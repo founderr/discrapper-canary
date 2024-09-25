@@ -1,9 +1,9 @@
-!(function e() {
+function r() {
     if ('undefined' != typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && 'function' == typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE)
         try {
-            __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(e);
+            __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(r);
         } catch (e) {
             console.error(e);
         }
-})(),
-    (e.exports = n(502920));
+}
+r(), (e.exports = n(502920));

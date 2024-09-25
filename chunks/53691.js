@@ -7,15 +7,15 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(526629),
-    o = n(481060),
+    o = n(526629),
+    s = n(481060),
     l = n(436774),
     u = n(197115),
     c = n(474936),
     d = n(422455);
 function _(e) {
     let { showUpsell: t, text: n, textVariant: i, button: _, buttonAnalyticsObject: E, className: f, showShadow: h = !0, position: p = 'floating' } = e,
-        I = (0, o.useSpring)({
+        m = (0, s.useSpring)({
             transform: t ? 'translateY(0%)' : 'translateY(120%)',
             opacity: t ? 1 : 0,
             config: {
@@ -23,8 +23,8 @@ function _(e) {
                 friction: 14
             }
         });
-    return (0, r.jsxs)(s.animated.div, {
-        style: { ...I },
+    return (0, r.jsxs)(o.animated.div, {
+        style: { ...m },
         className: a()(
             d.upsellContainer,
             {
@@ -35,11 +35,11 @@ function _(e) {
             f
         ),
         children: [
-            (0, r.jsx)(o.NitroWheelIcon, {
+            (0, r.jsx)(s.NitroWheelIcon, {
                 size: 'md',
                 color: l.JX.PREMIUM_TIER_2
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: null != i ? i : 'text-sm/medium',
                 color: 'header-primary',
                 className: d.upsellText,

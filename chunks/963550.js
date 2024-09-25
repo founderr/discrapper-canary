@@ -1,15 +1,15 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return a;
     }
 });
-var i = t(735250);
-t(470079);
-var o = t(930282);
-function a(e, n) {
-    let { message: t } = e;
-    return (0, i.jsx)(o.ZP, {
-        message: t,
-        content: n
+var r = n(735250);
+n(470079);
+var i = n(930282);
+function a(e, t) {
+    let { message: n } = e;
+    return (0, r.jsx)(i.ZP, {
+        message: n,
+        content: t
     });
 }

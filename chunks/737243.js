@@ -17,8 +17,8 @@ let m = s.memo(function (e) {
     var t, n;
     let { message: m, channel: p, compact: _ = !1, interactionUsernameProfile: f, interactionAvatarProfile: E, interactionData: g, referencedUsernameProfile: C, referencedAvatarProfile: I, setPopout: T } = e,
         x = (0, a.e7)([c.Z], () => c.Z.isBlockedForMessage(m), [m]),
-        S = (0, a.e7)([o.Z], () => o.Z.getMessageByReference(null == m ? void 0 : m.messageReference)),
-        v = (0, d.wq)(null === (t = m.interaction) || void 0 === t ? void 0 : t.user.id, p.id),
+        v = (0, a.e7)([o.Z], () => o.Z.getMessageByReference(null == m ? void 0 : m.messageReference)),
+        S = (0, d.wq)(null === (t = m.interaction) || void 0 === t ? void 0 : t.user.id, p.id),
         N = (0, d.Nk)(m.interaction, p, f, T),
         A = (0, d.NU)(E, T),
         Z = (0, r.t0)(m),
@@ -27,7 +27,7 @@ let m = s.memo(function (e) {
         R = (0, d.JC)(M, p, C, T),
         L = (0, d.rY)(I, T),
         j = (0, d.Xn)(g, T),
-        P = s.useCallback(
+        O = s.useCallback(
             () =>
                 T({
                     interactionUsernameProfile: !1,
@@ -38,7 +38,7 @@ let m = s.memo(function (e) {
                 }),
             [T]
         ),
-        O = s.useCallback(
+        P = s.useCallback(
             () =>
                 (0, h.Z)(
                     {
@@ -52,9 +52,9 @@ let m = s.memo(function (e) {
                         referencedAvatarProfile: I
                     },
                     m.messageReference,
-                    S
+                    v
                 ),
-            [p, _, m, I, S, C, T]
+            [p, _, m, I, v, C, T]
         );
     return (0, i.jsx)(u.Z, {
         message: m,
@@ -69,12 +69,12 @@ let m = s.memo(function (e) {
         onClickAvatar: A,
         onClickUsername: N,
         onClickCommand: j,
-        onUserContextMenu: v,
+        onUserContextMenu: S,
         onClickTargetAvatar: L,
         onClickTargetUsername: R,
         onTargetUserContextMenu: b,
-        onPopoutRequestClose: P,
-        renderTargetMessage: O
+        onPopoutRequestClose: O,
+        renderTargetMessage: P
     });
 });
 function p(e, t, n) {

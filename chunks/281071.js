@@ -26,8 +26,8 @@ function a(e) {
                     t && t.onClick ? ((a.onClick = t.onClick), (a.onContextMenu = t.onContextMenu)) : (a.onClick = t);
                 }
                 if (null == a.onClick) {
-                    var s;
-                    (a.href = null !== (s = (0, i.sanitizeUrl)(e.target)) && void 0 !== s ? s : void 0), (a.target = '_blank');
+                    var o;
+                    (a.href = null !== (o = (0, i.sanitizeUrl)(e.target)) && void 0 !== o ? o : void 0), (a.target = '_blank');
                 }
                 return (0, r.jsx)(
                     'a',

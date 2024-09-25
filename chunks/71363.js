@@ -24,7 +24,7 @@ var s = n(735250),
 t.Z = (e) => {
     let t,
         n,
-        { isAllPerksVisible: r, setIsAllPerksVisible: h, previousComponent: M, isFullScreen: x } = e,
+        { isAllPerksVisible: r, setIsAllPerksVisible: M, previousComponent: h, isFullScreen: x } = e,
         b = a.useRef(null),
         O = Object.entries((0, g.Z)()).reduce((e, t) => {
             let [n, s] = t;
@@ -52,10 +52,10 @@ t.Z = (e) => {
                         (0, s.jsx)(R.Z, {
                             className: A.heroHeading,
                             onBackClick: () => {
-                                h(!1),
+                                M(!1),
                                     T.default.track(p.rMx.NITRO_HOME_NAVIGATION, {
                                         current_component: N.MQ.SEE_ALL,
-                                        next_component: M,
+                                        next_component: h,
                                         interaction_component: 'Back Button'
                                     });
                             }

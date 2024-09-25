@@ -1,6 +1,6 @@
 l.d(e, {
     Z: function () {
-        return p;
+        return M;
     }
 });
 var t = l(735250);
@@ -9,22 +9,22 @@ var u = l(481060),
     i = l(829883),
     r = l(976853),
     a = l(378233),
-    o = l(902676),
-    d = l(626135),
+    d = l(902676),
+    o = l(626135),
     c = l(49012),
     s = l(358085),
     v = l(998502),
-    _ = l(36998),
-    f = l(981631),
-    h = l(689938);
-function p(n, e, l, p) {
-    let E = (0, r.Z)(null == l ? void 0 : l.getChannelId());
-    if (!s.isPlatformEmbedded || null == n || '' === n || E || (null == p ? void 0 : p.shouldHideMediaOptions) === !0 || (null != n && null != (0, a.B0)(n)) || (null != n && (0, i.zt)(n))) return null;
-    let I = (0, o.F)(n),
-        M = (l) => {
-            d.default.track(f.rMx.CONTEXT_MENU_LINK_OPENED, {
-                hostname: I,
-                ...(0, _.v)()
+    f = l(36998),
+    _ = l(981631),
+    p = l(689938);
+function M(n, e, l, M) {
+    let h = (0, r.Z)(null == l ? void 0 : l.getChannelId());
+    if (!s.isPlatformEmbedded || null == n || '' === n || h || (null == M ? void 0 : M.shouldHideMediaOptions) === !0 || (null != n && null != (0, a.B0)(n)) || (null != n && (0, i.zt)(n))) return null;
+    let E = (0, d.F)(n),
+        C = (l) => {
+            o.default.track(_.rMx.CONTEXT_MENU_LINK_OPENED, {
+                hostname: E,
+                ...(0, f.v)()
             }),
                 (0, c.q)(
                     {
@@ -40,11 +40,11 @@ function p(n, e, l, p) {
             u.MenuItem,
             {
                 id: 'copy-native-link',
-                label: h.Z.Messages.COPY_LINK,
+                label: p.Z.Messages.COPY_LINK,
                 action: () => {
-                    d.default.track(f.rMx.CONTEXT_MENU_LINK_COPIED, {
-                        hostname: I,
-                        ...(0, _.v)()
+                    o.default.track(_.rMx.CONTEXT_MENU_LINK_COPIED, {
+                        hostname: E,
+                        ...(0, f.v)()
                     }),
                         v.ZP.copy(n);
                 }
@@ -55,8 +55,8 @@ function p(n, e, l, p) {
             u.MenuItem,
             {
                 id: 'open-native-link',
-                label: h.Z.Messages.OPEN_LINK,
-                action: (n) => M(n)
+                label: p.Z.Messages.OPEN_LINK,
+                action: (n) => C(n)
             },
             'open-native-link'
         )

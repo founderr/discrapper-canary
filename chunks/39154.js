@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return a;
     }
-}),
-    n(789020);
-var r = n(978003);
-function i(e, t) {
-    return null == (t = null != t ? t : (0, r.Z)(e) ? e.messageSnapshots[0] : void 0)
+});
+var r = n(789020);
+var i = n(978003);
+function a(e, t) {
+    return null == (t = null != t ? t : (0, i.Z)(e) ? e.messageSnapshots[0] : void 0)
         ? e
         : e.merge({
               content: t.message.content,

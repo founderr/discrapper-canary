@@ -1,30 +1,30 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
     a = n(739566),
-    r = n(834129),
-    l = n(689938),
-    o = n(437814);
-function c(e) {
-    let { message: t, compact: n, usernameHook: c } = e,
-        u = (0, a.ZP)(t),
-        d = c(u),
-        _ = l.Z.Messages.SYSTEM_MESSAGE_STAGE_SPEAKER_HOOK.format({
-            username: u.nick,
+    o = n(834129),
+    s = n(689938),
+    l = n(437814);
+function u(e) {
+    let { message: t, compact: n, usernameHook: u } = e,
+        c = (0, a.ZP)(t),
+        d = u(c),
+        _ = s.Z.Messages.SYSTEM_MESSAGE_STAGE_SPEAKER_HOOK.format({
+            username: c.nick,
             usernameHook: d
         });
-    return (0, i.jsx)(r.Z, {
-        className: o.stageSystemMessage,
-        iconNode: (0, i.jsx)(s.MicrophoneArrowRightIcon, {
+    return (0, r.jsx)(o.Z, {
+        className: l.stageSystemMessage,
+        iconNode: (0, r.jsx)(i.MicrophoneArrowRightIcon, {
             size: 'md',
             color: 'currentColor'
         }),
-        iconContainerClassName: o.iconContainer,
+        iconContainerClassName: l.iconContainer,
         timestamp: t.timestamp,
         compact: n,
         children: _

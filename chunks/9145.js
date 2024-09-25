@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return U;
     }
 }),
     n(47120);
@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(594174),
     T = n(585483),
     x = n(51144),
-    S = n(566620),
-    v = n(317381),
+    v = n(566620),
+    S = n(317381),
     N = n(619915),
     A = n(988980),
     Z = n(952561),
@@ -34,27 +34,27 @@ var i = n(735250),
     R = n(719296),
     L = n(651612),
     j = n(918559),
-    P = n(981631),
-    O = n(689938),
+    O = n(981631),
+    P = n(689938),
     y = n(735299);
 let D = b.u.SIZE_32,
-    U = {
+    k = {
         [j.MI.NO_CHAT]: y.noChat,
         [j.MI.RESIZABLE]: y.resizable
     };
-function k(e) {
+function U(e) {
     var t, n;
-    let { maxHeight: a, connectedChannelId: k, renderExternalHeader: w } = e,
+    let { maxHeight: a, connectedChannelId: U, renderExternalHeader: w } = e,
         B = (0, Z.Z)(),
-        H = (0, r.Wu)([v.ZP], () => (null != k ? v.ZP.getEmbeddedActivitiesForChannel(k) : []), [k]),
-        G = (0, r.e7)([E.Z], () => E.Z.getChannel(k)),
+        H = (0, r.Wu)([S.ZP], () => (null != U ? S.ZP.getEmbeddedActivitiesForChannel(U) : []), [U]),
+        G = (0, r.e7)([E.Z], () => E.Z.getChannel(U)),
         V = (0, N.gb)(H),
         F = (0, N.uF)(V),
         W = s.useCallback(() => {
-            (0, S.tg)(j.Ez.PIP);
+            (0, v.tg)(j.Ez.PIP);
         }, []),
         z = s.useRef(null),
-        Y = (0, r.e7)([v.ZP], () => v.ZP.getFocusedLayout()),
+        Y = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
         K = Y !== j.MI.NO_CHAT,
         [q, X] = s.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : a),
         J = s.useCallback((e) => {
@@ -162,10 +162,10 @@ function k(e) {
         );
     };
     return (0, i.jsx)(c.ThemeProvider, {
-        theme: P.BRd.DARK,
+        theme: O.BRd.DARK,
         children: (e) =>
             (0, i.jsxs)('div', {
-                className: l()(y.wrapper, U[Y], e),
+                className: l()(y.wrapper, k[Y], e),
                 ref: z,
                 style: ec,
                 children: [
@@ -195,7 +195,7 @@ function k(e) {
                                 ref: Q,
                                 children: (0, i.jsx)(M.Z, {
                                     className: y.iframe,
-                                    embedId: (0, R.Z)(k, B.id)
+                                    embedId: (0, R.Z)(U, B.id)
                                 })
                             }),
                             null != el
@@ -221,14 +221,14 @@ function k(e) {
                                                       className: y.leaveButtonContainer,
                                                       children: (0, i.jsx)(f.Z, {
                                                           applicationId: B.id,
-                                                          channelId: k,
+                                                          channelId: U,
                                                           centerButton: !0,
                                                           color: 'red',
                                                           className: y.leaveActivityButton
                                                       })
                                                   }),
                                                   (0, i.jsx)(_.d, {
-                                                      label: O.Z.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
+                                                      label: P.Z.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
                                                       onClick: W,
                                                       iconComponent: c.MinimizeIcon,
                                                       themeable: !0,
@@ -248,10 +248,10 @@ function k(e) {
                               maxHeight: a,
                               resizableNode: z,
                               onResize: (e) => {
-                                  T.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
+                                  T.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
                               },
                               onResizeEnd: (e) => {
-                                  T.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
+                                  T.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
                               }
                           })
                         : null

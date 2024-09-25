@@ -45,7 +45,7 @@ function G() {
         : (0, s.jsx)(u.FormSection, {
               tag: u.FormTitleTags.H1,
               title: Z.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
-              children: (0, s.jsx)(w, { guild: e })
+              children: (0, s.jsx)(k, { guild: e })
           });
 }
 function P(e) {
@@ -138,7 +138,7 @@ let y = (e) => {
                     children: Z.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
                 })
         });
-function w(e) {
+function k(e) {
     let { guild: t } = e,
         [i, r] = (0, c.Wu)([S.Z], () => {
             var e;
@@ -246,7 +246,7 @@ function w(e) {
                                   }),
                                   i.map((e) =>
                                       (0, s.jsx)(
-                                          k,
+                                          w,
                                           {
                                               sound: e,
                                               isPlaying: !1,
@@ -263,7 +263,7 @@ function w(e) {
         ]
     });
 }
-function k(e) {
+function w(e) {
     let { sound: t, isPlaying: i, onPlaySound: l, guild: o } = e,
         { soundId: d, name: E, user: T, userId: S, emojiId: g, emojiName: h } = t,
         p = (0, c.e7)([R.default], () => (null != T ? T : R.default.getUser(S)), [S, T]),

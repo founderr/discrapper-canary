@@ -1,13 +1,13 @@
 n.d(t, {
     x: function () {
-        return a;
+        return l;
     }
-}),
-    n(411104),
-    n(47120),
-    n(653041);
-var r = n(65154);
-function i(e, t, n) {
+});
+var r = n(411104);
+var i = n(47120);
+var a = n(653041);
+var o = n(65154);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class l {
     getMaxSinkValue(e) {
         if (e < 0) throw Error('getMaxSinkValue: Requested ' + e);
         let t = this.orderedLadder[0].wantValue;
@@ -59,34 +59,34 @@ class a {
                 });
             }
         }
-        let i = {},
-            s = 0,
-            o = 100;
+        let r = {},
+            i = 0,
+            a = 100;
         for (let t = 1; t <= 25; ++t) {
-            let l = 0,
+            let s = 0,
                 u = 0,
                 c = 0;
             for (let r of n) {
                 if (r.pixelCount * t > e) break;
-                (l = r.width), (u = r.height), (c = r.budgetPortion);
+                (s = r.width), (u = r.height), (c = r.budgetPortion);
             }
-            if (s !== l) {
-                let e = a.getMutedFramerate(o);
-                (i[o] = {
-                    width: l,
+            if (i !== s) {
+                let e = l.getMutedFramerate(a);
+                (r[a] = {
+                    width: s,
                     height: u,
                     budgetPortion: c,
                     mutedFramerate: e,
-                    framerate: r.Gs
+                    framerate: o.Gs
                 }),
-                    (o -= 10),
-                    (s = l);
+                    (a -= 10),
+                    (i = s);
             }
         }
-        return i;
+        return r;
     }
     static getMutedFramerate(e) {
-        return e <= 20 ? r.Er : r.P8;
+        return e <= 20 ? o.Er : o.P8;
     }
     static calculateOrderedLadder(e) {
         let t = [];
@@ -103,10 +103,10 @@ class a {
         }
         return t;
     }
-    constructor(e = r.kS) {
-        i(this, 'pixelBudget', void 0), i(this, 'ladder', void 0), i(this, 'orderedLadder', void 0);
+    constructor(e = o.kS) {
+        s(this, 'pixelBudget', void 0), s(this, 'ladder', void 0), s(this, 'orderedLadder', void 0);
         let { width: t, height: n } = e.videoBudget;
         if (t <= 0 || n <= 0) throw Error('Invalid argument');
-        (this.pixelBudget = t * n), (this.ladder = a.calculateLadder(this.pixelBudget)), (this.orderedLadder = a.calculateOrderedLadder(this.ladder));
+        (this.pixelBudget = t * n), (this.ladder = l.calculateLadder(this.pixelBudget)), (this.orderedLadder = l.calculateOrderedLadder(this.ladder));
     }
 }

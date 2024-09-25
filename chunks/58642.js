@@ -1,12 +1,12 @@
 n.d(t, {
     h: function () {
-        return s;
+        return o;
     }
 });
 var r = n(544891),
     i = n(570140),
     a = n(981631);
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         i.Z.dispatch({
             type: 'LIBRARY_APPLICATION_FLAGS_UPDATE_START',

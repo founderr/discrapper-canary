@@ -17,8 +17,8 @@ var s = n(735250),
 let g = (e) => {
     let { name: t, title: n, description: r, descriptionCta: R, previewImage: g, videoUrl: N, shouldLoadVideo: C, isCompact: p, onClick: f, index: A } = e,
         S = (0, _.rO)(),
-        h = a.useRef(null),
-        [M, x] = a.useState(0),
+        M = a.useRef(null),
+        [h, x] = a.useState(0),
         b = (function (e) {
             let t;
             switch (e) {
@@ -49,10 +49,10 @@ let g = (e) => {
             d.default.track(T.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, o.snakeCase)(t) });
         }, 800),
         P = () => {
-            null != h.current && ((h.current.currentTime = M), h.current.play());
+            null != M.current && ((M.current.currentTime = h), M.current.play());
         },
         v = () => {
-            null != h.current && (x(h.current.currentTime), h.current.pause());
+            null != M.current && (x(M.current.currentTime), M.current.pause());
         },
         L = () =>
             (0, s.jsxs)('div', {
@@ -113,7 +113,7 @@ let g = (e) => {
                         [m.leftSideArt]: t && !p,
                         [m.compactBoxVideo]: p
                     }),
-                    ref: h,
+                    ref: M,
                     children: (0, s.jsx)('source', {
                         src: N,
                         type: S ? I.m.MP4 : I.m.WEBM

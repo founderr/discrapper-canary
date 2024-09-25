@@ -1,45 +1,45 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(70956),
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(70956),
     s = n(709054),
-    o = n(27144),
-    l = n(369566),
-    u = n(151545),
-    c = n(527790),
-    d = n(304042);
-function _(e) {
-    let { user: t, currentUser: n, className: _, onClose: E } = e,
-        { live: f, recent: h, stream: p } = (0, l.Z)(t.id),
-        [I] = f,
-        { mostRecentActivityEnabled: m } = (0, o.z)({ location: 'UserProfileFeaturedActivity' }),
-        T = i.useMemo(() => h.find((e) => s.default.age(e.id) / a.Z.Millis.HOUR < 24), [h]);
+    l = n(27144),
+    u = n(369566),
+    c = n(151545),
+    d = n(527790),
+    _ = n(304042);
+function E(e) {
+    let { user: t, currentUser: n, className: r, onClose: E } = e,
+        { live: f, recent: h, stream: p } = (0, u.Z)(t.id),
+        [m] = f,
+        { mostRecentActivityEnabled: I } = (0, l.z)({ location: 'UserProfileFeaturedActivity' }),
+        T = a.useMemo(() => h.find((e) => s.default.age(e.id) / o.Z.Millis.HOUR < 24), [h]);
     return null != p
-        ? (0, r.jsx)(d.Z, {
+        ? (0, i.jsx)(_.Z, {
               user: t,
               currentUser: n,
               stream: p,
-              className: _,
+              className: r,
               onClose: E
           })
-        : null != I
-          ? (0, r.jsx)(u.Z, {
+        : null != m
+          ? (0, i.jsx)(c.Z, {
                 user: t,
                 currentUser: n,
-                activity: I,
-                className: _,
+                activity: m,
+                className: r,
                 onClose: E
             })
-          : m && null != T
-            ? (0, r.jsx)(c.Z, {
+          : I && null != T
+            ? (0, i.jsx)(d.Z, {
                   user: t,
                   entry: T,
-                  className: _,
+                  className: r,
                   onClose: E
               })
             : null;

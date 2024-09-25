@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(725119),
     i = n(652853),
     a = n(347328),
-    s = n(540440),
-    o = n(553375),
+    o = n(540440),
+    s = n(553375),
     l = n(365583),
     u = n(582546),
     c = n(228168),
@@ -21,5 +21,5 @@ function _(e) {
             label: d.Z.Messages.USER_ACTIVITY_VIEW_ALL_ACTIVITY,
             onAction: () => (null == t ? void 0 : t({ action: 'PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM' }))
         });
-    return [n !== c.y0.FULL_SIZE ? _ : null, (0, u.Z)(e), (0, o.Z)(e), (0, l.Z)(e), (0, a.Z)(e), (0, s.B)(e)].filter((e) => null != e);
+    return [n !== c.y0.FULL_SIZE ? _ : null, (0, u.Z)(e), (0, s.Z)(e), (0, l.Z)(e), (0, a.Z)(e), (0, o.B)(e)].filter((e) => null != e);
 }

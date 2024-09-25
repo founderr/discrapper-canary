@@ -1,16 +1,16 @@
 n.d(t, {
     R: function () {
-        return o;
+        return s;
     }
 });
 var r = n(182823),
     i = n(706682),
     a = n(470079),
-    s = n(795250);
-function o(e, t) {
+    o = n(795250);
+function s(e, t) {
     let { role: n = 'dialog' } = e,
-        o = (0, r.mp)();
-    o = e['aria-label'] ? void 0 : o;
+        s = (0, r.mp)();
+    s = e['aria-label'] ? void 0 : s;
     let l = (0, a.useRef)(!1);
     return (
         (0, a.useEffect)(() => {
@@ -24,18 +24,18 @@ function o(e, t) {
                 };
             }
         }, [t]),
-        (0, s.Bq)(),
+        (0, o.Bq)(),
         {
             dialogProps: {
                 ...(0, r.zL)(e, { labelable: !0 }),
                 role: n,
                 tabIndex: -1,
-                'aria-labelledby': e['aria-labelledby'] || o,
+                'aria-labelledby': e['aria-labelledby'] || s,
                 onBlur: (e) => {
                     l.current && e.stopPropagation();
                 }
             },
-            titleProps: { id: o }
+            titleProps: { id: s }
         }
     );
 }

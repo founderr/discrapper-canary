@@ -30,8 +30,8 @@
         A = 'Opera',
         I = 'Samsung',
         B = 'Sharp',
-        R = 'Sony',
-        L = 'Xiaomi',
+        L = 'Sony',
+        R = 'Xiaomi',
         N = 'Zebra',
         F = 'Facebook',
         z = 'Chromium OS',
@@ -84,7 +84,7 @@
             10: ['NT 6.4', 'NT 10.0'],
             RT: 'ARM'
         },
-        $ = {
+        X = {
             browser: [
                 [/\b(?:crmo|crios)\/([\w\.]+)/i],
                 [h, [l, 'Chrome']],
@@ -206,13 +206,13 @@
                 [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite)?)(?: bui|\))/i],
                 [
                     [c, /_/g, ' '],
-                    [p, L],
+                    [p, R],
                     [f, y]
                 ],
                 [/\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i],
                 [
                     [c, /_/g, ' '],
-                    [p, L],
+                    [p, R],
                     [f, v]
                 ],
                 [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
@@ -242,11 +242,11 @@
                 [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
                 [c, [p, O], [f, y]],
                 [/droid.+ (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-                [c, [p, R], [f, y]],
+                [c, [p, L], [f, y]],
                 [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
                 [
                     [c, 'Xperia Tablet'],
-                    [p, R],
+                    [p, L],
                     [f, v]
                 ],
                 [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
@@ -365,9 +365,9 @@
                 [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
                 [c, [p, B], [f, m]],
                 [/(bravia[\w ]+)( bui|\))/i],
-                [c, [p, R], [f, m]],
-                [/(mitv-\w{5}) bui/i],
                 [c, [p, L], [f, m]],
+                [/(mitv-\w{5}) bui/i],
+                [c, [p, R], [f, m]],
                 [/Hbbtv.*(technisat) (.*);/i],
                 [p, c, [f, m]],
                 [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
@@ -383,7 +383,7 @@
                 [/droid.+; (shield) bui/i],
                 [c, [p, 'Nvidia'], [f, g]],
                 [/(playstation [345portablevi]+)/i],
-                [c, [p, R], [f, g]],
+                [c, [p, L], [f, g]],
                 [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
                 [c, [p, T], [f, g]],
                 [/((pebble))app/i],
@@ -458,12 +458,12 @@
                 [l, h]
             ]
         },
-        X = function (t, e) {
-            if ((typeof t === a && ((e = t), (t = n)), !(this instanceof X))) return new X(t, e).getResult();
+        Y = function (t, e) {
+            if ((typeof t === a && ((e = t), (t = n)), !(this instanceof Y))) return new Y(t, e).getResult();
             var g = typeof r !== o && r.navigator ? r.navigator : n,
                 m = t || (g && g.userAgent ? g.userAgent : ''),
                 _ = g && g.userAgentData ? g.userAgentData : n,
-                b = e ? j($, e) : $,
+                b = e ? j(X, e) : X,
                 S = g && g.userAgent == m;
             return (
                 (this.getBrowser = function () {
@@ -507,29 +507,29 @@
                 this
             );
         };
-    (X.VERSION = '0.7.36'),
-        (X.BROWSER = U([l, h, s])),
-        (X.CPU = U([d])),
-        (X.DEVICE = U([c, p, f, g, y, m, v, _, b])),
-        (X.ENGINE = X.OS = U([l, h])),
+    (Y.VERSION = '0.7.36'),
+        (Y.BROWSER = U([l, h, s])),
+        (Y.CPU = U([d])),
+        (Y.DEVICE = U([c, p, f, g, y, m, v, _, b])),
+        (Y.ENGINE = Y.OS = U([l, h])),
         typeof e !== o
-            ? (t.exports && (e = t.exports = X), (e.UAParser = X))
+            ? (t.exports && (e = t.exports = Y), (e.UAParser = Y))
             : typeof define === i && define.amd
               ? define(function () {
-                    return X;
+                    return Y;
                 })
-              : typeof r !== o && (r.UAParser = X);
-    var Y = typeof r !== o && (r.jQuery || r.Zepto);
-    if (Y && !Y.ua) {
-        var Z = new X();
-        (Y.ua = Z.getResult()),
-            (Y.ua.get = function () {
-                return Z.getUA();
+              : typeof r !== o && (r.UAParser = Y);
+    var Z = typeof r !== o && (r.jQuery || r.Zepto);
+    if (Z && !Z.ua) {
+        var $ = new Y();
+        (Z.ua = $.getResult()),
+            (Z.ua.get = function () {
+                return $.getUA();
             }),
-            (Y.ua.set = function (t) {
-                Z.setUA(t);
-                var e = Z.getResult();
-                for (var r in e) Y.ua[r] = e[r];
+            (Z.ua.set = function (t) {
+                $.setUA(t);
+                var e = $.getResult();
+                for (var r in e) Z.ua[r] = e[r];
             });
     }
 })('object' == typeof window ? window : this);

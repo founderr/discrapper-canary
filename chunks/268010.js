@@ -41,7 +41,7 @@ t.Z = (e) => {
         { primaryColor: Z, secondaryColor: A } = (0, E.Z)(null == P ? void 0 : P.src),
         S = (0, i.e7)([s.default], () => s.default.locale),
         M = (0, m.ap)(n.extra.media_assets_large_text),
-        y = a.useCallback(
+        O = a.useCallback(
             (e) => {
                 if (null != N && (null == P ? void 0 : P.src) != null)
                     return (0, x.B)({
@@ -57,7 +57,7 @@ t.Z = (e) => {
             },
             [t, n, M, S, null == P ? void 0 : P.src, Z, A, N]
         ),
-        O = () => {
+        y = () => {
             if (null == n.extra.url) return;
             let e = d.Z.safeParseWithQuery(n.extra.url);
             if (null != e && null != e.protocol && null != e.hostname)
@@ -84,8 +84,8 @@ t.Z = (e) => {
                           location: v.Gt.POPOUT,
                           children: _.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                       }),
-                      onClickTitle: O,
-                      onClickThumbnail: O
+                      onClickTitle: y,
+                      onClickThumbnail: y
                   }),
                   (0, l.jsx)(T.St, {
                       children: (0, l.jsx)(T.WT, {
@@ -93,7 +93,7 @@ t.Z = (e) => {
                           onVoiceChannelPreview: C,
                           user: N,
                           channel: t,
-                          generateReactionImage: y,
+                          generateReactionImage: O,
                           reactionImageAltText: I(n, N),
                           entry: n
                       })

@@ -1,32 +1,32 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
-}),
-    t(47120);
-var i = t(470079),
-    r = t(479531),
-    l = t(689938);
-function o(e) {
-    let [n, t] = i.useState(!1),
-        [o, u] = i.useState(null);
+});
+var r = n(47120);
+var i = n(470079),
+    a = n(479531),
+    o = n(689938);
+function s(e) {
+    let [t, n] = i.useState(!1),
+        [r, s] = i.useState(null);
     return [
         i.useCallback(
             async function () {
-                for (var n = arguments.length, i = Array(n), o = 0; o < n; o++) i[o] = arguments[o];
+                for (var t = arguments.length, r = Array(t), i = 0; i < t; i++) r[i] = arguments[i];
                 try {
-                    return u(null), t(!0), await e(...i);
+                    return s(null), n(!0), await e(...r);
                 } catch (e) {
-                    e.message !== l.Z.Messages.MFA_V2_CANCELED && u(e instanceof r.Z ? e : new r.Z(e));
+                    e.message !== o.Z.Messages.MFA_V2_CANCELED && s(e instanceof a.Z ? e : new a.Z(e));
                 } finally {
-                    t(!1);
+                    n(!1);
                 }
             },
             [e]
         ),
         {
-            loading: n,
-            error: o
+            loading: t,
+            error: r
         }
     ];
 }

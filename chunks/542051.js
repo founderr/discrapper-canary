@@ -1,24 +1,24 @@
 n.d(t, {
     M: function () {
-        return m;
+        return E;
     }
 }),
     n(411104);
-var i,
+var r,
+    i,
+    l,
     s,
-    a,
-    r,
-    l = n(735250),
+    a = n(735250),
     o = n(470079),
-    c = n(120356),
-    u = n.n(c),
+    u = n(120356),
+    c = n.n(u),
     d = n(481060),
-    _ = n(689938),
-    E = n(463659);
-function I(e) {
+    h = n(689938),
+    _ = n(463659);
+function f(e) {
     e.stopPropagation(), e.preventDefault();
 }
-function m(e, t, n) {
+function E(e, t, n) {
     return {
         id: ''.concat(e, '-').concat(t),
         role: 'option',
@@ -26,52 +26,52 @@ function m(e, t, n) {
         'aria-selected': n
     };
 }
-class T extends (i = o.PureComponent) {
+class p extends (r = o.PureComponent) {
     renderQuery(e) {
-        let { query: t, navId: n, focusedIndex: i, onSelectQuery: s, onSelectSearchEverywhere: a, onHighlightQuery: r, hideQuery: o, searchFavorites: c } = this.props;
+        let { query: t, navId: n, focusedIndex: r, onSelectQuery: i, onSelectSearchEverywhere: l, onHighlightQuery: s, hideQuery: o, searchFavorites: u } = this.props;
         if (e || o) return null;
-        let I = -1 === i;
-        return (0, l.jsxs)(l.Fragment, {
+        let f = -1 === r;
+        return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, l.jsxs)(d.Clickable, {
-                    className: u()(E.queryContainer, { [E.focused]: I }),
-                    ...m(n, -1, I),
-                    onMouseEnter: r,
-                    onClick: s,
+                (0, a.jsxs)(d.Clickable, {
+                    className: c()(_.queryContainer, { [_.focused]: f }),
+                    ...E(n, -1, f),
+                    onMouseEnter: s,
+                    onClick: i,
                     children: [
-                        (0, l.jsx)('div', {
-                            className: E.queryText,
-                            children: c ? _.Z.Messages.SEARCH_FAVORITES : _.Z.Messages.SEARCH_FOR_VALUE.format({ value: t })
+                        (0, a.jsx)('div', {
+                            className: _.queryText,
+                            children: u ? h.Z.Messages.SEARCH_FAVORITES : h.Z.Messages.SEARCH_FOR_VALUE.format({ value: t })
                         }),
-                        (0, l.jsx)('div', {
-                            className: E.queryShortcut,
+                        (0, a.jsx)('div', {
+                            className: _.queryShortcut,
                             'aria-hidden': !0,
-                            children: (0, l.jsx)(d.KeyCombo, {
+                            children: (0, a.jsx)(d.KeyCombo, {
                                 shortcut: 'return',
                                 dim: !0,
-                                className: E.keyCombo
+                                className: _.keyCombo
                             })
                         })
                     ]
                 }),
-                c &&
-                    (0, l.jsxs)(d.Clickable, {
-                        className: u()(E.queryContainer, { [E.focused]: I }),
-                        ...m(n, -1, I),
-                        onMouseEnter: r,
-                        onClick: a,
+                u &&
+                    (0, a.jsxs)(d.Clickable, {
+                        className: c()(_.queryContainer, { [_.focused]: f }),
+                        ...E(n, -1, f),
+                        onMouseEnter: s,
+                        onClick: l,
                         children: [
-                            (0, l.jsx)('div', {
-                                className: E.queryText,
-                                children: _.Z.Messages.SEARCH_EVERYWHERE
+                            (0, a.jsx)('div', {
+                                className: _.queryText,
+                                children: h.Z.Messages.SEARCH_EVERYWHERE
                             }),
-                            (0, l.jsx)('div', {
-                                className: E.queryShortcut,
+                            (0, a.jsx)('div', {
+                                className: _.queryShortcut,
                                 'aria-hidden': !0,
-                                children: (0, l.jsx)(d.KeyCombo, {
+                                children: (0, a.jsx)(d.KeyCombo, {
                                     shortcut: 'shift+return',
                                     dim: !0,
-                                    className: E.keyCombo
+                                    className: _.keyCombo
                                 })
                             })
                         ]
@@ -80,39 +80,39 @@ class T extends (i = o.PureComponent) {
         });
     }
     renderResults(e) {
-        let { numResults: t, renderNoResults: n, renderInitialState: i, renderResult: s, renderCustomResults: a } = this.props;
-        if (e) return i();
+        let { numResults: t, renderNoResults: n, renderInitialState: r, renderResult: i, renderCustomResults: l } = this.props;
+        if (e) return r();
         if (0 === t) return n();
-        if (null != s) return Array.from({ length: t }).map((e, t) => s(t));
-        if (null != a) return a();
+        if (null != i) return Array.from({ length: t }).map((e, t) => i(t));
+        if (null != l) return l();
         throw Error('SearchResultsPopout.renderResults: Flow should never allow this...');
     }
     render() {
-        let { query: e, focusedIndex: t, navId: n, width: i } = this.props,
-            s = '' === e.trim();
-        return (0, l.jsxs)('div', {
-            className: E.container,
-            style: { width: i },
-            onMouseDown: I,
+        let { query: e, focusedIndex: t, navId: n, width: r } = this.props,
+            i = '' === e.trim();
+        return (0, a.jsxs)('div', {
+            className: _.container,
+            style: { width: r },
+            onMouseDown: f,
             role: 'listbox',
             id: n,
             tabIndex: -1,
             'aria-activedescendant': ''.concat(n, '-').concat(t),
-            children: [this.renderQuery(s), this.renderResults(s)]
+            children: [this.renderQuery(i), this.renderResults(i)]
         });
     }
 }
-(r = {
+(s = {
     renderInitialState: () => null,
     hideQuery: !1,
     width: 320
 }),
-    (a = 'defaultProps') in (s = T)
-        ? Object.defineProperty(s, a, {
-              value: r,
+    (l = 'defaultProps') in (i = p)
+        ? Object.defineProperty(i, l, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = r),
-    (t.Z = T);
+        : (i[l] = s),
+    (t.Z = p);

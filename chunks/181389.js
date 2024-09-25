@@ -1,43 +1,43 @@
 n.d(t, {
     Jl: function () {
-        return l;
+        return a;
     },
     g9: function () {
         return o;
     }
 }),
     n(653041);
-var i = n(395041);
+var r = n(395041);
 n(349033);
-var s = n(999650);
+var i = n(999650);
 n(72006);
-var a = n(405656);
+var l = n(405656);
 n(981631);
-let r = {
-    [s.Qe.FILTER]: i.w,
-    [s.Qe.ANSWER]: i.O
+let s = {
+    [i.Qe.FILTER]: r.w,
+    [i.Qe.ANSWER]: r.O
 };
-function l() {
+function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = [];
     return (
         Object.keys(e).forEach((n) => {
-            let i = e[n];
+            let r = e[n];
             t.push({
-                strategy: (e, t, i) =>
-                    (function (e, t, n, i) {
+                strategy: (e, t, r) =>
+                    (function (e, t, n, r) {
                         t.findEntityRanges((t) => {
                             let n = t.getEntity();
-                            return null !== n && e.getEntity(n).getType() === i;
+                            return null !== n && e.getEntity(n).getType() === r;
                         }, n);
-                    })(i, e, t, n),
-                component: r[i.componentType]
+                    })(r, e, t, n),
+                component: s[r.componentType]
             });
         }),
         t
     );
 }
 function o(e, t) {
-    let { focusOffset: n, anchorOffset: i } = t.getSelection();
-    return (0, a.g9)(e, n, i);
+    let { focusOffset: n, anchorOffset: r } = t.getSelection();
+    return (0, l.g9)(e, n, r);
 }

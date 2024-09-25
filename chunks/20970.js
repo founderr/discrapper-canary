@@ -4,15 +4,15 @@ n.d(t, {
     }
 });
 var r = n(302454);
-let { newline: i, paragraph: a, url: s, link: o, strong: l, u, br: c, em: d, image: _, text: E } = r.defaultRules,
+let { newline: i, paragraph: a, url: o, link: s, strong: l, u, br: c, em: d, image: _, text: E } = r.defaultRules,
     f = {
         newline: i,
         paragraph: a,
-        url: s,
+        url: o,
         link: {
-            ...o,
+            ...s,
             parse(e, t, n) {
-                let r = o.parse(e, t, n);
+                let r = s.parse(e, t, n);
                 return (r.context = n.context), r;
             }
         },

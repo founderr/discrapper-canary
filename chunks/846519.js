@@ -13,13 +13,13 @@ function r(e, t, n) {
 }
 n.d(t, {
     GR: function () {
-        return o;
+        return s;
     },
     V7: function () {
         return i;
     },
     Xp: function () {
-        return s;
+        return o;
     },
     sW: function () {
         return a;
@@ -62,7 +62,7 @@ class a {
         r(this, '_timeout', void 0), r(this, '_delay', void 0), r(this, '_handler', void 0), (this._delay = e), (this._handler = t), (this._timeout = new i());
     }
 }
-class s {
+class o {
     start(e, t) {
         this.stop(), (this._ref = window.setInterval(t, e));
     }
@@ -76,7 +76,7 @@ class s {
         r(this, '_ref', void 0);
     }
 }
-function o(e) {
+function s(e) {
     return new Promise((t) => {
         setTimeout(() => t(), e);
     });

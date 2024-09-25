@@ -1,41 +1,41 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(481060),
-    a = n(39604),
-    r = n(176127),
-    l = n(689938),
+var i = n(481060),
+    l = n(39604),
+    s = n(176127),
+    a = n(689938),
     o = n(516707);
-function c(e) {
-    let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: c } = e;
-    return (0, i.jsxs)(s.TooltipLayer, {
+function u(e) {
+    let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: u } = e;
+    return (0, r.jsxs)(i.TooltipLayer, {
         tooltipClassName: o.reminderTooltip,
         tooltipContentClassName: o.tooltipContent,
         targetElementRef: { current: n },
         position: 'bottom',
-        color: s.TooltipColors.PRIMARY,
+        color: i.TooltipColors.PRIMARY,
         children: [
-            (0, i.jsx)(r.Z, {}),
-            (0, i.jsx)(s.Heading, {
+            (0, r.jsx)(s.Z, {}),
+            (0, r.jsx)(i.Heading, {
                 variant: 'heading-md/extrabold',
-                children: l.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: c.newClipIds.length })
+                children: a.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: u.newClipIds.length })
             }),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: o.buttonContainer,
                 children: [
-                    (0, i.jsx)(s.Button, {
-                        color: s.Button.Colors.TRANSPARENT,
-                        onClick: a.eL,
-                        children: l.Z.Messages.DISMISS
+                    (0, r.jsx)(i.Button, {
+                        color: i.Button.Colors.TRANSPARENT,
+                        onClick: l.eL,
+                        children: a.Z.Messages.DISMISS
                     }),
-                    (0, i.jsx)(s.Button, {
-                        color: s.Button.Colors.BRAND,
+                    (0, r.jsx)(i.Button, {
+                        color: i.Button.Colors.BRAND,
                         onClick: t,
-                        children: l.Z.Messages.CLIPS_REVIEW_NOW
+                        children: a.Z.Messages.CLIPS_REVIEW_NOW
                     })
                 ]
             })

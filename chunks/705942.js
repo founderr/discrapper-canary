@@ -9,10 +9,10 @@ n.d(t, {
         return l;
     },
     k$: function () {
-        return s;
+        return o;
     },
     sq: function () {
-        return o;
+        return s;
     }
 });
 var r = n(470079),
@@ -25,11 +25,11 @@ var r = n(470079),
             return e.apply(void 0, n);
         }
     },
-    s = function (e, t) {
+    o = function (e, t) {
         if ('function' == typeof e) return a(e, t);
         null != e && (e.current = t);
     },
-    o = function (e) {
+    s = function (e) {
         return e.reduce(function (e, t) {
             var n = t[0],
                 r = t[1];

@@ -89,11 +89,11 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             U = (0, i.e7)([p.Z], () => (null != n && (null == b ? void 0 : b.isPublished) ? p.Z.getSlug() : null)),
             [G, P] = a.useState([!0]),
             [B, y] = a.useState(!0),
-            [F, w] = a.useState([!1]),
-            [k, H] = a.useState(['']),
+            [F, k] = a.useState([!1]),
+            [w, H] = a.useState(['']),
             V = (e) => {
                 let t = Object.entries(O.zo)
-                    .filter((e) => !k.includes(e[1].presentation))
+                    .filter((e) => !w.includes(e[1].presentation))
                     .map((e) => ({
                         label: e[1].presentation,
                         value: e[0]
@@ -184,12 +184,12 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             $ = () => {
                 if (b.socialLinks.length < 9) {
                     let e = [...b.socialLinks];
-                    u.t$(n.id, e.concat('')), H(k.concat(''));
+                    u.t$(n.id, e.concat('')), H(w.concat(''));
                 }
             },
             ee = (e, t) => {
                 let s = [...b.socialLinks],
-                    a = [...k],
+                    a = [...w],
                     i = [...G];
                 (a[t] = e), (s[t] = O.zo[e].baseUrl), (i[t] = !0), P(i), H(a), y(i.every((e) => !0 === e)), u.t$(n.id, s);
             },
@@ -201,10 +201,10 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             },
             en = (e) => {
                 let t = [...F];
-                t.splice(e, 1), w(t);
+                t.splice(e, 1), k(t);
                 let s = [...G];
                 s.splice(e, 1), P(s);
-                let a = [...k];
+                let a = [...w];
                 a.splice(e, 1), H(a);
                 let i = [...b.socialLinks];
                 i.splice(e, 1), u.t$(n.id, i);
@@ -246,7 +246,7 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             })),
             el = (e, t) => {
                 let n = [...F];
-                (n[e] = t), w(n);
+                (n[e] = t), k(n);
             };
         return (0, s.jsx)('div', {
             className: M.settingsColumn,
@@ -535,9 +535,9 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                             l.SingleSelect,
                                                                             {
                                                                                 className: b.isPublished ? M.socialLinksDropdownMax : M.socialLinksDropdownMin,
-                                                                                options: V(k[t]),
+                                                                                options: V(w[t]),
                                                                                 placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DROPDOWN_PLACEHOLDER,
-                                                                                value: k[t],
+                                                                                value: w[t],
                                                                                 onChange: (e) => ee(e, t),
                                                                                 isDisabled: !j
                                                                             },

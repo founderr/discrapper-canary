@@ -19,9 +19,9 @@ var n = t(735250),
     S = t(565138),
     I = t(374649),
     N = t(908951),
-    m = t(255078),
-    A = t(430824),
-    C = t(509545),
+    A = t(255078),
+    C = t(430824),
+    m = t(509545),
     g = t(580130),
     h = t(55563),
     O = t(551428),
@@ -36,7 +36,7 @@ function L(e) {
     var s, t, a, r;
     let { subscription: c, navigateToSwitchPlan: E } = e,
         {
-            app: m,
+            app: A,
             appIcon: x,
             plan: f,
             storeListing: L,
@@ -45,19 +45,19 @@ function L(e) {
             subscriptionForGuild: F,
             sku: y
         } = (0, o.cj)(
-            [g.Z, O.Z, C.Z, T.Z, A.Z, h.Z],
+            [g.Z, O.Z, m.Z, T.Z, C.Z, h.Z],
             () => {
                 let e = g.Z.getForSubscription(c.id),
                     s = null != e && e.size > 0 ? Array.from(e)[0] : null,
                     t = null == s ? void 0 : s.applicationId,
                     n = c.planId,
-                    a = C.Z.get(n),
+                    a = m.Z.get(n),
                     i = null != t ? T.Z.getApplication(t) : null,
                     r = null != i ? (0, u.y)(i, 100) : null,
                     o = null != a ? O.Z.getForSKU(a.skuId) : null,
                     l = null != a ? (0, p.og)((0, p.T4)(a.price, a.currency), a.interval, a.intervalCount) : null,
                     d = null != o && (0, R.KK)(o.skuFlags),
-                    _ = d && null != s ? A.Z.getGuild(s.guildId) : void 0,
+                    _ = d && null != s ? C.Z.getGuild(s.guildId) : void 0,
                     E = null != o ? h.Z.get(o.skuId) : null;
                 return {
                     app: i,
@@ -101,7 +101,7 @@ function L(e) {
                             children: [
                                 (0, n.jsx)(l.Heading, {
                                     variant: 'heading-md/semibold',
-                                    children: null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_APPLICATION_NAME_UNAVAILABLE
+                                    children: null !== (t = null == A ? void 0 : A.name) && void 0 !== t ? t : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_APPLICATION_NAME_UNAVAILABLE
                                 }),
                                 (0, n.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
@@ -115,12 +115,12 @@ function L(e) {
                 (0, n.jsx)('div', {
                     className: P.headerButtons,
                     children:
-                        null != m &&
+                        null != A &&
                         null != L &&
                         null != y &&
                         (0, n.jsx)(j, {
                             subscription: c,
-                            app: m,
+                            app: A,
                             sku: y,
                             storeListing: L,
                             isCancelled: w,
@@ -201,10 +201,10 @@ function L(e) {
                         })
                 ]
             }),
-            null != m &&
+            null != A &&
                 (null == L ? void 0 : L.benefits) != null &&
                 (0, n.jsx)(B, {
-                    appId: m.id,
+                    appId: A.id,
                     listingBenefits: L.benefits
                 })
         ]
@@ -244,14 +244,14 @@ function j(e) {
     let { app: s, storeListing: i, sku: r, subscription: d, isCancelled: u, guild: T, navigateToSwitchPlan: S } = e,
         I = (0, R.OL)(r),
         { analyticsLocations: N } = (0, _.ZP)(),
-        [A, C] = a.useState(!1),
+        [C, m] = a.useState(!1),
         g = (0, E.q)(s.id),
         O = (0, o.e7)([h.Z], () => h.Z.getParentSKU(i.skuId), [i.skuId]),
         p = a.useMemo(() => (null == O ? [] : (0, f.$)(i.id, O, g)), [i.id, g, O]),
         x = 0 !== p.length,
         M = async () => {
             try {
-                C(!0);
+                m(!0);
                 let { subscription: e } = await (0, c.pl)(d, N);
                 if (null == e) return;
                 (0, l.openModalLazy)(async () => {
@@ -260,11 +260,11 @@ function j(e) {
                         (0, n.jsx)(s, {
                             ...t,
                             storeListing: i,
-                            subscription: m.Z.createFromServer(e)
+                            subscription: A.Z.createFromServer(e)
                         });
                 });
             } finally {
-                C(!1);
+                m(!1);
             }
         };
     return (0, n.jsxs)('div', {
@@ -277,7 +277,7 @@ function j(e) {
                         color: l.Button.Colors.PRIMARY,
                         size: l.Button.Sizes.SMALL,
                         onClick: M,
-                        submitting: A,
+                        submitting: C,
                         children: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RESUME_PLAN
                     })
                   : (0, n.jsx)(l.Button, {

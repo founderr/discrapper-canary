@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return m;
+        return A;
     }
 }),
     t(47120);
@@ -22,24 +22,24 @@ let S = (0, c.hQ)(),
         type: u.d4z.DM
     }),
     N = (0, c.hQ)();
-function m(e) {
-    let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: m, currentBio: A, disabled: C = !1 } = e,
-        [g, h] = a.useState(null != d ? d : A),
+function A(e) {
+    let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: A, currentBio: C, disabled: m = !1 } = e,
+        [g, h] = a.useState(null != d ? d : C),
         [O, p] = a.useState((0, o.JM)(g)),
         R = a.useRef(!1);
     return (
         a.useEffect(() => {
             if (void 0 === d) {
-                let e = (0, o.JM)(A);
-                h(A), p(e);
+                let e = (0, o.JM)(C);
+                h(C), p(e);
             }
-        }, [d, A]),
+        }, [d, C]),
         (0, n.jsxs)(_.Z, {
             title: s,
             titleId: S,
             description: E.Z.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
             errors: t,
-            disabled: C,
+            disabled: m,
             children: [
                 (0, n.jsx)(l.Z, {
                     'aria-describedby': N,
@@ -49,7 +49,7 @@ function m(e) {
                     onChange: function (e, s, t) {
                         s !== g && (h(s), p(t), c(s));
                     },
-                    placeholder: m,
+                    placeholder: A,
                     channel: I,
                     textValue: g,
                     richValue: O,

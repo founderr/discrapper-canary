@@ -1,8 +1,8 @@
 var r = n(690244)('%TypeError%'),
     i = n(116298),
     a = n(125179),
-    s = n(395238),
-    o = n(441596),
+    o = n(395238),
+    s = n(441596),
     l = n(75150),
     u = n(860438),
     c = n(465555),
@@ -11,13 +11,13 @@ var r = n(690244)('%TypeError%'),
     E = n(632384);
 e.exports = function (e, t, n, f, h) {
     var p,
-        I,
-        m = E(e);
-    if ('Undefined' !== m && 'Object' !== m) throw new r('Assertion failed: O must be undefined or an Object');
+        m,
+        I = E(e);
+    if ('Undefined' !== I && 'Object' !== I) throw new r('Assertion failed: O must be undefined or an Object');
     if (!d(t)) throw new r('Assertion failed: P must be a Property Key');
     if ('Boolean' !== E(n)) throw new r('Assertion failed: extensible must be a Boolean');
     if (
-        !s(
+        !o(
             {
                 Type: E,
                 IsDataDescriptor: u,
@@ -29,7 +29,7 @@ e.exports = function (e, t, n, f, h) {
         throw new r('Assertion failed: Desc must be a Property Descriptor');
     if (
         'Undefined' !== E(h) &&
-        !s(
+        !o(
             {
                 Type: E,
                 IsDataDescriptor: u,
@@ -42,10 +42,10 @@ e.exports = function (e, t, n, f, h) {
     if ('Undefined' === E(h))
         return (
             !!n &&
-            ('Undefined' === m ||
+            ('Undefined' === I ||
                 (l(f)
-                    ? i(u, _, o, e, t, f)
-                    : i(u, _, o, e, t, {
+                    ? i(u, _, s, e, t, f)
+                    : i(u, _, s, e, t, {
                           '[[Configurable]]': !!f['[[Configurable]]'],
                           '[[Enumerable]]': !!f['[[Enumerable]]'],
                           '[[Value]]': f['[[Value]]'],
@@ -68,23 +68,23 @@ e.exports = function (e, t, n, f, h) {
             if (('[[Get]]' in f && !_(f['[[Get]]'], h['[[Get]]'])) || ('[[Set]]' in f && !_(f['[[Set]]'], h['[[Set]]']))) return !1;
         } else if (!h['[[Writable]]'] && (('[[Writable]]' in f && f['[[Writable]]']) || ('[[Value]]' in f && !_(f['[[Value]]'], h['[[Value]]'])))) return !1;
     }
-    if ('Undefined' !== m)
+    if ('Undefined' !== I)
         return u(h) && l(f)
             ? ((p = ('[[Configurable]]' in f ? f : h)['[[Configurable]]']),
-              i(u, _, o, e, t, {
+              i(u, _, s, e, t, {
                   '[[Configurable]]': !!p,
-                  '[[Enumerable]]': !!(I = ('[[Enumerable]]' in f ? f : h)['[[Enumerable]]']),
+                  '[[Enumerable]]': !!(m = ('[[Enumerable]]' in f ? f : h)['[[Enumerable]]']),
                   '[[Get]]': ('[[Get]]' in f ? f : h)['[[Get]]'],
                   '[[Set]]': ('[[Set]]' in f ? f : h)['[[Set]]']
               }))
             : l(h) && u(f)
               ? ((p = ('[[Configurable]]' in f ? f : h)['[[Configurable]]']),
-                i(u, _, o, e, t, {
+                i(u, _, s, e, t, {
                     '[[Configurable]]': !!p,
-                    '[[Enumerable]]': !!(I = ('[[Enumerable]]' in f ? f : h)['[[Enumerable]]']),
+                    '[[Enumerable]]': !!(m = ('[[Enumerable]]' in f ? f : h)['[[Enumerable]]']),
                     '[[Value]]': ('[[Value]]' in f ? f : h)['[[Value]]'],
                     '[[Writable]]': !!('[[Writable]]' in f ? f : h)['[[Writable]]']
                 }))
-              : i(u, _, o, e, t, f);
+              : i(u, _, s, e, t, f);
     return !0;
 };

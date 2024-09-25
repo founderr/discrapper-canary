@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return T;
     }
 }),
     n(47120);
@@ -76,7 +76,7 @@ function N(e) {
           }))
         : C;
 }
-function S(e) {
+function x(e) {
     let { activity: t, embeddedApp: n, onOpenSpotifyTrack: l } = e,
         r = null == t ? void 0 : t.details,
         a = null == t ? void 0 : t.name,
@@ -99,7 +99,7 @@ function S(e) {
         children: s
     });
 }
-function x(e) {
+function S(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: l } = e,
         r = null == t ? void 0 : t.details,
         s = null == t ? void 0 : t.state,
@@ -138,7 +138,7 @@ function v(e) {
               children: n
           });
 }
-function T(e) {
+function Z(e) {
     let { activity: t } = e;
     if (null == t || !(0, c.Z)(t)) return null;
     let { timestamps: n } = t;
@@ -152,11 +152,11 @@ function T(e) {
         singleLine: !0
     });
 }
-function Z(e) {
+function T(e) {
     let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: _ } = e,
         m = [];
     null != n ? (m = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (m = u.map((e) => e.user.id));
-    let Z = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(g.lm)),
+    let T = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(g.lm)),
         b = null != n || (0, c.Z)(t),
         A = l.useMemo(() => {
             let e = new Map();
@@ -186,12 +186,12 @@ function Z(e) {
                           (0, i.jsxs)('div', {
                               className: I.detailsAndAvatarsContainer,
                               children: [
-                                  (0, i.jsx)(S, {
+                                  (0, i.jsx)(x, {
                                       activity: t,
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: h
                                   }),
-                                  (0, i.jsx)(x, {
+                                  (0, i.jsx)(S, {
                                       activity: t,
                                       user: r,
                                       onOpenSpotifyArtist: p
@@ -201,7 +201,7 @@ function Z(e) {
                                       (0, i.jsx)(d.Z, {
                                           className: I.usersSummary,
                                           guildId: a.guild_id,
-                                          users: Z,
+                                          users: T,
                                           size: E,
                                           max: 7,
                                           renderUser: (e) => {
@@ -232,7 +232,7 @@ function Z(e) {
                           })
                       ]
                   }),
-                  (0, i.jsx)(T, { activity: t })
+                  (0, i.jsx)(Z, { activity: t })
               ]
           })
         : null;

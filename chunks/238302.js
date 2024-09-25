@@ -1,9 +1,9 @@
 n.d(t, {
     Kq: function () {
-        return s;
+        return o;
     },
     Mo: function () {
-        return o;
+        return s;
     },
     kj: function () {
         return l;
@@ -28,10 +28,10 @@ let i = (e) => {
             presetId: null
         });
     },
-    s = () => {
+    o = () => {
         r.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_OPEN' });
     },
-    o = () => {
+    s = () => {
         r.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_CLOSE' });
     },
     l = () => {

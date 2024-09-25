@@ -44,18 +44,18 @@ let I = 0,
     },
     N = (e) => {
         let { profileEffects: t } = e;
-        (f = !1), (r = void 0), (i = Date.now() + T), (I = 0), A(0 === t.length ? _ : t);
+        (r = void 0), (i = Date.now() + T), (I = 0), A(0 === t.length ? _ : t), (f = !1);
     },
     O = (e) => {
         let { error: t } = e;
-        (f = !1), (r = t), (i = Date.now() + Math.min(g * 2 ** I, S)), ++I, A(_);
+        (r = t), (i = Date.now() + Math.min(g * 2 ** I, S)), ++I, A(_), (f = !1);
     },
     R = (e) => {
         let { id: t } = e;
         m = t;
     },
     C = () => {
-        (f = !1), A(_), (m = null), (i = void 0);
+        A(_), (m = null), (i = void 0), (f = !1);
     },
     y = (e) => {
         C();

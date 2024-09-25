@@ -1,9 +1,9 @@
 n.d(t, {
     Xo: function () {
-        return s;
+        return o;
     },
     pB: function () {
-        return o;
+        return s;
     }
 });
 var r = n(818083),
@@ -21,12 +21,12 @@ let a = (0, r.B)({
         }
     ]
 });
-function s(e) {
+function o(e) {
     let { location: t } = e,
         n = (0, i.C3)({ location: t });
     return a.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled || n;
 }
-function o(e) {
+function s(e) {
     let { location: t } = e,
         n = (0, i.GW)({ location: t });
     return a.getCurrentConfig({ location: t }).enabled || n;

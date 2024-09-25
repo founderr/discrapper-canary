@@ -47,15 +47,15 @@ t.exports = function (t, e) {
             return;
         }
         var B = b.getSelection(),
-            R = B.merge({
+            L = B.merge({
                 anchorOffset: D,
                 focusOffset: O,
                 isBackward: !1
             }),
-            L = T.getEntityAt(D),
-            N = u(L) ? K.getEntity(L) : null,
+            R = T.getEntityAt(D),
+            N = u(R) ? K.getEntity(R) : null,
             F = 'MUTABLE' === (null != N ? N.getMutability() : null),
-            z = n.replaceText(K, R, _, T.getInlineStyleAt(D), F ? T.getEntityAt(D) : null);
+            z = n.replaceText(K, L, _, T.getInlineStyleAt(D), F ? T.getEntityAt(D) : null);
         if (f) (r = d.anchorOffset), (h = (p = D + Math.min(r, (a = d.focusOffset))) + Math.abs(r - a)), (r = p), (a = h);
         else {
             var P = _.length - M.length;

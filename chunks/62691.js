@@ -1,88 +1,88 @@
 var r,
-    o,
-    a,
     i,
+    a,
+    o,
     s = n(668530),
-    c = n(156741),
-    l = n(476508),
-    u = n(735471),
+    l = n(156741),
+    u = n(476508),
+    c = n(735471),
     d = n(141603),
-    p = n(821819),
-    h = n(439230),
+    _ = n(821819),
+    E = n(439230),
     f = n(780524),
-    m = n(535538),
-    y = n(274745),
-    v = n(378636),
-    g = n(42433),
-    b = s.setImmediate,
-    _ = s.clearImmediate,
-    k = s.process,
-    C = s.Dispatch,
-    Z = s.Function,
-    w = s.MessageChannel,
-    S = s.String,
-    N = 0,
-    x = {},
-    P = 'onreadystatechange';
-p(function () {
+    h = n(535538),
+    p = n(274745),
+    m = n(378636),
+    I = n(42433),
+    T = s.setImmediate,
+    g = s.clearImmediate,
+    S = s.process,
+    A = s.Dispatch,
+    v = s.Function,
+    N = s.MessageChannel,
+    O = s.String,
+    R = 0,
+    C = {},
+    y = 'onreadystatechange';
+_(function () {
     r = s.location;
 });
-var A = function (e) {
-        if (d(x, e)) {
-            var t = x[e];
-            delete x[e], t();
+var b = function (e) {
+        if (d(C, e)) {
+            var t = C[e];
+            delete C[e], t();
         }
     },
-    R = function (e) {
+    L = function (e) {
         return function () {
-            A(e);
+            b(e);
         };
     },
-    F = function (e) {
-        A(e.data);
+    D = function (e) {
+        b(e.data);
     },
-    O = function (e) {
-        s.postMessage(S(e), r.protocol + '//' + r.host);
+    M = function (e) {
+        s.postMessage(O(e), r.protocol + '//' + r.host);
     };
-(!b || !_) &&
-    ((b = function (e) {
-        y(arguments.length, 1);
-        var t = u(e) ? e : Z(e),
+(!T || !g) &&
+    ((T = function (e) {
+        p(arguments.length, 1);
+        var t = c(e) ? e : v(e),
             n = f(arguments, 1);
         return (
-            (x[++N] = function () {
-                c(t, void 0, n);
+            (C[++R] = function () {
+                l(t, void 0, n);
             }),
-            o(N),
-            N
+            i(R),
+            R
         );
     }),
-    (_ = function (e) {
-        delete x[e];
+    (g = function (e) {
+        delete C[e];
     }),
-    g
-        ? (o = function (e) {
-              k.nextTick(R(e));
+    I
+        ? (i = function (e) {
+              S.nextTick(L(e));
           })
-        : C && C.now
-          ? (o = function (e) {
-                C.now(R(e));
+        : A && A.now
+          ? (i = function (e) {
+                A.now(L(e));
             })
-          : w && !v
-            ? ((i = (a = new w()).port2), (a.port1.onmessage = F), (o = l(i.postMessage, i)))
-            : s.addEventListener && u(s.postMessage) && !s.importScripts && r && 'file:' !== r.protocol && !p(O)
-              ? ((o = O), s.addEventListener('message', F, !1))
-              : (o =
-                    P in m('script')
+          : N && !m
+            ? ((o = (a = new N()).port2), (a.port1.onmessage = D), (i = u(o.postMessage, o)))
+            : s.addEventListener && c(s.postMessage) && !s.importScripts && r && 'file:' !== r.protocol && !_(M)
+              ? ((i = M), s.addEventListener('message', D, !1))
+              : (i =
+                    y in h('script')
                         ? function (e) {
-                              h.appendChild(m('script'))[P] = function () {
-                                  h.removeChild(this), A(e);
+                              E.appendChild(h('script'))[y] = function () {
+                                  E.removeChild(this), b(e);
                               };
                           }
                         : function (e) {
-                              setTimeout(R(e), 0);
+                              setTimeout(L(e), 0);
                           })),
     (e.exports = {
-        set: b,
-        clear: _
+        set: T,
+        clear: g
     });

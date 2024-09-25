@@ -10,9 +10,9 @@ function a(e, t) {
     let n = (0, i.Of)(e.user.id, t);
     if (null == n) return;
     let a = r.QK.getSetting(),
-        s = n.getBannerURL({
+        o = n.getBannerURL({
             canAnimate: a,
             size: 480
         });
-    if (null != s) new Image().src = s;
+    if (null != o) new Image().src = o;
 }

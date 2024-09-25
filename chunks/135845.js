@@ -1,73 +1,73 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return m;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(512722),
-    a = n.n(s),
-    r = n(442837),
-    l = n(955415),
-    o = n(131704),
-    c = n(601964),
-    u = n(199902),
+var i = n(512722),
+    a = n.n(i),
+    o = n(442837),
+    s = n(955415),
+    l = n(131704),
+    u = n(601964),
+    c = n(199902),
     d = n(914010),
     _ = n(358595),
     E = n(981631),
-    I = n(245335),
-    m = n(689938),
-    T = n(691784);
-function h(e) {
+    f = n(245335),
+    h = n(689938),
+    p = n(691784);
+function m(e) {
     let t,
         n,
-        s,
-        { invite: h, currentUserId: N, guild: f, onTransitionToInviteChannel: C, onAcceptInstantInvite: p } = e,
-        g = null == f ? void 0 : f.id,
-        A = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
-        S = (0, r.e7)([u.Z], () => (null != h && null != h.target_user ? u.Z.getActiveStreamForUser(h.target_user.id, g) : null), [h, g]),
-        x = (0, r.e7)([u.Z], () => (null != h && null != h.target_user ? u.Z.getStreamForUser(h.target_user.id, g) : null), [h, g]),
-        R = null != h && h.target_type === I.Iq.STREAM && null != h.target_user && null != S,
-        O = null != h && null != x && null != h.channel && null != h.guild && x.channelId === h.channel.id && x.guildId === h.guild.id;
-    a()(null != h, 'Invite cannot be null');
-    let { target_type: M, target_user: v } = h;
-    a()(M === I.Iq.STREAM && null != v, 'invalid streaming invite');
-    let L = N === v.id,
-        Z = h.state === E.r2o.ACCEPTING,
-        P = null != f;
-    if (null == f) {
-        if (null == h.guild) return (0, i.jsx)(_.Z, {});
-        f = new c.ZP(h.guild);
+        i,
+        { invite: m, currentUserId: I, guild: T, onTransitionToInviteChannel: g, onAcceptInstantInvite: S } = e,
+        A = null == T ? void 0 : T.id,
+        v = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
+        N = (0, o.e7)([c.Z], () => (null != m && null != m.target_user ? c.Z.getActiveStreamForUser(m.target_user.id, A) : null), [m, A]),
+        O = (0, o.e7)([c.Z], () => (null != m && null != m.target_user ? c.Z.getStreamForUser(m.target_user.id, A) : null), [m, A]),
+        R = null != m && m.target_type === f.Iq.STREAM && null != m.target_user && null != N,
+        C = null != m && null != O && null != m.channel && null != m.guild && O.channelId === m.channel.id && O.guildId === m.guild.id;
+    a()(null != m, 'Invite cannot be null');
+    let { target_type: y, target_user: b } = m;
+    a()(y === f.Iq.STREAM && null != b, 'invalid streaming invite');
+    let L = I === b.id,
+        D = m.state === E.r2o.ACCEPTING,
+        M = null != T;
+    if (null == T) {
+        if (null == m.guild) return (0, r.jsx)(_.Z, {});
+        T = new u.ZP(m.guild);
     }
-    let b = null != h.channel ? (0, o.jD)(h.channel) : null,
-        D = R ? C : p;
-    P && !O ? (s = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: v.username })) : ((t = m.Z.Messages.WATCH), (n = l.Z.Button.Colors.GREEN), R && ((t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = l.Z.Button.Colors.PRIMARY)), (s = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: v.username })));
-    let j = A === f.id && null != b ? (0, i.jsx)(l.Z.Channel, { channel: b }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: f.name });
-    return (0, i.jsxs)(l.Z, {
+    let P = null != m.channel ? (0, l.jD)(m.channel) : null,
+        U = R ? g : S;
+    M && !C ? (i = L ? h.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : h.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: b.username })) : ((t = h.Z.Messages.WATCH), (n = s.Z.Button.Colors.GREEN), R && ((t = h.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = s.Z.Button.Colors.PRIMARY)), (i = L ? h.Z.Messages.INVITE_BUTTON_STREAMER : h.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: b.username })));
+    let w = v === T.id && null != P ? (0, r.jsx)(s.Z.Channel, { channel: P }) : h.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: T.name });
+    return (0, r.jsxs)(s.Z, {
         children: [
-            (0, i.jsx)(l.Z.Header, { text: m.Z.Messages.INVITE_BUTTON_TITLE_STREAMING }),
-            (0, i.jsxs)(l.Z.Body, {
+            (0, r.jsx)(s.Z.Header, { text: h.Z.Messages.INVITE_BUTTON_TITLE_STREAMING }),
+            (0, r.jsxs)(s.Z.Body, {
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: T.headerLine,
+                    (0, r.jsxs)('div', {
+                        className: p.headerLine,
                         children: [
-                            (0, i.jsx)(l.Z.Icon, {
-                                guild: f,
-                                onClick: P && O ? D : void 0
+                            (0, r.jsx)(s.Z.Icon, {
+                                guild: T,
+                                onClick: M && C ? U : void 0
                             }),
-                            (0, i.jsx)(l.Z.Info, {
-                                title: s,
-                                onClick: P && O ? D : void 0,
-                                children: j
+                            (0, r.jsx)(s.Z.Info, {
+                                title: i,
+                                onClick: M && C ? U : void 0,
+                                children: w
                             })
                         ]
                     }),
-                    O
-                        ? (0, i.jsx)(l.Z.Button, {
-                              disabled: P && !O,
-                              onClick: D,
-                              submitting: Z,
-                              isDisabled: R && O,
+                    C
+                        ? (0, r.jsx)(s.Z.Button, {
+                              disabled: M && !C,
+                              onClick: U,
+                              submitting: D,
+                              isDisabled: R && C,
                               color: n,
                               children: t
                           })

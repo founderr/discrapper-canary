@@ -2,11 +2,11 @@ n.d(t, {
     Z: function () {
         return s;
     }
-}),
-    n(47120);
-var r = n(445686),
-    i = n(379649);
-function a(e, t, n) {
+});
+var r = n(47120);
+var i = n(445686),
+    a = n(379649);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ class s {
             this.participation.reset(),
             this.connected.reset(),
             this.connected.start(),
-            this.connection.on(r.S.Speaking, (e, t, n) => {
+            this.connection.on(i.S.Speaking, (e, t, n) => {
                 this.userId === e ? this.onSpeaking(0 !== t) : this.onListening(0 !== t, e);
             });
     }
@@ -48,7 +48,7 @@ class s {
             duration_connected_ms: this.connected.elapsed().asMilliseconds()
         };
     }
-    constructor(e, t, n = i.Z_) {
-        a(this, 'userId', void 0), a(this, 'connection', void 0), a(this, 'timestampProducer', void 0), a(this, 'listeningUsers', void 0), a(this, 'listening', void 0), a(this, 'speaking', void 0), a(this, 'participation', void 0), a(this, 'connected', void 0), (this.userId = e), (this.connection = t), (this.timestampProducer = n), (this.listeningUsers = new Set()), (this.listening = new i.G9(this.timestampProducer)), (this.speaking = new i.G9(this.timestampProducer)), (this.participation = new i.G9(this.timestampProducer)), (this.connected = new i.G9(this.timestampProducer));
+    constructor(e, t, n = a.Z_) {
+        o(this, 'userId', void 0), o(this, 'connection', void 0), o(this, 'timestampProducer', void 0), o(this, 'listeningUsers', void 0), o(this, 'listening', void 0), o(this, 'speaking', void 0), o(this, 'participation', void 0), o(this, 'connected', void 0), (this.userId = e), (this.connection = t), (this.timestampProducer = n), (this.listeningUsers = new Set()), (this.listening = new a.G9(this.timestampProducer)), (this.speaking = new a.G9(this.timestampProducer)), (this.participation = new a.G9(this.timestampProducer)), (this.connected = new a.G9(this.timestampProducer));
     }
 }

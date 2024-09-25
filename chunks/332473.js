@@ -1,20 +1,20 @@
 n.d(t, {
     b: function () {
-        return l;
+        return s;
     },
     e: function () {
-        return r;
+        return o;
     }
 });
-var i = n(399606),
-    s = n(594174),
+var r = n(399606),
+    i = n(594174),
     a = n(918505);
-let r = () => o(s.default.getCurrentUser(), (0, a.JH)()),
-    l = () =>
-        o(
-            (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+let o = () => l(i.default.getCurrentUser(), (0, a.JH)()),
+    s = () =>
+        l(
+            (0, r.e7)([i.default], () => i.default.getCurrentUser()),
             (0, a.o9)()
         );
-function o(e, t) {
+function l(e, t) {
     return !(null == e || e.isPomelo()) && !!e.hasVerifiedEmailOrPhone() && !!t && !0;
 }

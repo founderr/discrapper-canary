@@ -26,8 +26,8 @@ var i = n(399606),
     f = n(74538),
     A = n(860489),
     S = n(471309),
-    h = n(494127),
-    M = n(314684),
+    M = n(494127),
+    h = n(314684),
     x = n(687362),
     b = n(119269),
     O = n(467685),
@@ -79,18 +79,18 @@ t.Z = () => {
         eI = null != eT ? f.ZP.getSkuIdForPlan(eT.planId) : null,
         eR = eI === Z.Si.TIER_2,
         em = eI === Z.Si.TIER_0,
-        { flipped: eg } = (0, h.JP)(),
-        { flipped: eN } = (0, h.as)(),
-        eC = (0, M.nY)({ showAnimations: !0 }),
+        { flipped: eg } = (0, M.JP)(),
+        { flipped: eN } = (0, M.as)(),
+        eC = (0, h.nY)({ showAnimations: !0 }),
         ep = null != eC ? eC.initialPercentage : void 0,
         ef = null != eC ? eC.percentage : void 0,
         eA = (0, E.Z)(m.Z),
         eS = (0, x.Z)(),
-        eh = (0, T.Z)({
+        eM = (0, T.Z)({
             scrollPosition: B.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
-        eM = () => {
+        eh = () => {
             c.Z.open(D.oAB.VOICE, B.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
@@ -207,7 +207,7 @@ t.Z = () => {
                       subtitle: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
                       description: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                       descriptionCta: j.Z.Messages.TAKE_ME_THERE,
-                      onCtaClick: eM,
+                      onCtaClick: eh,
                       perkImage: $
                   }
                 : {
@@ -224,7 +224,7 @@ t.Z = () => {
                       subtitle: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
                       description: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                       descriptionCta: j.Z.Messages.TAKE_ME_THERE,
-                      onCtaClick: eM,
+                      onCtaClick: eh,
                       perkImage: ee
                   }
                 : {
@@ -263,7 +263,7 @@ t.Z = () => {
                 subtitle: j.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
                 description: j.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
                 descriptionCta: j.Z.Messages.TAKE_ME_THERE,
-                onCtaClick: eh,
+                onCtaClick: eM,
                 perkImage: V
             },
             remixing: eR
@@ -460,7 +460,7 @@ t.Z = () => {
                 subtitle: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PRORFILES_SUBTITLE,
                 descriptionCta: eR ? j.Z.Messages.TAKE_ME_THERE : j.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
                 isPremiumGetCta: !eR,
-                onCtaClick: eR ? eh : void 0,
+                onCtaClick: eR ? eM : void 0,
                 perkImage: ei
             }
         };

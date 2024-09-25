@@ -1,8 +1,8 @@
 var r = n(161581),
     i = n(926515),
     a = n(192291),
-    s = n(49693),
-    o = n(18316),
+    o = n(49693),
+    s = n(18316),
     l = n(339718),
     u = n(936940),
     c = r.RangeError,
@@ -26,7 +26,7 @@ var r = n(161581),
             3 !== e[1]
         );
     }),
-    I =
+    m =
         p &&
         a.NATIVE_ARRAY_BUFFER_VIEWS &&
         u(function () {
@@ -37,14 +37,14 @@ h(
     'set',
     function (e) {
         f(this);
-        var t = o(arguments.length > 1 ? arguments[1] : void 0, 1),
+        var t = s(arguments.length > 1 ? arguments[1] : void 0, 1),
             n = l(e);
         if (p) return i(E, this, n, t);
         var r = this.length,
-            a = s(n),
+            a = o(n),
             u = 0;
         if (a + t > r) throw c('Wrong length');
         for (; u < a; ) this[t + u] = n[u++];
     },
-    !p || I
+    !p || m
 );

@@ -1,26 +1,26 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
-var l = t(470079),
-    i = t(902704),
-    a = t(232567),
-    r = t(720202),
-    o = t(594174);
-function s(e) {
-    let { entry: n, channel: t } = e,
-        s = l.useRef([]);
+var r = n(470079),
+    i = n(902704),
+    a = n(232567),
+    o = n(720202),
+    s = n(594174);
+function l(e) {
+    let { entry: t, channel: n } = e,
+        l = r.useRef([]);
     return (
-        l.useEffect(() => {
-            if (!(0, i.E)(s.current, n.participants))
-                (s.current = n.participants),
-                    n.participants
-                        .filter((e) => null == o.default.getUser(e))
+        r.useEffect(() => {
+            if (!(0, i.E)(l.current, t.participants))
+                (l.current = t.participants),
+                    t.participants
+                        .filter((e) => null == s.default.getUser(e))
                         .forEach((e) => {
-                            null == t.guild_id ? (0, a.PR)(e) : r.Z.requestMember(t.guild_id, e);
+                            null == n.guild_id ? (0, a.PR)(e) : o.Z.requestMember(n.guild_id, e);
                         });
-        }, [n, t.guild_id]),
+        }, [t, n.guild_id]),
         {}
     );
 }

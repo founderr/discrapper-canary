@@ -1,59 +1,65 @@
 n.d(t, {
     dY: function () {
-        return S;
+        return D;
     },
     kC: function () {
-        return m;
+        return y;
     },
     l3: function () {
-        return g;
+        return M;
     },
     o3: function () {
-        return T;
+        return L;
     },
     vP: function () {
-        return A;
+        return P;
     }
-}),
-    n(789020),
-    n(315314),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120),
-    n(653041);
-var r = n(392711),
-    i = n.n(r),
-    a = n(913527),
-    s = n.n(a),
-    o = n(866442),
-    l = n(709054),
-    u = n(981631),
-    c = n(817384);
-let d = /sketchfab/i,
-    _ = /^https:\/\/sketchfab\.com/i,
-    E = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-    f = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-    h = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
-function p(e) {
+});
+var r = n(789020);
+var i = n(315314);
+var a = n(610138);
+var o = n(216116);
+var s = n(78328);
+var l = n(815648);
+var u = n(47120);
+var c = n(653041);
+var d = n(392711),
+    _ = n.n(d),
+    E = n(913527),
+    f = n.n(E),
+    h = n(866442),
+    p = n(709054),
+    m = n(981631),
+    I = n(817384);
+let T = /sketchfab/i,
+    g = /^https:\/\/sketchfab\.com/i,
+    S = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
+    A = 1492472454139,
+    v = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+    N = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
+function O(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function I(e) {
-    let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: s } = e;
+function R(e, t, n) {
+    if ((null != t && T.test(t.name)) || g.test(n.url)) return !1;
+    let r = null != n.proxy_url || /^https:/i.test(n.url);
+    return null != e && p.default.extractTimestamp(e) < A && (r = r && null != t && S.test(t.name)), r;
+}
+function C(e) {
+    let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: o } = e;
     return {
         url: t,
         proxyURL: n,
         width: r,
         height: i,
         placeholder: a,
-        placeholderVersion: s
+        placeholderVersion: o
     };
 }
-function m(e, t, n) {
+function y(e, t, n) {
     let r = {
-        id: i().uniqueId('embed_'),
+        id: _().uniqueId('embed_'),
         url: n.url,
         type: n.type,
         rawTitle: n.title,
@@ -83,49 +89,34 @@ function m(e, t, n) {
                 name: n.provider.name,
                 url: n.provider.url
             }),
-        null != n.timestamp && (r.timestamp = s()(new Date(n.timestamp))),
-        null != n.color && (r.color = (0, o.ho)(n.color, !0)),
-        null != n.thumbnail && p(n.thumbnail))
+        null != n.timestamp && (r.timestamp = f()(new Date(n.timestamp))),
+        null != n.color && (r.color = (0, h.ho)(n.color, !0)),
+        null != n.thumbnail && O(n.thumbnail))
     )
         switch (r.type) {
-            case u.hBH.ARTICLE:
-            case u.hBH.IMAGE:
-                r.image = I(n.thumbnail);
+            case m.hBH.ARTICLE:
+            case m.hBH.IMAGE:
+                r.image = C(n.thumbnail);
                 break;
             default:
-                r.thumbnail = I(n.thumbnail);
+                r.thumbnail = C(n.thumbnail);
         }
     if (
-        (null != n.image && p(n.image) && (r.image = I(n.image)),
+        (null != n.image && O(n.image) && (r.image = C(n.image)),
         null != n.video &&
             (null == r.thumbnail &&
                 null != n.video.proxy_url &&
-                p(n.video) &&
+                O(n.video) &&
                 (r.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
-                    url: (function (e, t) {
-                        let n = new URL(e);
-                        return (
-                            Object.keys(t).forEach((e) => {
-                                n.searchParams.set(e, t[e]);
-                            }),
-                            n.toString()
-                        );
-                    })(n.video.proxy_url, { format: 'webp' })
+                    url: b(n.video.proxy_url, { format: 'webp' })
                 }),
-            null != r.thumbnail &&
-                p(n.video) &&
-                (function (e, t, n) {
-                    if ((null != t && d.test(t.name)) || _.test(n.url)) return !1;
-                    let r = null != n.proxy_url || /^https:/i.test(n.url);
-                    return null != e && 1492472454139 > l.default.extractTimestamp(e) && (r = r && null != t && E.test(t.name)), r;
-                })(t, n.provider, n.video) &&
-                (r.video = I(n.video))),
-        c.k.has(r.type))
+            null != r.thumbnail && O(n.video) && R(t, n.provider, n.video) && (r.video = C(n.video))),
+        I.k.has(r.type))
     ) {
-        var a;
-        let e = null !== (a = n.fields) && void 0 !== a ? a : [];
+        var i;
+        let e = null !== (i = n.fields) && void 0 !== i ? i : [];
         r.fields = e.map((e) => {
             let { name: t, value: n, inline: r } = e;
             return {
@@ -137,7 +128,16 @@ function m(e, t, n) {
     } else r.fields = [];
     return r;
 }
-function T(e) {
+function b(e, t) {
+    let n = new URL(e);
+    return (
+        Object.keys(t).forEach((e) => {
+            n.searchParams.set(e, t[e]);
+        }),
+        n.toString()
+    );
+}
+function L(e) {
     let t = new Map(),
         n = [];
     return (
@@ -156,14 +156,14 @@ function T(e) {
         n
     );
 }
-function S(e) {
+function D(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
-    return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == a));
+    return (null != t || null != n) && (r === m.hBH.GIFV || (r !== m.hBH.RICH && null == i && null == a));
 }
-function g(e) {
-    return e.type === u.hBH.ARTICLE && null != e.url && (h.test(e.url) || f.test(e.url));
+function M(e) {
+    return e.type === m.hBH.ARTICLE && null != e.url && (N.test(e.url) || v.test(e.url));
 }
-function A(e, t, n) {
+function P(e, t, n) {
     var r;
     return null != t && null != n
         ? {

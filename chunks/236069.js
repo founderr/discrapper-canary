@@ -1,32 +1,32 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return u;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(735250);
 n(470079);
-var s = n(481060),
-    a = n(295474),
-    r = n(689938),
+var a = n(481060),
+    o = n(295474),
+    s = n(689938),
     l = n(569252);
-function o(e) {
-    let { guildId: t, analyticsLocations: n, analyticsLocation: o } = e,
-        [c, u] = (0, a.ww)({
+function u(e) {
+    let { guildId: t, analyticsLocations: n, analyticsLocation: r } = e,
+        [u, c] = (0, o.ww)({
             guildId: t,
             analyticsLocations: n,
-            analyticsLocation: o,
+            analyticsLocation: r,
             openWithoutBackstack: !0
         }),
-        d = u ? r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE : r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_NO_PERMS,
-        _ = u ? r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_CTA : r.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_ACCOUNT_USERNAME_CTA;
-    return (0, i.jsxs)(s.Notice, {
-        color: s.NoticeColors.CUSTOM,
+        d = c ? s.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE : s.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_NO_PERMS,
+        _ = c ? s.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_CTA : s.Z.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_ACCOUNT_USERNAME_CTA;
+    return (0, i.jsxs)(a.Notice, {
+        color: a.NoticeColors.CUSTOM,
         className: l.quarantineNotice,
         children: [
             d,
-            (0, i.jsx)(s.NoticeButton, {
-                onClick: c,
+            (0, i.jsx)(a.NoticeButton, {
+                onClick: u,
                 children: _
             })
         ]

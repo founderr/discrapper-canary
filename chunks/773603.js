@@ -1,8 +1,8 @@
 var r = n(147018),
     i = n(992051),
     a = n(955903),
-    s = n(936940),
-    o = n(545576),
+    o = n(936940),
+    s = n(545576),
     l = n(354848),
     u = n(344135),
     c = n(457110),
@@ -16,7 +16,7 @@ if (
             real: !0,
             forced:
                 !!a &&
-                s(function () {
+                o(function () {
                     _.finally.call(
                         {
                             then: function () {}
@@ -27,7 +27,7 @@ if (
         },
         {
             finally: function (e) {
-                var t = u(this, o('Promise')),
+                var t = u(this, s('Promise')),
                     n = l(e);
                 return this.then(
                     n
@@ -50,6 +50,6 @@ if (
     ),
     !i && l(a))
 ) {
-    var E = o('Promise').prototype.finally;
+    var E = s('Promise').prototype.finally;
     _.finally !== E && d(_, 'finally', E, { unsafe: !0 });
 }

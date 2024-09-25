@@ -9,8 +9,8 @@ var i = s(442837),
     o = s(979264),
     l = s(699516),
     r = s(5192),
-    c = s(648052),
-    a = s(681837),
+    a = s(648052),
+    c = s(681837),
     d = s(91433),
     u = s(502762),
     _ = s(530),
@@ -36,8 +36,8 @@ function Z(e) {
                 nickname: r.ZP.getName(null == p ? void 0 : p.guildId, h, s),
                 pronouns: null == p ? void 0 : p.pronouns,
                 nicknameVariant: 'heading-xl/bold',
-                nicknameIcons: (0, t.jsx)(a.Z, { userId: s.id }),
-                tags: (0, t.jsx)(c.Z, {
+                nicknameIcons: (0, t.jsx)(c.Z, { userId: s.id }),
+                tags: (0, t.jsx)(a.Z, {
                     displayProfile: p,
                     profileType: f.y0.FULL_SIZE,
                     onClose: g

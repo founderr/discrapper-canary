@@ -4,27 +4,27 @@ e.exports.parse = function (e) {
     t.shift();
     var n = null,
         r = [];
-    t[2] && ((n = (s = t[2].split('-')).shift()), (r = s));
+    t[2] && ((n = (o = t[2].split('-')).shift()), (r = o));
     var i = [];
     t[5] && (i = t[5].split('-')).shift();
     var a = [];
     if (t[6]) {
-        (s = t[6].split('-')).shift();
-        for (var s, o, l = []; s.length; ) {
-            var u = s.shift();
+        (o = t[6].split('-')).shift();
+        for (var o, s, l = []; o.length; ) {
+            var u = o.shift();
             1 === u.length
-                ? o
+                ? s
                     ? (a.push({
-                          singleton: o,
+                          singleton: s,
                           extension: l
                       }),
-                      (o = u),
+                      (s = u),
                       (l = []))
-                    : (o = u)
+                    : (s = u)
                 : l.push(u);
         }
         a.push({
-            singleton: o,
+            singleton: s,
             extension: l
         });
     }

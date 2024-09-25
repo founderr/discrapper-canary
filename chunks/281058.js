@@ -1,8 +1,8 @@
 var r,
     i = n(442837),
     a = n(570140),
-    s = n(626135),
-    o = n(761274),
+    o = n(626135),
+    s = n(761274),
     l = n(981631);
 function u(e, t, n) {
     return (
@@ -27,7 +27,7 @@ class d extends (r = i.ZP.DeviceSettingsStore) {
     }
     hasPermission(e) {
         let t = c.permissionStates[e];
-        return null != t && t === o.PQ.ACCEPTED;
+        return null != t && t === s.PQ.ACCEPTED;
     }
     handleSetNativePermission(e) {
         let { state: t, permissionType: n } = e,
@@ -35,10 +35,10 @@ class d extends (r = i.ZP.DeviceSettingsStore) {
             i = r[n];
         (r[n] = t),
             i !== t &&
-                s.default.track(l.rMx.PERMISSIONS_ACKED, {
+                o.default.track(l.rMx.PERMISSIONS_ACKED, {
                     type: n,
                     action: t,
-                    previous_action: null != i ? i : o.PQ.NONE
+                    previous_action: null != i ? i : s.PQ.NONE
                 });
     }
     constructor() {

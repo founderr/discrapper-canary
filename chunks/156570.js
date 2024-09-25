@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return l;
     }
-}),
-    n(789020);
-var r = n(81825),
-    i = n(218946),
-    a = n(598077);
+});
+var r = n(789020);
+var i = n(81825),
+    a = n(218946),
+    o = n(598077);
 function s(e, t, n) {
     return (
         t in e
@@ -20,10 +20,10 @@ function s(e, t, n) {
         e
     );
 }
-class o extends r.Z {
+class l extends i.Z {
     static createFromServer(e) {
         let t = e.staff_notes;
-        return new o({
+        return new l({
             id: e.id,
             applicationId: e.sku.application_id,
             skuId: e.sku.id,
@@ -41,12 +41,12 @@ class o extends r.Z {
                           youtubeVideoId: e.youtube_video_id
                       }))
                     : null,
-            assets: null != e.assets ? e.assets.map(i.m) : null,
+            assets: null != e.assets ? e.assets.map(a.m) : null,
             staffNotes:
                 null != t
                     ? {
                           content: t.content,
-                          user: null != t.user ? new a.Z(t.user) : null
+                          user: null != t.user ? new o.Z(t.user) : null
                       }
                     : null,
             guild:
@@ -59,14 +59,14 @@ class o extends r.Z {
                           approximatePresenceCount: e.guild.approximate_presence_count
                       }
                     : null,
-            thumbnail: null != e.thumbnail ? (0, i.m)(e.thumbnail) : null,
-            previewVideo: null != e.preview_video ? (0, i.m)(e.preview_video) : null,
-            headerBackground: null != e.header_background ? (0, i.m)(e.header_background) : null,
-            headerLogoDarkTheme: null != e.header_logo_dark_theme ? (0, i.m)(e.header_logo_dark_theme) : null,
-            headerLogoLightTheme: null != e.header_logo_light_theme ? (0, i.m)(e.header_logo_light_theme) : null,
-            boxArt: null != e.box_art ? (0, i.m)(e.box_art) : null,
-            heroBackground: null != e.hero_background ? (0, i.m)(e.hero_background) : null,
-            heroVideo: null != e.hero_video ? (0, i.m)(e.hero_video) : null,
+            thumbnail: null != e.thumbnail ? (0, a.m)(e.thumbnail) : null,
+            previewVideo: null != e.preview_video ? (0, a.m)(e.preview_video) : null,
+            headerBackground: null != e.header_background ? (0, a.m)(e.header_background) : null,
+            headerLogoDarkTheme: null != e.header_logo_dark_theme ? (0, a.m)(e.header_logo_dark_theme) : null,
+            headerLogoLightTheme: null != e.header_logo_light_theme ? (0, a.m)(e.header_logo_light_theme) : null,
+            boxArt: null != e.box_art ? (0, a.m)(e.box_art) : null,
+            heroBackground: null != e.hero_background ? (0, a.m)(e.hero_background) : null,
+            heroVideo: null != e.hero_video ? (0, a.m)(e.hero_video) : null,
             entitlementBranchId: e.entitlement_branch_id,
             benefits: e.benefits,
             published: e.published

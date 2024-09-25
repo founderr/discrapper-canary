@@ -1,88 +1,88 @@
-t.d(n, {
+n.d(t, {
     KB: function () {
-        return b;
+        return g;
     },
     wD: function () {
-        return g;
+        return I;
     }
-}),
-    t(47120);
-var o = t(735250),
-    r = t(470079),
-    a = t(479446),
-    i = t(646476),
-    c = t(599659),
-    l = t(155491),
-    s = t(975104),
-    u = t(669079),
-    d = t(598),
-    p = t(474936),
-    _ = t(689938);
-let f = p.Cj.STANDARD_BOX,
-    m = void 0,
-    [h, g, S] = (0, s.Z)();
-function b(e) {
-    let { isGift: n = !1, giftRecipient: t, giftMessage: s, giftStyle: g, children: S } = e,
-        { selectedSkuId: b } = (0, d.usePaymentContext)(),
-        [E, I] = r.useState(t),
-        [P, T] = r.useState(),
-        [x, y] = r.useState(!1),
-        M = (0, u.pO)(E),
-        C = (0, i.rK)(),
-        { enabled: v } = i.ZP.useExperiment({ location: 'PaymentContextProvider' }, { autoTrackExposure: M && C }),
-        { enabled: N } = c.O.useExperiment({ location: 'gift card' }),
-        A = m;
-    M && ((A = v && C ? p.Cj.SEASONAL_STANDARD_BOX : null != g ? g : f), N && (A = p.Cj.NITROWEEN_STANDARD));
-    let [R, L] = r.useState(A),
-        [k, O] = r.useState(n && (0, u.MY)(E) === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == s ? _.Z.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : s),
-        [B, U] = r.useState(void 0),
-        [w, D] = r.useState(void 0),
-        j = (0, u.E5)(b, n),
-        [Z, F] = r.useState(!1),
-        [W, G] = r.useState(!1),
-        [Y, H] = r.useState(),
-        V = r.useCallback(
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(479446),
+    s = n(646476),
+    l = n(599659),
+    u = n(155491),
+    c = n(975104),
+    d = n(669079),
+    _ = n(598),
+    E = n(474936),
+    f = n(689938);
+let h = E.Cj.STANDARD_BOX,
+    p = void 0,
+    [m, I, T] = (0, c.Z)();
+function g(e) {
+    let { isGift: t = !1, giftRecipient: n, giftMessage: r, giftStyle: c, children: I } = e,
+        { selectedSkuId: T } = (0, _.usePaymentContext)(),
+        [g, S] = a.useState(n),
+        [A, v] = a.useState(),
+        [N, O] = a.useState(!1),
+        R = (0, d.pO)(g),
+        C = (0, s.rK)(),
+        { enabled: y } = s.ZP.useExperiment({ location: 'PaymentContextProvider' }, { autoTrackExposure: R && C }),
+        { enabled: b } = l.O.useExperiment({ location: 'gift card' }),
+        L = p;
+    R && ((L = y && C ? E.Cj.SEASONAL_STANDARD_BOX : null != c ? c : h), b && (L = E.Cj.NITROWEEN_STANDARD));
+    let [D, M] = a.useState(L),
+        [P, U] = a.useState(t && (0, d.MY)(g) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == r ? f.Z.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : r),
+        [w, x] = a.useState(void 0),
+        [G, k] = a.useState(void 0),
+        B = (0, d.E5)(T, t),
+        [F, Z] = a.useState(!1),
+        [V, H] = a.useState(!1),
+        [Y, j] = a.useState(),
+        W = a.useCallback(
             (e) => {
-                let { onSubscriptionConfirmation: n } = e;
+                let { onSubscriptionConfirmation: t } = e;
                 return (
-                    G(!0),
-                    (0, a.YD)(E, j)
+                    H(!0),
+                    (0, o.YD)(g, B)
                         .then(() => {
-                            G(!1), null == n || n(), F(!0);
+                            H(!1), null == t || t(), Z(!0);
                         })
                         .catch((e) => {
-                            G(!1), H(e), F(!0);
+                            H(!1), j(e), Z(!0);
                         })
                 );
             },
-            [E, j, G, F, H]
+            [g, B, H, Z, j]
         ),
-        K = (0, l.x8)();
-    return (0, o.jsx)(h.Provider, {
+        K = (0, u.x8)();
+    return (0, i.jsx)(m.Provider, {
         value: {
-            isGift: n,
-            giftCode: j,
-            giftMessage: s,
-            giftRecipient: E,
-            setGiftRecipient: I,
-            giftRecipientError: P,
-            setGiftRecipientError: T,
-            validatingGiftRecipient: x,
-            setValidatingGiftRecipient: y,
-            soundEffect: B,
-            setSoundEffect: U,
-            emojiConfetti: w,
-            setEmojiConfetti: D,
-            customGiftMessage: k,
-            setCustomGiftMessage: O,
-            selectedGiftStyle: R,
-            setSelectedGiftStyle: L,
-            sendGiftMessage: V,
-            hasSentMessage: Z,
-            isSendingMessage: W,
+            isGift: t,
+            giftCode: B,
+            giftMessage: r,
+            giftRecipient: g,
+            setGiftRecipient: S,
+            giftRecipientError: A,
+            setGiftRecipientError: v,
+            validatingGiftRecipient: N,
+            setValidatingGiftRecipient: O,
+            soundEffect: w,
+            setSoundEffect: x,
+            emojiConfetti: G,
+            setEmojiConfetti: k,
+            customGiftMessage: P,
+            setCustomGiftMessage: U,
+            selectedGiftStyle: D,
+            setSelectedGiftStyle: M,
+            sendGiftMessage: W,
+            hasSentMessage: F,
+            isSendingMessage: V,
             giftMessageError: Y,
             alreadyHasHalloweenDeco: K
         },
-        children: S
+        children: I
     });
 }

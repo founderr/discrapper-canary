@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(928801),
     i = n(549895),
     a = n(885110);
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function s(e, t, n) {
         e
     );
 }
-class o extends r.Z {
+class s extends r.Z {
     getInitialState() {
         return a.Z.getLocalPresence();
     }
@@ -41,6 +41,6 @@ class o extends r.Z {
         (this.switchingAccounts = !0), this.reset(), this.emitPresenceUpdate(this.getState());
     }
     constructor(e) {
-        super(!1), s(this, 'socket', void 0), s(this, 'switchingAccounts', void 0), s(this, 'didCommit', void 0), (this.socket = e), (this.switchingAccounts = !1), (this.didCommit = (0, i.Z)(5, 20000, this.emitPresenceUpdate.bind(this)));
+        super(!1), o(this, 'socket', void 0), o(this, 'switchingAccounts', void 0), o(this, 'didCommit', void 0), (this.socket = e), (this.switchingAccounts = !1), (this.didCommit = (0, i.Z)(5, 20000, this.emitPresenceUpdate.bind(this)));
     }
 }

@@ -13,7 +13,7 @@ let m = 0,
     x = [],
     f = [],
     p = !1;
-class g extends (r = c.ZP.Store) {
+class b extends (r = c.ZP.Store) {
     initialize() {
         this.waitFor(h.Z);
     }
@@ -28,7 +28,7 @@ class g extends (r = c.ZP.Store) {
     }
 }
 (i = 'AnalyticsLogStore'),
-    (l = 'displayName') in (a = g)
+    (l = 'displayName') in (a = b)
         ? Object.defineProperty(a, l, {
               value: i,
               enumerable: !0,
@@ -36,7 +36,7 @@ class g extends (r = c.ZP.Store) {
               writable: !0
           })
         : (a[l] = i),
-    (t.Z = new g(d.Z, {
+    (t.Z = new b(d.Z, {
         TRACK: function (e) {
             let { event: t, properties: n, fingerprint: r } = e;
             if (h.Z.isDeveloper) {

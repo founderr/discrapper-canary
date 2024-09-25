@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
-}),
-    n(724458),
-    n(653041);
-var r = n(778787),
-    i = n(803358);
-function a(e, t, n) {
+});
+var r = n(724458);
+var i = n(653041);
+var a = n(778787),
+    o = n(803358);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,23 +20,23 @@ function a(e, t, n) {
         e
     );
 }
-class s extends i.Z {
+class l extends o.Z {
     static fromServer(e) {
-        let { products: t, logo: n, pdp_bg: i, mobile_bg: a, success_modal_bg: o, mobile_banner: l, ...u } = e;
-        return new s({
+        let { products: t, logo: n, pdp_bg: r, mobile_bg: i, success_modal_bg: o, mobile_banner: s, ...u } = e;
+        return new l({
             ...super.fromServer(u),
             products: t.reduce((e, t) => {
-                let n = r.Z.fromServer(t);
+                let n = a.Z.fromServer(t);
                 return 0 === n.items.length ? e : (e.push(n), e);
             }, []),
             logo: n,
-            pdpBg: i,
-            mobileBg: a,
+            pdpBg: r,
+            mobileBg: i,
             successModalBg: o,
-            mobileBanner: l
+            mobileBanner: s
         });
     }
     constructor(e) {
-        super(e), a(this, 'products', void 0), a(this, 'logo', void 0), a(this, 'pdpBg', void 0), a(this, 'mobileBg', void 0), a(this, 'successModalBg', void 0), a(this, 'mobileBanner', void 0), (this.products = e.products), (this.logo = e.logo), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner);
+        super(e), s(this, 'products', void 0), s(this, 'logo', void 0), s(this, 'pdpBg', void 0), s(this, 'mobileBg', void 0), s(this, 'successModalBg', void 0), s(this, 'mobileBanner', void 0), (this.products = e.products), (this.logo = e.logo), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner);
     }
 }

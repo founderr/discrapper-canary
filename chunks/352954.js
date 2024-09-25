@@ -1,51 +1,51 @@
-t(411104);
-var r = t(735250);
-t(470079);
-var i = t(481060),
-    E = t(981631),
-    u = t(689938);
-n.Z = {
-    openSecureFramesStreamVerification: function (e, n) {
-        (0, i.openModalLazy)(async () => {
-            let i = (await t.e('94904').then(t.bind(t, 660250))).default;
-            return (t) =>
-                (0, r.jsx)(i, {
+n(411104);
+var r = n(735250);
+n(470079);
+var E = n(481060),
+    i = n(981631),
+    a = n(689938);
+t.Z = {
+    openSecureFramesStreamVerification: function (e, t) {
+        (0, E.openModalLazy)(async () => {
+            let E = (await n.e('94904').then(n.bind(n, 660250))).default;
+            return (n) =>
+                (0, r.jsx)(E, {
                     streamKey: e,
-                    channelId: n,
-                    ...t
+                    channelId: t,
+                    ...n
                 });
         });
     },
-    openSecureFramesUserVerificationModal: function (e, n, u, a) {
-        u() &&
-            (0, i.openModalLazy)(
+    openSecureFramesUserVerificationModal: function (e, t, a, u) {
+        a() &&
+            (0, E.openModalLazy)(
                 async () => {
-                    let i = (await t.e('33397').then(t.bind(t, 963410))).default;
-                    return (t) =>
-                        (0, r.jsx)(i, {
+                    let E = (await n.e('33397').then(n.bind(n, 963410))).default;
+                    return (n) =>
+                        (0, r.jsx)(E, {
                             userId: e,
-                            channelId: n,
-                            ...t
+                            channelId: t,
+                            ...n
                         });
                 },
-                { contextKey: a === E.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT }
+                { contextKey: u === i.IlC.POPOUT ? E.POPOUT_MODAL_CONTEXT : E.DEFAULT_MODAL_CONTEXT }
             );
     },
     openSecureFramesUpdateConfirmation: function (e) {
-        let { title: n, subtitle: E, confirmText: a = u.Z.Messages.CONFIRM, onConfirm: o } = e;
-        (0, i.openModalLazy)(async () => {
-            let { ConfirmModal: e } = await Promise.resolve().then(t.bind(t, 481060));
-            return (t) =>
+        let { title: t, subtitle: i, confirmText: u = a.Z.Messages.CONFIRM, onConfirm: o } = e;
+        (0, E.openModalLazy)(async () => {
+            let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
+            return (n) =>
                 (0, r.jsx)(e, {
-                    header: n,
-                    confirmText: a,
-                    cancelText: u.Z.Messages.CANCEL,
+                    header: t,
+                    confirmText: u,
+                    cancelText: a.Z.Messages.CANCEL,
                     onConfirm: o,
-                    ...t,
-                    children: (0, r.jsx)(i.Text, {
+                    ...n,
+                    children: (0, r.jsx)(E.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: E
+                        children: i
                     })
                 });
         });

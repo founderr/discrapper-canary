@@ -6,13 +6,13 @@ n.d(t, {
         return a;
     },
     hP: function () {
-        return s;
+        return o;
     },
     hY: function () {
         return l;
     },
     xv: function () {
-        return o;
+        return s;
     }
 });
 var r = n(570140);
@@ -33,13 +33,13 @@ function a(e, t, n) {
         render: t
     });
 }
-function s(e) {
+function o(e) {
     return r.Z.dispatch({
         type: 'CHANNEL_CALL_POPOUT_WINDOW_OPEN',
         channel: e
     });
 }
-function o(e) {
+function s(e) {
     return r.Z.dispatch({
         type: 'POPOUT_WINDOW_CLOSE',
         key: e

@@ -79,7 +79,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    o = (0, r.B)({
         kind: 'user',
         id: '2024-08_message_forwarding_icon',
         label: 'Message forwarding icon change',
@@ -103,7 +103,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    o = (0, r.B)({
+    s = (0, r.B)({
         kind: 'user',
         id: '2024-09_message_forwarding_gtm',
         label: 'Message forwarding GTM',
@@ -126,8 +126,8 @@ let i = (0, r.B)({
 function l(e, t) {
     let n = i.getCurrentConfig(e, t),
         r = a.getCurrentConfig(e, t),
-        l = s.getCurrentConfig(e, t),
-        u = o.getCurrentConfig(e, t);
+        l = o.getCurrentConfig(e, t),
+        u = s.getCurrentConfig(e, t);
     return {
         ...n,
         ...r,
@@ -138,8 +138,8 @@ function l(e, t) {
 function u(e, t) {
     let n = i.useExperiment(e, t),
         r = a.useExperiment(e, t),
-        l = s.useExperiment(e, t),
-        u = o.useExperiment(e, t);
+        l = o.useExperiment(e, t),
+        u = s.useExperiment(e, t);
     return {
         ...n,
         ...r,

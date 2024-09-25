@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(291407),
     T = n(981631),
     x = n(314734),
-    S = n(921944),
-    v = n(689938),
+    v = n(921944),
+    S = n(689938),
     N = n(786899);
 let A = s.forwardRef(function (e, t) {
     let { type: n, animateRef: a } = e,
@@ -35,7 +35,7 @@ let A = s.forwardRef(function (e, t) {
         [E]
     );
     let I = s.useCallback(() => {
-        (0, d.yw)(T.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, C.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: S.L.TAKE_ACTION }), h._(_._b.TEXT, n)), g();
+        (0, d.yw)(T.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, C.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: v.L.TAKE_ACTION }), h._(_._b.TEXT, n)), g();
     }, [m, n, g]);
     return (0, i.jsx)('div', {
         className: l()(N.buttonContainer, x.t4),
@@ -46,7 +46,7 @@ let A = s.forwardRef(function (e, t) {
             tabIndex: 0,
             className: l()(N.button, { [N.buttonActive]: m }),
             onClick: I,
-            'aria-label': v.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
+            'aria-label': S.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
             focusProps: {
                 offset: {
                     top: 4,

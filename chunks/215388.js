@@ -4,10 +4,10 @@ t.d(A, {
     }
 }),
     t(47120);
-var a = t(735250),
-    n = t(470079),
-    r = t(120356),
-    s = t.n(r),
+var n = t(735250),
+    a = t(470079),
+    s = t(120356),
+    r = t.n(s),
     o = t(772848),
     l = t(481060),
     i = t(752305),
@@ -16,14 +16,14 @@ var a = t(735250),
     u = t(703558),
     C = t(981631),
     g = t(689938),
-    h = t(463859),
-    T = t(37823);
-let p = (0, o.Z)(),
-    m = (0, c.kt)({
+    T = t(463859),
+    I = t(37823);
+let U = (0, o.Z)(),
+    p = (0, c.kt)({
         id: '1',
         type: C.d4z.DM
     });
-function I() {
+function h() {
     return new Promise((e) => {
         e({
             shouldClear: !1,
@@ -31,24 +31,24 @@ function I() {
         });
     });
 }
-function U(e) {
+function m(e) {
     var A;
-    let { hasError: t, maxLength: n, text: r } = e;
-    return (0, a.jsxs)('div', {
-        className: s()(T.maxLength, { [T.errorOverflow]: t }),
+    let { hasError: t, maxLength: a, text: s } = e;
+    return (0, n.jsxs)('div', {
+        className: r()(I.maxLength, { [I.errorOverflow]: t }),
         'aria-hidden': 'true',
-        children: [null !== (A = null == r ? void 0 : r.length) && void 0 !== A ? A : 0, ' ', null != n && '/ '.concat(n)]
+        children: [null !== (A = null == s ? void 0 : s.length) && void 0 !== A ? A : 0, ' ', null != a && '/ '.concat(a)]
     });
 }
 function f(e) {
     var A;
-    let { 'aria-labelledby': t, className: r, id: o, autoFocus: c, maxLength: C, onChange: T, onSubmit: f, showCharacterCount: v = !1, placeholder: E, required: q, value: N, enableThemedBackground: D = !1, parentModalKey: O } = e,
-        x = (0, l.useFormContext)(),
-        [R, b] = n.useState(() => (0, i.JM)(N)),
-        L = n.useRef(!0 === c),
-        P = null != t ? t : null == x ? void 0 : x.titleId,
-        _ = null !== (A = null == x ? void 0 : x.errorId) && void 0 !== A ? A : p,
-        V = n.useMemo(
+    let { 'aria-labelledby': t, className: s, id: o, autoFocus: c, maxLength: C, onChange: I, onSubmit: f, showCharacterCount: v = !1, placeholder: q, required: E, value: O, enableThemedBackground: N = !1, parentModalKey: D } = e,
+        R = (0, l.useFormContext)(),
+        [L, x] = a.useState(() => (0, i.JM)(O)),
+        b = a.useRef(!0 === c),
+        P = null != t ? t : null == R ? void 0 : R.titleId,
+        V = null !== (A = null == R ? void 0 : R.errorId) && void 0 !== A ? A : U,
+        S = a.useMemo(
             () => ({
                 analyticsName: 'simple',
                 autocomplete: {
@@ -66,42 +66,42 @@ function f(e) {
             }),
             [c]
         );
-    return (0, a.jsxs)(d.Z, {
-        'aria-describedby': _,
+    return (0, n.jsxs)(d.Z, {
+        'aria-describedby': V,
         'aria-labelledby': P,
-        innerClassName: s()(r, h.textArea),
+        innerClassName: r()(s, T.textArea),
         id: o,
         maxCharacterCount: C,
         onChange: function (e, A, t) {
-            T(A), b(t);
+            I(A), x(t);
         },
-        placeholder: E,
-        required: q,
-        channel: m,
-        textValue: N,
-        richValue: R,
-        type: V,
+        placeholder: q,
+        required: E,
+        channel: p,
+        textValue: O,
+        richValue: L,
+        type: S,
         onBlur: () => {
-            L.current = !1;
+            b.current = !1;
         },
         onFocus: () => {
-            L.current = !0;
+            b.current = !0;
         },
-        focused: L.current,
-        onSubmit: null != f ? f : I,
-        disableThemedBackground: !D,
-        parentModalKey: O,
+        focused: b.current,
+        onSubmit: null != f ? f : h,
+        disableThemedBackground: !N,
+        parentModalKey: D,
         emojiPickerCloseOnModalOuterClick: !0,
         children: [
             !0 === v &&
-                (0, a.jsx)(U, {
-                    hasError: null != x.error || (null != C && N.length > C),
-                    text: N,
+                (0, n.jsx)(m, {
+                    hasError: null != R.error || (null != C && O.length > C),
+                    text: O,
                     maxLength: C
                 }),
             null != C &&
-                (0, a.jsx)(l.HiddenVisually, {
-                    id: p,
+                (0, n.jsx)(l.HiddenVisually, {
+                    id: U,
                     children: g.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: C })
                 })
         ]

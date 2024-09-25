@@ -1,13 +1,13 @@
 let r = n(318655),
     i = n(728734),
     a = n(689118);
-function s(e, t) {
+function o(e, t) {
     (this.name = e), (this.body = t), (this.decoders = {}), (this.encoders = {});
 }
 (t.define = function (e, t) {
-    return new s(e, t);
+    return new o(e, t);
 }),
-    (s.prototype._createNamed = function (e) {
+    (o.prototype._createNamed = function (e) {
         let t = this.name;
         function n(e) {
             this._initNamed(e, t);
@@ -20,15 +20,15 @@ function s(e, t) {
             new n(this)
         );
     }),
-    (s.prototype._getDecoder = function (e) {
+    (o.prototype._getDecoder = function (e) {
         return (e = e || 'der'), !this.decoders.hasOwnProperty(e) && (this.decoders[e] = this._createNamed(i[e])), this.decoders[e];
     }),
-    (s.prototype.decode = function (e, t, n) {
+    (o.prototype.decode = function (e, t, n) {
         return this._getDecoder(t).decode(e, n);
     }),
-    (s.prototype._getEncoder = function (e) {
+    (o.prototype._getEncoder = function (e) {
         return (e = e || 'der'), !this.encoders.hasOwnProperty(e) && (this.encoders[e] = this._createNamed(r[e])), this.encoders[e];
     }),
-    (s.prototype.encode = function (e, t, n) {
+    (o.prototype.encode = function (e, t, n) {
         return this._getEncoder(t).encode(e, n);
     });

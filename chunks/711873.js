@@ -19,12 +19,12 @@ var t = {
     r = 'function' == typeof Object.getOwnPropertySymbols;
 e.exports = function (e, i, a) {
     if ('string' != typeof i) {
-        var s = Object.getOwnPropertyNames(i);
-        r && (s = s.concat(Object.getOwnPropertySymbols(i)));
-        for (var o = 0; o < s.length; ++o)
-            if (!t[s[o]] && !n[s[o]] && (!a || !a[s[o]]))
+        var o = Object.getOwnPropertyNames(i);
+        r && (o = o.concat(Object.getOwnPropertySymbols(i)));
+        for (var s = 0; s < o.length; ++s)
+            if (!t[o[s]] && !n[o[s]] && (!a || !a[o[s]]))
                 try {
-                    e[s[o]] = i[s[o]];
+                    e[o[s]] = i[o[s]];
                 } catch (e) {}
     }
     return e;

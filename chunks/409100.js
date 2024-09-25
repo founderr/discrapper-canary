@@ -29,23 +29,23 @@ t.Z = (e) => {
         f = (0, a.wj)(p) || t,
         A = (0, d.N)(),
         S = null == A ? void 0 : A.subscription_trial,
-        h = (0, o.a5)({
+        M = (0, o.a5)({
             intervalType: null == S ? void 0 : S.interval,
             intervalCount: null == S ? void 0 : S.interval_count
         }),
-        M = (0, c.Ng)(),
+        h = (0, c.Ng)(),
         x = null != S && n === S.sku_id,
         { enabled: b } = l._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
         O = b && (null == A ? void 0 : A.trial_id) === u.a7,
         P = m
             ? E.Z.Messages.BOGO_CLAIM_OFFER
-            : null != M
-              ? R(n, N, g, M.discount.amount)
+            : null != h
+              ? R(n, N, g, h.discount.amount)
               : I({
                     showTrialCTA: x,
                     subscriptionTier: n,
                     shouldShowUpsells: !1,
-                    trialDurationCopy: h,
+                    trialDurationCopy: M,
                     isPersistentCTA: g,
                     shouldShowReferralTrialCopy: O,
                     subscriptionTrial: S

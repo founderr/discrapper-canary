@@ -21,8 +21,8 @@ var s = n(735250),
     f = n(621853),
     A = n(246946),
     S = n(594174),
-    h = n(78839),
-    M = n(626135),
+    M = n(78839),
+    h = n(626135),
     x = n(111361),
     b = n(357355),
     O = n(937579),
@@ -40,7 +40,7 @@ t.Z = function (e) {
     (0, p.z)(C.X);
     let n = (0, m.Q)(),
         { sourceAnalyticsLocations: r, analyticsLocations: w } = (0, R.ZP)(I.Z.PREMIUM_MARKETING),
-        y = (0, o.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
+        y = (0, o.e7)([M.ZP], () => M.ZP.hasFetchedSubscriptions()),
         H = (0, o.e7)([S.default], () => S.default.getCurrentUser()),
         k = (0, Z.N)(),
         F = (0, L.Ng)(),
@@ -68,7 +68,7 @@ t.Z = function (e) {
         }, [n, k, F]),
         a.useEffect(() => {
             !W &&
-                M.default.track(j.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+                h.default.track(j.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                     location_stack: r,
                     load_duration_ms: Y.current
                 });

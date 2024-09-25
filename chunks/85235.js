@@ -1,7 +1,7 @@
 var r = n(544891),
     i = n(570140),
     a = n(718745),
-    s = n(981631);
+    o = n(981631);
 t.Z = {
     search(e, t) {
         if (null == a.Z.getResults(e, t))
@@ -12,7 +12,7 @@ t.Z = {
             }),
                 r.tn
                     .get({
-                        url: s.ANM.INTEGRATION_SEARCH('tenor'),
+                        url: o.ANM.INTEGRATION_SEARCH('tenor'),
                         query: { q: t },
                         oldFormErrors: !0
                     })

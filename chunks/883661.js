@@ -1,32 +1,32 @@
 var r = n(735250),
     i = n(470079),
     a = n(481060),
-    s = n(149203);
-let o = (e) => {
+    o = n(149203);
+let s = (e) => {
         switch (e) {
-            case s.UX.RECENT:
+            case o.UX.RECENT:
                 return a.ClockIcon;
-            case s.UX.FAVORITES:
+            case o.UX.FAVORITES:
                 return a.StarIcon;
-            case s.UX.TOP_GUILD_EMOJI:
+            case o.UX.TOP_GUILD_EMOJI:
                 return a.TrophyIcon;
-            case s.UX.PEOPLE:
+            case o.UX.PEOPLE:
                 return a.ReactionIcon;
-            case s.UX.NATURE:
+            case o.UX.NATURE:
                 return a.NatureIcon;
-            case s.UX.FOOD:
+            case o.UX.FOOD:
                 return a.FoodIcon;
-            case s.UX.ACTIVITY:
+            case o.UX.ACTIVITY:
                 return a.GameControllerIcon;
-            case s.UX.TRAVEL:
+            case o.UX.TRAVEL:
                 return a.BicycleIcon;
-            case s.UX.OBJECTS:
+            case o.UX.OBJECTS:
                 return a.ObjectIcon;
-            case s.UX.SYMBOLS:
+            case o.UX.SYMBOLS:
                 return a.HeartIcon;
-            case s.UX.FLAGS:
+            case o.UX.FLAGS:
                 return a.FlagIcon;
-            case s.UX.PREMIUM_UPSELL:
+            case o.UX.PREMIUM_UPSELL:
                 return a.NitroWheelIcon;
             default:
                 return;
@@ -34,7 +34,7 @@ let o = (e) => {
     },
     l = i.memo(function (e) {
         let { categoryId: t, ...n } = e,
-            i = o(t);
+            i = s(t);
         return null == i
             ? null
             : (0, r.jsx)(i, {

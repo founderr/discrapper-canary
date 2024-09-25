@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return P;
     }
 });
 var i = n(735250),
@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(967128),
     T = n(320781),
     x = n(269203),
-    S = n(753898),
-    v = n(734386),
+    v = n(753898),
+    S = n(734386),
     N = n(184279),
     A = n(438306),
     Z = n(544142),
@@ -33,7 +33,7 @@ var i = n(735250),
     R = n(176505),
     L = n(689938),
     j = n(113207);
-function P(e) {
+function O(e) {
     let { canManageRoles: t, channel: n } = e,
         s = t && (0, c.Yk)(n),
         l = (0, a.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
@@ -41,17 +41,17 @@ function P(e) {
     if (n.isForumPost()) return (0, i.jsx)(T.Z, { channel: n });
     if (p.Ec.has(n.type)) return (0, i.jsx)(Z.Z, { channel: n });
     else if (l) return (0, i.jsx)(M.Z, { channel: n });
-    else if (s) return (0, i.jsx)(v.Z, { channel: n });
+    else if (s) return (0, i.jsx)(S.Z, { channel: n });
     return (0, i.jsx)(A.Z, { channel: n });
 }
-function O(e) {
+function P(e) {
     var t;
     let { channel: n, showingBanner: c } = e,
         u = (0, o.ZP)(n),
         { type: p } = n,
         _ = (0, a.e7)([E.default], () => (n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null)),
         T = g.ZP.useUserTag(_),
-        { canManageRoles: v, canReadMessageHistory: A } = (0, a.cj)([f.Z], () => ({
+        { canManageRoles: S, canReadMessageHistory: A } = (0, a.cj)([f.Z], () => ({
             canManageRoles: f.Z.can(b.Plq.MANAGE_ROLES, n),
             canReadMessageHistory: f.Z.can(b.Plq.READ_MESSAGE_HISTORY, n)
         })),
@@ -65,12 +65,12 @@ function O(e) {
     )
         return M
             ? (0, i.jsx)(N.Z, { channel: n })
-            : (0, i.jsx)(S.Z, {
+            : (0, i.jsx)(v.Z, {
                   channel: n,
                   children: L.Z.Messages.SYSTEM_DM_EMPTY_MESSAGE
               });
     if (p === b.d4z.DM)
-        return (0, i.jsxs)(S.Z, {
+        return (0, i.jsxs)(v.Z, {
             channel: n,
             user: _,
             children: [
@@ -96,14 +96,14 @@ function O(e) {
               })
             : n.hasFlag(R.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)
               ? (0, i.jsx)(x.Z, { channel: n })
-              : (0, i.jsx)(S.Z, {
+              : (0, i.jsx)(v.Z, {
                     channel: n,
                     children: L.Z.Messages.BEGINNING_GROUP_DM.format({ name: u })
                 });
     return A
-        ? (0, i.jsx)(P, {
+        ? (0, i.jsx)(O, {
               channel: n,
-              canManageRoles: v
+              canManageRoles: S
           })
         : (0, i.jsx)(I.ZP, {
               channelId: n.id,

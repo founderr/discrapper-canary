@@ -2,21 +2,21 @@ n.d(t, {
     Z: function () {
         return c;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(735250);
 n(470079);
-var s = n(592125),
-    a = n(430824),
-    r = n(496675),
+var a = n(592125),
+    o = n(430824),
+    s = n(496675),
     l = n(983436),
-    o = n(981631);
+    u = n(981631);
 function c(e) {
     let { code: t, messageData: n } = e,
-        [c, u] = t.split('/'),
-        d = s.Z.getChannel(u),
-        _ = a.Z.getGuild(c);
-    return null != d && d.isGuildVocal() && null != _ && r.Z.can(o.Plq.VIEW_CHANNEL, d) && r.Z.can(o.Plq.CONNECT, d)
+        [r, c] = t.split('/'),
+        d = a.Z.getChannel(c),
+        _ = o.Z.getGuild(r);
+    return null != d && d.isGuildVocal() && null != _ && s.Z.can(u.Plq.VIEW_CHANNEL, d) && s.Z.can(u.Plq.CONNECT, d)
         ? (0, i.jsx)(l.Z, {
               guild: _,
               channel: d,

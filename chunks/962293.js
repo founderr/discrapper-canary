@@ -1,13 +1,13 @@
 n.d(t, {
     B: function () {
-        return s;
+        return o;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(652484);
-function s(e) {
+function o(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(i.Clickable, {
         className: a.closeButton,

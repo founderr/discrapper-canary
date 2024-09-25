@@ -1,39 +1,39 @@
 n.d(t, {
     p: function () {
-        return p;
+        return m;
     }
-}),
-    n(789020);
-var r = n(570140),
-    i = n(881052),
-    a = n(630388),
+});
+var r = n(789020);
+var i = n(570140),
+    a = n(881052),
+    o = n(630388),
     s = n(317381),
-    o = n(424291),
-    l = n(966434),
-    u = n(649591),
-    c = n(224189),
-    d = n(981631);
-async function _(e, t, n) {
+    l = n(424291),
+    u = n(966434),
+    c = n(649591),
+    d = n(224189),
+    _ = n(981631);
+async function E(e, t, n) {
     try {
-        return await (0, c.Z)(e, t);
-    } catch (a) {
-        r.Z.dispatch({
+        return await (0, d.Z)(e, t);
+    } catch (r) {
+        i.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
             nonce: '',
             applicationId: e,
             channelId: t,
             guildId: n,
-            error: new i.Hx(a)
+            error: new a.Hx(r)
         });
     }
 }
-async function E(e) {
+async function f(e) {
     let { channel: t, currentEmbeddedApplication: n, embeddedActivitiesManager: r } = e;
     return (
         !!(
             null == n ||
             (await new Promise((e) => {
-                (0, l.Z)(
+                (0, u.Z)(
                     n,
                     t,
                     () => {
@@ -49,18 +49,18 @@ async function E(e) {
         ) || !1
     );
 }
-async function f(e) {
+async function h(e) {
     let { application: t, applicationId: n, channel: r, user: i } = e;
     if (null == i.nsfwAllowed) {
-        var a, s;
-        let e = null != t ? t : await _(n, r.id, r.getGuildId());
+        var a, o;
+        let e = null != t ? t : await E(n, r.id, r.getGuildId());
         if (
             null == e ||
-            (null !== (s = null === (a = e.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) &&
-                void 0 !== s &&
-                s &&
+            (null !== (o = null === (a = e.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) &&
+                void 0 !== o &&
+                o &&
                 !(await new Promise((t) => {
-                    (0, o.V)({
+                    (0, l.V)({
                         application: e,
                         onAgree: () => t(!0),
                         onDisagree: () => t(!1)
@@ -71,14 +71,14 @@ async function f(e) {
     }
     return !0;
 }
-async function h(e) {
+async function p(e) {
     let { application: t, applicationId: n, channel: r } = e,
-        i = null != t ? t : await _(n, r.id, r.getGuildId());
+        i = null != t ? t : await E(n, r.id, r.getGuildId());
     return (
         null != i &&
-        (!!((0, a.yE)(i.flags, d.udG.EMBEDDED_RELEASED) || i.isVerified || s.ZP.hasActivityEverBeenLaunched(n)) ||
+        (!!((0, o.yE)(i.flags, _.udG.EMBEDDED_RELEASED) || i.isVerified || s.ZP.hasActivityEverBeenLaunched(n)) ||
             new Promise((e) => {
-                (0, u.j)({
+                (0, c.j)({
                     application: i,
                     onConfirm: () => e(!0),
                     onCancel: () => e(!1)
@@ -86,6 +86,6 @@ async function h(e) {
             }))
     );
 }
-async function p(e) {
-    return !!((await E(e)) && (await f(e)) && (await h(e))) || !1;
+async function m(e) {
+    return !!((await f(e)) && (await h(e)) && (await p(e))) || !1;
 }

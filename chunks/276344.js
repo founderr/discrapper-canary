@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     NM: function () {
-        return o;
+        return s;
     }
 });
 var r = n(818083);
@@ -24,7 +24,7 @@ function a(e) {
     let { hasLeaderboard: t } = i.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return t;
 }
-let s = (0, r.B)({
+let o = (0, r.B)({
     kind: 'guild',
     id: '2024-09_league_of_legends_leaderboard',
     label: 'League of Legends Leaderboard',
@@ -37,8 +37,8 @@ let s = (0, r.B)({
         }
     ]
 });
-function o(e, t) {
-    let { enabled: n } = s.getCurrentConfig(
+function s(e, t) {
+    let { enabled: n } = o.getCurrentConfig(
         {
             guildId: e,
             location: t

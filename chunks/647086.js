@@ -3,13 +3,13 @@ n.d(t, {
         return a;
     },
     g: function () {
-        return s;
+        return o;
     }
 });
 var r = n(601964),
     i = n(981631);
 let a = '373',
-    s = new r.ZP({
+    o = new r.ZP({
         id: a,
         name: 'Favorites',
         description: 'The place for all your favorite channels!',

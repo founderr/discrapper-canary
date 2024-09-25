@@ -1,9 +1,9 @@
-var r, i;
+var r;
 n.d(t, {
     K: function () {
         return r;
     }
 }),
-    ((i = r || (r = {}))[(i.UNSET = 0)] = 'UNSET'),
-    (i[(i.OFF = 1)] = 'OFF'),
-    (i[(i.ON = 2)] = 'ON');
+    !(function (e) {
+        (e[(e.UNSET = 0)] = 'UNSET'), (e[(e.OFF = 1)] = 'OFF'), (e[(e.ON = 2)] = 'ON');
+    })(r || (r = {}));

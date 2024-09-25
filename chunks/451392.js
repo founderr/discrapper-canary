@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return m;
+        return A;
     }
 });
 var n = t(735250);
@@ -19,9 +19,9 @@ var a = t(120356),
     S = t(993413),
     I = t(689938),
     N = t(96923);
-function m(e) {
-    let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: m, guildId: A, className: C, showPremiumIcon: g = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
-        p = (0, _.ZP)(s.id, A),
+function A(e) {
+    let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: A, guildId: C, className: m, showPremiumIcon: g = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
+        p = (0, _.ZP)(s.id, C),
         { primaryColor: R, secondaryColor: x } = (0, u.Z)({
             user: s,
             displayProfile: p,
@@ -29,7 +29,7 @@ function m(e) {
             isPreview: !0
         }),
         f = E.ZP.canUsePremiumProfileCustomization(s),
-        M = null != t ? t : s.getAvatarURL(A, 80),
+        M = null != t ? t : s.getAvatarURL(C, 80),
         D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(),
         P = (0, d.Cf)(M, D, !1);
     if (null == R || null == x) return null;
@@ -38,8 +38,8 @@ function m(e) {
     };
     return (0, n.jsx)(S.Z, {
         title: I.Z.Messages.USER_SETTINGS_PROFILE_THEME,
-        disabled: !f && !m,
-        className: i()(N.__invalid_profileThemesSection, C),
+        disabled: !f && !A,
+        className: i()(N.__invalid_profileThemesSection, m),
         showPremiumIcon: g,
         forcedDivider: O,
         children: (0, n.jsxs)('div', {
@@ -78,7 +78,7 @@ function m(e) {
                     })
                 }),
                 h &&
-                    null != A &&
+                    null != C &&
                     (0, n.jsx)(c.Button, {
                         className: N.resetButton,
                         color: c.Button.Colors.PRIMARY,

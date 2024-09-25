@@ -1,10 +1,10 @@
 var r = n(67867),
-    o = n(476508),
+    i = n(476508),
     a = n(228042),
-    i = n(146321),
+    o = n(146321),
     s = n(292137),
-    c = i.Map,
-    l = i.set;
+    l = o.Map,
+    u = o.set;
 r(
     {
         target: 'Map',
@@ -15,11 +15,11 @@ r(
     {
         mapKeys: function (e) {
             var t = a(this),
-                n = o(e, arguments.length > 1 ? arguments[1] : void 0),
-                r = new c();
+                n = i(e, arguments.length > 1 ? arguments[1] : void 0),
+                r = new l();
             return (
-                s(t, function (e, o) {
-                    l(r, n(e, o, t), e);
+                s(t, function (e, i) {
+                    u(r, n(e, i, t), e);
                 }),
                 r
             );

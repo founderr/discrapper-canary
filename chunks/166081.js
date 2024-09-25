@@ -1,18 +1,18 @@
-t.d(n, {
+n.d(t, {
     U: function () {
-        return u;
+        return s;
     }
 });
-var i = t(470079),
-    r = t(695346),
-    l = t(73346),
-    o = t(834431);
-function u(e, n) {
-    let { shouldAnimate: t = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        u = r.QK.useSetting(),
-        s = (0, o.n)(),
-        a = t && s && u;
-    return i.useMemo(() => {
-        if ((null == e ? void 0 : e.image_asset) != null) return (0, l._W)(e.application_id, e.image_asset, n, a ? void 0 : 'webp');
-    }, [n, e, a]);
+var r = n(470079),
+    i = n(695346),
+    a = n(73346),
+    o = n(834431);
+function s(e, t) {
+    let { shouldAnimate: n = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        s = i.QK.useSetting(),
+        l = (0, o.n)(),
+        u = n && l && s;
+    return r.useMemo(() => {
+        if ((null == e ? void 0 : e.image_asset) != null) return (0, a._W)(e.application_id, e.image_asset, t, u ? void 0 : 'webp');
+    }, [t, e, u]);
 }

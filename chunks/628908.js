@@ -15,8 +15,8 @@ var o = n(735250),
     f = n(325067),
     R = n(594174),
     I = n(279837),
-    N = n(981631),
-    M = n(815660),
+    M = n(981631),
+    N = n(815660),
     A = n(689938),
     S = n(691844);
 function O(e, t, n) {
@@ -60,8 +60,8 @@ class F extends r.PureComponent {
     renderSMSSection() {
         let { currentUser: e } = this.props,
             t = null != this.props.currentUser.phone,
-            n = e.hasFlag(N.xW$.MFA_SMS),
-            r = e.hasFlag(N.xW$.PARTNER) || e.hasFlag(N.xW$.STAFF);
+            n = e.hasFlag(M.xW$.MFA_SMS),
+            r = e.hasFlag(M.xW$.PARTNER) || e.hasFlag(M.xW$.STAFF);
         return t
             ? (0, o.jsxs)(C, {
                   label: A.Z.Messages.MFA_SMS_ENABLE,
@@ -213,7 +213,7 @@ class F extends r.PureComponent {
                     ...t,
                     ...e
                 }),
-            { modalKey: M.M }
+            { modalKey: N.M }
         );
     }
     constructor(...e) {

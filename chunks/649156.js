@@ -5,7 +5,7 @@ var r = n(3570),
     a = n(186901);
 t.Z = function (e) {
     let { match: t, location: n } = e,
-        l = async (e, t) => {
+        o = async (e, t) => {
             await (0, r.s)(a.jE.PICK_GUILD_SETTINGS, {
                 section: e.params.section,
                 subsection: e.params.subsection,
@@ -15,6 +15,6 @@ t.Z = function (e) {
     return (0, s.jsx)(i.Z, {
         match: t,
         location: n,
-        attemptDeepLink: l
+        attemptDeepLink: o
     });
 };

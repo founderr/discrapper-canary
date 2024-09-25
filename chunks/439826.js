@@ -27,8 +27,8 @@ var s,
     f = n(670638),
     A = n(642145),
     S = n(981631),
-    h = n(689938),
-    M = n(411702);
+    M = n(689938),
+    h = n(411702);
 function x(e) {
     var t;
     let { quest: n, errorHints: s, warningHints: a, isDarkTheme: o } = e,
@@ -65,17 +65,17 @@ function x(e) {
             config: A.Y
         }),
         f = 0 === R ? u.CircleWarningIcon : u.CircleInformationIcon,
-        h = (0, I.Lq)(S.Ilk.RED_345),
-        x = 0 === R ? h : o ? u.tokens.colors.TEXT_NORMAL : u.tokens.colors.WHITE;
+        M = (0, I.Lq)(S.Ilk.RED_345),
+        x = 0 === R ? M : o ? u.tokens.colors.TEXT_NORMAL : u.tokens.colors.WHITE;
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsx)(c.animated.div, {
             style: p,
             children: (0, r.jsxs)('div', {
                 ref: l,
-                className: M.hints,
+                className: h.hints,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: M.hintsContainer,
+                        className: h.hintsContainer,
                         children: [
                             (0, r.jsx)(f, {
                                 size: 'xs',
@@ -136,10 +136,10 @@ function b(e) {
                 );
         }, [s, O, P]),
         (0, r.jsxs)('div', {
-            className: M.container,
+            className: h.container,
             children: [
                 (0, r.jsx)('div', {
-                    className: M.heroAssetWrapper,
+                    className: h.heroAssetWrapper,
                     children: O
                         ? (0, r.jsx)(p.Fl, {
                               id: 'QuestTileBanner_heroAnimated',
@@ -151,7 +151,7 @@ function b(e) {
                                       loop: !0,
                                       muted: !0,
                                       playsInline: !0,
-                                      className: M.heroAsset,
+                                      className: h.heroAsset,
                                       controls: !1,
                                       children: (0, r.jsx)('source', {
                                           src: C,
@@ -166,36 +166,36 @@ function b(e) {
                                   (0, r.jsx)('img', {
                                       ref: e,
                                       alt: ''.concat(n.config.messages.questName),
-                                      className: M.heroAsset,
+                                      className: h.heroAsset,
                                       src: C
                                   })
                           })
                 }),
                 (0, r.jsx)('div', {
-                    className: l()(M.overlay, {
-                        [M.darkThemeGradient]: b,
-                        [M.lightThemeGradient]: !b
+                    className: l()(h.overlay, {
+                        [h.darkThemeGradient]: b,
+                        [h.lightThemeGradient]: !b
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: M.positionContentOverBackground,
+                    className: h.positionContentOverBackground,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: M.contents,
+                            className: h.contents,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: M.topRow,
+                                    className: h.topRow,
                                     children: [
                                         v &&
                                             !L &&
                                             !Z &&
                                             (0, r.jsx)('div', {
-                                                className: M.pill,
+                                                className: h.pill,
                                                 children: (0, r.jsx)(u.Text, {
                                                     variant: 'eyebrow',
                                                     color: 'always-white',
-                                                    className: M.eyebrowText,
-                                                    children: h.Z.Messages.RECOMMENDED
+                                                    className: h.eyebrowText,
+                                                    children: M.Z.Messages.RECOMMENDED
                                                 })
                                             }),
                                         (0, r.jsx)(f.r, {
@@ -210,12 +210,12 @@ function b(e) {
                                             children: (e) =>
                                                 (0, r.jsx)(u.Clickable, {
                                                     ...e,
-                                                    className: M.submenuWrapper,
-                                                    'aria-label': h.Z.Messages.ACTIONS,
+                                                    className: h.submenuWrapper,
+                                                    'aria-label': M.Z.Messages.ACTIONS,
                                                     children: (0, r.jsx)(u.MoreHorizontalIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: l()(M.submenuIcon)
+                                                        className: l()(h.submenuIcon)
                                                     })
                                                 })
                                         })
@@ -226,25 +226,25 @@ function b(e) {
                                     children: (e) =>
                                         (0, r.jsx)('img', {
                                             ref: e,
-                                            className: M.partnerBranding,
+                                            className: h.partnerBranding,
                                             alt: n.config.messages.gameTitle,
                                             src: (0, N.Gs)(n, 'dark')
                                         })
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: M.bottomRow,
+                                    className: h.bottomRow,
                                     children: [
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-sm/medium',
                                             color: b ? 'text-muted' : 'always-white',
-                                            children: h.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({ brandName: n.config.messages.gamePublisher })
+                                            children: M.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({ brandName: n.config.messages.gamePublisher })
                                         }),
                                         L || Z
                                             ? null
                                             : (0, r.jsx)(u.Text, {
                                                   variant: 'text-sm/medium',
                                                   color: b ? 'text-muted' : 'always-white',
-                                                  children: h.Z.Messages.QUESTS_TILE_BANNER_ENDS_DATE.format({ expiryDate: U })
+                                                  children: M.Z.Messages.QUESTS_TILE_BANNER_ENDS_DATE.format({ expiryDate: U })
                                               })
                                     ]
                                 })

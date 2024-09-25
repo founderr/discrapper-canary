@@ -41,22 +41,22 @@ t.Z = (e) => {
         { parent_title: N, provider: P, image_url: Z } = n.extra.media,
         A = n.extra.artist.name,
         S = (0, s.e7)([u.default], () => u.default.getUser(n.author_id)),
-        { primaryColor: M, secondaryColor: y } = (0, E.Z)(Z),
-        O = (0, m.Nq)(n),
+        { primaryColor: M, secondaryColor: O } = (0, E.Z)(Z),
+        y = (0, m.Nq)(n),
         R = a.useCallback(() => {
-            if (null == t || null == S || !(0, d.Hi)(O, _.y9)) return;
-            let e = I(n, t, S, O);
+            if (null == t || null == S || !(0, d.Hi)(y, _.y9)) return;
+            let e = I(n, t, S, y);
             return (0, x.CR)({
                 user: S,
                 channel: t,
                 mediaImageSrc: Z,
                 artist: A,
                 description: e,
-                colors: [M, y],
+                colors: [M, O],
                 badges: (0, x.UU)(n)
             });
-        }, [Z, A, t, n, M, O, y, S]);
-    if (null == S || !(0, d.Hi)(O, _.y9)) return null;
+        }, [Z, A, t, n, M, y, O, S]);
+    if (null == S || !(0, d.Hi)(y, _.y9)) return null;
     let j = () => {
         let e = f.Hw.ALBUM,
             t = o.Z.isProtocolRegistered() ? f.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : f.C7.WEB_OPEN(e, n.extra.media.external_parent_id);

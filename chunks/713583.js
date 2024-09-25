@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    s = n.n(a),
-    o = n(239091),
+    o = n.n(a),
+    s = n(239091),
     l = n(962293),
     u = n(555573),
     c = n(665692),
@@ -18,8 +18,8 @@ function E(e) {
     let a,
         E,
         f,
-        { className: h, activeCommand: p, activeOption: I, optionStates: m, channelId: T } = e,
-        S = i.useCallback(
+        { className: h, activeCommand: p, activeOption: m, optionStates: I, channelId: T } = e,
+        g = i.useCallback(
             (e) => {
                 var t;
                 let i = null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id;
@@ -27,7 +27,7 @@ function E(e) {
                     e.preventDefault();
                     return;
                 }
-                (0, o.jW)(e, async () => {
+                (0, s.jW)(e, async () => {
                     let { default: e } = await n.e('5396').then(n.bind(n, 731646));
                     return (t) =>
                         (0, r.jsx)(e, {
@@ -39,7 +39,7 @@ function E(e) {
             },
             [null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id]
         ),
-        g = i.useCallback(() => {
+        S = i.useCallback(() => {
             u.Po({
                 channelId: T,
                 command: null,
@@ -47,13 +47,13 @@ function E(e) {
             });
         }, [T]);
     if (null == p) return null;
-    if (null != I) {
-        let e = m[I.name].lastValidationResult;
-        (a = I.displayName), (E = I.displayDescription), (f = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
+    if (null != m) {
+        let e = I[m.name].lastValidationResult;
+        (a = m.displayName), (E = m.displayDescription), (f = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
     } else (a = ''.concat(c.GI).concat(p.displayName)), (E = p.displayDescription), (f = null);
     return (0, r.jsxs)('div', {
-        className: s()(h, _.bar),
-        onContextMenu: S,
+        className: o()(h, _.bar),
+        onContextMenu: g,
         children: [
             (0, r.jsxs)('div', {
                 className: _.commandInfo,
@@ -75,7 +75,7 @@ function E(e) {
             }),
             (0, r.jsx)('div', {
                 className: _.actions,
-                children: (0, r.jsx)(l.B, { onClick: g })
+                children: (0, r.jsx)(l.B, { onClick: S })
             })
         ]
     });

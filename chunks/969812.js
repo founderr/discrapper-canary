@@ -1,21 +1,21 @@
 var r = n(544891),
     i = n(904245),
     a = n(981631),
-    s = n(689938);
+    o = n(689938);
 t.Z = {
-    changeNickname: (e, t, n, o) =>
+    changeNickname: (e, t, n, s) =>
         r.tn
             .patch({
                 url: a.ANM.GUILD_MEMBER_NICK(e, n),
-                body: { nick: o },
+                body: { nick: s },
                 oldFormErrors: !0
             })
             .then(
                 (e) => {
-                    (o = e.body.nick), i.Z.sendBotMessage(t, null != o && '' !== o ? s.Z.Messages.COMMAND_NICK_SUCCESS.plainFormat({ nick: o }) : s.Z.Messages.COMMAND_NICK_RESET);
+                    (s = e.body.nick), i.Z.sendBotMessage(t, null != s && '' !== s ? o.Z.Messages.COMMAND_NICK_SUCCESS.plainFormat({ nick: s }) : o.Z.Messages.COMMAND_NICK_RESET);
                 },
                 (e) => {
-                    403 === e.status ? i.Z.sendBotMessage(t, s.Z.Messages.COMMAND_NICK_FAILURE_PERMISSION.plainFormat()) : i.Z.sendBotMessage(t, s.Z.Messages.COMMAND_NICK_FAILURE);
+                    403 === e.status ? i.Z.sendBotMessage(t, o.Z.Messages.COMMAND_NICK_FAILURE_PERMISSION.plainFormat()) : i.Z.sendBotMessage(t, o.Z.Messages.COMMAND_NICK_FAILURE);
                 }
             )
 };

@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(481060),
-    a = n(665149),
-    r = n(388035),
-    l = n(453473),
+var i = n(481060),
+    l = n(665149),
+    s = n(388035),
+    a = n(453473),
     o = n(689938);
-function c(e) {
-    let { onOpen: t, onClose: n, className: c } = e;
-    return (0, i.jsx)(l.P, {
+function u(e) {
+    let { onOpen: t, onClose: n, className: u } = e;
+    return (0, r.jsx)(a.P, {
         onOpen: t,
         onClose: n,
         popoutPosition: 'bottom',
         popoutAlign: 'right',
-        children: (e, t, n, l) =>
-            (0, i.jsx)(r.U, {
+        children: (e, t, n, a) =>
+            (0, r.jsx)(s.U, {
                 location: 'bookmarks-button',
-                children: (0, i.jsx)(a.JO, {
+                children: (0, r.jsx)(l.JO, {
                     ...n,
-                    className: c,
+                    className: u,
                     onClick: e,
-                    icon: s.BookmarkIcon,
+                    icon: i.BookmarkIcon,
                     'aria-label': o.Z.Messages.FOR_LATER,
                     tooltip: t ? null : o.Z.Messages.FOR_LATER,
                     selected: t,
-                    showBadge: l,
+                    showBadge: a,
                     badgePosition: 'top'
                 })
             })

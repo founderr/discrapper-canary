@@ -1,14 +1,14 @@
-o.d(t, {
+r.d(o, {
     Z: function () {
-        return d;
+        return n;
     }
 });
-var n = o(735250);
-o(470079);
-var r = o(120356),
-    i = o.n(r),
-    a = o(876612);
-function d(e) {
-    let { className: t } = e;
-    return (0, n.jsx)('div', { className: i()(a.image, t) });
+var t = r(735250);
+r(470079);
+var a = r(120356),
+    d = r.n(a),
+    c = r(876612);
+function n(e) {
+    let { className: o } = e;
+    return (0, t.jsx)('div', { className: d()(c.image, o) });
 }

@@ -49,29 +49,29 @@ let Z = (e, t) =>
     };
 t.ZP = (e) => {
     let { channel: t, entry: n, onReaction: E, onVoiceChannelPreview: M } = e,
-        { largeImage: y } = (0, _.rv)({ entry: n }),
-        { user: O, details: R, activity: j, embeddedActivity: L } = (0, C.n)(n),
-        { primaryColor: w, secondaryColor: b } = (0, f.Z)(null == y ? void 0 : y.src),
+        { largeImage: O } = (0, _.rv)({ entry: n }),
+        { user: y, details: R, activity: j, embeddedActivity: L } = (0, C.n)(n),
+        { primaryColor: w, secondaryColor: b } = (0, f.Z)(null == O ? void 0 : O.src),
         D = (0, i.e7)([m.default], () => m.default.locale),
-        { displayParticipants: U, participant1: B, participant2: k, numOtherParticipants: F } = (0, v.Z)(n, 3),
-        G = () => {
+        { displayParticipants: U, participant1: B, participant2: k, numOtherParticipants: G } = (0, v.Z)(n, 3),
+        F = () => {
             c._(d._b.TEXT, h.I.NORMAL, { applicationId: n.extra.application_id });
         },
         H = a.useCallback(
             (e) => {
-                if ((null == y ? void 0 : y.src) == null || null == t || null == O) return;
+                if ((null == O ? void 0 : O.src) == null || null == t || null == y) return;
                 let l =
-                    F > 0
+                    G > 0
                         ? S({
                               entry: n,
                               channel: t,
                               users: [B, k],
-                              countOthers: F
+                              countOthers: G
                           })
-                        : A(n, t, O);
+                        : A(n, t, y);
                 return (0, p.C4)({
                     entry: n,
-                    applicationImageSrc: null == y ? void 0 : y.src,
+                    applicationImageSrc: null == O ? void 0 : O.src,
                     avatarSrcs: U.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
                     timestamp: (0, T.yh)(n, D),
@@ -79,9 +79,9 @@ t.ZP = (e) => {
                     channelId: e
                 });
             },
-            [null == y ? void 0 : y.src, t, U, n, D, F, B, k, w, b, O]
+            [null == O ? void 0 : O.src, t, U, n, D, G, B, k, w, b, y]
         );
-    if (null == O) return null;
+    if (null == y) return null;
     let V = (0, l.jsx)(g.PZ, {
             location: g.Gt.POPOUT,
             entry: n
@@ -93,9 +93,9 @@ t.ZP = (e) => {
             subtitle: R,
             badges: V,
             entry: n,
-            onClickTitle: G,
-            onClickSubtitle: G,
-            onClickThumbnail: G
+            onClickTitle: F,
+            onClickSubtitle: F,
+            onClickThumbnail: F
         }),
         z = (0, s.Z)(j, N.xjy.JOIN) || (0, o.Z)(j),
         W = z
@@ -103,7 +103,7 @@ t.ZP = (e) => {
                   isEmbedded: (0, o.Z)(j),
                   embeddedActivity: L,
                   activity: j,
-                  user: O,
+                  user: y,
                   ButtonComponent: (e) =>
                       (0, l.jsx)(I.Ll, {
                           IconComponent: r.DoorEnterIcon,
@@ -112,7 +112,7 @@ t.ZP = (e) => {
               })
             : null,
         q = (0, l.jsx)(I.Ll, {
-            onClick: G,
+            onClick: F,
             IconComponent: r.AppsIcon,
             children: P.Z.Messages.CONTENT_INVENTORY_VIEW_ACTIVITY
         }),
@@ -124,10 +124,10 @@ t.ZP = (e) => {
                 children: (0, l.jsx)(I.WT, {
                     onReaction: E,
                     onVoiceChannelPreview: M,
-                    user: O,
+                    user: y,
                     channel: t,
                     generateReactionImage: H,
-                    reactionImageAltText: Z(n, O),
+                    reactionImageAltText: Z(n, y),
                     entry: n,
                     buttons: J
                 })

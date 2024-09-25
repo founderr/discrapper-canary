@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return S;
     }
 }),
     n(47120);
@@ -71,7 +71,7 @@ function N(e) {
               connectionTypeText: a
           });
 }
-function S(e) {
+function x(e) {
     let t = (0, r.e7)([c.Z], () => c.Z.hasVideo(e.channelId)),
         [n, o] = l.useState(m.tu.RTC_DEBUG_PANEL),
         u = (0, s.Dt)(),
@@ -133,12 +133,12 @@ function S(e) {
         })
     );
 }
-function x(e) {
+function S(e) {
     return (0, p.J)({
         channelId: e.channelId,
         location: 'RTCConnectionPopout'
     })
-        ? (0, i.jsx)(S, { ...e })
+        ? (0, i.jsx)(x, { ...e })
         : (0, i.jsx)('div', {
               className: C.debugPanelStandalone,
               children: (0, i.jsx)('section', {

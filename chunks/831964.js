@@ -28,8 +28,8 @@ var s,
     f = n(821721),
     A = n(158897),
     S = n(290650),
-    h = n(751125),
-    M = n(904505),
+    M = n(751125),
+    h = n(904505),
     x = n(386014),
     b = n(845571),
     O = n(220046),
@@ -54,7 +54,7 @@ let D = () => {
             title: u.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_NO_LIMITS_HEADER,
             description: u.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_NO_LIMITS_DESCRIPTION,
             previewImage: T,
-            videoUrl: e ? S.Z : h.Z,
+            videoUrl: e ? S.Z : M.Z,
             isCompact: !0
         }
     };
@@ -73,7 +73,7 @@ t.ZP = (e) => {
                 description: u.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_SUBTITLE,
                 descriptionCta: u.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
                 previewImage: g,
-                videoUrl: s ? M.Z : x.Z
+                videoUrl: s ? h.Z : x.Z
             },
             serverProfiles: {
                 name: 'serverProfiles',

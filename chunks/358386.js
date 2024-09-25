@@ -1,33 +1,33 @@
-t.d(e, {
+t.d(n, {
     Z: function () {
         return c;
     }
 });
-var r = t(735250);
+var l = t(735250);
 t(470079);
-var a = t(442837),
-    u = t(481060),
-    i = t(430824),
-    l = t(594174),
+var u = t(442837),
+    a = t(481060),
+    r = t(430824),
+    i = t(594174),
     o = t(689938);
-function c(n, e) {
-    let c = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
-        d = (0, a.e7)([i.Z], () => i.Z.getGuild(e));
-    return null == d || null == c || n.id === d.ownerId || n.bot || !d.isOwnerWithRequiredMfaLevel(c)
+function c(e, n) {
+    let c = (0, u.e7)([i.default], () => i.default.getCurrentUser()),
+        s = (0, u.e7)([r.Z], () => r.Z.getGuild(n));
+    return null == s || null == c || e.id === s.ownerId || e.bot || !s.isOwnerWithRequiredMfaLevel(c)
         ? null
-        : (0, r.jsx)(u.MenuItem, {
+        : (0, l.jsx)(a.MenuItem, {
               id: 'transfer-ownership',
               color: 'danger',
               label: o.Z.Messages.TRANSFER_OWNERSHIP,
               action: () =>
-                  (0, u.openModalLazy)(async () => {
-                      let { default: e } = await t.e('8653').then(t.bind(t, 928090));
+                  (0, a.openModalLazy)(async () => {
+                      let { default: n } = await t.e('8653').then(t.bind(t, 928090));
                       return (t) =>
-                          (0, r.jsx)(e, {
+                          (0, l.jsx)(n, {
                               ...t,
-                              guild: d,
+                              guild: s,
                               fromUser: c,
-                              toUser: n
+                              toUser: e
                           });
                   })
           });

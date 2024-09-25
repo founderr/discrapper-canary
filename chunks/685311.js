@@ -3,8 +3,8 @@ var s,
     r,
     i = n(735250),
     a = n(470079),
-    l = n(120356),
-    o = n.n(l),
+    o = n(120356),
+    l = n.n(o),
     c = n(536285),
     u = n(857458),
     d = n(388905),
@@ -14,10 +14,10 @@ var s,
 ((r = s || (s = {}))[(r.INITIAL = 0)] = 'INITIAL'), (r[(r.RPC_CONNECTED = 1)] = 'RPC_CONNECTED'), (r[(r.APP_OPENING = 2)] = 'APP_OPENING'), (r[(r.APP_OPENED = 3)] = 'APP_OPENED');
 t.Z = function (e) {
     let { match: t, location: n, attemptDeepLink: s } = e,
-        [r, l] = a.useState(0);
+        [r, o] = a.useState(0);
     a.useEffect(() => {
         c.default.once('connected', () => {
-            l(1);
+            o(1);
         }),
             c.default.once('disconnected', () => {
                 (0, _.uL)((0, u.M)());
@@ -29,10 +29,10 @@ t.Z = function (e) {
             let e = setTimeout(() => (0, _.uL)((0, u.M)()), 3000);
             return () => clearTimeout(e);
         }, [r]);
-    let g = a.useCallback(
+    let p = a.useCallback(
         async (e, t) => {
             try {
-                l(2), await s(e, t), l(3);
+                o(2), await s(e, t), o(3);
             } catch (e) {
                 console.error('Error opening deeplink', e);
             }
@@ -51,11 +51,11 @@ t.Z = function (e) {
                     (0, i.jsx)(d.DK, { children: h.Z.Messages.DEEPLINK_BROWSER_PROMPT }),
                     (0, i.jsx)(d.zx, {
                         className: E.marginTop40,
-                        onClick: () => g(t, n),
+                        onClick: () => p(t, n),
                         children: h.Z.Messages.OPEN_IN_APP
                     }),
                     (0, i.jsx)(d.zx, {
-                        className: o()(E.marginTop8, E.marginCenterHorz),
+                        className: l()(E.marginTop8, E.marginCenterHorz),
                         color: d.zx.Colors.LINK,
                         look: d.zx.Looks.LINK,
                         onClick: () => (0, _.uL)((0, u.M)()),

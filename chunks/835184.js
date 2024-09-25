@@ -3,9 +3,9 @@ var l,
     u = t(570140),
     r = t(314897),
     a = t(924301),
-    o = t(658041),
-    s = t(765305);
-function d(e, n, t) {
+    d = t(658041),
+    o = t(765305);
+function s(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -26,7 +26,7 @@ function _(e) {
     let t = { ...E };
     delete t[e], (E = t);
 }
-class N extends (l = i.ZP.PersistedStore) {
+class f extends (l = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var n, t;
@@ -52,9 +52,9 @@ class N extends (l = i.ZP.PersistedStore) {
         };
     }
 }
-d(N, 'displayName', 'UpcomingEventNoticesStore'),
-    d(N, 'persistKey', 'UpcomingEventNotices'),
-    (n.Z = new N(u.Z, {
+s(f, 'displayName', 'UpcomingEventNoticesStore'),
+    s(f, 'persistKey', 'UpcomingEventNotices'),
+    (n.Z = new f(u.Z, {
         UPCOMING_GUILD_EVENT_NOTICE_HIDE: function (e) {
             let { eventId: n } = e,
                 t = { ...c };
@@ -62,7 +62,7 @@ d(N, 'displayName', 'UpcomingEventNoticesStore'),
         },
         GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
             let { guildScheduledEvent: n } = e;
-            (n.status === s.p1.CANCELED || n.status === s.p1.COMPLETED) && _(n.id);
+            (n.status === o.p1.CANCELED || n.status === o.p1.COMPLETED) && _(n.id);
         },
         GUILD_SCHEDULED_EVENT_DELETE: function (e) {
             let { guildScheduledEvent: n } = e;
@@ -72,9 +72,9 @@ d(N, 'displayName', 'UpcomingEventNoticesStore'),
             let { userId: n, guildEventId: t } = e;
             if (n !== r.default.getId()) return;
             let l = a.ZP.getGuildScheduledEvent(t);
-            if (null == l || l.status !== s.p1.SCHEDULED || null != c[t]) return;
+            if (null == l || l.status !== o.p1.SCHEDULED || null != c[t]) return;
             let i = E[t];
-            if ((0, o.M)(l, void 0, i, !1) === s.X_.NEW_EVENT) {
+            if ((0, d.M)(l, void 0, i, !1) === o.X_.NEW_EVENT) {
                 let e = { ...c };
                 (e[t] = Date.now()), (c = e);
             }

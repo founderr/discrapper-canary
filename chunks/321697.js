@@ -1,20 +1,20 @@
 t.d(n, {
     r: function () {
-        return r;
+        return E;
     }
 });
 var i = t(481060),
-    l = t(560067),
-    o = t(675999);
-let r = {
+    o = t(560067),
+    l = t(675999);
+let E = {
     binds: ['mod+shift+n'],
     comboKeysBindGlobal: !0,
     action() {
-        (0, i.hasModalOpen)(o.PU)
-            ? l.Z.updateCreateGuildModal({
-                  slide: o._m.JOIN_GUILD,
+        (0, i.hasModalOpen)(l.PU)
+            ? o.Z.updateCreateGuildModal({
+                  slide: l._m.JOIN_GUILD,
                   location: 'Keyboard Shortcut'
               })
-            : l.Z.openCreateGuildModal({ location: 'Keyboard Shortcut' });
+            : o.Z.openCreateGuildModal({ location: 'Keyboard Shortcut' });
     }
 };

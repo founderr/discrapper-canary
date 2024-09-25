@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return o;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(470079),
-    s = n(393238);
-function a() {
-    let { ref: e, width: t } = (0, s.Z)(),
-        [n, a] = i.useState();
+    a = n(393238);
+function o() {
+    let { ref: e, width: t } = (0, a.Z)(),
+        [n, r] = i.useState();
     return (
         i.useEffect(() => {
-            null == n && null != t && a(t);
+            null == n && null != t && r(t);
         }, [n, t]),
         [e, n]
     );

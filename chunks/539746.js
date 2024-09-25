@@ -3,10 +3,10 @@ n.d(t, {
         return a;
     },
     _J: function () {
-        return s;
+        return o;
     },
     xG: function () {
-        return o;
+        return s;
     }
 });
 var r = n(818083),
@@ -25,12 +25,12 @@ let a = (0, r.B)({
         }
     ]
 });
-function s(e) {
+function o(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         { enabled: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: t });
     return n;
 }
-function o(e) {
+function s(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         { enabled: n } = a.useExperiment({ location: e }, { autoTrackExposure: t });
     return n;

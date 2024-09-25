@@ -2,92 +2,92 @@ n.d(t, {
     Z: function () {
         return R;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
-    l = n(481060),
-    u = n(420660),
-    c = n(100527),
-    d = n(906732),
-    _ = n(233440),
-    E = n(158776),
-    f = n(74538),
-    h = n(998502),
-    p = n(785717),
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(442837),
+    u = n(481060),
+    c = n(420660),
+    d = n(100527),
+    _ = n(906732),
+    E = n(233440),
+    f = n(158776),
+    h = n(74538),
+    p = n(998502),
+    m = n(785717),
     I = n(369566),
-    m = n(518950),
-    T = n(652853),
+    T = n(518950),
+    g = n(652853),
     S = n(228168),
-    g = n(981631),
-    A = n(474936),
+    A = n(981631),
+    v = n(474936),
     N = n(8621);
-let O = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+let O = p.ZP.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar;
 function R(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: R, animateOnHover: v, onOpenProfile: C, className: y } = e,
-        { theme: L } = (0, T.z)(),
-        { analyticsLocations: D } = (0, d.ZP)(c.Z.AVATAR),
-        { trackUserProfileAction: b } = (0, p.KZ)(),
-        M = f.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, A.p9.TIER_2),
-        P = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, h), [t, h]),
+    let { user: t, displayProfile: n, guildId: r, channelId: o, profileType: p, animateOnHover: R, onOpenProfile: C, className: y } = e,
+        { theme: b } = (0, g.z)(),
+        { analyticsLocations: L } = (0, _.ZP)(d.Z.AVATAR),
+        { trackUserProfileAction: D } = (0, m.KZ)(),
+        M = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
+        P = a.useMemo(() => t.isNonUserBot() || (0, E.W)(t, o), [t, o]),
         { live: U } = (0, I.Z)(t.id),
         [w] = U,
-        { status: x, isMobileOnline: G } = (0, o.cj)([E.Z], () => ({
-            status: (0, u.Z)(w) ? g.Skl.STREAMING : E.Z.getStatus(t.id),
-            isMobileOnline: E.Z.isMobileOnline(t.id)
+        { status: x, isMobileOnline: G } = (0, l.cj)([f.Z], () => ({
+            status: (0, c.Z)(w) ? A.Skl.STREAMING : f.Z.getStatus(t.id),
+            isMobileOnline: f.Z.isMobileOnline(t.id)
         })),
-        k = R === S.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
+        k = p === S.y0.FULL_SIZE ? u.AvatarSizes.SIZE_120 : u.AvatarSizes.SIZE_80,
         B = s()(
             N.avatar,
             {
-                [N.biteSize]: R === S.y0.BITE_SIZE,
-                [N.fullSize]: R === S.y0.FULL_SIZE,
-                [N.panel]: R === S.y0.PANEL
+                [N.biteSize]: p === S.y0.BITE_SIZE,
+                [N.fullSize]: p === S.y0.FULL_SIZE,
+                [N.panel]: p === S.y0.PANEL
             },
             y
         ),
         {
             avatarDecorationSrc: F,
-            avatarSrc: V,
-            eventHandlers: H
-        } = (0, m.Z)({
+            avatarSrc: Z,
+            eventHandlers: V
+        } = (0, T.Z)({
             user: t,
-            guildId: null != n ? n.guildId : a,
+            guildId: null != n ? n.guildId : r,
             size: k,
-            animateOnHover: v
+            animateOnHover: R
         }),
-        Z = (0, r.jsx)(O, {
-            src: V,
+        H = (0, i.jsx)(O, {
+            src: Z,
             avatarDecoration: F,
             size: k,
             'aria-label': t.username,
             imageClassName: null != C ? N.overlay : void 0,
-            status: P ? g.Skl.UNKNOWN : x,
-            statusBackdropColor: M && !P ? (0, l.getStatusBackdropColor)(L) : void 0,
+            status: P ? A.Skl.UNKNOWN : x,
+            statusBackdropColor: M && !P ? (0, u.getStatusBackdropColor)(b) : void 0,
             isMobile: G,
             statusTooltip: !0,
             statusTooltipDelay: S.vB
         });
     return null == C
-        ? (0, r.jsx)('div', {
-              ...H,
+        ? (0, i.jsx)('div', {
+              ...V,
               className: B,
-              children: Z
+              children: H
           })
-        : (0, r.jsx)(l.Clickable, {
-              ...H,
+        : (0, i.jsx)(u.Clickable, {
+              ...V,
               className: s()(B, N.clickable),
               focusProps: { ringClassName: N.focusRing },
               onClick: () => {
-                  b({
+                  D({
                       action: 'PRESS_VIEW_PROFILE',
-                      analyticsLocations: D
+                      analyticsLocations: L
                   }),
                       null == C || C();
               },
-              children: Z
+              children: H
           });
 }

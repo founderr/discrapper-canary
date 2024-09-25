@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return m;
+        return A;
     }
 }),
     t(47120);
@@ -29,14 +29,14 @@ function N(e) {
             analyticsLocation: o.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
     if (null == N) return null;
-    let m = t ? I.finePrintWithOverheadSeparator : I.finePrint,
-        A = N.invoiceItems.find((e) => {
+    let A = t ? I.finePrintWithOverheadSeparator : I.finePrint,
+        C = N.invoiceItems.find((e) => {
             let { subscriptionPlanId: s } = e;
             return (0, d.uZ)(s);
         });
-    if (null == A) return null;
-    let C = A.subscriptionPlanId,
-        g = c.Z.get(C);
+    if (null == C) return null;
+    let m = C.subscriptionPlanId,
+        g = c.Z.get(m);
     i()(null != g, 'Missing plan');
     let h = (0, _.T4)(N.total, N.currency),
         O = '';
@@ -66,13 +66,13 @@ function N(e) {
                         })),
         (0, n.jsx)(r.Text, {
             color: 'text-muted',
-            className: m,
+            className: A,
             variant: 'text-xs/normal',
             children: O
         })
     );
 }
-function m(e) {
+function A(e) {
     let { subscription: s, withOverheadSeparator: t } = e;
     return s.status === T.O0b.CANCELED || s.isPurchasedExternally
         ? null

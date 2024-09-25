@@ -1,11 +1,11 @@
 n.d(t, {
     F: function () {
-        return a;
+        return o;
     }
-}),
-    n(411104);
-var r = n(153102);
-function i(e, t, n) {
+});
+var r = n(411104);
+var i = n(153102);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     attach(e) {
         let { stores: t } = this;
         t.forEach((t, n) => {
@@ -31,11 +31,11 @@ class a {
         e.forEach((e) => e.removeReactChangeListener(this.handleStoreChange));
     }
     constructor(e, t) {
-        i(this, 'stores', void 0),
-            i(this, 'changeCallback', void 0),
-            i(this, 'storeVersionHandled', void 0),
-            i(this, 'handleStoreChange', () => {
-                let e = r.Z.getChangeSentinel();
+        a(this, 'stores', void 0),
+            a(this, 'changeCallback', void 0),
+            a(this, 'storeVersionHandled', void 0),
+            a(this, 'handleStoreChange', () => {
+                let e = i.Z.getChangeSentinel();
                 if (this.storeVersionHandled !== e) this.changeCallback(), (this.storeVersionHandled = e);
             }),
             (this.stores = e),

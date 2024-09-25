@@ -6,15 +6,14 @@ var t = '[0-9](_*[0-9])*',
         variants: [{ begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` }, { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` }, { begin: `(${n})[fFdD]?\\b` }, { begin: `\\b(${t})[fFdD]\\b` }, { begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b` }, { begin: '\\b(0|[1-9](_*[0-9])*)[lL]?\\b' }, { begin: `\\b0[xX](${r})[lL]?\\b` }, { begin: '\\b0(_*[0-7])*[lL]?\\b' }, { begin: '\\b0[bB][01](_*[01])*[lL]?\\b' }],
         relevance: 0
     };
-e.exports = function (e) {
+function a(e, t, n) {
+    return -1 === n ? '' : e.replace(t, (r) => a(e, t, n - 1));
+}
+function o(e) {
     let t = e.regex,
         n = '[À-ʸa-zA-Z_$][À-ʸa-zA-Z_$0-9]*',
-        r =
-            n +
-            (function e(t, n, r) {
-                return -1 === r ? '' : t.replace(n, (i) => e(t, n, r - 1));
-            })('(?:<' + n + '~~~(?:\\s*,\\s*' + n + '~~~)*>)?', /~~~/g, 2),
-        a = {
+        r = n + a('(?:<' + n + '~~~(?:\\s*,\\s*' + n + '~~~)*>)?', /~~~/g, 2),
+        o = {
             keyword: ['synchronized', 'abstract', 'private', 'var', 'static', 'if', 'const ', 'for', 'while', 'strictfp', 'finally', 'protected', 'import', 'native', 'final', 'void', 'enum', 'else', 'break', 'transient', 'catch', 'instanceof', 'volatile', 'case', 'assert', 'package', 'default', 'public', 'try', 'switch', 'continue', 'throws', 'protected', 'public', 'private', 'module', 'requires', 'exports', 'do', 'sealed', 'yield', 'permits'],
             literal: ['false', 'true', 'null'],
             type: ['char', 'boolean', 'long', 'float', 'int', 'byte', 'short', 'double'],
@@ -31,11 +30,11 @@ e.exports = function (e) {
                 }
             ]
         },
-        o = {
+        l = {
             className: 'params',
             begin: /\(/,
             end: /\)/,
-            keywords: a,
+            keywords: o,
             relevance: 0,
             contains: [e.C_BLOCK_COMMENT_MODE],
             endsParent: !0
@@ -43,7 +42,7 @@ e.exports = function (e) {
     return {
         name: 'Java',
         aliases: ['jsp'],
-        keywords: a,
+        keywords: o,
         illegal: /<\/|#/,
         contains: [
             e.COMMENT('/\\*\\*', '\\*/', {
@@ -99,7 +98,7 @@ e.exports = function (e) {
                     1: 'keyword',
                     3: 'title.class'
                 },
-                contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [l, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 beginKeywords: 'new throw return else',
@@ -108,13 +107,13 @@ e.exports = function (e) {
             {
                 begin: ['(?:' + r + '\\s+)', e.UNDERSCORE_IDENT_RE, /\s*(?=\()/],
                 className: { 2: 'title.function' },
-                keywords: a,
+                keywords: o,
                 contains: [
                     {
                         className: 'params',
                         begin: /\(/,
                         end: /\)/,
-                        keywords: a,
+                        keywords: o,
                         relevance: 0,
                         contains: [s, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, i, e.C_BLOCK_COMMENT_MODE]
                     },
@@ -126,4 +125,5 @@ e.exports = function (e) {
             s
         ]
     };
-};
+}
+e.exports = o;

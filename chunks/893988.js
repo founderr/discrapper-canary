@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return a;
     }
-}),
-    n(757143);
-let r = /\\/g;
-function i(e) {
-    return e.replace(r, '/');
+});
+var r = n(757143);
+let i = /\\/g;
+function a(e) {
+    return e.replace(i, '/');
 }

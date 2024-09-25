@@ -2,16 +2,16 @@ var s = n(735250),
     r = n(470079),
     i = n(120356),
     a = n.n(i),
-    l = n(442837),
-    o = n(481060),
+    o = n(442837),
+    l = n(481060),
     c = n(812206),
     u = n(388905),
     d = n(925329),
     _ = n(479446),
     h = n(981632),
     E = n(594174),
-    g = n(509545),
-    p = n(55563),
+    p = n(509545),
+    g = n(55563),
     m = n(296848),
     f = n(981631),
     I = n(474936),
@@ -19,9 +19,9 @@ var s = n(735250),
     T = n(295242),
     x = n(739017),
     A = n(113207);
-t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
+t.Z = o.ZP.connectStores([g.Z, c.Z, p.Z, E.default], (e) => {
     let { giftCode: t } = e,
-        n = p.Z.get(t.skuId),
+        n = g.Z.get(t.skuId),
         { subscriptionPlanId: s } = t;
     return {
         sku: n,
@@ -30,13 +30,13 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
         gifter: E.default.getUser(t.userId)
     };
 })((e) => {
-    let { error: t, giftCode: n, gifter: i, sku: l, application: c, subscriptionPlan: E } = e,
-        g = null == i ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({ username: i.username }),
-        p = l.name;
+    let { error: t, giftCode: n, gifter: i, sku: o, application: c, subscriptionPlan: E } = e,
+        p = null == i ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({ username: i.username }),
+        g = o.name;
     return (
         null != E &&
-            (p = (E.interval === I.rV.MONTH ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
-                skuName: l.name,
+            (g = (E.interval === I.rV.MONTH ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
+                skuName: o.name,
                 intervalCount: E.intervalCount
             })),
         (0, s.jsxs)(r.Fragment, {
@@ -49,7 +49,7 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
                       })
                     : (0, s.jsx)(u.qE, {
                           src: null != i ? i.getAvatarURL(void 0, 100) : null,
-                          size: o.AvatarSizes.DEPRECATED_SIZE_100,
+                          size: l.AvatarSizes.DEPRECATED_SIZE_100,
                           className: A.marginBottom20
                       }),
                 null != t
@@ -58,18 +58,18 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
                       })
                     : (0, s.jsxs)(r.Fragment, {
                           children: [
-                              (0, s.jsx)(u.DK, { children: g }),
+                              (0, s.jsx)(u.DK, { children: p }),
                               (0, s.jsxs)(u.Dx, {
                                   className: a()(A.marginTop8, x.flexCenter),
                                   children: [
-                                      l.productLine !== f.POd.COLLECTIBLES &&
+                                      o.productLine !== f.POd.COLLECTIBLES &&
                                           (0, s.jsx)(d.Z, {
                                               size: d.Z.Sizes.MEDIUM,
                                               className: T.applicationIcon,
                                               game: c,
-                                              skuId: l.id
+                                              skuId: o.id
                                           }),
-                                      p
+                                      g
                                   ]
                               })
                           ]

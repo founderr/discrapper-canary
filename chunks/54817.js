@@ -1,33 +1,33 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return p;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
-    r = n(481060),
-    l = n(385499),
-    o = n(739566),
-    c = n(464891),
-    u = n(83561),
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(385499),
+    l = n(739566),
+    u = n(464891),
+    c = n(83561),
     d = n(834129),
     _ = n(981631),
     E = n(674563),
-    I = n(689938),
-    m = n(38814);
-function T(e) {
-    let { message: t, compact: n, usernameHook: s } = e,
-        T = (0, o.ZP)(t),
-        h = s(T),
+    f = n(689938),
+    h = n(38814);
+function p(e) {
+    let { message: t, compact: n, usernameHook: i } = e,
+        p = (0, l.ZP)(t),
+        m = i(p),
         {
-            avatarSrc: N,
-            eventHandlers: { onMouseEnter: f, onMouseLeave: C }
-        } = (0, u.m)(!0),
-        p =
+            avatarSrc: I,
+            eventHandlers: { onMouseEnter: T, onMouseLeave: g }
+        } = (0, c.m)(!0),
+        S =
             '' !== t.content
-                ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
+                ? new Date(t.content).toLocaleString(f.Z.getLocale(), {
                       hour: 'numeric',
                       minute: '2-digit',
                       month: '2-digit',
@@ -35,52 +35,52 @@ function T(e) {
                       year: 'numeric'
                   })
                 : '';
-    return (0, i.jsx)('div', {
-        onMouseEnter: f,
-        onMouseLeave: C,
-        children: (0, i.jsx)(d.Z, {
-            className: a()(m.mainContainer, { [m.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(u.S, { src: N }),
-            iconContainerClassName: m.iconContainer,
+    return (0, r.jsx)('div', {
+        onMouseEnter: T,
+        onMouseLeave: g,
+        children: (0, r.jsx)(d.Z, {
+            className: a()(h.mainContainer, { [h.compact]: n }),
+            iconNode: n ? null : (0, r.jsx)(c.S, { src: I }),
+            iconContainerClassName: h.iconContainer,
             compact: n,
-            children: (0, i.jsxs)('div', {
-                className: a()(m.content, { [m.compact]: n }),
+            children: (0, r.jsxs)('div', {
+                className: a()(h.content, { [h.compact]: n }),
                 children: [
-                    (0, i.jsx)(c.nD, {
+                    (0, r.jsx)(u.nD, {
                         message: t,
-                        messageClassname: m.spanCorrection,
-                        className: a()(m.usernameContainer, m.spanCorrection, { [m.compact]: n }),
-                        username: (0, i.jsxs)('div', {
-                            className: m.spanCorrection,
+                        messageClassname: h.spanCorrection,
+                        className: a()(h.usernameContainer, h.spanCorrection, { [h.compact]: n }),
+                        username: (0, r.jsxs)('div', {
+                            className: h.spanCorrection,
                             children: [
-                                (0, i.jsx)(r.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
-                                    className: m.username,
-                                    children: I.Z.Messages.GUILD_AUTOMOD_USERNAME
+                                    className: h.username,
+                                    children: f.Z.Messages.GUILD_AUTOMOD_USERNAME
                                 }),
-                                (0, i.jsx)(l.Z, {
+                                (0, r.jsx)(s.Z, {
                                     type: E.Hb.SYSTEM_DM,
-                                    className: m.systemTag
+                                    className: h.systemTag
                                 })
                             ]
                         }),
                         compact: n,
                         showTimestamp: !0
                     }),
-                    (0, i.jsx)('div', {
-                        className: a()(m.__invalid_messageContent, { [m.compact]: n }),
+                    (0, r.jsx)('div', {
+                        className: a()(h.__invalid_messageContent, { [h.compact]: n }),
                         children:
                             t.type === _.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
-                                ? I.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
-                                      username: T.nick,
-                                      usernameHook: h,
-                                      time: p
+                                ? f.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
+                                      username: p.nick,
+                                      usernameHook: m,
+                                      time: S
                                   })
-                                : I.Z.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
-                                      username: T.nick,
-                                      usernameHook: h
+                                : f.Z.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
+                                      username: p.nick,
+                                      usernameHook: m
                                   })
                     })
                 ]

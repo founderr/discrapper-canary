@@ -2,18 +2,18 @@ var s,
     r,
     i,
     a,
-    l = n(973361),
-    o = n(442837),
+    o = n(973361),
+    l = n(442837),
     c = n(570140),
     u = n(358085),
     d = n(723359);
 let _ = null,
     h = 'underage';
-class E extends (a = o.ZP.Store) {
+class E extends (a = l.ZP.Store) {
     isUnderageAnonymous() {
         if (u.isPlatformEmbedded) {
             if (null != _ && _ + d.k0 > Date.now()) return !0;
-        } else return null != l.parse(document.cookie)[h];
+        } else return null != o.parse(document.cookie)[h];
         return !1;
     }
 }

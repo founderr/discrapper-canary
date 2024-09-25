@@ -1,55 +1,55 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(481060),
-    a = n(259580),
-    r = n(528027),
-    l = n(686807),
+var i = n(481060),
+    l = n(259580),
+    s = n(528027),
+    a = n(686807),
     o = n(113318),
-    c = n(131809);
-function u(e) {
-    let { benefit: t, guildId: n, onClick: u } = e,
+    u = n(131809);
+function c(e) {
+    let { benefit: t, guildId: n, onClick: c } = e,
         d = (0, o.Z)(n, t.ref_id),
-        _ = (0, i.jsx)(r.Z, {
+        h = (0, r.jsx)(s.Z, {
             guildId: n,
             emojiId: t.emoji_id,
             emojiName: t.emoji_name
         });
-    return (0, i.jsxs)(s.Clickable, {
-        className: c.container,
+    return (0, r.jsxs)(i.Clickable, {
+        className: u.container,
         onClick: () => {
-            null == d || d.navigateToChannel(), u();
+            null == d || d.navigateToChannel(), c();
         },
         'aria-label': null == d ? void 0 : d.ariaLabel,
         role: 'link',
         children: [
-            (0, i.jsx)('div', {
-                className: c.emojiContainer,
-                children: _
+            (0, r.jsx)('div', {
+                className: u.emojiContainer,
+                children: h
             }),
-            (0, i.jsxs)('div', {
-                className: c.infoContainer,
+            (0, r.jsxs)('div', {
+                className: u.infoContainer,
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
-                        className: c.name,
-                        children: (0, l.Z)(t)
+                        className: u.name,
+                        children: (0, a.Z)(t)
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: 'interactive-normal',
                         variant: 'text-sm/normal',
                         children: t.description
                     })
                 ]
             }),
-            (0, i.jsx)(a.Z, {
-                direction: a.Z.Directions.RIGHT,
-                className: c.caret
+            (0, r.jsx)(l.Z, {
+                direction: l.Z.Directions.RIGHT,
+                className: u.caret
             })
         ]
     });

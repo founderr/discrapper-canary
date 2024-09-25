@@ -1,72 +1,72 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return h;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
-    r = n(481060),
-    l = n(592125),
-    o = n(944486),
-    c = n(471253),
-    u = n(623633),
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(592125),
+    l = n(944486),
+    u = n(471253),
+    c = n(623633),
     d = n(930180),
     _ = n(689938),
     E = n(979661);
-function I(e) {
-    let t = o.Z.getVoiceChannelId();
+function f(e) {
+    let t = l.Z.getVoiceChannelId();
     if (null == t) return;
-    let n = l.Z.getChannel(t);
-    if (null != n) (0, c.RK)(n, e);
+    let n = s.Z.getChannel(t);
+    if (null != n) (0, u.RK)(n, e);
 }
-function m() {
+function h() {
     var e;
-    let t = (0, u.Z)(),
+    let t = (0, c.Z)(),
         n = null !== (e = (0, d._d)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
     return null == t
         ? null
-        : (0, i.jsxs)(r.Notice, {
+        : (0, r.jsxs)(o.Notice, {
               className: E.container,
-              color: r.NoticeColors.DEFAULT,
+              color: o.NoticeColors.DEFAULT,
               children: [
-                  (0, i.jsx)('div', { children: _.Z.Messages.STAGE_SPEAK_INVITE_HEADER }),
+                  (0, r.jsx)('div', { children: _.Z.Messages.STAGE_SPEAK_INVITE_HEADER }),
                   n > 0
-                      ? (0, i.jsxs)('div', {
+                      ? (0, r.jsxs)('div', {
                             className: E.blocked,
                             children: [
-                                (0, i.jsx)(r.DenyIcon, {
+                                (0, r.jsx)(o.DenyIcon, {
                                     size: 'xxs',
                                     color: 'currentColor',
                                     className: E.blockedIcon
                                 }),
-                                (0, i.jsx)('div', {
+                                (0, r.jsx)('div', {
                                     className: E.blockedText,
                                     children: _.Z.Messages.STAGE_SPEAK_INVITE_HEADER_BLOCKED_USERS.format({ number: n })
                                 })
                             ]
                         })
                       : null,
-                  (0, i.jsx)(r.Button, {
+                  (0, r.jsx)(o.Button, {
                       className: a()(E.__invalid_button, E.acceptButton),
-                      size: r.Button.Sizes.MIN,
-                      color: r.Button.Colors.WHITE,
-                      onClick: () => I(!1),
-                      children: (0, i.jsx)(r.Text, {
+                      size: o.Button.Sizes.MIN,
+                      color: o.Button.Colors.WHITE,
+                      onClick: () => f(!1),
+                      children: (0, r.jsx)(o.Text, {
                           className: E.acceptText,
                           variant: 'text-xs/normal',
                           color: 'none',
                           children: _.Z.Messages.STAGE_SPEAK_INVITE_ACCEPT
                       })
                   }),
-                  (0, i.jsx)(r.Button, {
+                  (0, r.jsx)(o.Button, {
                       className: a()(E.__invalid_button, E.declineButton),
-                      look: r.Button.Looks.OUTLINED,
-                      size: r.Button.Sizes.MIN,
-                      color: r.Button.Colors.WHITE,
-                      onClick: () => I(!0),
-                      children: (0, i.jsx)(r.Text, {
+                      look: o.Button.Looks.OUTLINED,
+                      size: o.Button.Sizes.MIN,
+                      color: o.Button.Colors.WHITE,
+                      onClick: () => f(!0),
+                      children: (0, r.jsx)(o.Text, {
                           className: E.declineText,
                           variant: 'text-xs/normal',
                           color: 'none',

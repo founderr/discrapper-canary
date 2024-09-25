@@ -21,7 +21,7 @@ var a = n(120356),
     f = n(474936),
     A = n(689938),
     S = n(679757);
-let h = (e) => {
+let M = (e) => {
         let { inOfferExperience: t, inTrial: n, subscriptionTier: a, buttonClassName: i } = e,
             o = null;
         !t &&
@@ -54,7 +54,7 @@ let h = (e) => {
             })
         );
     },
-    M = (e) => {
+    h = (e) => {
         let { isFullscreen: t } = e;
         return (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar1 : S.settingsSparkleStar1 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar2 : S.settingsSparkleStar2 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar3 : S.settingsSparkleStar3 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar4 : S.settingsSparkleStar4 })]
@@ -119,7 +119,7 @@ t.Z = (e) => {
                               })
                             : p
                               ? null
-                              : (0, s.jsx)(h, {
+                              : (0, s.jsx)(M, {
                                     subscriptionTier: d,
                                     inOfferExperience: v,
                                     inTrial: P,
@@ -133,7 +133,7 @@ t.Z = (e) => {
                             })
                     ]
                 }),
-                !(v || g) && (0, s.jsx)(M, { isFullscreen: t })
+                !(v || g) && (0, s.jsx)(h, { isFullscreen: t })
             ]
         })
     });

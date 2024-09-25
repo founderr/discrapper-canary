@@ -1,12 +1,12 @@
 n.d(t, {
     i: function () {
-        return s;
+        return o;
     }
 });
 var r = n(544891),
     i = n(881052),
     a = n(981631);
-async function s(e, t) {
+async function o(e, t) {
     try {
         await r.tn.patch({
             url: a.ANM.MY_CONTENT_INVENTORY_APPLICATION(e),

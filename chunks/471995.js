@@ -22,8 +22,8 @@ var i = n(735250),
 function I(e) {
     let { guild: t, guildChannels: l, hasBanner: I } = e,
         N = l.getGuildActionSection(),
-        S = (0, d.Z)(t),
-        x = (0, r.e7)([p.Z], () => p.Z.getMemberCount(t.id)),
+        x = (0, d.Z)(t),
+        S = (0, r.e7)([p.Z], () => p.Z.getMemberCount(t.id)),
         v = async () => {
             let { default: e } = await n.e('46826').then(n.bind(n, 859432));
             return (n) => {
@@ -58,7 +58,7 @@ function I(e) {
                 children: (0, i.jsx)(s.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-low-contrast',
-                    children: g.Z.Messages.MEMBERS_HEADER.format({ members: x })
+                    children: g.Z.Messages.MEMBERS_HEADER.format({ members: S })
                 })
             }),
             (0, i.jsxs)('div', {
@@ -70,7 +70,7 @@ function I(e) {
                                 return (0, i.jsx)(E, {
                                     tooltip: g.Z.Messages.CHANNELS_AND_ROLES,
                                     onPress: () => {
-                                        (0, h.uL)(_.Z5c.CHANNEL(t.id, S ? m.oC.CUSTOMIZE_COMMUNITY : m.oC.CHANNEL_BROWSER));
+                                        (0, h.uL)(_.Z5c.CHANNEL(t.id, x ? m.oC.CUSTOMIZE_COMMUNITY : m.oC.CHANNEL_BROWSER));
                                     },
                                     children: (0, i.jsx)(s.ChannelListMagnifyingGlassIcon, { size: 'sm' })
                                 });

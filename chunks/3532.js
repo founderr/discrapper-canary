@@ -1,7 +1,7 @@
 var r = n(67867),
-    o = n(821819),
+    i = n(821819),
     a = n(729605),
-    i = n(65007).f,
+    o = n(65007).f,
     s = n(447631);
 r(
     {
@@ -9,14 +9,14 @@ r(
         stat: !0,
         forced:
             !s ||
-            o(function () {
-                i(1);
+            i(function () {
+                o(1);
             }),
         sham: !s
     },
     {
         getOwnPropertyDescriptor: function (e, t) {
-            return i(a(e), t);
+            return o(a(e), t);
         }
     }
 );

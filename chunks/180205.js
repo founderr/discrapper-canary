@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(470079),
     i = n(335218),
     a = n.n(i),
-    s = {};
-function o(e, t) {
+    o = {};
+function s(e, t) {
     void 0 === t && (t = a());
-    var n = (0, r.useRef)(s),
+    var n = (0, r.useRef)(o),
         i = n.current;
     return (
         (0, r.useEffect)(function () {
             n.current = i;
         }),
-        (n.current !== s && t(e, n.current)) || (i = e),
+        (n.current !== o && t(e, n.current)) || (i = e),
         i
     );
 }

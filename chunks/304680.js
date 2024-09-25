@@ -12,10 +12,10 @@ n.d(t, {
         return d;
     },
     xv: function () {
-        return s;
+        return o;
     },
     z4: function () {
-        return o;
+        return s;
     },
     zc: function () {
         return l;
@@ -30,10 +30,10 @@ function a(e) {
     }),
         r.Z.dispatch({ type: 'RTC_DEBUG_POPOUT_WINDOW_OPEN' });
 }
-function s() {
+function o() {
     r.Z.dispatch({ type: 'RTC_DEBUG_MODAL_CLOSE' });
 }
-function o() {
+function s() {
     r.Z.dispatch({ type: 'RTC_DEBUG_MODAL_OPEN_REPLAY' });
 }
 function l(e) {

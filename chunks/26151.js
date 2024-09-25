@@ -1,8 +1,8 @@
 var r = n(544891),
     i = n(570140),
     a = n(523746),
-    s = n(699516),
-    o = n(594174),
+    o = n(699516),
+    s = n(594174),
     l = n(626135),
     u = n(668781),
     c = n(194359),
@@ -15,8 +15,8 @@ t.Z = {
             d.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e);
         };
         if (null != i) {
-            if (s.Z.isBlocked(i)) return;
-            let t = o.default.getUser(i);
+            if (o.Z.isBlocked(i)) return;
+            let t = s.default.getUser(i);
             r.tn
                 .get({
                     url: _.ANM.CALL(e),

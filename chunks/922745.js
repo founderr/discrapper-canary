@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     },
     r: function () {
-        return S;
+        return g;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(442837),
-    o = n(692547),
+    o = n(442837),
+    s = n(692547),
     l = n(215569),
     u = n(481060),
     c = n(600164),
@@ -21,12 +21,12 @@ var i = n(120356),
     f = n(19780),
     h = n(540028),
     p = n(507675),
-    I = n(273716),
-    m = n(689938),
+    m = n(273716),
+    I = n(689938),
     T = n(497041);
-function S(e) {
+function g(e) {
     let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: l } = e,
-        c = (0, s.e7)([f.Z], () => f.Z.getChannelId()),
+        c = (0, o.e7)([f.Z], () => f.Z.getChannelId()),
         E =
             null != c
                 ? (0, r.jsx)(h.Z, {
@@ -45,7 +45,7 @@ function S(e) {
                     (0, r.jsx)(u.ArrowSmallLeftIcon, {
                         size: 'custom',
                         color: 'currentColor',
-                        'aria-label': m.Z.Messages.OPEN_IN_THEATER,
+                        'aria-label': I.Z.Messages.OPEN_IN_THEATER,
                         className: T.backButton,
                         width: 20,
                         height: 20
@@ -53,38 +53,38 @@ function S(e) {
                     (0, r.jsx)(d.Z, {
                         className: T.headerText,
                         size: d.Z.Sizes.SIZE_16,
-                        color: o.Z.unsafe_rawColors.WHITE_500.css,
+                        color: s.Z.unsafe_rawColors.WHITE_500.css,
                         children: t
                     })
                 ]
             }),
             p && null != i
-                ? (0, r.jsx)(I.Z, {
+                ? (0, r.jsx)(m.Z, {
                       onClick: i,
-                      label: m.Z.Messages.PICTURE_IN_PICTURE_CLOSE_PIP
+                      label: I.Z.Messages.PICTURE_IN_PICTURE_CLOSE_PIP
                   })
                 : null,
             E
         ]
     });
 }
-function g(e) {
-    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: _, renderBottomRightControls: f, screenMessage: h, hideControls: I = !1, className: m, innerClassName: g, ...A } = e;
+function S(e) {
+    let { children: t, idle: n, onJumpToChannel: i, onHide: o, backgroundKey: s, onActive: u, onForceIdle: d, renderBottomLeftControls: _, renderBottomRightControls: f, screenMessage: h, hideControls: m = !1, className: I, innerClassName: S, ...A } = e;
     return (0, r.jsxs)('div', {
         onMouseMove: u,
         onMouseDown: u,
         onMouseLeave: d,
-        className: a()(T.pictureInPictureVideo, { [T.idle]: n }, m),
+        className: a()(T.pictureInPictureVideo, { [T.idle]: n }, I),
         onDoubleClick: i,
         children: [
             (0, r.jsx)(l.W, {
                 children: (0, r.jsx)(
                     E.B,
                     {
-                        className: g,
+                        className: S,
                         children: t
                     },
-                    o
+                    s
                 )
             }),
             null != h
@@ -93,16 +93,16 @@ function g(e) {
                       ...h
                   })
                 : null,
-            !I &&
+            !m &&
                 (0, r.jsxs)('div', {
                     className: a()(T.videoControls, 'theme-dark'),
                     children: [
                         (0, r.jsx)('div', {
                             className: T.topControls,
-                            children: (0, r.jsx)(S, {
+                            children: (0, r.jsx)(g, {
                                 idle: n,
                                 onJumpToChannel: i,
-                                onHide: s,
+                                onHide: o,
                                 ...A
                             })
                         }),

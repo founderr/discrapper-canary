@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(558317),
     T = n(403404),
     x = n(981631),
-    S = n(689938),
-    v = n(735338);
+    v = n(689938),
+    S = n(735338);
 let N = 'vc-activities-'.concat((0, r.Z)()),
     A = s.forwardRef(function (e, t) {
         let { channel: n, isHovered: a, closePopout: r, onMouseEnter: A, onMouseLeave: Z, onClick: M, className: b } = e,
@@ -40,12 +40,12 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
             s.useEffect(() => {
                 !a && r();
             }, [r, a]);
-        let P = (0, d.bp)(),
-            { analyticsLocations: O } = (0, p.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
-            { analyticsLocations: y } = (0, p.ZP)([...O, m.Z.ACTIVITIES_MINI_SHELF_BANNER]),
-            D = P === x.IlC.POPOUT,
-            U = (0, u.O)(),
-            k = (function (e) {
+        let O = (0, d.bp)(),
+            { analyticsLocations: P } = (0, p.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
+            { analyticsLocations: y } = (0, p.ZP)([...P, m.Z.ACTIVITIES_MINI_SHELF_BANNER]),
+            D = O === x.IlC.POPOUT,
+            k = (0, u.O)(),
+            U = (function (e) {
                 return (0, g.Z)({ guildId: e }).slice(0, 5);
             })(n.getGuildId());
         s.useEffect(() => {
@@ -57,14 +57,14 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                 (0, T.Z)({
                     channel: n,
                     guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
-                    locationObject: U.location,
+                    locationObject: k.location,
                     openInPopout: D,
-                    analyticsLocations: O,
+                    analyticsLocations: P,
                     opensAppLauncherModal: !0
                 }),
                     Z(),
                     M();
-            }, [U, O, n, M, Z, D]),
+            }, [k, P, n, M, Z, D]),
             B = s.useCallback(
                 (e) => {
                     A(),
@@ -76,7 +76,7 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                 [A, n]
             );
         return (0, i.jsx)(p.Gt, {
-            value: O,
+            value: P,
             children: (0, i.jsx)(_.Z, {
                 children: (0, i.jsxs)(c.Dialog, {
                     ref: t,
@@ -88,46 +88,46 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                             children: (0, i.jsx)(c.HiddenVisually, {
                                 children: (0, i.jsx)(c.H, {
                                     id: N,
-                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
+                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
                                 })
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: v.container,
+                            className: S.container,
                             onMouseEnter: B,
                             onMouseLeave: Z,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: v.titleContainer,
+                                    className: S.titleContainer,
                                     children: [
                                         (0, i.jsxs)('div', {
-                                            className: v.titleLeft,
+                                            className: S.titleLeft,
                                             children: [
                                                 (0, i.jsx)(c.ActivitiesIcon, {
                                                     size: 'md',
-                                                    className: v.titleLeftIcon,
+                                                    className: S.titleLeftIcon,
                                                     color: 'var(--interactive-active)'
                                                 }),
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
+                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                                                 })
                                             ]
                                         }),
                                         (0, i.jsxs)(c.Clickable, {
-                                            className: v.titleRight,
+                                            className: S.titleRight,
                                             onClick: w,
                                             children: [
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
+                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
                                                 }),
                                                 (0, i.jsx)(c.ChevronSmallRightIcon, {
                                                     size: 'custom',
                                                     width: 12,
                                                     height: 12,
                                                     color: 'var(--interactive-active)',
-                                                    className: v.titleRightIcon
+                                                    className: S.titleRightIcon
                                                 })
                                             ]
                                         })
@@ -138,9 +138,9 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                                     children: null
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: v.activityContainer,
+                                    className: S.activityContainer,
                                     children: [
-                                        k.map((e) =>
+                                        U.map((e) =>
                                             (0, i.jsx)(
                                                 C.Y,
                                                 {
@@ -150,16 +150,16 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                                                         r(), M();
                                                     },
                                                     aspectRatio: C.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
-                                                    animatedDivClass: v.activitySuggestion
+                                                    animatedDivClass: S.activitySuggestion
                                                 },
                                                 e.application.id
                                             )
                                         ),
                                         (0, i.jsx)('div', {
-                                            className: l()(v.wumpusRocketOuterContainer, { [v.wumpusReducedMotion]: R }),
+                                            className: l()(S.wumpusRocketOuterContainer, { [S.wumpusReducedMotion]: R }),
                                             children: (0, i.jsx)('div', {
-                                                className: v.wumpusRocketInnerContainer,
-                                                children: (0, i.jsx)(I.Z, { className: v.wumpusRocket })
+                                                className: S.wumpusRocketInnerContainer,
+                                                children: (0, i.jsx)(I.Z, { className: S.wumpusRocket })
                                             })
                                         })
                                     ]

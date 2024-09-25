@@ -1,10 +1,10 @@
-n(47120);
-var r = n(147913),
-    i = n(314897),
-    a = n(592125),
+var r = n(47120);
+var i = n(147913),
+    a = n(314897),
+    o = n(592125),
     s = n(242291),
-    o = n(981631);
-function l(e, t, n) {
+    l = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,38 +17,38 @@ function l(e, t, n) {
         e
     );
 }
-class u extends r.Z {
+class c extends i.Z {
     constructor(...e) {
         super(...e),
-            l(this, 'prevConnected', !1),
-            l(this, 'tempMutedChannel', null),
-            l(this, 'handleRTCConnectionState', (e) => {
+            u(this, 'prevConnected', !1),
+            u(this, 'tempMutedChannel', null),
+            u(this, 'handleRTCConnectionState', (e) => {
                 let { state: t, channelId: n } = e,
-                    r = t === o.hes.RTC_CONNECTED,
+                    r = t === l.hes.RTC_CONNECTED,
                     i = r && !this.prevConnected,
-                    l = a.Z.getChannel(n),
-                    u = null == l ? void 0 : l.getGuildId(),
+                    a = o.Z.getChannel(n),
+                    u = null == a ? void 0 : a.getGuildId(),
                     c = this.tempMutedChannel === n;
                 i && null != u && (c ? (this.tempMutedChannel = null) : (0, s.M2)(u)), (this.prevConnected = r);
             }),
-            l(this, 'handleMute', (e) => {
+            u(this, 'handleMute', (e) => {
                 let { channelId: t } = e;
                 this.tempMutedChannel = t;
             }),
-            l(this, 'handleVoiceStateUpdates', (e) => {
+            u(this, 'handleVoiceStateUpdates', (e) => {
                 let { voiceStates: t } = e,
-                    n = i.default.getId(),
-                    r = i.default.getSessionId();
+                    n = a.default.getId(),
+                    r = a.default.getSessionId();
                 t.forEach((e) => {
                     let { userId: t, channelId: i, sessionId: a } = e;
                     t === n && a !== r && null != i && (this.tempMutedChannel = i);
                 });
             }),
-            l(this, 'actions', {
+            u(this, 'actions', {
                 RTC_CONNECTION_STATE: this.handleRTCConnectionState,
                 SOUNDBOARD_MUTE_JOIN_SOUND: this.handleMute,
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates
             });
     }
 }
-t.Z = new u();
+t.Z = new c();

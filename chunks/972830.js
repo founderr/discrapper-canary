@@ -1,22 +1,22 @@
 n.d(t, {
     h: function () {
-        return o;
+        return u;
     }
-}),
-    n(177593),
-    n(653041);
-var r = n(570140),
-    i = n(38618);
-let a = [];
-function s(e) {
+});
+var r = n(177593);
+var i = n(653041);
+var a = n(570140),
+    o = n(38618);
+let s = [];
+function l(e) {
     setImmediate(() => e());
 }
-function o(e) {
-    i.Z.isConnectedOrOverlay() ? s(e) : a.push(e);
+function u(e) {
+    o.Z.isConnectedOrOverlay() ? l(e) : s.push(e);
 }
-r.Z.subscribe('CONNECTION_OPEN', () => {
-    a.forEach((e) => s(e)), (a = []);
+a.Z.subscribe('CONNECTION_OPEN', () => {
+    s.forEach((e) => l(e)), (s = []);
 }),
-    r.Z.subscribe('CONNECTION_RESUMED', () => {
-        a.forEach((e) => s(e)), (a = []);
+    a.Z.subscribe('CONNECTION_RESUMED', () => {
+        s.forEach((e) => l(e)), (s = []);
     });

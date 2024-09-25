@@ -42,8 +42,8 @@ var i = n(735250),
     V = n(73346),
     F = n(3570),
     Y = n(689796),
-    z = n(15470),
-    W = n(506648),
+    W = n(15470),
+    z = n(506648),
     K = n(449275),
     q = n(445986),
     Q = n(119520),
@@ -241,7 +241,7 @@ class ec extends a.PureComponent {
         });
     }
     renderFeatures(e) {
-        return (0, i.jsx)(W.Z, { sku: e });
+        return (0, i.jsx)(z.Z, { sku: e });
     }
     renderSystemRequirements(e) {
         return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length
@@ -262,7 +262,7 @@ class ec extends a.PureComponent {
                     children: er.Z.Messages.APPLICATION_STORE_ABOUT_HEADER.format({ name: n.name })
                 }),
                 (0, i.jsx)(I.Z, {}),
-                (0, i.jsx)(z.Z, {
+                (0, i.jsx)(W.Z, {
                     applicationId: e.id,
                     blurb: t.summary,
                     description: s,

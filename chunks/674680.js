@@ -39,7 +39,7 @@ function T(e) {
             width: 0.4 * f,
             height: 0.4 * f
         },
-        h = {
+        M = {
             width: S.width + 1,
             height: S.height + 1,
             right: m.stroke + 1,
@@ -67,7 +67,7 @@ function T(e) {
             !d &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: h,
+                    style: M,
                     children: (0, s.jsx)(r.LockIcon, {
                         size: 'custom',
                         color: (0, o.Lq)(p.locked),
@@ -78,7 +78,7 @@ function T(e) {
                 N === c.EP.LEGENDARY &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: h,
+                    style: M,
                     children: (0, s.jsx)(l.Z, {
                         className: _.confettiIcon,
                         ...S

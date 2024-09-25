@@ -9,7 +9,7 @@ n.d(t, {
         return F;
     },
     cX: function () {
-        return H;
+        return V;
     },
     lv: function () {
         return k;
@@ -21,8 +21,8 @@ n.d(t, {
 var r = n(392711),
     i = n.n(r),
     a = n(490757),
-    s = n(429827),
-    o = n(353928),
+    o = n(429827),
+    s = n(353928),
     l = n(336892),
     u = n(624833),
     c = n(944314),
@@ -32,21 +32,21 @@ var r = n(392711),
     f = n(966552),
     h = n(561763),
     p = n(529306),
-    I = n(90075),
-    m = n(862666),
+    m = n(90075),
+    I = n(862666),
     T = n(252611),
-    S = n(136144),
-    g = n(316137),
+    g = n(136144),
+    S = n(316137),
     A = n(654123),
-    N = n(660020),
-    O = n(980084),
-    R = n(24688),
-    v = n(200997),
+    v = n(660020),
+    N = n(980084),
+    O = n(24688),
+    R = n(200997),
     C = n(633302),
     y = n(134432),
-    L = n(594174),
-    D = n(768581),
-    b = n(176354),
+    b = n(594174),
+    L = n(768581),
+    D = n(176354),
     M = n(353368),
     P = n(689938);
 let U = {
@@ -54,7 +54,7 @@ let U = {
         end: 15
     },
     w = [a],
-    x = [s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, g, A, N, O, R, v],
+    x = [o, s, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, v, N, O, R],
     G = {
         [M.q.BASIC]: w,
         [M.q.PREMIUM]: x
@@ -88,7 +88,7 @@ function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : M.v;
     if (null != e.id) {
         var n;
-        return D.ZP.getEmojiURL({
+        return L.ZP.getEmojiURL({
             id: e.id,
             animated: null !== (n = e.animated) && void 0 !== n && n,
             size: t
@@ -96,9 +96,9 @@ function F(e) {
     }
     let r = C.ZP.convertSurrogateToName(e.name, !1),
         i = C.ZP.getByName(r);
-    return null != i ? b.ZP.getURL(i.surrogates) : '';
+    return null != i ? D.ZP.getURL(i.surrogates) : '';
 }
-function V(e, t) {
+function Z(e, t) {
     return i()(e)
         .map((e) => {
             var n;
@@ -108,29 +108,29 @@ function V(e, t) {
         .uniq()
         .value();
 }
-function H(e) {
-    var t, n, r, i, a, s;
+function V(e) {
+    var t, n, r, i, a, o;
     if (e.length < 1) return '';
-    let o = V(e, 'userId'),
-        l = V(e, 'emojiName'),
+    let s = Z(e, 'userId'),
+        l = Z(e, 'emojiName'),
         u = l.length < 2 ? (null !== (t = null == l ? void 0 : l[0]) && void 0 !== t ? t : '') : l.join(', ');
-    if (o.length < 1) return '';
-    if (1 === o.length)
+    if (s.length < 1) return '';
+    if (1 === s.length)
         return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
-            firstUsername: null === (n = L.default.getUser(o[0])) || void 0 === n ? void 0 : n.username,
+            firstUsername: null === (n = b.default.getUser(s[0])) || void 0 === n ? void 0 : n.username,
             emojiNames: u
         });
-    if (2 === o.length)
+    if (2 === s.length)
         return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
-            firstUsername: null === (r = L.default.getUser(o[0])) || void 0 === r ? void 0 : r.username,
-            secondUsername: null === (i = L.default.getUser(o[1])) || void 0 === i ? void 0 : i.username,
+            firstUsername: null === (r = b.default.getUser(s[0])) || void 0 === r ? void 0 : r.username,
+            secondUsername: null === (i = b.default.getUser(s[1])) || void 0 === i ? void 0 : i.username,
             emojiNames: u
         });
     else
         return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
-            firstUsername: null === (a = L.default.getUser(o[0])) || void 0 === a ? void 0 : a.username,
-            secondUsername: null === (s = L.default.getUser(o[1])) || void 0 === s ? void 0 : s.username,
-            count: o.length - 2,
+            firstUsername: null === (a = b.default.getUser(s[0])) || void 0 === a ? void 0 : a.username,
+            secondUsername: null === (o = b.default.getUser(s[1])) || void 0 === o ? void 0 : o.username,
+            count: s.length - 2,
             emojiNames: u
         });
 }

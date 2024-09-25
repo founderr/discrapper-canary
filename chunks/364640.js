@@ -1,16 +1,17 @@
-n(47120);
 var r,
-    i,
-    a = n(626135),
-    s = n(591759),
-    o = n(777754),
+    i = n(47120);
+var a = n(626135),
+    o = n(591759),
+    s = n(777754),
     l = n(754688),
     u = n(981631);
-((i = r || (r = {})).MESSAGE = 'Discord Message Link'), (i.CHANNEL = 'Discord Channel Link'), (i.SERVER_INVITE = 'Discord Server Invite'), (i.GIFT = 'Discord Gift Link'), (i.UNKNOWN = 'Unknown');
+!(function (e) {
+    (e.MESSAGE = 'Discord Message Link'), (e.CHANNEL = 'Discord Channel Link'), (e.SERVER_INVITE = 'Discord Server Invite'), (e.GIFT = 'Discord Gift Link'), (e.UNKNOWN = 'Unknown');
+})(r || (r = {}));
 let c = [
-    (e) => (o.Z.isInvite(e) ? 'Discord Server Invite' : null),
+    (e) => (s.Z.isInvite(e) ? 'Discord Server Invite' : null),
     (e) => {
-        let t = s.Z.safeParseWithQuery(e);
+        let t = o.Z.safeParseWithQuery(e);
         if (null == t) return null;
         let n = (0, l.Qj)(t.path);
         return null == n
@@ -25,43 +26,42 @@ let c = [
 function d(e) {
     return null != e.guildId && null != e.channelId && null != e.messageId ? 'Discord Message Link' : null != e.guildId && null != e.channelId ? 'Discord Channel Link' : 'Unknown';
 }
-t.Z = {
-    trackDiscordLinkClicked: function (e) {
-        a.default.track(u.rMx.LINK_CLICKED, {
-            is_discord_link: !0,
-            discord_link_type: d(e)
-        });
-    },
-    trackLinkClicked: function (e, t) {
-        var n, r;
-        if (null == e && null == t) return;
-        let i = s.Z.isDiscordUrl(e, !0) || null != t;
-        a.default.track(u.rMx.LINK_CLICKED, {
-            is_discord_link: i,
-            discord_link_type: i
-                ? ((n = e),
-                  null == (r = t) && null == n
-                      ? 'Unknown'
-                      : null == r
-                        ? (function (e) {
-                              for (let t of c) {
-                                  let n = t(e);
-                                  if (null != n) return n;
-                              }
-                              return 'Unknown';
-                          })(n)
-                        : d(r))
-                : null
-        });
-    },
-    trackAnnouncementMessageLinkClicked: function (e) {
-        let { messageId: t, channelId: n, guildId: r, sourceChannelId: i, sourceGuildId: s } = e;
-        a.default.track(u.rMx.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
-            message_id: t,
-            channel_id: n,
-            guild_id: r,
-            source_channel_id: i,
-            source_guild_id: s
-        });
+function _(e) {
+    for (let t of c) {
+        let n = t(e);
+        if (null != n) return n;
     }
+    return 'Unknown';
+}
+function E(e, t) {
+    return null == t && null == e ? 'Unknown' : null == t ? _(e) : d(t);
+}
+function f(e) {
+    a.default.track(u.rMx.LINK_CLICKED, {
+        is_discord_link: !0,
+        discord_link_type: d(e)
+    });
+}
+function h(e, t) {
+    if (null == e && null == t) return;
+    let n = o.Z.isDiscordUrl(e, !0) || null != t;
+    a.default.track(u.rMx.LINK_CLICKED, {
+        is_discord_link: n,
+        discord_link_type: n ? E(e, t) : null
+    });
+}
+function p(e) {
+    let { messageId: t, channelId: n, guildId: r, sourceChannelId: i, sourceGuildId: o } = e;
+    a.default.track(u.rMx.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
+        message_id: t,
+        channel_id: n,
+        guild_id: r,
+        source_channel_id: i,
+        source_guild_id: o
+    });
+}
+t.Z = {
+    trackDiscordLinkClicked: f,
+    trackLinkClicked: h,
+    trackAnnouncementMessageLinkClicked: p
 };

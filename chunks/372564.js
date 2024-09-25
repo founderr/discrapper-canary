@@ -99,7 +99,7 @@ function T(e) {
 function x(e) {
     return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
-class S extends s.Component {
+class v extends s.Component {
     render() {
         let { channel: e } = this.props;
         return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length
@@ -178,4 +178,4 @@ class S extends s.Component {
             });
     }
 }
-t.Z = S;
+t.Z = v;

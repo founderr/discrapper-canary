@@ -1,47 +1,47 @@
-var n,
-    a = i(442837),
-    o = i(570140);
-function c(e, t, i) {
+var i,
+    a = n(442837),
+    c = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: i,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = i),
+            : (e[t] = n),
         e
     );
 }
-let r = {
+let s = {
     canPlayWowMoment: !1,
     isFetchingWowMomentMedia: !1,
     wowMomentWumpusMediaUrl: null
 };
-class s extends (n = a.ZP.PersistedStore) {
+class d extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (r = e), (r.canPlayWowMoment = !1), (r.isFetchingWowMomentMedia = !1), (r.wowMomentWumpusMediaUrl = null);
+        null != e && (s = e), (s.canPlayWowMoment = !1), (s.isFetchingWowMomentMedia = !1), (s.wowMomentWumpusMediaUrl = null);
     }
     getState() {
-        return r;
+        return s;
     }
     get canPlayWowMoment() {
-        return r.canPlayWowMoment;
+        return s.canPlayWowMoment;
     }
     get isFetchingWowMomentMedia() {
-        return r.isFetchingWowMomentMedia;
+        return s.isFetchingWowMomentMedia;
     }
     get wowMomentWumpusMedia() {
-        return r.wowMomentWumpusMediaUrl;
+        return s.wowMomentWumpusMediaUrl;
     }
 }
-c(s, 'displayName', 'PurchasedItemsFestivityStore'),
-    c(s, 'persistKey', 'PurchasedItemsFestivityStore'),
-    c(s, 'migrations', [(e) => ({ ...e })]),
-    (t.Z = new s(o.Z, {
+o(d, 'displayName', 'PurchasedItemsFestivityStore'),
+    o(d, 'persistKey', 'PurchasedItemsFestivityStore'),
+    o(d, 'migrations', [(e) => ({ ...e })]),
+    (t.Z = new d(c.Z, {
         LOGOUT: function () {
-            r = {
+            s = {
                 canPlayWowMoment: !1,
                 isFetchingWowMomentMedia: !1,
                 wowMomentWumpusMediaUrl: null
@@ -49,14 +49,14 @@ c(s, 'displayName', 'PurchasedItemsFestivityStore'),
         },
         PURCHASED_ITEMS_FESTIVITY_SET_CAN_PLAY_WOW_MOMENT: function (e) {
             let { value: t } = e;
-            r.canPlayWowMoment = t;
+            s.canPlayWowMoment = t;
         },
         PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA: function (e) {
             let { value: t } = e;
-            r.isFetchingWowMomentMedia = t;
+            s.isFetchingWowMomentMedia = t;
         },
         PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS: function (e) {
             let { wumpusMedia: t } = e;
-            (r.wowMomentWumpusMediaUrl = t), (r.isFetchingWowMomentMedia = !1);
+            (s.wowMomentWumpusMediaUrl = t), (s.isFetchingWowMomentMedia = !1);
         }
     }));

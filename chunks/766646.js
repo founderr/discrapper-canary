@@ -1,21 +1,21 @@
 n.d(t, {
     n: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(863012);
-function o(e) {
-    let { id: t, tag: n = 'span', showOnFocus: i, children: o } = e;
+    o = n(863012);
+function s(e) {
+    let { id: t, tag: n = 'span', showOnFocus: i, children: s } = e;
     return (0, r.jsx)(n, {
         id: t,
         className: a()({
-            [s.hiddenVisually]: !i,
-            [s.showOnFocus]: i
+            [o.hiddenVisually]: !i,
+            [o.showOnFocus]: i
         }),
-        children: o
+        children: s
     });
 }

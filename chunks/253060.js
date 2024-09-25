@@ -78,7 +78,7 @@ var c = r(660793),
         render: null
     },
     B = !1,
-    R = (function (t) {
+    L = (function (t) {
         function e() {
             return t.apply(this, arguments) || this;
         }
@@ -101,7 +101,7 @@ var c = r(660793),
             e
         );
     })(_.Component),
-    L = (function (t) {
+    R = (function (t) {
         function e(e) {
             var r;
             return (
@@ -362,7 +362,7 @@ var c = r(660793),
                                 suppressContentEditableWarning: !0,
                                 tabIndex: this.props.tabIndex
                             },
-                            _.createElement(R, {
+                            _.createElement(L, {
                                 editor: this,
                                 editorState: s
                             }),
@@ -380,7 +380,7 @@ var c = r(660793),
             e
         );
     })(_.Component);
-u(L, 'defaultProps', {
+u(R, 'defaultProps', {
     blockRenderMap: c,
     blockRendererFn: function () {
         return null;
@@ -393,4 +393,4 @@ u(L, 'defaultProps', {
     spellCheck: !1,
     stripPastedStyles: !1
 }),
-    (t.exports = L);
+    (t.exports = R);

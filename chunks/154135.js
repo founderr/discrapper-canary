@@ -1,6 +1,6 @@
 n.d(t, {
     EY: function () {
-        return s;
+        return o;
     },
     Vh: function () {
         return a;
@@ -17,7 +17,7 @@ function a(e) {
     let { thumbnail: r, image: i } = e;
     return null != r ? (null !== (t = r.proxy_url) && void 0 !== t ? t : r.url) : null != i ? (null !== (n = i.proxy_url) && void 0 !== n ? n : i.url) : void 0;
 }
-function s(e) {
+function o(e) {
     if (null == e) return;
     let { url: t, proxy_url: n } = e;
     return null != t && null != n ? ((0, r.cb)(t) ? ''.concat(n, '?format=webp') : n) : t;

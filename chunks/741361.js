@@ -1,6 +1,6 @@
 n.d(t, {
     Aj: function () {
-        return o;
+        return s;
     },
     S1: function () {
         return u;
@@ -15,15 +15,15 @@ n.d(t, {
         return d;
     },
     kY: function () {
-        return s;
+        return o;
     }
 });
 var r = n(570140),
     i = n(156699),
     a = n(493683);
-async function s(e, t, n, a) {
-    let s = e.getGuildId();
-    if (null != s && t === s && !(await (0, i.u)(e, a, n))) return !1;
+async function o(e, t, n, a) {
+    let o = e.getGuildId();
+    if (null != o && t === o && !(await (0, i.u)(e, a, n))) return !1;
     r.Z.dispatch({
         type: 'CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION',
         id: t,
@@ -31,7 +31,7 @@ async function s(e, t, n, a) {
         deny: a
     });
 }
-function o(e) {
+function s(e) {
     r.Z.dispatch({
         type: 'CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION',
         id: e

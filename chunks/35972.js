@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return i;
     }
 });
 var r = n(871074);
-function o() {
+function i() {
     if ('undefined' == typeof Reflect || !r || r.sham) return !1;
     if ('function' == typeof Proxy) return !0;
     try {

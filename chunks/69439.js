@@ -56,7 +56,7 @@ function p(e) {
 }
 function f(e) {
     var t, n, r, f;
-    let { quest: A, location: S, onReceiveErrorHints: h, contentPosition: M, rowIndex: x } = e,
+    let { quest: A, location: S, onReceiveErrorHints: M, contentPosition: h, rowIndex: x } = e,
         b = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         O = (0, I.g2)({ useReducedMotion: b }),
         P = (0, _._s)({ quest: A }),
@@ -84,9 +84,9 @@ function f(e) {
         Q = Y && !z && W.length > 1,
         q = a.useCallback(
             (e) => {
-                K(e), e === m.cd.DESKTOP && h([]);
+                K(e), e === m.cd.DESKTOP && M([]);
             },
-            [K, h]
+            [K, M]
         ),
         { text: X, onClick: J } = (0, I.Ks)({
             progressState: y,
@@ -94,7 +94,7 @@ function f(e) {
             isInHouseQuest: H,
             location: S,
             isCollectibleQuest: k,
-            questContentPosition: M,
+            questContentPosition: h,
             questContentRowIndex: x,
             inGiftInventory: !0
         }),
@@ -106,12 +106,12 @@ function f(e) {
                         questId: A.id,
                         questContent: S,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
-                        questContentPosition: M,
+                        questContentPosition: h,
                         questContentRowIndex: x
                     });
             },
             afterRequest: (e) => {
-                O.stopAnimation(), h(e);
+                O.stopAnimation(), M(e);
             }
         }),
         et = (null === (f = A.userStatus) || void 0 === f ? void 0 : f.claimedAt) != null,

@@ -20,14 +20,14 @@ var l = t(120356),
     _ = t(150512),
     u = t(430824),
     E = t(594174),
-    m = t(626135),
-    T = t(999382),
+    T = t(626135),
+    m = t(999382),
     O = t(983135),
     S = t(84658),
     D = t(981631),
     A = t(689938),
-    h = t(248641);
-let G = () => [
+    G = t(248641);
+let h = () => [
         {
             emoji: '\uD83E\uDDD9',
             emojiDescription: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_1_EMOJI,
@@ -53,7 +53,7 @@ let G = () => [
                 (0, s.jsx)(r.AnnouncementsIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: h.channelIcon
+                    className: G.channelIcon
                 }),
             channel: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_1,
             selected: !0
@@ -63,7 +63,7 @@ let G = () => [
                 (0, s.jsx)(r.TextIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: h.channelIcon
+                    className: G.channelIcon
                 }),
             channel: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_2,
             selected: !0
@@ -73,7 +73,7 @@ let G = () => [
                 (0, s.jsx)(r.TextIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: h.channelIcon
+                    className: G.channelIcon
                 }),
             channel: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_3,
             selected: !1
@@ -83,7 +83,7 @@ let G = () => [
                 (0, s.jsx)(r.ForumIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: h.channelIcon
+                    className: G.channelIcon
                 }),
             channel: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_4,
             selected: !0
@@ -91,7 +91,7 @@ let G = () => [
     ];
 function g(e) {
     let { isTooltip: n = !1 } = e,
-        t = G();
+        t = h();
     n && t.pop();
     let l = n
             ? (0, s.jsx)(r.Text, {
@@ -113,17 +113,17 @@ function g(e) {
                   children: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_SUBTITLE.format()
               });
     return (0, s.jsxs)('div', {
-        className: a()(h.upsellPreview, h.spacingLarge, { [h.tooltip]: n }),
+        className: a()(G.upsellPreview, G.spacingLarge, { [G.tooltip]: n }),
         children: [
             l,
             (0, s.jsx)('div', {
-                className: h.spacingSmall,
+                className: G.spacingSmall,
                 children: t.map((e, n) => {
                     let { emoji: t, emojiDescription: l, title: i, selected: o } = e;
                     return (0, s.jsxs)(
                         'div',
                         {
-                            className: a()(h.previewListItem, { [h.selected]: o }),
+                            className: a()(G.previewListItem, { [G.selected]: o }),
                             children: [
                                 (0, s.jsx)('span', {
                                     role: 'img',
@@ -137,11 +137,11 @@ function g(e) {
                                 }),
                                 o &&
                                     (0, s.jsx)('div', {
-                                        className: h.checkboxCircle,
+                                        className: G.checkboxCircle,
                                         children: (0, s.jsx)(r.CheckmarkLargeIcon, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: h.checkmark
+                                            className: G.checkmark
                                         })
                                     })
                             ]
@@ -180,32 +180,32 @@ function f() {
     return (0, s.jsx)(d.i, { testimonials: e });
 }
 function x() {
-    let e = (0, i.e7)([T.Z], () => T.Z.getGuildId()),
+    let e = (0, i.e7)([m.Z], () => m.Z.getGuildId()),
         n = (0, i.e7)([u.Z], () => u.Z.getGuild(e)),
         t = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
         { homeSettingsEnabled: l } = (0, I.kZ)(null != e ? e : D.lds);
     return null == e || null == n || null == t
         ? null
         : (0, s.jsxs)('div', {
-              className: h.upsellContainer,
+              className: G.upsellContainer,
               children: [
                   (0, s.jsxs)('div', {
-                      className: h.upsellHeader,
+                      className: G.upsellHeader,
                       children: [
                           (0, s.jsxs)('div', {
-                              className: h.islands,
+                              className: G.islands,
                               children: [
                                   (0, s.jsx)(c.xm, {}),
                                   (0, s.jsx)(c._I, {
                                       guild: n,
-                                      mainIslandClassName: h.mainIsland,
-                                      balloonDogClassName: h.balloonDog
+                                      mainIslandClassName: G.mainIsland,
+                                      balloonDogClassName: G.balloonDog
                                   }),
                                   (0, s.jsx)(c.B0, {})
                               ]
                           }),
                           (0, s.jsxs)('div', {
-                              className: h.upsellHeaderText,
+                              className: G.upsellHeaderText,
                               children: [
                                   (0, s.jsx)(r.Heading, {
                                       variant: 'heading-xl/semibold',
@@ -218,11 +218,11 @@ function x() {
                               ]
                           }),
                           (0, s.jsx)('div', {
-                              className: h.upsellButtons,
+                              className: G.upsellButtons,
                               children: (0, s.jsx)(r.Button, {
                                   onClick: function () {
                                       null != e &&
-                                          (m.default.track(D.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+                                          (T.default.track(D.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                                               ...(0, o.hH)(e),
                                               step: S.PG[S.PG.LANDING],
                                               back: !1,
@@ -241,14 +241,14 @@ function x() {
                   (0, s.jsx)(f, {}),
                   (0, s.jsx)(r.FormDivider, {}),
                   (0, s.jsxs)('div', {
-                      className: h.valuesContainer,
+                      className: G.valuesContainer,
                       children: [
                           (0, s.jsxs)('div', {
-                              className: h.valueContainer,
+                              className: G.valueContainer,
                               children: [
                                   (0, s.jsx)(g, {}),
                                   (0, s.jsxs)('div', {
-                                      className: h.valueText,
+                                      className: G.valueText,
                                       children: [
                                           (0, s.jsx)(r.Heading, {
                                               variant: 'heading-md/semibold',
@@ -264,10 +264,10 @@ function x() {
                           }),
                           l &&
                               (0, s.jsxs)('div', {
-                                  className: h.valueContainer,
+                                  className: G.valueContainer,
                                   children: [
                                       (0, s.jsxs)('div', {
-                                          className: h.valueText,
+                                          className: G.valueText,
                                           children: [
                                               (0, s.jsx)(r.Heading, {
                                                   variant: 'heading-md/semibold',
@@ -280,7 +280,7 @@ function x() {
                                           ]
                                       }),
                                       (0, s.jsxs)('div', {
-                                          className: a()(h.upsellPreview, h.spacingLarge),
+                                          className: a()(G.upsellPreview, G.spacingLarge),
                                           children: [
                                               (0, s.jsx)(_.Z, {
                                                   guildId: e,
@@ -308,19 +308,19 @@ function x() {
                                   ]
                               }),
                           (0, s.jsxs)('div', {
-                              className: h.valueContainer,
+                              className: G.valueContainer,
                               children: [
                                   (0, s.jsx)('div', {
-                                      className: a()(h.upsellPreview, h.spacingLarge),
+                                      className: a()(G.upsellPreview, G.spacingLarge),
                                       children: L().map((e, n) => {
                                           let { channelIcon: t, channel: l, selected: i } = e;
                                           return (0, s.jsxs)(
                                               'div',
                                               {
-                                                  className: a()(h.previewListItem, h.spaceBetween, { [h.selected]: i }),
+                                                  className: a()(G.previewListItem, G.spaceBetween, { [G.selected]: i }),
                                                   children: [
                                                       (0, s.jsxs)('div', {
-                                                          className: h.channel,
+                                                          className: G.channel,
                                                           children: [
                                                               t(),
                                                               (0, s.jsx)(r.Text, {
@@ -331,13 +331,13 @@ function x() {
                                                           ]
                                                       }),
                                                       (0, s.jsx)('div', {
-                                                          className: a()(h.checkbox, { [h.selected]: i }),
+                                                          className: a()(G.checkbox, { [G.selected]: i }),
                                                           children:
                                                               i &&
                                                               (0, s.jsx)(r.CheckmarkLargeIcon, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
-                                                                  className: h.checkmark
+                                                                  className: G.checkmark
                                                               })
                                                       })
                                                   ]
@@ -347,7 +347,7 @@ function x() {
                                       })
                                   }),
                                   (0, s.jsxs)('div', {
-                                      className: h.valueText,
+                                      className: G.valueText,
                                       children: [
                                           (0, s.jsx)(r.Heading, {
                                               variant: 'heading-md/semibold',

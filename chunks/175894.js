@@ -8,14 +8,14 @@ var r = n(470079),
 function a(e) {
     let { channel: t, userActivity: n } = e,
         a = t.id,
-        s = null == n ? void 0 : n.applicationId;
+        o = null == n ? void 0 : n.applicationId;
     r.useEffect(() => {
         null != a &&
-            null != s &&
+            null != o &&
             i.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_OPEN',
                 channelId: a,
-                applicationId: s
+                applicationId: o
             });
-    }, [a, s]);
+    }, [a, o]);
 }

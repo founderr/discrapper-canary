@@ -1,6 +1,6 @@
 a.d(n, {
     V: function () {
-        return s;
+        return d;
     }
 }),
     a(399606);
@@ -9,16 +9,16 @@ var t = a(92114),
     i = a(621600),
     o = a(113449),
     r = a(686660),
-    d = a(981631),
-    l = a(526761);
-function s(e, n) {
+    l = a(981631),
+    s = a(526761);
+function d(e, n) {
     let a = c.ZP.getGuildFlags(e);
     n === r.s8.ALL_MESSAGES
         ? t.Z.updateGuildNotificationSettings(
               e,
               {
-                  message_notifications: d.bL.ALL_MESSAGES,
-                  flags: (0, o.Q4)(a, l.vc.UNREADS_ALL_MESSAGES)
+                  message_notifications: l.bL.ALL_MESSAGES,
+                  flags: (0, o.Q4)(a, s.vc.UNREADS_ALL_MESSAGES)
               },
               i.ZB.PresetAll
           )
@@ -26,8 +26,8 @@ function s(e, n) {
           ? t.Z.updateGuildNotificationSettings(
                 e,
                 {
-                    message_notifications: d.bL.ONLY_MENTIONS,
-                    flags: (0, o.Q4)(a, l.vc.UNREADS_ONLY_MENTIONS)
+                    message_notifications: l.bL.ONLY_MENTIONS,
+                    flags: (0, o.Q4)(a, s.vc.UNREADS_ONLY_MENTIONS)
                 },
                 i.ZB.PresetMentions
             )
@@ -35,8 +35,8 @@ function s(e, n) {
             t.Z.updateGuildNotificationSettings(
                 e,
                 {
-                    message_notifications: d.bL.NO_MESSAGES,
-                    flags: (0, o.Q4)(a, l.vc.UNREADS_ONLY_MENTIONS)
+                    message_notifications: l.bL.NO_MESSAGES,
+                    flags: (0, o.Q4)(a, s.vc.UNREADS_ONLY_MENTIONS)
                 },
                 i.ZB.PresetNothing
             );

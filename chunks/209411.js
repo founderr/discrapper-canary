@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return g;
     }
 }),
     n(47120),
@@ -9,23 +9,23 @@ var s = n(735250),
     r = n(470079),
     i = n(593473),
     a = n(266067),
-    l = n(442837),
-    o = n(893776),
+    o = n(442837),
+    l = n(893776),
     c = n(899742),
     u = n(743142),
     d = n(703656),
     _ = n(314897),
     h = n(781428),
     E = n(981631),
-    g = n(176505);
-function p(e) {
+    p = n(176505);
+function g(e) {
     let t = r.useCallback(
             (t) => {
                 if (
                     (function (e) {
                         var t;
                         let n = (0, a.LX)(e, { path: E.Z5c.CHANNEL(':guildId', ':channelId') });
-                        return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === g.oC.ROLE_SUBSCRIPTIONS || !1;
+                        return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === p.oC.ROLE_SUBSCRIPTIONS || !1;
                     })(t)
                 )
                     d.dL(t);
@@ -36,7 +36,7 @@ function p(e) {
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: n, loginStatus: p } = (0, l.cj)([_.default], () => ({
+        { isAuthenticated: n, loginStatus: g } = (0, o.cj)([_.default], () => ({
             isAuthenticated: _.default.isAuthenticated(),
             loginStatus: _.default.getLoginStatus()
         })),
@@ -57,7 +57,7 @@ function p(e) {
             if (null != e && null != t) {
                 let n = null != f ? (0, u.L)(f) : void 0;
                 I
-                    ? o.Z.logout(null).finally(() => {
+                    ? l.Z.logout(null).finally(() => {
                           T({
                               handoffKey: e,
                               handoffToken: t,
@@ -72,7 +72,7 @@ function p(e) {
             }
         }
     }, []),
-    I || p === E.u34.LOGGING_IN)
+    I || g === E.u34.LOGGING_IN)
         ? (0, s.jsx)(h.q, {})
         : (0, s.jsx)(h.Z, {
               ...e,

@@ -25,9 +25,9 @@ var i = n(735250),
 function T(e) {
     let { channel: t, themeable: T } = e,
         x = t.getGuildId(),
-        { mute: S, suppress: v } = (0, m.Z)(t),
+        { mute: v, suppress: S } = (0, m.Z)(t),
         N = (0, a.e7)([f.Z], () => f.Z.isDeaf()),
-        A = S || v || N,
+        A = v || S || N,
         Z = (0, u.sR)({ isSoundboardButtonDisabled: A }),
         [M, b] = (0, c.cv)(Z);
     function R(e) {
@@ -76,8 +76,8 @@ function T(e) {
                 (0, i.jsx)(_.Z, {
                     themeable: T,
                     label: (function () {
-                        if (S) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-                        if (v) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+                        if (v) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+                        if (S) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
                         if (N) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
                     })(),
                     iconComponent: r.SoundboardIcon,

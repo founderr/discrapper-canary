@@ -1,8 +1,8 @@
 var r = n(566885),
     i = n(926515),
     a = n(24033),
-    s = n(938507),
-    o = n(908355),
+    o = n(938507),
+    s = n(908355),
     l = n(49693),
     u = n(838957),
     c = n(981971),
@@ -15,41 +15,41 @@ var r = n(566885),
     h = f.prototype;
 e.exports = function (e, t, n) {
     var p,
-        I,
         m,
+        I,
         T,
-        S,
         g,
+        S,
         A,
-        N = n && n.that,
-        O = !!(n && n.AS_ENTRIES),
-        R = !!(n && n.IS_RECORD),
-        v = !!(n && n.IS_ITERATOR),
+        v = n && n.that,
+        N = !!(n && n.AS_ENTRIES),
+        O = !!(n && n.IS_RECORD),
+        R = !!(n && n.IS_ITERATOR),
         C = !!(n && n.INTERRUPTED),
-        y = r(t, N),
-        L = function (e) {
+        y = r(t, v),
+        b = function (e) {
             return p && _(p, 'normal', e), new f(!0, e);
         },
-        D = function (e) {
-            return O ? (a(e), C ? y(e[0], e[1], L) : y(e[0], e[1])) : C ? y(e, L) : y(e);
+        L = function (e) {
+            return N ? (a(e), C ? y(e[0], e[1], b) : y(e[0], e[1])) : C ? y(e, b) : y(e);
         };
-    if (R) p = e.iterator;
-    else if (v) p = e;
+    if (O) p = e.iterator;
+    else if (R) p = e;
     else {
-        if (!(I = d(e))) throw E(s(e) + ' is not iterable');
-        if (o(I)) {
-            for (m = 0, T = l(e); T > m; m++) if ((S = D(e[m])) && u(h, S)) return S;
+        if (!(m = d(e))) throw E(o(e) + ' is not iterable');
+        if (s(m)) {
+            for (I = 0, T = l(e); T > I; I++) if ((g = L(e[I])) && u(h, g)) return g;
             return new f(!1);
         }
-        p = c(e, I);
+        p = c(e, m);
     }
-    for (g = R ? e.next : p.next; !(A = i(g, p)).done; ) {
+    for (S = O ? e.next : p.next; !(A = i(S, p)).done; ) {
         try {
-            S = D(A.value);
+            g = L(A.value);
         } catch (e) {
             _(p, 'throw', e);
         }
-        if ('object' == typeof S && S && u(h, S)) return S;
+        if ('object' == typeof g && g && u(h, g)) return g;
     }
     return new f(!1);
 };

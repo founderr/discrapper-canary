@@ -1,32 +1,32 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(692547),
+var i = n(692547),
     a = n(481060),
-    r = n(739566),
-    l = n(834129),
-    o = n(689938),
-    c = n(437814);
-function u(e) {
-    let { message: t, compact: n, usernameHook: u } = e,
-        d = (0, r.ZP)(t),
-        _ = u(d),
-        E = o.Z.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
+    o = n(739566),
+    s = n(834129),
+    l = n(689938),
+    u = n(437814);
+function c(e) {
+    let { message: t, compact: n, usernameHook: c } = e,
+        d = (0, o.ZP)(t),
+        _ = c(d),
+        E = l.Z.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
             username: d.nick,
             usernameHook: _,
             topic: t.content
         });
-    return (0, i.jsx)(l.Z, {
-        className: c.stageSystemMessage,
-        iconNode: (0, i.jsx)(a.StageIcon, {
+    return (0, r.jsx)(s.Z, {
+        className: u.stageSystemMessage,
+        iconNode: (0, r.jsx)(a.StageIcon, {
             size: 'md',
-            color: s.Z.unsafe_rawColors.GREEN_360.css
+            color: i.Z.unsafe_rawColors.GREEN_360.css
         }),
-        iconContainerClassName: c.iconContainer,
+        iconContainerClassName: u.iconContainer,
         timestamp: t.timestamp,
         compact: n,
         children: E

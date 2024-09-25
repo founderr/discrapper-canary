@@ -3,16 +3,16 @@ var s,
     r = n(735250),
     i = n(470079),
     a = n(593473),
-    l = n(442837),
-    o = n(544891),
+    o = n(442837),
+    l = n(544891),
     c = n(481060),
     u = n(129293),
     d = n(388905),
     _ = n(108427),
     h = n(598077),
     E = n(896797),
-    g = n(981631),
-    p = n(930441),
+    p = n(981631),
+    g = n(930441),
     m = n(689938),
     f = n(113207);
 function I(e, t, n) {
@@ -28,14 +28,14 @@ function I(e, t, n) {
         e
     );
 }
-l.ZP.initialize();
+o.ZP.initialize();
 class N extends (s = i.PureComponent) {
     componentDidMount() {
         let e = (0, u.Z)(this.props.location),
             t = (0, a.parse)(this.props.location.search);
-        o.tn
+        l.tn
             .post({
-                url: g.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: p.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -87,7 +87,7 @@ class N extends (s = i.PureComponent) {
                     className: f.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
-                    onClick: () => s(g.Z5c.SETTINGS('notifications', p.vG)),
+                    onClick: () => s(p.Z5c.SETTINGS('notifications', g.vG)),
                     children: m.Z.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
                 })
             ]
@@ -97,7 +97,7 @@ class N extends (s = i.PureComponent) {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { user: n, category: s } = this.state;
         if (null != s) {
-            let e = p.Od.find((e) => e.category === s);
+            let e = g.Od.find((e) => e.category === s);
             if (null != e) return this.renderCategorySuccess(s, e.label());
         }
         return (0, r.jsxs)(d.ZP, {
@@ -155,4 +155,4 @@ class N extends (s = i.PureComponent) {
             });
     }
 }
-I(N, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = l.ZP.connectStores([E.Z], () => ({ defaultRoute: E.Z.defaultRoute }))(N));
+I(N, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = o.ZP.connectStores([E.Z], () => ({ defaultRoute: E.Z.defaultRoute }))(N));

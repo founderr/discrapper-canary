@@ -1,26 +1,26 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var i = n(735250),
-    s = n(470079),
+var r = n(735250),
+    i = n(470079),
     a = n(442837),
-    r = n(481060),
-    l = n(468706),
-    o = n(774863),
-    c = n(689938);
-function u(e) {
+    o = n(481060),
+    s = n(468706),
+    l = n(774863),
+    u = n(689938);
+function c(e) {
     let { messageId: t, channelId: n } = e,
-        u = (0, a.e7)([o.Z], () => o.Z.canSubmitFpReport(t)),
-        d = s.useCallback(() => {
-            (0, l.e)(n, t);
+        c = (0, a.e7)([l.Z], () => l.Z.canSubmitFpReport(t)),
+        d = i.useCallback(() => {
+            (0, s.e)(n, t);
         }, [n, t]);
-    return (0, i.jsx)(r.Button, {
-        size: r.Button.Sizes.MEDIUM,
-        color: r.Button.Colors.PRIMARY,
+    return (0, r.jsx)(o.Button, {
+        size: o.Button.Sizes.MEDIUM,
+        color: o.Button.Colors.PRIMARY,
         onClick: d,
-        disabled: !u,
-        children: c.Z.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE
+        disabled: !c,
+        children: u.Z.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE
     });
 }

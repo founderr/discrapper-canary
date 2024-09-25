@@ -1,7 +1,7 @@
-var e = n(360518),
-    o = n(519723),
-    i = e('iterator'),
-    u = Array.prototype;
-t.exports = function (t) {
-    return void 0 !== t && (o.Array === t || u[i] === t);
+var r = n(360518),
+    i = n(519723),
+    a = r('iterator'),
+    o = Array.prototype;
+e.exports = function (e) {
+    return void 0 !== e && (i.Array === e || o[a] === e);
 };

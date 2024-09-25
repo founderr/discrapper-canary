@@ -19,9 +19,9 @@ var n = t(735250),
     S = t(663389),
     I = t(63063),
     N = t(358085),
-    m = t(894939),
-    A = t(321499),
-    C = t(710808),
+    A = t(894939),
+    C = t(321499),
+    m = t(710808),
     g = t(625205),
     h = t(325808),
     O = t(823087),
@@ -132,7 +132,7 @@ function F() {
             }),
             (0, n.jsx)(E.F, {
                 setting: L.s6.VOICE_AND_VIDEO_SOUNDS,
-                children: (0, n.jsx)(m.Z, {})
+                children: (0, n.jsx)(A.Z, {})
             }),
             (0, n.jsx)(E.F, {
                 setting: L.s6.VOICE_AND_VIDEO_VIDEO,
@@ -147,7 +147,7 @@ function F() {
                         children: v.Z.Messages.SETTINGS_ADVANCED
                     }),
                     children: [
-                        (0, n.jsx)(A.Z, {}),
+                        (0, n.jsx)(C.Z, {}),
                         (0, n.jsx)(E.F, {
                             setting: L.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
                             children: (0, n.jsx)(f.Z, {})
@@ -289,7 +289,7 @@ function F() {
                         }),
                         (0, n.jsx)(E.F, {
                             setting: L.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                            children: (0, n.jsx)(C.Z, {})
+                            children: (0, n.jsx)(m.Z, {})
                         }),
                         (0, n.jsx)(E.F, {
                             setting: L.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,

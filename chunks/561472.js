@@ -19,7 +19,7 @@ var i = n(735250),
     I = n(689938);
 t.Z = function (e) {
     let { className: t, style: n, channel: T, draftType: x } = e,
-        [S, v] = s.useState(!0),
+        [v, S] = s.useState(!0),
         N = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
         A = (0, a.e7)([h.Z], () => null != T && h.Z.can(C.Plq.ATTACH_FILES, T), [T]),
         Z = null != (0, a.e7)([l.Z], () => l.Z.getActiveCommand(T.id)),
@@ -31,13 +31,13 @@ t.Z = function (e) {
         }),
         L = (0, a.e7)([c.Z], () => c.Z.didAgree(M)) && !R,
         j = s.useMemo(() => !N && ((T.isPrivate() && !T.isManaged()) || (null != M && (!T.isNSFW() || L) && A && u.Z.canChatInGuild(M))), [A, L, T, M, N]),
-        P = b ? (C.TPd.GUILD_THREADS_ONLY.has(T.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD) : S ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(T, p.default, m.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
+        O = b ? (C.TPd.GUILD_THREADS_ONLY.has(T.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD) : v ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(T, p.default, m.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
     return Z || !j
         ? null
         : (0, i.jsx)(E.Z, {
               className: t,
               style: n,
-              title: P,
+              title: O,
               description: b ? I.Z.Messages.UPLOAD_AREA_NEW_THREAD_HELP : I.Z.Messages.UPLOAD_AREA_HELP,
               icons: g.J6,
               onDrop: (e) => {
@@ -45,15 +45,15 @@ t.Z = function (e) {
                   j &&
                       null != T &&
                       ((0, f.d)(e, T, x, {
-                          requireConfirm: S,
+                          requireConfirm: v,
                           showLargeMessageDialog: !1
                       }),
                       _.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS));
               },
-              onDragClear: () => v(!0),
+              onDragClear: () => S(!0),
               onDragOver: (e) => {
                   if (Z) return !1;
-                  !b && e.shiftKey === S && v(!e.shiftKey);
+                  !b && e.shiftKey === v && S(!e.shiftKey);
               }
           });
 };

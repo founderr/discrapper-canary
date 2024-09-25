@@ -1,20 +1,20 @@
 n.d(t, {
     B: function () {
-        return d;
+        return E;
     },
     Z: function () {
-        return _;
+        return f;
     }
-}),
-    n(789020),
-    n(47120);
-var r = n(480189),
-    i = n(81825),
-    a = n(768581),
-    s = n(584597),
-    o = n(598077),
-    l = n(701488);
-function u(e, t, n) {
+});
+var r = n(789020);
+var i = n(47120);
+var a = n(480189),
+    o = n(81825),
+    s = n(768581),
+    l = n(584597),
+    u = n(598077),
+    c = n(701488);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,37 +27,37 @@ function u(e, t, n) {
         e
     );
 }
-let c = {
-    [l.Zc]: 7,
-    [l.qm]: 12
+let _ = {
+    [c.Zc]: 7,
+    [c.qm]: 12
 };
-function d(e) {
+function E(e) {
     let t = {
         os: e.os,
         name: e.name
     };
     return null != e.arguments && (t.arguments = e.arguments), null != e.is_launcher && (t.isLauncher = e.is_launcher), t;
 }
-class _ extends i.Z {
+class f extends o.Z {
     static createFromServer(e) {
         var t, n;
-        return new _({
+        return new f({
             ...e,
             thirdPartySkus: e.third_party_skus,
             overlayWarn: e.overlay_warn,
             overlayCompatibilityHook: e.overlay_compatibility_hook,
-            overlayMethods: null !== (t = e.overlay_methods) && void 0 !== t ? t : r.e.DEFAULT,
+            overlayMethods: null !== (t = e.overlay_methods) && void 0 !== t ? t : a.e.DEFAULT,
             hook: e.hook,
             primarySkuId: e.primary_sku_id,
             storeListingSkuId: e.store_listing_sku_id,
             guildId: e.guild_id,
             guild: e.guild,
-            publishers: null != e.publishers ? e.publishers.map(s.Z.createFromServer) : [],
-            developers: null != e.developers ? e.developers.map(s.Z.createFromServer) : [],
+            publishers: null != e.publishers ? e.publishers.map(l.Z.createFromServer) : [],
+            developers: null != e.developers ? e.developers.map(l.Z.createFromServer) : [],
             eulaId: e.eula_id,
             slug: e.slug,
             coverImage: e.cover_image,
-            bot: null != e.bot ? new o.Z(e.bot) : null,
+            bot: null != e.bot ? new u.Z(e.bot) : null,
             flags: null !== (n = e.flags) && void 0 !== n ? n : 0,
             maxParticipants: e.max_participants,
             tags: e.tags,
@@ -78,7 +78,7 @@ class _ extends i.Z {
     }
     getIconURL(e, t) {
         return null != this.icon
-            ? a.ZP.getGameAssetURL({
+            ? s.ZP.getGameAssetURL({
                   id: this.id,
                   hash: this.icon,
                   size: e,
@@ -88,7 +88,7 @@ class _ extends i.Z {
     }
     getIconSource(e, t) {
         return null != this.icon
-            ? a.ZP.getGameAssetSource({
+            ? s.ZP.getGameAssetSource({
                   id: this.id,
                   hash: this.icon,
                   size: e,
@@ -98,7 +98,7 @@ class _ extends i.Z {
     }
     getSplashURL(e, t) {
         return null != this.splash
-            ? a.ZP.getGameAssetURL({
+            ? s.ZP.getGameAssetURL({
                   id: this.id,
                   hash: this.splash,
                   size: e,
@@ -109,7 +109,7 @@ class _ extends i.Z {
     }
     getCoverImageURL(e) {
         return null != this.coverImage
-            ? a.ZP.getApplicationIconURL({
+            ? s.ZP.getApplicationIconURL({
                   id: this.id,
                   icon: this.coverImage,
                   size: e
@@ -118,7 +118,7 @@ class _ extends i.Z {
     }
     getMaxParticipants() {
         var e, t;
-        return null !== (t = null !== (e = this.maxParticipants) && void 0 !== e ? e : c[this.id]) && void 0 !== t ? t : 0;
+        return null !== (t = null !== (e = this.maxParticipants) && void 0 !== e ? e : _[this.id]) && void 0 !== t ? t : 0;
     }
     supportsIntegrationTypes() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -129,14 +129,14 @@ class _ extends i.Z {
         return null != this.storeListingSkuId ? this.storeListingSkuId : this.primarySkuId;
     }
     get supportsOutOfProcessOverlay() {
-        return _.supportsOutOfProcessOverlay(this.overlayMethods);
+        return f.supportsOutOfProcessOverlay(this.overlayMethods);
     }
     static supportsOutOfProcessOverlay(e) {
-        let t = r.e.OUT_OF_PROCESS;
+        let t = a.e.OUT_OF_PROCESS;
         return null != e && (e & t) === t;
     }
     constructor(e) {
-        var t, n, i, a;
-        super(), u(this, 'id', void 0), u(this, 'name', void 0), u(this, 'icon', void 0), u(this, 'splash', void 0), u(this, 'overlay', void 0), u(this, 'overlayWarn', void 0), u(this, 'overlayCompatibilityHook', void 0), u(this, 'overlayMethods', void 0), u(this, 'hook', void 0), u(this, 'aliases', void 0), u(this, 'publishers', void 0), u(this, 'developers', void 0), u(this, 'primarySkuId', void 0), u(this, 'storeListingSkuId', void 0), u(this, 'thirdPartySkus', void 0), u(this, 'guildId', void 0), u(this, 'guild', void 0), u(this, 'executables', void 0), u(this, 'hashes', void 0), u(this, 'description', void 0), u(this, 'eulaId', void 0), u(this, 'slug', void 0), u(this, 'coverImage', void 0), u(this, 'bot', void 0), u(this, 'flags', void 0), u(this, 'maxParticipants', void 0), u(this, 'tags', void 0), u(this, 'embeddedActivityConfig', void 0), u(this, 'type', void 0), u(this, 'team', void 0), u(this, 'roleConnectionsVerificationUrl', void 0), u(this, 'integrationTypesConfig', void 0), u(this, 'isMonetized', void 0), u(this, 'storefront_available', void 0), u(this, 'termsOfServiceUrl', void 0), u(this, 'privacyPolicyUrl', void 0), u(this, 'isVerified', void 0), u(this, 'customInstallUrl', void 0), u(this, 'installParams', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon || null), (this.splash = e.splash || null), (this.overlay = e.overlay || !1), (this.overlayWarn = e.overlayWarn || !1), (this.overlayCompatibilityHook = e.overlayCompatibilityHook || !1), (this.overlayMethods = null !== (t = e.overlayMethods) && void 0 !== t ? t : r.e.DEFAULT), (this.hook = null === (n = e.hook) || void 0 === n || n), (this.aliases = e.aliases || []), (this.publishers = e.publishers || []), (this.developers = e.developers || []), (this.primarySkuId = e.primarySkuId), (this.storeListingSkuId = e.storeListingSkuId), (this.guildId = e.guildId || null), (this.guild = e.guild || null), (this.thirdPartySkus = e.thirdPartySkus || []), (this.executables = (e.executables || []).map(d)), (this.hashes = e.hashes || []), (this.description = e.description || null), (this.eulaId = e.eulaId || null), (this.slug = e.slug || null), (this.bot = e.bot || null), (this.coverImage = e.coverImage || null), (this.flags = null !== (i = e.flags) && void 0 !== i ? i : 0), (this.tags = null !== (a = e.tags) && void 0 !== a ? a : []), (this.maxParticipants = e.maxParticipants), (this.embeddedActivityConfig = e.embedded_activity_config), (this.type = e.type), (this.team = e.team), (this.roleConnectionsVerificationUrl = e.roleConnectionsVerificationUrl), (this.integrationTypesConfig = e.integrationTypesConfig), (this.isMonetized = e.is_monetized), (this.storefront_available = e.storefront_available), (this.termsOfServiceUrl = e.termsOfServiceUrl), (this.privacyPolicyUrl = e.privacyPolicyUrl), (this.isVerified = e.is_verified), (this.customInstallUrl = e.custom_install_url), (this.installParams = e.install_params);
+        var t, n, r, i;
+        super(), d(this, 'id', void 0), d(this, 'name', void 0), d(this, 'icon', void 0), d(this, 'splash', void 0), d(this, 'overlay', void 0), d(this, 'overlayWarn', void 0), d(this, 'overlayCompatibilityHook', void 0), d(this, 'overlayMethods', void 0), d(this, 'hook', void 0), d(this, 'aliases', void 0), d(this, 'publishers', void 0), d(this, 'developers', void 0), d(this, 'primarySkuId', void 0), d(this, 'storeListingSkuId', void 0), d(this, 'thirdPartySkus', void 0), d(this, 'guildId', void 0), d(this, 'guild', void 0), d(this, 'executables', void 0), d(this, 'hashes', void 0), d(this, 'description', void 0), d(this, 'eulaId', void 0), d(this, 'slug', void 0), d(this, 'coverImage', void 0), d(this, 'bot', void 0), d(this, 'flags', void 0), d(this, 'maxParticipants', void 0), d(this, 'tags', void 0), d(this, 'embeddedActivityConfig', void 0), d(this, 'type', void 0), d(this, 'team', void 0), d(this, 'roleConnectionsVerificationUrl', void 0), d(this, 'integrationTypesConfig', void 0), d(this, 'isMonetized', void 0), d(this, 'storefront_available', void 0), d(this, 'termsOfServiceUrl', void 0), d(this, 'privacyPolicyUrl', void 0), d(this, 'isVerified', void 0), d(this, 'customInstallUrl', void 0), d(this, 'installParams', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon || null), (this.splash = e.splash || null), (this.overlay = e.overlay || !1), (this.overlayWarn = e.overlayWarn || !1), (this.overlayCompatibilityHook = e.overlayCompatibilityHook || !1), (this.overlayMethods = null !== (t = e.overlayMethods) && void 0 !== t ? t : a.e.DEFAULT), (this.hook = null === (n = e.hook) || void 0 === n || n), (this.aliases = e.aliases || []), (this.publishers = e.publishers || []), (this.developers = e.developers || []), (this.primarySkuId = e.primarySkuId), (this.storeListingSkuId = e.storeListingSkuId), (this.guildId = e.guildId || null), (this.guild = e.guild || null), (this.thirdPartySkus = e.thirdPartySkus || []), (this.executables = (e.executables || []).map(E)), (this.hashes = e.hashes || []), (this.description = e.description || null), (this.eulaId = e.eulaId || null), (this.slug = e.slug || null), (this.bot = e.bot || null), (this.coverImage = e.coverImage || null), (this.flags = null !== (r = e.flags) && void 0 !== r ? r : 0), (this.tags = null !== (i = e.tags) && void 0 !== i ? i : []), (this.maxParticipants = e.maxParticipants), (this.embeddedActivityConfig = e.embedded_activity_config), (this.type = e.type), (this.team = e.team), (this.roleConnectionsVerificationUrl = e.roleConnectionsVerificationUrl), (this.integrationTypesConfig = e.integrationTypesConfig), (this.isMonetized = e.is_monetized), (this.storefront_available = e.storefront_available), (this.termsOfServiceUrl = e.termsOfServiceUrl), (this.privacyPolicyUrl = e.privacyPolicyUrl), (this.isVerified = e.is_verified), (this.customInstallUrl = e.custom_install_url), (this.installParams = e.install_params);
     }
 }

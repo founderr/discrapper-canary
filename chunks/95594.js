@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return u;
     }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(663507),
-    a = n(924428),
+});
+var r = n(47120);
+var i = n(470079),
+    a = n(663507),
+    o = n(924428),
     s = n(151973);
-let o = Object.freeze({
+let l = Object.freeze({
     coordsMap: {},
     visibleSections: {},
     totalHeight: 0,
@@ -17,54 +17,54 @@ let o = Object.freeze({
         coordinates: {}
     }
 });
-function l(e) {
-    let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: _, maxBufferWidth: E, itemGutter: f, removeEdgeItemGutters: h, sectionGutter: p, padding: I, paddingVertical: m, paddingHorizontal: T, dir: S } = e,
-        g = (0, a.Z)(),
-        A = (0, r.useRef)(o),
-        [N] = (0, r.useState)(() => new i.ZP()),
-        O = _(),
-        R = Math.min(null != E ? E : 1 / 0, O.offsetWidth),
-        v = null != E ? Math.max(0, O.offsetWidth - E) : 0,
+function u(e) {
+    let { sections: t, columns: n, getItemKey: r, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: _, maxBufferWidth: E, itemGutter: f, removeEdgeItemGutters: h, sectionGutter: p, padding: m, paddingVertical: I, paddingHorizontal: T, dir: g } = e,
+        S = (0, o.Z)(),
+        A = (0, i.useRef)(l),
+        [v] = (0, i.useState)(() => new a.ZP()),
+        N = _(),
+        O = Math.min(null != E ? E : 1 / 0, N.offsetWidth),
+        R = null != E ? Math.max(0, N.offsetWidth - E) : 0,
         {
             dirty: C,
             chunkStart: y,
-            chunkEnd: L,
-            forceUpdateOnChunkChange: D
+            chunkEnd: b,
+            forceUpdateOnChunkChange: L
         } = (0, s.Z)({
             chunkSize: d,
             getScrollerState: _,
-            forceUpdate: g
+            forceUpdate: S
         });
     return (
-        (A.current = (0, r.useMemo)(
+        (A.current = (0, i.useMemo)(
             () =>
                 C > 0
                     ? A.current
-                    : (N.mergeProps({
+                    : (v.mergeProps({
                           sections: t,
                           columns: n,
-                          getItemKey: l,
+                          getItemKey: r,
                           getItemHeight: u,
                           getSectionHeight: c,
-                          bufferWidth: R,
+                          bufferWidth: O,
                           itemGutter: f,
                           removeEdgeItemGutters: h,
                           sectionGutter: p,
-                          padding: I,
-                          paddingVertical: m,
+                          padding: m,
+                          paddingVertical: I,
                           paddingHorizontal: T,
-                          marginLeft: v / 2,
-                          dir: S
+                          marginLeft: R / 2,
+                          dir: g
                       }),
-                      N.computeVisibleSections(Math.max(0, y * d), L * d),
-                      N.getState()),
-            [C, N, t, n, l, u, c, y, L, d, f, h, p, I, m, T, R, S]
+                      v.computeVisibleSections(Math.max(0, y * d), b * d),
+                      v.getState()),
+            [C, v, t, n, r, u, c, y, b, d, f, h, p, m, I, T, O, g]
         )),
         {
             ...A.current,
-            masonryComputer: N,
-            forceUpdateOnChunkChange: D,
-            forceUpdate: g
+            masonryComputer: v,
+            forceUpdateOnChunkChange: L,
+            forceUpdate: S
         }
     );
 }

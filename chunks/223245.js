@@ -1,4 +1,4 @@
-n(47120);
+var r = n(47120);
 var i = n(570140);
 t.Z = {
     setEnabled(e) {

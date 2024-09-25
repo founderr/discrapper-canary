@@ -22,34 +22,34 @@ var s,
     n,
     t = E(470079),
     r = E(399606),
-    a = E(906732),
-    T = E(171368),
+    T = E(906732),
+    a = E(171368),
     I = E(430824),
     l = E(594174),
-    o = E(91047),
-    A = E(981631);
+    A = E(91047),
+    o = E(981631);
 let i = (e, _) => {
     let { guildId: E, userId: s, colorRoleId: n } = e;
-    (0, T.openUserProfileModal)({
+    (0, a.openUserProfileModal)({
         userId: s,
         guildId: E,
         sourceAnalyticsLocations: _,
         roleId: n,
         analyticsLocation: {
-            section: A.jXE.MEMBER_SAFETY_PAGE,
-            object: A.qAy.ACTIONED_BY_USER
+            section: o.jXE.MEMBER_SAFETY_PAGE,
+            object: o.qAy.ACTIONED_BY_USER
         }
     });
 };
 function N(e, _, E, s) {
-    let { analyticsLocations: n } = (0, a.ZP)();
+    let { analyticsLocations: n } = (0, T.ZP)();
     return t.useCallback(
         (t) => {
             if (null == e) return;
             let r = l.default.getUser(e.userId);
             if (null != r)
                 t.stopPropagation(),
-                    (0, o.nm)(t, {
+                    (0, A.nm)(t, {
                         user: r,
                         guildId: e.guildId,
                         analyticsLocations: null != E ? [E] : n,
@@ -61,14 +61,14 @@ function N(e, _, E, s) {
     );
 }
 function D(e, _, E) {
-    let { analyticsLocations: s } = (0, a.ZP)();
+    let { analyticsLocations: s } = (0, T.ZP)();
     return t.useCallback(
         (n) => {
             if (null == e) return;
             let t = l.default.getUser(e.userId);
             if (null != t)
                 n.stopPropagation(),
-                    (0, o._j)(n, {
+                    (0, A._j)(n, {
                         user: t,
                         guildId: e.guildId,
                         analyticsLocations: null != _ ? [_] : s,

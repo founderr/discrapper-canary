@@ -6,10 +6,10 @@ n.d(t, {
         return r;
     },
     dD: function () {
-        return o;
+        return s;
     },
     pt: function () {
-        return s;
+        return o;
     },
     ve: function () {
         return i;
@@ -18,5 +18,5 @@ n.d(t, {
 let r = 'guild-product-edit-modal',
     i = 1073741824,
     a = 1073741824,
-    s = 10,
-    o = 30;
+    o = 10,
+    s = 30;

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return S;
     }
 });
 var i = n(735250);
@@ -24,17 +24,17 @@ var s = n(512722),
     I = n(146085),
     T = n(427679),
     x = n(354459),
-    S = n(689938);
-function v(e) {
-    let { channelId: t, closePopout: n, appContext: s, onSelect: v } = e,
+    v = n(689938);
+function S(e) {
+    let { channelId: t, closePopout: n, appContext: s, onSelect: S } = e,
         N = (0, l.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
         A = (null == N ? void 0 : N.type) === x.fO.STREAM ? N.stream : null,
         Z = (0, m.Z)(t);
     return (0, i.jsxs)(r.Menu, {
         navId: 'stage-channel-call-overflow-popout',
         onClose: n,
-        'aria-label': S.Z.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
-        onSelect: v,
+        'aria-label': v.Z.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
+        onSelect: S,
         children: [
             (function (e) {
                 let t = (0, l.e7)([E.Z], () => E.Z.getChannel(e), [e]),
@@ -46,12 +46,12 @@ function v(e) {
                     ? null != s
                         ? (0, i.jsx)(r.MenuItem, {
                               id: 'edit-stage',
-                              label: S.Z.Messages.EDIT_STAGE_SUBTITLE,
+                              label: v.Z.Messages.EDIT_STAGE_SUBTITLE,
                               action: c
                           })
                         : (0, i.jsx)(r.MenuItem, {
                               id: 'start-stage',
-                              label: S.Z.Messages.STAGE_CHANNEL_START_TITLE,
+                              label: v.Z.Messages.STAGE_CHANNEL_START_TITLE,
                               action: c
                           })
                     : null;

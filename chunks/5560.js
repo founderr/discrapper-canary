@@ -120,7 +120,7 @@ class x extends s.PureComponent {
                     [I.highPriority]: u
                 };
             },
-            S = this.getTutorialPopoutText();
+            v = this.getTutorialPopoutText();
         return (0, i.jsx)(p.ZP, {
             position: _,
             renderMedia: r,
@@ -132,7 +132,7 @@ class x extends s.PureComponent {
             arrowAlignment: m,
             onSkipAll: this.handleSkipTips,
             onComplete: this.handleDismiss,
-            ...S,
+            ...v,
             children: (e, t) => {
                 let { isShown: n } = t;
                 return (0, i.jsx)(h.Clickable, {

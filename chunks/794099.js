@@ -1,4 +1,4 @@
-s.d(t, {
+n.d(t, {
     F4: function () {
         return i;
     },
@@ -6,7 +6,7 @@ s.d(t, {
         return a;
     }
 });
-let n = (0, s(818083).B)({
+let s = (0, n(818083).B)({
         kind: 'user',
         id: '2023-06_unique_username_registration',
         label: 'Unique Username Registration',
@@ -49,5 +49,5 @@ let n = (0, s(818083).B)({
             }
         ]
     }),
-    i = () => n.useExperiment({ location: '83ca1a_3' }, { autoTrackExposure: !1 }),
-    a = () => n.getCurrentConfig({ location: '83ca1a_4' }, { autoTrackExposure: !1 }).suggestions;
+    i = () => s.useExperiment({ location: '83ca1a_3' }, { autoTrackExposure: !1 }),
+    a = () => s.getCurrentConfig({ location: '83ca1a_4' }, { autoTrackExposure: !1 }).suggestions;

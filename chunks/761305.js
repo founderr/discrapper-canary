@@ -3,16 +3,16 @@ var s,
     r = n(735250),
     i = n(470079),
     a = n(593473),
-    l = n(442837),
-    o = n(544891),
+    o = n(442837),
+    l = n(544891),
     c = n(108427),
     u = n(601964),
     d = n(896797),
     _ = n(129293),
     h = n(388905),
     E = n(981631),
-    g = n(689938),
-    p = n(113207);
+    p = n(689938),
+    g = n(113207);
 function m(e, t, n) {
     return (
         t in e
@@ -26,12 +26,12 @@ function m(e, t, n) {
         e
     );
 }
-l.ZP.initialize();
+o.ZP.initialize();
 class f extends (s = i.PureComponent) {
     componentDidMount() {
         let e = (0, _.Z)(this.props.location),
             t = (0, a.parse)(this.props.location.search);
-        o.tn
+        l.tn
             .post({
                 url: E.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                 body: {
@@ -70,23 +70,23 @@ class f extends (s = i.PureComponent) {
         return (0, r.jsxs)(h.ZP, {
             children: [
                 (0, r.jsx)(h.Dx, {
-                    className: p.marginBottom8,
-                    children: g.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
+                    className: g.marginBottom8,
+                    children: p.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
                 }),
-                (0, r.jsx)(h.DK, { children: g.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({ guildName: n.name }) }),
+                (0, r.jsx)(h.DK, { children: p.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({ guildName: n.name }) }),
                 (0, r.jsx)(h.zx, {
-                    className: p.marginTop40,
+                    className: g.marginTop40,
                     onClick: () => t(e),
-                    children: g.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: p.Z.Messages.CONTINUE_TO_WEBAPP
                 }),
                 (0, r.jsx)(h.zx, {
-                    className: p.marginTop8,
+                    className: g.marginTop8,
                     color: h.zx.Colors.LINK,
                     look: h.zx.Looks.LINK,
                     onClick: () => {
                         t(E.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
-                    children: g.Z.Messages.SERVER_HIGHLIGHT_MANAGE_SETTINGS
+                    children: p.Z.Messages.SERVER_HIGHLIGHT_MANAGE_SETTINGS
                 })
             ]
         });
@@ -97,17 +97,17 @@ class f extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(h.Ee, {
                     src: n(105020),
-                    className: p.marginBottom20
+                    className: g.marginBottom20
                 }),
                 (0, r.jsx)(h.Dx, {
-                    className: p.marginBottom8,
-                    children: g.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+                    className: g.marginBottom8,
+                    children: p.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
                 }),
-                (0, r.jsx)(h.DK, { children: g.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY }),
+                (0, r.jsx)(h.DK, { children: p.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY }),
                 (0, r.jsx)(h.zx, {
-                    className: p.marginTop40,
+                    className: g.marginTop40,
                     onClick: () => t(e),
-                    children: g.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: p.Z.Messages.CONTINUE_TO_WEBAPP
                 })
             ]
         });
@@ -125,4 +125,4 @@ class f extends (s = i.PureComponent) {
             });
     }
 }
-m(f, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = l.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(f));
+m(f, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = o.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(f));

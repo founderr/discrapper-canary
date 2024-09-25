@@ -1,13 +1,13 @@
 t.d(n, {
     iN: function () {
-        return l;
+        return o;
     },
     oV: function () {
-        return o;
+        return l;
     }
 });
 var i = t(846027);
-let l = {
+let o = {
         binds: ['mod+shift+m'],
         comboKeysBindGlobal: !0,
         action: () => (
@@ -18,7 +18,7 @@ let l = {
             !1
         )
     },
-    o = {
+    l = {
         binds: ['mod+shift+d'],
         comboKeysBindGlobal: !0,
         action: () => (i.Z.toggleSelfDeaf(), !1)

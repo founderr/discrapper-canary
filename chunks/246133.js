@@ -6,11 +6,11 @@ n.d(t, {
 var r = n(381499),
     i = n(601992),
     a = n(675478),
-    s = n(885110),
-    o = n(626135),
+    o = n(885110),
+    s = n(626135),
     l = n(981631);
 async function u(e, t, n, u) {
-    null == t && (t = s.Z.getStatus()),
+    null == t && (t = o.Z.getStatus()),
         await a.hW.updateAsync(
             'status',
             (t) => {
@@ -29,5 +29,5 @@ async function u(e, t, n, u) {
             ...n,
             expire_duration_minutes: null != u ? u / 1000 : null
         }),
-        o.default.track(l.rMx.USER_STATUS_UPDATED, c);
+        s.default.track(l.rMx.USER_STATUS_UPDATED, c);
 }

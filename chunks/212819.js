@@ -3,7 +3,7 @@ n.d(t, {
         return i.a8;
     },
     gJ: function () {
-        return s.Z;
+        return o.Z;
     },
     h8: function () {
         return i.h8;
@@ -18,5 +18,5 @@ n.d(t, {
 var r = n(997383),
     i = n(727785),
     a = n(568547),
-    s = n(518454);
+    o = n(518454);
 n(620490), (t.ZP = r.Z);

@@ -9,10 +9,10 @@ n.d(t, {
         return r;
     },
     a4: function () {
-        return s;
+        return o;
     },
     jp: function () {
-        return o;
+        return s;
     },
     zy: function () {
         return i;
@@ -21,6 +21,6 @@ n.d(t, {
 let r = '@',
     i = '#',
     a = ':',
-    s = '+:',
-    o = ':',
+    o = '+:',
+    s = ':',
     l = '/';

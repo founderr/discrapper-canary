@@ -9,10 +9,10 @@ n.d(t, {
         return c;
     },
     m1: function () {
-        return s;
+        return o;
     },
     nS: function () {
-        return o;
+        return s;
     },
     zQ: function () {
         return l;
@@ -33,7 +33,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    o = (0, r.B)({
         kind: 'user',
         id: '2024-06_desktop_app_launcher_in_activities_shelf',
         label: 'Desktop App Launcher In Activities Shelf',
@@ -60,7 +60,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    o = (0, r.B)({
+    s = (0, r.B)({
         kind: 'user',
         id: '2024-07_open_platform_app_launcher',
         label: 'Open Platform App Launcher',

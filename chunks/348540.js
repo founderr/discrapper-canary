@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return S;
     }
 });
 var i = n(735250);
@@ -24,9 +24,9 @@ var s = n(442837),
     I = n(228168),
     T = n(981631),
     x = n(689938),
-    S = n(299336);
-function v(e) {
-    let { user: t, currentUser: n, displayProfile: v, channel: N, isHovering: A, onOpenProfile: Z } = e,
+    v = n(299336);
+function S(e) {
+    let { user: t, currentUser: n, displayProfile: S, channel: N, isHovering: A, onOpenProfile: Z } = e,
         M = (0, s.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),
         b = (0, s.e7)([l.Z], () => l.Z.hidePersonalInformation),
         R = (0, s.e7)([o.Z], () => {
@@ -34,16 +34,16 @@ function v(e) {
             return null === (e = o.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
     return (0, i.jsxs)('div', {
-        className: S.body,
+        className: v.body,
         children: [
             (0, i.jsx)(g.Z, {
                 user: t,
                 profileType: I.y0.PANEL,
                 nickname: r.ZP.getName(null, N.id, t),
-                pronouns: null == v ? void 0 : v.pronouns,
+                pronouns: null == S ? void 0 : S.pronouns,
                 onOpenProfile: Z,
                 tags: (0, i.jsx)(u.Z, {
-                    displayProfile: v,
+                    displayProfile: S,
                     profileType: I.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
@@ -68,19 +68,19 @@ function v(e) {
             (0, i.jsx)(h.Z, {
                 user: t,
                 currentUser: n,
-                className: S.activity
+                className: v.activity
             }),
             (0, i.jsxs)(E.Z.Overlay, {
-                className: S.overlay,
+                className: v.overlay,
                 children: [
                     !b &&
-                        (null == v ? void 0 : v.bio) != null &&
-                        (null == v ? void 0 : v.bio) !== '' &&
+                        (null == S ? void 0 : S.bio) != null &&
+                        (null == S ? void 0 : S.bio) !== '' &&
                         (0, i.jsx)(f.Z, {
                             heading: x.Z.Messages.USER_POPOUT_ABOUT_ME,
                             headingColor: 'header-primary',
                             children: (0, i.jsx)(d.Z, {
-                                userBio: v.bio,
+                                userBio: S.bio,
                                 animateOnHover: !0,
                                 isHovering: A,
                                 userId: t.id

@@ -1,6 +1,6 @@
 n.d(t, {
     Qe: function () {
-        return s;
+        return o;
     },
     ap: function () {
         return i;
@@ -23,7 +23,7 @@ function a(e) {
             return !1;
     }
 }
-function s(e) {
+function o(e) {
     if (null == e) return;
     let t = r.Al.get(e);
     return null != t ? 'theme-'.concat(t, ' theme-').concat(e, ' images-').concat(t) : 'theme-'.concat(e, ' images-').concat(e);

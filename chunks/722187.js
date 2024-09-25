@@ -7,15 +7,15 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(766646),
-    o = n(112831),
+    o = n(766646),
+    s = n(112831),
     l = n(689938),
     u = n(753328);
 function c(e) {
     let { children: t, className: n, disabled: i, required: c = !1, ...d } = e;
-    return (0, r.jsxs)(o.Z, {
+    return (0, r.jsxs)(s.Z, {
         tag: 'label',
-        color: o.Z.Colors.HEADER_SECONDARY,
+        color: s.Z.Colors.HEADER_SECONDARY,
         className: a()(u.label, n, {
             [u.defaultMargin]: null == n,
             [u.disabled]: i
@@ -31,7 +31,7 @@ function c(e) {
                             'aria-hidden': !0,
                             children: '*'
                         }),
-                        (0, r.jsx)(s.n, { children: l.Z.Messages.REQUIRED })
+                        (0, r.jsx)(o.n, { children: l.Z.Messages.REQUIRED })
                     ]
                 })
         ]

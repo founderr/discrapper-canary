@@ -1,12 +1,12 @@
 n.d(t, {
     z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(709014);
-let s = {
+let o = {
         click: {
             name: 'click',
             start: 0,
@@ -18,12 +18,12 @@ let s = {
             duration: 40
         }
     },
-    o = () => {
+    s = () => {
         let e = i.useRef(null),
             t = i.useCallback(() => {
                 null != e.current && e.current.play('click');
             }, []),
-            o = i.useCallback(() => {
+            s = i.useCallback(() => {
                 null != e.current && e.current.play('hover');
             }, []),
             l = i.useCallback(() => {
@@ -31,7 +31,7 @@ let s = {
             }, []);
         return {
             events: {
-                onMouseEnter: o,
+                onMouseEnter: s,
                 onMouseLeave: l
             },
             play: t,
@@ -41,7 +41,7 @@ let s = {
                         ...t,
                         src: () => n.e('36995').then(n.t.bind(n, 737962, 19)),
                         ref: e,
-                        markers: s
+                        markers: o
                     }),
                 []
             )

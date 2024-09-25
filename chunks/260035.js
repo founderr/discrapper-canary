@@ -1,50 +1,50 @@
 n.d(t, {
     m: function () {
-        return u;
+        return c;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(887024),
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(887024),
     s = n(745510),
-    o = n(675654),
-    l = n(688478);
-function u(e) {
+    l = n(675654),
+    u = n(688478);
+function c(e) {
     let { children: t } = e,
-        [n, u] = i.useState(null),
-        [c, d] = i.useState(null),
-        _ = i.useRef(new Set()),
-        [E, f] = i.useState(!1),
-        h = i.useCallback((e) => {
+        [n, r] = a.useState(null),
+        [c, d] = a.useState(null),
+        _ = a.useRef(new Set()),
+        [E, f] = a.useState(!1),
+        h = a.useCallback((e) => {
             _.current.delete(e), f(_.current.size > 0);
         }, []),
-        p = i.useCallback((e) => (_.current.add(e), f(!0), () => h(e)), [h]),
-        I = i.useCallback((e, t) => {
+        p = a.useCallback((e) => (_.current.add(e), f(!0), () => h(e)), [h]),
+        m = a.useCallback((e, t) => {
             for (let n of _.current) n(e, t);
         }, []);
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(s.d, {
+            (0, i.jsx)(s.d, {
                 confettiCanvas: c,
                 spriteCanvas: n,
-                baseConfig: o.We,
+                baseConfig: l.We,
                 addClickListener: p,
                 removeClickListener: h,
                 children: t
             }),
-            (0, r.jsx)(a.O_, {
+            (0, i.jsx)(o.O_, {
                 ref: d,
-                className: l.canvas,
-                environment: o.rq,
-                onClick: E ? I : void 0
+                className: u.canvas,
+                environment: l.rq,
+                onClick: E ? m : void 0
             }),
-            (0, r.jsx)(a.Ji, {
-                ref: u,
-                colors: o.Br,
-                sprites: o.CA,
-                spriteWidth: o.Ko,
-                spriteHeight: o.Ko
+            (0, i.jsx)(o.Ji, {
+                ref: r,
+                colors: l.Br,
+                sprites: l.CA,
+                spriteWidth: l.Ko,
+                spriteHeight: l.Ko
             })
         ]
     });

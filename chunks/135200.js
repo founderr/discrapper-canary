@@ -1,12 +1,12 @@
-var n,
+var s,
     i,
     a,
     r,
-    o = s(31775),
-    l = s.n(o),
-    u = s(442837),
-    c = s(570140),
-    d = s(70956);
+    o = n(31775),
+    l = n.n(o),
+    u = n(442837),
+    d = n(570140),
+    c = n(70956);
 let E = {
         taken: null,
         error: void 0,
@@ -32,7 +32,7 @@ let E = {
             }
         }
     };
-class g extends (r = u.ZP.Store) {
+class m extends (r = u.ZP.Store) {
     isRateLimited() {
         return null != _.retryAfterTime && Date.now() < _.retryAfterTime;
     }
@@ -61,36 +61,36 @@ class g extends (r = u.ZP.Store) {
     }
 }
 (a = 'PomeloStore'),
-    (i = 'displayName') in (n = g)
-        ? Object.defineProperty(n, i, {
+    (i = 'displayName') in (s = m)
+        ? Object.defineProperty(s, i, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (n[i] = a),
-    (t.Z = new g(c.Z, {
+        : (s[i] = a),
+    (t.Z = new m(d.Z, {
         POMELO_ATTEMPT_SUCCESS: function (e) {
-            let { username: t, taken: s } = e;
-            _.validations.set(t, { taken: s });
+            let { username: t, taken: n } = e;
+            _.validations.set(t, { taken: n });
         },
         POMELO_ATTEMPT_FAILURE: function (e) {
-            let { username: t, error: s, statusCode: n, retryAfter: i } = e;
-            429 === n
+            let { username: t, error: n, statusCode: s, retryAfter: i } = e;
+            429 === s
                 ? _.validations.set(
                       t,
                       {
                           taken: null,
-                          error: s,
+                          error: n,
                           rateLimited: !0
                       },
-                      (null != i ? i : 7) * d.Z.Millis.SECOND
+                      (null != i ? i : 7) * c.Z.Millis.SECOND
                   )
                 : _.validations.set(t, {
                       taken: null,
-                      error: s
+                      error: n
                   }),
-                null != i && (_.retryAfterTime = Date.now() + i * d.Z.Millis.SECOND);
+                null != i && (_.retryAfterTime = Date.now() + i * c.Z.Millis.SECOND);
         },
         POMELO_SUGGESTIONS_RESET: function () {
             (_.suggestions.migration = {
@@ -118,10 +118,10 @@ class g extends (r = u.ZP.Store) {
             _.suggestions.migration.usernameSuggestionLoading = t;
         },
         POMELO_REGISTRATION_SUGGESTIONS_SUCCESS: function (e) {
-            let { suggestion: t, source: s } = e;
+            let { suggestion: t, source: n } = e;
             (_.suggestions.registration = {
                 suggestion: t,
-                source: s,
+                source: n,
                 fetched: !0
             }),
                 (null == t ? void 0 : t.username) != null && _.validations.set(t.username, { taken: !1 });

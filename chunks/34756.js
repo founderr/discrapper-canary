@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var r = n(544891),
     i = n(981631),
     a = n(689938);
-class s extends r.yZ {
+class o extends r.yZ {
     constructor(e, t) {
         super(
             e,

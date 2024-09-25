@@ -25,8 +25,8 @@ var l = t(735250),
     g = t(703656),
     N = t(6025),
     I = t(922482),
-    b = t(601070),
-    E = t(216306),
+    E = t(601070),
+    b = t(216306),
     Z = t(163),
     v = t(753540),
     T = t(70297),
@@ -108,7 +108,7 @@ let M = a.memo(function () {
             P = (0, v.Mf)(i.id, n.id, a.id),
             y = (0, v.t4)(i.id, n.id, a.id),
             k = (0, v.EH)(i.id, a.id),
-            H = (0, s.e7)([b.Z], () => b.Z.getActiveThreadCount(i.id, n.id)),
+            H = (0, s.e7)([E.Z], () => E.Z.getActiveThreadCount(i.id, n.id)),
             D = (0, s.e7)([x.Z], () => x.Z.shouldIndicateNewChannel(i.id, n.id)),
             U = (e) => {
                 if (!y) return e.stopPropagation(), Z(i.id, n.id, a.id), !0;
@@ -157,7 +157,7 @@ let M = a.memo(function () {
                                 {
                                     variant: 'text-xs/normal',
                                     className: A.channelSubtitle,
-                                    children: (0, E.qw)(e.id)
+                                    children: (0, b.qw)(e.id)
                                 },
                                 'active'
                             )
@@ -194,7 +194,7 @@ let M = a.memo(function () {
             z = R.Z.Messages.CHANNEL_BROWSER_VIEW;
         n.isGuildStageVoice() || n.isGuildVoice() ? (z = R.Z.Messages.JOIN) : n.isForumLikeChannel() && (z = R.Z.Messages.OPEN);
         let V = y ? 'text-muted' : 'text-normal',
-            q = (0, d.useToken)(y ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_NORMAL).hex();
+            Y = (0, d.useToken)(y ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_NORMAL).hex();
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(d.Tooltip, {
@@ -234,7 +234,7 @@ let M = a.memo(function () {
                                                 }),
                                                 L
                                                     ? (0, l.jsx)(f.Z, {
-                                                          color: q,
+                                                          color: Y,
                                                           className: A.premiumIcon
                                                       })
                                                     : null,
@@ -327,7 +327,7 @@ function y(e) {
             [n, t, h, c, u]
         ),
         C = (0, T.q)(t.id),
-        p = (0, E.tn)(t.id, n, 64, C);
+        p = (0, b.tn)(t.id, n, 64, C);
     return (0, l.jsx)(
         d.ListAuto,
         {

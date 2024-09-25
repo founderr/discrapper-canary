@@ -9,8 +9,8 @@ var t = s(735250),
     o = s(442837),
     l = s(706898),
     r = s(481060),
-    c = s(246946),
-    a = s(785717),
+    a = s(246946),
+    c = s(785717),
     d = s(786366),
     u = s(323090),
     _ = s(296391),
@@ -60,8 +60,8 @@ function p(e) {
 function v(e) {
     var n, s, d;
     let { user: u, currentUser: _, displayProfile: I, items: E, initialSection: f = m.oh.USER_INFO, initialSubsection: v, onClose: S } = e,
-        { trackUserProfileAction: T } = (0, a.KZ)(),
-        g = (0, o.e7)([c.Z], () => c.Z.hidePersonalInformation),
+        { trackUserProfileAction: T } = (0, c.KZ)(),
+        g = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
         [{ section: A, subsection: N }, L] = i.useState({
             section:
                 null !==

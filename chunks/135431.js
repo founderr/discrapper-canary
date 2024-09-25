@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(873546),
     i = n(149765),
     a = n(69580),
-    s = n(626135),
-    o = n(49012),
+    o = n(626135),
+    s = n(49012),
     l = n(981631);
 function u(e) {
     let { customInstallUrl: t, installParams: n, integrationTypesConfig: r } = e;
@@ -19,18 +19,18 @@ function u(e) {
 function c(e) {
     let { applicationId: t, customInstallUrl: n, installParams: u, integrationTypesConfig: c, guildId: d, channelId: _, disableGuildSelect: E, source: f, oauth2Callback: h } = e;
     if (null != n) {
-        s.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+        o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
             application_id: t,
             guild_id: d,
             auth_type: 'custom_url',
             source: f,
             device_platform: r.tq ? 'mobile_web' : 'desktop_web'
         }),
-            (0, o.q)({ href: n });
+            (0, s.q)({ href: n });
         return;
     }
     if (null != c && Object.values(c).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null)) {
-        s.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+        o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
             application_id: t,
             guild_id: d,
             auth_type: 'in_app',
@@ -47,7 +47,7 @@ function c(e) {
         return;
     }
     null != u &&
-        (s.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+        (o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
             application_id: t,
             guild_id: d,
             auth_type: 'in_app',

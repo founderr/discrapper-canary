@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return a;
     }
-}),
-    n(789020);
-var r = n(981631);
-function i(e, t) {
-    return t !== r.xjy.INSTANCE && null != e && null != e.flags && !!(e.flags & t);
+});
+var r = n(789020);
+var i = n(981631);
+function a(e, t) {
+    return t !== i.xjy.INSTANCE && null != e && null != e.flags && !!(e.flags & t);
 }

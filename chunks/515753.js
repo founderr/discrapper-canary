@@ -26,28 +26,28 @@ var i = n(735250),
     I = n(702321),
     E = n(201895),
     N = n(43267),
-    S = n(933557),
-    x = n(979264),
+    x = n(933557),
+    S = n(979264),
     v = n(163889),
-    T = n(111028),
-    Z = n(853856),
+    Z = n(111028),
+    T = n(853856),
     b = n(93687),
     A = n(785232),
-    R = n(878857),
-    M = n(518950),
+    M = n(878857),
+    R = n(518950),
     L = n(199902),
-    P = n(158776),
-    y = n(306680),
+    y = n(158776),
+    P = n(306680),
     O = n(111583),
     j = n(9156),
     D = n(594174),
     w = n(709054),
-    U = n(998502),
-    G = n(788307),
+    G = n(998502),
+    U = n(788307),
     k = n(981631),
     B = n(689938),
     H = n(931450);
-let V = U.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
+let V = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
     F = {
         offset: {
             top: 2,
@@ -122,7 +122,7 @@ class Y extends l.Component {
     }
 }
 function K(e) {
-    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: b, applicationStream: L, isTyping: P, status: O, isMobile: D, 'aria-posinset': w, 'aria-setsize': U } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: b, applicationStream: L, isTyping: y, status: O, isMobile: D, 'aria-posinset': w, 'aria-setsize': G } = e,
         [Y, K] = l.useState(!1),
         q = l.useRef(null),
         Q = l.useRef(null),
@@ -130,15 +130,15 @@ function K(e) {
             avatarSrc: X,
             avatarDecorationSrc: J,
             eventHandlers: $
-        } = (0, M.Z)({
+        } = (0, R.Z)({
             user: d,
             size: p.AvatarSizes.SIZE_32,
             animateOnHover: !(s || Y)
         }),
         ee = (0, h.e7)([j.ZP], () => j.ZP.isChannelMuted(t.getGuildId(), t.id)),
-        et = (0, h.e7)([y.ZP], () => y.ZP.getMentionCount(t.id) > 0),
-        en = (0, S.ZP)(t),
-        ei = (0, h.e7)([Z.Z], () => Z.Z.isFavorite(t.id)),
+        et = (0, h.e7)([P.ZP], () => P.ZP.getMentionCount(t.id) > 0),
+        en = (0, x.ZP)(t),
+        ei = (0, h.e7)([T.Z], () => T.Z.isFavorite(t.id)),
         el = () => {
             K(!0);
         },
@@ -220,7 +220,7 @@ function K(e) {
                         children: B.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
                     })
                   : null != b && b.length > 0
-                    ? (0, i.jsx)(G.Z, {
+                    ? (0, i.jsx)(U.Z, {
                           ...e,
                           activities: b,
                           applicationStream: L,
@@ -238,7 +238,7 @@ function K(e) {
                           'aria-hidden': !0,
                           recipients: t.recipients,
                           size: e,
-                          isTyping: P,
+                          isTyping: y,
                           status: O
                       })
                     : (0, i.jsx)(V, {
@@ -246,8 +246,8 @@ function K(e) {
                           src: (0, N.x)(t),
                           'aria-hidden': !0,
                           size: e,
-                          status: P ? k.Skl.ONLINE : O,
-                          isTyping: P
+                          status: y ? k.Skl.ONLINE : O,
+                          isTyping: y
                       });
             o()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let n = null;
@@ -260,7 +260,7 @@ function K(e) {
                     avatarDecoration: J,
                     status: n,
                     isMobile: D,
-                    isTyping: P,
+                    isTyping: y,
                     'aria-label': d.username,
                     statusTooltip: !0
                 })
@@ -268,14 +268,14 @@ function K(e) {
         },
         ef = t.isMultiUserDM(),
         e_ = t.isSystemDM(),
-        em = (0, R.Q)(),
+        em = (0, M.Q)(),
         eg =
             ef || e_ || t.type !== k.d4z.DM || (null == d ? void 0 : d.clan) == null
                 ? en
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           en,
-                          (0, i.jsx)(x.ZP, {
+                          (0, i.jsx)(S.ZP, {
                               clan: null == d ? void 0 : d.clan,
                               userId: null == d ? void 0 : d.id,
                               inline: !0,
@@ -301,7 +301,7 @@ function K(e) {
                 onMouseLeave: er,
                 onMouseDown: es,
                 onContextMenu: eu,
-                'aria-setsize': U,
+                'aria-setsize': G,
                 'aria-posinset': w,
                 children: (0, i.jsxs)(p.Interactive, {
                     className: a()(H.interactive, {
@@ -328,7 +328,7 @@ function K(e) {
                                 highlighted: et,
                                 muted: null != ee && ee,
                                 subText: eh(),
-                                name: (0, i.jsx)(T.Z, {
+                                name: (0, i.jsx)(Z.Z, {
                                     tooltipClassName: H.overflowTooltip,
                                     children: eg
                                 }),
@@ -359,20 +359,20 @@ t.ZP = (e) => {
         { isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: s, isFacepileEnabled: o } = b.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
         c = null == r ? void 0 : r.id,
         u = (0, h.cj)(
-            [P.Z, L.Z],
+            [y.Z, L.Z],
             () => {
                 let e;
                 if (t.isMultiUserDM()) {
                     if (a) {
-                        let n = P.Z.getState().statuses;
+                        let n = y.Z.getState().statuses;
                         t.recipients.some((e) => n[e] === k.Skl.ONLINE) && (e = k.Skl.ONLINE);
                     }
-                } else null != c && (e = P.Z.getStatus(c));
+                } else null != c && (e = y.Z.getStatus(c));
                 return {
                     status: e,
-                    activities: null != c ? P.Z.getActivities(c) : null,
+                    activities: null != c ? y.Z.getActivities(c) : null,
                     applicationStream: null != c ? L.Z.getAnyStreamForUser(c) : null,
-                    isMobile: null != c && P.Z.isMobileOnline(c)
+                    isMobile: null != c && y.Z.isMobileOnline(c)
                 };
             },
             [t, c, a]

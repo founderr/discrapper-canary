@@ -48,9 +48,9 @@ let N = (e) => {
 t.Z = (e) => {
     var t;
     let { className: n, variant: r = I.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: p = !1, showAllPerksButton: f, headerClassname: A, isFullScreen: S = !0 } = e,
-        h = a.useRef(null),
-        M = (0, _.yQ)(),
-        x = (0, u.Ag)(M),
+        M = a.useRef(null),
+        h = (0, _.yQ)(),
+        x = (0, u.Ag)(h),
         b = (0, c.ZP)('perks-discoverability');
     (0, u.I2)();
     let O = (0, d.HI)({ location: I.R0.PERKS_DISCOVERABILITY }),
@@ -61,7 +61,7 @@ t.Z = (e) => {
         P && !x && (v(), L());
     }, [v, L, P, x]),
         a.useEffect(() => {
-            let e = h.current;
+            let e = M.current;
             if (null == e || !x || !P) return;
             let t = requestAnimationFrame(() => {
                 e.scrollIntoView({ behavior: 'smooth' }), P && v();
@@ -69,7 +69,7 @@ t.Z = (e) => {
             return () => {
                 cancelAnimationFrame(t), P && v();
             };
-        }, [h, x, P, v]);
+        }, [M, x, P, v]);
     let Z = (0, R.Op)(P),
         D = (0, E.Z)(),
         B = (0, R.mN)(),
@@ -78,7 +78,7 @@ t.Z = (e) => {
             variant: r,
             shopMarketingVariation: b,
             isFullScreen: S,
-            showTenureCard: null == M ? void 0 : M.showCard,
+            showTenureCard: null == h ? void 0 : h.showCard,
             tileOrderVariant: O,
             isPremiumSubscriber: B
         }),
@@ -94,7 +94,7 @@ t.Z = (e) => {
                     environment: y.current
                 }),
             (0, s.jsxs)('div', {
-                ref: h,
+                ref: M,
                 className: i()(
                     g.section,
                     {

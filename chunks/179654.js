@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var r = n(848479),
@@ -18,7 +18,7 @@ function a(e, t, n) {
         e
     );
 }
-class s {
+class o {
     getStats() {
         let e = this.cpuHistogram.getReport(),
             t = this.memoryHistogram.getReport(),
@@ -49,8 +49,8 @@ class s {
             if (null != this.lastCPU) {
                 let n = e.sampleTime - this.lastCPU.sampleTime;
                 if (n >= 1) {
-                    let t = e.usage - this.lastCPU.usage;
-                    this.cpuHistogram.addSample((t / (n / 1000)) * 100, n);
+                    let t = ((e.usage - this.lastCPU.usage) / (n / 1000)) * 100;
+                    this.cpuHistogram.addSample(t, n);
                 } else t = !1;
             }
             t && (this.lastCPU = e);

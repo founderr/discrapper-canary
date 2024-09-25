@@ -9,8 +9,8 @@ var t = s(735250),
     o = s(481060),
     l = s(727637),
     r = s(100527),
-    c = s(906732),
-    a = s(680295),
+    a = s(906732),
+    c = s(680295),
     d = s(5192),
     u = s(785717),
     _ = s(687158),
@@ -34,7 +34,7 @@ function M(e) {
     let { user: n, guildId: s, channelId: M, messageId: b, roleId: R, sessionId: O, transitionState: C, onClose: P, sourceAnalyticsLocations: y = [] } = e,
         U = s === g.ME ? void 0 : s,
         D = (0, _.ZP)(n.id, U),
-        { analyticsLocations: F } = (0, c.ZP)([...y, r.Z.SIMPLIFIED_PROFILE_MODAL]),
+        { analyticsLocations: F } = (0, a.ZP)([...y, r.Z.SIMPLIFIED_PROFILE_MODAL]),
         B = (0, u.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
@@ -46,7 +46,7 @@ function M(e) {
         }),
         G = i.createRef(),
         w = (0, l.Z)(G);
-    return (0, t.jsx)(c.Gt, {
+    return (0, t.jsx)(a.Gt, {
         value: F,
         children: (0, t.jsx)(u.Mt, {
             value: B,
@@ -151,7 +151,7 @@ function M(e) {
                         ]
                     }),
                     (null == D ? void 0 : D.profileEffectId) != null &&
-                        (0, t.jsx)(a.Z, {
+                        (0, t.jsx)(c.Z, {
                             profileEffectId: null == D ? void 0 : D.profileEffectId,
                             isHovering: w
                         })

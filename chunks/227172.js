@@ -1,6 +1,6 @@
 n.d(t, {
     v: function () {
-        return O;
+        return y;
     }
 });
 var l = n(735250),
@@ -30,8 +30,8 @@ var l = n(735250),
     A = n(410441),
     S = n(797342),
     M = n(981631),
-    y = n(689938);
-let O = {
+    O = n(689938);
+let y = {
     [i.z.DESKTOP]: null,
     [i.z.LINUX]: null,
     [i.z.MACOS]: null,
@@ -47,7 +47,7 @@ t.Z = (e) => {
         { user: L, details: w, appName: b, activity: D } = (0, S.n)(n),
         { primaryColor: U, secondaryColor: B } = (0, C.Z)(null == j ? void 0 : j.src),
         k = (0, r.e7)([m.default], () => m.default.locale),
-        { streamPreviewUrl: F, stream: G } = (0, p.Z)(n),
+        { streamPreviewUrl: G, stream: F } = (0, p.Z)(n),
         { displayParticipants: H, participant1: V, participant2: Y, numOtherParticipants: z } = (0, T.Z)(n, 3),
         W = a.useCallback(
             (e) => {
@@ -74,13 +74,13 @@ t.Z = (e) => {
             [null == j ? void 0 : j.src, t, H, n, k, z, V, Y, U, B, L]
         );
     if (null == L) return null;
-    let q = null != n.extra.platform ? O[n.extra.platform] : null,
+    let q = null != n.extra.platform ? y[n.extra.platform] : null,
         J = (0, l.jsx)(P.Gk, {
-            location: null == F ? P.Gt.POPOUT : P.Gt.STREAMING_POPOUT,
+            location: null == G ? P.Gt.POPOUT : P.Gt.STREAMING_POPOUT,
             children: N.W.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
         }),
         K =
-            null == F
+            null == G
                 ? (0, l.jsx)(Z.wG, {
                       channel: t,
                       headerIcons:
@@ -88,9 +88,9 @@ t.Z = (e) => {
                               ? null
                               : (0, l.jsx)(A.Z, {
                                     Icon: q,
-                                    'aria-label': y.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
+                                    'aria-label': O.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                                 }),
-                      userDescription: (0, f.kr)(n) ? y.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : y.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+                      userDescription: (0, f.kr)(n) ? O.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : O.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                       title: b,
                       subtitle: w,
                       badges: J,
@@ -100,13 +100,13 @@ t.Z = (e) => {
                   })
                 : (0, l.jsx)(Z.jL, {
                       channel: t,
-                      streamPreviewSrc: F,
+                      streamPreviewSrc: G,
                       title: n.extra.game_name,
                       subtitle: w,
                       badges: J,
-                      userDescription: y.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING_V2,
+                      userDescription: O.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING_V2,
                       entry: n,
-                      stream: G,
+                      stream: F,
                       onUserPopoutClosed: R
                   }),
         X =

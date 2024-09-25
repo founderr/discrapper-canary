@@ -1,9 +1,9 @@
 n.d(t, {
     M: function () {
-        return s;
+        return i;
     }
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-10_social_proofing_file_size',
     label: 'Social Proofing File Size',
@@ -16,6 +16,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function s(e) {
-    return i.getCurrentConfig({ location: e }).enabled;
+function i(e) {
+    return r.getCurrentConfig({ location: e }).enabled;
 }

@@ -11,23 +11,23 @@ try {
 } catch (e) {
     a = !1;
 }
-for (var s = new r.Buf8(256), o = 0; o < 256; o++) s[o] = o >= 252 ? 6 : o >= 248 ? 5 : o >= 240 ? 4 : o >= 224 ? 3 : o >= 192 ? 2 : 1;
+for (var o = new r.Buf8(256), s = 0; s < 256; s++) o[s] = s >= 252 ? 6 : s >= 248 ? 5 : s >= 240 ? 4 : s >= 224 ? 3 : s >= 192 ? 2 : 1;
 function l(e, t) {
     if (t < 65534 && ((e.subarray && a) || (!e.subarray && i))) return String.fromCharCode.apply(null, r.shrinkBuf(e, t));
-    for (var n = '', s = 0; s < t; s++) n += String.fromCharCode(e[s]);
+    for (var n = '', o = 0; o < t; o++) n += String.fromCharCode(e[o]);
     return n;
 }
-(s[254] = s[254] = 1),
+(o[254] = o[254] = 1),
     (t.string2buf = function (e) {
         var t,
             n,
             i,
             a,
-            s,
-            o = e.length,
+            o,
+            s = e.length,
             l = 0;
-        for (a = 0; a < o; a++) (64512 & (n = e.charCodeAt(a))) == 55296 && a + 1 < o && (64512 & (i = e.charCodeAt(a + 1))) == 56320 && ((n = 65536 + ((n - 55296) << 10) + (i - 56320)), a++), (l += n < 128 ? 1 : n < 2048 ? 2 : n < 65536 ? 3 : 4);
-        for (s = 0, t = new r.Buf8(l), a = 0; s < l; a++) (64512 & (n = e.charCodeAt(a))) == 55296 && a + 1 < o && (64512 & (i = e.charCodeAt(a + 1))) == 56320 && ((n = 65536 + ((n - 55296) << 10) + (i - 56320)), a++), n < 128 ? (t[s++] = n) : (n < 2048 ? (t[s++] = 192 | (n >>> 6)) : (n < 65536 ? (t[s++] = 224 | (n >>> 12)) : ((t[s++] = 240 | (n >>> 18)), (t[s++] = 128 | ((n >>> 12) & 63))), (t[s++] = 128 | ((n >>> 6) & 63))), (t[s++] = 128 | (63 & n)));
+        for (a = 0; a < s; a++) (64512 & (n = e.charCodeAt(a))) == 55296 && a + 1 < s && (64512 & (i = e.charCodeAt(a + 1))) == 56320 && ((n = 65536 + ((n - 55296) << 10) + (i - 56320)), a++), (l += n < 128 ? 1 : n < 2048 ? 2 : n < 65536 ? 3 : 4);
+        for (o = 0, t = new r.Buf8(l), a = 0; o < l; a++) (64512 & (n = e.charCodeAt(a))) == 55296 && a + 1 < s && (64512 & (i = e.charCodeAt(a + 1))) == 56320 && ((n = 65536 + ((n - 55296) << 10) + (i - 56320)), a++), n < 128 ? (t[o++] = n) : (n < 2048 ? (t[o++] = 192 | (n >>> 6)) : (n < 65536 ? (t[o++] = 224 | (n >>> 12)) : ((t[o++] = 240 | (n >>> 18)), (t[o++] = 128 | ((n >>> 12) & 63))), (t[o++] = 128 | ((n >>> 6) & 63))), (t[o++] = 128 | (63 & n)));
         return t;
     }),
     (t.buf2binstring = function (e) {
@@ -42,18 +42,18 @@ function l(e, t) {
             r,
             i,
             a,
-            o = t || e.length,
-            u = Array(2 * o);
-        for (r = 0, n = 0; n < o; ) {
+            s = t || e.length,
+            u = Array(2 * s);
+        for (r = 0, n = 0; n < s; ) {
             if ((i = e[n++]) < 128) {
                 u[r++] = i;
                 continue;
             }
-            if ((a = s[i]) > 4) {
+            if ((a = o[i]) > 4) {
                 (u[r++] = 65533), (n += a - 1);
                 continue;
             }
-            for (i &= 2 === a ? 31 : 3 === a ? 15 : 7; a > 1 && n < o; ) (i = (i << 6) | (63 & e[n++])), a--;
+            for (i &= 2 === a ? 31 : 3 === a ? 15 : 7; a > 1 && n < s; ) (i = (i << 6) | (63 & e[n++])), a--;
             if (a > 1) {
                 u[r++] = 65533;
                 continue;
@@ -65,5 +65,5 @@ function l(e, t) {
     (t.utf8border = function (e, t) {
         var n;
         for ((t = t || e.length) > e.length && (t = e.length), n = t - 1; n >= 0 && (192 & e[n]) == 128; ) n--;
-        return n < 0 || 0 === n ? t : n + s[e[n]] > t ? n : t;
+        return n < 0 || 0 === n ? t : n + o[e[n]] > t ? n : t;
     });

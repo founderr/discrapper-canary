@@ -6,10 +6,10 @@ n.d(t, {
         return a;
     },
     Zo: function () {
-        return s;
+        return o;
     },
     ai: function () {
-        return o;
+        return s;
     },
     jJ: function () {
         return l;
@@ -30,7 +30,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    o = (0, r.B)({
         kind: 'user',
         id: '2021-08_guild_role_subscription_users',
         label: 'Guild Role Subscription Users',
@@ -56,7 +56,7 @@ let a = (0, r.B)({
         }
     ]
 });
-let o = (0, r.B)({
+let s = (0, r.B)({
     kind: 'guild',
     id: '2022-07_guild_role_subscriptions_variable_max_tiers',
     label: 'Guild Role Subscription Max Tiers',

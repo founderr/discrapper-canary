@@ -1,24 +1,24 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(623113);
-t.Z = i.forwardRef(function (e, t) {
-    let { muted: n, volume: s, playing: o, ...l } = e,
-        [u, c] = (0, a.Z)(t);
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(623113);
+t.Z = a.forwardRef(function (e, t) {
+    let { muted: n, volume: r, playing: s, ...l } = e,
+        [u, c] = (0, o.Z)(t);
     return (
-        i.useEffect(() => {
+        a.useEffect(() => {
             let e = u.current;
             if (null != e) void 0 !== n && (e.muted = n);
         }, [u, n]),
-        i.useEffect(() => {
+        a.useEffect(() => {
             let e = u.current;
-            if (null != e) void 0 !== s && (e.volume = s);
+            if (null != e) void 0 !== r && (e.volume = r);
+        }, [u, r]),
+        a.useEffect(() => {
+            let e = u.current;
+            if (null != e) void 0 !== s && (s ? e.play() : e.pause());
         }, [u, s]),
-        i.useEffect(() => {
-            let e = u.current;
-            if (null != e) void 0 !== o && (o ? e.play() : e.pause());
-        }, [u, o]),
-        (0, r.jsx)('audio', {
+        (0, i.jsx)('audio', {
             ref: c,
             ...l
         })

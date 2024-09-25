@@ -23,11 +23,11 @@ var a = n(442837),
 t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
         C = (0, u.Dt)(),
-        { notClaimed: I, notEmailVerified: E, notPhoneVerified: N, newAccount: S, newMember: x } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
+        { notClaimed: I, notEmailVerified: E, notPhoneVerified: N, newAccount: x, newMember: S } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
         v = 0 === t ? m.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null,
-        T = null,
-        Z = null;
-    return (0 === t && (I ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (Z = m.Z.Messages.CLAIM_ACCOUNT)) : N ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (Z = m.Z.Messages.VERIFY_PHONE)) : E ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (Z = m.Z.Messages.RESEND_VERIFICATION_EMAIL)) : x ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: f.YeM.MEMBER_AGE })), (Z = m.Z.Messages.OKAY)) : S && ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: f.YeM.ACCOUNT_AGE })), (Z = m.Z.Messages.OKAY))), null == v || null == T)
+        Z = null,
+        T = null;
+    return (0 === t && (I ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (T = m.Z.Messages.CLAIM_ACCOUNT)) : N ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (T = m.Z.Messages.VERIFY_PHONE)) : E ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (T = m.Z.Messages.RESEND_VERIFICATION_EMAIL)) : S ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: f.YeM.MEMBER_AGE })), (T = m.Z.Messages.OKAY)) : x && ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: f.YeM.ACCOUNT_AGE })), (T = m.Z.Messages.OKAY))), null == v || null == Z)
         ? null
         : (0, r.jsxs)(s.Dialog, {
               className: g.container,
@@ -49,12 +49,12 @@ t.Z = (e) => {
                           (0, r.jsx)(s.Text, {
                               color: 'header-secondary',
                               variant: 'text-sm/normal',
-                              children: T
+                              children: Z
                           }),
                           (0, r.jsxs)('div', {
                               className: g.buttonContainer,
                               children: [
-                                  null != Z
+                                  null != T
                                       ? (0, r.jsx)(s.Button, {
                                             onClick: () => {
                                                 I
@@ -89,7 +89,7 @@ t.Z = (e) => {
                                                     l();
                                             },
                                             className: g.primaryButton,
-                                            children: Z
+                                            children: T
                                         })
                                       : null,
                                   I || N || E

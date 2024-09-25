@@ -1,7 +1,7 @@
 var r = n(470079),
     i = n(844303),
     a = n(958491),
-    s =
+    o =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -10,10 +10,10 @@ var r = n(470079),
             }
             return e;
         },
-    o = function (e) {
+    s = function (e) {
         var t = e.white,
             n = e.grey,
-            o = e.size,
+            s = e.size,
             l = e.renderers,
             u = e.borderRadius,
             c = e.boxShadow,
@@ -24,16 +24,16 @@ var r = n(470079),
                         borderRadius: u,
                         boxShadow: c,
                         absolute: '0px 0px 0px 0px',
-                        background: 'url(' + a.U(t, n, o, l.canvas) + ') center left'
+                        background: 'url(' + a.U(t, n, s, l.canvas) + ') center left'
                     }
                 }
             });
-        return (0, r.isValidElement)(d) ? r.cloneElement(d, s({}, d.props, { style: s({}, d.props.style, _.grid) })) : r.createElement('div', { style: _.grid });
+        return (0, r.isValidElement)(d) ? r.cloneElement(d, o({}, d.props, { style: o({}, d.props.style, _.grid) })) : r.createElement('div', { style: _.grid });
     };
-(o.defaultProps = {
+(s.defaultProps = {
     size: 8,
     white: 'transparent',
     grey: 'rgba(0,0,0,.08)',
     renderers: {}
 }),
-    (t.Z = o);
+    (t.Z = s);

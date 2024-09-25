@@ -1,17 +1,17 @@
 n.d(t, {
     b: function () {
-        return o;
+        return l;
     }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(526629),
-    a = n(481060),
+});
+var r = n(47120);
+var i = n(470079),
+    a = n(526629),
+    o = n(481060),
     s = n(717495);
-function o(e, t) {
+function l(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'respect-motion-settings',
-        o = arguments.length > 3 ? arguments[3] : void 0,
-        l = r.useContext(a.AccessibilityPreferencesContext).reducedMotion.enabled,
+        r = arguments.length > 3 ? arguments[3] : void 0,
+        l = i.useContext(o.AccessibilityPreferencesContext).reducedMotion.enabled,
         u = t;
     !('animate-always' === n || ('respect-motion-settings' === n && !l)) &&
         (u =
@@ -25,6 +25,6 @@ function o(e, t) {
                       ...s.F
                   })));
     let c = 'function' == typeof u,
-        [d, _, E] = (0, i.useSprings)(e, u, o);
+        [d, _, E] = (0, a.useSprings)(e, u, r);
     return c || 4 == arguments.length ? [d, _, E] : d;
 }

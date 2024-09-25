@@ -1,9 +1,9 @@
-var s, r;
+var r;
 n.d(t, {
     T: function () {
-        return s;
+        return r;
     }
 }),
-    ((r = s || (s = {}))[(r.ONE_MONTH = 30)] = 'ONE_MONTH'),
-    (r[(r.TWO_MONTHS = 60)] = 'TWO_MONTHS'),
-    (r[(r.THREE_MONTHS = 90)] = 'THREE_MONTHS');
+    !(function (e) {
+        (e[(e.ONE_MONTH = 30)] = 'ONE_MONTH'), (e[(e.TWO_MONTHS = 60)] = 'TWO_MONTHS'), (e[(e.THREE_MONTHS = 90)] = 'THREE_MONTHS');
+    })(r || (r = {}));

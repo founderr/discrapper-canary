@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
-}),
-    n(47120),
-    n(653041);
-var r = n(570140);
-function i(e, t, n) {
+});
+var r = n(47120);
+var i = n(653041);
+var a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,15 +19,15 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class s {
     static flush(e, t) {
-        for (let n of a.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush();
+        for (let n of s.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush();
     }
     flush() {
         let { action: e } = this;
         (this.action = null),
             null != e &&
-                r.Z.dispatch(e).catch((t) =>
+                a.Z.dispatch(e).catch((t) =>
                     this.socket.resetSocketOnError({
                         error: t,
                         action: e.type
@@ -35,17 +35,17 @@ class a {
                 );
     }
     constructor(e, t, n) {
-        i(this, 'socket', void 0),
-            i(this, 'action', void 0),
-            i(this, 'add', void 0),
-            i(this, 'shouldFlush', void 0),
+        o(this, 'socket', void 0),
+            o(this, 'action', void 0),
+            o(this, 'add', void 0),
+            o(this, 'shouldFlush', void 0),
             (this.socket = e),
             (this.action = null),
             (this.shouldFlush = n),
             (this.add = (e) => {
                 this.action = t(this.action, e);
             }),
-            a.batchers.push(this);
+            s.batchers.push(this);
     }
 }
-i(a, 'batchers', []);
+o(s, 'batchers', []);

@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return m;
+        return A;
     }
 }),
     t(47120);
@@ -31,7 +31,7 @@ function N() {
         })
     });
 }
-function m() {
+function A() {
     let e = (0, o.e7)([d.Z], () => d.Z.supports(T.AN.VIDEO)),
         [s, t] = a.useState(!1);
     return (0, n.jsxs)('div', {

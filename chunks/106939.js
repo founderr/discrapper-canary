@@ -28,8 +28,8 @@ var s = n(735250),
     f = n(210887),
     A = n(695346),
     S = n(594174),
-    h = n(626135),
-    M = n(280570),
+    M = n(626135),
+    h = n(280570),
     x = n(914788),
     b = n(841409),
     O = n(652262),
@@ -162,7 +162,7 @@ function W() {
         A = r && null != N && !f;
     return (a.useEffect(() => {
         (0, p.e)('family-center'),
-            M.ZP.initialPageLoad(),
+            h.ZP.initialPageLoad(),
             !n &&
                 (0, g.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: G.L.AUTO,
@@ -172,7 +172,7 @@ function W() {
     a.useEffect(() => {
         r &&
             f &&
-            (h.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
+            (M.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
                 selected_teen_id: o,
@@ -220,7 +220,7 @@ function K() {
         (a.useEffect(() => {
             u.Y(U.Z5c.FAMILY_CENTER),
                 (0, p.e)('family-center'),
-                !x.Z.isLoading() && x.Z.canRefetch() && M.ZP.initialPageLoad(),
+                !x.Z.isLoading() && x.Z.canRefetch() && h.ZP.initialPageLoad(),
                 !r &&
                     (0, g.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                         dismissAction: G.L.AUTO,
@@ -230,7 +230,7 @@ function K() {
         a.useEffect(() => {
             o &&
                 W &&
-                (h.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
+                (M.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
                     selected_teen_id: N,

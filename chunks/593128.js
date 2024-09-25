@@ -198,7 +198,7 @@ t.Z = (e) => {
             [B]
         ),
         F = (0, N.f)(),
-        w = a.useCallback(
+        k = a.useCallback(
             (e) => {
                 'Escape' === e.key && (e.stopPropagation(), n());
             },
@@ -209,12 +209,12 @@ t.Z = (e) => {
     }, [t, A]),
         a.useEffect(
             () => (
-                window.addEventListener('keydown', w),
+                window.addEventListener('keydown', k),
                 () => {
-                    window.removeEventListener('keydown', w);
+                    window.removeEventListener('keydown', k);
                 }
             ),
-            [w]
+            [k]
         ),
         a.useEffect(() => {
             c.Z.getDetectableGames();
@@ -222,7 +222,7 @@ t.Z = (e) => {
         a.useEffect(() => {
             (0, E.aH)(t);
         }, [t]);
-    let k = a.useCallback((e) => (0, E.mf)(t, { gameApplicationIds: e }), [t]),
+    let w = a.useCallback((e) => (0, E.mf)(t, { gameApplicationIds: e }), [t]),
         H = a.useCallback((e) => (0, E.mf)(t, { playstyle: e }), [t]),
         V = a.useCallback((e) => (0, E.mf)(t, { interests: e }), [t]),
         Y = a.useCallback((e) => (0, E.mf)(t, e), [t]),
@@ -325,7 +325,7 @@ t.Z = (e) => {
                                             return (0, s.jsx)(h.Z, {
                                                 title: M.Z.Messages.CLAN_SETUP_GAMES_TITLE,
                                                 description: M.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-                                                onUpdateGames: k,
+                                                onUpdateGames: w,
                                                 gameApplicationIds: null !== (e = U.gameApplicationIds) && void 0 !== e ? e : new Set(),
                                                 error: G.gameApplicationIds,
                                                 guildId: t,

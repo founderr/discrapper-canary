@@ -1,35 +1,35 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
     a = n(739566),
-    r = n(942951),
-    l = n(834129),
-    o = n(981791),
-    c = n(56689);
-function u(e) {
-    let { message: t, channel: n, compact: u } = e,
+    o = n(942951),
+    s = n(834129),
+    l = n(981791),
+    u = n(56689);
+function c(e) {
+    let { message: t, channel: n, compact: c } = e,
         d = (0, a.ZP)(t),
         _ = t.application,
-        E = (0, r.l)({
+        E = (0, o.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
             messageId: t.id
         });
-    return (0, i.jsx)(l.Z, {
-        iconNode: (0, i.jsx)(s.TicketIcon, {
+    return (0, r.jsx)(s.Z, {
+        iconNode: (0, r.jsx)(i.TicketIcon, {
             size: 'md',
             color: 'currentColor',
-            className: c.ticketIcon
+            className: u.ticketIcon
         }),
         timestamp: t.timestamp,
-        compact: u,
-        children: (0, o.A)({
+        compact: c,
+        children: (0, l.A)({
             application: _,
             username: d.nick,
             usernameHook: E(d)

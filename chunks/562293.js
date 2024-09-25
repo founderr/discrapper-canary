@@ -1,24 +1,24 @@
 n.d(t, {
     H: function () {
-        return r;
+        return o;
     },
     Z: function () {
-        return l;
+        return s;
     }
 });
-var i = n(913527),
-    s = n.n(i),
+var r = n(913527),
+    i = n.n(r),
     a = n(689938);
-function r(e) {
-    let t = s()();
+function o(e) {
+    let t = i()();
     if (e <= t) return;
     let n = e.diff(t, 'days');
     if (n > 1) return a.Z.Messages.POLL_EXPIRY_DAYS_REMAINING.format({ days: n });
-    let i = e.diff(t, 'hours');
-    if (i > 1) return a.Z.Messages.POLL_EXPIRY_HOURS_REMAINING.format({ hours: i });
-    let r = e.diff(t, 'minutes');
-    return a.Z.Messages.POLL_EXPIRY_MINUTES_REMAINING.format({ minutes: r });
+    let r = e.diff(t, 'hours');
+    if (r > 1) return a.Z.Messages.POLL_EXPIRY_HOURS_REMAINING.format({ hours: r });
+    let o = e.diff(t, 'minutes');
+    return a.Z.Messages.POLL_EXPIRY_MINUTES_REMAINING.format({ minutes: o });
 }
-function l(e) {
-    if (null != e) return r(e);
+function s(e) {
+    if (null != e) return o(e);
 }

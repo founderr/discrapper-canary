@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(739566),
     a = n(421399),
-    s = n(47930);
-function o(e) {
+    o = n(47930);
+function s(e) {
     var t, n;
-    let o = (0, i.ZP)(e.message),
-        l = (0, s.x)({
+    let s = (0, i.ZP)(e.message),
+        l = (0, o.x)({
             message: e.message,
             channel: e.channel,
             user: null !== (n = null === (t = e.message) || void 0 === t ? void 0 : t.author) && void 0 !== n ? n : e.userOverride,
@@ -23,7 +23,7 @@ function o(e) {
         null != l && (u[a.a.SYSTEM_TAG] = l),
         (0, r.jsx)(a.Z, {
             ...e,
-            author: o,
+            author: s,
             decorations: u
         })
     );

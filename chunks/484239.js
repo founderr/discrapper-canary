@@ -15,8 +15,8 @@ t.Z = (e) => {
     var t;
     let n,
         a,
-        { title: I, titleClassName: R, buttonClassName: m, perkImage: g, isCarousel: N, onCtaClick: C, perkComponent: p, subtitle: f = '', descriptionCta: A = '', cardVariant: S, subtitleClassName: h } = e,
-        M = (0, l._)(S),
+        { title: I, titleClassName: R, buttonClassName: m, perkImage: g, isCarousel: N, onCtaClick: C, perkComponent: p, subtitle: f = '', descriptionCta: A = '', cardVariant: S, subtitleClassName: M } = e,
+        h = (0, l._)(S),
         x = (0, o.yQ)(),
         b = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
     switch (null == x ? void 0 : x.nitroTenureStatus) {
@@ -38,10 +38,10 @@ t.Z = (e) => {
             (0, s.jsx)(c.Z, {
                 title: I,
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-                cardVariantStyleInfo: M,
+                cardVariantStyleInfo: h,
                 titleClassName: R,
                 subtitle: f,
-                subtitleClassName: h
+                subtitleClassName: M
             }),
             null != g &&
                 (0, s.jsx)('img', {
@@ -66,7 +66,7 @@ t.Z = (e) => {
                                     fullWidth: !0,
                                     onClick: C,
                                     children: (0, s.jsxs)('div', {
-                                        className: null == M ? void 0 : null === (t = M.descriptionCta) || void 0 === t ? void 0 : t.className,
+                                        className: null == h ? void 0 : null === (t = h.descriptionCta) || void 0 === t ? void 0 : t.className,
                                         children: [
                                             (0, s.jsx)('img', {
                                                 alt: a,

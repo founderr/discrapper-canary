@@ -1,24 +1,24 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return s;
+        return r;
     }
 });
-var a = n(735250);
-n(470079);
-var i = n(481060),
-    l = n(689938),
-    r = n(977993);
-function s(e) {
+var a = t(735250);
+t(470079);
+var i = t(481060),
+    l = t(689938),
+    s = t(977993);
+function r(e) {
     let {} = e;
     return (0, a.jsxs)('div', {
-        className: r.container,
+        className: s.container,
         children: [
             (0, a.jsxs)('div', {
-                className: r.content,
+                className: s.content,
                 children: [
                     (0, a.jsx)(i.Text, {
                         variant: 'text-sm/semibold',
-                        className: r.title,
+                        className: s.title,
                         children: l.Z.Messages.APP_DIRECTORY_MUSIC_BANNER_TITLE
                     }),
                     (0, a.jsx)(i.Heading, {
@@ -32,10 +32,10 @@ function s(e) {
                 ]
             }),
             (0, a.jsx)('div', {
-                className: r.imageContainer,
+                className: s.imageContainer,
                 children: (0, a.jsx)('img', {
-                    className: r.image,
-                    src: n(723067),
+                    className: s.image,
+                    src: t(723067),
                     alt: ''
                 })
             })

@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(470079),
     i = n(719711),
     a = n(433517),
-    s = n(579806),
-    o = n(626135),
+    o = n(579806),
+    s = n(626135),
     l = n(998502),
     u = n(286035),
     c = n(981631);
@@ -22,10 +22,10 @@ function _() {
                 !0 !== a.K.get(i.SV) &&
                 l.ZP.supportsFeature(c.eRX.USER_DATA_CACHE) &&
                 (u.Te(),
-                s.Z.userDataCache.getCached().then((e) => {
+                o.Z.userDataCache.getCached().then((e) => {
                     if (null == e) {
                         u.kb(),
-                            o.default.track(
+                            s.default.track(
                                 c.rMx.DOMAIN_MIGRATED,
                                 {
                                     success: !1,
@@ -50,7 +50,7 @@ function _() {
                                 a.K.set(t, JSON.parse(n));
                             } catch (e) {}
                         })),
-                        o.default.track(
+                        s.default.track(
                             c.rMx.DOMAIN_MIGRATED,
                             {
                                 success: !0,
@@ -60,7 +60,7 @@ function _() {
                             { flush: !0 }
                         ),
                         a.K.set(i.SV, !0),
-                        s.Z.userDataCache.deleteCache(),
+                        o.Z.userDataCache.deleteCache(),
                         u.Pg();
                 }));
         }, []),

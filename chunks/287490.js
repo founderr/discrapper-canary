@@ -41,7 +41,7 @@ function N() {
             }),
             r.length > 0
                 ? r.map((s) => {
-                      let t = s.experiment.type === T.xY.GUILD ? A : m;
+                      let t = s.experiment.type === T.xY.GUILD ? C : A;
                       return (0, n.jsx)(
                           t,
                           {
@@ -62,15 +62,15 @@ function N() {
         ]
     });
 }
-function m(e) {
+function A(e) {
     var s;
     let { experiment: t, experimentId: i, overrideDescriptor: _ } = e,
         [u, E] = a.useState(null != _),
-        [N, m] = a.useState(!1),
-        A = a.useCallback(() => {
+        [N, A] = a.useState(!1),
+        C = a.useCallback(() => {
             E((e) => !e);
         }, []),
-        C = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)),
+        m = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)),
         g = (0, o.e7)([d.Z], () => d.Z.getLoadedUserExperiment(i)),
         h = (0, o.e7)([d.Z], () =>
             r()
@@ -84,7 +84,7 @@ function m(e) {
                 })
         ),
         O = (0, n.jsx)(l.Clickable, {
-            onClick: A,
+            onClick: C,
             children: (0, n.jsxs)(l.FormTitle, {
                 tag: l.FormTitleTags.H3,
                 className: S.title,
@@ -142,7 +142,7 @@ function m(e) {
                               children: [
                                   (0, n.jsxs)(l.FormText, {
                                       type: l.FormTextTypes.DESCRIPTION,
-                                      children: ['Current assigned to bucket ', null !== (s = null == C ? void 0 : C.bucket) && void 0 !== s ? s : T.NZ.NOT_ELIGIBLE]
+                                      children: ['Current assigned to bucket ', null !== (s = null == m ? void 0 : m.bucket) && void 0 !== s ? s : T.NZ.NOT_ELIGIBLE]
                                   }),
                                   null == g
                                       ? (0, n.jsx)(l.FormText, {
@@ -191,7 +191,7 @@ function m(e) {
                                     className: S.debugButton,
                                     size: l.Button.Sizes.SMALL,
                                     look: l.Button.Looks.BLANK,
-                                    onClick: () => m(!0),
+                                    onClick: () => A(!0),
                                     children: 'More Details \xBB'
                                 })
                       ]
@@ -204,14 +204,14 @@ function m(e) {
               children: (0, n.jsx)(l.FormSection, { children: O })
           });
 }
-function A(e) {
+function C(e) {
     let { experiment: s, experimentId: t, overrideDescriptor: i } = e,
         [u, E] = a.useState(null != i),
-        [N, m] = a.useState(!1),
-        A = a.useCallback(() => {
+        [N, A] = a.useState(!1),
+        C = a.useCallback(() => {
             E((e) => !e);
         }, []),
-        C = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(t)),
+        m = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(t)),
         g = (0, o.e7)([d.Z], () =>
             r()
                 .sortBy(d.Z.getRecentExposures(T.xY.GUILD, t), (e) => {
@@ -244,7 +244,7 @@ function A(e) {
             ];
         }),
         p = (0, n.jsx)(l.Clickable, {
-            onClick: A,
+            onClick: C,
             children: (0, n.jsxs)(l.FormTitle, {
                 tag: l.FormTitleTags.H3,
                 className: S.title,
@@ -304,7 +304,7 @@ function A(e) {
                                       type: l.FormTextTypes.DESCRIPTION,
                                       children: ['Current Assignments: ', O]
                                   }),
-                                  null == C
+                                  null == m
                                       ? (0, n.jsx)(l.FormText, {
                                             type: l.FormTextTypes.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -333,7 +333,7 @@ function A(e) {
                                         (0, n.jsx)(l.Text, {
                                             variant: 'code',
                                             className: S.pre,
-                                            children: null == C ? 'None' : JSON.stringify(C, void 0, 2)
+                                            children: null == m ? 'None' : JSON.stringify(m, void 0, 2)
                                         }),
                                         (0, n.jsx)(l.FormTitle, {
                                             tag: 'h5',
@@ -361,7 +361,7 @@ function A(e) {
                                     className: S.debugButton,
                                     size: l.Button.Sizes.SMALL,
                                     look: l.Button.Looks.BLANK,
-                                    onClick: () => m(!0),
+                                    onClick: () => A(!0),
                                     children: 'More Details \xBB'
                                 })
                       ]

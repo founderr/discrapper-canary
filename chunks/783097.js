@@ -1,138 +1,138 @@
 n.d(t, {
     $d: function () {
-        return f;
-    },
-    BQ: function () {
         return N;
     },
-    Cb: function () {
-        return O;
-    },
-    Hu: function () {
-        return M;
-    },
-    L1: function () {
-        return P;
-    },
-    Wx: function () {
-        return h;
-    },
-    XZ: function () {
-        return L;
-    },
-    Y$: function () {
-        return x;
-    },
-    Yn: function () {
+    BQ: function () {
         return v;
     },
-    jD: function () {
-        return C;
+    Cb: function () {
+        return M;
     },
-    lf: function () {
+    Hu: function () {
+        return P;
+    },
+    L1: function () {
+        return G;
+    },
+    Wx: function () {
         return A;
     },
+    XZ: function () {
+        return w;
+    },
+    Y$: function () {
+        return L;
+    },
+    Yn: function () {
+        return U;
+    },
+    jD: function () {
+        return O;
+    },
+    lf: function () {
+        return y;
+    },
     pF: function () {
-        return Z;
+        return x;
     },
     sl: function () {
-        return R;
+        return D;
     },
     vJ: function () {
-        return g;
+        return C;
     },
     yJ: function () {
-        return S;
+        return b;
     },
     ye: function () {
-        return p;
+        return R;
     }
-}),
-    n(789020),
-    n(627494),
-    n(757143),
-    n(653041),
-    n(47120);
-var i = n(668781),
-    s = n(904245),
-    a = n(911969),
-    r = n(895924),
-    l = n(667204),
-    o = n(957730),
-    c = n(973616),
-    u = n(768581),
-    d = n(630388),
-    _ = n(541099),
-    E = n(827498),
-    I = n(981631),
-    m = n(689079),
-    T = n(689938);
-let h = { id: m.bi.BUILT_IN };
-function N(e) {
-    return e.id !== m.bi.BUILT_IN;
+});
+var r = n(789020);
+var i = n(627494);
+var a = n(757143);
+var o = n(653041);
+var s = n(47120);
+var l = n(668781),
+    u = n(904245),
+    c = n(911969),
+    d = n(895924),
+    _ = n(667204),
+    E = n(957730),
+    f = n(973616),
+    h = n(768581),
+    p = n(630388),
+    m = n(541099),
+    I = n(827498),
+    T = n(981631),
+    g = n(689079),
+    S = n(689938);
+let A = { id: g.bi.BUILT_IN };
+function v(e) {
+    return e.id !== g.bi.BUILT_IN;
 }
-function f(e) {
-    return N(e) ? e.name : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
+function N(e) {
+    return v(e) ? e.name : S.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
+}
+function O(e) {
+    return v(e) ? e.description : S.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
+}
+function R(e) {
+    var t;
+    return v(e) && (0, p.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, T.udG.EMBEDDED);
 }
 function C(e) {
-    return N(e) ? e.description : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
-}
-function p(e) {
     var t;
-    return N(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED);
+    return v(e) && (0, p.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, T.udG.PARTNER);
 }
-function g(e) {
+function y(e) {
     var t;
-    return N(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PARTNER);
+    return v(e) && (0, p.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, T.udG.PROMOTED);
 }
-function A(e) {
-    var t;
-    return N(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PROMOTED);
+function b(e) {
+    return v(e) && R(e) ? (e instanceof f.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
-function S(e) {
-    return N(e) && p(e) ? (e instanceof c.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
-}
-function x(e) {
-    let { command: t, optionValues: n, context: a, commandTargetId: c, maxSizeCallback: u, sectionName: d } = e,
-        { channel: E } = a,
-        I = async () => {
+function L(e) {
+    let { command: t, optionValues: n, context: r, commandTargetId: i, maxSizeCallback: a, sectionName: o } = e,
+        { channel: s } = r,
+        c = async () => {
             try {
-                let i = await (0, l.Z)({
+                let l = await (0, _.Z)({
                     command: t,
                     optionValues: n,
-                    context: a,
-                    commandTargetId: c,
-                    maxSizeCallback: u,
-                    commandOrigin: r.bB.APPLICATION_LAUNCHER,
-                    sectionName: d,
-                    source: _.Z.entrypoint()
+                    context: r,
+                    commandTargetId: i,
+                    maxSizeCallback: a,
+                    commandOrigin: d.bB.APPLICATION_LAUNCHER,
+                    sectionName: o,
+                    source: m.Z.entrypoint()
                 });
-                if (t.inputType === r.iw.BUILT_IN_TEXT && null != i) {
+                if (t.inputType === d.iw.BUILT_IN_TEXT && null != l) {
                     var e;
-                    let t = o.ZP.parse(E, i.content);
-                    (t.tts = null !== (e = i.tts) && void 0 !== e && e), s.Z.sendMessage(a.channel.id, t);
+                    let t = E.ZP.parse(s, l.content);
+                    (t.tts = null !== (e = l.tts) && void 0 !== e && e), u.Z.sendMessage(r.channel.id, t);
                 }
             } catch (e) {
                 throw (
-                    (i.Z.show({
-                        title: T.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
-                        body: T.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
-                        confirmText: T.Z.Messages.RETRY,
-                        onConfirm: () => I()
+                    (l.Z.show({
+                        title: S.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
+                        body: S.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
+                        confirmText: S.Z.Messages.RETRY,
+                        onConfirm: () => c()
                     }),
                     e)
                 );
             }
         };
-    return I();
+    return c();
 }
-function R(e) {
+function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { fakeAppIconURL: n, ...i } = t;
-    return N(e)
+        { fakeAppIconURL: n, ...r } = t;
+    return v(e)
         ? {
-              iconURL: u.ZP.getApplicationIconURL({
-                  ...i,
+              iconURL: h.ZP.getApplicationIconURL({
+                  ...r,
                   id: e.id,
                   icon: e.icon
               }),
@@ -141,31 +141,31 @@ function R(e) {
           }
         : {
               iconURL: null != n ? n : null,
-              name: T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
-              description: T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
+              name: S.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
+              description: S.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
           };
 }
-function O(e) {
-    return !!N(e) && (e instanceof c.Z ? e.isMonetized : e.is_monetized);
-}
 function M(e) {
-    let t = S(e);
+    return !!v(e) && (e instanceof f.Z ? e.isMonetized : e.is_monetized);
+}
+function P(e) {
+    let t = b(e);
     return null != t && t.displays_advertisements;
 }
-function v(e) {
-    return e === E._b.TEXT;
+function U(e) {
+    return e === I._b.TEXT;
 }
-function L(e) {
+function w(e) {
     return null == e ? '' : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll('_', ' ');
 }
-function Z(e) {
+function x(e) {
     let t = [];
     for (let n of e) {
         let e = n.items.filter((e) => {
             var t;
             let n = e.application,
-                i = null !== (t = e.commands) && void 0 !== t ? t : [];
-            return p(n) && i.some((e) => e.type === a.yU.PRIMARY_ENTRY_POINT);
+                r = null !== (t = e.commands) && void 0 !== t ? t : [];
+            return R(n) && r.some((e) => e.type === c.yU.PRIMARY_ENTRY_POINT);
         });
         if (0 !== e.length)
             t.push({
@@ -175,8 +175,8 @@ function Z(e) {
     }
     return t;
 }
-function P(e) {
-    return e instanceof c.Z
+function G(e) {
+    return e instanceof f.Z
         ? {
               applicationId: e.id,
               customInstallUrl: e.customInstallUrl,

@@ -1,10 +1,10 @@
-var e = n(67867),
-    o = n(270013);
-e(
+var r = n(67867),
+    i = n(270013);
+r(
     {
         target: 'Array',
         proto: !0,
-        forced: [].forEach !== o
+        forced: [].forEach !== i
     },
-    { forEach: o }
+    { forEach: i }
 );

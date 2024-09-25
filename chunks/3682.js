@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     jR: function () {
-        return s;
+        return o;
     },
     o: function () {
         return i;
@@ -15,4 +15,4 @@ n.d(t, {
 let r = 3,
     i = 0.5,
     a = 1,
-    s = 2.5;
+    o = 2.5;

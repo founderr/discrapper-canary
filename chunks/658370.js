@@ -17,12 +17,12 @@ t.Z = (e) => {
     var t;
     let n;
     let { title: a, titleClassName: m = '', buttonClassName: g = '', subtitle: N = '', description: C = '', descriptionCta: p = '', isPremiumGetCta: f, onCtaClick: A, cardVariant: S } = e,
-        h = (0, d.N)(),
-        M = null == h ? void 0 : h.subscription_trial,
+        M = (0, d.N)(),
+        h = null == M ? void 0 : M.subscription_trial,
         x = (0, c.Ng)(),
         b = (0, o.Rt)({
-            intervalType: null == M ? void 0 : M.interval,
-            intervalCount: null == M ? void 0 : M.interval_count
+            intervalType: null == h ? void 0 : h.interval,
+            intervalCount: null == h ? void 0 : h.interval_count
         }),
         O = (0, l._)({
             defaultResponse: I.Z.Messages.PREMIUM_SETTINGS_GET,

@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return P;
+        return O;
     }
 });
 var i = n(735250),
@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(574176),
     T = n(952164),
     x = n(199902),
-    S = n(592125),
-    v = n(430824),
+    v = n(592125),
+    S = n(430824),
     N = n(496675),
     A = n(979651),
     Z = n(626135),
@@ -49,28 +49,28 @@ function j(e) {
         isEmbedded: m
     });
 }
-let P = d.Z.Types;
+let O = d.Z.Types;
 t.Z = function (e) {
-    let { activity: t, user: n, useStoreStream: a = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: h = !1, analyticsParams: M, ...P } = e,
-        O = (0, r.e7)([A.Z, S.Z], () => {
+    let { activity: t, user: n, useStoreStream: a = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: h = !1, analyticsParams: M, ...O } = e,
+        P = (0, r.e7)([A.Z, v.Z], () => {
             var e;
-            return S.Z.getChannel(null === (e = A.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
+            return v.Z.getChannel(null === (e = A.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
         }),
         { enableHangStatus: y } = I.n.useExperiment(
             {
-                guildId: null == O ? void 0 : O.guild_id,
+                guildId: null == P ? void 0 : P.guild_id,
                 location: 'UserActivityContainer'
             },
             { autoTrackExposure: !1 }
         ),
         D = (0, r.e7)([x.Z], () => (a ? x.Z.getAnyStreamForUser(n.id) : null)),
-        U = y && N.Z.can(b.Plq.CONNECT, O),
-        k = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && U ? O : null,
-        w = (0, r.e7)([v.Z, A.Z, S.Z], () => {
+        k = y && N.Z.can(b.Plq.CONNECT, P),
+        U = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && k ? P : null,
+        w = (0, r.e7)([S.Z, A.Z, v.Z], () => {
             var e, i;
-            return (0, c.Z)(t, b.xjy.EMBEDDED) ? v.Z.getGuild(null === (e = S.Z.getChannel(null === (i = A.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? v.Z.getGuild(k.getGuildId()) : null;
+            return (0, c.Z)(t, b.xjy.EMBEDDED) ? S.Z.getGuild(null === (e = v.Z.getChannel(null === (i = A.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != U ? S.Z.getGuild(U.getGuildId()) : null;
         }),
-        B = (0, r.e7)([v.Z], () => (null != D ? v.Z.getGuild(D.guildId) : null)),
+        B = (0, r.e7)([S.Z], () => (null != D ? S.Z.getGuild(D.guildId) : null)),
         H = (0, r.e7)([m.Z], () => {
             if (null != t) return null != t.application_id ? m.Z.getApplication(t.application_id) : m.Z.getApplicationByName(t.name);
             return null;
@@ -80,16 +80,16 @@ t.Z = function (e) {
         F = G && null != t && V;
     return (s.useEffect(() => {
         (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS &&
-            U &&
+            k &&
             Z.default.track(b.rMx.VIEW_HANG_STATUS, {
                 source: 'UserProfilePopout',
-                guild_id: null == k ? void 0 : k.guild_id,
-                channel_id: null == k ? void 0 : k.id
+                guild_id: null == U ? void 0 : U.guild_id,
+                channel_id: null == U ? void 0 : U.id
             });
-    }, [null == t ? void 0 : t.type, U, k]),
-    (null == t ? void 0 : t.type) !== b.IIU.HANG_STATUS || U)
+    }, [null == t ? void 0 : t.type, k, U]),
+    (null == t ? void 0 : t.type) !== b.IIU.HANG_STATUS || k)
         ? (0, i.jsx)(d.Z, {
-              ...P,
+              ...O,
               activity: t,
               user: n,
               application: H,
@@ -97,14 +97,14 @@ t.Z = function (e) {
               activityGuild: null != w ? w : B,
               showReactions: F,
               showChannelDetails: h,
-              channel: h ? O : void 0,
+              channel: h ? P : void 0,
               renderActions: o
                   ? () =>
                         (0, i.jsxs)('div', {
                             className: l()(F && L.actionsWrapper),
                             children: [
                                 (0, i.jsx)(j, {
-                                    ...P,
+                                    ...O,
                                     applicationStream: D,
                                     activity: t,
                                     user: n

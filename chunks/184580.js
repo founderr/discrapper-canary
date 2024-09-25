@@ -1,9 +1,9 @@
 var r = n(952256),
-    o = n(474883),
+    i = n(474883),
     a = n(741674),
-    i = n(476508),
-    s = function (e, t, n, c, l, u, d, p) {
-        for (var h, f, m = l, y = 0, v = !!d && i(d, p); y < c; ) y in n && ((h = v ? v(n[y], y, t) : n[y]), u > 0 && r(h) ? ((f = o(h)), (m = s(e, t, h, f, m, u - 1) - 1)) : (a(m + 1), (e[m] = h)), m++), y++;
-        return m;
+    o = n(476508),
+    s = function (e, t, n, l, u, c, d, _) {
+        for (var E, f, h = u, p = 0, m = !!d && o(d, _); p < l; ) p in n && ((E = m ? m(n[p], p, t) : n[p]), c > 0 && r(E) ? ((f = i(E)), (h = s(e, t, E, f, h, c - 1) - 1)) : (a(h + 1), (e[h] = E)), h++), p++;
+        return h;
     };
 e.exports = s;

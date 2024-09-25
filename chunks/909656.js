@@ -102,8 +102,8 @@ function b(e) {
         [j, b] = a.useState(c),
         [U, G] = a.useState(null == l ? void 0 : l.store_page_guild_products_default_sort),
         [P, B] = a.useState(null == l ? void 0 : l.server_shop_tab_order),
-        { loading: y, error: F, updateSubscriptionsSettings: w } = (0, x.QV)(),
-        { imageCTA: k, imageAriaLabel: H, setFilename: V } = (0, R.Z)(null == l ? void 0 : l.cover_image_asset),
+        { loading: y, error: F, updateSubscriptionsSettings: k } = (0, x.QV)(),
+        { imageCTA: w, imageAriaLabel: H, setFilename: V } = (0, R.Z)(null == l ? void 0 : l.cover_image_asset),
         Y = (0, N.Dt)(),
         W = (0, N.Dt)(),
         z = (0, N.Dt)();
@@ -218,7 +218,7 @@ function b(e) {
                     }),
                     (0, s.jsx)(g.Z, {
                         image: j,
-                        hint: k,
+                        hint: w,
                         showIcon: !0,
                         showRemoveButton: !1,
                         hideSize: !0,
@@ -233,7 +233,7 @@ function b(e) {
                     (0, s.jsx)(E.Spacer, { size: 16 }),
                     (0, s.jsx)(S.Z, {
                         onChange: K,
-                        buttonCTA: k,
+                        buttonCTA: w,
                         'aria-label': H,
                         disabled: Q,
                         look: E.Button.Looks.OUTLINED,
@@ -308,7 +308,7 @@ function b(e) {
                             onSave: () => {
                                 o()(null != l, 'Settings must be defined');
                                 let e = {};
-                                m !== l.description && (e.description = m), null != j && j.startsWith('data:') && (e.cover_image = j), u !== r && (e.full_server_gate = u === O.e3.ALL_CHANNELS), U !== l.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = U), P !== l.server_shop_tab_order && (e.server_shop_tab_order = P), !d().isEmpty(e) && w(n.id, e);
+                                m !== l.description && (e.description = m), null != j && j.startsWith('data:') && (e.cover_image = j), u !== r && (e.full_server_gate = u === O.e3.ALL_CHANNELS), U !== l.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = U), P !== l.server_shop_tab_order && (e.server_shop_tab_order = P), !d().isEmpty(e) && k(n.id, e);
                             },
                             saveButtonTooltip: X ? void 0 : M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_FULL_OUT_ALL_INFO
                         })

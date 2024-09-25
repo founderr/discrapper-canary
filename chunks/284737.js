@@ -9,7 +9,7 @@ n.d(t, {
         return E;
     },
     T_: function () {
-        return o;
+        return s;
     },
     al: function () {
         return l;
@@ -21,21 +21,21 @@ n.d(t, {
         return d;
     }
 });
-var r = n(392711),
-    i = n(570140),
+var r = n(392711);
+var i = n(570140),
     a = n(228488),
-    s = n(830917);
-function o(e, t) {
+    o = n(830917);
+function s(e, t) {
     i.Z.dispatch({
         type: 'WINDOW_FOCUS',
-        windowId: (0, s.ZY)(e),
+        windowId: (0, o.ZY)(e),
         focused: t
     });
 }
 function l(e) {
     i.Z.dispatch({
         type: 'WINDOW_HIDDEN',
-        windowId: (0, s.ZY)(e)
+        windowId: (0, o.ZY)(e)
     });
 }
 let u = (0, r.memoize)((e) =>
@@ -49,10 +49,10 @@ let u = (0, r.memoize)((e) =>
     }, 100)
 );
 function c(e) {
-    u((0, s.ZY)(e))(e.innerWidth, e.innerHeight);
+    u((0, o.ZY)(e))(e.innerWidth, e.innerHeight);
 }
 function d(e) {
-    let t = (0, s.ZY)(e);
+    let t = (0, o.ZY)(e);
     i.Z.dispatch({
         type: 'WINDOW_FULLSCREEN_CHANGE',
         windowId: t,
@@ -60,7 +60,7 @@ function d(e) {
     });
 }
 function _(e) {
-    let t = (0, s.ZY)(e);
+    let t = (0, o.ZY)(e);
     i.Z.dispatch({
         type: 'WINDOW_VISIBILITY_CHANGE',
         windowId: t,
@@ -68,7 +68,7 @@ function _(e) {
     });
 }
 function E(e) {
-    let t = (0, s.ZY)(e),
+    let t = (0, o.ZY)(e),
         n = e.document;
     i.Z.dispatch({
         type: 'WINDOW_INIT',
@@ -83,6 +83,6 @@ function E(e) {
 function f(e) {
     i.Z.dispatch({
         type: 'WINDOW_UNLOAD',
-        windowId: (0, s.ZY)(e)
+        windowId: (0, o.ZY)(e)
     });
 }

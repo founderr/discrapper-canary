@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(307876),
-    s = n(894257),
-    o = n(981631);
+    o = n(894257),
+    s = n(981631);
 t.Z = new a.Z(() =>
     (0, i.openModalLazy)(
         async () => {
@@ -11,8 +11,8 @@ t.Z = new a.Z(() =>
             return (t) => (0, r.jsx)(e, { ...t });
         },
         {
-            modalKey: s._,
-            onCloseRequest: o.VqG
+            modalKey: o._,
+            onCloseRequest: s.VqG
         }
     )
 );

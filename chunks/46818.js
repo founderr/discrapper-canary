@@ -1,18 +1,18 @@
-var e = n(36478),
-    o = n(573492);
-function i(r) {
+var r = n(36478),
+    i = n(573492);
+function a(t) {
     return (
-        (t.exports = i =
-            'function' == typeof e && 'symbol' == typeof o
-                ? function (t) {
-                      return typeof t;
+        (e.exports = a =
+            'function' == typeof r && 'symbol' == typeof i
+                ? function (e) {
+                      return typeof e;
                   }
-                : function (t) {
-                      return t && 'function' == typeof e && t.constructor === e && t !== e.prototype ? 'symbol' : typeof t;
+                : function (e) {
+                      return e && 'function' == typeof r && e.constructor === r && e !== r.prototype ? 'symbol' : typeof e;
                   }),
-        (t.exports.__esModule = !0),
-        (t.exports.default = t.exports),
-        i(r)
+        (e.exports.__esModule = !0),
+        (e.exports.default = e.exports),
+        a(t)
     );
 }
-(t.exports = i), (t.exports.__esModule = !0), (t.exports.default = t.exports);
+(e.exports = a), (e.exports.__esModule = !0), (e.exports.default = e.exports);

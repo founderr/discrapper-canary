@@ -1,4 +1,10 @@
-function r(e) {
+n.d(t, {
+    Z: function () {
+        return i;
+    }
+});
+var r = n(47120);
+function i(e) {
     let t = {};
     for (let n of e)
         for (let e in n)
@@ -10,9 +16,3 @@ function r(e) {
                 : (t[e] = { ...n[e] });
     return t;
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    n(47120);

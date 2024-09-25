@@ -1,7 +1,7 @@
 var r = n(67867),
-    o = n(55525),
+    i = n(55525),
     a = n(228042),
-    i = n(292137);
+    o = n(292137);
 r(
     {
         target: 'Map',
@@ -13,10 +13,10 @@ r(
         includes: function (e) {
             return (
                 !0 ===
-                i(
+                o(
                     a(this),
                     function (t) {
-                        if (o(t, e)) return !0;
+                        if (i(t, e)) return !0;
                     },
                     !0
                 )

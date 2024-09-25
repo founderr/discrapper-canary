@@ -26,9 +26,9 @@ function _(e) {
         T = (0, s.e7)([o.Z, h.Z], () => !!(o.Z.getThreadIds(_.id, C, I).length > 0) || !!(h.Z.getThreads(_.id, C, I).length > 0) || !1, [_.id, C, I]),
         x = _.isMediaChannel();
     if (!f || g || (x && T)) return null;
-    let S = ((t = E), (n = x), t ? (n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW) : n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
+    let v = ((t = E), (n = x), t ? (n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW) : n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
     return (0, i.jsx)(m.JO, {
-        tooltip: S,
+        tooltip: v,
         icon: a.CircleInformationIcon,
         onClick: () => r.Z.hideAdminOnboarding(_.id, !E),
         selected: !E

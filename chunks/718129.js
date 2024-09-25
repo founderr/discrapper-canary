@@ -9,8 +9,8 @@ try {
 }
 if (i && r) {
     var a = {},
-        s = {};
-    i(s, 'length', {
+        o = {};
+    i(o, 'length', {
         '[[Get]]': function () {
             throw a;
         },
@@ -18,7 +18,7 @@ if (i && r) {
     }),
         (e.exports = function (e) {
             try {
-                r(e, s);
+                r(e, o);
             } catch (e) {
                 return e === a;
             }

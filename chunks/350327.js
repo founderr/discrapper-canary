@@ -1,21 +1,21 @@
 n.d(t, {
     CM: function () {
-        return m;
+        return I;
     },
     Cf: function () {
         return p;
     },
     ID: function () {
-        return I;
+        return m;
     },
     Xz: function () {
-        return g;
+        return S;
     },
     Z: function () {
         return E;
     },
     c_: function () {
-        return S;
+        return g;
     },
     f4: function () {
         return A;
@@ -27,7 +27,7 @@ n.d(t, {
         return f;
     },
     rf: function () {
-        return N;
+        return v;
     },
     z5: function () {
         return T;
@@ -36,8 +36,8 @@ n.d(t, {
 var r = n(544891),
     i = n(570140),
     a = n(881052),
-    s = n(957730),
-    o = n(695346),
+    o = n(957730),
+    s = n(695346),
     l = n(594174),
     u = n(626135),
     c = n(981631),
@@ -52,8 +52,8 @@ async function E(e, t) {
     var n, u, d;
     let _ = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
     if (null == _) return;
-    let E = o.dN.getSetting();
-    null != e.bio && E && (e.bio = s.ZP.parse(void 0, e.bio).content);
+    let E = s.dN.getSetting();
+    null != e.bio && E && (e.bio = o.ZP.parse(void 0, e.bio).content);
     try {
         i.Z.dispatch({
             type: 'USER_PROFILE_UPDATE_START',
@@ -109,13 +109,13 @@ function p(e) {
         bio: e
     });
 }
-function I(e) {
+function m(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS',
         pronouns: e
     });
 }
-function m(e) {
+function I(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR',
         color: e
@@ -127,14 +127,14 @@ function T(e) {
         themeColors: e
     });
 }
-function S(e) {
+function g(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR',
         avatar: e
     }),
         _(d.QP.ANIMATED_AVATAR);
 }
-function g(e) {
+function S(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e
@@ -148,7 +148,7 @@ function A(e) {
     }),
         _(d.QP.PROFILE_BANNER);
 }
-function N(e) {
+function v(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS',
         themeColors: e

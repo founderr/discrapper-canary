@@ -10,10 +10,10 @@ var i = n(735250),
     d = n(662146),
     h = n(322459);
 let p = l.forwardRef(function (e, t) {
-    let { id: n, onClick: r, onContextMenu: p, icon: f, selected: _, tooltip: m, upperBadge: g, lowerBadge: C, lowerBadgeSize: I, showPill: E = !0, className: N, 'aria-label': S, children: x, onMouseEnter: v, onMouseLeave: T, onMouseDown: Z } = e,
+    let { id: n, onClick: r, onContextMenu: p, icon: f, selected: _, tooltip: m, upperBadge: g, lowerBadge: C, lowerBadgeSize: I, showPill: E = !0, className: N, 'aria-label': x, children: S, onMouseEnter: v, onMouseLeave: Z, onMouseDown: T } = e,
         b = (0, s.Ie)(n),
-        [A, R] = l.useState(!1),
-        M = 'string' == typeof m && null == S ? m : S;
+        [A, M] = l.useState(!1),
+        R = 'string' == typeof m && null == x ? m : x;
     return (0, i.jsxs)(u.H, {
         children: [
             E
@@ -37,15 +37,15 @@ let p = l.forwardRef(function (e, t) {
                     children: (0, i.jsx)(o.Clickable, {
                         innerRef: t,
                         onMouseEnter: () => {
-                            null == v || v(), R(!0);
+                            null == v || v(), M(!0);
                         },
                         onMouseLeave: () => {
-                            null == T || T(), R(!1);
+                            null == Z || Z(), M(!1);
                         },
-                        onMouseDown: Z,
+                        onMouseDown: T,
                         className: a()(h.circleIconButton, N, { [h.selected]: _ || A }),
                         onClick: r,
-                        'aria-label': M,
+                        'aria-label': R,
                         onContextMenu: p,
                         focusProps: { enabled: !1 },
                         ...b,
@@ -58,7 +58,7 @@ let p = l.forwardRef(function (e, t) {
                     })
                 })
             }),
-            x
+            S
         ]
     });
 });

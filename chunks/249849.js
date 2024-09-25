@@ -1,6 +1,6 @@
 n.d(t, {
     s: function () {
-        return s;
+        return o;
     }
 });
 var r = n(688619),
@@ -11,12 +11,12 @@ function a(e, t, n) {
         a = r.luminance();
     return e.map((e, t) => r.luminance((e * n[t].base + a * n[t].tint) / (n[t].base + n[t].tint)).hex());
 }
-function s(e) {
-    let { primaryBaseColors: t, primaryTintColor: n, primaryTintLuminances: r, primaryLuminanceWeights: i, secondaryBaseColors: s, secondaryTintColor: o, secondaryTintLuminances: l, secondaryLuminanceWeights: u } = e,
+function o(e) {
+    let { primaryBaseColors: t, primaryTintColor: n, primaryTintLuminances: r, primaryLuminanceWeights: i, secondaryBaseColors: o, secondaryTintColor: s, secondaryTintLuminances: l, secondaryLuminanceWeights: u } = e,
         c = null != n ? a(r, n, i) : t,
         d = [];
     return (
-        null != s && null != l && null != u && (d = null != o ? a(l, o, u) : s),
+        null != o && null != l && null != u && (d = null != s ? a(l, s, u) : o),
         {
             primaryColorsTransformed: c,
             secondaryColorsTransformed: d

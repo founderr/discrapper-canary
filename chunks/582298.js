@@ -3,79 +3,79 @@ n.d(t, {
         return d;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
     a = n(430824),
-    r = n(646504),
-    l = n(834129),
-    o = n(981631),
-    c = n(689938),
-    u = n(657480);
+    o = n(646504),
+    s = n(834129),
+    l = n(981631),
+    u = n(689938),
+    c = n(657480);
 function d(e) {
     let t,
         { compact: d, isOwner: _, channel: E } = e,
-        I = () => {
+        f = () => {
             let e = a.Z.getGuild(E.getGuildId());
             null != e &&
-                ((0, s.openModalLazy)(async () => {
-                    let { default: t } = await Promise.all([n.e('7654'), n.e('1187'), n.e('28299')]).then(n.bind(n, 560114));
+                ((0, i.openModalLazy)(async () => {
+                    let { default: t } = await Promise.all([n.e('7654'), n.e('1187'), n.e('90761')]).then(n.bind(n, 560114));
                     return (n) =>
-                        (0, i.jsx)(t, {
+                        (0, r.jsx)(t, {
                             ...n,
                             guild: e,
                             channel: E,
-                            source: o.t4x.INVITE_SYSTEM_MESSAGE
+                            source: l.t4x.INVITE_SYSTEM_MESSAGE
                         });
                 }),
-                (0, r.w)());
+                (0, o.w)());
         },
-        m = (e, t) =>
-            (0, i.jsx)(
-                s.Anchor,
+        h = (e, t) =>
+            (0, r.jsx)(
+                i.Anchor,
                 {
-                    className: u.inviteLink,
-                    onClick: I,
+                    className: c.inviteLink,
+                    onClick: f,
                     children: e
                 },
                 t
             );
     return (
         (t = d
-            ? (0, i.jsx)('div', {
-                  className: u.inviteContent,
-                  children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({ inviteHook: m }) : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({ inviteHook: m })
+            ? (0, r.jsx)('div', {
+                  className: c.inviteContent,
+                  children: _ ? u.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({ inviteHook: h }) : u.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({ inviteHook: h })
               })
-            : (0, i.jsxs)('div', {
-                  className: u.content,
+            : (0, r.jsxs)('div', {
+                  className: c.content,
                   children: [
-                      (0, i.jsx)('div', {
-                          className: u.inviteHeader,
-                          children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS
+                      (0, r.jsx)('div', {
+                          className: c.inviteHeader,
+                          children: _ ? u.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER : u.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS
                       }),
-                      (0, i.jsx)('div', {
-                          className: u.inviteContent,
-                          children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
+                      (0, r.jsx)('div', {
+                          className: c.inviteContent,
+                          children: _ ? u.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : u.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
                       }),
-                      (0, i.jsx)(s.Button, {
-                          onClick: I,
-                          size: s.Button.Sizes.SMALL,
-                          className: u.inviteButton,
-                          children: c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_BUTTON
+                      (0, r.jsx)(i.Button, {
+                          onClick: f,
+                          size: i.Button.Sizes.SMALL,
+                          className: c.inviteButton,
+                          children: u.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_BUTTON
                       })
                   ]
               })),
-        (0, i.jsx)(l.Z, {
-            className: d ? u.compact : u.inviteContent,
+        (0, r.jsx)(s.Z, {
+            className: d ? c.compact : c.inviteContent,
             iconNode: d
                 ? null
-                : (0, i.jsx)('img', {
+                : (0, r.jsx)('img', {
                       alt: '',
                       src: n(826926),
                       width: 40,
                       height: 40
                   }),
-            iconContainerClassName: u.iconContainer,
+            iconContainerClassName: c.iconContainer,
             compact: d,
             children: t
         })

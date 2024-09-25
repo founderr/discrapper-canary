@@ -1,5 +1,5 @@
-var i = n(818083);
-t.Z = (0, i.B)({
+var r = n(818083);
+t.Z = (0, r.B)({
     kind: 'user',
     id: '2021-12_inferno_spam_redaction',
     label: 'Inferno Spam Redaction',

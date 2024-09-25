@@ -6,10 +6,10 @@ n.d(t, {
         return l;
     },
     kZ: function () {
-        return s;
+        return o;
     },
     l6: function () {
-        return o;
+        return s;
     }
 });
 var r = n(818083);
@@ -39,7 +39,7 @@ let i = (0, r.B)({
             }
         ]
     });
-function s(e) {
+function o(e) {
     return i.useExperiment(
         {
             guildId: e,
@@ -48,7 +48,7 @@ function s(e) {
         { autoTrackExposure: !0 }
     );
 }
-function o(e) {
+function s(e) {
     return i.getCurrentConfig({
         guildId: e,
         location: '259c05_2'

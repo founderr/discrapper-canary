@@ -6,15 +6,15 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    s = n.n(a),
-    o = n(442837),
+    o = n.n(a),
+    s = n(442837),
     l = n(481060),
     u = n(518950),
     c = n(357355),
     d = n(689938),
     _ = n(447234);
 function E() {
-    let e = (0, o.e7)([c.Z], () => c.Z.affinities.slice(0, 3)),
+    let e = (0, s.e7)([c.Z], () => c.Z.affinities.slice(0, 3)),
         t = e[0],
         { avatarSrc: n, eventHandlers: a } = (0, u.Z)({
             user: t,
@@ -36,7 +36,7 @@ function E() {
                       ...a
                   }),
                   (0, r.jsx)(l.Text, {
-                      className: s()(_.text),
+                      className: o()(_.text),
                       variant: 'text-sm/normal',
                       color: 'always-white',
                       children: f

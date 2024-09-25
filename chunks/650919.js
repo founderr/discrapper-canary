@@ -34,7 +34,7 @@ function I(e) {
             },
             [e]
         ),
-        m = (0, r.e7)(
+        A = (0, r.e7)(
             [o.Z],
             () => {
                 if (null == N) return;
@@ -43,14 +43,14 @@ function I(e) {
             },
             [N]
         ),
-        A = (0, r.e7)(
+        C = (0, r.e7)(
             [l.Z],
             () => {
                 if (null != N) return l.Z.getGuild(N.guildId);
             },
             [N]
         ),
-        [C, g] = n.useState(!1),
+        [m, g] = n.useState(!1),
         h =
             null == t
                 ? void 0
@@ -77,9 +77,9 @@ function I(e) {
                       subscription: e
                   });
     return {
-        application: m,
-        guild: A,
-        expanded: C,
+        application: A,
+        guild: C,
+        expanded: m,
         handleToggleExpanded: () => g((e) => !e),
         listing: t,
         storeListing: a,

@@ -20,9 +20,9 @@ var n = t(735250),
     S = t(419363),
     I = t(818083),
     N = t(688465),
-    m = t(487419),
-    A = t(378364),
-    C = t(197344),
+    A = t(487419),
+    C = t(378364),
+    m = t(197344),
     g = t(734934),
     h = t(223683),
     O = t(312400),
@@ -92,7 +92,7 @@ function W(e) {
 }
 function K(e) {
     let { disabledSounds: s, disableAllSounds: t, notifyMessagesInSelectedChannel: i } = e,
-        r = C.Z.useIsRingtoneEligible(),
+        r = m.Z.useIsRingtoneEligible(),
         o = a.useRef(),
         l = (0, g.p)(),
         c = a.useCallback((e, s) => {
@@ -102,7 +102,7 @@ function K(e) {
             (e, t) => {
                 let n = s.filter((s) => s !== e);
                 !t && n.push(e),
-                    e === A.Z.ringtone &&
+                    e === C.Z.ringtone &&
                         L.default.track(y.rMx.EVENT_RINGTONE_TOGGLED, {
                             toggled_on: t,
                             sound_name: e
@@ -172,8 +172,8 @@ function K(e) {
         ...(r
             ? [
                   {
-                      label: A.Z.getRingtoneSettingsLabel(),
-                      sound: A.Z.ringtone,
+                      label: C.Z.getRingtoneSettingsLabel(),
+                      sound: C.Z.ringtone,
                       disabled: s.includes('call_ringing')
                   }
               ]
@@ -253,7 +253,7 @@ function K(e) {
     });
 }
 function z() {
-    let e = (0, c.e7)([m.Z], () => m.Z.getGuildAlertSettings()),
+    let e = (0, c.e7)([A.Z], () => A.Z.getGuildAlertSettings()),
         [s, t] = a.useState(null),
         i = v.default.keys(e).map((s) => {
             let t = e[s];

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return P;
     }
 }),
     n(47120);
@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(216337),
     T = n(920888),
     x = n(287151),
-    S = n(569471),
-    v = n(346479),
+    v = n(569471),
+    S = n(346479),
     N = n(592125),
     A = n(934415),
     Z = n(456269),
@@ -34,18 +34,18 @@ var i = n(735250),
     R = n(981631),
     L = n(689938),
     j = n(314251),
-    P = n(96042);
-function O(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: O } = e,
+    O = n(96042);
+function P(e) {
+    let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: P } = e,
         { ref: y, width: D } = (0, m.Z)(),
-        [U, k] = s.useState(3),
+        [k, U] = s.useState(3),
         [w, B] = s.useState(!n),
         [H, G] = (0, p.Z)(!1, 2000),
         V = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
         { firstMessage: F } = (0, M.cl)(V),
-        W = (0, o.e7)([S.Z], () => S.Z.hasJoined(t)),
+        W = (0, o.e7)([v.Z], () => v.Z.hasJoined(t)),
         { disableReactionUpdates: z, disableReactionCreates: Y, isLurking: K, isGuest: q, isPendingMember: X } = (0, g.Z)(V),
-        J = (0, o.e7)([N.Z], () => N.Z.getChannel(O)),
+        J = (0, o.e7)([N.Z], () => N.Z.getChannel(P)),
         Q = (0, Z.Bs)(J),
         $ = (0, o.e7)([_.Z], () => _.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         ee = s.useCallback(
@@ -73,14 +73,14 @@ function O(e) {
     let [et, en] = s.useState(!0);
     if (
         (s.useEffect(() => {
-            if (null != D) k(Math.floor((D - 280) / 58)), en(!1);
+            if (null != D) U(Math.floor((D - 280) / 58)), en(!1);
         }, [D]),
         null == V || null == F)
     )
         return null;
     let ei = F.reactions.length > 0,
         es = () => {
-            W ? v.Z.leaveThread(V, 'Forum Toolbar') : v.Z.joinThread(V, 'Forum Toolbar');
+            W ? S.Z.leaveThread(V, 'Forum Toolbar') : S.Z.joinThread(V, 'Forum Toolbar');
         },
         ea = () => {
             (0, b.B)({
@@ -112,7 +112,7 @@ function O(e) {
                                 !Y &&
                                 null != Q &&
                                 (0, i.jsx)('div', {
-                                    className: P.reactions,
+                                    className: O.reactions,
                                     children: (0, i.jsx)(x.le, {
                                         message: F,
                                         readOnly: !1,
@@ -137,7 +137,7 @@ function O(e) {
                                 isLurking: K,
                                 isGuest: q,
                                 isPendingMember: X,
-                                maxReactions: U,
+                                maxReactions: k,
                                 className: j.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,

@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(100527),
     T = n(367907),
     x = n(906732),
-    S = n(493324),
-    v = n(611064),
+    v = n(493324),
+    S = n(611064),
     N = n(677432),
     A = n(178762),
     Z = n(868671),
@@ -35,12 +35,12 @@ var i = n(735250),
     R = n(313201),
     L = n(623624),
     j = n(518738),
-    P = n(155409),
-    O = n(184301),
+    O = n(155409),
+    P = n(184301),
     y = n(347475),
     D = n(439170),
-    U = n(430824),
-    k = n(111583),
+    k = n(430824),
+    U = n(111583),
     w = n(594174),
     B = n(585483),
     H = n(823379),
@@ -85,7 +85,7 @@ class J extends s.Component {
             C = null != f ? new Date(f) : null;
         return (0, i.jsx)(p.Popout, {
             preload: () =>
-                (0, O.Z)(a, {
+                (0, P.Z)(a, {
                     channelId: u.id,
                     guildId: h
                 }),
@@ -173,13 +173,13 @@ let Q = s.memo((e) => {
         let { colorRoleId: t, ...n } = e,
             { channel: s, user: a, index: l } = e,
             r = (0, c.JA)(''.concat(l)),
-            o = (0, h.e7)([k.Z], () => k.Z.isTyping(s.id, a.id)),
+            o = (0, h.e7)([U.Z], () => U.Z.isTyping(s.id, a.id)),
             u = (0, h.e7)([w.default], () => w.default.getCurrentUser()),
             d = (0, h.e7)(
-                [U.Z],
+                [k.Z],
                 () => {
                     var e;
-                    return null != t ? (null === (e = U.Z.getRole(s.guild_id, t)) || void 0 === e ? void 0 : e.name) : void 0;
+                    return null != t ? (null === (e = k.Z.getRole(s.guild_id, t)) || void 0 === e ? void 0 : e.name) : void 0;
                 },
                 [s, t]
             );
@@ -239,7 +239,7 @@ class et extends s.Component {
         return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length;
     }
     componentDidMount() {
-        this.updateSubscription(), this.trackMemberListViewed(), (this._areActivitiesExperimentallyHidden = (0, S.$)('ChannelMembers'));
+        this.updateSubscription(), this.trackMemberListViewed(), (this._areActivitiesExperimentallyHidden = (0, v.$)('ChannelMembers'));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(), this.trackMemberListViewed(), this.updateMaxContentFeedRowSeen();
@@ -335,14 +335,14 @@ class et extends s.Component {
                 let { section: t } = e,
                     { groups: n, channel: a } = this.props,
                     l = n[t];
-                return (0, v.R)(l)
-                    ? (0, s.createElement)(v.Z, {
+                return (0, S.R)(l)
+                    ? (0, s.createElement)(S.Z, {
                           ...l,
                           key: 'section-'.concat(t)
                       })
                     : 0 === t
                       ? (0, i.jsx)(
-                            P.Z,
+                            O.Z,
                             {
                                 tutorialId: 'whos-online',
                                 position: 'left',
@@ -428,7 +428,7 @@ class et extends s.Component {
             ),
             Y(this, 'getContentFeedGroup', () => {
                 let e = this.props.groups[Z.T];
-                if ((0, v.R)(e)) return e;
+                if ((0, S.R)(e)) return e;
             }),
             Y(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
             Y(this, 'getRowHeightComputer', () => {
@@ -545,7 +545,7 @@ function en(e) {
                 }),
             []
         ),
-        S = (0, u.ZP)({
+        v = (0, u.ZP)({
             id: 'members-'.concat(t.id),
             setFocus: E,
             isEnabled: r,
@@ -557,7 +557,7 @@ function en(e) {
         children: (0, i.jsx)('div', {
             className: l()(z.container, n),
             children: (0, i.jsx)(c.bG, {
-                navigator: S,
+                navigator: v,
                 children: (0, i.jsx)(et, {
                     ...e,
                     ...o,

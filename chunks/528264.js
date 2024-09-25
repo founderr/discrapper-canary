@@ -1,4 +1,4 @@
-(0, n(818083).B)({
+let r = (0, n(818083).B)({
     id: '2024-08_mobile_message_visibility_percentage_calculation',
     kind: 'user',
     label: 'Mobile Message Visibility Percentage Calculation',

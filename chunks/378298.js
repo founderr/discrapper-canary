@@ -1,12 +1,12 @@
 n.d(t, {
     Ms: function () {
-        return o;
+        return s;
     },
     Ot: function () {
         return u;
     },
     T: function () {
-        return s;
+        return o;
     },
     Uj: function () {
         return c;
@@ -18,7 +18,7 @@ n.d(t, {
 var r = n(544891),
     i = n(570140),
     a = n(981631);
-function s(e, t) {
+function o(e, t) {
     return (
         i.Z.dispatch({
             type: 'DISMISS_CHANNEL_SAFETY_WARNINGS',
@@ -32,7 +32,7 @@ function s(e, t) {
         })
     );
 }
-function o(e, t, n) {
+function s(e, t, n) {
     i.Z.dispatch({
         type: 'CHANNEL_SAFETY_WARNING_FEEDBACK',
         channelId: e,

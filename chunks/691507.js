@@ -1,8 +1,8 @@
 var r = n(470079),
     i = n(476400),
     a = n.n(i),
-    s = n(844303),
-    o = n(464854),
+    o = n(844303),
+    s = n(464854),
     l =
         Object.assign ||
         function (e) {
@@ -17,7 +17,7 @@ var r = n(470079),
             n = e.onClick,
             i = void 0 === n ? function () {} : n,
             a = e.onSwatchHover,
-            u = (0, s.default)(
+            u = (0, o.default)(
                 {
                     default: {
                         colors: {
@@ -67,7 +67,7 @@ var r = n(470079),
                         style: u.swatchWrap
                     },
                     r.createElement(
-                        o.m4,
+                        s.m4,
                         l({}, t, {
                             style: u.swatch,
                             onClick: c,

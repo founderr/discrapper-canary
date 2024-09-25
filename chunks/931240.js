@@ -1,59 +1,59 @@
 n.d(t, {
     Ii: function () {
-        return T;
-    },
-    LX: function () {
-        return f;
-    },
-    WJ: function () {
-        return _;
-    },
-    Zx: function () {
         return g;
     },
-    _9: function () {
+    LX: function () {
         return h;
     },
-    aH: function () {
-        return m;
+    WJ: function () {
+        return E;
     },
-    mf: function () {
+    Zx: function () {
+        return A;
+    },
+    _9: function () {
         return p;
     },
+    aH: function () {
+        return T;
+    },
+    mf: function () {
+        return m;
+    },
     nE: function () {
-        return E;
+        return f;
     },
     nr: function () {
         return S;
     },
     sv: function () {
-        return d;
+        return _;
     }
-}),
-    n(47120);
-var r = n(544891),
-    i = n(570140),
-    a = n(479531),
+});
+var r = n(47120);
+var i = n(544891),
+    a = n(570140),
+    o = n(479531),
     s = n(314897),
-    o = n(594174),
-    l = n(970606),
-    u = n(981631),
-    c = n(976757);
-async function d(e, t) {
-    i.Z.dispatch({
+    l = n(594174),
+    u = n(970606),
+    c = n(981631),
+    d = n(976757);
+async function _(e, t) {
+    a.Z.dispatch({
         type: 'CLAN_SETUP_SUBMIT',
         guildId: e
     });
     try {
-        var n, s, o, l;
-        await r.tn.post({
-            url: u.ANM.GUILD_CONVERT_TO_CLAN(e),
+        var n, r, s, l;
+        await i.tn.post({
+            url: c.ANM.GUILD_CONVERT_TO_CLAN(e),
             body: {
                 tag: t.tag,
                 description: t.description,
                 play_style: t.playstyle,
-                search_terms: Array.from(null !== (s = t.interests) && void 0 !== s ? s : new Set()),
-                game_application_ids: Array.from(null !== (o = t.gameApplicationIds) && void 0 !== o ? o : new Set()),
+                search_terms: Array.from(null !== (r = t.interests) && void 0 !== r ? r : new Set()),
+                game_application_ids: Array.from(null !== (s = t.gameApplicationIds) && void 0 !== s ? s : new Set()),
                 verification_form: { form_fields: null !== (l = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== l ? l : [] },
                 badge: t.badgeKind,
                 badge_color_primary: t.badgePrimaryColor,
@@ -64,71 +64,71 @@ async function d(e, t) {
                 wildcard_descriptors: t.wildcardDescriptors
             }
         }),
-            i.Z.dispatch({
+            a.Z.dispatch({
                 type: 'CLAN_SETUP_SUCCESS',
                 guildId: e
             });
     } catch (t) {
         throw (
-            (i.Z.dispatch({
+            (a.Z.dispatch({
                 type: 'CLAN_SETUP_ERROR',
                 guildId: e,
-                error: new a.Z(t)
+                error: new o.Z(t)
             }),
             t)
         );
     }
 }
-async function _(e) {
-    let t = await r.tn.get({ url: u.ANM.GUILD_CLAN_DISCOVERY_INFO(e) });
-    return (0, c.Gh)(t.body);
+async function E(e) {
+    let t = await i.tn.get({ url: c.ANM.GUILD_CLAN_DISCOVERY_INFO(e) });
+    return (0, d.Gh)(t.body);
 }
-async function E(e, t, n) {
+async function f(e, t, n) {
     try {
         null != e &&
             !0 === t &&
-            (0, l.hx)({
+            (0, u.hx)({
                 guildId: e,
                 userId: s.default.getId(),
                 source: n
             });
-        let a = await r.tn.put({
-            url: u.ANM.USER_SET_CLAN_IDENTITY,
+        let r = await i.tn.put({
+            url: c.ANM.USER_SET_CLAN_IDENTITY,
             body: {
                 identity_guild_id: e,
                 identity_enabled: t
             }
         });
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'CURRENT_USER_UPDATE',
             user: {
-                ...o.default.getCurrentUser(),
-                ...a.body
+                ...l.default.getCurrentUser(),
+                ...r.body
             }
         });
     } catch (e) {
         return;
     }
 }
-function f() {
-    i.Z.dispatch({ type: 'CLAN_SETUP_RESET' });
+function h() {
+    a.Z.dispatch({ type: 'CLAN_SETUP_RESET' });
 }
-function h(e, t) {
-    i.Z.dispatch({
+function p(e, t) {
+    a.Z.dispatch({
         type: 'CLAN_SETUP_UPDATE',
         guildId: e,
         updates: t
     });
 }
-function p(e, t) {
-    i.Z.dispatch({
+function m(e, t) {
+    a.Z.dispatch({
         type: 'CLAN_SETTINGS_UPDATE',
         guildId: e,
         updates: t
     });
 }
 let I = (e) => {
-    var t, n, r, i, a, s;
+    var t, n, r, i, a, o;
     return {
         tag: e.tag,
         gameApplicationIds: new Set(null !== (r = e.game_application_ids) && void 0 !== r ? r : []),
@@ -138,7 +138,7 @@ let I = (e) => {
         wildcardDescriptors: e.wildcard_descriptors,
         verificationForm: {
             description: null !== (a = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== a ? a : '',
-            formFields: null !== (s = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== s ? s : [],
+            formFields: null !== (o = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== o ? o : [],
             version: ''
         },
         badgeKind: e.badge,
@@ -149,30 +149,30 @@ let I = (e) => {
         brandSecondaryColor: e.brand_color_secondary
     };
 };
-async function m(e) {
-    i.Z.dispatch({ type: 'CLAN_SETTINGS_FETCH_START' });
-    let t = await r.tn.get({ url: u.ANM.CLAN_SETTINGS(e) });
-    i.Z.dispatch({
+async function T(e) {
+    a.Z.dispatch({ type: 'CLAN_SETTINGS_FETCH_START' });
+    let t = await i.tn.get({ url: c.ANM.CLAN_SETTINGS(e) });
+    a.Z.dispatch({
         type: 'CLAN_SETTINGS_FETCH_SUCCESS',
         guildId: e,
         settings: I(t.body)
     });
 }
-async function T(e, t) {
-    i.Z.dispatch({
+async function g(e, t) {
+    a.Z.dispatch({
         type: 'CLAN_SETTINGS_SUBMIT',
         guildId: e
     });
     try {
-        var n, s, o, l;
-        let a = await r.tn.patch({
-            url: u.ANM.CLAN_SETTINGS(e),
+        var n, r, s, l;
+        let o = await i.tn.patch({
+            url: c.ANM.CLAN_SETTINGS(e),
             body: {
                 tag: t.tag,
                 description: t.description,
                 play_style: t.playstyle,
-                search_terms: Array.from(null !== (s = t.interests) && void 0 !== s ? s : new Set()),
-                game_application_ids: Array.from(null !== (o = t.gameApplicationIds) && void 0 !== o ? o : new Set()),
+                search_terms: Array.from(null !== (r = t.interests) && void 0 !== r ? r : new Set()),
+                game_application_ids: Array.from(null !== (s = t.gameApplicationIds) && void 0 !== s ? s : new Set()),
                 verification_form: { form_fields: null !== (l = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== l ? l : [] },
                 badge: t.badgeKind,
                 badge_color_primary: t.badgePrimaryColor,
@@ -183,12 +183,12 @@ async function T(e, t) {
                 wildcard_descriptors: t.wildcardDescriptors
             }
         });
-        return i.Z.dispatch({ type: 'CLAN_SETTINGS_SUBMIT_SUCCESS' }), a.body;
+        return a.Z.dispatch({ type: 'CLAN_SETTINGS_SUBMIT_SUCCESS' }), o.body;
     } catch (e) {
         throw (
-            (i.Z.dispatch({
+            (a.Z.dispatch({
                 type: 'CLAN_SETTINGS_SUBMIT_ERROR',
-                error: new a.Z(e)
+                error: new o.Z(e)
             }),
             e)
         );
@@ -196,14 +196,14 @@ async function T(e, t) {
 }
 async function S(e) {
     try {
-        await r.tn.post({ url: u.ANM.DISABLE_CLAN(e) });
+        await i.tn.post({ url: c.ANM.DISABLE_CLAN(e) });
     } catch (e) {
         throw e;
     }
 }
-async function g(e) {
+async function A(e) {
     try {
-        await r.tn.post({ url: u.ANM.JOIN_WUMPUS_FEEDBACK_SQUAD(e) });
+        await i.tn.post({ url: c.ANM.JOIN_WUMPUS_FEEDBACK_SQUAD(e) });
     } catch (e) {
         throw e;
     }

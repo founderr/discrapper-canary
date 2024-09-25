@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return g;
     }
 }),
     n(47120);
@@ -8,99 +8,99 @@ var s = n(735250),
     r = n(470079),
     i = n(442837),
     a = n(231239),
-    l = n(129293),
-    o = n(388905),
+    o = n(129293),
+    l = n(388905),
     c = n(703656),
     u = n(108427),
     d = n(844800),
     _ = n(580497),
     h = n(981631),
     E = n(689938),
-    g = n(71188);
-function p(e) {
+    p = n(71188);
+function g(e) {
     let { location: t } = e,
-        [p, m] = r.useState(!1),
+        [g, m] = r.useState(!1),
         { verifySuccess: f, verifyErrors: I, redirectGuildId: N } = (0, i.e7)([d.Z], () => d.Z.getState());
     r.useEffect(() => {
-        let e = (0, l.Z)(t);
+        let e = (0, o.Z)(t);
         a.Z.verify(e), (0, u.e)('verify_hub_email');
     }, [t]);
     let T = () => {
         (0, _.Z)(N), m(!0);
     };
-    return p
-        ? (0, s.jsxs)(o.ZP, {
+    return g
+        ? (0, s.jsxs)(l.ZP, {
               children: [
-                  (0, s.jsx)(o.Dx, {
-                      className: g.title,
+                  (0, s.jsx)(l.Dx, {
+                      className: p.title,
                       children: E.Z.Messages.APP_OPENED_TITLE
                   }),
-                  (0, s.jsx)(o.DK, {
-                      className: g.subtitle,
+                  (0, s.jsx)(l.DK, {
+                      className: p.subtitle,
                       children: E.Z.Messages.APP_OPENED_BODY
                   }),
-                  (0, s.jsx)(o.zx, {
-                      className: g.spacedButton,
+                  (0, s.jsx)(l.zx, {
+                      className: p.spacedButton,
                       onClick: () => (0, c.uL)(h.Z5c.CHANNEL(N)),
                       children: E.Z.Messages.CONTINUE_TO_WEBAPP
                   })
               ]
           })
         : f
-          ? (0, s.jsxs)(o.ZP, {
+          ? (0, s.jsxs)(l.ZP, {
                 children: [
-                    (0, s.jsx)(o.Ee, {
-                        className: g.image,
+                    (0, s.jsx)(l.Ee, {
+                        className: p.image,
                         src: n(73962)
                     }),
-                    (0, s.jsx)(o.Dx, {
-                        className: g.title,
+                    (0, s.jsx)(l.Dx, {
+                        className: p.title,
                         children: E.Z.Messages.VERIFICATION_VERIFIED
                     }),
-                    (0, s.jsx)(o.zx, {
+                    (0, s.jsx)(l.zx, {
                         onClick: T,
                         children: E.Z.Messages.VERIFICATION_OPEN_DISCORD
                     })
                 ]
             })
           : null != I
-            ? (0, s.jsxs)(o.ZP, {
+            ? (0, s.jsxs)(l.ZP, {
                   children: [
-                      (0, s.jsx)(o.Ee, {
-                          className: g.image,
+                      (0, s.jsx)(l.Ee, {
+                          className: p.image,
                           src: n(375673)
                       }),
-                      (0, s.jsx)(o.Dx, {
-                          className: g.title,
+                      (0, s.jsx)(l.Dx, {
+                          className: p.title,
                           children: E.Z.Messages.VERFICATION_EXPIRED
                       }),
-                      (0, s.jsx)(o.DK, {
-                          className: g.subtitle,
+                      (0, s.jsx)(l.DK, {
+                          className: p.subtitle,
                           children: E.Z.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
                       }),
-                      (0, s.jsx)(o.zx, {
+                      (0, s.jsx)(l.zx, {
                           onClick: T,
                           children: E.Z.Messages.VERIFICATION_OPEN_DISCORD
                       })
                   ]
               })
-            : (0, s.jsxs)(o.ZP, {
+            : (0, s.jsxs)(l.ZP, {
                   children: [
-                      (0, s.jsx)(o.Ee, {
-                          className: g.image,
+                      (0, s.jsx)(l.Ee, {
+                          className: p.image,
                           src: n(892235)
                       }),
-                      (0, s.jsx)(o.Dx, {
-                          className: g.title,
+                      (0, s.jsx)(l.Dx, {
+                          className: p.title,
                           children: E.Z.Messages.VERIFICATION_VERIFYING
                       }),
-                      (0, s.jsx)(o.DK, {
-                          className: g.subtitle,
+                      (0, s.jsx)(l.DK, {
+                          className: p.subtitle,
                           children: E.Z.Messages.ACTION_MAY_TAKE_A_MOMENT
                       }),
-                      (0, s.jsx)(o.zx, {
+                      (0, s.jsx)(l.zx, {
                           submitting: !0,
-                          color: o.zx.Colors.PRIMARY
+                          color: l.zx.Colors.PRIMARY
                       })
                   ]
               });

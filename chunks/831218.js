@@ -18,18 +18,18 @@ var i,
     I = n(702321),
     E = n(82295),
     N = n(313201),
-    S = n(860144),
-    x = n(214852),
+    x = n(860144),
+    S = n(214852),
     v = n(518311),
-    T = n(355298),
-    Z = n(869404),
+    Z = n(355298),
+    T = n(869404),
     b = n(333984),
     A = n(210887),
-    R = n(592125),
-    M = n(158776),
+    M = n(592125),
+    R = n(158776),
     L = n(55589),
-    P = n(515753),
-    y = n(981631),
+    y = n(515753),
+    P = n(981631),
     O = n(689938),
     j = n(156762);
 function D(e, t, n) {
@@ -194,7 +194,7 @@ let w = s.memo(function () {
         ]
     });
 });
-class U extends (l = s.Component) {
+class G extends (l = s.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -296,10 +296,10 @@ class U extends (l = s.Component) {
                     c = n.some((e) => (0, I.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: o.filter((e) => null != e && M.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: o.filter((e) => null != e && R.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
-                    g.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
+                    g.ZP.trackWithMetadata(P.rMx.DM_LIST_VIEWED, {
                         ...u,
                         ...(0, C.X)(),
                         changelog_dm_visible: c
@@ -315,7 +315,7 @@ class U extends (l = s.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && _.Z.updateChannelListScroll(y.ME, e.scrollTop);
+                        null != e && _.Z.updateChannelListScroll(P.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -326,7 +326,7 @@ class U extends (l = s.Component) {
                 return null == o
                     ? null
                     : (0, a.jsx)(
-                          P.ZP,
+                          y.ZP,
                           {
                               channel: o,
                               selected: o.id === l,
@@ -384,25 +384,25 @@ class U extends (l = s.Component) {
             });
     }
 }
-D(U, 'defaultProps', { padding: 8 });
+D(G, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = s.Children.count(i),
-        o = R.Z.getMutablePrivateChannels(),
-        c = (0, Z.k1)(o),
+        o = M.Z.getMutablePrivateChannels(),
+        c = (0, T.k1)(o),
         p = (0, h.Wu)(
-            [L.Z, T.Z, b.Z],
+            [L.Z, Z.Z, b.Z],
             () => {
                 let e = L.Z.getPrivateChannelIds();
-                return (0, Z.tU)(e, [T.Z, b.Z]);
+                return (0, T.tU)(e, [Z.Z, b.Z]);
             },
             []
         );
-    (0, x.z)(S.R);
-    let f = (0, h.cj)([m.Z, A.Z, R.Z], () => ({
-            theme: A.Z.darkSidebar ? y.BRd.DARK : n,
+    (0, S.z)(x.R);
+    let f = (0, h.cj)([m.Z, A.Z, M.Z], () => ({
+            theme: A.Z.darkSidebar ? P.BRd.DARK : n,
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
-            version: null != t ? ''.concat(t, ':').concat(R.Z.getPrivateChannelsVersion()) : R.Z.getPrivateChannelsVersion()
+            version: null != t ? ''.concat(t, ':').concat(M.Z.getPrivateChannelsVersion()) : M.Z.getPrivateChannelsVersion()
         })),
         _ = s.useRef(null),
         g = s.useCallback((e) => {
@@ -453,7 +453,7 @@ t.Z = (e) => {
         });
     return (0, a.jsx)(u.bG, {
         navigator: v,
-        children: (0, a.jsx)(U, {
+        children: (0, a.jsx)(G, {
             channels: c,
             privateChannelIds: p,
             listRef: _,

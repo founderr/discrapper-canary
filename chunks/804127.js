@@ -1,70 +1,70 @@
 n.d(t, {
     G: function () {
-        return l;
+        return o;
     },
     u: function () {
-        return o;
+        return l;
     }
 }),
     n(47120);
-var r = n(470079),
+var s = n(470079),
     a = n(617136),
-    s = n(272008);
-function o(e) {
-    let { isClaimingReward: t, isFetchingRewardCode: n, questContent: a, quest: o, requiresPlatformSelection: l, rewardCode: i, selectedPlatformType: d } = e,
-        [c, u] = r.useState(!1),
-        p = r.useCallback((e, t, n) => {
-            u(!1);
+    r = n(272008);
+function l(e) {
+    let { isClaimingReward: t, isFetchingRewardCode: n, questContent: a, quest: l, requiresPlatformSelection: o, rewardCode: i, selectedPlatformType: d } = e,
+        [u, c] = s.useState(!1),
+        E = s.useCallback((e, t, n) => {
+            c(!1);
             try {
-                (0, s.QB)(e, t, n);
+                (0, r.QB)(e, t, n);
             } catch (e) {
-                u(!0);
+                c(!0);
             }
         }, []),
-        _ = r.useCallback((e) => {
-            u(!1);
+        C = s.useCallback((e) => {
+            c(!1);
             try {
-                (0, s.pf)(e);
+                (0, r.pf)(e);
             } catch (e) {
-                u(!0);
+                c(!0);
             }
         }, []);
     return (
-        r.useEffect(() => {
-            var e, r;
-            if (null == i && !c && !t && !n && !l) (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? p(o.id, d, a) : (null === (r = o.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null && _(o.id);
-        }, [p, _, c, t, n, a, o, l, i, d]),
+        s.useEffect(() => {
+            var e, s;
+            if (null == i && !u && !t && !n && !o) (null === (e = l.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? E(l.id, d, a) : (null === (s = l.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null && C(l.id);
+        }, [E, C, u, t, n, a, l, o, i, d]),
         {
-            claimCode: p,
-            fetchCode: _,
-            hasError: c,
-            setHasError: u
+            claimCode: E,
+            fetchCode: C,
+            hasError: u,
+            setHasError: c
         }
     );
 }
-function l(e) {
-    let { claimCode: t, fetchCode: n, hasError: s, onDismiss: o, quest: l, questContent: i, questContentCTA: d = a.jZ.GET_REWARD_CODE, questContentPosition: c, requiresPlatformSelection: u, selectedPlatformType: p } = e;
-    return r.useCallback(() => {
+function o(e) {
+    let { claimCode: t, fetchCode: n, hasError: r, onDismiss: l, quest: o, questContent: i, questContentCTA: d = a.jZ.GET_REWARD_CODE, questContentPosition: u, requiresPlatformSelection: c, selectedPlatformType: E } = e;
+    return s.useCallback(() => {
         var e;
-        u && null != p
-            ? (t(l.id, p, i),
+        c && null != E
+            ? (t(o.id, E, i),
               (0, a._3)({
-                  questId: l.id,
+                  questId: o.id,
                   questContent: i,
                   questContentCTA: d,
-                  questContentPosition: c
+                  questContentPosition: u
               }))
-            : s
-              ? (null === (e = l.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null
-                  ? n(l.id)
-                  : null != p &&
-                    (t(l.id, p, i),
+            : r
+              ? (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null
+                  ? n(o.id)
+                  : null != E &&
+                    (t(o.id, E, i),
                     (0, a._3)({
-                        questId: l.id,
+                        questId: o.id,
                         questContent: i,
                         questContentCTA: d,
-                        questContentPosition: c
+                        questContentPosition: u
                     }))
-              : o();
-    }, [t, n, s, o, l, i, d, c, u, p]);
+              : l();
+    }, [t, n, r, l, o, i, d, u, c, E]);
 }

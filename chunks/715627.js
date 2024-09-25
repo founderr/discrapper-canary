@@ -16,9 +16,9 @@ let l = {
             [p, f] = a.useState(null),
             { confettiCanvas: A } = a.useContext(i.h),
             S = (0, r.uR)(null != m ? m : A, p),
-            [h, M] = a.useState(!1);
+            [M, h] = a.useState(!1);
         a.useEffect(() => {
-            h && (null == C || C());
+            M && (null == C || C());
         });
         let x = a.useMemo(() => {
             if (null != d)
@@ -82,7 +82,7 @@ let l = {
                                 })(t.getBoundingClientRect(), E, T, I, R, g, N),
                                 null != u ? u : 50
                             ),
-                                s === e.length - 1 && null != C && M(!0);
+                                s === e.length - 1 && null != C && h(!0);
                         }, 60 * s)
                     )),
                     () => {

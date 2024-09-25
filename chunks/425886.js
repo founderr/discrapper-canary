@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(403182),
-    s = n(640108);
-class o extends i.PureComponent {
+    o = n(640108);
+class s extends i.PureComponent {
     render() {
-        let { src: e, fileSize: t, fileName: n, className: i, playable: o, volume: l, renderLinkComponent: u, onVolumeChange: c, onVolumeShow: d, onVolumeHide: _, autoMute: E, onMute: f, mimeType: h, onPlay: p } = this.props;
-        return (0, r.jsx)(s.ZP, {
+        let { src: e, fileSize: t, fileName: n, className: i, playable: s, volume: l, renderLinkComponent: u, onVolumeChange: c, onVolumeShow: d, onVolumeHide: _, autoMute: E, onMute: f, mimeType: h, onPlay: p } = this.props;
+        return (0, r.jsx)(o.ZP, {
             src: e,
             fileName: n,
             fileSize: (0, a.Ng)(t),
             fileSizeBytes: t,
-            type: s.ZP.Types.AUDIO,
+            type: o.ZP.Types.AUDIO,
             className: i,
-            playable: o,
+            playable: s,
             volume: l,
             onMute: f,
             autoMute: E,

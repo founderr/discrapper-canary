@@ -1,29 +1,29 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(739566),
+var i = n(739566),
     a = n(834129),
-    r = n(689938);
-function l(e) {
-    let { message: t, channel: l, targetUser: o, actorUsernameHook: c, targetUsernameHook: u, compact: d } = e,
-        _ = (0, s.ZP)(t),
-        E = (0, s.Sw)(o, l),
-        I = c(_),
-        m = u(null != E ? E : void 0),
-        T = r.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
+    o = n(689938);
+function s(e) {
+    let { message: t, channel: s, targetUser: l, actorUsernameHook: u, targetUsernameHook: c, compact: d } = e,
+        _ = (0, i.ZP)(t),
+        E = (0, i.Sw)(l, s),
+        f = u(_),
+        h = c(null != E ? E : void 0),
+        p = o.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
             actorName: _.nick,
-            actorHook: I,
+            actorHook: f,
             targetName: null == E ? void 0 : E.nick,
-            targetHook: m
+            targetHook: h
         });
-    return (0, i.jsx)(a.Z, {
+    return (0, r.jsx)(a.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: d,
-        children: T
+        children: p
     });
 }

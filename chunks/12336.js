@@ -11,23 +11,23 @@ function r(e) {
         i = () => t,
         a = (e, r = i, a = Object.is) => {
             console.warn('[DEPRECATED] Please use `subscribeWithSelector` middleware');
-            let s = r(t);
-            function o() {
+            let o = r(t);
+            function s() {
                 let n = r(t);
-                if (!a(s, n)) {
-                    let t = s;
-                    e((s = n), t);
+                if (!a(o, n)) {
+                    let t = o;
+                    e((o = n), t);
                 }
             }
-            return n.add(o), () => n.delete(o);
+            return n.add(s), () => n.delete(s);
         },
-        s = {
+        o = {
             setState: r,
             getState: i,
             subscribe: (e, t, r) => (t || r ? a(e, t, r) : (n.add(e), () => n.delete(e))),
             destroy: () => n.clear()
         };
-    return (t = e(r, i, s)), s;
+    return (t = e(r, i, o)), o;
 }
 n.d(t, {
     Z: function () {

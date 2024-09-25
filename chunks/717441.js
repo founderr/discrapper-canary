@@ -1,11 +1,11 @@
 var r = n(49693),
     i = n(959318),
     a = RangeError;
-e.exports = function (e, t, n, s) {
-    var o = r(e),
+e.exports = function (e, t, n, o) {
+    var s = r(e),
         l = i(n),
-        u = l < 0 ? o + l : l;
-    if (u >= o || u < 0) throw a('Incorrect index');
-    for (var c = new t(o), d = 0; d < o; d++) c[d] = d === u ? s : e[d];
+        u = l < 0 ? s + l : l;
+    if (u >= s || u < 0) throw a('Incorrect index');
+    for (var c = new t(s), d = 0; d < s; d++) c[d] = d === u ? o : e[d];
     return c;
 };

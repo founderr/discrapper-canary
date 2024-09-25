@@ -1,45 +1,45 @@
 n.d(t, {
     A: function () {
-        return _;
+        return E;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(442837),
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(442837),
     s = n(434650),
-    o = n(110924),
-    l = n(451478),
-    u = n(915750);
-let c = (e) => {
-        let [t, n] = i.useState(!1),
+    l = n(110924),
+    u = n(451478),
+    c = n(915750);
+let d = (e) => {
+        let [t, n] = a.useState(!1),
             r = null != e ? e : t,
-            a = r !== (0, o.Z)(r);
+            i = r !== (0, l.Z)(r);
         return {
             visible: r,
-            visibleChanged: a,
-            reference: (0, s.O)((e) => n(e), u.PI)
+            visibleChanged: i,
+            reference: (0, s.O)((e) => n(e), c.PI)
         };
     },
-    d = () => {
-        let e = (0, a.e7)([l.Z], () => l.Z.isFocused()),
-            t = e !== (0, o.Z)(e);
+    _ = () => {
+        let e = (0, o.e7)([u.Z], () => u.Z.isFocused()),
+            t = e !== (0, l.Z)(e);
         return {
             focused: e,
             focusedChanged: t
         };
     };
-function _(e) {
-    let { focused: t, focusedChanged: n } = d(),
-        { visible: a, visibleChanged: s, reference: o } = c(e.overrideVisibility),
+function E(e) {
+    let { focused: t, focusedChanged: n } = _(),
+        { visible: r, visibleChanged: o, reference: s } = d(e.overrideVisibility),
         l = {
             ...e,
             focused: t,
             focusedChanged: n,
-            visible: a,
-            visibleChanged: s,
-            reference: o,
-            impression: i.useRef(null)
+            visible: r,
+            visibleChanged: o,
+            reference: s,
+            impression: a.useRef(null)
         };
-    return (0, r.jsx)(u.ui, { ...l }, (0, u.B5)(e.questOrQuests, e.questContent));
+    return (0, i.jsx)(c.ui, { ...l }, (0, c.B5)(e.questOrQuests, e.questContent));
 }

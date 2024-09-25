@@ -1,46 +1,46 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return s;
+        return r;
     }
 });
-var a = n(735250);
-n(470079);
-var i = n(481060),
-    l = n(689938),
-    r = n(57778);
-function s(e) {
-    let { imageSrc: t, header: n, description: s, secondaryInfo: c, mutualGuildCount: o, ctaLabel: d, onCtaClick: u, children: _ } = e,
+var a = t(735250);
+t(470079);
+var i = t(481060),
+    l = t(689938),
+    s = t(57778);
+function r(e) {
+    let { imageSrc: n, header: t, description: r, secondaryInfo: c, mutualGuildCount: o, ctaLabel: d, onCtaClick: u, children: _ } = e,
         g = (0, a.jsx)(a.Fragment, {
             children: (0, a.jsxs)('div', {
-                className: r.topWrapper,
+                className: s.topWrapper,
                 children: [
                     (0, a.jsx)('div', {
-                        className: r.__invalid_imageContainer,
+                        className: s.__invalid_imageContainer,
                         children: (0, a.jsx)('img', {
                             alt: '',
-                            className: r.image,
-                            src: t
+                            className: s.image,
+                            src: n
                         })
                     }),
                     (0, a.jsxs)('div', {
-                        className: r.content,
+                        className: s.content,
                         children: [
                             (0, a.jsxs)('div', {
-                                className: r.header,
+                                className: s.header,
                                 children: [
                                     (0, a.jsxs)('div', {
-                                        className: r.info,
+                                        className: s.info,
                                         children: [
                                             (0, a.jsx)(i.Heading, {
-                                                className: r.name,
+                                                className: s.name,
                                                 variant: 'heading-md/semibold',
-                                                children: n
+                                                children: t
                                             }),
                                             null != o
                                                 ? o
                                                 : (0, a.jsx)(a.Fragment, {
                                                       children: (0, a.jsxs)('div', {
-                                                          className: r.details,
+                                                          className: s.details,
                                                           children: [
                                                               (0, a.jsx)(i.Text, {
                                                                   tag: 'span',
@@ -55,7 +55,7 @@ function s(e) {
                                                                                 tag: 'span',
                                                                                 color: 'interactive-muted',
                                                                                 variant: 'text-sm/normal',
-                                                                                className: r.bullet,
+                                                                                className: s.bullet,
                                                                                 children: '\u2022'
                                                                             }),
                                                                             (0, a.jsx)(i.Text, {
@@ -76,21 +76,21 @@ function s(e) {
                                         ? (0, a.jsx)(i.Button, {
                                               size: i.Button.Sizes.SMALL,
                                               onClick: u,
-                                              className: r.__invalid_button,
+                                              className: s.__invalid_button,
                                               children: d
                                           })
                                         : null
                                 ]
                             }),
-                            null != s
+                            null != r
                                 ? (0, a.jsx)(i.Text, {
-                                      className: r.listingDescription,
+                                      className: s.listingDescription,
                                       variant: 'text-md/normal',
-                                      children: s
+                                      children: r
                                   })
                                 : null,
                             (0, a.jsx)('div', {
-                                className: r.children,
+                                className: s.children,
                                 children: _
                             })
                         ]
@@ -100,7 +100,7 @@ function s(e) {
         });
     return (0, a.jsx)(i.FocusRing, {
         children: (0, a.jsx)('div', {
-            className: r.listing,
+            className: s.listing,
             children: g
         })
     });

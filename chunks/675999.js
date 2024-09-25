@@ -1,4 +1,4 @@
-var o, l, a, s;
+var o, l, a, i;
 n.d(t, {
     PU: function () {
         return r;
@@ -15,7 +15,7 @@ n.d(t, {
     (a.CHANNEL_PROMPT = 'channel-prompt'),
     (a.JOIN_GUILD = 'join-guild'),
     (a.CREATION_INTENT = 'creation-intent'),
-    ((s = l || (l = {})).FRIENDS = 'FRIENDS'),
-    (s.COMMUNITY = 'COMMUNITY'),
-    (s.CLAN = 'CLAN');
+    ((i = l || (l = {})).FRIENDS = 'FRIENDS'),
+    (i.COMMUNITY = 'COMMUNITY'),
+    (i.CLAN = 'CLAN');
 let r = 'create-guild';

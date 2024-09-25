@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     Zq: function () {
-        return s;
+        return o;
     },
     kK: function () {
         return i;
@@ -18,7 +18,7 @@ function a(e) {
     var t = (0, r.Z)(e).HTMLElement;
     return e instanceof t || e instanceof HTMLElement;
 }
-function s(e) {
+function o(e) {
     if ('undefined' == typeof ShadowRoot) return !1;
     var t = (0, r.Z)(e).ShadowRoot;
     return e instanceof t || e instanceof ShadowRoot;

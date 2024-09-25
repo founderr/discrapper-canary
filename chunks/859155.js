@@ -1,22 +1,22 @@
 n(411104);
 var l = n(991637),
-    a = n.n(l),
-    s = n(388123),
-    i = n(904245),
-    r = n(957730),
+    s = n.n(l),
+    a = n(388123),
+    r = n(904245),
+    i = n(957730),
     o = n(592125);
-let c = {
+let u = {
     async sendForward(e, t, n) {
         let l = o.Z.getChannel(t),
-            a = o.Z.getChannel(e.channel_id);
-        if (null == a) throw Error('Unable to find original channel for message');
+            s = o.Z.getChannel(e.channel_id);
+        if (null == s) throw Error('Unable to find original channel for message');
         if (null == l) throw Error('Unable to find destination channel for message');
-        let c = r.ZP.parse(l, ''),
-            u = {
-                guild_id: a.guild_id,
+        let u = i.ZP.parse(l, ''),
+            c = {
+                guild_id: s.guild_id,
                 channel_id: e.channel_id,
                 message_id: e.id,
-                type: s.U.FORWARD,
+                type: a.U.FORWARD,
                 forward_only:
                     (null == n ? void 0 : n.onlyAttachmentIds) != null || (null == n ? void 0 : n.onlyEmbedIndices) != null
                         ? {
@@ -25,12 +25,12 @@ let c = {
                           }
                         : void 0
             };
-        await i.Z.sendMessage(l.id, c, !1, {
-            messageReference: u,
+        await r.Z.sendMessage(l.id, u, !1, {
+            messageReference: c,
             eagerDispatch: !1
         }),
-            (null == n ? void 0 : n.withMessage) != null && (await i.Z.sendMessage(l.id, r.ZP.parse(l, n.withMessage), !1));
+            (null == n ? void 0 : n.withMessage) != null && (await r.Z.sendMessage(l.id, i.ZP.parse(l, n.withMessage), !1));
     },
-    sendForwards: (e, t, n) => a()(t.map((t) => c.sendForward(e, t, n)))
+    sendForwards: (e, t, n) => s()(t.map((t) => u.sendForward(e, t, n)))
 };
-t.Z = c;
+t.Z = u;

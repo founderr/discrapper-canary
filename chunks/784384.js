@@ -1,55 +1,55 @@
 n.d(t, {
     H: function () {
-        return E;
+        return g;
     },
     y: function () {
-        return g;
+        return _;
     }
 }),
     n(47120),
     n(390547);
 var l = n(442837),
-    a = n(933557),
-    s = n(926491),
-    i = n(378233),
-    r = n(131704),
+    s = n(933557),
+    a = n(926491),
+    r = n(378233),
+    i = n(131704),
     o = n(592125),
-    c = n(496675),
-    u = n(699516),
+    u = n(496675),
+    c = n(699516),
     d = n(594174),
     h = n(823379),
-    _ = n(981631),
+    m = n(981631),
     f = n(689938);
-function E(e, t, n) {
-    let l = n instanceof r.Sf;
+function g(e, t, n) {
+    let l = n instanceof i.Sf;
     if (t.isNSFW() && !(l && n.isNSFW())) return { label: f.Z.Messages.MESSAGE_FORWARDING_NSFW_NOT_ALLOWED };
-    if (l && (0, r.Km)(n.type)) {
-        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !c.Z.can(_.Plq.ATTACH_FILES, n)) return { label: f.Z.Messages.MESSAGE_CHANNEL_ATTACHMENTS_DISABLED };
-        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !c.Z.can(_.Plq.EMBED_LINKS, n)) return { label: f.Z.Messages.MESSAGE_CHANNEL_EMBEDS_DISABLED };
+    if (l && (0, i.Km)(n.type)) {
+        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !u.Z.can(m.Plq.ATTACH_FILES, n)) return { label: f.Z.Messages.MESSAGE_CHANNEL_ATTACHMENTS_DISABLED };
+        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !u.Z.can(m.Plq.EMBED_LINKS, n)) return { label: f.Z.Messages.MESSAGE_CHANNEL_EMBEDS_DISABLED };
         let t = [
-            ...(0, i.cv)(e),
+            ...(0, r.cv)(e),
             ...e.messageSnapshots.flatMap((e) => {
                 let { message: t } = e;
-                return (0, i.cv)(t);
+                return (0, r.cv)(t);
             })
         ];
         if (
             t.length > 0 &&
-            !c.Z.can(_.Plq.USE_EXTERNAL_STICKERS, n) &&
+            !u.Z.can(m.Plq.USE_EXTERNAL_STICKERS, n) &&
             t.some((e) =>
                 (function (e, t) {
-                    let n = s.Z.getStickerById(e.id);
-                    return !!(null != n && (0, i.J8)(n)) && (n.guild_id !== t.guild_id || void 0);
+                    let n = a.Z.getStickerById(e.id);
+                    return !!(null != n && (0, r.J8)(n)) && (n.guild_id !== t.guild_id || void 0);
                 })(e, n)
             )
         )
             return { label: f.Z.Messages.MESSAGE_CHANNEL_EXTERNAL_STICKERS_DISABLED };
-        if ((e.hasFlag(_.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(_.iLy.IS_VOICE_MESSAGE))) && !c.Z.can(_.Plq.SEND_VOICE_MESSAGES, n)) return { label: f.Z.Messages.MESSAGE_CHANNEL_VOICE_MESSAGES_DISABLED };
+        if ((e.hasFlag(m.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(m.iLy.IS_VOICE_MESSAGE))) && !u.Z.can(m.Plq.SEND_VOICE_MESSAGES, n)) return { label: f.Z.Messages.MESSAGE_CHANNEL_VOICE_MESSAGES_DISABLED };
     }
 }
-function g(e) {
+function _(e) {
     let t = (0, l.Wu)(
-        [o.Z, c.Z],
+        [o.Z, u.Z],
         () =>
             e
                 .map((e) => {
@@ -57,8 +57,8 @@ function g(e) {
                     return 'channel' === t ? o.Z.getChannel(n) : null;
                 })
                 .filter(h.lm)
-                .filter((e) => null != e.rateLimitPerUser && !!(e.rateLimitPerUser > 0) && !(c.Z.can(_.Plq.MANAGE_CHANNELS, e) || c.Z.can(_.Plq.MANAGE_MESSAGES, e))),
+                .filter((e) => null != e.rateLimitPerUser && !!(e.rateLimitPerUser > 0) && !(u.Z.can(m.Plq.MANAGE_CHANNELS, e) || u.Z.can(m.Plq.MANAGE_MESSAGES, e))),
         [e]
     );
-    return (0, l.Wu)([d.default, u.Z], () => t.map((e) => (0, a.F6)(e, d.default, u.Z, !0)), [t]);
+    return (0, l.Wu)([d.default, c.Z], () => t.map((e) => (0, s.F6)(e, d.default, c.Z, !0)), [t]);
 }

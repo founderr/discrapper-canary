@@ -1,36 +1,36 @@
-t.d(e, {
+t.d(n, {
     Z: function () {
         return M;
     }
 });
-var r = t(735250);
+var l = t(735250);
 t(470079);
-var a = t(442837),
-    u = t(481060),
-    i = t(313889),
-    l = t(825829),
+var u = t(442837),
+    a = t(481060),
+    r = t(313889),
+    i = t(825829),
     o = t(36459),
     c = t(592125),
-    d = t(375954),
-    s = t(496675),
+    s = t(375954),
+    d = t(496675),
     _ = t(981631),
     E = t(689938);
-function M(n, e) {
-    let t = (0, a.e7)([s.Z], () => null != n && s.Z.canWithPartialContext(_.Plq.MANAGE_MESSAGES, { channelId: n }), [n]),
-        M = (0, a.e7)([c.Z], () => c.Z.getChannel(n), [n]),
-        f = (0, a.e7)([d.Z], () => (null != n && null != e ? d.Z.getMessage(n, e) : null)),
-        A = (0, l.NK)(null != f ? f : null);
+function M(e, n) {
+    let t = (0, u.e7)([d.Z], () => null != e && d.Z.canWithPartialContext(_.Plq.MANAGE_MESSAGES, { channelId: e }), [e]),
+        M = (0, u.e7)([c.Z], () => c.Z.getChannel(e), [e]),
+        f = (0, u.e7)([s.Z], () => (null != e && null != n ? s.Z.getMessage(e, n) : null)),
+        Z = (0, i.NK)(null != f ? f : null);
     if (null == M || null == f) return null;
-    let I = null != A && A.actions.hasOwnProperty(i.d.SET_COMPLETED) ? i.d.UNSET_COMPLETED : i.d.SET_COMPLETED,
-        O = I === i.d.SET_COMPLETED ? E.Z.Messages.GUILD_AUTOMOD_ALERT_SET_COMPLETED : E.Z.Messages.GUILD_AUTOMOD_ALERT_UNSET_COMPLETED;
-    return t && null != e
-        ? (0, r.jsx)(
-              u.MenuItem,
+    let A = null != Z && Z.actions.hasOwnProperty(r.d.SET_COMPLETED) ? r.d.UNSET_COMPLETED : r.d.SET_COMPLETED,
+        T = A === r.d.SET_COMPLETED ? E.Z.Messages.GUILD_AUTOMOD_ALERT_SET_COMPLETED : E.Z.Messages.GUILD_AUTOMOD_ALERT_UNSET_COMPLETED;
+    return t && null != n
+        ? (0, l.jsx)(
+              a.MenuItem,
               {
                   id: 'mark-automod-alert-completed',
-                  label: O,
+                  label: T,
                   action: () => {
-                      (0, o.Xx)(e, M, I);
+                      (0, o.Xx)(n, M, A);
                   }
               },
               'mark-automod-alert-completed'

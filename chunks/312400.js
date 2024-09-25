@@ -1,6 +1,6 @@
 n.d(t, {
     ad: function () {
-        return s;
+        return o;
     },
     fs: function () {
         return a;
@@ -62,7 +62,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    o = (0, r.B)({
         kind: 'user',
         id: '2024-03_unreads_new_users',
         label: 'Unreads Experiment (grey-dot mode) (new users)',

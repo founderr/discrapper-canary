@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(481060),
-    o = n(494445),
+    o = n(481060),
+    s = n(494445),
     l = n(456138);
 let u = Object.freeze({
         SIZE_10: l.size10,
@@ -15,18 +15,18 @@ let u = Object.freeze({
         SIZE_32: l.size32
     }),
     c = (e) => {
-        let { id: t, muted: n = !1, className: i = o.wrapper, size: l = u.SIZE_14, selectable: c = !1, children: d, color: _, onClick: E, onContextMenu: f, style: h, title: p, uppercase: I } = e;
-        return (0, r.jsx)(s.H, {
+        let { id: t, muted: n = !1, className: i = s.wrapper, size: l = u.SIZE_14, selectable: c = !1, children: d, color: _, onClick: E, onContextMenu: f, style: h, title: p, uppercase: m } = e;
+        return (0, r.jsx)(o.H, {
             role: null != E ? 'button' : void 0,
             onClick: E,
             onContextMenu: f,
             id: t,
             className: a()(i, {
-                [o.base]: !0,
+                [s.base]: !0,
                 [l]: !0,
-                [o.selectable]: c,
-                [o.muted]: n,
-                [o.uppercase]: I
+                [s.selectable]: c,
+                [s.muted]: n,
+                [s.uppercase]: m
             }),
             title: p,
             style:

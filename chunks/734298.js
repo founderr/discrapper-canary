@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
-}),
-    n(653041),
-    n(47120);
-var r = n(46973),
-    i = n(198274);
-function a(e) {
+});
+var r = n(653041);
+var i = n(47120);
+var a = n(46973),
+    o = n(198274);
+function s(e) {
     let t = !1;
-    e.on(r.aB.Destroy, () => (t = !0));
+    e.on(a.aB.Destroy, () => (t = !0));
     let n = async () => {
         if (t) return;
-        let a = [];
+        let r = [];
         e.eachConnection((e) =>
-            a.push({
+            r.push({
                 connection: e,
                 stats: e.emitStats()
             })
         );
-        let s = [];
-        for (let e of a) {
+        let i = [];
+        for (let e of r) {
             let t = await e.stats;
             null != t &&
-                s.push({
+                i.push({
                     connection: e.connection,
                     stats: t
                 });
         }
-        e.emit(r.aB.ConnectionStats, s), setTimeout(n, i.T);
+        e.emit(a.aB.ConnectionStats, i), setTimeout(n, o.T);
     };
-    setTimeout(n, i.T);
+    setTimeout(n, o.T);
 }

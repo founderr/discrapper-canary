@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(481060),
-    o = n(239091),
+    o = n(481060),
+    s = n(239091),
     l = n(782568),
     u = n(364640),
     c = n(124072),
@@ -20,16 +20,16 @@ var i = n(120356),
 function p(e) {
     return {
         react(t, i, p) {
-            let I = p.noStyleAndInteraction
+            let m = p.noStyleAndInteraction
                     ? void 0
                     : async (n) => {
                           let r = await (0, d.B_)(t.attachmentUrl);
-                          e.shouldStopPropagation && (null == n || n.stopPropagation()), u.Z.trackLinkClicked(r), e.shouldCloseDefaultModals && (0, s.closeAllModals)(), (0, l.Z)(r);
+                          e.shouldStopPropagation && (null == n || n.stopPropagation()), u.Z.trackLinkClicked(r), e.shouldCloseDefaultModals && (0, o.closeAllModals)(), (0, l.Z)(r);
                       },
-                m = p.noStyleAndInteraction
+                I = p.noStyleAndInteraction
                     ? E.dG4
                     : (e) => {
-                          (0, o.jW)(e, async () => {
+                          (0, s.jW)(e, async () => {
                               let { default: e } = await n.e('98466').then(n.bind(n, 151578));
                               return (n) =>
                                   (0, r.jsx)(e, {
@@ -44,14 +44,14 @@ function p(e) {
                 {
                     role: 'link',
                     href: t.attachmentUrl,
-                    onClick: I,
-                    onContextMenu: m,
+                    onClick: m,
+                    onContextMenu: I,
                     className: 'attachmentLink',
                     children: [
-                        (0, r.jsx)(s.AttachmentIcon, {
+                        (0, r.jsx)(o.AttachmentIcon, {
                             size: 'xs',
                             className: a()(h.icon, f.icon),
-                            color: s.tokens.colors.MENTION_FOREGROUND
+                            color: o.tokens.colors.MENTION_FOREGROUND
                         }),
                         (0, _.S)(t, i, p)
                     ]

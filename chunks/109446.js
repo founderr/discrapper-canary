@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return S;
     }
 }),
     n(47120);
@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(981631),
     E = n(124368),
     N = n(689938),
-    S = n(462397);
-function x(e) {
+    x = n(462397);
+function S(e) {
     let { channel: t } = e,
         r = (0, s.Wu)([d.Z, _.ZP, f.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
@@ -47,10 +47,10 @@ function x(e) {
             (0, h.q)();
         }, []),
         (0, i.jsxs)('div', {
-            className: S.popout,
+            className: x.popout,
             children: [
                 (0, i.jsx)(o.Text, {
-                    className: S.title,
+                    className: x.title,
                     variant: 'text-xs/bold',
                     color: 'header-secondary',
                     children: t.isForumLikeChannel() ? N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM : N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER
@@ -61,7 +61,7 @@ function x(e) {
                     .filter((e) => l.isValidElement(e))
                     .slice(0, c),
                 (0, i.jsx)(o.Clickable, {
-                    className: S.more,
+                    className: x.more,
                     onClick: () => {
                         t.isForumLikeChannel()
                             ? (0, u.Kh)(t.id)
@@ -89,35 +89,35 @@ function v(e) {
         n = (0, s.e7)([m.default], () => m.default.getUser(t.ownerId)),
         l = (0, h.Ok)(t);
     return (0, i.jsxs)(o.Clickable, {
-        className: S.row,
+        className: x.row,
         onClick: (e) => {
             (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, E.on.POPOUT);
         },
         children: [
             null == n
                 ? (0, i.jsx)('img', {
-                      className: S.avatar,
+                      className: x.avatar,
                       src: g.ZP.getDefaultAvatarURL(void 0, void 0),
                       alt: ''
                   })
                 : (0, i.jsx)(c.Z, {
-                      className: S.avatar,
+                      className: x.avatar,
                       user: n,
                       size: o.AvatarSizes.SIZE_16
                   }),
             (0, i.jsx)(o.Text, {
-                className: S.name,
+                className: x.name,
                 variant: 'text-sm/normal',
                 color: 'none',
                 children: t.name
             }),
             (0, i.jsxs)(o.Text, {
-                className: S.timestamp,
+                className: x.timestamp,
                 variant: 'text-sm/normal',
                 color: 'none',
                 children: [
                     (0, i.jsx)('span', {
-                        className: S.bullet,
+                        className: x.bullet,
                         children: '\u2022'
                     }),
                     (0, h.Ye)(l)

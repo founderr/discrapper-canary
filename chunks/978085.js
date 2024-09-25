@@ -12,13 +12,13 @@ n.d(t, {
 var r = n(544891),
     i = n(570140),
     a = n(85521),
-    s = n(73346),
-    o = n(981631);
+    o = n(73346),
+    s = n(981631);
 async function l() {
     try {
-        let e = await (0, s.Kb)(
+        let e = await (0, o.Kb)(
             {
-                url: o.ANM.LIBRARY,
+                url: s.ANM.LIBRARY,
                 oldFormErrors: !0
             },
             !1
@@ -40,7 +40,7 @@ async function u(e) {
     let n = (
         await r.tn
             .get({
-                url: o.ANM.APPLICATION_BRANCH_LIST(e.id),
+                url: s.ANM.APPLICATION_BRANCH_LIST(e.id),
                 oldFormErrors: !0
             })
             .then((e) => e.body)

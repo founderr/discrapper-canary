@@ -1,14 +1,14 @@
 t.d(n, {
     Z: function () {
-        return T;
+        return m;
     },
     k: function () {
-        return l;
+        return a;
     }
 });
-var a,
-    l,
-    s = t(735250);
+var s,
+    a,
+    l = t(735250);
 t(470079);
 var i = t(120356),
     r = t.n(i),
@@ -18,104 +18,104 @@ var i = t(120356),
     u = t(857395),
     _ = t(131154),
     E = t(38981),
-    h = t(142664);
-function T(e) {
-    let { guild: n, stageInstance: t, showGuildPopout: a, setShowGuildPopout: l, handleGuildNameClick: i, source: T, speakers: m, speakerCount: I, audienceCount: N, channelName: x } = e,
-        f = n.id;
-    return (0, s.jsx)('div', {
-        className: h.contentContainer,
-        children: (0, s.jsxs)('div', {
-            className: h.headerContainer,
+    x = t(142664);
+function m(e) {
+    let { guild: n, stageInstance: t, showGuildPopout: s, setShowGuildPopout: a, handleGuildNameClick: i, source: m, speakers: h, speakerCount: I, audienceCount: T, channelName: N } = e,
+        C = n.id;
+    return (0, l.jsx)('div', {
+        className: x.contentContainer,
+        children: (0, l.jsxs)('div', {
+            className: x.headerContainer,
             children: [
-                (0, s.jsxs)('div', {
-                    className: h.guildInfoContainer,
+                (0, l.jsxs)('div', {
+                    className: x.guildInfoContainer,
                     children: [
-                        (0, s.jsx)(u.Z, {
-                            guildId: f,
-                            shouldShow: a,
-                            onRequestClose: () => l(!1),
+                        (0, l.jsx)(u.Z, {
+                            guildId: C,
+                            shouldShow: s,
+                            onRequestClose: () => a(!1),
                             children: () =>
-                                (0, s.jsxs)(o.Clickable, {
-                                    className: h.flexContainerRow,
+                                (0, l.jsxs)(o.Clickable, {
+                                    className: x.flexContainerRow,
                                     onClick: i,
                                     children: [
-                                        (0, s.jsx)(c.Z, {
+                                        (0, l.jsx)(c.Z, {
                                             guild: n,
                                             size: c.Z.Sizes.MINI,
-                                            className: h.guildIcon
+                                            className: x.guildIcon
                                         }),
-                                        (0, s.jsxs)('div', {
-                                            className: h.flexContainerRow,
+                                        (0, l.jsxs)('div', {
+                                            className: x.flexContainerRow,
                                             children: [
-                                                (0, s.jsx)(o.Text, {
+                                                (0, l.jsx)(o.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-sm/normal',
-                                                    className: r()(h.guildName, { [h.disabled]: null == i }),
+                                                    className: r()(x.guildName, { [x.disabled]: null == i }),
                                                     children: n.name
                                                 }),
-                                                (0, s.jsx)(d.Z, { guild: n })
+                                                (0, l.jsx)(d.Z, { guild: n })
                                             ]
                                         })
                                     ]
                                 })
                         }),
-                        (0, s.jsxs)('div', {
-                            className: h.rightJustifiedContent,
+                        (0, l.jsxs)('div', {
+                            className: x.rightJustifiedContent,
                             children: [
-                                6 === T &&
-                                    (0, s.jsx)('div', {
-                                        className: h.featuredTag,
-                                        children: (0, s.jsx)(o.Text, {
+                                6 === m &&
+                                    (0, l.jsx)('div', {
+                                        className: x.featuredTag,
+                                        children: (0, l.jsx)(o.Text, {
                                             variant: 'text-sm/normal',
-                                            className: h.featuredTagText,
+                                            className: x.featuredTagText,
                                             children: 'Featured'
                                         })
                                     }),
-                                (0, s.jsx)(E.Z, {
-                                    count: N,
-                                    className: h.__invalid_audienceCount
+                                (0, l.jsx)(E.Z, {
+                                    count: T,
+                                    className: x.__invalid_audienceCount
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, s.jsx)(o.Text, {
+                (0, l.jsx)(o.Text, {
                     color: 'header-primary',
                     variant: 'text-lg/semibold',
-                    className: h.topicText,
+                    className: x.topicText,
                     children: t.topic
                 }),
-                (0, s.jsx)(o.Text, {
+                (0, l.jsx)(o.Text, {
                     color: 'header-secondary',
-                    className: h.description,
+                    className: x.description,
                     variant: 'text-sm/normal',
                     children: t.description
                 }),
-                (0, s.jsx)(_.Z, {
+                (0, l.jsx)(_.Z, {
                     guild: n,
-                    speakers: m,
+                    speakers: h,
                     speakerCount: I,
-                    className: h.speakers
+                    className: x.speakers
                 }),
-                null != x &&
-                    (0, s.jsxs)(s.Fragment, {
+                null != N &&
+                    (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, s.jsx)('hr', { className: h.divider }),
-                            (0, s.jsxs)('div', {
-                                className: h.footer,
+                            (0, l.jsx)('hr', { className: x.divider }),
+                            (0, l.jsxs)('div', {
+                                className: x.footer,
                                 children: [
-                                    (0, s.jsx)(o.StageIcon, {
+                                    (0, l.jsx)(o.StageIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 20,
                                         height: 20,
-                                        className: h.icon
+                                        className: x.icon
                                     }),
-                                    (0, s.jsx)(o.Text, {
+                                    (0, l.jsx)(o.Text, {
                                         color: 'header-secondary',
-                                        className: h.__invalid_label,
+                                        className: x.__invalid_label,
                                         variant: 'text-sm/normal',
-                                        children: x
+                                        children: N
                                     })
                                 ]
                             })
@@ -125,4 +125,4 @@ function T(e) {
         })
     });
 }
-((a = l || (l = {}))[(a.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (a[(a.TRENDING = 1)] = 'TRENDING'), (a[(a.PERSONALIZED = 2)] = 'PERSONALIZED'), (a[(a.USER_GUILDS = 3)] = 'USER_GUILDS'), (a[(a.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (a[(a.INTRO_CARD = 5)] = 'INTRO_CARD'), (a[(a.FEATURED = 6)] = 'FEATURED');
+((s = a || (a = {}))[(s.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (s[(s.TRENDING = 1)] = 'TRENDING'), (s[(s.PERSONALIZED = 2)] = 'PERSONALIZED'), (s[(s.USER_GUILDS = 3)] = 'USER_GUILDS'), (s[(s.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (s[(s.INTRO_CARD = 5)] = 'INTRO_CARD'), (s[(s.FEATURED = 6)] = 'FEATURED');

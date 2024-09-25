@@ -29,14 +29,14 @@ function a() {
                     dirty: 0
                 };
             } else {
-                let { scrollTop: e, scrollLeft: r, scrollHeight: i, scrollWidth: a, offsetHeight: s, offsetWidth: o } = n;
+                let { scrollTop: e, scrollLeft: r, scrollHeight: i, scrollWidth: a, offsetHeight: o, offsetWidth: s } = n;
                 t.current = {
                     scrollTop: e,
                     scrollLeft: r,
                     scrollHeight: i,
                     scrollWidth: a,
-                    offsetHeight: s,
-                    offsetWidth: o,
+                    offsetHeight: o,
+                    offsetWidth: s,
                     dirty: 0
                 };
             }

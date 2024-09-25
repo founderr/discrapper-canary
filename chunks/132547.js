@@ -21,8 +21,8 @@ var s = n(735250),
     f = n(981631),
     A = n(689938),
     S = n(170367),
-    h = n(865215);
-let M = 'SubscriberNitroHome';
+    M = n(865215);
+let h = 'SubscriberNitroHome';
 t.Z = () => {
     (0, u.z)(_.X);
     let e = a.useRef(null),
@@ -30,8 +30,8 @@ t.Z = () => {
         { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [x, b] = a.useState(!1);
     (0, T.FM)();
-    let O = (0, g.bD)(M),
-        P = (0, g.TW)(M);
+    let O = (0, g.bD)(h),
+        P = (0, g.TW)(h);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(l.AdvancedScrollerAuto, {
@@ -77,7 +77,7 @@ t.Z = () => {
                                 children: (0, s.jsx)('div', { className: S.bottomOfPageVisibilitySensor })
                             }),
                             (0, s.jsx)('img', {
-                                src: h,
+                                src: M,
                                 className: S.bottomIllustration,
                                 width: 112,
                                 height: 85,

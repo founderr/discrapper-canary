@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(952265),
     a = n(626135),
-    s = n(863249),
-    o = n(266395),
+    o = n(863249),
+    s = n(266395),
     l = n(592286),
     u = n(981631);
 let c = () => {
@@ -20,7 +20,7 @@ t.Z = {
         if (__OVERLAY__) return;
         d(e);
         let a = async (t) => {
-            await s.ZP.submitVerificationForm(e, t);
+            await o.ZP.submitVerificationForm(e, t);
         };
         (0, i.ZD)(
             async () => {
@@ -33,8 +33,8 @@ t.Z = {
                         onClose: function () {
                             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                             if (!e) {
-                                if (o.rb.getState().hasUnsubmittedChanges) {
-                                    (0, o.PE)(!0);
+                                if (s.rb.getState().hasUnsubmittedChanges) {
+                                    (0, s.PE)(!0);
                                     return;
                                 }
                                 c();
@@ -46,7 +46,7 @@ t.Z = {
             {
                 modalKey: l.Pn,
                 onCloseRequest: () => {
-                    c(), o.rb.getState().hasUnsubmittedChanges ? (0, o.PE)(!0) : (0, i.Mr)(l.Pn);
+                    c(), s.rb.getState().hasUnsubmittedChanges ? (0, s.PE)(!0) : (0, i.Mr)(l.Pn);
                 },
                 onCloseCallback: t
             }

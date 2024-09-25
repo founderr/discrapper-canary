@@ -1,4 +1,19 @@
-function r() {
+n.d(t, {
+    H2: function () {
+        return i;
+    },
+    JM: function () {
+        return s;
+    },
+    VI: function () {
+        return l;
+    },
+    eK: function () {
+        return a;
+    }
+});
+var r = n(411104);
+function i() {
     return {
         textValue: '',
         richValue: [
@@ -9,28 +24,13 @@ function r() {
         ]
     };
 }
-function i(e) {
+function a(e) {
     return {
         textValue: e,
         richValue: s(e)
     };
 }
-n.d(t, {
-    H2: function () {
-        return r;
-    },
-    JM: function () {
-        return s;
-    },
-    VI: function () {
-        return o;
-    },
-    eK: function () {
-        return i;
-    }
-}),
-    n(411104);
-let a = Object.freeze([
+let o = Object.freeze([
     Object.freeze({
         type: 'line',
         children: Object.freeze([Object.freeze({ text: '' })])
@@ -42,9 +42,9 @@ function s(e) {
               type: 'line',
               children: [{ text: e }]
           }))
-        : a;
+        : o;
 }
-function o(e) {
+function l(e) {
     switch (e.type) {
         case 'userMention':
             return {

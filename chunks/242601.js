@@ -48,8 +48,8 @@ var i = n(735250),
     V = n(210887),
     F = n(592125),
     Y = n(796974),
-    z = n(486472),
-    W = n(984933),
+    W = n(486472),
+    z = n(984933),
     K = n(650774),
     q = n(430824),
     Q = n(819640),
@@ -249,7 +249,7 @@ class eT extends a.PureComponent {
                 className: eh.hubContainer,
                 children: (0, i.jsx)(y.Z, {
                     guild: t,
-                    channel: null != n ? n : W.ZP.getDefaultChannel(t.id)
+                    channel: null != n ? n : z.ZP.getDefaultChannel(t.id)
                 })
             });
         {
@@ -424,18 +424,18 @@ function eS(e) {
         E = (0, o.e7)([Y.Z], () => Y.Z.getGuildDimensions(n).scrollTo),
         h = (0, o.e7)([$.Z], () => $.Z.getChannelId()),
         [f, Z, P] = (0, o.Wu)([X.Z], () => [X.Z.can(ec.Plq.MANAGE_GUILD, d), X.Z.can(ec.Plq.MANAGE_ROLES, d), X.Z.can(ec.Plq.MANAGE_THREADS, d)]),
-        y = (0, o.e7)([z.Z], () => z.Z.isUnavailable(n)),
+        y = (0, o.e7)([W.Z], () => W.Z.isUnavailable(n)),
         G = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
         k = (0, o.e7)([V.Z], () => (V.Z.darkSidebar ? ec.BRd.DARK : V.Z.theme)),
         { enableStudyGroup: H } = (0, D.s)(d),
-        W = (0, A.ZP)((e) => e.currentlyShown.has(c.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
-        [ei, ea] = a.useState(!W),
+        z = (0, A.ZP)((e) => e.currentlyShown.has(c.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        [ei, ea] = a.useState(!z),
         es = (0, I.Z)(n),
         { analyticsLocations: er } = (0, p.ZP)(g.Z.GUILD_HEADER),
         { analyticsLocations: el } = (0, p.ZP)(g.Z.GUILD_CHANNEL_LIST_FOOTER);
     a.useEffect(() => {
-        n !== es && ea(!W);
-    }, [n, es, W]);
+        n !== es && ea(!z);
+    }, [n, es, z]);
     let [eo, e_] = (0, A.ZP)((e) => [ed.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eu.R.GUILD_HEADER_TOOLTIPS)]),
         eE = (0, S.Z)(d),
         eh = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),

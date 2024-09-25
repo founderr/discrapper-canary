@@ -1,29 +1,29 @@
 var r = n(96403),
-    o = n(548828),
+    i = n(548828),
     a = n(982665),
-    i = n(141603),
+    o = n(141603),
     s = n(780524),
-    c = n(809235),
-    l = Function,
-    u = r([].concat),
+    l = n(809235),
+    u = Function,
+    c = r([].concat),
     d = r([].join),
-    p = {},
-    h = function (e, t, n) {
-        if (!i(p, t)) {
-            for (var r = [], o = 0; o < t; o++) r[o] = 'a[' + o + ']';
-            p[t] = l('C,a', 'return new C(' + d(r, ',') + ')');
+    _ = {},
+    E = function (e, t, n) {
+        if (!o(_, t)) {
+            for (var r = [], i = 0; i < t; i++) r[i] = 'a[' + i + ']';
+            _[t] = u('C,a', 'return new C(' + d(r, ',') + ')');
         }
-        return p[t](e, n);
+        return _[t](e, n);
     };
-e.exports = c
-    ? l.bind
+e.exports = l
+    ? u.bind
     : function (e) {
-          var t = o(this),
+          var t = i(this),
               n = t.prototype,
               r = s(arguments, 1),
-              i = function () {
-                  var n = u(r, s(arguments));
-                  return this instanceof i ? h(t, n.length, n) : t.apply(e, n);
+              o = function () {
+                  var n = c(r, s(arguments));
+                  return this instanceof o ? E(t, n.length, n) : t.apply(e, n);
               };
-          return a(n) && (i.prototype = n), i;
+          return a(n) && (o.prototype = n), o;
       };

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return r;
     }
 });
-let i = 'https://dis.gd/appeal';
+let r = 'https://dis.gd/appeal';

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return C;
     }
 }),
     n(47120);
@@ -18,7 +18,7 @@ var r = n(735250),
     x = n(981631),
     f = n(219299),
     p = n(423705);
-let g = [
+let b = [
         {
             label: 'Nitro Monthly',
             value: '511651880837840896'
@@ -52,7 +52,7 @@ let g = [
             value: '1267969164312576000'
         }
     ],
-    b = {
+    g = {
         [x.O0b.UNPAID]: 'Unpaid',
         [x.O0b.ACTIVE]: 'Active',
         [x.O0b.PAST_DUE]: 'Past Due',
@@ -101,7 +101,7 @@ let g = [
             value: x.O0b.PAUSE_PENDING
         }
     ],
-    _ = {
+    j = {
         '511651880837840896': 'Nitro Monthly',
         '511651885459963904': 'Nitro Yearly',
         '511651871736201216': 'Nitro Classic Monthly',
@@ -109,7 +109,7 @@ let g = [
         '978380692553465866': 'Basic Monthly',
         '1024422698568122368': 'Basic Yearly'
     };
-function j() {
+function C() {
     let [e, t] = a.useState('511651880837840896'),
         n = (0, o.e7)([u.ZP], () => u.ZP.getPremiumSubscription()),
         l = async () => {
@@ -145,7 +145,7 @@ function j() {
                                     (0, r.jsx)(c.Select, {
                                         serialize: (e) => e,
                                         isSelected: (t) => t === e,
-                                        options: g,
+                                        options: b,
                                         select: t,
                                         popoutLayerContext: m.O$
                                     }),
@@ -163,15 +163,15 @@ function j() {
                         })
                     ]
                 }),
-                null != n && (0, r.jsx)(C, { subscription: n })
+                null != n && (0, r.jsx)(_, { subscription: n })
             ]
         })
     });
 }
-function C(e) {
+function _(e) {
     var t;
     let { subscription: n } = e,
-        a = (e) => ((null == e && (e = n.status), e in b) ? b[e] : 'Unknown status '.concat(e)),
+        a = (e) => ((null == e && (e = n.status), e in g) ? g[e] : 'Unknown status '.concat(e)),
         l = async (e) => {
             await s.tn.patch({
                 url: '/debug/subscription',
@@ -213,7 +213,7 @@ function C(e) {
                             ' Subscription Type: ',
                             (() => {
                                 let e = n.planIdFromItems;
-                                return null == e ? 'No plan id' : e in _ ? _[e] : 'Unknown plan id '.concat(e);
+                                return null == e ? 'No plan id' : e in j ? j[e] : 'Unknown plan id '.concat(e);
                             })(),
                             ' '
                         ]

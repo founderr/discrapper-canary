@@ -1,19 +1,19 @@
 t.d(A, {
     M: function () {
-        return r;
+        return s;
     }
 });
-var a = t(83439),
-    n = t(100781);
-let r = [
+var n = t(83439),
+    a = t(100781);
+let s = [
     {
         name: 'cool-frog',
         alt: 'A cool frog',
-        data: a.Z
+        data: n.Z
     },
     {
         name: 'cute-bunny',
         alt: 'A cute bunny',
-        data: n.Z
+        data: a.Z
     }
 ];

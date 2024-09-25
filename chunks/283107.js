@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(331595),
     a = n(249849);
-let s = ['#ba3500', '#fd6214', '#ffb84b', '#f0f0f0'],
-    o = ['#35363a', '#57595f', '#d8d8d8'],
+let o = ['#ba3500', '#fd6214', '#ffb84b', '#f0f0f0'],
+    s = ['#35363a', '#57595f', '#d8d8d8'],
     l = [0.05, 0.15, 0.4, 0.9],
     u = [
         {
@@ -46,11 +46,11 @@ let s = ['#ba3500', '#fd6214', '#ffb84b', '#f0f0f0'],
     _ = (e) => {
         let { width: t = 24, height: n = 24, primaryTintColor: _, secondaryTintColor: E, ...f } = e,
             { primaryColorsTransformed: h, secondaryColorsTransformed: p } = (0, a.s)({
-                primaryBaseColors: s,
+                primaryBaseColors: o,
                 primaryTintColor: _,
                 primaryTintLuminances: l,
                 primaryLuminanceWeights: u,
-                secondaryBaseColors: o,
+                secondaryBaseColors: s,
                 secondaryTintColor: E,
                 secondaryTintLuminances: c,
                 secondaryLuminanceWeights: d

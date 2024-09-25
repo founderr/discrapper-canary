@@ -1,6 +1,6 @@
 n.d(t, {
     Gi: function () {
-        return o;
+        return s;
     },
     MP: function () {
         return l;
@@ -15,8 +15,8 @@ n.d(t, {
 var r = n(818083),
     i = n(380684),
     a = n(311476),
-    s = n(474936);
-let o = (0, r.B)({
+    o = n(474936);
+let s = (0, r.B)({
         id: '2024-06_premium_emoji_desktop_upsell',
         label: 'Premium Emoji Desktop Upsell',
         kind: 'user',
@@ -111,12 +111,12 @@ let o = (0, r.B)({
     });
 function c(e) {
     switch (e) {
-        case s.cd.UPLOAD_ERROR_UPSELL:
+        case o.cd.UPLOAD_ERROR_UPSELL:
             return l.getCurrentConfig({ location: 'File Upload Roadblock' }, { autoTrackExposure: !1 }).addSocialProof && !(0, i.XS)();
-        case s.cd.CLIENT_THEMES_UPSELL:
-        case s.cd.APP_ICONS_UPSELL:
+        case o.cd.CLIENT_THEMES_UPSELL:
+        case o.cd.APP_ICONS_UPSELL:
             return a.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
-        case s.cd.FOR_LATER_MODAL_UPSELL:
+        case o.cd.FOR_LATER_MODAL_UPSELL:
             return !0;
         default:
             return !1;

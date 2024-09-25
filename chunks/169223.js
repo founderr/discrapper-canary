@@ -1,21 +1,21 @@
-n(47120);
-var r = n(735250);
+var r = n(47120);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(812206),
+var a = n(481060),
+    o = n(812206),
     s = n(569545),
-    o = n(687516),
-    l = n(981283),
-    u = n(928518),
-    c = n(314897),
-    d = n(592125),
-    _ = n(158776),
-    E = n(19780),
-    f = n(959457),
-    h = n(178635),
-    p = n(531578),
+    l = n(687516),
+    u = n(981283),
+    c = n(928518),
+    d = n(314897),
+    _ = n(592125),
+    E = n(158776),
+    f = n(19780),
+    h = n(959457),
+    p = n(178635),
+    m = n(531578),
     I = n(981631);
-function m(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,13 +28,13 @@ function m(e, t, n) {
         e
     );
 }
-class T extends h.Z {
+class g extends p.Z {
     _initialize() {
-        l.Z.init();
+        u.Z.init();
     }
     constructor(...e) {
         super(...e),
-            m(this, 'actions', {
+            T(this, 'actions', {
                 VOICE_CHANNEL_SHOW_FEEDBACK: (e) => this.handleVoiceChannelFeedback(e),
                 STREAM_CLOSE: (e) => this.handleStreamClose(e),
                 VIDEO_BACKGROUND_SHOW_FEEDBACK: (e) => this.handleVideoBackgroundShowFeedback(e),
@@ -42,109 +42,109 @@ class T extends h.Z {
                 IN_APP_REPORTS_SHOW_FEEDBACK: (e) => this.handleInAppReportsFeedback(e),
                 USER_DM_MUTE_SHOW_FEEDBACK: (e) => this.handleUserDmMuteFeedback(e)
             }),
-            m(this, 'handleVoiceChannelFeedback', (e) => {
+            T(this, 'handleVoiceChannelFeedback', (e) => {
                 let { analyticsData: t } = e;
-                this.possiblyShowFeedbackModal(p.nw.VOICE, () => {
-                    (0, i.openModalLazy)(async () => {
+                this.possiblyShowFeedbackModal(m.nw.VOICE, () => {
+                    (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('96888').then(n.bind(n, 988645));
                         return (n) =>
-                            (0, r.jsx)(e, {
+                            (0, i.jsx)(e, {
                                 ...n,
                                 analyticsData: t
                             });
                     });
                 });
             }),
-            m(this, 'handleStreamClose', (e) => {
+            T(this, 'handleStreamClose', (e) => {
                 var t;
-                let { streamKey: a, canShowFeedback: l } = e,
-                    u = (0, s.my)(a),
-                    d = (0, o.L2)(u, _.Z),
-                    E = null !== (t = f.Z.getVideoStats(a)) && void 0 !== t ? t : {},
-                    h = {
-                        media_session_id: f.Z.getMediaSessionId(a),
-                        rtc_connection_id: f.Z.getRtcConnectionId(a),
-                        stream_region: f.Z.getRegion(a),
-                        max_viewers: f.Z.getMaxViewers(a),
-                        ...E
+                let { streamKey: r, canShowFeedback: o } = e,
+                    u = (0, s.my)(r),
+                    c = (0, l.L2)(u, E.Z),
+                    _ = null !== (t = h.Z.getVideoStats(r)) && void 0 !== t ? t : {},
+                    f = {
+                        media_session_id: h.Z.getMediaSessionId(r),
+                        rtc_connection_id: h.Z.getRtcConnectionId(r),
+                        stream_region: h.Z.getRegion(r),
+                        max_viewers: h.Z.getMaxViewers(r),
+                        ..._
                     };
-                l &&
-                    this.possiblyShowFeedbackModal(p.nw.STREAM, () => {
-                        (0, i.openModalLazy)(async () => {
+                o &&
+                    this.possiblyShowFeedbackModal(m.nw.STREAM, () => {
+                        (0, a.openModalLazy)(async () => {
                             let { default: e } = await n.e('23657').then(n.bind(n, 142402));
                             return (t) =>
-                                (0, r.jsx)(e, {
+                                (0, i.jsx)(e, {
                                     stream: u,
-                                    streamApplication: d,
-                                    isStreamer: u.ownerId === c.default.getId(),
+                                    streamApplication: c,
+                                    isStreamer: u.ownerId === d.default.getId(),
                                     ...t,
-                                    analyticsData: h
+                                    analyticsData: f
                                 });
                         });
                     });
             }),
-            m(this, 'handleVideoBackgroundShowFeedback', (e) => {
+            T(this, 'handleVideoBackgroundShowFeedback', (e) => {
                 let { analyticsData: t } = e;
-                this.possiblyShowFeedbackModal(p.nw.VIDEO_BACKGROUND, () => {
-                    (0, i.openModalLazy)(async () => {
+                this.possiblyShowFeedbackModal(m.nw.VIDEO_BACKGROUND, () => {
+                    (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('11495').then(n.bind(n, 801320));
                         return (n) =>
-                            (0, r.jsx)(e, {
+                            (0, i.jsx)(e, {
                                 ...n,
                                 analyticsData: t
                             });
                     });
                 });
             }),
-            m(this, 'handleActivityClose', (e) => {
-                let { applicationId: t, channelId: s, showFeedback: o } = e,
-                    l = a.Z.getApplication(t),
-                    c = d.Z.getChannel(s),
-                    _ = {
-                        rtc_connection_id: E.Z.getRTCConnectionId(),
-                        media_session_id: E.Z.getMediaSessionId()
+            T(this, 'handleActivityClose', (e) => {
+                let { applicationId: t, channelId: r, showFeedback: s } = e,
+                    l = o.Z.getApplication(t),
+                    u = _.Z.getChannel(r),
+                    d = {
+                        rtc_connection_id: f.Z.getRTCConnectionId(),
+                        media_session_id: f.Z.getMediaSessionId()
                     },
-                    f = u.Z.getWindowOpen(I.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+                    E = c.Z.getWindowOpen(I.KJ3.CHANNEL_CALL_POPOUT) ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
                 null != l &&
-                    null != c &&
-                    o &&
-                    this.possiblyShowFeedbackModal(p.nw.ACTIVITY, () => {
-                        (0, i.openModalLazy)(
+                    null != u &&
+                    s &&
+                    this.possiblyShowFeedbackModal(m.nw.ACTIVITY, () => {
+                        (0, a.openModalLazy)(
                             async () => {
                                 let { default: e } = await n.e('4413').then(n.bind(n, 450634));
                                 return (t) =>
-                                    (0, r.jsx)(e, {
+                                    (0, i.jsx)(e, {
                                         ...t,
                                         activityApplication: l,
-                                        channel: c,
-                                        analyticsData: _
+                                        channel: u,
+                                        analyticsData: d
                                     });
                             },
-                            { contextKey: f }
+                            { contextKey: E }
                         );
                     });
             }),
-            m(this, 'handleInAppReportsFeedback', (e) => {
-                let { reportId: t, reportType: a } = e;
-                this.possiblyShowFeedbackModal(p.nw.IN_APP_REPORTS, () => {
-                    (0, i.openModalLazy)(async () => {
+            T(this, 'handleInAppReportsFeedback', (e) => {
+                let { reportId: t, reportType: r } = e;
+                this.possiblyShowFeedbackModal(m.nw.IN_APP_REPORTS, () => {
+                    (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('72135').then(n.bind(n, 442173));
                         return (n) =>
-                            (0, r.jsx)(e, {
+                            (0, i.jsx)(e, {
                                 ...n,
                                 reportId: t,
-                                reportType: a
+                                reportType: r
                             });
                     });
                 });
             }),
-            m(this, 'handleUserDmMuteFeedback', (e) => {
+            T(this, 'handleUserDmMuteFeedback', (e) => {
                 let { channel: t } = e;
-                this.possiblyShowFeedbackModal(p.nw.USER_DM_MUTE, () => {
-                    (0, i.openModalLazy)(async () => {
+                this.possiblyShowFeedbackModal(m.nw.USER_DM_MUTE, () => {
+                    (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('10620').then(n.bind(n, 408561));
                         return (n) =>
-                            (0, r.jsx)(e, {
+                            (0, i.jsx)(e, {
                                 ...n,
                                 channel: t
                             });
@@ -153,4 +153,4 @@ class T extends h.Z {
             });
     }
 }
-t.Z = new T();
+t.Z = new g();

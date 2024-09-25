@@ -1,9 +1,9 @@
-var r, i;
+var r;
 n.d(t, {
     Z: function () {
         return r;
     }
 }),
-    ((i = r || (r = {}))[(i.COACHTIP = 0)] = 'COACHTIP'),
-    (i[(i.BADGE = 1)] = 'BADGE'),
-    (i[(i.BANNER = 2)] = 'BANNER');
+    !(function (e) {
+        (e[(e.COACHTIP = 0)] = 'COACHTIP'), (e[(e.BADGE = 1)] = 'BADGE'), (e[(e.BANNER = 2)] = 'BANNER');
+    })(r || (r = {}));

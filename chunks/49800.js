@@ -9,8 +9,8 @@ n.d(t, {
 var r,
     i = n(735250),
     a = n(470079),
-    s = n(120356),
-    o = n.n(s),
+    o = n(120356),
+    s = n.n(o),
     l = n(951894);
 function u(e, t, n) {
     return (
@@ -36,11 +36,11 @@ let c = {
 class d extends (r = a.PureComponent) {
     render() {
         let e;
-        let { children: t, editable: n, type: r, className: a, outline: s, ...u } = this.props;
+        let { children: t, editable: n, type: r, className: a, outline: o, ...u } = this.props;
         return (
-            s ? (e = l.outline) : r === c.PRIMARY && n && (e = l.editable),
+            o ? (e = l.outline) : r === c.PRIMARY && n && (e = l.editable),
             (0, i.jsx)('div', {
-                className: o()(a, r, e),
+                className: s()(a, r, e),
                 ...u,
                 children: t
             })

@@ -1,10 +1,10 @@
 t.d(A, {
     F: function () {
-        return n;
+        return a;
     }
 });
-var a = t(680287);
-function n(e) {
+var n = t(680287);
+function a(e) {
     let A = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'POST';
-    return new a.Z(e, A, { raiseEndpointErrors: !0 });
+    return new n.Z(e, A, { raiseEndpointErrors: !0 });
 }

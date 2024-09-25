@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(346610),
     T = n(868643),
     x = n(245216),
-    S = n(223606),
-    v = n(188597),
+    v = n(223606),
+    S = n(188597),
     N = n(41776),
     A = n(222677),
     Z = n(995774),
@@ -29,12 +29,12 @@ var i = n(735250),
     R = n(2818),
     L = n(768943),
     j = n(665906),
-    P = n(695346),
-    O = n(314897),
+    O = n(695346),
+    P = n(314897),
     y = n(323873),
     D = n(271383),
-    U = n(430824),
-    k = n(607744),
+    k = n(430824),
+    U = n(607744),
     w = n(496675),
     B = n(626135),
     H = n(572004),
@@ -155,8 +155,8 @@ function ec(e) {
             canPublish: f,
             canReact: g,
             canConfigureJoin: C,
-            canReply: S,
-            canStartThread: v,
+            canReply: v,
+            canStartThread: S,
             canViewThread: A,
             canForward: Z,
             isExpanded: M,
@@ -171,13 +171,13 @@ function ec(e) {
         } = (function (e) {
             let { channel: t, message: n, showEmojiPicker: i, showEmojiBurstPicker: s, showMoreUtilities: a, setPopout: l, isFocused: r } = e,
                 { author: o } = n,
-                u = (0, c.e7)([U.Z], () => U.Z.getGuild(t.guild_id), [t.guild_id]),
-                d = (0, c.e7)([O.default], () => O.default.getId()),
+                u = (0, c.e7)([k.Z], () => k.Z.getGuild(t.guild_id), [t.guild_id]),
+                d = (0, c.e7)([P.default], () => P.default.getId()),
                 h = (0, j.$R)(t),
                 _ = (0, j.Gu)(t),
-                f = P.nc.useSetting(),
-                E = P.Sb.useSetting(),
-                g = (0, c.e7)([k.Z], () => null == t.guild_id || k.Z.canChatInGuild(t.guild_id), [t]),
+                f = O.nc.useSetting(),
+                E = O.Sb.useSetting(),
+                g = (0, c.e7)([U.Z], () => null == t.guild_id || U.Z.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: C, canAddNewReactions: x } = (0, c.cj)(
                     [w.Z],
                     () => ({
@@ -186,8 +186,8 @@ function ec(e) {
                     }),
                     [t, g]
                 ),
-                S = (0, b.U)(t, n),
-                v = (0, j.NE)(t, n),
+                v = (0, b.U)(t, n),
+                S = (0, j.NE)(t, n),
                 A = (0, j.Ek)(n),
                 Z = (0, c.e7)([N.Z], () => null != t.guild_id && N.Z.isLurking(t.guild_id), [t]),
                 M = (0, c.e7)([D.ZP], () => null != t.guild_id && D.ZP.isCurrentUserGuest(t.guild_id), [t]),
@@ -222,8 +222,8 @@ function ec(e) {
                 canEdit: K,
                 canDelete: B,
                 canReport: G,
-                canReply: S,
-                canStartThread: v,
+                canReply: v,
+                canStartThread: S,
                 canViewThread: A,
                 canForward: et && en,
                 canCopy: H.wS,
@@ -342,7 +342,7 @@ function ec(e) {
                                     'pin'
                                 )
                               : null,
-                          v && Z
+                          S && Z
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
@@ -353,7 +353,7 @@ function ec(e) {
                                     'thread'
                                 )
                               : null,
-                          S && h
+                          v && h
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
@@ -392,7 +392,7 @@ function ec(e) {
                       ]
                   })
                 : null,
-            S && !h
+            v && !h
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -428,7 +428,7 @@ function ec(e) {
                       'forward'
                   )
                 : null,
-            v && !Z
+            S && !Z
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -439,7 +439,7 @@ function ec(e) {
                       'thread'
                   )
                 : null,
-            !v && A
+            !S && A
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -514,8 +514,8 @@ function ec(e) {
 }
 function eu(e) {
     let { channel: t, message: n } = e,
-        s = (0, c.e7)([S.Z], () => null != S.Z.getMessage(n.id), [n.id]),
-        a = null == n.interaction || (null != n.interactionData && (0, v.$s)(n.interactionData));
+        s = (0, c.e7)([v.Z], () => null != v.Z.getMessage(n.id), [n.id]),
+        a = null == n.interaction || (null != n.interactionData && (0, S.$s)(n.interactionData));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !s &&

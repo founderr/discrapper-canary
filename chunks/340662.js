@@ -1,5 +1,5 @@
 var r = n(67867),
-    o = n(653457);
+    i = n(653457);
 r(
     {
         target: 'Promise',
@@ -7,7 +7,7 @@ r(
     },
     {
         withResolvers: function () {
-            var e = o.f(this);
+            var e = i.f(this);
             return {
                 promise: e.promise,
                 resolve: e.resolve,

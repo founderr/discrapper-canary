@@ -37,8 +37,8 @@ var l = n(735250),
     A = n(644548),
     S = n(335326),
     M = n(268010),
-    y = n(797342),
-    O = n(206583);
+    O = n(797342),
+    y = n(206583);
 let R = 72;
 function j(e) {
     return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? R : 0;
@@ -101,7 +101,7 @@ let L = (e) => {
             },
             closePopout: n,
             onVoiceChannelPreview: (e, n) => {
-                (0, v.L)(O.xP.VOICE_CHANNEL_PREVIEWED, {
+                (0, v.L)(y.xP.VOICE_CHANNEL_PREVIEWED, {
                     entry: a.entry,
                     channelId: a.channel.id,
                     guildId: a.channel.guild_id,
@@ -159,7 +159,7 @@ t.ZP = a.memo((e) => {
         [m, x] = a.useState('default'),
         E = (0, s.JA)(''.concat(i)),
         T = null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
-        { isRich: p, appName: f } = (0, y.n)(o.entry),
+        { isRich: p, appName: f } = (0, O.n)(o.entry),
         g = {
             entry: o.entry,
             channelId: o.channel.id,
@@ -194,7 +194,7 @@ t.ZP = a.memo((e) => {
         R = a.useCallback(
             r().throttle(
                 (e) => {
-                    (0, v.L)(O.xP.CARD_POPOUT_OPEN, e);
+                    (0, v.L)(y.xP.CARD_POPOUT_OPEN, e);
                 },
                 2000,
                 {

@@ -1,3 +1,8 @@
+n.d(t, {
+    A: function () {
+        return r;
+    }
+});
 function r() {
     return {
         get: (e, t, n = { miss: () => Promise.resolve() }) =>
@@ -9,8 +14,3 @@ function r() {
         clear: () => Promise.resolve()
     };
 }
-n.d(t, {
-    A: function () {
-        return r;
-    }
-});

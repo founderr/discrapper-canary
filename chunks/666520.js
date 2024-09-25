@@ -9,8 +9,8 @@ var t,
     o = s(470079),
     l = s(699581),
     r = s(442837),
-    c = s(481060),
-    a = s(34854),
+    a = s(481060),
+    c = s(34854),
     d = s(531301),
     u = s(246946),
     _ = s(981631),
@@ -42,7 +42,7 @@ class m extends (t = o.PureComponent) {
             ? null
             : (0, i.jsx)('div', {
                   className: e,
-                  children: (0, i.jsx)(c.TextAreaAutosize, {
+                  children: (0, i.jsx)(a.TextAreaAutosize, {
                       ref: this.noteRef,
                       className: E.textarea,
                       disabled: n,
@@ -61,7 +61,7 @@ class m extends (t = o.PureComponent) {
             f(this, 'handleBlur', (e) => {
                 let n = e.currentTarget.value,
                     { note: s, userId: t, onUpdate: i } = this.props;
-                if ((null != s ? s : '') !== n) null == i || i(), a.Z.updateNote(t, n);
+                if ((null != s ? s : '') !== n) null == i || i(), c.Z.updateNote(t, n);
             }),
             f(this, 'handleKeyPress', (e) => {
                 if (13 === e.which) {

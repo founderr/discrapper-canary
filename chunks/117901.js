@@ -1,8 +1,8 @@
 var r = n(566885),
     i = n(926515),
     a = n(339718),
-    s = n(627060),
-    o = n(908355),
+    o = n(627060),
+    s = n(908355),
     l = n(933676),
     u = n(49693),
     c = n(182867),
@@ -15,16 +15,16 @@ e.exports = function (e) {
         f,
         h,
         p,
-        I,
-        m = a(e),
+        m,
+        I = a(e),
         T = l(this),
-        S = arguments.length,
-        g = S > 1 ? arguments[1] : void 0,
-        A = void 0 !== g;
-    A && (g = r(g, S > 2 ? arguments[2] : void 0));
-    var N = _(m),
-        O = 0;
-    if (N && !(this === E && o(N))) for (p = (h = d(m, N)).next, n = T ? new this() : []; !(f = i(p, h)).done; O++) (I = A ? s(h, g, [f.value, O], !0) : f.value), c(n, O, I);
-    else for (t = u(m), n = T ? new this(t) : E(t); t > O; O++) (I = A ? g(m[O], O) : m[O]), c(n, O, I);
-    return (n.length = O), n;
+        g = arguments.length,
+        S = g > 1 ? arguments[1] : void 0,
+        A = void 0 !== S;
+    A && (S = r(S, g > 2 ? arguments[2] : void 0));
+    var v = _(I),
+        N = 0;
+    if (v && !(this === E && s(v))) for (p = (h = d(I, v)).next, n = T ? new this() : []; !(f = i(p, h)).done; N++) (m = A ? o(h, S, [f.value, N], !0) : f.value), c(n, N, m);
+    else for (t = u(I), n = T ? new this(t) : E(t); t > N; N++) (m = A ? S(I[N], N) : I[N]), c(n, N, m);
+    return (n.length = N), n;
 };

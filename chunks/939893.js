@@ -1,23 +1,23 @@
-var i = t(735250);
-t(470079);
-var a = t(302454),
-    r = t.n(a),
-    o = t(481060),
-    l = t(447543),
-    s = t(15470),
-    c = t(960904),
-    d = t(830121),
-    u = t(746878),
-    _ = t(241209);
+var i = n(735250);
+n(470079);
+var t = n(302454),
+    r = n.n(t),
+    l = n(481060),
+    s = n(447543),
+    o = n(15470),
+    c = n(960904),
+    d = n(830121),
+    u = n(746878),
+    _ = n(241209);
 let p = /^discord.gg\/[a-zA-Z0-9-]+/,
     m = {
         ..._.Z.rules,
-        heading: { ...s.i.heading },
+        heading: { ...o.i.heading },
         image: { ...r().defaultRules.image },
         inviteLink: {
             order: _.Z.rules.link.order + 1,
-            match: (e, n) => (n.inline ? p.exec(e) : null),
-            parse: (e, n, t) => {
+            match: (e, a) => (a.inline ? p.exec(e) : null),
+            parse: (e, a, n) => {
                 let i = (0, d.zO)(e[0]);
                 return null == i || i.type !== c.g.INVITE
                     ? {
@@ -34,25 +34,25 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
                           ],
                           onClick: () => {
                               var e;
-                              l.Z.acceptInviteAndTransitionToInviteChannel({
+                              s.Z.acceptInviteAndTransitionToInviteChannel({
                                   inviteKey: i.code,
                                   context: { location: 'Application Directory' }
                               }),
-                                  null === (e = t.closeModal) || void 0 === e || e.call(t);
+                                  null === (e = n.closeModal) || void 0 === e || e.call(n);
                           }
                       };
             },
-            react: (e, n, t) =>
+            react: (e, a, n) =>
                 (0, i.jsx)(
-                    o.Anchor,
+                    l.Anchor,
                     {
-                        onClick: (n) => {
-                            n.preventDefault(), e.onClick();
+                        onClick: (a) => {
+                            a.preventDefault(), e.onClick();
                         },
-                        children: (0, u.S)(e, n, t)
+                        children: (0, u.S)(e, a, n)
                     },
-                    t.key
+                    n.key
                 )
         }
     };
-n.Z = m;
+a.Z = m;

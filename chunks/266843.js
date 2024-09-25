@@ -1,51 +1,51 @@
 n.d(t, {
     O: function () {
-        return o;
+        return u;
     },
     h: function () {
         return l;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(470079),
-    s = n(481060),
-    a = n(393238),
-    r = n(87894);
+    a = n(481060),
+    o = n(393238),
+    s = n(87894);
 function l() {
     let e = i.useRef(null),
         [t, n] = i.useState('lg'),
-        [s, l] = i.useState(void 0);
+        [r, a] = i.useState(void 0);
     return (
-        (0, a.P)(e, (e) => {
-            let { width: t, scrollHeight: i } = e;
-            return (l(i), null == t || t > r.j2) ? n('lg') : t > r.Z0 ? n('sm') : n('xs');
+        (0, o.P)(e, (e) => {
+            let { width: t, scrollHeight: r } = e;
+            return (a(r), null == t || t > s.j2) ? n('lg') : t > s.Z0 ? n('sm') : n('xs');
         }),
         {
             containerRef: e,
             size: t,
-            height: s
+            height: r
         }
     );
 }
-function o(e) {
+function u(e) {
     let { initiallyExpanded: t } = e,
-        [n, a] = i.useState(t),
-        [r, l] = i.useState(!1),
-        o = i.useCallback(() => {
-            a((e) => !e), l(!0);
+        [n, r] = i.useState(t),
+        [o, s] = i.useState(!1),
+        l = i.useCallback(() => {
+            r((e) => !e), s(!0);
         }, []),
-        { expansionSpring: c } = (0, s.useSpring)({
+        { expansionSpring: u } = (0, a.useSpring)({
             expansionSpring: n ? 1 : 0,
             config: {
                 tension: 450,
                 friction: 45
             },
-            onRest: () => l(!1)
+            onRest: () => s(!1)
         });
     return {
-        expansionSpring: c,
-        isAnimating: r,
+        expansionSpring: u,
+        isAnimating: o,
         isExpanded: n,
-        toggleExpanded: o
+        toggleExpanded: l
     };
 }

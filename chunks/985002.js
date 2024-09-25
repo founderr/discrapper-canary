@@ -20,7 +20,7 @@ function l(e) {
         [C, p] = s.useState(!1),
         [f, A] = s.useState(!1),
         S = l || d || u || T || g || f,
-        h = s.useCallback(
+        M = s.useCallback(
             async (e) => {
                 if (!S) {
                     c(!0);
@@ -36,7 +36,7 @@ function l(e) {
             },
             [S, t, n]
         ),
-        M = s.useCallback(
+        h = s.useCallback(
             async (e) => {
                 if (!S) {
                     _(!0);
@@ -130,8 +130,8 @@ function l(e) {
             [g, t, n]
         );
     return {
-        acceptLinkRequest: h,
-        declineLinkRequest: M,
+        acceptLinkRequest: M,
+        declineLinkRequest: h,
         disconnectLinkRequest: x,
         cancelLinkRequest: b,
         selectTeenUser: P,

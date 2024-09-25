@@ -1,67 +1,67 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(686546),
-    l = n(768581),
-    u = n(895924),
-    c = n(696967),
-    d = n(970952);
-function _(e) {
-    let { section: t, isSelected: n, width: a, height: _, className: E, selectable: f = !1, isSquircle: h, onFocus: p, onBlur: I, onMouseOver: m, onMouseLeave: T, ...S } = e,
-        [g, A] = i.useState(!1),
-        N = i.useCallback(() => {
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(686546),
+    u = n(768581),
+    c = n(895924),
+    d = n(696967),
+    _ = n(970952);
+function E(e) {
+    let { section: t, isSelected: n, width: r, height: o, className: E, selectable: f = !1, isSquircle: h, onFocus: p, onBlur: m, onMouseOver: I, onMouseLeave: T, ...g } = e,
+        [S, A] = a.useState(!1),
+        v = a.useCallback(() => {
             A(!0), null == p || p();
         }, [p]),
-        O = i.useCallback(() => {
-            A(!1), null == I || I();
-        }, [I]),
-        R = i.useCallback(() => {
-            A(!0), null == m || m();
+        N = a.useCallback(() => {
+            A(!1), null == m || m();
         }, [m]),
-        v = i.useCallback(() => {
+        O = a.useCallback(() => {
+            A(!0), null == I || I();
+        }, [I]),
+        R = a.useCallback(() => {
             A(!1), null == T || T();
         }, [T]),
-        C = i.useMemo(() => {
-            if (t.type === u.Qi.APPLICATION) {
+        C = a.useMemo(() => {
+            if (t.type === c.Qi.APPLICATION) {
                 var e;
-                return l.ZP.getApplicationIconURL({
+                return u.ZP.getApplicationIconURL({
                     id: t.id,
                     icon: t.icon,
                     bot: null === (e = t.application) || void 0 === e ? void 0 : e.bot,
                     botIconFirst: !0,
-                    size: a
+                    size: r
                 });
             }
-            return d;
-        }, [t, a]);
-    return (0, r.jsx)('div', {
-        ...S,
-        className: s()(c.wrapper, E, {
-            [c.selectable]: f,
-            [c.selected]: f && n
+            return _;
+        }, [t, r]);
+    return (0, i.jsx)('div', {
+        ...g,
+        className: s()(d.wrapper, E, {
+            [d.selectable]: f,
+            [d.selected]: f && n
         }),
-        onFocus: N,
-        onBlur: O,
-        onMouseOver: R,
-        onMouseLeave: v,
-        children: (0, r.jsx)(o.ZP, {
-            className: c.mask,
-            mask: h || (f && (n || g)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
-            width: a,
-            height: _,
-            children: (0, r.jsx)('img', {
+        onFocus: v,
+        onBlur: N,
+        onMouseOver: O,
+        onMouseLeave: R,
+        children: (0, i.jsx)(l.ZP, {
+            className: d.mask,
+            mask: h || (f && (n || S)) ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
+            width: r,
+            height: o,
+            children: (0, i.jsx)('img', {
                 alt: '',
-                className: c.icon,
+                className: d.icon,
                 style: {
-                    width: a,
-                    height: _
+                    width: r,
+                    height: o
                 },
                 src: C
             })

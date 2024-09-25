@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return o;
     }
 });
-var s = n(735250),
-    o = n(470079),
+var r = n(735250),
+    i = n(470079),
     a = n(618158);
-function i(e) {
+function o(e) {
     let { children: t } = e,
-        { preventIdle: n, allowIdle: i } = (0, a.Y)('popup');
-    return o.useEffect(() => (n(), () => i()), [i, n]), (0, s.jsx)(s.Fragment, { children: t });
+        { preventIdle: n, allowIdle: o } = (0, a.Y)('popup');
+    return i.useEffect(() => (n(), () => o()), [o, n]), (0, r.jsx)(r.Fragment, { children: t });
 }

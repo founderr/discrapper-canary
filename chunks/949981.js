@@ -1,84 +1,84 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return I;
     }
-}),
-    n(724458),
-    n(653041);
-var i = n(735250);
+});
+var r = n(724458);
+var i = n(653041);
+var a = n(735250);
 n(470079);
-var s = n(512722),
-    a = n.n(s),
-    r = n(442837),
-    l = n(955415),
-    o = n(131704),
-    c = n(592125),
-    u = n(594174),
-    d = n(823379),
-    _ = n(358595),
-    E = n(981631),
-    I = n(689938),
+var o = n(512722),
+    s = n.n(o),
+    l = n(442837),
+    u = n(955415),
+    c = n(131704),
+    d = n(592125),
+    _ = n(594174),
+    E = n(823379),
+    f = n(358595),
+    h = n(981631),
+    p = n(689938),
     m = n(691784);
-function T(e) {
+function I(e) {
     let t,
-        { invite: n, author: s, currentUserId: T, onTransitionToInviteChannel: h, onAcceptInstantInvite: N } = e,
-        f = T === s.id,
-        C = n.state === E.r2o.ACCEPTING,
-        p = (0, r.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
-    a()(null == p || p.isPrivate(), 'must be a private channel');
-    let g = null != p;
-    if (null == p) {
-        if (null == n.channel) return (0, i.jsx)(_.Z, {});
-        (p = (0, o.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
+        { invite: n, author: r, currentUserId: i, onTransitionToInviteChannel: o, onAcceptInstantInvite: I } = e,
+        T = i === r.id,
+        g = n.state === h.r2o.ACCEPTING,
+        S = (0, l.e7)([d.Z], () => (null != n.channel ? d.Z.getChannel(n.channel.id) : null), [n]);
+    s()(null == S || S.isPrivate(), 'must be a private channel');
+    let A = null != S;
+    if (null == S) {
+        if (null == n.channel) return (0, a.jsx)(f.Z, {});
+        (S = (0, c.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
     } else {
-        t = p.recipients.reduce((e, t) => {
-            let n = u.default.getUser(t);
+        t = S.recipients.reduce((e, t) => {
+            let n = _.default.getUser(t);
             return null != n && e.push(n), e;
         }, []);
-        let e = u.default.getCurrentUser();
-        g && null != e && t.push(e);
+        let e = _.default.getCurrentUser();
+        A && null != e && t.push(e);
     }
-    let A = p.name;
-    (null == A || '' === A) &&
-        (A =
+    let v = S.name;
+    (null == v || '' === v) &&
+        (v =
             t.length > 0
                 ? t
-                      .filter(d.lm)
+                      .filter(E.lm)
                       .map((e) => e.username)
                       .join(', ')
-                : I.Z.Messages.UNNAMED);
-    let S = g ? h : N,
-        x = I.Z.Messages.JOIN_GUILD,
-        R = l.Z.Button.Colors.GREEN;
-    g && ((x = I.Z.Messages.JOINED_GUILD), (R = l.Z.Button.Colors.PRIMARY));
-    let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+                : p.Z.Messages.UNNAMED);
+    let N = A ? o : I,
+        O = p.Z.Messages.JOIN_GUILD,
+        R = u.Z.Button.Colors.GREEN;
+    A && ((O = p.Z.Messages.JOINED_GUILD), (R = u.Z.Button.Colors.PRIMARY));
+    let C = p.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
     return (
-        f && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM),
-        (0, i.jsxs)(l.Z, {
+        T && (C = p.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM),
+        (0, a.jsxs)(u.Z, {
             children: [
-                (0, i.jsx)(l.Z.Header, { text: O }),
-                (0, i.jsxs)(l.Z.Body, {
+                (0, a.jsx)(u.Z.Header, { text: C }),
+                (0, a.jsxs)(u.Z.Body, {
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, a.jsxs)('div', {
                             className: m.headerLine,
                             children: [
-                                (0, i.jsx)(l.Z.Icon, {
-                                    channel: p,
-                                    onClick: g ? S : void 0
+                                (0, a.jsx)(u.Z.Icon, {
+                                    channel: S,
+                                    onClick: A ? N : void 0
                                 }),
-                                (0, i.jsx)(l.Z.Info, {
-                                    title: A,
-                                    onClick: g ? S : void 0,
-                                    children: (0, i.jsx)(l.Z.Data, { members: t.length })
+                                (0, a.jsx)(u.Z.Info, {
+                                    title: v,
+                                    onClick: A ? N : void 0,
+                                    children: (0, a.jsx)(u.Z.Data, { members: t.length })
                                 })
                             ]
                         }),
-                        (0, i.jsx)(l.Z.Button, {
-                            onClick: S,
-                            submitting: C,
-                            isDisabled: g,
+                        (0, a.jsx)(u.Z.Button, {
+                            onClick: N,
+                            submitting: g,
+                            isDisabled: A,
                             color: R,
-                            children: x
+                            children: O
                         })
                     ]
                 })

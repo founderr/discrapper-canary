@@ -1,12 +1,12 @@
 var r = n(700312).charAt,
     i = n(714050),
     a = n(644659),
-    s = n(828114),
-    o = n(535586),
+    o = n(828114),
+    s = n(535586),
     l = 'String Iterator',
     u = a.set,
     c = a.getterFor(l);
-s(
+o(
     String,
     'String',
     function (e) {
@@ -21,6 +21,6 @@ s(
             t = c(this),
             n = t.string,
             i = t.index;
-        return i >= n.length ? o(void 0, !0) : ((e = r(n, i)), (t.index += e.length), o(e, !1));
+        return i >= n.length ? s(void 0, !0) : ((e = r(n, i)), (t.index += e.length), s(e, !1));
     }
 );

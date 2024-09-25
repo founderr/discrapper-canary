@@ -33,7 +33,7 @@ var l = n(735250),
     A = n(689938),
     S = n(290500),
     M = n(738127);
-let y = (e, t, n) => {
+let O = (e, t, n) => {
     let { artist: l, media: a } = e,
         i = A.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST,
         r = _.ZP.getName(t.guild_id, t.id, n);
@@ -45,7 +45,7 @@ let y = (e, t, n) => {
         })
         .replaceAll('*', '');
 };
-function O(e) {
+function y(e) {
     let { activity: t } = e,
         n = t.timestamps,
         i = (0, C.tS)(),
@@ -91,7 +91,7 @@ function R(e) {
         R,
         { channel: j, entry: L, closePopout: w, onReaction: b, onVoiceChannelPreview: D } = e,
         { largeImage: U } = (0, v.rv)({ entry: L }),
-        { activity: B, currentEntry: k, artist: F, title: G, user: H } = (0, g.pi)(L),
+        { activity: B, currentEntry: k, artist: G, title: F, user: H } = (0, g.pi)(L),
         { primaryColor: V, secondaryColor: Y } = (0, f.Z)(null == U ? void 0 : U.src),
         z = (0, r.e7)([c.Z, x.default], () => ((null == B ? void 0 : B.type) === P.IIU.LISTENING && null != H ? (0, h.Z)(c.Z, x.default, H, B) : void 0), [B, H], s.Z),
         W = a.useCallback(() => {
@@ -103,11 +103,11 @@ function R(e) {
                 user: H,
                 channel: j,
                 mediaImageSrc: null == U ? void 0 : U.src,
-                artist: F,
-                description: y(
+                artist: G,
+                description: O(
                     {
-                        artist: F,
-                        media: G
+                        artist: G,
+                        media: F
                     },
                     j,
                     H
@@ -115,9 +115,9 @@ function R(e) {
                 colors: [V, Y],
                 badges: (0, p.jE)({ timestamp: n })
             });
-        }, [B, F, j, L, null == U ? void 0 : U.src, V, Y, G, H]);
+        }, [B, G, j, L, null == U ? void 0 : U.src, V, Y, F, H]);
     if (null == B || null == k) return null;
-    let q = F,
+    let q = G,
         J = [];
     if (k.media.provider === i.p.SPOTIFY) {
         (S = () => {
@@ -130,7 +130,7 @@ function R(e) {
                 (0, u.aG)(B);
             });
         (q = (0, l.jsx)(d.Z, {
-            artists: F,
+            artists: G,
             canOpen: null != B.sync_id,
             linkClassName: M.popoutTextSecondary,
             onOpenSpotifyArtist: (e) => {
@@ -165,11 +165,11 @@ function R(e) {
                   })
                 : null,
         userDescription: (0, T.kr)(L) ? A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING_V2 : A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
-        title: G,
+        title: F,
         onClickTitle: S,
         subtitle: q,
         badges: null,
-        children: (null === (t = B.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, l.jsx)(O, { activity: B })
+        children: (null === (t = B.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, l.jsx)(y, { activity: B })
     });
     return (0, l.jsxs)(I.yR, {
         children: [
@@ -182,7 +182,7 @@ function R(e) {
                     channel: j,
                     generateReactionImage: W,
                     reactionImageAltText:
-                        ((n = F),
+                        ((n = G),
                         (_ = H),
                         A.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
                             username: _.username,

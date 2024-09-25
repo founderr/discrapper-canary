@@ -3,26 +3,26 @@ n.d(t, {
         return l;
     },
     _: function () {
-        return r;
+        return s;
     }
-}),
-    n(627341);
+});
+var r = n(627341);
 var i = n(278074),
-    s = n(263568),
-    a = n(228131);
-function r(e, t) {
+    a = n(263568),
+    o = n(228131);
+function s(e, t) {
     let n = (0, i.EQ)(t)
-        .with(s.C.IMAGE_ONLY_ANSWERS, () => a.normalStylesImageOnlyAnswers)
-        .otherwise(() => a.normalStylesDefault);
+        .with(a.C.IMAGE_ONLY_ANSWERS, () => o.normalStylesImageOnlyAnswers)
+        .otherwise(() => o.normalStylesDefault);
     return {
         styles: {
             loserSelected: n,
             normal: n,
             notVoted: n,
             selected: n,
-            voted: a.votedStyles,
-            victorSelected: a.victorStyles,
-            victorNotSelected: a.victorStyles,
+            voted: o.votedStyles,
+            victorSelected: o.victorStyles,
+            victorNotSelected: o.victorStyles,
             normalVote: n
         }
     };

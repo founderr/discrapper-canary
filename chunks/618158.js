@@ -1,39 +1,39 @@
 n.d(t, {
     Y: function () {
-        return s;
+        return o;
     },
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(937995);
-function s(e) {
+function o(e) {
     let { onPreventIdle: t, onAllowIdle: n, onActive: r } = i.useContext(a.nM),
-        s = i.useCallback(() => {
+        o = i.useCallback(() => {
             t(e);
         }, [e, t]);
     return {
-        preventIdle: s,
+        preventIdle: o,
         allowIdle: i.useCallback(() => {
             n(e);
         }, [e, n]),
         onActive: r
     };
 }
-function o(e) {
+function s(e) {
     let { children: t, className: n } = e,
-        { onForceIdle: o, onActive: l } = i.useContext(a.nM),
-        { preventIdle: u, allowIdle: c } = s('interact');
+        { onForceIdle: s, onActive: l } = i.useContext(a.nM),
+        { preventIdle: u, allowIdle: c } = o('interact');
     i.useEffect(() => () => c(), [c]);
     let d = i.useCallback(
         (e) => {
             var t;
             let n = null !== (t = e.target.ownerDocument) && void 0 !== t ? t : document;
-            if (!e.currentTarget.contains(n.activeElement)) o();
+            if (!e.currentTarget.contains(n.activeElement)) s();
         },
-        [o]
+        [s]
     );
     return (0, r.jsx)('div', {
         className: n,

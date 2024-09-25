@@ -10,8 +10,8 @@ var i = s(597312),
     o = s(442837),
     l = s(481060),
     r = s(860719),
-    c = s(621853),
-    a = s(689938),
+    a = s(621853),
+    c = s(689938),
     d = s(834585);
 function u(e) {
     let { icon: n, title: s, description: i } = e;
@@ -45,9 +45,9 @@ function u(e) {
 }
 function _(e) {
     let { user: n } = e,
-        s = (0, o.e7)([c.Z], () => {
+        s = (0, o.e7)([a.Z], () => {
             var e;
-            return null === (e = c.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
+            return null === (e = a.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
         }),
         { hasMessageContent: _, hasGuildPresences: I, hasGuildMembers: E } = (0, r.w)({ flags: null == s ? void 0 : s.flags });
     return (0, t.jsxs)(i.zJ, {
@@ -57,24 +57,24 @@ function _(e) {
             _ &&
                 (0, t.jsx)(u, {
                     icon: l.ChatIcon,
-                    title: a.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
-                    description: a.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
+                    title: c.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
+                    description: c.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
                 }),
             I &&
                 (0, t.jsx)(u, {
                     icon: l.GameControllerIcon,
-                    title: a.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
-                    description: a.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
+                    title: c.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
+                    description: c.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
                 }),
             E &&
                 (0, t.jsx)(u, {
                     icon: l.GroupIcon,
-                    title: a.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
-                    description: a.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
+                    title: c.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
+                    description: c.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
                 }),
             (0, t.jsx)(l.Text, {
                 variant: 'text-xs/normal',
-                children: a.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({ helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
+                children: c.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({ helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
             })
         ]
     });

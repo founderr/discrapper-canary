@@ -1,16 +1,16 @@
 n.d(t, {
     U: function () {
-        return c;
+        return d;
     }
-}),
-    n(47120);
+});
 var r,
-    i = n(735250),
-    a = n(470079),
+    i = n(47120);
+var a = n(735250),
+    o = n(470079),
     s = n(392711),
-    o = n.n(s),
-    l = n(607070);
-function u(e, t, n) {
+    l = n.n(s),
+    u = n(607070);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function u(e, t, n) {
         e
     );
 }
-class c extends (r = a.Component) {
+class d extends (r = o.Component) {
     componentDidMount() {
         this.props.isShaking && this.startShaking();
     }
@@ -43,7 +43,7 @@ class c extends (r = a.Component) {
     }
     render() {
         let { className: e, children: t } = this.props;
-        return (0, i.jsx)('div', {
+        return (0, a.jsx)('div', {
             className: e,
             ref: this.ref,
             children: t
@@ -51,23 +51,23 @@ class c extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            u(this, 'ref', a.createRef()),
-            u(this, 'animationFrame', void 0),
-            u(this, 'shouldRenderFrame', !0),
-            u(this, 'animate', () => {
+            c(this, 'ref', o.createRef()),
+            c(this, 'animationFrame', void 0),
+            c(this, 'shouldRenderFrame', !0),
+            c(this, 'animate', () => {
                 let { intensity: e, isShaking: t } = this.props;
                 if (!t) return;
                 let n = this.ref.current;
                 if (this.shouldRenderFrame && null != n) {
-                    let t = o().random(-e, e, !0),
-                        r = o().random(-e, e, !0);
-                    n.style.transform = l.Z.useReducedMotion ? '' : 'translate3d('.concat(t, 'px,').concat(r, 'px,0px)');
+                    let t = l().random(-e, e, !0),
+                        r = l().random(-e, e, !0);
+                    n.style.transform = u.Z.useReducedMotion ? '' : 'translate3d('.concat(t, 'px,').concat(r, 'px,0px)');
                 }
                 (this.shouldRenderFrame = !this.shouldRenderFrame), (this.animationFrame = requestAnimationFrame(this.animate));
             });
     }
 }
-u(c, 'defaultProps', {
+c(d, 'defaultProps', {
     isShaking: !0,
     intensity: 5
 });

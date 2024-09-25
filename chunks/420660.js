@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var r = n(701488),
@@ -8,6 +8,6 @@ var r = n(701488),
 function a(e) {
     return e.type === i.IIU.STREAMING && null != e.url && r.Fr.test(e.url);
 }
-function s(e) {
+function o(e) {
     return null != e && (Array.isArray(e) ? e.some(a) : a(e));
 }

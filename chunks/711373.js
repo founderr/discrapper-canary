@@ -6,25 +6,25 @@ t.d(n, {
     t(724458),
     t(47120),
     t(653041);
-var i = t(470079),
-    a = t(442837),
-    l = t(924301),
-    r = t(765305);
+var l = t(470079),
+    i = t(442837),
+    r = t(924301),
+    a = t(765305);
 function o(e, n) {
-    let t = (0, a.Wu)([l.ZP], () => Object.values(l.ZP.getUsersForGuildEvent(e, null)), [e]),
-        o = (0, a.Wu)([l.ZP], () => Object.values(l.ZP.getUsersForGuildEvent(e, n)), [e, n]);
-    return (0, i.useMemo)(() => {
+    let t = (0, i.Wu)([r.ZP], () => Object.values(r.ZP.getUsersForGuildEvent(e, null)), [e]),
+        o = (0, i.Wu)([r.ZP], () => Object.values(r.ZP.getUsersForGuildEvent(e, n)), [e, n]);
+    return (0, l.useMemo)(() => {
         let e = o.reduce((e, n) => ((e[n.user_id] = n), e), {}),
             n = t.filter((n) => {
                 let t = e[n.user_id];
-                return null == t || t.response === r.gv.INTERESTED;
+                return null == t || t.response === a.gv.INTERESTED;
             }),
-            i = o.filter((e) => e.response === r.gv.INTERESTED),
-            a = new Set(),
-            l = [],
+            l = o.filter((e) => e.response === a.gv.INTERESTED),
+            i = new Set(),
+            r = [],
             c = (e) => {
-                !a.has(e.user_id) && (l.push(e), a.add(e.user_id));
+                !i.has(e.user_id) && (r.push(e), i.add(e.user_id));
             };
-        return n.forEach(c), i.forEach(c), l;
+        return n.forEach(c), l.forEach(c), r;
     }, [t, o]);
 }

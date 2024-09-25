@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return o;
     }
 });
 var r = n(369977),
-    o = n(335832),
+    i = n(335832),
     a = n(299188);
-function i(e, t) {
+function o(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
     (e.prototype = r(t && t.prototype, {
         constructor: {
@@ -15,6 +15,6 @@ function i(e, t) {
             configurable: !0
         }
     })),
-        o(e, 'prototype', { writable: !1 }),
+        i(e, 'prototype', { writable: !1 }),
         t && (0, a.Z)(e, t);
 }

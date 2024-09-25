@@ -1,34 +1,34 @@
-n.d(e, {
+n.d(t, {
     L: function () {
-        return r;
+        return l;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
     a = n(51025),
     o = n(850840),
-    l = n(391690);
-function r(t, e, r, c, d) {
-    let u = l.Z.getInstallationPath(t.id, e),
-        p = null != t.eulaId && !o.Z.hasAcceptedEULA(t.eulaId);
-    null == u || p
-        ? (0, s.openModalLazy)(async () => {
-              let { default: s } = await n.e('226').then(n.bind(n, 472064));
+    s = n(391690);
+function l(e, t, l, u, c) {
+    let d = s.Z.getInstallationPath(e.id, t),
+        _ = null != e.eulaId && !o.Z.hasAcceptedEULA(e.eulaId);
+    null == d || _
+        ? (0, i.openModalLazy)(async () => {
+              let { default: i } = await n.e('226').then(n.bind(n, 472064));
               return (n) =>
-                  (0, i.jsx)(s, {
+                  (0, r.jsx)(i, {
                       ...n,
-                      applicationId: t.id,
-                      branchId: e,
-                      analyticsLocation: d
+                      applicationId: e.id,
+                      branchId: t,
+                      analyticsLocation: c
                   });
           })
         : (0, a.LO)({
-              application: t,
-              branchId: e,
-              buildId: r,
-              manifestIds: c,
-              installationPath: u,
-              analyticsLocation: d
+              application: e,
+              branchId: t,
+              buildId: l,
+              manifestIds: u,
+              installationPath: d,
+              analyticsLocation: c
           });
 }

@@ -42,11 +42,11 @@ var i,
     V = n(981631),
     F = n(689938),
     Y = n(534255);
-let z = {
+let W = {
         SMALL: 64,
         LARGE: 160
     },
-    W = [14, 14, 12, 12, 10, 8, 6],
+    z = [14, 14, 12, 12, 10, 8, 6],
     K = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, s.jsx)(u.Text, {
@@ -111,13 +111,13 @@ class J extends r.Component {
                               children: [
                                   (0, s.jsx)('img', {
                                       alt: null !== (e = i.large_text) && void 0 !== e ? e : '',
-                                      src: c(l, i.large_image, [z.LARGE, z.LARGE]),
+                                      src: c(l, i.large_image, [W.LARGE, W.LARGE]),
                                       className: o()(Y.largeImage, { [Y.largeImageMask]: null != i.small_image })
                                   }),
                                   null != i.small_image
                                       ? (0, s.jsx)('img', {
                                             alt: null !== (t = i.small_text) && void 0 !== t ? t : '',
-                                            src: c(l, i.small_image, [z.SMALL, z.SMALL]),
+                                            src: c(l, i.small_image, [W.SMALL, W.SMALL]),
                                             className: Y.smallImage
                                         })
                                       : null
@@ -270,7 +270,7 @@ let et = (e) => {
                                           className: Y.voiceSectionNoGuildImageWrapper,
                                           children: (0, s.jsx)('div', {
                                               className: Y.voiceSectionNoGuildImage,
-                                              style: { fontSize: null !== (n = W[i.acronym.length]) && void 0 !== n ? n : W[W.length - 1] },
+                                              style: { fontSize: null !== (n = z[i.acronym.length]) && void 0 !== n ? n : z[z.length - 1] },
                                               children: i.acronym
                                           })
                                       }),
@@ -361,7 +361,7 @@ let et = (e) => {
                               children: [
                                   (0, s.jsx)('img', {
                                       alt: null !== (t = n.large_text) && void 0 !== t ? t : '',
-                                      src: _(r, n.large_image, [z.LARGE, z.LARGE]),
+                                      src: _(r, n.large_image, [W.LARGE, W.LARGE]),
                                       className: o()(Y.largeImage, Y.borderRadius0, { [Y.largeImageMask]: null != n.small_image })
                                   }),
                                   u

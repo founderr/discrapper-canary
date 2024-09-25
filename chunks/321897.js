@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return s;
+        return o;
     }
 });
 let r = Object.freeze({
@@ -12,7 +12,7 @@ let r = Object.freeze({
         overflowY: 'hidden'
     }),
     a = Object.freeze({ overflow: 'auto' });
-function s(e) {
+function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'vertical',
         n = 'vertical' === t ? r : 'horizontal' === t ? i : a;
     return null != e

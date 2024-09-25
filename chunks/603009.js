@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(603368),
     T = n(353093),
     x = n(940725),
-    S = n(114487),
-    v = n(979264),
+    v = n(114487),
+    S = n(979264),
     N = n(981631),
     A = n(921944),
     Z = n(689938),
@@ -69,13 +69,13 @@ function b(e) {
             },
             [m]
         ),
-        P = s.useCallback(
+        O = s.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), o();
             },
             [o]
         ),
-        O = (0, c.useTransition)(
+        P = (0, c.useTransition)(
             a,
             {
                 from: {
@@ -105,9 +105,9 @@ function b(e) {
         ),
         y = (0, T.Zp)(n, L),
         D = y ? Z.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({ guildName: n.name }) : Z.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({ guildName: n.name }),
-        U = y ? Z.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : Z.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
-        k = y ? Z.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({ guildName: n.name }) : Z.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({ guildName: n.name });
-    return O((e, t) => {
+        k = y ? Z.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : Z.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
+        U = y ? Z.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({ guildName: n.name }) : Z.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({ guildName: n.name });
+    return P((e, t) => {
         var s, a;
         return (
             t &&
@@ -121,21 +121,21 @@ function b(e) {
                 },
                 ref: E,
                 children: (0, i.jsx)(c.ClickableContainer, {
-                    'aria-label': k,
-                    onClick: P,
+                    'aria-label': U,
+                    onClick: O,
                     children: (0, i.jsxs)('div', {
                         className: l()(M.toastContainerInner, p ? M.hovered : null),
                         children: [
                             (0, i.jsxs)('div', {
                                 className: M.guildIconContainer,
                                 children: [
-                                    (0, i.jsx)(S.Z, {
+                                    (0, i.jsx)(v.Z, {
                                         guild: n,
                                         iconSize: 64
                                     }),
                                     (0, i.jsx)('div', {
                                         className: M.guildTagContainer,
-                                        children: (0, i.jsx)(v.aG, {
+                                        children: (0, i.jsx)(S.aG, {
                                             guildId: n.id,
                                             clanTag: null === (s = n.clan) || void 0 === s ? void 0 : s.tag,
                                             clanBadge: null === (a = n.clan) || void 0 === a ? void 0 : a.badge,
@@ -157,7 +157,7 @@ function b(e) {
                                         children: (0, i.jsx)(c.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'header-secondary',
-                                            children: U
+                                            children: k
                                         })
                                     })
                                 ]

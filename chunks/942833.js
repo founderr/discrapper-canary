@@ -1,28 +1,28 @@
-t.d(n, {
+n.d(t, {
     C: function () {
         return o;
     },
     k: function () {
-        return u;
+        return s;
     }
 });
-var i = t(470079),
-    r = t(937615),
-    l = t(689938);
+var r = n(470079),
+    i = n(937615),
+    a = n(689938);
 function o(e) {
-    return i.useMemo(() => {
+    return r.useMemo(() => {
         if (null == e) return;
-        let n = null != e.role_id,
-            t = e.attachments_count > 0;
-        if (n && t) return l.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE;
-        if (n) return l.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE;
-        if (t) return l.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE;
+        let t = null != e.role_id,
+            n = e.attachments_count > 0;
+        if (t && n) return a.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE;
+        if (t) return a.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE;
+        if (n) return a.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE;
     }, [e]);
 }
-function u(e) {
-    return i.useMemo(() => {
+function s(e) {
+    return r.useMemo(() => {
         if ((null == e ? void 0 : e.price) == null) return;
-        let { amount: n, currency: t } = e.price;
-        return (0, r.T4)(n, t);
+        let { amount: t, currency: n } = e.price;
+        return (0, i.T4)(t, n);
     }, [e]);
 }

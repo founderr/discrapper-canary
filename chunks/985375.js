@@ -12,11 +12,11 @@ n.d(t, {
 var r = n(470079),
     i = n(392711),
     a = n.n(i),
-    s = n(516373);
-let o = {};
+    o = n(516373);
+let s = {};
 function l() {
     var e, t;
-    return null !== (t = null === (e = (0, s.D)().favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : o;
+    return null !== (t = null === (e = (0, o.D)().favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : s;
 }
 function u() {
     let e = l();

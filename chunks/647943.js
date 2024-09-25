@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     },
     o: function () {
         return l;
@@ -9,12 +9,12 @@ n.d(t, {
 var r = n(230367),
     i = n(69122),
     a = n(825842);
-let s = {
+let o = {
     readUnknownField: !0,
     readerFactory: (e) => new l(e)
 };
-function o(e) {
-    return e ? Object.assign(Object.assign({}, s), e) : s;
+function s(e) {
+    return e ? Object.assign(Object.assign({}, o), e) : o;
 }
 class l {
     constructor(e, t) {

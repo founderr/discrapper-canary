@@ -14,9 +14,9 @@ var n = t(735250),
     S = t(410030),
     I = t(454585),
     N = t(163684),
-    m = t(178100),
-    A = t(518638),
-    C = t(725727),
+    A = t(178100),
+    C = t(518638),
+    m = t(725727),
     g = t(454982),
     h = t(197115),
     O = t(504983),
@@ -37,9 +37,9 @@ function v(e) {
         [u, E] = a.useState(!1),
         T = () => _((e) => !e),
         N = (0, S.ZP)(),
-        C = (0, A.Pz)(t.id, N),
+        m = (0, C.Pz)(t.id, N),
         h = null != i,
-        O = (0, m.Z)(t, h);
+        O = (0, A.Z)(t, h);
     h && c
         ? (s = b.Z.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
               endDate: O,
@@ -79,7 +79,7 @@ function v(e) {
                                         className: Z.promotionIcon,
                                         children: (0, n.jsx)('img', {
                                             alt: '',
-                                            src: C,
+                                            src: m,
                                             className: Z.promotionIconImage
                                         })
                                     }),
@@ -147,8 +147,8 @@ s.Z = function () {
             (0, u.Qv)().then(() => I(!0));
         });
     }, []);
-    let { promotionsLoaded: m, activeOutboundPromotions: A, claimedEndedOutboundPromotions: g, claimedOutboundPromotionCodeMap: j, addClaimedOutboundPromotionCode: B } = (0, C.lG)(),
-        U = A.length + g.length > 0,
+    let { promotionsLoaded: A, activeOutboundPromotions: C, claimedEndedOutboundPromotions: g, claimedOutboundPromotionCodeMap: j, addClaimedOutboundPromotionCode: B } = (0, m.lG)(),
+        U = C.length + g.length > 0,
         G =
             N.g.useExperiment(
                 { location: 'EntitlementGifts' },
@@ -160,7 +160,7 @@ s.Z = function () {
     function F() {
         T.Z.open(P.oAB.PREMIUM);
     }
-    return S && m
+    return S && A
         ? (0, n.jsxs)(n.Fragment, {
               children: [
                   (function () {
@@ -227,7 +227,7 @@ s.Z = function () {
                                           t.id
                                       );
                                   }),
-                                  A.map((e) =>
+                                  C.map((e) =>
                                       (0, n.jsx)(
                                           v,
                                           {

@@ -1,45 +1,45 @@
 n.d(t, {
     Rg: function () {
-        return f;
+        return h;
     },
     Xh: function () {
-        return E;
+        return f;
     },
     ho: function () {
-        return _;
+        return E;
     }
-}),
-    n(627341);
-var r = n(735250);
+});
+var r = n(627341);
+var i = n(735250);
 n(470079);
-var i = n(278074),
-    a = n(481060),
+var a = n(278074),
+    o = n(481060),
     s = n(841784),
-    o = n(297781),
-    l = n(371991),
-    u = n(561308),
-    c = n(232174),
-    d = n(981631);
-function _(e) {
-    var t, n, u;
-    let { activity: _ } = e,
-        E = null !== (u = null === (t = _.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== u ? u : _.created_at;
-    if (null == E || (0, c.Z)(_)) return null;
-    let f = (0, i.EQ)(_)
-        .when(s.Z, () => a.ActivitiesIcon)
-        .with({ type: d.IIU.LISTENING }, () => a.RecordPlayerIcon)
-        .with({ type: d.IIU.WATCHING }, () => a.TvIcon)
-        .otherwise(() => a.GameControllerIcon);
-    return (0, r.jsxs)(o.m7, {
+    l = n(297781),
+    u = n(371991),
+    c = n(561308),
+    d = n(232174),
+    _ = n(981631);
+function E(e) {
+    var t, n, r;
+    let { activity: c } = e,
+        E = null !== (r = null === (t = c.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== r ? r : c.created_at;
+    if (null == E || (0, d.Z)(c)) return null;
+    let f = (0, a.EQ)(c)
+        .when(s.Z, () => o.ActivitiesIcon)
+        .with({ type: _.IIU.LISTENING }, () => o.RecordPlayerIcon)
+        .with({ type: _.IIU.WATCHING }, () => o.TvIcon)
+        .otherwise(() => o.GameControllerIcon);
+    return (0, i.jsxs)(l.m7, {
         children: [
-            (0, r.jsx)(f, {
+            (0, i.jsx)(f, {
                 size: 'xxs',
-                color: a.tokens.colors.TEXT_POSITIVE
+                color: o.tokens.colors.TEXT_POSITIVE
             }),
-            (0, r.jsx)(l.x3, {
+            (0, i.jsx)(u.x3, {
                 entry: {
                     start: E,
-                    end: null === (n = _.timestamps) || void 0 === n ? void 0 : n.end
+                    end: null === (n = c.timestamps) || void 0 === n ? void 0 : n.end
                 },
                 textColor: 'text-positive',
                 bold: !0
@@ -47,25 +47,25 @@ function _(e) {
         ]
     });
 }
-function E(e) {
+function f(e) {
     let { activity: t } = e;
     if ((0, s.Z)(t) || null == t.party) return null;
-    let n = (0, u.bT)(t.state, t.party);
+    let n = (0, c.bT)(t.state, t.party);
     return null == n
         ? null
-        : (0, r.jsx)(o.ej, {
-              Icon: a.GroupIcon,
+        : (0, i.jsx)(l.ej, {
+              Icon: o.GroupIcon,
               text: n
           });
 }
-function f(e) {
+function h(e) {
     var t;
     let { activity: n } = e,
-        i = (0, u.ap)(null === (t = n.assets) || void 0 === t ? void 0 : t.large_text);
-    return null == i
+        r = (0, c.ap)(null === (t = n.assets) || void 0 === t ? void 0 : t.large_text);
+    return null == r
         ? null
-        : (0, r.jsx)(o.ej, {
-              Icon: a.TopicsIcon,
-              text: i
+        : (0, i.jsx)(l.ej, {
+              Icon: o.TopicsIcon,
+              text: r
           });
 }

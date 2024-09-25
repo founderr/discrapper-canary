@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
     a = n(481060),
-    s = n(300284),
-    o = n(314897),
+    o = n(300284),
+    s = n(314897),
     l = n(430824),
     u = n(785717),
     c = n(475413),
@@ -16,10 +16,10 @@ var i = n(442837),
     _ = n(534934);
 function E(e) {
     let { user: t, guildId: n, fullWidth: E, onClose: f } = e,
-        h = (0, i.e7)([o.default], () => o.default.getId() === t.id),
+        h = (0, i.e7)([s.default], () => s.default.getId() === t.id),
         p = (0, i.e7)([l.Z], () => (null != n ? l.Z.getGuild(n) : null)),
-        I = (0, s.Z)({ guild: p }),
-        m = (0, s.Z)(),
+        m = (0, o.Z)({ guild: p }),
+        I = (0, o.Z)(),
         { trackUserProfileAction: T } = (0, u.KZ)();
     return h
         ? null == p
@@ -30,7 +30,7 @@ function E(e) {
                   autoFocus: !0,
                   fullWidth: E,
                   onClick: () => {
-                      null == f || f(), m();
+                      null == f || f(), I();
                   }
               })
             : (0, r.jsx)(a.Popout, {
@@ -50,7 +50,7 @@ function E(e) {
                                   label: d.Z.Messages.CHANGE_IDENTITY,
                                   subtext: d.Z.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
                                   action: () => {
-                                      T({ action: 'EDIT_GUILD_PROFILE' }), I();
+                                      T({ action: 'EDIT_GUILD_PROFILE' }), m();
                                   }
                               }),
                               (0, r.jsx)(a.MenuItem, {
@@ -58,7 +58,7 @@ function E(e) {
                                   label: d.Z.Messages.EDIT_MAIN_PROFILE,
                                   subtext: d.Z.Messages.USER_PROFILE_MENU_HELP,
                                   action: () => {
-                                      T({ action: 'EDIT_PROFILE' }), m();
+                                      T({ action: 'EDIT_PROFILE' }), I();
                                   }
                               })
                           ]

@@ -1,55 +1,56 @@
 n.d(t, {
     Ce: function () {
-        return _;
-    },
-    Ji: function () {
-        return c;
-    },
-    _G: function () {
-        return I;
-    },
-    _I: function () {
-        return E;
-    },
-    _S: function () {
         return h;
     },
+    Ji: function () {
+        return E;
+    },
+    _G: function () {
+        return g;
+    },
+    _I: function () {
+        return p;
+    },
+    _S: function () {
+        return I;
+    },
     fD: function () {
-        return f;
+        return m;
     },
     mG: function () {
-        return T;
+        return A;
     },
     pU: function () {
-        return d;
+        return f;
     },
     r4: function () {
-        return A;
+        return C;
     }
-}),
-    n(642549),
-    n(47120);
-var r = n(973361),
-    i = n(729594),
-    a = n(544891),
-    s = n(358085),
-    o = n(591759),
-    l = n(908442);
+});
+var r = n(642549);
+var i = n(47120);
+var a = n(973361),
+    o = n(729594),
+    s = n(544891),
+    l = n(358085),
+    u = n(591759),
+    c = n(908442);
 n(981631);
-let u = void 0,
-    c = (0, s.isAndroid)() ? u.Version.split(' - ')[0] : (0, s.isIOS)() ? u.Version : void 0;
-function d(e) {
+let d = void 0,
+    _ = '/__development/build_overrides',
+    E = (0, l.isAndroid)() ? d.Version.split(' - ')[0] : (0, l.isIOS)() ? d.Version : void 0;
+function f(e) {
     return ''.concat(location.protocol, '//').concat(location.host).concat(e);
 }
-function _() {
-    let e = o.Z.safeParseWithQuery(d('/__development/build_overrides'));
+function h() {
+    let e = u.Z.safeParseWithQuery(f(_));
     return null == e
         ? Promise.resolve(null)
         : ((e.search = null),
-          c && (e.query.version = c),
-          a.tn
+          E && (e.query.version = E),
+          s.tn
               .get({
-                  url: i.format(e),
+                  url: o.format(e),
                   oldFormErrors: !0
               })
               .then(
@@ -57,36 +58,18 @@ function _() {
                   () => null
               ));
 }
-function E(e) {
-    if (T(e))
-        return Promise.resolve(
-            (function (e) {
-                let t = e.match(m);
-                if (null == t || 2 !== t.length) return null;
-                let n = (0, s.getNativePlatform)(),
-                    r = t[1];
-                return {
-                    targetBuildOverride: {
-                        ['discord_'.concat(n)]: {
-                            type: 'branch',
-                            id: r
-                        }
-                    },
-                    validForUserIds: [],
-                    expiresAt: 'Mon, 1 Jan 2038 00:00:00 GMT'
-                };
-            })(e)
-        );
-    let t = o.Z.safeParseWithQuery(e);
+function p(e) {
+    if (A(e)) return Promise.resolve(v(e));
+    let t = u.Z.safeParseWithQuery(e);
     return null == t
         ? Promise.resolve(null)
         : ((t.search = null),
           (t.query.meta = 'true'),
-          c && (t.query.version = c),
+          E && (t.query.version = E),
           (t.host = window.location.host),
-          a.tn
+          s.tn
               .get({
-                  url: i.format(t),
+                  url: o.format(t),
                   oldFormErrors: !0
               })
               .then(
@@ -94,13 +77,13 @@ function E(e) {
                   () => null
               ));
 }
-function f() {
-    return -1 !== window.document.cookie.indexOf(''.concat(l.ZF, '='));
+function m() {
+    return -1 !== window.document.cookie.indexOf(''.concat(c.ZF, '='));
 }
-function h() {
+function I() {
     try {
         var e;
-        let t = r.parse(window.document.cookie)[l.ZF];
+        let t = a.parse(window.document.cookie)[c.ZF];
         if (null == t) return {};
         let n = JSON.parse(atob(t.substring(t.indexOf('.') + 1)));
         return null !== (e = n.$meta.experiments) && void 0 !== e ? e : {};
@@ -108,27 +91,44 @@ function h() {
         return {};
     }
 }
-let p = RegExp('^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$', 'i');
-function I(e) {
-    return null != e && p.test(e);
+let T = RegExp('^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$', 'i');
+function g(e) {
+    return null != e && T.test(e);
 }
-let m = RegExp('^dev://branch/([\\w-./]+)$', 'i');
-function T(e) {
-    return null != e && m.test(e);
-}
-let S = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
-    g = new Set(['/__development/link', '/__development/link/']);
+let S = RegExp('^dev://branch/([\\w-./]+)$', 'i');
 function A(e) {
-    if (T(e))
+    return null != e && S.test(e);
+}
+function v(e) {
+    let t = e.match(S);
+    if (null == t || 2 !== t.length) return null;
+    let n = (0, l.getNativePlatform)(),
+        r = t[1];
+    return {
+        targetBuildOverride: {
+            ['discord_'.concat(n)]: {
+                type: 'branch',
+                id: r
+            }
+        },
+        validForUserIds: [],
+        expiresAt: 'Mon, 1 Jan 2038 00:00:00 GMT'
+    };
+}
+let N = 's',
+    O = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
+    R = new Set(['/__development/link', '/__development/link/']);
+function C(e) {
+    if (A(e))
         return {
             payload: null,
             url: e
         };
-    let t = o.Z.safeParseWithQuery(e);
-    if (null == t || !S.has(t.hostname) || !('s' in t.query) || !g.has(t.pathname)) return null;
-    for (let e in t.query) 's' !== e && delete t.query[e];
+    let t = u.Z.safeParseWithQuery(e);
+    if (null == t || !O.has(t.hostname) || !(N in t.query) || !R.has(t.pathname)) return null;
+    for (let e in t.query) e !== N && delete t.query[e];
     return {
-        payload: t.query.s,
-        url: i.format(t)
+        payload: t.query[N],
+        url: o.format(t)
     };
 }

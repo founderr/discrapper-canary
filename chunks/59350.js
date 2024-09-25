@@ -23,8 +23,8 @@ var l = t(735250),
     g = t(125988),
     N = t(44315),
     I = t(160404),
-    b = t(240991),
-    E = t(703656),
+    E = t(240991),
+    b = t(703656),
     Z = t(687158),
     v = t(287008),
     T = t(484459),
@@ -48,8 +48,8 @@ var l = t(735250),
     F = t(290511),
     z = t(981631),
     V = t(176505),
-    q = t(490897),
-    Y = t(689938),
+    Y = t(490897),
+    q = t(689938),
     X = t(302137),
     Q = t(784237),
     K = t(554034);
@@ -84,7 +84,7 @@ function ee(e) {
     a.useEffect(() => {
         (0, T.Z)(i.id, i.getAvatarURL(t.id, (0, _.getAvatarSize)(J)), { guildId: t.id });
     }, []);
-    let E = (0, b.YP)(null == I ? void 0 : I.bio),
+    let b = (0, E.YP)(null == I ? void 0 : I.bio),
         R = L.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
     return (0, l.jsxs)('div', {
         className: X.profile,
@@ -92,12 +92,12 @@ function ee(e) {
             (0, l.jsx)(_.Heading, {
                 variant: 'heading-md/semibold',
                 color: 'header-primary',
-                children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_PROFILE
+                children: q.Z.Messages.CUSTOMIZE_COMMUNITY_PROFILE
             }),
             (0, l.jsx)(_.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
-                children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_PROFILE_DESCRIPTION
+                children: q.Z.Messages.CUSTOMIZE_COMMUNITY_PROFILE_DESCRIPTION
             }),
             (0, l.jsxs)('div', {
                 className: X.profileCard,
@@ -121,7 +121,7 @@ function ee(e) {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         className: r()(K.markup, X.bio),
-                        children: E
+                        children: b
                     }),
                     null != N &&
                         N.length > 0 &&
@@ -132,7 +132,7 @@ function ee(e) {
                                     variant: 'text-xs/semibold',
                                     color: 'text-muted',
                                     className: X.title,
-                                    children: Y.Z.Messages.ROLES
+                                    children: q.Z.Messages.ROLES
                                 }),
                                 (0, l.jsx)('div', {
                                     className: X.roles,
@@ -193,12 +193,12 @@ function en(e) {
                     n
                 )
         }),
-        { handleSelectOption: b } = (0, k.Z)(i.id),
-        E = (0, _.useToken)(h.Z.unsafe_rawColors.BRAND_500),
+        { handleSelectOption: E } = (0, k.Z)(i.id),
+        b = (0, _.useToken)(h.Z.unsafe_rawColors.BRAND_500),
         Z = (0, _.useSpring)(
             {
-                from: { color: t.isNew ? E.hex({ opacity: 1 }) : E.hex({ opacity: 0 }) },
-                color: E.hex({ opacity: 0 }),
+                from: { color: t.isNew ? b.hex({ opacity: 1 }) : b.hex({ opacity: 0 }) },
+                color: b.hex({ opacity: 0 }),
                 config: { duration: 300 },
                 delay: 500
             },
@@ -217,7 +217,7 @@ function en(e) {
                 t.isNew &&
                     (0, l.jsx)(_.TextBadge, {
                         color: (0, N.Lq)(z.Ilk.BRAND_260),
-                        text: Y.Z.Messages.NEW,
+                        text: q.Z.Messages.NEW,
                         className: X.newBadge
                     }),
                 (0, l.jsxs)(_.Heading, {
@@ -240,7 +240,7 @@ function en(e) {
                     onChange: (e) => {
                         let n = e.find((e) => !x.includes(e.id)),
                             l = e.map((e) => e.id);
-                        if (null != n) b(t, n, !0), t.singleSelect && t.options.forEach((e) => d.delete(e.id)), d.add(n.id);
+                        if (null != n) E(t, n, !0), t.singleSelect && t.options.forEach((e) => d.delete(e.id)), d.add(n.id);
                         else {
                             let e = x.filter((e) => !l.includes(e)),
                                 n = t.options.filter((n) => e.includes(n.id));
@@ -249,7 +249,7 @@ function en(e) {
                                 return;
                             }
                             n.forEach((e) => {
-                                b(t, e, !1), d.delete(e.id);
+                                E(t, e, !1), d.delete(e.id);
                             });
                         }
                         m(new Set(d)), o(null);
@@ -291,13 +291,13 @@ function et(e) {
                     n
                 )
         }),
-        { handleSelectOption: b } = (0, k.Z)(i.id),
-        E = (e, n) => {
+        { handleSelectOption: E } = (0, k.Z)(i.id),
+        b = (e, n) => {
             if (!n && 1 === x.length && t.required) {
                 o({ type: $ });
                 return;
             }
-            b(t, e, null != n && n), t.singleSelect && n && t.options.forEach((e) => d.delete(e.id)), n ? d.add(e.id) : d.delete(e.id), m(new Set(d)), o(null);
+            E(t, e, null != n && n), t.singleSelect && n && t.options.forEach((e) => d.delete(e.id)), n ? d.add(e.id) : d.delete(e.id), m(new Set(d)), o(null);
         },
         Z = (0, _.useToken)(h.Z.unsafe_rawColors.BRAND_500),
         v = (0, _.useSpring)(
@@ -317,7 +317,7 @@ function et(e) {
                 t.isNew &&
                     (0, l.jsx)(_.TextBadge, {
                         color: (0, N.Lq)(z.Ilk.BRAND_260),
-                        text: Y.Z.Messages.NEW,
+                        text: q.Z.Messages.NEW,
                         className: X.newBadge
                     }),
                 (0, l.jsxs)(_.Heading, {
@@ -343,7 +343,7 @@ function et(e) {
                                 hideMemberCount: !0,
                                 guildId: i.id,
                                 option: e,
-                                onSelect: (n) => E(e, n),
+                                onSelect: (n) => b(e, n),
                                 selected: x.includes(e.id),
                                 canBeNew: !t.isNew
                             },
@@ -368,10 +368,10 @@ function el(e) {
         o = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
         c = (0, C.Z)('(min-width: 1344px)') && null != o,
         d = a.useCallback(() => {
-            (0, E.uL)(z.Z5c.CHANNEL(n, V.oC.CHANNEL_BROWSER)), null == t || t();
+            (0, b.uL)(z.Z5c.CHANNEL(n, V.oC.CHANNEL_BROWSER)), null == t || t();
         }, [n, t]),
-        h = (0, u.e7)([R.ZP], () => R.ZP.hasUnread(n, q.W.GUILD_ONBOARDING_QUESTION)),
-        { onboardingPromptsRaw: x, newOnboardingPrompts: g, onboardingPromptsWithNewAnswers: b, newAnswersCount: Z, onboardingPrompts: v } = (0, D.Z)(n);
+        h = (0, u.e7)([R.ZP], () => R.ZP.hasUnread(n, Y.W.GUILD_ONBOARDING_QUESTION)),
+        { onboardingPromptsRaw: x, newOnboardingPrompts: g, onboardingPromptsWithNewAnswers: E, newAnswersCount: Z, onboardingPrompts: v } = (0, D.Z)(n);
     a.useEffect(() => {
         if ((null == s ? void 0 : s.id) != null) !I.Z.isFullServerPreview(s.id) && (P.Z.shouldFetchPrompts(s.id) || h) && (0, w.eM)(s.id);
     }, [null == s ? void 0 : s.id, h]),
@@ -379,7 +379,7 @@ function el(e) {
             if ((null == s ? void 0 : s.id) != null) {
                 if (!I.Z.isFullServerPreview(s.id))
                     return () => {
-                        (0, f.Ju)(s.id, q.W.GUILD_ONBOARDING_QUESTION, P.Z.ackIdForGuild(s.id)), M.Z.updateOnboardingResponses(s.id);
+                        (0, f.Ju)(s.id, Y.W.GUILD_ONBOARDING_QUESTION, P.Z.ackIdForGuild(s.id)), M.Z.updateOnboardingResponses(s.id);
                     };
             }
         }, [null == s ? void 0 : s.id]);
@@ -428,11 +428,11 @@ function el(e) {
                     (0, l.jsx)(_.Heading, {
                         className: X.emptyHeader,
                         variant: 'heading-md/semibold',
-                        children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_HEADER
+                        children: q.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_HEADER
                     }),
                     (0, l.jsx)(_.Text, {
                         variant: 'text-sm/medium',
-                        children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_SUBHEADER.format({ onBrowseChannels: d })
+                        children: q.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_SUBHEADER.format({ onBrowseChannels: d })
                     })
                 ]
             })
@@ -445,18 +445,18 @@ function el(e) {
             (0, l.jsxs)('div', {
                 className: X.pageBody,
                 children: [
-                    (g.length > 0 || b.length > 0) &&
+                    (g.length > 0 || E.length > 0) &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsx)('div', {
                                     children: (0, l.jsx)(_.Heading, {
                                         variant: 'heading-md/semibold',
                                         color: 'header-primary',
-                                        children: Y.Z.Messages.ONBOARDING_PROMPT_ANSWERS_NEW.format({ count: g.length + Z })
+                                        children: q.Z.Messages.ONBOARDING_PROMPT_ANSWERS_NEW.format({ count: g.length + Z })
                                     })
                                 }),
                                 g.map(T),
-                                b.map(T),
+                                E.map(T),
                                 (0, l.jsx)('div', { className: X.sectionSeparator })
                             ]
                         }),
@@ -468,12 +468,12 @@ function el(e) {
                                         (0, l.jsx)(_.Heading, {
                                             variant: 'heading-md/semibold',
                                             color: 'header-primary',
-                                            children: Y.Z.Messages.ONBOARDING_PROMPT_QUESTIONS_HEADER.format({ count: v.length })
+                                            children: q.Z.Messages.ONBOARDING_PROMPT_QUESTIONS_HEADER.format({ count: v.length })
                                         }),
                                         (0, l.jsx)(_.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
-                                            children: Y.Z.Messages.ONBOARDING_PROMPT_MEMBER_DESCRIPTION
+                                            children: q.Z.Messages.ONBOARDING_PROMPT_MEMBER_DESCRIPTION
                                         })
                                     ]
                                 }),

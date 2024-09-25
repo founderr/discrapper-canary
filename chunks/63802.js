@@ -16,8 +16,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(780384),
-    o = n(410030),
+    o = n(780384),
+    s = n(410030),
     l = n(325767),
     u = n(474936),
     c = n(984459);
@@ -25,8 +25,8 @@ let d = 'premium_new_tier_2_gradient',
     _ = 'premium_old_tier_2_gradient';
 function E(e) {
     let { tier: t = u.p9.TIER_2 } = e,
-        n = (0, o.ZP)(),
-        i = (0, s.ap)(n);
+        n = (0, s.ZP)(),
+        i = (0, o.ap)(n);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !i &&
@@ -49,9 +49,9 @@ function E(e) {
     });
 }
 function f(e) {
-    let { width: t = 14, height: n = 13, color: i = 'white', foreground: a, ...s } = e;
+    let { width: t = 14, height: n = 13, color: i = 'white', foreground: a, ...o } = e;
     return (0, r.jsxs)('svg', {
-        ...(0, l.Z)({ ...s }),
+        ...(0, l.Z)({ ...o }),
         preserveAspectRatio: 'none',
         width: t,
         height: n,

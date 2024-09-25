@@ -1,6 +1,6 @@
-n.d(t, {
+n.d(e, {
     J: function () {
-        return c;
+        return s;
     }
 });
-let c = 'KEYBOARD_SHORTCUT_MODAL_KEY';
+let s = 'KEYBOARD_SHORTCUT_MODAL_KEY';

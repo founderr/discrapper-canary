@@ -9,44 +9,44 @@ n.d(t, {
 var r = n(182823),
     i = n(148836),
     a = n(470079),
-    s = n(616073);
-let o = new WeakMap();
+    o = n(616073);
+let s = new WeakMap();
 function l(e, t, n) {
     'string' == typeof t && (t = t.replace(/\s+/g, ''));
-    let r = o.get(e);
+    let r = s.get(e);
     return `${r}-${n}-${t}`;
 }
 function u(e, t, n) {
     var a;
-    let { key: s, isDisabled: o, shouldSelectOnPressUp: u } = e,
+    let { key: o, isDisabled: s, shouldSelectOnPressUp: u } = e,
         { selectionManager: c, selectedKey: d } = t,
-        _ = s === d,
-        E = o || t.isDisabled || t.disabledKeys.has(s),
+        _ = o === d,
+        E = s || t.isDisabled || t.disabledKeys.has(o),
         { itemProps: f, isPressed: h } = (0, i.Cs)({
             selectionManager: c,
-            key: s,
+            key: o,
             ref: n,
             isDisabled: E,
             shouldSelectOnPressUp: u,
             linkBehavior: 'selection'
         }),
-        p = l(t, s, 'tab'),
-        I = l(t, s, 'tabpanel'),
-        { tabIndex: m } = f,
-        T = t.collection.getItem(s),
-        S = (0, r.zL)(null == T ? void 0 : T.props, {
+        p = l(t, o, 'tab'),
+        m = l(t, o, 'tabpanel'),
+        { tabIndex: I } = f,
+        T = t.collection.getItem(o),
+        g = (0, r.zL)(null == T ? void 0 : T.props, {
             isLink: !!(null == T ? void 0 : null === (a = T.props) || void 0 === a ? void 0 : a.href),
             labelable: !0
         });
     return (
-        delete S.id,
+        delete g.id,
         {
-            tabProps: (0, r.dG)(S, f, {
+            tabProps: (0, r.dG)(g, f, {
                 id: p,
                 'aria-selected': _,
                 'aria-disabled': E || void 0,
-                'aria-controls': _ ? I : void 0,
-                tabIndex: E ? void 0 : m,
+                'aria-controls': _ ? m : void 0,
+                tabIndex: E ? void 0 : I,
                 role: 'tab'
             }),
             isSelected: _,
@@ -93,7 +93,7 @@ class c {
 function d(e, t, n) {
     let { orientation: l = 'horizontal', keyboardActivation: u = 'automatic' } = e,
         { collection: d, selectionManager: _, disabledKeys: E } = t,
-        { direction: f } = (0, s.bU)(),
+        { direction: f } = (0, o.bU)(),
         h = (0, a.useMemo)(() => new c(d, f, l, E), [d, E, l, f]),
         { collectionProps: p } = (0, i.gq)({
             ref: n,
@@ -104,15 +104,15 @@ function d(e, t, n) {
             scrollRef: n,
             linkBehavior: 'selection'
         }),
-        I = (0, r.Me)();
-    o.set(t, I);
-    let m = (0, r.bE)({
+        m = (0, r.Me)();
+    s.set(t, m);
+    let I = (0, r.bE)({
         ...e,
-        id: I
+        id: m
     });
     return {
         tabListProps: {
-            ...(0, r.dG)(p, m),
+            ...(0, r.dG)(p, I),
             role: 'tablist',
             'aria-orientation': l,
             tabIndex: void 0

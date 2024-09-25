@@ -14,9 +14,9 @@ var n = t(735250),
     S = t(415104),
     I = t(78826),
     N = t(37303),
-    m = t(134483),
-    A = t(683650),
-    C = t(478977),
+    A = t(134483),
+    C = t(683650),
+    m = t(478977),
     g = t(456799),
     h = t(210851),
     O = t(602683),
@@ -393,13 +393,13 @@ function j() {
                         className: f.fields,
                         style: { marginBottom: 0 },
                         children: [
-                            (0, n.jsx)(C.Z, {
+                            (0, n.jsx)(m.Z, {
                                 title: 'Primary',
                                 colorKey: 'primary',
                                 onChange: H,
                                 value: l.config.colors.primary
                             }),
-                            (0, n.jsx)(C.Z, {
+                            (0, n.jsx)(m.Z, {
                                 title: 'Secondary',
                                 colorKey: 'secondary',
                                 onChange: H,
@@ -549,7 +549,7 @@ function j() {
                                     questId: '0',
                                     children: (0, n.jsx)('div', {
                                         className: f.questChannelCallHeaderPreview,
-                                        children: (0, n.jsx)(m.Z, {
+                                        children: (0, n.jsx)(A.Z, {
                                             channelId: '123',
                                             previewQuest: l,
                                             isParticipatingOverride: j
@@ -577,7 +577,7 @@ function j() {
                         children: [
                             (0, n.jsx)(d.FormTitle, { children: 'Quest Card Embed' }),
                             U
-                                ? (0, n.jsx)(A.o, {})
+                                ? (0, n.jsx)(C.o, {})
                                 : (0, n.jsx)(
                                       N.Z,
                                       {

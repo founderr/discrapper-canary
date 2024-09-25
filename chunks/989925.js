@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return i;
+        return r;
     }
 });
-let i = 200;
+let r = 200;

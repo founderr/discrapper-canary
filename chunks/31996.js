@@ -1,37 +1,37 @@
 n.d(t, {
     Q: function () {
-        return u;
+        return c;
     }
-}),
-    n(47120);
-var r = n(544891),
-    i = n(570140),
-    a = n(430824),
+});
+var r = n(47120);
+var i = n(544891),
+    a = n(570140),
+    o = n(430824),
     s = n(356264),
-    o = n(981631);
-let l = new Set();
-async function u(e) {
-    if (null == a.Z.getGuild(e) && null == s.Z.getGuildOrStatus(e)) {
-        if (!l.has(e)) {
-            i.Z.dispatch({
+    l = n(981631);
+let u = new Set();
+async function c(e) {
+    if (null == o.Z.getGuild(e) && null == s.Z.getGuildOrStatus(e)) {
+        if (!u.has(e)) {
+            a.Z.dispatch({
                 type: 'BASIC_GUILD_FETCH',
                 guildId: e
             }),
-                l.add(e);
+                u.add(e);
             try {
-                let t = (await r.tn.get({ url: o.ANM.GUILD_BASIC(e) })).body;
-                i.Z.dispatch({
+                let t = (await i.tn.get({ url: l.ANM.GUILD_BASIC(e) })).body;
+                a.Z.dispatch({
                     type: 'BASIC_GUILD_FETCH_SUCCESS',
                     guildId: e,
                     guildInfo: t
                 });
             } catch (t) {
-                i.Z.dispatch({
+                a.Z.dispatch({
                     type: 'BASIC_GUILD_FETCH_FAILURE',
                     guildId: e
                 });
             } finally {
-                l.delete(e);
+                u.delete(e);
             }
         }
     }

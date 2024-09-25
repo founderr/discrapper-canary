@@ -1,6 +1,6 @@
 n.d(t, {
     o: function () {
-        return T;
+        return Z;
     }
 }),
     n(47120);
@@ -23,16 +23,16 @@ var i = n(735250),
     I = n(731455),
     E = n(921944),
     N = n(49898),
-    S = n(46140),
-    x = n(689938),
+    x = n(46140),
+    S = n(689938),
     v = n(55869);
-function T(e, t) {
+function Z(e, t) {
     let n = (0, d.a)({ location: 'discovery_button' }),
         i = window.location.pathname.startsWith(C.Z5c.GUILD_DISCOVERY),
         l = m.ZP.getCurrentCategoryId() === I.Gj.Clans;
     if (n) {
         if (e === N.F$.QUESTS) {
-            (0, f.navigateToQuestHome)(S.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
+            (0, f.navigateToQuestHome)(x.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
             return;
         }
         if (e === N.F$.SERVERS) {
@@ -46,18 +46,18 @@ function T(e, t) {
     let a = (0, _.s1)().location.search;
     (0, _.uL)(C.Z5c.GUILD_DISCOVERY, { search: a });
 }
-let Z = l.forwardRef(function (e, t) {
+let T = l.forwardRef(function (e, t) {
     let { selected: n, className: r, onClick: o } = e,
-        f = (0, d.v)({ location: 'guild_discovery_button' }) ? x.Z.Messages.DISCOVER : x.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
+        f = (0, d.v)({ location: 'guild_discovery_button' }) ? S.Z.Messages.DISCOVER : S.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
         _ = p.d.getState().selectedTab,
         m = (0, c.Z)('discovery_button'),
         C = m ? I.Gj.Clans : I.Hk,
-        [S, Z] = (0, u.cv)([a.z.GLOBAL_DISCOVERY_RAPIDASH_NOTIF]),
+        [x, T] = (0, u.cv)([a.z.GLOBAL_DISCOVERY_RAPIDASH_NOTIF]),
         b = l.useCallback(() => {
-            null == o || o(), (0, h.k5)({ source: N.JU.GUILDS_BAR_ICON }), T(_, C), Z(E.L.DISMISS);
-        }, [o, _, C, Z]),
-        A = null != S && m,
-        R = l.useMemo(
+            null == o || o(), (0, h.k5)({ source: N.JU.GUILDS_BAR_ICON }), Z(_, C), T(E.L.DISMISS);
+        }, [o, _, C, T]),
+        A = null != x && m,
+        M = l.useMemo(
             () => ({
                 lowerBadgeSize: {
                     width: 12,
@@ -75,7 +75,7 @@ let Z = l.forwardRef(function (e, t) {
         selected: n,
         tooltip: f,
         icon: s.CompassIcon,
-        ...R
+        ...M
     });
 });
-t.Z = Z;
+t.Z = T;

@@ -1,52 +1,52 @@
 n.d(t, {
     O: function () {
-        return c;
+        return u;
     },
     l: function () {
-        return o;
+        return l;
     }
 });
-var i = n(594174),
-    s = n(63063),
+var r = n(594174),
+    i = n(63063),
     a = n(74538),
-    r = n(981631),
-    l = n(689938);
-function o(e) {
+    o = n(981631),
+    s = n(689938);
+function l(e) {
     switch (e) {
-        case r.evJ.TOO_MANY_USER_GUILDS:
-            let t = i.default.getCurrentUser(),
-                n = a.ZP.canUseIncreasedGuildCap(t) || (null == t ? void 0 : t.isStaff()) ? r.tHP : r.DZw;
+        case o.evJ.TOO_MANY_USER_GUILDS:
+            let t = r.default.getCurrentUser(),
+                n = a.ZP.canUseIncreasedGuildCap(t) || (null == t ? void 0 : t.isStaff()) ? o.tHP : o.DZw;
             return {
-                title: l.Z.Messages.TOO_MANY_USER_GUILDS_TITLE_2.format({ quantity: n }),
-                description: l.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION
+                title: s.Z.Messages.TOO_MANY_USER_GUILDS_TITLE_2.format({ quantity: n }),
+                description: s.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION
             };
-        case r.evJ.GUILD_AT_CAPACITY:
+        case o.evJ.GUILD_AT_CAPACITY:
             return {
-                title: l.Z.Messages.SERVER_IS_CURRENTLY_FULL,
-                description: l.Z.Messages.PLEASE_TRY_AGAIN_LATER
+                title: s.Z.Messages.SERVER_IS_CURRENTLY_FULL,
+                description: s.Z.Messages.PLEASE_TRY_AGAIN_LATER
             };
-        case r.evJ.GUILD_JOIN_INVITE_LIMITED_ACCESS:
+        case o.evJ.GUILD_JOIN_INVITE_LIMITED_ACCESS:
             return {
-                title: l.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_HEADING,
-                description: l.Z.Messages.PLEASE_TRY_AGAIN_LATER
+                title: s.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_HEADING,
+                description: s.Z.Messages.PLEASE_TRY_AGAIN_LATER
             };
         default:
             return null;
     }
 }
-function c(e) {
+function u(e) {
     switch (e) {
-        case r.evJ.TOO_MANY_USER_GUILDS:
-            return l.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION;
-        case r.evJ.GUILD_AT_CAPACITY:
-            return l.Z.Messages.MAX_GUILD_MEMBERS_REACHED_ERROR;
-        case r.evJ.INVALID_COUNTRY_CODE:
-            return l.Z.Messages.INVALID_COUNTRY_CODE;
-        case r.evJ.INVALID_CANNOT_FRIEND_SELF:
-            return l.Z.Messages.INVALID_CANNOT_FRIEND_SELF;
-        case r.evJ.INVITES_DISABLED:
-            return l.Z.Messages.INVITES_DISABLED_MODAL_DESCRIPTION.format({ articleLink: s.Z.getArticleURL(r.BhN.INVITE_DISABLED) });
+        case o.evJ.TOO_MANY_USER_GUILDS:
+            return s.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION;
+        case o.evJ.GUILD_AT_CAPACITY:
+            return s.Z.Messages.MAX_GUILD_MEMBERS_REACHED_ERROR;
+        case o.evJ.INVALID_COUNTRY_CODE:
+            return s.Z.Messages.INVALID_COUNTRY_CODE;
+        case o.evJ.INVALID_CANNOT_FRIEND_SELF:
+            return s.Z.Messages.INVALID_CANNOT_FRIEND_SELF;
+        case o.evJ.INVITES_DISABLED:
+            return s.Z.Messages.INVITES_DISABLED_MODAL_DESCRIPTION.format({ articleLink: i.Z.getArticleURL(o.BhN.INVITE_DISABLED) });
         default:
-            return l.Z.Messages.INVITE_MODAL_ERROR_DEFAULT;
+            return s.Z.Messages.INVITE_MODAL_ERROR_DEFAULT;
     }
 }

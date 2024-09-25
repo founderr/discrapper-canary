@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return S;
     }
 });
 var i = n(735250),
@@ -33,22 +33,22 @@ let N = {
         y: 0
     }
 };
-function S(e) {
+function x(e) {
     (0, s.jW)(e, async () => {
         let { default: e } = await n.e('9606').then(n.bind(n, 987578));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function x(e) {
+function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         s = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
-        x = l.useMemo(() => Object.values(s), [s]),
+        S = l.useMemo(() => Object.values(s), [s]),
         v = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        T = l.useMemo(() => x.some((e) => e.isOwner(v)), [x, v]),
-        Z = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, C.PU)),
+        Z = l.useMemo(() => S.some((e) => e.isOwner(v)), [S, v]),
+        T = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, C.PU)),
         { analyticsLocations: b } = (0, o.ZP)(),
         A = (0, a.useRedesignIconContext)().enabled,
-        R = (0, i.jsx)(m.Z, {
+        M = (0, i.jsx)(m.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -63,21 +63,21 @@ function x(e) {
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: Z,
-            onContextMenu: S,
+            selected: T,
+            onContextMenu: x,
             tooltip: I.Z.Messages.ADD_A_SERVER,
             icon: A ? a.PlusMediumIcon : a.PlusSmallIcon
         });
     return t
-        ? R
+        ? M
         : (0, i.jsx)('div', {
               className: E.tutorialContainer,
               children: (0, i.jsxs)(h.Z, {
-                  tutorialId: T ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: Z ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: N,
                   position: 'right',
                   children: [
-                      R,
+                      M,
                       null != n &&
                           (0, i.jsx)(_.ZP, {
                               name: I.Z.Messages.DND_END_OF_LIST,

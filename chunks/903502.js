@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return b;
     }
 }),
     n(47120);
@@ -35,20 +35,20 @@ let m = 60000,
             value: 86400000
         }
     ];
-function g() {
+function b() {
     let [e, t] = a.useState(null),
-        [n, g] = a.useState(0),
-        [b, v] = a.useState(1000),
-        [_, j] = a.useState(0),
-        C = (0, l.e7)([c.Z], () => {
+        [n, b] = a.useState(0),
+        [g, v] = a.useState(1000),
+        [j, C] = a.useState(0),
+        _ = (0, l.e7)([c.Z], () => {
             var t;
             return null === e ? null : null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : s.R[e];
         }),
-        T = Object.keys(s.R).map((e) => ({
+        S = Object.keys(s.R).map((e) => ({
             label: e,
             value: e
         })),
-        S = a.useMemo(() => null != e && _ >= 0 && _ <= 100 && n >= 0, [e, _, n]);
+        T = a.useMemo(() => null != e && j >= 0 && j <= 100 && n >= 0, [e, j, n]);
     return (0, r.jsxs)('div', {
         className: h.container,
         children: [
@@ -57,7 +57,7 @@ function g() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: (0, r.jsx)(i.SingleSelect, {
-                    options: T,
+                    options: S,
                     value: e,
                     onChange: (e) => {
                         t(e);
@@ -71,7 +71,7 @@ function g() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
-                    null != C &&
+                    null != _ &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(d.Z, {
@@ -83,19 +83,19 @@ function g() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / 1000, ' second(s) or')
+                                    children: ''.concat(_.cooldown / 1000, ' second(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / m, ' minute(s) or')
+                                    children: ''.concat(_.cooldown / m, ' minute(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / x, ' hour(s) or')
+                                    children: ''.concat(_.cooldown / x, ' hour(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / f, ' day(s)')
+                                    children: ''.concat(_.cooldown / f, ' day(s)')
                                 })
                             ]
                         }),
@@ -114,11 +114,11 @@ function g() {
                                 value: n.toString(),
                                 type: 'number',
                                 placeholder: 'Duration length',
-                                onChange: (e) => g(parseFloat(e))
+                                onChange: (e) => b(parseFloat(e))
                             }),
                             (0, r.jsx)(i.SingleSelect, {
                                 options: p,
-                                value: b,
+                                value: g,
                                 onChange: (e) => {
                                     v(e);
                                 },
@@ -133,7 +133,7 @@ function g() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
-                    null != C &&
+                    null != _ &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(d.Z, {
@@ -145,7 +145,7 @@ function g() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(100 * C.chance, '%')
+                                    children: ''.concat(100 * _.chance, '%')
                                 })
                             ]
                         }),
@@ -162,9 +162,9 @@ function g() {
                             (0, r.jsx)(i.TextInput, {
                                 min: 0,
                                 max: 100,
-                                value: _.toString(),
+                                value: j.toString(),
                                 type: 'number',
-                                onChange: (e) => j(parseFloat(e))
+                                onChange: (e) => C(parseFloat(e))
                             }),
                             (0, r.jsx)(i.Text, {
                                 variant: 'text-md/normal',
@@ -182,10 +182,10 @@ function g() {
                             void o.Z.dispatch({
                                 type: 'FEEDBACK_OVERRIDE_SET',
                                 feedbackType: e,
-                                cooldown: n * b,
-                                chance: _ / 100
+                                cooldown: n * g,
+                                chance: j / 100
                             }),
-                        disabled: !S,
+                        disabled: !T,
                         children: 'Update'
                     }),
                     (0, r.jsx)(i.Button, {
@@ -194,7 +194,7 @@ function g() {
                                 type: 'FEEDBACK_OVERRIDE_CLEAR',
                                 feedbackType: e
                             }),
-                        disabled: !S,
+                        disabled: !T,
                         children: 'Clear Override'
                     })
                 ]
@@ -211,7 +211,7 @@ function g() {
                     color: 'text-danger',
                     children: 'Error: cooldown needs to be a number greater than 0'
                 }),
-            !(_ >= 0 && _ <= 100) &&
+            !(j >= 0 && j <= 100) &&
                 (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-danger',

@@ -1,9 +1,9 @@
 n.d(t, {
     q: function () {
-        return s;
+        return i;
     }
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
         id: '2024-04_concurrent_quests',
         kind: 'user',
         label: 'Concurrent Quests',
@@ -21,7 +21,7 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    s = (e) => {
+    i = (e) => {
         let { location: t, autoTrackExposure: n = !1 } = e;
-        return i.useExperiment({ location: t }, { autoTrackExposure: n }).enabled;
+        return r.useExperiment({ location: t }, { autoTrackExposure: n }).enabled;
     };

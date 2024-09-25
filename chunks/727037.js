@@ -1,13 +1,13 @@
 n.d(t, {
     I: function () {
-        return o;
+        return s;
     }
 });
 var r = n(230367),
     i = n(36056),
     a = n(929412),
-    s = n(436759);
-class o {
+    o = n(436759);
+class s {
     constructor(e) {
         this.info = e;
     }
@@ -20,28 +20,28 @@ class o {
     }
     read(e, t, n, a) {
         this.prepare();
-        let s = void 0 === a ? e.len : e.pos + a;
-        for (; e.pos < s; ) {
-            let [a, s] = e.tag(),
-                o = this.fieldNoToField.get(a);
-            if (!o) {
+        let o = void 0 === a ? e.len : e.pos + a;
+        for (; e.pos < o; ) {
+            let [a, o] = e.tag(),
+                s = this.fieldNoToField.get(a);
+            if (!s) {
                 let i = n.readUnknownField;
-                if ('throw' == i) throw Error(`Unknown field ${a} (wire type ${s}) for ${this.info.typeName}`);
-                let o = e.skip(s);
-                !1 !== i && (!0 === i ? r.z.onRead : i)(this.info.typeName, t, a, s, o);
+                if ('throw' == i) throw Error(`Unknown field ${a} (wire type ${o}) for ${this.info.typeName}`);
+                let s = e.skip(o);
+                !1 !== i && (!0 === i ? r.z.onRead : i)(this.info.typeName, t, a, o, s);
                 continue;
             }
             let l = t,
-                u = o.repeat,
-                c = o.localName;
-            switch ((o.oneof && (l = l[o.oneof]).oneofKind !== c && (l = t[o.oneof] = { oneofKind: c }), o.kind)) {
+                u = s.repeat,
+                c = s.localName;
+            switch ((s.oneof && (l = l[s.oneof]).oneofKind !== c && (l = t[s.oneof] = { oneofKind: c }), s.kind)) {
                 case 'scalar':
                 case 'enum':
-                    let d = 'enum' == o.kind ? i.wx.INT32 : o.T,
-                        _ = 'scalar' == o.kind ? o.L : void 0;
+                    let d = 'enum' == s.kind ? i.wx.INT32 : s.T,
+                        _ = 'scalar' == s.kind ? s.L : void 0;
                     if (u) {
                         let t = l[c];
-                        if (s == r.TD.LengthDelimited && d != i.wx.STRING && d != i.wx.BYTES) {
+                        if (o == r.TD.LengthDelimited && d != i.wx.STRING && d != i.wx.BYTES) {
                             let n = e.uint32() + e.pos;
                             for (; e.pos < n; ) t.push(this.scalar(e, d, _));
                         } else t.push(this.scalar(e, d, _));
@@ -50,12 +50,12 @@ class o {
                 case 'message':
                     if (u) {
                         let t = l[c],
-                            r = o.T().internalBinaryRead(e, e.uint32(), n);
+                            r = s.T().internalBinaryRead(e, e.uint32(), n);
                         t.push(r);
-                    } else l[c] = o.T().internalBinaryRead(e, e.uint32(), n, l[c]);
+                    } else l[c] = s.T().internalBinaryRead(e, e.uint32(), n, l[c]);
                     break;
                 case 'map':
-                    let [E, f] = this.mapEntry(o, e, n);
+                    let [E, f] = this.mapEntry(s, e, n);
                     l[c][E] = f;
             }
         }
@@ -63,11 +63,11 @@ class o {
     mapEntry(e, t, n) {
         let r,
             a,
-            o = t.uint32(),
-            l = t.pos + o;
+            s = t.uint32(),
+            l = t.pos + s;
         for (; t.pos < l; ) {
-            let [s, o] = t.tag();
-            switch (s) {
+            let [o, s] = t.tag();
+            switch (o) {
                 case 1:
                     r = e.K == i.wx.BOOL ? t.bool().toString() : this.scalar(t, e.K, i.pz.STRING);
                     break;
@@ -84,17 +84,17 @@ class o {
                     }
                     break;
                 default:
-                    throw Error(`Unknown field ${s} (wire type ${o}) in map entry for ${this.info.typeName}#${e.name}`);
+                    throw Error(`Unknown field ${o} (wire type ${s}) in map entry for ${this.info.typeName}#${e.name}`);
             }
         }
         if (void 0 === r) {
-            let t = (0, s.N)(e.K);
+            let t = (0, o.N)(e.K);
             r = e.K == i.wx.BOOL ? t.toString() : t;
         }
         if (void 0 === a)
             switch (e.V.kind) {
                 case 'scalar':
-                    a = (0, s.N)(e.V.T, e.V.L);
+                    a = (0, o.N)(e.V.T, e.V.L);
                     break;
                 case 'enum':
                     a = 0;

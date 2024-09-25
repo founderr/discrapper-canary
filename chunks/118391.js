@@ -1,12 +1,12 @@
-var e = n(67867),
-    o = n(168013);
-e(
+var r = n(67867),
+    i = n(168013);
+r(
     {
         target: 'Array',
         stat: !0,
-        forced: !n(546533)(function (t) {
-            Array.from(t);
+        forced: !n(546533)(function (e) {
+            Array.from(e);
         })
     },
-    { from: o }
+    { from: i }
 );

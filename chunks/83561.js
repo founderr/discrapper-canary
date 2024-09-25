@@ -1,47 +1,47 @@
 n.d(t, {
     S: function () {
-        return I;
+        return h;
     },
     m: function () {
-        return E;
+        return f;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
-    r = n(481060),
+    a = n(470079),
+    o = n(442837),
+    s = n(481060),
     l = n(607070),
-    o = n(426563),
+    u = n(426563),
     c = n(998502),
-    u = n(689938),
-    d = n(146655);
-let _ = c.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
-function E() {
+    d = n(689938),
+    _ = n(146655);
+let E = c.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        [t, n] = s.useState(!1),
-        i = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-        r = s.useMemo(() => {
-            let n = t || (!i && !e);
-            return (0, o.j)(n);
-        }, [t, i, e]),
-        c = s.useCallback(() => n(!0), []);
+        [t, n] = a.useState(!1),
+        r = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
+        i = a.useMemo(() => {
+            let n = t || (!r && !e);
+            return (0, u.j)(n);
+        }, [t, r, e]),
+        s = a.useCallback(() => n(!0), []);
     return {
-        avatarSrc: r,
+        avatarSrc: i,
         eventHandlers: {
-            onMouseEnter: c,
-            onMouseLeave: s.useCallback(() => n(!1), [])
+            onMouseEnter: s,
+            onMouseLeave: a.useCallback(() => n(!1), [])
         }
     };
 }
-function I(e) {
+function h(e) {
     let { src: t } = e;
     return (0, i.jsx)('div', {
-        className: d.avatarContainer,
-        children: (0, i.jsx)(_, {
+        className: _.avatarContainer,
+        children: (0, i.jsx)(E, {
             src: t,
-            size: r.AvatarSizes.SIZE_40,
-            'aria-label': u.Z.Messages.GUILD_AUTOMOD_USERNAME
+            size: s.AvatarSizes.SIZE_40,
+            'aria-label': d.Z.Messages.GUILD_AUTOMOD_USERNAME
         })
     });
 }

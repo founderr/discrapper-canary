@@ -1,7 +1,16 @@
-function r(e, t) {
+n.d(t, {
+    Q: function () {
+        return a;
+    },
+    l: function () {
+        return i;
+    }
+});
+var r = n(47120);
+function i(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function i(e) {
+function a(e) {
     let t = e.split(':');
     if (2 !== t.length) return null;
     let [n, r] = t;
@@ -10,12 +19,3 @@ function i(e) {
         skuId: r
     };
 }
-n.d(t, {
-    Q: function () {
-        return i;
-    },
-    l: function () {
-        return r;
-    }
-}),
-    n(47120);

@@ -3,23 +3,23 @@ n.d(t, {
         return S;
     },
     e: function () {
-        return m;
+        return T;
     }
-}),
-    n(47120);
+});
 var r,
-    i = n(735250);
+    i = n(47120);
+var a = n(735250);
 n(470079);
-var a = n(442837),
+var o = n(442837),
     s = n(570140),
-    o = n(962293),
-    l = n(592125),
-    u = n(271383),
-    c = n(944486),
-    d = n(594174),
-    _ = n(689938),
-    E = n(146263);
-function f(e, t, n) {
+    l = n(962293),
+    u = n(592125),
+    c = n(271383),
+    d = n(944486),
+    _ = n(594174),
+    E = n(689938),
+    f = n(146263);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,37 +32,37 @@ function f(e, t, n) {
         e
     );
 }
-let h = new Set();
-class p extends (r = a.ZP.PersistedStore) {
+let p = new Set();
+class m extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (h = new Set(e));
+        null != e && (p = new Set(e));
     }
     hasId(e) {
-        return h.has(e);
+        return p.has(e);
     }
     getState() {
-        return [...h];
+        return [...p];
     }
 }
-f(p, 'displayName', 'PTOStore'), f(p, 'persistKey', 'PTOStore');
-let I = new p(s.Z, {}),
-    m = (e) =>
-        (0, a.e7)([u.ZP, d.default, I], () => {
-            let t = d.default.getCurrentUser();
+h(m, 'displayName', 'PTOStore'), h(m, 'persistKey', 'PTOStore');
+let I = new m(s.Z, {}),
+    T = (e) =>
+        (0, o.e7)([c.ZP, _.default, I], () => {
+            let t = _.default.getCurrentUser();
             if (null == t || !t.isStaff() || !e.isDM()) return !1;
-            let n = d.default.getUser(e.getRecipientId());
+            let n = _.default.getUser(e.getRecipientId());
             if (!(null == n ? void 0 : n.isStaff())) return !1;
-            let r = u.ZP.getNicknames(n.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
-            return r ? !I.hasId(n.id) && r : (h.delete(n.id) && I.emitChange(), !1);
+            let r = c.ZP.getNicknames(n.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
+            return r ? !I.hasId(n.id) && r : (p.delete(n.id) && I.emitChange(), !1);
         }),
-    T = () => {
-        let e = c.Z.getChannelId();
+    g = () => {
+        let e = d.Z.getChannelId();
         if (null == e) return;
-        let t = l.Z.getChannel(e);
-        null != t && t.isPrivate() && !h.has(t.getRecipientId()) && (h.add(t.getRecipientId()), I.emitChange());
+        let t = u.Z.getChannel(e);
+        null != t && t.isPrivate() && !p.has(t.getRecipientId()) && (p.add(t.getRecipientId()), I.emitChange());
     },
     S = () =>
-        (0, i.jsxs)('div', {
-            className: E.bar,
-            children: [_.Z.Messages.STAFF_PTO_NOTICE, (0, i.jsx)(o.B, { onClick: T })]
+        (0, a.jsxs)('div', {
+            className: f.bar,
+            children: [E.Z.Messages.STAFF_PTO_NOTICE, (0, a.jsx)(l.B, { onClick: g })]
         });

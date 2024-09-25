@@ -1,70 +1,70 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return g;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(392711),
-    r = n.n(a),
+    a = n(470079),
+    o = n(392711),
+    s = n.n(o),
     l = n(442837),
-    o = n(570140),
+    u = n(570140),
     c = n(45114),
-    u = n(404616),
-    d = n(470623),
-    _ = n(344185),
-    E = n(488131),
-    I = n(592125),
-    m = n(823379),
-    T = n(709054),
-    h = n(124368),
-    N = n(302762);
-function f(e) {
-    let { channel: t, channelRecord: n, deleteChannel: a } = e,
-        f = (0, l.Wu)(
-            [_.Z, I.Z],
+    d = n(404616),
+    _ = n(470623),
+    E = n(344185),
+    f = n(488131),
+    h = n(592125),
+    p = n(823379),
+    m = n(709054),
+    I = n(124368),
+    T = n(302762);
+function g(e) {
+    let { channel: t, channelRecord: n, deleteChannel: r } = e,
+        o = (0, l.Wu)(
+            [E.Z, h.Z],
             () =>
-                r()(_.Z.getThreadsForParent(n.guild_id, n.id))
+                s()(E.Z.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
-                        return T.default.compare(n, t.oldestReadMessageId) > 0;
+                        return m.default.compare(n, t.oldestReadMessageId) > 0;
                     })
                     .map((e) => {
                         let { id: t } = e;
-                        return I.Z.getChannel(t);
+                        return h.Z.getChannel(t);
                     })
-                    .filter(m.lm)
-                    .sort((e, t) => T.default.compare(e.id, t.id))
+                    .filter(p.lm)
+                    .sort((e, t) => m.default.compare(e.id, t.id))
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
-        C = s.useCallback((e, t) => {
-            (0, E.ok)(e, t, h.on.INBOX);
+        g = a.useCallback((e, t) => {
+            (0, f.ok)(e, t, I.on.INBOX);
         }, []);
     return (
-        s.useEffect(() => {
+        a.useEffect(() => {
             null != n &&
                 t.isFullyLoaded &&
                 !t.hasError &&
                 !t.collapsed &&
-                0 === f.length &&
-                o.Z.wait(() => {
-                    (0, c.In)(t.channelId, !0), a(t.channelId);
+                0 === o.length &&
+                u.Z.wait(() => {
+                    (0, c.In)(t.channelId, !0), r(t.channelId);
                 });
         }),
         (0, i.jsx)('div', {
-            className: N.container,
-            children: f.map((e) =>
+            className: T.container,
+            children: o.map((e) =>
                 (0, i.jsx)(
-                    d.oL,
+                    _.oL,
                     {
-                        createStore: () => (0, d.NU)(n),
-                        children: (0, i.jsx)(u.ZP, {
-                            className: N.forumPost,
+                        createStore: () => (0, _.NU)(n),
+                        children: (0, i.jsx)(d.ZP, {
+                            className: T.forumPost,
                             threadId: e.id,
-                            goToThread: C
+                            goToThread: g
                         })
                     },
                     e.id

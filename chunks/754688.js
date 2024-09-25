@@ -1,6 +1,6 @@
 n.d(t, {
     Ao: function () {
-        return I;
+        return m;
     },
     Jv: function () {
         return f;
@@ -15,23 +15,23 @@ n.d(t, {
         return T;
     },
     YO: function () {
-        return m;
+        return I;
     }
 });
 var r = n(592125),
     i = n(430824),
     a = n(496675),
-    s = n(226951),
-    o = n(981631);
+    o = n(226951),
+    s = n(981631);
 let l = Array.from(n(176505).Vg)
-        .map((e) => s.Z.escape(e))
+        .map((e) => o.Z.escape(e))
         .join('|'),
-    u = new RegExp('^/channels/(\\d+|'.concat(o.ME, ')(?:/)?(\\d+|').concat(l, ')?')),
-    c = new RegExp('^/channels/(\\d+|'.concat(o.ME, ')(?:/)(\\d+|').concat(l, ')(?:/)(\\d+)')),
+    u = new RegExp('^/channels/(\\d+|'.concat(s.ME, ')(?:/)?(\\d+|').concat(l, ')?')),
+    c = new RegExp('^/channels/(\\d+|'.concat(s.ME, ')(?:/)(\\d+|').concat(l, ')(?:/)(\\d+)')),
     d = RegExp('^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)'),
     _ = RegExp('^/guild-stages/(\\d+)(?:/)?(\\d+)?'),
     E = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
-    f = new RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|'.concat(o.ME, ')(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?')),
+    f = new RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|'.concat(s.ME, ')(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?')),
     h = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)');
 function p(e) {
     if (null == e) return null;
@@ -61,7 +61,7 @@ function p(e) {
     let a = e.match(_);
     return null != a && a.length > 1 ? { guildId: a[1] } : null;
 }
-function I(e) {
+function m(e) {
     if (null == e) return null;
     let t = e.match(E);
     return null != t && t.length > 1
@@ -72,13 +72,13 @@ function I(e) {
           }
         : null;
 }
-function m(e) {
-    return !!e.isPrivate() || a.Z.can(o.Plq.VIEW_CHANNEL, e);
+function I(e) {
+    return !!e.isPrivate() || a.Z.can(s.Plq.VIEW_CHANNEL, e);
 }
 function T(e) {
     let { guildId: t, channelId: n } = e;
-    if (null == i.Z.getGuild(t) && t !== o.ME) return !1;
+    if (null == i.Z.getGuild(t) && t !== s.ME) return !1;
     if (null == n) return !0;
     let a = r.Z.getChannel(n);
-    return null != a && m(a);
+    return null != a && I(a);
 }

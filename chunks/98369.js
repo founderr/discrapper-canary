@@ -1,116 +1,116 @@
 n(47120), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(724458);
-var i,
-    s,
-    a,
+var r,
     l,
-    r = n(442837),
+    i,
+    u,
+    s = n(442837),
     o = n(46973),
-    c = n(570140),
-    u = n(569545),
+    a = n(570140),
+    c = n(569545),
     d = n(314897),
-    h = n(19780),
-    m = n(959457),
-    p = n(630759),
-    _ = n(729303),
-    f = n(651941),
-    E = n(981631);
-let g = new Map(),
+    f = n(19780),
+    E = n(959457),
+    _ = n(630759),
+    S = n(729303),
+    I = n(651941),
+    g = n(981631);
+let R = new Map(),
     C = new Map(),
-    I = !1,
-    T = null;
-function x() {
-    return m.Z.getAllActiveStreamKeys().reduce((e, t) => {
-        let { ownerId: n } = (0, u.my)(t),
-            i = !0 === g.get(n),
-            s = C.get(t) !== i;
-        return C.set(t, i), !!s || e;
+    m = !1,
+    h = null;
+function N() {
+    return E.Z.getAllActiveStreamKeys().reduce((e, t) => {
+        let { ownerId: n } = (0, c.my)(t),
+            r = !0 === R.get(n),
+            l = C.get(t) !== r;
+        return C.set(t, r), !!l || e;
     }, !1);
 }
-function S() {
+function T() {
     var e;
-    let t = null !== (e = h.Z.getUserIds()) && void 0 !== e ? e : new Set(),
+    let t = null !== (e = f.Z.getUserIds()) && void 0 !== e ? e : new Set(),
         n = d.default.getId(),
-        i = !0;
+        r = !0;
     for (let e of t)
-        if (n !== e && !0 !== g.get(e)) {
-            i = !1;
+        if (n !== e && !0 !== R.get(e)) {
+            r = !1;
             break;
         }
-    let s = i !== I;
-    return (I = i), s;
+    let l = r !== m;
+    return (m = r), l;
 }
-function v(e) {
+function Z(e) {
     let { userId: t } = e;
     if (d.default.getId() === t) return !1;
     let n = (function (e) {
-            let t = h.Z.getSecureFramesRosterMapEntry(e);
+            let t = f.Z.getSecureFramesRosterMapEntry(e);
             if (null == t) return !1;
             let n = new Uint8Array(t),
-                i = f.Z.isKeyVerified(e, n) || _.Z.isKeyVerified(e, n),
-                s = (0, p.UB)(e, [h.Z, m.Z]),
-                a = i && !s,
-                l = a !== g.get(e);
-            return g.set(e, a), l;
+                r = I.Z.isKeyVerified(e, n) || S.Z.isKeyVerified(e, n),
+                l = (0, _.UB)(e, [f.Z, E.Z]),
+                i = r && !l,
+                u = i !== R.get(e);
+            return R.set(e, i), u;
         })(t),
-        i = x(),
-        s = S();
-    return n || i || s;
+        r = N(),
+        l = T();
+    return n || r || l;
 }
-function N() {
-    g.clear(), C.clear(), (I = !1);
+function v() {
+    R.clear(), C.clear(), (m = !1);
 }
-class A extends (i = r.ZP.Store) {
+class y extends (r = s.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, f.Z, h.Z, m.Z);
+        this.waitFor(S.Z, I.Z, f.Z, E.Z);
     }
     isCallVerified() {
-        return I;
+        return m;
     }
     isStreamVerified(e) {
         return C.get(e);
     }
     isUserVerified(e) {
-        return g.get(e);
+        return R.get(e);
     }
 }
-(l = 'SecureFramesVerifiedStore'),
-    (a = 'displayName') in (s = A)
-        ? Object.defineProperty(s, a, {
-              value: l,
+(u = 'SecureFramesVerifiedStore'),
+    (i = 'displayName') in (l = y)
+        ? Object.defineProperty(l, i, {
+              value: u,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = l),
-    (t.Z = new A(c.Z, {
-        CONNECTION_OPEN: N,
+        : (l[i] = u),
+    (t.Z = new y(a.Z, {
+        CONNECTION_OPEN: v,
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            if (t === T) return !1;
-            (T = t), N();
+            if (t === h) return !1;
+            (h = t), v();
         },
         RTC_CONNECTION_STATE: function (e) {
-            let { streamKey: t, state: n, context: i } = e;
-            if (n !== E.hes.DISCONNECTED) return !1;
-            switch (i) {
+            let { streamKey: t, state: n, context: r } = e;
+            if (n !== g.hes.DISCONNECTED) return !1;
+            switch (r) {
                 case o.Yn.STREAM:
                     if (null == t) return !1;
-                    return C.delete(t), S();
+                    return C.delete(t), T();
                 case o.Yn.DEFAULT:
-                    N();
+                    v();
             }
         },
         RTC_CONNECTION_ROSTER_MAP_UPDATE: function (e) {
             let { userIds: t } = e,
                 n = d.default.getId(),
-                i = t.reduce((e, t) => (n === t ? e : !!v({ userId: t }) || e), !1),
-                s = x(),
-                a = S();
-            return i || s || a;
+                r = t.reduce((e, t) => (n === t ? e : !!Z({ userId: t }) || e), !1),
+                l = N(),
+                i = T();
+            return r || l || i;
         },
-        SECURE_FRAMES_TRANSIENT_KEY_CREATE: v,
-        SECURE_FRAMES_TRANSIENT_KEY_DELETE: v,
-        SECURE_FRAMES_VERIFIED_KEY_CREATE: v,
-        SECURE_FRAMES_VERIFIED_KEY_DELETE: v,
-        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: v
+        SECURE_FRAMES_TRANSIENT_KEY_CREATE: Z,
+        SECURE_FRAMES_TRANSIENT_KEY_DELETE: Z,
+        SECURE_FRAMES_VERIFIED_KEY_CREATE: Z,
+        SECURE_FRAMES_VERIFIED_KEY_DELETE: Z,
+        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: Z
     }));

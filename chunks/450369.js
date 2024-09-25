@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(199902),
     T = n(430824),
     x = n(496675),
-    S = n(979651),
-    v = n(88751),
+    v = n(979651),
+    S = n(88751),
     N = n(252132),
     A = n(248400),
     Z = n(981631),
@@ -80,21 +80,21 @@ let R = 16 / 9,
     j = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: a, width: l, isModerator: u, onContextMenu: h, inPopout: g } = e,
             { reducedMotion: C } = s.useContext(o.AccessibilityPreferencesContext),
-            { id: v, blocked: L } = t,
+            { id: S, blocked: L } = t,
             j = (0, r.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
-            { selectedParticipant: P, largeStream: O } = (0, r.cj)([m.Z], () => ({
+            { selectedParticipant: O, largeStream: P } = (0, r.cj)([m.Z], () => ({
                 selectedParticipant: null != a ? m.Z.getSelectedParticipant(a.id) : null,
                 largeStream: null != a && m.Z.getStageStreamSize(a.id)
             })),
             y = s.useCallback(
                 (e, t) => {
                     if (e.type === M.fO.STREAM && 0 === j.filter((t) => (0, _.V9)(t) === e.id && t.state !== Z.jm8.ENDED).length) {
-                        if (!(0, f.p9)(a, S.Z, T.Z, x.Z, p.Z)[0]) return;
+                        if (!(0, f.p9)(a, v.Z, T.Z, x.Z, p.Z)[0]) return;
                         (0, d.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
                     }
-                    (null == P ? void 0 : P.id) === e.id ? (O ? (c.Z.selectParticipant(a.id, null), c.Z.updateStageStreamSize(a.id, !1)) : c.Z.updateStageStreamSize(a.id, !0)) : (c.Z.updateStageStreamSize(a.id, !1), c.Z.selectParticipant(a.id, e.id));
+                    (null == O ? void 0 : O.id) === e.id ? (P ? (c.Z.selectParticipant(a.id, null), c.Z.updateStageStreamSize(a.id, !1)) : c.Z.updateStageStreamSize(a.id, !0)) : (c.Z.updateStageStreamSize(a.id, !1), c.Z.selectParticipant(a.id, e.id));
                 },
-                [j, a, P, O]
+                [j, a, O, P]
             );
         return (0, i.jsx)(
             N.Z,
@@ -114,7 +114,7 @@ let R = 16 / 9,
                 width: l,
                 children: u && n.type === M.fO.USER && (0, i.jsx)(A.Z, {})
             },
-            v
+            S
         );
     };
 t.Z = s.memo(function (e) {
@@ -125,7 +125,7 @@ t.Z = s.memo(function (e) {
     l()(null != d, 'Channel cannot be guildless');
     let { user: p } = s,
         _ = (0, r.e7)([m.Z], () => m.Z.getParticipant(a.id, s.id), [a.id, s.id]),
-        f = (0, r.e7)([v.ZP], () => v.ZP.isModerator(p.id, a.id), [a.id, p.id]);
+        f = (0, r.e7)([S.ZP], () => S.ZP.isModerator(p.id, a.id), [a.id, p.id]);
     if (null == _ || _.type === M.fO.ACTIVITY) return null;
     let E = (e, t) => {
             switch (e.type) {

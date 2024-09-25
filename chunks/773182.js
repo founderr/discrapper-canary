@@ -3,13 +3,13 @@ n.d(t, {
         return D;
     },
     LW: function () {
-        return G;
+        return U;
     },
     OO: function () {
         return w;
     },
     TH: function () {
-        return U;
+        return G;
     }
 }),
     n(47120),
@@ -33,30 +33,30 @@ var i = n(735250),
     I = n(243778),
     E = n(669764),
     N = n(210753),
-    S = n(863249),
-    x = n(937111),
+    x = n(863249),
+    S = n(937111),
     v = n(369566),
-    T = n(314897),
-    Z = n(480294),
+    Z = n(314897),
+    T = n(480294),
     b = n(602147),
     A = n(981631),
-    R = n(308083),
-    M = n(731455),
+    M = n(308083),
+    R = n(731455),
     L = n(921944),
-    P = n(49898),
-    y = n(689938),
+    y = n(49898),
+    P = n(689938),
     O = n(877861);
 function j(e) {
     let { title: t, message: n, dismissibleContent: r, gameId: a, onPopoutVisible: c, onClick: h, children: p, isEligibleForUpsell: f = !0, withInviteIcon: _ = !0, backgroundImageUrl: g } = e,
         C = (0, s.TH)(),
         [E, N] = (0, I.US)([r], L.R.SIDEBAR),
-        S = E !== r,
-        x = (0, d.Z)(),
-        v = f && !x && !S && C.pathname !== A.Z5c.GUILD_DISCOVERY;
+        x = E !== r,
+        S = (0, d.Z)(),
+        v = f && !S && !x && C.pathname !== A.Z5c.GUILD_DISCOVERY;
     l.useEffect(() => {
         v && c();
     }, [v, c]);
-    let T = l.useCallback(() => {
+    let Z = l.useCallback(() => {
             N(L.L.TAKE_ACTION), h();
         }, [N, h]),
         b = l.useCallback(
@@ -65,8 +65,8 @@ function j(e) {
             },
             [N]
         ),
-        R = (0, o.e7)([Z.Z], () => Z.Z.hasConsented(A.pjP.PERSONALIZATION)),
-        M = l.useMemo(() => (null != g && R ? { backgroundImage: 'url('.concat(g, ')') } : {}), [g, R]);
+        M = (0, o.e7)([T.Z], () => T.Z.hasConsented(A.pjP.PERSONALIZATION)),
+        R = l.useMemo(() => (null != g && M ? { backgroundImage: 'url('.concat(g, ')') } : {}), [g, M]);
     return (0, i.jsxs)('div', {
         className: O.container,
         children: [
@@ -79,7 +79,7 @@ function j(e) {
                         children: [
                             (0, i.jsx)('div', {
                                 className: O.genericBackgroundImage,
-                                style: M
+                                style: R
                             }),
                             (0, i.jsx)(u.Clickable, {
                                 onClick: () => b(l),
@@ -91,7 +91,7 @@ function j(e) {
                             }),
                             (0, i.jsxs)('div', {
                                 className: O.popoutContent,
-                                children: [_ && (0, i.jsx)(m.YV, {}), (0, i.jsx)(m.aF, { title: t }), (0, i.jsx)(m.To, { message: n }), (0, i.jsx)(m.Xu, { onClick: T })]
+                                children: [_ && (0, i.jsx)(m.YV, {}), (0, i.jsx)(m.aF, { title: t }), (0, i.jsx)(m.To, { message: n }), (0, i.jsx)(m.Xu, { onClick: Z })]
                             }),
                             (0, i.jsx)('div', { className: O.popoutCaret })
                         ]
@@ -107,7 +107,7 @@ function j(e) {
                         className: O.popoutAnchor
                     })
             }),
-            p({ onClick: T })
+            p({ onClick: Z })
         ]
     });
 }
@@ -120,12 +120,12 @@ function D(e) {
             hasFetchedGame: s
         } = (function () {
             var e;
-            let t = (0, o.e7)([T.default], () => T.default.getId()),
+            let t = (0, o.e7)([Z.default], () => Z.default.getId()),
                 { recent: n, outbox: i } = (0, v.Z)(t),
                 r = (0, o.e7)([C.Z], () => C.Z.hasInitialized),
-                a = (0, o.e7)([Z.Z], () => Z.Z.hasConsented(A.pjP.PERSONALIZATION)),
+                a = (0, o.e7)([T.Z], () => T.Z.hasConsented(A.pjP.PERSONALIZATION)),
                 s = null == i && r,
-                c = l.useMemo(() => (a ? n.reduce((e, t) => ('played_game_extra' !== t.extra.type || null == R.gQ.get(t.extra.application_id) ? e : e.concat(t.extra.application_id)), []) : []), [n, a]);
+                c = l.useMemo(() => (a ? n.reduce((e, t) => ('played_game_extra' !== t.extra.type || null == M.gQ.get(t.extra.application_id) ? e : e.concat(t.extra.application_id)), []) : []), [n, a]);
             l.useEffect(() => {
                 s && a && (0, g.JX)(t);
             }, [t, s, a]);
@@ -147,7 +147,7 @@ function D(e) {
                 }, [h]);
             return {
                 gameId: u,
-                treatment: null != u && a ? R.O7.GAME_SPECIFIC : R.O7.GENERIC,
+                treatment: null != u && a ? M.O7.GAME_SPECIFIC : M.O7.GENERIC,
                 backgroundImageUrl: p,
                 hasFetchedGame: !s && !d
             };
@@ -165,12 +165,12 @@ function D(e) {
                 treatment: a,
                 gameApplicationId: n
             }),
-                (0, b.o)(P.F$.SERVERS, M.Gj.Clans);
+                (0, b.o)(y.F$.SERVERS, R.Gj.Clans);
         }, [a, n]);
-    return a !== R.O7.GAME_SPECIFIC || s
+    return a !== M.O7.GAME_SPECIFIC || s
         ? (0, i.jsx)(j, {
-              title: y.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_TITLE,
-              message: y.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_MESSAGE,
+              title: P.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_TITLE,
+              message: P.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_MESSAGE,
               gameId: n,
               backgroundImageUrl: r,
               dismissibleContent: c.z.RAPIDASH_M3_DISCOVERY_UPSELL,
@@ -194,8 +194,8 @@ function w(e) {
         s = l.useCallback(() => {
             (0, f._9)({ location: p.Z.GUILDS_LIST });
         }, []),
-        o = y.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
-        u = y.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE;
+        o = P.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+        u = P.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE;
     return (0, i.jsx)(j, {
         title: o,
         message: u,
@@ -207,11 +207,11 @@ function w(e) {
         children: t
     });
 }
-function U(e) {
+function G(e) {
     let { onActivate: t, children: n } = e,
-        r = (0, o.e7)([x.Z], () => x.Z.hasJoinRequestCoackmark()),
+        r = (0, o.e7)([S.Z], () => S.Z.hasJoinRequestCoackmark()),
         a = l.useCallback(() => {
-            S.ZP.clearCoachmark();
+            x.ZP.clearCoachmark();
         }, []),
         s = (0, h.Z)(r),
         c = l.useRef(null);
@@ -240,12 +240,12 @@ function U(e) {
                                             children: [
                                                 (0, i.jsx)(u.Heading, {
                                                     variant: 'heading-md/medium',
-                                                    children: y.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
+                                                    children: P.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
                                                 }),
                                                 (0, i.jsx)(u.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: y.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_BODY
+                                                    children: P.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_BODY
                                                 })
                                             ]
                                         }),
@@ -254,7 +254,7 @@ function U(e) {
                                             size: u.ButtonSizes.SMALL,
                                             color: u.ButtonColors.BRAND,
                                             onClick: a,
-                                            children: y.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
+                                            children: P.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
                                         })
                                     ]
                                 }),
@@ -276,7 +276,7 @@ function U(e) {
         })
     );
 }
-function G(e) {
+function U(e) {
     let { hideGradient: t, children: n } = e;
     return (0, i.jsxs)('div', {
         className: O.footer,

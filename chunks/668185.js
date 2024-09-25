@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(149765),
-    s = n(178940),
-    o = n(993365),
+    o = n(178940),
+    s = n(993365),
     l = n(481060),
     u = n(422559),
     c = n(689938),
@@ -19,7 +19,7 @@ function _(e) {
         E(!1, a.hX(n, h));
     }, [h, E, n]);
     let p = u.VY.filter((e) => a.e$(n, e)),
-        I = p
+        m = p
             .filter((e) => !a.e$(h, e))
             .map((e) => {
                 let t = (0, u.wt)(e),
@@ -28,11 +28,11 @@ function _(e) {
                     'li',
                     {
                         className: d.permission,
-                        children: (0, r.jsx)(s.X, {
+                        children: (0, r.jsx)(o.X, {
                             value: n,
                             onChange: (t, n) => E(n, e),
-                            type: s.X.Types.INVERTED,
-                            children: (0, r.jsx)(o.x, {
+                            type: o.X.Types.INVERTED,
+                            children: (0, r.jsx)(s.x, {
                                 variant: 'text-md/normal',
                                 children: t
                             })
@@ -41,7 +41,7 @@ function _(e) {
                     String(e)
                 );
             }),
-        m = p
+        I = p
             .filter((e) => a.e$(h, e))
             .map((e) => {
                 let t = (0, u.wt)(e);
@@ -58,7 +58,7 @@ function _(e) {
                                     className: d.icon
                                 })
                             }),
-                            (0, r.jsx)(o.x, {
+                            (0, r.jsx)(s.x, {
                                 variant: 'text-md/normal',
                                 children: t
                             })
@@ -70,10 +70,10 @@ function _(e) {
     return (0, r.jsxs)('div', {
         className: d.botPermissions,
         children: [
-            I.length > 0
+            m.length > 0
                 ? (0, r.jsxs)('div', {
                       children: [
-                          (0, r.jsx)(o.x, {
+                          (0, r.jsx)(s.x, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
                               children: c.Z.Messages.OAUTH2_CONFIRM_BOT_PERMISSIONS.format({
@@ -83,22 +83,22 @@ function _(e) {
                           }),
                           (0, r.jsx)('ul', {
                               className: d.permissionsList,
-                              children: I
+                              children: m
                           })
                       ]
                   })
                 : null,
-            m.length > 0
+            I.length > 0
                 ? (0, r.jsxs)('div', {
                       children: [
-                          (0, r.jsx)(o.x, {
+                          (0, r.jsx)(s.x, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
                               children: c.Z.Messages.OAUTH2_DISABLED_PERMISSIONS.format({ applicationName: t.name })
                           }),
                           (0, r.jsx)('ul', {
                               className: d.permissionsList,
-                              children: m
+                              children: I
                           })
                       ]
                   })

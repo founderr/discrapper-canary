@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     o: function () {
-        return s;
+        return o;
     }
 });
 var r = n(544891),
@@ -12,7 +12,7 @@ function a() {
     var e;
     return r.tn.get(''.concat(((e = 'https:'), 'https:')).concat(window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT));
 }
-function s(e, t) {
+function o(e, t) {
     i.Z.dispatch({
         type: 'RTC_LATENCY_TEST_COMPLETE',
         latencyRankedRegions: e,

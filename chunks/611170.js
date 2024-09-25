@@ -1,39 +1,39 @@
-t.d(n, {
+n.d(t, {
     a: function () {
-        return r;
+        return o;
     },
     r: function () {
-        return o;
+        return s;
     }
 });
-var l = t(591759),
-    i = t(524444),
-    a = t(231338);
-function r(e) {
-    let n = e.item.originalItem.media;
+var r = n(591759),
+    i = n(524444),
+    a = n(231338);
+function o(e) {
+    let t = e.item.originalItem.media;
     return (0, i.Yi)({
         ...e,
         alt: e.item.originalItem.description,
-        src: n.proxyUrl,
-        original: n.url,
-        placeholder: n.placeholder,
-        placeholderVersion: n.placeholderVersion,
+        src: t.proxyUrl,
+        original: t.url,
+        placeholder: t.placeholder,
+        placeholderVersion: t.placeholderVersion,
         renderForwardComponent: a.Vq
     });
 }
-function o(e) {
-    let n = e.item.originalItem.media,
-        t = l.Z.toURLSafe(n.proxyUrl);
-    return null == t
+function s(e) {
+    let t = e.item.originalItem.media,
+        n = r.Z.toURLSafe(t.proxyUrl);
+    return null == n
         ? null
-        : (t.searchParams.append('format', 'webp'),
+        : (n.searchParams.append('format', 'webp'),
           (0, i.lV)({
               ...e,
-              poster: t.toString(),
+              poster: n.toString(),
               alt: e.item.originalItem.description,
-              src: n.proxyUrl,
-              placeholder: n.placeholder,
-              placeholderVersion: n.placeholderVersion,
+              src: t.proxyUrl,
+              placeholder: t.placeholder,
+              placeholderVersion: t.placeholderVersion,
               renderForwardComponent: a.Vq
           }));
 }

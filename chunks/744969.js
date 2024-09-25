@@ -1,131 +1,131 @@
-t.d(n, {
+n.d(t, {
     s: function () {
-        return x;
+        return S;
     }
-}),
-    t(789020);
-var l = t(735250),
-    i = t(470079),
-    a = t(442837),
-    r = t(544891),
-    o = t(481060),
-    s = t(570140),
-    c = t(171246),
-    u = t(509545),
-    d = t(55563),
-    m = t(551428),
-    f = t(74538),
-    _ = t(937615),
-    p = t(147496),
-    C = t(519896),
-    h = t(981631),
-    I = t(689938);
-let E = (0, a.Kb)([d.Z, u.Z, m.Z], {
+});
+var r = n(789020);
+var i = n(735250),
+    a = n(470079),
+    o = n(442837),
+    s = n(544891),
+    l = n(481060),
+    u = n(570140),
+    c = n(171246),
+    d = n(509545),
+    _ = n(55563),
+    E = n(551428),
+    f = n(74538),
+    h = n(937615),
+    p = n(147496),
+    m = n(519896),
+    I = n(981631),
+    T = n(689938);
+let g = (0, o.Kb)([_.Z, d.Z, E.Z], {
     queryId: (e) => (null != e ? ['premium-button', e] : null),
     get: (e) => {
-        var n;
+        var t;
         if (null == e) return;
-        let t = d.Z.get(e),
-            l = null !== (n = u.Z.getForSKU(e)) && void 0 !== n ? n : [],
-            i = m.Z.getForSKU(e),
-            a = d.Z.getParentSKU(e);
-        if (null != t && null != i && (null == t || t.type !== h.epS.SUBSCRIPTION || null != a))
+        let n = _.Z.get(e),
+            r = null !== (t = d.Z.getForSKU(e)) && void 0 !== t ? t : [],
+            i = E.Z.getForSKU(e),
+            a = _.Z.getParentSKU(e);
+        if (null != n && null != i && (null == n || n.type !== I.epS.SUBSCRIPTION || null != a))
             return {
                 parentSku: a,
-                sku: t,
+                sku: n,
                 storeListing: i,
-                subscriptionPlans: l
+                subscriptionPlans: r
             };
     },
-    load: async (e, n) => {
-        if (null == n) return;
-        let t = { url: h.ANM.STOREFRONT_PREMIUM_BUTTON(n) },
-            { body: l } = await r.tn.get(t);
-        s.Z.dispatch({
+    load: async (e, t) => {
+        if (null == t) return;
+        let n = { url: I.ANM.STOREFRONT_PREMIUM_BUTTON(t) },
+            { body: r } = await s.tn.get(n);
+        u.Z.dispatch({
             type: 'STORE_LISTINGS_FETCH_SUCCESS',
-            storeListings: l.store_listings
+            storeListings: r.store_listings
         }),
-            null != l.subscription_plans &&
-                s.Z.dispatch({
+            null != r.subscription_plans &&
+                u.Z.dispatch({
                     type: 'SUBSCRIPTION_PLANS_FETCH_SUCCESS',
-                    skuId: n,
-                    subscriptionPlans: l.subscription_plans
+                    skuId: t,
+                    subscriptionPlans: r.subscription_plans
                 }),
-            null != l.skus &&
-                l.skus.forEach((e) => {
-                    s.Z.dispatch({
+            null != r.skus &&
+                r.skus.forEach((e) => {
+                    u.Z.dispatch({
                         type: 'SKU_FETCH_SUCCESS',
                         sku: e
                     });
                 });
     },
-    useStateHook: a.cj
+    useStateHook: o.cj
 });
-function x(e) {
-    let { data: n } = E(e),
-        t = null == n ? void 0 : n.parentSku,
-        a = null == n ? void 0 : n.sku,
-        r = null == n ? void 0 : n.storeListing,
-        s = null == n ? void 0 : n.subscriptionPlans,
-        u = i.useCallback(() => {
-            if ((null == a ? void 0 : a.applicationId) == null || (null == a ? void 0 : a.id) == null || (null == t ? void 0 : t.id) == null || (null == a ? void 0 : a.flags) == null) return null;
-            (0, o.openModal)((e) => {
-                let { onClose: n, transitionState: i } = e;
-                return (0, l.jsx)(C.SubscriptionDetailsModal, {
-                    appId: a.applicationId,
-                    groupListingId: t.id,
-                    subscriptionType: (0, c.KW)(a.flags) ? 'user' : 'guild',
-                    onClose: n,
-                    skuId: a.id,
-                    transitionState: i
+function S(e) {
+    let { data: t } = g(e),
+        n = null == t ? void 0 : t.parentSku,
+        r = null == t ? void 0 : t.sku,
+        o = null == t ? void 0 : t.storeListing,
+        s = null == t ? void 0 : t.subscriptionPlans,
+        u = a.useCallback(() => {
+            if ((null == r ? void 0 : r.applicationId) == null || (null == r ? void 0 : r.id) == null || (null == n ? void 0 : n.id) == null || (null == r ? void 0 : r.flags) == null) return null;
+            (0, l.openModal)((e) => {
+                let { onClose: t, transitionState: a } = e;
+                return (0, i.jsx)(m.SubscriptionDetailsModal, {
+                    appId: r.applicationId,
+                    groupListingId: n.id,
+                    subscriptionType: (0, c.KW)(r.flags) ? 'user' : 'guild',
+                    onClose: t,
+                    skuId: r.id,
+                    transitionState: a
                 });
             });
-        }, [null == a ? void 0 : a.applicationId, null == a ? void 0 : a.id, null == t ? void 0 : t.id, null == a ? void 0 : a.flags]),
-        d = i.useCallback(() => {
-            if (null == a) return null;
-            (0, o.openModal)((e) => {
-                let { onClose: n, transitionState: t } = e;
-                return (0, l.jsx)(p.ItemDetailsModal, {
-                    appId: a.applicationId,
-                    skuId: a.id,
-                    onClose: n,
-                    transitionState: t
+        }, [null == r ? void 0 : r.applicationId, null == r ? void 0 : r.id, null == n ? void 0 : n.id, null == r ? void 0 : r.flags]),
+        d = a.useCallback(() => {
+            if (null == r) return null;
+            (0, l.openModal)((e) => {
+                let { onClose: t, transitionState: n } = e;
+                return (0, i.jsx)(p.ItemDetailsModal, {
+                    appId: r.applicationId,
+                    skuId: r.id,
+                    onClose: t,
+                    transitionState: n
                 });
             });
-        }, [a]);
-    if (null != a && null != r && (null == a || a.type !== h.epS.SUBSCRIPTION || null != t)) {
-        if (null == e || (null != a && !a.available))
+        }, [r]);
+    if (null != r && null != o && (null == r || r.type !== I.epS.SUBSCRIPTION || null != n)) {
+        if (null == e || (null != r && !r.available))
             return {
                 disabled: !0,
-                label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                label: T.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
             };
-        if (a.type === h.epS.SUBSCRIPTION) {
+        if (r.type === I.epS.SUBSCRIPTION) {
             if (null == s || 0 === s.length)
                 return {
                     disabled: !0,
-                    label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                    label: T.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
                 };
             let e = s[0],
-                n = (0, f.aS)(e.id);
+                t = (0, f.aS)(e.id);
             return {
                 disabled: !1,
-                label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
-                    skuName: a.name,
-                    price: (0, _.T4)(n.amount, n.currency)
+                label: T.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
+                    skuName: r.name,
+                    price: (0, h.T4)(t.amount, t.currency)
                 }),
                 onClick: u
             };
         }
-        return null == a.price
+        return null == r.price
             ? {
                   disabled: !0,
-                  label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                  label: T.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
               }
             : {
                   disabled: !1,
-                  label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
-                      skuName: a.name,
-                      price: (0, _.T4)(a.price.amount, a.price.currency)
+                  label: T.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
+                      skuName: r.name,
+                      price: (0, h.T4)(r.price.amount, r.price.currency)
                   }),
                   onClick: d
               };

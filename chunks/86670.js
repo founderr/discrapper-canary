@@ -1,12 +1,12 @@
 n.d(t, {
     Pv: function () {
-        return s;
+        return o;
     },
     dI: function () {
         return a;
     },
     gs: function () {
-        return o;
+        return s;
     }
 });
 var r = n(570140);
@@ -18,7 +18,7 @@ async function a(e) {
         return i.log('database load failed.', e), null;
     }
 }
-function s(e, t, n) {
+function o(e, t, n) {
     try {
         return t();
     } catch (t) {
@@ -37,7 +37,7 @@ function s(e, t, n) {
         );
     }
 }
-async function o(e, t, n) {
+async function s(e, t, n) {
     try {
         return await t();
     } catch (t) {

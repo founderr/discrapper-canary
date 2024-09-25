@@ -1,49 +1,49 @@
 n.d(t, {
     FW: function () {
-        return c;
-    },
-    fZ: function () {
         return _;
     },
+    fZ: function () {
+        return f;
+    },
     py: function () {
-        return E;
+        return h;
     }
-}),
-    n(47120),
-    n(411104);
-var r = n(911969),
-    i = n(581364),
-    a = n(752305),
-    s = n(130402),
-    o = n(365704),
-    l = n(590921),
-    u = n(185923);
-function c(e) {
+});
+var r = n(47120);
+var i = n(411104);
+var a = n(911969),
+    o = n(581364),
+    s = n(752305),
+    l = n(130402),
+    u = n(365704),
+    c = n(590921),
+    d = n(185923);
+function _(e) {
     var t;
-    let { activeCommandOption: n, canMentionUsers: s = !0, canMentionRoles: o = !0, canMentionChannels: u = !0, canMentionEveryone: c, canMentionClyde: d = !1, useNewSlashCommands: _, canOnlyUseTextCommands: E, canSendStickers: f, hideMentionDescription: h, hidePersonalInformation: p, type: I, emojiIntention: m, editorRef: T, onSendMessage: S, onSendSticker: g, setValue: A } = e,
-        N = {
+    let { activeCommandOption: n, canMentionUsers: r = !0, canMentionRoles: i = !0, canMentionChannels: l = !0, canMentionEveryone: u, canMentionClyde: d = !1, useNewSlashCommands: _, canOnlyUseTextCommands: E, canSendStickers: f, hideMentionDescription: h, hidePersonalInformation: p, type: m, emojiIntention: I, editorRef: T, onSendMessage: g, onSendSticker: S, setValue: A } = e,
+        v = {
             mentions: {
-                channel: l.nS.DENY,
-                global: l.VV.DENY,
-                role: l.Fw.DENY,
-                user: l.h3.DENY,
-                clyde: l.cz.DENY
+                channel: c.nS.DENY,
+                global: c.VV.DENY,
+                role: c.Fw.DENY,
+                user: c.h3.DENY,
+                clyde: c.cz.DENY
             },
-            commands: l.L8.DISABLED,
+            commands: c.L8.DISABLED,
             allowStickers: !0 === f,
-            forNonStringCommandOption: null != n && n.type !== r.jw.STRING,
+            forNonStringCommandOption: null != n && n.type !== a.jw.STRING,
             hideMentionDescription: !0 === h,
             hidePersonalInformation: !0 === p,
-            chatInputType: I,
-            emojiIntention: m,
-            sendMessage: S,
-            sendSticker: g,
+            chatInputType: m,
+            emojiIntention: I,
+            sendMessage: g,
+            sendSticker: S,
             insertText: (e, t) => {
                 var n;
                 null === (n = T.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e);
             },
             replaceText: (e, t) => {
-                A(e, null != t ? t : (0, a.JM)(e));
+                A(e, null != t ? t : (0, s.JM)(e));
             },
             getCommandOptionValues: () => {
                 var e;
@@ -51,117 +51,117 @@ function c(e) {
             }
         };
     if (null != n) {
-        let e = (0, i.$z)(n);
-        e.canMentionChannels && (N.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (N.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (N.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (N.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), (N.hideMentionDescription = !0);
-    } else u && (N.mentions.channel = l.nS.ALLOW_SELECTABLE), o && (N.mentions.role = l.Fw.ALLOW_MENTIONABLE), s && (N.mentions.user = l.h3.ALLOW_CHANNEL), c && (N.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), d && (N.mentions.clyde = l.cz.ALLOW);
-    return (null === (t = I.commands) || void 0 === t ? void 0 : t.enabled) && (_ ? (N.commands = E ? l.L8.NEW_TEXT_ONLY : l.L8.NEW) : (N.commands = l.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (N.allowedChannelTypes = n.channelTypes), N;
+        let e = (0, o.$z)(n);
+        e.canMentionChannels && (v.mentions.channel = c.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (v.mentions.global = e.canMentionHere ? c.VV.ALLOW_EVERYONE_OR_HERE : c.VV.ALLOW_EVERYONE), e.canMentionRoles && (v.mentions.role = e.canMentionNonMentionableRoles ? c.Fw.ALLOW_ALL : c.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (v.mentions.user = e.canMentionAnyGuildUser ? c.h3.ALLOW_GUILD : c.h3.ALLOW_CHANNEL), (v.hideMentionDescription = !0);
+    } else l && (v.mentions.channel = c.nS.ALLOW_SELECTABLE), i && (v.mentions.role = c.Fw.ALLOW_MENTIONABLE), r && (v.mentions.user = c.h3.ALLOW_CHANNEL), u && (v.mentions.global = c.VV.ALLOW_EVERYONE_OR_HERE), d && (v.mentions.clyde = c.cz.ALLOW);
+    return (null === (t = m.commands) || void 0 === t ? void 0 : t.enabled) && (_ ? (v.commands = E ? c.L8.NEW_TEXT_ONLY : c.L8.NEW) : (v.commands = c.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (v.allowedChannelTypes = n.channelTypes), v;
 }
-function d(e) {
-    let { type: t, channel: n, guild: r, query: i, isAtStart: a, options: s } = e,
-        l = o.W[t];
-    if (null != l.sentinel) {
-        if (!i.startsWith(l.sentinel)) return !1;
-        i = i.substring(l.sentinel.length);
+function E(e) {
+    let { type: t, channel: n, guild: r, query: i, isAtStart: a, options: o } = e,
+        s = u.W[t];
+    if (null != s.sentinel) {
+        if (!i.startsWith(s.sentinel)) return !1;
+        i = i.substring(s.sentinel.length);
     }
-    return !!(null == l.matches || l.matches(n, r, i, a, s)) || !1;
+    return !!(null == s.matches || s.matches(n, r, i, a, o)) || !1;
 }
-function _(e) {
-    let { channel: t, guild: n, options: r, currentWord: i, currentWordIsAtStart: a, textValue: c, optionText: _ } = e,
-        E = null;
-    for (let e of o.R) {
-        var f, h, p, I, m, T;
-        let S = o.W[e];
-        if (e === l.eq.GIFS || e === l.eq.CHOICES) {
-            if (r.commands === l.L8.OLD_BUILT_INS) {
+function f(e) {
+    let { channel: t, guild: n, options: r, currentWord: i, currentWordIsAtStart: a, textValue: o, optionText: s } = e,
+        _ = null;
+    for (let e of u.R) {
+        var f, h, p, m, I, T;
+        let g = u.W[e];
+        if (e === c.eq.GIFS || e === c.eq.CHOICES) {
+            if (r.commands === c.L8.OLD_BUILT_INS) {
                 if (
-                    d({
+                    E({
                         type: e,
                         channel: t,
                         guild: n,
-                        query: c,
+                        query: o,
                         isAtStart: !1,
                         options: r
                     })
                 ) {
-                    E = {
+                    _ = {
                         type: e,
-                        typeInfo: S,
-                        query: c
+                        typeInfo: g,
+                        query: o
                     };
                     break;
                 }
             } else if (
-                d({
+                E({
                     type: e,
                     channel: t,
                     guild: n,
-                    query: _,
+                    query: s,
                     isAtStart: !1,
                     options: r
                 })
             )
                 return {
                     type: e,
-                    typeInfo: S,
-                    query: _
+                    typeInfo: g,
+                    query: s
                 };
-        } else if (e === l.eq.STICKERS) {
+        } else if (e === c.eq.STICKERS) {
             if (
-                d({
+                E({
                     type: e,
                     channel: t,
                     guild: n,
-                    query: _,
+                    query: s,
                     isAtStart: !1,
                     options: r
                 })
             )
                 return {
                     type: e,
-                    typeInfo: S,
-                    query: _
+                    typeInfo: g,
+                    query: s
                 };
-        } else if (e === l.eq.COMMANDS && r.commands !== l.L8.OLD_BUILT_INS) {
+        } else if (e === c.eq.COMMANDS && r.commands !== c.L8.OLD_BUILT_INS) {
             if (
-                d({
+                E({
                     type: e,
                     channel: t,
                     guild: n,
-                    query: c,
+                    query: o,
                     isAtStart: !0,
                     options: r
                 })
             ) {
-                E = {
+                _ = {
                     type: e,
-                    typeInfo: S,
-                    query: c.substring(null !== (h = null === (f = S.sentinel) || void 0 === f ? void 0 : f.length) && void 0 !== h ? h : 0)
+                    typeInfo: g,
+                    query: o.substring(null !== (h = null === (f = g.sentinel) || void 0 === f ? void 0 : f.length) && void 0 !== h ? h : 0)
                 };
                 break;
             }
-        } else if (e === l.eq.LEGACY_COMMANDS) {
+        } else if (e === c.eq.LEGACY_COMMANDS) {
             if (
-                d({
+                E({
                     type: e,
                     channel: t,
                     guild: n,
-                    query: c,
+                    query: o,
                     isAtStart: a,
                     options: r
                 })
             ) {
-                E = {
+                _ = {
                     type: e,
-                    typeInfo: S,
-                    query: c
+                    typeInfo: g,
+                    query: o
                 };
                 break;
             }
-        } else if (e === l.eq.EMOJIS_AND_STICKERS) {
+        } else if (e === c.eq.EMOJIS_AND_STICKERS) {
             if (
-                (null != i && i.length > 0 && (0, s.x)(u.qR.AutocompleteTyped),
+                (null != i && i.length > 0 && (0, l.x)(d.qR.AutocompleteTyped),
                 null != i &&
-                    d({
+                    E({
                         type: e,
                         channel: t,
                         guild: n,
@@ -170,16 +170,16 @@ function _(e) {
                         options: r
                     }))
             ) {
-                E = {
+                _ = {
                     type: e,
-                    typeInfo: S,
-                    query: i.substring(null !== (I = null === (p = S.sentinel) || void 0 === p ? void 0 : p.length) && void 0 !== I ? I : 0)
+                    typeInfo: g,
+                    query: i.substring(null !== (m = null === (p = g.sentinel) || void 0 === p ? void 0 : p.length) && void 0 !== m ? m : 0)
                 };
                 break;
             }
         } else if (
             null != i &&
-            d({
+            E({
                 type: e,
                 channel: t,
                 guild: n,
@@ -188,40 +188,40 @@ function _(e) {
                 options: r
             })
         ) {
-            E = {
+            _ = {
                 type: e,
-                typeInfo: S,
-                query: i.substring(null !== (T = null === (m = S.sentinel) || void 0 === m ? void 0 : m.length) && void 0 !== T ? T : 0)
+                typeInfo: g,
+                query: i.substring(null !== (T = null === (I = g.sentinel) || void 0 === I ? void 0 : I.length) && void 0 !== T ? T : 0)
             };
             break;
         }
     }
-    return null == E ? null : ((E.query = E.query.toLocaleLowerCase()), E);
+    return null == _ ? null : ((_.query = _.query.toLocaleLowerCase()), _);
 }
-function E(e, t) {
+function h(e, t) {
     let n;
     if (null == t || null == e) return null;
-    if (null != e.choices || e.autocomplete) n = l.eq.CHOICES;
+    if (null != e.choices || e.autocomplete) n = c.eq.CHOICES;
     else
         switch (e.type) {
-            case r.jw.BOOLEAN:
-                n = l.eq.CHOICES;
+            case a.jw.BOOLEAN:
+                n = c.eq.CHOICES;
                 break;
-            case r.jw.CHANNEL:
-                n = l.eq.CHANNELS;
+            case a.jw.CHANNEL:
+                n = c.eq.CHANNELS;
                 break;
-            case r.jw.ROLE:
-            case r.jw.USER:
-            case r.jw.MENTIONABLE:
-                n = l.eq.MENTIONS;
+            case a.jw.ROLE:
+            case a.jw.USER:
+            case a.jw.MENTIONABLE:
+                n = c.eq.MENTIONS;
                 break;
             default:
                 return null;
         }
-    let i = o.W[n];
+    let r = u.W[n];
     return {
         type: n,
-        typeInfo: i,
+        typeInfo: r,
         query: t
     };
 }

@@ -3,16 +3,16 @@ n.d(t, {
         return l;
     },
     pj: function () {
-        return s;
+        return o;
     },
     pr: function () {
-        return o;
+        return s;
     }
 });
 var r = n(544891),
     i = n(570140),
     a = n(981631);
-function s(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'TOP_EMOJIS_FETCH',
         guildId: e
@@ -41,7 +41,7 @@ function s(e) {
                     })
             );
 }
-function o(e, t) {
+function s(e, t) {
     i.Z.dispatch({ type: 'NEWLY_ADDED_EMOJI_SEEN_UPDATED' }),
         null != e &&
             null != t &&

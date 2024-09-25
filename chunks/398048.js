@@ -19,7 +19,7 @@ function s(e, n) {
               label: i.Z.Messages.CLONE_CHANNEL,
               action: () =>
                   (0, r.openModalLazy)(async () => {
-                      let { default: l } = await Promise.all([a.e('7590'), a.e('45094'), a.e('5769')]).then(a.bind(a, 218613));
+                      let { default: l } = await Promise.all([a.e('7590'), a.e('45094'), a.e('16053')]).then(a.bind(a, 218613));
                       return (a) =>
                           (0, t.jsx)(l, {
                               ...a,

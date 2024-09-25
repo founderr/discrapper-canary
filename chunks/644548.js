@@ -40,7 +40,7 @@ t.Z = (e) => {
         { primaryColor: Z, secondaryColor: A } = (0, d.Z)(null == I ? void 0 : I.src),
         S = (0, u.yA)(n),
         M = (0, u.Nq)(n),
-        y = a.useCallback(
+        O = a.useCallback(
             (e) => {
                 if (null != t && null != C && null != S && null != M && !!(0, m.qy)(M))
                     return (0, c.SO)({
@@ -56,16 +56,16 @@ t.Z = (e) => {
             [null == I ? void 0 : I.src, t, S, n, Z, M, A, C]
         );
     if (null == C || null == S || null == M || !(0, m.qy)(M)) return null;
-    let O = null != n.extra.platform ? h.v[n.extra.platform] : null;
+    let y = null != n.extra.platform ? h.v[n.extra.platform] : null;
     return (0, l.jsxs)(E.yR, {
         children: [
             (0, l.jsx)(E.wG, {
                 channel: t,
                 headerIcons:
-                    null == O
+                    null == y
                         ? null
                         : (0, l.jsx)(_.Z, {
-                              Icon: O,
+                              Icon: y,
                               'aria-label': T.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                           }),
                 entry: n,
@@ -84,7 +84,7 @@ t.Z = (e) => {
                     onVoiceChannelPreview: g,
                     user: C,
                     channel: t,
-                    generateReactionImage: y,
+                    generateReactionImage: O,
                     reactionImageAltText: f(n, C),
                     entry: n
                 })

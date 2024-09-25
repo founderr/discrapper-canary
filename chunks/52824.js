@@ -1,9 +1,9 @@
-t.d(n, {
+function r(e) {
+    let { proxyURL: t, url: n } = e;
+    return null != t && '' !== t ? t : n;
+}
+n.d(t, {
     q: function () {
-        return i;
+        return r;
     }
 });
-function i(e) {
-    let { proxyURL: n, url: t } = e;
-    return null != n && '' !== n ? n : t;
-}

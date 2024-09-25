@@ -1,12 +1,12 @@
 n.d(t, {
     IV: function () {
-        return o;
+        return l;
     },
     P: function () {
-        return u;
+        return c;
     },
     fH: function () {
-        return c;
+        return u;
     },
     sk: function () {
         return _;
@@ -15,41 +15,41 @@ n.d(t, {
         return d;
     }
 });
-var i = n(166459),
-    s = n(966390),
+var r = n(166459),
+    i = n(966390),
     a = n(476326),
-    r = n(703558),
-    l = n(398805);
-async function o(e, t, n) {
-    let i = (0, l.Yk)(t, n),
-        s = await fetch(n);
-    return c(e, t, new File([await s.blob()], i, { type: 'image/gif' })), n;
+    o = n(703558),
+    s = n(398805);
+async function l(e, t, n) {
+    let r = (0, s.Yk)(t, n),
+        i = await fetch(n);
+    return u(e, t, new File([await i.blob()], r, { type: 'image/gif' })), n;
 }
-function c(e, t, n) {
-    let s = {
+function u(e, t, n) {
+    let i = {
         id: t,
         channelId: e,
         file: n,
         platform: a.ow.WEB
     };
-    i.Z.addFile({
-        file: s,
+    r.Z.addFile({
+        file: i,
         channelId: e,
-        draftType: r.d.Poll
+        draftType: o.d.Poll
     });
 }
-async function u(e, t, n) {
-    i.Z.remove(e, t, r.d.Poll);
+async function c(e, t, n) {
+    r.Z.remove(e, t, o.d.Poll);
 }
 async function d(e) {
-    i.Z.clearAll(e, r.d.Poll);
+    r.Z.clearAll(e, o.d.Poll);
 }
 async function _(e) {
-    let { channel: t, items: n, poll: i, nonce: a, maxSizeCallback: l } = e;
-    return s.Z.uploadFiles({
+    let { channel: t, items: n, poll: r, nonce: a, maxSizeCallback: s } = e;
+    return i.Z.uploadFiles({
         channelId: t.id,
         uploads: n,
-        draftType: r.d.Poll,
+        draftType: o.d.Poll,
         parsedMessage: {
             content: '',
             tts: !1,
@@ -58,7 +58,7 @@ async function _(e) {
         },
         options: {
             nonce: a,
-            poll: i
+            poll: r
         },
         raiseEndpointErrors: !0
     });

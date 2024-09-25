@@ -85,7 +85,7 @@ function A(e) {
 function S(e) {
     let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: _, recentlyUsedEmojis: p, analyticsOverride: S } = e,
         M = (0, h.Dt)(),
-        [y, O] = a.useState(!1),
+        [O, y] = a.useState(!1),
         R = (0, m.wC)(t.guild_id),
         j = (0, s.uniqBy)([...R, ...P], 'name')
             .filter(
@@ -99,7 +99,7 @@ function S(e) {
             .slice(0, f.e5);
     null != p && p.length > 0 && j.splice(j.length - 1, 1, p[0]);
     let L = (e) => {
-            O(e), null == x || x(e);
+            y(e), null == x || x(e);
         },
         w = (e, t) => {
             if (null == e && t) {
@@ -127,23 +127,23 @@ function S(e) {
                     (0, l.jsx)(E.Z, {
                         analyticsOverride: S,
                         channel: t,
-                        className: r()(C.animatedPicker, { [C.animatedPickerTall]: y }),
-                        headerClassName: r()(C.emojiPickerHeader, { [C.emojiPickerHeaderExpanded]: y }),
+                        className: r()(C.animatedPicker, { [C.animatedPickerTall]: O }),
+                        headerClassName: r()(C.emojiPickerHeader, { [C.emojiPickerHeaderExpanded]: O }),
                         closePopout: i,
-                        onSelectEmoji: y ? w : () => {},
-                        shouldHidePickerActions: !y,
+                        onSelectEmoji: O ? w : () => {},
+                        shouldHidePickerActions: !O,
                         wrapper: 'div',
                         pickerIntention: N,
                         searchProps: {
                             ..._,
                             accessory: (0, l.jsx)(A, {
                                 otherAccessories: null == _ ? void 0 : _.accessory,
-                                isEmojiPickerExpanded: y,
+                                isEmojiPickerExpanded: O,
                                 onSetExpanded: L,
                                 onFocus: o
                             }),
                             onKeyDown: (e) => {
-                                null != e && e.key !== I.vn.TAB && (e.key !== I.vn.ENTER || e.shiftKey ? L(!0) : L(!y));
+                                null != e && e.key !== I.vn.TAB && (e.key !== I.vn.ENTER || e.shiftKey ? L(!0) : L(!O));
                             }
                         }
                     }),

@@ -1,28 +1,28 @@
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    s = n.n(a),
-    o = n(613828),
+    o = n.n(a),
+    s = n(613828),
     l = n(481060),
     u = n(440718);
 let c = i.forwardRef(function (e, t) {
     var n;
-    let { avatar: i, name: a, children: c, subText: d, decorators: _, onClick: E, selected: f, muted: h, to: p, avatarClassName: I, selectedClassName: m, innerClassName: T, wrapContent: S, highlighted: g, focusProps: A, ...N } = e;
-    (N.className = s()(N.className, u.container, {
+    let { avatar: i, name: a, children: c, subText: d, decorators: _, onClick: E, selected: f, muted: h, to: p, avatarClassName: m, selectedClassName: I, innerClassName: T, wrapContent: g, highlighted: S, focusProps: A, ...v } = e;
+    (v.className = o()(v.className, u.container, {
         [u.selected]: f,
-        [u.highlighted]: g,
-        [null != m ? m : '']: f,
+        [u.highlighted]: S,
+        [null != I ? I : '']: f,
         [u.clickable]: !f && (null != p || null != E)
     })),
-        (N['aria-selected'] = null !== (n = N['aria-selected']) && void 0 !== n ? n : f);
-    let O = (0, r.jsxs)('div', {
-        className: s()(T, u.layout, {
+        (v['aria-selected'] = null !== (n = v['aria-selected']) && void 0 !== n ? n : f);
+    let N = (0, r.jsxs)('div', {
+        className: o()(T, u.layout, {
             [u.muted]: !f && h,
-            [u.wrappedLayout]: S
+            [u.wrappedLayout]: g
         }),
         children: [
             (0, r.jsx)('div', {
-                className: s()(u.avatar, I),
+                className: o()(u.avatar, m),
                 children: i
             }),
             (0, r.jsxs)('div', {
@@ -32,7 +32,7 @@ let c = i.forwardRef(function (e, t) {
                         className: u.nameAndDecorators,
                         children: [
                             (0, r.jsx)('div', {
-                                className: s()(u.name, { [u.wrappedName]: S }),
+                                className: o()(u.name, { [u.wrappedName]: g }),
                                 children: a
                             }),
                             _
@@ -57,31 +57,31 @@ let c = i.forwardRef(function (e, t) {
     return null != p
         ? (0, r.jsx)(l.FocusRing, {
               ...A,
-              children: (0, r.jsx)(o.rU, {
+              children: (0, r.jsx)(s.rU, {
                   to: p,
                   onClick: E,
-                  ...N,
+                  ...v,
                   role: 'listitem',
                   ref: t,
-                  children: O
+                  children: N
               })
           })
         : null != E
           ? (0, r.jsx)(l.Clickable, {
                 onClick: E,
                 focusProps: A,
-                ...N,
+                ...v,
                 role: 'listitem',
                 innerRef: t,
-                children: O
+                children: N
             })
           : (0, r.jsx)(l.FocusRing, {
                 ...A,
                 children: (0, r.jsx)('div', {
-                    ...N,
+                    ...v,
                     role: 'listitem',
                     ref: t,
-                    children: O
+                    children: N
                 })
             });
 });

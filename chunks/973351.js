@@ -2,10 +2,10 @@ var r;
 if (!Object.keys) {
     var i = Object.prototype.hasOwnProperty,
         a = Object.prototype.toString,
-        s = n(560640),
-        o = Object.prototype.propertyIsEnumerable,
-        l = !o.call({ toString: null }, 'toString'),
-        u = o.call(function () {}, 'prototype'),
+        o = n(560640),
+        s = Object.prototype.propertyIsEnumerable,
+        l = !s.call({ toString: null }, 'toString'),
+        u = s.call(function () {}, 'prototype'),
         c = ['toString', 'toLocaleString', 'valueOf', 'hasOwnProperty', 'isPrototypeOf', 'propertyIsEnumerable', 'constructor'],
         d = function (e) {
             var t = e.constructor;
@@ -62,16 +62,16 @@ if (!Object.keys) {
     r = function (e) {
         var t = null !== e && 'object' == typeof e,
             n = '[object Function]' === a.call(e),
-            r = s(e),
-            o = t && '[object String]' === a.call(e),
+            r = o(e),
+            s = t && '[object String]' === a.call(e),
             d = [];
         if (!t && !n && !r) throw TypeError('Object.keys called on a non-object');
         var _ = u && n;
-        if (o && e.length > 0 && !i.call(e, 0)) for (var E = 0; E < e.length; ++E) d.push(String(E));
+        if (s && e.length > 0 && !i.call(e, 0)) for (var E = 0; E < e.length; ++E) d.push(String(E));
         if (r && e.length > 0) for (var h = 0; h < e.length; ++h) d.push(String(h));
         else for (var p in e) !(_ && 'prototype' === p) && i.call(e, p) && d.push(String(p));
         if (l) {
-            for (var I = f(e), m = 0; m < c.length; ++m) !(I && 'constructor' === c[m]) && i.call(e, c[m]) && d.push(c[m]);
+            for (var m = f(e), I = 0; I < c.length; ++I) !(m && 'constructor' === c[I]) && i.call(e, c[I]) && d.push(c[I]);
         }
         return d;
     };

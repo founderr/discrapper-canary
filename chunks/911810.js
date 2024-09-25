@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(939350),
-    o = n(667947);
+    o = n(939350),
+    s = n(667947);
 function l(e) {
     let { contents: t, label: n, className: i, color: l = 'default' } = e;
     return 0 === t.length
@@ -20,7 +20,7 @@ function l(e) {
               children: [
                   null != n
                       ? (0, r.jsx)('div', {
-                            className: a()(o.groupLabel, o.hideInteraction, s._[l]),
+                            className: a()(s.groupLabel, s.hideInteraction, o._[l]),
                             children: n
                         })
                       : null,

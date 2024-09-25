@@ -1,31 +1,31 @@
 n.d(t, {
     Z_: function () {
-        return l;
-    },
-    hY: function () {
         return u;
     },
-    sd: function () {
+    hY: function () {
         return c;
+    },
+    sd: function () {
+        return d;
     }
-}),
-    n(411104);
-var r = n(544891),
-    i = n(570140),
-    a = n(647162),
+});
+var r = n(411104);
+var i = n(544891),
+    a = n(570140),
+    o = n(647162),
     s = n(158776),
-    o = n(981631);
-function l(e, t) {
-    i.Z.dispatch({
+    l = n(981631);
+function u(e, t) {
+    a.Z.dispatch({
         type: 'ACTIVITY_SYNC',
         activity: e,
         userId: t
     });
 }
-function u(e, t) {
-    (0, a.iy)(e, t)
+function c(e, t) {
+    (0, o.iy)(e, t)
         .then((n) =>
-            i.Z.dispatch({
+            a.Z.dispatch({
                 type: 'ACTIVITY_PLAY',
                 activity: e,
                 userId: t,
@@ -33,29 +33,29 @@ function u(e, t) {
             })
         )
         .catch(() =>
-            i.Z.dispatch({
+            a.Z.dispatch({
                 type: 'ACTIVITY_PLAY',
                 activity: e,
                 userId: t
             })
         );
 }
-async function c(e, t) {
+async function d(e, t) {
     let n = e.metadata;
     if (null != n) return n;
-    let a = s.Z.getActivityMetadata(t);
-    if (null != a) return a;
+    let r = s.Z.getActivityMetadata(t);
+    if (null != r) return r;
     if (null == e.session_id) throw Error('null/undefined session_id');
-    let { body: l } = await r.tn.get({
-        url: o.ANM.USER_ACTIVITY_METADATA(t, e.session_id, e.application_id),
+    let { body: o } = await i.tn.get({
+        url: l.ANM.USER_ACTIVITY_METADATA(t, e.session_id, e.application_id),
         oldFormErrors: !0
     });
     return (
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'ACTIVITY_METADATA_UPDATE',
-            metadata: l,
+            metadata: o,
             userId: t
         }),
-        l
+        o
     );
 }

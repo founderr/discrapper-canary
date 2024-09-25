@@ -1,9 +1,9 @@
-var r, i;
+var r;
 n.d(t, {
     w: function () {
         return r;
     }
 }),
-    ((i = r || (r = {}))[(i.REWARD_CODE = 1)] = 'REWARD_CODE'),
-    (i[(i.IN_GAME = 2)] = 'IN_GAME'),
-    (i[(i.COLLECTIBLE = 3)] = 'COLLECTIBLE');
+    !(function (e) {
+        (e[(e.REWARD_CODE = 1)] = 'REWARD_CODE'), (e[(e.IN_GAME = 2)] = 'IN_GAME'), (e[(e.COLLECTIBLE = 3)] = 'COLLECTIBLE');
+    })(r || (r = {}));

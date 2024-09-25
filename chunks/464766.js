@@ -4,24 +4,24 @@ t.d(n, {
     }
 }),
     t(653041);
-var i = t(735250),
-    a = t(470079),
-    l = t(120356),
-    r = t.n(l),
+var l = t(735250),
+    i = t(470079),
+    r = t(120356),
+    a = t.n(r),
     o = t(481060),
     c = t(765305),
     s = t(689938),
     d = t(400463);
 function u(e) {
-    let { onClose: n, selectedTab: t, onTabSelected: l, userCount: u, hasBanner: _, isHub: g = !1 } = e,
-        v = a.useRef(null);
-    a.useEffect(() => {
+    let { onClose: n, selectedTab: t, onTabSelected: r, userCount: u, hasBanner: _, isHub: h = !1 } = e,
+        v = i.useRef(null);
+    i.useEffect(() => {
         var e, n, t;
         return null === (t = v.current) || void 0 === t ? void 0 : null === (n = t.ref) || void 0 === n ? void 0 : null === (e = n.blur) || void 0 === e ? void 0 : e.call(n);
     }, []);
-    let h = s.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({ userCount: u }),
-        f = [
-            (0, i.jsx)(
+    let f = s.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({ userCount: u }),
+        E = [
+            (0, l.jsx)(
                 o.TabBar.Item,
                 {
                     className: d.tabBarItem,
@@ -32,39 +32,39 @@ function u(e) {
             )
         ];
     return (
-        !g &&
-            f.push(
-                (0, i.jsx)(
+        !h &&
+            E.push(
+                (0, l.jsx)(
                     o.TabBar.Item,
                     {
                         className: d.tabBarItem,
                         id: c.fL.RSVP_LIST,
-                        children: h
+                        children: f
                     },
                     'is-hub'
                 )
             ),
-        (0, i.jsxs)('div', {
+        (0, l.jsxs)('div', {
             className: d.container,
             children: [
-                (0, i.jsx)(o.Clickable, {
+                (0, l.jsx)(o.Clickable, {
                     ref: v,
                     onClick: n,
                     className: d.closeButton,
                     'aria-label': s.Z.Messages.CLOSE,
-                    children: (0, i.jsx)(o.XSmallIcon, {
+                    children: (0, l.jsx)(o.XSmallIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: r()(d.closeIcon, _ && d.closeIconBanner)
+                        className: a()(d.closeIcon, _ && d.closeIconBanner)
                     })
                 }),
-                (0, i.jsx)(o.TabBar, {
+                (0, l.jsx)(o.TabBar, {
                     className: d.tabBar,
                     'aria-label': s.Z.Messages.OPTIONS,
                     selectedItem: t,
                     type: 'top',
-                    onItemSelect: l,
-                    children: f
+                    onItemSelect: r,
+                    children: E
                 })
             ]
         })

@@ -7,10 +7,10 @@ function i(e) {
 function a(e) {
     return null;
 }
-function s(e) {
+function o(e) {
     return null;
 }
-function o(e) {
+function s(e) {
     return null;
 }
 function l(e) {
@@ -24,10 +24,10 @@ n.d(t, {
         return l;
     },
     S8: function () {
-        return s;
+        return o;
     },
     k5: function () {
-        return o;
+        return s;
     },
     kS: function () {
         return i;

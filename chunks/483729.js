@@ -1,12 +1,12 @@
 n.d(t, {
     d: function () {
-        return s;
+        return o;
     }
 });
 var r = n(345926),
     i = n(913122),
     a = n(470079);
-function s(e) {
+function o(e) {
     let t = (0, r.W)(e),
         n = (0, i.BA)({
             ...e,
@@ -14,7 +14,7 @@ function s(e) {
                 null != e.onSelectionChange && e.onSelectionChange(n), t.close();
             }
         }),
-        [s, o] = (0, a.useState)(!1);
+        [o, s] = (0, a.useState)(!1);
     return {
         ...n,
         ...t,
@@ -24,7 +24,7 @@ function s(e) {
         toggle(e) {
             0 !== n.collection.size && t.toggle(e);
         },
-        isFocused: s,
-        setFocused: o
+        isFocused: o,
+        setFocused: s
     };
 }

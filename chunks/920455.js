@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+    o = n.n(a),
+    s = n(481060),
     l = n(239091),
     u = n(688465),
     c = n(63063),
@@ -41,11 +41,11 @@ function h(e) {
     return null == h
         ? null
         : (0, r.jsxs)('div', {
-              className: s()(a, f.bar),
+              className: o()(a, f.bar),
               onContextMenu: p,
               children: [
                   (0, r.jsx)(u.Z, {}),
-                  (0, r.jsxs)(o.Text, {
+                  (0, r.jsxs)(s.Text, {
                       variant: 'text-sm/normal',
                       color: 'text-muted',
                       children: [E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EDUCATION.format({ betaUserLimit: d.um }), E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE.format({ learnMoreUrl: c.Z.getArticleURL(_.BhN.USING_APPS_FAQ) })]

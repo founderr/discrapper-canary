@@ -1,53 +1,53 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(512722),
-    s = n.n(a),
-    o = n(442837),
-    l = n(699516),
-    u = n(594174),
-    c = n(971393),
-    d = n(614417),
-    _ = n(601665),
-    E = n(103113),
-    f = n(738953);
-function h(e) {
-    let { userId: t, user: n, ...a } = e,
-        h = (0, o.e7)([u.default], () => u.default.getUser(t), [t]),
-        p = null != n ? n : h;
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(512722),
+    s = n.n(o),
+    l = n(442837),
+    u = n(699516),
+    c = n(594174),
+    d = n(971393),
+    _ = n(614417),
+    E = n(601665),
+    f = n(103113),
+    h = n(738953);
+function p(e) {
+    let { userId: t, user: n, ...r } = e,
+        o = (0, l.e7)([c.default], () => c.default.getUser(t), [t]),
+        p = null != n ? n : o;
     s()(null != p, 'UserProfilePopoutWrapper: user cannot be undefined');
-    let I = (0, o.e7)([u.default], () => u.default.getCurrentUser());
-    s()(null != I, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
-    let m = (0, o.e7)([l.Z], () => l.Z.isBlocked(p.id)),
-        [T, S] = i.useState(m),
-        g = (0, c.sS)({ location: 'UserProfilePopoutWrapper' });
-    return T && g
-        ? (0, r.jsx)(d.Z, {
-              ...a,
+    let m = (0, l.e7)([c.default], () => c.default.getCurrentUser());
+    s()(null != m, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
+    let I = (0, l.e7)([u.Z], () => u.Z.isBlocked(p.id)),
+        [T, g] = a.useState(I),
+        S = (0, d.sS)({ location: 'UserProfilePopoutWrapper' });
+    return T && S
+        ? (0, i.jsx)(_.Z, {
+              ...r,
               user: p,
-              currentUser: I,
-              onViewBlockedProfileClick: () => S(!1)
+              currentUser: m,
+              onViewBlockedProfileClick: () => g(!1)
           })
         : p.isNonUserBot()
-          ? (0, r.jsx)(E.Z, {
-                ...a,
+          ? (0, i.jsx)(f.Z, {
+                ...r,
                 user: p,
-                currentUser: I
+                currentUser: m
             })
           : p.bot
-            ? (0, r.jsx)(_.Z, {
-                  ...a,
+            ? (0, i.jsx)(E.Z, {
+                  ...r,
                   user: p,
-                  currentUser: I
+                  currentUser: m
               })
-            : (0, r.jsx)(f.Z, {
-                  ...a,
+            : (0, i.jsx)(h.Z, {
+                  ...r,
                   user: p,
-                  currentUser: I
+                  currentUser: m
               });
 }

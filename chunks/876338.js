@@ -3,15 +3,15 @@ n.d(t, {
         return a;
     }
 });
-var i = n(406432),
-    s = n(981631);
+var r = n(406432),
+    i = n(981631);
 function a(e, t) {
     let { targetKind: n, embedIndex: a } = t;
     if ('media' === n) {
-        var r, l;
+        var o, s;
         let t = e;
         return (
-            (null === (r = e.messageReference) || void 0 === r ? void 0 : r.type) === s.Uvt.FORWARD && (t = null === (l = e.messageSnapshots[0]) || void 0 === l ? void 0 : l.message),
+            (null === (o = e.messageReference) || void 0 === o ? void 0 : o.type) === i.Uvt.FORWARD && (t = null === (s = e.messageSnapshots[0]) || void 0 === s ? void 0 : s.message),
             {
                 onlyAttachmentIds:
                     null == t
@@ -19,7 +19,7 @@ function a(e, t) {
                         : t.attachments
                               .filter((e) => {
                                   let { filename: t } = e;
-                                  return (0, i.CO)(t) || (0, i.NU)(t);
+                                  return (0, r.CO)(t) || (0, r.NU)(t);
                               })
                               .map((e) => e.id)
             }

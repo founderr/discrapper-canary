@@ -1,27 +1,27 @@
-var i,
-    s,
-    a,
-    r,
-    l = n(442837),
-    o = n(570140);
-let c = [];
-class u extends (r = l.ZP.Store) {
+var r,
+    i = n(442837),
+    a = n(570140);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let s = [];
+function l(e) {
+    let { eligibleGuilds: t } = e;
+    s = t;
+}
+class u extends (r = i.ZP.Store) {
     getEligibleGuildsForNagActivate() {
-        return c;
+        return s;
     }
 }
-(a = 'CreatorMonetizationMarketingStore'),
-    (s = 'displayName') in (i = u)
-        ? Object.defineProperty(i, s, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[s] = a),
-    (t.Z = new u(o.Z, {
-        CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: function (e) {
-            let { eligibleGuilds: t } = e;
-            c = t;
-        }
-    }));
+o(u, 'displayName', 'CreatorMonetizationMarketingStore'), (t.Z = new u(a.Z, { CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: l }));

@@ -1,58 +1,58 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(68405),
-    u = n(985375),
-    c = n(585483),
-    d = n(981631),
-    _ = n(689938),
-    E = n(591745);
-t.Z = i.memo(function (e) {
-    let { width: t, height: n, src: a, url: f, format: h, className: p } = e,
-        [I, m] = i.useState(!1),
-        T = (0, u.hb)((0, l.iy)(f)),
-        S = T ? _.Z.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : _.Z.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES,
-        g = T ? o.StarIcon : o.StarOutlineIcon;
-    i.useEffect(() => {
-        if (!I) return;
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(481060),
+    u = n(68405),
+    c = n(985375),
+    d = n(585483),
+    _ = n(981631),
+    E = n(689938),
+    f = n(591745);
+t.Z = a.memo(function (e) {
+    let { width: t, height: n, src: r, url: o, format: h, className: p } = e,
+        [m, I] = a.useState(!1),
+        T = (0, c.hb)((0, u.iy)(o)),
+        g = T ? E.Z.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : E.Z.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES,
+        S = T ? l.StarIcon : l.StarOutlineIcon;
+    a.useEffect(() => {
+        if (!m) return;
         let e = setTimeout(() => {
-            m(!1);
+            I(!1);
         }, 500);
         return () => clearTimeout(e);
-    }, [I]);
+    }, [m]);
     let A = (e) => {
         e.preventDefault(),
             e.stopPropagation(),
-            m(!0),
+            I(!0),
             T
-                ? (0, l.PF)(f)
-                : ((0, l.uL)({
-                      url: f,
-                      src: a,
+                ? (0, u.PF)(o)
+                : ((0, u.uL)({
+                      url: o,
+                      src: r,
                       width: t,
                       height: n,
                       format: h
                   }),
-                  c.S.dispatch(d.CkL.FAVORITE_GIF));
+                  d.S.dispatch(_.CkL.FAVORITE_GIF));
     };
-    return (0, r.jsx)(o.Tooltip, {
-        text: S,
+    return (0, i.jsx)(l.Tooltip, {
+        text: g,
         children: (e) =>
-            (0, r.jsx)(o.Clickable, {
+            (0, i.jsx)(l.Clickable, {
                 ...e,
-                className: s()(p, E.size, E.gifFavoriteButton, {
-                    [E.selected]: T,
-                    [E.showPulse]: I
+                className: s()(p, f.size, f.gifFavoriteButton, {
+                    [f.selected]: T,
+                    [f.showPulse]: m
                 }),
                 onMouseDown: (e) => e.preventDefault(),
                 onClick: A,
                 onDoubleClick: (e) => e.preventDefault(),
-                children: (0, r.jsx)(g, {
+                children: (0, i.jsx)(S, {
                     color: 'currentColor',
-                    className: E.icon
+                    className: f.icon
                 })
             })
     });

@@ -1,12 +1,25 @@
-n(653041);
-var r = n(735250),
-    i = n(470079),
-    a = n(834427),
+var r = n(653041);
+var i = n(735250),
+    a = n(470079),
+    o = n(834427),
     s = n(579806),
-    o = n(403182),
-    l = n(358085),
-    u = n(861990);
-function c(e) {
+    l = n(403182),
+    u = n(358085),
+    c = n(861990);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
     let t = ['openFile'];
     e.multiple && t.push('multiSelections');
     let n = e.filters;
@@ -16,10 +29,10 @@ function c(e) {
                 properties: t,
                 filters: n
             },
-            u.zz
+            c.zz
         )
         .then((t) => {
-            let n = t.map((e) => o.qF(e));
+            let n = t.map((e) => l.qF(e));
             null != n &&
                 e.onChange({
                     stopPropagation: () => null,
@@ -38,7 +51,7 @@ function c(e) {
             });
         });
 }
-class d extends i.Component {
+class E extends a.Component {
     activateUploadDialogue() {
         if (null != this._ref) return this._ref.activateUploadDialogue();
     }
@@ -46,28 +59,15 @@ class d extends i.Component {
         this._ref = e;
     }
     render() {
-        return (0, r.jsx)(a.S, {
+        return (0, i.jsx)(o.S, {
             ref: this.setRef,
-            handleNativeClick: c,
-            embedded: (0, l.isDesktop)(),
+            handleNativeClick: _,
+            embedded: (0, u.isDesktop)(),
             ...this.props
         });
     }
     constructor(e) {
-        var t, n, r;
-        super(e),
-            (t = this),
-            (n = '_ref'),
-            (r = i.createRef()),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r),
-            (this.setRef = this.setRef.bind(this));
+        super(e), d(this, '_ref', a.createRef()), (this.setRef = this.setRef.bind(this));
     }
 }
-t.Z = d;
+t.Z = E;

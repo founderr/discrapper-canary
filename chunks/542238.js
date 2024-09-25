@@ -6,11 +6,11 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(442837),
-    s = n(258609),
-    o = n(34292);
+    o = n(258609),
+    s = n(34292);
 function l(e) {
     let { body: t, dismissCallback: n, errorCodeMessage: l } = e,
-        u = (0, a.e7)([s.Z], () => s.Z.getRemoteSessionId());
+        u = (0, a.e7)([o.Z], () => o.Z.getRemoteSessionId());
     return (i.useEffect(() => {
         null != u && n();
     }, [u, n]),
@@ -20,7 +20,7 @@ function l(e) {
               children: [
                   t,
                   (0, r.jsx)('div', {
-                      className: o.errorCodeMessage,
+                      className: s.errorCodeMessage,
                       children: l
                   })
               ]

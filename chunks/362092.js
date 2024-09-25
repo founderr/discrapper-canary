@@ -1,35 +1,35 @@
 n.d(t, {
     Q2: function () {
-        return o;
+        return c;
     },
     i6: function () {
-        return l;
+        return d;
     },
     rN: function () {
-        return u;
+        return _;
     }
-}),
-    n(47120),
-    n(411104),
-    n(653041);
-var r = n(920478);
+});
+var r = n(47120);
+var i = n(411104);
+var a = n(653041);
+var o = n(920478);
 n(364964);
-let i = r.Z.listLanguages(),
-    a = {};
-for (let e of i) {
+let s = o.Z.listLanguages(),
+    l = {};
+for (let e of s) {
     e = e.toLowerCase();
-    let t = r.Z.getLanguage(e);
+    let t = o.Z.getLanguage(e);
     if (null == t) continue;
     let n = t.aliases;
-    if (((a[e] = e), null != n)) for (let t of n) a[t.toLowerCase()] = e;
+    if (((l[e] = e), null != n)) for (let t of n) l[t.toLowerCase()] = e;
 }
-let s = /^[a-z0-9_+\-.#]+$/,
-    o = /^[a-z0-9_+\-.#]+$/i;
-for (let e in a) if (null == e.match(s)) throw Error('Language name does not match regex: '.concat(e));
-function l(e) {
-    return e.toLowerCase() in a;
+let u = /^[a-z0-9_+\-.#]+$/,
+    c = /^[a-z0-9_+\-.#]+$/i;
+for (let e in l) if (null == e.match(u)) throw Error('Language name does not match regex: '.concat(e));
+function d(e) {
+    return e.toLowerCase() in l;
 }
-function u(e) {
+function _(e) {
     let t;
     let n = [],
         r = /\\|```/g;

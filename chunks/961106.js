@@ -1,6 +1,6 @@
 i.d(t, {
     Z: function () {
-        return C;
+        return x;
     }
 }),
     i(47120),
@@ -11,8 +11,8 @@ i.d(t, {
 var n = i(735250),
     a = i(470079),
     r = i(120356),
-    o = i.n(r),
-    s = i(399606),
+    s = i.n(r),
+    o = i(399606),
     l = i(481060),
     c = i(626135),
     d = i(463571),
@@ -21,27 +21,27 @@ var n = i(735250),
     _ = i(132871),
     p = i(147890),
     m = i(981631),
-    f = i(689938),
-    g = i(583138);
-function C(e) {
+    g = i(689938),
+    C = i(583138);
+function x(e) {
     let { className: t } = e,
         i = (0, _.useApplicationDirectoryHistory)((e) => e.guildId),
-        r = (0, s.e7)([u.Z], () => u.Z.getCategories()),
-        C = a.useMemo(() => [(0, h.KQ)(), ...r], [r]),
-        x = (0, _.getCurrentView)(),
+        r = (0, o.e7)([u.Z], () => u.Z.getCategories()),
+        x = a.useMemo(() => [(0, h.KQ)(), ...r], [r]),
+        f = (0, _.getCurrentView)(),
         I = (e) => {
-            let t = C.find((t) => t.id === e);
+            let t = x.find((t) => t.id === e);
             c.default.track(m.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                 category: t.name,
                 category_id: t.id,
-                current_page: null == x ? void 0 : x.type,
+                current_page: null == f ? void 0 : f.type,
                 guild_id: i
             }),
                 (0, p.goToCategory)({ categoryId: t.id });
         };
     return (0, n.jsx)('nav', {
-        className: o()(g.container, t),
-        children: C.map((e) => {
+        className: s()(C.container, t),
+        children: x.map((e) => {
             let t = e.id,
                 i = e.name,
                 a = (0, h.tu)(e),
@@ -53,12 +53,12 @@ function C(e) {
                     {
                         href: ''.concat(m.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(r),
                         children: (0, n.jsxs)(l.Clickable, {
-                            className: g.category,
-                            'aria-label': f.Z.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({ categoryName: i }),
+                            className: C.category,
+                            'aria-label': g.Z.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({ categoryName: i }),
                             onClick: () => I(t),
                             children: [
                                 (0, n.jsx)(a, {
-                                    className: g.icon,
+                                    className: C.icon,
                                     size: 'md',
                                     color: 'currentColor'
                                 }),

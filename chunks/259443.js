@@ -1,14 +1,14 @@
 n.d(t, {
     Y: function () {
-        return o;
+        return l;
     },
     _: function () {
         return s;
     }
-}),
-    n(47120);
-var r = n(247071);
-function i(e, t, n) {
+});
+var r = n(47120);
+var i = n(247071);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,54 +21,54 @@ function i(e, t, n) {
         e
     );
 }
-let a = () => {};
+let o = () => {};
 function s(e) {
-    a = e;
+    o = e;
 }
-class o {
+class l {
     constructor(e = 'default') {
         var t = this;
-        i(this, 'name', void 0),
-            i(this, 'logDangerously', function (e) {
+        a(this, 'name', void 0),
+            a(this, 'logDangerously', function (e) {
                 for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
-                a(t.name, 'log', e, ...r);
+                o(t.name, 'log', e, ...r);
             }),
-            i(this, 'log', function (e) {
-                for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) i[s - 1] = arguments[s];
-                (0, r.c)(e, ...i), a(t.name, 'log', e, ...i);
+            a(this, 'log', function (e) {
+                for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), a = 1; a < n; a++) r[a - 1] = arguments[a];
+                (0, i.c)(e, ...r), o(t.name, 'log', e, ...r);
             }),
-            i(this, 'verboseDangerously', function (e) {
+            a(this, 'verboseDangerously', function (e) {
                 for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
-                a(t.name, 'debug', e, ...r);
+                o(t.name, 'debug', e, ...r);
             }),
-            i(this, 'verbose', function (e) {
-                for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) i[s - 1] = arguments[s];
-                (0, r.c)(e, ...i), a(t.name, 'debug', e, ...i);
+            a(this, 'verbose', function (e) {
+                for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), a = 1; a < n; a++) r[a - 1] = arguments[a];
+                (0, i.c)(e, ...r), o(t.name, 'debug', e, ...r);
             }),
-            i(this, 'info', function (e) {
-                for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) i[s - 1] = arguments[s];
-                (0, r.c)(e, ...i), a(t.name, 'info', e, ...i);
+            a(this, 'info', function (e) {
+                for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), a = 1; a < n; a++) r[a - 1] = arguments[a];
+                (0, i.c)(e, ...r), o(t.name, 'info', e, ...r);
             }),
-            i(this, 'warn', function (e) {
-                for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) i[s - 1] = arguments[s];
-                (0, r.c)(e, ...i), a(t.name, 'warn', e, ...i);
+            a(this, 'warn', function (e) {
+                for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), a = 1; a < n; a++) r[a - 1] = arguments[a];
+                (0, i.c)(e, ...r), o(t.name, 'warn', e, ...r);
             }),
-            i(this, 'error', function (e) {
-                for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) i[s - 1] = arguments[s];
-                (0, r.c)(e, ...i), a(t.name, 'error', e, ...i);
+            a(this, 'error', function (e) {
+                for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), a = 1; a < n; a++) r[a - 1] = arguments[a];
+                (0, i.c)(e, ...r), o(t.name, 'error', e, ...r);
             }),
-            i(this, 'trace', function (e) {
+            a(this, 'trace', function (e) {
                 for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
-                a(t.name, 'trace', e, ...r);
+                o(t.name, 'trace', e, ...r);
             }),
-            i(this, 'time', (e, t) => {
+            a(this, 'time', (e, t) => {
                 let n = Date.now(),
                     r = t();
                 return this.log(e, Date.now() - n), r;
             }),
-            i(this, 'fileOnly', function (e) {
+            a(this, 'fileOnly', function (e) {
                 for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
-                a(t.name, 'file-only', e, ...r);
+                o(t.name, 'file-only', e, ...r);
             }),
             (this.name = e);
     }

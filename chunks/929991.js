@@ -6,7 +6,7 @@ n.d(t, {
         return i;
     },
     rS: function () {
-        return s;
+        return o;
     }
 });
 var r = n(570140);
@@ -26,7 +26,7 @@ function a(e, t, n) {
         timestampMillis: n
     });
 }
-function s(e, t) {
+function o(e, t) {
     r.Z.dispatch({
         type: 'ANALYTICS_FEED_FLUSH',
         id: e,

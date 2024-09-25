@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return S;
     }
 }),
     n(47120);
@@ -38,7 +38,7 @@ function N(e) {
               tabIndex: -1
           });
 }
-function S(e) {
+function x(e) {
     let t,
         n,
         { folderNode: r, hovered: a, expanded: c } = e,
@@ -46,26 +46,26 @@ function S(e) {
         p = null != u ? u : m.Wyy,
         f = h.map((e) => e.id),
         [_, g] = l.useState(!1),
-        [S, x] = l.useState(c),
+        [x, S] = l.useState(c),
         v = c ? 0 : -E,
-        T = (0, d.useSpring)(
+        Z = (0, d.useSpring)(
             {
                 transform: 'translate3d(0, '.concat(v, 'px, 0)'),
                 config: { duration: I },
                 onStart() {
-                    g(!0), x(c);
+                    g(!0), S(c);
                 },
                 onRest() {
-                    g(!1), x(c);
+                    g(!1), S(c);
                 }
             },
             'animate-always'
         ),
-        Z = _ ? T : void 0;
+        T = _ ? Z : void 0;
     return (
-        (_ || S) &&
+        (_ || x) &&
             (t = (0, i.jsx)(s.animated.div, {
-                style: Z,
+                style: T,
                 className: C.expandedFolderIconWrapper,
                 children: (0, i.jsx)(d.FolderIcon, {
                     size: 'md',
@@ -73,9 +73,9 @@ function S(e) {
                     style: { color: (0, o.Rf)(p) }
                 })
             })),
-        (_ || !S) &&
+        (_ || !x) &&
             (n = (0, i.jsx)(s.animated.div, {
-                style: Z,
+                style: T,
                 className: C.closedFolderIconWrapper,
                 children: f.slice(0, 4).map((e) =>
                     (0, i.jsx)(
@@ -96,7 +96,7 @@ function S(e) {
         })
     );
 }
-function x(e) {
+function S(e) {
     let {
             folderNode: t,
             forceCircular: n,
@@ -111,27 +111,27 @@ function x(e) {
             onContextMenu: m,
             onHoverChange: I,
             onKeyDown: E,
-            treeItemProps: { onFocus: N, ...x }
+            treeItemProps: { onFocus: N, ...S }
         } = e,
-        [v, T] = l.useState(!1),
-        Z = l.useCallback(() => {
-            s || T(!0), null == I || I(!0);
+        [v, Z] = l.useState(!1),
+        T = l.useCallback(() => {
+            s || Z(!0), null == I || I(!0);
         }, [s, I]),
         b = l.useCallback(() => {
-            s || T(!1), null == I || I(!1);
+            s || Z(!1), null == I || I(!1);
         }, [s, I]),
         A = r || null == o ? null : (0, _.Or)(o),
-        R = !r && c > 0 ? (0, _.Ne)(c) : null;
+        M = !r && c > 0 ? (0, _.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
         selected: !n,
         upperBadge: A,
-        lowerBadge: R,
+        lowerBadge: M,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
             className: a()(C.folder, { [C.hover]: v }),
             onClick: f,
             onContextMenu: m,
-            onMouseEnter: Z,
+            onMouseEnter: T,
             onMouseLeave: b,
             onKeyDown: E,
             onFocus: N,
@@ -142,7 +142,7 @@ function x(e) {
             'aria-expanded': r,
             'aria-owns': h,
             focusProps: { enabled: !1 },
-            ...x,
+            ...S,
             role: 'treeitem',
             children:
                 null != p
@@ -150,7 +150,7 @@ function x(e) {
                           className: C.expandedFolderIconWrapper,
                           children: p
                       })
-                    : (0, i.jsx)(S, {
+                    : (0, i.jsx)(x, {
                           folderNode: t,
                           hovered: v,
                           expanded: r

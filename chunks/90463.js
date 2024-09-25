@@ -1,13 +1,13 @@
-function r(e) {
+n.d(t, {
+    Z: function () {
+        return i;
+    }
+});
+var r = n(757143);
+function i(e) {
     return e
         .replace(/[\s-~]+/g, '-')
         .replace(/^-+/, '')
         .replace(/[\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, '')
         .toLowerCase();
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    n(757143);

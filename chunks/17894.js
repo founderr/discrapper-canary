@@ -1,48 +1,48 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return g;
     }
 });
-var r = n(525654),
-    a = n.n(r),
+var s = n(525654),
+    r = n.n(s),
     i = n(39612),
-    l = n(271579),
-    s = n(756647),
-    o = n(232567),
-    u = n(703656),
-    c = n(314897),
+    a = n(271579),
+    o = n(756647),
+    l = n(232567),
+    c = n(703656),
+    u = n(314897),
     d = n(896797),
-    I = n(626135),
-    _ = n(954824),
-    h = n(981631);
-async function f(e) {
+    _ = n(626135),
+    h = n(954824),
+    E = n(981631);
+async function p(e) {
     var t, n;
-    let r = null === (t = a().os) || void 0 === t ? void 0 : t.family;
-    if ('Android' === r || 'iOS' === r) {
-        let t = null !== (n = c.default.getFingerprint()) && void 0 !== n ? n : c.default.getId(),
-            r = (0, l.WS)();
-        if (null == t && c.default.isAuthenticated())
+    let s = null === (t = r().os) || void 0 === t ? void 0 : t.family;
+    if ('Android' === s || 'iOS' === s) {
+        let t = null !== (n = u.default.getFingerprint()) && void 0 !== n ? n : u.default.getId(),
+            s = (0, a.WS)();
+        if (null == t && u.default.isAuthenticated())
             try {
-                await (0, o.k)(), (t = c.default.getId());
+                await (0, l.k)(), (t = u.default.getId());
             } catch {}
-        return (0, l.ZP)((0, i.Gk)(), {
+        return (0, a.ZP)((0, i.Gk)(), {
             utmSource: e,
             fingerprint: t,
-            attemptId: r
+            attemptId: s
         });
     }
     return 'discord://';
 }
-async function S(e) {
-    let t = await f(e),
-        n = (0, l.zS)(t);
+async function g(e) {
+    let t = await p(e),
+        n = (0, a.zS)(t);
     null != n &&
-        I.default.track(h.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, s.K)(n.fingerprint),
+        _.default.track(E.rMx.DEEP_LINK_CLICKED, {
+            fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),
-        _.Z.launch(t, (e) => {
-            !e && (0, u.dL)(d.Z.fallbackRoute);
+        h.Z.launch(t, (e) => {
+            !e && (0, c.dL)(d.Z.fallbackRoute);
         });
 }

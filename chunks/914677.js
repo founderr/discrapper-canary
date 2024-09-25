@@ -50,7 +50,7 @@ t.Z = (e) => {
         f = (0, r.ap)(p),
         A = _(I),
         S = d(I, f),
-        h = null != R ? R : u(f, I);
+        M = null != R ? R : u(f, I);
     return (0, s.jsxs)('div', {
         className: l.circleContainer,
         children: [
@@ -69,7 +69,7 @@ t.Z = (e) => {
                         strokeOpacity: S
                     }),
                     (0, s.jsx)('circle', {
-                        stroke: h,
+                        stroke: M,
                         strokeWidth: T,
                         strokeLinecap: 'round',
                         strokeDasharray: ''.concat(g, ' ').concat(g),

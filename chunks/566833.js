@@ -6,13 +6,13 @@ n.d(t, {
 var r = n(470079),
     i = n(699581),
     a = n(978008),
-    s = n(427753),
-    o = n.n(s),
+    o = n(427753),
+    s = n.n(o),
     l = n(705942),
     u = [],
     c = function (e, t, n) {
         void 0 === n && (n = {});
-        var s = r.useRef(null),
+        var o = r.useRef(null),
             c = {
                 onFirstUpdate: n.onFirstUpdate,
                 placement: n.placement || 'bottom',
@@ -72,7 +72,7 @@ var r = n(470079),
                             }
                         ])
                     };
-                    return o()(s.current, e) ? s.current || e : ((s.current = e), e);
+                    return s()(o.current, e) ? o.current || e : ((o.current = e), e);
                 },
                 [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, f]
             ),

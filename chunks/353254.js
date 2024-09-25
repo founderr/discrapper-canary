@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return o;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(838085),
-    s = n(73346);
-function a(e) {
+    a = n(73346);
+function o(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        [n, a] = (0, i.Z)();
-    return [n, (null == e ? void 0 : e.application_id) != null && null != a ? (0, s._W)(e.application_id, e, a, t ? void 0 : 'webp') : void 0];
+        [n, r] = (0, i.Z)();
+    return [n, (null == e ? void 0 : e.application_id) != null && null != r ? (0, a._W)(e.application_id, e, r, t ? void 0 : 'webp') : void 0];
 }

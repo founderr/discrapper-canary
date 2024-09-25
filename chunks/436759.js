@@ -1,12 +1,12 @@
 n.d(t, {
     N: function () {
-        return s;
+        return o;
     }
 });
 var r = n(36056),
     i = n(929412),
     a = n(69122);
-function s(e, t = r.pz.STRING) {
+function o(e, t = r.pz.STRING) {
     switch (e) {
         case r.wx.BOOL:
             return !1;

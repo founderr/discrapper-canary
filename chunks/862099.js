@@ -299,7 +299,7 @@ function Y(e) {
         })
     );
 }
-function z(e) {
+function W(e) {
     let { guildEvent: t } = e,
         n = (0, y.cS)(t);
     return null == n
@@ -316,10 +316,10 @@ function z(e) {
                   height: 16,
                   className: B.stageIcon
               }),
-              children: (0, s.jsx)(W, { guildEvent: t })
+              children: (0, s.jsx)(z, { guildEvent: t })
           });
 }
-function W(e) {
+function z(e) {
     let { guildEvent: t } = e,
         n = r.useCallback(() => {
             (0, Z.bO)({ eventId: t.id });
@@ -463,7 +463,7 @@ function Q(e) {
                     channel: i
                 }))
               : a.entity_type === G.WX.EXTERNAL
-                ? (u = (0, s.jsx)(z, { guildEvent: a }))
+                ? (u = (0, s.jsx)(W, { guildEvent: a }))
                 : a.entity_type === G.WX.VOICE &&
                   null != i &&
                   (u = (0, s.jsx)(V, {

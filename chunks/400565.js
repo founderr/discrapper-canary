@@ -1,75 +1,75 @@
 n.d(t, {
     U: function () {
-        return u;
+        return c;
     }
 });
-var i = n(735250),
-    s = n(470079),
+var r = n(735250),
+    i = n(470079),
     a = n(686546),
-    r = n(598077),
-    l = n(865112),
-    o = n(655538);
-let c = (e) => {
+    o = n(598077),
+    s = n(865112),
+    l = n(655538);
+let u = (e) => {
         let { mask: t } = e;
         return null == t
             ? null
-            : (0, i.jsx)('div', {
-                  className: o.maskBackground,
+            : (0, r.jsx)('div', {
+                  className: l.maskBackground,
                   style: { backgroundColor: t.color.css },
-                  children: (0, i.jsx)('img', {
-                      className: o.maskIcon,
+                  children: (0, r.jsx)('img', {
+                      className: l.maskIcon,
                       alt: '',
                       src: t.icon
                   })
               });
     },
-    u = s.memo(function (e) {
+    c = i.memo(function (e) {
         let { item: t } = e,
             n = null,
-            s = !1;
+            i = !1;
         if (null != t.icon_name)
-            n = (0, i.jsx)('img', {
+            n = (0, r.jsx)('img', {
                 alt: '',
-                src: l.VH[(0, l.RB)(t.icon_name)]
+                src: s.VH[(0, s.RB)(t.icon_name)]
             });
         else if (null != t.other_user) {
-            let e = t.other_user instanceof r.Z ? t.other_user : new r.Z(t.other_user);
-            (n = (0, i.jsx)('img', {
+            let e = t.other_user instanceof o.Z ? t.other_user : new o.Z(t.other_user);
+            (n = (0, r.jsx)('img', {
                 alt: '',
-                className: o.image,
+                className: l.image,
                 src: e.getAvatarURL(void 0, 40)
             })),
-                (s = !0);
+                (i = !0);
         } else
             n =
                 null != t.icon_url
-                    ? (0, i.jsx)('img', {
+                    ? (0, r.jsx)('img', {
                           alt: '',
-                          className: o.image,
+                          className: l.image,
                           src: t.icon_url
                       })
-                    : (0, i.jsx)('img', {
+                    : (0, r.jsx)('img', {
                           alt: '',
-                          src: l.VH[(0, l.q7)(t)]
+                          src: s.VH[(0, s.q7)(t)]
                       });
-        let u = (0, l.Vi)(t.type);
-        return (0, i.jsxs)('div', {
-            className: o.container,
+        let c = (0, s.Vi)(t.type);
+        return (0, r.jsxs)('div', {
+            className: l.container,
             children: [
-                (0, i.jsx)(a.ZP, {
-                    mask: null == u ? a.QS.AVATAR_DEFAULT : a.QS.AVATAR_STATUS_ROUND_16,
+                (0, r.jsx)(a.ZP, {
+                    mask: null == c ? a.QS.AVATAR_DEFAULT : a.QS.AVATAR_STATUS_ROUND_16,
                     width: 40,
                     height: 40,
                     rightOverhang: 3,
                     bottomOverhang: 3,
-                    className: o.mask,
-                    children: (0, i.jsx)('div', {
-                        className: o.imageContainer,
-                        style: s ? void 0 : { backgroundColor: (0, l.Vu)(t) },
+                    className: l.mask,
+                    children: (0, r.jsx)('div', {
+                        className: l.imageContainer,
+                        style: i ? void 0 : { backgroundColor: (0, s.Vu)(t) },
                         children: n
                     })
                 }),
-                (0, i.jsx)(c, { mask: u })
+                (0, r.jsx)(u, { mask: c })
             ]
         });
     });

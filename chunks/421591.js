@@ -12,8 +12,8 @@ var i = t(735250),
     p = t(684256),
     _ = t(314734),
     C = t(981631),
-    h = t(559103);
-let f = {
+    f = t(559103);
+let h = {
         width: _.Gy,
         height: _.lv
     },
@@ -90,7 +90,7 @@ function N(e) {
                 }
             );
         })(o),
-        { currentView: C, getMostRecentHistoryItemByType: f, setSlideReady: E } = (0, d.hH)();
+        { currentView: C, getMostRecentHistoryItemByType: h, setSlideReady: E } = (0, d.hH)();
     a.useEffect(() => {
         E(!1);
     }, [null == C ? void 0 : C.type, E]);
@@ -98,8 +98,8 @@ function N(e) {
         E(!0);
     }, [E]);
     if (null == C) return null;
-    let x = f(d.gc.LIST),
-        v = f(d.gc.APPLICATION);
+    let v = h(d.gc.LIST),
+        x = h(d.gc.APPLICATION);
     return (0, i.jsxs)(l.Slides, {
         activeSlide: C.type,
         width: _.Gy,
@@ -108,7 +108,7 @@ function N(e) {
             (0, i.jsx)(l.Slide, {
                 id: d.gc.HOME,
                 children: (0, i.jsx)('div', {
-                    className: h.slideContent,
+                    className: f.slideContent,
                     style: A,
                     children: (0, i.jsx)(m.Z, {
                         isScrollCloseToBottom: c,
@@ -123,31 +123,31 @@ function N(e) {
             (0, i.jsx)(l.Slide, {
                 id: d.gc.LIST,
                 children: (0, i.jsx)('div', {
-                    className: h.slideContent,
+                    className: f.slideContent,
                     style: A,
                     children:
-                        null != x &&
+                        null != v &&
                         (0, i.jsx)(p.Z, {
                             channel: n,
                             entrypoint: t,
-                            title: x.title,
-                            look: x.look,
-                            items: x.items,
-                            sectionName: x.sectionName
+                            title: v.title,
+                            look: v.look,
+                            items: v.items,
+                            sectionName: v.sectionName
                         })
                 })
             }),
             (0, i.jsx)(l.Slide, {
                 id: d.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
-                    className: h.slideContent,
+                    className: f.slideContent,
                     style: A,
                     children:
-                        null != v &&
+                        null != x &&
                         (0, i.jsx)(u.Z, {
                             channel: n,
-                            application: v.application,
-                            sectionName: v.sectionName
+                            application: x.application,
+                            sectionName: x.sectionName
                         })
                 })
             })
@@ -176,11 +176,11 @@ n.Z = a.memo(
                 };
             }, [l]),
             (0, i.jsx)('div', {
-                className: h.drawerSizingWrapper,
+                className: f.drawerSizingWrapper,
                 ref: n,
-                style: f,
+                style: h,
                 children: (0, i.jsx)('div', {
-                    className: h.contentWrapper,
+                    className: f.contentWrapper,
                     children: (0, i.jsx)(s.Gt, {
                         value: u,
                         children: (0, i.jsx)(E, {

@@ -9,13 +9,13 @@ n.d(t, {
 var r,
     i = n(470079),
     a = n(802498),
-    s = n(442837),
-    o = n(607070);
+    o = n(442837),
+    s = n(607070);
 let l = null !== (r = document.getElementById('app-mount')) && void 0 !== r ? r : document;
 function u(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        r = (0, s.e7)([o.Z], () => o.Z.keyboardModeEnabled),
+        r = (0, o.e7)([s.Z], () => s.Z.keyboardModeEnabled),
         u = i.useRef(!1);
     return (
         (u.current = !r),

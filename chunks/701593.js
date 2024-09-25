@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = '[a-zA-Z_][\\w.]*',
         n = '<\\?(lasso(script)?|=)',
         r = '\\]|\\?>',
@@ -9,7 +9,7 @@ e.exports = function (e) {
             keyword: 'cache database_names database_schemanames database_tablenames define_tag define_type email_batch encode_set html_comment handle handle_error header if inline iterate ljax_target link link_currentaction link_currentgroup link_currentrecord link_detail link_firstgroup link_firstrecord link_lastgroup link_lastrecord link_nextgroup link_nextrecord link_prevgroup link_prevrecord log loop namespace_using output_none portal private protect records referer referrer repeating resultset rows search_args search_arguments select sort_args sort_arguments thread_atomic value_list while abort case else fail_if fail_ifnot fail if_empty if_false if_null if_true loop_abort loop_continue loop_count params params_up return return_value run_children soap_definetag soap_lastrequest soap_lastresponse tag_name ascending average by define descending do equals frozen group handle_failure import in into join let match max min on order parent protected provide public require returnhome skip split_thread sum take thread to trait type where with yield yieldhome'
         },
         a = e.COMMENT('<!--', '-->', { relevance: 0 }),
-        s = {
+        o = {
             className: 'meta',
             begin: '\\[noprocess\\]',
             starts: {
@@ -18,11 +18,15 @@ e.exports = function (e) {
                 contains: [a]
             }
         },
-        o = {
+        s = {
             className: 'meta',
             begin: '\\[/noprocess|' + n
         },
-        l = [
+        l = {
+            className: 'symbol',
+            begin: "'" + t + "'"
+        },
+        u = [
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.inherit(e.C_NUMBER_MODE, { begin: e.C_NUMBER_RE + '|(-?infinity|NaN)\\b' }),
@@ -62,12 +66,7 @@ e.exports = function (e) {
             {
                 begin: /(->|\.)\s*/,
                 relevance: 0,
-                contains: [
-                    {
-                        className: 'symbol',
-                        begin: "'" + t + "'"
-                    }
-                ]
+                contains: [l]
             },
             {
                 className: 'class',
@@ -94,8 +93,8 @@ e.exports = function (e) {
                     contains: [a]
                 }
             },
-            s,
             o,
+            s,
             {
                 className: 'meta',
                 begin: '\\[no_square_brackets',
@@ -113,9 +112,9 @@ e.exports = function (e) {
                                 contains: [a]
                             }
                         },
-                        s,
-                        o
-                    ].concat(l)
+                        o,
+                        s
+                    ].concat(u)
                 }
             },
             {
@@ -129,6 +128,7 @@ e.exports = function (e) {
                 end: 'lasso9$',
                 relevance: 10
             }
-        ].concat(l)
+        ].concat(u)
     };
-};
+}
+e.exports = t;

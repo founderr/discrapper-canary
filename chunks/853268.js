@@ -8,21 +8,21 @@ n(470079);
 var r = n(120356),
     i = n.n(r),
     a = n(481060),
-    l = n(600164),
-    o = n(388905),
+    o = n(600164),
+    l = n(388905),
     c = n(691134),
     u = n(113207);
 function d(e) {
     let { value: t, onChange: n, subText: r, muted: d, marginTopStyle: _ } = e;
-    return (0, s.jsx)(l.Z, {
+    return (0, s.jsx)(o.Z, {
         className: null != _ ? _ : u.marginTop20,
-        align: l.Z.Align.CENTER,
+        align: o.Z.Align.CENTER,
         children: (0, s.jsx)(a.Checkbox, {
             value: t,
             type: a.Checkbox.Types.INVERTED,
             onChange: (e, t) => n(t),
             className: c.checkbox,
-            children: (0, s.jsx)(o.i_, {
+            children: (0, s.jsx)(l.i_, {
                 className: i()({ [c.subText]: !d }),
                 children: r
             })

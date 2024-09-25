@@ -1,9 +1,9 @@
 n.d(t, {
     TS: function () {
-        return U;
+        return k;
     },
     ud: function () {
-        return P;
+        return O;
     },
     v0: function () {
         return y;
@@ -30,8 +30,8 @@ var i = n(735250),
     I = n(594174),
     T = n(768581),
     x = n(63063),
-    S = n(946734),
-    v = n(99843),
+    v = n(946734),
+    S = n(99843),
     N = n(372564),
     A = n(984370),
     Z = n(217314),
@@ -110,7 +110,7 @@ function j(e) {
         a
     );
 }
-function P(e) {
+function O(e) {
     let { channel: t, channelName: n, parentChannel: a, guild: r, inSidebar: o = !1, handleClick: u, handleContextMenu: d, handleParentClick: p, handleParentContextMenu: f, renderFollowButton: E } = e,
         C = (0, m.KS)(t, r),
         { prefix: T, level: x } = (function (e, t) {
@@ -155,7 +155,7 @@ function P(e) {
                     };
             }
         })(t.type, r),
-        S = (0, i.jsxs)(i.Fragment, {
+        v = (0, i.jsxs)(i.Fragment, {
             children: [
                 null != T
                     ? (0, i.jsxs)(c.HiddenVisually, {
@@ -175,7 +175,7 @@ function P(e) {
                 handleContextMenu: d
             });
         case M.d4z.GROUP_DM:
-            if (t.isManaged()) return S;
+            if (t.isManaged()) return v;
             return (0, i.jsxs)(s.Fragment, {
                 children: [
                     (0, i.jsx)(c.HiddenVisually, { children: R.Z.Messages.GROUP_DM }),
@@ -189,7 +189,7 @@ function P(e) {
                             className: L.avatar
                         })
                     }),
-                    (0, i.jsx)(v.Z, { channel: t }, 'channel-'.concat(t.id))
+                    (0, i.jsx)(S.Z, { channel: t }, 'channel-'.concat(t.id))
                 ]
             });
         case M.d4z.GUILD_ANNOUNCEMENT:
@@ -203,7 +203,7 @@ function P(e) {
                         level: x,
                         onContextMenu: d,
                         onClick: u,
-                        children: S
+                        children: v
                     }),
                     null != t.linkedLobby ? (0, i.jsx)(j, { channel: t }) : null,
                     null != E ? E() : null
@@ -217,7 +217,7 @@ function P(e) {
                         level: x,
                         onContextMenu: d,
                         onClick: u,
-                        children: S
+                        children: v
                     })
                 ]
             });
@@ -229,7 +229,7 @@ function P(e) {
                         level: x,
                         onContextMenu: d,
                         onClick: u,
-                        children: S
+                        children: v
                     })
                 ]
             });
@@ -266,12 +266,12 @@ function P(e) {
                             [L.cursorPointer]: o,
                             [L.forumPostTitle]: b
                         }),
-                        children: S
+                        children: v
                     })
                 ]
             });
         case M.d4z.GUILD_DIRECTORY:
-            let P = (null == r ? void 0 : r.hasFeature(M.oNc.HUB)) ? R.Z.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({ guildName: n }) : n;
+            let O = (null == r ? void 0 : r.hasFeature(M.oNc.HUB)) ? R.Z.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({ guildName: n }) : n;
             return (0, i.jsxs)(s.Fragment, {
                 children: [
                     null !== C
@@ -292,7 +292,7 @@ function P(e) {
                                   })
                                 : null,
                             ' ',
-                            P
+                            O
                         ]
                     })
                 ]
@@ -301,7 +301,7 @@ function P(e) {
             return null;
     }
 }
-let O = (e) => {
+let P = (e) => {
     let { channel: t } = e,
         n = (0, r.e7)([I.default], () => I.default.getCurrentUser()),
         s = (0, r.e7)([I.default], () => I.default.getUser(t.getRecipientId()));
@@ -311,7 +311,7 @@ function y(e, t) {
     switch (e.type) {
         case M.d4z.DM:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(O, { channel: e }), (0, i.jsx)(S.Z, { channel: e }, e.id)]
+                children: [(0, i.jsx)(P, { channel: e }), (0, i.jsx)(v.Z, { channel: e }, e.id)]
             });
         case M.d4z.GUILD_ANNOUNCEMENT:
         case M.d4z.GUILD_TEXT:
@@ -345,7 +345,7 @@ function D(e, t) {
         ]
     });
 }
-function U(e) {
+function k(e) {
     let { guild: t, channel: n, caretPosition: s = 'left' } = e;
     return (0, r.e7)([C.Z], () => C.Z.getGuildId()) !== M.I_8 || null == t
         ? null

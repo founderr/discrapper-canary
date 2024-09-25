@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return b;
     }
 }),
     n(47120),
@@ -37,7 +37,7 @@ function p(e) {
               })
           });
 }
-function g() {
+function b() {
     var e;
     let t = (0, a.e7)([u.Z], () => u.Z.getFeed(x.YN.GLOBAL_FEED)),
         n = (0, a.e7)([u.Z], () => u.Z.getFilters()),

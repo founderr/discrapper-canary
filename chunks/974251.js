@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(536442),
     T = n(79390),
     x = n(665906),
-    S = n(706454),
-    v = n(695346),
+    v = n(706454),
+    S = n(695346),
     N = n(433355),
     A = n(819640),
     Z = n(375954),
@@ -29,12 +29,12 @@ var i = n(735250),
     R = n(627553),
     L = n(38761),
     j = n(585483),
-    P = n(358085),
-    O = n(127654),
+    O = n(358085),
+    P = n(127654),
     y = n(316595),
     D = n(193910),
-    U = n(951211),
-    k = n(981631),
+    k = n(951211),
+    U = n(981631),
     w = n(356659),
     B = n(921944),
     H = n(689938),
@@ -59,19 +59,19 @@ t.Z = s.memo(function (e) {
         [ec, eu] = s.useState(null),
         ed = (0, f.Go)() && ($ || eo),
         eh = W.isPrivate(),
-        em = (0, r.e7)([M.Z], () => eh || (M.Z.can(k.Plq.ATTACH_FILES, W) && M.Z.can(k.Plq.SEND_MESSAGES, W))),
-        ep = (0, r.e7)([S.default], () => S.default.locale),
+        em = (0, r.e7)([M.Z], () => eh || (M.Z.can(U.Plq.ATTACH_FILES, W) && M.Z.can(U.Plq.SEND_MESSAGES, W))),
+        ep = (0, r.e7)([v.default], () => v.default.locale),
         e_ = ['en-US', 'en-GB'].includes(ep) ? H.Z.Messages.CHAT_ATTACH_PLUS_BUTTON_A11Y_LABEL : H.Z.Messages.MORE_OPTIONS,
         ef = (0, d.Z)(ee);
     (null == ef ? void 0 : ef.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && ea && en && !el && !ei && !er && eu('recentClips');
     let eE = (e, t, n) => {
             null != t && 'ETOOLARGE' === t.code
-                ? (0, O.G)(W, [])
-                : (0, O.d)(e, W, z, {
+                ? (0, P.G)(W, [])
+                : (0, P.d)(e, W, z, {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
-                j.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
+                j.S.dispatchToLastSubscribed(U.CkL.TEXTAREA_FOCUS);
         },
         eg = (0, r.e7)([Z.Z], () => Z.Z.hasCurrentUserSentMessageSinceAppStart());
     function eC() {
@@ -94,20 +94,20 @@ t.Z = s.memo(function (e) {
             return null === (e = J.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
         };
         return (
-            j.S.subscribe(k.CkL.UPLOAD_FILE, e),
+            j.S.subscribe(U.CkL.UPLOAD_FILE, e),
             () => {
-                j.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
+                j.S.unsubscribe(U.CkL.UPLOAD_FILE, e);
             }
         );
     });
     let eI = (0, x.NE)(W),
         eT = (0, x.Xu)(W),
-        ex = !v.dN.useSetting() && !(0, P.isAndroidWeb)() && null != window.ResizeObserver,
-        eS = (0, T.UI)(null != W ? W : void 0),
-        ev = (0, c.useRedesignIconContext)().enabled,
+        ex = !S.dN.useSetting() && !(0, O.isAndroidWeb)() && null != window.ResizeObserver,
+        ev = (0, T.UI)(null != W ? W : void 0),
+        eS = (0, c.useRedesignIconContext)().enabled,
         eN = (0, m.qB)(W.id, 'ChannelAttachButton'),
         eA = null !== (a = null == et ? void 0 : et.length) && void 0 !== a ? a : 0,
-        eZ = (0, U.Z)({
+        eZ = (0, k.Z)({
             canAttachFiles: em,
             canStartThreads: eI || eT,
             useSlate: ex,
@@ -116,14 +116,14 @@ t.Z = s.memo(function (e) {
             channel: W,
             activities: Q,
             newClipsCount: eA,
-            canPostPolls: eS,
+            canPostPolls: ev,
             canLaunchActivities: eN,
             appContext: X
         });
     if (0 === eZ.length) return null;
-    let eM = Q.some((e) => (0, p.Z)(e, k.xjy.SYNC)),
-        eb = Q.some((e) => (0, p.Z)(e, k.xjy.JOIN) && !(0, p.Z)(e, k.xjy.EMBEDDED)) || eM;
-    V = ev
+    let eM = Q.some((e) => (0, p.Z)(e, U.xjy.SYNC)),
+        eb = Q.some((e) => (0, p.Z)(e, U.xjy.JOIN) && !(0, p.Z)(e, U.xjy.EMBEDDED)) || eM;
+    V = eS
         ? (0, i.jsx)(c.CirclePlusIcon, {
               className: G.__invalid_attachButtonIcon,
               colorClass: G.attachButtonPlus

@@ -1,168 +1,168 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return F;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(442837),
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(442837),
     s = n(481060),
-    o = n(278323),
-    l = n(224706),
-    u = n(287734),
-    c = n(566620),
-    d = n(317381),
-    _ = n(638880),
-    E = n(255621),
-    f = n(452634),
-    h = n(620662),
-    p = n(841784),
+    l = n(278323),
+    u = n(224706),
+    c = n(287734),
+    d = n(566620),
+    _ = n(317381),
+    E = n(638880),
+    f = n(255621),
+    h = n(452634),
+    p = n(620662),
+    m = n(841784),
     I = n(275920),
-    m = n(906732),
-    T = n(895924),
+    T = n(906732),
+    g = n(895924),
     S = n(835473),
-    g = n(592745),
-    A = n(592125),
+    A = n(592745),
+    v = n(592125),
     N = n(757266),
     O = n(650774),
     R = n(430824),
-    v = n(283595),
-    C = n(496675),
-    y = n(699516),
+    C = n(283595),
+    y = n(496675),
+    b = n(699516),
     L = n(944486),
     D = n(979651),
-    b = n(181106),
-    M = n(417363),
-    P = n(358085),
-    U = n(804739),
-    w = n(475413),
-    x = n(981631),
-    G = n(701488),
-    k = n(689938);
-function B(e) {
-    let { user: t, currentUser: n, activity: B, onAction: F, onClose: V } = e,
-        { analyticsLocations: H, newestAnalyticsLocation: Z } = (0, m.ZP)(),
-        [Y] = (0, S.Z)([null == B ? void 0 : B.application_id]),
-        j = (0, p.Z)(B),
-        W = null == B ? void 0 : B.application_id,
-        K = null == B ? void 0 : B.session_id,
-        z = (0, f.Z)({
-            activity: B,
+    M = n(181106),
+    P = n(417363),
+    U = n(358085),
+    w = n(804739),
+    x = n(475413),
+    G = n(981631),
+    k = n(701488),
+    B = n(689938);
+function F(e) {
+    let { user: t, currentUser: n, activity: r, onAction: F, onClose: Z } = e,
+        { analyticsLocations: V, newestAnalyticsLocation: H } = (0, T.ZP)(),
+        [Y] = (0, S.Z)([null == r ? void 0 : r.application_id]),
+        j = (0, m.Z)(r),
+        W = null == r ? void 0 : r.application_id,
+        K = null == r ? void 0 : r.session_id,
+        z = (0, h.Z)({
+            activity: r,
             userId: t.id,
             channelId: void 0
         }),
         q =
-            (0, a.e7)(
-                [v.Z, g.Z, M.Z, N.Z],
+            (0, o.e7)(
+                [C.Z, A.Z, P.Z, N.Z],
                 () =>
                     null != W &&
-                    (0, U.t)({
+                    (0, w.t)({
                         applicationId: W,
-                        LibraryApplicationStore: v.Z,
-                        LaunchableGameStore: g.Z,
-                        DispatchApplicationStore: M.Z,
+                        LibraryApplicationStore: C.Z,
+                        LaunchableGameStore: A.Z,
+                        DispatchApplicationStore: P.Z,
                         ConnectedAppsStore: N.Z
                     })
             ) || j,
-        Q = (0, a.e7)([d.ZP], () =>
-            [...d.ZP.getSelfEmbeddedActivities().values()].some((e) => {
+        Q = (0, o.e7)([_.ZP], () =>
+            [..._.ZP.getSelfEmbeddedActivities().values()].some((e) => {
                 let { applicationId: t, channelId: n } = e;
                 return t === W && n === z;
             })
         ),
-        X = (0, a.e7)([b.Z], () => null != W && b.Z.getState(W, x.mFx.JOIN) === x.OcF.LOADING),
-        $ = (0, a.e7)([A.Z, R.Z, O.Z, y.Z, L.Z, D.Z, C.Z], () =>
-            (0, E.Z)({
+        X = (0, o.e7)([M.Z], () => null != W && M.Z.getState(W, G.mFx.JOIN) === G.OcF.LOADING),
+        $ = (0, o.e7)([v.Z, R.Z, O.Z, b.Z, L.Z, D.Z, y.Z], () =>
+            (0, f.Z)({
                 user: t,
-                activity: B,
+                activity: r,
                 application: Y,
                 channelId: z,
                 currentUser: n,
                 isEmbedded: j,
-                ChannelStore: A.Z,
+                ChannelStore: v.Z,
                 GuildStore: R.Z,
                 GuildMemberCountStore: O.Z,
-                RelationshipStore: y.Z,
+                RelationshipStore: b.Z,
                 SelectedChannelStore: L.Z,
                 VoiceStateStore: D.Z,
-                PermissionStore: C.Z
+                PermissionStore: y.Z
             })
         ),
-        [J, ee] = i.useState(!1),
-        et = J || Q || (P.isPlatformEmbedded && !q);
-    if (null == W || !$ || (!(0, h.Z)(B, x.xjy.JOIN) && !j)) return null;
+        [J, ee] = a.useState(!1),
+        et = J || Q || (U.isPlatformEmbedded && !q);
+    if (null == W || !$ || (!(0, p.Z)(r, G.xjy.JOIN) && !j)) return null;
     let en = async () => {
             if (
                 j &&
                 $ &&
                 null != z &&
                 null != W &&
-                (await (0, _.Z)({
+                (await (0, E.Z)({
                     applicationId: W,
                     activityChannelId: z,
-                    locationObject: { page: x.ZY5.USER_PROFILE },
-                    analyticsLocations: H,
-                    commandOrigin: T.bB.USER_PROFILE
+                    locationObject: { page: G.ZY5.USER_PROFILE },
+                    analyticsLocations: V,
+                    commandOrigin: g.bB.USER_PROFILE
                 }))
             ) {
-                null == V || V();
+                null == Z || Z();
                 return;
             }
             if ($ && null != W && null != K) {
                 var e, n;
-                let r = L.Z.getVoiceChannelId(),
-                    i = A.Z.getChannel(r);
-                await l.Z.join({
+                let i = L.Z.getVoiceChannelId(),
+                    a = v.Z.getChannel(i);
+                await u.Z.join({
                     userId: t.id,
                     sessionId: K,
                     applicationId: W,
-                    channelId: r,
+                    channelId: i,
                     messageId: null,
-                    intent: G.Ws.PLAY,
+                    intent: k.Ws.PLAY,
                     embedded: j,
-                    partyId: null == B ? void 0 : null === (e = B.party) || void 0 === e ? void 0 : e.id,
-                    locationObject: { page: x.ZY5.USER_PROFILE },
-                    analyticsLocations: H
+                    partyId: null == r ? void 0 : null === (e = r.party) || void 0 === e ? void 0 : e.id,
+                    locationObject: { page: G.ZY5.USER_PROFILE },
+                    analyticsLocations: V
                 }),
                     !j &&
                         (0, I.Z)({
-                            type: x.q5t.JOIN,
+                            type: G.q5t.JOIN,
                             userId: t.id,
-                            guildId: null == i ? void 0 : i.guild_id,
-                            channelId: r,
-                            channelType: null == i ? void 0 : i.type,
-                            partyId: null == B ? void 0 : null === (n = B.party) || void 0 === n ? void 0 : n.id,
+                            guildId: null == a ? void 0 : a.guild_id,
+                            channelId: i,
+                            channelType: null == a ? void 0 : a.type,
+                            partyId: null == r ? void 0 : null === (n = r.party) || void 0 === n ? void 0 : n.id,
                             applicationId: W,
-                            analyticsLocations: H
+                            analyticsLocations: V
                         });
             }
             if ((ee(!0), null != z && null != W))
-                return c.pu({
+                return d.pu({
                     channelId: z,
                     applicationId: W,
                     userId: t.id,
-                    location: Z
+                    location: H
                 });
-            if (null != B) {
-                let e = await o.Z.sendActivityInviteUser({
-                    type: x.mFx.JOIN_REQUEST,
+            if (null != r) {
+                let e = await l.Z.sendActivityInviteUser({
+                    type: G.mFx.JOIN_REQUEST,
                     userId: t.id,
-                    activity: B,
-                    location: x.Sbl.PROFILE_POPOUT
+                    activity: r,
+                    location: G.Sbl.PROFILE_POPOUT
                 });
-                null != e && u.default.selectPrivateChannel(e.id);
+                null != e && c.default.selectPrivateChannel(e.id);
             }
         },
-        er = () => (t.id === n.id ? k.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : P.isPlatformEmbedded && !q && null != B ? k.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: B.name }) : null);
+        er = () => (t.id === n.id ? B.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : U.isPlatformEmbedded && !q && null != r ? B.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: r.name }) : null);
     return j
-        ? (0, r.jsx)(s.Tooltip, {
+        ? (0, i.jsx)(s.Tooltip, {
               text: er(),
               children: (e) =>
-                  (0, r.jsx)(w.tG, {
+                  (0, i.jsx)(x.tG, {
                       ...e,
                       icon: s.ActivitiesIcon,
-                      text: k.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY,
+                      text: B.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY,
                       disabled: et,
                       submitting: X,
                       fullWidth: !0,
@@ -171,13 +171,13 @@ function B(e) {
                       }
                   })
           })
-        : (0, r.jsx)(s.Tooltip, {
+        : (0, i.jsx)(s.Tooltip, {
               text: er(),
               children: (e) =>
-                  (0, r.jsx)(w.tG, {
+                  (0, i.jsx)(x.tG, {
                       ...e,
                       icon: s.GameControllerIcon,
-                      text: $ ? k.Z.Messages.JOIN : k.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
+                      text: $ ? B.Z.Messages.JOIN : B.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
                       disabled: et,
                       submitting: X,
                       fullWidth: !0,

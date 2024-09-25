@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return U;
     }
 }),
     n(47120),
@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(111583),
     T = n(594174),
     x = n(626135),
-    S = n(768581),
-    v = n(585483),
+    v = n(768581),
+    S = n(585483),
     N = n(233870),
     A = n(51144),
     Z = n(998502),
@@ -35,8 +35,8 @@ var i = n(735250),
     R = n(689938),
     L = n(226686),
     j = n(204394);
-let P = [],
-    O = Z.ZP.getEnableHardwareAcceleration();
+let O = [],
+    P = Z.ZP.getEnableHardwareAcceleration();
 function y(e) {
     let { user: t, channel: s, status: u, activities: d } = e,
         h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(s.id)[t.id]),
@@ -67,7 +67,7 @@ function y(e) {
         onShiftClick: () => {
             let e = '@'.concat(A.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+            S.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }),
@@ -81,7 +81,7 @@ function y(e) {
                     currentUser: m,
                     isOwner: t.id === s.ownerId,
                     ownerTooltipText: R.Z.Messages.GROUP_OWNER,
-                    shouldAnimateStatus: O,
+                    shouldAnimateStatus: P,
                     isTyping: h,
                     status: u,
                     activities: d,
@@ -113,7 +113,7 @@ function D(e) {
             [l, c]
         ),
         d = l.application.bot,
-        m = S.ZP.getApplicationIconURL({
+        m = v.ZP.getApplicationIconURL({
             id: l.application.id,
             icon: l.application.icon,
             bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
@@ -162,7 +162,7 @@ function D(e) {
           })
         : null;
 }
-function U(e, t) {
+function k(e, t) {
     if (e.listItems.length !== t.listItems.length) return !1;
     for (let n = 0; n < e.listItems.length; n++) {
         let i = e.listItems[n],
@@ -171,7 +171,7 @@ function U(e, t) {
     }
     return !0;
 }
-function k(e) {
+function U(e) {
     var t;
     let { channel: a } = e,
         o = T.default.getCurrentUser(),
@@ -189,11 +189,11 @@ function k(e) {
                         C.Z.isFriend(t.id) || t.id === (null === (i = T.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                             ? (n[t.id] = {
                                   status: null !== (s = g.Z.getStatus(t.id)) && void 0 !== s ? s : b.Skl.OFFLINE,
-                                  activities: null !== (a = g.Z.getActivities(t.id)) && void 0 !== a ? a : P
+                                  activities: null !== (a = g.Z.getActivities(t.id)) && void 0 !== a ? a : O
                               })
                             : (n[t.id] = {
                                   status: b.Skl.OFFLINE,
-                                  activities: P
+                                  activities: O
                               });
                     }
                     let l = [];
@@ -208,9 +208,9 @@ function k(e) {
                     return { listItems: l };
                 },
                 [t],
-                U
+                k
             )),
-        { installedIntegrations: I, applicationsShelf: S, fetched: v, appsInGDMEnabled: A, availableApplications: Z } = (0, _.j)({ channelId: a.id });
+        { installedIntegrations: I, applicationsShelf: v, fetched: S, appsInGDMEnabled: A, availableApplications: Z } = (0, _.j)({ channelId: a.id });
     s.useEffect(() => {
         x.default.track(b.rMx.MEMBER_LIST_VIEWED, {
             channel_id: a.id,
@@ -244,7 +244,7 @@ function k(e) {
                         )
                     ),
                     A &&
-                        (I.length > 0 || (v && S.length > 0)) &&
+                        (I.length > 0 || (S && v.length > 0)) &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(m.Z, {

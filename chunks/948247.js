@@ -10,10 +10,10 @@ n.r(t),
             return a.s;
         },
         usePopper: function () {
-            return s.D;
+            return o.D;
         }
     });
 var r = n(90078),
     i = n(234366),
     a = n(943754),
-    s = n(566833);
+    o = n(566833);

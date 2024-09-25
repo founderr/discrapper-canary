@@ -1,8 +1,8 @@
 var r = n(325008),
     i = n(498576),
     a = TypeError,
-    s = Object.getOwnPropertyDescriptor,
-    o =
+    o = Object.getOwnPropertyDescriptor,
+    s =
         r &&
         !(function () {
             if (void 0 !== this) return !0;
@@ -12,9 +12,9 @@ var r = n(325008),
                 return e instanceof TypeError;
             }
         })();
-e.exports = o
+e.exports = s
     ? function (e, t) {
-          if (i(e) && !s(e, 'length').writable) throw a('Cannot set read only .length');
+          if (i(e) && !o(e, 'length').writable) throw a('Cannot set read only .length');
           return (e.length = t);
       }
     : function (e, t) {

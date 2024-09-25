@@ -1,15 +1,15 @@
-n(47120);
-var r = n(147913),
-    i = n(362721),
-    a = n(314897),
+var r = n(47120);
+var i = n(147913),
+    a = n(362721),
+    o = n(314897),
     s = n(592125),
-    o = n(979651),
-    l = n(906605),
-    u = n(574176),
-    c = n(106301),
-    d = n(866071),
-    _ = n(981631);
-function E(e, t, n) {
+    l = n(979651),
+    u = n(906605),
+    c = n(574176),
+    d = n(106301),
+    _ = n(866071),
+    E = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,24 +22,24 @@ function E(e, t, n) {
         e
     );
 }
-class f extends r.Z {
+class h extends i.Z {
     constructor(...e) {
         super(...e),
-            E(this, 'previousVoiceChannelId', void 0),
-            E(this, 'actions', {
+            f(this, 'previousVoiceChannelId', void 0),
+            f(this, 'actions', {
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
                 VOICE_CHANNEL_SELECT: (e) => this.handleVoiceChannelSelect(e),
                 GUILD_MEMBER_UPDATE: (e) => this.handleGuildMemberUpdate(e),
                 LOGOUT: () => this.handleLogout()
             }),
-            E(this, 'handlePostConnectionOpen', () => {
-                (0, l.UP)();
+            f(this, 'handlePostConnectionOpen', () => {
+                (0, u.UP)();
             }),
-            E(this, 'handleVoiceChannelSelect', (e) => {
+            f(this, 'handleVoiceChannelSelect', (e) => {
                 let { channelId: t, guildId: n } = e,
-                    { enableHangStatus: r, setDefaultStatus: a } = u.n.getCurrentConfig(
+                    { enableHangStatus: r, setDefaultStatus: i } = c.n.getCurrentConfig(
                         {
-                            guildId: null != n ? n : _.lds,
+                            guildId: null != n ? n : E.lds,
                             location: 'HangStatusManager'
                         },
                         { autoTrackExposure: !0 }
@@ -51,37 +51,37 @@ class f extends r.Z {
                 if (!r || t === this.previousVoiceChannelId) return;
                 if (((this.previousVoiceChannelId = t), null == n || null == t)) return;
                 let o = s.Z.getChannel(t);
-                if (null == o || o.type !== _.d4z.GUILD_VOICE || !(0, i.w)(o, !0) || null != c.Z.getCurrentHangStatus()) return;
-                let E = c.Z.getCurrentDefaultStatus();
-                if ((null == E ? void 0 : E.expiresAt) != null && (null == E ? void 0 : E.expiresAt) >= Date.now()) {
-                    if (E.status === _.tNA.CUSTOM && null != E.customHangStatus) {
-                        let { status: e, emoji: t } = E.customHangStatus;
-                        if (null != t && !(0, d.K)(t, o)) return;
-                        (0, l._s)(e, t);
+                if (null == o || o.type !== E.d4z.GUILD_VOICE || !(0, a.w)(o, !0) || null != d.Z.getCurrentHangStatus()) return;
+                let l = d.Z.getCurrentDefaultStatus();
+                if ((null == l ? void 0 : l.expiresAt) != null && (null == l ? void 0 : l.expiresAt) >= Date.now()) {
+                    if (l.status === E.tNA.CUSTOM && null != l.customHangStatus) {
+                        let { status: e, emoji: t } = l.customHangStatus;
+                        if (null != t && !(0, _.K)(t, o)) return;
+                        (0, u._s)(e, t);
                         return;
                     }
-                    if (null == E.status) return;
+                    if (null == l.status) return;
                     else {
-                        (0, l.Zx)(E.status);
+                        (0, u.Zx)(l.status);
                         return;
                     }
                 }
-                a && (0, l.Zx)(_.tNA.CHILLING);
+                i && (0, u.Zx)(E.tNA.CHILLING);
             }),
-            E(this, 'handleGuildMemberUpdate', (e) => {
+            f(this, 'handleGuildMemberUpdate', (e) => {
                 let { user: t, guildId: n } = e;
-                if (t.id !== a.default.getId()) return;
-                let r = o.Z.getCurrentClientVoiceChannelId(n);
-                if (null == r || null == c.Z.getCurrentHangStatus()) return;
-                let u = s.Z.getChannel(r);
-                !(0, i.w)(u, !0) && (0, l.Sc)();
+                if (t.id !== o.default.getId()) return;
+                let r = l.Z.getCurrentClientVoiceChannelId(n);
+                if (null == r || null == d.Z.getCurrentHangStatus()) return;
+                let i = s.Z.getChannel(r);
+                !(0, a.w)(i, !0) && (0, u.Sc)();
             }),
-            E(this, 'handleDisconnectFromVoiceChannel', () => {
-                (0, l.Sc)();
+            f(this, 'handleDisconnectFromVoiceChannel', () => {
+                (0, u.Sc)();
             }),
-            E(this, 'handleLogout', () => {
+            f(this, 'handleLogout', () => {
                 this.handleDisconnectFromVoiceChannel();
             });
     }
 }
-t.Z = new f();
+t.Z = new h();

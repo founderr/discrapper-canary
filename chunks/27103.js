@@ -1,68 +1,68 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return h;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
-    r = n(481060),
-    l = n(385499),
-    o = n(739566),
-    c = n(464891),
-    u = n(83561),
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(385499),
+    l = n(739566),
+    u = n(464891),
+    c = n(83561),
     d = n(834129),
     _ = n(674563),
     E = n(689938),
-    I = n(38814);
-function m(e) {
-    let { message: t, compact: n, usernameHook: s } = e,
-        m = (0, o.ZP)(t),
-        T = s(m),
+    f = n(38814);
+function h(e) {
+    let { message: t, compact: n, usernameHook: i } = e,
+        h = (0, l.ZP)(t),
+        p = i(h),
         {
-            avatarSrc: h,
-            eventHandlers: { onMouseEnter: N, onMouseLeave: f }
-        } = (0, u.m)(!0);
-    return (0, i.jsx)('div', {
-        onMouseEnter: N,
-        onMouseLeave: f,
-        children: (0, i.jsx)(d.Z, {
-            className: a()(I.mainContainer, { [I.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(u.S, { src: h }),
-            iconContainerClassName: I.iconContainer,
+            avatarSrc: m,
+            eventHandlers: { onMouseEnter: I, onMouseLeave: T }
+        } = (0, c.m)(!0);
+    return (0, r.jsx)('div', {
+        onMouseEnter: I,
+        onMouseLeave: T,
+        children: (0, r.jsx)(d.Z, {
+            className: a()(f.mainContainer, { [f.compact]: n }),
+            iconNode: n ? null : (0, r.jsx)(c.S, { src: m }),
+            iconContainerClassName: f.iconContainer,
             compact: n,
-            children: (0, i.jsxs)('div', {
-                className: a()(I.content, { [I.compact]: n }),
+            children: (0, r.jsxs)('div', {
+                className: a()(f.content, { [f.compact]: n }),
                 children: [
-                    (0, i.jsx)(c.nD, {
+                    (0, r.jsx)(u.nD, {
                         message: t,
-                        messageClassname: I.spanCorrection,
-                        className: a()(I.usernameContainer, I.spanCorrection, { [I.compact]: n }),
-                        username: (0, i.jsxs)('div', {
-                            className: I.spanCorrection,
+                        messageClassname: f.spanCorrection,
+                        className: a()(f.usernameContainer, f.spanCorrection, { [f.compact]: n }),
+                        username: (0, r.jsxs)('div', {
+                            className: f.spanCorrection,
                             children: [
-                                (0, i.jsx)(r.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
-                                    className: I.username,
+                                    className: f.username,
                                     children: E.Z.Messages.GUILD_AUTOMOD_USERNAME
                                 }),
-                                (0, i.jsx)(l.Z, {
+                                (0, r.jsx)(s.Z, {
                                     type: _.Hb.SYSTEM_DM,
-                                    className: I.systemTag
+                                    className: f.systemTag
                                 })
                             ]
                         }),
                         compact: n,
                         showTimestamp: !0
                     }),
-                    (0, i.jsx)('div', {
-                        className: a()(I.__invalid_messageContent, { [I.compact]: n }),
+                    (0, r.jsx)('div', {
+                        className: a()(f.__invalid_messageContent, { [f.compact]: n }),
                         children: E.Z.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
-                            username: m.nick,
-                            usernameHook: T
+                            username: h.nick,
+                            usernameHook: p
                         })
                     })
                 ]

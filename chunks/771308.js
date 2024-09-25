@@ -13,18 +13,18 @@ var s = n(544891),
     r = n(570140),
     i = n(959776),
     a = n(626135),
-    l = n(723359),
-    o = n(981631);
+    o = n(723359),
+    l = n(981631);
 function c(e, t) {
     return (
         (0, i.Z)(e, t),
-        a.default.track(o.rMx.AGE_GATE_ACTION, {
+        a.default.track(l.rMx.AGE_GATE_ACTION, {
             source: t,
-            action: l.Al.AGE_GATE_SUBMITTED
+            action: o.Al.AGE_GATE_SUBMITTED
         }),
         s.tn
             .patch({
-                url: o.ANM.ME,
+                url: l.ANM.ME,
                 oldFormErrors: !0,
                 body: { date_of_birth: e.format('YYYY-MM-DD') }
             })
@@ -34,24 +34,24 @@ function c(e, t) {
                     type: 'CURRENT_USER_UPDATE',
                     user: n
                 }),
-                    a.default.track(o.rMx.AGE_GATE_ACTION, {
+                    a.default.track(l.rMx.AGE_GATE_ACTION, {
                         source: t,
-                        action: l.Al.AGE_GATE_SUCCESS
+                        action: o.Al.AGE_GATE_SUCCESS
                     });
             })
     );
 }
 function u(e) {
     r.Z.dispatch({ type: 'AGE_GATE_PREVENT_UNDERAGE_REGISTRATION' }),
-        a.default.track(o.rMx.AGE_GATE_ACTION, {
+        a.default.track(l.rMx.AGE_GATE_ACTION, {
             source: e,
-            action: l.Al.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
+            action: o.Al.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
         });
 }
 function d(e) {
     r.Z.dispatch({ type: 'AGE_GATE_LOGOUT_UNDERAGE_NEW_USER' }),
-        a.default.track(o.rMx.AGE_GATE_ACTION, {
+        a.default.track(l.rMx.AGE_GATE_ACTION, {
             source: e,
-            action: l.Al.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
+            action: o.Al.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
         });
 }

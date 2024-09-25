@@ -1,6 +1,6 @@
 t.d(n, {
     $K: function () {
-        return G;
+        return h;
     },
     IG: function () {
         return f;
@@ -32,14 +32,14 @@ var s = t(570140),
     _ = t(592125),
     u = t(430824),
     E = t(823379),
-    m = t(434404),
-    T = t(889369),
+    T = t(434404),
+    m = t(889369),
     O = t(570961),
     S = t(84658),
     D = t(176505),
     A = t(290511),
-    h = t(689938);
-function G(e) {
+    G = t(689938);
+function h(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_STEP',
         step: e
@@ -54,12 +54,12 @@ function L(e) {
 }
 async function g(e, n) {
     let t = i.Z.getEnabled(e),
-        r = Array.from(T.Z.editedDefaultChannelIds).filter((e) => null != _.Z.getChannel(e)),
+        r = Array.from(m.Z.editedDefaultChannelIds).filter((e) => null != _.Z.getChannel(e)),
         [c, d] = (0, o.d9)(e, [...r]);
     if (t && n === A.Un.ONBOARDING_DEFAULT && (d.length < A.md || c.length < A.X)) {
         l.Z.show({
-            title: h.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-            body: h.Z.Messages.DEFAULT_CHANNELS_SAVE_INVALID_DEFAULT_CHANNELS
+            title: G.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
+            body: G.Z.Messages.DEFAULT_CHANNELS_SAVE_INVALID_DEFAULT_CHANNELS
         });
         return;
     }
@@ -69,7 +69,7 @@ async function g(e, n) {
         var I;
         let { fieldName: e, error: n } = null !== (I = new a.Z(t).getAnyErrorMessageAndField()) && void 0 !== I ? I : {};
         l.Z.show({
-            title: h.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
+            title: G.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
             body: [e, n].filter(E.lm).join(': ')
         });
     }
@@ -84,10 +84,10 @@ function f(e, n) {
         s = S.xh.findIndex((e) => e === n);
     if (-1 !== s && s !== S.xh.length - 1) {
         if (!t && S.xh[s + 1] === S.PG.HOME_SETTINGS) {
-            G(S.xh[s + 2]);
+            h(S.xh[s + 2]);
             return;
         }
-        G(S.xh[s + 1]);
+        h(S.xh[s + 1]);
     }
 }
 function x(e, n) {
@@ -95,16 +95,16 @@ function x(e, n) {
         s = S.xh.findIndex((e) => e === n);
     if (-1 !== s && 0 !== s) {
         if (!t && S.xh[s - 1] === S.PG.HOME_SETTINGS) {
-            G(S.xh[s - 2]);
+            h(S.xh[s - 2]);
             return;
         }
-        G(S.xh[s - 1]);
+        h(S.xh[s - 1]);
     }
 }
 async function R(e) {
     let n = u.Z.getGuild(e);
     null != n &&
-        (m.Z.close(),
+        (T.Z.close(),
         (0, I.iD)(n.id, {
             type: N.z.NEW_MEMBER,
             roles: {},

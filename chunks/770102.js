@@ -1,17 +1,17 @@
 n.d(t, {
     $: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(563924);
-function o(e) {
+    o = n(563924);
+function s(e) {
     let { className: t, style: n } = e;
     return (0, r.jsx)('div', {
-        className: a()(s.divider, t),
+        className: a()(o.divider, t),
         style: n
     });
 }

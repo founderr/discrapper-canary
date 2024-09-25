@@ -1,7 +1,7 @@
 var r = n(67867),
-    o = n(96403),
+    i = n(96403),
     a = Date,
-    i = o(a.prototype.getTime);
+    o = i(a.prototype.getTime);
 r(
     {
         target: 'Date',
@@ -9,7 +9,7 @@ r(
     },
     {
         now: function () {
-            return i(new a());
+            return o(new a());
         }
     }
 );

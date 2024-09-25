@@ -15,13 +15,13 @@ var a = t(120356),
     S = t(474936),
     I = t(689938),
     N = t(574587);
-function m(e) {
+function A(e) {
     let { user: s, planId: t, count: a, userPremiumSubscription: r } = e,
         [o, d] = (0, l.Wu)([_.Z], () => [_.Z.get(t), null != r ? _.Z.get(r.planId) : null]);
     if (null == o || E.ZP.getInterval(t).intervalType !== S.rV.MONTH) return null;
     let u = null != d ? d.skuId : null,
         T = o.skuId === u,
-        m = E.ZP.getDisplayName(t);
+        A = E.ZP.getDisplayName(t);
     return (0, n.jsxs)('div', {
         className: N.accountCreditRow,
         children: [
@@ -42,7 +42,7 @@ function m(e) {
                 children: [
                     (0, n.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
-                        children: I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT.format({ planName: m })
+                        children: I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT.format({ planName: A })
                     }),
                     s.hasFreePremium() || (null != r && r.isPurchasedExternally)
                         ? null
@@ -50,7 +50,7 @@ function m(e) {
                               className: N.rowApplied,
                               variant: 'heading-sm/semibold',
                               color: 'header-secondary',
-                              children: T && null != r ? I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_ON.format({ date: r.currentPeriodEnd }) : I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_MISMATCHED_PLAN.format({ planName: m })
+                              children: T && null != r ? I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_ON.format({ date: r.currentPeriodEnd }) : I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_MISMATCHED_PLAN.format({ planName: A })
                           })
                 ]
             }),
@@ -74,8 +74,8 @@ s.Z = function (e) {
         r = (0, l.e7)([u.ZP], () => u.ZP.getPremiumSubscription()),
         _ = (0, l.e7)([u.ZP], () => null == u.ZP.getPremiumTypeSubscription()),
         E = Object.keys(a).some((e) => e === S.Xh.PREMIUM_MONTH_TIER_1),
-        A = (0, l.e7)([d.default], () => d.default.getCurrentUser());
-    return null == A
+        C = (0, l.e7)([d.default], () => d.default.getCurrentUser());
+    return null == C
         ? null
         : (0, n.jsxs)('div', {
               children: [
@@ -83,12 +83,12 @@ s.Z = function (e) {
                       className: i()(s, N.premiumSubscriptionAccountCredit),
                       children: Object.keys(a).map((e) =>
                           (0, n.jsx)(
-                              m,
+                              A,
                               {
                                   planId: e,
                                   count: a[e].length,
                                   userPremiumSubscription: r,
-                                  user: A
+                                  user: C
                               },
                               e
                           )

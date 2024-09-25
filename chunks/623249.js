@@ -31,14 +31,14 @@ function f(e) {
     let { questId: t, errorHints: n, transitionState: r, onClose: f } = e,
         S = (0, T.B4)(t);
     null == S && f();
-    let [h, M] = (0, a.useState)(n),
+    let [M, h] = (0, a.useState)(n),
         x = (0, T.KX)(),
         b = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         O = (0, m.g2)({
             useReducedMotion: b,
             className: C.colorTransition
         }),
-        P = h.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
+        P = M.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
         v = (0, R.Bz)(S),
         L = (0, o.e7)([u.Z], () => u.Z.getState().theme),
         Z = (0, l.wj)(L) ? g.BRd.DARK : g.BRd.LIGHT,
@@ -53,7 +53,7 @@ function f(e) {
                     });
             },
             afterRequest: (e) => {
-                O.stopAnimation(), M(e);
+                O.stopAnimation(), h(e);
             }
         });
     return (0, s.jsxs)(c.ModalRoot, {

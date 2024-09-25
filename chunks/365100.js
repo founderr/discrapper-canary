@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(49691),
     i = n(285363),
     a = n(977489),
-    s = n(436857);
-function o(e, t) {
+    o = n(436857);
+function s(e, t) {
     var n = (0, r.Z)(e),
-        o = (0, i.Z)(e),
+        s = (0, i.Z)(e),
         l = n.visualViewport,
-        u = o.clientWidth,
-        c = o.clientHeight,
+        u = s.clientWidth,
+        c = s.clientHeight,
         d = 0,
         _ = 0;
     if (l) {
         (u = l.width), (c = l.height);
-        var E = (0, s.Z)();
+        var E = (0, o.Z)();
         (E || (!E && 'fixed' === t)) && ((d = l.offsetLeft), (_ = l.offsetTop));
     }
     return {

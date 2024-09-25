@@ -2,25 +2,25 @@ n.d(t, {
     Z: function () {
         return l;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(470079);
-let s = !1,
-    a = new Set();
-function r(e) {
-    e !== s && ((s = e), a.forEach((e) => e(s)));
+let a = !1,
+    o = new Set();
+function s(e) {
+    e !== a && ((a = e), o.forEach((e) => e(a)));
 }
 function l() {
-    let [e, t] = i.useState(s);
+    let [e, t] = i.useState(a);
     return (
         i.useEffect(() => {
             let e = (e) => {
                 t(e);
             };
             return (
-                a.add(e),
+                o.add(e),
                 () => {
-                    a.delete(e);
+                    o.delete(e);
                 }
             );
         }, []),
@@ -28,14 +28,14 @@ function l() {
     );
 }
 window.addEventListener('keydown', (e) => {
-    r(e.shiftKey);
+    s(e.shiftKey);
 }),
     window.addEventListener('keyup', (e) => {
-        r(e.shiftKey);
+        s(e.shiftKey);
     }),
     window.addEventListener('mousemove', (e) => {
-        r(e.shiftKey);
+        s(e.shiftKey);
     }),
     window.addEventListener('blur', () => {
-        r(!1);
+        s(!1);
     });

@@ -6,10 +6,10 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(561779),
-    s = n(109907);
-let o = (e) => ''.concat(e.toFixed(0), '%'),
+    o = n(109907);
+let s = (e) => ''.concat(e.toFixed(0), '%'),
     l = i.forwardRef(function (e, t) {
-        let { value: n, minValue: l = 0, maxValue: u = 100, onChange: c, renderValue: d = o, 'aria-label': _ } = e,
+        let { value: n, minValue: l = 0, maxValue: u = 100, onChange: c, renderValue: d = s, 'aria-label': _ } = e,
             E = i.useRef(null);
         return (
             i.useImperativeHandle(
@@ -28,12 +28,12 @@ let o = (e) => ''.concat(e.toFixed(0), '%'),
                 []
             ),
             (0, r.jsx)('div', {
-                className: s.sliderContainer,
+                className: o.sliderContainer,
                 children: (0, r.jsx)(a.i, {
                     ref: E,
                     mini: !0,
                     handleSize: 16,
-                    className: s.slider,
+                    className: o.slider,
                     initialValue: n,
                     minValue: l,
                     maxValue: u,

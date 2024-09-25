@@ -1,7 +1,7 @@
-var e = n(821819);
-t.exports = e(function () {
+var r = n(821819);
+e.exports = r(function () {
     if ('function' == typeof ArrayBuffer) {
-        var t = new ArrayBuffer(8);
-        Object.isExtensible(t) && Object.defineProperty(t, 'a', { value: 8 });
+        var e = new ArrayBuffer(8);
+        Object.isExtensible(e) && Object.defineProperty(e, 'a', { value: 8 });
     }
 });

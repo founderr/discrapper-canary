@@ -3,7 +3,7 @@ t.d(n, {
         return I;
     },
     Z: function () {
-        return b;
+        return E;
     }
 }),
     t(47120);
@@ -36,13 +36,13 @@ function I(e) {
         })
     });
 }
-function b(e) {
+function E(e) {
     let { guildId: n } = e,
         [s, o] = a.useState(''),
         I = (0, i.e7)([h.Z], () => h.Z.getGuild(n)),
-        b = (0, i.e7)([u.ZP], () => u.ZP.getChannels(n)),
-        E = (0, i.e7)([d.Z], () => d.Z.getCategories(n)),
-        Z = (0, f.Fo)(n, E, b, s),
+        E = (0, i.e7)([u.ZP], () => u.ZP.getChannels(n)),
+        b = (0, i.e7)([d.Z], () => d.Z.getCategories(n)),
+        Z = (0, f.Fo)(n, b, E, s),
         v = (0, i.e7)([m.Z], () => m.Z.canWithPartialContext(p.Plq.MANAGE_CHANNELS, { guildId: n })),
         T = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(x.oC.CHANNEL_BROWSER)),
         j = a.useCallback(() => o(''), [o]),
@@ -94,7 +94,7 @@ function b(e) {
                   }),
                   (0, l.jsx)(C.Z, {
                       className: N.browser,
-                      channels: b,
+                      channels: E,
                       categories: Z,
                       guild: I,
                       hasSidebar: T

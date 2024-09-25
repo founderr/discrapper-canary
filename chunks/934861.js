@@ -1,9 +1,9 @@
 s.d(n, {
     c: function () {
-        return c;
+        return a;
     },
     v: function () {
-        return a;
+        return c;
     }
 });
 var t = s(735250);
@@ -12,8 +12,8 @@ var i = s(481060),
     o = s(493683),
     l = s(475413),
     r = s(689938);
-function c(e) {
-    let { userId: n, onClose: s, ...c } = e;
+function a(e) {
+    let { userId: n, onClose: s, ...a } = e;
     return (0, t.jsx)(l.tG, {
         action: 'SEND_MESSAGE',
         icon: i.ChatIcon,
@@ -21,11 +21,11 @@ function c(e) {
         onClick: () => {
             o.Z.openPrivateChannel(n), null == s || s();
         },
-        ...c
+        ...a
     });
 }
-function a(e) {
-    let { userId: n, onClose: s, ...c } = e;
+function c(e) {
+    let { userId: n, onClose: s, ...a } = e;
     return (0, t.jsx)(l.ef, {
         action: 'SEND_MESSAGE',
         icon: i.ChatIcon,
@@ -33,6 +33,6 @@ function a(e) {
         onClick: () => {
             o.Z.openPrivateChannel(n), null == s || s();
         },
-        ...c
+        ...a
     });
 }

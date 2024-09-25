@@ -1,20 +1,20 @@
 n.d(t, {
     RO: function () {
-        return d;
+        return _;
     },
     rK: function () {
-        return _;
+        return E;
     }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(913527),
-    a = n.n(i),
+});
+var r = n(47120);
+var i = n(470079),
+    a = n(913527),
+    o = n.n(a),
     s = n(846519),
-    o = n(987170);
-let l = new Date('2024-01-04T07:59:59.000Z'),
-    u = a()(l),
-    c = (0, o.Z)({
+    l = n(987170);
+let u = new Date('2024-01-04T07:59:59.000Z'),
+    c = o()(u),
+    d = (0, l.Z)({
         id: '2023-11_seasonal_gifting',
         label: 'Seasonal Gifting 2023',
         kind: 'user',
@@ -27,7 +27,7 @@ let l = new Date('2024-01-04T07:59:59.000Z'),
             }
         ]
     }),
-    d = (0, o.Z)({
+    _ = (0, l.Z)({
         id: '2023-11_seasonal_gifting_marketing_2023',
         label: 'Seasonal Gifting Marketing 2023',
         kind: 'user',
@@ -40,16 +40,16 @@ let l = new Date('2024-01-04T07:59:59.000Z'),
             }
         ]
     });
-function _() {
-    let [e, t] = r.useState(() => u.isAfter(Date.now()));
+function E() {
+    let [e, t] = i.useState(() => c.isAfter(Date.now()));
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             let n = new s.V7(),
                 r = () => {
-                    let e = Math.min(u.diff(Date.now(), 'millisecond'), 86400000);
+                    let e = Math.min(c.diff(Date.now(), 'millisecond'), 86400000);
                     null == n ||
                         n.start(e, () => {
-                            u.isBefore(Date.now()) ? t(!1) : r();
+                            c.isBefore(Date.now()) ? t(!1) : r();
                         });
                 };
             return e && r(), () => n.stop();
@@ -57,4 +57,4 @@ function _() {
         e
     );
 }
-t.ZP = c;
+t.ZP = d;

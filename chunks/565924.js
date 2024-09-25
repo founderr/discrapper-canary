@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var r = n(592125),
@@ -13,13 +13,13 @@ function a(e) {
         return e.isGuildVocal() ? i + e.position + 500 : i + e.position;
     }
 }
-function s(e, t) {
-    var n, r, i, s, o, l;
+function o(e, t) {
+    var n, r, i, o, s, l;
     if (e.score !== t.score) return t.score - e.score;
     let u = a(e.record),
         c = a(t.record);
     if (u !== c) return u - c;
-    let d = null !== (s = null !== (i = e.sortable) && void 0 !== i ? i : null === (n = e.comparator) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && void 0 !== s ? s : '',
-        _ = null !== (l = null !== (o = e.sortable) && void 0 !== o ? o : null === (r = t.comparator) || void 0 === r ? void 0 : r.toLocaleLowerCase()) && void 0 !== l ? l : '';
+    let d = null !== (o = null !== (i = e.sortable) && void 0 !== i ? i : null === (n = e.comparator) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && void 0 !== o ? o : '',
+        _ = null !== (l = null !== (s = e.sortable) && void 0 !== s ? s : null === (r = t.comparator) || void 0 === r ? void 0 : r.toLocaleLowerCase()) && void 0 !== l ? l : '';
     return d < _ ? -1 : d > _ ? 1 : 0;
 }

@@ -1,107 +1,107 @@
-var a = t(735250),
-    r = t(470079),
-    s = t(120356),
-    o = t.n(s),
-    i = t(442837),
-    l = t(481060),
-    c = t(178762),
-    d = t(91140),
-    u = t(297781),
-    _ = t(592125),
-    E = t(944486),
-    I = t(594174),
-    A = t(5192),
-    p = t(810568),
-    m = t(689938),
-    T = t(501345),
-    O = t(51527);
-n.Z = (e) => {
-    let { entry: n, viewId: t, officialGuildId: s, onClose: R } = e,
-        g = (0, i.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        N = (0, i.e7)([I.default], () => I.default.getUser(n.author_id)),
-        { nick: h, avatar: P } = r.useMemo(() => {
-            let e = null == N ? void 0 : N.getAvatarURL(null == g ? void 0 : g.guild_id, 48, !1);
+var t = n(735250),
+    o = n(470079),
+    i = n(120356),
+    r = n.n(i),
+    l = n(442837),
+    s = n(481060),
+    c = n(178762),
+    d = n(91140),
+    u = n(297781),
+    m = n(592125),
+    p = n(944486),
+    _ = n(594174),
+    g = n(5192),
+    h = n(810568),
+    f = n(689938),
+    x = n(501345),
+    I = n(51527);
+a.Z = (e) => {
+    let { entry: a, viewId: n, officialGuildId: i, onClose: v } = e,
+        E = (0, l.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getChannelId())),
+        A = (0, l.e7)([_.default], () => _.default.getUser(a.author_id)),
+        { nick: M, avatar: P } = o.useMemo(() => {
+            let e = null == A ? void 0 : A.getAvatarURL(null == E ? void 0 : E.guild_id, 48, !1);
             return {
-                nick: A.ZP.getName(null == g ? void 0 : g.guild_id, null == g ? void 0 : g.id, N),
+                nick: g.ZP.getName(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, A),
                 avatar: e
             };
-        }, [N, g]);
-    return null == N
+        }, [A, E]);
+    return null == A
         ? null
-        : (0, a.jsx)(l.Popout, {
+        : (0, t.jsx)(s.Popout, {
               position: 'right',
               renderPopout: (e) => {
-                  let { closePopout: r, updatePosition: o } = e;
-                  return (0, a.jsx)(c.J, {
-                      entry: n,
-                      closePopout: r,
-                      updatePopoutPosition: o,
+                  let { closePopout: o, updatePosition: r } = e;
+                  return (0, t.jsx)(c.J, {
+                      entry: a,
+                      closePopout: o,
+                      updatePopoutPosition: r,
                       onReaction: () => {
-                          (0, p.UE)({
-                              action: p.as.SendMessageUser,
-                              applicationId: n.extra.application_id,
-                              gameName: n.extra.game_name,
-                              recipientUserId: n.author_id,
-                              viewId: t,
-                              officialGuildId: s
+                          (0, h.UE)({
+                              action: h.as.SendMessageUser,
+                              applicationId: a.extra.application_id,
+                              gameName: a.extra.game_name,
+                              recipientUserId: a.author_id,
+                              viewId: n,
+                              officialGuildId: i
                           }),
-                              R(),
-                              r();
+                              v(),
+                              o();
                       },
-                      onUserPopoutClosed: () => r(),
+                      onUserPopoutClosed: () => o(),
                       disableGameProfileLinks: !0
                   });
               },
-              positionKey: 'game-profile-entry-'.concat(n.id),
+              positionKey: 'game-profile-entry-'.concat(a.id),
               onRequestOpen: () => {
-                  (0, p.UE)({
-                      action: p.as.ClickMessageUser,
-                      applicationId: n.extra.application_id,
-                      gameName: n.extra.game_name,
-                      recipientUserId: n.author_id,
-                      viewId: t,
-                      officialGuildId: s
+                  (0, h.UE)({
+                      action: h.as.ClickMessageUser,
+                      applicationId: a.extra.application_id,
+                      gameName: a.extra.game_name,
+                      recipientUserId: a.author_id,
+                      viewId: n,
+                      officialGuildId: i
                   });
               },
               children: (e) =>
-                  (0, a.jsx)(l.Clickable, {
+                  (0, t.jsx)(s.Clickable, {
                       ...e,
-                      className: T.profileEntryCard,
-                      children: (0, a.jsx)(l.FocusRing, {
+                      className: x.profileEntryCard,
+                      children: (0, t.jsx)(s.FocusRing, {
                           offset: {
                               top: 4,
                               bottom: 4,
                               left: 4,
                               right: 4
                           },
-                          children: (0, a.jsxs)(a.Fragment, {
+                          children: (0, t.jsxs)(t.Fragment, {
                               children: [
-                                  (0, a.jsx)('img', {
-                                      className: T.avatar,
+                                  (0, t.jsx)('img', {
+                                      className: x.avatar,
                                       src: P,
-                                      alt: m.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: h })
+                                      alt: f.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: M })
                                   }),
-                                  (0, a.jsx)('div', {
-                                      className: o()(T.playerInfo),
-                                      children: (0, a.jsxs)('div', {
-                                          className: o()(O.column, O.gapXs),
+                                  (0, t.jsx)('div', {
+                                      className: r()(x.playerInfo),
+                                      children: (0, t.jsxs)('div', {
+                                          className: r()(I.column, I.gapXs),
                                           children: [
-                                              (0, a.jsx)(l.Text, {
+                                              (0, t.jsx)(s.Text, {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
-                                                  children: h
+                                                  children: M
                                               }),
-                                              (0, a.jsx)(u.Gk, {
+                                              (0, t.jsx)(u.Gk, {
                                                   location: u.Gt.GAME_PROFILE,
-                                                  children: d.W.map((e, t) => (0, a.jsx)(e, { entry: n }, t))
+                                                  children: d.W.map((e, n) => (0, t.jsx)(e, { entry: a }, n))
                                               })
                                           ]
                                       })
                                   }),
-                                  (0, a.jsx)('div', {
-                                      className: T.reactions,
-                                      children: (0, a.jsx)(l.ArrowAngleLeftUpIcon, {})
+                                  (0, t.jsx)('div', {
+                                      className: x.reactions,
+                                      children: (0, t.jsx)(s.ArrowAngleLeftUpIcon, {})
                                   })
                               ]
                           })

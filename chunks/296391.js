@@ -8,8 +8,8 @@ var t = s(735250),
     o = s(704215),
     l = s(481060),
     r = s(605236),
-    c = s(63063),
-    a = s(369566),
+    a = s(63063),
+    c = s(369566),
     d = s(678738),
     u = s(151545),
     _ = s(527790),
@@ -20,7 +20,7 @@ var t = s(735250),
     x = s(505865);
 function Z(e) {
     let { user: n, currentUser: s, onClose: Z } = e,
-        { live: h, recent: p, stream: v } = (0, a.Z)(n.id),
+        { live: h, recent: p, stream: v } = (0, c.Z)(n.id),
         S = n.id === s.id,
         T = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
@@ -66,7 +66,7 @@ function Z(e) {
                                   (0, t.jsx)(
                                       l.Anchor,
                                       {
-                                          href: c.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
+                                          href: a.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
                                           children: e
                                       },
                                       n

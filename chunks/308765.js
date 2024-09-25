@@ -369,7 +369,7 @@ let i = {
     },
     LeagueOfLegendsLifecycleManager: {
         actions: ['RUNNING_GAMES_CHANGE'],
-        inlineRequire: () => n(15787).Z,
+        inlineRequire: () => n(614571).Z,
         neverLoadBeforeConnectionOpen: !0
     },
     SharedSpacesWarningManager: {

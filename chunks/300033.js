@@ -1,32 +1,32 @@
 n.d(t, {
     R: function () {
-        return l;
+        return u;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(442837),
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(442837),
     s = n(481060),
-    o = n(607070);
-function l(e) {
+    l = n(607070);
+function u(e) {
     let { animationData: t, className: n } = e,
-        [l, u] = (0, i.useState)(0),
-        c = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
+        [r, u] = (0, a.useState)(0),
+        c = (0, o.e7)([l.Z], () => l.Z.useReducedMotion);
     return (
-        (0, i.useEffect)(() => {
-            let e = l + 1;
+        (0, a.useEffect)(() => {
+            let e = r + 1;
             e < t.length && t[e]();
-        }, [l, t]),
-        (0, r.jsx)(s.LottieAnimation, {
-            importData: t[l],
+        }, [r, t]),
+        (0, i.jsx)(s.LottieAnimation, {
+            importData: t[r],
             className: n,
             shouldAnimate: !c,
-            versionKey: l,
+            versionKey: r,
             onComplete: () => {
-                l < t.length - 1 && u(l + 1);
+                r < t.length - 1 && u(r + 1);
             },
-            loop: l === t.length - 1
+            loop: r === t.length - 1
         })
     );
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return O;
     }
 }),
     n(47120);
@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(434404),
     T = n(454585),
     x = n(430824),
-    S = n(496675),
-    v = n(594174),
+    v = n(496675),
+    S = n(594174),
     N = n(700785),
     A = n(51144),
     Z = n(396769),
@@ -34,31 +34,31 @@ var i = n(735250),
     R = n(981631),
     L = n(689938),
     j = n(293081);
-function P(e) {
+function O(e) {
     let { channel: t } = e,
         [n, a] = s.useState(!1),
         r = (0, _.ZP)(t, !0),
-        P = t.guild_id,
-        O = (0, d.e7)([x.Z], () => (null != P ? x.Z.getRoles(P) : void 0)),
-        y = (0, d.e7)([v.default, x.Z], () => {
+        O = t.guild_id,
+        P = (0, d.e7)([x.Z], () => (null != O ? x.Z.getRoles(O) : void 0)),
+        y = (0, d.e7)([S.default, x.Z], () => {
             var e;
-            return v.default.getUser(null === (e = x.Z.getGuild(P)) || void 0 === e ? void 0 : e.ownerId);
+            return S.default.getUser(null === (e = x.Z.getGuild(O)) || void 0 === e ? void 0 : e.ownerId);
         }),
         D = s.useMemo(
             () =>
-                null != P
-                    ? o()(O)
+                null != O
+                    ? o()(P)
                           .sortBy((e) => -e.position)
-                          .filter((e) => !(0, f.pM)(P, e.id))
+                          .filter((e) => !(0, f.pM)(O, e.id))
                           .value()
                     : [],
-            [P, O]
+            [O, P]
         ),
-        U = s.useMemo(
+        k = s.useMemo(
             () =>
                 o()(D)
                     .filter((e) => {
-                        if (null == P) return !1;
+                        if (null == O) return !1;
                         let n = N.I0({
                             forceRoles: { [e.id]: e },
                             context: t
@@ -66,15 +66,15 @@ function P(e) {
                         return c.e$(n, R.Plq.ADMINISTRATOR) || c.e$(n, R.Plq.VIEW_CHANNEL);
                     })
                     .value(),
-            [t, P, D]
+            [t, O, D]
         ),
-        k = (0, d.Wu)(
-            [v.default],
+        U = (0, d.Wu)(
+            [S.default],
             () => {
                 let e = {};
                 for (let n of (null != y && (e[y.id] = y), Object.values(t.permissionOverwrites))) {
                     if (n.type !== p.BN.MEMBER || null != e[n.id]) continue;
-                    let t = v.default.getUser(n.id);
+                    let t = S.default.getUser(n.id);
                     null != t && (e[t.id] = t);
                 }
                 return o()(e)
@@ -93,7 +93,7 @@ function P(e) {
             },
             [t, y]
         ),
-        w = S.Z.can(R.Plq.MANAGE_CHANNELS, t) || S.Z.can(R.Plq.MANAGE_ROLES, t);
+        w = v.Z.can(R.Plq.MANAGE_CHANNELS, t) || v.Z.can(R.Plq.MANAGE_ROLES, t);
     function B() {
         m.ZP.open(t.id);
     }
@@ -139,14 +139,14 @@ function P(e) {
                 className: j.members,
                 children: [
                     (function () {
-                        if (1 !== k.length || U.length > 0)
+                        if (1 !== U.length || k.length > 0)
                             return (0, i.jsx)(b.Z, {
                                 guildId: t.guild_id,
                                 className: j.avatars,
                                 maxUsers: 5,
-                                users: k
+                                users: U
                             });
-                        let e = k[0],
+                        let e = U[0],
                             n = A.ZP.getName(e);
                         return (0, i.jsxs)('div', {
                             className: j.avatars,
@@ -172,7 +172,7 @@ function P(e) {
                             ]
                         });
                     })(),
-                    U.map((e, n) => {
+                    k.map((e, n) => {
                         var s, a;
                         let r = null !== (a = e.colorString) && void 0 !== a ? a : (0, u.Rf)(R.p6O),
                             o = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== void 0;
@@ -180,7 +180,7 @@ function P(e) {
                             ? (0, i.jsx)(
                                   g.Z,
                                   {
-                                      className: l()(j.role, { [j.last]: n === U.length - 1 }),
+                                      className: l()(j.role, { [j.last]: n === k.length - 1 }),
                                       roleName: e.name,
                                       roleColor: r,
                                       disabled: !w,
@@ -194,7 +194,7 @@ function P(e) {
                             : (0, i.jsx)(
                                   C.Z,
                                   {
-                                      className: l()(j.role, { [j.last]: n === U.length - 1 }),
+                                      className: l()(j.role, { [j.last]: n === k.length - 1 }),
                                       roleName: e.name,
                                       roleColor: r,
                                       verified: o

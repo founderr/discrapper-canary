@@ -10,33 +10,33 @@ n.d(t, {
 var r = n(39621),
     i = n(911969),
     a = n(213459),
-    s = n(581364),
-    o = n(807169),
+    o = n(581364),
+    s = n(807169),
     l = n(104793),
     u = n(689938);
 function c(e, t, n) {
     var r, u, c, d;
-    let _ = (0, o.Hs)(t, [i.yU.CHAT]),
+    let _ = (0, s.Hs)(t, [i.yU.CHAT]),
         E = (0, a.PL)(!0, !1),
         f = (0, a.LD)(null == t ? void 0 : t.guild_id, !1),
-        h = (0, s.vC)(null == t ? void 0 : t.guild_id, n);
+        h = (0, o.vC)(null == t ? void 0 : t.guild_id, n);
     if (null == e || h) return !1;
-    let { context: p, userId: I, roleIds: m, isImpersonating: T } = _,
-        S = null === (u = f.result) || void 0 === u ? void 0 : null === (r = u.sections[e.applicationId]) || void 0 === r ? void 0 : r.descriptor;
-    if (void 0 !== S) {
-        let n = (0, l.ZJ)(S.permissions, t, null == t ? void 0 : t.guild_id),
-            r = (0, l.ML)(S.permissions, p.guild_id, I, m, T);
+    let { context: p, userId: m, roleIds: I, isImpersonating: T } = _,
+        g = null === (u = f.result) || void 0 === u ? void 0 : null === (r = u.sections[e.applicationId]) || void 0 === r ? void 0 : r.descriptor;
+    if (void 0 !== g) {
+        let n = (0, l.ZJ)(g.permissions, t, null == t ? void 0 : t.guild_id),
+            r = (0, l.ML)(g.permissions, p.guild_id, m, I, T);
         if (
             (0, l.Ft)(e, _, {
                 applicationAllowedForUser: r,
                 applicationAllowedForChannel: n,
-                commandBotId: S.botId
+                commandBotId: g.botId
             }) === l.mF.ALLOWED
         )
             return !1;
     }
-    let g = null === (d = E.result) || void 0 === d ? void 0 : null === (c = d.sections[e.applicationId]) || void 0 === c ? void 0 : c.commands;
-    return null != g && e.id in g;
+    let S = null === (d = E.result) || void 0 === d ? void 0 : null === (c = d.sections[e.applicationId]) || void 0 === c ? void 0 : c.commands;
+    return null != S && e.id in S;
 }
 function d(e) {
     switch (e) {

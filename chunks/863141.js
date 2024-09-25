@@ -1,5 +1,11 @@
-function r(e) {
-    let { id: t, username: n, discriminator: r, globalName: i, avatar: a, avatarDecoration: s, bot: o, flags: l, premiumType: u } = e;
+n.d(t, {
+    Z: function () {
+        return i;
+    }
+});
+var r = n(789020);
+function i(e) {
+    let { id: t, username: n, discriminator: r, globalName: i, avatar: a, avatarDecoration: o, bot: s, flags: l, premiumType: u } = e;
     return {
         id: t,
         username: n,
@@ -7,20 +13,14 @@ function r(e) {
         global_name: i,
         avatar: a,
         avatar_decoration_data:
-            null != s
+            null != o
                 ? {
-                      asset: s.asset,
-                      sku_id: s.skuId
+                      asset: o.asset,
+                      sku_id: o.skuId
                   }
                 : null,
-        bot: o,
+        bot: s,
         flags: l,
         premium_type: null != u ? u : 0
     };
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    n(789020);

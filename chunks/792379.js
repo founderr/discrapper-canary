@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return O;
     }
 });
 var i = n(735250),
@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(867176),
     T = n(280885),
     x = n(900927),
-    S = n(678738),
-    v = n(502762),
+    v = n(678738),
+    S = n(502762),
     N = n(530),
     A = n(679332),
     Z = n(544989),
@@ -33,34 +33,34 @@ var i = n(735250),
     R = n(689938),
     L = n(337319),
     j = n(299336);
-function P(e) {
+function O(e) {
     let { user: t, channel: n } = e,
-        P = __OVERLAY__ || !(0, d.Z)(t.id),
-        O = (0, E.ZP)(t.id),
+        O = __OVERLAY__ || !(0, d.Z)(t.id),
+        P = (0, E.ZP)(t.id),
         y = (0, o.ZP)(),
         { analyticsLocations: D } = (0, u.ZP)(c.Z.PROFILE_PANEL),
-        U = (0, _.ZB)({
+        k = (0, _.ZB)({
             layout: 'SIMPLIFIED_DM_PANEL',
             userId: t.id,
             channelId: n.id
         }),
-        k = s.useRef(null),
-        w = (0, r.Z)(k),
+        U = s.useRef(null),
+        w = (0, r.Z)(U),
         B = (e) => {
             (0, M.openUserProfileModal)({
                 sourceAnalyticsLocations: D,
-                ...U,
+                ...k,
                 ...e
             });
         };
     return (0, i.jsx)(u.Gt, {
         value: D,
         children: (0, i.jsx)(_.Mt, {
-            value: U,
-            children: (0, i.jsxs)(v.Z, {
-                ref: k,
+            value: k,
+            children: (0, i.jsxs)(S.Z, {
+                ref: U,
                 user: t,
-                displayProfile: O,
+                displayProfile: P,
                 profileType: b.y0.PANEL,
                 themeOverride: y,
                 className: L.container,
@@ -76,16 +76,16 @@ function P(e) {
                                 children: [
                                     (0, i.jsx)(I.Z, {
                                         user: t,
-                                        displayProfile: O,
+                                        displayProfile: P,
                                         profileType: b.y0.PANEL,
                                         animateOnHover: !w
                                     }),
                                     (0, i.jsx)(g.Z, {
                                         user: t,
-                                        displayProfile: O,
+                                        displayProfile: P,
                                         channelId: n.id,
                                         profileType: b.y0.PANEL,
-                                        onOpenProfile: P ? void 0 : B
+                                        onOpenProfile: O ? void 0 : B
                                     }),
                                     t.isClyde() && (0, i.jsx)(h.Z, { className: L.headerTag })
                                 ]
@@ -97,27 +97,27 @@ function P(e) {
                                         user: t,
                                         profileType: b.y0.PANEL,
                                         nickname: p.ZP.getName(null, n.id, t),
-                                        pronouns: null == O ? void 0 : O.pronouns,
-                                        onOpenProfile: P ? void 0 : B,
+                                        pronouns: null == P ? void 0 : P.pronouns,
+                                        onOpenProfile: O ? void 0 : B,
                                         tags: (0, i.jsx)(C.Z, {
-                                            displayProfile: O,
+                                            displayProfile: P,
                                             profileType: b.y0.PANEL
                                         })
                                     }),
-                                    (0, i.jsxs)(v.Z.Overlay, {
+                                    (0, i.jsxs)(S.Z.Overlay, {
                                         className: j.overlay,
                                         children: [
-                                            (0, i.jsx)(S.Z, {
+                                            (0, i.jsx)(v.Z, {
                                                 heading: R.Z.Messages.USER_POPOUT_ABOUT_ME,
                                                 headingColor: 'header-primary',
                                                 children: (0, i.jsx)(T.Z, {
-                                                    userBio: null == O ? void 0 : O.bio,
+                                                    userBio: null == P ? void 0 : P.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
                                                     isHovering: w
                                                 })
                                             }),
-                                            (0, i.jsx)(S.Z, {
+                                            (0, i.jsx)(v.Z, {
                                                 heading: R.Z.Messages.BOT_PROFILE_CREATED_ON,
                                                 headingColor: 'header-primary',
                                                 children: (0, i.jsx)(x.Z, { userId: t.id })
@@ -128,7 +128,7 @@ function P(e) {
                             })
                         ]
                     }),
-                    !P &&
+                    !O &&
                         (0, i.jsx)('footer', {
                             className: L.footer,
                             children: (0, i.jsx)(l.Button, {
@@ -141,15 +141,15 @@ function P(e) {
                                         (0, f.pQ)({
                                             action: 'PRESS_VIEW_PROFILE',
                                             analyticsLocations: D,
-                                            ...U
+                                            ...k
                                         });
                                 },
                                 children: R.Z.Messages.VIEW_FULL_PROFILE
                             })
                         }),
-                    (null == O ? void 0 : O.profileEffectId) != null &&
+                    (null == P ? void 0 : P.profileEffectId) != null &&
                         (0, i.jsx)(m.Z, {
-                            profileEffectId: null == O ? void 0 : O.profileEffectId,
+                            profileEffectId: null == P ? void 0 : P.profileEffectId,
                             isHovering: w
                         })
                 ]

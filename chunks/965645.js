@@ -5,9 +5,9 @@ n.d(t, {
 });
 var r = n(735250);
 function i(e) {
-    let { width: t = 24, height: n = 24, boxColor: i, ribbonColor: a, style: s } = e;
+    let { width: t = 24, height: n = 24, boxColor: i, ribbonColor: a, style: o } = e;
     return (0, r.jsxs)('svg', {
-        style: s,
+        style: o,
         width: t,
         height: n,
         viewBox: '0 0 24 24',

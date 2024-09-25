@@ -1,154 +1,154 @@
-let a, i, r;
-t(47120), t(653041);
+let i, r, a;
+n(47120), n(653041);
 var o,
+    d,
+    f,
     c,
     l,
     s,
-    u,
-    d,
-    _ = t(913527),
-    I = t.n(_),
-    f = t(442837),
-    E = t(759174),
-    N = t(570140),
-    T = t(355298),
-    S = t(333984),
-    m = t(131704),
-    h = t(592125),
-    g = t(430824),
-    O = t(306680),
-    p = t(9156),
-    v = t(594174),
-    P = t(709054),
-    C = t(176505);
-((l = o || (o = {})).DEFAULT = 'DEFAULT'), (l.FAVORITE = 'FAVORITE');
-let b = new E.h(
+    u = n(913527),
+    _ = n.n(u),
+    h = n(442837),
+    b = n(759174),
+    p = n(570140),
+    I = n(355298),
+    m = n(333984),
+    E = n(131704),
+    v = n(592125),
+    g = n(430824),
+    A = n(306680),
+    S = n(9156),
+    C = n(594174),
+    F = n(709054),
+    y = n(176505);
+((f = o || (o = {})).DEFAULT = 'DEFAULT'), (f.FAVORITE = 'FAVORITE');
+let R = new b.h(
     (e) => {
-        let { isRequest: n, isFavorite: t } = e;
-        return n ? [] : [t ? 'FAVORITE' : 'DEFAULT'];
+        let { isRequest: t, isFavorite: n } = e;
+        return t ? [] : [n ? 'FAVORITE' : 'DEFAULT'];
     },
     (e) => {
-        let { lastMessageId: n } = e;
-        return -n;
+        let { lastMessageId: t } = e;
+        return -t;
     }
 );
-function U(e) {
-    let n =
+function T(e) {
+    let t =
         arguments.length > 1 && void 0 !== arguments[1]
             ? arguments[1]
             : (function (e) {
-                  var n, t;
-                  let a = null !== (t = null !== (n = O.ZP.lastMessageId(e.id)) && void 0 !== n ? n : e.lastMessageId) && void 0 !== t ? t : e.id,
-                      i = e.isMessageRequestTimestamp;
-                  if (null != i) {
-                      let e = I()(i).valueOf(),
-                          n = P.default.fromTimestamp(e);
-                      return P.default.compare(a, n) > 0 ? a : n;
+                  var t, n;
+                  let i = null !== (n = null !== (t = A.ZP.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
+                      r = e.isMessageRequestTimestamp;
+                  if (null != r) {
+                      let e = _()(r).valueOf(),
+                          t = F.default.fromTimestamp(e);
+                      return F.default.compare(i, t) > 0 ? i : t;
                   }
-                  return a;
+                  return i;
               })(e);
     return {
         channelId: e.id,
-        lastMessageId: n,
+        lastMessageId: t,
         isFavorite: !1,
-        isRequest: T.Z.isMessageRequest(e.id) || S.Z.isSpam(e.id)
+        isRequest: I.Z.isMessageRequest(e.id) || m.Z.isSpam(e.id)
     };
 }
-function M() {
-    b.clear(),
-        Object.values(h.Z.getMutablePrivateChannels()).forEach((e) => {
-            b.set(e.id, U(e));
+function w() {
+    R.clear(),
+        Object.values(v.Z.getMutablePrivateChannels()).forEach((e) => {
+            R.set(e.id, T(e));
         });
 }
-function R() {
-    let e = h.Z.getMutablePrivateChannels();
-    for (let n in e) b.set(n, U(e[n]));
+function L() {
+    let e = v.Z.getMutablePrivateChannels();
+    for (let t in e) R.set(t, T(e[t]));
 }
-let x =
-    ((a = []),
-    (i = []),
+let U =
+    ((i = []),
     (r = []),
+    (a = []),
     () => {
-        let e = b.values('FAVORITE'),
-            n = b.values('DEFAULT');
+        let e = R.values('FAVORITE'),
+            t = R.values('DEFAULT');
         return (
-            (a !== e || i !== n) &&
-                ((r = []),
+            (i !== e || r !== t) &&
+                ((a = []),
                 e.forEach((e) => {
-                    let { channelId: n } = e;
-                    return r.push(n);
+                    let { channelId: t } = e;
+                    return a.push(t);
                 }),
-                (a = e),
-                n.forEach((e) => {
-                    let { channelId: n } = e;
-                    return r.push(n);
+                (i = e),
+                t.forEach((e) => {
+                    let { channelId: t } = e;
+                    return a.push(t);
                 }),
-                (i = n)),
-            r
+                (r = t)),
+            a
         );
     });
-class A extends (c = f.ZP.Store) {
+class N extends (d = h.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, g.Z, v.default, T.Z, p.ZP), this.syncWith([p.ZP, T.Z], M);
+        this.waitFor(v.Z, g.Z, C.default, I.Z, S.ZP), this.syncWith([S.ZP, I.Z], w);
     }
     getPrivateChannelIds() {
-        return x();
+        return U();
     }
     getSortedChannels() {
-        return [b.values('FAVORITE'), b.values('DEFAULT')];
+        return [R.values('FAVORITE'), R.values('DEFAULT')];
     }
     serializeForOverlay() {
         let e = {};
         return (
-            b.values().forEach((n) => {
-                let { channelId: t, lastMessageId: a } = n;
-                e[t] = a;
+            R.values().forEach((t) => {
+                let { channelId: n, lastMessageId: i } = t;
+                e[n] = i;
             }),
             e
         );
     }
 }
-(d = 'PrivateChannelSortStore'),
-    (u = 'displayName') in (s = A)
-        ? Object.defineProperty(s, u, {
-              value: d,
+(s = 'PrivateChannelSortStore'),
+    (l = 'displayName') in (c = N)
+        ? Object.defineProperty(c, l, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[u] = d),
-    (n.Z = new A(N.Z, {
-        CONNECTION_OPEN: M,
-        CONNECTION_OPEN_SUPPLEMENTAL: M,
-        OVERLAY_INITIALIZE: M,
-        CACHE_LOADED: R,
-        CACHE_LOADED_LAZY: R,
+        : (c[l] = s),
+    (t.Z = new N(p.Z, {
+        CONNECTION_OPEN: w,
+        CONNECTION_OPEN_SUPPLEMENTAL: w,
+        OVERLAY_INITIALIZE: w,
+        CACHE_LOADED: L,
+        CACHE_LOADED_LAZY: L,
         CHANNEL_UPDATES: function (e) {
-            let { channels: n } = e;
-            n.forEach((e) => {
-                ((0, m.hv)(e.type) || b.has(e.id)) && b.set(e.id, U(e));
+            let { channels: t } = e;
+            t.forEach((e) => {
+                ((0, E.hv)(e.type) || R.has(e.id)) && R.set(e.id, T(e));
             });
         },
         CHANNEL_CREATE: function (e) {
-            let { channel: n } = e;
-            if (!(0, m.hv)(n.type) || n.id === C.V) return !1;
-            b.set(n.id, U(n));
+            let { channel: t } = e;
+            if (!(0, E.hv)(t.type) || t.id === y.V) return !1;
+            R.set(t.id, T(t));
         },
         CHANNEL_DELETE: function (e) {
-            let { channel: n } = e;
-            return b.delete(n.id);
+            let { channel: t } = e;
+            return R.delete(t.id);
         },
         MESSAGE_CREATE: function (e) {
-            let { channelId: n, message: t } = e;
-            if (!b.has(n)) return !1;
-            let a = h.Z.getChannel(n);
-            return null != a && b.set(n, U(a, t.id));
+            let { channelId: t, message: n } = e;
+            if (!R.has(t)) return !1;
+            let i = v.Z.getChannel(t);
+            return null != i && R.set(t, T(i, n.id));
         },
         GUILD_CREATE: function (e) {
-            let n = e.guild.id;
-            return b.delete(n);
+            let t = e.guild.id;
+            return R.delete(t);
         },
         LOGOUT: function () {
-            b.clear();
+            R.clear();
         }
     }));

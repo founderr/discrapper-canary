@@ -3,10 +3,10 @@ n.d(t, {
         return a;
     }
 });
-var i = n(470079),
-    s = n(192720);
+var r = n(470079),
+    i = n(192720);
 function a() {
-    i.useEffect(() => {
-        (0, s.sE)();
+    r.useEffect(() => {
+        (0, i.sE)();
     }, []);
 }

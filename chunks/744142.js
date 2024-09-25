@@ -6,15 +6,15 @@ i.d(t, {
 var n = i(735250),
     a = i(470079),
     r = i(481060),
-    o = i(768581),
-    s = i(924489),
+    s = i(768581),
+    o = i(924489),
     l = i(950854),
     c = i(491576),
     d = i(169909);
 function u(e) {
     var t, i, u, h, _;
-    let { application: p, className: m, childrenClassName: f, animatesOnHover: g, onClick: C, ...x } = e,
-        I = o.ZP.getApplicationIconURL({
+    let { application: p, className: m, childrenClassName: g, animatesOnHover: C, onClick: x, ...f } = e,
+        I = s.ZP.getApplicationIconURL({
             id: p.id,
             icon: p.icon,
             size: 48
@@ -22,20 +22,20 @@ function u(e) {
         b = (0, c.Z)({ application: p }),
         N = null === (t = p.categories) || void 0 === t ? void 0 : t[0],
         v = (null !== (h = null === (i = p.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== h ? h : 0) > 0 || b.length > 0,
-        A = a.useCallback(() => {
-            C({ mutualGuilds: b });
-        }, [C, b]),
-        E = (0, n.jsx)(s.Z, {
+        E = a.useCallback(() => {
+            x({ mutualGuilds: b });
+        }, [x, b]),
+        A = (0, n.jsx)(o.Z, {
             application: p,
             textVariant: 'text-xs/normal',
             mutualGuilds: b,
             mutualGuildShownMax: 3,
-            guildIconSize: s.x.SMALL,
+            guildIconSize: o.x.SMALL,
             compact: !0
         });
     return (0, n.jsxs)(l.Z, {
         className: m,
-        onClick: A,
+        onClick: E,
         iconSrc: I,
         header: p.name,
         subheader:
@@ -46,12 +46,12 @@ function u(e) {
                 variant: 'text-xs/normal',
                 children: N.name
             }),
-        animatesOnHover: g,
-        ...x,
+        animatesOnHover: C,
+        ...f,
         children: [
-            (null != p.description || null != f) &&
+            (null != p.description || null != g) &&
                 (0, n.jsx)('div', {
-                    className: f,
+                    className: g,
                     children: (0, n.jsx)(r.Text, {
                         className: d.listingDescription,
                         variant: 'text-sm/normal',
@@ -62,7 +62,7 @@ function u(e) {
             v &&
                 (0, n.jsx)('div', {
                     className: d.bottomGuildCountContainer,
-                    children: E
+                    children: A
                 })
         ]
     });

@@ -1,20 +1,20 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return o;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(901461),
+var i = n(901461),
     a = n(815387);
-function r(e) {
-    let { message: t, channel: n, compact: r, disableInteraction: l } = e;
-    return (0, s.Z)(t)
-        ? (0, i.jsx)(a.Z, {
+function o(e) {
+    let { message: t, channel: n, compact: o, disableInteraction: s } = e;
+    return (0, i.Z)(t)
+        ? (0, r.jsx)(a.Z, {
               message: t,
               channel: n,
-              compact: r,
-              disableInteraction: l
+              compact: o,
+              disableInteraction: s
           })
         : null;
 }

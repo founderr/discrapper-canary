@@ -1,19 +1,19 @@
 var r = n(960081),
-    o = Math.floor,
+    i = Math.floor,
     a = function (e, t) {
         var n = e.length,
-            c = o(n / 2);
-        return n < 8 ? i(e, t) : s(e, a(r(e, 0, c), t), a(r(e, c), t), t);
+            l = i(n / 2);
+        return n < 8 ? o(e, t) : s(e, a(r(e, 0, l), t), a(r(e, l), t), t);
     },
-    i = function (e, t) {
-        for (var n, r, o = e.length, a = 1; a < o; ) {
+    o = function (e, t) {
+        for (var n, r, i = e.length, a = 1; a < i; ) {
             for (r = a, n = e[a]; r && t(e[r - 1], n) > 0; ) e[r] = e[--r];
             r !== a++ && (e[r] = n);
         }
         return e;
     },
     s = function (e, t, n, r) {
-        for (var o = t.length, a = n.length, i = 0, s = 0; i < o || s < a; ) e[i + s] = i < o && s < a ? (0 >= r(t[i], n[s]) ? t[i++] : n[s++]) : i < o ? t[i++] : n[s++];
+        for (var i = t.length, a = n.length, o = 0, s = 0; o < i || s < a; ) e[o + s] = o < i && s < a ? (0 >= r(t[o], n[s]) ? t[o++] : n[s++]) : o < i ? t[o++] : n[s++];
         return e;
     };
 e.exports = a;

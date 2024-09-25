@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return M;
     }
 });
 var i = n(735250);
@@ -23,20 +23,20 @@ var l = n(120356),
     I = n(984933),
     E = n(430824),
     N = n(626135),
-    S = n(434479),
-    x = n(981631),
+    x = n(434479),
+    S = n(981631),
     v = n(176505),
-    T = n(629481),
-    Z = n(689938),
+    Z = n(629481),
+    T = n(689938),
     b = n(316512);
 function A(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
         _ = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
-        v = (null == _ ? void 0 : _.hasFeature(x.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
-        A = 'false' === o.K.get(T.tM, 'false'),
-        R = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
-    return (0, i.jsx)(S.m, {
+        v = (null == _ ? void 0 : _.hasFeature(S.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
+        A = 'false' === o.K.get(Z.tM, 'false'),
+        M = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
+    return (0, i.jsx)(x.m, {
         id: 'shop-'.concat(t),
         className: r()(b.previewChannelRow, {
             [b.selected]: n,
@@ -49,16 +49,16 @@ function A(e) {
                 height: 20,
                 className: r()([e, b.shopIcon])
             }),
-        text: Z.Z.Messages.GUILD_SHOP_CHANNEL_LABEL,
+        text: T.Z.Messages.GUILD_SHOP_CHANNEL_LABEL,
         selected: n,
         onClick: l,
         trailing: (0, i.jsxs)('div', {
             className: b.gifSection,
             children: [
-                R
+                M
                     ? (0, i.jsx)(c.TextBadge, {
                           color: c.tokens.unsafe_rawColors.BRAND_260.css,
-                          text: Z.Z.Messages.NEW,
+                          text: T.Z.Messages.NEW,
                           className: b.newBadge
                       })
                     : (0, i.jsx)('img', {
@@ -73,17 +73,17 @@ function A(e) {
                             if (
                                 (e.stopPropagation(),
                                 (0, g.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW),
-                                N.default.track(x.rMx.GUILD_SHOP_PREVIEW_CLICK, {
+                                N.default.track(S.rMx.GUILD_SHOP_PREVIEW_CLICK, {
                                     ...(0, h.hH)(t),
-                                    action_taken: T.mz.DISMISS_CHANNEL_ROW
+                                    action_taken: Z.mz.DISMISS_CHANNEL_ROW
                                 }),
                                 !u || !v)
                             ) {
                                 var n;
-                                (0, C.dL)(x.Z5c.CHANNEL(t, null === (n = I.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
+                                (0, C.dL)(S.Z5c.CHANNEL(t, null === (n = I.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
                             }
                         },
-                        'aria-label': Z.Z.Messages.CLOSE,
+                        'aria-label': T.Z.Messages.CLOSE,
                         children: (0, i.jsx)(c.CircleXIcon, {
                             size: 'xs',
                             color: 'currentColor'
@@ -93,11 +93,11 @@ function A(e) {
         })
     });
 }
-function R(e) {
+function M(e) {
     let { guild: t, selected: l } = e,
         r = (0, _.g)(t, 'guild_shop_channel_row'),
         a = () => {
-            o.K.set(T.tM, 'true'), (0, C.uL)(x.Z5c.CHANNEL(t.id, v.oC.GUILD_SHOP));
+            o.K.set(Z.tM, 'true'), (0, C.uL)(S.Z5c.CHANNEL(t.id, v.oC.GUILD_SHOP));
         };
     return r
         ? (0, i.jsx)(A, {
@@ -105,7 +105,7 @@ function R(e) {
               selected: l,
               handleClick: a
           })
-        : (0, i.jsx)(S.m, {
+        : (0, i.jsx)(x.m, {
               id: 'shop-'.concat(t.id),
               renderIcon: (e) =>
                   (0, i.jsx)(m.Z, {
@@ -113,7 +113,7 @@ function R(e) {
                       height: 20,
                       className: e
                   }),
-              text: Z.Z.Messages.GUILD_SHOP_CHANNEL_LABEL,
+              text: T.Z.Messages.GUILD_SHOP_CHANNEL_LABEL,
               selected: l,
               onClick: a,
               onContextMenu: (e) => {

@@ -11,7 +11,7 @@ var i = n(735250),
     p = n(599293);
 let f = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: r, image: s, type: _, imageStyles: m, imageMarginX: g, imageMarginTop: C, trackingSource: I, undismissable: E, onDismissed: N, onClick: S, cta: x, ctaColor: v, centerText: T, className: Z } = e;
+    let { guild: t, title: n, message: r, image: s, type: _, imageStyles: m, imageMarginX: g, imageMarginTop: C, trackingSource: I, undismissable: E, onDismissed: N, onClick: x, cta: S, ctaColor: v, centerText: Z, className: T } = e;
     l.useEffect(() => {
         f(d.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: _,
@@ -19,9 +19,9 @@ t.Z = function (e) {
         });
     }, [t.id, _]);
     let b = null;
-    'function' == typeof x
-        ? (b = x())
-        : null != x &&
+    'function' == typeof S
+        ? (b = S())
+        : null != S &&
           (b = (0, i.jsx)(o.Button, {
               className: p.button,
               size: o.Button.Sizes.SMALL,
@@ -32,11 +32,11 @@ t.Z = function (e) {
                           guild_id: t.id,
                           notice_type: _
                       }),
-                      null == S || S();
+                      null == x || x();
               },
               fullWidth: !0,
               color: v,
-              children: x
+              children: S
           }));
     let A = null;
     'function' == typeof n
@@ -45,22 +45,22 @@ t.Z = function (e) {
           (A = (0, i.jsx)(o.Text, {
               variant: 'text-md/medium',
               color: 'header-primary',
-              className: a()(p.title, { [p.noImageTitle]: null == s }, { [p.center]: T }),
+              className: a()(p.title, { [p.noImageTitle]: null == s }, { [p.center]: Z }),
               children: n
           }));
-    let R = null;
+    let M = null;
     'function' == typeof r
-        ? (R = r())
+        ? (M = r())
         : null != r &&
-          (R = (0, i.jsx)(o.Text, {
-              className: a()({ [p.center]: T }),
+          (M = (0, i.jsx)(o.Text, {
+              className: a()({ [p.center]: Z }),
               variant: 'text-sm/normal',
               color: 'text-muted',
               children: r
           }));
-    let M = null != g ? ''.concat(g, 'px') : '16px';
+    let R = null != g ? ''.concat(g, 'px') : '16px';
     return (0, i.jsxs)('div', {
-        className: a()(p.container, Z),
+        className: a()(p.container, T),
         children: [
             !0 === E
                 ? null
@@ -81,8 +81,8 @@ t.Z = function (e) {
                     className: p.imageContainer,
                     style: {
                         marginTop: ''.concat(C, 'px'),
-                        marginLeft: M,
-                        marginRight: M
+                        marginLeft: R,
+                        marginRight: R
                     },
                     children: (0, i.jsx)('img', {
                         className: p.image,
@@ -93,7 +93,7 @@ t.Z = function (e) {
                 }),
             (0, i.jsxs)('div', {
                 className: p.message,
-                children: [A, R, b]
+                children: [A, M, b]
             })
         ]
     });

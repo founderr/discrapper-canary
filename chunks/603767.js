@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return o;
     }
-}),
-    n(47120);
-var r = n(526629);
-function i(e, t, n) {
+});
+var r = n(47120);
+var i = n(526629);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,28 +18,28 @@ function i(e, t, n) {
         e
     );
 }
-class a extends r.FrameLoop {
+class o extends i.FrameLoop {
     setRAF(e, t) {
         0 !== this.id && (this._cancelAnimationFrame(this.id), (this.id = 0)), (this._requestAnimationFrame = e), (this._cancelAnimationFrame = t), this.loop();
     }
     constructor(...e) {
         super(...e),
-            i(this, '_requestAnimationFrame', (e) => requestAnimationFrame(e)),
-            i(this, '_cancelAnimationFrame', (e) => cancelAnimationFrame(e)),
-            i(this, 'writing', !1),
-            i(this, 'id', 0),
-            i(this, 'lastTime', 0),
-            i(this, 'animations', []),
-            i(this, 'priority', 0),
-            i(this, 'startQueue', new Set()),
-            i(this, 'frameQueue', new Set()),
-            i(this, 'writeQueue', new Set()),
-            i(this, 'timeoutQueue', []),
-            i(this, 'addAnimation', (e) => {
+            a(this, '_requestAnimationFrame', (e) => requestAnimationFrame(e)),
+            a(this, '_cancelAnimationFrame', (e) => cancelAnimationFrame(e)),
+            a(this, 'writing', !1),
+            a(this, 'id', 0),
+            a(this, 'lastTime', 0),
+            a(this, 'animations', []),
+            a(this, 'priority', 0),
+            a(this, 'startQueue', new Set()),
+            a(this, 'frameQueue', new Set()),
+            a(this, 'writeQueue', new Set()),
+            a(this, 'timeoutQueue', []),
+            a(this, 'addAnimation', (e) => {
                 let t = this.animations.indexOf(e);
                 t < 0 && ((t = this.animations.findIndex((t) => t.priority > e.priority)), this.animations.splice(0 != ~t ? t : this.animations.length, 0, e));
             }),
-            i(this, 'loop', () => {
+            a(this, 'loop', () => {
                 if (0 !== this.lastTime)
                     try {
                         this.advance();
@@ -49,15 +49,15 @@ class a extends r.FrameLoop {
                         this.animations.length > 0 || this.startQueue.size > 0 || this.frameQueue.size > 0 || this.writeQueue.size > 0 || this.timeoutQueue.length > 0 ? (this.id = this._requestAnimationFrame(this.loop)) : ((this.lastTime = 0), (this.id = 0));
                     }
             }),
-            i(this, 'startLoop', () => {
-                if (!(this.lastTime > 0)) (this.lastTime = r.Globals.now()), (this.id = this._requestAnimationFrame(this.loop));
+            a(this, 'startLoop', () => {
+                if (!(this.lastTime > 0)) (this.lastTime = i.Globals.now()), (this.id = this._requestAnimationFrame(this.loop));
             }),
-            i(this, 'advance', () => {
-                let e = r.Globals.now();
+            a(this, 'advance', () => {
+                let e = i.Globals.now();
                 if (
                     (this.startQueue.size > 0 && (this.startQueue.forEach(this.addAnimation), this.startQueue.clear()),
                     this.timeoutQueue.length > 0 &&
-                        r.Globals.batchedUpdates(() => {
+                        i.Globals.batchedUpdates(() => {
                             let t = s(this.timeoutQueue, (t) => t.time > e);
                             this.timeoutQueue.splice(0, t).forEach((e) => e.handler());
                         }),
@@ -65,32 +65,32 @@ class a extends r.FrameLoop {
                 ) {
                     let t = Math.min(64, e - this.lastTime);
                     (this.lastTime = e),
-                        r.Globals.batchedUpdates(() => {
-                            this.animations.length > 0 && (r.Globals.willAdvance(this.animations), (this.animations = this.animations.filter((e) => ((this.priority = e.priority), !e.idle && e.advance(t), !e.idle))), (this.priority = 0)), this.frameQueue.size > 0 && (this.frameQueue.forEach((t) => t(e)), this.frameQueue.clear()), this.writeQueue.size > 0 && ((this.writing = !0), this.writeQueue.forEach((t) => t(e)), this.writeQueue.clear(), (this.writing = !1));
+                        i.Globals.batchedUpdates(() => {
+                            this.animations.length > 0 && (i.Globals.willAdvance(this.animations), (this.animations = this.animations.filter((e) => ((this.priority = e.priority), !e.idle && e.advance(t), !e.idle))), (this.priority = 0)), this.frameQueue.size > 0 && (this.frameQueue.forEach((t) => t(e)), this.frameQueue.clear()), this.writeQueue.size > 0 && ((this.writing = !0), this.writeQueue.forEach((t) => t(e)), this.writeQueue.clear(), (this.writing = !1));
                         });
                 }
             }),
-            i(this, 'start', (e) => {
+            a(this, 'start', (e) => {
                 this.priority > e.priority ? this.startQueue.add(e) : (this.addAnimation(e), this.startLoop());
             }),
-            i(this, 'setTimeout', (e, t) => {
-                let n = r.Globals.now() + t,
-                    i = () => {
-                        let e = this.timeoutQueue.findIndex((e) => e.cancel === i);
+            a(this, 'setTimeout', (e, t) => {
+                let n = i.Globals.now() + t,
+                    r = () => {
+                        let e = this.timeoutQueue.findIndex((e) => e.cancel === r);
                         e >= 0 && this.timeoutQueue.splice(e, 1);
                     },
                     a = s(this.timeoutQueue, (e) => e.time > n),
                     o = {
                         time: n,
                         handler: e,
-                        cancel: i
+                        cancel: r
                     };
                 return this.timeoutQueue.splice(a, 0, o), this.startLoop(), o;
             }),
-            i(this, 'onFrame', (e) => {
+            a(this, 'onFrame', (e) => {
                 this.frameQueue.add(e), this.startLoop();
             }),
-            i(this, 'onWrite', (e) => {
+            a(this, 'onWrite', (e) => {
                 this.writing ? e(this.lastTime) : this.writeQueue.add(e);
             });
     }

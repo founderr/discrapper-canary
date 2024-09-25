@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
     a = n(692547),
-    s = n(981729),
-    o = n(481060),
+    o = n(981729),
+    s = n(481060),
     l = n(621853),
     u = n(228168),
     c = n(689938),
@@ -21,11 +21,11 @@ function _(e) {
             return null === (e = l.Z.getUserProfile(t)) || void 0 === e ? void 0 : e.fetchError;
         })
         ? null
-        : (0, r.jsx)(s.DY, {
+        : (0, r.jsx)(o.DY, {
               className: d.container,
               text: c.Z.Messages.USER_PROFILE_LOAD_ERROR,
               delay: u.vB,
-              children: (0, r.jsx)(o.CircleWarningIcon, {
+              children: (0, r.jsx)(s.CircleWarningIcon, {
                   size: 'xs',
                   color: a.Z.colors.STATUS_WARNING.css
               })

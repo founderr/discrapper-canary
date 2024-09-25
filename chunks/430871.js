@@ -1,16 +1,16 @@
 n.d(t, {
     x: function () {
-        return o;
+        return s;
     }
 });
 var r = n(594174),
     i = n(130402),
     a = n(174065),
-    s = n(353842);
-async function o() {
+    o = n(353842);
+async function s() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'unknown';
     if (null == r.default.getCurrentUser()) return;
-    let { isEmojiTextMatchSuggestionsEnabled: t } = s.Z.getCurrentConfig({ location: e });
+    let { isEmojiTextMatchSuggestionsEnabled: t } = o.Z.getCurrentConfig({ location: e });
     if (!t) {
         a.Z.hasPersistedState() && a.Z.clear();
         return;

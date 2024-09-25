@@ -3,22 +3,22 @@ n.d(t, {
         return a;
     },
     ZP: function () {
-        return l;
+        return s;
     },
     r9: function () {
-        return o;
+        return l;
     }
 });
-var i = n(726542),
-    s = n(973616);
+var r = n(726542),
+    i = n(973616);
 let a = 'spotify',
-    r = i.Z.get(a);
-class l extends s.Z {
+    o = r.Z.get(a);
+class s extends i.Z {
     getIconURL(e) {
-        return r.icon.lightPNG;
+        return o.icon.lightPNG;
     }
     constructor() {
-        super({}), (this.id = a), (this.name = r.name);
+        super({}), (this.id = a), (this.name = o.name);
     }
 }
-let o = new l();
+let l = new s();

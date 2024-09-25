@@ -1,8 +1,8 @@
-var r = Math.ceil,
+var t = Math.ceil,
     n = Math.floor;
-t.exports =
+e.exports =
     Math.trunc ||
-    function (t) {
-        var e = +t;
-        return (e > 0 ? n : r)(e);
+    function (e) {
+        var r = +e;
+        return (r > 0 ? n : t)(r);
     };

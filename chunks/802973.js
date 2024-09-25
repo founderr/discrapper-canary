@@ -1,9 +1,9 @@
-t.exports = function (t, r) {
-    return 1 === r
-        ? function (r, n) {
-              return r[t](n);
+e.exports = function (e, t) {
+    return 1 === t
+        ? function (t, n) {
+              return t[e](n);
           }
-        : function (r, n, e) {
-              return r[t](n, e);
+        : function (t, n, r) {
+              return t[e](n, r);
           };
 };

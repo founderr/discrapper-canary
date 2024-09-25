@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(74538),
     T = n(401062),
     x = n(696900),
-    S = n(456631),
-    v = n(963838),
+    v = n(456631),
+    S = n(963838),
     N = n(535879),
     A = n(310892),
     Z = n(12168),
@@ -34,15 +34,15 @@ var i = n(735250),
     R = n(354459),
     L = n(185923),
     j = n(474936),
-    P = n(526761),
-    O = n(689938),
+    O = n(526761),
+    P = n(689938),
     y = n(742831);
 let D = L.Hz.CHAT,
-    U = {
+    k = {
         section: b.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
     },
-    k = [_.ZP.getByName('thumbsup'), _.ZP.getByName('eyes'), _.ZP.getByName('laughing'), _.ZP.getByName('watermelon'), _.ZP.getByName('fork_and_knife'), _.ZP.getByName('yum')].filter(C.lm);
+    U = [_.ZP.getByName('thumbsup'), _.ZP.getByName('eyes'), _.ZP.getByName('laughing'), _.ZP.getByName('watermelon'), _.ZP.getByName('fork_and_knife'), _.ZP.getByName('yum')].filter(C.lm);
 function w(e) {
     var t;
     let { channel: n, closePopout: _, onFocus: C } = e,
@@ -52,7 +52,7 @@ function w(e) {
         H = (0, l.e7)([x.Z], () => x.Z.getState().animationType),
         G = s.useRef(!1),
         V = (0, p.wC)(n.guild_id),
-        F = (0, a.uniqBy)([...V, ...k], 'name')
+        F = (0, a.uniqBy)([...V, ...U], 'name')
             .filter(
                 (e) =>
                     !g.ZP.isEmojiFilteredOrLocked({
@@ -62,9 +62,9 @@ function w(e) {
                     })
             )
             .slice(0, R.e5),
-        W = (null !== (t = S.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name));
+        W = (null !== (t = v.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name));
     W.length > 0 && F.splice(F.length - 1, 1, W[0]);
-    let z = (0, v.Iu)(H),
+    let z = (0, S.Iu)(H),
         Y = (e) => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
@@ -112,37 +112,37 @@ function w(e) {
                 a = L && t === r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
             return (0, i.jsx)(o.Popout, {
                 position: 'left',
-                'aria-label': O.Z.Messages.VOICE_CHANNEL_EFFECTS_MORE,
+                'aria-label': P.Z.Messages.VOICE_CHANNEL_EFFECTS_MORE,
                 shouldShow: a,
                 renderPopout: () =>
                     (0, i.jsx)('div', {
                         onMouseEnter: C,
                         children: (0, i.jsx)(f.ZP, {
                             className: y.reducedMotionTooltip,
-                            header: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
-                            content: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
+                            header: P.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
+                            content: P.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
                             onClick: () => {
-                                u.Z.open(b.oAB.ACCESSIBILITY, null, { scrollPosition: P.rP.REDUCED_MOTION }), _();
+                                u.Z.open(b.oAB.ACCESSIBILITY, null, { scrollPosition: O.rP.REDUCED_MOTION }), _();
                             },
                             markAsDismissed: s,
-                            buttonCTA: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
-                            secondaryButtonCTA: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
+                            buttonCTA: P.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
+                            secondaryButtonCTA: P.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
                             caretPosition: f.DF.RIGHT_CENTER
                         })
                     }),
                 children: () =>
                     (0, i.jsx)(Z.Z, {
-                        title: O.Z.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
+                        title: P.Z.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
                         channel: n,
                         closePopout: _,
                         onSelectEmoji: Y,
                         onSelectDisabledEmoji: K,
                         onFocus: C,
                         onExpandedToggle: q,
-                        analyticsOverride: U,
+                        analyticsOverride: k,
                         emojiSearchProps: {
                             accessory: (0, i.jsx)(N.Z, {
-                                labelText: O.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
+                                labelText: P.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
                                 value: $,
                                 onChange: () => {
                                     if (B)

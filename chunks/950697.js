@@ -47,8 +47,8 @@ class a {
             let a = e[r];
             if (!(0, i.Li)(a)) return !1;
             if (void 0 === a.oneofKind) continue;
-            let s = this.fields.find((e) => e.localName === a.oneofKind);
-            if (!s || !this.field(a[a.oneofKind], s, n, t)) return !1;
+            let o = this.fields.find((e) => e.localName === a.oneofKind);
+            if (!o || !this.field(a[a.oneofKind], o, n, t)) return !1;
         }
         for (let r of this.fields) if (void 0 === r.oneof && !this.field(e[r.localName], r, n, t)) return !1;
         return !0;

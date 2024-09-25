@@ -1,9 +1,9 @@
 n.d(t, {
     Gc: function () {
-        return s;
+        return o;
     },
     ol: function () {
-        return o;
+        return s;
     },
     q3: function () {
         return a;
@@ -16,10 +16,10 @@ let a = i.createContext({
     errorId: void 0,
     error: void 0
 });
-function s() {
+function o() {
     return i.useContext(a);
 }
-function o(e) {
+function s(e) {
     let { children: t, ...n } = e;
     return (0, r.jsx)(a.Provider, {
         value: n,

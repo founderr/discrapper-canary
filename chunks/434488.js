@@ -1,6 +1,6 @@
 n.d(t, {
     h: function () {
-        return v;
+        return S;
     }
 });
 var i = n(735250),
@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(981631),
     T = n(689938),
     x = n(896659),
-    S = n(334732);
-function v(e) {
+    v = n(334732);
+function S(e) {
     let { channel: t, guild: n, width: s, inPopout: a, handleClose: l, userParticipantCount: r } = e;
     return s < 250
         ? (0, i.jsx)(N, {
@@ -127,7 +127,7 @@ function A(e) {
             children: [
                 r > 400
                     ? (0, i.jsx)('img', {
-                          src: S,
+                          src: v,
                           className: x.art,
                           alt: T.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
                       })
@@ -206,16 +206,16 @@ function Z(e) {
         });
     }, []);
     let m = (0, d.Z)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: v } = (0, _.ZP)(p.Z.VC_TILE_ACTIVITY_SUGGESTION);
+        { analyticsLocations: S } = (0, _.ZP)(p.Z.VC_TILE_ACTIVITY_SUGGESTION);
     return (0, i.jsx)(_.Gt, {
-        value: v,
+        value: S,
         children: (0, i.jsxs)(C.Z, {
             className: x.root,
             children: [
                 o > 480
                     ? (0, i.jsx)('img', {
                           className: x.art,
-                          src: S,
+                          src: v,
                           alt: T.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
                       })
                     : null,

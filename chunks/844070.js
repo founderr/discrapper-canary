@@ -9,13 +9,13 @@ n.d(t, {
 var r = n(493683),
     i = n(758059),
     a = n(292556),
-    s = n(703656),
-    o = n(768581),
+    o = n(703656),
+    s = n(768581),
     l = n(981631),
     u = n(689938);
 function c(e, t, n) {
     a.default.showNotification(
-        o.ZP.getUserAvatarURL(e),
+        s.ZP.getUserAvatarURL(e),
         e.username,
         t,
         {},
@@ -33,7 +33,7 @@ function d(e) {
             let { openUserProfileModal: t } = n(171368);
             t({ userId: e.id });
         }
-        (0, s.uL)(l.Z5c.FRIENDS), i.Z.setSection(l.pJs.PENDING);
+        (0, o.uL)(l.Z5c.FRIENDS), i.Z.setSection(l.pJs.PENDING);
     });
 }
 function _(e) {

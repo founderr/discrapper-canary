@@ -3,10 +3,10 @@ t.d(n, {
         return o;
     }
 });
-var i = t(652874),
-    r = t(731965);
-let o = (0, i.Z)((e) => ({
+var r = t(652874),
+    i = t(731965);
+let o = (0, r.Z)((e) => ({
     favoriteAdded: !1,
-    notifyFavoriteAdded: () => (0, r.j)(() => e({ favoriteAdded: !0 })),
-    clearFavoriteAdded: () => (0, r.j)(() => e({ favoriteAdded: !1 }))
+    notifyFavoriteAdded: () => (0, i.j)(() => e({ favoriteAdded: !0 })),
+    clearFavoriteAdded: () => (0, i.j)(() => e({ favoriteAdded: !1 }))
 }));

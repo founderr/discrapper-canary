@@ -6,17 +6,17 @@ n.d(t, {
         return a;
     },
     Wj: function () {
-        return s;
+        return o;
     },
     aQ: function () {
         return i;
     },
     pL: function () {
-        return o;
+        return s;
     }
 });
 let r = 'hello',
     i = 'version',
     a = 'force-resync-version',
-    s = 3,
-    o = 'stable-53';
+    o = 3,
+    s = 'stable-53';

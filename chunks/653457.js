@@ -1,9 +1,9 @@
 var r = n(548828),
-    o = TypeError,
+    i = TypeError,
     a = function (e) {
         var t, n;
         (this.promise = new e(function (e, r) {
-            if (void 0 !== t || void 0 !== n) throw new o('Bad Promise constructor');
+            if (void 0 !== t || void 0 !== n) throw new i('Bad Promise constructor');
             (t = e), (n = r);
         })),
             (this.resolve = r(t)),

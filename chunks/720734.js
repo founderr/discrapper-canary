@@ -48,8 +48,8 @@ var i = n(735250),
     V = n(637906),
     F = n(39370),
     Y = n(19199),
-    z = n(111653),
-    W = n(866483),
+    W = n(111653),
+    z = n(866483),
     K = n(14357),
     q = n(393333),
     Q = n(763296),
@@ -292,7 +292,7 @@ class ex extends a.PureComponent {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
-                                                  renderPopout: () => (0, i.jsx)(W.Z, { markAsDismissed: n }),
+                                                  renderPopout: () => (0, i.jsx)(z.Z, { markAsDismissed: n }),
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE:
@@ -371,7 +371,7 @@ class ex extends a.PureComponent {
                 let { currentUser: t } = this.props;
                 null != t &&
                     (0, m.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('96427'), n.e('88223'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('76540'), n.e('68136'), n.e('87624'), n.e('22646'), n.e('25183'), n.e('5528'), n.e('57674'), n.e('30419'), n.e('18824'), n.e('52619'), n.e('3955'), n.e('25908')]).then(n.bind(n, 923422));
+                        let { default: e } = await Promise.all([n.e('96427'), n.e('88223'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('68136'), n.e('76540'), n.e('87624'), n.e('22646'), n.e('25183'), n.e('5528'), n.e('57674'), n.e('30419'), n.e('18824'), n.e('52619'), n.e('3955'), n.e('25908')]).then(n.bind(n, 923422));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -508,9 +508,9 @@ function eb() {
         D = (0, l.e7)([w.Z], () => null != w.Z.getAwaitingRemoteSessionInfo()),
         j = (0, Y.D)(),
         G = (0, p.u)(),
-        k = (0, z.t)(),
+        k = (0, W.t)(),
         F = em.ZP.canUsePremiumGuildMemberProfile(t),
-        W = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eN.rL,
+        z = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eN.rL,
         K = 'account';
     (0, T.j)({
         location: K + ' auto on',
@@ -550,7 +550,7 @@ function eb() {
             settings: []
         };
     return (
-        !P && (X && $.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), j && (1 === G ? $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), k && $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), F && $.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), W && $.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
+        !P && (X && $.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), j && (1 === G ? $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), k && $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), F && $.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), z && $.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
         (0, i.jsx)(N.Gt, {
             value: J,
             children: (0, i.jsx)(ex, {

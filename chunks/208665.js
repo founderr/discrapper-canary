@@ -11,25 +11,25 @@ var s,
     _ = t(981631),
     u = t(290511);
 let E = !1,
-    m = null,
-    T = [],
+    T = null,
+    m = [],
     O = !1,
     S = [];
 function D() {
     (function () {
-        (E = !1), (m = null), (S = []), (O = !1);
+        (E = !1), (T = null), (S = []), (O = !1);
     })(),
-        null != (m = N.Z.getGuildId()) && N.Z.getSection() === _.pNK.ONBOARDING && ((T = I.Z.getOnboardingPrompts(m)), (O = I.Z.isAdvancedMode(m)));
+        null != (T = N.Z.getGuildId()) && N.Z.getSection() === _.pNK.ONBOARDING && ((m = I.Z.getOnboardingPrompts(T)), (O = I.Z.isAdvancedMode(T)));
 }
 class A extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(N.Z, I.Z);
     }
     hasChanges() {
-        return null != m && !o().isEqual(I.Z.getOnboardingPrompts(m), T);
+        return null != T && !o().isEqual(I.Z.getOnboardingPrompts(T), m);
     }
     get guildId() {
-        return m;
+        return T;
     }
     get submitting() {
         return E;
@@ -38,7 +38,7 @@ class A extends (i = c.ZP.Store) {
         return S;
     }
     get editedOnboardingPrompts() {
-        return T;
+        return m;
     }
     get advancedMode() {
         return O;
@@ -66,7 +66,7 @@ class A extends (i = c.ZP.Store) {
         },
         GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
             let { prompts: n } = e;
-            T = n;
+            m = n;
         },
         GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
             (E = !0), (S = []);

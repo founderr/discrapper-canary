@@ -1,273 +1,273 @@
-t.r(n),
-    t.d(n, {
+n.r(a),
+    n.d(a, {
         default: function () {
-            return ex;
+            return eP;
         }
     }),
-    t(47120),
-    t(315314),
-    t(610138),
-    t(216116),
-    t(78328),
-    t(815648),
-    t(789020),
-    t(653041);
-var i = t(735250),
-    a = t(470079),
-    r = t(120356),
-    o = t.n(r),
-    l = t(525654),
-    s = t.n(l),
-    c = t(302454),
-    d = t.n(c),
-    u = t(873546),
-    _ = t(149765),
-    p = t(468194),
-    m = t(442837),
-    I = t(692547),
-    f = t(477690),
-    h = t(481060),
-    g = t(995648),
-    C = t(445986),
-    v = t(9807),
-    E = t(911969),
-    b = t(330726),
-    x = t(782568),
-    T = t(607070),
-    P = t(581364),
-    S = t(970321),
-    A = t(283836),
-    N = t(220082),
-    R = t(252618),
-    L = t(299206),
-    O = t(241209),
-    y = t(422559),
-    j = t(703656),
-    D = t(280885),
-    M = t(706454),
-    Z = t(314897),
-    B = t(451478),
-    k = t(626135),
-    F = t(768581),
-    w = t(572004),
-    H = t(823379),
-    G = t(900849),
-    U = t(674588),
-    Y = t(264043),
-    W = t(303383),
-    V = t(887706),
-    z = t(738130),
-    K = t(4461),
-    q = t(34674),
-    X = t(576958),
-    J = t(924489),
-    Q = t(125909),
-    $ = t(409425),
-    ee = t(132871),
-    en = t(147890),
-    et = t(491576),
-    ei = t(527564),
-    ea = t(326135),
-    er = t(940064),
-    eo = t(626004),
-    el = t(939893),
-    es = t(430913),
-    ec = t(606183),
-    ed = t(272242),
-    eu = t(981631),
-    e_ = t(558921),
-    ep = t(689938),
-    em = t(613250),
-    eI = t(902294);
-let ef = d().parserFor(el.Z),
-    eh = d().reactFor(d().ruleOutput(el.Z, 'react')),
-    eg = (0, p.Mg)(f.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
-    eC = 'redirect_to_support_server',
-    ev = 'start_application_install',
-    eE = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(eu.Z5c.APPLICATION_DIRECTORY_PROFILE(e)),
-    eb = (e) => {
+    n(47120),
+    n(315314),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(789020),
+    n(653041);
+var i = n(735250),
+    t = n(470079),
+    r = n(120356),
+    l = n.n(r),
+    s = n(525654),
+    o = n.n(s),
+    c = n(302454),
+    d = n.n(c),
+    u = n(873546),
+    _ = n(149765),
+    p = n(468194),
+    m = n(442837),
+    g = n(692547),
+    I = n(477690),
+    h = n(481060),
+    x = n(995648),
+    f = n(445986),
+    C = n(9807),
+    v = n(911969),
+    E = n(330726),
+    P = n(782568),
+    R = n(607070),
+    A = n(581364),
+    b = n(970321),
+    N = n(283836),
+    T = n(220082),
+    j = n(252618),
+    S = n(299206),
+    O = n(241209),
+    L = n(422559),
+    y = n(703656),
+    D = n(280885),
+    M = n(706454),
+    Z = n(314897),
+    k = n(451478),
+    w = n(626135),
+    B = n(768581),
+    G = n(572004),
+    H = n(823379),
+    Y = n(900849),
+    F = n(674588),
+    U = n(264043),
+    W = n(303383),
+    V = n(887706),
+    z = n(738130),
+    K = n(4461),
+    q = n(34674),
+    X = n(576958),
+    J = n(924489),
+    Q = n(125909),
+    $ = n(409425),
+    ee = n(132871),
+    ea = n(147890),
+    en = n(491576),
+    ei = n(527564),
+    et = n(326135),
+    er = n(940064),
+    el = n(626004),
+    es = n(939893),
+    eo = n(430913),
+    ec = n(606183),
+    ed = n(272242),
+    eu = n(981631),
+    e_ = n(558921),
+    ep = n(689938),
+    em = n(613250),
+    eg = n(902294);
+let eI = d().parserFor(es.Z),
+    eh = d().reactFor(d().ruleOutput(es.Z, 'react')),
+    ex = (0, p.Mg)(I.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
+    ef = 'redirect_to_support_server',
+    eC = 'start_application_install',
+    ev = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(eu.Z5c.APPLICATION_DIRECTORY_PROFILE(e)),
+    eE = (e) => {
         if (null == e) return null;
-        let n = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
-        return null != n ? n[1] : null;
+        let a = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
+        return null != a ? a[1] : null;
     };
-function ex(e) {
-    var n, r, l, c;
+function eP(e) {
+    var a, r, s, c;
     let d,
         {
             match: {
-                params: { applicationId: p, section: I = ed.ApplicationDirectoryProfileSections.GENERAL }
+                params: { applicationId: p, section: g = ed.ApplicationDirectoryProfileSections.GENERAL }
             }
         } = e,
-        f = (0, ee.useApplicationDirectoryHistory)((e) => e.guildId),
-        E = (0, V.Z)(),
-        T = (0, m.e7)(
+        I = (0, ee.useApplicationDirectoryHistory)((e) => e.guildId),
+        v = (0, V.Z)(),
+        R = (0, m.e7)(
             [W.Z],
             () =>
                 W.Z.getFetchState({
                     applicationId: p,
-                    guildId: f
+                    guildId: I
                 }) === W.M.FETCHING
         ),
-        N = a.useRef({
+        T = t.useRef({
             applicationId: void 0,
             guildId: void 0
         }),
-        { similarApplications: el, similarLoadId: eb } = (0, m.cj)([W.Z], () => {
+        { similarApplications: es, similarLoadId: eE } = (0, m.cj)([W.Z], () => {
             let e = {
                     applicationId: p,
-                    guildId: f
+                    guildId: I
                 },
-                n = W.Z.getSimilarApplications(e);
+                a = W.Z.getSimilarApplications(e);
             return (
-                null == n ? (n = W.Z.getSimilarApplications(N.current)) : (N.current = e),
+                null == a ? (a = W.Z.getSimilarApplications(T.current)) : (T.current = e),
                 {
-                    similarApplications: null == n ? void 0 : n.applications,
-                    similarLoadId: null == n ? void 0 : n.loadId
+                    similarApplications: null == a ? void 0 : a.applications,
+                    similarLoadId: null == a ? void 0 : a.loadId
                 }
             );
         }),
-        ex = a.useMemo(() => (null == el ? void 0 : el.slice(0, 3)), [el]),
-        eS = (0, m.e7)([Y.Z], () => Y.Z.getApplicationFetchState(p)),
-        [eN, eR] = a.useState(void 0),
-        eL = a.useCallback(
+        eP = t.useMemo(() => (null == es ? void 0 : es.slice(0, 3)), [es]),
+        eb = (0, m.e7)([U.Z], () => U.Z.getApplicationFetchState(p)),
+        [eT, ej] = t.useState(void 0),
+        eS = t.useCallback(
             (e) => {
                 if (null != p) {
                     if (e === ed.ApplicationDirectoryProfileSections.GENERAL) {
-                        (0, en.replaceAppDirectoryURLWith)(eu.Z5c.APPLICATION_DIRECTORY_PROFILE(p));
+                        (0, ea.replaceAppDirectoryURLWith)(eu.Z5c.APPLICATION_DIRECTORY_PROFILE(p));
                         return;
                     }
-                    (0, en.replaceAppDirectoryURLWith)(eu.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(p, e));
+                    (0, ea.replaceAppDirectoryURLWith)(eu.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(p, e));
                 }
             },
             [p]
         ),
-        eO = (0, m.e7)([B.Z], () => B.Z.isFocused()),
-        ey = (0, m.e7)([M.default], () => M.default.locale),
-        ej = a.useRef(p),
-        eD = (0, m.e7)([Y.Z], () => {
-            let e = Y.Z.getApplication(p);
-            return null == e ? (e = Y.Z.getApplication(ej.current)) : (ej.current = p), e;
+        eO = (0, m.e7)([k.Z], () => k.Z.isFocused()),
+        eL = (0, m.e7)([M.default], () => M.default.locale),
+        ey = t.useRef(p),
+        eD = (0, m.e7)([U.Z], () => {
+            let e = U.Z.getApplication(p);
+            return null == e ? (e = U.Z.getApplication(ey.current)) : (ey.current = p), e;
         }),
-        eM = (0, et.Z)({ application: eD }),
+        eM = (0, en.Z)({ application: eD }),
         eZ = (0, m.e7)([Z.default], () => Z.default.getSessionId());
-    (0, R.Tt)({ location: null == eD ? void 0 : eD.name });
-    let eB = a.useCallback(async () => {
+    (0, j.Tt)({ location: null == eD ? void 0 : eD.name });
+    let ek = t.useCallback(async () => {
         try {
             var e;
-            let n = null == eD ? void 0 : null === (e = eD.guild) || void 0 === e ? void 0 : e.id;
-            if (null != n) {
+            let a = null == eD ? void 0 : null === (e = eD.guild) || void 0 === e ? void 0 : e.id;
+            if (null != a) {
                 (null == eD ? void 0 : eD.id) != null &&
-                    k.default.track(eu.rMx.APP_DIRECTORY_SUPPORT_SERVER_JOINED, {
+                    w.default.track(eu.rMx.APP_DIRECTORY_SUPPORT_SERVER_JOINED, {
                         application_id: eD.id,
-                        guild_id: n
+                        guild_id: a
                     });
                 let e = { page: eu.ZY5.APPLICATION_DIRECTORY };
-                await (0, G.Ub)(n, e, { setsHistorySnapshot: !1 });
+                await (0, Y.Ub)(a, e, { setsHistorySnapshot: !1 });
             }
         } catch {}
     }, [eD]);
-    a.useEffect(() => {
+    t.useEffect(() => {
         if (null == eD) return;
         let e = new URL(location.href);
-        if (E && null != eZ && 'true' === e.searchParams.get(eC)) {
-            e.searchParams.delete(eC);
-            let n = e.pathname + e.search;
-            (0, j.dL)(n), eB();
+        if (v && null != eZ && 'true' === e.searchParams.get(ef)) {
+            e.searchParams.delete(ef);
+            let a = e.pathname + e.search;
+            (0, y.dL)(a), ek();
         }
-    }, [E, eB, eZ, eD]);
-    let ek = a.useCallback(() => {
+    }, [v, ek, eZ, eD]);
+    let ew = t.useCallback(() => {
             var e;
-            null != (null == eD ? void 0 : null === (e = eD.guild) || void 0 === e ? void 0 : e.id) && (E ? eB() : (0, q.rf)({ [eC]: 'true' }));
-        }, [eD, E, eB]),
-        eF = a.useCallback(() => {
-            (0, en.replaceAppDirectoryURLWith)(''.concat(eu.Z5c.APPLICATION_DIRECTORY_PROFILE(p)).concat(location.search));
+            null != (null == eD ? void 0 : null === (e = eD.guild) || void 0 === e ? void 0 : e.id) && (v ? ek() : (0, q.rf)({ [ef]: 'true' }));
+        }, [eD, v, ek]),
+        eB = t.useCallback(() => {
+            (0, ea.replaceAppDirectoryURLWith)(''.concat(eu.Z5c.APPLICATION_DIRECTORY_PROFILE(p)).concat(location.search));
         }, [p]);
-    a.useEffect(() => {
-        I === ed.ApplicationDirectoryProfileSections.GENERAL && eF();
-    }, [eF, I]),
-        a.useEffect(() => {
-            null != p && U.i6(p);
+    t.useEffect(() => {
+        g === ed.ApplicationDirectoryProfileSections.GENERAL && eB();
+    }, [eB, g]),
+        t.useEffect(() => {
+            null != p && F.i6(p);
         }, [p]),
-        a.useEffect(() => {
+        t.useEffect(() => {
             if ((null == eD ? void 0 : eD.directory_entry) != null) {
                 let e = eD.directory_entry,
-                    n = null == e ? void 0 : e.popular_application_commands;
-                null != n
-                    ? eR(
-                          n.map((e) =>
-                              (0, P.Z8)({
+                    a = null == e ? void 0 : e.popular_application_commands;
+                null != a
+                    ? ej(
+                          a.map((e) =>
+                              (0, A.Z8)({
                                   rootCommand: e,
                                   command: e,
                                   applicationId: e.application_id
                               })
                           )
                       )
-                    : eR(void 0);
+                    : ej(void 0);
             }
         }, [eD]);
-    let ew = F.ZP.getApplicationIconURL({
-            id: null !== (l = null == eD ? void 0 : eD.id) && void 0 !== l ? l : '-1',
+    let eG = B.ZP.getApplicationIconURL({
+            id: null !== (s = null == eD ? void 0 : eD.id) && void 0 !== s ? s : '-1',
             icon: null == eD ? void 0 : eD.icon,
-            size: eg
+            size: ex
         }),
-        eH = (0, L.Z)({
+        eH = (0, S.Z)({
             id: null !== (c = null == eD ? void 0 : eD.id) && void 0 !== c ? c : '',
             label: ep.Z.Messages.COPY_ID_APPLICATION
         }),
-        { canInstall: eG, install: eU } = (0, K.P)(eD, f),
-        eY = null === (n = (0, ee.getPreviousView)()) || void 0 === n ? void 0 : n.type;
-    a.useEffect(() => {
+        { canInstall: eY, install: eF } = (0, K.P)(eD, I),
+        eU = null === (a = (0, ee.getPreviousView)()) || void 0 === a ? void 0 : a.type;
+    t.useEffect(() => {
         (null == eD ? void 0 : eD.id) != null &&
-            k.default.track(eu.rMx.APP_DIRECTORY_PAGE_VIEWED, {
+            w.default.track(eu.rMx.APP_DIRECTORY_PAGE_VIEWED, {
                 current_page: 'product',
-                previous_page: eY,
+                previous_page: eU,
                 application_id: eD.id,
-                guild_id: f,
+                guild_id: I,
                 shown_mutual_guilds_count: eM.length,
-                profile_section: I,
+                profile_section: g,
                 referrer: document.referrer
             });
-    }, [null == eD ? void 0 : eD.id, f, eM]);
-    let eW = a.useMemo(() => {
+    }, [null == eD ? void 0 : eD.id, I, eM]);
+    let eW = t.useMemo(() => {
             var e;
-            let n = null == eD ? void 0 : null === (e = eD.install_params) || void 0 === e ? void 0 : e.permissions;
-            if (null != n) return y.VY.filter((e) => _.e$(_.vB(n), e));
+            let a = null == eD ? void 0 : null === (e = eD.install_params) || void 0 === e ? void 0 : e.permissions;
+            if (null != a) return L.VY.filter((e) => _.e$(_.vB(a), e));
         }, [null == eD ? void 0 : null === (r = eD.install_params) || void 0 === r ? void 0 : r.permissions]),
-        eV = a.useCallback(
+        eV = t.useCallback(
             (e) => {
-                eL(e),
+                eS(e),
                     (null == eD ? void 0 : eD.id) != null &&
-                        k.default.track(eu.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
+                        w.default.track(eu.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                             application_id: eD.id,
-                            guild_id: f,
+                            guild_id: I,
                             tab_name: e
                         });
             },
-            [null == eD ? void 0 : eD.id, f, eL]
+            [null == eD ? void 0 : eD.id, I, eS]
         ),
-        ez = a.useMemo(() => {
-            var e, n, t;
-            return null !== (t = (null !== (n = null == eD ? void 0 : null === (e = eD.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(eT).filter(H.lm)) && void 0 !== t ? t : [];
+        ez = t.useMemo(() => {
+            var e, a, n;
+            return null !== (n = (null !== (a = null == eD ? void 0 : null === (e = eD.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== a ? a : []).map(eR).filter(H.lm)) && void 0 !== n ? n : [];
         }, [eD]),
-        eK = a.useCallback(
-            (e, n) => {
+        eK = t.useCallback(
+            (e, a) => {
                 if (e.type === eu.s9s.IMG) {
-                    let n = ez.filter((e) => e.type === eu.s9s.IMG),
-                        a = n.findIndex((n) => n === e);
-                    if (a < 0) return;
-                    let r = n.map((e) => ({
-                        src: (0, C.Q)(e.src),
+                    let a = ez.filter((e) => e.type === eu.s9s.IMG),
+                        t = a.findIndex((a) => a === e);
+                    if (t < 0) return;
+                    let r = a.map((e) => ({
+                        src: (0, f.Q)(e.src),
                         width: e.width,
                         height: e.height
                     }));
                     (0, h.openModalLazy)(async () => {
-                        let { default: e } = await t.e('41814').then(t.bind(t, 895023));
-                        return (n) => {
-                            let { ...t } = n;
+                        let { default: e } = await n.e('41814').then(n.bind(n, 895023));
+                        return (a) => {
+                            let { ...n } = a;
                             return (0, i.jsx)(e, {
-                                ...t,
+                                ...n,
                                 items: r,
-                                startingIndex: a,
+                                startingIndex: t,
                                 modalCarouselItemClassName: em.appSlide
                             });
                         };
@@ -276,54 +276,54 @@ function ex(e) {
             },
             [ez]
         ),
-        eq = a.useCallback(
+        eq = t.useCallback(
             (e) => {
                 (null == eD ? void 0 : eD.id) != null &&
-                    k.default.track(eu.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
+                    w.default.track(eu.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                         current_page: 'product',
                         category: e.name,
                         category_id: e.id,
                         application_id: eD.id,
-                        guild_id: f
+                        guild_id: I
                     }),
-                    (0, en.goToCategory)({ categoryId: e.id });
+                    (0, ea.goToCategory)({ categoryId: e.id });
             },
-            [eD, f]
+            [eD, I]
         );
-    a.useEffect(() => {
+    t.useEffect(() => {
         if (null != p)
-            U.T4({
+            F.T4({
                 applicationId: p,
-                guildId: f
+                guildId: I
             });
-    }, [p, f]);
-    let eX = a.useCallback(
+    }, [p, I]);
+    let eX = t.useCallback(
             (e) => {
-                let { application: n, mutualGuilds: t } = e;
+                let { application: a, mutualGuilds: n } = e;
                 (null == eD ? void 0 : eD.id) != null &&
-                    k.default.track(eu.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
+                    w.default.track(eu.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
                         current_page: 'product',
                         application_id: eD.id,
-                        suggested_application_id: n.id,
-                        load_id: eb,
-                        guild_id: f,
-                        shown_mutual_guilds_count: t.length
+                        suggested_application_id: a.id,
+                        load_id: eE,
+                        guild_id: I,
+                        shown_mutual_guilds_count: n.length
                     }),
-                    (0, en.goToApplication)({ applicationId: n.id });
+                    (0, ea.goToApplication)({ applicationId: a.id });
             },
-            [null == eD ? void 0 : eD.id, eb, f]
+            [null == eD ? void 0 : eD.id, eE, I]
         ),
-        eJ = a.useCallback(() => {
+        eJ = t.useCallback(() => {
             null != eD &&
-                (0, x.Z)(
-                    (0, ea.G)({
+                (0, P.Z)(
+                    (0, et.G)({
                         id: eD.id,
                         name: eD.name,
-                        locale: ey
+                        locale: eL
                     })
                 );
-        }, [ey, eD]),
-        eQ = a.useCallback(
+        }, [eL, eD]),
+        eQ = t.useCallback(
             (e) =>
                 (0, i.jsxs)(h.Menu, {
                     navId: 'application-directory-profile',
@@ -344,58 +344,58 @@ function ex(e) {
                 }),
             [eH, eJ]
         ),
-        [e$, e0] = (0, b.Z)(!1, 1000),
-        e1 = a.useCallback(() => {
+        [e$, e0] = (0, E.Z)(!1, 1000),
+        e6 = t.useCallback(() => {
             if (null != eD)
-                k.default.track(eu.rMx.APP_SHARE_BUTTON_CLICKED, {
+                w.default.track(eu.rMx.APP_SHARE_BUTTON_CLICKED, {
                     source: 'product_page',
                     application_id: eD.id,
-                    guild_id: f
+                    guild_id: I
                 }),
-                    (0, w.JG)(eE(eD.id)),
+                    (0, G.JG)(ev(eD.id)),
                     e0(!0);
-        }, [eD, e0, f]);
-    a.useEffect(() => {
+        }, [eD, e0, I]);
+    t.useEffect(() => {
         let e = new URL(location.href);
-        if (E && 'true' === e.searchParams.get(ev)) {
-            e.searchParams.delete(ev);
-            let n = e.pathname + e.search;
-            (0, j.dL)(n), eU('product_page');
+        if (v && 'true' === e.searchParams.get(eC)) {
+            e.searchParams.delete(eC);
+            let a = e.pathname + e.search;
+            (0, y.dL)(a), eF('product_page');
         }
-    }, [E, eU]);
-    let e6 = a.useCallback(() => {
+    }, [v, eF]);
+    let e1 = t.useCallback(() => {
             null != eD &&
-                (E
-                    ? eU('product_page')
-                    : (k.default.track(eu.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+                (v
+                    ? eF('product_page')
+                    : (w.default.track(eu.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
                           application_id: p,
-                          guild_id: f,
+                          guild_id: I,
                           auth_type: null != eD.custom_install_url ? 'custom_url' : 'in_app',
                           source: 'product_page',
                           device_platform: u.tq ? 'mobile_web' : 'desktop_web'
                       }),
-                      (0, q.rf)({ [ev]: 'true' })));
-        }, [eD, E, eU, p, f]),
+                      (0, q.rf)({ [eC]: 'true' })));
+        }, [eD, v, eF, p, I]),
         e8 = (null == eD ? void 0 : eD.id) === e_.g,
-        [e5, e3] = a.useState(!1),
-        [e2, e9] = a.useState(!1),
-        [e4, e7] = a.useState(!0),
-        ne = (e) => {
-            null != e && e3(e.scrollHeight > e.clientHeight);
+        [e5, e2] = t.useState(!1),
+        [e3, e4] = t.useState(!1),
+        [e9, e7] = t.useState(!0),
+        ae = (e) => {
+            null != e && e2(e.scrollHeight > e.clientHeight);
         },
-        nn = null != eW && eW.length > 0,
-        nt = (null == eD ? void 0 : eD.flags) != null,
-        ni = (0, S.R)(null != p ? p : '');
-    a.useEffect(() => {
-        ni && null != p && (0, A.Z)(p);
-    }, [ni, p]);
-    let na = a.useMemo(() => {
+        aa = null != eW && eW.length > 0,
+        an = (null == eD ? void 0 : eD.flags) != null,
+        ai = (0, b.R)(null != p ? p : '');
+    t.useEffect(() => {
+        ai && null != p && (0, N.Z)(p);
+    }, [ai, p]);
+    let at = t.useMemo(() => {
             let e = [],
-                n = !0;
-            switch (I) {
+                a = !0;
+            switch (g) {
                 case ed.ApplicationDirectoryProfileSections.GENERAL: {
-                    var t, a;
-                    let r = null == eD ? void 0 : null === (t = eD.directory_entry) || void 0 === t ? void 0 : t.detailed_description;
+                    var n, t;
+                    let r = null == eD ? void 0 : null === (n = eD.directory_entry) || void 0 === n ? void 0 : n.detailed_description;
                     null != r && r.length > 0
                         ? (e.push(
                               (0, i.jsxs)(i.Fragment, {
@@ -406,31 +406,31 @@ function ex(e) {
                                           children: ep.Z.Messages.APP_DIRECTORY_PROFILE_DESCRIPTION_HEADING
                                       }),
                                       (0, i.jsx)('div', {
-                                          ref: ne,
-                                          className: o()({
-                                              [em.descriptionClamp]: !e2,
-                                              [em.descriptionClampSafari]: !e2 && 'Safari' === s().name
+                                          ref: ae,
+                                          className: l()({
+                                              [em.descriptionClamp]: !e3,
+                                              [em.descriptionClampSafari]: !e3 && 'Safari' === o().name
                                           }),
                                           children: (0, i.jsx)(O.Z, {
                                               className: em.detailedDescription,
-                                              parser: ef,
+                                              parser: eI,
                                               output: eh,
                                               state: { allowLinks: !0 },
                                               children: r
                                           })
                                       }),
-                                      (e5 || e2) &&
-                                          (0, i.jsx)(eP, {
-                                              isViewAll: e2,
+                                      (e5 || e3) &&
+                                          (0, i.jsx)(eA, {
+                                              isViewAll: e3,
                                               onToggle: () => {
-                                                  e9((e) => !e);
+                                                  e4((e) => !e);
                                               }
                                           })
                                   ]
                               })
                           ),
-                          (n = !1))
-                        : (null == eD ? void 0 : null === (a = eD.directory_entry) || void 0 === a ? void 0 : a.short_description) !== void 0
+                          (a = !1))
+                        : (null == eD ? void 0 : null === (t = eD.directory_entry) || void 0 === t ? void 0 : t.short_description) !== void 0
                           ? e.push(
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
@@ -450,8 +450,8 @@ function ex(e) {
                                     userBio: eD.description
                                 })
                             ),
-                        null != eN &&
-                            eN.length > 0 &&
+                        null != eT &&
+                            eT.length > 0 &&
                             (e.push(
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
@@ -462,21 +462,21 @@ function ex(e) {
                                         }),
                                         (0, i.jsx)(er.Z, {
                                             className: em.commandList,
-                                            commands: eN
+                                            commands: eT
                                         })
                                     ]
                                 })
                             ),
-                            (n = !0));
+                            (a = !0));
                     break;
                 }
                 case ed.ApplicationDirectoryProfileSections.IMAGES: {
                     if (0 === ez.length) break;
-                    let n = (0, i.jsxs)(i.Fragment, {
+                    let a = (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)('img', {
                                 className: em.errorImage,
-                                src: eI,
+                                src: eg,
                                 'aria-hidden': !0,
                                 alt: ''
                             }),
@@ -486,17 +486,17 @@ function ex(e) {
                             })
                         ]
                     });
-                    ez.forEach((e, n) => {
+                    ez.forEach((e, a) => {
                         null != eD
                             ? (e.alt = ep.Z.Messages.APP_DIRECTORY_PROFILE_IMAGE_CAROUSEL_ALT.format({
-                                  index: n + 1,
+                                  index: a + 1,
                                   totalImages: ez.length,
                                   name: eD.name
                               }))
                             : (e.alt = ep.Z.Messages.APP_DIRECTORY_PROFILE_IMAGE_DEFAULT_ALT);
                     }),
                         e.push(
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(C.Z, {
                                 className: em.carousel,
                                 themedPagination: !0,
                                 items: ez,
@@ -504,15 +504,15 @@ function ex(e) {
                                 paused: !eO,
                                 videoAutoPlay: !0,
                                 onCurrentItemClick: eK,
-                                errorComponent: n,
+                                errorComponent: a,
                                 onImageLoad: (e) => {
-                                    let { src: n, loadTimeMs: t } = e;
-                                    null != t &&
+                                    let { src: a, loadTimeMs: n } = e;
+                                    null != n &&
                                         null != eD &&
-                                        k.default.track(eu.rMx.APP_DIRECTORY_CAROUSEL_IMAGE_LOADED, {
+                                        w.default.track(eu.rMx.APP_DIRECTORY_CAROUSEL_IMAGE_LOADED, {
                                             application_id: eD.id,
-                                            load_time_ms: t,
-                                            src: n
+                                            load_time_ms: n,
+                                            src: a
                                         });
                                 }
                             })
@@ -520,10 +520,10 @@ function ex(e) {
                     break;
                 }
                 case ed.ApplicationDirectoryProfileSections.STORE:
-                    ni && null != p && e.push((0, i.jsx)(ei.M, { appId: p }));
+                    ai && null != p && e.push((0, i.jsx)(ei.M, { appId: p }));
                     break;
                 case ed.ApplicationDirectoryProfileSections.PRIVACY:
-                    nn &&
+                    aa &&
                         e.push(
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
@@ -532,7 +532,7 @@ function ex(e) {
                                         variant: 'heading-md/semibold',
                                         children: ep.Z.Messages.APP_DIRECTORY_PROFILE_REQUIRED_PERMISSIONS_HEADING
                                     }),
-                                    (0, i.jsx)(g.Z, {
+                                    (0, i.jsx)(x.Z, {
                                         className: em.commandList,
                                         grantedPermissions: eW,
                                         grantedPermissionsHeader: ep.Z.Messages.APP_DIRECTORY_PROFILE_REQUIRED_PERMISSIONS_SUB_HEADING
@@ -540,7 +540,7 @@ function ex(e) {
                                 ]
                             })
                         ),
-                        nt &&
+                        an &&
                             e.push(
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
@@ -549,27 +549,27 @@ function ex(e) {
                                             variant: 'heading-md/semibold',
                                             children: ep.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_HEADING
                                         }),
-                                        (0, i.jsx)(eo.Z, { application: eD })
+                                        (0, i.jsx)(el.Z, { application: eD })
                                     ]
                                 })
                             );
             }
             return (
-                e7(n),
-                0 === e.length && I !== ed.ApplicationDirectoryProfileSections.GENERAL && null != eD && eF(),
-                e.map((e, n) =>
+                e7(a),
+                0 === e.length && g !== ed.ApplicationDirectoryProfileSections.GENERAL && null != eD && eB(),
+                e.map((e, a) =>
                     (0, i.jsx)(
                         'div',
                         {
                             className: em.section,
                             children: e
                         },
-                        n
+                        a
                     )
                 )
             );
-        }, [I, eF, eD, eN, e2, e5, ez, eO, eK, ni, p, nn, nt, eW]),
-        nr = a.useMemo(() => {
+        }, [g, eB, eD, eT, e3, e5, ez, eO, eK, ai, p, aa, an, eW]),
+        ar = t.useMemo(() => {
             let e = [
                 {
                     name: ed.ApplicationDirectoryProfileSections.GENERAL,
@@ -584,13 +584,13 @@ function ex(e) {
                         text: ep.Z.Messages.APP_DIRECTORY_PROFILE_TAB_IMAGES,
                         Icon: h.ImagesIcon
                     }),
-                ni &&
+                ai &&
                     e.push({
                         name: ed.ApplicationDirectoryProfileSections.STORE,
                         text: ep.Z.Messages.APP_DIRECTORY_PROFILE_TAB_STORE,
                         Icon: h.ShopSparkleIcon
                     }),
-                (nn || nt) &&
+                (aa || an) &&
                     e.push({
                         name: ed.ApplicationDirectoryProfileSections.PRIVACY,
                         text: ep.Z.Messages.APP_DIRECTORY_PROFILE_TAB_PRIVACY,
@@ -598,12 +598,12 @@ function ex(e) {
                     }),
                 e
             );
-        }, [ez.length, nn, nt, ni]);
+        }, [ez.length, aa, an, ai]);
     return (
         (d =
             null == eD
-                ? null == eS || eS === Y.M.FETCHING
-                    ? (0, i.jsx)(Q.Z, { loading: eS === Y.M.FETCHING })
+                ? null == eb || eb === U.M.FETCHING
+                    ? (0, i.jsx)(Q.Z, { loading: eb === U.M.FETCHING })
                     : (0, i.jsx)('div', {
                           className: em.__invalid_page,
                           children: (0, i.jsxs)('div', {
@@ -611,7 +611,7 @@ function ex(e) {
                               children: [
                                   (0, i.jsx)('img', {
                                       className: em.emptyImage,
-                                      src: eI,
+                                      src: eg,
                                       alt: ''
                                   }),
                                   (0, i.jsx)(h.Heading, {
@@ -622,11 +622,11 @@ function ex(e) {
                           })
                       })
                 : (0, i.jsxs)(Q.Z, {
-                      loading: eS === Y.M.FETCHING,
+                      loading: eb === U.M.FETCHING,
                       children: [
-                          (0, i.jsx)(eA, {
+                          (0, i.jsx)(eN, {
                               app: eD,
-                              iconSrc: ew
+                              iconSrc: eG
                           }),
                           (0, i.jsxs)('div', {
                               className: em.__invalid_page,
@@ -641,9 +641,9 @@ function ex(e) {
                                                       className: em.headerIcon,
                                                       alt: '',
                                                       'aria-hidden': !0,
-                                                      src: ew,
-                                                      width: eg,
-                                                      height: eg
+                                                      src: eG,
+                                                      width: ex,
+                                                      height: ex
                                                   }),
                                                   (0, i.jsx)(J.Z, {
                                                       application: eD,
@@ -667,7 +667,7 @@ function ex(e) {
                                                                       variant: 'heading-xxl/semibold',
                                                                       children: eD.name
                                                                   }),
-                                                                  ni &&
+                                                                  ai &&
                                                                       (0, i.jsx)(h.Tooltip, {
                                                                           tooltipClassName: em.premiumIconTooltip,
                                                                           text: ep.Z.Messages.APPLICATION_DIRECTORY_PROFILE_TOOLTIP_PREMIUM,
@@ -676,7 +676,7 @@ function ex(e) {
                                                                                   ...e,
                                                                                   alt: ep.Z.Messages.APPLICATION_DIRECTORY_PROFILE_TOOLTIP_PREMIUM,
                                                                                   className: em.premiumIcon,
-                                                                                  src: t(744050)
+                                                                                  src: n(744050)
                                                                               })
                                                                       }),
                                                                   e8 && (0, i.jsx)($.Z, { className: em.partnerBadge })
@@ -686,20 +686,20 @@ function ex(e) {
                                                               className: em.buttons,
                                                               children: [
                                                                   (0, i.jsx)(h.Button, {
-                                                                      onClick: e1,
+                                                                      onClick: e6,
                                                                       color: h.Button.Colors.PRIMARY,
                                                                       children: e$ ? ep.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : ep.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
                                                                   }),
                                                                   (0, i.jsx)(h.Button, {
                                                                       color: h.Button.Colors.BRAND,
-                                                                      onClick: e6,
-                                                                      disabled: !eG,
+                                                                      onClick: e1,
+                                                                      disabled: !eY,
                                                                       children: ep.Z.Messages.APPLICATION_ADD_BUTTON
                                                                   }),
                                                                   (0, i.jsx)(h.Popout, {
                                                                       renderPopout: (e) => {
-                                                                          let { closePopout: n } = e;
-                                                                          return eQ(n);
+                                                                          let { closePopout: a } = e;
+                                                                          return eQ(a);
                                                                       },
                                                                       position: 'left',
                                                                       align: 'top',
@@ -722,9 +722,9 @@ function ex(e) {
                                                       ]
                                                   }),
                                                   (0, i.jsx)(ec.Z, {
-                                                      activeSection: I,
+                                                      activeSection: g,
                                                       setSection: eV,
-                                                      sections: nr
+                                                      sections: ar
                                                   })
                                               ]
                                           })
@@ -736,11 +736,11 @@ function ex(e) {
                                           (0, i.jsxs)('div', {
                                               className: em.content,
                                               children: [
-                                                  na,
-                                                  null != ex && ex.length > 0
+                                                  at,
+                                                  null != eP && eP.length > 0
                                                       ? (0, i.jsxs)(i.Fragment, {
                                                             children: [
-                                                                e4 && (0, i.jsx)('div', { className: em.separator }),
+                                                                e9 && (0, i.jsx)('div', { className: em.separator }),
                                                                 (0, i.jsxs)('div', {
                                                                     className: em.section,
                                                                     children: [
@@ -750,9 +750,9 @@ function ex(e) {
                                                                             children: ep.Z.Messages.APP_DIRECTORY_PROFILE_RELATED_APPS_HEADING
                                                                         }),
                                                                         (0, i.jsx)(Q.Z, {
-                                                                            loading: T,
+                                                                            loading: R,
                                                                             children: (0, i.jsx)(X.Z, {
-                                                                                applications: ex,
+                                                                                applications: eP,
                                                                                 onViewOne: eX
                                                                             })
                                                                         })
@@ -763,12 +763,12 @@ function ex(e) {
                                                       : null
                                               ]
                                           }),
-                                          (0, i.jsx)(es.Z, {
+                                          (0, i.jsx)(eo.Z, {
                                               className: em.sidebar,
                                               application: eD,
-                                              guildId: f,
+                                              guildId: I,
                                               onViewCategory: eq,
-                                              onClickGuildWidget: ek
+                                              onClickGuildWidget: ew
                                           })
                                       ]
                                   })
@@ -779,19 +779,19 @@ function ex(e) {
         (0, i.jsx)(z.Z, { children: d })
     );
 }
-function eT(e) {
+function eR(e) {
     switch (e.type) {
-        case E.ee.MEDIA_PROXY:
-            var n;
-            let t = null !== (n = e.proxy_url) && void 0 !== n ? n : e.url;
+        case v.ee.MEDIA_PROXY:
+            var a;
+            let n = null !== (a = e.proxy_url) && void 0 !== a ? a : e.url;
             return {
                 type: eu.s9s.IMG,
                 width: 0,
                 height: 0,
-                src: t
+                src: n
             };
-        case E.ee.YOUTUBE:
-            let i = eb(e.url);
+        case v.ee.YOUTUBE:
+            let i = eE(e.url);
             if (null != i)
                 return {
                     type: eu.s9s.YOUTUBE_VIDEO,
@@ -800,11 +800,11 @@ function eT(e) {
     }
     return console.warn('Unsupported carousel item', e), null;
 }
-let eP = (e) => {
-        let n,
-            { onToggle: t, isViewAll: a } = e;
+let eA = (e) => {
+        let a,
+            { onToggle: n, isViewAll: t } = e;
         return (
-            (n = a
+            (a = t
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(h.Text, {
@@ -833,31 +833,31 @@ let eP = (e) => {
                           })
                       ]
                   })),
-            (0, i.jsx)(eS, {
+            (0, i.jsx)(eb, {
                 children: (0, i.jsx)(h.Button, {
                     look: h.Button.Looks.BLANK,
                     color: h.Button.Colors.TRANSPARENT,
                     size: h.Button.Sizes.NONE,
                     className: em.showMoreButton,
                     innerClassName: em.showMoreButtonInner,
-                    onClick: t,
-                    children: n
+                    onClick: n,
+                    children: a
                 })
             })
         );
     },
-    eS = (e) => {
-        let { className: n, contentClassName: t, children: a } = e;
+    eb = (e) => {
+        let { className: a, contentClassName: n, children: t } = e;
         return (0, i.jsxs)('div', {
-            className: o()([em.dividerContainer, n]),
+            className: l()([em.dividerContainer, a]),
             children: [
                 (0, i.jsx)('div', { className: em.divider }),
-                null != a
+                null != t
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)('div', {
-                                  className: o()(em.contentDivider, t),
-                                  children: a
+                                  className: l()(em.contentDivider, n),
+                                  children: t
                               }),
                               (0, i.jsx)('div', { className: em.divider })
                           ]
@@ -866,34 +866,34 @@ let eP = (e) => {
             ]
         });
     };
-function eA(e) {
-    let { app: n, iconSrc: t } = e,
-        r = (0, N.ZP)(t, I.Z.unsafe_rawColors.PRIMARY_800.css),
-        { bot: o } = n,
-        l = (0, m.e7)([T.Z], () => T.Z.useReducedMotion),
-        s = a.useMemo(() => {
+function eN(e) {
+    let { app: a, iconSrc: n } = e,
+        r = (0, T.ZP)(n, g.Z.unsafe_rawColors.PRIMARY_800.css),
+        { bot: l } = a,
+        s = (0, m.e7)([R.Z], () => R.Z.useReducedMotion),
+        o = t.useMemo(() => {
             let e = { backgroundColor: r };
-            if (null != o) {
-                let n = (0, F.aN)({
-                    id: o.id,
-                    banner: o.banner,
+            if (null != l) {
+                let a = (0, B.aN)({
+                    id: l.id,
+                    banner: l.banner,
                     size: 1024,
                     canAnimate: !1
                 });
-                if ((null != n && ((e['--custom-background-static'] = 'url('.concat(n)), (e.height = '212px')), !l)) {
-                    let n = (0, F.aN)({
-                        id: o.id,
-                        banner: o.banner,
+                if ((null != a && ((e['--custom-background-static'] = 'url('.concat(a)), (e.height = '212px')), !s)) {
+                    let a = (0, B.aN)({
+                        id: l.id,
+                        banner: l.banner,
                         size: 1024,
                         canAnimate: !0
                     });
-                    null != n && (e['--custom-background-animated'] = 'url('.concat(n));
+                    null != a && (e['--custom-background-animated'] = 'url('.concat(a));
                 }
             }
             return e;
-        }, [r, o, l]);
+        }, [r, l, s]);
     return (0, i.jsx)('div', {
-        style: s,
+        style: o,
         className: em.headerBanner
     });
 }

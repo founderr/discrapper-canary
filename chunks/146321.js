@@ -1,11 +1,11 @@
-var e = n(294377),
-    o = n(802973),
-    i = e('Map');
-t.exports = {
-    Map: i,
-    set: o('set', 2),
-    get: o('get', 1),
-    has: o('has', 1),
-    remove: o('delete', 1),
-    proto: i.prototype
+var r = n(294377),
+    i = n(802973),
+    a = r('Map');
+e.exports = {
+    Map: a,
+    set: i('set', 2),
+    get: i('get', 1),
+    has: i('has', 1),
+    remove: i('delete', 1),
+    proto: a.prototype
 };

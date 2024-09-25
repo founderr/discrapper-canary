@@ -1,72 +1,72 @@
-var i,
-    s = n(442837),
-    a = n(570140);
-function r(e, t, n) {
+var c,
+    i = t(442837),
+    a = t(570140);
+function o(e, n, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = t),
         e
     );
 }
-let l = {
+let r = {
         speechRate: 1,
         currentMessage: null
     },
-    o = l;
-class c extends (i = s.ZP.DeviceSettingsStore) {
+    s = r;
+class u extends (c = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        o = {
-            ...l,
+        s = {
+            ...r,
             ...(null != e ? e : null)
         };
     }
-    isSpeakingMessage(e, t) {
-        let { currentMessage: n } = o;
-        return null !== n && n.channelId === e && n.messageId === t;
+    isSpeakingMessage(e, n) {
+        let { currentMessage: t } = s;
+        return null !== t && t.channelId === e && t.messageId === n;
     }
     get currentMessage() {
-        return o.currentMessage;
+        return s.currentMessage;
     }
     get speechRate() {
-        return o.speechRate;
+        return s.speechRate;
     }
     getUserAgnosticState() {
-        return o;
+        return s;
     }
 }
-r(c, 'displayName', 'TTSStore'),
-    r(c, 'persistKey', 'TTSStore'),
-    r(c, 'migrations', []),
-    (t.Z = new c(
+o(u, 'displayName', 'TTSStore'),
+    o(u, 'persistKey', 'TTSStore'),
+    o(u, 'migrations', []),
+    (n.Z = new u(
         a.Z,
         __OVERLAY__
             ? {}
             : {
                   SPEAKING_MESSAGE: function (e) {
-                      let { messageId: t, channelId: n } = e;
-                      o = {
-                          ...o,
+                      let { messageId: n, channelId: t } = e;
+                      s = {
+                          ...s,
                           currentMessage: {
-                              messageId: t,
-                              channelId: n
+                              messageId: n,
+                              channelId: t
                           }
                       };
                   },
                   STOP_SPEAKING: function () {
-                      o = {
-                          ...o,
+                      s = {
+                          ...s,
                           currentMessage: null
                       };
                   },
                   SET_TTS_SPEECH_RATE: function (e) {
-                      o = {
-                          ...o,
+                      s = {
+                          ...s,
                           speechRate: e.speechRate
                       };
                   }

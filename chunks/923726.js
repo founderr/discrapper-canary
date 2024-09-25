@@ -12,10 +12,10 @@ n.d(t, {
         return c;
     },
     kT: function () {
-        return s;
+        return o;
     },
     s1: function () {
-        return o;
+        return s;
     },
     ss: function () {
         return d;
@@ -41,7 +41,7 @@ function a(e) {
         { enableRoleSubscriptionsForUser: n } = r.Zo.useExperiment({ location: '504714_2' }, { autoTrackExposure: !1 });
     return null != e && t && n;
 }
-function s(e) {
+function o(e) {
     let { enableRoleSubscriptionsForGuild: t } = r.Xv.getCurrentConfig({
             guildId: null != e ? e : i.lds,
             location: '504714_3'
@@ -49,7 +49,7 @@ function s(e) {
         { enableRoleSubscriptionsForUser: n } = r.Zo.getCurrentConfig({ location: '504714_4' }, { autoTrackExposure: !1 });
     return null != e && t && n;
 }
-function o(e) {
+function s(e) {
     return r.ai.useExperiment({
         guildId: null != e ? e : i.lds,
         location: '504714_7'

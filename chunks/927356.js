@@ -1,36 +1,36 @@
-n.d(t, {
+i.d(t, {
     Z: function () {
         return u;
     }
 });
-var a = n(735250),
-    i = n(470079),
-    l = n(120356),
-    r = n.n(l),
-    s = n(481060),
-    c = n(689938),
-    o = n(202371),
-    d = n(902294);
+var n = i(735250),
+    a = i(470079),
+    r = i(120356),
+    s = i.n(r),
+    o = i(481060),
+    l = i(689938),
+    c = i(202371),
+    d = i(902294);
 function u(e) {
-    let { heading: t = c.Z.Messages.APP_DIRECTORY_ERROR_HEADING, body: n = c.Z.Messages.APP_DIRECTORY_ERROR_BODY, className: l } = e;
-    return (0, a.jsxs)('div', {
-        className: r()(o.container, l),
+    let { heading: t = l.Z.Messages.APP_DIRECTORY_ERROR_HEADING, body: i = l.Z.Messages.APP_DIRECTORY_ERROR_BODY, className: r } = e;
+    return (0, n.jsxs)('div', {
+        className: s()(c.container, r),
         children: [
-            (0, a.jsx)('img', {
-                className: o.image,
+            (0, n.jsx)('img', {
+                className: c.image,
                 src: d,
-                alt: c.Z.Messages.APP_DIRECTORY_CONFUSED_CLYDE_IMAGE_ALT
+                alt: l.Z.Messages.APP_DIRECTORY_CONFUSED_CLYDE_IMAGE_ALT
             }),
-            (0, a.jsxs)(i.Fragment, {
+            (0, n.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsx)(s.Heading, {
-                        className: o.header,
+                    (0, n.jsx)(o.Heading, {
+                        className: c.header,
                         variant: 'heading-xl/semibold',
                         children: t
                     }),
-                    (0, a.jsx)(s.Text, {
+                    (0, n.jsx)(o.Text, {
                         variant: 'text-md/normal',
-                        children: n
+                        children: i
                     })
                 ]
             })

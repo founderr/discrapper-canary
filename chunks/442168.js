@@ -33,8 +33,8 @@ function C(e) {
         I = (0, s.useRef)(null),
         T = d.n.getState().clipsButtonRef,
         x = (0, h.V9)(t),
-        S = (0, l.e7)([c.Z], () => c.Z.getActiveAnimation()),
-        v = (0, l.Wu)([c.Z], () => c.Z.getStreamClipAnimations(x)),
+        v = (0, l.e7)([c.Z], () => c.Z.getActiveAnimation()),
+        S = (0, l.Wu)([c.Z], () => c.Z.getStreamClipAnimations(x)),
         N = (0, s.useRef)();
     s.useEffect(
         () => () => {
@@ -56,7 +56,7 @@ function C(e) {
         },
         Z = (e) => {
             let t = null == T ? void 0 : T.getBoundingClientRect();
-            if (((N.current = t), e.timestamp !== S || null == t || n)) return _;
+            if (((N.current = t), e.timestamp !== v || null == t || n)) return _;
             let { top: i, left: s } = t;
             return {
                 top: i + 36,
@@ -67,7 +67,7 @@ function C(e) {
         },
         M = (0, s.useRef)(null),
         b = (0, o.useTransition)(
-            v,
+            S,
             {
                 keys: (e) => e.timestamp,
                 ref: M,
@@ -79,7 +79,7 @@ function C(e) {
         ),
         R = (0, s.useRef)(null),
         L = (0, o.useTransition)(
-            v,
+            S,
             {
                 ref: R,
                 keys: (e) => e.timestamp,
@@ -112,7 +112,7 @@ function C(e) {
                 },
                 config: C.enabled ? g : E,
                 onRest: (e, t) => {
-                    null != t.item && null != v.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(x, t.item.timestamp);
+                    null != t.item && null != S.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(x, t.item.timestamp);
                 }
             },
             'animate-always'

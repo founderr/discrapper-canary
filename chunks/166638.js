@@ -1,3 +1,3 @@
 n(831296);
-var e = n(387992);
-t.exports = e('Array', 'push');
+var r = n(387992);
+e.exports = r('Array', 'push');

@@ -10,7 +10,7 @@ function i(e, t, n, r, i) {
 function a(e, t, n, r) {
     (this.id = e), (this.offset = t), (this.numberFormat = n), (this.string = r);
 }
-function s(e, t) {
+function o(e, t) {
     (this.id = e), (this.options = t);
 }
 (t.default = n),
@@ -45,7 +45,7 @@ function s(e, t) {
         if (!t) return new r(e.id);
         var n,
             a = this.formats,
-            o = this.locales,
+            s = this.locales,
             l = this.pluralFn;
         switch (t.type) {
             case 'numberFormat':
@@ -53,7 +53,7 @@ function s(e, t) {
                     (n = a.number[t.style]),
                     {
                         id: e.id,
-                        format: new Intl.NumberFormat(o, n).format
+                        format: new Intl.NumberFormat(s, n).format
                     }
                 );
             case 'dateFormat':
@@ -61,7 +61,7 @@ function s(e, t) {
                     (n = a.date[t.style]),
                     {
                         id: e.id,
-                        format: new Intl.DateTimeFormat(o, n).format
+                        format: new Intl.DateTimeFormat(s, n).format
                     }
                 );
             case 'timeFormat':
@@ -69,13 +69,13 @@ function s(e, t) {
                     (n = a.time[t.style]),
                     {
                         id: e.id,
-                        format: new Intl.DateTimeFormat(o, n).format
+                        format: new Intl.DateTimeFormat(s, n).format
                     }
                 );
             case 'pluralFormat':
                 return (n = this.compileOptions(e)), new i(e.id, t.ordinal, t.offset, n, l);
             case 'selectFormat':
-                return (n = this.compileOptions(e)), new s(e.id, n);
+                return (n = this.compileOptions(e)), new o(e.id, n);
             default:
                 throw Error('Message element does not have a valid format type');
         }
@@ -86,9 +86,9 @@ function s(e, t) {
             r,
             i = e.format,
             a = i.options,
-            s = {};
-        for (this.pluralStack.push(this.currentPlural), this.currentPlural = 'pluralFormat' === i.type ? e : null, t = 0, n = a.length; t < n; t += 1) s[(r = a[t]).selector] = this.compileMessage(r.value);
-        return (this.currentPlural = this.pluralStack.pop()), s;
+            o = {};
+        for (this.pluralStack.push(this.currentPlural), this.currentPlural = 'pluralFormat' === i.type ? e : null, t = 0, n = a.length; t < n; t += 1) o[(r = a[t]).selector] = this.compileMessage(r.value);
+        return (this.currentPlural = this.pluralStack.pop()), o;
     }),
     (r.prototype.format = function (e) {
         return e ? ('string' == typeof e ? e : String(e)) : '';
@@ -101,7 +101,7 @@ function s(e, t) {
         var t = this.numberFormat.format(e - this.offset);
         return this.string.replace(/(^|[^\\])#/g, '$1' + t).replace(/\\#/g, '#');
     }),
-    (s.prototype.getOption = function (e) {
+    (o.prototype.getOption = function (e) {
         var t = this.options;
         return t[e] || t.other;
     });

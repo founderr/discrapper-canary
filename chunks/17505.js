@@ -1,15 +1,15 @@
-var e = n(96403),
-    o = n(141603),
-    i = n(729605),
-    u = n(818140).indexOf,
+var r = n(96403),
+    i = n(141603),
+    a = n(729605),
+    o = n(818140).indexOf,
     s = n(511364),
-    c = e([].push);
-t.exports = function (t, r) {
+    l = r([].push);
+e.exports = function (e, t) {
     var n,
-        e = i(t),
-        f = 0,
-        a = [];
-    for (n in e) !o(s, n) && o(e, n) && c(a, n);
-    for (; r.length > f; ) o(e, (n = r[f++])) && (~u(a, n) || c(a, n));
-    return a;
+        r = a(e),
+        u = 0,
+        c = [];
+    for (n in r) !i(s, n) && i(r, n) && l(c, n);
+    for (; t.length > u; ) i(r, (n = t[u++])) && (~o(c, n) || l(c, n));
+    return c;
 };

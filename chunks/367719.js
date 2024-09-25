@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var i = n(468194),
-    s = n(477690),
-    a = n(131388),
-    r = n(293810);
-let l = (0, i.Mg)(s.Z.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE),
-    o = (0, i.Mg)(s.Z.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE_MOBILE);
-function c() {
-    let e = (0, a.Z)(r.iP);
-    return e ? o : l;
+var r = n(468194),
+    i = n(477690),
+    l = n(131388),
+    s = n(293810);
+let a = (0, r.Mg)(i.Z.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE),
+    o = (0, r.Mg)(i.Z.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE_MOBILE);
+function u() {
+    let e = (0, l.Z)(s.iP);
+    return e ? o : a;
 }

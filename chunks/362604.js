@@ -1,99 +1,99 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return S;
     }
-}),
-    n(47120),
-    n(536091);
-var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
-    l = n(442837),
-    o = n(481060),
-    c = n(834129),
-    u = n(623292),
-    d = n(926491),
-    _ = n(419922),
-    E = n(626135),
-    I = n(585483),
+});
+var r = n(47120);
+var i = n(536091);
+var a = n(735250),
+    o = n(470079),
+    s = n(120356),
+    l = n.n(s),
+    u = n(442837),
+    c = n(481060),
+    d = n(834129),
+    _ = n(623292),
+    E = n(926491),
+    f = n(419922),
+    h = n(626135),
+    p = n(585483),
     m = n(115610),
-    T = n(981631),
-    h = n(689938),
-    N = n(809858);
-function f(e) {
-    let { message: t, channel: a, compact: f } = e,
-        C = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [p, g] = s.useState(null);
-    return (s.useEffect(() => {
+    I = n(981631),
+    T = n(689938),
+    g = n(809858);
+function S(e) {
+    let { message: t, channel: r, compact: i } = e,
+        s = (0, u.Wu)([E.Z], () => Array.from(E.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [S, A] = o.useState(null);
+    return (o.useEffect(() => {
         let e = setInterval(() => {
-            C.length > 0 && g(C[Math.floor(Math.random() * C.length)]);
+            s.length > 0 && A(s[Math.floor(Math.random() * s.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [C]),
-    null == a.guild_id)
+    }, [s]),
+    null == r.guild_id)
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, a.jsxs)('div', {
               children: [
-                  (0, i.jsx)(c.Z, {
-                      className: r()(N.mainContainer, { [N.compact]: f }),
+                  (0, a.jsx)(d.Z, {
+                      className: l()(g.mainContainer, { [g.compact]: i }),
                       icon: n(570111),
-                      compact: f,
-                      children: (0, i.jsx)('div', {
-                          className: r()(N.__invalid_content, { [N.compact]: f }),
-                          children: (0, i.jsx)('div', {
-                              className: r()(N.__invalid_messageContent, { [N.compact]: f }),
-                              children: '' !== t.content ? t.content : h.Z.Messages.DEADCHAT_PROMPT_1
+                      compact: i,
+                      children: (0, a.jsx)('div', {
+                          className: l()(g.__invalid_content, { [g.compact]: i }),
+                          children: (0, a.jsx)('div', {
+                              className: l()(g.__invalid_messageContent, { [g.compact]: i }),
+                              children: '' !== t.content ? t.content : T.Z.Messages.DEADCHAT_PROMPT_1
                           })
                       })
                   }),
-                  (0, i.jsxs)('div', {
-                      className: N.actions,
+                  (0, a.jsxs)('div', {
+                      className: g.actions,
                       children: [
-                          (0, i.jsx)(o.TooltipContainer, {
-                              text: h.Z.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
-                              children: (0, i.jsx)(o.Button, {
-                                  color: o.Button.Colors.PRIMARY,
+                          (0, a.jsx)(c.TooltipContainer, {
+                              text: T.Z.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
+                              children: (0, a.jsx)(c.Button, {
+                                  color: c.Button.Colors.PRIMARY,
                                   onClick: () => {
-                                      E.default.track(T.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      h.default.track(I.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
-                                          channel_id: a.id,
-                                          guild_id: a.guild_id,
+                                          channel_id: r.id,
+                                          guild_id: r.guild_id,
                                           action_type: 'upload_file'
                                       }),
-                                          I.S.dispatch(T.CkL.UPLOAD_FILE),
-                                          (0, u.fE)({
+                                          p.S.dispatch(I.CkL.UPLOAD_FILE),
+                                          (0, _.fE)({
                                               message: t,
-                                              channel: a,
+                                              channel: r,
                                               shouldMention: !0
                                           });
                                   },
-                                  children: (0, i.jsx)(o.ImagePlusIcon, {
+                                  children: (0, a.jsx)(c.ImagePlusIcon, {
                                       size: 'md',
                                       color: 'currentColor'
                                   })
                               })
                           }),
-                          (0, i.jsx)(o.TooltipContainer, {
-                              text: h.Z.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
-                              children: (0, i.jsx)(o.Button, {
-                                  color: o.Button.Colors.PRIMARY,
+                          (0, a.jsx)(c.TooltipContainer, {
+                              text: T.Z.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
+                              children: (0, a.jsx)(c.Button, {
+                                  color: c.Button.Colors.PRIMARY,
                                   onClick: () => {
-                                      E.default.track(T.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      h.default.track(I.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
-                                          channel_id: a.id,
-                                          guild_id: a.guild_id,
+                                          channel_id: r.id,
+                                          guild_id: r.guild_id,
                                           action_type: 'sticker'
                                       }),
-                                          (0, m.O)(t.id, a);
+                                          (0, m.O)(t.id, r);
                                   },
                                   children:
-                                      null != p
-                                          ? (0, i.jsx)(_.ZP, {
+                                      null != S
+                                          ? (0, a.jsx)(f.ZP, {
                                                 size: 32,
-                                                sticker: p
+                                                sticker: S
                                             })
-                                          : (0, i.jsx)(o.ReactionIcon, {
+                                          : (0, a.jsx)(c.ReactionIcon, {
                                                 size: 'md',
                                                 color: 'currentColor'
                                             })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return v;
     }
 }),
     n(47120);
@@ -24,14 +24,14 @@ var i = n(735250),
     I = n(689938),
     T = n(546764);
 let x = '749054660769218631';
-function S(e) {
+function v(e) {
     var t;
     let { channel: n } = e,
-        [a, S] = s.useState('');
+        [a, v] = s.useState('');
     s.useEffect(() => {
         (0, u.FQ)('847199849233514549', !0);
     }, []);
-    let v = (0, r.e7)(
+    let S = (0, r.e7)(
             [p.Z, m.default],
             () =>
                 !!l()(p.Z.getMessages(n.id).toArray())
@@ -52,7 +52,7 @@ function S(e) {
                             type: 'Send wave'
                         });
                 } catch (e) {
-                    !e.ok && 429 === e.status && S(I.Z.Messages.RATE_LIMITED);
+                    !e.ok && 429 === e.status && v(I.Z.Messages.RATE_LIMITED);
                 }
         }, [n.id, n.type, a]),
         b = I.Z.Messages.WAVE_TO.format({ username: A }),
@@ -65,7 +65,7 @@ function S(e) {
                       children: a
                   })
                 : null;
-    return v
+    return S
         ? (0, i.jsxs)('div', {
               className: T.containerCompact,
               children: [

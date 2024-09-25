@@ -8,58 +8,58 @@ var r =
             }
             return e;
         },
-    i = (function (e) {
-        return e && e.__esModule ? e : { default: e };
-    })(n(470079));
-function a(e, t) {
+    i = a(n(470079));
+function a(e) {
+    return e && e.__esModule ? e : { default: e };
+}
+function o(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function s(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-var s = (t.hover = function (e) {
+function l(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+}
+var u = (t.hover = function (e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
     return (function (n) {
-        function s() {
-            !(function (e, t) {
-                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, s);
-            for (var n, o, l, u = arguments.length, c = Array(u), d = 0; d < u; d++) c[d] = arguments[d];
+        function a() {
+            o(this, a);
+            for (var n, l, u, c = arguments.length, d = Array(c), _ = 0; _ < c; _++) d[_] = arguments[_];
             return (
-                (o = l = a(this, (n = s.__proto__ || Object.getPrototypeOf(s)).call.apply(n, [this].concat(c)))),
-                (l.state = { hover: !1 }),
-                (l.handleMouseOver = function () {
-                    return l.setState({ hover: !0 });
+                (l = u = s(this, (n = a.__proto__ || Object.getPrototypeOf(a)).call.apply(n, [this].concat(d)))),
+                (u.state = { hover: !1 }),
+                (u.handleMouseOver = function () {
+                    return u.setState({ hover: !0 });
                 }),
-                (l.handleMouseOut = function () {
-                    return l.setState({ hover: !1 });
+                (u.handleMouseOut = function () {
+                    return u.setState({ hover: !1 });
                 }),
-                (l.render = function () {
+                (u.render = function () {
                     return i.default.createElement(
                         t,
                         {
-                            onMouseOver: l.handleMouseOver,
-                            onMouseOut: l.handleMouseOut
+                            onMouseOver: u.handleMouseOver,
+                            onMouseOut: u.handleMouseOut
                         },
-                        i.default.createElement(e, r({}, l.props, l.state))
+                        i.default.createElement(e, r({}, u.props, u.state))
                     );
                 }),
-                a(l, o)
+                s(u, l)
             );
         }
-        return (
-            !(function (e, t) {
-                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                (e.prototype = Object.create(t && t.prototype, {
-                    constructor: {
-                        value: e,
-                        enumerable: !1,
-                        writable: !0,
-                        configurable: !0
-                    }
-                })),
-                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-            })(s, n),
-            s
-        );
+        return l(a, n), a;
     })(i.default.Component);
 });
-t.default = s;
+t.default = u;

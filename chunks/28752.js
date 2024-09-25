@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(373793),
-    s = n(974674),
-    o = n(481060),
+    o = n(974674),
+    s = n(481060),
     l = n(688465),
     u = n(768581),
     c = n(182294),
@@ -28,14 +28,14 @@ function E(e) {
                 [
                     {
                         type: a.Y.USER_INSTALL,
-                        icon: o.UserPlusIcon,
+                        icon: s.UserPlusIcon,
                         title: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
                         subtitle: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
                         beta: !1
                     },
                     {
                         type: a.Y.GUILD_INSTALL,
-                        icon: o.ServerIcon,
+                        icon: s.ServerIcon,
                         title: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
                         subtitle: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
                         beta: !1
@@ -52,12 +52,12 @@ function E(e) {
             (0, r.jsxs)('div', {
                 className: _.header,
                 children: [
-                    (0, r.jsx)(s.qE, {
+                    (0, r.jsx)(o.qE, {
                         src: E,
                         size: c.EF.SIZE_80,
                         'aria-label': t.name
                     }),
-                    (0, r.jsx)(o.Heading, {
+                    (0, r.jsx)(s.Heading, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
                         children: t.name
@@ -68,7 +68,7 @@ function E(e) {
                 className: _.rows,
                 children: f.map((e) =>
                     (0, r.jsxs)(
-                        o.Clickable,
+                        s.Clickable,
                         {
                             tag: 'li',
                             className: _.row,
@@ -85,12 +85,12 @@ function E(e) {
                                         (0, r.jsxs)('div', {
                                             className: _.rowDetails,
                                             children: [
-                                                (0, r.jsx)(o.Text, {
+                                                (0, r.jsx)(s.Text, {
                                                     variant: 'text-md/medium',
                                                     color: 'interactive-active',
                                                     children: e.title
                                                 }),
-                                                (0, r.jsx)(o.Text, {
+                                                (0, r.jsx)(s.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
                                                     children: e.subtitle
@@ -98,7 +98,7 @@ function E(e) {
                                             ]
                                         }),
                                         e.beta && (0, r.jsx)(l.Z, {}),
-                                        (0, r.jsx)(o.ChevronSmallRightIcon, {
+                                        (0, r.jsx)(s.ChevronSmallRightIcon, {
                                             size: 'md',
                                             color: 'currentColor',
                                             className: _.rightIcon

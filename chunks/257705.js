@@ -1,21 +1,21 @@
 n.d(t, {
     z: function () {
-        return u;
+        return c;
     }
-}),
-    n(411104);
-var r = n(735250),
-    i = n(470079),
-    a = n(803997),
-    s = n.n(a),
-    o = n(789978),
-    l = n(780900);
-function u(e, t) {
-    let n = (0, l.G6)(e);
-    return i.forwardRef(function (a, u) {
-        let { children: c, className: d, dir: _ = 'ltr', orientation: E = 'vertical', paddingFix: f = !0, fade: h = !1, onScroll: p, style: I, ...m } = a,
-            T = i.useRef(null),
-            S = (0, l.tT)({
+});
+var r = n(411104);
+var i = n(735250),
+    a = n(470079),
+    o = n(803997),
+    s = n.n(o),
+    l = n(789978),
+    u = n(780900);
+function c(e, t) {
+    let n = (0, u.G6)(e);
+    return a.forwardRef(function (r, o) {
+        let { children: c, className: d, dir: _ = 'ltr', orientation: E = 'vertical', paddingFix: f = !0, fade: h = !1, onScroll: p, style: m, ...I } = r,
+            T = a.useRef(null),
+            g = (0, u.tT)({
                 paddingFix: f,
                 orientation: E,
                 dir: _,
@@ -23,20 +23,20 @@ function u(e, t) {
                 scrollerRef: T,
                 specs: n
             });
-        return (0, r.jsx)('div', {
+        return (0, i.jsx)('div', {
             ref: (e) => {
-                'function' == typeof u ? u(e) : null != u && (u.current = e), (T.current = e);
+                'function' == typeof o ? o(e) : null != o && (o.current = e), (T.current = e);
             },
             className: s()(d, {
                 [e]: !0,
                 [t]: h
             }),
-            style: (0, l.uT)(I, E),
+            style: (0, u.uT)(m, E),
             dir: _,
-            ...m,
-            children: (0, r.jsxs)(o.Jc, {
+            ...I,
+            children: (0, i.jsxs)(l.Jc, {
                 containerRef: T,
-                children: [c, S]
+                children: [c, g]
             })
         });
     });

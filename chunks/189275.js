@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(626135),
-    s = n(110223),
-    o = n(981631);
+    o = n(110223),
+    s = n(981631);
 function l(e) {
     let { channelId: t, blockedUserIds: l } = e;
     (0, i.openModalLazy)(
@@ -26,18 +26,18 @@ function l(e) {
         },
         {
             onCloseCallback: () => {
-                a.default.track(o.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: s.q.DISMISS,
+                a.default.track(s.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: o.q.DISMISS,
                     channel_id: t,
-                    warning_medium: s.X.MODAL,
+                    warning_medium: o.X.MODAL,
                     blocked_user_ids: l
                 });
             }
         }
     ),
-        a.default.track(o.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
+        a.default.track(s.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
             channel_id: t,
-            warning_medium: s.X.MODAL,
+            warning_medium: o.X.MODAL,
             blocked_user_ids: l
         });
 }

@@ -1,87 +1,87 @@
 n.d(t, {
     $_: function () {
-        return g;
+        return v;
     },
     KQ: function () {
-        return _;
+        return S;
     },
     MU: function () {
-        return d;
+        return m;
     },
     m0: function () {
-        return f;
+        return g;
     },
     rf: function () {
-        return C;
+        return N;
     },
     tu: function () {
-        return m;
+        return A;
     }
-}),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120),
-    n(315314);
-var i = n(860911),
-    l = n(477690),
-    r = n(481060),
-    a = n(134432),
-    s = n(703656),
-    o = n(768581),
-    c = n(981631),
-    u = n(689938);
-let d = 0,
-    { API_ENDPOINT: h, CDN_HOST: p } = window.GLOBAL_ENV;
-function f(e) {
-    return e.id === d;
+});
+var r = n(610138);
+var i = n(216116);
+var a = n(78328);
+var o = n(815648);
+var s = n(47120);
+var l = n(315314);
+var u = n(860911),
+    c = n(477690),
+    d = n(481060),
+    _ = n(134432),
+    E = n(703656),
+    f = n(768581),
+    h = n(981631),
+    p = n(689938);
+let m = 0,
+    { API_ENDPOINT: I, CDN_HOST: T } = window.GLOBAL_ENV;
+function g(e) {
+    return e.id === m;
 }
-function _() {
+function S() {
     return {
-        id: d,
-        name: u.Z.Messages.APP_DIRECTORY_ALL_CATEGORY
+        id: m,
+        name: p.Z.Messages.APP_DIRECTORY_ALL_CATEGORY
     };
 }
-function m(e) {
+function A(e) {
     switch (e.id) {
         case 0:
-            return r.GlobeEarthIcon;
+            return d.GlobeEarthIcon;
         case 4:
-            return r.TvIcon;
+            return d.TvIcon;
         case 5:
-            return r.AnalyticsIcon;
+            return d.AnalyticsIcon;
         case 6:
-            return r.GameControllerIcon;
+            return d.GameControllerIcon;
         case 8:
             break;
         case 9:
-            return r.FriendsIcon;
+            return d.FriendsIcon;
         case 10:
-            return r.WrenchIcon;
+            return d.WrenchIcon;
     }
-    return r.AsteriskIcon;
+    return d.AsteriskIcon;
 }
-function g(e) {
+function v(e) {
     let { itemId: t, hash: n } = e,
-        i = new URLSearchParams({ size: (0, a.oO)(parseFloat(l.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, a.x_)()).toString() }).toString(),
-        r = o.$k ? 'webp' : 'png';
-    return null != p
-        ? ''.concat(location.protocol, '//').concat(p, '/app-assets/application-directory/collection-items/').concat(t, '/').concat(n, '.').concat(r, '?').concat(i)
+        r = new URLSearchParams({ size: (0, _.oO)(parseFloat(c.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, _.x_)()).toString() }).toString(),
+        i = f.$k ? 'webp' : 'png';
+    return null != T
+        ? ''.concat(location.protocol, '//').concat(T, '/app-assets/application-directory/collection-items/').concat(t, '/').concat(n, '.').concat(i, '?').concat(r)
         : ''
               .concat(location.protocol)
-              .concat(h)
-              .concat(c.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(t, n, r), '?')
-              .concat(i);
+              .concat(I)
+              .concat(h.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(t, n, i), '?')
+              .concat(r);
 }
-function C() {
+function N() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = new URL(location.href);
     for (let n in e) {
-        let i = e[n];
-        t.searchParams.set(n, i);
+        let r = e[n];
+        t.searchParams.set(n, r);
     }
     let n = t.pathname + t.search,
-        l = (0, i.U)(n, !1);
-    (0, s.uL)(l);
+        r = (0, u.U)(n, !1);
+    (0, E.uL)(r);
 }

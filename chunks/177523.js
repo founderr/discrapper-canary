@@ -3,18 +3,18 @@ n.d(t, {
         return s.KV;
     },
     ZP: function () {
-        return _;
+        return E;
     }
-}),
-    n(47120);
-var r = n(392711),
-    i = n.n(r),
-    a = n(846519),
+});
+var r = n(47120);
+var i = n(392711),
+    a = n.n(i),
+    o = n(846519),
     s = n(509848),
-    o = n(483019),
-    l = n(945689),
-    u = n(981631);
-function c(e, t, n) {
+    l = n(483019),
+    u = n(945689),
+    c = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,10 +27,10 @@ function c(e, t, n) {
         e
     );
 }
-function d(e) {
-    return null != e && 'null' !== e && e !== u.ME && 'undefined' !== e && e !== u.I_8;
+function _(e) {
+    return null != e && 'null' !== e && e !== c.ME && 'undefined' !== e && e !== c.I_8;
 }
-class _ {
+class E {
     _enqueue(e, t) {
         (this._pending[e] = {
             ...this._pending[e],
@@ -73,44 +73,44 @@ class _ {
         (t || !this._threads.has(e)) && this._subscribed.delete(e), delete this._pending[e], this._members.clear(e), this._channels.clear(e), this._threadMemberLists.clear(e), this._typing.delete(e), this._memberUpdates.delete(e), t && this._threads.delete(e), this._activities.delete(e);
     }
     flush() {
-        i().forEach(this._pending, (e, t) => {
+        a().forEach(this._pending, (e, t) => {
             this._subscribed.add(t);
         }),
             this._onChange(this._pending),
             (this._pending = {});
     }
     subscribeUser(e, t) {
-        d(e) && this._members.subscribe(e, t);
+        _(e) && this._members.subscribe(e, t);
     }
     unsubscribeUser(e, t) {
-        d(e) && this._members.unsubscribe(e, t);
+        _(e) && this._members.unsubscribe(e, t);
     }
     subscribeChannel(e, t, n) {
-        return !!d(e) && this._channels.subscribe(e, t, n);
+        return !!_(e) && this._channels.subscribe(e, t, n);
     }
     subscribeToMemberUpdates(e) {
-        if (!d(e)) return !1;
+        if (!_(e)) return !1;
         this._enqueue(e, { member_updates: !0 }), this._memberUpdates.add(e);
     }
     unsubscribeFromMemberUpdates(e) {
-        if (!d(e)) return !1;
+        if (!_(e)) return !1;
         this._enqueue(e, { member_updates: !1 });
     }
     subscribeThreadMemberList(e, t, n) {
-        return !!d(e) && this._threadMemberLists.subscribe(e, t, n);
+        return !!_(e) && this._threadMemberLists.subscribe(e, t, n);
     }
     unsubscribeThreadMemberList(e, t) {
-        return !!d(e) && this._threadMemberLists.unsubscribe(e, t);
+        return !!_(e) && this._threadMemberLists.unsubscribe(e, t);
     }
     subscribeToGuild(e) {
         this._subscribeToFeature(e, this._typing, { typing: !0 }), this._subscribeToFeature(e, this._activities, { activities: !0 }), this._subscribeToFeature(e, this._threads, { threads: !0 });
     }
     _subscribeToFeature(e, t, n) {
-        if (d(e)) {
+        if (_(e)) {
             if (!t.has(e)) t.add(e), this._enqueue(e, n);
         }
     }
     constructor(e) {
-        c(this, '_members', new o.Z((e, t) => this._enqueue(e, { members: t }))), c(this, '_channels', new s.ZP((e, t) => this._enqueue(e, { channels: t }))), c(this, '_threadMemberLists', new l.Z((e, t) => this._enqueue(e, { thread_member_lists: t }))), c(this, '_typing', new Set()), c(this, '_threads', new Set()), c(this, '_activities', new Set()), c(this, '_memberUpdates', new Set()), c(this, '_subscribed', new Set()), c(this, '_pending', {}), c(this, '_flush', new a.sW(0, () => this.flush())), c(this, '_onChange', void 0), (this._onChange = e);
+        d(this, '_members', new l.Z((e, t) => this._enqueue(e, { members: t }))), d(this, '_channels', new s.ZP((e, t) => this._enqueue(e, { channels: t }))), d(this, '_threadMemberLists', new u.Z((e, t) => this._enqueue(e, { thread_member_lists: t }))), d(this, '_typing', new Set()), d(this, '_threads', new Set()), d(this, '_activities', new Set()), d(this, '_memberUpdates', new Set()), d(this, '_subscribed', new Set()), d(this, '_pending', {}), d(this, '_flush', new o.sW(0, () => this.flush())), d(this, '_onChange', void 0), (this._onChange = e);
     }
 }

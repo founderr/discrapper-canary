@@ -1,16 +1,16 @@
 let r;
 n.d(t, {
     RI: function () {
-        return T;
+        return S;
     },
     jy: function () {
-        return S;
+        return A;
     }
 });
 var i = n(570140),
     a = n(519938),
-    s = n(317770),
-    o = n(928518),
+    o = n(317770),
+    s = n(928518),
     l = n(592125),
     u = n(819640),
     c = n(366050),
@@ -20,44 +20,44 @@ var i = n(570140),
     f = n(979651),
     h = n(317381),
     p = n(719296),
-    I = n(958185),
-    m = n(981631);
-function T(e) {
-    let t = null != e ? e : r;
-    null != t && c.Z.isOpen(t) && i.Z.wait(() => a.Cp(t));
+    m = n(958185),
+    I = n(981631);
+function T(e, t) {
+    if (c.Z.isOpen(t)) return !1;
+    i.Z.wait(() => a.bA(t, I.NYg.EMBED_IFRAME, { channel: e })), (r = t);
+}
+function g() {
+    let e = r;
+    null != e && c.Z.isOpen(e) && (i.Z.wait(() => a.xv(e)), (r = null));
 }
 function S(e) {
     let t = null != e ? e : r;
+    null != t && c.Z.isOpen(t) && i.Z.wait(() => a.Cp(t));
+}
+function A(e) {
+    let t = null != e ? e : r;
     null != t && c.Z.isOpen(t) && i.Z.wait(() => a.$Z(t));
 }
-function g() {
+function v() {
     let e = h.ZP.getConnectedActivityChannelId(),
-        t = h.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : m.lds),
+        t = h.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : I.lds),
         n = l.Z.getChannel(e);
-    return null == e || null == n || null == t
-        ? (function () {
-              let e = r;
-              null != e && c.Z.isOpen(e) && (i.Z.wait(() => a.xv(e)), (r = null));
-          })()
-        : (function (e, t) {
-              if (c.Z.isOpen(t)) return !1;
-              i.Z.wait(() => a.bA(t, m.NYg.EMBED_IFRAME, { channel: e })), (r = t);
-          })(n, (0, p.Z)(e, t.applicationId));
+    return null == e || null == n || null == t ? g() : T(n, (0, p.Z)(e, t.applicationId));
 }
-function A() {
-    return (0, I.Z)({
+function N() {
+    return (0, m.Z)({
         LayerStore: u.Z,
-        PopoutWindowStore: o.Z
+        PopoutWindowStore: s.Z
     })
-        ? T()
-        : S();
+        ? S()
+        : A();
 }
-class N extends s.Z {
+class O extends o.Z {
     _initialize() {
-        _.Z.addChangeListener(g), E.Z.addChangeListener(g), d.Z.addChangeListener(g), f.Z.addChangeListener(g), o.Z.addChangeListener(g), h.ZP.addChangeListener(g), u.Z.addChangeListener(A);
+        _.Z.addChangeListener(v), E.Z.addChangeListener(v), d.Z.addChangeListener(v), f.Z.addChangeListener(v), s.Z.addChangeListener(v), h.ZP.addChangeListener(v), u.Z.addChangeListener(N);
     }
     _terminate() {
-        _.Z.removeChangeListener(g), E.Z.removeChangeListener(g), d.Z.removeChangeListener(g), f.Z.removeChangeListener(g), o.Z.removeChangeListener(g), h.ZP.removeChangeListener(g), u.Z.removeChangeListener(A);
+        _.Z.removeChangeListener(v), E.Z.removeChangeListener(v), d.Z.removeChangeListener(v), f.Z.removeChangeListener(v), s.Z.removeChangeListener(v), h.ZP.removeChangeListener(v), u.Z.removeChangeListener(N);
     }
 }
-t.ZP = new N();
+t.ZP = new O();

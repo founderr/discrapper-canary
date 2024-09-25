@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(544891),
     i = n(570140),
     a = n(881052),
-    s = n(25251),
-    o = n(981631);
+    o = n(25251),
+    s = n(981631);
 let l = (e) => {
         let { sku_id: t, ...n } = e;
         return {
@@ -21,11 +21,11 @@ let l = (e) => {
     },
     u = async function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (!(!e && (s.Z.hasFetched() || s.Z.isFetching))) {
-            if (s.Z.canFetch()) {
+        if (!(!e && o.Z.hasFetched()) && !o.Z.isFetching) {
+            if (o.Z.canFetch()) {
                 i.Z.dispatch({ type: 'USER_PROFILE_EFFECTS_FETCH' });
                 try {
-                    let { body: e } = await r.tn.get(o.ANM.USER_PROFILE_EFFECTS),
+                    let { body: e } = await r.tn.get(s.ANM.USER_PROFILE_EFFECTS),
                         t = (null == e ? void 0 : e.profile_effect_configs).map(l);
                     i.Z.dispatch({
                         type: 'USER_PROFILE_EFFECTS_FETCH_SUCCESS',

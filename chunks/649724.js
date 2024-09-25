@@ -1,23 +1,23 @@
 n.d(t, {
     k: function () {
-        return h;
+        return p;
     },
     u: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
+});
 var r,
-    i = n(735250),
-    a = n(470079),
+    i = n(47120);
+var a = n(735250),
+    o = n(470079),
     s = n(120356),
-    o = n.n(s),
-    l = n(481060),
-    u = n(600164),
-    c = n(153066),
-    d = n(689938),
-    _ = n(893873);
-function E(e, t, n) {
+    l = n.n(s),
+    u = n(481060),
+    c = n(600164),
+    d = n(153066),
+    _ = n(689938),
+    E = n(893873);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,12 +30,12 @@ function E(e, t, n) {
         e
     );
 }
-let f = {
+let h = {
     DEFAULT: 'default',
     SUCCESS: 'success',
     ERROR: 'error'
 };
-class h extends (r = a.PureComponent) {
+class p extends (r = o.PureComponent) {
     select() {
         var e;
         null === (e = this.inputRef.current) || void 0 === e || e.select();
@@ -43,62 +43,62 @@ class h extends (r = a.PureComponent) {
     renderInput(e) {
         var t;
         let { value: n, mode: r } = this.props,
-            a = null === (t = this.context) || void 0 === t ? void 0 : t.titleId;
-        return (0, i.jsx)('input', {
-            className: o()((0, c.l)(_, 'input', r), { [_.inputHidden]: e }),
+            i = null === (t = this.context) || void 0 === t ? void 0 : t.titleId;
+        return (0, a.jsx)('input', {
+            className: l()((0, d.l)(E, 'input', r), { [E.inputHidden]: e }),
             ref: this.inputRef,
             type: 'text',
             value: n,
             onClick: this.handleInputClick,
             readOnly: !0,
-            'aria-labelledby': a
+            'aria-labelledby': i
         });
     }
     render() {
         let e;
-        let { text: t = d.Z.Messages.COPY, mode: n, hideMessage: r, className: a, buttonLook: s } = this.props,
-            E = null != r;
+        let { text: t = _.Z.Messages.COPY, mode: n, hideMessage: r, className: i, buttonLook: o } = this.props,
+            s = null != r;
         switch (n) {
-            case f.SUCCESS:
-                e = l.ButtonColors.GREEN;
+            case h.SUCCESS:
+                e = u.ButtonColors.GREEN;
                 break;
-            case f.ERROR:
-                e = l.ButtonColors.RED;
+            case h.ERROR:
+                e = u.ButtonColors.RED;
                 break;
             default:
                 e = this.props.buttonColor;
         }
-        return (0, i.jsx)(l.FocusRing, {
+        return (0, a.jsx)(u.FocusRing, {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
-            children: (0, i.jsx)('div', {
-                className: o()((0, c.l)(_, 'copyInput', n), a),
+            children: (0, a.jsx)('div', {
+                className: l()((0, d.l)(E, 'copyInput', n), i),
                 ref: this.containerRef,
-                children: (0, i.jsxs)(u.Z, {
-                    className: _.layout,
+                children: (0, a.jsxs)(c.Z, {
+                    className: E.layout,
                     children: [
-                        (0, i.jsxs)(u.Z, {
-                            className: _.inputWrapper,
+                        (0, a.jsxs)(c.Z, {
+                            className: E.inputWrapper,
                             children: [
-                                this.renderInput(E),
-                                E
-                                    ? (0, i.jsx)('div', {
-                                          className: _.hiddenMessage,
+                                this.renderInput(s),
+                                s
+                                    ? (0, a.jsx)('div', {
+                                          className: E.hiddenMessage,
                                           children: r
                                       })
                                     : null
                             ]
                         }),
-                        (0, i.jsx)(u.Z, {
+                        (0, a.jsx)(c.Z, {
                             shrink: 1,
                             grow: 0,
                             style: { margin: 0 },
-                            children: (0, i.jsx)(l.Button, {
-                                className: _.button,
+                            children: (0, a.jsx)(u.Button, {
+                                className: E.button,
                                 onClick: this.handleButtonClick,
-                                size: l.ButtonSizes.MIN,
+                                size: u.ButtonSizes.MIN,
                                 color: e,
-                                look: s,
+                                look: o,
                                 children: t
                             })
                         })
@@ -109,25 +109,25 @@ class h extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'inputRef', a.createRef()),
-            E(this, 'containerRef', a.createRef()),
-            E(this, 'handleButtonClick', () => {
+            f(this, 'inputRef', o.createRef()),
+            f(this, 'containerRef', o.createRef()),
+            f(this, 'handleButtonClick', () => {
                 this.select();
                 let { onCopy: e, value: t } = this.props;
                 e(t);
             }),
-            E(this, 'handleInputClick', () => {
+            f(this, 'handleInputClick', () => {
                 this.select();
             });
     }
 }
-E(h, 'contextType', l.FormContext),
-    E(h, 'defaultProps', {
+f(p, 'contextType', u.FormContext),
+    f(p, 'defaultProps', {
         supportsCopy: !0,
-        buttonColor: l.ButtonColors.PRIMARY,
-        buttonLook: l.ButtonLooks.FILLED,
-        mode: f.DEFAULT
+        buttonColor: u.ButtonColors.PRIMARY,
+        buttonLook: u.ButtonLooks.FILLED,
+        mode: h.DEFAULT
     }),
-    E(h, 'Modes', f),
-    E(h, 'ButtonColors', l.ButtonColors),
-    E(h, 'ButtonLooks', l.ButtonLooks);
+    f(p, 'Modes', h),
+    f(p, 'ButtonColors', u.ButtonColors),
+    f(p, 'ButtonLooks', u.ButtonLooks);

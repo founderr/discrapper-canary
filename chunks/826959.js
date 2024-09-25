@@ -1,36 +1,36 @@
-var e = n(67867),
-    o = n(952256),
-    i = n(571240),
-    u = n(982665),
+var r = n(67867),
+    i = n(952256),
+    a = n(571240),
+    o = n(982665),
     s = n(223944),
-    c = n(474883),
-    f = n(729605),
-    a = n(256110),
-    p = n(360518),
-    v = n(469624),
-    l = n(780524),
-    y = v('slice'),
-    h = p('species'),
-    x = Array,
-    d = Math.max;
-e(
+    l = n(474883),
+    u = n(729605),
+    c = n(256110),
+    d = n(360518),
+    _ = n(469624),
+    E = n(780524),
+    f = _('slice'),
+    h = d('species'),
+    p = Array,
+    m = Math.max;
+r(
     {
         target: 'Array',
         proto: !0,
-        forced: !y
+        forced: !f
     },
     {
-        slice: function (t, r) {
+        slice: function (e, t) {
             var n,
-                e,
-                p,
-                v = f(this),
-                y = c(v),
-                g = s(t, y),
-                b = s(void 0 === r ? y : r, y);
-            if (o(v) && (i((n = v.constructor)) && (n === x || o(n.prototype)) ? (n = void 0) : u(n) && null === (n = n[h]) && (n = void 0), n === x || void 0 === n)) return l(v, g, b);
-            for (p = 0, e = new (void 0 === n ? x : n)(d(b - g, 0)); g < b; g++, p++) g in v && a(e, p, v[g]);
-            return (e.length = p), e;
+                r,
+                d,
+                _ = u(this),
+                f = l(_),
+                I = s(e, f),
+                T = s(void 0 === t ? f : t, f);
+            if (i(_) && (a((n = _.constructor)) && (n === p || i(n.prototype)) ? (n = void 0) : o(n) && null === (n = n[h]) && (n = void 0), n === p || void 0 === n)) return E(_, I, T);
+            for (d = 0, r = new (void 0 === n ? p : n)(m(T - I, 0)); I < T; I++, d++) I in _ && c(r, d, _[I]);
+            return (r.length = d), r;
         }
     }
 );

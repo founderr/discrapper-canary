@@ -1,8 +1,8 @@
-var e = n(327192),
-    o = n(621528),
-    i = n(250765),
-    u = n(519723),
+var r = n(327192),
+    i = n(621528),
+    a = n(250765),
+    o = n(519723),
     s = n(360518)('iterator');
-t.exports = function (t) {
-    if (!i(t)) return o(t, s) || o(t, '@@iterator') || u[e(t)];
+e.exports = function (e) {
+    if (!a(e)) return i(e, s) || i(e, '@@iterator') || o[r(e)];
 };

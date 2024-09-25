@@ -2,14 +2,14 @@ var r = n(735250);
 n(470079);
 var i = n(239091),
     a = n(644956),
-    s = n(819366),
-    o = n(592125);
+    o = n(819366),
+    s = n(592125);
 t.Z = {
-    handleUserContextMenu(e, t, a, s) {
-        let l = o.Z.getChannel(t);
+    handleUserContextMenu(e, t, a, o) {
+        let l = s.Z.getChannel(t);
         null != l &&
-            (0, i.jW)(s, async () => {
-                let { default: t } = await Promise.all([n.e('50506'), n.e('79695'), n.e('79107'), n.e('92453'), n.e('13125'), n.e('34879')]).then(n.bind(n, 757387));
+            (0, i.jW)(o, async () => {
+                let { default: t } = await Promise.all([n.e('50506'), n.e('79695'), n.e('13351'), n.e('92453'), n.e('13125'), n.e('34879')]).then(n.bind(n, 757387));
                 return (n) =>
                     (0, r.jsx)(t, {
                         ...n,
@@ -20,7 +20,7 @@ t.Z = {
             });
     },
     react(e, t, n) {
-        let { userId: i, channelId: o, parsedUserId: l, roleId: u, roleName: c, viewingChannelId: d } = e;
+        let { userId: i, channelId: s, parsedUserId: l, roleId: u, roleName: c, viewingChannelId: d } = e;
         return null == i && (null != u || '@everyone' === c || '@here' === c)
             ? (0, r.jsx)(
                   a.Z,
@@ -32,11 +32,11 @@ t.Z = {
                   n.key
               )
             : (0, r.jsx)(
-                  s.Z,
+                  o.Z,
                   {
                       className: 'mention',
                       userId: i,
-                      channelId: o,
+                      channelId: s,
                       viewingChannelId: d,
                       parsedUserId: l,
                       content: t(e.content, n),

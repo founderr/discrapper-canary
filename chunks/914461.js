@@ -1,16 +1,16 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.flattenNames = void 0);
-var r = o(n(426169)),
-    i = o(n(320403)),
-    a = o(n(667066)),
-    s = o(n(681926));
-function o(e) {
+var r = s(n(426169)),
+    i = s(n(320403)),
+    a = s(n(667066)),
+    o = s(n(681926));
+function s(e) {
     return e && e.__esModule ? e : { default: e };
 }
 var l = (t.flattenNames = function e() {
     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
         n = [];
     return (
-        (0, s.default)(t, function (t) {
+        (0, o.default)(t, function (t) {
             Array.isArray(t)
                 ? e(t).map(function (e) {
                       return n.push(e);

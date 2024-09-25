@@ -2,112 +2,112 @@ n.d(t, {
     Z: function () {
         return O;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(780384),
-    l = n(481060),
-    u = n(2052),
-    c = n(410030),
-    d = n(100527),
-    _ = n(906732),
-    E = n(98278),
-    f = n(197115),
-    h = n(626135),
-    p = n(74538),
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(780384),
+    u = n(481060),
+    c = n(2052),
+    d = n(410030),
+    _ = n(100527),
+    E = n(906732),
+    f = n(98278),
+    h = n(197115),
+    p = n(626135),
+    m = n(74538),
     I = n(706667),
-    m = n(409673),
-    T = n(981631),
+    T = n(409673),
+    g = n(981631),
     S = n(474936),
-    g = n(689938),
-    A = n(383052),
+    A = n(689938),
+    v = n(383052),
     N = n(145834);
 function O(e) {
     var t;
-    let { onClose: a, closePopout: O, sound: R, channel: v } = e,
-        C = (0, c.ZP)(),
-        [y, L] = i.useState(!1),
-        { location: D } = (0, u.O)(),
-        b = i.useMemo(
+    let { onClose: r, closePopout: o, sound: O, channel: R } = e,
+        C = (0, d.ZP)(),
+        [y, b] = a.useState(!1),
+        { location: L } = (0, c.O)(),
+        D = a.useMemo(
             () => ({
-                ...D,
-                section: T.jXE.SOUNDBOARD_SOUND_PICKER
+                ...L,
+                section: g.jXE.SOUNDBOARD_SOUND_PICKER
             }),
-            [D]
+            [L]
         ),
-        { analyticsLocations: M } = (0, _.ZP)(d.Z.PREMIUM_UPSELL),
-        { previewSound: P } = (0, I.Z)(R, null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : null),
-        U = (0, m.K_)({
-            sound: R,
+        { analyticsLocations: M } = (0, E.ZP)(_.Z.PREMIUM_UPSELL),
+        { previewSound: P } = (0, I.Z)(O, null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : null),
+        U = (0, T.K_)({
+            sound: O,
             previewSound: P,
             tooltipPosition: 'left'
         }),
-        w = (0, o.ap)(C) ? n(537381) : n(341048);
-    i.useEffect(() => {
-        h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+        w = (0, l.ap)(C) ? n(537381) : n(341048);
+    a.useEffect(() => {
+        p.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
             type: S.cd.SOUND_PICKER_SOUND_CLICKED,
             is_external: !0,
             location: {
-                ...b,
-                object: T.qAy.SOUNDBOARD_SOUND
+                ...D,
+                object: g.qAy.SOUNDBOARD_SOUND
             },
             location_stack: M,
-            sku_id: p.ZP.getSkuIdForPremiumType(S.p9.TIER_2)
+            sku_id: m.ZP.getSkuIdForPremiumType(S.p9.TIER_2)
         });
-    }, [M, b]);
-    let x = i.useCallback(() => {
-        h.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, { location_section: T.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, E.z)(), O();
-    }, [O]);
-    return (0, r.jsxs)('div', {
-        className: s()(N.premiumPromo, A.container),
+    }, [M, D]);
+    let x = a.useCallback(() => {
+        p.default.track(g.rMx.PREMIUM_PROMOTION_OPENED, { location_section: g.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, f.z)(), o();
+    }, [o]);
+    return (0, i.jsxs)('div', {
+        className: s()(N.premiumPromo, v.container),
         children: [
-            (0, r.jsx)(l.Clickable, {
+            (0, i.jsx)(u.Clickable, {
                 className: N.premiumPromoClose,
-                onClick: a,
-                children: g.Z.Messages.CLOSE
+                onClick: r,
+                children: A.Z.Messages.CLOSE
             }),
-            (0, r.jsx)('img', {
+            (0, i.jsx)('img', {
                 'aria-hidden': !0,
                 alt: '',
-                className: s()(N.premiumPromoImage, N.premiumPromoImageSmaller, A.image),
+                className: s()(N.premiumPromoImage, N.premiumPromoImageSmaller, v.image),
                 src: w
             }),
-            (0, r.jsx)(l.Heading, {
+            (0, i.jsx)(u.Heading, {
                 variant: 'heading-lg/normal',
                 color: 'header-primary',
                 className: N.premiumPromoTitle,
-                children: g.Z.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
+                children: A.Z.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
             }),
-            (0, r.jsx)(l.Text, {
+            (0, i.jsx)(u.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: N.premiumPromoDescription,
-                children: g.Z.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({ onClick: x })
+                children: A.Z.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({ onClick: x })
             }),
-            (0, r.jsxs)('div', {
-                className: A.buttonContainer,
+            (0, i.jsxs)('div', {
+                className: v.buttonContainer,
                 children: [
-                    (0, r.jsx)('div', {
-                        className: A.previewButtonContainer,
+                    (0, i.jsx)('div', {
+                        className: v.previewButtonContainer,
                         children: U
                     }),
-                    (0, r.jsx)(f.Z, {
+                    (0, i.jsx)(h.Z, {
                         subscriptionTier: S.Si.TIER_2,
                         submitting: y,
                         premiumModalAnalyticsLocation: {
-                            section: T.jXE.SOUNDBOARD_SOUND_PICKER,
-                            object: T.qAy.BUTTON_CTA
+                            section: g.jXE.SOUNDBOARD_SOUND_PICKER,
+                            object: g.qAy.BUTTON_CTA
                         },
-                        size: l.Button.Sizes.SMALL,
-                        color: l.Button.Colors.GREEN,
+                        size: u.Button.Sizes.SMALL,
+                        color: u.Button.Colors.GREEN,
                         onClick: () => {
-                            L(!0);
+                            b(!0);
                         },
                         onSubscribeModalClose: (e) => {
-                            L(!1), e && a();
+                            b(!1), e && r();
                         }
                     })
                 ]

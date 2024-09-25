@@ -1,4 +1,10 @@
-function r(e, t, n) {
+n.d(t, {
+    Z: function () {
+        return a;
+    }
+});
+var r = n(47120);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,13 +17,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-}),
-    n(47120);
-class i {
+class a {
     has(e) {
         return this.listeners.has(e);
     }
@@ -29,14 +29,14 @@ class i {
     }
     constructor() {
         var e = this;
-        r(this, 'listeners', new Set()),
-            r(this, 'add', (e) => {
+        i(this, 'listeners', new Set()),
+            i(this, 'add', (e) => {
                 this.listeners.add(e);
             }),
-            r(this, 'remove', (e) => {
+            i(this, 'remove', (e) => {
                 this.listeners.delete(e);
             }),
-            r(this, 'addConditional', function (t) {
+            i(this, 'addConditional', function (t) {
                 let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
                 if (n && !1 === t()) return;
                 let r = () => {

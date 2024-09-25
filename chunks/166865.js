@@ -1,17 +1,17 @@
 n.d(t, {
     s: function () {
-        return s;
+        return o;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(331595),
     a = n(267843);
-let s = (e) => {
+let o = (e) => {
     var t, n;
-    let { size: s = 'md', width: o, height: l, color: u = '#fff', colorClass: c = '', ...d } = e,
-        _ = (0, a.m)(s),
-        E = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : o,
+    let { size: o = 'md', width: s, height: l, color: u = '#fff', colorClass: c = '', ...d } = e,
+        _ = (0, a.m)(o),
+        E = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : s,
         f = null !== (n = null == _ ? void 0 : _.height) && void 0 !== n ? n : l;
     return (0, r.jsx)('svg', {
         ...(0, i.Z)(d),

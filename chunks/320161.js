@@ -23,14 +23,14 @@ function m(e) {
         [N, C] = a.useState(0),
         [p, f] = a.useState(!1),
         [A, S] = a.useState(!1),
-        [h] = a.useState(() => new i.V7()),
-        [M] = a.useState(() => new i.V7());
+        [M] = a.useState(() => new i.V7()),
+        [h] = a.useState(() => new i.V7());
     if (
         (a.useEffect(
             () => () => {
-                h.stop(), M.stop();
+                M.stop(), h.stop();
             },
-            [h, M]
+            [M, h]
         ),
         !c.wS)
     )
@@ -39,7 +39,7 @@ function m(e) {
         b = x ? o.TooltipColors.RED : o.TooltipColors.GREEN,
         O = p ? b : o.TooltipColors.PRIMARY,
         P = () => {
-            null == u || u(), (0, c.JG)(n), l.default.track(_.rMx.TEXT_COPIED), !A && C(N + 1), S(!0), f(!0), h.start(E, () => S(!1)), M.start(T, () => C(0));
+            null == u || u(), (0, c.JG)(n), l.default.track(_.rMx.TEXT_COPIED), !A && C(N + 1), S(!0), f(!0), M.start(E, () => S(!1)), h.start(T, () => C(0));
         };
     return (0, s.jsx)(o.Tooltip, {
         text: (() => {
@@ -71,7 +71,7 @@ function m(e) {
                         null == n || n();
                         return;
                     }
-                    h.stop(), S(!1);
+                    M.stop(), S(!1);
                 }
             });
         }

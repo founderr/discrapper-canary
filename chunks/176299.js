@@ -27,8 +27,8 @@ var i = n(735250),
     N = n(963202),
     A = n(118379),
     v = n(652515),
-    L = n(544978),
-    Z = n(540059),
+    Z = n(544978),
+    L = n(540059),
     R = n(194729),
     O = n(668940),
     x = n(831565),
@@ -129,9 +129,9 @@ let eg = 'resizable-sidebar-width',
                 if ((null == e ? void 0 : e.type) === H.z.SERVER_SHOP)
                     switch (e.initialTab) {
                         case 'role_subscriptions':
-                            return L.y.GUILD_ROLE_SUBSCRIPTIONS;
+                            return Z.y.GUILD_ROLE_SUBSCRIPTIONS;
                         case 'guild_products':
-                            return L.y.GUILD_PRODUCTS;
+                            return Z.y.GUILD_PRODUCTS;
                         default:
                             return;
                     }
@@ -143,7 +143,7 @@ let eg = 'resizable-sidebar-width',
                     return d
                         ? (0, i.jsx)(eT, {
                               guildId: a,
-                              initialTab: L.y.GUILD_ROLE_SUBSCRIPTIONS
+                              initialTab: Z.y.GUILD_ROLE_SUBSCRIPTIONS
                           })
                         : (0, i.jsx)(U.Z, { guildId: a });
                 case eh.oC.GUILD_SHOP:
@@ -191,7 +191,7 @@ let eg = 'resizable-sidebar-width',
         }
         return (0, i.jsx)(f.Z, {});
     },
-    eL = a.memo(function () {
+    eZ = a.memo(function () {
         let { guildId: e, channelId: t } = (0, q.Z)(),
             n = (0, u.e7)([et.Z], () => (null != t ? t : et.Z.getChannelId(e))),
             a = (0, x.v)({ location: 'sidebar' });
@@ -215,7 +215,7 @@ let eg = 'resizable-sidebar-width',
               )
             : (0, i.jsx)(ed.Z, {});
     }),
-    eZ = (e) => (0, i.jsx)(ev, { ...e }),
+    eL = (e) => (0, i.jsx)(ev, { ...e }),
     eR = (e) => {
         let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null,
             n = (0, x.a)({ location: 'sidebar' });
@@ -291,7 +291,7 @@ function ek(e) {
     let c = 'app view user trigger debugging';
     h.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), h.R6.trackExposure({ location: c });
     let g = (0, u.e7)([S.Z], () => S.Z.isFullscreenInContext()),
-        p = (0, Z.Q)('ChannelSidebar'),
+        p = (0, L.Q)('ChannelSidebar'),
         T = (0, er.A)((e) => !e.isOpen);
     a.useLayoutEffect(() => {
         if (p) {
@@ -343,7 +343,7 @@ function ek(e) {
             orientation: I.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
         }),
-        L = a.useCallback(() => {
+        Z = a.useCallback(() => {
             er.A.setState((e) => ({ isOpen: !e.isOpen }));
         }, []);
     if (
@@ -375,11 +375,11 @@ function ek(e) {
                         }),
                     (0, i.jsx)(R, {
                         className: eI.sidebarList,
-                        children: (0, i.jsx)(eL, {})
+                        children: (0, i.jsx)(eZ, {})
                     }),
                     p
                         ? (0, i.jsx)(E.Clickable, {
-                              onClick: L,
+                              onClick: Z,
                               'aria-label': 'Resize Sidebar',
                               className: eI.sidebarResizeHandle,
                               onMouseDown: v
@@ -436,7 +436,7 @@ function eB() {
         m = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eh.oC.GUILD_ONBOARDING,
         I = s || r || c || _ || m,
         p = a.useCallback(() => F.Z.openSidebar(), []),
-        S = (0, Z.Q)('AppView');
+        S = (0, L.Q)('AppView');
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: eI.container,
@@ -529,7 +529,7 @@ function eB() {
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: [eE.Z5c.CHANNEL_THREAD_VIEW(':guildId', ':channelId', ':threadId', ':messageId?'), eE.Z5c.CHANNEL(eE.ME, ':channelId'), eE.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')],
-                                                    render: eZ,
+                                                    render: eL,
                                                     impressionName: o.ImpressionNames.GUILD_CHANNEL,
                                                     disableTrack: !0
                                                 }),

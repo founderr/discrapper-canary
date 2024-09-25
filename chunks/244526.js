@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return m;
     }
 });
 var n,
@@ -18,9 +18,9 @@ var n,
     S = t(46141),
     I = t(122289),
     N = t(624138),
-    m = t(689938),
-    A = t(146466);
-class C extends (r = l.PureComponent) {
+    A = t(689938),
+    C = t(146466);
+class m extends (r = l.PureComponent) {
     get typeString() {
         let { paymentSource: e } = this.props;
         if (e instanceof S.qo) return T.ZP.Types.PAYPAL;
@@ -44,48 +44,48 @@ class C extends (r = l.PureComponent) {
     }
     getLabel(e) {
         return e instanceof S.dm
-            ? m.Z.Messages.PAYMENT_SOURCE_CARD_ENDING.format({
+            ? A.Z.Messages.PAYMENT_SOURCE_CARD_ENDING.format({
                   brand: (0, N.De)(e.brand),
                   last_4: e.last4
               })
             : e instanceof S.qo
-              ? m.Z.Messages.PAYMENT_SOURCE_PAYPAL
+              ? A.Z.Messages.PAYMENT_SOURCE_PAYPAL
               : e instanceof S.Sf
-                ? m.Z.Messages.PAYMENT_SOURCE_SOFORT
+                ? A.Z.Messages.PAYMENT_SOURCE_SOFORT
                 : e instanceof S.fv
-                  ? m.Z.Messages.PAYMENT_SOURCE_GIROPAY
+                  ? A.Z.Messages.PAYMENT_SOURCE_GIROPAY
                   : e instanceof S.Vg
-                    ? m.Z.Messages.PAYMENT_SOURCE_PRZELEWY24
+                    ? A.Z.Messages.PAYMENT_SOURCE_PRZELEWY24
                     : e instanceof S.sn
-                      ? m.Z.Messages.PAYMENT_SOURCE_PAYSAFE_CARD
+                      ? A.Z.Messages.PAYMENT_SOURCE_PAYSAFE_CARD
                       : e instanceof S.o_
-                        ? m.Z.Messages.PAYMENT_SOURCE_GCASH
+                        ? A.Z.Messages.PAYMENT_SOURCE_GCASH
                         : e instanceof S.kX
-                          ? m.Z.Messages.PAYMENT_SOURCE_GRABPAY
+                          ? A.Z.Messages.PAYMENT_SOURCE_GRABPAY
                           : e instanceof S.z
-                            ? m.Z.Messages.PAYMENT_SOURCE_MOMO_WALLET
+                            ? A.Z.Messages.PAYMENT_SOURCE_MOMO_WALLET
                             : e instanceof S.Xc
-                              ? m.Z.Messages.PAYMENT_SOURCE_VENMO
+                              ? A.Z.Messages.PAYMENT_SOURCE_VENMO
                               : e instanceof S.Om
-                                ? m.Z.Messages.PAYMENT_SOURCE_KAKAOPAY
+                                ? A.Z.Messages.PAYMENT_SOURCE_KAKAOPAY
                                 : e instanceof S.JC
-                                  ? m.Z.Messages.PAYMENT_SOURCE_GOPAY_WALLET
+                                  ? A.Z.Messages.PAYMENT_SOURCE_GOPAY_WALLET
                                   : e instanceof S.U4
-                                    ? m.Z.Messages.PAYMENT_SOURCE_BANCONTACT
+                                    ? A.Z.Messages.PAYMENT_SOURCE_BANCONTACT
                                     : e instanceof S.jc
-                                      ? m.Z.Messages.PAYMENT_SOURCE_IDEAL_WITH_BANK.format({ bank: (0, u.YE)(e.bank) })
+                                      ? A.Z.Messages.PAYMENT_SOURCE_IDEAL_WITH_BANK.format({ bank: (0, u.YE)(e.bank) })
                                       : e instanceof S.D0
-                                        ? m.Z.Messages.PAYMENT_SOURCE_EPS_WITH_BANK.format({ bank: (0, u.Ul)(e.bank) })
+                                        ? A.Z.Messages.PAYMENT_SOURCE_EPS_WITH_BANK.format({ bank: (0, u.Ul)(e.bank) })
                                         : e instanceof S.u_
-                                          ? m.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY
+                                          ? A.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY
                                           : e instanceof S.$z
-                                            ? m.Z.Messages.PAYMENT_SOURCE_APPLE
-                                            : m.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
+                                            ? A.Z.Messages.PAYMENT_SOURCE_APPLE
+                                            : A.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
     }
     renderDescription() {
         let { paymentSource: e, descriptionClassName: s } = this.props;
         return (0, o.jsx)(_.Text, {
-            className: d()(A.description, s),
+            className: d()(C.description, s),
             variant: 'text-md/semibold',
             children: this.getLabel(e)
         });
@@ -95,7 +95,7 @@ class C extends (r = l.PureComponent) {
             t = null;
         return (
             e instanceof S.dm
-                ? (t = m.Z.Messages.PAYMENT_SOURCE_CARD_EXPIRES.format({
+                ? (t = A.Z.Messages.PAYMENT_SOURCE_CARD_EXPIRES.format({
                       month: (0, I.E2)(e.expiresMonth, s),
                       year: e.expiresYear
                   }))
@@ -119,7 +119,7 @@ class C extends (r = l.PureComponent) {
                 a && (0, o.jsx)(T.ZP, { type: this.typeString }),
                 (0, o.jsxs)(E.Z, {
                     direction: E.Z.Direction.VERTICAL,
-                    className: A.descriptionWrapper,
+                    className: C.descriptionWrapper,
                     children: [
                         (0, o.jsxs)(E.Z, {
                             align: E.Z.Align.CENTER,
@@ -127,27 +127,27 @@ class C extends (r = l.PureComponent) {
                                 this.renderDescription(),
                                 i && e
                                     ? (0, o.jsx)('div', {
-                                          className: A.defaultIndicator,
-                                          children: m.Z.Messages.DEFAULT
+                                          className: C.defaultIndicator,
+                                          children: A.Z.Messages.DEFAULT
                                       })
                                     : null,
                                 n
                                     ? (0, o.jsx)('div', {
-                                          className: A.premiumIndicator,
-                                          children: m.Z.Messages.PAYMENT_SOURCE_SUBSCRIPTION
+                                          className: C.premiumIndicator,
+                                          children: A.Z.Messages.PAYMENT_SOURCE_SUBSCRIPTION
                                       })
                                     : null,
                                 i && s.invalid
                                     ? (0, o.jsx)('div', {
-                                          className: A.invalidIndicator,
-                                          children: m.Z.Messages.PAYMENT_SOURCE_INVALID
+                                          className: C.invalidIndicator,
+                                          children: A.Z.Messages.PAYMENT_SOURCE_INVALID
                                       })
                                     : null
                             ]
                         }),
                         t && null != r
                             ? (0, o.jsx)('div', {
-                                  className: A.subText,
+                                  className: C.subText,
                                   children: r
                               })
                             : null
@@ -164,7 +164,7 @@ class C extends (r = l.PureComponent) {
     showPaymentSourceIcon: !1,
     showLabels: !1
 }),
-    (a = 'defaultProps') in (n = C)
+    (a = 'defaultProps') in (n = m)
         ? Object.defineProperty(n, a, {
               value: i,
               enumerable: !0,

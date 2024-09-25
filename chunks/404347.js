@@ -4,13 +4,13 @@ n.d(t, {
     }
 });
 var r = n(978856),
-    o = n(764303);
+    i = n(764303);
 function a(e, t) {
     if (null == e) return {};
     var n,
         a,
-        i = {},
+        o = {},
         s = r(e);
-    for (a = 0; a < s.length; a++) (n = s[a]), !(o(t).call(t, n) >= 0) && (i[n] = e[n]);
-    return i;
+    for (a = 0; a < s.length; a++) (n = s[a]), !(i(t).call(t, n) >= 0) && (o[n] = e[n]);
+    return o;
 }

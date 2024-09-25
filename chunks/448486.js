@@ -1,20 +1,20 @@
 n.d(t, {
     _: function () {
-        return c;
+        return u;
     }
 });
 var l = n(470079),
-    a = n(442837),
-    s = n(594174),
-    i = n(823379),
-    r = n(51144),
+    s = n(442837),
+    a = n(594174),
+    r = n(823379),
+    i = n(51144),
     o = n(689938);
-function c(e) {
-    let t = (0, a.Wu)([s.default], () =>
+function u(e) {
+    let t = (0, s.Wu)([a.default], () =>
         e.recipients
-            .map((e) => s.default.getUser(e))
-            .filter(i.lm)
-            .map((e) => r.ZP.getName(e))
+            .map((e) => a.default.getUser(e))
+            .filter(r.lm)
+            .map((e) => i.ZP.getName(e))
     );
     return l.useMemo(
         () =>

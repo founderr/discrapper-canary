@@ -9,8 +9,8 @@ var t = s(735250),
     o = s(481060),
     l = s(100527),
     r = s(906732),
-    c = s(138201),
-    a = s(785717),
+    a = s(138201),
+    c = s(785717),
     d = s(221292),
     u = s(687158),
     _ = s(471879),
@@ -25,7 +25,7 @@ function p(e) {
     let { user: n, guildId: s, channelId: p, messageId: v, roleId: S, transitionState: T, onViewBlockedProfileClick: g, showGuildProfile: A = !0, sourceAnalyticsLocations: N = [] } = e,
         L = s === m.ME ? void 0 : s,
         { analyticsLocations: j } = (0, r.ZP)([...N, l.Z.BLOCKED_PROFILE_MODAL]),
-        M = (0, a.ZB)({
+        M = (0, c.ZB)({
             layout: 'BLOCKED_PROFILE_MODAL',
             userId: n.id,
             guildId: L,
@@ -48,7 +48,7 @@ function p(e) {
         O = i.createRef();
     return (0, t.jsx)(r.Gt, {
         value: j,
-        children: (0, t.jsx)(a.Mt, {
+        children: (0, t.jsx)(c.Mt, {
             value: M,
             children: (0, t.jsx)(o.ModalRoot, {
                 transitionState: T,
@@ -94,7 +94,7 @@ function p(e) {
                                         children: b.map((e, n) => {
                                             let { icon: s, description: i } = e;
                                             return (0, t.jsx)(
-                                                c.Z,
+                                                a.Z,
                                                 {
                                                     icon: s,
                                                     title: i,

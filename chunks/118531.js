@@ -1,7 +1,7 @@
 var r = n(67867),
-    o = n(818140).includes,
+    i = n(818140).includes,
     a = n(821819),
-    i = n(501953);
+    o = n(501953);
 r(
     {
         target: 'Array',
@@ -12,8 +12,8 @@ r(
     },
     {
         includes: function (e) {
-            return o(this, e, arguments.length > 1 ? arguments[1] : void 0);
+            return i(this, e, arguments.length > 1 ? arguments[1] : void 0);
         }
     }
 ),
-    i('includes');
+    o('includes');

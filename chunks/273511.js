@@ -1,3 +1,3 @@
-var e = n(360518)('toStringTag'),
-    o = {};
-(o[e] = 'z'), (t.exports = '[object z]' === String(o));
+var r = n(360518)('toStringTag'),
+    i = {};
+(i[r] = 'z'), (e.exports = '[object z]' === String(i));

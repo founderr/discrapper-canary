@@ -3,16 +3,16 @@ var s,
     r,
     i = n(735250),
     a = n(470079),
-    l = n(593473),
-    o = n(756647),
+    o = n(593473),
+    l = n(756647),
     c = n(442837),
     u = n(544891),
     d = n(433517),
     _ = n(481060),
     h = n(570140),
     E = n(893776),
-    g = n(375964),
-    p = n(314897),
+    p = n(375964),
+    g = n(314897),
     m = n(626135),
     f = n(70956),
     I = n(970648),
@@ -22,14 +22,14 @@ let x = 'mweb_handoff_nonce',
     A = 'mweb_handoff_nonce_expiration',
     C = 1 * f.Z.Millis.MINUTE;
 ((r = s || (s = {})).NONCE_MISSING = 'nonce_missing'), (r.NONCE_EXPIRED = 'nonce_expired'), (r.NULL_HANDOFF_TOKEN = 'deep_link_failed'), (r.HANDOFF_EXCHANGE = 'handoff_exchange');
-let v = new Set(['nonce_missing', 'nonce_expired', 'handoff_exchange']),
-    Z = new Set(['deep_link_failed']),
-    S = () => {
+let Z = new Set(['nonce_missing', 'nonce_expired', 'handoff_exchange']),
+    R = new Set(['deep_link_failed']),
+    v = () => {
         d.K.remove(x), d.K.remove(A);
     };
 t.Z = () => {
-    let e = (0, c.e7)([p.default], () => p.default.getFingerprint()),
-        { fingerprint: t, handoff_token: n } = (0, l.parse)(window.location.search),
+    let e = (0, c.e7)([g.default], () => g.default.getFingerprint()),
+        { fingerprint: t, handoff_token: n } = (0, o.parse)(window.location.search),
         s = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
         r = null != s ? s : null !== e ? e : void 0;
     a.useEffect(() => {
@@ -40,20 +40,20 @@ t.Z = () => {
                 fingerprint: s
             });
     }, [s, e]);
-    let [f, R] = a.useState(null),
+    let [f, S] = a.useState(null),
         O = a.useCallback(
             (e) => {
-                R(e),
+                S(e),
                     m.default.track(
                         N.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                         {
                             reason: e,
-                            fingerprint: (0, o.K)(r)
+                            fingerprint: (0, l.K)(r)
                         },
                         { fingerprint: r }
                     );
             },
-            [R, r]
+            [S, r]
         ),
         b = d.K.get(x);
     if (
@@ -62,7 +62,7 @@ t.Z = () => {
         a.useEffect(() => {
             if (null != b) {
                 let e = d.K.get(A);
-                (null == e || Date.now() >= e) && (O('nonce_expired'), S());
+                (null == e || Date.now() >= e) && (O('nonce_expired'), v());
             }
         }, [b, O]),
         a.useEffect(() => {
@@ -83,7 +83,7 @@ t.Z = () => {
                         m.default.track(N.rMx.LOGIN_SUCCESSFUL, {
                             source: N.uRl.MOBILE_WEB_HANDOFF,
                             is_new_user: !1,
-                            fingerprint: (0, o.K)(r)
+                            fingerprint: (0, l.K)(r)
                         });
                         let e = new URL(window.location.href),
                             t = new URLSearchParams(e.search);
@@ -93,27 +93,27 @@ t.Z = () => {
                         O('handoff_exchange');
                     })
                     .finally(() => {
-                        S();
+                        v();
                     });
         }, [n, b, f, r, O]),
         null == r)
     )
         return null;
-    let D = (() => {
+    let P = (() => {
         if (null == f)
             return (0, i.jsxs)(i.Fragment, {
-                children: [g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, i.jsx)('br', {}), g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
+                children: [p.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, i.jsx)('br', {}), p.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
             });
-        if (Z.has(f)) return g.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
-        if (v.has(f)) return g.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN;
+        if (R.has(f)) return p.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
+        if (Z.has(f)) return p.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN;
     })();
-    return null != f && Z.has(f)
+    return null != f && R.has(f)
         ? (0, i.jsx)('div', {
               className: T.errorContainer,
               children: (0, i.jsx)(_.Text, {
                   color: 'interactive-normal',
                   variant: 'text-sm/semibold',
-                  children: D
+                  children: P
               })
           })
         : (0, i.jsxs)('div', {
@@ -121,7 +121,7 @@ t.Z = () => {
               children: [
                   (0, i.jsx)(_.Text, {
                       variant: 'text-sm/semibold',
-                      children: D
+                      children: P
                   }),
                   (0, i.jsx)(_.Button, {
                       color: _.Button.Colors.BRAND_INVERTED,
@@ -139,7 +139,7 @@ t.Z = () => {
                               m.default.track(
                                   N.rMx.DEEP_LINK_CLICKED,
                                   {
-                                      fingerprint: (0, o.K)(r),
+                                      fingerprint: (0, l.K)(r),
                                       source: 'mobile_web_handoff',
                                       destination: N.x0X
                                   },
@@ -153,7 +153,7 @@ t.Z = () => {
                       children: (0, i.jsx)(_.Text, {
                           className: T.buttonText,
                           variant: 'text-sm/semibold',
-                          children: g.MOBILE_WEB_HANDOFF_BUTTON_TEXT
+                          children: p.MOBILE_WEB_HANDOFF_BUTTON_TEXT
                       })
                   })
               ]

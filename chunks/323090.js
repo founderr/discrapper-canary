@@ -9,8 +9,8 @@ var i = s(442837),
     o = s(481060),
     l = s(666520),
     r = s(592125),
-    c = s(430824),
-    a = s(944486),
+    a = s(430824),
+    c = s(944486),
     d = s(785717),
     u = s(621853),
     _ = s(172351),
@@ -25,12 +25,12 @@ function p(e) {
     var n;
     let { user: s, currentUser: p, displayProfile: v, subsection: S, onClose: T } = e,
         { trackUserProfileAction: g } = (0, d.KZ)(),
-        A = (0, i.e7)([c.Z], () => ((null == v ? void 0 : v.guildId) != null ? c.Z.getGuild(v.guildId) : null)),
+        A = (0, i.e7)([a.Z], () => ((null == v ? void 0 : v.guildId) != null ? a.Z.getGuild(v.guildId) : null)),
         N = (0, i.e7)([u.Z], () => {
             var e;
             return null === (e = u.Z.getUserProfile(s.id)) || void 0 === e ? void 0 : e.application;
         }),
-        L = (0, i.e7)([r.Z, a.Z], () => r.Z.getChannel(a.Z.getChannelId()));
+        L = (0, i.e7)([r.Z, c.Z], () => r.Z.getChannel(c.Z.getChannelId()));
     return (0, t.jsxs)(o.ScrollerThin, {
         fade: !0,
         className: h.scroller,

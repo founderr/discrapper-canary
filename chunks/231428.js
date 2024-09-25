@@ -19,9 +19,9 @@ var n,
     S = t(827837),
     I = t(821849),
     N = t(724757),
-    m = t(600164),
-    A = t(239827),
-    C = t(818035),
+    A = t(600164),
+    C = t(239827),
+    m = t(818035),
     g = t(509545),
     h = t(78839),
     O = t(74538),
@@ -54,7 +54,7 @@ function L(e) {
         var e;
         null === (e = l.current) || void 0 === e || e.scrollTo({ to: 0 });
     }, [c]);
-    let m = i.useCallback(
+    let A = i.useCallback(
             (e) => {
                 _(e);
                 let t = s[s.length - 1].id;
@@ -62,16 +62,16 @@ function L(e) {
             },
             [s, r, E]
         ),
-        C = (0, N.Z)('billing-history', l);
+        m = (0, N.Z)('billing-history', l);
     return (0, a.jsx)(d.bG, {
-        navigator: C,
+        navigator: m,
         children: (0, a.jsx)(d.SJ, {
             children: (e) => {
                 let { ref: s, ...i } = e;
-                return (0, a.jsx)(A.Z, {
+                return (0, a.jsx)(C.Z, {
                     className: o()(M.verticalFit, M.paginator),
                     currentPageIndex: c,
-                    onChangePage: m,
+                    onChangePage: A,
                     numPages: r,
                     showPageCount: !1,
                     ref: s,
@@ -143,7 +143,7 @@ class b extends (n = i.PureComponent) {
                                         ? null
                                         : (0, a.jsx)('div', {
                                               className: o()(M.paymentRow, M.bottomDivider),
-                                              children: (0, a.jsxs)(m.Z, {
+                                              children: (0, a.jsxs)(A.Z, {
                                                   className: M.paymentRowHeader,
                                                   children: [
                                                       (0, a.jsx)('div', {
@@ -185,7 +185,7 @@ function Z(e) {
     return !(null == t || null == n || Object.values(R.Si).includes(t) || (0, O.PV)(n));
 }
 function v(e) {
-    let s = (0, _.e7)([C.Z], () => C.Z.getPayments()),
+    let s = (0, _.e7)([m.Z], () => m.Z.getPayments()),
         t = (0, _.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
         n = i.useMemo(
             () =>

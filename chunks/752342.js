@@ -10,8 +10,8 @@ var i = s(481060),
     o = s(100527),
     l = s(906732),
     r = s(5192),
-    c = s(785717),
-    a = s(687158),
+    a = s(785717),
+    c = s(687158),
     d = s(899007),
     u = s(648052),
     _ = s(867176),
@@ -33,9 +33,9 @@ var i = s(481060),
 function j(e) {
     let { user: n, currentUser: s, guildId: j, channelId: M, messageId: b, roleId: R, sessionId: O, initialSection: C, initialSubsection: P, transitionState: y, onClose: U, sourceAnalyticsLocations: D = [] } = e,
         F = j === A.ME ? void 0 : j,
-        B = (0, a.ZP)(n.id, F),
+        B = (0, c.ZP)(n.id, F),
         { analyticsLocations: G } = (0, l.ZP)([...D, o.Z.SIMPLIFIED_PROFILE_MODAL]),
-        w = (0, c.ZB)({
+        w = (0, a.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             sourceSessionId: O,
@@ -47,7 +47,7 @@ function j(e) {
         k = (0, T.Z)(n);
     return (0, t.jsx)(l.Gt, {
         value: G,
-        children: (0, t.jsx)(c.Mt, {
+        children: (0, t.jsx)(a.Mt, {
             value: w,
             children: (0, t.jsx)(i.ModalRoot, {
                 transitionState: y,

@@ -1,12 +1,12 @@
 t(411104);
 var i,
-    l,
     o,
-    r,
-    E = t(442837),
+    l,
+    E,
+    r = t(442837),
     a = t(570140);
 let u = null;
-class s extends (i = E.ZP.Store) {
+class d extends (i = r.ZP.Store) {
     getCurrentPath() {
         return null != u ? u.pathname : null;
     }
@@ -20,16 +20,16 @@ class s extends (i = E.ZP.Store) {
         throw Error('Should not reset the store this way outside of a test environment');
     }
 }
-(r = 'ApplicationStoreLocationStore'),
-    (o = 'displayName') in (l = s)
-        ? Object.defineProperty(l, o, {
-              value: r,
+(E = 'ApplicationStoreLocationStore'),
+    (l = 'displayName') in (o = d)
+        ? Object.defineProperty(o, l, {
+              value: E,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[o] = r),
-    (n.Z = new s(a.Z, {
+        : (o[l] = E),
+    (n.Z = new d(a.Z, {
         APPLICATION_STORE_LOCATION_CHANGE: function (e) {
             let { location: n } = e;
             u = { ...n };

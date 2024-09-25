@@ -9,32 +9,32 @@ n.d(t, {
 var r = n(442837),
     i = n(763296),
     a = n(944486),
-    s = n(606304),
-    o = n(979651);
+    o = n(606304),
+    s = n(979651);
 function l(e, t, n) {
     return e || t || n;
 }
 function u(e) {
-    var t, n, l;
-    let { userId: u, checkSoundSharing: c = !1, checkSoundboardSounds: d = !0, checkIsMuted: _ = !1, context: E } = e,
-        f = (0, r.e7)([o.Z, a.Z], () => {
+    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: u = !0, checkIsMuted: c = !1, context: d } = e,
+        _ = (0, r.e7)([s.Z, a.Z], () => {
             let e = a.Z.getVoiceChannelId();
-            return null != e ? o.Z.getVoiceStateForChannel(e, u) : null;
+            return null != e ? s.Z.getVoiceStateForChannel(e, t) : null;
         }),
-        h = _ && ((null == f ? void 0 : f.mute) || (null == f ? void 0 : f.selfMute)),
-        p = (0, r.e7)([s.Z], () => s.Z.isSpeaking(u, E) && !h),
-        I = (0, r.e7)([s.Z], () => s.Z.isSoundSharing(u) && c),
-        m = (0, r.e7)([i.Z], () => i.Z.isUserPlayingSounds(u) && d);
-    return (t = p), (n = m), (l = I), t || n || l;
+        E = c && ((null == _ ? void 0 : _.mute) || (null == _ ? void 0 : _.selfMute)),
+        f = (0, r.e7)([o.Z], () => o.Z.isSpeaking(t, d) && !E),
+        h = (0, r.e7)([o.Z], () => o.Z.isSoundSharing(t) && n);
+    return l(
+        f,
+        (0, r.e7)([i.Z], () => i.Z.isUserPlayingSounds(t) && u),
+        h
+    );
 }
 function c(e) {
-    var t, n, r;
-    let { userId: l, checkSoundSharing: u = !1, checkSoundboardSounds: c = !0, checkIsMuted: d = !1, context: _ } = e,
-        E = a.Z.getVoiceChannelId(),
-        f = null != E ? o.Z.getVoiceStateForChannel(E, l) : null,
-        h = d && ((null == f ? void 0 : f.mute) || (null == f ? void 0 : f.selfMute)),
-        p = s.Z.isSpeaking(l, _) && !h,
-        I = s.Z.isSoundSharing(l) && u,
-        m = i.Z.isUserPlayingSounds(l) && c;
-    return (t = p), (n = m), (r = I), t || n || r;
+    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: r = !0, checkIsMuted: u = !1, context: c } = e,
+        d = a.Z.getVoiceChannelId(),
+        _ = null != d ? s.Z.getVoiceStateForChannel(d, t) : null,
+        E = u && ((null == _ ? void 0 : _.mute) || (null == _ ? void 0 : _.selfMute)),
+        f = o.Z.isSpeaking(t, c) && !E,
+        h = o.Z.isSoundSharing(t) && n;
+    return l(f, i.Z.isUserPlayingSounds(t) && r, h);
 }

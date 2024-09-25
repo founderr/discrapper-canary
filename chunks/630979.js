@@ -11,8 +11,8 @@ var r = function (e) {
         var a = e.push ? {} : r ? t[e.name] : t;
         i(n.match(e.reg), a, e.names, e.name), e.push && t[e.push].push(a);
     },
-    s = n(767172),
-    o = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
+    o = n(767172),
+    s = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
 t.parse = function (e) {
     var t = {},
         n = [],
@@ -20,7 +20,7 @@ t.parse = function (e) {
     return (
         e
             .split(/(\r\n|\r|\n)/)
-            .filter(o)
+            .filter(s)
             .forEach(function (e) {
                 var t = e[0],
                     i = e.slice(2);
@@ -30,8 +30,8 @@ t.parse = function (e) {
                         fmtp: []
                     }),
                     (r = n[n.length - 1]));
-                for (var o = 0; o < (s[t] || []).length; o += 1) {
-                    var l = s[t][o];
+                for (var s = 0; s < (o[t] || []).length; s += 1) {
+                    var l = o[t][s];
                     if (l.reg.test(i)) return a(l, r, i);
                 }
             }),

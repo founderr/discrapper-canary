@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(516044);
-function o(e) {
+    o = n(516044);
+function s(e) {
     let { className: t, ...n } = e;
     return (0, r.jsx)('div', {
-        className: a()(s.gifTag, t),
+        className: a()(o.gifTag, t),
         ...n
     });
 }

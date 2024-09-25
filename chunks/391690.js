@@ -1,13 +1,14 @@
 let r;
-n(47120), n(757143);
 var i,
-    a = n(442837),
-    s = n(570140),
-    o = n(579806),
-    l = n(358085),
-    u = n(417363),
-    c = n(689938);
-function d(e, t, n) {
+    a = n(47120);
+var o = n(757143);
+var s = n(442837),
+    l = n(570140),
+    u = n(579806),
+    c = n(358085),
+    d = n(417363),
+    _ = n(689938);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,43 +21,82 @@ function d(e, t, n) {
         e
     );
 }
-let _ = {},
-    E = (0, l.isWindows)() ? ''.concat(o.Z.process.env.LOCALAPPDATA, '\\DiscordGames') : (0, l.isMac)() ? '/Applications/DiscordGames' : '/tmp';
-function f(e, t) {
+let f = {},
+    h = (() => ((0, c.isWindows)() ? ''.concat(u.Z.process.env.LOCALAPPDATA, '\\DiscordGames') : (0, c.isMac)() ? '/Applications/DiscordGames' : '/tmp'))();
+function p(e, t) {
     var n;
-    _ = {
-        ..._,
+    f = {
+        ...f,
         [e]: {
-            ...(null !== (n = _[e]) && void 0 !== n ? n : {}),
+            ...(null !== (n = f[e]) && void 0 !== n ? n : {}),
             ...t
         }
     };
 }
-function h(e) {
+function m(e) {
+    (f = { ...f }), delete f[e];
+}
+function I(e, t) {
+    r.pathLabels = {
+        ...r.pathLabels,
+        [e]: t
+    };
+}
+function T(e) {
+    if (null == r.pathLabels[e]) return !1;
+    (r.pathLabels = { ...r.pathLabels }), delete r.pathLabels[e];
+}
+function g(e) {
     let { applicationId: t, branchId: n, installationPath: i } = e;
     null == r.installations[t] && (r.installations[t] = {}),
         (r.installations[t][n] = { installationPath: i }),
         !r.installationPaths.has(i) &&
-            I({
+            v({
                 path: i,
                 metadata: {}
             });
 }
-function p(e) {
+function S(e) {
+    let { applicationId: t, branchId: n } = e,
+        r = d.Z.getState(t, n);
+    null != r &&
+        null == r.buildId &&
+        null == r.manifestIds &&
+        A({
+            applicationId: t,
+            branchId: n
+        });
+}
+function A(e) {
     let { applicationId: t, branchId: n } = e;
     if (null == r.installations[t]) return !1;
     delete r.installations[t][n], 0 === Object.keys(r.installations[t]).length && delete r.installations[t];
 }
-function I(e) {
+function v(e) {
     if (r.installationPaths.has(e.path)) return !1;
-    f(e.path, e.metadata);
+    p(e.path, e.metadata);
     let t = new Set(r.installationPaths);
     t.add(e.path), (r.installationPaths = t);
 }
-class m extends (i = a.ZP.PersistedStore) {
+function N(e) {
+    let { path: t } = e;
+    if (!r.installationPaths.has(t) || r.defaultInstallationPath === t) return !1;
+    let n = new Set(r.installationPaths);
+    n.delete(t), (r.installationPaths = n), m(t), T(t);
+}
+function O(e) {
+    let { path: t, label: n, isDefault: i } = e;
+    if (!r.installationPaths.has(t)) return !1;
+    null != n && '' !== n && r.pathLabels[t] !== n && I(t, n), i && r.defaultInstallationPath !== t && (r.defaultInstallationPath = t);
+}
+function R(e) {
+    let { metadataPayload: t } = e;
+    for (let e in t) p(e, t[e]);
+}
+class C extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         let t = { ...e };
-        null == t.installations && (t.installations = {}), null == t.defaultInstallationPath && (t.defaultInstallationPath = E), null == t.installationPaths ? (t.installationPaths = new Set([t.defaultInstallationPath])) : (t.installationPaths = new Set(Array.from(t.installationPaths))), null == t.pathLabels && (t.pathLabels = {}), (r = t);
+        null == t.installations && (t.installations = {}), null == t.defaultInstallationPath && (t.defaultInstallationPath = h), null == t.installationPaths ? (t.installationPaths = new Set([t.defaultInstallationPath])) : (t.installationPaths = new Set(Array.from(t.installationPaths))), null == t.pathLabels && (t.pathLabels = {}), (r = t);
     }
     getState() {
         return r;
@@ -71,7 +111,7 @@ class m extends (i = a.ZP.PersistedStore) {
         }));
     }
     get installationPathsMetadata() {
-        return _;
+        return f;
     }
     hasGamesInstalledInPath(e) {
         let { installations: t } = r;
@@ -86,11 +126,11 @@ class m extends (i = a.ZP.PersistedStore) {
     }
     getLabelFromPath(e) {
         var t, n;
-        return e === E
-            ? c.Z.Messages.INSTALL_LOCATION_MAIN
+        return e === h
+            ? _.Z.Messages.INSTALL_LOCATION_MAIN
             : null !==
                     (n =
-                        null !== (t = o.Z.fileManager.basename(e)) && void 0 !== t
+                        null !== (t = u.Z.fileManager.basename(e)) && void 0 !== t
                             ? t
                             : e
                                   .replace(/[/\\]+$/, '')
@@ -100,55 +140,15 @@ class m extends (i = a.ZP.PersistedStore) {
               : '?';
     }
 }
-d(m, 'displayName', 'InstallationManagerStore'),
-    d(m, 'persistKey', 'InstallationManagerStore'),
-    (t.Z = new m(s.Z, {
-        DISPATCH_APPLICATION_INSTALL: h,
-        DISPATCH_APPLICATION_UNINSTALL: p,
-        DISPATCH_APPLICATION_CANCEL: function (e) {
-            let { applicationId: t, branchId: n } = e,
-                r = u.Z.getState(t, n);
-            null != r &&
-                null == r.buildId &&
-                null == r.manifestIds &&
-                p({
-                    applicationId: t,
-                    branchId: n
-                });
-        },
-        INSTALLATION_LOCATION_ADD: I,
-        INSTALLATION_LOCATION_REMOVE: function (e) {
-            var t;
-            let { path: n } = e;
-            if (!r.installationPaths.has(n) || r.defaultInstallationPath === n) return !1;
-            let i = new Set(r.installationPaths);
-            i.delete(n),
-                (r.installationPaths = i),
-                (t = n),
-                (_ = { ..._ }),
-                delete _[t],
-                !(function (e) {
-                    if (null == r.pathLabels[e]) return;
-                    (r.pathLabels = { ...r.pathLabels }), delete r.pathLabels[e];
-                })(n);
-        },
-        INSTALLATION_LOCATION_UPDATE: function (e) {
-            let { path: t, label: n, isDefault: i } = e;
-            if (!r.installationPaths.has(t)) return !1;
-            if (null != n && '' !== n && r.pathLabels[t] !== n) {
-                var a, s;
-                (a = t),
-                    (s = n),
-                    (r.pathLabels = {
-                        ...r.pathLabels,
-                        [a]: s
-                    });
-            }
-            i && r.defaultInstallationPath !== t && (r.defaultInstallationPath = t);
-        },
-        INSTALLATION_LOCATION_FETCH_METADATA: function (e) {
-            let { metadataPayload: t } = e;
-            for (let e in t) f(e, t[e]);
-        },
-        DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: h
+E(C, 'displayName', 'InstallationManagerStore'),
+    E(C, 'persistKey', 'InstallationManagerStore'),
+    (t.Z = new C(l.Z, {
+        DISPATCH_APPLICATION_INSTALL: g,
+        DISPATCH_APPLICATION_UNINSTALL: A,
+        DISPATCH_APPLICATION_CANCEL: S,
+        INSTALLATION_LOCATION_ADD: v,
+        INSTALLATION_LOCATION_REMOVE: N,
+        INSTALLATION_LOCATION_UPDATE: O,
+        INSTALLATION_LOCATION_FETCH_METADATA: R,
+        DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: g
     }));

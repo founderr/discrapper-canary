@@ -1,116 +1,116 @@
-i.d(n, {
+n.d(t, {
     Z: function () {
-        return m;
+        return S;
     }
 });
-var t = i(735250);
-i(470079);
-var o = i(120356),
-    a = i.n(o),
-    r = i(442837),
-    l = i(481060),
-    s = i(666188),
-    c = i(372769),
-    d = i(523751),
-    u = i(623624),
-    _ = i(290034),
-    g = i(271383),
-    b = i(594174),
-    h = i(267642),
-    f = i(981631),
-    E = i(689938),
-    T = i(427542);
-function I(e) {
-    let { guild: n, isBannerVisible: i, disableBoostClick: o } = e,
-        a = (0, r.e7)([b.default, g.ZP], () => {
-            let e = b.default.getCurrentUser();
-            return g.ZP.isMember(n.id, null == e ? void 0 : e.id);
+var r = n(735250);
+n(470079);
+var i = n(120356),
+    a = n.n(i),
+    o = n(442837),
+    s = n(481060),
+    l = n(666188),
+    u = n(372769),
+    c = n(523751),
+    d = n(623624),
+    _ = n(290034),
+    E = n(271383),
+    f = n(594174),
+    h = n(267642),
+    p = n(981631),
+    m = n(689938),
+    I = n(427542);
+function T(e) {
+    let { guild: t, isBannerVisible: n, disableBoostClick: i } = e,
+        a = (0, o.e7)([f.default, E.ZP], () => {
+            let e = f.default.getCurrentUser();
+            return E.ZP.isMember(t.id, null == e ? void 0 : e.id);
         }),
-        { premiumTier: s, premiumSubscriberCount: c } = n;
-    if (0 === c && s === f.Eu4.NONE) return null;
-    let d = (e) => {
+        { premiumTier: l, premiumSubscriberCount: u } = t;
+    if (0 === u && l === p.Eu4.NONE) return null;
+    let c = (e) => {
             e.stopPropagation(),
                 e.preventDefault(),
                 a &&
-                    !o &&
-                    (0, u.f)({
-                        guildId: n.id,
+                    !i &&
+                    (0, d.f)({
+                        guildId: t.id,
                         location: {
-                            section: f.jXE.GUILD_HEADER,
-                            object: f.qAy.BOOST_GEM_ICON
+                            section: p.jXE.GUILD_HEADER,
+                            object: p.qAy.BOOST_GEM_ICON
                         }
                     });
         },
-        I = s === f.Eu4.NONE ? E.Z.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : h.nW(s),
-        N = (0, t.jsxs)(t.Fragment, {
+        T = l === p.Eu4.NONE ? m.Z.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : h.nW(l),
+        g = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, t.jsx)('div', {
-                    className: T.tierTooltipTitle,
-                    children: I
+                (0, r.jsx)('div', {
+                    className: I.tierTooltipTitle,
+                    children: T
                 }),
-                (0, t.jsx)('div', { children: E.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({ subscriberCount: c }) })
+                (0, r.jsx)('div', { children: m.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({ subscriberCount: u }) })
             ]
         });
-    return (0, t.jsx)('div', {
-        className: T.guildIconContainer,
-        children: (0, t.jsx)(l.Tooltip, {
-            text: N,
+    return (0, r.jsx)('div', {
+        className: I.guildIconContainer,
+        children: (0, r.jsx)(s.Tooltip, {
+            text: g,
             position: 'bottom',
-            'aria-label': null != I ? I : '',
+            'aria-label': null != T ? T : '',
             children: (e) =>
-                (0, t.jsx)(l.Clickable, {
+                (0, r.jsx)(s.Clickable, {
                     ...e,
-                    className: T.__invalid_premiumGuildIcon,
-                    onClick: d,
-                    children: (0, t.jsx)(_.Z, {
-                        premiumTier: s,
-                        iconBackgroundClassName: i ? T.boostedGuildTierIconBackgroundWithVisibleBanner : null,
-                        iconClassName: i && s !== f.Eu4.TIER_3 ? T.boostedGuildTierMutedIconWithVisibleBanner : null
+                    className: I.__invalid_premiumGuildIcon,
+                    onClick: c,
+                    children: (0, r.jsx)(_.Z, {
+                        premiumTier: l,
+                        iconBackgroundClassName: n ? I.boostedGuildTierIconBackgroundWithVisibleBanner : null,
+                        iconClassName: n && l !== p.Eu4.TIER_3 ? I.boostedGuildTierMutedIconWithVisibleBanner : null
                     })
                 })
         })
     });
 }
-function N(e) {
-    let { guild: n, disableColor: i, disableBoostClick: o } = e;
-    return (0, s.Z)(n)
-        ? (0, t.jsx)('div', {
-              className: T.guildIconV2Container,
-              children: (0, t.jsx)(d.Z, {
-                  guild: n,
+function g(e) {
+    let { guild: t, disableColor: n, disableBoostClick: i } = e;
+    return (0, l.Z)(t)
+        ? (0, r.jsx)('div', {
+              className: I.guildIconV2Container,
+              children: (0, r.jsx)(c.Z, {
+                  guild: t,
                   tooltipPosition: 'bottom',
-                  tooltipColor: l.Tooltip.Colors.PRIMARY,
-                  className: a()(T.guildBadge, { [T.disableColor]: i }),
-                  disableBoostClick: o
+                  tooltipColor: s.Tooltip.Colors.PRIMARY,
+                  className: a()(I.guildBadge, { [I.disableColor]: n }),
+                  disableBoostClick: i
               })
           })
-        : (0, t.jsx)('div', {
-              className: T.guildIconContainer,
-              children: (0, t.jsx)(c.Z, {
-                  guild: n,
+        : (0, r.jsx)('div', {
+              className: I.guildIconContainer,
+              children: (0, r.jsx)(u.Z, {
+                  guild: t,
                   size: 20,
                   tooltipPosition: 'bottom',
-                  tooltipColor: l.Tooltip.Colors.PRIMARY,
-                  className: a()(T.guildBadge, { [T.disableColor]: i })
+                  tooltipColor: s.Tooltip.Colors.PRIMARY,
+                  className: a()(I.guildBadge, { [I.disableColor]: n })
               })
           });
 }
-function m(e) {
-    let { guild: n, isBannerVisible: i, disableBoostClick: o } = e;
-    return (0, s.Z)(n)
-        ? (0, t.jsx)(N, {
-              guild: n,
+function S(e) {
+    let { guild: t, isBannerVisible: n, disableBoostClick: i } = e;
+    return (0, l.Z)(t)
+        ? (0, r.jsx)(g, {
+              guild: t,
               disableColor: !1,
-              disableBoostClick: o
+              disableBoostClick: i
           })
-        : n.hasFeature(f.oNc.VERIFIED) || n.hasFeature(f.oNc.PARTNERED)
-          ? (0, t.jsx)(N, {
-                guild: n,
-                disableColor: !i
+        : t.hasFeature(p.oNc.VERIFIED) || t.hasFeature(p.oNc.PARTNERED)
+          ? (0, r.jsx)(g, {
+                guild: t,
+                disableColor: !n
             })
-          : (0, t.jsx)(I, {
-                guild: n,
-                isBannerVisible: i,
-                disableBoostClick: o
+          : (0, r.jsx)(T, {
+                guild: t,
+                isBannerVisible: n,
+                disableBoostClick: i
             });
 }

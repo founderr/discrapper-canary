@@ -1,8 +1,8 @@
 var r = n(690244)('%TypeError%'),
     i = n(395238),
     a = n(116298),
-    s = n(441596),
-    o = n(75150),
+    o = n(441596),
+    s = n(75150),
     l = n(860438),
     u = n(828148),
     c = n(148309),
@@ -15,7 +15,7 @@ e.exports = function (e, t, n) {
         {
             Type: _,
             IsDataDescriptor: l,
-            IsAccessorDescriptor: o
+            IsAccessorDescriptor: s
         },
         n
     )
@@ -26,11 +26,11 @@ e.exports = function (e, t, n) {
             {
                 Type: _,
                 IsDataDescriptor: l,
-                IsAccessorDescriptor: o
+                IsAccessorDescriptor: s
             },
             E
         )
     )
         throw new r('Assertion failed: Desc is not a valid Property Descriptor');
-    return a(l, c, s, e, t, E);
+    return a(l, c, o, e, t, E);
 };

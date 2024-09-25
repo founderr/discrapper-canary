@@ -25,8 +25,8 @@ var s = n(120356),
     I = n(984370),
     T = n(910611),
     x = n(454585),
-    S = n(134483),
-    v = n(210975),
+    v = n(134483),
+    S = n(210975),
     N = n(809244),
     A = n(618158),
     Z = n(358221),
@@ -35,24 +35,24 @@ var s = n(120356),
     R = n(613548),
     L = n(221888),
     j = n(339340),
-    P = n(354459),
-    O = n(981631),
+    O = n(354459),
+    P = n(981631),
     y = n(231338),
     D = n(689938),
-    U = n(652807),
-    k = n(554034);
+    k = n(652807),
+    U = n(554034);
 function w(e) {
     let { focusedParticipant: t, channel: n } = e,
         s = (0, c.bp)(),
         a = (0, l.e7)([Z.Z], () => Z.Z.getLayout(n.id, s));
     return (0, i.jsx)(A.Z, {
         children: (0, i.jsx)(L.Z, {
-            className: U.participants,
+            className: k.participants,
             participant: t,
             maxVisibleUsers: 5,
             guildId: n.getGuildId(),
             channelId: n.id,
-            disableInteraction: s === O.IlC.POPOUT || a === O.AEg.FULL_SCREEN
+            disableInteraction: s === P.IlC.POPOUT || a === P.AEg.FULL_SCREEN
         })
     });
 }
@@ -64,13 +64,13 @@ function B(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(o.Z, {
-                      className: U.avatar,
+                      className: k.avatar,
                       size: r.AvatarSizes.SIZE_24,
                       user: t,
                       animate: !1
                   }),
                   (0, i.jsx)(r.Text, {
-                      className: U.playingText,
+                      className: k.playingText,
                       variant: 'text-md/medium',
                       color: a,
                       children: l
@@ -85,17 +85,17 @@ function H(e) {
         o = (0, f.qY)(a.id),
         c = null != o ? (0, E.DK)(o) : null,
         d = null != o;
-    if ((null == s ? void 0 : s.type) === P.fO.ACTIVITY)
+    if ((null == s ? void 0 : s.type) === O.fO.ACTIVITY)
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(C.ZP.Divider, { className: U.divider }),
+                    (0, i.jsx)(C.ZP.Divider, { className: k.divider }),
                     (0, i.jsx)(_.Z, {
                         game: n,
-                        className: U.activityIcon
+                        className: k.activityIcon
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: U.playingText,
+                        className: k.playingText,
                         variant: 'text-md/normal',
                         color: 'none',
                         children: (0, u.Z)(n.name)
@@ -107,12 +107,12 @@ function H(e) {
                         })
                 ]
             }));
-    else if ((null == s ? void 0 : s.type) === P.fO.STREAM) {
+    else if ((null == s ? void 0 : s.type) === O.fO.STREAM) {
         let e = s.user,
             n = s.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(C.ZP.Divider, { className: U.divider }),
+                (0, i.jsx)(C.ZP.Divider, { className: k.divider }),
                 (0, i.jsx)(B, {
                     user: e,
                     channel: a,
@@ -133,7 +133,7 @@ function H(e) {
                 recurrenceId: c
             }));
     return (0, i.jsx)('div', {
-        className: U.container,
+        className: k.container,
         children: t
     });
 }
@@ -149,7 +149,7 @@ function G(e) {
         ),
         E = (0, m.ZP)(t),
         g = (0, p.KS)(t),
-        [N] = (0, d.Z)((null == f ? void 0 : f.type) === P.fO.ACTIVITY ? [f.id] : []),
+        [N] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []),
         A = D.Z.Messages.VOICE_CHANNEL;
     t.isDM() ? (A = D.Z.Messages.DM) : t.isGroupDM() && (A = D.Z.Messages.GROUP_DM);
     let b = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)),
@@ -164,19 +164,19 @@ function G(e) {
                   children: (e) =>
                       (0, i.jsxs)(r.Clickable, {
                           ...e,
-                          className: a()(U.channelStatusClickable, { [U.hoverable]: w }),
+                          className: a()(k.channelStatusClickable, { [k.hoverable]: w }),
                           onClick: w ? G : void 0,
                           children: [
                               (0, i.jsx)(r.Text, {
                                   variant: 'text-xs/normal',
-                                  className: a()(U.channelStatus, k.markup, { [U.hoverable]: w }),
+                                  className: a()(k.channelStatus, U.markup, { [k.hoverable]: w }),
                                   children: x.Z.parseVoiceChannelStatus(b, !0, { channelId: t.id })
                               }),
                               w &&
                                   (0, i.jsx)(r.PencilIcon, {
                                       size: 'custom',
                                       color: 'currentColor',
-                                      className: a()(U.pencilIcon, U.hoverable),
+                                      className: a()(k.pencilIcon, k.hoverable),
                                       width: 14,
                                       height: 14
                                   })
@@ -197,12 +197,12 @@ function G(e) {
             { modalKey: j.VOICE_CHANNEL_STATUS_MODAL_KEY }
         );
     }
-    let V = (0, v.m$)({
+    let V = (0, S.m$)({
         channelId: t.id,
         location: 'ChannelCallHeader'
     });
     return (0, i.jsxs)('div', {
-        className: U.subtitleContainer,
+        className: k.subtitleContainer,
         children: [
             (0, i.jsx)(r.ThemeProvider, {
                 theme: y.BR.DARK,
@@ -213,7 +213,7 @@ function G(e) {
                         className: e,
                         childrenBottom: B,
                         toolbar: (0, i.jsx)(R.Z, {
-                            inPopout: o === O.IlC.POPOUT,
+                            inPopout: o === P.IlC.POPOUT,
                             channel: t,
                             appContext: o,
                             inCall: c,
@@ -241,7 +241,7 @@ function G(e) {
                                                         size: 'xs',
                                                         'aria-label': D.Z.Messages.E2EE_CALL_VERIFIED_A11Y,
                                                         color: r.tokens.colors.INTERACTIVE_NORMAL,
-                                                        className: U.secureFramesIcon
+                                                        className: k.secureFramesIcon
                                                     })
                                             })
                                     ]
@@ -259,7 +259,7 @@ function G(e) {
                         ]
                     })
             }),
-            (0, i.jsx)(S.Z, { channelId: t.id })
+            (0, i.jsx)(v.Z, { channelId: t.id })
         ]
     });
 }

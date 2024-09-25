@@ -1,31 +1,31 @@
-var i, r, l, o;
-t.d(n, {
+var r, i;
+n.d(t, {
     Hr: function () {
-        return u;
-    },
-    P4: function () {
         return a;
     },
-    TR: function () {
-        return c;
-    },
-    mz: function () {
-        return i;
-    },
-    tM: function () {
+    P4: function () {
         return s;
     },
-    xv: function () {
+    TR: function () {
+        return l;
+    },
+    mz: function () {
         return r;
+    },
+    tM: function () {
+        return o;
+    },
+    xv: function () {
+        return i;
     }
 }),
-    ((l = i || (i = {})).GET_STARTED_CLICK = 'get_started_click'),
-    (l.DISMISS_FULL_PREVIEW = 'dismiss_full_preview'),
-    (l.DISMISS_TAB_PREVIEW = 'dismiss_tab_preview'),
-    (l.DISMISS_CHANNEL_ROW = 'dismiss_channel_row'),
-    ((o = r || (r = {})).CHANNEL_ROW_CONTEXT_MENU = 'channel_row_context_menu'),
-    (o.SHOP_HEADER_BUTTON = 'shop_header_button');
-let u = 'hasClickedGuildShopProductPreviewTab',
-    s = 'hasClickedGuildShopChannelRow',
-    a = 'https://discord.com/servershop',
-    c = '1 GB';
+    !(function (e) {
+        (e.GET_STARTED_CLICK = 'get_started_click'), (e.DISMISS_FULL_PREVIEW = 'dismiss_full_preview'), (e.DISMISS_TAB_PREVIEW = 'dismiss_tab_preview'), (e.DISMISS_CHANNEL_ROW = 'dismiss_channel_row');
+    })(r || (r = {})),
+    !(function (e) {
+        (e.CHANNEL_ROW_CONTEXT_MENU = 'channel_row_context_menu'), (e.SHOP_HEADER_BUTTON = 'shop_header_button');
+    })(i || (i = {}));
+let a = 'hasClickedGuildShopProductPreviewTab',
+    o = 'hasClickedGuildShopChannelRow',
+    s = 'https://discord.com/servershop',
+    l = '1 GB';

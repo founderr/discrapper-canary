@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return o;
+        return s;
     },
     T: function () {
         return l;
@@ -9,7 +9,7 @@ n.d(t, {
 var r = n(182823),
     i = n(470079),
     a = n(612001);
-let s = {
+let o = {
     border: 0,
     clip: 'rect(0 0 0 0)',
     clipPath: 'inset(50%)',
@@ -21,12 +21,12 @@ let s = {
     width: '1px',
     whiteSpace: 'nowrap'
 };
-function o(e = {}) {
+function s(e = {}) {
     let { style: t, isFocusable: n } = e,
-        [r, o] = (0, i.useState)(!1),
+        [r, s] = (0, i.useState)(!1),
         { focusWithinProps: l } = (0, a.L_)({
             isDisabled: !n,
-            onFocusWithinChange: (e) => o(e)
+            onFocusWithinChange: (e) => s(e)
         }),
         u = (0, i.useMemo)(
             () =>
@@ -34,10 +34,10 @@ function o(e = {}) {
                     ? t
                     : t
                       ? {
-                            ...s,
+                            ...o,
                             ...t
                         }
-                      : s,
+                      : o,
             [r]
         );
     return {
@@ -48,7 +48,7 @@ function o(e = {}) {
     };
 }
 function l(e) {
-    let { children: t, elementType: n = 'div', isFocusable: a, style: s, ...l } = e,
-        { visuallyHiddenProps: u } = o(e);
+    let { children: t, elementType: n = 'div', isFocusable: a, style: o, ...l } = e,
+        { visuallyHiddenProps: u } = s(e);
     return i.createElement(n, (0, r.dG)(l, u), t);
 }

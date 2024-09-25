@@ -26,8 +26,8 @@ var i,
     I = n(708690),
     T = n(194359),
     x = n(425493),
-    S = n(461745),
-    v = n(40851),
+    v = n(461745),
+    S = n(40851),
     N = n(367907),
     A = n(43267),
     Z = n(933557),
@@ -36,12 +36,12 @@ var i,
     R = n(366980),
     L = n(703656),
     j = n(93127),
-    P = n(60349),
-    O = n(428598),
+    O = n(60349),
+    P = n(428598),
     y = n(131704),
     D = n(592125),
-    U = n(341165),
-    k = n(544610),
+    k = n(341165),
+    U = n(544610),
     w = n(19780),
     B = n(306680),
     H = n(699516),
@@ -267,13 +267,13 @@ class eu extends (i = a.PureComponent) {
             (0, s.jsxs)(M.Z, {
                 className: r()(et.searchBar, ei.marginTop20),
                 children: [
-                    (0, s.jsx)(S.ZP, {
+                    (0, s.jsx)(v.ZP, {
                         ref: this.searchBarRef,
                         className: et.searchBarComponent,
                         autoFocus: !0,
                         placeholder: 0 === l.size ? ee.Z.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
                         disabled: this.isPartyFull(),
-                        size: S.ZP.Sizes.MEDIUM,
+                        size: v.ZP.Sizes.MEDIUM,
                         query: t,
                         selectedRow: a,
                         sections: [null !== (e = null == i ? void 0 : i.length) && void 0 !== e ? e : 0],
@@ -486,7 +486,7 @@ class eu extends (i = a.PureComponent) {
         return {
             affinities: e.map((e) => {
                 var t;
-                let n = O.Z.getUserAffinity(e);
+                let n = P.Z.getUserAffinity(e);
                 return null !== (t = null == n ? void 0 : n.communicationProbability) && void 0 !== t ? t : -1;
             })
         };
@@ -702,13 +702,13 @@ class eu extends (i = a.PureComponent) {
 }
 function ed(e) {
     let { channel: t, ...n } = e;
-    P.Z.useExperiment({ location: 'desktop_dm_list' });
-    let i = (0, m.cj)([k.Z, U.Z, G.Z], () => {
+    O.Z.useExperiment({ location: 'desktop_dm_list' });
+    let i = (0, m.cj)([U.Z, k.Z, G.Z], () => {
         let e;
         return (
-            null != t && null != (e = U.Z.getInvite(t.id)) && e.isExpired() && (e = null),
+            null != t && null != (e = k.Z.getInvite(t.id)) && e.isExpired() && (e = null),
             {
-                ...k.Z.getState(),
+                ...U.Z.getState(),
                 invite: e,
                 hideDiscriminator: G.Z.hidePersonalInformation,
                 hideInstantInvites: G.Z.hideInstantInvites
@@ -779,4 +779,4 @@ function em(e) {
 function ep(e) {
     return JSON.stringify(e.sort());
 }
-es(eu, 'contextType', v.ZP);
+es(eu, 'contextType', S.ZP);

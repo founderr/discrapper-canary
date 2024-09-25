@@ -68,10 +68,10 @@ function f(e) {
             ),
                 T(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
         }, [t, E, f, T]),
-        S = s.useCallback(() => {
+        v = s.useCallback(() => {
             g(), T(h.NM.USER_BANNER_BLOCK_CONFIRM);
         }, [g, T]),
-        v = s.useCallback(() => {
+        S = s.useCallback(() => {
             g(), T(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
         }, [g, T]),
         N = s.useCallback(() => {
@@ -81,8 +81,8 @@ function f(e) {
                     let { transitionState: s, onClose: a } = n;
                     return (0, i.jsx)(e, {
                         transitionState: s,
-                        onBlock: S,
-                        onBlockAndReport: v,
+                        onBlock: v,
+                        onBlockAndReport: S,
                         onCancel: () => {
                             null == a || a(), T(h.NM.USER_BANNER_BLOCK_CANCEL);
                         },
@@ -92,7 +92,7 @@ function f(e) {
                     });
                 };
             });
-        }, [S, v, E, t, T]);
+        }, [v, S, E, t, T]);
     return (0, i.jsx)(m.Q, {
         channelId: t,
         warningId: f,

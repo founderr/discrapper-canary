@@ -6,10 +6,10 @@ n.d(t, {
         return i;
     },
     d3: function () {
-        return s;
+        return o;
     },
     oP: function () {
-        return o;
+        return s;
     }
 });
 var r = n(246364);
@@ -19,9 +19,9 @@ function i(e) {
 function a(e) {
     return e === r.wB.SUBMITTED;
 }
-function s(e) {
+function o(e) {
     return e.applicationStatus === r.wB.APPROVED && null != e.lastSeen;
 }
-function o(e) {
+function s(e) {
     return i(e.applicationStatus) && null == e.lastSeen;
 }

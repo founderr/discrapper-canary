@@ -1,11 +1,11 @@
-n(47120);
 var r,
-    i = n(735250),
-    a = n(470079),
+    i = n(47120);
+var a = n(735250),
+    o = n(470079),
     s = n(120356),
-    o = n.n(s),
-    l = n(869035);
-function u(e, t, n) {
+    l = n.n(s),
+    u = n(869035);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function u(e, t, n) {
         e
     );
 }
-class c extends (r = a.PureComponent) {
+class d extends (r = o.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { streamId: n } = e;
         if (t.aReady) {
@@ -49,26 +49,26 @@ class c extends (r = a.PureComponent) {
         return null;
     }
     renderVideo(e, t) {
-        let { children: n, mirror: r, paused: s, component: o } = this.props;
+        let { children: n, mirror: r, paused: i, component: s } = this.props;
         if (null == e) {
             if (null == n) return null;
-            let e = a.Children.only(n);
-            return a.cloneElement(e, {
+            let e = o.Children.only(n);
+            return o.cloneElement(e, {
                 style: { display: t && !r ? void 0 : 'none' },
                 ...e.props
             });
         }
-        return (0, i.jsx)(o, {
-            paused: s,
-            className: l.media,
+        return (0, a.jsx)(s, {
+            paused: i,
+            className: u.media,
             streamId: e,
             onReady: t ? null : this.handleReady
         });
     }
     render() {
         let { mirror: e, className: t } = this.props;
-        return (0, i.jsxs)('div', {
-            className: o()(l.video, t, { [l.mirror]: e }),
+        return (0, a.jsxs)('div', {
+            className: l()(u.video, t, { [u.mirror]: e }),
             onDoubleClick: this.handleDoubleClick,
             onContextMenu: this.handleContextMenu,
             children: [this.renderVideo(this.state.aStreamId, this.state.aReady), this.renderVideo(this.state.bStreamId, this.state.bReady)]
@@ -76,13 +76,13 @@ class c extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            u(this, 'state', {
+            c(this, 'state', {
                 aStreamId: null,
                 aReady: !1,
                 bStreamId: this.props.streamId,
                 bReady: !0
             }),
-            u(this, 'handleReady', () => {
+            c(this, 'handleReady', () => {
                 this.state.aReady
                     ? this.setState({
                           bReady: !0,
@@ -95,14 +95,14 @@ class c extends (r = a.PureComponent) {
                           bReady: !1
                       });
             }),
-            u(this, 'handleDoubleClick', (e) => {
+            c(this, 'handleDoubleClick', (e) => {
                 let { onDoubleClick: t, id: n } = this.props;
                 null == t || t(e, n);
             }),
-            u(this, 'handleContextMenu', (e) => {
+            c(this, 'handleContextMenu', (e) => {
                 let { onContextMenu: t, id: n } = this.props;
                 null == t || t(e, n);
             });
     }
 }
-u(c, 'defaultProps', { paused: !0 }), (t.Z = c);
+c(d, 'defaultProps', { paused: !0 }), (t.Z = d);

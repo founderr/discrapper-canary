@@ -1,9 +1,9 @@
 var r = n(735250);
 n(470079);
-var i = n(392711),
-    a = n(481060),
-    s = n(570140),
-    o = n(846027),
+var i = n(392711);
+var a = n(481060),
+    o = n(570140),
+    s = n(846027),
     l = n(872810),
     u = n(695346),
     c = n(199902),
@@ -13,14 +13,14 @@ var i = n(392711),
     f = n(594174),
     h = n(449753),
     p = n(569545),
-    I = n(803647),
-    m = n(70722),
+    m = n(803647),
+    I = n(70722),
     T = n(981631);
-let S = (0, i.debounce)(l.xc, 1000);
+let g = (0, i.debounce)(l.xc, 1000);
 t.Z = {
     init() {
         h.Z.init(),
-            s.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
+            o.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e,
                     n = c.Z.getCurrentUserActiveStream();
                 if (null != n) {
@@ -28,7 +28,7 @@ t.Z = {
                     (0, l.tK)(n, e);
                 }
             }),
-            s.Z.subscribe('STREAM_DELETE', (e) => {
+            o.Z.subscribe('STREAM_DELETE', (e) => {
                 e.reason === T.si2.STREAM_FULL &&
                     ((0, l.aP)(e.streamKey, !1),
                     (0, a.openModalLazy)(async () => {
@@ -36,15 +36,15 @@ t.Z = {
                         return (t) => (0, r.jsx)(e, { ...t });
                     }));
             }),
-            s.Z.subscribe('STREAM_WATCH', (e) => {
+            o.Z.subscribe('STREAM_WATCH', (e) => {
                 let { streamKey: t, allowMultiple: n } = e;
                 if (n) return;
                 let r = (0, p.my)(t);
                 c.Z.getAllActiveStreams().forEach((e) => {
-                    if (e.ownerId !== r.ownerId && e.ownerId !== d.default.getId()) e.ownerId === d.default.getId() && o.Z.setGoLiveSource(null), (0, l.aP)((0, p.V9)(e), !1);
+                    if (e.ownerId !== r.ownerId && e.ownerId !== d.default.getId()) e.ownerId === d.default.getId() && s.Z.setGoLiveSource(null), (0, l.aP)((0, p.V9)(e), !1);
                 });
             }),
-            s.Z.subscribe('VOICE_STATE_UPDATES', (e) => {
+            o.Z.subscribe('VOICE_STATE_UPDATES', (e) => {
                 let { voiceStates: t } = e;
                 t.forEach((e) => {
                     let { userId: t } = e;
@@ -52,17 +52,17 @@ t.Z = {
                     let n = c.Z.getAllActiveStreams(),
                         r = E.Z.getChannelId();
                     n.forEach((e) => {
-                        e.channelId !== r && (0, I.Z)(e, !1);
+                        e.channelId !== r && (0, m.Z)(e, !1);
                     });
                 });
             }),
-            s.Z.subscribe('STREAM_CREATE', (e) => {
+            o.Z.subscribe('STREAM_CREATE', (e) => {
                 var t;
                 let { streamKey: n } = e,
                     { ownerId: r, guildId: i } = (0, p.my)(n);
                 if (null == i || null == r || r !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
                 let a = _.Z.getMemberCount(i);
-                if (null != a && !(a < 2) && !(a > m.tB)) u.eo.getSetting() && S(n);
+                if (null != a && !(a < 2) && !(a > I.tB)) u.eo.getSetting() && g(n);
             });
     }
 };

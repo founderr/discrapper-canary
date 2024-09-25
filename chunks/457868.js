@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(91218),
     T = n(623624),
     x = n(518738),
-    S = n(965376),
-    v = n(159299),
+    v = n(965376),
+    S = n(159299),
     N = n(184301),
     A = n(347475),
     Z = n(199902),
@@ -34,12 +34,12 @@ var i = n(735250),
     R = n(158776),
     L = n(885110),
     j = n(111583),
-    P = n(594174),
-    O = n(499033),
+    O = n(594174),
+    P = n(499033),
     y = n(626135),
     D = n(585483),
-    U = n(700785),
-    k = n(51144),
+    k = n(700785),
+    U = n(51144),
     w = n(998502),
     B = n(276264),
     H = n(981631),
@@ -60,15 +60,15 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id, u]
             ),
-            E = (0, h.e7)([P.default], () => P.default.getUser(l)),
-            g = (0, h.e7)([P.default], () => P.default.getCurrentUser()),
+            E = (0, h.e7)([O.default], () => O.default.getUser(l)),
+            g = (0, h.e7)([O.default], () => O.default.getCurrentUser()),
             C = (null == E ? void 0 : E.id) === (null == g ? void 0 : g.id),
             I = (0, h.e7)([R.Z, L.Z], () => (C ? L.Z.getStatus() : R.Z.getStatus(l, t.guild_id))),
             x = (0, h.e7)([R.Z], () => R.Z.isMobileOnline(l)),
-            S = (0, h.e7)([R.Z, L.Z], () => (C ? L.Z.getActivities() : R.Z.getActivities(l, t.guild_id))),
-            O = (0, h.e7)([Z.Z], () => Z.Z.getAnyStreamForUser(l)),
+            v = (0, h.e7)([R.Z, L.Z], () => (C ? L.Z.getActivities() : R.Z.getActivities(l, t.guild_id))),
+            P = (0, h.e7)([Z.Z], () => Z.Z.getAnyStreamForUser(l)),
             y = (0, c.JA)(l),
-            U = (0, h.e7)([v.Z], () => v.Z.canUserViewChannel(t.id, a, l)),
+            k = (0, h.e7)([S.Z], () => S.Z.canUserViewChannel(t.id, a, l)),
             w = (null == E ? void 0 : E.id) != null && E.id === r,
             V = s.useCallback(
                 (e) => {
@@ -88,7 +88,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
             ),
             F = s.useCallback(() => {
                 if (null == E) return;
-                let e = '@'.concat(k.ZP.getUserTag(E, { decoration: 'never' })),
+                let e = '@'.concat(U.ZP.getUserTag(E, { decoration: 'never' })),
                     n = '<@'.concat(E.id, '>');
                 D.S.dispatchToLastSubscribed(H.CkL.INSERT_TEXT, {
                     plainText: e,
@@ -136,7 +136,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                     currentUser: g,
                     nick: null == u ? void 0 : u.nick,
                     status: I,
-                    activities: S,
+                    activities: v,
                     colorString: null == u ? void 0 : u.colorString,
                     colorRoleName: f,
                     isTyping: o,
@@ -144,11 +144,11 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                     guildId: t.guild_id,
                     isMobile: x,
                     selected: s,
-                    applicationStream: O,
+                    applicationStream: P,
                     premiumSince: null == Y ? null : new Date(Y),
                     onClickPremiumGuildIcon: z,
                     itemProps: y,
-                    lostPermissionTooltipText: U ? void 0 : G.Z.Messages.THREAD_MEMBER_WITHOUT_ACCESS,
+                    lostPermissionTooltipText: k ? void 0 : G.Z.Messages.THREAD_MEMBER_WITHOUT_ACCESS,
                     isOwner: w,
                     ...e
                 });
@@ -220,7 +220,7 @@ function X(e) {
     let { channel: t, guild: n } = e,
         a = 'members-'.concat(t.id),
         { analyticsLocations: r } = (0, g.ZP)(E.Z.MEMBER_LIST),
-        d = (0, S.D)(t.id, n),
+        d = (0, v.D)(t.id, n),
         p = d.filter((e) => e.userIds.length > 0).reverse()[0],
         { navigator: _, listRef: C } = (function (e, t) {
             let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
@@ -292,7 +292,7 @@ function X(e) {
     )
         return (0, i.jsx)(J, { channel: t });
     let T = o().omit(_.containerProps, ['ref']),
-        x = U.iJ(n);
+        x = k.iJ(n);
     return (0, i.jsx)(g.Gt, {
         value: r,
         children: (0, i.jsx)(c.bG, {
@@ -374,7 +374,7 @@ function J(e) {
                             color: 'currentColor'
                         })
                     }),
-                    (0, i.jsx)(O.Z, { className: V.emptyStateStars })
+                    (0, i.jsx)(P.Z, { className: V.emptyStateStars })
                 ]
             }),
             (0, i.jsx)(m.Heading, {

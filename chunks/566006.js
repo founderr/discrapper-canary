@@ -1,10 +1,10 @@
-var r, i;
 n.d(t, {
     O: function () {
         return r;
     }
-}),
-    n(47120),
-    ((i = r || (r = {}))[(i.NORMAL = 0)] = 'NORMAL'),
-    (i[(i.BURST = 1)] = 'BURST'),
-    (i[(i.VOTE = 2)] = 'VOTE');
+});
+var r,
+    i = n(47120);
+!(function (e) {
+    (e[(e.NORMAL = 0)] = 'NORMAL'), (e[(e.BURST = 1)] = 'BURST'), (e[(e.VOTE = 2)] = 'VOTE');
+})(r || (r = {}));

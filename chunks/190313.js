@@ -1,15 +1,15 @@
 n.d(t, {
     E: function () {
-        return u;
+        return c;
     },
     i: function () {
-        return l;
+        return u;
     }
-}),
-    n(411104);
-var r = n(503461),
-    i = n(218521);
-function a(e, t, n) {
+});
+var r = n(411104);
+var i = n(503461),
+    a = n(218521);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,15 +26,15 @@ function s(e, t) {
     return 0 === t.length
         ? e
         : {
-              key: (0, i.m)(t, e.key),
+              key: (0, a.m)(t, e.key),
               data: e.data,
               generation: e.generation
           };
 }
-function o(e, t) {
+function l(e, t) {
     return 0 === t.length ? e : e.map((e) => s(e, t));
 }
-class l {
+class u {
     close() {
         this.database.close();
     }
@@ -49,7 +49,7 @@ class l {
             {
                 type: 'kv.get_many',
                 table: this.tableId,
-                key: (0, i.d)(this.prefix, e),
+                key: (0, a.d)(this.prefix, e),
                 ordering: null == t ? void 0 : t.ordering,
                 limit: null == t ? void 0 : t.limit
             },
@@ -57,13 +57,13 @@ class l {
         );
     }
     getRange(e, t, n) {
-        let r = (0, i.m)(this.prefix, e),
-            a = (0, i.m)(this.prefix, t);
+        let r = (0, a.m)(this.prefix, e),
+            i = (0, a.m)(this.prefix, t);
         return this.database.execute(
             {
                 type: 'kv.get_range',
                 table: this.tableId,
-                range: [r, a],
+                range: [r, i],
                 ordering: null == n ? void 0 : n.ordering,
                 limit: null == n ? void 0 : n.limit
             },
@@ -76,7 +76,7 @@ class l {
             {
                 type: 'kv.get_kv_entries',
                 table: this.tableId,
-                key: (0, i.d)(this.prefix, e)
+                key: (0, a.d)(this.prefix, e)
             },
             this.defaultDebugTag
         );
@@ -87,7 +87,7 @@ class l {
             {
                 type: 'kv.get_map_entries',
                 table: this.tableId,
-                key: (0, i.d)(this.prefix, e)
+                key: (0, a.d)(this.prefix, e)
             },
             this.defaultDebugTag
         );
@@ -98,7 +98,7 @@ class l {
             {
                 type: 'kv.get_child_ids',
                 table: this.tableId,
-                key: (0, i.d)(this.prefix, e)
+                key: (0, a.d)(this.prefix, e)
             },
             this.defaultDebugTag
         );
@@ -109,31 +109,31 @@ class l {
             {
                 type: 'kv.get_parent_id',
                 table: this.tableId,
-                key: (0, i.m)(this.prefix, e)
+                key: (0, a.m)(this.prefix, e)
             },
             this.defaultDebugTag
         );
     }
     put(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Sn.Replace;
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Sn.Replace;
         return this.database.execute(
             {
                 type: 'kv.put_one',
                 table: this.tableId,
                 cell: s(e, this.prefix),
-                overwrite: t === r.Sn.Replace
+                overwrite: t === i.Sn.Replace
             },
             this.defaultDebugTag
         );
     }
     putAll(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Sn.Replace;
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Sn.Replace;
         return this.database.execute(
             {
                 type: 'kv.put_many',
                 table: this.tableId,
-                cells: o(e, this.prefix),
-                overwrite: t === r.Sn.Replace
+                cells: l(e, this.prefix),
+                overwrite: t === i.Sn.Replace
             },
             this.defaultDebugTag
         );
@@ -149,14 +149,14 @@ class l {
             {
                 type: 'kv.delete_many',
                 table: this.tableId,
-                key: (0, i.d)(this.prefix, e)
+                key: (0, a.d)(this.prefix, e)
             },
             this.defaultDebugTag
         );
     }
     deleteRange(e, t) {
-        let n = (0, i.m)(this.prefix, e),
-            r = (0, i.m)(this.prefix, t);
+        let n = (0, a.m)(this.prefix, e),
+            r = (0, a.m)(this.prefix, t);
         return this.database.execute(
             {
                 type: 'kv.delete_range',
@@ -174,7 +174,7 @@ class l {
             {
                 type: 'kv.delete_generation',
                 table: this.tableId,
-                key: (0, i.d)(this.prefix, e),
+                key: (0, a.d)(this.prefix, e),
                 generation: n,
                 comparer: t
             },
@@ -182,10 +182,10 @@ class l {
         );
     }
     transaction(e, t) {
-        return this.database.transaction((t) => e(new u(this.prefix, this.tableId, t)), t);
+        return this.database.transaction((t) => e(new c(this.prefix, this.tableId, t)), t);
     }
     upgradeTransaction(e) {
-        return new u(this.prefix, this.tableId, e);
+        return new c(this.prefix, this.tableId, e);
     }
     getManySyncUnsafe() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
@@ -193,7 +193,7 @@ class l {
         return this.database.executeSync({
             type: 'kv.get_many',
             table: this.tableId,
-            key: (0, i.d)(this.prefix, e),
+            key: (0, a.d)(this.prefix, e),
             ordering: null == t ? void 0 : t.ordering,
             limit: null == t ? void 0 : t.limit
         });
@@ -203,15 +203,15 @@ class l {
         return this.database.executeSync({
             type: 'kv.get_map_entries',
             table: this.tableId,
-            key: (0, i.d)(this.prefix, e)
+            key: (0, a.d)(this.prefix, e)
         });
     }
     constructor(e, t, n, r) {
-        a(this, 'prefix', void 0),
-            a(this, 'tableId', void 0),
-            a(this, 'database', void 0),
-            a(this, 'defaultDebugTag', void 0),
-            a(this, 'messages', {
+        o(this, 'prefix', void 0),
+            o(this, 'tableId', void 0),
+            o(this, 'database', void 0),
+            o(this, 'defaultDebugTag', void 0),
+            o(this, 'messages', {
                 getLatest: (e) =>
                     this.database.execute(
                         {
@@ -228,26 +228,26 @@ class l {
             (this.defaultDebugTag = r ? void 0 : null);
     }
 }
-class u {
+class c {
     static fromDatabaseTransaction(e, t, n) {
-        return new u(e, t, n);
+        return new c(e, t, n);
     }
     put(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Sn.Replace;
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Sn.Replace;
         this.transaction.add({
             type: 'kv.put_one',
             table: this.tableId,
             cell: s(e, this.prefix),
-            overwrite: t === r.Sn.Replace
+            overwrite: t === i.Sn.Replace
         });
     }
     putAll(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Sn.Replace;
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Sn.Replace;
         this.transaction.add({
             type: 'kv.put_many',
             table: this.tableId,
-            cells: o(e, this.prefix),
-            overwrite: t === r.Sn.Replace
+            cells: l(e, this.prefix),
+            overwrite: t === i.Sn.Replace
         });
     }
     replaceAll(e) {
@@ -258,12 +258,12 @@ class u {
         this.transaction.add({
             type: 'kv.delete_many',
             table: this.tableId,
-            key: (0, i.d)(this.prefix, e)
+            key: (0, a.d)(this.prefix, e)
         });
     }
     deleteRange(e, t) {
-        let n = (0, i.m)(this.prefix, e),
-            r = (0, i.m)(this.prefix, t);
+        let n = (0, a.m)(this.prefix, e),
+            r = (0, a.m)(this.prefix, t);
         this.transaction.add({
             type: 'kv.delete_range',
             table: this.tableId,
@@ -277,16 +277,16 @@ class u {
         this.transaction.add({
             type: 'kv.delete_generation',
             table: this.tableId,
-            key: (0, i.d)(this.prefix, e),
+            key: (0, a.d)(this.prefix, e),
             generation: n,
             comparer: t
         });
     }
     constructor(e, t, n) {
-        a(this, 'prefix', void 0),
-            a(this, 'tableId', void 0),
-            a(this, 'transaction', void 0),
-            a(this, 'messages', {
+        o(this, 'prefix', void 0),
+            o(this, 'tableId', void 0),
+            o(this, 'transaction', void 0),
+            o(this, 'messages', {
                 trimOrphans: (e) => {
                     if (1 !== this.prefix.length || 1 !== e.length) throw Error('trimOrphans: only one prefix component is supported at this time');
                     this.transaction.add({
@@ -300,7 +300,7 @@ class u {
                     this.transaction.add({
                         type: 'messages.trim_channel',
                         table: this.tableId,
-                        key: (0, i.m)(this.prefix, e),
+                        key: (0, a.m)(this.prefix, e),
                         limit: t
                     });
                 },

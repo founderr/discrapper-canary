@@ -4,10 +4,10 @@ n.d(t, {
     }
 });
 var r = n(335832),
-    o = n(665336);
+    i = n(665336);
 function a(e, t, n) {
     return (
-        (t = (0, o.Z)(t)) in e
+        (t = (0, i.Z)(t)) in e
             ? r(e, t, {
                   value: n,
                   enumerable: !0,

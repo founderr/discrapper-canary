@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     w: function () {
-        return s;
+        return o;
     }
 });
 var r = n(515652),
@@ -12,7 +12,7 @@ function a(e, t) {
     var n = new i.p(r.s[e]);
     return n.loadDataTransfer(t), n;
 }
-function s(e) {
+function o(e) {
     if (!e) return null;
     var t = Array.prototype.slice.call(e.types || []);
     return (

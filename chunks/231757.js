@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(842146),
-    s = n(293177),
-    o = n(349407),
+    o = n(293177),
+    s = n(349407),
     l = n(49012),
     u = n(202120),
     c = n(981631);
@@ -19,11 +19,11 @@ function d(e) {
         return;
     }
     if (t === c.ABu.XBOX) {
-        o.K([null != d ? d : 'unknown']);
+        s.K([null != d ? d : 'unknown']);
         return;
     }
     if (t === c.ABu.PLAYSTATION || t === c.ABu.PLAYSTATION_STAGING) {
-        s.K([null != d ? d : 'unknown'], t);
+        o.K([null != d ? d : 'unknown'], t);
         return;
     }
     if (t === c.ABu.DOMAIN) {

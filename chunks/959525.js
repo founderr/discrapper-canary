@@ -6,7 +6,7 @@ n.d(t, {
         return i;
     },
     hN: function () {
-        return s;
+        return o;
     },
     yF: function () {
         return a;
@@ -15,4 +15,4 @@ n.d(t, {
 let r = /\{.+?\}/,
     i = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,
     a = /!!/,
-    s = /!!/g;
+    o = /!!/g;

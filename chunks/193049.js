@@ -1,63 +1,63 @@
-s.r(t),
-    s.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
             return P;
         }
     }),
-    s(47120);
-var n = s(735250),
-    i = s(470079),
-    a = s(512722),
-    r = s.n(a),
-    o = s(990547),
-    l = s(399606),
-    u = s(481060),
-    c = s(232567),
-    d = s(809206),
-    E = s(479531),
-    _ = s(484459),
-    g = s(594174),
-    m = s(626135),
-    S = s(51144),
-    I = s(986197),
-    T = s(135200),
-    N = s(346585),
-    O = s(347649),
-    h = s(361117),
-    f = s(108793),
-    M = s(635774),
-    L = s(387955),
-    x = s(801461),
-    C = s(448624),
-    R = s(981631),
-    A = s(689938),
-    v = s(168534);
+    n(47120);
+var s = n(735250),
+    i = n(470079),
+    a = n(512722),
+    r = n.n(a),
+    o = n(990547),
+    l = n(399606),
+    u = n(481060),
+    d = n(232567),
+    c = n(809206),
+    E = n(479531),
+    _ = n(484459),
+    m = n(594174),
+    g = n(626135),
+    f = n(51144),
+    I = n(986197),
+    S = n(135200),
+    T = n(346585),
+    h = n(347649),
+    N = n(361117),
+    O = n(108793),
+    M = n(635774),
+    C = n(387955),
+    L = n(801461),
+    x = n(448624),
+    R = n(981631),
+    p = n(689938),
+    A = n(168534);
 function P(e) {
     let t,
-        { source: s, transitionState: a, onClose: P, oneClickFlow: y = !1 } = e,
-        [Z, U] = i.useState(y ? C.A.SUGGESTIONS : C.A.INFO),
-        [G, b] = i.useState(!1),
+        { source: n, transitionState: a, onClose: P, oneClickFlow: y = !1 } = e,
+        [Z, b] = i.useState(y ? x.A.SUGGESTIONS : x.A.INFO),
+        [U, G] = i.useState(!1),
         [j, D] = i.useState(null),
-        [W, k] = i.useState(y ? x.Wq.SUGGESTION : x.Wq.NONE),
-        [F, w] = i.useState(!1),
-        [B, q] = i.useState(!1),
+        [W, k] = i.useState(y ? L.Wq.SUGGESTION : L.Wq.NONE),
+        [F, B] = i.useState(!1),
+        [w, q] = i.useState(!1),
         H = i.useRef(null),
-        X = (0, l.e7)([T.Z], () => T.Z.isCurrentUsernameInvalid()),
-        V = (0, l.e7)([g.default], () => {
-            let e = g.default.getCurrentUser();
+        X = (0, l.e7)([S.Z], () => S.Z.isCurrentUsernameInvalid()),
+        V = (0, l.e7)([m.default], () => {
+            let e = m.default.getCurrentUser();
             return r()(null != e, 'PomeloModal: user cannot be undefined'), e;
         }),
-        z = (0, O.CC)(),
-        { usernameSuggestion: Y, usernameSuggestionLoading: K } = (0, h.G)(y ? x.en : void 0);
+        z = (0, h.CC)(),
+        { usernameSuggestion: Y, usernameSuggestionLoading: K } = (0, N.G)(y ? L.en : void 0);
     i.useEffect(() => {
-        W === x.Wq.EDIT_USERNAME && q(!0),
-            m.default.track(R.rMx.POMELO_EDIT_STEP_VIEWED, {
-                source: s,
+        W === L.Wq.EDIT_USERNAME && q(!0),
+            g.default.track(R.rMx.POMELO_EDIT_STEP_VIEWED, {
+                source: n,
                 step: W
             });
-    }, [W, s]),
+    }, [W, n]),
         i.useEffect(() => {
-            !B &&
+            !w &&
                 !F &&
                 null != Y &&
                 Y.length > 0 &&
@@ -65,14 +65,14 @@ function P(e) {
                     ...e,
                     username: Y
                 }));
-        }, [Y, B, F]);
+        }, [Y, w, F]);
     let [Q, $] = i.useState({
-            username: (0, N.e$)(V),
-            globalName: S.ZP.getName(V)
+            username: (0, T.e$)(V),
+            globalName: f.ZP.getName(V)
         }),
         J = (e) => {
             D(null),
-                null != e.username && w(!0),
+                null != e.username && B(!0),
                 $((t) => ({
                     ...t,
                     ...e
@@ -81,100 +81,100 @@ function P(e) {
         ee = i.useMemo(
             () => [
                 {
-                    slideId: C.A.INFO,
-                    next: C.A.EDIT_SCREEN,
+                    slideId: x.A.INFO,
+                    next: x.A.EDIT_SCREEN,
                     footerButtons: ['REMIND_ME_LATER', 'GET_STARTED']
                 },
                 {
-                    slideId: C.A.EDIT_SCREEN,
-                    next: C.A.FINISH_LATER,
-                    back: C.A.INFO,
-                    footerButtons: [W === x.Wq.PREVIEW ? 'GOT_IT' : 'BACK', W === x.Wq.PREVIEW ? 'GOT_IT' : W === x.Wq.EDIT_USERNAME ? 'SUBMIT' : 'NEXT']
+                    slideId: x.A.EDIT_SCREEN,
+                    next: x.A.FINISH_LATER,
+                    back: x.A.INFO,
+                    footerButtons: [W === L.Wq.PREVIEW ? 'GOT_IT' : 'BACK', W === L.Wq.PREVIEW ? 'GOT_IT' : W === L.Wq.EDIT_USERNAME ? 'SUBMIT' : 'NEXT']
                 },
                 {
-                    slideId: C.A.FINISH_LATER,
-                    back: C.A.EDIT_SCREEN
+                    slideId: x.A.FINISH_LATER,
+                    back: x.A.EDIT_SCREEN
                 },
                 {
-                    slideId: C.A.SUGGESTIONS,
-                    footerButtons: [W === x.Wq.PREVIEW ? 'GOT_IT' : 'UPDATE']
+                    slideId: x.A.SUGGESTIONS,
+                    footerButtons: [W === L.Wq.PREVIEW ? 'GOT_IT' : 'UPDATE']
                 },
-                { slideId: C.A.FINISH_LATER }
+                { slideId: x.A.FINISH_LATER }
             ],
             [W]
         ),
         et = ee.length,
-        es = i.useCallback(async () => {
+        en = i.useCallback(async () => {
             if (Q.globalName.length <= 0) {
-                let e = A.Z.Messages.POMELO_EXISTING_FLOW_ERROR_LIMIT.format({
+                let e = p.Z.Messages.POMELO_EXISTING_FLOW_ERROR_LIMIT.format({
                     minNum: 1,
                     maxNum: 32
                 });
                 D(e),
-                    m.default.track(R.rMx.POMELO_ERRORS, {
+                    g.default.track(R.rMx.POMELO_ERRORS, {
                         reason: e,
                         display_name_error: !0,
                         location: 'modal'
                     });
                 return;
             }
-            if (S.ZP.getGlobalName(V) === Q.globalName) {
-                k(x.Wq.EDIT_USERNAME);
+            if (f.ZP.getGlobalName(V) === Q.globalName) {
+                k(L.Wq.EDIT_USERNAME);
                 return;
             }
             try {
-                D(null), b(!0), await (0, d.S2)({ global_name: Q.globalName }), k(x.Wq.EDIT_USERNAME);
+                D(null), G(!0), await (0, c.S2)({ global_name: Q.globalName }), k(L.Wq.EDIT_USERNAME);
             } catch (t) {
                 let e = new E.Z(t).getAnyErrorMessage();
-                m.default.track(R.rMx.POMELO_ERRORS, {
+                g.default.track(R.rMx.POMELO_ERRORS, {
                     reason: e,
                     display_name_error: !0,
                     location: 'modal'
                 }),
                     D(e);
             } finally {
-                b(!1);
+                G(!1);
             }
         }, [V, Q]),
-        en = i.useCallback(async () => {
+        es = i.useCallback(async () => {
             try {
-                D(null), b(!0), await I.Z.createPomelo({ username: (0, N.R_)(Q.username) }, y), await (0, c.In)(V.id), k(x.Wq.PREVIEW);
-            } catch (s) {
-                let e = new E.Z(s),
-                    t = (null == e ? void 0 : e.status) != null && e.status >= 400 && e.status < 500 ? e.getAnyErrorMessage() : A.Z.Messages.ERROR_GENERIC_TITLE;
+                D(null), G(!0), await I.Z.createPomelo({ username: (0, T.R_)(Q.username) }, y), await (0, d.In)(V.id), k(L.Wq.PREVIEW);
+            } catch (n) {
+                let e = new E.Z(n),
+                    t = (null == e ? void 0 : e.status) != null && e.status >= 400 && e.status < 500 ? e.getAnyErrorMessage() : p.Z.Messages.ERROR_GENERIC_TITLE;
                 D(t),
-                    m.default.track(R.rMx.POMELO_ERRORS, {
+                    g.default.track(R.rMx.POMELO_ERRORS, {
                         reason: t,
                         username_error: !0,
                         location: 'modal',
                         one_click_flow: y
                     });
             } finally {
-                b(!1);
+                G(!1);
             }
         }, [Q, V.id, y]),
-        ei = X || (0, N.NX)(V),
+        ei = X || (0, T.NX)(V),
         ea = i.useCallback(() => {
-            k(ei ? x.Wq.EDIT_USERNAME : x.Wq.EDIT_DISPLAY_NAME), U(ee[Math.min(et - 1, Z + 1)].slideId);
+            k(ei ? L.Wq.EDIT_USERNAME : L.Wq.EDIT_DISPLAY_NAME), b(ee[Math.min(et - 1, Z + 1)].slideId);
         }, [Z, ee, et, ei]),
         er = i.useCallback(() => {
-            D(null), Z === C.A.EDIT_SCREEN ? (W === x.Wq.EDIT_USERNAME ? (ei ? (k(x.Wq.NONE), U(ee[Math.max(0, Z - 1)].slideId)) : k(x.Wq.EDIT_DISPLAY_NAME)) : W === x.Wq.EDIT_DISPLAY_NAME ? (k(x.Wq.NONE), U(ee[Math.max(0, Z - 1)].slideId)) : W === x.Wq.PREVIEW && k(x.Wq.EDIT_USERNAME)) : U(ee[Math.max(0, Z - 1)].slideId);
+            D(null), Z === x.A.EDIT_SCREEN ? (W === L.Wq.EDIT_USERNAME ? (ei ? (k(L.Wq.NONE), b(ee[Math.max(0, Z - 1)].slideId)) : k(L.Wq.EDIT_DISPLAY_NAME)) : W === L.Wq.EDIT_DISPLAY_NAME ? (k(L.Wq.NONE), b(ee[Math.max(0, Z - 1)].slideId)) : W === L.Wq.PREVIEW && k(L.Wq.EDIT_USERNAME)) : b(ee[Math.max(0, Z - 1)].slideId);
         }, [ee, Z, W, ei]),
         eo = i.useCallback(() => {
-            U(C.A.FINISH_LATER);
+            b(x.A.FINISH_LATER);
         }, []),
         el = i.useCallback(() => {
-            y ? (U(C.A.SUGGESTIONS), k(x.Wq.SUGGESTION)) : (U(C.A.INFO), k(x.Wq.NONE));
+            y ? (b(x.A.SUGGESTIONS), k(L.Wq.SUGGESTION)) : (b(x.A.INFO), k(L.Wq.NONE));
         }, [y]),
         eu = i.useMemo(() => {
-            if (Z === C.A.EDIT_SCREEN && W === x.Wq.EDIT_DISPLAY_NAME) return es;
-            if (Z === C.A.EDIT_SCREEN && W === x.Wq.EDIT_USERNAME) return en;
-            if (Z === C.A.SUGGESTIONS && W === x.Wq.SUGGESTION) return en;
+            if (Z === x.A.EDIT_SCREEN && W === L.Wq.EDIT_DISPLAY_NAME) return en;
+            if (Z === x.A.EDIT_SCREEN && W === L.Wq.EDIT_USERNAME) return es;
+            if (Z === x.A.SUGGESTIONS && W === L.Wq.SUGGESTION) return es;
             else return ea;
-        }, [Z, W, es, en, ea]),
-        ec = i.useMemo(() => {
+        }, [Z, W, en, es, ea]),
+        ed = i.useMemo(() => {
             var e, t;
-            return p(
+            return v(
                 null !== (t = null === (e = ee.find((e) => e.slideId === Z)) || void 0 === e ? void 0 : e.footerButtons) && void 0 !== t ? t : [],
                 {
                     handleNext: eu,
@@ -182,34 +182,34 @@ function P(e) {
                     handleRemindMeLater: eo,
                     onClose: P
                 },
-                G,
+                U,
                 K,
                 F
             );
-        }, [er, eo, eu, P, ee, Z, G, K, F]),
-        ed = i.useMemo(() => (0, N.zV)(V), [V]);
+        }, [er, eo, eu, P, ee, Z, U, K, F]),
+        ec = i.useMemo(() => (0, T.zV)(V), [V]);
     i.useLayoutEffect(() => {
-        (0, _.Z)(V.id, ed);
-    }, [V, ed]),
+        (0, _.Z)(V.id, ec);
+    }, [V, ec]),
         i.useEffect(() => {
             var e, t;
             switch (W) {
-                case x.Wq.EDIT_DISPLAY_NAME:
+                case L.Wq.EDIT_DISPLAY_NAME:
                     null === (e = H.current) || void 0 === e || e.focusDisplayName();
                     break;
-                case x.Wq.EDIT_USERNAME:
-                case x.Wq.SUGGESTION:
+                case L.Wq.EDIT_USERNAME:
+                case L.Wq.SUGGESTION:
                     null === (t = H.current) || void 0 === t || t.focusUsername();
             }
         }, [W]);
     return (
-        !F && null == j && (W === x.Wq.EDIT_USERNAME ? (t = A.Z.Messages.POMELO_SUGGESTION_ORIGIN_NOTICE.format({ source: V.username })) : W === x.Wq.SUGGESTION && (K || null != Y) && (t = A.Z.Messages.POMELO_SUGGESTIONS_OCF)),
-        (0, n.jsxs)(u.ModalRoot, {
-            className: v.modalRoot,
+        !F && null == j && (W === L.Wq.EDIT_USERNAME ? (t = p.Z.Messages.POMELO_SUGGESTION_ORIGIN_NOTICE.format({ source: V.username })) : W === L.Wq.SUGGESTION && (K || null != Y) && (t = p.Z.Messages.POMELO_SUGGESTIONS_OCF)),
+        (0, s.jsxs)(u.ModalRoot, {
+            className: A.modalRoot,
             impression: {
                 impressionName: o.ImpressionNames.POMELO_LANDING,
                 impressionProperties: {
-                    source: s,
+                    source: n,
                     impression_group: o.ImpressionGroups.POMELO_FLOW,
                     one_click_flow: y
                 }
@@ -217,35 +217,35 @@ function P(e) {
             transitionState: a,
             size: u.ModalSize.DYNAMIC,
             children: [
-                (0, n.jsx)(u.Button, {
+                (0, s.jsx)(u.Button, {
                     onClick: () => {
-                        z && (Z === C.A.SUGGESTIONS || Z === C.A.EDIT_SCREEN) ? U(C.A.FINISH_LATER) : P();
+                        z && (Z === x.A.SUGGESTIONS || Z === x.A.EDIT_SCREEN) ? b(x.A.FINISH_LATER) : P();
                     },
                     size: u.Button.Sizes.MIN,
                     look: u.Button.Looks.BLANK,
-                    className: v.closeContainer,
-                    'aria-label': A.Z.Messages.CLOSE,
-                    children: (0, n.jsx)(u.XSmallIcon, {
+                    className: A.closeContainer,
+                    'aria-label': p.Z.Messages.CLOSE,
+                    children: (0, s.jsx)(u.XSmallIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 15,
                         height: 15,
-                        className: v.close
+                        className: A.close
                     })
                 }),
-                (0, n.jsx)(u.ModalContent, {
-                    className: v.contentContainer,
-                    children: (0, n.jsxs)(u.Slides, {
+                (0, s.jsx)(u.ModalContent, {
+                    className: A.contentContainer,
+                    children: (0, s.jsxs)(u.Slides, {
                         activeSlide: Z,
                         width: 480,
                         children: [
-                            (0, n.jsx)(u.Slide, {
-                                id: C.A.INFO,
-                                children: (0, n.jsx)(L.Z, { user: V })
+                            (0, s.jsx)(u.Slide, {
+                                id: x.A.INFO,
+                                children: (0, s.jsx)(C.Z, { user: V })
                             }),
-                            (0, n.jsx)(u.Slide, {
-                                id: C.A.EDIT_SCREEN,
-                                children: (0, n.jsx)(f.Z, {
+                            (0, s.jsx)(u.Slide, {
+                                id: x.A.EDIT_SCREEN,
+                                children: (0, s.jsx)(O.Z, {
                                     user: V,
                                     error: j,
                                     editState: W,
@@ -253,21 +253,21 @@ function P(e) {
                                     formValues: Q,
                                     footerNotice: t,
                                     onChangeFormValue: J,
-                                    onFocusUsername: () => k(x.Wq.EDIT_USERNAME),
-                                    onFocusDisplayName: () => k(x.Wq.EDIT_DISPLAY_NAME),
+                                    onFocusUsername: () => k(L.Wq.EDIT_USERNAME),
+                                    onFocusDisplayName: () => k(L.Wq.EDIT_DISPLAY_NAME),
                                     onClose: P
                                 })
                             }),
-                            (0, n.jsx)(u.Slide, {
-                                id: C.A.FINISH_LATER,
-                                children: (0, n.jsx)(M.Z, {
+                            (0, s.jsx)(u.Slide, {
+                                id: x.A.FINISH_LATER,
+                                children: (0, s.jsx)(M.Z, {
                                     onClose: P,
                                     handleStartFlow: el
                                 })
                             }),
-                            (0, n.jsx)(u.Slide, {
-                                id: C.A.SUGGESTIONS,
-                                children: (0, n.jsx)(f.Z, {
+                            (0, s.jsx)(u.Slide, {
+                                id: x.A.SUGGESTIONS,
+                                children: (0, s.jsx)(O.Z, {
                                     user: V,
                                     error: j,
                                     editState: W,
@@ -275,8 +275,8 @@ function P(e) {
                                     formValues: Q,
                                     footerNotice: t,
                                     onChangeFormValue: J,
-                                    onFocusUsername: () => k(x.Wq.SUGGESTION),
-                                    onFocusDisplayName: () => k(x.Wq.EDIT_DISPLAY_NAME),
+                                    onFocusUsername: () => k(L.Wq.SUGGESTION),
+                                    onFocusDisplayName: () => k(L.Wq.EDIT_DISPLAY_NAME),
                                     onClose: P,
                                     usernameSuggestionLoading: K,
                                     oneClickFlow: y
@@ -285,80 +285,80 @@ function P(e) {
                         ]
                     })
                 }),
-                ec
+                ed
             ]
         })
     );
 }
-let p = (e, t, s, i, a) =>
+let v = (e, t, n, i, a) =>
     0 === e.length
         ? null
-        : (0, n.jsxs)(u.ModalFooter, {
-              className: v.footer,
+        : (0, s.jsxs)(u.ModalFooter, {
+              className: A.footer,
               children: [
-                  (0, n.jsxs)('div', {
-                      className: v.inline,
+                  (0, s.jsxs)('div', {
+                      className: A.inline,
                       children: [
                           e.includes('REMIND_ME_LATER') &&
-                              (0, n.jsx)(u.Button, {
-                                  className: v.unfilledButton,
+                              (0, s.jsx)(u.Button, {
+                                  className: A.unfilledButton,
                                   type: 'button',
                                   size: u.Button.Sizes.SMALL,
                                   look: u.Button.Looks.BLANK,
                                   color: u.Button.Colors.CUSTOM,
                                   onClick: t.handleRemindMeLater,
-                                  children: A.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_SKIP_CTA
+                                  children: p.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_SKIP_CTA
                               }),
                           e.includes('NEXT') &&
-                              (0, n.jsx)(u.Button, {
+                              (0, s.jsx)(u.Button, {
                                   type: 'button',
                                   size: u.Button.Sizes.SMALL,
-                                  submitting: s,
+                                  submitting: n,
                                   onClick: t.handleNext,
-                                  children: A.Z.Messages.NEXT
+                                  children: p.Z.Messages.NEXT
                               }),
                           e.includes('SUBMIT') &&
-                              (0, n.jsx)(u.Button, {
+                              (0, s.jsx)(u.Button, {
                                   type: 'button',
                                   size: u.Button.Sizes.SMALL,
-                                  submitting: s,
+                                  submitting: n,
                                   onClick: t.handleNext,
-                                  children: A.Z.Messages.SUBMIT
+                                  children: p.Z.Messages.SUBMIT
                               }),
                           e.includes('GET_STARTED') &&
-                              (0, n.jsx)(u.Button, {
+                              (0, s.jsx)(u.Button, {
                                   type: 'button',
                                   size: u.Button.Sizes.SMALL,
                                   onClick: t.handleNext,
-                                  children: A.Z.Messages.GET_STARTED
+                                  children: p.Z.Messages.GET_STARTED
                               }),
                           e.includes('GOT_IT') &&
-                              (0, n.jsx)(u.Button, {
+                              (0, s.jsx)(u.Button, {
                                   type: 'button',
                                   size: u.Button.Sizes.SMALL,
                                   onClick: t.onClose,
-                                  children: A.Z.Messages.GOT_IT
+                                  children: p.Z.Messages.GOT_IT
                               }),
                           e.includes('UPDATE') &&
-                              (0, n.jsx)(u.Button, {
+                              (0, s.jsx)(u.Button, {
                                   type: 'button',
                                   size: u.Button.Sizes.SMALL,
                                   disabled: i && !a,
-                                  submitting: s,
+                                  submitting: n,
                                   onClick: t.handleNext,
-                                  children: A.Z.Messages.UPDATE
+                                  children: p.Z.Messages.UPDATE
                               })
                       ]
                   }),
                   e.includes('BACK') &&
-                      (0, n.jsx)(u.Button, {
-                          className: v.unfilledButton,
+                      (0, s.jsx)(u.Button, {
+                          className: A.unfilledButton,
                           type: 'button',
                           size: u.Button.Sizes.SMALL,
                           look: u.Button.Looks.BLANK,
                           color: u.Button.Colors.CUSTOM,
                           onClick: t.handleBack,
-                          children: A.Z.Messages.BACK
+                          children: p.Z.Messages.BACK
                       })
               ]
           });

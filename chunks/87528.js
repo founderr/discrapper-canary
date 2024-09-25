@@ -1,6 +1,6 @@
 i.d(t, {
     Z: function () {
-        return g;
+        return C;
     }
 }),
     i(47120),
@@ -9,8 +9,8 @@ i.d(t, {
 var n = i(735250),
     a = i(470079),
     r = i(912370),
-    o = i(477690),
-    s = i(313201),
+    s = i(477690),
+    o = i(313201),
     l = i(626135),
     c = i(463571),
     d = i(744142),
@@ -19,25 +19,25 @@ var n = i(735250),
     _ = i(216547),
     p = i(57716),
     m = i(981631),
-    f = i(341151);
-function g(e) {
+    g = i(341151);
+function C(e) {
     let {
             collection: t,
-            collection: { id: i, title: g, application_directory_collection_items: C }
+            collection: { id: i, title: C, application_directory_collection_items: x }
         } = e,
-        [x, I] = a.useState(300),
+        [f, I] = a.useState(300),
         [b, N] = a.useState(4),
-        v = parseFloat(o.Z.COLLECTION_LIST_CARD_GAP),
-        A = (0, u.useApplicationDirectoryHistory)((e) => e.guildId),
-        E = (0, p.Z)({ collection: t });
+        v = parseFloat(s.Z.COLLECTION_LIST_CARD_GAP),
+        E = (0, u.useApplicationDirectoryHistory)((e) => e.guildId),
+        A = (0, p.Z)({ collection: t });
     a.useEffect(() => {
         function e() {
             var e;
-            let t = null === (e = E.current) || void 0 === e ? void 0 : e.offsetWidth,
+            let t = null === (e = A.current) || void 0 === e ? void 0 : e.offsetWidth,
                 i = 1;
             return null == t ? 300 : (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1000 && (i = 4), N(i), (t - (i - 1) * v) / i);
         }
-        let t = E.current;
+        let t = A.current;
         if (null == t) return;
         let i = new ResizeObserver(() => {
             I(e());
@@ -49,18 +49,18 @@ function g(e) {
                 i.disconnect();
             }
         );
-    }, [v, E]);
-    let T = (0, s.Dt)();
+    }, [v, A]);
+    let T = (0, o.Dt)();
     return (0, n.jsx)('div', {
-        ref: E,
+        ref: A,
         children: (0, n.jsx)(_.Z, {
-            header: g,
+            header: C,
             headerId: T,
-            tileWidth: x,
+            tileWidth: f,
             tileMargin: v,
             onScroll: (e) => {
                 let { tileIndex: t } = e,
-                    n = C.slice(t, t + b).reduce((e, t) => {
+                    n = x.slice(t, t + b).reduce((e, t) => {
                         let { type: i, application: n } = t;
                         return i === r.C.APPLICATION && null != n && e.push(n.id), e;
                     }, []);
@@ -68,34 +68,34 @@ function g(e) {
                     collection_id: i,
                     offset: t,
                     results: n,
-                    guild_id: A
+                    guild_id: E
                 });
             },
             children: (0, n.jsx)('ul', {
                 'aria-labelledby': T,
-                className: f.itemsContainer,
-                children: C.map((e) => {
-                    let { id: t, type: a, application: o } = e;
-                    if (a === r.C.APPLICATION && null != o)
+                className: g.itemsContainer,
+                children: x.map((e) => {
+                    let { id: t, type: a, application: s } = e;
+                    if (a === r.C.APPLICATION && null != s)
                         return (0, n.jsx)(
                             'li',
                             {
-                                style: { width: x },
-                                className: f.itemContainer,
+                                style: { width: f },
+                                className: g.itemContainer,
                                 children: (0, n.jsx)(c.Z, {
-                                    className: f.seoAnchor,
-                                    href: m.Z5c.APPLICATION_DIRECTORY_PROFILE(o.id),
+                                    className: g.seoAnchor,
+                                    href: m.Z5c.APPLICATION_DIRECTORY_PROFILE(s.id),
                                     children: (0, n.jsx)(d.Z, {
-                                        application: o,
+                                        application: s,
                                         onClick: (e) => {
                                             let { mutualGuilds: t } = e;
                                             l.default.track(m.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                                                 collection_id: i,
-                                                application_id: o.id,
-                                                guild_id: A,
+                                                application_id: s.id,
+                                                guild_id: E,
                                                 shown_mutual_guilds_count: t.length
                                             }),
-                                                (0, h.goToApplication)({ applicationId: o.id });
+                                                (0, h.goToApplication)({ applicationId: s.id });
                                         },
                                         animatesOnHover: !0
                                     })

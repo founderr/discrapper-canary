@@ -20,9 +20,9 @@ var n = t(735250),
     S = t(275850),
     I = t(906732),
     N = t(15640),
-    m = t(246946),
-    A = t(853872),
-    C = t(509545),
+    A = t(246946),
+    C = t(853872),
+    m = t(509545),
     g = t(74538),
     h = t(212895),
     O = t(296848),
@@ -33,8 +33,8 @@ var n = t(735250),
     M = t(739017);
 function D(e) {
     let { subscription: s, onPaymentSourceAdded: t, highlightAddPaymentMethodButton: i, dropdownClassName: o, analyticsLocation: D, currentInvoicePreview: L, disabled: b = !1 } = e,
-        Z = (0, c.e7)([m.Z], () => m.Z.hidePersonalInformation),
-        [v, j] = (0, c.Wu)([A.Z], () => [A.Z.paymentSources, A.Z.hasFetchedPaymentSources]),
+        Z = (0, c.e7)([A.Z], () => A.Z.hidePersonalInformation),
+        [v, j] = (0, c.Wu)([C.Z], () => [C.Z.paymentSources, C.Z.hasFetchedPaymentSources]),
         B = (0, N.V)((0, O.yb)(s)),
         { analyticsLocations: U } = (0, I.ZP)(),
         G = a.useMemo(() => Object.values(v).filter((e) => !e.invalid), [v]),
@@ -67,7 +67,7 @@ function D(e) {
                 : n(e, t);
         },
         H = (e) => {
-            let t = C.Z.get(s.planIdForCurrencies);
+            let t = m.Z.get(s.planIdForCurrencies);
             l()(null != e, 'paymentSource not specified for change'), l()(null != t, 'Unable to fetch plan');
             let n = (0, h.DE)(t.id, e.id, !1);
             return n.length > 0 ? n[0] : R.pKx.USD;
@@ -123,7 +123,7 @@ function D(e) {
             children: x.Z.Messages.BILLING_ADD_PAYMENT_METHOD
         });
     else {
-        let e = C.Z.get(s.planIdForCurrencies);
+        let e = m.Z.get(s.planIdForCurrencies);
         l()(null != e, 'Unable to fetch plan');
         let t = (0, h.DE)(e, s.paymentSourceId, !1);
         return (0, n.jsxs)(n.Fragment, {

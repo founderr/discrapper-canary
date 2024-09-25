@@ -1,22 +1,22 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = t(735250);
 t(470079);
 var r = t(692547),
     l = t(313201);
-function o(e) {
+function s(e) {
     let { isSelected: n, ...t } = e,
-        o = (0, l.Dt)();
+        s = (0, l.Dt)();
     return (0, i.jsxs)('svg', {
         ...t,
         width: '16',
         height: '16',
         viewBox: '0 0 16 16',
         xmlns: 'http://www.w3.org/2000/svg',
-        fill: 'url(#'.concat(o, ')'),
+        fill: 'url(#'.concat(s, ')'),
         children: [
             (0, i.jsx)('path', {
                 d: 'M10 9.33332C10.7364 9.33332 11.3334 8.73637 11.3334 7.99999C11.3334 7.26361 10.7364 6.66666 10 6.66666C9.26364 6.66666 8.66669 7.26361 8.66669 7.99999C8.66669 8.73637 9.26364 9.33332 10 9.33332Z',

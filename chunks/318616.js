@@ -5,21 +5,21 @@ n.d(t, {
 });
 function l(e) {
     var t, n, l;
-    let { message: a, forwardOptions: s } = e,
-        i = null == s ? void 0 : s.onlyAttachmentIds,
-        r = null == s ? void 0 : s.onlyEmbedIndices,
-        o = null !== (l = null === (t = a.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== l ? l : a,
-        c = o.attachments;
-    null != i ? (c = o.attachments.filter((e) => i.includes(e.id))) : null != r && (c = []);
-    let u = o.embeds;
+    let { message: s, forwardOptions: a } = e,
+        r = null == a ? void 0 : a.onlyAttachmentIds,
+        i = null == a ? void 0 : a.onlyEmbedIndices,
+        o = null !== (l = null === (t = s.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== l ? l : s,
+        u = o.attachments;
+    null != r ? (u = o.attachments.filter((e) => r.includes(e.id))) : null != i && (u = []);
+    let c = o.embeds;
     return (
-        null != r ? (u = o.embeds.filter((e, t) => r.includes(t))) : null != i && (u = []),
-        (null != r || ('' === o.content && u.length > 0)) && (o = o.set('content', u.map((e) => e.url).join('\n'))),
+        null != i ? (c = o.embeds.filter((e, t) => i.includes(t))) : null != r && (c = []),
+        (null != i || ('' === o.content && c.length > 0)) && (o = o.set('content', c.map((e) => e.url).join('\n'))),
         '' === o.content && (null === (n = o.embeds[0]) || void 0 === n ? void 0 : n.rawDescription) != null && (o = o.set('content', o.embeds[0].rawDescription)),
         {
-            attachments: c,
-            embeds: u,
-            hasContent: '' !== o.content && null == i,
+            attachments: u,
+            embeds: c,
+            hasContent: '' !== o.content && null == r,
             contentMessage: o
         }
     );

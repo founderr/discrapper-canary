@@ -1,16 +1,16 @@
 var r = n(21841),
     i = n(689118),
     a = n(726315),
-    s = n(449348);
-function o() {
+    o = n(449348);
+function s() {
     (this.tmp = [, ,]), (this.keys = null);
 }
 function l(e) {
-    s.call(this, e);
-    var t = new o();
+    o.call(this, e);
+    var t = new s();
     (this._desState = t), this.deriveKeys(t, e.key);
 }
-i(l, s),
+i(l, o),
     (e.exports = l),
     (l.create = function (e) {
         return new l(e);
@@ -21,16 +21,16 @@ var u = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1];
     var n = a.readUInt32BE(t, 0),
         i = a.readUInt32BE(t, 4);
     a.pc1(n, i, e.tmp, 0), (n = e.tmp[0]), (i = e.tmp[1]);
-    for (var s = 0; s < e.keys.length; s += 2) {
-        var o = u[s >>> 1];
-        (n = a.r28shl(n, o)), (i = a.r28shl(i, o)), a.pc2(n, i, e.keys, s);
+    for (var o = 0; o < e.keys.length; o += 2) {
+        var s = u[o >>> 1];
+        (n = a.r28shl(n, s)), (i = a.r28shl(i, s)), a.pc2(n, i, e.keys, o);
     }
 }),
     (l.prototype._update = function (e, t, n, r) {
         var i = this._desState,
-            s = a.readUInt32BE(e, t),
-            o = a.readUInt32BE(e, t + 4);
-        a.ip(s, o, i.tmp, 0), (s = i.tmp[0]), (o = i.tmp[1]), 'encrypt' === this.type ? this._encrypt(i, s, o, i.tmp, 0) : this._decrypt(i, s, o, i.tmp, 0), (s = i.tmp[0]), (o = i.tmp[1]), a.writeUInt32BE(n, s, r), a.writeUInt32BE(n, o, r + 4);
+            o = a.readUInt32BE(e, t),
+            s = a.readUInt32BE(e, t + 4);
+        a.ip(o, s, i.tmp, 0), (o = i.tmp[0]), (s = i.tmp[1]), 'encrypt' === this.type ? this._encrypt(i, o, s, i.tmp, 0) : this._decrypt(i, o, s, i.tmp, 0), (o = i.tmp[0]), (s = i.tmp[1]), a.writeUInt32BE(n, o, r), a.writeUInt32BE(n, s, r + 4);
     }),
     (l.prototype._pad = function (e, t) {
         if (!1 === this.padding) return !1;
@@ -43,19 +43,7 @@ var u = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1];
         return e.slice(0, e.length - t);
     }),
     (l.prototype._encrypt = function (e, t, n, r, i) {
-        for (var s = t, o = n, l = 0; l < e.keys.length; l += 2) {
-            var u = e.keys[l],
-                c = e.keys[l + 1];
-            a.expand(o, e.tmp, 0), (u ^= e.tmp[0]), (c ^= e.tmp[1]);
-            var d = a.substitute(u, c),
-                _ = a.permute(d),
-                E = o;
-            (o = (s ^ _) >>> 0), (s = E);
-        }
-        a.rip(o, s, r, i);
-    }),
-    (l.prototype._decrypt = function (e, t, n, r, i) {
-        for (var s = n, o = t, l = e.keys.length - 2; l >= 0; l -= 2) {
+        for (var o = t, s = n, l = 0; l < e.keys.length; l += 2) {
             var u = e.keys[l],
                 c = e.keys[l + 1];
             a.expand(s, e.tmp, 0), (u ^= e.tmp[0]), (c ^= e.tmp[1]);
@@ -65,4 +53,16 @@ var u = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1];
             (s = (o ^ _) >>> 0), (o = E);
         }
         a.rip(s, o, r, i);
+    }),
+    (l.prototype._decrypt = function (e, t, n, r, i) {
+        for (var o = n, s = t, l = e.keys.length - 2; l >= 0; l -= 2) {
+            var u = e.keys[l],
+                c = e.keys[l + 1];
+            a.expand(o, e.tmp, 0), (u ^= e.tmp[0]), (c ^= e.tmp[1]);
+            var d = a.substitute(u, c),
+                _ = a.permute(d),
+                E = o;
+            (o = (s ^ _) >>> 0), (s = E);
+        }
+        a.rip(o, s, r, i);
     });

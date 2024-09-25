@@ -3,10 +3,10 @@ n.d(t, {
         return a;
     },
     HQ: function () {
-        return o;
+        return s;
     },
     gK: function () {
-        return s;
+        return o;
     },
     wu: function () {
         return r;
@@ -17,9 +17,9 @@ let r = ['click', 'mousedown', 'mouseup', 'keydown', 'keyup', 'keypress', 'conte
 function a() {
     return i;
 }
-function s(e) {
+function o(e) {
     i = e;
 }
-function o(e) {
+function s(e) {
     if (i === e) i = null;
 }

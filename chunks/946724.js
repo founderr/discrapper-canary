@@ -100,7 +100,7 @@ let G = u().debounce(() => {
         }),
         0 === p.size && (L = !1),
         M && u().isEqual(v, j) && ((e = !0), (M = !1)),
-        e && w.emitChange();
+        e && k.emitChange();
 }, 500);
 function P(e, t) {
     let n = O.indexOf(e);
@@ -202,7 +202,7 @@ class F extends (r = E.ZP.Store) {
               writable: !0
           })
         : (l[o] = c);
-let w = new F(
+let k = new F(
     T.Z,
     __OVERLAY__
         ? {}
@@ -320,4 +320,4 @@ let w = new F(
               }
           }
 );
-t.Z = w;
+t.Z = k;

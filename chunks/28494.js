@@ -97,7 +97,7 @@ function h(e) {
         onSearchSubmit: i.useCallback(() => {
             let e = (0, c.uP)(),
                 n = (0, c.WF)();
-            if (e === n) return;
+            if ('' === e.trim() || e === n) return;
             l.Z.clearAlgoliaSearchResults(n);
             let i = (0, c.a7)(),
                 a = (0, c.lx)();

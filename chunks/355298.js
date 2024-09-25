@@ -1,7 +1,7 @@
-n(47120);
-var r = n(133080),
-    i = n(592125),
-    a = n(412788);
+var r = n(47120);
+var i = n(133080),
+    a = n(592125),
+    o = n(412788);
 function s(e, t, n) {
     return (
         t in e
@@ -15,98 +15,98 @@ function s(e, t, n) {
         e
     );
 }
-let o = new Set(),
-    l = new Set(),
-    u = !1,
-    c = null;
-function d(e) {
+let l = new Set(),
+    u = new Set(),
+    c = !1,
+    d = null;
+function _(e) {
     return e.isMessageRequest && !e.isSpam;
 }
-function _(e) {
-    let t = !1;
-    return d(e) && !o.has(e.id) && (o.add(e.id), (t = !0)), !d(e) && o.has(e.id) && (o.delete(e.id), (t = !0)), !d(e) && l.has(e.id) && (l.delete(e.id), (t = !0)), t;
-}
 function E(e) {
-    var t;
-    if (null != e) c = null !== (t = (0, r.Zz)(e)) && void 0 !== t ? t : (0, r.K4)();
+    let t = !1;
+    return _(e) && !l.has(e.id) && (l.add(e.id), (t = !0)), !_(e) && l.has(e.id) && (l.delete(e.id), (t = !0)), !_(e) && u.has(e.id) && (u.delete(e.id), (t = !0)), t;
 }
 function f(e) {
-    'CONNECTION_OPEN' === e.type && E(e.countryCode),
-        o.clear(),
-        l.clear(),
-        Object.values(i.Z.getMutablePrivateChannels()).forEach((e) => {
-            _(e);
-        }),
-        (u = !0);
+    var t;
+    if (null != e) d = null !== (t = (0, i.Zz)(e)) && void 0 !== t ? t : (0, i.K4)();
 }
 function h(e) {
-    let { channelId: t } = e;
-    l.add(t);
+    'CONNECTION_OPEN' === e.type && f(e.countryCode),
+        l.clear(),
+        u.clear(),
+        Object.values(a.Z.getMutablePrivateChannels()).forEach((e) => {
+            E(e);
+        }),
+        (c = !0);
 }
 function p(e) {
-    let { channel: t } = e;
-    return _(t);
-}
-function I(e) {
-    let { channels: t } = e;
-    for (let e of t) _(e);
+    let { channelId: t } = e;
+    u.add(t);
 }
 function m(e) {
     let { channel: t } = e;
-    return !!o.has(t.id) && (o.delete(t.id), !0);
+    return E(t);
+}
+function I(e) {
+    let { channels: t } = e;
+    for (let e of t) E(e);
 }
 function T(e) {
+    let { channel: t } = e;
+    return !!l.has(t.id) && (l.delete(t.id), !0);
+}
+function g(e) {
     let { messageRequestChannelIds: t } = e;
-    t.forEach((e) => o.add(e));
+    t.forEach((e) => l.add(e));
 }
 function S(e) {
     let { countryCode: t } = e;
-    E(t);
+    f(t);
 }
-class g extends a.Z {
+class A extends o.Z {
     initialize() {
-        this.waitFor(i.Z);
+        this.waitFor(a.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(g.LATEST_SNAPSHOT_VERSION);
-        null != e && (o = new Set(e));
+        let e = this.readSnapshot(A.LATEST_SNAPSHOT_VERSION);
+        null != e && (l = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: g.LATEST_SNAPSHOT_VERSION,
-            data: Array.from(o)
+            version: A.LATEST_SNAPSHOT_VERSION,
+            data: Array.from(l)
         };
     }
     getMessageRequestChannelIds() {
-        return o;
+        return l;
     }
     getMessageRequestsCount() {
-        return o.size;
+        return l.size;
     }
     isMessageRequest(e) {
-        return o.has(e);
-    }
-    isAcceptedOptimistic(e) {
         return l.has(e);
     }
+    isAcceptedOptimistic(e) {
+        return u.has(e);
+    }
     getUserCountryCode() {
-        return c;
+        return d;
     }
     isReady() {
-        return u;
+        return c;
     }
     constructor() {
         super({
-            CONNECTION_OPEN: f,
-            CONNECTION_OPEN_SUPPLEMENTAL: f,
+            CONNECTION_OPEN: h,
+            CONNECTION_OPEN_SUPPLEMENTAL: h,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            OVERLAY_INITIALIZE: T,
-            CHANNEL_CREATE: p,
+            OVERLAY_INITIALIZE: g,
+            CHANNEL_CREATE: m,
             CHANNEL_UPDATES: I,
-            CHANNEL_DELETE: m,
+            CHANNEL_DELETE: T,
             SET_LOCATION_METADATA: S,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: p
         });
     }
 }
-s(g, 'displayName', 'MessageRequestStore'), s(g, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new g());
+s(A, 'displayName', 'MessageRequestStore'), s(A, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new A());

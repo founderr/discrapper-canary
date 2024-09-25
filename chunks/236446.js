@@ -8,16 +8,16 @@ var s = n(735250),
     r = n(470079),
     i = n(120356),
     a = n.n(i),
-    l = n(512722),
-    o = n.n(l),
+    o = n(512722),
+    l = n.n(o),
     c = n(442837),
     u = n(388905),
     d = n(362762),
     _ = n(409059),
     h = n(659900),
     E = n(962220),
-    g = n(473855),
-    p = n(306453),
+    p = n(473855),
+    g = n(306453),
     m = n(929809),
     f = n(108427),
     I = n(390885),
@@ -26,19 +26,19 @@ var s = n(735250),
     x = n(954824),
     A = n(781428),
     C = n(163671),
-    v = n(423527),
-    Z = n(981631),
-    S = n(58346),
-    R = n(701476),
+    Z = n(423527),
+    R = n(981631),
+    v = n(58346),
+    S = n(701476),
     O = n(630724),
     b = n(436620),
-    D = n(689938),
-    L = n(60561),
+    P = n(689938),
+    D = n(60561),
     M = n(113207);
 c.ZP.initialize();
-class P extends r.PureComponent {
+class L extends r.PureComponent {
     componentDidMount() {
-        (0, f.e)('guildTemplate'), !b.KO && x.Z.launch('discord://' + Z.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+        (0, f.e)('guildTemplate'), !b.KO && x.Z.launch('discord://' + R.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && E.Z.resolveGuildTemplate(this.props.code);
@@ -66,10 +66,10 @@ class P extends r.PureComponent {
                 }),
                 (0, s.jsx)(u.Dx, {
                     className: a()(M.marginTop8, M.marginBottom8),
-                    children: D.Z.Messages.GUILD_TEMPLATE_INVALID_TITLE
+                    children: P.Z.Messages.GUILD_TEMPLATE_INVALID_TITLE
                 }),
-                (0, s.jsx)(u.DK, { children: D.Z.Messages.GUILD_TEMPLATE_INVALID_SUBTITLE }),
-                this.renderButton(D.Z.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)
+                (0, s.jsx)(u.DK, { children: P.Z.Messages.GUILD_TEMPLATE_INVALID_SUBTITLE }),
+                this.renderButton(P.Z.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)
             ]
         });
     }
@@ -78,36 +78,36 @@ class P extends r.PureComponent {
             children: [
                 (0, s.jsx)(u.Dx, {
                     className: M.marginBottom8,
-                    children: D.Z.Messages.APP_OPENED_TITLE
+                    children: P.Z.Messages.APP_OPENED_TITLE
                 }),
-                (0, s.jsx)(u.DK, { children: D.Z.Messages.APP_OPENED_BODY }),
-                this.renderButton(D.Z.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)
+                (0, s.jsx)(u.DK, { children: P.Z.Messages.APP_OPENED_BODY }),
+                this.renderButton(P.Z.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)
             ]
         });
     }
     renderAuthenticatedOrDownload() {
         let { guildTemplate: e } = this.props;
-        return (o()(null != e, 'guild template must not be null'), e.state === S.Rj.RESOLVING)
+        return (l()(null != e, 'guild template must not be null'), e.state === v.Rj.RESOLVING)
             ? (0, s.jsx)(u.ZP, {
-                  className: L.authBox,
-                  children: (0, s.jsx)(p.Z, { guildTemplate: e })
+                  className: D.authBox,
+                  children: (0, s.jsx)(g.Z, { guildTemplate: e })
               })
             : (0, s.jsx)(y, { guildTemplate: e });
     }
     renderContinue() {
         return (0, s.jsxs)(u.ZP, {
-            children: [(0, s.jsx)(u.Dx, { children: D.Z.Messages.APP_NOT_OPENED }), this.renderButton(D.Z.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)]
+            children: [(0, s.jsx)(u.Dx, { children: P.Z.Messages.APP_NOT_OPENED }), this.renderButton(P.Z.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)]
         });
     }
     render() {
         let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: r, location: i } = this.props;
-        if (null == e) return this.renderSpinner(D.Z.Messages.LOADING);
-        if (t === Z.kEZ.OPEN) return this.renderAppOpened();
-        if (t === Z.kEZ.OPENING) return this.renderSpinner(D.Z.Messages.APP_OPENING);
+        if (null == e) return this.renderSpinner(P.Z.Messages.LOADING);
+        if (t === R.kEZ.OPEN) return this.renderAppOpened();
+        if (t === R.kEZ.OPENING) return this.renderSpinner(P.Z.Messages.APP_OPENING);
         switch (e.state) {
-            case S.Rj.RESOLVING:
-                return this.renderSpinner(D.Z.Messages.APP_OPENING);
-            case S.Rj.RESOLVED:
+            case v.Rj.RESOLVING:
+                return this.renderSpinner(P.Z.Messages.APP_OPENING);
+            case v.Rj.RESOLVED:
                 if (n || !b.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
                     return (0, s.jsx)(A.Z, {
@@ -116,15 +116,15 @@ class P extends r.PureComponent {
                         location: i
                     });
                 else
-                    return (0, s.jsx)(v.Z, {
+                    return (0, s.jsx)(Z.Z, {
                         guildTemplate: e,
                         transitionTo: r,
                         location: i,
                         onRegister: () => {
-                            (0, m.c)(R.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), I.Z.flowStart(O.MK.ORGANIC_GUILD_TEMPLATES, O.EW.NUF_STARTED);
+                            (0, m.c)(S.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), I.Z.flowStart(O.MK.ORGANIC_GUILD_TEMPLATES, O.EW.NUF_STARTED);
                         }
                     });
-            case S.Rj.EXPIRED:
+            case v.Rj.EXPIRED:
                 return this.renderInvalidGuildTemplate();
             default:
                 return null;
@@ -156,7 +156,7 @@ function j(e) {
         authenticated: (0, c.e7)([N.default], () => N.default.isAuthenticated()),
         defaultRoute: (0, c.e7)([T.Z], () => T.Z.defaultRoute)
     };
-    return (0, s.jsx)(P, {
+    return (0, s.jsx)(L, {
         ...e,
         ...t
     });
@@ -168,25 +168,25 @@ function y(e) {
     let i = (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(u.Dx, {
-                className: L.header,
-                children: D.Z.Messages.GUILD_TEMPLATE_SETUP_DISCORD
+                className: D.header,
+                children: P.Z.Messages.GUILD_TEMPLATE_SETUP_DISCORD
             }),
             n,
             (0, s.jsx)(u.zx, {
-                className: L.createButton,
+                className: D.createButton,
                 onClick: r,
-                children: D.Z.Messages.GUILD_TEMPLATE_CREATE_DISCORD
+                children: P.Z.Messages.GUILD_TEMPLATE_CREATE_DISCORD
             })
         ]
     });
     return (0, s.jsx)(C.Z, {
-        className: L.authBox,
+        className: D.authBox,
         children: () => [
-            (0, s.jsx)(g.Z, { guildTemplate: t }, 'template'),
+            (0, s.jsx)(p.Z, { guildTemplate: t }, 'template'),
             (0, s.jsx)(
                 'div',
                 {
-                    className: L.formContainer,
+                    className: D.formContainer,
                     children: i
                 },
                 'contents'

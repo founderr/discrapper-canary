@@ -1,25 +1,25 @@
-t.d(n, {
+n.d(t, {
     i: function () {
         return u;
     }
 });
-var l = t(735250),
-    i = t(470079),
-    r = t(512100),
-    s = t(906732),
-    o = t(626135),
-    a = t(981631);
+var r = n(735250),
+    i = n(470079),
+    a = n(512100),
+    o = n(906732),
+    s = n(626135),
+    l = n(981631);
 function u(e) {
-    let { appId: n, skuId: t, ...u } = e,
-        { analyticsLocations: c } = (0, s.ZP)();
+    let { appId: t, skuId: n, ...u } = e,
+        { analyticsLocations: c } = (0, o.ZP)();
     return (
         i.useEffect(() => {
-            o.default.track(a.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
-                application_id: n,
-                sku_id: t,
+            s.default.track(l.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
+                application_id: t,
+                sku_id: n,
                 location_stack: c
             });
-        }, [c, n, t]),
-        (0, l.jsx)(r.u, { ...u })
+        }, [c, t, n]),
+        (0, r.jsx)(a.u, { ...u })
     );
 }

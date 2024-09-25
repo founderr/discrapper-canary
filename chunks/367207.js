@@ -19,24 +19,24 @@ var l = n(392711),
     I = n(626135),
     E = n(74538),
     N = n(557457),
-    S = n(269486),
-    x = n(514851),
+    x = n(269486),
+    S = n(514851),
     v = n(970645),
-    T = n(30684),
-    Z = n(514701),
+    Z = n(30684),
+    T = n(514701),
     b = n(6242),
     A = n(467721),
-    R = n(757692),
-    M = n(114064),
+    M = n(757692),
+    R = n(114064),
     L = n(933843),
-    P = n(281494),
-    y = n(276444),
+    y = n(281494),
+    P = n(276444),
     O = n(684259),
     j = n(937579),
     D = n(1163),
     w = n(841174),
-    U = n(522558),
-    G = n(879463),
+    G = n(522558),
+    U = n(879463),
     k = n(822070),
     B = n(520540),
     H = n(11352),
@@ -79,10 +79,10 @@ class q extends c.Z {
     }
     _getReferralIncentiveEligibility() {
         let e = g.default.getCurrentUser();
-        if (y.Z.getIsFetchingReferralIncentiveEligibility() || !(0, E.I5)(e)) return;
+        if (P.Z.getIsFetchingReferralIncentiveEligibility() || !(0, E.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
-        if (!!B.g.getCurrentConfig(t, n).enabled && !G.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, P.bq)();
+        if (!!B.g.getCurrentConfig(t, n).enabled && !U.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, y.bq)();
     }
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
@@ -115,7 +115,7 @@ class q extends c.Z {
         if (!t || e.state !== F.hes.DISCONNECTED || e.willReconnect) return;
         let n = _.Z.getChannel(e.channelId);
         if (null == n) return;
-        let i = M.Z.hasActiveDemo(r.q.STREAM_HIGH_QUALITY);
+        let i = R.Z.hasActiveDemo(r.q.STREAM_HIGH_QUALITY);
         if (
             (i &&
                 s.Z.dispatch({
@@ -142,14 +142,14 @@ class q extends c.Z {
             }),
             K(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = g.default.getCurrentUser();
-                null != e && e.verified && !(0, E.I5)(e) && T.Z.shouldFetchCheckoutRecovery() && (await (0, v.o)());
+                null != e && e.verified && !(0, E.I5)(e) && Z.Z.shouldFetchCheckoutRecovery() && (await (0, v.o)());
             }),
             K(this, '_maybeFetchCampaignContext', async () => {
                 let e = g.default.getCurrentUser();
-                null != e && e.verified && x.Z.shouldFetchCampaignContext() && (await (0, S.W)());
+                null != e && e.verified && S.Z.shouldFetchCampaignContext() && (await (0, x.W)());
             }),
             K(this, '_maybeFetchUserAffinities', () => {
-                let { enabled: e } = U.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
+                let { enabled: e } = G.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
                 e && (0, p.W)();
             }),
             K(this, '_trackCustomNotificationSoundsExposure', () => {
@@ -184,11 +184,11 @@ class q extends c.Z {
                 (0, l.debounce)((e, t, n) => {
                     var i, l;
                     let r = d.Z.getSelectedParticipant(e),
-                        a = (0, R.o)(r, n),
+                        a = (0, M.o)(r, n),
                         { sendNitroMessage: s } = (0, b.TD)(a),
                         c = null !== (l = null === (i = m.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : F.Eu4.NONE;
                     if (A.Z.cooldownIsActive() || !s || c >= F.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== W.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
-                    Z.I();
+                    T.I();
                     let u = Y.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
                         nickname: r.userNick,
                         resolution: (0, z.o6)(r.maxResolution.height),

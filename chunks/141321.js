@@ -1,57 +1,57 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return I;
     }
 });
-var i = n(735250),
-    s = n(470079),
+var r = n(735250),
+    i = n(470079),
     a = n(442837),
-    r = n(481060),
-    l = n(317632),
-    o = n(602478),
-    c = n(665149),
-    u = n(388035),
+    o = n(481060),
+    s = n(317632),
+    l = n(602478),
+    u = n(665149),
+    c = n(388035),
     d = n(306680),
     _ = n(594174),
     E = n(178088),
-    I = n(222940),
-    m = n(490897),
-    T = n(689938),
-    h = n(233194);
-function N(e) {
-    let { onOpen: t, onClose: n, className: N } = e,
-        f = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
-        C = s.useRef(null),
-        p = (0, a.e7)([d.ZP], () => (null == f ? void 0 : f.id) != null && d.ZP.getMentionCount(f.id, m.W.NOTIFICATION_CENTER) > 0),
-        { enabled: g } = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
-        A = (0, a.e7)([l.Z], () => g && l.Z.getUnseenInviteCount() > 0);
-    return (0, i.jsx)(E.k, {
+    f = n(222940),
+    h = n(490897),
+    p = n(689938),
+    m = n(233194);
+function I(e) {
+    let { onOpen: t, onClose: n, className: I } = e,
+        T = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        g = i.useRef(null),
+        S = (0, a.e7)([d.ZP], () => (null == T ? void 0 : T.id) != null && d.ZP.getMentionCount(T.id, h.W.NOTIFICATION_CENTER) > 0),
+        { enabled: A } = l.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
+        v = (0, a.e7)([s.Z], () => A && s.Z.getUnseenInviteCount() > 0);
+    return (0, r.jsx)(E.k, {
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: p },
+        badgeState: { badgeForYou: S },
         popoutPosition: 'bottom',
         popoutAlign: 'right',
-        children: (e, t, n, s) =>
-            (0, i.jsxs)('div', {
-                ref: C,
-                className: h.recentsIcon,
+        children: (e, t, n, i) =>
+            (0, r.jsxs)('div', {
+                ref: g,
+                className: m.recentsIcon,
                 children: [
-                    g &&
-                        (0, i.jsx)(I.Z, {
-                            inboxIconRef: C,
+                    A &&
+                        (0, r.jsx)(f.Z, {
+                            inboxIconRef: g,
                             recentsPopoutShown: t
                         }),
-                    (0, i.jsx)(u.U, {
+                    (0, r.jsx)(c.U, {
                         location: 'inbox-button',
-                        children: (0, i.jsx)(c.JO, {
+                        children: (0, r.jsx)(u.JO, {
                             ...n,
-                            className: N,
+                            className: I,
                             onClick: e,
-                            icon: r.InboxIcon,
-                            'aria-label': T.Z.Messages.INBOX,
-                            tooltip: t ? null : T.Z.Messages.INBOX,
+                            icon: o.InboxIcon,
+                            'aria-label': p.Z.Messages.INBOX,
+                            tooltip: t ? null : p.Z.Messages.INBOX,
                             selected: t,
-                            showBadge: p || A || s
+                            showBadge: S || v || i
                         })
                     })
                 ]

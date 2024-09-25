@@ -1,37 +1,37 @@
 var r = n(21841),
     i = n(689118),
     a = n(449348),
-    s = n(922689);
-function o(e, t) {
+    o = n(922689);
+function s(e, t) {
     r.equal(t.length, 24, 'Invalid key length');
     var n = t.slice(0, 8),
         i = t.slice(8, 16),
         a = t.slice(16, 24);
     'encrypt' === e
         ? (this.ciphers = [
-              s.create({
+              o.create({
                   type: 'encrypt',
                   key: n
               }),
-              s.create({
+              o.create({
                   type: 'decrypt',
                   key: i
               }),
-              s.create({
+              o.create({
                   type: 'encrypt',
                   key: a
               })
           ])
         : (this.ciphers = [
-              s.create({
+              o.create({
                   type: 'decrypt',
                   key: a
               }),
-              s.create({
+              o.create({
                   type: 'encrypt',
                   key: i
               }),
-              s.create({
+              o.create({
                   type: 'decrypt',
                   key: n
               })
@@ -39,7 +39,7 @@ function o(e, t) {
 }
 function l(e) {
     a.call(this, e);
-    var t = new o(this.type, this.options.key);
+    var t = new s(this.type, this.options.key);
     this._edeState = t;
 }
 i(l, a),
@@ -51,5 +51,5 @@ i(l, a),
         var i = this._edeState;
         i.ciphers[0]._update(e, t, n, r), i.ciphers[1]._update(n, r, n, r), i.ciphers[2]._update(n, r, n, r);
     }),
-    (l.prototype._pad = s.prototype._pad),
-    (l.prototype._unpad = s.prototype._unpad);
+    (l.prototype._pad = o.prototype._pad),
+    (l.prototype._unpad = o.prototype._unpad);

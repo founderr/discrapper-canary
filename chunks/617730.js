@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return p;
     }
 });
 var s = n(735250);
@@ -8,8 +8,8 @@ n(470079);
 var r = n(481060),
     i = n(973616),
     a = n(131704),
-    l = n(601964),
-    o = n(598077),
+    o = n(601964),
+    l = n(598077),
     c = n(230224),
     u = n(258356),
     d = n(981631),
@@ -25,19 +25,19 @@ let E = (e) => {
             return !1;
     }
 };
-function g(e) {
-    let { invite: t, onAcceptInvite: n, disableUser: g = !1 } = e;
+function p(e) {
+    let { invite: t, onAcceptInvite: n, disableUser: p = !1 } = e;
     if (null == t) return null;
-    let p = null != t.guild ? new l.ZP(t.guild) : null,
+    let g = null != t.guild ? new o.ZP(t.guild) : null,
         m = null != t.channel ? (0, a.jD)(t.channel) : null,
         f = null != t.target_application ? new i.Z(t.target_application) : null,
-        I = g || null == t.inviter ? null : new o.Z(t.inviter),
-        N = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(d.oNc.COMMUNITY))) && null != I && (0, c.WT)(t),
+        I = p || null == t.inviter ? null : new l.Z(t.inviter),
+        N = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != g && g.hasFeature(d.oNc.COMMUNITY))) && null != I && (0, c.WT)(t),
         T = E(t),
         x = {
             invite: t,
             user: I,
-            guild: p,
+            guild: g,
             channel: m,
             application: f
         };
@@ -53,7 +53,7 @@ function g(e) {
               children: [
                   (0, s.jsx)(c.GB, {
                       application: f,
-                      guild: p,
+                      guild: g,
                       user: N || (0, c.X7)(t) ? I : null
                   }),
                   (0, c.X7)(t)

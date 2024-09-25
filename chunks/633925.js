@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return s;
+            return o;
         }
     });
 var r = n(528734),
@@ -16,7 +16,7 @@ function a(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function s(e) {
+function o(e) {
     var t, n;
     if (((0, i.Z)(1, arguments), e && 'function' == typeof e.forEach)) t = e;
     else {

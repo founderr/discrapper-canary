@@ -9,17 +9,17 @@ var i = s(399606),
     o = s(481060),
     l = s(275759),
     r = s(565138),
-    c = s(706454),
-    a = s(271383),
+    a = s(706454),
+    c = s(271383),
     d = s(430824),
     u = s(709054),
     _ = s(689938),
     I = s(45844);
 function E(e) {
     let { userId: n, guildId: s, textClassName: E, tooltipDelay: f } = e,
-        m = (0, i.e7)([c.default], () => c.default.locale),
+        m = (0, i.e7)([a.default], () => a.default.locale),
         x = (0, i.e7)([d.Z], () => (null != s ? d.Z.getGuild(s) : null)),
-        Z = (0, i.e7)([a.ZP], () => (null != s ? a.ZP.getMember(s, n) : null)),
+        Z = (0, i.e7)([c.ZP], () => (null != s ? c.ZP.getMember(s, n) : null)),
         h = (0, l.FI)(u.default.extractTimestamp(n), m),
         p = (0, l.FI)(null == Z ? void 0 : Z.joinedAt, m);
     return null == x || null == Z

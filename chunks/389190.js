@@ -12,8 +12,8 @@ var i = s(442837),
     o = s(481060),
     l = s(239091),
     r = s(129861),
-    c = s(906732),
-    a = s(158776),
+    a = s(906732),
+    c = s(158776),
     d = s(785717),
     u = s(697927),
     _ = s(171368),
@@ -22,15 +22,15 @@ var i = s(442837),
     f = s(519294);
 let m = (0, o.getAvatarSize)(o.AvatarSizes.SIZE_40);
 function x(e) {
-    let { user: n, status: c, onSelect: d } = e,
-        u = (0, i.e7)([a.Z], () => a.Z.isMobileOnline(n.id));
+    let { user: n, status: a, onSelect: d } = e,
+        u = (0, i.e7)([c.Z], () => c.Z.isMobileOnline(n.id));
     return (0, t.jsxs)(o.Clickable, {
         focusProps: { offset: { right: 8 } },
         className: f.listRow,
         onClick: d,
         onContextMenu: (e) => {
             (0, l.jW)(e, async () => {
-                let { default: e } = await Promise.all([s.e('79695'), s.e('69220'), s.e('50261')]).then(s.bind(s, 881351));
+                let { default: e } = await Promise.all([s.e('79695'), s.e('69220')]).then(s.bind(s, 881351));
                 return (s) =>
                     (0, t.jsx)(e, {
                         ...s,
@@ -43,7 +43,7 @@ function x(e) {
                 src: n.getAvatarURL(void 0, m),
                 'aria-label': n.username,
                 size: o.AvatarSizes.SIZE_40,
-                status: c,
+                status: a,
                 isMobile: u,
                 className: f.listAvatar
             }),
@@ -58,9 +58,9 @@ function x(e) {
 function Z(e) {
     let { user: n, onClose: s } = e,
         { mutualFriends: i } = (0, u.Z)(n.id),
-        { analyticsLocations: l } = (0, c.ZP)(),
+        { analyticsLocations: l } = (0, a.ZP)(),
         { context: r } = (0, d.KZ)(),
-        a = (e) => {
+        c = (e) => {
             s(),
                 (0, _.openUserProfileModal)({
                     ...r,
@@ -96,7 +96,7 @@ function Z(e) {
                             {
                                 user: s,
                                 status: i,
-                                onSelect: () => a(s.id)
+                                onSelect: () => c(s.id)
                             },
                             n
                         );

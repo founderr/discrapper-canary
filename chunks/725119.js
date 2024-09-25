@@ -7,15 +7,15 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(40851),
-    s = n(906732),
-    o = n(785717),
+    o = n(906732),
+    s = n(785717),
     l = n(171368),
     u = n(981631),
     c = n(689938);
 function d(e) {
     let { label: t, onAction: n, ...d } = e,
-        { analyticsLocations: _ } = (0, s.ZP)(),
-        { context: E } = (0, o.KZ)(),
+        { analyticsLocations: _ } = (0, o.ZP)(),
+        { context: E } = (0, s.KZ)(),
         f = (0, a.Aq)();
     return (0, r.jsx)(i.MenuItem, {
         id: 'user-profile',

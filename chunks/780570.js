@@ -1,64 +1,64 @@
 n.d(t, {
     CP: function () {
-        return l;
+        return c;
     },
     Je: function () {
-        return f;
+        return p;
     },
     KJ: function () {
-        return _;
+        return f;
     },
     OT: function () {
-        return u;
-    },
-    Tu: function () {
-        return o;
-    },
-    d0: function () {
         return d;
     },
-    lK: function () {
+    Tu: function () {
+        return u;
+    },
+    d0: function () {
         return E;
     },
+    lK: function () {
+        return h;
+    },
     xI: function () {
-        return c;
+        return _;
     }
-}),
-    n(47120),
-    n(724458);
-var r = n(695346),
-    i = n(594174),
-    a = n(55563),
-    s = n(981631);
-function o(e, t) {
+});
+var r = n(47120);
+var i = n(724458);
+var a = n(695346),
+    o = n(594174),
+    s = n(55563),
+    l = n(981631);
+function u(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function l(e) {
+function c(e) {
     let [t, n] = e.split(':');
     return {
         applicationId: t,
         branchId: n
     };
 }
-function u(e, t) {
-    if (!r.G6.getSetting() || r.co.getSetting() === s.Skl.INVISIBLE) return !1;
+function d(e, t) {
+    if (!a.G6.getSetting() || a.co.getSetting() === l.Skl.INVISIBLE) return !1;
     let n = t.getActiveLibraryApplication(e);
-    return null == n || !n.hasFlag(s.eHb.PRIVATE);
+    return null == n || !n.hasFlag(l.eHb.PRIVATE);
 }
-function c(e, t) {
+function _(e, t) {
     return 0 === t ? 100 : (e / t) * 100;
 }
-function d(e, t, n) {
-    return !(null == t || (n.enabled && t.hasFlag(s.eHb.PRIVATE))) && !t.isHidden();
+function E(e, t, n) {
+    return !(null == t || (n.enabled && t.hasFlag(l.eHb.PRIVATE))) && !t.isHidden();
 }
-function _(e) {
-    return null == e ? null : e.type === s.vxO.INSTALLING || e.type === s.vxO.UPDATING || e.type === s.vxO.UNINSTALLING ? e : null;
+function f(e) {
+    return null == e ? null : e.type === l.vxO.INSTALLING || e.type === l.vxO.UPDATING || e.type === l.vxO.UNINSTALLING ? e : null;
 }
-function E(e) {
+function h(e) {
     return e.reduce(
         (e, t) => {
-            let n = _(t);
-            return null == n || t.type === s.vxO.UP_TO_DATE
+            let n = f(t);
+            return null == n || t.type === l.vxO.UP_TO_DATE
                 ? e
                 : {
                       total: e.total + Number(n.total),
@@ -71,6 +71,6 @@ function E(e) {
         }
     );
 }
-function f(e) {
-    return !!e.isDiscordApplication() && e.isEntitled(i.default.getCurrentUser(), a.Z);
+function p(e) {
+    return !!e.isDiscordApplication() && e.isEntitled(o.default.getCurrentUser(), s.Z);
 }

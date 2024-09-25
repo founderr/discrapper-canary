@@ -1,91 +1,91 @@
-n.r(t),
-    n.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return f;
+            return T;
         }
     });
-var c = n(735250),
-    l = n(470079),
-    i = n(481060),
-    a = n(561716),
-    o = n(721383),
-    r = n(313201),
-    s = n(63063),
-    _ = n(857595),
+var s = n(735250),
+    a = n(470079),
+    o = n(481060),
+    r = n(561716),
+    i = n(721383),
+    c = n(313201),
+    d = n(63063),
+    l = n(857595),
     u = n(981631),
-    d = n(689938),
+    _ = n(689938),
     h = n(312573);
-function f(e) {
-    let { transitionState: t, onClose: n } = e,
-        f = (0, r.Dt)();
+function T(t) {
+    let { transitionState: e, onClose: n } = t,
+        T = (0, c.Dt)();
     return (
-        l.useEffect(() => {
-            _.r_();
+        a.useEffect(() => {
+            l.r_();
         }, []),
-        (0, c.jsxs)(i.ModalRoot, {
-            transitionState: t,
+        (0, s.jsxs)(o.ModalRoot, {
+            transitionState: e,
             role: 'alertdialog',
-            'aria-labelledby': f,
+            'aria-labelledby': T,
             children: [
-                (0, c.jsxs)(i.ModalContent, {
+                (0, s.jsxs)(o.ModalContent, {
                     className: h.content,
                     children: [
-                        (0, c.jsx)(i.Heading, {
+                        (0, s.jsx)(o.Heading, {
                             variant: 'heading-xl/semibold',
-                            id: f,
+                            id: T,
                             className: h.header,
-                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_MODAL_TITLE.format({
-                                tab: (e, t) =>
-                                    (0, c.jsx)(
-                                        i.KeyCombo,
+                            children: _.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_MODAL_TITLE.format({
+                                tab: (t, e) =>
+                                    (0, s.jsx)(
+                                        o.KeyCombo,
                                         {
                                             shortcut: 'tab',
                                             className: h.headerShortcut
                                         },
-                                        t
+                                        e
                                     )
                             })
                         }),
-                        (0, c.jsx)(i.Text, {
+                        (0, s.jsx)(o.Text, {
                             variant: 'text-md/normal',
-                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_MODAL_BODY
+                            children: _.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_MODAL_BODY
                         }),
-                        (0, c.jsxs)('ul', {
+                        (0, s.jsxs)('ul', {
                             className: h.tips,
                             children: [
-                                (0, c.jsxs)('li', {
+                                (0, s.jsxs)('li', {
                                     children: [
-                                        (0, c.jsx)(i.KeyCombo, { shortcut: o._.binds['0'] }),
-                                        (0, c.jsx)(i.Text, {
+                                        (0, s.jsx)(o.KeyCombo, { shortcut: i._.binds['0'] }),
+                                        (0, s.jsx)(o.Text, {
                                             variant: 'text-md/normal',
-                                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_LIST_SHORTCUT
+                                            children: _.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_LIST_SHORTCUT
                                         })
                                     ]
                                 }),
-                                (0, c.jsxs)('li', {
+                                (0, s.jsxs)('li', {
                                     children: [
-                                        (0, c.jsx)(i.KeyCombo, { shortcut: a.$.binds['0'] }),
-                                        (0, c.jsx)(i.Text, {
+                                        (0, s.jsx)(o.KeyCombo, { shortcut: r.$.binds['0'] }),
+                                        (0, s.jsx)(o.Text, {
                                             variant: 'text-md/normal',
-                                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_QUICKSWITCHER_SHORTCUT
+                                            children: _.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_QUICKSWITCHER_SHORTCUT
                                         })
                                     ]
                                 })
                             ]
                         }),
-                        (0, c.jsx)(i.Text, {
+                        (0, s.jsx)(o.Text, {
                             variant: 'text-md/normal',
-                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_HELP_CENTER_LINK.format({ link: s.Z.getArticleURL(u.BhN.KEYBOARD_NAVIGATION) })
+                            children: _.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_HELP_CENTER_LINK.format({ link: d.Z.getArticleURL(u.BhN.KEYBOARD_NAVIGATION) })
                         })
                     ]
                 }),
-                (0, c.jsx)(i.ModalFooter, {
-                    children: (0, c.jsx)(i.Button, {
+                (0, s.jsx)(o.ModalFooter, {
+                    children: (0, s.jsx)(o.Button, {
                         onClick: n,
-                        color: i.Button.Colors.BRAND,
-                        size: i.Button.Sizes.SMALL,
+                        color: o.Button.Colors.BRAND,
+                        size: o.Button.Sizes.SMALL,
                         autoFocus: !0,
-                        children: d.Z.Messages.OKAY
+                        children: _.Z.Messages.OKAY
                     })
                 })
             ]

@@ -58,7 +58,7 @@ let o = {
     ROLE_SUBSCRIPTIONS: new Set([0, 2, 5, 13, 15, 16]),
     ICON_EMOJIS: new Set([0, 2, 5, 13, 15]),
     SUMMARIZEABLE: new Set([0]),
-    CONTENT_ENTRY_EMBEDS: new Set([0, 1, 3, 5]),
+    CONTENT_ENTRY_EMBEDS: new Set([0, 1, 5]),
     POLLS: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13]),
     ACTIVITY_LAUNCHABLE: new Set([0, 1, 2, 3]),
     ALL: new Set([0, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16])

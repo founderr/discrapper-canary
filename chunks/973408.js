@@ -1,17 +1,17 @@
 n.d(t, {
     X: function () {
-        return o;
+        return s;
     }
 });
 var r = n(69122),
     i = n(825842),
     a = n(17146);
-let s = {
+let o = {
     writeUnknownFields: !0,
     writerFactory: () => new l()
 };
-function o(e) {
-    return e ? Object.assign(Object.assign({}, s), e) : s;
+function s(e) {
+    return e ? Object.assign(Object.assign({}, o), e) : o;
 }
 class l {
     constructor(e) {
@@ -108,8 +108,8 @@ class l {
         let t = r.M.from(e),
             n = t.hi >> 31,
             a = (t.lo << 1) ^ n,
-            s = ((t.hi << 1) | (t.lo >>> 31)) ^ n;
-        return (0, i._y)(a, s, this.buf), this;
+            o = ((t.hi << 1) | (t.lo >>> 31)) ^ n;
+        return (0, i._y)(a, o, this.buf), this;
     }
     uint64(e) {
         let t = r.p.from(e);

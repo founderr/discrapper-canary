@@ -1,12 +1,12 @@
 n.d(t, {
     $Z: function () {
-        return o;
+        return s;
     },
     Ao: function () {
         return l;
     },
     Cp: function () {
-        return s;
+        return o;
     },
     Cz: function () {
         return c;
@@ -40,13 +40,13 @@ function a(e) {
         id: e
     });
 }
-function s(e) {
+function o(e) {
     r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_HIDE',
         id: e
     });
 }
-function o(e) {
+function s(e) {
     r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_SHOW',
         id: e

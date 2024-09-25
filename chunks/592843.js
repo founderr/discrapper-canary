@@ -1,28 +1,28 @@
-var e = n(447631),
-    o = n(96403),
-    i = n(570596),
-    u = n(821819),
+var r = n(447631),
+    i = n(96403),
+    a = n(570596),
+    o = n(821819),
     s = n(302231),
-    c = n(502640),
-    f = n(790248),
-    a = n(611345),
-    p = n(186973),
-    v = Object.assign,
-    l = Object.defineProperty,
-    y = o([].concat);
-t.exports =
-    !v ||
-    u(function () {
+    l = n(502640),
+    u = n(790248),
+    c = n(611345),
+    d = n(186973),
+    _ = Object.assign,
+    E = Object.defineProperty,
+    f = i([].concat);
+e.exports =
+    !_ ||
+    o(function () {
         if (
-            e &&
+            r &&
             1 !==
-                v(
+                _(
                     { b: 1 },
-                    v(
-                        l({}, 'a', {
+                    _(
+                        E({}, 'a', {
                             enumerable: !0,
                             get: function () {
-                                l(this, 'b', {
+                                E(this, 'b', {
                                     value: 3,
                                     enumerable: !1
                                 });
@@ -33,22 +33,22 @@ t.exports =
                 ).b
         )
             return !0;
-        var t = {},
-            r = {},
+        var e = {},
+            t = {},
             n = Symbol('assign detection'),
-            o = 'abcdefghijklmnopqrst';
+            i = 'abcdefghijklmnopqrst';
         return (
-            (t[n] = 7),
-            o.split('').forEach(function (t) {
-                r[t] = t;
+            (e[n] = 7),
+            i.split('').forEach(function (e) {
+                t[e] = e;
             }),
-            7 !== v({}, t)[n] || s(v({}, r)).join('') !== o
+            7 !== _({}, e)[n] || s(_({}, t)).join('') !== i
         );
     })
-        ? function (t, r) {
-              for (var n = a(t), o = arguments.length, u = 1, v = c.f, l = f.f; o > u; ) {
-                  for (var h, x = p(arguments[u++]), d = v ? y(s(x), v(x)) : s(x), g = d.length, b = 0; g > b; ) (h = d[b++]), (!e || i(l, x, h)) && (n[h] = x[h]);
+        ? function (e, t) {
+              for (var n = c(e), i = arguments.length, o = 1, _ = l.f, E = u.f; i > o; ) {
+                  for (var h, p = d(arguments[o++]), m = _ ? f(s(p), _(p)) : s(p), I = m.length, T = 0; I > T; ) (h = m[T++]), (!r || a(E, p, h)) && (n[h] = p[h]);
               }
               return n;
           }
-        : v;
+        : _;

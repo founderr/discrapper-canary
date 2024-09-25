@@ -6,15 +6,15 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(470716),
-    s = n(266067),
-    o = n(304445),
+    o = n(266067),
+    s = n(304445),
     l = n(703656);
 function u(e) {
     let { children: t } = e;
     return (
-        i.useEffect(() => (o.Z.initialize(), () => o.Z.cleanup()), []),
+        i.useEffect(() => (s.Z.initialize(), () => s.Z.cleanup()), []),
         (0, r.jsx)(a.B6, {
-            children: (0, r.jsx)(s.F0, {
+            children: (0, r.jsx)(o.F0, {
                 history: (0, l.s1)(),
                 children: t
             })

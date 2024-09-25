@@ -7,8 +7,18 @@ function t(e) {
     else if (arguments.length > 0) for (var r = 0, i = arguments.length; r < i; r++) n.push(arguments[r]);
     return n;
 }
+function n(e, t) {
+    (e.tail = new i(t, e.tail, null, e)), !e.head && (e.head = e.tail), e.length++;
+}
+function r(e, t) {
+    (e.head = new i(t, null, e.head, e)), !e.tail && (e.tail = e.head), e.length++;
+}
+function i(e, t, n, r) {
+    if (!(this instanceof i)) return new i(e, t, n, r);
+    (this.list = r), (this.value = e), t ? ((t.next = this), (this.prev = t)) : (this.prev = null), n ? ((n.prev = this), (this.next = n)) : (this.next = null);
+}
 (e.exports = t),
-    (t.Node = n),
+    (t.Node = i),
     (t.create = t),
     (t.prototype.removeNode = function (e) {
         if (e.list !== this) throw Error('removing node which does not belong to this list');
@@ -31,17 +41,11 @@ function t(e) {
         }
     }),
     (t.prototype.push = function () {
-        for (var e = 0, t = arguments.length; e < t; e++)
-            (function (e, t) {
-                (e.tail = new n(t, e.tail, null, e)), !e.head && (e.head = e.tail), e.length++;
-            })(this, arguments[e]);
+        for (var e = 0, t = arguments.length; e < t; e++) n(this, arguments[e]);
         return this.length;
     }),
     (t.prototype.unshift = function () {
-        for (var e = 0, t = arguments.length; e < t; e++)
-            (function (e, t) {
-                (e.head = new n(t, null, e.head, e)), !e.tail && (e.tail = e.head), e.length++;
-            })(this, arguments[e]);
+        for (var e = 0, t = arguments.length; e < t; e++) r(this, arguments[e]);
         return this.length;
     }),
     (t.prototype.pop = function () {
@@ -133,7 +137,3 @@ function t(e) {
         }
         return (this.head = t), (this.tail = e), this;
     });
-function n(e, t, r, i) {
-    if (!(this instanceof n)) return new n(e, t, r, i);
-    (this.list = i), (this.value = e), t ? ((t.next = this), (this.prev = t)) : (this.prev = null), r ? ((r.prev = this), (this.next = r)) : (this.next = null);
-}

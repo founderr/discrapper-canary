@@ -1,8 +1,8 @@
 var r = n(717441),
     i = n(192291),
     a = n(536524),
-    s = n(959318),
-    o = n(165915),
+    o = n(959318),
+    s = n(165915),
     l = i.aTypedArray,
     u = i.getTypedArrayConstructor;
 (0, i.exportTypedArrayMethod)(
@@ -10,8 +10,8 @@ var r = n(717441),
     {
         with: function (e, t) {
             var n = l(this),
-                i = s(e),
-                c = a(n) ? o(t) : +t;
+                i = o(e),
+                c = a(n) ? s(t) : +t;
             return r(n, u(n), i, c);
         }
     }.with,

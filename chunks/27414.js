@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var r = n(928518),
     i = n(451478),
     a = n(981631);
-function s() {
+function o() {
     return i.Z.isVisible() || r.Z.getWindowVisible(a.KJ3.CHANNEL_CALL_POPOUT);
 }

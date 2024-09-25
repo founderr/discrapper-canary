@@ -1,56 +1,56 @@
 n.d(t, {
     $m: function () {
-        return u;
+        return c;
     },
     NJ: function () {
-        return l;
+        return u;
     },
     Xo: function () {
-        return c;
+        return d;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(512722),
-    s = n.n(a);
-let o = i.createContext(void 0);
-function l(e) {
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(512722),
+    s = n.n(o);
+let l = a.createContext(void 0);
+function u(e) {
     let { value: t, children: n } = e;
-    return (0, r.jsx)(o.Provider, {
+    return (0, i.jsx)(l.Provider, {
         value: t,
         children: n
     });
 }
-function u() {
-    let [e, t] = i.useState(null),
-        [n, r] = i.useState(null),
-        a = i.useCallback((e) => {
+function c() {
+    let [e, t] = a.useState(null),
+        [n, r] = a.useState(null),
+        i = a.useCallback((e) => {
             t(e.interactionType), r(e.interactionSource);
         }, []),
-        s = i.useCallback(() => {
-            a({
+        o = a.useCallback(() => {
+            i({
                 interactionType: null,
                 interactionSource: null
             });
-        }, [a]),
-        [o, l] = i.useState(!1),
-        [u, c] = i.useState(null);
-    return i.useMemo(
+        }, [i]),
+        [s, l] = a.useState(!1),
+        [u, c] = a.useState(null);
+    return a.useMemo(
         () => ({
             interactionType: e,
             interactionSource: n,
-            onInteraction: a,
-            resetInteraction: s,
-            interactionToastShown: o,
+            onInteraction: i,
+            resetInteraction: o,
+            interactionToastShown: s,
             setInteractionToastShown: l,
             interactionTypeSent: u,
             setInteractionTypeSent: c
         }),
-        [a, n, o, e, u, s]
+        [i, n, s, e, u, o]
     );
 }
-function c() {
-    let e = i.useContext(o);
+function d() {
+    let e = a.useContext(l);
     return s()(null != e, 'must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider'), e;
 }

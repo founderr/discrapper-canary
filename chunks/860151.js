@@ -1,35 +1,35 @@
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
-    r = n(481060),
-    l = n(585500),
+var i = n(120356),
+    l = n.n(i),
+    s = n(481060),
+    a = n(585500),
     o = n(644646),
-    c = n(489066);
+    u = n(489066);
 t.Z = function (e) {
-    let { className: t, autoplay: n, quest: s, questContent: u, taskDetails: d, location: _ } = e,
-        E = (0, l.D)({
-            quest: s,
+    let { className: t, autoplay: n, quest: i, questContent: c, taskDetails: d, location: h } = e,
+        _ = (0, a.D)({
+            quest: i,
             taskDetails: d,
-            location: _,
-            questContent: u
+            location: h,
+            questContent: c
         });
-    return (0, i.jsxs)('div', {
-        className: a()(c.wrapper, t),
-        style: { color: s.config.colors.primary },
+    return (0, r.jsxs)('div', {
+        className: l()(u.wrapper, t),
+        style: { color: i.config.colors.primary },
         children: [
-            (0, i.jsx)(o.Z, {
+            (0, r.jsx)(o.Z, {
                 autoplay: n,
-                className: c.rewardTile,
-                quest: s,
-                questContent: u,
-                location: _
+                className: u.rewardTile,
+                quest: i,
+                questContent: c,
+                location: h
             }),
-            (0, i.jsx)(r.Text, {
-                className: c.instructions,
+            (0, r.jsx)(s.Text, {
+                className: u.instructions,
                 variant: 'text-sm/normal',
                 color: 'text-normal',
-                children: E
+                children: _
             })
         ]
     });

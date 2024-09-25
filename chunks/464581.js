@@ -15,7 +15,7 @@ function a(e, t, n) {
             },
             [t, n]
         ),
-        s = r.useCallback(
+        o = r.useCallback(
             (t) => {
                 let { event: n } = t;
                 !a(n) && (n.preventDefault(), n.stopPropagation(), null != n.clipboardData && (e.insertData(n.clipboardData), i.bN.focus(e)));
@@ -24,6 +24,6 @@ function a(e, t, n) {
         );
     return {
         handlePaste: a,
-        handleGlobalPaste: s
+        handleGlobalPaste: o
     };
 }

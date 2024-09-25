@@ -12,8 +12,8 @@ var i = s(120356),
     o = s.n(i),
     l = s(780384),
     r = s(481060),
-    c = s(239091),
-    a = s(37234),
+    a = s(239091),
+    c = s(37234),
     d = s(410030),
     u = s(44315),
     _ = s(565138),
@@ -27,15 +27,15 @@ var i = s(120356),
     p = s(581958);
 let v = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_16);
 function S(e) {
-    let { user: n, guild: i, nick: a, theme: d, onSelect: I } = e,
+    let { user: n, guild: i, nick: c, theme: d, onSelect: I } = e,
         f = n.hasAvatarForGuild(i.id);
     return (0, t.jsxs)(r.Clickable, {
         focusProps: { offset: { right: 8 } },
         className: h.listRow,
         onClick: I,
         onContextMenu: (e) => {
-            (0, c.jW)(e, async () => {
-                let { default: e } = await Promise.all([s.e('96427'), s.e('23755'), s.e('11751'), s.e('33053'), s.e('37581'), s.e('65840'), s.e('7654'), s.e('90508'), s.e('18146'), s.e('44156'), s.e('59743'), s.e('44294'), s.e('85552'), s.e('85742'), s.e('58227'), s.e('1187'), s.e('36897'), s.e('22036'), s.e('92557'), s.e('64679'), s.e('36362'), s.e('3175'), s.e('33213'), s.e('88578')]).then(s.bind(s, 545135));
+            (0, a.jW)(e, async () => {
+                let { default: e } = await Promise.all([s.e('96427'), s.e('11751'), s.e('33053'), s.e('37581'), s.e('65840'), s.e('7654'), s.e('18146'), s.e('44156'), s.e('44294'), s.e('85552'), s.e('58227'), s.e('67564'), s.e('36897'), s.e('22036'), s.e('92557'), s.e('64679'), s.e('1187'), s.e('36362'), s.e('2293'), s.e('33213'), s.e('48915')]).then(s.bind(s, 545135));
                 return (n) =>
                     (0, t.jsx)(e, {
                         ...n,
@@ -62,7 +62,7 @@ function S(e) {
                         className: h.listName,
                         children: i.toString()
                     }),
-                    f || null != a
+                    f || null != c
                         ? (0, t.jsxs)('div', {
                               className: p.guildNick,
                               children: [
@@ -73,7 +73,7 @@ function S(e) {
                                           className: p.guildAvatar,
                                           'aria-hidden': !0
                                       }),
-                                  null != a ? a : E.ZP.getName(n)
+                                  null != c ? c : E.ZP.getName(n)
                               ]
                           })
                         : null
@@ -87,7 +87,7 @@ function T(e) {
         { mutualGuilds: i } = (0, f.Z)(n.id),
         o = (0, d.ZP)(),
         l = (e) => {
-            (0, I.X)(e), s(), (0, a.xf)();
+            (0, I.X)(e), s(), (0, c.xf)();
         };
     return (0, t.jsx)(r.ScrollerThin, {
         className: h.listScroller,

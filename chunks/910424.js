@@ -31,8 +31,8 @@ function g(e) {
                     return t !== C.ownerId;
                 }).length > 0
         })),
-        S = (0, s.e7)([h.Z], () => h.Z.getChannel(null == C ? void 0 : C.channelId)),
-        [v, N] = (0, u.wq)(S),
+        v = (0, s.e7)([h.Z], () => h.Z.getChannel(null == C ? void 0 : C.channelId)),
+        [S, N] = (0, u.wq)(v),
         A = (0, c.Aq)(),
         Z = null != T && null != C && T.state !== _.jm8.ENDED && T.ownerId === C.ownerId,
         M = (e) => {
@@ -50,7 +50,7 @@ function g(e) {
             (0, i.jsxs)(
                 p.Z,
                 {
-                    disabled: t || Z || !v,
+                    disabled: t || Z || !S,
                     onClick: () => M(!1),
                     ...R,
                     fullWidth: !0,

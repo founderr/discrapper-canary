@@ -2,46 +2,46 @@ var s,
     r,
     i,
     a,
-    l = n(735250),
-    o = n(470079),
+    o = n(735250),
+    l = n(470079),
     c = n(525654),
     u = n.n(c),
     d = n(442837),
     _ = n(893776),
     h = n(129293),
     E = n(388905),
-    g = n(108427),
-    p = n(314897),
+    p = n(108427),
+    g = n(314897),
     m = n(981631),
     f = n(689938),
     I = n(113207);
 d.ZP.initialize();
-class N extends (a = o.PureComponent) {
+class N extends (a = l.PureComponent) {
     componentDidMount() {
         let e = (0, h.Z)(this.props.location);
-        null != e && _.Z.authorizeIPAddress(e), (0, g.e)('authorize_ip');
+        null != e && _.Z.authorizeIPAddress(e), (0, p.e)('authorize_ip');
     }
     renderLoginButton() {
         if ('Android' === u().os.family || 'iOS' === u().os.family) return null;
         let { transitionTo: e } = this.props;
-        return (0, l.jsx)(E.zx, {
+        return (0, o.jsx)(E.zx, {
             onClick: () => e(m.Z5c.LOGIN),
             children: f.Z.Messages._LOGIN
         });
     }
     renderFailed() {
-        return (0, l.jsxs)(E.ZP, {
+        return (0, o.jsxs)(E.ZP, {
             children: [
-                (0, l.jsx)('img', {
+                (0, o.jsx)('img', {
                     alt: '',
                     src: n(211095),
                     className: I.marginBottom20
                 }),
-                (0, l.jsx)(E.Dx, {
+                (0, o.jsx)(E.Dx, {
                     className: I.marginBottom8,
                     children: f.Z.Messages.AUTHORIZATION_EXPIRED
                 }),
-                (0, l.jsx)(E.DK, {
+                (0, o.jsx)(E.DK, {
                     className: I.marginBottom40,
                     children: f.Z.Messages._AUTH_EXPIRED_SUGGESTION
                 }),
@@ -50,18 +50,18 @@ class N extends (a = o.PureComponent) {
         });
     }
     renderSucceeded() {
-        return (0, l.jsxs)(E.ZP, {
+        return (0, o.jsxs)(E.ZP, {
             children: [
-                (0, l.jsx)('img', {
+                (0, o.jsx)('img', {
                     alt: '',
                     src: n(640356),
                     className: I.marginBottom20
                 }),
-                (0, l.jsx)(E.Dx, {
+                (0, o.jsx)(E.Dx, {
                     className: I.marginBottom8,
                     children: f.Z.Messages.IP_AUTHORIZATION_SUCCEEDED
                 }),
-                (0, l.jsx)(E.DK, {
+                (0, o.jsx)(E.DK, {
                     className: I.marginBottom40,
                     children: f.Z.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
                 }),
@@ -70,8 +70,8 @@ class N extends (a = o.PureComponent) {
         });
     }
     renderDefault() {
-        return (0, l.jsxs)(E.ZP, {
-            children: [(0, l.jsx)(E.Hh, {}), (0, l.jsx)(E.Dx, { children: f.Z.Messages.AUTHORIZING })]
+        return (0, o.jsxs)(E.ZP, {
+            children: [(0, o.jsx)(E.Hh, {}), (0, o.jsx)(E.Dx, { children: f.Z.Messages.AUTHORIZING })]
         });
     }
     render() {
@@ -90,7 +90,7 @@ class N extends (a = o.PureComponent) {
               writable: !0
           })
         : (s[r] = i),
-    (t.Z = d.ZP.connectStores([p.default], () => ({
-        verifyFailed: p.default.didVerifyFail(),
-        verifySucceeded: p.default.didVerifySucceed()
+    (t.Z = d.ZP.connectStores([g.default], () => ({
+        verifyFailed: g.default.didVerifyFail(),
+        verifySucceeded: g.default.didVerifySucceed()
     }))(N));

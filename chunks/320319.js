@@ -21,8 +21,8 @@ var s = n(735250),
     f = n(391110),
     A = n(484239),
     S = n(658370),
-    h = n(735825),
-    M = n(981631),
+    M = n(735825),
+    h = n(981631),
     x = n(921944),
     b = n(689938),
     O = n(977341);
@@ -41,9 +41,9 @@ let P = {
             w = (0, m.yQ)(),
             y = (0, m.IB)(),
             [H, k] = a.useState(!1),
-            [F, V] = a.useState(t === p.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === h.EB.REDEEMABLE);
+            [F, V] = a.useState(t === p.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === M.EB.REDEEMABLE);
         a.useEffect(() => {
-            t === p.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === h.EB.REDEEMABLE && V(!0);
+            t === p.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === M.EB.REDEEMABLE && V(!0);
         }, [y, t, w]);
         let W = a.useCallback(() => {
                 k(!0);
@@ -62,7 +62,7 @@ let P = {
             }, [z, H]);
         let { easterEggLevel: q, isEasterEggTriggered: X, onHover: J, onUnhover: $ } = (0, C.Z)(5),
             ee = (0, o.debounce)(() => {
-                R.default.track(M.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
+                R.default.track(h.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                     card_type: (0, o.snakeCase)(t),
                     is_tenure_reward: t === p.u.FREE_BOOST,
                     reward_status: null == w ? void 0 : w.nitroTenureStatus
@@ -70,7 +70,7 @@ let P = {
             }, 800),
             et = (0, o.debounce)(() => {
                 null != Z &&
-                    R.default.track(M.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
+                    R.default.track(h.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
                         card_type: (0, o.snakeCase)(t),
                         function_name: (0, o.snakeCase)(Z.name)
                     });
@@ -88,7 +88,7 @@ let P = {
         };
         let es = z !== r || null == r || j || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
         return (a.useEffect(() => {
-            D && B && (G(!0), R.default.track(M.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION));
+            D && B && (G(!0), R.default.track(h.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION));
         }, [D, B, r, t, Q]),
         (0, E.Z)(
             {
@@ -97,7 +97,7 @@ let P = {
                 properties: {
                     user_tenure_reward_id: null == w ? void 0 : w.tenureRewardStatusId,
                     tenure_reward_id: null == w ? void 0 : w.tenureRewardSkuId,
-                    reward_type: h.nW.SERVER_BOOST,
+                    reward_type: M.nW.SERVER_BOOST,
                     redeemable_at: null == w ? void 0 : w.redeemableAt,
                     reward_status: null == w ? void 0 : w.nitroTenureStatus
                 }
@@ -183,7 +183,7 @@ let P = {
                                 [O.reducedMotion]: D
                             }),
                             onTransitionEnd: (e) => {
-                                if (!!B && 'transform' === e.propertyName && !!e.target.classList.contains(O.flipCard)) G(!0), R.default.track(M.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION);
+                                if (!!B && 'transform' === e.propertyName && !!e.target.classList.contains(O.flipCard)) G(!0), R.default.track(h.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION);
                             },
                             children: [
                                 (0, s.jsx)('div', {
@@ -223,7 +223,7 @@ let P = {
 v.displayName = 'PerkDiscoverabilityCard';
 let L = a.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: o = '', subtitle: l = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: u, onCtaClick: E, onMouseEnter: T, className: I, perkComponent: R, cardVariant: g, cardType: C, onClick: p, backgroundImage: h, pillText: M, perkImage: x } = e,
+    let { title: r, titleClassName: o = '', subtitle: l = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: u, onCtaClick: E, onMouseEnter: T, className: I, perkComponent: R, cardVariant: g, cardType: C, onClick: p, backgroundImage: M, pillText: h, perkImage: x } = e,
         b = C === f.R0.CARD_CAROUSEL_FIRST_ROW || C === f.R0.CARD_CAROUSEL_SECOND_ROW || C === f.R0.CARD_CAROUSEL_THIRD_ROW,
         P = 0 !== c.length || 0 !== d.length || (0 !== l.length && g === f.zW.REWARD),
         v = (0, m.IB)(),
@@ -238,14 +238,14 @@ let L = a.forwardRef((e, t) => {
             [O.hideOverflow]: b
         }),
         onMouseEnter: T,
-        style: { backgroundImage: null != h ? 'url('.concat(h, ')') : void 0 },
+        style: { backgroundImage: null != M ? 'url('.concat(M, ')') : void 0 },
         onClick: p,
         children: [
-            null != M &&
+            null != h &&
                 (0, s.jsx)(_.Text, {
                     variant: 'text-xs/semibold',
                     className: O.pill,
-                    children: M
+                    children: h
                 }),
             (0, s.jsx)('div', { ref: t }),
             (0, s.jsx)(A.Z, {

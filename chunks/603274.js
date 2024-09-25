@@ -26,17 +26,17 @@ var l = n(120356),
     I = n(709054),
     E = n(853856),
     N = n(981631),
-    S = n(689938),
-    x = n(516126),
+    x = n(689938),
+    S = n(516126),
     v = n(64056);
-function T(e, t) {
+function Z(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
-              className: x.row,
+              className: S.row,
               children: [
                   (0, i.jsx)(e, {
-                      className: x.activityIcon,
+                      className: S.activityIcon,
                       color: 'currentColor'
                   }),
                   (0, i.jsx)(d.Z, {
@@ -47,7 +47,7 @@ function T(e, t) {
               ]
           });
 }
-function Z() {
+function T() {
     var e, t;
     let n = (0, o.Wu)([E.Z, _.Z], () =>
             I.default
@@ -58,7 +58,7 @@ function Z() {
         l = n.map((e) => e.id),
         r = n.filter((e) => e.type === N.d4z.GUILD_VOICE),
         a = n.filter((e) => e.type === N.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
-        S = (0, o.Wu)(
+        x = (0, o.Wu)(
             [g.ZP],
             () =>
                 s().flatMap(r, (e) =>
@@ -79,7 +79,7 @@ function Z() {
                     })
             )
         ),
-        Z = (0, o.e7)([h.Z], () => {
+        T = (0, o.e7)([h.Z], () => {
             let e = 0;
             for (let t of a) e += h.Z.getParticipantCount(t, p.pV.AUDIENCE);
             return e;
@@ -105,24 +105,24 @@ function Z() {
             },
             [l]
         ),
-        R = (0, o.Wu)([m.default], () => A.map((e) => m.default.getUser(e)), [A]),
-        M = (0, o.Wu)([m.default], () => b.map((e) => m.default.getUser(e)), [b]),
-        L = T(
+        M = (0, o.Wu)([m.default], () => A.map((e) => m.default.getUser(e)), [A]),
+        R = (0, o.Wu)([m.default], () => b.map((e) => m.default.getUser(e)), [b]),
+        L = Z(
             c.VoiceNormalIcon,
-            S.filter((e) => !b.includes(e.id) && !A.includes(e.id))
+            x.filter((e) => !b.includes(e.id) && !A.includes(e.id))
         );
-    let P =
+    let y =
             ((e = v),
-            (t = Z),
+            (t = T),
             0 === e.length
                 ? null
                 : (0, i.jsxs)('div', {
-                      className: x.row,
+                      className: S.row,
                       children: [
                           (0, i.jsx)(c.StageIcon, {
                               size: 'lg',
                               color: 'currentColor',
-                              className: x.activityIcon
+                              className: S.activityIcon
                           }),
                           (0, i.jsx)(d.Z, {
                               guildId: void 0,
@@ -130,14 +130,14 @@ function Z() {
                               max: 3
                           }),
                           (0, i.jsxs)('div', {
-                              className: x.stageListenerPill,
+                              className: S.stageListenerPill,
                               children: [
                                   (0, i.jsx)(c.HeadphonesIcon, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   }),
                                   (0, i.jsx)(c.Text, {
-                                      className: x.stageListenerCount,
+                                      className: S.stageListenerCount,
                                       color: 'text-normal',
                                       variant: 'text-xs/medium',
                                       children: t
@@ -146,26 +146,26 @@ function Z() {
                           })
                       ]
                   })),
-        y = T(
+        P = Z(
             c.ScreenArrowIcon,
-            M.filter((e) => null != e && !A.includes(e.id))
+            R.filter((e) => null != e && !A.includes(e.id))
         ),
-        O = T(c.ActivitiesIcon, R);
+        O = Z(c.ActivitiesIcon, M);
     return (0, i.jsxs)(i.Fragment, {
-        children: [P, L, y, O]
+        children: [y, L, P, O]
     });
 }
 function b() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: r()(x.row, x.rowGuildName),
+                className: r()(S.row, S.rowGuildName),
                 children: (0, i.jsx)('span', {
-                    className: r()(x.guildNameText, x.guildNameTextLimitedSize),
-                    children: S.Z.Messages.FAVORITES_GUILD_NAME
+                    className: r()(S.guildNameText, S.guildNameTextLimitedSize),
+                    children: x.Z.Messages.FAVORITES_GUILD_NAME
                 })
             }),
-            (0, i.jsx)(Z, {})
+            (0, i.jsx)(T, {})
         ]
     });
 }

@@ -3,10 +3,10 @@ n.d(t, {
         return a;
     },
     SO: function () {
-        return s;
+        return o;
     },
     Zw: function () {
-        return o;
+        return s;
     }
 });
 var r = n(570140),
@@ -17,9 +17,9 @@ function a(e) {
         settings: e
     });
 }
-function s() {
+function o() {
     a({ displayTools: !i.Z.displayTools });
 }
-function o() {
+function s() {
     r.Z.dispatch({ type: 'ANALYTICS_LOG_CLEAR' });
 }

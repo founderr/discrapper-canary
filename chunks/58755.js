@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return g;
+        return b;
     }
 }),
     n(724458),
@@ -32,7 +32,7 @@ let f = Object.keys(m.jQ).map((e) => ({
         value: e,
         label: e
     }));
-function g(e) {
+function b(e) {
     let { state: t, setState: n } = e,
         { scales: l } = t,
         [i, o] = a.useState(null),
@@ -93,7 +93,7 @@ function g(e) {
         u = l.find((e) => e.name === i),
         f =
             null != u
-                ? (0, r.jsx)(b, {
+                ? (0, r.jsx)(g, {
                       onClose: () => o(null),
                       scale: u,
                       setState: n
@@ -101,9 +101,9 @@ function g(e) {
                 : s;
     return (0, r.jsx)('div', { children: f });
 }
-function b(e) {
+function g(e) {
     let { scale: t, setState: n, onClose: a } = e,
-        { name: c, base: p, darkness: g, lightness: b, showColumnarPalettePreview: v, colorSpace: j, easingStrength: C = 1, useP3ColorSpace: T, steps: S = 26 } = t,
+        { name: c, base: p, darkness: b, lightness: g, showColumnarPalettePreview: v, colorSpace: C, easingStrength: _ = 1, useP3ColorSpace: S, steps: T = 26 } = t,
         N = (0, m.XM)(t),
         y = (0, m.W6)(N, c);
     return (0, r.jsxs)(d.FormSection, {
@@ -136,7 +136,7 @@ function b(e) {
                             (0, u.q)('figma-'.concat(t.name), JSON.stringify(e, null, 4));
                         },
                         style: { cursor: 'pointer' },
-                        children: (0, r.jsx)(_, {})
+                        children: (0, r.jsx)(j, {})
                     })
                 ]
             }),
@@ -165,7 +165,7 @@ function b(e) {
                     }),
                     (0, r.jsx)(d.SingleSelect, {
                         options: f,
-                        value: j,
+                        value: C,
                         onChange: (e) => (0, m.t4)(c, e, n),
                         popoutLayerContext: h.O$
                     })
@@ -176,7 +176,7 @@ function b(e) {
                 children: [
                     (0, r.jsx)(d.FormItem, {}),
                     (0, r.jsxs)(d.FormItem, {
-                        title: 'Lighten ('.concat((100 * b).toFixed(), '%)'),
+                        title: 'Lighten ('.concat((100 * g).toFixed(), '%)'),
                         children: [
                             (0, r.jsx)(d.FormText, {
                                 type: d.FormTextTypes.DESCRIPTION,
@@ -184,7 +184,7 @@ function b(e) {
                             }),
                             (0, r.jsx)(d.Slider, {
                                 onValueRender: () => null,
-                                initialValue: b,
+                                initialValue: g,
                                 stickToMarkers: !0,
                                 markers: Array.from({ length: 21 }, (e, t) => t / 10),
                                 minValue: 0,
@@ -195,7 +195,7 @@ function b(e) {
                         ]
                     }),
                     (0, r.jsxs)(d.FormItem, {
-                        title: 'Darken ('.concat((100 * g).toFixed(), '%)'),
+                        title: 'Darken ('.concat((100 * b).toFixed(), '%)'),
                         children: [
                             (0, r.jsx)(d.FormText, {
                                 type: d.FormTextTypes.DESCRIPTION,
@@ -218,7 +218,7 @@ function b(e) {
             (0, r.jsx)(d.FormSection, {
                 title: 'Easing',
                 children: (0, r.jsxs)(d.FormItem, {
-                    title: 'Easing Strength ('.concat(C.toFixed(2), ')'),
+                    title: 'Easing Strength ('.concat(_.toFixed(2), ')'),
                     children: [
                         (0, r.jsx)(d.FormText, {
                             type: d.FormTextTypes.DESCRIPTION,
@@ -226,7 +226,7 @@ function b(e) {
                         }),
                         (0, r.jsx)(d.Slider, {
                             onValueRender: () => null,
-                            initialValue: C,
+                            initialValue: _,
                             minValue: 1,
                             maxValue: 5,
                             onValueChange: (e) => (0, m.rd)(c, e, n),
@@ -249,17 +249,17 @@ function b(e) {
                     (0, r.jsx)(d.FormItem, {
                         children: (0, r.jsx)(d.FormSwitch, {
                             note: 'Renders the palette preview in a single column, useful for comparing the luminance of each step.',
-                            value: T,
+                            value: S,
                             disabled: !m.S2,
                             onChange: (e) => (0, m.uF)(c, e, n),
                             children: 'Use P3 Color Space'
                         })
                     }),
                     (0, r.jsx)(d.FormItem, {
-                        title: 'Steps ('.concat(S, ')'),
+                        title: 'Steps ('.concat(T, ')'),
                         children: (0, r.jsx)(d.Slider, {
                             onValueRender: () => null,
-                            initialValue: S,
+                            initialValue: T,
                             minValue: (0, m.A0)(c).length,
                             maxValue: 100,
                             onValueChange: (e) => (0, m.YC)(c, Math.round(e), n),
@@ -358,7 +358,7 @@ function v(e) {
         ]
     });
 }
-let _ = () =>
+let j = () =>
     (0, r.jsxs)('svg', {
         width: '20',
         height: '20',

@@ -1,47 +1,47 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return d;
     }
 }),
-    n(47120);
-var r = n(735250),
-    a = n(470079),
-    i = n(89057),
-    l = n(509545),
-    s = n(74538),
-    o = n(987209),
-    u = n(598),
-    c = n(456251);
+    t(47120);
+var r = t(735250),
+    i = t(470079),
+    a = t(89057),
+    s = t(509545),
+    o = t(74538),
+    l = t(987209),
+    c = t(598),
+    u = t(456251);
 function d(e) {
-    let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: I, handleClose: _ } = e,
-        { blockedPayments: h, setStep: f, hasFetchedSubscriptions: S, hasFetchedSubscriptionPlans: E, currencyLoading: m, selectedSkuId: p, setSelectedSkuId: T, setSelectedPlanId: C, priceOptions: N, setSubscriptionMetadataRequest: A } = (0, u.usePaymentContext)(),
-        { isGift: O } = (0, o.wD)(),
-        [P, b] = a.useState(!S || !E || m);
-    return (a.useEffect(() => {
-        b(!S || !E || m);
-    }, [m, E, S]),
-    a.useEffect(() => {
-        null != d && A({ guild_id: d });
-    }, [d, A]),
-    a.useEffect(() => {
-        C(n);
-        let e = null != n ? l.Z.get(n) : null;
-        if (!P && !h)
-            I((t) => {
-                let n = null != e ? (0, s.aS)(e.id, !1, O, N) : void 0;
+    let { initialStep: n, initialPlanId: t, guildId: d, setAnalyticsData: I, handleClose: _ } = e,
+        { blockedPayments: m, setStep: f, hasFetchedSubscriptions: p, hasFetchedSubscriptionPlans: T, currencyLoading: h, selectedSkuId: N, setSelectedSkuId: E, setSelectedPlanId: C, priceOptions: S, setSubscriptionMetadataRequest: P } = (0, c.usePaymentContext)(),
+        { isGift: g } = (0, l.wD)(),
+        [A, O] = i.useState(!p || !T || h);
+    return (i.useEffect(() => {
+        O(!p || !T || h);
+    }, [h, T, p]),
+    i.useEffect(() => {
+        null != d && P({ guild_id: d });
+    }, [d, P]),
+    i.useEffect(() => {
+        C(t);
+        let e = null != t ? s.Z.get(t) : null;
+        if (!A && !m)
+            I((n) => {
+                let t = null != e ? (0, o.aS)(e.id, !1, g, S) : void 0;
                 return {
-                    ...t,
+                    ...n,
                     subscription_plan_id: null == e ? void 0 : e.id,
-                    price: null == n ? void 0 : n.amount,
+                    price: null == t ? void 0 : t.amount,
                     regular_price: null == e ? void 0 : e.price,
-                    currency: N.currency
+                    currency: S.currency
                 };
             }),
-                null != e && (T(null == e ? void 0 : e.skuId), f(t));
-    }, [h, n, O, P, N, p, I, C, T, f, t]),
-    P)
-        ? (0, r.jsx)(c.Z, {})
-        : h
-          ? (0, r.jsx)(i.Vq, { onClose: _ })
+                null != e && (E(null == e ? void 0 : e.skuId), f(n));
+    }, [m, t, g, A, S, N, I, C, E, f, n]),
+    A)
+        ? (0, r.jsx)(u.Z, {})
+        : m
+          ? (0, r.jsx)(a.Vq, { onClose: _ })
           : null;
 }

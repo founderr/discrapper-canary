@@ -16,8 +16,8 @@ e.exports = function e(t, n) {
             var r,
                 i,
                 a,
-                s = a[i];
-            if (!e(t[s], n[s])) return !1;
+                o = a[i];
+            if (!e(t[o], n[o])) return !1;
         }
         return !0;
     }

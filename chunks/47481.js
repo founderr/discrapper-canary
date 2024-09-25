@@ -23,7 +23,7 @@ function u(e) {
         I = null;
     return (
         h.forEach((e) => {
-            var s, T, x, S, v, N, A, Z;
+            var s, T, x, v, S, N, A, Z;
             if (null != _ && _.length > 0) {
                 let t = l.default.extractTimestamp(e.id);
                 for (let e = 0; (s = e < (null == _ ? void 0 : _.length)), s; e++) {
@@ -66,16 +66,16 @@ function u(e) {
                 [R, b] =
                     ((T = E),
                     (x = e),
-                    (S = j),
-                    (n = v = b),
-                    null == v || v.type !== S
+                    (v = j),
+                    (n = S = b),
+                    null == S || S.type !== v
                         ? ((t = {
-                              type: S,
+                              type: v,
                               content: [],
                               key: x.id
                           }),
                           T.push(t))
-                        : (n = (t = v).content[t.content.length - 1]),
+                        : (n = (t = S).content[t.content.length - 1]),
                     [t, n]);
             }
             if (m === e.id && null != C) {
@@ -106,17 +106,17 @@ function u(e) {
                             unreadId: e.id
                         }),
                     (C = null));
-            let P = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? u : b;
-            (0, r.J)(d, P, e) && (n = e.id);
-            let O = {
+            let O = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? u : b;
+            (0, r.J)(d, O, e) && (n = e.id);
+            let P = {
                 type: e.type === c.uaV.THREAD_STARTER_MESSAGE ? c.ys_.THREAD_STARTER_MESSAGE : c.ys_.MESSAGE,
                 content: e,
                 groupId: n
             };
-            n === e.id && (u = O);
-            let { jumpSequenceId: y, jumpFlash: D, jumpTargetId: U } = h;
-            D && e.id === U && null != y && (O.flashKey = y),
-                h.jumpTargetId === e.id && (O.jumpTarget = !0),
+            n === e.id && (u = P);
+            let { jumpSequenceId: y, jumpFlash: D, jumpTargetId: k } = h;
+            D && e.id === k && null != y && (P.flashKey = y),
+                h.jumpTargetId === e.id && (P.jumpTarget = !0),
                 null != f &&
                     e.id === f.startId &&
                     f.count > 1 &&
@@ -126,7 +126,7 @@ function u(e) {
                         contentKey: f.startId,
                         isSummaryDivider: !0
                     }),
-                null !== R ? (R.content.push(O), O.jumpTarget && (R.hasJumpTarget = !0)) : E.push(O),
+                null !== R ? (R.content.push(P), P.jumpTarget && (R.hasJumpTarget = !0)) : E.push(P),
                 e.isFirstMessageInForumPost(d) && E.push({ type: c.ys_.FORUM_POST_ACTION_BAR }),
                 null != f &&
                     e.id === f.endId &&

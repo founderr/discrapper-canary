@@ -1,12 +1,12 @@
-n(47120);
-var r = n(147913),
-    i = n(430824),
-    a = n(70956),
+var r = n(47120);
+var i = n(147913),
+    a = n(430824),
+    o = n(70956),
     s = n(709054),
-    o = n(553385),
-    l = n(556178),
-    u = n(890477);
-function c(e, t, n) {
+    l = n(553385),
+    u = n(556178),
+    c = n(890477);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,35 +19,35 @@ function c(e, t, n) {
         e
     );
 }
-let d = 0;
-class _ extends r.Z {
+let _ = 0;
+class E extends i.Z {
     constructor(...e) {
         super(...e),
-            c(this, 'actions', {
+            d(this, 'actions', {
                 POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                 IDLE: () => this.handleIdleChange()
             }),
-            c(this, 'handleConnectionOpen', (e) => {
+            d(this, 'handleConnectionOpen', (e) => {
                 this._attemptDeadchatPrompt(), this._triggerGamingStatsSetupExperiment();
             }),
-            c(this, 'handleIdleChange', () => {
-                Date.now() - d > a.Z.Millis.HOUR && this._attemptDeadchatPrompt();
+            d(this, 'handleIdleChange', () => {
+                Date.now() - _ > o.Z.Millis.HOUR && this._attemptDeadchatPrompt();
             }),
-            c(this, '_attemptDeadchatPrompt', () => {
-                let e = i.Z.getGuilds(),
+            d(this, '_attemptDeadchatPrompt', () => {
+                let e = a.Z.getGuilds(),
                     t = s.default.keys(e).filter(
                         (e) =>
-                            u.Z.getCurrentConfig({
+                            c.Z.getCurrentConfig({
                                 guildId: e,
                                 location: 'manager'
                             }).triggerDeadchat
                     );
-                t.length > 0 && ((d = Date.now()), (0, o.N7)(t));
+                t.length > 0 && ((_ = Date.now()), (0, l.N7)(t));
             }),
-            c(this, '_triggerGamingStatsSetupExperiment', () => {
-                let e = i.Z.getGuilds();
+            d(this, '_triggerGamingStatsSetupExperiment', () => {
+                let e = a.Z.getGuilds();
                 s.default.keys(e).forEach((e) => {
-                    l.g.trackExposure({
+                    u.g.trackExposure({
                         guildId: e,
                         location: 'manager'
                     });
@@ -55,4 +55,4 @@ class _ extends r.Z {
             });
     }
 }
-t.Z = new _();
+t.Z = new E();

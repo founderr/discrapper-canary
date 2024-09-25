@@ -1,26 +1,26 @@
 n.d(t, {
     x: function () {
-        return s;
+        return a;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(470079);
-function s(e, t, n) {
-    let s = i.useRef(null),
-        [o, a] = i.useState(!1),
-        l = i.useCallback(() => {
-            if (e && null !== s.current) {
+function a(e, t, n) {
+    let r = i.useRef(null),
+        [a, o] = i.useState(!1),
+        s = i.useCallback(() => {
+            if (e && null !== r.current) {
                 var n;
-                a((null === (n = s.current) || void 0 === n ? void 0 : n.offsetHeight) > 2.5 * t);
+                o((null === (n = r.current) || void 0 === n ? void 0 : n.offsetHeight) > 2.5 * t);
             }
-        }, [a, e, t]);
+        }, [o, e, t]);
     return (
         i.useLayoutEffect(() => {
-            l();
-        }, [l, e, n]),
+            s();
+        }, [s, e, n]),
         {
-            postTitleRef: s,
-            isNewBadgeOverflow: o
+            postTitleRef: r,
+            isNewBadgeOverflow: a
         }
     );
 }

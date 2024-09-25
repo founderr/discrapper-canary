@@ -1,14 +1,14 @@
 i.d(t, {
     Z: function () {
-        return C;
+        return x;
     }
 }),
     i(411104);
 var n = i(735250),
     a = i(470079),
     r = i(120356),
-    o = i.n(r),
-    s = i(873199),
+    s = i.n(r),
+    o = i(873199),
     l = i(442837),
     c = i(857192),
     d = i(674588),
@@ -17,9 +17,9 @@ var n = i(735250),
     _ = i(125909),
     p = i(185156),
     m = i(87528),
-    f = i(57348),
-    g = i(354775);
-function C() {
+    g = i(57348),
+    C = i(354775);
+function x() {
     let e = (0, l.e7)([c.default], () => c.default.appDirectoryIncludesInactiveCollections),
         t = (0, l.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: e })),
         i = (0, l.e7)([u.Z], () => u.Z.getCollections({ includesInactive: e }));
@@ -35,15 +35,15 @@ function C() {
                       ? void 0
                       : i.map((e, t) => {
                             let a;
-                            let r = t > 0 && i[t - 1].type !== s.o.GALLERY;
+                            let r = t > 0 && i[t - 1].type !== o.o.GALLERY;
                             switch (e.type) {
-                                case s.o.LIST:
+                                case o.o.LIST:
                                     a = (0, n.jsx)(m.Z, { collection: e });
                                     break;
-                                case s.o.LIST_WITH_IMAGE:
-                                    a = (0, n.jsx)(f.Z, { collection: e });
+                                case o.o.LIST_WITH_IMAGE:
+                                    a = (0, n.jsx)(g.Z, { collection: e });
                                     break;
-                                case s.o.GALLERY:
+                                case o.o.GALLERY:
                                     a = (0, n.jsx)(p.Z, { collection: e });
                                     break;
                                 default:
@@ -52,7 +52,7 @@ function C() {
                             return (0, n.jsx)(
                                 'div',
                                 {
-                                    className: o()({ [g.topMargin]: r }),
+                                    className: s()({ [C.topMargin]: r }),
                                     children: a
                                 },
                                 e.id

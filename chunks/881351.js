@@ -1,8 +1,8 @@
 t.r(n);
 var l = t(735250);
 t(470079);
-var s = t(481060),
-    i = t(239091),
+var i = t(481060),
+    s = t(239091),
     a = t(883385),
     o = t(108843),
     d = t(947440),
@@ -26,53 +26,53 @@ n.default = (0, o.Z)(
     (0, a.Z)(
         function (e) {
             let { user: n, guildId: t, channelId: a, showMediaItems: o = !1, mediaEngineContext: u, onSelect: O } = e,
-                U = (0, N.Z)({
+                v = (0, N.Z)({
                     userId: n.id,
                     guildId: t,
                     channelId: a
                 }),
-                S = (0, A.Z)(n.id),
-                v = (0, f.Z)({ user: n }),
-                x = (0, M.Z)({
+                U = (0, A.Z)(n.id),
+                S = (0, f.Z)({ user: n }),
+                b = (0, M.Z)({
                     user: n,
                     guildId: t,
                     channelId: a
                 }),
-                b = (0, E.Z)({ user: n }),
+                x = (0, E.Z)({ user: n }),
                 D = (0, m.Z)(n.id),
                 L = (0, C.Z)(n.id),
                 h = (0, I.Z)(n.id, u),
                 R = (0, g.Z)({ user: n }),
-                j = (0, d.Z)(null, n),
+                P = (0, d.Z)(null, n),
                 p = (0, Z.Z)(n),
-                P = (0, _.Z)({ user: n }),
+                j = (0, _.Z)({ user: n }),
                 k = (0, r.Z)({
                     id: n.id,
                     label: T.Z.Messages.COPY_ID_USER
                 }),
                 V = (0, c.Z)(n),
                 F = n.isNonUserBot();
-            return (0, l.jsxs)(s.Menu, {
+            return (0, l.jsxs)(i.Menu, {
                 navId: 'user-context',
-                onClose: i.Zy,
+                onClose: s.Zy,
                 'aria-label': T.Z.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: O,
                 children: [
                     !F &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(s.MenuGroup, { children: V }),
-                                (0, l.jsxs)(s.MenuGroup, {
-                                    children: [U, S, v, x, b, D]
+                                (0, l.jsx)(i.MenuGroup, { children: V }),
+                                (0, l.jsxs)(i.MenuGroup, {
+                                    children: [v, U, S, b, x, D]
                                 }),
-                                o && (0, l.jsx)(s.MenuGroup, { children: L }),
-                                (0, l.jsx)(s.MenuGroup, { children: j }),
-                                (0, l.jsxs)(s.MenuGroup, {
-                                    children: [o && h, R, p, P]
+                                o && (0, l.jsx)(i.MenuGroup, { children: L }),
+                                (0, l.jsx)(i.MenuGroup, { children: P }),
+                                (0, l.jsxs)(i.MenuGroup, {
+                                    children: [o && h, R, p, j]
                                 })
                             ]
                         }),
-                    (0, l.jsx)(s.MenuGroup, { children: k })
+                    (0, l.jsx)(i.MenuGroup, { children: k })
                 ]
             });
         },

@@ -3,16 +3,16 @@ var s,
     r = n(735250),
     i = n(470079),
     a = n(120356),
-    l = n.n(a),
-    o = n(442837),
+    o = n.n(a),
+    l = n(442837),
     c = n(893776),
     u = n(129293),
     d = n(388905),
     _ = n(17894),
     h = n(108427),
     E = n(314897),
-    g = n(626135),
-    p = n(981631),
+    p = n(626135),
+    g = n(981631),
     m = n(689938),
     f = n(237810),
     I = n(113207);
@@ -29,7 +29,7 @@ function N(e, t, n) {
         e
     );
 }
-o.ZP.initialize();
+l.ZP.initialize();
 class T extends (s = i.PureComponent) {
     componentDidMount() {
         this.handleVerify(), (0, h.e)('verify_email');
@@ -39,7 +39,7 @@ class T extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(375673),
-                    className: l()(f.image, I.marginBottom20)
+                    className: o()(f.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: I.marginBottom8,
@@ -61,7 +61,7 @@ class T extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(73962),
-                    className: l()(f.image, I.marginBottom20)
+                    className: o()(f.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: I.marginBottom40,
@@ -79,7 +79,7 @@ class T extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(892235),
-                    className: l()(f.image, I.marginBottom20)
+                    className: o()(f.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: I.marginBottom8,
@@ -108,16 +108,16 @@ class T extends (s = i.PureComponent) {
             }),
             N(this, 'handleLogin', () => {
                 let { transitionTo: e } = this.props;
-                e(p.Z5c.LOGIN);
+                e(g.Z5c.LOGIN);
             }),
             N(this, 'handleOpenApp', () => {
                 let { verifyingUserId: e } = this.props;
-                g.default.track(p.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, _.Z)('verify_email');
+                p.default.track(g.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, _.Z)('verify_email');
             });
     }
 }
 N(T, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }),
-    (t.Z = o.ZP.connectStores([E.default], () => ({
+    (t.Z = l.ZP.connectStores([E.default], () => ({
         verifyFailed: E.default.didVerifyFail(),
         verifyErrors: E.default.getVerifyErrors(),
         verifySucceeded: E.default.didVerifySucceed(),

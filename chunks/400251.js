@@ -24,14 +24,14 @@ var i = n(735250),
     I = n(683818),
     T = n(16853),
     x = n(981631),
-    S = n(689938),
-    v = n(724850),
+    v = n(689938),
+    S = n(724850),
     N = n(883760);
 let A = (e) => {
     let { onClick: t } = e;
     return (0, i.jsxs)(o.Clickable, {
         onClick: t,
-        className: v.addEntryCard,
+        className: S.addEntryCard,
         children: [
             (0, i.jsx)('img', {
                 alt: '',
@@ -40,8 +40,8 @@ let A = (e) => {
             (0, i.jsx)(o.Text, {
                 variant: 'text-sm/semibold',
                 color: 'header-primary',
-                className: v.addServerText,
-                children: S.Z.Messages.HUB_ADD_SERVER_CTA
+                className: S.addServerText,
+                children: v.Z.Messages.HUB_ADD_SERVER_CTA
             })
         ]
     });
@@ -51,12 +51,12 @@ function Z(e) {
         [a, r] = s.useState(!1),
         { canEdit: c } = (0, I.Z)(t);
     return (0, i.jsx)('div', {
-        className: l()(v.actionButtonsContainer, { [v.forceButtonsShow]: a }),
+        className: l()(S.actionButtonsContainer, { [S.forceButtonsShow]: a }),
         children: (0, i.jsxs)(h.ZP, {
             children: [
                 c
                     ? (0, i.jsx)(o.Tooltip, {
-                          text: S.Z.Messages.HUB_ENTRY_UPDATE,
+                          text: v.Z.Messages.HUB_ENTRY_UPDATE,
                           hideOnClick: !0,
                           children: (e) => {
                               let { onClick: s, ...a } = e;
@@ -73,11 +73,11 @@ function Z(e) {
                                                   });
                                           });
                                   },
-                                  'aria-label': S.Z.Messages.HUB_ENTRY_UPDATE,
+                                  'aria-label': v.Z.Messages.HUB_ENTRY_UPDATE,
                                   children: (0, i.jsx)(o.PencilIcon, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: v.overflowIcon
+                                      className: S.overflowIcon
                                   })
                               });
                           }
@@ -91,7 +91,7 @@ function Z(e) {
                     children: (e) => {
                         let { onClick: t, ...n } = e;
                         return (0, i.jsx)(o.Tooltip, {
-                            text: S.Z.Messages.MORE,
+                            text: v.Z.Messages.MORE,
                             hideOnClick: !0,
                             children: (e) => {
                                 let { onClick: s, ...a } = e;
@@ -101,11 +101,11 @@ function Z(e) {
                                     onClick: (e) => {
                                         null == s || s(), t(e);
                                     },
-                                    'aria-label': S.Z.Messages.MORE,
+                                    'aria-label': v.Z.Messages.MORE,
                                     children: (0, i.jsx)(o.MoreHorizontalIcon, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: v.overflowIcon
+                                        className: S.overflowIcon
                                     })
                                 });
                             }
@@ -143,11 +143,11 @@ t.Z = (e) => {
                 })) && void 0 !== t
                 ? t
                 : void 0,
-        M = S.Z.Messages.JOIN;
+        M = v.Z.Messages.JOIN;
     return (
-        I && (M = S.Z.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON),
+        I && (M = v.Z.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON),
         (0, i.jsxs)('div', {
-            className: v.card,
+            className: S.card,
             onContextMenu: (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
@@ -160,28 +160,28 @@ t.Z = (e) => {
             },
             children: [
                 (0, i.jsxs)('div', {
-                    className: v.cardHeader,
+                    className: S.cardHeader,
                     children: [
                         (0, i.jsx)('div', {
-                            className: v.splash,
+                            className: S.splash,
                             children:
                                 null != N &&
                                 (0, i.jsx)('img', {
                                     src: N,
                                     alt: '',
-                                    className: v.splashImage
+                                    className: S.splashImage
                                 })
                         }),
                         (0, i.jsx)('div', {
-                            className: v.guildIcon,
+                            className: S.guildIcon,
                             children: (0, i.jsx)(d.ZP, {
                                 mask: d.ZP.Masks.SQUIRCLE,
                                 width: 48,
                                 height: 48,
                                 children: (0, i.jsx)('div', {
-                                    className: v.iconMask,
+                                    className: S.iconMask,
                                     children: (0, i.jsx)(m.Z, {
-                                        className: v.icon,
+                                        className: S.icon,
                                         iconSrc: A,
                                         guild: new E.ZP(a),
                                         size: m.Z.Sizes.MEDIUM,
@@ -193,18 +193,18 @@ t.Z = (e) => {
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: v.guildInfo,
+                    className: S.guildInfo,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: v.title,
+                            className: S.title,
                             children: [
                                 (0, i.jsx)(p.Z, {
-                                    className: v.guildBadge,
+                                    className: S.guildBadge,
                                     guild: a,
                                     tooltipColor: o.Tooltip.Colors.PRIMARY
                                 }),
                                 (0, i.jsx)(o.Text, {
-                                    className: v.guildName,
+                                    className: S.guildName,
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
                                     children: a.name
@@ -212,35 +212,35 @@ t.Z = (e) => {
                             ]
                         }),
                         (0, i.jsx)(o.Text, {
-                            className: v.description,
+                            className: S.description,
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             children: a.description
                         }),
                         (0, i.jsxs)('div', {
-                            className: v.memberInfo,
+                            className: S.memberInfo,
                             children: [
                                 null != a.approximatePresenceCount &&
                                     (0, i.jsxs)('div', {
-                                        className: v.memberCount,
+                                        className: S.memberCount,
                                         children: [
-                                            (0, i.jsx)('div', { className: v.dotOnline }),
+                                            (0, i.jsx)('div', { className: S.dotOnline }),
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'header-secondary',
-                                                children: S.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: a.approximatePresenceCount })
+                                                children: v.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: a.approximatePresenceCount })
                                             })
                                         ]
                                     }),
                                 null != a.approximateMemberCount &&
                                     (0, i.jsxs)('div', {
-                                        className: v.memberCount,
+                                        className: S.memberCount,
                                         children: [
-                                            (0, i.jsx)('div', { className: v.dotOffline }),
+                                            (0, i.jsx)('div', { className: S.dotOffline }),
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'header-secondary',
-                                                children: S.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: a.approximateMemberCount })
+                                                children: v.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: a.approximateMemberCount })
                                             })
                                         ]
                                     })
@@ -248,7 +248,7 @@ t.Z = (e) => {
                         }),
                         (0, i.jsx)(o.Button, {
                             submitting: l,
-                            className: v.joinButton,
+                            className: S.joinButton,
                             color: I ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
                             onClick: T,
                             children: M

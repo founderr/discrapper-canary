@@ -2,12 +2,12 @@ var s,
     r,
     i,
     a,
-    l = n(442837),
-    o = n(570140);
+    o = n(442837),
+    l = n(570140);
 let c = !1,
     u = null,
     d = null;
-class _ extends (a = l.ZP.Store) {
+class _ extends (a = o.ZP.Store) {
     getState() {
         return {
             verifySuccess: c,
@@ -25,7 +25,7 @@ class _ extends (a = l.ZP.Store) {
               writable: !0
           })
         : (s[r] = i),
-    (t.Z = new _(o.Z, {
+    (t.Z = new _(l.Z, {
         HUB_VERIFY_EMAIL_SUCCESS: function (e) {
             let { guildId: t } = e;
             (c = !0), (u = null), (d = t);

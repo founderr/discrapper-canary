@@ -1,24 +1,24 @@
 var r = n(668530),
-    o = n(821819),
+    i = n(821819),
     a = n(96403),
-    i = n(342545),
+    o = n(342545),
     s = n(625014).trim,
-    c = n(219479),
-    l = r.parseInt,
-    u = r.Symbol,
-    d = u && u.iterator,
-    p = /^[+-]?0x/i,
-    h = a(p.exec),
+    l = n(219479),
+    u = r.parseInt,
+    c = r.Symbol,
+    d = c && c.iterator,
+    _ = /^[+-]?0x/i,
+    E = a(_.exec),
     f =
-        8 !== l(c + '08') ||
-        22 !== l(c + '0x16') ||
+        8 !== u(l + '08') ||
+        22 !== u(l + '0x16') ||
         (d &&
-            !o(function () {
-                l(Object(d));
+            !i(function () {
+                u(Object(d));
             }));
 e.exports = f
     ? function (e, t) {
-          var n = s(i(e));
-          return l(n, t >>> 0 || (h(p, n) ? 16 : 10));
+          var n = s(o(e));
+          return u(n, t >>> 0 || (E(_, n) ? 16 : 10));
       }
-    : l;
+    : u;

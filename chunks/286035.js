@@ -1,6 +1,6 @@
 n.d(t, {
     Pg: function () {
-        return s;
+        return o;
     },
     Te: function () {
         return i;
@@ -16,6 +16,6 @@ function i() {
 function a() {
     r.Z.dispatch({ type: 'DOMAIN_MIGRATION_FAILURE' });
 }
-function s() {
+function o() {
     window.location.reload();
 }

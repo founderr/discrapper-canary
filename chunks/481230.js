@@ -1,33 +1,33 @@
 n.d(t, {
     R$: function () {
-        return p;
+        return g;
     },
     ZP: function () {
-        return g;
+        return p;
     }
 });
 var s = n(913527),
     r = n.n(s),
     i = n(990547),
     a = n(570140),
-    l = n(479531),
-    o = n(771308),
+    o = n(479531),
+    l = n(771308),
     c = n(314897),
     u = n(626135),
     d = n(573261),
     _ = n(959776),
     h = n(981631),
     E = n(723359);
-function g(e) {
+function p(e) {
     let { invite: t = null, giftCodeSKUId: n = null, ...s } = e;
-    return p({
+    return g({
         ...s,
         invite: t,
         giftCodeSKUId: n
     });
 }
-function p(e) {
-    let { email: t, phoneToken: n, username: s, globalName: g, consent: p, password: m, guildTemplateCode: f, birthday: I, invite: N = null, giftCodeSKUId: T = null, multiStep: x = !1, promoEmailConsent: A = null, usedUsernameSuggestion: C = null } = e;
+function g(e) {
+    let { email: t, phoneToken: n, username: s, globalName: p, consent: g, password: m, guildTemplateCode: f, birthday: I, invite: N = null, giftCodeSKUId: T = null, multiStep: x = !1, promoEmailConsent: A = null, usedUsernameSuggestion: C = null } = e;
     return (
         a.Z.dispatch({
             type: 'REGISTER',
@@ -50,10 +50,10 @@ function p(e) {
                 fingerprint: c.default.getFingerprint(),
                 email: t,
                 username: s,
-                global_name: g,
+                global_name: p,
                 password: m,
                 invite: N,
-                consent: p,
+                consent: g,
                 phone_token: n,
                 date_of_birth: null == I ? void 0 : I.format('YYYY-MM-DD'),
                 gift_code_sku_id: T,
@@ -82,13 +82,13 @@ function p(e) {
                     });
             },
             (e) => {
-                let t = new l.Z(e);
+                let t = new o.Z(e);
                 throw (
                     (a.Z.dispatch({
                         type: 'REGISTER_FAILURE',
                         error: t
                     }),
-                    null != t.getFieldErrors('date_of_birth') && o.wE(E.L0.REGISTER),
+                    null != t.getFieldErrors('date_of_birth') && l.wE(E.L0.REGISTER),
                     u.default.track(h.rMx.REGISTER_SUBMIT_ERRORED, {
                         is_unique_username_registration: !0,
                         email_error_reason: t.getFirstFieldErrorMessage('email'),

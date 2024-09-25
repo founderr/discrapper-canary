@@ -1,47 +1,47 @@
 var r = n(67867),
-    o = n(570596),
+    i = n(570596),
     a = n(548828),
-    i = n(294377),
+    o = n(294377),
     s = n(653457),
-    c = n(139545),
-    l = n(730427),
-    u = n(871785),
+    l = n(139545),
+    u = n(730427),
+    c = n(871785),
     d = 'No one promise resolved';
 r(
     {
         target: 'Promise',
         stat: !0,
-        forced: u
+        forced: c
     },
     {
         any: function (e) {
             var t = this,
-                n = i('AggregateError'),
+                n = o('AggregateError'),
                 r = s.f(t),
-                u = r.resolve,
-                p = r.reject,
-                h = c(function () {
+                c = r.resolve,
+                _ = r.reject,
+                E = l(function () {
                     var r = a(t.resolve),
-                        i = [],
+                        o = [],
                         s = 0,
-                        c = 1,
-                        h = !1;
-                    l(e, function (e) {
+                        l = 1,
+                        E = !1;
+                    u(e, function (e) {
                         var a = s++,
-                            l = !1;
-                        c++,
-                            o(r, t, e).then(
+                            u = !1;
+                        l++,
+                            i(r, t, e).then(
                                 function (e) {
-                                    !l && !h && ((h = !0), u(e));
+                                    !u && !E && ((E = !0), c(e));
                                 },
                                 function (e) {
-                                    !l && !h && ((l = !0), (i[a] = e), --c || p(new n(i, d)));
+                                    !u && !E && ((u = !0), (o[a] = e), --l || _(new n(o, d)));
                                 }
                             );
                     }),
-                        --c || p(new n(i, d));
+                        --l || _(new n(o, d));
                 });
-            return h.error && p(h.value), r.promise;
+            return E.error && _(E.value), r.promise;
         }
     }
 );

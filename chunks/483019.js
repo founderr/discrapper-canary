@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return _;
     }
-}),
-    n(47120);
-var r = n(392711),
-    i = n.n(r),
-    a = n(846519),
+});
+var r = n(47120);
+var i = n(392711),
+    a = n.n(i),
+    o = n(846519),
     s = n(710845),
-    o = n(70956),
-    l = n(709054);
-function u(e, t, n) {
+    l = n(70956),
+    u = n(709054);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,15 +23,15 @@ function u(e, t, n) {
         e
     );
 }
-let c = 1 * o.Z.Millis.MINUTE;
-class d {
+let d = 1 * l.Z.Millis.MINUTE;
+class _ {
     reset() {
         (this._subscriptions = {}), (this._unsubscriptions = {}), this._unsubscribe.cancel();
     }
     get(e) {
         var t;
         let n = null !== (t = this._subscriptions[e]) && void 0 !== t ? t : {};
-        return l.default.keys(n);
+        return u.default.keys(n);
     }
     clear(e) {
         delete this._subscriptions[e], delete this._unsubscriptions[e];
@@ -60,19 +60,19 @@ class d {
         l > 5 && new s.Z('GuildMemberSubscriptions').warn('GuildMemberSubscriptions.subscribe(...): Potential reference leak! ('.concat(l, ' subscriptions)'));
     }
     flushUnsubscriptions() {
-        if (!i().isEmpty(this._unsubscriptions))
-            i().forEach(this._unsubscriptions, (e, t) => {
+        if (!a().isEmpty(this._unsubscriptions))
+            a().forEach(this._unsubscriptions, (e, t) => {
                 let n = this._subscriptions[t];
-                i().forEach(e, (e, t) => {
+                a().forEach(e, (e, t) => {
                     var r;
                     (n[t] = (null !== (r = n[t]) && void 0 !== r ? r : 0) - e), n[t] <= 0 && delete n[t];
                 }),
-                    i().isEmpty(n) && delete this._subscriptions[t],
+                    a().isEmpty(n) && delete this._subscriptions[t],
                     this._onChange(t, this.get(t));
             }),
                 (this._unsubscriptions = {});
     }
     constructor(e) {
-        u(this, '_subscriptions', {}), u(this, '_unsubscriptions', {}), u(this, '_onChange', void 0), u(this, '_unsubscribe', new a.sW(c, () => this.flushUnsubscriptions())), (this._onChange = e);
+        c(this, '_subscriptions', {}), c(this, '_unsubscriptions', {}), c(this, '_onChange', void 0), c(this, '_unsubscribe', new o.sW(d, () => this.flushUnsubscriptions())), (this._onChange = e);
     }
 }

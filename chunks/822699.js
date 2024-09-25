@@ -3,16 +3,16 @@ var s = n(735250),
     r = n(470079),
     i = n(593473),
     a = n(990547),
-    l = n(873546),
-    o = n(442837),
+    o = n(873546),
+    l = n(442837),
     c = n(570140),
     u = n(893776),
     d = n(533307),
     _ = n(447543),
     h = n(126399),
     E = n(765717),
-    g = n(267394),
-    p = n(761305),
+    p = n(267394),
+    g = n(761305),
     m = n(698177),
     f = n(353926),
     I = n(409059),
@@ -21,16 +21,16 @@ var s = n(735250),
     x = n(264229),
     A = n(677760),
     C = n(314897),
-    v = n(82142),
-    Z = n(701190),
-    S = n(626135),
-    R = n(81063),
+    Z = n(82142),
+    R = n(701190),
+    v = n(626135),
+    S = n(81063),
     O = n(449934),
     b = n(768581),
-    D = n(625054),
-    L = n(645499),
+    P = n(625054),
+    D = n(645499),
     M = n(320830),
-    P = n(721751),
+    L = n(721751),
     j = n(718182),
     y = n(223543),
     G = n(73906),
@@ -50,7 +50,7 @@ var s = n(735250),
     X = n(981631),
     Q = n(188785);
 n(179645);
-o.ZP.initialize();
+l.ZP.initialize();
 let $ = (0, M.Z)(H.Z),
     ee = (0, M.Z)(V.Z),
     et = (0, M.Z)(w.Z),
@@ -59,51 +59,51 @@ let $ = (0, M.Z)(H.Z),
     er = (0, M.Z)(A.Z),
     ei = (0, M.Z)(K.Z),
     ea = (0, M.Z)(j.Z),
-    el = (0, M.Z)(y.Z),
-    eo = (0, M.Z)(J.Z),
+    eo = (0, M.Z)(y.Z),
+    el = (0, M.Z)(J.Z),
     ec = (0, M.Z)(m.Z),
     eu = (0, M.Z)(Y.Z),
     ed = (0, M.Z)(B.Z),
-    e_ = (0, M.Z)(p.Z),
+    e_ = (0, M.Z)(g.Z),
     eh = (0, M.Z)(T.Z),
     eE = (0, M.Z)(G.Z),
-    eg = (0, M.Z)(z.Z),
-    ep = (0, M.Z)(q.Z),
+    ep = (0, M.Z)(z.Z),
+    eg = (0, M.Z)(q.Z),
     em = (0, M.Z)(W.Z);
 class ef extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         var n;
         let { invite: s, location: r } = e,
             { backgroundId: a } = t,
-            l = null !== (n = (0, i.parse)(r.search).redirect_to) && void 0 !== n ? n : null;
-        (null == l || '' === l || !(0, L.B)(l) || l.startsWith(X.Z5c.ME)) && (l = null);
-        let o = null;
-        if (null == s) o = (0, O.gK)(l);
+            o = null !== (n = (0, i.parse)(r.search).redirect_to) && void 0 !== n ? n : null;
+        (null == o || '' === o || !(0, D.B)(o) || o.startsWith(X.Z5c.ME)) && (o = null);
+        let l = null;
+        if (null == s) l = (0, O.gK)(o);
         else if ((null == s ? void 0 : s.state) === X.r2o.RESOLVED) {
             let { guild: e, target_application: t } = s;
             null != t
-                ? null != a && (o = (0, R.getAssetImage)(t.id, a, 1024))
+                ? null != a && (l = (0, S.getAssetImage)(t.id, a, 1024))
                 : null != e &&
                   'string' == typeof e.splash &&
-                  (o = b.ZP.getGuildSplashURL({
+                  (l = b.ZP.getGuildSplashURL({
                       id: e.id,
                       splash: e.splash
                   }));
         }
         return {
-            redirectTo: l,
-            splash: o
+            redirectTo: o,
+            splash: l
         };
     }
     componentDidMount() {
         let { inviteKey: e, hasLoadedExperiments: t, isAuthenticated: n } = this.props;
         null != e &&
             (!t && n && u.Z.getExperiments(!0),
-            S.default.track(
+            v.default.track(
                 X.rMx.INVITE_OPENED,
                 {
                     invite_code: (0, x.jX)(e),
-                    load_time: D.Z.getTimeSinceNavigationStart()
+                    load_time: P.Z.getTimeSinceNavigationStart()
                 },
                 { flush: !0 }
             )),
@@ -124,7 +124,7 @@ class ef extends r.PureComponent {
         if ((null == e ? void 0 : e.state) === X.r2o.RESOLVED) {
             let { target_application: t } = e;
             null != t &&
-                (0, R.fetchAssetIds)(t.id, ['embedded_splash']).then((e) => {
+                (0, S.fetchAssetIds)(t.id, ['embedded_splash']).then((e) => {
                     let [t] = e;
                     return this.setState({ backgroundId: t });
                 });
@@ -135,18 +135,18 @@ class ef extends r.PureComponent {
         if (null != e)
             (async () => {
                 let { invite: t } = await _.Z.resolveInvite(e, X.Usc.INVITE);
-                null != t && (0, g.A)(t);
+                null != t && (0, p.A)(t);
             })(),
                 _.Z.openNativeAppModal(e);
     }
     resolveGuildTemplate() {
         let { guildTemplateCode: e } = this.props;
         if (null != e)
-            S.default.track(
+            v.default.track(
                 X.rMx.GUILD_TEMPLATE_OPENED,
                 {
                     guild_template_code: e,
-                    load_time: D.Z.getTimeSinceNavigationStart()
+                    load_time: P.Z.getTimeSinceNavigationStart()
                 },
                 { flush: !0 }
             ),
@@ -163,7 +163,7 @@ class ef extends r.PureComponent {
     render() {
         let { splash: e, redirectTo: t } = this.state,
             { inviteKey: n } = this.props;
-        return (0, s.jsxs)(P.Z, {
+        return (0, s.jsxs)(L.Z, {
             splash: e,
             children: [
                 (0, s.jsx)(E.Z, {
@@ -222,7 +222,7 @@ class ef extends r.PureComponent {
                                 transitionTo: i
                             } = e,
                             a = (0, x.mb)(t, r.search);
-                        return l.tq || l.Em
+                        return o.tq || o.Em
                             ? (0, s.jsx)(
                                   er,
                                   {
@@ -250,7 +250,7 @@ class ef extends r.PureComponent {
                             location: r,
                             transitionTo: i
                         } = e;
-                        return l.tq || l.Em
+                        return o.tq || o.Em
                             ? (0, s.jsx)(k.Z, { code: t }, t)
                             : (0, s.jsx)(en, {
                                   code: t,
@@ -262,7 +262,7 @@ class ef extends r.PureComponent {
                 }),
                 (0, s.jsx)(E.Z, {
                     path: X.Z5c.VERIFY,
-                    render: (e) => (0, s.jsx)(eo, { ...e })
+                    render: (e) => (0, s.jsx)(el, { ...e })
                 }),
                 (0, s.jsx)(E.Z, {
                     path: X.Z5c.VERIFY_HUB_EMAIL,
@@ -302,7 +302,7 @@ class ef extends r.PureComponent {
                 }),
                 (0, s.jsx)(E.Z, {
                     path: X.Z5c.AUTHORIZE_PAYMENT,
-                    render: (e) => (0, s.jsx)(el, { ...e })
+                    render: (e) => (0, s.jsx)(eo, { ...e })
                 }),
                 (0, s.jsx)(E.Z, {
                     path: X.Z5c.RESET,
@@ -314,7 +314,7 @@ class ef extends r.PureComponent {
                 }),
                 (0, s.jsx)(E.Z, {
                     path: X.Z5c.PICK_GUILD_SETTINGS(':section?', ':subsection?'),
-                    render: (e) => (0, s.jsx)(eg, { ...e })
+                    render: (e) => (0, s.jsx)(ep, { ...e })
                 }),
                 (0, s.jsx)(E.Z, {
                     path: X.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?'),
@@ -322,7 +322,7 @@ class ef extends r.PureComponent {
                 }),
                 (0, s.jsx)(E.Z, {
                     path: X.Z5c.REPORT,
-                    render: (e) => (0, s.jsx)(ep, { ...e })
+                    render: (e) => (0, s.jsx)(eg, { ...e })
                 }),
                 (0, s.jsx)(E.Z, {
                     path: X.Z5c.REPORT_SECOND_LOOK,
@@ -350,21 +350,21 @@ class ef extends r.PureComponent {
                 : (t[n] = s);
     }
 }
-t.default = o.ZP.connectStores([C.default, Z.Z, v.Z, f.Z, I.Z], (e) => {
+t.default = l.ZP.connectStores([C.default, R.Z, Z.Z, f.Z, I.Z], (e) => {
     var t, n, s;
     let { match: r, location: i } = e,
         a = null == r ? void 0 : null === (t = r.params) || void 0 === t ? void 0 : t.inviteCode,
-        l = Q.a ? Q.Y : void 0,
-        o = null != a ? (0, x.mb)(a, i.search) : l,
+        o = Q.a ? Q.Y : void 0,
+        l = null != a ? (0, x.mb)(a, i.search) : o,
         c = null == r ? void 0 : null === (n = r.params) || void 0 === n ? void 0 : n.giftCode,
         u = null == r ? void 0 : null === (s = r.params) || void 0 === s ? void 0 : s.guildTemplateCode;
     return {
-        inviteKey: o,
+        inviteKey: l,
         isAuthenticated: C.default.isAuthenticated(),
         giftCode: c,
         guildTemplateCode: u,
-        gift: null != c ? v.Z.get(c) : null,
-        invite: null != o ? Z.Z.getInvite(o) : null,
+        gift: null != c ? Z.Z.get(c) : null,
+        invite: null != l ? R.Z.getInvite(l) : null,
         guildTemplate: null != u ? I.Z.getGuildTemplate(u) : null,
         hasLoadedExperiments: f.Z.hasLoadedExperiments
     };

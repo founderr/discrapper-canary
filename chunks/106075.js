@@ -39,25 +39,25 @@ function b() {
         y = !L.MU.has(P),
         j = (0, d.iN)('global_discovery_servers_layout'),
         { searchBarState: U, onTabsAvailableWidthChange: G, onCollapsedSearchBarClick: w, onSearchBarBlur: k, tabsClassName: B } = (0, m.U)({ isSearchBarVisible: y }),
-        { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: Y, isSearchVisible: z } = (0, N.H)({ loadId: e.current }),
-        W = (0, E.GN)((e) => e.mode, l.Z),
+        { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: Y, isSearchVisible: W } = (0, N.H)({ loadId: e.current }),
+        z = (0, E.GN)((e) => e.mode, l.Z),
         K = a.useCallback(
             (e) => {
-                M(e), z && F();
+                M(e), W && F();
             },
-            [z, F, M]
+            [W, F, M]
         ),
         q = a.useMemo(
             () =>
-                z
+                W
                     ? b.filter((e) => {
                           let { id: t } = e;
                           return !L.MU.has(t);
                       })
                     : b,
-            [b, z]
+            [b, W]
         ),
-        Q = W === E.v0.SAVED_GUILDS,
+        Q = z === E.v0.SAVED_GUILDS,
         X = a.useRef(new S.Z(D)),
         { onGuildCardSeen: J, onGuildCardClick: $ } = (0, C.H)({
             guildDiscoveryCardSeenManager: X.current,
@@ -70,8 +70,8 @@ function b() {
             s();
         }, [P, s]),
         a.useEffect(() => {
-            !z && (0, T.LD)({ scrollPosition: null });
-        }, [z]),
+            !W && (0, T.LD)({ scrollPosition: null });
+        }, [W]),
         a.useEffect(() => {
             (0, c.N)();
         }, []);
@@ -99,26 +99,26 @@ function b() {
         className: x.container,
         children: [
             (0, i.jsxs)(I.ZP, {
-                className: z ? x.search : void 0,
+                className: W ? x.search : void 0,
                 children: [
-                    !z && (0, i.jsx)(I.z6, { scrollPosition: n }),
+                    !W && (0, i.jsx)(I.z6, { scrollPosition: n }),
                     !Q &&
                         (0, i.jsx)(I.aV, {
-                            icon: z ? o.ArrowLargeLeftIcon : o.ServerIcon,
-                            onClick: z ? F : void 0
+                            icon: W ? o.ArrowLargeLeftIcon : o.ServerIcon,
+                            onClick: W ? F : void 0
                         }),
                     !Q &&
                         (0, i.jsx)(g.Z, {
                             className: B,
                             tabs: q,
-                            selectedTab: z ? null : P,
+                            selectedTab: W ? null : P,
                             onTabSelect: K,
                             onAvailableWidthChange: G
                         }),
                     ee
                 ]
             }),
-            z
+            W
                 ? (0, i.jsx)(Z.Z, {
                       loadId: e.current,
                       onGuildCardClick: $,

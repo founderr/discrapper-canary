@@ -72,20 +72,20 @@ function E(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: d } = e,
         { bottomBar: h, topBar: f } = (0, o.cj)([_.Z], () => _.Z.getUnreadStateForGuildId(n.id)),
         E = (0, o.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: N, mentionCount: S, targetChannelId: x } = 'bottom' === t ? h : f,
+        { mode: N, mentionCount: x, targetChannelId: S } = 'bottom' === t ? h : f,
         v = N === _.x.HIDDEN,
-        T = (0, u.useSpring)(
+        Z = (0, u.useSpring)(
             {
                 to: { transform: v ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: C
             },
             E ? 'respect-motion-settings' : 'animate-never'
         ),
-        Z = l.useCallback(
+        T = l.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != x && d(x);
+                e.preventDefault(), e.stopPropagation(), null != S && d(S);
             },
-            [d, x]
+            [d, S]
         );
     return (0, i.jsx)('div', {
         className: a()(g.container, {
@@ -94,7 +94,7 @@ function E(e) {
         }),
         children: (0, i.jsx)(s.animated.div, {
             className: g.containerPadding,
-            style: T,
+            style: Z,
             'aria-hidden': v,
             children:
                 N === _.x.HIDDEN
@@ -102,7 +102,7 @@ function E(e) {
                     : N === _.x.UNREAD
                       ? (0, i.jsxs)(u.Clickable, {
                             className: g.bar,
-                            onClick: Z,
+                            onClick: T,
                             children: [
                                 'bottom' === t
                                     ? (0, i.jsx)(u.ChevronSmallDownIcon, {
@@ -130,12 +130,12 @@ function E(e) {
                       : N === _.x.MENTIONS
                         ? (0, i.jsx)(u.Clickable, {
                               className: a()(g.bar, g.mentionsBar),
-                              onClick: Z,
+                              onClick: T,
                               children: (0, i.jsx)(u.Text, {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',
                                   className: g.barText,
-                                  children: m.Z.Messages.NEW_MENTIONS_COUNT.format({ count: S })
+                                  children: m.Z.Messages.NEW_MENTIONS_COUNT.format({ count: x })
                               })
                           })
                         : N === _.x.VOICE_CHANNELS

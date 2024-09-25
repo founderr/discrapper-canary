@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return o;
     }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(920103);
-function a(e) {
+});
+var r = n(47120);
+var i = n(470079),
+    a = n(920103);
+function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'vertical',
-        [n] = (0, r.useState)(
+        [n] = (0, i.useState)(
             () =>
-                new i.Z({
+                new a.Z({
                     tension: 200,
                     friction: 35,
                     mass: 2,

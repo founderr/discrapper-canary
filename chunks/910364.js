@@ -9,8 +9,8 @@ var t = s(735250),
     o = s(442837),
     l = s(481060),
     r = s(727637),
-    c = s(58540),
-    a = s(100527),
+    a = s(58540),
+    c = s(100527),
     d = s(906732),
     u = s(680295),
     _ = s(699516),
@@ -40,7 +40,7 @@ var t = s(735250),
 function U(e) {
     let { user: n, currentUser: s, guildId: U, channelId: D, messageId: F, roleId: B, sessionId: G, friendToken: w, initialSection: k, initialSubsection: V, transitionState: W, onClose: Y, showGuildProfile: K = !0, sourceAnalyticsLocations: z = [] } = e,
         H = U === C.ME ? void 0 : U,
-        { analyticsLocations: q } = (0, d.ZP)([...z, a.Z.SIMPLIFIED_PROFILE_MODAL]),
+        { analyticsLocations: q } = (0, d.ZP)([...z, c.Z.SIMPLIFIED_PROFILE_MODAL]),
         Q = (0, x.Z)({
             user: n,
             currentUser: s,
@@ -61,7 +61,7 @@ function U(e) {
         ee = (0, m.ZP)(n.id, H),
         en = (0, o.e7)([_.Z], () => _.Z.getRelationshipType(n.id)),
         es = i.useMemo(() => (null != H ? { [H]: [n.id] } : {}), [H, n.id]);
-    (0, c.$)(es);
+    (0, a.$)(es);
     let et = i.createRef(),
         ei = (0, r.Z)(et),
         eo = () =>

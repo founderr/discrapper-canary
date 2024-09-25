@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return u;
     }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(442837),
-    a = n(232567),
+});
+var r = n(47120);
+var i = n(470079),
+    a = n(442837),
+    o = n(232567),
     s = n(110924),
-    o = n(314897);
-function l() {
-    let [e, t] = (0, i.Wu)([o.default], () => [o.default.isAuthenticated(), null != o.default.getAnalyticsToken()]),
+    l = n(314897);
+function u() {
+    let [e, t] = (0, a.Wu)([l.default], () => [l.default.isAuthenticated(), null != l.default.getAnalyticsToken()]),
         n = (0, s.Z)(e);
-    r.useEffect(() => {
-        !n && e && !t && a.k({ withAnalyticsToken: !0 });
+    i.useEffect(() => {
+        !n && e && !t && o.k({ withAnalyticsToken: !0 });
     }, [n, e, t]);
 }

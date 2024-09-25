@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(846027),
     i = n(872810),
     a = n(314897),
-    s = n(569545);
-function o(e) {
+    o = n(569545);
+function s(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (null == e) return;
-    let { streamType: n, guildId: o, channelId: l, ownerId: u } = e,
-        c = (0, s.V9)({
+    let { streamType: n, guildId: s, channelId: l, ownerId: u } = e,
+        c = (0, o.V9)({
             streamType: n,
-            guildId: o,
+            guildId: s,
             channelId: l,
             ownerId: u
         });

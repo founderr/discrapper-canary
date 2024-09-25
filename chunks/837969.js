@@ -32,7 +32,7 @@ function d(e) {
             focusedIndex: d,
             itemCount: n
         }),
-        { itemCount: S, focusedIndex: v } = T,
+        { itemCount: v, focusedIndex: S } = T,
         [N] = i.useState(() => (0, l.P2)(x, 16));
     return (
         i.useEffect(() => {
@@ -44,17 +44,17 @@ function d(e) {
         (function (e) {
             let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: m = u, getNewFocusIndex: p, dispatch: _, maintainFocusPosition: f, includeSetSizes: E, focusOnMount: g, enabled: C, makeId: I = l.qR, getIndexFromId: T } = e,
                 x = i.useRef(n),
-                S = i.useRef(T);
-            (S.current = T), (x.current = n);
-            let v = i.useRef();
+                v = i.useRef(T);
+            (v.current = T), (x.current = n);
+            let S = i.useRef();
             i.useEffect(() => {
-                v.current = C;
+                S.current = C;
             }, [C]);
             let [N, A] = i.useState(!1),
                 [Z] = i.useState(
                     () =>
                         new l.$o((e) => () => {
-                            let t = null != S.current && 'string' == typeof e ? S.current(e) : e;
+                            let t = null != v.current && 'string' == typeof e ? v.current(e) : e;
                             'number' == typeof t &&
                                 !(t < 0) &&
                                 _({
@@ -66,7 +66,7 @@ function d(e) {
             i.useEffect(() => () => Z.clean(), [Z]);
             let M = i.useCallback(
                     (e, t) => {
-                        v.current && m(e, t);
+                        S.current && m(e, t);
                     },
                     [m]
                 ),
@@ -93,7 +93,7 @@ function d(e) {
                 ),
                 j = i.useCallback(
                     (e) => {
-                        if (!v.current) return;
+                        if (!S.current) return;
                         if (r.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                             e.preventDefault(), e.stopPropagation(), L();
                             return;
@@ -133,10 +133,10 @@ function d(e) {
                     },
                     [I, t, _, d, L, h]
                 ),
-                P = i.useCallback(() => {
+                O = i.useCallback(() => {
                     N || A(!0);
                 }, [N]),
-                O = i.useCallback(() => {
+                P = i.useCallback(() => {
                     if (!N) f ? M(I(t, d), d) : L(!0);
                 }, [I, t, M, f, N, d, L]),
                 y = i.useCallback(
@@ -157,15 +157,15 @@ function d(e) {
                 let e = D.current;
                 if (null != e)
                     return (
-                        e.addEventListener('focusin', P),
-                        e.addEventListener('focus', O),
+                        e.addEventListener('focusin', O),
+                        e.addEventListener('focus', P),
                         e.addEventListener('focusout', y),
                         () => {
-                            e.removeEventListener('focusin', P), e.removeEventListener('focus', O), e.removeEventListener('focusout', y);
+                            e.removeEventListener('focusin', O), e.removeEventListener('focus', P), e.removeEventListener('focusout', y);
                         }
                     );
-            }, [O, P, y]);
-            let U = i.useCallback(
+            }, [P, O, y]);
+            let k = i.useCallback(
                     () => ({
                         role: 'list',
                         tabIndex: N && f ? -1 : 0,
@@ -175,7 +175,7 @@ function d(e) {
                     }),
                     [t, N, j, f]
                 ),
-                k = i.useCallback(
+                U = i.useCallback(
                     (e) => {
                         let { index: n } = e;
                         return {
@@ -184,7 +184,7 @@ function d(e) {
                             'aria-posinset': E ? n + 1 : void 0,
                             id: I(t, n),
                             tabIndex: f && n === d ? 0 : -1,
-                            onFocus: Z.get(null != S.current ? I(t, n) : n)
+                            onFocus: Z.get(null != v.current ? I(t, n) : n)
                         };
                     },
                     [I, t, d, f, Z, E]
@@ -192,15 +192,15 @@ function d(e) {
             return i.useMemo(
                 () => ({
                     dispatch: _,
-                    getContainerProps: U,
-                    getItemProps: k
+                    getContainerProps: k,
+                    getItemProps: U
                 }),
-                [_, U, k]
+                [_, k, U]
             );
         })({
             navId: t,
-            itemCount: S,
-            focusedIndex: v,
+            itemCount: v,
+            focusedIndex: S,
             dispatch: N,
             onSelect: h,
             setFocus: m,

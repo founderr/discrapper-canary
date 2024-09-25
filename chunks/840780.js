@@ -18,24 +18,24 @@ var i = n(735250),
     I = n(620662),
     E = n(513202),
     N = n(835473),
-    S = n(933557),
-    x = n(194082),
+    x = n(933557),
+    S = n(194082),
     v = n(311352),
-    T = n(436774),
-    Z = n(594190),
+    Z = n(436774),
+    T = n(594190),
     b = n(925329),
     A = n(810568),
-    R = n(168524),
-    M = n(382182),
+    M = n(168524),
+    R = n(382182),
     L = n(74299),
-    P = n(914923),
-    y = n(165393),
+    y = n(914923),
+    P = n(165393),
     O = n(989941),
     j = n(803647),
     D = n(690221),
     w = n(231664),
-    U = n(759198),
-    G = n(131704),
+    G = n(759198),
+    U = n(131704),
     k = n(199902),
     B = n(314897),
     H = n(592125),
@@ -83,7 +83,7 @@ class ec extends l.PureComponent {
         let e, t, n, l;
         let { canGoLive: r, guildId: a, isStreaming: s, channel: o, canStream: c, runningGame: d, embeddedActivity: h } = this.props;
         return (null != d || null == h) && (s || (r && null != d))
-            ? (s ? ((e = !1), (t = this.handleClickStopStreamingButton), (n = u.ScreenXIcon), (l = er.Z.Messages.STOP_STREAMING)) : c ? ((e = !1), (t = this.handleClickGoLiveButton), (n = u.ScreenArrowIcon), (l = null != d ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({ game: d.name }) : er.Z.Messages.ACTIVITY_PANEL_GO_LIVE)) : ((e = !0), (t = null), (n = u.ScreenArrowIcon), (l = null != o && (0, G.vd)(o.type) ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != a ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD)),
+            ? (s ? ((e = !1), (t = this.handleClickStopStreamingButton), (n = u.ScreenXIcon), (l = er.Z.Messages.STOP_STREAMING)) : c ? ((e = !1), (t = this.handleClickGoLiveButton), (n = u.ScreenArrowIcon), (l = null != d ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({ game: d.name }) : er.Z.Messages.ACTIVITY_PANEL_GO_LIVE)) : ((e = !0), (t = null), (n = u.ScreenArrowIcon), (l = null != o && (0, U.vd)(o.type) ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != a ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD)),
               (0, i.jsx)('div', {
                   className: ea.panelButtonContainer,
                   children: (0, i.jsx)(ee.Z, {
@@ -188,15 +188,15 @@ class ec extends l.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: l, sanitizedTitle: r } = (0, P.Z)(t);
+            { title: l, sanitizedTitle: r } = (0, y.Z)(t);
         return (0, i.jsxs)('div', {
             className: ea.gameWrapper,
             children: [
                 e
-                    ? (0, i.jsx)(y.Z, { title: r })
-                    : (0, i.jsx)(x.ZP, {
-                          look: x.ZP.Looks.GRAY,
-                          size: x.ZP.Sizes.SMALL,
+                    ? (0, i.jsx)(P.Z, { title: r })
+                    : (0, i.jsx)(S.ZP, {
+                          look: S.ZP.Looks.GRAY,
+                          size: S.ZP.Sizes.SMALL,
                           className: ea.liveIndicator
                       }),
                 (0, i.jsxs)('div', {
@@ -209,9 +209,9 @@ class ec extends l.PureComponent {
                                 children: [
                                     (0, i.jsx)(u.NitroWheelIcon, {
                                         size: 'xxs',
-                                        color: T.JX.PREMIUM_TIER_2
+                                        color: Z.JX.PREMIUM_TIER_2
                                     }),
-                                    (0, i.jsx)(U.Z, {
+                                    (0, i.jsx)(G.Z, {
                                         className: ea.perksDemoText,
                                         variant: 'text-xxs/semibold',
                                         children: n
@@ -257,7 +257,7 @@ class ec extends l.PureComponent {
                                 children: t.name
                             })
                         }),
-                        (0, G.Qm)(l.type) ? c : (0, i.jsx)(eo, { timestamps: s })
+                        (0, U.Qm)(l.type) ? c : (0, i.jsx)(eo, { timestamps: s })
                     ]
                 })
             ]
@@ -280,7 +280,7 @@ class ec extends l.PureComponent {
             es(this, 'modalKey', void 0),
             es(this, 'handleClickGoLiveButton', () => {
                 let { guildId: e, channel: t } = this.props,
-                    l = null != t && (0, G.vd)(t.type) ? t : null,
+                    l = null != t && (0, U.vd)(t.type) ? t : null,
                     r = null != l ? l.getGuildId() : e;
                 (0, u.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('46746'), n.e('41720')]).then(n.bind(n, 60594));
@@ -323,13 +323,13 @@ class ec extends l.PureComponent {
             es(this, 'handleApplicationLinkClick', () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
-                o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, G.vd)(t.type) && h.Z.selectParticipant(t.id, n.applicationId), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ei.ME, t.id), (0, G.Qm)(t.type) && (0, g.tg)(el.Ez.PANEL);
+                o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, U.vd)(t.type) && h.Z.selectParticipant(t.id, n.applicationId), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ei.ME, t.id), (0, U.Qm)(t.type) && (0, g.tg)(el.Ez.PANEL);
             });
     }
 }
 function eu(e) {
     let { name: t, applicationId: n } = e,
-        l = (0, R.Z)({
+        l = (0, M.Z)({
             location: 'ActivityPanelGameCard',
             applicationId: n,
             source: A.m1.RtcPanel,
@@ -348,7 +348,7 @@ t.Z = (0, _.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
         r = (0, c.e7)([B.default], () => B.default.getId()),
-        a = (0, c.e7)([Z.ZP, X.Z], () => (0, O.Z)(Z.ZP, X.Z)),
+        a = (0, c.e7)([T.ZP, X.Z], () => (0, O.Z)(T.ZP, X.Z)),
         s = (0, c.e7)([q.Z, H.Z], () => H.Z.getChannel(q.Z.getVoiceChannelId())),
         o = (0, c.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
         u = (0, c.e7)([H.Z], () => H.Z.getChannel(o)),
@@ -356,7 +356,7 @@ t.Z = (0, _.Z)(function (e) {
         [h, p] = (0, c.Wu)([k.Z], () => [k.Z.getCurrentUserActiveStream(), k.Z.getStreamerActiveStreamMetadata()]),
         f = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         _ = (0, c.e7)([C.ZP], () => (null != u ? C.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        g = (0, c.e7)([F.Z, z.Z, V.ZP], () => (null != s ? M.JL(s, F.Z, z.Z, !1) : null != n && M.h_(V.ZP.getChannels(n), F.Z, z.Z).length > 0)),
+        g = (0, c.e7)([F.Z, z.Z, V.ZP], () => (null != s ? R.JL(s, F.Z, z.Z, !1) : null != n && R.h_(V.ZP.getChannels(n), F.Z, z.Z).length > 0)),
         [I] = (0, N.Z)([
             null !==
                 (t = (function () {
@@ -368,15 +368,15 @@ t.Z = (0, _.Z)(function (e) {
                 : ''
         ]),
         E = (0, c.e7)([W.Z], () => (0, L.Z)(W.Z) && (0, $.isWindows)()),
-        x = (0, c.e7)([Y.Z], () => (null != r ? Y.Z.findActivity(r, (e) => e.type === ei.IIU.PLAYING) : null)),
+        S = (0, c.e7)([Y.Z], () => (null != r ? Y.Z.findActivity(r, (e) => e.type === ei.IIU.PLAYING) : null)),
         v = null != h && h.ownerId === r && h.state !== ei.jm8.ENDED,
-        T = (0, c.e7)([Q.default, K.Z], () => (null != u ? (0, S.F6)(u, Q.default, K.Z) : void 0)),
+        Z = (0, c.e7)([Q.default, K.Z], () => (null != u ? (0, x.F6)(u, Q.default, K.Z) : void 0)),
         b = (0, w.Z)();
     return (0, i.jsx)(ec, {
         ...l,
         guildId: n,
         canGoLive: E,
-        activity: x,
+        activity: S,
         embeddedActivity: _,
         userId: r,
         runningGame: a,
@@ -387,7 +387,7 @@ t.Z = (0, _.Z)(function (e) {
         canStream: g,
         stream: h,
         streamMetadata: p,
-        channelName: T,
+        channelName: Z,
         guildForConnectedChannel: d,
         streamQualityIndicator: b
     });

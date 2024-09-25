@@ -1,9 +1,9 @@
-var i, r;
-t.d(n, {
+var r;
+n.d(t, {
     q: function () {
-        return i;
+        return r;
     }
 }),
-    ((r = i || (i = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'),
-    (r[(r.MESSAGE_SEND = 1)] = 'MESSAGE_SEND'),
-    (r[(r.GUILD_MEMBER_JOIN_OR_UPDATE = 2)] = 'GUILD_MEMBER_JOIN_OR_UPDATE');
+    !(function (e) {
+        (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.MESSAGE_SEND = 1)] = 'MESSAGE_SEND'), (e[(e.GUILD_MEMBER_JOIN_OR_UPDATE = 2)] = 'GUILD_MEMBER_JOIN_OR_UPDATE');
+    })(r || (r = {}));

@@ -3,10 +3,10 @@ n.d(t, {
         return d;
     },
     $y: function () {
-        return I;
+        return m;
     },
     BU: function () {
-        return S;
+        return g;
     },
     Dz: function () {
         return p;
@@ -21,13 +21,13 @@ n.d(t, {
         return r;
     },
     QN: function () {
-        return o;
+        return s;
     },
     ZE: function () {
         return E;
     },
     bK: function () {
-        return m;
+        return I;
     },
     ek: function () {
         return _;
@@ -51,7 +51,7 @@ n.d(t, {
         return c;
     },
     vq: function () {
-        return s;
+        return o;
     }
 });
 var r = {
@@ -102,7 +102,7 @@ var r = {
         a400: '#d500f9',
         a700: '#aa00ff'
     },
-    s = {
+    o = {
         50: '#ede7f6',
         100: '#d1c4e9',
         200: '#b39ddb',
@@ -118,7 +118,7 @@ var r = {
         a400: '#651fff',
         a700: '#6200ea'
     },
-    o = {
+    s = {
         50: '#e8eaf6',
         100: '#c5cae9',
         200: '#9fa8da',
@@ -278,7 +278,7 @@ var r = {
         a400: '#ffc400',
         a700: '#ffab00'
     },
-    I = {
+    m = {
         50: '#fff3e0',
         100: '#ffe0b2',
         200: '#ffcc80',
@@ -294,7 +294,7 @@ var r = {
         a400: '#ff9100',
         a700: '#ff6d00'
     },
-    m = {
+    I = {
         50: '#fbe9e7',
         100: '#ffccbc',
         200: '#ffab91',
@@ -322,7 +322,7 @@ var r = {
         800: '#4e342e',
         900: '#3e2723'
     },
-    S = {
+    g = {
         50: '#eceff1',
         100: '#cfd8dc',
         200: '#b0bec5',

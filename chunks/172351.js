@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(367907),
-    s = n(10718),
-    o = n(69626),
+    o = n(10718),
+    s = n(69626),
     l = n(626135),
     u = n(785717),
     c = n(678738),
@@ -16,22 +16,22 @@ var r = n(735250),
     E = n(987352);
 function f(e) {
     let { applicationId: t, commandIds: n, guildId: f, channel: h, onClick: p } = e,
-        { trackUserProfileAction: I } = (0, u.KZ)(),
-        { commands: m } = s.Qm(h, t, n),
+        { trackUserProfileAction: m } = (0, u.KZ)(),
+        { commands: I } = o.Qm(h, t, n),
         T = i.useMemo(
             () =>
-                null == m
+                null == I
                     ? void 0
-                    : m.filter((e) => {
+                    : I.filter((e) => {
                           let { nsfw: t } = e;
                           return !0 !== t;
                       }),
-            [m]
+            [I]
         );
     if (null == T || 0 === T.length) return null;
-    let S = (e) => {
+    let g = (e) => {
         null == p || p(),
-            I({ action: 'PRESS_APP_COMMAND' }),
+            m({ action: 'PRESS_APP_COMMAND' }),
             l.default.track(d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
                 application_id: t,
                 command_id: e,
@@ -47,11 +47,11 @@ function f(e) {
                 (0, r.jsx)(
                     'li',
                     {
-                        children: (0, r.jsx)(o.wz, {
+                        children: (0, r.jsx)(s.wz, {
                             commandId: e.id,
                             commandName: e.displayName,
                             commandDescription: e.displayDescription,
-                            onClick: S,
+                            onClick: g,
                             guildId: f,
                             channelId: h.id,
                             applicationId: e.applicationId

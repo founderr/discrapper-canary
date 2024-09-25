@@ -1,128 +1,128 @@
-t.r(i),
-    t.d(i, {
+l.r(n),
+    l.d(n, {
         FailedChannelRow: function () {
-            return b;
+            return p;
         },
         FailedGroupDMRow: function () {
-            return L;
+            return A;
         },
         FailedUserRow: function () {
-            return N;
+            return L;
         },
         ForwardFailedAlertModal: function () {
-            return T;
+            return C;
         }
     });
-var a = t(735250),
-    n = t(470079),
-    l = t(442837),
-    s = t(481060),
-    r = t(700582),
-    c = t(933557),
-    d = t(266076),
-    o = t(810123),
-    u = t(592125),
-    A = t(430824),
-    I = t(158776),
-    _ = t(699516),
-    S = t(594174),
-    E = t(51144),
-    f = t(912332),
-    h = t(689938),
-    g = t(703523);
-function p(e) {
-    let { icon: i, label: t } = e;
-    return (0, a.jsxs)('div', {
-        className: g.failedRow,
+var i = l(735250),
+    t = l(470079),
+    a = l(442837),
+    r = l(481060),
+    s = l(700582),
+    o = l(933557),
+    c = l(266076),
+    u = l(810123),
+    d = l(592125),
+    f = l(430824),
+    h = l(158776),
+    m = l(699516),
+    x = l(594174),
+    _ = l(51144),
+    g = l(912332),
+    Z = l(689938),
+    j = l(703523);
+function S(e) {
+    let { icon: n, label: l } = e;
+    return (0, i.jsxs)('div', {
+        className: j.failedRow,
         children: [
-            i,
-            (0, a.jsx)(s.Text, {
-                className: g.label,
+            n,
+            (0, i.jsx)(r.Text, {
+                className: j.label,
                 variant: 'text-md/medium',
                 lineClamp: 1,
-                children: t
+                children: l
             })
         ]
     });
 }
-function L(e) {
-    let { channel: i } = e,
-        t = (0, c.ZP)(i);
-    return (0, a.jsx)(p, {
-        icon: (0, a.jsx)(d.Z, {
+function A(e) {
+    let { channel: n } = e,
+        l = (0, o.ZP)(n);
+    return (0, i.jsx)(S, {
+        icon: (0, i.jsx)(c.Z, {
             'aria-hidden': !0,
-            size: s.AvatarSizes.SIZE_32,
-            channel: i,
+            size: r.AvatarSizes.SIZE_32,
+            channel: n,
             experimentLocation: 'forward-failed-retry-modal'
+        }),
+        label: l
+    });
+}
+function L(e) {
+    let { user: n } = e,
+        l = _.ZP.useName(n),
+        t = (0, a.e7)([m.Z], () => m.Z.getNickname(n.id)),
+        o = (0, a.e7)([h.Z], () => h.Z.getStatus(n.id));
+    return (0, i.jsx)(S, {
+        icon: (0, i.jsx)(s.Z, {
+            'aria-hidden': !0,
+            size: r.AvatarSizes.SIZE_32,
+            user: n,
+            status: o
+        }),
+        label: null != t ? t : l
+    });
+}
+function p(e) {
+    let { channel: n } = e,
+        l = (0, a.e7)([f.Z], () => f.Z.getGuild(null == n ? void 0 : n.guild_id)),
+        t = (0, o.ZP)(n);
+    return (0, i.jsx)(S, {
+        icon: (0, i.jsx)(u.Z, {
+            size: u.E.SMALL_32,
+            guild: l,
+            channel: n
         }),
         label: t
     });
 }
-function N(e) {
-    let { user: i } = e,
-        t = E.ZP.useName(i),
-        n = (0, l.e7)([_.Z], () => _.Z.getNickname(i.id)),
-        c = (0, l.e7)([I.Z], () => I.Z.getStatus(i.id));
-    return (0, a.jsx)(p, {
-        icon: (0, a.jsx)(r.Z, {
-            'aria-hidden': !0,
-            size: s.AvatarSizes.SIZE_32,
-            user: i,
-            status: c
-        }),
-        label: null != n ? n : t
-    });
-}
-function b(e) {
-    let { channel: i } = e,
-        t = (0, l.e7)([A.Z], () => A.Z.getGuild(null == i ? void 0 : i.guild_id)),
-        n = (0, c.ZP)(i);
-    return (0, a.jsx)(p, {
-        icon: (0, a.jsx)(o.Z, {
-            size: o.E.SMALL_32,
-            guild: t,
-            channel: i
-        }),
-        label: n
-    });
-}
-function x(e) {
-    let { destination: i } = e,
-        { channel: t, user: n } = (0, l.cj)([u.Z, S.default], () => ({
-            channel: 'channel' === i.type ? u.Z.getChannel(i.id) : null,
-            user: 'user' === i.type ? S.default.getUser(i.id) : null
+function v(e) {
+    let { destination: n } = e,
+        { channel: l, user: t } = (0, a.cj)([d.Z, x.default], () => ({
+            channel: 'channel' === n.type ? d.Z.getChannel(n.id) : null,
+            user: 'user' === n.type ? x.default.getUser(n.id) : null
         }));
-    if (null == t ? void 0 : t.isGroupDM()) return (0, a.jsx)(L, { channel: t });
-    if (null != n) return (0, a.jsx)(N, { user: n });
-    if (null != t) return (0, a.jsx)(b, { channel: t });
+    if (null == l ? void 0 : l.isGroupDM()) return (0, i.jsx)(A, { channel: l });
+    if (null != t) return (0, i.jsx)(L, { user: t });
+    if (null != l) return (0, i.jsx)(p, { channel: l });
     return null;
 }
-function T(e) {
-    let { messageId: i, channelId: t, failedDestinations: l, forwardOptions: r, ...c } = e,
-        d = n.useCallback(() => {
-            (0, f.l8)({
-                messageId: i,
-                channelId: t,
+function C(e) {
+    let { messageId: n, channelId: l, failedDestinations: a, forwardOptions: s, ...o } = e,
+        c = t.useCallback(() => {
+            (0, g.l8)({
+                messageId: n,
+                channelId: l,
                 source: 'retry-modal',
-                initialSelectedDestinations: l,
-                forwardOptions: r
+                initialSelectedDestinations: a,
+                forwardOptions: s
             });
-        }, [t, l, i, r]);
-    return (0, a.jsxs)(s.ConfirmModal, {
-        header: h.Z.Messages.MESSAGE_FORWARD_FAILED,
-        confirmText: h.Z.Messages.RETRY,
-        cancelText: h.Z.Messages.CANCEL,
-        confirmButtonColor: s.Button.Colors.BRAND,
-        onConfirm: d,
-        ...c,
+        }, [l, a, n, s]);
+    return (0, i.jsxs)(r.ConfirmModal, {
+        header: Z.Z.Messages.MESSAGE_FORWARD_FAILED,
+        confirmText: Z.Z.Messages.RETRY,
+        cancelText: Z.Z.Messages.CANCEL,
+        confirmButtonColor: r.Button.Colors.BRAND,
+        onConfirm: c,
+        ...o,
         children: [
-            (0, a.jsx)(s.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-md/medium',
-                children: h.Z.Messages.MESSAGE_FORWARD_FAILED_BODY.format({ count: l.length })
+                children: Z.Z.Messages.MESSAGE_FORWARD_FAILED_BODY.format({ count: a.length })
             }),
-            (0, a.jsx)('div', {
-                className: g.failedDestinations,
-                children: l.map((e, i) => (0, a.jsx)(x, { destination: e }, i))
+            (0, i.jsx)('div', {
+                className: j.failedDestinations,
+                children: a.map((e, n) => (0, i.jsx)(v, { destination: e }, n))
             })
         ]
     });

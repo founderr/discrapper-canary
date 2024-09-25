@@ -21,8 +21,8 @@ var s = n(735250),
     f = n(657825),
     A = n(198952),
     S = n(329242),
-    h = n(895328),
-    M = n(292352),
+    M = n(895328),
+    h = n(292352),
     x = n(981631),
     b = n(689938),
     O = n(555825);
@@ -54,14 +54,14 @@ function v(e) {
         o = (0, R.ws)(t),
         c = (0, R.C7)(t),
         { loadMore: _, isMoreLoading: T } = (0, I.G)({ onError: n }),
-        m = M.tx.get(t),
-        [N, C] = a.useState(M.iB),
+        m = h.tx.get(t),
+        [N, C] = a.useState(h.iB),
         A = (0, E.Xi)({ location: 'family_center_activity_section_web' }),
         S = a.useCallback(() => {
-            C((e) => e + M.iB), _(t);
+            C((e) => e + h.iB), _(t);
         }, [t, _]);
     i()(m, 'No text for action type');
-    let h = m.sectionHeader(c),
+    let M = m.sectionHeader(c),
         x = a.useCallback(
             (e) => {
                 let { row: t } = e,
@@ -90,7 +90,7 @@ function v(e) {
                             className: O.sectionHeader,
                             variant: 'eyebrow',
                             color: 'header-secondary',
-                            children: h
+                            children: M
                         }),
                         void 0 !== m.sectionDescription
                             ? (0, s.jsx)(l.Text, {
@@ -102,7 +102,7 @@ function v(e) {
                             : null
                     ]
                 }),
-            [h, m, r, A]
+            [M, m, r, A]
         );
     if (0 === o.length) return null;
     let v = o.slice(0, N);
@@ -128,7 +128,7 @@ function v(e) {
                           : (0, s.jsx)(l.Text, {
                                 className: O.loadMore,
                                 variant: 'text-sm/bold',
-                                children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({ pageSize: Math.min(c - v.length, M.iB) })
+                                children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({ pageSize: Math.min(c - v.length, h.iB) })
                             })
                   })
                 : null
@@ -137,7 +137,7 @@ function v(e) {
 }
 let L = () => {
         let e = (0, g.Z)(),
-            t = (0, N.mq)(M.ne.ACTIVE),
+            t = (0, N.mq)(h.ne.ACTIVE),
             n = (0, T.o)(b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({ activeLinks: t.length }), b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
             a = (0, u.Qr)(!!e),
             r = (0, N.Rd)(a);
@@ -191,7 +191,7 @@ let L = () => {
               });
     },
     D = () => {
-        let e = (0, N.mq)(M.ne.ACTIVE),
+        let e = (0, N.mq)(h.ne.ACTIVE),
             t = (0, o.e7)([_.Z], () => _.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, I.G)({}),
             r = e.map((e) => ({
@@ -215,7 +215,7 @@ let L = () => {
             },
             serialize: (e) => e,
             select: (e) => {
-                n(e), c.default.track(x.rMx.FAMILY_CENTER_ACTION, { action: M.YC.SelectTeen });
+                n(e), c.default.track(x.rMx.FAMILY_CENTER_ACTION, { action: h.YC.SelectTeen });
             },
             isSelected: (e) => e === t,
             options: r
@@ -224,7 +224,7 @@ let L = () => {
     B = (e) => {
         let { userId: t } = e,
             n = (0, g.Z)(),
-            a = (0, N.mq)(M.ne.ACTIVE),
+            a = (0, N.mq)(h.ne.ACTIVE),
             r = (0, u.Qr)(!!n),
             i = (0, N.Rd)(r);
         return n && 1 !== a.length
@@ -236,7 +236,7 @@ let L = () => {
     };
 t.Z = (e) => {
     let { user: t } = e,
-        n = Array.from(M.tx.entries()),
+        n = Array.from(h.tx.entries()),
         a = (0, R.kE)(),
         r = (0, u.t3)(),
         i = (0, N.Rd)(r);
@@ -278,7 +278,7 @@ t.Z = (e) => {
                                           let [t] = e;
                                           return (0, s.jsx)(v, { displayType: t }, ''.concat(t, '-list'));
                                       })
-                                    : (0, s.jsx)(h.Z, {
+                                    : (0, s.jsx)(M.Z, {
                                           className: O.emptyActivity,
                                           text: null != i ? i : ''
                                       })

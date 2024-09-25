@@ -1,40 +1,40 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 });
-var l = t(735250);
-t(470079);
-var i = t(512722),
-    a = t.n(i),
-    r = t(442837),
-    o = t(52396),
-    s = t(592125),
-    c = t(970184),
-    u = t(151200),
-    d = t(96513);
-function m(e) {
-    let { contentInventoryEntry: n, channel: t } = e,
-        { parsedEntry: i } = (0, o.B)();
-    return (0, l.jsx)(u.Z, {
+var r = n(735250);
+n(470079);
+var i = n(512722),
+    a = n.n(i),
+    o = n(442837),
+    s = n(52396),
+    l = n(592125),
+    u = n(970184),
+    c = n(151200),
+    d = n(96513);
+function _(e) {
+    let { contentInventoryEntry: t, channel: n } = e,
+        { parsedEntry: i } = (0, s.B)();
+    return (0, r.jsx)(c.Z, {
         ...i,
-        entry: n,
-        channel: t
+        entry: t,
+        channel: n
     });
 }
-function f(e) {
-    let n = (0, c.CJ)();
-    a()(null != n, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
-    let { channelId: t } = n,
-        i = (0, r.e7)([s.Z], () => s.Z.getChannel(t));
+function E(e) {
+    let t = (0, u.CJ)();
+    a()(null != t, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
+    let { channelId: n } = t,
+        i = (0, o.e7)([l.Z], () => l.Z.getChannel(n));
     return (
         a()(null != i, 'channel must be defined'),
-        (0, l.jsx)(o.r, {
+        (0, r.jsx)(s.r, {
             location: d._.EMBED,
             entry: e.contentInventoryEntry,
             channel: i,
             errorFallback: null,
-            children: (0, l.jsx)(m, {
+            children: (0, r.jsx)(_, {
                 ...e,
                 channel: i
             })

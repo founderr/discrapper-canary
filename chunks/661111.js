@@ -1,8 +1,8 @@
 var r = n(544891),
     i = n(570140),
     a = n(802098),
-    s = n(695346),
-    o = n(981631),
+    o = n(695346),
+    s = n(981631),
     l = n(596401);
 function u() {
     let e = new Date().getMinutes();
@@ -27,7 +27,7 @@ t.Z = {
             changelogId: e,
             changelogDate: t
         }),
-            s.l4.updateSetting(e);
+            o.l4.updateSetting(e);
     },
     setChangelogOverride(e) {
         i.Z.dispatch({
@@ -38,7 +38,7 @@ t.Z = {
     },
     sendChangelogMessage(e) {
         r.tn.post({
-            url: o.ANM.CHANGELOG_MESSAGES,
+            url: s.ANM.CHANGELOG_MESSAGES,
             body: { changelog_id: e }
         });
     },

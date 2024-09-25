@@ -63,13 +63,13 @@ t.ZP = l.memo(function (e) {
                     : [],
             [E, _, m, d]
         ),
-        S = (0, a.Q)('ChannelListSectionFooter');
+        x = (0, a.Q)('ChannelListSectionFooter');
     if (t === n.voiceChannelsSectionNumber)
         return (0, i.jsx)(p, {
             guildChannels: n,
             guildChannelsVersion: u
         });
-    let x = C ? (0, i.jsx)('div', { className: h.sectionDivider }) : null;
+    let S = C ? (0, i.jsx)('div', { className: h.sectionDivider }) : null;
     return I && 0 !== N.length
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -83,10 +83,10 @@ t.ZP = l.memo(function (e) {
                           guildId: f
                       })
                   }),
-                  x
+                  S
               ]
           })
-        : S
+        : x
           ? null
-          : x;
+          : S;
 });

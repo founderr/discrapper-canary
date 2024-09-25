@@ -1,6 +1,6 @@
 n.d(t, {
     i: function () {
-        return o;
+        return s;
     },
     j: function () {
         return l;
@@ -10,8 +10,8 @@ var r = n(735250);
 n(470079);
 var i = n(952265),
     a = n(723359),
-    s = n(231338);
-function o(e) {
+    o = n(231338);
+function s(e) {
     (0, i.ZD)(
         async () => {
             let { default: e } = await Promise.all([n.e('96427'), n.e('20727'), n.e('78701')]).then(n.bind(n, 298237));
@@ -19,7 +19,7 @@ function o(e) {
         },
         {
             modalKey: a.$$,
-            onCloseRequest: s.dG,
+            onCloseRequest: o.dG,
             onCloseCallback: e
         }
     );
@@ -29,7 +29,7 @@ function l() {
         t = arguments.length > 1 ? arguments[1] : void 0;
     (0, i.ZD)(
         async () => {
-            let { default: t } = await n.e('1677').then(n.bind(n, 324239));
+            let { default: t } = await n.e('60827').then(n.bind(n, 324239));
             return (n) =>
                 (0, r.jsx)(t, {
                     claimRequired: e,
@@ -37,7 +37,7 @@ function l() {
                 });
         },
         {
-            onCloseRequest: e ? s.dG : null,
+            onCloseRequest: e ? o.dG : null,
             onCloseCallback: t
         }
     );

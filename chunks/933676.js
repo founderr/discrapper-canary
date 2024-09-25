@@ -1,12 +1,12 @@
 var r = n(581031),
     i = n(936940),
     a = n(354848),
-    s = n(974971),
-    o = n(545576),
+    o = n(974971),
+    s = n(545576),
     l = n(943329),
     u = function () {},
     c = [],
-    d = o('Reflect', 'construct'),
+    d = s('Reflect', 'construct'),
     _ = /^\s*(?:class|function)\b/,
     E = r(_.exec),
     f = !_.exec(u),
@@ -20,7 +20,7 @@ var r = n(581031),
     },
     p = function (e) {
         if (!a(e)) return !1;
-        switch (s(e)) {
+        switch (o(e)) {
             case 'AsyncFunction':
             case 'GeneratorFunction':
             case 'AsyncGeneratorFunction':

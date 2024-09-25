@@ -1,31 +1,31 @@
-t.d(n, {
+t.d(s, {
     Z: function () {
         return d;
     }
 });
-var i = t(735250);
+var n = t(735250);
 t(470079);
-var a = t(120356),
-    l = t.n(a),
-    r = t(689938),
-    o = t(843117),
-    c = t(296507),
-    s = t(866402);
+var c = t(120356),
+    o = t.n(c),
+    a = t(689938),
+    r = t(843117),
+    l = t(296507),
+    i = t(866402);
 function d(e) {
-    let { className: n, children: t } = e;
-    return (0, i.jsxs)('div', {
-        className: l()(o.container, n),
+    let { className: s, children: t } = e;
+    return (0, n.jsxs)('div', {
+        className: o()(r.container, s),
         children: [
-            (0, i.jsx)('img', {
-                alt: r.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-                src: s,
-                className: l()(o.sparkleIcon, o.sparkleBottom)
+            (0, n.jsx)('img', {
+                alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+                src: i,
+                className: o()(r.sparkleIcon, r.sparkleBottom)
             }),
             t,
-            (0, i.jsx)('img', {
-                alt: r.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-                src: c,
-                className: l()(o.sparkleIcon, o.sparkleTop)
+            (0, n.jsx)('img', {
+                alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+                src: l,
+                className: o()(r.sparkleIcon, r.sparkleTop)
             })
         ]
     });

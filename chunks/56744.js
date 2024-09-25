@@ -1,53 +1,53 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 });
-var i = n(735250),
-    s = n(470079),
+var r = n(735250),
+    i = n(470079),
     a = n(442837),
-    r = n(905405),
-    l = n(869765),
-    o = n(699516),
-    c = n(937889),
-    u = n(739566),
+    o = n(905405),
+    s = n(869765),
+    l = n(699516),
+    u = n(937889),
+    c = n(739566),
     d = n(267128),
     _ = n(981631);
-let E = s.memo(function (e) {
+let E = i.memo(function (e) {
     let { baseMessage: t, channel: n, referencedMessage: _, compact: E = !1 } = e,
-        I = _.state === l.Y.LOADED ? _.message : void 0,
-        m = (0, r.p)(),
-        T = s.useMemo(
+        f = _.state === s.Y.LOADED ? _.message : void 0,
+        h = (0, o.p)(),
+        p = i.useMemo(
             () =>
-                (null == I ? void 0 : I.content) != null && '' !== I.content
-                    ? (0, c.ZP)(I, {
+                (null == f ? void 0 : f.content) != null && '' !== f.content
+                    ? (0, u.ZP)(f, {
                           formatInline: !0,
-                          shouldFilterKeywords: m
+                          shouldFilterKeywords: h
                       }).content
                     : null,
-            [I, m]
+            [f, h]
         ),
-        h = (0, a.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]),
-        N = (0, u.Uj)(I),
-        f = (0, u.Uj)(t);
-    return (0, i.jsx)(d.Z, {
-        repliedAuthor: N,
-        baseAuthor: f,
+        m = (0, a.e7)([l.Z], () => null != f && l.Z.isBlockedForMessage(f), [f]),
+        I = (0, c.Uj)(f),
+        T = (0, c.Uj)(t);
+    return (0, r.jsx)(d.Z, {
+        repliedAuthor: I,
+        baseAuthor: T,
         baseMessage: t,
         channel: n,
         referencedMessage: _,
-        content: T,
+        content: p,
         compact: E,
-        isReplyAuthorBlocked: h
+        isReplyAuthorBlocked: m
     });
 });
-function I(e, t, n, s, a) {
+function f(e, t, n, i, a) {
     return e.type !== _.uaV.REPLY || null == n
         ? null
-        : (0, i.jsx)(E, {
+        : (0, r.jsx)(E, {
               baseMessage: e,
               channel: t,
-              referencedMessage: s,
+              referencedMessage: i,
               compact: a
           });
 }

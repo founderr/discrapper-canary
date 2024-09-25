@@ -11,16 +11,16 @@ t.Z = s.memo(function (e) {
         x = (0, l.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
     if (a.tq && x) return null;
     if (null == t) return (0, i.jsx)(i.Fragment, { children: s.Children.only(I) });
-    let S = null;
+    let v = null;
     return (
         null != f
-            ? (S = (0, i.jsx)('img', {
+            ? (v = (0, i.jsx)('img', {
                   alt: '',
                   src: f,
                   className: u.image
               }))
             : null != E &&
-              (S = (0, i.jsx)(r.LottieAnimation, {
+              (v = (0, i.jsx)(r.LottieAnimation, {
                   importData: E,
                   shouldAnimate: !T,
                   className: u.animation
@@ -31,7 +31,7 @@ t.Z = s.memo(function (e) {
                 (0, i.jsxs)('div', {
                     className: u.content,
                     children: [
-                        S,
+                        v,
                         (0, i.jsxs)('div', {
                             className: u.text,
                             children: [

@@ -1,9 +1,9 @@
 n.d(t, {
     u2: function () {
-        return o;
+        return s;
     },
     w0: function () {
-        return s;
+        return o;
     },
     zJ: function () {
         return a;
@@ -12,5 +12,5 @@ n.d(t, {
 var r = n(257705),
     i = n(49505);
 let a = (0, r.z)(i.thin, i.fade),
-    s = (0, r.z)(i.auto, i.fade),
-    o = (0, r.z)(i.none, i.fade);
+    o = (0, r.z)(i.auto, i.fade),
+    s = (0, r.z)(i.none, i.fade);

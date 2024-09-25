@@ -6,14 +6,14 @@ n.d(t, {
         return h;
     },
     ub: function () {
-        return I;
+        return m;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    s = n.n(a),
-    o = n(780384),
+    o = n.n(a),
+    s = n(780384),
     l = n(481060),
     u = n(600164),
     c = n(981631),
@@ -27,41 +27,41 @@ class h extends i.PureComponent {
             children: (E) =>
                 (0, r.jsx)(u.Z.Child, {
                     grow: 0,
-                    className: s()(d.image, _.marginBottom40),
+                    className: o()(d.image, _.marginBottom40),
                     style: {
                         ...c,
                         width: n,
                         height: i,
                         marginLeft: a,
                         marginTop: l,
-                        backgroundImage: 'url('.concat((0, o.wj)(E) ? t : e, ')')
+                        backgroundImage: 'url('.concat((0, s.wj)(E) ? t : e, ')')
                     }
                 })
         });
     }
 }
 let p = (e) => {
-    let { children: t, className: n, noteClassName: i, note: a, style: o } = e;
+    let { children: t, className: n, noteClassName: i, note: a, style: s } = e;
     return (0, r.jsxs)(u.Z.Child, {
         grow: 0,
         direction: u.Z.Direction.VERTICAL,
-        style: o,
+        style: s,
         children: [
             null != t &&
                 (0, r.jsx)(l.H, {
-                    className: s()(n, d.title),
+                    className: o()(n, d.title),
                     children: t
                 }),
             null != a
                 ? (0, r.jsx)('div', {
-                      className: s()(i, d.text, _.marginTop8),
+                      className: o()(i, d.text, _.marginTop8),
                       children: a
                   })
                 : null
         ]
     });
 };
-class I extends i.PureComponent {
+class m extends i.PureComponent {
     render() {
         let { children: e, theme: t, className: n, style: i } = this.props;
         return (0, r.jsx)(E, {
@@ -70,7 +70,7 @@ class I extends i.PureComponent {
                 direction: u.Z.Direction.VERTICAL,
                 align: u.Z.Align.CENTER,
                 justify: u.Z.Justify.CENTER,
-                className: s()(d.wrapper, n),
+                className: o()(d.wrapper, n),
                 style: i,
                 children: e
             })

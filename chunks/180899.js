@@ -4,26 +4,26 @@ t.d(n, {
     }
 }),
     t(47120);
-var a = t(470079),
-    l = t(512722),
-    s = t.n(l),
+var s = t(470079),
+    a = t(512722),
+    l = t.n(a),
     i = t(157925),
     r = t(765305);
 function o(e) {
-    let { stageInstance: n, defaultStep: t, error: l, onSave: o } = e,
-        [c, d] = a.useState(t),
-        [u, _] = a.useState(),
-        [E, h] = a.useState(null);
+    let { stageInstance: n, defaultStep: t, error: a, onSave: o } = e,
+        [c, d] = s.useState(t),
+        [u, _] = s.useState(),
+        [E, x] = s.useState(null);
     return (
-        a.useEffect(() => {
-            null != l && d(i.lv.STAGE_CHANNEL_SETTINGS);
-        }, [l]),
+        s.useEffect(() => {
+            null != a && d(i.lv.STAGE_CHANNEL_SETTINGS);
+        }, [a]),
         {
             modalStep: c,
             setModalStep: d,
             readySlide: E,
             handleSlideReady: function (e) {
-                return h(e);
+                return x(e);
             },
             savedOptions: u,
             handleSettingsSave: function (e) {
@@ -34,7 +34,7 @@ function o(e) {
                 o(e);
             },
             handleDelayedSave: function () {
-                s()(null != u, 'Must have some saved options.'), o(u);
+                l()(null != u, 'Must have some saved options.'), o(u);
             }
         }
     );
