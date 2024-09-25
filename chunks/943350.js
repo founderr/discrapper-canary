@@ -4,7 +4,7 @@ n.r(a),
             return v;
         },
         GameProfileFeedbackThankYouModal: function () {
-            return p;
+            return b;
         }
     }),
     n(47120);
@@ -13,45 +13,46 @@ var l = n(735250),
     s = n(658722),
     i = n.n(s),
     o = n(392711),
-    r = n(442837),
-    d = n(481060),
+    d = n(442837),
+    r = n(481060),
     c = n(224706),
     u = n(812206),
-    h = n(206295),
-    m = n(669764),
+    m = n(206295),
+    h = n(669764),
     g = n(690221),
     x = n(77498),
     E = n(49012),
-    f = n(701488),
-    _ = n(689938),
+    f = n(810568),
+    _ = n(701488),
+    p = n(689938),
     C = n(361357);
-function p(e) {
+function b(e) {
     let { transitionState: a, onClose: n } = e;
-    return (0, l.jsxs)(d.ModalRoot, {
-        size: d.ModalSize.SMALL,
+    return (0, l.jsxs)(r.ModalRoot, {
+        size: r.ModalSize.SMALL,
         transitionState: a,
         children: [
-            (0, l.jsxs)(d.ModalContent, {
+            (0, l.jsxs)(r.ModalContent, {
                 className: C.content,
                 children: [
-                    (0, l.jsx)(d.Heading, {
+                    (0, l.jsx)(r.Heading, {
                         variant: 'heading-xl/bold',
                         className: C.header,
-                        children: _.Z.Messages.GAME_PROFILE_FEEDBACK_HEAD_TY
+                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_HEAD_TY
                     }),
-                    (0, l.jsx)(d.Text, {
+                    (0, l.jsx)(r.Text, {
                         className: C.tip,
                         variant: 'text-md/medium',
-                        children: _.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_TY
+                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_TY
                     })
                 ]
             }),
-            (0, l.jsx)(d.ModalFooter, {
+            (0, l.jsx)(r.ModalFooter, {
                 className: C.footer,
-                children: (0, l.jsx)(d.Button, {
+                children: (0, l.jsx)(r.Button, {
                     fullWidth: !0,
                     onClick: n,
-                    children: _.Z.Messages.DONE
+                    children: p.Z.Messages.DONE
                 })
             })
         ]
@@ -59,25 +60,25 @@ function p(e) {
 }
 function v(e) {
     var a, n;
-    let { transitionState: s, applicationId: v, onClose: b } = e,
-        [M, j] = t.useState(!1),
-        [A, S] = t.useState(''),
-        [D, F] = t.useState(''),
-        I = (0, r.e7)([u.Z], () => u.Z.getApplication(v)),
-        [T, L] = t.useState(null != v ? v : null),
-        N = (0, r.e7)([m.Z], () => m.Z.getGame(v)),
-        R = null !== (a = null == N ? void 0 : N.name) && void 0 !== a ? a : null == I ? void 0 : I.name,
-        k = null == I ? void 0 : I.getIconURL(f.Si.LARGE),
-        { primaryColor: Z, secondaryColor: B } = (0, h.Z)(k);
+    let { transitionState: s, applicationId: v, onClose: M, viewId: j } = e,
+        [A, I] = t.useState(!1),
+        [S, D] = t.useState(''),
+        [F, N] = t.useState(''),
+        T = (0, d.e7)([u.Z], () => u.Z.getApplication(v)),
+        [k, L] = t.useState(null != v ? v : null),
+        R = (0, d.e7)([h.Z], () => h.Z.getGame(v)),
+        Z = null !== (a = null == R ? void 0 : R.name) && void 0 !== a ? a : null == T ? void 0 : T.name,
+        B = null == T ? void 0 : T.getIconURL(_.Si.LARGE),
+        { primaryColor: G, secondaryColor: O } = (0, m.Z)(B);
     t.useEffect(() => {
         c.Z.getDetectableGames();
     }, []);
-    let O = (0, r.Wu)(
+    let P = (0, d.Wu)(
             [x.Z],
             () => {
-                let e = ((null == A ? void 0 : A.length) > 0 ? A : null != R ? R : '').toLowerCase(),
+                let e = ((null == S ? void 0 : S.length) > 0 ? S : null != Z ? Z : '').toLowerCase(),
                     a = x.Z.getDetectableGame(v),
-                    n = null != T ? x.Z.getDetectableGame(T) : void 0;
+                    n = null != k ? x.Z.getDetectableGame(k) : void 0;
                 return (0, o.chain)(x.Z.games)
                     .filter((a) => i()(e, a.name.toLowerCase()))
                     .take(3)
@@ -86,34 +87,34 @@ function v(e) {
                     .uniqBy('id')
                     .value();
             },
-            [v, T, R, A]
+            [v, k, Z, S]
         ),
-        P = A.length > 0 && !O.map((e) => e.name).includes(A),
-        G = 0 === D.length && (T === v || (null === T && 0 === A.length));
-    if (M)
-        return (0, l.jsx)(p, {
+        H = S.length > 0 && !P.map((e) => e.name).includes(S),
+        K = 0 === F.length && (k === v || (null === k && 0 === S.length));
+    if (A)
+        return (0, l.jsx)(b, {
             transitionState: s,
-            onClose: b
+            onClose: M
         });
-    let K = (e, a) => {
-        a ? (L(e.id), S(e.name)) : L(v);
+    let y = (e, a) => {
+        a ? (L(e.id), D(e.name)) : L(v);
     };
-    return (0, l.jsxs)(d.ModalRoot, {
-        size: d.ModalSize.SMALL,
+    return (0, l.jsxs)(r.ModalRoot, {
+        size: r.ModalSize.SMALL,
         transitionState: s,
         children: [
-            (0, l.jsxs)(d.ModalContent, {
+            (0, l.jsxs)(r.ModalContent, {
                 className: C.content,
                 children: [
-                    (0, l.jsx)(d.Heading, {
+                    (0, l.jsx)(r.Heading, {
                         variant: 'heading-xl/bold',
                         className: C.header,
-                        children: _.Z.Messages.GAME_PROFILE_FEEDBACK_HEAD_OTHER
+                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_HEAD_OTHER
                     }),
-                    (0, l.jsx)(d.Text, {
+                    (0, l.jsx)(r.Text, {
                         className: C.tip,
                         variant: 'text-md/medium',
-                        children: _.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_OUTDATED
+                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_OUTDATED
                     }),
                     (0, l.jsx)(g.Z, {
                         onClick: () =>
@@ -121,56 +122,56 @@ function v(e) {
                                 href: 'https://igdb.com',
                                 trusted: !0
                             }),
-                        children: (0, l.jsxs)(d.Text, {
+                        children: (0, l.jsxs)(r.Text, {
                             className: C.tip,
                             variant: 'text-sm/medium',
                             color: 'text-secondary',
-                            children: [_.Z.Messages.GAME_PROFILE_FEEDBACK_VISIT_IGDB, ' ', (0, l.jsx)(d.LinkExternalMediumIcon, { size: 'xxs' })]
+                            children: [p.Z.Messages.GAME_PROFILE_FEEDBACK_VISIT_IGDB, ' ', (0, l.jsx)(r.LinkExternalMediumIcon, { size: 'xxs' })]
                         })
                     }),
                     (0, l.jsxs)('div', {
                         className: C.gameInfoBox,
-                        style: { background: 'linear-gradient(45deg, '.concat(Z, ', ').concat(B, ')') },
+                        style: { background: 'linear-gradient(45deg, '.concat(G, ', ').concat(O, ')') },
                         children: [
-                            null != k &&
+                            null != B &&
                                 (0, l.jsx)('img', {
                                     className: C.gameIcon,
-                                    src: k,
+                                    src: B,
                                     alt: ''
                                 }),
-                            (0, l.jsx)(d.Heading, {
+                            (0, l.jsx)(r.Heading, {
                                 variant: 'heading-lg/semibold',
                                 className: C.gameTitle,
-                                children: null !== (n = null == N ? void 0 : N.name) && void 0 !== n ? n : null == I ? void 0 : I.name
+                                children: null !== (n = null == R ? void 0 : R.name) && void 0 !== n ? n : null == T ? void 0 : T.name
                             })
                         ]
                     }),
                     (0, l.jsxs)('div', {
                         className: C.inputField,
                         children: [
-                            (0, l.jsx)(d.SearchBar, {
+                            (0, l.jsx)(r.SearchBar, {
                                 className: C.searchBar,
-                                query: A,
+                                query: S,
                                 onChange: (e) => {
-                                    0 === e.length && null === T && L(v), S(e);
+                                    0 === e.length && null === k && L(v), D(e);
                                 },
-                                size: d.SearchBar.Sizes.MEDIUM,
+                                size: r.SearchBar.Sizes.MEDIUM,
                                 onClear: () => {
-                                    null === T && L(v), S('');
+                                    null === k && L(v), D('');
                                 },
-                                placeholder: _.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_INCORRECT
+                                placeholder: p.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_INCORRECT
                             }),
-                            O.map((e) =>
+                            P.map((e) =>
                                 (0, l.jsx)(
-                                    d.Checkbox,
+                                    r.Checkbox,
                                     {
                                         className: C.gameSuggestion,
-                                        shape: d.Checkbox.Shapes.ROUND,
+                                        shape: r.Checkbox.Shapes.ROUND,
                                         reverse: !0,
-                                        value: e.id === T,
-                                        disabled: e.id === T && T === v,
-                                        onChange: (a) => K(e, a.currentTarget.checked),
-                                        children: (0, l.jsx)(d.Text, {
+                                        value: e.id === k,
+                                        disabled: e.id === k && k === v,
+                                        onChange: (a) => y(e, a.currentTarget.checked),
+                                        children: (0, l.jsx)(r.Text, {
                                             variant: 'text-md/medium',
                                             color: 'interactive-normal',
                                             children: e.name
@@ -179,41 +180,49 @@ function v(e) {
                                     e.id
                                 )
                             ),
-                            P &&
-                                (0, l.jsx)(d.Checkbox, {
+                            H &&
+                                (0, l.jsx)(r.Checkbox, {
                                     className: C.gameSuggestion,
-                                    shape: d.Checkbox.Shapes.ROUND,
+                                    shape: r.Checkbox.Shapes.ROUND,
                                     reverse: !0,
-                                    value: null == T,
-                                    disabled: null == T,
+                                    value: null == k,
+                                    disabled: null == k,
                                     onChange: () => L(null),
-                                    children: (0, l.jsx)(d.Text, {
+                                    children: (0, l.jsx)(r.Text, {
                                         variant: 'text-md/medium',
                                         color: 'interactive-normal',
-                                        children: A
+                                        children: S
                                     })
                                 })
                         ]
                     }),
                     (0, l.jsx)('div', {
                         className: C.inputField,
-                        children: (0, l.jsx)(d.TextArea, {
-                            value: D,
-                            onChange: (e) => F(e),
-                            placeholder: _.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_OTHER
+                        children: (0, l.jsx)(r.TextArea, {
+                            value: F,
+                            onChange: (e) => N(e),
+                            placeholder: p.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_OTHER
                         })
                     })
                 ]
             }),
-            (0, l.jsx)(d.ModalFooter, {
+            (0, l.jsx)(r.ModalFooter, {
                 className: C.footer,
-                children: (0, l.jsx)(d.Button, {
+                children: (0, l.jsx)(r.Button, {
                     fullWidth: !0,
                     onClick: () => {
-                        j(!0);
+                        (0, f.MH)({
+                            applicationId: v,
+                            suggestedGameApplicationId: k,
+                            suggestedGameName: S,
+                            submitted: !0,
+                            feedback: F,
+                            viewId: j
+                        }),
+                            I(!0);
                     },
-                    disabled: G,
-                    children: _.Z.Messages.SUBMIT
+                    disabled: K,
+                    children: p.Z.Messages.SUBMIT
                 })
             })
         ]

@@ -4864,6 +4864,7 @@ let ie = Object.freeze({
     (nf.GAME_PROFILE_CLOSE = 'game_profile_close'),
     (nf.GAME_PROFILE_ENTRY_POINT_AVAILABLE = 'game_profile_entry_point_available'),
     (nf.GAME_PROFILE_FOLLOW_SURVEY = 'game_profile_follow_survey'),
+    (nf.GAME_PROFILE_FEEDBACK = 'game_profile_feedback'),
     (nf.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED = 'user_nitro_tenure_reward_acknowledged'),
     (nf.REVIEW_REQUEST_DEFERRED = 'review_request_deferred'),
     (nf.REVIEW_REQUEST_ELIGIBILITY_CHECKED = 'review_request_eligibility_checked'),

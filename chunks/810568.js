@@ -2,6 +2,9 @@ n.d(t, {
     IS: function () {
         return d;
     },
+    MH: function () {
+        return f;
+    },
     UE: function () {
         return E;
     },
@@ -69,5 +72,16 @@ let c = () => (0, a.Z)(),
             similar_game_id: a,
             view_id: o,
             official_guild_id: u
+        });
+    },
+    f = (e) => {
+        let { viewId: t, applicationId: n, suggestedGameName: r, suggestedGameApplicationId: i, feedback: a, submitted: o } = e;
+        return s.default.track(l.rMx.GAME_PROFILE_FEEDBACK, {
+            view_id: t,
+            application_id: n,
+            suggested_game_name: r,
+            suggested_game_application_id: i,
+            feedback: a,
+            submitted: o
         });
     };
