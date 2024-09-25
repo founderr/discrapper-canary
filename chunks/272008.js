@@ -41,6 +41,9 @@ n.d(t, {
     pf: function () {
         return A;
     },
+    w: function () {
+        return b;
+    },
     xw: function () {
         return m;
     }
@@ -382,5 +385,25 @@ async function D() {
                 error: new s.Z(e)
             });
         }
+    }
+}
+async function b(e) {
+    a.Z.dispatch({
+        type: 'QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN',
+        placement: e
+    });
+    try {
+        let t = await i.tn.get({ url: f.ANM.QUEST_FETCH_QUEST_TO_DELIVER(e) });
+        a.Z.dispatch({
+            type: 'QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS',
+            quest: (0, _.q6)(t.body.quest),
+            placement: e
+        });
+    } catch (t) {
+        a.Z.dispatch({
+            type: 'QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE',
+            error: new s.Z(t),
+            placement: e
+        });
     }
 }

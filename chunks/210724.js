@@ -37,8 +37,8 @@ function b(e) {
             location: h.dr.QUESTS_BAR
         }),
         O = (0, N.Zy)({ location: h.dr.QUESTS_BAR }),
-        v = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
-        P = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
+        P = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
+        v = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
         L = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         Z = (0, d.Z)(L),
         D = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
@@ -131,9 +131,9 @@ function b(e) {
     a.useEffect(() => {
         em({
             expansionSpring: Q ? 1 : 0,
-            immediate: v
+            immediate: P
         });
-    }, [Q, em, v]);
+    }, [Q, em, P]);
     let { visibilitySpring: eg } = (0, c.useSpring)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: H ? 1 : 0 },
@@ -176,7 +176,7 @@ function b(e) {
         ? (0, s.jsx)(p.A, {
               questOrQuests: I,
               questContent: F.trackingCtx.content,
-              overrideVisibility: !P && H,
+              overrideVisibility: !v && H,
               children: () => {
                   let e = F.component;
                   return (0, s.jsx)('div', {
@@ -219,7 +219,7 @@ function b(e) {
                                       onCtxMenuOpened: eo,
                                       onCtxMenuSelection: ec,
                                       quest: I,
-                                      useReducedMotion: v,
+                                      useReducedMotion: P,
                                       collapsedHeight: V
                                   })
                               })
@@ -232,22 +232,21 @@ function b(e) {
 }
 t.Z =
     12633 == n.j
-        ? function (e) {
-              let { overrideQuest: t } = e,
-                  n = (0, l.e7)([I.Z], () => {
-                      var e;
-                      return null !== (e = null != t ? t : I.Z.questDeliveryOverride) && void 0 !== e ? e : (0, m._)(I.Z.quests, R.jn.QUEST_BAR);
-                  });
-              return null == n
+        ? function () {
+              let e = (0, l.e7)([I.Z], () => {
+                  var e, t;
+                  return null !== (t = null !== (e = I.Z.questDeliveryOverride) && void 0 !== e ? e : (0, m.PM)(I.Z.quests, I.Z.questToDeliverForPlacement, R.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== t ? t : (0, m._)(I.Z.quests, R.jn.QUEST_BAR);
+              });
+              return null == e
                   ? null
                   : (0, s.jsx)(
                         f.p,
                         {
                             source: h.dr.QUESTS_BAR,
-                            questId: n.id,
-                            children: (0, s.jsx)(b, { quest: n })
+                            questId: e.id,
+                            children: (0, s.jsx)(b, { quest: e })
                         },
-                        n.id
+                        e.id
                     );
           }
         : null;
