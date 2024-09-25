@@ -1,5 +1,5 @@
 n(47120);
-var i = n(445346),
+var i = n(442837),
     a = n(570140),
     s = n(513418),
     r = n(710845),
@@ -22,7 +22,7 @@ function u(e, t, n) {
 }
 let _ = -1 / 0,
     E = new r.Z('MessagePreviewStore');
-class h extends i.y {
+class h extends i.ZP.Store {
     isLatest(e, t) {
         var n;
         let i = this.guilds.get(null != e ? e : null);

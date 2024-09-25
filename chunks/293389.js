@@ -15,8 +15,8 @@ var n = t(735250),
     I = t(77498),
     N = t(283595),
     A = t(626135),
-    C = t(251625),
-    m = t(358085),
+    m = t(251625),
+    C = t(358085),
     g = t(210887),
     h = t(981631),
     O = t(689938),
@@ -26,7 +26,7 @@ var n = t(735250),
     f = t(869042),
     M = t(113207);
 let D = o.ZP.connectStores([g.Z], () => ({ theme: g.Z.theme }))(c.EmptyState),
-    P = (0, m.isWindows)();
+    P = (0, C.isWindows)();
 function L(e) {
     let { onClose: s } = e,
         t = (0, o.e7)([E.ZP], () => E.ZP.getCandidateGames()),
@@ -81,35 +81,35 @@ function L(e) {
 function b(e) {
     var s;
     let { rawGame: t, nowPlaying: i = !1, isOverride: T } = e,
-        C = (0, o.cj)([I.Z, E.ZP, N.Z], () => (0, E.FZ)(t)),
-        [m, g] = a.useState(!1),
-        [R, M] = a.useState(null !== (s = C.name) && void 0 !== s ? s : '???'),
+        m = (0, o.cj)([I.Z, E.ZP, N.Z], () => (0, E.FZ)(t)),
+        [C, g] = a.useState(!1),
+        [R, M] = a.useState(null !== (s = m.name) && void 0 !== s ? s : '???'),
         D = r()(x.flexCenter, {
             [p.game]: !i,
             [p.activeGame]: i,
             [f.card]: !i,
-            [p.nowPlaying]: null != C && i
+            [p.nowPlaying]: null != m && i
         });
     function L() {
-        d.Z.deleteEntry(C);
+        d.Z.deleteEntry(m);
     }
     function b() {
-        C.name !== R && d.Z.editName(C, R);
+        m.name !== R && d.Z.editName(m, R);
     }
     function Z(e) {
         13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
     }
     function v() {
-        d.Z.toggleDetection(C);
+        d.Z.toggleDetection(m);
     }
     function j() {
-        if (m) return;
-        let e = null != C.id ? I.Z.getDetectableGame(C.id) : null;
+        if (C) return;
+        let e = null != m.id ? I.Z.getDetectableGame(m.id) : null;
         A.default.track(h.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
-            game_name: C.name
+            game_name: m.name
         }),
-            (0, c.showToast)((0, c.createToast)(O.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({ gameName: C.name }), c.ToastType.SUCCESS)),
+            (0, c.showToast)((0, c.createToast)(O.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({ gameName: m.name }), c.ToastType.SUCCESS)),
             g(!0);
     }
     return (0, n.jsxs)('div', {
@@ -118,13 +118,13 @@ function b(e) {
             (0, n.jsxs)('div', {
                 className: r()(p.gameNameLastPlayed, x.vertical),
                 children: [
-                    C.verified && !T
+                    m.verified && !T
                         ? (0, n.jsxs)('div', {
                               className: p.detectedApplication,
                               children: [
                                   (0, n.jsx)('div', {
                                       className: p.gameName,
-                                      children: C.name
+                                      children: m.name
                                   }),
                                   (0, n.jsx)(c.Tooltip, {
                                       text: O.Z.Messages.SETTINGS_GAMES_VERIFIED_ICON,
@@ -155,7 +155,7 @@ function b(e) {
                           }),
                     (function () {
                         let e;
-                        let { played: s, exePath: t } = C;
+                        let { played: s, exePath: t } = m;
                         return (
                             i ? (e = O.Z.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE) : null != s && '' !== s && (e = O.Z.Messages.SETTINGS_GAMES_LAST_PLAYED.format({ when: s })),
                             (0, n.jsx)('div', {
@@ -171,7 +171,7 @@ function b(e) {
             }),
             T
                 ? null
-                : m
+                : C
                   ? null
                   : (0, n.jsx)('div', {
                         className: r()(x.flexCenter, x.noWrap, x.justifyBetween, p.toggleContainer),
@@ -196,7 +196,7 @@ function b(e) {
                         })
                     }),
             (function () {
-                let { detectable: e } = C,
+                let { detectable: e } = m,
                     s = e
                         ? (0, n.jsx)(c.EyeIcon, {
                               size: 'md',
@@ -230,7 +230,7 @@ function b(e) {
             })(),
             (function () {
                 if (!P) return null;
-                let { overlay: e, overlayWarn: s } = C,
+                let { overlay: e, overlayWarn: s } = m,
                     t = e
                         ? (0, n.jsx)(c.ScreenIcon, {
                               size: 'md',
@@ -267,7 +267,7 @@ function b(e) {
                                     className: p.toggleIcon,
                                     onClick: () => {
                                         var s;
-                                        return (s = !e), void d.Z.toggleOverlay(C, s);
+                                        return (s = !e), void d.Z.toggleOverlay(m, s);
                                     },
                                     onMouseEnter: a,
                                     onMouseLeave: i,
@@ -320,7 +320,7 @@ function v(e) {
         ]
     });
 }
-let j = (0, C.oH)(function () {
+let j = (0, m.oH)(function () {
     for (var e = arguments.length, s = Array(e), t = 0; t < e; t++) s[t] = arguments[t];
     return new Set(s.map((e) => e.exePath));
 });

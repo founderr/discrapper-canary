@@ -19,12 +19,12 @@ var a = t(525654),
 function u() {
     var e, s, t, a, u, E;
     let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        S = '330545',
-        I = ((e = '3b047f85125999db14977996357283eeebd5e062'), e.substring(0, 7)),
+        S = '330591',
+        I = ((e = '649d9e2434d411d804f929299c5595b41f4df571'), e.substring(0, 7)),
         N = null === o.Z || void 0 === o.Z ? void 0 : o.Z.remoteApp.getVersion(),
         A = null === o.Z || void 0 === o.Z ? void 0 : null === (s = (t = o.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(t),
-        C = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (u = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(u),
-        m = null === (E = l.C.getCurrentBuildOverride().overrides) || void 0 === E ? void 0 : E.discord_web,
+        m = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (u = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(u),
+        C = null === (E = l.C.getCurrentBuildOverride().overrides) || void 0 === E ? void 0 : E.discord_web,
         g = (function () {
             var e;
             let s = null === i() || void 0 === i() ? void 0 : null === (e = i().os) || void 0 === e ? void 0 : e.toString();
@@ -35,8 +35,8 @@ function u() {
         })(),
         h = [T, S, '('.concat(I, ')')];
     return (
-        null != N && (h.push('Host '.concat(N)), null != C && h.push(C.toLowerCase()), null != A && h.push('('.concat(A, ')'))),
-        h.push('Build Override: '.concat(null != m ? m.id : 'N/A')),
+        null != N && (h.push('Host '.concat(N)), null != m && h.push(m.toLowerCase()), null != A && h.push('('.concat(A, ')'))),
+        h.push('Build Override: '.concat(null != C ? C.id : 'N/A')),
         null != g && h.push(g),
         (0, n.jsx)(c.Z, {
             copyValue: h.join(' '),
@@ -79,10 +79,10 @@ function u() {
                                                   'Host ',
                                                   N,
                                                   ' ',
-                                                  null != C
+                                                  null != m
                                                       ? (0, n.jsxs)('span', {
                                                             className: _.appArch,
-                                                            children: [C.toLowerCase(), ' ']
+                                                            children: [m.toLowerCase(), ' ']
                                                         })
                                                       : null,
                                                   null != A

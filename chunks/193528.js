@@ -19,7 +19,7 @@ var n = t(735250),
     S = t(689938),
     I = t(109469);
 function N(e) {
-    let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: A, label: C, colorPickerMiddle: m, colorPickerFooter: g, showEyeDropper: h } = e,
+    let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: A, label: m, colorPickerMiddle: C, colorPickerFooter: g, showEyeDropper: h } = e,
         O = a.useRef(null),
         p = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         R = c.Z.colors.BACKGROUND_ACCENT.css,
@@ -27,13 +27,13 @@ function N(e) {
         f = (0, l.Rf)(i),
         M = f === p ? R : f,
         D = (0, u.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530),
-        P = (0, _.Z)(m),
+        P = (0, _.Z)(C),
         L = (0, _.Z)(g),
         [b, Z] = a.useState((0, o.Z)());
     return (
         a.useEffect(() => {
-            (P !== m || L !== g) && Z((0, o.Z)());
-        }, [g, m, L, P]),
+            (P !== C || L !== g) && Z((0, o.Z)());
+        }, [g, C, L, P]),
         (0, n.jsx)(d.Popout, {
             positionKey: b,
             renderPopout: (e) =>
@@ -42,7 +42,7 @@ function N(e) {
                     value: i,
                     onChange: s,
                     suggestedColors: N,
-                    middle: m,
+                    middle: C,
                     footer: g,
                     showEyeDropper: h
                 }),
@@ -72,7 +72,7 @@ function N(e) {
                                 color: D
                             })
                         }),
-                        C
+                        m
                     ]
                 });
             }

@@ -15,8 +15,8 @@ var n = t(735250),
     I = t(468026),
     N = t(410030),
     A = t(726542),
-    C = t(122021),
-    m = t(275759),
+    m = t(122021),
+    C = t(275759),
     g = t(231757),
     h = t(888496),
     O = t(605236),
@@ -124,7 +124,7 @@ function k(e) {
         [k, H] = a.useState(null),
         [W, K] = a.useState(!1),
         [z, Q] = a.useState([]),
-        X = (0, C.rR)(T.type),
+        X = (0, m.rR)(T.type),
         q = A.Z.get(X);
     a.useEffect(() => {
         p(T.friendSync), f(T.visibility), D(T.metadataVisibility), b(T.showActivity);
@@ -289,7 +289,7 @@ function k(e) {
                 var s;
                 let t = null !== (s = e.metadata) && void 0 !== s ? s : {},
                     a = null,
-                    i = (0, m.FI)(t[G.PC.CREATED_AT], N);
+                    i = (0, C.FI)(t[G.PC.CREATED_AT], N);
                 switch (e.type) {
                     case U.ABu.REDDIT:
                         a = (0, h.oP)(t, V.metadataItem);
@@ -510,7 +510,7 @@ function K() {
             onComplete: W
         });
     }
-    let s = (0, C.fq)(),
+    let s = (0, m.fq)(),
         t = (0, _.useRedesignIconContext)().enabled ? 24 : 18;
     return (0, n.jsxs)('div', {
         className: V.connectionsContainer,

@@ -37,7 +37,7 @@ function T() {
                           color: 'text-normal',
                           children: h.Z.Messages.FOR_LATER_EMPTY_ALL_TITLE
                       }),
-                      (0, r.jsx)(o.x, {
+                      (0, r.jsx)(o.xv, {
                           variant: 'text-md/medium',
                           color: 'text-muted',
                           children: h.Z.Messages.FOR_LATER_EMPTY_ALL_BODY_WEB
@@ -62,7 +62,7 @@ function T() {
                               color: 'text-normal',
                               children: h.Z.Messages.FOR_LATER_UPSELL_MODAL_TITLE
                           }),
-                          (0, r.jsx)(o.x, {
+                          (0, r.jsx)(o.xv, {
                               variant: 'text-md/medium',
                               color: 'text-muted',
                               children: h.Z.Messages.FOR_LATER_UPSELL_MODAL_BODY
@@ -98,7 +98,7 @@ function g() {
                 size: 'md',
                 color: u.JX.PREMIUM_TIER_2
             }),
-            (0, r.jsx)(o.x, {
+            (0, r.jsx)(o.xv, {
                 variant: 'text-xs/medium',
                 color: 'header-primary',
                 className: p.upsellText,

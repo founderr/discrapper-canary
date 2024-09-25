@@ -15,8 +15,8 @@ var n = t(735250),
     I = t(952306),
     N = t(600164),
     A = t(690221),
-    C = t(346585),
-    m = t(347649),
+    m = t(346585),
+    C = t(347649),
     g = t(332473),
     h = t(303172),
     O = t(921801),
@@ -110,7 +110,7 @@ class w extends a.PureComponent {
                   className: V.accountWarningBodyText,
                   messageType: _.HelpMessageTypes.WARNING,
                   children: [
-                      this.props.forceMigrationExperiment ? y.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, C.IE)(this.props.locale) }) : y.Z.Messages.POMELO_ACTION_NEEDED.format(),
+                      this.props.forceMigrationExperiment ? y.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, m.IE)(this.props.locale) }) : y.Z.Messages.POMELO_ACTION_NEEDED.format(),
                       ' ',
                       '',
                       (0, n.jsx)(A.Z, {
@@ -329,7 +329,7 @@ s.Z = () => {
         t = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
         a = (0, c.e7)([L.Z], () => L.Z.theme),
         i = (0, g.b)(),
-        r = (0, m.CC)(),
+        r = (0, C.CC)(),
         o = (0, c.e7)([P.default], () => P.default.locale);
     return (0, n.jsx)(w, {
         theme: a,

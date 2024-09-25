@@ -46,7 +46,7 @@ function _(e) {
             }),
             (0, r.jsx)('div', {
                 className: d.textContainer,
-                children: (0, r.jsx)(s.x, {
+                children: (0, r.jsx)(s.xv, {
                     variant: 'text-sm/medium',
                     children: _
                 })

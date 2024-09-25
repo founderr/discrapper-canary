@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-class s extends i.yh {
+class s extends i.ZP.Store {
     allGuildIds() {
         return this.guildIds;
     }

@@ -18,7 +18,7 @@ function u(e, t, n) {
     );
 }
 a.Ds.KvCache, a.Ds.KvCache;
-class c extends i.yh {
+class c extends i.ZP.Store {
     initialize() {
         this.waitFor(s.default);
     }

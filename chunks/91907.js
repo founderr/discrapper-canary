@@ -19,7 +19,7 @@ function l(e) {
             (0, r.jsx)(o.Z, {
                 ...e,
                 tag: 'span',
-                children: (0, r.jsx)(a.x, {
+                children: (0, r.jsx)(a.xv, {
                     className: u,
                     variant: 'text-sm/semibold',
                     color: 'text-primary',

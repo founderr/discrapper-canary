@@ -1,5 +1,5 @@
 var r = n(47120);
-var i = n(445346),
+var i = n(442837),
     a = n(570140),
     o = n(710845),
     s = n(93093);
@@ -18,7 +18,7 @@ function l(e, t, n) {
 }
 let u = new o.Z('BasicChannelCacheStore'),
     c = !1;
-class d extends i.y {
+class d extends i.ZP.Store {
     hasChannel(e) {
         return this.channels.has(e);
     }

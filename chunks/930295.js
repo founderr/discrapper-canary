@@ -13,10 +13,10 @@ var o = n(735250),
     c = n(699581),
     d = n(374470),
     _ = n(846519),
-    E = n(337033),
-    f = n(302901),
-    h = n(539907),
-    p = n(952265),
+    E = n(302901),
+    f = n(539907),
+    h = n(952265),
+    p = n(481060),
     m = n(40851),
     I = n(314910),
     T = n(920676),
@@ -88,7 +88,7 @@ class v extends (r = s.Component) {
                         position: this.state.renderedPosition
                     }
                 ),
-                (0, o.jsx)(E.y, {
+                (0, o.jsx)(p.HeadingLevel, {
                     forceLevel: 2,
                     children: this.renderLayer()
                 })
@@ -98,12 +98,12 @@ class v extends (r = s.Component) {
     renderLayer() {
         if (!this.shouldShowPopout(this.props, this.state) || null == this.domElementRef.current) return null;
         let { position: e, align: t, nudgeAlignIntoViewport: n, useRawTargetDimensions: r, spacing: i, autoInvert: a, fixed: s, positionKey: l, disablePointerEvents: u, layerContext: c } = this.props,
-            { resizeKey: d, isLoading: _, shouldShowLoadingState: E } = this.state;
-        return _ && !E
+            { resizeKey: d, isLoading: _, shouldShowLoadingState: h } = this.state;
+        return _ && !h
             ? null
-            : (0, o.jsx)(f.mh, {
+            : (0, o.jsx)(E.mh, {
                   layerContext: null != c ? c : I.nz,
-                  children: (0, o.jsx)(h.j, {
+                  children: (0, o.jsx)(f.j, {
                       ref: this.layerRef,
                       onMount: this.handlePopoutShow,
                       onUnmount: this.handlePopoutHide,
@@ -215,7 +215,7 @@ class v extends (r = s.Component) {
                     n = e.target,
                     r = this.domElementRef.current;
                 if (null != r) {
-                    if ((0, h.t)(r, n) || (t && (0, p.$s)())) return;
+                    if ((0, f.t)(r, n) || (t && (0, h.$s)())) return;
                     this.isValidClickStart = !0;
                 }
             }),

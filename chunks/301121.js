@@ -22,8 +22,8 @@ var n,
     I = t(570140),
     N = t(668781),
     A = t(409700),
-    C = t(809206),
-    m = t(230711),
+    m = t(809206),
+    C = t(230711),
     g = t(241420),
     h = t(600164),
     O = t(651530),
@@ -389,7 +389,7 @@ function eA(e) {
         })
     );
 }
-function eC(e) {
+function em(e) {
     let { message: s } = e;
     eA({
         header: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
@@ -397,10 +397,10 @@ function eC(e) {
         body: s
     });
 }
-class em extends r.PureComponent {
+class eC extends r.PureComponent {
     componentDidMount() {
         (0, A.I)(),
-            (0, C.ol)().then(
+            (0, m.ol)().then(
                 (e) => {
                     let s = {
                         requestingHarvest: !1,
@@ -691,7 +691,7 @@ class em extends r.PureComponent {
                             className: ed.marginBottom20,
                             children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_NOTE.format({
                                 onClick: () => {
-                                    m.Z.setSection(ei.oAB.ACCOUNT);
+                                    C.Z.setSection(ei.oAB.ACCOUNT);
                                 }
                             })
                         }),
@@ -879,9 +879,9 @@ class em extends r.PureComponent {
                           body: eo.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
                           confirmText: eo.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
                           cancelText: eo.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
-                          onConfirm: () => (0, A.g)([], [ei.pjP.USAGE_STATISTICS]).catch(eC)
+                          onConfirm: () => (0, A.g)([], [ei.pjP.USAGE_STATISTICS]).catch(em)
                       })
-                    : (0, A.g)([ei.pjP.USAGE_STATISTICS], []).catch(eC);
+                    : (0, A.g)([ei.pjP.USAGE_STATISTICS], []).catch(em);
             }),
             e_(this, 'handlePersonalizationChange', () => {
                 this.props.personalization
@@ -890,11 +890,11 @@ class em extends r.PureComponent {
                           confirmText: eo.Z.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
                           cancelText: eo.Z.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
                           onConfirm: () => {
-                              (0, A.g)([], [ei.pjP.PERSONALIZATION]).catch(eC);
+                              (0, A.g)([], [ei.pjP.PERSONALIZATION]).catch(em);
                           },
                           body: eo.Z.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
                       })
-                    : (0, A.g)([ei.pjP.PERSONALIZATION], []).catch(eC);
+                    : (0, A.g)([ei.pjP.PERSONALIZATION], []).catch(em);
             }),
             e_(this, 'handleDataDownloadRequest', () => {
                 var e;
@@ -906,7 +906,7 @@ class em extends r.PureComponent {
                     confirmButtonColor: S.Button.Colors.BRAND,
                     onConfirm: (e) => {
                         this.setState({ requestingHarvest: !0 }, () => {
-                            (0, C.V3)(e)
+                            (0, m.V3)(e)
                                 .then(
                                     (e) => {
                                         null != e && null != e.body
@@ -960,7 +960,7 @@ function eg() {
         c = (0, D.p)(),
         _ = (0, P.Z)(),
         { enabled: u } = (0, b.S)({ location: 'PrivacySafetySettings' });
-    return (0, i.jsx)(em, {
+    return (0, i.jsx)(eC, {
         currentUser: e,
         defaultGuildsRestricted: Q.iG.useSetting(),
         nonSpamRetrainingOptIn: Q.kJ.useSetting(),

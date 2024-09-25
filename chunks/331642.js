@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return m;
+        return C;
     }
 }),
     t(47120);
@@ -61,7 +61,7 @@ function A(e) {
             })
     });
 }
-function C(e) {
+function m(e) {
     let { sound: s } = e,
         { previewSound: t } = (0, u.Z)(s, null),
         a =
@@ -81,7 +81,7 @@ function C(e) {
         })
     });
 }
-function m(e) {
+function C(e) {
     let { sound: s, isGlobal: t, onSelect: a } = e,
         i = null != s,
         c = null == s ? void 0 : s.emojiId,
@@ -121,7 +121,7 @@ function m(e) {
                                   : s.name
                     }),
                     i
-                        ? (0, n.jsx)(C, { sound: s })
+                        ? (0, n.jsx)(m, { sound: s })
                         : (0, n.jsx)(o.VoiceNormalIcon, {
                               size: 'md',
                               color: 'currentColor',

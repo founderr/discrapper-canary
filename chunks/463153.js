@@ -18,7 +18,7 @@ function l() {
                 src: o,
                 alt: ''
             }),
-            (0, n.jsx)(a.x, {
+            (0, n.jsx)(a.xv, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
                 children: i.Z.Messages.USER_SETTINGS_NO_SEARCH_RESULTS

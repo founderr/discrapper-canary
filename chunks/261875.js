@@ -20,7 +20,7 @@ function c(e, t, n) {
 }
 let d = new s.Z('DatabaseManager'),
     _ = !1;
-class E extends i.yh {
+class E extends i.ZP.Store {
     initialize() {
         this.waitFor(l.default), this.carefullySpeculativelyOpen(u.n()), this.handleAuthenticationStoreChanged(), l.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
     }

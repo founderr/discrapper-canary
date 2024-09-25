@@ -30,12 +30,12 @@ a.default = (e) => {
                         (0, d.jsxs)('div', {
                             className: _.badgeText,
                             children: [
-                                (0, d.jsx)(n.x, {
+                                (0, d.jsx)(n.xv, {
                                     variant: 'text-md/semibold',
                                     className: _.badgeName,
                                     children: a
                                 }),
-                                (0, d.jsx)(n.x, {
+                                (0, d.jsx)(n.xv, {
                                     variant: 'text-xs/normal',
                                     children: t
                                 })
@@ -58,12 +58,12 @@ a.default = (e) => {
             (0, d.jsxs)(r.ModalContent, {
                 className: _.content,
                 children: [
-                    (0, d.jsx)(n.x, {
+                    (0, d.jsx)(n.xv, {
                         variant: 'display-md',
                         className: _.header,
                         children: m.Z.Messages.NITRO_HOME_TIERED_TENURE_BADGES_MODAL_HEADER
                     }),
-                    (0, d.jsx)(n.x, {
+                    (0, d.jsx)(n.xv, {
                         variant: 'text-md/medium',
                         className: _.subHeader,
                         children: m.Z.Messages.NITRO_HOME_TIERED_TENURE_BADGES_MODAL_SUB_HEADER

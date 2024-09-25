@@ -21,8 +21,8 @@ var n = t(735250),
     I = t(726985),
     N = t(981631),
     A = t(689938),
-    C = t(472346);
-let m = (e) => {
+    m = t(472346);
+let C = (e) => {
     (0, l.openModalLazy)(async () => {
         let { default: s } = await t.e('25120').then(t.bind(t, 926281));
         return (t) =>
@@ -43,7 +43,7 @@ function g() {
     let h = (0, u.$6)(s, e) || t,
         O = h && null != s,
         p = () => {
-            m({
+            C({
                 header: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
                 body: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({ helpdeskArticle: _.Z.getArticleURL(N.BhN.GDPR_PACKAGE_CONTENTS) }),
                 confirmText: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
@@ -80,14 +80,14 @@ function g() {
             }),
             O
                 ? (0, n.jsx)(l.Card, {
-                      className: C.card,
+                      className: m.card,
                       children: (0, n.jsx)(l.Text, {
                           variant: 'text-md/normal',
                           children: A.Z.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({ date: r()(s.created_at).add(N.eBq, 'days').format('MMMM Do YYYY') })
                       })
                   })
                 : (0, n.jsx)('div', {
-                      className: C.button,
+                      className: m.button,
                       children: (0, n.jsx)(l.Tooltip, {
                           text: e.verified ? null : A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_TOOLTIP,
                           children: (e) => {

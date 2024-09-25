@@ -127,7 +127,7 @@ function L(e) {
                 children: (0, i.jsxs)('div', {
                     className: A.variant2InfoContainer,
                     children: [
-                        (0, i.jsx)(o.x, {
+                        (0, i.jsx)(o.xv, {
                             className: A.variant2Text,
                             variant: 'text-sm/medium',
                             children: a ? N.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_POPOUT_BODY : N.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_BODY

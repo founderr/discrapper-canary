@@ -15,8 +15,8 @@ var n = t(735250),
     I = t(454585),
     N = t(163684),
     A = t(178100),
-    C = t(518638),
-    m = t(725727),
+    m = t(518638),
+    C = t(725727),
     g = t(454982),
     h = t(197115),
     O = t(504983),
@@ -37,7 +37,7 @@ function v(e) {
         [u, E] = a.useState(!1),
         T = () => _((e) => !e),
         N = (0, S.ZP)(),
-        m = (0, C.Pz)(t.id, N),
+        C = (0, m.Pz)(t.id, N),
         h = null != i,
         O = (0, A.Z)(t, h);
     h && c
@@ -79,7 +79,7 @@ function v(e) {
                                         className: Z.promotionIcon,
                                         children: (0, n.jsx)('img', {
                                             alt: '',
-                                            src: m,
+                                            src: C,
                                             className: Z.promotionIconImage
                                         })
                                     }),
@@ -147,8 +147,8 @@ s.Z = function () {
             (0, u.Qv)().then(() => I(!0));
         });
     }, []);
-    let { promotionsLoaded: A, activeOutboundPromotions: C, claimedEndedOutboundPromotions: g, claimedOutboundPromotionCodeMap: j, addClaimedOutboundPromotionCode: B } = (0, m.lG)(),
-        U = C.length + g.length > 0,
+    let { promotionsLoaded: A, activeOutboundPromotions: m, claimedEndedOutboundPromotions: g, claimedOutboundPromotionCodeMap: j, addClaimedOutboundPromotionCode: B } = (0, C.lG)(),
+        U = m.length + g.length > 0,
         G =
             N.g.useExperiment(
                 { location: 'EntitlementGifts' },
@@ -227,7 +227,7 @@ s.Z = function () {
                                           t.id
                                       );
                                   }),
-                                  C.map((e) =>
+                                  m.map((e) =>
                                       (0, n.jsx)(
                                           v,
                                           {

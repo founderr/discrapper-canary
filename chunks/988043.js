@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return m;
     }
 }),
     t(47120);
@@ -20,12 +20,12 @@ var n = t(735250),
     I = t(736530),
     N = t(981631),
     A = t(689938);
-function C() {
+function m() {
     let e = (0, _.is)(),
         s = (0, _.c_)(),
         t = d.h2.useSetting().includes(e),
-        C = d.iG.useSetting(),
-        m = a.useCallback(
+        m = d.iG.useSetting(),
+        C = a.useCallback(
             (s) => {
                 let t = new Set((0, c.YK)());
                 s ? t.delete(e) : t.add(e), d.h2.updateSetting(Array.from(t));
@@ -60,7 +60,7 @@ function C() {
                 ? (0, n.jsx)(E.Z, {
                       title: A.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
                       note: A.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_GLOBAL_NOTE,
-                      value: !C,
+                      value: !m,
                       onChange: (e) => {
                           h(!e);
                       }
@@ -69,7 +69,7 @@ function C() {
                       title: A.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
                       note: s ? A.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : A.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
                       value: !t,
-                      onChange: m
+                      onChange: C
                   })
     });
 }

@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(735250),
     i = n(470079),
-    a = n(337033),
+    a = n(481060),
     o = n(15127),
     s = n(512983),
     l = n(276580);
@@ -19,7 +19,7 @@ let u = i.forwardRef(function (e, t) {
         className: c,
         children:
             null != _
-                ? (0, r.jsx)(a.y, {
+                ? (0, r.jsx)(a.HeadingLevel, {
                       component: (0, r.jsxs)('div', {
                           className: l.sectionTitle,
                           children: [

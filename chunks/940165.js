@@ -35,7 +35,7 @@ function I(e) {
                         variant: 'text-md/medium',
                         children: n
                     }),
-                    (0, a.jsx)(i.x, {
+                    (0, a.jsx)(i.xv, {
                         variant: 'text-sm/normal',
                         children: o
                     })

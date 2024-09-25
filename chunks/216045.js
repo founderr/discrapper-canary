@@ -20,8 +20,8 @@ var n,
     I = t(809206),
     N = t(497321),
     A = t(634894),
-    C = t(100527),
-    m = t(906732),
+    m = t(100527),
+    C = t(906732),
     g = t(475977),
     h = t(957730),
     O = t(31590),
@@ -51,7 +51,7 @@ function G() {
         { pendingBio: t, ...n } = (0, _.cj)([P.Z], () => P.Z.getAllPending()),
         a = Z.dN.useSetting() && null != t ? h.ZP.parse(void 0, t).content : t,
         o = b.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: c } = (0, m.ZP)(C.Z.PROFILE);
+        { analyticsLocations: c } = (0, C.ZP)(m.Z.PROFILE);
     r.useEffect(() => () => T.Z.wait(I.W3), []);
     let G = 'UserSettingsProfileCustomization';
     (0, A.j)({
@@ -96,7 +96,7 @@ function G() {
         Q = r.useRef(null);
     return s
         ? (0, i.jsx)(N.Z, {})
-        : (0, i.jsxs)(m.Gt, {
+        : (0, i.jsxs)(C.Gt, {
               value: c,
               children: [
                   (0, i.jsx)(g.Z, {}),

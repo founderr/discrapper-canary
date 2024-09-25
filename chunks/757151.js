@@ -19,8 +19,8 @@ var n = t(735250),
     I = t(993315),
     N = t(883382),
     A = t(940021),
-    C = t(402583),
-    m = t(821035),
+    m = t(402583),
+    C = t(821035),
     g = t(694569),
     h = t(394655),
     O = t(230341),
@@ -60,7 +60,7 @@ let U = () =>
                 (0, n.jsxs)(x.Z, {
                     title: j.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_CONTENT,
                     webSetting: Z.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                    children: [(0, n.jsx)(m.P, {}), (0, n.jsx)(T.Z, {}), (0, n.jsx)(h.Z, {}), (0, n.jsx)(E.Z, {}), (0, n.jsx)(u.Z, {}), (0, n.jsx)(f.Z, {})]
+                    children: [(0, n.jsx)(C.P, {}), (0, n.jsx)(T.Z, {}), (0, n.jsx)(h.Z, {}), (0, n.jsx)(E.Z, {}), (0, n.jsx)(u.Z, {}), (0, n.jsx)(f.Z, {})]
                 }),
                 (0, n.jsx)(U, {}),
                 (0, n.jsx)(x.Z, {
@@ -77,7 +77,7 @@ let U = () =>
                 (0, n.jsxs)(x.Z, {
                     title: j.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_DISCORD_DATA_USAGE,
                     webSetting: Z.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-                    children: [(0, n.jsx)(C.Z, {}), (0, n.jsx)(A.Z, {}), (0, n.jsx)(N.Z, {}), (0, n.jsx)(I.Z, {})]
+                    children: [(0, n.jsx)(m.Z, {}), (0, n.jsx)(A.Z, {}), (0, n.jsx)(N.Z, {}), (0, n.jsx)(I.Z, {})]
                 }),
                 (0, n.jsx)(x.Z, {
                     title: j.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_REQUEST_DATA,

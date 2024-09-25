@@ -1,4 +1,4 @@
-var r = n(445346),
+var r = n(442837),
     i = n(570140),
     a = n(710845),
     o = n(70956),
@@ -19,7 +19,7 @@ function l(e, t, n) {
 let u = new a.Z('FileSystemStore'),
     c = 1048576,
     d = 10 * o.Z.Millis.MINUTE;
-class _ extends r.y {
+class _ extends r.ZP.Store {
     handlePostConnectionOpen() {
         return this.refresh(), !1;
     }

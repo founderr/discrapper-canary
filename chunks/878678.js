@@ -12,7 +12,7 @@ var r = n(735250),
     a = n(120356),
     o = n.n(a),
     s = n(693789),
-    l = n(260034),
+    l = n(481060),
     u = n(709692),
     c = n(642649);
 function d(e) {
@@ -64,7 +64,7 @@ function d(e) {
                 null != a
                     ? (0, r.jsx)(u.xB, {
                           separator: !1,
-                          children: (0, r.jsx)(l.X, {
+                          children: (0, r.jsx)(l.Heading, {
                               variant: 'heading-lg/semibold',
                               children: a
                           })

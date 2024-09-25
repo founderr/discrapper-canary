@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(47120);
 var i = n(735250),
     a = n(470079),
-    o = n(260034),
+    o = n(793030),
     s = n(993365),
     l = n(481060),
     u = n(489863),
@@ -48,7 +48,7 @@ function E(e) {
     return (0, i.jsxs)('div', {
         className: d.selectorGroup,
         children: [
-            (0, i.jsx)(o.X, {
+            (0, i.jsx)(o.X6, {
                 variant: 'heading-deprecated-12/semibold',
                 className: d.sectionLabel,
                 children: c.Z.Messages.OAUTH2_ADD_WEBHOOK_INCOMING

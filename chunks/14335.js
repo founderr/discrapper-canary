@@ -65,7 +65,7 @@ function S() {
             }),
             t
                 ? n
-                    ? (0, r.jsxs)(a.x, {
+                    ? (0, r.jsxs)(a.xv, {
                           variant: 'text-sm/normal',
                           className: g.text,
                           children: [T.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE_V2, ' ', T.Z.Messages.LEARN_MORE_CLICK.format({ onClick: N })]

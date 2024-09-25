@@ -46,12 +46,12 @@ t.Z = () => {
                   (0, s.jsxs)('div', {
                       className: d.textColumn,
                       children: [
-                          (0, s.jsx)(i.x, {
+                          (0, s.jsx)(i.xv, {
                               variant: 'text-lg/semibold',
                               className: d.badgeText,
                               children: n
                           }),
-                          (0, s.jsx)(i.x, {
+                          (0, s.jsx)(i.xv, {
                               variant: 'text-xs/normal',
                               children: c.Z.Messages.NITRO_HOME_TIERED_TENURE_BADGES_EARNED_ON.format({ date: a })
                           })

@@ -19,8 +19,8 @@ var n = t(735250),
     I = t(341907),
     N = t(46140),
     A = t(981631),
-    C = t(689938),
-    m = t(936598),
+    m = t(689938),
+    C = t(936598),
     g = t(66094);
 function h() {
     let e = (0, l.wj)((0, _.ZP)()),
@@ -39,43 +39,43 @@ function h() {
         }, []),
         (0, u.un)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
         (0, n.jsxs)('div', {
-            className: r()(m.container),
+            className: r()(C.container),
             style: s,
             children: [
                 !1,
                 (0, n.jsxs)('div', {
-                    className: m.textContainer,
+                    className: C.textContainer,
                     children: [
                         (0, n.jsxs)('div', {
-                            className: m.headerContainer,
+                            className: C.headerContainer,
                             children: [
                                 (0, n.jsx)('img', {
                                     alt: '',
                                     src: g,
-                                    className: m.icon
+                                    className: C.icon
                                 }),
                                 (0, n.jsx)(c.Heading, {
                                     variant: 'heading-lg/bold',
                                     color: 'always-white',
-                                    children: C.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_TITLE
+                                    children: m.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_TITLE
                                 })
                             ]
                         }),
                         (0, n.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             color: 'text-muted',
-                            children: C.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_DESCRIPTION_V2
+                            children: m.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_DESCRIPTION_V2
                         }),
                         (0, n.jsx)(c.Button, {
                             size: 'large',
                             color: e ? c.ButtonColors.BRAND : c.ButtonColors.WHITE,
-                            className: m.button,
+                            className: C.button,
                             onClick: t,
-                            innerClassName: m.innerButton,
+                            innerClassName: C.innerButton,
                             children: (0, n.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: e ? 'always-white' : 'text-normal',
-                                children: C.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_BUTTON
+                                children: m.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_BUTTON
                             })
                         })
                     ]

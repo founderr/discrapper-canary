@@ -10,7 +10,7 @@ var r = n(735250),
     i = n(470079),
     a = n(597442),
     o = n(84735),
-    s = n(337033),
+    s = n(481060),
     l = n(793903);
 let u = i.createContext(void 0),
     c = i.forwardRef(function (e, t) {
@@ -35,7 +35,7 @@ let u = i.createContext(void 0),
                     role: 'dialog',
                     tabIndex: -1,
                     'aria-modal': !0,
-                    children: (0, r.jsx)(s.y, {
+                    children: (0, r.jsx)(s.HeadingLevel, {
                         forceLevel: 1,
                         children: (0, r.jsx)(o.J, {
                             containerRef: h,

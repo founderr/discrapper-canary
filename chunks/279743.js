@@ -22,8 +22,8 @@ function T(e) {
         I = (0, c.useToken)(T).spring({ opacity: 0 }),
         N = (0, c.useToken)(T).spring({ opacity: 0.1 }),
         A = (0, c.useToken)(T).spring({ opacity: 0 }),
-        C = (0, c.useToken)(T).spring({ opacity: 1 }),
-        m = (e) => {
+        m = (0, c.useToken)(T).spring({ opacity: 1 }),
+        C = (e) => {
             e.finished && (null == i || i());
         },
         [g, h] = (0, c.useSpring)(
@@ -57,7 +57,7 @@ function T(e) {
                     to: [
                         {
                             backgroundColor: N,
-                            borderColor: C
+                            borderColor: m
                         }
                     ],
                     config: {
@@ -78,7 +78,7 @@ function T(e) {
                         duration: p,
                         easing: l.Z.Easing.ease
                     },
-                    onRest: m
+                    onRest: C
                 });
         }, [h]),
         (0, n.jsx)(o.animated.div, {

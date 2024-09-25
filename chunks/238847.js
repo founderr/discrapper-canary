@@ -15,8 +15,8 @@ var n = t(735250),
     I = t(313201),
     N = t(565138),
     A = t(404203),
-    C = t(330181),
-    m = t(374649),
+    m = t(330181),
+    C = t(374649),
     g = t(908951),
     h = t(255078),
     O = t(853872),
@@ -63,7 +63,7 @@ let P = (e) => {
     L = (e) => {
         let { subscription: s, disabled: t } = e,
             { analyticsLocations: a } = (0, T.ZP)(),
-            [i] = (0, m.ED)({
+            [i] = (0, C.ED)({
                 subscriptionId: s.id,
                 renewal: !0,
                 analyticsLocations: a,
@@ -108,11 +108,11 @@ let P = (e) => {
     };
 s.Z = (e) => {
     let { subscription: s } = e,
-        { storeListing: i, groupListing: o, guild: d, expanded: E, handleToggleExpanded: S, subscriptionInfo: m, application: g } = (0, x.Z)(s),
+        { storeListing: i, groupListing: o, guild: d, expanded: E, handleToggleExpanded: S, subscriptionInfo: C, application: g } = (0, x.Z)(s),
         O = (0, I.Dt)(),
         [Z, v] = a.useState(!1),
         { analyticsLocations: j } = (0, T.ZP)();
-    if (null == o || null == i || null == m) return null;
+    if (null == o || null == i || null == C) return null;
     let B = () => {
             l()(null != g, 'Application cannot be null'),
                 (0, _.openModalLazy)(async () => {
@@ -145,7 +145,7 @@ s.Z = (e) => {
                 v(!1);
             }
         },
-        { isCancelled: G, isDeleted: F, isPastDue: y, subscriptionPlanPrice: V, subscribedSinceDate: Y, currentPeriodEndDate: w, currentPeriodEndLabel: k } = m,
+        { isCancelled: G, isDeleted: F, isPastDue: y, subscriptionPlanPrice: V, subscribedSinceDate: Y, currentPeriodEndDate: w, currentPeriodEndLabel: k } = C,
         H = (0, p.KW)(i.skuFlags),
         W = (0, p.KK)(i.skuFlags),
         K = null == g || ((!W || null == d) && !H),
@@ -248,7 +248,7 @@ s.Z = (e) => {
                                     children: M.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_DELETED_WARNING
                                 })
                               : null,
-                          (0, n.jsx)(C.Z, {
+                          (0, n.jsx)(m.Z, {
                               groupListingId: o.id,
                               subscription: s,
                               className: D.changePlanNotice

@@ -15,8 +15,8 @@ var n = t(735250),
     I = t(497321),
     N = t(468026),
     A = t(317381),
-    C = t(513202),
-    m = t(979200),
+    m = t(513202),
+    C = t(979200),
     g = t(600164),
     h = t(713938),
     O = t(881998),
@@ -255,7 +255,7 @@ let F = (e) => {
                                         null == i
                                             ? void 0
                                             : i.map((s, t) => {
-                                                  let a = (0, m.PM)(s);
+                                                  let a = (0, C.PM)(s);
                                                   return null != a
                                                       ? (0, n.jsxs)(
                                                             'li',
@@ -289,7 +289,7 @@ s.Z = () => {
             T.Z.delete(s);
             let n = r.get(t.id);
             null != n &&
-                C.Z.leaveActivity({
+                m.Z.leaveActivity({
                     channelId: n.channelId,
                     applicationId: t.id,
                     showFeedback: !1
@@ -314,7 +314,7 @@ s.Z = () => {
                     'aria-label': v.Z.Messages.INTEGRATIONS_SEARCH
                 })
             }),
-        m = (e, s) =>
+        C = (e, s) =>
             (0, n.jsxs)(U, {
                 className: j.__invalid_marginTop20,
                 children: [
@@ -353,10 +353,10 @@ s.Z = () => {
                                 type: E.Spinner.Type.SPINNING_CIRCLE
                             })
                           : 0 === s.length
-                            ? m(v.Z.Messages.NO_AUTHORIZED_APPS_NOTE, v.Z.Messages.NO_AUTHORIZED_APPS)
+                            ? C(v.Z.Messages.NO_AUTHORIZED_APPS_NOTE, v.Z.Messages.NO_AUTHORIZED_APPS)
                             : 0 === g.length
                               ? (0, n.jsxs)(n.Fragment, {
-                                    children: [N(), m(null, v.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
+                                    children: [N(), C(null, v.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
                                 })
                               : (0, n.jsxs)(n.Fragment, {
                                     children: [

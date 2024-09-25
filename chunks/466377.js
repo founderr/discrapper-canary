@@ -34,10 +34,10 @@ var r,
     E = n(693789),
     f = n(507274),
     h = n(84735),
-    p = n(337033),
-    m = n(261833),
-    I = n(742746),
-    T = n(147479),
+    p = n(261833),
+    m = n(742746),
+    I = n(147479),
+    T = n(481060),
     g = n(600164),
     S = n(602091),
     A = n(231338),
@@ -124,11 +124,11 @@ function C(e) {
 function y(e) {
     switch (null != e ? e : 'thin') {
         case 'auto':
-            return T.yW;
+            return I.yW;
         case 'none':
-            return T.xV;
+            return I.xV;
         default:
-            return T.h2;
+            return I.h2;
     }
 }
 function b(e) {
@@ -138,7 +138,7 @@ function b(e) {
         className: s()(N.content, t),
         ref: r,
         ...o,
-        children: (0, i.jsx)(p.y, { children: n })
+        children: (0, i.jsx)(T.HeadingLevel, { children: n })
     });
 }
 function L(e) {
@@ -151,7 +151,7 @@ function L(e) {
         align: null !== (r = e.align) && void 0 !== r ? r : g.Z.Align.STRETCH,
         wrap: null !== (a = e.wrap) && void 0 !== a ? a : g.Z.Wrap.NO_WRAP,
         className: s()(N.footer, e.className, { [N.footerSeparator]: null === (o = e.separator) || void 0 === o || o }),
-        children: (0, i.jsx)(p.y, { children: e.children })
+        children: (0, i.jsx)(T.HeadingLevel, { children: e.children })
     });
 }
 function D(e) {
@@ -166,7 +166,7 @@ function D(e) {
             [N.hideOnFullscreen]: e.hideOnFullscreen,
             [N.close]: !e.withCircleBackground
         }),
-        children: (0, i.jsx)(m.D, {
+        children: (0, i.jsx)(p.D, {
             size: 'md',
             color: 'currentColor',
             className: s()(e.innerClassName, N.closeIcon)
@@ -175,7 +175,7 @@ function D(e) {
 }
 function M(e) {
     let { className: t, scrollerRef: n, ...r } = e;
-    return (0, i.jsx)(I.Tv, {
+    return (0, i.jsx)(m.Tv, {
         className: t,
         ref: n,
         ...r
