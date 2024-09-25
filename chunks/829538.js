@@ -1,1 +1,1 @@
-e.exports = { defaultColor: 'defaultColor_e9e35f' };
+e.exports = '/assets/e221f3cf33d8af1c606d.svg';

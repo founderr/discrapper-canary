@@ -1,15 +1,15 @@
 n.d(t, {
     A7: function () {
-        return A;
+        return S;
     },
     hQ: function () {
-        return R;
+        return O;
     },
     lo: function () {
-        return y;
+        return C;
     },
     yn: function () {
-        return v;
+        return A;
     }
 });
 var r = n(47120);
@@ -21,20 +21,19 @@ var i = n(735250),
     u = n(91192),
     c = n(178940),
     d = n(1561),
-    _ = n(260034),
-    E = n(742746),
-    f = n(326452),
-    h = n(993365),
-    p = n(481060),
-    m = n(689938),
-    I = n(251887);
-let T = 'data-listbox-item-id',
-    g = 40,
-    S = Object.freeze({
-        STANDARD: I.selected,
-        BRAND: I.selectedBrand
+    _ = n(742746),
+    E = n(326452),
+    f = n(993365),
+    h = n(481060),
+    p = n(689938),
+    m = n(251887);
+let I = 'data-listbox-item-id',
+    T = 40,
+    g = Object.freeze({
+        STANDARD: m.selected,
+        BRAND: m.selectedBrand
     });
-function A(e) {
+function S(e) {
     let [t, n] = a.useState(() => new Set(e));
     return [
         t,
@@ -46,7 +45,7 @@ function A(e) {
         }, [])
     ];
 }
-function v(e) {
+function A(e) {
     let [t, n] = a.useState(() => new Set(null != e ? [e] : void 0));
     return [
         t,
@@ -55,24 +54,24 @@ function v(e) {
         }, [])
     ];
 }
-function N(e) {
+function v(e) {
     return String(e);
 }
-let O = a.createContext({
+let N = a.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
-    itemToString: N
+    itemToString: v
 });
-function R(e) {
-    let { placeholder: t, children: n, value: r, onChange: o, className: c, listClassName: d, 'aria-label': p, multiSelect: S = !1, autoFocus: A = !1, maxVisibleItems: v = 5, itemToString: R = N, showScrollbar: C = !1 } = e,
+function O(e) {
+    let { placeholder: t, children: n, value: r, onChange: o, className: c, listClassName: d, 'aria-label': g, multiSelect: S = !1, autoFocus: A = !1, maxVisibleItems: O = 5, itemToString: R = v, showScrollbar: C = !1 } = e,
         [y, b] = a.useState(''),
         [L] = a.useState(!0),
         [D, M] = a.useState(null),
         P = a.useId(),
         U = a.useRef(null);
     a.useLayoutEffect(() => {
-        let e = document.querySelector('['.concat(T, '="').concat(D, '"]')),
+        let e = document.querySelector('['.concat(I, '="').concat(D, '"]')),
             t = U.current;
         null != t &&
             null != e &&
@@ -116,7 +115,7 @@ function R(e) {
             scrollToEnd: B,
             setFocus: F
         }),
-        V = C ? E.Tv : E.lW;
+        V = C ? _.Tv : _.lW;
     return (0, i.jsx)(u.bG, {
         navigator: Z,
         children: (0, i.jsx)(u.SJ, {
@@ -125,23 +124,23 @@ function R(e) {
                 return (0, i.jsxs)('div', {
                     ref: n,
                     role: 'combobox',
-                    'aria-label': p,
+                    'aria-label': g,
                     'aria-expanded': L,
                     'aria-controls': L ? P : void 0,
                     'aria-owns': P,
                     'aria-haspopup': 'listbox',
-                    className: s()(I.combobox, c),
+                    className: s()(m.combobox, c),
                     children: [
-                        (0, i.jsx)(f.E, {
+                        (0, i.jsx)(E.E, {
                             autoFocus: A,
-                            size: f.E.Sizes.MEDIUM,
+                            size: E.E.Sizes.MEDIUM,
                             placeholder: t,
                             query: y,
                             onChange: b,
                             onKeyDown: a,
                             onBlur: () => M(null),
                             onClear: () => b(''),
-                            className: s()({ [I.searchWithScrollbar]: C }),
+                            className: s()({ [m.searchWithScrollbar]: C }),
                             inputProps: {
                                 'aria-multiline': !1,
                                 'aria-activedescendant': null != D ? D : void 0
@@ -152,20 +151,20 @@ function R(e) {
                                 L &&
                                 (x
                                     ? (0, i.jsxs)('div', {
-                                          className: I.empty,
+                                          className: m.empty,
                                           children: [
-                                              (0, i.jsx)(_.X, {
+                                              (0, i.jsx)(h.Heading, {
                                                   variant: 'heading-md/semibold',
-                                                  children: m.Z.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
+                                                  children: p.Z.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
                                               }),
-                                              (0, i.jsx)(h.x, {
+                                              (0, i.jsx)(f.x, {
                                                   color: 'text-muted',
                                                   variant: 'text-md/normal',
-                                                  children: m.Z.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
+                                                  children: p.Z.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
                                               })
                                           ]
                                       })
-                                    : (0, i.jsx)(O.Provider, {
+                                    : (0, i.jsx)(N.Provider, {
                                           value: {
                                               activeDescendant: D,
                                               selected: r,
@@ -174,14 +173,14 @@ function R(e) {
                                           },
                                           children: (0, i.jsx)(V, {
                                               ...l,
-                                              style: { maxHeight: v * (g + 6) },
+                                              style: { maxHeight: O * (T + 6) },
                                               'aria-multiselectable': S,
                                               id: P,
                                               ref: U,
-                                              className: s()(I.list, d, { [I.scroller]: C }),
+                                              className: s()(m.list, d, { [m.scroller]: C }),
                                               sections: [w.length],
                                               sectionHeight: 0,
-                                              rowHeight: g,
+                                              rowHeight: T,
                                               renderRow: (e) => {
                                                   let { row: t } = e;
                                                   return w[t];
@@ -196,56 +195,56 @@ function R(e) {
         })
     });
 }
-let C = a.createContext(null);
-function y(e) {
+let R = a.createContext(null);
+function C(e) {
     var t;
-    let { value: n, children: r, disabled: o = !1, selectedColor: l = S.STANDARD, ...c } = e,
-        { activeDescendant: _, selected: E, setSelected: f, itemToString: h } = a.useContext(O),
+    let { value: n, children: r, disabled: o = !1, selectedColor: l = g.STANDARD, ...c } = e,
+        { activeDescendant: _, selected: E, setSelected: f, itemToString: h } = a.useContext(N),
         p = h(n),
-        m = _ === p,
-        g = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : E.has(n),
+        T = _ === p,
+        S = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : E.has(n),
         A = (0, u.JA)(p);
     return (0, i.jsx)(d.P, {
         tag: 'li',
         id: p,
         onClick: () => (o ? null : f(n)),
-        [T]: n,
-        className: s()(I.item, {
-            [I.focused]: m,
-            [l]: g,
-            [I.disabled]: o
+        [I]: n,
+        className: s()(m.item, {
+            [m.focused]: T,
+            [l]: S,
+            [m.disabled]: o
         }),
         ...A,
         role: 'option',
-        'aria-selected': g,
+        'aria-selected': S,
         'aria-disabled': o,
-        children: (0, i.jsx)(C.Provider, {
+        children: (0, i.jsx)(R.Provider, {
             value: n,
             children: r
         })
     });
 }
-(y.Colors = S),
-    (y.Label = function (e) {
+(C.Colors = g),
+    (C.Label = function (e) {
         let { children: t } = e;
         return (0, i.jsx)('span', {
-            className: I.itemLabel,
+            className: m.itemLabel,
             children: t
         });
     }),
-    (y.Icon = function (e) {
+    (C.Icon = function (e) {
         let { children: t } = e;
         return (0, i.jsx)('span', {
-            className: I.itemCheckbox,
+            className: m.itemCheckbox,
             children: t
         });
     }),
-    (y.Checkbox = function (e) {
+    (C.Checkbox = function (e) {
         let { checked: t } = e,
-            { selected: n } = a.useContext(O),
-            r = a.useContext(C);
+            { selected: n } = a.useContext(N),
+            r = a.useContext(R);
         return (0, i.jsx)('span', {
-            className: I.itemCheckbox,
+            className: m.itemCheckbox,
             children: (0, i.jsx)(c.X, {
                 displayOnly: !0,
                 value: null != t ? t : null != r && n.has(r),
@@ -254,13 +253,13 @@ function y(e) {
             })
         });
     }),
-    (y.Checkmark = function () {
-        let { selected: e } = a.useContext(O),
-            t = a.useContext(C);
+    (C.Checkmark = function () {
+        let { selected: e } = a.useContext(N),
+            t = a.useContext(R);
         return e.has(t)
             ? (0, i.jsx)('span', {
-                  className: I.itemCheckbox,
-                  children: (0, i.jsx)(p.CircleCheckIcon, {
+                  className: m.itemCheckbox,
+                  children: (0, i.jsx)(h.CircleCheckIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 20,
