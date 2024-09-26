@@ -34,8 +34,8 @@ var l = n(392711),
     O = n(684259),
     j = n(937579),
     D = n(1163),
-    w = n(841174),
-    G = n(522558),
+    G = n(841174),
+    w = n(522558),
     U = n(879463),
     k = n(822070),
     B = n(520540),
@@ -126,7 +126,7 @@ class q extends c.Z {
         )
             return;
         let { resolution: l, fps: a } = f.Z.getState();
-        !(0, L.mc)(l, a) && (0, w.Z)(n.guild_id);
+        !(0, L.mc)(l, a) && (0, G.Z)(n.guild_id);
     }
     constructor(...e) {
         super(...e),
@@ -149,7 +149,7 @@ class q extends c.Z {
                 null != e && e.verified && S.Z.shouldFetchCampaignContext() && (await (0, x.W)());
             }),
             K(this, '_maybeFetchUserAffinities', () => {
-                let { enabled: e } = G.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
+                let { enabled: e } = w.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
                 e && (0, p.W)();
             }),
             K(this, '_trackCustomNotificationSoundsExposure', () => {

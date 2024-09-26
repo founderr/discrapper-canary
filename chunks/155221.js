@@ -232,7 +232,7 @@ class J extends a.Component {
                                     (0, i.jsx)(h.Z, {
                                         path: C.Z5c.DISCOVERY_GUILD_GAME_RESULTS(':gameId'),
                                         component: K,
-                                        impressionName: l.ImpressionNames.GLOBAL_DISCOVERY
+                                        impressionName: l.ImpressionNames.DISCOVERY_GAME_LANDING_PAGE
                                     }),
                                     (0, i.jsx)(h.Z, {
                                         path: C.Z5c.HANDOFF,

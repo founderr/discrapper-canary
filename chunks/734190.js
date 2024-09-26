@@ -49,13 +49,13 @@ t.Z = l.memo(function (e) {
             mentionCount: m.ZP.getMentionCount(t.id)
         })),
         D = (0, o.e7)([p.Z], () => p.Z.isMuted(t.id)),
-        w = l.useCallback(
+        G = l.useCallback(
             (e) => {
                 (0, f.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
             },
             [t]
         ),
-        G = l.useCallback(() => {
+        w = l.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
         U = l.useCallback(
@@ -111,7 +111,7 @@ t.Z = l.memo(function (e) {
                         [b.modeUnreadImportant]: !D && !r && O,
                         [b.withGuildIcon]: L
                     }),
-                    onMouseDown: G,
+                    onMouseDown: w,
                     onContextMenu: U,
                     children: [
                         !O || D || r ? null : (0, i.jsx)('div', { className: a()(b.unread, b.unreadImportant) }),
@@ -119,7 +119,7 @@ t.Z = l.memo(function (e) {
                             ...H,
                             innerRef: V,
                             className: b.link,
-                            onClick: w,
+                            onClick: G,
                             'aria-label': F,
                             focusProps: { enabled: !1 },
                             children: (0, i.jsxs)('div', {

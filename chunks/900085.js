@@ -79,7 +79,7 @@ class D extends (i = r.Component) {
     }
 }
 P(D, 'defaultProps', { unread: !1 });
-let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
+let G = c.ZP.connectStores([N.ZP, C.Z], (e) => {
         let { channel: t } = e;
         return {
             unread: N.ZP.hasUnread(t.id),
@@ -87,7 +87,7 @@ let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
             category: C.Z.getChannel(t.parent_id)
         };
     })(D),
-    G = c.ZP.connectStores([S.ZP], (e) => {
+    w = c.ZP.connectStores([S.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
@@ -409,7 +409,7 @@ class V extends r.PureComponent {
                         return (0, l.jsx)(A.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));
                     case f.h8.TEXT_CHANNEL:
                         return (0, l.jsx)(
-                            w,
+                            G,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,
@@ -424,7 +424,7 @@ class V extends r.PureComponent {
                         );
                     case f.h8.VOICE_CHANNEL:
                         return (0, l.jsx)(
-                            G,
+                            w,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,

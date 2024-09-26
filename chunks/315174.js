@@ -105,15 +105,15 @@ t.ZP = l.memo(function (e) {
         O = b.hasFeature(_.oNc.ANIMATED_BANNER),
         j = (0, d.Z)(b),
         D = !j && b.hasCommunityInfoSubheader(),
-        w = !j && y,
-        G = (0, p.xR)(A) && O && !v,
+        G = !j && y,
+        w = (0, p.xR)(A) && O && !v,
         [U, k] = l.useState(!1),
         B = l.useRef(),
         H = l.useRef(null),
         V = l.useRef(),
         F = h.QK.getSetting();
     l.useEffect(() => {
-        if (G && t && !B.current && F)
+        if (w && t && !B.current && F)
             return (
                 k(!0),
                 (V.current = setTimeout(() => {
@@ -123,7 +123,7 @@ t.ZP = l.memo(function (e) {
                     clearTimeout(V.current);
                 }
             );
-    }, [G, t, F]),
+    }, [w, t, F]),
         l.useEffect(() => {
             B.current = t;
         }, [t]);
@@ -147,7 +147,7 @@ t.ZP = l.memo(function (e) {
                             [C.hasBanner]: W(),
                             [C.bannerVisible]: t,
                             [e]: t,
-                            [C.communityInfoVisible]: w || (P && D)
+                            [C.communityInfoVisible]: G || (P && D)
                         }),
                         onMouseDown: S,
                         onContextMenu: x,
@@ -210,7 +210,7 @@ t.ZP = l.memo(function (e) {
                                 : null
                         ]
                     }),
-                    G && W()
+                    w && W()
                         ? (0, i.jsx)('div', {
                               className: C.animatedBannerHoverLayer,
                               onMouseEnter: () => {

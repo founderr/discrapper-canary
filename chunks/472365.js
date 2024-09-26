@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return G;
     }
 }),
     n(411104);
@@ -127,7 +127,7 @@ function D(e) {
         })
     });
 }
-function w(e) {
+function G(e) {
     let t,
         n,
         { transitionState: r } = e;
@@ -147,7 +147,7 @@ function w(e) {
     function R() {
         null != _ && b.Z.acceptInvite(_);
     }
-    let { guild: j, channel: w, inviter: G, target_application: U } = _,
+    let { guild: j, channel: G, inviter: w, target_application: U } = _,
         k = null != j,
         B = null != _.stage_instance,
         H = null == _.guild && null == _.channel && null != _.inviter;
@@ -158,7 +158,7 @@ function w(e) {
                 id: j.id,
                 splash: j.splash
             }));
-    else if (((null == (t = w.name) || '' === t) && null != G && (t = G.username), null == t)) throw Error('no name for group DM invite');
+    else if (((null == (t = G.name) || '' === t) && null != w && (t = w.username), null == t)) throw Error('no name for group DM invite');
     let V = (0, g.yU)(),
         F = B ? L.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : L.Z.Messages.INVITE_MODAL_BUTTON.format({ guildName: t });
     return (

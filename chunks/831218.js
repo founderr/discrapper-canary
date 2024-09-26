@@ -46,7 +46,7 @@ function D(e, t, n) {
     );
 }
 ((r = i || (i = {}))[(r.PAGES = 0)] = 'PAGES'), (r[(r.DMS = 1)] = 'DMS');
-let w = s.memo(function () {
+let G = s.memo(function () {
     return (0, a.jsxs)('svg', {
         width: '184',
         height: '428',
@@ -194,7 +194,7 @@ let w = s.memo(function () {
         ]
     });
 });
-class G extends (l = s.Component) {
+class w extends (l = s.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -349,7 +349,7 @@ class G extends (l = s.Component) {
             D(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
                     { privateChannelIds: i } = this.props;
-                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(w, {}, 'no-private-channels') : this.renderDM(t, n);
+                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(G, {}, 'no-private-channels') : this.renderDM(t, n);
             }),
             D(this, 'renderSection', (e) => {
                 let { section: t } = e,
@@ -384,7 +384,7 @@ class G extends (l = s.Component) {
             });
     }
 }
-D(G, 'defaultProps', { padding: 8 });
+D(w, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = s.Children.count(i),
@@ -453,7 +453,7 @@ t.Z = (e) => {
         });
     return (0, a.jsx)(u.bG, {
         navigator: v,
-        children: (0, a.jsx)(G, {
+        children: (0, a.jsx)(w, {
             channels: c,
             privateChannelIds: p,
             listRef: _,

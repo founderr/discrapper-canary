@@ -41,13 +41,13 @@ var i = n(735250),
     O = n(111583),
     j = n(9156),
     D = n(594174),
-    w = n(709054),
-    G = n(998502),
+    G = n(709054),
+    w = n(998502),
     U = n(788307),
     k = n(981631),
     B = n(689938),
     H = n(931450);
-let V = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
+let V = w.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
     F = {
         offset: {
             top: 2,
@@ -122,7 +122,7 @@ class Y extends l.Component {
     }
 }
 function K(e) {
-    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: b, applicationStream: L, isTyping: y, status: O, isMobile: D, 'aria-posinset': w, 'aria-setsize': G } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: b, applicationStream: L, isTyping: y, status: O, isMobile: D, 'aria-posinset': G, 'aria-setsize': w } = e,
         [Y, K] = l.useState(!1),
         q = l.useRef(null),
         Q = l.useRef(null),
@@ -301,8 +301,8 @@ function K(e) {
                 onMouseLeave: er,
                 onMouseDown: es,
                 onContextMenu: eu,
-                'aria-setsize': G,
-                'aria-posinset': w,
+                'aria-setsize': w,
+                'aria-posinset': G,
                 children: (0, i.jsxs)(p.Interactive, {
                     className: a()(H.interactive, {
                         [H.interactiveSystemDM]: em && e_,
@@ -383,7 +383,7 @@ t.ZP = (e) => {
                 if (t.isMultiUserDM())
                     return (
                         !!s &&
-                        w.default.keys(O.Z.getTypingUsers(t.id)).some((e) => {
+                        G.default.keys(O.Z.getTypingUsers(t.id)).some((e) => {
                             var t;
                             return e !== (null === (t = D.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
                         })

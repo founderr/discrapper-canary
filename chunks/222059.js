@@ -58,12 +58,12 @@ function O(e) {
             S(null), O(0), clearTimeout(N);
         };
     if (null == n) return null;
-    let w = L.Z.Messages.DIRECT_MESSAGES;
-    I && (w = s.K.get(A.wli) ? L.Z.Messages.DISCODO_ENABLED : L.Z.Messages.DISCODO_DISABLED);
-    let G = null;
+    let G = L.Z.Messages.DIRECT_MESSAGES;
+    I && (G = s.K.get(A.wli) ? L.Z.Messages.DISCODO_ENABLED : L.Z.Messages.DISCODO_DISABLED);
+    let w = null;
     !t &&
         _ &&
-        (G = (0, i.jsx)(c.Z, {
+        (w = (0, i.jsx)(c.Z, {
             className: y.downloadProgress,
             determineOwnVisibility: !1
         }));
@@ -71,7 +71,7 @@ function O(e) {
         k = (0, i.jsx)(o.BlobMask, {
             selected: U,
             lowerBadge: h > 0 ? (0, b.Ne)(h) : null,
-            upperBadge: G,
+            upperBadge: w,
             lowerBadgeSize: { width: (0, o.getBadgeWidthForValue)(h) },
             children: (0, i.jsx)(o.NavItem, {
                 onMouseEnter: () => C(!0),
@@ -121,7 +121,7 @@ function O(e) {
                     (0, i.jsx)(T.Z, {
                         color: o.Tooltip.Colors.PRIMARY,
                         hideOnClick: !0,
-                        text: w,
+                        text: G,
                         selected: t,
                         children: k
                     })
