@@ -31,6 +31,9 @@ function A(e) {
         r = (0, c.e7)([u.Z], () => (null != n ? u.Z.getApplication(n) : null));
     return (
         a.useEffect(() => {
+            (0, T.$X)({ gameId: n });
+        }, [n]),
+        a.useEffect(() => {
             (0, o.j)(() => {
                 S.d.setState({ selectedTab: C.F$.SERVERS }), h.GN.setState({ mode: h.v0.DISCOVERY });
             }),

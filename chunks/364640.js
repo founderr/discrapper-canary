@@ -6,7 +6,7 @@ var a = n(626135),
     l = n(754688),
     u = n(981631);
 !(function (e) {
-    (e.MESSAGE = 'Discord Message Link'), (e.CHANNEL = 'Discord Channel Link'), (e.SERVER_INVITE = 'Discord Server Invite'), (e.GIFT = 'Discord Gift Link'), (e.UNKNOWN = 'Unknown');
+    (e.MESSAGE = 'Discord Message Link'), (e.CHANNEL = 'Discord Channel Link'), (e.SERVER_INVITE = 'Discord Server Invite'), (e.GIFT = 'Discord Gift Link'), (e.UNKNOWN = 'Unknown'), (e.DISCOVERY = 'Discord Discovery Link');
 })(r || (r = {}));
 let c = [
     (e) => (s.Z.isInvite(e) ? 'Discord Server Invite' : null),
@@ -21,7 +21,8 @@ let c = [
                   channelId: n.channelId,
                   messageId: n.messageId
               });
-    }
+    },
+    (e) => (s.Z.isDiscoveryLink(e) ? 'Discord Discovery Link' : null)
 ];
 function d(e) {
     return null != e.guildId && null != e.channelId && null != e.messageId ? 'Discord Message Link' : null != e.guildId && null != e.channelId ? 'Discord Channel Link' : 'Unknown';

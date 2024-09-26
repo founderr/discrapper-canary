@@ -1,63 +1,68 @@
-t.r(n),
-    t.d(n, {
+n.r(t),
+    n.d(t, {
         default: function () {
             return N;
         }
     });
-var a = t(735250),
-    s = t(470079),
-    i = t(442837),
-    r = t(830064),
-    l = t(388905),
-    o = t(625128),
-    c = t(362762),
-    u = t(831565),
-    d = t(703656),
-    p = t(963202),
-    m = t(981631),
-    x = t(186901),
-    _ = t(689938),
-    b = t(940956);
+var a = n(735250),
+    s = n(470079),
+    r = n(442837),
+    i = n(830064),
+    l = n(388905),
+    o = n(625128),
+    c = n(362762),
+    u = n(831565),
+    d = n(571457),
+    p = n(703656),
+    _ = n(963202),
+    m = n(981631),
+    x = n(186901),
+    E = n(689938),
+    f = n(940956);
 function N(e) {
-    let { match: n } = e,
-        t = (0, i.e7)([c.Z], () => c.Z.getState('discovery')),
+    let { match: t } = e,
+        n = (0, r.e7)([c.Z], () => c.Z.getState('discovery')),
         N = (0, u.v)({ location: 'game_discovery_entry_point' }),
-        E = (0, p.iN)('game_discovery_entry_point'),
-        h = n.params.gameId;
+        b = (0, _.iN)('game_discovery_entry_point'),
+        I = t.params.gameId;
     s.useEffect(() => {
-        !N && (0, d.dL)({ pathname: m.Z5c.GUILD_DISCOVERY }),
-            !E && (0, d.dL)({ pathname: m.Z5c.GLOBAL_DISCOVERY_SERVERS }),
-            null == t
-                ? o.Z.openNativeAppModal('discovery', m.Etm.DEEP_LINK, {
-                      type: x.jE.DISCOVERY_GAME_RESULTS,
-                      params: { gameId: h }
-                  })
-                : t === m.kEZ.OPEN_FAIL &&
-                  (0, d.dL)({
-                      pathname: m.Z5c.GLOBAL_DISCOVERY_SERVERS,
-                      search: '?game='.concat(h)
-                  });
-    }, [h, N, E, t]);
-    let g = null == t || t === m.kEZ.OPENING || t === m.kEZ.OPEN_FAIL;
+        (0, d.HV)({ gameId: I });
+    }, [I]),
+        s.useEffect(() => {
+            !N && (0, p.dL)({ pathname: m.Z5c.GUILD_DISCOVERY }),
+                !b && (0, p.dL)({ pathname: m.Z5c.GLOBAL_DISCOVERY_SERVERS }),
+                null == n
+                    ? ((0, d.zY)({ gameId: I }),
+                      o.Z.openNativeAppModal('discovery', m.Etm.DEEP_LINK, {
+                          type: x.jE.DISCOVERY_GAME_RESULTS,
+                          params: { gameId: I }
+                      }))
+                    : n === m.kEZ.OPEN_FAIL &&
+                      (0, p.dL)({
+                          pathname: m.Z5c.GLOBAL_DISCOVERY_SERVERS,
+                          search: '?game='.concat(I)
+                      });
+        }, [I, N, b, n]);
+    let g = null == n || n === m.kEZ.OPENING || n === m.kEZ.OPEN_FAIL;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(r.Z, {
-                className: b.backgroundArt,
+            (0, a.jsx)(i.Z, {
+                className: f.backgroundArt,
                 preserveAspectRatio: 'xMinYMin slice'
             }),
             (0, a.jsx)('div', {
-                className: b.container,
+                className: f.container,
                 children: (0, a.jsx)(l.ZP, {
                     children: g
                         ? (0, a.jsxs)(a.Fragment, {
-                              children: [(0, a.jsx)(l.Dx, { children: _.Z.Messages.APP_OPENING }), (0, a.jsx)(l.Hh, {})]
+                              children: [(0, a.jsx)(l.Dx, { children: E.Z.Messages.APP_OPENING }), (0, a.jsx)(l.Hh, {})]
                           })
                         : (0, a.jsxs)(a.Fragment, {
-                              children: [(0, a.jsx)(l.Dx, { children: _.Z.Messages.APP_OPENED_TITLE }), (0, a.jsx)(l.DK, { children: _.Z.Messages.DEEPLINK_BROWSER_APP_OPENED })]
+                              children: [(0, a.jsx)(l.Dx, { children: E.Z.Messages.APP_OPENED_TITLE }), (0, a.jsx)(l.DK, { children: E.Z.Messages.DEEPLINK_BROWSER_APP_OPENED })]
                           })
                 })
             })
         ]
     });
 }
-i.ZP.initialize();
+r.ZP.initialize();

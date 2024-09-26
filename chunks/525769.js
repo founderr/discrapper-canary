@@ -48,6 +48,7 @@ n.d(t, {
             (e.CREATOR_PROMO_PAGE_GUILD_HEADER_UPSELL = 'impression_creator_promo_page_guild_header_upsell'),
             (e.DIRECTORY_ADD_GUILD_CONFIRMATION = 'impression_directory_add_guild_confirmation'),
             (e.DISCOVERABILITY = 'impression_discoverability'),
+            (e.DISCOVERY_GAME_LANDING_PAGE = 'impression_discovery_game_landing_page'),
             (e.DROPS_QUEST_COMPLETION = 'impression_drops_quest_completion'),
             (e.DROPS_QUEST_ENROLLMENT = 'impression_drops_quest_enrollment'),
             (e.EMBEDDED_ACTIVITY_HAPPENING_NOW = 'impression_embedded_activity_happening_now'),
