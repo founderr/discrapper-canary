@@ -382,8 +382,7 @@ class Q extends c.Z {
                           applicationId: a,
                           launchId: null == p ? void 0 : p.launchId,
                           inputApplication: null,
-                          analyticsLocations: o,
-                          commandOrigin: s
+                          analyticsLocations: o
                       })
                     : await (0, U.Z)({
                           targetApplicationId: a,

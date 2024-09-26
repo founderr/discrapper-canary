@@ -66,8 +66,7 @@ function w(e) {
                         applicationId: j.applicationId,
                         activityChannelId: G,
                         locationObject: x.location,
-                        analyticsLocations: w,
-                        commandOrigin: f.bB.ACTIVITY_BOOKMARK_EMBED
+                        analyticsLocations: w
                     });
                 else {
                     let e = k.isPrivate() && !m.Z.isCallActive(G),

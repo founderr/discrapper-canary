@@ -299,6 +299,8 @@ function w(e) {
         case I.bB.APPLICATION_LAUNCHER:
         case I.bB.CONTEXT_MENU:
         case I.bB.VOICE_UI:
+        case I.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
+        case I.bB.MINI_SHELF:
         case I.bB.USER_PROFILE:
         case I.bB.NOW_PLAYING:
         case I.bB.ACTIVITY_DETAILS:

@@ -88,8 +88,7 @@ function C(e) {
                       activityChannelId: r,
                       locationObject: b.location,
                       analyticsLocations: y,
-                      componentId: V,
-                      commandOrigin: p.bB.ACTIVITY_INSTANCE_EMBED
+                      componentId: V
                   });
         },
         j = Z.disabled ? O.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : O.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;

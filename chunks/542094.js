@@ -122,7 +122,6 @@ function w(e) {
                         locationObject: i,
                         analyticsLocations: Z,
                         componentId: o,
-                        commandOrigin: a,
                         sectionName: c,
                         source: d
                     }).then((e) => e && (null == r ? void 0 : r({ applicationId: t }))));

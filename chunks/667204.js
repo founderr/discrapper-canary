@@ -404,6 +404,10 @@ function ee(e) {
             return B.Vh.ACTIVITY_INSTANCE_EMBED;
         case B.bB.ACTIVITY_BOOKMARK_EMBED:
             return B.Vh.ACTIVITY_BOOKMARK_EMBED;
+        case B.bB.MINI_SHELF:
+            return B.Vh.ACTIVITIES_MINI_SHELF;
+        case B.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
+            return B.Vh.VC_TILE_ACTIVITY_SUGGESTION;
         default:
             return B.Vh.SLASH_UI;
     }

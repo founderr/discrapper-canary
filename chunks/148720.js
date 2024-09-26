@@ -59,40 +59,39 @@ function m(e) {
     }
 }
 async function I(e) {
-    let { channelId: t, applicationId: n, launchId: r, inputApplication: a, analyticsLocations: p, launchingComponentId: I, commandOrigin: T, sectionName: g } = e,
-        S = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == r || e.launchId === r)),
-        A = a;
-    if (null == A) {
+    let { channelId: t, applicationId: n, launchId: r, inputApplication: a, analyticsLocations: p, launchingComponentId: I, sectionName: T } = e,
+        g = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == r || e.launchId === r)),
+        S = a;
+    if (null == S) {
         let e = await i.Z.fetchApplication(n);
-        A = o.Z.createFromServer(e);
+        S = o.Z.createFromServer(e);
     }
-    if (null == S || null == A) return;
-    let v = c.default.getCurrentUser(),
-        N = s.Z.getChannel(t);
-    async function O() {
-        if (null != S)
+    if (null == g || null == S) return;
+    let A = c.default.getCurrentUser(),
+        v = s.Z.getChannel(t);
+    async function N() {
+        if (null != g)
             await (0, E.Z)({
-                applicationId: S.applicationId,
+                applicationId: g.applicationId,
                 activityChannelId: t,
                 locationObject: {},
                 analyticsLocations: p,
                 componentId: I,
-                commandOrigin: T,
-                sectionName: g
+                sectionName: T
             });
     }
     m({
         embeddedActivityJoinability: (0, h.ZP)({
-            userId: null == v ? void 0 : v.id,
-            application: A,
+            userId: null == A ? void 0 : A.id,
+            application: S,
             channelId: t,
-            currentUser: v,
-            isActivitiesEnabledForCurrentPlatform: (0, f.a)(N),
+            currentUser: A,
+            isActivitiesEnabledForCurrentPlatform: (0, f.a)(v),
             ChannelStore: s.Z,
             VoiceStateStore: d.Z,
             PermissionStore: u.Z,
             GuildStore: l.Z
         }),
-        handleCanJoin: O
+        handleCanJoin: N
     });
 }
