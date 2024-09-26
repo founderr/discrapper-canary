@@ -50,49 +50,41 @@ let F = {
     }
 };
 function Z(e) {
-    let { closePopout: t, throttledNow: n } = e,
-        r = (0, P.Z)(),
-        a = (0, f.e7)([D.Z], () => D.Z.getOverdueMessageReminderCount());
-    return (
-        (0, T.Z)(
-            {
-                type: _.ImpressionTypes.POPOUT,
-                name: _.ImpressionNames.FOR_LATER_LIST_VIEWED,
-                properties: {
-                    total_count: r.length,
-                    overdue_count: a
-                }
-            },
-            {},
-            [r.length, a]
-        ),
-        (0, i.jsx)(h.Dialog, {
-            'aria-label': k.Z.Messages.FOR_LATER,
-            children: (0, i.jsxs)('div', {
-                className: B.popoutContainer,
-                children: [
-                    (0, i.jsx)(m.h4, {
-                        icon: h.BookmarkIcon,
-                        title: k.Z.Messages.FOR_LATER
-                    }),
-                    (0, i.jsx)(V, {
-                        savedMessageKeys: r,
-                        closePopout: t,
-                        throttledNow: n
-                    })
-                ]
-            })
+    let { closePopout: t } = e;
+    return (0, i.jsx)(h.Dialog, {
+        'aria-label': k.Z.Messages.FOR_LATER,
+        children: (0, i.jsxs)('div', {
+            className: B.popoutContainer,
+            children: [
+                (0, i.jsx)(m.h4, {
+                    icon: h.BookmarkIcon,
+                    title: k.Z.Messages.FOR_LATER
+                }),
+                (0, i.jsx)(V, { closePopout: t })
+            ]
         })
-    );
+    });
 }
 function V(e) {
-    let { savedMessageKeys: t, closePopout: n, throttledNow: r } = e;
-    return 0 === t.length
+    let { closePopout: t } = e,
+        n = (0, P.Z)();
+    return ((0, T.Z)(
+        {
+            type: _.ImpressionTypes.POPOUT,
+            name: _.ImpressionNames.FOR_LATER_LIST_VIEWED,
+            properties: {
+                total_count: n.length,
+                overdue_count: D.Z.getOverdueMessageReminderCount()
+            }
+        },
+        {},
+        [n.length]
+    ),
+    0 === n.length)
         ? (0, i.jsx)(w.w, {})
         : (0, i.jsx)(Y, {
-              savedMessageKeys: t,
-              closePopout: n,
-              throttledNow: r
+              savedMessageKeys: n,
+              closePopout: t
           });
 }
 function H(e) {
@@ -105,19 +97,9 @@ function H(e) {
             u(!l), l ? null == n || n() : null == t || t();
         }, [n, t, l]);
     a.useEffect(() => (y.S.subscribe(G.CkL.TOGGLE_FOR_LATER, d), () => void y.S.unsubscribe(G.CkL.TOGGLE_FOR_LATER, d)), [d]);
-    let [_, E] = a.useState(new Date());
-    a.useEffect(() => {
-        let e = setInterval(() => E(new Date()), b.Z.Millis.MINUTE);
-        return () => {
-            clearInterval(e);
-        };
-    }, []);
-    let p = (0, f.e7)([D.Z], () => D.Z.hasOverdueReminder(_), [_]);
-    function m() {
-        return (0, i.jsx)(Z, {
-            closePopout: c,
-            throttledNow: _
-        });
+    let _ = (0, f.e7)([D.Z], () => D.Z.hasOverdueReminder(), []);
+    function E() {
+        return (0, i.jsx)(Z, { closePopout: c });
     }
     return (0, i.jsx)(h.Popout, {
         animation: h.Popout.Animation.NONE,
@@ -126,45 +108,54 @@ function H(e) {
         autoInvert: !1,
         shouldShow: l,
         onRequestClose: c,
-        renderPopout: m,
+        renderPopout: E,
         ignoreModalClicks: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return r(d, n, e, p);
+            return r(d, n, e, _);
         }
     });
 }
 function Y(e) {
-    let { savedMessageKeys: t, closePopout: n, throttledNow: r } = e,
-        o = a.useRef(null),
-        s = (0, I.Z)('for-later', o);
-    return (0, i.jsx)(E.bG, {
-        navigator: s,
-        children: (0, i.jsx)(E.SJ, {
-            children: (e) => {
-                let { ref: a, ...s } = e;
-                return (0, i.jsx)(h.AdvancedScrollerThin, {
-                    ref: (e) => {
-                        var t;
-                        (o.current = e), (a.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
-                    },
-                    className: B.messagesScroller,
-                    ...s,
-                    children: t.map((e) =>
-                        (0, i.jsx)(
-                            W,
-                            {
-                                savedMessageKey: e,
-                                closePopout: n,
-                                throttledNow: r
-                            },
-                            e.messageId
+    let { savedMessageKeys: t, closePopout: n } = e,
+        r = a.useRef(null),
+        o = (0, I.Z)('for-later', r),
+        [s, l] = a.useState(new Date());
+    return (
+        a.useEffect(() => {
+            let e = setInterval(() => l(new Date()), b.Z.Millis.MINUTE);
+            return () => {
+                clearInterval(e);
+            };
+        }, []),
+        (0, i.jsx)(E.bG, {
+            navigator: o,
+            children: (0, i.jsx)(E.SJ, {
+                children: (e) => {
+                    let { ref: a, ...o } = e;
+                    return (0, i.jsx)(h.AdvancedScrollerThin, {
+                        ref: (e) => {
+                            var t;
+                            (r.current = e), (a.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+                        },
+                        className: B.messagesScroller,
+                        ...o,
+                        children: t.map((e) =>
+                            (0, i.jsx)(
+                                W,
+                                {
+                                    savedMessageKey: e,
+                                    closePopout: n,
+                                    throttledNow: s
+                                },
+                                e.messageId
+                            )
                         )
-                    )
-                });
-            }
+                    });
+                }
+            })
         })
-    });
+    );
 }
 function j(e) {
     let { savedMessage: t, closePopout: n, throttledNow: r } = e,

@@ -1,30 +1,24 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return l;
     }
 });
 var r = n(735250),
     i = n(524437),
-    a = n(664559),
-    o = n(453473),
-    s = n(791914),
-    l = n(802840);
-function u(e) {
-    let { throttledNow: t, setTab: n, closePopout: u } = e,
-        c = (0, a.Z)();
+    a = n(453473),
+    o = n(791914),
+    s = n(802840);
+function l(e) {
+    let { setTab: t, closePopout: n } = e;
     return (0, r.jsxs)('div', {
-        className: l.container,
+        className: s.container,
         children: [
-            (0, r.jsx)(s.Z, {
+            (0, r.jsx)(o.Z, {
                 tab: i.X.BOOKMARKS,
-                setTab: n,
-                closePopout: u
+                setTab: t,
+                closePopout: n
             }),
-            (0, r.jsx)(o.K, {
-                savedMessageKeys: c,
-                closePopout: u,
-                throttledNow: t
-            })
+            (0, r.jsx)(a.K, { closePopout: n })
         ]
     });
 }
