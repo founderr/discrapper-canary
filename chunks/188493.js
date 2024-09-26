@@ -22,15 +22,12 @@ function h(e) {
             (e) => {
                 (0, c.LD)({ languageCode: e });
                 let n = (0, c.WF)();
-                o.Z.clearAlgoliaSearchResults(n);
-                let i = (0, c.uP)();
-                (0, d.II)({ searchQuery: i }),
-                    (0, d.LO)({
+                o.Z.clearAlgoliaSearchResults([n]),
+                    (0, d.oT)({
                         loadId: t,
                         categoryId: (0, c.lx)(),
-                        searchQuery: (0, c.uP)(),
-                        languageCode: e,
-                        offset: 0
+                        query: (0, c.uP)(),
+                        languageCode: e
                     });
             },
             [t]

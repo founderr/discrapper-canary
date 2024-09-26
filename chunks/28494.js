@@ -19,50 +19,59 @@ var i = n(470079),
 function h(e) {
     let { loadId: t } = e,
         n = (0, c.$G)(),
-        s = (0, c.lZ)(),
-        r = (0, d.a1)({
-            categoryId: s,
-            query: n
-        }),
-        l = (0, a.e7)([o.Z], () => {
+        s = (0, c.NL)(),
+        r = (0, c.lZ)(),
+        l = (0, c.Dm)(),
+        u = i.useMemo(
+            () => ({
+                categoryId: r,
+                query: s,
+                languageCode: l
+            }),
+            [r, l, s]
+        ),
+        h = (0, a.e7)([o.Z], () => {
             var e;
-            return null !== (e = o.Z.getGuildIds(r)) && void 0 !== e ? e : _.q5;
+            return null !== (e = o.Z.getGuildIds(u)) && void 0 !== e ? e : _.q5;
         }),
-        u = (0, a.e7)([o.Z], () => {
+        E = (0, a.e7)([o.Z], () => {
             var e;
-            return null === (e = o.Z.getIsFetching(r)) || void 0 === e || e;
+            return null !== (e = o.Z.getIsFetching(u)) && void 0 !== e && e;
         }),
-        h = i.useCallback(() => {
+        m = (0, a.e7)([o.Z], () => {
+            var e;
+            return null === (e = o.Z.getIsBlocked(s)) || void 0 === e || e;
+        }),
+        I = n !== s,
+        g = i.useCallback(() => {
             let e = (0, c.WF)(),
                 n = (0, c.lx)(),
-                i = (0, d.a1)({
-                    categoryId: n,
-                    query: e
-                }),
-                a = o.Z.getGuildIds(i),
-                s = o.Z.getTotal(i);
-            if (null == a || null == s) return;
-            let r = o.Z.getIsFetching(i),
-                l = o.Z.getIsInitialFetchComplete(i);
-            if (r || !l || a.length >= s) return;
-            let u = (0, c.a7)();
-            (0, d.AS)({
+                i = o.Z.getGuildIds(u),
+                a = o.Z.getTotal(u);
+            if (null == i || null == a) return;
+            let s = o.Z.getIsFetching(u),
+                r = o.Z.getIsInitialFetchComplete(u);
+            if (s || !r || i.length >= a) return;
+            let l = (0, c.a7)();
+            (0, d.CD)({
                 loadId: t,
                 categoryId: n,
-                offset: a.length,
-                searchQuery: e,
-                languageCode: u
+                offset: i.length,
+                query: e,
+                languageCode: l
             });
-        }, [t]);
+        }, [t, u]);
     return i.useMemo(
         () => ({
-            guildIds: l,
-            loading: u,
+            guildIds: h,
+            loading: !m && (I || E),
             searchResultsQuery: n,
-            loadMore: h,
-            searchCategoryId: s
+            searchFetchedQuery: s,
+            loadMore: g,
+            searchCategoryId: r,
+            isBlockedSearchQuery: m
         }),
-        [l, u, n, h, s]
+        [h, m, I, E, n, s, g, r]
     );
 }
 function E(e) {
@@ -76,15 +85,14 @@ function E(e) {
             (0, c.LD)({ query: e });
         }, []),
         _ = i.useCallback(() => {
-            r.IZ(t);
-            let e = (0, c.WF)();
-            l.Z.clearAlgoliaSearchResults(e);
-            let n = (0, u.Iy)(),
-                i = (0, d.lg)(n);
+            r.IZ(t), l.Z.clearAlgoliaSearchResults(), l.Z.resetSearchLayout();
+            let e = (0, u.Iy)(),
+                n = (0, d.lg)(e);
             (0, c.LD)({
-                resultsQuery: '',
                 query: '',
-                categoryId: i,
+                fetchedQuery: '',
+                resultsQuery: '',
+                categoryId: n,
                 resultsInitialCategoryId: null,
                 scrollPosition: null
             }),
@@ -98,16 +106,15 @@ function E(e) {
             let e = (0, c.uP)(),
                 n = (0, c.WF)();
             if ('' === e.trim() || e === n) return;
-            l.Z.clearAlgoliaSearchResults(n);
+            l.Z.clearAlgoliaSearchResults();
             let i = (0, c.a7)(),
                 a = (0, c.lx)();
             (0, c.LD)({ resultsInitialCategoryId: a }),
                 (0, u.jY)({ isSearchVisible: !0 }),
-                (0, d.II)({ searchQuery: e }),
-                (0, d.XW)({
+                (0, d.NL)({
                     loadId: t,
                     categoryId: a,
-                    searchQuery: e,
+                    query: e,
                     languageCode: i
                 });
         }, [t]),

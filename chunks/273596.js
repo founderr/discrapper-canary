@@ -46,53 +46,53 @@ let A = 56,
     });
 function O(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: r } = e,
-        { guildIds: h, loading: O, searchResultsQuery: x, loadMore: b, searchCategoryId: P } = (0, I.f)({ loadId: t }),
-        M = a.useContext(u.AnalyticsContext),
-        [D, y] = a.useState((0, c.P)()),
-        [j, U] = a.useState(!0),
-        G = a.useRef(j),
-        [w, k] = a.useState(3),
+        { guildIds: h, loading: O, searchResultsQuery: x, searchFetchedQuery: b, loadMore: P, searchCategoryId: M, isBlockedSearchQuery: D } = (0, I.f)({ loadId: t }),
+        y = 0 === h.length && !O,
+        j = a.useContext(u.AnalyticsContext),
+        [U, G] = a.useState((0, c.P)()),
+        [w, k] = a.useState(!0),
         B = a.useRef(w),
-        H = a.useRef(null),
-        V = a.useCallback(
+        [H, V] = a.useState(3),
+        F = a.useRef(H),
+        Y = a.useRef(null),
+        W = a.useCallback(
             (e) => {
                 var t;
-                let n = null === (t = H.current) || void 0 === t ? void 0 : t.getScrollerState();
-                null != n && null != e && n.scrollHeight < e.height && b();
+                if (D) return;
+                let n = null === (t = Y.current) || void 0 === t ? void 0 : t.getScrollerState();
+                null != n && null != e && n.scrollHeight < e.height && P();
             },
-            [b]
+            [D, P]
         ),
-        F = (0, o.y)((e) => {
+        z = (0, o.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = t.width;
-            n < 1024 && G.current ? ((G.current = !1), U(!1)) : n > 1024 && !G.current && ((G.current = !0), U(!0));
+            n < 1024 && B.current ? ((B.current = !1), k(!1)) : n > 1024 && !B.current && ((B.current = !0), k(!0));
             let i = 1;
-            for (n -= j ? 450 : 0, n -= 280; n > 0; ) (n -= 264), (i += 1);
-            i !== B.current && ((B.current = i), k(i)), V(t);
+            for (n -= w ? 450 : 0, n -= 280; n > 0; ) (n -= 264), (i += 1);
+            i !== F.current && ((F.current = i), V(i)), W(t);
         });
     a.useLayoutEffect(() => {
         var e;
-        V(null === (e = F.current) || void 0 === e ? void 0 : e.getBoundingClientRect());
-    }, [F, h, V]),
+        W(null === (e = z.current) || void 0 === e ? void 0 : e.getBoundingClientRect());
+    }, [z, h, W]),
         a.useEffect(() => {
-            y((0, c.P)());
+            G((0, c.P)());
         }, [x]),
         a.useEffect(() => {
             R({
                 loadId: t,
-                searchId: D,
+                searchId: U,
                 query: x,
                 guildResults: h.map(E.Z.getGuild).filter(_.lm),
-                analyticsContext: M,
-                categoryId: P
+                analyticsContext: j,
+                categoryId: M
             });
-        }, [M, h, t, P, D, x]);
-    let Y = a.useCallback((e) => n(e, P), [n, P]),
-        W = a.useMemo(() => (O ? [h.length, 0] : [h.length]), [h.length, O]),
-        z = (0, m.NL)(),
-        K = 0 === h.length && !O,
-        q = a.useCallback(
+        }, [j, h, t, M, U, x]);
+    let K = a.useCallback((e) => n(e, M), [n, M]),
+        q = a.useMemo(() => (O && !D ? [h.length, 0] : [h.length]), [h.length, D, O]),
+        Q = a.useCallback(
             (e, n, a) => {
                 switch (e) {
                     case 0:
@@ -107,14 +107,14 @@ function O(e) {
                                     (0, i.jsx)(l.Heading, {
                                         variant: 'heading-lg/semibold',
                                         className: N.heading,
-                                        children: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: z })
+                                        children: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: b })
                                     }),
-                                    !j &&
+                                    !w &&
                                         (0, i.jsxs)('div', {
                                             className: N.headingFilters,
                                             children: [(0, i.jsx)(p.Z, { loadId: t }), (0, i.jsx)(S.Z, { loadId: t })]
                                         }),
-                                    K && (0, i.jsx)(T.Z, { loadId: t })
+                                    (y || D) && (0, i.jsx)(T.Z, { loadId: t })
                                 ]
                             },
                             a
@@ -123,23 +123,23 @@ function O(e) {
                         return (0, i.jsx)(l.Spinner, { className: N.spinner }, a);
                 }
             },
-            [K, j, t, z]
+            [D, y, w, t, b]
         ),
-        Q = a.useCallback(
+        X = a.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
-                        let t = j ? A : v;
-                        return K ? t + 400 : t;
+                        let t = w ? A : v;
+                        return y ? t + 400 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [K, j]
+            [y, w]
         ),
-        X = a.useCallback(
+        J = a.useCallback(
             (e, t) => {
                 switch (e) {
                     case 0:
@@ -152,7 +152,7 @@ function O(e) {
             },
             [h]
         ),
-        J = a.useCallback((e) => {
+        $ = a.useCallback((e) => {
             switch (e) {
                 case 0:
                     return 320;
@@ -162,16 +162,16 @@ function O(e) {
                     throw Error('[getItemHeight] Failed for section: '.concat(e));
             }
         }, []),
-        $ = a.useCallback(
+        ee = a.useCallback(
             async (e, t, n) => {
                 var i, a;
                 await r(e, t, n);
-                let s = null === (a = H.current) || void 0 === a ? void 0 : null === (i = a.getScrollerState()) || void 0 === i ? void 0 : i.scrollTop;
+                let s = null === (a = Y.current) || void 0 === a ? void 0 : null === (i = a.getScrollerState()) || void 0 === i ? void 0 : i.scrollTop;
                 null != s && (0, m.LD)({ scrollPosition: s });
             },
             [r]
         ),
-        ee = a.useCallback(
+        et = a.useCallback(
             (e, t, n, a) => {
                 if (0 === e) {
                     let e = h[t];
@@ -181,8 +181,8 @@ function O(e) {
                             style: n,
                             children: (0, i.jsx)(f.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await $(e, t, P),
-                                onView: (e) => Y(e)
+                                onClick: async (e) => await ee(e, t, M),
+                                onView: (e) => K(e)
                             })
                         },
                         a
@@ -190,10 +190,10 @@ function O(e) {
                 }
                 return null;
             },
-            [h, $, Y, P]
+            [h, ee, K, M]
         );
     a.useEffect(() => {
-        let e = H.current;
+        let e = Y.current;
         return () => {
             var t;
             let n = null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollTop;
@@ -205,7 +205,7 @@ function O(e) {
             null != e &&
                 setTimeout(() => {
                     var t;
-                    null === (t = H.current) ||
+                    null === (t = Y.current) ||
                         void 0 === t ||
                         t.scrollTo({
                             to: e,
@@ -216,46 +216,45 @@ function O(e) {
                         });
                 });
         }, []);
-    let et = a.useMemo(
-            () =>
-                (0, s.debounce)(
+    let en = a.useMemo(() => {
+            if (!D)
+                return (0, s.debounce)(
                     () => {
                         var e;
-                        let t = null === (e = H.current) || void 0 === e ? void 0 : e.getScrollerState();
+                        let t = null === (e = Y.current) || void 0 === e ? void 0 : e.getScrollerState();
                         if (null == t) return;
                         let n = t.scrollTop + t.offsetHeight;
-                        t.scrollHeight - n < 300 && b();
+                        t.scrollHeight - n < 300 && P();
                     },
                     100,
                     { leading: !0 }
-                ),
-            [b]
-        ),
-        en = j ? Z : L;
+                );
+        }, [D, P]),
+        ei = w ? Z : L;
     return (0, i.jsxs)('div', {
         className: N.container,
-        ref: F,
+        ref: z,
         children: [
             (0, i.jsx)(d.KY, {
                 location: 'global_discovery_search',
                 query: x
             }),
             (0, i.jsx)(l.MasonryList, {
-                ref: H,
+                ref: Y,
                 className: N.masonryList,
-                sections: W,
-                columns: w,
+                sections: q,
+                columns: H,
                 itemGutter: 16,
-                padding: en,
-                renderItem: ee,
-                renderSection: q,
-                getSectionHeight: Q,
-                getItemKey: X,
-                getItemHeight: J,
+                padding: ei,
+                renderItem: et,
+                renderSection: Q,
+                getSectionHeight: X,
+                getItemKey: J,
+                getItemHeight: $,
                 chunkSize: 24,
-                onScroll: et,
+                onScroll: en,
                 renderAccessory: (e) =>
-                    j
+                    w
                         ? (0, i.jsx)('div', {
                               className: N.sidebar,
                               style: { height: e },

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return p;
     }
 });
 var i = n(735250),
@@ -14,17 +14,17 @@ var i = n(735250),
     u = n(962486),
     _ = n(62938),
     h = n(149788),
-    E = n(128449);
-function m(e) {
+    E = n(128449),
+    m = n(731455);
+function I(e) {
     let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: r } = e,
-        l = (0, d.sS)(),
-        _ = (0, s.e7)([c.Z], () => {
+        l = (0, s.e7)([c.Z], () => {
             var e;
-            return null !== (e = c.Z.getGuildIds(l)) && void 0 !== e ? e : E.q5;
+            return null !== (e = c.Z.getGuildIds({ categoryId: m.Hk })) && void 0 !== e ? e : E.q5;
         }),
-        h = (0, s.e7)([c.Z], () => {
+        d = (0, s.e7)([c.Z], () => {
             var e;
-            return null === (e = c.Z.getIsFetching(l)) || void 0 === e || e;
+            return null === (e = c.Z.getIsFetching({ categoryId: m.Hk })) || void 0 === e || e;
         });
     return (
         a.useEffect(() => {
@@ -32,25 +32,24 @@ function m(e) {
         }, []),
         (0, i.jsx)(u.Z, {
             tab: E.vf.FEATURED,
-            guildIds: _,
-            loading: h,
+            guildIds: l,
+            loading: d,
             onScroll: t,
             onGuildCardSeen: n,
             onGuildCardClick: r
         })
     );
 }
-function I(e) {
+function g(e) {
     let { tab: t, onScroll: n, onGuildCardSeen: r, onGuildCardClick: l } = e,
         _ = (0, d.lg)(t),
-        h = (0, d.Io)({ categoryId: _ }),
+        h = (0, s.e7)([c.Z], () => {
+            var e;
+            return null !== (e = c.Z.getGuildIds({ categoryId: _ })) && void 0 !== e ? e : E.q5;
+        }),
         m = (0, s.e7)([c.Z], () => {
             var e;
-            return null !== (e = c.Z.getGuildIds(h)) && void 0 !== e ? e : E.q5;
-        }),
-        I = (0, s.e7)([c.Z], () => {
-            var e;
-            return null === (e = c.Z.getIsFetching(h)) || void 0 === e || e;
+            return null === (e = c.Z.getIsFetching({ categoryId: _ })) || void 0 === e || e;
         });
     return (
         a.useEffect(() => {
@@ -58,15 +57,15 @@ function I(e) {
         }, [_]),
         (0, i.jsx)(u.Z, {
             tab: t,
-            guildIds: m,
-            loading: I,
+            guildIds: h,
+            loading: m,
             onScroll: n,
             onGuildCardSeen: r,
             onGuildCardClick: l
         })
     );
 }
-function g(e) {
+function p(e) {
     let { loadId: t, selectedTab: n, onScroll: s, onGuildCardSeen: o, onGuildCardClick: c } = e;
     switch (
         (a.useEffect(() => {
@@ -76,7 +75,7 @@ function g(e) {
         n)
     ) {
         case E.vf.FEATURED:
-            return (0, i.jsx)(m, {
+            return (0, i.jsx)(I, {
                 tab: n,
                 onScroll: s,
                 onGuildCardClick: c,
@@ -88,7 +87,7 @@ function g(e) {
         case E.vf.TECH:
         case E.vf.EDUCATION:
             return (0, i.jsx)(
-                I,
+                g,
                 {
                     tab: n,
                     onScroll: s,

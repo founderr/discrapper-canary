@@ -14,12 +14,13 @@ t.Z = function (e) {
         n = (0, o.lZ)(),
         E = (0, s.e7)([l.Z], () => l.Z.getCategoryName(n)),
         m = a.useCallback(() => {
-            (0, c.XW)({
-                loadId: t,
-                categoryId: d.Hk,
-                searchQuery: (0, o.uP)(),
-                languageCode: (0, o.a7)()
-            });
+            (0, o.LD)({ categoryId: d.Hk }),
+                (0, c.oT)({
+                    loadId: t,
+                    categoryId: d.Hk,
+                    query: (0, o.uP)(),
+                    languageCode: (0, o.a7)()
+                });
         }, [t]),
         I = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({ categoryName: E }),
         g = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({ onClick: m });
