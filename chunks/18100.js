@@ -38,8 +38,8 @@ function C(e) {
 }
 function h(e) {
     var n;
-    let { guildId: t, progress: i, traitsToHighlight: u, maskDescription: h, maskTraits: x, onTraitClick: g } = e,
-        p = (0, o.e7)([d.Z], () => d.Z.getGuild(t)),
+    let { guildId: t, progress: i, traitsToHighlight: u, maskDescription: h, maskTraits: x, onTraitClick: p } = e,
+        g = (0, o.e7)([d.Z], () => d.Z.getGuild(t)),
         { interests: T, description: E, playstyle: I, wildcardDescriptors: b, brandPrimaryColor: N } = i,
         v = (0, l.useToken)(l.tokens.colors.TEXT_BRAND),
         y = Array.from(T),
@@ -54,7 +54,7 @@ function h(e) {
                         variant: 'heading-md/medium',
                         color: 'header-primary',
                         lineClamp: 1,
-                        children: null == p ? void 0 : p.name
+                        children: null == g ? void 0 : g.name
                     }),
                     (0, a.jsxs)('div', {
                         className: f.clanInfoRow,
@@ -74,7 +74,7 @@ function h(e) {
                                 className: f.clanInfoItem,
                                 children: null !== (n = (0, m.mv)(I)) && void 0 !== n ? n : _.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
                             }),
-                            null != p &&
+                            null != g &&
                                 (0, a.jsx)(c.cS, {
                                     wildcardDescriptors: b,
                                     primaryColor: null != N ? N : v.hex()
@@ -115,7 +115,7 @@ function h(e) {
                                 {
                                     trait: e,
                                     selected: S.has(e),
-                                    onClick: g
+                                    onClick: p
                                 },
                                 e
                             )

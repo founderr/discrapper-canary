@@ -19,8 +19,8 @@ var a = t(735250),
     C = t(449226),
     h = t(689938),
     x = t(176981),
-    g = t(13441);
-function p(e) {
+    p = t(13441);
+function g(e) {
     let { guild: n, isExpanded: i, emptyFormFields: s, hasTermsField: o } = e,
         c = n.hasVerificationGate(),
         [u, m] = r.useState(c),
@@ -34,7 +34,7 @@ function p(e) {
                 m(u);
             }
         },
-        p = (e) => {
+        g = (e) => {
             e && s
                 ? (0, l.openModalLazy)(async () => {
                       let { ConfirmModal: n } = await Promise.resolve().then(t.bind(t, 481060));
@@ -83,7 +83,7 @@ function p(e) {
                         }),
                     !i &&
                         (0, a.jsx)('div', {
-                            className: g.pillRow,
+                            className: p.pillRow,
                             children:
                                 o &&
                                 (0, a.jsxs)(l.Text, {
@@ -104,7 +104,7 @@ function p(e) {
                 ]
             }),
             (0, a.jsx)('div', {
-                className: g.previewAndEnable,
+                className: p.previewAndEnable,
                 children:
                     i || u || !s
                         ? (0, a.jsxs)(a.Fragment, {
@@ -116,20 +116,20 @@ function p(e) {
                                           _(e), T();
                                       },
                                       children: (0, a.jsx)(l.Tooltip, {
-                                          tooltipContentClassName: g.__invalid_tooltip,
+                                          tooltipContentClassName: p.__invalid_tooltip,
                                           text: h.Z.Messages.PREVIEW,
                                           children: (e) =>
                                               (0, a.jsx)(l.EyeIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: g.previewIcon,
+                                                  className: p.previewIcon,
                                                   ...e
                                               })
                                       })
                                   }),
                                   (0, a.jsx)(C.Z, {
                                       checked: u,
-                                      onChange: () => p(!u)
+                                      onChange: () => g(!u)
                                   })
                               ]
                           })
@@ -165,7 +165,7 @@ function I(e) {
         L = !C;
     return (0, a.jsx)(c.Z, {
         renderHeader: L
-            ? (0, a.jsx)(p, {
+            ? (0, a.jsx)(g, {
                   guild: l,
                   isExpanded: N,
                   emptyFormFields: (null == j ? void 0 : j.length) == null || (null == j ? void 0 : j.length) === 0,
@@ -179,7 +179,7 @@ function I(e) {
         children: (0, a.jsx)('div', {
             className: s()(x.itemBodyContainer, {
                 [x.noPadding]: !L,
-                [g.rulesScreeningItemsNoBorder]: !L
+                [p.rulesScreeningItemsNoBorder]: !L
             }),
             children:
                 R &&

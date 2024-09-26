@@ -20,8 +20,8 @@ var a = t(735250),
 function C(e) {
     let { gameApplicationIds: n, preventGameRemoval: t, onUpdateGames: i, minGames: l = 1, error: C } = e,
         { options: h, matchSorterOptions: x } = (0, c.P)(),
-        g = r.useMemo(() => Array.from(n), [n]),
-        p = r.useCallback(
+        p = r.useMemo(() => Array.from(n), [n]),
+        g = r.useCallback(
             (e) => {
                 if (!(e.length < l)) i(new Set(e));
             },
@@ -47,16 +47,16 @@ function C(e) {
                     autoFocus: !0,
                     wrapperClassName: s()(f.input, _.input),
                     options: h,
-                    value: g,
+                    value: p,
                     placeholder: m.Z.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-                    onChange: p,
+                    onChange: g,
                     isDisabled: n.size === u.cm,
                     matchSorterOptions: x,
                     clearQueryOnSelect: !0,
                     customPillContainerClassName: _.pills,
                     renderCustomPill: E
                 }),
-                g.length > 0 &&
+                p.length > 0 &&
                     (0, a.jsxs)('div', {
                         className: _.gamesContainer,
                         children: [
@@ -67,7 +67,7 @@ function C(e) {
                             }),
                             (0, a.jsx)('div', {
                                 className: _.gamesList,
-                                children: g.map((e) =>
+                                children: p.map((e) =>
                                     (0, a.jsx)(
                                         o.Tooltip,
                                         {

@@ -15,7 +15,7 @@ t.d(n, {
         return C;
     },
     oL: function () {
-        return g;
+        return p;
     },
     wE: function () {
         return d;
@@ -90,7 +90,7 @@ async function x(e) {
         body: {}
     });
 }
-async function g(e) {
+async function p(e) {
     return (
         await x(e),
         await i.Z.getApplicationsForGuild(e, {

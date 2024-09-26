@@ -15,7 +15,7 @@ t.d(n, {
         return m;
     },
     Vv: function () {
-        return p;
+        return g;
     },
     W1: function () {
         return C;
@@ -33,7 +33,7 @@ t.d(n, {
         return h;
     },
     t$: function () {
-        return g;
+        return p;
     },
     zH: function () {
         return _;
@@ -165,14 +165,14 @@ function x(e, n) {
         reasonsToJoin: n
     });
 }
-function g(e, n) {
+function p(e, n) {
     r.Z.dispatch({
         type: 'GUILD_UPDATE_DISCOVERY_METADATA',
         guildId: e,
         socialLinks: n
     });
 }
-async function p(e) {
+async function g(e) {
     let { guildId: n, primaryCategoryId: t, keywords: i, emojiDiscoverabilityEnabled: s, partnerActionedTimestamp: o, partnerApplicationTimestamp: c, isPublished: d, reasonsToJoin: u, socialLinks: m, about: _ } = e;
     try {
         let {
@@ -181,8 +181,8 @@ async function p(e) {
             keywords: C,
             emoji_discoverability_enabled: h,
             partner_actioned_timestamp: x,
-            partner_application_timestamp: g,
-            is_published: p,
+            partner_application_timestamp: p,
+            is_published: g,
             reasons_to_join: T,
             social_links: E,
             about: I
@@ -212,8 +212,8 @@ async function p(e) {
                 keywords: C,
                 emojiDiscoverabilityEnabled: h,
                 partnerActionedTimestamp: x,
-                partnerApplicationTimestamp: g,
-                isPublished: p,
+                partnerApplicationTimestamp: p,
+                isPublished: g,
                 reasonsToJoin: T,
                 socialLinks: E,
                 about: I

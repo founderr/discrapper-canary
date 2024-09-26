@@ -11,7 +11,7 @@ var a = t(735250),
 n.Z = r.memo(function (e) {
     let { renderHeader: n, children: t, isExpanded: i, isStuck: m, onExpand: _, disableAnimation: f, disableBackground: C } = e,
         [h, x] = r.useState(!0),
-        [g, p] = r.useState(!1),
+        [p, g] = r.useState(!1),
         { ref: T, height: E = 0 } = (0, c.Z)(),
         { ref: I, height: b = 0 } = (0, c.Z)(),
         [N, v] = r.useState(i),
@@ -23,17 +23,17 @@ n.Z = r.memo(function (e) {
                     clamp: !0
                 },
                 onStart: () => {
-                    p(!1);
+                    g(!1);
                 },
                 onRest: () => {
-                    p(!0);
+                    g(!0);
                 }
             },
             h || f ? 'animate-never' : 'respect-motion-settings'
         );
     return (
         r.useLayoutEffect(() => {
-            p(!1), v(i);
+            g(!1), v(i);
         }, [i]),
         r.useLayoutEffect(() => {
             let e = setTimeout(() => {
@@ -47,7 +47,7 @@ n.Z = r.memo(function (e) {
                 [u.noBackground]: C
             }),
             children: (0, a.jsxs)(o.animated.div, {
-                className: s()(u.contentExpandContainer, { [u.showOverflow]: i && g }),
+                className: s()(u.contentExpandContainer, { [u.showOverflow]: i && p }),
                 style: y,
                 children: [
                     (0, a.jsx)(l.Clickable, {

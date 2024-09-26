@@ -39,7 +39,7 @@ let l = ['#0089d9'],
     ];
 function f(e) {
     let { width: n, height: t, primaryTintColor: f, secondaryTintColor: C, ...h } = e,
-        { primaryColorsTransformed: x, secondaryColorsTransformed: g } = (0, r.s)({
+        { primaryColorsTransformed: x, secondaryColorsTransformed: p } = (0, r.s)({
             primaryBaseColors: l,
             primaryTintColor: f,
             primaryTintLuminances: d,
@@ -49,7 +49,7 @@ function f(e) {
             secondaryTintLuminances: m,
             secondaryLuminanceWeights: _
         }),
-        { styleContent: p, containerId: T } = (0, i.bC)(x, g);
+        { styleContent: g, containerId: T } = (0, i.bC)(x, p);
     return (0, a.jsxs)('svg', {
         ...h,
         'aria-label': s.Z.Messages.CLAN_LOOK_BANNER,
@@ -57,7 +57,7 @@ function f(e) {
         height: t,
         viewBox: '0 0 '.concat(i.Km, ' ').concat(i.md),
         children: [
-            (0, a.jsx)('defs', { children: (0, a.jsx)('style', { children: p }) }),
+            (0, a.jsx)('defs', { children: (0, a.jsx)('style', { children: g }) }),
             (0, a.jsx)('use', {
                 href: ''.concat(o, '#wrapper-layer'),
                 id: T

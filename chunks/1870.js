@@ -26,7 +26,7 @@ let h = !1,
     },
     m = (e) => {
         let { error: t } = e;
-        (E = _), (f = !1), (i = t);
+        (E = _), (f = !1), (i = t), (h = !0);
     },
     I = (e) => {
         0 === e.purchases.length ? (E = _) : !(0, l.isEqual)([...E.values()], e.purchases) && (E = new Map(e.purchases.map((e) => [e.skuId, e]))), (h = !0), (f = !1), (i = void 0);

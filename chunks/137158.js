@@ -68,7 +68,7 @@ function h(e) {
             await m(e, n, t);
         }),
         x = r.useRef(null),
-        [, g] = (0, l.c)({
+        [, p] = (0, l.c)({
             type: C,
             item: {
                 index: n,
@@ -78,7 +78,7 @@ function h(e) {
                 null != e && !n.didDrop() && h(e.field, null, !0);
             }
         }),
-        [, p] = (0, c.L)({
+        [, g] = (0, c.L)({
             accept: C,
             hover: (e, t) => {
                 var a;
@@ -97,12 +97,12 @@ function h(e) {
     return (
         r.useLayoutEffect(
             () => (
-                g(p(x)),
+                p(g(x)),
                 () => {
-                    p(null), g(null);
+                    g(null), p(null);
                 }
             ),
-            [g, p]
+            [p, g]
         ),
         (0, a.jsxs)('div', {
             ref: x,

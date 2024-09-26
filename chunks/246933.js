@@ -35,7 +35,7 @@ let l = ['#cc99ff', '#ffffff'],
     ];
 function f(e) {
     let { width: n, height: t, primaryTintColor: f, secondaryTintColor: C, ...h } = e,
-        { primaryColorsTransformed: x, secondaryColorsTransformed: g } = (0, r.s)({
+        { primaryColorsTransformed: x, secondaryColorsTransformed: p } = (0, r.s)({
             primaryBaseColors: l,
             primaryTintColor: f,
             primaryTintLuminances: d,
@@ -45,7 +45,7 @@ function f(e) {
             secondaryTintLuminances: m,
             secondaryLuminanceWeights: _
         }),
-        { styleContent: p, containerId: T } = (0, i.bC)(x, g);
+        { styleContent: g, containerId: T } = (0, i.bC)(x, p);
     return (0, a.jsxs)('svg', {
         ...h,
         'aria-label': s.Z.Messages.CLAN_LOOK_BANNER,
@@ -86,18 +86,18 @@ function f(e) {
                                 spreadMethod: 'pad',
                                 children: [
                                     (0, a.jsx)('stop', {
-                                        stopColor: g[1],
+                                        stopColor: p[1],
                                         offset: '0%'
                                     }),
                                     (0, a.jsx)('stop', {
-                                        stopColor: g[0],
+                                        stopColor: p[0],
                                         offset: '70%'
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, a.jsx)('style', { children: p })
+                    (0, a.jsx)('style', { children: g })
                 ]
             }),
             (0, a.jsx)('use', {

@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(n, {
     G: function () {
         return l;
     }

@@ -1,16 +1,16 @@
-n.d(t, {
+t.d(n, {
     _: function () {
         return u;
     }
 });
-var l = n(470079),
-    s = n(442837),
-    a = n(594174),
-    r = n(823379),
-    i = n(51144),
-    o = n(689938);
+var l = t(470079),
+    s = t(442837),
+    a = t(594174),
+    r = t(823379),
+    i = t(51144),
+    o = t(689938);
 function u(e) {
-    let t = (0, s.Wu)([a.default], () =>
+    let n = (0, s.Wu)([a.default], () =>
         e.recipients
             .map((e) => a.default.getUser(e))
             .filter(r.lm)
@@ -34,14 +34,14 @@ function u(e) {
                               second: e[1],
                               third: e[2]
                           });
-                      let t = e.length - 3;
+                      let n = e.length - 3;
                       return o.Z.Messages.USER_SUMMARY_THREE_AND_OTHERS.format({
                           first: e[0],
                           second: e[1],
                           third: e[2],
-                          count: t
+                          count: n
                       });
-                  })(t),
-        [e, t]
+                  })(n),
+        [e, n]
     );
 }

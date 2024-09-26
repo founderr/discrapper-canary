@@ -1,38 +1,38 @@
-n.d(t, {
+t.d(n, {
     n: function () {
-        return p;
+        return x;
     }
 }),
-    n(47120);
-var l = n(735250),
-    s = n(470079),
-    a = n(106351),
-    r = n(442837),
-    i = n(481060),
-    o = n(541716),
-    u = n(752305),
-    c = n(893718),
-    d = n(849522),
-    h = n(987509),
-    m = n(131704),
-    f = n(592125),
-    g = n(823379),
-    _ = n(784384),
-    E = n(822869),
-    S = n(912332),
-    M = n(646746),
-    v = n(689938),
-    x = n(463061);
-function p(e) {
-    let { message: t, forwardOptions: n, sendLabel: p, canSend: N, selectedDestinations: C, isSending: Z, onSend: A, showPreview: b } = e,
+    t(47120);
+var l = t(735250),
+    s = t(470079),
+    a = t(106351),
+    r = t(442837),
+    i = t(481060),
+    o = t(541716),
+    u = t(752305),
+    c = t(893718),
+    d = t(849522),
+    h = t(987509),
+    f = t(131704),
+    m = t(592125),
+    g = t(823379),
+    _ = t(784384),
+    E = t(822869),
+    S = t(912332),
+    M = t(646746),
+    v = t(689938),
+    p = t(463061);
+function x(e) {
+    let { message: n, forwardOptions: t, sendLabel: x, canSend: N, selectedDestinations: C, isSending: Z, onSend: A, showPreview: b } = e,
         L = (0, d.Z)(),
         R = C.map(h.hl).find(g.lm),
-        I = (0, r.e7)([f.Z], () => f.Z.getChannel(R), [R]),
+        I = (0, r.e7)([m.Z], () => m.Z.getChannel(R), [R]),
         w = s.useMemo(
             () =>
                 null != I
                     ? I
-                    : (0, m.kt)({
+                    : (0, f.kt)({
                           id: '1',
                           type: a.d.DM
                       }),
@@ -46,14 +46,14 @@ function p(e) {
         G = s.useCallback(() => W(!0), []),
         U = s.useCallback(() => W(!1), []),
         F = s.useCallback(
-            (e, n, l) => {
+            (e, t, l) => {
                 P({
-                    textValue: n,
+                    textValue: t,
                     richValue: l
                 }),
-                    T(t.channel_id, t.id);
+                    T(n.channel_id, n.id);
             },
-            [T, t]
+            [T, n]
         ),
         B = s.useCallback(() => {
             A(D);
@@ -73,24 +73,24 @@ function p(e) {
             [B, D, L, N]
         );
     return (0, l.jsxs)(i.ModalFooter, {
-        className: x.footerWithMessage,
+        className: p.footerWithMessage,
         children: [
             b &&
                 (0, l.jsx)('div', {
-                    className: x.forwardPreviewWrapper,
+                    className: p.forwardPreviewWrapper,
                     children: (0, l.jsx)(M.O, {
-                        message: t,
-                        forwardOptions: n
+                        message: n,
+                        forwardOptions: t
                     })
                 }),
             (0, l.jsxs)('div', {
-                className: x.footerWarningWrapper,
+                className: p.footerWarningWrapper,
                 children: [
                     (0, l.jsxs)('div', {
-                        className: x.footerButtons,
+                        className: p.footerButtons,
                         children: [
                             (0, l.jsx)(c.Z, {
-                                innerClassName: x.messageInput,
+                                innerClassName: p.messageInput,
                                 onChange: F,
                                 placeholder: v.Z.Messages.MESSAGE_FORWARD_MESSAGE_PLACEHOLDER,
                                 channel: w,
@@ -106,11 +106,11 @@ function p(e) {
                                 emojiPickerCloseOnModalOuterClick: !0
                             }),
                             (0, l.jsx)(i.Button, {
-                                className: x.sendWithMessage,
+                                className: p.sendWithMessage,
                                 submitting: Z,
                                 disabled: !N || D.length > L,
                                 onClick: B,
-                                children: p
+                                children: x
                             })
                         ]
                     }),

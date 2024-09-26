@@ -11,7 +11,7 @@ var r = t(120356),
     u = t(689938),
     m = t(631403);
 n.Z = function (e) {
-    let { channelId: n, formField: t, index: r, isDragEnabled: _, isDropHovered: f, onDrop: C, onEdit: h, onRemove: x, canRemove: g, title: p, actionsLocation: T } = e,
+    let { channelId: n, formField: t, index: r, isDragEnabled: _, isDropHovered: f, onDrop: C, onEdit: h, onRemove: x, canRemove: p, title: g, actionsLocation: T } = e,
         E = t.values,
         I = E.slice(0, 1),
         b = E.length - I.length;
@@ -23,8 +23,8 @@ n.Z = function (e) {
         onDrop: C,
         onEdit: h,
         onRemove: x,
-        title: p,
-        canRemove: g,
+        title: g,
+        canRemove: p,
         actionsLocation: T,
         children: [
             (0, a.jsx)(c.EK, {

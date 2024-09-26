@@ -14,9 +14,9 @@ var a = t(735250),
     C = t(308083),
     h = t(689938),
     x = t(258738),
-    g = t(602075);
+    p = t(602075);
 n.Z = (e) => {
-    let { guildId: n, handleUpdate: t, progress: i, error: p } = e,
+    let { guildId: n, handleUpdate: t, progress: i, error: g } = e,
         { interests: T } = i,
         [E, I] = r.useState(''),
         [b, N] = r.useState(0),
@@ -53,44 +53,44 @@ n.Z = (e) => {
             N((e) => (e + 1) % y.length);
         }, [N, y]);
     return (0, a.jsxs)('div', {
-        className: g.slideContent,
+        className: p.slideContent,
         children: [
             (0, a.jsx)(l.Heading, {
                 variant: 'heading-xxl/medium',
-                className: g.title,
+                className: p.title,
                 children: h.Z.Messages.CLAN_SETUP_INTERESTS_TITLE
             }),
             (0, a.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: g.subtitle,
+                className: p.subtitle,
                 children: h.Z.Messages.CLAN_SETUP_INTERESTS_SUBTITLE.format()
             }),
-            null != p &&
+            null != g &&
                 (0, a.jsx)(l.Text, {
                     variant: 'text-sm/normal',
                     color: 'status-danger',
-                    className: g.errorText,
-                    children: p
+                    className: p.errorText,
+                    children: g
                 }),
             (0, a.jsxs)('div', {
-                className: g.content,
+                className: p.content,
                 children: [
                     (0, a.jsxs)('div', {
-                        className: g.mainPanelContainer,
+                        className: p.mainPanelContainer,
                         children: [
                             (0, a.jsxs)('div', {
-                                className: g.inputContainer,
+                                className: p.inputContainer,
                                 children: [
                                     (0, a.jsx)(l.Text, {
                                         variant: 'text-xs/semibold',
                                         color: 'text-muted',
-                                        className: g.contentLabel,
+                                        className: p.contentLabel,
                                         children: h.Z.Messages.CLAN_SETUP_INTERESTS_LABEL
                                     }),
                                     (0, a.jsx)(l.TextInput, {
                                         autoFocus: !0,
-                                        inputClassName: g.input,
+                                        inputClassName: p.input,
                                         value: E,
                                         onKeyDown: L,
                                         onChange: I,
@@ -101,24 +101,24 @@ n.Z = (e) => {
                                     E.length > 0 &&
                                         (0, a.jsx)(l.Clickable, {
                                             onClick: () => R(E.trim()),
-                                            className: s()(g.plusIcon, g.clickable),
+                                            className: s()(p.plusIcon, p.clickable),
                                             children: (0, a.jsx)(l.PlusSmallIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: g.icon
+                                                className: p.icon
                                             })
                                         }),
                                     E.length > 0 &&
                                         (0, a.jsx)(l.Text, {
                                             color: 'text-muted',
                                             variant: 'text-xs/normal',
-                                            className: g.enterToSearchText,
+                                            className: p.enterToSearchText,
                                             children: h.Z.Messages.CLAN_SETUP_INTERESTS_HELP
                                         })
                                 ]
                             }),
                             (0, a.jsx)(l.Text, {
-                                className: g.interestsCategoryTitle,
+                                className: p.interestsCategoryTitle,
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
                                 children: h.Z.Messages.CLAN_SETUP_SUGGESTED_INTERESTS
@@ -138,7 +138,7 @@ n.Z = (e) => {
                                         e
                                     ),
                                 maxLines: 2,
-                                className: g.interestsCategory,
+                                className: p.interestsCategory,
                                 itemGapPx: 8,
                                 renderOverflow: () => null
                             }),
@@ -164,7 +164,7 @@ n.Z = (e) => {
                         ]
                     }),
                     (0, a.jsx)('div', {
-                        className: g.fixedWidthSidebar,
+                        className: p.fixedWidthSidebar,
                         children:
                             A.length > 0 &&
                             (0, a.jsx)(f.Z, {

@@ -14,8 +14,8 @@ var a = t(735250),
     C = t(430824),
     h = t(175557),
     x = t(688298),
-    g = t(995119),
-    p = t(116175),
+    p = t(995119),
+    g = t(116175),
     T = t(308083),
     E = t(689938),
     I = t(861246),
@@ -111,8 +111,8 @@ n.Z = (e) => {
             if (P) return O;
             if (w)
                 return {
-                    primary: null != M ? M : p.Nh,
-                    secondary: null != j ? j : p.vY
+                    primary: null != M ? M : g.Nh,
+                    secondary: null != j ? j : g.vY
                 };
             {
                 let e = T.ym[Z - 2];
@@ -192,7 +192,7 @@ n.Z = (e) => {
                         children: (0, a.jsxs)('div', {
                             className: I.colorsContainer,
                             children: [
-                                (0, a.jsx)(g.Z, { onClick: G }),
+                                (0, a.jsx)(p.Z, { onClick: G }),
                                 (0, a.jsxs)('div', {
                                     className: I.colorPickerContainer,
                                     children: [

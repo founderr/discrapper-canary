@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(n, {
     M: function () {
         return s;
     },
@@ -6,7 +6,7 @@ n.d(t, {
         return a;
     }
 });
-var l = n(212819);
+var l = t(212819);
 let s = Array.from([l.h8.USER, l.h8.TEXT_CHANNEL, l.h8.VOICE_CHANNEL, l.h8.GROUP_DM]);
 function a(e) {
     return s.includes(e.type);

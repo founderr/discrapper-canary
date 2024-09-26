@@ -1,37 +1,37 @@
-n.d(t, {
+t.d(n, {
     O: function () {
         return E;
     }
 });
-var l = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
-    i = n(392711),
-    o = n(481060),
-    u = n(686546),
-    c = n(124347),
-    d = n(499376),
-    h = n(937889),
-    m = n(930282),
-    f = n(318616),
-    g = n(689938),
-    _ = n(228895);
+var l = t(735250),
+    s = t(470079),
+    a = t(120356),
+    r = t.n(a),
+    i = t(392711),
+    o = t(481060),
+    u = t(686546),
+    c = t(124347),
+    d = t(499376),
+    h = t(937889),
+    f = t(930282),
+    m = t(318616),
+    g = t(689938),
+    _ = t(228895);
 function E(e) {
-    let { message: t, forwardOptions: n } = e,
+    let { message: n, forwardOptions: t } = e,
         {
             attachments: a,
             embeds: E,
             hasContent: S,
             contentMessage: M
-        } = (0, f.c)({
-            message: t,
-            forwardOptions: n
+        } = (0, m.c)({
+            message: n,
+            forwardOptions: t
         }),
         v = s.useMemo(
             () =>
                 S
-                    ? (0, h.ZP)(t, {
+                    ? (0, h.ZP)(n, {
                           formatInline: !0,
                           allowLinks: !0,
                           allowHeading: !0,
@@ -40,29 +40,29 @@ function E(e) {
                           contentMessage: M
                       }).content
                     : null,
-            [M, S, t]
+            [M, S, n]
         ),
-        x = a.length,
-        p = null,
+        p = a.length,
+        x = null,
         N = null,
         C = null;
-    if (x > 0 || E.length > 0) {
+    if (p > 0 || E.length > 0) {
         var Z, A, b, L;
         let e = (0, i.countBy)(a, (e) => (0, d.aw)(e, !0)),
-            t = null !== (b = e.IMAGE) && void 0 !== b ? b : 0,
-            n = null !== (L = e.VIDEO) && void 0 !== L ? L : 0;
-        t > 0 && n > 0
-            ? ((p = g.Z.Messages.NUM_IMAGES_VIDEOS.format({
-                  image_count: t,
-                  video_count: n
+            n = null !== (b = e.IMAGE) && void 0 !== b ? b : 0,
+            t = null !== (L = e.VIDEO) && void 0 !== L ? L : 0;
+        n > 0 && t > 0
+            ? ((x = g.Z.Messages.NUM_IMAGES_VIDEOS.format({
+                  image_count: n,
+                  video_count: t
               })),
               (N = o.ImagesIcon))
-            : n > 0
-              ? ((p = g.Z.Messages.NUM_VIDEOS.format({ count: n })), (N = o.CirclePlayIcon))
-              : t > 0
-                ? ((p = g.Z.Messages.NUM_IMAGES.format({ count: t })), (N = 1 === t ? o.ImageIcon : o.ImagesIcon))
-                : ((p = g.Z.Messages.NUM_ATTACHMENTS.format({ count: x })), (N = o.AttachmentIcon)),
-            n > 0 && x === n
+            : t > 0
+              ? ((x = g.Z.Messages.NUM_VIDEOS.format({ count: t })), (N = o.CirclePlayIcon))
+              : n > 0
+                ? ((x = g.Z.Messages.NUM_IMAGES.format({ count: n })), (N = 1 === n ? o.ImageIcon : o.ImagesIcon))
+                : ((x = g.Z.Messages.NUM_ATTACHMENTS.format({ count: p })), (N = o.AttachmentIcon)),
+            t > 0 && p === t
                 ? (C = (0, l.jsxs)('div', {
                       className: r()(_.attachmentPreview, _.attachmentPreviewVideo),
                       children: [
@@ -79,7 +79,7 @@ function E(e) {
                           })
                       ]
                   }))
-                : x > 0
+                : p > 0
                   ? (C = (0, l.jsx)('div', {
                         className: _.attachmentPreview,
                         children: (0, l.jsx)(c.Z, {
@@ -99,7 +99,7 @@ function E(e) {
                     }));
     }
     return (
-        x > 1 &&
+        p > 1 &&
             null != C &&
             (C = (0, l.jsxs)('div', {
                 className: _.attachmentPreviewOverflow,
@@ -114,7 +114,7 @@ function E(e) {
                         className: _.overflowCount,
                         variant: 'text-xs/semibold',
                         color: 'text-normal',
-                        children: ['+', x - 1]
+                        children: ['+', p - 1]
                     })
                 ]
             })),
@@ -126,12 +126,12 @@ function E(e) {
                     className: _.contentWrapper,
                     children: [
                         S &&
-                            (0, l.jsx)(m.ZP, {
-                                className: r()(_.forwardPreviewMessage, x > 0 && _.hasAttachments),
-                                message: t,
+                            (0, l.jsx)(f.ZP, {
+                                className: r()(_.forwardPreviewMessage, p > 0 && _.hasAttachments),
+                                message: n,
                                 content: v
                             }),
-                        x > 0 &&
+                        p > 0 &&
                             (0, l.jsxs)('div', {
                                 className: _.attachmentRow,
                                 children: [
@@ -141,11 +141,11 @@ function E(e) {
                                             width: S ? 18 : 20,
                                             color: o.tokens.colors.TEXT_LOW_CONTRAST
                                         }),
-                                    null != p &&
+                                    null != x &&
                                         (0, l.jsx)(o.Text, {
                                             variant: S ? 'text-sm/medium' : 'text-md/medium',
                                             color: 'text-low-contrast',
-                                            children: p
+                                            children: x
                                         })
                                 ]
                             })

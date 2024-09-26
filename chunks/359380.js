@@ -79,13 +79,13 @@ function m(e) {
         }, [m, null == s ? void 0 : s.interests]),
         h = r.useMemo(() => Array.from(C), [C]),
         x = r.useMemo(() => h.filter((e) => l.gh.has(e)), [h]),
-        g = r.useCallback(
+        p = r.useCallback(
             (e) => {
                 t(new Set([...h.filter((e) => !l.gh.has(e)), ...e]));
             },
             [t, h]
         ),
-        p = r.useMemo(() => h.filter((e) => l.WZ.has(e) || l.gh.has(e)), [h]),
+        g = r.useMemo(() => h.filter((e) => l.WZ.has(e) || l.gh.has(e)), [h]),
         T = r.useCallback(
             (e) => {
                 let n = new Set(C);
@@ -125,7 +125,7 @@ function m(e) {
                             wrapperClassName: d.input,
                             options: f,
                             value: x,
-                            onChange: g,
+                            onChange: p,
                             placeholder: c.Z.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
                             multi: !0
                         })
@@ -141,7 +141,7 @@ function m(e) {
                     (0, a.jsx)(o.Z, {
                         guildId: n,
                         progress: s,
-                        traitsToHighlight: p,
+                        traitsToHighlight: g,
                         maskDescription: !0,
                         onTraitClick: T
                     })

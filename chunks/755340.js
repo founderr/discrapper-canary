@@ -14,9 +14,9 @@ var a = t(735250),
     C = t(700833),
     h = t(592286),
     x = t(981631),
-    g = t(689938);
+    p = t(689938);
 n.Z = function (e) {
-    let { guild: n, submittedGuildJoinRequestsCount: t, onFormFieldUpdate: p, hideVerificationLevelField: T, isClanContext: E, formDescription: I, onFieldsSave: b, onDescriptionSave: N } = e,
+    let { guild: n, submittedGuildJoinRequestsCount: t, onFormFieldUpdate: g, hideVerificationLevelField: T, isClanContext: E, formDescription: I, onFieldsSave: b, onDescriptionSave: N } = e,
         v = r.useRef(!1),
         [y, S] = r.useState(null),
         [A, M] = r.useState(e.formFields);
@@ -31,7 +31,7 @@ n.Z = function (e) {
         P = O > 0,
         w = n.hasFeature(x.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || E,
         F = r.useCallback(() => {
-            (0, s.showToast)((0, s.createToast)(g.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE));
+            (0, s.showToast)((0, s.createToast)(p.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE));
         }, []),
         G = (0, i.e7)([o.Z], () => o.Z.can(x.Plq.MANAGE_GUILD, n)),
         B = r.useCallback(
@@ -39,7 +39,7 @@ n.Z = function (e) {
                 if (!v.current) {
                     (v.current = !0), E && (e = e.filter((e) => e.field_type !== l.QJ.TERMS));
                     try {
-                        await b(n.id, e), p(), M(e), (j.current = e);
+                        await b(n.id, e), g(), M(e), (j.current = e);
                     } catch (e) {
                         throw (M(j.current), e);
                     } finally {
@@ -47,7 +47,7 @@ n.Z = function (e) {
                     }
                 }
             },
-            [y, n.id, p, b, E]
+            [y, n.id, g, b, E]
         ),
         U = r.useCallback(
             async (e) => {
