@@ -36,7 +36,7 @@ var i = n(735250),
     L = n(324701),
     D = n(768943),
     M = n(686478),
-    P = n(818260),
+    P = n(664559),
     U = n(767893),
     w = n(206697),
     x = n(74551),
@@ -51,10 +51,9 @@ let F = {
 };
 function Z(e) {
     let { closePopout: t, throttledNow: n } = e,
-        r = (0, f.e7)([D.Z], () => D.Z.getSavedMessages()),
+        r = (0, P.Z)(),
         a = (0, f.e7)([D.Z], () => D.Z.getOverdueMessageReminderCount());
     return (
-        (0, P.Z)(),
         (0, T.Z)(
             {
                 type: _.ImpressionTypes.POPOUT,
@@ -77,7 +76,7 @@ function Z(e) {
                         title: k.Z.Messages.FOR_LATER
                     }),
                     (0, i.jsx)(V, {
-                        savedMessages: r,
+                        savedMessageKeys: r,
                         closePopout: t,
                         throttledNow: n
                     })
@@ -87,11 +86,11 @@ function Z(e) {
     );
 }
 function V(e) {
-    let { savedMessages: t, closePopout: n, throttledNow: r } = e;
+    let { savedMessageKeys: t, closePopout: n, throttledNow: r } = e;
     return 0 === t.length
         ? (0, i.jsx)(w.w, {})
         : (0, i.jsx)(Y, {
-              savedMessages: t,
+              savedMessageKeys: t,
               closePopout: n,
               throttledNow: r
           });
@@ -136,7 +135,7 @@ function H(e) {
     });
 }
 function Y(e) {
-    let { savedMessages: t, closePopout: n, throttledNow: r } = e,
+    let { savedMessageKeys: t, closePopout: n, throttledNow: r } = e,
         o = a.useRef(null),
         s = (0, I.Z)('for-later', o);
     return (0, i.jsx)(E.bG, {
@@ -153,13 +152,13 @@ function Y(e) {
                     ...s,
                     children: t.map((e) =>
                         (0, i.jsx)(
-                            j,
+                            W,
                             {
-                                savedMessage: e,
+                                savedMessageKey: e,
                                 closePopout: n,
                                 throttledNow: r
                             },
-                            e.saveData.messageId
+                            e.messageId
                         )
                     )
                 });
@@ -229,7 +228,7 @@ function j(e) {
                   ),
                   (0, i.jsx)(A.ZP, {
                       className: B.hoverBar,
-                      children: (0, i.jsx)(W, {
+                      children: (0, i.jsx)(K, {
                           savedMessage: t,
                           jumpToMessage: u
                       })
@@ -268,6 +267,17 @@ function j(e) {
           });
 }
 function W(e) {
+    let { savedMessageKey: t, closePopout: n, throttledNow: r } = e,
+        a = (0, f.e7)([D.Z], () => D.Z.getSavedMessage(t.channelId, t.messageId));
+    return null == a
+        ? null
+        : (0, i.jsx)(j, {
+              savedMessage: a,
+              closePopout: n,
+              throttledNow: r
+          });
+}
+function K(e) {
     let { savedMessage: t, jumpToMessage: r } = e;
     return (u()(null != t.message, 'Saved message must be cached for For Later action buttons'), null != t.saveData.dueAt)
         ? (0, i.jsxs)(i.Fragment, {
