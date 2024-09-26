@@ -53,13 +53,12 @@ var i = n(735250),
     ee = n(921944),
     et = n(185923),
     en = n(689938),
-    ei = n(573908),
-    es = n(866274);
-let ea = [g.ZP.getByName('100'), g.ZP.getByName('laughing'), g.ZP.getByName('sparkling_heart')].filter(V.lm);
-function el(e) {
+    ei = n(573908);
+let es = [g.ZP.getByName('100'), g.ZP.getByName('laughing'), g.ZP.getByName('sparkling_heart')].filter(V.lm);
+function ea(e) {
     e.stopPropagation();
 }
-function er(e) {
+function el(e) {
     let { message: t, channel: n, canReport: i, onClose: s, updatePosition: a } = e;
     return (0, J.useMessageMenu)({
         message: t,
@@ -79,7 +78,7 @@ function er(e) {
         ariaLabel: en.Z.Messages.MESSAGE_UTILITIES_A11Y_LABEL
     });
 }
-let eo = s.memo(function (e) {
+let er = s.memo(function (e) {
     let { channel: t, message: n } = e,
         s = (0, f.q5)(t.guild_id).filter(
             (e) =>
@@ -90,7 +89,7 @@ let eo = s.memo(function (e) {
                     guildId: t.guild_id
                 })
         ),
-        a = (s.length >= 3 ? s : [...(0, C.Z)(s.concat(ea)).values()]).slice(0, 3),
+        a = (s.length >= 3 ? s : [...(0, C.Z)(s.concat(es)).values()]).slice(0, 3),
         l = n.reactions.filter((e) => e.me);
     return (0, i.jsx)(i.Fragment, {
         children: a.map((e) => {
@@ -120,14 +119,13 @@ let eo = s.memo(function (e) {
                     }),
                     label: c,
                     onClick: () =>
-                        ed({
+                        eu({
                             type: null != a ? 'remove' : 'add',
                             emoji: e,
                             channel: t,
                             message: n,
                             location: A.TW.MESSAGE_HOVER_BAR
                         }),
-                    buttonClassName: es.reactionSuggestion,
                     children: (0, i.jsx)(h.Z, {
                         emojiId: e.id,
                         emojiName: null == e.id ? e.surrogates : e.name,
@@ -143,7 +141,7 @@ let eo = s.memo(function (e) {
         })
     });
 });
-function ec(e) {
+function eo(e) {
     let {
             channel: t,
             message: n,
@@ -166,8 +164,8 @@ function ec(e) {
             isMessageBookmark: J,
             setPopout: et,
             hasDeveloperMode: ei,
-            isGuildInviteReminder: ea,
-            isFocused: el
+            isGuildInviteReminder: es,
+            isFocused: ea
         } = (function (e) {
             let { channel: t, message: n, showEmojiPicker: i, showEmojiBurstPicker: s, showMoreUtilities: a, setPopout: l, isFocused: r } = e,
                 { author: o } = n,
@@ -242,7 +240,7 @@ function ec(e) {
                 isGuildInviteReminder: n.type === $.uaV.GUILD_INVITE_REMINDER
             };
         })(e),
-        ec = s.useCallback(() => {
+        eo = s.useCallback(() => {
             !y &&
                 B.default.track($.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: n.id,
@@ -250,27 +248,27 @@ function ec(e) {
                 }),
                 et({ moreUtilities: !y });
         }, [y, et, n]),
-        eu = s.useCallback(() => {
+        ec = s.useCallback(() => {
             et({ emojiPicker: !G });
         }, [G, et]),
-        ed = (0, j.$R)(t),
-        em = n.hasFlag($.iLy.CROSSPOSTED),
-        [ep, e_] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
-        ef = ep === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
-        [eE, eg] = s.useState(!1),
+        eu = (0, j.$R)(t),
+        eh = n.hasFlag($.iLy.CROSSPOSTED),
+        [em, ep] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
+        e_ = em === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
+        [ef, eE] = s.useState(!1),
+        eg = s.useCallback(() => {
+            eE(!0);
+        }, []),
         eC = s.useCallback(() => {
-            eg(!0);
+            eE(!1);
         }, []),
-        eI = s.useCallback(() => {
-            eg(!1);
-        }, []),
-        eT = s.useCallback(
+        eI = s.useCallback(
             (e, t) => {
-                e_(ee.L.TAKE_ACTION), (0, q.ts)(e, t);
+                ep(ee.L.TAKE_ACTION), (0, q.ts)(e, t);
             },
-            [e_]
+            [ep]
         ),
-        { canShowReactionsOnMessageHover: ex } = E.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
+        { canShowReactionsOnMessageHover: eT } = E.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             M
@@ -287,7 +285,7 @@ function ec(e) {
                                     'copy-id'
                                 )
                               : null,
-                          a && !ea
+                          a && !es
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
@@ -309,7 +307,7 @@ function ec(e) {
                                     'configure'
                                 )
                               : null,
-                          ed
+                          eu
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
@@ -367,25 +365,25 @@ function ec(e) {
                       ]
                   })
                 : null,
-            g && !ea
+            g && !es
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          ex && !M
+                          eT && !M
                               ? (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, i.jsx)(eo, {
+                                        (0, i.jsx)(er, {
                                             channel: t,
                                             message: n
                                         }),
-                                        (0, i.jsx)(K.fO, { className: es.separator })
+                                        (0, i.jsx)(K.fO, {})
                                     ]
                                 })
                               : null,
                           (0, i.jsx)(X.Z, {
-                              togglePopout: eu,
-                              renderEmojiPicker: eh,
+                              togglePopout: ec,
+                              renderEmojiPicker: ed,
                               shouldShow: G,
-                              isFocused: el,
+                              isFocused: ea,
                               channel: t,
                               message: n
                           })
@@ -420,10 +418,10 @@ function ec(e) {
                       {
                           label: en.Z.Messages.MESSAGE_ACTION_FORWARD,
                           icon: x.Z,
-                          onClick: () => eT(t, n),
-                          onTooltipShow: eC,
-                          onTooltipHide: eI,
-                          showNewBadge: !eE && ef
+                          onClick: () => eI(t, n),
+                          onTooltipShow: eg,
+                          onTooltipHide: eC,
+                          showNewBadge: !ef && e_
                       },
                       'forward'
                   )
@@ -454,15 +452,15 @@ function ec(e) {
                 ? (0, i.jsx)(
                       K.sF,
                       {
-                          label: em ? en.Z.Messages.NEWS_CHANNEL_PUBLISHED : en.Z.Messages.NEWS_CHANNEL_PUBLISH,
+                          label: eh ? en.Z.Messages.NEWS_CHANNEL_PUBLISHED : en.Z.Messages.NEWS_CHANNEL_PUBLISH,
                           icon: d.AnnouncementsIcon,
                           onClick: () => (0, q.Xl)(t, n),
-                          disabled: em
+                          disabled: eh
                       },
                       'publish'
                   )
                 : null,
-            r && (ea || M)
+            r && (es || M)
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -480,7 +478,7 @@ function ec(e) {
                 : (0, i.jsx)(d.Popout, {
                       renderPopout: (e) => {
                           let { updatePosition: s, closePopout: a } = e;
-                          return (0, i.jsx)(er, {
+                          return (0, i.jsx)(el, {
                               channel: t,
                               message: n,
                               canReport: o,
@@ -489,7 +487,7 @@ function ec(e) {
                           });
                       },
                       shouldShow: y,
-                      onRequestClose: ec,
+                      onRequestClose: eo,
                       position: 'left',
                       align: 'top',
                       animation: d.Popout.Animation.NONE,
@@ -502,7 +500,7 @@ function ec(e) {
                                   label: en.Z.Messages.MORE,
                                   icon: d.MoreHorizontalIcon,
                                   selected: a,
-                                  onClick: ec,
+                                  onClick: eo,
                                   ...s
                               },
                               'more'
@@ -512,7 +510,7 @@ function ec(e) {
         ]
     });
 }
-function eu(e) {
+function ec(e) {
     let { channel: t, message: n } = e,
         s = (0, c.e7)([v.Z], () => null != v.Z.getMessage(n.id), [n.id]),
         a = null == n.interaction || (null != n.interactionData && (0, S.$s)(n.interactionData));
@@ -541,7 +539,7 @@ function eu(e) {
         ]
     });
 }
-function ed(e) {
+function eu(e) {
     let { type: t, emoji: n, channel: i, message: s, location: a, isBurst: l = !1 } = e;
     if (null == n) return;
     let r = (0, Z.g1)(n);
@@ -555,7 +553,7 @@ function ed(e) {
               options: { burst: l }
           });
 }
-function eh(e, t, n) {
+function ed(e, t, n) {
     let s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         a = {
             openPopoutType: 'message_reaction_emoji_picker',
@@ -570,7 +568,7 @@ function eh(e, t, n) {
         channel: e,
         closePopout: n,
         onSelectEmoji: (i, s, a) => {
-            ed({
+            eu({
                 type: 'add',
                 emoji: i,
                 channel: e,
@@ -590,7 +588,7 @@ t.Z = s.memo(function (e) {
         r = (function (e) {
             let { channel: t, message: n } = e;
             return n.state === $.yb.SEND_FAILED
-                ? (0, i.jsx)(eu, {
+                ? (0, i.jsx)(ec, {
                       channel: t,
                       message: n
                   })
@@ -598,7 +596,7 @@ t.Z = s.memo(function (e) {
         })(e),
         o = (function (e) {
             let { message: t } = e;
-            return t.state !== $.yb.SEND_FAILED ? (0, i.jsx)(ec, { ...e }) : null;
+            return t.state !== $.yb.SEND_FAILED ? (0, i.jsx)(eo, { ...e }) : null;
         })(e);
     return a || (null == r && null == o)
         ? null
@@ -607,8 +605,8 @@ t.Z = s.memo(function (e) {
                   [ei.container]: !0,
                   [ei.isHeader]: s
               }),
-              onClick: el,
-              onContextMenu: el,
+              onClick: ea,
+              onContextMenu: ea,
               role: 'group',
               'aria-label': en.Z.Messages.MESSAGE_UTILITIES_A11Y_LABEL,
               children: (0, i.jsxs)(K.ZP, {
