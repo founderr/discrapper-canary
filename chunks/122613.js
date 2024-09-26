@@ -12,28 +12,27 @@ var r = n(592125),
     u = n(574952),
     c = n(981631);
 async function d(e) {
-    let { targetApplicationId: t, locationObject: n, channelId: d, analyticsLocations: _, componentId: E, commandOrigin: f, sectionName: h, source: p, forceCheckAuth: m = !1 } = e,
-        I = (0, u.Z)(),
-        T = i.default.getCurrentUser();
+    let { targetApplicationId: t, locationObject: n, channelId: d, analyticsLocations: _, componentId: E, commandOrigin: f, sectionName: h, source: p } = e,
+        m = (0, u.Z)(),
+        I = i.default.getCurrentUser();
     if (null == t) return !1;
-    let g = await (0, l.Z)(t, d);
+    let T = await (0, l.Z)(t, d);
     return null == d
         ? (a.S.dispatch(c.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t }), !1)
         : null != r.Z.getChannel(d) &&
+              null != I &&
               null != T &&
-              null != g &&
-              (o.tZ(g.id),
+              (o.tZ(T.id),
               await (0, s.af)({
                   channelId: d,
-                  applicationId: g.id,
+                  applicationId: T.id,
                   isStart: !0,
-                  embeddedActivitiesManager: I,
+                  embeddedActivitiesManager: m,
                   componentId: E,
                   commandOrigin: f,
                   sectionName: h,
                   locationObject: n,
                   analyticsLocations: _,
-                  source: p,
-                  forceCheckAuth: m
+                  source: p
               }));
 }
