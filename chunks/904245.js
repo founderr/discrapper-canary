@@ -133,6 +133,7 @@ function eN(e) {
                 event: eh.rMx.QUEST_LINK_SHARED,
                 trackGuildAndChannelMetadata: !0
             });
+        else if (t === g.g.DISCOVERY_GAME);
         else throw Error('Unknown coded link type: '.concat(t));
     });
 }

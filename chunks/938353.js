@@ -279,7 +279,8 @@ class e7 extends (r = u.Component) {
                                 },
                                 r
                             );
-                  } else throw Error('Unknown coded link type: '.concat(n));
+                  } else if (n === R.g.DISCOVERY_GAME) return null;
+                  else throw Error('Unknown coded link type: '.concat(n));
               });
     }
     renderGiftCodes(e) {
