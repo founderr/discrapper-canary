@@ -24,8 +24,8 @@ var r,
     R = 8,
     C = 9,
     y = 15,
-    b = 8,
-    L = 286,
+    L = 8,
+    b = 286,
     D = 30,
     M = 19,
     P = 573,
@@ -193,7 +193,7 @@ function e_(e) {
     (e.window_size = 2 * e.w_size), J(e.head), (e.max_lazy_match = r[e.level].max_lazy), (e.good_match = r[e.level].good_length), (e.nice_match = r[e.level].nice_length), (e.max_chain_length = r[e.level].max_chain), (e.strstart = 0), (e.block_start = 0), (e.lookahead = 0), (e.insert = 0), (e.match_length = e.prev_length = w - 1), (e.match_available = 0), (e.ins_h = 0);
 }
 function eE() {
-    (this.strm = null), (this.status = 0), (this.pending_buf = null), (this.pending_buf_size = 0), (this.pending_out = 0), (this.pending = 0), (this.wrap = 0), (this.gzhead = null), (this.gzindex = 0), (this.method = R), (this.last_flush = -1), (this.w_size = 0), (this.w_bits = 0), (this.w_mask = 0), (this.window = null), (this.window_size = 0), (this.prev = null), (this.head = null), (this.ins_h = 0), (this.hash_size = 0), (this.hash_bits = 0), (this.hash_mask = 0), (this.hash_shift = 0), (this.block_start = 0), (this.match_length = 0), (this.prev_match = 0), (this.match_available = 0), (this.strstart = 0), (this.match_start = 0), (this.lookahead = 0), (this.prev_length = 0), (this.max_chain_length = 0), (this.max_lazy_match = 0), (this.level = 0), (this.strategy = 0), (this.good_match = 0), (this.nice_match = 0), (this.dyn_ltree = new i.Buf16(2 * P)), (this.dyn_dtree = new i.Buf16((2 * D + 1) * 2)), (this.bl_tree = new i.Buf16((2 * M + 1) * 2)), J(this.dyn_ltree), J(this.dyn_dtree), J(this.bl_tree), (this.l_desc = null), (this.d_desc = null), (this.bl_desc = null), (this.bl_count = new i.Buf16(U + 1)), (this.heap = new i.Buf16(2 * L + 1)), J(this.heap), (this.heap_len = 0), (this.heap_max = 0), (this.depth = new i.Buf16(2 * L + 1)), J(this.depth), (this.l_buf = 0), (this.lit_bufsize = 0), (this.last_lit = 0), (this.d_buf = 0), (this.opt_len = 0), (this.static_len = 0), (this.matches = 0), (this.insert = 0), (this.bi_buf = 0), (this.bi_valid = 0);
+    (this.strm = null), (this.status = 0), (this.pending_buf = null), (this.pending_buf_size = 0), (this.pending_out = 0), (this.pending = 0), (this.wrap = 0), (this.gzhead = null), (this.gzindex = 0), (this.method = R), (this.last_flush = -1), (this.w_size = 0), (this.w_bits = 0), (this.w_mask = 0), (this.window = null), (this.window_size = 0), (this.prev = null), (this.head = null), (this.ins_h = 0), (this.hash_size = 0), (this.hash_bits = 0), (this.hash_mask = 0), (this.hash_shift = 0), (this.block_start = 0), (this.match_length = 0), (this.prev_match = 0), (this.match_available = 0), (this.strstart = 0), (this.match_start = 0), (this.lookahead = 0), (this.prev_length = 0), (this.max_chain_length = 0), (this.max_lazy_match = 0), (this.level = 0), (this.strategy = 0), (this.good_match = 0), (this.nice_match = 0), (this.dyn_ltree = new i.Buf16(2 * P)), (this.dyn_dtree = new i.Buf16((2 * D + 1) * 2)), (this.bl_tree = new i.Buf16((2 * M + 1) * 2)), J(this.dyn_ltree), J(this.dyn_dtree), J(this.bl_tree), (this.l_desc = null), (this.d_desc = null), (this.bl_desc = null), (this.bl_count = new i.Buf16(U + 1)), (this.heap = new i.Buf16(2 * b + 1)), J(this.heap), (this.heap_len = 0), (this.heap_max = 0), (this.depth = new i.Buf16(2 * b + 1)), J(this.depth), (this.l_buf = 0), (this.lit_bufsize = 0), (this.last_lit = 0), (this.d_buf = 0), (this.opt_len = 0), (this.static_len = 0), (this.matches = 0), (this.insert = 0), (this.bi_buf = 0), (this.bi_valid = 0);
 }
 function ef(e) {
     var t;
@@ -215,7 +215,7 @@ function em(e, t, n, r, a, o) {
     return (e.state = l), (l.strm = e), (l.wrap = s), (l.gzhead = null), (l.w_bits = r), (l.w_size = 1 << l.w_bits), (l.w_mask = l.w_size - 1), (l.hash_bits = a + 7), (l.hash_size = 1 << l.hash_bits), (l.hash_mask = l.hash_size - 1), (l.hash_shift = ~~((l.hash_bits + w - 1) / w)), (l.window = new i.Buf8(2 * l.w_size)), (l.head = new i.Buf16(l.hash_size)), (l.prev = new i.Buf16(l.w_size)), (l.lit_bufsize = 1 << (a + 6)), (l.pending_buf_size = 4 * l.lit_bufsize), (l.pending_buf = new i.Buf8(l.pending_buf_size)), (l.d_buf = 1 * l.lit_bufsize), (l.l_buf = 3 * l.lit_bufsize), (l.level = t), (l.strategy = o), (l.method = n), eh(e);
 }
 function eI(e, t) {
-    return em(e, t, R, y, b, N);
+    return em(e, t, R, y, L, N);
 }
 function eT(e, t) {
     if (!e || !e.state || t > E || t < 0) return e ? X(e, p) : p;

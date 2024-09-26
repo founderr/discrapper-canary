@@ -54,10 +54,10 @@ function y(e) {
     var t;
     (T[e.invite.code] = E.Z.createFromServer(e.invite)), (r = null !== (t = o()(l()(c()(Object.values(T), 'createdAt')))) && void 0 !== t ? t : null), (A = !1);
 }
-function b() {
+function L() {
     A = !1;
 }
-function L(e) {
+function b(e) {
     var t;
     null != e.invites &&
         e.invites.forEach((e) => {
@@ -108,8 +108,8 @@ h(x, 'displayName', 'InstantInviteStore'),
         CONNECTION_OPEN: v,
         CHANNEL_DELETE: N,
         FRIEND_INVITE_CREATE_SUCCESS: y,
-        FRIEND_INVITE_CREATE_FAILURE: b,
-        FRIEND_INVITE_REVOKE_SUCCESS: L,
+        FRIEND_INVITE_CREATE_FAILURE: L,
+        FRIEND_INVITE_REVOKE_SUCCESS: b,
         INSTANT_INVITE_CREATE_SUCCESS: O,
         INSTANT_INVITE_CREATE_FAILURE: R,
         INSTANT_INVITE_REVOKE_SUCCESS: C,

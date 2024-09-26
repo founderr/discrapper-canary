@@ -17,13 +17,13 @@ var i = t(735250),
     p = t(583027),
     _ = t(585483),
     C = t(499254),
-    f = t(541099),
-    h = t(827498),
+    h = t(541099),
+    f = t(827498),
     A = t(392370),
     E = t(98880),
     N = t(804307),
-    v = t(520315),
-    x = t(532309),
+    x = t(520315),
+    v = t(532309),
     I = t(561160),
     g = t(41558),
     P = t(106771),
@@ -42,14 +42,14 @@ function Z(e) {
 }
 function O(e) {
     let { channel: n, query: t, entrypoint: l, isScrollCloseToBottom: s } = e,
-        c = l === h._b.TEXT,
-        d = l === h._b.TEXT,
+        c = l === f._b.TEXT,
+        d = l === f._b.TEXT,
         {
             loading: u,
             isEmptyState: p,
             commandResults: _,
             hasCommandResults: C,
-            applicationResults: f
+            applicationResults: h
         } = (0, A.pe)({
             channel: n,
             query: t,
@@ -60,7 +60,7 @@ function O(e) {
         {
             fetchState: E,
             applicationResults: N,
-            fetchNextPage: v
+            fetchNextPage: x
         } = (0, A.Q2)({
             query: t,
             channel: n,
@@ -69,16 +69,16 @@ function O(e) {
             entrypoint: l
         });
     a.useEffect(() => {
-        s && E === m.M.FETCHED && v();
-    }, [v, E, s]);
-    let x = null == E || E === m.M.FETCHING,
+        s && E === m.M.FETCHED && x();
+    }, [x, E, s]);
+    let v = null == E || E === m.M.FETCHING,
         g = a.useMemo(() => {
-            let e = f.map((e) => ({
+            let e = h.map((e) => ({
                     application: e,
                     installOnDemand: !0
                 })),
                 n = new Set(
-                    f.map((e) => {
+                    h.map((e) => {
                         let { id: n } = e;
                         return n;
                     })
@@ -96,16 +96,16 @@ function O(e) {
                     )
                 )
             ];
-        }, [N, f]),
+        }, [N, h]),
         P = g.length > 0,
-        L = p && !P && !x;
+        L = p && !P && !v;
     return u
         ? (0, i.jsx)(k, {})
         : L
           ? (0, i.jsx)(I.A, {
-                type: h.LG.SEARCH_EMPTY,
+                type: f.LG.SEARCH_EMPTY,
                 searchQuery: t,
-                textContent: l === h._b.TEXT ? R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+                textContent: l === f._b.TEXT ? R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
             })
           : (0, i.jsxs)('div', {
                 children: [
@@ -115,10 +115,10 @@ function O(e) {
                             commandResults: _,
                             query: t
                         }),
-                    (P || x) &&
+                    (P || v) &&
                         (0, i.jsx)(B, {
                             applicationResults: g,
-                            includePlaceholder: x,
+                            includePlaceholder: v,
                             query: t,
                             searchesBots: d
                         })
@@ -131,7 +131,7 @@ function H(e) {
         m = o.length > 4,
         A = a.useMemo(() => (m ? o.slice(0, 4) : o), [o, m]),
         [E, N] = a.useState(!1),
-        x = null !== (n = (0, s.Z)(E)) && void 0 !== n ? n : E,
+        v = null !== (n = (0, s.Z)(E)) && void 0 !== n ? n : E,
         I = a.useCallback(() => N((e) => !e), []),
         L = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
         M = E && !L;
@@ -140,21 +140,21 @@ function H(e) {
         ref: y,
         isTransitioning: j,
         onTransitionEnd: Z
-    } = (0, v.Z)({
+    } = (0, x.Z)({
         key: r,
         isExpanded: M,
         durationMs: 200,
         maxAnimationHeight: S.K7
     });
     a.useEffect(() => {
-        !x &&
+        !v &&
             E &&
             (0, c.yw)(b.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
-                section_name: h.L3.SEARCH,
-                source: f.Z.entrypoint(),
+                section_name: f.L3.SEARCH,
+                source: h.Z.entrypoint(),
                 num: o.length
             });
-    }, [o.length, x, E]);
+    }, [o.length, v, E]);
     let O = M || j,
         H = M ? g.Z.buttonTypes.VIEW_LESS : g.Z.buttonTypes.VIEW_MORE,
         U = O ? o : A;
@@ -179,12 +179,12 @@ function H(e) {
                             query: r,
                             searchResultsPosition: n,
                             onClick: () => {
-                                let e = f.Z.entrypoint();
-                                C.y(h.ti.DISMISSED),
+                                let e = h.Z.entrypoint();
+                                C.y(f.ti.DISMISSED),
                                     (0, p.Mo)({
                                         command: t,
                                         location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
-                                        sectionName: h.L3.SEARCH
+                                        sectionName: f.L3.SEARCH
                                     }),
                                     d.Po({
                                         channelId: l.id,
@@ -193,7 +193,7 @@ function H(e) {
                                         location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
                                         triggerSection: void 0,
                                         queryLength: r.length,
-                                        sectionName: h.L3.SEARCH,
+                                        sectionName: f.L3.SEARCH,
                                         query: r,
                                         searchResultsPosition: n,
                                         source: e
@@ -209,7 +209,7 @@ function H(e) {
     });
 }
 function U(e) {
-    let { trackSearchResultsItemImpressionRef: n } = (0, x.Z)({
+    let { trackSearchResultsItemImpressionRef: n } = (0, v.Z)({
         applicationId: e.application.id,
         query: e.query,
         searchResultsPosition: e.resultsPosition
@@ -240,7 +240,7 @@ function B(e) {
                                   {
                                       application: t,
                                       location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
-                                      sectionName: h.L3.SEARCH,
+                                      sectionName: f.L3.SEARCH,
                                       resultsPosition: n,
                                       installOnDemand: l,
                                       query: a
@@ -267,7 +267,7 @@ function B(e) {
                                       application: t,
                                       look: E.U4.LARGE_BANNER,
                                       location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
-                                      sectionName: h.L3.SEARCH,
+                                      sectionName: f.L3.SEARCH,
                                       resultsPosition: n,
                                       installOnDemand: l,
                                       query: a

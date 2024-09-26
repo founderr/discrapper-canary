@@ -20,8 +20,8 @@ var n = t(735250),
     I = t(689938),
     N = t(393752),
     A = t(739017),
-    m = t(113207);
-let C = (0, E.hQ)();
+    C = t(113207);
+let m = (0, E.hQ)();
 function g() {
     let [e, s] = a.useState(-100),
         [t, i] = a.useState(!1),
@@ -38,7 +38,7 @@ function g() {
     function x(e, t) {
         s(e), i((t & S.Dg.VOICE) === S.Dg.VOICE);
     }
-    function f(e, s) {
+    function M(e, s) {
         u.Z.setMode(O, {
             threshold: e,
             autoThreshold: s
@@ -55,15 +55,15 @@ function g() {
             }
         );
     }, []);
-    let M = (0, n.jsx)('section', {
+    let f = (0, n.jsx)('section', {
         className: r()(N.inputSensitivityToggle, N.manual),
         children: (0, n.jsx)(_.Slider, {
             initialValue: g + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => f(-((100 - e) * 1), h),
+            onValueChange: (e) => M(-((100 - e) * 1), h),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': C,
+            'aria-labelledby': m,
             children: (0, n.jsxs)('div', {
                 className: r()(N.sliderBar, N.microphone, N.inputSensitivityBar),
                 children: [
@@ -78,7 +78,7 @@ function g() {
     });
     return (
         h &&
-            (M = (0, n.jsxs)('section', {
+            (f = (0, n.jsxs)('section', {
                 className: N.inputSensitivityToggle,
                 children: [
                     (0, n.jsx)('div', {
@@ -87,7 +87,7 @@ function g() {
                     }),
                     (0, n.jsx)(_.FormText, {
                         type: _.FormText.Types.DESCRIPTION,
-                        className: m.marginBottom8,
+                        className: C.marginBottom8,
                         children: I.Z.Messages.FORM_HELP_AUTOMATIC_VAD
                     })
                 ]
@@ -96,9 +96,9 @@ function g() {
             className: N.sensitivity,
             children: [
                 (0, n.jsx)(_.FormTitle, {
-                    id: C,
+                    id: m,
                     tag: _.FormTitleTags.H5,
-                    className: m.marginBottom8,
+                    className: C.marginBottom8,
                     children: I.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY
                 }),
                 (0, n.jsxs)('div', {
@@ -107,11 +107,11 @@ function g() {
                             (0, n.jsx)(E.FG, {
                                 children: (e) =>
                                     (0, n.jsxs)('div', {
-                                        className: r()(A.horizontal, m.marginBottom4),
+                                        className: r()(A.horizontal, C.marginBottom4),
                                         children: [
                                             (0, n.jsx)(_.FormTitle, {
                                                 tag: _.FormTitleTags.H3,
-                                                className: m.marginReset,
+                                                className: C.marginReset,
                                                 children: (0, n.jsx)('label', {
                                                     htmlFor: e,
                                                     children: I.Z.Messages.FORM_LABEL_AUTOMATIC_VAD
@@ -120,18 +120,18 @@ function g() {
                                             (0, n.jsx)(_.Switch, {
                                                 id: e,
                                                 checked: h,
-                                                onChange: (e) => f(g, e)
+                                                onChange: (e) => M(g, e)
                                             })
                                         ]
                                     })
                             }),
-                        M
+                        f
                     ]
                 }),
                 !R &&
                     (0, n.jsx)(_.FormText, {
                         type: _.FormText.Types.DESCRIPTION,
-                        className: r()(N.inputDisabledWarning, m.marginBottom8),
+                        className: r()(N.inputDisabledWarning, C.marginBottom8),
                         children: I.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({ onEnableClick: u.Z.enable })
                     })
             ]

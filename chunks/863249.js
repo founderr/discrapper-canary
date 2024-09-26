@@ -171,10 +171,10 @@ let g = async (e, t) => {
 function y() {
     i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW' });
 }
-function b() {
+function L() {
     i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR' });
 }
-function L(e) {
+function b(e) {
     let { guild: t, guildJoinRequest: n, guildJoinRequestUser: r, reason: i, reasonOther: a, responses: o } = e;
     h.default.track(m.rMx.GUILD_MEMBER_APPLICATION_REPORTED, {
         application_id: n.joinRequestId,
@@ -193,6 +193,6 @@ t.ZP = {
     updateVerificationFormDescriptionLocal: N,
     enableVerificationForm: O,
     submitVerificationForm: C,
-    clearCoachmark: b,
-    reportApplication: L
+    clearCoachmark: L,
+    reportApplication: b
 };

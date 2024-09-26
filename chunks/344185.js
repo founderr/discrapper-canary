@@ -105,7 +105,7 @@ function C(e) {
     (E[t.guild_id] = { ...E[t.guild_id] }), delete E[t.guild_id][t.id];
 }
 let y = {};
-class b extends (r = s.ZP.Store) {
+class L extends (r = s.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -132,8 +132,8 @@ class b extends (r = s.ZP.Store) {
         return f.has(e);
     }
 }
-_(b, 'displayName', 'ActiveThreadsStore'),
-    (t.Z = new b(l.Z, {
+_(L, 'displayName', 'ActiveThreadsStore'),
+    (t.Z = new L(l.Z, {
         CONNECTION_OPEN: T,
         OVERLAY_INITIALIZE: g,
         GUILD_CREATE: S,

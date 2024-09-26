@@ -36,14 +36,14 @@ function N(e) {
             platform: S.S4.DESKTOP
         },
         [C, y] = u.useState(!1),
-        b = m.Z.theme,
-        L = { ...r };
+        L = m.Z.theme,
+        b = { ...r };
     function D(e) {
         var n;
         null == i || i(e.target), (N.current = e.target), O(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([p.Z.HELLO, R], null != t ? t : '');
     }
     return (
-        b === A.BRd.LIGHT ? (L.colorScheme = 'light') : (L.colorScheme = 'dark'),
+        L === A.BRd.LIGHT ? (b.colorScheme = 'light') : (b.colorScheme = 'dark'),
         u.useEffect(
             () => (
                 I.S.dispatch(A.CkL.IFRAME_MOUNT, { id: v }),
@@ -65,10 +65,10 @@ function N(e) {
                 }
             );
         }, []),
-        C && (L.pointerEvents = 'none'),
+        C && (b.pointerEvents = 'none'),
         null != t
             ? (0, l.jsx)('iframe', {
-                  style: L,
+                  style: b,
                   allow: 'autoplay; encrypted-media',
                   referrerPolicy: c,
                   onLoad: D,

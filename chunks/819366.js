@@ -53,8 +53,8 @@ function R(e) {
     });
 }
 function C(e) {
-    let { className: t, userId: i, channelId: a, parsedUserId: f, content: C, inlinePreview: y = !1, viewingChannelId: b } = e,
-        { analyticsLocations: L } = (0, _.ZP)(d.Z.USER_MENTION),
+    let { className: t, userId: i, channelId: a, parsedUserId: f, content: C, inlinePreview: y = !1, viewingChannelId: L } = e,
+        { analyticsLocations: b } = (0, _.ZP)(d.Z.USER_MENTION),
         D = (0, l.e7)([A.default], () => A.default.getUser(i)),
         M = (0, l.e7)([I.Z], () => I.Z.getChannel(a)),
         P = null != M ? M.getGuildId() : null,
@@ -68,7 +68,7 @@ function C(e) {
                               return (t) =>
                                   (0, r.jsx)(e, {
                                       ...t,
-                                      viewingChannelId: b,
+                                      viewingChannelId: L,
                                       user: D,
                                       channel: M,
                                       guildId: P
@@ -95,11 +95,11 @@ function C(e) {
         });
     return y
         ? (0, r.jsx)(_.Gt, {
-              value: L,
+              value: b,
               children: B()
           })
         : (0, r.jsx)(_.Gt, {
-              value: L,
+              value: b,
               children: (0, r.jsx)(u.Popout, {
                   preload:
                       null == D

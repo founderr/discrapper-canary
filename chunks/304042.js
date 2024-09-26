@@ -30,8 +30,8 @@ var a = n(120356),
     R = n(502762),
     C = n(652853),
     y = n(194811),
-    b = n(373826),
-    L = n(315324),
+    L = n(373826),
+    b = n(315324),
     D = n(582123),
     M = n(648926),
     P = n(290274),
@@ -167,7 +167,7 @@ function Z(e) {
                                     })
                                 ]
                             }),
-                            (0, i.jsx)(b.Z, {
+                            (0, i.jsx)(L.Z, {
                                 variant: 'text-xs/normal',
                                 text: x.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({ guildName: q.name }),
                                 onClick: n
@@ -178,7 +178,7 @@ function Z(e) {
                         users: X,
                         guildId: q.id,
                         channelId: Q.id,
-                        maxUsers: L.W,
+                        maxUsers: b.W,
                         size: l.AvatarSizes.SIZE_16,
                         disableUserPopout: (e) => e === t.id,
                         overflowCountVariant: 'text-xxs/semibold',
@@ -193,7 +193,7 @@ function Z(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)('div', { className: G.voiceChannelDivider }),
-                          (0, i.jsx)(L.Z, {
+                          (0, i.jsx)(b.Z, {
                               user: t,
                               guild: q,
                               channel: Q,

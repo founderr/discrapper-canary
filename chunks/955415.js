@@ -197,7 +197,7 @@ let A = (e) => {
         className: null,
         isDisabled: !1
     });
-let b = (e) => {
+let L = (e) => {
         let { children: t, className: n, containerRef: r } = e;
         return (0, a.jsx)('div', {
             ref: r,
@@ -205,7 +205,7 @@ let b = (e) => {
             children: t
         });
     },
-    L = (e) => {
+    b = (e) => {
         let { guild: t } = e,
             [n, r] = o.useState(!1),
             i = I.ZP.getGuildSplashURL({
@@ -245,4 +245,4 @@ let b = (e) => {
             })
         });
     };
-(b.Header = A), (b.Body = v), (b.Icon = N), (b.Info = O), (b.Data = R), (b.Channel = C), (b.Button = y), (b.GuildSplash = L), (b.GuildName = D), (b.GuildTemplateName = M), (A.displayName = 'InviteButton.Header'), (v.displayName = 'InviteButton.Body'), (N.displayName = 'InviteButton.Icon'), (O.displayName = 'InviteButton.Info'), (R.displayName = 'InviteButton.Data'), (C.displayName = 'InviteButton.Channel'), (y.displayName = 'InviteButton.Button'), (L.displayName = 'InviteButton.GuildSplash'), (D.displayName = 'InviteButton.GuildName'), (M.displayName = 'InviteButton.GuildTemplateName'), (t.Z = b);
+(L.Header = A), (L.Body = v), (L.Icon = N), (L.Info = O), (L.Data = R), (L.Channel = C), (L.Button = y), (L.GuildSplash = b), (L.GuildName = D), (L.GuildTemplateName = M), (A.displayName = 'InviteButton.Header'), (v.displayName = 'InviteButton.Body'), (N.displayName = 'InviteButton.Icon'), (O.displayName = 'InviteButton.Info'), (R.displayName = 'InviteButton.Data'), (C.displayName = 'InviteButton.Channel'), (y.displayName = 'InviteButton.Button'), (b.displayName = 'InviteButton.GuildSplash'), (D.displayName = 'InviteButton.GuildName'), (M.displayName = 'InviteButton.GuildTemplateName'), (t.Z = L);

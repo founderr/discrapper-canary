@@ -24,12 +24,12 @@ var r,
     R = n(29461),
     C = n(197859),
     y = n(732116),
-    b = n(653457),
-    L = 'Promise',
+    L = n(653457),
+    b = 'Promise',
     D = y.CONSTRUCTOR,
     M = y.REJECTION_EVENT,
     P = y.SUBCLASSING,
-    U = R.getterFor(L),
+    U = R.getterFor(b),
     w = R.set,
     x = C && C.prototype,
     G = C,
@@ -37,7 +37,7 @@ var r,
     B = c.TypeError,
     F = c.document,
     Z = c.process,
-    V = b.f,
+    V = L.f,
     H = V,
     Y = !!(F && F.createEvent && c.dispatchEvent),
     j = 'unhandledrejection',
@@ -152,7 +152,7 @@ if (
     }).prototype),
     ((r = function (e) {
         w(this, {
-            type: L,
+            type: b,
             done: !1,
             notified: !1,
             parent: !1,
@@ -182,7 +182,7 @@ if (
             t = U(e);
         (this.promise = e), (this.resolve = ea(es, t)), (this.reject = ea(eo, t));
     }),
-    (b.f = V =
+    (L.f = V =
         function (e) {
             return e === G || e === a ? new i(e) : H(e);
         }),
@@ -215,5 +215,5 @@ s(
     },
     { Promise: G }
 ),
-    f(G, L, !1, !0),
-    h(L);
+    f(G, b, !1, !0),
+    h(b);

@@ -191,7 +191,7 @@ var I = function e(t) {
     R = g.call(Function.call, RegExp.prototype.exec),
     C = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     y = /\\(\\)?/g,
-    b = function (e) {
+    L = function (e) {
         var t = O(e, 0, 1),
             n = O(e, -1);
         if ('%' === t && '%' !== n) throw new i('invalid intrinsic syntax, expected closing `%`');
@@ -204,7 +204,7 @@ var I = function e(t) {
             r
         );
     },
-    L = function (e, t) {
+    b = function (e, t) {
         var n,
             r = e;
         if ((S(T, r) && (r = '%' + (n = T[r])[0] + '%'), S(p, r))) {
@@ -222,9 +222,9 @@ e.exports = function (e, t) {
     if ('string' != typeof e || 0 === e.length) throw new o('intrinsic name must be a non-empty string');
     if (arguments.length > 1 && 'boolean' != typeof t) throw new o('"allowMissing" argument must be a boolean');
     if (null === R(/^%?[^%]*%?$/, e)) throw new i('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
-    var n = b(e),
+    var n = L(e),
         r = n.length > 0 ? n[0] : '',
-        a = L('%' + r + '%', t),
+        a = b('%' + r + '%', t),
         s = a.name,
         u = a.value,
         c = !1,

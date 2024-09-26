@@ -29,8 +29,8 @@ var a = n(735250),
     R = n(275759),
     C = n(107484),
     y = n(977392),
-    b = n(134433),
-    L = n(753194),
+    L = n(134433),
+    b = n(753194),
     D = n(458034),
     M = n(856651),
     P = n(981631),
@@ -99,7 +99,7 @@ function k(e) {
                 m = (null == h ? void 0 : h.bot) != null ? new v.Z(h.bot) : null;
             return (
                 R.SJ.includes(null !== (t = null == h ? void 0 : h.id) && void 0 !== t ? t : '')
-                    ? (s = (0, a.jsx)(L.Z, {
+                    ? (s = (0, a.jsx)(b.Z, {
                           className: x.botTag,
                           color: r,
                           size: 16
@@ -280,7 +280,7 @@ function F(e) {
                         ...t,
                         ...e,
                         children: [
-                            (0, a.jsx)(b.Z, {
+                            (0, a.jsx)(L.Z, {
                                 className: x.badgeVerifiedIcon,
                                 size: 16,
                                 color: u.colorString

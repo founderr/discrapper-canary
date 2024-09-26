@@ -61,8 +61,8 @@ function N(e, t, n) {
 }
 t.Z = a.memo(function (e) {
     let t,
-        { src: n, volume: r = 1, onVolumeChange: o, onMute: _, waveform: f, durationSecs: I, onVolumeShow: O, onVolumeHide: R, onPlay: C, onPause: y, onError: b } = e,
-        L = a.useRef(null),
+        { src: n, volume: r = 1, onVolumeChange: o, onMute: _, waveform: f, durationSecs: I, onVolumeShow: O, onVolumeHide: R, onPlay: C, onPause: y, onError: L } = e,
+        b = a.useRef(null),
         [D, M] = a.useState(0),
         [P, U] = a.useState(I),
         [w, x] = a.useState(!1),
@@ -92,11 +92,11 @@ t.Z = a.memo(function (e) {
             if (!B) X();
         }, [X, B]),
         J = a.useCallback(() => {
-            let e = L.current;
+            let e = b.current;
             if (null == e) return;
             let t = e.error;
-            null == b || b(t);
-        }, [b]),
+            null == L || L(t);
+        }, [L]),
         ee = a.useCallback(
             (e) => {
                 let t = (0, p.A)(e, 1);
@@ -115,7 +115,7 @@ t.Z = a.memo(function (e) {
         }, [D, P, X]),
         ei = a.useCallback(
             (e) => {
-                let t = L.current;
+                let t = b.current;
                 if (null == P || null == t) return;
                 let n = e * P;
                 M(n), (t.currentTime = n), V(!0), clearTimeout(K.current), (K.current = void 0);
@@ -130,7 +130,7 @@ t.Z = a.memo(function (e) {
         if (Z || G) {
             if (G) {
                 var e, t;
-                (ea.current = performance.now()), null == C || C(!1, D, (null !== (t = null === (e = L.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * h.Z.Millis.SECOND);
+                (ea.current = performance.now()), null == C || C(!1, D, (null !== (t = null === (e = b.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * h.Z.Millis.SECOND);
             } else {
                 let e = performance.now(),
                     t = ea.current,
@@ -139,14 +139,14 @@ t.Z = a.memo(function (e) {
             }
         }
     }, [G]),
-        v(L, G, M),
+        v(b, G, M),
         N(n, G, k);
     let eo = G ? u.PauseIcon : u.PlayIcon,
         es = G ? T.Z.Messages.PAUSE : T.Z.Messages.PLAY;
     'Safari' === platform.name
         ? (t = (0, i.jsx)(a.Suspense, {
               children: (0, i.jsx)(S, {
-                  ref: L,
+                  ref: b,
                   className: g.audioElement,
                   src: n,
                   preload: H,
@@ -159,7 +159,7 @@ t.Z = a.memo(function (e) {
               })
           }))
         : (t = (0, i.jsx)(d.Z, {
-              ref: L,
+              ref: b,
               className: g.audioElement,
               controls: !1,
               preload: H,

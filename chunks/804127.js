@@ -1,70 +1,70 @@
 n.d(t, {
     G: function () {
-        return o;
+        return l;
     },
     u: function () {
-        return l;
+        return o;
     }
 }),
     n(47120);
-var s = n(470079),
+var r = n(470079),
     a = n(617136),
-    r = n(272008);
-function l(e) {
-    let { isClaimingReward: t, isFetchingRewardCode: n, questContent: a, quest: l, requiresPlatformSelection: o, rewardCode: i, selectedPlatformType: d } = e,
-        [u, c] = s.useState(!1),
-        E = s.useCallback((e, t, n) => {
-            c(!1);
+    s = n(272008);
+function o(e) {
+    let { isClaimingReward: t, isFetchingRewardCode: n, questContent: a, quest: o, requiresPlatformSelection: l, rewardCode: i, selectedPlatformType: d, preview: c } = e,
+        [u, p] = r.useState(!1),
+        _ = r.useCallback((e, t, n) => {
+            p(!1);
             try {
-                (0, r.QB)(e, t, n);
+                (0, s.QB)(e, t, n);
             } catch (e) {
-                c(!0);
+                p(!0);
             }
         }, []),
-        C = s.useCallback((e) => {
-            c(!1);
+        m = r.useCallback((e) => {
+            p(!1);
             try {
-                (0, r.pf)(e);
+                (0, s.pf)(e);
             } catch (e) {
-                c(!0);
+                p(!0);
             }
         }, []);
     return (
-        s.useEffect(() => {
-            var e, s;
-            if (null == i && !u && !t && !n && !o) (null === (e = l.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? E(l.id, d, a) : (null === (s = l.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null && C(l.id);
-        }, [E, C, u, t, n, a, l, o, i, d]),
+        r.useEffect(() => {
+            var e, r;
+            if (!0 !== c && null == i && !u && !t && !n && !l) (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? _(o.id, d, a) : (null === (r = o.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null && m(o.id);
+        }, [_, m, u, t, n, a, o, l, i, d, c]),
         {
-            claimCode: E,
-            fetchCode: C,
+            claimCode: _,
+            fetchCode: m,
             hasError: u,
-            setHasError: c
+            setHasError: p
         }
     );
 }
-function o(e) {
-    let { claimCode: t, fetchCode: n, hasError: r, onDismiss: l, quest: o, questContent: i, questContentCTA: d = a.jZ.GET_REWARD_CODE, questContentPosition: u, requiresPlatformSelection: c, selectedPlatformType: E } = e;
-    return s.useCallback(() => {
+function l(e) {
+    let { claimCode: t, fetchCode: n, hasError: s, onDismiss: o, quest: l, questContent: i, questContentCTA: d = a.jZ.GET_REWARD_CODE, questContentPosition: c, requiresPlatformSelection: u, selectedPlatformType: p } = e;
+    return r.useCallback(() => {
         var e;
-        c && null != E
-            ? (t(o.id, E, i),
+        u && null != p
+            ? (t(l.id, p, i),
               (0, a._3)({
-                  questId: o.id,
+                  questId: l.id,
                   questContent: i,
                   questContentCTA: d,
-                  questContentPosition: u
+                  questContentPosition: c
               }))
-            : r
-              ? (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null
-                  ? n(o.id)
-                  : null != E &&
-                    (t(o.id, E, i),
+            : s
+              ? (null === (e = l.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null
+                  ? n(l.id)
+                  : null != p &&
+                    (t(l.id, p, i),
                     (0, a._3)({
-                        questId: o.id,
+                        questId: l.id,
                         questContent: i,
                         questContentCTA: d,
-                        questContentPosition: u
+                        questContentPosition: c
                     }))
-              : l();
-    }, [t, n, r, l, o, i, d, u, c, E]);
+              : o();
+    }, [t, n, s, o, l, i, d, c, u, p]);
 }

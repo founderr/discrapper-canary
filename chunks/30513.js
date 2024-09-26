@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     },
     WW: function () {
-        return L;
+        return b;
     },
     XO: function () {
         return y;
@@ -18,7 +18,7 @@ n.d(t, {
         return D;
     },
     zC: function () {
-        return b;
+        return L;
     }
 });
 var r = n(692547),
@@ -152,10 +152,10 @@ function C() {
 function y() {
     return [f(), m(l.Eu4.TIER_2), R(), v()];
 }
-function b() {
+function L() {
     return [m(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), N(), I(), v()];
 }
-function L() {
+function b() {
     return [I(), E(), m(l.Eu4.TIER_3), v()];
 }
 function D() {

@@ -21,10 +21,10 @@ n.d(t, {
         return B;
     },
     Wl: function () {
-        return L;
+        return b;
     },
     XO: function () {
-        return b;
+        return L;
     },
     Xn: function () {
         return j;
@@ -97,11 +97,11 @@ function y(e, t, n) {
         [e, t, n]
     );
 }
-function b(e, t, n, r) {
+function L(e, t, n, r) {
     let i = C('usernameProfile', n, r);
     return y(e.author.id, t.id, i);
 }
-function L(e, t, n, r) {
+function b(e, t, n, r) {
     let i = C('referencedUsernameProfile', n, r);
     return y(null == e ? void 0 : e.author.id, t.id, i);
 }

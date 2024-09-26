@@ -36,7 +36,7 @@ let S = {},
     R = {},
     C = null,
     y = {};
-function b() {
+function L() {
     for (let e in ((S = {}), (O = {}), (A = {}), (v = {}), (N = {}), (C = f.Z.getChannelId()), y)) clearTimeout(y[e]);
     (y = {}),
         p.Z.forEachGuild((e) => {
@@ -44,7 +44,7 @@ function b() {
         }),
         M();
 }
-function L(e) {
+function b(e) {
     for (let t in (delete S[e], delete O[e], delete A[e], delete v[e], delete N[e], D(e), v[e])) U(e, t);
 }
 function D(e) {
@@ -115,7 +115,7 @@ function G(e) {
     let { channels: t } = e;
     for (let e of t)
         if (e.isNSFW() !== k(e.guild_id, e.parent_id)) {
-            b();
+            L();
             return;
         }
     return !1;
@@ -188,15 +188,15 @@ function V() {
     M();
 }
 function H(e) {
-    if (e.channels.length > 0) return L(e.guildId);
+    if (e.channels.length > 0) return b(e.guildId);
 }
 function Y(e) {
     let { guild: t } = e;
-    return L(t.id);
+    return b(t.id);
 }
 function j(e) {
     let { guildId: t } = e;
-    return L(t);
+    return b(t);
 }
 function W(e) {
     Z(e), K();
@@ -340,16 +340,16 @@ class es extends (r = l.ZP.Store) {
 }
 g(es, 'displayName', 'ActiveJoinedThreadsStore'),
     (t.Z = new es(u.Z, {
-        CONNECTION_OPEN: b,
-        OVERLAY_INITIALIZE: b,
+        CONNECTION_OPEN: L,
+        OVERLAY_INITIALIZE: L,
         THREAD_LIST_SYNC: j,
-        LOAD_THREADS_SUCCESS: b,
-        LOAD_ARCHIVED_THREADS_SUCCESS: b,
-        SEARCH_FINISH: b,
-        MOD_VIEW_SEARCH_FINISH: b,
+        LOAD_THREADS_SUCCESS: L,
+        LOAD_ARCHIVED_THREADS_SUCCESS: L,
+        SEARCH_FINISH: L,
+        MOD_VIEW_SEARCH_FINISH: L,
         GUILD_CREATE: Y,
-        GUILD_DELETE: b,
-        CURRENT_USER_UPDATE: b,
+        GUILD_DELETE: L,
+        CURRENT_USER_UPDATE: L,
         THREAD_CREATE: x,
         THREAD_UPDATE: x,
         THREAD_DELETE: x,

@@ -1,6 +1,6 @@
 n.d(t, {
     $s: function () {
-        return M;
+        return S;
     },
     AV: function () {
         return T;
@@ -9,44 +9,44 @@ n.d(t, {
         return h;
     },
     Kn: function () {
-        return S;
+        return M;
     },
     Nq: function () {
-        return u;
-    },
-    Q_: function () {
         return E;
     },
+    Q_: function () {
+        return u;
+    },
     TW: function () {
-        return m;
+        return g;
     },
     bD: function () {
         return R;
     },
     pn: function () {
-        return g;
-    },
-    uv: function () {
-        return p;
-    },
-    vx: function () {
         return N;
     },
+    uv: function () {
+        return f;
+    },
+    vx: function () {
+        return C;
+    },
     wG: function () {
-        return A;
+        return p;
     }
 });
 var s = n(442837),
     a = n(704215),
     r = n(605236),
     i = n(276444),
-    o = n(822070),
-    l = n(520540),
+    l = n(822070),
+    o = n(520540),
     c = n(898997),
     d = n(981631),
     _ = n(689938);
-let u = '40%',
-    E = 3,
+let E = '40%',
+    u = 3,
     T = 8,
     I = (e) => {
         let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: s, helpdeskArticle: a } = e;
@@ -54,78 +54,78 @@ let u = '40%',
             ? _.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({ helpdeskArticle: a })
             : n
               ? _.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
-                    numFriends: E - s,
+                    numFriends: u - s,
                     helpdeskArticle: a
                 })
               : _.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER.format({
-                    numFriends: E,
+                    numFriends: u,
                     helpdeskArticle: a
                 });
     },
     R = (e) => {
-        let { enabled: t, eligibleToFetch: n } = l.g.useExperiment({ location: e }, { autoTrackExposure: !1 });
+        let { enabled: t, eligibleToFetch: n } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 });
         (0, c.B)(e, !n);
         let a = (0, s.e7)([i.Z], () => i.Z.getIsEligibleToSendReferrals());
         return t && a;
     },
-    m = (e) => {
-        let t = p(e);
+    g = (e) => {
+        let t = f(e);
         return null != t && t !== d.g2L.NOT_ELIGIBLE;
     },
-    g = (e) => {
-        let t = m(e),
+    N = (e) => {
+        let t = g(e),
             n = R('PremiumManagementSettings'),
             a = (0, s.e7)([i.Z], () => i.Z.getRecipientStatus());
         if (!t) return !1;
         if (!n) return !!(a.size > 0) || !1;
         return !0;
     },
-    N = (e) => {
-        let t = C(e),
+    C = (e) => {
+        let t = m(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
         return t && !n;
     },
-    C = (e) => {
-        let { enabled: t } = l.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            { enabled: n } = o.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
+    m = (e) => {
+        let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
+            { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
             a = (0, s.e7)([i.Z], () => i.Z.getIsSenderEligibleForIncentive());
         return t && n && a;
     },
-    p = (e) => {
-        let { enabled: t } = l.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            { enabled: n } = o.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
+    f = (e) => {
+        let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
+            { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
             a = (0, s.e7)([i.Z], () => i.Z.getIsFetchingReferralIncentiveEligibility()),
             r = (0, s.e7)([i.Z], () => i.Z.getSenderIncentiveState());
         return a ? d.g2L.NOT_ELIGIBLE : n && t ? r : d.g2L.NOT_ELIGIBLE;
     },
-    f = (e) => {
-        let t = p(e);
+    A = (e) => {
+        let t = f(e);
         return t === d.g2L.COOLDOWN || t === d.g2L.UNAPPLIED || t === d.g2L.QUALIFIED;
     },
-    A = (e) => {
-        let t = f(e),
+    p = (e) => {
+        let t = A(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !n;
     },
-    S = (e) => {
-        let t = m(e),
+    M = (e) => {
+        let t = g(e),
             n = R(e),
             s = (0, r.wE)(a.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return !t && n && !s;
     },
-    M = (e) => {
+    S = (e) => {
         let { referralIncentiveLifecycleState: t, hasSentAll: n, referralsStatuses: s } = e;
         switch (t) {
             case d.g2L.NOT_ELIGIBLE:
                 return n ? _.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : _.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS;
             case d.g2L.ELIGIBLE:
-                if (s.sent < 2) return _.Z.Messages.REFERRAL_INCENTIVE_SHARE_NITRO_GET_DISCOUNT.format({ discountRate: u });
-                if (s.redeemed === E) return _.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING;
-                return _.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASSES_KEEP_GOING.format({ discountRate: u });
+                if (s.sent < 2) return _.Z.Messages.REFERRAL_INCENTIVE_SHARE_NITRO_GET_DISCOUNT.format({ discountRate: E });
+                if (s.redeemed === u) return _.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING;
+                return _.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASSES_KEEP_GOING.format({ discountRate: E });
             case d.g2L.QUALIFIED:
             case d.g2L.COOLDOWN:
             case d.g2L.UNAPPLIED:
-                return s.redeemed === E ? _.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING : _.Z.Messages.REFERRAL_INCENTIVE_DISCOUNT_UNLOCKED;
+                return s.redeemed === u ? _.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING : _.Z.Messages.REFERRAL_INCENTIVE_DISCOUNT_UNLOCKED;
         }
     },
     h = (e) => {
@@ -133,14 +133,14 @@ let u = '40%',
         switch (n) {
             case d.g2L.NOT_ELIGIBLE:
                 return I({
-                    hasSentAll: s.sent >= E,
+                    hasSentAll: s.sent >= u,
                     hasSentAtLeastOne: s.sent >= 1,
                     numSentUsers: s.sent,
                     helpdeskArticle: t
                 });
             case d.g2L.ELIGIBLE:
                 let r = {
-                    discountRate: u,
+                    discountRate: E,
                     learnMoreLink: t,
                     subscriptionInterval: _.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
                 };
@@ -149,7 +149,7 @@ let u = '40%',
             case d.g2L.QUALIFIED:
             case d.g2L.COOLDOWN:
             case d.g2L.UNAPPLIED:
-                if (s.redeemed < E) return _.Z.Messages.REFERRAL_INCENTIVE_KEEP_SHARING_TO_EARN_ANOTHER_DISCOUNT.format({ learnMoreLink: t });
+                if (s.redeemed < u) return _.Z.Messages.REFERRAL_INCENTIVE_KEEP_SHARING_TO_EARN_ANOTHER_DISCOUNT.format({ learnMoreLink: t });
                 if (!a)
                     return _.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASS_COUNTDOWN_HAS_BEGUN.format({
                         learnMoreLink: t,

@@ -28,12 +28,12 @@ function S(e) {
         N = (0, a.e7)([d.Z], () => (null != v ? d.Z.getChannelId(v) : null), [v]),
         O = null != v ? v : null,
         R = (0, a.e7)([c.Z], () => (null != O ? c.Z.getGuild(O) : null), [O]),
-        { shouldShowIncidentActions: C, incidentData: y, isUnderLockdown: b } = (0, f.mI)(O),
-        L = (0, l.n2)(null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : m.lds),
+        { shouldShowIncidentActions: C, incidentData: y, isUnderLockdown: L } = (0, f.mI)(O),
+        b = (0, l.n2)(null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : m.lds),
         D = i.useCallback(() => null != R && (0, u._X)(R.id), [R]);
     if (null == R || null == y || !C) return null;
     let M = (e) => {
-            if (e && L && N !== I.oC.MEMBER_SAFETY && D()) {
+            if (e && b && N !== I.oC.MEMBER_SAFETY && D()) {
                 E.default.track(m.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
                     notice_type: m.kVF.GUILD_RAID_NOTIFICATION,
                     guild_id: R.id
@@ -60,7 +60,7 @@ function S(e) {
             size: s.Z.Sizes.MINI
         }),
         U = (0, p.OY)(y, R.name);
-    if (null != (null !== (S = y.dmsDisabledUntil) && void 0 !== S ? S : y.invitesDisabledUntil) && b)
+    if (null != (null !== (S = y.dmsDisabledUntil) && void 0 !== S ? S : y.invitesDisabledUntil) && L)
         return (0, r.jsxs)(o.Notice, {
             className: g.notice,
             color: o.NoticeColors.NEUTRAL,
@@ -88,7 +88,7 @@ function S(e) {
             ]
         });
     let w = (0, p.CG)(y) ? T.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({ guildName: R.name }) : (0, p.kk)(y) ? T.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({ guildName: R.name }) : T.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({ guildName: R.name }),
-        x = L && N === I.oC.MEMBER_SAFETY;
+        x = b && N === I.oC.MEMBER_SAFETY;
     return (0, r.jsxs)(o.Notice, {
         className: g.notice,
         color: o.NoticeColors.WARNING,

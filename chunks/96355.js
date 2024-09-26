@@ -231,12 +231,12 @@
         for (void 0 === n && (n = 1), r = n / 2, i = 0, a = 0; a < 20; a++) (o = r * td[20][a] + r), (i += t_[20][a] * C(e, t, o));
         return r * i;
     }
-    function b(e, t, n, r) {
+    function L(e, t, n, r) {
         var i = e * r - t * n < 0 ? -1 : 1,
             a = e * n + t * r;
         return a > 1 && (a = 1), a < -1 && (a = -1), i * Math.acos(a);
     }
-    function L(e, t, n, r, i, a, o, s, l, u) {
+    function b(e, t, n, r, i, a, o, s, l, u) {
         var c = (u * (e - n)) / 2 + (l * (t - r)) / 2,
             d = (-l * (e - n)) / 2 + (u * (t - r)) / 2,
             _ = o * o,
@@ -253,8 +253,8 @@
             A = (d - I) / s,
             v = (-c - m) / o,
             N = (-d - I) / s,
-            O = b(1, 0, S, A),
-            R = b(S, A, v, N);
+            O = L(1, 0, S, A),
+            R = L(S, A, v, N);
         return 0 === a && R > 0 && (R -= tf), 1 === a && R < 0 && (R += tf), [T, g, O, R];
     }
     function D(e, t) {
@@ -444,7 +444,7 @@
     }
     function en(e, t, n, r, i) {
         var a, o;
-        if (i === eb(e, t, n, r) > 0) for (a = t; a < n; a += r) o = eR(a, e[a], e[a + 1], o);
+        if (i === eL(e, t, n, r) > 0) for (a = t; a < n; a += r) o = eR(a, e[a], e[a + 1], o);
         else for (a = n - r; a >= t; a -= r) o = eR(a, e[a], e[a + 1], o);
         return o && eg(o, o.next) && (eC(o), (o = o.next)), o;
     }
@@ -658,11 +658,11 @@
     function ey(e, t, n) {
         (this.i = e), (this.x = t), (this.y = n), (this.prev = null), (this.next = null), (this.z = null), (this.prevZ = null), (this.nextZ = null), (this.steiner = !1);
     }
-    function eb(e, t, n, r) {
+    function eL(e, t, n, r) {
         for (var i = 0, a = t, o = n - r; a < n; a += r) (i += (e[o] - e[a]) * (e[a + 1] + e[o + 1])), (o = a);
         return i;
     }
-    function eL(e, t) {
+    function eb(e, t) {
         var n = t.id,
             r = t.bbox,
             i = null == t.properties ? {} : t.properties,
@@ -880,7 +880,7 @@
         )
             !(function () {
                 var t = n[0],
-                    i = tL(n)[0][0],
+                    i = tb(n)[0][0],
                     a = n[i],
                     o = eP(e, [t, a]);
                 (o.area = t.area + a.area), (o.type = 'Polygon'), (o.arcs = o.arcs[0]), n.splice(i, 1), n.shift(), n.splice(r(n, o.area), 0, o);
@@ -1705,7 +1705,7 @@
             n = Math.abs(n);
             var E = (d * d) / (n * n) + (_ * _) / ((r = Math.abs(r)) * r);
             E > 1 && ((n *= Math.sqrt(E)), (r *= Math.sqrt(E)));
-            var f = L(e, t, s, l, a, o, n, r, u, c),
+            var f = b(e, t, s, l, a, o, n, r, u, c),
                 h = [],
                 p = f[2],
                 m = f[3],
@@ -1857,12 +1857,12 @@
     (et.deviation = function (e, t, n, r) {
         var i = t && t.length,
             a = i ? t[0] * n : e.length,
-            o = Math.abs(eb(e, 0, a, n));
+            o = Math.abs(eL(e, 0, a, n));
         if (i)
             for (var s = 0, l = t.length; s < l; s++) {
                 var u = t[s] * n,
                     c = s < l - 1 ? t[s + 1] * n : e.length;
-                o -= Math.abs(eb(e, u, c, n));
+                o -= Math.abs(eL(e, u, c, n));
             }
         var d = 0;
         for (s = 0; s < r.length; s += 3) {
@@ -1919,10 +1919,10 @@
                 ? {
                       type: 'FeatureCollection',
                       features: t.geometries.map(function (t) {
-                          return eL(e, t);
+                          return eb(e, t);
                       })
                   }
-                : eL(e, t);
+                : eb(e, t);
         },
         ty = function (e, t) {
             function n(t) {
@@ -1990,14 +1990,14 @@
                 s
             );
         },
-        tb = function (e, t) {
+        tL = function (e, t) {
             for (var n = 0, r = e.length; n < r; ) {
                 var i = (n + r) >>> 1;
                 e[i] < t ? (n = i + 1) : (r = i);
             }
             return n;
         },
-        tL = function (e) {
+        tb = function (e) {
             function t(e, t) {
                 e.forEach(function (e) {
                     e < 0 && (e = ~e);
@@ -2037,7 +2037,7 @@
                         var _,
                             E = l[c],
                             f = l[d];
-                        (_ = a[E])[(s = tb(_, f))] !== f && _.splice(s, 0, f), (_ = a[f])[(s = tb(_, E))] !== E && _.splice(s, 0, E);
+                        (_ = a[E])[(s = tL(_, f))] !== f && _.splice(s, 0, f), (_ = a[f])[(s = tL(_, E))] !== E && _.splice(s, 0, E);
                     }
             return a;
         },

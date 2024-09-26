@@ -43,7 +43,7 @@ let E = 24,
               });
     },
     h = (e) => {
-        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: s = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: f, foreground: h, background: p, icon: m, onClick: I, onContextMenu: T, tooltip: g = null, tooltipColor: S, tooltipPosition: A = 'bottom', tooltipDisabled: v, hideOnClick: N = !0, role: O, 'aria-label': R, 'aria-hidden': C, 'aria-checked': y, 'aria-expanded': b, 'aria-haspopup': L } = e,
+        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: s = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: f, foreground: h, background: p, icon: m, onClick: I, onContextMenu: T, tooltip: g = null, tooltipColor: S, tooltipPosition: A = 'bottom', tooltipDisabled: v, hideOnClick: N = !0, role: O, 'aria-label': R, 'aria-hidden': C, 'aria-checked': y, 'aria-expanded': L, 'aria-haspopup': b } = e,
             D = (0, r.jsx)(m, {
                 x: 0,
                 y: 0,
@@ -103,8 +103,8 @@ let E = 24,
                               'aria-label': M,
                               'aria-hidden': C,
                               'aria-checked': y,
-                              'aria-haspopup': L,
-                              'aria-expanded': b,
+                              'aria-haspopup': b,
+                              'aria-expanded': L,
                               tabIndex: s || null == I ? -1 : 0,
                               children: [
                                   l

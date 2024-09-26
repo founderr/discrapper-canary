@@ -38,7 +38,7 @@ let v = (e, t) => ''.concat(e, ':').concat(t),
                     ? S.Z.Messages.EMOJI_NAMES_WITH_FAVORITED.format({ names: e })
                     : e;
             },
-            b = d && !O;
+            L = d && !O;
         return (0, i.jsx)(u.FocusRing, {
             children: (0, i.jsx)('button', {
                 ...R,
@@ -63,13 +63,13 @@ let v = (e, t) => ''.concat(e, ':').concat(t),
                     size: m,
                     surrogateCodePoint: T,
                     allowAnimatedEmoji: v,
-                    isLocked: b
+                    isLocked: L
                 })
             })
         });
     });
 function O(e) {
-    let { descriptor: t, emojiItemKey: r, isInspected: o, rowIndex: s, channelGuildId: E, onInspect: h, onSelect: I, isScrolling: g, isUsingKeyboardNavigation: A, showEmojiFavoriteTooltip: O, surrogateCodePoint: R, selectedItemClassName: C, getEmojiItemProps: y, isMediumSize: b, isLargeSize: L, pulseItemKey: D, allowAnimatedEmoji: M, setPulseItemKey: P, messageId: U, isBurstReaction: w, rowPosition: x, inNitroLockedSection: G } = e,
+    let { descriptor: t, emojiItemKey: r, isInspected: o, rowIndex: s, channelGuildId: E, onInspect: h, onSelect: I, isScrolling: g, isUsingKeyboardNavigation: A, showEmojiFavoriteTooltip: O, surrogateCodePoint: R, selectedItemClassName: C, getEmojiItemProps: y, isMediumSize: L, isLargeSize: b, pulseItemKey: D, allowAnimatedEmoji: M, setPulseItemKey: P, messageId: U, isBurstReaction: w, rowPosition: x, inNitroLockedSection: G } = e,
         [k, B] = a.useState(''),
         F = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         Z = (0, l.e7)([_.ZP], () => _.ZP.getDisambiguatedEmojiContext(E), [E]),
@@ -110,8 +110,8 @@ function O(e) {
                         ref: l,
                         emoji: H,
                         isFavorite: Z.isFavoriteEmojiWithoutFetchingLatest(H),
-                        isLargeSize: L,
-                        isMediumSize: b,
+                        isLargeSize: b,
+                        isMediumSize: L,
                         isInspected: o,
                         isDisabled: j,
                         showPulse: D === r,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return b;
     }
 });
 var r = n(735250),
@@ -29,11 +29,11 @@ var r = n(735250),
     R = n(666984),
     C = n(290274),
     y = n(228168),
-    b = n(676411);
-function L(e) {
-    let { user: t, currentUser: n, activity: a, guild: L, channel: D, className: M, onClose: P } = e,
+    L = n(676411);
+function b(e) {
+    let { user: t, currentUser: n, activity: a, guild: b, channel: D, className: M, onClose: P } = e,
         { profileType: U } = (0, T.z)(),
-        w = { [b.fullSize]: U === y.y0.FULL_SIZE },
+        w = { [L.fullSize]: U === y.y0.FULL_SIZE },
         x = (0, E.Bq)({
             activity: a,
             user: t
@@ -71,7 +71,7 @@ function L(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(s.Clickable, {
-                                            className: o()(b.clickable, b.inline),
+                                            className: o()(L.clickable, L.inline),
                                             onClick: () => {
                                                 F({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, f.d$)(a, t.id, n);
                                             },
@@ -97,14 +97,14 @@ function L(e) {
                   });
         },
         Y = () =>
-            null == L || null == D
+            null == b || null == D
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)('div', { className: b.voiceChannelDivider }),
+                          (0, r.jsx)('div', { className: L.voiceChannelDivider }),
                           (0, r.jsx)(v.Z, {
                               user: t,
-                              guild: L,
+                              guild: b,
                               channel: D,
                               onAction: F,
                               onClose: P
@@ -115,7 +115,7 @@ function L(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: o()(b.actions, w),
+                      className: o()(L.actions, w),
                       children: (0, r.jsx)(R.Z, {
                           user: t,
                           activity: a,
@@ -130,7 +130,7 @@ function L(e) {
             children: (e) => {
                 let { onAutoDismiss: n } = e;
                 return (0, r.jsxs)(I.Z.Overlay, {
-                    className: o()(b.card, M),
+                    className: o()(L.card, M),
                     ref: Z,
                     children: [
                         (0, r.jsx)(S.Z, {
@@ -146,10 +146,10 @@ function L(e) {
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: b.body,
+                            className: L.body,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: o()(b.content, w),
+                                    className: o()(L.content, w),
                                     children: [
                                         (0, r.jsx)(_.E, {
                                             image: k,
@@ -159,7 +159,7 @@ function L(e) {
                                             size: _.J.SIZE_60
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: b.details,
+                                            className: L.details,
                                             children: [
                                                 (0, r.jsxs)('div', {
                                                     children: [
@@ -176,7 +176,7 @@ function L(e) {
                                                 (0, r.jsx)(g.Z, {
                                                     user: t,
                                                     activity: a,
-                                                    className: b.badges
+                                                    className: L.badges
                                                 }),
                                                 H()
                                             ]

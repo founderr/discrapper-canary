@@ -24,9 +24,9 @@ let O = 490,
     R = 490,
     C = 245,
     y = 200,
-    b = 175;
+    L = 175;
 t.Z = a.forwardRef(function (e, t) {
-    var n, r, o, L, D;
+    var n, r, o, b, D;
     let { channel: M, type: P, editorHeight: U, onVisibilityChange: w } = e,
         x = (0, h.Dt)(),
         G = (0, u.e7)(
@@ -95,7 +95,7 @@ t.Z = a.forwardRef(function (e, t) {
             [N.autocompleteTop]: W
         },
         Q = O;
-    null != j && (Q = (null === (o = P.autocomplete) || void 0 === o ? void 0 : o.small) ? y : (null === (L = B.query) || void 0 === L ? void 0 : L.type) === g.eq.EMOJIS_AND_STICKERS ? R : C), (Q = Math.min(window.innerHeight - b, Q));
+    null != j && (Q = (null === (o = P.autocomplete) || void 0 === o ? void 0 : o.small) ? y : (null === (b = B.query) || void 0 === b ? void 0 : b.type) === g.eq.EMOJIS_AND_STICKERS ? R : C), (Q = Math.min(window.innerHeight - L, Q));
     let X = (0, i.jsx)(E.ZP, {
         id: x,
         className: s()(N.autocomplete, q),

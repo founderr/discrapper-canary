@@ -99,12 +99,12 @@ function y(e) {
         section: n
     };
 }
-function b() {
+function L() {
     Object.values(E.Yn).forEach((e) => {
         m[e] = {};
     });
 }
-function L(e) {
+function b(e) {
     Object.values(E.Yn).forEach((t) => {
         let n = t;
         e.filter((e) => {
@@ -132,7 +132,7 @@ function P() {
     D();
 }
 function U(e) {
-    null != e.channelId && (b(), I.clear());
+    null != e.channelId && (L(), I.clear());
 }
 function w(e) {
     if (null === e.streamId) {
@@ -219,7 +219,7 @@ function H(e) {
     let { userId: t, context: n, quality: r } = e;
     I.set(A(t, n), r);
 }
-b();
+L();
 class Y extends (r = o.ZP.Store) {
     getSection() {
         return p;
@@ -283,4 +283,4 @@ f(Y, 'displayName', 'RTCDebugStore'),
         VOICE_CHANNEL_SELECT: U,
         RTC_CONNECTION_VIDEO: w
     })),
-    c.Z.getMediaEngine().on(s.aB.ConnectionStats, L);
+    c.Z.getMediaEngine().on(s.aB.ConnectionStats, b);

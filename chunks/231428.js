@@ -20,18 +20,18 @@ var n,
     I = t(821849),
     N = t(724757),
     A = t(600164),
-    m = t(239827),
-    C = t(818035),
+    C = t(239827),
+    m = t(818035),
     g = t(509545),
     h = t(78839),
     O = t(74538),
     p = t(807160),
     R = t(474936),
     x = t(231338),
-    f = t(689938),
-    M = t(486142),
+    M = t(689938),
+    f = t(486142),
     D = t(925477);
-function P(e, s, t) {
+function L(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -44,7 +44,7 @@ function P(e, s, t) {
         e
     );
 }
-function L(e) {
+function P(e) {
     let { payments: s, locale: t, compactMode: n, numPages: r } = e,
         l = i.useRef(null),
         [c, _] = i.useState(0),
@@ -62,14 +62,14 @@ function L(e) {
             },
             [s, r, E]
         ),
-        C = (0, N.Z)('billing-history', l);
+        m = (0, N.Z)('billing-history', l);
     return (0, a.jsx)(d.bG, {
-        navigator: C,
+        navigator: m,
         children: (0, a.jsx)(d.SJ, {
             children: (e) => {
                 let { ref: s, ...i } = e;
-                return (0, a.jsx)(m.Z, {
-                    className: o()(M.verticalFit, M.paginator),
+                return (0, a.jsx)(C.Z, {
+                    className: o()(f.verticalFit, f.paginator),
                     currentPageIndex: c,
                     onChangePage: A,
                     numPages: r,
@@ -77,13 +77,13 @@ function L(e) {
                     ref: s,
                     ...i,
                     children: (0, a.jsx)(u.AdvancedScroller, {
-                        className: M.bottomDivider,
+                        className: f.bottomDivider,
                         ref: l,
                         children: I.map((e, s) =>
                             (0, a.jsx)(
                                 p.Z,
                                 {
-                                    className: o()(M.paymentRow, M.bottomDivider),
+                                    className: o()(f.paymentRow, f.bottomDivider),
                                     payment: e,
                                     locale: t,
                                     compactMode: n
@@ -110,15 +110,15 @@ class b extends (n = i.PureComponent) {
         return (
             c()(null != e.paymentGateway, 'Expected payment gateway when rendering for external subscription'),
             (0, a.jsxs)(u.Card, {
-                className: M.externalRow,
+                className: f.externalRow,
                 children: [
                     (0, a.jsx)('div', {
-                        className: M.externalRowHeader,
-                        children: f.Z.Messages.BILLING_EXTERNAL_HEADER.format({ paymentGatewayName: x.Vz[e.paymentGateway] })
+                        className: f.externalRowHeader,
+                        children: M.Z.Messages.BILLING_EXTERNAL_HEADER.format({ paymentGatewayName: x.Vz[e.paymentGateway] })
                     }),
                     (0, a.jsx)('div', {
-                        className: M.externalRowBody,
-                        children: f.Z.Messages.BILLING_EXTERNAL_DESCRIPTION.format({
+                        className: f.externalRowBody,
+                        children: M.Z.Messages.BILLING_EXTERNAL_DESCRIPTION.format({
                             paymentGatewayName: x.Vz[e.paymentGateway],
                             billingHistoryLink: (0, O.JE)(e.paymentGateway, 'BILLING_HISTORY')
                         })
@@ -132,36 +132,36 @@ class b extends (n = i.PureComponent) {
             i = null != t && t.isPurchasedExternally;
         return 0 !== s.length || i
             ? (0, a.jsxs)('div', {
-                  className: M.verticalFit,
+                  className: f.verticalFit,
                   children: [
                       null != t && i ? this.renderPremiumExternalSubscription(t) : null,
                       s.length > 0
                           ? (0, a.jsxs)('div', {
-                                className: o()(M.paymentPane, M.verticalFit),
+                                className: o()(f.paymentPane, f.verticalFit),
                                 children: [
                                     e
                                         ? null
                                         : (0, a.jsx)('div', {
-                                              className: o()(M.paymentRow, M.bottomDivider),
+                                              className: o()(f.paymentRow, f.bottomDivider),
                                               children: (0, a.jsxs)(A.Z, {
-                                                  className: M.paymentRowHeader,
+                                                  className: f.paymentRowHeader,
                                                   children: [
                                                       (0, a.jsx)('div', {
                                                           className: D.date,
-                                                          children: f.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_DATE
+                                                          children: M.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_DATE
                                                       }),
                                                       (0, a.jsx)('div', {
-                                                          className: M.paymentRowHeaderDescription,
-                                                          children: f.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_DESCRIPTION
+                                                          className: f.paymentRowHeaderDescription,
+                                                          children: M.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_DESCRIPTION
                                                       }),
                                                       (0, a.jsx)('div', {
                                                           className: D.amount,
-                                                          children: f.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_AMOUNT
+                                                          children: M.Z.Messages.BILLING_PAYMENT_TABLE_HEADER_AMOUNT
                                                       })
                                                   ]
                                               })
                                           }),
-                                    (0, a.jsx)(L, {
+                                    (0, a.jsx)(P, {
                                         compactMode: e,
                                         locale: n,
                                         payments: s,
@@ -175,7 +175,7 @@ class b extends (n = i.PureComponent) {
             : null;
     }
     constructor(...e) {
-        super(...e), P(this, 'scrollerRef', i.createRef());
+        super(...e), L(this, 'scrollerRef', i.createRef());
     }
 }
 function Z(e) {
@@ -185,7 +185,7 @@ function Z(e) {
     return !(null == t || null == n || Object.values(R.Si).includes(t) || (0, O.PV)(n));
 }
 function v(e) {
-    let s = (0, _.e7)([C.Z], () => C.Z.getPayments()),
+    let s = (0, _.e7)([m.Z], () => m.Z.getPayments()),
         t = (0, _.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
         n = i.useMemo(
             () =>
@@ -223,4 +223,4 @@ function v(e) {
         })
     );
 }
-P(b, 'defaultProps', { compactMode: !1 });
+L(b, 'defaultProps', { compactMode: !1 });

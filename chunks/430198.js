@@ -97,10 +97,10 @@ function y(e, t) {
         o = R(r, i);
     return a !== o && (o ? n.add(t) : n.delete(t), !0);
 }
-function b() {
+function L() {
     (A = {}), v.clear();
 }
-function L(e) {
+function b(e) {
     let { guild: t } = e;
     delete A[t.id];
 }
@@ -130,7 +130,7 @@ function w(e) {
 }
 class x extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, p.Z, f.Z), c.Zo.subscribe({ location: '1' }, () => b());
+        this.waitFor(I.Z, p.Z, f.Z), c.Zo.subscribe({ location: '1' }, () => L());
     }
     isChannelGated(e, t) {
         if (null == e) return !1;
@@ -149,12 +149,12 @@ class x extends (r = o.ZP.Store) {
 }
 S(x, 'displayName', 'GatedChannelStore'),
     (t.Z = new x(s.Z, {
-        CONNECTION_OPEN: b,
-        OVERLAY_INITIALIZE: b,
-        CACHE_LOADED_LAZY: b,
-        GUILD_CREATE: L,
-        GUILD_UPDATE: L,
-        GUILD_DELETE: L,
+        CONNECTION_OPEN: L,
+        OVERLAY_INITIALIZE: L,
+        CACHE_LOADED_LAZY: L,
+        GUILD_CREATE: b,
+        GUILD_UPDATE: b,
+        GUILD_DELETE: b,
         GUILD_ROLE_CREATE: D,
         GUILD_ROLE_UPDATE: D,
         GUILD_ROLE_DELETE: D,

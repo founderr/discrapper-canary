@@ -4,11 +4,11 @@ t.Z = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
         [t, n] = s.useState(!1),
         [a, r] = s.useState(0),
-        [i, o] = s.useState(!1),
-        [l, c] = s.useState(0);
+        [i, l] = s.useState(!1),
+        [o, c] = s.useState(0);
     return (
         s.useEffect(() => {
-            a >= e && (o(!0), c(Math.floor(a / e)));
+            a >= e && (l(!0), c(Math.floor(a / e)));
             let t = setTimeout(() => {
                 r(0);
             }, 1000);
@@ -17,7 +17,7 @@ t.Z = function () {
         s.useEffect(() => {
             if (!t) {
                 let e = setTimeout(() => {
-                    o(!1), c(0);
+                    l(!1), c(0);
                 }, 1000);
                 return () => clearTimeout(e);
             }
@@ -31,7 +31,7 @@ t.Z = function () {
                 n(!1);
             },
             isEasterEggTriggered: i,
-            easterEggLevel: l
+            easterEggLevel: o
         }
     );
 };

@@ -74,7 +74,7 @@ async function y(e, t) {
         {}
     );
 }
-class b extends d.Z {
+class L extends d.Z {
     constructor(...e) {
         super(...e),
             R(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
@@ -111,4 +111,4 @@ class b extends d.Z {
             });
     }
 }
-t.Z = new b();
+t.Z = new L();

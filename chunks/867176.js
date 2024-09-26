@@ -31,7 +31,7 @@ let A = (e) => {
 };
 function v(e) {
     var t;
-    let { user: n, displayProfile: r, guildId: o, pendingBanner: g, children: v, className: N, avatarSize: O, avatarOffsetX: R, avatarOffsetY: C, bannerWidth: y, bannerHeight: b, themePadding: L, animateOnHover: D = !1 } = e,
+    let { user: n, displayProfile: r, guildId: o, pendingBanner: g, children: v, className: N, avatarSize: O, avatarOffsetX: R, avatarOffsetY: C, bannerWidth: y, bannerHeight: L, themePadding: b, animateOnHover: D = !1 } = e,
         M = (0, f.Dt)(),
         [P, U] = a.useState(!1),
         w = (0, u.e7)([m.Z], () => m.Z.isFocused()),
@@ -47,14 +47,14 @@ function v(e) {
         Z = (0, l._i)((0, _.ZP)(F, B, !1)),
         V = (0, E.Z)(null !== (t = null == r ? void 0 : r.primaryColor) && void 0 !== t ? t : Z).hex,
         H = A(O),
-        Y = H + R - L,
-        j = b - C - L;
+        Y = H + R - b,
+        j = L - C - b;
     return (0, i.jsxs)('svg', {
         className: S.mask,
-        viewBox: '0 0 '.concat(y, ' ').concat(b),
+        viewBox: '0 0 '.concat(y, ' ').concat(L),
         style: {
             minWidth: y,
-            minHeight: b
+            minHeight: L
         },
         children: [
             (0, i.jsxs)('mask', {
@@ -89,8 +89,8 @@ function v(e) {
                         onMouseMove: () => U(!0),
                         onMouseLeave: () => U(!1),
                         style: {
-                            height: b,
-                            minHeight: b,
+                            height: L,
+                            minHeight: L,
                             backgroundImage: null != G ? 'url('.concat(G, ')') : void 0,
                             backgroundColor: 'COMPLETE' !== k ? c.Z.unsafe_rawColors.PRIMARY_800.css : V
                         },

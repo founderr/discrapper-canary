@@ -21,19 +21,19 @@ var n = t(735250),
     I = t(818083),
     N = t(688465),
     A = t(487419),
-    m = t(378364),
-    C = t(197344),
+    C = t(378364),
+    m = t(197344),
     g = t(734934),
     h = t(223683),
     O = t(312400),
     p = t(115345),
     R = t(392888),
     x = t(106371),
-    f = t(995774),
-    M = t(921801),
+    M = t(995774),
+    f = t(921801),
     D = t(292959),
-    P = t(9156),
-    L = t(626135),
+    L = t(9156),
+    P = t(626135),
     b = t(912101),
     Z = t(358085),
     v = t(709054),
@@ -92,7 +92,7 @@ function W(e) {
 }
 function K(e) {
     let { disabledSounds: s, disableAllSounds: t, notifyMessagesInSelectedChannel: i } = e,
-        r = C.Z.useIsRingtoneEligible(),
+        r = m.Z.useIsRingtoneEligible(),
         o = a.useRef(),
         l = (0, g.p)(),
         c = a.useCallback((e, s) => {
@@ -102,8 +102,8 @@ function K(e) {
             (e, t) => {
                 let n = s.filter((s) => s !== e);
                 !t && n.push(e),
-                    e === m.Z.ringtone &&
-                        L.default.track(y.rMx.EVENT_RINGTONE_TOGGLED, {
+                    e === C.Z.ringtone &&
+                        P.default.track(y.rMx.EVENT_RINGTONE_TOGGLED, {
                             toggled_on: t,
                             sound_name: e
                         }),
@@ -172,8 +172,8 @@ function K(e) {
         ...(r
             ? [
                   {
-                      label: m.Z.getRingtoneSettingsLabel(),
-                      sound: m.Z.ringtone,
+                      label: C.Z.getRingtoneSettingsLabel(),
+                      sound: C.Z.ringtone,
                       disabled: s.includes('call_ringing')
                   }
               ]
@@ -215,7 +215,7 @@ function K(e) {
             sound: 'reconnect'
         }
     ];
-    return (0, n.jsx)(M.F, {
+    return (0, n.jsx)(f.F, {
         setting: F.s6.NOTIFICATIONS_SOUNDS,
         children: (0, n.jsxs)(_.FormSection, {
             tag: _.FormTitleTags.H1,
@@ -264,7 +264,7 @@ function z() {
         });
     return 0 === Object.keys(e).length
         ? null
-        : (0, n.jsxs)(M.F, {
+        : (0, n.jsxs)(f.F, {
               setting: F.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
               children: [
                   (0, n.jsxs)(_.Heading, {
@@ -292,7 +292,7 @@ function z() {
                               ? (0, n.jsxs)('div', {
                                     className: k.marginTop20,
                                     children: [
-                                        (0, n.jsxs)(M.F, {
+                                        (0, n.jsxs)(f.F, {
                                             setting: F.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
                                             children: [
                                                 (0, n.jsx)(_.FormSwitch, {
@@ -314,7 +314,7 @@ function z() {
                                                 (0, n.jsx)(_.FormDivider, { className: r()(k.marginTop20, k.marginBottom40) })
                                             ]
                                         }),
-                                        (0, n.jsxs)(M.F, {
+                                        (0, n.jsxs)(f.F, {
                                             setting: F.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
                                             children: [
                                                 (0, n.jsx)(_.FormSwitch, {
@@ -374,7 +374,7 @@ class Q extends a.PureComponent {
             tag: _.FormTitleTags.H1,
             title: Y.Z.Messages.NOTIFICATIONS,
             children: [
-                (0, n.jsx)(M.F, {
+                (0, n.jsx)(f.F, {
                     setting: F.s6.NOTIFICATIONS_ENABLE_DESKTOP,
                     children: (0, n.jsx)(_.FormSwitch, {
                         className: k.marginBottom20,
@@ -387,7 +387,7 @@ class Q extends a.PureComponent {
                     })
                 }),
                 (0, n.jsx)(q, {}),
-                (0, n.jsx)(M.F, {
+                (0, n.jsx)(f.F, {
                     setting: F.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, n.jsx)(_.FormSwitch, {
                         className: u ? k.marginBottom20 : k.marginBottom40,
@@ -397,7 +397,7 @@ class Q extends a.PureComponent {
                         children: Y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_LABEL
                     })
                 }),
-                (0, n.jsx)(M.F, {
+                (0, n.jsx)(f.F, {
                     setting: F.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
                     children: (0, n.jsx)(_.FormSwitch, {
                         className: k.marginBottom40,
@@ -409,7 +409,7 @@ class Q extends a.PureComponent {
                 }),
                 (0, n.jsx)(J, {}),
                 (0, n.jsx)(et, {}),
-                (0, n.jsx)(M.F, {
+                (0, n.jsx)(f.F, {
                     setting: F.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
                     children: (0, n.jsxs)(_.FormItem, {
                         title: Y.Z.Messages.FORM_LABEL_PUSH_AFK_TIMEOUT,
@@ -465,7 +465,7 @@ class Q extends a.PureComponent {
                         value: y.PrB.NEVER
                     }
                 ];
-                return (0, n.jsxs)(M.F, {
+                return (0, n.jsxs)(f.F, {
                     setting: F.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
                     children: [
                         (0, n.jsxs)(_.FormItem, {
@@ -504,9 +504,9 @@ let X = (0, I.B)({
 });
 function q() {
     let e = X.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled,
-        s = (0, c.e7)([P.ZP], () => P.ZP.mentionOnAllMessages);
+        s = (0, c.e7)([L.ZP], () => L.ZP.mentionOnAllMessages);
     return e
-        ? (0, n.jsx)(M.F, {
+        ? (0, n.jsx)(f.F, {
               setting: F.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
               children: (0, n.jsx)(_.FormSwitch, {
                   className: k.marginBottom20,
@@ -523,13 +523,13 @@ function q() {
 function J() {
     let e = O.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
         { manuallyOpen: s } = O.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
-        t = (0, c.e7)([P.ZP], () => P.ZP.useNewNotifications),
+        t = (0, c.e7)([L.ZP], () => L.ZP.useNewNotifications),
         [i, o] = a.useState(!1);
     return e && (t || s)
         ? (0, n.jsxs)(n.Fragment, {
               children: [
                   t
-                      ? (0, n.jsx)(M.F, {
+                      ? (0, n.jsx)(f.F, {
                             setting: F.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                             children: (0, n.jsx)(_.FormSwitch, {
                                 className: k.marginBottom40,
@@ -542,7 +542,7 @@ function J() {
                             })
                         })
                       : s
-                        ? (0, n.jsx)(M.F, {
+                        ? (0, n.jsx)(f.F, {
                               setting: F.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                               children: (0, n.jsx)(_.FormSwitch, {
                                   className: k.marginBottom40,
@@ -554,7 +554,7 @@ function J() {
                               })
                           })
                         : null,
-                  (0, n.jsxs)(M.F, {
+                  (0, n.jsxs)(f.F, {
                       setting: F.s6.NOTIFICATIONS_NEW_SETTINGS,
                       children: [
                           (0, n.jsx)(_.FormItem, {
@@ -565,14 +565,14 @@ function J() {
                                       gap: 16
                                   },
                                   children: [
-                                      (0, n.jsx)(M.F, {
+                                      (0, n.jsx)(f.F, {
                                           setting: F.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
                                           children: (0, n.jsx)(_.Button, {
                                               onClick: h.KP,
                                               children: 'Restore most recent snapshot'
                                           })
                                       }),
-                                      (0, n.jsx)(M.F, {
+                                      (0, n.jsx)(f.F, {
                                           setting: F.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
                                           children: (0, n.jsx)(_.Button, {
                                               onClick: () => {
@@ -581,7 +581,7 @@ function J() {
                                               children: 'Launch Migration'
                                           })
                                       }),
-                                      (0, n.jsx)(M.F, {
+                                      (0, n.jsx)(f.F, {
                                           setting: F.s6.NOTIFICATIONS_TOGGLE_NEW_SYSTEM,
                                           children: (0, n.jsx)(_.FormSwitch, {
                                               hideBorder: !0,
@@ -655,7 +655,7 @@ function et() {
             }
         ];
     return x.Z.getCurrentConfig({ location: 'webSettings' }).enableInAppNotifications
-        ? (0, n.jsxs)(M.F, {
+        ? (0, n.jsxs)(f.F, {
               setting: F.s6.NOTIFICATIONS_REACTIONS,
               children: [
                   (0, n.jsxs)(_.FormItem, {
@@ -669,7 +669,7 @@ function et() {
                           (0, n.jsx)(_.RadioGroup, {
                               options: s,
                               onChange: (s) => {
-                                  (0, f.MR)(s.value, e);
+                                  (0, M.MR)(s.value, e);
                               },
                               value: e
                           })

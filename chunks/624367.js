@@ -30,8 +30,8 @@ var o = n(613828),
     R = n(147865),
     C = n(778569),
     y = n(884338),
-    b = n(403404),
-    L = n(701488),
+    L = n(403404),
+    b = n(701488),
     D = n(981631),
     M = n(689938),
     P = n(896219);
@@ -88,12 +88,12 @@ function w(e) {
                         : t();
                 }
             } else
-                (0, b.Z)({
+                (0, L.Z)({
                     guildId: B,
                     locationObject: x.location,
                     openInPopout: q,
                     initialSelectedApplicationId: l,
-                    initialSlide: L.ag.SELECT_CHANNEL,
+                    initialSlide: b.ag.SELECT_CHANNEL,
                     analyticsLocations: w
                 });
         };

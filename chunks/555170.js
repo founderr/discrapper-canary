@@ -42,23 +42,23 @@ function y(e) {
     var t = this instanceof r;
     (this._readableState = new C(e, this, t)), (this.readable = !0), e && ('function' == typeof e.read && (this._read = e.read), 'function' == typeof e.destroy && (this._destroy = e.destroy)), c.call(this);
 }
-function b(e, t, n, r, a) {
+function L(e, t, n, r, a) {
     i('readableAddChunk', t);
     var o,
         s = e._readableState;
     if (null === t) (s.reading = !1), w(e, s);
     else if ((!a && (o = D(s, t)), o)) N(e, o);
     else if (s.objectMode || (t && t.length > 0)) {
-        if (('string' != typeof t && !s.objectMode && Object.getPrototypeOf(t) !== d.prototype && (t = E(t)), r)) s.endEmitted ? N(e, new v()) : L(e, s, t, !0);
+        if (('string' != typeof t && !s.objectMode && Object.getPrototypeOf(t) !== d.prototype && (t = E(t)), r)) s.endEmitted ? N(e, new v()) : b(e, s, t, !0);
         else if (s.ended) N(e, new S());
         else {
             if (s.destroyed) return !1;
-            (s.reading = !1), s.decoder && !n ? ((t = s.decoder.write(t)), s.objectMode || 0 !== t.length ? L(e, s, t, !1) : k(e, s)) : L(e, s, t, !1);
+            (s.reading = !1), s.decoder && !n ? ((t = s.decoder.write(t)), s.objectMode || 0 !== t.length ? b(e, s, t, !1) : k(e, s)) : b(e, s, t, !1);
         }
     } else !r && ((s.reading = !1), k(e, s));
     return !s.ended && (s.length < s.highWaterMark || 0 === s.length);
 }
-function L(e, t, n, r) {
+function b(e, t, n, r) {
     t.flowing && 0 === t.length && !t.sync ? ((t.awaitDrain = 0), e.emit('data', n)) : ((t.length += t.objectMode ? 1 : n.length), r ? t.buffer.unshift(n) : t.buffer.push(n), t.needReadable && x(e)), k(e, t);
 }
 function D(e, t) {
@@ -82,10 +82,10 @@ Object.defineProperty(y.prototype, 'destroyed', {
     (y.prototype.push = function (e, t) {
         var n,
             r = this._readableState;
-        return r.objectMode ? (n = !0) : 'string' == typeof e && ((t = t || r.defaultEncoding) !== r.encoding && ((e = d.from(e, t)), (t = '')), (n = !0)), b(this, e, t, !1, n);
+        return r.objectMode ? (n = !0) : 'string' == typeof e && ((t = t || r.defaultEncoding) !== r.encoding && ((e = d.from(e, t)), (t = '')), (n = !0)), L(this, e, t, !1, n);
     }),
     (y.prototype.unshift = function (e) {
-        return b(this, e, null, !0, !1);
+        return L(this, e, null, !0, !1);
     }),
     (y.prototype.isPaused = function () {
         return !1 === this._readableState.flowing;

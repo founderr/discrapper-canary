@@ -24,7 +24,7 @@ n.d(t, {
         return K;
     },
     fy: function () {
-        return b.fy;
+        return L.fy;
     },
     hW: function () {
         return G;
@@ -65,8 +65,8 @@ var h = n(512722),
     R = n(262847),
     C = n(581883),
     y = n(48481),
-    b = n(526761),
-    L = n(981631);
+    L = n(526761),
+    b = n(981631);
 function D(e, t, n) {
     return (
         t in e
@@ -122,7 +122,7 @@ class x {
                           proto: s
                       },
                       delaySeconds: n,
-                      jitter: n === b.fy.AUTOMATED || n === b.fy.DAILY,
+                      jitter: n === L.fy.AUTOMATED || n === L.fy.DAILY,
                       partial: !0,
                       resetEditInfo: !1,
                       local: !0
@@ -130,7 +130,7 @@ class x {
                 : (this.logger.log('Updating '.concat(String(e), ' with delay ').concat(n)),
                   this.markDirty(s, {
                       delaySeconds: n,
-                      jitter: n === b.fy.AUTOMATED || n === b.fy.DAILY
+                      jitter: n === L.fy.AUTOMATED || n === L.fy.DAILY
                   }));
     }
     markDirty(e, t) {
@@ -184,7 +184,7 @@ class x {
             try {
                 let {
                         body: { settings: t }
-                    } = await I.tn.get({ url: L.ANM.USER_SETTINGS_PROTO(this.type) }),
+                    } = await I.tn.get({ url: b.ANM.USER_SETTINGS_PROTO(this.type) }),
                     n = (0, y.d5)(this.ProtoClass, t);
                 if (null == n) {
                     this.dispatchChanges({
@@ -220,7 +220,7 @@ class x {
             this.markDirty(e, {
                 cleanup: t,
                 dispatch: !1,
-                delaySeconds: b.fy.AUTOMATED,
+                delaySeconds: L.fy.AUTOMATED,
                 jitter: !0
             });
     }
@@ -276,7 +276,7 @@ class x {
                 try {
                     this.saveLastSendTime();
                     let { body: n } = await I.tn.patch({
-                        url: L.ANM.USER_SETTINGS_PROTO(this.type),
+                        url: b.ANM.USER_SETTINGS_PROTO(this.type),
                         body: {
                             settings: t,
                             required_data_version: e.offlineEditDataVersion
@@ -306,18 +306,18 @@ class x {
                             rateLimited: !0,
                             timeout: n
                         });
-                    } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === L.evJ.INVALID_USER_SETTINGS_DATA) throw (this.logger.log('Reloading do to invalid data'), this.loadIfNecessary(!0), e);
+                    } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === b.evJ.INVALID_USER_SETTINGS_DATA) throw (this.logger.log('Reloading do to invalid data'), this.loadIfNecessary(!0), e);
                     else throw (this.logger.log('Unknown user settings error'), e);
                 }
             }),
             (this.logger = new m.Y(this.ProtoClass.typeName));
     }
 }
-let G = new x(S.o8, b.yP.PRELOADED_USER_SETTINGS),
-    k = new x(g.ji, b.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+let G = new x(S.o8, L.yP.PRELOADED_USER_SETTINGS),
+    k = new x(g.ji, L.yP.FRECENCY_AND_FAVORITES_SETTINGS),
     B = {
-        [b.yP.PRELOADED_USER_SETTINGS]: G,
-        [b.yP.FRECENCY_AND_FAVORITES_SETTINGS]: k
+        [L.yP.PRELOADED_USER_SETTINGS]: G,
+        [L.yP.FRECENCY_AND_FAVORITES_SETTINGS]: k
     };
 function F(e, t, n) {
     return G.updateAsync('guilds', (n) => (0, y.u0)(n, e, t), n);
@@ -332,7 +332,7 @@ function V(e) {
             if ((0, O.jl)(t.dismissedContents, e)) return !1;
             t.dismissedContents = (0, O.GV)(t.dismissedContents, e);
         },
-        b.fy.INFREQUENT_USER_ACTION
+        L.fy.INFREQUENT_USER_ACTION
     );
 }
 function H(e, t) {
@@ -341,7 +341,7 @@ function H(e, t) {
         (n) => {
             null == n.recurringDismissibleContentStates[e] ? (n.recurringDismissibleContentStates[e] = { lastDismissedVersion: t }) : (n.recurringDismissibleContentStates[e].lastDismissedVersion = t);
         },
-        b.fy.INFREQUENT_USER_ACTION
+        L.fy.INFREQUENT_USER_ACTION
     );
 }
 function Y(e) {
@@ -351,7 +351,7 @@ function Y(e) {
             if (!(0, O.jl)(t.dismissedContents, e)) return !1;
             t.dismissedContents = (0, O.jx)(t.dismissedContents, e);
         },
-        b.fy.INFREQUENT_USER_ACTION
+        L.fy.INFREQUENT_USER_ACTION
     );
 }
 function j(e) {
@@ -361,7 +361,7 @@ function j(e) {
             if (null == t.recurringDismissibleContentStates[e]) return !1;
             t.recurringDismissibleContentStates[e].lastDismissedVersion = 0;
         },
-        b.fy.INFREQUENT_USER_ACTION
+        L.fy.INFREQUENT_USER_ACTION
     );
 }
 function W() {
@@ -370,7 +370,7 @@ function W() {
         (e) => {
             (e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {});
         },
-        b.fy.INFREQUENT_USER_ACTION
+        L.fy.INFREQUENT_USER_ACTION
     );
 }
 function K() {
@@ -381,6 +381,6 @@ function K() {
             for (let e of Object.keys(T.z)) t = (0, O.GV)(t, T.z[e]);
             e.dismissedContents = t;
         },
-        b.fy.INFREQUENT_USER_ACTION
+        L.fy.INFREQUENT_USER_ACTION
     );
 }

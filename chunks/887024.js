@@ -421,7 +421,7 @@ function y(e) {
         }
     })(f(f({}, e), { valueType: 'number' }));
 }
-function b(e) {
+function L(e) {
     return (function (e) {
         switch (e.type) {
             case 'static':
@@ -461,7 +461,7 @@ function b(e) {
         }
     })(f(f({}, e), { valueType: 'Vector2' }));
 }
-function L(e) {
+function b(e) {
     return (function (e) {
         switch (e.type) {
             case 'static':
@@ -505,7 +505,7 @@ function D(e, t, n, r, i) {
     var a = (function (e, t) {
             return f(f({ id: t }, c), e);
         })(t, e),
-        o = b(a.size),
+        o = L(a.size),
         s = (function (e, t) {
             if (null != e) {
                 var n = t.sprites.findIndex(function (t) {
@@ -535,10 +535,10 @@ function D(e, t, n, r, i) {
         })(null != r ? r : l, i, n);
     return new u({
         id: e,
-        position: b(a.position),
-        velocity: b(a.velocity),
-        rotation: L(a.rotation),
-        dragCoefficient: b(a.dragCoefficient),
+        position: L(a.position),
+        velocity: L(a.velocity),
+        rotation: b(a.rotation),
+        dragCoefficient: L(a.dragCoefficient),
         size: o,
         opacity: y(a.opacity),
         spriteX: _ * n.spriteWidth + 2 * _,
@@ -696,13 +696,13 @@ var M = r.forwardRef(function (e, t) {
                 },
                 [C, l]
             ),
-            b = r.useCallback(
+            L = r.useCallback(
                 function (e) {
                     return C(e, { clickHandler: u });
                 },
                 [C, u]
             ),
-            L = r.useCallback(
+            b = r.useCallback(
                 function (e) {
                     return C(e, { mouseHandler: c });
                 },
@@ -722,15 +722,15 @@ var M = r.forwardRef(function (e, t) {
                     };
                     return (
                         e('click', y, l),
-                        e('mousedown', b, u),
-                        e('mousemove', L, c),
+                        e('mousedown', L, u),
+                        e('mousemove', b, c),
                         e('mouseup', M, d),
                         function () {
-                            window.removeEventListener('click', y), window.removeEventListener('mousedown', b), window.removeEventListener('mousemove', L), window.removeEventListener('mouseup', L);
+                            window.removeEventListener('click', y), window.removeEventListener('mousedown', L), window.removeEventListener('mousemove', b), window.removeEventListener('mouseup', b);
                         }
                     );
                 },
-                [y, b, L, M, l, u, c, d]
+                [y, L, b, M, l, u, c, d]
             ),
             r.useEffect(function () {
                 var e = p.current,

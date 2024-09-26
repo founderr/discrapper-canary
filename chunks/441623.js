@@ -72,10 +72,10 @@ function y() {
         }),
         (N = new Set(v.slice(0, T)));
 }
-function b(e) {
+function L(e) {
     return Math.round(s()().diff(e, 'years', !0));
 }
-function L() {
+function b() {
     return Array.from(N).some((e) => !A.lastShownFriendsListGiftIntents.includes(e));
 }
 function D() {
@@ -111,11 +111,11 @@ class x extends (r = l.ZP.PersistedStore) {
     canShowFriendsTabBadge() {
         var e;
         let t = null !== (e = A.friendsTabBadgeLastDismissedTime) && void 0 !== e ? e : 0;
-        return !(Date.now() - t <= g) && L();
+        return !(Date.now() - t <= g) && b();
     }
     getFriendAnniversaryYears(e) {
         let t = O[e];
-        return null == t ? 0 : b(t.friendsSince);
+        return null == t ? 0 : L(t.friendsSince);
     }
 }
 I(x, 'displayName', 'PremiumGiftingIntentStore'),

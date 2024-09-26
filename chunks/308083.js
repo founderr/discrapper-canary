@@ -72,7 +72,7 @@ n.d(t, {
         return K;
     },
     f4: function () {
-        return b;
+        return L;
     },
     gQ: function () {
         return $;
@@ -93,7 +93,7 @@ n.d(t, {
         return y;
     },
     nJ: function () {
-        return L;
+        return b;
     },
     nt: function () {
         return O;
@@ -163,7 +163,7 @@ function y(e) {
             return e;
     }
 }
-function b() {
+function L() {
     return {
         [E.z.SOCIAL]: {
             type: E.z.SOCIAL,
@@ -194,7 +194,7 @@ function b() {
 !(function (e) {
     (e[(e.GAMES = 0)] = 'GAMES'), (e[(e.PLAYSTYLE = 1)] = 'PLAYSTYLE'), (e[(e.UTILITY_TRAITS = 2)] = 'UTILITY_TRAITS'), (e[(e.INTERESTS = 3)] = 'INTERESTS'), (e[(e.DESCRIPTION = 4)] = 'DESCRIPTION'), (e[(e.CUSTOMIZE_TAG_BADGE = 5)] = 'CUSTOMIZE_TAG_BADGE'), (e[(e.CUSTOMIZE_BANNER = 6)] = 'CUSTOMIZE_BANNER'), (e[(e.MEMBER_APPLICATION = 7)] = 'MEMBER_APPLICATION');
 })(r || (r = {}));
-let L = '700136079562375258',
+let b = '700136079562375258',
     D = '762434991303950386',
     M = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP', 'Voice ON', 'Voice OFF', 'Unrated', 'All Ranks', 'Bronze+', 'Silver+', 'Gold+', 'Platinum+', 'Diamond+'],
     P = new Set([...M, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),

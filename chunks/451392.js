@@ -20,26 +20,26 @@ var a = t(120356),
     I = t(689938),
     N = t(96923);
 function A(e) {
-    let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: A, guildId: m, className: C, showPremiumIcon: g = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
-        p = (0, _.ZP)(s.id, m),
+    let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: A, guildId: C, className: m, showPremiumIcon: g = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
+        p = (0, _.ZP)(s.id, C),
         { primaryColor: R, secondaryColor: x } = (0, u.Z)({
             user: s,
             displayProfile: p,
             pendingThemeColors: a,
             isPreview: !0
         }),
-        f = E.ZP.canUsePremiumProfileCustomization(s),
-        M = null != t ? t : s.getAvatarURL(m, 80),
+        M = E.ZP.canUsePremiumProfileCustomization(s),
+        f = null != t ? t : s.getAvatarURL(C, 80),
         D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(),
-        P = (0, d.Cf)(M, D, !1);
+        L = (0, d.Cf)(f, D, !1);
     if (null == R || null == x) return null;
-    let L = (e) => {
+    let P = (e) => {
         r(o()(e, null == p ? void 0 : p.themeColors) ? void 0 : e);
     };
     return (0, n.jsx)(S.Z, {
         title: I.Z.Messages.USER_SETTINGS_PROFILE_THEME,
-        disabled: !f && !A,
-        className: i()(N.__invalid_profileThemesSection, C),
+        disabled: !M && !A,
+        className: i()(N.__invalid_profileThemesSection, m),
         showPremiumIcon: g,
         forcedDivider: O,
         children: (0, n.jsxs)('div', {
@@ -48,9 +48,9 @@ function A(e) {
                 (0, n.jsx)('div', {
                     className: N.sparkleContainer,
                     children: (0, n.jsx)(T.Z, {
-                        onChange: (e) => L([e, x]),
+                        onChange: (e) => P([e, x]),
                         color: R,
-                        suggestedColors: P,
+                        suggestedColors: L,
                         showEyeDropper: !0,
                         label: (0, n.jsx)(c.Text, {
                             className: N.colorSwatchLabel,
@@ -64,9 +64,9 @@ function A(e) {
                 (0, n.jsx)('div', {
                     className: N.sparkleContainer,
                     children: (0, n.jsx)(T.Z, {
-                        onChange: (e) => L([R, e]),
+                        onChange: (e) => P([R, e]),
                         color: x,
-                        suggestedColors: P,
+                        suggestedColors: L,
                         showEyeDropper: !0,
                         label: (0, n.jsx)(c.Text, {
                             className: N.colorSwatchLabel,
@@ -78,13 +78,13 @@ function A(e) {
                     })
                 }),
                 h &&
-                    null != m &&
+                    null != C &&
                     (0, n.jsx)(c.Button, {
                         className: N.resetButton,
                         color: c.Button.Colors.PRIMARY,
                         look: c.Button.Looks.LINK,
                         size: c.Button.Sizes.SMALL,
-                        onClick: () => L([null, null]),
+                        onClick: () => P([null, null]),
                         children: I.Z.Messages.USER_SETTINGS_RESET_PROFILE_THEME
                     })
             ]

@@ -77,7 +77,7 @@ function v(e, n) {
     (p = !1), m && ((m = !1), T(R), (R = -1)), (h = !0);
     var a = f;
     try {
-        for (S(n), E = r(c); null !== E && (!(E.expirationTime > n) || (e && !b())); ) {
+        for (S(n), E = r(c); null !== E && (!(E.expirationTime > n) || (e && !L())); ) {
             var o = E.callback;
             if ('function' == typeof o) {
                 (E.callback = null), (f = E.priorityLevel);
@@ -102,10 +102,10 @@ var N = !1,
     R = -1,
     C = 5,
     y = -1;
-function b() {
+function L() {
     return !(t.unstable_now() - y < C);
 }
-function L() {
+function b() {
     if (null !== O) {
         var e = t.unstable_now();
         y = e;
@@ -119,18 +119,18 @@ function L() {
 }
 if ('function' == typeof g)
     o = function () {
-        g(L);
+        g(b);
     };
 else if ('undefined' != typeof MessageChannel) {
     var D = new MessageChannel(),
         M = D.port2;
-    (D.port1.onmessage = L),
+    (D.port1.onmessage = b),
         (o = function () {
             M.postMessage(null);
         });
 } else
     o = function () {
-        I(L, 0);
+        I(b, 0);
     };
 function P(e) {
     (O = e), N || ((N = !0), o());
@@ -232,7 +232,7 @@ function U(e, n) {
             e
         );
     }),
-    (t.unstable_shouldYield = b),
+    (t.unstable_shouldYield = L),
     (t.unstable_wrapCallback = function (e) {
         var t = f;
         return function () {

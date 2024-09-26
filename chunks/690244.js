@@ -193,20 +193,20 @@ var v = function e(t) {
     R = n(706165),
     C = O.call(Function.call, Array.prototype.concat),
     y = O.call(Function.apply, Array.prototype.splice),
-    b = O.call(Function.call, String.prototype.replace),
-    L = O.call(Function.call, String.prototype.slice),
+    L = O.call(Function.call, String.prototype.replace),
+    b = O.call(Function.call, String.prototype.slice),
     D = O.call(Function.call, RegExp.prototype.exec),
     M = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     P = /\\(\\)?/g,
     U = function (e) {
-        var t = L(e, 0, 1),
-            n = L(e, -1);
+        var t = b(e, 0, 1),
+            n = b(e, -1);
         if ('%' === t && '%' !== n) throw new l('invalid intrinsic syntax, expected closing `%`');
         if ('%' === n && '%' !== t) throw new l('invalid intrinsic syntax, expected opening `%`');
         var r = [];
         return (
-            b(e, M, function (e, t, n, i) {
-                r[r.length] = n ? b(i, P, '$1') : t || e;
+            L(e, M, function (e, t, n, i) {
+                r[r.length] = n ? L(i, P, '$1') : t || e;
             }),
             r
         );
@@ -239,8 +239,8 @@ e.exports = function (e, t) {
     c && ((r = c[0]), y(n, C([0, 1], c)));
     for (var d = 1, _ = !0; d < n.length; d += 1) {
         var f = n[d],
-            h = L(f, 0, 1),
-            p = L(f, -1);
+            h = b(f, 0, 1),
+            p = b(f, -1);
         if (('"' === h || "'" === h || '`' === h || '"' === p || "'" === p || '`' === p) && h !== p) throw new l('property names with quotes must have matching quotes');
         if ((('constructor' === f || !_) && (s = !0), (r += '.' + f), R(S, (a = '%' + r + '%')))) o = S[a];
         else if (null != o) {

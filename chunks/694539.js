@@ -15,8 +15,8 @@ var n = t(735250),
     I = t(329156),
     N = t(661065),
     A = t(346537),
-    m = t(830318);
-let C = (e) => {
+    C = t(830318);
+let m = (e) => {
     let [s, t] = e.split(','),
         n = atob(t),
         a = s.split(';')[0],
@@ -32,16 +32,16 @@ s.Z = (e) => {
         [h, O] = a.useState(!0),
         p = a.useRef(null),
         [R, x] = a.useState(!1),
-        [f, M] = a.useState(!1),
-        [D, P] = a.useState(!1),
-        [L, b] = a.useState([]),
+        [M, f] = a.useState(!1),
+        [D, L] = a.useState(!1),
+        [P, b] = a.useState([]),
         [Z, v] = a.useState(s.name);
     return (a.useEffect(() => {
         let e = s.config.effects;
         e.length > 0 &&
             b(
                 [...e].map((e) => {
-                    let s = C(e.base64),
+                    let s = m(e.base64),
                         t = URL.createObjectURL(s);
                     return (e.src = t), e;
                 })
@@ -51,9 +51,9 @@ s.Z = (e) => {
         i({
             id: s.id,
             name: Z,
-            config: { effects: L }
+            config: { effects: P }
         });
-    }, [L, Z]),
+    }, [P, Z]),
     null == g)
         ? (0, n.jsx)('div', {})
         : (0, n.jsxs)('div', {
@@ -73,7 +73,7 @@ s.Z = (e) => {
                               className: r()(N.col, N.preview),
                               children: [
                                   (0, n.jsx)('img', {
-                                      src: R ? A : m,
+                                      src: R ? A : C,
                                       alt: '',
                                       width: 450
                                   }),
@@ -85,7 +85,7 @@ s.Z = (e) => {
                                               description: 'debug',
                                               accessibilityLabel: 'debug',
                                               reducedMotionSrc: '',
-                                              effects: D ? (0, S.Tp)(L) : L,
+                                              effects: D ? (0, S.Tp)(P) : P,
                                               animationType: 0
                                           },
                                           profileEffectId: 'debug'
@@ -141,10 +141,10 @@ s.Z = (e) => {
                                                   }),
                                                   (0, n.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: f,
+                                                      checked: M,
                                                       className: N.checkBox,
                                                       onChange: () => {
-                                                          M(!f);
+                                                          f(!M);
                                                       }
                                                   })
                                               ]
@@ -161,7 +161,7 @@ s.Z = (e) => {
                                                       checked: D,
                                                       className: N.checkBox,
                                                       onChange: () => {
-                                                          P(!D);
+                                                          L(!D);
                                                       }
                                                   })
                                               ]
@@ -187,7 +187,7 @@ s.Z = (e) => {
                                                               n = new FileReader();
                                                           (n.onload = async (e) => {
                                                               if (null == e.target || 'string' != typeof e.target.result) return;
-                                                              let s = await (0, S.Xv)(URL.createObjectURL(t), e.target.result, t, L.length);
+                                                              let s = await (0, S.Xv)(URL.createObjectURL(t), e.target.result, t, P.length);
                                                               b((e) => [...e, s]);
                                                           }),
                                                               n.readAsDataURL(t);
@@ -223,7 +223,7 @@ s.Z = (e) => {
                                           (0, n.jsx)(c.Button, {
                                               color: c.ButtonColors.BRAND,
                                               onClick: () => {
-                                                  (0, E.JG)((0, S.HV)(L, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                  (0, E.JG)((0, S.HV)(P, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                               },
                                               children: 'Export'
                                           })
@@ -252,7 +252,7 @@ s.Z = (e) => {
                                           })
                                       ]
                                   }),
-                                  L.some((e) => {
+                                  P.some((e) => {
                                       var s;
                                       return (null !== (s = e.randomizedSources) && void 0 !== s ? s : []).length > 0;
                                   }) &&
@@ -270,7 +270,7 @@ s.Z = (e) => {
                                       }),
                                   (0, n.jsx)('div', {
                                       children:
-                                          f &&
+                                          M &&
                                           (0, n.jsxs)('div', {
                                               className: r()(N.userProfilePreview, N.preview),
                                               children: [
@@ -288,7 +288,7 @@ s.Z = (e) => {
                                                           description: 'debug',
                                                           accessibilityLabel: 'debug',
                                                           reducedMotionSrc: '',
-                                                          effects: D ? (0, S.Tp)(L) : L,
+                                                          effects: D ? (0, S.Tp)(P) : P,
                                                           animationType: 0
                                                       },
                                                       profileEffectId: 'debug'
@@ -300,7 +300,7 @@ s.Z = (e) => {
                           }),
                           (0, n.jsx)('div', {
                               className: r()(N.grid, N.layers),
-                              children: L.map((e, s) => {
+                              children: P.map((e, s) => {
                                   var t;
                                   return (0, n.jsxs)(
                                       'div',

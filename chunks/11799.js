@@ -36,7 +36,7 @@ let E = 100,
                 cursor: c.Z.cursor,
                 errored: c.Z.errored
             })),
-            { roleFilter: y, everyoneFilter: b } = (0, a.cj)([l.Z], () => ({
+            { roleFilter: y, everyoneFilter: L } = (0, a.cj)([l.Z], () => ({
                 everyoneFilter: l.Z.everyoneFilter,
                 roleFilter: l.Z.roleFilter
             }));
@@ -44,12 +44,12 @@ let E = 100,
             i.useEffect(() => {
                 A && t && (0, o.FT)(_.W.NOTIFICATION_CENTER);
             }, [t, A]);
-        let L = (0, s.Z)();
+        let b = (0, s.Z)();
         i.useEffect(
             () => () => {
-                r ? !L() && (C || N.length > E) && (0, u.jF)() : n && N.length > E && (0, u.jF)();
+                r ? !b() && (C || N.length > E) && (0, u.jF)() : n && N.length > E && (0, u.jF)();
             },
-            [n, N, r, L, C]
+            [n, N, r, b, C]
         ),
             i.useEffect(() => {
                 let e = I && t;
@@ -58,9 +58,9 @@ let E = 100,
                         limit: null != m ? m : p ? f : h,
                         with_mentions: p,
                         roles_filter: y,
-                        everyone_filter: b
+                        everyone_filter: L
                     });
-            }, [A, I, t, p, y, b, m]);
+            }, [A, I, t, p, y, L, m]);
         let D = i.useCallback(
             async (e) => {
                 !T.current &&
@@ -75,7 +75,7 @@ let E = 100,
                             after: R,
                             with_mentions: p,
                             roles_filter: y,
-                            everyone_filter: b,
+                            everyone_filter: L,
                             limit: p ? f : h
                         },
                         () => {
@@ -84,7 +84,7 @@ let E = 100,
                     ),
                     S(!1));
             },
-            [A, O, R, C, p, y, b]
+            [A, O, R, C, p, y, L]
         );
         return {
             initialized: A,

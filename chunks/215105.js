@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return L;
     }
 });
 var r = n(47120);
@@ -59,9 +59,9 @@ let R = (0, E.kt)({
                 (0, f.vE)(e);
         }
     };
-function b(e) {
-    let { user: t, guildId: n, channelId: r, profileType: o, sourceType: l, sourceDetails: E, setPopoutRef: f, modalKey: N, onClose: b } = e,
-        { trackUserProfileAction: L } = (0, m.KZ)(),
+function L(e) {
+    let { user: t, guildId: n, channelId: r, profileType: o, sourceType: l, sourceDetails: E, setPopoutRef: f, modalKey: N, onClose: L } = e,
+        { trackUserProfileAction: b } = (0, m.KZ)(),
         { sendReply: D } = (0, I.Q)(l),
         { resetInteraction: M, setInteractionToastShown: P, setInteractionTypeSent: U } = (0, g.Xo)(),
         [w, x] = a.useState(''),
@@ -79,7 +79,7 @@ function b(e) {
     }, [F, f]);
     let V = async (e) => {
             if (null == e) return;
-            L({ action: D });
+            b({ action: D });
             let n = C({
                 input: e,
                 username: p.ZP.getName(t),
@@ -143,7 +143,7 @@ function b(e) {
                         return (
                             await V(n),
                             M(),
-                            null == b || b(),
+                            null == L || L(),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1

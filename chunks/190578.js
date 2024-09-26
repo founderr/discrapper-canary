@@ -68,12 +68,12 @@ function N(e) {
             literal: d
         },
         y = [I, N, R],
-        b = {
+        L = {
             match: r(/\./, a(...f)),
             relevance: 0
         },
-        L = [
-            b,
+        b = [
+            L,
             {
                 className: 'built_in',
                 match: r(/\b/, a(...f), /(?=\()/)
@@ -212,7 +212,7 @@ function N(e) {
                 },
                 ...h,
                 ...y,
-                ...L,
+                ...b,
                 ...M,
                 w,
                 Z,
@@ -293,7 +293,7 @@ function N(e) {
     for (let e of Z.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
         t.keywords = C;
-        let n = [...y, ...L, ...M, w, Z, ...H];
+        let n = [...y, ...b, ...M, w, Z, ...H];
         t.contains = [
             ...n,
             {
@@ -332,7 +332,7 @@ function N(e) {
                 relevance: 0
             },
             ...y,
-            ...L,
+            ...b,
             ...M,
             w,
             Z,

@@ -213,10 +213,10 @@ function C(e, t, n, r) {
 function y(e, t, n, r) {
     return C(e, t, n, r);
 }
-function b(e, t, n, r) {
+function L(e, t, n, r) {
     return Q(q(t), e, n, r);
 }
-function L(e, t, n, r) {
+function b(e, t, n, r) {
     return Q(z(t, e.length - n), e, n, r);
 }
 function D(e, t, n) {
@@ -410,12 +410,12 @@ function M(e, t, n) {
                 case 'binary':
                     return y(this, e, t, n);
                 case 'base64':
-                    return b(this, e, t, n);
+                    return L(this, e, t, n);
                 case 'ucs2':
                 case 'ucs-2':
                 case 'utf16le':
                 case 'utf-16le':
-                    return L(this, e, t, n);
+                    return b(this, e, t, n);
                 default:
                     if (a) throw TypeError('Unknown encoding: ' + r);
                     (r = ('' + r).toLowerCase()), (a = !0);

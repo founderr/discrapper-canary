@@ -92,12 +92,12 @@ function y(e) {
     for (let { guild_id: e } of t) null != e && ((I[e] = void 0), (n = !0), m === e && v(e));
     return n;
 }
-function b(e) {
+function L(e) {
     let { guildId: t, user: n } = e;
     if (d.default.getId() !== n.id) return !1;
     (I[t] = void 0), t === m && v(t);
 }
-function L() {
+function b() {
     if (null == m) return !1;
     v(m);
 }
@@ -153,8 +153,8 @@ p(k, 'displayName', 'GuildCategoryStore'),
         CHANNEL_CREATE: C,
         CHANNEL_DELETE: C,
         CHANNEL_UPDATES: y,
-        GUILD_MEMBER_UPDATE: b,
-        CURRENT_USER_UPDATE: L,
+        GUILD_MEMBER_UPDATE: L,
+        CURRENT_USER_UPDATE: b,
         GUILD_ROLE_CREATE: D,
         GUILD_ROLE_UPDATE: D,
         GUILD_ROLE_DELETE: D,

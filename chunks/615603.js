@@ -15,15 +15,15 @@ var n = t(735250),
     I = t(594174),
     N = t(78839),
     A = t(267642),
-    m = t(74538),
-    C = t(283029),
+    C = t(74538),
+    m = t(283029),
     g = t(357956),
     h = t(275909),
     O = t(981631),
     p = t(735825),
     R = t(689938),
     x = t(601709);
-function f(e) {
+function M(e) {
     let { guildBoostSlot: s, isCancellable: t, onCancel: i, onUncancel: r, premiumSubscription: o, useReducedMotion: c } = e,
         d = a.useMemo(() => (null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null), [s]),
         _ = (0, A.tl)(s);
@@ -86,7 +86,7 @@ function f(e) {
         s.id
     );
 }
-function M(e) {
+function f(e) {
     (0, l.openModalLazy)(
         async () => (s) =>
             (0, n.jsx)(u.default, {
@@ -111,9 +111,9 @@ s.Z = function (e) {
         E = (null == u ? void 0 : u.isPausedOrPausePending) === !0,
         g = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         h = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
-        P = (0, S.Vp)(),
+        L = (0, S.Vp)(),
         {
-            appliedGuildBoostSlots: L,
+            appliedGuildBoostSlots: P,
             unappliedGuildBoostSlots: b,
             numActiveGuildBoostSlots: Z,
             hasCooldownBoosts: v,
@@ -137,8 +137,8 @@ s.Z = function (e) {
                 }
             );
         }, [i]),
-        B = null != u ? (0, d.G)(u, P) : 0,
-        U = Math.max(0, B - L.length),
+        B = null != u ? (0, d.G)(u, L) : 0,
+        U = Math.max(0, B - P.length),
         G = Z > B,
         F = B === i.length,
         y = F ? U : 1,
@@ -147,7 +147,7 @@ s.Z = function (e) {
             for (let s = 0; s < y; s++)
                 e.push(
                     (0, n.jsx)(
-                        C.Z,
+                        m.Z,
                         {
                             className: x.headerBoostGem,
                             useReducedMotion: g
@@ -157,12 +157,12 @@ s.Z = function (e) {
                 );
             return e;
         }, [y, g]),
-        Y = null != P,
+        Y = null != L,
         w = a.useMemo(() => b.find((e) => e.isAvailable()), [b]);
     if (0 === b.length) return null;
     let k = b.length;
-    if (((s = F ? (1 === k && Y ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({ numUnappliedGuildBoostSlots: k })) : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({ numUnappliedGuildBoostSlots: k })), m.ZP.isPremium(h))) {
-        if (F && 1 === k && Y) t = P.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
+    if (((s = F ? (1 === k && Y ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({ numUnappliedGuildBoostSlots: k })) : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({ numUnappliedGuildBoostSlots: k })), C.ZP.isPremium(h))) {
+        if (F && 1 === k && Y) t = L.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
         else {
             let e = (e, s) =>
                 (0, n.jsx)(
@@ -275,11 +275,11 @@ s.Z = function (e) {
                             className: x.unappliedBoostSlots,
                             children: b.map((e) =>
                                 (0, n.jsx)(
-                                    f,
+                                    M,
                                     {
                                         guildBoostSlot: e,
                                         isCancellable: G,
-                                        onCancel: M,
+                                        onCancel: f,
                                         onUncancel: D,
                                         premiumSubscription: u,
                                         useReducedMotion: g

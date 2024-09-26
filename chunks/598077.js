@@ -162,7 +162,7 @@ class h extends o.Z {
         this.avatarDecorationData = (0, s.FG)(e);
     }
     constructor(e) {
-        var t, n, r, i, o, s, l, u, _, E, h, p, m, I, T, g, S, A, v, N, O, R, C, y, b, L, D, M, P, U;
+        var t, n, r, i, o, s, l, u, _, E, h, p, m, I, T, g, S, A, v, N, O, R, C, y, L, b, D, M, P, U;
         super(), f(this, 'id', void 0), f(this, 'username', void 0), f(this, 'discriminator', void 0), f(this, 'avatar', void 0), f(this, 'avatarDecorationData', void 0), f(this, 'banner', void 0), f(this, 'email', void 0), f(this, 'verified', void 0), f(this, 'bot', void 0), f(this, 'system', void 0), f(this, 'mfaEnabled', void 0), f(this, 'mobile', void 0), f(this, 'desktop', void 0), f(this, 'premiumType', void 0), f(this, 'flags', void 0), f(this, 'publicFlags', void 0), f(this, 'purchasedFlags', void 0), f(this, 'premiumUsageFlags', void 0), f(this, 'phone', void 0), f(this, 'nsfwAllowed', void 0), f(this, 'guildMemberAvatars', void 0), f(this, 'hasBouncedEmail', void 0), f(this, 'personalConnectionId', void 0), f(this, 'globalName', void 0), f(this, 'clan', void 0), f(this, 'hasFlag', (e) => !1), f(this, 'isStaff', () => !1), f(this, 'isStaffPersonal', () => !1), f(this, 'hasAnyStaffLevel', () => !1);
         let w = null !== (n = e.premium_type) && void 0 !== n ? n : e.premiumType;
         (this.id = e.id),
@@ -185,7 +185,7 @@ class h extends o.Z {
             (this.phone = null !== (R = e.phone) && void 0 !== R ? R : null),
             (this.nsfwAllowed = null !== (C = e.nsfw_allowed) && void 0 !== C ? C : e.nsfwAllowed),
             (this.guildMemberAvatars = null !== (y = e.guildMemberAvatars) && void 0 !== y ? y : {}),
-            (this.hasBouncedEmail = null !== (L = null !== (b = e.has_bounced_email) && void 0 !== b ? b : e.hasBouncedEmail) && void 0 !== L && L),
+            (this.hasBouncedEmail = null !== (b = null !== (L = e.has_bounced_email) && void 0 !== L ? L : e.hasBouncedEmail) && void 0 !== b && b),
             (this.personalConnectionId = null !== (M = null !== (D = e.personal_connection_id) && void 0 !== D ? D : e.personalConnectionId) && void 0 !== M ? M : null),
             (this.globalName = null !== (P = e.global_name) && void 0 !== P ? P : e.globalName),
             (this.banner = e.banner),

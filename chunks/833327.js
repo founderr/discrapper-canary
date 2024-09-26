@@ -68,16 +68,16 @@ function y(e, t) {
     var n = new A();
     N(e, n), a.nextTick(t, n);
 }
-function b(e, t, n, r) {
+function L(e, t, n, r) {
     var i;
     return null === n ? (i = new S()) : 'string' != typeof n && !t.objectMode && (i = new p('chunk', ['string', 'Buffer'], n)), !i || (N(e, i), a.nextTick(r, i), !1);
 }
-function L(e, t, n) {
+function b(e, t, n) {
     return !e.objectMode && !1 !== e.decodeStrings && 'string' == typeof t && (t = u.from(t, n)), t;
 }
 function D(e, t, n, r, i, a) {
     if (!n) {
-        var o = L(t, r, i);
+        var o = b(t, r, i);
         r !== o && ((n = !0), (i = 'buffer'), (r = o));
     }
     var s = t.objectMode ? 1 : r.length;
@@ -209,7 +209,7 @@ n(689118)(C, l),
         var r = this._writableState,
             i = !1,
             a = !r.objectMode && _(e);
-        return a && !u.isBuffer(e) && (e = d(e)), 'function' == typeof t && ((n = t), (t = null)), a ? (t = 'buffer') : !t && (t = r.defaultEncoding), 'function' != typeof n && (n = O), r.ending ? y(this, n) : (a || b(this, r, e, n)) && (r.pendingcb++, (i = D(this, r, a, e, t, n))), i;
+        return a && !u.isBuffer(e) && (e = d(e)), 'function' == typeof t && ((n = t), (t = null)), a ? (t = 'buffer') : !t && (t = r.defaultEncoding), 'function' != typeof n && (n = O), r.ending ? y(this, n) : (a || L(this, r, e, n)) && (r.pendingcb++, (i = D(this, r, a, e, t, n))), i;
     }),
     (C.prototype.cork = function () {
         this._writableState.corked++;

@@ -87,7 +87,7 @@ function R(e) {
         N = (0, u.e7)([f.default], () => f.default.getId() === t.id),
         R = (0, p.Z)(t.id),
         { onInteraction: C } = (0, I.Xo)(),
-        [y, b] = (0, E.US)([c.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK]);
+        [y, L] = (0, E.US)([c.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK]);
     return t.bot || N || !R
         ? null
         : (0, a.jsxs)(_.ZP, {
@@ -111,7 +111,7 @@ function R(e) {
                                           interactionType: T.P.REACT,
                                           interactionSource: n
                                       }),
-                                  b(g.L.UNKNOWN);
+                                  L(g.L.UNKNOWN);
                           },
                           className: s()(A.button, A.left),
                           'aria-label': O(T.P.REACT, n),
@@ -135,7 +135,7 @@ function R(e) {
                                           interactionType: T.P.REPLY,
                                           interactionSource: n
                                       }),
-                                  b(g.L.UNKNOWN);
+                                  L(g.L.UNKNOWN);
                           },
                           className: s()(A.button, A.right),
                           'aria-label': O(T.P.REPLY, n),

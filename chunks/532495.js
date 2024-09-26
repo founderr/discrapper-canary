@@ -20,23 +20,23 @@ var a = t(512722),
     I = t(532432),
     N = t(349177),
     A = t(872736),
-    m = t(134795),
-    C = t(610966),
+    C = t(134795),
+    m = t(610966),
     g = t(513901),
     h = t(451392),
     O = t(906364),
     p = t(350327),
     R = t(621853),
     x = t(687158),
-    f = t(25990),
-    M = t(594174),
+    M = t(25990),
+    f = t(594174),
     D = t(74538),
-    P = t(689938),
-    L = t(221118);
+    L = t(689938),
+    P = t(221118);
 function b() {
     var e, s, t, a, b, Z, v, j;
-    let B = (0, r.e7)([M.default], () => {
-            let e = M.default.getCurrentUser();
+    let B = (0, r.e7)([f.default], () => {
+            let e = f.default.getCurrentUser();
             return i()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
         }),
         U = (0, r.e7)([R.Z], () => R.Z.getUserProfile(B.id)),
@@ -49,9 +49,9 @@ function b() {
             pendingAccentColor: w,
             pendingThemeColors: k,
             errors: H
-        } = (0, r.cj)([f.Z], () => {
-            let e = f.Z.getAllPending(),
-                s = f.Z.getErrors();
+        } = (0, r.cj)([M.Z], () => {
+            let e = M.Z.getAllPending(),
+                s = M.Z.getErrors();
             return {
                 ...e,
                 errors: s
@@ -77,7 +77,7 @@ function b() {
         es = (0, c.Z)('user_profile'),
         et = (0, d.V)();
     return (0, n.jsxs)('div', {
-        className: L.sectionsContainer,
+        className: P.sectionsContainer,
         children: [
             (0, n.jsx)(N.Z, {
                 placeholder: B.username,
@@ -89,7 +89,7 @@ function b() {
             (0, n.jsx)(
                 O.Z,
                 {
-                    sectionTitle: P.Z.Messages.USER_SETTINGS_PRONOUNS,
+                    sectionTitle: L.Z.Messages.USER_SETTINGS_PRONOUNS,
                     errors: H.pronouns,
                     onPronounsChange: p.ID,
                     pendingPronouns: Y,
@@ -103,7 +103,7 @@ function b() {
                     onAvatarChange: o.I5,
                     showRemoveAvatarButton: z,
                     errors: H.avatar,
-                    sectionTitle: P.Z.Messages.USER_SETTINGS_AVATAR,
+                    sectionTitle: L.Z.Messages.USER_SETTINGS_AVATAR,
                     forcedDivider: !0
                 },
                 'avatar'
@@ -112,7 +112,7 @@ function b() {
                 S.Z,
                 {
                     user: B,
-                    sectionTitle: P.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
+                    sectionTitle: L.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
                 },
                 'decoration'
             ),
@@ -120,7 +120,7 @@ function b() {
                 g.Z,
                 {
                     user: B,
-                    sectionTitle: P.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
+                    sectionTitle: L.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
                 },
                 'effect'
             ),
@@ -128,7 +128,7 @@ function b() {
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
                           (0, n.jsx)(
-                              m.Z,
+                              C.Z,
                               {
                                   showRemoveBannerButton: Q,
                                   errors: H.banner,
@@ -147,7 +147,7 @@ function b() {
                       ]
                   })
                 : (0, n.jsx)(
-                      C.Z,
+                      m.Z,
                       {
                           user: B,
                           savedUserColor: null == U ? void 0 : U.accentColor,
@@ -159,7 +159,7 @@ function b() {
             (0, n.jsx)(
                 T.Z,
                 {
-                    sectionTitle: P.Z.Messages.USER_SETTINGS_ABOUT_ME,
+                    sectionTitle: L.Z.Messages.USER_SETTINGS_ABOUT_ME,
                     errors: ee,
                     onBioChange: (e) => (0, E.xQ)(e, null == U ? void 0 : U.bio),
                     pendingBio: V,

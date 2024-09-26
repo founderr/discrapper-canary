@@ -71,7 +71,7 @@ let S = o.vB(0),
     R = o.$e(g.Plq.VIEW_CHANNEL, g.Plq.READ_MESSAGE_HISTORY),
     C = o.$e(g.Plq.VIEW_CHANNEL, g.Plq.READ_MESSAGE_HISTORY, g.Plq.CHANGE_NICKNAME),
     y = o.$e(g.Plq.MANAGE_GUILD, g.Plq.MANAGE_ROLES, g.Plq.ADMINISTRATOR, g.Plq.BAN_MEMBERS, g.Plq.MANAGE_NICKNAMES, g.Plq.CREATE_GUILD_EXPRESSIONS, g.Plq.MANAGE_GUILD_EXPRESSIONS, g.Plq.MANAGE_WEBHOOKS, g.Plq.VIEW_AUDIT_LOG);
-function b(e, t, n) {
+function L(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (r && t.mfaLevel === g.BpS.ELEVATED && n === f.default.getId()) {
         var i;
@@ -79,7 +79,7 @@ function b(e, t, n) {
     }
     return e;
 }
-function L(e, t, n, r) {
+function b(e, t, n, r) {
     let i = r[e];
     if ((null != i && ((n = o.Od(n, i.deny)), (n = o.IH(n, i.allow))), null != t)) {
         let e = S,
@@ -98,7 +98,7 @@ function L(e, t, n, r) {
 }
 function D(e) {
     let { userId: t, member: n, guild: r, overwrites: i, roles: a, checkElevated: s = !0, excludeGuildPermissions: l = !1, lurkerPermissionsMask: u = N } = e;
-    if (l) return L(r.id, n, S, i);
+    if (l) return b(r.id, n, S, i);
     let c = (a =
             null != a
                 ? {
@@ -112,7 +112,7 @@ function D(e) {
             let t = a[n.roles[e]];
             void 0 !== t && (_ = o.IH(_, t.permissions));
         }
-    return (_ = o.e$(_, g.Plq.ADMINISTRATOR) ? A : L(r.id, n, _, i)), (d.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (_ = o.hX(_, u)), p.ZP.isCurrentUserGuest(r.id) && (_ = o.hX(_, O)), b(_, r, t, s);
+    return (_ = o.e$(_, g.Plq.ADMINISTRATOR) ? A : b(r.id, n, _, i)), (d.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (_ = o.hX(_, u)), p.ZP.isCurrentUserGuest(r.id) && (_ = o.hX(_, O)), L(_, r, t, s);
 }
 function M(e) {
     let t,
@@ -212,7 +212,7 @@ function P(e) {
         i = null != e ? m.Z.getGuild(e) : null;
     } else (s = null != s ? s : {}), (i = o);
     if (null == i) return S;
-    if (!(f === (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && c.Z.isViewingRoles(i.id)) && i.isOwner(f)) return b(A, i, f, u);
+    if (!(f === (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && c.Z.isViewingRoles(i.id)) && i.isOwner(f)) return L(A, i, f, u);
     let g = p.ZP.getMember(i.id, f);
     return D({
         userId: f,

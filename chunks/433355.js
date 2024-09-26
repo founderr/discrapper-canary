@@ -53,20 +53,20 @@ function C(e) {
 function y(e) {
     return [s.tI.VIEW_CHANNEL, s.tI.VIEW_THREAD, s.tI.VIEW_MESSAGE_REQUEST].includes(e.type);
 }
-function b(e) {
+function L(e) {
     let t = !1;
     N && ((N = !1), (t = !0));
     let n = C(E.Z.getChannelId());
     return null != n && n in O && (delete O[n], (t = !0)), t && e ? e : !e;
 }
-function L() {
-    A && (A = b(A)), (S = b(S));
+function b() {
+    A && (A = L(A)), (S = L(S));
 }
 function D() {
-    S && (S = b(S)), (A = b(A));
+    S && (S = L(S)), (A = L(A));
 }
 function M() {
-    !v && l.S.dispatch(p.CkL.SEARCH_RESULTS_CLOSE), (v = b(v));
+    !v && l.S.dispatch(p.CkL.SEARCH_RESULTS_CLOSE), (v = L(v));
 }
 function P(e) {
     let { sidebarType: t, guildId: n, baseChannelId: r, details: i } = e;
@@ -211,7 +211,7 @@ class Y extends (r = a.ZP.PersistedStore) {
 T(Y, 'displayName', 'ChannelSectionStore'),
     T(Y, 'persistKey', 'ChannelSectionStore2'),
     (t.ZP = new Y(o.Z, {
-        CHANNEL_TOGGLE_MEMBERS_SECTION: L,
+        CHANNEL_TOGGLE_MEMBERS_SECTION: b,
         PROFILE_PANEL_TOGGLE_SECTION: M,
         CHANNEL_TOGGLE_SUMMARIES_SECTION: D,
         SIDEBAR_VIEW_CHANNEL: w,

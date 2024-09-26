@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(228168),
     C = n(689938),
     y = n(249818);
-let b = 'text-sm/medium',
-    L = 18,
+let L = 'text-sm/medium',
+    b = 18,
     D = 1.25,
     M = 36,
     P = 144,
@@ -54,7 +54,7 @@ function G(e) {
         ee = null != Q,
         et = ee && !J,
         en = ee ? D : 0,
-        er = L + en,
+        er = b + en,
         ei = P + en,
         ea = M + en,
         eo = ee || J,
@@ -136,7 +136,7 @@ function G(e) {
         eC = () =>
             J
                 ? (0, i.jsx)(d.Text, {
-                      variant: b,
+                      variant: L,
                       className: y.statusText,
                       children: $
                   })
@@ -153,13 +153,13 @@ function G(e) {
                 children: [eR(), eC()]
             });
         },
-        eb = () =>
+        eL = () =>
             (0, i.jsxs)('div', {
                 className: s()(y.content, y.clamp, y.placeholderWidth, { [y.panel]: I === R.y0.PANEL }),
                 ref: z,
                 children: [eR(), eC()]
             }),
-        eL = () =>
+        eb = () =>
             (0, i.jsxs)('div', {
                 className: s()(y.content, y.unclamp, y.placeholderWidth, y.incorporeal, { [y.panel]: I === R.y0.PANEL }),
                 ref: W,
@@ -220,7 +220,7 @@ function G(e) {
                                     colorClass: y.addStatusIconColor
                                 }),
                                 (0, i.jsx)(d.Text, {
-                                    variant: b,
+                                    variant: L,
                                     className: y.addStatusPrompt,
                                     children: C.Z.Messages.USER_SETTINGS_ADD_STATUS
                                 })
@@ -232,7 +232,7 @@ function G(e) {
         eF = () => {
             let e = (0, i.jsxs)('span', {
                 className: eG,
-                children: [eo && eb(), eo && eL()]
+                children: [eo && eL(), eo && eb()]
             });
             return (0, i.jsxs)('div', {
                 className: s()(y.invisibleContainer, eM, ex),

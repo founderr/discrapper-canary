@@ -133,12 +133,12 @@ function R(e) {
     });
 }
 function C(e) {
-    let { startTime: t, status: n, eventType: r, className: i, endTime: s, liveText: u, textVariant: d = 'text-sm/semibold', isNew: p, recurrenceRule: C, guildEventId: y, recurrenceId: b } = e,
-        L = (0, E.O0)(I.tP.TEXT_BRAND),
+    let { startTime: t, status: n, eventType: r, className: i, endTime: s, liveText: u, textVariant: d = 'text-sm/semibold', isNew: p, recurrenceRule: C, guildEventId: y, recurrenceId: L } = e,
+        b = (0, E.O0)(I.tP.TEXT_BRAND),
         D = (0, E.O0)(I.tP.TEXT_POSITIVE),
         M = (0, E.O0)(I.tP.TEXT_DANGER);
     null == u && (u = r === m.WX.EXTERNAL ? T.Z.Messages.STAGE_CHANNEL_HAPPENING_NOW : T.Z.Messages.STAGE_CHANNEL_LIVE_NOW);
-    let P = (0, f.Z)(b, y),
+    let P = (0, f.Z)(L, y),
         [{ startDateTimeString: U, endDateTimeString: w, currentOrPastEvent: x, upcomingEvent: G, diffMinutes: k }, B] = o.useState((0, h.ub)(t, s));
     o.useEffect(() => {
         B((0, h.ub)(t, s));
@@ -165,13 +165,13 @@ function C(e) {
             () =>
                 N({
                     timeStatus: Z,
-                    textBrand: L,
+                    textBrand: b,
                     textPositive: D,
                     textDanger: M,
                     endDateTimeString: w,
                     startDateTimeString: U
                 }),
-            [Z, L, D, M, w, U]
+            [Z, b, D, M, w, U]
         ),
         K = null;
     if (null != C) {

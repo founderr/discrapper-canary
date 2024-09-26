@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return L;
     }
 });
 var r = n(735250),
@@ -40,7 +40,7 @@ function y(e, t, n) {
         o = null;
     null != e && null != r && (o = r === v.NgX.ALL_SERVERS ? null : e.getGuildId()), l.Z.fetchRecentMentions(n, v.DJj, o, i, a);
 }
-function b(e) {
+function L(e) {
     let { setTab: t, onJump: n, badgeState: s, closePopout: _ } = e,
         E = (0, a.e7)([f.Z, p.Z], () => f.Z.getChannel(p.Z.getChannelId())),
         {
@@ -49,7 +49,7 @@ function b(e) {
             loading: g,
             guildFilter: S,
             roleFilter: C,
-            everyoneFilter: b
+            everyoneFilter: L
         } = (0, a.cj)([m.Z], () => ({
             messages: m.Z.getMentions(),
             hasMore: m.Z.hasMore,
@@ -61,7 +61,7 @@ function b(e) {
         M = !0,
         U = (0, c.Z)(S),
         w = (0, c.Z)(C),
-        x = (0, c.Z)(b);
+        x = (0, c.Z)(L);
     function G() {
         y(E, M, null != h && h.length > 0 ? h[h.length - 1].id : null);
     }
@@ -73,8 +73,8 @@ function b(e) {
             y(E, M);
             return;
         }
-        M && ((null != U && S !== U) || (null != w && C !== w) || (null != x && b !== x)) && y(E, M);
-    }, [U, S, w, C, x, b, E, M]),
+        M && ((null != U && S !== U) || (null != w && C !== w) || (null != x && L !== x)) && y(E, M);
+    }, [U, S, w, C, x, L, E, M]),
         i.useEffect(() => {
             (null == h ? void 0 : h.some(d.k5)) && (l.Z.clearMentions(), y(E, M));
         }, []),
@@ -111,13 +111,13 @@ function b(e) {
             canCloseAllMessages: !0,
             renderHeader: B,
             renderEmptyState: P,
-            renderMessage: M ? D : L,
+            renderMessage: M ? D : b,
             'aria-label': N.Z.Messages.RECENT_MENTIONS,
             listName: 'recents'
         })
     });
 }
-function L(e, t) {
+function b(e, t) {
     return [
         (0, r.jsx)(
             M,

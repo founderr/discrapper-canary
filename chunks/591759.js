@@ -31,10 +31,10 @@ function C(e) {
 function y(e, t) {
     return null != e && null != t && (window.location.host === e || !1);
 }
-function b(e) {
+function L(e) {
     return null != e && 'discord:' === e;
 }
-function L(e) {
+function b(e) {
     return null != e && E.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
 }
 function D(e) {
@@ -42,7 +42,7 @@ function D(e) {
     return null != e && C(E.parse(e).hostname, t);
 }
 function M(e) {
-    return null != e && b(E.parse(e).protocol);
+    return null != e && L(E.parse(e).protocol);
 }
 function P(e) {
     let t = O ? window.GLOBAL_ENV.INVITE_HOST : location.host;
@@ -52,10 +52,10 @@ t.Z = {
     URL_REGEX: v,
     isDiscordHostname: C,
     isDiscordLocalhost: y,
-    isDiscordProtocol: b,
+    isDiscordProtocol: L,
     isDiscordUrl: D,
     isDiscordUri: M,
-    isDiscordCdnUrl: L,
+    isDiscordCdnUrl: b,
     isDiscordUrlOrUri: (e) => D(e) || M(e),
     isAppRoute: (e) => {
         let t = e.toLowerCase();

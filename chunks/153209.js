@@ -50,7 +50,7 @@ function v(e) {
             }
             return !1;
         }, [R, C, O]),
-        b = () => {
+        L = () => {
             null != R && (f.d$.updateSetting(R.id), h.default.track(I.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
         };
     return (0, i.jsxs)('div', {
@@ -61,7 +61,7 @@ function v(e) {
                 setTab: t,
                 badgeState: n,
                 closePopout: r,
-                children: y ? (0, i.jsx)(A, { onClick: b }) : null
+                children: y ? (0, i.jsx)(A, { onClick: L }) : null
             }),
             (0, i.jsx)(E.Z, {
                 initialized: l,

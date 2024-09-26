@@ -92,7 +92,7 @@ function y(e, t) {
         }
     );
 }
-function b(e, t, n) {
+function L(e, t, n) {
     var r;
     let i = (0, u.e7)([v.Z], () => v.Z.getInteractionComponentState(e.id, t.id)),
         a = (0, u.e7)([E.ZP], () => E.ZP.getInteraction(e), [e]),
@@ -129,7 +129,7 @@ function b(e, t, n) {
         error: l
     };
 }
-function L(e, t, n) {
+function b(e, t, n) {
     let r = (0, u.e7)([v.Z], () => v.Z.getInteractionComponentState(e.customId, t.id)),
         { error: i, validate: a } = y(t, r),
         s = o.useCallback(
@@ -164,14 +164,14 @@ function M(e) {
             () =>
                 null != n
                     ? {
-                          useComponentState: b.bind(null, n),
+                          useComponentState: L.bind(null, n),
                           channelId: n.channel_id,
                           message: n,
                           validators: i
                       }
                     : (l()(null != r, 'modal is present if message is not'),
                       {
-                          useComponentState: L.bind(null, r),
+                          useComponentState: b.bind(null, r),
                           channelId: r.channelId,
                           modal: r,
                           validators: i

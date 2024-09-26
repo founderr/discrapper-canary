@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     },
     MP: function () {
-        return L;
+        return b;
     },
     Mg: function () {
         return R;
@@ -123,7 +123,7 @@ function y(e) {
         media: e
     });
 }
-function b(e) {
+function L(e) {
     let { mid: t, type: n, setup: r, direction: i, baseSDP: a, codec: o, payload: s, bitrate: l, ssrcs: u, extensions: c, rtxPayload: d, sendingVideo: E } = e;
     if ('inactive' === i && !A.WS)
         return {
@@ -254,7 +254,7 @@ function b(e) {
     }
     return f;
 }
-function L(e) {
+function b(e) {
     let { type: t, baseSDP: n, direction: r, audioCodec: i, audioPayloadType: a, audioBitRate: o, videoCodec: s, videoPayloadType: l, videoBitRate: u, rtxPayloadType: c, ssrcs: d, extensions: _ } = e,
         E = [];
     if ((N.info('generateSessionDescription: '.concat(JSON.stringify(d))), 'Firefox' === I().name)) {
@@ -266,7 +266,7 @@ function L(e) {
                 I = 'audio' === f ? a : l,
                 T = 'audio' === f ? o : u;
             E.push(
-                b({
+                L({
                     mid: p,
                     type: f,
                     setup: e,
@@ -293,7 +293,7 @@ function L(e) {
                 });
         if (
             (E.push(
-                b({
+                L({
                     mid: 'audio',
                     type: 'audio',
                     setup: e,
@@ -318,7 +318,7 @@ function L(e) {
                     return C(n, t, 'v');
                 });
             E.push(
-                b({
+                L({
                     mid: 'video',
                     type: 'video',
                     setup: e,
@@ -353,7 +353,7 @@ function D(e) {
                 S = 'audio' === p ? null : c,
                 A = 'audio' === p ? a : l;
             E.push(
-                b({
+                L({
                     mid: I,
                     type: p,
                     setup: f,

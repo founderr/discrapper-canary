@@ -38,20 +38,20 @@ function O(e) {
             location_stack: C
         });
     }, [C]);
-    let b = (0, _.N)(),
-        L = (0, d.Ng)(),
-        D = null != b || null != L,
-        M = (null == b ? void 0 : null === (t = b.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.Si.TIER_0;
+    let L = (0, _.N)(),
+        b = (0, d.Ng)(),
+        D = null != L || null != b,
+        M = (null == L ? void 0 : null === (t = L.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.Si.TIER_0;
     return (0, r.jsxs)('div', {
         className: o()(v.emptyState, O, { [v.unifyTrialUpsell]: D }),
         children: [
             D
                 ? (0, r.jsx)(E.ZP, {
-                      discountOffer: L,
-                      trialOffer: b,
+                      discountOffer: b,
+                      trialOffer: L,
                       onClose: R,
                       type: S.cd.EMPTY_STICKER_PICKER_UPSELL,
-                      subscriptionTier: null !== (a = null == b ? void 0 : null === (n = b.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : S.Si.TIER_2,
+                      subscriptionTier: null !== (a = null == L ? void 0 : null === (n = L.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : S.Si.TIER_2,
                       children: A.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
                   })
                 : (0, r.jsxs)(r.Fragment, {

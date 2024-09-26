@@ -1,6 +1,6 @@
 n.d(t, {
     K: function () {
-        return L;
+        return b;
     }
 });
 var r = n(47120);
@@ -166,7 +166,7 @@ function y(e) {
         )
         .otherwise(() => null);
 }
-function b(e) {
+function L(e) {
     let { answer: t, isExpired: n, answersInteraction: r, canShowVoteCounts: i, canShowVoterDetails: o } = e,
         s = !0 === t.isSelected,
         c = !0 === t.didSelfVote,
@@ -217,7 +217,7 @@ function b(e) {
         })
     });
 }
-function L(e) {
+function b(e) {
     let { isExpired: t, answersInteraction: n, canShowVoteCounts: r, canTapAnswers: i, ...o } = e;
     return (0, a.jsx)(T.$e, {
         className: A.answersContainer,
@@ -225,7 +225,7 @@ function L(e) {
         answersInteraction: n,
         canTapAnswers: i,
         renderAnswerContent: (e) =>
-            (0, a.jsx)(b, {
+            (0, a.jsx)(L, {
                 answer: e,
                 isExpired: t,
                 answersInteraction: n,

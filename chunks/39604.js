@@ -77,8 +77,8 @@ var a = n(46973),
     R = n(550351),
     C = n(659487),
     y = n(711644),
-    b = n(259612),
-    L = n(356659),
+    L = n(259612),
+    b = n(356659),
     D = n(981631);
 function M(e) {
     let { allowVoiceRecording: t } = e;
@@ -238,11 +238,11 @@ async function V(e) {
         let { duration: e, clipStats: t } = await (null != s ? a.saveClipForUser(s, i, o) : a.saveClip(i, o)),
             r = Z(c, t);
         (r.clip_save_time_ms = t.clipSaveTimeMs), (r.clip_size_bytes = t.clipSizeBytes), null != t.viewerDecodeFps && ((r.decode_fps_during_clip = t.viewerDecodeFps), (r.encode_fps_during_clip = t.viewerEncodeFps), (r.target_fps = null)), S.default.track(D.rMx.CLIP_SAVED, r);
-        let l = await (0, b.R)(u.Z.clips.getClipProtocolURLFromPath(i), 0);
+        let l = await (0, L.R)(u.Z.clips.getClipProtocolURLFromPath(i), 0);
         return (
             (n.thumbnail = l),
             (n.length = e),
-            L.jF.info('Clip save succeeded with '.concat(e, 'ms and thumbnail ').concat(null !== (d = null == l ? void 0 : l.length) && void 0 !== d ? d : 0, ' bytes thumbnail.')),
+            b.jF.info('Clip save succeeded with '.concat(e, 'ms and thumbnail ').concat(null !== (d = null == l ? void 0 : l.length) && void 0 !== d ? d : 0, ' bytes thumbnail.')),
             await a.updateClipMetadata(i, JSON.stringify(n)),
             {
                 ...n,
@@ -278,7 +278,7 @@ async function H(e) {
         h = null != e ? e : f,
         T = (() => {
             let e = null != h ? (0, _.my)(h).ownerId : void 0;
-            return e === m.default.getId() ? L.X9.STREAMER : null != e ? L.X9.VIEWER : L.X9.DECOUPLED;
+            return e === m.default.getId() ? b.X9.STREAMER : null != e ? b.X9.VIEWER : b.X9.DECOUPLED;
         })(),
         S = await (async () => {
             if (null == h) return;
@@ -288,7 +288,7 @@ async function H(e) {
                 try {
                     let e = (0, o.zS)(),
                         t = await e.getNextVideoOutputFrame(n);
-                    return (0, b.W)(t);
+                    return (0, L.W)(t);
                 } catch (e) {
                     return;
                 }
@@ -308,9 +308,9 @@ async function H(e) {
             clip: e
         });
     } catch (e) {
-        L.jF.error('Clip Failed to Save', e), null == A || A.stop(), (0, v.GN)('clip_error', 0.5), l.Z.dispatch({ type: 'CLIPS_SAVE_CLIP_ERROR' });
+        b.jF.error('Clip Failed to Save', e), null == A || A.stop(), (0, v.GN)('clip_error', 0.5), l.Z.dispatch({ type: 'CLIPS_SAVE_CLIP_ERROR' });
     }
-    L.jF.info(''.concat(N.Z.getSettings().clipsLength / 1000, 's clip save took ').concat(Math.round(performance.now() - O), 'ms'));
+    b.jF.info(''.concat(N.Z.getSettings().clipsLength / 1000, 's clip save took ').concat(Math.round(performance.now() - O), 'ms'));
 }
 function Y(e, t) {
     l.Z.dispatch({

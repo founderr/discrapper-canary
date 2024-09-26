@@ -24,8 +24,8 @@ var a = n(735250),
     R = n(652136),
     C = n(695346),
     y = n(626135),
-    b = n(280930),
-    L = n(606301),
+    L = n(280930),
+    b = n(606301),
     D = n(981631),
     M = n(689938),
     P = n(238268);
@@ -118,9 +118,9 @@ function F(e) {
             [H, Y] = o.useState(''),
             [j, W] = o.useState(!1),
             [K, z] = o.useState(!1),
-            q = (0, b.Z)(Z, N, r),
+            q = (0, L.Z)(Z, N, r),
             { analyticsLocations: Q } = (0, p.ZP)(h.Z.EXPRESSION_SUGGESTIONS),
-            { handleTextChange: X, debouncedSetTextInputValue: $ } = (0, b.m)({
+            { handleTextChange: X, debouncedSetTextInputValue: $ } = (0, L.m)({
                 setTextInputValue: V,
                 setHasDismissed: O,
                 setHasSelection: z,
@@ -192,7 +192,7 @@ function F(e) {
             ea = o.useRef([]),
             eo = o.useRef(!1);
         o.useEffect(() => {
-            en && (ea.current = q), en !== eo.current && (_.emit(en ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), en && ((0, L.Tk)(Z), Y(Z))), (eo.current = en);
+            en && (ea.current = q), en !== eo.current && (_.emit(en ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), en && ((0, b.Tk)(Z), Y(Z))), (eo.current = en);
         }, [_, en, q, Z]);
         let es = !en,
             el = en ? q : ea.current;

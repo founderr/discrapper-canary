@@ -9,11 +9,11 @@ var o = n(526629),
     d = n(689938),
     u = n(437567);
 t.Z = (e) => {
-    let { quest: t, expansionSpring: n, isFullyExpanded: p, partnerBranding: x, useReducedMotion: m } = e,
-        { enabled: g, variant: _ } = l.Hp.useExperiment({ location: c.dr.QUESTS_BAR });
-    if (!g) return null;
-    let C = null;
-    return (_ === l.PW.REWARD_AVAILABLE ? (C = d.Z.Messages.REWARD_AVAILABLE) : _ === l.PW.EARN_A_REWARD ? (C = d.Z.Messages.EARN_A_REWARD) : _ === l.PW.EARN_A_REWARD_EXCLAMATION && (C = d.Z.Messages.EARN_A_REWARD_EXCLAIMATION), null == C)
+    let { quest: t, expansionSpring: n, isFullyExpanded: p, partnerBranding: m, useReducedMotion: x } = e,
+        { enabled: _, variant: C } = l.Hp.useExperiment({ location: c.dr.QUESTS_BAR });
+    if (!_) return null;
+    let g = null;
+    return (C === l.PW.REWARD_AVAILABLE ? (g = d.Z.Messages.REWARD_AVAILABLE) : C === l.PW.EARN_A_REWARD ? (g = d.Z.Messages.EARN_A_REWARD) : C === l.PW.EARN_A_REWARD_EXCLAMATION && (g = d.Z.Messages.EARN_A_REWARD_EXCLAIMATION), null == g)
         ? null
         : (0, s.jsxs)(s.Fragment, {
               children: [
@@ -57,7 +57,7 @@ t.Z = (e) => {
                           quest: t,
                           questContent: a.jn.QUEST_BAR_V2,
                           location: c.dr.QUESTS_BAR,
-                          autoplay: p && !m
+                          autoplay: p && !x
                       })
                   }),
                   (0, s.jsxs)('div', {
@@ -84,7 +84,7 @@ t.Z = (e) => {
                                       (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')
                                   )
                               },
-                              children: x
+                              children: m
                           }),
                           (0, s.jsx)(o.animated.div, {
                               className: u.rewardHighlightCTA,
@@ -97,7 +97,7 @@ t.Z = (e) => {
                               children: (0, s.jsx)(r.Text, {
                                   color: 'always-white',
                                   variant: 'text-xs/medium',
-                                  children: C
+                                  children: g
                               })
                           })
                       ]

@@ -43,7 +43,7 @@ function v(e) {
 }
 function N() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    L();
+    b();
     let t = c.Z.getForApplication(p.CL),
         n = (0, h.kG)(t),
         r = (0, h.MR)([m.Ft.FREE_GUILD_BOOST_1_MONTH, m.Ft.FREE_GUILD_BOOST_3_MONTHS], t),
@@ -53,7 +53,7 @@ function N() {
         return;
     }
     if (!!(0, E.dR)({ location: 'tenure_reward_manager' }))
-        if ((!0 === e || C(i)) && null == r) b();
+        if ((!0 === e || C(i)) && null == r) L();
         else {
             let e = c.Z.getForApplication(p.CL);
             if (null == e) return;
@@ -83,20 +83,20 @@ function C(e) {
 }
 function y() {
     var e;
-    if ((L(), f.Z.getFetchState() !== f.M.FETCHED || g)) return;
+    if ((b(), f.Z.getFetchState() !== f.M.FETCHED || g)) return;
     let t = null !== (e = f.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : f.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_3_MONTHS);
     if ((null == t ? void 0 : t.redeemable_at) == null) return;
     let n = (null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
     null != n && n > 0 && (T = setTimeout(N, n));
 }
-async function b() {
+async function L() {
     if (!g) (g = !0), await _.V(), (g = !1), o.Z.wait(() => y());
 }
-function L() {
+function b() {
     clearTimeout(T), (T = null);
 }
 function D() {
-    L();
+    b();
 }
 function M() {
     N();
@@ -115,7 +115,7 @@ class P extends s.Z {
                 ENTITLEMENT_CREATE: v,
                 ENTITLEMENT_UPDATE: () => N(),
                 ENTITLEMENT_DELETE: () => N(),
-                LOGOUT: L
+                LOGOUT: b
             });
     }
 }

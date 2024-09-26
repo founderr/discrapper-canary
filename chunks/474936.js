@@ -6,7 +6,7 @@ n.d(t, {
         return ew;
     },
     $e: function () {
-        return b;
+        return L;
     },
     $n: function () {
         return eq;
@@ -24,7 +24,7 @@ n.d(t, {
         return eu;
     },
     CL: function () {
-        return L;
+        return b;
     },
     Cj: function () {
         return h;
@@ -57,7 +57,7 @@ n.d(t, {
         return k;
     },
     Lw: function () {
-        return eb;
+        return eL;
     },
     M_: function () {
         return eX;
@@ -319,12 +319,12 @@ let R = void 0,
             label: 'Standard'
         }
     ],
-    b = Object.freeze({
+    L = Object.freeze({
         3: 0,
         1: 1,
         2: 2
     }),
-    L = '521842831262875670';
+    b = '521842831262875670';
 !(function (e) {
     (e.NONE = '628379670982688768'), (e.TIER_0 = '978380684370378762'), (e.TIER_1 = '521846918637420545'), (e.TIER_2 = '521847234246082599'), (e.GUILD = '590663762298667008'), (e.LEGACY = '521842865731534868');
 })(i || (i = {}));
@@ -686,8 +686,8 @@ let ey = Object.freeze({
         '521847234246082599': 2,
         '590663762298667008': 4
     }),
-    eb = 52428800,
     eL = 52428800,
+    eb = 52428800,
     eD = 524288000,
     eM = 52428800,
     eP = 104857600,
@@ -806,8 +806,8 @@ let eZ = Object.freeze({
         SUPPRESS_NOTIFICATION: 128
     }),
     eV = Object.freeze({
-        3: { fileSize: eb },
-        1: { fileSize: eL },
+        3: { fileSize: eL },
+        1: { fileSize: eb },
         2: { fileSize: eD }
     });
 !(function (e) {

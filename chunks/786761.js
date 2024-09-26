@@ -3,10 +3,10 @@ n.d(t, {
         return k;
     },
     e5: function () {
-        return b;
+        return L;
     },
     gx: function () {
-        return L;
+        return b;
     },
     lp: function () {
         return G;
@@ -63,7 +63,7 @@ function y(e) {
         codedLinks: e.type === v.uaV.THREAD_CREATED ? [] : (0, s.ZP)(e.content)
     });
 }
-function b(e) {
+function L(e) {
     var t, n, r, i, a, o, s;
     let { reactions: l, interactionData: c } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         E = y(e),
@@ -74,8 +74,8 @@ function b(e) {
         A = R(e),
         N = null,
         O = null == e ? void 0 : e.gift_info,
-        b = e.gifting_prompt,
-        L = null != e.interaction ? d.Z.createFromServer(e.interaction) : null,
+        L = e.gifting_prompt,
+        b = null != e.interaction ? d.Z.createFromServer(e.interaction) : null,
         D = e.type === v.uaV.THREAD_STARTER_MESSAGE ? (null === (r = e.referenced_message) || void 0 === r ? void 0 : null === (n = r.author) || void 0 === n ? void 0 : n.id) : void 0,
         M = e.type === v.uaV.PREMIUM_REFERRAL ? e.content : void 0,
         U = e.content;
@@ -114,17 +114,17 @@ function b(e) {
               call: P(e.call, E.timestamp),
               messageSnapshots: x(e),
               reactions: w(null != l ? l : e.reactions, e.poll),
-              interaction: L,
+              interaction: b,
               interactionData: null != c ? c : e.interaction_data,
               interactionMetadata: e.interaction_metadata,
               roleSubscriptionData: e.role_subscription_data,
               purchaseNotification: e.purchase_notification,
               poll: null == e.poll ? void 0 : (0, u.Z)(e.poll),
               giftInfo: null == O ? void 0 : O,
-              giftingPrompt: b
+              giftingPrompt: L
           });
 }
-function L(e, t) {
+function b(e, t) {
     return null != t.edited_timestamp
         ? {
               ...t,
@@ -138,7 +138,7 @@ function L(e, t) {
 }
 function D(e, t) {
     if (null != t.edited_timestamp)
-        return b(t, {
+        return L(t, {
             reactions: e.reactions,
             interactionData: e.interactionData
         });

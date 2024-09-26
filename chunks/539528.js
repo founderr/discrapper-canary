@@ -162,12 +162,12 @@ function R(e) {
             a = i.pathname + i.search + i.hash;
         return C && (a = c(a, C)), f(a, r, n);
     }
-    function b() {
+    function L() {
         return Math.random().toString(36).substr(2, R);
     }
-    var L = p();
+    var b = p();
     function D(e) {
-        (0, r.Z)(Q, e), (Q.length = t.length), L.notifyListeners(Q.location, Q.action);
+        (0, r.Z)(Q, e), (Q.length = t.length), b.notifyListeners(Q.location, Q.action);
     }
     function M(e) {
         !A(e) && w(y(e.state));
@@ -180,7 +180,7 @@ function R(e) {
         if (U) (U = !1), D();
         else {
             var t = 'POP';
-            L.confirmTransitionTo(e, t, h, function (n) {
+            b.confirmTransitionTo(e, t, h, function (n) {
                 n
                     ? D({
                           action: t,
@@ -206,8 +206,8 @@ function R(e) {
     }
     function F(e, r) {
         var i = 'PUSH',
-            a = f(e, r, b(), Q.location);
-        L.confirmTransitionTo(a, i, h, function (e) {
+            a = f(e, r, L(), Q.location);
+        b.confirmTransitionTo(a, i, h, function (e) {
             if (e) {
                 var r = B(a),
                     o = a.key,
@@ -241,8 +241,8 @@ function R(e) {
     }
     function Z(e, r) {
         var i = 'REPLACE',
-            a = f(e, r, b(), Q.location);
-        L.confirmTransitionTo(a, i, h, function (e) {
+            a = f(e, r, L(), Q.location);
+        b.confirmTransitionTo(a, i, h, function (e) {
             if (e) {
                 var r = B(a),
                     o = a.key,
@@ -288,7 +288,7 @@ function R(e) {
     var K = !1;
     function z(e) {
         void 0 === e && (e = !1);
-        var t = L.setPrompt(e);
+        var t = b.setPrompt(e);
         return (
             !K && (W(1), (K = !0)),
             function () {
@@ -297,7 +297,7 @@ function R(e) {
         );
     }
     function q(e) {
-        var t = L.appendListener(e);
+        var t = b.appendListener(e);
         return (
             W(1),
             function () {
@@ -339,11 +339,11 @@ var C = 'hashchange',
             decodePath: s
         }
     };
-function b(e) {
+function L(e) {
     var t = e.indexOf('#');
     return -1 === t ? e : e.slice(0, t);
 }
-function L() {
+function b() {
     var e = window.location.href,
         t = e.indexOf('#');
     return -1 === t ? '' : e.substring(t + 1);
@@ -352,7 +352,7 @@ function D(e) {
     window.location.hash = e;
 }
 function M(e) {
-    window.location.replace(b(window.location.href) + '#' + e);
+    window.location.replace(L(window.location.href) + '#' + e);
 }
 function P(e) {
     void 0 === e && (e = {}), m || (0, o.Z)(!1);
@@ -368,7 +368,7 @@ function P(e) {
         T = h.encodePath,
         g = h.decodePath;
     function A() {
-        var e = g(L());
+        var e = g(b());
         return _ && (e = c(e, _)), f(e);
     }
     var v = p();
@@ -381,7 +381,7 @@ function P(e) {
         return e.pathname === t.pathname && e.search === t.search && e.hash === t.hash;
     }
     function U() {
-        var e = L(),
+        var e = b(),
             t = T(e);
         if (e !== t) M(t);
         else {
@@ -414,7 +414,7 @@ function P(e) {
         var i = n - r;
         i && ((O = !0), Y(i));
     }
-    var G = L(),
+    var G = b(),
         k = T(G);
     G !== k && M(k);
     var B = A(),
@@ -422,7 +422,7 @@ function P(e) {
     function Z(e) {
         var t = document.querySelector('base'),
             n = '';
-        return t && t.getAttribute('href') && (n = b(window.location.href)), n + '#' + T(_ + E(e));
+        return t && t.getAttribute('href') && (n = L(window.location.href)), n + '#' + T(_ + E(e));
     }
     function V(e, t) {
         var n = 'PUSH',
@@ -431,7 +431,7 @@ function P(e) {
             if (e) {
                 var t = E(r),
                     i = T(_ + t),
-                    a = L() !== i;
+                    a = b() !== i;
                 if (a) {
                     (R = t), D(i);
                     var o = F.lastIndexOf(E($.location)),
@@ -453,7 +453,7 @@ function P(e) {
             if (e) {
                 var t = E(r),
                     i = T(_ + t),
-                    a = L() !== i;
+                    a = b() !== i;
                 a && ((R = t), M(i));
                 var o = F.indexOf(E($.location));
                 -1 !== o && (F[o] = t),

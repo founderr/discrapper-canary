@@ -20,8 +20,8 @@ e.exports = function (e, t, n, f, h, p, m, I) {
         R,
         C,
         y = I.bits,
-        b = 0,
         L = 0,
+        b = 0,
         D = 0,
         M = 0,
         P = 0,
@@ -36,32 +36,32 @@ e.exports = function (e, t, n, f, h, p, m, I) {
         V = new r.Buf16(i + 1),
         H = null,
         Y = 0;
-    for (b = 0; b <= i; b++) Z[b] = 0;
-    for (L = 0; L < f; L++) Z[t[n + L]]++;
+    for (L = 0; L <= i; L++) Z[L] = 0;
+    for (b = 0; b < f; b++) Z[t[n + b]]++;
     for (P = y, M = i; M >= 1 && 0 === Z[M]; M--);
     if ((P > M && (P = M), 0 === M)) return (h[p++] = 20971520), (h[p++] = 20971520), (I.bits = 1), 0;
     for (D = 1; D < M && 0 === Z[D]; D++);
-    for (P < D && (P = D), x = 1, b = 1; b <= i; b++) if (((x <<= 1), (x -= Z[b]) < 0)) return -1;
+    for (P < D && (P = D), x = 1, L = 1; L <= i; L++) if (((x <<= 1), (x -= Z[L]) < 0)) return -1;
     if (x > 0 && (e === s || 1 !== M)) return -1;
-    for (b = 1, V[1] = 0; b < i; b++) V[b + 1] = V[b] + Z[b];
-    for (L = 0; L < f; L++) 0 !== t[n + L] && (m[V[t[n + L]]++] = L);
-    if ((e === s ? ((B = H = m), (N = 19)) : e === l ? ((B = c), (F -= 257), (H = d), (Y -= 257), (N = 256)) : ((B = _), (H = E), (N = -1)), (k = 0), (L = 0), (b = D), (v = p), (U = P), (w = 0), (S = -1), (A = (G = 1 << P) - 1), (e === l && G > a) || (e === u && G > o))) return 1;
+    for (L = 1, V[1] = 0; L < i; L++) V[L + 1] = V[L] + Z[L];
+    for (b = 0; b < f; b++) 0 !== t[n + b] && (m[V[t[n + b]]++] = b);
+    if ((e === s ? ((B = H = m), (N = 19)) : e === l ? ((B = c), (F -= 257), (H = d), (Y -= 257), (N = 256)) : ((B = _), (H = E), (N = -1)), (k = 0), (b = 0), (L = D), (v = p), (U = P), (w = 0), (S = -1), (A = (G = 1 << P) - 1), (e === l && G > a) || (e === u && G > o))) return 1;
     for (;;) {
-        (O = b - w), m[L] < N ? ((R = 0), (C = m[L])) : m[L] > N ? ((R = H[Y + m[L]]), (C = B[F + m[L]])) : ((R = 96), (C = 0)), (T = 1 << (b - w)), (D = g = 1 << U);
+        (O = L - w), m[b] < N ? ((R = 0), (C = m[b])) : m[b] > N ? ((R = H[Y + m[b]]), (C = B[F + m[b]])) : ((R = 96), (C = 0)), (T = 1 << (L - w)), (D = g = 1 << U);
         do h[v + (k >> w) + (g -= T)] = (O << 24) | (R << 16) | C | 0;
         while (0 !== g);
-        for (T = 1 << (b - 1); k & T; ) T >>= 1;
-        if ((0 !== T ? ((k &= T - 1), (k += T)) : (k = 0), L++, 0 == --Z[b])) {
-            if (b === M) break;
-            b = t[n + m[L]];
+        for (T = 1 << (L - 1); k & T; ) T >>= 1;
+        if ((0 !== T ? ((k &= T - 1), (k += T)) : (k = 0), b++, 0 == --Z[L])) {
+            if (L === M) break;
+            L = t[n + m[b]];
         }
-        if (b > P && (k & A) !== S) {
-            for (0 === w && (w = P), v += D, x = 1 << (U = b - w); U + w < M && !((x -= Z[U + w]) <= 0); ) {
+        if (L > P && (k & A) !== S) {
+            for (0 === w && (w = P), v += D, x = 1 << (U = L - w); U + w < M && !((x -= Z[U + w]) <= 0); ) {
                 U++, (x <<= 1);
             }
             if (((G += 1 << U), (e === l && G > a) || (e === u && G > o))) return 1;
             h[(S = k & A)] = (P << 24) | (U << 16) | (v - p) | 0;
         }
     }
-    return 0 !== k && (h[v + k] = ((b - w) << 24) | 4194304), (I.bits = P), 0;
+    return 0 !== k && (h[v + k] = ((L - w) << 24) | 4194304), (I.bits = P), 0;
 };

@@ -32,8 +32,8 @@ var s = n(373793),
     R = n(981631),
     C = n(665692);
 let y = new Set(['applicationCommandOption']),
-    b = new Set([l.jw.ATTACHMENT]),
-    L = new Set(['line', 'applicationCommand']);
+    L = new Set([l.jw.ATTACHMENT]),
+    b = new Set(['line', 'applicationCommand']);
 function D(e, t, n, r) {
     let { insertData: i, isInline: a, isVoid: o, onChange: s, deleteBackward: l, deleteForward: h, deleteFragment: p } = e;
     (e.insertData = (n) => {
@@ -68,7 +68,7 @@ function D(e, t, n, r) {
         return i(n);
     }),
         (e.isInline = (e) => !!y.has(e.type) || a(e)),
-        (e.isVoid = (e) => !!('applicationCommandOption' === e.type && b.has(e.optionType)) || o(e)),
+        (e.isVoid = (e) => !!('applicationCommandOption' === e.type && L.has(e.optionType)) || o(e)),
         (e.deleteBackward = (t) => {
             B(e, () => l(t));
         }),
@@ -155,7 +155,7 @@ function M(e) {
             );
         let e = N.bN.richValue(r)[0],
             t = e.children[0];
-        if (L.has(e.type) && N.LC.isText(t)) {
+        if (b.has(e.type) && N.LC.isText(t)) {
             let e = F(t.text, a);
             if (null != e)
                 return (
@@ -234,7 +234,7 @@ function P(e, t, n) {
         for (let r of c.options)
             if (!e.has(r.name) && (r.required || null != u[r.name])) {
                 let e, i;
-                E.length > 0 && !b.has(r.type) ? ((e = E), (E = '')) : (e = null != (i = Z(n, t, r.name)) ? i : '');
+                E.length > 0 && !L.has(r.type) ? ((e = E), (E = '')) : (e = null != (i = Z(n, t, r.name)) ? i : '');
                 let a = {
                     type: 'applicationCommandOption',
                     optionName: r.name,
@@ -328,7 +328,7 @@ function w(e, t) {
     );
 }
 function x(e, t) {
-    if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || b.has(t.options[0].type) || g.cu(e).length > 0 || null == g.cr(e)) return !1;
+    if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || L.has(t.options[0].type) || g.cu(e).length > 0 || null == g.cr(e)) return !1;
     let n = N.bN.getFirstText(e);
     if (null == n) return !1;
     let r = t.options[0],

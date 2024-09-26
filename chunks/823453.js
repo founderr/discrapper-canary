@@ -31,9 +31,9 @@ function C(e) {
         r = (0, d.e7)([T.Z], () => T.Z.isFocused(), []),
         { reducedMotion: o } = a.useContext(E.AccessibilityPreferencesContext),
         { accessibilitySettings: l, appWrapperClassName: _ } = (0, A.I)(),
-        { fontScale: f, fontScaleClass: S, saturation: O, desaturateUserColors: C, useForcedColors: y, systemForcedColors: b } = l,
-        L = (0, u.TH)(),
-        D = a.useMemo(() => R.has(L.pathname), [L.pathname]);
+        { fontScale: f, fontScaleClass: S, saturation: O, desaturateUserColors: C, useForcedColors: y, systemForcedColors: L } = l,
+        b = (0, u.TH)(),
+        D = a.useMemo(() => R.has(b.pathname), [b.pathname]);
     (0, v.Z)(window, D);
     let M = (0, N.Z)(window, __OVERLAY__ || r),
         P = (0, d.e7)([p.Z], () => p.Z.sidebarWidth),
@@ -53,7 +53,7 @@ function C(e) {
                 'is-mobile': c.tq,
                 'app-focused': r,
                 'desaturate-user-colors': C,
-                'disable-forced-colors': !y && 'active' === b,
+                'disable-forced-colors': !y && 'active' === L,
                 'enable-forced-colors': y,
                 'show-redesigned-icons': U,
                 'visual-refresh': w
@@ -94,7 +94,7 @@ function y() {
         })
     );
 }
-function b(e) {
+function L(e) {
     let { children: t, skipsSettingDefaultPageTitle: n } = e;
     (0, S.ZD)({ skipsSettingDefaultPageTitle: n });
     let { clientThemesClassName: r, clientThemesCSS: o } = (0, f.ZP)(),
@@ -103,4 +103,4 @@ function b(e) {
         children: [C(r), y(), s, t]
     });
 }
-t.Z = a.memo(b);
+t.Z = a.memo(L);

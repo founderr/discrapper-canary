@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
 var r = n(735250);
@@ -10,8 +10,8 @@ var i = n(481060),
     s = n(176127),
     a = n(689938),
     o = n(516707);
-function u(e) {
-    let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: u } = e;
+function c(e) {
+    let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: c } = e;
     return (0, r.jsxs)(i.TooltipLayer, {
         tooltipClassName: o.reminderTooltip,
         tooltipContentClassName: o.tooltipContent,
@@ -22,7 +22,7 @@ function u(e) {
             (0, r.jsx)(s.Z, {}),
             (0, r.jsx)(i.Heading, {
                 variant: 'heading-md/extrabold',
-                children: a.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: u.newClipIds.length })
+                children: a.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: c.newClipIds.length })
             }),
             (0, r.jsxs)('div', {
                 className: o.buttonContainer,

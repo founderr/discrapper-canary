@@ -15,7 +15,7 @@ n.d(t, {
         return M;
     },
     al: function () {
-        return b;
+        return L;
     },
     cG: function () {
         return A;
@@ -36,7 +36,7 @@ n.d(t, {
         return C;
     },
     wi: function () {
-        return L;
+        return b;
     }
 });
 var r = n(411104);
@@ -171,7 +171,7 @@ function y(e, t) {
         branchId: t
     });
 }
-function b(e, t) {
+function L(e, t) {
     f.Z.cancel(e, t),
         a.Z.dispatch({
             type: 'DISPATCH_APPLICATION_CANCEL',
@@ -179,7 +179,7 @@ function b(e, t) {
             branchId: t
         });
 }
-function L(e, t) {
+function b(e, t) {
     a.Z.dispatch({
         type: 'DISPATCH_APPLICATION_REMOVE_FINISHED',
         applicationId: e,

@@ -35,8 +35,8 @@ var l = n(735250),
     R = n(960904),
     C = n(161314),
     y = n(163268),
-    b = n(25610),
-    L = n(703751),
+    L = n(25610),
+    b = n(703751),
     D = n(761538),
     M = n(674611),
     P = n(346610),
@@ -89,8 +89,8 @@ var l = n(735250),
     eR = n(591759),
     eC = n(169525),
     ey = n(786761),
-    eb = n(161010),
-    eL = n(461157),
+    eL = n(161010),
+    eb = n(461157),
     eD = n(901461),
     eM = n(432376),
     eP = n(384203),
@@ -207,7 +207,7 @@ class e7 extends (r = u.Component) {
     }
     renderSocialProofingFileSizeNitroUpsell(e) {
         let t = e.attachments.some((e) => e.size > eq.Lw);
-        return (0, eb.M)('attachment') && t ? (0, l.jsx)(e1, {}) : null;
+        return (0, eL.M)('attachment') && t ? (0, l.jsx)(e1, {}) : null;
     }
     renderCodedLinks(e) {
         return 0 === e.codedLinks.length
@@ -683,15 +683,15 @@ class e7 extends (r = u.Component) {
             R = this.renderSafetyPolicyNotice(t),
             C = this.renderSafetySystemNotification(t),
             y = this.renderVoiceChannelInvite(t, n),
-            b = this.renderMediaObscureNotice(t),
-            L = this.renderPoll(t, r),
+            L = this.renderMediaObscureNotice(t),
+            b = this.renderPoll(t, r),
             D = this.renderForwardedMessage(t);
-        return null == o && null == c && null == f && null == h && null == p && null == s && null == u && null == m && null == I && null == T && null == g && null == S && null == v && null == A && null == O && null == R && null != N && null == L && null == y && null == D
+        return null == o && null == c && null == f && null == h && null == p && null == s && null == u && null == m && null == I && null == T && null == g && null == S && null == v && null == A && null == O && null == R && null != N && null == b && null == y && null == D
             ? null
             : (0, l.jsxs)('div', {
                   id: (0, eB.bX)(t),
                   className: d()(e, e$.container),
-                  children: [D, A, L, o, s, u, O, c, _, f, b, h, T, S, v, N, E, p, m, I, i && this.renderSuppressConfirmModal(), a && this.renderRemoveAttachmentConfirmModal(), g, R, C, y]
+                  children: [D, A, b, o, s, u, O, c, _, f, L, h, T, S, v, N, E, p, m, I, i && this.renderSuppressConfirmModal(), a && this.renderRemoveAttachmentConfirmModal(), g, R, C, y]
               });
     }
     constructor(...e) {
@@ -807,7 +807,7 @@ function e8(e) {
         g = (0, B.ux)(n.guild_id),
         [, S] = (0, F.AB)(n.guild_id),
         A = (0, ed.$R)(n),
-        v = (o === r.author.id || T) && r.author.id !== ez.LAt && !1 !== i && !(0, ev.yE)(r.flags, ez.iLy.EPHEMERAL) && A && 1 === (0, eL.Z)(r),
+        v = (o === r.author.id || T) && r.author.id !== ez.LAt && !1 !== i && !(0, ev.yE)(r.flags, ez.iLy.EPHEMERAL) && A && 1 === (0, eb.Z)(r),
         N = o === r.author.id && A && !a,
         O = r.author.id === o,
         R = r.isFirstMessageInForumPost(n),
@@ -825,8 +825,8 @@ function e8(e) {
         y = (0, q.A)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()),
         D = (0, J.Z)(null == n ? void 0 : n.id),
         M = (0, en.Z)(r),
-        w = (0, b.V)(n.id, r.author.id),
-        x = (0, L.r)(r.id),
+        w = (0, L.V)(n.id, r.author.id),
+        x = (0, b.r)(r.id),
         { hasInlineForwardButton: G } = (0, P.yk)({ location: 'MessageAccessories' }),
         k = (0, U.a)(r) && G;
     return (0, l.jsx)(e7, {
@@ -866,8 +866,8 @@ let e9 = (e) => {
         h = eE.QK.useSetting(),
         p = (0, q.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
         m = (0, J.Z)(null == r ? void 0 : r.id),
-        I = (0, b.V)(r.id, n.author.id),
-        T = (0, L.r)(n.id),
+        I = (0, L.V)(r.id, n.author.id),
+        T = (0, b.r)(n.id),
         g = (0, en.Z)(n);
     return (0, l.jsx)(e7, {
         ...d,

@@ -81,7 +81,7 @@ function m(e, t, n) {
                 : _,
             !0,
             h(t, n),
-            (e, n) => (!Array.isArray(e) && (e = [e]), a && (e = y(e, (null != c ? c : t).embeds)), !o && (e = N(e, n)), (d = R((e = I(e)), n)), o && (e = b(e)), null != l && (e = l(e, n)), e)
+            (e, n) => (!Array.isArray(e) && (e = [e]), a && (e = y(e, (null != c ? c : t).embeds)), !o && (e = N(e, n)), (d = R((e = I(e)), n)), o && (e = L(e)), null != l && (e = l(e, n)), e)
         );
     return {
         hasSpoilerEmbeds: d,
@@ -194,10 +194,10 @@ function y(e, t) {
         r = t[0];
     return ('link' === n.type || 'attachmentLink' === n.type) && E.has(r.type) && (0, c.dY)(r) ? [] : e;
 }
-function b(e) {
+function L(e) {
     return (
         e.forEach((e) => {
-            f.has(e.type) && null != e.content && (Array.isArray(e.content) ? b(e.content) : (e.content = e.content.replace(/\n/g, ' ')));
+            f.has(e.type) && null != e.content && (Array.isArray(e.content) ? L(e.content) : (e.content = e.content.replace(/\n/g, ' ')));
         }),
         e
     );

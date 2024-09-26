@@ -15,7 +15,7 @@ n.d(t, {
         return O;
     },
     yC: function () {
-        return b;
+        return L;
     }
 });
 var r = n(47120);
@@ -334,8 +334,8 @@ class y extends T.C {
         ]);
     }
 }
-let b = new y();
-class L extends T.C {
+let L = new y();
+class b extends T.C {
     internalJsonWrite(e, t) {
         return e.value;
     }
@@ -384,7 +384,7 @@ class L extends T.C {
         ]);
     }
 }
-let D = new L();
+let D = new b();
 class M extends T.C {
     internalJsonWrite(e, t) {
         return e.value;

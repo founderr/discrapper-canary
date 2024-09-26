@@ -41,8 +41,8 @@ let A = 'scientist:triggered',
     R = 1,
     C = new f.Z('ExperimentStore'),
     y = !1,
-    b = {},
     L = {},
+    b = {},
     D = {
         rawUserExperiments: [],
         rawGuildExperiments: []
@@ -86,7 +86,7 @@ function j(e) {
 let W = Date.now(),
     K = !1;
 function z(e, t, n, r) {
-    let i = b[Y(e, t, n, r)];
+    let i = L[Y(e, t, n, r)];
     return !(null == i || (K ? i.time < W : Date.now() - i.time > Z)) && i.hash === j(t);
 }
 function q(e) {
@@ -139,11 +139,11 @@ function q(e) {
             }
         );
     }
-    (b[Y(t, n, r, u)] = {
+    (L[Y(t, n, r, u)] = {
         time: Date.now(),
         hash: j(n)
     }),
-        e_(b);
+        e_(L);
 }
 function Q(e) {
     let [t, n] = e;
@@ -335,7 +335,7 @@ function ea(e) {
     let { serializedExperimentStore: t, user: n } = e;
     !G && H(n) && (G = !0),
         (y = t.hasLoadedExperiments),
-        (b = t.trackedExposureExperiments),
+        (L = t.trackedExposureExperiments),
         (M = t.loadedUserExperiments),
         (w = t.userExperimentOverrides),
         (x = t.guildExperimentOverrides),
@@ -359,11 +359,11 @@ function es(e) {
             ...D,
             rawUserExperiments: []
         }),
-        (b = {}),
+        (L = {}),
         (y = !1);
 }
 function el() {
-    (y = !1), (b = {}), d.K.remove(A);
+    (y = !1), (L = {}), d.K.remove(A);
 }
 function eu() {
     let e = d.K.get(A);
@@ -442,7 +442,7 @@ function e_(e) {
 }
 function eE(e) {
     let { experimentId: t, experimentType: n, title: r, description: i, buckets: a, commonTriggerPoint: o } = e;
-    L[t] = {
+    b[t] = {
         type: n,
         title: r,
         description: i,
@@ -453,7 +453,7 @@ function eE(e) {
 function ef(e) {
     var t;
     let { experimentId: n, experimentBucket: r, experimentType: i, skipCleanup: a } = e,
-        o = null != i ? i : null === (t = L[n]) || void 0 === t ? void 0 : t.type;
+        o = null != i ? i : null === (t = b[n]) || void 0 === t ? void 0 : t.type;
     if (null == o) return !1;
     if (
         (null == r
@@ -480,7 +480,7 @@ function ef(e) {
                 }),
         !a)
     )
-        for (let e of [w, x]) for (let t in e) null == L[t] && delete w[t];
+        for (let e of [w, x]) for (let t in e) null == b[t] && delete w[t];
     ed();
 }
 function eh(e) {
@@ -492,7 +492,7 @@ function eh(e) {
 }
 class ep extends p.Z {
     initialize() {
-        (b = eu()), ec(), this.waitFor(h.default), this.loadCache();
+        (L = eu()), ec(), this.waitFor(h.default), this.loadCache();
     }
     loadCache() {
         let e = this.readSnapshot(ep.LATEST_SNAPSHOT_VERSION);
@@ -508,7 +508,7 @@ class ep extends p.Z {
         return y;
     }
     hasRegisteredExperiment(e) {
-        return null != L[e];
+        return null != b[e];
     }
     getUserExperimentDescriptor(e) {
         if (G) {
@@ -549,7 +549,7 @@ class ep extends p.Z {
     }
     getRecentExposures(e, t) {
         let n = ''.concat(e, '|').concat(t, '|');
-        return Object.entries(b)
+        return Object.entries(L)
             .filter((e) => {
                 let [t] = e;
                 return t.startsWith(n);
@@ -560,7 +560,7 @@ class ep extends p.Z {
             });
     }
     getRegisteredExperiments() {
-        return L;
+        return b;
     }
     getAllExperimentOverrideDescriptors() {
         return G
@@ -577,7 +577,7 @@ class ep extends p.Z {
     getAllExperimentAssignments() {
         let e = {},
             t = {};
-        for (let n in (Object.keys(L).forEach((e) => {
+        for (let n in (Object.keys(b).forEach((e) => {
             t[B(''.concat(e))] = e;
         }),
         M)) {
@@ -595,7 +595,7 @@ class ep extends p.Z {
         for (let t in P) for (let n of ((e[t] = JSON.parse(JSON.stringify(P[t]))), e[t].populations)) n.filters = [];
         return {
             hasLoadedExperiments: y,
-            trackedExposureExperiments: b,
+            trackedExposureExperiments: L,
             loadedUserExperiments: M,
             loadedGuildExperiments: e,
             userExperimentOverrides: w,

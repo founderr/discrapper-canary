@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return b;
     }
 });
 var r = n(773603);
@@ -42,8 +42,8 @@ function y(e, t, n) {
         e
     );
 }
-let b = new c.Y('MediaEngineWebRTC');
-class L extends d.Z {
+let L = new c.Y('MediaEngineWebRTC');
+class b extends d.Z {
     destroy() {
         null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null)), this.eachConnection((e) => e.destroy()), this.emit(h.aB.Destroy), this.removeAllListeners();
     }
@@ -51,7 +51,7 @@ class L extends d.Z {
         !this.interacted && (document.createElement('audio').play(), (this.interacted = !0)), this.eachConnection((e) => e.interact());
     }
     static supported() {
-        return !__OVERLAY__ && (C.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(250678), !0) : (b.info('WebRTC is not supported on', u().name, u().version), !1));
+        return !__OVERLAY__ && (C.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(250678), !0) : (L.info('WebRTC is not supported on', u().name, u().version), !1));
     }
     supported() {
         return !0;

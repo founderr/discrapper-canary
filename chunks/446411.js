@@ -32,8 +32,8 @@ var o = n(735250),
     R = n(626135),
     C = n(585483),
     y = n(55935),
-    b = n(408433),
-    L = n(956664),
+    L = n(408433),
+    b = n(956664),
     D = n(468846),
     M = n(401419),
     P = n(249458),
@@ -68,7 +68,7 @@ function K(e, t) {
     return ''.concat(r + 1, ' / ').concat(r + n + 1);
 }
 function z(e) {
-    let { className: t, iframeWrapperClassName: n, maxWidth: r, maxHeight: i, thumbnail: a, video: l, provider: c, allowFullScreen: d = !0, responsive: _ = !1, renderImageComponent: E, renderVideoComponent: f, renderLinkComponent: h, renderForwardComponent: p = U.VqG, playable: m = !0, autoPlay: I = !1, autoMute: g, volume: S, onPlay: A, onPause: v, onEnded: N, onControlsHide: R, onControlsShow: y, onVolumeChange: b, onMute: M, href: P, messageId: w, channelId: x, placeholder: k, placeholderVersion: B } = e,
+    let { className: t, iframeWrapperClassName: n, maxWidth: r, maxHeight: i, thumbnail: a, video: l, provider: c, allowFullScreen: d = !0, responsive: _ = !1, renderImageComponent: E, renderVideoComponent: f, renderLinkComponent: h, renderForwardComponent: p = U.VqG, playable: m = !0, autoPlay: I = !1, autoMute: g, volume: S, onPlay: A, onPause: v, onEnded: N, onControlsHide: R, onControlsShow: y, onVolumeChange: L, onMute: M, href: P, messageId: w, channelId: x, placeholder: k, placeholderVersion: B } = e,
         [F, Z] = s.useState(I),
         V = null != l && null == l.proxyURL,
         H = s.useCallback(() => Z(!1), [Z]),
@@ -83,7 +83,7 @@ function z(e) {
     );
     let { width: K, height: z } = a;
     null != l && ((K = l.width), (z = l.height));
-    let q = (0, L.Tj)({
+    let q = (0, b.Tj)({
         width: K,
         height: z,
         maxWidth: r,
@@ -106,7 +106,7 @@ function z(e) {
                 onEnded: N,
                 naturalWidth: l.width,
                 naturalHeight: l.height,
-                onVolumeChange: b,
+                onVolumeChange: L,
                 playable: m,
                 autoMute: g,
                 volume: S,
@@ -729,7 +729,7 @@ class Q extends (r = s.PureComponent) {
             { maxMediaWidth: o, maxMediaHeight: s } = this.state,
             l = null != t ? t : r;
         if (null == l) return;
-        let { width: u } = (0, L.Tj)({
+        let { width: u } = (0, b.Tj)({
             width: l.width,
             height: l.height,
             maxWidth: o,
@@ -739,7 +739,7 @@ class Q extends (r = s.PureComponent) {
         if (i === U.hBH.RICH && void 0 !== n) return W;
         if (i === U.hBH.GIFV) {
             var c, d, _, E;
-            let { width: e } = (0, L.Tj)({
+            let { width: e } = (0, b.Tj)({
                 width: Math.max(null !== (c = null == a ? void 0 : a.width) && void 0 !== c ? c : 0, null !== (d = null == r ? void 0 : r.width) && void 0 !== d ? d : 0),
                 height: Math.max(null !== (_ = null == a ? void 0 : a.height) && void 0 !== _ ? _ : 0, null !== (E = null == r ? void 0 : r.height) && void 0 !== E ? E : 0),
                 maxWidth: o,
@@ -750,7 +750,7 @@ class Q extends (r = s.PureComponent) {
     }
     isInline() {
         let { hideMedia: e, embed: t } = this.props;
-        return !e && (0, b.dY)(t);
+        return !e && (0, L.dY)(t);
     }
     renderSuppressButton(e) {
         return (0, o.jsx)(d.Clickable, {
@@ -782,7 +782,7 @@ class Q extends (r = s.PureComponent) {
         if (void 0 === s && void 0 === n && i !== U.hBH.RICH) {
             let e = null != t ? t : r;
             if (void 0 !== e) {
-                let { width: t } = (0, L.Tj)({
+                let { width: t } = (0, b.Tj)({
                     width: e.width,
                     height: e.height,
                     maxWidth: a,
@@ -848,7 +848,7 @@ class Q extends (r = s.PureComponent) {
                 videoControlsShown: !1,
                 isImageHovered: !1,
                 showImageAppMenu: !1,
-                ...(0, b.vP)(this.props.embed)
+                ...(0, L.vP)(this.props.embed)
             }),
             Z(this, 'onReveal', () => {
                 this.setState({ isVisible: !0 });

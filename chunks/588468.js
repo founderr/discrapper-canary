@@ -32,8 +32,8 @@ var o = n(735250),
     R = n(594174),
     C = n(768581),
     y = n(51144),
-    b = n(965386),
-    L = n(981631),
+    L = n(965386),
+    b = n(981631),
     D = n(185923),
     M = n(689938),
     P = n(980213);
@@ -118,8 +118,8 @@ class k extends s.PureComponent {
 class B extends k {
     renderContent() {
         let { text: e, description: t } = this.props;
-        return (0, o.jsxs)(b.RX, {
-            children: [(0, o.jsx)(b.z5, { children: (0, o.jsx)(b.BR, { children: e }) }), null != t ? (0, o.jsx)(b.dY, { children: t }) : null]
+        return (0, o.jsxs)(L.RX, {
+            children: [(0, o.jsx)(L.z5, { children: (0, o.jsx)(L.BR, { children: e }) }), null != t ? (0, o.jsx)(L.dY, { children: t }) : null]
         });
     }
 }
@@ -128,9 +128,9 @@ function F(e) {
     return (0, o.jsx)('div', {
         className: P.base,
         'aria-busy': !0,
-        children: (0, o.jsx)(b.RX, {
-            children: (0, o.jsx)(b.z5, {
-                children: (0, o.jsx)(b.BR, {
+        children: (0, o.jsx)(L.RX, {
+            children: (0, o.jsx)(L.z5, {
+                children: (0, o.jsx)(L.BR, {
                     children: (0, o.jsx)('div', {
                         className: P.autocompletePlaceholder,
                         style: { width: t }
@@ -167,9 +167,9 @@ class H extends k {
         var e;
         let { user: t, nick: n, status: r, hidePersonalInformation: i, guildId: a } = this.props,
             s = null == a ? O.Z.getNickname(t.id) : null;
-        return (0, o.jsxs)(b.RX, {
+        return (0, o.jsxs)(L.RX, {
             children: [
-                (0, o.jsx)(b.Tw, {
+                (0, o.jsx)(L.Tw, {
                     children: (0, o.jsx)(E.Avatar, {
                         size: E.AvatarSizes.SIZE_24,
                         src: t.getAvatarURL(a, 24),
@@ -177,8 +177,8 @@ class H extends k {
                         status: r
                     })
                 }),
-                (0, o.jsx)(b.z5, { children: (0, o.jsx)(b.BR, { children: null !== (e = null != n ? n : s) && void 0 !== e ? e : y.ZP.getName(t) }) }),
-                (0, o.jsxs)(b.dY, {
+                (0, o.jsx)(L.z5, { children: (0, o.jsx)(L.BR, { children: null !== (e = null != n ? n : s) && void 0 !== e ? e : y.ZP.getName(t) }) }),
+                (0, o.jsxs)(L.dY, {
                     children: [
                         y.ZP.getUserTag(t, {
                             mode: 'username',
@@ -202,10 +202,10 @@ class Y extends k {
             { colorString: n } = e,
             r = 'dot' === f.Z.roleStyle,
             i = 'username' === f.Z.roleStyle && null != n ? { color: n } : void 0;
-        return (0, o.jsxs)(b.RX, {
+        return (0, o.jsxs)(L.RX, {
             children: [
-                (0, o.jsx)(b.z5, {
-                    children: (0, o.jsxs)(b.BR, {
+                (0, o.jsx)(L.z5, {
+                    children: (0, o.jsxs)(L.BR, {
                         children: [
                             r &&
                                 (0, o.jsx)(E.RoleDot, {
@@ -220,7 +220,7 @@ class Y extends k {
                         ]
                     })
                 }),
-                t ? null : (0, o.jsx)(b.dY, { children: M.Z.Messages.MENTION_USERS_WITH_ROLE })
+                t ? null : (0, o.jsx)(L.dY, { children: M.Z.Messages.MENTION_USERS_WITH_ROLE })
             ]
         });
     }
@@ -228,18 +228,18 @@ class Y extends k {
 class j extends k {
     renderContent() {
         let { channel: e, category: t } = this.props,
-            n = e.type === L.d4z.GUILD_CATEGORY ? E.FolderIcon : (0, T.KS)(e);
-        return (0, o.jsxs)(b.RX, {
-            children: [null != n && (0, o.jsx)(b.Tw, { children: (0, o.jsx)(n, { className: P.icon }) }), (0, o.jsx)(b.z5, { children: (0, o.jsx)(b.BR, { children: (0, I.F6)(e, R.default, O.Z) }) }), null != t ? (0, o.jsx)(b.dY, { children: t.name }) : null]
+            n = e.type === b.d4z.GUILD_CATEGORY ? E.FolderIcon : (0, T.KS)(e);
+        return (0, o.jsxs)(L.RX, {
+            children: [null != n && (0, o.jsx)(L.Tw, { children: (0, o.jsx)(n, { className: P.icon }) }), (0, o.jsx)(L.z5, { children: (0, o.jsx)(L.BR, { children: (0, I.F6)(e, R.default, O.Z) }) }), null != t ? (0, o.jsx)(L.dY, { children: t.name }) : null]
         });
     }
 }
 class W extends k {
     renderContent() {
         let { command: e } = this.props;
-        return (0, o.jsxs)(b.RX, {
+        return (0, o.jsxs)(L.RX, {
             children: [
-                (0, o.jsx)(b.Tw, {
+                (0, o.jsx)(L.Tw, {
                     children: (0, o.jsx)(E.SlashIcon, {
                         size: 'xs',
                         color: 'currentColor',
@@ -247,8 +247,8 @@ class W extends k {
                         colorClass: P.iconForeground
                     })
                 }),
-                (0, o.jsx)(b.z5, { children: (0, o.jsx)(b.BR, { children: e.displayName }) }),
-                (0, o.jsx)(b.dY, { children: e.displayDescription })
+                (0, o.jsx)(L.z5, { children: (0, o.jsx)(L.BR, { children: e.displayName }) }),
+                (0, o.jsx)(L.dY, { children: e.displayDescription })
             ]
         });
     }
@@ -295,12 +295,12 @@ class z extends k {
                           className: P.emojiRaw,
                           children: e.surrogates
                       }),
-            a = null != n ? (0, o.jsx)(b.dY, { children: n.name }) : null;
-        return (0, o.jsxs)(b.RX, {
+            a = null != n ? (0, o.jsx)(L.dY, { children: n.name }) : null;
+        return (0, o.jsxs)(L.RX, {
             children: [
-                (0, o.jsx)(b.Tw, { children: i }),
-                (0, o.jsx)(b.z5, {
-                    children: (0, o.jsxs)(b.BR, {
+                (0, o.jsx)(L.Tw, { children: i }),
+                (0, o.jsx)(L.z5, {
+                    children: (0, o.jsxs)(L.BR, {
                         children: [t, e.name, t]
                     })
                 }),
@@ -320,13 +320,13 @@ class q extends k {
             { hovered: l } = this.state;
         return (
             (0, A.jl)(s) ? (n = null === (e = S.Z.getStickerPack(s.pack_id)) || void 0 === e ? void 0 : e.name) : (0, A.J8)(s) && (n = null === (t = N.Z.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name),
-            (0, o.jsxs)(b.RX, {
+            (0, o.jsxs)(L.RX, {
                 children: [
-                    (0, o.jsx)(b.Tw, { children: i(s, l || !0 === a) }),
-                    (0, o.jsxs)(b.z5, {
-                        children: [(0, o.jsx)(b.BR, { children: s.name }), null != r && (0, o.jsx)(b.wL, { children: M.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({ queryMatch: r }) })]
+                    (0, o.jsx)(L.Tw, { children: i(s, l || !0 === a) }),
+                    (0, o.jsxs)(L.z5, {
+                        children: [(0, o.jsx)(L.BR, { children: s.name }), null != r && (0, o.jsx)(L.wL, { children: M.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({ queryMatch: r }) })]
                     }),
-                    null != n && (0, o.jsx)(b.dY, { children: n })
+                    null != n && (0, o.jsx)(L.dY, { children: n })
                 ]
             })
         );

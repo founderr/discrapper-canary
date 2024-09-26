@@ -48,8 +48,8 @@ let O = Object.freeze({
     R = null,
     C = {},
     y = null,
-    b = new Set(),
-    L = !1,
+    L = new Set(),
+    b = !1,
     D = null,
     M = !1,
     P = !1,
@@ -128,7 +128,7 @@ function H(e) {
     e.userId in C && delete C[e.userId];
 }
 function Y() {
-    b.clear();
+    L.clear();
 }
 function j(e) {
     let { focusedPID: t } = e;
@@ -146,13 +146,13 @@ function W() {
 function K() {
     if (!__OVERLAY__) return !1;
     let e = R === (0, g.QF)(),
-        t = b.has((0, g.QF)()) || U.size > 0;
+        t = L.has((0, g.QF)()) || U.size > 0;
     e && t ? (0, u.T_)(window, !0) : (0, u.T_)(window, !1);
 }
 function z() {}
 function q(e) {
     let { locked: t, pid: n } = e;
-    t ? b.delete(n) : b.add(n), X(), K(), (w = !1);
+    t ? L.delete(n) : L.add(n), X(), K(), (w = !1);
 }
 function Q(e) {
     let { region: t } = e;
@@ -220,7 +220,7 @@ function ed() {
     G.disableExternalLinkAlert = !0;
 }
 function e_() {
-    L = !0;
+    b = !0;
 }
 function eE() {
     l.Z.addInterceptor((e) => {
@@ -283,7 +283,7 @@ function eh() {
         });
 }
 function ep(e) {
-    b.delete(e.previousAssociatedGamePID);
+    L.delete(e.previousAssociatedGamePID);
 }
 class em extends (r = o.ZP.PersistedStore) {
     initialize(e) {
@@ -293,7 +293,7 @@ class em extends (r = o.ZP.PersistedStore) {
                 let e = E.default.getId();
                 G = null != e ? x(e) : { ...O };
             }),
-            __OVERLAY__ && (I.isPlatformEmbedded && (D = T.ZP.requireModule('discord_overlay2')), b.delete((0, g.QF)())),
+            __OVERLAY__ && (I.isPlatformEmbedded && (D = T.ZP.requireModule('discord_overlay2')), L.delete((0, g.QF)())),
             null != e)
         ) {
             C = e;
@@ -305,11 +305,11 @@ class em extends (r = o.ZP.PersistedStore) {
         return C;
     }
     isUILocked(e) {
-        return !b.has(e);
+        return !L.has(e);
     }
     isInstanceUILocked() {
         if (!__OVERLAY__) throw Error('OverlayStore: App instance should never call .isInstanceUILocked()');
-        return !b.has((0, g.QF)());
+        return !L.has((0, g.QF)());
     }
     isInstanceFocused() {
         if (!__OVERLAY__) throw Error('OverlayStore: App instance should never call .isInstanceFocused()');
@@ -366,7 +366,7 @@ class em extends (r = o.ZP.PersistedStore) {
         return P;
     }
     get incompatibleApp() {
-        return L;
+        return b;
     }
     getActiveRegions() {
         return U;

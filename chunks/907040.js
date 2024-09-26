@@ -29,8 +29,8 @@ var o = n(735250),
     R = n(806966),
     C = n(28546),
     y = n(691251),
-    b = n(98528),
-    L = n(770812),
+    L = n(98528),
+    b = n(770812),
     D = n(434404),
     M = n(536442),
     P = n(609218),
@@ -122,7 +122,7 @@ let es = (e, t) => {
                 gridContainerProps: I,
                 handleGridContainerKeyDown: T,
                 isUsingKeyboardNavigation: g
-            } = (0, b.VO)({
+            } = (0, L.VO)({
                 columnCounts: r,
                 gridNavigatorId: $.Vr,
                 itemGrid: a,
@@ -189,14 +189,14 @@ let es = (e, t) => {
         let i,
             { pickerIntention: a, channel: l, guildId: c, closePopout: d, emojiSize: _ = $.Su.MEDIUM, hasTabWrapper: h = !1, containerContext: m = 0, includeCreateEmojiButton: y, onSelectEmoji: D, containerWidth: B, onNavigateAway: es, persistSearch: ed, className: eh, headerClassName: ep, analyticsOverride: em = ef, searchProps: eI = {}, wrapper: eT, shouldHidePickerActions: eg = !1, messageId: eS, renderHeader: eA, listHeaderClassName: ev, categoryListClassName: eN } = e,
             { onFocus: eO, onKeyDown: eR, autoFocus: eC = !0, accessory: ey } = eI,
-            eb = (0, E.e7)([w.ZP], () => (null != c ? w.ZP.getDefaultChannel(c) : null), [c]),
-            [eL, eD] = s.useState(null),
+            eL = (0, E.e7)([w.ZP], () => (null != c ? w.ZP.getDefaultChannel(c) : null), [c]),
+            [eb, eD] = s.useState(null),
             eM = s.useRef(''),
             eP = (0, C.Iu)((e) => e.searchQuery),
             eU = s.useRef(null),
             ew = s.useRef(null),
             ex = s.useRef(null);
-        null == l && null != eb && (l = eb);
+        null == l && null != eL && (l = eL);
         let eG = null !== (r = null !== (n = null == l ? void 0 : l.getGuildId()) && void 0 !== n ? n : c) && void 0 !== r ? r : null,
             [ek, eB] = s.useState(!1),
             eF = x.default.getCurrentUser(),
@@ -220,7 +220,7 @@ let es = (e, t) => {
             e0 = s.useCallback((e) => {
                 U.d4.updateSetting(Array.from(e));
             }, []),
-            e1 = (0, b.ep)({
+            e1 = (0, L.ep)({
                 gridWrapperRef: eU,
                 containerWidth: B,
                 listPaddingLeft: ei,
@@ -348,12 +348,12 @@ let es = (e, t) => {
             }, [eP, eK, eX, eQ, a]);
         let ta = null != eT ? eT : h ? 'div' : p.Dialog,
             to = null != e1;
-        if ((null == eL ? void 0 : eL.type) === K.Bg.PREMIUM) {
+        if ((null == eb ? void 0 : eb.type) === K.Bg.PREMIUM) {
             let e = P.p.NONE;
             2 === m ? (e = P.p.PARENT_CONTAINER) : 1 === m && (e = P.p.TAB_PARENT_CONTAINER),
                 (i = (0, o.jsx)(X.Z, {
                     onLearnMore: e9,
-                    emojiDescriptor: eL.emojiDescriptor,
+                    emojiDescriptor: eb.emojiDescriptor,
                     pickerIntention: a,
                     analyticsLocation: eK,
                     onClose: () => eD(null),
@@ -361,11 +361,11 @@ let es = (e, t) => {
                     containerContext: e
                 }));
         } else
-            (null == eL ? void 0 : eL.type) === K.Bg.ROLE_SUBSCRIPTION
-                ? (i = (0, o.jsx)(L.Z, {
+            (null == eb ? void 0 : eb.type) === K.Bg.ROLE_SUBSCRIPTION
+                ? (i = (0, o.jsx)(b.Z, {
                       onClose: () => eD(null),
-                      guildId: eL.guildId,
-                      emojiId: eL.emojiId
+                      guildId: eb.guildId,
+                      emojiId: eb.emojiId
                   }))
                 : ek && !eZ && (i = (0, o.jsx)(H.Z, { onDismiss: () => eB(!1) }));
         let ts = (e, t) => {

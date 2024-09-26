@@ -58,8 +58,8 @@ function g(e) {
         R = null != S && i === c.ZJ.PREMIUM,
         C = R && (null == O ? void 0 : O.disabled),
         y = R ? (null == O ? void 0 : O.label) : n,
-        b = null != p,
-        L = null != y && y.length > 0,
+        L = null != p,
+        b = null != y && y.length > 0,
         D = i === c.ZJ.LINK && null != g && g.length > 0,
         M = v === h.gH.LOADING || (R && null == O);
     return (
@@ -107,16 +107,16 @@ function g(e) {
                                   })
                               })
                             : null,
-                        b
+                        L
                             ? (0, r.jsx)(u.Z, {
-                                  className: a()({ [m.textEmoji]: L }),
+                                  className: a()({ [m.textEmoji]: b }),
                                   src: p.src,
                                   emojiId: p.id,
                                   emojiName: p.name,
                                   animated: p.animated
                               })
                             : null,
-                        L
+                        b
                             ? (0, r.jsx)('div', {
                                   className: m.label,
                                   children: y

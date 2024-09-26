@@ -99,21 +99,21 @@ class I {
                 useOldIcon: O
             };
         }
-        let b = null === (t = v.messageReference) || void 0 === t ? void 0 : t.guild_id;
-        if (null == b)
+        let L = null === (t = v.messageReference) || void 0 === t ? void 0 : t.guild_id;
+        if (null == L)
             return {
                 snapshotIndex: A,
                 useOldIcon: O
             };
-        let L = null !== (c = g.getGuild(b)) && void 0 !== c ? c : S.getGuild(b);
-        return null == L
+        let b = null !== (c = g.getGuild(L)) && void 0 !== c ? c : S.getGuild(L);
+        return null == b
             ? {
                   snapshotIndex: A,
                   useOldIcon: O
               }
             : {
                   snapshotIndex: A,
-                  footerInfo: m(L, C),
+                  footerInfo: m(b, C),
                   useOldIcon: O
               };
     }

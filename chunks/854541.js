@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     Z$: function () {
-        return L;
+        return b;
     },
     jH: function () {
         return y;
@@ -116,20 +116,20 @@ class y extends a.PureComponent {
         });
     }
 }
-function b(e) {
+function L(e) {
     let { value: t, eagerUpdate: n = !1, onChange: r, onClose: o, suggestedColors: l, middle: u, footer: E, showEyeDropper: m, wrapperComponentType: g, className: N } = e,
         R = (0, p.Z)(),
         C = O(t),
         y = null != C ? C : 0,
-        b = (0, c.Rf)(y),
-        L = (0, c.O)(y),
+        L = (0, c.Rf)(y),
+        b = (0, c.O)(y),
         [D, M] = a.useState({
             current: y,
             pending: {
-                hex: b,
-                hsl: L
+                hex: L,
+                hsl: b
             },
-            input: b
+            input: L
         });
     a.useEffect(() => {
         if (null == C || C === D.current) return;
@@ -245,7 +245,7 @@ function b(e) {
         children: G
     });
 }
-let L = a.memo(b);
+let b = a.memo(L);
 function D(e) {
     let { className: t, defaultColor: n, customColor: r, colors: a, value: o, disabled: c, onChange: d, renderDefaultButton: _, renderCustomButton: E, colorContainerClassName: f } = e,
         h = (e) =>

@@ -40,7 +40,7 @@ function C(e) {
 function y(e) {
     var t, n, r, i, a, o;
     let s = l.default.getCurrentUser();
-    if (null == s) return b();
+    if (null == s) return L();
     (E = null !== (t = e.section) && void 0 !== t ? t : E),
         (O = null !== (n = e.section) && void 0 !== n ? n : E),
         null != e.subsection && null != E && (f[E] = e.subsection),
@@ -67,10 +67,10 @@ function y(e) {
         (N = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
         (R = null !== (o = e.impressionSource) && void 0 !== o ? o : null);
 }
-function b() {
+function L() {
     (d = u.QZA.CLOSED), (T = !1), (m = null), (O = null), (I = null), (_ = null), (E = null), (f = {}), (h = {}), (A = null), (v = null), (N = []), (R = null);
 }
-function L(e) {
+function b(e) {
     var t;
     (_ = E), (E = e.section), (v = null), (N = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (f[E] = e.subsection);
 }
@@ -184,11 +184,11 @@ c(B, 'displayName', 'UserSettingsModalStore'),
     (t.Z = new B(s.Z, {
         USER_SETTINGS_MODAL_OPEN: C,
         USER_SETTINGS_MODAL_INIT: y,
-        USER_SETTINGS_MODAL_CLOSE: b,
-        LOGOUT: b,
+        USER_SETTINGS_MODAL_CLOSE: L,
+        LOGOUT: L,
         USER_SETTINGS_MODAL_SUBMIT: U,
         USER_SETTINGS_MODAL_SUBMIT_FAILURE: G,
-        USER_SETTINGS_MODAL_SET_SECTION: L,
+        USER_SETTINGS_MODAL_SET_SECTION: b,
         USER_SETTINGS_MODAL_CLEAR_SUBSECTION: D,
         USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: M,
         USER_SETTINGS_MODAL_UPDATE_ACCOUNT: P,

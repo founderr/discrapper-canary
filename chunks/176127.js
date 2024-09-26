@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
 var r = n(735250);
@@ -10,7 +10,7 @@ var i = n(120356),
     s = n(442837),
     a = n(435064),
     o = n(735807);
-function u() {
+function c() {
     let e = (0, s.Wu)([a.Z], () => {
         var e;
         let t = null === (e = a.Z.getLastClipsSession()) || void 0 === e ? void 0 : e.newClipIds;

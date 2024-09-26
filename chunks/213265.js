@@ -38,13 +38,13 @@ var r = n(926515),
         if (R) return (R.lastIndex = v.lastIndex), (t = r(h, R, O)), (v.lastIndex = R.lastIndex), t;
         var C = N.groups,
             y = S && v.sticky,
-            b = r(o, v),
-            L = v.source,
+            L = r(o, v),
+            b = v.source,
             D = 0,
             M = O;
         if (
-            (y && (-1 === m((b = I(b, 'y', '')), 'g') && (b += 'g'), (M = T(O, v.lastIndex)), v.lastIndex > 0 && (!v.multiline || (v.multiline && '\n' !== p(O, v.lastIndex - 1))) && ((L = '(?: ' + L + ')'), (M = ' ' + M), D++), (n = RegExp('^(?:' + L + ')', b))),
-            A && (n = RegExp('^' + L + '$(?!\\s)', b)),
+            (y && (-1 === m((L = I(L, 'y', '')), 'g') && (L += 'g'), (M = T(O, v.lastIndex)), v.lastIndex > 0 && (!v.multiline || (v.multiline && '\n' !== p(O, v.lastIndex - 1))) && ((b = '(?: ' + b + ')'), (M = ' ' + M), D++), (n = RegExp('^(?:' + b + ')', L))),
+            A && (n = RegExp('^' + b + '$(?!\\s)', L)),
             g && (i = v.lastIndex),
             (s = r(f, y ? n : v, M)),
             y ? (s ? ((s.input = T(s.input, D)), (s[0] = T(s[0], D)), (s.index = v.lastIndex), (v.lastIndex += s[0].length)) : (v.lastIndex = 0)) : g && s && (v.lastIndex = v.global ? s.index + s[0].length : i),

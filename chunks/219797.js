@@ -166,13 +166,13 @@ function C(e) {
 }
 function y(e) {
     if ('CLIP' === e.item.type)
-        return (0, i.jsx)(b, {
+        return (0, i.jsx)(L, {
             attachment: e.item.originalItem,
             message: e.message
         });
     return null;
 }
-function b(e) {
+function L(e) {
     var t;
     let { attachment: n, message: r } = e,
         a = r.channel_id,

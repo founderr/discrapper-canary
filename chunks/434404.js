@@ -156,8 +156,8 @@ let A = new s.Z('GuildSettingsActionCreators'),
         },
         saveGuild(e, t) {
             let { name: n, description: r, icon: o, splash: s, banner: u, homeHeader: c, afkChannelId: d, afkTimeout: _, systemChannelId: E, verificationLevel: f, defaultMessageNotifications: h, explicitContentFilter: p, features: m, systemChannelFlags: I, preferredLocale: S, rulesChannelId: v, safetyAlertsChannelId: N, discoverySplash: O, publicUpdatesChannelId: R, premiumProgressBarEnabled: C, clan: y } = t,
-                b = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                L = {
+                L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                b = {
                     name: n,
                     description: r,
                     icon: o,
@@ -185,8 +185,8 @@ let A = new s.Z('GuildSettingsActionCreators'),
                 i.tn
                     .patch({
                         url: T.ANM.GUILD(e),
-                        query: { for_discovery: b.isForDiscovery },
-                        body: L,
+                        query: { for_discovery: L.isForDiscovery },
+                        body: b,
                         oldFormErrors: !0
                     })
                     .then(
@@ -204,7 +204,7 @@ let A = new s.Z('GuildSettingsActionCreators'),
                                     errors: e.body
                                 }),
                                 A.error('Failed to save guild settings', { errors: e.body }),
-                                b.throwErr)
+                                L.throwErr)
                             )
                                 throw e.body;
                         }

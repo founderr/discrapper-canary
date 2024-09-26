@@ -46,11 +46,11 @@ function y(e) {
     let { avatarDecoration: t } = e;
     i = t;
 }
-function b(e) {
+function L(e) {
     let { profileEffectId: t } = e;
     a = t;
 }
-function L(e) {
+function b(e) {
     let { banner: t } = e;
     o = t;
 }
@@ -157,8 +157,8 @@ I(F, 'displayName', 'GuildIdentitySettingsStore'),
         USER_PROFILE_UPDATE_FAILURE: R,
         GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: C,
         GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: y,
-        GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: b,
-        GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: L,
+        GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: L,
+        GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: b,
         GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: D,
         GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: M,
         GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: P,

@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(25827),
     C = n(131951),
     y = n(594174),
-    b = n(451478),
-    L = n(358221),
+    L = n(451478),
+    b = n(358221),
     D = n(584511),
     M = n(793865),
     P = n(981631),
@@ -141,8 +141,8 @@ function Y(e) {
         I = (0, h.x)(o),
         T = (0, p.ZP)(o),
         [g, S] = (0, u.Wu)([C.Z], () => [C.Z.supports(U.AN.VIDEO), Object.keys(C.Z.getVideoDevices()).length]),
-        A = (0, u.e7)([b.Z], () => b.Z.isFocused()),
-        v = (0, u.e7)([L.Z], () => L.Z.getMode(o.id)),
+        A = (0, u.e7)([L.Z], () => L.Z.isFocused()),
+        v = (0, u.e7)([b.Z], () => b.Z.getMode(o.id)),
         N = a.useCallback((e) => {
             null != e.top && null != e.left && _.Z.move(e.left, e.top);
         }, []),
@@ -192,7 +192,7 @@ function Y(e) {
             ]
         }),
         M = R ? k : B,
-        Y = (0, u.e7)([b.Z], () => b.Z.windowSize());
+        Y = (0, u.e7)([L.Z], () => L.Z.windowSize());
     return (0, i.jsx)(f.Z, {
         className: x.wrapper,
         selector: '.'.concat(x.root),

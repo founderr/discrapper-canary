@@ -36,8 +36,8 @@ function O(e, t, n) {
 let R = new c.Z('GameConsoleManager'),
     C = 3000,
     y = 60000,
-    b = 180000;
-async function L(e) {
+    L = 180000;
+async function b(e) {
     let t = E.Z.getChannelId();
     a()(null == t, 'Syncing to remote while in voice!'), e.selfMute !== _.Z.isSelfMute() && (await l.Z.toggleSelfMute({ syncRemote: !1 })), e.selfDeaf !== _.Z.isSelfDeaf() && l.Z.toggleSelfDeaf({ syncRemote: !1 });
 }
@@ -71,7 +71,7 @@ class M extends u.Z {
                 if (null == t) return null;
                 this.awaitRemoteTimeout.stop(), (0, m.ef)(t.sessionId);
                 let n = h.Z.getVoiceStateForSession(d.default.getId(), t.sessionId);
-                null != n && L(n);
+                null != n && b(n);
             }),
             O(this, 'handleAudioStateToggle', (e) => {
                 let { syncRemote: t, context: n } = e;
@@ -89,7 +89,7 @@ class M extends u.Z {
                             selfMute: i
                         }),
                         this.rollbackCommandTimeout.start(C, () => {
-                            L(s);
+                            b(s);
                         }));
             }),
             O(this, 'handleVoiceStateUpdates', (e) => {
@@ -108,7 +108,7 @@ class M extends u.Z {
                     let { sessionId: t } = e;
                     return t === n;
                 });
-                null != r && (this.rollbackCommandTimeout.stop(), L(r));
+                null != r && (this.rollbackCommandTimeout.stop(), b(r));
             }),
             O(this, 'handleSessionsChanged', () => {
                 let e = T.Z.getRemoteSessionId();
@@ -149,7 +149,7 @@ class M extends u.Z {
                         errorCodeMessage: s.errorCodeMessage,
                         reconnectPlatformType: s.isAccountLinkError ? a.type : void 0
                     }),
-                    A.e8.has(i.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(b, () => (0, m.s6)(), !0) : 'failed' === r && (0, m.s6)();
+                    A.e8.has(i.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(L, () => (0, m.s6)(), !0) : 'failed' === r && (0, m.s6)();
             }),
             O(this, 'handleRemoteSessionDisconnect', () => {
                 this.awaitRemoteTimeout.stop();

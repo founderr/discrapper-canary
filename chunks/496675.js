@@ -36,8 +36,8 @@ function C(e, t, n) {
     );
 }
 let y = {},
-    b = {},
     L = {},
+    b = {},
     D = 0;
 function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -73,17 +73,17 @@ function P(e) {
 }
 function U(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = b[e];
-    return null != n ? n : (b[e] = P(e, t));
+        n = L[e];
+    return null != n ? n : (L[e] = P(e, t));
 }
 function w(e) {
     if (null != e) {
         var t;
-        L[e] = (null !== (t = L[e]) && void 0 !== t ? t : 0) + 1;
+        b[e] = (null !== (t = b[e]) && void 0 !== t ? t : 0) + 1;
     }
 }
 function x() {
-    for (let e in ((y = {}), (b = {}), L)) L[e] += 1;
+    for (let e in ((y = {}), (L = {}), b)) b[e] += 1;
     D += 1;
 }
 function G() {
@@ -112,8 +112,8 @@ function Z(e) {
             user: r,
             context: n
         });
-    if (b[n.id] === i) return !1;
-    (b[n.id] = i), (D += 1), w(n.getGuildId());
+    if (L[n.id] === i) return !1;
+    (L[n.id] = i), (D += 1), w(n.getGuildId());
 }
 function V(e) {
     let { channels: t } = e,
@@ -126,7 +126,7 @@ function V(e) {
                 user: r,
                 context: t
             });
-        if (b[t.id] !== i) (b[t.id] = i), w(t.getGuildId()), (n = !0);
+        if (L[t.id] !== i) (L[t.id] = i), w(t.getGuildId()), (n = !0);
     }
     return !!n && ((D += 1), n);
 }
@@ -150,14 +150,14 @@ function K(e) {
 }
 function z(e) {
     let { channel: t } = e;
-    return delete b[t.id], (D += 1), w(t.guild_id), !1;
+    return delete L[t.id], (D += 1), w(t.guild_id), !1;
 }
 function q(e) {
     let { guildId: t } = e;
     delete y[t];
     let n = g.Z.getMutableBasicGuildChannelsForGuild(t);
     o().forEach(n, (e) => {
-        delete b[e.id];
+        delete L[e.id];
     }),
         (D += 1),
         w(t);
@@ -171,15 +171,15 @@ function Q(e) {
             user: r,
             context: n
         });
-    if (i === b[n.id]) return !1;
-    (b[n.id] = i), (D += 1);
+    if (i === L[n.id]) return !1;
+    (L[n.id] = i), (D += 1);
 }
 function X(e) {
     let { guildId: t } = e;
     delete y[t];
     let n = g.Z.getMutableBasicGuildChannelsForGuild(t);
     o().forEach(n, (e) => {
-        delete b[e.id];
+        delete L[e.id];
     }),
         (D += 1),
         w(t);
@@ -282,14 +282,14 @@ class J extends (r = l.ZP.Store) {
     }
     getGuildVersion(e) {
         var t;
-        return null !== (t = L[e]) && void 0 !== t ? t : 0;
+        return null !== (t = b[e]) && void 0 !== t ? t : 0;
     }
     getChannelsVersion() {
         return D;
     }
 }
 function ee() {
-    (b = {}), (y = {}), (L = {}), (D = 0);
+    (L = {}), (y = {}), (b = {}), (D = 0);
 }
 C(J, 'displayName', 'PermissionStore'),
     (t.Z = new J(u.Z, {

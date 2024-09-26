@@ -47,13 +47,13 @@ var r = n(478497),
     },
     h = {},
     p = function e(t, n, a, o, s, u, d, _, p, m, I, T, g, S, A, v, N, O) {
-        for (var R, C = t, y = O, b = 0, L = !1; void 0 !== (y = y.get(h)) && !L; ) {
+        for (var R, C = t, y = O, L = 0, b = !1; void 0 !== (y = y.get(h)) && !b; ) {
             var D = y.get(t);
-            if (((b += 1), void 0 !== D)) {
-                if (D === b) throw RangeError('Cyclic object value');
-                L = !0;
+            if (((L += 1), void 0 !== D)) {
+                if (D === L) throw RangeError('Cyclic object value');
+                b = !0;
             }
-            void 0 === y.get(h) && (b = 0);
+            void 0 === y.get(h) && (L = 0);
         }
         if (
             ('function' == typeof m
@@ -88,7 +88,7 @@ var r = n(478497),
             if (!d || null !== k) {
                 var B = T && _ ? G.replace(/\./g, '%2E') : G,
                     F = l(C) ? ('function' == typeof a ? a(w, B) : w) : w + (T ? '.' + B : '[' + B + ']');
-                O.set(t, b);
+                O.set(t, L);
                 var Z = r();
                 Z.set(h, O), c(M, e(k, F, a, o, s, u, d, _, 'comma' === a && v && l(C) ? null : p, m, I, T, g, S, A, v, N, Z));
             }

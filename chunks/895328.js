@@ -3,21 +3,21 @@ n(470079);
 var a = n(120356),
     r = n.n(a),
     i = n(481060),
-    o = n(740697),
-    l = n(113207),
+    l = n(740697),
+    o = n(113207),
     c = n(398008);
 t.Z = (e) => {
     let { text: t, className: n } = e;
     return (0, s.jsxs)('div', {
-        className: r()(n, o.empty),
+        className: r()(n, l.empty),
         children: [
             (0, s.jsx)('img', {
-                className: o.image,
+                className: l.image,
                 src: c,
                 alt: ''
             }),
             (0, s.jsx)(i.Text, {
-                className: l.marginTop8,
+                className: o.marginTop8,
                 variant: 'text-sm/medium',
                 color: 'text-muted',
                 children: t

@@ -41,8 +41,8 @@ var l = n(470079),
     R = n(594174),
     C = n(78839),
     y = n(176354),
-    b = n(111361),
-    L = n(111846),
+    L = n(111361),
+    b = n(111846),
     D = n(392552),
     M = n(543241),
     P = n(304852),
@@ -78,7 +78,7 @@ let k = (e) => {
         K = (0, _.e7)([f.ZP], () => f.ZP.expandedSectionsByGuildIds),
         { canCreateExpressions: z } = (0, S.X)(T),
         q = (0, _.e7)([R.default], () => R.default.getCurrentUser()),
-        Q = (0, b.I5)(q),
+        Q = (0, L.I5)(q),
         X = (0, _.e7)([C.ZP], () => C.ZP.inReverseTrial()),
         $ = k.getCustomEmoji(),
         J = (e) => {
@@ -92,7 +92,7 @@ let k = (e) => {
                 disable: !z
             }
         ),
-        { enabled: er } = L.Z.getCurrentConfig(
+        { enabled: er } = b.Z.getCurrentConfig(
             { location: 'useEmojiGrid' },
             {
                 autoTrackExposure: !Q,
@@ -127,14 +127,14 @@ let k = (e) => {
                         O = !v && null != S && A === S.id && T.length < S.getMaxEmojiSlots(),
                         R = v && T.length < m && !et,
                         C = null != S && v && et && en === D.B.WITH_TOP_LIST && ee[S.id].length < S.getMaxEmojiSlots(),
-                        b = r && z && null != S && (O || R || C);
-                    b && C && T.length === m && T.shift();
-                    let L = T.length > g,
-                        P = er && L && null != S && o.isNitroLocked,
+                        L = r && z && null != S && (O || R || C);
+                    L && C && T.length === m && T.shift();
+                    let b = T.length > g,
+                        P = er && b && null != S && o.isNitroLocked,
                         U = P && !K.has(S.id);
                     U && T.splice(g - 1);
-                    let x = et && b && !d,
-                        k = Math.ceil((b || P ? T.length + 1 : T.length) / m),
+                    let x = et && L && !d,
+                        k = Math.ceil((L || P ? T.length + 1 : T.length) / m),
                         B = [];
                     for (let e = 0; e < k; e++) {
                         let t = 0 === e,
@@ -173,7 +173,7 @@ let k = (e) => {
                             B.push(i),
                             !d)
                         ) {
-                            if (!et && b && e === k - 1) {
+                            if (!et && L && e === k - 1) {
                                 let t = B[e];
                                 t.push({
                                     type: 1,

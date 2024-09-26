@@ -48,12 +48,12 @@ let g = 10800000,
         duration: 150,
         friction: 3
     },
-    b = {
+    L = {
         friction: 30,
         tension: 900,
         mass: 1
     },
-    L = {
+    b = {
         duration: 150,
         friction: 10,
         tension: 100,
@@ -171,7 +171,7 @@ class x extends (i = s.Component) {
                       .update({
                           spring: 1,
                           immediate: !document.hasFocus(),
-                          config: b
+                          config: L
                       })
                       .start()
                 : null == n &&
@@ -181,7 +181,7 @@ class x extends (i = s.Component) {
                           .update({
                               spring: 0,
                               immediate: !document.hasFocus(),
-                              config: L
+                              config: b
                           })
                           .start()),
             null != r && null == e.upperBadge
@@ -190,7 +190,7 @@ class x extends (i = s.Component) {
                       .update({
                           spring: 1,
                           immediate: !document.hasFocus(),
-                          config: b
+                          config: L
                       })
                       .start()
                 : null == r &&
@@ -200,7 +200,7 @@ class x extends (i = s.Component) {
                           .update({
                               spring: 0,
                               immediate: !document.hasFocus(),
-                              config: L
+                              config: b
                           })
                           .start()),
             !s || w(this.props) || this.timeout.isStarted() ? w(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(_()(g, S), this.handleTimeout);
@@ -280,8 +280,8 @@ class x extends (i = s.Component) {
         let S = ''.concat(d, '-upper_badge_masks'),
             C = ''.concat(d, '-lower_badge_masks'),
             y = ''.concat(d, '-blob_mask'),
-            b = ''.concat(d, '-stroke_mask'),
-            L = ''.concat(d, '-highlight_mask'),
+            L = ''.concat(d, '-stroke_mask'),
+            b = ''.concat(d, '-highlight_mask'),
             D = (null == i ? void 0 : i.width) != null ? i.width : A,
             M = (null == i ? void 0 : i.height) != null ? i.height : A;
         return (0, o.jsxs)(
@@ -306,7 +306,7 @@ class x extends (i = s.Component) {
                                         c &&
                                             (0, o.jsx)(E.animated.path, {
                                                 d: this.getPathInterpolation(),
-                                                id: L
+                                                id: b
                                             }),
                                         (0, o.jsx)(E.animated.path, {
                                             d: this.getPathInterpolation(),
@@ -348,7 +348,7 @@ class x extends (i = s.Component) {
                                     children: [
                                         c &&
                                             (0, o.jsx)('use', {
-                                                href: '#'.concat(L),
+                                                href: '#'.concat(b),
                                                 fill: 'black'
                                             }),
                                         (0, o.jsx)('use', {
@@ -374,7 +374,7 @@ class x extends (i = s.Component) {
                                 }),
                                 T
                                     ? (0, o.jsxs)('mask', {
-                                          id: b,
+                                          id: L,
                                           children: [
                                               (0, o.jsx)('rect', {
                                                   width: '150%',
@@ -399,7 +399,7 @@ class x extends (i = s.Component) {
                                           children: [
                                               (0, o.jsx)('g', {
                                                   className: I.focusStroke,
-                                                  mask: 'url(#'.concat(b, ')'),
+                                                  mask: 'url(#'.concat(L, ')'),
                                                   children: (0, o.jsx)('use', { href: '#'.concat(y) })
                                               }),
                                               (0, o.jsxs)('g', {
@@ -415,7 +415,7 @@ class x extends (i = s.Component) {
                                         stroke: h.Z.BRAND_500,
                                         'stroke-width': R,
                                         className: I.highlight,
-                                        mask: 'url(#'.concat(b, ')')
+                                        mask: 'url(#'.concat(L, ')')
                                     }),
                                 (0, o.jsx)(
                                     'foreignObject',

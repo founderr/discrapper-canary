@@ -29,8 +29,8 @@ var r = n(235003),
     R = n(701809),
     C = n(340132),
     y = n(355180),
-    b = n(778341),
-    L = n(368480),
+    L = n(778341),
+    b = n(368480),
     D = n(453440),
     M = n(910188),
     P = n(733710),
@@ -132,10 +132,10 @@ function Q(e, t) {
         y = (e) => {
             'touch' === e.pointerType && (o.current.focus(), t.toggle(null, 'manual'));
         },
-        b = (e) => {
+        L = (e) => {
             'touch' !== e.pointerType && (o.current.focus(), t.toggle('keyboard' === e.pointerType || 'virtual' === e.pointerType ? 'first' : null, 'manual'));
         },
-        L = (0, F.bE)({
+        b = (0, F.bE)({
             id: E.id,
             'aria-label': _.format('buttonLabel'),
             'aria-labelledby': e['aria-labelledby'] || N.id
@@ -207,10 +207,10 @@ function Q(e, t) {
             labelProps: N,
             buttonProps: {
                 ...E,
-                ...L,
+                ...b,
                 excludeFromTabOrder: !0,
                 onPress: y,
-                onPressStart: b,
+                onPressStart: L,
                 isDisabled: d || c
             },
             inputProps: (0, F.dG)(O, {
@@ -265,8 +265,8 @@ q = {
     'pt-PT': R.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
-    'sk-SK': b.Z,
-    'sl-SI': L.Z,
+    'sk-SK': L.Z,
+    'sl-SI': b.Z,
     'sr-SP': D.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,

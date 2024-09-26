@@ -19,8 +19,8 @@ var n = t(735250),
     I = t(981631),
     N = t(474936),
     A = t(689938),
-    m = t(444298),
-    C = t(113207);
+    C = t(444298),
+    m = t(113207);
 let g = () => {
         (0, d.nJ)(), (0, o.xf)();
     },
@@ -43,13 +43,13 @@ let g = () => {
                     });
             }, []),
             (0, n.jsxs)('div', {
-                className: m.selectionGroup,
+                className: C.selectionGroup,
                 children: [
                     (0, n.jsx)(u.Z, {
                         disabled: s && !t,
                         renderCTAButtons: () =>
                             (0, n.jsxs)('div', {
-                                className: m.tryItOutButtons,
+                                className: C.tryItOutButtons,
                                 children: [
                                     (0, n.jsx)(r.Button, {
                                         color: !t && s ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
@@ -66,7 +66,7 @@ let g = () => {
                                 ]
                             })
                     }),
-                    (0, n.jsx)(r.FormDivider, { className: C.marginTop20 })
+                    (0, n.jsx)(r.FormDivider, { className: m.marginTop20 })
                 ]
             })
         );

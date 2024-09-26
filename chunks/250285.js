@@ -3,47 +3,47 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    o = n(789978),
-    l = n(748780),
+    l = n(789978),
+    o = n(748780),
     c = n(91192),
     d = n(906732),
     _ = n(171368),
-    u = n(981631),
-    E = n(823120);
+    E = n(981631),
+    u = n(823120);
 t.Z = (e) => {
     let { userId: t, children: n, isLast: r, className: T } = e,
         [I, R] = a.useState(!1),
-        { analyticsLocations: m } = (0, d.ZP)(),
-        g = a.useCallback(() => {
+        { analyticsLocations: g } = (0, d.ZP)(),
+        N = a.useCallback(() => {
             (0, _.openUserProfileModal)({
                 userId: t,
-                sourceAnalyticsLocations: m,
-                analyticsLocation: { section: u.jXE.FAMILY_CENTER }
+                sourceAnalyticsLocations: g,
+                analyticsLocation: { section: E.jXE.FAMILY_CENTER }
             });
-        }, [t, m]),
-        N = () => {
+        }, [t, g]),
+        C = () => {
             R(!0);
         },
-        C = () => {
+        m = () => {
             R(!1);
         };
     return (0, s.jsx)(c.mh, {
         id: t,
         children: (e) =>
-            (0, s.jsx)(o.tE, {
+            (0, s.jsx)(l.tE, {
                 offset: {
                     left: -8,
                     right: -8
                 },
-                children: (0, s.jsx)(l.Z.div, {
+                children: (0, s.jsx)(o.Z.div, {
                     style: { opacity: 1 },
-                    className: i()(E.rowItem, T, {
-                        [E.last]: r,
-                        [E.active]: I
+                    className: i()(u.rowItem, T, {
+                        [u.last]: r,
+                        [u.active]: I
                     }),
-                    onMouseEnter: N,
-                    onMouseLeave: C,
-                    onClick: g,
+                    onMouseEnter: C,
+                    onMouseLeave: m,
+                    onClick: N,
                     ...e,
                     children: n(I)
                 })

@@ -44,8 +44,8 @@ let O = {},
     R = {},
     C = !1,
     y = !1,
-    b = { flags: 0 },
-    L = new c.ZP(),
+    L = { flags: 0 },
+    b = new c.ZP(),
     D = new c.ZP(),
     M = {
         suppress_everyone: !1,
@@ -89,7 +89,7 @@ function Z(e, t) {
             ...t,
             channel_overrides: a
         };
-    L.clearTimer(e),
+    b.clearTimer(e),
         s().forEach(i, (e) => {
             D.clearTimer(e.channel_id);
         }),
@@ -104,7 +104,7 @@ function Z(e, t) {
 }
 function V(e, t) {
     !0 === t.muted &&
-        L.setTimer(e, t.mute_config, () => {
+        b.setTimer(e, t.mute_config, () => {
             Y(e, { muted: !1 }),
                 u.Z.dispatch({
                     type: 'GUILD_MUTE_EXPIRED',
@@ -221,7 +221,7 @@ function $(e) {
         }));
 }
 function J(e) {
-    en(e.notificationSettings), L.reset(), D.reset(), !e.userGuildSettings.partial && ((O = {}), (U = {}), (w = {}));
+    en(e.notificationSettings), b.reset(), D.reset(), !e.userGuildSettings.partial && ((O = {}), (U = {}), (w = {}));
     let t = new Set();
     for (let n in (e.userGuildSettings.entries.forEach((e) => {
         let n = e;
@@ -248,7 +248,7 @@ function et(e) {
     en(t);
 }
 function en(e) {
-    (C = h.yE(e.flags, S.c.USE_NEW_NOTIFICATIONS)), (y = h.yE(e.flags, S.c.MENTION_ON_ALL_MESSAGES)), (b = e);
+    (C = h.yE(e.flags, S.c.USE_NEW_NOTIFICATIONS)), (y = h.yE(e.flags, S.c.MENTION_ON_ALL_MESSAGES)), (L = e);
 }
 function er(e) {
     let { userGuildSettings: t } = e;
@@ -510,7 +510,7 @@ class ef extends (r = l.ZP.PersistedStore) {
         return null !== (e = w[x]) && void 0 !== e ? e : k;
     }
     get accountNotificationSettings() {
-        return b;
+        return L;
     }
     get useNewNotifications() {
         return C;

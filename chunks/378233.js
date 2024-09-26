@@ -1,6 +1,6 @@
 n.d(t, {
     B0: function () {
-        return L;
+        return b;
     },
     Hc: function () {
         return U;
@@ -39,7 +39,7 @@ n.d(t, {
         return x;
     },
     sM: function () {
-        return b;
+        return L;
     },
     z: function () {
         return M;
@@ -121,7 +121,7 @@ let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: p, PROJECT_ENV: m, ASSET_ENDPOINT: 
         }
         return ''.concat(location.protocol).concat(h).concat(o);
     },
-    b = (e, t) => {
+    L = (e, t) => {
         let n;
         let r = e.banner_asset_id;
         if (null == r) return null;
@@ -138,7 +138,7 @@ let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: p, PROJECT_ENV: m, ASSET_ENDPOINT: 
             n
         );
     },
-    L = (e) => e.match('development' !== m ? A : v),
+    b = (e) => e.match('development' !== m ? A : v),
     D = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;

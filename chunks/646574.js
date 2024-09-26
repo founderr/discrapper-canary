@@ -66,10 +66,10 @@ function v(e) {
         N = null == v || (0, h.I5)(v) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
         [O, R] = (0, E.US)(N),
         [C, y] = a.useState(!1),
-        [b, L] = (0, d.useSpring)(() => ({})),
+        [L, b] = (0, d.useSpring)(() => ({})),
         D = (0, l.animated)(d.SuperReactionIcon);
     function M() {
-        L({
+        b({
             from: { rotate: t ? '360deg' : '0deg' },
             to: { rotate: t ? '0deg' : '360deg' },
             config: T
@@ -113,7 +113,7 @@ function v(e) {
                           })
                         : null,
                     (0, i.jsx)(D, {
-                        style: o ? void 0 : b,
+                        style: o ? void 0 : L,
                         size: 'custom',
                         width: g,
                         height: g,

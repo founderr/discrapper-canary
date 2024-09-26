@@ -130,10 +130,10 @@ function y(e) {
         content: e
     };
 }
-function b(e) {
+function L(e) {
     return null != e ? C(e) : y('#'.concat(g.Z.Messages.UNKNOWN_CHANNEL_PLACEHOLDER));
 }
-function L() {
+function b() {
     return v(
         {
             name: g.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(),
@@ -153,7 +153,7 @@ function D(e, t, n, r, i) {
         messageId: n,
         originalLink: i,
         inContent: null == a || o ? null : [A(a)],
-        content: [L()]
+        content: [b()]
     };
 }
 function M(e, t, n, r) {
@@ -217,7 +217,7 @@ function P(e, t, n, r) {
                   inContent: [v(e)],
                   content: [O(!1)]
               }
-            : b(r);
+            : L(r);
     let o = e.guildId === n,
         s = null != t;
     return {

@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(283595),
     C = n(496675),
     y = n(699516),
-    b = n(944486),
-    L = n(979651),
+    L = n(944486),
+    b = n(979651),
     D = n(181106),
     M = n(417363),
     P = n(358085),
@@ -71,7 +71,7 @@ function B(e) {
             })
         ),
         Q = (0, o.e7)([D.Z], () => null != j && D.Z.getState(j, x.mFx.JOIN) === x.OcF.LOADING),
-        X = (0, o.e7)([A.Z, O.Z, N.Z, y.Z, b.Z, L.Z, C.Z], () =>
+        X = (0, o.e7)([A.Z, O.Z, N.Z, y.Z, L.Z, b.Z, C.Z], () =>
             (0, f.Z)({
                 user: t,
                 activity: r,
@@ -83,8 +83,8 @@ function B(e) {
                 GuildStore: O.Z,
                 GuildMemberCountStore: N.Z,
                 RelationshipStore: y.Z,
-                SelectedChannelStore: b.Z,
-                VoiceStateStore: L.Z,
+                SelectedChannelStore: L.Z,
+                VoiceStateStore: b.Z,
                 PermissionStore: C.Z
             })
         ),
@@ -109,7 +109,7 @@ function B(e) {
             }
             if (X && null != j && null != W) {
                 var e, n;
-                let i = b.Z.getVoiceChannelId(),
+                let i = L.Z.getVoiceChannelId(),
                     a = A.Z.getChannel(i);
                 await u.Z.join({
                     userId: t.id,

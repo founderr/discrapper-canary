@@ -10,25 +10,25 @@ var s,
     a,
     r = n(230711),
     i = n(100527),
-    o = n(906732),
-    l = n(300284),
+    l = n(906732),
+    o = n(300284),
     c = n(526167),
     d = n(981631),
     _ = n(526761),
-    u = n(689938),
-    E = n(509614),
+    E = n(689938),
+    u = n(509614),
     T = n(880511),
     I = n(985443),
     R = n(612253),
-    m = n(832287),
-    g = n(860528),
-    N = n(872532),
-    C = n(91342),
-    p = n(181708),
-    f = n(821721),
-    A = n(158897),
-    S = n(290650),
-    M = n(751125),
+    g = n(832287),
+    N = n(860528),
+    C = n(872532),
+    m = n(91342),
+    f = n(181708),
+    A = n(821721),
+    p = n(158897),
+    M = n(290650),
+    S = n(751125),
     h = n(904505),
     x = n(386014),
     b = n(845571),
@@ -43,25 +43,25 @@ let D = () => {
     return {
         emojis: {
             name: 'emojis',
-            title: u.Z.Messages.PREMIUM_UPSELL_MOBILE_FEATURE_EMOJI_TITLE,
-            description: u.Z.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
-            previewImage: E,
-            videoUrl: e ? C.Z : p.Z,
+            title: E.Z.Messages.PREMIUM_UPSELL_MOBILE_FEATURE_EMOJI_TITLE,
+            description: E.Z.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
+            previewImage: u,
+            videoUrl: e ? m.Z : f.Z,
             isCompact: !0
         },
         noLimits: {
             name: 'noLimits',
-            title: u.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_NO_LIMITS_HEADER,
-            description: u.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_NO_LIMITS_DESCRIPTION,
+            title: E.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_NO_LIMITS_HEADER,
+            description: E.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_NO_LIMITS_DESCRIPTION,
             previewImage: T,
-            videoUrl: e ? S.Z : M.Z,
+            videoUrl: e ? M.Z : S.Z,
             isCompact: !0
         }
     };
 };
 t.ZP = (e) => {
-    let { analyticsLocations: t } = (0, o.ZP)(i.Z.PREMIUM_MARKETING_BENTO_BOX),
-        n = (0, l.Z)({
+    let { analyticsLocations: t } = (0, l.ZP)(i.Z.PREMIUM_MARKETING_BENTO_BOX),
+        n = (0, o.Z)({
             scrollPosition: _.Y_.TRY_IT_OUT,
             analyticsLocations: t
         }),
@@ -69,44 +69,44 @@ t.ZP = (e) => {
         a = {
             referralProgram: {
                 name: 'referralProgram',
-                title: u.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_TITLE,
-                description: u.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_SUBTITLE,
-                descriptionCta: u.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
-                previewImage: g,
+                title: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_TITLE,
+                description: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_SUBTITLE,
+                descriptionCta: E.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
+                previewImage: N,
                 videoUrl: s ? h.Z : x.Z
             },
             serverProfiles: {
                 name: 'serverProfiles',
-                title: u.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PROFILES_TITLE,
-                description: u.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PRORFILES_SUBTITLE,
-                descriptionCta: u.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
-                previewImage: N,
+                title: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PROFILES_TITLE,
+                description: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PRORFILES_SUBTITLE,
+                descriptionCta: E.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
+                previewImage: C,
                 videoUrl: s ? b.Z : O.Z
             },
             newAppStyles: {
                 name: 'newAppStyles',
-                title: u.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_TITLE,
-                description: u.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_SUBTITLE,
-                descriptionCta: u.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
-                previewImage: m,
-                videoUrl: s ? f.Z : A.Z
+                title: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_TITLE,
+                description: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_SUBTITLE,
+                descriptionCta: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
+                previewImage: g,
+                videoUrl: s ? A.Z : p.Z
             }
         },
-        E = {
+        u = {
             showYourStyle: {
                 name: 'showYourStyle',
-                title: u.Z.Messages.MARKETING_PAGE_COMPARISON_TABLE_SHOW_OFF_YOUR_STYLE_SECTION_V2,
-                description: u.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_PROFILE_STYLES_DESCRIPTION,
-                descriptionCta: u.Z.Messages.TAKE_ME_THERE,
+                title: E.Z.Messages.MARKETING_PAGE_COMPARISON_TABLE_SHOW_OFF_YOUR_STYLE_SECTION_V2,
+                description: E.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_PROFILE_STYLES_DESCRIPTION,
+                descriptionCta: E.Z.Messages.TAKE_ME_THERE,
                 previewImage: R,
                 onClick: n,
                 videoUrl: s ? P.Z : v.Z
             },
             yourSpace: {
                 name: 'yourSpace',
-                title: u.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_APP_STYLES_HEADER,
-                description: u.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_APP_STYLES_DESCRIPTION,
-                descriptionCta: u.Z.Messages.TAKE_ME_THERE,
+                title: E.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_APP_STYLES_HEADER,
+                description: E.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO_APP_STYLES_DESCRIPTION,
+                descriptionCta: E.Z.Messages.TAKE_ME_THERE,
                 previewImage: I,
                 onClick: () => {
                     r.Z.open(d.oAB.APPEARANCE, null, {
@@ -117,5 +117,5 @@ t.ZP = (e) => {
                 videoUrl: s ? L.Z : Z.Z
             }
         };
-    return e ? E : a;
+    return e ? u : a;
 };

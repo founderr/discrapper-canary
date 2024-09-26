@@ -4,8 +4,8 @@ var r = n(735250),
     s = n.n(l),
     a = n(913527),
     o = n.n(a),
-    u = n(442837),
-    c = n(570140),
+    c = n(442837),
+    u = n(570140),
     d = n(821849),
     h = n(131388),
     _ = n(906732),
@@ -13,80 +13,80 @@ var r = n(735250),
     E = n(246364),
     p = n(937111),
     m = n(281956),
-    C = n(41776),
-    S = n(738737),
-    I = n(509545),
+    I = n(41776),
+    C = n(738737),
+    S = n(509545),
     g = n(63063),
-    T = n(817460),
-    R = n(584825),
+    R = n(817460),
+    T = n(584825),
     N = n(697227),
-    v = n(934826),
-    x = n(896083),
-    A = n(939872),
-    L = n(265985),
-    b = n(293810),
-    O = n(981631),
-    Z = n(689938);
+    x = n(934826),
+    v = n(896083),
+    O = n(939872),
+    b = n(265985),
+    L = n(293810),
+    A = n(981631),
+    P = n(689938);
 t.Z = (e, t, n, l) => {
     let a;
-    let P = (0, u.e7)([C.Z], () => C.Z.isLurking(t)),
-        M = (0, m.J)(t),
-        y = (0, u.e7)([p.Z], () => (null != t ? p.Z.getRequest(t) : null)),
-        j = (null == y ? void 0 : y.applicationStatus) === E.wB.SUBMITTED,
+    let Z = (0, c.e7)([I.Z], () => I.Z.isLurking(t)),
+        y = (0, m.J)(t),
+        M = (0, c.e7)([p.Z], () => (null != t ? p.Z.getRequest(t) : null)),
+        j = (null == M ? void 0 : M.applicationStatus) === E.wB.SUBMITTED,
         U = null == e ? void 0 : e.subscription_plans[0],
         D = null == U ? void 0 : U.id,
         B = (null == e ? void 0 : e.published) === !0,
-        k = null == U ? void 0 : U.sku_id,
-        F = (0, u.e7)([I.Z], () => (null != D ? I.Z.get(D) : null)),
-        { activeSubscription: H, activeSubscriptionPlanFromStore: w } = (0, v.Z)(n),
+        F = null == U ? void 0 : U.sku_id,
+        k = (0, c.e7)([S.Z], () => (null != D ? S.Z.get(D) : null)),
+        { activeSubscription: H, activeSubscriptionPlanFromStore: w } = (0, x.Z)(n),
         G = null == H || null != w,
-        z = (0, R._k)(n, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
-        Q = (0, N.V)(H),
-        V = null != Q,
-        q = (null == H ? void 0 : H.trialId) != null,
-        { loading: W, getTrialPurchaseEligibility: K } = (0, x.F)(),
-        Y = (0, R.oC)(null == e ? void 0 : e.id),
-        { analyticsLocations: J } = (0, _.ZP)(),
-        X = (null == H ? void 0 : H.paymentGateway) === O.gg$.APPLE_PARTNER;
-    j ? (a = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : P && !M ? (a = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Q === D ? (a = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != H ? o()(H.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : V ? (a = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : q ? (a = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : X && (a = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
-    let $ = (0, h.Z)(b.iP);
+        z = (0, T._k)(n, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
+        W = (0, N.V)(H),
+        V = null != W,
+        K = (null == H ? void 0 : H.trialId) != null,
+        { loading: Y, getTrialPurchaseEligibility: Q } = (0, v.F)(),
+        q = (0, T.oC)(null == e ? void 0 : e.id),
+        { analyticsLocations: X } = (0, _.ZP)(),
+        J = (null == H ? void 0 : H.paymentGateway) === A.gg$.APPLE_PARTNER;
+    j ? (a = P.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Z && !y ? (a = P.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : W === D ? (a = P.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != H ? o()(H.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : V ? (a = P.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : K ? (a = P.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : J && (a = P.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
+    let $ = (0, h.Z)(L.iP);
     i.useEffect(() => {
         B &&
-            null != k &&
-            c.Z.wait(() => {
-                (0, d.GZ)(k);
+            null != F &&
+            u.Z.wait(() => {
+                (0, d.GZ)(F);
             });
-    }, [B, k]);
+    }, [B, F]);
     let ee = i.useCallback(async () => {
             let n, i;
-            if ((s()(null != e, 'No subscription listing'), s()(null != U, 'No subscription plan'), s()(B, 'Cannot purchase this unpublished plan'), (null == Y ? void 0 : Y.active_trial) != null)) {
-                let r = await K(t, e.id, Y.active_trial.id);
+            if ((s()(null != e, 'No subscription listing'), s()(null != U, 'No subscription plan'), s()(B, 'Cannot purchase this unpublished plan'), (null == q ? void 0 : q.active_trial) != null)) {
+                let r = await Q(t, e.id, q.active_trial.id);
                 if ((null == r ? void 0 : r.is_eligible) === !0) {
                     var a;
-                    n = null == Y ? void 0 : null === (a = Y.active_trial) || void 0 === a ? void 0 : a.id;
-                } else i = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER;
+                    n = null == q ? void 0 : null === (a = q.active_trial) || void 0 === a ? void 0 : a.id;
+                } else i = P.Z.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER;
             }
-            (0, S.Z)({
+            (0, C.Z)({
                 activeSubscription: H,
-                analyticsSubscriptionType: O.NYc.GUILD,
+                analyticsSubscriptionType: A.NYc.GUILD,
                 trialId: n,
                 trialFooterMessageOverride:
-                    (null == Y ? void 0 : Y.active_trial) != null
-                        ? Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER_V2.format({
-                              buttonText: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SUBSCRIBE,
-                              interval: (0, T.iG)(U),
+                    (null == q ? void 0 : q.active_trial) != null
+                        ? P.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER_V2.format({
+                              buttonText: P.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SUBSCRIBE,
+                              interval: (0, R.iG)(U),
                               days: 1,
-                              contactLink: O.EYA.CONTACT,
-                              cancelSubscriptionArticle: g.Z.getArticleURL(O.BhN.ROLE_SUBSCRIPTION_CANCEL),
-                              helpdeskArticle: g.Z.getArticleURL(O.BhN.ROLE_SUBSCRIPTION_TRIAL),
-                              paidServiceTermsArticle: g.Z.getArticleURL(O.BhN.PAID_TERMS),
+                              contactLink: A.EYA.CONTACT,
+                              cancelSubscriptionArticle: g.Z.getArticleURL(A.BhN.ROLE_SUBSCRIPTION_CANCEL),
+                              helpdeskArticle: g.Z.getArticleURL(A.BhN.ROLE_SUBSCRIPTION_TRIAL),
+                              paidServiceTermsArticle: g.Z.getArticleURL(A.BhN.PAID_TERMS),
                               tierName: U.name
                           })
                         : void 0,
-                analyticsLocations: J,
+                analyticsLocations: X,
                 analyticsLocation: l,
                 renderHeader: (n, i, l) =>
-                    (0, r.jsx)(L.h, {
+                    (0, r.jsx)(b.h, {
                         onClose: i,
                         listing: e,
                         step: l,
@@ -97,26 +97,26 @@ t.Z = (e, t, n, l) => {
                 planGroup: z,
                 renderPurchaseConfirmation: (n, i) =>
                     $
-                        ? (0, r.jsx)(A.m, {
+                        ? (0, r.jsx)(O.m, {
                               listing: e,
                               onClose: i,
                               guildId: t
                           })
-                        : (0, r.jsx)(L.x, {
+                        : (0, r.jsx)(b.x, {
                               listing: e,
                               onClose: i,
                               guildId: t
                           }),
                 reviewWarningMessage: i
             });
-        }, [B, e, U, H, z, t, J, l, K, Y, $]),
+        }, [B, e, U, H, z, t, X, l, Q, q, $]),
         et = i.useCallback(() => {
             (0, f.hk)(t);
         }, [t]);
     return {
-        openModal: M ? et : ee,
-        canOpenModal: !P && null != F && G && !j && !V && !q && !X,
+        openModal: y ? et : ee,
+        canOpenModal: !Z && null != k && G && !j && !V && !K && !J,
         cannotOpenReason: a,
-        isCheckingTrialEligibility: W
+        isCheckingTrialEligibility: Y
     };
 };

@@ -90,7 +90,7 @@ n.d(t, {
         return en;
     },
     bt: function () {
-        return eL;
+        return eb;
     },
     dn: function () {
         return eZ;
@@ -135,7 +135,7 @@ n.d(t, {
         return eI;
     },
     v6: function () {
-        return eb;
+        return eL;
     },
     v9: function () {
         return eJ;
@@ -177,8 +177,8 @@ var h = n(782568),
     R = n(122289),
     C = n(55935),
     y = n(424218),
-    b = n(358085),
-    L = n(380684),
+    L = n(358085),
+    b = n(380684),
     D = n(111361),
     M = n(937615),
     P = n(981631),
@@ -502,7 +502,7 @@ function eo(e) {
         O = d.status === P.O0b.UNPAID && null !== d.latestInvoice && (null === (n = d.latestInvoice) || void 0 === n ? void 0 : n.status) === P.hUK.OPEN,
         R = v ? P.O0b.CANCELED : O ? P.O0b.UNPAID : d.status,
         y = null === (a = null !== (i = null == T ? void 0 : T.taxInclusive) && void 0 !== i ? i : null === (r = d.latestInvoice) || void 0 === r ? void 0 : r.taxInclusive) || void 0 === a || a,
-        b = w.cb + (p ? eh(d.additionalPlans) : 0);
+        L = w.cb + (p ? eh(d.additionalPlans) : 0);
     switch (_) {
         case w.Xh.PREMIUM_MONTH_TIER_0:
         case w.Xh.PREMIUM_YEAR_TIER_0:
@@ -514,11 +514,11 @@ function eo(e) {
                 case P.O0b.UNPAID:
                     return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAYMENT.format();
                 case P.O0b.PAUSE_PENDING:
-                    let L = null != d.pauseEndsAt ? E()(d.pauseEndsAt).diff(d.currentPeriodEnd, 'days') : null;
-                    return null != L
+                    let b = null != d.pauseEndsAt ? E()(d.pauseEndsAt).diff(d.currentPeriodEnd, 'days') : null;
+                    return null != b
                         ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING.format({
                               pauseDate: d.currentPeriodEnd,
-                              pauseDuration: L
+                              pauseDuration: b
                           })
                         : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING_NO_DURATION.format({ pauseDate: d.currentPeriodEnd });
                 case P.O0b.PAUSED:
@@ -572,27 +572,27 @@ function eo(e) {
                         ? y
                             ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format({
                                   price: f,
-                                  num: b
+                                  num: L
                               })
                             : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_TAX_EXCLUSIVE.format({
                                   price: f,
-                                  num: b
+                                  num: L
                               })
-                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE.format({ num: b });
+                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE.format({ num: L });
                 case P.O0b.ACCOUNT_HOLD:
                     return N
                         ? y
                             ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format({
                                   price: f,
-                                  num: b
+                                  num: L
                               })
                             : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({
                                   price: f,
-                                  num: b
+                                  num: L
                               })
-                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE.format({ num: b });
+                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE.format({ num: L });
                 case P.O0b.UNPAID:
-                    return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAYMENT.format({ num: b });
+                    return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAYMENT.format({ num: L });
                 case P.O0b.PAUSE_PENDING:
                     let M = null != d.pauseEndsAt ? E()(d.pauseEndsAt).diff(d.currentPeriodEnd, 'days') : null;
                     return null != M
@@ -634,13 +634,13 @@ function eo(e) {
                           ? y
                               ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
                                     price: f,
-                                    num: b
+                                    num: L
                                 })
                               : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_TAX_EXCLUSIVE.format({
                                     price: f,
-                                    num: b
+                                    num: L
                                 })
-                          : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_NO_PRICE.format({ num: b });
+                          : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_NO_PRICE.format({ num: L });
             }
         default:
             throw Error('Invalid planId '.concat(_));
@@ -871,7 +871,7 @@ function ev(e, t) {
             price: r
         });
     else if (e.status === P.O0b.ACCOUNT_HOLD)
-        return e.isPurchasedViaGoogle && !(0, b.isAndroid)()
+        return e.isPurchasedViaGoogle && !(0, L.isAndroid)()
             ? G.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
                   endDate: E()(e.currentPeriodStart).add(w.gh, 'days'),
                   paymentGatewayName: x.Vz[e.paymentGateway],
@@ -923,10 +923,10 @@ function ey(e) {
         i = eh(n);
     return 0 === (null != t ? eh(t.additionalPlans) : null) && 0 !== i ? P.O0b.CANCELED : r;
 }
-function eb(e) {
+function eL(e) {
     return e.isPurchasedExternally ? e.status === P.O0b.CANCELED : ey(e) === P.O0b.CANCELED;
 }
-function eL(e) {
+function eb(e) {
     var t, n, r;
     let { subscription: i, user: a, price: o, renewalInvoicePreview: s } = e,
         { planId: l, additionalPlans: u } = i,
@@ -940,7 +940,7 @@ function eL(e) {
     }
     o = null != o ? o : (0, M.T4)(E, i.currency);
     let f = null === (r = null !== (n = null == s ? void 0 : s.taxInclusive) && void 0 !== n ? n : null === (t = i.latestInvoice) || void 0 === t ? void 0 : t.taxInclusive) || void 0 === r || r;
-    if (eb(i))
+    if (eL(i))
         return i.isPurchasedViaGoogle
             ? G.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_PENDING_CANCELATION_NO_PRICE.format({ quantity: _ })
             : f
@@ -1410,7 +1410,7 @@ t.ZP = Object.freeze({
     isPremiumSku: eu,
     getClosestUpgrade: ef,
     getIntervalMonths: er,
-    getUserMaxFileSize: L.h6,
+    getUserMaxFileSize: b.h6,
     getSkuIdForPlan: ed,
     getSkuIdForPremiumType: e_,
     getNumIncludedPremiumGuildSubscriptionSlots: eS,

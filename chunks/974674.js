@@ -203,7 +203,7 @@ function y(e, t, n) {
         y: e.size - i.height - e.offset
     };
 }
-function b(e, t, n) {
+function L(e, t, n) {
     let { size: r, status: i, stroke: a, offset: o } = e,
         s = n ? i * m.D6 : i,
         l = (s - i) / 2,
@@ -216,7 +216,7 @@ function b(e, t, n) {
         avatarCutoutRadius: t ? (u + 2 * a) * m.ZC : (i + 2 * a) / 2
     };
 }
-function L(e, t, n, r) {
+function b(e, t, n, r) {
     let i = y(n, r, t, !1),
         o = (0, _.lm)(r, e);
     if (!t) {
@@ -249,7 +249,7 @@ function D(e) {
         a = n && !r && t === I.Skl.ONLINE,
         o = (0, m.UC)(i);
     return {
-        ...b(o, a, r),
+        ...L(o, a, r),
         ...(0, _.Dk)({
             status: t,
             size: o.status,
@@ -267,22 +267,22 @@ function M(e) {
             height: (0, m.px)(n)
         },
         y = null == f || h ? void 0 : O(f, p, I),
-        b = N.size * T.hs,
-        L = R(p, n, I, g),
+        L = N.size * T.hs,
+        b = R(p, n, I, g),
         D =
             null != A &&
             (0, a.jsx)('svg', {
-                width: b + v,
-                height: b,
-                viewBox: '0 0 '.concat(b + v, ' ').concat(b),
+                width: L + v,
+                height: L,
+                viewBox: '0 0 '.concat(L + v, ' ').concat(L),
                 className: S.avatarDecoration,
                 'aria-hidden': !0,
                 children: (0, a.jsx)('foreignObject', {
                     x: 0,
                     y: 0,
-                    width: b,
-                    height: b,
-                    mask: null != L ? 'url(#'.concat(L, ')') : void 0,
+                    width: L,
+                    height: L,
+                    mask: null != b ? 'url(#'.concat(b, ')') : void 0,
                     children: (0, a.jsx)('div', {
                         className: S.avatarStack,
                         children: (0, a.jsx)('img', {
@@ -345,7 +345,7 @@ function U(e) {
         N = n !== I.Skl.UNKNOWN ? n : null,
         O = (0, m.UC)(r),
         R = null != N ? Math.ceil((O.status * m.D6 - O.status) / 2) : 0,
-        b = O.size + R,
+        L = O.size + R,
         D = (0, _.vj)(N, i);
     return (0, a.jsx)(M, {
         ...e,
@@ -355,9 +355,9 @@ function U(e) {
         specs: O,
         typingOffset: R,
         children: (0, a.jsxs)('svg', {
-            width: b,
-            height: b,
-            viewBox: '0 0 '.concat(b, ' ').concat(b),
+            width: L,
+            height: L,
+            viewBox: '0 0 '.concat(L, ' ').concat(L),
             className: l()(S.mask, S.svg),
             'aria-hidden': !0,
             children: [
@@ -373,7 +373,7 @@ function U(e) {
                         className: v
                     })
                 }),
-                null != N && null != T ? L(T, o, O, N) : null,
+                null != N && null != T ? b(T, o, O, N) : null,
                 null != N
                     ? (0, a.jsx)(E.u, {
                           text: f ? (0, p.u5)(N) : null,
@@ -412,7 +412,7 @@ function w(e, t, n) {
     return 5 - (n && !r ? 0 : 0.5 * e) + 1.5 * t;
 }
 function x(e) {
-    let { fromIsMobile: t = !0, fromStatus: n, fromColor: r, isMobile: i = !1, isTyping: s = !1, typingIndicatorRef: c, isSpeaking: h = !1, size: I, src: T, status: g, statusColor: O, statusTooltip: R = !1, statusTooltipDelay: C, statusBackdropColor: y, 'aria-hidden': b = !1, 'aria-label': U, imageClassName: x } = e,
+    let { fromIsMobile: t = !0, fromStatus: n, fromColor: r, isMobile: i = !1, isTyping: s = !1, typingIndicatorRef: c, isSpeaking: h = !1, size: I, src: T, status: g, statusColor: O, statusTooltip: R = !1, statusTooltipDelay: C, statusBackdropColor: y, 'aria-hidden': L = !1, 'aria-label': U, imageClassName: x } = e,
         G = (0, _.vj)(g, O),
         k = o.useId(),
         B = o.useId(),
@@ -464,7 +464,7 @@ function x(e) {
     return (0, a.jsx)(M, {
         ...e,
         ariaLabel: U,
-        ariaHidden: b,
+        ariaHidden: L,
         typingOffset: J,
         specs: Q,
         children: (0, a.jsxs)('svg', {
@@ -509,7 +509,7 @@ function x(e) {
                         className: x
                     })
                 }),
-                null != y && L(y, i, Q, g),
+                null != y && b(y, i, Q, g),
                 (0, a.jsx)(E.u, {
                     text: R ? (0, p.u5)(g) : null,
                     'aria-label': !1,

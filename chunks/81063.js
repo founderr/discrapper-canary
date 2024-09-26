@@ -4,13 +4,13 @@ n.r(t),
             return w;
         },
         getAssetFromImageURL: function () {
-            return b;
+            return L;
         },
         getAssetIds: function () {
             return x;
         },
         getAssetImage: function () {
-            return L;
+            return b;
         },
         getAssets: function () {
             return D;
@@ -83,11 +83,11 @@ function y(e) {
     let t = E.Z.getApplicationAssets(e);
     return null == t || R(t.lastUpdated) ? C(e) : Promise.resolve(t);
 }
-function b(e, t) {
+function L(e, t) {
     let n = N[e].serialize(t);
     return n ? ''.concat(e, ':').concat(n.toString()) : null;
 }
-function L(e, t, n) {
+function b(e, t, n) {
     if (null != t && t.includes(':')) {
         let [e, r] = t.split(':');
         if (e === p.ABu.TWITCH) {
@@ -131,7 +131,7 @@ function P(e, t) {
             let i = e[r];
             if (null == i) continue;
             let a = Object.prototype.hasOwnProperty.call(O, i) ? O[i] : void 0;
-            null != a && ((t[r] = b(m, a)), n++);
+            null != a && ((t[r] = L(m, a)), n++);
         }
     return n === e.length;
 }

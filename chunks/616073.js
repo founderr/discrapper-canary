@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     },
     L0: function () {
-        return b;
+        return L;
     },
     Ux: function () {
         return R;
@@ -126,7 +126,7 @@ function y(e) {
     let r = new Intl.Collator(t, e);
     return C.set(n, r), r;
 }
-function b(e) {
+function L(e) {
     let t = y({
             usage: 'search',
             ...e

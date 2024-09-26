@@ -25,19 +25,19 @@ var n,
     I = t(410030),
     N = t(100527),
     A = t(906732),
-    m = t(211242),
-    C = t(600164),
+    C = t(211242),
+    m = t(600164),
     g = t(509545),
     h = t(626135),
     O = t(122289),
     p = t(63063),
     R = t(74538),
     x = t(937615),
-    f = t(374649),
-    M = t(140465),
+    M = t(374649),
+    f = t(140465),
     D = t(314684),
-    P = t(653798),
-    L = t(625881),
+    L = t(653798),
+    P = t(625881),
     b = t(440984),
     Z = t(398775),
     v = t(973159),
@@ -68,7 +68,7 @@ async function k(e) {
 function H(e) {
     var s;
     let { premiumSubscription: t, premiumType: n, setStep: a, onClose: o, whatYouLoseExperienceEnabled: l, analyticsLocation: c } = e,
-        d = (0, m.Q)(),
+        d = (0, C.Q)(),
         [_, u] = r.useState(!1),
         [S, N] = r.useState(!1),
         g = (0, I.ZP)(),
@@ -119,7 +119,7 @@ function H(e) {
                       let { planId: s } = e;
                       return !y.dJ.has(s);
                   })) != null,
-        f = x
+        M = x
             ? (0, i.jsx)(T.Button, {
                   onClick: () => a(3),
                   children: Y.Z.Messages.NEXT
@@ -139,7 +139,7 @@ function H(e) {
                   },
                   children: l ? Y.Z.Messages.CONFIRM : Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({ planPremiumType: R.ZP.getDisplayPremiumType(t.planId) })
               }),
-        M = (0, i.jsx)(T.Button, {
+        f = (0, i.jsx)(T.Button, {
             look: T.Button.Looks.LINK,
             color: (0, E.ap)(g) ? T.Button.Colors.PRIMARY : T.Button.Colors.WHITE,
             onClick: o,
@@ -177,8 +177,8 @@ function H(e) {
                 ]
             }),
             (0, i.jsxs)(T.ModalFooter, {
-                justify: C.Z.Justify.START,
-                children: [f, M]
+                justify: m.Z.Justify.START,
+                children: [M, f]
             })
         ]
     });
@@ -187,7 +187,7 @@ function W(e) {
     var s, t;
     let { premiumSubscription: n } = e,
         { analyticsLocations: a } = (0, A.ZP)(),
-        [r] = (0, f.ED)({
+        [r] = (0, M.ED)({
             subscriptionId: n.id,
             items: (0, R.Ue)(null !== (t = null === (s = n.renewalMutations) || void 0 === s ? void 0 : s.items) && void 0 !== t ? t : n.items),
             renewal: !0,
@@ -210,15 +210,15 @@ function W(e) {
                           })
                         : Y.Z.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE.format({ renewalDate: r.subscriptionPeriodStart })
             }),
-            (0, i.jsxs)(P.PO, {
+            (0, i.jsxs)(L.PO, {
                 children: [
-                    (0, i.jsx)(P.q9, { children: Y.Z.Messages.PREMIUM_SUBSCRIPTION_UPDATES }),
-                    (0, i.jsx)(P.R$, {
+                    (0, i.jsx)(L.q9, { children: Y.Z.Messages.PREMIUM_SUBSCRIPTION_UPDATES }),
+                    (0, i.jsx)(L.R$, {
                         label: Y.Z.Messages.PREMIUM_SUBSCRIPTION_CANCELLED.format({ planName: R.ZP.getDisplayName(o.id) }),
                         value: (0, R.PK)(o),
                         className: w.invoiceCancelRow
                     }),
-                    (0, i.jsx)(P.KU, {}),
+                    (0, i.jsx)(L.KU, {}),
                     (0, i.jsx)(B.nd, {
                         premiumSubscription: n,
                         renewalInvoice: r,
@@ -253,8 +253,8 @@ function K(e) {
                 ]
             }),
             (0, i.jsxs)(T.ModalFooter, {
-                align: C.Z.Align.CENTER,
-                justify: C.Z.Justify.BETWEEN,
+                align: m.Z.Align.CENTER,
+                justify: m.Z.Justify.BETWEEN,
                 children: [
                     (0, i.jsx)(T.Button, {
                         color: T.Button.Colors.RED,
@@ -301,17 +301,17 @@ function X(e) {
     let t,
         { premiumSubscription: n, transitionState: a, onClose: o, analyticsLocations: l, analyticsLocation: d, initialStep: u } = e,
         S = r.useRef(new c.qA()),
-        [m, C] = r.useState(null),
+        [C, m] = r.useState(null),
         g = (0, D.yQ)(),
         p = (null == g ? void 0 : g.showCard) === !0,
         x = null === (s = (0, R.Af)(n)) || void 0 === s ? void 0 : s.planId,
-        f = null != x ? R.ZP.getPremiumType(x) : null;
-    _()(null != f, 'Should not be cancelling Nitro without premiumType');
-    let P = (0, I.ZP)();
+        M = null != x ? R.ZP.getPremiumType(x) : null;
+    _()(null != M, 'Should not be cancelling Nitro without premiumType');
+    let L = (0, I.ZP)();
     r.useEffect(() => {
         h.default.track(V.rMx.CANCELLATION_FLOW_STARTED, z(n));
     }, [n]);
-    let j = f === y.p9.TIER_0 || f === y.p9.TIER_1 || f === y.p9.TIER_2;
+    let j = M === y.p9.TIER_0 || M === y.p9.TIER_1 || M === y.p9.TIER_2;
     null == u && (u = j ? 1 : 2);
     let { analyticsLocations: B } = (0, A.ZP)(l, N.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
         [U, k, W, X] = (function (e, s, t) {
@@ -348,13 +348,13 @@ function X(e) {
                     ...z(n)
                 });
         },
-        ee = (0, M.UV)(),
-        { churnUserDiscountOffer: es, isFetchingChurnDiscountOffer: et } = (0, M.WR)(!ee || 1 !== U);
+        ee = (0, f.UV)(),
+        { churnUserDiscountOffer: es, isFetchingChurnDiscountOffer: et } = (0, f.WR)(!ee || 1 !== U);
     switch (U) {
         case 6:
             t = (0, i.jsx)(Z.of, {
                 premiumSubscription: n,
-                premiumType: f,
+                premiumType: M,
                 setStep: k,
                 onClose: () => $(U),
                 pauseDuration: q,
@@ -371,7 +371,7 @@ function X(e) {
                         }),
                         (0, i.jsx)(T.Button, {
                             look: T.Button.Looks.LINK,
-                            color: (0, E.wj)(P) ? T.Button.Colors.WHITE : T.Button.Colors.PRIMARY,
+                            color: (0, E.wj)(L) ? T.Button.Colors.WHITE : T.Button.Colors.PRIMARY,
                             onClick: o,
                             children: Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
                         })
@@ -395,7 +395,7 @@ function X(e) {
             }
             t = (0, i.jsx)(Z.Sz, {
                 premiumSubscription: n,
-                premiumType: f,
+                premiumType: M,
                 setStep: k,
                 onClose: () => $(U),
                 analyticsLocation: d,
@@ -404,7 +404,7 @@ function X(e) {
             break;
         case 1:
             t = (0, i.jsx)(v.Z, {
-                premiumType: f,
+                premiumType: M,
                 titleText: Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
                 subtitleText: p ? Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD_V2 : Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
                 subtitleClassName: p ? w.subtitleSection : void 0,
@@ -430,7 +430,7 @@ function X(e) {
                         }),
                         (0, i.jsx)(T.Button, {
                             look: T.Button.Looks.LINK,
-                            color: (0, E.wj)(P) ? T.Button.Colors.WHITE : T.Button.Colors.PRIMARY,
+                            color: (0, E.wj)(L) ? T.Button.Colors.WHITE : T.Button.Colors.PRIMARY,
                             onClick: () => $(U),
                             children: Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
                         })
@@ -447,7 +447,7 @@ function X(e) {
         case 2:
             t = (0, i.jsx)(H, {
                 premiumSubscription: n,
-                premiumType: f,
+                premiumType: M,
                 setStep: k,
                 onClose: () => $(U),
                 whatYouLoseExperienceEnabled: j,
@@ -457,16 +457,16 @@ function X(e) {
         case 3:
             t = (0, i.jsx)(K, {
                 premiumSubscription: n,
-                premiumType: f,
+                premiumType: M,
                 onBack: () => k(2),
                 onClose: () => $(U),
                 analyticsLocation: d
             });
             break;
         case 4:
-            t = (0, i.jsx)(L.Z, {
+            t = (0, i.jsx)(P.Z, {
                 premiumSubscription: n,
-                premiumType: f,
+                premiumType: M,
                 onClose: () => $(U),
                 onConfirm: () => k(5),
                 userDiscountOffer: es
@@ -475,9 +475,9 @@ function X(e) {
         case 5:
             t = (0, i.jsx)(b.D, {
                 premiumSubscription: n,
-                premiumType: f,
+                premiumType: M,
                 onClose: () => $(U),
-                confettiCanvas: m,
+                confettiCanvas: C,
                 userDiscountOffer: es
             });
             break;
@@ -488,7 +488,7 @@ function X(e) {
         value: B,
         children: [
             (0, i.jsx)(c.O_, {
-                ref: C,
+                ref: m,
                 className: w.confettiCanvas,
                 environment: S.current
             }),

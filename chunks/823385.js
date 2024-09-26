@@ -24,8 +24,8 @@ var u = n(392711),
     R = n(306680),
     C = n(944486),
     y = n(914010),
-    b = n(9156),
-    L = n(483360),
+    L = n(9156),
+    b = n(483360),
     D = n(823379),
     M = n(981631),
     P = n(689938);
@@ -81,32 +81,32 @@ function X() {
     switch (V) {
         case f.h8.USER: {
             let e = T.default.getId();
-            return L.ZP.getRecentlyTalked(r, 100).filter((t) => {
+            return b.ZP.getRecentlyTalked(r, 100).filter((t) => {
                 let { record: n } = t;
                 return n.id !== e;
             });
         }
         case f.h8.APPLICATION:
-            return L.ZP.queryApplications({
+            return b.ZP.queryApplications({
                 query: '',
                 limit: 100,
                 fuzzy: !0
             });
         case f.h8.GUILD:
-            return L.ZP.queryGuilds({
+            return b.ZP.queryGuilds({
                 query: '',
                 limit: 100,
                 fuzzy: !0
             });
         case f.h8.TEXT_CHANNEL:
-            return L.ZP.queryChannels({
+            return b.ZP.queryChannels({
                 query: '',
                 guildId: y.Z.getGuildId(),
                 limit: 100,
                 fuzzy: !0
             });
         case f.h8.VOICE_CHANNEL:
-            return L.ZP.queryChannels({
+            return b.ZP.queryChannels({
                 query: '',
                 guildId: y.Z.getGuildId(),
                 limit: 100,
@@ -133,7 +133,7 @@ function X() {
         let e = A.ZP.getSelectableChannelIds(n)
             .filter((e) => {
                 let t = g.Z.getChannel(e);
-                return !(null == t || e === r || K.includes(e) || b.ZP.isChannelMuted(t.guild_id, e) || (null != t.parent_id && b.ZP.isChannelMuted(t.guild_id, t.parent_id))) && (0, p.d)(t);
+                return !(null == t || e === r || K.includes(e) || L.ZP.isChannelMuted(t.guild_id, e) || (null != t.parent_id && L.ZP.isChannelMuted(t.guild_id, t.parent_id))) && (0, p.d)(t);
             })
             .map((e) => Q(e))
             .filter((e) => e);

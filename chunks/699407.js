@@ -126,7 +126,7 @@ let p = 1500,
                     !1
                 );
             });
-        class b extends (t = _.ZP.Store) {
+        class L extends (t = _.ZP.Store) {
             initialize() {
                 null != f && this.waitFor(...f);
             }
@@ -134,5 +134,5 @@ let p = 1500,
                 super(...e), h(this, 'submitEventsImmediately', y);
             }
         }
-        return h(b, 'displayName', 'AnalyticsTrackingStore'), new b(n, o);
+        return h(L, 'displayName', 'AnalyticsTrackingStore'), new L(n, o);
     };

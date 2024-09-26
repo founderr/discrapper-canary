@@ -49,8 +49,8 @@ class N extends o.PureComponent {
     }
     render() {
         let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: r, isGuest: i, isPendingMember: o, isForumToolbar: s, channel: g, className: S, forceAddReactions: A, reactionClassName: v, useChatFontScaling: N, forceHideReactionCreates: O, remainingReactions: R, combinedReactions: C, visibleReactionsCount: y } = this.props,
-            { disableTransitionAppear: b } = this.state,
-            L = N ? T : I,
+            { disableTransitionAppear: L } = this.state,
+            b = N ? T : I,
             D = y > 0;
         if (!D && !A) return null;
         let { enabled: M } = d.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
@@ -58,8 +58,8 @@ class N extends o.PureComponent {
             U = (A && !D) || P;
         return (0, a.jsxs)(u.W, {
             component: 'div',
-            className: l()(L.reactions, S),
-            transitionAppear: !b,
+            className: l()(b.reactions, S),
+            transitionAppear: !L,
             role: 'group',
             transitionLeave: !1,
             id: (0, f.bY)(e),
@@ -82,10 +82,10 @@ class N extends o.PureComponent {
                         onClick: (t) => {
                             t.stopPropagation(), (0, p.op)(g, e);
                         },
-                        className: l()(L.reaction, v, L.remainingReactions),
+                        className: l()(b.reaction, v, b.remainingReactions),
                         'aria-label': m.Z.Messages.ADD_REACTION,
                         children: (0, a.jsxs)(c.Text, {
-                            className: L.reactionInner,
+                            className: b.reactionInner,
                             variant: 'text-sm/normal',
                             children: ['+', R]
                         })
@@ -100,8 +100,8 @@ class N extends o.PureComponent {
                         useChatFontScaling: N,
                         isHovered: this.state.isHovered,
                         className: l()({
-                            [L.forceShow]: U,
-                            [L.forceShowLook]: A || P
+                            [b.forceShow]: U,
+                            [b.forceShowLook]: A || P
                         })
                     })
             ]

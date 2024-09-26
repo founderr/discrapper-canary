@@ -30,14 +30,14 @@ function R(e) {
     let { user: t, children: n, onClose: r } = e,
         { analyticsLocations: R } = (0, d.ZP)(c.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
         { context: C } = (0, h.KZ)(),
-        { profileType: y, primaryColor: b } = (0, p.z)(),
-        L =
+        { profileType: y, primaryColor: L } = (0, p.z)(),
+        b =
             (0, o.e7)([f.default], () => {
                 var e;
                 return (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
             }) && y === I.y0.BITE_SIZE,
         [D, M] = a.useState(!1);
-    (0, u.Z)(() => M(!0), L ? v : null);
+    (0, u.Z)(() => M(!0), b ? v : null);
     let P = D ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
         [U, w] = (0, _.US)(P),
         x = () => {
@@ -51,7 +51,7 @@ function R(e) {
         };
     return (0, i.jsx)(l.Popout, {
         shouldShow: null != U,
-        spacing: null != b ? O : N,
+        spacing: null != L ? O : N,
         renderPopout: (e) => {
             let { position: t, closePopout: n, setPopoutRef: r } = e;
             return (0, i.jsx)(l.Dialog, {

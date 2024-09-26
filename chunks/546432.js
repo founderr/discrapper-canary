@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(981631),
     C = n(689938),
     y = n(526675),
-    b = n(275703);
-let L = 200,
+    L = n(275703);
+let b = 200,
     D = 50;
 function M(e) {
     return 'IMAGE' === e || 'VIDEO' === e;
@@ -60,7 +60,7 @@ let U = (e) => {
                     ...e,
                     target: '_blank',
                     rel: 'noreferrer noopener',
-                    className: b.hoverButton,
+                    className: L.hoverButton,
                     iconClassName: y.downloadHoverButtonIcon,
                     focusProps: { offset: 2 },
                     href: l,
@@ -73,7 +73,7 @@ let U = (e) => {
                 children: (e) =>
                     (0, i.jsx)(u.Clickable, {
                         ...e,
-                        className: s()(b.hoverButton, y.removeMosaicItemHoverButton),
+                        className: s()(L.hoverButton, y.removeMosaicItemHoverButton),
                         focusProps: { offset: 2 },
                         onClick: c,
                         'aria-label': C.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
@@ -92,22 +92,22 @@ let U = (e) => {
             toggleShowMenu: T,
             showMenu: m,
             channelId: p,
-            className: s()(b.hoverButton, { [b.selected]: m }),
+            className: s()(L.hoverButton, { [L.selected]: m }),
             imageUrl: l,
             mimeType: o
         })),
     null == n && null == t && null == r)
         ? null
         : (0, i.jsxs)('div', {
-              className: s()(b.hoverButtonGroup, {
-                  [b.nonMediaMosaicItem]: !h,
-                  [b.forceShowHover]: m
+              className: s()(L.hoverButtonGroup, {
+                  [L.nonMediaMosaicItem]: !h,
+                  [L.forceShowHover]: m
               }),
               children: [r, t, n]
           });
 };
 function w(e) {
-    let { message: t, item: n, autoPlayGif: r, canRemoveItem: o, onRemoveItem: _, onClick: E, onContextMenu: f, onPlay: h, renderImageComponent: p, renderVideoComponent: v, renderAudioComponent: N, renderPlaintextFilePreview: b, renderGenericFileComponent: L, className: D, imgContainerClassName: M, imgClassName: P, focusable: w, hiddenSpoilers: x, mediaLayoutType: G, maxWidth: k, maxHeight: B, hasFooter: F, useFullWidth: Z, isVisualMediaType: V, onVideoControlsShow: H, onVideoControlsHide: Y, isSearchResult: j } = e,
+    let { message: t, item: n, autoPlayGif: r, canRemoveItem: o, onRemoveItem: _, onClick: E, onContextMenu: f, onPlay: h, renderImageComponent: p, renderVideoComponent: v, renderAudioComponent: N, renderPlaintextFilePreview: L, renderGenericFileComponent: b, className: D, imgContainerClassName: M, imgClassName: P, focusable: w, hiddenSpoilers: x, mediaLayoutType: G, maxWidth: k, maxHeight: B, hasFooter: F, useFullWidth: Z, isVisualMediaType: V, onVideoControlsShow: H, onVideoControlsHide: Y, isSearchResult: j } = e,
         { width: W, height: K, spoiler: z, type: q, contentType: Q } = n,
         [X, $] = a.useState(!1),
         [J, ee] = a.useState(!1),
@@ -250,7 +250,7 @@ function w(e) {
                 onPlay: h
             });
         case 'PLAINTEXT_PREVIEW':
-            return (0, i.jsx)(b, {
+            return (0, i.jsx)(L, {
                 item: n,
                 message: t,
                 className: D,
@@ -259,7 +259,7 @@ function w(e) {
                 renderAdjacentContent: ec
             });
         case 'OTHER':
-            return (0, i.jsx)(L, {
+            return (0, i.jsx)(b, {
                 item: n,
                 message: t,
                 className: D,
@@ -296,9 +296,9 @@ function G(e) {
         T = o(n, (0, p.V)(r.channel_id, r.author.id)),
         [g, S] = a.useState(null != T),
         A = u === O.hV.MOSAIC,
-        R = !A && ((null != f && f < L) || (null != m && m < D)),
+        R = !A && ((null != f && f < b) || (null != m && m < D)),
         C = M(I),
-        b = (0, N.R_)(I),
+        L = (0, N.R_)(I),
         P = c && null != T && (0, h.bR)(f, m),
         [U, G] = a.useState(!1),
         k = () => {
@@ -326,7 +326,7 @@ function G(e) {
                 mediaLayoutType: u,
                 hasFooter: null != d,
                 useFullWidth: !!P || l,
-                isVisualMediaType: b,
+                isVisualMediaType: L,
                 onVideoControlsShow: k,
                 onVideoControlsHide: B
             });
@@ -337,7 +337,7 @@ function G(e) {
                 [y.mosaicItemNoJustify]: C,
                 [y.mosaicItemFullWidth]: l,
                 [y.mosaicItemMediaMosaic]: A,
-                [y.hideOverflow]: A && b,
+                [y.hideOverflow]: A && L,
                 [y.mosaicItemWithFooter]: null != d
             }),
             children: [

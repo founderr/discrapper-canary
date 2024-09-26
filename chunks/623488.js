@@ -77,15 +77,15 @@ function f(e) {
           });
 }
 function h(e) {
-    let { imageUrl: t, name: n, description: i, formattedPrice: u, role: h, ctaComponent: p, shouldShowFullDescriptionButton: m = !0, onShowFullDescription: I, productType: T, onTapCard: g, actionMenu: S, showOpaqueBackground: A = !1, hideRoleTag: v = !1, lineClamp: N = 1, cardWidth: O = 332, cardHeight: R, thumbnailHeight: C = 187, descriptionTextVariant: y = 'text-sm/normal', isDraft: b = !1 } = e,
-        L = (0, s.hQ)(),
+    let { imageUrl: t, name: n, description: i, formattedPrice: u, role: h, ctaComponent: p, shouldShowFullDescriptionButton: m = !0, onShowFullDescription: I, productType: T, onTapCard: g, actionMenu: S, showOpaqueBackground: A = !1, hideRoleTag: v = !1, lineClamp: N = 1, cardWidth: O = 332, cardHeight: R, thumbnailHeight: C = 187, descriptionTextVariant: y = 'text-sm/normal', isDraft: L = !1 } = e,
+        b = (0, s.hQ)(),
         D = (e) => {
             e.stopPropagation();
         },
         M = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(E, {
-                    showDraftBadge: b,
+                    showDraftBadge: L,
                     hidePurchaseToUnlockBadge: !0,
                     children: (0, r.jsx)('img', {
                         alt: '',
@@ -104,7 +104,7 @@ function h(e) {
                                     variant: 'text-md/medium',
                                     color: 'header-primary',
                                     className: _.productName,
-                                    id: L,
+                                    id: b,
                                     children: n
                                 }),
                                 (0, r.jsx)(o.FocusBlock, {
@@ -157,7 +157,7 @@ function h(e) {
     return null == g
         ? (0, r.jsx)('article', {
               className: a()(_.productCard, A ? _.opaqueBackground : _.solidBackground),
-              'aria-labelledby': L,
+              'aria-labelledby': b,
               children: M
           })
         : (0, r.jsx)('div', {

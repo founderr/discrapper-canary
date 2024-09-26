@@ -45,8 +45,8 @@ var d = n(735250),
     R = n(922770),
     C = n(481060),
     y = n(893776),
-    b = n(596454),
-    L = n(434650),
+    L = n(596454),
+    b = n(434650),
     D = n(367907),
     M = n(702493),
     P = n(728345),
@@ -139,11 +139,11 @@ function ef(e) {
         E,
         { clientId: m, responseType: N, redirectUri: O, codeChallenge: M, codeChallengeMethod: w, state: G, nonce: ei, prompt: e_, authorizations: eE, scopes: ef, permissions: eh, guildId: ep, channelId: em, integrationType: eI, disableGuildSelect: eT = !1, showLogout: eg = !1, cancelCompletesFlow: eS = !0, isTrustedName: eA = !1, isEmbeddedFlow: ev = !1, callback: eN, callbackWithoutPost: eO, onClose: eR, disclosures: eC } = e,
         ey = null != eI ? (null == eE ? void 0 : eE.get(eI)) : void 0,
-        eb = (0, h.TH)(),
-        eL = (0, S.e7)([x.Z], () => x.Z.hasLoadedExperiments);
+        eL = (0, h.TH)(),
+        eb = (0, S.e7)([x.Z], () => x.Z.hasLoadedExperiments);
     _.useEffect(() => {
-        Z.default.isAuthenticated() && !eL && y.Z.getExperiments();
-    }, [eL]);
+        Z.default.isAuthenticated() && !eb && y.Z.getExperiments();
+    }, [eb]);
     let [eD, eM] = _.useState(null),
         [eP, eU] = _.useState(null),
         [ew, ex] = _.useState(null),
@@ -195,7 +195,7 @@ function ef(e) {
             } catch (n) {
                 let { status: e, body: t } = n;
                 if (401 === e) {
-                    (0, W.c$)(eb);
+                    (0, W.c$)(eL);
                     return;
                 }
                 ex(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
@@ -205,12 +205,12 @@ function ef(e) {
         };
         if (null == eC) {
             if (!Z.default.isAuthenticated()) {
-                (0, W.c$)(eb);
+                (0, W.c$)(eL);
                 return;
             }
             e();
         }
-    }, [m, eb, eC, e7, ex, e9, eU]);
+    }, [m, eL, eC, e7, ex, e9, eU]);
     let te = _.useCallback(
             async (e) => {
                 if (null != eO) {
@@ -275,7 +275,7 @@ function ef(e) {
         tt = _.useRef(!1),
         tn = _.useCallback(async () => {
             if (!Z.default.isAuthenticated()) {
-                (0, W.c$)(eb);
+                (0, W.c$)(eL);
                 return;
             }
             if (!e5.current) {
@@ -300,7 +300,7 @@ function ef(e) {
                     } catch (n) {
                         let { status: e, body: t } = n;
                         if (401 === e) {
-                            (0, W.c$)(eb);
+                            (0, W.c$)(eL);
                             return;
                         }
                         ex(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
@@ -309,7 +309,7 @@ function ef(e) {
                     }
                 }
             }
-        }, [eb, ey, m, e2, N, O, M, w, G, ei, eQ, e_, te, e8]),
+        }, [eL, ey, m, e2, N, O, M, w, G, ei, eQ, e_, te, e8]),
         tr = _.useMemo(() => {
             var e;
             return null != eJ && e$
@@ -337,12 +337,12 @@ function ef(e) {
             }));
     }, [m, eQ, e4, e2, eP]),
         _.useEffect(() => {
-            if (null == eP && (!e$ || null != eJ) && !!eL)
+            if (null == eP && (!e$ || null != eJ) && !!eb)
                 if (null != ey) {
                     var e;
                     eX(null !== (e = ey.integration_type) && void 0 !== e ? e : I.Y.GUILD_INSTALL), eU('AUTHORIZE_SCOPES');
                 } else tr.length > 1 ? eU('SELECT_INSTALL_TYPE') : (1 === tr.length ? eX(tr[0]) : null != eI ? eX(eI) : eX(I.Y.GUILD_INSTALL), eU('AUTHORIZE_SCOPES'));
-        }, [ey, tr, eJ, e$, eI, eP, eL]),
+        }, [ey, tr, eJ, e$, eI, eP, eb]),
         _.useEffect(() => {
             if (null == eQ || null != eD || null != ew) return;
             eQ === I.Y.USER_INSTALL && (eH(null), ej(null));
@@ -352,7 +352,7 @@ function ef(e) {
     let ta = _.useCallback((e) => {
             e && eF(!0);
         }, []),
-        to = (0, L.O)(ta);
+        to = (0, b.O)(ta);
     if (ew instanceof Error) return { body: (0, d.jsx)(ea.Lk, { message: ew.message }) };
     let ts = (e) => {
             eX(e), eM(null), eU('AUTHORIZE_SCOPES');
@@ -465,7 +465,7 @@ function ef(e) {
                 bot: eD.bot,
                 accountScopes: e3,
                 showLogout: eg || !1,
-                location: eb
+                location: eL
             })),
         tE &&
             (E = (0, d.jsxs)('div', {
@@ -510,7 +510,7 @@ function ef(e) {
                                                   children: [
                                                       eu.Z.Messages.OAUTH2_KEEP_SCROLLING,
                                                       ' ',
-                                                      (0, d.jsx)(b.Z, {
+                                                      (0, d.jsx)(L.Z, {
                                                           className: ec.emoji,
                                                           src: V.ZP.getURL(A.Z.convert.fromCodePoint(es.I)),
                                                           emojiName: ':point_down:',

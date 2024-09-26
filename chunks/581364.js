@@ -1,6 +1,6 @@
 n.d(t, {
     $z: function () {
-        return L;
+        return b;
     },
     BH: function () {
         return y;
@@ -12,7 +12,7 @@ n.d(t, {
         return w;
     },
     Dd: function () {
-        return b;
+        return L;
     },
     Ft: function () {
         return P;
@@ -242,7 +242,7 @@ function C(e, t) {
 function y(e) {
     return S.Xyh.test(e.trim());
 }
-function b(e, t, n, r) {
+function L(e, t, n, r) {
     let i = [];
     return (
         _()(e).forEach((e) => {
@@ -251,7 +251,7 @@ function b(e, t, n, r) {
         i.slice(0, r)
     );
 }
-function L(e) {
+function b(e) {
     let t = e.type === f.jw.STRING,
         n = e.type === f.jw.CHANNEL,
         r = e.type === f.jw.USER || e.type === f.jw.MENTIONABLE,

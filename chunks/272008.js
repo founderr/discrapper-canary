@@ -9,7 +9,7 @@ n.d(t, {
         return I;
     },
     EW: function () {
-        return L;
+        return b;
     },
     OR: function () {
         return D;
@@ -18,7 +18,7 @@ n.d(t, {
         return v;
     },
     T0: function () {
-        return b;
+        return L;
     },
     Wf: function () {
         return C;
@@ -340,7 +340,7 @@ async function y(e) {
         });
     }
 }
-async function b(e) {
+async function L(e) {
     try {
         let t = await a.tn.del({
             url: h.ANM.QUESTS_PREVIEW_DISMISSIBILITY(e),
@@ -358,7 +358,7 @@ async function b(e) {
         });
     }
 }
-function L(e) {
+function b(e) {
     o.Z.dispatch({
         type: 'QUESTS_DELIVERY_OVERRIDE',
         questId: e

@@ -55,11 +55,11 @@ function C(e) {
 function y() {
     return !1;
 }
-function b(e) {
+function L(e) {
     let { guildId: t, userIds: n } = e;
     return v(t).updateMembersByMemberIds(n);
 }
-function L(e) {
+function b(e) {
     let { chunks: t } = e,
         n = !1;
     for (let e of t) n = v(e.guildId).updateServerMembers(e.members) || n;
@@ -334,7 +334,7 @@ let et = new ee(l.Z, {
     PASSIVE_UPDATE_V2: W,
     GUILD_CREATE: R,
     GUILD_DELETE: C,
-    GUILD_MEMBERS_CHUNK_BATCH: L,
+    GUILD_MEMBERS_CHUNK_BATCH: b,
     GUILD_MEMBER_ADD: y,
     GUILD_MEMBER_UPDATE: y,
     GUILD_MEMBER_UPDATE_LOCAL: D,
@@ -355,6 +355,6 @@ let et = new ee(l.Z, {
     MEMBER_SAFETY_SEARCH_STATE_UPDATE: X,
     FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS: $,
     MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: J,
-    MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: b
+    MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: L
 });
 t.Z = et;

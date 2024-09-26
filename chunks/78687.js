@@ -145,16 +145,16 @@ e.exports = function (e) {
                 function y(e) {
                     return 2 * e + N();
                 }
-                function b(e) {
+                function L(e) {
                     return 2 * e + O();
                 }
-                function L(e, t, n) {
+                function b(e, t, n) {
                     var r = p(e),
                         i = m(e),
                         a = R(t),
                         o = C(n),
                         s = y(t),
-                        l = b(n);
+                        l = L(n);
                     (r.scrollLeft = a), (r.scrollTop = o), (i.scrollLeft = s), (i.scrollTop = l);
                 }
                 function D() {
@@ -257,7 +257,7 @@ e.exports = function (e) {
                                     d('Aborting because element container has not been initialized');
                                     return;
                                 }
-                                L(s, l, c);
+                                b(s, l, c);
                             }),
                             _ &&
                                 r &&
@@ -324,7 +324,7 @@ e.exports = function (e) {
                         return;
                     }
                     var e = i(s).style;
-                    A(s, e.width, e.height), L(s, e.width, e.height);
+                    A(s, e.width, e.height), b(s, e.width, e.height);
                 }
                 function w() {
                     u(s);

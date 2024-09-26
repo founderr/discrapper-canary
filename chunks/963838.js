@@ -44,8 +44,8 @@ var r = n(392711),
     R = n(200997),
     C = n(633302),
     y = n(134432),
-    b = n(594174),
-    L = n(768581),
+    L = n(594174),
+    b = n(768581),
     D = n(176354),
     M = n(353368),
     P = n(689938);
@@ -88,7 +88,7 @@ function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : M.v;
     if (null != e.id) {
         var n;
-        return L.ZP.getEmojiURL({
+        return b.ZP.getEmojiURL({
             id: e.id,
             animated: null !== (n = e.animated) && void 0 !== n && n,
             size: t
@@ -117,19 +117,19 @@ function V(e) {
     if (s.length < 1) return '';
     if (1 === s.length)
         return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
-            firstUsername: null === (n = b.default.getUser(s[0])) || void 0 === n ? void 0 : n.username,
+            firstUsername: null === (n = L.default.getUser(s[0])) || void 0 === n ? void 0 : n.username,
             emojiNames: u
         });
     if (2 === s.length)
         return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
-            firstUsername: null === (r = b.default.getUser(s[0])) || void 0 === r ? void 0 : r.username,
-            secondUsername: null === (i = b.default.getUser(s[1])) || void 0 === i ? void 0 : i.username,
+            firstUsername: null === (r = L.default.getUser(s[0])) || void 0 === r ? void 0 : r.username,
+            secondUsername: null === (i = L.default.getUser(s[1])) || void 0 === i ? void 0 : i.username,
             emojiNames: u
         });
     else
         return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
-            firstUsername: null === (a = b.default.getUser(s[0])) || void 0 === a ? void 0 : a.username,
-            secondUsername: null === (o = b.default.getUser(s[1])) || void 0 === o ? void 0 : o.username,
+            firstUsername: null === (a = L.default.getUser(s[0])) || void 0 === a ? void 0 : a.username,
+            secondUsername: null === (o = L.default.getUser(s[1])) || void 0 === o ? void 0 : o.username,
             count: s.length - 2,
             emojiNames: u
         });

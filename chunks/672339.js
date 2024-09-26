@@ -6,7 +6,7 @@ n.d(t, {
         return M;
     },
     wG: function () {
-        return L;
+        return b;
     }
 });
 var r = n(66153);
@@ -74,7 +74,7 @@ function y(e, t, n, r, i) {
         }
     });
 }
-async function b(e, t, n) {
+async function L(e, t, n) {
     let r,
         i = !1;
     if (null == n) return y(e, t, h.zZ.NONE);
@@ -102,14 +102,14 @@ async function b(e, t, n) {
             (0, T.Nm)();
         }
 }
-async function L(e, t) {
+async function b(e, t) {
     let { track: n = !0, location: r } = t;
-    await b(h.TO.CAMERA_BACKGROUND_LIVE, { type: h.W$.INPUT_DEVICE }, e), n && (0, S.Bh)(e, r, 'Enabled');
+    await L(h.TO.CAMERA_BACKGROUND_LIVE, { type: h.W$.INPUT_DEVICE }, e), n && (0, S.Bh)(e, r, 'Enabled');
 }
 async function D(e, t, n) {
     let { track: r = !0, location: i } = n;
     (0, T.GS)(),
-        await b(
+        await L(
             h.TO.CAMERA_BACKGROUND_PREVIEW,
             {
                 type: h.W$.STREAM,
@@ -123,5 +123,5 @@ function M() {
     let e = p.default.getCurrentUser();
     if (null == e) return;
     let t = (0, I.P)(e);
-    (0, v.Z)() && !g.Z.hasBeenApplied && null != t && L(t, { track: !1 }).catch(O.dG4);
+    (0, v.Z)() && !g.Z.hasBeenApplied && null != t && b(t, { track: !1 }).catch(O.dG4);
 }

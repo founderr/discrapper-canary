@@ -30,8 +30,8 @@ var i = n(120356),
     R = n(594174),
     C = n(689938),
     y = n(554034),
-    b = n(63133);
-let L = (0, I.B)({
+    L = n(63133);
+let b = (0, I.B)({
     kind: 'user',
     id: '2021-07_role_popout',
     label: 'Role Popout',
@@ -59,14 +59,14 @@ function D(e) {
                     G &&
                         (0, r.jsx)(c.RoleDot, {
                             color: (0, l.Rf)(t),
-                            className: b.roleDot,
+                            className: L.roleDot,
                             background: !1,
                             tooltip: !1
                         }),
                     M
                 ]
             }),
-        { enabled: B } = L.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
+        { enabled: B } = b.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
     return !B || P || null == o || null == D || (null == i && '@everyone' !== I)
         ? (0, r.jsx)(h.Gt, {
               value: U,

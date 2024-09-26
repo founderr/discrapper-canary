@@ -29,7 +29,7 @@ var s = n(735250),
     R = n(981631),
     C = n(689938),
     y = n(217437);
-function b(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function b(e, t, n) {
 !(function (e) {
     (e.PLAY = 'play'), (e.NOW_PLAYING = 'now_playing'), (e.INSTALL = 'install'), (e.UPDATE = 'update'), (e.PAUSED = 'paused'), (e.LOCATE = 'locate'), (e.UNINSTALLING = 'uninstalling'), (e.QUEUED = 'queued'), (e.DOWNLOADING = 'downloading'), (e.UNSUPPORTED_OS = 'unsupported_os'), (e.ADD_TO_LIBRARY = 'add_to_library'), (e.PREORDER_WAIT = 'preorder_wait');
 })(r || (r = {}));
-let L = Object.freeze({
+let b = Object.freeze({
         [R.apO.PLAY]: 'play',
         [R.apO.INSTALL]: 'install',
         [R.apO.UPDATE]: 'update',
@@ -95,7 +95,7 @@ class P extends (i = l.Component) {
         let { libraryApplication: e, dispatchState: t, actionState: n } = this.props;
         if (e.isHidden()) return 'add_to_library';
         if (e.isPreorder()) return 'preorder_wait';
-        let r = null != n ? L[n] : null;
+        let r = null != n ? b[n] : null;
         return null != r ? r : null != t && t.type === R.vxO.UNINSTALLING ? 'uninstalling' : (0, A.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {
@@ -177,8 +177,8 @@ class P extends (i = l.Component) {
     }
     constructor(...e) {
         super(...e),
-            b(this, '_uninstallStringIndex', null),
-            b(this, 'handleAddToLibrary', async () => {
+            L(this, '_uninstallStringIndex', null),
+            L(this, 'handleAddToLibrary', async () => {
                 try {
                     let { libraryApplication: e } = this.props;
                     await _.h(e.id, e.branchId, e.getFlags() & ~R.eHb.HIDDEN), (0, h.uL)(R.Z5c.APPLICATION_LIBRARY);
@@ -186,20 +186,20 @@ class P extends (i = l.Component) {
                     new f.Z('LibraryApplicationButton').error(e);
                 }
             }),
-            b(this, 'handleInstall', () => {
+            L(this, 'handleInstall', () => {
                 let { libraryApplication: e, source: t } = this.props;
                 N.installApplication(e.id, e.branchId, t);
             }),
-            b(this, 'handleUpdate', () => {
+            L(this, 'handleUpdate', () => {
                 let { libraryApplication: e } = this.props;
                 N.updateApplication(e.id, e.branchId);
             }),
-            b(this, 'onClickHandlers', {
+            L(this, 'onClickHandlers', {
                 add_to_library: this.handleAddToLibrary,
                 install: this.handleInstall,
                 update: this.handleUpdate
             }),
-            b(this, 'handleClick', (e, t) => {
+            L(this, 'handleClick', (e, t) => {
                 let { onClick: n } = this.props;
                 null == n || n(e), t(e);
             });
@@ -220,11 +220,11 @@ function U(e) {
         hasNoBuild: o
     });
 }
-b(P, 'defaultProps', {
+L(P, 'defaultProps', {
     fullWidth: !1,
     size: d.Button.Sizes.LARGE,
     hideProgress: !1,
     isPlayShiny: !1,
     tooltipPosition: 'top'
 }),
-    b(P, 'ButtonStates', r);
+    L(P, 'ButtonStates', r);

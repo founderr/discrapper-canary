@@ -22,19 +22,19 @@ var i = t(470079),
     p = t(895924),
     _ = t(691424),
     C = t(428595),
-    f = t(364458),
-    h = t(499254),
+    h = t(364458),
+    f = t(499254),
     A = t(541099),
     E = t(827498),
     N = t(346683),
-    v = t(981631),
-    x = t(689938);
+    x = t(981631),
+    v = t(689938);
 let I = {
         ...C.Z.RULES.commandMention,
         parse: (e, n, t) => ({ content: C.Z.RULES.commandMention.parse(e, n, t).content })
     },
     g = l().pick(
-        (0, f.Z)([
+        (0, h.Z)([
             C.Z.RULES,
             { commandMention: I },
             (0, _.Z)({
@@ -47,7 +47,7 @@ let I = {
     P = r.w4(g);
 function L(e) {
     let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: r = !0, launchingComponentId: _, submitting: C = !1 } = e,
-        f = (0, c.O)(),
+        h = (0, c.O)(),
         I = (0, d.Qv)({
             channelId: n.id,
             applicationId: t.id
@@ -58,11 +58,11 @@ function L(e) {
             applicationId: t.id,
             embeddedActivitiesManager: u.Z,
             channelId: n.id,
-            locationObject: f.location,
+            locationObject: h.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e;
-                r && h.y(E.ti.ACTIVITY),
-                    (0, m.yw)(v.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                r && f.y(E.ti.ACTIVITY),
+                    (0, m.yw)(x.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,
                         section_name: a,
@@ -76,9 +76,9 @@ function L(e) {
             source: P
         }),
         S = s.ButtonColors.BRAND,
-        b = null != l ? l : x.Z.Messages.LAUNCH;
+        b = null != l ? l : v.Z.Messages.LAUNCH;
     return (
-        g === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (b = x.Z.Messages.JOIN_ACTIVITY)) : g === d.JS.LEAVE && !C && ((S = s.ButtonColors.RED), (b = x.Z.Messages.LEAVE)),
+        g === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (b = v.Z.Messages.JOIN_ACTIVITY)) : g === d.JS.LEAVE && !C && ((S = s.ButtonColors.RED), (b = v.Z.Messages.LEAVE)),
         {
             onActivityItemSelected: L,
             activityAction: g,
@@ -93,7 +93,7 @@ function S(e, n) {
             () =>
                 (0, a.debounce)(
                     (e, n) => {
-                        (0, m.yw)(v.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, m.yw)(x.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: n
                         });

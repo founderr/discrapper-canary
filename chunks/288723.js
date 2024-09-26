@@ -47,8 +47,8 @@ function d(e) {
                 }, []),
                 C = t.rects.reference,
                 y = t.rects.popper,
-                b = new Map(),
-                L = !0,
+                L = new Map(),
+                b = !0,
                 D = R[0],
                 M = 0;
             M < R.length;
@@ -77,17 +77,17 @@ function d(e) {
                     return e;
                 }))
             ) {
-                (D = P), (L = !1);
+                (D = P), (b = !1);
                 break;
             }
-            b.set(P, Z);
+            L.set(P, Z);
         }
-        if (L) {
+        if (b) {
             for (
                 var V = S ? 3 : 1,
                     H = function (e) {
                         var t = R.find(function (t) {
-                            var n = b.get(t);
+                            var n = L.get(t);
                             if (n)
                                 return n.slice(0, e).every(function (e) {
                                     return e;

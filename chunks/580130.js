@@ -57,11 +57,11 @@ function y(e) {
     let { applicationId: t, entitlements: n } = e;
     for (let e of (g.delete(t), S.add(t), n)) !0 !== e.consumed && N(e);
 }
-function b(e) {
+function L(e) {
     let { entitlements: t } = e;
     (h = {}), t.forEach(O);
 }
-function L() {}
+function b() {}
 function D() {
     I = !0;
 }
@@ -155,8 +155,8 @@ E(k, 'displayName', 'EntitlementStore'),
     (t.Z = new k(l.Z, {
         ENTITLEMENT_FETCH_APPLICATION_START: C,
         ENTITLEMENT_FETCH_APPLICATION_SUCCESS: y,
-        ENTITLEMENT_FETCH_APPLICATION_FAIL: L,
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: b,
+        ENTITLEMENT_FETCH_APPLICATION_FAIL: b,
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: L,
         SKU_PURCHASE_SUCCESS: U,
         LIBRARY_FETCH_SUCCESS: w,
         ENTITLEMENT_CREATE: x,

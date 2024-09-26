@@ -24,8 +24,8 @@ var h = n(392711),
     R = n(823379),
     C = n(960048),
     y = n(709054),
-    b = n(51144),
-    L = n(981631);
+    L = n(51144),
+    b = n(981631);
 function D(e, t, n) {
     return (
         t in e
@@ -46,10 +46,10 @@ function P(e) {
         id: e.id,
         username: '0' !== e.discriminator ? ''.concat(e.username, '#').concat(e.discriminator) : e.username
     };
-    if ((null != b.ZP.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), e instanceof g.Z)) t.isProvisional = e.isProvisional();
+    if ((null != L.ZP.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), e instanceof g.Z)) t.isProvisional = e.isProvisional();
     else if ('flags' in e) {
         var n;
-        t.isProvisional = O.yE(null !== (n = e.flags) && void 0 !== n ? n : 0, L.xW$.PROVISIONAL_ACCOUNT);
+        t.isProvisional = O.yE(null !== (n = e.flags) && void 0 !== n ? n : 0, b.xW$.PROVISIONAL_ACCOUNT);
     } else t.isProvisional = !1;
     return v.Z.isFriend(e.id) && ((t.isFriend = !0), (t.friendNickname = v.Z.getNickname(e.id))), t;
 }
@@ -233,7 +233,7 @@ class k extends I.Z {
                         for (let t in r[e]) {
                             var i, a;
                             let o = n[t],
-                                s = null !== (a = null === (i = r[e][t]) || void 0 === i ? void 0 : i.nick) && void 0 !== a ? a : b.ZP.getGlobalName(o);
+                                s = null !== (a = null === (i = r[e][t]) || void 0 === i ? void 0 : i.nick) && void 0 !== a ? a : L.ZP.getGlobalName(o);
                             null != o && (o[e] = null != s && '' !== s ? s : null);
                         }
                     this.updateUsers(Object.values(n), 'connection_open');

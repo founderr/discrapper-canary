@@ -1,24 +1,24 @@
 t(47120);
 var n = t(735250),
-    a = t(470079),
+    r = t(470079),
     i = t(481060),
-    r = t(763610),
-    o = t(720778);
+    a = t(763610),
+    l = t(720778);
 s.Z = function (e) {
     var s, t;
-    let { assetKey: l, filters: c, initialValue: d, onFileChange: _, title: u } = e,
-        [E, T] = a.useState(null),
-        [S, I] = a.useState(!1);
+    let { assetKey: o, filters: d, initialValue: c, onFileChange: u, title: m } = e,
+        [h, g] = r.useState(null),
+        [x, f] = r.useState(!1);
     return (0, n.jsxs)(i.FormItem, {
         children: [
             (0, n.jsx)(i.FormTitle, {
                 tag: i.FormTitleTags.H5,
                 children: (0, n.jsxs)('div', {
-                    className: o.headingWithTooltip,
+                    className: l.headingWithTooltip,
                     children: [
-                        u,
+                        m,
                         (0, n.jsx)(i.Tooltip, {
-                            text: 'Supported asset formats: '.concat(c.join(', ')),
+                            text: 'Supported asset formats: '.concat(d.join(', ')),
                             children: (e) =>
                                 (0, n.jsx)(i.CircleInformationIcon, {
                                     size: 'xs',
@@ -28,22 +28,22 @@ s.Z = function (e) {
                     ]
                 })
             }),
-            (0, n.jsx)(r.Z, {
-                filename: null !== (t = null !== (s = null == E ? void 0 : E.name) && void 0 !== s ? s : d) && void 0 !== t ? t : '',
+            (0, n.jsx)(a.Z, {
+                filename: null !== (t = null !== (s = null == h ? void 0 : h.name) && void 0 !== s ? s : c) && void 0 !== t ? t : '',
                 filters: [
                     {
-                        name: u,
-                        extensions: c
+                        name: m,
+                        extensions: d
                     }
                 ],
                 buttonText: 'Browse',
                 placeholder: 'Select an asset',
                 onFileSelect: function (e) {
-                    if ((T(null != e ? e : null), null == e)) return;
-                    I(!0);
+                    if ((g(null != e ? e : null), null == e)) return;
+                    f(!0);
                     let s = new FileReader();
                     (s.onload = function () {
-                        'string' == typeof s.result && (_(l, s.result), I(!1));
+                        'string' == typeof s.result && (u(o, s.result), f(!1));
                     }),
                         (s.onerror = function (e) {
                             console.error(e);

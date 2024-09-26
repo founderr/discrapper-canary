@@ -100,7 +100,7 @@ function y(e) {
                 record: n
             }));
 }
-function b(e) {
+function L(e) {
     let { subscription: t } = e;
     if (((S = !0), null != t)) {
         let e = d.default.getId();
@@ -120,7 +120,7 @@ function b(e) {
         I = c.Q.createFromServer(t);
     }
 }
-function L(e) {
+function b(e) {
     let { subscription: t } = e;
     if (((N = !0), null != t)) {
         let e = d.default.getId();
@@ -229,8 +229,8 @@ h(w, 'displayName', 'SubscriptionStore'),
     (t.ZP = new w(s.Z, {
         BILLING_SUBSCRIPTION_FETCH_SUCCESS: R,
         BILLING_SUBSCRIPTION_UPDATE_SUCCESS: y,
-        BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: b,
-        BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: L,
+        BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: L,
+        BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: b,
         BILLING_SUBSCRIPTION_RESET: D,
         LOGOUT: D
     }));

@@ -79,13 +79,13 @@ function C(e) {
 }
 function y(e) {
     let { userId: t, speakingFlags: n } = e;
-    return n !== E.Dg.NONE && t === d.default.getId() && L({}), !1;
+    return n !== E.Dg.NONE && t === d.default.getId() && b({}), !1;
 }
-function b(e) {
+function L(e) {
     let { state: t } = e;
     return (g = t === _.$7l.BACKGROUND), (h = Date.now()), N(), !1;
 }
-function L(e) {
+function b(e) {
     let { timestamp: t, type: n } = e,
         r = 'OVERLAY_SET_NOT_IDLE' === n && null != t;
     return (
@@ -104,16 +104,16 @@ function L(e) {
     (c.isPlatformEmbedded && (null === s.Z || void 0 === s.Z ? void 0 : s.Z.remotePowerMonitor) != null
         ? (O(),
           s.Z.remotePowerMonitor.on('resume', () => {
-              (I = !1), L({});
+              (I = !1), b({});
           }),
           s.Z.remotePowerMonitor.on('suspend', () => {
-              (I = !0), L({}), o.default.disconnect();
+              (I = !0), b({}), o.default.disconnect();
           }),
           s.Z.remotePowerMonitor.on('lock-screen', () => {
-              (T = !0), L({});
+              (T = !0), b({});
           }),
           s.Z.remotePowerMonitor.on('unlock-screen', () => {
-              (T = !1), L({});
+              (T = !1), b({});
           }))
         : setInterval(N, 0.25 * _.OSm));
 class D extends (r = i.ZP.Store) {
@@ -132,12 +132,12 @@ f(D, 'displayName', 'IdleStore'),
         IDLE: R,
         AFK: C,
         SPEAKING: y,
-        APP_STATE_UPDATE: b,
-        OVERLAY_SET_NOT_IDLE: L,
-        CHANNEL_SELECT: L,
-        VOICE_CHANNEL_SELECT: L,
-        WINDOW_FOCUS: L,
-        OVERLAY_INITIALIZE: L,
-        OVERLAY_SET_INPUT_LOCKED: L,
-        USER_SETTINGS_PROTO_UPDATE: L
+        APP_STATE_UPDATE: L,
+        OVERLAY_SET_NOT_IDLE: b,
+        CHANNEL_SELECT: b,
+        VOICE_CHANNEL_SELECT: b,
+        WINDOW_FOCUS: b,
+        OVERLAY_INITIALIZE: b,
+        OVERLAY_SET_INPUT_LOCKED: b,
+        USER_SETTINGS_PROTO_UPDATE: b
     }));

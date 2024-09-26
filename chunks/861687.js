@@ -29,8 +29,8 @@ var l = n(654861),
     R = n(811660),
     C = n(42352),
     y = n(148959),
-    b = n(926951),
-    L = n(868616),
+    L = n(926951),
+    b = n(868616),
     D = n(848886),
     M = n(583215),
     P = n(576574),
@@ -285,7 +285,7 @@ class eT extends m.Z {
     _chooseExperiments(e) {
         let t = [];
         if ((this._recordingEnabled && t.push('connection_log'), null != this.guildId)) {
-            let { shouldOverrideKrisp: e, overrideKrispSetting: n } = L.Z.getCurrentConfig(
+            let { shouldOverrideKrisp: e, overrideKrispSetting: n } = b.Z.getCurrentConfig(
                 {
                     guildId: this.guildId,
                     location: 'handleReady'
@@ -295,7 +295,7 @@ class eT extends m.Z {
             e && (n ? t.push('force_krisp_enabled') : t.push('force_krisp_disabled'));
         }
         if ((B.Z.supports(es.AN.FIXED_KEYFRAME_INTERVAL) && t.push('fixed_keyframe_interval'), 0 !== this._supportedBandwidthEstimationExperiments.length)) {
-            let { enabled: e, fullname: n } = b.Z.getConfig(!0, this._supportedBandwidthEstimationExperiments);
+            let { enabled: e, fullname: n } = L.Z.getConfig(!0, this._supportedBandwidthEstimationExperiments);
             e && t.push(n);
         }
         this._selectedExperiments = t;
@@ -876,7 +876,7 @@ class eT extends m.Z {
     }
     _handleBandwidthEstimationExperiment(e) {
         this._bandwidthEstimationExperiment = e;
-        let t = b.Z.getMediaEngineExperiments(e);
+        let t = L.Z.getMediaEngineExperiments(e);
         if (null !== t && 0 !== t.length) {
             var n;
             null === (n = this._connection) || void 0 === n || n.setBandwidthEstimationExperiments(t);

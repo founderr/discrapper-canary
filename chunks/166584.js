@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return b;
     }
 });
 var r = n(47120);
@@ -33,13 +33,13 @@ let O = 4,
         let { width: t } = e.getBoundingClientRect();
         return t > 0 ? t + O : 0;
     };
-function b(e) {
+function L(e) {
     let { user: t, currentUser: n, guild: r, guildMember: i, roles: c, highestRole: _, canManageRoles: E, onAddRole: f, onRemoveRole: h } = e,
         p = o.useRef({}),
-        b = (e, t) => {
+        L = (e, t) => {
             null != t ? (p.current[e] = t) : delete p.current[e];
         },
-        [L, D] = o.useState(c),
+        [b, D] = o.useState(c),
         [M, P] = o.useState(R),
         [U, w] = o.useState(!1),
         x = o.useRef(null),
@@ -61,8 +61,8 @@ function b(e) {
                 (e += o + O), n.push(i);
             }
         }
-        D(n.length === L.length ? L : n), P(r);
-    }, [c, L, U]);
+        D(n.length === b.length ? b : n), P(r);
+    }, [c, b, U]);
     let k = o.useMemo(() => 'roles-'.concat((0, s.Z)()), []),
         B = (0, l.ZP)({
             id: k,
@@ -73,16 +73,16 @@ function b(e) {
         }),
         F = c.length,
         Z = 0 === F ? v.Z.Messages.ROLE_LIST_EMPTY : v.Z.Messages.ROLES_LIST.format({ numRoles: F }),
-        V = (U ? c : L).map((e, i) => {
+        V = (U ? c : b).map((e, i) => {
             var o;
             return (0, a.jsx)(
                 g.Z,
                 {
                     role: e,
                     guildId: r.id,
-                    style: { maxWidth: U || i !== L.length - 1 ? R : M },
+                    style: { maxWidth: U || i !== b.length - 1 ? R : M },
                     disableBorderColor: !0,
-                    ref: (t) => b(e.id, t),
+                    ref: (t) => L(e.id, t),
                     onRemove: () => h(e),
                     canRemove: E ? I.r6(r, n.id, _, e) : (null === (o = e.tags) || void 0 === o ? void 0 : o.guild_connections) === null && t.id === n.id
                 },
@@ -109,7 +109,7 @@ function b(e) {
                     children: [
                         V,
                         !U &&
-                            L.length < c.length &&
+                            b.length < c.length &&
                             (0, a.jsx)(d.TooltipContainer, {
                                 text: v.Z.Messages.VIEW_ALL_ROLES,
                                 children: (0, a.jsx)(d.Clickable, {
@@ -118,7 +118,7 @@ function b(e) {
                                     className: N.expandButton,
                                     children: (0, a.jsx)(d.Text, {
                                         variant: 'text-xs/medium',
-                                        children: '+'.concat(c.length - L.length)
+                                        children: '+'.concat(c.length - b.length)
                                     })
                                 })
                             }),
@@ -151,7 +151,7 @@ function b(e) {
         })
     });
 }
-function L(e) {
+function b(e) {
     let { user: t, currentUser: n, guild: r } = e,
         { trackUserProfileAction: i } = (0, T.KZ)(),
         s = (0, c.e7)([f.ZP], () => f.ZP.getMember(r.id, t.id)),
@@ -193,7 +193,7 @@ function L(e) {
         N = g && null != s;
     return 0 !== d.length || N
         ? (0, a.jsx)('div', {
-              children: (0, a.jsx)(b, {
+              children: (0, a.jsx)(L, {
                   user: t,
                   currentUser: n,
                   guild: r,

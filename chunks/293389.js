@@ -15,19 +15,19 @@ var n = t(735250),
     I = t(77498),
     N = t(283595),
     A = t(626135),
-    m = t(251625),
-    C = t(358085),
+    C = t(251625),
+    m = t(358085),
     g = t(210887),
     h = t(981631),
     O = t(689938),
     p = t(545217),
     R = t(852401),
     x = t(739017),
-    f = t(869042),
-    M = t(113207);
+    M = t(869042),
+    f = t(113207);
 let D = o.ZP.connectStores([g.Z], () => ({ theme: g.Z.theme }))(c.EmptyState),
-    P = (0, C.isWindows)();
-function L(e) {
+    L = (0, m.isWindows)();
+function P(e) {
     let { onClose: s } = e,
         t = (0, o.e7)([E.ZP], () => E.ZP.getCandidateGames()),
         [i, l] = a.useState(null),
@@ -55,7 +55,7 @@ function L(e) {
                         children: e.label
                     })
             }),
-            (0, n.jsx)(c.FormDivider, { className: r()(M.marginTop8, M.marginBottom8) }),
+            (0, n.jsx)(c.FormDivider, { className: r()(f.marginTop8, f.marginBottom8) }),
             (0, n.jsxs)('div', {
                 className: r()(p.actions, x.horizontal),
                 children: [
@@ -81,35 +81,35 @@ function L(e) {
 function b(e) {
     var s;
     let { rawGame: t, nowPlaying: i = !1, isOverride: T } = e,
-        m = (0, o.cj)([I.Z, E.ZP, N.Z], () => (0, E.FZ)(t)),
-        [C, g] = a.useState(!1),
-        [R, M] = a.useState(null !== (s = m.name) && void 0 !== s ? s : '???'),
+        C = (0, o.cj)([I.Z, E.ZP, N.Z], () => (0, E.FZ)(t)),
+        [m, g] = a.useState(!1),
+        [R, f] = a.useState(null !== (s = C.name) && void 0 !== s ? s : '???'),
         D = r()(x.flexCenter, {
             [p.game]: !i,
             [p.activeGame]: i,
-            [f.card]: !i,
-            [p.nowPlaying]: null != m && i
+            [M.card]: !i,
+            [p.nowPlaying]: null != C && i
         });
-    function L() {
-        d.Z.deleteEntry(m);
+    function P() {
+        d.Z.deleteEntry(C);
     }
     function b() {
-        m.name !== R && d.Z.editName(m, R);
+        C.name !== R && d.Z.editName(C, R);
     }
     function Z(e) {
         13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
     }
     function v() {
-        d.Z.toggleDetection(m);
+        d.Z.toggleDetection(C);
     }
     function j() {
-        if (C) return;
-        let e = null != m.id ? I.Z.getDetectableGame(m.id) : null;
+        if (m) return;
+        let e = null != C.id ? I.Z.getDetectableGame(C.id) : null;
         A.default.track(h.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
-            game_name: m.name
+            game_name: C.name
         }),
-            (0, c.showToast)((0, c.createToast)(O.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({ gameName: m.name }), c.ToastType.SUCCESS)),
+            (0, c.showToast)((0, c.createToast)(O.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({ gameName: C.name }), c.ToastType.SUCCESS)),
             g(!0);
     }
     return (0, n.jsxs)('div', {
@@ -118,13 +118,13 @@ function b(e) {
             (0, n.jsxs)('div', {
                 className: r()(p.gameNameLastPlayed, x.vertical),
                 children: [
-                    m.verified && !T
+                    C.verified && !T
                         ? (0, n.jsxs)('div', {
                               className: p.detectedApplication,
                               children: [
                                   (0, n.jsx)('div', {
                                       className: p.gameName,
-                                      children: m.name
+                                      children: C.name
                                   }),
                                   (0, n.jsx)(c.Tooltip, {
                                       text: O.Z.Messages.SETTINGS_GAMES_VERIFIED_ICON,
@@ -151,11 +151,11 @@ function b(e) {
                               value: R,
                               onBlur: b,
                               onKeyDown: Z,
-                              onChange: (e) => M(e.target.value)
+                              onChange: (e) => f(e.target.value)
                           }),
                     (function () {
                         let e;
-                        let { played: s, exePath: t } = m;
+                        let { played: s, exePath: t } = C;
                         return (
                             i ? (e = O.Z.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE) : null != s && '' !== s && (e = O.Z.Messages.SETTINGS_GAMES_LAST_PLAYED.format({ when: s })),
                             (0, n.jsx)('div', {
@@ -171,7 +171,7 @@ function b(e) {
             }),
             T
                 ? null
-                : C
+                : m
                   ? null
                   : (0, n.jsx)('div', {
                         className: r()(x.flexCenter, x.noWrap, x.justifyBetween, p.toggleContainer),
@@ -196,7 +196,7 @@ function b(e) {
                         })
                     }),
             (function () {
-                let { detectable: e } = m,
+                let { detectable: e } = C,
                     s = e
                         ? (0, n.jsx)(c.EyeIcon, {
                               size: 'md',
@@ -229,8 +229,8 @@ function b(e) {
                 });
             })(),
             (function () {
-                if (!P) return null;
-                let { overlay: e, overlayWarn: s } = m,
+                if (!L) return null;
+                let { overlay: e, overlayWarn: s } = C,
                     t = e
                         ? (0, n.jsx)(c.ScreenIcon, {
                               size: 'md',
@@ -267,7 +267,7 @@ function b(e) {
                                     className: p.toggleIcon,
                                     onClick: () => {
                                         var s;
-                                        return (s = !e), void d.Z.toggleOverlay(m, s);
+                                        return (s = !e), void d.Z.toggleOverlay(C, s);
                                     },
                                     onMouseEnter: a,
                                     onMouseLeave: i,
@@ -281,7 +281,7 @@ function b(e) {
             !i || T
                 ? (0, n.jsx)(_.Z, {
                       className: p.removeGame,
-                      onClick: L
+                      onClick: P
                   })
                 : null
         ]
@@ -308,7 +308,7 @@ function Z() {
 function v(e) {
     let { children: s } = e;
     return (0, n.jsxs)(D, {
-        className: M.marginTop40,
+        className: f.marginTop40,
         children: [
             (0, n.jsx)(c.EmptyStateImage, {
                 darkSrc: t(879601),
@@ -320,7 +320,7 @@ function v(e) {
         ]
     });
 }
-let j = (0, m.oH)(function () {
+let j = (0, C.oH)(function () {
     for (var e = arguments.length, s = Array(e), t = 0; t < e; t++) s[t] = arguments[t];
     return new Set(s.map((e) => e.exePath));
 });
@@ -350,13 +350,13 @@ s.Z = function (e) {
                       )
                     : (0, n.jsx)(Z, {}),
                 (0, n.jsxs)('div', {
-                    className: r()(p.nowPlayingAdd, M.marginReset, M.marginTop8, M.marginBottom20),
+                    className: r()(p.nowPlayingAdd, f.marginReset, f.marginTop8, f.marginBottom20),
                     children: [
                         (0, n.jsx)('span', { children: O.Z.Messages.SETTINGS_GAMES_NOT_SEEING_GAME }),
                         (0, n.jsx)(c.Popout, {
                             renderPopout: (e) => {
                                 let { closePopout: s } = e;
-                                return (0, n.jsx)(L, { onClose: s });
+                                return (0, n.jsx)(P, { onClose: s });
                             },
                             align: 'center',
                             position: 'bottom',
@@ -374,10 +374,10 @@ s.Z = function (e) {
                 0 === i.length
                     ? (0, n.jsx)(v, { children: (0, n.jsx)(c.EmptyStateText, { children: O.Z.Messages.SETTINGS_GAMES_NO_GAMES_HEADER }) })
                     : (0, n.jsxs)(c.FormSection, {
-                          className: M.marginTop40,
+                          className: f.marginTop40,
                           children: [
                               (0, n.jsx)(c.FormTitle, {
-                                  className: M.marginBottom4,
+                                  className: f.marginBottom4,
                                   children: O.Z.Messages.SETTINGS_GAMES_ADDED_GAMES_LABEL
                               }),
                               (0, n.jsx)(c.FormText, {

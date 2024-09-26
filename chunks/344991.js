@@ -37,16 +37,16 @@ function I(e) {
         [A, v] = o.useState(!1),
         [N, O] = o.useState(!1),
         [R, C] = o.useState(new Map(null == s ? void 0 : s.map((e) => [e.value, e]))),
-        [y, b] = o.useState(new Set(R.keys())),
-        [L, D] = o.useState(() => (null != s ? s : []).map((e) => e.value)),
+        [y, L] = o.useState(new Set(R.keys())),
+        [b, D] = o.useState(() => (null != s ? s : []).map((e) => e.value)),
         [M, P] = o.useState(0);
     o.useEffect(() => {
         let e = (null != s ? s : []).map((e) => e.value);
-        if (e.every((e) => L.includes(e)) && L.every((t) => e.includes(t))) return;
+        if (e.every((e) => b.includes(e)) && b.every((t) => e.includes(t))) return;
         D(e);
         let t = new Map(null == s ? void 0 : s.map((e) => [e.value, e]));
-        C(t), b(new Set(t.keys())), P((e) => e + 1);
-    }, [s, L]);
+        C(t), L(new Set(t.keys())), P((e) => e + 1);
+    }, [s, b]);
     let {
             state: U,
             executeStateUpdate: w,
@@ -62,14 +62,14 @@ function I(e) {
     o.useEffect(() => {
         if ((null == U ? void 0 : U.type) === c.re.USER_SELECT || (null == U ? void 0 : U.type) === c.re.ROLE_SELECT || (null == U ? void 0 : U.type) === c.re.MENTIONABLE_SELECT || (null == U ? void 0 : U.type) === c.re.CHANNEL_SELECT) {
             let e = new Map(U.selectedOptions.map((e) => [e.value, e]));
-            C(e), b(new Set(e.keys()));
+            C(e), L(new Set(e.keys()));
         }
     }, [U]);
     let Z = o.useCallback(() => {
         w({
             type: I,
             selectedOptions: Array.from(R.values())
-        }) && b(new Set(R.keys()));
+        }) && L(new Set(R.keys()));
     }, [w, I, R]);
     o.useEffect(() => {
         if (!(A || N || (R.size === y.size && Array.from(R.keys()).every((e) => y.has(e))))) Z();

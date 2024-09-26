@@ -29,8 +29,8 @@ var r = n(735250),
     R = n(51144),
     C = n(937889),
     y = n(739566),
-    b = n(779125),
-    L = n(890410),
+    L = n(779125),
+    b = n(890410),
     D = n(464891),
     M = n(507418),
     P = n(348238),
@@ -224,7 +224,7 @@ let X = i.memo(function (e) {
     let I = () =>
         (0, r.jsx)('div', {
             className: V.channelNameContainer,
-            children: (0, r.jsx)(b.Z, {
+            children: (0, r.jsx)(L.Z, {
                 channel: a,
                 className: V.channelName,
                 openChatWithoutConnecting: !0
@@ -246,13 +246,13 @@ function $(e) {
             eventHandlers: { onMouseEnter: N, onMouseLeave: O }
         } = (0, w.m)(!0),
         { onFocus: R, ...y } = (0, u.JA)(null != n ? n : ''),
-        { isFocused: b, handleFocus: M, handleBlur: U } = (0, P.bb)(R),
+        { isFocused: L, handleFocus: M, handleBlur: U } = (0, P.bb)(R),
         G = (0, d.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         Y = (0, d.e7)([v.Z], () => v.Z.can(k.Plq.MANAGE_MESSAGES, l), [l]),
         { ruleName: K, embedChannel: z, decisionId: q, keywordMatchedContent: $, keyword: J, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: er, alertActionsExecution: ei, quarantineType: ea, interactionUserId: eo } = (0, m.ZP)(s),
         es = i.useMemo(() => (0, C.k$)(ee, $, l.id), [ee, $, l]),
         { selected: el, ...eu } = H(s, l),
-        ec = el || (G && b),
+        ec = el || (G && L),
         ed = (e) => {
             var t;
             null === (t = eu.onContextMenuModerateUser) || void 0 === t || t.call(eu, e);
@@ -329,7 +329,7 @@ function $(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: o()(V.messageContent, { [V.compact]: a }),
-                        children: (0, r.jsx)(L.Z, {
+                        children: (0, r.jsx)(b.Z, {
                             ...y,
                             message: s,
                             channel: z,

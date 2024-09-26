@@ -24,8 +24,8 @@ var a = n(658722),
     R = n(251625),
     C = n(823379),
     y = n(780570),
-    b = n(358085),
-    L = n(998502),
+    L = n(358085),
+    b = n(998502),
     D = n(804739),
     M = n(7956),
     P = n(981631);
@@ -157,8 +157,8 @@ function $() {
         (B = null != I.Z.lastFetched && T.Z.fetched),
         !l().isEqual(a, G) &&
             ((G = a),
-            b.isPlatformEmbedded &&
-                L.ZP.setSystemTrayApplications(
+            L.isPlatformEmbedded &&
+                b.ZP.setSystemTrayApplications(
                     Y(G)
                         .map((e) => e.application)
                         .slice(0, w)

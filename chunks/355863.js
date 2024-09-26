@@ -173,9 +173,9 @@ function C(e) {
 }
 function y(e) {
     let { widgetId: t } = e;
-    return R(t, (e, t) => b(t, e.id));
+    return R(t, (e, t) => L(t, e.id));
 }
-function b(e, t) {
+function L(e, t) {
     let n = G(e);
     n.sort((e, t) => e.zIndex - t.zIndex);
     let r = n.findIndex((e) => e.id === t);
@@ -184,7 +184,7 @@ function b(e, t) {
     for (let e = 0; e < n.length; e++) w(n[e], e);
     return !0;
 }
-function L(e) {
+function b(e) {
     let { widgetId: t } = e;
     return R(t, (e, t) => {
         x(e);
@@ -504,7 +504,7 @@ S(Z, 'displayName', 'LayoutStore'),
     ]),
     (t.Z = new Z(p.Z, {
         LAYOUT_CREATE: N,
-        LAYOUT_SET_PINNED: L,
+        LAYOUT_SET_PINNED: b,
         LAYOUT_UPDATE_WIDGET: C,
         LAYOUT_SET_TOP_WIDGET: y,
         LAYOUT_DELETE_WIDGET: M,

@@ -78,11 +78,11 @@ function y(e) {
     let { storeListings: t } = e;
     for (let e of t) C(e);
 }
-function b(e) {
+function L(e) {
     let { storeListing: t } = e;
     C(t);
 }
-function L(e) {
+function b(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.sku && I(e.sku);
 }
@@ -123,14 +123,14 @@ d(P, 'displayName', 'SKUStore'),
         STORE_LISTINGS_FETCH_START: g,
         STORE_LISTINGS_FETCH_FAIL: A,
         STORE_LISTINGS_FETCH_SUCCESS: y,
-        STORE_LISTING_FETCH_SUCCESS: b,
+        STORE_LISTING_FETCH_SUCCESS: L,
         GIFT_CODE_RESOLVE_SUCCESS: N,
         SKU_FETCH_START: S,
         SKU_FETCH_SUCCESS: O,
         SKU_FETCH_FAIL: v,
         SKUS_FETCH_SUCCESS: R,
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: L,
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: b,
         APPLICATION_STORE_CLEAR_DATA: D,
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: L,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: L
+        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: b,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: b
     }));

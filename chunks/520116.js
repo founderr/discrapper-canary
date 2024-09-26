@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return L;
     }
 });
 var r = n(653041);
@@ -74,15 +74,15 @@ function y(e) {
         )
     });
 }
-function b(e) {
+function L(e) {
     var t, n;
     let { channel: r, channelRecord: a, gotoChannel: o } = e,
         { enabled: l } = d.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         p = m.jU.useSetting(),
         A = (0, u.e7)([T.Z], () => T.Z.can(N.Plq.CREATE_INSTANT_INVITE, a)),
         C = (0, f.P1)(a),
-        b = !1,
-        L = 0 === r.messages.length || s()(r.messages[0].timestamp).isSame(s()(), 'day'),
+        L = !1,
+        b = 0 === r.messages.length || s()(r.messages[0].timestamp).isSame(s()(), 'day'),
         D = null !== (n = null === (t = g.default.getUser(I.default.getId())) || void 0 === t ? void 0 : t.hasFlag(N.xW$.SPAMMER)) && void 0 !== n && n,
         M = [];
     if (!r.collapsed) {
@@ -91,7 +91,7 @@ function b(e) {
             n = r.messages.slice(0, v.hC);
         n.forEach((n) => {
             if (!(0, _.Z)(n, A)) {
-                if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
+                if (!b && (null == e || !e.isSame(n.timestamp, 'day'))) {
                     let t = (0, S.vc)(n.timestamp, 'LL');
                     M.push(
                         (0, i.jsx)(
@@ -107,7 +107,7 @@ function b(e) {
                 }
                 let r = null == t || (0, E.Z)(a, t, n);
                 (t = n),
-                    (b = b || (0, f.DQ)(n)),
+                    (L = L || (0, f.DQ)(n)),
                     M.push(
                         (0, i.jsx)(
                             y,
@@ -140,7 +140,7 @@ function b(e) {
             0 === M.length && (M = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
     }
     return (
-        b && C && d.Z.trackExposure({ location: '20e3b0_2' }),
+        L && C && d.Z.trackExposure({ location: '20e3b0_2' }),
         (0, i.jsx)('div', {
             className: R.messages,
             children: M

@@ -24,10 +24,10 @@ n.d(t, {
         return U;
     },
     pR: function () {
-        return L;
+        return b;
     },
     rn: function () {
-        return b;
+        return L;
     },
     tK: function () {
         return C;
@@ -83,7 +83,7 @@ function y(e, t) {
     let n = f.Z.getChannel(t);
     return i()(null != n, 'Cannot join a null voice channel'), !m.Z.isInChannel(t) && (0, I.rY)(n, m.Z, h.Z);
 }
-function b(e, t) {
+function L(e, t) {
     if (null != l.Z.getRemoteSessionId()) return;
     let { guildId: n, channelId: r } = e;
     if (null != n && y(n, r)) return;
@@ -101,7 +101,7 @@ function b(e, t) {
     }),
         !a && (null == t || !t.noFocus) && A.Z.selectParticipant(e.channelId, i);
 }
-function L(e, t) {
+function b(e, t) {
     s.Z.dispatch({
         type: 'STREAM_UPDATE_SELF_HIDDEN',
         channelId: e,
@@ -111,7 +111,7 @@ function L(e, t) {
 function D(e, t) {
     let { guildId: n, channelId: r } = e;
     if (null != n && y(n, r)) return;
-    b(e, t);
+    L(e, t);
     let i = d.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
         a = p.Z.getVoiceChannelId();
     if (!i || a !== r) (0, c.Z)(e);

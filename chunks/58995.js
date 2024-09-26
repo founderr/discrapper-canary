@@ -24,17 +24,17 @@ var a = n(735250),
     R = n(981631),
     C = n(921944),
     y = n(689938),
-    b = n(679583),
-    L = n(933283);
+    L = n(679583),
+    b = n(933283);
 let D = A.Z.Millis.DAYS_30;
 function M(e) {
     let { animatedIconComponent: t, hovered: r, isCoachmarkDismissed: i } = e,
         o = !i || r;
     return (0, a.jsxs)('div', {
-        className: b.iconContainer,
+        className: L.iconContainer,
         children: [
             (0, a.jsx)('div', {
-                className: l()(b.decorativeLayer, { [b.decorativeLayerActive]: o }),
+                className: l()(L.decorativeLayer, { [L.decorativeLayerActive]: o }),
                 style: { zIndex: 3 },
                 children: (0, a.jsx)(_.LottieAnimation, {
                     shouldAnimate: !0,
@@ -42,12 +42,12 @@ function M(e) {
                 })
             }),
             (0, a.jsx)('div', {
-                className: l()(b.giftIconButton, { [b.giftIconButtonActive]: o }),
+                className: l()(L.giftIconButton, { [L.giftIconButtonActive]: o }),
                 style: { zIndex: 2 },
                 children: (0, a.jsx)(t, { color: 'currentColor' })
             }),
             (0, a.jsx)('div', {
-                className: l()(b.decorativeLayer, { [b.decorativeLayerActive]: o }),
+                className: l()(L.decorativeLayer, { [L.decorativeLayerActive]: o }),
                 style: { zIndex: 1 },
                 children: (0, a.jsx)(_.LottieAnimation, {
                     shouldAnimate: !0,
@@ -89,7 +89,7 @@ function P(e) {
         });
     };
     return (0, a.jsxs)('div', {
-        className: b.container,
+        className: L.container,
         onMouseEnter: () => {
             !i && s(!0);
         },
@@ -104,7 +104,7 @@ function P(e) {
                     markAsDismissed: G
                 }),
             (0, a.jsx)(O.Z, {
-                innerClassName: L.button,
+                innerClassName: b.button,
                 'aria-label': y.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                 isActive: !1,
                 onClick: () => {

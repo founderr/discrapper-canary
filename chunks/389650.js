@@ -21,19 +21,19 @@ var n = t(735250),
     I = t(825209),
     N = t(721383),
     A = t(612226),
-    m = t(579806),
-    C = t(714338),
+    C = t(579806),
+    m = t(714338),
     g = t(924557),
     h = t(600164),
     O = t(74299),
     p = t(960861),
     R = t(131951),
     x = t(556296),
-    f = t(808506),
-    M = t(63063),
+    M = t(808506),
+    f = t(63063),
     D = t(358085),
-    P = t(13140),
-    L = t(210887),
+    L = t(13140),
+    P = t(210887),
     b = t(659947),
     Z = t(981631),
     v = t(70722),
@@ -63,12 +63,12 @@ let Y = l()((0, A.Rv)())
         .filter((e) => e.description !== B.Z.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG)
         .groupBy((e) => e.group)
         .value(),
-    w = _.ZP.connectStores([L.Z], () => ({ theme: L.Z.theme }))(E.EmptyState);
+    w = _.ZP.connectStores([P.Z], () => ({ theme: P.Z.theme }))(E.EmptyState);
 class k extends a.PureComponent {
     renderMessage() {
         let { keybind: e } = this.props,
-            s = P.BB(e.shortcut);
-        return C.Z.hasBind(s)
+            s = L.BB(e.shortcut);
+        return m.Z.hasBind(s)
             ? (0, n.jsx)(E.FormText, {
                   className: U.keybindMessage,
                   type: E.FormTextTypes.DESCRIPTION,
@@ -80,7 +80,7 @@ class k extends a.PureComponent {
                     className: U.keybindMessage,
                     type: E.FormTextTypes.DESCRIPTION,
                     style: { color: u.Z.unsafe_rawColors.RED_400.css },
-                    children: B.Z.Messages.KEYBIND_NAVIGATION_CONFLICT.format({ keyboardNavArticle: M.Z.getArticleURL(Z.BhN.KEYBOARD_NAVIGATION) })
+                    children: B.Z.Messages.KEYBIND_NAVIGATION_CONFLICT.format({ keyboardNavArticle: f.Z.getArticleURL(Z.BhN.KEYBOARD_NAVIGATION) })
                 })
               : (0, n.jsx)(E.FormText, {
                     className: U.keybindMessage,
@@ -239,7 +239,7 @@ class H extends a.PureComponent {
                 value: Z.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
                 label: B.Z.Messages.KEYBIND_ACTIVATE_OVERLAY_CHAT
             }));
-        let i = (0, D.isMac)() && !d().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, v.jR);
+        let i = (0, D.isMac)() && !d().satisfies(null === C.Z || void 0 === C.Z ? void 0 : C.Z.os.release, v.jR);
         return (
             s &&
                 ((0, D.isWindows)() || p.ZP.enabled()) &&
@@ -478,7 +478,7 @@ class H extends a.PureComponent {
 function W() {
     let e = (0, _.e7)([x.Z], () => x.Z.getState()),
         s = (0, _.e7)([R.Z], () => (0, O.Z)(R.Z)),
-        t = (0, _.e7)([f.Z], () => f.Z.isSupported()),
+        t = (0, _.e7)([M.Z], () => M.Z.isSupported()),
         a = (0, g.Go)();
     return (0, n.jsx)(H, {
         keybinds: e,

@@ -114,11 +114,11 @@ function y(e) {
     let t = N(e, l.G.QUARANTINE_USER_ACTION);
     if (null != t) return t;
 }
-function b(e) {
+function L(e) {
     let t = N(e, l.G.BLOCK_PROFILE_UPDATE_TYPE);
     if (null != t) return t;
 }
-function L(e) {
+function b(e) {
     let t = N(e, l.G.QUARANTINE_EVENT);
     if (null != t) return t;
 }
@@ -176,9 +176,9 @@ function U(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : I.VqG,
         r = arguments.length > 3 ? arguments[3] : void 0,
         i = arguments.length > 4 ? arguments[4] : void 0,
-        a = b(e),
+        a = L(e),
         u = y(e),
-        c = L(e),
+        c = b(e),
         d = C(e),
         _ = R(e),
         E = N(e, l.G.INTERACTION_CALLBACK_TYPE),

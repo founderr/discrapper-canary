@@ -53,16 +53,16 @@ function C(e, t) {
             });
 }
 function y(e, t) {
-    return R.subscribeToGuild(e), null != t && h.ZP.getSection(t) === N.ULH.MEMBERS && b(e, t, c.KV);
+    return R.subscribeToGuild(e), null != t && h.ZP.getSection(t) === N.ULH.MEMBERS && L(e, t, c.KV);
 }
-function b(e, t, n) {
+function L(e, t, n) {
     if (t === f.oL) return R.subscribeChannel(e, t, n);
     let r = p.Z.getChannel(t);
     if (null == r) return !1;
     let i = r.getGuildId();
     return (i !== e && e === N.I_8 && R.subscribeToGuild(i), null != r && r.isThread()) ? (r.type === N.d4z.ANNOUNCEMENT_THREAD ? R.subscribeChannel(i, r.parent_id, n) : !!r.isActiveThread() && R.subscribeThreadMemberList(i, t, A.Z.getChannelId())) : R.subscribeChannel(i, t, n);
 }
-function L(e) {
+function b(e) {
     let { type: t } = e;
     'CONNECTION_OPEN' === t && C(!0, !1);
     let n = v.Z.getGuildId();
@@ -128,7 +128,7 @@ function F(e) {
 }
 function Z(e) {
     let { guildId: t, channelId: n, ranges: r } = e;
-    return b(t, n, r);
+    return L(t, n, r);
 }
 function V(e) {
     let { guildId: t, channelId: n } = e;
@@ -194,8 +194,8 @@ class q extends (i = l.ZP.Store) {
 }
 O(q, 'displayName', 'GuildSubscriptionsStore'),
     (t.Z = new q(u.Z, {
-        CONNECTION_OPEN: L,
-        CONNECTION_RESUMED: L,
+        CONNECTION_OPEN: b,
+        CONNECTION_RESUMED: b,
         CONNECTION_CLOSED: D,
         IDLE: M,
         LOGOUT: P,

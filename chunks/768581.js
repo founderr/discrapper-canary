@@ -22,7 +22,7 @@ n.d(t, {
         return en;
     },
     gT: function () {
-        return b;
+        return L;
     },
     ov: function () {
         return M;
@@ -76,7 +76,7 @@ function y(e) {
     let E = {};
     return null != o && (E.size = (0, f.oO)(o * (0, f.x_)())), null != l && (E.keep_aspect_ratio = l), t + '?'.concat(_.stringify(E));
 }
-function b(e) {
+function L(e) {
     let { id: t, animated: n, size: r, forcePNG: i = !1 } = e,
         a = A && !i ? 'webp' : 'png',
         o = A && !C ? '&quality=lossless' : '';
@@ -90,7 +90,7 @@ function b(e) {
               .concat(o)
         : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + I.ANM.EMOJI(t, n ? 'gif' : a);
 }
-function L(e, t) {
+function b(e, t) {
     if (null == e && null == t) return S[0];
     let n = (0, h.Lk)(t, 0);
     return n > 0 ? S[n % v] : null != e ? S[d()(e).shiftRight(22).mod(N).toJSNumber()] : S[0];
@@ -120,7 +120,7 @@ function M(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : I.IXf,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-    return null !== (t = D(e, n, r, i)) && void 0 !== t ? t : L(e.id, e.discriminator);
+    return null !== (t = D(e, n, r, i)) && void 0 !== t ? t : b(e.id, e.discriminator);
 }
 function P(e) {
     let t,
@@ -367,7 +367,7 @@ function ea(e) {
 }
 t.ZP = {
     getUserAvatarURL: M,
-    getDefaultAvatarURL: L,
+    getDefaultAvatarURL: b,
     getGuildMemberAvatarURL: U,
     getGuildMemberAvatarURLSimple: P,
     getGuildMemberAvatarSource: w,
@@ -388,7 +388,7 @@ t.ZP = {
     getNewMemberActionIconURL: Y,
     getGuildTemplateIconURL: z,
     getChannelIconURL: J,
-    getEmojiURL: b,
+    getEmojiURL: L,
     getApplicationIconURL: q,
     getGameAssetURL: Q,
     getVideoFilterAssetURL: X,

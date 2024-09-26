@@ -44,11 +44,11 @@ function C(e) {
         })),
         c = a === A.z.SERVER_SHOP,
         C = (0, E.e7)([h.ZP], () => (null != n ? h.ZP.getTrueMember(t, n.id) : null)),
-        [y, b] = (0, f.useMultiSelect)(null == l ? [] : T.default.keys(l)),
-        L = s.useRef(r);
+        [y, L] = (0, f.useMultiSelect)(null == l ? [] : T.default.keys(l)),
+        b = s.useRef(r);
     s.useEffect(() => {
         let e = {},
-            t = L.current;
+            t = b.current;
         if (null != t && null != a) {
             for (let t of y) {
                 let n = i[t];
@@ -98,7 +98,7 @@ function C(e) {
               children: (0, o.jsx)(f.Combobox, {
                   placeholder: N.Z.Messages.SEARCH_ROLES,
                   value: y,
-                  onChange: b,
+                  onChange: L,
                   autoFocus: !0,
                   children: (e) => {
                       let t = M.reduce(

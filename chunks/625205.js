@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return m;
     }
 }),
     t(47120);
@@ -21,11 +21,11 @@ var a = t(392711),
     I = t(65154),
     N = t(689938),
     A = t(416805),
-    m = t(113207);
-function C() {
+    C = t(113207);
+function m() {
     let e, s;
     let { analyticsLocations: a } = (0, d.ZP)(),
-        C = (0, r.e7)([T.Z], () => T.Z.theme),
+        m = (0, r.e7)([T.Z], () => T.Z.theme),
         {
             canSetInputDevice: g,
             canSetOutputDevice: h,
@@ -42,24 +42,24 @@ function C() {
     !g &&
         (e = (0, n.jsx)(l.FormText, {
             type: l.FormText.Types.DESCRIPTION,
-            className: m.marginTop8,
+            className: C.marginTop8,
             children: N.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, S.y)('Help Text Input Devices') })
         })),
         !h &&
             (s = (0, n.jsx)(l.FormText, {
                 type: l.FormText.Types.DESCRIPTION,
-                className: m.marginTop8,
+                className: C.marginTop8,
                 children: N.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, S.y)('Help Text Output Devices') })
             }));
-    let f = i()(R).values().first(),
-        M = null != f ? f.disabled : null != e,
+    let M = i()(R).values().first(),
+        f = null != M ? M.disabled : null != e,
         D = i()(x).values().first(),
-        P = null != D ? D.disabled : null != s;
-    function L(e) {
+        L = null != D ? D.disabled : null != s;
+    function P(e) {
         let s,
             { label: a, value: i } = e;
         if (u.Z.isCertified(i)) {
-            let e = (0, o.ap)(C) ? t(561259) : t(887695);
+            let e = (0, o.ap)(m) ? t(561259) : t(887695);
             s = (0, n.jsx)('img', {
                 src: e,
                 alt: 'Certified',
@@ -82,17 +82,17 @@ function C() {
         );
     }
     function b(e) {
-        return L(e[0]);
+        return P(e[0]);
     }
     return (0, n.jsxs)(_.Z, {
-        className: m.marginBottom20,
+        className: C.marginBottom20,
         children: [
             (0, n.jsxs)(_.Z.Child, {
                 basis: '50%',
                 children: [
                     (0, n.jsx)(l.FormTitle, {
                         tag: l.FormTitleTags.H5,
-                        className: m.marginBottom8,
+                        className: C.marginBottom8,
                         children: N.Z.Messages.FORM_LABEL_INPUT_DEVICE
                     }),
                     (0, n.jsx)(l.SingleSelect, {
@@ -109,9 +109,9 @@ function C() {
                                 label: t
                             };
                         }),
-                        isDisabled: M,
+                        isDisabled: f,
                         renderOptionValue: b,
-                        renderOptionLabel: L
+                        renderOptionLabel: P
                     }),
                     e
                 ]
@@ -121,7 +121,7 @@ function C() {
                 children: [
                     (0, n.jsx)(l.FormTitle, {
                         tag: l.FormTitleTags.H5,
-                        className: m.marginBottom8,
+                        className: C.marginBottom8,
                         children: N.Z.Messages.FORM_LABEL_OUTPUT_DEVICE
                     }),
                     (0, n.jsx)(l.SingleSelect, {
@@ -138,9 +138,9 @@ function C() {
                                 label: t
                             };
                         }),
-                        isDisabled: P,
+                        isDisabled: L,
                         renderOptionValue: b,
-                        renderOptionLabel: L
+                        renderOptionLabel: P
                     }),
                     s
                 ]

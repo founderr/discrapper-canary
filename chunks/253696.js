@@ -42,13 +42,13 @@ function I(e) {
         R = v.slice(0, O),
         C = null != g ? o.ZP.getGuildEmoji(g) : [],
         y = Object.values(null !== (t = o.ZP.getDisambiguatedEmojiContext(null == T ? void 0 : T.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => (e += t.length), 0),
-        { topEmojis: b, newlyAddedEmojis: L } = (0, E._)({
+        { topEmojis: L, newlyAddedEmojis: b } = (0, E._)({
             guildId: null == T ? void 0 : T.getGuildId(),
             pickerIntention: n
         }),
         { visibleTopEmojis: D, visibleNewlyAddedEmojis: M } = (0, _.J)({
-            topEmojis: b,
-            newlyAddedEmojis: L,
+            topEmojis: L,
+            newlyAddedEmojis: b,
             rowSize: i
         });
     a.ZP.trackWithMetadata(n === h.Hz.REACTION ? f.rMx.REACTION_PICKER_OPENED : f.rMx.EXPRESSION_PICKER_OPENED, {

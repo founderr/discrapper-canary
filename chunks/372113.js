@@ -25,8 +25,8 @@ var i = n(120356),
     R = n(981631),
     C = n(689938),
     y = n(389444),
-    b = n(789002);
-let L = (e, t, n) => ((0, v.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
+    L = n(789002);
+let b = (e, t, n) => ((0, v.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
 function D(e) {
     let { containerSize: t, onClick: n, children: i, tabIndex: a } = e;
     return 'xs' === t
@@ -91,18 +91,18 @@ function M(e) {
                   reward: A,
                   date: g
               });
-    let b = S
+    let L = S
         ? (0, p.o9)({
               quest: s,
               idx: 0
           })
         : null;
     return _
-        ? C.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({ reward: null !== (o = null == b ? void 0 : b.messages.nameWithArticle) && void 0 !== o ? o : A })
-        : null != b && null != b.approximateCount
+        ? C.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({ reward: null !== (o = null == L ? void 0 : L.messages.nameWithArticle) && void 0 !== o ? o : A })
+        : null != L && null != L.approximateCount
           ? C.Z.Messages.QUEST_REWARD_TIERED.format({
-                maxReward: b.messages.nameWithArticle,
-                maxRewardCount: (0, d.Bs)(b.approximateCount, u),
+                maxReward: L.messages.nameWithArticle,
+                maxRewardCount: (0, d.Bs)(L.approximateCount, u),
                 helpCenterLink: c.Z.getArticleURL(R.BhN.QUESTS_LEARN_MORE)
             })
           : null != N
@@ -118,7 +118,7 @@ let P = (e) => {
     let { quest: t, location: n, size: i, isFocused: l, isQuestExpired: c, isExpanded: d, isAnimating: f, contentPosition: m } = e,
         g = (0, E._Q)(t),
         R = g >= E.OH.ACCEPTED,
-        b = g >= E.OH.COMPLETED,
+        L = g >= E.OH.COMPLETED,
         P = g >= E.OH.CLAIMED,
         w = (0, p.Xv)(t.config),
         x = (0, v.uq)(n),
@@ -139,8 +139,8 @@ let P = (e) => {
         H = (0, o.e7)([u.default], () => u.default.locale),
         Y = (0, E.z)(t),
         j = x && w,
-        W = c && !b,
-        K = Z.length > 0 && x && (0, p.$J)(t) && R && !b && !Y,
+        W = c && !L,
+        K = Z.length > 0 && x && (0, p.$J)(t) && R && !L && !Y,
         z = (0, r.jsx)(T.Z, {
             autoplay: l,
             className: a()(y.gridImg, {
@@ -156,7 +156,7 @@ let P = (e) => {
             questContentPosition: m
         }),
         q = () =>
-            c && !b
+            c && !L
                 ? null
                 : (0, r.jsx)(U, {
                       quest: t,
@@ -205,7 +205,7 @@ let P = (e) => {
                         className: a()(y.gridText, y.taskDetails),
                         children: [
                             (0, r.jsx)(s.Text, {
-                                variant: L(n, i, R),
+                                variant: b(n, i, R),
                                 className: y.taskInstructions,
                                 children: c ? C.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({ questName: t.config.messages.questName }) : F
                             }),
@@ -236,7 +236,7 @@ let P = (e) => {
                     B &&
                         (0, r.jsx)(I.Z, {
                             className: y.gridProgressBar,
-                            color: b ? s.tokens.colors.TEXT_POSITIVE : s.tokens.colors.BG_BRAND,
+                            color: L ? s.tokens.colors.TEXT_POSITIVE : s.tokens.colors.BG_BRAND,
                             quest: t,
                             isInventory: x
                         })
@@ -293,7 +293,7 @@ function U(e) {
                         children: [
                             T &&
                                 (0, r.jsx)('img', {
-                                    src: b,
+                                    src: L,
                                     alt: '',
                                     className: y.inHouseIcon
                                 }),

@@ -24,8 +24,8 @@ var s = n(392711),
     R = n(594174),
     C = n(483360),
     y = n(176354),
-    b = n(51144),
-    L = n(981631),
+    L = n(51144),
+    b = n(981631),
     D = n(185923),
     M = n(689938);
 function P(e, t, n) {
@@ -236,10 +236,10 @@ let G = f.Z.RULES,
                 let { isNotification: r } = n,
                     i = R.default.getUser(e[1]);
                 if (null == i) return { content: e[0] };
-                let a = b.ZP.getUserTag(i, { identifiable: r && O.Z.enabled ? 'never' : 'always' });
+                let a = L.ZP.getUserTag(i, { identifiable: r && O.Z.enabled ? 'never' : 'always' });
                 if (!r) return { content: '@'.concat(a) };
                 {
-                    let e = b.ZP.getGlobalName(i);
+                    let e = L.ZP.getGlobalName(i);
                     return { content: null != e ? '@'.concat(e) : '@'.concat(a) };
                 }
             }
@@ -280,11 +280,11 @@ let G = f.Z.RULES,
             }
         },
         spoiler: {
-            match: c().anyScopeRegex(L.$92),
+            match: c().anyScopeRegex(b.$92),
             parse: () => ({ content: '<'.concat(M.Z.Messages.SPOILER.toLowerCase(), '>') })
         },
         staticRouteLink: {
-            match: c().anyScopeRegex(L.PEY),
+            match: c().anyScopeRegex(b.PEY),
             parse: (e) => ({ content: '<id:'.concat(e[1], '>') })
         },
         timestamp: {
@@ -344,7 +344,7 @@ function $(e) {
     let t;
     let n = null == e ? void 0 : e.getGuildId(),
         r = null != n ? A.Z.getGuild(n) : null,
-        i = v.Z.can(L.Plq.MENTION_EVERYONE, e);
+        i = v.Z.can(b.Plq.MENTION_EVERYONE, e);
     t = (null == e ? void 0 : e.isPrivate())
         ? e.recipients.map((e) => ({
               userId: e,

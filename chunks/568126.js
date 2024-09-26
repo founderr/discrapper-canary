@@ -3,37 +3,37 @@ n(470079);
 var a = n(442837),
     r = n(481060),
     i = n(706454),
-    o = n(78839),
-    l = n(985754),
+    l = n(78839),
+    o = n(985754),
     c = n(222727),
     d = n(474494),
     _ = n(981631),
-    u = n(366750);
+    E = n(366750);
 t.Z = function (e) {
     let { localizedPricingPromo: t } = e,
         n = t.countryCode,
-        E = (0, a.e7)([i.default], () => i.default.locale);
+        u = (0, a.e7)([i.default], () => i.default.locale);
     (0, c.U)(_.jXE.SETTINGS_PREMIUM_BANNER, n);
-    let T = (0, a.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
-        { localizedPricingBannerBody: I } = (0, l.vB)({
+    let T = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
+        { localizedPricingBannerBody: I } = (0, o.vB)({
             localizedPricingPromo: t,
             subscription: T,
             forceSingleLine: !0,
-            userLocale: E
+            userLocale: u
         });
     return (0, s.jsxs)('div', {
-        className: u.bannerContainer,
+        className: E.bannerContainer,
         children: [
             (0, s.jsx)(d.Z, {
-                className: u.badge,
+                className: E.badge,
                 countryCode: n
             }),
             (0, s.jsx)('div', {
-                className: u.bannerBodyContainer,
+                className: E.bannerBodyContainer,
                 children: (0, s.jsx)(r.Text, {
                     color: 'none',
                     variant: 'text-md/normal',
-                    className: u.bannerBody,
+                    className: E.bannerBody,
                     children: I
                 })
             })

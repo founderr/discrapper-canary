@@ -85,7 +85,7 @@ function _(e) {
         }, [t]),
         y(u, a, n),
         T(u, n),
-        L(u, a, n),
+        b(u, a, n),
         C(u, o),
         (0, i.useEffect)(() => {
             let e = (0, r.r3)(u.current ? u.current[0] : void 0).activeElement,
@@ -328,7 +328,7 @@ function y(e, t, n) {
         );
     }, [e, t, n]);
 }
-function b(e) {
+function L(e) {
     let t = x.getTreeNode(d);
     for (; t && t.scopeRef !== e; ) {
         if (t.nodeToRestore) return !1;
@@ -336,7 +336,7 @@ function b(e) {
     }
     return (null == t ? void 0 : t.scopeRef) === e;
 }
-function L(e, t, n) {
+function b(e, t, n) {
     let a = (0, i.useRef)('undefined' != typeof document ? (0, r.r3)(e.current ? e.current[0] : void 0).activeElement : null);
     (0, r.bt)(() => {
         let i = e.current,
@@ -392,7 +392,7 @@ function L(e, t, n) {
                         let n = x.getTreeNode(e);
                         if (!n) return;
                         let r = n.nodeToRestore;
-                        if (t && r && (S(i.activeElement, e.current) || (i.activeElement === i.body && b(e)))) {
+                        if (t && r && (S(i.activeElement, e.current) || (i.activeElement === i.body && L(e)))) {
                             let t = x.clone();
                             requestAnimationFrame(() => {
                                 if (i.activeElement === i.body) {

@@ -35,8 +35,8 @@ var u = n(470079),
     R = n(970184),
     C = n(471073),
     y = n(892902),
-    b = n(981631),
-    L = n(689938);
+    L = n(981631),
+    b = n(689938);
 let D = (e) => {
     let t = !0;
     return (
@@ -87,7 +87,7 @@ function U(e, t) {
                 customId: r
             }),
             t()),
-            d === C.i.ERRORED && s(L.Z.Messages.INTERACTION_FORM_SUBMISSION_FAILED);
+            d === C.i.ERRORED && s(b.Z.Messages.INTERACTION_FORM_SUBMISSION_FAILED);
     }, [l, d, t, r]);
     let { applicationIconURL: m, applicationName: I } = P(n);
     return {
@@ -162,7 +162,7 @@ function G(e, t) {
         (null == t || !t.aborted) &&
             E.tn
                 .post({
-                    url: b.ANM.INTERACTIONS,
+                    url: L.ANM.INTERACTIONS,
                     body: {
                         type: h.B8.MODAL_SUBMIT,
                         application_id: e.application.id,

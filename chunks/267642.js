@@ -36,7 +36,7 @@ n.d(t, {
         return y;
     },
     e9: function () {
-        return L;
+        return b;
     },
     f2: function () {
         return x;
@@ -51,7 +51,7 @@ n.d(t, {
         return O;
     },
     nW: function () {
-        return b;
+        return L;
     },
     rF: function () {
         return P;
@@ -288,7 +288,7 @@ let A = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
             ].filter(f.lm)
         }
     ];
-function b(e) {
+function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { useLevels: n = !0 } = t;
     switch (e) {
@@ -304,7 +304,7 @@ function b(e) {
             throw Error('Not a valid tier type');
     }
 }
-function L(e) {
+function b(e) {
     switch (e) {
         case m.Eu4.NONE:
             return T.Z.Messages.PREMIUM_GUILD_TIER_0;

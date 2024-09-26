@@ -97,18 +97,18 @@ function y(e, t, n) {
     for (let i = 0, a, o, s, l, u; i < t; i += n) (o = e[(a = 4 * i) + 0]), (s = e[a + 1]), (l = e[a + 2]), (void 0 === (u = e[a + 3]) || u >= 125) && !(o > 250 && s > 250 && l > 250) && r.push([o, s, l]);
     return r;
 }
-let b = [[0, 0, 0]],
-    L = 128;
+let L = [[0, 0, 0]],
+    b = 128;
 function D(e, t, n) {
     let r = document.createElement('canvas'),
         i = r.getContext('2d');
-    if (null == i) return b;
-    let a = (r.width = 0 === e.width ? L : e.width),
-        o = (r.height = 0 === e.height ? L : e.height);
+    if (null == i) return L;
+    let a = (r.width = 0 === e.width ? b : e.width),
+        o = (r.height = 0 === e.height ? b : e.height);
     i.drawImage(e, 0, 0, a, o);
     let s = y(i.getImageData(0, 0, a, o).data, a * o, n),
         l = S()(s, t);
-    return 'boolean' == typeof l ? b : l.palette();
+    return 'boolean' == typeof l ? L : l.palette();
 }
 let M = (e) => ('number' == typeof e ? null : P(e)),
     P = T().memoize(

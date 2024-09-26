@@ -29,8 +29,8 @@ var r = n(735250),
     R = n(217804),
     C = n(139712),
     y = n(765305),
-    b = n(689938),
-    L = n(639955);
+    L = n(689938),
+    b = n(639955);
 let D = (e, t) => (n) => {
         n.stopPropagation(), c.default.selectVoiceChannel(e.channel_id, !1), null == t || t(n);
     },
@@ -80,40 +80,40 @@ let D = (e, t) => (n) => {
                         (0, r.jsx)(g, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: L.channelIcon
+                            className: b.channelIcon
                         }),
                     (0, r.jsx)(l.Text, {
-                        className: L.channelDescription,
+                        className: b.channelDescription,
                         variant: 'text-xs/normal',
                         children: (0, T.m)(null !== (t = null == h ? void 0 : h.locationName) && void 0 !== t ? t : '', !0)
                     })
                 ]
             });
         return (0, r.jsxs)('div', {
-            className: L.inviteDetailsContainer,
+            className: b.inviteDetailsContainer,
             children: [
                 (0, r.jsx)(_.Z.Icon, {
                     guild: E,
                     onClick: m
                 }),
                 (0, r.jsxs)('div', {
-                    className: L.verticalContainer,
+                    className: b.verticalContainer,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: L.guildChannelInfoContainer,
+                            className: b.guildChannelInfoContainer,
                             children: [
                                 (0, r.jsx)(d.Z, {
                                     guild: E,
                                     tooltipPosition: 'top',
                                     tooltipColor: l.Tooltip.Colors.PRIMARY,
                                     size: 16,
-                                    className: L.guildBadge
+                                    className: b.guildBadge
                                 }),
                                 (0, r.jsx)(l.Clickable, {
-                                    className: L.guildNameClickable,
+                                    className: b.guildNameClickable,
                                     onClick: m,
                                     children: (0, r.jsx)(l.Heading, {
-                                        className: c ? L.guildNameLinkable : L.guildName,
+                                        className: c ? b.guildNameLinkable : b.guildName,
                                         variant: 'text-sm/medium',
                                         children: E.name
                                     })
@@ -121,10 +121,10 @@ let D = (e, t) => (n) => {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: L.channelInfoContainer,
+                            className: b.channelInfoContainer,
                             children: U(a, c)
                                 ? (0, r.jsx)(l.Clickable, {
-                                      className: L.channelLocationLink,
+                                      className: b.channelLocationLink,
                                       onClick: I,
                                       children: S
                                   })
@@ -147,26 +147,26 @@ let D = (e, t) => (n) => {
         return u
             ? a
                 ? (0, r.jsx)(l.Button, {
-                      className: L.button,
+                      className: b.button,
                       size: l.Button.Sizes.SMALL,
                       onClick: (e) => {
                           !c && h(e);
                       },
                       color: c ? l.Button.Colors.TRANSPARENT : l.Button.Colors.GREEN,
-                      children: c ? b.Z.Messages.GUILD_SCHEDULED_EVENT_VIEW_DETAIL : b.Z.Messages.JOIN_GUILD
+                      children: c ? L.Z.Messages.GUILD_SCHEDULED_EVENT_VIEW_DETAIL : L.Z.Messages.JOIN_GUILD
                   })
                 : o
                   ? (0, r.jsx)(l.Button, {
-                        className: L.button,
+                        className: b.button,
                         size: l.Button.Sizes.SMALL,
                         disabled: !0,
                         color: l.Button.Colors.PRIMARY,
                         look: l.Button.Looks.OUTLINED,
-                        children: b.Z.Messages.GUILD_EVENT_INVITE_COMPLETED
+                        children: L.Z.Messages.GUILD_EVENT_INVITE_COMPLETED
                     })
                   : (0, r.jsxs)(l.Button, {
-                        className: L.button,
-                        innerClassName: L.innerButton,
+                        className: b.button,
+                        innerClassName: b.innerButton,
                         size: l.Button.Sizes.SMALL,
                         color: l.Button.Colors.PRIMARY,
                         look: E ? l.Button.Looks.OUTLINED : l.Button.Looks.FILLED,
@@ -176,22 +176,22 @@ let D = (e, t) => (n) => {
                                 ? (0, r.jsx)(l.CheckmarkLargeIcon, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: L.buttonIcon
+                                      className: b.buttonIcon
                                   })
                                 : (0, r.jsx)(l.BellIcon, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: L.buttonIcon
+                                      className: b.buttonIcon
                                   }),
-                            b.Z.Messages.INDICATE_RSVP
+                            L.Z.Messages.INDICATE_RSVP
                         ]
                     })
             : (0, r.jsx)(l.Button, {
-                  className: L.button,
+                  className: b.button,
                   size: l.Button.Sizes.SMALL,
                   onClick: h,
                   color: l.Button.Colors.GREEN,
-                  children: b.Z.Messages.JOIN_GUILD
+                  children: L.Z.Messages.JOIN_GUILD
               });
     }),
     G = i.memo(function (e) {
@@ -211,21 +211,21 @@ let D = (e, t) => (n) => {
         if (null == n || !h) return null;
         let R = (0, I.xt)(n),
             C = (0, I.Z2)(n),
-            b = n.entity_type === y.WX.EXTERNAL;
+            L = n.entity_type === y.WX.EXTERNAL;
         return (0, r.jsx)(_.Z, {
-            className: o()({ [L.clickable]: u }),
+            className: o()({ [b.clickable]: u }),
             children: (0, r.jsxs)(l.Clickable, {
                 onClick: T,
                 children: [
                     null != n.image &&
                         (0, r.jsx)(N.Z, {
                             source: (0, v.Z)(n),
-                            className: L.banner
+                            className: b.banner
                         }),
                     (0, r.jsx)(O.ZP, {
                         name: n.name,
                         description: null !== (t = n.description) && void 0 !== t ? t : void 0,
-                        descriptionClassName: L.eventDescription,
+                        descriptionClassName: b.eventDescription,
                         guildId: n.guild_id,
                         creator: p,
                         guildEvent: n,
@@ -233,7 +233,7 @@ let D = (e, t) => (n) => {
                         recurrenceId: f
                     }),
                     (0, r.jsxs)('div', {
-                        className: L.footerContainer,
+                        className: b.footerContainer,
                         children: [
                             (0, r.jsx)(w, {
                                 guild: a,
@@ -250,7 +250,7 @@ let D = (e, t) => (n) => {
                                 recurrenceId: f,
                                 onAcceptInstantInvite: d,
                                 onTransitionToInviteChannel: E,
-                                isExternal: b
+                                isExternal: L
                             })
                         ]
                     })

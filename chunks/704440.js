@@ -29,7 +29,7 @@ var a = n(735250),
     R = n(397293),
     C = n(352175),
     y = n(90351);
-let b = async (e, t, n) => {
+let L = async (e, t, n) => {
         n(!0),
             await (0, T.Eo)(e)
                 .then(() => {
@@ -39,7 +39,7 @@ let b = async (e, t, n) => {
                     n(!1);
                 });
     },
-    L = (e) => {
+    b = (e) => {
         let { onClose: t, referralsRemaining: n, recipient: r, analyticsLocations: i, shouldShowBirthdayUX: s } = e,
             [u, c] = o.useState(!1),
             d = n - 1;
@@ -83,7 +83,7 @@ let b = async (e, t, n) => {
                             className: N.confirmationShareButton,
                             submitting: u,
                             onClick: () => {
-                                b(r, t, c),
+                                L(r, t, c),
                                     p.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
                                         location_stack: i,
                                         step: S.fz.FLOW_COMPLETED,
@@ -119,7 +119,7 @@ function D(e) {
     return null == T
         ? null
         : s
-          ? (0, a.jsx)(L, {
+          ? (0, a.jsx)(b, {
                 onClose: r,
                 referralsRemaining: t,
                 recipient: T,
@@ -183,7 +183,7 @@ function D(e) {
                             submitting: d,
                             onClick: () => {
                                 i
-                                    ? b(T, r, E)
+                                    ? L(T, r, E)
                                     : (u(!0),
                                       p.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
                                           location_stack: C,

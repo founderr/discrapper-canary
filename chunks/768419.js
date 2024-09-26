@@ -22,8 +22,8 @@ var E = n(392711),
     R = n(553795),
     C = n(517100),
     y = n(158776),
-    b = n(606304),
-    L = n(979651),
+    L = n(606304),
+    b = n(979651),
     D = n(626135),
     M = n(81063),
     P = n(70956),
@@ -362,11 +362,11 @@ function ey(e) {
     let { accountId: t, devices: n } = e;
     (el[t] = n), et.info('Devices updated for '.concat(t, ':'), n);
 }
-function eb(e) {
+function eL(e) {
     let { accountId: t, deviceId: n } = e;
     eg(t, n);
 }
-function eL(e) {
+function eb(e) {
     var t;
     let n,
         { activity: r, metadata: a } = e,
@@ -416,7 +416,7 @@ function eP() {
 }
 function eU(e) {
     if (e === O.default.getId()) {
-        let t = L.Z.isCurrentClientInVoiceChannel(),
+        let t = b.Z.isCurrentClientInVoiceChannel(),
             n = (0, g.O)({
                 userId: e,
                 checkSoundSharing: !0,
@@ -546,7 +546,7 @@ function eF(e, t) {
 }
 class eZ extends (s = p.ZP.Store) {
     initialize() {
-        this.waitFor(R.Z, b.Z), this.syncWith([y.Z], () => eM()), (0, w.k1)();
+        this.waitFor(R.Z, L.Z), this.syncWith([y.Z], () => eM()), (0, w.k1)();
     }
     hasConnectedAccount() {
         return Object.keys(es).length > 0;
@@ -643,11 +643,11 @@ let eV = new eZ(T.Z, {
     SPOTIFY_PROFILE_UPDATE: eG,
     SPOTIFY_PLAYER_STATE: eR,
     SPOTIFY_PLAYER_PLAY: eC,
-    ACTIVITY_PLAY: eL,
+    ACTIVITY_PLAY: eb,
     ACTIVITY_SYNC: eD,
     ACTIVITY_SYNC_STOP: eA,
     SPOTIFY_SET_DEVICES: ey,
-    SPOTIFY_SET_ACTIVE_DEVICE: eb,
+    SPOTIFY_SET_ACTIVE_DEVICE: eL,
     SPEAKING: ew,
     VOICE_STATE_UPDATES: ex,
     MEDIA_ENGINE_SET_GO_LIVE_SOURCE: ek

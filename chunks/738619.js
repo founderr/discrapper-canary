@@ -29,8 +29,8 @@ var a = n(735250),
     R = n(314897),
     C = n(430824),
     y = n(496675),
-    b = n(699516),
-    L = n(885110),
+    L = n(699516),
+    b = n(885110),
     D = n(300429),
     M = n(111583),
     P = n(594174),
@@ -144,7 +144,7 @@ class K extends o.PureComponent {
                 : c()(o)
                       .keys()
                       .filter((e) => e !== (null == A ? void 0 : A.id))
-                      .reject((e) => b.Z.isBlocked(e))
+                      .reject((e) => L.Z.isBlocked(e))
                       .map((e) => P.default.getUser(e))
                       .filter(k.lm)
                       .map((e) => B.ZP.getName(t, this.props.channel.id, e))
@@ -160,11 +160,11 @@ class K extends o.PureComponent {
                       guild: v
                   });
         let y = '',
-            L = null,
+            b = null,
             D = '';
         if (O) {
             if (
-                ((L = (0, a.jsx)(m.TimerIcon, {
+                ((b = (0, a.jsx)(m.TimerIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     className: V.slowModeIcon
@@ -238,7 +238,7 @@ class K extends o.PureComponent {
                                     style: this.getCooldownTextStyle(),
                                     className: V.cooldownWrapper,
                                     ...e,
-                                    children: [y, L]
+                                    children: [y, b]
                                 })
                         }),
                     I && T && (0, a.jsx)(N.Z, { channelId: f.id })
@@ -269,7 +269,7 @@ class K extends o.PureComponent {
 }
 function z(e) {
     let { channel: t, isThreadCreation: n = !1, ...r } = e,
-        i = (0, h.e7)([L.Z], () => L.Z.findActivity((e) => null != e.application_id)),
+        i = (0, h.e7)([b.Z], () => b.Z.findActivity((e) => null != e.application_id)),
         o = (0, h.e7)([v.ZP, R.default], () => v.ZP.getUserCombo(R.default.getId(), t.id)),
         s = (0, h.e7)([O.Z, g.Z], () => (0, T.Z)(t, i, O.Z, g.Z)),
         l = (0, h.e7)([D.Z], () => D.Z.getSlowmodeCooldownGuess(t.id, n ? D.S.CreateThread : D.S.SendMessage)),

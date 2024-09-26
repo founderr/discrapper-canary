@@ -225,17 +225,17 @@ function y(e, t) {
     let n = m(e, t);
     return e.subtract({ days: n });
 }
-let b = new Map();
-function L(e) {
+let L = new Map();
+function b(e) {
     if (Intl.Locale) {
-        let t = b.get(e);
-        return !t && ((t = new Intl.Locale(e).maximize().region), b.set(e, t)), t;
+        let t = L.get(e);
+        return !t && ((t = new Intl.Locale(e).maximize().region), L.set(e, t)), t;
     }
     let t = e.split('-')[1];
     return 'u' === t ? null : t;
 }
 function D(e) {
-    return f[L(e)] || 0;
+    return f[b(e)] || 0;
 }
 function M(e, t) {
     let n = e.calendar.getDaysInMonth(e);
@@ -245,7 +245,7 @@ let P = null;
 function U(e, t) {
     let n = Math.ceil(e.calendar.toJulianDay(e) + 1) % 7;
     n < 0 && (n += 7);
-    let [r, i] = P[L(t)] || [6, 0];
+    let [r, i] = P[b(t)] || [6, 0];
     return n === r || n === i;
 }
 function w(e) {
@@ -570,9 +570,9 @@ let eN = /^(\d{2})(?::(\d{2}))?(?::(\d{2}))?(\.\d+)?$/,
     eR = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}))?(?::(\d{2}))?(?::(\d{2}))?(\.\d+)?$/,
     eC = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}))?(?::(\d{2}))?(?::(\d{2}))?(\.\d+)?(?:([+-]\d{2})(?::?(\d{2}))?)?\[(.*?)\]$/,
     ey = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}))?(?::(\d{2}))?(?::(\d{2}))?(\.\d+)?(?:(?:([+-]\d{2})(?::?(\d{2}))?)|Z)$/,
-    eb = /^((?<negative>-)|\+)?P((?<years>\d*)Y)?((?<months>\d*)M)?((?<weeks>\d*)W)?((?<days>\d*)D)?((?<time>T)((?<hours>\d*[.,]?\d{1,9})H)?((?<minutes>\d*[.,]?\d{1,9})M)?((?<seconds>\d*[.,]?\d{1,9})S)?)?$/,
-    eL = ['hours', 'minutes', 'seconds'],
-    eD = ['years', 'months', 'weeks', 'days', ...eL];
+    eL = /^((?<negative>-)|\+)?P((?<years>\d*)Y)?((?<months>\d*)M)?((?<weeks>\d*)W)?((?<days>\d*)D)?((?<time>T)((?<hours>\d*[.,]?\d{1,9})H)?((?<minutes>\d*[.,]?\d{1,9})M)?((?<seconds>\d*[.,]?\d{1,9})S)?)?$/,
+    eb = ['hours', 'minutes', 'seconds'],
+    eD = ['years', 'months', 'weeks', 'days', ...eb];
 function eM(e, t) {
     var n;
     let r = e.match(ey);
@@ -1120,16 +1120,16 @@ function ty(e) {
         r = 29 * t + Math.floor(n / 25920);
     return 3 > o(3 * (r + 1), 7) && (r += 1), r;
 }
-function tb(e) {
+function tL(e) {
     let t = ty(e - 1),
         n = ty(e);
     return ty(e + 1) - n == 356 ? 2 : n - t == 382 ? 1 : 0;
 }
-function tL(e) {
-    return ty(e) + tb(e);
+function tb(e) {
+    return ty(e) + tL(e);
 }
 function tD(e) {
-    return tL(e + 1) - tL(e);
+    return tb(e + 1) - tb(e);
 }
 function tM(e) {
     let t = tD(e);
@@ -1151,9 +1151,9 @@ class tU {
     fromJulianDay(e) {
         let t = e - tv,
             n = Math.floor((((t * tO) / tR) * 19 + 234) / 235) + 1,
-            r = tL(n),
+            r = tb(n),
             i = Math.floor(t - r);
-        for (; i < 1; ) i = Math.floor(t - (r = tL(--n)));
+        for (; i < 1; ) i = Math.floor(t - (r = tb(--n)));
         let a = 1,
             o = 0;
         for (; o < i; ) (o += tP(n, a)), a++;
@@ -1161,7 +1161,7 @@ class tU {
         return new eZ(this, n, a, s);
     }
     toJulianDay(e) {
-        let t = tL(e.year);
+        let t = tb(e.year);
         for (let n = 1; n < e.month; n++) t += tP(e.year, n);
         return t + e.day + tv;
     }

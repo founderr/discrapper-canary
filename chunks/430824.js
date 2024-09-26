@@ -96,7 +96,7 @@ function y(e) {
         }),
         (m[t.id] = d.C5(t.id, e.guild.roles));
 }
-function b(e) {
+function L(e) {
     g = [
         ...g,
         {
@@ -108,7 +108,7 @@ function b(e) {
         }
     ];
 }
-function L(e) {
+function b(e) {
     let { guild: t } = e,
         n = g.findIndex((e) => e.id === t.id);
     if (-1 !== n) {
@@ -193,11 +193,11 @@ p(x, 'displayName', 'GuildStore'),
         CACHE_LOADED_LAZY: O,
         GUILD_CREATE: C,
         GUILD_UPDATE: y,
-        GUILD_DELETE: L,
+        GUILD_DELETE: b,
         GUILD_ROLE_CREATE: D,
         GUILD_ROLE_UPDATE: D,
         GUILD_ROLE_DELETE: M,
         GUILD_MEMBER_ADD: P,
         GUILD_SETTINGS_SUBMIT_SUCCESS: U,
-        GUILD_GEO_RESTRICTED: b
+        GUILD_GEO_RESTRICTED: L
     }));

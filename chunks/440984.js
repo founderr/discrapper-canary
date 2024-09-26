@@ -1,6 +1,6 @@
 t.d(s, {
     D: function () {
-        return C;
+        return m;
     }
 }),
     t(47120);
@@ -20,37 +20,37 @@ var n = t(735250),
     I = t(689938),
     N = t(265791),
     A = t(982404),
-    m = t(299156);
-function C(e) {
-    let { premiumSubscription: s, premiumType: t, onClose: C, confettiCanvas: g, userWasChurned: h = !1, userDiscountOffer: O } = e,
+    C = t(299156);
+function m(e) {
+    let { premiumSubscription: s, premiumType: t, onClose: m, confettiCanvas: g, userWasChurned: h = !1, userDiscountOffer: O } = e,
         p = (0, l.ZP)(),
-        R = (0, r.wj)(p) ? A : m,
+        R = (0, r.wj)(p) ? A : C,
         x = a.useRef(null),
-        [f, M] = a.useState(!1),
+        [M, f] = a.useState(!1),
         D = (0, E._)(s, S.Xh.PREMIUM_MONTH_TIER_2, O),
-        P = (0, _.aS)(S.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+        L = (0, _.aS)(S.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: s.currency,
             paymentSourceId: s.paymentSourceId
         }),
-        L = (0, u.T4)(P.amount, P.currency),
+        P = (0, u.T4)(L.amount, L.currency),
         b = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
         (a.useEffect(() => {
-            null != x.current && null != D && M(!0);
-        }, [x, f, D]),
+            null != x.current && null != D && f(!0);
+        }, [x, M, D]),
         null == O || null == D)
     )
         return null;
     let Z = I.Z.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
             numMonths: O.discount.user_usage_limit,
             discountedPrice: D,
-            regularPrice: L
+            regularPrice: P
         }),
         v = (0, n.jsx)('div', {
             className: N.whatYouLoseButtonContainer,
             children: (0, n.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
-                onClick: C,
+                onClick: m,
                 children: I.Z.Messages.PREMIUM_DISCOUNT_SWEET
             })
         });
@@ -59,7 +59,7 @@ function C(e) {
             (0, n.jsx)(T.Z, {
                 premiumType: t,
                 className: N.cancellationHeader,
-                onClose: C
+                onClose: m
             }),
             (0, n.jsx)('div', {
                 ref: x,
@@ -94,7 +94,7 @@ function C(e) {
                 })
             }),
             !b &&
-                f &&
+                M &&
                 (0, n.jsx)(d.Z, {
                     confettiTarget: x.current,
                     confettiCanvas: g,

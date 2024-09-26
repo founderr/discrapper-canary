@@ -59,7 +59,7 @@ class y {
         });
     }
 }
-class b {
+class L {
     static makeEmptyGroupAnalytics() {
         return {
             [v.Vk.Nudge]: 0,
@@ -123,8 +123,8 @@ class b {
             [v.bv.Clicked]: 0
         }),
             N(this, 'groupCounters', {
-                [v.bv.Viewed]: b.makeEmptyGroupAnalytics(),
-                [v.bv.Clicked]: b.makeEmptyGroupAnalytics()
+                [v.bv.Viewed]: L.makeEmptyGroupAnalytics(),
+                [v.bv.Clicked]: L.makeEmptyGroupAnalytics()
             }),
             N(this, 'counters', {
                 [v.n0.NewsNudge]: new y(),
@@ -145,7 +145,7 @@ class b {
 !(function (e) {
     (e[(e.Voice = 0)] = 'Voice'), (e[(e.Text = 1)] = 'Text');
 })(r || (r = {}));
-class L {
+class b {
     static makeEmptyAnalytics() {
         return {
             initialized: !1,
@@ -181,8 +181,8 @@ class L {
     }
     constructor() {
         N(this, 'types', {
-            0: L.makeEmptyAnalytics(),
-            1: L.makeEmptyAnalytics()
+            0: b.makeEmptyAnalytics(),
+            1: b.makeEmptyAnalytics()
         });
     }
 }
@@ -391,7 +391,7 @@ class M {
         for (let t of Object.values(M.gamesByPid)) t.rtcConnectionTimer.toggle(e);
     }
     constructor(e) {
-        N(this, 'game', void 0), N(this, 'uuid', void 0), N(this, 'overlayStatus', void 0), N(this, 'notificationAnalytics', void 0), N(this, 'widgetAnalytics', void 0), N(this, 'screenAnalytics', void 0), N(this, 'uiUnlockedCount', void 0), N(this, 'uiLockedCount', void 0), N(this, 'gameFocusChangedCount', void 0), N(this, 'gameConcurrentGameCount', void 0), N(this, 'overlayMessageAckCount', void 0), N(this, 'overlayMessageCreateCount', void 0), N(this, 'gameTimer', void 0), N(this, 'gameFocusedTimer', void 0), N(this, 'unlockedTimer', void 0), N(this, 'rtcConnectionTimer', void 0), N(this, 'desktopFocusedTimer', void 0), N(this, 'desktopFocusChangedCount', void 0), N(this, 'desktopMessageAckCount', void 0), N(this, 'desktopMessageCreateCount', void 0), N(this, 'soundboardShownTimer', void 0), N(this, 'soundboardShownCount', void 0), N(this, 'soundboardKeepOpenCount', void 0), N(this, 'muteToggledCount', void 0), N(this, '_successfullyShown', void 0), (this.game = e), (this.uuid = crypto.randomUUID()), (this.notificationAnalytics = new b()), (this.widgetAnalytics = new L()), (this.uiUnlockedCount = 0), (this.uiLockedCount = 0), (this.gameFocusChangedCount = 0), (this.gameConcurrentGameCount = 0), (this.overlayMessageAckCount = 0), (this.overlayMessageCreateCount = 0), (this.gameTimer = s.G9.startNew()), (this.gameFocusedTimer = new s.G9()), (this.unlockedTimer = new s.G9()), (this.rtcConnectionTimer = new s.G9()), (this.desktopFocusedTimer = new s.G9()), (this.desktopFocusChangedCount = 0), (this.desktopMessageAckCount = 0), (this.desktopMessageCreateCount = 0), (this.soundboardShownTimer = new s.G9()), (this.soundboardShownCount = 0), (this.soundboardKeepOpenCount = 0), (this.muteToggledCount = 0), (this._successfullyShown = !1), (this.screenAnalytics = new D(e)), (this.overlayStatus = E.ZP.getGameOverlayStatus(e)), M.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), j.hasConnection() && this.rtcConnectionTimer.start();
+        N(this, 'game', void 0), N(this, 'uuid', void 0), N(this, 'overlayStatus', void 0), N(this, 'notificationAnalytics', void 0), N(this, 'widgetAnalytics', void 0), N(this, 'screenAnalytics', void 0), N(this, 'uiUnlockedCount', void 0), N(this, 'uiLockedCount', void 0), N(this, 'gameFocusChangedCount', void 0), N(this, 'gameConcurrentGameCount', void 0), N(this, 'overlayMessageAckCount', void 0), N(this, 'overlayMessageCreateCount', void 0), N(this, 'gameTimer', void 0), N(this, 'gameFocusedTimer', void 0), N(this, 'unlockedTimer', void 0), N(this, 'rtcConnectionTimer', void 0), N(this, 'desktopFocusedTimer', void 0), N(this, 'desktopFocusChangedCount', void 0), N(this, 'desktopMessageAckCount', void 0), N(this, 'desktopMessageCreateCount', void 0), N(this, 'soundboardShownTimer', void 0), N(this, 'soundboardShownCount', void 0), N(this, 'soundboardKeepOpenCount', void 0), N(this, 'muteToggledCount', void 0), N(this, '_successfullyShown', void 0), (this.game = e), (this.uuid = crypto.randomUUID()), (this.notificationAnalytics = new L()), (this.widgetAnalytics = new b()), (this.uiUnlockedCount = 0), (this.uiLockedCount = 0), (this.gameFocusChangedCount = 0), (this.gameConcurrentGameCount = 0), (this.overlayMessageAckCount = 0), (this.overlayMessageCreateCount = 0), (this.gameTimer = s.G9.startNew()), (this.gameFocusedTimer = new s.G9()), (this.unlockedTimer = new s.G9()), (this.rtcConnectionTimer = new s.G9()), (this.desktopFocusedTimer = new s.G9()), (this.desktopFocusChangedCount = 0), (this.desktopMessageAckCount = 0), (this.desktopMessageCreateCount = 0), (this.soundboardShownTimer = new s.G9()), (this.soundboardShownCount = 0), (this.soundboardKeepOpenCount = 0), (this.muteToggledCount = 0), (this._successfullyShown = !1), (this.screenAnalytics = new D(e)), (this.overlayStatus = E.ZP.getGameOverlayStatus(e)), M.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), j.hasConnection() && this.rtcConnectionTimer.start();
     }
 }
 function P(e) {

@@ -30,10 +30,10 @@ function g(e) {
         R = (0, d.pO)(g),
         C = (0, s.rK)(),
         { enabled: y } = s.ZP.useExperiment({ location: 'PaymentContextProvider' }, { autoTrackExposure: R && C }),
-        { enabled: b } = l.O.useExperiment({ location: 'gift card' }),
-        L = p;
-    R && ((L = y && C ? E.Cj.SEASONAL_STANDARD_BOX : null != c ? c : h), b && (L = E.Cj.NITROWEEN_STANDARD));
-    let [D, M] = a.useState(L),
+        { enabled: L } = l.O.useExperiment({ location: 'gift card' }),
+        b = p;
+    R && ((b = y && C ? E.Cj.SEASONAL_STANDARD_BOX : null != c ? c : h), L && (b = E.Cj.NITROWEEN_STANDARD));
+    let [D, M] = a.useState(b),
         [P, U] = a.useState(t && (0, d.MY)(g) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == r ? f.Z.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : r),
         [w, x] = a.useState(void 0),
         [G, k] = a.useState(void 0),

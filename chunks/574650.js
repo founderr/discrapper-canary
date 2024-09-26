@@ -57,18 +57,18 @@ let A = () => {
         },
         C = null !== (t = null == o ? void 0 : o.applicationStatus) && void 0 !== t ? t : h.wB.STARTED,
         y = null,
-        b = null,
         L = null,
+        b = null,
         D = [g.notice, S.notice];
     switch (C) {
         case h.wB.SUBMITTED:
-            (y = T.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE), (b = T.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION), (L = O);
+            (y = T.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE), (L = T.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION), (b = O);
             break;
         case h.wB.REJECTED:
-            (y = T.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE), (b = T.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE), (L = R), D.push(g.error);
+            (y = T.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE), (L = T.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE), (b = R), D.push(g.error);
             break;
         default:
-            (y = T.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT), (b = T.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA), (L = N);
+            (y = T.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT), (L = T.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA), (b = N);
     }
     return (0, a.jsxs)('div', {
         className: s()(...D),
@@ -83,8 +83,8 @@ let A = () => {
                 look: c.Button.Looks.OUTLINED,
                 color: c.Button.Colors.WHITE,
                 size: c.Button.Sizes.NONE,
-                onClick: L,
-                children: b
+                onClick: b,
+                children: L
             })
         ]
     });

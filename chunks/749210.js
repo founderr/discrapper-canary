@@ -29,13 +29,13 @@ var a = n(990547),
     R = n(668781),
     C = n(981631),
     y = n(689938);
-let b = (e) => {
+let L = (e) => {
         R.Z.show({
             title: y.Z.Messages.TOO_MANY_USER_GUILDS_ALERT_TITLE,
             body: y.Z.Messages.TOO_MANY_USER_GUILDS_ALERT_DESCRIPTION.format({ quantity: e })
         });
     },
-    L = (e) => {
+    b = (e) => {
         l.Z.dispatch({
             type: 'GUILD_DELETE',
             guild: { id: e }
@@ -113,9 +113,9 @@ async function M(e) {
     } catch (t) {
         if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === C.evJ.TOO_MANY_USER_GUILDS) {
             let e = S.default.getCurrentUser();
-            N.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? b(C.tHP) : b(C.DZw);
+            N.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? L(C.tHP) : L(C.DZw);
         }
-        throw ((null === (a = t.body) || void 0 === a ? void 0 : a.code) === C.evJ.GUILD_AT_CAPACITY && D(), p && (null === (o = t.body) || void 0 === o ? void 0 : o.code) === C.evJ.UNKNOWN_GUILD && L(e), t);
+        throw ((null === (a = t.body) || void 0 === a ? void 0 : a.code) === C.evJ.GUILD_AT_CAPACITY && D(), p && (null === (o = t.body) || void 0 === o ? void 0 : o.code) === C.evJ.UNKNOWN_GUILD && b(e), t);
     }
 }
 function P(e) {
@@ -144,7 +144,7 @@ t.Z = {
             (0, f.uL)(C.Z5c.CHANNEL(e, r), i),
             await new Promise(setImmediate);
     },
-    deleteGuild: L,
+    deleteGuild: b,
     selectGuild(e) {
         (0, d.a)(e);
     },

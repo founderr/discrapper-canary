@@ -29,13 +29,13 @@ var r = n(735250),
     R = n(149203),
     C = n(689938),
     y = n(5772);
-let b = 250;
-function L(e) {
+let L = 250;
+function b(e) {
     return 'animated' in e;
 }
 let D = (e) => {
         let { inspectedEmoji: t, guild: n } = e,
-            r = L(t);
+            r = b(t);
         return null != n && r ? C.Z.Messages.EMOJI_FROM_GUILD.format({ guildName: n.name }) : null;
     },
     M = i.memo(function (e) {
@@ -74,7 +74,7 @@ let D = (e) => {
             Y = (0, a.e7)([I.Z], () => I.Z.isFocused()),
             j = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             W = p.Yk.useSetting(),
-            K = (0, A.C1)(x, L(t) ? t : null),
+            K = (0, A.C1)(x, b(t) ? t : null),
             z = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: q } = (0, v.Z)(x, G),
             Q = t.id,
@@ -83,8 +83,8 @@ let D = (e) => {
             (i.useEffect(() => {
                 let e = Date.now();
                 return () => {
-                    Date.now() - e >= b &&
-                        L(t) &&
+                    Date.now() - e >= L &&
+                        b(t) &&
                         X !== R.t0.NONE &&
                         (X === R.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, _.Zg)(t.guildId, q[0].id),
                         null != F.source &&
@@ -100,7 +100,7 @@ let D = (e) => {
         )
             return null;
         let $ = h.Z.theme;
-        if (L(t)) {
+        if (b(t)) {
             var J;
             let e =
                 null != t.id

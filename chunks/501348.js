@@ -20,19 +20,19 @@ var n = t(735250),
     I = t(627845),
     N = t(514361),
     A = t(600164),
-    m = t(313201),
-    C = t(605236),
+    C = t(313201),
+    m = t(605236),
     g = t(786761),
     h = t(3148),
     O = t(739566),
     p = t(753206),
     R = t(311476),
     x = t(921801),
-    f = t(594174),
-    M = t(358085),
+    M = t(594174),
+    f = t(358085),
     D = t(210887),
-    P = t(740492),
-    L = t(695346),
+    L = t(740492),
+    P = t(695346),
     b = t(329013),
     Z = t(333859),
     v = t(726985),
@@ -59,9 +59,9 @@ let Y = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    w = (0, m.hQ)(),
-    k = (0, m.hQ)(),
-    H = (0, m.hQ)(),
+    w = (0, C.hQ)(),
+    k = (0, C.hQ)(),
+    H = (0, C.hQ)(),
     W = '1337',
     K = (e) => {
         let s = 0;
@@ -132,7 +132,7 @@ let Y = {
     };
 class Q extends a.Component {
     renderZoomSlider() {
-        return M.isPlatformEmbedded
+        return f.isPlatformEmbedded
             ? (0, n.jsxs)(d.FormItem, {
                   className: y.marginTop20,
                   children: [
@@ -382,37 +382,37 @@ class Q extends a.Component {
             }),
             V(this, 'handleMessageDisplayModeChange', (e) => {
                 let { value: s } = e;
-                L.jU.updateSetting(s === Y.COMPACT), (0, T.ZZ)();
+                P.jU.updateSetting(s === Y.COMPACT), (0, T.ZZ)();
             });
     }
 }
 let X = (e) => {
-    !(0, C.un)(e) &&
-        (0, C.EW)(e, {
+    !(0, m.un)(e) &&
+        (0, m.EW)(e, {
             dismissAction: B.L.AUTO,
             forceTrack: !0
         });
 };
 function q() {
-    let e = L.jU.useSetting(),
-        s = L.RS.useSetting(),
-        t = L.NA.useSetting(),
-        i = L.L1.useSetting();
+    let e = P.jU.useSetting(),
+        s = P.RS.useSetting(),
+        t = P.NA.useSetting(),
+        i = P.L1.useSetting();
     a.useEffect(() => {
         X(l.z.CLIENT_THEMES_SETTINGS_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     }, []);
-    let r = (0, o.cj)([D.Z, P.ZP, S.Z, f.default, N.Z], () => {
+    let r = (0, o.cj)([D.Z, L.ZP, S.Z, M.default, N.Z], () => {
         var e, s;
         return {
             theme: D.Z.theme,
             useForcedColors: S.Z.useForcedColors,
-            useSystemTheme: P.ZP.useSystemTheme,
+            useSystemTheme: L.ZP.useSystemTheme,
             darkSidebar: D.Z.darkSidebar,
             fontSize: S.Z.fontSize,
             zoom: S.Z.zoom,
             messageGroupSpacing: S.Z.messageGroupSpacing,
-            displayCompactAvatars: P.ZP.displayCompactAvatars,
-            isStaff: null !== (s = null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== s && s,
+            displayCompactAvatars: L.ZP.displayCompactAvatars,
+            isStaff: null !== (s = null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== s && s,
             gradientPreset: N.Z.gradientPreset
         };
     });

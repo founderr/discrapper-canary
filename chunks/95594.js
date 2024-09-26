@@ -28,8 +28,8 @@ function u(e) {
         {
             dirty: C,
             chunkStart: y,
-            chunkEnd: b,
-            forceUpdateOnChunkChange: L
+            chunkEnd: L,
+            forceUpdateOnChunkChange: b
         } = (0, s.Z)({
             chunkSize: d,
             getScrollerState: _,
@@ -56,14 +56,14 @@ function u(e) {
                           marginLeft: R / 2,
                           dir: g
                       }),
-                      v.computeVisibleSections(Math.max(0, y * d), b * d),
+                      v.computeVisibleSections(Math.max(0, y * d), L * d),
                       v.getState()),
-            [C, v, t, n, r, u, c, y, b, d, f, h, p, m, I, T, O, g]
+            [C, v, t, n, r, u, c, y, L, d, f, h, p, m, I, T, O, g]
         )),
         {
             ...A.current,
             masonryComputer: v,
-            forceUpdateOnChunkChange: L,
+            forceUpdateOnChunkChange: b,
             forceUpdate: S
         }
     );

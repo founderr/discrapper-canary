@@ -12,7 +12,7 @@ n.d(t, {
         return R;
     },
     SA: function () {
-        return L;
+        return b;
     },
     Um: function () {
         return N;
@@ -143,14 +143,14 @@ function y(e, t) {
         draftType: t
     });
 }
-function b(e) {
+function L(e) {
     return E.Z.totalUnavailableGuilds > 0 || !u.Z.isConnected() ? e : e.filter((e) => null != p.Z.getStickerById(e));
 }
-function L(e) {
+function b(e) {
     d.DZ.updateAsync(
         'favoriteStickers',
         (t) =>
-            ((t.stickerIds = b(t.stickerIds)), a().size(t.stickerIds) >= I.oX)
+            ((t.stickerIds = L(t.stickerIds)), a().size(t.stickerIds) >= I.oX)
                 ? (l.Z.show({
                       title: T.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
                       body: T.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({ count: I.oX })
@@ -164,7 +164,7 @@ function D(e) {
     d.DZ.updateAsync(
         'favoriteStickers',
         (t) => {
-            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = b(t.stickerIds));
+            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = L(t.stickerIds));
         },
         I.fy.INFREQUENT_USER_ACTION
     );

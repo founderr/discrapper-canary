@@ -49,22 +49,22 @@ function y() {
         activeLibraryApplicationBranchIds: N
     });
 }
-function b(e) {
+function L(e) {
     for (let t of e) {
         let e = _.Z.createFromServer(t);
         S[(0, f.Tu)(e.id, e.branchId)] = e;
     }
 }
-function L() {
+function b() {
     g = !1;
 }
 function D(e) {
     let { libraryApplications: t } = e;
-    (S = {}), b(t), (g = !0);
+    (S = {}), L(t), (g = !0);
 }
 function M(e) {
     let { libraryApplications: t } = e;
-    b(t);
+    L(t);
 }
 function P(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
@@ -182,7 +182,7 @@ class V extends (r = u.ZP.Store) {
 }
 m(V, 'displayName', 'LibraryApplicationStore'),
     (t.Z = new V(d.Z, {
-        LOGOUT: L,
+        LOGOUT: b,
         LIBRARY_FETCH_SUCCESS: D,
         SKU_PURCHASE_SUCCESS: M,
         LIBRARY_APPLICATION_FLAGS_UPDATE_START: P,

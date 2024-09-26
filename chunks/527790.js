@@ -30,8 +30,8 @@ var a = n(120356),
     R = n(502762),
     C = n(652853),
     y = n(194811),
-    b = n(373826),
-    L = n(582123),
+    L = n(373826),
+    b = n(582123),
     D = n(290274),
     M = n(228168),
     P = n(689938),
@@ -53,7 +53,7 @@ function w(e) {
             trackEntryPointImpression: !0
         }),
         { analyticsLocations: y } = (0, c.ZP)(),
-        L = (0, v.Z)({
+        b = (0, v.Z)({
             display: 'recent',
             user: t,
             entry: n,
@@ -61,7 +61,7 @@ function w(e) {
         }),
         D = (0, N.Z)({
             userId: t.id,
-            onAction: L
+            onAction: b
         }),
         P = () => (n.content_type === s.s.TOP_GAME ? m.Hs.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))) : f.W.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))));
     return null == O
@@ -83,7 +83,7 @@ function w(e) {
                                   className: U.details,
                                   children: [
                                       (0, i.jsx)('div', {
-                                          children: (0, i.jsx)(b.Z, {
+                                          children: (0, i.jsx)(L.Z, {
                                               variant: 'heading-sm/semibold',
                                               text: I
                                           })
@@ -113,7 +113,7 @@ function w(e) {
                               (0, i.jsx)(E.E, {
                                   image: p,
                                   onClick: () => {
-                                      L({ action: 'PRESS_GAME_IMAGE' }), O();
+                                      b({ action: 'PRESS_GAME_IMAGE' }), O();
                                   },
                                   size: E.J.SIZE_60
                               }),
@@ -123,9 +123,9 @@ function w(e) {
                                       (0, i.jsx)(l.Clickable, {
                                           className: U.clickable,
                                           onClick: () => {
-                                              L({ action: 'OPEN_GAME_PROFILE' }), O(), null == u || u();
+                                              b({ action: 'OPEN_GAME_PROFILE' }), O(), null == u || u();
                                           },
-                                          children: (0, i.jsx)(b.Z, {
+                                          children: (0, i.jsx)(L.Z, {
                                               variant: 'heading-sm/semibold',
                                               text: I
                                           })
@@ -179,11 +179,11 @@ function x(e) {
                             children: [
                                 (0, i.jsxs)('div', {
                                     children: [
-                                        (0, i.jsx)(b.Z, {
+                                        (0, i.jsx)(L.Z, {
                                             variant: 'heading-sm/semibold',
                                             text: n.extra.media_title
                                         }),
-                                        (0, i.jsx)(b.Z, {
+                                        (0, i.jsx)(L.Z, {
                                             variant: 'text-xs/normal',
                                             text: n.extra.media_subtitle
                                         })
@@ -240,7 +240,7 @@ function G(e) {
                             className: U.details,
                             children: [
                                 (0, i.jsx)('div', {
-                                    children: (0, i.jsx)(b.Z, {
+                                    children: (0, i.jsx)(L.Z, {
                                         variant: 'heading-sm/semibold',
                                         text: A
                                     })
@@ -293,11 +293,11 @@ function k(e) {
                             children: [
                                 (0, i.jsxs)('div', {
                                     children: [
-                                        (0, i.jsx)(b.Z, {
+                                        (0, i.jsx)(L.Z, {
                                             variant: 'heading-sm/semibold',
                                             text: n.extra.media.title
                                         }),
-                                        (0, i.jsx)(b.Z, {
+                                        (0, i.jsx)(L.Z, {
                                             variant: 'text-xs/normal',
                                             text: n.extra.artist.name
                                         })
@@ -323,7 +323,7 @@ function B(e) {
     return (0, O.Z)(n)
         ? (0, i.jsx)(c.Gt, {
               value: s,
-              children: (0, i.jsx)(L.Z, {
+              children: (0, i.jsx)(b.Z, {
                   user: t,
                   onClose: a,
                   children: (e) => {

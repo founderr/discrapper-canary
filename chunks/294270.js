@@ -74,7 +74,7 @@ function y(e, t, n) {
         (v[t] = r), r.delay();
     }
 }
-class b extends s.Z {
+class L extends s.Z {
     _terminate() {
         Object.values(v).forEach((e) => e.cancel()), (v = {});
     }
@@ -86,4 +86,4 @@ class b extends s.Z {
             });
     }
 }
-t.Z = new b();
+t.Z = new L();

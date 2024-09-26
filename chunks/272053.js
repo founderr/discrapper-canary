@@ -36,8 +36,8 @@ let S = '33kozedd0zs6fbauka98psnc7zwom2s',
     R = /live_user_(.*)-\{width\}/,
     C = 128,
     y = null,
-    b = 0,
-    L = null,
+    L = 0,
+    b = null,
     D = new Set(),
     M = {};
 function P(e) {
@@ -70,8 +70,8 @@ class x {
     }
     stop() {
         (this._started = !1),
-            (L = null),
-            (b = 0),
+            (b = null),
+            (L = 0),
             null != this._nextCheck && clearTimeout(this._nextCheck),
             _.Z.dispatch({
                 type: 'STREAMING_UPDATE',
@@ -125,7 +125,7 @@ class x {
     }
     async _checkYouTube(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (((L = null), e.revoked || D.has(e.id))) return null;
+        if (((b = null), e.revoked || D.has(e.id))) return null;
         try {
             var n;
             let {
@@ -147,7 +147,7 @@ class x {
                 } = r[0],
                 s = { large_image: null !== (n = (0, h.getAssetFromImageURL)(T.ABu.YOUTUBE, o.high.url)) && void 0 !== n ? n : void 0 },
                 l = null != a && '' !== a ? a.slice(0, C) : void 0;
-            return (L = {
+            return (b = {
                 url: v(i),
                 name: f.Z.get(T.ABu.YOUTUBE).name,
                 details: l,
@@ -168,12 +168,12 @@ class x {
         null != this._nextCheck && clearTimeout(this._nextCheck);
         let t = [T.ABu.TWITCH],
             n = Date.now();
-        b <= n && (t.push(T.ABu.YOUTUBE), (b = n + N)),
+        L <= n && (t.push(T.ABu.YOUTUBE), (L = n + N)),
             Promise.allSettled(e.filter((e) => t.includes(e.type)).map((e) => (e.type === T.ABu.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e)))).then((e) => {
                 if (this._started) {
                     var t;
                     let n = null === (t = e.find((e) => 'fulfilled' === e.status && null != e.value)) || void 0 === t ? void 0 : t.value;
-                    null == n && null != L && (n = L),
+                    null == n && null != b && (n = b),
                         _.Z.dispatch({
                             type: 'STREAMING_UPDATE',
                             stream: n

@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return f;
+        return M;
     }
 }),
     t(47120);
@@ -20,8 +20,8 @@ var n = t(735250),
     I = t(331642),
     N = t(63063),
     A = t(581883),
-    m = t(918257),
-    C = t(726985),
+    C = t(918257),
+    m = t(726985),
     g = t(981631),
     h = t(710111),
     O = t(689938),
@@ -34,23 +34,23 @@ function x(e) {
         return E.Z.getSound(s === h.hY ? h.X8 : s, t);
     });
 }
-function f() {
+function M() {
     let { analyticsLocations: e } = (0, l.ZP)(),
         [s, t] = a.useState(h.hY),
         o = (0, S.tT)(s),
         A = x(o),
-        f = (0, i.e7)([E.Z], () => E.Z.hasFetchedAllSounds()),
+        M = (0, i.e7)([E.Z], () => E.Z.hasFetchedAllSounds()),
         D = (null == o ? void 0 : o.type) === S.zx.GLOBAL,
-        P = f && null != o && null == A;
+        L = M && null != o && null == A;
     a.useEffect(() => {
-        P && (0, T.tt)({ location: e });
-    }, [P, e]),
+        L && (0, T.tt)({ location: e });
+    }, [L, e]),
         a.useEffect(() => {
             (0, u.w)();
         }, []);
-    let L = a.useCallback((e, s) => {
+    let P = a.useCallback((e, s) => {
         let { inDropdown: t } = s;
-        return null == e ? null : t ? (0, n.jsx)(M, { guildId: e.value }) : null;
+        return null == e ? null : t ? (0, n.jsx)(f, { guildId: e.value }) : null;
     }, []);
     return (0, n.jsxs)(r.FormSection, {
         className: p.container,
@@ -59,11 +59,11 @@ function f() {
         title: O.Z.Messages.SOUNDBOARD,
         children: [
             (0, n.jsx)(_.F, {
-                setting: C.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                children: (0, n.jsx)(m.Z, {})
+                setting: m.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                children: (0, n.jsx)(C.Z, {})
             }),
             (0, n.jsxs)(_.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+                setting: m.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                 children: [
                     (0, n.jsx)(r.FormDivider, { className: p.callSoundsDivider }),
                     (0, n.jsx)(r.Heading, {
@@ -85,7 +85,7 @@ function f() {
                             value: h.hY
                         },
                         onChange: (e) => t(null == e ? h.hY : e.id),
-                        renderOptionSuffix: L,
+                        renderOptionSuffix: P,
                         hideDivider: !0
                     }),
                     (0, n.jsxs)(d.Z, {
@@ -107,7 +107,7 @@ function f() {
                                     null == t ? (0, T.aC)(s, e) : (0, T.SZ)(s, t, e);
                                 }
                             }),
-                            P &&
+                            L &&
                                 (0, n.jsx)(r.HelpMessage, {
                                     className: p.notice,
                                     messageType: r.HelpMessageTypes.WARNING,
@@ -120,7 +120,7 @@ function f() {
         ]
     });
 }
-function M(e) {
+function f(e) {
     let { guildId: s } = e,
         t = (0, i.e7)([A.Z], () => {
             var e, t, n;

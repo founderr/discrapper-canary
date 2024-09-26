@@ -15,19 +15,19 @@ var n = t(735250),
     I = t(497321),
     N = t(468026),
     A = t(317381),
-    m = t(513202),
-    C = t(979200),
+    C = t(513202),
+    m = t(979200),
     g = t(600164),
     h = t(713938),
     O = t(881998),
     p = t(246946),
     R = t(768581),
     x = t(49012),
-    f = t(709054),
-    M = t(706454),
+    M = t(709054),
+    f = t(706454),
     D = t(210887),
-    P = t(436267),
-    L = t(149418),
+    L = t(436267),
+    P = t(149418),
     b = t(494620),
     Z = t(981631),
     v = t(689938),
@@ -77,7 +77,7 @@ let F = (e) => {
             d = () => {
                 let e = v.Z.Messages.DELETE_APP_CONFIRM_MSG_V2.format({ applicationName: t.name });
                 return (
-                    (0, L.Z)(t) &&
+                    (0, P.Z)(t) &&
                         (e = (0, n.jsxs)(n.Fragment, {
                             children: [
                                 e,
@@ -88,7 +88,7 @@ let F = (e) => {
                                 })
                             ]
                         })),
-                    (0, P.Z)(t.id) &&
+                    (0, L.Z)(t.id) &&
                         (e = (0, n.jsxs)(n.Fragment, {
                             children: [
                                 e,
@@ -124,7 +124,7 @@ let F = (e) => {
                         shouldConfirm: !0
                     });
             },
-            S = (0, P.O)(t.id);
+            S = (0, L.O)(t.id);
         return (0, n.jsx)(E.Card, {
             className: r()(j.authedApp, B.marginBottom8),
             outline: !0,
@@ -145,7 +145,7 @@ let F = (e) => {
                                       })
                                   })
                                 : null,
-                        a = new Date(f.default.extractTimestamp(l)).toLocaleDateString(o);
+                        a = new Date(M.default.extractTimestamp(l)).toLocaleDateString(o);
                     return (0, n.jsxs)('div', {
                         className: r()(j.header, B.marginBottom20),
                         children: [
@@ -255,7 +255,7 @@ let F = (e) => {
                                         null == i
                                             ? void 0
                                             : i.map((s, t) => {
-                                                  let a = (0, C.PM)(s);
+                                                  let a = (0, m.PM)(s);
                                                   return null != a
                                                       ? (0, n.jsxs)(
                                                             'li',
@@ -279,7 +279,7 @@ let F = (e) => {
 s.Z = () => {
     let e = (0, d.e7)([p.Z], () => p.Z.hidePersonalInformation),
         s = (0, d.e7)([O.Z], () => O.Z.getApps()),
-        i = (0, d.e7)([M.default], () => M.default.locale),
+        i = (0, d.e7)([f.default], () => f.default.locale),
         r = (0, d.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities());
     a.useEffect(() => {
         T.Z.fetch();
@@ -289,7 +289,7 @@ s.Z = () => {
             T.Z.delete(s);
             let n = r.get(t.id);
             null != n &&
-                m.Z.leaveActivity({
+                C.Z.leaveActivity({
                     channelId: n.channelId,
                     applicationId: t.id,
                     showFeedback: !1
@@ -314,7 +314,7 @@ s.Z = () => {
                     'aria-label': v.Z.Messages.INTEGRATIONS_SEARCH
                 })
             }),
-        C = (e, s) =>
+        m = (e, s) =>
             (0, n.jsxs)(U, {
                 className: j.__invalid_marginTop20,
                 children: [
@@ -353,10 +353,10 @@ s.Z = () => {
                                 type: E.Spinner.Type.SPINNING_CIRCLE
                             })
                           : 0 === s.length
-                            ? C(v.Z.Messages.NO_AUTHORIZED_APPS_NOTE, v.Z.Messages.NO_AUTHORIZED_APPS)
+                            ? m(v.Z.Messages.NO_AUTHORIZED_APPS_NOTE, v.Z.Messages.NO_AUTHORIZED_APPS)
                             : 0 === g.length
                               ? (0, n.jsxs)(n.Fragment, {
-                                    children: [N(), C(null, v.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
+                                    children: [N(), m(null, v.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
                                 })
                               : (0, n.jsxs)(n.Fragment, {
                                     children: [

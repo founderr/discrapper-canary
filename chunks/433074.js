@@ -29,7 +29,7 @@ let O = 16;
 function R(e) {
     var t, n, r;
     let { code: R, message: C } = e,
-        [y, b, L] = (0, l.Wu)([T.Z], () => [T.Z.getApplication(R), T.Z.isInvalidApplication(R), T.Z.getApplicationFetchState(R)], [R]),
+        [y, L, b] = (0, l.Wu)([T.Z], () => [T.Z.getApplication(R), T.Z.isInvalidApplication(R), T.Z.getApplicationFetchState(R)], [R]),
         D = (0, l.e7)([_.default], () => _.default.locale),
         M = (0, l.e7)([f.Z], () => {
             var e;
@@ -46,7 +46,7 @@ function R(e) {
     }, [R]),
         a.useEffect(() => {
             U &&
-                L === T.M.FETCHED &&
+                b === T.M.FETCHED &&
                 p.default.track(A.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: R,
                     device_platform: o.tq ? 'mobile_web' : 'desktop_web',
@@ -54,17 +54,17 @@ function R(e) {
                     guild_id: M,
                     channel_id: C.channel_id
                 });
-        }, [U, R, null == P ? void 0 : P.id, C.channel_id, M, C.author.id, L]),
+        }, [U, R, null == P ? void 0 : P.id, C.channel_id, M, C.author.id, b]),
         a.useEffect(() => {
             U &&
-                b &&
+                L &&
                 p.default.track(A.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                     device_platform: o.tq ? 'mobile_web' : 'desktop_web',
                     sender_user_id: C.author.id,
                     guild_id: M,
                     channel_id: C.channel_id
                 });
-        }, [U, M, b, C.author.id, C.channel_id]);
+        }, [U, M, L, C.author.id, C.channel_id]);
     let k = (e) => {
             p.default.track(A.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
                 application_id: R,
@@ -91,7 +91,7 @@ function R(e) {
                     source: 'app_directory_profile_embed'
                 });
         };
-    if (b)
+    if (L)
         return (0, i.jsxs)(d.Z, {
             containerRef: G,
             children: [
@@ -111,7 +111,7 @@ function R(e) {
                 })
             ]
         });
-    if (null == y || L === T.M.FETCHING)
+    if (null == y || b === T.M.FETCHING)
         return (0, i.jsxs)(d.Z, {
             containerRef: G,
             children: [(0, i.jsx)(d.Z.Header, { text: v.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER }), (0, i.jsx)(d.Z.Body, { resolving: !0 })]

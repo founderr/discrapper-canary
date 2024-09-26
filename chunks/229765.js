@@ -3,7 +3,7 @@ n.d(t, {
         return D;
     },
     Cg: function () {
-        return L;
+        return b;
     },
     EV: function () {
         return U;
@@ -113,7 +113,7 @@ function y(e) {
     return (
         u.useEffect(() => {
             if (!!r)
-                b({
+                L({
                     games: [],
                     traits: []
                 });
@@ -121,7 +121,7 @@ function y(e) {
         null
     );
 }
-function b(e) {
+function L(e) {
     return f.tn.post({
         url: S.ANM.DISCOVERY_RECOMMENDATIONS,
         body: {
@@ -131,14 +131,14 @@ function b(e) {
         }
     });
 }
-async function L(e) {
+async function b(e) {
     let t = m.Z.getSearchResult(e),
         { resetPagination: n, updatePaginationResults: r } = I.a.getState();
     if ('loaded' === t.status) return n({ pageMemoryEnabled: !0 }), r(t.guildIds), t;
     let i = E().v3(JSON.stringify(e));
     try {
         var a, o;
-        let t = await b(e),
+        let t = await L(e),
             s = t.body.guilds.map(g.Gh),
             l = null !== (a = t.body.guild_ids) && void 0 !== a ? a : [],
             u = {

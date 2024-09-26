@@ -24,8 +24,8 @@ var i = n(735250),
     R = n(266910),
     C = n(788983),
     y = n(703656),
-    b = n(937995),
-    L = n(618158),
+    L = n(937995),
+    b = n(618158),
     D = n(922745),
     M = n(197016),
     P = n(800965),
@@ -166,7 +166,7 @@ class ea extends a.PureComponent {
                               'aria-label': null == n ? void 0 : n.user.username
                           })
                       }))),
-            (0, i.jsx)(b.ZP, {
+            (0, i.jsx)(L.ZP, {
                 timeout: 1800,
                 children: (e) => {
                     var t;
@@ -178,7 +178,7 @@ class ea extends a.PureComponent {
                         onHide: this.handleHidePIP,
                         renderBottomLeftControls: this.renderBottomLeftControls,
                         renderBottomRightControls: this.renderBottomRightControls,
-                        preventIdleComponent: L.Z,
+                        preventIdleComponent: b.Z,
                         width: a,
                         className: er.elevationHigh,
                         ...e,
@@ -249,7 +249,7 @@ class ea extends a.PureComponent {
                 let { participantOnScreen: e, channel: t } = this.props;
                 return (
                     s()((0, et._5)(e) || (null == e ? void 0 : e.type) === et.fO.ACTIVITY, 'Cannot render participants for participant type '.concat(null == e ? void 0 : e.type)),
-                    (0, i.jsx)(L.Z, {
+                    (0, i.jsx)(b.Z, {
                         children: (0, i.jsx)(g.Z, {
                             channelId: t.id,
                             guildId: t.getGuildId(),

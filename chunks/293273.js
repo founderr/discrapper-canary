@@ -86,12 +86,12 @@ function C() {
 function y() {
     (R = {}), C();
 }
-function b(e) {
+function L(e) {
     let { socketId: t, activity: n } = e;
     if (s()(R[t], n)) return !1;
     null != n ? (R[t] = n) : delete R[t], C();
 }
-function L(e) {
+function b(e) {
     let { socketId: t } = e;
     delete R[t], C();
 }
@@ -126,8 +126,8 @@ N(M, 'displayName', 'LocalActivityStore'),
     (t.Z = new M(d.Z, {
         OVERLAY_INITIALIZE: D,
         START_SESSION: y,
-        LOCAL_ACTIVITY_UPDATE: b,
-        RPC_APP_DISCONNECTED: L,
+        LOCAL_ACTIVITY_UPDATE: L,
+        RPC_APP_DISCONNECTED: b,
         RUNNING_GAMES_CHANGE: C,
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: C,
         SPOTIFY_PLAYER_STATE: C,

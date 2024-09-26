@@ -35,8 +35,8 @@ var i = n(735250),
     R = n(892561),
     C = n(494536);
 let y = 80,
-    b = 4,
-    L = 250,
+    L = 4,
+    b = 250,
     D = 6,
     M = 24;
 function P() {
@@ -121,7 +121,7 @@ function w(e) {
         V = T.ZP.getGuildDiscoverySplashURL({
             id: S,
             splash: A,
-            size: L * (0, h.x_)()
+            size: b * (0, h.x_)()
         }),
         H =
             null !==
@@ -156,8 +156,8 @@ function w(e) {
                                 onClick: Z,
                                 children: (0, i.jsx)(E.ZP, {
                                     mask: E.ZP.Masks.SQUIRCLE,
-                                    width: y + 2 * b,
-                                    height: y + 2 * b,
+                                    width: y + 2 * L,
+                                    height: y + 2 * L,
                                     children: (0, i.jsx)('div', {
                                         className: O.iconMask,
                                         children: (0, i.jsx)(E.ZP, {

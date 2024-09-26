@@ -5,46 +5,46 @@ s.d(n, {
 });
 var t = s(735250),
     i = s(470079),
-    o = s(704215),
-    l = s(481060),
+    l = s(704215),
+    o = s(481060),
     r = s(605236),
-    a = s(63063),
-    c = s(369566),
+    c = s(63063),
+    a = s(369566),
     d = s(678738),
     u = s(151545),
-    _ = s(527790),
-    I = s(304042),
+    I = s(527790),
+    _ = s(304042),
     E = s(981631),
     f = s(921944),
     m = s(689938),
     x = s(505865);
 function Z(e) {
     let { user: n, currentUser: s, onClose: Z } = e,
-        { live: h, recent: p, stream: v } = (0, c.Z)(n.id),
+        { live: p, recent: h, stream: v } = (0, a.Z)(n.id),
         S = n.id === s.id,
-        T = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+        T = (0, r.wE)(l.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
         i.useEffect(() => {
             if (!!S && !T)
-                (0, r.EW)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
+                (0, r.EW)(l.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
                     dismissAction: f.L.AUTO_DISMISS,
                     forceTrack: !0
                 });
         }, [S, T]),
-        (0, t.jsxs)(l.ScrollerThin, {
+        (0, t.jsxs)(o.ScrollerThin, {
             className: x.scroller,
             fade: !0,
             children: [
                 (0, t.jsxs)(d.Z, {
                     children: [
                         null != v &&
-                            (0, t.jsx)(I.Z, {
+                            (0, t.jsx)(_.Z, {
                                 user: n,
                                 currentUser: s,
                                 stream: v,
                                 onClose: Z
                             }),
-                        h.map((e, i) =>
+                        p.map((e, i) =>
                             (0, t.jsx)(
                                 u.Z,
                                 {
@@ -64,18 +64,18 @@ function Z(e) {
                         ? m.Z.Messages.USER_RECENT_ACTIVITY_LEARN_MORE.format({
                               learnMoreHook: (e, n) =>
                                   (0, t.jsx)(
-                                      l.Anchor,
+                                      o.Anchor,
                                       {
-                                          href: a.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
+                                          href: c.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
                                           children: e
                                       },
                                       n
                                   )
                           })
                         : null,
-                    children: p.map((e) =>
+                    children: h.map((e) =>
                         (0, t.jsx)(
-                            _.Z,
+                            I.Z,
                             {
                                 user: n,
                                 entry: e,

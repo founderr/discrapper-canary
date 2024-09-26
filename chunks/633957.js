@@ -31,9 +31,9 @@ function C(e) {
     var t;
     let { application: n, channelId: r, guildId: C } = e,
         { analyticsLocations: y } = (0, h.ZP)(f.Z.ACTIVITY_INSTANCE_EMBED),
-        b = (0, l.O)(),
-        L = (0, o.e7)([T.Z], () => T.Z.getChannel(r)),
-        D = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : r,
+        L = (0, l.O)(),
+        b = (0, o.e7)([T.Z], () => T.Z.getChannel(r)),
+        D = (null == b ? void 0 : null === (t = b.isThread) || void 0 === t ? void 0 : t.call(b)) ? (null == b ? void 0 : b.parent_id) : r,
         M = (0, o.e7)([I.default], () => I.default.getId()),
         {
             embeddedActivity: P,
@@ -69,7 +69,7 @@ function C(e) {
             embeddedActivity: P,
             joinability: B,
             currentEmbeddedActivity: U,
-            channel: L
+            channel: b
         }),
         V = a.useId(),
         H = null != w && w.isLaunching && w.componentId === V,
@@ -78,7 +78,7 @@ function C(e) {
                 ? await (0, d.Z)({
                       targetApplicationId: n.id,
                       channelId: r,
-                      locationObject: b.location,
+                      locationObject: L.location,
                       analyticsLocations: y,
                       componentId: V,
                       commandOrigin: p.bB.ACTIVITY_INSTANCE_EMBED
@@ -86,7 +86,7 @@ function C(e) {
                 : await (0, c.Z)({
                       applicationId: P.applicationId,
                       activityChannelId: r,
-                      locationObject: b.location,
+                      locationObject: L.location,
                       analyticsLocations: y,
                       componentId: V
                   });

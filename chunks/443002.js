@@ -25,7 +25,7 @@ function N(e) {
         R = a.useRef(!1),
         C = (0, o.Z)(() => Date.now()),
         { analyticsLocations: y } = (0, c.ZP)(),
-        b = a.useCallback(() => {
+        L = a.useCallback(() => {
             r(),
                 d.default.track(S.rMx.MODAL_DISMISSED, {
                     type: S.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -36,7 +36,7 @@ function N(e) {
                     duration_open_ms: Date.now() - C
                 });
         }, [r, t, y, C, n.id]),
-        L = a.useCallback(
+        b = a.useCallback(
             (e) => {
                 e &&
                     !R.current &&
@@ -63,7 +63,7 @@ function N(e) {
         }, [n.id, t, y]),
         a.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && b();
+                'Escape' === e.key && L();
             }
             return (
                 window.addEventListener('keydown', e),
@@ -71,14 +71,14 @@ function N(e) {
                     window.removeEventListener('keydown', e);
                 }
             );
-        }, [b]),
+        }, [L]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
                     className: v.closeIconWrapper,
                     children: (0, i.jsx)(u.Z, {
                         className: v.closeIcon,
-                        closeAction: b,
+                        closeAction: L,
                         keybind: 'ESC',
                         variant: u.Z.Variants.SOLID
                     })
@@ -100,7 +100,7 @@ function N(e) {
                                         }),
                                         (0, i.jsx)(E.Z, {
                                             guild: n,
-                                            closeLayer: b,
+                                            closeLayer: L,
                                             onCtaVisibilityChange: O
                                         }),
                                         (0, i.jsx)(p.Z, { guild: n }),
@@ -133,7 +133,7 @@ function N(e) {
                             ]
                         }),
                         (0, i.jsx)(s.$, {
-                            onChange: L,
+                            onChange: b,
                             children: (0, i.jsx)('div', { className: v.persistentCtaSpacer })
                         })
                     ]
@@ -141,7 +141,7 @@ function N(e) {
                 (0, i.jsx)(h.Z, {
                     guild: n,
                     isVisible: !N,
-                    closeLayer: b
+                    closeLayer: L
                 })
             ]
         })

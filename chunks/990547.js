@@ -41,7 +41,7 @@ n.r(t),
             return Y;
         },
         getCampaignParams: function () {
-            return b;
+            return L;
         },
         getDevice: function () {
             return U;
@@ -132,7 +132,7 @@ function y(e, t) {
     let n = new RegExp('[\\?&]'.concat(t, '=([^&#]*)')).exec(e);
     return null === n || ('string' != typeof n[1] && n[1].length) ? '' : decodeURIComponent(n[1]).replace(/\+/g, ' ');
 }
-function b(e) {
+function L(e) {
     let t = {};
     return (
         C.forEach((n) => {
@@ -142,7 +142,7 @@ function b(e) {
         t
     );
 }
-function L() {
+function b() {
     let e = document.referrer;
     if (0 === e.search('https?://(.*)google.([^/?]*)')) return 'google';
     if (0 === e.search('https?://(.*)bing.com')) return 'bing';
@@ -153,7 +153,7 @@ function L() {
 function D() {
     let e = {},
         t = document.referrer,
-        n = L(),
+        n = b(),
         r = 'yahoo' !== n ? 'q' : 'p';
     if (null != n) {
         e.search_engine = n;
@@ -225,7 +225,7 @@ function k() {
         (e.referring_domain = w()),
         (e = {
             ...e,
-            ...b(window.location.href),
+            ...L(window.location.href),
             ...D()
         })
     );
@@ -261,7 +261,7 @@ function V() {
     let r = {},
         i = window.GLOBAL_ENV.RELEASE_CHANNEL;
     i && (r.release_channel = i.split('-')[0]);
-    let a = parseInt(((n = '330901'), '330901'), 10);
+    let a = parseInt(((n = '330951'), '330951'), 10);
     !isNaN(a) && (r.client_build_number = a);
     let o = null == R ? void 0 : null === (e = (t = R.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
     return !isNaN(o) && (r.native_build_number = o), (r.client_event_source = Z()), r;

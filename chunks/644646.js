@@ -48,7 +48,7 @@ function S(e) {
             a && !y.current ? C.current.play() : !a && y.current && ((C.current.currentTime = 0), C.current.pause()), (y.current = a);
         }
     }, [a, N, A]);
-    let b = N
+    let L = N
         ? (0, r.jsx)(p.Fl, {
               id: 'QuestRewardTile_rewardTileAnimated',
               children: (e) =>
@@ -81,7 +81,7 @@ function S(e) {
     return null == S
         ? (0, r.jsx)('div', {
               className: o()(g.questRewardTile, t),
-              children: b
+              children: L
           })
         : (0, r.jsxs)(u.Clickable, {
               className: o()(
@@ -95,7 +95,7 @@ function S(e) {
               ),
               onClick: O,
               children: [
-                  b,
+                  L,
                   R &&
                       (0, r.jsx)(u.Shine, {
                           className: g.shine,

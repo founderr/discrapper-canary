@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     M2: function () {
-        return L;
+        return b;
     },
     Nq: function () {
         return R;
@@ -63,11 +63,11 @@ function C(e, t, n) {
 function y(e, t) {
     (0, m.XE)(t, e, T.YQ.JOINED_VOICE_CHANNEL), (0, c.vy)(t, e, __OVERLAY__);
 }
-function b() {
+function L() {
     var e, t;
     return Object.values(null !== (t = null === (e = u.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {}).some((e) => null != e.joinSound);
 }
-async function L(e) {
+async function b(e) {
     let t = E.default.getCurrentUser(),
         n = (0, o.Z)(),
         r = (0, S.k9)(e);
@@ -84,7 +84,7 @@ function D(e) {
     let { isSoundboardButtonDisabled: t = !1 } = e,
         n = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
         r = [a.z.SOUNDBOARD_EDUCATION];
-    if (!t && !b()) {
+    if (!t && !L()) {
         r.push(a.z.CUSTOM_CALL_SOUNDS_SPARKLES);
         let e = (0, p.Fc)(n);
         (h.ZP.canUseCustomCallSounds(n) || e) && r.push(a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);

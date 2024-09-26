@@ -42,7 +42,7 @@ function R(e, t, n) {
 }
 let C = 104,
     y = 16;
-function b(e) {
+function L(e) {
     var t, n, r, i;
     let { file: a } = e,
         [o, s] = c.useState(),
@@ -97,11 +97,11 @@ function b(e) {
         }
     });
 }
-class L extends c.Component {
+class b extends c.Component {
     render() {
         var e;
         if (this.props.upload.item.platform !== h.ow.WEB) return null;
-        if (this.props.upload.isImage) return (0, u.jsx)(b, { file: this.props.upload.item.file });
+        if (this.props.upload.isImage) return (0, u.jsx)(L, { file: this.props.upload.item.file });
         return (0, u.jsx)('div', { className: _()(N.icon, { [N[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0 }) });
     }
 }
@@ -138,7 +138,7 @@ class D extends c.Component {
                         (0, u.jsxs)('div', {
                             className: _()(N.file, { [N.expandable]: e.isImage }),
                             children: [
-                                (0, u.jsx)(L, { upload: e }),
+                                (0, u.jsx)(b, { upload: e }),
                                 (0, u.jsxs)('div', {
                                     className: N.description,
                                     children: [

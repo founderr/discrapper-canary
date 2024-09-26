@@ -33,12 +33,12 @@ let N = 40,
         let R = (0, a.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
             C = (0, _.Z)(R),
             y = C ? A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({ name: O }) : A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({ name: O }),
-            b = {
+            L = {
                 ...t,
                 src: null == t.src ? t.src : (0, c.o)(t.src, N),
                 size: N
             },
-            L = () => {
+            b = () => {
                 (0, d.f)({
                     guildId: n.id,
                     location: { section: g.jXE.ROLE_ICON_POPOUT }
@@ -47,7 +47,7 @@ let N = 40,
             D = () => {
                 (0, E.uL)(g.Z5c.CHANNEL(n.id, S.oC.ROLE_SUBSCRIPTIONS));
             },
-            M = C ? D : L;
+            M = C ? D : b;
         return (0, r.jsx)(o.Dialog, {
             children: (0, r.jsx)(T.W_, {
                 children: (0, r.jsxs)('div', {
@@ -59,7 +59,7 @@ let N = 40,
                                 (0, r.jsx)('div', {
                                     className: v.roleIconContainer,
                                     children: (0, r.jsx)(u.Z, {
-                                        ...b,
+                                        ...L,
                                         enableTooltip: !1,
                                         className: v.__invalid_roleIcon,
                                         enableHeight: !1

@@ -49,15 +49,15 @@ function E(e) {
         R = (0, a.useMemo)(() => (v && 'timeZone' in v ? v.timeZone : n.timeZone), [v, n.timeZone]),
         C = (0, a.useMemo)(() => (e.focusedValue ? d((0, r.Mw)((0, r.WG)(e.focusedValue), A), m, I) : void 0), [e.focusedValue, A, m, I]),
         y = (0, a.useMemo)(() => d(e.defaultFocusedValue ? (0, r.Mw)((0, r.WG)(e.defaultFocusedValue), A) : O || (0, r.Mw)((0, r.Lg)(R), A), m, I), [e.defaultFocusedValue, O, R, A, m, I]),
-        [b, L] = (0, i.zk)(C, y, e.onFocusChange),
+        [L, b] = (0, i.zk)(C, y, e.onFocusChange),
         [D, M] = (0, a.useState)(() => {
             switch (T) {
                 case 'start':
-                    return l(b, p, E, m, I);
+                    return l(L, p, E, m, I);
                 case 'end':
-                    return u(b, p, E, m, I);
+                    return u(L, p, E, m, I);
                 default:
-                    return s(b, p, E, m, I);
+                    return s(L, p, E, m, I);
             }
         }),
         [P, U] = (0, a.useState)(e.autoFocus || !1),
@@ -67,16 +67,16 @@ function E(e) {
         }, [D, p]),
         [x, G] = (0, a.useState)(A.identifier);
     if (A.identifier !== x) {
-        let e = (0, r.Mw)(b, A);
-        M(s(e, p, E, m, I)), L(e), G(A.identifier);
+        let e = (0, r.Mw)(L, A);
+        M(s(e, p, E, m, I)), b(e), G(A.identifier);
     }
     function k(e) {
-        L((e = d(e, m, I)));
+        b((e = d(e, m, I)));
     }
     function B(t) {
         !e.isDisabled && !e.isReadOnly && (t = _((t = d(t, m, I)), D, g)) && ((t = (0, r.Mw)(t, (null == v ? void 0 : v.calendar) || new r.IQ())), v && 'hour' in v ? N(v.set(t)) : N(t));
     }
-    o(b, m, I) ? L(d(b, m, I)) : 0 > b.compare(D) ? M(u(b, p, E, m, I)) : b.compare(w) > 0 && M(l(b, p, E, m, I));
+    o(L, m, I) ? b(d(L, m, I)) : 0 > L.compare(D) ? M(u(L, p, E, m, I)) : L.compare(w) > 0 && M(l(L, p, E, m, I));
     let F = (0, a.useMemo)(() => !!O && (!!(g && g(O)) || o(O, m, I)), [O, g, m, I]),
         Z = e.isInvalid || 'invalid' === e.validationState || F,
         V = Z ? 'invalid' : null,
@@ -92,7 +92,7 @@ function E(e) {
         },
         minValue: m,
         maxValue: I,
-        focusedDate: b,
+        focusedDate: L,
         timeZone: R,
         validationState: V,
         isValueInvalid: Z,
@@ -100,47 +100,47 @@ function E(e) {
             k(e), U(!0);
         },
         focusNextDay() {
-            k(b.add({ days: 1 }));
+            k(L.add({ days: 1 }));
         },
         focusPreviousDay() {
-            k(b.subtract({ days: 1 }));
+            k(L.subtract({ days: 1 }));
         },
         focusNextRow() {
-            p.days ? this.focusNextPage() : (p.weeks || p.months || p.years) && k(b.add({ weeks: 1 }));
+            p.days ? this.focusNextPage() : (p.weeks || p.months || p.years) && k(L.add({ weeks: 1 }));
         },
         focusPreviousRow() {
-            p.days ? this.focusPreviousPage() : (p.weeks || p.months || p.years) && k(b.subtract({ weeks: 1 }));
+            p.days ? this.focusPreviousPage() : (p.weeks || p.months || p.years) && k(L.subtract({ weeks: 1 }));
         },
         focusNextPage() {
             let e = D.add(H);
-            L(d(b.add(H), m, I)), M(l(c(b, e, H, E, m, I), H, E));
+            b(d(L.add(H), m, I)), M(l(c(L, e, H, E, m, I), H, E));
         },
         focusPreviousPage() {
             let e = D.subtract(H);
-            L(d(b.subtract(H), m, I)), M(l(c(b, e, H, E, m, I), H, E));
+            b(d(L.subtract(H), m, I)), M(l(c(L, e, H, E, m, I), H, E));
         },
         focusSectionStart() {
-            p.days ? k(D) : p.weeks ? k((0, r.zJ)(b, E)) : (p.months || p.years) && k((0, r.Nm)(b));
+            p.days ? k(D) : p.weeks ? k((0, r.zJ)(L, E)) : (p.months || p.years) && k((0, r.Nm)(L));
         },
         focusSectionEnd() {
-            p.days ? k(w) : p.weeks ? k((0, r.vV)(b, E)) : (p.months || p.years) && k((0, r.Vf)(b));
+            p.days ? k(w) : p.weeks ? k((0, r.vV)(L, E)) : (p.months || p.years) && k((0, r.Vf)(L));
         },
         focusNextSection(e) {
             if (!e && !p.days) {
-                k(b.add(f(p)));
+                k(L.add(f(p)));
                 return;
             }
-            p.days ? this.focusNextPage() : p.weeks ? k(b.add({ months: 1 })) : (p.months || p.years) && k(b.add({ years: 1 }));
+            p.days ? this.focusNextPage() : p.weeks ? k(L.add({ months: 1 })) : (p.months || p.years) && k(L.add({ years: 1 }));
         },
         focusPreviousSection(e) {
             if (!e && !p.days) {
-                k(b.subtract(f(p)));
+                k(L.subtract(f(p)));
                 return;
             }
-            p.days ? this.focusPreviousPage() : p.weeks ? k(b.subtract({ months: 1 })) : (p.months || p.years) && k(b.subtract({ years: 1 }));
+            p.days ? this.focusPreviousPage() : p.weeks ? k(L.subtract({ months: 1 })) : (p.months || p.years) && k(L.subtract({ years: 1 }));
         },
         selectFocusedDate() {
-            B(b);
+            B(L);
         },
         selectDate(e) {
             B(e);
@@ -151,7 +151,7 @@ function E(e) {
         isSelected(e) {
             return null != O && (0, r.KC)(e, O) && !this.isCellDisabled(e) && !this.isCellUnavailable(e);
         },
-        isCellFocused: (e) => P && b && (0, r.KC)(e, b),
+        isCellFocused: (e) => P && L && (0, r.KC)(e, L),
         isCellDisabled(t) {
             return e.isDisabled || 0 > t.compare(D) || t.compare(w) > 0 || this.isInvalid(t, m, I);
         },
@@ -199,16 +199,16 @@ function h(e) {
     }
     let R = (0, a.useRef)(null),
         [C, y] = (0, a.useState)(null),
-        b = (0, a.useMemo)(() => (0, r.l7)(h, null == C ? void 0 : C.start), [h, C]),
-        L = (0, a.useMemo)(() => (0, r.Mb)(T, null == C ? void 0 : C.end), [T, C]),
+        L = (0, a.useMemo)(() => (0, r.l7)(h, null == C ? void 0 : C.start), [h, C]),
+        b = (0, a.useMemo)(() => (0, r.Mb)(T, null == C ? void 0 : C.end), [T, C]),
         D = E({
             ...g,
             value: S && S.start,
             createCalendar: u,
             locale: c,
             visibleDuration: f,
-            minValue: b,
-            maxValue: L,
+            minValue: L,
+            maxValue: b,
             selectionAlignment: O
         }),
         M = (t) => {
@@ -228,7 +228,7 @@ function h(e) {
         x = v ? p(v, D.focusedDate) : S && p(S.start, S.end),
         G = (t) => {
             if (!e.isReadOnly) {
-                if ((t = _((t = d(t, b, L)), D.visibleRange.start, e.isDateUnavailable))) {
+                if ((t = _((t = d(t, L, b)), D.visibleRange.start, e.isDateUnavailable))) {
                     if (v) {
                         let e = p(v, t);
                         A({

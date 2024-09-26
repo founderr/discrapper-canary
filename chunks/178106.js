@@ -68,17 +68,17 @@ function y(e) {
     for (let t of p.Z.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
     return !1;
 }
-function b(e) {
+function L(e) {
     return s().mapValues(e, (e) => ({
         ...e,
         recentUses: e.recentUses.map(Number).filter((e) => e > 0)
     }));
 }
-function L() {
+function b() {
     var e;
     if (!P()) return;
     let t = null === (e = E.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
-    v.overwriteHistory(b(null != t ? t : {}), S);
+    v.overwriteHistory(L(null != t ? t : {}), S);
 }
 function D(e) {
     let {
@@ -101,7 +101,7 @@ function P() {
 }
 class U extends (r = c.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && A.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (S = e.playedEventsPendingFlush), this.syncWith([E.Z], L);
+        this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && A.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (S = e.playedEventsPendingFlush), this.syncWith([E.Z], b);
     }
     getState() {
         return {

@@ -8,17 +8,17 @@ n(470079);
 var a = n(780384),
     r = n(481060),
     i = n(410030),
-    o = n(44315),
-    l = n(889901),
+    l = n(44315),
+    o = n(889901),
     c = n(955204),
     d = n(231338),
     _ = n(694954);
-let u = {
+let E = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
     },
-    E = {
+    u = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
@@ -29,59 +29,59 @@ function T(e) {
         I = (0, i.ZP)(),
         R = (0, c.oX)(n);
     if (null == R) return null;
-    let m = (0, r.getAvatarSpecs)(T),
-        { name: g, rarity: N } = R,
-        { color: C } = (0, c.F7)(N),
-        p = (0, a.wj)(I) ? u : E,
-        f = (m.size - m.offset - 2 * m.stroke) * 0.8,
-        A = m.size - m.stroke,
-        S = {
-            width: 0.4 * f,
-            height: 0.4 * f
-        },
+    let g = (0, r.getAvatarSpecs)(T),
+        { name: N, rarity: C } = R,
+        { color: m } = (0, c.F7)(C),
+        f = (0, a.wj)(I) ? E : u,
+        A = (g.size - g.offset - 2 * g.stroke) * 0.8,
+        p = g.size - g.stroke,
         M = {
-            width: S.width + 1,
-            height: S.height + 1,
-            right: m.stroke + 1,
-            bottom: m.stroke + 1,
+            width: 0.4 * A,
+            height: 0.4 * A
+        },
+        S = {
+            width: M.width + 1,
+            height: M.height + 1,
+            right: g.stroke + 1,
+            bottom: g.stroke + 1,
             padding: 0
         };
     return (0, s.jsxs)('div', {
         className: _.container,
         style: {
-            width: A,
-            height: A,
-            padding: m.stroke
+            width: p,
+            height: p,
+            padding: g.stroke
         },
-        'aria-label': ''.concat(null !== (t = g()) && void 0 !== t ? t : ''),
+        'aria-label': ''.concat(null !== (t = N()) && void 0 !== t ? t : ''),
         children: [
             (0, s.jsx)('div', {
                 className: _.trophyIconContainer,
                 children: (0, s.jsx)(r.TrophyIcon, {
                     size: 'custom',
-                    color: d ? C : (0, o.Lq)(p.trophy),
-                    width: f,
-                    height: f
+                    color: d ? m : (0, l.Lq)(f.trophy),
+                    width: A,
+                    height: A
                 })
             }),
             !d &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: M,
+                    style: S,
                     children: (0, s.jsx)(r.LockIcon, {
                         size: 'custom',
-                        color: (0, o.Lq)(p.locked),
-                        ...S
+                        color: (0, l.Lq)(f.locked),
+                        ...M
                     })
                 }),
             d &&
-                N === c.EP.LEGENDARY &&
+                C === c.EP.LEGENDARY &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: M,
-                    children: (0, s.jsx)(l.Z, {
+                    style: S,
+                    children: (0, s.jsx)(o.Z, {
                         className: _.confettiIcon,
-                        ...S
+                        ...M
                     })
                 })
         ]

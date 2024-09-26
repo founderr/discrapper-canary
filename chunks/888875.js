@@ -83,7 +83,7 @@ class R extends l.Z {
             S(this, 'actions', {
                 POST_CONNECTION_OPEN: C,
                 CONNECTION_RESUMED: C,
-                CONNECTION_CLOSED: b,
+                CONNECTION_CLOSED: L,
                 APP_STATE_UPDATE: y
             });
     }
@@ -92,12 +92,12 @@ function C() {
     (O = !0), D(A, !0);
 }
 function y(e) {
-    O && 'active' !== e.state && (clearTimeout(N), (N = null), L(!1));
+    O && 'active' !== e.state && (clearTimeout(N), (N = null), b(!1));
 }
-function b() {
-    O && (clearTimeout(N), (N = null), L(!1));
+function L() {
+    O && (clearTimeout(N), (N = null), b(!1));
 }
-async function L(e) {
+async function b(e) {
     D(v, !1),
         !m.Z.hasLoaded(T.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (E.Z.hasPendingUsage() || d.ZP.hasPendingUsage() || u.ZP.hasPendingUsage() || c.Z.hasPendingUsage() || (f.Z.hasPendingUsage() && !e)) && ((0, p.T6)(), await p.DZ.loadIfNecessary()),
         o().forEach(p.aj, (e) => {
@@ -105,6 +105,6 @@ async function L(e) {
         });
 }
 function D(e, t) {
-    null != N && clearTimeout(N), (N = setTimeout(() => L(t), e));
+    null != N && clearTimeout(N), (N = setTimeout(() => b(t), e));
 }
 t.Z = new R();

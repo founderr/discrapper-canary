@@ -27,8 +27,8 @@ e.exports = function (e, t, n, o, f, p, R) {
     l(n, t, o);
     var C,
         y,
-        b,
-        L = function (e) {
+        L,
+        b = function (e) {
             if (e === f && w) return w;
             if (!g && e && e in P) return P[e];
             switch (e) {
@@ -47,7 +47,7 @@ e.exports = function (e, t, n, o, f, p, R) {
         M = !1,
         P = e.prototype,
         U = P[S] || P['@@iterator'] || (f && P[f]),
-        w = (!g && U) || L(f),
+        w = (!g && U) || b(f),
         x = ('Array' === t && P.entries) || U;
     if (
         (x && (C = u(x.call(new e()))) !== Object.prototype && C.next && (!a && u(C) !== T && (c ? c(C, T) : !s(C[S]) && E(C, S, O)), d(C, D, !0, !0), a && (h[D] = O)),
@@ -65,13 +65,13 @@ e.exports = function (e, t, n, o, f, p, R) {
     ) {
         if (
             ((y = {
-                values: L(v),
-                keys: p ? w : L(A),
-                entries: L(N)
+                values: b(v),
+                keys: p ? w : b(A),
+                entries: b(N)
             }),
             R)
         )
-            for (b in y) (g || M || !(b in P)) && E(P, b, y[b]);
+            for (L in y) (g || M || !(L in P)) && E(P, L, y[L]);
         else
             r(
                 {

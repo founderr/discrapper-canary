@@ -219,7 +219,7 @@
             })
         ];
     }
-    function b(e) {
+    function L(e) {
         var t = u(e).toHsl(),
             n = t.h;
         return [
@@ -236,7 +236,7 @@
             })
         ];
     }
-    function L(e, t, n) {
+    function b(e, t, n) {
         (t = t || 6), (n = n || 30);
         var r = u(e).toHsl(),
             i = 360 / n,
@@ -412,7 +412,7 @@
             return e.apply(null, [this].concat([].slice.call(t)));
         },
         analogous: function () {
-            return this._applyCombination(L, arguments);
+            return this._applyCombination(b, arguments);
         },
         complement: function () {
             return this._applyCombination(R, arguments);
@@ -421,7 +421,7 @@
             return this._applyCombination(D, arguments);
         },
         splitcomplement: function () {
-            return this._applyCombination(b, arguments);
+            return this._applyCombination(L, arguments);
         },
         triad: function () {
             return this._applyCombination(C, arguments);

@@ -101,7 +101,7 @@ function y(e) {
         return n === I && i === T && (g = null != r ? r : null), o !== g && (a = m.delete(h.Yn.DEFAULT) || a), null == r ? (a = n === I && i === T ? m.delete(h.Yn.DEFAULT) || a : A(h.Yn.DEFAULT, n) || a) : n === I && i !== T ? (a = m.delete(h.Yn.DEFAULT) || a) : n !== I && r !== _.Z.getChannelId() && (a = A(h.Yn.DEFAULT, n) || a), a || e;
     }, !1);
 }
-class b extends (r = s.ZP.Store) {
+class L extends (r = s.ZP.Store) {
     initialize() {
         this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(_.Z);
     }
@@ -145,8 +145,8 @@ class b extends (r = s.ZP.Store) {
         return null != I && this.isPrioritySpeaker(I, e) && this.isSpeaking(I, e);
     }
 }
-p(b, 'displayName', 'SpeakingStore'),
-    (t.Z = new b(l.Z, {
+p(L, 'displayName', 'SpeakingStore'),
+    (t.Z = new L(l.Z, {
         CONNECTION_OPEN: R,
         OVERLAY_INITIALIZE: R,
         SPEAKING: C,

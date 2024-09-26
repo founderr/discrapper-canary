@@ -97,10 +97,10 @@ function O(e) {
         });
     if (2 === r) return (0, i.jsx)(C, { itemsForLayout: t });
     if (3 === r) return (0, i.jsx)(y, { itemsForLayout: t });
-    if (4 === r) return (0, i.jsx)(b, { itemsForLayout: t });
+    if (4 === r) return (0, i.jsx)(L, { itemsForLayout: t });
     let a = r % 3;
     return (0, i.jsxs)(i.Fragment, {
-        children: [1 === a && (0, i.jsx)(R, { itemsForLayout: t.slice(0, a) }), 2 === a && (0, i.jsx)(C, { itemsForLayout: t.slice(0, a) }), 0 === a ? (0, i.jsx)(L, { itemsForLayout: t }) : (0, i.jsx)(L, { itemsForLayout: t.slice(a) })]
+        children: [1 === a && (0, i.jsx)(R, { itemsForLayout: t.slice(0, a) }), 2 === a && (0, i.jsx)(C, { itemsForLayout: t.slice(0, a) }), 0 === a ? (0, i.jsx)(b, { itemsForLayout: t }) : (0, i.jsx)(b, { itemsForLayout: t.slice(a) })]
     });
 }
 function R(e) {
@@ -175,7 +175,7 @@ function y(e) {
         ]
     });
 }
-function b(e) {
+function L(e) {
     let { itemsForLayout: t } = e;
     return (0, i.jsx)('div', {
         className: p.twoByTwoGrid,
@@ -192,7 +192,7 @@ function b(e) {
         )
     });
 }
-function L(e) {
+function b(e) {
     let { itemsForLayout: t } = e;
     return (0, i.jsx)('div', {
         className: p.threeByThreeGrid,

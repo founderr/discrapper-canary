@@ -12,7 +12,7 @@ n.d(t, {
         return g;
     },
     _U: function () {
-        return b;
+        return L;
     },
     dM: function () {
         return C;
@@ -193,7 +193,7 @@ function C(e, t, n, r) {
 function y(e) {
     (0, _.PS)(e, (e) => (!(0, p.yE)(e.guildOnboardingProgress, a.nI.GUILD_NOTICE_CLEARED) || !!(0, p.yE)(e.guildOnboardingProgress, a.nI.GUILD_NOTICE_SHOWN)) && ((e.guildOnboardingProgress = (0, p.pj)(e.guildOnboardingProgress, a.nI.GUILD_NOTICE_CLEARED)), (e.guildOnboardingProgress = (0, p.mB)(e.guildOnboardingProgress, a.nI.GUILD_NOTICE_SHOWN, !1)), !0), _.fy.INFREQUENT_USER_ACTION);
 }
-function b(e, t) {
+function L(e, t) {
     o.Z.dispatch({
         type: 'DISMISS_FAVORITE_SUGGESTION',
         guildId: e,

@@ -29,8 +29,8 @@ var a = n(952639),
     R = n(735020),
     C = n(774863),
     y = n(799525),
-    b = n(981631),
-    L = n(526761);
+    L = n(981631),
+    b = n(526761);
 function D(e, t, n) {
     return (
         t in e
@@ -202,7 +202,7 @@ function Y(e) {
     let n = e.filter((e) => (0, A.OR)(e) && (0, O.HH)(e)),
         r = e
             .map((e) => {
-                if (b.OBS.has(e.type) && null != e.messageReference) {
+                if (L.OBS.has(e.type) && null != e.messageReference) {
                     let t = f.Z.getMessageByReference(e.messageReference);
                     if (t.state === f.Y.LOADED && null != t.message && (0, A.OR)(t.message) && (0, O.HH)(t.message)) return t.message;
                 }
@@ -302,7 +302,7 @@ function J(e) {
 }
 function ee(e) {
     let { settings: t, local: n } = e;
-    if (!(0, N.Kh)() || !n || t.type !== L.yP.PRELOADED_USER_SETTINGS) return !1;
+    if (!(0, N.Kh)() || !n || t.type !== b.yP.PRELOADED_USER_SETTINGS) return !1;
     let r = T.Z.getChannelId();
     return null != r && en(r);
 }

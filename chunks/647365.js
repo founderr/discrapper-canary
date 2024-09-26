@@ -4,7 +4,7 @@ var o = n(453217),
     r = n(100805),
     a = n(784145);
 t.Z = function (e) {
-    let { collapsedHeight: t, expandedContentRef: n, expansionSpring: l, isExpanded: i, isExpansionAnimationComplete: c, onCtxMenuOpened: d, onCtxMenuClosed: u, onCtxMenuSelection: p, quest: x, useReducedMotion: m } = e;
+    let { collapsedHeight: t, expandedContentRef: n, expansionSpring: l, isExpanded: i, isExpansionAnimationComplete: c, onCtxMenuOpened: d, onCtxMenuClosed: u, onCtxMenuSelection: p, quest: m, useReducedMotion: x } = e;
     return (0, s.jsx)(r.Z, {
         expansionSpring: l,
         className: a.content,
@@ -14,16 +14,16 @@ t.Z = function (e) {
         onCtxMenuSelect: p,
         isExpanded: i,
         isExpansionAnimationComplete: c,
-        quest: x,
-        useReducedMotion: m,
+        quest: m,
+        useReducedMotion: x,
         ref: n,
         children: (0, s.jsx)(o.Z, {
             className: a.content,
             expansionSpring: l,
             isExpanded: i,
             isExpansionAnimationComplete: c,
-            quest: x,
-            useReducedMotion: m
+            quest: m,
+            useReducedMotion: x
         })
     });
 };

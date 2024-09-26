@@ -104,20 +104,20 @@ function E(e, n, r) {
     if (o) return o;
     var s = Object.keys(n),
         l = _(s);
-    if ((e.showHidden && (s = Object.getOwnPropertyNames(n)), L(n) && (s.indexOf('message') >= 0 || s.indexOf('description') >= 0))) return h(n);
+    if ((e.showHidden && (s = Object.getOwnPropertyNames(n)), b(n) && (s.indexOf('message') >= 0 || s.indexOf('description') >= 0))) return h(n);
     if (0 === s.length) {
         if (D(n)) {
             var u = n.name ? ': ' + n.name : '';
             return e.stylize('[Function' + u + ']', 'special');
         }
         if (C(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
-        if (b(n)) return e.stylize(Date.prototype.toString.call(n), 'date');
-        if (L(n)) return h(n);
+        if (L(n)) return e.stylize(Date.prototype.toString.call(n), 'date');
+        if (b(n)) return h(n);
     }
     var c = '',
         d = !1,
         g = ['{', '}'];
-    if ((T(n) && ((d = !0), (g = ['[', ']'])), D(n) && (c = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), C(n) && (c = ' ' + RegExp.prototype.toString.call(n)), b(n) && (c = ' ' + Date.prototype.toUTCString.call(n)), L(n) && (c = ' ' + h(n)), 0 === s.length && (!d || 0 == n.length))) return g[0] + c + g[1];
+    if ((T(n) && ((d = !0), (g = ['[', ']'])), D(n) && (c = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), C(n) && (c = ' ' + RegExp.prototype.toString.call(n)), L(n) && (c = ' ' + Date.prototype.toUTCString.call(n)), b(n) && (c = ' ' + h(n)), 0 === s.length && (!d || 0 == n.length))) return g[0] + c + g[1];
     if (r < 0) return C(n) ? e.stylize(RegExp.prototype.toString.call(n), 'regexp') : e.stylize('[Object]', 'special');
     return (
         e.seen.push(n),
@@ -225,10 +225,10 @@ function C(e) {
 function y(e) {
     return 'object' == typeof e && null !== e;
 }
-function b(e) {
+function L(e) {
     return y(e) && '[object Date]' === P(e);
 }
-function L(e) {
+function b(e) {
     return y(e) && ('[object Error]' === P(e) || e instanceof Error);
 }
 function D(e) {
@@ -293,10 +293,10 @@ function U(e) {
     (t.isRegExp = C),
     (t.types.isRegExp = C),
     (t.isObject = y),
-    (t.isDate = b),
-    (t.types.isDate = b),
-    (t.isError = L),
-    (t.types.isNativeError = L),
+    (t.isDate = L),
+    (t.types.isDate = L),
+    (t.isError = b),
+    (t.types.isNativeError = b),
     (t.isFunction = D),
     (t.isPrimitive = M),
     (t.isBuffer = n(102439));

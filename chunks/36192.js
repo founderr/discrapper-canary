@@ -20,8 +20,8 @@ var n = t(735250),
     I = t(246946),
     N = t(594174),
     A = t(460562),
-    m = t(823379),
-    C = t(981631),
+    C = t(823379),
+    m = t(981631),
     g = t(921944),
     h = t(689938),
     O = t(722177);
@@ -38,10 +38,10 @@ function p() {
             clearTimeout(e), (0, E.$Z)();
         };
     }, []);
-    let m = () => {
-            l.tn.post({ url: C.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG });
+    let C = () => {
+            l.tn.post({ url: m.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG });
         },
-        [p, f] = a.useState(new Set());
+        [p, M] = a.useState(new Set());
     return i
         ? (0, n.jsx)(u.Z, {})
         : ((e =
@@ -86,7 +86,7 @@ function p() {
                                                               checked: p.has(e.id_hash),
                                                               setChecked: (s) => {
                                                                   let t = new Set(p);
-                                                                  s ? t.add(e.id_hash) : t.delete(e.id_hash), f(t);
+                                                                  s ? t.add(e.id_hash) : t.delete(e.id_hash), M(t);
                                                               }
                                                           },
                                                           e.id_hash
@@ -152,7 +152,7 @@ function p() {
                                         return (0, n.jsx)(d.Button, {
                                             size: d.Button.Sizes.SMALL,
                                             color: d.Button.Colors.PRIMARY,
-                                            onClick: m,
+                                            onClick: C,
                                             onMouseEnter: s,
                                             onMouseLeave: t,
                                             children: 'Trigger Suspicious Sessions Notification'
@@ -171,7 +171,7 @@ function R(e) {
     let { session: l, current: c, setChecked: _, checked: u, useChecks: S } = e,
         I = null !== (o = null === (s = l.client_info) || void 0 === s ? void 0 : s.location) && void 0 !== o ? o : null === (t = l.client_info) || void 0 === t ? void 0 : t.ip,
         N = null === (a = l.client_info) || void 0 === a ? void 0 : a.platform,
-        { text: A, icon: C } = (function (e) {
+        { text: A, icon: m } = (function (e) {
             switch (null == e ? void 0 : e.toLowerCase().trim()) {
                 case null:
                 case void 0:
@@ -194,8 +194,8 @@ function R(e) {
             }
         })(null === (i = l.client_info) || void 0 === i ? void 0 : i.os),
         g = c ? null : (0, T.p)(l.approx_last_used_time),
-        p = [A, N].filter(m.lm),
-        R = [I, g].filter(m.lm);
+        p = [A, N].filter(C.lm),
+        R = [I, g].filter(C.lm);
     return (0, n.jsxs)(
         'div',
         {
@@ -203,7 +203,7 @@ function R(e) {
             children: [
                 (0, n.jsx)('div', {
                     className: O.sessionIcon,
-                    children: (0, n.jsx)(C, {
+                    children: (0, n.jsx)(m, {
                         size: 'md',
                         color: 'currentColor'
                     })
@@ -287,7 +287,7 @@ function x() {
                         variant: 'text-sm/medium',
                         className: O.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, n.jsx)('span', { children: h.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({ onClick: () => _.Z.setSection(C.oAB.ACCOUNT) }) })
+                        children: (0, n.jsx)('span', { children: h.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({ onClick: () => _.Z.setSection(m.oAB.ACCOUNT) }) })
                     })
                 ]
             })

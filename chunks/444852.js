@@ -44,8 +44,8 @@ function y(e, t, n) {
         e
     );
 }
-let b = 10,
-    L = 1000000,
+let L = 10,
+    b = 1000000,
     D = 1500000;
 class M {
     setActionContext(e) {
@@ -102,7 +102,7 @@ class P extends l.Z {
             m = null === (n = e.find((e) => e.connection === this._connection)) || void 0 === n ? void 0 : n.stats;
         if (null != m && h) {
             let e = m.transport.inboundBitrateEstimate;
-            null != e && e < 100000000 && (this._bandwidthSamples.push(e), this._bandwidthSamples.length > b && this._bandwidthSamples.shift(), this._bandwidthSamples.length === b && ((f = a().mean(this._bandwidthSamples)) > D ? (p = 'HQ') : f < L && (p = 'LQ')));
+            null != e && e < 100000000 && (this._bandwidthSamples.push(e), this._bandwidthSamples.length > L && this._bandwidthSamples.shift(), this._bandwidthSamples.length === L && ((f = a().mean(this._bandwidthSamples)) > D ? (p = 'HQ') : f < b && (p = 'LQ')));
         }
         let I = null !== (i = null === (r = this._goLiveQualityManager) || void 0 === r ? void 0 : r.isDowngraded()) && void 0 !== i && i;
         if (('HQ' === p && I ? (this.logger.info('Attempting to upgrade to HQ simulcast stream, bandwidth estimate: '.concat(f)), null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!1)) : 'LQ' === p && !I && (this.logger.info('Attempting to downgrade to LQ simulcast stream, bandwidth estimate: '.concat(f)), null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!0)), h)) {
@@ -148,9 +148,9 @@ class P extends l.Z {
                                     gpu_memory: i
                                 };
                             }
-                            let b = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != m ? m : 0) + (null != p ? p : 0),
-                                L = (null == g ? void 0 : null === (v = g.desktopSource) || void 0 === v ? void 0 : v.sourcePid) != null ? f.ZP.getGameForPID(g.desktopSource.sourcePid) : null,
-                                { gameName: D, gameId: M, exe: P, distributor: U } = (0, E.G8)(L);
+                            let L = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != m ? m : 0) + (null != p ? p : 0),
+                                b = (null == g ? void 0 : null === (v = g.desktopSource) || void 0 === v ? void 0 : v.sourcePid) != null ? f.ZP.getGameForPID(g.desktopSource.sourcePid) : null,
+                                { gameName: D, gameId: M, exe: P, distributor: U } = (0, E.G8)(b);
                             A.default.track(R.rMx.SCREENSHARE_FINISHED, {
                                 screenshare_frames: e,
                                 videohook_frames: t,
@@ -164,7 +164,7 @@ class P extends l.Z {
                                 quartz_frames: u,
                                 screencapturekit_frames: m,
                                 go_live_camera_frames: p,
-                                total_frames: b,
+                                total_frames: L,
                                 desktop_capturer_type: c,
                                 media_session_id: I,
                                 rtc_connection_id: T,

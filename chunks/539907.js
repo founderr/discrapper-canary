@@ -112,13 +112,13 @@ function y(e, t, n) {
     }
     return n;
 }
-function b(e) {
+function L(e) {
     let { targetRef: t, overrideTargetRect: n } = e;
     return null != n ? n : (d()(null != t.current, 'Invalid ref'), t.current.getBoundingClientRect());
 }
-function L(e, t) {
-    let n = b(e),
-        r = b(t);
+function b(e, t) {
+    let n = L(e),
+        r = L(t);
     return n.top === r.top && n.left === r.left;
 }
 class D extends (r = s.Component) {
@@ -232,7 +232,7 @@ class D extends (r = s.Component) {
     }
     calculatePositionStyle(e, t, n) {
         let { spacing: r = 0 } = this.props,
-            i = b(this.props),
+            i = L(this.props),
             a = n.getBoundingClientRect(),
             o = R(i, a.left, a.top);
         switch (e) {
@@ -287,7 +287,7 @@ class D extends (r = s.Component) {
         d()(null != i, 'Missing elementRef'), null != n.current && S.set(i, n.current), h.S.subscribe(I.CkL.LAYER_POP_START, this.handleLayerPopStart), h.S.subscribe(I.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == i || null === (t = i.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener('resize', this.handleLayerPopComplete), null == r || r();
     }
     componentDidUpdate(e, t) {
-        if (((N(e) !== N(this.props) || !L(e, this.props)) && this.updatePosition(), t.position !== this.state.position)) {
+        if (((N(e) !== N(this.props) || !b(e, this.props)) && this.updatePosition(), t.position !== this.state.position)) {
             var n, r;
             null === (n = (r = this.props).onPositionChange) || void 0 === n || n.call(r, this.state.position);
         }

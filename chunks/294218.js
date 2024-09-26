@@ -24,10 +24,10 @@ var r = n(735250),
     R = n(145807),
     C = n(56744),
     y = n(981631),
-    b = n(916315);
-function L(e) {
+    L = n(916315);
+function b(e) {
     var t, n;
-    let { message: i, compact: a = !1, className: L, onContextMenu: D, onClick: M, hideSimpleEmbedContent: P = !0, channel: U, isGroupStart: w, animateAvatar: x, subscribeToComponentDispatch: G, renderThreadAccessory: k, trackAnnouncementViews: B = !1, ...F } = e,
+    let { message: i, compact: a = !1, className: b, onContextMenu: D, onClick: M, hideSimpleEmbedContent: P = !0, channel: U, isGroupStart: w, animateAvatar: x, subscribeToComponentDispatch: G, renderThreadAccessory: k, trackAnnouncementViews: B = !1, ...F } = e,
         Z = i.type === y.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
         V = i.isFirstMessageInForumPost(U),
         H = (0, c.A)((null !== (n = i.editedTimestamp) && void 0 !== n ? n : i.timestamp).valueOf()),
@@ -58,9 +58,9 @@ function L(e) {
         et = (0, T.Gx)(i);
     return (0, r.jsx)(I.Z, {
         compact: a,
-        className: o()(L, {
-            [b.ephemeral]: (0, h.Pv)(i),
-            [b.disableInteraction]: Z
+        className: o()(b, {
+            [L.ephemeral]: (0, h.Pv)(i),
+            [L.disableInteraction]: Z
         }),
         disableInteraction: Z,
         childrenRepliedMessage: (0, C.Z)(i, U, W, K, a),
@@ -88,4 +88,4 @@ function L(e) {
         ...F
     });
 }
-t.Z = i.memo(L);
+t.Z = i.memo(b);

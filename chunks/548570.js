@@ -29,8 +29,8 @@ var f = n(261470),
     R = n(218543),
     C = n(857192),
     y = n(626135),
-    b = n(12647),
-    L = n(70956),
+    L = n(12647),
+    b = n(70956),
     D = n(358085),
     M = n(960048),
     P = n(138859),
@@ -97,9 +97,9 @@ let z = 4,
     q = 1001,
     Q = 'Stream end encountered',
     X = 4004,
-    $ = 30 * L.Z.Millis.SECOND,
-    J = 3 * L.Z.Millis.MINUTE,
-    ee = 1 * L.Z.Millis.MINUTE;
+    $ = 30 * b.Z.Millis.SECOND,
+    J = 3 * b.Z.Millis.MINUTE,
+    ee = 1 * b.Z.Millis.MINUTE;
 function et(e, t, n) {
     let r = 0;
     e.dataReady((e) => {
@@ -221,7 +221,7 @@ class ei extends B.Z {
                     this._sendHeartbeatIfDue();
                 }),
                 onError: () => {
-                    this.setResumeUrl(null), b.Z.flushDNSCache(), this._handleClose(!1, 0, 'An error with the websocket occurred');
+                    this.setResumeUrl(null), L.Z.flushDNSCache(), this._handleClose(!1, 0, 'An error with the websocket occurred');
                 },
                 onClose: (e) => {
                     let { wasClean: t, code: n, reason: r } = e;

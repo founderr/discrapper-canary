@@ -33,9 +33,9 @@ function E(e) {
             R = m[T],
             C = N - I[p] - m[g],
             y = N / 2 - I[p] / 2 + O,
-            b = (0, l.u)(R, y, C),
-            L = h;
-        n.modifiersData[a] = (((t = {})[L] = b), (t.centerOffset = b - y), t);
+            L = (0, l.u)(R, y, C),
+            b = h;
+        n.modifiersData[a] = (((t = {})[b] = L), (t.centerOffset = L - y), t);
     }
 }
 function f(e) {

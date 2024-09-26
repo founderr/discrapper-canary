@@ -44,8 +44,8 @@ var s = n(470079),
     R = n(823379),
     C = n(960048),
     y = n(709054),
-    b = n(223683),
-    L = n(630114),
+    L = n(223683),
+    b = n(630114),
     D = n(506712),
     M = n(468788),
     P = n(789662),
@@ -103,7 +103,7 @@ function Z(e, t, n, r, i) {
     var a;
     let [o, s, l] = I.Z.hasConsented(U.pjP.PERSONALIZATION) ? (0, D.q)(e, t, n, r, !0) : (0, D.A)(e, n),
         u = null !== (a = n.filter((t) => t.guild_id === e.id)[0]) && void 0 !== a ? a : {},
-        c = (0, L.Z)(e, null != i ? i : o, u, r, t);
+        c = (0, b.Z)(e, null != i ? i : o, u, r, t);
     return {
         guildId: e.id,
         mode: o,
@@ -267,8 +267,8 @@ async function K(e) {
     return await e();
 }
 async function z() {
-    let e = await (0, b.Tn)();
-    e.length > 0 ? (await q()) && (0, b.dt)(e) : (0, b.$U)('Backup from '.concat(new Date().toLocaleDateString()));
+    let e = await (0, L.Tn)();
+    e.length > 0 ? (await q()) && (0, L.dt)(e) : (0, L.$U)('Backup from '.concat(new Date().toLocaleDateString()));
 }
 function q() {
     return new Promise((e) => {
@@ -284,7 +284,7 @@ function q() {
 }
 async function Q() {
     d.K.set('turnedOffNewNotifications', !0), N.default.track(U.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(S.Z.getGuilds()).filter((e) => v.ZP.resolveGuildUnreadSetting(e) === w.i.ONLY_MENTIONS).length });
-    let e = await (0, b.Tn)(),
+    let e = await (0, L.Tn)(),
         t = u().sortBy(e, (e) => new Date(e.recorded_at).getTime());
     if (t.length > 0) {
         let e = t[t.length - 1];
@@ -297,7 +297,7 @@ async function Q() {
                 onCancel: () => {}
             })
         ),
-            await (0, b.xx)(e.id),
+            await (0, L.xx)(e.id),
             await f.Z.setAccountFlag(M.c.USE_NEW_NOTIFICATIONS, !1);
     } else await f.Z.setAccountFlag(M.c.USE_NEW_NOTIFICATIONS, !1);
 }

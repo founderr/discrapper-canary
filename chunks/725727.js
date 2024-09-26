@@ -83,14 +83,14 @@ function I() {
                 return t;
             })
         ),
-        b = S.filter((e) => {
+        L = S.filter((e) => {
             let { promotion: t } = e;
             return !y.has(t.id);
         });
     return {
         promotionsLoaded: T && (!O || null != e),
         activeOutboundPromotions: C,
-        claimedEndedOutboundPromotions: b.filter((e) => (0, E.ZC)(e.promotion)),
+        claimedEndedOutboundPromotions: L.filter((e) => (0, E.ZC)(e.promotion)),
         claimedOutboundPromotionCodeMap: R,
         addClaimedOutboundPromotionCode: v
     };

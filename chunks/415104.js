@@ -1,42 +1,42 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return _;
     }
 }),
     n(47120);
 var s = n(735250),
-    a = n(470079),
+    o = n(470079),
     r = n(120356),
-    i = n.n(r),
-    o = n(617136),
-    l = n(113434),
+    a = n.n(r),
+    l = n(617136),
+    i = n(113434),
     c = n(497505),
     d = n(602667),
-    _ = n(439826),
-    u = n(43779),
-    E = n(981631),
-    T = n(968470);
-function I(e) {
-    let { quest: t, className: n, questContent: r, contentPosition: I, rowIndex: R } = e,
-        [m, g] = a.useState(!1),
-        [N, C] = a.useState([]),
-        p = (0, l.qb)(t),
-        f = a.useCallback(() => {
-            g(!0),
-                (0, o.dA)({
+    u = n(439826),
+    p = n(43779),
+    m = n(981631),
+    x = n(968470);
+function _(e) {
+    let { quest: t, className: n, questContent: r, contentPosition: _, rowIndex: C } = e,
+        [g, f] = o.useState(!1),
+        [E, h] = o.useState([]),
+        S = (0, i.qb)(t),
+        T = o.useCallback(() => {
+            f(!0),
+                (0, l.dA)({
                     questId: t.id,
-                    event: E.rMx.QUEST_HOVER,
-                    properties: (0, o.mH)(r)
+                    event: m.rMx.QUEST_HOVER,
+                    properties: (0, l.mH)(r)
                 });
-        }, [g, r, t.id]),
-        A = a.useCallback(() => {
-            g(!1);
-        }, [g]);
+        }, [f, r, t.id]),
+        N = o.useCallback(() => {
+            f(!1);
+        }, [f]);
     return (0, s.jsx)(d.A, {
         questOrQuests: t,
         questContent: r,
-        questContentPosition: I,
-        questContentRowIndex: R,
+        questContentPosition: _,
+        questContentRowIndex: C,
         trackGuildAndChannelMetadata: r === c.jn.QUESTS_EMBED,
         children: (e) =>
             (0, s.jsxs)('div', {
@@ -44,23 +44,23 @@ function I(e) {
                 ref: (t) => {
                     e.current = t;
                 },
-                className: i()(T.container, n),
-                onMouseEnter: f,
-                onMouseLeave: A,
+                className: a()(x.container, n),
+                onMouseEnter: T,
+                onMouseLeave: N,
                 children: [
-                    (0, s.jsx)(_.Z, {
-                        quest: t,
-                        isHovering: m,
-                        errorHints: N,
-                        warningHints: p
-                    }),
                     (0, s.jsx)(u.Z, {
                         quest: t,
+                        isHovering: g,
+                        errorHints: E,
+                        warningHints: S
+                    }),
+                    (0, s.jsx)(p.Z, {
+                        quest: t,
                         questContent: r,
-                        isHovering: m,
-                        contentPosition: I,
-                        rowIndex: R,
-                        onReceiveErrorHints: C
+                        isHovering: g,
+                        contentPosition: _,
+                        rowIndex: C,
+                        onReceiveErrorHints: h
                     })
                 ]
             })

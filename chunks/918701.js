@@ -33,7 +33,7 @@ n.d(t, {
         return eE;
     },
     Jg: function () {
-        return eL;
+        return eb;
     },
     K: function () {
         return eC;
@@ -171,7 +171,7 @@ n.d(t, {
         return en;
     },
     ys: function () {
-        return eb;
+        return eL;
     },
     zE: function () {
         return eA;
@@ -211,8 +211,8 @@ var S = n(572004),
     R = n(960048),
     C = n(617136),
     y = n(569984),
-    b = n(497505),
-    L = n(566078),
+    L = n(497505),
+    b = n(566078),
     D = n(312046),
     M = n(46140),
     P = n(981631),
@@ -235,14 +235,14 @@ let B = (e) => e.application_id === U.Ev || e.platform === P.M7m.XBOX,
 function Z(e, t) {
     if (null == e) return !1;
     let n = e.name.toLowerCase(),
-        r = L.r.build(t.config).application.name.toLowerCase();
+        r = b.r.build(t.config).application.name.toLowerCase();
     return B(e) || F(e) ? n === r : null != e.application_id && H(e.application_id, t);
 }
 function V(e, t) {
     for (let [n, r] of e) if (Z(t, r) && !W(r)) return r;
 }
 function H(e, t) {
-    return null != L.r.build(t.config).application.ids.find((t) => t === e);
+    return null != b.r.build(t.config).application.ids.find((t) => t === e);
 }
 function Y(e, t) {
     let n;
@@ -422,7 +422,7 @@ let eu = (e) => {
                 quest: e,
                 idx: null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedTier
             }),
-            i = L.r.build(e.config).defaultRewardAsset,
+            i = b.r.build(e.config).defaultRewardAsset,
             a = null !== (n = null == r ? void 0 : r.asset) && void 0 !== n ? n : i;
         return {
             name: a,
@@ -459,15 +459,15 @@ function eI(e, t) {
 }
 let eT = (e) => {
     switch (e) {
-        case b.y$.XBOX:
+        case L.y$.XBOX:
             return w.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
-        case b.y$.PLAYSTATION:
+        case L.y$.PLAYSTATION:
             return w.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION;
-        case b.y$.SWITCH:
+        case L.y$.SWITCH:
             return w.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_SWITCH;
-        case b.y$.PC:
+        case L.y$.PC:
             return w.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_PC;
-        case b.y$.CROSS_PLATFORM:
+        case L.y$.CROSS_PLATFORM:
             return w.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM;
     }
 };
@@ -483,11 +483,11 @@ function eg(e) {
     return w.Z.Messages.QUESTS_TITLE.format({ questName: r.config.messages.questName });
 }
 function eS(e) {
-    return Object.keys(M.a_).includes(b.jn[e]);
+    return Object.keys(M.a_).includes(L.jn[e]);
 }
 function eA(e, t) {
     if (!eS(t)) return !1;
-    let n = b.jn[t];
+    let n = L.jn[t];
     return (0, v.yE)(e.dismissedQuestContent, M.a_[n]);
 }
 function ev(e) {
@@ -538,7 +538,7 @@ function eC(e) {
 function ey(e, t) {
     return e.targetedContent.includes(t);
 }
-function eb(e, t) {
+function eL(e, t) {
     R.Z.captureException(e, {
         ...t,
         tags: {
@@ -547,7 +547,7 @@ function eb(e, t) {
         }
     });
 }
-function eL(e, t) {
+function eb(e, t) {
     if (null == t || null == e) return null;
     for (let n of t) {
         let t = V(e, n);
@@ -608,7 +608,7 @@ function eB(e) {
     return null != e && eG({ quest: e });
 }
 function eF(e, t) {
-    return L.r.build(t.config).application.id === e || eZ(t);
+    return b.r.build(t.config).application.id === e || eZ(t);
 }
 function eZ(e) {
     return eH(e, M.S7.FRACTIONS_QUEST);
@@ -617,7 +617,7 @@ function eV(e) {
     return !eH(e, M.S7.IN_HOUSE_CONSOLE_QUEST);
 }
 function eH(e, t) {
-    return L.r.build(e.config).features.has(t);
+    return b.r.build(e.config).features.has(t);
 }
 function eY(e) {
     let { quest: t, idx: n } = e;
@@ -628,7 +628,7 @@ function eY(e) {
         .otherwise(() => null);
 }
 function ej(e, t) {
-    let n = L.r.build(e.config).application.link;
+    let n = b.r.build(e.config).application.link;
     (0, O.q)({
         href: n,
         onConfirm: () => {

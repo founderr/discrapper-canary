@@ -3,74 +3,74 @@ var s = n(570140),
     a = n(317770),
     r = n(474873),
     i = n(314897),
-    o = n(19780),
-    l = n(944486),
+    l = n(19780),
+    o = n(944486),
     c = n(111583),
     d = n(557177),
     _ = n(351780),
-    u = n(843693),
-    E = n(981631);
+    E = n(843693),
+    u = n(981631);
 let T = (0, d.uk)('poggermode_applause', r.Z.getSoundpack()),
     I = !1,
     R = !1,
-    m = [],
-    g = null,
-    N = () => {
+    g = [],
+    N = null,
+    C = () => {
         if (!I) T.loop(), (I = !0);
     },
-    C = () => {
+    m = () => {
         T.stop(), (I = !1);
     },
-    p = () => {
+    f = () => {
         let e = _.Z.isEnabled(),
             t = _.Z.comboSoundsEnabled;
-        return (!!e && !!t && null != l.Z.getChannelId()) || !1;
-    },
-    f = () => {
-        if (0 === m.length || !p() || R) return;
-        R = !0;
-        let [e, t] = m[m.length - 1];
-        (0, d.GN)(e, t), (g = setTimeout(A, 1000));
+        return (!!e && !!t && null != o.Z.getChannelId()) || !1;
     },
     A = () => {
-        m.pop(), (R = !1), f();
+        if (0 === g.length || !f() || R) return;
+        R = !0;
+        let [e, t] = g[g.length - 1];
+        (0, d.GN)(e, t), (N = setTimeout(p, 1000));
     },
-    S = function (e) {
+    p = () => {
+        g.pop(), (R = !1), A();
+    },
+    M = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            n = o.Z.isConnected();
-        m.push([e, t * (n ? 0.1 : 1)]), f();
+            n = l.Z.isConnected();
+        g.push([e, t * (n ? 0.1 : 1)]), A();
     };
-class M extends a.Z {
+class S extends a.Z {
     _initialize() {
-        u.ZP.addChangeListener(this.startAudio), s.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), s.Z.subscribe('TYPING_STOP', this.stopAudio), s.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), s.Z.subscribe('CHANNEL_SELECT', this.stopAudio), s.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio);
+        E.ZP.addChangeListener(this.startAudio), s.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), s.Z.subscribe('TYPING_STOP', this.stopAudio), s.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), s.Z.subscribe('CHANNEL_SELECT', this.stopAudio), s.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio);
     }
     _terminate() {
-        u.ZP.removeChangeListener(this.startAudio), s.Z.unsubscribe('RTC_CONNECTION_STATE', this.setVolume), s.Z.unsubscribe('TYPING_STOP', this.stopAudio), s.Z.unsubscribe('TYPING_STOP_LOCAL', this.stopAudio), s.Z.unsubscribe('CHANNEL_SELECT', this.stopAudio), s.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio), clearTimeout(g);
+        E.ZP.removeChangeListener(this.startAudio), s.Z.unsubscribe('RTC_CONNECTION_STATE', this.setVolume), s.Z.unsubscribe('TYPING_STOP', this.stopAudio), s.Z.unsubscribe('TYPING_STOP_LOCAL', this.stopAudio), s.Z.unsubscribe('CHANNEL_SELECT', this.stopAudio), s.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio), clearTimeout(N);
     }
     setVolume(e) {
         let { state: t } = e;
-        t === E.hes.RTC_CONNECTED ? (T.volume = 0.1) : (T.volume = 1);
+        t === u.hes.RTC_CONNECTED ? (T.volume = 0.1) : (T.volume = 1);
     }
     handleTypingStop(e) {
         let { userId: t } = e;
-        i.default.getId() === t && C();
+        i.default.getId() === t && m();
     }
     stopAudio() {
-        C();
+        m();
     }
     startAudio() {
         var e;
-        if (!p()) return;
-        let t = l.Z.getChannelId();
+        if (!f()) return;
+        let t = o.Z.getChannelId();
         if (null == t) return;
         let n = i.default.getId(),
             s = c.Z.isTyping(t, n),
-            a = u.ZP.getUserCombo(n, t),
+            a = E.ZP.getUserCombo(n, t),
             r = null !== (e = null == a ? void 0 : a.multiplier) && void 0 !== e ? e : 1;
-        s && r >= 7 ? N() : C();
+        s && r >= 7 ? C() : m();
     }
     playAchievementUnlockSound() {
-        if (!!p()) S('poggermode_achievement_unlock');
+        if (!!f()) M('poggermode_achievement_unlock');
     }
 }
-t.Z = new M();
+t.Z = new S();

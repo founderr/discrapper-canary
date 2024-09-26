@@ -17,13 +17,13 @@ var i = t(735250),
     p = t(827498),
     _ = t(783097),
     C = t(753972),
-    f = t(387658),
-    h = t(536650),
+    h = t(387658),
+    f = t(536650),
     A = t(675993),
     E = t(689079),
     N = t(689938),
-    v = t(804978),
-    x = t(413097);
+    x = t(804978),
+    v = t(413097);
 function I(e) {
     var n;
     let { channel: t, application: s, sectionName: c } = e,
@@ -35,7 +35,7 @@ function I(e) {
         { iconURL: T, name: M } = a.useMemo(
             () =>
                 (0, _.sl)(P, {
-                    fakeAppIconURL: x,
+                    fakeAppIconURL: v,
                     size: 84
                 }),
             [P]
@@ -49,13 +49,13 @@ function I(e) {
             O ? d.ZP.queryInstallOnDemandApp(P.id, t.id) : d.ZP.maybeQueryForInstallLessApps(P.id, t.id);
         }, [P.id, t.id, O]),
         (0, i.jsxs)(r.ScrollerNone, {
-            className: v.container,
+            className: x.container,
             fade: !0,
             ref: S,
             role: 'region',
             'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: M }),
             children: [
-                (0, i.jsx)(h.Z, {
+                (0, i.jsx)(f.Z, {
                     application: P,
                     name: M,
                     iconURL: T,
@@ -65,7 +65,7 @@ function I(e) {
                 null != T &&
                     (0, i.jsx)(C.Z, {
                         src: T,
-                        className: v.appIcon
+                        className: x.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
                 (0, i.jsx)(L, {
@@ -75,7 +75,7 @@ function I(e) {
                     hasCommands: b
                 }),
                 I === p._b.TEXT
-                    ? (0, i.jsx)(f.Z, {
+                    ? (0, i.jsx)(h.Z, {
                           channel: t,
                           application: P,
                           sectionName: c,

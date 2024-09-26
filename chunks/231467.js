@@ -32,8 +32,8 @@ var i = n(735250),
     R = n(271383),
     C = n(594174),
     y = n(229893),
-    b = n(229765),
-    L = n(778045),
+    L = n(229765),
+    b = n(778045),
     D = n(355932),
     M = n(981631),
     P = n(308083),
@@ -199,7 +199,7 @@ function Z(e) {
                         guildId: n.id,
                         isFavorited: !et
                     }),
-                    et ? (0, b.SI)(n.id) : (0, b.EV)(n.id);
+                    et ? (0, L.SI)(n.id) : (0, L.EV)(n.id);
             },
             [n.id, et, g]
         ),
@@ -401,7 +401,7 @@ function Z(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: w.cardFooterGames,
-                        children: (0, i.jsx)(L.Z, {
+                        children: (0, i.jsx)(b.Z, {
                             games: W,
                             prioritizedGameIds: h,
                             gameActivity: j
@@ -427,13 +427,13 @@ function V(e) {
             return (null === (e = N.Z.getRequest(_.id)) || void 0 === e ? void 0 : e.applicationStatus) === v.wB.SUBMITTED;
         }),
         y = (0, f.iN)('ClanGuildProfile'),
-        b = _.memberCount >= P.Du,
-        L = a.useRef(-1),
-        D = a.useCallback((e) => o(e, L), [o]),
+        L = _.memberCount >= P.Du,
+        b = a.useRef(-1),
+        D = a.useCallback((e) => o(e, b), [o]),
         U = (0, d.O)(D, 1);
     a.useEffect(
         () => () => {
-            null == o || o(!1, L);
+            null == o || o(!1, b);
         },
         [o]
     );
@@ -495,7 +495,7 @@ function V(e) {
                 prioritizedGameIds: r,
                 showBrandingFooter: !0,
                 hasPendingJoinRequest: A,
-                atMaxMemberCapacity: b
+                atMaxMemberCapacity: L
             })
         })
     });

@@ -29,8 +29,8 @@ var r = n(735250),
     R = n(271383),
     C = n(594174),
     y = n(464891),
-    b = n(348238),
-    L = n(83561),
+    L = n(348238),
+    b = n(83561),
     D = n(834129),
     M = n(981631),
     P = n(674563),
@@ -219,7 +219,7 @@ function Z(e) {
         S = (0, _.e7)([O.Z], () => O.Z.getChannel(n.channel_id), [n.channel_id]),
         A = null !== (t = null == S ? void 0 : S.guild_id) && void 0 !== t ? t : null,
         { shouldShowIncidentActions: v } = (0, m.mI)(A),
-        N = (0, b.sR)(n.author.id, n.channel_id),
+        N = (0, L.sR)(n.author.id, n.channel_id),
         R = (e) => {
             N(e);
         },
@@ -228,12 +228,12 @@ function Z(e) {
             null != e && (0, g.kW)(n.id, e);
         }, [n.id, S]),
         y = h === d.$.DM_RAID,
-        L = y ? f.CircleWarningIcon : f.ChatWarningIcon;
+        b = y ? f.CircleWarningIcon : f.ChatWarningIcon;
     return (0, r.jsx)(H, {
         compact: a,
         header: (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(L, {
+                (0, r.jsx)(b, {
                     size: 'xs',
                     color: E.Z.colors.TEXT_DANGER.css
                 }),
@@ -450,7 +450,7 @@ function Y(e) {
         {
             avatarSrc: s,
             eventHandlers: { onMouseEnter: l, onMouseLeave: u }
-        } = (0, L.m)(!0),
+        } = (0, b.m)(!0),
         { notificationType: d } = (0, T.FL)(i),
         _ = null == d || d === c.p.RAID;
     return (0, r.jsx)('div', {
@@ -458,7 +458,7 @@ function Y(e) {
         onMouseLeave: u,
         children: (0, r.jsx)(D.Z, {
             className: o()(w.mainContainer, { [w.compact]: n }),
-            iconNode: n ? null : (0, r.jsx)(L.S, { src: s }),
+            iconNode: n ? null : (0, r.jsx)(b.S, { src: s }),
             iconContainerClassName: w.iconContainer,
             compact: n,
             children: (0, r.jsxs)('div', {

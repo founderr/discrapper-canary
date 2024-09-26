@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 }),
     n(47120);
@@ -10,7 +10,7 @@ var r = n(470079),
     s = n(823162),
     a = n(355298);
 let o = new Set(['GB']);
-function u() {
+function c() {
     let e = (0, i.e7)([a.Z], () => a.Z.getUserCountryCode()),
         t =
             !1 ===

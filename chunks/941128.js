@@ -42,8 +42,8 @@ function O(e, t, n) {
 let R = [N.ff.AUTHENTICATION_FAILED, N.ff.NOT_ENTITLED],
     C = 'DispatchManagerStore',
     y = [],
-    b = [],
-    L = !1,
+    L = [],
+    b = !1,
     D = null,
     M = null,
     P = !1,
@@ -53,7 +53,7 @@ let R = [N.ff.AUTHENTICATION_FAILED, N.ff.NOT_ENTITLED],
 function G() {
     let e = {
         queue: y,
-        paused: L,
+        paused: b,
         userActions: Array.from(U)
     };
     E.K.set(C, e);
@@ -84,15 +84,15 @@ function Z(e, t, n, r) {
             comboId: i,
             action: r
         },
-        o = b.indexOf(i);
-    -1 !== o && b.splice(o, 1);
+        o = L.indexOf(i);
+    -1 !== o && L.splice(o, 1);
     let s = F(e, t);
-    0 !== s && (n ? -1 === s && (y.push(a), B()) : (s > 0 && y.splice(s, 1), y.unshift(a), B())), !n && L && g.Z.resume(), G();
+    0 !== s && (n ? -1 === s && (y.push(a), B()) : (s > 0 && y.splice(s, 1), y.unshift(a), B())), !n && b && g.Z.resume(), G();
 }
 function V(e, t) {
     let n = (0, T.Tu)(e, t),
-        r = b.indexOf(n);
-    -1 !== r && b.splice(r, 1);
+        r = L.indexOf(n);
+    -1 !== r && L.splice(r, 1);
     let i = F(e, t);
     -1 !== i && (y.splice(i, 1), G()), B();
 }
@@ -119,19 +119,19 @@ function z(e) {
     let { applicationId: t, branchId: n } = e,
         r = F(t, n);
     if (r < 1) return !1;
-    y.splice(0, 0, y.splice(r, 1)[0]), B(), L && g.Z.resume(), G();
+    y.splice(0, 0, y.splice(r, 1)[0]), B(), b && g.Z.resume(), G();
 }
 function q(e) {
     let { applicationId: t, branchId: n } = e,
         r = (0, T.Tu)(t, n),
-        i = b.indexOf(r);
-    -1 !== i && b.splice(i, 1);
+        i = L.indexOf(r);
+    -1 !== i && L.splice(i, 1);
 }
 function Q(e) {
     let { state: t } = e;
-    !P && ((P = !0), B(), !L && g.Z.resume());
-    let n = L;
-    (L = t.paused), (D = t.currentTask), (M = t.nextTask);
+    !P && ((P = !0), B(), !b && g.Z.resume());
+    let n = b;
+    (b = t.paused), (D = t.currentTask), (M = t.nextTask);
     let r = !1;
     (y = y.filter((e) => {
         let { comboId: t } = e,
@@ -140,7 +140,7 @@ function Q(e) {
             o = I.Z.getTargetBuildId(n, i),
             s = I.Z.getTargetManifests(n, i);
         if (null != a && a.type === v.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === o && d().isEqual(a.manifestIds, a.targetManifestIds) && d().isEqual(a.manifestIds, s)) {
-            if ((b.push(t), U.has(t))) {
+            if ((L.push(t), U.has(t))) {
                 switch (U.get(t)) {
                     case 'Install':
                         h.XT(n, a);
@@ -155,7 +155,7 @@ function Q(e) {
         return !0;
     })),
         B(),
-        (r || n !== L) && G();
+        (r || n !== b) && G();
 }
 function X() {
     let e = m.default.getToken(),
@@ -179,7 +179,7 @@ function $(e) {
 function J() {
     for (let e of p.ZP.getRunningDiscordApplicationIds()) h.al(e, e);
     let e = p.ZP.getVisibleGame();
-    return !L && null != e && e.pid !== x && h.wO(), (x = null == e ? null : e.pid), !1;
+    return !b && null != e && e.pid !== x && h.wO(), (x = null == e ? null : e.pid), !1;
 }
 function ee() {
     (0, S.isDesktop)() && X();
@@ -208,7 +208,7 @@ class er extends (a = _.ZP.Store) {
                       paused: null,
                       userActions: null
                   };
-        null != t.queue && (y = en(t.queue)), null != t.paused && (L = t.paused), null != t.userActions && (U = new Map(Array.from(t.userActions))), this.waitFor(A.Z, p.ZP), this.syncWith([p.ZP], J), this.waitFor(A.Z);
+        null != t.queue && (y = en(t.queue)), null != t.paused && (b = t.paused), null != t.userActions && (U = new Map(Array.from(t.userActions))), this.waitFor(A.Z, p.ZP), this.syncWith([p.ZP], J), this.waitFor(A.Z);
     }
     get activeItems() {
         return y.map((e) => {
@@ -217,10 +217,10 @@ class er extends (a = _.ZP.Store) {
         });
     }
     get finishedItems() {
-        return b.map(T.CP);
+        return L.map(T.CP);
     }
     get paused() {
-        return L;
+        return b;
     }
     getQueuePosition(e, t) {
         return F(e, t);

@@ -41,8 +41,8 @@ var r = n(852163),
     R = n(651847),
     C = n(483578),
     y = n(392107),
-    b = n(747658),
-    L = n(123143),
+    L = n(747658),
+    b = n(123143),
     D = n(95988),
     M = n(695474),
     P = n(85074),
@@ -134,8 +134,8 @@ q = {
     'pt-PT': R.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
-    'sk-SK': b.Z,
-    'sl-SI': L.Z,
+    'sk-SK': L.Z,
+    'sl-SI': b.Z,
     'sr-SP': D.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,
@@ -557,10 +557,10 @@ function ea(e, t, n) {
             : {};
     e !== (0, F.useMemo)(() => t.segments.find((e) => e.isEditable), [t.segments]) && !t.isInvalid && (l = void 0);
     let y = (0, k.Me)(),
-        b = !t.isDisabled && !t.isReadOnly && e.isEditable,
-        L = 'literal' === e.type ? '' : a.of(e.type),
+        L = !t.isDisabled && !t.isReadOnly && e.isEditable,
+        b = 'literal' === e.type ? '' : a.of(e.type),
         D = (0, k.bE)({
-            'aria-label': `${L}${o ? `, ${o}` : ''}${s ? ', ' : ''}`,
+            'aria-label': `${b}${o ? `, ${o}` : ''}${s ? ', ' : ''}`,
             'aria-labelledby': s
         });
     return 'literal' === e.type
@@ -573,13 +573,13 @@ function ea(e, t, n) {
                   'aria-describedby': l,
                   'aria-readonly': t.isReadOnly || !e.isEditable ? 'true' : void 0,
                   'data-placeholder': e.isPlaceholder || void 0,
-                  contentEditable: b,
-                  suppressContentEditableWarning: b,
-                  spellCheck: b ? 'false' : void 0,
-                  autoCapitalize: b ? 'off' : void 0,
-                  autoCorrect: b ? 'off' : void 0,
-                  [parseInt(F.version, 10) >= 17 ? 'enterKeyHint' : 'enterkeyhint']: b ? 'next' : void 0,
-                  inputMode: t.isDisabled || 'dayPeriod' === e.type || 'era' === e.type || !b ? void 0 : 'numeric',
+                  contentEditable: L,
+                  suppressContentEditableWarning: L,
+                  spellCheck: L ? 'false' : void 0,
+                  autoCapitalize: L ? 'off' : void 0,
+                  autoCorrect: L ? 'off' : void 0,
+                  [parseInt(F.version, 10) >= 17 ? 'enterKeyHint' : 'enterkeyhint']: L ? 'next' : void 0,
+                  inputMode: t.isDisabled || 'dayPeriod' === e.type || 'era' === e.type || !L ? void 0 : 'numeric',
                   tabIndex: t.isDisabled ? void 0 : 0,
                   onKeyDown: m,
                   onFocus: O,
@@ -661,7 +661,7 @@ function es(e, t, n) {
             onFocusWithinChange: e.onFocusChange
         }),
         y = (0, F.useRef)(B.PS),
-        b = (0, F.useRef)(B.PS);
+        L = (0, F.useRef)(B.PS);
     return {
         groupProps: (0, k.dG)(R, A, c, m, C, {
             role: 'group',
@@ -706,7 +706,7 @@ function es(e, t, n) {
                 realtimeValidation: t.realtimeValidation,
                 displayValidation: t.displayValidation,
                 updateValidation(e) {
-                    (y.current = e), t.updateValidation((0, B.W0)(e, b.current));
+                    (y.current = e), t.updateValidation((0, B.W0)(e, L.current));
                 },
                 resetValidation: t.resetValidation,
                 commitValidation: t.commitValidation
@@ -722,7 +722,7 @@ function es(e, t, n) {
                 realtimeValidation: t.realtimeValidation,
                 displayValidation: t.displayValidation,
                 updateValidation(e) {
-                    (b.current = e), t.updateValidation((0, B.W0)(y.current, e));
+                    (L.current = e), t.updateValidation((0, B.W0)(y.current, e));
                 },
                 resetValidation: t.resetValidation,
                 commitValidation: t.commitValidation

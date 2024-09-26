@@ -27,7 +27,7 @@ n.d(t, {
         return A;
     },
     i_: function () {
-        return b;
+        return L;
     },
     k8: function () {
         return R;
@@ -275,7 +275,7 @@ function y(e, t, n, r, i) {
         ((null == n ? void 0 : n.should_submit_data) === !0 && (null == i || 0 === Object.keys(i).length))
     );
 }
-function b(e, t, n) {
+function L(e, t, n) {
     return s.useCallback(
         (r) => (i) => {
             c.ZP.trackWithMetadata(E.rMx.IAR_SETTINGS_UPSELLS_ACTION, {

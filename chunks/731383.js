@@ -45,9 +45,9 @@ var r = n(728804),
     h = {},
     p = function e(t, n, a, o, s, u, d, _, p, m, I, T, g, S, A, v) {
         for (var N, O = t, R = v, C = 0, y = !1; void 0 !== (R = R.get(h)) && !y; ) {
-            var b = R.get(t);
-            if (((C += 1), void 0 !== b)) {
-                if (b === C) throw RangeError('Cyclic object value');
+            var L = R.get(t);
+            if (((C += 1), void 0 !== L)) {
+                if (L === C) throw RangeError('Cyclic object value');
                 y = !0;
             }
             void 0 === R.get(h) && (C = 0);
@@ -68,8 +68,8 @@ var r = n(728804),
             O = '';
         }
         if (f(O) || i.isBuffer(O)) return d ? [g(S ? n : d(n, E.encoder, A, 'key', T)) + '=' + g(d(O, E.encoder, A, 'value', T))] : [g(n) + '=' + g(String(O))];
-        var L = [];
-        if (void 0 === O) return L;
+        var b = [];
+        if (void 0 === O) return b;
         if ('comma' === a && l(O)) S && d && (O = i.maybeMap(O, d)), (N = [{ value: O.length > 0 ? O.join(',') || null : void 0 }]);
         else if (l(_)) N = _;
         else {
@@ -83,10 +83,10 @@ var r = n(728804),
                 var x = l(O) ? ('function' == typeof a ? a(M, U) : M) : M + (m ? '.' + U : '[' + U + ']');
                 v.set(t, C);
                 var G = r();
-                G.set(h, v), c(L, e(w, x, a, o, s, u, 'comma' === a && S && l(O) ? null : d, _, p, m, I, T, g, S, A, G));
+                G.set(h, v), c(b, e(w, x, a, o, s, u, 'comma' === a && S && l(O) ? null : d, _, p, m, I, T, g, S, A, G));
             }
         }
-        return L;
+        return b;
     },
     m = function (e) {
         if (!e) return E;

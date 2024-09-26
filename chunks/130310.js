@@ -3,15 +3,15 @@ n(470079);
 var a = n(120356),
     r = n.n(a),
     i = n(481060),
-    o = n(785681),
-    l = n(231994),
+    l = n(785681),
+    o = n(231994),
     c = n(689938),
     d = n(205402),
     _ = n(113207);
-let u = (e) => {
-    let { header: t, description: n, icon: a, inModal: o } = e;
+let E = (e) => {
+    let { header: t, description: n, icon: a, inModal: l } = e;
     return (0, s.jsxs)('div', {
-        className: r()(d.row, _.marginBottom8, { [d.inModal]: o }),
+        className: r()(d.row, _.marginBottom8, { [d.inModal]: l }),
         children: [
             (0, s.jsx)('div', {
                 className: d.iconContainer,
@@ -37,10 +37,10 @@ let u = (e) => {
 };
 t.Z = (e) => {
     let { inModal: t } = e,
-        n = (0, o.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_PARENT),
-        a = (0, o.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_PARENT),
-        r = (0, o.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_PARENT),
-        _ = (0, o.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_PARENT);
+        n = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_PARENT),
+        a = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_PARENT),
+        r = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_PARENT),
+        _ = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_PARENT);
     return (0, s.jsxs)('div', {
         children: [
             (0, s.jsx)(i.Text, {
@@ -49,7 +49,7 @@ t.Z = (e) => {
                 color: 'header-secondary',
                 children: n
             }),
-            (0, s.jsx)(u, {
+            (0, s.jsx)(E, {
                 header: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_FRIEND_ADD_HEADER,
                 description: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_FRIEND_ADD_DESCRIPTION,
                 icon: (0, s.jsx)(i.FriendsIcon, {
@@ -60,7 +60,7 @@ t.Z = (e) => {
                 }),
                 inModal: t
             }),
-            (0, s.jsx)(u, {
+            (0, s.jsx)(E, {
                 header: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_GUILD_PARTICIPATION_HEADER,
                 description: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_GUILD_PARTICIPATION_DESCRIPTION,
                 icon: (0, s.jsx)(i.ServerGridIcon, {
@@ -71,10 +71,10 @@ t.Z = (e) => {
                 }),
                 inModal: t
             }),
-            (0, s.jsx)(u, {
+            (0, s.jsx)(E, {
                 header: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_USERS_MESSAGED_HEADER,
                 description: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_USERS_MESSAGED_DESCRIPTION,
-                icon: (0, s.jsx)(l.Z, {
+                icon: (0, s.jsx)(o.Z, {
                     width: 20,
                     height: 20,
                     color: i.tokens.colors.WHITE.css
@@ -87,7 +87,7 @@ t.Z = (e) => {
                 color: 'header-secondary',
                 children: a
             }),
-            (0, s.jsx)(u, {
+            (0, s.jsx)(E, {
                 header: r,
                 description: _,
                 icon: (0, s.jsx)(i.XSmallIcon, {

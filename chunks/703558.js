@@ -131,10 +131,10 @@ function y(e) {
             v(t.parent_id, 2);
     }
 }
-function b(e) {
+function L(e) {
     !e.isSwitchingAccount && (m = {});
 }
-function L(e) {
+function b(e) {
     e.userId in m && delete m[e.userId];
 }
 function D() {
@@ -219,8 +219,8 @@ h(M, 'displayName', 'DraftStore'),
     ]),
     (t.Z = new M(u.Z, {
         CONNECTION_OPEN: O,
-        LOGOUT: b,
-        MULTI_ACCOUNT_REMOVE_ACCOUNT: L,
+        LOGOUT: L,
+        MULTI_ACCOUNT_REMOVE_ACCOUNT: b,
         GUILD_DELETE: R,
         CHANNEL_DELETE: C,
         THREAD_DELETE: C,

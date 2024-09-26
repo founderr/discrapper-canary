@@ -30,9 +30,9 @@ function m(e) {
         R = null != m && m.target_type === f.Iq.STREAM && null != m.target_user && null != N,
         C = null != m && null != O && null != m.channel && null != m.guild && O.channelId === m.channel.id && O.guildId === m.guild.id;
     a()(null != m, 'Invite cannot be null');
-    let { target_type: y, target_user: b } = m;
-    a()(y === f.Iq.STREAM && null != b, 'invalid streaming invite');
-    let L = I === b.id,
+    let { target_type: y, target_user: L } = m;
+    a()(y === f.Iq.STREAM && null != L, 'invalid streaming invite');
+    let b = I === L.id,
         D = m.state === E.r2o.ACCEPTING,
         M = null != T;
     if (null == T) {
@@ -41,7 +41,7 @@ function m(e) {
     }
     let P = null != m.channel ? (0, l.jD)(m.channel) : null,
         U = R ? g : S;
-    M && !C ? (i = L ? h.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : h.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: b.username })) : ((t = h.Z.Messages.WATCH), (n = s.Z.Button.Colors.GREEN), R && ((t = h.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = s.Z.Button.Colors.PRIMARY)), (i = L ? h.Z.Messages.INVITE_BUTTON_STREAMER : h.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: b.username })));
+    M && !C ? (i = b ? h.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : h.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: L.username })) : ((t = h.Z.Messages.WATCH), (n = s.Z.Button.Colors.GREEN), R && ((t = h.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = s.Z.Button.Colors.PRIMARY)), (i = b ? h.Z.Messages.INVITE_BUTTON_STREAMER : h.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: L.username })));
     let w = v === T.id && null != P ? (0, r.jsx)(s.Z.Channel, { channel: P }) : h.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: T.name });
     return (0, r.jsxs)(s.Z, {
         children: [

@@ -67,10 +67,10 @@ function C() {
 function y(e) {
     (f = e.clans), (p = !0), (m = !1), e.clans.forEach(O), (A = !1);
 }
-function b() {
+function L() {
     (m = !1), (A = !0);
 }
-function L(e) {
+function b(e) {
     let { searchResult: t, criteriaHash: n, recommendationId: r } = e;
     return (A = !1), (g[n] = t), (I = r), t.items.forEach(O), (t.guildIds = t.guildIds.reduce((e, t) => (S.has(t) ? e : (e.push(t), e)), [])), !0;
 }
@@ -156,8 +156,8 @@ E(B, 'displayName', 'ClanDiscoveryStore'),
     (t.Z = new B(c.Z, {
         FETCH_STATIC_CLAN_LIST_START: C,
         FETCH_STATIC_CLAN_LIST_SUCCESS: y,
-        FETCH_STATIC_CLAN_LIST_FAILURE: b,
-        FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: L,
+        FETCH_STATIC_CLAN_LIST_FAILURE: L,
+        FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: b,
         FETCH_CLAN_DISCOVERY_SEARCH_RESULT_FAILURE: D,
         FETCH_CLAN_DISCOVERY_PROFILE_LIST_SUCCESS: M,
         FETCH_CLAN_DISCOVERY_SAVED_GUILDS_SUCCESS: U,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return g;
     }
 }),
     n(47120);
@@ -8,56 +8,56 @@ var s = n(735250),
     a = n(470079),
     r = n(392711),
     i = n(846519),
-    o = n(481060),
-    l = n(626135),
+    l = n(481060),
+    o = n(626135),
     c = n(572004),
     d = n(70956),
     _ = n(981631),
-    u = n(689938);
-let E = d.Z.Millis.SECOND,
-    T = 2 * E,
+    E = n(689938);
+let u = d.Z.Millis.SECOND,
+    T = 2 * u,
     I = d.Z.Millis.HALF_SECOND,
-    R = [() => u.Z.Messages.COPY_SUCCESS_1, () => u.Z.Messages.COPY_SUCCESS_2, () => u.Z.Messages.COPY_SUCCESS_3, () => u.Z.Messages.COPY_SUCCESS_4, () => u.Z.Messages.COPY_SUCCESS_5, () => u.Z.Messages.COPY_SUCCESS_6, () => u.Z.Messages.COPY_SUCCESS_7, () => u.Z.Messages.COPY_SUCCESS_8, () => u.Z.Messages.COPY_SUCCESS_9, () => u.Z.Messages.COPY_SUCCESS_10, () => u.Z.Messages.COPY_SUCCESS_11];
-function m(e) {
-    let { text: t, copyValue: n, children: d, onCopy: u, 'aria-label': m, delay: g = I } = e,
-        [N, C] = a.useState(0),
-        [p, f] = a.useState(!1),
-        [A, S] = a.useState(!1),
-        [M] = a.useState(() => new i.V7()),
+    R = [() => E.Z.Messages.COPY_SUCCESS_1, () => E.Z.Messages.COPY_SUCCESS_2, () => E.Z.Messages.COPY_SUCCESS_3, () => E.Z.Messages.COPY_SUCCESS_4, () => E.Z.Messages.COPY_SUCCESS_5, () => E.Z.Messages.COPY_SUCCESS_6, () => E.Z.Messages.COPY_SUCCESS_7, () => E.Z.Messages.COPY_SUCCESS_8, () => E.Z.Messages.COPY_SUCCESS_9, () => E.Z.Messages.COPY_SUCCESS_10, () => E.Z.Messages.COPY_SUCCESS_11];
+function g(e) {
+    let { text: t, copyValue: n, children: d, onCopy: E, 'aria-label': g, delay: N = I } = e,
+        [C, m] = a.useState(0),
+        [f, A] = a.useState(!1),
+        [p, M] = a.useState(!1),
+        [S] = a.useState(() => new i.V7()),
         [h] = a.useState(() => new i.V7());
     if (
         (a.useEffect(
             () => () => {
-                M.stop(), h.stop();
+                S.stop(), h.stop();
             },
-            [M, h]
+            [S, h]
         ),
         !c.wS)
     )
         return (0, s.jsx)(s.Fragment, { children: d({}) });
-    let x = N >= R.length - 1,
-        b = x ? o.TooltipColors.RED : o.TooltipColors.GREEN,
-        O = p ? b : o.TooltipColors.PRIMARY,
+    let x = C >= R.length - 1,
+        b = x ? l.TooltipColors.RED : l.TooltipColors.GREEN,
+        O = f ? b : l.TooltipColors.PRIMARY,
         P = () => {
-            null == u || u(), (0, c.JG)(n), l.default.track(_.rMx.TEXT_COPIED), !A && C(N + 1), S(!0), f(!0), M.start(E, () => S(!1)), h.start(T, () => C(0));
+            null == E || E(), (0, c.JG)(n), o.default.track(_.rMx.TEXT_COPIED), !p && m(C + 1), M(!0), A(!0), S.start(u, () => M(!1)), h.start(T, () => m(0));
         };
-    return (0, s.jsx)(o.Tooltip, {
+    return (0, s.jsx)(l.Tooltip, {
         text: (() => {
             var e;
-            if (!p) return t;
-            let n = (0, r.clamp)(N - 1, 0, R.length - 1),
+            if (!f) return t;
+            let n = (0, r.clamp)(C - 1, 0, R.length - 1),
                 a = null !== (e = R[n]) && void 0 !== e ? e : R[0];
-            return (0, s.jsx)(o.Shaker, {
+            return (0, s.jsx)(l.Shaker, {
                 isShaking: x,
                 children: a()
             });
         })(),
-        delay: g,
-        'aria-label': m,
+        delay: N,
+        'aria-label': g,
         color: O,
-        forceOpen: A,
+        forceOpen: p,
         onAnimationRest: (e, t) => {
-            !A && p && t.phase === _.UkZ.LEAVE && f(!1);
+            !p && f && t.phase === _.UkZ.LEAVE && A(!1);
         },
         children: (e) => {
             let { onClick: t, onMouseEnter: n, ...s } = e;
@@ -67,11 +67,11 @@ function m(e) {
                     null == t || t(), P();
                 },
                 onMouseEnter: () => {
-                    if (!p) {
+                    if (!f) {
                         null == n || n();
                         return;
                     }
-                    M.stop(), S(!1);
+                    S.stop(), M(!1);
                 }
             });
         }

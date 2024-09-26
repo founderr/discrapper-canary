@@ -70,12 +70,12 @@ function y(e) {
     let { changelogDate: t } = e;
     (g = new Date(t)), o.K.set(I, t);
 }
-function b() {
+function L() {
     T = u.l4.getSetting();
 }
-class L extends (r = a.ZP.Store) {
+class b extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(l.default, c.Z), this.syncWith([l.default], () => !0), this.syncWith([c.Z], b);
+        this.waitFor(l.default, c.Z), this.syncWith([l.default], () => !0), this.syncWith([c.Z], L);
         let e = o.K.get(I);
         if (null != e)
             try {
@@ -122,8 +122,8 @@ class L extends (r = a.ZP.Store) {
         return S.size > 0;
     }
 }
-_(L, 'displayName', 'ChangelogStore'),
-    (t.Z = new L(s.Z, {
+_(b, 'displayName', 'ChangelogStore'),
+    (t.Z = new b(s.Z, {
         CHANGE_LOG_LOCK: A,
         CHANGE_LOG_UNLOCK: v,
         CHANGE_LOG_SET_CONFIG: N,

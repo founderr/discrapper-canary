@@ -32,7 +32,7 @@ let O = '#ffffff',
     y = (e, t) => {
         (0, S.isMac)() && !t.altKey ? A.ZP.fullscreen(e) : A.ZP.maximize(e);
     },
-    b = (e) => {
+    L = (e) => {
         let { children: t, windowKey: n, themeOverride: i, hasOpenLayer: o, isRefreshEnabled: l } = e,
             u = (0, r.jsx)(s.Clickable, {
                 className: N.winButtonClose,
@@ -78,7 +78,7 @@ let O = '#ffffff',
                 })
         });
     },
-    L = (e) => {
+    b = (e) => {
         let { focused: t, windowKey: n, frame: i, themeOverride: o, hasOpenLayer: l, children: u } = e;
         return (0, r.jsx)(s.ThemeProvider, {
             theme: o,
@@ -136,7 +136,7 @@ function D(e) {
     if (f) return null;
     switch (n) {
         case S.PlatformTypes.WINDOWS:
-            return (0, r.jsx)(b, {
+            return (0, r.jsx)(L, {
                 windowKey: i,
                 themeOverride: s,
                 hasOpenLayer: h,
@@ -144,7 +144,7 @@ function D(e) {
                 children: m
             });
         case S.PlatformTypes.OSX:
-            return (0, r.jsx)(L, {
+            return (0, r.jsx)(b, {
                 focused: t,
                 windowKey: i,
                 frame: a,

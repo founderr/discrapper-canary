@@ -24,8 +24,8 @@ var i = n(735250),
     R = n(918701),
     C = n(602667),
     y = n(644646),
-    b = n(667105),
-    L = n(341907),
+    L = n(667105),
+    b = n(341907),
     D = n(46140),
     M = n(981631),
     P = n(231338),
@@ -44,7 +44,7 @@ function F(e) {
             var e;
             return null !== (e = T.Z.getChannel(null == S ? void 0 : S.channelId)) && void 0 !== e ? e : null;
         }),
-        H = (0, b.hf)({
+        H = (0, L.hf)({
             quest: m,
             location: O.jn.MEMBERS_LIST
         }),
@@ -131,7 +131,7 @@ function F(e) {
                 questContentCTA: v.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, L.navigateToQuestHome)(D.dr.MEMBERS_LIST, O.jn.MEMBERS_LIST, m.id);
+                (0, b.navigateToQuestHome)(D.dr.MEMBERS_LIST, O.jn.MEMBERS_LIST, m.id);
         },
         eu = (e) => {
             e.stopPropagation(), es();

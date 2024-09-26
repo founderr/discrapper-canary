@@ -1,313 +1,313 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    l = n(120356),
-    s = n.n(l),
-    a = n(442837),
-    o = n(780384),
-    u = n(481060),
-    c = n(358221),
-    d = n(594190),
-    h = n(687516),
-    _ = n(210887),
-    f = n(937995),
-    E = n(158776),
-    p = n(594174),
-    m = n(617136),
-    C = n(272008),
-    S = n(113434),
-    I = n(569984),
-    g = n(497505),
-    T = n(918701),
-    R = n(5881),
-    N = n(566078),
-    v = n(602667),
-    x = n(340100),
-    A = n(611855),
-    L = n(644646),
-    b = n(670638),
-    O = n(667105),
-    Z = n(860151),
-    P = n(341907),
-    M = n(46140),
-    y = n(981631),
-    j = n(354459),
-    U = n(689938),
-    D = n(869630);
+l(47120);
+var s = l(735250),
+    n = l(470079),
+    i = l(120356),
+    a = l.n(i),
+    u = l(442837),
+    r = l(780384),
+    o = l(481060),
+    c = l(358221),
+    d = l(594190),
+    E = l(687516),
+    S = l(210887),
+    A = l(937995),
+    T = l(158776),
+    _ = l(594174),
+    m = l(617136),
+    C = l(272008),
+    j = l(113434),
+    L = l(569984),
+    v = l(497505),
+    p = l(918701),
+    R = l(5881),
+    N = l(566078),
+    f = l(602667),
+    h = l(340100),
+    Z = l(611855),
+    g = l(644646),
+    x = l(670638),
+    M = l(667105),
+    U = l(860151),
+    Q = l(341907),
+    I = l(46140),
+    B = l(981631),
+    q = l(354459),
+    D = l(689938),
+    H = l(869630);
 t.Z = function (e) {
-    var t, n, l;
-    let { channelId: B, previewQuest: k, isParticipatingOverride: F } = e,
-        [H, w] = i.useState(!1),
-        G = i.useCallback(() => w(!0), []),
-        z = i.useCallback(() => w(!1), []),
-        Q = i.useContext(f.h9),
-        V = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
-        q = (0, a.e7)([_.Z], () => _.Z.getState().theme),
-        W = (0, o.wj)(q) ? y.BRd.DARK : y.BRd.LIGHT,
-        { isCurrentUserStreamingQuestApplication: K, quest: Y } = (0, a.cj)(
-            [E.Z, c.Z, I.Z],
+    var t, l, i;
+    let { channelId: b, previewQuest: k, isParticipatingOverride: V } = e,
+        [y, z] = n.useState(!1),
+        w = n.useCallback(() => z(!0), []),
+        O = n.useCallback(() => z(!1), []),
+        P = n.useContext(A.h9),
+        W = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
+        G = (0, u.e7)([S.Z], () => S.Z.getState().theme),
+        K = (0, r.wj)(G) ? B.BRd.DARK : B.BRd.LIGHT,
+        { isCurrentUserStreamingQuestApplication: $, quest: F } = (0, u.cj)(
+            [T.Z, c.Z, L.Z],
             () => {
-                var e, t, n, r;
-                let i = c.Z.getParticipants(B),
-                    l =
+                var e, t, l, s;
+                let n = c.Z.getParticipants(b),
+                    i =
                         null != k
                             ? k
-                            : (function (e, t, n) {
-                                  for (let s of e) {
-                                      var r, i, l;
-                                      if (s.type === j.fO.STREAM) {
-                                          let e = null !== (i = (0, h.Um)(s.stream, n)) && void 0 !== i ? i : null,
-                                              l = (0, T.ZZ)(t, e);
-                                          if (null != l && (null === (r = l.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null) return l;
+                            : (function (e, t, l) {
+                                  for (let a of e) {
+                                      var s, n, i;
+                                      if (a.type === q.fO.STREAM) {
+                                          let e = null !== (n = (0, E.Um)(a.stream, l)) && void 0 !== n ? n : null,
+                                              i = (0, p.ZZ)(t, e);
+                                          if (null != i && (null === (s = i.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null) return i;
                                       }
-                                      for (let r of e) {
-                                          if (!(0, j.I)(r))
-                                              for (let e of n.getActivities(r.user.id)) {
-                                                  let n = (0, T.ZZ)(t, e);
-                                                  if (null != n && (null === (l = n.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null && ((0, T.Nj)({ quest: n }) || (0, T.$J)(n))) return n;
+                                      for (let s of e) {
+                                          if (!(0, q.I)(s))
+                                              for (let e of l.getActivities(s.user.id)) {
+                                                  let l = (0, p.ZZ)(t, e);
+                                                  if (null != l && (null === (i = l.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null && ((0, p.Nj)({ quest: l }) || (0, p.$J)(l))) return l;
                                               }
                                       }
                                   }
                                   return null;
-                              })(i, I.Z.quests, E.Z);
+                              })(n, L.Z.quests, T.Z);
                 return {
                     isCurrentUserStreamingQuestApplication:
-                        null != l &&
-                        null != V &&
-                        ((e = i),
-                        (t = l),
-                        (n = V),
-                        (r = E.Z),
+                        null != i &&
+                        null != W &&
+                        ((e = n),
+                        (t = i),
+                        (l = W),
+                        (s = T.Z),
                         e.some((e) => {
-                            if (e.type !== j.fO.STREAM || e.user.id !== n.id) return !1;
-                            let i = (0, h.Um)(e.stream, r);
-                            return null != i && (0, T._D)(i, t);
+                            if (e.type !== q.fO.STREAM || e.user.id !== l.id) return !1;
+                            let n = (0, E.Um)(e.stream, s);
+                            return null != n && (0, p._D)(n, t);
                         })),
-                    quest: l
+                    quest: i
                 };
             },
-            [B, V, k]
+            [b, W, k]
         ),
-        J = null != Y ? N.r.build(Y.config) : null,
-        X = null == J ? void 0 : J.application.id,
-        $ = (0, a.e7)(
-            [d.ZP, E.Z],
+        J = null != F ? N.r.build(F.config) : null,
+        Y = null == J ? void 0 : J.application.id,
+        X = (0, u.e7)(
+            [d.ZP, T.Z],
             () => {
-                if (null == Y) return !1;
+                if (null == F) return !1;
                 let e = d.ZP.getRunningGames().map((e) => e.id);
-                if ((0, T.$H)(Y) && e.includes(X)) return !0;
-                let t = null != V ? E.Z.findActivity(V.id, (e) => e.type !== y.IIU.CUSTOM_STATUS) : null;
-                return !!(null != t && (0, T.$J)(Y) && (0, T._D)(t, Y)) || !1;
+                if ((0, p.$H)(F) && e.includes(Y)) return !0;
+                let t = null != W ? T.Z.findActivity(W.id, (e) => e.type !== B.IIU.CUSTOM_STATUS) : null;
+                return !!(null != t && (0, p.$J)(F) && (0, p._D)(t, F)) || !1;
             },
-            [Y, X, V]
+            [F, Y, W]
         ),
-        ee = !0 === F || K || $,
-        et = (0, a.e7)([I.Z], () => null != Y && I.Z.isEnrolling(Y.id), [Y]),
-        en = (0, a.e7)([c.Z], () => ((null == V ? void 0 : V.id) == null ? null : c.Z.getParticipant(B, V.id)) != null, [B, V]),
-        er = (0, S.B6)(null == Y ? void 0 : Y.config.expiresAt),
-        ei = (0, S.B6)(null == J ? void 0 : J.rewardsExpireAt),
-        el = i.useCallback(() => {
-            null != Y &&
-                (0, C.AH)(Y.id, {
-                    questContent: g.jn.QUEST_LIVE_STREAM,
+        ee = !0 === V || $ || X,
+        et = (0, u.e7)([L.Z], () => null != F && L.Z.isEnrolling(F.id), [F]),
+        el = (0, u.e7)([c.Z], () => ((null == W ? void 0 : W.id) == null ? null : c.Z.getParticipant(b, W.id)) != null, [b, W]),
+        es = (0, j.B6)(null == F ? void 0 : F.config.expiresAt),
+        en = (0, j.B6)(null == J ? void 0 : J.rewardsExpireAt),
+        ei = n.useCallback(() => {
+            null != F &&
+                (0, C.AH)(F.id, {
+                    questContent: v.jn.QUEST_LIVE_STREAM,
                     questContentCTA: m.jZ.ACCEPT_QUEST
                 });
-        }, [Y]),
-        es = i.useCallback(() => {
-            null != Y &&
+        }, [F]),
+        ea = n.useCallback(() => {
+            null != F &&
                 ((0, m._3)({
-                    questId: Y.id,
-                    questContent: g.jn.QUEST_LIVE_STREAM,
+                    questId: F.id,
+                    questContent: v.jn.QUEST_LIVE_STREAM,
                     questContentCTA: m.jZ.TRACK_PROGRESS
                 }),
-                (0, P.navigateToQuestHome)(M.dr.QUEST_CHANNEL_CALL_HEADER, g.jn.QUEST_LIVE_STREAM, Y.id));
-        }, [Y]),
-        ea = i.useCallback(() => {
-            null != Y &&
+                (0, Q.navigateToQuestHome)(I.dr.QUEST_CHANNEL_CALL_HEADER, v.jn.QUEST_LIVE_STREAM, F.id));
+        }, [F]),
+        eu = n.useCallback(() => {
+            null != F &&
                 ((0, m._3)({
-                    questId: Y.id,
-                    questContent: g.jn.QUEST_LIVE_STREAM,
+                    questId: F.id,
+                    questContent: v.jn.QUEST_LIVE_STREAM,
                     questContentCTA: m.jZ.LEARN_MORE
                 }),
-                (0, P.navigateToQuestHome)(M.dr.QUEST_CHANNEL_CALL_HEADER, g.jn.QUEST_LIVE_STREAM, Y.id));
-        }, [Y]),
-        eo = (0, O.hf)({
-            quest: Y,
-            location: g.jn.QUEST_LIVE_STREAM
+                (0, Q.navigateToQuestHome)(I.dr.QUEST_CHANNEL_CALL_HEADER, v.jn.QUEST_LIVE_STREAM, F.id));
+        }, [F]),
+        er = (0, M.hf)({
+            quest: F,
+            location: v.jn.QUEST_LIVE_STREAM
         }),
-        eu = i.useMemo(
+        eo = n.useMemo(
             () =>
                 (0, R.T)({
-                    quest: Y,
-                    location: M.dr.QUEST_CHANNEL_CALL_HEADER
+                    quest: F,
+                    location: I.dr.QUEST_CHANNEL_CALL_HEADER
                 }),
-            [Y]
+            [F]
         ),
-        ec = (0, S.tP)(Y);
-    if (null == Y || !(0, T.dl)(Y)) return null;
-    let ed = (null === (t = Y.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        eh = (null === (n = Y.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        e_ = null != Y.userStatus && (0, T.zE)(Y.userStatus, g.jn.QUEST_LIVE_STREAM),
-        ef = null != Y.userStatus && (0, T.zE)(Y.userStatus, g.jn.QUEST_BAR),
-        eE = (0, T.Mi)(Y, g.jn.QUEST_BAR) && !ef;
-    eu.info({
-        isQuestCallHeaderDismissed: e_,
+        ec = (0, j.tP)(F);
+    if (null == F || !(0, p.dl)(F)) return null;
+    let ed = (null === (t = F.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        eE = (null === (l = F.userStatus) || void 0 === l ? void 0 : l.completedAt) != null,
+        eS = null != F.userStatus && (0, p.zE)(F.userStatus, v.jn.QUEST_LIVE_STREAM),
+        eA = null != F.userStatus && (0, p.zE)(F.userStatus, v.jn.QUEST_BAR),
+        eT = (0, p.Mi)(F, v.jn.QUEST_BAR) && !eA;
+    eo.info({
+        isQuestCallHeaderDismissed: eS,
         isQuestExpired: ec,
-        isQuestBarShowing: eE,
-        isCurrentUserCallParticipant: en
+        isQuestBarShowing: eT,
+        isCurrentUserCallParticipant: el
     });
-    let ep = null != k && (null === (l = Y.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null;
-    if ((!ep && (e_ || ec || eE)) || (!ep && !en)) return null;
-    let em = (0, T.il)(Y),
-        eC = (0, r.jsx)(L.Z, {
-            className: D.rewardTile,
-            autoplay: H,
-            quest: Y,
-            questContent: g.jn.QUEST_LIVE_STREAM,
-            location: M.dr.QUEST_CHANNEL_CALL_HEADER
+    let e_ = null != k && (null === (i = F.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null;
+    if ((!e_ && (eS || ec || eT)) || (!e_ && !el)) return null;
+    let em = (0, p.il)(F),
+        eC = (0, s.jsx)(g.Z, {
+            className: H.rewardTile,
+            autoplay: y,
+            quest: F,
+            questContent: v.jn.QUEST_LIVE_STREAM,
+            location: I.dr.QUEST_CHANNEL_CALL_HEADER
         });
-    return (0, r.jsx)(v.A, {
-        questOrQuests: Y,
-        overrideVisibility: !Q,
-        questContent: g.jn.QUEST_LIVE_STREAM,
+    return (0, s.jsx)(f.A, {
+        questOrQuests: F,
+        overrideVisibility: !P,
+        questContent: v.jn.QUEST_LIVE_STREAM,
         children: () => {
             var e;
-            return (0, r.jsxs)('div', {
-                className: s()(D.wrapper, { [D.wrapperAccepted]: ed }),
-                onFocus: G,
-                onMouseEnter: G,
-                onBlur: z,
-                onMouseLeave: z,
+            return (0, s.jsxs)('div', {
+                className: a()(H.wrapper, { [H.wrapperAccepted]: ed }),
+                onFocus: w,
+                onMouseEnter: w,
+                onBlur: O,
+                onMouseLeave: O,
                 children: [
                     !ed &&
-                        (0, r.jsxs)('div', {
-                            className: D.rewardTileWrapper,
+                        (0, s.jsxs)('div', {
+                            className: H.rewardTileWrapper,
                             children: [
                                 eC,
-                                (0, r.jsx)(A.Z, {
+                                (0, s.jsx)(Z.Z, {
                                     bgOpacity: 0.32,
-                                    className: D.promotedTag
+                                    className: H.promotedTag
                                 })
                             ]
                         }),
-                    (0, r.jsxs)('div', {
-                        className: D.content,
+                    (0, s.jsxs)('div', {
+                        className: H.content,
                         children: [
-                            (0, r.jsxs)('div', {
-                                className: D.heading,
+                            (0, s.jsxs)('div', {
+                                className: H.heading,
                                 children: [
                                     ed && ee
                                         ? eC
-                                        : (0, r.jsx)('img', {
-                                              className: D.gameTile,
-                                              alt: Y.config.messages.gameTitle,
-                                              src: (0, T.uo)(Y, W)
+                                        : (0, s.jsx)('img', {
+                                              className: H.gameTile,
+                                              alt: F.config.messages.gameTitle,
+                                              src: (0, p.uo)(F, K)
                                           }),
-                                    (0, r.jsxs)('div', {
+                                    (0, s.jsxs)('div', {
                                         children: [
-                                            (0, r.jsxs)('div', {
-                                                className: D.headingWithSubmenu,
+                                            (0, s.jsxs)('div', {
+                                                className: H.headingWithSubmenu,
                                                 children: [
-                                                    (0, r.jsx)(u.Heading, {
-                                                        className: D.questTitle,
+                                                    (0, s.jsx)(o.Heading, {
+                                                        className: H.questTitle,
                                                         variant: 'heading-md/semibold',
                                                         color: 'header-primary',
                                                         children: ee
-                                                            ? (0, T.AV)({
-                                                                  quest: Y,
+                                                            ? (0, p.AV)({
+                                                                  quest: F,
                                                                   taskDetails: em
                                                               })
-                                                            : U.Z.Messages.QUESTS_TITLE.format({ questName: Y.config.messages.questName })
+                                                            : D.Z.Messages.QUESTS_TITLE.format({ questName: F.config.messages.questName })
                                                     }),
-                                                    (0, r.jsx)(b.r, {
-                                                        questContent: g.jn.QUEST_LIVE_STREAM,
-                                                        quest: Y,
+                                                    (0, s.jsx)(x.r, {
+                                                        questContent: v.jn.QUEST_LIVE_STREAM,
+                                                        quest: F,
                                                         preventIdle: !0,
-                                                        shouldShowDisclosure: (null === (e = Y.userStatus) || void 0 === e ? void 0 : e.enrolledAt) == null,
+                                                        shouldShowDisclosure: (null === (e = F.userStatus) || void 0 === e ? void 0 : e.enrolledAt) == null,
                                                         children: (e) =>
-                                                            (0, r.jsx)(u.Clickable, {
+                                                            (0, s.jsx)(o.Clickable, {
                                                                 ...e,
-                                                                className: D.submenuWrapper,
-                                                                'aria-label': U.Z.Messages.ACTIONS,
-                                                                children: (0, r.jsx)(u.MoreHorizontalIcon, {
+                                                                className: H.submenuWrapper,
+                                                                'aria-label': D.Z.Messages.ACTIONS,
+                                                                children: (0, s.jsx)(o.MoreHorizontalIcon, {
                                                                     size: 'md',
                                                                     color: 'currentColor',
-                                                                    className: D.submenuIcon
+                                                                    className: H.submenuIcon
                                                                 })
                                                             })
                                                     })
                                                 ]
                                             }),
-                                            (0, r.jsx)(u.Text, {
+                                            (0, s.jsx)(o.Text, {
                                                 color: 'header-secondary',
                                                 variant: 'text-xs/medium',
-                                                children: eh ? U.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: ei }) : U.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: er })
+                                                children: eE ? D.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: en }) : D.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: es })
                                             })
                                         ]
                                     })
                                 ]
                             }),
                             ed &&
-                                !eh &&
+                                !eE &&
                                 !ee &&
-                                (0, r.jsx)(Z.Z, {
-                                    autoplay: H,
-                                    quest: Y,
-                                    questContent: g.jn.QUEST_LIVE_STREAM,
+                                (0, s.jsx)(U.Z, {
+                                    autoplay: y,
+                                    quest: F,
+                                    questContent: v.jn.QUEST_LIVE_STREAM,
                                     taskDetails: em,
-                                    location: M.dr.QUEST_CHANNEL_CALL_HEADER
+                                    location: I.dr.QUEST_CHANNEL_CALL_HEADER
                                 }),
-                            (0, r.jsxs)('div', {
-                                className: D.ctas,
+                            (0, s.jsxs)('div', {
+                                className: H.ctas,
                                 children: [
                                     !ed &&
-                                        (0, r.jsxs)(r.Fragment, {
+                                        (0, s.jsxs)(s.Fragment, {
                                             children: [
-                                                (0, r.jsx)(u.Button, {
-                                                    className: D.cta,
-                                                    color: u.Button.Colors.PRIMARY,
+                                                (0, s.jsx)(o.Button, {
+                                                    className: H.cta,
+                                                    color: o.Button.Colors.PRIMARY,
                                                     fullWidth: !0,
-                                                    size: u.Button.Sizes.SMALL,
-                                                    onClick: ea,
-                                                    children: U.Z.Messages.QUESTS_LEARN_MORE_V2
+                                                    size: o.Button.Sizes.SMALL,
+                                                    onClick: eu,
+                                                    children: D.Z.Messages.QUESTS_LEARN_MORE_V2
                                                 }),
-                                                (0, r.jsx)(u.Button, {
-                                                    className: D.cta,
-                                                    color: u.Button.Colors.BRAND,
+                                                (0, s.jsx)(o.Button, {
+                                                    className: H.cta,
+                                                    color: o.Button.Colors.BRAND,
                                                     fullWidth: !0,
-                                                    onClick: el,
-                                                    size: u.Button.Sizes.SMALL,
+                                                    onClick: ei,
+                                                    size: o.Button.Sizes.SMALL,
                                                     submitting: et,
-                                                    children: U.Z.Messages.QUESTS_ACCEPT_QUEST
+                                                    children: D.Z.Messages.QUESTS_ACCEPT_QUEST
                                                 })
                                             ]
                                         }),
                                     ed &&
-                                        !eh &&
+                                        !eE &&
                                         ee &&
-                                        (0, r.jsx)(x.Z, {
-                                            color: u.tokens.colors.BG_BRAND,
-                                            quest: Y
+                                        (0, s.jsx)(h.Z, {
+                                            color: o.tokens.colors.BG_BRAND,
+                                            quest: F
                                         }),
                                     ed &&
-                                        !eh &&
+                                        !eE &&
                                         !ee &&
-                                        (0, r.jsx)(u.Button, {
-                                            className: D.cta,
-                                            color: u.Button.Colors.BRAND,
+                                        (0, s.jsx)(o.Button, {
+                                            className: H.cta,
+                                            color: o.Button.Colors.BRAND,
                                             fullWidth: !0,
-                                            onClick: es,
-                                            size: u.Button.Sizes.SMALL,
-                                            children: U.Z.Messages.QUESTS_CHECK_PROGRESS
+                                            onClick: ea,
+                                            size: o.Button.Sizes.SMALL,
+                                            children: D.Z.Messages.QUESTS_CHECK_PROGRESS
                                         }),
-                                    eh &&
-                                        (0, r.jsx)(u.Button, {
-                                            className: D.cta,
-                                            color: u.Button.Colors.BRAND,
+                                    eE &&
+                                        (0, s.jsx)(o.Button, {
+                                            className: H.cta,
+                                            color: o.Button.Colors.BRAND,
                                             fullWidth: !0,
-                                            onClick: eo,
-                                            size: u.Button.Sizes.SMALL,
-                                            children: U.Z.Messages.QUESTS_CLAIM_REWARD
+                                            onClick: er,
+                                            size: o.Button.Sizes.SMALL,
+                                            children: D.Z.Messages.QUESTS_CLAIM_REWARD
                                         })
                                 ]
                             })

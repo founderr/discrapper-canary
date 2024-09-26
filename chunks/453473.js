@@ -32,8 +32,8 @@ var i = n(735250),
     R = n(496675),
     C = n(626135),
     y = n(585483),
-    b = n(70956),
-    L = n(324701),
+    L = n(70956),
+    b = n(324701),
     D = n(768943),
     M = n(686478),
     P = n(664559),
@@ -123,7 +123,7 @@ function Y(e) {
         [s, l] = a.useState(new Date());
     return (
         a.useEffect(() => {
-            let e = setInterval(() => l(new Date()), b.Z.Millis.MINUTE);
+            let e = setInterval(() => l(new Date()), L.Z.Millis.MINUTE);
             return () => {
                 clearInterval(e);
             };
@@ -249,7 +249,7 @@ function j(e) {
                               label: k.Z.Messages.FOR_LATER_REMOVE,
                               icon: h.TrashIcon,
                               dangerous: !0,
-                              onClick: () => (0, L.x)(t.saveData)
+                              onClick: () => (0, b.x)(t.saveData)
                           },
                           'delete'
                       )
@@ -279,7 +279,7 @@ function K(e) {
                           label: k.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
                           icon: h.CheckmarkLargeIcon,
                           onClick: () =>
-                              (0, L.z)({
+                              (0, b.z)({
                                   channelId: t.saveData.channelId,
                                   messageId: t.saveData.messageId,
                                   dueAt: void 0
@@ -320,7 +320,7 @@ function K(e) {
                       {
                           label: k.Z.Messages.FOR_LATER_REMOVE,
                           icon: h.BookmarkIcon,
-                          onClick: () => (0, L.x)(t.saveData)
+                          onClick: () => (0, b.x)(t.saveData)
                       },
                       'remove-reminder'
                   )
@@ -360,7 +360,7 @@ function K(e) {
                       {
                           label: k.Z.Messages.FOR_LATER_REMOVE,
                           icon: h.BookmarkIcon,
-                          onClick: () => (0, L.x)(t.saveData)
+                          onClick: () => (0, b.x)(t.saveData)
                       },
                       'remove-bookmark'
                   )

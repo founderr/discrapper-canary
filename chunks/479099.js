@@ -27,8 +27,8 @@ function g(e) {
     let { tag: t, size: r = 1, disabled: i, className: s, onClick: g, onRemove: S, selected: A, ariaLabel: v } = e,
         { name: N, emojiId: O, emojiName: R } = t,
         C = null != S,
-        [y, b] = o.useState(!1),
-        L = (0, c.e7)([h.ZP], () => (null != O ? h.ZP.getUsableCustomEmojiById(O) : null)),
+        [y, L] = o.useState(!1),
+        b = (0, c.e7)([h.ZP], () => (null != O ? h.ZP.getUsableCustomEmojiById(O) : null)),
         D = C || null != g,
         M = (!C || !y) && (null != O || null != R),
         P = 0 === r,
@@ -57,7 +57,7 @@ function g(e) {
                           className: l()(T.emoji, { [T.small]: P }),
                           emojiId: O,
                           emojiName: R,
-                          animated: !!(null == L ? void 0 : L.animated),
+                          animated: !!(null == b ? void 0 : b.animated),
                           size: 'reaction'
                       })
                     : null,
@@ -92,8 +92,8 @@ function g(e) {
             ),
             onClick: x,
             onContextMenu: (e) => G(e),
-            onMouseEnter: () => C && b(!0),
-            onMouseLeave: () => C && b(!1)
+            onMouseEnter: () => C && L(!0),
+            onMouseLeave: () => C && L(!1)
         },
         F = (0, u.JA)('forum-tag-'.concat(t.id));
     return D

@@ -41,14 +41,14 @@ let g = 25,
     R = l.z.LATEST_ACTIVITY,
     C = [],
     y = 0;
-function b() {
+function L() {
     (S = !1), (A = !0), (v = !1), (N = !1), (O = null), (R = l.z.LATEST_ACTIVITY), (r = new Set()), (y = 0), (C = []);
 }
-function L(e, t) {
+function b(e, t) {
     return t === l.z.LATEST_ACTIVITY ? h.ZP.lastMessageId(e.id) : e.id;
 }
 function D(e) {
-    (e.channelId !== O || e.sortOrder !== R || !(0, p.OL)(e.tagFilter, r)) && b(), (O = e.channelId), (R = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (S = !0), (A = !1);
+    (e.channelId !== O || e.sortOrder !== R || !(0, p.OL)(e.tagFilter, r)) && L(), (O = e.channelId), (R = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (S = !0), (A = !1);
 }
 function M(e) {
     if (e.channelId !== O || e.sortOrder !== R || !(0, p.OL)(e.tagFilter, r)) return !1;
@@ -78,7 +78,7 @@ function U() {
     if (null == O) return !1;
     let e = !v,
         t = f.Z.getChannel(C[C.length - 1]),
-        n = null == t ? null : L(t, R);
+        n = null == t ? null : b(t, R);
     C = s()(f.Z.getAllThreadsForParent(O))
         .filter((e) => e.isArchivedThread())
         .filter((t) => {
@@ -86,11 +86,11 @@ function U() {
             if (0 !== r.size && (null === (i = t.appliedTags) || void 0 === i ? void 0 : i.some((e) => r.has(e))) !== !0) return !1;
             if (e || null == n) return !0;
             {
-                let e = null == t ? null : L(t, R);
+                let e = null == t ? null : b(t, R);
                 return null != e && m.default.compare(e, n) >= 0;
             }
         })
-        .sort((e, t) => m.default.compare(L(e, R), L(t, R)))
+        .sort((e, t) => m.default.compare(b(e, R), b(t, R)))
         .map((e) => e.id)
         .reverse()
         .value();
@@ -101,7 +101,7 @@ function w(e) {
 }
 function x(e) {
     if (e.channel.id !== O) return !1;
-    b();
+    L();
 }
 function G(e) {
     if (!(C.indexOf(e) >= 0)) return !1;
@@ -130,7 +130,7 @@ class Z extends (i = u.ZP.Store) {
         return A;
     }
     isLoading(e, t, n) {
-        return O === e && R === t && (0, p.OL)(r, n) ? S : (b(), !1);
+        return O === e && R === t && (0, p.OL)(r, n) ? S : (L(), !1);
     }
     getThreads(e, t, n) {
         return O === e && R === t && (0, p.OL)(r, n) ? C : F;
@@ -138,7 +138,7 @@ class Z extends (i = u.ZP.Store) {
 }
 T(Z, 'displayName', 'ArchivedThreadsStore'),
     (t.Z = new Z(c.Z, {
-        CONNECTION_OPEN: b,
+        CONNECTION_OPEN: L,
         THREAD_DELETE: k,
         THREAD_UPDATE: B,
         CHANNEL_DELETE: x,

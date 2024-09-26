@@ -45,7 +45,7 @@ n.d(t, {
         return v;
     },
     e5: function () {
-        return b;
+        return L;
     },
     e7: function () {
         return m;
@@ -66,7 +66,7 @@ n.d(t, {
         return G;
     },
     ws: function () {
-        return L;
+        return b;
     },
     xI: function () {
         return D;
@@ -243,11 +243,11 @@ function y(e) {
         location: n
     });
 }
-function b(e) {
+function L(e) {
     let { onboardingCTA: t } = e;
     r.ZP.trackWithMetadata(E.rMx.FORUM_CHANNEL_ONBOARDING_CLICKED, { onboarding_cta_type: t });
 }
-function L(e) {
+function b(e) {
     let { forumDemoId: t } = e;
     r.ZP.trackWithMetadata(E.rMx.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: t });
 }

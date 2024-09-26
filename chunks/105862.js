@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return f;
     }
 });
 var i = t(735250),
@@ -16,20 +16,20 @@ var i = t(735250),
     p = t(689938),
     _ = t(597397),
     C = t(983008),
-    f = t(478408);
-function h() {
+    h = t(478408);
+function f() {
     let e = (0, r.ZP)(),
-        n = (0, l.ap)(e) ? f : C,
+        n = (0, l.ap)(e) ? h : C,
         t = a.useCallback(() => {
             (0, s.Z)(c.Z.getArticleURL(m.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON));
         }, []),
-        { trackSectionImpressionRef: h } = (0, u.Z)({
+        { trackSectionImpressionRef: f } = (0, u.Z)({
             sectionName: d.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1
         });
     return (0, i.jsxs)('div', {
-        ref: (e) => (h.current = e),
+        ref: (e) => (f.current = e),
         className: _.container,
         children: [
             (0, i.jsx)('img', {

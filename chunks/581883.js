@@ -105,11 +105,11 @@ function y(e) {
         !1
     );
 }
-function b(e) {
-    let { userSettings: t } = e;
-    L(t);
-}
 function L(e) {
+    let { userSettings: t } = e;
+    b(t);
+}
+function b(e) {
     null != e &&
         s().forEach(T, (t, n) => {
             var r, i;
@@ -127,7 +127,7 @@ function L(e) {
 }
 class D extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        L(e);
+        b(e);
     }
     getState() {
         return this.computeState();
@@ -188,7 +188,7 @@ class D extends (r = l.ZP.PersistedStore) {
 p(D, 'displayName', 'UserSettingsProtoStore'),
     p(D, 'persistKey', 'UserSettingsProtoStore-Cache'),
     (t.Z = new D(_.Z, {
-        CACHE_LOADED: b,
+        CACHE_LOADED: L,
         USER_SETTINGS_PROTO_UPDATE: C,
         USER_SETTINGS_PROTO_ENQUEUE_UPDATE: C,
         USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: y,

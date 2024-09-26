@@ -127,9 +127,9 @@ function T(e) {
         }),
         R = s > 1,
         C = v === E.gH.LOADING,
-        [y, b] = a.useState(!1),
-        [L, D] = a.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
-        [M, P] = a.useState(L),
+        [y, L] = a.useState(!1),
+        [b, D] = a.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
+        [M, P] = a.useState(b),
         U = a.useMemo(() => n.some((e) => null != e.emoji), [n]);
     a.useEffect(() => {
         if ((null == S ? void 0 : S.type) === c.re.STRING_SELECT) {
@@ -141,19 +141,19 @@ function T(e) {
         }
     }, [r, g, S]);
     let w = a.useCallback(() => {
-        if (M !== L)
+        if (M !== b)
             A({
                 type: c.re.STRING_SELECT,
-                values: Array.from(L)
-            }) && P(L);
-    }, [L, M, P, A]);
+                values: Array.from(b)
+            }) && P(b);
+    }, [b, M, P, A]);
     a.useEffect(() => {
-        if (!(y || (L.size === M.size && Array.from(M).every((e) => L.has(e))))) w();
-    }, [y, L, M, w]);
+        if (!(y || (b.size === M.size && Array.from(M).every((e) => b.has(e))))) w();
+    }, [y, b, M, w]);
     let x = l.singleSelect;
     R ? (x = l.multiSelect) : 0 === u && (x = l.toggleSelect);
     let G = (0, l.useVariableSelect)({
-        value: L,
+        value: b,
         onChange: (e) => D(e),
         onSelectInteraction: x
     });
@@ -167,18 +167,18 @@ function T(e) {
                         className: h.select,
                         options: n.map((e) => ({
                             ...e,
-                            disabled: R && !L.has(e.value) && L.size === s
+                            disabled: R && !b.has(e.value) && b.size === s
                         })),
                         placeholder: null != o ? o : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
-                        onClose: () => b(!1),
-                        onOpen: () => b(!0),
+                        onClose: () => L(!1),
+                        onOpen: () => L(!0),
                         maxVisibleItems: 5,
                         closeOnSelect: !R,
                         optionClassName: h.selectOption,
                         renderOptionLabel: (e) =>
                             (0, i.jsx)(p, {
                                 ...e,
-                                isDisabled: R && !L.has(e.value) && L.size === s,
+                                isDisabled: R && !b.has(e.value) && b.size === s,
                                 isOffset: U
                             }),
                         renderOptionValue: (e) => (R ? (0, i.jsx)(I, { options: e }) : (0, i.jsx)(m, { ...e[0] })),

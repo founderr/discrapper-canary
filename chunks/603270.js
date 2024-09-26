@@ -3,7 +3,7 @@ n.d(t, {
         return M;
     },
     P: function () {
-        return L;
+        return b;
     }
 });
 var r = n(47120);
@@ -32,8 +32,8 @@ var a = n(735250),
     R = n(981631),
     C = n(272242),
     y = n(689938),
-    b = n(738571);
-let L = w(D);
+    L = n(738571);
+let b = w(D);
 function D(e) {
     let { appId: t, message: r } = e,
         i = (0, N.R)(t),
@@ -52,20 +52,20 @@ function D(e) {
         I === p.N.NONE && (0, u.k)(t), null == c && !E && !h && (0, _.UM)(t);
     }, [c, t, h, E, I]);
     let O = m.subscriptions.length,
-        L = m.otps.length,
+        b = m.otps.length,
         D = o.useMemo(
             () =>
-                O > 0 && L > 0
+                O > 0 && b > 0
                     ? y.Z.Messages.STOREFRONT_SUBSCRIPTION_AND_ITEMS_COUNT.format({
                           subCount: O,
-                          itemCount: L
+                          itemCount: b
                       })
                     : O > 0
                       ? y.Z.Messages.STOREFRONT_SUBSCRIPTION_COUNT.format({ count: O })
-                      : L > 0
-                        ? y.Z.Messages.STOREFRONT_ITEM_COUNT.format({ count: L })
+                      : b > 0
+                        ? y.Z.Messages.STOREFRONT_ITEM_COUNT.format({ count: b })
                         : y.Z.Messages.STOREFRONT_UNKNOWN_SUBSCRIPTIONS_OR_ITEMS,
-            [L, O]
+            [b, O]
         );
     if (!i || null == c) return null;
     let M = () => {
@@ -107,7 +107,7 @@ function D(e) {
         onIconClick: P,
         children: (0, a.jsx)(l.Button, {
             onClick: w,
-            className: b.openStoreButton,
+            className: L.openStoreButton,
             children: y.Z.Messages.STOREFRONT_OPEN_STORE
         })
     });
@@ -116,7 +116,7 @@ let M = w(P);
 function P(e) {
     var t, r;
     let { skuId: i, message: u } = e,
-        [_, p, g, v, L, D, M, P] = (0, s.Wu)(
+        [_, p, g, v, b, D, M, P] = (0, s.Wu)(
             [m.Z, I.Z, h.Z, f.Z, d.Z],
             () => {
                 var e, t, n, r;
@@ -132,8 +132,8 @@ function P(e) {
         ),
         w = (0, N.R)(null !== (r = null == p ? void 0 : p.id) && void 0 !== r ? r : '');
     o.useEffect(() => {
-        null == _ && !v && !L && (0, c.km)(i);
-    }, [L, v, _, i]),
+        null == _ && !v && !b && (0, c.km)(i);
+    }, [b, v, _, i]),
         o.useEffect(() => {
             if ((null == p ? void 0 : p.id) != null) (0, c.oJ)(null == p ? void 0 : p.id);
         }, [null == p ? void 0 : p.id]);
@@ -249,12 +249,12 @@ function P(e) {
         iconSrc: P,
         onIconClick: H,
         children: (0, a.jsxs)('div', {
-            className: b.skuPurchaseButtons,
+            className: L.skuPurchaseButtons,
             children: [
                 (0, a.jsx)(l.Button, {
                     color: l.ButtonColors.CUSTOM,
                     onClick: Y,
-                    className: b.viewDetailsButton,
+                    className: L.viewDetailsButton,
                     children: y.Z.Messages.STOREFRONT_DETAILS
                 }),
                 G
@@ -291,13 +291,13 @@ function P(e) {
 function U(e) {
     let { appName: t, title: n, description: r, link: i, iconSrc: o, onIconClick: s, onLinkCopy: u, children: c } = e;
     return (0, a.jsxs)('div', {
-        className: b.wrapper,
+        className: L.wrapper,
         children: [
             (0, a.jsxs)('div', {
-                className: b.header,
+                className: L.header,
                 children: [
                     (0, a.jsxs)('div', {
-                        className: b.headerTitle,
+                        className: L.headerTitle,
                         children: [
                             (0, a.jsx)(l.ShopIcon, { size: 'xxs' }),
                             (0, a.jsx)(l.Text, {
@@ -320,10 +320,10 @@ function U(e) {
                 ]
             }),
             (0, a.jsxs)('div', {
-                className: b.content,
+                className: L.content,
                 children: [
                     (0, a.jsxs)('div', {
-                        className: b.contentTextWrapper,
+                        className: L.contentTextWrapper,
                         children: [
                             null != o &&
                                 (0, a.jsx)(l.Button, {
@@ -333,11 +333,11 @@ function U(e) {
                                     children: (0, a.jsx)('img', {
                                         src: o.href,
                                         alt: '',
-                                        className: b.appIcon
+                                        className: L.appIcon
                                     })
                                 }),
                             (0, a.jsxs)('div', {
-                                className: b.contentText,
+                                className: L.contentText,
                                 style: null == r ? { justifyContent: 'space-evenly' } : void 0,
                                 children: [
                                     (0, a.jsx)(l.Text, {
@@ -350,7 +350,7 @@ function U(e) {
                                             variant: 'heading-md/medium',
                                             color: 'text-muted',
                                             tag: 'div',
-                                            className: b.description,
+                                            className: L.description,
                                             children: r
                                         })
                                 ]

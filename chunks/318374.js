@@ -58,7 +58,7 @@ function h(e) {
             })
         });
     }
-    function b() {
+    function L() {
         let e = u()(t)
                 .take(r)
                 .map((e) => {
@@ -127,6 +127,6 @@ function h(e) {
         ? null
         : (0, i.jsx)('div', {
               className: s()(h, f.avatars),
-              children: b()
+              children: L()
           });
 }

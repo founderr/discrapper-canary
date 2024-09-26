@@ -24,8 +24,8 @@ var i = n(735250),
     R = n(926491),
     C = n(457040),
     y = n(740492),
-    b = n(585483),
-    L = n(5967),
+    L = n(585483),
+    b = n(5967),
     D = n(28546),
     M = n(957825),
     P = n(981631),
@@ -141,8 +141,8 @@ function V(e) {
                     n = n.parentNode;
                 }
                 (0, D._Q)();
-                let r = null === (t = (0, L.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-                (null == r || 'BODY' === r.tagName) && b.S.dispatchToLastSubscribed(P.CkL.TEXTAREA_FOCUS);
+                let r = null === (t = (0, b.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+                (null == r || 'BODY' === r.tagName) && L.S.dispatchToLastSubscribed(P.CkL.TEXTAREA_FOCUS);
             },
             [q, ec, eu]
         ),
@@ -157,9 +157,9 @@ function V(e) {
             ea.addEventListener('mousedown', ed),
             ea.addEventListener('contextmenu', ed),
             eo.subscribe(P.CkL.POPOUT_CLOSE, e_),
-            b.S.subscribe(P.CkL.CLOSE_GIF_PICKER, e),
+            L.S.subscribe(P.CkL.CLOSE_GIF_PICKER, e),
             () => {
-                ea.removeEventListener('mousedown', ed), ea.removeEventListener('contextmenu', ed), eo.unsubscribe(P.CkL.POPOUT_CLOSE, e_), b.S.unsubscribe(P.CkL.CLOSE_GIF_PICKER, e);
+                ea.removeEventListener('mousedown', ed), ea.removeEventListener('contextmenu', ed), eo.unsubscribe(P.CkL.POPOUT_CLOSE, e_), L.S.unsubscribe(P.CkL.CLOSE_GIF_PICKER, e);
             }
         );
     }, [er, e_, ed, ea, eo]),

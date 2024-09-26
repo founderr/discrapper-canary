@@ -72,11 +72,11 @@ function y(e) {
     let { channelId: t } = e;
     return R(t);
 }
-function b(e) {
+function L(e) {
     let { channelId: t } = e;
     return R(t);
 }
-function L(e) {
+function b(e) {
     let { x: t, y: n } = e;
     return (
         (r = {
@@ -116,7 +116,7 @@ p(P, 'displayName', 'IncomingCallStore'),
         CALL_CREATE: C,
         CALL_UPDATE: C,
         CALL_DELETE: y,
-        VOICE_CHANNEL_SELECT: b,
-        INCOMING_CALL_MOVE: L,
+        VOICE_CHANNEL_SELECT: L,
+        INCOMING_CALL_MOVE: b,
         CHANNEL_DELETE: D
     }));

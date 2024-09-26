@@ -32,8 +32,8 @@ var l = n(512722),
     R = n(346479),
     C = n(706454),
     y = n(430824),
-    b = n(117530),
-    L = n(594174),
+    L = n(117530),
+    b = n(594174),
     D = n(403182),
     M = n(823379),
     P = n(861990),
@@ -67,7 +67,7 @@ let j = (e, t) => {
     };
 async function z(e) {
     var t, n, r, i, a, o, s, l, d, E, h, p, T, g, S, A, v;
-    let { command: N, optionValues: O, context: y, commandTargetId: L, maxSizeCallback: D, commandOrigin: M = B.bB.CHAT, sectionName: P, interactionLifecycleOptionsFactory: w = J, source: G } = e,
+    let { command: N, optionValues: O, context: y, commandTargetId: b, maxSizeCallback: D, commandOrigin: M = B.bB.CHAT, sectionName: P, interactionLifecycleOptionsFactory: w = J, source: G } = e,
         Z = null !== (r = k.Z.getSource(y.channel.id)) && void 0 !== r ? r : G,
         H = null !== (i = k.Z.getCommandOrigin(y.channel.id)) && void 0 !== i ? i : M;
     null == y.autocomplete &&
@@ -101,7 +101,7 @@ async function z(e) {
             }
             if (e.type === f.jw.ATTACHMENT) {
                 if (null != y.autocomplete) continue;
-                let n = b.Z.getUpload(y.channel.id, e.name, Q);
+                let n = L.Z.getUpload(y.channel.id, e.name, Q);
                 if (null == n) continue;
                 let r = z.length;
                 z.push(n),
@@ -228,7 +228,7 @@ async function z(e) {
         et = () => {
             q(O);
         };
-    null != L && ($.target_id = L),
+    null != b && ($.target_id = b),
         null != y.autocomplete
             ? (0, U.GV)(N, y, $)
             : (_.Z.clearAll(y.channel.id, Q),
@@ -358,7 +358,7 @@ async function J(e, t, n) {
             name: n.name,
             name_localized: e.displayName,
             type: f.B8.APPLICATION_COMMAND,
-            user: (0, N.pe)(L.default.getCurrentUser())
+            user: (0, N.pe)(b.default.getCurrentUser())
         },
         interaction_data: n
     };

@@ -29,8 +29,8 @@ var r = n(939421),
     R = n(635311),
     C = n(705665),
     y = n(517898),
-    b = n(694147),
-    L = n(443992),
+    L = n(694147),
+    b = n(443992),
     D = n(978038),
     M = n(261248),
     P = n(41410),
@@ -51,12 +51,12 @@ var j = {};
 function W(e, t, n) {
     let r,
         { id: i, decrementAriaLabel: a, incrementAriaLabel: o, isDisabled: s, isReadOnly: l, isRequired: u, minValue: c, maxValue: d, autoFocus: _, label: E, formatOptions: f, onBlur: h = () => {}, onFocus: p, onFocusChange: m, onKeyDown: I, onKeyUp: T, description: g, errorMessage: S, ...A } = e,
-        { increment: v, incrementToMax: N, decrement: O, decrementToMin: R, numberValue: C, inputValue: y, commit: b, commitValidation: L } = t,
+        { increment: v, incrementToMax: N, decrement: O, decrementToMin: R, numberValue: C, inputValue: y, commit: L, commitValidation: b } = t,
         D = (0, V.qb)(Y(j), '@react-aria/numberfield'),
         M = (0, G.Me)(i),
         { focusProps: P } = (0, F.KK)({
             onBlur() {
-                b();
+                L();
             }
         }),
         U = (0, V.Ux)(f),
@@ -112,9 +112,9 @@ function W(e, t, n) {
         ea = (0, G.zL)(e),
         eo = (0, k.useCallback)(
             (e) => {
-                'Enter' === e.key ? (b(), L()) : e.continuePropagation();
+                'Enter' === e.key ? (L(), b()) : e.continuePropagation();
             },
-            [b, L]
+            [L, b]
         ),
         { isInvalid: es, validationErrors: el, validationDetails: eu } = t.displayValidation,
         {
@@ -240,8 +240,8 @@ j = {
     'pt-PT': R.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
-    'sk-SK': b.Z,
-    'sl-SI': L.Z,
+    'sk-SK': L.Z,
+    'sl-SI': b.Z,
     'sr-SP': D.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,

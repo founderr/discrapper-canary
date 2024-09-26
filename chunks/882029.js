@@ -2,8 +2,8 @@ var s,
     a = n(442837),
     r = n(570140),
     i = n(314897),
-    o = n(57562),
-    l = n(351780),
+    l = n(57562),
+    o = n(351780),
     c = n(843693);
 function d(e, t, n) {
     return (
@@ -19,42 +19,42 @@ function d(e, t, n) {
     );
 }
 let _ = { unlockedAchievements: {} },
-    u = { ..._ };
-class E extends (s = a.ZP.PersistedStore) {
+    E = { ..._ };
+class u extends (s = a.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(i.default, c.ZP);
         let t = null != e ? e : { ..._ };
-        for (let e in t) u[e] = t[e];
+        for (let e in t) E[e] = t[e];
     }
     getState() {
-        return u;
+        return E;
     }
     getAllUnlockedAchievements() {
-        return u.unlockedAchievements;
+        return E.unlockedAchievements;
     }
     getUnlocked(e) {
         var t;
-        return null !== (t = u.unlockedAchievements[e]) && void 0 !== t ? t : null;
+        return null !== (t = E.unlockedAchievements[e]) && void 0 !== t ? t : null;
     }
 }
-d(E, 'displayName', 'PoggermodeAchievementStore'),
-    d(E, 'persistKey', 'PoggermodeAchievementStore'),
-    (t.Z = new E(r.Z, {
+d(u, 'displayName', 'PoggermodeAchievementStore'),
+    d(u, 'persistKey', 'PoggermodeAchievementStore'),
+    (t.Z = new u(r.Z, {
         POGGERMODE_ACHIEVEMENT_UNLOCK: function (e) {
             var t;
             let { achievementId: n } = e;
-            if (!l.Z.isEnabled()) return !1;
+            if (!o.Z.isEnabled()) return !1;
             (t = n),
-                null != u.unlockedAchievements[t] ||
-                    ((u.unlockedAchievements = {
-                        ...u.unlockedAchievements,
+                null != E.unlockedAchievements[t] ||
+                    ((E.unlockedAchievements = {
+                        ...E.unlockedAchievements,
                         [t]: {
                             achievementId: t,
                             dateUnlocked: Date.now()
                         }
                     }),
                     setTimeout(() => {
-                        (0, o.D)(t, !0);
+                        (0, l.D)(t, !0);
                     }, 2000));
         }
     }));

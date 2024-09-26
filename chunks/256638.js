@@ -32,8 +32,8 @@ var r = n(735250),
     R = n(906732),
     C = n(812206),
     y = n(391650),
-    b = n(600164),
-    L = n(605236),
+    L = n(600164),
+    b = n(605236),
     D = n(749277),
     M = n(492435),
     P = n(353926),
@@ -185,12 +185,12 @@ let eA = i.memo(function () {
                 ]
             });
         case ed.kVF.MACOS_17_18_DEPRECATED_MESSAGE:
-            let { dismissUntil: eb } = j.metadata;
+            let { dismissUntil: eL } = j.metadata;
             return (0, r.jsxs)(u.Notice, {
                 color: u.NoticeColors.WARNING,
                 children: [
                     (0, r.jsx)(u.NoticeCloseButton, {
-                        onClick: () => eg(eb),
+                        onClick: () => eg(eL),
                         noticeType: ed.kVF.MACOS_17_18_DEPRECATED_MESSAGE
                     }),
                     eh.Z.Messages.MACOS_DEPRECATED_WARNING.format({ helpCenterLink: es.Z.getArticleURL(ed.BhN.MACOS_17_18_DEPRECATE) })
@@ -275,7 +275,7 @@ let eA = i.memo(function () {
                 ]
             });
         case ed.kVF.SPOTIFY_AUTO_PAUSED:
-            let eL = N.Z.get(ed.ABu.SPOTIFY);
+            let eb = N.Z.get(ed.ABu.SPOTIFY);
             return (0, r.jsxs)(u.Notice, {
                 color: u.NoticeColors.DANGER,
                 children: [
@@ -286,7 +286,7 @@ let eA = i.memo(function () {
                     (0, r.jsx)('img', {
                         alt: '',
                         className: ep.platformIcon,
-                        src: eL.icon.whiteSVG
+                        src: eb.icon.whiteSVG
                     }),
                     eh.Z.Messages.NOTICE_SPOTIFY_AUTO_PAUSED,
                     (0, r.jsx)(u.PrimaryCTANoticeButton, {
@@ -604,8 +604,8 @@ let eA = i.memo(function () {
                         onClick: () => eg(),
                         noticeType: ed.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS
                     }),
-                    (0, r.jsxs)(b.Z, {
-                        justify: b.Z.Justify.CENTER,
+                    (0, r.jsxs)(L.Z, {
+                        justify: L.Z.Justify.CENTER,
                         children: [
                             null != eZ
                                 ? eh.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
@@ -630,9 +630,9 @@ let eA = i.memo(function () {
             if (null != ei.Z.testModeEmbeddedApplicationId)
                 return (0, r.jsx)(u.Notice, {
                     color: u.NoticeColors.WARNING,
-                    children: (0, r.jsxs)(b.Z, {
-                        justify: b.Z.Justify.CENTER,
-                        align: b.Z.Align.CENTER,
+                    children: (0, r.jsxs)(L.Z, {
+                        justify: L.Z.Justify.CENTER,
+                        align: L.Z.Align.CENTER,
                         children: [
                             (0, r.jsx)('div', { children: eh.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({ applicationName: j.metadata.applicationName }) }),
                             (0, r.jsx)(u.NoticeCloseButton, {
@@ -644,9 +644,9 @@ let eA = i.memo(function () {
                 });
             return (0, r.jsx)(u.Notice, {
                 color: u.NoticeColors.WARNING,
-                children: (0, r.jsxs)(b.Z, {
-                    justify: b.Z.Justify.CENTER,
-                    align: b.Z.Align.CENTER,
+                children: (0, r.jsxs)(L.Z, {
+                    justify: L.Z.Justify.CENTER,
+                    align: L.Z.Align.CENTER,
                     children: [
                         (0, r.jsx)('div', { children: eh.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({ applicationName: j.metadata.applicationName }) }),
                         (0, r.jsx)(eu.Z, {
@@ -909,7 +909,7 @@ let eA = i.memo(function () {
             let eW = o()().add(5, 'days').toDate();
             return (0, r.jsx)(K.Z, {
                 dismissCurrentNotice: () => {
-                    (0, L.EW)(ea.m[ed.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eg(eW);
+                    (0, b.EW)(ea.m[ed.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eg(eW);
                 },
                 subscriptionTier: e_.Si.TIER_2
             });

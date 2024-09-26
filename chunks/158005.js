@@ -66,8 +66,8 @@ function E(e, t, n) {
             errorMessage: e.errorMessage || v
         });
     (S.onKeyDown = S.onKeyDownCapture), delete S.onKeyDownCapture;
-    let b = (0, r.zL)(e, { labelable: !0 }),
-        L = (0, r.dG)(S, I, R),
+    let L = (0, r.zL)(e, { labelable: !0 }),
+        b = (0, r.dG)(S, I, R),
         D = (0, r.Me)();
     return (
         _.set(t, {
@@ -83,12 +83,12 @@ function E(e, t, n) {
                     !e.isDisabled && (n.current.focus(), (0, o._w)('keyboard'));
                 }
             },
-            triggerProps: (0, r.dG)(b, {
-                ...L,
+            triggerProps: (0, r.dG)(L, {
+                ...b,
                 isDisabled: d,
-                onKeyDown: (0, r.tS)(L.onKeyDown, g, e.onKeyDown),
+                onKeyDown: (0, r.tS)(b.onKeyDown, g, e.onKeyDown),
                 onKeyUp: e.onKeyUp,
-                'aria-labelledby': [D, L['aria-labelledby'], L['aria-label'] && !L['aria-labelledby'] ? L.id : null].filter(Boolean).join(' '),
+                'aria-labelledby': [D, b['aria-labelledby'], b['aria-label'] && !b['aria-labelledby'] ? b.id : null].filter(Boolean).join(' '),
                 onFocus(n) {
                     !t.isFocused && (e.onFocus && e.onFocus(n), e.onFocusChange && e.onFocusChange(!0), t.setFocused(!0));
                 },
@@ -107,7 +107,7 @@ function E(e, t, n) {
                 onBlur: (n) => {
                     !n.currentTarget.contains(n.relatedTarget) && (e.onBlur && e.onBlur(n), e.onFocusChange && e.onFocusChange(!1), t.setFocused(!1));
                 },
-                'aria-labelledby': [R['aria-labelledby'], L['aria-label'] && !R['aria-labelledby'] ? L.id : null].filter(Boolean).join(' ')
+                'aria-labelledby': [R['aria-labelledby'], b['aria-label'] && !R['aria-labelledby'] ? b.id : null].filter(Boolean).join(' ')
             },
             descriptionProps: C,
             errorMessageProps: y,

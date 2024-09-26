@@ -65,10 +65,10 @@ function C(e) {
 function y(e) {
     I.set(e.id, e);
 }
-function b() {
+function L() {
     m.clear(), I.clear(), (T = {}), g.clear(), (S = {}), (A = {}), (v = {}), (N = {}), O.clear();
 }
-function L(e) {
+function b(e) {
     let { settings: t } = e;
     S[t.guild_id] = t;
 }
@@ -183,8 +183,8 @@ class K extends (i = l.ZP.Store) {
 }
 _(K, 'displayName', 'GuildRoleSubscriptionsStore'),
     (t.Z = new K(c.Z, {
-        CONNECTION_OPEN: b,
-        GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: L,
+        CONNECTION_OPEN: L,
+        GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: b,
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS: D,
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: M,
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: P,

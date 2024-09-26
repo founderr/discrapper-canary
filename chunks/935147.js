@@ -19,19 +19,19 @@ var n = t(735250),
     I = t(81245),
     N = t(53691),
     A = t(165583),
-    m = t(197115),
-    C = t(267717),
+    C = t(197115),
+    m = t(267717),
     g = t(350327),
     h = t(996073),
     O = t(25990),
     p = t(626135),
     R = t(74538),
     x = t(296810),
-    f = t(433411),
-    M = t(532432),
+    M = t(433411),
+    f = t(532432),
     D = t(504983),
-    P = t(134795),
-    L = t(513901),
+    L = t(134795),
+    P = t(513901),
     b = t(451392),
     Z = t(649700),
     v = t(981631),
@@ -131,14 +131,14 @@ function F(e) {
                                 showPremiumIcon: !1,
                                 preventDisabled: !0
                             }),
-                            (0, n.jsx)(P.Z, {
+                            (0, n.jsx)(L.Z, {
                                 className: G.customizationSection,
                                 isTryItOutFlow: !0,
                                 showRemoveBannerButton: null != k,
                                 onBannerChange: g.f4,
                                 showPremiumIcon: !1
                             }),
-                            (0, n.jsx)(M.Z, {
+                            (0, n.jsx)(f.Z, {
                                 className: G.customizationSection,
                                 isTryItOutFlow: !0,
                                 onAvatarChange: g.c_,
@@ -147,7 +147,7 @@ function F(e) {
                                 sectionTitle: U.Z.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
                             }),
                             (0, n.jsx)(
-                                f.Z,
+                                M.Z,
                                 {
                                     isTryItOutFlow: !0,
                                     className: G.customizationSection,
@@ -157,7 +157,7 @@ function F(e) {
                                 'decoration'
                             ),
                             (0, n.jsx)(
-                                L.Z,
+                                P.Z,
                                 {
                                     className: G.customizationSection,
                                     isTryItOutFlow: !0,
@@ -176,7 +176,7 @@ function F(e) {
                                             children: U.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
                                         }),
                                         !ee &&
-                                            (0, n.jsx)(m.Z, {
+                                            (0, n.jsx)(C.Z, {
                                                 onSubscribeModalClose: (e) => {
                                                     e && ((0, c.I5)(w), (0, g.g_)(k), (0, g.z5)(Y));
                                                 },
@@ -204,7 +204,7 @@ function F(e) {
                     (0, n.jsx)(N.p, {
                         className: G.floatingUpsell,
                         showUpsell: !0,
-                        text: U.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_UPSELL.format({ onClick: C.openPremiumTryItOutProfileUpsell }),
+                        text: U.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_UPSELL.format({ onClick: m.openPremiumTryItOutProfileUpsell }),
                         button: U.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
                         position: 'inline',
                         showShadow: !1

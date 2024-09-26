@@ -164,7 +164,7 @@ function C(e, t) {
     t._ = t.p.length;
     var n = t.p[0],
         i = void 0 !== e && e !== n;
-    return t.h.O || T('ES5').S(t, e, i), i ? (n[q].P && (v(t), r(4)), a(e) && ((e = y(t, e)), t.l || L(t, e)), t.u && T('Patches').M(n[q].t, e, t.u, t.s)) : (e = y(t, n, [])), v(t), t.u && t.v(t.u, t.s), e !== K ? e : void 0;
+    return t.h.O || T('ES5').S(t, e, i), i ? (n[q].P && (v(t), r(4)), a(e) && ((e = y(t, e)), t.l || b(t, e)), t.u && T('Patches').M(n[q].t, e, t.u, t.s)) : (e = y(t, n, [])), v(t), t.u && t.v(t.u, t.s), e !== K ? e : void 0;
 }
 function y(e, t, n) {
     if (I(t)) return t;
@@ -174,14 +174,14 @@ function y(e, t, n) {
             o(
                 t,
                 function (i, a) {
-                    return b(e, r, t, i, a, n);
+                    return L(e, r, t, i, a, n);
                 },
                 !0
             ),
             t
         );
     if (r.A !== e) return t;
-    if (!r.P) return L(e, r.t, !0), r.t;
+    if (!r.P) return b(e, r.t, !0), r.t;
     if (!r.I) {
         (r.I = !0), r.A._--;
         var i = 4 === r.i || 5 === r.i ? (r.o = h(r.k)) : r.o,
@@ -189,14 +189,14 @@ function y(e, t, n) {
             s = !1;
         3 === r.i && ((a = new Set(i)), i.clear(), (s = !0)),
             o(a, function (t, a) {
-                return b(e, r, i, t, a, n, s);
+                return L(e, r, i, t, a, n, s);
             }),
-            L(e, i, !1),
+            b(e, i, !1),
             n && e.u && T('Patches').N(r, n, e.u, e.s);
     }
     return r.o;
 }
-function b(e, t, n, r, o, s, u) {
+function L(e, t, n, r, o, s, u) {
     if (i(o)) {
         var d = y(e, o, s && t && 3 !== t.i && !l(t.R, r) ? s.concat(r) : void 0);
         if ((c(n, r, d), !i(d))) return;
@@ -204,10 +204,10 @@ function b(e, t, n, r, o, s, u) {
     } else u && n.add(o);
     if (a(o) && !I(o)) {
         if (!e.h.D && e._ < 1) return;
-        y(e, o), (t && t.A.l) || L(e, o);
+        y(e, o), (t && t.A.l) || b(e, o);
     }
 }
-function L(e, t, n) {
+function b(e, t, n) {
     void 0 === n && (n = !1), !e.l && e.h.D && e.m && p(t, n);
 }
 function D(e, t) {

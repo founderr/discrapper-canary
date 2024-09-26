@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
 var r = n(735250);
@@ -10,8 +10,8 @@ var i = n(481060),
     s = n(388035),
     a = n(453473),
     o = n(689938);
-function u(e) {
-    let { onOpen: t, onClose: n, className: u } = e;
+function c(e) {
+    let { onOpen: t, onClose: n, className: c } = e;
     return (0, r.jsx)(a.P, {
         onOpen: t,
         onClose: n,
@@ -22,7 +22,7 @@ function u(e) {
                 location: 'bookmarks-button',
                 children: (0, r.jsx)(l.JO, {
                     ...n,
-                    className: u,
+                    className: c,
                     onClick: e,
                     icon: i.BookmarkIcon,
                     'aria-label': o.Z.Messages.FOR_LATER,

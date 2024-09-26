@@ -21,8 +21,8 @@ var n = t(735250),
     I = t(689938),
     N = t(179447);
 function A() {}
-let m = [S.h8.VOICE_CHANNEL];
-function C(e) {
+let C = [S.h8.VOICE_CHANNEL];
+function m(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
 function g(e) {
@@ -75,7 +75,7 @@ function R(e) {
             children: [
                 (0, n.jsx)('div', {
                     className: N.selectedVoiceChannel,
-                    children: (0, n.jsx)(f, { channelId: d })
+                    children: (0, n.jsx)(M, { channelId: d })
                 }),
                 (0, n.jsx)(c.Z.Child, {
                     grow: 0,
@@ -112,15 +112,15 @@ function x(e) {
             };
         })(),
         {
-            query: f,
-            updateQuery: M,
+            query: M,
+            updateQuery: f,
             queryResults: D
         } = (0, l.Z)({
             visible: !0,
-            autocompleterResultTypes: m,
-            autocompleterBeforeCreateSearchContext: C
+            autocompleterResultTypes: C,
+            autocompleterBeforeCreateSearchContext: m
         }),
-        P = (function (e) {
+        L = (function (e) {
             let s = '' !== e,
                 t = (0, i.Wu)(
                     [u.ZP, _.Z, T.Z],
@@ -137,8 +137,8 @@ function x(e) {
                     [s]
                 );
             return s ? null : t;
-        })(f),
-        { focusedIndex: L, setFocusedIndex: b } = (function (e) {
+        })(M),
+        { focusedIndex: P, setFocusedIndex: b } = (function (e) {
             let [s, t] = a.useState(0),
                 n = a.useRef(e);
             return (
@@ -149,22 +149,22 @@ function x(e) {
                     setFocusedIndex: t
                 }
             );
-        })(f);
+        })(M);
     a.useEffect(() => {
         let { current: e } = A;
-        !(null == e || e.isItemVisible(0, L, !0)) &&
+        !(null == e || e.isItemVisible(0, P, !0)) &&
             e.scrollToIndex({
                 section: 0,
-                row: L
+                row: P
             });
-    }, [L]);
-    let Z = null != P ? P.length : D.length,
+    }, [P]);
+    let Z = null != L ? L.length : D.length,
         v = (() => {
-            if (null != P) {
+            if (null != L) {
                 var e;
-                return null === (e = P[L]) || void 0 === e ? void 0 : e.id;
+                return null === (e = L[P]) || void 0 === e ? void 0 : e.id;
             }
-            let s = D[L];
+            let s = D[P];
             if ((null == s ? void 0 : s.type) === S.h8.VOICE_CHANNEL) return s.record.id;
         })();
     return (0, n.jsx)('div', {
@@ -178,8 +178,8 @@ function x(e) {
                 (0, n.jsx)('div', {
                     className: N.inputWrapper,
                     children: (0, n.jsx)(r.TextInput, {
-                        value: f,
-                        onChange: M,
+                        value: M,
+                        onChange: f,
                         onKeyDown: function (e) {
                             x();
                             let s = e.key.toLowerCase();
@@ -190,18 +190,18 @@ function x(e) {
                                         break;
                                     case 'enter': {
                                         let e = (() => {
-                                            if (null != P) return P[L];
-                                            let e = D[L];
+                                            if (null != L) return L[P];
+                                            let e = D[P];
                                             if ((null == e ? void 0 : e.type) === S.h8.VOICE_CHANNEL) return e.record;
                                         })();
                                         null == e ? o(void 0) : o(e.id), t();
                                         break;
                                     }
                                     case 'arrowup':
-                                        0 === L ? b(Z - 1) : b(L - 1);
+                                        0 === P ? b(Z - 1) : b(P - 1);
                                         break;
                                     case 'arrowdown':
-                                        L >= Z - 1 ? b(0) : b(L + 1);
+                                        P >= Z - 1 ? b(0) : b(P + 1);
                                 }
                         },
                         placeholder: I.Z.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
@@ -213,8 +213,8 @@ function x(e) {
                         spellCheck: !1
                     })
                 }),
-                0 === Z && '' !== f && (0, n.jsx)(p, {}),
-                (Z > 0 || '' === f) &&
+                0 === Z && '' !== M && (0, n.jsx)(p, {}),
+                (Z > 0 || '' === M) &&
                     (0, n.jsx)(r.ListThin, {
                         innerId: c,
                         innerRole: 'listbox',
@@ -224,7 +224,7 @@ function x(e) {
                         renderRow: function (e) {
                             let { row: s } = e,
                                 a = (() => {
-                                    if (null != P) return P[s];
+                                    if (null != L) return L[s];
                                     let e = D[s];
                                     if ((null == e ? void 0 : e.type) === S.h8.VOICE_CHANNEL) return e.record;
                                 })();
@@ -237,7 +237,7 @@ function x(e) {
                                     id: a.id,
                                     channel: a,
                                     category: i,
-                                    focused: L === s,
+                                    focused: P === s,
                                     onMouseEnter: () => g.current && b(s),
                                     onClick: () => {
                                         o(a.id), t();
@@ -266,7 +266,7 @@ function x(e) {
         })
     });
 }
-function f(e) {
+function M(e) {
     let { channelId: s } = e,
         {
             channel: t,

@@ -31,8 +31,8 @@ var n = t(735250),
     I = t(68985),
     N = t(211644),
     A = t(804501),
-    m = t(957436),
-    C = t(113207);
+    C = t(957436),
+    m = t(113207);
 function g(e) {
     let { contents: s, content: t, onChange: a } = e,
         i = l.z[t],
@@ -45,7 +45,7 @@ function g(e) {
             },
             children: (0, n.jsx)(d.FormText, {
                 size: u.Z.Sizes.SIZE_16,
-                className: C.marginTop4,
+                className: m.marginTop4,
                 children: ''.concat(t.toLowerCase(), ' (').concat(l.z[t], ')')
             })
         })
@@ -106,8 +106,8 @@ function O() {
             });
         },
         x = s.map((e) => l.z[e]),
-        f = O.filter((e) => e.toLowerCase().includes(u.toLowerCase())).filter((e) => !x.includes(e)),
-        M = Object.keys(l.z)
+        M = O.filter((e) => e.toLowerCase().includes(u.toLowerCase())).filter((e) => !x.includes(e)),
+        f = Object.keys(l.z)
             .filter((e) => !x.includes(e))
             .filter((e) => !O.includes(e))
             .filter((e) => e.toLowerCase().includes(u.toLowerCase()))
@@ -117,11 +117,11 @@ function O() {
             (0, n.jsxs)(d.FormSection, {
                 title: 'Dismissible Content Fatigue',
                 tag: d.FormTitleTags.H1,
-                className: C.marginBottom60,
+                className: m.marginBottom60,
                 children: [
                     (0, n.jsx)(d.FormItem, {
                         children: (0, n.jsxs)(d.FormText, {
-                            className: C.marginBottom4,
+                            className: m.marginBottom4,
                             children: ['Daily Cap Reached: ', t ? 'Yes' : 'No']
                         })
                     }),
@@ -137,7 +137,7 @@ function O() {
                                 children: 'Reset DismissibleContentFrameworkStore'
                             }),
                             (0, n.jsx)(d.FormText, {
-                                className: C.marginTop4,
+                                className: m.marginTop4,
                                 children: 'This will reset the daily cap and content seen during session'
                             })
                         ]
@@ -149,14 +149,14 @@ function O() {
                 tag: d.FormTitleTags.H1,
                 children: [
                     (0, n.jsx)(d.SearchBar, {
-                        className: C.marginBottom20,
+                        className: m.marginBottom20,
                         size: d.SearchBar.Sizes.LARGE,
                         query: u,
                         onChange: A,
                         onClear: () => A('')
                     }),
                     (0, n.jsxs)(d.FormItem, {
-                        className: m.buttonsContainer,
+                        className: C.buttonsContainer,
                         children: [
                             (0, n.jsx)(d.Button, {
                                 onClick: E.sr,
@@ -170,10 +170,10 @@ function O() {
                     }),
                     s.length > 0
                         ? (0, n.jsxs)('div', {
-                              className: C.marginBottom20,
+                              className: m.marginBottom20,
                               children: [
                                   (0, n.jsx)('div', {
-                                      className: C.marginBottom20,
+                                      className: m.marginBottom20,
                                       children: (0, n.jsx)(d.FormTitle, { children: 'Recently Shown' })
                                   }),
                                   (0, n.jsx)(h, {
@@ -184,15 +184,15 @@ function O() {
                               ]
                           })
                         : null,
-                    f.length > 0
+                    M.length > 0
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
                                   (0, n.jsx)('div', {
-                                      className: C.marginBottom20,
+                                      className: m.marginBottom20,
                                       children: (0, n.jsx)(d.FormTitle, { children: 'Recent Overrides' })
                                   }),
                                   (0, n.jsx)(h, {
-                                      items: f,
+                                      items: M,
                                       dismissedContents: g,
                                       handleChange: R
                                   })
@@ -200,11 +200,11 @@ function O() {
                           })
                         : null,
                     (0, n.jsx)(_.Z, {
-                        className: r()(C.marginBottom20, C.marginTop20),
+                        className: r()(m.marginBottom20, m.marginTop20),
                         children: (0, n.jsx)(d.FormTitle, { children: 'Available Dismissible Contents' })
                     }),
                     (0, n.jsx)(h, {
-                        items: M,
+                        items: f,
                         dismissedContents: g,
                         handleChange: R
                     })

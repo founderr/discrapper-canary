@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     ZP: function () {
-        return b;
+        return L;
     },
     sI: function () {
         return r;
@@ -62,7 +62,7 @@ function y(e) {
 !(function (e) {
     (e.VIDEO = 'VIDEO'), (e.STREAM = 'STREAM'), (e.FILTERED = 'FILTERED'), (e.SPEAKING = 'SPEAKING'), (e.ACTIVITY = 'ACTIVITY');
 })(r || (r = {}));
-class b {
+class L {
     get version() {
         return this.participantByIndex.version;
     }

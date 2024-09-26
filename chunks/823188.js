@@ -48,8 +48,8 @@ var s = n(120356),
     R = n(74538),
     C = n(357355),
     y = n(140465),
-    b = n(650032),
-    L = n(515593),
+    L = n(650032),
+    b = n(515593),
     D = n(104494),
     M = n(639119),
     P = n(230916),
@@ -473,7 +473,7 @@ function J(e) {
         V = (0, U.W1)(),
         j = (0, E.ap)((0, h.ZP)()),
         K = j ? 5 : 2,
-        { enabled: z } = b._.useExperiment({ location: Y }, { autoTrackExposure: !1 }),
+        { enabled: z } = L._.useExperiment({ location: Y }, { autoTrackExposure: !1 }),
         Q = F.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
     z && (null == T ? void 0 : T.trial_id) === k.a7 && (Q = F.Z.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL);
     let X = G && !j ? Z.rimGlowTier2 : void 0;
@@ -592,7 +592,7 @@ function J(e) {
                           }),
                           (0, o.jsx)('div', {
                               className: Z.halloweenAvatar,
-                              children: (0, o.jsx)(L.Z, { size: f.AvatarSizes.SIZE_80 })
+                              children: (0, o.jsx)(b.Z, { size: f.AvatarSizes.SIZE_80 })
                           })
                       ]
                   })

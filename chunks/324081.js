@@ -111,7 +111,7 @@ function y(e) {
         p = t.isMultiUserDM()
             ? S.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
             : t.isPrivate()
-              ? (0, r.jsx)(b, { channel: t })
+              ? (0, r.jsx)(L, { channel: t })
               : (0, r.jsx)(l.Clickable, {
                     className: a()(A.subtext, A.guildName),
                     onClick: n,
@@ -158,7 +158,7 @@ function y(e) {
         ]
     });
 }
-function b(e) {
+function L(e) {
     let { channel: t } = e,
         {
             user: n,

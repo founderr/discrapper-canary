@@ -97,11 +97,11 @@ function y(e) {
     let { channelId: t, uploads: n, draftType: r } = e;
     S(t, r, n);
 }
-function b(e) {
+function L(e) {
     let { channelId: t, draftType: n } = e;
     S(t, n, []);
 }
-function L(e) {
+function b(e) {
     let { baseChannelId: t } = e;
     S(t, E.d.FirstThreadMessage, []);
 }
@@ -135,8 +135,8 @@ p(D, 'displayName', 'UploadAttachmentStore'),
         UPLOAD_ATTACHMENT_UPDATE_FILE: R,
         UPLOAD_ATTACHMENT_REMOVE_FILE: N,
         UPLOAD_ATTACHMENT_REMOVE_FILES: O,
-        UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: b,
+        UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: L,
         UPLOAD_ATTACHMENT_SET_UPLOADS: y,
         UPLOAD_ATTACHMENT_SET_FILE: C,
-        SIDEBAR_CLOSE: L
+        SIDEBAR_CLOSE: b
     }));

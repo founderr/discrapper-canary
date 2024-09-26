@@ -12,7 +12,7 @@ n.d(t, {
         return N;
     },
     bp: function () {
-        return b;
+        return L;
     },
     ef: function () {
         return A;
@@ -152,14 +152,14 @@ async function y(e) {
         n
     );
 }
-function b(e, t) {
+function L(e, t) {
     l.Z.dispatch({
         type: 'GAME_CONSOLE_SELECT_DEVICE',
         platform: e,
         deviceId: t
     });
 }
-async function L(e, t, n, r) {
+async function b(e, t, n, r) {
     let i;
     l.Z.dispatch({
         type: 'GAME_CONSOLE_DEVICE_SEND_COMMAND_START',
@@ -229,5 +229,5 @@ async function D(e, t, n) {
 async function M(e, t, n) {
     await h.Z.maybeShowPTTAlert(e), await S();
     let r = await R();
-    await L(e, t, n, r), (0, m.Z)(n.id, e);
+    await b(e, t, n, r), (0, m.Z)(n.id, e);
 }

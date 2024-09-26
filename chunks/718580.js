@@ -57,15 +57,15 @@ function T(e) {
         R = null !== (t = S.directionOverride) && void 0 !== t ? t : p(null != O ? A[O] : null, A[N]),
         { reducedMotion: C } = i.useContext(l.S),
         y = i.useContext(_.Z),
-        b = A[N].impressionName,
-        L = {
+        L = A[N].impressionName,
+        b = {
             ...A[N].impressionProperties,
             location_stack: v
         };
     y({
         type: o.ImpressionTypes.MODAL,
-        name: b,
-        properties: L,
+        name: L,
+        properties: b,
         _stackContext: { isSlide: !0 }
     });
     let { ref: D, width: M = 0, height: P = 0 } = (0, c.Z)(N),

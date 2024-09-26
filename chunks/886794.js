@@ -1,62 +1,62 @@
 s.d(n, {
     Z: function () {
-        return M;
+        return L;
     }
 }),
     s(47120);
 var t = s(735250),
     i = s(470079),
-    o = s(481060),
-    l = s(727637),
+    l = s(481060),
+    o = s(727637),
     r = s(100527),
-    a = s(906732),
-    c = s(680295),
+    c = s(906732),
+    a = s(680295),
     d = s(5192),
     u = s(785717),
-    _ = s(687158),
-    I = s(899007),
+    I = s(687158),
+    _ = s(899007),
     E = s(648052),
     f = s(867176),
     m = s(280885),
     x = s(900927),
     Z = s(678738),
-    h = s(502762),
-    p = s(530),
+    p = s(502762),
+    h = s(530),
     v = s(679332),
     S = s(544989),
     T = s(228168),
     g = s(981631),
     A = s(689938),
     N = s(272216),
-    L = s(11633),
-    j = s(722849);
-function M(e) {
-    let { user: n, guildId: s, channelId: M, messageId: b, roleId: R, sessionId: O, transitionState: C, onClose: P, sourceAnalyticsLocations: y = [] } = e,
+    j = s(11633),
+    b = s(722849);
+function L(e) {
+    let { user: n, guildId: s, channelId: L, messageId: M, roleId: O, sessionId: R, transitionState: C, onClose: P, sourceAnalyticsLocations: y = [] } = e,
         U = s === g.ME ? void 0 : s,
-        D = (0, _.ZP)(n.id, U),
-        { analyticsLocations: F } = (0, a.ZP)([...y, r.Z.SIMPLIFIED_PROFILE_MODAL]),
-        B = (0, u.ZB)({
+        D = (0, I.ZP)(n.id, U),
+        { analyticsLocations: B } = (0, c.ZP)([...y, r.Z.SIMPLIFIED_PROFILE_MODAL]),
+        F = (0, u.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
-            sourceSessionId: O,
+            sourceSessionId: R,
             guildId: U,
-            channelId: M,
-            messageId: b,
-            roleId: R
+            channelId: L,
+            messageId: M,
+            roleId: O
         }),
         G = i.createRef(),
-        w = (0, l.Z)(G);
-    return (0, t.jsx)(a.Gt, {
-        value: F,
+        w = (0, o.Z)(G);
+    return (0, t.jsx)(c.Gt, {
+        value: B,
         children: (0, t.jsx)(u.Mt, {
-            value: B,
-            children: (0, t.jsxs)(o.ModalRoot, {
+            value: F,
+            children: (0, t.jsxs)(l.ModalRoot, {
                 transitionState: C,
                 className: N.root,
                 hideShadow: !0,
                 'aria-label': A.Z.Messages.USER_PROFILE_MODAL,
                 children: [
-                    (0, t.jsxs)(h.Z, {
+                    (0, t.jsxs)(p.Z, {
                         user: n,
                         displayProfile: D,
                         profileType: T.y0.FULL_SIZE,
@@ -75,11 +75,11 @@ function M(e) {
                                     }),
                                     (0, t.jsx)('div', {
                                         className: N.headerInner,
-                                        children: (0, t.jsx)(I.Z, {
+                                        children: (0, t.jsx)(_.Z, {
                                             user: n,
                                             displayProfile: D,
                                             guildId: U,
-                                            channelId: M,
+                                            channelId: L,
                                             profileType: T.y0.FULL_SIZE
                                         })
                                     })
@@ -88,10 +88,10 @@ function M(e) {
                             (0, t.jsxs)('div', {
                                 className: N.body,
                                 children: [
-                                    (0, t.jsx)(p.Z, {
+                                    (0, t.jsx)(h.Z, {
                                         user: n,
                                         profileType: T.y0.FULL_SIZE,
-                                        nickname: d.ZP.getName(U, M, n),
+                                        nickname: d.ZP.getName(U, L, n),
                                         pronouns: null == D ? void 0 : D.pronouns,
                                         nicknameVariant: 'heading-xl/bold',
                                         tags: (0, t.jsx)(E.Z, {
@@ -100,23 +100,23 @@ function M(e) {
                                             onClose: P
                                         })
                                     }),
-                                    (0, t.jsx)(h.Z.Overlay, {
+                                    (0, t.jsx)(p.Z.Overlay, {
                                         className: N.overlay,
                                         children: (0, t.jsxs)('div', {
-                                            className: j.container,
+                                            className: b.container,
                                             children: [
-                                                (0, t.jsx)(o.TabBar, {
-                                                    className: j.tabBar,
+                                                (0, t.jsx)(l.TabBar, {
+                                                    className: b.tabBar,
                                                     type: 'top',
                                                     selectedItem: T.oh.BOT_INFO,
                                                     onItemSelect: g.dG4,
                                                     children: (0, t.jsx)(
-                                                        o.TabBar.Item,
+                                                        l.TabBar.Item,
                                                         {
-                                                            className: j.tabBarItem,
+                                                            className: b.tabBarItem,
                                                             id: T.oh.BOT_INFO,
                                                             'aria-label': A.Z.Messages.USER_PROFILE_ABOUT_ME,
-                                                            children: (0, t.jsx)(o.Text, {
+                                                            children: (0, t.jsx)(l.Text, {
                                                                 variant: 'text-sm/normal',
                                                                 children: A.Z.Messages.USER_PROFILE_ABOUT_ME
                                                             })
@@ -124,9 +124,9 @@ function M(e) {
                                                         T.oh.BOT_INFO
                                                     )
                                                 }),
-                                                (0, t.jsxs)(o.ScrollerThin, {
+                                                (0, t.jsxs)(l.ScrollerThin, {
                                                     fade: !0,
-                                                    className: L.scroller,
+                                                    className: j.scroller,
                                                     children: [
                                                         (0, t.jsx)(m.Z, {
                                                             userId: n.id,
@@ -151,7 +151,7 @@ function M(e) {
                         ]
                     }),
                     (null == D ? void 0 : D.profileEffectId) != null &&
-                        (0, t.jsx)(c.Z, {
+                        (0, t.jsx)(a.Z, {
                             profileEffectId: null == D ? void 0 : D.profileEffectId,
                             isHovering: w
                         })

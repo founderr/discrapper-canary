@@ -24,8 +24,8 @@ var i = n(735250),
     R = n(703656),
     C = n(471253),
     y = n(565799),
-    b = n(590415),
-    L = n(911560),
+    L = n(590415),
+    b = n(911560),
     D = n(488131),
     M = n(814820),
     P = n(314897),
@@ -80,7 +80,7 @@ var i = n(735250),
 function ey(e) {
     Y.Z.captureException(e), new h.Z('SystemMessage').error('', e);
 }
-function eb(e) {
+function eL(e) {
     let { message: t, compact: n, channel: r } = e,
         { id: s, author: l } = t,
         u = P.default.getId(),
@@ -105,7 +105,7 @@ function eb(e) {
         onClickJoinCall: p
     });
 }
-function eL(e) {
+function eb(e) {
     let { message: t, compact: n, channel: r } = e,
         { author: a } = t,
         o = t.getChannelId(),
@@ -210,7 +210,7 @@ function eU(e) {
                 var n;
                 let r = null === (n = t.messageReference) || void 0 === n ? void 0 : n.channel_id;
                 if (null != r) {
-                    await L.Z.loadThread(r);
+                    await b.Z.loadThread(r);
                     let t = w.Z.getChannel(r);
                     null != t && (0, D.ok)(t, e.shiftKey);
                 }
@@ -561,7 +561,7 @@ function eQ(e) {
         },
         E = (0, o.e7)([y.Z], () => y.Z.getParticipant(a.id, r.author.id)),
         f = new Date(j.default.extractTimestamp(r.id)).toISOString() === new Date(null !== (n = null == E ? void 0 : null === (t = E.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) && void 0 !== n ? n : 0).toISOString(),
-        h = d && (null == E ? void 0 : E.rtsState) === b.xO.REQUESTED_TO_SPEAK && f;
+        h = d && (null == E ? void 0 : E.rtsState) === L.xO.REQUESTED_TO_SPEAK && f;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(ef.Z, {
@@ -660,8 +660,8 @@ let e4 = Object.freeze({
     [eN.uaV.CONTEXT_MENU_COMMAND]: void 0,
     [eN.uaV.RECIPIENT_ADD]: eP,
     [eN.uaV.RECIPIENT_REMOVE]: ew,
-    [eN.uaV.CALL]: eb,
-    [eN.uaV.CHANNEL_NAME_CHANGE]: eL,
+    [eN.uaV.CALL]: eL,
+    [eN.uaV.CHANNEL_NAME_CHANGE]: eb,
     [eN.uaV.CHANNEL_ICON_CHANGE]: eD,
     [eN.uaV.CHANNEL_PINNED_MESSAGE]: eM,
     [eN.uaV.USER_JOIN]: ex,

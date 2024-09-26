@@ -21,7 +21,7 @@ var d = n(442837),
     R = n(979651),
     C = n(981631),
     y = n(70722);
-function b(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function b(e, t, n) {
         e
     );
 }
-let L = null,
+let b = null,
     D = {},
     M = null;
 function P() {
@@ -143,9 +143,9 @@ function Y(e) {
 function j(e) {
     let { id: t, channelId: n } = e;
     if (
-        ((L = t),
+        ((b = t),
         Array.from(r.values()).forEach((e) => {
-            (0, h.V9)(e) !== L && e.state === C.jm8.ENDED && x((0, h.V9)(e));
+            (0, h.V9)(e) !== b && e.state === C.jm8.ENDED && x((0, h.V9)(e));
         }),
         null != t)
     )
@@ -174,7 +174,7 @@ function W(e) {
         ...s,
         state: l
     }),
-        l === C.jm8.ENDED && L !== t && x(t);
+        l === C.jm8.ENDED && b !== t && x(t);
 }
 function K(e) {
     let { streamKey: t } = e,
@@ -206,7 +206,7 @@ function z(e) {
 }
 function q(e) {
     let { channelId: t, selfStreamHidden: n } = e;
-    (0, h.DB)(L) && (null == L ? void 0 : L.includes(T.default.getId())) && !1 === D[t] && !0 === n && (L = null), (D[t] = n);
+    (0, h.DB)(b) && (null == b ? void 0 : b.includes(T.default.getId())) && !1 === D[t] && !0 === n && (b = null), (D[t] = n);
 }
 function Q(e) {
     let { intent: t } = e;
@@ -330,7 +330,7 @@ class J extends (s = d.ZP.Store) {
               };
     }
 }
-b(J, 'displayName', 'ApplicationStreamingStore'),
+L(J, 'displayName', 'ApplicationStreamingStore'),
     (t.Z = new J(_.Z, {
         OVERLAY_INITIALIZE: k,
         VOICE_STATE_UPDATES: B,

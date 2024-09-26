@@ -15,19 +15,19 @@ var n = t(735250),
     I = t(952306),
     N = t(600164),
     A = t(690221),
-    m = t(346585),
-    C = t(347649),
+    C = t(346585),
+    m = t(347649),
     g = t(332473),
     h = t(303172),
     O = t(921801),
     p = t(484459),
     R = t(430824),
     x = t(325067),
-    f = t(246946),
-    M = t(594174),
+    M = t(246946),
+    f = t(594174),
     D = t(709054),
-    P = t(706454),
-    L = t(210887),
+    L = t(706454),
+    P = t(210887),
     b = t(418632),
     Z = t(730820),
     v = t(888256),
@@ -110,7 +110,7 @@ class w extends a.PureComponent {
                   className: V.accountWarningBodyText,
                   messageType: _.HelpMessageTypes.WARNING,
                   children: [
-                      this.props.forceMigrationExperiment ? y.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, m.IE)(this.props.locale) }) : y.Z.Messages.POMELO_ACTION_NEEDED.format(),
+                      this.props.forceMigrationExperiment ? y.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, C.IE)(this.props.locale) }) : y.Z.Messages.POMELO_ACTION_NEEDED.format(),
                       ' ',
                       '',
                       (0, n.jsx)(A.Z, {
@@ -321,16 +321,16 @@ class w extends a.PureComponent {
     }
 }
 s.Z = () => {
-    let e = (0, c.e7)([M.default], () => {
-            let e = M.default.getCurrentUser();
+    let e = (0, c.e7)([f.default], () => {
+            let e = f.default.getCurrentUser();
             return l()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
         }),
         s = (0, c.e7)([x.Z], () => x.Z.getBackupCodes()),
-        t = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
-        a = (0, c.e7)([L.Z], () => L.Z.theme),
+        t = (0, c.e7)([M.Z], () => M.Z.hidePersonalInformation),
+        a = (0, c.e7)([P.Z], () => P.Z.theme),
         i = (0, g.b)(),
-        r = (0, C.CC)(),
-        o = (0, c.e7)([P.default], () => P.default.locale);
+        r = (0, m.CC)(),
+        o = (0, c.e7)([L.default], () => L.default.locale);
     return (0, n.jsx)(w, {
         theme: a,
         currentUser: e,

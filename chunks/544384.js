@@ -46,14 +46,14 @@ function N(e, t, n) {
 }
 function O(e) {
     var t, n, c;
-    let { channel: h, currentUser: m, activeStreams: I, hideSelfOptions: O = !1, showReportOption: R = !1, handleGoLive: C, onClose: y, onSelect: b, appContext: L = S.IlC.APP } = e,
+    let { channel: h, currentUser: m, activeStreams: I, hideSelfOptions: O = !1, showReportOption: R = !1, handleGoLive: C, onClose: y, onSelect: L, appContext: b = S.IlC.APP } = e,
         D = (0, a.e7)([p.Z], () => p.Z.getGoLiveSource()),
         M = (0, a.e7)([f.Z], () => f.Z.getState().soundshareEnabled),
         P = p.Z.supports(A.AN.DESKTOP_CAPTURE_APPLICATIONS),
         U = null !== (c = I.find((e) => e.ownerId === (null == m ? void 0 : m.id))) && void 0 !== c ? c : null,
         w = N(h, m, I),
-        x = (0, _.Z)(U, L),
-        G = (0, d.Z)(U, L, S.VqG),
+        x = (0, _.Z)(U, b),
+        G = (0, d.Z)(U, b, S.VqG),
         k = (0, a.e7)([p.Z], () => p.Z.supports(A.AN.SOUNDSHARE)),
         B = (0, a.e7)([p.Z], () => p.Z.supportsScreenSoundshare()),
         F = (null == D ? void 0 : D.desktopSource) != null,
@@ -144,7 +144,7 @@ function O(e) {
     return (0, r.jsx)(u.Z, {
         section: S.jXE.CONTEXT_MENU,
         children: (0, r.jsxs)(o.Menu, {
-            onSelect: b,
+            onSelect: L,
             navId: 'manage-streams',
             onClose: y,
             'aria-label': null != U ? v.Z.Messages.STOP_STREAMING : v.Z.Messages.SHARE_YOUR_SCREEN,

@@ -24,8 +24,8 @@ var a = n(735250),
     R = n(926491),
     C = n(378233),
     y = n(419922),
-    b = n(688179),
-    L = n(981631),
+    L = n(688179),
+    b = n(981631),
     D = n(474936),
     M = n(689938),
     P = n(174461),
@@ -42,9 +42,9 @@ let w = 80,
         return o.useMemo(() => (null == n ? [] : n.stickers.slice(0, B + 1).reduce((e, n) => (e.length !== B && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
     };
 function H(e) {
-    v.default.track(L.rMx.PREMIUM_PROMOTION_OPENED, {
-        location_page: null != e.guild_id ? L.ZY5.GUILD_CHANNEL : L.ZY5.DM_CHANNEL,
-        location_section: L.jXE.STICKER_POPOUT
+    v.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
+        location_page: null != e.guild_id ? b.ZY5.GUILD_CHANNEL : b.ZY5.DM_CHANNEL,
+        location_section: b.jXE.STICKER_POPOUT
     }),
         (0, T.z)();
 }
@@ -91,8 +91,8 @@ let j = (e) => {
                 i();
             }, [l]),
             o.useEffect(() => {
-                v.default.track(L.rMx.OPEN_POPOUT, {
-                    type: L.jXE.STICKER_POPOUT,
+                v.default.track(b.rMx.OPEN_POPOUT, {
+                    type: b.jXE.STICKER_POPOUT,
                     guild_id: r.getGuildId(),
                     sticker_pack_id: n.pack_id,
                     ...(0, _.v_)(r)
@@ -104,7 +104,7 @@ let j = (e) => {
         let h = d,
             p = () => {
                 h &&
-                    (0, b.m)({
+                    (0, L.m)({
                         stickerPack: s,
                         stickerPickerCategories: f
                     }),
@@ -158,15 +158,15 @@ let j = (e) => {
             [f, T] = o.useState(null),
             [O, R] = o.useState(!1),
             C = A.default.getCurrentUser(),
-            b = N.ZP.canUseCustomStickersEverywhere(C),
+            L = N.ZP.canUseCustomStickersEverywhere(C),
             w = (0, u.e7)([S.Z], () => S.Z.getGuild(n.guild_id)),
             x = null != w,
             [B, Z] = o.useState(!1),
             [V, j] = o.useState(null),
             W = o.useMemo(
                 () => ({
-                    page: null != r.guild_id ? L.ZY5.GUILD_CHANNEL : L.ZY5.DM_CHANNEL,
-                    section: L.jXE.STICKER_POPOUT
+                    page: null != r.guild_id ? b.ZY5.GUILD_CHANNEL : b.ZY5.DM_CHANNEL,
+                    section: b.jXE.STICKER_POPOUT
                 }),
                 [r.guild_id]
             ),
@@ -176,14 +176,14 @@ let j = (e) => {
             });
         o.useEffect(() => {
             (async () => {
-                (null == w || w.hasFeature(L.oNc.DISCOVERABLE)) && T(await (0, p.Z)(n.id)), R(!0);
+                (null == w || w.hasFeature(b.oNc.DISCOVERABLE)) && T(await (0, p.Z)(n.id)), R(!0);
             })();
         }, [n.id, x]);
         let z = n.guild_id === r.getGuildId(),
             q = null != f,
             Q = !1,
             X = 'Custom Sticker Popout';
-        b
+        L
             ? (t = x ? (z ? M.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : M.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION) : q ? M.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : M.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION)
             : x
               ? (z ? (t = M.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION) : (t = M.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION), (Q = !0), (X = 'Custom Sticker Popout (Upsell)'))
@@ -195,13 +195,13 @@ let j = (e) => {
                       }
                   })),
                   (X = 'Custom Sticker Popout (Soft Upsell)'));
-        let $ = !Q && !x && q && b;
+        let $ = !Q && !x && q && L;
         if (
             (o.useEffect(() => {
                 s();
             }, [O, f]),
             o.useEffect(() => {
-                v.default.track(L.rMx.OPEN_POPOUT, {
+                v.default.track(b.rMx.OPEN_POPOUT, {
                     type: X,
                     ...K
                 });

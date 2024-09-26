@@ -59,20 +59,20 @@ function C() {
 function y(e, t) {
     return [e, e.clone().add(1, t)];
 }
-function b(e) {
+function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return y(d()().startOf(e).add(t, e), e);
 }
-function L(e, t, n) {
+function b(e, t, n) {
     return y(d()(e, t).local(), n);
 }
 function D() {
     return {
-        [N.Z.Messages.SEARCH_SHORTCUT_TODAY]: () => b('day'),
-        [N.Z.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => b('day', -1),
-        [N.Z.Messages.SEARCH_SHORTCUT_WEEK]: () => b('week'),
-        [N.Z.Messages.SEARCH_SHORTCUT_MONTH]: () => b('month'),
-        [N.Z.Messages.SEARCH_SHORTCUT_YEAR]: () => b('year')
+        [N.Z.Messages.SEARCH_SHORTCUT_TODAY]: () => L('day'),
+        [N.Z.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => L('day', -1),
+        [N.Z.Messages.SEARCH_SHORTCUT_WEEK]: () => L('week'),
+        [N.Z.Messages.SEARCH_SHORTCUT_MONTH]: () => L('month'),
+        [N.Z.Messages.SEARCH_SHORTCUT_YEAR]: () => L('year')
     };
 }
 let M = '([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})',
@@ -97,7 +97,7 @@ function Z(e, t) {
     let n, r;
     let i = e.getFullMatch().trim().toLowerCase(),
         a = D()[i];
-    return null != a ? ([n, r] = a()) : O().has(i) ? ([n, r] = L(i, 'MMMM', 'month')) : R().has(i) ? ([n, r] = L(i, 'dddd', 'day')) : C().has(i) ? ([n, r] = L(i, 'YYYY', 'year')) : ([n, r] = L(i, v.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
+    return null != a ? ([n, r] = a()) : O().has(i) ? ([n, r] = b(i, 'MMMM', 'month')) : R().has(i) ? ([n, r] = b(i, 'dddd', 'day')) : C().has(i) ? ([n, r] = b(i, 'YYYY', 'year')) : ([n, r] = b(i, v.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
 }
 function V(e) {
     let t = e.getMatch(1),

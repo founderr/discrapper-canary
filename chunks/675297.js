@@ -23,17 +23,17 @@ var i = n(399606),
 let T = 600;
 function g(e) {
     let { guildProductListing: t, guildId: n, location: g, shouldShowFullDescriptionButton: S = !0, hideRoleTag: A = !1, lineClamp: v = 1, cardWidth: N, cardHeight: O, thumbnailHeight: R, descriptionTextVariant: C = 'text-sm/normal', showOpaqueBackground: y = !1 } = e,
-        b = (0, i.e7)([l.Z], () => l.Z.getGuild(n), [n]),
-        L = (0, i.e7)([l.Z], () => {
+        L = (0, i.e7)([l.Z], () => l.Z.getGuild(n), [n]),
+        b = (0, i.e7)([l.Z], () => {
             var e;
             return l.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : I.lds);
         }),
         D = (0, a.U)(t, T),
         M = (0, f.C)(t),
-        P = (0, c.SO)(b),
+        P = (0, c.SO)(L),
         { shouldHideGuildPurchaseEntryPoints: U } = (0, s.uP)(n),
         w = (0, f.k)(t);
-    if (null == b || U) return null;
+    if (null == L || U) return null;
     let x = () =>
             (0, p.e)({
                 guildId: n,
@@ -41,7 +41,7 @@ function g(e) {
                 analyticsLocation: g
             }),
         G = () => {
-            _.h(b.id, t.id);
+            _.h(L.id, t.id);
         },
         k = () => {
             (0, o.x)({ listing: t });
@@ -72,7 +72,7 @@ function g(e) {
             name: t.name,
             description: t.description,
             formattedPrice: w,
-            role: L,
+            role: b,
             ctaComponent: (0, r.jsx)(m.Z, {
                 guildId: n,
                 guildProductListingId: t.id,

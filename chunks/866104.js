@@ -1,9 +1,9 @@
 n.d(t, {
     C: function () {
-        return L;
+        return b;
     },
     Z: function () {
-        return b;
+        return L;
     }
 });
 var r = n(47120);
@@ -68,7 +68,7 @@ function y(e) {
         [e]
     );
 }
-function b(e) {
+function L(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         r = h.QK.useSetting(),
         a = (0, g.n)() && r,
@@ -100,7 +100,7 @@ function b(e) {
                   })
     });
 }
-function L(e) {
+function b(e) {
     var t, n;
     let { guild: r, subscriptionsSettings: o } = e,
         s = r.id,
@@ -110,8 +110,8 @@ function L(e) {
         m = (null !== (n = null == o ? void 0 : null === (t = o.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
         [I, T] = a.useState(1),
         g = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: L, isPhantomPreview: D } = (0, A.m)(),
-        M = L === v.y.GUILD_PRODUCTS_PREVIEW ? O.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : O.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
+        { selectedTab: b, isPhantomPreview: D } = (0, A.m)(),
+        M = b === v.y.GUILD_PRODUCTS_PREVIEW ? O.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : O.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
         P = (e) => {
             null != e && e.clientHeight > 30 && T(2);
         };
@@ -194,7 +194,7 @@ function L(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(b, {
+            (0, i.jsx)(L, {
                 coverImageAsset: null == o ? void 0 : o.cover_image_asset,
                 isPreview: D
             })

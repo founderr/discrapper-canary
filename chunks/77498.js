@@ -72,12 +72,12 @@ function C() {
 function y() {
     r = !1;
 }
-function b(e) {
+function L(e) {
     let { games: t, etag: n } = e;
     for (let e of (null != n && S !== n && (S = n), t)) O(v(e));
     (r = void 0), (A = Date.now());
 }
-class L extends (a = s.ZP.PersistedStore) {
+class b extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
         null != e && (null != e.detectableGamesEtag && (S = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach((e) => O(e)));
@@ -142,9 +142,9 @@ class L extends (a = s.ZP.PersistedStore) {
         (g[e] = !0), l.K.set(h, g);
     }
 }
-f(L, 'displayName', 'GameStore'),
-    f(L, 'persistKey', 'GameStore'),
-    f(L, 'migrations', [
+f(b, 'displayName', 'GameStore'),
+    f(b, 'persistKey', 'GameStore'),
+    f(b, 'migrations', [
         (e) => {
             var t, n;
             if (null == e)
@@ -165,9 +165,9 @@ f(L, 'displayName', 'GameStore'),
                       detectableGames: []
                   }
     ]),
-    (t.Z = new L(u.Z, {
+    (t.Z = new b(u.Z, {
         OVERLAY_INITIALIZE: R,
         GAMES_DATABASE_FETCH: C,
         GAMES_DATABASE_FETCH_FAIL: y,
-        GAMES_DATABASE_UPDATE: b
+        GAMES_DATABASE_UPDATE: L
     }));

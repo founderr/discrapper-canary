@@ -29,8 +29,8 @@ var a = n(525654),
     R = n(82085),
     C = n(264229),
     y = n(652898),
-    b = n(895886),
-    L = n(143816),
+    L = n(895886),
+    b = n(143816),
     D = n(703656),
     M = n(922482),
     P = n(131704),
@@ -91,7 +91,7 @@ function es(e, t) {
         { transitionTo: r, welcomeModalChannelId: i, guildScheduledEvent: a } = null != t ? t : {},
         o = n === X.d4z.GUILD_STAGE_VOICE,
         s = {
-            source: L.Z.INVITE_ACCEPT,
+            source: b.Z.INVITE_ACCEPT,
             navigationReplace: !0
         };
     return null != i && (s.welcomeModalChannelId = i), o && (s.state = et.Df), null != a && (s.guildScheduledEventId = a.id), (e) => (null != r ? r(e, s) : (0, D.uL)(e, s));
@@ -343,7 +343,7 @@ t.Z = {
             c = ea(i, s),
             d = H.default.getCurrentUser();
         return null !== (t = null == d ? void 0 : d.hasFlag(X.xW$.QUARANTINED)) && void 0 !== t && t
-            ? ((0, b.default)(), new Promise((e, t) => t(Error())))
+            ? ((0, L.default)(), new Promise((e, t) => t(Error())))
             : (E.Z.dispatch({
                   type: 'INVITE_ACCEPT',
                   code: l

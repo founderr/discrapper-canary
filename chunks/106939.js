@@ -10,25 +10,25 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    o = n(873546),
-    l = n(286379),
+    l = n(873546),
+    o = n(286379),
     c = n(399606),
     d = n(704215),
     _ = n(481060),
-    u = n(150063),
-    E = n(758119),
+    E = n(150063),
+    u = n(758119),
     T = n(100527),
     I = n(906732),
     R = n(252618),
-    m = n(313201),
-    g = n(605236),
-    N = n(984370),
-    C = n(797614),
-    p = n(108427),
-    f = n(210887),
-    A = n(695346),
-    S = n(594174),
-    M = n(626135),
+    g = n(313201),
+    N = n(605236),
+    C = n(984370),
+    m = n(797614),
+    f = n(108427),
+    A = n(210887),
+    p = n(695346),
+    M = n(594174),
+    S = n(626135),
     h = n(280570),
     x = n(914788),
     b = n(841409),
@@ -44,12 +44,12 @@ var s = n(735250),
     G = n(921944),
     w = n(689938),
     y = n(379493);
-let k = {
+let H = {
         [B.dG.REQUESTS]: () => (0, s.jsx)(Z.Z, {}),
         [B.dG.ACTIVITY]: () => (0, s.jsx)(L.Z, {}),
         [B.dG.SETTINGS]: () => (0, s.jsx)(D.Z, {})
     },
-    H = {
+    k = {
         [B.dG.REQUESTS]: () => (0, s.jsx)(Z.Z, {}),
         [B.dG.ACTIVITY]: () => (0, s.jsx)(L.Z, {})
     };
@@ -96,27 +96,27 @@ function F(e) {
 }
 function V(e) {
     let { theme: t, section: n, handleItemSelect: a } = e,
-        r = (0, m.Dt)(),
-        l = (0, v.gU)();
+        r = (0, g.Dt)(),
+        o = (0, v.gU)();
     return (0, s.jsx)(_.ThemeProvider, {
         theme: t,
         children: (e) =>
-            (0, s.jsxs)(N.Z, {
+            (0, s.jsxs)(C.Z, {
                 className: i()(e, y.sidebarTabBar),
-                scrollable: o.tq,
+                scrollable: l.tq,
                 role: 'navigation',
                 'aria-labelledby': r,
                 toolbar: !0,
                 children: [
-                    (0, s.jsx)(N.Z.Icon, {
+                    (0, s.jsx)(C.Z.Icon, {
                         icon: _.GroupIcon,
                         'aria-hidden': !0
                     }),
-                    (0, s.jsx)(N.Z.Title, {
+                    (0, s.jsx)(C.Z.Title, {
                         id: r,
                         children: w.Z.Messages.FAMILY_CENTER_TITLE
                     }),
-                    (0, s.jsx)(N.Z.Divider, {}),
+                    (0, s.jsx)(C.Z.Divider, {}),
                     (0, s.jsxs)(_.TabBar, {
                         'aria-label': w.Z.Messages.FAMILY_CENTER_TITLE,
                         selectedItem: n,
@@ -135,10 +135,10 @@ function V(e) {
                                 'aria-label': w.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
                                 children: [
                                     w.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
-                                    l > 0
+                                    o > 0
                                         ? (0, s.jsx)(_.NumberBadge, {
                                               className: y.badge,
-                                              count: l
+                                              count: o
                                           })
                                         : null
                                 ]
@@ -152,53 +152,53 @@ function V(e) {
 function W() {
     let e = (0, P.Z)(),
         t = (0, v.M8)(),
-        n = (0, g.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
+        n = (0, N.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         r = (0, c.e7)([x.Z], () => x.Z.getIsInitialized()),
-        o = (0, O.M)(),
-        { selectedTab: u, handleTabChange: T } = (0, b.Z)(),
-        I = (0, m.Dt)(),
-        N = S.default.getCurrentUser(),
-        f = null != e,
-        A = r && null != N && !f;
+        l = (0, O.M)(),
+        { selectedTab: E, handleTabChange: T } = (0, b.Z)(),
+        I = (0, g.Dt)(),
+        C = M.default.getCurrentUser(),
+        A = null != e,
+        p = r && null != C && !A;
     return (a.useEffect(() => {
-        (0, p.e)('family-center'),
+        (0, f.e)('family-center'),
             h.ZP.initialPageLoad(),
             !n &&
-                (0, g.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+                (0, N.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: G.L.AUTO,
                     forceTrack: !0
                 });
     }, []),
     a.useEffect(() => {
         r &&
-            f &&
-            (M.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
+            A &&
+            (S.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
-                selected_teen_id: o,
-                initial_page: B.QH[u],
+                selected_teen_id: l,
+                initial_page: B.QH[E],
                 source: B._6[B.Mu.SIDENAV]
             }),
-            C.Z.increment({ name: l.V.FAMILY_CENTER_VIEW }));
-    }, [r, f]),
-    A)
-        ? ((0, E.mN)(j.L0.FAMILY_CENTER), null)
+            m.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
+    }, [r, A]),
+    p)
+        ? ((0, u.mN)(j.L0.FAMILY_CENTER), null)
         : (0, s.jsxs)('main', {
               className: i()(y.container),
               'aria-label': w.Z.Messages.FAMILY_CENTER_TITLE,
               children: [
                   (0, s.jsx)(R.yY, { location: w.Z.Messages.FAMILY_CENTER_TITLE }),
                   (0, s.jsx)(F, {
-                      section: u,
+                      section: E,
                       handleItemSelect: (e) => {
                           T(e);
                       }
                   }),
                   (0, s.jsx)(_.TabBar.Panel, {
-                      id: u,
+                      id: E,
                       'aria-labelledby': I,
                       className: y.contentPanel,
-                      children: (0, s.jsx)('div', { children: k[u]() })
+                      children: (0, s.jsx)('div', { children: H[E]() })
                   })
               ]
           });
@@ -207,47 +207,47 @@ function K() {
     let { analyticsLocations: e } = (0, I.ZP)(T.Z.FAMILY_CENTER),
         t = (0, P.Z)(),
         n = (0, v.M8)(),
-        r = (0, g.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-        o = (0, c.e7)([x.Z], () => x.Z.getIsInitialized()),
-        N = (0, O.M)(),
-        L = (0, c.e7)([f.Z], () => f.Z.theme),
+        r = (0, N.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
+        l = (0, c.e7)([x.Z], () => x.Z.getIsInitialized()),
+        C = (0, O.M)(),
+        L = (0, c.e7)([A.Z], () => A.Z.theme),
         { selectedTab: Z, handleTabChange: D } = (0, b.Z)(),
-        k = (0, m.Dt)(),
-        F = S.default.getCurrentUser(),
+        H = (0, g.Dt)(),
+        F = M.default.getCurrentUser(),
         W = null != t,
-        K = o && null != F && !W;
+        K = l && null != F && !W;
     if (
         (a.useEffect(() => {
-            u.Y(U.Z5c.FAMILY_CENTER),
-                (0, p.e)('family-center'),
+            E.Y(U.Z5c.FAMILY_CENTER),
+                (0, f.e)('family-center'),
                 !x.Z.isLoading() && x.Z.canRefetch() && h.ZP.initialPageLoad(),
                 !r &&
-                    (0, g.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+                    (0, N.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                         dismissAction: G.L.AUTO,
                         forceTrack: !0
                     });
         }, []),
         a.useEffect(() => {
-            o &&
+            l &&
                 W &&
-                (M.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
+                (S.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
-                    selected_teen_id: N,
+                    selected_teen_id: C,
                     initial_page: B.QH[Z],
                     source: B._6[B.Mu.SIDENAV]
                 }),
-                C.Z.increment({ name: l.V.FAMILY_CENTER_VIEW }));
-        }, [o, W]),
+                m.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
+        }, [l, W]),
         a.useEffect(() => {
-            let e = A.Ex.getSetting();
-            o && t && void 0 === e && A.Ex.updateSetting(!0);
-        }, [o, t]),
+            let e = p.Ex.getSetting();
+            l && t && void 0 === e && p.Ex.updateSetting(!0);
+        }, [l, t]),
         K)
     )
-        return (0, E.mN)(j.L0.FAMILY_CENTER), null;
+        return (0, u.mN)(j.L0.FAMILY_CENTER), null;
     let Y = Z !== B.dG.SETTINGS ? Z : B.dG.ACTIVITY,
-        z = H[Y];
+        z = k[Y];
     return (0, s.jsx)(I.Gt, {
         value: e,
         children: (0, s.jsxs)('main', {
@@ -264,7 +264,7 @@ function K() {
                 }),
                 (0, s.jsx)(_.TabBar.Panel, {
                     id: Y,
-                    'aria-labelledby': k,
+                    'aria-labelledby': H,
                     className: y.contentPanel,
                     children: (0, s.jsx)(_.Scroller, {
                         children: (0, s.jsx)('div', {

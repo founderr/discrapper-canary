@@ -94,14 +94,14 @@ function y(e) {
     let a = { ...i };
     return (a.message = null), E.set(r, a), !0;
 }
-function b(e) {
+function L(e) {
     let { id: t, channelId: n } = e;
     return y({
         messageId: t,
         channelId: n
     });
 }
-function L(e) {
+function b(e) {
     let { ids: t, channelId: n } = e;
     for (let e of t)
         y({
@@ -214,8 +214,8 @@ d(k, 'displayName', 'SavedMessagesStore'),
         SAVED_MESSAGES_UPDATE: O,
         SAVED_MESSAGE_CREATE: R,
         SAVED_MESSAGE_DELETE: C,
-        MESSAGE_DELETE: b,
-        MESSAGE_DELETE_BULK: L,
+        MESSAGE_DELETE: L,
+        MESSAGE_DELETE_BULK: b,
         MESSAGE_UPDATE: D,
         GUILD_CREATE: M,
         GUILD_UPDATE: M,

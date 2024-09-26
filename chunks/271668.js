@@ -24,8 +24,8 @@ var a = n(735250),
     R = n(56801),
     C = n(342687),
     y = n(826298),
-    b = n(689079),
-    L = n(981631),
+    L = n(689079),
+    b = n(981631),
     D = n(689938),
     M = n(590515),
     P = n(239840);
@@ -38,7 +38,7 @@ let U = 512,
     F = 420,
     Z = [8, 8, 0, 8],
     V = c().debounce(() => {
-        (0, E.yw)(L.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
+        (0, E.yw)(b.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300);
 function H(e) {
     e.preventDefault();
@@ -52,7 +52,7 @@ t.Z = o.forwardRef(function (e, t) {
         [j, W] = o.useState(!1),
         K = I.Xn.useStore((e) => e.activeCategoryIndex);
     o.useEffect(() => {
-        (0, E.yw)(L.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
+        (0, E.yw)(b.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
     }, []);
     let {
             sectionDescriptors: z,
@@ -72,7 +72,7 @@ t.Z = o.forwardRef(function (e, t) {
             },
             {
                 placeholderCount: w,
-                limit: b.tn,
+                limit: L.tn,
                 includeFrecency: !0
             }
         ),
@@ -111,7 +111,7 @@ t.Z = o.forwardRef(function (e, t) {
         }, [$, J]);
     let eo = o.useCallback(
             (e) => {
-                if (e.id === J || e.id === b.bi.FRECENCY) {
+                if (e.id === J || e.id === L.bi.FRECENCY) {
                     var t;
                     et(null), null === (t = Y.current) || void 0 === t || t.scrollToSectionTop(0);
                 } else et(e.id);
@@ -213,7 +213,7 @@ t.Z = o.forwardRef(function (e, t) {
                 let i = Q[t.sectionIndex],
                     o = i.data[t.sectionRowIndex],
                     s = ''.concat(i.section.id, ':').concat(null !== (r = null == o ? void 0 : o.id) && void 0 !== r ? r : e);
-                if (null == o || (i.section.id !== o.applicationId && i.section.id !== b.bi.FRECENCY) || o.inputType === N.iw.PLACEHOLDER) return (0, a.jsx)(C.Z, {}, s);
+                if (null == o || (i.section.id !== o.applicationId && i.section.id !== L.bi.FRECENCY) || o.inputType === N.iw.PLACEHOLDER) return (0, a.jsx)(C.Z, {}, s);
                 let l = z.find((e) => e.id === o.applicationId);
                 return (0, a.jsx)(
                     f.ZP.NewCommand,

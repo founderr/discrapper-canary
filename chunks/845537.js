@@ -9,7 +9,7 @@ n.d(t, {
         return U;
     },
     Ox: function () {
-        return b;
+        return L;
     },
     Vq: function () {
         return D;
@@ -18,7 +18,7 @@ n.d(t, {
         return w;
     },
     cB: function () {
-        return L;
+        return b;
     },
     dy: function () {
         return C;
@@ -85,7 +85,7 @@ function y(e) {
             })
     });
 }
-function b(e) {
+function L(e) {
     let { text: t, channelId: n, guildId: i } = e,
         a = m.Z.getGuild(i),
         o = p.Z.getChannel(n),
@@ -95,7 +95,7 @@ function b(e) {
         children: t
     });
 }
-function L(e) {
+function b(e) {
     let { id: t, guildId: n, channelId: o } = e,
         l = (0, i.e7)([T.default], () => T.default.getUser(t)),
         u = (0, i.e7)([I.Z], () => I.Z.hidePersonalInformation),

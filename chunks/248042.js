@@ -9,7 +9,7 @@ n.d(t, {
         return D;
     },
     l2: function () {
-        return L;
+        return b;
     }
 });
 var r = n(913527),
@@ -94,7 +94,7 @@ function y() {
         );
     return !E && v;
 }
-async function b() {
+async function L() {
     var e;
     let t = u.default.getCurrentUser(),
         n = !(null == t ? void 0 : t.isClaimed()),
@@ -111,15 +111,15 @@ async function b() {
         mostRecentSubscription: l
     });
 }
-async function L() {
-    if (!(await b())) return;
+async function b() {
+    if (!(await L())) return;
     let e = A.Z.bogoPromotion;
     if (!(null != e && new Date(e.endDate).valueOf() >= Date.now())) await (0, g.L9)();
 }
 async function D() {
     let e = A.Z.bogoPromotion,
         t = null != e && new Date(e.endDate).valueOf() >= Date.now() && new Date(e.startDate).valueOf() <= Date.now(),
-        n = await b(),
+        n = await L(),
         { enabled: r } = p.Am.getCurrentConfig({ location: '153d31_6' }, { autoTrackExposure: !1 }),
         { enabled: i } = h.Z.getCurrentConfig({ location: '153d31_7' }, { autoTrackExposure: t && r && n });
     return t && i && r && n;

@@ -41,8 +41,8 @@ function y(e, t, n) {
         e
     );
 }
-let b = 50,
-    L = 0;
+let L = 50,
+    b = 0;
 function D(e) {
     return (null != e ? e : C.Qx) / C.Qx;
 }
@@ -841,7 +841,7 @@ class P extends m.Z {
     }
     constructor(e, t, n) {
         super(e, t),
-            y(this, 'mediaEngineConnectionId', 'Native-'.concat(L++)),
+            y(this, 'mediaEngineConnectionId', 'Native-'.concat(b++)),
             y(this, 'goLiveSourceIdentifier', void 0),
             y(this, 'selfMute', !1),
             y(this, 'selfVideo', !1),
@@ -1001,11 +1001,11 @@ class P extends m.Z {
                         if (null != a && null != o && null != a.framesCaptured && null != o.framesCaptured) {
                             let e = a.framesCaptured - o.framesCaptured,
                                 t = null != a.noiseCancellerFrames ? (null != o.noiseCancellerFrames ? a.noiseCancellerFrames - o.noiseCancellerFrames : 0) : e;
-                            if (this.noiseCancellation && t > b && null != a.noiseCancellerProcessTime && null != o.noiseCancellerProcessTime) {
+                            if (this.noiseCancellation && t > L && null != a.noiseCancellerProcessTime && null != o.noiseCancellerProcessTime) {
                                 let e = a.noiseCancellerProcessTime - o.noiseCancellerProcessTime;
                                 e / t > 8 ? this.emit(g.Sh.NoiseCancellationError, C.H3.CPU_OVERUSE) : 0 === e && this.emit(g.Sh.NoiseCancellationError, C.H3.FAILED);
                             }
-                            this.inputMode === C.pM.VOICE_ACTIVITY && this.vadAutoThreshold && this.vadUseKrisp && e > b && null != a.voiceActivityDetectorProcessTime && null != o.voiceActivityDetectorProcessTime && (a.voiceActivityDetectorProcessTime - o.voiceActivityDetectorProcessTime) / e > 4 && this.emit(g.Sh.VoiceActivityDetectorError, C.H3.VAD_CPU_OVERUSE);
+                            this.inputMode === C.pM.VOICE_ACTIVITY && this.vadAutoThreshold && this.vadUseKrisp && e > L && null != a.voiceActivityDetectorProcessTime && null != o.voiceActivityDetectorProcessTime && (a.voiceActivityDetectorProcessTime - o.voiceActivityDetectorProcessTime) / e > 4 && this.emit(g.Sh.VoiceActivityDetectorError, C.H3.VAD_CPU_OVERUSE);
                         }
                     }
                     this.stats = e;

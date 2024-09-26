@@ -38,7 +38,7 @@ function y(e) {
         throw (O.error('Error while dispatching LOGOUT', e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e);
     });
 }
-function b() {
+function L() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.Z5c.DEFAULT_LOGGED_OUT;
     if ((y(), null == e)) return;
     let t = (0, p.PP)();
@@ -312,7 +312,7 @@ function b() {
                 trackedActionData: { event: l.NetworkActionNames.USER_LOGOUT },
                 ...(null != n && { headers: { authorization: null !== (e = u.getToken(n)) && void 0 !== e ? e : '' } })
             }).finally(() => {
-                (null == n || n === T.default.getId()) && b(t);
+                (null == n || n === T.default.getId()) && L(t);
             });
         },
         switchAccountToken(e) {
@@ -340,7 +340,7 @@ function b() {
                     url: v.ANM.ME,
                     oldFormErrors: !0
                 })
-                .catch(() => b(e));
+                .catch(() => L(e));
         },
         verify(e) {
             null != e

@@ -1,54 +1,54 @@
 n.d(t, {
     FZ: function () {
-        return Z;
+        return P;
     },
     Hl: function () {
         return B;
     },
     NJ: function () {
-        return y;
+        return M;
     },
     R8: function () {
         return U;
     },
     Sq: function () {
-        return L;
+        return b;
     },
     Wg: function () {
         return D;
     },
     Zn: function () {
-        return A;
+        return O;
     },
     c2: function () {
-        return P;
+        return Z;
     },
     eE: function () {
         return j;
     },
     iE: function () {
-        return k;
+        return F;
     },
     iK: function () {
-        return M;
+        return y;
     },
     lv: function () {
-        return b;
+        return L;
     },
     nR: function () {
-        return O;
+        return A;
     },
     q0: function () {
         return l.a;
     },
     x0: function () {
-        return v;
+        return x;
     },
     xb: function () {
-        return F;
+        return k;
     },
     yd: function () {
-        return x;
+        return v;
     }
 }),
     n(47120),
@@ -59,21 +59,21 @@ var r = n(371917),
     s = n(563751),
     a = n.n(s),
     o = n(608382),
-    u = n.n(o),
-    c = n(722661),
-    d = n.n(c),
+    c = n.n(o),
+    u = n(722661),
+    d = n.n(u),
     h = n(225389),
     _ = n.n(h),
     f = n(71716),
     E = n.n(f),
     p = n(869045),
     m = n.n(p),
-    C = n(110599),
-    S = n.n(C),
-    I = n(801539),
-    g = n.n(I),
-    T = n(887868),
-    R = n.n(T);
+    I = n(110599),
+    C = n.n(I),
+    S = n(801539),
+    g = n.n(S),
+    R = n(887868),
+    T = n.n(R);
 function N(e, t, n, i) {
     let l = i.getCurrentContent(),
         s = null;
@@ -87,18 +87,18 @@ function N(e, t, n, i) {
         });
     return (l = r.Modifier.applyEntity(l, o, s)), r.EditorState.set(i, { currentContent: l });
 }
-function v(e, t, n, i) {
+function x(e, t, n, i) {
     let l, s;
     let o = t.getCurrentContent(),
-        u = o.getFirstBlock(),
-        c = u.getText();
+        c = o.getFirstBlock(),
+        u = c.getText();
     'number' == typeof n
-        ? (n > c.length && (n = c.length),
-          null != i && i > c.length && (i = c.length),
+        ? (n > u.length && (n = u.length),
+          null != i && i > u.length && (i = u.length),
           (l = new r.SelectionState({
-              anchorKey: u.getKey(),
+              anchorKey: c.getKey(),
               anchorOffset: n,
-              focusKey: u.getKey(),
+              focusKey: c.getKey(),
               focusOffset: null != i && 0 !== i ? i : n
           })))
         : (l = t.getSelection());
@@ -106,26 +106,26 @@ function v(e, t, n, i) {
         h = a()(o, l);
     return l.isCollapsed() ? ((o = r.Modifier.insertText(o, l, e, d, h)), (s = 'insert-characters')) : ((o = r.Modifier.replaceText(o, l, e, d, h)), (s = 'replace-characters')), r.EditorState.push(t, o, s);
 }
-function x(e, t) {
+function v(e, t) {
     switch (e) {
         case 'delete':
             return g()(t);
         case 'delete-word':
             return _()(t);
         case 'backspace':
-            return S()(t);
+            return C()(t);
         case 'backspace-word':
             return d()(t);
         case 'backspace-to-start-of-line':
-            return u()(t);
+            return c()(t);
         default:
             return t;
     }
 }
-function A(e, t) {
+function O(e, t) {
     switch (e) {
         case 'transpose-characters':
-            return R()(t);
+            return T()(t);
         case 'move-selection-to-start-of-block':
             return m()(t);
         case 'move-selection-to-end-of-block':
@@ -134,10 +134,10 @@ function A(e, t) {
             return t;
     }
 }
-function L(e) {
+function b(e) {
     return e.getCurrentContent().getFirstBlock().getText();
 }
-function b(e, t) {
+function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = t.getCurrentContent(),
         i = r.getFirstBlock(),
@@ -178,47 +178,47 @@ function b(e, t) {
         t
     );
 }
-function O(e) {
+function A(e) {
     return r.EditorState.createEmpty(new r.CompositeDecorator(e));
 }
-function Z(e) {
+function P(e) {
     let t = r.EditorState.push(e, r.ContentState.createFromText('')),
         n = e.getSelection();
     return null != n && n.hasFocus && (t = r.EditorState.moveFocusToEnd(t)), t;
 }
-function P(e, t) {
-    let n = L(t);
-    return v(e, t, 0, n.length);
+function Z(e, t) {
+    let n = b(t);
+    return x(e, t, 0, n.length);
 }
-function M(e, t) {
+function y(e, t) {
     let n = t.getSelection();
     return (n = (n = n.set('focusOffset', e)).set('anchorOffset', e)), r.EditorState.forceSelection(t, n);
 }
-function y(e) {
-    return M(e.getCurrentContent().getFirstBlock().getText().length, e);
+function M(e) {
+    return y(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
 function j(e) {
-    return M(0, e);
+    return y(0, e);
 }
 function U(e) {
     let t = e.getSelection();
     return (t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), r.EditorState.forceSelection(e, t);
 }
 function D(e) {
-    let t = L(e),
+    let t = b(e),
         n = e.getSelection();
     return (n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), r.EditorState.forceSelection(e, n);
 }
 function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
-        n = L(e);
+        n = b(e);
     if (n.length > t) {
         let i = e.getSelection();
-        (e = v('', e, t, n.length)), i.getAnchorOffset() > t && (i = i.set('anchorOffset', t)), i.getFocusOffset() > t && (i = i.set('focusOffset', t)), (e = r.EditorState.forceSelection(e, i));
+        (e = x('', e, t, n.length)), i.getAnchorOffset() > t && (i = i.set('anchorOffset', t)), i.getFocusOffset() > t && (i = i.set('focusOffset', t)), (e = r.EditorState.forceSelection(e, i));
     }
     return e;
 }
-function k(e) {
+function F(e) {
     let t = window.getSelection();
     if (null == t || 'Caret' !== t.type || null == e) return;
     let n = t.getRangeAt(0);
@@ -238,6 +238,6 @@ function k(e) {
     let l = r.left - i.left + e.scrollLeft;
     l < e.scrollLeft ? (e.scrollLeft = l - 10) : l > e.scrollLeft + e.offsetWidth && (e.scrollLeft = l - e.offsetWidth + 3);
 }
-function F(e) {
-    return 0 === L(e).length;
+function k(e) {
+    return 0 === b(e).length;
 }

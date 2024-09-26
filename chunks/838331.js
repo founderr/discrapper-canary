@@ -65,8 +65,8 @@ let N = a.createContext({
 });
 function O(e) {
     let { placeholder: t, children: n, value: r, onChange: o, className: c, listClassName: d, 'aria-label': g, multiSelect: S = !1, autoFocus: A = !1, maxVisibleItems: O = 5, itemToString: R = v, showScrollbar: C = !1 } = e,
-        [y, b] = a.useState(''),
-        [L] = a.useState(!0),
+        [y, L] = a.useState(''),
+        [b] = a.useState(!0),
         [D, M] = a.useState(null),
         P = a.useId(),
         U = a.useRef(null);
@@ -125,8 +125,8 @@ function O(e) {
                     ref: n,
                     role: 'combobox',
                     'aria-label': g,
-                    'aria-expanded': L,
-                    'aria-controls': L ? P : void 0,
+                    'aria-expanded': b,
+                    'aria-controls': b ? P : void 0,
                     'aria-owns': P,
                     'aria-haspopup': 'listbox',
                     className: s()(m.combobox, c),
@@ -136,10 +136,10 @@ function O(e) {
                             size: E.E.Sizes.MEDIUM,
                             placeholder: t,
                             query: y,
-                            onChange: b,
+                            onChange: L,
                             onKeyDown: a,
                             onBlur: () => M(null),
-                            onClear: () => b(''),
+                            onClear: () => L(''),
                             className: s()({ [m.searchWithScrollbar]: C }),
                             inputProps: {
                                 'aria-multiline': !1,
@@ -148,7 +148,7 @@ function O(e) {
                         }),
                         (0, i.jsx)('div', {
                             children:
-                                L &&
+                                b &&
                                 (x
                                     ? (0, i.jsxs)('div', {
                                           className: m.empty,

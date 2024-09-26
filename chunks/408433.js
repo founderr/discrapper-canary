@@ -9,7 +9,7 @@ n.d(t, {
         return M;
     },
     o3: function () {
-        return L;
+        return b;
     },
     vP: function () {
         return P;
@@ -110,7 +110,7 @@ function y(e, t, n) {
                 (r.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
-                    url: b(n.video.proxy_url, { format: 'webp' })
+                    url: L(n.video.proxy_url, { format: 'webp' })
                 }),
             null != r.thumbnail && O(n.video) && R(t, n.provider, n.video) && (r.video = C(n.video))),
         I.k.has(r.type))
@@ -128,7 +128,7 @@ function y(e, t, n) {
     } else r.fields = [];
     return r;
 }
-function b(e, t) {
+function L(e, t) {
     let n = new URL(e);
     return (
         Object.keys(t).forEach((e) => {
@@ -137,7 +137,7 @@ function b(e, t) {
         n.toString()
     );
 }
-function L(e) {
+function b(e) {
     let t = new Map(),
         n = [];
     return (

@@ -52,7 +52,7 @@ function R(e) {
     let { badges: t, className: n, badgeClassName: r, onClose: o } = e,
         { analyticsLocations: A } = (0, d.ZP)(c.Z.BADGE),
         { context: R, trackUserProfileAction: C } = (0, p.KZ)(),
-        [y, b] = a.useState(!1);
+        [y, L] = a.useState(!1);
     return (0, i.jsx)('div', {
         className: s()(N.container, n),
         'aria-label': v.Z.Messages.PROFILE_USER_BADGES,
@@ -86,8 +86,8 @@ function R(e) {
                     text: e.description,
                     delay: g.vB,
                     tooltipClassName: c,
-                    onTooltipShow: () => b(null != a),
-                    onTooltipHide: () => b(!1),
+                    onTooltipShow: () => L(null != a),
+                    onTooltipHide: () => L(!1),
                     children: (0, i.jsxs)(l.Anchor, {
                         onClick: t,
                         onMouseEnter: n,

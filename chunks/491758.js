@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return P;
+        return L;
     }
 });
 var n = t(735250),
@@ -19,24 +19,24 @@ var n = t(735250),
     I = t(924557),
     N = t(435064),
     A = t(894694),
-    m = t(779618),
-    C = t(39604),
+    C = t(779618),
+    m = t(39604),
     g = t(442334),
     h = t(356659),
     O = t(981631),
     p = t(37113),
     R = t(526761),
     x = t(689938),
-    f = t(703353),
-    M = t(595362),
+    M = t(703353),
+    f = t(595362),
     D = t(113207);
-function P() {
+function L() {
     let e = (0, o.e7)([T.Z], () => T.Z.getHardwareEncoding()),
-        { clipsEnabled: s, remindersEnabled: t, decoupledClipsEnabled: i, clipsLength: P, clipsQuality: L } = (0, o.cj)([N.Z], () => N.Z.getSettings()),
+        { clipsEnabled: s, remindersEnabled: t, decoupledClipsEnabled: i, clipsLength: L, clipsQuality: P } = (0, o.cj)([N.Z], () => N.Z.getSettings()),
         b = (0, o.e7)([N.Z], () => N.Z.getHardwareClassification()),
         Z = (0, o.e7)([S.Z], () => S.Z.getKeybindForAction(O.kg4.SAVE_CLIP, !0)),
         v = N.Z.isDecoupledGameClippingEnabled(),
-        j = (0, m.Z)(T.Z),
+        j = (0, C.Z)(T.Z),
         { showClipsHeaderEntrypoint: B } = I.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     r()(null != Z, 'Save clip keybind unset');
     let U = (0, o.e7)([u.default], () => u.default.locale),
@@ -116,24 +116,24 @@ function P() {
                     !e &&
                         (0, n.jsx)(E.Z, {
                             look: E.z.WARNING,
-                            className: M.formItem,
+                            className: f.formItem,
                             children: x.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({ onClick: () => d.Z.open(O.oAB.VOICE, null, { scrollPosition: R.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
                     b === A.x.BELOW_MINIMUM
                         ? (0, n.jsx)(E.Z, {
                               look: E.z.WARNING,
-                              className: M.formItem,
+                              className: f.formItem,
                               children: x.Z.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
                           })
                         : null,
                     (0, n.jsx)(l.FormSwitch, {
                         hideBorder: !0,
                         disabled: !e,
-                        className: M.formItem,
+                        className: f.formItem,
                         value: s,
                         note: x.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
                         onChange: (e) =>
-                            C.em({
+                            m.em({
                                 clipsEnabled: e,
                                 trackAnalytics: !0
                             }),
@@ -141,7 +141,7 @@ function P() {
                     }),
                     e &&
                         (0, n.jsx)(E.Z, {
-                            className: M.formItem,
+                            className: f.formItem,
                             children: x.Z.Messages.CLIPS_SETTINGS_QUALITY_INFOBOX
                         })
                 ]
@@ -157,11 +157,11 @@ function P() {
                             children: (0, n.jsx)(l.FormSwitch, {
                                 hideBorder: !0,
                                 disabled: !e,
-                                className: M.formItem,
+                                className: f.formItem,
                                 value: i,
                                 note: x.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
                                 onChange: (e) =>
-                                    C._Q({
+                                    m._Q({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
@@ -178,10 +178,10 @@ function P() {
                             className: D.marginTop20,
                             children: (0, n.jsx)(l.FormSwitch, {
                                 hideBorder: !0,
-                                className: M.formItem,
+                                className: f.formItem,
                                 value: t,
                                 note: x.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
-                                onChange: (e) => C.N0(e),
+                                onChange: (e) => m.N0(e),
                                 children: x.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
                             })
                         })
@@ -192,43 +192,43 @@ function P() {
                 className: D.marginTop20,
                 children: [
                     (0, n.jsx)(g.Q, {
-                        className: M.formItem,
-                        select: C.eU,
+                        className: f.formItem,
+                        select: m.eU,
                         title: x.Z.Messages.CLIPS_SETTINGS_LENGTH,
                         note: x.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
-                        value: P,
+                        value: L,
                         options: G
                     }),
                     (0, n.jsx)(g.Q, {
-                        className: M.formItem,
+                        className: f.formItem,
                         select: (e) =>
-                            C.yi({
+                            m.yi({
                                 resolution: e,
-                                frameRate: L.frameRate
+                                frameRate: P.frameRate
                             }),
                         title: x.Z.Messages.CLIPS_SETTINGS_RESOLUTION,
                         note: x.Z.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
-                        value: L.resolution,
+                        value: P.resolution,
                         options: F
                     }),
                     (0, n.jsx)(g.Q, {
-                        className: M.formItem,
+                        className: f.formItem,
                         select: (e) =>
-                            C.yi({
-                                resolution: L.resolution,
+                            m.yi({
+                                resolution: P.resolution,
                                 frameRate: e
                             }),
                         title: x.Z.Messages.CLIPS_SETTINGS_FRAMERATE,
                         note: x.Z.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
-                        value: L.frameRate,
+                        value: P.frameRate,
                         options: y
                     }),
                     (0, n.jsx)(g.O, {
-                        className: M.formItem,
+                        className: f.formItem,
                         title: x.Z.Messages.CLIPS_SETTINGS_KEYBIND,
                         note: x.Z.Messages.CLIPS_SETTINGS_KEYBIND_HELP,
                         children: (0, n.jsx)('div', {
-                            className: f.keyRecorder,
+                            className: M.keyRecorder,
                             children: (0, n.jsx)(_.Z, {
                                 defaultValue: Z.shortcut,
                                 onChange: V

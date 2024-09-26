@@ -40,13 +40,13 @@ r(l, i),
     (l.prototype._update = function (e) {
         for (var t = this._w, n = 0 | this._ah, r = 0 | this._bh, i = 0 | this._ch, a = 0 | this._dh, s = 0 | this._eh, l = 0 | this._fh, I = 0 | this._gh, T = 0 | this._hh, g = 0 | this._al, S = 0 | this._bl, A = 0 | this._cl, v = 0 | this._dl, N = 0 | this._el, O = 0 | this._fl, R = 0 | this._gl, C = 0 | this._hl, y = 0; y < 32; y += 2) (t[y] = e.readInt32BE(4 * y)), (t[y + 1] = e.readInt32BE(4 * y + 4));
         for (; y < 160; y += 2) {
-            var b = t[y - 30],
-                L = t[y - 30 + 1],
-                D = E(b, L),
-                M = f(L, b);
-            b = t[y - 4];
-            var P = h(b, (L = t[y - 4 + 1])),
-                U = p(L, b),
+            var L = t[y - 30],
+                b = t[y - 30 + 1],
+                D = E(L, b),
+                M = f(b, L);
+            L = t[y - 4];
+            var P = h(L, (b = t[y - 4 + 1])),
+                U = p(b, L),
                 w = t[y - 14],
                 x = t[y - 14 + 1],
                 G = t[y - 32],

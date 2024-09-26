@@ -1,12 +1,12 @@
 n.d(t, {
     EK: function () {
-        return E;
-    },
-    GX: function () {
         return h;
     },
+    GX: function () {
+        return E;
+    },
     eQ: function () {
-        return C;
+        return g;
     },
     vf: function () {
         return f;
@@ -23,48 +23,48 @@ var s = n(470079),
     d = n(497505),
     u = n(918701),
     p = n(665430),
-    x = n(585500),
-    m = n(566078),
-    g = n(46140),
-    _ = n(689938);
-function C(e) {
+    m = n(585500),
+    x = n(566078),
+    _ = n(46140),
+    C = n(689938);
+function g(e) {
     var t, n;
     let s = (0, o.e7)([l.default], () => l.default.locale),
         r = (0, c.Rf)(e),
         [a] = (0, c.me)(e, r),
-        x = (0, p.pF)({ location: g.dr.QUESTS_BAR });
-    if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return _.Z.Messages.QUESTS_COMPLETION_COMPLETE;
+        m = (0, p.pF)({ location: _.dr.QUESTS_BAR });
+    if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return C.Z.Messages.QUESTS_COMPLETION_COMPLETE;
     if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && r.percentComplete > 0) {
         let e = (0, i.T3)(s, r.percentComplete, { roundingMode: 'floor' });
-        return _.Z.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({ percent: e });
+        return C.Z.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({ percent: e });
     }
-    return x && a === d.LI.SELECT ? _.Z.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER : (0, u.$J)(e) ? _.Z.Messages.QUEST_BAR_TITLE_START_PLAYING : _.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
+    return m && a === d.LI.SELECT ? C.Z.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER : (0, u.$J)(e) ? C.Z.Messages.QUEST_BAR_TITLE_START_PLAYING : C.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
 }
 function f(e, t, n) {
     var s;
-    let o = (0, c.B6)(m.r.build(e.config).rewardsExpireAt),
+    let o = (0, c.B6)(x.r.build(e.config).rewardsExpireAt),
         r = (0, c.Rf)(e),
         a = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
         l = (0, c.z)(e),
-        i = (0, x.D)({
+        i = (0, m.D)({
             quest: e,
-            location: g.dr.QUESTS_BAR,
+            location: _.dr.QUESTS_BAR,
             questContent: d.jn.QUEST_BAR_V2,
             taskDetails: r,
             useV2Variants: !0
         });
-    if (a) return _.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: o });
-    if (t) return n === d.LI.SELECT ? _.Z.Messages.QUEST_MULTIPLATFORM_SELECT_FUN_SUBTITLE : i;
+    if (a) return C.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: o });
+    if (t) return n === d.LI.SELECT ? C.Z.Messages.QUEST_MULTIPLATFORM_SELECT_FUN_SUBTITLE : i;
     if (r.percentComplete > 0)
         return l
             ? (0, u.AV)({
                   quest: e,
                   taskDetails: r
               })
-            : _.Z.Messages.QUEST_BAR_TITLE_START_PLAYING;
-    return _.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE;
+            : C.Z.Messages.QUEST_BAR_TITLE_START_PLAYING;
+    return C.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE;
 }
-function h() {
+function E() {
     let [{ spring: e }, t] = (0, r.useSpring)(() => ({ spring: 0 }), 'animate-always');
     return {
         completionSpring: e,
@@ -77,7 +77,7 @@ function h() {
         }, [t])
     };
 }
-function E(e, t) {
+function h(e, t) {
     var n;
     let s = (0, c.z)(e),
         o = null !== (n = (0, a.i6)()) && void 0 !== n ? n : 0,

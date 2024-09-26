@@ -1,6 +1,6 @@
 n.d(t, {
     Co: function () {
-        return L;
+        return b;
     }
 });
 var r = n(47120);
@@ -35,13 +35,13 @@ let v = (e) => e.preventDefault(),
         tension: 1600,
         friction: 60
     };
-function b(e, t) {
+function L(e, t) {
     return a.cloneElement(e, {
         'data-type': 'sticker',
         'data-id': t
     });
 }
-function L(e) {
+function b(e) {
     let t = 'description' in e && null != e.description ? ''.concat(e.name, ', ').concat(e.description) : e.name;
     return S.Z.Messages.STICKER_A11Y_LABEL.format({ stickerName: t });
 }
@@ -129,7 +129,7 @@ let D = (e) => {
             : (0, i.jsx)('div', {
                   role: 'img',
                   className: d,
-                  'aria-label': N ? S.Z.Messages.ERROR_LOADING_STICKER : L(o),
+                  'aria-label': N ? S.Z.Messages.ERROR_LOADING_STICKER : b(o),
                   ref: E,
                   children: (0, i.jsx)(D, {
                       hasError: N,
@@ -137,7 +137,7 @@ let D = (e) => {
                       maskAsset: _,
                       size: r,
                       withLoadingIndicator: f,
-                      children: b(
+                      children: L(
                           (0, i.jsx)('canvas', {
                               className: A.lottieCanvas,
                               ref: m
@@ -192,10 +192,10 @@ let D = (e) => {
                           maskAsset: u,
                           size: o,
                           withLoadingIndicator: d,
-                          children: b(
+                          children: L(
                               (0, i.jsx)('img', {
                                   className: A.pngImage,
-                                  alt: L(n),
+                                  alt: b(n),
                                   src: R,
                                   draggable: !1,
                                   onError: y,

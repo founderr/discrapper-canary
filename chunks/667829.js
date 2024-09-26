@@ -29,8 +29,8 @@ var a = n(735250),
     R = n(30465),
     C = n(140963),
     y = n(4484),
-    b = n(925994),
-    L = n(981631),
+    L = n(925994),
+    b = n(981631),
     D = n(689938),
     M = n(933283);
 function P(e, t, n) {
@@ -67,7 +67,7 @@ class x extends o.Component {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, b.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, O.JM)(e));
+            (e = this.props.useSlate ? this.props.textValue : (0, L.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, O.JM)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -162,7 +162,7 @@ class x extends o.Component {
     }
     render() {
         var e, t, n, r, i, o;
-        let { textValue: s, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: E, onSubmit: h, channel: p, type: m, fontSize: I, useSlate: T, spellcheckEnabled: g, useNewSlashCommands: S, canOnlyUseTextCommands: v, className: R, id: b, required: D, maxCharacterCount: P, allowNewLines: U, 'aria-describedby': x, 'aria-labelledby': G, accessibilityLabel: k } = this.props,
+        let { textValue: s, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: E, onSubmit: h, channel: p, type: m, fontSize: I, useSlate: T, spellcheckEnabled: g, useNewSlashCommands: S, canOnlyUseTextCommands: v, className: R, id: L, required: D, maxCharacterCount: P, allowNewLines: U, 'aria-describedby': x, 'aria-labelledby': G, accessibilityLabel: k } = this.props,
             { submitting: B, popup: F } = this.state,
             Z = {
                 channel: p,
@@ -170,7 +170,7 @@ class x extends o.Component {
                     [M.textAreaSlate]: T,
                     [M.textAreaDisabled]: c || B
                 }),
-                id: b,
+                id: L,
                 placeholder: this.getPlaceholder(),
                 required: D,
                 accessibilityLabel: k,
@@ -226,11 +226,11 @@ class x extends o.Component {
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)(A.d9, {
-                    event: L.CkL.INSERT_TEXT,
+                    event: b.CkL.INSERT_TEXT,
                     handler: this.handleInsertText
                 }),
                 (0, a.jsx)(A.d9, {
-                    event: L.CkL.CLEAR_TEXT,
+                    event: b.CkL.CLEAR_TEXT,
                     handler: this.handleClearText
                 }),
                 V

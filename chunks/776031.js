@@ -44,7 +44,7 @@ function v(e, t) {
             return null === (t = h.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier;
         }),
         { location: y } = (0, u.O)(),
-        { available: b, activated: L } = (0, d.k)(a.q.STREAM_HIGH_QUALITY),
+        { available: L, activated: b } = (0, d.k)(a.q.STREAM_HIGH_QUALITY),
         D = i.useCallback(
             (e, n, r, i) => {
                 if (e) {
@@ -67,7 +67,7 @@ function v(e, t) {
                                   videoDeviceGuid: O.cameraSource.videoDeviceGuid,
                                   audioDeviceGuid: O.cameraSource.audioDeviceGuid
                               }),
-                            b && (0, E.J1)(!(0, _.mc)(n, r)),
+                            L && (0, E.J1)(!(0, _.mc)(n, r)),
                             l.Z.setGoLiveSource(e);
                     }
                 } else
@@ -77,7 +77,7 @@ function v(e, t) {
                         objectType: i
                     });
             },
-            [t, y, O, b]
+            [t, y, O, L]
         );
     if (null == e) return null;
     let M = n === T.tI.PRESET_DOCUMENTS ? T.ws.FPS_30 : N,
@@ -100,7 +100,7 @@ function v(e, t) {
             let { value: t, label: n } = e,
                 i = (0, c.Z)(T.tI.PRESET_CUSTOM, t, M, R, C);
             return (
-                b && !L && (i = !1),
+                L && !b && (i = !1),
                 (0, r.jsx)(
                     s.MenuRadioItem,
                     {

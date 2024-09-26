@@ -1,6 +1,6 @@
 n.d(t, {
     X: function () {
-        return L;
+        return b;
     }
 });
 var r = n(789020);
@@ -29,7 +29,7 @@ var a = n(735250),
     R = n(689938),
     C = n(96042),
     y = n(968661);
-function b(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function b(e, t, n) {
         e
     );
 }
-class L extends o.Component {
+class b extends o.Component {
     render() {
         let { type: e, message: t, className: n, children: r, useChatFontScaling: i, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
@@ -100,16 +100,16 @@ class L extends o.Component {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'state', { isReactionPickerActive: !1 }),
-            b(this, 'onAddReaction', (e, t) => {
+            L(this, 'state', { isReactionPickerActive: !1 }),
+            L(this, 'onAddReaction', (e, t) => {
                 if (null == e) return;
                 let { channel: n, message: r, isForumToolbar: i } = this.props;
                 (0, p.rU)(n.id, r.id, (0, m.g1)(e), i ? p.TW.FORUM_TOOLBAR : p.TW.MESSAGE_INLINE_BUTTON, { burst: t });
             }),
-            b(this, 'handleReactionPickerToggle', () => {
+            L(this, 'handleReactionPickerToggle', () => {
                 this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
             }),
-            b(this, 'handleAddReactionClick', (e) => {
+            L(this, 'handleAddReactionClick', (e) => {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let r = T.default.getCurrentUser();
@@ -125,7 +125,7 @@ class L extends o.Component {
                     }),
                     this.handleReactionPickerToggle();
             }),
-            b(this, 'renderReactionPopout', (e) => {
+            L(this, 'renderReactionPopout', (e) => {
                 let { closePopout: t } = e,
                     { type: n, channel: r, message: i } = this.props,
                     o = {

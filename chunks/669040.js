@@ -24,8 +24,8 @@ var i = n(735250),
     R = n(53691),
     C = n(75145),
     y = n(631771),
-    b = n(695346),
-    L = n(594174),
+    L = n(695346),
+    b = n(594174),
     D = n(78839),
     M = n(626135),
     P = n(111361),
@@ -56,7 +56,7 @@ let K = 0,
     ei = 33,
     ea = (e) => e + 2 * en,
     eo = (e) => {
-        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: r, emojiSize: o, onEmojiSelect: l, searchQuery: c, sectionDescriptors: E, setCollapsedSections: f, getEmojiItemProps: p, getEmojiRowProps: m, isScrolling: T, isUsingKeyboardNavigation: S, allowAnimatedEmoji: N, channelGuildId: O, messageId: R, isBurstReaction: y, listHeaderClassName: b, activeSectionIndex: L, upsellGlowOpacity: P, emojiListRef: U } = e,
+        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: r, emojiSize: o, onEmojiSelect: l, searchQuery: c, sectionDescriptors: E, setCollapsedSections: f, getEmojiItemProps: p, getEmojiRowProps: m, isScrolling: T, isUsingKeyboardNavigation: S, allowAnimatedEmoji: N, channelGuildId: O, messageId: R, isBurstReaction: y, listHeaderClassName: L, activeSectionIndex: b, upsellGlowOpacity: P, emojiListRef: U } = e,
             w = (0, h.O)(),
             Y = a.useRef(V.xAR),
             j = a.useMemo(() => ('' !== n ? _.Z.convert.toCodePoint(n) : ''), [n]),
@@ -173,14 +173,14 @@ let K = 0,
                                       : null,
                             c = null == r ? void 0 : r.toString();
                         null != a && (c = (0, x.Y1)(a, null == r ? void 0 : r.toString()));
-                        let d = L === e,
+                        let d = b === e,
                             _ = n.isNitroLocked,
                             f = _ && !d,
                             h = _ && d;
                         return (0, i.jsx)(
                             A.Z,
                             {
-                                className: s()(W.header, b, {
+                                className: s()(W.header, L, {
                                     [W.inactiveNitroHeader]: f,
                                     [W.activeNitroHeader]: h
                                 }),
@@ -192,7 +192,7 @@ let K = 0,
                             l
                         );
                     }),
-                [E, t, ea, b, L]
+                [E, t, ea, L, b]
             ),
             ec = (0, d.e7)([D.ZP], () => D.ZP.inReverseTrial()),
             ed = a.useCallback(
@@ -248,8 +248,8 @@ let K = 0,
             F = a.useRef(!1),
             Z = I.kJ.useStore((e) => e.activeCategoryIndex),
             H = (0, T.Iu)((e) => e.searchQuery),
-            z = b.Yk.useSetting(),
-            q = (0, d.e7)([L.default], () => L.default.getCurrentUser()),
+            z = L.Yk.useSetting(),
+            q = (0, d.e7)([b.default], () => b.default.getCurrentUser()),
             Q = (0, P.I5)(q),
             { location: X } = (0, h.O)(),
             { analyticsLocations: $ } = (0, p.ZP)(),

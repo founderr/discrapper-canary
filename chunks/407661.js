@@ -90,7 +90,7 @@ function N(e) {
     function y(e) {
         e.stopPropagation(), (0, d.qx)(i.id, !s);
     }
-    function b(e) {
+    function L(e) {
         e.stopPropagation(), (0, d.A6)(i.id);
     }
     return (0, r.jsx)('div', {
@@ -171,7 +171,7 @@ function N(e) {
                                             })
                                         ]
                                     }),
-                                (0, r.jsx)(p.B, { onClick: b })
+                                (0, r.jsx)(p.B, { onClick: L })
                             ]
                         })
                     ]

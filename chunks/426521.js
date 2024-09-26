@@ -29,8 +29,8 @@ var r = n(735250),
     R = n(689938),
     C = n(56599),
     y = n(756688),
-    b = n(886765);
-let L = '^/users/(\\d+)';
+    L = n(886765);
+let b = '^/users/(\\d+)';
 function D(e) {
     var t, n, i;
     let { item: s } = e,
@@ -71,7 +71,7 @@ function M(e) {
 }
 function P(e) {
     let { item: t } = e,
-        n = b,
+        n = L,
         i = R.Z.Messages.NOTIFICATION_CENTER_TODO;
     return (
         t.completed && ((n = y), (i = R.Z.Messages.NOTIFICATION_CENTER_DONE)),
@@ -117,7 +117,7 @@ let U = i.memo(function (e) {
                         r = t.path;
                     if (null == n || null == r) return;
                     if (p.Z.isDiscordHostname(n)) {
-                        let t = r.match(L);
+                        let t = r.match(b);
                         if (null != t && 2 === t.length) {
                             var e;
                             (0, c.openUserProfileModal)({
@@ -138,7 +138,7 @@ let U = i.memo(function (e) {
             }, [o, E, _]),
             y = null;
         o.type === I.O7.INCOMING_FRIEND_REQUESTS && null != o.other_user && (y = (0, r.jsx)(v.Z, { userId: o.other_user.id }));
-        let b = null != o.local_id,
+        let L = null != o.local_id,
             U = (0, g.Z)(o);
         return (0, r.jsxs)('div', {
             className: C.row,
@@ -172,7 +172,7 @@ let U = i.memo(function (e) {
                         })
                     ]
                 }),
-                b ? null : (0, r.jsx)(N.z, { item: o })
+                L ? null : (0, r.jsx)(N.z, { item: o })
             ]
         });
     }),

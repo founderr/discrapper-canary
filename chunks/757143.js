@@ -50,13 +50,13 @@ o(
                 var f = u(i);
                 !f && (i = E(i));
                 var p = o.global;
-                p && ((L = o.unicode), (o.lastIndex = 0));
+                p && ((b = o.unicode), (o.lastIndex = 0));
                 for (var T = []; null !== (D = I(o, s)); ) {
                     if ((v(T, D), !p)) break;
-                    '' === E(D[0]) && (o.lastIndex = h(s, _(o.lastIndex), L));
+                    '' === E(D[0]) && (o.lastIndex = h(s, _(o.lastIndex), b));
                 }
-                for (var C = '', y = 0, b = 0; b < T.length; b++) {
-                    for (var L, D, M, P = E((D = T[b])[0]), U = g(S(d(D.index), s.length), 0), w = [], x = 1; x < D.length; x++) v(w, R(D[x]));
+                for (var C = '', y = 0, L = 0; L < T.length; L++) {
+                    for (var b, D, M, P = E((D = T[L])[0]), U = g(S(d(D.index), s.length), 0), w = [], x = 1; x < D.length; x++) v(w, R(D[x]));
                     var G = D.groups;
                     if (f) {
                         var k = A([P], w, U, s);

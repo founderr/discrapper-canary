@@ -17,8 +17,8 @@ var a = t(120356),
     p = t(783097),
     _ = t(314734),
     C = t(981631),
-    f = t(689938),
-    h = t(500257);
+    h = t(689938),
+    f = t(500257);
 function A(e) {
     let { application: n, className: t, sectionName: a } = e,
         A = (0, p.L1)(n),
@@ -36,13 +36,13 @@ function A(e) {
                 className: _.NN,
                 navId: 'app-details-more-menu',
                 onClose: t,
-                'aria-label': f.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
+                'aria-label': h.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
                 onSelect: void 0,
                 children: [
                     E
                         ? (0, i.jsx)(o.MenuItem, {
                               id: 'add-app',
-                              label: f.Z.Messages.APPLICATION_ADD_BUTTON,
+                              label: h.Z.Messages.APPLICATION_ADD_BUTTON,
                               action: () => {
                                   null == A.customInstallUrl && (0, r.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, N),
                                       (0, u.L)({
@@ -58,7 +58,7 @@ function A(e) {
                         : null,
                     (0, i.jsx)(o.MenuItem, {
                         id: 'copy',
-                        label: f.Z.Messages.COPY_LINK,
+                        label: h.Z.Messages.COPY_LINK,
                         action: () => {
                             (0, d.JG)(
                                 (0, c.J)({
@@ -76,8 +76,8 @@ function A(e) {
         children: (e) =>
             (0, i.jsx)(o.Clickable, {
                 onClick: e.onClick,
-                className: l()(h.clickable, t),
-                'aria-label': f.Z.Messages.MORE,
+                className: l()(f.clickable, t),
+                'aria-label': h.Z.Messages.MORE,
                 children: (0, i.jsx)(o.MoreHorizontalIcon, {
                     size: 'sm',
                     color: o.tokens.colors.INTERACTIVE_ACTIVE

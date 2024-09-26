@@ -3,13 +3,13 @@ n.d(t, {
         return r;
     },
     CB: function () {
-        return b;
+        return L;
     },
     aU: function () {
         return O;
     },
     cp: function () {
-        return L;
+        return b;
     },
     eL: function () {
         return C;
@@ -143,14 +143,14 @@ function y(e, t) {
         r = N(e, t);
     return null == n[0] && null != r[0];
 }
-function b(e, t) {
+function L(e, t) {
     var n;
     let r = d.Z.getChannel(t);
     if (null == r) return !1;
     let i = _.Z.getMessage(r.id, p.default.castChannelIdAsMessageId(r.id));
     return null != i && e.length > 0 && null != e.find((e) => e.isImage || e.isVideo) && r.isForumPost() && r.ownerId === (null === (n = E.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === u.Z.getCount(r.id) && (0 === i.attachments.length || null == i.attachments.find((e) => T(e) || g(e)));
 }
-function L(e) {
+function b(e) {
     return e.reduce(
         (e, t) => ({
             containsVideo: e.containsVideo || t.isVideo,

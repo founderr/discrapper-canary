@@ -38,8 +38,8 @@ var a = n(735250),
     R = n(944386),
     C = n(305325),
     y = n(33154),
-    b = n(692147),
-    L = n(197115),
+    L = n(692147),
+    b = n(197115),
     D = n(659215),
     M = n(222677),
     P = n(995774),
@@ -128,7 +128,7 @@ class ed extends (r = o.PureComponent) {
         let e, t;
         let { count: n, burst_count: r, colors: i, isBurstReaction: o, hideCount: s, emoji: u, readOnly: _, isLurking: E, isGuest: p, isPendingMember: m, className: T, useChatFontScaling: g, message: A, hideEmoji: v, animationStartPosition: N } = this.props,
             { shouldShowTooltip: O, tooltipTextAria: R, reactionRef: C, tooltipPositionKey: y } = this.state,
-            L = g ? et : ee,
+            b = g ? et : ee,
             D = {
                 transform: [{ scale: this.scale }],
                 opacity: this.opacity
@@ -158,10 +158,10 @@ class ed extends (r = o.PureComponent) {
                         onMouseLeave: this.handleLeave,
                         ref: this.handleSetReactionRef,
                         children: (0, a.jsx)(c.Z.div, {
-                            className: l()(L.reaction, T, {
-                                [L.reactionMe]: this.isMe(),
-                                [L.reactionReadOnly]: _ && !E && !m && !p,
-                                [L.shakeReaction]: v && null == N
+                            className: l()(b.reaction, T, {
+                                [b.reactionMe]: this.isMe(),
+                                [b.reactionReadOnly]: _ && !E && !m && !p,
+                                [b.shakeReaction]: v && null == N
                             }),
                             style: D,
                             children: (0, a.jsx)(f.Popout, {
@@ -170,14 +170,14 @@ class ed extends (r = o.PureComponent) {
                                 children: (n) =>
                                     (0, a.jsxs)(f.Clickable, {
                                         ...n,
-                                        className: L.reactionInner,
+                                        className: b.reactionInner,
                                         onClick: this.handleClick,
                                         'aria-disabled': _,
                                         'aria-label': (0, P.iD)(this.isMe(), M, u, o),
                                         'aria-pressed': this.isMe(),
                                         children: [
                                             (0, a.jsx)('div', {
-                                                className: l()({ [L.burstGlow]: o }),
+                                                className: l()({ [b.burstGlow]: o }),
                                                 style: { boxShadow: '0 0 16px '.concat(t) }
                                             }),
                                             (0, a.jsxs)('div', {
@@ -205,7 +205,7 @@ class ed extends (r = o.PureComponent) {
                                                           })
                                                         : null,
                                                     (0, a.jsx)(h.Z, {
-                                                        className: l()({ [L.hideEmoji]: v }),
+                                                        className: l()({ [b.hideEmoji]: v }),
                                                         emojiId: u.id,
                                                         emojiName: u.name,
                                                         size: 'reaction',
@@ -216,12 +216,12 @@ class ed extends (r = o.PureComponent) {
                                             s
                                                 ? null
                                                 : (0, a.jsx)(I.Z, {
-                                                      className: L.reactionCount,
+                                                      className: b.reactionCount,
                                                       value: M,
                                                       color: e,
                                                       digitWidth: ei
                                                   }),
-                                            (0, a.jsx)(b.Z, {
+                                            (0, a.jsx)(L.Z, {
                                                 count: M,
                                                 reactionRef: C
                                             })
@@ -437,7 +437,7 @@ class ed extends (r = o.PureComponent) {
                                             'aria-label': 'super reaction tooltip upsell',
                                             children: $.Z.Messages.SUPER_REACTION_TOOLTIP_UPSELL
                                         }),
-                                        (0, a.jsx)(L.Z, {
+                                        (0, a.jsx)(b.Z, {
                                             subscriptionTier: X.Si.TIER_2,
                                             buttonText: $.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
                                             className: en.burstReactionTooltipUpsellCta,
@@ -629,8 +629,8 @@ let e_ = o.memo((e) => {
             [N, R] = o.useState(!1),
             C = null != u,
             y = null !== (t = null == c ? void 0 : c.isDiscoverable()) && void 0 !== t && t,
-            b = k.Z.getGuildId(),
-            L = null != b && (b === (null == c ? void 0 : c.id) || b === (null == u ? void 0 : u.id)),
+            L = k.Z.getGuildId(),
+            b = null != L && (L === (null == c ? void 0 : c.id) || L === (null == u ? void 0 : u.id)),
             D = B.default.getCurrentUser(),
             M = (0, j.a)({
                 sourceType: p,
@@ -638,7 +638,7 @@ let e_ = o.memo((e) => {
                 isPremium: V.ZP.isPremium(D),
                 hasJoinedEmojiSourceGuild: C,
                 isDiscoverable: y,
-                emojiComesFromCurrentGuild: L,
+                emojiComesFromCurrentGuild: b,
                 isUnusableRoleSubscriptionEmoji: !1,
                 userIsRoleSubscriber: !1,
                 isRoleSubscriptionEmoji: !1,
@@ -714,7 +714,7 @@ let e_ = o.memo((e) => {
                           hasJoinedExpressionSourceGuild: C,
                           onClose: i,
                           popoutData: M,
-                          currentGuildId: b,
+                          currentGuildId: L,
                           nonce: s
                       })
             ]

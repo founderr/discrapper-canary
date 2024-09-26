@@ -54,7 +54,7 @@ function O(e) {
     return (0, i.jsx)(l.animated.div, {
         ref: r,
         style: f,
-        children: (0, i.jsx)(b, { ...e })
+        children: (0, i.jsx)(L, { ...e })
     });
 }
 let R = a.memo(O);
@@ -96,7 +96,7 @@ function y(e) {
                 mentionCount: t.mentionCount,
                 toggleCollapsed: o,
                 channelState: t,
-                children: [(0, i.jsx)(I.Z, { channel: s }), (0, i.jsx)(L, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(D, { ...e })]
+                children: [(0, i.jsx)(I.Z, { channel: s }), (0, i.jsx)(b, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(D, { ...e })]
             }),
             children: t.collapsed
                 ? null
@@ -117,8 +117,8 @@ function y(e) {
     });
 }
 t.Z = R;
-let b = a.memo(y);
-function L(e) {
+let L = a.memo(y);
+function b(e) {
     let { channel: t, markChannelRead: n, markGuildRead: r, getNumUnreadChannels: a } = e,
         o = (0, f.Z)() && null != t.guildId;
     function s() {

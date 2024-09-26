@@ -38,8 +38,8 @@ function R(e, t, n) {
 }
 let C = v.kod,
     y = {},
-    b = new Set(),
-    L = 0;
+    L = new Set(),
+    b = 0;
 function D(e) {
     var t;
     let n = y[null != e ? e : C];
@@ -59,7 +59,7 @@ function M(e) {
 }
 function P(e) {
     let t = M(e);
-    t.sentinel++, L++;
+    t.sentinel++, b++;
 }
 function U(e, t, n) {
     return null != e.guild_id && n && !((0, _.Q5)(e.type) || S.ZP.isChannelRecordOrParentOptedIn(e)) && 0 === t;
@@ -103,7 +103,7 @@ function H() {
     if (null != e) return I.ZP.getNotifCenterReadState(e.id);
 }
 function Y(e, t, n) {
-    return Z(t), (t.mentionCount = s()(t.mentionCounts).values().sum()), (t.unread !== n.unread || t.mentionCount !== n.mentionCount) && ((y[null != e ? e : C] = t), null != e && (t.unread ? b.add(e) : b.delete(e)), L++, P(null != e ? e : C), V(t, n), !0);
+    return Z(t), (t.mentionCount = s()(t.mentionCounts).values().sum()), (t.unread !== n.unread || t.mentionCount !== n.mentionCount) && ((y[null != e ? e : C] = t), null != e && (t.unread ? L.add(e) : L.delete(e)), b++, P(null != e ? e : C), V(t, n), !0);
 }
 function j(e, t) {
     let n = k(e),
@@ -126,7 +126,7 @@ function j(e, t) {
     ) {
         let e = h.Z.getChannel(r.unreadChannelId);
         if (!(null != e && !t.includes(e.id) && I.ZP.hasUnread(e.id) && w(e))) return K(n);
-        null != n && b.add(n), (i.unreadByType[O.W.CHANNEL] = !0);
+        null != n && L.add(n), (i.unreadByType[O.W.CHANNEL] = !0);
     }
     return Y(n, i, r);
 }
@@ -174,11 +174,11 @@ function K(e, t) {
     }
     Z(r);
     let i = M(n);
-    return (r.unread !== i.unread || r.mentionCount !== i.mentionCount) && ((y[null != n ? n : C] = r), null != n && (r.unread ? b.add(n) : b.delete(n)), L++, P(null != n ? n : C), V(r, i), !0);
+    return (r.unread !== i.unread || r.mentionCount !== i.mentionCount) && ((y[null != n ? n : C] = r), null != n && (r.unread ? L.add(n) : L.delete(n)), b++, P(null != n ? n : C), V(r, i), !0);
 }
 function z(e) {
     let { guilds: t } = e;
-    (y = {}), (L = 0), (b = new Set()), K(null);
+    (y = {}), (b = 0), (L = new Set()), K(null);
     let { length: n } = t;
     for (let e = 0; e < n; e++) {
         let n = t[e];
@@ -187,7 +187,7 @@ function z(e) {
 }
 function q(e) {
     let { guilds: t, readState: n } = e;
-    (y = {}), (L = 0), (b = new Set());
+    (y = {}), (b = 0), (L = new Set());
     let r = n.entries.length < 500,
         i = new Set();
     for (let e of (r &&
@@ -204,7 +204,7 @@ function q(e) {
         K(e.id, r ? i.has(e.id) : void 0);
 }
 function Q() {
-    for (let e of ((y = {}), (b = new Set()), K(null), Object.values(p.Z.getGuildIds()))) K(e);
+    for (let e of ((y = {}), (L = new Set()), K(null), Object.values(p.Z.getGuildIds()))) K(e);
 }
 function X(e) {
     let { guild: t } = e;
@@ -212,7 +212,7 @@ function X(e) {
 }
 function $(e) {
     let { guild: t } = e;
-    return null != y[t.id] && (delete y[t.id], b.delete(t.id), L++, !0);
+    return null != y[t.id] && (delete y[t.id], L.delete(t.id), b++, !0);
 }
 function J(e) {
     let {
@@ -348,31 +348,31 @@ class eS extends g.Z {
     }
     loadCache() {
         let e = this.readSnapshot(eS.LATEST_SNAPSHOT_VERSION);
-        null != e && ((y = e.guilds), (b = new Set(e.unreadGuilds)));
+        null != e && ((y = e.guilds), (L = new Set(e.unreadGuilds)));
     }
     takeSnapshot() {
         return {
             version: eS.LATEST_SNAPSHOT_VERSION,
             data: {
                 guilds: y,
-                unreadGuilds: Array.from(b)
+                unreadGuilds: Array.from(L)
             }
         };
     }
     hasAnyUnread() {
-        return b.size > 0;
+        return L.size > 0;
     }
     getStoreChangeSentinel() {
-        return L;
+        return b;
     }
     getMutableUnreadGuilds() {
-        return b;
+        return L;
     }
     getMutableGuildStates() {
         return y;
     }
     hasUnread(e) {
-        return b.has(e);
+        return L.has(e);
     }
     getMentionCount(e) {
         return M(e).mentionCount;

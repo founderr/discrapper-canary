@@ -32,8 +32,8 @@ var o = n(735250),
     R = n(197115),
     C = n(727939),
     y = n(981631),
-    b = n(921944),
-    L = n(474936),
+    L = n(921944),
+    b = n(474936),
     D = n(689938),
     M = n(556120);
 function P() {
@@ -128,7 +128,7 @@ function w(e) {
                     r &&
                         (0, o.jsx)(R.Z, {
                             className: M.footerButton,
-                            subscriptionTier: L.Si.TIER_2,
+                            subscriptionTier: b.Si.TIER_2,
                             showGradient: !0,
                             fullWidth: !0,
                             buttonText: D.Z.Messages.PREMIUM_UPSELL_GET_NITRO
@@ -163,7 +163,7 @@ function x(e) {
         }, [l, u, E]),
         I = (0, f.Z)(null, c ? h : y.dG4),
         T = s.useCallback(() => {
-            (0, p.G8)(), (0, g.Mo)(), h(), null == n || n(b.L.DISMISS);
+            (0, p.G8)(), (0, g.Mo)(), h(), null == n || n(L.L.DISMISS);
         }, [h, n]);
     return (0, o.jsx)(C.Z, {
         className: M.draggableContainer,

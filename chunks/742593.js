@@ -37,14 +37,14 @@ function g(e) {
         C = (0, c.Z)(A, g.id),
         y = (null == N ? void 0 : N.scheduled_start_time) != null ? (0, f.lh)(C, R, new Date(N.scheduled_start_time)) : null;
     if (null == N) return null;
-    let { entity_type: b, status: L, recurrence_rule: D } = N;
+    let { entity_type: L, status: b, recurrence_rule: D } = N;
     return (0, r.jsxs)('div', {
         className: a()(T.statusContainer, t),
         children: [
             (0, r.jsx)(m.z, {
                 startTime: R.toISOString(),
-                status: null != y ? y : L,
-                eventType: b,
+                status: null != y ? y : b,
+                eventType: L,
                 isNew: h,
                 recurrenceRule: (0, E.KV)(D),
                 guildEventId: g.id,

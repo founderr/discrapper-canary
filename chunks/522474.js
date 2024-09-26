@@ -36,8 +36,8 @@ let O = {},
     R = {},
     C = {},
     y = {},
-    b = {},
-    L = new Set(),
+    L = {},
+    b = new Set(),
     D = 'app-mount',
     M = () => X.emitChange(),
     P = h().debounce(M, 150),
@@ -70,7 +70,7 @@ function G(e) {
     let t = C[e];
     E()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', M), t.removeEventListener('blur', M), t.removeEventListener('resize', P);
     let n = y[e];
-    E()(null != n, 'Window root was null while unmounting'), n.unmount(), delete C[e], delete R[e], delete b[e], delete y[e];
+    E()(null != n, 'Window root was null while unmounting'), n.unmount(), delete C[e], delete R[e], delete L[e], delete y[e];
 }
 function k(e, t, r) {
     let i = e.document,
@@ -89,7 +89,7 @@ function B(e, t) {
 }
 function F(e) {
     let t = C[e],
-        n = b[e];
+        n = L[e];
     if (null == t) {
         new T.Z('PopoutWindowStore').warn('Failed to open window', e);
         return;
@@ -128,10 +128,10 @@ function V(e) {
             });
     }
     let _ = window.open(v.Z5c.POPOUT_WINDOW, t, Z(u));
-    (_.windowKey = t), null == _ || _.focus(), (C[t] = _), (b[t] = r), g.isPlatformEmbedded && (S.ZP.setAlwaysOnTop(t, c), (R[t] = c), S.ZP.isAlwaysOnTop(t).then((e) => (R[t] = e))), L.add(t);
+    (_.windowKey = t), null == _ || _.focus(), (C[t] = _), (L[t] = r), g.isPlatformEmbedded && (S.ZP.setAlwaysOnTop(t, c), (R[t] = c), S.ZP.isAlwaysOnTop(t).then((e) => (R[t] = e))), b.add(t);
 }
 function H(e) {
-    L.has(e) && (F(e), L.delete(e), X.emitChange());
+    b.has(e) && (F(e), b.delete(e), X.emitChange());
 }
 function Y(e) {
     let t = C[e];

@@ -24,8 +24,8 @@ var i = n(735250),
     R = n(283595),
     C = n(594174),
     y = n(509545),
-    b = n(55563),
-    L = n(199480),
+    L = n(55563),
+    b = n(199480),
     D = n(626135),
     M = n(669079),
     P = n(74538),
@@ -335,7 +335,7 @@ class Y extends a.Component {
                                 className: F.snow,
                                 wind: 5
                             }),
-                        r && (0, i.jsx)(L.Z, { className: F.headerIcon }),
+                        r && (0, i.jsx)(b.Z, { className: F.headerIcon }),
                         null != e.giftStyle &&
                             (0, i.jsx)(S.Z, {
                                 defaultAnimationState: e.redeemed ? T.SR.LOOP : T.SR.IDLE,
@@ -348,10 +348,10 @@ class Y extends a.Component {
     }
 }
 let j = (0, h.Z)((0, f.Z)(Y));
-t.Z = c.ZP.connectStores([O.Z, b.Z, C.default, R.Z, y.Z, N.default, p.Z], (e) => {
+t.Z = c.ZP.connectStores([O.Z, L.Z, C.default, R.Z, y.Z, N.default, p.Z], (e) => {
     let { code: t, author: n, currentUser: r } = e,
         i = O.Z.get(t),
-        a = null != i ? b.Z.get(i.skuId) : null,
+        a = null != i ? L.Z.get(i.skuId) : null,
         o = null != i && null != i.userId ? C.default.getUser(i.userId) : null,
         s = p.Z.useReducedMotion;
     return {

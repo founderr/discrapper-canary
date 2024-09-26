@@ -29,8 +29,8 @@ var a = n(913527),
     R = n(223606),
     C = n(160404),
     y = n(41776),
-    b = n(347649),
-    L = n(332473),
+    L = n(347649),
+    b = n(332473),
     D = n(514851),
     M = n(30684),
     P = n(616106),
@@ -83,8 +83,8 @@ var a = n(913527),
     eR = n(188785),
     eC = n(474936),
     ey = n(46140),
-    eb = n(231338),
-    eL = n(65154);
+    eL = n(231338),
+    eb = n(65154);
 function eD(e, t, n) {
     return (
         t in e
@@ -277,7 +277,7 @@ let ej = [eO.kVF.QUARANTINED, eO.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eO.kVF.VI
         [eO.kVF.VIDEO_UNSUPPORTED_BROWSER]: {
             predicate: (e) => {
                 let { voiceChannelId: t } = e;
-                return null != t && eE.Z.hasVideo(t) && !et.Z.supports(eL.AN.VIDEO) && !eY(eO.kVF.VIDEO_UNSUPPORTED_BROWSER);
+                return null != t && eE.Z.hasVideo(t) && !et.Z.supports(eb.AN.VIDEO) && !eY(eO.kVF.VIDEO_UNSUPPORTED_BROWSER);
             }
         },
         [eO.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK]: {
@@ -474,7 +474,7 @@ let ej = [eO.kVF.QUARANTINED, eO.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eO.kVF.VI
                 let { premiumSubscription: t, currentUser: n } = e,
                     r = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
                     i = null != t && null != t.paymentSourceId ? eh.Z.getPaymentSource(t.paymentSourceId) : null,
-                    a = null != i && eb.Uk.has(i.type),
+                    a = null != i && eL.Uk.has(i.type),
                     s = null != t && t.status === eO.O0b.PAST_DUE && !r && a && !n.hasFreePremium() && !t.isPurchasedExternally;
                 return !eY(eO.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT) && s;
             },
@@ -494,8 +494,8 @@ let ej = [eO.kVF.QUARANTINED, eO.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eO.kVF.VI
                 }
             }
         },
-        [eO.kVF.POMELO_ELIGIBLE]: { predicate: () => (0, L.e)() && !eY(eO.kVF.POMELO_ELIGIBLE) && !(0, b.ov)() },
-        [eO.kVF.UU_MIGRATION]: { predicate: () => (0, L.e)() && !eY(eO.kVF.UU_MIGRATION) && (0, b.ov)() },
+        [eO.kVF.POMELO_ELIGIBLE]: { predicate: () => (0, b.e)() && !eY(eO.kVF.POMELO_ELIGIBLE) && !(0, L.ov)() },
+        [eO.kVF.UU_MIGRATION]: { predicate: () => (0, b.e)() && !eY(eO.kVF.UU_MIGRATION) && (0, L.ov)() },
         [eO.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e,

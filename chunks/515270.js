@@ -64,7 +64,7 @@ function O(e) {
             a = null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine);
         (n = R(e, r, i, a, null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)), t.push(n);
     }
-    return b(t), t;
+    return L(t), t;
 }
 function R(e, t, n, r, i) {
     var a;
@@ -112,7 +112,7 @@ function y(e) {
           }
         : null;
 }
-function b(e) {
+function L(e) {
     let t = [],
         n = !1;
     for (let r of e) {
@@ -166,12 +166,12 @@ function b(e) {
         n && t.push(r), r.opensCodeBlock && (n = !0);
     }
 }
-let L = {
+let b = {
         max: 1 / 0,
         maxAge: 1 * c.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    D = new (u())(L);
+    D = new (u())(b);
 function M(e, t) {
     let n = ''.concat(e, '-').concat(t),
         r = D.get(n);

@@ -21,7 +21,7 @@ n.d(t, {
         return g;
     },
     O8: function () {
-        return b;
+        return L;
     },
     Pl: function () {
         return S;
@@ -63,7 +63,7 @@ n.d(t, {
         return f;
     },
     qH: function () {
-        return L;
+        return b;
     },
     tj: function () {
         return m;
@@ -128,8 +128,8 @@ let E = new _(r.q.ANIMATED_EMOJIS),
     R = new _('boostDiscount'),
     C = new _('freeBoosts'),
     y = new _(r.q.STREAM_MID_QUALITY),
-    b = new _(r.q.STREAM_HIGH_QUALITY),
-    L = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
+    L = new _(r.q.STREAM_HIGH_QUALITY),
+    b = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
     D = new _('fancyVoiceChannelReactions'),
     M = new _('installPremiumApplications'),
     P = new _('redeemPremiumPerks'),
@@ -142,7 +142,7 @@ let w = new _(r.q.INCREASED_GUILD_LIMIT),
     B = Object.freeze({
         [l.Si.TIER_0]: new s.Z(l.Si.TIER_0, [E, f, h, S, U, G, k, N]),
         [l.Si.TIER_1]: new s.Z(l.Si.TIER_1, [E, f, I, T, S, R, y, D, G, k, N]),
-        [l.Si.TIER_2]: new s.Z(l.Si.TIER_2, [E, f, h, p, m, I, T, g, S, A, O, R, C, y, b, D, M, P, U, w, x, G, k, N, v, L])
+        [l.Si.TIER_2]: new s.Z(l.Si.TIER_2, [E, f, h, p, m, I, T, g, S, A, O, R, C, y, L, D, M, P, U, w, x, G, k, N, v, b])
     });
 function F(e, t) {
     return e.getFeatureValue(t);

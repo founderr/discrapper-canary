@@ -59,7 +59,7 @@ function C(e) {
     return (
         0 !== n.length &&
         (n.forEach((e) => {
-            !I.includes(e) && !g.includes(e) && (L({ code: e }), u.Z.wait(() => c.Z.resolveGiftCode(e, !1, !0).catch(E.VqG)));
+            !I.includes(e) && !g.includes(e) && (b({ code: e }), u.Z.wait(() => c.Z.resolveGiftCode(e, !1, !0).catch(E.VqG)));
         }),
         !1)
     );
@@ -67,11 +67,11 @@ function C(e) {
 function y() {
     return N.clear(), !1;
 }
-function b(e) {
+function L(e) {
     let { channelId: t } = e;
     return null != t && N.add(t), !1;
 }
-function L(e) {
+function b(e) {
     let { code: t } = e;
     !I.includes(t) && (I = [...I, t]);
 }
@@ -214,8 +214,8 @@ class q extends (r = s.ZP.Store) {
 f(q, 'displayName', 'GiftCodeStore');
 let Q = new q(u.Z, {
     CONNECTION_OPEN: y,
-    CHANNEL_SELECT: b,
-    GIFT_CODE_RESOLVE: L,
+    CHANNEL_SELECT: L,
+    GIFT_CODE_RESOLVE: b,
     GIFT_CODE_RESOLVE_SUCCESS: D,
     GIFT_CODE_RESOLVE_FAILURE: M,
     GIFT_CODE_REDEEM: U,

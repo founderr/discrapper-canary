@@ -37,8 +37,8 @@ function R(e) {
 function C(e) {
     var t, n, r, o, s, l, d;
     let _,
-        { option: E, channel: v, guild: y, messageId: b, parentOptionKey: L, commandOptionSpec: D, sourceAnalyticsLocations: M } = e,
-        P = null != L ? L + ' ' + E.name : E.name;
+        { option: E, channel: v, guild: y, messageId: L, parentOptionKey: b, commandOptionSpec: D, sourceAnalyticsLocations: M } = e,
+        P = null != b ? b + ' ' + E.name : E.name;
     if (E.type === c.jw.SUB_COMMAND || E.type === c.jw.SUB_COMMAND_GROUP) {
         let e = [
                 (0, i.jsxs)(
@@ -62,7 +62,7 @@ function C(e) {
                     option: t,
                     channel: v,
                     guild: y,
-                    messageId: b,
+                    messageId: L,
                     parentOptionKey: P,
                     commandOptionSpec: s[t.name],
                     sourceAnalyticsLocations: M
@@ -85,7 +85,7 @@ function C(e) {
                                 userId: t.id,
                                 guildId: v.guild_id,
                                 channelId: v.id,
-                                messageId: b,
+                                messageId: L,
                                 sourceAnalyticsLocations: M,
                                 analyticsLocation: { section: g.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                             }),

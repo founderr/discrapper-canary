@@ -47,8 +47,8 @@ var i = n(735250),
     R = n(937889),
     C = n(443877),
     y = n(524444),
-    b = n(287151),
-    L = n(267128),
+    L = n(287151),
+    b = n(267128),
     D = n(695346),
     M = n(433355),
     P = n(592125),
@@ -121,7 +121,7 @@ t.ZP = a.memo(function (e) {
             channel: c
         }),
         { role: O, onFocus: R, ...C } = (0, _.JA)(t),
-        { isFocused: y, handleFocus: b, handleBlur: L } = (0, K.Z)(R);
+        { isFocused: y, handleFocus: L, handleBlur: b } = (0, K.Z)(R);
     return (0, i.jsxs)('div', {
         ref: T,
         'data-item-id': t,
@@ -138,8 +138,8 @@ t.ZP = a.memo(function (e) {
                     count: E
                 }),
                 className: J.focusTarget,
-                onFocus: b,
-                onBlur: L,
+                onFocus: L,
+                onBlur: b,
                 ...C
             }),
             (0, i.jsxs)('div', {
@@ -269,7 +269,7 @@ function es(e) {
                       contentPlaceholder: null,
                       renderedContent: null
                   }
-                : (0, L.f)(t, r, l, s()(J.messageContent, ee.inlineFormat, ee.__invalid_smallFontSize), {
+                : (0, b.f)(t, r, l, s()(J.messageContent, ee.inlineFormat, ee.__invalid_smallFontSize), {
                       leadingIconClass: J.messageContentLeadingIcon,
                       trailingIconClass: J.messageContentTrailingIcon,
                       iconSize: X.WW
@@ -407,7 +407,7 @@ function ed(e) {
         { disableReactionCreates: o, isLurking: s, isPendingMember: l } = (0, C.Z)(n);
     return null == a || o
         ? null
-        : (0, i.jsx)(b.le, {
+        : (0, i.jsx)(L.le, {
               className: J.updateReactionButton,
               message: t,
               readOnly: n.isArchivedLockedThread(),
@@ -432,7 +432,7 @@ function e_(e) {
     return null == a
         ? null
         : (0, i.jsx)(
-              b.le,
+              L.le,
               {
                   className: J.updateReactionButton,
                   message: n,

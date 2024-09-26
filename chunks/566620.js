@@ -62,8 +62,8 @@ var o = n(990547),
     R = n(973616),
     C = n(314897),
     y = n(592125),
-    b = n(430824),
-    L = n(496675),
+    L = n(430824),
+    b = n(496675),
     D = n(594174),
     M = n(979651),
     P = n(585483),
@@ -96,15 +96,15 @@ function X(e, t) {
 }
 async function $(e) {
     var t, n;
-    let { channelId: r, applicationId: i, isStart: a, analyticsLocations: o, locationObject: s, embeddedActivitiesManager: u, componentId: c, commandOrigin: d, sectionName: _, source: E, partyId: S, forceCheckAuth: O = !1 } = e,
-        R = y.Z.getChannel(r),
-        C = null !== (t = null == R ? void 0 : R.getGuildId()) && void 0 !== t ? t : void 0;
-    if (null == C && !(null !== (n = null == R ? void 0 : R.isPrivate()) && void 0 !== n && n)) return !1;
-    let L = (0, N.r)();
+    let { channelId: r, applicationId: i, isStart: a, analyticsLocations: o, locationObject: s, embeddedActivitiesManager: u, componentId: c, commandOrigin: d, sectionName: _, source: E, partyId: S } = e,
+        O = y.Z.getChannel(r),
+        R = null !== (t = null == O ? void 0 : O.getGuildId()) && void 0 !== t ? t : void 0;
+    if (null == R && !(null !== (n = null == O ? void 0 : O.isPrivate()) && void 0 !== n && n)) return !1;
+    let C = (0, N.r)();
     try {
         l.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
-            nonce: L,
+            nonce: C,
             applicationId: i,
             channelId: r,
             componentId: c,
@@ -117,9 +117,9 @@ async function $(e) {
                 (0, j.Z)({
                     type: a ? K.q5t.LAUNCH : K.q5t.JOIN,
                     userId: null == e ? void 0 : e.id,
-                    guildId: C,
+                    guildId: R,
                     channelId: r,
-                    channelType: null == R ? void 0 : R.type,
+                    channelType: null == O ? void 0 : O.type,
                     applicationId: i,
                     locationObject: s,
                     analyticsLocations: null != o ? o : [],
@@ -136,14 +136,14 @@ async function $(e) {
                         if (e.message === T.sV) return !1;
                         throw e;
                     }
-                    if (O || e.handler === h.VC.APP_HANDLER) {
+                    if (e.handler === h.VC.APP_HANDLER) {
                         let e =
-                                null != C
+                                null != R
                                     ? await (0, m.FN)({
                                           type: 'guild',
-                                          guildId: C
+                                          guildId: R
                                       })
-                                    : m.ZP.getGuildState(C),
+                                    : m.ZP.getGuildState(R),
                             t = await (0, m.FN)({ type: 'user' });
                         if (
                             !(await (0, p.L)({
@@ -155,7 +155,7 @@ async function $(e) {
                             return !1;
                     }
                     let t = y.Z.getChannel(r),
-                        n = null != C ? b.Z.getGuild(C) : null;
+                        n = null != R ? L.Z.getGuild(R) : null;
                     return (
                         null != t &&
                         (await new Promise((r, i) => {
@@ -170,7 +170,7 @@ async function $(e) {
                                 sectionName: _,
                                 source: E,
                                 interactionLifecycleOptionsFactory: () => ({
-                                    nonce: L,
+                                    nonce: C,
                                     onSuccess: () => r(),
                                     onFailure: (e, t, n, r) => {
                                         null != e && null != t && null != n
@@ -194,10 +194,10 @@ async function $(e) {
                     );
                 },
                 t = z.Yq.includes(i),
-                n = (null == R ? void 0 : R.type) === K.d4z.GUILD_VOICE,
+                n = (null == O ? void 0 : O.type) === K.d4z.GUILD_VOICE,
                 a = g.Z.getApplication(i),
                 o = null != a && (0, U.yE)(a.flags, K.udG.EMBEDDED),
-                s = (0, G.l5)(R);
+                s = (0, G.l5)(O);
             if (t) {
                 if (!(await e())) throw Error();
             } else if (n) {
@@ -211,13 +211,13 @@ async function $(e) {
                 channelId: r,
                 embeddedActivitiesManager: u,
                 isStart: a,
-                guildId: C
+                guildId: R
             }))
         )
             throw new A.Z(A.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
         l.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
-            nonce: L,
+            nonce: C,
             applicationId: i,
             channelId: r
         });
@@ -225,8 +225,8 @@ async function $(e) {
         return (
             l.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
-                nonce: L,
-                guildId: C,
+                nonce: C,
+                guildId: R,
                 applicationId: i,
                 channelId: r,
                 isStart: a,
@@ -253,8 +253,8 @@ async function J(e) {
             ? (0, V.e4)({
                   channelId: r,
                   ChannelStore: y.Z,
-                  GuildStore: b.Z,
-                  PermissionStore: L.Z,
+                  GuildStore: L.Z,
+                  PermissionStore: b.Z,
                   VoiceStateStore: M.Z
               })
             : V.jy.NO_CHANNEL;

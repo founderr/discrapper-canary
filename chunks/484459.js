@@ -21,14 +21,14 @@ async function E(e, t) {
         C = Date.now() - (null !== (h = null == R ? void 0 : R.lastFetched) && void 0 !== h ? h : 0) >= _;
     if (((null == R ? void 0 : null === (n = R.fetchError) || void 0 === n ? void 0 : n.status) === 404 || (null == R ? void 0 : null === (E = R.fetchError) || void 0 === E ? void 0 : E.status) === 429) && !C) return;
     let y = c.Z.getGuildMemberProfile(e, A),
-        b = c.Z.getMutualGuilds(e),
-        L = c.Z.getMutualFriends(e),
+        L = c.Z.getMutualGuilds(e),
+        b = c.Z.getMutualFriends(e),
         D = c.Z.getMutualFriendsCount(e);
     p = p || null != A;
-    let M = null == L && I,
+    let M = null == b && I,
         P = null == D && m,
         U = null != A && null == y;
-    if (!(null == b && p) && !M && !P && !U && !C) return;
+    if (!(null == L && p) && !M && !P && !U && !C) return;
     (0, s.z)(), null != t && (0, a.vM)(t);
     let w = {
             withMutualGuilds: p,

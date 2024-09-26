@@ -19,13 +19,13 @@ n.d(t, {
         return A;
     },
     eH: function () {
-        return L;
+        return b;
     },
     m1: function () {
         return R;
     },
     op: function () {
-        return b;
+        return L;
     },
     s1: function () {
         return v;
@@ -130,9 +130,9 @@ function C(e) {
 function y() {
     return h;
 }
-function b() {
+function L() {
     m() && ((i = null), r.goBack());
 }
-function L() {
+function b() {
     m() && ((i = null), r.goForward());
 }

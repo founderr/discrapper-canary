@@ -55,7 +55,7 @@ function y(e, t) {
         r = m.default.extractTimestamp(e) % n.length;
     return n[r];
 }
-function b(e) {
+function L(e) {
     return (0, i.Rp)(
         T.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED.astFormat({
             username: e,
@@ -63,10 +63,10 @@ function b(e) {
         })
     );
 }
-function L(e, t) {
+function b(e, t) {
     let n = E.Z.getChannel(t);
     return null == n || null == f.Z.getGuild(n.getGuildId())
-        ? b(e)
+        ? L(e)
         : (0, i.Rp)(
               T.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED.astFormat({
                   username: e,
@@ -192,11 +192,11 @@ function w(e, t) {
                 })
             );
         case I.uaV.GUILD_BOOST:
-            return b(A);
+            return L(A);
         case I.uaV.GUILD_BOOST_TIER_1:
         case I.uaV.GUILD_BOOST_TIER_2:
         case I.uaV.GUILD_BOOST_TIER_3:
-            return L(A, S);
+            return b(A, S);
         case I.uaV.GUILD_INVITE_REMINDER:
             return T.Z.Messages.SYSTEM_MESSAGE_INVITE_NOTIFICATION;
         case I.uaV.THREAD_STARTER_MESSAGE:

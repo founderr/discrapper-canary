@@ -9,10 +9,10 @@ n.d(t, {
         return M;
     },
     hz: function () {
-        return b;
+        return L;
     },
     mz: function () {
-        return L;
+        return b;
     },
     ol: function () {
         return D;
@@ -70,8 +70,8 @@ function R(e) {
             },
             'animate-always'
         ),
-        b = a.useRef(null),
-        L = null != v['aria-label'],
+        L = a.useRef(null),
+        b = null != v['aria-label'],
         D = null != v['aria-labelledby'],
         M = a.useId(),
         P = null !== (t = v['aria-labelledby']) && void 0 !== t ? t : M,
@@ -89,17 +89,17 @@ function R(e) {
             role: E,
             returnRef: g,
             impressionType: u.ImpressionTypes.MODAL,
-            'aria-labelledby': L ? void 0 : U.headerId,
+            'aria-labelledby': b ? void 0 : U.headerId,
             ...v,
             children: (0, i.jsx)(l.animated.div, {
                 className: s()(p, N.root, O[o], {
                     [N.fullscreenOnMobile]: m,
                     [N.rootWithShadow]: !I
                 }),
-                ref: b,
+                ref: L,
                 style: y,
                 children: (0, i.jsx)(h.J, {
-                    containerRef: b,
+                    containerRef: L,
                     children: r
                 })
             })
@@ -131,7 +131,7 @@ function y(e) {
             return I.h2;
     }
 }
-function b(e) {
+function L(e) {
     let { className: t, children: n, scrollerRef: r, scrollbarType: a, ...o } = e,
         l = y(a);
     return (0, i.jsx)(l, {
@@ -141,7 +141,7 @@ function b(e) {
         children: (0, i.jsx)(T.HeadingLevel, { children: n })
     });
 }
-function L(e) {
+function b(e) {
     var t, n, r, a, o;
     return (0, i.jsx)(g.Z, {
         grow: 0,

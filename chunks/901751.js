@@ -41,7 +41,7 @@ let N = 1 * f.Z.Millis.MINUTE,
             channelId: e,
             ownerId: '1'
         });
-function b() {
+function L() {
     let e = c.Z.getStreamerActiveStreamMetadata();
     if ((null == e ? void 0 : e.id) == null) return null;
     let t = _.Z.getDetectableGame(e.id);
@@ -49,7 +49,7 @@ function b() {
     let n = (0, m.lQ)(p.Z.quests, t.id);
     return null != n && D(n) ? n : null;
 }
-function L(e) {
+function b(e) {
     return E.ZP.countVoiceStatesForChannel(e) >= O;
 }
 function D(e) {
@@ -59,10 +59,10 @@ function M(e) {
     var t;
     let { questId: n, streamKey: r, applicationId: i } = e,
         { channelId: a } = (0, u.my)(r),
-        o = L(a),
+        o = b(a),
         s = p.Z.quests.get(n);
     if (null == s || !D(s)) return 'STOP';
-    let d = null === (t = b()) || void 0 === t ? void 0 : t.config,
+    let d = null === (t = L()) || void 0 === t ? void 0 : t.config,
         _ = null != c.Z.getRTCStream(r) && null != d && g.r.build(d).application.id === i && o,
         { quest: E, activity: f } = P(),
         h = null != (null == E ? void 0 : E.config) && (null == E ? void 0 : E.id) === n && (0, m.UZ)(i, E) && (null == f ? void 0 : f.channelId) === a,
@@ -188,7 +188,7 @@ class w extends o.Z {
                         enrolledQuestUserStatus: { questId: t }
                     } = e,
                     n = c.Z.getCurrentUserActiveStream(),
-                    r = b();
+                    r = L();
                 if (null != n && null != r && r.id === t && D(r)) {
                     C.log('handleEnrollmentSuccess - initiating heartbeat for stream'),
                         this.initiateHeartbeat({
@@ -297,7 +297,7 @@ class w extends o.Z {
             }),
             v(this, 'handleVoiceStateChange', () => {
                 let e = c.Z.getCurrentUserActiveStream(),
-                    t = b();
+                    t = L();
                 null != e &&
                     this._handleVoiceStateChange({
                         streamKey: (0, u.V9)(e),
@@ -307,8 +307,8 @@ class w extends o.Z {
             }),
             v(this, '_handleVoiceStateChange', (e) => {
                 let { streamKey: t, channelId: n, quest: r } = e,
-                    i = null == r || !L(n),
-                    a = L(n) && !this.streamKeyToHeartbeatState.has(t) && null != r && D(r) && !(0, m.$H)(r);
+                    i = null == r || !b(n),
+                    a = b(n) && !this.streamKeyToHeartbeatState.has(t) && null != r && D(r) && !(0, m.$H)(r);
                 i
                     ? (C.log('handleVoiceStateChange - calling terminateHeartbeat for streamKey '.concat(t)),
                       this.terminateHeartbeat({
@@ -346,7 +346,7 @@ class w extends o.Z {
                 let { streamKey: t } = e,
                     { channelId: n, ownerId: r } = (0, u.my)(t);
                 if (r !== d.default.getId()) return;
-                let i = b();
+                let i = L();
                 if (null == i) {
                     C.log('handleStreamCreate - calling terminateHeartbeat for streamKey '.concat(t)),
                         this.terminateHeartbeat({
@@ -355,7 +355,7 @@ class w extends o.Z {
                         });
                     return;
                 }
-                L(n) &&
+                b(n) &&
                     D(i) &&
                     !(0, m.$H)(i) &&
                     !this.streamKeyToHeartbeatState.has(t) &&
@@ -368,7 +368,7 @@ class w extends o.Z {
             }),
             v(this, 'handleStreamStart', (e) => {
                 let { streamType: t, guildId: n, channelId: r } = e,
-                    i = b(),
+                    i = L(),
                     a = (0, u.V9)({
                         streamType: t,
                         guildId: n,
@@ -381,7 +381,7 @@ class w extends o.Z {
                           streamKey: a,
                           sendTerminalHeartbeat: !0
                       }))
-                    : L(r) &&
+                    : b(r) &&
                       D(i) &&
                       !(0, m.$H)(i) &&
                       !this.streamKeyToHeartbeatState.has(a) &&

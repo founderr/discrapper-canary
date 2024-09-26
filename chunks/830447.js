@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return b;
+        return L;
     },
     v: function () {
         return y;
@@ -347,15 +347,15 @@ function y(e) {
     u.useEffect(() => {
         y.isUsingKeyboardNavigation ? !T.Z.keyboardModeEnabled && (0, I.Qj)() : T.Z.keyboardModeEnabled && (0, I.rf)();
     }, [y.isUsingKeyboardNavigation]);
-    let b = u.useRef(null);
-    (0, h.T)(b);
+    let L = u.useRef(null);
+    (0, h.T)(L);
     let D = i ? p.u2 : p.zJ;
     return (0, l.jsx)(S.r.Provider, {
         value: c,
         children: (0, l.jsx)('div', {
             className: d()(v.menu, v[r], a),
             ...y.getContainerProps(),
-            ref: b,
+            ref: L,
             'aria-label': e['aria-label'],
             children: (0, l.jsxs)(D, {
                 className: v.scroller,
@@ -363,7 +363,7 @@ function y(e) {
                     0 === _.length &&
                         (0, l.jsx)(A.ck, {
                             disabled: !0,
-                            label: () => (0, l.jsx)(L, {}),
+                            label: () => (0, l.jsx)(b, {}),
                             menuItemProps: y.getItemProps({ path: ['empty'] }),
                             isFocused: !1,
                             onFocus: () => {},
@@ -375,13 +375,13 @@ function y(e) {
         })
     });
 }
-function b() {
+function L() {
     return (0, l.jsx)('div', {
         className: d()(v.menu, v.loader, v.flexible),
         children: (0, l.jsx)(m.$, {})
     });
 }
-function L() {
+function b() {
     let e = '\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A',
         t = '\u266B \u2282(\uFF61\u25D5‿‿\u25D5\uFF61\u2282) \u266A',
         [n, r] = u.useState(e);

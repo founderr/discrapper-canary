@@ -47,7 +47,7 @@ let S = 3,
                 size: A,
                 onlyAnimateOnHover: !C
             }),
-            b = () =>
+            L = () =>
                 o === m.$0.PURCHASE || (o === m.$0.PREMIUM_PURCHASE && v)
                     ? null
                     : S
@@ -92,7 +92,7 @@ let S = 3,
                     src: y,
                     alt: n.label
                 }),
-                b()
+                L()
             ]
         });
     },

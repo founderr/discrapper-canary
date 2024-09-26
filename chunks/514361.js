@@ -35,7 +35,7 @@ function O(e, t, n) {
 let R = !1,
     C = !0,
     y = !1,
-    b = (e) => {
+    L = (e) => {
         let { presetId: t } = e;
         if (null == t) {
             r = void 0;
@@ -43,7 +43,7 @@ let R = !1,
         }
         r = v.qt[t];
     },
-    L = (e) => {
+    b = (e) => {
         let { mobileThemesIndex: t } = e;
         if (null == t) {
             i = void 0;
@@ -138,8 +138,8 @@ class Z extends (a = s.ZP.PersistedStore) {
 O(Z, 'displayName', 'ClientThemesBackgroundStore'),
     O(Z, 'persistKey', 'ClientThemesBackgroundStore'),
     (t.Z = new Z(u.Z, {
-        UPDATE_BACKGROUND_GRADIENT_PRESET: b,
-        UPDATE_MOBILE_PENDING_THEME_INDEX: L,
+        UPDATE_BACKGROUND_GRADIENT_PRESET: L,
+        UPDATE_MOBILE_PENDING_THEME_INDEX: b,
         CLIENT_THEMES_EDITOR_OPEN: D,
         CLIENT_THEMES_EDITOR_CLOSE: M,
         RESET_PREVIEW_CLIENT_THEME: P,

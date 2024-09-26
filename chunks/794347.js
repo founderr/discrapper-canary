@@ -8,13 +8,13 @@ var s,
     a = n(735250),
     r = n(470079),
     i = n(120356),
-    o = n.n(i),
-    l = n(692547),
+    l = n.n(i),
+    o = n(692547),
     c = n(477690),
     d = n(162168),
     _ = n(624138),
-    u = n(229684);
-function E(e, t, n) {
+    E = n(229684);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,8 +29,8 @@ function E(e, t, n) {
 }
 let T = (0, _.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
     I = Object.freeze({
-        BLACK: u.black,
-        GRAY: u.gray
+        BLACK: E.black,
+        GRAY: E.gray
     });
 class R extends (s = r.Component) {
     componentDidMount() {
@@ -61,20 +61,20 @@ class R extends (s = r.Component) {
         let { className: e, notchBackground: t } = this.props,
             { barWidth: n } = this.state;
         return (0, a.jsx)('div', {
-            className: u.wrapper,
+            className: E.wrapper,
             ref: this.sizerRef,
             children: (0, a.jsxs)('div', {
-                className: o()(u.container, e),
+                className: l()(E.container, e),
                 style: this.getGradientStyles(),
                 children: [
                     (0, a.jsx)('div', {
-                        className: u.progress,
+                        className: E.progress,
                         style: this.getProgressStyles()
                     }),
                     0 !== n &&
                         (0, a.jsx)(d.Z, {
                             width: n,
-                            className: o()(u.notches, t)
+                            className: l()(E.notches, t)
                         })
                 ]
             })
@@ -82,16 +82,16 @@ class R extends (s = r.Component) {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'state', { barWidth: 0 }),
-            E(this, 'sizerRef', r.createRef()),
-            E(this, 'computeBars', () => {
+            u(this, 'state', { barWidth: 0 }),
+            u(this, 'sizerRef', r.createRef()),
+            u(this, 'computeBars', () => {
                 let { current: e } = this.sizerRef;
                 this.setState({ barWidth: null != e ? this.roundToNearestStep(e.clientWidth) : 0 });
             });
     }
 }
-E(R, 'defaultProps', {
-    gradientStart: l.Z.unsafe_rawColors.YELLOW_260.css,
-    gradientEnd: l.Z.unsafe_rawColors.GREEN_360.css
+u(R, 'defaultProps', {
+    gradientStart: o.Z.unsafe_rawColors.YELLOW_260.css,
+    gradientEnd: o.Z.unsafe_rawColors.GREEN_360.css
 }),
     (t.Z = R);

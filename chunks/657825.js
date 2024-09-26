@@ -3,20 +3,20 @@ n(470079);
 var a = n(399606),
     r = n(481060),
     i = n(594174),
-    o = n(51144),
-    l = n(546791),
+    l = n(51144),
+    o = n(546791),
     c = n(198952),
     d = n(939941);
 t.Z = (e) => {
     let { userId: t, timestamp: n, timestampFormatter: _ } = e,
-        u = (0, a.e7)([i.default], () => i.default.getUser(t));
-    return void 0 === u
+        E = (0, a.e7)([i.default], () => i.default.getUser(t));
+    return void 0 === E
         ? null
         : (0, s.jsxs)('div', {
               className: d.container,
               children: [
                   (0, s.jsx)(c.r, {
-                      user: u,
+                      user: E,
                       avatarSize: r.AvatarSizes.SIZE_40
                   }),
                   (0, s.jsx)('div', {
@@ -25,12 +25,12 @@ t.Z = (e) => {
                           children: [
                               (0, s.jsx)(r.Text, {
                                   variant: 'text-md/semibold',
-                                  children: o.ZP.getName(u)
+                                  children: l.ZP.getName(E)
                               }),
                               (0, s.jsx)(r.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-muted',
-                                  children: (0, l.LI)(new Date(n).getTime(), _)
+                                  children: (0, o.LI)(new Date(n).getTime(), _)
                               })
                           ]
                       })

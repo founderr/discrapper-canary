@@ -46,7 +46,7 @@ let C = {
 function y(e, t) {
     for (let n of e) if (('number' == typeof n.emoji.id ? ''.concat(n.emoji.id) : n.emoji.id) === t) return n;
 }
-let b = (e) =>
+let L = (e) =>
     (0, a.EQ)(e)
         .with(
             {
@@ -95,7 +95,7 @@ let b = (e) =>
             () => 'notVoted'
         )
         .otherwise(() => 'normalVote');
-function L(e) {
+function b(e) {
     let { animateEmoji: t = !1, size: n = 48 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (null == e) return;
     let r = e.animated;
@@ -140,8 +140,8 @@ function M(e, t) {
     let v = p.size > 0,
         R = S.some((e) => !0 === e.me_vote),
         y = !I && R,
-        b = y || h || g,
-        L = l && A && (!R || I || b),
+        L = y || h || g,
+        b = l && A && (!R || I || L),
         M = null === (r = _.Z.getChannel(e.getChannelId())) || void 0 === r ? void 0 : null === (n = r.getGuildId) || void 0 === n ? void 0 : n.call(r),
         P = null != M ? E.ZP.getSelfMember(M) : null,
         U = (0, c.EY)(P),
@@ -149,9 +149,9 @@ function M(e, t) {
         x = !m && v && !y && l && !U && !w;
     return {
         poll: s,
-        canTapAnswers: L,
+        canTapAnswers: b,
         canRemoveVote: y && l && !h,
-        canShowVoteCounts: b,
+        canShowVoteCounts: L,
         canSubmitVote: x,
         expirationLabel: u,
         hasSelectedAnswer: v,
@@ -164,7 +164,7 @@ function M(e, t) {
         reactions: S,
         selectedAnswerIds: p,
         submitting: m,
-        tapShouldOpenVotersModal: b,
+        tapShouldOpenVotersModal: L,
         showResults: g
     };
 }
@@ -201,7 +201,7 @@ function P(e, t) {
                 d = Z.has(s),
                 _ = u >= K && 0 !== u,
                 f = x && null !== (r = null == l ? void 0 : l.me_vote) && void 0 !== r && r,
-                h = b({
+                h = L({
                     didSelfVote: f,
                     hasVoted: x,
                     isExpired: k,
@@ -213,7 +213,7 @@ function P(e, t) {
                 answerId: s,
                 pollMedia: {
                     text: e.poll_media.text,
-                    emoji: L(e.poll_media.emoji, { animateEmoji: i }),
+                    emoji: b(e.poll_media.emoji, { animateEmoji: i }),
                     stickerId: e.poll_media.sticker_id,
                     attachmentIds: e.poll_media.attachment_ids
                 },

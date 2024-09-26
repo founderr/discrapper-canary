@@ -20,21 +20,21 @@ var a = t(512722),
     I = t(906364),
     N = t(621853),
     A = t(271383),
-    m = t(594174),
-    C = t(74538),
+    C = t(594174),
+    m = t(74538),
     g = t(51144),
     h = t(18438),
     O = t(778825),
     p = t(52597),
     R = t(430131),
     x = t(133484),
-    f = t(689938),
-    M = t(944167);
+    M = t(689938),
+    f = t(944167);
 function D(e) {
     var s, t, a, D;
-    let { guild: P } = e,
-        L = (0, r.e7)([m.default], () => {
-            let e = m.default.getCurrentUser();
+    let { guild: L } = e,
+        P = (0, r.e7)([C.default], () => {
+            let e = C.default.getCurrentUser();
             return i()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         {
@@ -59,12 +59,12 @@ function D(e) {
                 guild: O.Z.getGuild()
             };
         }),
-        y = null != P ? P : F;
+        y = null != L ? L : F;
     i()(null != y, 'guild should not be null');
     let V = (0, l.gS)(y.id),
-        Y = (0, r.e7)([A.ZP], () => (null == y.id ? null : A.ZP.getMember(y.id, L.id))),
-        w = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(L.id, y.id)),
-        k = C.ZP.canUsePremiumProfileCustomization(L),
+        Y = (0, r.e7)([A.ZP], () => (null == y.id ? null : A.ZP.getMember(y.id, P.id))),
+        w = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(P.id, y.id)),
+        k = m.ZP.canUsePremiumProfileCustomization(P),
         H = (0, c.gd)(b, null == Y ? void 0 : Y.avatar),
         W = (0, c.f$)(v, null == w ? void 0 : w.banner),
         K = (0, p.p)(U, null == w ? void 0 : w.themeColors),
@@ -74,13 +74,13 @@ function D(e) {
             t(null != e ? e : null != s ? null : void 0);
         };
     return (0, n.jsxs)('div', {
-        className: M.sectionsContainer,
+        className: f.sectionsContainer,
         children: [
             (0, n.jsx)(
                 R.Z,
                 {
                     errors: null !== (a = null == G ? void 0 : G.nick) && void 0 !== a ? a : null == V ? void 0 : V.nick,
-                    username: g.ZP.getName(L),
+                    username: g.ZP.getName(P),
                     pendingNick: Z,
                     currentNick: null == Y ? void 0 : Y.nick,
                     guild: y
@@ -90,7 +90,7 @@ function D(e) {
             (0, n.jsx)(
                 I.Z,
                 {
-                    sectionTitle: f.Z.Messages.USER_SETTINGS_PRONOUNS,
+                    sectionTitle: M.Z.Messages.USER_SETTINGS_PRONOUNS,
                     errors: null == G ? void 0 : G.pronouns,
                     onPronounsChange: (e) => {
                         (0, p.xs)(e, Q);
@@ -101,7 +101,7 @@ function D(e) {
                 'pronouns'
             ),
             (0, n.jsxs)(x.Z, {
-                user: L,
+                user: P,
                 showOverlay: !k,
                 children: [
                     (0, n.jsx)(
@@ -109,15 +109,15 @@ function D(e) {
                         {
                             sectionTitle: (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    f.Z.Messages.USER_SETTINGS_AVATAR,
+                                    M.Z.Messages.USER_SETTINGS_AVATAR,
                                     (0, n.jsx)(o.Tooltip, {
-                                        text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
                                         children: (e) =>
                                             (0, n.jsx)(o.NitroWheelIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
                                                 ...e,
-                                                className: M.nitroWheel
+                                                className: f.nitroWheel
                                             })
                                     })
                                 ]
@@ -135,20 +135,20 @@ function D(e) {
                         {
                             sectionTitle: (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    f.Z.Messages.USER_SETTINGS_AVATAR_DECORATION,
+                                    M.Z.Messages.USER_SETTINGS_AVATAR_DECORATION,
                                     (0, n.jsx)(o.Tooltip, {
-                                        text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
                                         children: (e) =>
                                             (0, n.jsx)(o.NitroWheelIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
                                                 ...e,
-                                                className: M.nitroWheel
+                                                className: f.nitroWheel
                                             })
                                     })
                                 ]
                             }),
-                            user: L,
+                            user: P,
                             guild: y
                         },
                         'decoration'
@@ -158,20 +158,20 @@ function D(e) {
                         {
                             sectionTitle: (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    f.Z.Messages.USER_SETTINGS_PROFILE_EFFECT,
+                                    M.Z.Messages.USER_SETTINGS_PROFILE_EFFECT,
                                     (0, n.jsx)(o.Tooltip, {
-                                        text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
                                         children: (e) =>
                                             (0, n.jsx)(o.NitroWheelIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
                                                 ...e,
-                                                className: M.nitroWheel
+                                                className: f.nitroWheel
                                             })
                                     })
                                 ]
                             }),
-                            user: L,
+                            user: P,
                             guild: y
                         },
                         'effect'
@@ -188,7 +188,7 @@ function D(e) {
                         'banner'
                     ),
                     (0, n.jsx)(S.Z, {
-                        user: L,
+                        user: P,
                         pendingAvatar: b,
                         pendingColors: U,
                         onThemeColorsChange: (e) => {
@@ -200,18 +200,18 @@ function D(e) {
                     (0, n.jsx)(
                         d.Z,
                         {
-                            placeholder: f.Z.Messages.CHANGE_IDENTITY_BIO_PLACEHOLDER,
+                            placeholder: M.Z.Messages.CHANGE_IDENTITY_BIO_PLACEHOLDER,
                             sectionTitle: (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    f.Z.Messages.USER_PROFILE_ABOUT_ME,
+                                    M.Z.Messages.USER_PROFILE_ABOUT_ME,
                                     (0, n.jsx)(o.Tooltip, {
-                                        text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
                                         children: (e) =>
                                             (0, n.jsx)(o.NitroWheelIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
                                                 ...e,
-                                                className: M.nitroWheel
+                                                className: f.nitroWheel
                                             })
                                     })
                                 ]

@@ -24,7 +24,7 @@ var s = n(512722),
     R = n(413523),
     C = n(354459),
     y = n(981631);
-function b(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function b(e, t, n) {
         e
     );
 }
-let L = new f.Z('ChannelRTCStore'),
+let b = new f.Z('ChannelRTCStore'),
     D = Object.freeze([]),
     M = [],
     P = {},
@@ -243,7 +243,7 @@ function eI(e) {
             let { ownerId: e } = (0, p.my)(n);
             e === I.default.getId() && K(e, [t]);
         } catch (e) {
-            L.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
+            b.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
         }
         !$(r) && (k[t] = !1);
     }
@@ -302,7 +302,7 @@ function ey(e) {
     var t;
     return !!(null === (t = g.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal());
 }
-class eb extends (r = d.ZP.Store) {
+class eL extends (r = d.ZP.Store) {
     initialize() {
         this.waitFor(m.Z, I.default, T.Z, g.Z, E.ZP, S.Z, A.Z, v.default, N.Z, O.Z), this.syncWith([E.ZP], eo), this.syncWith([h.Z], en);
     }
@@ -391,8 +391,8 @@ class eb extends (r = d.ZP.Store) {
         return V[e];
     }
 }
-b(eb, 'displayName', 'ChannelRTCStore'),
-    (t.Z = new eb(_.Z, {
+L(eL, 'displayName', 'ChannelRTCStore'),
+    (t.Z = new eL(_.Z, {
         CONNECTION_OPEN: Y,
         CONNECTION_OPEN_SUPPLEMENTAL: en,
         THREAD_LIST_SYNC: en,

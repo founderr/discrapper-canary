@@ -3,7 +3,7 @@ t.d(s, {
         return g;
     },
     of: function () {
-        return C;
+        return m;
     }
 }),
     t(653041),
@@ -24,7 +24,7 @@ var n = t(735250),
     I = t(981631),
     N = t(689938),
     A = t(689230);
-async function m(e) {
+async function C(e) {
     let { premiumSubscription: s, pauseDuration: t, onClose: n, setHasError: a, setIsCancelling: i, analyticsLocations: r, analyticsLocation: o } = e;
     try {
         i(!0), a(!1), await (0, d.Mg)(s, { pauseDuration: t }, r, o), n();
@@ -32,7 +32,7 @@ async function m(e) {
         a(!0), i(!1);
     }
 }
-function C(e) {
+function m(e) {
     let { premiumType: s, onClose: t, pauseDuration: i, setPauseDuration: r, footer: l, premiumSubscription: d } = e,
         _ = a.useCallback(
             (e) => {
@@ -42,7 +42,7 @@ function C(e) {
             [r]
         ),
         u = d.status === I.O0b.PAUSED ? N.Z.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : N.Z.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE,
-        m = (function (e) {
+        C = (function (e) {
             let s = e.status === I.O0b.PAUSED ? N.Z.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE : N.Z.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
                 { durations: t, currentDaysPaused: n } = (0, T.AT)(e),
                 a = [];
@@ -67,7 +67,7 @@ function C(e) {
         })(d);
     return (
         a.useEffect(() => {
-            if (!(m.length < 1)) r(m[0].value);
+            if (!(C.length < 1)) r(C[0].value);
         }, []),
         (0, n.jsxs)(n.Fragment, {
             children: [
@@ -96,7 +96,7 @@ function C(e) {
                 (0, n.jsx)(c.ModalContent, {
                     className: A.body,
                     children: (0, n.jsx)(c.RadioGroup, {
-                        options: m,
+                        options: C,
                         onChange: _,
                         value: i
                     })
@@ -111,28 +111,28 @@ function C(e) {
 }
 function g(e) {
     let { premiumSubscription: s, premiumType: t, onClose: i, pauseDuration: o, analyticsLocation: d } = e,
-        [T, C] = a.useState(!1),
+        [T, m] = a.useState(!1),
         { analyticsLocations: g } = (0, u.ZP)(),
         [h, O] = a.useState(!1),
         p = (0, _.ZP)(),
         R = null,
         x = null,
-        f = [I.O0b.PAST_DUE, I.O0b.PAUSED].includes(s.status) ? s.currentPeriodStart : s.currentPeriodEnd,
-        M = r()(f).add(o, 'days').toDate();
+        M = [I.O0b.PAST_DUE, I.O0b.PAUSED].includes(s.status) ? s.currentPeriodStart : s.currentPeriodEnd,
+        f = r()(M).add(o, 'days').toDate();
     switch (s.status) {
         case I.O0b.PAST_DUE:
             x = N.Z.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
                 pauseDuration: o,
-                resumeDate: M
+                resumeDate: f
             });
             break;
         case I.O0b.PAUSED:
-            x = N.Z.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({ resumeDate: M });
+            x = N.Z.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({ resumeDate: f });
             break;
         default:
             x = N.Z.Messages.PREMIUM_PAUSE_CONFIRM_BODY.format({
-                pauseDate: f,
-                resumeDate: M,
+                pauseDate: M,
+                resumeDate: f,
                 pauseDuration: o
             });
     }
@@ -179,11 +179,11 @@ function g(e) {
                                 color: c.Button.Colors.RED,
                                 disabled: h || null == o,
                                 onClick: async () => {
-                                    await m({
+                                    await C({
                                         premiumSubscription: s,
                                         pauseDuration: o,
                                         setIsCancelling: O,
-                                        setHasError: C,
+                                        setHasError: m,
                                         onClose: i,
                                         analyticsLocations: g,
                                         analyticsLocation: d

@@ -223,18 +223,18 @@ t.Z = a.forwardRef(function (e, t) {
             };
         }, [o, E, r]),
         [R, C] = a.useState(0),
-        [y, b] = a.useState(0);
+        [y, L] = a.useState(0);
     if (
         (a.useLayoutEffect(() => {
             if (null == N || null == O || null == u.current) return;
             let e = u.current.getBoundingClientRect();
-            b(e.width / 2), C(e.height + 12);
+            L(e.width / 2), C(e.height + 12);
         }, [N, O]),
         null == N || null == O)
     )
         return null;
-    let L = null === (n = r.current) || void 0 === n ? void 0 : n.getSlateEditor();
-    return null == L
+    let b = null === (n = r.current) || void 0 === n ? void 0 : n.getSlateEditor();
+    return null == b
         ? null
         : (0, i.jsx)(d.ZP, {
               children: (0, i.jsxs)('div', {
@@ -252,7 +252,7 @@ t.Z = a.forwardRef(function (e, t) {
                       e.stopPropagation();
                   },
                   children: [
-                      (0, i.jsx)(A, { slateEditor: L }),
+                      (0, i.jsx)(A, { slateEditor: b }),
                       (0, i.jsx)(T, {
                           editorRef: r,
                           options: s

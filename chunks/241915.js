@@ -286,7 +286,7 @@ m(y, 'defaultProps', {
     hidden: !1,
     roundCorners: !0
 });
-let b = (e) => {
+let L = (e) => {
     let { selectedPIPWindow: t, pipWindows: n, pipType: r, pipWidth: i, maxX: o, maxY: s, onWindowMove: l, onWindowResize: u, dockedRect: c, pictureInPictureComponents: d, appContext: _, roundCorners: E } = e,
         h = () => {
             if (null == t) return null;
@@ -329,4 +329,4 @@ let b = (e) => {
         children: h()
     });
 };
-t.Z = o.memo(b);
+t.Z = o.memo(L);

@@ -32,8 +32,8 @@ var r = n(735250),
     R = n(423298);
 let C = '1',
     y = 0.01,
-    b = 0.1,
-    L = 0.01,
+    L = 0.1,
+    b = 0.01,
     D = 1000;
 function M(e) {
     let { disabled: t = !1, onClick: n, text: i, children: a, tooltipPosition: s = 'top', refreshEnabled: l = !1 } = e;
@@ -108,9 +108,9 @@ t.ZP = i.forwardRef(function (e, t) {
         eR = i.useRef(null),
         eC = (null !== (G = null === (n = eR.current) || void 0 === n ? void 0 : n.scrollHeight) && void 0 !== G ? G : 0) > (null !== (k = null === (a = eR.current) || void 0 === a ? void 0 : a.offsetHeight) && void 0 !== k ? k : 0),
         ey = null !== (B = h.Wq.useStore().bottomPosition) && void 0 !== B ? B : 0,
-        eb = (null !== (F = null === (w = ef.current) || void 0 === w ? void 0 : w.getBoundingClientRect().bottom) && void 0 !== F ? F : 0) + 50 > ey ? 'top' : 'bottom',
-        eL = eN && J,
-        { enableInlineUpsell: eD } = p.Qs.useExperiment({ location: 'Soundboard Sound Button' }, { autoTrackExposure: eL });
+        eL = (null !== (F = null === (w = ef.current) || void 0 === w ? void 0 : w.getBoundingClientRect().bottom) && void 0 !== F ? F : 0) + 50 > ey ? 'top' : 'bottom',
+        eb = eN && J,
+        { enableInlineUpsell: eD } = p.Qs.useExperiment({ location: 'Soundboard Sound Button' }, { autoTrackExposure: eb });
     function eM(e) {
         e.stopPropagation(), e.currentTarget.blur(), eg ? (0, I.hs)(er) : (0, I.TB)(er);
     }
@@ -140,7 +140,7 @@ t.ZP = i.forwardRef(function (e, t) {
         !z && eu(X);
     }
     function ew() {
-        if ((eT && !ep && ((em.current = Math.min(em.current + L, b)), Math.random() < em.current && eE(eh.x, eh.y, void 0, void 0, { sprite: N.vv })), null != Q)) {
+        if ((eT && !ep && ((em.current = Math.min(em.current + b, L)), Math.random() < em.current && eE(eh.x, eh.y, void 0, void 0, { sprite: N.vv })), null != Q)) {
             Q();
             return;
         }
@@ -242,7 +242,7 @@ t.ZP = i.forwardRef(function (e, t) {
             return (
                 eT &&
                     e.start(D, () => {
-                        em.current = Math.max(em.current - L, y);
+                        em.current = Math.max(em.current - b, y);
                     }),
                 () => e.stop()
             );
@@ -254,7 +254,7 @@ t.ZP = i.forwardRef(function (e, t) {
             children: [
                 (0, r.jsx)(d.Tooltip, {
                     text: Z.name,
-                    position: eb,
+                    position: eL,
                     children: (e) =>
                         (0, r.jsxs)(d.ClickableContainer, {
                             ...en,

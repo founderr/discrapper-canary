@@ -38,7 +38,7 @@ function g(e, t) {
     let C = a.useCallback(() => {
             (0, _.RO)(m.X1.GIF, r);
         }, [r]),
-        { Component: y, events: b, play: L } = (0, c.V)();
+        { Component: y, events: L, play: b } = (0, c.V)();
     if (n) return null;
     let D = A === m.X1.GIF && v === r;
     return (0, i.jsx)(d.Tooltip, {
@@ -51,10 +51,10 @@ function g(e, t) {
                 ...e,
                 children: (0, i.jsx)(h.Z, {
                     innerClassName: T.button,
-                    onMouseEnter: b.onMouseEnter,
-                    onMouseLeave: b.onMouseLeave,
+                    onMouseEnter: L.onMouseEnter,
+                    onMouseLeave: L.onMouseLeave,
                     onClick: () => {
-                        C(), L();
+                        C(), b();
                     },
                     isActive: D,
                     pulse: o,

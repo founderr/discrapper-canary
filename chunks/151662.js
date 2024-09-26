@@ -2,14 +2,14 @@ var s,
     a,
     r,
     i,
-    o = n(442837),
-    l = n(570140);
+    l = n(442837),
+    o = n(570140);
 let c = {},
     d = null;
 function _() {
     (c = {}), (d = null);
 }
-class u extends (i = o.ZP.Store) {
+class E extends (i = l.ZP.Store) {
     getEmailSettings() {
         return {
             categories: c,
@@ -18,7 +18,7 @@ class u extends (i = o.ZP.Store) {
     }
 }
 (r = 'EmailSettingsStore'),
-    (a = 'displayName') in (s = u)
+    (a = 'displayName') in (s = E)
         ? Object.defineProperty(s, a, {
               value: r,
               enumerable: !0,
@@ -26,7 +26,7 @@ class u extends (i = o.ZP.Store) {
               writable: !0
           })
         : (s[a] = r),
-    (t.Z = new u(l.Z, {
+    (t.Z = new E(o.Z, {
         CONNECTION_OPEN: _,
         LOGOUT: _,
         EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {

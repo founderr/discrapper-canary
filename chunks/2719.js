@@ -20,19 +20,19 @@ var n = t(735250),
     I = t(299206),
     N = t(295474),
     A = t(144114),
-    m = t(918505),
-    C = t(332473),
+    C = t(918505),
+    m = t(332473),
     g = t(921801),
     h = t(485341),
     O = t(687158),
     p = t(518950),
     R = t(184325),
     x = t(867176),
-    f = t(25990),
-    M = t(594174),
+    M = t(25990),
+    f = t(594174),
     D = t(572004),
-    P = t(51144),
-    L = t(998502),
+    L = t(51144),
+    P = t(998502),
     b = t(695346),
     Z = t(461877),
     v = t(726985),
@@ -41,13 +41,13 @@ var n = t(735250),
     U = t(801461),
     G = t(689938),
     F = t(529733);
-let y = L.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
+let y = P.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
 function V(e) {
     var s, i;
     let { className: o, user: l } = e,
         c = a.useRef(null),
-        u = (0, m.o9)(),
-        E = (0, C.b)(),
+        u = (0, C.o9)(),
+        E = (0, m.b)(),
         T = (0, N.gS)(),
         S = null !== (i = null == T ? void 0 : null === (s = T.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null,
         [I, A] = a.useState(!1);
@@ -158,7 +158,7 @@ function Y(e) {
     let { user: i, className: o } = e,
         l = (0, N.gS)(),
         c = null !== (t = null == l ? void 0 : null === (s = l.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== t ? t : null,
-        u = P.ZP.getGlobalName(i),
+        u = L.ZP.getGlobalName(i),
         E = a.useRef(null),
         [T, S] = a.useState(!1);
     return (
@@ -436,14 +436,14 @@ function K() {
 }
 function z() {
     var e;
-    let s = (0, c.e7)([M.default], () => {
-            let e = M.default.getCurrentUser();
+    let s = (0, c.e7)([f.default], () => {
+            let e = f.default.getCurrentUser();
             return l()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
         }),
         t = (0, O.ZP)(s.id),
         a = (0, h.Z)(t),
         i = b.co.useSetting(),
-        r = (0, c.e7)([f.Z], () => f.Z.getErrors()),
+        r = (0, c.e7)([M.Z], () => M.Z.getErrors()),
         o = null == r ? void 0 : null === (e = r.avatar) || void 0 === e ? void 0 : e[0],
         { avatarSrc: d, avatarDecorationSrc: u } = (0, p.Z)({
             user: s,

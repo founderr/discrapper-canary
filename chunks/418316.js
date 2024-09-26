@@ -23,15 +23,15 @@ function _(e) {
         case u.O7.FRIEND_REQUESTS_GROUPED:
             let C = l.ZP.getName(o.default.getUser(null === (f = e.other_users) || void 0 === f ? void 0 : null === (E = f[0]) || void 0 === E ? void 0 : E.id)),
                 y = l.ZP.getName(o.default.getUser(null === (p = e.other_users) || void 0 === p ? void 0 : null === (h = p[1]) || void 0 === h ? void 0 : h.id)),
-                b = Math.max((null !== (I = null === (m = e.other_users) || void 0 === m ? void 0 : m.length) && void 0 !== I ? I : 0) - 2, 0);
+                L = Math.max((null !== (I = null === (m = e.other_users) || void 0 === m ? void 0 : m.length) && void 0 !== I ? I : 0) - 2, 0);
             return d.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUESTS.format({
                 user: C,
                 user2: y,
-                count: b
+                count: L
             });
         case u.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-            let L = null !== (g = null === (T = e.local_id) || void 0 === T ? void 0 : T.split('_').pop()) && void 0 !== g ? g : 'unknown';
-            return 'Update to build '.concat(L, ' available!');
+            let b = null !== (g = null === (T = e.local_id) || void 0 === T ? void 0 : T.split('_').pop()) && void 0 !== g ? g : 'unknown';
+            return 'Update to build '.concat(b, ' available!');
         case u.DY.FRIEND_SUGGESTION_CREATED:
             let D = !1,
                 M = a.Z.getRelationshipType(O) === c.OGo.PENDING_OUTGOING;

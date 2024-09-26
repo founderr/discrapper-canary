@@ -28,9 +28,9 @@ function m(e) {
     if (null == O) return null;
     let C = null !== (n = O.name) && void 0 !== n ? n : '',
         y = null !== (m = null == N ? void 0 : null === (t = N.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== m ? m : void 0,
-        b = (null == N ? void 0 : N.headerBackground) != null && null !== (I = c.Z.toURLSafe((0, u._W)(A, N.headerBackground, 256))) && void 0 !== I ? I : void 0,
-        L = O.type === h.epS.DURABLE && R,
-        D = O.type === h.epS.DURABLE ? (L ? p.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : p.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
+        L = (null == N ? void 0 : N.headerBackground) != null && null !== (I = c.Z.toURLSafe((0, u._W)(A, N.headerBackground, 256))) && void 0 !== I ? I : void 0,
+        b = O.type === h.epS.DURABLE && R,
+        D = O.type === h.epS.DURABLE ? (b ? p.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : p.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
         { price: M } = O;
     return null == M
         ? null
@@ -49,7 +49,7 @@ function m(e) {
                   skuId: O.id,
                   title: C,
                   description: y,
-                  imgSrc: b,
+                  imgSrc: L,
                   tag: null != D ? (0, r.jsx)(i.V, { text: D }) : void 0,
                   FallbackIcon: o.TicketIcon
               })

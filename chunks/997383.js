@@ -29,8 +29,8 @@ var E = n(392711),
     R = n(483360),
     C = n(892880),
     y = n(591759),
-    b = n(279779),
-    L = n(620490),
+    L = n(279779),
+    b = n(620490),
     D = n(727785),
     M = n(981631);
 function P(e, t, n) {
@@ -101,7 +101,7 @@ function Z(e, t) {
 }
 class V {
     createSearchContext() {
-        null == this.userSearchContext && (this.userSearchContext = b.Z.getSearchContext(this.parseUserResults, this._limit));
+        null == this.userSearchContext && (this.userSearchContext = L.Z.getSearchContext(this.parseUserResults, this._limit));
     }
     setLimit(e) {
         let { userSearchContext: t } = this;
@@ -295,7 +295,7 @@ class V {
                 clearTimeout(this._asyncTimeout),
                     (this.results = f()([...this._userResults, ...this._groupDMResults, ...this._textChannelResults, ...this._voiceChannelResults, ...this._guildResults, ...this._linkResults, ...this._inAppNavigations])
                         .uniqBy((e) => ''.concat(e.type, '-').concat(e.record.id))
-                        .sort(L.Z)
+                        .sort(b.Z)
                         .value()),
                     this.onResultsChange(this.results, this.query);
             }),

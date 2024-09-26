@@ -42,13 +42,13 @@
             for (var t, n, r = [], i = 0, a = e.length; i < a; ) (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < a ? ((64512 & (n = e.charCodeAt(i++))) == 56320 ? r.push(((1023 & t) << 10) + (1023 & n) + 65536) : (r.push(t), i--)) : r.push(t);
             return r;
         }
-        function b(e) {
+        function L(e) {
             return R(e, function (e) {
                 var t = '';
                 return e > 65535 && ((e -= 65536), (t += N(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (t += N(e));
             }).join('');
         }
-        function L(e) {
+        function b(e) {
             return e - 48 < 10 ? e - 22 : e - 65 < 26 ? e - 65 : e - 97 < 26 ? e - 97 : c;
         }
         function D(e, t) {
@@ -77,12 +77,12 @@
                 A = h;
             for ((n = e.lastIndexOf(m)) < 0 && (n = 0), r = 0; r < n; ++r) e.charCodeAt(r) >= 128 && O('not-basic'), I.push(e.charCodeAt(r));
             for (i = n > 0 ? n + 1 : 0; i < T; ) {
-                for (a = g, o = 1, s = c; i >= T && O('invalid-input'), ((l = L(e.charCodeAt(i++))) >= c || l > v((u - g) / o)) && O('overflow'), (g += l * o), !(l < (E = s <= A ? d : s >= A + _ ? _ : s - A)); s += c) {
+                for (a = g, o = 1, s = c; i >= T && O('invalid-input'), ((l = b(e.charCodeAt(i++))) >= c || l > v((u - g) / o)) && O('overflow'), (g += l * o), !(l < (E = s <= A ? d : s >= A + _ ? _ : s - A)); s += c) {
                     o > v(u / (f = c - E)) && O('overflow'), (o *= f);
                 }
                 (A = M(g - a, (t = I.length + 1), 0 == a)), v(g / t) > u - S && O('overflow'), (S += v(g / t)), (g %= t), I.splice(g++, 0, S);
             }
-            return b(I);
+            return L(I);
         }
         function U(e) {
             var t,
@@ -130,7 +130,7 @@
                 version: '1.4.1',
                 ucs2: {
                     decode: y,
-                    encode: b
+                    encode: L
                 },
                 decode: P,
                 encode: U,

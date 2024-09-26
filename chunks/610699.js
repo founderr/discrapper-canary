@@ -29,8 +29,8 @@ var o = n(735250),
     R = n(601964),
     C = n(592125),
     y = n(430824),
-    b = n(496675),
-    L = n(594174),
+    L = n(496675),
+    b = n(594174),
     D = n(624138),
     M = n(358595),
     P = n(981631),
@@ -173,7 +173,7 @@ function V(e) {
             });
         }),
         Q = C.Z.getChannel(null === (t = a.channel) || void 0 === t ? void 0 : t.id),
-        X = (0, _.e7)([b.Z], () => null != Q && b.Z.can(P.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
+        X = (0, _.e7)([L.Z], () => null != Q && L.Z.can(P.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
         { analyticsLocations: $ } = (0, S.ZP)(g.Z.INVITE_EMBED),
         J = (0, m.Z)({
             applicationId: N.id,
@@ -190,7 +190,7 @@ function V(e) {
                     : [],
             [Q, N.id]
         ),
-        et = (0, _.Wu)([L.default], () => ee.map((e) => L.default.getUser(e)), [ee]),
+        et = (0, _.Wu)([b.default], () => ee.map((e) => b.default.getUser(e)), [ee]),
         en = a.state === P.r2o.ACCEPTING,
         er = null != W;
     if (null == W) {

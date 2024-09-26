@@ -20,19 +20,19 @@ var n = t(735250),
     I = t(600164),
     N = t(313201),
     A = t(786761),
-    m = t(3148),
-    C = t(739566),
+    C = t(3148),
+    m = t(739566),
     g = t(753206),
     h = t(440849),
     O = t(921801),
     p = t(196051),
     R = t(441729),
     x = t(626135),
-    f = t(63063),
-    M = t(695346),
+    M = t(63063),
+    f = t(695346),
     D = t(263937),
-    P = t(996073),
-    L = t(526761),
+    L = t(996073),
+    P = t(526761),
     b = t(726985),
     Z = t(981631),
     v = t(611480),
@@ -117,10 +117,10 @@ function H(e) {
     });
 }
 function W() {
-    let e = M.jU.useSetting(),
+    let e = f.jU.useSetting(),
         [s] = a.useState(() => {
             let e = (0, A.e5)({
-                ...(0, m.ZP)({
+                ...(0, C.ZP)({
                     channelId: '1337',
                     content: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_LINK_PREVIEW_MESSAGE.format({ previewLink: 'https://discord.com/accessibility' })
                 }),
@@ -164,7 +164,7 @@ function W() {
                     children: (0, n.jsx)(g.Z, {
                         compact: e,
                         author: {
-                            ...(0, C.ZH)(s),
+                            ...(0, m.ZH)(s),
                             colorString: '#DD80F4'
                         },
                         message: s
@@ -291,7 +291,7 @@ function q() {
     let e = (0, c.e7)([T.Z], () => T.Z.syncProfileThemeWithUserTheme),
         s = a.useRef(null);
     return (
-        (0, P.Z)(s, L.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
+        (0, L.Z)(s, P.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
         (0, n.jsx)(d.FormItem, {
             ref: s,
             title: B.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_COLORS_TITLE,
@@ -323,7 +323,7 @@ function J() {
     a.useEffect(() => {
         null != i.current && (clearTimeout(i.current), (i.current = null)), s !== e && (i.current = setTimeout(() => (0, E.qz)(s), 150));
     }, [s, e]);
-    let r = B.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_DESCRIPTION.format({ learnMoreLink: f.Z.getArticleURL(Z.BhN.FORCED_COLORS) });
+    let r = B.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_DESCRIPTION.format({ learnMoreLink: M.Z.getArticleURL(Z.BhN.FORCED_COLORS) });
     return (0, n.jsx)(d.FormItem, {
         title: B.Z.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
         className: G.marginTop20,
@@ -339,8 +339,8 @@ function J() {
     });
 }
 function $() {
-    let e = M.QK.useSetting(),
-        s = M.Yk.useSetting(),
+    let e = f.QK.useSetting(),
+        s = f.Yk.useSetting(),
         {
             useReducedMotion: t,
             rawPrefersReducedMotion: i,
@@ -355,7 +355,7 @@ function $() {
             animateEmojiOverrideReason: D.Z.getAppliedOverrideReasonKey('animateEmoji')
         })),
         u = a.useRef(null);
-    (0, P.Z)(u, L.rP.REDUCED_MOTION);
+    (0, L.Z)(u, P.rP.REDUCED_MOTION);
     let S = a.useCallback(
             (e, s) => {
                 (0, E.Zt)(s ? 'auto' : o);
@@ -373,7 +373,7 @@ function $() {
             (0, n.jsx)(d.FormText, {
                 type: d.FormText.Types.DESCRIPTION,
                 className: G.marginBottom8,
-                children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({ helpdeskArticle: f.Z.getArticleURL(Z.BhN.REDUCED_MOTION) })
+                children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({ helpdeskArticle: M.Z.getArticleURL(Z.BhN.REDUCED_MOTION) })
             }),
             (0, n.jsx)(d.Checkbox, {
                 className: r()(G.marginTop20, G.marginBottom20),
@@ -400,7 +400,7 @@ function $() {
                     className: G.marginBottom20,
                     value: e,
                     note: null != l ? (0, h.Z)(l) : void 0,
-                    onChange: M.QK.updateSetting,
+                    onChange: f.QK.updateSetting,
                     children: B.Z.Messages.GIF_AUTO_PLAY_LABEL
                 })
             }),
@@ -410,7 +410,7 @@ function $() {
                     className: G.marginBottom20,
                     value: s,
                     note: null != _ ? (0, h.Z)(_) : void 0,
-                    onChange: M.Yk.updateSetting,
+                    onChange: f.Yk.updateSetting,
                     children: B.Z.Messages.ANIMATE_EMOJI
                 })
             })
@@ -418,10 +418,10 @@ function $() {
     });
 }
 function ee() {
-    let e = M.Wp.useSetting(),
+    let e = f.Wp.useSetting(),
         s = (0, c.e7)([D.Z], () => D.Z.getAppliedOverrideReasonKey('animateStickers')),
         t = a.useCallback((e) => {
-            M.Wp.updateSetting(e.value);
+            f.Wp.updateSetting(e.value);
         }, []);
     return (0, n.jsxs)(d.FormItem, {
         className: G.marginTop20,
@@ -456,10 +456,10 @@ function ee() {
 }
 function es() {
     let e = (0, c.e7)([T.Z], () => T.Z.isSubmitButtonEnabled),
-        s = M.dN.useSetting(),
+        s = f.dN.useSetting(),
         t = a.useRef(null);
     return (
-        (0, P.Z)(t, L.rP.LEGACY_CHAT_INPUT),
+        (0, L.Z)(t, P.rP.LEGACY_CHAT_INPUT),
         (0, n.jsxs)(d.FormItem, {
             ref: t,
             className: G.marginTop20,
@@ -488,7 +488,7 @@ function es() {
                                 enabled: e,
                                 location: { section: Z.jXE.SETTINGS_ACCESSIBILITY }
                             }),
-                                M.dN.updateSetting(e);
+                                f.dN.updateSetting(e);
                         },
                         children: B.Z.Messages.LEGACY_CHAT_INPUT
                     })
@@ -498,7 +498,7 @@ function es() {
     );
 }
 function et() {
-    let e = M.OW.useSetting(),
+    let e = f.OW.useSetting(),
         s = (0, c.e7)([R.Z], () => R.Z.speechRate),
         [t, i] = a.useState(!1);
     return u.Zh
@@ -518,7 +518,7 @@ function et() {
                                   children: (0, n.jsx)(d.FormSwitch, {
                                       className: G.marginTop20,
                                       value: e,
-                                      onChange: M.OW.updateSetting,
+                                      onChange: f.OW.updateSetting,
                                       children: B.Z.Messages.ALLOW_TTS_COMMAND
                                   })
                               })

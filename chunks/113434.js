@@ -104,8 +104,8 @@ var u = n(470079),
     R = n(918701),
     C = n(977156),
     y = n(665430),
-    b = n(569743),
-    L = n(585500),
+    L = n(569743),
+    b = n(585500),
     D = n(566078),
     M = n(46140),
     P = n(981631),
@@ -123,7 +123,7 @@ function G() {
         o = (0, C.cB)({ location: M.dr.USE_QUESTS });
     return (
         u.useEffect(() => {
-            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) && o && !t && !i && (n(!0), (0, v.xw)(), (0, b.Z)({ location: M.dr.USE_QUESTS }) && (0, v.w)(O.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
+            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) && o && !t && !i && (n(!0), (0, v.xw)(), (0, L.Z)({ location: M.dr.USE_QUESTS }) && (0, v.w)(O.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
         }, [e.fetchPolicy, o, t, i, a]),
         {
             quests: r,
@@ -503,7 +503,7 @@ function ed(e) {
     var t, n;
     let r = X(e),
         i = (0, R.b7)(e),
-        a = (0, L.D)({
+        a = (0, b.D)({
             quest: e,
             taskDetails: r,
             location: M.dr.QUEST_HOME_DESKTOP,

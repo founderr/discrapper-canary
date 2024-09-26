@@ -56,8 +56,8 @@ let y = {
 !(function (e) {
     (e.TOP_LEFT = 'TOP_LEFT'), (e.TOP_RIGHT = 'TOP_RIGHT'), (e.BOTTOM_LEFT = 'BOTTOM_LEFT'), (e.BOTTOM_RIGHT = 'BOTTOM_RIGHT');
 })(i || (i = {}));
-let b = ['TOP_LEFT', 'TOP_RIGHT'],
-    L = (0, _.Mg)(E.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+let L = ['TOP_LEFT', 'TOP_RIGHT'],
+    b = (0, _.Mg)(E.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
     D = 11,
     M = 125,
     P = {
@@ -171,7 +171,7 @@ function Q(e, t) {
         case 'enter':
             return 'confetti';
         case 'confetti':
-            if (b.includes(t)) return 'leaf_peel';
+            if (L.includes(t)) return 'leaf_peel';
             return 'exit';
         case 'leaf_peel':
             return 'leaf_fall';
@@ -182,7 +182,7 @@ function Q(e, t) {
     }
 }
 function X(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : L,
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : b,
         r = null == e ? void 0 : e.getBoundingClientRect();
     if (null == r)
         return {
@@ -217,7 +217,7 @@ function J(e) {
         [I, T] = s.useState(null),
         g = (0, c.uR)(m, I),
         S = Q(l, E),
-        A = b.includes(E),
+        A = L.includes(E),
         v = A && 'exit' === l,
         N = s.useCallback((e) => {
             _(e);
@@ -329,8 +329,8 @@ function ee(e) {
         c = (0, T.Z)(n),
         { createMultipleConfettiAt: d, addClickListener: _ } = s.useContext(p.h),
         [E, y] = s.useState(!1),
-        b = s.useRef(null),
-        { reducedMotion: L } = s.useContext(f.AccessibilityPreferencesContext),
+        L = s.useRef(null),
+        { reducedMotion: b } = s.useContext(f.AccessibilityPreferencesContext),
         D = (0, A.ZH)(n),
         M = D.nick,
         P = a(D);
@@ -361,14 +361,14 @@ function ee(e) {
                     newTierName: (0, S.nW)(u)
                 });
     let U = s.useCallback(() => {
-            if (!L.enabled)
+            if (!b.enabled)
                 if (E || 0 !== Math.floor(Math.random() * C)) {
                     var e;
-                    let t = null === (e = b.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+                    let t = null === (e = L.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
                     if (null == t) return;
                     d(t.left + t.width / 2, t.top + t.height / 2);
                 } else y(!0);
-        }, [d, L, E]),
+        }, [d, b, E]),
         w = s.useCallback(() => {
             y(!1);
         }, []),
@@ -384,7 +384,7 @@ function ee(e) {
     s.useEffect(() => _(G));
     let k = (0, o.jsx)(f.Clickable, {
         className: R.iconWrapper,
-        innerRef: b,
+        innerRef: L,
         onClick: l,
         children: (0, o.jsx)(g.Z, {
             className: R.icon,

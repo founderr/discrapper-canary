@@ -24,8 +24,8 @@ var a = n(735250),
     R = n(266080),
     C = n(316617),
     y = n(15682),
-    b = n(189472),
-    L = n(749534),
+    L = n(189472),
+    b = n(749534),
     D = n(521332),
     M = n(905434),
     P = n(196627),
@@ -170,7 +170,7 @@ let H = (e) => {
                     null != F(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, a.jsx)(C.Z, { message: n.record }),
                     null != F(t, 'user_preview') && 'user' === n.name ? (0, a.jsx)(w.Z, { user: n.record }) : null,
                     Z(t) &&
-                        (0, a.jsxs)(L.Z, {
+                        (0, a.jsxs)(b.Z, {
                             children: [
                                 null != F(t, 'block_users') &&
                                     ('message' === n.name || 'first_dm' === n.name || 'user' === n.name) &&
@@ -180,7 +180,7 @@ let H = (e) => {
                                     }),
                                 null != F(t, 'mute_users') &&
                                     ('message' === n.name || 'first_dm' === n.name || 'user' === n.name) &&
-                                    (0, a.jsx)(b.Z, {
+                                    (0, a.jsx)(L.Z, {
                                         user: 'user' === n.name ? n.record : n.record.author,
                                         reportId: W
                                     }),

@@ -9,7 +9,7 @@ n.d(t, {
         return T;
     },
     P6: function () {
-        return b;
+        return L;
     },
     S2: function () {
         return I;
@@ -209,6 +209,6 @@ function C() {
 function y() {
     o.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
-function b() {
+function L() {
     o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }

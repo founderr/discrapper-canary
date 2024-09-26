@@ -6,7 +6,7 @@ n.d(t, {
         return D;
     },
     IM: function () {
-        return b;
+        return L;
     },
     J2: function () {
         return x;
@@ -60,7 +60,7 @@ function C(e, t) {
                           })) && void 0 !== n
                 ? n
                 : [],
-        u = L(t, r, (e) => ({
+        u = b(t, r, (e) => ({
             id: e.id,
             members: e.members,
             presences: e.presences,
@@ -91,7 +91,7 @@ function y() {
         };
     });
 }
-function b(e, t, n) {
+function L(e, t, n) {
     var r;
     let { users: i, relationships: a, private_channels: o, merged_members: l, guilds: c, ...d } = e;
     U(n);
@@ -102,7 +102,7 @@ function b(e, t, n) {
             null != t && (e.recipients = t.map((e) => (s()(null != R[e], 'Missing user in compressed ready payload'), R[e]))), delete e.recipient_ids;
         });
     let E = null !== (r = null == c ? void 0 : c.map((e, t) => (!0 === e.unavailable ? e : ((e.members = M(R, null == l ? void 0 : l[t])), w(e))))) && void 0 !== r ? r : [],
-        f = L(t, c, (e) => w(e));
+        f = b(t, c, (e) => w(e));
     return (
         null != f && E.push(f),
         {
@@ -115,7 +115,7 @@ function b(e, t, n) {
         }
     );
 }
-function L(e, t, n) {
+function b(e, t, n) {
     return null == O || O.identifyTime !== e || (null != t && t.some((e) => e.id === O.guild.id)) ? null : n(O.guild);
 }
 function D(e, t) {

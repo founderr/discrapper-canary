@@ -36,8 +36,8 @@ function C(e) {
         [D, M] = (0, v.ZP)(C),
         { loadState: P, channels: U } = D,
         { maybeLoadMore: w, markAllRead: x } = M;
-    b(C, D, M),
-        L(D, M),
+    L(C, D, M),
+        b(D, M),
         a.useEffect(() => {
             m.default.track(N.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
@@ -141,7 +141,7 @@ function y(e) {
         ]
     });
 }
-function b(e, t, n) {
+function L(e, t, n) {
     a.useLayoutEffect(() => {
         var r;
         let { scrollToChannelIndex: i } = t;
@@ -157,7 +157,7 @@ function b(e, t, n) {
         (s.offsetTop < l || s.offsetTop > c) && a.scrollTo({ to: s.offsetTop });
     });
 }
-function L(e, t) {
+function b(e, t) {
     a.useEffect(() => {
         let n = () => {
             let n = e.channels.find((e) => !e.collapsed);

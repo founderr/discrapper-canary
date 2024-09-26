@@ -21,7 +21,7 @@ n.d(t, {
         return w;
     },
     mO: function () {
-        return b;
+        return L;
     },
     t1: function () {
         return N;
@@ -30,7 +30,7 @@ n.d(t, {
         return x;
     },
     v2: function () {
-        return L;
+        return b;
     },
     yC: function () {
         return y;
@@ -124,14 +124,14 @@ function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;
     '' === e
-        ? L()
+        ? b()
         : (u.Z.dispatch({
               type: 'GIF_PICKER_QUERY',
               query: e
           }),
           n ? R(e, t, r) : C(e, t, r));
 }
-function b(e) {
+function L(e) {
     if ('' !== e && null != e)
         s.tn
             .get({
@@ -153,7 +153,7 @@ function b(e) {
                 });
             });
 }
-function L() {
+function b() {
     u.Z.dispatch({
         type: 'GIF_PICKER_QUERY',
         query: ''

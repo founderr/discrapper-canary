@@ -61,7 +61,7 @@ function y(e) {
         queryMode: n
     };
 }
-function b(e) {
+function L(e) {
     let t;
     if (S.Z.isOpen()) return;
     let n = I.Z.getGuildId(),
@@ -77,7 +77,7 @@ function b(e) {
         current_channel_type: t
     });
 }
-function L(e, t) {
+function b(e, t) {
     let { results: n, queryMode: r, query: i, maxQueryLength: a } = S.Z.getProps(),
         o = I.Z.getGuildId(),
         s = m.Z.getChannelId(o),
@@ -136,14 +136,14 @@ function D() {
 function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'KEYBIND',
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
-    b(e),
+    L(e),
         a.Z.dispatch({
             type: 'QUICKSWITCHER_SHOW',
             ...y(t)
         });
 }
 function P() {
-    L(A.rMx.QUICKSWITCHER_CLOSED), D();
+    b(A.rMx.QUICKSWITCHER_CLOSED), D();
 }
 function U(e) {
     a.Z.dispatch({
@@ -160,7 +160,7 @@ function w(e) {
 function x(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    D(), L(A.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
+    D(), b(A.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
     let { type: r, record: i } = e,
         f = { page: A.ZY5.QUICK_SWITCHER };
     switch (r) {

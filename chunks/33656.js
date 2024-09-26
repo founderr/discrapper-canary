@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return m;
+        return C;
     }
 }),
     t(724458);
@@ -28,7 +28,7 @@ function A(e) {
         children: s
     });
 }
-function m() {
+function C() {
     let e = (0, o.e7)([d.Z], () => d.Z.getSubsection()),
         s = a.createRef(),
         { categories: t, initialized: i } = (0, o.cj)([u.Z], () => u.Z.getEmailSettings());
@@ -39,8 +39,8 @@ function m() {
             null == s || null === (t = s.current) || void 0 === t || t.scrollIntoView(!0);
         }
     }, [i, s, e]);
-    let m = E.M0.reduce((e, s) => e || !!t[s], !1),
-        C = {
+    let C = E.M0.reduce((e, s) => e || !!t[s], !1),
+        m = {
             [E.$Z.COMMUNICATION]: T.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
             [E.$Z.SOCIAL]: T.s6.NOTIFICATIONS_EMAILS_SOCIAL,
             [E.$Z.UPDATES_AND_ANNOUNCEMENTS]: T.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
@@ -59,7 +59,7 @@ function m() {
                       children: [
                           E.Od.map((e) => {
                               let { category: s, label: a, subLabel: i } = e,
-                                  r = C[s],
+                                  r = m[s],
                                   o = (0, n.jsx)(
                                       A,
                                       {
@@ -89,7 +89,7 @@ function m() {
                               children: [
                                   (0, n.jsx)(l.Button, {
                                       className: I.marketingUnsubscribeButton,
-                                      disabled: !m,
+                                      disabled: !C,
                                       look: l.ButtonLooks.LINK,
                                       color: l.ButtonColors.LINK,
                                       onClick: _.oc,

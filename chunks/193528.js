@@ -19,21 +19,21 @@ var n = t(735250),
     S = t(689938),
     I = t(109469);
 function N(e) {
-    let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: A, label: m, colorPickerMiddle: C, colorPickerFooter: g, showEyeDropper: h } = e,
+    let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: A, label: C, colorPickerMiddle: m, colorPickerFooter: g, showEyeDropper: h } = e,
         O = a.useRef(null),
         p = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         R = c.Z.colors.BACKGROUND_ACCENT.css,
         x = (0, E.DP)(i),
-        f = (0, l.Rf)(i),
-        M = f === p ? R : f,
+        M = (0, l.Rf)(i),
+        f = M === p ? R : M,
         D = (0, u.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530),
-        P = (0, _.Z)(C),
-        L = (0, _.Z)(g),
+        L = (0, _.Z)(m),
+        P = (0, _.Z)(g),
         [b, Z] = a.useState((0, o.Z)());
     return (
         a.useEffect(() => {
-            (P !== C || L !== g) && Z((0, o.Z)());
-        }, [g, C, L, P]),
+            (L !== m || P !== g) && Z((0, o.Z)());
+        }, [g, m, P, L]),
         (0, n.jsx)(d.Popout, {
             positionKey: b,
             renderPopout: (e) =>
@@ -42,7 +42,7 @@ function N(e) {
                     value: i,
                     onChange: s,
                     suggestedColors: N,
-                    middle: C,
+                    middle: m,
                     footer: g,
                     showEyeDropper: h
                 }),
@@ -58,8 +58,8 @@ function N(e) {
                             tabIndex: A ? -1 : 0,
                             onClick: A ? T.dG4 : s,
                             style: {
-                                backgroundColor: f,
-                                borderColor: M
+                                backgroundColor: M,
+                                borderColor: f
                             },
                             className: I.swatch,
                             'aria-label': S.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
@@ -72,7 +72,7 @@ function N(e) {
                                 color: D
                             })
                         }),
-                        m
+                        C
                     ]
                 });
             }

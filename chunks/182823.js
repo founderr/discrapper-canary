@@ -263,22 +263,22 @@ function y(e, t, n = 'horizontal') {
     let r = e.getBoundingClientRect();
     return t ? ('horizontal' === n ? r.right : r.bottom) : 'horizontal' === n ? r.left : r.top;
 }
-function b(e) {
+function L(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
-function L(e) {
+function b(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && e.test((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.platform) || window.navigator.platform);
 }
 function D() {
-    return L(/^Mac/i);
+    return b(/^Mac/i);
 }
 function M() {
-    return L(/^iPhone/i);
+    return b(/^iPhone/i);
 }
 function P() {
-    return L(/^iPad/i) || (D() && navigator.maxTouchPoints > 1);
+    return b(/^iPad/i) || (D() && navigator.maxTouchPoints > 1);
 }
 function U() {
     return M() || P();
@@ -287,16 +287,16 @@ function w() {
     return D() || U();
 }
 function x() {
-    return b(/AppleWebKit/i) && !G();
+    return L(/AppleWebKit/i) && !G();
 }
 function G() {
-    return b(/Chrome/i);
+    return L(/Chrome/i);
 }
 function k() {
-    return b(/Android/i);
+    return L(/Android/i);
 }
 function B() {
-    return b(/Firefox/i);
+    return L(/Firefox/i);
 }
 let F = (0, r.createContext)({
     isNative: !0,

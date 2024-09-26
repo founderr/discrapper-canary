@@ -12,13 +12,13 @@ n.d(t, {
         return E.Skl;
     },
     W5: function () {
-        return b;
+        return L;
     },
     lm: function () {
         return g;
     },
     qb: function () {
-        return L;
+        return b;
     },
     rs: function () {
         return y;
@@ -338,7 +338,7 @@ function y(e, t) {
             return _.ZP.Masks.STATUS_ONLINE;
     }
 }
-function b(e, t, n) {
+function L(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return t === E.Skl.ONLINE && n && !r
         ? {
@@ -350,7 +350,7 @@ function b(e, t, n) {
               height: e
           };
 }
-function L(e) {
+function b(e) {
     let { status: t, isMobile: n = !1, size: r = p, className: a, style: o, color: l } = e,
         u = t === E.Skl.ONLINE && n,
         c = T(t, l);
@@ -358,7 +358,7 @@ function L(e) {
         mask: y(t, u),
         className: s()(h.mask, a),
         style: o,
-        ...b(r, t, u),
+        ...L(r, t, u),
         children: (0, i.jsx)('div', {
             style: { backgroundColor: c },
             className: h.status

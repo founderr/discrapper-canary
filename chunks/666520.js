@@ -6,15 +6,15 @@ s.d(n, {
     s(47120);
 var t,
     i = s(735250),
-    o = s(470079),
-    l = s(699581),
+    l = s(470079),
+    o = s(699581),
     r = s(442837),
-    a = s(481060),
-    c = s(34854),
+    c = s(481060),
+    a = s(34854),
     d = s(531301),
     u = s(246946),
-    _ = s(981631),
-    I = s(689938),
+    I = s(981631),
+    _ = s(689938),
     E = s(605258);
 function f(e, n, s) {
     return (
@@ -29,10 +29,10 @@ function f(e, n, s) {
         e
     );
 }
-class m extends (t = o.PureComponent) {
+class m extends (t = l.PureComponent) {
     componentDidMount() {
         if (this.props.autoFocus && !this.props.hideNote) {
-            let e = l.findDOMNode(this.noteRef.current);
+            let e = o.findDOMNode(this.noteRef.current);
             null != e && null != e.selectionStart && (e.focus(), (e.selectionStart = e.selectionEnd = e.value.length));
         }
     }
@@ -42,26 +42,26 @@ class m extends (t = o.PureComponent) {
             ? null
             : (0, i.jsx)('div', {
                   className: e,
-                  children: (0, i.jsx)(a.TextAreaAutosize, {
+                  children: (0, i.jsx)(c.TextAreaAutosize, {
                       ref: this.noteRef,
                       className: E.textarea,
                       disabled: n,
-                      placeholder: n ? I.Z.Messages.LOADING_NOTE : I.Z.Messages.NOTE_PLACEHOLDER,
-                      'aria-label': I.Z.Messages.NOTE,
+                      placeholder: n ? _.Z.Messages.LOADING_NOTE : _.Z.Messages.NOTE_PLACEHOLDER,
+                      'aria-label': _.Z.Messages.NOTE,
                       onBlur: this.handleBlur,
                       onKeyPress: this.handleKeyPress,
                       defaultValue: null != s ? s : void 0,
-                      maxLength: _.vuo
+                      maxLength: I.vuo
                   })
               });
     }
     constructor(...e) {
         super(...e),
-            f(this, 'noteRef', o.createRef()),
+            f(this, 'noteRef', l.createRef()),
             f(this, 'handleBlur', (e) => {
                 let n = e.currentTarget.value,
                     { note: s, userId: t, onUpdate: i } = this.props;
-                if ((null != s ? s : '') !== n) null == i || i(), c.Z.updateNote(t, n);
+                if ((null != s ? s : '') !== n) null == i || i(), a.Z.updateNote(t, n);
             }),
             f(this, 'handleKeyPress', (e) => {
                 if (13 === e.which) {
@@ -69,7 +69,7 @@ class m extends (t = o.PureComponent) {
                         var n;
                         (null !== (n = e.currentTarget.value.match(/\n/g)) && void 0 !== n ? n : []).length >= 5 && e.preventDefault();
                     } else e.preventDefault(), e.currentTarget.blur();
-                } else e.which === _.yXg.SPACE && e.stopPropagation();
+                } else e.which === I.yXg.SPACE && e.stopPropagation();
             });
     }
 }

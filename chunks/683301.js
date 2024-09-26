@@ -58,8 +58,8 @@ let g = {
     R = I.Hk,
     C = null,
     y = [],
-    b = (0, f.P)(),
-    L = !1,
+    L = (0, f.P)(),
+    b = !1,
     D = 7;
 function M(e) {
     let { index: t } = e;
@@ -97,7 +97,7 @@ function U(e) {
 }
 function w(e) {
     let { guilds: t, section: n, total: r, offset: i, limit: a } = e;
-    (v = !1), (O = Date.now()), (b = (0, f.P)());
+    (v = !1), (O = Date.now()), (L = (0, f.P)());
     let o = d().map(t, P);
     S = {
         ...S,
@@ -278,7 +278,7 @@ function z() {
 }
 function q(e) {
     let { forClanDiscovery: t } = e;
-    t && (L = !0);
+    t && (b = !0);
 }
 class Q extends (a = _.ZP.Store) {
     initialize() {
@@ -316,10 +316,10 @@ class Q extends (a = _.ZP.Store) {
         return y;
     }
     getLoadId() {
-        return b;
+        return L;
     }
     getIsReady() {
-        return L;
+        return b;
     }
 }
 T(Q, 'displayName', 'GuildDiscoveryStore'),

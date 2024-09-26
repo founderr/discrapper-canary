@@ -39,8 +39,8 @@ let O = 200,
     e.DISPATCH_APPLICATION_PROGRESS = 'dispatch_application_progress';
 })(r || (r = {}));
 let y = {},
-    b = 'content',
-    L = 'file://',
+    L = 'content',
+    b = 'file://',
     D = !1,
     M = 0,
     P = 0,
@@ -67,7 +67,7 @@ function Z(e) {
             else if (null == t) e = v.vxO.INSTALL_REQUIRED;
             else if (h && (t !== n || (null != r && 0 !== u().difference(r, i).length))) e = v.vxO.UPDATE_REQUIRED;
             else if (((e = v.vxO.UP_TO_DATE), null != d)) {
-                let e = _.Z.fileManager.join(d, b),
+                let e = _.Z.fileManager.join(d, L),
                     t = (0, p.D)();
                 if (null != l && 0 !== l.length) {
                     for (let n of (t === v.QR$.WIN64 && !F(t, l) && (t = v.QR$.WIN32), l))
@@ -76,7 +76,7 @@ function Z(e) {
                             let { executable: r, name: i, working_dir: a } = n,
                                 o = i,
                                 s = _.Z.fileManager.join(e, r);
-                            (0, T.isMac)() && !s.startsWith(L) && (s = ''.concat(L).concat(s)),
+                            (0, T.isMac)() && !s.startsWith(b) && (s = ''.concat(b).concat(s)),
                                 (t = null != a ? _.Z.fileManager.join(e, a) : _.Z.fileManager.dirname(s)),
                                 (m[o] = {
                                     ...n,

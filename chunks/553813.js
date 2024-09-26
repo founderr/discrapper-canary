@@ -205,11 +205,11 @@ function C(e, t) {
 function y(e, t) {
     return new g(e, t).patch;
 }
-function b(e, t, n) {
+function L(e, t, n) {
     return new g(e, n).compare(new g(t, n));
 }
-function L(e, t) {
-    return b(e, t, !0);
+function b(e, t) {
+    return L(e, t, !0);
 }
 function D(e, t, n) {
     var r = new g(e, n),
@@ -217,7 +217,7 @@ function D(e, t, n) {
     return r.compare(i) || r.compareBuild(i);
 }
 function M(e, t, n) {
-    return b(t, e, n);
+    return L(t, e, n);
 }
 function P(e, n) {
     return e.sort(function (e, r) {
@@ -230,22 +230,22 @@ function U(e, n) {
     });
 }
 function w(e, t, n) {
-    return b(e, t, n) > 0;
+    return L(e, t, n) > 0;
 }
 function x(e, t, n) {
-    return 0 > b(e, t, n);
+    return 0 > L(e, t, n);
 }
 function G(e, t, n) {
-    return 0 === b(e, t, n);
+    return 0 === L(e, t, n);
 }
 function k(e, t, n) {
-    return 0 !== b(e, t, n);
+    return 0 !== L(e, t, n);
 }
 function B(e, t, n) {
-    return b(e, t, n) >= 0;
+    return L(e, t, n) >= 0;
 }
 function F(e, t, n) {
-    return 0 >= b(e, t, n);
+    return 0 >= L(e, t, n);
 }
 function Z(e, t, n, r) {
     switch (t) {
@@ -286,7 +286,7 @@ function V(e, t) {
     if (!(this instanceof V)) return new V(e, t);
     r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === H ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
 }
-(t.rcompareIdentifiers = O), (t.major = R), (t.minor = C), (t.patch = y), (t.compare = b), (t.compareLoose = L), (t.compareBuild = D), (t.rcompare = M), (t.sort = P), (t.rsort = U), (t.gt = w), (t.lt = x), (t.eq = G), (t.neq = k), (t.gte = B), (t.lte = F), (t.cmp = Z), (t.Comparator = V);
+(t.rcompareIdentifiers = O), (t.major = R), (t.minor = C), (t.patch = y), (t.compare = L), (t.compareLoose = b), (t.compareBuild = D), (t.rcompare = M), (t.sort = P), (t.rsort = U), (t.gt = w), (t.lt = x), (t.eq = G), (t.neq = k), (t.gte = B), (t.lte = F), (t.cmp = Z), (t.Comparator = V);
 var H = {};
 function Y(e, t) {
     if (

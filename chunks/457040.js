@@ -24,8 +24,8 @@ var i = n(735250),
     R = n(217590),
     C = n(453070),
     y = n(926491),
-    b = n(373228),
-    L = n(462109),
+    L = n(373228),
+    b = n(462109),
     D = n(422195),
     M = n(657795),
     P = n(489762),
@@ -63,7 +63,7 @@ let F = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ea = a.useRef('');
         a.useImperativeHandle(t, () => ({ onPickerOpen: eM }));
         let eo = (0, C.Sd)(s),
-            es = 0 === eo.filter((e) => e.type !== b.Ih.EMPTY_GUILD_UPSELL).length,
+            es = 0 === eo.filter((e) => e.type !== L.Ih.EMPTY_GUILD_UPSELL).length,
             el = (0, m.ep)({
                 gridWrapperRef: X,
                 containerWidth: o,
@@ -82,7 +82,7 @@ let F = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             eI = ep.length + em.length,
             eT = a.useCallback(
                 (e) => {
-                    '' === er ? (0, R.On)(e) : (0, R.Yk)(e, er, eI), c(e.sticker, b.V0.STICKER_PICKER);
+                    '' === er ? (0, R.On)(e) : (0, R.Yk)(e, er, eI), c(e.sticker, L.V0.STICKER_PICKER);
                 },
                 [c, er, eI]
             ),
@@ -106,7 +106,7 @@ let F = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 (e, t) => {
                     let { location: r } = t;
                     switch (e.type) {
-                        case b.al.CREATE_STICKER:
+                        case L.al.CREATE_STICKER:
                             A.default.track(k.rMx.OPEN_MODAL, {
                                 type: k.jXE.CREATE_STICKER_MODAL,
                                 location: j
@@ -120,7 +120,7 @@ let F = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                         });
                                 });
                             break;
-                        case b.al.STICKER:
+                        case L.al.STICKER:
                             null != e.sticker && (0, O.kl)(e.sticker, ed, s) && eT(e);
                     }
                 },
@@ -129,10 +129,10 @@ let F = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             {
                 getItemProps: eC,
                 getRowProps: ey,
-                gridContainerProps: eb,
-                handleGridContainerKeyDown: eL,
+                gridContainerProps: eL,
+                handleGridContainerKeyDown: eb,
                 isUsingKeyboardNavigation: eD
-            } = (0, L.t)({
+            } = (0, b.t)({
                 columnCounts: eO,
                 stickersListRef: ee,
                 stickersGrid: ev,
@@ -183,7 +183,7 @@ let F = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         className: B.header,
                         children: (0, i.jsx)(U.Z, {
                             ref: et,
-                            onKeyDown: eL,
+                            onKeyDown: eb,
                             stickersListRef: ee,
                             channel: s
                         })
@@ -199,7 +199,7 @@ let F = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   ref: X,
                                   className: B.listWrapper,
                                   id: G.Vr,
-                                  ...eb,
+                                  ...eL,
                                   children:
                                       null != el
                                           ? (0, i.jsx)(P.Z, {

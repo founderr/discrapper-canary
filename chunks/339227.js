@@ -198,9 +198,9 @@ let R = {
     },
     C = /(-# +)/,
     y = (0, m.Z)([v, R]),
-    b = (0, m.Z)([N, R]),
-    L = _._p(y),
-    D = _._p(b),
+    L = (0, m.Z)([N, R]),
+    b = _._p(y),
+    D = _._p(L),
     M = {
         max: 1 / 0,
         maxAge: 1 * I.Z.Millis.MINUTE,
@@ -215,7 +215,7 @@ function w(e, t, n) {
             disableAutoBlockNewlines: !0,
             guildId: t
         },
-        a = n ? D : L,
+        a = n ? D : b,
         o = n ? U : P,
         s = o.get(e);
     if (null != s) return s;

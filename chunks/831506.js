@@ -116,7 +116,7 @@ function y() {
         t = d.Z.getActivities();
     return T(_.ME, e, t);
 }
-function b(e) {
+function L(e) {
     let { relationship: t } = e;
     if (!c.Z.isBlocked(t.id)) return !1;
     let n = f[t.id];
@@ -126,7 +126,7 @@ function b(e) {
         null != n && n.delete(t.id);
     }
 }
-function L(e) {
+function b(e) {
     let { relationship: t } = e,
         n = f[t.id];
     if (null == n) return !1;
@@ -158,6 +158,6 @@ E(D, 'displayName', 'GamePartyStore'),
         PRESENCE_UPDATES: N,
         THREAD_MEMBER_LIST_UPDATE: O,
         THREAD_MEMBERS_UPDATE: R,
-        RELATIONSHIP_ADD: b,
-        RELATIONSHIP_REMOVE: L
+        RELATIONSHIP_ADD: L,
+        RELATIONSHIP_REMOVE: b
     }));

@@ -24,8 +24,8 @@ var p = n(512722),
     R = n(710845),
     C = n(977059),
     y = n(695346),
-    b = n(199902),
-    L = n(314897),
+    L = n(199902),
+    b = n(314897),
     D = n(358085),
     M = n(998502),
     P = n(569545),
@@ -76,7 +76,7 @@ function z(e) {
 async function q(e, t) {
     if (r !== e) return;
     let { enabled: n } = (0, C.R)({ location: 'uploadStreamPreviews' }),
-        i = ((0, D.isWeb)() && y.I0.getSetting()) || b.Z.getIsActiveStreamPreviewDisabled(t);
+        i = ((0, D.isWeb)() && y.I0.getSetting()) || L.Z.getIsActiveStreamPreviewDisabled(t);
     if (n && i) return;
     let a = () => q(e, t);
     if (!Z)
@@ -92,7 +92,7 @@ async function q(e, t) {
                 }),
                 D.isPlatformEmbedded)
             ) {
-                let e = L.default.getToken();
+                let e = b.default.getToken();
                 m()(null != e, 'Auth token was null while sending screenshot.'),
                     await M.ZP.makeChunkedRequest(
                         w.ANM.STREAM_PREVIEW(t),
@@ -171,7 +171,7 @@ t.Z = {
             O.Z.subscribe('STREAM_DELETE', W),
             O.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
                 let { guildId: t, channelId: n, userId: i, streamId: a, context: o } = e;
-                !(null == a || o !== x.Yn.STREAM || i !== L.default.getId() || __OVERLAY__) && (W(), (r = a), K(a, t, n, i));
+                !(null == a || o !== x.Yn.STREAM || i !== b.default.getId() || __OVERLAY__) && (W(), (r = a), K(a, t, n, i));
             }),
             O.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;

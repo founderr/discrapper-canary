@@ -12,7 +12,7 @@ n.d(t, {
         return v;
     },
     YD: function () {
-        return L;
+        return b;
     },
     aD: function () {
         return c;
@@ -21,7 +21,7 @@ n.d(t, {
         return y;
     },
     k8: function () {
-        return b;
+        return L;
     },
     oo: function () {
         return l;
@@ -239,7 +239,7 @@ function y(e, t) {
         r = R(e.red, e.green, e.blue);
     return n ? (r.lightness = r.lightness + t > 1 ? 0.9 : r.lightness + t) : (r.lightness = r.lightness - t < 0 ? 0.1 : r.lightness - t), C(r.hue, r.saturation, r.lightness);
 }
-function b(e) {
+function L(e) {
     let { colors: t, ratio: n = 5, saturationFactor: r = 1 } = e;
     if (t.length < 2) return;
     let a = t[0],
@@ -259,7 +259,7 @@ function b(e) {
     }
     return C(c.hue, c.saturation, c.lightness);
 }
-function L(e) {
+function b(e) {
     return e
         .slice(0, 3)
         .map((e) => {

@@ -28,8 +28,8 @@ var O = n(807864),
     R = n(442837),
     C = n(570140),
     y = n(26151),
-    b = n(224706),
-    L = n(765250),
+    L = n(224706),
+    b = n(765250),
     D = n(13245),
     M = n(287734),
     P = n(579806),
@@ -279,11 +279,11 @@ function ey() {
     var e, t;
     null === P.Z || void 0 === P.Z || null === (t = P.Z.window) || void 0 === t || t.close(null === P.Z || void 0 === P.Z ? void 0 : null === (e = P.Z.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), (es = null);
 }
-function eb(e) {
+function eL(e) {
     let t = Y.Z.getGameForPID(e);
     D.Z.setAssociatedGame(null != es ? es : -1, e, t);
 }
-function eL(e) {
+function eb(e) {
     eD().then((t) => {
         null == t || t.readyToShow(e.pid);
     });
@@ -295,7 +295,7 @@ let eD = (() => {
         try {
             var e, t, n;
             let { OutOfProcess: r } = await eR();
-            return null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setClickZoneCallback(e3), r.setHostWindowCallbacks(eC, ey, eb), r.setFocusCallback(eU), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, ew), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, ex), r;
+            return null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setClickZoneCallback(e3), r.setHostWindowCallbacks(eC, ey, eL), r.setFocusCallback(eU), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, ew), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, ex), r;
         } catch (e) {
             throw (eh.error('failed loading out of process overlay', e), e);
         }
@@ -344,7 +344,7 @@ function eG(e, t, n) {
             success: t,
             ...n
         };
-    (0, L.te)(q.qU, H.Z.getDefaultLayout(q.qU), {
+    (0, b.te)(q.qU, H.Z.getDefaultLayout(q.qU), {
         width: n.graphics_width,
         height: n.graphics_height
     }),
@@ -430,7 +430,7 @@ function eX(e) {
     let { port: t } = e;
     el = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append('build_id', '97f485b6a63158afb7f9ae8f922ebb8754e6fc6d'), n.append('rpc', String(t)), n.append('rpc_auth_token', el), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+    n.append('build_id', '7d4123af2361ad27b0e2e6302bca3729577dbe87'), n.append('rpc', String(t)), n.append('rpc_auth_token', el), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
 }
 function e$(e) {
     let { channelId: t, ring: n } = e;
@@ -441,7 +441,7 @@ function e$(e) {
 function eJ(e) {
     let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a } = e;
     setImmediate(() => {
-        b.Z.join({
+        L.Z.join({
             userId: t,
             sessionId: n,
             applicationId: r,
@@ -545,7 +545,7 @@ function te(e) {
         case Q.BmY.CONNECT:
             let t = Z.default.getToken();
             if (null == t) break;
-            (0, L.te)(q.qU, H.Z.getDefaultLayout(q.qU)),
+            (0, b.te)(q.qU, H.Z.getDefaultLayout(q.qU)),
                 Promise.all([(0, B.Z)(t, e.pid), R.ZP.PersistedStore.getAllStates()]).then((t) => {
                     let [n, r] = t,
                         { pid: i, token: a } = e;
@@ -633,7 +633,7 @@ let tr = new tn(
               RUNNING_GAME_TOGGLE_OVERLAY: tt,
               OVERLAY_SET_CLICK_ZONES: e5,
               OVERLAY_SET_ASSOCIATED_GAME: e2,
-              OVERLAY_NOTIFY_READY_TO_SHOW: eL
+              OVERLAY_NOTIFY_READY_TO_SHOW: eb
           }
 );
 t.Z = tr;

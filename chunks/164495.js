@@ -14,18 +14,18 @@ var o = n(481060),
     d = n(667105),
     u = n(46140),
     p = n(689938),
-    x = n(128220);
-let m = (e) => {
+    m = n(128220);
+let x = (e) => {
         let { quest: t } = e;
         return (0, i.KM)(t)
             ? (0, s.jsx)(o.Button, {
-                  className: x.cta,
+                  className: m.cta,
                   size: o.Button.Sizes.SMALL,
                   onClick: () => (0, r.Z)('https://support.discord.com/hc/en-us/articles/4422142836759-Activities-on-Discord'),
                   children: p.Z.Messages.QUESTS_LEARN_MORE_V2
               })
             : (0, s.jsx)(o.Button, {
-                  className: x.cta,
+                  className: m.cta,
                   size: o.Button.Sizes.SMALL,
                   onClick: () =>
                       (0, i.FE)(t, {
@@ -35,11 +35,11 @@ let m = (e) => {
                   children: p.Z.Messages.QUESTS_GET_THIS_GAME
               });
     },
-    g = (e) => {
+    _ = (e) => {
         let { quest: t } = e;
         return (0, s.jsx)(o.Button, {
             fullWidth: !0,
-            className: x.cta,
+            className: m.cta,
             onClick: () =>
                 (0, i.gI)(
                     { quest: t },
@@ -52,7 +52,7 @@ let m = (e) => {
             children: p.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
         });
     },
-    _ = (e) => {
+    C = (e) => {
         let { quest: t, useReducedMotion: n, isExpanded: r } = e,
             a = (0, d.hf)({
                 quest: t,
@@ -63,42 +63,42 @@ let m = (e) => {
             size: o.Button.Sizes.SMALL,
             onClick: a,
             pauseAnimation: n || !r,
-            className: x.cta,
-            buttonShineClassName: x.shine,
+            className: m.cta,
+            buttonShineClassName: m.shine,
             children: p.Z.Messages.QUESTS_CLAIM_REWARD
         });
     },
-    C = (e) => {
+    g = (e) => {
         var t;
         let { quest: n, useReducedMotion: o, isExpanded: r, awaitingConsoleConnections: a, hasMadeProgress: i, isProgressing: d, activeScreen: p } = e,
-            x = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-            C = (0, c.P)({ location: u.dr.QUESTS_BAR });
-        if (x)
-            return (0, s.jsx)(_, {
+            m = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+            g = (0, c.P)({ location: u.dr.QUESTS_BAR });
+        if (m)
+            return (0, s.jsx)(C, {
                 quest: n,
                 useReducedMotion: o,
                 isExpanded: r
             });
-        if (p === l.LI.CONSOLE && a && !C) return (0, s.jsx)(g, { quest: n });
-        if (p !== l.LI.SELECT && !i && !d) return (0, s.jsx)(m, { quest: n });
+        if (p === l.LI.CONSOLE && a && !g) return (0, s.jsx)(_, { quest: n });
+        if (p !== l.LI.SELECT && !i && !d) return (0, s.jsx)(x, { quest: n });
         return null;
     };
 function f(e) {
     return (0, s.jsxs)('div', {
-        className: x.ctaButtons,
+        className: m.ctaButtons,
         children: [
             e.showBackButton &&
                 (0, s.jsx)(o.Button, {
-                    className: x.backButton,
-                    innerClassName: x.backButtonInner,
+                    className: m.backButton,
+                    innerClassName: m.backButtonInner,
                     look: 'blank',
                     grow: !1,
                     fullWidth: !1,
                     size: 'none',
                     onClick: e.onBack,
-                    children: (0, s.jsx)(o.ChevronSmallLeftIcon, { className: x.backIcon })
+                    children: (0, s.jsx)(o.ChevronSmallLeftIcon, { className: m.backIcon })
                 }),
-            (0, s.jsx)(C, { ...e })
+            (0, s.jsx)(g, { ...e })
         ]
     });
 }

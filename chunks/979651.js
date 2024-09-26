@@ -51,11 +51,11 @@ function y(e) {
     var t;
     return null !== (t = g.get(e)) && void 0 !== t ? t : new Set();
 }
-function b(e, t) {
+function L(e, t) {
     let n = y(e);
     if (!n.has(t)) (n = new Set(n)).add(t), g.set(e, n);
 }
-function L(e, t) {
+function b(e, t) {
     let n = y(e);
     if (!!n.has(t)) (n = new Set(n)).delete(t), 0 === n.size ? g.delete(e) : g.set(e, n);
 }
@@ -63,7 +63,7 @@ function D(e, t, n) {
     let r = R(I, null != e ? e : E.ME),
         i = r[t],
         a = n(i);
-    return i === a ? [!1, a, i] : (null != i && (delete r[t], null != i.channelId && (delete R(S, i.channelId)[t], delete R(A, i.channelId)[t]), null != i.sessionId && delete R(v, t)[i.sessionId], L(null != e ? e : E.ME, t)), null != a && ((r[t] = a), null != a.channelId && ((R(S, a.channelId)[t] = a), a.selfVideo && ((R(A, a.channelId)[t] = a), b(null != e ? e : E.ME, t))), null != a.sessionId && (R(v, t)[a.sessionId] = a)), [!0, a, i]);
+    return i === a ? [!1, a, i] : (null != i && (delete r[t], null != i.channelId && (delete R(S, i.channelId)[t], delete R(A, i.channelId)[t]), null != i.sessionId && delete R(v, t)[i.sessionId], b(null != e ? e : E.ME, t)), null != a && ((r[t] = a), null != a.channelId && ((R(S, a.channelId)[t] = a), a.selfVideo && ((R(A, a.channelId)[t] = a), L(null != e ? e : E.ME, t))), null != a.sessionId && (R(v, t)[a.sessionId] = a)), [!0, a, i]);
 }
 function M(e) {
     let { voiceStates: t } = e;

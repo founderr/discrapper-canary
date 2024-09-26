@@ -23,8 +23,8 @@ var E = n(392711),
     R = n(131951),
     C = n(914010),
     y = n(981631),
-    b = n(176505);
-function L(e, t, n) {
+    L = n(176505);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -91,7 +91,7 @@ function H() {
         t = O.Z.getGuilds();
     return (
         f().each(U, (t, n) => {
-            (null == t || (!v.Z.hasChannel(t) && t !== a && !G.has(t) && !(0, b.ME)(t))) && (delete U[n], delete w[n], (e = !0));
+            (null == t || (!v.Z.hasChannel(t) && t !== a && !G.has(t) && !(0, L.ME)(t))) && (delete U[n], delete w[n], (e = !0));
         }),
         f().each(x, (t, n) => {
             (null == t || (!v.Z.hasChannel(t) && !G.has(t))) && (delete x[n], (e = !0));
@@ -260,7 +260,7 @@ class ei extends (c = h.ZP.Store) {
         return o;
     }
 }
-L(ei, 'displayName', 'SelectedChannelStore'),
+b(ei, 'displayName', 'SelectedChannelStore'),
     (t.Z = new ei(m.Z, {
         CONNECTION_OPEN: Y,
         OVERLAY_INITIALIZE: j,

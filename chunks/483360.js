@@ -29,8 +29,8 @@ var l = n(658722),
     R = n(675478),
     C = n(131704),
     y = n(598077),
-    b = n(592125),
-    L = n(984933),
+    L = n(592125),
+    b = n(984933),
     D = n(271383),
     M = n(430824),
     P = n(375954),
@@ -76,7 +76,7 @@ function em() {
         t = arguments.length > 1 ? arguments[1] : void 0;
     return eu * e * (null != t ? t : 1);
 }
-let eI = [L.sH, L.Zb, z.d4z.GUILD_CATEGORY];
+let eI = [b.sH, b.Zb, z.d4z.GUILD_CATEGORY];
 function eT(e, t) {
     return e.split(/(?:,| )+/).every((e) => RegExp(Y.Z.escape(e), 'i').test(t));
 }
@@ -175,10 +175,10 @@ function ev(e) {
     }
 }
 function eN(e, t, n) {
-    return e === t || (!!(n || (0, C.Km)(t)) && (e === L.sH ? (0, C.r8)(t) || (0, C.bw)(t) : e === L.Zb && (0, C.bw)(t)));
+    return e === t || (!!(n || (0, C.Km)(t)) && (e === b.sH ? (0, C.r8)(t) || (0, C.bw)(t) : e === b.Zb && (0, C.bw)(t)));
 }
 function eO(e, t) {
-    return e === L.sH && (0, C.bw)(t);
+    return e === b.sH && (0, C.bw)(t);
 }
 function eR(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -223,17 +223,17 @@ function ey(e, t) {
     }
     return n;
 }
-function eb(e, t) {
+function eL(e, t) {
     if (null == e.parent_id) return;
     let n = t[e.parent_id];
     if (null == n) {
         var r;
-        n = t[e.parent_id] = null === (r = b.Z.getChannel(e.parent_id)) || void 0 === r ? void 0 : r.name.toLocaleLowerCase();
+        n = t[e.parent_id] = null === (r = L.Z.getChannel(e.parent_id)) || void 0 === r ? void 0 : r.name.toLocaleLowerCase();
     }
     return n;
 }
-function eL(e, t) {
-    let n = b.Z.getChannel(e);
+function eb(e, t) {
+    let n = L.Z.getChannel(e);
     return null == e || null == n
         ? []
         : d()(P.Z.getMessages(e).toArray())
@@ -275,7 +275,7 @@ t.ZP = {
         let { query: t, limit: n = 10, filter: r } = e;
         return eA({
             query: t,
-            members: b.Z.getDMUserIds()
+            members: L.Z.getDMUserIds()
                 .map((e) => B.default.getUser(e))
                 .filter(Z.lm),
             limit: n,
@@ -285,9 +285,9 @@ t.ZP = {
     queryChannelUsers(e) {
         let t,
             { channelId: n, query: r, limit: i = 10, request: a = !0, checkRecentlyTalkedOnEmptyQuery: o = !0, allowSnowflake: s = !1 } = e,
-            l = b.Z.getChannel(n);
+            l = L.Z.getChannel(n);
         if (null == l) return [];
-        let u = l.isThread() ? b.Z.getChannel(l.parent_id) : null,
+        let u = l.isThread() ? L.Z.getChannel(l.parent_id) : null,
             c = null != u ? u : l;
         if (null == c) return [];
         if (c.isPrivate()) {
@@ -306,7 +306,7 @@ t.ZP = {
                 });
         } else {
             if (0 === r.length && o) {
-                let e = eL(l.id, i);
+                let e = eb(l.id, i);
                 if (e.length > 0) return e;
             }
             (t = D.ZP.getMembers(c.guild_id).filter(eS)), a && V.Z.requestMembers(c.guild_id, r, i);
@@ -329,7 +329,7 @@ t.ZP = {
         let { guildId: t, query: n, limit: r = 10, request: i = !0, checkRecentlyTalkedOnEmptyQuery: a = !0, filter: o, allowSnowflake: s } = e;
         if (null == M.Z.getGuild(t)) return [];
         if (0 === n.length && a) {
-            let e = eL(G.Z.getChannelId(t), r);
+            let e = eb(G.Z.getChannelId(t), r);
             if (e.length > 0) return e;
         }
         let l = D.ZP.getMembers(t).filter(eS);
@@ -360,15 +360,15 @@ t.ZP = {
     },
     queryChannels(e) {
         let t,
-            { query: n, guildId: r, limit: i = z.rnv, fuzzy: a = !0, filter: o = ed, type: s = L.sH, allowEmptyQueries: l = !1, requireVocalConnectAccess: u = !0, boosters: c = {}, allowSnowflake: _ } = e,
+            { query: n, guildId: r, limit: i = z.rnv, fuzzy: a = !0, filter: o = ed, type: s = b.sH, allowEmptyQueries: l = !1, requireVocalConnectAccess: u = !0, boosters: c = {}, allowSnowflake: _ } = e,
             h = eR(n, l);
         t =
             null != r
-                ? d()(L.ZP.getChannels(r)[s])
+                ? d()(b.ZP.getChannels(r)[s])
                       .map((e) => e.channel)
                       .concat(O.Z.computeAllActiveJoinedThreads(r))
                       .value()
-                : d()(b.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(O.Z.computeAllActiveJoinedThreads()).value();
+                : d()(L.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(O.Z.computeAllActiveJoinedThreads()).value();
         let p = {},
             m = [];
         for (let e of t) {
@@ -379,7 +379,7 @@ t.ZP = {
                 d = l ? J : eC(i, t, a);
             if (0 !== d) {
                 if (t.length > 0) {
-                    for (let n of [ey(e, p), eb(e, p)]) {
+                    for (let n of [ey(e, p), eL(e, p)]) {
                         if (null == n || '' === n) continue;
                         let e = eC(n, t, !1);
                         0 !== e && (d += 0.5 * e);
@@ -431,7 +431,7 @@ t.ZP = {
                 containQuery: RegExp(Y.Z.escape(o), 'i'),
                 queryLower: o
             },
-            l = d()(b.Z.getMutablePrivateChannels()).values().value(),
+            l = d()(L.Z.getMutablePrivateChannels()).values().value(),
             u = [];
         for (let e of l) {
             if (!e.isMultiUserDM() || !i(e)) continue;
@@ -528,7 +528,7 @@ t.ZP = {
             }
         return l.sort(E.Z), l.length > n && (l.length = n), l;
     },
-    getRecentlyTalked: eL,
+    getRecentlyTalked: eb,
     queryMentionResults(e) {
         let { query: t, channel: n, canMentionEveryone: r = !1, canMentionHere: i = !0, canMentionUsers: a = !0, canMentionRoles: o = !0, includeAllGuildUsers: s = !1, includeNonMentionableRoles: l = !1, checkRecentlyTalkedOnEmptyQuery: c = !0, limit: _ = z.rnv, request: E, allowSnowflake: f = !1 } = e,
             h = a
@@ -694,7 +694,7 @@ t.ZP = {
         return u;
     },
     queryChannelResults(e) {
-        let { query: t, channel: n, type: r = L.sH, channelTypes: i } = e;
+        let { query: t, channel: n, type: r = b.sH, channelTypes: i } = e;
         return {
             channels: this.queryChannels({
                 query: t,

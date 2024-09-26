@@ -8,13 +8,13 @@ var s,
     r = n(735250);
 n(470079);
 var i = n(780384),
-    o = n(410030);
+    l = n(410030);
 ((s = a || (a = {}))[(s.TOP = 0)] = 'TOP'), (s[(s.BOTTOM = 1)] = 'BOTTOM');
-let l = 'premium_tier_2_gradient',
+let o = 'premium_tier_2_gradient',
     c = 'premium_tier_2_fill',
     d = 'white_gradient',
     _ = (0, r.jsxs)('linearGradient', {
-        id: l,
+        id: o,
         x1: '0%',
         y1: '0%',
         x2: '100%',
@@ -42,7 +42,7 @@ let l = 'premium_tier_2_gradient',
             })
         ]
     }),
-    u = (0, r.jsxs)('linearGradient', {
+    E = (0, r.jsxs)('linearGradient', {
         id: c,
         x1: '0%',
         y1: '0%',
@@ -63,7 +63,7 @@ let l = 'premium_tier_2_gradient',
             })
         ]
     }),
-    E = (0, r.jsxs)('linearGradient', {
+    u = (0, r.jsxs)('linearGradient', {
         id: d,
         x1: '0.005697',
         y1: '18.3495',
@@ -93,7 +93,7 @@ let l = 'premium_tier_2_gradient',
         ]
     }),
     T = (0, r.jsxs)('defs', {
-        children: [_, u, E]
+        children: [_, E, u]
     }),
     I = (e) => {
         let { className: t, fill: n, gradient: s } = e;
@@ -159,8 +159,8 @@ let l = 'premium_tier_2_gradient',
     };
 t.ZP = (e) => {
     let { className: t, variant: n } = e,
-        s = (0, o.ZP)(),
-        a = (0, i.wj)(s) ? d : l,
+        s = (0, l.ZP)(),
+        a = (0, i.wj)(s) ? d : o,
         _ = (0, i.wj)(s) ? '#F2F3F5' : 'url(#'.concat(c, ')');
     switch (n) {
         case 0:

@@ -1,6 +1,6 @@
 n.d(t, {
     Cy: function () {
-        return b;
+        return L;
     },
     DY: function () {
         return w;
@@ -78,7 +78,7 @@ function y(e, t, n) {
         l = n;
     return t === a ? ((s = '0%'), (l += v)) : t === o && ((s = '100%'), (l -= N + N)), { [i]: 'calc('.concat(s, ' + ').concat(l, 'px)') };
 }
-let b = (e) => {
+let L = (e) => {
         let { targetElementRef: t, align: n = 'center', position: r, color: i, children: a, onNonAccessibleClick: o, tooltipClassName: l, tooltipStyle: u, tooltipContentClassName: d, spacing: E = O, animationStyle: f, disableTooltipPointerEvents: h = !1, allowOverflow: p = !1, tooltipPointerClassName: m } = e,
             I = ''.concat('string' == typeof a ? a : '', ':').concat(r);
         return (0, s.jsx)(g.W5, {
@@ -113,7 +113,7 @@ let b = (e) => {
             }
         });
     },
-    L = {
+    b = {
         scale: 0.95,
         opacity: 0
     },
@@ -133,15 +133,15 @@ let b = (e) => {
             {
                 keys: (e) => (e ? 'tooltip' : 'empty'),
                 config: p.F,
-                from: a.enabled ? D : L,
+                from: a.enabled ? D : b,
                 enter: M,
-                leave: a.enabled ? D : L,
+                leave: a.enabled ? D : b,
                 onRest: n
             },
             'animate-always'
         )((e, t) =>
             t
-                ? (0, s.jsx)(b, {
+                ? (0, s.jsx)(L, {
                       animationStyle: e,
                       targetElementRef: r,
                       ...i

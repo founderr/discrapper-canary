@@ -35,8 +35,8 @@ function C(e, t, n) {
     );
 }
 let y = {},
-    b = {},
     L = {},
+    b = {},
     D = {},
     M = O.hVg.THEATRE,
     P = {},
@@ -51,7 +51,7 @@ function x(e, t, n) {
             serverId: t,
             initialLayout: M,
             analyticsContext: n,
-            isStreamer: null != b[e],
+            isStreamer: null != L[e],
             parentMediaSessionId: N.Z.getMediaSessionId()
         })
     );
@@ -99,12 +99,12 @@ function Z(e) {
             t.setActionContext(i);
         }),
         (D[s] = o),
-        (L[s] = a),
+        (b[s] = a),
         null != a)
     ) {
         let e = f.ZP.getGameForPID(a);
         null != e &&
-            (b[s] = {
+            (L[s] = {
                 name: e.name,
                 id: e.id,
                 exe: e.exeName,
@@ -120,19 +120,19 @@ function V(e) {
             n.setActionContext(t);
         }),
         (D[n] = null),
-        (L[n] = null);
+        (b[n] = null);
 }
 function H(e) {
     let { streamKey: t, rtcServerId: n, region: r, viewerIds: a } = e;
     i = t;
     let o = P[t];
     if (null == o && null != n) {
-        null == L[t] && (b[t] = null);
+        null == b[t] && (L[t] = null);
         let e = (0, p.my)(t);
-        null == b[t] && null == D[t] && (b[t] = (0, m.L2)(e, v.Z));
+        null == L[t] && null == D[t] && (L[t] = (0, m.L2)(e, v.Z));
         let i = new h.A({
             streamRegion: r,
-            streamApplication: b[t],
+            streamApplication: L[t],
             streamSourceType: ee(D[t]),
             actionContext: y[t],
             numViewers: null != a ? a.length : 0

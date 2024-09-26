@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(695346),
     C = n(271383),
     y = n(594174),
-    b = n(768581),
-    L = n(900849),
+    L = n(768581),
+    b = n(900849),
     D = n(506071),
     M = n(495114),
     P = n(170140),
@@ -80,7 +80,7 @@ function B(e) {
                     can_access: F.canAccess,
                     is_member: Q
                 }),
-                F.canAccess ? (0, g.Z)(U.Z5c.CHANNEL(F.guildId, F.threadId, F.messageId)) : Q ? (0, g.Z)(U.Z5c.CHANNEL(F.guildId, F.parentChannelId)) : await L.Ub(F.guildId, {}, { channelId: F.parentChannelId }));
+                F.canAccess ? (0, g.Z)(U.Z5c.CHANNEL(F.guildId, F.threadId, F.messageId)) : Q ? (0, g.Z)(U.Z5c.CHANNEL(F.guildId, F.parentChannelId)) : await b.Ub(F.guildId, {}, { channelId: F.parentChannelId }));
         }, [F, B, Q]),
         es = a.useCallback(
             () => (
@@ -105,7 +105,7 @@ function B(e) {
                 newAnalyticsLocations: t
             })
         ),
-        eu = (0, b.NZ)({
+        eu = (0, L.NZ)({
             avatarDecoration: $,
             size: (0, I.y9)(E.AvatarSizes.SIZE_40),
             canAnimate: en

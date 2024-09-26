@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     AQ: function () {
-        return L;
+        return b;
     },
     G7: function () {
         return R;
@@ -18,7 +18,7 @@ n.d(t, {
         return O;
     },
     gk: function () {
-        return b;
+        return L;
     },
     uY: function () {
         return D;
@@ -271,7 +271,7 @@ async function y(e, t) {
             p.rC({ categoryId: I.Hk });
     }
 }
-async function b() {
+async function L() {
     let e = Object.keys(f.Z.applicationStatistics);
     d.Z.dispatch({
         type: 'GUILD_DISCOVERY_FETCH_START',
@@ -291,7 +291,7 @@ async function b() {
         });
     }
 }
-function L() {
+function b() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     e && (0, _.uL)(m.Z5c.GUILD_DISCOVERY), d.Z.dispatch({ type: 'GUILD_DISCOVERY_CLEAR_SEARCH' });
 }

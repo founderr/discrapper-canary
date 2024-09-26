@@ -24,13 +24,13 @@ function u(e) {
         [N, O] = (0, a.useState)(Array(A.length).fill(!1)),
         R = (0, a.useRef)(Array(A.length).fill(!0)),
         [C, y] = (0, a.useState)(void 0),
-        b = (0, a.useRef)(A),
-        L = (0, a.useRef)(N),
+        L = (0, a.useRef)(A),
+        b = (0, a.useRef)(N),
         D = (e) => {
-            (b.current = e), v(e);
+            (L.current = e), v(e);
         },
         M = (e) => {
-            (L.current = e), O(e);
+            (b.current = e), O(e);
         };
     function P(e) {
         return (e - u) / (E - u);
@@ -48,7 +48,7 @@ function u(e) {
         if (n || !x(e)) return;
         let i = U(e),
             a = w(e);
-        (t = (0, r.N4)(t, i, a, h)), D(c(b.current, e, t));
+        (t = (0, r.N4)(t, i, a, h)), D(c(L.current, e, t));
     }
     function k(e) {
         return f.format(e);
@@ -79,8 +79,8 @@ function u(e) {
         isThumbDragging: (e) => N[e],
         setThumbDragging: function e(e, t) {
             if (n || !x(e)) return;
-            let r = L.current[e];
-            (L.current = c(L.current, e, t)), M(L.current), S && r && !L.current.some(Boolean) && S(b.current);
+            let r = b.current[e];
+            (b.current = c(b.current, e, t)), M(b.current), S && r && !b.current.some(Boolean) && S(L.current);
         },
         focusedThumb: C,
         setFocusedThumb: y,

@@ -24,7 +24,7 @@ var i = n(735250),
 let R = (e) => {
     var t;
     let n,
-        { guildId: r, groupListingId: o, analyticsLocation: R, showBenefitsFirst: C, skuId: y, onComplete: b, forcesTransitionToGuild: L } = e,
+        { guildId: r, groupListingId: o, analyticsLocation: R, showBenefitsFirst: C, skuId: y, onComplete: L, forcesTransitionToGuild: b } = e,
         D = (0, l.e7)([m.Z], () => (null != y ? m.Z.get(y) : void 0), [y]),
         M = (0, l.e7)([I.Z], () => (null != y ? I.Z.getForSKU(y) : void 0), [y]),
         P = (0, l.Wu)([p.Z], () => (null != y ? p.Z.getForSKU(y) : []), [y]),
@@ -77,8 +77,8 @@ let R = (e) => {
                         planGroup: B,
                         applicationId: k.id,
                         showBenefitsFirst: C,
-                        onComplete: b,
-                        forcesTransitionToGuild: L
+                        onComplete: L,
+                        forcesTransitionToGuild: b
                     });
                 };
                 !q && j
@@ -88,7 +88,7 @@ let R = (e) => {
                           onCancel: () => {}
                       })
                     : e();
-            }, [x, U, B, k, r, q, j, F, R, Z, C, H, b, L]),
+            }, [x, U, B, k, r, q, j, F, R, Z, C, H, L, b]),
             canOpenModal: X,
             cannotOpenReason: n
         }

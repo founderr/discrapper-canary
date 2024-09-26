@@ -73,17 +73,17 @@ async function y(e) {
     }
     throw Error('could not find launchable');
 }
-function b(e, t, n) {
+function L(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
     if (e()) {
         t();
         return;
     }
     setTimeout(() => {
-        r * A <= v ? b(e, t, n, r + 1) : n();
+        r * A <= v ? L(e, t, n, r + 1) : n();
     }, A);
 }
-function L(e) {
+function b(e) {
     return (
         I.info('launch', e),
         new Promise((t, n) => {
@@ -92,15 +92,15 @@ function L(e) {
     );
 }
 t.Z = {
-    waitSubscribed: (e, t) => new Promise((n, r) => b(() => l.Z.isSubscribed(e, t), n, r)),
+    waitSubscribed: (e, t) => new Promise((n, r) => L(() => l.Z.isSubscribed(e, t), n, r)),
     waitConnected(e) {
-        return new Promise(b.bind(this, () => c.Z.isConnected(e)));
+        return new Promise(L.bind(this, () => c.Z.isConnected(e)));
     },
     isLaunchable: (e) =>
         y(R(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launch: (e) => y(R(e)).then(L),
+    launch: (e) => y(R(e)).then(b),
     launchDispatchApplication(e, t, n, r, i) {
         let { launchOptions: o, defaultLaunchOptionId: l, installPath: c, applicationId: d, branchId: f, buildId: h, shouldPatch: p } = e;
         if (null == o || null == l || null == c) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
@@ -147,7 +147,7 @@ t.Z = {
         y(C(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launchGame: (e) => (c.Z.isConnected(e) ? Promise.resolve() : y(C(e)).then(L)),
+    launchGame: (e) => (c.Z.isConnected(e) ? Promise.resolve() : y(C(e)).then(b)),
     isProtocolRegistered: (e) =>
         O().then((t) => {
             var n, r;

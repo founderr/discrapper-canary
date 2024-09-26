@@ -67,32 +67,32 @@ function R(e) {
 function C(e) {
     var t, n, r;
     let { editor: i, chatInputType: o, channel: s, canUseCommands: l, canOnlyUseTextCommands: u, windowContext: c, previewMarkdown: d, forTests: O, onChangeStart: R, onChangeEnd: C, updateState: y } = e,
-        b = i,
-        { onChange: L } = b;
-    (b.chatInputType = o),
-        (b.windowContext = c),
-        (b.previewMarkdown = d),
-        (b.composition = null),
-        (b.events = new a.EventEmitter()),
-        (b.isMac = 'MacIntel' === navigator.platform),
-        (b.onChange = () => {
-            b.events.emit('onChange'), L();
+        L = i,
+        { onChange: b } = L;
+    (L.chatInputType = o),
+        (L.windowContext = c),
+        (L.previewMarkdown = d),
+        (L.composition = null),
+        (L.events = new a.EventEmitter()),
+        (L.isMac = 'MacIntel' === navigator.platform),
+        (L.onChange = () => {
+            L.events.emit('onChange'), b();
         }),
-        (b = (0, S.B)(b, !0 === O)),
-        (b = (0, g.Z)(b)),
-        (b = (0, T.Z)(b)),
-        (null === (t = o.commands) || void 0 === t ? void 0 : t.enabled) && (b = (0, _.Z)(b, s, !0 === l, !0 === u)),
-        (b = (0, I.ZP)(b, s.guild_id, s.id)),
-        !(null === (n = o.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (b = (0, E.Z)(b)),
-        !(null === (r = o.markdown) || void 0 === r ? void 0 : r.disableCodeBlocks) && (b = (0, f.ZP)(b)),
-        O && (b = (0, v.Z)(b)),
-        (b = (0, m.Z)(b)),
-        (b = (0, h.Z)(b)),
-        (b = (0, A.Z)(b)),
-        (b = (0, N.Z)(b, R, C)),
-        (b = (0, p.Z)(b, (e) => {
+        (L = (0, S.B)(L, !0 === O)),
+        (L = (0, g.Z)(L)),
+        (L = (0, T.Z)(L)),
+        (null === (t = o.commands) || void 0 === t ? void 0 : t.enabled) && (L = (0, _.Z)(L, s, !0 === l, !0 === u)),
+        (L = (0, I.ZP)(L, s.guild_id, s.id)),
+        !(null === (n = o.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (L = (0, E.Z)(L)),
+        !(null === (r = o.markdown) || void 0 === r ? void 0 : r.disableCodeBlocks) && (L = (0, f.ZP)(L)),
+        O && (L = (0, v.Z)(L)),
+        (L = (0, m.Z)(L)),
+        (L = (0, h.Z)(L)),
+        (L = (0, A.Z)(L)),
+        (L = (0, N.Z)(L, R, C)),
+        (L = (0, p.Z)(L, (e) => {
             let { newValue: t, newSelection: n } = e;
-            return y(b, 'undo', {
+            return y(L, 'undo', {
                 value: t,
                 selection: n
             });

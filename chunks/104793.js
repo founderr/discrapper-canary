@@ -30,7 +30,7 @@ var a = n(512722),
 function I(e, t, n) {
     var r;
     let { context: i, commandTypes: a, allowNsfw: c, computedPermissions: I, userId: v, roleIds: N, isImpersonating: O, hasBaseAccessPermissions: R } = t,
-        { applicationAllowedForUser: C, applicationAllowedForChannel: y, isGuildInstalled: b, isUserInstalled: L, commandBotId: D } = n;
+        { applicationAllowedForUser: C, applicationAllowedForChannel: y, isGuildInstalled: L, isUserInstalled: b, commandBotId: D } = n;
     if (!a.includes(e.type)) return 2;
     if (e.nsfw && !c) return 1;
     let M = (0, h.Vh)(i, D);
@@ -49,8 +49,8 @@ function I(e, t, n) {
     }
     if (e.applicationId === p.bi.BUILT_IN) return 0;
     let P = (0, h.ny)(i);
-    if (null == P || l.e$(I, m.Plq.ADMINISTRATOR) || (L && (null === (r = e.integration_types) || void 0 === r ? void 0 : r.includes(s.Y.USER_INSTALL)))) return 0;
-    if (!R && b && (null == e.integration_types || e.integration_types.includes(s.Y.GUILD_INSTALL))) return 5;
+    if (null == P || l.e$(I, m.Plq.ADMINISTRATOR) || (b && (null === (r = e.integration_types) || void 0 === r ? void 0 : r.includes(s.Y.USER_INSTALL)))) return 0;
+    if (!R && L && (null == e.integration_types || e.integration_types.includes(s.Y.GUILD_INSTALL))) return 5;
     if (i instanceof d.Sf) {
         o()(void 0 !== y, 'missing applicationAllowedForChannel');
         let t = S(e.permissions, i, P);

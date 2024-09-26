@@ -29,7 +29,7 @@ let m = 0.05,
     T = !1;
 function g(e) {
     let { searchId: t, searchType: n } = e;
-    null != t && (b = t), (T = !0), (r = n);
+    null != t && (L = t), (T = !0), (r = n);
 }
 function S() {
     (T = !1), (r = void 0);
@@ -72,8 +72,8 @@ let O = 'SearchStore',
     R = 'tokenized',
     C = !1,
     y = {},
-    b = null;
-function L(e) {
+    L = null;
+function b(e) {
     let { searchId: t, editorState: n } = e;
     A(t).editorState = n;
 }
@@ -167,8 +167,8 @@ function x(e) {
     null != n.searchFetcher && n.searchFetcher.cancel(), delete I[t];
 }
 function G(e) {
-    if (e === b) return !1;
-    null != e && null == I[e] && A(e), (b = e);
+    if (e === L) return !1;
+    null != e && null == I[e] && A(e), (L = e);
 }
 function k(e) {
     let { guildId: t, channelId: n } = e;
@@ -207,7 +207,7 @@ function j() {
     u.K.remove(O), (y = {});
 }
 function W() {
-    return null != b && x({ searchId: b });
+    return null != L && x({ searchId: L });
 }
 class K extends (i = l.ZP.Store) {
     initialize() {
@@ -222,17 +222,17 @@ class K extends (i = l.ZP.Store) {
         return r;
     }
     getCurrentSearchId() {
-        return b;
+        return L;
     }
     isActive() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : L;
         return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e));
     }
     isTokenized() {
         return C;
     }
     getSearchType(e) {
-        return N(null != e ? e : b, (e) => e.searchType);
+        return N(null != e ? e : L, (e) => e.searchType);
     }
     getRawResults(e) {
         return N(e, (e) => e.rawResults);
@@ -311,7 +311,7 @@ p(K, 'displayName', 'SearchStore'),
         SEARCH_FINISH: w,
         SEARCH_EDITOR_STATE_CLEAR: x,
         SEARCH_ENSURE_SEARCH_STATE: D,
-        SEARCH_EDITOR_STATE_CHANGE: L,
+        SEARCH_EDITOR_STATE_CHANGE: b,
         SEARCH_SET_SHOW_BLOCKED_RESULTS: H,
         SEARCH_SCREEN_OPEN: B,
         CHANNEL_SELECT: k,

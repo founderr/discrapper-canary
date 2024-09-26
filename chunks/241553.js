@@ -29,8 +29,8 @@ var a = n(735250),
     R = n(51144),
     C = n(443603),
     y = n(981631),
-    b = n(921944),
-    L = n(474936),
+    L = n(921944),
+    b = n(474936),
     D = n(689938),
     M = n(746734),
     P = n(933283);
@@ -176,7 +176,7 @@ function Y(e) {
                 isGift: !0,
                 giftRecipient: null == B ? void 0 : B,
                 initialPlanId: null,
-                subscriptionTier: L.Si.TIER_2,
+                subscriptionTier: b.Si.TIER_2,
                 analyticsLocations: r,
                 analyticsObject: {
                     page: n.isPrivate() ? y.ZY5.DM_CHANNEL : y.ZY5.GUILD_CHANNEL,
@@ -207,7 +207,7 @@ function Y(e) {
                     'aria-label': D.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                     isActive: !1,
                     onClick: () => {
-                        s(!1), (0, p.EW)(u.z.SEASONAL_GIFTING_COACHMARK_2023, { dismissAction: b.L.TAKE_ACTION }), Z();
+                        s(!1), (0, p.EW)(u.z.SEASONAL_GIFTING_COACHMARK_2023, { dismissAction: L.L.TAKE_ACTION }), Z();
                     },
                     children: (0, a.jsx)('div', {
                         className: M.noPointerEvents,

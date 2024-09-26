@@ -48,7 +48,7 @@ n.d(t, {
         return F;
     },
     tG: function () {
-        return L;
+        return b;
     },
     vx: function () {
         return U;
@@ -103,8 +103,8 @@ let O = {
         [N.TI.NON_FRIENDS.valueOf()]: u.Q4.BLOCK,
         [N.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: u.Q4.BLOCK
     },
-    b = 1,
-    L = (e) => {
+    L = 1,
+    b = (e) => {
         let { setting: t, isDm: n = !1, isFriend: r = !1 } = e;
         if (null != t && t !== u.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
         let i = m.default.getCurrentUser();
@@ -133,12 +133,12 @@ let O = {
     P = () => {
         let e = f.Sh.getSetting();
         return {
-            explicitContentGuilds: L({ setting: null == e ? void 0 : e.explicitContentGuilds }),
-            explicitContentNonFriendDm: L({
+            explicitContentGuilds: b({ setting: null == e ? void 0 : e.explicitContentGuilds }),
+            explicitContentNonFriendDm: b({
                 setting: null == e ? void 0 : e.explicitContentNonFriendDm,
                 isDm: !0
             }),
-            explicitContentFriendDm: L({
+            explicitContentFriendDm: b({
                 setting: null == e ? void 0 : e.explicitContentFriendDm,
                 isDm: !0,
                 isFriend: !0
@@ -234,7 +234,7 @@ function V(e, t) {
     let n = Math.min(Math.floor((Date.now() - e) / 1000), 3);
     _.Z.increment({
         name: l.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING,
-        tags: ['timingBucket:'.concat(n), 'source:'.concat(t), 'metricVersion:'.concat(b)]
+        tags: ['timingBucket:'.concat(n), 'source:'.concat(t), 'metricVersion:'.concat(L)]
     });
 }
 function H(e) {
@@ -253,7 +253,7 @@ function H(e) {
     }),
         _.Z.increment({
             name: l.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT,
-            tags: ['metricVersion:'.concat(b)]
+            tags: ['metricVersion:'.concat(L)]
         }),
         _.Z.distribution({ name: l.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION }, (null !== (r = null == s ? void 0 : s.length) && void 0 !== r ? r : 0) + (null !== (i = null == u ? void 0 : u.length) && void 0 !== i ? i : 0));
 }

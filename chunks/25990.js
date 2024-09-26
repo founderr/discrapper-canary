@@ -33,11 +33,11 @@ function y(e) {
     if (v !== S.QZA.SUBMITTING) return !1;
     (v = S.QZA.OPEN), (N = null !== (t = e.errors) && void 0 !== t ? t : {});
 }
-function b(e) {
+function L(e) {
     let { section: t } = e;
     return t === S.oAB.ACCOUNT && O();
 }
-function L(e) {
+function b(e) {
     let { avatar: t } = e;
     (r = t), (E = void 0);
 }
@@ -204,12 +204,12 @@ A(J, 'displayName', 'UserSettingsAccountStore'),
         USER_SETTINGS_ACCOUNT_INIT: O,
         USER_SETTINGS_MODAL_INIT: O,
         USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: O,
-        USER_SETTINGS_MODAL_SET_SECTION: b,
+        USER_SETTINGS_MODAL_SET_SECTION: L,
         USER_SETTINGS_ACCOUNT_CLOSE: R,
         USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: $,
         USER_SETTINGS_ACCOUNT_SUBMIT: C,
         USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: y,
-        USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: L,
+        USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: b,
         USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: D,
         USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: M,
         USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: U,

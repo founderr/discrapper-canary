@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return L;
     }
 });
 var r = n(47120);
@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(228168),
     C = n(689938),
     y = n(451563);
-function b(e) {
-    let { user: t, guildId: n, channelId: r, messageId: b, roleId: L, setPopoutRef: D, closePopout: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
+function L(e) {
+    let { user: t, guildId: n, channelId: r, messageId: L, roleId: b, setPopoutRef: D, closePopout: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
         w = (0, p.ZP)(t.id, n),
         { analyticsLocations: x } = (0, u.ZP)([...U, l.Z.BITE_SIZE_PROFILE_POPOUT]),
         G = (0, f.ZB)({
@@ -38,8 +38,8 @@ function b(e) {
             userId: t.id,
             guildId: n,
             channelId: r,
-            messageId: b,
-            roleId: L
+            messageId: L,
+            roleId: b
         }),
         k = a.useRef(null),
         B = (0, s.Z)(k);

@@ -3,8 +3,8 @@ var s = n(392711),
     a = n.n(s),
     r = n(710845),
     i = n(592125),
-    o = n(306680),
-    l = n(709054),
+    l = n(306680),
+    o = n(709054),
     c = n(287328);
 function d(e, t, n) {
     return (
@@ -37,15 +37,15 @@ t.Z = new (class e {
         null != this.readStateVersion && (null != e.version ? (this.readStateVersion = e.version) : _.log('Received null read states version', e));
     }
     handleWriteCaches(e, t) {
-        let n = o.ZP.getAllReadStates(!1);
+        let n = l.ZP.getAllReadStates(!1);
         if (t) {
             var s;
             if (null == this.readStateVersion) return;
             let t = '0',
                 r = '0',
-                o = Object.keys(i.Z.getMutablePrivateChannels()),
-                d = new Set(o);
-            for (let e of ((r = null !== (s = a()(o).sort(l.default.compare).reverse().value()[0]) && void 0 !== s ? s : '0'), n)) null != e._lastMessageId && (1 === l.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === l.default.compare(e._lastMessageId, r) && (r = e._lastMessageId));
+                l = Object.keys(i.Z.getMutablePrivateChannels()),
+                d = new Set(l);
+            for (let e of ((r = null !== (s = a()(l).sort(o.default.compare).reverse().value()[0]) && void 0 !== s ? s : '0'), n)) null != e._lastMessageId && (1 === o.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === o.default.compare(e._lastMessageId, r) && (r = e._lastMessageId));
             c.Z.nonGuildVersionsTransaction(e).putAll([
                 {
                     id: 'highest_last_message_id',

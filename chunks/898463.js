@@ -32,8 +32,8 @@ var u = n(735250),
     R = n(859235),
     C = n(689938),
     y = n(671292);
-let b = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/quicktime', 'video/mp4'];
-function L(e) {
+let L = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/quicktime', 'video/mp4'];
+function b(e) {
     let { alt: t, spoiler: n, renderContent: r, size: i } = e,
         [a, o] = c.useState(!1);
     return (0, u.jsx)(g.a.Provider, {
@@ -86,7 +86,7 @@ function D(e) {
         }),
         E = i === R.q.SMALL;
     c.useEffect(() => {
-        if (null == t || !1 === b.includes(t.type)) return;
+        if (null == t || !1 === L.includes(t.type)) return;
         let e = URL.createObjectURL(t);
         s(e);
         let n = new Image();
@@ -145,7 +145,7 @@ function D(e) {
         children: (0, u.jsx)(f.Clickable, {
             onClick: p,
             className: y.clickableMedia,
-            children: (0, u.jsx)(L, {
+            children: (0, u.jsx)(b, {
                 size: i,
                 alt: n,
                 spoiler: r,
@@ -172,7 +172,7 @@ function M(e) {
         (0, u.jsx)('div', {
             onMouseEnter: a,
             className: y.mediaContainer,
-            children: (0, u.jsx)(L, {
+            children: (0, u.jsx)(b, {
                 size: i,
                 alt: n,
                 spoiler: r,

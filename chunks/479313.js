@@ -9,7 +9,7 @@ n.d(t, {
         return C;
     },
     U$: function () {
-        return b;
+        return L;
     },
     e7: function () {
         return N;
@@ -125,14 +125,14 @@ function C(e, t) {
 function y(e, t) {
     return null == T[e] && (T[e] = 0), null === t ? (T[e] = 0) : (T[e] += t), T[e];
 }
-function b(e, t) {
+function L(e, t) {
     l.Z.dispatch({
         type: 'SET_SUMMARY_FEEDBACK',
         summary: e,
         rating: t
     });
 }
-async function L() {
+async function b() {
     var e;
     let t, n;
     if (!f.Z.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -215,7 +215,7 @@ function M() {
         t && e();
         async function e() {
             try {
-                await L();
+                await b();
             } catch (e) {}
             await D(n.split(','));
         }
@@ -233,7 +233,7 @@ async function P(e) {
     }
 }
 let U = {
-    setSummaryFeedback: b,
+    setSummaryFeedback: L,
     updateVisibleMessages: C,
     setSelectedSummary: O,
     setGravitySelectedSummary: R,

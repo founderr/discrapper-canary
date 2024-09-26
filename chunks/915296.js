@@ -1,6 +1,6 @@
 n.d(t, {
     HI: function () {
-        return o;
+        return l;
     },
     mJ: function () {
         return a;
@@ -33,7 +33,7 @@ let i = (0, r.B)({
         }
     ]
 });
-function o(e) {
+function l(e) {
     let { location: t } = e,
         { tileOrderVariant: n } = i.useExperiment({ location: t });
     return n;

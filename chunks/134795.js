@@ -15,7 +15,7 @@ var a = t(120356),
     _ = t(850691);
 function u(e) {
     let { showRemoveBannerButton: s, errors: t, onBannerChange: a, guildId: u, className: E, disabled: T = !1, showPremiumIcon: S = !0, isTryItOutFlow: I = !1, forcedDivider: N, withHighlight: A = !1 } = e,
-        m = A ? r.ShinyButton : r.Button;
+        C = A ? r.ShinyButton : r.Button;
     return (0, n.jsx)(l.Z, {
         className: E,
         title: d.Z.Messages.USER_SETTINGS_PROFILE_BANNER,
@@ -26,7 +26,7 @@ function u(e) {
         children: (0, n.jsxs)('div', {
             className: _.buttonsContainer,
             children: [
-                (0, n.jsx)(m, {
+                (0, n.jsx)(C, {
                     className: i()({ [_.buttonHighlighted]: A }),
                     size: r.Button.Sizes.SMALL,
                     onClick: () => (0, o.$r)(c.pC.BANNER, u, I, void 0),

@@ -123,7 +123,7 @@ class y extends (i = s.Component) {
         null != i && this._cancellers.add(i);
     }
     render() {
-        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: s, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: m, minHeight: I, maxWidth: T, maxHeight: g, onClick: A, renderAccessory: v, tabIndex: N, limitResponsiveWidth: O, useFullWidth: R, placeholder: C, placeholderVersion: b, dataSafeSrc: L } = this.props,
+        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: s, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: m, minHeight: I, maxWidth: T, maxHeight: g, onClick: A, renderAccessory: v, tabIndex: N, limitResponsiveWidth: O, useFullWidth: R, placeholder: C, placeholderVersion: L, dataSafeSrc: b } = this.props,
             { readyState: D, hasMouseOver: M, hasFocus: P } = this.state,
             U = null != n,
             w = this.getRatio(),
@@ -146,8 +146,8 @@ class y extends (i = s.Component) {
                 height: G,
                 src: '',
                 placeholder: C,
-                placeholderVersion: b,
-                dataSafeSrc: L,
+                placeholderVersion: L,
+                dataSafeSrc: b,
                 children:
                     null != _
                         ? (e) => {
@@ -294,7 +294,7 @@ class y extends (i = s.Component) {
                 return this.props.shouldRenderAccessory ? (n ? r : (0, o.jsx)(E.Z, {})) : null;
             }),
             (0, f.Vv)(this.getSrc(this.getRatio(), y.isAnimated(this.props))) && (this.state.readyState = S.zo9.READY),
-            (this.imageLoadAnalyticsEnabled = b.getCurrentConfig({ location: 'lazy_image' }).enabled);
+            (this.imageLoadAnalyticsEnabled = L.getCurrentConfig({ location: 'lazy_image' }).enabled);
     }
 }
 v(y, 'visibilityObserver', new c.Z({ threshold: 0.7 })),
@@ -306,7 +306,7 @@ v(y, 'visibilityObserver', new c.Z({ threshold: 0.7 })),
         minHeight: 0,
         shouldRenderAccessory: !0
     });
-let b = (0, _.B)({
+let L = (0, _.B)({
     kind: 'user',
     id: '2024-02_image_load_metrics',
     label: 'Image load metrics Config User Experiment',

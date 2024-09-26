@@ -17,18 +17,18 @@ var i = t(735250),
     p = t(496675),
     _ = t(358085),
     C = t(499254),
-    f = t(827498),
-    h = t(783097),
+    h = t(827498),
+    f = t(783097),
     A = t(890280),
     E = t(176412),
     N = t(231338),
-    v = t(689938),
-    x = t(94958);
+    x = t(689938),
+    v = t(94958);
 function I(e) {
     let { channel: n, application: t, sectionName: I, primaryEntryPointCommand: g, buttonSize: P = o.ButtonSizes.MEDIUM } = e,
         L = a.useId(),
         S = a.useCallback(() => {
-            C.y(f.ti.ACTIVITY);
+            C.y(h.ti.ACTIVITY);
         }, []),
         { submitting: b, wasSubmitting: R } = (0, A.Z)({
             applicationId: t.id,
@@ -41,7 +41,7 @@ function I(e) {
             applicationId: t.id,
             channelId: n.id
         }),
-        j = a.useMemo(() => (0, h.XZ)(g.displayName), [g.displayName]),
+        j = a.useMemo(() => (0, f.XZ)(g.displayName), [g.displayName]),
         {
             onActivityItemSelected: Z,
             buttonColor: O,
@@ -61,7 +61,7 @@ function I(e) {
                 a = (0, l.e7)([p.Z], () => p.Z.can(N.Pl.USE_EMBEDDED_ACTIVITIES, n)),
                 o = (0, s.KF)(n.id),
                 u = !1,
-                C = v.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START;
+                C = x.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START;
             switch (i) {
                 case d.JS.LEAVE:
                     u = !1;
@@ -75,7 +75,7 @@ function I(e) {
             if (i !== d.JS.LEAVE) {
                 let e = t instanceof m.Z ? t.embeddedActivityConfig : t.embedded_activity_config,
                     i = (0, c.Z)((0, _.getOS)());
-                null == e || e.supported_platforms.includes(i) ? n.isThread() && ((u = !0), (C = v.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_IN_THREAD)) : ((u = !0), (C = v.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_ON_DEVICE));
+                null == e || e.supported_platforms.includes(i) ? n.isThread() && ((u = !0), (C = x.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_IN_THREAD)) : ((u = !0), (C = x.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_ON_DEVICE));
             }
             return {
                 disabled: u,
@@ -88,7 +88,7 @@ function I(e) {
         });
     return (0, i.jsx)(o.Tooltip, {
         shouldShow: U,
-        tooltipContentClassName: x.tooltipContent,
+        tooltipContentClassName: v.tooltipContent,
         text: B,
         children: (e) => {
             let { onClick: n, ...a } = e;
@@ -102,7 +102,7 @@ function I(e) {
                 onClick: () => {
                     M(!0), Z(), null == n || n();
                 },
-                'aria-label': v.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
+                'aria-label': x.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
                     buttonText: H,
                     applicationName: t.name
                 }),

@@ -1,6 +1,6 @@
 n.d(t, {
     M9: function () {
-        return L;
+        return b;
     },
     QA: function () {
         return P;
@@ -35,8 +35,8 @@ var r = n(392711),
     R = n(405571),
     C = n(730886),
     y = n(473974),
-    b = n(563856);
-let L = 60,
+    L = n(563856);
+let b = 60,
     D = () => [
         {
             id: a.Ru.BRAND_DARK,
@@ -94,7 +94,7 @@ let L = 60,
         },
         {
             id: a.Ru.Y2K,
-            iconSource: b,
+            iconSource: L,
             isPremium: !0,
             name: o.Z.Messages.APP_ICON_Y2K
         },

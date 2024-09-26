@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return b;
+            return L;
         }
     });
 var r,
@@ -157,7 +157,7 @@ let C = (e) => {
             })
         });
     };
-function b(e) {
+function L(e) {
     let { source: t, onClose: n, transitionState: r } = e,
         i = (0, E.e7)([I.default], () => I.default.getCurrentUser()),
         s = (0, E.e7)([m.default], () => m.default.getFingerprint()),
@@ -175,7 +175,7 @@ function b(e) {
             }),
             !u && (n(), h.j());
     }
-    function b(e) {
+    function L(e) {
         g(e);
     }
     o.useEffect(() => {
@@ -184,20 +184,20 @@ function b(e) {
             source: { location: t }
         });
     }, [t]);
-    let L = (0, p.Dt)();
+    let b = (0, p.Dt)();
     return (0, a.jsx)(f.ThemeProvider, {
         theme: S.BRd.LIGHT,
         children: (e) =>
             (0, a.jsx)(f.ModalRoot, {
                 className: l()(v.downloadApps, e),
                 transitionState: r,
-                'aria-labelledby': L,
+                'aria-labelledby': b,
                 children: (0, a.jsx)('div', {
                     className: v.inner,
                     children: (0, a.jsxs)(f.HeadingLevel, {
                         component: (0, a.jsx)(f.HiddenVisually, {
                             children: (0, a.jsx)(f.H, {
-                                id: L,
+                                id: b,
                                 children: A.Z.Messages.DOWNLOAD_APP
                             })
                         }),
@@ -224,7 +224,7 @@ function b(e) {
                                                         isActive: c === e.platformKey,
                                                         platform: e,
                                                         onClick: C,
-                                                        onMouseEnter: b,
+                                                        onMouseEnter: L,
                                                         claimed: u
                                                     },
                                                     e.platformKey
@@ -255,7 +255,7 @@ function b(e) {
                                                         isActive: c === e.platformKey,
                                                         platform: e,
                                                         onClick: C,
-                                                        onMouseEnter: b,
+                                                        onMouseEnter: L,
                                                         claimed: u
                                                     },
                                                     e.platformKey

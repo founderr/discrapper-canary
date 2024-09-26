@@ -22,7 +22,7 @@ let f = (e) => {
         y = (e) => {
             null != e && e.preventDefault(), null == S || S(), null == A || A();
         },
-        b = () => {
+        L = () => {
             null == S || S(), null == v || v();
         };
     return (
@@ -49,7 +49,7 @@ let f = (e) => {
         null != T &&
             '' !== T &&
             (i = (0, r.jsx)(s.P, {
-                onClick: b,
+                onClick: L,
                 className: E.minorContainer,
                 children: (0, r.jsx)(c.x, {
                     className: E.secondaryAction,

@@ -45,8 +45,8 @@ function E(e) {
     let v = d(c(t, r, E)),
         [N, O] = i.useState(!1),
         [R, C] = i.useState(!1),
-        [y, b] = i.useState(!1),
-        [L] = i.useState(
+        [y, L] = i.useState(!1),
+        [b] = i.useState(
             () =>
                 new s.$o((e) => {
                     let [t, n] = e.split(',').map(Number);
@@ -60,7 +60,7 @@ function E(e) {
                     };
                 })
         );
-    i.useEffect(() => () => L.clean(), [L]);
+    i.useEffect(() => () => b.clean(), [b]);
     let D = i.useCallback(
             (e) => {
                 if (!A.current || !g) return !1;
@@ -91,11 +91,11 @@ function E(e) {
                     }),
                     !e)
                 ) {
-                    b(!0);
+                    L(!0);
                     return;
                 }
                 let o = d(c(t, n, i));
-                null != o && (b(!0), D(o));
+                null != o && (L(!0), D(o));
             },
             [m, r, E, p, t, D]
         ),
@@ -119,7 +119,7 @@ function E(e) {
         N && R && null != v && (D(v), C(!1));
     }, [R, v]),
         i.useEffect(() => {
-            N && (!y && M(r, E), b(!1));
+            N && (!y && M(r, E), L(!1));
         }, [r, E]);
     let G = i.useCallback(
             (e) => {
@@ -147,7 +147,7 @@ function E(e) {
             },
             [P, m, g, v, f, r, E]
         ),
-        k = i.useCallback((e) => (e.currentTarget !== e.target ? (!N && (O(!0), b(!0)), !1) : N ? (P(!1), !1) : void (I && null != v ? M(r, E) : P(!0))), [N, I, v, P, M, r, E]),
+        k = i.useCallback((e) => (e.currentTarget !== e.target ? (!N && (O(!0), L(!0)), !1) : N ? (P(!1), !1) : void (I && null != v ? M(r, E) : P(!0))), [N, I, v, P, M, r, E]),
         B = i.useCallback((e) => {
             if (e.target !== e.currentTarget) {
                 if (e.currentTarget.contains(e.relatedTarget)) return !1;
@@ -176,11 +176,11 @@ function E(e) {
                     'aria-colindex': e + 1,
                     id: (0, s.NE)(t, e, n),
                     tabIndex: I && e === r && n === E ? 0 : -1,
-                    onFocus: L.get(''.concat(e, ',').concat(n))
+                    onFocus: b.get(''.concat(e, ',').concat(n))
                 };
                 return e === r && n === E && (i.ref = x), i;
             },
-            [t, I, r, E, L, x]
+            [t, I, r, E, b, x]
         ),
         H = i.useCallback(
             (e) => ({

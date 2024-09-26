@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(623552),
     C = n(718582),
     y = n(177963),
-    b = n(835248),
-    L = n(437431),
+    L = n(835248),
+    b = n(437431),
     D = n(874070),
     M = n(185885),
     P = n(126134),
@@ -63,7 +63,7 @@ function k(e, t, n, r) {
                     guildId: t,
                     users: d
                 });
-            return e.isStage && !a ? (0, i.jsx)(L.Z, { className: G.imageIcon }) : (0, i.jsx)(y.Z, { className: G.imageIcon });
+            return e.isStage && !a ? (0, i.jsx)(b.Z, { className: G.imageIcon }) : (0, i.jsx)(y.Z, { className: G.imageIcon });
         case P.L.EMBEDDED_ACTIVITY:
             let { embeddedActivities: p } = e;
             if (null == p[0].applicationId)
@@ -79,14 +79,14 @@ function k(e, t, n, r) {
         case P.L.HANGOUT: {
             let { streamUserIds: r, userIds: o, channelHasVideo: s, isStage: u } = e;
             if (a) {
-                if (u) return (0, i.jsx)(L.Z, { className: G.imageIcon });
-                if (r.length > 0) return (0, i.jsx)(b.Z, { className: G.imageIcon });
+                if (u) return (0, i.jsx)(b.Z, { className: G.imageIcon });
+                if (r.length > 0) return (0, i.jsx)(L.Z, { className: G.imageIcon });
                 if (s) return (0, i.jsx)(D.Z, { className: G.imageIcon });
                 return (0, i.jsx)(M.Z, { className: G.imageIcon });
             }
             let _ = u ? d : [];
             if (u) {
-                if (0 === _.length) return (0, i.jsx)(L.Z, { className: G.imageIcon });
+                if (0 === _.length) return (0, i.jsx)(b.Z, { className: G.imageIcon });
                 return (0, i.jsx)(R.Z, {
                     guildId: t,
                     users: _
@@ -496,8 +496,8 @@ function j(e) {
         { usersToShow: O } = (0, C.Es)(T),
         R = (0, C.ni)(r),
         y = k(r, o, p, R),
-        b = B(r, o),
-        L = Z(r, R, p),
+        L = B(r, o),
+        b = Z(r, R, p),
         D = V(r),
         M = (0, C.$1)(r, o, l),
         U = H(r, o, l),
@@ -539,19 +539,19 @@ function j(e) {
             (0, i.jsxs)('div', {
                 className: s()(G.content, j && G.hangoutChannelStatusContent),
                 children: [
-                    null != b &&
+                    null != L &&
                         (0, i.jsx)(c.Heading, {
                             color: 'header-primary',
                             variant: 'heading-sm/semibold',
                             className: 0 === D.length ? G.multiLineTitle : G.singleLineTitle,
-                            children: b
+                            children: L
                         }),
-                    null != L &&
+                    null != b &&
                         (0, i.jsx)(c.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-secondary',
                             className: G.subtitle,
-                            children: L
+                            children: b
                         }),
                     !z &&
                         !(null == T ? void 0 : T.isGuildStageVoice()) &&

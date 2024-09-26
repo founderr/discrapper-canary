@@ -272,11 +272,11 @@ async function y(e) {
         );
     }
 }
-function b(e) {
+function L(e) {
     var t;
     return T.ldS.has(e.type) ? null : JSON.stringify({ type: null !== (t = S.QL.get(e.type)) && void 0 !== t ? t : null });
 }
-async function L(e, t, n, r) {
+async function b(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     l.Z.dispatch({ type: 'BILLING_PAYMENT_SOURCE_CREATE_START' });
     try {
@@ -399,7 +399,7 @@ async function w(e, t, n, r) {
         });
     if (null != h) throw P(h);
     if (null == f) throw P('paymentMethod not available with successful stripe call');
-    return L(T.gg$.STRIPE, f.id, n, {
+    return b(T.gg$.STRIPE, f.id, n, {
         billingAddressToken: E,
         analyticsLocation: r,
         bank: t
@@ -430,7 +430,7 @@ async function x(e, t, n, r) {
         });
     if (null != h) throw P(h);
     if (null == f) throw P('paymentMethod not available with successful stripe call');
-    return L(T.gg$.STRIPE, f.id, n, {
+    return b(T.gg$.STRIPE, f.id, n, {
         billingAddressToken: E,
         analyticsLocation: r,
         bank: t
@@ -461,7 +461,7 @@ async function G(e, t, n, r) {
         });
     if (null != p) throw P(p);
     if (null == h) throw P('paymentMethod not available with successful stripe call');
-    return L(T.gg$.STRIPE, h.id, n, {
+    return b(T.gg$.STRIPE, h.id, n, {
         billingAddressToken: E,
         analyticsLocation: r,
         bank: f
@@ -490,7 +490,7 @@ async function k(e, t, n) {
         });
     if (null != f) throw P(f);
     if (null == E) throw P('paymentMethod not available with successful stripe call');
-    return L(T.gg$.STRIPE, E.id, t, {
+    return b(T.gg$.STRIPE, E.id, t, {
         billingAddressToken: r,
         analyticsLocation: n
     });
@@ -526,7 +526,7 @@ async function B(e, t, n, r) {
     if ((null == h ? void 0 : h.payment_method) == null) throw P('setupIntent.payment_method not available with successful stripe call');
     return (
         o()('string' == typeof h.payment_method, 'setupIntent.payment_method expanded not supported'),
-        L(T.gg$.STRIPE, h.payment_method, n, {
+        b(T.gg$.STRIPE, h.payment_method, n, {
             billingAddressToken: f,
             analyticsLocation: r
         })
@@ -534,10 +534,10 @@ async function B(e, t, n, r) {
 }
 function F(e, t, n) {
     let { token: r, billingAddressInfo: i } = I.az(e);
-    return L(T.gg$.STRIPE, r, null != t ? t : i, { analyticsLocation: n });
+    return b(T.gg$.STRIPE, r, null != t ? t : i, { analyticsLocation: n });
 }
 function Z(e, t, n) {
-    return L(T.gg$.BRAINTREE, e, t, { analyticsLocation: n });
+    return b(T.gg$.BRAINTREE, e, t, { analyticsLocation: n });
 }
 async function V(e, t, n, r) {
     if (null == e) throw P('Stripe not loaded');
@@ -561,7 +561,7 @@ async function V(e, t, n, r) {
     });
     if (null != h) throw P(h);
     if (null == f) throw P('stripePaymentMethod not available with successful stripe call');
-    return L(T.gg$.STRIPE, f.id, t, {
+    return b(T.gg$.STRIPE, f.id, t, {
         billingAddressToken: i,
         analyticsLocation: r
     });
@@ -569,7 +569,7 @@ async function V(e, t, n, r) {
 async function H(e, t, n) {
     let r = await y(e),
         i = { type: S.QL.get(t) };
-    return L(T.gg$.ADYEN, JSON.stringify(i), e, {
+    return b(T.gg$.ADYEN, JSON.stringify(i), e, {
         billingAddressToken: r,
         analyticsLocation: n
     });
@@ -586,7 +586,7 @@ async function Y(e, t, n, r) {
         E = (0, s.K0)() + T.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t, null != _ ? _ : '', 'success');
     try {
         return {
-            paymentSource: await L(
+            paymentSource: await b(
                 T.gg$.ADYEN,
                 JSON.stringify(d),
                 e,
@@ -659,7 +659,7 @@ async function j(e) {
     return E.id;
 }
 function W(e) {
-    return T.ldS.has(e.type) ? null : S.QL.has(e.type) ? b(e) : j(e);
+    return T.ldS.has(e.type) ? null : S.QL.has(e.type) ? L(e) : j(e);
 }
 async function K() {
     try {

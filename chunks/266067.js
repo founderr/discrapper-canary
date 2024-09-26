@@ -3,7 +3,7 @@ n.d(t, {
         return H;
     },
     AW: function () {
-        return L;
+        return b;
     },
     EN: function () {
         return k;
@@ -12,7 +12,7 @@ n.d(t, {
         return m;
     },
     LX: function () {
-        return b;
+        return L;
     },
     TH: function () {
         return Z;
@@ -178,7 +178,7 @@ function y(e, t) {
         };
     return C < R && ((r[e] = a), C++), a;
 }
-function b(e, t) {
+function L(e, t) {
     void 0 === t && (t = {}), ('string' == typeof t || Array.isArray(t)) && (t = { path: t });
     var n = t,
         r = n.path,
@@ -215,7 +215,7 @@ function b(e, t) {
               };
     }, null);
 }
-var L = (function (e) {
+var b = (function (e) {
     function t() {
         return e.apply(this, arguments) || this;
     }
@@ -226,7 +226,7 @@ var L = (function (e) {
             return i.createElement(p.Consumer, null, function (t) {
                 t || (0, l.Z)(!1);
                 var n = e.props.location || t.location,
-                    r = e.props.computedMatch ? e.props.computedMatch : e.props.path ? b(n.pathname, e.props) : t.match,
+                    r = e.props.computedMatch ? e.props.computedMatch : e.props.path ? L(n.pathname, e.props) : t.match,
                     a = (0, u.Z)({}, t, {
                         location: n,
                         match: r
@@ -280,7 +280,7 @@ var G = (function (e) {
                         if (null == r && i.isValidElement(e)) {
                             n = e;
                             var o = e.props.path || e.props.from;
-                            r = o ? b(a.pathname, (0, u.Z)({}, e.props, { path: o })) : t.match;
+                            r = o ? L(a.pathname, (0, u.Z)({}, e.props, { path: o })) : t.match;
                         }
                     }),
                     r
@@ -320,5 +320,5 @@ function V() {
 function H(e) {
     var t = Z(),
         n = B(p).match;
-    return e ? b(t.pathname, e) : n;
+    return e ? L(t.pathname, e) : n;
 }

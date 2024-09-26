@@ -24,8 +24,8 @@ var a = n(735250),
     R = n(831506),
     C = n(271383),
     y = n(283595),
-    b = n(293273),
-    L = n(594174),
+    L = n(293273),
+    b = n(594174),
     D = n(181106),
     M = n(417363),
     P = n(768581),
@@ -212,17 +212,17 @@ class Z extends (r = o.PureComponent) {
     }
 }
 B(Z, 'defaultProps', { isPreview: !1 }),
-    (t.Z = s.ZP.connectStores([g.Z, R.Z, b.Z, y.Z, I.Z, M.Z, O.Z, D.Z, L.default, C.ZP], (e) => {
+    (t.Z = s.ZP.connectStores([g.Z, R.Z, L.Z, y.Z, I.Z, M.Z, O.Z, D.Z, b.default, C.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: r, partyId: i, userId: a, guildId: o } = e,
             { id: s } = null != r ? r : {},
             l = null != t && null != t.party && t.party.id === i ? R.Z.getParty(t.party.id) : null,
-            u = null != s ? b.Z.getApplicationActivity(s) : b.Z.findActivity((e) => e.type === G.IIU.LISTENING),
+            u = null != s ? L.Z.getApplicationActivity(s) : L.Z.findActivity((e) => e.type === G.IIU.LISTENING),
             c = !1;
         null != s && (c = D.Z.getState(s, G.mFx.JOIN) === G.OcF.LOADING);
         let d = Array.from(null != l ? l : []).map((e) => {
                 let t = null != o ? C.ZP.getMember(o, e) : null,
                     n = null != t ? t.nick : null,
-                    r = L.default.getUser(e),
+                    r = b.default.getUser(e),
                     i = null == r;
                 return (
                     null == r && (r = new N.Z({ discriminator: '0005' })),

@@ -120,7 +120,7 @@ async function v(e, t, n) {
         o = arguments.length > 4 ? arguments[4] : void 0,
         c = null != o && !!o.burst,
         d = null != o && !!o.isRetry;
-    if (!d && b(e, t, n, c)) {
+    if (!d && L(e, t, n, c)) {
         s.Z.show({
             title: m.Z.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_TITLE,
             body: m.Z.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_BODY,
@@ -275,7 +275,7 @@ async function y(e, t) {
         } catch {}
     return n;
 }
-function b(e, t, n, r) {
+function L(e, t, n, r) {
     let i = d.Z.getMessage(e, t);
     return null != i && i.userHasReactedWithEmoji(n, r);
 }

@@ -38,8 +38,8 @@ let g = 2,
     y = (e, t) => {
         C = new Map(C.set(e, t));
     },
-    b = p.Z.Millis.HOUR,
-    L = async () => {
+    L = p.Z.Millis.HOUR,
+    b = async () => {
         if (0 !== g) return;
         let e = u.Z.database();
         if (null == e) return;
@@ -226,16 +226,16 @@ class q extends (r = s.ZP.Store) {
         return g;
     }
     get stickerMetadata() {
-        return L(), null == v && ((v = new Map()), w()), v;
+        return b(), null == v && ((v = new Map()), w()), v;
     }
     get hasLoadedStickerPacks() {
-        return null != O && O + b > Date.now();
+        return null != O && O + L > Date.now();
     }
     get isFetchingStickerPacks() {
         return R;
     }
     getStickerById(e) {
-        return !A.has(e) && L(), A.get(e);
+        return !A.has(e) && b(), A.get(e);
     }
     getStickerPack(e) {
         return S.get(e);
@@ -250,13 +250,13 @@ class q extends (r = s.ZP.Store) {
         return C;
     }
     getAllStickersIterator() {
-        return L(), A.values();
+        return b(), A.values();
     }
     getAllGuildStickers() {
-        return L(), C;
+        return b(), C;
     }
     getStickersByGuildId(e) {
-        return L(), C.get(e);
+        return b(), C.get(e);
     }
 }
 T(q, 'displayName', 'StickersStore'),

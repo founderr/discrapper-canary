@@ -93,11 +93,11 @@ function y(e) {
     if (null == _.Z.getChannel(t)) return !1;
     for (let [e, t] of Object.entries(I)) t.state === f.F.FAILED && w(e);
 }
-function b(e) {
+function L(e) {
     let { nonce: t } = e;
     U(t);
 }
-function L(e) {
+function b(e) {
     let { application: t, nonce: n } = e;
     (i = t.id), U(n);
 }
@@ -176,9 +176,9 @@ h(x, 'displayName', 'InteractionStore'),
         INTERACTION_FAILURE: C,
         MESSAGE_CREATE: R,
         CHANNEL_SELECT: y,
-        INTERACTION_IFRAME_MODAL_CREATE: L,
+        INTERACTION_IFRAME_MODAL_CREATE: b,
         INTERACTION_IFRAME_MODAL_CLOSE: D,
         INTERACTION_IFRAME_MODAL_KEY_CREATE: M,
-        INTERACTION_MODAL_CREATE: b,
+        INTERACTION_MODAL_CREATE: L,
         EMBEDDED_ACTIVITY_UPDATE_V2: P
     }));

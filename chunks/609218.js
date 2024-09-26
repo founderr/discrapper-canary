@@ -28,14 +28,14 @@ var r,
 function A(e) {
     let { containerContext: t, image: n, title: r, description: o, enableSocialProof: A, analyticsLocationSection: v, upsellViewedTrackingData: N, onClose: O, onDisplay: R, onLearnMore: C } = e,
         y = (0, l.e7)([h.Z], () => h.Z.affinities),
-        b = (0, l.e7)([h.Z], () => h.Z.hasFetched);
+        L = (0, l.e7)([h.Z], () => h.Z.hasFetched);
     a.useEffect(() => {
-        !b && A && c.MH();
-    }, [b, A]),
+        !L && A && c.MH();
+    }, [L, A]),
         a.useEffect(() => {
             f.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, N), null == R || R();
         }, [R, N]);
-    let L = y.length > 1 && A,
+    let b = y.length > 1 && A,
         D = () => (2 === t ? S.hasTabParentContainer : 1 === t ? S.hasParentContainer : S.noParentContainer),
         M = () => {
             f.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
@@ -74,11 +74,11 @@ function A(e) {
                                 alt: 'Nitro Perk'
                             }),
                             (0, i.jsx)(u.Heading, {
-                                className: s()(S.title, { [S.titleNoSocialProof]: !L }),
+                                className: s()(S.title, { [S.titleNoSocialProof]: !b }),
                                 variant: 'heading-xl/bold',
                                 children: r
                             }),
-                            L && (0, i.jsx)(m.Z, { affinities: y }),
+                            b && (0, i.jsx)(m.Z, { affinities: y }),
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
                                 className: S.body,

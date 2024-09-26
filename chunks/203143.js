@@ -29,8 +29,8 @@ var s = n(512722),
     R = n(607744),
     C = n(375954),
     y = n(117530),
-    b = n(553803),
-    L = n(316758),
+    L = n(553803),
+    b = n(316758),
     D = n(467531),
     M = n(798628),
     P = n(918088),
@@ -96,7 +96,7 @@ function B(e) {
     let a = C.Z.getMessage(t, n);
     if (null == a || null == a.poll || 0 === a.poll.answers.length) return;
     let o = null != r ? r : String(a.poll.answers[0].answer_id);
-    b.A({
+    L.A({
         message: a,
         initialAnswerId: o
     });
@@ -413,7 +413,7 @@ async function z(e) {
         if (null != l && l.length > 0) {
             var _;
             let e = null !== (_ = v.default.getToken()) && void 0 !== _ ? _ : '';
-            await L.sk({
+            await b.sk({
                 channel: t,
                 items: l,
                 token: e,

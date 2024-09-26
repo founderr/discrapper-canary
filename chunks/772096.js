@@ -40,19 +40,19 @@ let v = ['http:', 'https:', 'discord:'],
     R = [T.b.LIST, T.b.HEADING, T.b.BLOCK_QUOTE, T.b.SUBTEXT],
     C = [T.b.TEXT],
     y = [T.b.UNDERLINE, T.b.STRONG, T.b.ITALICS, T.b.STRIKETHROUGH, T.b.INLINE_CODE, T.b.SPOILER, T.b.LINE_BREAK, T.b.TIMESTAMP, T.b.EMOJI, T.b.CUSTOM_EMOJI, T.b.LIST, T.b.HEADING, T.b.BLOCK_QUOTE, T.b.SUBTEXT];
-function b(e, t) {
+function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (!Array.isArray(e) && (e = [e]), e)) {
         if (void 0 === r || !t.includes(r.type)) return null;
         if (r.type === T.b.INLINE_CODE) {
             let e = [...t, ...n];
-            if (null == b(r.validationChildContent, e)) return null;
+            if (null == L(r.validationChildContent, e)) return null;
         }
-        if (Array.isArray(r.content) && null == b(r.content, t)) return null;
+        if (Array.isArray(r.content) && null == L(r.content, t)) return null;
     }
     return e;
 }
-function L(e) {
+function b(e) {
     let t = '';
     for (let n of e)
         switch (n.type) {
@@ -74,7 +74,7 @@ function L(e) {
             case T.b.UNDERLINE:
             case T.b.STRIKETHROUGH:
             case T.b.SPOILER:
-                t += L(n.content);
+                t += b(n.content);
                 break;
             case T.b.TIMESTAMP:
                 t += '<timestamp>';
@@ -137,9 +137,9 @@ t.ZP = {
             M = n.allowEmojiLinks ? O : N,
             P = [...M, ...R],
             U = [...C, ...y],
-            w = b(t(E, v), P, [T.b.EMOJI]),
-            x = b(t(f, v), U);
-        if (null == w || null == x || 0 === L(w).trim().length) return s();
+            w = L(t(E, v), P, [T.b.EMOJI]),
+            x = L(t(f, v), U);
+        if (null == w || null == x || 0 === b(w).trim().length) return s();
         let G = d().pick(t.rules, M),
             k = p().parserFor(G)(u.whitespaceSanitized, v),
             B = c.whitespaceSanitized,

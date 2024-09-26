@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return b;
+        return L;
     }
 });
 var r = n(47120);
@@ -29,7 +29,7 @@ var i = n(735250),
     R = n(981631),
     C = n(23952);
 let y = '14px';
-function b(e) {
+function L(e) {
     let { emoji: t, className: n, animate: r = !0, hideTooltip: a, tooltipDelay: o } = e,
         l = T.Yk.useSetting(),
         d = null != t.id ? ':'.concat(t.name, ':') : h.ZP.translateSurrogatesToInlineEmoji(t.name),
@@ -52,7 +52,7 @@ function b(e) {
                   })
           });
 }
-let L = 150,
+let b = 150,
     D = (e) => {
         let { className: t, text: n } = e,
             r = a.useRef(null),
@@ -66,7 +66,7 @@ let L = 150,
             }, [n]),
             (0, i.jsx)(u.Tooltip, {
                 text: l || null == n || '' === n ? null : n,
-                delay: L,
+                delay: b,
                 'aria-label': !1,
                 children: (e) =>
                     (0, i.jsxs)(i.Fragment, {
@@ -89,7 +89,7 @@ let L = 150,
         );
     },
     M = (e) => {
-        let { activities: t, applicationStream: n, className: r, textClassName: a, emojiClassName: o, animate: s = !0, hideTooltip: c = !1, hideEmoji: h = !1, user: T, hasQuest: L } = e,
+        let { activities: t, applicationStream: n, className: r, textClassName: a, emojiClassName: o, animate: s = !0, hideTooltip: c = !1, hideEmoji: h = !1, user: T, hasQuest: b } = e,
             M = null != t ? t.find((e) => e.type === R.IIU.CUSTOM_STATUS) : null,
             P = (0, l.e7)([g.default], () => g.default.getId() === (null == T ? void 0 : T.id)),
             U = (0, l.e7)([m.Z], () => (P ? m.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === R.IIU.HANG_STATUS) : null)),
@@ -115,7 +115,7 @@ let L = 150,
             : null != M &&
               null != M.emoji &&
               !h &&
-              (k = (0, i.jsx)(b, {
+              (k = (0, i.jsx)(L, {
                   emoji: M.emoji,
                   animate: s,
                   hideTooltip: c,
@@ -137,7 +137,7 @@ let L = 150,
                           text: Y,
                           className: a
                       }),
-                      L &&
+                      b &&
                           (0, i.jsx)(u.QuestsIcon, {
                               size: 'custom',
                               className: C.questsIcon,

@@ -29,8 +29,8 @@ var r = n(735250),
     R = n(769860);
 function C(e) {
     var t, n, a;
-    let { title: C, type: y, guildBoostProps: b, analyticsSource: L, analyticsLocation: D, body: M, context: P, glowUp: U, modalClassName: w, modalContentClassName: x, artContainerClassName: G, headerClassName: k, bodyClassName: B, transitionState: F, onClose: Z, onSubscribeClick: V, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: j, showNewBadge: W = !1, enableArtBoxShadow: K = !0, subscriptionTier: z = A.Si.TIER_2, isLoading: q = !1, hideBackButton: Q, backButtonText: X, showEnhancedUpsell: $, useSubscribeButtonGradient: J, subscribeButtonClassname: ee, hidePremiumOfferUpsell: et, children: en, LeadingComponent: er, ...ei } = e,
-        ea = null != b,
+    let { title: C, type: y, guildBoostProps: L, analyticsSource: b, analyticsLocation: D, body: M, context: P, glowUp: U, modalClassName: w, modalContentClassName: x, artContainerClassName: G, headerClassName: k, bodyClassName: B, transitionState: F, onClose: Z, onSubscribeClick: V, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: j, showNewBadge: W = !1, enableArtBoxShadow: K = !0, subscriptionTier: z = A.Si.TIER_2, isLoading: q = !1, hideBackButton: Q, backButtonText: X, showEnhancedUpsell: $, useSubscribeButtonGradient: J, subscribeButtonClassname: ee, hidePremiumOfferUpsell: et, children: en, LeadingComponent: er, ...ei } = e,
+        ea = null != L,
         eo = (0, m.N)(),
         es = (0, p.Ng)(),
         el = !et && ((null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === z || (0, p.Wp)(es, z)) && !ea,
@@ -39,15 +39,15 @@ function C(e) {
         !q &&
             (ea
                 ? E.default.track(v.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
-                      type: ''.concat(y, ' - Tier ').concat(b.boostedGuildTier),
-                      guild_id: b.guild.id,
-                      channel_id: b.channelId,
+                      type: ''.concat(y, ' - Tier ').concat(L.boostedGuildTier),
+                      guild_id: L.guild.id,
+                      channel_id: L.channelId,
                       location: D,
                       location_stack: eu
                   })
                 : E.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
                       type: y,
-                      source: L,
+                      source: b,
                       location: D,
                       location_stack: eu,
                       sku_id: (0, f.Wz)(z)
@@ -63,7 +63,7 @@ function C(e) {
             if (ea)
                 return (0, r.jsx)(_.Z, {
                     analyticsLocation: D,
-                    guild: b.guild,
+                    guild: L.guild,
                     onClose: Z
                 });
             let e = $ ? N.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;

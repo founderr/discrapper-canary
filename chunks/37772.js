@@ -24,8 +24,8 @@ var r = n(735250),
     R = n(25015),
     C = n(689674),
     y = n(963550),
-    b = n(845080),
-    L = n(295790),
+    L = n(845080),
+    b = n(295790),
     D = n(145807),
     M = n(56744),
     P = n(834129),
@@ -88,7 +88,7 @@ function k(e) {
                     [G.groupStart]: e.isGroupStart
                 }),
                 childrenRepliedMessage: (0, M.Z)(a, i, Y, j, l),
-                childrenHeader: (0, b.Z)({
+                childrenHeader: (0, L.Z)({
                     ...e,
                     author: en,
                     guildId: i.guild_id
@@ -119,7 +119,7 @@ function k(e) {
                 }),
                 childrenExecutedCommand: (0, D.Z)(a, i, l),
                 childrenMessageContent: (0, y.Z)(e, ee),
-                childrenSystemMessage: (0, L.Z)(e),
+                childrenSystemMessage: (0, b.Z)(e),
                 onContextMenu: x,
                 onClick: F,
                 hasThread: !1 !== V && null != er && a.hasFlag(U.iLy.HAS_THREAD),

@@ -253,7 +253,7 @@ class f {
                                         relativeReceptionDelay: t.relativeReceptionDelay,
                                         relativePlayoutDelay: t.relativePlayoutDelay
                                     },
-                                    b = {
+                                    L = {
                                         silent: t.opSilence,
                                         normal: t.opNormal,
                                         merged: t.opMerge,
@@ -262,7 +262,7 @@ class f {
                                         preemptiveExpanded: t.opPreemptiveExpand,
                                         cng: t.opCNG
                                     },
-                                    L = {
+                                    b = {
                                         passthroughCount: null !== (l = t.passthroughCount) && void 0 !== l ? l : 0,
                                         decryptSuccessCount: null !== (u = t.decryptSuccessCount) && void 0 !== u ? u : 0,
                                         decryptFailureCount: null !== (c = t.decryptFailureCount) && void 0 !== c ? c : 0,
@@ -286,14 +286,14 @@ class f {
                                             mosCount: this.inboundStats[n].mosCount + (i > 0 ? 1 : 0),
                                             mosBuckets: a,
                                             bufferStats: y,
-                                            frameOpStats: b,
-                                            ...L
+                                            frameOpStats: L,
+                                            ...b
                                         }),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: this.periodicInboundStats[n].previousTimestampMs,
                                             previous: this.periodicInboundStats[n].previous,
                                             currentTimestampMs: Date.now(),
-                                            current: b,
+                                            current: L,
                                             accelerateRateSum: this.periodicInboundStats[n].accelerateRateSum + (null !== (E = t.accelerateRate) && void 0 !== E ? E : 0),
                                             expandRateSum: this.periodicInboundStats[n].expandRateSum + (null !== (f = t.expandRate) && void 0 !== f ? f : 0),
                                             preemptiveExpandRateSum: this.periodicInboundStats[n].preemptiveExpandRateSum + (null !== (h = t.preemptiveExpandRate) && void 0 !== h ? h : 0),
@@ -312,14 +312,14 @@ class f {
                                         mosCount: 0,
                                         mosBuckets: [0, 0, 0, 0, 0],
                                         bufferStats: y,
-                                        frameOpStats: b,
-                                        ...L
+                                        frameOpStats: L,
+                                        ...b
                                     }),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: Date.now(),
-                                            previous: b,
+                                            previous: L,
                                             currentTimestampMs: Date.now(),
-                                            current: b,
+                                            current: L,
                                             accelerateRateSum: null !== (m = t.accelerateRate) && void 0 !== m ? m : 0,
                                             expandRateSum: null !== (I = t.expandRate) && void 0 !== I ? I : 0,
                                             preemptiveExpandRateSum: null !== (T = t.preemptiveExpandRate) && void 0 !== T ? T : 0,

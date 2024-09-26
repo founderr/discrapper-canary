@@ -29,14 +29,14 @@ function O(e) {
     var t;
     let { onClose: r, closePopout: o, sound: O, channel: R } = e,
         C = (0, d.ZP)(),
-        [y, b] = a.useState(!1),
-        { location: L } = (0, c.O)(),
+        [y, L] = a.useState(!1),
+        { location: b } = (0, c.O)(),
         D = a.useMemo(
             () => ({
-                ...L,
+                ...b,
                 section: g.jXE.SOUNDBOARD_SOUND_PICKER
             }),
-            [L]
+            [b]
         ),
         { analyticsLocations: M } = (0, E.ZP)(_.Z.PREMIUM_UPSELL),
         { previewSound: P } = (0, I.Z)(O, null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : null),
@@ -104,10 +104,10 @@ function O(e) {
                         size: u.Button.Sizes.SMALL,
                         color: u.Button.Colors.GREEN,
                         onClick: () => {
-                            b(!0);
+                            L(!0);
                         },
                         onSubscribeModalClose: (e) => {
-                            b(!1), e && r();
+                            L(!1), e && r();
                         }
                     })
                 ]

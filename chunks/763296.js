@@ -39,9 +39,9 @@ let A = new Map(),
     R = 0,
     C = new Set(),
     y = new Map(),
-    b = !1;
-function L() {
-    A.clear(), v.clear(), y.clear(), (b = !1), (R = 0), (O = 0);
+    L = !1;
+function b() {
+    A.clear(), v.clear(), y.clear(), (L = !1), (R = 0), (O = 0);
 }
 function D() {
     v.clear(), y.clear();
@@ -89,7 +89,7 @@ function F(e) {
     let { soundId: i, userId: a } = e,
         o = (null !== (n = v.get(i)) && void 0 !== n ? n : 0) + 1,
         s = (null !== (r = y.get(a)) && void 0 !== r ? r : 0) + 1;
-    v.set(i, o), y.set(a, s), a !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (b = !0);
+    v.set(i, o), y.set(a, s), a !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (L = !0);
 }
 function Z(e) {
     var t, n;
@@ -185,7 +185,7 @@ class z extends (i = c.ZP.Store) {
         return N.has(e);
     }
     hasHadOtherUserPlaySoundInSession() {
-        return b;
+        return L;
     }
     hasFetchedAllSounds() {
         return 2 === R && 2 === O;
@@ -193,7 +193,7 @@ class z extends (i = c.ZP.Store) {
 }
 S(z, 'displayName', 'SoundboardStore'),
     (t.Z = new z(d.Z, {
-        LOGOUT: L,
+        LOGOUT: b,
         GUILD_SOUNDBOARD_FETCH: M,
         GUILD_SOUNDBOARD_SOUND_CREATE: w,
         GUILD_SOUNDBOARD_SOUND_UPDATE: w,

@@ -18,7 +18,7 @@ n.d(t, {
         return C;
     },
     XE: function () {
-        return b;
+        return L;
     },
     hs: function () {
         return y;
@@ -27,7 +27,7 @@ n.d(t, {
         return v;
     },
     xR: function () {
-        return L;
+        return b;
     },
     xz: function () {
         return M;
@@ -148,7 +148,7 @@ function y(e) {
         m.fy.INFREQUENT_USER_ACTION
     );
 }
-function b(e, t, n) {
+function L(e, t, n) {
     l.Z.dispatch({
         type: 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY',
         sound: t,
@@ -156,7 +156,7 @@ function b(e, t, n) {
         trigger: n
     });
 }
-function L(e, t) {
+function b(e, t) {
     l.Z.dispatch({
         type: 'GUILD_SOUNDBOARD_SOUND_PLAY_START',
         soundId: e,

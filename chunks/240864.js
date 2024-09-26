@@ -81,11 +81,11 @@ function y(e) {
     let { product: t } = e;
     (f[t.id] = 2), S.set(t.id, t);
 }
-function b(e) {
+function L(e) {
     let { productId: t, error: n } = e;
     (f[t] = 2), 404 === n.status && S.delete(t);
 }
-function L(e) {
+function b(e) {
     let { product: t } = e;
     S.set(t.id, t);
 }
@@ -124,10 +124,10 @@ _(P, 'displayName', 'GuildProductsStore'),
         GUILD_PRODUCTS_FETCH: N,
         GUILD_PRODUCTS_FETCH_SUCCESS: O,
         GUILD_PRODUCTS_FETCH_FAILURE: R,
-        GUILD_PRODUCT_CREATE: L,
+        GUILD_PRODUCT_CREATE: b,
         GUILD_PRODUCT_UPDATE: D,
         GUILD_PRODUCT_DELETE: M,
         GUILD_PRODUCT_FETCH: C,
         GUILD_PRODUCT_FETCH_SUCCESS: y,
-        GUILD_PRODUCT_FETCH_FAILURE: b
+        GUILD_PRODUCT_FETCH_FAILURE: L
     }));

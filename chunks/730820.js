@@ -20,19 +20,19 @@ var n = t(735250),
     I = t(921801),
     N = t(607018),
     A = t(778764),
-    m = t(314897),
-    C = t(325067),
+    C = t(314897),
+    m = t(325067),
     g = t(594174),
     h = t(572004),
     O = t(287880),
     p = t(714565),
     R = t(202858),
     x = t(726985),
-    f = t(981631),
-    M = t(815660),
+    M = t(981631),
+    f = t(815660),
     D = t(689938),
-    P = t(898005),
-    L = t(113207);
+    L = t(898005),
+    P = t(113207);
 function b(e, s, t) {
     return (
         s in e
@@ -62,18 +62,18 @@ function Z(e) {
             [i]
         );
     return (0, n.jsx)('li', {
-        className: L.marginBottom20,
+        className: P.marginBottom20,
         children: (0, n.jsx)(l.Clickable, {
             innerRef: r,
-            className: P.backupCode,
+            className: L.backupCode,
             onKeyDown: o,
             children: (0, n.jsx)(l.Checkbox, {
                 displayOnly: !0,
                 readOnly: !0,
-                className: P.codeCheckbox,
+                className: L.codeCheckbox,
                 value: t,
                 children: (0, n.jsx)('span', {
-                    className: P.code,
+                    className: L.code,
                     children: i
                 })
             })
@@ -89,17 +89,17 @@ class v extends a.PureComponent {
         let { revealed: t } = this.state,
             { currentUser: a, togglingSMS: i } = this.props,
             r = null != a.phone,
-            o = a.hasFlag(f.xW$.MFA_SMS);
+            o = a.hasFlag(M.xW$.MFA_SMS);
         if (r || o) {
             let e = t ? a.phone : this.maskPhoneNumber(a.phone);
             s = (0, n.jsxs)(l.FormText, {
                 type: l.FormText.Types.DESCRIPTION,
-                className: L.marginBottom8,
+                className: P.marginBottom8,
                 children: [
                     D.Z.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({ phoneNumber: e }),
                     (0, n.jsx)(l.Anchor, {
                         onClick: this.togglePhoneNumberVisibility,
-                        className: P.phoneRevealer,
+                        className: L.phoneRevealer,
                         children: t ? D.Z.Messages.MFA_SMS_PHONE_NUMBER_HIDE : D.Z.Messages.MFA_SMS_PHONE_NUMBER_REVEAL
                     })
                 ]
@@ -107,7 +107,7 @@ class v extends a.PureComponent {
         }
         if (o)
             e = (0, n.jsx)(T.Z, {
-                className: r ? '' : L.marginTop8,
+                className: r ? '' : P.marginTop8,
                 children: (0, n.jsx)(l.Button, {
                     color: l.Button.Colors.RED,
                     look: l.Button.Looks.OUTLINED,
@@ -120,7 +120,7 @@ class v extends a.PureComponent {
         else {
             let s = (0, p.c)(a);
             e = (0, n.jsxs)(T.Z, {
-                className: r ? '' : L.marginTop8,
+                className: r ? '' : P.marginTop8,
                 children: [
                     (0, n.jsx)(l.Button, {
                         onClick: this.handleEnableSMS,
@@ -144,7 +144,7 @@ class v extends a.PureComponent {
         return (0, n.jsx)(I.F, {
             setting: x.s6.ACCOUNT_SMS_BACKUP,
             children: (0, n.jsxs)(l.FormSection, {
-                className: L.marginTop40,
+                className: P.marginTop40,
                 title: D.Z.Messages.MFA_SMS_AUTH,
                 children: [
                     (0, n.jsx)(l.FormText, {
@@ -184,20 +184,20 @@ class v extends a.PureComponent {
                 children: [
                     (0, n.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: L.marginBottom20,
+                        className: P.marginBottom20,
                         children: D.Z.Messages.TWO_FA_BACKUP_CODES_BODY.format()
                     }),
                     (0, n.jsxs)(T.Z, {
                         children: [
                             (0, n.jsx)(T.Z.Child, {
                                 children: (0, n.jsx)('ul', {
-                                    className: P.checkboxGroup,
+                                    className: L.checkboxGroup,
                                     children: a(s.slice(0, s.length / 2))
                                 })
                             }),
                             (0, n.jsx)(T.Z.Child, {
                                 children: (0, n.jsx)('ul', {
-                                    className: P.checkboxGroup,
+                                    className: L.checkboxGroup,
                                     children: a(s.slice(s.length / 2))
                                 })
                             })
@@ -211,7 +211,7 @@ class v extends a.PureComponent {
                             children: D.Z.Messages.TWO_FA_GENERATE_CODES
                         })
                     }),
-                    (0, n.jsx)(l.FormDivider, { className: L.marginTop20 })
+                    (0, n.jsx)(l.FormDivider, { className: P.marginTop20 })
                 ]
             });
         }
@@ -220,12 +220,12 @@ class v extends a.PureComponent {
                 (0, n.jsx)(l.FormTitle, { children: D.Z.Messages.TWO_FA }),
                 (0, n.jsx)(l.FormText, {
                     type: l.FormText.Types.DESCRIPTION,
-                    className: L.marginBottom20,
+                    className: P.marginBottom20,
                     children: D.Z.Messages.TWO_FA_DESCRIPTION
                 }),
                 (0, n.jsxs)(T.Z, {
                     justify: T.Z.Justify.START,
-                    className: L.marginBottom20,
+                    className: P.marginBottom20,
                     children: [
                         (0, n.jsx)(T.Z.Child, {
                             wrap: !0,
@@ -272,7 +272,7 @@ class v extends a.PureComponent {
             children: [
                 (0, n.jsx)(l.FormText, {
                     type: l.FormText.Types.DESCRIPTION,
-                    className: L.marginBottom20,
+                    className: P.marginBottom20,
                     children: D.Z.Messages.TWO_FA_SALES_PITCH
                 }),
                 (0, n.jsx)(l.FormItem, {
@@ -317,7 +317,7 @@ class v extends a.PureComponent {
                     ...s,
                     ...e
                 }),
-            { modalKey: M.M }
+            { modalKey: f.M }
         );
     }
     constructor(...e) {
@@ -338,7 +338,7 @@ class v extends a.PureComponent {
                 });
             }),
             b(this, 'generateBackupCodes', async () => {
-                let e = C.Z.getVerificationKey();
+                let e = m.Z.getVerificationKey();
                 await c.Z.confirmViewBackupCodes(e, !0);
             }),
             b(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
@@ -415,9 +415,9 @@ class v extends a.PureComponent {
 function j(e) {
     let s = (0, o.e7)([g.default], () => g.default.getCurrentUser());
     r()(null != s, 'TwoFactorAuth: currentUser cannot be undefined');
-    let t = (0, o.cj)([C.Z, m.default], () => ({
-        togglingSMS: C.Z.togglingSMS,
-        hasTOTPEnabled: m.default.hasTOTPEnabled()
+    let t = (0, o.cj)([m.Z, C.default], () => ({
+        togglingSMS: m.Z.togglingSMS,
+        hasTOTPEnabled: C.default.hasTOTPEnabled()
     }));
     return (0, n.jsx)(v, {
         currentUser: s,

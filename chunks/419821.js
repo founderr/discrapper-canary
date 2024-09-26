@@ -7,20 +7,20 @@ var s = n(735250),
     a = n(470079),
     r = n(512722),
     i = n.n(r),
-    o = n(399606),
-    l = n(481060),
+    l = n(399606),
+    o = n(481060),
     c = n(594174),
     d = n(933970),
     _ = n(340453),
-    u = n(292352),
-    E = n(689938),
+    E = n(292352),
+    u = n(689938),
     T = n(279324);
 function I(e) {
     let { user: t } = e,
-        r = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
+        r = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         I = a.useCallback(() => {
             i()(void 0 !== r, 'User must be logged in to accept a link request'),
-                (0, l.openModalLazy)(async () => {
+                (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('50872').then(n.bind(n, 442673));
                     return (n) =>
                         (0, s.jsx)(e, {
@@ -37,15 +37,15 @@ function I(e) {
                 className: T.details,
                 children: (0, s.jsx)(_.Z, {
                     otherUser: t,
-                    status: u.ne.ACTIVE
+                    status: E.ne.ACTIVE
                 })
             }),
             (0, s.jsx)('div', {
                 className: T.actions,
                 children: (0, s.jsx)(d.Z, {
-                    icon: l.XSmallIcon,
+                    icon: o.XSmallIcon,
                     className: T.__invalid_actionDeny,
-                    tooltip: E.Z.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
+                    tooltip: u.Z.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
                     onClick: I
                 })
             })

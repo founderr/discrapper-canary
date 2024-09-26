@@ -20,19 +20,19 @@ var n,
     I = t(809206),
     N = t(497321),
     A = t(634894),
-    m = t(100527),
-    C = t(906732),
+    C = t(100527),
+    m = t(906732),
     g = t(475977),
     h = t(957730),
     O = t(31590),
     p = t(53691),
     R = t(267717),
     x = t(296810),
-    f = t(921813),
-    M = t(935147),
+    M = t(921813),
+    f = t(935147),
     D = t(246946),
-    P = t(25990),
-    L = t(594174),
+    L = t(25990),
+    P = t(594174),
     b = t(74538),
     Z = t(695346),
     v = t(265159),
@@ -40,18 +40,18 @@ var n,
     B = t(689938),
     U = t(111265);
 function G() {
-    let e = (0, _.e7)([L.default], () => {
-        let e = L.default.getCurrentUser();
+    let e = (0, _.e7)([P.default], () => {
+        let e = P.default.getCurrentUser();
         return d()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
     });
     r.useEffect(() => {
         (0, S.In)(e.id);
     }, [e.id]);
     let s = (0, _.e7)([D.Z], () => D.Z.hidePersonalInformation),
-        { pendingBio: t, ...n } = (0, _.cj)([P.Z], () => P.Z.getAllPending()),
+        { pendingBio: t, ...n } = (0, _.cj)([L.Z], () => L.Z.getAllPending()),
         a = Z.dN.useSetting() && null != t ? h.ZP.parse(void 0, t).content : t,
         o = b.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: c } = (0, C.ZP)(m.Z.PROFILE);
+        { analyticsLocations: c } = (0, m.ZP)(C.Z.PROFILE);
     r.useEffect(() => () => T.Z.wait(I.W3), []);
     let G = 'UserSettingsProfileCustomization';
     (0, A.j)({
@@ -96,7 +96,7 @@ function G() {
         Q = r.useRef(null);
     return s
         ? (0, i.jsx)(N.Z, {})
-        : (0, i.jsxs)(C.Gt, {
+        : (0, i.jsxs)(m.Gt, {
               value: c,
               children: [
                   (0, i.jsx)(g.Z, {}),
@@ -114,7 +114,7 @@ function G() {
                       }),
                   K &&
                       (0, i.jsx)(x.Z, {
-                          profilePreview: (0, i.jsx)(f.Z, {
+                          profilePreview: (0, i.jsx)(M.Z, {
                               user: e,
                               canUsePremiumCustomization: o,
                               onUpsellClick: v.Z,
@@ -130,7 +130,7 @@ function G() {
                           active: V,
                           children: (0, i.jsx)('div', {
                               ref: Q,
-                              children: (0, i.jsx)(M.Z, { user: e })
+                              children: (0, i.jsx)(f.Z, { user: e })
                           })
                       }),
                   V &&

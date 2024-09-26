@@ -35,8 +35,8 @@ var o = n(735250),
     R = n(740492),
     C = n(430824),
     y = n(496675),
-    b = n(594174),
-    L = n(768581),
+    L = n(594174),
+    b = n(768581),
     D = n(585483),
     M = n(630388),
     P = n(74538),
@@ -120,7 +120,7 @@ function q(e) {
     let { props: r, guildId: i, handleRenderPopout: a, showCommunicationDisabledStyles: l = !1, className: u } = e,
         { message: h, author: p, compact: m = !1, subscribeToGroupId: I, animate: T = !0, onContextMenu: g, onClickAvatar: S, onPopoutRequestClose: A, showAvatarPopout: N } = r,
         [C, y] = s.useState(!1),
-        { analyticsLocations: b } = (0, f.ZP)(E.Z.AVATAR),
+        { analyticsLocations: L } = (0, f.ZP)(E.Z.AVATAR),
         M = (0, d.e7)([R.ZP], () => {
             var e;
             return null !== (e = r.displayCompactAvatars) && void 0 !== e ? e : R.ZP.displayCompactAvatars;
@@ -145,7 +145,7 @@ function q(e) {
             var e, t;
             return Z && null == U.avatar && (null === (e = h.application) || void 0 === e ? void 0 : e.icon) != null
                 ? null !==
-                      (t = L.ZP.getApplicationIconURL({
+                      (t = b.ZP.getApplicationIconURL({
                           id: h.application.id,
                           icon: h.application.icon,
                           size: x,
@@ -163,7 +163,7 @@ function q(e) {
     )
         return null != a && null != N
             ? (0, o.jsx)(f.Gt, {
-                  value: b,
+                  value: L,
                   children: (0, o.jsx)(_.Popout, {
                       preload: P ? void 0 : H,
                       renderPopout: a,
@@ -186,7 +186,7 @@ function q(e) {
                   })
               })
             : (0, o.jsx)(f.Gt, {
-                  value: b,
+                  value: L,
                   children: K({
                       ...B,
                       avatarSrc: V,
@@ -204,7 +204,7 @@ function q(e) {
         return (0, O.Z)(
             h.author.id,
             null != p.guildMemberAvatar && null != i
-                ? L.ZP.getGuildMemberAvatarURLSimple({
+                ? b.ZP.getGuildMemberAvatarURLSimple({
                       guildId: i,
                       userId: h.author.id,
                       avatar: p.guildMemberAvatar,
@@ -296,12 +296,12 @@ function J(e) {
         [, v] = (0, m.ZP)(t.author.id, e.guildId),
         N = (0, d.e7)([C.Z], () => C.Z.getGuild(e.guildId), [e.guildId]),
         O = null != t.author && null != N && y.Z.canManageUser(F.Plq.MODERATE_MEMBERS, t.author, N),
-        L = v && O,
+        b = v && O,
         D = q({
             props: e,
             guildId: e.guildId,
             handleRenderPopout: A,
-            showCommunicationDisabledStyles: L
+            showCommunicationDisabledStyles: b
         }),
         G = (0, d.e7)([R.ZP], () => {
             var t;
@@ -351,7 +351,7 @@ function J(e) {
             isRepliedMessage: !1
         }),
         j = [],
-        W = b.default.getCurrentUser(),
+        W = L.default.getCurrentUser(),
         K = P.ZP.isPremium(t.author),
         X = P.ZP.isPremium(W),
         J = null == T ? void 0 : T.isPrivate();
@@ -410,7 +410,7 @@ function J(e) {
         avatar: D,
         username: (0, o.jsxs)(o.Fragment, {
             children: [
-                L &&
+                b &&
                     (0, o.jsx)(_.Tooltip, {
                         text: Z.Z.Messages.GUILD_COMMUNICATION_DISABLED_ICON_TOOLTIP_BODY,
                         children: (e) =>

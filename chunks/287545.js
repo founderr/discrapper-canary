@@ -32,8 +32,8 @@ var o = n(772848),
     R = n(358085),
     C = n(624138),
     y = n(24933),
-    b = n(115130),
-    L = n(566620),
+    L = n(115130),
+    b = n(566620),
     D = n(317381),
     M = n(969345),
     P = n(148720),
@@ -141,11 +141,11 @@ async function z(e) {
         O = null == I && (null == m ? void 0 : m.isVocal()) === !0 && (null == m ? void 0 : m.isPrivate()) === !1;
     if (null == A || O) return;
     let R = (0, o.Z)(),
-        b = 'location' in f ? 2 : 1,
-        L = null == m ? void 0 : m.getGuildId(),
+        L = 'location' in f ? 2 : 1,
+        b = null == m ? void 0 : m.getGuildId(),
         P = v.default.getCurrentUser();
     if (null == m || null == P) return;
-    let U = D.ZP.getShelfActivities(L),
+    let U = D.ZP.getShelfActivities(b),
         w = y.Z.getState().shelfOrder,
         x = (0, M.Z)({
             applicationId: s,
@@ -160,7 +160,7 @@ async function z(e) {
             activityUserSessionId: R,
             launchId: f.launchId,
             mediaSessionIds: Z,
-            activitiesInfraVersion: b
+            activitiesInfraVersion: L
         };
     H[s] = V;
     let W = Y[s];
@@ -197,7 +197,7 @@ async function z(e) {
             is_activity_start: c,
             shelf_rank: null == x ? void 0 : null === (r = x.activity) || void 0 === r ? void 0 : r.shelf_rank,
             shelf_sorted_rank: G > 0 ? G : null,
-            activities_infra_version: b
+            activities_infra_version: L
         });
 }
 function q(e) {
@@ -262,8 +262,8 @@ class Q extends c.Z {
                 let d = F.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
                 if (i instanceof f.Z) {
                     (t = 0), (r = i.reason);
-                    let e = b.Z.getFetchState();
-                    if ((m.Sb.getSetting() && e !== b.O.LOADED && (await (0, L.$h)()), i.reason === f.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND)) b.Z.inDevModeForApplication(l) && (d = F.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_MISSING_PRIMARY_APP_COMMAND);
+                    let e = L.Z.getFetchState();
+                    if ((m.Sb.getSetting() && e !== L.O.LOADED && (await (0, b.$h)()), i.reason === f.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND)) L.Z.inDevModeForApplication(l) && (d = F.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_MISSING_PRIMARY_APP_COMMAND);
                 } else if (i instanceof h.Z) {
                     var _;
                     (t = 1), (r = i.reason), (d = null !== (_ = (0, p.A0)(i.reason, l)) && void 0 !== _ ? _ : d);
@@ -358,14 +358,14 @@ class Q extends c.Z {
                     return;
                 }
                 let _ = null !== (n = null == l ? void 0 : l.getGuildId()) && void 0 !== n ? n : void 0,
-                    { activityConfigs: E, applications: f } = await (0, L.w1)({ guildId: _ }),
+                    { activityConfigs: E, applications: f } = await (0, b.w1)({ guildId: _ }),
                     h = (0, M.Z)({
                         applicationId: a,
                         activityConfigs: E,
                         applications: f
                     });
                 if (null == h) {
-                    let e = await (0, L.w1)({
+                    let e = await (0, b.w1)({
                         guildId: _,
                         force: !0
                     });

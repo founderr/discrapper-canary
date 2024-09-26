@@ -121,14 +121,14 @@ function R(e) {
             );
         }),
         C = _.ZP.canUseSoundboardEverywhere(r),
-        b = (0, o.e7)([u.Z], () => u.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        L = (0, o.e7)(
+        L = (0, o.e7)([u.Z], () => u.Z.getGuild(null == e ? void 0 : e.guild_id)),
+        b = (0, o.e7)(
             [c.Z],
             () => {
-                let { canCreateExpressions: e } = (0, s.G)(b);
+                let { canCreateExpressions: e } = (0, s.G)(L);
                 return e;
             },
-            [b]
+            [L]
         ),
         { canSeeRecentlyHeard: D, canSeeFrequentlyPlayed: M } = (0, f.k)({
             location: 'soundboard-useSoundGrid',
@@ -170,15 +170,15 @@ function R(e) {
                       sectionType: m.bg.FREQUENTLY_USED,
                       sortById: !1
                   }),
-              N(e, b, L, l, t),
+              N(e, L, b, l, t),
               !C && O(e, l),
-              v(e, R, null == b ? void 0 : b.id, l, i),
+              v(e, R, null == L ? void 0 : L.id, l, i),
               C && O(e, l),
               {
                   categories: e,
                   isFetching: T
               });
-    }, [S, l, E, U, P, M, D, b, L, t, C, R, n, T, i]);
+    }, [S, l, E, U, P, M, D, L, b, t, C, R, n, T, i]);
 }
 function C(e, t, n) {
     return a.useMemo(

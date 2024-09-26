@@ -29,8 +29,8 @@ let N = 'text-sm/medium',
     R = 1.25,
     C = 36,
     y = 144,
-    b = 150,
     L = 150,
+    b = 150,
     D = 300;
 function M(e) {
     let { statusActivity: t, profileType: r, editEnabled: o, hasEntered: p = !0, animate: m = !0, onCloseProfile: T } = e,
@@ -73,7 +73,7 @@ function M(e) {
         maxHeight: ''.concat(X, 'px'),
         config: {
             clamp: !0,
-            duration: b
+            duration: L
         }
     }));
     if ((a.useEffect(() => () => w.stop(), [w]), !$ && !J)) return null;
@@ -87,7 +87,7 @@ function M(e) {
                     delay: U ? 0 : D,
                     config: {
                         clamp: !0,
-                        duration: U ? 0 : b
+                        duration: U ? 0 : L
                     }
                 });
             } else {
@@ -101,7 +101,7 @@ function M(e) {
                 G(!e);
                 return;
             }
-            let r = e ? D : L;
+            let r = e ? D : b;
             w.start(r, () => {
                 G(!e);
             });

@@ -30,8 +30,8 @@ function m(e) {
         {
             expansionSpring: C,
             isAnimating: y,
-            isExpanded: b,
-            toggleExpanded: L
+            isExpanded: L,
+            toggleExpanded: b
         } = (0, f.O)({
             initiallyExpanded:
                 !R ||
@@ -77,10 +77,10 @@ function m(e) {
                                 size: N,
                                 expansionSpring: C,
                                 isAnimating: y,
-                                isExpanded: b,
+                                isExpanded: L,
                                 isInConcurrentQuestExperiment: R,
                                 contentPosition: m,
-                                toggleExpanded: L
+                                toggleExpanded: b
                             }),
                             (0, i.jsx)(_.Z, {
                                 quest: t,
@@ -88,7 +88,7 @@ function m(e) {
                                 location: n,
                                 size: N,
                                 isFocused: I,
-                                isExpanded: b,
+                                isExpanded: L,
                                 isAnimating: y,
                                 contentPosition: m
                             })

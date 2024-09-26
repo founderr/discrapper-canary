@@ -24,8 +24,8 @@ var a = n(735250),
     R = n(613413),
     C = n(94795),
     y = n(327943),
-    b = n(907459),
-    L = n(559407),
+    L = n(907459),
+    b = n(559407),
     D = n(556766),
     M = n(514361),
     P = n(724145),
@@ -177,7 +177,7 @@ function eu(e) {
                                                                                     className: l()(s ? eo.mobileApp : eo.app),
                                                                                     children: t
                                                                                 }),
-                                                                                (0, a.jsx)(L.Z, {}),
+                                                                                (0, a.jsx)(b.Z, {}),
                                                                                 (0, a.jsx)(I.Z, {}),
                                                                                 (0, a.jsx)(h.Modals, {}),
                                                                                 (0, a.jsx)(T.Z, {}),
@@ -198,7 +198,7 @@ function eu(e) {
                                                             eA && !eO && (0, a.jsx)(P.Z, { markAsDismissed: em }),
                                                             ev &&
                                                                 !eO &&
-                                                                (0, a.jsx)(b.Z, {
+                                                                (0, a.jsx)(L.Z, {
                                                                     isCoachmark: eI,
                                                                     markAsDismissed: em
                                                                 }),

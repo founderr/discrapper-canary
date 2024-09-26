@@ -25,8 +25,8 @@ var r,
     R = A.URLSearchParams,
     C = A.getState,
     y = s.URL,
-    b = s.TypeError,
-    L = s.parseInt,
+    L = s.TypeError,
+    b = s.parseInt,
     D = Math.floor,
     M = Math.pow,
     P = u(''.charAt),
@@ -72,7 +72,7 @@ var r,
             if (((a = 10), i.length > 1 && '0' === P(i, 0) && ((a = U($, i) ? 16 : 8), (i = V(i, 8 === a ? 1 : 2))), '' === i)) o = 0;
             else {
                 if (!U(10 === a ? ee : 8 === a ? J : et, i)) return e;
-                o = L(i, a);
+                o = b(i, a);
             }
             k(n, o);
         }
@@ -109,7 +109,7 @@ var r,
                 d++, (c = ++u);
                 continue;
             }
-            for (t = n = 0; n < 4 && U(et, _()); ) (t = 16 * t + L(_(), 16)), d++, n++;
+            for (t = n = 0; n < 4 && U(et, _()); ) (t = 16 * t + b(_(), 16)), d++, n++;
             if ('.' === _()) {
                 if (0 === n) return;
                 if (((d -= n), u > 6)) return;
@@ -120,7 +120,7 @@ var r,
                     }
                     if (!U(X, _())) return;
                     for (; U(X, _()); ) {
-                        if (((a = L(_(), 10)), null === i)) i = a;
+                        if (((a = b(_(), 10)), null === i)) i = a;
                         else {
                             if (0 === i) return;
                             i = 10 * i + a;
@@ -218,8 +218,8 @@ var r,
     eR = {},
     eC = {},
     ey = {},
-    eb = {},
     eL = {},
+    eb = {},
     eD = {},
     eM = {},
     eP = {},
@@ -237,10 +237,10 @@ var r,
             a,
             o = T(e);
         if (t) {
-            if ((i = this.parse(o))) throw new b(i);
+            if ((i = this.parse(o))) throw new L(i);
             this.searchParams = null;
         } else {
-            if ((void 0 !== n && (r = new eV(n, !0)), (i = this.parse(o, null, r)))) throw new b(i);
+            if ((void 0 !== n && (r = new eV(n, !0)), (i = this.parse(o, null, r)))) throw new L(i);
             (a = C(new R())).bindURL(this), (this.searchParams = a);
         }
     };
@@ -292,7 +292,7 @@ eV.prototype = {
                     u = 'file' === n.scheme ? eU : eR;
                     continue;
                 case eN:
-                    if ('/' === a && '/' === i[c + 1]) (u = eb), c++;
+                    if ('/' === a && '/' === i[c + 1]) (u = eL), c++;
                     else {
                         u = eR;
                         continue;
@@ -300,7 +300,7 @@ eV.prototype = {
                     break;
                 case eO:
                     if ('/' === a) {
-                        u = eL;
+                        u = eb;
                         break;
                     }
                     u = ek;
@@ -316,24 +316,24 @@ eV.prototype = {
                     }
                     break;
                 case eC:
-                    if (l.isSpecial() && ('/' === a || '\\' === a)) u = eb;
-                    else if ('/' === a) u = eL;
+                    if (l.isSpecial() && ('/' === a || '\\' === a)) u = eL;
+                    else if ('/' === a) u = eb;
                     else {
                         (l.username = n.username), (l.password = n.password), (l.host = n.host), (l.port = n.port), (u = ek);
                         continue;
                     }
                     break;
                 case ey:
-                    if (((u = eb), '/' !== a || '/' !== P(d, c + 1))) continue;
+                    if (((u = eL), '/' !== a || '/' !== P(d, c + 1))) continue;
                     c++;
                     break;
-                case eb:
+                case eL:
                     if ('/' !== a && '\\' !== a) {
-                        u = eL;
+                        u = eb;
                         continue;
                     }
                     break;
-                case eL:
+                case eb:
                     if ('@' === a) {
                         _ && (d = '%40' + d), (_ = !0), (o = h(d));
                         for (var I = 0; I < o.length; I++) {
@@ -376,7 +376,7 @@ eV.prototype = {
                     else {
                         if (!(a === r || '/' === a || '?' === a || '#' === a || ('\\' === a && l.isSpecial())) && !t) return z;
                         if ('' !== d) {
-                            var A = L(d, 10);
+                            var A = b(d, 10);
                             if (A > 65535) return z;
                             (l.port = l.isSpecial() && A === ep[l.scheme] ? null : A), (d = '');
                         }
@@ -499,7 +499,7 @@ eV.prototype = {
     },
     setHref: function (e) {
         var t = this.parse(e);
-        if (t) throw new b(t);
+        if (t) throw new L(t);
         this.searchParams.update();
     },
     getOrigin: function () {

@@ -18,13 +18,13 @@ n.d(t, {
         return U;
     },
     jZ: function () {
-        return L;
+        return b;
     },
     mE: function () {
         return H;
     },
     oQ: function () {
-        return b;
+        return L;
     },
     rX: function () {
         return D;
@@ -92,7 +92,7 @@ function y(e, t, n) {
         }
     );
 }
-function b(e, t, n) {
+function L(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = [];
     return (
@@ -103,7 +103,7 @@ function b(e, t, n) {
         i
     );
 }
-function L(e, t) {
+function b(e, t) {
     return y(e, t, s.BN.MEMBER);
 }
 function D(e, t) {

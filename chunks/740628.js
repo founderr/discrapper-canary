@@ -6,27 +6,27 @@ s.d(n, {
     s(47120);
 var t = s(735250),
     i = s(470079),
-    o = s(442837),
-    l = s(706898),
+    l = s(442837),
+    o = s(706898),
     r = s(481060),
-    a = s(246946),
-    c = s(785717),
+    c = s(246946),
+    a = s(785717),
     d = s(786366),
     u = s(323090),
-    _ = s(296391),
-    I = s(384816),
+    I = s(296391),
+    _ = s(384816),
     E = s(389190),
     f = s(428927),
     m = s(228168),
     x = s(689938),
     Z = s(519294),
-    h = s(722849);
-function p(e) {
-    let { section: n, subsection: s, user: i, currentUser: o, displayProfile: l, onClose: r } = e;
+    p = s(722849);
+function h(e) {
+    let { section: n, subsection: s, user: i, currentUser: l, displayProfile: o, onClose: r } = e;
     return n === m.oh.ACTIVITY
-        ? (0, t.jsx)(_.Z, {
+        ? (0, t.jsx)(I.Z, {
               user: i,
-              currentUser: o,
+              currentUser: l,
               onClose: r
           })
         : n === m.oh.MUTUAL_FRIENDS
@@ -44,25 +44,25 @@ function p(e) {
               : n === m.oh.BOT_INFO
                 ? (0, t.jsx)(u.Z, {
                       user: i,
-                      currentUser: o,
-                      displayProfile: l,
+                      currentUser: l,
+                      displayProfile: o,
                       subsection: s,
                       onClose: r
                   })
-                : (0, t.jsx)(I.Z, {
+                : (0, t.jsx)(_.Z, {
                       user: i,
-                      currentUser: o,
-                      displayProfile: l,
+                      currentUser: l,
+                      displayProfile: o,
                       subsection: s,
                       onClose: r
                   });
 }
 function v(e) {
     var n, s, d;
-    let { user: u, currentUser: _, displayProfile: I, items: E, initialSection: f = m.oh.USER_INFO, initialSubsection: v, onClose: S } = e,
-        { trackUserProfileAction: T } = (0, c.KZ)(),
-        g = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
-        [{ section: A, subsection: N }, L] = i.useState({
+    let { user: u, currentUser: I, displayProfile: _, items: E, initialSection: f = m.oh.USER_INFO, initialSubsection: v, onClose: S } = e,
+        { trackUserProfileAction: T } = (0, a.KZ)(),
+        g = (0, l.e7)([c.Z], () => c.Z.hidePersonalInformation),
+        [{ section: A, subsection: N }, j] = i.useState({
             section:
                 null !==
                     (d =
@@ -81,27 +81,27 @@ function v(e) {
         });
     i.useEffect(() => {
         if (null == E.find((e) => e.section === A))
-            L({
+            j({
                 section: E[0].section,
                 subsection: void 0
             });
     }, [E, A]);
-    let j = i.useCallback(
+    let b = i.useCallback(
         (e) => {
             T({
                 action: 'PRESS_SECTION',
                 section: e
             }),
-                L({
+                j({
                     section: e,
                     subsection: void 0
                 });
         },
-        [T, L]
+        [T, j]
     );
     return g
         ? (0, t.jsx)('div', {
-              className: h.container,
+              className: p.container,
               children: (0, t.jsxs)('div', {
                   className: Z.empty,
                   children: [
@@ -114,19 +114,19 @@ function v(e) {
               })
           })
         : (0, t.jsxs)('div', {
-              className: h.container,
+              className: p.container,
               children: [
-                  (0, t.jsx)(l.n, {
-                      className: h.tabBar,
+                  (0, t.jsx)(o.n, {
+                      className: p.tabBar,
                       type: 'top',
                       selectedItem: A,
-                      onItemSelect: j,
+                      onItemSelect: b,
                       children: E.map((e) => {
                           let { section: n, text: s } = e;
                           return (0, t.jsx)(
-                              l.n.Item,
+                              o.n.Item,
                               {
-                                  className: h.tabBarItem,
+                                  className: p.tabBarItem,
                                   id: n,
                                   'aria-label': s,
                                   children: (0, t.jsx)(r.Text, {
@@ -138,13 +138,13 @@ function v(e) {
                           );
                       })
                   }),
-                  (0, t.jsx)(p, {
+                  (0, t.jsx)(h, {
                       items: E,
                       section: A,
                       subsection: N,
                       user: u,
-                      currentUser: _,
-                      displayProfile: I,
+                      currentUser: I,
+                      displayProfile: _,
                       onClose: S
                   })
               ]

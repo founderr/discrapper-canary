@@ -52,10 +52,10 @@ function y() {
     var e;
     if (!(null != S.lastFetched && Date.now() - (null !== (e = S.lastFetched) && void 0 !== e ? e : 0) < R) || null != S.surveyOverride) (0, _.wk)(S.surveyOverride, !0);
 }
-function b(e) {
-    return D(e) && L(e);
-}
 function L(e) {
+    return D(e) && b(e);
+}
+function b(e) {
     let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
     if (0 === t.length) return !0;
     for (let e of t) if (!C.has(e)) return !1;
@@ -102,7 +102,7 @@ function D(e) {
 function M(e) {
     let { survey: t } = e;
     if (((S.lastFetched = Date.now()), null == S.hiddenSurveys && (S.hiddenSurveys = {}), null != t && null == S.hiddenSurveys[t.key])) {
-        if (!b(t)) return;
+        if (!L(t)) return;
         O = t;
     }
 }
@@ -124,11 +124,11 @@ function G() {
     S.hiddenSurveys = {};
 }
 function k(e) {
-    return !!b(e) || ((O = null), !1);
+    return !!L(e) || ((O = null), !1);
 }
 function B() {
     let e = Object.values((N = null != N ? N : {}))[0];
-    if (null != e && b(e)) {
+    if (null != e && L(e)) {
         M({
             type: 'SURVEY_FETCHED',
             survey: e

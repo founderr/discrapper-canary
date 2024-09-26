@@ -80,12 +80,12 @@ function y() {
     var e, t, n;
     return C(null !== (t = E.Z.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = E.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : []);
 }
-function b() {
+function L() {
     var e, t;
     let n = E.Z.getGuildFolders();
     return !(null != r && l()(r, n)) && C(null != (r = n) ? r : [], null !== (t = null === (e = E.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : []);
 }
-function L(e) {
+function b(e) {
     let { sourceId: t, targetId: n, moveToBelow: r, combine: i } = e,
         a = N.getNode(t),
         o = N.getNode(n);
@@ -228,8 +228,8 @@ class H extends g.Z {
             GUILD_CREATE: y,
             GUILD_DELETE: y,
             GUILD_MEMBER_ADD: U,
-            USER_SETTINGS_PROTO_UPDATE: b,
-            GUILD_MOVE_BY_ID: L,
+            USER_SETTINGS_PROTO_UPDATE: L,
+            GUILD_MOVE_BY_ID: b,
             GUILD_FOLDER_CREATE_LOCAL: D,
             GUILD_FOLDER_EDIT_LOCAL: M,
             GUILD_FOLDER_DELETE_LOCAL: P,

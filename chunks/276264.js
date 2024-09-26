@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(624138),
     C = n(51144),
     y = n(788307),
-    b = n(981631),
-    L = n(674563),
+    L = n(981631),
+    b = n(674563),
     D = n(524484),
     M = n(689938),
     P = n(226686);
@@ -57,7 +57,7 @@ function x(e) {
         }),
         eT = a.useMemo(
             () => ({
-                source: b.jXE.MEMBER_LIST,
+                source: L.jXE.MEMBER_LIST,
                 tagUserId: el
             }),
             [el]
@@ -79,9 +79,9 @@ function x(e) {
         ey = (e) => {
             eh(e);
         },
-        eb = () => {
+        eL = () => {
             if (eg && eS) return null;
-            let e = null != F ? F.find((e) => e.type === b.IIU.CUSTOM_STATUS) : null,
+            let e = null != F ? F.find((e) => e.type === L.IIU.CUSTOM_STATUS) : null,
                 t = null != e && null != k && (0, m.Z)(e, k, W);
             return (0, i.jsx)(y.Z, {
                 className: P.activity,
@@ -96,7 +96,7 @@ function x(e) {
                 hasQuest: null != eN && (0, g.dl)(eN)
             });
         },
-        eL = () =>
+        eb = () =>
             null != u && u && null == U
                 ? (0, i.jsx)(c.Tooltip, {
                       text: null != R ? R : M.Z.Messages.GUILD_OWNER,
@@ -125,7 +125,7 @@ function x(e) {
                           })
                   }),
         eM = () => {
-            let e = (null == k ? void 0 : k.isClyde()) ? L.Hb.AI : L.Hb.BOT;
+            let e = (null == k ? void 0 : k.isClyde()) ? b.Hb.AI : b.Hb.BOT;
             return null != k && k.bot
                 ? (0, i.jsx)(_.Z, {
                       className: P.botTag,
@@ -136,11 +136,11 @@ function x(e) {
         },
         eP = () =>
             (0, i.jsxs)(i.Fragment, {
-                children: [eM(), eL(), eD()]
+                children: [eM(), eb(), eD()]
             }),
         eU = (e, t) => {
             let n = H ? c.AnimatedAvatar : c.Avatar,
-                r = (0, d.Z)(F) ? b.Skl.STREAMING : V;
+                r = (0, d.Z)(F) ? L.Skl.STREAMING : V;
             return (
                 (r = t ? void 0 : r),
                 (0, i.jsxs)(i.Fragment, {
@@ -193,7 +193,7 @@ function x(e) {
                 ...e,
                 closePopout: () => ev(!0)
             }),
-        eG = V === b.Skl.OFFLINE;
+        eG = V === L.Skl.OFFLINE;
     return null == k
         ? (0, i.jsx)(E.Z, {
               avatarSize: c.AvatarSizes.SIZE_32,
@@ -235,7 +235,7 @@ function x(e) {
                                         })
                                 }),
                       avatar: eU(k, eG),
-                      subText: eb(),
+                      subText: eL(),
                       decorators: eP(),
                       'aria-controls': et,
                       'aria-expanded': en,

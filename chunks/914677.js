@@ -3,79 +3,79 @@ var s = n(735250),
     a = n(470079),
     r = n(780384),
     i = n(410030),
-    o = n(119269),
-    l = n(315566);
+    l = n(119269),
+    o = n(315566);
 let c = 'url(#gradient)',
     d = (e, t) => {
         switch (e) {
-            case o.Q.NITRO_LOGO:
+            case l.Q.NITRO_LOGO:
                 return t ? '0.3' : '0.2';
-            case o.Q.NITRO_GEM:
+            case l.Q.NITRO_GEM:
             default:
                 return;
         }
     },
     _ = (e) => {
         switch (e) {
-            case o.Q.NITRO_GEM:
+            case l.Q.NITRO_GEM:
                 return 'var(--background-primary)';
-            case o.Q.NITRO_LOGO:
+            case l.Q.NITRO_LOGO:
                 return 'var(--premium-tier-2-purple)';
             default:
                 return;
         }
     },
-    u = (e, t) => {
+    E = (e, t) => {
         switch (t) {
-            case o.Q.NITRO_GEM:
+            case l.Q.NITRO_GEM:
                 return c;
-            case o.Q.NITRO_LOGO:
+            case l.Q.NITRO_LOGO:
                 return e ? 'url(#gradient_nitro_logo)' : c;
             default:
                 return;
         }
     };
 t.Z = (e) => {
-    let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: E = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
-        m = 43 + T / 2,
-        g = 2 * Math.PI * m,
-        [N, C] = a.useState(E);
+    let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: u = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
+        g = 43 + T / 2,
+        N = 2 * Math.PI * g,
+        [C, m] = a.useState(u);
     a.useEffect(() => {
         let e = setTimeout(() => {
-            C(t);
+            m(t);
         }, 200);
         return () => clearTimeout(e);
     }, [t]);
-    let p = (0, i.ZP)(),
-        f = (0, r.ap)(p),
-        A = _(I),
-        S = d(I, f),
-        M = null != R ? R : u(f, I);
+    let f = (0, i.ZP)(),
+        A = (0, r.ap)(f),
+        p = _(I),
+        M = d(I, A),
+        S = null != R ? R : E(A, I);
     return (0, s.jsxs)('div', {
-        className: l.circleContainer,
+        className: o.circleContainer,
         children: [
             (0, s.jsxs)('svg', {
                 viewBox: '0 0 100 100',
-                className: l.circleSVG,
+                className: o.circleSVG,
                 children: [
                     (0, s.jsx)('circle', {
-                        className: I === o.Q.NITRO_GEM ? l.baseProgressCircle : void 0,
+                        className: I === l.Q.NITRO_GEM ? o.baseProgressCircle : void 0,
                         fill: 'transparent',
                         strokeWidth: T,
-                        r: ''.concat(m),
+                        r: ''.concat(g),
                         cx: '50%',
                         cy: '50%',
-                        stroke: A,
-                        strokeOpacity: S
+                        stroke: p,
+                        strokeOpacity: M
                     }),
                     (0, s.jsx)('circle', {
-                        stroke: M,
+                        stroke: S,
                         strokeWidth: T,
                         strokeLinecap: 'round',
-                        strokeDasharray: ''.concat(g, ' ').concat(g),
+                        strokeDasharray: ''.concat(N, ' ').concat(N),
                         className: c,
-                        style: { strokeDashoffset: (1 - N / 100) * g },
-                        r: ''.concat(m),
+                        style: { strokeDashoffset: (1 - C / 100) * N },
+                        r: ''.concat(g),
                         cx: '50%',
                         cy: '50%'
                     })
@@ -143,7 +143,7 @@ t.Z = (e) => {
                 ]
             }),
             (0, s.jsx)('div', {
-                className: l.childrenContainer,
+                className: o.childrenContainer,
                 children: n
             })
         ]

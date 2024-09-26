@@ -72,7 +72,7 @@ function v(e) {
 }
 function N(e) {
     let { threads: t } = e;
-    t.forEach(b);
+    t.forEach(L);
 }
 function O(e) {
     let { channel: t } = e;
@@ -84,27 +84,27 @@ function R(e) {
 }
 function C(e) {
     let t = !1;
-    for (let n of e.messages) t = b(n.thread) || t;
+    for (let n of e.messages) t = L(n.thread) || t;
     return t;
 }
 function y(e) {
     let t = !1;
-    for (let n of e.messages) for (let e of n) t = b(e.thread) || t;
+    for (let n of e.messages) for (let e of n) t = L(e.thread) || t;
     return (
         e.threads.forEach((e) => {
-            t = b(e) || t;
+            t = L(e) || t;
         }),
         t
     );
 }
-function b(e) {
+function L(e) {
     if (null != e && !(e.id in _)) {
         let t = c.Z.getChannel(e.id);
         if (null != t) return m(t), !0;
     }
     return !1;
 }
-function L(e) {
+function b(e) {
     let t = _[e.id];
     if (null == t) return !1;
     null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount);
@@ -135,7 +135,7 @@ d(D, 'displayName', 'ThreadMembersStore'),
         THREAD_CREATE: A,
         THREAD_UPDATE: A,
         THREAD_LIST_SYNC: v,
-        THREAD_MEMBERS_UPDATE: L,
+        THREAD_MEMBERS_UPDATE: b,
         SEARCH_FINISH: y,
         MOD_VIEW_SEARCH_FINISH: y,
         LOAD_THREADS_SUCCESS: N,

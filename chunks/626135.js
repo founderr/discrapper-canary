@@ -57,8 +57,8 @@ let T = { location: {} },
     R = 900000,
     C = 3600000,
     y = 86400000,
-    b = 0.01,
-    L = 0.001,
+    L = 0.01,
+    b = 0.001,
     D = performance.now(),
     M = [];
 function P(e) {
@@ -164,12 +164,12 @@ let U = {
     [p.rMx.RPC_COMMAND_SENT]: {
         throttlePeriod: y,
         throttleKeys: (e) => [e.application_id, e.command],
-        throttlePercent: L
+        throttlePercent: b
     },
     [p.rMx.RPC_SUBSCRIPTION_REQUESTED]: {
         throttlePeriod: y,
         throttleKeys: (e) => [e.application_id, e.event],
-        throttlePercent: L
+        throttlePercent: b
     },
     [p.rMx.CHANNEL_BANNER_VIEWED]: {
         throttlePeriod: y,
@@ -191,7 +191,7 @@ let U = {
         throttlePeriod: v,
         throttleKeys: (e) => [e.user_id]
     },
-    [p.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: { throttlePercent: b },
+    [p.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: { throttlePercent: L },
     [p.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
         throttlePeriod: O,
         throttleKeys: (e) => [e.channel_id]

@@ -24,8 +24,8 @@ var a = n(735250),
 let R = 20,
     C = 125,
     y = (0, T.hQ)(),
-    b = E.Z.convert.fromCodePoint('1f44f'),
-    L = (0, A.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+    L = E.Z.convert.fromCodePoint('1f44f'),
+    b = (0, A.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
     D = (0, A.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE);
 function M(e) {
     switch (E.Z.convert.toCodePoint(e)) {
@@ -46,7 +46,7 @@ function M(e) {
 let P = (e) => {
         let { fade: t, surrogate: n, onClick: r, delay: i, index: o } = e,
             s = (0, _.JA)('item-'.concat(o)),
-            l = S.ZP.getURL(b + n),
+            l = S.ZP.getURL(L + n),
             u = (0, h.useSpring)(
                 {
                     opacity: 1,
@@ -75,7 +75,7 @@ let P = (e) => {
         let { id: t, selectedSurrogate: n, onClick: r, hasTabWrapper: i } = e,
             s = (0, I.Z)('diversity'),
             u = (0, h.useSpring)({
-                height: (D + 2 * L) * (g.gw.length + 1),
+                height: (D + 2 * b) * (g.gw.length + 1),
                 from: { height: D },
                 config: { duration: C }
             });
@@ -119,7 +119,7 @@ let P = (e) => {
     },
     w = (e) => {
         let { searchBarRef: t, selectedSurrogate: n, className: r, hasTabWrapper: i } = e,
-            s = S.ZP.getURL(b + n),
+            s = S.ZP.getURL(L + n),
             [l, u] = o.useState(!1),
             c = (0, m.Z)(null, () => u(!1)),
             d = o.useRef(null),

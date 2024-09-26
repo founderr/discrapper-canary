@@ -42,10 +42,10 @@ function y(e, t) {
         state: t
     });
 }
-function b() {
+function L() {
     D(S);
 }
-function L(e) {
+function b(e) {
     if (N.has(e) || (e === p.YN.GAME_PROFILE_FEED && (!(0, s._J)('ContentInventoryManager') || void 0 !== h.Z.getFeed(e)))) return !1;
     if (e === S) {
         if (!(0, _.sA)('ContentInventoryManager') || (f.Z.hidden && null != h.Z.getFeed(e)) || !d.Z.isFocused() || !l.Z.isConnected()) return !1;
@@ -60,7 +60,7 @@ function D(e) {
     void 0 !== t && (clearTimeout(t), v.delete(e));
 }
 function M() {
-    if ((D(S), !L(S))) return;
+    if ((D(S), !b(S))) return;
     let e = h.Z.getFeed(S);
     if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == R) return;
     let t = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
@@ -76,7 +76,7 @@ function M() {
 }
 async function P(e) {
     let { force: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    if (!!(L(e) || t))
+    if (!!(b(e) || t))
         try {
             let t = h.Z.getFeed(e);
             N.add(e), y(e, { loading: !0 });
@@ -136,7 +136,7 @@ class B extends o.Z {
         super(...e),
             I(this, 'actions', {
                 POST_CONNECTION_OPEN: U,
-                CONNECTION_CLOSED: b,
+                CONNECTION_CLOSED: L,
                 WINDOW_FOCUS: U,
                 IDLE: U,
                 CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: U,

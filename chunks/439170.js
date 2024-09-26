@@ -1,9 +1,9 @@
 n.d(t, {
     CR: function () {
-        return b;
+        return L;
     },
     oL: function () {
-        return L;
+        return b;
     },
     so: function () {
         return r;
@@ -47,8 +47,8 @@ function y(e, t, n) {
         e
     );
 }
-let b = 'everyone',
-    L = 0;
+let L = 'everyone',
+    b = 0;
 function D(e, t, n, r) {
     switch (t) {
         case R.Skl.ONLINE:
@@ -106,11 +106,11 @@ function M(e, t, n) {
 }
 function P(e) {
     let t = T.Z.getChannel(e);
-    return null == t ? b : null == t.memberListId ? U(t) : t.memberListId;
+    return null == t ? L : null == t.memberListId ? U(t) : t.memberListId;
 }
 function U(e) {
     return p.oz(R.Plq.VIEW_CHANNEL, e)
-        ? b
+        ? L
         : d()
               .v3(
                   u()(e.permissionOverwrites)

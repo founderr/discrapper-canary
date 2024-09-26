@@ -22,16 +22,16 @@ var i = t(470079),
     p = t(807169),
     _ = t(104793),
     C = t(674588),
-    f = t(809547),
-    h = t(822245),
+    h = t(809547),
+    f = t(822245),
     A = t(631827),
     E = t(827498),
     N = t(783097),
-    v = t(689079),
-    x = t(665692);
+    x = t(689079),
+    v = t(665692);
 function I(e, n) {
-    let t = h.Z.getScoreWithoutLoadingLatest(e.id);
-    return h.Z.getScoreWithoutLoadingLatest(n.id) - t;
+    let t = f.Z.getScoreWithoutLoadingLatest(e.id);
+    return f.Z.getScoreWithoutLoadingLatest(n.id) - t;
 }
 function g(e, n) {
     let t = (0, N.$d)(e),
@@ -43,10 +43,10 @@ function P(e, n) {
 }
 function L(e) {
     let { channel: n, query: t, commandLimit: a, applicationLimit: o, searchesCommands: r = !0, searchesBots: s = !0, searchesActivities: C = !0 } = e;
-    t.startsWith(''.concat(x.GI)) && (t = t.substring(1));
+    t.startsWith(''.concat(v.GI)) && (t = t.substring(1));
     let {
-            commands: f,
-            commandSectionMap: h,
+            commands: h,
+            commandSectionMap: f,
             loading: E
         } = (function (e) {
             var n, t;
@@ -58,7 +58,7 @@ function L(e) {
                 let c = null !== (t = null === (e = r.result) || void 0 === e ? void 0 : e.sections) && void 0 !== t ? t : {},
                     d = null !== (i = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {},
                     u = [...Object.keys(c), ...Object.keys(d).filter((e) => !(e in c))];
-                l && u.push(v.bi.BUILT_IN);
+                l && u.push(x.bi.BUILT_IN);
                 let p = [],
                     _ = {};
                 for (let e of u) {
@@ -92,16 +92,16 @@ function L(e) {
                     [o, r, t]
                 ),
                 C = [],
-                f = new Set();
+                h = new Set();
             if (null != d.result)
                 for (let e of Object.values(d.result.sections)) {
                     let n = e.descriptor.application;
-                    null != n && _(e) && (C.push(n), f.add(n.id));
+                    null != n && _(e) && (C.push(n), h.add(n.id));
                 }
             if (null != u.result)
                 for (let e of Object.values(u.result.sections)) {
                     let n = e.descriptor.application;
-                    null != n && !f.has(n.id) && _(e) && C.push(n);
+                    null != n && !h.has(n.id) && _(e) && C.push(n);
                 }
             return (
                 r && a && C.push(N.Wx),
@@ -121,7 +121,7 @@ function L(e) {
         b = i.useMemo(() => {
             var e;
             if (!r) return [];
-            return (0, A.N)(f, {
+            return (0, A.N)(h, {
                 limit: a,
                 filterPredicates: [
                     (function (e) {
@@ -204,7 +204,7 @@ function L(e) {
                     P
                 ]
             });
-        }, [r, f, a, n, t]),
+        }, [r, h, a, n, t]),
         R = i.useMemo(() => {
             if (0 === b.length) return [];
             let e = new Map(L.map((e) => [e.id, e]));
@@ -213,7 +213,7 @@ function L(e) {
                     var t;
                     let i = e.get(n.applicationId);
                     if (null == i) return null;
-                    let a = null !== (t = h[n.id]) && void 0 !== t ? t : null;
+                    let a = null !== (t = f[n.id]) && void 0 !== t ? t : null;
                     return {
                         command: n,
                         application: i,
@@ -221,7 +221,7 @@ function L(e) {
                     };
                 })
             );
-        }, [L, b, h]),
+        }, [L, b, f]),
         T = i.useMemo(() => {
             var e;
             let i = [];
@@ -310,17 +310,17 @@ function L(e) {
 }
 function S(e) {
     let { channel: n, query: t, fetches: a = !0, pageLimit: l = 1 / 0, entrypoint: c } = e;
-    t.startsWith(''.concat(x.GI)) && (t = t.substring(1));
+    t.startsWith(''.concat(v.GI)) && (t = t.substring(1));
     let d = c === E._b.VOICE,
         [u, m] = i.useState(1),
         p = i.useRef(u);
     p.current = u;
-    let { fetchState: _, totalPages: h } = (0, s.cj)(
-            [f.Z],
+    let { fetchState: _, totalPages: f } = (0, s.cj)(
+            [h.Z],
             () => {
                 var e, i;
                 return {
-                    fetchState: f.Z.getFetchState({
+                    fetchState: h.Z.getFetchState({
                         query: t,
                         guildId: n.guild_id,
                         page: u,
@@ -335,7 +335,7 @@ function S(e) {
                         null !==
                             (i =
                                 null ===
-                                    (e = f.Z.getSearchResults({
+                                    (e = h.Z.getSearchResults({
                                         query: t,
                                         guildId: n.guild_id,
                                         page: u,
@@ -356,12 +356,12 @@ function S(e) {
         ),
         A = i.useMemo(
             () =>
-                Array.from({ length: _ === f.M.FETCHED || _ === f.M.ERROR ? u : u - 1 }, (e, i) => {
+                Array.from({ length: _ === h.M.FETCHED || _ === h.M.ERROR ? u : u - 1 }, (e, i) => {
                     var a, l;
                     return null !==
                         (l =
                             null ===
-                                (a = f.Z.getSearchResults({
+                                (a = h.Z.getSearchResults({
                                     query: t,
                                     guildId: n.guild_id,
                                     page: i + 1,
@@ -381,9 +381,9 @@ function S(e) {
         ),
         N = i.useCallback(() => {
             let e = A.length;
-            _ === f.M.FETCHED && e === p.current && e > 0 && e < h && e < l && A[e - 1].length > 0 && (p.current++, m((e) => e + 1));
-        }, [_, l, A, h]),
-        v = i.useCallback(
+            _ === h.M.FETCHED && e === p.current && e > 0 && e < f && e < l && A[e - 1].length > 0 && (p.current++, m((e) => e + 1));
+        }, [_, l, A, f]),
+        x = i.useCallback(
             (e) => {
                 let { query: n, page: t, guildId: i } = e;
                 C.yC({
@@ -405,12 +405,12 @@ function S(e) {
     return (
         i.useEffect(() => {
             if (!!a)
-                v({
+                x({
                     query: t,
                     page: u,
                     guildId: n.guild_id
                 });
-        }, [t, n.guild_id, v, u, a]),
+        }, [t, n.guild_id, x, u, a]),
         i.useEffect(() => {
             m(1);
         }, [n.guild_id, t]),

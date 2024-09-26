@@ -84,10 +84,10 @@ function C(e) {
 function y(e) {
     (h = { ...h }), delete h[e.relationship.id], null != p[e.relationship.id] && ((p = { ...p }), delete p[e.relationship.id]), null != m[e.relationship.id] && ((m = { ...m }), delete m[e.relationship.id]), I.delete(e.relationship.id), N();
 }
-function b(e) {
+function L(e) {
     null == e.relationship.since ? delete m[e.relationship.id] : (m[e.relationship.id] = e.relationship.since), null == e.relationship.nickname ? delete p[e.relationship.id] : (p[e.relationship.id] = e.relationship.nickname), (0, u.A)({ location: 'relationship_store' }) && e.relationship.isSpamRequest ? I.add(e.relationship.id) : I.delete(e.relationship.id);
 }
-function L(e) {
+function b(e) {
     (h = { ...h }),
         d.default.keys(h).forEach((e) => {
             h[e] === E.OGo.PENDING_INCOMING && (delete h[e], I.delete(e));
@@ -159,6 +159,6 @@ f(D, 'displayName', 'RelationshipStore'),
         OVERLAY_INITIALIZE: R,
         RELATIONSHIP_ADD: C,
         RELATIONSHIP_REMOVE: y,
-        RELATIONSHIP_UPDATE: b,
-        RELATIONSHIP_PENDING_INCOMING_REMOVED: L
+        RELATIONSHIP_UPDATE: L,
+        RELATIONSHIP_PENDING_INCOMING_REMOVED: b
     }));

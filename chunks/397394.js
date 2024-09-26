@@ -3,10 +3,10 @@ n.d(t, {
         return y;
     },
     Lk: function () {
-        return b;
+        return L;
     },
     Xg: function () {
-        return L;
+        return b;
     },
     ZP: function () {
         return R;
@@ -124,7 +124,7 @@ function y(e) {
         A = h.zQ.useExperiment({ location: 'OAuth2AuthorizedSuccess' }, { autoTrackExposure: !1 }).enabled,
         R = null != t,
         y = null == t && A && (!c || null != u),
-        b = (0, i.jsxs)(i.Fragment, {
+        L = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(E.x, {
                     variant: 'text-sm/normal',
@@ -171,19 +171,19 @@ function y(e) {
             className: O.authorizedSuccessWrapper,
             children: (0, i.jsx)(C, {
                 message: s,
-                footer: b,
+                footer: L,
                 ...r
             })
         })
     );
 }
-function b(e) {
+function L(e) {
     return (0, i.jsx)(R, {
         ...e,
         headerClassName: O.headerFailure
     });
 }
-function L() {
+function b() {
     var e, t;
     let n = (0, u.TH)();
     return (0, i.jsx)(A.G, {
@@ -205,7 +205,7 @@ function D(e) {
     let o = null != r ? (0, l.parse)(r.search) : {},
         s = null !== (n = null !== (t = o.error_description) && void 0 !== t ? t : o.error) && void 0 !== n ? n : N.Z.Messages.OAUTH2_UNKNOWN_ERROR;
     return (0, i.jsx)(A.G, {
-        children: (0, i.jsx)(b, {
+        children: (0, i.jsx)(L, {
             message: s,
             showsCloseWindowText: !0
         })

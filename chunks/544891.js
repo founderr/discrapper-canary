@@ -12,7 +12,7 @@ n.d(t, {
         return c.f$;
     },
     lg: function () {
-        return L;
+        return b;
     },
     sX: function () {
         return c.Hx;
@@ -82,7 +82,7 @@ function p(e, t, n, r, i) {
     let m = () => {
         (t.backoff = null != t.backoff ? t.backoff : new s.Z()), (t.retried = (null != t.retried ? t.retried : 0) + 1), t.backoff.fail(() => D(t.url).then(() => p(e, t, n, r, i)));
     };
-    null == b || null === (u = b.prepareRequest) || void 0 === u || u.call(b, f),
+    null == L || null === (u = L.prepareRequest) || void 0 === u || u.call(L, f),
         f.ok((e) => null != e.status),
         f.then(
             (a) => {
@@ -118,7 +118,7 @@ function p(e, t, n, r, i) {
                                     err: e
                                 }));
                     };
-                if ((null == t ? void 0 : null === (o = t.interceptResponse) || void 0 === o ? void 0 : o.call(t, a, E, f)) !== !0 && (null == b ? void 0 : null === (s = b.interceptResponse) || void 0 === s ? void 0 : s.call(b, a, E, f)) !== !0) {
+                if ((null == t ? void 0 : null === (o = t.interceptResponse) || void 0 === o ? void 0 : o.call(t, a, E, f)) !== !0 && (null == L ? void 0 : null === (s = L.interceptResponse) || void 0 === s ? void 0 : s.call(L, a, E, f)) !== !0) {
                     if (a.ok) n(u);
                     else {
                         if (t.oldFormErrors && (null == u ? void 0 : null === (l = u.body) || void 0 === l ? void 0 : l.code) === c.f$) {
@@ -231,9 +231,9 @@ function y() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return 'https:' + window.GLOBAL_ENV.API_ENDPOINT + (e ? '/v'.concat(window.GLOBAL_ENV.API_VERSION) : '');
 }
-let b = null;
-function L(e) {
-    b = e;
+let L = null;
+function b(e) {
+    L = e;
 }
 let D = () => Promise.resolve();
 function M(e) {

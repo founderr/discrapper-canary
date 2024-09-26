@@ -20,8 +20,8 @@ var n = t(735250),
     I = t(226961),
     N = t(12647),
     A = t(726985),
-    m = t(981631),
-    C = t(65154),
+    C = t(981631),
+    m = t(65154),
     g = t(689938),
     h = t(113207);
 async function O() {
@@ -51,16 +51,16 @@ function R() {
             aecDumpSupported: S.Z.isAecDumpSupported(),
             debugLogging: S.Z.getDebugLogging(),
             aecDumpEnabled: S.Z.getAecDump(),
-            supportsConnectionReplay: S.Z.supports(C.AN.CONNECTION_REPLAY)
+            supportsConnectionReplay: S.Z.supports(m.AN.CONNECTION_REPLAY)
         })),
         R = (0, i.e7)([T.default], () => T.default.isStreamInfoOverlayEnabled),
         x = (0, i.e7)([I.ZP], () => I.ZP.shouldRecordNextConnection());
-    async function f() {
+    async function M() {
         s(!0);
         try {
             await S.Z.getMediaEngine().writeAudioDebugState(),
                 await N.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
-                await (0, u.E)(m.GU0.RTC),
+                await (0, u.E)(C.GU0.RTC),
                 !(function () {
                     let e = g.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
                         s = g.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
@@ -164,7 +164,7 @@ function R() {
                                     children: (0, n.jsx)(r.Button, {
                                         disabled: e,
                                         size: r.Button.Sizes.SMALL,
-                                        onClick: f,
+                                        onClick: M,
                                         children: g.Z.Messages.UPLOAD
                                     })
                                 }),

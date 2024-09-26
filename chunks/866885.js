@@ -24,8 +24,8 @@ var i = n(735250),
     R = n(246106),
     C = n(963614),
     y = n(917107),
-    b = n(208156),
-    L = n(748492),
+    L = n(208156),
+    b = n(748492),
     D = n(701488),
     M = n(918559),
     P = n(981631),
@@ -79,7 +79,7 @@ function k(e) {
         var s;
         return et && null != B && ((null == K ? void 0 : K.type) === U.fO.ACTIVITY || r)
             ? (null === (s = B.config) || void 0 === s ? void 0 : s.useInteractivePIP)
-                ? (0, i.jsx)(L.of, {
+                ? (0, i.jsx)(b.of, {
                       onJumpToChannel: er,
                       applicationId: B.applicationId,
                       channel: o,
@@ -93,7 +93,7 @@ function k(e) {
                   })
                 : r
                   ? (0, i.jsx)(i.Fragment, {
-                        children: (0, i.jsx)(L.q5, {
+                        children: (0, i.jsx)(b.q5, {
                             idle: n,
                             onMouseMove: e,
                             onMouseDown: e,
@@ -117,7 +117,7 @@ function k(e) {
                                   className: w.clickShield,
                                   onDoubleClick: er
                               }),
-                              (0, i.jsx)(L.YB, {
+                              (0, i.jsx)(b.YB, {
                                   idle: n,
                                   onMouseMove: e,
                                   onMouseDown: e,
@@ -184,7 +184,7 @@ function k(e) {
                                       [w.pipModeTall]: et && R
                                   })
                               })
-                            : (0, i.jsx)(b.J, {
+                            : (0, i.jsx)(L.J, {
                                   allowPopups: (0, C.h)(Z),
                                   referrerPolicy: D.um.has(B.applicationId) ? 'no-referrer' : 'origin',
                                   url: B.url,
@@ -197,7 +197,7 @@ function k(e) {
                                   shouldRefocus: !et && H
                               }),
                         !et &&
-                            (0, i.jsx)(L.Ds, {
+                            (0, i.jsx)(b.Ds, {
                                 participantsOpen: q,
                                 showToggleParticipants: !1,
                                 channelId: o.id

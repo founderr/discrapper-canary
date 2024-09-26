@@ -1,6 +1,6 @@
 n.d(t, {
     M9: function () {
-        return o;
+        return l;
     },
     Zh: function () {
         return a;
@@ -27,6 +27,6 @@ function r(e, t) {
 function i(e, t) {
     a && ((e.voice = t), speechSynthesis.speak(e));
 }
-function o() {
+function l() {
     a && speechSynthesis.cancel();
 }

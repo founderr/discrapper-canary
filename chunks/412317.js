@@ -1,32 +1,32 @@
 s.d(n, {
     Z: function () {
-        return _;
+        return I;
     }
 });
 var t = s(735250);
 s(470079);
 var i = s(481060),
-    o = s(194359),
-    l = s(906732),
+    l = s(194359),
+    o = s(906732),
     r = s(475413),
-    a = s(934861),
-    c = s(981631),
+    c = s(934861),
+    a = s(981631),
     d = s(689938),
     u = s(266580);
-function _(e) {
-    let { isCurrentUser: n, user: s, relationshipType: _, friendToken: I, onClose: E } = e,
-        { newestAnalyticsLocation: f } = (0, l.ZP)();
-    return n || _ === c.OGo.BLOCKED
+function I(e) {
+    let { isCurrentUser: n, user: s, relationshipType: I, friendToken: _, onClose: E } = e,
+        { newestAnalyticsLocation: f } = (0, o.ZP)();
+    return n || I === a.OGo.BLOCKED
         ? null
-        : _ === c.OGo.FRIEND || s.bot
+        : I === a.OGo.FRIEND || s.bot
           ? (0, t.jsx)('div', {
                 className: u.multipleButtons,
-                children: (0, t.jsx)(a.c, {
+                children: (0, t.jsx)(c.c, {
                     userId: s.id,
                     onClose: E
                 })
             })
-          : _ === c.OGo.PENDING_OUTGOING || _ === c.OGo.PENDING_INCOMING
+          : I === a.OGo.PENDING_OUTGOING || I === a.OGo.PENDING_INCOMING
             ? (0, t.jsxs)('div', {
                   className: u.multipleButtons,
                   children: [
@@ -35,7 +35,7 @@ function _(e) {
                           tooltipText: d.Z.Messages.FRIENDS_SECTION_PENDING,
                           disabled: !0
                       }),
-                      (0, t.jsx)(a.c, {
+                      (0, t.jsx)(c.c, {
                           userId: s.id,
                           onClose: E
                       })
@@ -44,7 +44,7 @@ function _(e) {
             : (0, t.jsxs)('div', {
                   className: u.multipleButtons,
                   children: [
-                      (0, t.jsx)(a.v, {
+                      (0, t.jsx)(c.v, {
                           userId: s.id,
                           onClose: E
                       }),
@@ -54,10 +54,10 @@ function _(e) {
                           text: d.Z.Messages.USER_PROFILE_ADD_FRIEND,
                           color: i.Button.Colors.BRAND,
                           onClick: () => {
-                              o.Z.addRelationship({
+                              l.Z.addRelationship({
                                   userId: s.id,
                                   context: { location: f },
-                                  friendToken: I
+                                  friendToken: _
                               });
                           }
                       })

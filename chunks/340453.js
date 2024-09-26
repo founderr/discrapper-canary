@@ -8,17 +8,17 @@ n(470079);
 var a = n(481060),
     r = n(518950),
     i = n(998502),
-    o = n(631885),
-    l = n(329242),
+    l = n(631885),
+    o = n(329242),
     c = n(539559);
 let d = i.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 function _(e) {
     let { otherUser: t, status: n } = e,
-        i = (0, o.j_)(t.id, n),
+        i = (0, l.j_)(t.id, n),
         {
             avatarSrc: _,
-            avatarDecorationSrc: u,
-            eventHandlers: E
+            avatarDecorationSrc: E,
+            eventHandlers: u
         } = (0, r.Z)({
             user: t,
             size: a.AvatarSizes.SIZE_40,
@@ -27,11 +27,11 @@ function _(e) {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)('div', {
-                ...E,
+                ...u,
                 children: (0, s.jsx)(d, {
                     className: c.avatar,
                     src: _,
-                    avatarDecoration: u,
+                    avatarDecoration: E,
                     size: a.AvatarSizes.SIZE_40,
                     'aria-label': t.username
                 })
@@ -41,7 +41,7 @@ function _(e) {
                 children: [
                     (0, s.jsx)('div', {
                         className: c.userContainerWithTimestamp,
-                        children: (0, s.jsx)(l.Z, { user: t })
+                        children: (0, s.jsx)(o.Z, { user: t })
                     }),
                     (0, s.jsx)(a.Text, {
                         className: c.__invalid_timestamp,

@@ -1,6 +1,6 @@
 t.d(s, {
     h: function () {
-        return C;
+        return m;
     }
 }),
     t(47120);
@@ -36,24 +36,24 @@ let A = (e) => {
             submitting: s
         };
     },
-    m = (e) => {
+    C = (e) => {
         var s;
-        let { transitionState: t, groupListing: a, guildId: i, listing: l, subscription: m, onClose: C } = e,
+        let { transitionState: t, groupListing: a, guildId: i, listing: l, subscription: C, onClose: m } = e,
             g = (0, _.Dt)(),
             h = (0, E.YB)(i),
             O = (null == h ? void 0 : null === (s = h.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null ? (0, u._W)(h.cover_image_asset.application_id, h.cover_image_asset, 440) : void 0,
             { analyticsLocations: p } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: R, error: x, submitting: f } = A(p),
-            M = async () => {
-                (await R(m.id)) && C();
+            { cancelSubscription: R, error: x, submitting: M } = A(p),
+            f = async () => {
+                (await R(C.id)) && m();
             },
             D = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.CHANNEL),
-            P = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.INTANGIBLE),
-            L = r()(m.currentPeriodEnd).format('MMMM Do, YYYY'),
+            L = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.INTANGIBLE),
+            P = r()(C.currentPeriodEnd).format('MMMM Do, YYYY'),
             b = I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
                 numChannels: D.length,
-                numAdditionalBenefits: P.length,
-                subscriptionEndDate: L
+                numAdditionalBenefits: L.length,
+                subscriptionEndDate: P
             });
         return (0, n.jsxs)(o.ModalRoot, {
             transitionState: t,
@@ -70,7 +70,7 @@ let A = (e) => {
                         (0, n.jsx)(o.ModalCloseButton, {
                             withCircleBackground: !0,
                             className: N.closeButton,
-                            onClick: C
+                            onClick: m
                         })
                     ]
                 }),
@@ -101,15 +101,15 @@ let A = (e) => {
                     children: [
                         (0, n.jsx)(o.Button, {
                             color: o.Button.Colors.RED,
-                            onClick: M,
-                            submitting: f,
+                            onClick: f,
+                            submitting: M,
                             children: I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
                         }),
                         (0, n.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.WHITE,
                             className: N.goBackButton,
-                            onClick: C,
+                            onClick: m,
                             children: I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_NEVERMIND_CTA
                         })
                     ]
@@ -117,9 +117,9 @@ let A = (e) => {
             ]
         });
     },
-    C = (e) => {
+    m = (e) => {
         (0, o.openModal)((s) =>
-            (0, n.jsx)(m, {
+            (0, n.jsx)(C, {
                 ...s,
                 ...e
             })

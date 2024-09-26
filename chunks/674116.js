@@ -20,19 +20,19 @@ var n = t(735250),
     I = t(63063),
     N = t(358085),
     A = t(894939),
-    m = t(321499),
-    C = t(710808),
+    C = t(321499),
+    m = t(710808),
     g = t(625205),
     h = t(325808),
     O = t(823087),
     p = t(546997),
     R = t(520384),
     x = t(167540),
-    f = t(803567),
-    M = t(269876),
+    M = t(803567),
+    f = t(269876),
     D = t(976758),
-    P = t(526761),
-    L = t(726985),
+    L = t(526761),
+    P = t(726985),
     b = t(981631),
     Z = t(65154),
     v = t(689938),
@@ -85,7 +85,7 @@ function F() {
         k = (0, o.e7)([S.Z], () => S.Z.getSubsection()),
         H = a.createRef();
     a.useEffect(() => {
-        if (k === P.GA) {
+        if (k === L.GA) {
             var e;
             null == H || null === (e = H.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection();
         }
@@ -96,15 +96,15 @@ function F() {
         title: v.Z.Messages.VOICE_SETTINGS,
         children: [
             (0, n.jsx)(E.F, {
-                setting: L.s6.VOICE_AND_VIDEO_DEVICES,
+                setting: P.s6.VOICE_AND_VIDEO_DEVICES,
                 children: (0, n.jsx)(g.Z, {})
             }),
             (0, n.jsx)(E.F, {
-                setting: L.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
+                setting: P.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
                 children: (0, n.jsx)(D.Z, {})
             }),
             (0, n.jsxs)(E.F, {
-                setting: L.s6.VOICE_AND_VIDEO_MIC_TEST,
+                setting: P.s6.VOICE_AND_VIDEO_MIC_TEST,
                 children: [
                     (0, n.jsx)(O.Z, {}),
                     (0, n.jsx)(l.FormText, {
@@ -116,30 +116,30 @@ function F() {
                 ]
             }),
             (0, n.jsx)(E.F, {
-                setting: L.s6.VOICE_AND_VIDEO_INPUT_MODE,
+                setting: P.s6.VOICE_AND_VIDEO_INPUT_MODE,
                 children: (0, n.jsx)(h.Z, {})
             }),
             (0, n.jsxs)(E.F, {
-                setting: L.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                children: [e === Z.pM.VOICE_ACTIVITY && (0, n.jsx)(M.Z, {}), (0, n.jsx)(l.FormDivider, { className: j.marginBottom40 })]
+                setting: P.s6.VOICE_AND_VIDEO_SENSITIVITY,
+                children: [e === Z.pM.VOICE_ACTIVITY && (0, n.jsx)(f.Z, {}), (0, n.jsx)(l.FormDivider, { className: j.marginBottom40 })]
             }),
             (0, n.jsx)(E.F, {
-                setting: L.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                setting: P.s6.VOICE_AND_VIDEO_SOUNDBOARD,
                 children: (0, n.jsx)('div', {
                     style: { scrollMarginTop: '48px' },
                     ref: H
                 })
             }),
             (0, n.jsx)(E.F, {
-                setting: L.s6.VOICE_AND_VIDEO_SOUNDS,
+                setting: P.s6.VOICE_AND_VIDEO_SOUNDS,
                 children: (0, n.jsx)(A.Z, {})
             }),
             (0, n.jsx)(E.F, {
-                setting: L.s6.VOICE_AND_VIDEO_VIDEO,
+                setting: P.s6.VOICE_AND_VIDEO_VIDEO,
                 children: (0, n.jsx)(x.Z, {})
             }),
             (0, n.jsx)(E.F, {
-                setting: L.s6.VOICE_AND_VIDEO_ADVANCED,
+                setting: P.s6.VOICE_AND_VIDEO_ADVANCED,
                 children: (0, n.jsxs)(l.HeadingLevel, {
                     component: (0, n.jsx)(l.FormTitle, {
                         tag: l.FormTitleTags.H1,
@@ -147,14 +147,14 @@ function F() {
                         children: v.Z.Messages.SETTINGS_ADVANCED
                     }),
                     children: [
-                        (0, n.jsx)(m.Z, {}),
+                        (0, n.jsx)(C.Z, {}),
                         (0, n.jsx)(E.F, {
-                            setting: L.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                            children: (0, n.jsx)(f.Z, {})
+                            setting: P.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                            children: (0, n.jsx)(M.Z, {})
                         }),
                         (0, n.jsx)(R.Z, {}),
                         (0, n.jsx)(E.F, {
-                            setting: L.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
+                            setting: P.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
                             children: (0, n.jsx)(l.FormSection, {
                                 className: j.marginBottom20,
                                 title: v.Z.Messages.FORM_LABEL_QOS,
@@ -167,7 +167,7 @@ function F() {
                             })
                         }),
                         (0, n.jsx)(E.F, {
-                            setting: L.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
+                            setting: P.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
                             children: (0, n.jsxs)(l.FormSection, {
                                 className: j.marginBottom20,
                                 children: [
@@ -205,7 +205,7 @@ function F() {
                         }),
                         W &&
                             (0, n.jsx)(E.F, {
-                                setting: L.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
+                                setting: P.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
                                 children: (0, n.jsxs)(l.FormSection, {
                                     className: j.marginBottom20,
                                     children: [
@@ -230,7 +230,7 @@ function F() {
                                 })
                             }),
                         (0, n.jsx)(E.F, {
-                            setting: L.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
+                            setting: P.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
                             children: (0, n.jsxs)(l.FormSection, {
                                 className: j.marginBottom20,
                                 title: v.Z.Messages.FORM_LABEL_SUBSYSTEM,
@@ -273,7 +273,7 @@ function F() {
                             })
                         }),
                         (0, n.jsxs)(E.F, {
-                            setting: L.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
+                            setting: P.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
                             children: [
                                 (0, n.jsx)(p.Z, {}),
                                 (0, n.jsx)(l.FormSection, {
@@ -288,11 +288,11 @@ function F() {
                             ]
                         }),
                         (0, n.jsx)(E.F, {
-                            setting: L.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                            children: (0, n.jsx)(C.Z, {})
+                            setting: P.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+                            children: (0, n.jsx)(m.Z, {})
                         }),
                         (0, n.jsx)(E.F, {
-                            setting: L.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
+                            setting: P.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
                             children: (0, n.jsx)(l.FormItem, {
                                 children: (0, n.jsx)(l.Button, {
                                     look: l.Button.Looks.OUTLINED,

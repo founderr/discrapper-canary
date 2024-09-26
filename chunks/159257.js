@@ -122,13 +122,13 @@ function E(e, t) {
             'aria-labelledby': `${O.id} ${null !== (n = e['aria-labelledby']) && void 0 !== n ? n : ''}`.trim()
         }),
         y = t.values[_],
-        b = (0, a.useCallback)(() => {
+        L = (0, a.useCallback)(() => {
             m.current && (0, r.Ao)(m.current);
         }, [m]),
-        L = t.focusedThumb === _;
+        b = t.focusedThumb === _;
     (0, a.useEffect)(() => {
-        L && b();
-    }, [L, b]);
+        b && L();
+    }, [b, L]);
     let D = 'rtl' === A,
         M = (0, a.useRef)(null),
         { keyboardProps: P } = (0, o.v5)({
@@ -182,11 +182,11 @@ function E(e, t) {
         ),
         x = (0, a.useRef)(void 0),
         G = (e) => {
-            b(), (x.current = e), t.setThumbDragging(_, !0), v(window, 'mouseup', k, !1), v(window, 'touchend', k, !1), v(window, 'pointerup', k, !1);
+            L(), (x.current = e), t.setThumbDragging(_, !0), v(window, 'mouseup', k, !1), v(window, 'touchend', k, !1), v(window, 'pointerup', k, !1);
         },
         k = (e) => {
             var n, r;
-            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === x.current && (b(), t.setThumbDragging(_, !1), N(window, 'mouseup', k, !1), N(window, 'touchend', k, !1), N(window, 'pointerup', k, !1));
+            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === x.current && (L(), t.setThumbDragging(_, !1), N(window, 'mouseup', k, !1), N(window, 'touchend', k, !1), N(window, 'pointerup', k, !1));
         },
         B = t.getThumbPercent(_);
     (S || 'rtl' === A) && (B = 1 - B);
@@ -240,7 +240,7 @@ function E(e, t) {
             labelProps: R,
             isDragging: t.isThumbDragging(_),
             isDisabled: g,
-            isFocused: L
+            isFocused: b
         }
     );
 }

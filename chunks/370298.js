@@ -29,8 +29,8 @@ var a = n(735250),
     R = n(703558),
     C = n(430824),
     y = n(626135),
-    b = n(585483),
-    L = n(619895),
+    L = n(585483),
+    b = n(619895),
     D = n(844439),
     M = n(981631),
     P = n(689938),
@@ -86,7 +86,7 @@ function w(e) {
 function x(e) {
     let { onSelect: t, onClose: n, channel: r, imageUrl: i, mimeType: l } = e,
         O = (0, s.e7)([C.Z], () => C.Z.getGuild(r.guild_id)),
-        { fetchState: w, imageRecCommandContexts: x } = (0, L.hR)({ channelId: r.id }),
+        { fetchState: w, imageRecCommandContexts: x } = (0, b.hR)({ channelId: r.id }),
         G = w === D.M.FETCHING,
         k = (0, g.g)(r),
         B = (0, h.PL)(!0, !0),
@@ -113,7 +113,7 @@ function x(e) {
                 let t = await fetch(i),
                     n = await t.arrayBuffer(),
                     a = l.join('/'),
-                    o = new File([n], 'image'.concat((0, L.Qm)({ contentType: a })), { type: a });
+                    o = new File([n], 'image'.concat((0, b.Qm)({ contentType: a })), { type: a });
                 c.Z.setFile({
                     channelId: r.id,
                     id: e,
@@ -162,7 +162,7 @@ function x(e) {
                         location: n,
                         sectionName: t.name
                     }),
-                    b.S.dispatch(M.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: r.id });
+                    L.S.dispatch(M.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: r.id });
             },
             [r.id, Z, k, B, F]
         ),
@@ -242,7 +242,7 @@ function x(e) {
                   )
                 : (0, a.jsx)(a.Fragment, {
                       children: x.map((e) => {
-                          let t = L.yJ[e.command.id],
+                          let t = b.yJ[e.command.id],
                               n = e.overrideSendCommand,
                               i = t.overrideSendCommandInfo,
                               o = null != n && null != i,

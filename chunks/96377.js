@@ -32,8 +32,8 @@ function f(e) {
             altBoundary: S
         }),
         y = (0, i.Z)(t.placement),
-        b = (0, d.Z)(t.placement),
-        L = !b,
+        L = (0, d.Z)(t.placement),
+        b = !L,
         D = (0, a.Z)(y),
         M = (0, o.Z)(D),
         P = t.modifiersData.popperOffsets,
@@ -68,8 +68,8 @@ function f(e) {
                 j = Y + C[Z],
                 W = Y - C[V],
                 K = N ? -w[H] / 2 : 0,
-                z = b === r.BL ? U[H] : w[H],
-                q = b === r.BL ? -w[H] : -U[H],
+                z = L === r.BL ? U[H] : w[H],
+                q = L === r.BL ? -w[H] : -U[H],
                 Q = t.elements.arrow,
                 X =
                     N && Q
@@ -82,8 +82,8 @@ function f(e) {
                 J = $[Z],
                 ee = $[V],
                 et = (0, s.u)(0, U[H], X[H]),
-                en = L ? U[H] / 2 - K - et - J - G.mainAxis : z - et - J - G.mainAxis,
-                er = L ? -U[H] / 2 + K + et + ee + G.mainAxis : q + et + ee + G.mainAxis,
+                en = b ? U[H] / 2 - K - et - J - G.mainAxis : z - et - J - G.mainAxis,
+                er = b ? -U[H] / 2 + K + et + ee + G.mainAxis : q + et + ee + G.mainAxis,
                 ei = t.elements.arrow && (0, u.Z)(t.elements.arrow),
                 ea = ei ? ('y' === D ? ei.clientTop || 0 : ei.clientLeft || 0) : 0,
                 eo = null != (F = null == k ? void 0 : k[D]) ? F : 0,

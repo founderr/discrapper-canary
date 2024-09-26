@@ -54,7 +54,7 @@ n.d(t, {
         return w;
     },
     bw: function () {
-        return L;
+        return b;
     },
     dF: function () {
         return z;
@@ -72,7 +72,7 @@ n.d(t, {
         return eB;
     },
     mn: function () {
-        return eL;
+        return eb;
     },
     nl: function () {
         return ep;
@@ -93,7 +93,7 @@ n.d(t, {
         return x;
     },
     tx: function () {
-        return b;
+        return L;
     },
     uC: function () {
         return H;
@@ -162,9 +162,9 @@ function y(e) {
     return C.has(e);
 }
 I.d4z.GUILD_TEXT, I.d4z.GUILD_ANNOUNCEMENT, I.d4z.GUILD_FORUM, I.d4z.GUILD_MEDIA;
-let b = new Set([I.d4z.GUILD_VOICE, I.d4z.GUILD_STAGE_VOICE]);
-function L(e) {
-    return 'SELECTABLE' !== e && b.has(e);
+let L = new Set([I.d4z.GUILD_VOICE, I.d4z.GUILD_STAGE_VOICE]);
+function b(e) {
+    return 'SELECTABLE' !== e && L.has(e);
 }
 let D = new Set([I.d4z.GUILD_STAGE_VOICE]),
     M = new Set([I.d4z.DM, I.d4z.GROUP_DM]);
@@ -247,10 +247,10 @@ function es(e) {
 let el = _.$e(I.Plq.CONNECT, I.Plq.VIEW_CHANNEL),
     eu = I.S7T.CONNECT | I.S7T.VIEW_CHANNEL;
 function ec(e) {
-    return L(e) ? el : I.Plq.VIEW_CHANNEL;
+    return b(e) ? el : I.Plq.VIEW_CHANNEL;
 }
 function ed(e) {
-    return L(e) ? eu : I.S7T.VIEW_CHANNEL;
+    return b(e) ? eu : I.S7T.VIEW_CHANNEL;
 }
 class e_ {
     constructor(e) {
@@ -359,7 +359,7 @@ class eh extends e_ {
         return B(this.type);
     }
     isGuildVocal() {
-        return L(this.type);
+        return b(this.type);
     }
     isGuildVocalOrThread() {
         return this.isGuildVocal() || this.isVocalThread();
@@ -641,18 +641,18 @@ class eC {
     }
 }
 let ey = new eC(),
-    eb = new eC();
-class eL extends eh {
+    eL = new eC();
+class eb extends eh {
     static sortRecipients(e, t) {
         let n = ey.getOrCompute(t);
         return [...(null != e ? e : [])].sort((e, t) => {
-            let r = eb.getOrCompute(e.id);
-            return (r ^ n) - (eb.getOrCompute(t.id) ^ n);
+            let r = eL.getOrCompute(e.id);
+            return (r ^ n) - (eL.getOrCompute(t.id) ^ n);
         });
     }
     static fromServer(e) {
         var t, n;
-        let r = eL.sortRecipients(e.recipients, e.id),
+        let r = eb.sortRecipients(e.recipients, e.id),
             i = {
                 application_id: e.application_id,
                 flags_: e.flags,
@@ -674,7 +674,7 @@ class eL extends eh {
                 blockedUserWarningDismissed: e.blocked_user_warning_dismissed,
                 type: null != e.type ? e.type : I.d4z.DM
             };
-        return (0, E.gh)(i, eL);
+        return (0, E.gh)(i, eb);
     }
     isSystemDM() {
         let e = this.rawRecipients[0];
@@ -706,11 +706,11 @@ class eL extends eh {
     }
     constructor(e) {
         var t, n;
-        super(e), (this.application_id = e.application_id), (this.flags_ = e.flags_), (this.icon = e.icon), (this.isMessageRequest = e.isMessageRequest), (this.isMessageRequestTimestamp = e.isMessageRequestTimestamp), (this.isSpam = e.isSpam), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.nicks = e.nicks), (this.ownerId = e.ownerId), (this.rawRecipients = eL.sortRecipients(e.rawRecipients, this.id)), (this.recipients = [...(null !== (t = e.recipients) && void 0 !== t ? t : [])].sort(m.default.compare)), (this.recipientFlags = e.recipientFlags), (this.safetyWarnings = null !== (n = e.safetyWarnings) && void 0 !== n ? n : []), (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed);
+        super(e), (this.application_id = e.application_id), (this.flags_ = e.flags_), (this.icon = e.icon), (this.isMessageRequest = e.isMessageRequest), (this.isMessageRequestTimestamp = e.isMessageRequestTimestamp), (this.isSpam = e.isSpam), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.nicks = e.nicks), (this.ownerId = e.ownerId), (this.rawRecipients = eb.sortRecipients(e.rawRecipients, this.id)), (this.recipients = [...(null !== (t = e.recipients) && void 0 !== t ? t : [])].sort(m.default.compare)), (this.recipientFlags = e.recipientFlags), (this.safetyWarnings = null !== (n = e.safetyWarnings) && void 0 !== n ? n : []), (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed);
     }
 }
-class eD extends eL {}
-class eM extends eL {}
+class eD extends eb {}
+class eM extends eb {}
 class eP extends eh {
     static fromServer(e, t) {
         var n, r, i, a, o;
@@ -765,8 +765,8 @@ class eP extends eh {
     }
 }
 let eU = {
-    [I.d4z.DM]: eL.fromServer,
-    [I.d4z.GROUP_DM]: eL.fromServer,
+    [I.d4z.DM]: eb.fromServer,
+    [I.d4z.GROUP_DM]: eb.fromServer,
     [I.d4z.GUILD_TEXT]: eI.fromServer,
     [I.d4z.GUILD_VOICE]: em.fromServer,
     [I.d4z.GUILD_STAGE_VOICE]: em.fromServer,

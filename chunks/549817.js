@@ -24,8 +24,8 @@ var s = n(392711),
     R = n(637853),
     C = n(816436),
     y = n(981631),
-    b = n(372897),
-    L = n(490897);
+    L = n(372897),
+    b = n(490897);
 function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (h.Z.isFullServerPreview(e)) return;
@@ -138,7 +138,7 @@ t.Z = {
                 guild_onboarding_covered_channel_ids: s.map((e) => e.id),
                 guild_onboarding_uncovered_channel_ids: l.map((e) => e.id)
             }),
-            (0, d.Ju)(e, L.W.GUILD_ONBOARDING_QUESTION, N.default.fromTimestamp(Date.now())),
+            (0, d.Ju)(e, b.W.GUILD_ONBOARDING_QUESTION, N.default.fromTimestamp(Date.now())),
             D(e, !0),
             h.Z.isFullServerPreview(e))
         ) {
@@ -147,7 +147,7 @@ t.Z = {
             if (null != t) {
                 var v, M;
                 let n = null !== (M = null === (v = I.ZP.getMember(e, t.id)) || void 0 === v ? void 0 : v.flags) && void 0 !== M ? M : 0;
-                (0, f.aq)(e, { memberOptions: { flags: (0, S.mB)(n, b.q.COMPLETED_ONBOARDING, !0) } });
+                (0, f.aq)(e, { memberOptions: { flags: (0, S.mB)(n, L.q.COMPLETED_ONBOARDING, !0) } });
             }
         }
     },
@@ -173,7 +173,7 @@ t.Z = {
         if (null != t) {
             var n, r;
             let i = null !== (r = null === (n = I.ZP.getMember(e, t.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== r ? r : 0;
-            await (0, E.e)(e, { flags: (0, S.mB)(i, b.q.COMPLETED_ONBOARDING, !1) });
+            await (0, E.e)(e, { flags: (0, S.mB)(i, L.q.COMPLETED_ONBOARDING, !1) });
         }
     }
 };

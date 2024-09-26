@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     },
     Eg: function () {
-        return b;
+        return L;
     },
     IZ: function () {
         return A;
@@ -224,7 +224,7 @@ function y(e) {
         guild_size: d.Z.getMemberCount(e)
     });
 }
-async function b(e) {
+async function L(e) {
     try {
         var t, n;
         let r = await o.tn.get({

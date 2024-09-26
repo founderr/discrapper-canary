@@ -29,8 +29,8 @@ var a = n(735250),
     R = n(912787),
     C = n(272709),
     y = n(718582),
-    b = n(126134),
-    L = n(981631),
+    L = n(126134),
+    b = n(981631),
     D = n(689938),
     M = n(206248);
 let P = 12,
@@ -47,7 +47,7 @@ function x(e) {
                     if (n) {
                         let n = null;
                         return (
-                            e.category === b.L.EMBEDDED_ACTIVITY ? (n = e.embeddedActivities[0].channelId) : e.category === b.L.HANGOUT || e.category === b.L.GAMING ? (n = e.channelId) : e.category === b.L.EVENT && (n = e.event.channel_id),
+                            e.category === L.L.EMBEDDED_ACTIVITY ? (n = e.embeddedActivities[0].channelId) : e.category === L.L.HANGOUT || e.category === L.L.GAMING ? (n = e.channelId) : e.category === L.L.EVENT && (n = e.event.channel_id),
                             r++,
                             (0, a.jsx)(
                                 C.Z,
@@ -82,7 +82,7 @@ function x(e) {
                 a.push(h.length > 0 ? h[0].id : '0'),
                 o.push(h.length > 0 && null !== (E = null === (c = v.Z.getUserAffinity(h[0].id)) || void 0 === c ? void 0 : c.affinity) && void 0 !== E ? E : 0),
                 n.push(Math.min(h.length, 6)),
-                s.push(null !== (f = null === (d = N.Z.getChannel(i)) || void 0 === d ? void 0 : d.type) && void 0 !== f ? f : L.d4z.UNKNOWN),
+                s.push(null !== (f = null === (d = N.Z.getChannel(i)) || void 0 === d ? void 0 : d.type) && void 0 !== f ? f : b.d4z.UNKNOWN),
                 (l['position_'.concat(p + 1, '_affinity_user_ids')] = h.slice(0, 6).map((e) => e.id)),
                 (l['position_'.concat(p + 1, '_user_affinity_scores')] = h.slice(0, 6).map((e) => {
                     var t, n;
@@ -97,7 +97,7 @@ function x(e) {
             (l.max_affinity_user_scores = o),
             (l.channel_types = s),
             (l.guild_id = t.id),
-            O.default.track(L.rMx.GUILD_TOOLTIP_SHOWN, {
+            O.default.track(b.rMx.GUILD_TOOLTIP_SHOWN, {
                 ...l,
                 ...(0, u.hH)(t.id)
             }));
@@ -120,11 +120,11 @@ function G(e) {
             backNavigationSection: S.Z.getBackNavigationSection(n.id)
         })),
         C = () => {
-            S.Z.isFullServerPreview(n.id) && (0, A.uL)(L.Z5c.CHANNEL(n.id)), h.ZP.shouldShowOnboarding(n.id) && (f.Z.finishOnboarding(n.id), (0, p.discardOnboardingPromise)(n.id)), (0, g.mL)(n.id), T.Z.open(n.id, R), R === L.pNK.ROLE_SUBSCRIPTIONS && (0, m.GN)(n.id);
+            S.Z.isFullServerPreview(n.id) && (0, A.uL)(b.Z5c.CHANNEL(n.id)), h.ZP.shouldShowOnboarding(n.id) && (f.Z.finishOnboarding(n.id), (0, p.discardOnboardingPromise)(n.id)), (0, g.mL)(n.id), T.Z.open(n.id, R), R === b.pNK.ROLE_SUBSCRIPTIONS && (0, m.GN)(n.id);
         },
         y = null === (t = u.current) || void 0 === t ? void 0 : t.clientHeight,
-        b = i + U,
-        G = null != y ? y - (U + w) : b;
+        L = i + U,
+        G = null != y ? y - (U + w) : L;
     return (0, a.jsx)(c.Z.Provider, {
         value: n.id,
         children: (0, a.jsxs)('div', {
@@ -133,7 +133,7 @@ function G(e) {
             children: [
                 (0, a.jsx)('div', {
                     className: M.tooltipPointer,
-                    style: { top: Math.min(b, G) }
+                    style: { top: Math.min(L, G) }
                 }),
                 (0, a.jsxs)('div', {
                     className: M.header,
@@ -173,7 +173,7 @@ function G(e) {
                                   variant: 'text-xs/medium',
                                   children: D.Z.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
                                       onClick: () => {
-                                          r(), T.Z.open(n.id, L.pNK.INSTANT_INVITES);
+                                          r(), T.Z.open(n.id, b.pNK.INSTANT_INVITES);
                                       }
                                   })
                               })

@@ -80,7 +80,7 @@ function C(e) {
 function y() {
     (A = {}), (v = {});
 }
-class b extends (r = l.ZP.Store) {
+class L extends (r = l.ZP.Store) {
     initialize() {
         var e;
         this.waitFor(h.ZP, I.Z, m.Z), (N = null !== (e = u.K.get(S)) && void 0 !== e ? e : N);
@@ -89,8 +89,8 @@ class b extends (r = l.ZP.Store) {
         return s().values(A);
     }
 }
-g(b, 'displayName', 'DetectedOffPlatformPremiumPerksStore'),
-    (t.Z = new b(c.Z, {
+g(L, 'displayName', 'DetectedOffPlatformPremiumPerksStore'),
+    (t.Z = new L(c.Z, {
         LOGOUT: y,
         SKU_FETCH_SUCCESS: R,
         ENTITLEMENT_FETCH_APPLICATION_SUCCESS: R,

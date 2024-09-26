@@ -30,12 +30,12 @@ var i = n(735250),
     R = n(981631),
     C = n(474936),
     y = n(689938),
-    b = n(398787);
-function L(e) {
+    L = n(398787);
+function b(e) {
     let { user: t, categories: n, purchases: r, analyticsLocations: o, onClose: s, initialSelectedDecoration: c, initialSelectedDecorationId: f, isTryItOutFlow: g, guild: S } = e,
         {
             pendingAvatarDecoration: R,
-            setPendingAvatarDecoration: L,
+            setPendingAvatarDecoration: b,
             savedAvatarDecoration: D
         } = (0, T.Z)({
             analyticsLocations: o,
@@ -57,7 +57,7 @@ function L(e) {
             P(e), null != e && k(e);
         },
         Z = () => {
-            L(M), s();
+            b(M), s();
         },
         V = a.useCallback(
             (e) => {
@@ -80,7 +80,7 @@ function L(e) {
                   })
                 : null == w && (x || !(0, _.G1)(U))
                   ? (0, i.jsx)(l.Button, {
-                        className: b.modalFooterShopButton,
+                        className: L.modalFooterShopButton,
                         onClick: () => V(null == U ? void 0 : U.skuId),
                         children: y.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                     })
@@ -93,20 +93,20 @@ function L(e) {
         children: [
             (0, i.jsxs)(l.ModalHeader, {
                 separator: !1,
-                className: b.modalHeader,
+                className: L.modalHeader,
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-lg/semibold',
                         children: y.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
                     }),
                     (0, i.jsx)(l.ModalCloseButton, {
-                        className: b.modalCloseButton,
+                        className: L.modalCloseButton,
                         onClick: s
                     })
                 ]
             }),
             (0, i.jsxs)(l.ModalContent, {
-                className: b.modalContent,
+                className: L.modalContent,
                 scrollbarType: 'none',
                 children: [
                     (0, i.jsx)(O.Z, {
@@ -118,7 +118,7 @@ function L(e) {
                         onOpenShop: V
                     }),
                     (0, i.jsx)(N.Z, {
-                        className: b.modalPreview,
+                        className: L.modalPreview,
                         user: t,
                         guildId: null == S ? void 0 : S.id,
                         avatarDecorationOverride: M
@@ -126,7 +126,7 @@ function L(e) {
                 ]
             }),
             (0, i.jsxs)(l.ModalFooter, {
-                className: b.modalFooter,
+                className: L.modalFooter,
                 children: [
                     (0, i.jsx)('div', { children: Y() }),
                     (0, i.jsx)(l.Button, {
@@ -176,14 +176,14 @@ function D(e) {
                   value: T,
                   children: (0, i.jsx)(l.ModalRoot, {
                       transitionState: t,
-                      className: b.modal,
+                      className: L.modal,
                       size: C ? l.ModalSize.DYNAMIC : l.ModalSize.MEDIUM,
                       children: C
                           ? (0, i.jsx)(l.Spinner, {
-                                className: b.spinner,
+                                className: L.spinner,
                                 type: l.Spinner.Type.SPINNING_CIRCLE
                             })
-                          : (0, i.jsx)(L, {
+                          : (0, i.jsx)(b, {
                                 user: I,
                                 guild: m,
                                 categories: A,

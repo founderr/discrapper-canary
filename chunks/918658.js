@@ -33,7 +33,7 @@ var i = n(120356),
     R = n(293810),
     C = n(689938),
     y = n(489666);
-function b(e) {
+function L(e) {
     let { className: t, onClick: n, children: i } = e;
     return (0, r.jsx)(l.Button, {
         className: a()(y.button, t),
@@ -45,9 +45,9 @@ function b(e) {
         children: i
     });
 }
-function L(e) {
+function b(e) {
     let { onClick: t } = e;
-    return (0, r.jsx)(b, {
+    return (0, r.jsx)(L, {
         onClick: t,
         children: C.Z.Messages.DISABLE
     });
@@ -93,7 +93,7 @@ function P() {
         color: l.NoticeColors.BRAND,
         className: y.notice,
         children: [
-            (0, r.jsxs)(b, {
+            (0, r.jsxs)(L, {
                 onClick: () => x({ backToSettings: !0 }),
                 className: y.backButton,
                 children: [
@@ -126,7 +126,7 @@ function P() {
                               renderPopout: () => (0, r.jsx)(A.Z, { guildId: e }),
                               children: (e) => {
                                   let { onClick: t } = e;
-                                  return (0, r.jsxs)(b, {
+                                  return (0, r.jsxs)(L, {
                                       onClick: t,
                                       children: [
                                           U,
@@ -163,7 +163,7 @@ function P() {
                               })
                       ]
                   }),
-            a || i === v.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(L, { onClick: () => x({ backToSettings: !1 }) })
+            a || i === v.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(b, { onClick: () => x({ backToSettings: !1 }) })
         ]
     });
 }

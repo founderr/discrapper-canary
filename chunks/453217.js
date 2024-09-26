@@ -9,22 +9,22 @@ var o = n(120356),
     d = n(685613),
     u = n(340100),
     p = n(644646),
-    x = n(788284),
-    m = n(46140),
-    g = n(689938),
-    _ = n(968387);
+    m = n(788284),
+    x = n(46140),
+    _ = n(689938),
+    C = n(968387);
 t.Z = function (e) {
     var t;
-    let { className: n, expansionSpring: o, isExpanded: C, isExpansionAnimationComplete: f, quest: h, useReducedMotion: E } = e,
-        S = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        { percentComplete: T } = (0, i.Rf)(h),
-        A = (0, i.Jf)(h),
-        v = null != A ? A.completedRatio > 0 : T > 0;
+    let { className: n, expansionSpring: o, isExpanded: g, isExpansionAnimationComplete: f, quest: E, useReducedMotion: h } = e,
+        S = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        { percentComplete: T } = (0, i.Rf)(E),
+        N = (0, i.Jf)(E),
+        v = null != N ? N.completedRatio > 0 : T > 0;
     return (0, s.jsxs)(a.animated.div, {
-        'aria-hidden': C && f,
-        className: r()(n, _.contentCollapsed, {
-            [_.contentCollapsedExpanded]: C,
-            [_.contentCollapsedAccepted]: S
+        'aria-hidden': g && f,
+        className: r()(n, C.contentCollapsed, {
+            [C.contentCollapsedExpanded]: g,
+            [C.contentCollapsedAccepted]: S
         }),
         style: {
             opacity: o.to({
@@ -33,48 +33,48 @@ t.Z = function (e) {
             })
         },
         children: [
-            (0, s.jsx)(x.Z, {
-                quest: h,
-                useReducedMotion: E
+            (0, s.jsx)(m.Z, {
+                quest: E,
+                useReducedMotion: h
             }),
             (0, s.jsx)('div', {
-                className: _.contentCollapsedWrapper,
+                className: C.contentCollapsedWrapper,
                 children: S
                     ? (0, s.jsxs)('div', {
-                          className: _.questProgressWrapper,
+                          className: C.questProgressWrapper,
                           children: [
                               (0, s.jsx)(p.Z, {
-                                  className: _.questProgressRewardTile,
-                                  quest: h,
+                                  className: C.questProgressRewardTile,
+                                  quest: E,
                                   questContent: c.jn.QUEST_BAR,
                                   autoplay: !1,
-                                  location: m.dr.QUESTS_BAR
+                                  location: x.dr.QUESTS_BAR
                               }),
                               v
                                   ? (0, s.jsx)(u.Z, {
-                                        className: _.questProgressBar,
-                                        quest: h
+                                        className: C.questProgressBar,
+                                        quest: E
                                     })
                                   : (0, s.jsx)(l.Text, {
-                                        className: _.questProgressHint,
+                                        className: C.questProgressHint,
                                         color: 'always-white',
                                         variant: 'text-sm/semibold',
-                                        children: g.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
+                                        children: _.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
                                     })
                           ]
                       })
                     : (0, s.jsxs)('div', {
-                          className: _.brandingWrapper,
+                          className: C.brandingWrapper,
                           children: [
                               (0, s.jsx)(d.Z, {
-                                  className: _.partnerBranding,
-                                  quest: h
+                                  className: C.partnerBranding,
+                                  quest: E
                               }),
                               (0, s.jsx)(l.Heading, {
                                   color: 'always-white',
                                   variant: 'heading-sm/medium',
-                                  className: _.questName,
-                                  children: g.Z.Messages.QUEST.format({ questName: h.config.messages.questName })
+                                  className: C.questName,
+                                  children: _.Z.Messages.QUEST.format({ questName: E.config.messages.questName })
                               })
                           ]
                       })

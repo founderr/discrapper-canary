@@ -53,13 +53,13 @@ function E(e) {
         R = f.hasOwnProperty('y'),
         C = r.t$,
         y = r.we,
-        b = window;
+        L = window;
     if (m) {
-        var L = (0, i.Z)(l),
+        var b = (0, i.Z)(l),
             D = 'clientHeight',
             M = 'clientWidth';
-        L === (0, a.Z)(l) && ((L = (0, o.Z)(l)), 'static' !== (0, s.Z)(L).position && 'absolute' === h && ((D = 'scrollHeight'), (M = 'scrollWidth')));
-        (c === r.we || ((c === r.t$ || c === r.F2) && E === r.ut)) && ((y = r.I), (v -= (T && L === b && b.visualViewport ? b.visualViewport.height : L[D]) - u.height), (v *= p ? 1 : -1)), (c === r.t$ || ((c === r.we || c === r.I) && E === r.ut)) && ((C = r.F2), (S -= (T && L === b && b.visualViewport ? b.visualViewport.width : L[M]) - u.width), (S *= p ? 1 : -1));
+        b === (0, a.Z)(l) && ((b = (0, o.Z)(l)), 'static' !== (0, s.Z)(b).position && 'absolute' === h && ((D = 'scrollHeight'), (M = 'scrollWidth')));
+        (c === r.we || ((c === r.t$ || c === r.F2) && E === r.ut)) && ((y = r.I), (v -= (T && b === L && L.visualViewport ? L.visualViewport.height : b[D]) - u.height), (v *= p ? 1 : -1)), (c === r.t$ || ((c === r.we || c === r.I) && E === r.ut)) && ((C = r.F2), (S -= (T && b === L && L.visualViewport ? L.visualViewport.width : b[M]) - u.width), (S *= p ? 1 : -1));
     }
     var P = Object.assign({ position: h }, m && d),
         U =
@@ -75,7 +75,7 @@ function E(e) {
                       x: S,
                       y: v
                   };
-    return ((S = U.x), (v = U.y), p) ? Object.assign({}, P, (((n = {})[y] = R ? '0' : ''), (n[C] = O ? '0' : ''), (n.transform = 1 >= (b.devicePixelRatio || 1) ? 'translate(' + S + 'px, ' + v + 'px)' : 'translate3d(' + S + 'px, ' + v + 'px, 0)'), n)) : Object.assign({}, P, (((t = {})[y] = R ? v + 'px' : ''), (t[C] = O ? S + 'px' : ''), (t.transform = ''), t));
+    return ((S = U.x), (v = U.y), p) ? Object.assign({}, P, (((n = {})[y] = R ? '0' : ''), (n[C] = O ? '0' : ''), (n.transform = 1 >= (L.devicePixelRatio || 1) ? 'translate(' + S + 'px, ' + v + 'px)' : 'translate3d(' + S + 'px, ' + v + 'px, 0)'), n)) : Object.assign({}, P, (((t = {})[y] = R ? v + 'px' : ''), (t[C] = O ? S + 'px' : ''), (t.transform = ''), t));
 }
 function f(e) {
     var t = e.state,

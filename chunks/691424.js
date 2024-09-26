@@ -29,8 +29,8 @@ var u = n(481060),
     R = n(746878),
     C = n(285063),
     y = n(943362),
-    b = n(551452),
-    L = n(69626),
+    L = n(551452),
+    b = n(69626),
     D = n(142990),
     M = n(532901),
     P = n(981631),
@@ -333,8 +333,8 @@ function V(e) {
         devLink: (0, D.Z)(e),
         emoji: G(e),
         customEmoji: k(e),
-        channelMention: (0, b.Z)(e),
-        commandMention: (0, L.ZP)(e),
+        channelMention: (0, L.Z)(e),
+        commandMention: (0, b.ZP)(e),
         attachmentLink: (0, y.Z)(e)
     };
 }

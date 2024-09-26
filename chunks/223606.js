@@ -74,13 +74,13 @@ function y(e) {
     let { guildId: t } = e;
     return delete I[t], !0;
 }
-function b(e) {
+function L(e) {
     let { guildId: t, message: n } = e;
     if (null == t || n.type !== f.uaV.AUTO_MODERATION_ACTION) return !1;
     let r = (0, l.e5)(n);
     return !!(0, E.nY)(r) && !!(0, E.OP)(r) && ((T[t] = r.id), !0);
 }
-function L(e) {
+function b(e) {
     var t;
     let { channelId: n, messages: r } = e,
         i = null === (t = u.Z.getChannel(n)) || void 0 === t ? void 0 : t.getGuildId();
@@ -133,9 +133,9 @@ h(D, 'displayName', 'GuildAutomodMessageStore'),
     h(D, 'persistKey', 'GuildAutomodMessages'),
     (t.Z = new D(o.Z, {
         CONNECTION_OPEN: v,
-        LOAD_MESSAGES_SUCCESS: L,
-        LOCAL_MESSAGES_LOADED: L,
-        MESSAGE_CREATE: b,
+        LOAD_MESSAGES_SUCCESS: b,
+        LOCAL_MESSAGES_LOADED: b,
+        MESSAGE_CREATE: L,
         MESSAGE_SEND_FAILED_AUTOMOD: N,
         MESSAGE_EDIT_FAILED_AUTOMOD: N,
         REMOVE_AUTOMOD_MESSAGE_NOTICE: O,

@@ -47,7 +47,7 @@ function S(e) {
     let n = null === (t = f.Z.getGuild(e.guild_id)) || void 0 === t ? void 0 : t.name;
     T.fileOnly('received deleted guild entities (id: '.concat(e.guild_id, ', name: ').concat(n, ')')),
         o.ZP.Emitter.batched(() => {
-            null != e.channels && C(e.guild_id, new Set(e.channels)), null != e.roles && y(e.guild_id, new Set(e.roles)), null != e.emojis && b(e.guild_id, new Set(e.emojis)), null != e.stickers && L(e.guild_id, new Set(e.stickers));
+            null != e.channels && C(e.guild_id, new Set(e.channels)), null != e.roles && y(e.guild_id, new Set(e.roles)), null != e.emojis && L(e.guild_id, new Set(e.emojis)), null != e.stickers && b(e.guild_id, new Set(e.stickers));
         });
 }
 function A() {
@@ -103,7 +103,7 @@ function y(e, t) {
             });
     });
 }
-function b(e, t) {
+function L(e, t) {
     let n = d.ZP.getGuildEmoji(e),
         r = n.filter((e) => t.has(e.id));
     n.length !== r.length &&
@@ -113,7 +113,7 @@ function b(e, t) {
             emojis: r
         });
 }
-function L(e, t) {
+function b(e, t) {
     var n;
     let r = null !== (n = _.Z.getStickersByGuildId(e)) && void 0 !== n ? n : [],
         i = r.filter((e) => t.has(e.id));

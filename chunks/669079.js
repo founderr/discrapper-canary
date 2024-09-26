@@ -80,15 +80,15 @@ let A = ['discordapp.com/gifts', 'discord.com/gifts'],
     R = RegExp('(?: |^|https?://)(?:'.concat(O, ')/([a-z0-9-]+)'), 'gi'),
     C = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => m.Z.escape(e))].join('|'),
     y = RegExp('(?: |^|https?://)(?:'.concat(C, ')/([a-z0-9-]+)'), 'gi'),
-    b = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789',
-    L = (e, t) =>
+    L = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789',
+    b = (e, t) =>
         Array(t)
             .fill(void 0)
-            .map(() => '['.concat(b, ']{').concat(e, '}'))
+            .map(() => '['.concat(L, ']{').concat(e, '}'))
             .join('-?'),
-    D = L(4, 4),
-    M = L(4, 6),
-    P = L(5, 3),
+    D = b(4, 4),
+    M = b(4, 6),
+    P = b(5, 3),
     U = 'WUMP-?',
     w = [D, M, P, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     x = new RegExp('^('.concat(U, ')?(').concat(w, ')$')),

@@ -9,8 +9,8 @@ var a = n(735250),
 let d = o.memo(
     o.forwardRef((e, t) => {
         let { onScroll: n, onResize: r, listPadding: i = [0, 0, 0, 0], renderRow: s, renderSection: d, renderSectionHeader: _, renderSectionFooter: E, renderListHeader: f, rowCount: h, rowCountBySection: p, rowHeight: m, sectionMarginBottom: I, sectionHeaderHeight: T, sectionFooterHeight: g, listHeaderHeight: S, stickyHeaders: A = !1, className: v, hideScrollbar: N = !1, fade: O = !1, initialScrollTop: R = 0, role: C = 'list' } = e,
-            [y, b] = o.useState(-1),
-            [L, D] = o.useState(-1),
+            [y, L] = o.useState(-1),
+            [b, D] = o.useState(-1),
             M = o.useRef(null),
             P = o.useRef(0),
             U = o.useRef(-1);
@@ -107,7 +107,7 @@ let d = o.memo(
             if (null == t) return;
             let { offsetWidth: n, offsetHeight: i, scrollTop: a } = t;
             D(i),
-                b(a),
+                L(a),
                 null == r ||
                     r({
                         width: n,
@@ -115,8 +115,8 @@ let d = o.memo(
                     });
         }, [r]);
         o.useLayoutEffect(() => {
-            -1 === L && j();
-        }, [L, j]),
+            -1 === b && j();
+        }, [b, j]),
             o.useEffect(() => {
                 var e;
                 let t = null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode(),
@@ -132,7 +132,7 @@ let d = o.memo(
                 (window.cancelAnimationFrame(U.current),
                 (U.current = window.requestAnimationFrame(() => {
                     let { scrollTop: e } = t;
-                    (P.current = e), null == n || n(e), b(e);
+                    (P.current = e), null == n || n(e), L(e);
                 })));
         }, [n]);
         o.useImperativeHandle(
@@ -162,7 +162,7 @@ let d = o.memo(
                                 } = i,
                                 u = G(o),
                                 c = s - (A ? u : 0) - r <= P.current,
-                                d = l + r >= P.current + L;
+                                d = l + r >= P.current + b;
                             if (c) {
                                 let i = P.current + u - s,
                                     a = A ? P.current - i : s;
@@ -173,7 +173,7 @@ let d = o.memo(
                                         animate: n
                                     });
                             } else if (d) {
-                                let e = l - (P.current + L);
+                                let e = l - (P.current + b);
                                 null === (a = M.current) ||
                                     void 0 === a ||
                                     a.scrollTo({
@@ -199,7 +199,7 @@ let d = o.memo(
                         });
                 },
                 getListDimensions: () => ({
-                    height: L,
+                    height: b,
                     totalHeight: V
                 }),
                 getSectionDescriptors: () => F.current,
@@ -213,16 +213,16 @@ let d = o.memo(
                     return null === (t = M.current) || void 0 === t ? void 0 : t.scrollIntoViewNode({ node: e });
                 }
             }),
-            [G, A, V, L]
+            [G, A, V, b]
         );
         let { visibleItems: K, listOffset: z } = o.useMemo(() => {
-                if (-1 === L || -1 === y)
+                if (-1 === b || -1 === y)
                     return {
                         visibleItems: null,
                         listOffset: 0
                     };
                 let e = y,
-                    t = y + L,
+                    t = y + b,
                     n = 0,
                     r = i[0],
                     a = [],
@@ -270,7 +270,7 @@ let d = o.memo(
                     visibleItems: a,
                     listOffset: r
                 };
-            }, [x, k, G, B, i, s, d, E, _, y, Y, A, f, w, L]),
+            }, [x, k, G, B, i, s, d, E, _, y, Y, A, f, w, b]),
             q = o.useMemo(() => {
                 var e, t, n;
                 return {

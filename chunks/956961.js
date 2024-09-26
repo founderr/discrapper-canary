@@ -64,11 +64,11 @@ function y(e) {
                     })
                 ]
             }),
-            0 === u.length ? (0, i.jsx)(L, {}) : (0, i.jsx)(_.AdvancedScrollerThin, { children: u.map((e) => (0, i.jsx)(b, { messageReminder: e }, e.saveData.messageId)) })
+            0 === u.length ? (0, i.jsx)(b, {}) : (0, i.jsx)(_.AdvancedScrollerThin, { children: u.map((e) => (0, i.jsx)(L, { messageReminder: e }, e.saveData.messageId)) })
         ]
     });
 }
-function b(e) {
+function L(e) {
     let t,
         { messageReminder: r } = e,
         a = r.saveData,
@@ -187,6 +187,6 @@ function b(e) {
               ]
           });
 }
-function L() {
+function b() {
     return null;
 }

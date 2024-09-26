@@ -78,10 +78,10 @@ let I = function e(e) {
     function y(e) {
         v(!1), null == n || n(e.currentTarget.checked, e);
     }
-    function b(e) {
+    function L(e) {
         if (!o && !e.repeat) (' ' === e.key || 'Enter' === e.key) && v(!0);
     }
-    function L(e) {
+    function b(e) {
         var t;
         if (!o && !!A && !e.repeat) v(!1), 'Enter' === e.key && (null === (t = S.current) || void 0 === t || t.click());
     }
@@ -147,8 +147,8 @@ let I = function e(e) {
                     },
                     className: f.input,
                     tabIndex: o ? -1 : 0,
-                    onKeyDown: b,
-                    onKeyUp: L,
+                    onKeyDown: L,
+                    onKeyUp: b,
                     onChange: y,
                     checked: r,
                     disabled: o

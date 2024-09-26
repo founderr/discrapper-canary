@@ -24,7 +24,7 @@ var a = n(392711),
     R = n(344651),
     C = n(981631),
     y = n(526761);
-function b(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function b(e, t, n) {
         e
     );
 }
-let L = window.DiscordNative;
+let b = window.DiscordNative;
 N.Wb.dispatcher.getDispatchHandler = R.Z;
 let D = new c.Z('ConnectionStore'),
     M = 100,
@@ -60,7 +60,7 @@ async function F(e) {
         n = T.Z.getVoiceChannelId();
     if (null != n) {
         var r, i, a, o, s, l, c, d;
-        if ((null === (s = window) || void 0 === s ? void 0 : null === (o = s.performance) || void 0 === o ? void 0 : null === (a = o.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(o, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == L ? void 0 : null === (d = L.processUtils) || void 0 === d ? void 0 : null === (c = d.getLastCrash) || void 0 === c ? void 0 : c.call(d))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !w) {
+        if ((null === (s = window) || void 0 === s ? void 0 : null === (o = s.performance) || void 0 === o ? void 0 : null === (a = o.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(o, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == b ? void 0 : null === (d = b.processUtils) || void 0 === d ? void 0 : null === (c = d.getLastCrash) || void 0 === c ? void 0 : c.call(d))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !w) {
             let e = h.Z.getChannel(n);
             null != e &&
                 (t = {
@@ -266,7 +266,7 @@ class em extends (r = s.ZP.Store) {
         return P;
     }
 }
-b(em, 'displayName', 'GatewayConnectionStore'),
+L(em, 'displayName', 'GatewayConnectionStore'),
     (t.Z = new em(l.Z, {
         START_SESSION: G,
         LOGIN_SUCCESS: B,

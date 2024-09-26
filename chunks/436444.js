@@ -44,7 +44,7 @@ function T(e) {
         R = O && S <= r.premiumTier,
         C = O && S < r.premiumTier,
         y = O && S === r.premiumTier,
-        { scaleFactor: b } = (0, l.useSpring)({
+        { scaleFactor: L } = (0, l.useSpring)({
             from: { scaleFactor: 0 },
             to: { scaleFactor: A >= S || (a && A + 1 === S) || (a && -1 === A && S === f.Eu4.NONE) ? 1 : 0 },
             config: {
@@ -52,11 +52,11 @@ function T(e) {
                 friction: 12
             }
         }),
-        L = (0, i.jsxs)(i.Fragment, {
+        b = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.animated.div, {
                     className: p.progressBarMarkerIndicator,
-                    style: { transform: b.to((e) => 'translate(-50%, -50%) scale('.concat(e, ')')) }
+                    style: { transform: L.to((e) => 'translate(-50%, -50%) scale('.concat(e, ')')) }
                 }),
                 S !== f.Eu4.NONE &&
                     (0, i.jsx)(c.Z, {
@@ -107,9 +107,9 @@ function T(e) {
                               confettiTriggerRef: n,
                               setConfettiCount: T,
                               setShouldFireConfetti: g,
-                              children: L
+                              children: b
                           })
-                        : L,
+                        : b,
                     (0, i.jsxs)(l.Text, {
                         className: p.progressBarMarkerLabel,
                         variant: 'text-md/normal',

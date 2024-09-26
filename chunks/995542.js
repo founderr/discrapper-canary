@@ -44,8 +44,8 @@ function N(e, t, n, r, A, N, O) {
             var y = O.get(e);
             if (y) return y == t;
             (r |= c), O.set(e, t);
-            var b = o(R(e), R(t), r, A, N, O);
-            return O.delete(e), b;
+            var L = o(R(e), R(t), r, A, N, O);
+            return O.delete(e), L;
         case T:
             if (v) return v.call(e) == v.call(t);
     }

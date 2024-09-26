@@ -60,7 +60,7 @@ let I = 0,
     y = (e) => {
         C();
     };
-class b extends (a = s.ZP.Store) {
+class L extends (a = s.ZP.Store) {
     get isFetching() {
         return f;
     }
@@ -83,8 +83,8 @@ class b extends (a = s.ZP.Store) {
         return null != e ? p[e] : void 0;
     }
 }
-d(b, 'displayName', 'ProfileEffectStore'),
-    (t.Z = new b(l.Z, {
+d(L, 'displayName', 'ProfileEffectStore'),
+    (t.Z = new L(l.Z, {
         USER_PROFILE_EFFECTS_FETCH: v,
         USER_PROFILE_EFFECTS_FETCH_SUCCESS: N,
         USER_PROFILE_EFFECTS_FETCH_FAILURE: O,

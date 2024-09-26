@@ -1,6 +1,6 @@
 n.d(t, {
     GE: function () {
-        return L;
+        return b;
     },
     GL: function () {
         return g;
@@ -30,7 +30,7 @@ n.d(t, {
         return M;
     },
     dw: function () {
-        return b;
+        return L;
     },
     ig: function () {
         return G;
@@ -166,11 +166,11 @@ function y(e) {
     var t;
     return null === (t = A(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
 }
-function b(e) {
+function L(e) {
     let t = A(e, s.N.RESURRECTED);
     return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
-function L(e) {
+function b(e) {
     let {
         months: t = 0,
         weeks: n = 0,

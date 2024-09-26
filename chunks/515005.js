@@ -23,7 +23,7 @@ let N = (0, u.Mg)(v.__invalid_stickerPickerPreviewDimensions),
     O = (0, u.Mg)(v.__invalid_stickerPickerPreviewPadding),
     R = 250,
     C = a.memo(function (e) {
-        let { isDisplayingIndividualStickers: t = !1, preferAnimation: r = !0, getStickerItemProps: o, getStickerRowProps: u, gutterWidth: C, inspectedStickerPosition: y, isScrolling: b, isUsingKeyboardNavigation: L, onInspect: D, onSelect: M, rowIndex: P, stickerClassName: U, stickerDescriptors: w, stickerPadding: x = O, stickerSize: G = N, ownedStickerPacks: k, enlargeOnInteraction: B = !1, channel: F, currentUser: Z, checkSendability: V = !0 } = e,
+        let { isDisplayingIndividualStickers: t = !1, preferAnimation: r = !0, getStickerItemProps: o, getStickerRowProps: u, gutterWidth: C, inspectedStickerPosition: y, isScrolling: L, isUsingKeyboardNavigation: b, onInspect: D, onSelect: M, rowIndex: P, stickerClassName: U, stickerDescriptors: w, stickerPadding: x = O, stickerSize: G = N, ownedStickerPacks: k, enlargeOnInteraction: B = !1, channel: F, currentUser: Z, checkSendability: V = !0 } = e,
             { location: H } = (0, _.O)(),
             Y = G + 2 * x,
             j = a.useMemo(
@@ -53,12 +53,12 @@ let N = (0, u.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                 let _ = e.visibleRowIndex === (null == y ? void 0 : y.rowIndex) && e.columnIndex === (null == y ? void 0 : y.columnIndex),
                     E = e.type === m.al.STICKER && B && _,
                     N = (t) => {
-                        if ((null == b ? void 0 : b.current) === !0 || (null == L ? void 0 : L.current) === !0) return;
+                        if ((null == L ? void 0 : L.current) === !0 || (null == b ? void 0 : b.current) === !0) return;
                         let n = t.altKey;
                         n && e.type === m.al.STICKER && !(0, I.gM)(e.sticker.id) && z(e.sticker.id), null == M || M(e, n);
                     },
                     O = (0, l.throttle)(() => {
-                        (null == b ? void 0 : b.current) !== !0 && (null == L ? void 0 : L.current) !== !0 && !_ && (null == D || D(e));
+                        (null == L ? void 0 : L.current) !== !0 && (null == b ? void 0 : b.current) !== !0 && !_ && (null == D || D(e));
                     }, R),
                     C = () => {
                         e.type === m.al.CREATE_STICKER &&

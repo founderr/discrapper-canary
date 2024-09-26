@@ -3,8 +3,8 @@ var s,
     a = n(442837),
     r = n(570140),
     i = n(381496),
-    o = n(430824);
-function l(e, t, n) {
+    l = n(430824);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ let c = {},
 d();
 class _ extends (s = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (c = e), this.waitFor(o.Z);
+        null != e && (c = e), this.waitFor(l.Z);
     }
     getState() {
         return c;
@@ -43,8 +43,8 @@ class _ extends (s = a.ZP.PersistedStore) {
         return 0 !== c.lastFetched;
     }
 }
-l(_, 'displayName', 'GuildAffinitiesStore'),
-    l(_, 'persistKey', 'GuildAffinitiesStore'),
+o(_, 'displayName', 'GuildAffinitiesStore'),
+    o(_, 'persistKey', 'GuildAffinitiesStore'),
     (t.Z = new _(r.Z, {
         CONNECTION_OPEN: function () {
             return Date.now() - c.lastFetched > 86400000 && (0, i.j)(), !1;

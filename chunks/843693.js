@@ -121,7 +121,7 @@ function C(e) {
 function y(e, t, n, r) {
     return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
 }
-function b(e) {
+function L(e) {
     var t, n;
     let {
         channelId: r,
@@ -148,7 +148,7 @@ function b(e) {
     }
     return !1;
 }
-class L extends (r = a.ZP.Store) {
+class b extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(u.default, c.Z);
     }
@@ -187,10 +187,10 @@ class L extends (r = a.ZP.Store) {
         return null != i ? (0, E.KH)(i, r) * n : 0;
     }
 }
-p(L, 'displayName', 'PoggermodeStore');
-let D = new L(l.Z, {
+p(b, 'displayName', 'PoggermodeStore');
+let D = new b(l.Z, {
     POGGERMODE_UPDATE_COMBO: R,
     POGGERMODE_UPDATE_MESSAGE_COMBO: C,
-    MESSAGE_CREATE: b
+    MESSAGE_CREATE: L
 });
 t.ZP = D;

@@ -25,8 +25,8 @@ var m = n(202226),
     R = n(585275),
     C = n(960048),
     y = n(63063),
-    b = n(240849),
-    L = n(998502),
+    L = n(240849),
+    b = n(998502),
     D = n(513566),
     M = n(534713),
     P = n(358085),
@@ -78,24 +78,24 @@ if (null != k.Z) {
         .join(', ');
     new Y.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(c, ', build: ').concat(t));
     let d = null === (l = (u = k.Z.remoteApp).getReleaseChannel) || void 0 === l ? void 0 : l.call(u);
-    ('canary' === d || 'development' === d) && L.ZP.pauseFrameEvictor(), L.ZP.initializeExitHook();
+    ('canary' === d || 'development' === d) && b.ZP.pauseFrameEvictor(), b.ZP.initializeExitHook();
 }
 if (((0, x.O)(window), __OVERLAY__)) X(g.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) X(g.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), P.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => L.ZP.beforeUnload()), L.ZP.on('HELP_OPEN', () => window.open(y.Z.getCommunityURL()));
-        let e = new G.sW(W, () => L.ZP.purgeMemory());
-        L.ZP.on('MAIN_WINDOW_BLUR', () => {
-            e.delay(), L.ZP.setFocused(!1), (0, w.T_)(window, !1);
+        (window.onbeforeunload = () => b.ZP.beforeUnload()), b.ZP.on('HELP_OPEN', () => window.open(y.Z.getCommunityURL()));
+        let e = new G.sW(W, () => b.ZP.purgeMemory());
+        b.ZP.on('MAIN_WINDOW_BLUR', () => {
+            e.delay(), b.ZP.setFocused(!1), (0, w.T_)(window, !1);
         }),
-            L.ZP.on('MAIN_WINDOW_FOCUS', () => {
-                e.cancel(), L.ZP.setFocused(!0), (0, w.T_)(window, !0);
+            b.ZP.on('MAIN_WINDOW_FOCUS', () => {
+                e.cancel(), b.ZP.setFocused(!0), (0, w.T_)(window, !0);
             }),
-            L.ZP.on('MAIN_WINDOW_PATH', Q),
-            L.ZP.on('MAIN_WINDOW_HIDDEN', () => {
+            b.ZP.on('MAIN_WINDOW_PATH', Q),
+            b.ZP.on('MAIN_WINDOW_HIDDEN', () => {
                 (0, w.al)(window);
             });
     }
-    N.Z.initialize(), S.Z.initialize(), A.Z.init(), R.Z.init(), H.Z.init(), v.Z.initialize(), b.Z.initialize(), D.Z.initialize(), O.j(), X(g.Z.App);
+    N.Z.initialize(), S.Z.initialize(), A.Z.init(), R.Z.init(), H.Z.init(), v.Z.initialize(), L.Z.initialize(), D.Z.initialize(), O.j(), X(g.Z.App);
 }

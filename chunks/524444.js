@@ -77,8 +77,8 @@ var a = n(735250),
     R = n(593545),
     C = n(479313),
     y = n(765104),
-    b = n(505953),
-    L = n(695346),
+    L = n(505953),
+    b = n(695346),
     D = n(201542),
     M = n(306680),
     P = n(594174),
@@ -167,7 +167,7 @@ function X(e) {
     var t;
     let { alt: n, hiddenSpoilers: r, renderAdjacentContent: i, containerClassName: s, imageContainerClassName: u, disableAltTextDisplay: c = !1, mediaLayoutType: d, imageContainerStyle: _, renderForwardComponent: f } = e,
         h = d === B.hV.MOSAIC,
-        m = !c && L.H1.getSetting() && null != n && '' !== n && !0 !== r,
+        m = !c && b.H1.getSetting() && null != n && '' !== n && !0 !== r,
         I = (e) => {
             let { altText: t } = e;
             return (0, a.jsxs)(E.Dialog, {
@@ -423,7 +423,7 @@ function eo(e) {
         A = o.useRef(null),
         [N, O] = o.useState(null),
         R = o.useRef(null),
-        L = (0, _.Wu)(
+        b = (0, _.Wu)(
             [y.Z],
             () => {
                 var e;
@@ -431,29 +431,29 @@ function eo(e) {
             },
             [i]
         ),
-        D = (0, T.Z)(L);
+        D = (0, T.Z)(b);
     o.useEffect(() => {
-        !c().isEqual(D, L) &&
+        !c().isEqual(D, b) &&
             w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
-                num_summaries: L.length,
-                message_counts: L.map((e) => e.count),
-                start_message_ids: L.map((e) => e.startId),
-                end_message_ids: L.map((e) => e.endId),
-                num_participants: L.map((e) => e.people.length),
+                num_summaries: b.length,
+                message_counts: b.map((e) => e.count),
+                start_message_ids: b.map((e) => e.startId),
+                end_message_ids: b.map((e) => e.endId),
+                num_participants: b.map((e) => e.people.length),
                 guild_id: i.guild_id,
                 channel_id: i.id,
                 channel_type: i.type
             });
-    }, [L, D, i.guild_id, i.id, i.type]);
+    }, [b, D, i.guild_id, i.id, i.type]);
     let G = (0, _.e7)(
             [P.default],
             () => {
                 var e;
                 return null !==
                     (e =
-                        null == L
+                        null == b
                             ? void 0
-                            : L.map((e) => {
+                            : b.map((e) => {
                                   var t;
                                   return null === (t = e.people) || void 0 === t
                                       ? void 0
@@ -467,12 +467,12 @@ function eo(e) {
                     ? e
                     : [];
             },
-            [L],
+            [b],
             el
         ),
         B = null !== (n = (0, _.e7)([y.Z], () => y.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-        Z = null == L ? void 0 : null === (t = L[B]) || void 0 === t ? void 0 : t.topic;
-    null == Z && null == m && (null == L ? void 0 : L.length) >= 1 && (Z = null === (r = L[0]) || void 0 === r ? void 0 : r.topic);
+        Z = null == b ? void 0 : null === (t = b[B]) || void 0 === t ? void 0 : t.topic;
+    null == Z && null == m && (null == b ? void 0 : b.length) >= 1 && (Z = null === (r = b[0]) || void 0 === r ? void 0 : r.topic);
     let j = o.useMemo(
             () =>
                 c().debounce((e) => {
@@ -502,21 +502,21 @@ function eo(e) {
         Q = o.useCallback(() => {
             w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !z,
-                num_summaries: L.length,
-                message_counts: L.map((e) => e.count),
-                start_message_ids: L.map((e) => e.startId),
-                end_message_ids: L.map((e) => e.endId),
-                num_participants: L.map((e) => e.people.length),
+                num_summaries: b.length,
+                message_counts: b.map((e) => e.count),
+                start_message_ids: b.map((e) => e.startId),
+                end_message_ids: b.map((e) => e.endId),
+                num_participants: b.map((e) => e.people.length),
                 guild_id: i.guild_id,
                 channel_id: i.id,
                 channel_type: i.type
             }),
                 q(!z);
-        }, [z, L, q, i]),
+        }, [z, b, q, i]),
         X = o.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : V.DZ.PILL_DROPDOWN,
-                    n = L[e];
+                    n = b[e];
                 if (null == n) return;
                 (0, C.wv)(i.id, n.id), (0, C.yK)(i.id, n.id);
                 let r = () => {
@@ -543,7 +543,7 @@ function eo(e) {
                         context: 'Summary Jump'
                     });
             },
-            [L, i, K, u]
+            [b, i, K, u]
         ),
         $ = o.useCallback((e) => {
             var t;
@@ -564,18 +564,18 @@ function eo(e) {
                 z &&
                     w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
-                        num_summaries: L.length,
-                        message_counts: L.map((e) => e.count),
-                        start_message_ids: L.map((e) => e.startId),
-                        end_message_ids: L.map((e) => e.endId),
-                        num_participants: L.map((e) => e.people.length),
+                        num_summaries: b.length,
+                        message_counts: b.map((e) => e.count),
+                        start_message_ids: b.map((e) => e.startId),
+                        end_message_ids: b.map((e) => e.endId),
+                        num_participants: b.map((e) => e.people.length),
                         guild_id: i.guild_id,
                         channel_id: i.id,
                         channel_type: i.type
                     }),
                     $(!1);
         },
-        [z, L, i, $]
+        [z, b, i, $]
     );
     o.useEffect(
         () => (
@@ -600,14 +600,14 @@ function eo(e) {
         );
     let ee = o.useMemo(
             () =>
-                (0, a.jsx)(b.Z, {
+                (0, a.jsx)(L.Z, {
                     channel: i,
-                    summaries: L,
+                    summaries: b,
                     summariesMembers: G,
                     selectTopic: X,
                     setOpen: $
                 }),
-            [L, G, X, $, i]
+            [b, G, X, $, i]
         ),
         et = o.useCallback(() => {
             let e = M.ZP.ackMessageId(i.id);
@@ -630,7 +630,7 @@ function eo(e) {
         }, [i.id]),
         er = H.Z.Messages.SUMMARIES_NO_SUMMARIES;
     return (
-        L.length > 0 && (er = '' === Z || null == Z ? H.Z.Messages.SUMMARIES_VIEW_ALL : Z),
+        b.length > 0 && (er = '' === Z || null == Z ? H.Z.Messages.SUMMARIES_VIEW_ALL : Z),
         p
             ? null
             : (0, a.jsxs)('div', {
@@ -774,7 +774,7 @@ function eu(e) {
                 channel_type: i.type
             });
     }, [O, R, i.guild_id, i.id, i.type]);
-    let L = (0, _.e7)(
+    let b = (0, _.e7)(
             [P.default],
             () => {
                 var e;
@@ -937,14 +937,14 @@ function eu(e) {
         );
     let ee = o.useMemo(
         () =>
-            (0, a.jsx)(b.Z, {
+            (0, a.jsx)(L.Z, {
                 channel: i,
                 summaries: O,
-                summariesMembers: L,
+                summariesMembers: b,
                 selectTopic: q,
                 setOpen: $
             }),
-        [O, L, q, $, i]
+        [O, b, q, $, i]
     );
     if (!(0, _.e7)([y.Z], () => y.Z.shouldShowTopicsBar())) return null;
     let et = H.Z.Messages.SUMMARIES_NO_SUMMARIES;

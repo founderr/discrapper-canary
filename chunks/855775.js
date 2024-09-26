@@ -44,11 +44,11 @@ function C(e) {
 function y(e) {
     C(), (_ = e.skuId), (f = e.applicationId), (A = e.isIAP), (h = e.analyticsLocation), (O = e.context), (N = e.isGift), (v = !0), (S = !1), (r = e.resolve), (i = e.reject), (g = null), (I = null), (p = e.promotionId);
 }
-function b(e) {
+function L(e) {
     let { error: t } = e;
     (v = !1), (O = null), C(t);
 }
-function L(e) {
+function b(e) {
     let { skuId: t } = e;
     R.add(t);
 }
@@ -142,8 +142,8 @@ class Z extends (a = s.ZP.Store) {
 c(Z, 'displayName', 'SKUPaymentModalStore'),
     (t.Z = new Z(l.Z, {
         SKU_PURCHASE_MODAL_OPEN: y,
-        SKU_PURCHASE_MODAL_CLOSE: b,
-        SKU_PURCHASE_PREVIEW_FETCH: L,
+        SKU_PURCHASE_MODAL_CLOSE: L,
+        SKU_PURCHASE_PREVIEW_FETCH: b,
         SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: D,
         SKU_PURCHASE_PREVIEW_FETCH_FAILURE: M,
         SKU_PURCHASE_START: P,

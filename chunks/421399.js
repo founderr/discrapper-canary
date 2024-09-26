@@ -38,7 +38,7 @@ function N(e) {
 function O(e) {
     var t;
     let n,
-        { author: r, message: o, channel: f, userOverride: O, compact: R = !1, withMentionPrefix: C = !1, showPopout: y = !1, className: b, onClick: L, onContextMenu: D, onPopoutRequestClose: M, renderPopout: P, renderRemixTag: U = !1, decorations: w } = e,
+        { author: r, message: o, channel: f, userOverride: O, compact: R = !1, withMentionPrefix: C = !1, showPopout: y = !1, className: L, onClick: b, onContextMenu: D, onPopoutRequestClose: M, renderPopout: P, renderRemixTag: U = !1, decorations: w } = e,
         x = a.useContext(p.Z),
         G = null !== (t = null == f ? void 0 : f.guild_id) && void 0 !== t ? t : x,
         { analyticsLocations: k } = (0, E.ZP)(_.Z.USERNAME),
@@ -60,7 +60,7 @@ function O(e) {
         q = {
             className: v.username,
             style: j && null != Z ? { color: Z } : void 0,
-            onClick: L,
+            onClick: b,
             onContextMenu: D,
             children: (0, i.jsx)(i.Fragment, { children: B + F })
         };
@@ -111,7 +111,7 @@ function O(e) {
                                   tag: 'span',
                                   ...n,
                                   ...q,
-                                  className: s()(q.className, v.clickable, b)
+                                  className: s()(q.className, v.clickable, L)
                               }),
                               X
                           ]
@@ -122,7 +122,7 @@ function O(e) {
                   children: [
                       (0, i.jsx)(c.Clickable, {
                           ...q,
-                          className: s()(q.className, b)
+                          className: s()(q.className, L)
                       }),
                       X
                   ]

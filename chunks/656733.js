@@ -89,12 +89,12 @@ function y(e) {
             };
         }));
 }
-function b(e) {
+function L(e) {
     let { query: t } = e;
     if (null == t) return !1;
     (I = t), (T = []);
 }
-function L(e) {
+function b(e) {
     let t = e.trendingCategories;
     g = [
         ...(null != e.trendingGIFPreview
@@ -155,8 +155,8 @@ _(P, 'displayName', 'GIFPickerViewStore'),
         GIF_PICKER_INITIALIZE: N,
         GIF_PICKER_QUERY: O,
         GIF_PICKER_QUERY_SUCCESS: y,
-        GIF_PICKER_QUERY_FAILURE: b,
-        GIF_PICKER_TRENDING_FETCH_SUCCESS: L,
+        GIF_PICKER_QUERY_FAILURE: L,
+        GIF_PICKER_TRENDING_FETCH_SUCCESS: b,
         GIF_PICKER_SUGGESTIONS_SUCCESS: D,
         GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: M
     }));

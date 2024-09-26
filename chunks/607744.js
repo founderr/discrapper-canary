@@ -115,7 +115,7 @@ function y(e) {
     let { guildId: t } = e;
     g(t);
 }
-class b extends (r = s.ZP.Store) {
+class L extends (r = s.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, E.default);
     }
@@ -127,8 +127,8 @@ class b extends (r = s.ZP.Store) {
         return this.getCheck(e).canChat;
     }
 }
-p(b, 'displayName', 'GuildVerificationStore'),
-    (t.Z = new b(l.Z, {
+p(L, 'displayName', 'GuildVerificationStore'),
+    (t.Z = new L(l.Z, {
         CONNECTION_OPEN: A,
         CONNECTION_CLOSED: v,
         CURRENT_USER_UPDATE: C,

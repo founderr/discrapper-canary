@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return b;
     }
 });
 var r = n(411104);
@@ -106,33 +106,33 @@ function y(e) {
         })
     });
 }
-let b = [];
-function L(e) {
+let L = [];
+function b(e) {
     let { channelId: t, guildId: r, participant: i, className: s, compact: u = !1, disableInteraction: p = !1, maxVisibleUsers: g = 3 } = e,
         [v, R] = o.useState(!1),
-        L = o.useRef(new _.sW(O, () => R(!1))),
+        b = o.useRef(new _.sW(O, () => R(!1))),
         D = (0, d.Wu)(
             [m.Z, I.default],
             () => {
                 if (i.type === S.fO.STREAM) {
                     let e = m.Z.getViewerIds(i.id);
-                    return e.length > 0 ? e.map((e) => I.default.getUser(e)).filter(T.lm) : b;
+                    return e.length > 0 ? e.map((e) => I.default.getUser(e)).filter(T.lm) : L;
                 }
                 return i.type === S.fO.ACTIVITY
                     ? i.participants.length > 0
                         ? Array.from(i.participants)
                               .map((e) => I.default.getUser(e.userId))
                               .filter(T.lm)
-                        : b
-                    : b;
+                        : L
+                    : L;
             },
             [i]
         ),
         M = o.useCallback(() => {
-            L.current.cancel(), R(!0);
+            b.current.cancel(), R(!0);
         }, []),
         P = o.useCallback(() => {
-            L.current.delay();
+            b.current.delay();
         }, []),
         U = o.useCallback(
             (e, t) => {

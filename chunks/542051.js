@@ -10,8 +10,8 @@ var r,
     s,
     a = n(735250),
     o = n(470079),
-    u = n(120356),
-    c = n.n(u),
+    c = n(120356),
+    u = n.n(c),
     d = n(481060),
     h = n(689938),
     _ = n(463659);
@@ -28,20 +28,20 @@ function E(e, t, n) {
 }
 class p extends (r = o.PureComponent) {
     renderQuery(e) {
-        let { query: t, navId: n, focusedIndex: r, onSelectQuery: i, onSelectSearchEverywhere: l, onHighlightQuery: s, hideQuery: o, searchFavorites: u } = this.props;
+        let { query: t, navId: n, focusedIndex: r, onSelectQuery: i, onSelectSearchEverywhere: l, onHighlightQuery: s, hideQuery: o, searchFavorites: c } = this.props;
         if (e || o) return null;
         let f = -1 === r;
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsxs)(d.Clickable, {
-                    className: c()(_.queryContainer, { [_.focused]: f }),
+                    className: u()(_.queryContainer, { [_.focused]: f }),
                     ...E(n, -1, f),
                     onMouseEnter: s,
                     onClick: i,
                     children: [
                         (0, a.jsx)('div', {
                             className: _.queryText,
-                            children: u ? h.Z.Messages.SEARCH_FAVORITES : h.Z.Messages.SEARCH_FOR_VALUE.format({ value: t })
+                            children: c ? h.Z.Messages.SEARCH_FAVORITES : h.Z.Messages.SEARCH_FOR_VALUE.format({ value: t })
                         }),
                         (0, a.jsx)('div', {
                             className: _.queryShortcut,
@@ -54,9 +54,9 @@ class p extends (r = o.PureComponent) {
                         })
                     ]
                 }),
-                u &&
+                c &&
                     (0, a.jsxs)(d.Clickable, {
-                        className: c()(_.queryContainer, { [_.focused]: f }),
+                        className: u()(_.queryContainer, { [_.focused]: f }),
                         ...E(n, -1, f),
                         onMouseEnter: s,
                         onClick: l,

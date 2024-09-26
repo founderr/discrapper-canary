@@ -36,14 +36,14 @@ let A = new Set(),
     R = new Set(),
     C = {},
     y = 10 * I.Z.Millis.MINUTE,
-    b = 6 * I.Z.Millis.HOUR,
-    L = 10 * I.Z.Millis.MINUTE,
+    L = 6 * I.Z.Millis.HOUR,
+    b = 10 * I.Z.Millis.MINUTE,
     D = new u.V7();
 function M(e) {
     D.start(e + Math.random() * y, d.o);
 }
 function P() {
-    return M(b), U();
+    return M(L), U();
 }
 function U() {
     if (!(0, g.Q)()) return !1;
@@ -127,10 +127,10 @@ function H(e) {
         }
         C[t] = r;
     }
-    M(b);
+    M(L);
 }
 function Y() {
-    M(L);
+    M(b);
 }
 function j() {
     D.stop();

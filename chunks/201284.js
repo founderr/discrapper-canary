@@ -72,15 +72,15 @@ function c(e) {
         O = (0, r.useRef)(o),
         [R, C] = (0, r.useState)(o),
         y = (0, r.useRef)(o),
-        b = () => {
-            if (!L) return;
+        L = () => {
+            if (!b) return;
             D(!1);
             let e = m || u || O.current;
             !f(e, y.current) && ((y.current = e), C(e));
         },
-        [L, D] = (0, r.useState)(!1);
+        [b, D] = (0, r.useState)(!1);
     return (
-        (0, r.useEffect)(b),
+        (0, r.useEffect)(L),
         {
             realtimeValidation: p || N || m || u || o,
             displayValidation: 'native' === h ? p || N || R : p || N || m || u || R,

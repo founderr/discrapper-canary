@@ -577,7 +577,7 @@
             return E(a(e.statelessHosts).reverse(), e.getTimeout);
         });
     }
-    function b(e) {
+    function L(e) {
         var t = e.hostsCache,
             n = e.logger,
             r = e.requester,
@@ -661,7 +661,7 @@
             };
         return d;
     }
-    function L(e) {
+    function b(e) {
         var t = {
             value: 'Algolia for JavaScript ('.concat(e, ')'),
             add: function (e) {
@@ -1436,7 +1436,7 @@
                 );
             };
         },
-        eb = function (e) {
+        eL = function (e) {
             return function (t) {
                 var r = n({ hitsPerPage: 1000 }, t);
                 return V(
@@ -1469,7 +1469,7 @@
                 );
             };
         },
-        eL = function (e) {
+        eb = function (e) {
             return function (t, n, i) {
                 var a = i || {},
                     o = a.batchSize,
@@ -1618,7 +1618,7 @@
                 var r = t.map(function (e) {
                     return { objectID: e };
                 });
-                return eL(e)(r, tn.DeleteObject, n);
+                return eb(e)(r, tn.DeleteObject, n);
             };
         },
         ek = function (e) {
@@ -1823,7 +1823,7 @@
                     a = i.createIfNotExists,
                     o = r(i, ['createIfNotExists']),
                     s = a ? tn.PartialUpdateObject : tn.PartialUpdateObjectNoCreate;
-                return eL(e)(t, s, o);
+                return eb(e)(t, s, o);
             };
         },
         eX = function (e) {
@@ -1971,7 +1971,7 @@
                         }
                     }
                 }
-                return eL(e)(t, s, o);
+                return eb(e)(t, s, o);
             };
         },
         e2 = function (e) {
@@ -2338,7 +2338,7 @@
                 hostsCache: s({
                     caches: [o({ key: ''.concat('4.23.3', '-').concat(e) }), l()]
                 }),
-                userAgent: L('4.23.3').add({ segment: 'Browser' })
+                userAgent: b('4.23.3').add({ segment: 'Browser' })
             },
             c = n(n({}, a), r),
             d = function () {
@@ -2346,7 +2346,7 @@
                     return (function (e) {
                         var t = e.region || 'us',
                             r = u(h.WithinHeaders, e.appId, e.apiKey),
-                            i = b(
+                            i = L(
                                 n(
                                     n({ hosts: [{ url: 'personalization.'.concat(t, '.algolia.com') }] }, e),
                                     {},
@@ -2380,7 +2380,7 @@
         return (function (e) {
             var t = e.appId,
                 r = u(void 0 !== e.authMode ? e.authMode : h.WithinHeaders, t, e.apiKey),
-                i = b(
+                i = L(
                     n(
                         n(
                             {
@@ -2494,7 +2494,7 @@
                                         saveSynonyms: e5,
                                         getSynonym: ez,
                                         searchSynonyms: e9,
-                                        browseSynonyms: eb,
+                                        browseSynonyms: eL,
                                         deleteSynonym: eB,
                                         clearSynonyms: eP,
                                         replaceAllObjects: eX,
@@ -2516,7 +2516,7 @@
                                 return (function (e) {
                                     var t = e.region || 'us',
                                         r = u(h.WithinHeaders, e.appId, e.apiKey),
-                                        i = b(
+                                        i = L(
                                             n(
                                                 n({ hosts: [{ url: 'analytics.'.concat(t, '.algolia.com') }] }, e),
                                                 {},

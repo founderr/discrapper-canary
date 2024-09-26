@@ -89,13 +89,13 @@ function y(e) {
     }
     return n;
 }
-function b(e) {
+function L(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (p(l.Z.createFromServer(e.application)), (n = !0));
     return n;
 }
-function L(e) {
+function b(e) {
     let { integrations: t, guildId: n } = e,
         r = !1,
         i = [];
@@ -197,10 +197,10 @@ u(B, 'displayName', 'ApplicationStore'),
         APPLICATIONS_FETCH_SUCCESS: R,
         APPLICATIONS_FETCH_FAIL: y,
         APPLICATION_UPDATE: g,
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: b,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: b,
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: b,
-        GUILD_SETTINGS_LOADED_INTEGRATIONS: L,
+        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: L,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: L,
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: L,
+        GUILD_SETTINGS_LOADED_INTEGRATIONS: b,
         GUILD_APPLICATIONS_FETCH_SUCCESS: D,
         BILLING_PAYMENTS_FETCH_SUCCESS: M,
         PAYMENT_UPDATE: P,

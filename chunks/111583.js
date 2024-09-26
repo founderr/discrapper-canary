@@ -146,7 +146,7 @@ function y(e) {
     let t = T(e);
     return t === I ? 0 : Object.keys(t).length;
 }
-class b extends (i = a.ZP.Store) {
+class L extends (i = a.ZP.Store) {
     getTypingUsers(e) {
         return T(e);
     }
@@ -154,8 +154,8 @@ class b extends (i = a.ZP.Store) {
         return null != T(e)[t];
     }
 }
-E(b, 'displayName', 'TypingStore'),
-    (t.Z = new b(s.Z, {
+E(L, 'displayName', 'TypingStore'),
+    (t.Z = new L(s.Z, {
         TYPING_START: N,
         TYPING_STOP: O,
         TYPING_START_LOCAL: g,

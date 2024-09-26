@@ -71,14 +71,14 @@ function y(e) {
         null != e.lastMessageId && (null == r ? void 0 : r.id) !== e.lastMessageId && ((t.mostRecentRawMessage = null), (t.mostRecentMessage = null));
     });
 }
-function b(e) {
+function L(e) {
     if (null != e && !(e.id in g)) {
         let t = E.Z.getChannel(e.id);
         if (null != t) return y(t), !0;
     }
     return !1;
 }
-function L(e) {
+function b(e) {
     (S = {}), T.clear(), e.guilds.forEach(R);
 }
 function D(e) {
@@ -119,12 +119,12 @@ function w(e) {
 }
 function x(e) {
     let { threads: t } = e;
-    t.forEach(b);
+    t.forEach(L);
 }
 function G(e) {
     let { messages: t, threads: n } = e;
-    for (let e of t) for (let t of e) b(t.thread);
-    n.forEach(b);
+    for (let e of t) for (let t of e) L(t.thread);
+    n.forEach(L);
 }
 function k(e) {
     let { channel: t } = e;
@@ -186,7 +186,7 @@ function Y(e) {
 }
 function j(e) {
     let t = !1;
-    for (let n of e.messages) t = b(n.thread) || t;
+    for (let n of e.messages) t = L(n.thread) || t;
     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
     let n = E.Z.getChannel(e.channelId);
     if (null == n || !c.Ec.has(n.type)) return t;
@@ -221,7 +221,7 @@ class W extends (r = s.ZP.Store) {
 }
 I(W, 'displayName', 'ThreadMessageStore'),
     (t.Z = new W(l.Z, {
-        CONNECTION_OPEN: L,
+        CONNECTION_OPEN: b,
         OVERLAY_INITIALIZE: D,
         GUILD_CREATE: M,
         GUILD_DELETE: P,

@@ -37,15 +37,15 @@ r(
                 R,
                 C = o(this),
                 y = 0,
-                b = 0,
-                L = '';
+                L = 0,
+                b = '';
             if (!l(e)) {
                 if ((n = u(e)) && !~I(c(o(_(e))), 'g')) throw m('`.replaceAll` does not allow non-global regexes');
                 if ((r = d(e, p))) return i(r, e, C, t);
                 if (h && n) return T(c(C), e, t);
             }
-            for (a = c(C), f = c(e), !(v = s(t)) && (t = c(t)), O = S(1, (N = f.length)), y = A(a, f, 0); -1 !== y; ) (R = v ? c(t(f, y, a)) : E(f, a, y, [], void 0, t)), (L += g(a, b, y) + R), (b = y + N), (y = A(a, f, y + O));
-            return b < a.length && (L += g(a, b)), L;
+            for (a = c(C), f = c(e), !(v = s(t)) && (t = c(t)), O = S(1, (N = f.length)), y = A(a, f, 0); -1 !== y; ) (R = v ? c(t(f, y, a)) : E(f, a, y, [], void 0, t)), (b += g(a, L, y) + R), (L = y + N), (y = A(a, f, y + O));
+            return L < a.length && (b += g(a, L)), b;
         }
     }
 );

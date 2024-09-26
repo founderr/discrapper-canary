@@ -167,7 +167,7 @@ function y(e) {
         message: (0, d.Cm)(r.message)
     });
 }
-function b(e) {
+function L(e) {
     let { message: t } = e,
         n = t.id,
         r = t.channel_id;
@@ -179,7 +179,7 @@ function b(e) {
         message: (0, _.wi)(i.message, t)
     });
 }
-function L(e) {
+function b(e) {
     return S.deleteChannelCache(e.channel.id);
 }
 function D() {
@@ -248,12 +248,12 @@ p(B, 'displayName', 'ReferencedMessageStore'),
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: y,
         LOAD_FORUM_POSTS: k,
         MESSAGE_CREATE: C,
-        MESSAGE_UPDATE: b,
+        MESSAGE_UPDATE: L,
         MESSAGE_DELETE: P,
         MESSAGE_DELETE_BULK: U,
         CREATE_PENDING_REPLY: w,
-        CHANNEL_DELETE: L,
-        THREAD_DELETE: L,
+        CHANNEL_DELETE: b,
+        THREAD_DELETE: b,
         GUILD_DELETE: D,
         CONNECTION_OPEN: x,
         LOGOUT: x

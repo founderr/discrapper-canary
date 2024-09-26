@@ -4,9 +4,9 @@ t.d(s, {
     }
 });
 var n = t(735250);
-let a = t(470079).createContext(!1);
+let r = t(470079).createContext(!1);
 function i(e) {
-    return (0, n.jsx)(a.Provider, {
+    return (0, n.jsx)(r.Provider, {
         value: !0,
         children: e.children
     });

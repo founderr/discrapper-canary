@@ -24,8 +24,8 @@ var c = n(512722),
     R = n(449934),
     C = n(960048),
     y = n(117240),
-    b = n(412788),
-    L = n(981631),
+    L = n(412788),
+    b = n(981631),
     D = n(723359);
 function M(e, t, n) {
     return (
@@ -53,8 +53,8 @@ let P = new A.Z('AuthenticationStore'),
     H = null,
     Y = null,
     j = null,
-    W = L.u34.NONE,
-    K = L.$ib.NONE,
+    W = b.u34.NONE,
+    K = b.$ib.NONE,
     z = !1,
     q = [],
     Q = '',
@@ -88,7 +88,7 @@ function eE(e) {
 }
 function ef(e) {
     let t = null != _.getToken(),
-        n = null != p.K.get(L.B1h);
+        n = null != p.K.get(b.B1h);
     P.verbose(e, {
         tokenManagerHasToken: t,
         storageHasToken: n
@@ -108,7 +108,7 @@ function ep(e) {
         null != H && (n['X-Fingerprint'] = H),
         (es = h.tn
             .get({
-                url: L.ANM.EXPERIMENTS,
+                url: b.ANM.EXPERIMENTS,
                 query: { with_guild_experiments: t },
                 headers: n,
                 context: { location: (0, v.Wf)() },
@@ -147,14 +147,14 @@ function eT() {
     return ef('removeAuthToken called.'), _.removeToken();
 }
 function eg(e) {
-    (ea = {}), (W = L.u34.LOGGING_IN), (et = ''), (i = null), null != e.login && (el = e.login), ed || (ed = e.loginMethod === L.nnr.PASSWORD);
+    (ea = {}), (W = b.u34.LOGGING_IN), (et = ''), (i = null), null != e.login && (el = e.login), ed || (ed = e.loginMethod === b.nnr.PASSWORD);
 }
 function eS(e) {
     let { isMultiAccount: t } = e;
-    if (((ea = {}), (W = L.u34.NONE), (Q = ''), (X = !1), ($ = null), (i = null), (r = null), !t)) eT(), eh(!1);
+    if (((ea = {}), (W = b.u34.NONE), (Q = ''), (X = !1), ($ = null), (i = null), (r = null), !t)) eT(), eh(!1);
 }
 function eA() {
-    W = L.u34.NONE;
+    W = b.u34.NONE;
 }
 function ev(e) {
     let { login: t, password: n } = e;
@@ -165,58 +165,58 @@ function ev(e) {
 }
 function eN(e) {
     let { token: t } = e;
-    (W = L.u34.NONE), eI(t), em(), (Q = ''), (X = !1), ($ = null), (ec = !1), (et = '');
+    (W = b.u34.NONE), eI(t), em(), (Q = ''), (X = !1), ($ = null), (ec = !1), (et = '');
 }
 function eO(e) {
     let { error: t } = e;
-    (Q = ''), (X = !1), ($ = null), (W = null != (ea = eE(t)).date_of_birth ? L.u34.LOGIN_AGE_GATE : L.u34.NONE);
+    (Q = ''), (X = !1), ($ = null), (W = null != (ea = eE(t)).date_of_birth ? b.u34.LOGIN_AGE_GATE : b.u34.NONE);
 }
 function eR() {
     (ea = {}), (ec = !0);
 }
 function eC(e) {
     let { error: t } = e;
-    (Q = ''), (X = !1), ($ = null), (ec = !1), (W = null != (ea = e_(t)).date_of_birth ? L.u34.LOGIN_AGE_GATE : L.u34.NONE);
+    (Q = ''), (X = !1), ($ = null), (ec = !1), (W = null != (ea = e_(t)).date_of_birth ? b.u34.LOGIN_AGE_GATE : b.u34.NONE);
 }
 function ey(e) {
     let { ticket: t, sms: n, webauthn: r, backup: i, totp: a } = e;
-    null != t && ((Q = t), (X = n), (et = ''), ($ = null != r ? r : null), (ee = i), (J = a)), (ea = {}), (W = L.u34.MFA_STEP);
+    null != t && ((Q = t), (X = n), (et = ''), ($ = null != r ? r : null), (ee = i), (J = a)), (ea = {}), (W = b.u34.MFA_STEP);
 }
-function eb() {
-    W = L.u34.LOGGING_IN_MFA;
+function eL() {
+    W = b.u34.LOGGING_IN_MFA;
 }
-function eL(e) {
+function eb(e) {
     let { message: t } = e;
-    (W = L.u34.MFA_STEP), (ea = { code: t });
+    (W = b.u34.MFA_STEP), (ea = { code: t });
 }
 function eD() {
-    W = L.u34.LOGGING_IN_MFA_SMS;
+    W = b.u34.LOGGING_IN_MFA_SMS;
 }
 function eM(e) {
     let { phone: t } = e;
-    (W = L.u34.MFA_SMS_STEP), (et = t);
+    (W = b.u34.MFA_SMS_STEP), (et = t);
 }
 function eP(e) {
     let { message: t } = e;
-    (W = L.u34.MFA_SMS_STEP), (ea = { code: t });
+    (W = b.u34.MFA_SMS_STEP), (ea = { code: t });
 }
 function eU(e) {
-    (W = L.u34.ACCOUNT_SCHEDULED_FOR_DELETION), (r = e.credentials);
+    (W = b.u34.ACCOUNT_SCHEDULED_FOR_DELETION), (r = e.credentials);
 }
 function ew(e) {
-    (W = L.u34.ACCOUNT_DISABLED), (r = e.credentials);
+    (W = b.u34.ACCOUNT_DISABLED), (r = e.credentials);
 }
 function ex() {
-    W = L.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION;
+    W = b.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION;
 }
 function eG() {
-    W = L.u34.PHONE_IP_AUTHORIZATION;
+    W = b.u34.PHONE_IP_AUTHORIZATION;
 }
 function ek(e) {
     let t = e.fingerprint;
     null == H
         ? null != t
-            ? (O.default.track(L.rMx.USER_FINGERPRINT_CHANGED, {
+            ? (O.default.track(b.rMx.USER_FINGERPRINT_CHANGED, {
                   old_fingerprint: null != Y ? (0, E.s)(Y) : null,
                   new_fingerprint: (0, E.s)(t)
               }),
@@ -226,14 +226,14 @@ function ek(e) {
             : eh()
         : null != t &&
           H !== t &&
-          O.default.track(L.rMx.EXTERNAL_FINGERPRINT_DROPPED, {
+          O.default.track(b.rMx.EXTERNAL_FINGERPRINT_DROPPED, {
               fingerprint: (0, E.s)(H),
               dropped_fingerprint: (0, E.s)(t)
           });
 }
 function eB(e) {
     let { form: t } = e;
-    (i = t), (K = L.$ib.REGISTER_AGE_GATE);
+    (i = t), (K = b.$ib.REGISTER_AGE_GATE);
 }
 function eF(e) {
     let { birthday: t } = e;
@@ -244,15 +244,15 @@ function eF(e) {
                 ...i,
                 birthday: t
             })),
-        (K = L.$ib.REGISTERING);
+        (K = b.$ib.REGISTERING);
 }
 function eZ(e) {
     let { token: t } = e;
-    (K = L.$ib.NONE), (i = null), eI(t), em();
+    (K = b.$ib.NONE), (i = null), eI(t), em();
 }
 function eV(e) {
     let { error: t } = e;
-    (ea = e_(t)), (K = null != t.getFieldErrors('date_of_birth') ? L.$ib.REGISTER_AGE_GATE : L.$ib.REGISTER_WITH_ERROR);
+    (ea = e_(t)), (K = null != t.getFieldErrors('date_of_birth') ? b.$ib.REGISTER_AGE_GATE : b.$ib.REGISTER_WITH_ERROR);
 }
 function eH() {
     if (0 === Object.keys(ea).length) return !1;
@@ -277,7 +277,7 @@ function eW(e) {
             eq();
             return;
         }
-        O.default.track(L.rMx.APP_USER_DEAUTHENTICATED, { user_id: p.K.get(x) }), eQ(), setImmediate(() => (0, v.uL)(L.Z5c.DEFAULT_LOGGED_OUT));
+        O.default.track(b.rMx.APP_USER_DEAUTHENTICATED, { user_id: p.K.get(x) }), eQ(), setImmediate(() => (0, v.uL)(b.Z5c.DEFAULT_LOGGED_OUT));
     }
 }
 function eK(e) {
@@ -292,7 +292,7 @@ function eq() {
     (z = !0),
         eQ(),
         m.Z.wait(() => {
-            (0, v.uL)(L.Z5c.REGISTER);
+            (0, v.uL)(b.Z5c.REGISTER);
         });
 }
 function eQ(e) {
@@ -304,8 +304,8 @@ function eQ(e) {
             omit: ['InstallationManagerStore', 'AgeGateStore', 'NativePermissionsStore', 'MultiAccountStore', 'DraftStore', 'OverlayStoreV2', 'StreamerModeStore', 'LoginRequiredActionStore'],
             type: (null == e ? void 0 : e.isSwitchingAccount) ? 'user-data-only' : 'all'
         }),
-        b.Z.clearAll();
-    S.ZH(), C.Z.clearUser(), p.K.remove(x), (k = null), (W = (null == e ? void 0 : e.isSwitchingAccount) ? L.u34.LOGGING_IN : L.u34.NONE), (K = L.$ib.NONE), (Q = ''), (et = ''), ($ = null), (X = !1), (en = !1), (er = !1), (ei = {}), (ea = {}), (ec = !1), (ed = !1);
+        L.Z.clearAll();
+    S.ZH(), C.Z.clearUser(), p.K.remove(x), (k = null), (W = (null == e ? void 0 : e.isSwitchingAccount) ? b.u34.LOGGING_IN : b.u34.NONE), (K = b.$ib.NONE), (Q = ''), (et = ''), ($ = null), (X = !1), (en = !1), (er = !1), (ei = {}), (ea = {}), (ec = !1), (ed = !1);
 }
 function eX(e) {
     let { errors: t } = e;
@@ -315,10 +315,10 @@ function e$(e) {
     (er = !0), (en = !1), (ei = {}), (eo = e.verifyingUserId);
 }
 function eJ() {
-    (W = L.u34.FORGOT_PASSWORD), (ea = {});
+    (W = b.u34.FORGOT_PASSWORD), (ea = {});
 }
 function e0() {
-    (W = L.u34.NONE), (ea = {});
+    (W = b.u34.NONE), (ea = {});
 }
 function e1(e) {
     let { user: t } = e;
@@ -329,10 +329,10 @@ function e2() {
 }
 function e3(e) {
     let { suspendedUserToken: t } = e;
-    (ec = !1), (eu = t), setImmediate(() => (0, v.uL)(L.Z5c.ACCOUNT_STANDING));
+    (ec = !1), (eu = t), setImmediate(() => (0, v.uL)(b.Z5c.ACCOUNT_STANDING));
 }
 function e4() {
-    (eu = null), (W = L.u34.NONE), eQ(), setImmediate(() => (0, v.uL)(L.Z5c.DEFAULT_LOGGED_OUT));
+    (eu = null), (W = b.u34.NONE), eQ(), setImmediate(() => (0, v.uL)(b.Z5c.DEFAULT_LOGGED_OUT));
 }
 class e5 extends (a = f.ZP.Store) {
     initialize() {
@@ -469,8 +469,8 @@ M(e5, 'displayName', 'AuthenticationStore'),
             LOGIN_SUCCESS: eN,
             LOGIN_FAILURE: eO,
             LOGIN_MFA_STEP: ey,
-            LOGIN_MFA: eb,
-            LOGIN_MFA_FAILURE: eL,
+            LOGIN_MFA: eL,
+            LOGIN_MFA_FAILURE: eb,
             LOGIN_MFA_SMS: eD,
             LOGIN_MFA_SMS_REQUEST_SUCCESS: eM,
             LOGIN_MFA_SMS_FAILURE: eP,

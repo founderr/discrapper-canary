@@ -24,8 +24,8 @@ var i = n(735250),
     R = n(670638),
     C = n(87894),
     y = n(46140),
-    b = n(689938),
-    L = n(128175);
+    L = n(689938),
+    b = n(128175);
 let D = 1000,
     M = (0, l.animated)(_.ChevronSmallDownIcon),
     P = (0, l.animated)(h.Z),
@@ -58,15 +58,15 @@ let D = 1000,
             forceOpen: s,
             shouldShow: s,
             color: _.Tooltip.Colors.GREEN,
-            text: b.Z.Messages.COPY_SUCCESS_1,
+            text: L.Z.Messages.COPY_SUCCESS_1,
             children: () =>
                 (0, i.jsx)(_.Button, {
                     ...o,
-                    className: L.shareButton,
+                    className: b.shareButton,
                     color: _.Button.Colors.PRIMARY,
                     size: _.Button.Sizes.SMALL,
                     onClick: c,
-                    children: b.Z.Messages.QUESTS_SHARE_QUEST
+                    children: L.Z.Messages.QUESTS_SHARE_QUEST
                 })
         });
     },
@@ -111,12 +111,12 @@ let D = 1000,
                 K && null != z.current && (n ? z.current.play() : !n && (z.current.pause(), (z.current.currentTime = 0)));
             }, [n, K]),
             (0, i.jsxs)('div', {
-                className: s()(L.outerContainer, {
-                    [L.outerContainerGiftInventory]: q,
-                    [L.outerContainerEmbed]: Q,
-                    [L.outerContainerXs]: 'xs' === h
+                className: s()(b.outerContainer, {
+                    [b.outerContainerGiftInventory]: q,
+                    [b.outerContainerEmbed]: Q,
+                    [b.outerContainerXs]: 'xs' === h
                 }),
-                'aria-label': b.Z.Messages.EXPAND,
+                'aria-label': L.Z.Messages.EXPAND,
                 style: { height: q ? F : void 0 },
                 children: [
                     (0, i.jsx)(P, {
@@ -130,7 +130,7 @@ let D = 1000,
                         loop: !1,
                         muted: !0,
                         playsInline: !0,
-                        className: L.questSplash,
+                        className: b.questSplash,
                         controls: !1,
                         poster: W,
                         ref: z,
@@ -143,11 +143,11 @@ let D = 1000,
                             })
                     }),
                     (0, i.jsxs)('div', {
-                        className: L.header,
+                        className: b.header,
                         'aria-expanded': w,
                         children: [
                             (0, i.jsxs)(l.animated.div, {
-                                className: s()(L.headerContent, { [L.headerContentEmbed]: Q }),
+                                className: s()(b.headerContent, { [b.headerContentEmbed]: Q }),
                                 style: {
                                     y: q
                                         ? m.to({
@@ -159,7 +159,7 @@ let D = 1000,
                                 children: [
                                     q &&
                                         (0, i.jsx)(l.animated.div, {
-                                            className: L.headerCollapsedContent,
+                                            className: b.headerCollapsedContent,
                                             style: {
                                                 opacity: m.to({
                                                     range: [0, 1],
@@ -169,27 +169,27 @@ let D = 1000,
                                             },
                                             'aria-hidden': !D && w,
                                             children: (0, i.jsxs)(_.ClickableContainer, {
-                                                'aria-label': b.Z.Messages.EXPAND,
+                                                'aria-label': L.Z.Messages.EXPAND,
                                                 onClick: et,
-                                                className: L.headerCollapsedClickableContainer,
+                                                className: b.headerCollapsedClickableContainer,
                                                 children: [
                                                     (0, i.jsx)('div', {
-                                                        className: L.headerCollapsedContentRewardWrapper,
+                                                        className: b.headerCollapsedContentRewardWrapper,
                                                         children: (0, i.jsx)(O.Z, {
                                                             quest: o,
                                                             questContent: d,
-                                                            className: L.headerCollapsedRewardTile,
+                                                            className: b.headerCollapsedRewardTile,
                                                             location: y.dr.QUESTS_CARD
                                                         })
                                                     }),
                                                     (0, i.jsxs)('div', {
-                                                        className: L.headerCollapsedContentCopyWrapper,
+                                                        className: b.headerCollapsedContentCopyWrapper,
                                                         children: [
                                                             (0, i.jsxs)('div', {
-                                                                className: L.headerCollapsedContentCopyLogos,
+                                                                className: b.headerCollapsedContentCopyLogos,
                                                                 children: [
                                                                     (0, i.jsx)(v.Z, {
-                                                                        className: L.partnerBranding,
+                                                                        className: b.partnerBranding,
                                                                         gameTileSize: v.f.MEDIUM,
                                                                         quest: o,
                                                                         theme: Y
@@ -210,9 +210,9 @@ let D = 1000,
                                         ref: (e) => {
                                             B.current = e;
                                         },
-                                        className: s()(L.headerExpandedContent, {
-                                            [L.outerContainerGiftInventory]: q,
-                                            [L.outerContainerEmbed]: Q
+                                        className: s()(b.headerExpandedContent, {
+                                            [b.outerContainerGiftInventory]: q,
+                                            [b.outerContainerEmbed]: Q
                                         }),
                                         style: {
                                             opacity: m.to({
@@ -224,13 +224,13 @@ let D = 1000,
                                         'aria-hidden': !D && !w,
                                         children: [
                                             (0, i.jsxs)('div', {
-                                                className: L.headerExpandedWrapper,
+                                                className: b.headerExpandedWrapper,
                                                 children: [
                                                     (0, i.jsxs)('div', {
-                                                        className: L.iconLogotypeContainer,
+                                                        className: b.iconLogotypeContainer,
                                                         children: [
                                                             (0, i.jsx)(v.Z, {
-                                                                className: L.partnerBranding,
+                                                                className: b.partnerBranding,
                                                                 gameTileSize: v.f.MEDIUM,
                                                                 quest: o,
                                                                 theme: Y
@@ -239,7 +239,7 @@ let D = 1000,
                                                         ]
                                                     }),
                                                     (0, i.jsxs)('div', {
-                                                        className: L.questInfo,
+                                                        className: b.questInfo,
                                                         children: [
                                                             (0, i.jsx)(_.Tooltip, {
                                                                 text: o.config.messages.questName,
@@ -248,14 +248,14 @@ let D = 1000,
                                                                     (0, i.jsx)(_.Heading, {
                                                                         ref: Z,
                                                                         variant: 'lg' === h ? 'heading-xxl/bold' : 'sm' === h ? 'heading-xl/bold' : 'heading-lg/bold',
-                                                                        className: L.heading,
+                                                                        className: b.heading,
                                                                         ...e,
-                                                                        children: b.Z.Messages.QUEST.format({ questName: o.config.messages.questName })
+                                                                        children: L.Z.Messages.QUEST.format({ questName: o.config.messages.questName })
                                                                     })
                                                             }),
                                                             (0, i.jsx)(_.Text, {
                                                                 variant: 'text-xs/normal',
-                                                                children: $ ? b.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: ee }) : r ? b.Z.Messages.QUESTS_EXPIRED_ON.format({ expirationDate: J }) : b.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: J })
+                                                                children: $ ? L.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: ee }) : r ? L.Z.Messages.QUESTS_EXPIRED_ON.format({ expirationDate: J }) : L.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: J })
                                                             })
                                                         ]
                                                     })
@@ -273,7 +273,7 @@ let D = 1000,
                                 ]
                             }),
                             (0, i.jsxs)(l.animated.div, {
-                                className: L.iconsContainer,
+                                className: b.iconsContainer,
                                 style: {
                                     top: q
                                         ? m.to({
@@ -299,8 +299,8 @@ let D = 1000,
                                                 'aria-hidden': !D && !w,
                                                 children: (0, i.jsx)(_.Clickable, {
                                                     ...e,
-                                                    className: L.iconWrapper,
-                                                    'aria-label': b.Z.Messages.ACTIONS,
+                                                    className: b.iconWrapper,
+                                                    'aria-label': L.Z.Messages.ACTIONS,
                                                     children: (0, i.jsx)(_.MoreHorizontalIcon, {
                                                         size: 'md',
                                                         color: u.Z.WHITE
@@ -312,8 +312,8 @@ let D = 1000,
                                         !(0, C.W_)(d) &&
                                         (0, i.jsx)(_.Clickable, {
                                             onClick: et,
-                                            className: L.iconWrapper,
-                                            'aria-label': w ? b.Z.Messages.COLLAPSE : b.Z.Messages.EXPAND,
+                                            className: b.iconWrapper,
+                                            'aria-label': w ? L.Z.Messages.COLLAPSE : L.Z.Messages.EXPAND,
                                             children: (0, i.jsx)(M, {
                                                 style: {
                                                     rotate: m.to({

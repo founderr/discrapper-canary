@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     Ob: function () {
-        return l;
+        return o;
     },
     ZI: function () {
         return i;
@@ -12,7 +12,7 @@ n.d(t, {
         return c;
     },
     uc: function () {
-        return o;
+        return l;
     }
 });
 var s = n(987170),
@@ -45,7 +45,7 @@ let r = (0, s.Z)({
             }
         ]
     }),
-    o = (0, s.Z)({
+    l = (0, s.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_nitro_multiple_buckets',
         label: 'CTP open nitro - A/A test - Multiple buckets',
@@ -64,7 +64,7 @@ let r = (0, s.Z)({
             }
         ]
     }),
-    l = (0, s.Z)({
+    o = (0, s.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_nitro_everyone',
         label: 'CTP open nitro - A/A test - Everyone',

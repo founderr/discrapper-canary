@@ -24,8 +24,8 @@ var r = n(176338),
     R = '[object Uint8ClampedArray]',
     C = '[object Uint16Array]',
     y = '[object Uint32Array]',
-    b = {};
-function L(e) {
-    return (0, a.Z)(e) && (0, i.Z)(e.length) && !!b[(0, r.Z)(e)];
+    L = {};
+function b(e) {
+    return (0, a.Z)(e) && (0, i.Z)(e.length) && !!L[(0, r.Z)(e)];
 }
-(b['[object Float32Array]'] = b[S] = b[A] = b[v] = b[N] = b[O] = b[R] = b[C] = b[y] = !0), (b[o] = b[s] = b[T] = b[l] = b[g] = b[u] = b[c] = b[d] = b[_] = b[E] = b[f] = b[h] = b[p] = b[m] = b[I] = !1), (t.Z = L);
+(L['[object Float32Array]'] = L[S] = L[A] = L[v] = L[N] = L[O] = L[R] = L[C] = L[y] = !0), (L[o] = L[s] = L[T] = L[l] = L[g] = L[u] = L[c] = L[d] = L[_] = L[E] = L[f] = L[h] = L[p] = L[m] = L[I] = !1), (t.Z = b);

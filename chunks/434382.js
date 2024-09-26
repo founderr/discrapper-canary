@@ -119,7 +119,7 @@ function C() {
 function y() {
     N(), (T = new Map()), (g = new Set()), (S = new Map()), C();
 }
-class b extends o.Z {
+class L extends o.Z {
     constructor(...e) {
         super(...e),
             f(this, 'actions', {
@@ -131,4 +131,4 @@ class b extends o.Z {
             });
     }
 }
-t.Z = new b();
+t.Z = new L();

@@ -17,13 +17,13 @@ var i = t(735250),
     p = t(555573),
     _ = t(213459),
     C = t(10718),
-    f = t(895924),
-    h = t(583027),
+    h = t(895924),
+    f = t(583027),
     A = t(585483),
     E = t(499254),
     N = t(541099),
-    v = t(827498),
-    x = t(496158),
+    x = t(827498),
+    v = t(496158),
     I = t(676161),
     g = t(660090),
     P = t(783097),
@@ -42,20 +42,20 @@ function H(e) {
     let { channel: l, command: o, section: s, sectionName: c } = e,
         u = a.useCallback(() => {
             let e = N.Z.entrypoint();
-            E.y(v.ti.COMMAND),
-                (0, h.Mo)({
+            E.y(x.ti.COMMAND),
+                (0, f.Mo)({
                     command: o,
-                    location: f.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+                    location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                     sectionName: c
                 }),
                 p.Po({
                     channelId: l.id,
                     command: o,
                     section: s,
-                    location: f.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+                    location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                     sectionName: c,
                     source: e,
-                    commandOrigin: f.bB.APPLICATION_LAUNCHER
+                    commandOrigin: h.bB.APPLICATION_LAUNCHER
                 }),
                 A.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
         }, [l.id, o, s, c]),
@@ -154,7 +154,7 @@ function B(e) {
     let { channel: n, command: t, sectionName: l } = e,
         o = (0, _.PL)(!0, !0),
         r = (0, _.LD)(n.guild_id, !0),
-        c = (0, x.D)(n),
+        c = (0, v.D)(n),
         [u, m] = a.useState(!1),
         p = a.useCallback(
             async (e) => {
@@ -166,7 +166,7 @@ function B(e) {
                         userIndexState: o,
                         guildIndexState: r,
                         sectionName: l,
-                        location: f.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+                        location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                         entrypoint: n
                     })) &&
                         (await (0, P.Y$)({
@@ -175,7 +175,7 @@ function B(e) {
                             context: c,
                             sectionName: l
                         }),
-                        E.y(v.ti.COMMAND));
+                        E.y(x.ti.COMMAND));
                 } finally {
                     m(!1);
                 }
@@ -263,8 +263,8 @@ function k(e) {
         ),
         _ = null !== (n = m.find((e) => e.id === l.id)) && void 0 !== n ? n : null,
         {
-            sortOrder: f,
-            setSortOrder: h,
+            sortOrder: h,
+            setSortOrder: f,
             commands: A,
             canSort: E
         } = (0, g.Z)({
@@ -302,8 +302,8 @@ function k(e) {
                       children:
                           E &&
                           (0, i.jsx)(b.Z, {
-                              sortOrder: f,
-                              onSortOptionClick: h
+                              sortOrder: h,
+                              onSortOptionClick: f
                           })
                   })
               ]

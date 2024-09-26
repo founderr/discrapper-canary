@@ -21,7 +21,7 @@ n.d(t, {
         return C;
     },
     fP: function () {
-        return b;
+        return L;
     },
     fQ: function () {
         return y;
@@ -53,7 +53,7 @@ var o = n(470079),
     v = n(981631),
     N = n(689938);
 let O = (e) => {
-        b();
+        L();
         let t = (0, s.e7)([g.Z], () => g.Z.hasLoadedStickerPacks);
         o.useEffect(() => {
             t && null == g.Z.getStickerPack(e) && (0, I.FQ)(e);
@@ -140,12 +140,12 @@ let O = (e) => {
             [t, e]
         );
     },
-    b = () => {
+    L = () => {
         o.useEffect(() => {
             (0, I.$p)();
         }, []);
     },
-    L = (e) => {
+    b = (e) => {
         let t = (0, s.e7)([g.Z], () => g.Z.getAllGuildStickers()),
             n = (0, s.Wu)(
                 [E.ZP, d.Z],
@@ -231,7 +231,7 @@ let x = (e) => {
                 []
             ),
             i = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
-            a = L(e);
+            a = b(e);
         return o.useMemo(() => {
             var o;
             let s = n.map(A.z),

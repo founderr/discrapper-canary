@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return P;
+        return L;
     }
 }),
     t(653041);
@@ -21,8 +21,8 @@ var r = t(120356),
     I = t(131951),
     N = t(626135),
     A = t(63063),
-    m = t(210887),
-    C = t(726985),
+    C = t(210887),
+    m = t(726985),
     g = t(981631),
     h = t(689938),
     O = t(113207);
@@ -30,11 +30,11 @@ let p = t(775322),
     R = t(853453),
     x = (0, E.hQ)();
 ((a = n || (n = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.STANDARD = 1)] = 'STANDARD'), (a[(a.KRISP = 2)] = 'KRISP');
-let f = {
+let M = {
     page: g.ZY5.USER_SETTINGS,
     section: g.jXE.SETTINGS_VOICE_AND_VIDEO
 };
-function M(e) {
+function f(e) {
     let s = e.currentTarget;
     N.default.track(g.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
         text: s.text,
@@ -46,7 +46,7 @@ function M(e) {
     });
 }
 function D() {
-    let e = (0, l.e7)([m.Z], () => m.Z.theme),
+    let e = (0, l.e7)([C.Z], () => C.Z.theme),
         {
             noiseCancellation: s,
             noiseSuppression: t,
@@ -92,7 +92,7 @@ function D() {
                 (0, i.jsx)(d.RadioGroup, {
                     options: r,
                     onChange: (e) => {
-                        _.Z.setNoiseCancellation(2 === e.value, f), _.Z.setNoiseSuppression(1 === e.value, f);
+                        _.Z.setNoiseCancellation(2 === e.value, M), _.Z.setNoiseSuppression(1 === e.value, M);
                     },
                     value: s ? 2 : t ? 1 : 0
                 }),
@@ -108,7 +108,7 @@ function D() {
                         align: u.Z.Align.CENTER,
                         body: (0, i.jsx)(d.Anchor, {
                             href: A.Z.getArticleURL(g.BhN.NOISE_SUPPRESSION),
-                            onClick: M,
+                            onClick: f,
                             children: h.Z.Messages.LEARN_MORE
                         })
                     }),
@@ -117,7 +117,7 @@ function D() {
         })
     );
 }
-function P() {
+function L() {
     let {
             inputMode: e,
             inputDeviceId: s,
@@ -159,7 +159,7 @@ function P() {
                     children: h.Z.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
                 }),
             (0, i.jsx)(T.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
+                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: o()(O.marginTop8, O.marginBottom20),
                     value: t,
@@ -173,11 +173,11 @@ function P() {
                 })
             }),
             (0, i.jsx)(T.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
+                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
                 children: (0, i.jsx)(D, {})
             }),
             (0, i.jsx)(T.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
+                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
                 children: (0, i.jsx)(d.FormSwitch, {
                     value: r,
                     onChange: (s) => _.Z.setMode(e, { vadUseKrisp: s }),
@@ -187,7 +187,7 @@ function P() {
                 })
             }),
             (0, i.jsx)(T.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
+                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: '',
                     value: n,

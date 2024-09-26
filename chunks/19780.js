@@ -154,10 +154,10 @@ function y() {
     if (null == r) return !1;
     (N = r.getDuration()), r.destroy(), (r = null), (v = null);
 }
-function b(e) {
+function L(e) {
     return (i = e.sessionId), (S = null), (A = null), y(), !1;
 }
-function L() {
+function b() {
     (i = null), (S = null), (A = null), y();
 }
 function D(e) {
@@ -315,8 +315,8 @@ let j = new Y(
     __OVERLAY__
         ? {}
         : {
-              CONNECTION_OPEN: b,
-              CONNECTION_CLOSED: L,
+              CONNECTION_OPEN: L,
+              CONNECTION_CLOSED: b,
               RTC_CONNECTION_STATE: F,
               RTC_CONNECTION_PING: Z,
               RTC_CONNECTION_LOSS_RATE: Z,

@@ -38,8 +38,8 @@ var r = n(488745),
     R = n(279465),
     C = n(134945),
     y = n(36737),
-    b = n(884147),
-    L = n(696421),
+    L = n(884147),
+    b = n(696421),
     D = n(623126),
     M = n(800889),
     P = n(135858),
@@ -143,8 +143,8 @@ Y = {
     'pt-PT': R.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
-    'sk-SK': b.Z,
-    'sl-SI': L.Z,
+    'sk-SK': L.Z,
+    'sl-SI': b.Z,
     'sr-SP': D.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,
@@ -198,9 +198,9 @@ function z(e, t, n) {
         R = W.get(t),
         C = e.onClose || R.onClose,
         y = v ? () => {} : e.onAction || R.onAction,
-        b = (0, G.tv)(),
-        L = (e) => {
-            y && y(o), e.target instanceof HTMLAnchorElement && b.open(e.target, e);
+        L = (0, G.tv)(),
+        b = (e) => {
+            y && y(o), e.target instanceof HTMLAnchorElement && L.open(e.target, e);
         },
         D = 'menuitem';
     !v && ('single' === t.selectionManager.selectionMode ? (D = 'menuitemradio') : 'multiple' === t.selectionManager.selectionMode && (D = 'menuitemcheckbox'));
@@ -221,10 +221,10 @@ function z(e, t, n) {
     let x = t.collection.getItem(o);
     l && ((w['aria-posinset'] = null == x ? void 0 : x.index), (w['aria-setsize'] = (0, V.is)(t.collection)));
     let k = (e) => {
-            'keyboard' === e.pointerType && L(e), null == c || c(e);
+            'keyboard' === e.pointerType && b(e), null == c || c(e);
         },
         F = (e) => {
-            'keyboard' !== e.pointerType && (L(e), !v && C && (null != s ? s : 'multiple' !== t.selectionManager.selectionMode || t.selectionManager.isLink(o)) && C()), null == d || d(e);
+            'keyboard' !== e.pointerType && (b(e), !v && C && (null != s ? s : 'multiple' !== t.selectionManager.selectionMode || t.selectionManager.isLink(o)) && C()), null == d || d(e);
         },
         { itemProps: H, isFocused: Y } = (0, Z.Cs)({
             selectionManager: t.selectionManager,

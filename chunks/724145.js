@@ -29,8 +29,8 @@ var a = n(735250),
     R = n(514361),
     C = n(572397),
     y = n(705262),
-    b = n(981631),
-    L = n(921944),
+    L = n(981631),
+    b = n(921944),
     D = n(474936),
     M = n(689938),
     P = n(748020);
@@ -53,7 +53,7 @@ let U = () =>
         let { markAsDismissed: t } = e,
             n = (0, C.q)(),
             r = () => {
-                null != t && t(L.L.DISMISS), n(b.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, O.Mo)();
+                null != t && t(b.L.DISMISS), n(L.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, O.Mo)();
             };
         return (0, a.jsxs)('div', {
             className: P.editorHeader,
@@ -86,7 +86,7 @@ let U = () =>
             }),
             p = (e) => {
                 if (!e) return;
-                if ((null == i || i(), null != o && o(L.L.PRIMARY), null != l))
+                if ((null == i || i(), null != o && o(b.L.PRIMARY), null != l))
                     (0, y.Yk)({
                         isPersisted: !0,
                         themeName: d.Us[l.id],
@@ -113,7 +113,7 @@ let U = () =>
             [i, s] = o.useState(!1),
             l = (0, C.q)(),
             d = () => {
-                null != t && t(L.L.DISMISS), l(b.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, O.Mo)(), !r && f.Z.open();
+                null != t && t(b.L.DISMISS), l(L.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, O.Mo)(), !r && f.Z.open();
             },
             E = (0, u.EQ)({
                 isPreview: n,
@@ -158,16 +158,16 @@ function k(e) {
             shouldEditorAnimate: R.Z.isCoachmark && !p.Z.useReducedMotion
         })),
         d = (0, C.q)();
-    o.useEffect(() => d(b.rMx.CLIENT_THEME_PREVIEW_VIEWED), [d]),
+    o.useEffect(() => d(L.rMx.CLIENT_THEME_PREVIEW_VIEWED), [d]),
         o.useEffect(() => {
             if (!!r)
-                v.default.track(b.rMx.PREMIUM_UPSELL_VIEWED, {
+                v.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: D.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: n
                 });
         }, [r, n]);
     let E = (0, C.J)(),
-        f = (0, h.Z)(null, r ? E : b.dG4);
+        f = (0, h.Z)(null, r ? E : L.dG4);
     return (
         o.useEffect(() => {
             if (!!r && !s) return E;

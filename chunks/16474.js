@@ -27,19 +27,19 @@ function A(e) {
     let { giftIntentType: t, recipientUser: n, onMouseEnter: i, onMouseLeave: A, popoutPosition: v, analyticsPage: N, analyticsSection: O, glow: R } = e,
         C = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         { analyticsLocations: y } = (0, c.ZP)(),
-        { enableEmojiCTA: b } = h.w.useExperiment({ location: 'GiftIntentCard' }, { autoTrackExposure: !1 }),
-        L = (0, o.e7)([p.Z], () => p.Z.getFriendAnniversaryYears(n.id)),
-        D = null != v && !b,
+        { enableEmojiCTA: L } = h.w.useExperiment({ location: 'GiftIntentCard' }, { autoTrackExposure: !1 }),
+        b = (0, o.e7)([p.Z], () => p.Z.getFriendAnniversaryYears(n.id)),
+        D = null != v && !L,
         M = () => {
             if (t === m.hX.FRIEND_ANNIVERSARY) return g.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: E.ZP.getName(n) });
             return (0, f.Ou)(t);
         },
         P = () => {
-            if (t === m.hX.FRIEND_ANNIVERSARY) return g.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER.format({ numberOfYears: L });
+            if (t === m.hX.FRIEND_ANNIVERSARY) return g.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER.format({ numberOfYears: b });
             return (0, f.Ou)(t);
         },
         U = () => {
-            if (t === m.hX.FRIEND_ANNIVERSARY) return g.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: L });
+            if (t === m.hX.FRIEND_ANNIVERSARY) return g.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: b });
             return (0, f.Ou)(t);
         },
         w = (e) => {

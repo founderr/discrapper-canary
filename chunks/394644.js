@@ -35,19 +35,19 @@ var n = t(470079),
     I = t(160913),
     N = t(725727),
     A = t(977156),
-    m = t(921157),
-    C = t(237292),
+    C = t(921157),
+    m = t(237292),
     g = t(314897),
     h = t(283595),
     O = t(663389),
     p = t(594174),
     R = t(202527),
     x = t(187819),
-    f = t(695346),
-    M = t(620163),
+    M = t(695346),
+    f = t(620163),
     D = t(295545),
-    P = t(168308),
-    L = t(839469),
+    L = t(168308),
+    P = t(839469),
     b = t(726985),
     Z = t(46140),
     v = t(689938);
@@ -91,10 +91,10 @@ function j(e) {
 function B() {
     var e, s, t, n;
     let r = (0, N.YO)().length,
-        L = (0, I.U)(),
+        P = (0, I.U)(),
         b = (0, a.e7)([O.Z], () => O.Z.getProps().impressionSource),
         v = (0, T.gU)(),
-        j = (0, P.bC)(),
+        j = (0, L.bC)(),
         B = (0, c.Go)(),
         [U] = (0, d.cv)(B ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []),
         G = 'useGenerateUserSettingsSections';
@@ -110,20 +110,20 @@ function B() {
         y = (0, D.eA)({ location: 'settings' }),
         V = (0, _.Xo)({ location: 'settings' }),
         Y = null !== (t = null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t,
-        w = (0, C.y0)({ location: 'settings' }),
+        w = (0, m.y0)({ location: 'settings' }),
         k = (0, l.Q)(),
         H = (0, A.Zy)({ location: Z.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: W } = S.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
         K = (0, a.e7)([h.Z], () => h.Z.hasLibraryApplication()),
         z = (0, a.e7)([g.default], () => g.default.hasTOTPEnabled()),
-        Q = f.Sb.useSetting(),
+        Q = M.Sb.useSetting(),
         X = (0, u.Z)(),
         q = (0, x._p)({ location: 'settings-renderer-utils-web' }),
         J = null === (n = (0, E.Z)()) || void 0 === n || n,
-        $ = (null === (s = (0, m.s)()) || void 0 === s ? void 0 : s.length) > 0;
-    return (0, M.i)({
+        $ = (null === (s = (0, C.s)()) || void 0 === s ? void 0 : s.length) > 0;
+    return (0, f.i)({
         unseenGiftCount: r,
-        showPrepaidPaymentPastDueWarning: L,
+        showPrepaidPaymentPastDueWarning: P,
         impressionSource: b,
         numOfPendingFamilyRequests: v,
         isOverlaySupported: j,
@@ -146,7 +146,7 @@ function B() {
     });
 }
 function U(e) {
-    let { searchResults: s } = (0, L.E)(),
+    let { searchResults: s } = (0, P.E)(),
         t = B();
     if (!(0, D.eA)({ location: 'settings' })) return new Set();
     let n = t[e],

@@ -54,8 +54,8 @@ __OVERLAY__ && (O = n(237997).Z),
 let R = (e) => 0 === e.type,
     C = (e) => 1 === e.type,
     y = (e) => (R(e) ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id),
-    b = [1 * m.Z.Millis.MINUTE, 5 * m.Z.Millis.MINUTE];
-class L extends T.Z {
+    L = [1 * m.Z.Millis.MINUTE, 5 * m.Z.Millis.MINUTE];
+class b extends T.Z {
     isFull() {
         return this.queue.length >= this.maxSize;
     }
@@ -86,7 +86,7 @@ class L extends T.Z {
         return this.queue.push(...n), this.logger.log('Cancel pending send requests', t.length), t;
     }
     startQueueMetricTimers(e) {
-        let t = b.map((e) =>
+        let t = L.map((e) =>
             setTimeout(() => {
                 (0, d.yw)(A.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e)
@@ -212,4 +212,4 @@ class L extends T.Z {
         super(new _.Z('MessageQueue')), N(this, 'maxSize', void 0), N(this, 'requests', void 0), N(this, 'analyticsTimeouts', void 0), (this.maxSize = e), (this.requests = new Map()), (this.analyticsTimeouts = new Map());
     }
 }
-t.ZP = new L();
+t.ZP = new b();

@@ -24,7 +24,7 @@ n.d(t, {
         return A;
     },
     Wx: function () {
-        return b;
+        return L;
     },
     X0: function () {
         return S;
@@ -142,14 +142,14 @@ function y(e, t, n, r) {
         .sort(A)
         .map((e) => S(e));
 }
-function b(e, t, n, r) {
+function L(e, t, n, r) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return Object.values(t)
         .filter((t) => !T(t) && N(n, t.id, r) && C(e, t) && a(t.name))
         .sort(A)
         .map((e) => S(e, i.e$(e.permissions, r)));
 }
-function L(e, t, n, r, i) {
+function b(e, t, n, r, i) {
     return Object.values(t).filter((t) => T(t) || (!N(n, t.id, r, i) && C(e, t)));
 }
 function D(e, t, n, r, a) {
@@ -161,7 +161,7 @@ function D(e, t, n, r, a) {
 function M(e, t, n, r, i) {
     let a = [];
     return 0 ===
-        (a = L(e, t, n, r, i)
+        (a = b(e, t, n, r, i)
             .sort(A)
             .map((e) => S(e))).length
         ? v(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES)

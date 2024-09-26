@@ -19,8 +19,8 @@ var n = t(735250),
     I = t(358085),
     N = t(962100),
     A = t(981631),
-    m = t(689938),
-    C = t(592142),
+    C = t(689938),
+    m = t(592142),
     g = t(113207);
 let h = !I.isPlatformEmbedded,
     O = (0, T.hQ)();
@@ -36,23 +36,23 @@ function R(e) {
             I.isPlatformEmbedded || t !== A.pM4.PUSH_TO_TALK
                 ? (0, n.jsx)(l.FormText, {
                       type: l.FormText.Types.DESCRIPTION,
-                      className: r()(C.pttToolsMessage, g.marginBottom8),
-                      children: m.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({ onClick: () => d.Z.setSection(A.oAB.KEYBINDS) })
+                      className: r()(m.pttToolsMessage, g.marginBottom8),
+                      children: C.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({ onClick: () => d.Z.setSection(A.oAB.KEYBINDS) })
                   })
                 : (0, n.jsx)(l.FormText, {
                       type: l.FormText.Types.DESCRIPTION,
-                      className: r()(C.pttToolsMessage, C.pttToolsWarning, g.marginBottom8),
-                      children: m.Z.Messages.PTT_LIMITED_WARNING.format({ onDownloadClick: () => (0, N.y)('Help Text PTT') })
+                      className: r()(m.pttToolsMessage, m.pttToolsWarning, g.marginBottom8),
+                      children: C.Z.Messages.PTT_LIMITED_WARNING.format({ onDownloadClick: () => (0, N.y)('Help Text PTT') })
                   })),
         (0, n.jsxs)('div', {
-            className: C.pttTools,
+            className: m.pttTools,
             children: [
                 (0, n.jsxs)(E.Z, {
                     children: [
                         (0, n.jsx)(E.Z.Child, {
                             basis: '50%',
                             children: (0, n.jsx)(l.FormItem, {
-                                title: m.Z.Messages.FORM_LABEL_SHORTCUT,
+                                title: C.Z.Messages.FORM_LABEL_SHORTCUT,
                                 children: (0, n.jsx)(_.Z, {
                                     defaultValue: a,
                                     onChange: (e) => c.Z.setMode(t, { shortcut: e })
@@ -67,7 +67,7 @@ function R(e) {
                                         id: O,
                                         tag: l.FormTitleTags.H5,
                                         className: g.marginBottom8,
-                                        children: m.Z.Messages.INPUT_MODE_PTT_RELEASE_DELAY
+                                        children: C.Z.Messages.INPUT_MODE_PTT_RELEASE_DELAY
                                     }),
                                     (0, n.jsx)(l.Slider, {
                                         initialValue: i,
@@ -92,11 +92,11 @@ function x() {
         i = [
             {
                 value: A.pM4.VOICE_ACTIVITY,
-                name: m.Z.Messages.INPUT_MODE_VAD
+                name: C.Z.Messages.INPUT_MODE_VAD
             },
             {
                 value: A.pM4.PUSH_TO_TALK,
-                name: h ? m.Z.Messages.INPUT_MODE_PTT_LIMITED : m.Z.Messages.INPUT_MODE_PTT
+                name: h ? C.Z.Messages.INPUT_MODE_PTT_LIMITED : C.Z.Messages.INPUT_MODE_PTT
             }
         ],
         r = a.useCallback(
@@ -108,11 +108,11 @@ function x() {
                         let { default: e } = await Promise.resolve().then(t.bind(t, 468026));
                         return (s) =>
                             (0, n.jsx)(e, {
-                                title: m.Z.Messages.PTT_LIMITED_TITLE,
-                                confirmText: m.Z.Messages.DOWNLOAD,
-                                cancelText: m.Z.Messages.OKAY,
+                                title: C.Z.Messages.PTT_LIMITED_TITLE,
+                                confirmText: C.Z.Messages.DOWNLOAD,
+                                cancelText: C.Z.Messages.OKAY,
                                 onConfirm: () => (0, N.y)('PTT Limited Modal'),
-                                body: m.Z.Messages.PTT_LIMITED_BODY,
+                                body: C.Z.Messages.PTT_LIMITED_BODY,
                                 ...s
                             });
                     }),
@@ -123,7 +123,7 @@ function x() {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(l.FormItem, {
-                title: m.Z.Messages.FORM_LABEL_INPUT_MODE,
+                title: C.Z.Messages.FORM_LABEL_INPUT_MODE,
                 className: g.marginBottom20,
                 children: (0, n.jsx)(l.RadioGroup, {
                     onChange: r,

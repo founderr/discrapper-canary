@@ -40,7 +40,7 @@ let S = Object.freeze([]),
     A = {};
 function v(e) {
     let t = A[e];
-    return null == t && ((t = new b(e)), (A[e] = t)), t;
+    return null == t && ((t = new L(e)), (A[e] = t)), t;
 }
 function N(e, t) {
     return f.ZP.getMember(e, t.id);
@@ -81,7 +81,7 @@ function y(e, t, n) {
         };
     return i && (s._isPlaceholder = !0), s;
 }
-class b {
+class L {
     updateVoiceState(e) {
         if (null != this._pending) return this._pending.add(e), !1;
         let t = p.Z.getVoiceState(this.guildId, e),
@@ -183,7 +183,7 @@ class b {
             (this.guildId = e);
     }
 }
-function L() {
+function b() {
     A = {};
 }
 function D() {
@@ -265,7 +265,7 @@ class F extends (r = l.ZP.Store) {
 }
 g(F, 'displayName', 'SortedVoiceStateStore'),
     (t.ZP = new F(c.Z, {
-        CONNECTION_OPEN: L,
+        CONNECTION_OPEN: b,
         OVERLAY_INITIALIZE: D,
         VOICE_CHANNEL_SELECT: U,
         VOICE_STATE_UPDATES: M,

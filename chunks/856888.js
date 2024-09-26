@@ -34,16 +34,16 @@ function T(e) {
         { loadState: I } = (0, c.qz)(),
         N = T || I !== c.jd.LOADED,
         { enabled: A } = o.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' }),
-        [m, C] = a.useState();
+        [C, m] = a.useState();
     return (
-        null == m &&
-            (m = (0, n.jsx)(S, {
+        null == C &&
+            (C = (0, n.jsx)(S, {
                 onBack: s,
                 title: u.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAGE_TITLE
             })),
         (0, n.jsxs)('div', {
             children: [
-                m,
+                C,
                 N
                     ? (0, n.jsx)(r.Spinner, {})
                     : (0, n.jsx)('div', {
@@ -52,11 +52,11 @@ function T(e) {
                               ? (0, n.jsx)(d.Z, {
                                     subscriptions: t,
                                     updateHeader: (e, s) => {
-                                        C(
+                                        m(
                                             (0, n.jsx)(S, {
                                                 title: e,
                                                 onBack: () => {
-                                                    s(), C(void 0);
+                                                    s(), m(void 0);
                                                 }
                                             })
                                         );

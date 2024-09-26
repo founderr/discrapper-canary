@@ -106,7 +106,7 @@ class A extends (i = l.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: i, markerPositions: a, closestMarkerIndex: o, newClosestIndex: l, min: u, max: d } = this.state,
-            { disabled: _, stickToMarkers: E, className: I, children: T, barStyles: g, fillStyles: S, mini: A, hideBubble: v, defaultValue: N, orientation: O, onValueRender: R, renderMarker: C, getAriaValueText: y, barClassName: b, grabberClassName: L, grabberStyles: D = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': U, 'aria-labelledby': w, 'aria-describedby': x } = this.props,
+            { disabled: _, stickToMarkers: E, className: I, children: T, barStyles: g, fillStyles: S, mini: A, hideBubble: v, defaultValue: N, orientation: O, onValueRender: R, renderMarker: C, getAriaValueText: y, barClassName: L, grabberClassName: b, grabberStyles: D = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': U, 'aria-labelledby': w, 'aria-describedby': x } = this.props,
             G = 0;
         E ? null != a && (null != l ? (G = a[l]) : null != o && (G = a[o])) : (G = this.scaleValue(t));
         let k = ''.concat(G, '%'),
@@ -175,7 +175,7 @@ class A extends (i = l.PureComponent) {
                         children: B
                     }),
                     (0, s.jsx)('div', {
-                        className: c()(m.bar, b),
+                        className: c()(m.bar, L),
                         style: g,
                         children: (0, s.jsx)('div', {
                             className: m.barFill,
@@ -196,7 +196,7 @@ class A extends (i = l.PureComponent) {
                             children: (e) =>
                                 (0, s.jsx)('div', {
                                     ...e,
-                                    className: c()(m.grabber, L),
+                                    className: c()(m.grabber, b),
                                     style: {
                                         ...D,
                                         left: k

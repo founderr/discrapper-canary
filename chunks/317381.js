@@ -46,8 +46,8 @@ let N = {
     R = [],
     C = '0',
     y = new Map(),
-    b = new Map(),
     L = new Map(),
+    b = new Map(),
     D = new Map(),
     M = new Map(),
     P = new Map(),
@@ -67,7 +67,7 @@ function H(e) {
     let { guildId: a, channelId: o, location: s, applicationId: l, launchId: u, compositeInstanceId: c, participants: _ } = e,
         E = (0, m.Z)(l);
     if (null == E) return;
-    let f = null !== (n = L.get(o)) && void 0 !== n ? n : O,
+    let f = null !== (n = b.get(o)) && void 0 !== n ? n : O,
         p = 0 === f.length,
         T = f.find((e) => e.applicationId === l),
         g = _.map((e) => e.userId),
@@ -109,10 +109,10 @@ function H(e) {
               isFirstActivityInChannel: p,
               isStart: null == T
           });
-    let P = (null !== (r = L.get(o)) && void 0 !== r ? r : []).filter((e) => e.applicationId !== l),
+    let P = (null !== (r = b.get(o)) && void 0 !== r ? r : []).filter((e) => e.applicationId !== l),
         U = V(a),
-        w = (null !== (i = b.get(U)) && void 0 !== i ? i : []).filter((e) => !(e.applicationId === l && e.channelId === o));
-    g.length > 0 && (P.push(D), w.push(D)), L.set(o, P), b.set(U, w);
+        w = (null !== (i = L.get(U)) && void 0 !== i ? i : []).filter((e) => !(e.applicationId === l && e.channelId === o));
+    g.length > 0 && (P.push(D), w.push(D)), b.set(o, P), L.set(U, w);
 }
 function Y(e) {
     let t = e.activity_instances;
@@ -136,7 +136,7 @@ function Y(e) {
 }
 function j(e) {
     let { guilds: t } = e;
-    L.clear(), b.clear(), t.forEach((e) => Y(e));
+    b.clear(), L.clear(), t.forEach((e) => Y(e));
 }
 function W(e) {
     let { guild: t } = e;
@@ -144,13 +144,13 @@ function W(e) {
 }
 function K(e) {
     let { channel: t } = e;
-    L.set(t.id, []);
+    b.set(t.id, []);
     let n = t.guild_id;
     if (null != n) {
         var r;
         let e = V(n),
-            i = (null !== (r = b.get(e)) && void 0 !== r ? r : []).filter((e) => e.channelId !== t.id);
-        b.set(e, i);
+            i = (null !== (r = L.get(e)) && void 0 !== r ? r : []).filter((e) => e.channelId !== t.id);
+        L.set(e, i);
     }
 }
 function z(e) {
@@ -371,14 +371,14 @@ class ep extends (i = l.ZP.PersistedStore) {
     }
     getEmbeddedActivitiesForGuild(e) {
         var t;
-        return null !== (t = b.get(e)) && void 0 !== t ? t : O;
+        return null !== (t = L.get(e)) && void 0 !== t ? t : O;
     }
     getEmbeddedActivitiesForChannel(e) {
         var t;
-        return null !== (t = L.get(e)) && void 0 !== t ? t : O;
+        return null !== (t = b.get(e)) && void 0 !== t ? t : O;
     }
     getEmbeddedActivitiesByChannel() {
-        return L;
+        return b;
     }
     getEmbeddedActivityDurationMs(e, t) {
         let n = B.get(eh(e, t));
@@ -435,7 +435,7 @@ class ep extends (i = l.ZP.PersistedStore) {
     getEmbeddedActivityForUserId(e, t) {
         let n;
         if (void 0 !== t) {
-            s: for (let [r, i] of L)
+            s: for (let [r, i] of b)
                 for (let r of i)
                     if (r.applicationId === t && r.userIds.has(e)) {
                         n = r;

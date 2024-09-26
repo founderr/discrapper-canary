@@ -104,8 +104,8 @@ var a = n(470079),
     R = n(306680),
     C = n(699516),
     y = n(111583),
-    b = n(594174),
-    L = n(823379),
+    L = n(594174),
+    b = n(823379),
     D = n(709054),
     M = n(883429),
     P = n(238349),
@@ -209,11 +209,11 @@ function $(e) {
     let t = Q(e);
     return a.useMemo(() => {
         var n, r, i;
-        return null !== (i = null == e ? void 0 : null === (r = e.appliedTags) || void 0 === r ? void 0 : null === (n = r.map((e) => t[e])) || void 0 === n ? void 0 : n.filter(L.lm)) && void 0 !== i ? i : X;
+        return null !== (i = null == e ? void 0 : null === (r = e.appliedTags) || void 0 === r ? void 0 : null === (n = r.map((e) => t[e])) || void 0 === n ? void 0 : n.filter(b.lm)) && void 0 !== i ? i : X;
     }, [t, null == e ? void 0 : e.appliedTags]);
 }
 function J(e, t) {
-    let n = (0, u.Wu)([b.default], () => t.map((e) => b.default.getUser(e)).filter(L.lm));
+    let n = (0, u.Wu)([L.default], () => t.map((e) => L.default.getUser(e)).filter(b.lm));
     return (
         a.useEffect(() => {
             n.forEach((t) => {
@@ -280,7 +280,7 @@ function er(e) {
 }
 function ei(e) {
     var t;
-    let n = (0, u.e7)([b.default], () => b.default.getUser(e.ownerId)),
+    let n = (0, u.e7)([L.default], () => L.default.getUser(e.ownerId)),
         r = (0, u.e7)([w.Z], () => {
             var t;
             return null === (t = w.Z.getMessage(e.id)) || void 0 === t ? void 0 : t.firstMessage;
@@ -298,7 +298,7 @@ function ei(e) {
 }
 function ea(e) {
     var t, n;
-    let r = b.default.getUser(e.ownerId),
+    let r = L.default.getUser(e.ownerId),
         i = null === (t = w.Z.getMessage(e.id)) || void 0 === t ? void 0 : t.firstMessage,
         a = (0, p.ij)(null !== (n = null == i ? void 0 : i.author) && void 0 !== n ? n : r, e);
     return {
@@ -307,14 +307,14 @@ function ea(e) {
     };
 }
 function eo(e) {
-    return (0, u.Wu)([y.Z, b.default, C.Z], () => {
-        let t = b.default.getCurrentUser();
+    return (0, u.Wu)([y.Z, L.default, C.Z], () => {
+        let t = L.default.getCurrentUser();
         return s()(y.Z.getTypingUsers(e.id))
             .keys()
             .filter((e) => e !== (null == t ? void 0 : t.id))
             .reject((e) => C.Z.isBlocked(e))
-            .map((e) => b.default.getUser(e))
-            .filter(L.lm)
+            .map((e) => L.default.getUser(e))
+            .filter(b.lm)
             .map((e) => e.id)
             .value();
     });

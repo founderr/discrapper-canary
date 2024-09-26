@@ -11,22 +11,22 @@ let d = 20,
         let { categories: n, store: r, hasSearchResults: _, listPadding: E, renderRow: f, renderSection: h, renderSectionHeader: p, renderSectionFooter: m, renderInspector: I, renderEmptySearchState: T, rowCount: g, rowCountBySection: S, rowHeight: A, sectionHeaderHeight: v, sectionFooterHeight: N, renderUpsell: O, setShowUpsell: R } = e,
             C = a.useRef(!1),
             y = a.useRef(null),
-            b = (0, l.Iu)((e) => e.searchQuery),
-            L = r.useStore((e) => e.activeCategoryIndex),
+            L = (0, l.Iu)((e) => e.searchQuery),
+            b = r.useStore((e) => e.activeCategoryIndex),
             D = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
             M = (0, u.Uf)({
                 listRef: y,
-                searchQuery: b,
+                searchQuery: L,
                 nitroLockedSectionStates: D,
                 setShowUpsell: R
             }),
             P = (0, u.Qs)({
-                activeCategoryIndex: L,
+                activeCategoryIndex: b,
                 isScrolling: C,
                 listRef: y,
                 onActiveCategoryIndexChange: r.setActiveCategoryIndex,
                 scrollOffset: d,
-                searchQuery: b
+                searchQuery: L
             }),
             U = a.useCallback(
                 (e) => {
@@ -36,8 +36,8 @@ let d = 20,
             );
         return (
             (0, u.Xs)({
-                searchQuery: b,
-                activeCategoryIndex: L,
+                searchQuery: L,
+                activeCategoryIndex: b,
                 listRef: y
             }),
             a.useImperativeHandle(
@@ -86,7 +86,7 @@ let d = 20,
             (0, i.jsxs)('div', {
                 className: c.wrapper,
                 children: [
-                    b.length > 0 && !_ && null != T
+                    L.length > 0 && !_ && null != T
                         ? T()
                         : (0, i.jsx)(o.Z, {
                               role: 'none presentation',

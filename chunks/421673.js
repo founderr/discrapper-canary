@@ -27,16 +27,16 @@ let p = 100,
     N = 1,
     O = [],
     R = 350,
-    C = u()(b, R),
-    y = u()(L, R);
-function b(e, t) {
+    C = u()(L, R),
+    y = u()(b, R);
+function L(e, t) {
     _.default.track(h.rMx.SEARCH_STARTED, {
         channel_id: t,
         search_type: h.aib.SOUNDBOARD,
         location_stack: e
     });
 }
-function L(e, t, n, r) {
+function b(e, t, n, r) {
     _.default.track(h.rMx.SEARCH_RESULT_VIEWED, {
         search_type: h.aib.SOUNDBOARD,
         channel_id: n,

@@ -32,8 +32,8 @@ var i = n(735250),
     R = n(979651),
     C = n(259580),
     y = n(626135),
-    b = n(74538),
-    L = n(135869),
+    L = n(74538),
+    b = n(135869),
     D = n(763296),
     M = n(697426),
     P = n(242291),
@@ -204,7 +204,7 @@ function el(e) {
 }
 function eu(e) {
     let { guildId: t, channel: r, containerWidth: o, onClose: s, onSelect: d, suppressPlaySound: p = !1, shouldShowUpsell: S = !0, gridNotice: C, soundButtonOverlay: k, listPadding: B, renderHeader: z, defaultSoundsOnly: eu = !1, inExpressionPicker: ec, refreshEnabled: ed } = e,
-        { currentPreviewRef: e_ } = a.useContext(L.Z),
+        { currentPreviewRef: e_ } = a.useContext(b.Z),
         { analyticsLocations: eE } = (0, f.ZP)(),
         { analyticsLocations: ef } = (0, f.ZP)(E.Z.PREMIUM_UPSELL),
         { location: eh } = (0, _.O)(),
@@ -217,7 +217,7 @@ function eu(e) {
         ),
         [em, eI] = a.useState(null),
         eT = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
-        eg = (0, b.I5)(eT, j.p9.TIER_2),
+        eg = (0, L.I5)(eT, j.p9.TIER_2),
         eS = (0, l.e7)([R.Z], () => {
             var e;
             return R.Z.getVoiceState(t, null !== (e = null == eT ? void 0 : eT.id) && void 0 !== e ? e : Y.lds);
@@ -228,16 +228,16 @@ function eu(e) {
         eO = (0, h.Dt)(),
         { categories: eR } = (0, G.ZP)(r, void 0, eu),
         [eC, ey] = a.useState([]),
-        [eb, eL] = a.useState(!1),
+        [eL, eb] = a.useState(!1),
         eD = (0, G.FS)(eR, eC, ev).filter((e) => e.items.length > 0),
-        eM = eD.some((e) => !!(0, b._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
+        eM = eD.some((e) => !!(0, L._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
         eP = !eg && S && eM,
         { enableInlineUpsell: eU, enableRoadblock: ew, enableRoadblockWithSocialProof: ex } = A.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eP }),
         eG = eP && eU,
         ek = N.T4.useSetting(),
         eB = a.useMemo(() => new Set(ek), [ek]),
         eF = null == r,
-        eZ = b.ZP.canUseCustomCallSounds(eT),
+        eZ = L.ZP.canUseCustomCallSounds(eT),
         eV = a.useCallback(
             (e) => {
                 eB.has(e) ? eB.delete(e) : eB.add(e), N.T4.updateSetting(Array.from(eB));
@@ -393,7 +393,7 @@ function eu(e) {
             null != e && eI(e);
         },
         e2 = a.useCallback(() => {
-            let e = (0, b.Px)(j.p9.TIER_2);
+            let e = (0, L.Px)(j.p9.TIER_2);
             return W.Z.Messages.PREMIUM_UPSELL_MOBILE_FEATURE_SOUNDBOARD_POPUP_LABEL_V2.format({
                 nitroTierName: e,
                 onClick: e1
@@ -403,13 +403,13 @@ function eu(e) {
             () =>
                 eG
                     ? (0, i.jsx)(g.p, {
-                          showUpsell: eb,
+                          showUpsell: eL,
                           text: e2(),
                           button: W.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
                           buttonAnalyticsObject: { section: Y.jXE.SOUND_PICKER_FLOATING_UPSELL }
                       })
                     : null,
-            [e2, eb, eG]
+            [e2, eL, eG]
         ),
         e4 = a.useCallback(
             (e) => {
@@ -454,7 +454,7 @@ function eu(e) {
                                   object: Y.qAy.SOUNDBOARD_SOUND
                               },
                               location_stack: ef,
-                              sku_id: b.ZP.getSkuIdForPremiumType(j.p9.TIER_2)
+                              sku_id: L.ZP.getSkuIdForPremiumType(j.p9.TIER_2)
                           },
                           onClose: () => eI(null),
                           onDisplay: e6
@@ -491,7 +491,7 @@ function eu(e) {
                 gridNotice: C,
                 renderHeader: z,
                 renderUpsell: e3,
-                setShowUpsell: eL
+                setShowUpsell: eb
             })
         ]
     });

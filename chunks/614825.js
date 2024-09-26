@@ -29,7 +29,7 @@ var i = n(735250),
     R = n(981631),
     C = n(689938),
     y = n(526387);
-function b(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,14 +42,14 @@ function b(e, t, n) {
         e
     );
 }
-let L = '???';
+let b = '???';
 class D extends a.Component {
     renderTitle(e, t, n) {
         let { trialOffer: r } = this.props,
             i = m.default.getUser(r.user_id),
-            a = null != i ? i.username : L,
+            a = null != i ? i.username : b,
             o = m.default.getUser(r.referrer_id),
-            s = null != o ? o.username : L;
+            s = null != o ? o.username : b;
         if (e && void 0 === r.redeemed_at) return C.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({ username: a });
         if (t) return n ? C.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : C.Z.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({ userName: s });
         return C.Z.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
@@ -156,7 +156,7 @@ class D extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'handleStartTrial', (e, t) => {
+            L(this, 'handleStartTrial', (e, t) => {
                 (0, p.Z)({
                     initialPlanId: null,
                     subscriptionTier: O.Si.TIER_2,

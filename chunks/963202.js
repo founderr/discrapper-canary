@@ -6,7 +6,7 @@ n.d(t, {
         return A;
     },
     It: function () {
-        return b;
+        return L;
     },
     St: function () {
         return v;
@@ -282,13 +282,13 @@ let y = (0, o.B)({
         }
     ]
 });
-function b(e) {
+function L(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = E(e, t),
         r = y.useExperiment({ location: e }, { autoTrackExposure: t });
     return n ? { clanTagsVisible: !0 } : r;
 }
-let L = (0, o.B)({
+let b = (0, o.B)({
         kind: 'user',
         id: '2024-06_clans_mobile_tags',
         label: 'Clans - Mobile',

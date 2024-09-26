@@ -29,8 +29,8 @@ var r,
     R = n(55935),
     C = n(739566),
     y = n(421399),
-    b = n(310423),
-    L = n(223021),
+    L = n(310423),
+    b = n(223021),
     D = n(981631),
     M = n(689938),
     P = n(825193);
@@ -212,7 +212,7 @@ function F(e) {
         T = a.useMemo(
             () => (e) => (
                 u()(null != o, 'ExecutedCommand: channel cannot be null'),
-                (0, i.jsx)(b.Z, {
+                (0, i.jsx)(L.Z, {
                     ...e,
                     channel: o,
                     messageId: r.id,
@@ -226,7 +226,7 @@ function F(e) {
         y = (null == N ? void 0 : N.type) === E.B8.APPLICATION_COMMAND && null != r.messageReference && null != e.renderTargetMessage,
         U = (0, C.Sw)(null === (t = r.interaction) || void 0 === t ? void 0 : t.user, o),
         w = (0, C.Sw)(O, o),
-        F = a.useMemo(() => (e.compact ? (0, L.Z)((0, R.vc)(d()(), 'LT')) : null), [e.compact]),
+        F = a.useMemo(() => (e.compact ? (0, b.Z)((0, R.vc)(d()(), 'LT')) : null), [e.compact]),
         Z = (0, f.NX)(o.id),
         V = r.interaction;
     if (null == V || null == U) return null;

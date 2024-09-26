@@ -119,7 +119,7 @@ let I = Symbol('linkClicked');
 function T(e) {
     let { onPress: t, onPressChange: n, onPressStart: a, onPressEnd: o, onPressUp: s, isDisabled: l, isPressed: u, preventFocusOnPress: c, shouldCancelOnPointerExit: d, allowTextSelectionOnPress: f, ref: p, ...T } = h(e),
         [O, R] = (0, i.useState)(!1),
-        L = (0, i.useRef)({
+        b = (0, i.useRef)({
             isPressed: !1,
             ignoreEmulatedMouseEvents: !1,
             ignoreClickAfterPress: !1,
@@ -132,7 +132,7 @@ function T(e) {
         }),
         { addGlobalListener: D, removeAllGlobalListeners: M } = (0, r.xi)(),
         P = (0, r.iW)((e, t) => {
-            let r = L.current;
+            let r = b.current;
             if (l || r.didFirePressStart) return !1;
             let i = !0;
             if (((r.isTriggeringEvent = !0), a)) {
@@ -142,7 +142,7 @@ function T(e) {
             return n && n(!0), (r.isTriggeringEvent = !1), (r.didFirePressStart = !0), R(!0), i;
         }),
         U = (0, r.iW)((e, r, i = !0) => {
-            let a = L.current;
+            let a = b.current;
             if (!a.didFirePressStart) return !1;
             (a.ignoreClickAfterPress = !0), (a.didFirePressStart = !1), (a.isTriggeringEvent = !0);
             let s = !0;
@@ -157,7 +157,7 @@ function T(e) {
             return (a.isTriggeringEvent = !1), s;
         }),
         w = (0, r.iW)((e, t) => {
-            let n = L.current;
+            let n = b.current;
             if (l) return !1;
             if (s) {
                 n.isTriggeringEvent = !0;
@@ -167,19 +167,19 @@ function T(e) {
             return !0;
         }),
         x = (0, r.iW)((e) => {
-            let t = L.current;
+            let t = b.current;
             t.isPressed && t.target && (t.isOverTarget && null != t.pointerType && U(N(t.target, e), t.pointerType, !1), (t.isPressed = !1), (t.isOverTarget = !1), (t.activePointerId = null), (t.pointerType = null), M(), !f && E(t.target));
         }),
         G = (0, r.iW)((e) => {
             d && x(e);
         }),
         k = (0, i.useMemo)(() => {
-            let e = L.current,
+            let e = b.current,
                 t = {
                     onKeyDown(t) {
                         if (S(t.nativeEvent, t.currentTarget) && t.currentTarget.contains(t.target)) {
                             var i;
-                            b(t.target, t.key) && t.preventDefault();
+                            L(t.target, t.key) && t.preventDefault();
                             let a = !0;
                             !e.isPressed && !t.repeat && ((e.target = t.currentTarget), (e.isPressed = !0), (a = P(t, 'keyboard')), D((0, r.r3)(t.currentTarget), 'keyup', n, !1)), a && t.stopPropagation(), t.metaKey && (0, r.V5)() && (null === (i = e.metaKeyEvents) || void 0 === i || i.set(t.key, t.nativeEvent));
                         } else 'Meta' === t.key && (e.metaKeyEvents = new Map());
@@ -204,7 +204,7 @@ function T(e) {
                 n = (t) => {
                     var n, i, a;
                     if (e.isPressed && e.target && S(t, e.target)) {
-                        b(t.target, t.key) && t.preventDefault();
+                        L(t.target, t.key) && t.preventDefault();
                         let n = t.target,
                             a = U(N(e.target, t), 'keyboard', e.target.contains(n));
                         M(), a && t.stopPropagation(), 'Enter' !== t.key && g(e.target) && e.target.contains(n) && !t[I] && ((t[I] = !0), (0, r.nG)(e.target, t, !1)), (e.isPressed = !1), null === (i = e.metaKeyEvents) || void 0 === i || i.delete(t.key);
@@ -323,7 +323,7 @@ function T(e) {
         (0, i.useEffect)(
             () => () => {
                 var e;
-                !f && E(null !== (e = L.current.target) && void 0 !== e ? e : void 0);
+                !f && E(null !== (e = b.current.target) && void 0 !== e ? e : void 0);
             },
             [f]
         ),
@@ -386,12 +386,12 @@ function C(e, t) {
 function y(e) {
     return !(e instanceof HTMLElement) || !e.hasAttribute('draggable');
 }
-function b(e, t) {
+function L(e, t) {
     return e instanceof HTMLInputElement ? !D(e, t) : e instanceof HTMLButtonElement ? 'submit' !== e.type && 'reset' !== e.type : !g(e) && !0;
 }
-let L = new Set(['checkbox', 'radio', 'range', 'color', 'file', 'image', 'button', 'submit', 'reset']);
+let b = new Set(['checkbox', 'radio', 'range', 'color', 'file', 'image', 'button', 'submit', 'reset']);
 function D(e, t) {
-    return 'checkbox' === e.type || 'radio' === e.type ? ' ' === t : L.has(e.type);
+    return 'checkbox' === e.type || 'radio' === e.type ? ' ' === t : b.has(e.type);
 }
 function M({ children: e }) {
     let t = (0, i.useMemo)(

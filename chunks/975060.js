@@ -40,7 +40,7 @@ function C() {
 function y(e) {
     (h = e.name), (f = e.country), (m = e.line1), (I = e.line2), (T = e.city), (g = e.postalCode), (S = e.state), (p = e.email);
 }
-function b(e) {
+function L(e) {
     let { stripePaymentMethod: t } = e;
     if (null == t) {
         C();
@@ -50,7 +50,7 @@ function b(e) {
     let { billingAddressInfo: n } = o.az(d);
     y(n);
 }
-function L() {
+function b() {
     (l = ''), (u = null);
 }
 function D(e) {
@@ -142,10 +142,10 @@ class Z extends (r = i.ZP.Store) {
 }
 s(Z, 'displayName', 'NewPaymentSourceStore'),
     (t.Z = new Z(a.Z, {
-        NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: b,
+        NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: L,
         NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE: U,
         NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: w,
-        BRAINTREE_TOKENIZE_PAYPAL_START: L,
+        BRAINTREE_TOKENIZE_PAYPAL_START: b,
         BRAINTREE_TOKENIZE_PAYPAL_SUCCESS: D,
         BRAINTREE_TOKENIZE_VENMO_START: M,
         BRAINTREE_TOKENIZE_VENMO_SUCCESS: P,

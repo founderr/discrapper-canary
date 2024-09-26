@@ -26,8 +26,8 @@ function I(e, t, n, I, T, g, S) {
     if (R) {
         var C = u(v),
             y = !C && d(v),
-            b = !C && !y && h(v);
-        (O = v), C || y || b ? (u(A) ? (O = A) : c(A) ? (O = o(A)) : y ? ((R = !1), (O = i(v, !0))) : b ? ((R = !1), (O = a(v, !0))) : (O = [])) : f(v) || l(v) ? ((O = A), l(A) ? (O = m(A)) : (!E(A) || _(A)) && (O = s(v))) : (R = !1);
+            L = !C && !y && h(v);
+        (O = v), C || y || L ? (u(A) ? (O = A) : c(A) ? (O = o(A)) : y ? ((R = !1), (O = i(v, !0))) : L ? ((R = !1), (O = a(v, !0))) : (O = [])) : f(v) || l(v) ? ((O = A), l(A) ? (O = m(A)) : (!E(A) || _(A)) && (O = s(v))) : (R = !1);
     }
     R && (S.set(v, O), T(O, v, I, g, S), S.delete(v)), r(e, n, O);
 }

@@ -44,7 +44,7 @@ let h = 24,
         }
     };
 function I(e) {
-    let { className: t, disabled: n = !1, innerClassName: r, childClassName: a, iconClassName: o, icon: I, children: T, onClick: g, isActive: S, onMouseEnter: A, onMouseLeave: v, onFocus: N, onBlur: O, pulse: R, sparkle: C, notification: y, 'aria-label': b, 'aria-expanded': L, 'aria-haspopup': D, 'aria-controls': M } = e,
+    let { className: t, disabled: n = !1, innerClassName: r, childClassName: a, iconClassName: o, icon: I, children: T, onClick: g, isActive: S, onMouseEnter: A, onMouseLeave: v, onFocus: N, onBlur: O, pulse: R, sparkle: C, notification: y, 'aria-label': L, 'aria-expanded': b, 'aria-haspopup': D, 'aria-controls': M } = e,
         P = (0, d.Q)('ChannelTextAreaButton'),
         U = (0, u.useTransition)(null != T, {
             ...m,
@@ -71,8 +71,8 @@ function I(e) {
     return (0, i.jsxs)(u.Button, {
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
-        'aria-label': b,
-        'aria-expanded': L,
+        'aria-label': L,
+        'aria-expanded': b,
         'aria-haspopup': D,
         'aria-controls': M,
         disabled: n,

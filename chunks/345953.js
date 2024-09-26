@@ -93,7 +93,7 @@ function y() {
             I.fy.AUTOMATED
         );
 }
-function b(e, t, n, r) {
+function L(e, t, n, r) {
     var i;
     let a = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
         o = (0, m.z)(n);
@@ -101,7 +101,7 @@ function b(e, t, n, r) {
     let s = e[o];
     return (s[t] = null !== (i = s[t]) && void 0 !== i ? i : C(n)), r(s[t]), (s[t].modifiedAt = String(Date.now())), a && O(s, t, n), R(s), !0;
 }
-function L() {
+function b() {
     y();
 }
 let D = a().debounce(() => {
@@ -124,7 +124,7 @@ function x() {
             let t = !1;
             return (
                 (0, p.$E)((n, r, i) => {
-                    let a = b(e, r, n, (e) => {
+                    let a = L(e, r, n, (e) => {
                         Object.assign(e, i);
                     });
                     t = t || a;
@@ -158,7 +158,7 @@ class F extends u.Z {
     constructor(...e) {
         super(...e),
             g(this, 'actions', {
-                POST_CONNECTION_OPEN: L,
+                POST_CONNECTION_OPEN: b,
                 AUDIO_SET_LOCAL_VOLUME: G,
                 AUDIO_TOGGLE_LOCAL_MUTE: k,
                 AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: B

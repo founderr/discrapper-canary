@@ -60,13 +60,13 @@ n.d(t, {
         return v;
     },
     i$: function () {
-        return L;
+        return b;
     },
     jF: function () {
         return d;
     },
     ji: function () {
-        return b;
+        return L;
     },
     jp: function () {
         return y;
@@ -128,8 +128,8 @@ let u = 'alt+c',
     R = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
     C = 15,
     y = 30000,
-    b = 30,
-    L = 10,
+    L = 30,
+    b = 10,
     D = 14 * l.Z.Millis.DAY,
     M = 5,
     P = 5,

@@ -70,7 +70,7 @@ class y extends o.PureComponent {
             });
     }
 }
-class b extends o.PureComponent {
+class L extends o.PureComponent {
     isDeadInvite() {
         let { isPreview: e, message: t, activity: n, applicationId: r } = this.props;
         return !e && !(null != t && (0, g.Z)(n, t, r));
@@ -401,4 +401,4 @@ class b extends o.PureComponent {
             });
     }
 }
-t.Z = b;
+t.Z = L;

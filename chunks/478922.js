@@ -24,7 +24,7 @@ function _(e, t, n) {
         });
     return (0, a.forwardRef)(function (n, E) {
         var f;
-        let { onScroll: h, dir: p = 'ltr', sections: m, columns: I, getItemKey: T, getItemHeight: g, getSectionHeight: S, chunkSize: A, renderSection: v, renderItem: N, getSectionProps: O, itemGutter: R, removeEdgeItemGutters: C, sectionGutter: y, padding: b, paddingVertical: L, paddingHorizontal: D, fade: M = !1, className: P, style: U, maxContentWidth: w, renderAccessory: x, onItemVisibilityChange: G, ...k } = n,
+        let { onScroll: h, dir: p = 'ltr', sections: m, columns: I, getItemKey: T, getItemHeight: g, getSectionHeight: S, chunkSize: A, renderSection: v, renderItem: N, getSectionProps: O, itemGutter: R, removeEdgeItemGutters: C, sectionGutter: y, padding: L, paddingVertical: b, paddingHorizontal: D, fade: M = !1, className: P, style: U, maxContentWidth: w, renderAccessory: x, onItemVisibilityChange: G, ...k } = n,
             B = a.useRef(null),
             F = a.useRef(null),
             Z = a.useRef({}),
@@ -55,8 +55,8 @@ function _(e, t, n) {
             itemGutter: R,
             removeEdgeItemGutters: C,
             sectionGutter: y,
-            padding: b,
-            paddingVertical: L,
+            padding: L,
+            paddingVertical: b,
             paddingHorizontal: D,
             getScrollerState: W,
             dir: p,

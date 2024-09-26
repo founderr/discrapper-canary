@@ -39,8 +39,8 @@ null != v &&
         .map((e) => parseInt(e))),
     (C = null === (r = (i = v.remoteApp).getModuleVersions) || void 0 === r ? void 0 : r.call(i)),
     (R = null === (a = (o = v.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(o)));
-let b = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
-    L = !1;
+let L = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
+    b = !1;
 async function D(e) {
     let t = {
             method: 'GET',
@@ -84,7 +84,7 @@ function P(e) {
     })(l || (l = {})),
     (t.ZP = {
         requireModule: (e) => v.nativeModules.requireModule(e),
-        ensureModule: (e) => (T.isPlatformEmbedded ? (__OVERLAY__ && b.has(e) ? Promise.resolve() : v.nativeModules.ensureModule(e)) : Promise.reject(Error('not embedded'))),
+        ensureModule: (e) => (T.isPlatformEmbedded ? (__OVERLAY__ && L.has(e) ? Promise.resolve() : v.nativeModules.ensureModule(e)) : Promise.reject(Error('not embedded'))),
         get canBootstrapNewUpdater() {
             return v.nativeModules.canBootstrapNewUpdater || !1;
         },
@@ -165,10 +165,10 @@ function P(e) {
         },
         getVoiceEngine() {
             if (__OVERLAY__) throw Error('cannot require discord_voice in overlay');
-            return (L = !0), this.requireModule('discord_voice');
+            return (b = !0), this.requireModule('discord_voice');
         },
         getDiscordUtils() {
-            if (!L)
+            if (!b)
                 try {
                     this.getVoiceEngine();
                 } catch (e) {}

@@ -50,8 +50,8 @@ var u = n(470079),
     R = n(700089),
     C = n(654455),
     y = n(963456),
-    b = n(367790),
-    L = n(895924),
+    L = n(367790),
+    b = n(895924),
     D = n(581364),
     M = n(807169),
     P = n(104793),
@@ -442,7 +442,7 @@ class ed extends (r = E.ZP.Store) {
                 { commandTypes: [p.yU.CHAT] },
                 {
                     placeholderCount: 5,
-                    scoreMethod: b.p.COMMAND_ONLY,
+                    scoreMethod: L.p.COMMAND_ONLY,
                     applicationId: r,
                     allowFetch: !0
                 }
@@ -456,7 +456,7 @@ class ed extends (r = E.ZP.Store) {
                 { commandTypes: [p.yU.CHAT] },
                 {
                     placeholderCount: 5,
-                    scoreMethod: b.p.COMMAND_ONLY,
+                    scoreMethod: L.p.COMMAND_ONLY,
                     applicationId: e,
                     allowFetch: !0
                 }
@@ -654,12 +654,12 @@ function eS(e, t, n) {
 }
 function eA(e) {
     var t, n, r, i, a, o;
-    let { permissionContext: s, contextState: l, userState: u, applicationStates: c, text: _, builtIns: E = b.D.ALLOW, allowApplicationCommands: f = !0, singleApplicationId: h, allowEmptySections: p = !1, scoreMethod: I = b.p.NONE, sortOptions: T = eg, installOnDemand: S = !1 } = e,
+    let { permissionContext: s, contextState: l, userState: u, applicationStates: c, text: _, builtIns: E = L.D.ALLOW, allowApplicationCommands: f = !0, singleApplicationId: h, allowEmptySections: p = !1, scoreMethod: I = L.p.NONE, sortOptions: T = eg, installOnDemand: S = !1 } = e,
         { commandTypes: v } = s,
         N = null == _ ? void 0 : _.toLowerCase(),
         R = null == N ? void 0 : N.split(' '),
-        y = E === b.D.ONLY_TEXT,
-        L = E !== b.D.DENY ? (0, O.Kh)(v, !0, y) : [],
+        y = E === L.D.ONLY_TEXT,
+        b = E !== L.D.DENY ? (0, O.Kh)(v, !0, y) : [],
         D = [],
         M = {
             permissionContext: s,
@@ -714,7 +714,7 @@ function eA(e) {
     if (
         (T.applications.useFrecency && g.DZ.loadIfNecessary(),
         D.sort((e, t) => {
-            if (T.applications.useScore && I === b.p.APPLICATION_ONLY) {
+            if (T.applications.useScore && I === L.p.APPLICATION_ONLY) {
                 var n, r, i, a;
                 let o = null !== (i = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== i ? i : Number.MAX_VALUE,
                     s = null !== (a = null === (r = t.data[0]) || void 0 === r ? void 0 : r.score) && void 0 !== a ? a : Number.MAX_VALUE;
@@ -727,9 +727,9 @@ function eA(e) {
             }
             return eU(e.section.name, t.section.name);
         }),
-        L.length > 0 || !0 === p)
+        b.length > 0 || !0 === p)
     ) {
-        let e = ev(O.Tm[U.bi.BUILT_IN], L, !0, !0, M);
+        let e = ev(O.Tm[U.bi.BUILT_IN], b, !0, !0, M);
         null != e && D.push(e);
     }
     let k = D.flatMap((e) =>
@@ -738,7 +738,7 @@ function eA(e) {
             section: e.section
         }))
     );
-    if (I === b.p.COMMAND_ONLY || I === b.p.COMMAND_OR_APPLICATION) {
+    if (I === L.p.COMMAND_ONLY || I === L.p.COMMAND_OR_APPLICATION) {
         let e = s.context,
             t = A.Z.getGuild(s.context.guild_id);
         T.commands.useFrecency && g.DZ.loadIfNecessary(),
@@ -791,8 +791,8 @@ function ev(e, t, n, r, i) {
             isGuildInstalled: n,
             isUserInstalled: r || d
         }) === P.mF.ALLOWED && I.push(i);
-    return 0 !== (a = u !== b.p.NONE && null != o && null != s ? eM(o, s, I, e, u) : I).length || l
-        ? ((u === b.p.NONE || u === b.p.APPLICATION_ONLY) && a.sort((e, t) => eU(e.displayName, t.displayName)),
+    return 0 !== (a = u !== L.p.NONE && null != o && null != s ? eM(o, s, I, e, u) : I).length || l
+        ? ((u === L.p.NONE || u === L.p.APPLICATION_ONLY) && a.sort((e, t) => eU(e.displayName, t.displayName)),
           {
               section: e,
               data: a
@@ -827,23 +827,23 @@ function ey(e, t) {
         description: null !== (i = null !== (r = e.description_default) && void 0 !== r ? r : e.description) && void 0 !== i ? i : '',
         dm_permission: e.dm_permission,
         name: null !== (a = e.name_default) && void 0 !== a ? a : e.name,
-        options: null !== (o = null === (n = e.options) || void 0 === n ? void 0 : n.map(eb)) && void 0 !== o ? o : [],
+        options: null !== (o = null === (n = e.options) || void 0 === n ? void 0 : n.map(eL)) && void 0 !== o ? o : [],
         permissions: null != e.permissions ? eD(e.permissions, t) : void 0
     };
     return e.description !== e.description_default && (s.description_localized = e.description), e.name !== e.name_default && (s.name_localized = e.name), s;
 }
-function eb(e) {
+function eL(e) {
     var t, n, r, i;
     let a = {
         ...e,
-        choices: null === (t = e.choices) || void 0 === t ? void 0 : t.map(eL),
+        choices: null === (t = e.choices) || void 0 === t ? void 0 : t.map(eb),
         description: null !== (r = e.description_default) && void 0 !== r ? r : e.description,
         name: null !== (i = e.name_default) && void 0 !== i ? i : e.name,
-        options: null === (n = e.options) || void 0 === n ? void 0 : n.map(eb)
+        options: null === (n = e.options) || void 0 === n ? void 0 : n.map(eL)
     };
     return e.description !== e.description_default && (a.description_localized = e.description), e.name !== e.name_default && (a.name_localized = e.name), a;
 }
-function eL(e) {
+function eb(e) {
     var t;
     let n = {
         ...e,
@@ -856,7 +856,7 @@ function eD(e, t) {
     if (
         (null != e.user &&
             n.push({
-                type: L.Kw.USER,
+                type: b.Kw.USER,
                 id: t,
                 permission: e.user
             }),
@@ -864,14 +864,14 @@ function eD(e, t) {
     )
         for (let [t, r] of Object.entries(e.channels))
             n.push({
-                type: L.Kw.CHANNEL,
+                type: b.Kw.CHANNEL,
                 id: t,
                 permission: r
             });
     if (null != e.roles)
         for (let [t, r] of Object.entries(e.roles))
             n.push({
-                type: L.Kw.ROLE,
+                type: b.Kw.ROLE,
                 id: t,
                 permission: r
             });
@@ -880,7 +880,7 @@ function eD(e, t) {
 function eM(e, t, n, r, i) {
     let a;
     let o = [];
-    if (i === b.p.APPLICATION_ONLY || i === b.p.COMMAND_OR_APPLICATION) {
+    if (i === L.p.APPLICATION_ONLY || i === L.p.COMMAND_OR_APPLICATION) {
         let t = r.name.toLocaleLowerCase();
         if (t.startsWith(e)) a = 5;
         else if (t.includes(e)) a = 6;
@@ -894,7 +894,7 @@ function eM(e, t, n, r, i) {
         c = t.slice(1).join(' ');
     for (let t of n) {
         let n;
-        (i === b.p.COMMAND_ONLY || i === b.p.COMMAND_OR_APPLICATION) && (n = eP(t, e, u, c)),
+        (i === L.p.COMMAND_ONLY || i === L.p.COMMAND_OR_APPLICATION) && (n = eP(t, e, u, c)),
             (void 0 === n || (void 0 !== a && a < n)) && (n = a),
             void 0 !== n &&
                 o.push({

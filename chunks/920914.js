@@ -15,19 +15,19 @@ var n = t(735250),
     I = t(468026),
     N = t(410030),
     A = t(726542),
-    m = t(122021),
-    C = t(275759),
+    C = t(122021),
+    m = t(275759),
     g = t(231757),
     h = t(888496),
     O = t(605236),
     p = t(565138),
     R = t(297700),
     x = t(553795),
-    f = t(430824),
-    M = t(771845),
+    M = t(430824),
+    f = t(771845),
     D = t(246946),
-    P = t(626135),
-    L = t(63063),
+    L = t(626135),
+    P = t(63063),
     b = t(706454),
     Z = t(349728),
     v = t(494620),
@@ -56,7 +56,7 @@ let w = (e) => {
             }),
             [i.id]
         ),
-        d = null != (0, o.e7)([f.Z], () => f.Z.getGuild(i.guild.id), [i.guild.id]);
+        d = null != (0, o.e7)([M.Z], () => M.Z.getGuild(i.guild.id), [i.guild.id]);
     return (
         !d &&
             (a = (0, n.jsx)(_.Button, {
@@ -117,20 +117,20 @@ function k(e) {
         l,
         { onDisconnect: u, account: T, theme: S, locale: N } = e,
         [O, p] = a.useState(T.friendSync),
-        [x, f] = a.useState(T.visibility),
-        [M, D] = a.useState(T.metadataVisibility),
-        [P, b] = a.useState(T.showActivity),
+        [x, M] = a.useState(T.visibility),
+        [f, D] = a.useState(T.metadataVisibility),
+        [L, b] = a.useState(T.showActivity),
         [F, Y] = a.useState(null),
         [k, H] = a.useState(null),
         [W, K] = a.useState(!1),
         [z, Q] = a.useState([]),
-        X = (0, m.rR)(T.type),
+        X = (0, C.rR)(T.type),
         q = A.Z.get(X);
     a.useEffect(() => {
-        p(T.friendSync), f(T.visibility), D(T.metadataVisibility), b(T.showActivity);
+        p(T.friendSync), M(T.visibility), D(T.metadataVisibility), b(T.showActivity);
     }, [T]),
         a.useEffect(() => {
-            if (!1 !== T.verified) null != F && (f(F), E.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (D(k), E.Z.setMetadataVisibility(T.type, T.id, k), H(null));
+            if (!1 !== T.verified) null != F && (M(F), E.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (D(k), E.Z.setMetadataVisibility(T.type, T.id, k), H(null));
         }, [T]);
     function J() {
         (0, g.Z)({
@@ -173,7 +173,7 @@ function k(e) {
                 });
             return;
         }
-        f(t), E.Z.setVisibility(T.type, T.id, t);
+        M(t), E.Z.setVisibility(T.type, T.id, t);
     }
     function es(e) {
         let { verified: s } = T,
@@ -289,7 +289,7 @@ function k(e) {
                 var s;
                 let t = null !== (s = e.metadata) && void 0 !== s ? s : {},
                     a = null,
-                    i = (0, C.FI)(t[G.PC.CREATED_AT], N);
+                    i = (0, m.FI)(t[G.PC.CREATED_AT], N);
                 switch (e.type) {
                     case U.ABu.REDDIT:
                         a = (0, h.oP)(t, V.metadataItem);
@@ -342,7 +342,7 @@ function k(e) {
                             {
                                 variant: 'text-xs/normal',
                                 className: V.connectionMetadataUpsellDescription,
-                                children: y.Z.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({ helpdeskUrl: L.Z.getArticleURL(U.BhN.CONNECTION_DETAILS) })
+                                children: y.Z.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({ helpdeskUrl: P.Z.getArticleURL(U.BhN.CONNECTION_DETAILS) })
                             },
                             'label'
                         )
@@ -398,7 +398,7 @@ function k(e) {
                 (o = (0, n.jsx)(_.FormSwitch, {
                     className: V.connectionOptionSwitch,
                     hideBorder: !0,
-                    value: P,
+                    value: L,
                     onChange: en,
                     children: (0, n.jsx)(_.Text, {
                         variant: 'text-sm/semibold',
@@ -409,7 +409,7 @@ function k(e) {
                 (l = (0, n.jsx)(_.FormSwitch, {
                     className: V.connectionOptionSwitch,
                     hideBorder: !0,
-                    value: 1 === M,
+                    value: 1 === f,
                     onChange: es,
                     disabled: 1 !== x || null == T.metadata,
                     children: (0, n.jsx)(_.Text, {
@@ -497,7 +497,7 @@ function H() {
 function W(e) {
     let s = A.Z.get(e);
     (0, g.Z)({ platformType: s.type }),
-        P.default.track(U.rMx.ACCOUNT_LINK_STEP, {
+        L.default.track(U.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',
             platform_type: s.type
@@ -510,7 +510,7 @@ function K() {
             onComplete: W
         });
     }
-    let s = (0, m.fq)(),
+    let s = (0, C.fq)(),
         t = (0, _.useRedesignIconContext)().enabled ? 24 : 18;
     return (0, n.jsxs)('div', {
         className: V.connectionsContainer,
@@ -610,7 +610,7 @@ s.Z = () => {
         s = (0, o.e7)([x.Z], () => x.Z.isFetching()),
         t = (0, o.e7)([x.Z], () => x.Z.getAccounts()),
         i = (0, N.ZP)();
-    (0, o.e7)([M.ZP], () => M.ZP.getFlattenedGuildIds());
+    (0, o.e7)([f.ZP], () => f.ZP.getFlattenedGuildIds());
     let r = (0, o.e7)([b.default], () => b.default.locale);
     return (a.useEffect(() => {
         E.Z.fetch();

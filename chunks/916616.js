@@ -38,7 +38,7 @@ function A(e, t, n) {
 class v extends (r = o.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: r, src: i, placeholder: o, placeholderVersion: s, alt: u, width: d, height: f, maxWidth: m = d, maxHeight: g = f, minWidth: S, minHeight: A, mediaLayoutType: v, limitResponsiveWidth: C = !0, accessory: y, zoomable: b, original: L, children: D, renderAccessory: M, onClick: P, tabIndex: U, dataSafeSrc: w, useFullWidth: x = !1, ...G } = this.props;
+        let { className: t, imageClassName: n, readyState: r, src: i, placeholder: o, placeholderVersion: s, alt: u, width: d, height: f, maxWidth: m = d, maxHeight: g = f, minWidth: S, minHeight: A, mediaLayoutType: v, limitResponsiveWidth: C = !0, accessory: y, zoomable: L, original: b, children: D, renderAccessory: M, onClick: P, tabIndex: U, dataSafeSrc: w, useFullWidth: x = !1, ...G } = this.props;
         if (1 === d && 1 === f) return null;
         let k = (0, E.Tj)({
                 width: d,
@@ -81,7 +81,7 @@ class v extends (r = o.PureComponent) {
                     className: l()(
                         T.imageWrapper,
                         {
-                            [T.imageZoom]: b,
+                            [T.imageZoom]: L,
                             [T.imageWrapperBackground]: r !== p.zo9.READY,
                             [T.clickable]: null != P
                         },
@@ -90,13 +90,13 @@ class v extends (r = o.PureComponent) {
                     style: O(k, C, x, v),
                     ...G,
                     children: [
-                        null != L &&
+                        null != b &&
                             (0, a.jsx)('a', {
                                 tabIndex: -1,
                                 onClick: P,
                                 'aria-hidden': !0,
                                 className: T.originalLink,
-                                href: L,
+                                href: b,
                                 ref: this._containerRef,
                                 'data-role': 'img',
                                 'data-safe-src': null != w ? w : i

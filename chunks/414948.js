@@ -21,7 +21,7 @@ n.d(t, {
         return P;
     },
     yU: function () {
-        return b;
+        return L;
     },
     zL: function () {
         return m;
@@ -197,7 +197,7 @@ function C(e) {
 function y() {
     return void 0 !== window.ResizeObserver;
 }
-function b(e) {
+function L(e) {
     let { ref: t, onResize: n } = e;
     (0, r.useEffect)(() => {
         let e = null == t ? void 0 : t.current;
@@ -223,7 +223,7 @@ function b(e) {
         }
     }, [n, t]);
 }
-function L(e) {
+function b(e) {
     for (D(e) && (e = e.parentElement); e && !D(e); ) e = e.parentElement;
     return e || document.scrollingElement || document.documentElement;
 }

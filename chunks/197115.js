@@ -87,7 +87,7 @@ function N(e) {
     );
 }
 function O(e) {
-    let { isGift: t, subscriptionTier: n, onClick: i, size: d, className: O, isTrialCTA: R, buttonText: C, buttonTextClassName: y, iconClassName: b, postSuccessGuild: L, onSubscribeModalClose: D, premiumModalAnalyticsLocation: M, showIcon: P = !0, disableShine: U, applicationId: w, giftMessage: x, overrideDisabledButtonText: G, shinyButtonClassName: k, showGradient: B = !1, ...F } = e,
+    let { isGift: t, subscriptionTier: n, onClick: i, size: d, className: O, isTrialCTA: R, buttonText: C, buttonTextClassName: y, iconClassName: L, postSuccessGuild: b, onSubscribeModalClose: D, premiumModalAnalyticsLocation: M, showIcon: P = !0, disableShine: U, applicationId: w, giftMessage: x, overrideDisabledButtonText: G, shinyButtonClassName: k, showGradient: B = !1, ...F } = e,
         Z = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         V = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         H = (0, o.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
@@ -110,7 +110,7 @@ function O(e) {
                 isGift: t,
                 subscriptionTier: n,
                 trialId: W ? (null === (r = j.subscription_trial) || void 0 === r ? void 0 : r.id) : null,
-                postSuccessGuild: L,
+                postSuccessGuild: b,
                 onSubscribeModalClose: D,
                 analyticsLocations: Y,
                 premiumModalAnalyticsLocation: M,
@@ -200,7 +200,7 @@ function O(e) {
                     (0, r.jsx)(s.NitroWheelIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: a()(A.premiumIcon, b)
+                        className: a()(A.premiumIcon, L)
                     }),
                 (0, r.jsx)('span', {
                     className: a()(A.buttonText, y),

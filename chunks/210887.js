@@ -64,10 +64,10 @@ function y() {
     let e = C();
     return e;
 }
-function b() {
+function L() {
     return G();
 }
-function L() {
+function b() {
     return G();
 }
 function D() {
@@ -139,15 +139,15 @@ v(B, 'displayName', 'ThemeStore'),
         }
     ]),
     (t.Z = new B(c.Z, {
-        CACHE_LOADED: b,
-        CONNECTION_OPEN: b,
+        CACHE_LOADED: L,
+        CONNECTION_OPEN: L,
         LOGOUT: M,
-        OVERLAY_INITIALIZE: b,
-        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: L,
-        UNSYNCED_USER_SETTINGS_UPDATE: L,
-        USER_SETTINGS_PROTO_UPDATE: b,
+        OVERLAY_INITIALIZE: L,
+        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: b,
+        UNSYNCED_USER_SETTINGS_UPDATE: b,
+        USER_SETTINGS_PROTO_UPDATE: L,
         UPDATE_BACKGROUND_GRADIENT_PRESET: w,
-        RESET_PREVIEW_CLIENT_THEME: b,
+        RESET_PREVIEW_CLIENT_THEME: L,
         SYSTEM_THEME_CHANGE: P,
         ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: U,
         ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: D

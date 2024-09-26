@@ -18,22 +18,22 @@ var n = t(735250),
     S = t(689938),
     I = t(406926);
 function N(e) {
-    let { user: s, guild: t, className: i, sectionTitle: u, forcedDivider: N = !1, withTutorial: m = !1, isTryItOutFlow: C = !1 } = e,
+    let { user: s, guild: t, className: i, sectionTitle: u, forcedDivider: N = !1, withTutorial: C = !1, isTryItOutFlow: m = !1 } = e,
         { analyticsLocations: g } = (0, l.ZP)(),
         h = null != t,
         { userAvatarDecoration: O, guildAvatarDecoration: p, pendingAvatarDecoration: R, pendingErrors: x } = (0, E.$U)(s, t),
-        f = (0, _.Z)('enable_avatar_decoration_uploads'),
-        M = a.useCallback(
+        M = (0, _.Z)('enable_avatar_decoration_uploads'),
+        f = a.useCallback(
             () =>
                 (0, d.ps)({
                     analyticsLocations: g,
-                    isTryItOutFlow: C,
+                    isTryItOutFlow: m,
                     guild: t
                 }),
-            [g, C, t]
+            [g, m, t]
         ),
-        D = C || void 0 !== R ? null != R : (h ? p : O) != null,
-        P = m ? o.ShinyButton : o.Button;
+        D = m || void 0 !== R ? null != R : (h ? p : O) != null,
+        L = C ? o.ShinyButton : o.Button;
     return (0, n.jsxs)(T.Z, {
         className: i,
         forcedDivider: N,
@@ -44,10 +44,10 @@ function N(e) {
             (0, n.jsxs)('div', {
                 className: I.buttonsContainer,
                 children: [
-                    (0, n.jsx)(P, {
+                    (0, n.jsx)(L, {
                         size: o.Button.Sizes.SMALL,
-                        onClick: M,
-                        className: r()({ [I.buttonHighlighted]: m }),
+                        onClick: f,
+                        className: r()({ [I.buttonHighlighted]: C }),
                         children: S.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
                     }),
                     D &&
@@ -63,7 +63,7 @@ function N(e) {
                         })
                 ]
             }),
-            s.isStaff() && f && (0, n.jsx)(A, { user: s })
+            s.isStaff() && M && (0, n.jsx)(A, { user: s })
         ]
     });
 }

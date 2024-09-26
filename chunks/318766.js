@@ -57,12 +57,12 @@ function y(e) {
         '--custom-emoji-sprite-col': e % v
     };
 }
-function b(e) {
-    let { tabIndex: t, className: n, renderButtonContents: r, active: o, onClick: v, 'aria-controls': N, focusProps: b } = e,
-        [L, D] = a.useState(!1),
+function L(e) {
+    let { tabIndex: t, className: n, renderButtonContents: r, active: o, onClick: v, 'aria-controls': N, focusProps: L } = e,
+        [b, D] = a.useState(!1),
         [M, P] = a.useState(50),
         U = (0, u.e7)([h.ZP], () => h.ZP.inReverseTrial()),
-        w = L || o,
+        w = b || o,
         x = (0, m.l)(A, 'emojiButton', w ? 'Hovered' : 'Normal'),
         G = y(M),
         k = a.useCallback(() => {
@@ -108,7 +108,7 @@ function b(e) {
                 'aria-controls': N,
                 'aria-expanded': o,
                 'aria-haspopup': 'dialog',
-                focusProps: b,
+                focusProps: L,
                 onContextMenu: e.onContextMenu,
                 children:
                     null != r
@@ -131,4 +131,4 @@ function b(e) {
             })
     });
 }
-t.Z = b;
+t.Z = L;

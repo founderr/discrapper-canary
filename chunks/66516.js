@@ -19,16 +19,16 @@ var n = t(735250),
     I = t(621853),
     N = t(246946),
     A = t(594174),
-    m = t(63063),
-    C = t(74538),
+    C = t(63063),
+    m = t(74538),
     g = t(18438),
     h = t(778825),
     O = t(856607),
     p = t(594496),
     R = t(856768),
     x = t(981631),
-    f = t(689938);
-function M(e) {
+    M = t(689938);
+function f(e) {
     (0, l.openModalLazy)(async () => {
         let { default: s } = await t.e('84509').then(t.bind(t, 933696));
         return (t) =>
@@ -49,21 +49,21 @@ function D(e) {
             return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         D = (0, o.e7)([I.Z], () => !I.Z.isFetchingProfile(i.id, null == s ? void 0 : s.id)),
-        P = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation),
-        { source: L, ...b } = (0, o.cj)([h.Z], () => ({
+        L = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation),
+        { source: P, ...b } = (0, o.cj)([h.Z], () => ({
             ...h.Z.getAllPending(),
             source: h.Z.getSource()
         }));
     return (a.useEffect(() => () => c.Z.wait(g.W3), []),
     a.useEffect(() => {
-        null != L &&
+        null != P &&
             u.ZP.trackWithMetadata(x.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: 'guild',
                 destination_pane: x.jXE.SETTINGS_CUSTOMIZE_PROFILE,
-                source: L
+                source: P
             });
-    }, [L]),
-    P)
+    }, [P]),
+    L)
         ? (0, n.jsx)(d.Z, {})
         : D
           ? (0, n.jsxs)(E.Gt, {
@@ -71,7 +71,7 @@ function D(e) {
                 children: [
                     (0, n.jsx)(l.Text, {
                         variant: 'text-sm/normal',
-                        children: f.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({ helpCenterLink: m.Z.getArticleURL(x.BhN.GUILD_PROFILES) })
+                        children: M.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({ helpCenterLink: C.Z.getArticleURL(x.BhN.GUILD_PROFILES) })
                     }),
                     null != s
                         ? (0, n.jsxs)(n.Fragment, {
@@ -83,12 +83,12 @@ function D(e) {
                                       }
                                   }),
                                   (0, n.jsx)(T.Z, {
-                                      previewTitle: f.Z.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({ guildName: null == s ? void 0 : s.name }),
+                                      previewTitle: M.Z.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({ guildName: null == s ? void 0 : s.name }),
                                       profilePreview: (0, n.jsx)(S.Z, {
                                           user: i,
                                           guild: s,
-                                          canUsePremiumCustomization: C.ZP.canUsePremiumProfileCustomization(i),
-                                          onUpsellClick: M,
+                                          canUsePremiumCustomization: m.ZP.canUsePremiumProfileCustomization(i),
+                                          onUpsellClick: f,
                                           ...b
                                       }),
                                       children: (0, n.jsx)(p.Z, {})

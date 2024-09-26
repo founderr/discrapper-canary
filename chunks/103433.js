@@ -3,39 +3,39 @@ n(470079);
 var a = n(120356),
     r = n.n(a),
     i = n(481060),
-    o = n(689938),
-    l = n(686549),
+    l = n(689938),
+    o = n(686549),
     c = n(505944);
 t.Z = (e) => {
     let { className: t, onBackClick: n } = e;
     return (0, s.jsxs)('div', {
-        className: r()(l.container, t),
+        className: r()(o.container, t),
         'data-testid': 'all-perks-hero-header',
         children: [
             (0, s.jsx)('img', {
                 src: c,
                 alt: '',
-                className: l.headerArt
+                className: o.headerArt
             }),
             (0, s.jsxs)('div', {
-                className: l.containerInner,
+                className: o.containerInner,
                 children: [
                     (0, s.jsx)('div', {
-                        className: l.backButtonContainer,
+                        className: o.backButtonContainer,
                         children: (0, s.jsxs)(i.Clickable, {
                             onClick: n,
-                            className: l.backButton,
-                            children: [(0, s.jsx)(i.ChevronSmallLeftIcon, { color: 'currentColor' }), o.Z.Messages.BACK]
+                            className: o.backButton,
+                            children: [(0, s.jsx)(i.ChevronSmallLeftIcon, { color: 'currentColor' }), l.Z.Messages.BACK]
                         })
                     }),
                     (0, s.jsx)('div', {
-                        className: l.__invalid_contentContainer,
+                        className: o.__invalid_contentContainer,
                         children: (0, s.jsx)('div', {
-                            className: l.content,
+                            className: o.content,
                             children: (0, s.jsx)(i.Heading, {
                                 variant: 'display-lg',
                                 color: 'always-white',
-                                children: o.Z.Messages.NITRO_HOME_ALL_YOUR_NITRO_PERKS
+                                children: l.Z.Messages.NITRO_HOME_ALL_YOUR_NITRO_PERKS
                             })
                         })
                     })

@@ -36,8 +36,8 @@ function R(e, t, n) {
 }
 let C = 'recentMentionFilterSettings',
     y = [],
-    b = {},
-    L = !1,
+    L = {},
+    b = !1,
     D = !0,
     M = u.K.get(C, {
         guildFilter: O.NgX.ALL_SERVERS,
@@ -56,7 +56,7 @@ function k() {
 }
 function B(e) {
     let { guildId: t } = e;
-    (L = !0), null == t && M.guildFilter === O.NgX.THIS_SERVER && q({ guildFilter: O.NgX.ALL_SERVERS });
+    (b = !0), null == t && M.guildFilter === O.NgX.THIS_SERVER && q({ guildFilter: O.NgX.ALL_SERVERS });
 }
 function F(e) {
     if (e instanceof p.ZP) return e;
@@ -66,17 +66,17 @@ function F(e) {
 function Z(e) {
     let { hasMoreAfter: t, messages: n, isAfter: r } = e,
         i = s().map(n, F);
-    r ? (y = y.concat(i)) : ((y = i), (b = {})),
+    r ? (y = y.concat(i)) : ((y = i), (L = {})),
         s().forEach(i, (e) => {
-            b[e.id] = !0;
+            L[e.id] = !0;
         }),
-        (L = !1),
+        (b = !1),
         (D = t),
         (U = (0, c.zO)()),
         (P = !0);
 }
 function V() {
-    L = !1;
+    b = !1;
 }
 function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -122,11 +122,11 @@ function Y(e) {
         return !1;
     let i = H(n, t);
     if (null == i) return !1;
-    (y = y.slice()).unshift(i), (b[i.id] = !0);
+    (y = y.slice()).unshift(i), (L[i.id] = !0);
 }
 function j(e) {
     let t = e.message.id;
-    if (null == b[String(t)]) return !1;
+    if (null == L[String(t)]) return !1;
     let n = s().findIndex(y, (e) => {
             let { id: n } = e;
             return n === t;
@@ -135,8 +135,8 @@ function j(e) {
     null != r && (y[n] = (0, _.wi)(r, e.message));
 }
 function W(e) {
-    if (null == b[e]) return !1;
-    delete b[e],
+    if (null == L[e]) return !1;
+    delete L[e],
         (y = s().filter(y, (t) => {
             let { id: n } = t;
             return n !== e;
@@ -155,12 +155,12 @@ function q(e) {
     (M = s().defaults(s().pick(e, ['guildFilter', 'roleFilter', 'everyoneFilter']), M)), u.K.set(C, M);
     let n = (e, n) => t[e] !== M[e] && M[e] === n,
         r = n('guildFilter', O.NgX.THIS_SERVER) || n('everyoneFilter', !1) || n('roleFilter', !1);
-    b = {};
+    L = {};
     let i = [];
     r &&
         y.forEach((e) => {
             let t = H(e);
-            null != t && (i.push(t), (b[t.id] = !0));
+            null != t && (i.push(t), (L[t.id] = !0));
         }),
         0 === (y = i).length && (P = !1);
 }
@@ -169,13 +169,13 @@ function Q() {
     P = !1;
 }
 function X() {
-    (y = []), (b = {}), (P = !1), (x = !1);
+    (y = []), (L = {}), (P = !1), (x = !1);
 }
 function $(e) {
     let { guild: t } = e;
     y = s().filter(y, (e) => {
         let n = I.Z.getChannel(e.channel_id);
-        return (null != n && n.getGuildId() !== t.id) || (delete b[e.id], !1);
+        return (null != n && n.getGuildId() !== t.id) || (delete L[e.id], !1);
     });
 }
 function J() {
@@ -183,14 +183,14 @@ function J() {
 }
 function ee(e) {
     let { channel: t } = e;
-    y = s().filter(y, (e) => e.channel_id !== t.id || (delete b[e.id], !1));
+    y = s().filter(y, (e) => e.channel_id !== t.id || (delete L[e.id], !1));
 }
 function et(e) {
     X();
 }
 function en(e) {
     let { size: t } = e;
-    for (let e = t; e < y.length; ++e) delete b[y[e].id];
+    for (let e = t; e < y.length; ++e) delete L[y[e].id];
     let n = y.length;
     n > (y = y.slice(0, t)).length && (D = !0);
 }
@@ -214,10 +214,10 @@ class ei extends (r = l.ZP.Store) {
         return P || y.length > 0 ? y : null;
     }
     hasMention(e) {
-        return b[e];
+        return L[e];
     }
     get loading() {
-        return L;
+        return b;
     }
     get hasMore() {
         return D;

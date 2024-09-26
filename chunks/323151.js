@@ -30,8 +30,8 @@ function p(e, t, n, p, m, I) {
             C = N && h.call(t, '__wrapped__');
         if (R || C) {
             var y = R ? e.value() : e,
-                b = C ? t.value() : t;
-            return I || (I = new r()), m(y, b, n, p, I);
+                L = C ? t.value() : t;
+            return I || (I = new r()), m(y, L, n, p, I);
         }
     }
     return !!O && (I || (I = new r()), o(e, t, n, p, m, I));

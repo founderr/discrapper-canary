@@ -222,7 +222,7 @@
             return O(e) && 'function' == typeof e.elements && 'function' == typeof e.createToken && 'function' == typeof e.createPaymentMethod && 'function' == typeof e.confirmCardPayment;
         },
         y = '[object Object]',
-        b = function e(t, n) {
+        L = function e(t, n) {
             if (!O(t) || !O(n)) return t === n;
             var r = Array.isArray(t);
             if (r !== Array.isArray(n)) return !1;
@@ -243,10 +243,10 @@
                 };
             return c.every(E);
         },
-        L = function (e, t, n) {
+        b = function (e, t, n) {
             return O(e)
                 ? Object.keys(e).reduce(function (i, o) {
-                      var s = !O(t) || !b(e[o], t[o]);
+                      var s = !O(t) || !L(e[o], t[o]);
                       return n.includes(o) ? (s && console.warn('Unsupported prop change: options.'.concat(o, ' is not a mutable property.')), i) : s ? r(r({}, i || {}), {}, a({}, o, e[o])) : i;
                   }, null)
                 : null;
@@ -351,7 +351,7 @@
                 t.useEffect(
                     function () {
                         if (!!s.elements) {
-                            var e = L(r, d, ['clientSecret', 'fonts']);
+                            var e = b(r, d, ['clientSecret', 'fonts']);
                             e && s.elements.update(e);
                         }
                     },
@@ -470,12 +470,12 @@
             t.useEffect(
                 function () {
                     if (!!d.customCheckoutSdk) {
-                        r.clientSecret && !O(p) && !b(r.clientSecret, p.clientSecret) && console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
+                        r.clientSecret && !O(p) && !L(r.clientSecret, p.clientSecret) && console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
                         var e,
                             t,
                             n = null == p ? void 0 : null === (e = p.elementsOptions) || void 0 === e ? void 0 : e.appearance,
                             i = null == r ? void 0 : null === (t = r.elementsOptions) || void 0 === t ? void 0 : t.appearance;
-                        i && !b(i, n) && d.customCheckoutSdk.changeAppearance(i);
+                        i && !L(i, n) && d.customCheckoutSdk.changeAppearance(i);
                     }
                 },
                 [r, p, d.customCheckoutSdk]
@@ -544,30 +544,30 @@
                         R = 'elements' in O ? O.elements : null,
                         C = 'customCheckoutSdk' in O ? O.customCheckoutSdk : null,
                         y = l(t.useState(null), 2),
-                        b = y[0],
+                        L = y[0],
                         D = y[1],
                         M = t.useRef(null),
                         P = t.useRef(null);
-                    v(b, 'blur', c),
-                        v(b, 'focus', d),
-                        v(b, 'escape', f),
-                        v(b, 'click', h),
-                        v(b, 'loaderror', p),
-                        v(b, 'loaderstart', m),
-                        v(b, 'networkschange', I),
-                        v(b, 'confirm', T),
-                        v(b, 'cancel', g),
-                        v(b, 'shippingaddresschange', S),
-                        v(b, 'shippingratechange', A),
-                        v(b, 'change', E),
+                    v(L, 'blur', c),
+                        v(L, 'focus', d),
+                        v(L, 'escape', f),
+                        v(L, 'click', h),
+                        v(L, 'loaderror', p),
+                        v(L, 'loaderstart', m),
+                        v(L, 'networkschange', I),
+                        v(L, 'confirm', T),
+                        v(L, 'cancel', g),
+                        v(L, 'shippingaddresschange', S),
+                        v(L, 'shippingratechange', A),
+                        v(L, 'change', E),
                         _ &&
                             (i =
                                 'expressCheckout' === e
                                     ? _
                                     : function () {
-                                          _(b);
+                                          _(L);
                                       }),
-                        v(b, 'ready', i),
+                        v(L, 'ready', i),
                         t.useLayoutEffect(
                             function () {
                                 if (null === M.current && null !== P.current && (R || C)) {
@@ -582,7 +582,7 @@
                         t.useEffect(
                             function () {
                                 if (!!M.current) {
-                                    var e = L(u, U, ['paymentRequest']);
+                                    var e = b(u, U, ['paymentRequest']);
                                     e && M.current.update(e);
                                 }
                             },

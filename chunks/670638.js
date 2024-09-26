@@ -42,14 +42,14 @@ function T(e) {
                 ctaContent: c.jZ.CONTEXT_MENU_COPY_LINK
             });
         }, [e.quest, e.questContent, e.questContentPosition]),
-        b = () => {
+        L = () => {
             (0, h.openDisclosureModal)(e.quest, {
                 content: e.questContent,
                 position: e.questContentPosition,
                 ctaContent: c.jZ.CONTEXT_MENU_OPEN_DISCLOSURE
             });
         },
-        L = () => {
+        b = () => {
             (0, c._3)({
                 questId: e.quest.id,
                 questContent: e.questContent,
@@ -111,13 +111,13 @@ function T(e) {
                             (0, r.jsx)(o.MenuItem, {
                                 id: 'learn-more',
                                 label: I.Z.Messages.QUESTS_LEARN_MORE_V2,
-                                action: L
+                                action: b
                             }),
                         e.shouldShowDisclosure &&
                             (0, r.jsx)(o.MenuItem, {
                                 id: 'display-disclosure',
                                 label: I.Z.Messages.QUESTS_DISCLOSURE_LABEL,
-                                action: b
+                                action: L
                             }),
                         u &&
                             (0, r.jsx)(o.MenuItem, {

@@ -24,8 +24,8 @@ var c = n(512722),
     R = n(570220),
     C = n(28546),
     y = n(805680),
-    b = n(151574),
-    L = n(368844),
+    L = n(151574),
+    b = n(368844),
     D = n(41776),
     M = n(849522),
     P = n(780291),
@@ -76,7 +76,7 @@ function eE(e, t, r, i) {
                 l(!0);
                 let T = null !== (h = null === (f = U.Z.getStickerPreview(i, t.drafts.type)) || void 0 === f ? void 0 : f.map((e) => e.id)) && void 0 !== h ? h : [],
                     g = null !== (I = H.Z.getUploads(i, t.drafts.type)) && void 0 !== I ? I : [];
-                if (null == c && !_ && !E && (0, L.CB)(g, i)) {
+                if (null == c && !_ && !E && (0, b.CB)(g, i)) {
                     l(!1),
                         (0, p.openModalLazy)(async () => {
                             let { default: e } = await n.e('91842').then(n.bind(n, 273602));
@@ -331,7 +331,7 @@ function eR(e, t, n, r) {
 }
 function eC(e, t) {
     var n, r, i, s, u, c, _, f, m, C;
-    let { textValue: L, richValue: D, className: U, innerClassName: w, editorClassName: x, id: G, required: B, disabled: F, placeholder: Z, accessibilityLabel: H, channel: Y, type: j, focused: W, renderAttachButton: $, renderApplicationCommandIcon: es, pendingReply: ed, onChange: e_, onResize: eC, onBlur: ey, onFocus: eb, onKeyDown: eL, onSubmit: eD, promptToUpload: eM, highlighted: eP, canMentionRoles: eU, canMentionChannels: ew, maxCharacterCount: ex, showRemainingCharsAfterCount: eG, allowNewLines: ek = !0, characterCountClassName: eB, 'aria-describedby': eF, 'aria-labelledby': eZ, setEditorRef: eV, autoCompletePosition: eH, children: eY, disableThemedBackground: ej = !1, emojiPickerCloseOnModalOuterClick: eW, parentModalKey: eK, onCommandSentinelTyped: ez } = e;
+    let { textValue: b, richValue: D, className: U, innerClassName: w, editorClassName: x, id: G, required: B, disabled: F, placeholder: Z, accessibilityLabel: H, channel: Y, type: j, focused: W, renderAttachButton: $, renderApplicationCommandIcon: es, pendingReply: ed, onChange: e_, onResize: eC, onBlur: ey, onFocus: eL, onKeyDown: eb, onSubmit: eD, promptToUpload: eM, highlighted: eP, canMentionRoles: eU, canMentionChannels: ew, maxCharacterCount: ex, showRemainingCharsAfterCount: eG, allowNewLines: ek = !0, characterCountClassName: eB, 'aria-describedby': eF, 'aria-labelledby': eZ, setEditorRef: eV, autoCompletePosition: eH, children: eY, disableThemedBackground: ej = !1, emojiPickerCloseOnModalOuterClick: eW, parentModalKey: eK, onCommandSentinelTyped: ez } = e;
     d()(null != j, 'chat input type must be set');
     let { analyticsLocations: eq } = (0, S.ZP)(g.Z.CHANNEL_TEXT_AREA),
         eQ = eS(t),
@@ -355,15 +355,15 @@ function eC(e, t) {
         { isLurking: e5, isPendingMember: e6, disabled: e7, canAttachFiles: e8, canCreateThreads: e9, canEveryoneSendMessages: te } = ev(Y, j, e3, F),
         tt = j.toolbarType === q.O.STATIC,
         tn = !k.dN.useSetting() && !(0, K.isAndroidWeb)() && null != window.ResizeObserver,
-        tr = !tn || !(null === (n = j.commands) || void 0 === n ? void 0 : n.enabled) || !W || L !== eo.GI,
+        tr = !tn || !(null === (n = j.commands) || void 0 === n ? void 0 : n.enabled) || !W || b !== eo.GI,
         ti = (0, M.Z)(),
         { isSubmitButtonEnabled: ta, fontSize: to } = (0, h.cj)([T.Z], () => ({
             fontSize: T.Z.fontSize,
             isSubmitButtonEnabled: T.Z.isSubmitButtonEnabled
         })),
         ts = (0, h.e7)([V.Z], () => V.Z.isEnabled()),
-        tl = o.useRef(L);
-    tl.current = L;
+        tl = o.useRef(b);
+    tl.current = b;
     let tu = o.useCallback(
         (e, t, n) => {
             var r;
@@ -372,7 +372,7 @@ function eC(e, t) {
         [e_, ez, null === (r = j.commands) || void 0 === r ? void 0 : r.enabled]
     );
     eI(j, e7);
-    let { eventEmitter: tc, handleEditorSelectionChanged: td } = eT(e$, L, D),
+    let { eventEmitter: tc, handleEditorSelectionChanged: td } = eT(e$, b, D),
         { submitting: t_, submit: tE, handleSubmit: tf } = eE(eD, j, e$, Y.id),
         { autocompleteRef: th, handleMaybeShowAutocomplete: tp, handleHideAutocomplete: tm } = eg(),
         tI = ef(tE, j, e$),
@@ -380,7 +380,7 @@ function eC(e, t) {
         tg = ep({
             editorRef: e$,
             disabled: e7,
-            textValue: L,
+            textValue: b,
             channelId: Y.id,
             chatInputType: j,
             submit: eD
@@ -392,7 +392,7 @@ function eC(e, t) {
         }, []),
         { editorHeight: tv, handleResize: tN } = eA(eC),
         { handleTab: tO, handleEnter: tR, handleMoveSelection: tC } = eO(th, eX, tr),
-        { expressionPickerView: ty, shouldHideExpressionPicker: tb, handleAutocompleteVisibilityChange: tL, handleOuterClick: tD } = eN(j, tc, e$);
+        { expressionPickerView: ty, shouldHideExpressionPicker: tL, handleAutocompleteVisibilityChange: tb, handleOuterClick: tD } = eN(j, tc, e$);
     (0, z.S)(tc, Y.guild_id, Y.id);
     let tM = null != ed,
         tP = (e7 && !((e5 || e6) && te)) || (t_ && (null === (i = j.submit) || void 0 === i ? void 0 : i.useDisabledStylesOnSubmit)),
@@ -477,7 +477,7 @@ function eC(e, t) {
                                                 id: G,
                                                 focused: W,
                                                 useSlate: tn,
-                                                textValue: L,
+                                                textValue: b,
                                                 richValue: D,
                                                 disabled: e7,
                                                 placeholder: Z,
@@ -494,8 +494,8 @@ function eC(e, t) {
                                                 onChange: tu,
                                                 onResize: tN,
                                                 onBlur: ey,
-                                                onFocus: eb,
-                                                onKeyDown: eL,
+                                                onFocus: eL,
+                                                onKeyDown: eb,
                                                 onSubmit: tE,
                                                 onTab: tO,
                                                 onEnter: tR,
@@ -522,7 +522,7 @@ function eC(e, t) {
                                             disabled: e7,
                                             channel: Y,
                                             handleSubmit: tf,
-                                            isEmpty: 0 === L.trim().length,
+                                            isEmpty: 0 === b.trim().length,
                                             showAllButtons: e1
                                         })
                                     ]
@@ -544,7 +544,7 @@ function eC(e, t) {
                             useNewSlashCommands: tn,
                             canOnlyUseTextCommands: tM,
                             canSendStickers: null === (u = j.stickers) || void 0 === u ? void 0 : u.allowSending,
-                            textValue: L,
+                            textValue: b,
                             focused: W,
                             expressionPickerView: ty,
                             type: j,
@@ -552,26 +552,26 @@ function eC(e, t) {
                             editorRef: e$,
                             onSendMessage: tE,
                             onSendSticker: tg,
-                            onVisibilityChange: tL,
+                            onVisibilityChange: tb,
                             editorHeight: tv,
                             setValue: (e, t) => (null == tu ? void 0 : tu(null, e, t)),
                             position: eH
                         }),
                         (0, a.jsx)(P.Z, {
-                            textValue: L,
+                            textValue: b,
                             editorHeight: tv
                         }),
                         tw
                             ? (0, a.jsx)(en.Z, {
                                   type: j,
-                                  textValue: L,
+                                  textValue: b,
                                   className: l()(eB, { [el.indentCharacterCount]: tF }),
                                   maxCharacterCount: ex,
                                   showRemainingCharsAfterCount: eG
                               })
                             : null,
                         tG
-                            ? (0, a.jsx)(b.Z, {
+                            ? (0, a.jsx)(L.Z, {
                                   editorRef: e$,
                                   channel: Y,
                                   isEditorFocused: W,
@@ -583,7 +583,7 @@ function eC(e, t) {
                         eY
                     ]
                 }),
-                tb
+                tL
                     ? null
                     : (0, a.jsx)(y.Z, {
                           positionTargetRef: eQ,

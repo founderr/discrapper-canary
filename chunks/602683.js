@@ -1,25 +1,25 @@
 t(47120);
 var n = t(735250),
-    a = t(470079),
+    r = t(470079),
     i = t(481060);
 s.Z = function (e) {
-    let { assetKey: s, initialValue: t, onMessageChange: r, title: o } = e,
-        [l, c] = a.useState('');
+    let { assetKey: s, initialValue: t, onMessageChange: a, title: l } = e,
+        [o, d] = r.useState('');
     return (
-        a.useEffect(() => {
-            c(null != t ? t : '');
+        r.useEffect(() => {
+            d(null != t ? t : '');
         }, [t]),
         (0, n.jsxs)(i.FormItem, {
             children: [
                 (0, n.jsx)(i.FormTitle, {
                     tag: i.FormTitleTags.H5,
-                    children: o
+                    children: l
                 }),
                 (0, n.jsx)(i.FormText, {
                     children: (0, n.jsx)(i.TextInput, {
-                        value: l,
+                        value: o,
                         onChange: function (e) {
-                            c(e), r(s, e);
+                            d(e), a(s, e);
                         }
                     })
                 })

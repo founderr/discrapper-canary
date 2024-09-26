@@ -167,8 +167,8 @@
         R = RegExp(N + '[^\\n]*(?:\\n(?!\\1' + v + ' )[^\\n]*)*(\n|$)', 'gm'),
         C = /\n{2,}$/,
         y = /^ (?= *`)|(` *) $/g,
-        b = C,
-        L = / *\n+$/,
+        L = C,
+        b = / *\n+$/,
         D = RegExp('^( *)(' + v + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + v + ' )\\n*|\\s*\n*$)'),
         M = /(?:^|\n)( *)$/,
         P = (function () {
@@ -394,7 +394,7 @@
                     var r = e[2],
                         i = r.length > 1,
                         a = i ? +r : void 0,
-                        o = e[0].replace(b, '\n').match(R),
+                        o = e[0].replace(L, '\n').match(R),
                         s = !1;
                     return {
                         ordered: i,
@@ -409,7 +409,7 @@
                             s = d;
                             var _ = n.inline,
                                 E = n._list;
-                            (n._list = !0), d ? ((n.inline = !1), (i = u.replace(L, '\n\n'))) : ((n.inline = !0), (i = u.replace(L, '')));
+                            (n._list = !0), d ? ((n.inline = !1), (i = u.replace(b, '\n\n'))) : ((n.inline = !0), (i = u.replace(b, '')));
                             var f = t(i, n);
                             return (n.inline = _), (n._list = E), f;
                         })

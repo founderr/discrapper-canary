@@ -24,8 +24,8 @@ var r = n(161581),
     R = 'ArrayBuffer',
     C = 'DataView',
     y = 'prototype',
-    b = 'Wrong length',
-    L = 'Wrong index',
+    L = 'Wrong length',
+    b = 'Wrong index',
     D = v.getterFor(R),
     M = v.getterFor(C),
     P = v.set,
@@ -71,7 +71,7 @@ var r = n(161581),
         var i = M(e),
             a = h(n),
             o = !!r;
-        if (a + t > i.byteLength) throw Z(L);
+        if (a + t > i.byteLength) throw Z(b);
         var s = i.bytes,
             l = a + i.byteOffset,
             u = S(s, l, l + t);
@@ -82,7 +82,7 @@ var r = n(161581),
             s = h(n),
             l = r(+i),
             u = !!a;
-        if (s + t > o.byteLength) throw Z(L);
+        if (s + t > o.byteLength) throw Z(b);
         for (var c = o.bytes, d = s + o.byteOffset, _ = 0; _ < t; _++) c[d + _] = l[u ? _ : t - _ - 1];
     };
 if (o) {
@@ -139,7 +139,7 @@ if (o) {
                 i = r.byteLength,
                 o = E(t);
             if (o < 0 || o > i) throw Z('Wrong offset');
-            if (((n = void 0 === n ? i - o : f(n)), o + n > i)) throw Z(b);
+            if (((n = void 0 === n ? i - o : f(n)), o + n > i)) throw Z(L);
             P(this, {
                 type: C,
                 buffer: e,

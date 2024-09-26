@@ -20,8 +20,8 @@ var n = t(735250),
     I = t(358085),
     N = t(210887),
     A = t(981631),
-    m = t(689938),
-    C = t(937416);
+    C = t(689938),
+    m = t(937416);
 let g = [
     {
         label: 'Latin alphabet',
@@ -74,24 +74,24 @@ function h() {
             });
     }, []);
     let x = I.isPlatformEmbedded ? t : e,
-        f = (0, o.e7)([T.C], () => {
+        M = (0, o.e7)([T.C], () => {
             var e, s;
             return (0, S.fD)() ? (null === (s = T.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
-        [M, D] = (0, u.R)('playground-overrideText', null),
-        [P, L] = (0, u.R)('playground-defaultText', g[0].value),
+        [f, D] = (0, u.R)('playground-overrideText', null),
+        [L, P] = (0, u.R)('playground-defaultText', g[0].value),
         b = a.useCallback(
             (e) => {
                 let s = g.find((s) => {
                     let { value: t } = s;
                     return t === e;
                 });
-                '' === e || null == e ? (L(g[0].value), D(null)) : null != s ? L(s.value) : (L('custom'), D(e));
+                '' === e || null == e ? (P(g[0].value), D(null)) : null != s ? P(s.value) : (P('custom'), D(e));
             },
-            [D, L]
+            [D, P]
         );
     return (0, n.jsx)('div', {
-        className: C.fullscreen,
+        className: m.fullscreen,
         style: {
             '--playground-font-family': 'mono' === h ? 'gg mono' : 'gg sans',
             '--playground-font-style': 'italic' === h ? 'italic' : 'normal'
@@ -100,7 +100,7 @@ function h() {
             tag: l.FormTitleTags.H1,
             children: [
                 (0, n.jsxs)('div', {
-                    className: C.toolbar,
+                    className: m.toolbar,
                     children: [
                         (0, n.jsxs)('div', {
                             children: [
@@ -110,7 +110,7 @@ function h() {
                                     style: { display: 'inline-block' },
                                     children: ['Zoom: ', x, '%']
                                 }),
-                                null != f
+                                null != M
                                     ? (0, n.jsxs)(l.Text, {
                                           tag: 'div',
                                           variant: 'heading-lg/bold',
@@ -119,25 +119,25 @@ function h() {
                                               marginLeft: '1em'
                                           },
                                           color: 'header-secondary',
-                                          children: ['(', f.id, ')']
+                                          children: ['(', M.id, ')']
                                       })
                                     : null
                             ]
                         }),
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)(l.SingleSelect, {
-                                className: C.select,
+                                className: m.select,
                                 options: g,
                                 onChange: (e) => b(e),
-                                value: P
+                                value: L
                             })
                         }),
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)('div', {
-                                className: C.input,
+                                className: m.input,
                                 children: (0, n.jsx)(l.TextInput, {
                                     placeholder: 'Enter custom input...',
-                                    value: null != M ? M : '',
+                                    value: null != f ? f : '',
                                     onChange: b
                                 })
                             })
@@ -145,15 +145,15 @@ function h() {
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)(l.RadioGroup, {
                                 withTransparentBackground: !0,
-                                className: C.theme,
+                                className: m.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
-                                        name: m.Z.Messages.THEME_DARK,
+                                        name: C.Z.Messages.THEME_DARK,
                                         value: A.BRd.DARK
                                     },
                                     {
-                                        name: m.Z.Messages.THEME_LIGHT,
+                                        name: C.Z.Messages.THEME_LIGHT,
                                         value: A.BRd.LIGHT
                                     }
                                 ],
@@ -166,7 +166,7 @@ function h() {
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)(l.RadioGroup, {
                                 withTransparentBackground: !0,
-                                className: C.theme,
+                                className: m.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
@@ -195,14 +195,14 @@ function h() {
                     ]
                 }),
                 (0, n.jsxs)('div', {
-                    className: C.textGrid,
+                    className: m.textGrid,
                     children: [
                         (0, n.jsx)('div', {}),
                         p.map((e) =>
                             (0, n.jsx)(
                                 'div',
                                 {
-                                    className: C.columnHeading,
+                                    className: m.columnHeading,
                                     children: (0, n.jsx)(l.Heading, {
                                         variant: 'eyebrow',
                                         children: e
@@ -219,7 +219,7 @@ function h() {
                                         (0, n.jsxs)(
                                             'div',
                                             {
-                                                className: C.fontSize,
+                                                className: m.fontSize,
                                                 children: [
                                                     (0, n.jsxs)(l.Heading, {
                                                         variant: 'eyebrow',
@@ -238,14 +238,14 @@ function h() {
                                         ),
                                         p.map((s) => {
                                             var t;
-                                            let a = null !== (t = 'custom' === P ? M : P) && void 0 !== t ? t : '';
+                                            let a = null !== (t = 'custom' === L ? f : L) && void 0 !== t ? t : '';
                                             return (0, n.jsx)(
                                                 'div',
                                                 {
-                                                    className: C.textSample,
+                                                    className: m.textSample,
                                                     children: (0, n.jsxs)('div', {
                                                         title: ''.concat(e, 'px at ').concat(s),
-                                                        className: r()(C.text, { [C.breakAnywhere]: !a.includes(' ') }),
+                                                        className: r()(m.text, { [m.breakAnywhere]: !a.includes(' ') }),
                                                         style: {
                                                             fontSize: e,
                                                             fontWeight: R.get(s)

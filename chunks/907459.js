@@ -46,7 +46,7 @@ let y = () => {
             subscriptionTier: O.Si.TIER_2
         });
     },
-    b = (e) => {
+    L = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
                 null == t || t(N.L.DISMISS), (0, g.G8)();
@@ -76,7 +76,7 @@ let y = () => {
             ]
         });
     },
-    L = (e) => {
+    b = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
             i = (0, s.e7)([S.Z], () => S.Z.isUpsellPreview),
             a = () => {
@@ -129,7 +129,7 @@ function D(e) {
                   className: o()(C.editor, p ? C.editorAnimate : null),
                   children: (0, r.jsxs)(l.HeadingLevel, {
                       children: [
-                          (0, r.jsx)(b, { markAsDismissed: n }),
+                          (0, r.jsx)(L, { markAsDismissed: n }),
                           (0, r.jsx)(l.Scroller, {
                               className: C.editorBody,
                               children: (0, r.jsx)(A.Z, {
@@ -137,7 +137,7 @@ function D(e) {
                                   isEditor: !0
                               })
                           }),
-                          (0, r.jsx)(L, {
+                          (0, r.jsx)(b, {
                               markAsDismissed: n,
                               isCoachmark: t
                           })

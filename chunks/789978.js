@@ -316,8 +316,8 @@ class C {
 }
 let y = new C();
 'u' > typeof window && y.setContainer(document.body);
-let b = s.createContext(y);
-var L = function (e, t, n, r) {
+let L = s.createContext(y);
+var b = function (e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
     if (e === t) return !0;
@@ -340,7 +340,7 @@ let D = !1,
 function U() {
     if (!D) return;
     let e = null == r ? void 0 : r.getStyle();
-    null == e || L(e, P) ? null != M && cancelAnimationFrame(M) : ((P = e), null == r || r.invalidate()), (M = requestAnimationFrame(U));
+    null == e || b(e, P) ? null != M && cancelAnimationFrame(M) : ((P = e), null == r || r.invalidate()), (M = requestAnimationFrame(U));
 }
 let w = !1,
     x = {
@@ -404,14 +404,14 @@ function H(e) {
         s.useEffect(() => {
             i.current.setContainer(t.current), i.current.setThemeOptions(r);
         }, [t.current]),
-        V(b.Provider, {
+        V(L.Provider, {
             value: i.current,
             children: [n, Z(Y, {})]
         })
     );
 }
 function Y() {
-    let e = s.useContext(b),
+    let e = s.useContext(L),
         [, t] = s.useState({});
     return (
         s.useEffect(
@@ -437,7 +437,7 @@ function W(e) {
     null != a && E(null != o, 'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'), null != r && E(null != o, 'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.');
     let f = s.useRef(!1),
         [h, p] = s.useState(!1),
-        m = s.useContext(b),
+        m = s.useContext(L),
         I = s.Children.only(d),
         { onBlur: T, onFocus: g, ...S } = I.props,
         A = s.useMemo(

@@ -36,8 +36,8 @@ let g = 'default',
     R = null,
     C = {},
     y = null,
-    b = null,
-    L = {},
+    L = null,
+    b = {},
     D = {
         clipsEnabled: !1,
         storageLocation: g,
@@ -100,9 +100,9 @@ function G(e) {
     if (((N += 1), (M.hasTakenDecoupledClip = M.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != r)) {
         var i;
         let e = Date.now();
-        (b = null != b ? b : e),
-            (L[n] = [
-                ...(null !== (i = L[n]) && void 0 !== i ? i : []),
+        (L = null != L ? L : e),
+            (b[n] = [
+                ...(null !== (i = b[n]) && void 0 !== i ? i : []),
                 {
                     timestamp: e,
                     thumbnail: r
@@ -112,7 +112,7 @@ function G(e) {
 }
 function k(e) {
     let { streamKey: t, timestamp: n } = e;
-    b === n && (b = null), null == n ? (L[t] = []) : (L[t] = L[t].filter((e) => e.timestamp !== n));
+    L === n && (L = null), null == n ? (b[t] = []) : (b[t] = b[t].filter((e) => e.timestamp !== n));
 }
 function B() {
     N = Math.max(N - 1, 0);
@@ -188,7 +188,7 @@ function K(e) {
 }
 function z(e) {
     let { streamKey: t } = e;
-    if (((b = null), (L[t] = []), null == R || (0, c.my)(t).ownerId !== d.default.getId())) return !1;
+    if (((L = null), (b[t] = []), null == R || (0, c.my)(t).ownerId !== d.default.getId())) return !1;
     R =
         0 === R.newClipIds.length
             ? null
@@ -259,14 +259,14 @@ class en extends (r = o.ZP.DeviceSettingsStore) {
         return O === e;
     }
     getActiveAnimation() {
-        return b;
+        return L;
     }
     getStreamClipAnimations(e) {
         var t;
-        return null !== (t = L[e]) && void 0 !== t ? t : S;
+        return null !== (t = b[e]) && void 0 !== t ? t : S;
     }
     hasAnyClipAnimations() {
-        return Object.values(L).some((e) => e.length > 0);
+        return Object.values(b).some((e) => e.length > 0);
     }
     getHardwareClassification() {
         return M.hardwareClassification;
