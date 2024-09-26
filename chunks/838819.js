@@ -30,13 +30,13 @@ var a = r(735250),
     j = r(307043),
     R = r(223143),
     A = r(298228),
-    Z = r(937510),
-    P = r(309956),
+    P = r(937510),
+    Z = r(309956),
     M = r(853748),
     y = r(426171),
     w = r(823941),
-    F = r(752053),
-    H = r(963102),
+    H = r(752053),
+    F = r(963102),
     D = r(508498),
     U = r(38900),
     W = r(709999),
@@ -95,7 +95,7 @@ function ea(e) {
 }
 function en(e) {
     let { category: t, initialItemCardRef: r, ...s } = e,
-        i = (0, Z.l)(t.products),
+        i = (0, P.l)(t.products),
         l = (0, c.e7)([k.Z], () => k.Z.initialProductSkuId),
         d = n.useCallback(
             (e) => (t) => {
@@ -165,8 +165,8 @@ t.default = function (e) {
     let r = (0, j.u)('CollectiblesShop'),
         { analyticsSource: s, analyticsLocations: o } = (0, c.cj)([k.Z], () => k.Z.getAnalytics()),
         { analyticsLocations: m } = (0, _.ZP)([...o, C.Z.COLLECTIBLES_SHOP]),
-        { sessionId: I, scrollerRef: x, scrollHandler: Z } = (0, g._)(Q.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
-        { feedState: M, catalogState: w, transitionToCatalog: W, transitionToFeed: V } = (0, P.B)(r, x),
+        { sessionId: I, scrollerRef: x, scrollHandler: P } = (0, g._)(Q.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
+        { feedState: M, catalogState: w, transitionToCatalog: W, transitionToFeed: V } = (0, Z.B)(r, x),
         [z, $] = n.useState(!1),
         [ea, en] = n.useState(q.IV),
         [ei, eo] = n.useState(),
@@ -236,37 +236,29 @@ t.default = function (e) {
     let ev = n.useCallback(() => {
             eh();
         }, [eh]),
-        { containerRef: eS } = (function () {
-            let e = n.useRef(null),
-                t = n.useRef(null);
-            return (
-                (0, f.useFocusLock)(e, { returnRef: t }),
-                {
-                    containerRef: e,
-                    returnRef: t
-                }
-            );
-        })(),
-        { setCategoryRef: eL, handleScrollToCategory: eN } = (0, y.xV)(x.current),
-        { reducedMotion: eO } = n.useContext(f.AccessibilityPreferencesContext),
-        eB = n.useCallback(
-            async (e, r, a) => {
-                let n = a && !t && !eO.enabled;
-                ec(e), eo(r), await W(n), r && eN(r);
-            },
-            [W, eN, t, eO]
-        );
+        { setCategoryRef: eS, handleScrollToCategory: eL } = (0, y.xV)(x.current),
+        { reducedMotion: eN } = n.useContext(f.AccessibilityPreferencesContext),
+        eO = n.useRef(null);
+    (0, f.useFocusLock)(eO);
+    let eB = n.useCallback(
+        async (e, r, a) => {
+            let n = a && !t && !eN.enabled;
+            ec(e), eo(r), await W(n), r && eL(r);
+        },
+        [W, eL, t, eN]
+    );
     return (0, a.jsxs)(_.Gt, {
         value: m,
         children: [
             (0, a.jsx)('div', {
                 className: er.shop,
-                ref: t ? eS : void 0,
+                ref: eO,
+                tabIndex: -1,
                 children: (0, a.jsxs)(f.AdvancedScroller, {
                     className: er.shopScroll,
                     ref: x,
                     onScroll: () => {
-                        if ((Z(), null != x.current)) {
+                        if ((P(), null != x.current)) {
                             let e = x.current.getDistanceFromBottom();
                             ea >= q.iA ? $(e < 20) : e <= 200 && en(ea + q.IV);
                         }
@@ -280,7 +272,7 @@ t.default = function (e) {
                                     [er.out]: M === q.f7.OUT
                                 }),
                                 children: [
-                                    (0, a.jsx)(H.I, {
+                                    (0, a.jsx)(F.I, {
                                         isFullScreen: t,
                                         isLayer: ed,
                                         onClose: ef,
@@ -301,7 +293,7 @@ t.default = function (e) {
                                     [er.out]: w === q.f7.OUT
                                 }),
                                 children: [
-                                    (0, a.jsx)(H.I, {
+                                    (0, a.jsx)(F.I, {
                                         isFullScreen: t,
                                         isLayer: ed,
                                         onClose: ef,
@@ -316,7 +308,7 @@ t.default = function (e) {
                                             children: e_
                                                 ? (0, a.jsx)(U.Z, {})
                                                 : eg
-                                                  ? (0, a.jsx)(F.Z, { onRetry: ev })
+                                                  ? (0, a.jsx)(H.Z, { onRetry: ev })
                                                   : (0, a.jsx)('div', {
                                                         className: er.categories,
                                                         children: eb
@@ -329,7 +321,7 @@ t.default = function (e) {
                                                                 (0, a.jsx)(
                                                                     'div',
                                                                     {
-                                                                        ref: (t) => eL(e.skuId, t),
+                                                                        ref: (t) => eS(e.skuId, t),
                                                                         children: (0, a.jsx)(es, {
                                                                             isPremiumUser: em,
                                                                             category: e,
