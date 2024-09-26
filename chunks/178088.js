@@ -1,6 +1,6 @@
 n.d(t, {
     k: function () {
-        return b;
+        return L;
     }
 });
 var r = n(47120);
@@ -65,9 +65,9 @@ function y(e) {
         setSeenTutorial: n
     };
 }
-function b(e) {
-    let { onOpen: t, onClose: n, children: r, badgeState: p, popoutPosition: m, popoutAlign: b } = e,
-        { analyticsLocations: L } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
+function L(e) {
+    let { onOpen: t, onClose: n, children: r, badgeState: p, popoutPosition: m, popoutAlign: L } = e,
+        { analyticsLocations: b } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
         [D, M] = a.useState(!1),
         [P, U] = C(),
         { showTutorial: w, setSeenTutorial: x } = y(P),
@@ -123,6 +123,7 @@ function b(e) {
                           : F && Z && P === l.X.BOOKMARKS
                             ? (0, i.jsx)(T.Z, {
                                   setTab: U,
+                                  badgeState: p,
                                   closePopout: G
                               })
                             : (0, i.jsx)(o.SV, {
@@ -143,11 +144,11 @@ function b(e) {
         });
     }
     return (0, i.jsx)(d.Gt, {
-        value: L,
+        value: b,
         children: (0, i.jsx)(u.Popout, {
             animation: u.Popout.Animation.NONE,
             position: m,
-            align: b,
+            align: L,
             autoInvert: !1,
             shouldShow: D,
             onRequestClose: G,

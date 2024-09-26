@@ -9,14 +9,15 @@ var r = n(735250),
     o = n(791914),
     s = n(802840);
 function l(e) {
-    let { setTab: t, closePopout: n } = e;
+    let { setTab: t, closePopout: n, badgeState: l } = e;
     return (0, r.jsxs)('div', {
         className: s.container,
         children: [
             (0, r.jsx)(o.Z, {
                 tab: i.X.BOOKMARKS,
                 setTab: t,
-                closePopout: n
+                closePopout: n,
+                badgeState: l
             }),
             (0, r.jsx)(a.K, { closePopout: n })
         ]
