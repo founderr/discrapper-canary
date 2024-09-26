@@ -18134,6 +18134,8 @@ e.exports = Object.freeze({
     GAME_PROFILE_LINK_YOUTUBE: 'YouTube',
     GAME_PROFILE_LINK_OFFICIAL: 'Official web page',
     VIEW_GAME_PROFILE: 'View Game Profile',
+    MACHINE_TRANSLATED_TRANSLATED: 'Translated \xB7 [See Original](onShowOriginal)',
+    MACHINE_TRANSLATED_ORIGINAL: 'Original \xB7 [See Translated](onShowTranslated)',
     GAME_PROFILE_QUESTION_BENEFITS: 'Which benefits would you be most interested in receiving when you follow this game?',
     GAME_PROFILE_Q1_WHEN_FRIENDS_PLAY: 'Find out when friends or server members are playing the game',
     GAME_PROFILE_Q1_ACHIEVEMENTS: 'Find out when my friends reach achievements in the game',

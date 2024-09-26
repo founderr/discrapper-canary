@@ -33,11 +33,12 @@ function E(e) {
         u.delete(e), c.delete(e);
     }),
         n.forEach((e) => {
-            let { application_id: t, name: n, summary: r, websites: i, themes: a, genres: o, platforms: s, artwork_urls: u, screenshot_urls: c, cover_image_url: d, first_release_date: _, publisher_names: E, developer_names: f } = e;
+            let { application_id: t, name: n, summary: r, websites: i, themes: a, genres: o, platforms: s, artwork_urls: u, screenshot_urls: c, cover_image_url: d, first_release_date: _, summary_localized: E, publisher_names: f, developer_names: h } = e;
             l.set(t, {
                 applicationId: t,
                 name: n,
                 summary: r,
+                summaryLocalized: E,
                 websites: i,
                 themes: a,
                 genres: o,
@@ -46,8 +47,8 @@ function E(e) {
                 screenshots: c,
                 coverImageUrl: d,
                 firstReleaseDate: _,
-                publishers: null != E ? E : [],
-                developers: null != f ? f : []
+                publishers: null != f ? f : [],
+                developers: null != h ? h : []
             });
         });
 }

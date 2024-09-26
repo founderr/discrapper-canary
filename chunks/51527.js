@@ -26,6 +26,7 @@ e.exports = {
     mainContent: 'mainContent_e881fc',
     sidebar: 'sidebar_e881fc',
     sidebarSections: 'sidebarSections_e881fc',
+    translatedInfo: 'translatedInfo_e881fc',
     fadedEntries: 'fadedEntries_e881fc',
     expandEntriesButton: 'expandEntriesButton_e881fc',
     emptyFriendsWhoPlay: 'emptyFriendsWhoPlay_e881fc',
