@@ -17,6 +17,7 @@ e.exports = {
     statusBubbleWithTextPadding: 'statusBubbleWithTextPadding_e6ac4a',
     statusBubbleWithTextMinWidth: 'statusBubbleWithTextMinWidth_e6ac4a',
     content: 'content_e6ac4a',
+    coachmarkAnchor: 'coachmarkAnchor_e6ac4a',
     clamp: 'clamp_e6ac4a',
     unclamp: 'unclamp_e6ac4a',
     placeholderWidth: 'placeholderWidth_e6ac4a',
