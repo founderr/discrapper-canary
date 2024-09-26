@@ -17184,6 +17184,7 @@ e.exports = Object.freeze({
     MESSAGE_REMINDERS_DELETE_SUCCESS: 'Reminder removed.',
     MESSAGE_REMINDER_NOTIFICATION_TITLE: 'Message Reminder',
     MESSAGE_REMINDER_NOTIFICATION_BODY: '!!{username}!!: {message}',
+    MESSAGE_REMINDER_DESKTOP_NOTIFICATION_TITLE: '\u23F0 Reminder Due',
     MESSAGE_BOOKMARKS_HEADER: 'Bookmarks',
     MESSAGE_BOOKMARKS_CREATE: 'Bookmark Message',
     MESSAGE_BOOKMARKS_REMOVE: 'Remove Bookmark',
