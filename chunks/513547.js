@@ -1,6 +1,6 @@
 n.d(t, {
     al: function () {
-        return R;
+        return D;
     },
     ck: function () {
         return b;
@@ -67,6 +67,7 @@ let d = {
     framesDroppedCongestionWindow: 'Frames Dropped by Congestion Window',
     framesDroppedEncoderQueue: 'Frames Dropped by Encoder Queue',
     framesDroppedRateLimiter: 'Frames Dropped by Bitrate Limiter',
+    framesDroppedEncoder: 'Frames Dropped by Encoder',
     framesEncoded: 'Frames Encoded',
     framesReceived: 'Frames Received',
     framesSent: 'Frames Sent',
@@ -160,7 +161,7 @@ function y(e) {
     let { last: t } = e;
     return ''.concat(t, ' ms');
 }
-let R = {
+let D = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -183,9 +184,10 @@ let R = {
         encryptAttempts: !0,
         encryptDuration: !0,
         encryptMaxAttempts: !0,
-        lqSimulcastStreamEncoded: !0
+        lqSimulcastStreamEncoded: !0,
+        hqSimulcastStreamEncoded: !0
     },
-    D = {
+    S = {
         accelerateRate: g,
         audioDetected: f,
         audioLevel: C,
@@ -241,7 +243,7 @@ let R = {
             return e < t.length ? t[e] : 'Unknown';
         }
     },
-    S = (e) => e,
+    R = (e) => e,
     v = (e) => {
         let [t] = a.useState([]);
         return (
@@ -260,7 +262,7 @@ let R = {
 function b(e) {
     var t, n, a, i;
     let { label: o, value: u, section: m } = e,
-        p = null !== (n = D[o]) && void 0 !== n ? n : S;
+        p = null !== (n = S[o]) && void 0 !== n ? n : R;
     let h =
             s.Pz[o] &&
             (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value
