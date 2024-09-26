@@ -105,7 +105,7 @@ let G = c.ZP.connectStores([N.ZP, C.Z], (e) => {
             n = C.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? N.ZP.getMentionCount(n) : 0 };
     })(A.n5);
-function H(e, t, n) {
+function V(e, t, n) {
     return (0, l.jsx)(
         u.Tooltip,
         {
@@ -120,7 +120,7 @@ function H(e, t, n) {
         e
     );
 }
-class V extends r.PureComponent {
+class H extends r.PureComponent {
     componentDidMount() {
         p.Z.disable(), p.Z.enableTemp(h.u);
     }
@@ -207,10 +207,10 @@ class V extends r.PureComponent {
             className: s()(y.protip, { [y.hasContent]: this.state.query.length > 0 }),
             type: m.Z.Types.INLINE,
             children: L.Z.Messages.QUICKSWITCHER_PROTIP.format({
-                userSymbolHook: (e, t) => H(t, f.xQ.USER, L.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-                textChannelSymbolHook: (e, t) => H(t, f.xQ.TEXT_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-                voiceChannelSymbolHook: (e, t) => H(t, f.xQ.VOICE_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-                guildSymbolHook: (e, t) => H(t, f.xQ.GUILD, L.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+                userSymbolHook: (e, t) => V(t, f.xQ.USER, L.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+                textChannelSymbolHook: (e, t) => V(t, f.xQ.TEXT_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+                voiceChannelSymbolHook: (e, t) => V(t, f.xQ.VOICE_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+                guildSymbolHook: (e, t) => V(t, f.xQ.GUILD, L.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
                 helpdeskArticle: Z.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
@@ -534,7 +534,7 @@ class V extends r.PureComponent {
 }
 function F(e) {
     let t = (0, c.cj)([b.Z], () => b.Z.getProps());
-    return (0, l.jsx)(V, {
+    return (0, l.jsx)(H, {
         ...t,
         ...e
     });

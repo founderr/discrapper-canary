@@ -31,8 +31,8 @@ function g(e) {
             ];
         })(),
         x = s.useRef(null),
-        v = null == g.getGuildId() ? 70 : 50,
-        S = (0, r.e7)([d.Z], () => d.Z.pipWidth(p.cL.CAMERA_PREVIEW));
+        S = null == g.getGuildId() ? 70 : 50,
+        v = (0, r.e7)([d.Z], () => d.Z.pipWidth(p.cL.CAMERA_PREVIEW));
     return (
         s.useLayoutEffect(() => {
             var e;
@@ -44,13 +44,13 @@ function g(e) {
                 position: I,
                 id: 0,
                 type: p.cL.CAMERA_PREVIEW,
-                width: S,
+                width: v,
                 ref: x,
                 onMove: (e, t) => T(t),
                 onResize: (e) => c.d7(e, p.cL.CAMERA_PREVIEW),
                 maxX: t,
                 maxY: a,
-                edgeOffsetTop: v,
+                edgeOffsetTop: S,
                 edgeOffsetBottom: 70,
                 edgeOffsetLeft: 16,
                 edgeOffsetRight: 16,

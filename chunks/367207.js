@@ -39,8 +39,8 @@ var l = n(392711),
     U = n(879463),
     k = n(822070),
     B = n(520540),
-    H = n(11352),
-    V = n(474936),
+    V = n(11352),
+    H = n(474936),
     F = n(981631),
     W = n(354459),
     z = n(37113),
@@ -153,7 +153,7 @@ class q extends c.Z {
                 e && (0, p.W)();
             }),
             K(this, '_trackCustomNotificationSoundsExposure', () => {
-                H.Y.trackExposure({ location: 'PremiumManager' });
+                V.Y.trackExposure({ location: 'PremiumManager' });
             }),
             K(this, '_trackSkyLoadExposure', () => {
                 O.Z.trackExposure({ location: 'PremiumManager' });
@@ -196,7 +196,7 @@ class q extends c.Z {
                     });
                     o.Z.sendNitroSystemMessage(e, u),
                         I.default.track(F.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
-                            type: V.cd.HD_STREAMING_VIEWER_UPSELL,
+                            type: H.cd.HD_STREAMING_VIEWER_UPSELL,
                             location_section: null != t ? F.jXE.TEXT_IN_VOICE : F.jXE.CHANNEL_TEXT_AREA,
                             location_object: F.qAy.MESSAGE,
                             guild_id: t

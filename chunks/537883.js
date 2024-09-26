@@ -7,7 +7,10 @@ var i,
     c = n(331114),
     d = n(356164);
 let u = [];
-class _ extends (r = l.ZP.Store) {
+function _() {
+    u = [];
+}
+class h extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, d.Z);
     }
@@ -16,7 +19,7 @@ class _ extends (r = l.ZP.Store) {
     }
 }
 (s = 'GlobalDiscoveryServersSearchLayoutStore'),
-    (a = 'displayName') in (i = _)
+    (a = 'displayName') in (i = h)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -24,15 +27,12 @@ class _ extends (r = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new _(o.Z, {
-        CONNECTION_OPEN: function () {
-            u = [];
-        },
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: function () {
-            u = [];
-        },
+    (t.Z = new h(o.Z, {
+        CONNECTION_OPEN: _,
+        GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: _,
+        GLOBAL_DISCOVERY_SERVERS_SEARCH_BLOCKED: _,
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
-            let { id: t } = e,
+            let { query: t } = e,
                 n = c.Z.getCounts(t);
             if (null == n) return !1;
             u = n;

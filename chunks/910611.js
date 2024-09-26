@@ -30,8 +30,8 @@ var i = n(735250),
     I = n(594174),
     T = n(768581),
     x = n(63063),
-    v = n(946734),
-    S = n(99843),
+    S = n(946734),
+    v = n(99843),
     N = n(372564),
     A = n(984370),
     Z = n(217314),
@@ -155,7 +155,7 @@ function P(e) {
                     };
             }
         })(t.type, r),
-        v = (0, i.jsxs)(i.Fragment, {
+        S = (0, i.jsxs)(i.Fragment, {
             children: [
                 null != T
                     ? (0, i.jsxs)(c.HiddenVisually, {
@@ -175,7 +175,7 @@ function P(e) {
                 handleContextMenu: d
             });
         case M.d4z.GROUP_DM:
-            if (t.isManaged()) return v;
+            if (t.isManaged()) return S;
             return (0, i.jsxs)(s.Fragment, {
                 children: [
                     (0, i.jsx)(c.HiddenVisually, { children: R.Z.Messages.GROUP_DM }),
@@ -189,7 +189,7 @@ function P(e) {
                             className: L.avatar
                         })
                     }),
-                    (0, i.jsx)(S.Z, { channel: t }, 'channel-'.concat(t.id))
+                    (0, i.jsx)(v.Z, { channel: t }, 'channel-'.concat(t.id))
                 ]
             });
         case M.d4z.GUILD_ANNOUNCEMENT:
@@ -203,7 +203,7 @@ function P(e) {
                         level: x,
                         onContextMenu: d,
                         onClick: u,
-                        children: v
+                        children: S
                     }),
                     null != t.linkedLobby ? (0, i.jsx)(j, { channel: t }) : null,
                     null != E ? E() : null
@@ -217,7 +217,7 @@ function P(e) {
                         level: x,
                         onContextMenu: d,
                         onClick: u,
-                        children: v
+                        children: S
                     })
                 ]
             });
@@ -229,7 +229,7 @@ function P(e) {
                         level: x,
                         onContextMenu: d,
                         onClick: u,
-                        children: v
+                        children: S
                     })
                 ]
             });
@@ -266,7 +266,7 @@ function P(e) {
                             [L.cursorPointer]: o,
                             [L.forumPostTitle]: b
                         }),
-                        children: v
+                        children: S
                     })
                 ]
             });
@@ -311,7 +311,7 @@ function y(e, t) {
     switch (e.type) {
         case M.d4z.DM:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(O, { channel: e }), (0, i.jsx)(v.Z, { channel: e }, e.id)]
+                children: [(0, i.jsx)(O, { channel: e }), (0, i.jsx)(S.Z, { channel: e }, e.id)]
             });
         case M.d4z.GUILD_ANNOUNCEMENT:
         case M.d4z.GUILD_TEXT:

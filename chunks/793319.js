@@ -1,6 +1,6 @@
 n.d(t, {
     NZ: function () {
-        return ev;
+        return eS;
     },
     r: function () {
         return ex;
@@ -27,8 +27,8 @@ var i,
     I = n(40851),
     T = n(317381),
     x = n(596040),
-    v = n(100527),
-    S = n(906732),
+    S = n(100527),
+    v = n(906732),
     N = n(358221),
     A = n(887012),
     Z = n(659580),
@@ -85,7 +85,7 @@ function ex(e, t) {
     let n = () => f.Z.setVideoEnabled(e);
     e ? (0, eE.Z)(n, t) : n();
 }
-function ev(e) {
+function eS(e) {
     let { channel: t, currentUser: n, exitFullScreen: i, canGoLive: s, hasPermission: r, disabled: o } = e,
         c = (0, I.bp)(),
         u = (0, m.Wu)([$.Z], () => $.Z.getAllActiveStreams()),
@@ -98,8 +98,8 @@ function ev(e) {
             if ((null == i || i(), !s)) return (0, e_.Z)();
             (0, ef.Z)(T, t.id, eg.ZY5.GUILD_CHANNEL);
         }, [T, t.id, s, i]),
-        v = (0, m.e7)([es.ZP], () => es.ZP.inReverseTrial()),
-        S = () => {
+        S = (0, m.e7)([es.ZP], () => es.ZP.inReverseTrial()),
+        v = () => {
             if (s) {
                 x();
                 return;
@@ -138,12 +138,12 @@ function ev(e) {
                 shouldShowTooltip: !t,
                 premiumGlow: g && E.hqStreamingIsEnabled,
                 buttonRef: C,
-                onClick: null != d ? N : S
+                onClick: null != d ? N : v
             });
         };
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            v && 0 === u.length
+            S && 0 === u.length
                 ? (0, a.jsx)(R.ZP, {
                       contentTypes: [p.z.REVERSE_TRIAL_STREAM_POPOUT],
                       bypassAutoDismiss: !0,
@@ -197,7 +197,7 @@ function ev(e) {
         ]
     });
 }
-function eS(e) {
+function ev(e) {
     let { channel: t, idle: n } = e,
         i = t.getGuildId();
     return (0, x.Z)(i, t.id)
@@ -232,8 +232,8 @@ let eN = l.memo(function (e) {
             if (null != I) return 'EVENT';
             return 'CALL';
         }, [r, t, f, I]),
-        [x, v] = l.useState(T()),
-        S = (0, _.useSpring)(
+        [x, S] = l.useState(T()),
+        v = (0, _.useSpring)(
             {
                 opacity: c ? 0.2 : 1,
                 transform: c && !o.enabled ? 'scale(0.7)' : 'scale(1)',
@@ -245,7 +245,7 @@ let eN = l.memo(function (e) {
                     clamp: c
                 },
                 onRest: () => {
-                    v(T()), u(!1);
+                    S(T()), u(!1);
                 }
             },
             'animate-always'
@@ -318,7 +318,7 @@ let eN = l.memo(function (e) {
             let { onClick: n } = e,
                 { isShown: i } = t;
             return (0, a.jsx)(d.animated.div, {
-                style: S,
+                style: v,
                 children: Z(i, n)
             });
         }
@@ -395,9 +395,9 @@ t.ZP = function (e) {
             return null != e ? e.applicationId : null;
         }),
         { reachedLimit: U, limit: w } = (0, eo.Z)(n),
-        { analyticsLocations: B } = (0, S.ZP)(v.Z.VOICE_CONTROL_TRAY);
+        { analyticsLocations: B } = (0, v.ZP)(S.Z.VOICE_CONTROL_TRAY);
     if (!P)
-        return (0, a.jsx)(S.Gt, {
+        return (0, a.jsx)(v.Gt, {
             value: B,
             children: (0, a.jsx)(eA, {
                 channel: n,
@@ -414,7 +414,7 @@ t.ZP = function (e) {
         }) &&
         !n.isPrivate() &&
         !y;
-    return (0, a.jsx)(S.Gt, {
+    return (0, a.jsx)(v.Gt, {
         value: B,
         children: (0, a.jsxs)(C.Z, {
             section: eg.jXE.VOICE_CONTROL_TRAY,
@@ -454,12 +454,12 @@ t.ZP = function (e) {
                                 }
                             }),
                         !R &&
-                            (0, a.jsx)(eS, {
+                            (0, a.jsx)(ev, {
                                 channel: n,
                                 idle: null === (t = null == r ? void 0 : r.idle) || void 0 === t || t
                             }),
                         !R &&
-                            (0, a.jsx)(ev, {
+                            (0, a.jsx)(eS, {
                                 channel: n,
                                 currentUser: c,
                                 exitFullScreen: l,

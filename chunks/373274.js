@@ -47,8 +47,8 @@ var i,
     U = n(471995),
     k = n(906817),
     B = n(429122),
-    H = n(285573),
-    V = n(995993),
+    V = n(285573),
+    H = n(995993),
     F = n(910595),
     W = n(466935),
     z = n(120818),
@@ -545,7 +545,7 @@ class eu extends (i = r.PureComponent) {
                         case ei.z.CHANNELS_AND_ROLES:
                             if (m) return null;
                             return (0, l.jsx)(
-                                V.m,
+                                H.m,
                                 {
                                     guild: i,
                                     selected: s === ea.oC.CHANNEL_BROWSER || s === ea.oC.CUSTOMIZE_COMMUNITY
@@ -554,7 +554,7 @@ class eu extends (i = r.PureComponent) {
                             );
                         case ei.z.GUILD_DIRECTORY:
                             return (0, l.jsx)(
-                                H.Z,
+                                V.Z,
                                 {
                                     guild: i,
                                     selectedChannelId: s,

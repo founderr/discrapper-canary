@@ -26,7 +26,7 @@ var i = n(512722),
     C = n(689938);
 let I = async (e) => {
         let { reaction: t, altText: n, ...i } = e,
-            s = await v(i);
+            s = await S(i);
         (0, _.a)({
             file: s,
             altText: n,
@@ -36,7 +36,7 @@ let I = async (e) => {
     },
     T = async (e) => {
         let { reply: t, altText: n, ...i } = e,
-            l = await v(i),
+            l = await S(i),
             r = await a.Z.openPrivateChannel(i.user.id, !1, !1),
             o = h.Z.getChannel(r);
         s()(null != o, 'Channel cannot be null'),
@@ -72,7 +72,7 @@ let I = async (e) => {
             ...(null != C && { HangStatus: C })
         };
     },
-    v = async (e) => {
+    S = async (e) => {
         let { user: t, activity: n, application: i, stream: s } = e,
             d = await a.Z.openPrivateChannel(t.id, !1, !1),
             h = x({
@@ -108,7 +108,7 @@ let I = async (e) => {
             }
         });
     },
-    S = (e, t) => {
+    v = (e, t) => {
         e.setColor('dark' === t ? 'white' : 'black'),
             e.drawPath(
                 f.Cv,
@@ -175,7 +175,7 @@ let I = async (e) => {
                         },
                         8
                     )
-                  : S(e, r);
+                  : v(e, r);
         let o = f.vS + f.o3 + f.sB;
         e.setColor('dark' === r ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
@@ -319,7 +319,7 @@ let I = async (e) => {
                       },
                       8
                   )
-                : S(e, r);
+                : v(e, r);
         let o = f.vS + f.o3 + f.sB;
         e.setColor('dark' === r ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
@@ -486,7 +486,7 @@ let I = async (e) => {
                         },
                         8
                     )
-                  : S(e, r);
+                  : v(e, r);
         let o = f.vS + f.o3 + f.sB;
         e.setColor('dark' === r ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({

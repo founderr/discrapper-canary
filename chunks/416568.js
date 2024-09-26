@@ -38,8 +38,8 @@ var i = n(735250),
     U = n(741616),
     k = n(187835),
     B = n(118122),
-    H = n(193154),
-    V = n(602147),
+    V = n(193154),
+    H = n(602147),
     F = n(773182),
     W = n(222059),
     z = n(751277),
@@ -309,7 +309,7 @@ function eo(e) {
         ej = (0, M.U)(),
         eD = en.map((e) =>
             (0, i.jsx)(
-                H.Z,
+                V.Z,
                 {
                     id: e.id,
                     name: e.name,
@@ -369,7 +369,7 @@ function eo(e) {
                                           }),
                                     n || eg
                                         ? null
-                                        : (0, i.jsx)(V.Z, {
+                                        : (0, i.jsx)(H.Z, {
                                               ref: eT.guildDiscoveryRef,
                                               selected: eM
                                           }),
@@ -387,7 +387,7 @@ function eo(e) {
                                       children: (0, i.jsx)(eI, {
                                           children: (e) => {
                                               let { onClick: t } = e;
-                                              return (0, i.jsx)(V.Z, {
+                                              return (0, i.jsx)(H.Z, {
                                                   ref: eT.guildDiscoveryRef,
                                                   selected: eM,
                                                   className: et.fixedDiscoveryIcon,
@@ -399,7 +399,7 @@ function eo(e) {
                                 : !n && eg
                                   ? (0, i.jsx)(F.LW, {
                                         hideGradient: eh,
-                                        children: (0, i.jsx)(V.Z, {
+                                        children: (0, i.jsx)(H.Z, {
                                             ref: eT.guildDiscoveryRef,
                                             selected: eM,
                                             className: et.fixedDiscoveryIcon

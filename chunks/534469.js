@@ -26,8 +26,8 @@ var i = n(735250),
     I = n(592125),
     T = n(906467),
     x = n(323873),
-    v = n(709054),
-    S = n(786761),
+    S = n(709054),
+    v = n(786761),
     N = n(534091),
     A = n(901461),
     Z = n(739566),
@@ -111,7 +111,7 @@ function X(e) {
             compact: I = !1,
             className: T,
             groupId: x,
-            viewingChannelId: v
+            viewingChannelId: S
         } = e,
         N = r.type === W.uaV.REPLY ? r.messageReference : void 0,
         { onFocus: M, ...y } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''),
@@ -133,7 +133,7 @@ function X(e) {
             allowHeading: ee,
             allowLinks: !0,
             previewLinkTarget: !0,
-            viewingChannelId: v
+            viewingChannelId: S
         }),
         ec = (0, j.Z)(o, m, es),
         eu = (0, Z.ZP)(r),
@@ -162,7 +162,7 @@ function X(e) {
                     [Y.message]: !0,
                     [Y.cozyMessage]: !I,
                     [Y.mentioned]: r.mentioned,
-                    [Y.ephemeral]: (0, S.Pv)(r),
+                    [Y.ephemeral]: (0, v.Pv)(r),
                     [Y.systemMessage]: (0, A.Z)(r),
                     [Y.groupStart]: r.id === x || r.type === W.uaV.REPLY,
                     [Y.selected]: ea
@@ -229,14 +229,14 @@ t.ZP = s.memo(function (e) {
         eI = (0, u.e7)([x.Z], () => x.Z.isEditing(q, N), [q, N]),
         eT = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled),
         ex = eo || eI || (eT && ef),
-        ev = ex || e_,
-        eS = (0, u.e7)([I.Z], () => g.hasFlag(W.iLy.HAS_THREAD) && I.Z.getChannel(v.default.castMessageIdAsChannelId(g.id))),
+        eS = ex || e_,
+        ev = (0, u.e7)([I.Z], () => g.hasFlag(W.iLy.HAS_THREAD) && I.Z.getChannel(S.default.castMessageIdAsChannelId(g.id))),
         eN = g.isFirstMessageInForumPost(K),
         eA = (0, _.A)((null !== (n = g.editedTimestamp) && void 0 !== n ? n : g.timestamp).valueOf()),
         eZ = (0, u.e7)([T.Z], () => T.Z.isDeveloper),
         { content: eM, hasSpoilerEmbeds: eb } = (0, O.Z)(g, {
             hideSimpleEmbedContent: es && ea,
-            isInteracting: ev,
+            isInteracting: eS,
             formatInline: !1,
             allowList: eN || eA,
             allowHeading: eN || eA,
@@ -291,7 +291,7 @@ t.ZP = s.memo(function (e) {
                         [Y.message]: !0,
                         [Y.cozyMessage]: !X,
                         [Y.mentioned]: g.mentioned,
-                        [Y.ephemeral]: (0, S.Pv)(g),
+                        [Y.ephemeral]: (0, v.Pv)(g),
                         [Y.nitroMessage]: g.type === W.uaV.NITRO_NOTIFICATION,
                         [Y.systemMessage]: (0, A.Z)(g),
                         [Y.groupStart]: !ee && (eB || g.type === W.uaV.REPLY),
@@ -318,7 +318,7 @@ t.ZP = s.memo(function (e) {
                         channelMessageProps: e,
                         hasSpoilerEmbeds: eb,
                         handleContextMenu: eu,
-                        isInteracting: ev,
+                        isInteracting: eS,
                         isAutomodBlockedMessage: ew
                     }),
                     childrenButtons:
@@ -334,7 +334,7 @@ t.ZP = s.memo(function (e) {
                     childrenMessageContent: a,
                     onMouseMove: eh,
                     onMouseLeave: em,
-                    hasThread: !ee && g.hasFlag(W.iLy.HAS_THREAD) && null != eS,
+                    hasThread: !ee && g.hasFlag(W.iLy.HAS_THREAD) && null != ev,
                     isSystemMessage: (0, A.Z)(g),
                     hasReply: g.type === W.uaV.REPLY,
                     messageRef: ek

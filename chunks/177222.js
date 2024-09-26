@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(169979),
     T = n(119096),
     x = n(502762),
-    v = n(952124),
-    S = n(544989),
+    S = n(952124),
+    v = n(544989),
     N = n(481932),
     A = n(272510),
     Z = n(171368),
@@ -77,14 +77,14 @@ function O(e) {
                         null != V.interactionType && (0, i.jsx)('div', { className: P.backdrop }),
                         (0, i.jsxs)(a.u2, {
                             children: [
-                                (0, i.jsxs)(S.Z, {
+                                (0, i.jsxs)(v.Z, {
                                     profileType: R.y0.PANEL,
                                     children: [
                                         (0, i.jsx)(N.Z, {
                                             user: t,
                                             profileType: R.y0.PANEL
                                         }),
-                                        t.bot ? (0, i.jsx)(v.Z, { user: t }) : (0, i.jsx)(A.Z, { user: t })
+                                        t.bot ? (0, i.jsx)(S.Z, { user: t }) : (0, i.jsx)(A.Z, { user: t })
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {

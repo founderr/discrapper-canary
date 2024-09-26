@@ -15,9 +15,9 @@ var r = n(735250),
     f = n(5192),
     C = n(476221),
     y = n(481250),
-    R = n(206314),
-    D = n(513547),
-    S = n(65154),
+    D = n(206314),
+    S = n(513547),
+    R = n(65154),
     v = n(689938),
     b = n(701491),
     E = n(113207);
@@ -32,7 +32,7 @@ class Z extends a.PureComponent {
             s = o().map(i, (e, t) => {
                 if ('receiverReports' !== t && (!n || 'localAddress' !== t))
                     return (0, r.jsx)(
-                        D.ck,
+                        S.ck,
                         {
                             label: t,
                             value: e
@@ -68,7 +68,7 @@ class Z extends a.PureComponent {
                 return (
                     null == s && (s = null != i ? i.username : e.id),
                     (0, r.jsx)(
-                        R.Z,
+                        D.Z,
                         {
                             label: e.id,
                             valueRendered: [n, a],
@@ -89,7 +89,7 @@ class Z extends a.PureComponent {
 t.Z = s.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
     let { context: t, index: n } = e,
         r = u.ZP.getAllStats(t)[n],
-        a = t === S.Yn.STREAM ? p.Z.getHostname(p.Z.getActiveStreamKey()) : d.Z.getHostname();
+        a = t === R.Yn.STREAM ? p.Z.getHostname(p.Z.getActiveStreamKey()) : d.Z.getHostname();
     return {
         hidePersonalInformation: h.Z.hidePersonalInformation,
         transport: null != r ? r.transport : null,

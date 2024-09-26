@@ -37,7 +37,7 @@ function _(e, t) {
     switch (e) {
         case '/discovery/quests':
             return l.F$.QUESTS;
-        case '/discovery/apps':
+        case '/discovery/applications':
             return t ? l.F$.APPS : l.D7;
         case '/discovery/servers':
             return l.F$.SERVERS;

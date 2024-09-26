@@ -31,10 +31,10 @@ let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     b = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function A(e) {
     let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: M = !1, defaultFolderName: R, useCircleMask: L = !1, draggable: y = !1, sorting: P = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: G, renderChildNode: w, folderIconContent: U } = e,
-        { id: k, name: B, children: H } = t,
-        [V, F] = l.useState(!1),
+        { id: k, name: B, children: V } = t,
+        [H, F] = l.useState(!1),
         [W, z] = l.useState(!1),
-        Y = V || W;
+        Y = H || W;
     l.useEffect(() => {
         P && F(!1);
     }, [P]);
@@ -64,7 +64,7 @@ function A(e) {
         J = null != B && '' !== B ? B : null != R && '' !== R ? R : x.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
         $ = (0, c.Ie)(''.concat(k)),
         ee = 'folder-items-'.concat(k),
-        et = H.length * (T + b),
+        et = V.length * (T + b),
         en = (0, d.useTransition)(!K && u, {
             from: { height: 0 },
             enter: { height: 1 },
@@ -76,7 +76,7 @@ function A(e) {
             children: [
                 (0, i.jsx)(m.Z, {
                     disabled: K || u,
-                    hovered: V,
+                    hovered: H,
                     selected: r,
                     unread: M,
                     className: v.pill
@@ -142,7 +142,7 @@ function A(e) {
                             style: { height: e.height.to((e) => e * et) },
                             className: S.__invalid_expandedGuilds,
                             role: 'group',
-                            children: H.map(w)
+                            children: V.map(w)
                         },
                         l
                     )

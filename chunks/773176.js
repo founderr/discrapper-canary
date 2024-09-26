@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(346610),
     T = n(868643),
     x = n(245216),
-    v = n(223606),
-    S = n(188597),
+    S = n(223606),
+    v = n(188597),
     N = n(41776),
     A = n(222677),
     Z = n(995774),
@@ -153,8 +153,8 @@ function eo(e) {
             canPublish: f,
             canReact: g,
             canConfigureJoin: C,
-            canReply: v,
-            canStartThread: S,
+            canReply: S,
+            canStartThread: v,
             canViewThread: A,
             canForward: Z,
             isExpanded: M,
@@ -184,8 +184,8 @@ function eo(e) {
                     }),
                     [t, g]
                 ),
-                v = (0, b.U)(t, n),
-                S = (0, j.NE)(t, n),
+                S = (0, b.U)(t, n),
+                v = (0, j.NE)(t, n),
                 A = (0, j.Ek)(n),
                 Z = (0, c.e7)([N.Z], () => null != t.guild_id && N.Z.isLurking(t.guild_id), [t]),
                 M = (0, c.e7)([D.ZP], () => null != t.guild_id && D.ZP.isCurrentUserGuest(t.guild_id), [t]),
@@ -220,8 +220,8 @@ function eo(e) {
                 canEdit: K,
                 canDelete: B,
                 canReport: G,
-                canReply: v,
-                canStartThread: S,
+                canReply: S,
+                canStartThread: v,
                 canViewThread: A,
                 canForward: et && en,
                 canCopy: H.wS,
@@ -340,7 +340,7 @@ function eo(e) {
                                     'pin'
                                 )
                               : null,
-                          S && Z
+                          v && Z
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
@@ -351,7 +351,7 @@ function eo(e) {
                                     'thread'
                                 )
                               : null,
-                          v && h
+                          S && h
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
@@ -390,7 +390,7 @@ function eo(e) {
                       ]
                   })
                 : null,
-            v && !h
+            S && !h
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -426,7 +426,7 @@ function eo(e) {
                       'forward'
                   )
                 : null,
-            S && !Z
+            v && !Z
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -437,7 +437,7 @@ function eo(e) {
                       'thread'
                   )
                 : null,
-            !S && A
+            !v && A
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -512,8 +512,8 @@ function eo(e) {
 }
 function ec(e) {
     let { channel: t, message: n } = e,
-        s = (0, c.e7)([v.Z], () => null != v.Z.getMessage(n.id), [n.id]),
-        a = null == n.interaction || (null != n.interactionData && (0, S.$s)(n.interactionData));
+        s = (0, c.e7)([S.Z], () => null != S.Z.getMessage(n.id), [n.id]),
+        a = null == n.interaction || (null != n.interactionData && (0, v.$s)(n.interactionData));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !s &&

@@ -26,8 +26,8 @@ var i = n(735250),
     I = n(88101),
     T = n(576954),
     x = n(280006),
-    v = n(347102),
-    S = n(765104),
+    S = n(347102),
+    v = n(765104),
     N = n(122707),
     A = n(779836),
     Z = n(23750),
@@ -94,7 +94,7 @@ function et(e) {
         eh = (0, w.$)(r),
         em = d.length > 0 && (null === (t = d.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(r)),
         ep = (0, o.ts)(r),
-        e_ = (0, a.e7)([S.Z], () => S.Z.shouldShowTopicsBar() && !ec),
+        e_ = (0, a.e7)([v.Z], () => v.Z.shouldShowTopicsBar() && !ec),
         ef = (0, I.P)(r.id),
         eE = (0, g.z)(r.id, J.zr),
         eg = (0, k.Z)(),
@@ -112,15 +112,15 @@ function et(e) {
                           senderId: e.getRecipientId()
                       })
                 : e.isGroupDM() && (0, x.f)({ location: 'blocked_user_banner' })
-                  ? (0, i.jsx)(v.e, { channel: e })
+                  ? (0, i.jsx)(S.e, { channel: e })
                   : null;
         })(r, null != ef ? ef : eE),
         eI = r.isForumPost() && !em ? (0, i.jsx)(m.Z, { postId: r.id }) : null,
         eT = (0, _.Z)(r.id);
     (0, Y.Z)();
     let ex = null,
-        ev = [],
-        eS = ei.map((e, t) => {
+        eS = [],
+        ev = ei.map((e, t) => {
             if (e.type === X.ys_.DIVIDER) {
                 var n, s;
                 let a = null != e.unreadId;
@@ -193,7 +193,7 @@ function et(e) {
                 e.content.id
             );
         });
-    ev.push(...eS);
+    eS.push(...ev);
     let eN = ei[ei.length - 1];
     if (
         (null != eu &&
@@ -208,7 +208,7 @@ function et(e) {
                             author: eu
                         })
                     );
-                ev.push(
+                eS.push(
                     (0, i.jsx)(
                         ee,
                         {
@@ -224,7 +224,7 @@ function et(e) {
         d.hasMoreBefore && null == er)
     ) {
         d.length > 0 &&
-            ev.unshift(
+            eS.unshift(
                 (0, i.jsx)(
                     'div',
                     {
@@ -238,7 +238,7 @@ function et(e) {
             );
         let { useReducedMotion: e } = c.Z;
         ((e && ed()) || !e) &&
-            ev.unshift(
+            eS.unshift(
                 (0, i.jsx)(
                     W.ZP,
                     {
@@ -251,7 +251,7 @@ function et(e) {
     }
     if (
         ((!d.hasMoreBefore || null != er) &&
-            ev.unshift(
+            eS.unshift(
                 (0, i.jsx)(
                     h.Z,
                     {
@@ -262,7 +262,7 @@ function et(e) {
                 )
             ),
         d.hasMoreAfter &&
-            ev.push(
+            eS.push(
                 (0, i.jsx)(
                     W.ZP,
                     {
@@ -272,7 +272,7 @@ function et(e) {
                     'has-more-after'
                 )
             ),
-        !eo && eh && ed() && ev.push((0, i.jsx)(z.Z, { channel: r })),
+        !eo && eh && ed() && eS.push((0, i.jsx)(z.Z, { channel: r })),
         B > 0 && et && ed())
     ) {
         let e, t;
@@ -434,7 +434,7 @@ function et(e) {
                     });
     }
     return {
-        channelStreamMarkup: ev,
+        channelStreamMarkup: eS,
         newMessagesBar: n,
         jumpToPresentBar: s,
         forumPostActionBar: eI,

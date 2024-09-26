@@ -24,8 +24,8 @@ var i,
     I = n(496675),
     T = n(158776),
     x = n(471253),
-    v = n(431328),
-    S = n(62526),
+    S = n(431328),
+    v = n(62526),
     N = n(590415),
     A = n(614173),
     Z = n(618896),
@@ -62,7 +62,7 @@ let L = l.memo(function (e) {
         }, []);
         let f = t.getGuildId();
         u()(null != f, 'Channel cannot be guildless');
-        let { isMobile: I, status: v } = (0, d.cj)([T.Z], () => ({
+        let { isMobile: I, status: S } = (0, d.cj)([T.Z], () => ({
                 isMobile: T.Z.isMobileOnline(i.user.id),
                 status: T.Z.getStatus(i.user.id, f)
             })),
@@ -119,7 +119,7 @@ let L = l.memo(function (e) {
                                     className: R.participantAvatar,
                                     user: i.user,
                                     isMobile: I,
-                                    status: v
+                                    status: S
                                 }),
                                 (0, a.jsxs)('div', {
                                     className: R.participantTextContainer,
@@ -132,7 +132,7 @@ let L = l.memo(function (e) {
                                         (0, a.jsx)(h.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-secondary',
-                                            children: (0, S.$)(i)
+                                            children: (0, v.$)(i)
                                         })
                                     ]
                                 })
@@ -206,7 +206,7 @@ let L = l.memo(function (e) {
     });
 function y(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
-        s = (0, v.Fd)(t.id),
+        s = (0, S.Fd)(t.id),
         l = [(0, d.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, s.length)];
     return (0, a.jsxs)('div', {
         className: o()(R.container, { [R.chatOpen]: i }),

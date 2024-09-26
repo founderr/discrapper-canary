@@ -46,8 +46,8 @@ var i = n(735250),
     U = n(788307),
     k = n(981631),
     B = n(689938),
-    H = n(931450);
-let V = w.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
+    V = n(931450);
+let H = w.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
     F = {
         offset: {
             top: 2,
@@ -57,7 +57,7 @@ let V = w.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
     },
     W = (e) =>
         (0, i.jsx)(p.Clickable, {
-            className: H.closeButton,
+            className: V.closeButton,
             ...e,
             focusProps: {
                 offset: {
@@ -70,20 +70,20 @@ let V = w.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
             children: (0, i.jsx)(p.XSmallIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: H.closeIcon
+                className: V.closeIcon
             })
         }),
     z = () =>
         (0, i.jsx)(p.StarIcon, {
             size: 'xs',
             color: 'currentColor',
-            className: H.favoriteIcon
+            className: V.favoriteIcon
         });
 class Y extends l.Component {
     render() {
         let { route: e, selected: t, icon: n, iconClassName: l, interactiveClassName: r, text: s, children: o, locationState: u, onClick: h, className: f, role: _, 'aria-posinset': m, 'aria-setsize': g, ...I } = this.props;
         return (0, i.jsx)(v.Z, {
-            className: a()(H.channel, { [H.fullWidth]: d.tq }, f),
+            className: a()(V.channel, { [V.fullWidth]: d.tq }, f),
             onClick: h,
             role: _,
             focusProps: {
@@ -95,24 +95,24 @@ class Y extends l.Component {
             children: (0, i.jsx)(p.Interactive, {
                 as: 'div',
                 selected: t,
-                className: a()(r, H.interactive, H.linkButton, { [H.interactiveSelected]: t }),
+                className: a()(r, V.interactive, V.linkButton, { [V.interactiveSelected]: t }),
                 children: (0, i.jsxs)(c.rU, {
                     to: {
                         pathname: e,
                         state: u
                     },
-                    className: H.link,
+                    className: V.link,
                     ...I,
                     children: [
                         (0, i.jsx)(C.Z, {
                             selected: t,
                             muted: !1,
                             avatar: (0, i.jsx)(n, {
-                                className: a()(H.linkButtonIcon, l),
+                                className: a()(V.linkButtonIcon, l),
                                 color: 'currentColor'
                             }),
                             name: s,
-                            innerClassName: H.avatarWithText
+                            innerClassName: V.avatarWithText
                         }),
                         o
                     ]
@@ -205,18 +205,18 @@ function K(e) {
         },
         eh = () => {
             let e = {
-                className: H.activity,
-                textClassName: H.activityText,
-                emojiClassName: H.activityEmoji
+                className: V.activity,
+                textClassName: V.activityText,
+                emojiClassName: V.activityEmoji
             };
             return t.isSystemDM()
                 ? (0, i.jsx)('div', {
-                      className: H.subtext,
+                      className: V.subtext,
                       children: (0, I.Z)(t.id) ? B.Z.Messages.SYSTEM_DM_CHANGELOG_STATUS : B.Z.Messages.SYSTEM_DM_ACTIVITY_TEXT
                   })
                 : t.isMultiUserDM()
                   ? (0, i.jsx)('div', {
-                        className: H.subtext,
+                        className: V.subtext,
                         children: B.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
                     })
                   : null != b && b.length > 0
@@ -241,7 +241,7 @@ function K(e) {
                           isTyping: y,
                           status: O
                       })
-                    : (0, i.jsx)(V, {
+                    : (0, i.jsx)(H, {
                           ...$,
                           src: (0, N.x)(t),
                           'aria-hidden': !0,
@@ -253,7 +253,7 @@ function K(e) {
             let n = null;
             return (
                 !d.isSystemUser() && (n = (0, m.Z)(b) ? k.Skl.STREAMING : O),
-                (0, i.jsx)(V, {
+                (0, i.jsx)(H, {
                     ...$,
                     size: p.AvatarSizes.SIZE_32,
                     src: X,
@@ -280,7 +280,7 @@ function K(e) {
                               userId: null == d ? void 0 : d.id,
                               inline: !0,
                               disableGuildProfile: !0,
-                              className: H.clanTag
+                              className: V.clanTag
                           })
                       ]
                   });
@@ -289,7 +289,7 @@ function K(e) {
         children: (e) => {
             let { role: n, ...l } = e;
             return (0, i.jsx)(v.Z, {
-                className: H.channel,
+                className: V.channel,
                 role: n,
                 focusProps: {
                     ...F,
@@ -304,9 +304,9 @@ function K(e) {
                 'aria-setsize': w,
                 'aria-posinset': G,
                 children: (0, i.jsxs)(p.Interactive, {
-                    className: a()(H.interactive, {
-                        [H.interactiveSystemDM]: em && e_,
-                        [H.interactiveSelected]: s
+                    className: a()(V.interactive, {
+                        [V.interactiveSystemDM]: em && e_,
+                        [V.interactiveSelected]: s
                     }),
                     as: 'div',
                     onClick: ec,
@@ -316,7 +316,7 @@ function K(e) {
                         (0, i.jsx)(c.rU, {
                             innerRef: q,
                             to: k.Z5c.CHANNEL(k.ME, t.id),
-                            className: H.link,
+                            className: V.link,
                             'aria-label': (0, E.ZP)({
                                 channel: t,
                                 unread: et
@@ -329,12 +329,12 @@ function K(e) {
                                 muted: null != ee && ee,
                                 subText: eh(),
                                 name: (0, i.jsx)(Z.Z, {
-                                    tooltipClassName: H.overflowTooltip,
+                                    tooltipClassName: V.overflowTooltip,
                                     children: eg
                                 }),
                                 decorators: t.isSystemDM()
                                     ? (0, i.jsx)(g.Z, {
-                                          className: H.decorator,
+                                          className: V.decorator,
                                           type: g.Z.Types.SYSTEM_DM,
                                           verified: !0
                                       })

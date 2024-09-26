@@ -36,13 +36,13 @@ function b(e) {
         U = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)),
         k = (0, l.e7)([_.Z], () => _.Z.hasVideo(n.id)),
         B = (0, u.PK)(n.id) && n.isGuildStageVoice(),
-        H = (0, I.ZP)({
+        V = (0, I.ZP)({
             channel: n,
             locked: U,
             video: k || B,
             selected: b
         }),
-        V = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
+        H = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
         F = (0, o.n2)(n.guild_id, n.id),
         W = (0, l.e7)([h.Z], () => {
             var e, t;
@@ -56,11 +56,11 @@ function b(e) {
             color: r.Z.unsafe_rawColors.BRAND_260.css,
             className: T.newChannel
         });
-    if (!j && D === v.i.ALL_MESSAGES && n.isForumLikeChannel() && null != V && V > 0)
+    if (!j && D === v.i.ALL_MESSAGES && n.isForumLikeChannel() && null != H && H > 0)
         return (0, i.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',
-            children: Z.Z.Messages.CHANNEL_NEW_POSTS_LABEL.format({ count: (0, a.getBadgeCountString)(V) })
+            children: Z.Z.Messages.CHANNEL_NEW_POSTS_LABEL.format({ count: (0, a.getBadgeCountString)(H) })
         });
     if (!j && n.isForumLikeChannel() && null != F && F > 0)
         return (0, i.jsx)(a.Text, {
@@ -69,7 +69,7 @@ function b(e) {
             children: (0, a.getBadgeCountString)(F)
         });
     let z = null !== (t = null == M ? void 0 : M.length) && void 0 !== t ? t : 0;
-    return null != R && R && H
+    return null != R && R && V
         ? (0, i.jsx)(N.Z, {
               userCount: z,
               video: k || B,

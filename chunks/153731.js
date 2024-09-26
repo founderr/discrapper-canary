@@ -23,9 +23,9 @@ var r = n(735250),
     f = n(19780),
     C = n(226961),
     y = n(594174),
-    R = n(51144),
-    D = n(189648),
-    S = n(775194),
+    D = n(51144),
+    S = n(189648),
+    R = n(775194),
     v = n(499848),
     b = n(724392),
     E = n(442580),
@@ -49,7 +49,7 @@ let _ = (e, t, n) =>
                         }),
                         (0, r.jsx)('span', {
                             className: T.username,
-                            children: null != t ? t : R.ZP.getName(e)
+                            children: null != t ? t : D.ZP.getName(e)
                         })
                     ]
                 })
@@ -105,7 +105,7 @@ function I(e, t, n, r, a) {
             i.push({
                 section: (0, C.J$)(e, F._s_.CAMERA, n),
                 label: x.Z.Messages.RTC_DEBUG_CAMERA,
-                element: D.Z,
+                element: S.Z,
                 elementProps: {
                     context: e,
                     index: n,
@@ -160,8 +160,8 @@ function j() {
         m = null === (e = n.concat(i).find((e) => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare,
         g = null === (t = i.find((e) => null != e.clips)) || void 0 === t ? void 0 : t.clips,
         y = (0, s.e7)([p.Z], () => p.Z.theme),
-        R = (0, s.e7)([p.Z], () => (p.Z.darkSidebar ? F.BRd.DARK : void 0)),
-        D = (0, s.e7)([C.ZP], () => C.ZP.getSection()),
+        D = (0, s.e7)([p.Z], () => (p.Z.darkSidebar ? F.BRd.DARK : void 0)),
+        S = (0, s.e7)([C.ZP], () => C.ZP.getSection()),
         v = (0, s.e7)([C.ZP], () => C.ZP.getVideoStreams()),
         b = (function (e) {
             let { defaultStats: t, streamStats: n, videoStreams: a, screenshare: i, clips: o, channel: s, connectionState: c } = e,
@@ -183,7 +183,7 @@ function j() {
                     h.push({
                         section: F._s_.CLIPS,
                         label: x.Z.Messages.RTC_DEBUG_CLIPS,
-                        element: S.Z,
+                        element: R.Z,
                         elementProps: { clips: o }
                     })),
                 m.length > 0 && m.unshift(g);
@@ -237,8 +237,8 @@ function j() {
         ),
         (0, r.jsx)(d.ZP, {
             theme: y,
-            sidebarTheme: R,
-            section: D,
+            sidebarTheme: D,
+            section: S,
             onSetSection: c.zc,
             sections: b
         })

@@ -150,7 +150,7 @@ function G(e) {
     let { guild: j, channel: G, inviter: w, target_application: U } = _,
         k = null != j,
         B = null != _.stage_instance,
-        H = null == _.guild && null == _.channel && null != _.inviter;
+        V = null == _.guild && null == _.channel && null != _.inviter;
     if (null != U) (t = null == j ? void 0 : j.name), (n = I.Z.createFromServer(U).getCoverImageURL(1024));
     else if (null != j)
         (t = j.name),
@@ -159,10 +159,10 @@ function G(e) {
                 splash: j.splash
             }));
     else if (((null == (t = G.name) || '' === t) && null != w && (t = w.username), null == t)) throw Error('no name for group DM invite');
-    let V = (0, g.yU)(),
+    let H = (0, g.yU)(),
         F = B ? L.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : L.Z.Messages.INVITE_MODAL_BUTTON.format({ guildName: t });
     return (
-        H && (F = L.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON),
+        V && (F = L.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON),
         (0, i.jsx)(d.Gt, {
             value: S,
             children: (0, i.jsxs)(o.ModalRoot, {
@@ -201,10 +201,10 @@ function G(e) {
                                         : null,
                                     (0, i.jsxs)('div', {
                                         children: [
-                                            V ? (0, i.jsx)(O, {}) : null,
+                                            H ? (0, i.jsx)(O, {}) : null,
                                             null == U
                                                 ? (0, i.jsx)(o.Tooltip, {
-                                                      text: V ? L.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
+                                                      text: H ? L.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                                                       position: 'bottom',
                                                       children: (e) => {
                                                           let { onMouseEnter: t, onMouseLeave: n } = e;
@@ -212,11 +212,11 @@ function G(e) {
                                                               size: h.zx.Sizes.LARGE,
                                                               onClick: R,
                                                               submitting: N,
-                                                              disabled: V,
+                                                              disabled: H,
                                                               color: B ? h.zx.Colors.GREEN : h.zx.Colors.BRAND,
                                                               onMouseEnter: t,
                                                               onMouseLeave: n,
-                                                              children: V ? L.Z.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : F
+                                                              children: H ? L.Z.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : F
                                                           });
                                                       }
                                                   })

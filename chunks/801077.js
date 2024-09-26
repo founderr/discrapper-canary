@@ -38,8 +38,8 @@ var i,
     U = n(823379),
     k = n(981631);
 let B = !1,
-    H = !1,
-    V = [],
+    V = !1,
+    H = [],
     F = [],
     W = {},
     z = {},
@@ -167,14 +167,14 @@ function ei(e, t, n) {
     }
     let k = 1 === g.length,
         B = [],
-        H = new Set(),
-        V = new Set();
+        V = new Set(),
+        H = new Set();
     for (let e of t) {
         let n = et(e.id),
             i = M.Z.getChannel(n),
             l = null != i ? i.getGuildId() : null,
             r = P.Z.getGuild(l);
-        if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (k = !0));
+        if ((H.has(l) && V.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (k = !0));
         else {
             let e = w.Z.getVoiceStatesForChannel(i.id),
                 a = o()(e)
@@ -186,9 +186,9 @@ function ei(e, t, n) {
                     .orderBy([en], ['desc'])
                     .value();
             a.filter((e) => !m.includes(e.id)).forEach((e) => t.push(e)),
-                k ? !V.has(l) && (u = null) : ((u = r), (k = !0)),
-                V.add(l),
-                H.add(n),
+                k ? !H.has(l) && (u = null) : ((u = r), (k = !0)),
+                H.add(l),
+                V.add(n),
                 B.push({
                     channel: i,
                     guild: r,
@@ -225,7 +225,7 @@ let er = o().throttle(() => {
         var e;
         if (!el()) return;
         Y.clear(),
-            (F = (V = (function (e) {
+            (F = (H = (function (e) {
                 let t = (e) => e.voiceChannels.length > 0;
                 return e
                     .values()
@@ -284,7 +284,7 @@ let er = o().throttle(() => {
                     g.Z.fetchApplications(e), e.forEach((e) => K.add(e)), Y.clear();
                 }
             })(),
-            (H = !0);
+            (V = !0);
     })(),
         eo.emitChange();
 }, 1000);
@@ -296,7 +296,7 @@ class es extends (i = c.ZP.Store) {
         this.syncWith([G.default, C.Z, j.Z, L.Z, w.Z, A.Z, D.Z, R.Z, v.Z], ea), this.waitFor(N.Z, P.Z, C.Z, G.default, v.Z);
     }
     get currentActivityParties() {
-        return V;
+        return H;
     }
     get nowPlayingCards() {
         return F;
@@ -305,7 +305,7 @@ class es extends (i = c.ZP.Store) {
         return B;
     }
     get loaded() {
-        return H;
+        return V;
     }
 }
 (a = 'NowPlayingViewStore'),
@@ -319,7 +319,7 @@ class es extends (i = c.ZP.Store) {
         : (l[r] = a);
 let eo = new es(u.Z, {
     LOGOUT: function () {
-        (B = !1), (V = []), (F = []), Y.clear();
+        (B = !1), (H = []), (F = []), Y.clear();
     },
     NOW_PLAYING_MOUNTED: function () {
         (B = !0), er();

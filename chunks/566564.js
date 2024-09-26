@@ -12,7 +12,7 @@ var a = r(735250),
     p = r(597688),
     m = r(1870),
     C = r(884697),
-    _ = r(997136),
+    _ = r(43610),
     g = r(223143),
     h = r(823941),
     b = r(752053),
@@ -21,31 +21,31 @@ var a = r(735250),
     x = r(215023),
     T = r(689938),
     v = r(632007),
-    S = r(367815),
-    L = r(454410),
+    S = r(454410),
+    L = r(783433),
     N = r(170873),
     O = r(562292),
-    B = r(80995),
-    k = r(725763);
-let j = { [c.T.AUTUMN_EQUINOX]: { hero: { left: v.darker } } },
-    R = (e) => (null == e ? {} : l()(j, e, {}));
+    B = r(196315);
+let k = { [c.T.AUTUMN_EQUINOX]: { hero: { left: v.darker } } },
+    j = (e) => (null == e ? {} : l()(k, e, {}));
 t.Z = (e) => {
-    var t, r, s, o, j, A, Z;
-    let { handleTransition: P, numVisibleItems: M } = e,
-        { isFetchingCategories: y, error: w, refreshCategories: F } = (0, g.Z)(),
+    var t, r, s, o, k, R, A;
+    let { handleTransition: P, numVisibleItems: Z } = e,
+        { isFetchingCategories: M, error: y, refreshCategories: w } = (0, g.Z)(),
         H = (0, d.e7)([f.default], () => f.default.getCurrentUser()),
-        D = n.createRef(),
-        U = (0, _.x)('CollectiblesFeedShop'),
-        W = U ? c.T.BAND : c.T.AUTUMN_EQUINOX,
-        G = R(W),
-        V = (0, d.cj)([p.Z], () => ({ feature: p.Z.getCategory(W) })),
-        z = n.useCallback(() => {
-            F();
-        }, [F]),
-        Y = U ? x.WC : x.v7,
-        K = n.useMemo(
+        F = n.createRef(),
+        D = (0, _.t)('CollectiblesFeedShop'),
+        U = D ? c.T.SPOOKY_NIGHT : c.T.BAND,
+        W = j(U),
+        G = (0, d.cj)([p.Z], () => ({ feature: p.Z.getCategory(U) })),
+        V = n.useCallback(() => {
+            w();
+        }, [w]),
+        z = D ? x.Ku : x.WC,
+        Y = n.useMemo(
             () =>
-                Y.map((e) => p.Z.getProduct(e))
+                z
+                    .map((e) => p.Z.getProduct(e))
                     .filter((e) => null != e)
                     .map((e) => ({
                         ...e,
@@ -58,9 +58,9 @@ t.Z = (e) => {
                         return Number(r) - Number(a);
                     })
                     .slice(0, 4),
-            [y, U]
+            [M, D]
         ),
-        X = n.useMemo(
+        K = n.useMemo(
             () =>
                 x.yo
                     .map((e) => p.Z.getProduct(e))
@@ -75,11 +75,11 @@ t.Z = (e) => {
                             a = !!m.Z.getPurchase(t.skuId);
                         return Number(r) - Number(a);
                     }),
-            [y]
+            [M]
         );
     if (null == H) return null;
-    let $ = T.Z.Messages.COLLECTIBLES_SHOP_CATEGORY_COLLECTION.format({ category_name: null === (t = V.feature) || void 0 === t ? void 0 : t.name });
-    if (w) return (0, a.jsx)(b.Z, { onRetry: z });
+    let X = T.Z.Messages.COLLECTIBLES_SHOP_CATEGORY_COLLECTION.format({ category_name: null === (t = G.feature) || void 0 === t ? void 0 : t.name });
+    if (y) return (0, a.jsx)(b.Z, { onRetry: V });
     return (0, a.jsx)(a.Fragment, {
         children: (0, a.jsxs)('div', {
             className: v.shop,
@@ -89,10 +89,10 @@ t.Z = (e) => {
                     children: [
                         (0, a.jsx)('div', {
                             className: v.bannerImage,
-                            style: { backgroundImage: 'url('.concat(U ? N : B, ')') }
+                            style: { backgroundImage: 'url('.concat(D ? B : N, ')') }
                         }),
-                        (0, a.jsx)('div', { className: i()(v.bannerShadow, v.left, l()(G, 'hero.left')) }),
-                        (0, a.jsx)('div', { className: i()(v.bannerShadow, v.right, l()(G, 'hero.right')) })
+                        (0, a.jsx)('div', { className: i()(v.bannerShadow, v.left, l()(W, 'hero.left')) }),
+                        (0, a.jsx)('div', { className: i()(v.bannerShadow, v.right, l()(W, 'hero.right')) })
                     ]
                 }),
                 (0, a.jsxs)('div', {
@@ -101,12 +101,12 @@ t.Z = (e) => {
                         (0, a.jsxs)('div', {
                             className: i()(v.heroHeaderContainer),
                             children: [
-                                y
+                                M
                                     ? (0, a.jsx)('div', { className: i()(v.heroHeaderBadgeLogoSummaryContainer) })
                                     : (0, a.jsxs)('div', {
                                           className: i()(v.heroHeaderBadgeLogoSummaryContainer),
                                           children: [
-                                              (null === (s = V.feature) || void 0 === s ? void 0 : s.unpublishedAt) != null &&
+                                              (null === (s = G.feature) || void 0 === s ? void 0 : s.unpublishedAt) != null &&
                                                   (0, a.jsx)(u.TextBadge, {
                                                       disableColor: !0,
                                                       text: T.Z.Messages.LIMITED_TIME,
@@ -114,14 +114,14 @@ t.Z = (e) => {
                                                   }),
                                               (0, a.jsx)('img', {
                                                   className: v.heroHeaderLogo,
-                                                  src: (0, C.uV)(null !== (Z = null === (o = V.feature) || void 0 === o ? void 0 : o.logo) && void 0 !== Z ? Z : '', { size: h.n }),
-                                                  alt: null === (j = V.feature) || void 0 === j ? void 0 : j.name
+                                                  src: (0, C.uV)(null !== (A = null === (o = G.feature) || void 0 === o ? void 0 : o.logo) && void 0 !== A ? A : '', { size: h.n }),
+                                                  alt: null === (k = G.feature) || void 0 === k ? void 0 : k.name
                                               }),
                                               (0, a.jsx)(u.Text, {
                                                   color: 'always-white',
                                                   variant: 'text-md/normal',
                                                   className: v.subHeaderText,
-                                                  children: null === (A = V.feature) || void 0 === A ? void 0 : A.summary
+                                                  children: null === (R = G.feature) || void 0 === R ? void 0 : R.summary
                                               })
                                           ]
                                       }),
@@ -130,20 +130,20 @@ t.Z = (e) => {
                                     children: (0, a.jsx)(u.Button, {
                                         className: v.heroHeaderButton,
                                         color: u.ButtonColors.WHITE,
-                                        onClick: () => P('shop latest category hero', W),
-                                        children: $
+                                        onClick: () => P('shop latest category hero', U),
+                                        children: X
                                     })
                                 })
                             ]
                         }),
                         (0, a.jsx)('div', {
                             className: i()(v.row, v.feed, v.feedSingleRow),
-                            children: y
+                            children: M
                                 ? (0, a.jsx)(a.Fragment, {
                                       children: [void 0, void 0, void 0, void 0].map((e, t) => (0, a.jsx)(E.K, {}, t))
                                   })
                                 : (0, a.jsx)(a.Fragment, {
-                                      children: K.map((e) => {
+                                      children: Y.map((e) => {
                                           if (null == e || null == e.category) return null;
                                           let { category: t, ...r } = e;
                                           return (0, a.jsx)(
@@ -164,10 +164,10 @@ t.Z = (e) => {
                             children: [
                                 (0, a.jsxs)(u.Clickable, {
                                     className: i()(v.featuredBlock),
-                                    style: { backgroundImage: 'url('.concat(U ? O : k, ')') },
-                                    onClick: () => P('shop marketing tile', U ? c.T.AUTUMN_EQUINOX : c.T.FALL),
+                                    style: { backgroundImage: 'url('.concat(D ? L : O, ')') },
+                                    onClick: () => P('shop marketing tile', D ? c.T.BAND : c.T.AUTUMN_EQUINOX),
                                     children: [
-                                        (null === (r = p.Z.getCategory(U ? c.T.AUTUMN_EQUINOX : c.T.FALL)) || void 0 === r ? void 0 : r.unpublishedAt) != null &&
+                                        (null === (r = p.Z.getCategory(D ? c.T.BAND : c.T.AUTUMN_EQUINOX)) || void 0 === r ? void 0 : r.unpublishedAt) != null &&
                                             (0, a.jsx)(u.TextBadge, {
                                                 disableColor: !0,
                                                 text: T.Z.Messages.LIMITED_TIME,
@@ -183,7 +183,7 @@ t.Z = (e) => {
                                 }),
                                 (0, a.jsxs)(u.Clickable, {
                                     className: i()(v.featuredBlock),
-                                    style: { backgroundImage: 'url('.concat(U ? L : S, ')') },
+                                    style: { backgroundImage: 'url('.concat(S, ')') },
                                     onClick: () => P('shop marketing tile', c.T.ANIME_V2),
                                     children: [
                                         (0, a.jsx)(u.TextBadge, {
@@ -223,11 +223,11 @@ t.Z = (e) => {
                         }),
                         (0, a.jsx)('div', {
                             className: v.feed,
-                            ref: D,
-                            children: y
+                            ref: F,
+                            children: M
                                 ? (0, a.jsx)(a.Fragment, { children: [...Array(12)].map((e, t) => (0, a.jsx)(E.K, {}, t + 1)) })
                                 : (0, a.jsx)(a.Fragment, {
-                                      children: X.slice(0, M).map((e) => {
+                                      children: K.slice(0, Z).map((e) => {
                                           if (null == e || null == e.category) return null;
                                           let { category: t, ...r } = e;
                                           return (0, a.jsx)(
@@ -243,7 +243,7 @@ t.Z = (e) => {
                                       })
                                   })
                         }),
-                        M >= x.iA &&
+                        Z >= x.iA &&
                             (0, a.jsxs)('div', {
                                 className: v.endOfFeed,
                                 children: [

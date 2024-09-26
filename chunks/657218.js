@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(313201),
     T = n(967128),
     x = n(665149),
-    v = n(294218),
-    S = n(913663),
+    S = n(294218),
+    v = n(913663),
     N = n(268350),
     A = n(695346),
     Z = n(592125),
@@ -148,7 +148,7 @@ function z(e) {
         I = (0, D.vH)(t),
         {
             nameError: x,
-            messageError: v,
+            messageError: S,
             submit: A
         } = (function (e) {
             let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: a, textAreaState: l, location: r } = e,
@@ -169,7 +169,7 @@ function z(e) {
                 submit: s.useCallback(
                     async (e, s, a) => {
                         var r, o, u;
-                        null == e && (e = l.textValue), (e = e.trim()), (null == s || 0 === s.length) && (s = null === (r = S.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == a || 0 === a.length) && (a = L.Z.getUploads(t.id, M.d.FirstThreadMessage));
+                        null == e && (e = l.textValue), (e = e.trim()), (null == s || 0 === s.length) && (s = null === (r = v.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == a || 0 === a.length) && (a = L.Z.getUploads(t.id, M.d.FirstThreadMessage));
                         let m = null !== (o = i.name) && void 0 !== o ? o : '',
                             p = null == n && 0 === m.length,
                             _ = '' === e && (null == s || 0 === s.length) && 0 === a.length;
@@ -280,7 +280,7 @@ function z(e) {
                                 textAreaState: g,
                                 setTextAreaState: C,
                                 submit: A,
-                                error: v
+                                error: S
                             }),
                             (0, i.jsx)(d.Z, {
                                 channel: t,
@@ -433,7 +433,7 @@ function X(e) {
         s = (0, r.e7)([b.Z], () => (null == n ? null : b.Z.getMessage(t.id, n))),
         a = A.jU.useSetting();
     return null != s
-        ? (0, i.jsx)(v.Z, {
+        ? (0, i.jsx)(S.Z, {
               className: G.messagePreview,
               message: s,
               channel: t,

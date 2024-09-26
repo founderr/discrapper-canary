@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(457868),
     T = n(561472),
     x = n(36311),
-    v = n(112724),
-    S = n(902840),
+    S = n(112724),
+    v = n(902840),
     N = n(110924),
     A = n(317381),
     Z = n(82888),
@@ -73,8 +73,8 @@ var i = n(735250),
     eI = n(897473),
     eT = n(922482),
     ex = n(504185),
-    ev = n(657218),
-    eS = n(66556),
+    eS = n(657218),
+    ev = n(66556),
     eN = n(739830),
     eA = n(377929),
     eZ = n(900157),
@@ -349,7 +349,7 @@ class tt extends s.PureComponent {
             switch (s.type) {
                 case eI.tI.CREATE_THREAD:
                     if (null == t ? void 0 : t.isForumLikeChannel()) return null;
-                    e = (0, i.jsx)(ev.Z, {
+                    e = (0, i.jsx)(eS.Z, {
                         parentChannelId: s.parentChannelId,
                         parentMessageId: s.parentMessageId,
                         location: s.location
@@ -568,11 +568,11 @@ class tt extends s.PureComponent {
                     case e1.d4z.ANNOUNCEMENT_THREAD:
                     case e1.d4z.PRIVATE_THREAD:
                     case e1.d4z.PUBLIC_THREAD:
-                        null != t && !t.isForumLikeChannel() && l.push((0, i.jsx)(eS.Z, { channel: t }, 'browser')), e.isVocalThread() && l.push((0, i.jsx)(er.Z, { channel: e }, 'thread-call')), l.push((0, i.jsx)(eN.Z, { channel: e }, 'notifications')), l.push((0, i.jsx)(Q.Z, { channel: e }, 'pins')), !e.isArchivedThread() && l.push((0, i.jsx)(X.Z, { channelId: e.id }, 'members')), null != t && (0, S.Lp)(e) && l.push((0, i.jsx)($.Z, { channel: e }, 'summaries')), l.push((0, i.jsx)(eA.Z, { channel: e }, 'threads-overflow'));
+                        null != t && !t.isForumLikeChannel() && l.push((0, i.jsx)(ev.Z, { channel: t }, 'browser')), e.isVocalThread() && l.push((0, i.jsx)(er.Z, { channel: e }, 'thread-call')), l.push((0, i.jsx)(eN.Z, { channel: e }, 'notifications')), l.push((0, i.jsx)(Q.Z, { channel: e }, 'pins')), !e.isArchivedThread() && l.push((0, i.jsx)(X.Z, { channelId: e.id }, 'members')), null != t && (0, v.Lp)(e) && l.push((0, i.jsx)($.Z, { channel: e }, 'summaries')), l.push((0, i.jsx)(eA.Z, { channel: e }, 'threads-overflow'));
                         break;
                     case e1.d4z.GUILD_ANNOUNCEMENT:
                     case e1.d4z.GUILD_TEXT:
-                        l.push((0, i.jsx)(k.Z, { channel: e }, 'favorites')), l.push((0, i.jsx)(eS.Z, { channel: e }, 'browser')), !n && l.push((0, i.jsx)(J.Z, { channel: e }, 'notifications')), l.push((0, i.jsx)(Q.Z, { channel: e }, 'pins')), l.push((0, i.jsx)(X.Z, { channelId: e.id }, 'members')), (0, S.Lp)(e) && l.push((0, i.jsx)($.Z, { channel: e }, 'summaries'));
+                        l.push((0, i.jsx)(k.Z, { channel: e }, 'favorites')), l.push((0, i.jsx)(ev.Z, { channel: e }, 'browser')), !n && l.push((0, i.jsx)(J.Z, { channel: e }, 'notifications')), l.push((0, i.jsx)(Q.Z, { channel: e }, 'pins')), l.push((0, i.jsx)(X.Z, { channelId: e.id }, 'members')), (0, v.Lp)(e) && l.push((0, i.jsx)($.Z, { channel: e }, 'summaries'));
                         break;
                     case e1.d4z.GUILD_FORUM:
                     case e1.d4z.GUILD_MEDIA:
@@ -691,7 +691,7 @@ class tt extends s.PureComponent {
             });
     }
 }
-let tn = (0, v.Z)(tt);
+let tn = (0, S.Z)(tt);
 t.Z = s.memo(function (e) {
     var t;
     let { providedChannel: n } = e,
@@ -713,10 +713,10 @@ t.Z = s.memo(function (e) {
             },
             [r]
         ),
-        v = (0, B.Z)(),
+        S = (0, B.Z)(),
         Z = (0, m.e7)([eV.Z], () => {
             var e;
-            return (null !== (e = null == v ? void 0 : v.channelId) && void 0 !== e ? e : eV.Z.getVoiceChannelId()) === (null == c ? void 0 : c.id);
+            return (null !== (e = null == S ? void 0 : S.channelId) && void 0 !== e ? e : eV.Z.getVoiceChannelId()) === (null == c ? void 0 : c.id);
         }),
         L = (0, m.e7)([A.ZP], () => (null != c ? A.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
         j = (0, m.e7)([eH.Z], () => eH.Z.isConnected()),
@@ -772,7 +772,7 @@ t.Z = s.memo(function (e) {
         s.useEffect(() => {
             null != a && null != c && ef && c.id === a && !ep && ((0, eT.Cq)(c), l(null));
         }, [a, ef]);
-    let eE = (0, S.ts)(c),
+    let eE = (0, v.ts)(c),
         eg = null != c && c.isPrivate(),
         eC = (0, N.Z)(eg),
         eI = (0, N.Z)(null == c ? void 0 : c.id);

@@ -18,10 +18,10 @@ var i = n(735250),
 function E(e) {
     let { categoryId: t, loadId: n } = e;
     (0, c.LD)({ categoryId: t }),
-        (0, d.XW)({
+        (0, d.oT)({
             loadId: n,
             categoryId: t,
-            searchQuery: (0, c.uP)(),
+            query: (0, c.uP)(),
             languageCode: (0, c.a7)()
         });
 }

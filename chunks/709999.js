@@ -30,13 +30,13 @@ var a = r(735250),
     j = r(884697),
     R = r(664018),
     A = r(890249),
-    Z = r(635552),
-    P = r(724994),
+    P = r(635552),
+    Z = r(724994),
     M = r(390698),
     y = r(813083),
     w = r(680942),
-    F = r(558060),
-    H = r(237031),
+    H = r(558060),
+    F = r(237031),
     D = r(616066),
     U = r(216541),
     W = r(832149),
@@ -85,7 +85,7 @@ t.Z = function (e) {
         eo = n.useMemo(() => (0, j.BH)(t, es), [t, es]),
         el = (0, j.G1)(t),
         ec = (0, j.rN)(t),
-        { isPurchased: ed, isPartiallyPurchased: eu } = (0, P.L)(t),
+        { isPurchased: ed, isPartiallyPurchased: eu } = (0, Z.L)(t),
         [ef, ep] = (0, p.Wu)([k.Z], () => [k.Z.isClaiming === t.skuId, null != k.Z.isClaiming && k.Z.isClaiming !== t.skuId]),
         em = (0, p.e7)([N.Z], () => (0, m.wj)(N.Z.theme)),
         eC = (0, A.m)('CollectiblesCollectedModal'),
@@ -110,7 +110,7 @@ t.Z = function (e) {
         }, [o]);
     let eE = (0, v.Z)({ analyticsLocations: q }),
         eI = n.useRef(null),
-        { handleUseNow: ex, isApplying: eT } = (0, Z.W)({ product: t }),
+        { handleUseNow: ex, isApplying: eT } = (0, P.W)({ product: t }),
         ev = () => {
             if (((0, _.xf)(), eE(), t.type === f.Z.AVATAR_DECORATION && null != ea)) {
                 l()(ea.type === t.type, "product type is equivlant to first item's check for avatar deco"),
@@ -128,7 +128,7 @@ t.Z = function (e) {
         },
         eS = (e) => (r) => {
             (eI.current = r.currentTarget),
-                (0, H.T)({
+                (0, F.T)({
                     product: t,
                     category: s,
                     analyticsLocations: q,
@@ -162,7 +162,7 @@ t.Z = function (e) {
                         className: z.priceTag,
                         children: V.Z.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
                     })
-                  : (0, a.jsx)(F.Z, {
+                  : (0, a.jsx)(H.Z, {
                         product: t,
                         discount: eo,
                         isPremiumUser: es,

@@ -18,8 +18,8 @@ var i = n(470079),
     I = n(572004),
     T = n(585483),
     x = n(358085),
-    v = n(709054),
-    S = n(418476),
+    S = n(709054),
+    v = n(418476),
     N = n(901461),
     A = n(432376),
     Z = n(996861),
@@ -53,7 +53,7 @@ t.Z = function (e, t, n) {
                         break;
                     case 'e':
                         if (y) {
-                            if (((i = G), (L = H), (j = B), !L.isSystemDM() && (0, S.Z)(j, i))) n.preventDefault(), (0, Z.Hd)(H, B);
+                            if (((i = G), (L = H), (j = B), !L.isSystemDM() && (0, v.Z)(j, i))) n.preventDefault(), (0, Z.Hd)(H, B);
                         }
                         break;
                     case 'p':
@@ -96,7 +96,7 @@ t.Z = function (e, t, n) {
                     case 't':
                         if (y && (0, u.ki)(H, B)) n.preventDefault(), (0, d.R6)(H, B, 'Message Shortcut');
                         else if (B.hasFlag(M.iLy.HAS_THREAD)) {
-                            let e = p.Z.getChannel(v.default.castMessageIdAsChannelId(B.id));
+                            let e = p.Z.getChannel(S.default.castMessageIdAsChannelId(B.id));
                             null != e && (y || w) && (n.preventDefault(), (0, d.ok)(e, w));
                         }
                         break;

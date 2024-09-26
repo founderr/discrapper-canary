@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(981631),
     T = n(354459),
     x = n(396602),
-    v = n(512388);
-let S = 16 / 9,
+    S = n(512388);
+let v = 16 / 9,
     N = 8 + C.cF;
 function A(e) {
     var t;
@@ -49,7 +49,7 @@ function A(e) {
         ea = (null !== (t = (0, c.Z)(P.id)) && void 0 !== t ? t : P.id) !== P.id,
         el = 0;
     (X || ee) && (el += 72), X && !ee && (ei ? (el += 48) : (el += 8)), ee && (el += 0.5 * N + 8);
-    let er = s.useMemo(() => (X && J ? U / (k - 2 * el) : Q && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : S), [Q, F, X, U, k, el, J]),
+    let er = s.useMemo(() => (X && J ? U / (k - 2 * el) : Q && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : v), [Q, F, X, U, k, el, J]),
         eo = k - 2 * el,
         ec = X && J ? U : eo * er,
         eu = Math.floor(Math.min(U, ec) / er),
@@ -130,19 +130,19 @@ function A(e) {
         eg = ee || D ? [] : (0, g.n3)(M, P, V),
         { visibleParticipants: eC, participantTileWidth: eI } = (0, C.ZB)(U, b);
     return (0, i.jsxs)('div', {
-        className: l()(v.root, x.flexCenter, y),
+        className: l()(S.root, x.flexCenter, y),
         children: [
             (0, i.jsxs)('div', {
-                className: v.tileWrapper,
+                className: S.tileWrapper,
                 style: { opacity: Q && z ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(r.animated.div, {
-                        className: v.videoFrame,
+                        className: S.videoFrame,
                         style: { top: em.value.to((e) => (-e * N) / 2) },
                         children: [
                             (0, i.jsx)(r.animated.div, {
                                 style: { width: ep.value },
-                                className: v.videoWrapper,
+                                className: S.videoWrapper,
                                 children: (0, i.jsx)('div', {
                                     className: l()(x.videoSizer),
                                     style: { aspectRatio: er },
@@ -179,7 +179,7 @@ function A(e) {
                             }),
                             ei
                                 ? (0, i.jsx)(r.animated.div, {
-                                      className: l()(v.actionRow, { [v.idle]: B }),
+                                      className: l()(S.actionRow, { [S.idle]: B }),
                                       style: { bottom: e_.value },
                                       children: (0, i.jsx)(d.Z, {
                                           channelId: j.id,
@@ -191,7 +191,7 @@ function A(e) {
                         ]
                     }),
                     (0, i.jsx)(r.animated.div, {
-                        className: v.participantsWrapperAnimated,
+                        className: S.participantsWrapperAnimated,
                         style: {
                             translateY: eh.value.to((e) => (e * N) / 2),
                             opacity: eh.value,

@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(607070),
     T = n(367907),
     x = n(499254),
-    v = n(541099),
-    S = n(827498),
+    S = n(541099),
+    v = n(827498),
     N = n(845936),
     A = n(555573),
     Z = n(213459),
@@ -73,8 +73,8 @@ var i = n(735250),
     eI = n(934415),
     eT = n(459273),
     ex = n(585483),
-    ev = n(709054),
-    eS = n(838440),
+    eS = n(709054),
+    ev = n(838440),
     eN = n(228488),
     eA = n(127654),
     eZ = n(979956),
@@ -256,7 +256,7 @@ class eH extends s.PureComponent {
                             let { channel: e } = this.props,
                                 t = ep.Z.getLastCommandMessage(e.id),
                                 n = ep.Z.getLastEditableMessage(e.id);
-                            null != t && null != n ? (ev.default.compare(n.id, t.id) > 0 ? this.handleEditLastMessage(n) : this.handleRecallLastCommand(t)) : null != t ? this.handleRecallLastCommand(t) : null != n && this.handleEditLastMessage(n);
+                            null != t && null != n ? (eS.default.compare(n.id, t.id) > 0 ? this.handleEditLastMessage(n) : this.handleRecallLastCommand(t)) : null != t ? this.handleRecallLastCommand(t) : null != n && this.handleEditLastMessage(n);
                         }
                         return;
                     case eO.yXg.ESCAPE:
@@ -328,7 +328,7 @@ class eH extends s.PureComponent {
                     if (e === L.bB.APPLICATION_LAUNCHER || e === L.bB.IMAGE_RECS_MENU || e === L.bB.IMAGE_RECS_SUBMENU) {
                         var m;
                         let { location: t, sectionName: n } = null !== (m = (0, eR._U)(s)) && void 0 !== m ? m : {},
-                            i = e === L.bB.APPLICATION_LAUNCHER ? v.Z.lastShownEntrypoint() : S._b.TEXT;
+                            i = e === L.bB.APPLICATION_LAUNCHER ? S.Z.lastShownEntrypoint() : v._b.TEXT;
                         if (
                             !(await (0, N.L)({
                                 applicationId: s.applicationId,
@@ -360,7 +360,7 @@ class eH extends s.PureComponent {
                         });
                     null != n && ((t = null != n.content && '' !== n.content ? n.content : t), (d = !0 === n.tts));
                 }
-                return (0, eS.v)({
+                return (0, ev.v)({
                     openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
                     type: this.props.chatInputType,
                     content: t,
@@ -491,9 +491,9 @@ class eG extends s.PureComponent {
         var e;
         let t;
         let { channel: n, guild: s, keyboardModeEnabled: a, hasModalOpen: l, pendingReply: r, chatInputType: c, placeholder: d, accessibilityLabel: h, showQuarantinedUserBanner: m, filterAfterTimestamp: p, communicationDisabledUntil: _, shakeIntensity: g, poggermodeEnabled: C, isSelectedResourceChannel: I, showAutomodUserProfileChatBlocker: T } = this.props,
-            { textAreaFocused: x, textAreaHighlighted: v } = this.state,
-            S = c === O.I.SIDEBAR;
-        t = S && n.type === eO.d4z.GUILD_VOICE ? ey.Z.Messages.TEXT_IN_VOICE_A11Y_LABEL : S && n.type === eO.d4z.GUILD_STAGE_VOICE ? ey.Z.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.T.THREADS.has(n.type) ? ey.Z.Messages.THREAD_A11Y_LABEL : ey.Z.Messages.CHANNEL_A11Y_LABEL;
+            { textAreaFocused: x, textAreaHighlighted: S } = this.state,
+            v = c === O.I.SIDEBAR;
+        t = v && n.type === eO.d4z.GUILD_VOICE ? ey.Z.Messages.TEXT_IN_VOICE_A11Y_LABEL : v && n.type === eO.d4z.GUILD_STAGE_VOICE ? ey.Z.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.T.THREADS.has(n.type) ? ey.Z.Messages.THREAD_A11Y_LABEL : ey.Z.Messages.CHANNEL_A11Y_LABEL;
         let N = (0, i.jsxs)('div', {
             className: eD.channelBottomBarArea,
             children: [
@@ -503,7 +503,7 @@ class eG extends s.PureComponent {
                     offsetX: 75,
                     children: (0, i.jsx)(eH, {
                         focused: x,
-                        highlighted: v,
+                        highlighted: S,
                         channel: n,
                         guild: s,
                         keyboardModeEnabled: a,
@@ -552,7 +552,7 @@ class eG extends s.PureComponent {
                                 handler: this.handleOpenAppLauncher
                             }),
                             (0, i.jsxs)(eB, {
-                                isSidebar: S,
+                                isSidebar: v,
                                 className: eD.chatContent,
                                 'aria-label': t.format({ channelName: n.name }),
                                 onMouseDown: this.handleChatInteract,
@@ -562,7 +562,7 @@ class eG extends s.PureComponent {
                                     (0, i.jsx)(eL.Z, {
                                         channel: n,
                                         guild: s,
-                                        narrow: S
+                                        narrow: v
                                     }),
                                     (0, i.jsxs)(u.HeadingLevel, {
                                         component: (0, i.jsx)(u.HiddenVisually, { children: (0, i.jsx)(u.H, { children: ey.Z.Messages.CHANNEL_CHAT_HEADING.format({ channelName: n.name }) }) }),
@@ -573,7 +573,7 @@ class eG extends s.PureComponent {
                                                 filterAfterTimestamp: p,
                                                 showingQuarantineBanner: m
                                             }),
-                                            null == n.guild_id || S
+                                            null == n.guild_id || v
                                                 ? null
                                                 : (0, i.jsx)(K.Z, {
                                                       guildId: n.guild_id,
@@ -609,7 +609,7 @@ class eG extends s.PureComponent {
                                                                 channel: n,
                                                                 poggermodeEnabled: C
                                                             }),
-                                                            !S && (0, i.jsx)(B.Z, {})
+                                                            !v && (0, i.jsx)(B.Z, {})
                                                         ]
                                                     }),
                                             (0, i.jsx)(q.kw, {})
@@ -678,7 +678,7 @@ class eG extends s.PureComponent {
             }),
             eU(this, 'handleOpenAppLauncher', (e) => {
                 let { applicationId: t } = e;
-                return x._(S._b.TEXT, this.props.chatInputType, { applicationId: t });
+                return x._(v._b.TEXT, this.props.chatInputType, { applicationId: t });
             }),
             eU(this, 'handleChatInteract', () => {
                 var e;

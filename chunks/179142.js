@@ -25,9 +25,9 @@ function g(e) {
         { context: g, trackUserProfileAction: C } = (0, r.KZ)(),
         I = (0, s.ZP)(),
         { mutualFriends: T, isFetching: x } = (0, o.Z)(t.id, !t.bot),
-        { mutualGuilds: v, isFetching: S } = (0, c.Z)(t.id, !0),
+        { mutualGuilds: S, isFetching: v } = (0, c.Z)(t.id, !0),
         N = !t.bot && null != T && T.length > 0,
-        A = null != v && v.length > 0;
+        A = null != S && S.length > 0;
     return N || A
         ? (0, i.jsxs)(d.Z.Overlay, {
               className: E.overlay,
@@ -35,16 +35,16 @@ function g(e) {
                   A &&
                       (0, i.jsx)(_.Z, {
                           className: E.list,
-                          header: f.Z.Messages.MUTUAL_GUILDS_COUNT.format({ count: v.length }),
-                          isLoadingHeader: S,
-                          loadingContentsCount: v.length,
+                          header: f.Z.Messages.MUTUAL_GUILDS_COUNT.format({ count: S.length }),
+                          isLoadingHeader: v,
+                          loadingContentsCount: S.length,
                           itemType: _.R.MutualGuildList,
                           onExpand: () =>
                               C({
                                   action: 'PRESS_SECTION',
                                   section: 'MUTUAL_GUILDS'
                               }),
-                          children: v.map((e) => {
+                          children: S.map((e) => {
                               let { guild: n, nick: s } = e;
                               return (0, i.jsx)(
                                   p.D,

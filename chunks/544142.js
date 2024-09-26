@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return S;
     }
 });
 var i = n(735250);
@@ -41,12 +41,12 @@ function T(e) {
                 });
         });
     }
-    let v = null !== (s = null !== (t = null == T ? void 0 : T.nick) && void 0 !== t ? t : f.ZP.getName(C)) && void 0 !== s ? s : '???',
-        S = null == T ? void 0 : T.colorString;
+    let S = null !== (s = null !== (t = null == T ? void 0 : T.nick) && void 0 !== t ? t : f.ZP.getName(C)) && void 0 !== s ? s : '???',
+        v = null == T ? void 0 : T.colorString;
     return null == C
         ? (0, i.jsx)('span', {
               className: a()(I.threadCreatorName, I.unknownCreatorName),
-              children: v
+              children: S
           })
         : (0, i.jsx)(u.Gt, {
               value: g,
@@ -72,8 +72,8 @@ function T(e) {
                           className: I.threadCreatorName,
                           onContextMenu: x,
                           children: (0, i.jsx)(r.NameWithRole, {
-                              name: v,
-                              color: null != S ? S : void 0
+                              name: S,
+                              color: null != v ? v : void 0
                           })
                       })
               })
@@ -114,7 +114,7 @@ function x(e) {
               ]
           });
 }
-function v(e) {
+function S(e) {
     var t;
     let { channel: n } = e,
         s = null !== (t = (0, d.KS)(n)) && void 0 !== t ? t : r.ThreadIcon;

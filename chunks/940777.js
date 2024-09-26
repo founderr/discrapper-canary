@@ -87,8 +87,8 @@ function y() {
                 })
             );
         })(j),
-        H = U > 0 ? (0, m.N)(U) : null,
-        V = l.useCallback(() => {
+        V = U > 0 ? (0, m.N)(U) : null,
+        H = l.useCallback(() => {
             r();
         }, [r]);
     return (0, i.jsxs)(f.H, {
@@ -100,12 +100,12 @@ function y() {
                 className: R.pill
             }),
             (0, i.jsx)(b.Z, {
-                onShow: V,
+                onShow: H,
                 children: (0, i.jsx)(T.S, {
                     children: (0, i.jsx)(c.BlobMask, {
                         selected: w || y,
                         upperBadge: B,
-                        lowerBadge: H,
+                        lowerBadge: V,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
                             ariaLabel: M.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({

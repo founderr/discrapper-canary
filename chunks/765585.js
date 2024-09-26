@@ -15,7 +15,7 @@ t.Z = l.forwardRef(function (e, t) {
         G = v ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
         [w, U] = l.useState(!1),
         { ref: k, width: B } = (0, o.Z)();
-    function H(e) {
+    function V(e) {
         (0, c.EW)(T, { dismissAction: e });
     }
     return (
@@ -104,7 +104,7 @@ t.Z = l.forwardRef(function (e, t) {
                                               className: p.button,
                                               size: G,
                                               onClick: (e) => {
-                                                  null == E || E(e), I(e), H(d.L.PRIMARY);
+                                                  null == E || E(e), I(e), V(d.L.PRIMARY);
                                               },
                                               color: S || R ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
                                               children: null != g ? g : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
@@ -114,7 +114,7 @@ t.Z = l.forwardRef(function (e, t) {
                                                   className: p.button,
                                                   size: G,
                                                   onClick: (e) => {
-                                                      null == E || E(e), H(d.L.DISMISS);
+                                                      null == E || E(e), V(d.L.DISMISS);
                                                   },
                                                   color: S || R ? s.Button.Colors.WHITE : s.Button.Colors.BRAND,
                                                   look: S || R ? s.Button.Looks.LINK : s.Button.Looks.FILLED,
@@ -126,7 +126,7 @@ t.Z = l.forwardRef(function (e, t) {
                                       className: p.button,
                                       size: s.Button.Sizes.MAX,
                                       onClick: (e) => {
-                                          null == E || E(e), H(d.L.PRIMARY);
+                                          null == E || E(e), V(d.L.PRIMARY);
                                       },
                                       color: s.Button.Colors.WHITE,
                                       children: h.Z.Messages.EDUCATION_NEW_FEATURE_CONFIRM

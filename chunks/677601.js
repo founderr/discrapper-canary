@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(410575),
     T = n(393238),
     x = n(110924),
-    v = n(40851),
-    S = n(115130),
+    S = n(40851),
+    v = n(115130),
     N = n(317381),
     A = n(596040),
     Z = n(349619),
@@ -73,8 +73,8 @@ var i = n(735250),
     eI = n(414910),
     eT = n(887012),
     ex = n(909820),
-    ev = n(493010),
-    eS = n(742603),
+    eS = n(493010),
+    ev = n(742603),
     eN = n(221888),
     eA = n(900211),
     eZ = n(18759),
@@ -298,7 +298,7 @@ class eD extends s.PureComponent {
                     children:
                         a &&
                         (!u || !this.popoutOpen || this.inPopout) &&
-                        (0, i.jsx)(ev.Z, {
+                        (0, i.jsx)(eS.Z, {
                             channel: t,
                             guild: n,
                             maxWidth: o
@@ -646,7 +646,7 @@ class eD extends s.PureComponent {
                                       ? null == e
                                           ? void 0
                                           : e()
-                                      : (0, i.jsx)(eS.Z, {
+                                      : (0, i.jsx)(ev.Z, {
                                             channel: t,
                                             guild: n,
                                             appContext: s,
@@ -668,7 +668,7 @@ t.Z = function (e) {
         { width: r = 0, ref: o } = (0, T.Z)(),
         { width: d = 0, height: m = 0, ref: p } = (0, T.Z)(),
         { ref: _ } = (0, T.Z)(),
-        f = (0, v.bp)(),
+        f = (0, S.bp)(),
         E = (0, O.Z)(),
         C = (0, c.e7)([eu.Z], () => {
             var e;
@@ -725,10 +725,10 @@ t.Z = function (e) {
         }, []),
         et = null !== (t = null == F ? void 0 : F.id) && void 0 !== t ? t : null,
         en = (0, A.Z)(et, n.id),
-        ed = (0, c.e7)([S.Z], () => S.Z.getFetchState(), []),
+        ed = (0, c.e7)([v.Z], () => v.Z.getFetchState(), []),
         eh = (0, x.Z)(ed);
     s.useEffect(() => {
-        ed === S.O.ERROR && eh !== S.O.ERROR && (0, h.showToast)((0, h.createToast)(eL.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, h.ToastType.FAILURE));
+        ed === v.O.ERROR && eh !== v.O.ERROR && (0, h.showToast)((0, h.createToast)(eL.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, h.ToastType.FAILURE));
     }, [ed, eh]);
     let em = (0, c.e7)([N.ZP], () => N.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     s.useEffect(() => {
