@@ -223,5 +223,6 @@ t.Z = {
             oldFormErrors: !0
         });
         return u.Z.checkGuildTemplateDirty(e), o;
-    }
+    },
+    fetchChannel: async (e) => (await i.tn.get(S.ANM.CHANNEL(e))).body
 };
