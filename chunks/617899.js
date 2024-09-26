@@ -9,7 +9,7 @@ var i = n(735250),
     d = n(921944),
     u = n(689938),
     _ = n(589148);
-function E(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function E(e, t, n) {
         e
     );
 }
-class h extends a.PureComponent {
+class E extends a.PureComponent {
     render() {
         let e = ''.concat(u.Z.Messages.INVITE_NOTICE_MESSAGE, '\n').concat(u.Z.Messages.INVITE_NOTICE_MESSAGE_PART_2);
         return (0, i.jsx)(o.Z, {
@@ -39,7 +39,7 @@ class h extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'handleInvite', () => {
+            h(this, 'handleInvite', () => {
                 let { guild: e } = this.props;
                 (0, s.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
@@ -51,10 +51,10 @@ class h extends a.PureComponent {
                         });
                 });
             }),
-            E(this, 'handleClose', () => {
+            h(this, 'handleClose', () => {
                 let e = l.Z.getChannelId();
                 this.props.markAsDismissed(d.L.UNKNOWN), null != e && r.Z.sendBotMessage(e, u.Z.Messages.HOW_TO_INVITE_OTHERS.format({ invitePeople: u.Z.Messages.INVITE_PEOPLE }));
             });
     }
 }
-t.Z = h;
+t.Z = E;

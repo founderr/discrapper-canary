@@ -14,14 +14,14 @@ var a = n(120356),
     d = n(63063),
     u = n(13140),
     _ = n(435064),
-    E = n(39604),
-    h = n(356659),
+    h = n(39604),
+    E = n(356659),
     m = n(981631),
     I = n(332325),
     g = n(689938),
     p = n(321500);
 function T(e) {
-    (0, o.Z)(I.Z.CLIPS), (0, E.UW)(e);
+    (0, o.Z)(I.Z.CLIPS), (0, h.UW)(e);
 }
 function S() {
     let e = (0, r.e7)([c.Z], () => c.Z.getKeybindForAction(m.kg4.SAVE_CLIP));
@@ -39,7 +39,7 @@ function S() {
     });
 }
 let f = {
-    [h.D5.Error]: {
+    [E.D5.Error]: {
         textColor: 'text-primary',
         buttonLook: l.Button.Looks.FILLED,
         buttonColor: l.Button.Colors.PRIMARY,
@@ -60,22 +60,22 @@ let f = {
         },
         containerClass: p.container
     },
-    [h.D5.Disabled]: {
+    [E.D5.Disabled]: {
         textColor: 'text-primary',
         buttonLook: l.Button.Looks.FILLED,
         buttonColor: l.Button.Colors.BRAND,
         bodyCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
         buttonCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-        ctaOnClick: () => T(h.D5.Disabled),
+        ctaOnClick: () => T(E.D5.Disabled),
         containerClass: p.container
     },
-    [h.D5.Enabled]: {
+    [E.D5.Enabled]: {
         textColor: 'always-white',
         buttonLook: l.Button.Looks.FILLED,
         buttonColor: l.Button.Colors.BRAND_INVERTED,
         bodyCopy: () => (0, i.jsx)(S, {}),
         buttonCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-        ctaOnClick: () => T(h.D5.Enabled),
+        ctaOnClick: () => T(E.D5.Enabled),
         containerClass: s()(p.container, p.containerEnabled)
     }
 };
@@ -85,7 +85,7 @@ function C() {
         decoupledClipsEnabled: _.Z.getSettings().decoupledClipsEnabled,
         clipsError: _.Z.getLastClipsError()
     }));
-    let a = ((e = t), null != n ? h.D5.Error : e ? h.D5.Enabled : h.D5.Disabled),
+    let a = ((e = t), null != n ? E.D5.Error : e ? E.D5.Enabled : E.D5.Disabled),
         { bodyCopy: s, buttonCopy: o, ctaOnClick: c, textColor: d, buttonColor: u, buttonLook: m, containerClass: I } = f[a];
     return (0, i.jsxs)('div', {
         className: I,
@@ -96,7 +96,7 @@ function C() {
                 children: s()
             }),
             (0, i.jsx)(l.Button, {
-                onClick: () => (0, E.UW)(a),
+                onClick: () => (0, h.UW)(a),
                 size: l.Button.Sizes.NONE,
                 look: l.Button.Looks.BLANK,
                 className: p.buttonClose,

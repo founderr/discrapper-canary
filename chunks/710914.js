@@ -37,10 +37,10 @@ function u(e) {
             }
     }, [n, u]);
     let _ = null != u,
-        [E, h] = a.useState(window.innerWidth);
+        [h, E] = a.useState(window.innerWidth);
     a.useEffect(() => {
         let e = () => {
-            h(window.innerWidth);
+            E(window.innerWidth);
         };
         return (
             window.addEventListener('resize', e),
@@ -49,7 +49,7 @@ function u(e) {
             }
         );
     }, []);
-    let m = (t = E) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
+    let m = (t = h) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
     return s && 0 === n.length
         ? (0, i.jsx)(l.Spinner, { className: d.spinner })
         : (0, i.jsx)(

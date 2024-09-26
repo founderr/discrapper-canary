@@ -9,18 +9,18 @@ var a = n(526629),
     d = n(51382),
     u = n(91326),
     _ = n(503856),
-    E = n(981631);
-function h(e) {
+    h = n(981631);
+function E(e) {
     let { channel: t, guild: n } = e,
         o = (0, s.e7)([l.qc], () => l.qc.hasHotspot(l.v6.HUB_STUDY_ROOM_NOTICE)),
         c = (0, _.r)(t.guild_id),
-        E = (0, r.useSpring)({
+        h = (0, r.useSpring)({
             maxHeight: c ? 0 : 300,
             overflow: 'hidden',
             delay: 400
         });
     return (0, i.jsx)(a.animated.div, {
-        style: E,
+        style: h,
         children: o
             ? (0, i.jsx)(d.Z, {
                   channel: t,
@@ -35,9 +35,9 @@ function h(e) {
 t.Z = function (e) {
     let { guild: t } = e,
         n = (0, s.e7)([o.ZP], () => o.ZP.getChannels(t.id)[o.Zb][0]),
-        a = (0, s.e7)([c.Z], () => null != n && c.Z.can(E.Plq.CONNECT, n.channel));
-    return t.hasFeature(E.oNc.HUB) && null != n && a
-        ? (0, i.jsx)(h, {
+        a = (0, s.e7)([c.Z], () => null != n && c.Z.can(h.Plq.CONNECT, n.channel));
+    return t.hasFeature(h.oNc.HUB) && null != n && a
+        ? (0, i.jsx)(E, {
               channel: n.channel,
               guild: t
           })

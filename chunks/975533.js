@@ -8,8 +8,8 @@ var i = n(570140),
     d = n(924557),
     u = n(39604),
     _ = n(569545),
-    E = n(722835),
-    h = n(703656),
+    h = n(722835),
+    E = n(703656),
     m = n(641015),
     I = n(183584),
     g = n(199902),
@@ -125,7 +125,7 @@ let Z = {
         onTrigger() {
             let e = g.Z.getCurrentUserActiveStream();
             if (null != e) return (0, l.g)((0, _.V9)(e));
-            (0, E.Z)();
+            (0, h.Z)();
         },
         keyEvents: {
             keyup: !0,
@@ -142,7 +142,7 @@ let Z = {
         }
     },
     [A.kg4.NAVIGATE_BACK]: {
-        onTrigger: () => (0, h.op)(),
+        onTrigger: () => (0, E.op)(),
         keyEvents: {
             keyup: !0,
             keydown: !1,
@@ -151,7 +151,7 @@ let Z = {
         }
     },
     [A.kg4.NAVIGATE_FORWARD]: {
-        onTrigger: () => (0, h.eH)(),
+        onTrigger: () => (0, E.eH)(),
         keyEvents: {
             keyup: !0,
             keydown: !1,

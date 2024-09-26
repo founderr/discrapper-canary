@@ -16,8 +16,8 @@ var i,
     d = n(566620),
     u = n(403404),
     _ = n(100527),
-    E = n(906732),
-    h = n(70097),
+    h = n(906732),
+    E = n(70097),
     m = n(592125),
     I = n(626135),
     g = n(981631),
@@ -104,13 +104,13 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         };
                 }
             })(i),
-            { analyticsLocations: P } = (0, E.ZP)(a);
+            { analyticsLocations: P } = (0, h.ZP)(a);
         r.useEffect(() => {
             I.default.track(g.rMx.TOOLTIP_VIEWED, { type: N });
         }, [N]);
         let M = (0, c.bp)() === g.IlC.POPOUT,
             D = (0, l.e7)([m.Z], () => m.Z.getChannel(t), [t]);
-        return (0, s.jsx)(E.Gt, {
+        return (0, s.jsx)(h.Gt, {
             value: P,
             children: (0, s.jsx)('div', {
                 className: S.wrapper,
@@ -119,7 +119,7 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                     children: (0, s.jsxs)('div', {
                         className: S.content,
                         children: [
-                            (0, s.jsx)(h.Z, {
+                            (0, s.jsx)(E.Z, {
                                 className: S.video,
                                 src: x,
                                 poster: O,

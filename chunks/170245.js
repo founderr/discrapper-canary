@@ -8,17 +8,17 @@ var a = n(120356),
     c = n(699516),
     d = n(263443);
 t.Z = function (e) {
-    let { user: t, hovered: n, subText: a, showAccountIdentifier: u, status: _, isMobile: E, className: h } = e,
+    let { user: t, hovered: n, subText: a, showAccountIdentifier: u, status: _, isMobile: h, className: E } = e,
         m = (0, r.e7)([c.Z], () => c.Z.getNickname(t.id));
     return (0, i.jsxs)('div', {
-        className: s()(d.userInfo, h, { [d.hovered]: n }),
+        className: s()(d.userInfo, E, { [d.hovered]: n }),
         children: [
             (0, i.jsx)(o.Z, {
                 user: t,
                 className: d.avatar,
                 animate: n,
                 status: _,
-                isMobile: E
+                isMobile: h
             }),
             (0, i.jsxs)('div', {
                 className: d.text,

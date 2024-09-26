@@ -21,8 +21,8 @@ function u(e, t, n) {
     );
 }
 let _ = -1 / 0,
-    E = new r.Z('MessagePreviewStore');
-class h extends i.ZP.Store {
+    h = new r.Z('MessagePreviewStore');
+class E extends i.ZP.Store {
     isLatest(e, t) {
         var n;
         let i = this.guilds.get(null != e ? e : null);
@@ -105,13 +105,13 @@ class h extends i.ZP.Store {
     }
     handleMessagePreviewsLoaded(e) {
         if (!(0, l.cn)()) return;
-        E.verbose('adding remote previews (guildId: '.concat(e.guildId, ', messages: ').concat(e.messages.length, ')'));
+        h.verbose('adding remote previews (guildId: '.concat(e.guildId, ', messages: ').concat(e.messages.length, ')'));
         let t = this.data(e.guildId);
         for (let n of e.messages) !t.isLatest(n.channel_id, this.generation) && t.put(n.channel_id, n, this.generation);
     }
     handleMessagePreviewsLocallyLoaded(e) {
         if (!(0, l.cn)()) return;
-        E.verbose('adding local previews (guildId: '.concat(e.guildId, ', messages: ').concat(e.messages.length, ')'));
+        h.verbose('adding local previews (guildId: '.concat(e.guildId, ', messages: ').concat(e.messages.length, ')'));
         let t = this.data(e.guildId);
         for (let [n, i] of e.messages) !t.has(n) && t.put(n, i, _);
         t.localNeeded = !1;
@@ -138,4 +138,4 @@ class h extends i.ZP.Store {
             u(this, 'generation', 0);
     }
 }
-new h();
+new E();

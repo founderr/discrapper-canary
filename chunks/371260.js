@@ -13,11 +13,11 @@ let d = {
 };
 t.Z = function (e) {
     let { animate: t, state: n, cleanUp: u, children: _ } = e,
-        E = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
-        h = a.useMemo(() => {
+        h = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
+        E = a.useMemo(() => {
             var e, i, a;
             return (
-                (e = !1 !== t && !E),
+                (e = !1 !== t && !h),
                 (i = n),
                 (a = u),
                 e
@@ -37,8 +37,8 @@ t.Z = function (e) {
                           }
                     : { opacity: 1 }
             );
-        }, [t, u, E, n]),
-        m = (0, l.useSpring)(h);
+        }, [t, u, h, n]),
+        m = (0, l.useSpring)(E);
     return (0, i.jsx)(s.animated.div, {
         style: m,
         className: c.transitionItem,

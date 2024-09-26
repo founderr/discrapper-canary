@@ -14,8 +14,8 @@ var i,
     d = n(692547),
     u = n(481060),
     _ = n(232567),
-    E = n(100527),
-    h = n(471445),
+    h = n(100527),
+    E = n(471445),
     m = n(15274),
     I = n(924301),
     g = n(504160),
@@ -77,11 +77,11 @@ function w(e) {
     } = r.useMemo(
         () =>
             (function (e) {
-                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: a, myRole: r, eventCreator: l, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: _, isStudyRoomNotice: E } = e,
+                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: a, myRole: r, eventCreator: l, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: _, isStudyRoomNotice: h } = e,
                     m = null != n && null != i && !_,
                     p = null != t ? (0, N.DK)(t) : null;
-                if (E && null != i) {
-                    let e = (0, h.KS)(i);
+                if (h && null != i) {
+                    let e = (0, E.KS)(i);
                     return {
                         noticeType: 3,
                         title: '\uD83D\uDCDA\u2615 '.concat(i.name),
@@ -230,7 +230,7 @@ function w(e) {
                                       })
                         };
                     } else if (t.entity_type === j.WX.VOICE && null != i) {
-                        let e = (0, h.KS)(i),
+                        let e = (0, E.KS)(i),
                             n = I.ZP.getUserCount(t.id, p);
                         return {
                             noticeType: 2,
@@ -334,7 +334,7 @@ function w(e) {
                                                   ...n,
                                                   userId: e.id,
                                                   guildId: t.id,
-                                                  newAnalyticsLocations: [E.Z.AVATAR]
+                                                  newAnalyticsLocations: [h.Z.AVATAR]
                                               }),
                                           position: 'right',
                                           children: (n) =>

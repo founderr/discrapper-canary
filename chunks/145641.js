@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(617015),
     u = n(522756);
 t.Z = function (e) {
-    let { statusSections: t, renderRow: n, searchQuery: _, footer: E } = e,
-        h = (e) => {
+    let { statusSections: t, renderRow: n, searchQuery: _, footer: h } = e,
+        E = (e) => {
             let { section: i, row: a } = e,
                 s = t[i];
             if (null == s || null == a) return null;
@@ -67,13 +67,13 @@ t.Z = function (e) {
                                 (I.current = e), (n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
                             },
                             sectionHeight: 0,
-                            renderRow: h,
+                            renderRow: E,
                             rowHeight: d.NV,
                             sections: t.map((e) => ('' !== _ && 0 === e.length ? e.length + 1 : e.length)),
                             className: u.peopleList,
                             ...a
                         }),
-                        E
+                        h
                     ]
                 });
             }

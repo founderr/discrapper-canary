@@ -42,8 +42,8 @@ var i = n(399606),
     G = n(977341),
     w = n(660372),
     y = n(926433),
-    H = n(302036),
-    k = n(994554),
+    k = n(302036),
+    H = n(994554),
     F = n(704565),
     V = n(393305),
     W = n(338879),
@@ -411,14 +411,14 @@ t.Z = () => {
                 name: 'customSoundsEverywhere',
                 title: j.Z.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
                 subtitle: j.Z.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-                perkImage: (0, v.gx)(t, y, H),
+                perkImage: (0, v.gx)(t, y, k),
                 description: j.Z.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
             },
             specialStickerAccess: {
                 name: 'specialStickerAccess',
                 title: j.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 subtitle: j.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                perkImage: (0, v.gx)(t, k, ec),
+                perkImage: (0, v.gx)(t, H, ec),
                 description: j.Z.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO
             },
             largeUploads: {

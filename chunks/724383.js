@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(728345),
     u = n(812206),
     _ = n(252618),
-    E = n(207796),
-    h = n(352057),
+    h = n(207796),
+    E = n(352057),
     m = n(319443),
     I = n(106075),
     g = n(121711),
@@ -32,25 +32,25 @@ function A(e) {
     return (
         a.useEffect(() => {
             (0, o.j)(() => {
-                S.d.setState({ selectedTab: C.F$.SERVERS }), E.GN.setState({ mode: E.v0.DISCOVERY });
+                S.d.setState({ selectedTab: C.F$.SERVERS }), h.GN.setState({ mode: h.v0.DISCOVERY });
             }),
                 null != n &&
                     null == r &&
                     ((0, o.j)(() => {
-                        E.GN.setState({ loadingGameApplication: !0 });
+                        h.GN.setState({ loadingGameApplication: !0 });
                     }),
                     d.Z.fetchApplication(n).finally(() => {
                         (0, o.j)(() => {
-                            E.GN.setState({ loadingGameApplication: !1 });
+                            h.GN.setState({ loadingGameApplication: !1 });
                         });
                     })),
-                null != n && null != r && E.GN.getState().setSelectedGames([n]);
+                null != n && null != r && h.GN.getState().setSelectedGames([n]);
         }, [r, n]),
         (0, i.jsx)(v, {})
     );
 }
 function v() {
-    let e = (0, h.h)({ location: 'DiscoveryUISelectedTab' }),
+    let e = (0, E.h)({ location: 'DiscoveryUISelectedTab' }),
         t = (0, S.d)((e) => e.selectedTab, l.Z),
         n = (function (e) {
             switch (e) {

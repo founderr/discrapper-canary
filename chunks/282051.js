@@ -21,7 +21,7 @@ function d(e) {
             },
             [t, u]
         ),
-        E = a.useCallback(() => {
+        h = a.useCallback(() => {
             null == n || n(), null == u || u(l.L.SECONDARY);
         }, [n, u]);
     return (0, i.jsxs)('div', {
@@ -51,7 +51,7 @@ function d(e) {
                         fullWidth: !0,
                         size: s.Button.Sizes.SMALL,
                         look: s.Button.Looks.BLANK,
-                        onClick: E,
+                        onClick: h,
                         children: o.Z.Messages.NO_THANKS
                     })
                 ]

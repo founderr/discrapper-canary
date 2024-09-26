@@ -75,8 +75,8 @@ function f(e) {
         G = (0, T.iQ)(A),
         w = !(0, T.zi)(A),
         y = (0, _._Q)(A),
-        H = (0, T.zK)(A, m.S7.IN_HOUSE_CONSOLE_QUEST),
-        k = (0, T.Xv)(A.config),
+        k = (0, T.zK)(A, m.S7.IN_HOUSE_CONSOLE_QUEST),
+        H = (0, T.Xv)(A.config),
         F = (0, _.Rf)(A),
         [V, W, K] = (0, _.me)(A, F),
         Y = w && y === _.OH.ACCEPTED,
@@ -91,9 +91,9 @@ function f(e) {
         { text: X, onClick: J } = (0, I.Ks)({
             progressState: y,
             quest: A,
-            isInHouseQuest: H,
+            isInHouseQuest: k,
             location: S,
-            isCollectibleQuest: k,
+            isCollectibleQuest: H,
             questContentPosition: h,
             questContentRowIndex: x,
             inGiftInventory: !0

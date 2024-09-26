@@ -16,8 +16,8 @@ var i = n(735250),
     d = n(239091),
     u = n(749210),
     _ = n(410030),
-    E = n(726542),
-    h = n(884338),
+    h = n(726542),
+    E = n(884338),
     m = n(367907),
     I = n(313201),
     g = n(598077),
@@ -128,7 +128,7 @@ t.default = function (e) {
                                                       })
                                                     : null;
                                         } else {
-                                            let t = E.Z.get(e.connection_type);
+                                            let t = h.Z.get(e.connection_type);
                                             l = (0, i.jsx)('img', {
                                                 src: (0, o.ap)(j) ? t.icon.lightSVG : t.icon.darkSVG,
                                                 alt: '',
@@ -197,7 +197,7 @@ t.default = function (e) {
                                                     : null
                                             ]
                                         }),
-                                        (0, i.jsx)(h.Z, {
+                                        (0, i.jsx)(E.Z, {
                                             showUserPopout: !1,
                                             guildId: t,
                                             users: l.map(() => null),

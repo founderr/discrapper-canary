@@ -9,8 +9,8 @@ var i = n(392711),
     d = n(592125),
     u = n(430824),
     _ = n(496675),
-    E = n(944486),
-    h = n(979651),
+    h = n(944486),
+    E = n(979651),
     m = n(934415),
     I = n(996106),
     g = n(914946),
@@ -94,7 +94,7 @@ t.Z = {
                 args: { channel_id: i, timeout: a = 0, force: s = !1, navigate: r = !1 }
             } = e;
             if (!i) return l.default.selectVoiceChannel(null), null;
-            let p = E.Z.getVoiceChannelId();
+            let p = h.Z.getVoiceChannelId();
             if (null != p && p !== i && !1 === s) throw new I.Z({ errorCode: f.lTL.SELECT_VOICE_FORCE_REQUIRED }, 'User is already joined to a voice channel.');
             return t
                 .storeWait(n, () => d.Z.getChannel(i), a)
@@ -109,7 +109,7 @@ t.Z = {
                 .then((e) => {
                     let [t, n] = e;
                     if (n.guild_id) {
-                        if ((0, m.rY)(t, h.Z, u.Z)) throw new I.Z({ errorCode: f.lTL.INVALID_CHANNEL }, 'Channel is full');
+                        if ((0, m.rY)(t, E.Z, u.Z)) throw new I.Z({ errorCode: f.lTL.INVALID_CHANNEL }, 'Channel is full');
                         if (!_.Z.can(f.Plq.CONNECT, t)) throw new I.Z({ errorCode: f.lTL.INVALID_PERMISSIONS }, 'Connect permission required to join channel');
                     }
                     return l.default.selectVoiceChannel(t.id), r && (0, o.dL)(f.Z5c.CHANNEL(t.guild_id, t.id)), n;
@@ -122,7 +122,7 @@ t.Z = {
         },
         handler(e) {
             let { socket: t } = e,
-                n = E.Z.getVoiceChannelId(),
+                n = h.Z.getVoiceChannelId(),
                 i = null != n ? d.Z.getChannel(n) : null;
             return null != i ? (0, g.T5)(i, (0, g.zM)(i, t.application.id, t.authorization.scopes)) : null;
         }

@@ -10,8 +10,8 @@ var a = n(481060),
     d = n(944486),
     u = n(556296),
     _ = n(131468),
-    E = n(208049),
-    h = n(763296),
+    h = n(208049),
+    E = n(763296),
     m = n(641015),
     I = n(22382),
     g = n(747071),
@@ -58,21 +58,21 @@ class C extends _.Z {
                     i = arguments.length > 2 ? arguments[2] : void 0,
                     a = arguments.length > 3 ? arguments[3] : void 0,
                     s = null != a && d.Z.getVoiceChannelId() === a;
-                if ((null == a || s) && !c.Z.isDeaf() && !h.Z.isLocalSoundboardMuted(i))
+                if ((null == a || s) && !c.Z.isDeaf() && !E.Z.isLocalSoundboardMuted(i))
                     try {
                         let a = {
                             soundKey: ''.concat(i, '-').concat(e),
                             soundURL: (0, I.Z)(e),
                             soundVolume: (0, g.Z)(n),
-                            reportSoundStartedPlaying: () => (0, E.xR)(e, i)
+                            reportSoundStartedPlaying: () => (0, h.xR)(e, i)
                         };
                         c.Z.supports(S.AN.SAMPLE_PLAYBACK) ? await (0, p.$)(a) : await (0, p.h)(a, t.playingSoundsWeb);
                     } finally {
-                        (0, E.R)(e, i);
+                        (0, h.R)(e, i);
                     }
             }),
             f(this, '_handleOverlaySoundboardSoundsFetchRequest', () => {
-                (0, E.w)();
+                (0, h.w)();
             }),
             f(this, '_handleOpenEducationModal', (e, t) => {
                 if (null == e) return;

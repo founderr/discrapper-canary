@@ -66,8 +66,8 @@ var i,
     d = n(155268),
     u = n(454585),
     _ = n(739566),
-    E = n(695346),
-    h = n(131704),
+    h = n(695346),
+    E = n(131704),
     m = n(598077),
     I = n(592125),
     g = n(430824),
@@ -114,7 +114,7 @@ function G(e, t) {
     let n = [],
         i = e.getGuildId();
     return (
-        ![O.d4z.GUILD_CATEGORY, ...h.tx].includes(e.type) &&
+        ![O.d4z.GUILD_CATEGORY, ...E.tx].includes(e.type) &&
             n.push(
                 new Promise((t) => {
                     T.Z.whenReady(e.id, () => t()),
@@ -229,7 +229,7 @@ function Y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { instance: n, secrets: i, party: a } = e,
         s = 0;
-    return (n && (s |= O.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (s |= O.xjy.JOIN), t) ? ((s |= O.xjy.EMBEDDED), (s |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == a ? void 0 : a.privacy) === O.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (E.cP.getSetting() && (s |= O.xjy.PARTY_PRIVACY_FRIENDS), E.Ou.getSetting() && (s |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), s);
+    return (n && (s |= O.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (s |= O.xjy.JOIN), t) ? ((s |= O.xjy.EMBEDDED), (s |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == a ? void 0 : a.privacy) === O.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (h.cP.getSetting() && (s |= O.xjy.PARTY_PRIVACY_FRIENDS), h.Ou.getSetting() && (s |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), s);
 }
 function W(e, t, n) {
     if (e === O.mFx.JOIN) return null != t && null != t.id && null != n.join;

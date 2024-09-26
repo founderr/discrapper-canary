@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(986332),
     u = n(428695),
     _ = n(981631),
-    E = n(689938),
-    h = n(768336);
+    h = n(689938),
+    E = n(768336);
 let m = r().debounce(o.ZP.trackWithMetadata, 500),
     I = (e) => {
         let { guild: t, title: n, message: s, image: r, type: d, imageMarginX: u, imageMarginTop: I, trackingSource: g, undismissable: p, onDismissed: T, onClick: S, cta: f, ctaColor: C } = e;
@@ -24,7 +24,7 @@ let m = r().debounce(o.ZP.trackWithMetadata, 500),
             ? (N = f())
             : null != f &&
               (N = (0, i.jsx)(l.Button, {
-                  className: h.btn,
+                  className: E.btn,
                   size: l.Button.Sizes.SMALL,
                   onClick: () => {
                       null != d &&
@@ -41,7 +41,7 @@ let m = r().debounce(o.ZP.trackWithMetadata, 500),
               }));
         let A = null != u ? ''.concat(u, 'px') : '16px';
         return (0, i.jsxs)('div', {
-            className: h.channelNotice,
+            className: E.channelNotice,
             children: [
                 !0 === p
                     ? null
@@ -49,34 +49,34 @@ let m = r().debounce(o.ZP.trackWithMetadata, 500),
                           onClick: () => {
                               o.ZP.trackWithMetadata(_.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == T || T();
                           },
-                          className: h.close,
-                          'aria-label': E.Z.Messages.DISMISS,
+                          className: E.close,
+                          'aria-label': h.Z.Messages.DISMISS,
                           children: (0, i.jsx)(l.XSmallIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: h.closeIcon
+                              className: E.closeIcon
                           })
                       }),
                 (0, i.jsx)('div', {
-                    className: h.imageContainer,
+                    className: E.imageContainer,
                     style: {
                         marginTop: ''.concat(I, 'px'),
                         marginLeft: A,
                         marginRight: A
                     },
                     children: (0, i.jsx)('img', {
-                        className: h.image,
+                        className: E.image,
                         src: r,
                         alt: ''
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: h.message,
+                    className: E.message,
                     children: [
                         null != n
                             ? (0, i.jsx)(l.Heading, {
                                   variant: 'heading-md/semibold',
-                                  className: h.title,
+                                  className: E.title,
                                   children: n
                               })
                             : null,

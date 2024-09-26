@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(788307),
     u = n(2052),
     _ = n(393238),
-    E = n(727637),
-    h = n(100527),
+    h = n(727637),
+    E = n(100527),
     m = n(906732),
     I = n(676035),
     g = n(440051),
@@ -167,19 +167,19 @@ function ea(e) {
         es = __OVERLAY__,
         er = (0, v.ZP)(V.id),
         el = (0, u.O)(),
-        { analyticsLocations: eo } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
+        { analyticsLocations: eo } = (0, m.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT),
         ec = (0, C.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: V.id
         }),
         { ref: ed } = (0, _.Z)(),
-        eu = (0, E.Z)(ed);
+        eu = (0, h.Z)(ed);
     a.useEffect(() => {
         null == ea || ea(ed.current);
     }, [ed, ea]);
     let e_ = (0, o.e7)([k.Z], () => k.Z.getStatus(V.id)),
-        eE = (0, o.e7)([B.Z], () => B.Z.hidePersonalInformation),
-        eh = (0, p.p)(),
+        eh = (0, o.e7)([B.Z], () => B.Z.hidePersonalInformation),
+        eE = (0, p.p)(),
         em = w.Sb.useSetting(),
         eI = (0, I.a)(),
         eg = (function (e) {
@@ -392,7 +392,7 @@ function ea(e) {
                                 (0, i.jsx)(G.Z, {
                                     user: V,
                                     bio: null == er ? void 0 : er.bio,
-                                    hidePersonalInformation: eE,
+                                    hidePersonalInformation: eh,
                                     onClose: W
                                 }),
                                 (0, i.jsx)(x.Z, {
@@ -432,7 +432,7 @@ function ea(e) {
                                                                 status: e_,
                                                                 size: 12
                                                             }),
-                                                        hint: (eh || e_ === Q.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
+                                                        hint: (eE || e_ === Q.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
                                                         renderSubmenu: r.tq
                                                             ? void 0
                                                             : (e) => {

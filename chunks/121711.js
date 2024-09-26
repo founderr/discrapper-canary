@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(175307),
     u = n(17845),
     _ = n(374939),
-    E = n(611928),
-    h = n(922122),
+    h = n(611928),
+    E = n(922122),
     m = n(283293),
     I = n(63063),
     g = n(113434),
@@ -48,12 +48,12 @@ t.Z = function () {
     return (0, i.jsxs)('div', {
         className: Z.container,
         children: [
-            (0, i.jsxs)(E.ZP, {
+            (0, i.jsxs)(h.ZP, {
                 children: [
                     (0, i.jsx)('div', { className: Z.dragRegion }),
-                    (0, i.jsx)(E.z6, { scrollPosition: R }),
-                    (0, i.jsx)(E.aV, { icon: r.QuestsIcon }),
-                    (0, i.jsx)(h.Z, {
+                    (0, i.jsx)(h.z6, { scrollPosition: R }),
+                    (0, i.jsx)(h.aV, { icon: r.QuestsIcon }),
+                    (0, i.jsx)(E.Z, {
                         tabs: e,
                         selectedTab: t,
                         onTabSelect: n

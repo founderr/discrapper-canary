@@ -44,8 +44,8 @@ let D = new A.Z('CacheStore'),
     G = 0,
     w = !1,
     y = !1,
-    H = !1;
-function k(e) {
+    k = !1;
+function H(e) {
     D.log('Clearing cache store'), (G = Date.now()), d.K.remove(Z.FsG), d.K.remove(Z.ihW), d.K.remove(Z.O42), (j = 'no-cache'), 'CLEAR_CACHES' === e.type && e.preventWritingCachesAgainThisSession && (U = !0);
 }
 async function F(e, t, n) {
@@ -359,7 +359,7 @@ class q extends (s = c.ZP.Store) {
         return G;
     }
     canWriteCaches(e) {
-        return (0, O.$8)() ? (U ? (D.log('Not writing cache because caches cleared'), !1) : !!e || !!H || (D.log('Not writing cache because never connected'), !1)) : (D.log('Not writing cache because not authenticated'), !1);
+        return (0, O.$8)() ? (U ? (D.log('Not writing cache because caches cleared'), !1) : !!e || !!k || (D.log('Not writing cache because never connected'), !1)) : (D.log('Not writing cache because not authenticated'), !1);
     }
     async loadCacheAsync(e, t) {
         let n = (0, P.h)(t);
@@ -405,11 +405,11 @@ class q extends (s = c.ZP.Store) {
         B
             ? {
                   CONNECTION_OPEN: function () {
-                      return (y = !0), (H = !0), !1;
+                      return (y = !0), (k = !0), !1;
                   },
-                  LOGOUT: k,
+                  LOGOUT: H,
                   CONNECTION_CLOSED: function () {
-                      return (y = !1), (H = !0), !1;
+                      return (y = !1), (k = !0), !1;
                   },
                   CACHE_LOADED: function () {
                       w = !0;
@@ -420,7 +420,7 @@ class q extends (s = c.ZP.Store) {
                   CACHE_LOADED_LAZY_NO_CACHE: function () {
                       j = 'no-cache';
                   },
-                  CLEAR_CACHES: k,
+                  CLEAR_CACHES: H,
                   WRITE_CACHES: function () {
                       D.verbose('Writing cache now'), (G = Date.now()), (w = !0), d.K.remove(Z.FsG), d.K.remove(Z.O42), d.K.remove(Z.ihW);
                   }

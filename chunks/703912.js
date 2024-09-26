@@ -15,8 +15,8 @@ var i = n(664751),
     d = n(570140),
     u = n(812206),
     _ = n(979200),
-    E = n(489863),
-    h = n(166148),
+    h = n(489863),
+    E = n(166148),
     m = n(307643),
     I = n(973616),
     g = n(594174),
@@ -50,7 +50,7 @@ async function A(e, t, n) {
     let B = null != k && (0, p.yE)(k.flags, C.udG.EMBEDDED) && (null === (i = k.integrationTypesConfig) || void 0 === i ? void 0 : i[a.Y.USER_INSTALL]) != null;
     o = null == j ? (B ? a.Y.USER_INSTALL : a.Y.GUILD_INSTALL) : Number(j);
     try {
-        c = await (0, E.Ww)({
+        c = await (0, h.Ww)({
             clientId: N,
             scopes: w,
             responseType: A,
@@ -71,10 +71,10 @@ async function A(e, t, n) {
         let { body: e } = t;
         throw new S.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'OAuth2 Authorization Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
     }
-    if (D === h.s.NONE && null != c && c.authorized && f)
+    if (D === E.s.NONE && null != c && c.authorized && f)
         try {
             return (
-                await (0, E.Iq)({
+                await (0, h.Iq)({
                     authorize: !0,
                     clientId: N,
                     scopes: w,

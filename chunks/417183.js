@@ -9,7 +9,7 @@ var i = n(735250),
     d = n(239091),
     u = n(617015),
     _ = n(771883);
-function E(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function E(e, t, n) {
         e
     );
 }
-class h extends a.PureComponent {
+class E extends a.PureComponent {
     componentWillLeave(e) {
         l.Z.parallel([
             l.Z.timing(this.state.opacity, {
@@ -51,7 +51,7 @@ class h extends a.PureComponent {
     }
     render() {
         let { height: e, opacity: t, hovered: n, isContextMenuActive: a } = this.state,
-            { children: s, user: d, onClick: u, isActive: E, className: h, activeClassName: m } = this.props;
+            { children: s, user: d, onClick: u, isActive: h, className: E, activeClassName: m } = this.props;
         return (0, i.jsx)(o.mh, {
             id: d.id,
             children: (o) =>
@@ -61,7 +61,7 @@ class h extends a.PureComponent {
                         right: -8
                     },
                     children: (0, i.jsx)(l.Z.div, {
-                        className: r()(h, _.peopleListItem, null != m ? { [m]: E || a } : null, { [_.active]: E || a }),
+                        className: r()(E, _.peopleListItem, null != m ? { [m]: h || a } : null, { [_.active]: h || a }),
                         onContextMenu: (e) => this.handleContextMenu(e, d),
                         onMouseEnter: this.handleMouseEnter,
                         onMouseLeave: this.handleMouseLeave,
@@ -71,28 +71,28 @@ class h extends a.PureComponent {
                             opacity: t
                         },
                         ...o,
-                        children: s(n || E || a)
+                        children: s(n || h || a)
                     })
                 })
         });
     }
     constructor(...e) {
         super(...e),
-            E(this, 'state', {
+            h(this, 'state', {
                 height: new l.Z.Value(u.NV),
                 opacity: new l.Z.Value(1),
                 hovered: !1,
                 isContextMenuActive: !1
             }),
-            E(this, 'handleMouseEnter', () => {
+            h(this, 'handleMouseEnter', () => {
                 let { isFocused: e, isActive: t, onOtherHover: n } = this.props,
                     { isContextMenuActive: i } = this.state;
                 this.setState({ hovered: e }), e && !t && !i && (null == n || n());
             }),
-            E(this, 'handleMouseLeave', () => {
+            h(this, 'handleMouseLeave', () => {
                 this.setState({ hovered: !1 });
             }),
-            E(this, 'handleContextMenu', (e, t) => {
+            h(this, 'handleContextMenu', (e, t) => {
                 this.setState({ isContextMenuActive: !0 }),
                     (0, d.jW)(
                         e,
@@ -113,4 +113,4 @@ class h extends a.PureComponent {
             });
     }
 }
-t.Z = h;
+t.Z = E;

@@ -44,12 +44,12 @@ var s = n(735250),
     G = n(921944),
     w = n(689938),
     y = n(379493);
-let H = {
+let k = {
         [B.dG.REQUESTS]: () => (0, s.jsx)(Z.Z, {}),
         [B.dG.ACTIVITY]: () => (0, s.jsx)(L.Z, {}),
         [B.dG.SETTINGS]: () => (0, s.jsx)(D.Z, {})
     },
-    k = {
+    H = {
         [B.dG.REQUESTS]: () => (0, s.jsx)(Z.Z, {}),
         [B.dG.ACTIVITY]: () => (0, s.jsx)(L.Z, {})
     };
@@ -198,7 +198,7 @@ function W() {
                       id: u,
                       'aria-labelledby': I,
                       className: y.contentPanel,
-                      children: (0, s.jsx)('div', { children: H[u]() })
+                      children: (0, s.jsx)('div', { children: k[u]() })
                   })
               ]
           });
@@ -212,7 +212,7 @@ function K() {
         N = (0, O.M)(),
         L = (0, c.e7)([f.Z], () => f.Z.theme),
         { selectedTab: Z, handleTabChange: D } = (0, b.Z)(),
-        H = (0, m.Dt)(),
+        k = (0, m.Dt)(),
         F = S.default.getCurrentUser(),
         W = null != t,
         K = o && null != F && !W;
@@ -247,7 +247,7 @@ function K() {
     )
         return (0, E.mN)(j.L0.FAMILY_CENTER), null;
     let Y = Z !== B.dG.SETTINGS ? Z : B.dG.ACTIVITY,
-        z = k[Y];
+        z = H[Y];
     return (0, s.jsx)(I.Gt, {
         value: e,
         children: (0, s.jsxs)('main', {
@@ -264,7 +264,7 @@ function K() {
                 }),
                 (0, s.jsx)(_.TabBar.Panel, {
                     id: Y,
-                    'aria-labelledby': H,
+                    'aria-labelledby': k,
                     className: y.contentPanel,
                     children: (0, s.jsx)(_.Scroller, {
                         children: (0, s.jsx)('div', {

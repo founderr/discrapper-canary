@@ -11,15 +11,15 @@ t.Z = function (e) {
     let { tabId: t } = e,
         n = (0, l.C)(),
         _ = (0, s.e7)([r.Z], () => r.Z.getCategories()),
-        E = (0, a.useMemo)(() => {
+        h = a.useMemo(() => {
             var e, n;
-            return null !== (n = null === (e = _.find((e) => e.id === t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
+            return [null !== (n = null === (e = _.find((e) => e.id === t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '', u.Z.Messages.GLOBAL_DISCOVERY_APPS_CATEGORY_TITLE_END];
         }, [_, t]);
     return (0, i.jsxs)(d.Z, {
         onScroll: () => {},
         children: [
             (0, i.jsx)(o.Z, {
-                title: u.Z.Messages.GLOBAL_DISCOVERY_APPS_CATEGORY_TITLE.format({ category: E }),
+                title: h,
                 description: '',
                 className: n
             }),

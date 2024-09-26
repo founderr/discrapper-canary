@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(481060),
     u = n(207796),
     _ = n(889711),
-    E = n(931240),
-    h = n(970606),
+    h = n(931240),
+    E = n(970606),
     m = n(650461),
     I = n(35313),
     g = n(284019),
@@ -81,11 +81,11 @@ function v(e) {
         }),
         H = a.useCallback(
             (e) => {
-                if (e === R.length) D(0), (0, h.Lp)(t, 'signature');
+                if (e === R.length) D(0), (0, E.Lp)(t, 'signature');
                 else if (0 === M) D(1);
                 else {
                     var n;
-                    E._9(t, {
+                    h._9(t, {
                         currentStep: e,
                         furthestStep: Math.max(null !== (n = v.furthestStep) && void 0 !== n ? n : 0, e)
                     });
@@ -94,7 +94,7 @@ function v(e) {
             [M, t, v.furthestStep, R.length]
         );
     a.useEffect(() => {
-        (0, h.Lp)(t, (0, h.Qh)(v.currentStep));
+        (0, E.Lp)(t, (0, E.Qh)(v.currentStep));
     }, [t, v.currentStep]),
         a.useEffect(() => {
             let e = (0, _.pP)((0, l.debounce)(() => P(window.innerWidth), 250));
@@ -103,7 +103,7 @@ function v(e) {
     let V = a.useMemo(() => null != Z && Object.values(Z).some((e) => null != e), [Z]),
         F = a.useMemo(() => (null != Z && Object.values(Z).length > 0 ? (0, f.G)(Z).find((e) => e.hasError) : null), [Z]),
         Y = a.useCallback(() => {
-            D(1), E._9(t, { currentStep: null == F ? void 0 : F.index });
+            D(1), h._9(t, { currentStep: null == F ? void 0 : F.index });
         }, [null == F ? void 0 : F.index, t]),
         W = a.useCallback(() => {
             (0, u.fH)(u.v0.ADMIN_UPSELL);

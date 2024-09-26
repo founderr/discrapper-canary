@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(963202),
     u = n(105671),
     _ = n(92373),
-    E = n(570938),
-    h = n(377171),
+    h = n(570938),
+    E = n(377171),
     m = n(229893),
     I = n(207796),
     g = n(308083),
@@ -23,14 +23,14 @@ var i = n(735250),
     T = n(899115);
 function S(e) {
     let { icon: t, text: n, ariaLabel: s, tooltip: l, onClick: o, isActive: d, autoWidth: u = !1 } = e,
-        [_, E] = a.useState(!1),
-        [h, m] = a.useState(!1),
+        [_, h] = a.useState(!1),
+        [E, m] = a.useState(!1),
         g = I.GN.getState().mode,
         p = g === I.v0.GAMES || g === I.v0.PLAYSTYLE || g === I.v0.TRAITS;
     a.useEffect(() => {
-        p && (E(!1), m(!1));
+        p && (h(!1), m(!1));
     }, [p]);
-    let S = d && (h || _),
+    let S = d && (E || _),
         f = a.useMemo(
             () =>
                 null != l
@@ -38,10 +38,10 @@ function S(e) {
                           className: T.tooltipContentWrapper,
                           onClick: o,
                           onMouseEnter: () => {
-                              !p && E(!0);
+                              !p && h(!0);
                           },
                           onMouseLeave: () => {
-                              E(!1);
+                              h(!1);
                           },
                           children: [(0, i.jsx)('div', { className: T.tooltipHoverBridge }), l]
                       })
@@ -121,12 +121,12 @@ function f() {
                 )
             )
         }),
-        E = (0, i.jsx)(c.GameControllerIcon, {
+        h = (0, i.jsx)(c.GameControllerIcon, {
             className: T.filterPillIcon,
             color: 'currentColor'
         });
     return (0, i.jsx)(S, {
-        icon: E,
+        icon: h,
         text: p.Z.Messages.CLAN_DISCOVERY_GAME_FILTER.format({ count: t.length }),
         tooltip: d,
         onClick: n,
@@ -231,7 +231,7 @@ function A(e) {
                 a.length > 0
                     ? (0, i.jsx)(c.NumberBadge, {
                           count: a.length,
-                          color: h.Z.INTERACTIVE_ACTIVE,
+                          color: E.Z.INTERACTIVE_ACTIVE,
                           className: T.badgeInnerText
                       })
                     : null
@@ -272,7 +272,7 @@ function v() {
                 r > 0
                     ? (0, i.jsx)(c.NumberBadge, {
                           count: r,
-                          color: h.Z.INTERACTIVE_ACTIVE,
+                          color: E.Z.INTERACTIVE_ACTIVE,
                           className: T.badgeInnerText
                       })
                     : null
@@ -330,7 +330,7 @@ function R() {
     return (0, i.jsxs)('div', {
         className: T.guildsIconContainer,
         children: [
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(h.Z, {
                 width: 24,
                 height: 24
             }),
@@ -354,11 +354,11 @@ function O(e) {
         _ = a.useCallback(() => {
             if (s !== I.v0.SAVED_GUILDS) return (0, I.fH)(I.v0.SAVED_GUILDS);
         }, [s]),
-        E = a.useCallback(() => (0, I.fH)(I.v0.DISCOVERY), []);
+        h = a.useCallback(() => (0, I.fH)(I.v0.DISCOVERY), []);
     return s === I.v0.SAVED_GUILDS
         ? (0, i.jsx)(L, {
               className: n,
-              onNavigateBack: E
+              onNavigateBack: h
           })
         : (0, i.jsxs)('div', {
               className: r()(T.toolbar, n),

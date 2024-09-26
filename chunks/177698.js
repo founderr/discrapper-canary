@@ -9,18 +9,18 @@ var a = n(481060),
     d = n(358085),
     u = n(998502),
     _ = n(996106),
-    E = n(703912),
-    h = n(852926),
+    h = n(703912),
+    E = n(852926),
     m = n(981631);
-t.Z = (0, E.Z)(
+t.Z = (0, h.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: c, scopes: d, parsedPermissions: u, responseType: E, redirectUri: I, codeChallenge: g, codeChallengeMethod: p, state: T, guildId: S, channelId: f, prompt: C, disableGuildSelect: N, disclosures: A, integrationType: v, pid: Z } = e,
+        let { clientId: n, authorizations: c, scopes: d, parsedPermissions: u, responseType: h, redirectUri: I, codeChallenge: g, codeChallengeMethod: p, state: T, guildId: S, channelId: f, prompt: C, disableGuildSelect: N, disclosures: A, integrationType: v, pid: Z } = e,
             L = 'OAuth2Authorize_'.concat(n, '_').concat(S, '_').concat(f),
             R = null != v ? (null == c ? void 0 : c.get(v)) : void 0,
             O = null !== (t = null == R ? void 0 : R.application) && void 0 !== t ? t : l.Z.getApplication(n);
         return new Promise((e, t) => {
-            let l = (0, h.jU)(Z),
+            let l = (0, E.jU)(Z),
                 R = (i) => {
                     let { clientId: a, location: r } = i;
                     if (null == a || a === n) l.lock(), s.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', R), null != location ? e(r) : t(new _.Z({ errorCode: m.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
@@ -35,7 +35,7 @@ t.Z = (0, E.Z)(
                             clientId: n,
                             scopes: null != d ? d : [],
                             disclosures: null != A ? A : [],
-                            responseType: E,
+                            responseType: h,
                             redirectUri: I,
                             codeChallenge: g,
                             codeChallengeMethod: p,
@@ -59,7 +59,7 @@ t.Z = (0, E.Z)(
                         scopes: null != d ? d : [],
                         disclosures: null != A ? A : [],
                         callback: R,
-                        responseType: E,
+                        responseType: h,
                         redirectUri: I,
                         codeChallenge: g,
                         codeChallengeMethod: p,

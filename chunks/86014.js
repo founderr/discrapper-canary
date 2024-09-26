@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(970606),
     u = n(963202),
     _ = n(650461),
-    E = n(603839),
-    h = n(648113),
+    h = n(603839),
+    E = n(648113),
     m = n(17845),
     I = n(374939),
     g = n(283293),
@@ -26,7 +26,7 @@ function A(e) {
             location: 'ClanDiscoveryContentCtaContent',
             includeConverted: !1
         }),
-        [h, m] = a.useState(() => {
+        [E, m] = a.useState(() => {
             var e;
             let t = new Set(_.ZP.getGuildIds());
             for (let e of l) if (t.has(e.id)) return e.id;
@@ -43,20 +43,20 @@ function A(e) {
         g = n && l.length > 0,
         S = a.useCallback(() => {
             (0, d._9)({
-                guildId: h,
+                guildId: E,
                 location: s ? c.Z.GLOBAL_DISCOVERY : c.Z.CLAN_DISCOVERY
             }),
                 (0, p.q4)(
                     (e) => {
                         let { closeLayer: t } = e;
-                        return (0, i.jsx)(E.Z, {
+                        return (0, i.jsx)(h.Z, {
                             onClose: t,
-                            guildId: h
+                            guildId: E
                         });
                     },
                     { layerKey: f.Pv }
                 );
-        }, [h, s]),
+        }, [E, s]),
         A = a.useMemo(
             () =>
                 t
@@ -91,7 +91,7 @@ function A(e) {
                               l.length > 0 &&
                                   (0, i.jsx)(o.SearchableSelect, {
                                       className: N.upsellSelect,
-                                      value: h,
+                                      value: E,
                                       options: I,
                                       onChange: m
                                   }),
@@ -112,7 +112,7 @@ function A(e) {
                           ]
                       })
                     : null,
-            [n, l.length, I, h, S]
+            [n, l.length, I, E, S]
         );
     return (0, i.jsxs)('div', {
         className: r()(N.contentCtaContainer, { [N.contentCtaContainerSpacing]: !s }),
@@ -122,7 +122,7 @@ function A(e) {
 t.Z = a.memo(function (e) {
     let { width: t, paddingVertical: n = 16, paddingHorizontal: s = 32, variant: r = S.Bj.DEFAULT, onScroll: c, withAdminContent: d = !1, inGlobalDiscovery: u } = e,
         _ = a.useRef(null),
-        E = (0, T.GN)((e) => e.completedNux, l.Z),
+        h = (0, T.GN)((e) => e.completedNux, l.Z),
         p = a.useCallback(() => {
             var e;
             null === (e = _.current) || void 0 === e || e.scrollToTop();
@@ -131,12 +131,12 @@ t.Z = a.memo(function (e) {
             () =>
                 (0, i.jsx)(A, {
                     inGlobalDiscovery: u,
-                    showPickGameButton: !E,
+                    showPickGameButton: !h,
                     showAdminGuildPicker: d
                 }),
-            [E, d, u]
+            [h, d, u]
         ),
-        v = (0, h.C)();
+        v = (0, E.C)();
     return (0, i.jsxs)(g.Z, {
         ref: _,
         onScroll: c,
@@ -148,7 +148,7 @@ t.Z = a.memo(function (e) {
                     color: 'header-primary',
                     children: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE_2.format({})
                 }),
-                description: E ? C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION_NUX_COMPLETED : C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
+                description: h ? C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION_NUX_COMPLETED : C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
                 button: f,
                 className: v
             }),

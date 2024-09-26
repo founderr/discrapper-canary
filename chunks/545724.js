@@ -10,7 +10,7 @@ var i = n(735250),
     u = n(687683),
     _ = n(454515);
 t.Z = function (e) {
-    let { index: t, children: s, user: E, channel: h, onClick: m, isFocused: I, isActive: g, onOtherHover: p, className: T } = e,
+    let { index: t, children: s, user: h, channel: E, onClick: m, isFocused: I, isActive: g, onOtherHover: p, className: T } = e,
         [S, f] = a.useState(!1),
         [C, N] = a.useState(!1),
         A = () => {
@@ -40,7 +40,7 @@ t.Z = function (e) {
                     );
         };
     return (0, i.jsx)(o.mh, {
-        id: h.id,
+        id: E.id,
         children: (e) =>
             (0, i.jsx)(c.FocusRing, {
                 offset: {
@@ -52,7 +52,7 @@ t.Z = function (e) {
                         [_.active]: g || C,
                         [_.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => Z(e, E),
+                    onContextMenu: (e) => Z(e, h),
                     onMouseEnter: A,
                     onMouseLeave: v,
                     onClick: null != m ? m : void 0,

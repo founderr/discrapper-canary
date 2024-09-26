@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(143927),
     u = n(481060),
     _ = n(410030),
-    E = n(950279),
-    h = n(741595),
+    h = n(950279),
+    E = n(741595),
     m = n(359380),
     I = n(766219),
     g = n(480222),
@@ -41,7 +41,7 @@ let A = {
                 hasChanges: l,
                 onSave: s,
                 onReset: r,
-                children: (0, i.jsx)(h.Z, {
+                children: (0, i.jsx)(E.Z, {
                     title: C.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
                     description: C.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
                     onUpdatePlaystyle: n,
@@ -86,7 +86,7 @@ let A = {
                 hasChanges: l,
                 onSave: s,
                 onReset: r,
-                children: (0, i.jsx)(E.Z, {
+                children: (0, i.jsx)(h.Z, {
                     title: C.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
                     description: C.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
                     onUpdateGames: n,
@@ -101,7 +101,7 @@ let A = {
                 [s, r] = a.useState(new Set(e)),
                 [l, c] = a.useState(t),
                 [u, _] = a.useState(new Set(n)),
-                E = a.useMemo(
+                h = a.useMemo(
                     () => ({
                         games: Array.from(s),
                         playstyle: l,
@@ -109,7 +109,7 @@ let A = {
                     }),
                     [s, l, u]
                 ),
-                h = a.useMemo(
+                E = a.useMemo(
                     () => ({
                         games: e,
                         playstyle: t,
@@ -117,14 +117,14 @@ let A = {
                     }),
                     [e, t, n]
                 ),
-                m = a.useMemo(() => !o()(E, h), [h, E]),
+                m = a.useMemo(() => !o()(h, E), [E, h]),
                 S = a.useCallback(() => {
                     var e;
-                    p.GN.getState().setSelectedGames(E.games), p.GN.getState().setSelectedPlaystyle(null !== (e = E.playstyle) && void 0 !== e ? e : null), p.GN.getState().setSelectedTraits(E.traits), (0, I.Og)();
-                }, [E.games, E.playstyle, E.traits]),
+                    p.GN.getState().setSelectedGames(h.games), p.GN.getState().setSelectedPlaystyle(null !== (e = h.playstyle) && void 0 !== e ? e : null), p.GN.getState().setSelectedTraits(h.traits), (0, I.Og)();
+                }, [h.games, h.playstyle, h.traits]),
                 f = a.useCallback(() => {
-                    r(new Set(h.games)), c(h.playstyle), _(new Set(h.traits));
-                }, [h.games, h.playstyle, h.traits]);
+                    r(new Set(E.games)), c(E.playstyle), _(new Set(E.traits));
+                }, [E.games, E.playstyle, E.traits]);
             return (0, i.jsx)(g.Z, {
                 hasChanges: m,
                 onSave: S,

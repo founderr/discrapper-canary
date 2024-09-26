@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(963202),
     u = n(117496),
     _ = n(702646),
-    E = n(207796),
-    h = n(979233),
+    h = n(207796),
+    E = n(979233),
     m = n(88693),
     I = n(611928),
     g = n(922122),
@@ -33,14 +33,14 @@ var i = n(735250),
     x = n(636872);
 function b() {
     let e = a.useRef((0, u.P)()),
-        { onScroll: t, scrollPosition: n, resetScrollPosition: s } = (0, h.M)(),
+        { onScroll: t, scrollPosition: n, resetScrollPosition: s } = (0, E.M)(),
         { tabs: b, selectedTab: P, setSelectedTab: M } = (0, A.Y)(),
         D = (0, f.lg)(P),
         y = !L.MU.has(P),
         j = (0, d.iN)('global_discovery_servers_layout'),
         { searchBarState: U, onTabsAvailableWidthChange: G, onCollapsedSearchBarClick: w, onSearchBarBlur: k, tabsClassName: B } = (0, m.U)({ isSearchBarVisible: y }),
         { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: Y, isSearchVisible: W } = (0, N.H)({ loadId: e.current }),
-        z = (0, E.GN)((e) => e.mode, l.Z),
+        z = (0, h.GN)((e) => e.mode, l.Z),
         K = a.useCallback(
             (e) => {
                 M(e), W && F();
@@ -57,7 +57,7 @@ function b() {
                     : b,
             [b, W]
         ),
-        Q = z === E.v0.SAVED_GUILDS,
+        Q = z === h.v0.SAVED_GUILDS,
         X = a.useRef(new S.Z(D)),
         { onGuildCardSeen: J, onGuildCardClick: $ } = (0, C.H)({
             guildDiscoveryCardSeenManager: X.current,

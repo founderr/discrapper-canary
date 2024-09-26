@@ -11,14 +11,14 @@ var i = n(735250),
 t.Z = function (e) {
     let { guild: t, className: n } = e,
         [s, _] = a.useState(!1),
-        E = a.useCallback(() => _(!0), [_]),
-        h = a.useCallback(() => _(!0), [_]);
+        h = a.useCallback(() => _(!0), [_]),
+        E = a.useCallback(() => _(!0), [_]);
     return (0, i.jsx)('div', {
         className: r()(u.actionButtonsContainer, n, { [u.forceButtonsShow]: s }),
         children: (0, i.jsx)(o.ZP, {
             children: (0, i.jsx)(c.GuildDiscoveryMenuPopout, {
-                onRequestOpen: E,
-                onRequestClose: h,
+                onRequestOpen: h,
+                onRequestClose: E,
                 guild: t,
                 children: (e) => {
                     let { onClick: t, ...n } = e;

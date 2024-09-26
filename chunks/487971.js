@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(906732),
     u = n(963249),
     _ = n(579185),
-    E = n(479446),
-    h = n(522558),
+    h = n(479446),
+    E = n(522558),
     m = n(441623),
     I = n(16474),
     g = n(474936),
@@ -30,7 +30,7 @@ function N(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: s, shouldHighlight: N } = e,
         { analyticsLocations: A } = (0, d.ZP)(),
         { isHovered: v, setIsHovered: Z, onMouseEnter: L, onMouseLeave: R } = (0, _.Z)(200, 300),
-        { enableEmojiCTA: O } = h.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 }),
+        { enableEmojiCTA: O } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 }),
         x = a.useCallback(
             (e) => {
                 'focus' !== e.type && L();
@@ -55,11 +55,11 @@ function N(e) {
         },
         P = () => {
             if (n === g.hX.FRIEND_ANNIVERSARY) return T.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: m.Z.getFriendAnniversaryYears(t.id) });
-            return (0, E.Ou)(n);
+            return (0, h.Ou)(n);
         },
         M = () => {
             if (n === g.hX.FRIEND_ANNIVERSARY) return T.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY;
-            return (0, E.Ou)(n);
+            return (0, h.Ou)(n);
         },
         D = () =>
             O

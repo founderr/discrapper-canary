@@ -14,8 +14,8 @@ var i,
     d = n(215569),
     u = n(481060),
     _ = n(37234),
-    E = n(134616),
-    h = n(714338),
+    h = n(134616),
+    E = n(714338),
     m = n(663993),
     I = n(84615),
     g = n(210887),
@@ -69,7 +69,7 @@ let N = (0, m.Un)({
         tension: 100
     };
 function b() {
-    return s.useEffect(() => (h.Z.enable(), h.Z.enableTemp(E.u), () => h.Z.disableTemp()), []), null;
+    return s.useEffect(() => (E.Z.enable(), E.Z.enableTemp(h.u), () => E.Z.disableTemp()), []), null;
 }
 class P extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {

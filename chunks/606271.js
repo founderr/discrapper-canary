@@ -14,8 +14,8 @@ var i = n(392711),
     d = n(271383),
     u = n(430824),
     _ = n(131951),
-    E = n(158776),
-    h = n(19780),
+    h = n(158776),
+    E = n(19780),
     m = n(699516),
     I = n(944486),
     g = n(594174),
@@ -69,7 +69,7 @@ class O {
                     reason: t
                 });
             });
-        let e = [c.Z, d.ZP, E.Z, p.Z, _.Z, h.Z];
+        let e = [c.Z, d.ZP, h.Z, p.Z, _.Z, E.Z];
         new s.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), r.Z.subscribe('MESSAGE_CREATE', (e) => this.handleMessage(e)), r.Z.subscribe('MESSAGE_UPDATE', (e) => this.handleMessage(e)), r.Z.subscribe('MESSAGE_DELETE', (e) => this.handleMessage(e)), r.Z.subscribe('SPEAKING', (e) => this.handleSpeaking(e)), r.Z.subscribe('OAUTH2_TOKEN_REVOKE', (e) => this.handleOAuth2TokenRevoke(e)), r.Z.subscribe('GUILD_CREATE', (e) => this.handleGuildCreate(e)), r.Z.subscribe('CHANNEL_CREATE', (e) => this.handleChannelCreate(e)), r.Z.subscribe('LOGOUT', () => this.handleLogout()), r.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => this.handleVoiceChannelSelect(e)), r.Z.subscribe('RPC_NOTIFICATION_CREATE', (e) => this.handleNotificationCreate(e)), r.Z.subscribe('ACTIVITY_JOIN', (e) => this.handleActivityJoin(e)), r.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', (e) => this.handleActivityLayoutModeUpdate(e)), r.Z.subscribe('THERMAL_STATE_CHANGE', (e) => this.handleThermalStateChange(e)), r.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', (e) => this.handleScreenOrientationUpdate(e)), (0, N.HU)((e) => this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), r.Z.subscribe('RELATIONSHIP_ADD', (e) => this.handleRelationshipAdd(e)), r.Z.subscribe('RELATIONSHIP_REMOVE', (e) => this.handleRelationshipRemove(e)), r.Z.subscribe('PRESENCE_UPDATES', (e) => this.handlePresenceUpdate(e)), r.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), r.Z.subscribe('ENTITLEMENT_CREATE', (e) => this.handleEntitlementCreate(e)), r.Z.subscribe('ENTITLEMENT_DELETE', (e) => this.handleEntitlementDelete(e)), r.Z.subscribe('USER_ACHIEVEMENT_UPDATE', (e) => this.handleUserAchievementUpdate(e));
     }
     handleMessage(e) {
@@ -183,7 +183,7 @@ class O {
         if (null == r) return;
         let l = g.default.getCurrentUser();
         if (null == l || r.id === l.id) return;
-        let o = s.type === v.mFx.JOIN_REQUEST ? E.Z.getApplicationActivity(l.id, a.id) : E.Z.getApplicationActivity(r.id, a.id);
+        let o = s.type === v.mFx.JOIN_REQUEST ? h.Z.getApplicationActivity(l.id, a.id) : h.Z.getApplicationActivity(r.id, a.id);
         if (null == o || null == o.party || o.party.id !== s.party_id) return;
         let c = o.application_id;
         switch (s.type) {

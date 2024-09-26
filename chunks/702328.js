@@ -37,8 +37,8 @@ var s = n(735250),
     G = n(392521),
     w = n(349803),
     y = n(179984),
-    H = n(409100),
-    k = n(391110),
+    k = n(409100),
+    H = n(391110),
     F = n(71363),
     V = n(781800),
     W = n(474936),
@@ -93,7 +93,7 @@ let X = (e) => {
                   children: [
                       !o &&
                           (0, s.jsx)(j.Z, {
-                              variant: k.R0.WHATS_NEW,
+                              variant: H.R0.WHATS_NEW,
                               isFullScreen: t
                           }),
                       o &&
@@ -119,7 +119,7 @@ let X = (e) => {
                               showAllPerksButton: t
                                   ? (0, s.jsx)(V.Z, {
                                         setIsAllPerksVisible: r,
-                                        previousComponent: k.MQ.MARKETING
+                                        previousComponent: H.MQ.MARKETING
                                     })
                                   : void 0
                           }),
@@ -191,7 +191,7 @@ t.Z = (e) => {
                     showWumpus: !0,
                     tier0CTAButton:
                         eN === W.Si.TIER_2 || ep || null != em
-                            ? (0, s.jsx)(H.Z, {
+                            ? (0, s.jsx)(k.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: W.Si.TIER_0,
@@ -200,7 +200,7 @@ t.Z = (e) => {
                                   color: d.ButtonColors.WHITE,
                                   buttonShineClassName: Y.buttonShine
                               })
-                            : (0, s.jsx)(H.Z, {
+                            : (0, s.jsx)(k.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: W.Si.TIER_0,
@@ -209,7 +209,7 @@ t.Z = (e) => {
                               }),
                     tier2CTAButton:
                         eN === W.Si.TIER_0
-                            ? (0, s.jsx)(H.Z, {
+                            ? (0, s.jsx)(k.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: W.Si.TIER_2,
@@ -218,7 +218,7 @@ t.Z = (e) => {
                                   color: d.ButtonColors.WHITE,
                                   buttonShineClassName: Y.buttonShine
                               })
-                            : (0, s.jsx)(H.Z, {
+                            : (0, s.jsx)(k.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: W.Si.TIER_2,
@@ -343,7 +343,7 @@ t.Z = (e) => {
                       children: eh
                   }),
                   (0, s.jsx)(F.Z, {
-                      previousComponent: k.MQ.MARKETING,
+                      previousComponent: H.MQ.MARKETING,
                       isAllPerksVisible: eI,
                       setIsAllPerksVisible: eR,
                       isFullScreen: n

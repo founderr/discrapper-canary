@@ -17,8 +17,8 @@ var i = n(735250),
     d = n(668781),
     u = n(239091),
     _ = n(881052),
-    E = n(410030),
-    h = n(686546),
+    h = n(410030),
+    E = n(686546),
     m = n(556017),
     I = n(206887),
     g = n(66637),
@@ -74,7 +74,7 @@ function b(e) {
             },
             [t]
         ),
-        U = (0, E.ZP)(),
+        U = (0, h.ZP)(),
         G = t.features.has(v.oNc.HUB),
         w = a.useMemo(() => {
             let e = N.ZP.getGuildDiscoverySplashURL({
@@ -143,14 +143,14 @@ function b(e) {
                                     }),
                                 (0, i.jsx)('div', {
                                     className: L.icon,
-                                    children: (0, i.jsx)(h.ZP, {
-                                        mask: h.ZP.Masks.SQUIRCLE,
+                                    children: (0, i.jsx)(E.ZP, {
+                                        mask: E.ZP.Masks.SQUIRCLE,
                                         width: 48,
                                         height: 48,
                                         children: (0, i.jsx)('div', {
                                             className: L.iconMask,
-                                            children: (0, i.jsx)(h.ZP, {
-                                                mask: h.ZP.Masks.SQUIRCLE,
+                                            children: (0, i.jsx)(E.ZP, {
+                                                mask: E.ZP.Masks.SQUIRCLE,
                                                 width: 40,
                                                 height: 40,
                                                 children: (0, i.jsx)('img', {

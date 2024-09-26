@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return E;
     }
 });
 var i = n(735250);
@@ -14,8 +14,8 @@ var a = n(120356),
     d = n(785717),
     u = n(475413),
     _ = n(689938),
-    E = n(563331);
-function h(e) {
+    h = n(563331);
+function E(e) {
     let { user: t, isHovering: n } = e,
         { trackUserProfileAction: a } = (0, d.KZ)();
     return o.wS
@@ -31,11 +31,11 @@ function h(e) {
               children: (e) =>
                   (0, i.jsx)(u.kF, {
                       ...e,
-                      className: s()(E.hover, { [E.visible]: n }),
-                      innerClassName: E.hover,
+                      className: s()(h.hover, { [h.visible]: n }),
+                      innerClassName: h.hover,
                       look: r.Button.Looks.BLANK,
                       size: r.Button.Sizes.NONE,
-                      color: E.hoverColor,
+                      color: h.hoverColor,
                       themeColor: 'none',
                       grow: !1,
                       'aria-label': _.Z.Messages.COPY_USERNAME,

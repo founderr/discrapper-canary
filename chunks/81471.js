@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(905405),
     u = n(255269),
     _ = n(937889),
-    E = n(267128),
-    h = n(695346),
+    h = n(267128),
+    E = n(695346),
     m = n(496675),
     I = n(699516),
     g = n(868807),
@@ -24,7 +24,7 @@ let N = a.memo(function (e) {
         A = (0, d.p)(),
         v = (0, l.e7)([I.Z], () => null != N && I.Z.isBlockedForMessage(N), [N]),
         Z = (0, l.e7)([m.Z], () => m.Z.can(p.Plq.MANAGE_MESSAGES, t)),
-        L = h.cC.useSetting(),
+        L = E.cC.useSetting(),
         { content: R } = a.useMemo(
             () =>
                 (null == N ? void 0 : N.content) != null && '' !== N.content
@@ -53,7 +53,7 @@ let N = a.memo(function (e) {
                 children: S.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
             });
         else if (null != N) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, E.f)(N, R, v, r()(f.messageContent, C.inlineFormat), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, h.f)(N, R, v, r()(f.messageContent, C.inlineFormat), {
                 leadingIconClass: f.messageContentIcon,
                 trailingIconClass: f.messageContentIcon,
                 iconSize: T.WW

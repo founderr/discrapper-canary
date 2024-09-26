@@ -9,7 +9,7 @@ var i = n(735250),
     u = n(27471),
     _ = n(364632);
 t.Z = (e) => {
-    let { headerId: t, reapplyText: n, onReapply: E, confirmText: h, onWithdrawApplication: m, rejectionReason: I = null, guild: g = null } = e,
+    let { headerId: t, reapplyText: n, onReapply: h, confirmText: E, onWithdrawApplication: m, rejectionReason: I = null, guild: g = null } = e,
         p = (0, s.e7)([c.Z], () => {
             var e;
             return c.Z.getCooldown(null !== (e = null == g ? void 0 : g.id) && void 0 !== e ? e : '0');
@@ -70,7 +70,7 @@ t.Z = (e) => {
                         'aria-label': T ? d.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY_COOLDOWN.format({ days: S }) : void 0,
                         children: (0, i.jsx)(r.Button, {
                             className: u.confirmationTooltipContents,
-                            onClick: E,
+                            onClick: h,
                             color: r.Button.Colors.PRIMARY,
                             submitting: null == p,
                             disabled: T,
@@ -81,7 +81,7 @@ t.Z = (e) => {
                         onClick: m,
                         color: r.Button.Colors.RED,
                         className: u.confirmationButton,
-                        children: h
+                        children: E
                     })
                 ]
             })

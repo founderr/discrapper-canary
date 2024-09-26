@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(481060),
     u = n(596454),
     _ = n(515753),
-    E = n(410030),
-    h = n(607070),
+    h = n(410030),
+    E = n(607070),
     m = n(100527),
     I = n(906732),
     g = n(821982),
@@ -40,17 +40,17 @@ let O = (e) => {
     },
     x = (e) => {
         let { selected: t, locationState: n, icon: s, onMouseEnter: r, onMouseLeave: o, children: c, ...u } = e,
-            E = (0, l.JA)('shop'),
-            h = m.Z.HOME_PAGE_SHOP_TAB,
-            { analyticsLocations: g } = (0, I.ZP)(h),
+            h = (0, l.JA)('shop'),
+            E = m.Z.HOME_PAGE_SHOP_TAB,
+            { analyticsLocations: g } = (0, I.ZP)(E),
             p = a.useCallback(
                 () =>
                     (0, f.mK)({
                         openInLayer: !1,
-                        analyticsSource: h,
+                        analyticsSource: E,
                         analyticsLocations: g
                     }),
-                [h, g]
+                [E, g]
             );
         return (0, i.jsx)(_.Qj, {
             selected: t,
@@ -58,7 +58,7 @@ let O = (e) => {
             icon: null != s ? s : d.ShopIcon,
             text: L.Z.Messages.COLLECTIBLES_SHOP,
             locationState: n,
-            ...E,
+            ...h,
             ...u,
             onMouseEnter: r,
             onMouseLeave: o,
@@ -116,10 +116,10 @@ let O = (e) => {
         var t, n, s, l, u, _, m, I, g, p, T, f;
         let C, N;
         let { selected: A, locationState: v, displayOptions: Z } = e,
-            b = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
+            b = (0, o.e7)([E.Z], () => E.Z.useReducedMotion),
             [M, D] = a.useState(0),
             [y, j] = a.useState(!1),
-            U = (0, E.ZP)(),
+            U = (0, h.ZP)(),
             G = Z.entrypointDecorationAssets,
             w = (0, c.wj)(U);
         y ? (w ? ((C = null === (t = Z.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (N = null === (s = Z.entrypointBackgroundStyle) || void 0 === s ? void 0 : null === (n = s.hovered) || void 0 === n ? void 0 : n.dark)) : ((C = null === (l = Z.entryPointBackgroundAssets) || void 0 === l ? void 0 : l.srcLightHovered), (N = null === (_ = Z.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (u = _.hovered) || void 0 === u ? void 0 : u.light))) : w ? ((C = null === (m = Z.entryPointBackgroundAssets) || void 0 === m ? void 0 : m.srcDark), (N = null === (g = Z.entrypointBackgroundStyle) || void 0 === g ? void 0 : null === (I = g.resting) || void 0 === I ? void 0 : I.dark)) : ((C = null === (p = Z.entryPointBackgroundAssets) || void 0 === p ? void 0 : p.srcLight), (N = null === (f = Z.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (T = f.resting) || void 0 === T ? void 0 : T.light));

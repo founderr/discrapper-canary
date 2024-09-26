@@ -14,9 +14,9 @@ var a = n(481060),
     c = n(911965);
 function d(e) {
     let { coverImageAsset: t, title: n, guild: d, description: u, children: _ } = e,
-        E = r.QK.useSetting(),
-        h = (0, l.n)(),
-        [m, I] = (0, o.Z)(t, h && E);
+        h = r.QK.useSetting(),
+        E = (0, l.n)(),
+        [m, I] = (0, o.Z)(t, E && h);
     return (0, i.jsxs)('div', {
         className: c.container,
         children: [

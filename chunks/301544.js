@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return E;
     }
 });
 var i = n(735250),
@@ -13,7 +13,7 @@ var i = n(735250),
     d = n(355932),
     u = n(852786),
     _ = n(68118);
-function E(e) {
+function h(e) {
     let { traits: t } = e,
         n = a.useCallback(
             (e) =>
@@ -35,7 +35,7 @@ function E(e) {
         itemGapPx: 4
     });
 }
-function h(e) {
+function E(e) {
     let { className: t, style: n } = e;
     return (0, i.jsx)('div', {
         className: r()(_.clickableCard, t),
@@ -150,7 +150,7 @@ function h(e) {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(E, {
+                        (0, i.jsx)(h, {
                             traits: ['1', '2', '3']
                         })
                     ]

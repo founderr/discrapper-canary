@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(705348),
     u = n(243778),
     _ = n(360453),
-    E = n(377743),
-    h = n(834743),
+    h = n(377743),
+    E = n(834743),
     m = n(862099),
     I = n(704631),
     g = n(819792),
@@ -70,7 +70,7 @@ function P(e) {
                                 markAsDismissed: s
                             });
                         case r.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
-                            return (0, i.jsx)(h.Z, {
+                            return (0, i.jsx)(E.Z, {
                                 guild: n,
                                 markAsDismissed: s
                             });
@@ -80,7 +80,7 @@ function P(e) {
                                 markAsDismissed: s
                             });
                         case r.z.CHANNEL_NOTICE_GUILD_BANNER:
-                            return (0, i.jsx)(E.Z, {
+                            return (0, i.jsx)(h.Z, {
                                 guild: n,
                                 markAsDismissed: s
                             });

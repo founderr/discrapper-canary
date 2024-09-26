@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(579022),
     u = n(391690),
     _ = n(424218),
-    E = n(358085),
-    h = n(998502),
+    h = n(358085),
+    E = n(998502),
     m = n(689938),
     I = n(325343),
     g = n(113207);
@@ -259,7 +259,7 @@ class S extends a.PureComponent {
                 (0, i.jsx)('div', {
                     className: I.buttonRowWrapper,
                     children: (0, i.jsx)(r.Button, {
-                        disabled: !E.isPlatformEmbedded,
+                        disabled: !h.isPlatformEmbedded,
                         onClick: this.handleAddInstallationLocation,
                         size: r.Button.Sizes.SMALL,
                         children: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD
@@ -272,7 +272,7 @@ class S extends a.PureComponent {
         super(...e),
             p(this, 'state', { editingPath: null }),
             p(this, 'handleAddInstallationLocation', () => {
-                h.ZP.showOpenDialog(['openDirectory']).then((e) => {
+                E.ZP.showOpenDialog(['openDirectory']).then((e) => {
                     if (null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0]) (0, l.RY)(e[0]);
                 });
             }),

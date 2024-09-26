@@ -9,8 +9,8 @@ var a = n(636977),
     d = n(285865),
     u = n(918701),
     _ = n(702428),
-    E = n(341907),
-    h = n(703656),
+    h = n(341907),
+    E = n(703656),
     m = n(683301),
     I = n(150192),
     g = n(889010),
@@ -51,7 +51,7 @@ let v = (e) => {
                           icon: v(e.categoryId)
                       })),
             T = (e) => {
-                (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== S.Gj.Quests && (0, h.uL)(f.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === S.Gj.Quests && (0, E.navigateToQuestHome)(C.dr.DISCOVERY_SIDEBAR, a.j.DISCOVERY_SIDEBAR);
+                (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== S.Gj.Quests && (0, E.uL)(f.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === S.Gj.Quests && (0, h.navigateToQuestHome)(C.dr.DISCOVERY_SIDEBAR, a.j.DISCOVERY_SIDEBAR);
             };
         return (0, i.jsxs)(r.Scroller, {
             className: A.sidebarContainer,

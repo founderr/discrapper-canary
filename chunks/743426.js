@@ -538,7 +538,7 @@ class S extends l.Z {
     }
     presentNativeScreenSharePicker(e) {
         var t, n;
-        null === (t = (n = (0, E.zS)()).presentNativeScreenSharePicker) || void 0 === t || t.call(n, e);
+        null === (t = (n = (0, E.zS)()).presentNativeScreenSharePicker) || void 0 === t || t.call(n, null != e ? e : '');
     }
     releaseNativeDesktopVideoSourcePickerStream() {
         var e, t;

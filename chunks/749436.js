@@ -14,8 +14,8 @@ var i,
     d = n(442837),
     u = n(481060),
     _ = n(212093),
-    E = n(683301),
-    h = n(626135),
+    h = n(683301),
+    E = n(626135),
     m = n(585483),
     I = n(900849),
     g = n(878727),
@@ -59,7 +59,7 @@ class L extends (i = s.PureComponent) {
         let { loadId: e, searchResults: t, currentCategoryId: n } = this.props,
             { searchId: i, query: a, isHandlingTagSearch: s } = this.state,
             r = this.context;
-        if ((null == E.ZP.getSearchIndex() && _.Ue(), m.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), m.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), a.length > 0)) {
+        if ((null == h.ZP.getSearchIndex() && _.Ue(), m.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), m.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), a.length > 0)) {
             let l = n !== S.Hk ? n : null;
             v({
                 loadId: e,
@@ -77,7 +77,7 @@ class L extends (i = s.PureComponent) {
             { isSearching: l, searchId: o, query: c, isHandlingTagSearch: d } = this.state,
             u = this.context,
             _ = e.isFetchingSearch && !i,
-            E = s !== S.Hk ? s : null;
+            h = s !== S.Hk ? s : null;
         (l || d) &&
             _ &&
             (v({
@@ -86,11 +86,11 @@ class L extends (i = s.PureComponent) {
                 query: c,
                 guildResults: a.guilds,
                 analyticsContext: u,
-                categoryId: E,
+                categoryId: h,
                 isTagSearch: d
             }),
             this.setState({ isHandlingTagSearch: !1 })),
-            !t.isSearching && l && I.tI(n, E, u),
+            !t.isSearching && l && I.tI(n, h, u),
             e.mostRecentQuery !== r &&
                 this.setState({
                     query: r,
@@ -257,11 +257,11 @@ class L extends (i = s.PureComponent) {
 }
 function R(e) {
     let t = (0, d.e7)([T.Z], () => T.Z.getDiscoveryCategories(), [], T.j),
-        n = (0, d.e7)([E.ZP], () => E.ZP.getTopCategoryCounts(e.mostRecentQuery));
+        n = (0, d.e7)([h.ZP], () => h.ZP.getTopCategoryCounts(e.mostRecentQuery));
     return (0, a.jsx)(L, {
         ...e,
         categories: t,
         countsByCategory: n
     });
 }
-A(L, 'contextType', void 0), (L.contextType = h.AnalyticsContext);
+A(L, 'contextType', void 0), (L.contextType = E.AnalyticsContext);

@@ -13,12 +13,12 @@ var i = n(735250),
     d = n(645041),
     u = n(981631),
     _ = n(921944),
-    E = n(647086),
-    h = n(135899);
+    h = n(647086),
+    E = n(135899);
 function m(e) {
     var t;
     let m = (0, l.SE)(e),
-        I = h.$X.some((t) => (null == e ? void 0 : e.id) !== E._ && c.oz(t, e)),
+        I = E.$X.some((t) => (null == e ? void 0 : e.id) !== h._ && c.oz(t, e)),
         g = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES,
         p = (0, d.FT)(s.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds),
         T = m && (I || g) && !p,

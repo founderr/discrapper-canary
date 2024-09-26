@@ -13,25 +13,25 @@ var i = n(735250),
     d = n(963202),
     u = n(353093),
     _ = n(481685),
-    E = n(207796),
-    h = n(497189),
+    h = n(207796),
+    E = n(497189),
     m = n(490610),
     I = n(981631),
     g = n(689938),
     p = n(422114);
 let T = (e, t) => {
     switch (e) {
-        case E.hz.NONE:
+        case h.hz.NONE:
             return;
-        case E.hz.GENSHIN:
+        case h.hz.GENSHIN:
             return t === I.BRd.DARK ? p.genshinUpsellBackgroundImageDark : p.genshinUpsellBackgroundImageLight;
-        case E.hz.VALORANT:
+        case h.hz.VALORANT:
             return t === I.BRd.DARK ? p.valorantUpsellBackgroundImageDark : p.valorantUpsellBackgroundImageLight;
     }
 };
 function S(e) {
     let { onScroll: t } = e,
-        n = (0, E.GN)((e) => e.game, l.Z),
+        n = (0, h.GN)((e) => e.game, l.Z),
         { guilds: s } = (0, d.C3)({
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0
@@ -51,11 +51,11 @@ function S(e) {
                       (0, i.jsxs)('div', {
                           className: r()(f, p.adminUpsell),
                           children: [
-                              n !== E.hz.NONE && (0, i.jsx)('div', { className: p.backgroundImageBlur }),
+                              n !== h.hz.NONE && (0, i.jsx)('div', { className: p.backgroundImageBlur }),
                               (0, i.jsx)(_.Z, {}),
                               (0, i.jsx)('div', {
                                   className: p.backgroundImageContent,
-                                  children: (0, i.jsx)(h.Z, {
+                                  children: (0, i.jsx)(E.Z, {
                                       eligibleGuilds: I,
                                       eligibleGuildsIncludingConverted: s
                                   })
@@ -64,7 +64,7 @@ function S(e) {
                       }),
                       (0, i.jsx)(m.Z, {
                           title: g.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
-                          className: n === E.hz.NONE ? p.genericPreviewList : void 0
+                          className: n === h.hz.NONE ? p.genericPreviewList : void 0
                       })
                   ]
               })

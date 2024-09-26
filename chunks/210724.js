@@ -47,9 +47,9 @@ function b(e) {
         j = null != I.userStatus && (0, m.zE)(I.userStatus, R.jn.QUEST_BAR),
         G = (0, T.tP)(I),
         { hasError: w, isLoading: y } = (0, f.d7)(),
-        H = O && !j && !U && !G && !y,
-        k = a.useRef(H),
-        F = (0, S.B)(I, H && !w),
+        k = O && !j && !U && !G && !y,
+        H = a.useRef(k),
+        F = (0, S.B)(I, k && !w),
         V = (0, g.vI)(I, M.dr.QUESTS_BAR) ? g.WV : F.collapsedHeight,
         W = a.useRef(-1),
         K = a.useRef(!1),
@@ -115,8 +115,8 @@ function b(e) {
             !D && L && !Z && !K.current && ea(!1);
         }, [L, D, Z, ea]),
         a.useLayoutEffect(() => {
-            H !== k.current && ee(!1), (k.current = H);
-        }, [H]);
+            k !== H.current && ee(!1), (H.current = k);
+        }, [k]);
     let eI = L ? M.XZ : M.R4,
         [{ expansionSpring: eR }, em] = (0, c.useSpring)(() => ({
             from: { expansionSpring: 0 },
@@ -136,7 +136,7 @@ function b(e) {
     }, [Q, em, P]);
     let { visibilitySpring: eg } = (0, c.useSpring)({
         from: { visibilitySpring: 0 },
-        to: { visibilitySpring: H ? 1 : 0 },
+        to: { visibilitySpring: k ? 1 : 0 },
         config: {
             tension: 250,
             friction: 10,
@@ -172,24 +172,24 @@ function b(e) {
                     }
                 });
     }, [w, O, I.id]),
-    O && (H || !$ || y) && !w)
+    O && (k || !$ || y) && !w)
         ? (0, s.jsx)(p.A, {
               questOrQuests: I,
               questContent: F.trackingCtx.content,
-              overrideVisibility: !v && H,
+              overrideVisibility: !v && k,
               children: () => {
                   let e = F.component;
                   return (0, s.jsx)('div', {
                       className: x.mask,
                       children: (0, s.jsx)(o.animated.div, {
-                          'aria-hidden': !H,
+                          'aria-hidden': !k,
                           onMouseLeave: eT,
                           onMouseEnter: eE,
                           onFocus: e_,
                           onBlur: eu,
                           className: i()(x.wrapper, {
-                              [x.wrapperInvisible]: !H,
-                              [x.wrapperVisible]: H && $
+                              [x.wrapperInvisible]: !k,
+                              [x.wrapperVisible]: k && $
                           }),
                           style: {
                               color: I.config.colors.secondary,

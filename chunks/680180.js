@@ -11,13 +11,13 @@ var i = n(735250),
     o = n(49898),
     c = n(495288);
 function d(e) {
-    let { state: t, query: n, placeholder: s, onTextChange: d, onCollapsedClick: u, onClear: _, onBlur: E, onSubmit: h } = e,
+    let { state: t, query: n, placeholder: s, onTextChange: d, onCollapsedClick: u, onClear: _, onBlur: h, onSubmit: E } = e,
         m = a.useRef(null),
         I = a.useCallback(
             (e) => {
-                'Enter' === e.key && h();
+                'Enter' === e.key && E();
             },
-            [h]
+            [E]
         ),
         g = a.useCallback(() => {
             u(),
@@ -44,6 +44,6 @@ function d(e) {
               onChange: d,
               onClear: _,
               onKeyDown: I,
-              onBlur: E
+              onBlur: h
           });
 }

@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(100527),
     u = n(600164),
     _ = n(184301),
-    E = n(347475),
-    h = n(237583),
+    h = n(347475),
+    E = n(237583),
     m = n(63063),
     I = n(870569),
     g = n(345243),
@@ -74,7 +74,7 @@ class A extends a.PureComponent {
                 (0, i.jsx)(u.Z, {
                     justify: u.Z.Justify.END,
                     className: f.party,
-                    children: (0, i.jsx)(h.Z, {
+                    children: (0, i.jsx)(E.Z, {
                         users: this.props.party,
                         max: this.isHost() ? N.HOST : N.LISTENER,
                         renderUser: this.renderPartyMember,
@@ -102,7 +102,7 @@ class A extends a.PureComponent {
                             preload: () => (0, _.Z)(e.id, e.getAvatarURL(void 0, 80)),
                             renderPopout: (t) => (
                                 o()(null != e, ''),
-                                (0, i.jsx)(E.Z, {
+                                (0, i.jsx)(h.Z, {
                                     ...t,
                                     userId: e.id,
                                     newAnalyticsLocations: [d.Z.AVATAR]

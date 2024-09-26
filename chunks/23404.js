@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(210887),
     u = n(617136),
     _ = n(272008),
-    E = n(113434),
-    h = n(569984),
+    h = n(113434),
+    E = n(569984),
     m = n(497505),
     I = n(918701),
     g = n(585500),
@@ -28,8 +28,8 @@ var i = n(735250),
 function O(e) {
     var t;
     let { quest: n } = e,
-        a = (0, E.B6)(n.config.expiresAt),
-        s = (0, E.B6)(p.r.build(n.config).rewardsExpireAt),
+        a = (0, h.B6)(n.config.expiresAt),
+        s = (0, h.B6)(p.r.build(n.config).rewardsExpireAt),
         r = (0, l.e7)([d.Z], () => d.Z.getState().theme),
         u = (0, o.wj)(r) ? Z.BRd.DARK : Z.BRd.LIGHT,
         _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
@@ -62,7 +62,7 @@ function O(e) {
 t.Z = function (e) {
     var t, n, s;
     let { quest: o } = e,
-        d = (0, l.e7)([h.Z], () => h.Z.isEnrolling(o.id), [o]),
+        d = (0, l.e7)([E.Z], () => E.Z.isEnrolling(o.id), [o]),
         [p, Z] = a.useState(!1),
         x = a.useCallback(() => Z(!0), []),
         b = a.useCallback(() => Z(!1), []),
@@ -96,12 +96,12 @@ t.Z = function (e) {
             quest: o,
             location: m.jn.ACTIVITY_PANEL
         }),
-        U = (0, E.tP)(o),
+        U = (0, h.tP)(o),
         G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         w = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         k = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
         B = (null == o ? void 0 : o.userStatus) == null || (0, I.zE)(o.userStatus, m.jn.ACTIVITY_PANEL),
-        H = (0, E.Rf)(o),
+        H = (0, h.Rf)(o),
         V = (0, g.D)({
             quest: o,
             taskDetails: H,

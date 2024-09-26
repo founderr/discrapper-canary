@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(481060),
     u = n(393238),
     _ = n(410030),
-    E = n(204418),
-    h = n(583434),
+    h = n(204418),
+    E = n(583434),
     m = n(70097),
     I = n(594174),
     g = n(626135),
@@ -40,7 +40,7 @@ t.Z = (0, a.memo)(function (e) {
         B = null !== (v = null === (n = Z.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
         H = Z.config.rewards[B],
         V = (null == H ? void 0 : H.type) === l.w.COLLECTIBLE,
-        { product: F } = (0, h.T)(V && null != H ? H.skuId : null),
+        { product: F } = (0, E.T)(V && null != H ? H.skuId : null),
         Y = null == F ? void 0 : null === (s = F.items) || void 0 === s ? void 0 : s[0];
     if (
         ((0, u.P)(M, (e) => {
@@ -91,7 +91,7 @@ t.Z = (0, a.memo)(function (e) {
                         ref: y,
                         className: A.decoWrapper,
                         style: { top: O },
-                        children: (0, i.jsx)(E.Z, {
+                        children: (0, i.jsx)(h.Z, {
                             avatarDecorationOverride: Y,
                             user: j,
                             guildId: null

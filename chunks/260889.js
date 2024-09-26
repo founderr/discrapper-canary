@@ -13,12 +13,12 @@ var i = n(735250),
     d = n(496675),
     u = n(205129),
     _ = n(626135),
-    E = n(981631),
-    h = n(689938);
+    h = n(981631),
+    E = n(689938);
 function m(e) {
     let t = a.useContext(_.AnalyticsContext),
         n = e.voiceChannels[0],
-        m = (0, s.e7)([d.Z], () => null != n && d.Z.can(E.Plq.CONNECT, n.channel));
+        m = (0, s.e7)([d.Z], () => null != n && d.Z.can(h.Plq.CONNECT, n.channel));
     return null == n
         ? null
         : [
@@ -29,17 +29,17 @@ function m(e) {
                       action: function () {
                           (0, c.X)(n.guild.id),
                               l.default.selectVoiceChannel(n.channel.id),
-                              o.ZP.trackWithMetadata(E.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
+                              o.ZP.trackWithMetadata(h.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
                                   source: {
                                       ...t.location,
-                                      object: E.qAy.LIST_ITEM
+                                      object: h.qAy.LIST_ITEM
                                   },
                                   guild_id: n.guild.id,
                                   channel_id: n.channel.id,
                                   ...(0, u.y)(e)
                               });
                       },
-                      label: h.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_JOIN_CHANNEL,
+                      label: E.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_JOIN_CHANNEL,
                       disabled: !m
                   },
                   'join-voice'
@@ -50,17 +50,17 @@ function m(e) {
                       id: 'goto-server',
                       action: function () {
                           (0, c.X)(n.guild.id),
-                              o.ZP.trackWithMetadata(E.rMx.ACTIVITY_FEED_GUILD_VISITED, {
+                              o.ZP.trackWithMetadata(h.rMx.ACTIVITY_FEED_GUILD_VISITED, {
                                   source: {
                                       ...t.location,
-                                      object: E.qAy.LIST_ITEM
+                                      object: h.qAy.LIST_ITEM
                                   },
                                   guild_id: n.guild.id,
                                   af_recently_played: !1,
                                   ...(0, u.y)(e)
                               });
                       },
-                      label: h.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_GO_TO_SERVER
+                      label: E.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_GO_TO_SERVER
                   },
                   'goto-server'
               )

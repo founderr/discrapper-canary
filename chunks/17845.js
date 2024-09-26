@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
 var i = n(735250),
@@ -22,10 +22,10 @@ function _(e) {
         children: t
     });
 }
-function E(e) {
-    let { title: t, description: n, button: s, className: d, children: E } = e,
-        h = (0, c.ZP)(),
-        m = (0, l.wj)(h),
+function h(e) {
+    let { title: t, description: n, button: s, className: d, children: h } = e,
+        E = (0, c.ZP)(),
+        m = (0, l.wj)(E),
         I = a.useMemo(() => ('string' == typeof t ? (0, i.jsx)(_, { title: t }) : Array.isArray(t) && t.every((e) => 'string' == typeof e) ? t.map((e) => (0, i.jsx)(_, { title: e }, e)) : t), [t]);
     return (0, i.jsxs)('div', {
         className: r()(u.container, d),
@@ -50,7 +50,7 @@ function E(e) {
                     ]
                 })
             }),
-            E
+            h
         ]
     });
 }

@@ -42,7 +42,7 @@ function f(e) {
         j = (null === (r = f.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
         { completedRatio: G, completedRatioDisplay: w } = (0, u.I)(f),
         y = (0, u.Bd)(f),
-        H = a.useCallback(
+        k = a.useCallback(
             (e) =>
                 (0, s.jsx)(c.Text, {
                     variant: 'text-md/semibold',
@@ -53,7 +53,7 @@ function f(e) {
                 }),
             []
         ),
-        k = a.useMemo(() => (j ? H(O) : N.Z.Messages.QUESTS_CLAIM_REWARD_HOOK.format({ rewardWithArticleHook: () => H(P) })), [O, P, j, H]),
+        H = a.useMemo(() => (j ? k(O) : N.Z.Messages.QUESTS_CLAIM_REWARD_HOOK.format({ rewardWithArticleHook: () => k(P) })), [O, P, j, k]),
         F = a.useMemo(() => {
             if (null != y)
                 return (0, s.jsx)(c.Text, {
@@ -129,7 +129,7 @@ function f(e) {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
                                 className: C.header,
-                                children: k
+                                children: H
                             }),
                             F
                         ]

@@ -8,11 +8,11 @@ var i = n(735250),
     d = n(981631),
     u = n(689938),
     _ = n(438201);
-let E = (0, c.Q)() || !1;
+let h = (0, c.Q)() || !1;
 t.Z = a.memo(function (e) {
     let { currentRoute: t, renderToolbar: n } = e,
         c = a.useContext(o.AnalyticsContext),
-        h = E || t === d.Z5c.APPLICATION_LIBRARY_SETTINGS;
+        E = h || t === d.Z5c.APPLICATION_LIBRARY_SETTINGS;
     return (0, i.jsxs)(r.Z, {
         className: _.libraryHeader,
         toolbar: null == n ? void 0 : n(),
@@ -43,7 +43,7 @@ t.Z = a.memo(function (e) {
                         id: d.Z5c.APPLICATION_LIBRARY,
                         children: u.Z.Messages.APPLICATION_LIBRARY_MY_GAMES
                     }),
-                    h
+                    E
                         ? (0, i.jsx)(s.TabBar.Item, {
                               id: d.Z5c.APPLICATION_LIBRARY_SETTINGS,
                               children: u.Z.Messages.SETTINGS

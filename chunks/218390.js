@@ -42,8 +42,8 @@ var s = n(735250),
     G = n(823188),
     w = n(504865),
     y = n(179984),
-    H = n(938736),
-    k = n(386733),
+    k = n(938736),
+    H = n(386733),
     F = n(474936),
     V = n(981631),
     W = n(689938),
@@ -276,8 +276,8 @@ t.Z = function () {
             autoTrackExposure: !1
         }),
         (0, U.B)('PremiumManagementSettings');
-    let x = (0, H.bD)('PremiumManagementSettings'),
-        P = (0, H.pn)('PremiumManagementSettings');
+    let x = (0, k.bD)('PremiumManagementSettings'),
+        P = (0, k.pn)('PremiumManagementSettings');
     a.useEffect(() => {
         E.Z.wait(async () => {
             !m && !e && (await Promise.all([T.jg(), T.tZ(), (0, R.Y2)(I, null, V.JjL.DISCOVERY)])), l(!1);
@@ -301,7 +301,7 @@ t.Z = function () {
                     className: K.__invalid_container,
                     children: [
                         (0, s.jsx)(J, {}),
-                        (x || P) && (0, s.jsx)(k.Z, { isInSettings: !0 }),
+                        (x || P) && (0, s.jsx)(H.Z, { isInSettings: !0 }),
                         (0, s.jsx)(ee, {}),
                         (0, s.jsx)(y.Z, {
                             className: K.__invalid_planComparisonTable,

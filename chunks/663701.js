@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(442837),
     u = n(704215),
     _ = n(952265),
-    E = n(481060),
-    h = n(493683),
+    h = n(481060),
+    E = n(493683),
     m = n(463119),
     I = n(377171),
     g = n(243778),
@@ -58,7 +58,7 @@ let F = (e) => {
                     interactiveClassName: l ? V.friendsBadge : void 0,
                     selected: t,
                     route: k.Z5c.FRIENDS,
-                    icon: E.FriendsIcon,
+                    icon: h.FriendsIcon,
                     text: H.Z.Messages.FRIENDS,
                     onMouseEnter: () => {
                         u(!0);
@@ -68,7 +68,7 @@ let F = (e) => {
                     },
                     ...n,
                     ...s,
-                    children: r > 0 ? (0, i.jsx)(E.NumberBadge, { count: r }) : null
+                    children: r > 0 ? (0, i.jsx)(h.NumberBadge, { count: r }) : null
                 }),
                 l &&
                     (0, i.jsx)(v.Z, {
@@ -93,7 +93,7 @@ let F = (e) => {
         return (0, i.jsx)(U.Qj, {
             selected: t,
             route: k.Z5c.APPLICATION_LIBRARY,
-            icon: E.InventoryIcon,
+            icon: h.InventoryIcon,
             text: H.Z.Messages.LIBRARY,
             ...a,
             ...s,
@@ -102,18 +102,18 @@ let F = (e) => {
     },
     W = () => {
         let e = (0, T.q)();
-        return e > 0 ? (0, i.jsx)(E.NumberBadge, { count: e }) : null;
+        return e > 0 ? (0, i.jsx)(h.NumberBadge, { count: e }) : null;
     },
     z = (e) => {
         let { selected: t } = e,
             n = (0, o.JA)('messageRequests'),
             { channelId: a } = (0, p._)();
         if (!(0, S.a)()) return null;
-        let s = null == a ? void 0 : () => h.Z.preload(k.ME, a);
+        let s = null == a ? void 0 : () => E.Z.preload(k.ME, a);
         return (0, i.jsx)(U.Qj, {
             selected: t,
             route: k.Z5c.MESSAGE_REQUESTS,
-            icon: E.EnvelopeIcon,
+            icon: h.EnvelopeIcon,
             text: H.Z.Messages.MESSAGE_REQUESTS,
             onClick: s,
             ...n,
@@ -131,7 +131,7 @@ let F = (e) => {
             ? (0, i.jsx)(U.Qj, {
                   selected: t,
                   route: k.Z5c.FAMILY_CENTER,
-                  icon: E.GroupIcon,
+                  icon: h.GroupIcon,
                   text: n,
                   onMouseEnter: () => {
                       d(!0);
@@ -161,14 +161,14 @@ let F = (e) => {
             : a > 0
               ? (0, i.jsx)('div', {
                     className: V.familyCenterPendingBadge,
-                    children: (0, i.jsx)(E.NumberBadge, { count: a })
+                    children: (0, i.jsx)(h.NumberBadge, { count: a })
                 })
               : (0, i.jsx)(g.ZP, {
                     contentTypes: [u.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
                         return t === u.z.FAMILY_CENTER_NEW_BADGE
-                            ? (0, i.jsx)(E.TextBadge, {
+                            ? (0, i.jsx)(h.TextBadge, {
                                   text: H.Z.Messages.NEW,
                                   color: I.Z.BG_BRAND
                               })

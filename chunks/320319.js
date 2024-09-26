@@ -40,26 +40,26 @@ let P = {
             [j, G] = a.useState(!1),
             w = (0, m.yQ)(),
             y = (0, m.IB)(),
-            [H, k] = a.useState(!1),
+            [k, H] = a.useState(!1),
             [F, V] = a.useState(t === p.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === M.EB.REDEEMABLE);
         a.useEffect(() => {
             t === p.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === M.EB.REDEEMABLE && V(!0);
         }, [y, t, w]);
         let W = a.useCallback(() => {
-                k(!0);
+                H(!0);
             }, []),
             K = A === f.R0.CARD_CAROUSEL_FIRST_ROW || A === f.R0.CARD_CAROUSEL_SECOND_ROW || A === f.R0.CARD_CAROUSEL_THIRD_ROW,
             Y = (0, p.Z)(),
             [z, Q] = (0, I.cv)((null != r && n) || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [r] : []);
         a.useEffect(
             () => () => {
-                z === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && H && (0, T.EW)(z);
+                z === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && k && (0, T.EW)(z);
             },
-            [z, H]
+            [z, k]
         ),
             a.useEffect(() => {
-                z === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && H && (0, T.EW)(z);
-            }, [z, H]);
+                z === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && k && (0, T.EW)(z);
+            }, [z, k]);
         let { easterEggLevel: q, isEasterEggTriggered: X, onHover: J, onUnhover: $ } = (0, C.Z)(5),
             ee = (0, o.debounce)(() => {
                 R.default.track(h.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {

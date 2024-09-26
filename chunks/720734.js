@@ -15,8 +15,8 @@ var i = n(735250),
     d = n(400354),
     u = n(652844),
     _ = n(789639),
-    E = n(481060),
-    h = n(355467),
+    h = n(481060),
+    E = n(355467),
     m = n(239091),
     I = n(230711),
     g = n(410575),
@@ -69,8 +69,8 @@ var i = n(735250),
     ed = n(78839),
     eu = n(626135),
     e_ = n(768581),
-    eE = n(572004),
-    eh = n(70956),
+    eh = n(572004),
+    eE = n(70956),
     em = n(74538),
     eI = n(374023),
     eg = n(51144),
@@ -95,20 +95,20 @@ function eZ(e, t, n) {
         e
     );
 }
-let eL = ep.ZP.getEnableHardwareAcceleration() ? E.AnimatedAvatar : E.Avatar,
-    eR = 30 * eh.Z.Millis.DAY;
+let eL = ep.ZP.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
+    eR = 30 * eE.Z.Millis.DAY;
 function eO(e) {
     let { speaking: t, streaming: n, currentUser: a, status: s, handleMouseLeave: l, renderNameTag: o } = e,
         c = (0, A.Z)(null == a ? void 0 : a.avatarDecoration),
         d = (0, e_.NZ)({
             avatarDecoration: c,
-            size: (0, v.y9)(E.AvatarSizes.SIZE_32)
+            size: (0, v.y9)(h.AvatarSizes.SIZE_32)
         });
     return null == a
         ? null
         : (0, i.jsx)(g.Z, {
               object: eC.qAy.AVATAR,
-              children: (0, i.jsx)(E.Popout, {
+              children: (0, i.jsx)(h.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: t, setPopoutRef: n } = e;
                       return (0, i.jsx)('div', {
@@ -124,7 +124,7 @@ function eO(e) {
                   },
                   position: 'top',
                   align: 'left',
-                  animation: E.Popout.Animation.FADE,
+                  animation: h.Popout.Animation.FADE,
                   spacing: 14,
                   fixed: !0,
                   preload: () =>
@@ -133,13 +133,13 @@ function eO(e) {
                           withMutualFriends: !1
                       }),
                   children: (e) =>
-                      (0, i.jsxs)(E.Clickable, {
+                      (0, i.jsxs)(h.Clickable, {
                           ...e,
                           'aria-label': eA.Z.Messages.SET_STATUS,
                           className: ev.avatarWrapper,
                           children: [
                               (0, i.jsx)(eL, {
-                                  size: E.AvatarSizes.SIZE_32,
+                                  size: h.AvatarSizes.SIZE_32,
                                   src: a.getAvatarURL(void 0, 32, !1),
                                   avatarDecoration: d,
                                   'aria-label': a.username,
@@ -148,7 +148,7 @@ function eO(e) {
                                   className: ev.avatar
                               }),
                               (0, i.jsx)('div', {
-                                  className: r()(ev.nameTag, { [ev.canCopy]: eE.wS }),
+                                  className: r()(ev.nameTag, { [ev.canCopy]: eh.wS }),
                                   children: o()
                               })
                           ]
@@ -173,7 +173,7 @@ class ex extends a.PureComponent {
         let { copiedStreak: e } = this.state,
             t = [eA.Z.Messages.COPY_SUCCESS_1, eA.Z.Messages.COPY_SUCCESS_2, eA.Z.Messages.COPY_SUCCESS_3, eA.Z.Messages.COPY_SUCCESS_4, eA.Z.Messages.COPY_SUCCESS_5, eA.Z.Messages.COPY_SUCCESS_6, eA.Z.Messages.COPY_SUCCESS_7, eA.Z.Messages.COPY_SUCCESS_8, eA.Z.Messages.COPY_SUCCESS_9, eA.Z.Messages.COPY_SUCCESS_10, eA.Z.Messages.COPY_SUCCESS_11],
             n = Math.min(Math.max(0, e - 1), t.length - 1);
-        return (0, i.jsx)(E.Shaker, {
+        return (0, i.jsx)(h.Shaker, {
             isShaking: this.isCopiedStreakGodlike,
             children: t[n]
         });
@@ -260,7 +260,7 @@ class ex extends a.PureComponent {
                                   suppress: l,
                                   awaitingRemote: a,
                                   tooltipText: d ? eA.Z.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, O.Z)(n, s, l, a),
-                                  tooltipColor: d ? E.TooltipColors.GREEN : void 0,
+                                  tooltipColor: d ? h.TooltipColors.GREEN : void 0,
                                   tooltipForceOpen: d || void 0,
                                   onMouseEnter: this.handleMouseEnterMute,
                                   onMouseLeave: this.handleMouseLeaveMute,
@@ -280,7 +280,7 @@ class ex extends a.PureComponent {
                                       let { visibleContent: t, markAsDismissed: n } = e;
                                       switch (t) {
                                           case o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2:
-                                              return (0, i.jsx)(E.Popout, {
+                                              return (0, i.jsx)(h.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -288,7 +288,7 @@ class ex extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK:
-                                              return (0, i.jsx)(E.Popout, {
+                                              return (0, i.jsx)(h.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -296,7 +296,7 @@ class ex extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE:
-                                              return (0, i.jsx)(E.Popout, {
+                                              return (0, i.jsx)(h.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -304,7 +304,7 @@ class ex extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.SOUNDBOARD_VOLUME_EDUCATION:
-                                              return (0, i.jsx)(E.Popout, {
+                                              return (0, i.jsx)(h.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -312,7 +312,7 @@ class ex extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING:
-                                              return (0, i.jsx)(E.Popout, {
+                                              return (0, i.jsx)(h.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -320,7 +320,7 @@ class ex extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK:
-                                              return (0, i.jsx)(E.Popout, {
+                                              return (0, i.jsx)(h.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -430,7 +430,7 @@ class ex extends a.PureComponent {
                 let { currentUser: e } = this.props,
                     { shouldShowNametagTooltip: t, copiedStreak: n } = this.state;
                 if (null == e) return;
-                (0, eE.JG)(
+                (0, eh.JG)(
                     eg.ZP.getUserTag(e, {
                         decoration: 'never',
                         identifiable: 'always'
@@ -503,7 +503,7 @@ function eb() {
         O = (0, l.e7)([ed.ZP], () => ed.ZP.getPremiumTypeSubscription()),
         x = (0, l.e7)([es.Z], () => es.Z.getEverSpeakingWhileMuted()),
         b = (0, l.e7)([ea.Z], () => ea.Z.hasLayers()),
-        P = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || b || eI.s.isDisallowPopupsSet(),
+        P = (0, h.useModalsStore)(h.hasAnyModalOpenSelector) || b || eI.s.isDisallowPopupsSet(),
         M = (0, B.b)(),
         D = (0, l.e7)([w.Z], () => null != w.Z.getAwaitingRemoteSessionInfo()),
         j = (0, Y.D)(),
@@ -535,10 +535,10 @@ function eb() {
                     (async () => {
                         if (e || null != n || !r) return;
                         if (!i) {
-                            await (0, h.ou)();
+                            await (0, E.ou)();
                             return;
                         }
-                        if (!c) !t && (await (0, h.l0)());
+                        if (!c) !t && (await (0, E.l0)());
                     })();
                 }, [r, n, e, i, t, c]),
                 !e && !!r && !c && null != n && n
@@ -579,15 +579,15 @@ function eb() {
 }
 function eP(e) {
     let { webBuildOverride: t, isEligibleForPomelo: n, onClick: a, onContextMenu: s } = e,
-        r = (0, E.useRedesignIconContext)().enabled,
+        r = (0, h.useRedesignIconContext)().enabled,
         l = null,
-        o = E.SettingsIcon,
+        o = h.SettingsIcon,
         c = (0, _.i)();
     return (
         r
-            ? (o = null != t ? E.SettingsInfoIcon : n ? E.SettingsCircleIcon : c.Component)
+            ? (o = null != t ? h.SettingsInfoIcon : n ? h.SettingsCircleIcon : c.Component)
             : null != t
-              ? (l = (0, i.jsx)(E.CircleInformationIcon, {
+              ? (l = (0, i.jsx)(h.CircleInformationIcon, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 9,
@@ -596,7 +596,7 @@ function eP(e) {
                     'aria-hidden': !0
                 }))
               : n &&
-                (l = (0, i.jsx)(E.CircleBadge, {
+                (l = (0, i.jsx)(h.CircleBadge, {
                     color: M.Z.STATUS_DANGER,
                     className: ev.hasBuildOverride,
                     'aria-hidden': !0
@@ -613,10 +613,10 @@ function eP(e) {
     );
 }
 function eM(e) {
-    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: r, tooltipText: l, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: _, onClick: h, onContextMenu: m } = e,
+    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: r, tooltipText: l, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: _, onClick: E, onContextMenu: m } = e,
         I = t || s || n,
         { Component: g, play: p, events: T } = (0, u.O)(I ? 'unmute' : 'mute'),
-        S = n || s ? E.MicrophoneDenyIcon : g,
+        S = n || s ? h.MicrophoneDenyIcon : g,
         { analyticsLocations: f } = (0, N.ZP)(C.Z.AUDIO_INPUT_BUTTON);
     a.useEffect(() => () => p(), [I, p]);
     let A = a.useCallback(
@@ -641,10 +641,10 @@ function eM(e) {
                 size: 'custom',
                 width: 20,
                 height: 20,
-                color: I ? E.tokens.colors.STATUS_DANGER : 'currentColor'
+                color: I ? h.tokens.colors.STATUS_DANGER : 'currentColor'
             }),
             iconForeground: I ? ev.strikethrough : null,
-            onClick: h,
+            onClick: E,
             onContextMenu: A,
             role: 'switch',
             'aria-label': eA.Z.Messages.MUTE,
@@ -659,9 +659,9 @@ function eD(e) {
         {
             Component: u,
             play: _,
-            events: { onMouseEnter: h, onMouseLeave: m }
+            events: { onMouseEnter: E, onMouseLeave: m }
         } = (0, d.l)(c ? 'undeafen' : 'deafen'),
-        I = n ? E.HeadphonesDenyIcon : u,
+        I = n ? h.HeadphonesDenyIcon : u,
         { analyticsLocations: g } = (0, N.ZP)(C.Z.AUDIO_OUTPUT_BUTTON);
     a.useEffect(() => () => _(), [c, _]);
     let p = a.useCallback(
@@ -674,13 +674,13 @@ function eD(e) {
         value: g,
         children: (0, i.jsx)(eT.Z, {
             tooltipText: (0, R.Z)(t, n, s),
-            onMouseEnter: h,
+            onMouseEnter: E,
             onMouseLeave: m,
             icon: (0, i.jsx)(I, {
                 size: 'custom',
                 width: 20,
                 height: 20,
-                color: c ? E.tokens.colors.STATUS_DANGER : 'currentColor'
+                color: c ? h.tokens.colors.STATUS_DANGER : 'currentColor'
             }),
             onClick: l,
             onContextMenu: p,

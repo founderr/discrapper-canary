@@ -15,8 +15,8 @@ var a = n(442837),
     d = n(626135),
     u = n(51144),
     _ = n(480387),
-    E = n(726745),
-    h = n(251423),
+    h = n(726745),
+    E = n(251423),
     m = n(383832),
     I = n(981631),
     g = n(689938),
@@ -24,14 +24,14 @@ var a = n(442837),
 function T(e) {
     let t = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         n = (0, a.e7)([o.Z], () => o.Z.hidePersonalInformation),
-        { multiAccountUsers: T } = (0, h.L)(),
+        { multiAccountUsers: T } = (0, E.L)(),
         S = (e) => {
             if (e !== (null == t ? void 0 : t.id)) d.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.USER_PROFILE } }), _.yD(e);
         },
         f = T.map((a) => {
             let o = new l.Z(a),
                 c = o.id === (null == t ? void 0 : t.id),
-                d = a.tokenStatus === E.q.INVALID,
+                d = a.tokenStatus === h.q.INVALID,
                 _ = n ? null : '#'.concat(o.discriminator);
             return (0, i.jsx)(
                 s.MenuItem,

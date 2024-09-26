@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(481060),
     u = n(352057),
     _ = n(341907),
-    E = n(703656),
-    h = n(836768),
+    h = n(703656),
+    E = n(836768),
     m = n(766219),
     I = n(49898),
     g = n(981631),
@@ -18,7 +18,7 @@ var i = n(735250),
     S = n(696165);
 function f(e) {
     let { tab: t } = e,
-        n = (0, h.d)((e) => e.selectedTab === t, l.Z),
+        n = (0, E.d)((e) => e.selectedTab === t, l.Z),
         s = a.useMemo(
             () =>
                 (function (e) {
@@ -35,13 +35,13 @@ function f(e) {
         ),
         u = a.useMemo(() => (0, m.sm)(t), [t]),
         T = a.useCallback(() => {
-            switch (((0, c.j)(() => h.d.setState({ selectedTab: t })), t)) {
+            switch (((0, c.j)(() => E.d.setState({ selectedTab: t })), t)) {
                 case I.F$.QUESTS:
                     return (0, _.navigateToQuestHome)(p.dr.DISCOVERY_SIDEBAR, o.j.DISCOVERY_SIDEBAR);
                 case I.F$.APPS:
-                    return (0, E.uL)(g.Z5c.GLOBAL_DISCOVERY_APPS);
+                    return (0, h.uL)(g.Z5c.GLOBAL_DISCOVERY_APPS);
                 case I.F$.SERVERS:
-                    return (0, E.uL)(g.Z5c.GLOBAL_DISCOVERY_SERVERS);
+                    return (0, h.uL)(g.Z5c.GLOBAL_DISCOVERY_SERVERS);
             }
         }, [t]);
     return (0, i.jsxs)(d.Clickable, {

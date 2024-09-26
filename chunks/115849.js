@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(194359),
     u = n(313201),
     _ = n(657682),
-    E = n(981631),
-    h = n(420212),
+    h = n(981631),
+    E = n(420212),
     m = n(689938),
     I = n(467189),
     g = n(113207);
@@ -116,12 +116,12 @@ function N() {
                                 inputClassName: I.input,
                                 onKeyPress: (t) => {
                                     let n = t.currentTarget.value;
-                                    if (t.key !== h.mR.Enter) {
+                                    if (t.key !== E.mR.Enter) {
                                         if (n.includes('#')) {
                                             o()(null != e.current, 'Input is handling keypress when not mounted');
                                             let i = n.indexOf('#'),
                                                 a = e.current.selectionStart,
-                                                s = t.key === h.mR.Backspace || t.key === h.mR.ArrowRight || t.key === h.mR.ArrowLeft,
+                                                s = t.key === E.mR.Backspace || t.key === E.mR.ArrowRight || t.key === E.mR.ArrowLeft,
                                                 r = t.which >= 48 && t.which <= 57;
                                             null != a && a > i && /^(.+?#\d{4})$/.test(n) && !s ? t.preventDefault() : null != a && a > i && !r && !s && t.preventDefault();
                                         }
@@ -134,7 +134,7 @@ function N() {
                                     }
                                     let t = '',
                                         [, n] = e.split('#');
-                                    null != n && (t = e + E.LYt.slice(null != n ? n.length + 1 : 0)),
+                                    null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)),
                                         s({
                                             type: 'HINT',
                                             text: t

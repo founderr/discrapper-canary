@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(239091),
     u = n(194359),
     _ = n(487971),
-    E = n(703656),
-    h = n(592125),
+    h = n(703656),
+    E = n(592125),
     m = n(131951),
     I = n(51144),
     g = n(321488),
@@ -155,8 +155,8 @@ class L extends a.PureComponent {
             v(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
-                let n = r().find(h.Z.getMutablePrivateChannels(), (e) => e.type === f.d4z.DM && e.getRecipientId() === t.id);
-                null != n ? (0, E.uL)(f.Z5c.CHANNEL(f.ME, n.id)) : c.Z.openPrivateChannel(t.id);
+                let n = r().find(E.Z.getMutablePrivateChannels(), (e) => e.type === f.d4z.DM && e.getRecipientId() === t.id);
+                null != n ? (0, h.uL)(f.Z5c.CHANNEL(f.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
             v(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t } = this.props;

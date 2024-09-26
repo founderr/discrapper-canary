@@ -88,7 +88,7 @@ t.Z = {
                 }),
         handler(e) {
             let {
-                args: { input: t, output: n, mode: i, automatic_gain_control: r, echo_cancellation: l, noise_suppression: o, qos: d, silence_warning: u, deaf: _, mute: E }
+                args: { input: t, output: n, mode: i, automatic_gain_control: r, echo_cancellation: l, noise_suppression: o, qos: d, silence_warning: u, deaf: _, mute: h }
             } = e;
             if ((t && (null != t.device_id && a.Z.setInputDevice(t.device_id), null != t.volume && a.Z.setInputVolume(t.volume)), n && (null != n.device_id && a.Z.setOutputDevice(n.device_id), null != n.volume && a.Z.setOutputVolume(n.volume)), i)) {
                 let e = s.Z.getMode(),
@@ -99,9 +99,9 @@ t.Z = {
                 let e = s.Z.isSelfDeaf();
                 ((e && !_) || (!e && _)) && a.Z.toggleSelfDeaf();
             }
-            if (null != E) {
+            if (null != h) {
                 let e = s.Z.isSelfMute();
-                ((e && !E) || (!e && E)) && a.Z.toggleSelfMute();
+                ((e && !h) || (!e && h)) && a.Z.toggleSelfMute();
             }
             return (0, c._X)();
         }

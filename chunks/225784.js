@@ -9,8 +9,8 @@ var i,
     d = n(239091),
     u = n(686546),
     _ = n(372769),
-    E = n(134432),
-    h = n(695346),
+    h = n(134432),
+    E = n(695346),
     m = n(768581),
     I = n(900849),
     g = n(556017),
@@ -55,7 +55,7 @@ class R extends (i = s.PureComponent) {
             P = m.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
-                size: 300 * (0, E.x_)()
+                size: 300 * (0, h.x_)()
             }),
             M = null != P ? P : this.getDefaultSplashURL(i, b),
             D = m.ZP.getGuildIconURL({
@@ -67,7 +67,7 @@ class R extends (i = s.PureComponent) {
         let { shouldDisplayTags: y } = p.w.getCurrentConfig({ location: 'de1ef6_2' }, { autoTrackExposure: !1 }),
             { canSeeInAppReportingButtons: j } = g.N.getCurrentConfig({ location: 'de1ef6_3' }, { autoTrackExposure: !1 });
         g.N.trackExposure({ location: 'de1ef6_4' });
-        let U = h.Sb.getSetting();
+        let U = E.Sb.getSetting();
         return (0, a.jsx)(o.$, {
             active: !A,
             onChange: this.setIsVisible,

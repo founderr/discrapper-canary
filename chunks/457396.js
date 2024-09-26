@@ -15,8 +15,8 @@ var r = n(91192),
     d = n(515753),
     u = n(605236),
     _ = n(243778),
-    E = n(819640),
-    h = n(594174),
+    h = n(819640),
+    E = n(594174),
     m = n(351402),
     I = n(78839),
     g = n(626135),
@@ -49,7 +49,7 @@ let B = (e) => {
         n,
         i,
         { selected: a, route: B, locationState: H, ...V } = e,
-        F = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
+        F = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
         Y = (0, l.e7)([I.ZP], () => I.ZP.getPremiumTypeSubscription()),
         W = (0, p.Qo)(F, Y),
         z = (0, r.JA)('nitro'),
@@ -65,7 +65,7 @@ let B = (e) => {
         ei = (0, P.vx)(w),
         ea = (0, P.wG)(w),
         es = (0, l.e7)([T.Z], () => T.Z.getCreatedAtOverride()),
-        er = (0, l.e7)([E.Z], () => E.Z.hasLayers()),
+        er = (0, l.e7)([h.Z], () => h.Z.hasLayers()),
         el = null != es ? es : null == F ? void 0 : F.createdAt,
         eo = a || null != K || null != q || J || ei || ea || $ || null != ee || null != et || W,
         { enabled: ec } = S._.useExperiment({ location: w }, { autoTrackExposure: !1 }),
@@ -110,7 +110,7 @@ let B = (e) => {
                               isTabSelected: a
                           })),
                           (i = 4));
-    let eE = (0, s.jsx)(d.Qj, {
+    let eh = (0, s.jsx)(d.Qj, {
         selected: a,
         route: B,
         icon: c.NitroWheelIcon,
@@ -128,5 +128,5 @@ let B = (e) => {
         className: t,
         children: n
     });
-    return en ? (0, s.jsx)(R.Em, { children: eE }) : ei && !er ? (0, s.jsx)(R.A7, { children: () => eE }) : eE;
+    return en ? (0, s.jsx)(R.Em, { children: eh }) : ei && !er ? (0, s.jsx)(R.A7, { children: () => eh }) : eh;
 };

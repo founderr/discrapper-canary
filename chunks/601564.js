@@ -15,8 +15,8 @@ var i = n(735250),
     d = n(410575),
     u = n(666743),
     _ = n(112724),
-    E = n(447269),
-    h = n(612226),
+    h = n(447269),
+    E = n(612226),
     m = n(714338),
     I = n(663993),
     g = n(628123),
@@ -57,12 +57,12 @@ class O extends a.PureComponent {
             })),
             this.props.isAuthenticated && (0, c.tZ)(),
             m.Z.disable(),
-            m.Z.setLayout(E.r),
+            m.Z.setLayout(h.r),
             m.Z.enable(),
             (0, T.e)('application_store');
     }
     componentWillUnmount() {
-        null != this.stopListeningToHistory && this.stopListeningToHistory(), m.Z.disable(), m.Z.setLayout(h.oT), m.Z.enable();
+        null != this.stopListeningToHistory && this.stopListeningToHistory(), m.Z.disable(), m.Z.setLayout(E.oT), m.Z.enable();
     }
     renderCustomErrorMessage() {
         return (0, i.jsxs)('div', {

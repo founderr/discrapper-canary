@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return E;
     }
 }),
     n(653041);
@@ -14,16 +14,16 @@ var i = n(735250),
     d = n(283293),
     u = n(726115),
     _ = n(294330),
-    E = n(417712);
-function h(e) {
-    let { tab: t, guildIds: n, loading: h, onScroll: m, onGuildCardClick: I, onGuildCardSeen: g } = e,
+    h = n(417712);
+function E(e) {
+    let { tab: t, guildIds: n, loading: E, onScroll: m, onGuildCardClick: I, onGuildCardSeen: g } = e,
         p = (0, u.Mf)(t),
         T = (0, u.a$)(t),
         S = (0, u.QW)(t),
         f = (0, u.lg)(t),
         C = (0, l.C)(),
         N = a.useMemo(() => {
-            let e = h ? 30 : n.length,
+            let e = E ? 30 : n.length,
                 t = [];
             for (let s = 0; s < e; s++) {
                 var a;
@@ -37,7 +37,7 @@ function h(e) {
                 );
             }
             return t;
-        }, [f, n, h, I, g]);
+        }, [f, n, E, I, g]);
     return (0, i.jsxs)(d.Z, {
         onScroll: m,
         children: [
@@ -53,13 +53,13 @@ function h(e) {
                         query: t
                     }),
                     (0, i.jsx)(s.Heading, {
-                        className: E.sectionTitle,
+                        className: h.sectionTitle,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
                         children: S
                     }),
                     (0, i.jsx)('div', {
-                        className: E.content,
+                        className: h.content,
                         children: N
                     })
                 ]

@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(184301),
     u = n(347475),
     _ = n(237583),
-    E = n(51144),
-    h = n(981631),
+    h = n(51144),
+    E = n(981631),
     m = n(689938),
     I = n(31848);
 function g(e, t, n) {
@@ -27,7 +27,7 @@ function g(e, t, n) {
     );
 }
 let p = {
-    [h.AzA.NOW_PLAYING]: {
+    [E.AzA.NOW_PLAYING]: {
         single: (e, t) =>
             m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
                 user1: e.username,
@@ -42,7 +42,7 @@ let p = {
             }),
         other: (e) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_OTHER.format({ count: e })
     },
-    [h.AzA.RECENTLY_PLAYED]: {
+    [E.AzA.RECENTLY_PLAYED]: {
         single: (e, t) =>
             m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_SINGLE.format({
                 user1: e.username,
@@ -57,7 +57,7 @@ let p = {
             }),
         other: (e) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_OTHER.format({ count: e })
     },
-    [h.AzA.EVER_PLAYED]: {
+    [E.AzA.EVER_PLAYED]: {
         single: (e, t) =>
             m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_SINGLE.format({
                 user1: e.username,
@@ -131,7 +131,7 @@ class T extends a.PureComponent {
                 (0, i.jsxs)('div', {
                     className: I.tooltip,
                     children: [
-                        (0, i.jsx)('div', { children: E.ZP.getUserTag(e) }),
+                        (0, i.jsx)('div', { children: h.ZP.getUserTag(e) }),
                         (0, i.jsx)(c.ZP, {
                             className: I.tooltipTimestamp,
                             start: t,
@@ -160,7 +160,7 @@ class T extends a.PureComponent {
                               children: (t) =>
                                   (0, i.jsx)(l.Tooltip, {
                                       text: this.renderUserTooltip(e, s.startTime, s.endTime),
-                                      'aria-label': (0, E.W5)(e, { decoration: 'never' }),
+                                      'aria-label': (0, h.W5)(e, { decoration: 'never' }),
                                       children: (n) =>
                                           (0, i.jsx)(l.Avatar, {
                                               className: r()(I.playerAvatar, { [I.avatarMasked]: !a }),

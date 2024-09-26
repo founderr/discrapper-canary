@@ -20,8 +20,8 @@ var i,
     d = n(481060),
     u = n(884338),
     _ = n(471445),
-    E = n(986332),
-    h = n(662842),
+    h = n(986332),
+    E = n(662842),
     m = n(703656),
     I = n(922482),
     g = n(565799),
@@ -51,7 +51,7 @@ var i,
     B = n(257956);
 let H = r.memo(function (e) {
     let { heading: t, location: n, locationIcon: i, details: a, detailsIcon: r, topic: l, onClickCloseIcon: c, onClickTopicText: u, children: _ } = e,
-        E = (0, s.jsx)(d.Text, {
+        h = (0, s.jsx)(d.Text, {
             color: 'header-primary',
             variant: 'text-md/semibold',
             className: B.eventName,
@@ -83,13 +83,13 @@ let H = r.memo(function (e) {
                 ]
             }),
             null == u
-                ? E
+                ? h
                 : (0, s.jsx)(d.Button, {
                       size: d.Button.Sizes.MIN,
                       look: d.Button.Looks.LINK,
                       color: d.Button.Colors.PRIMARY,
                       onClick: u,
-                      children: E
+                      children: h
                   }),
             (0, s.jsxs)('div', {
                 className: o()(B.textBlock, B.singleLine),
@@ -206,8 +206,8 @@ function Y(e) {
         l = null != a ? (0, b.m)(a, !0) : null,
         c = (0, y.nE)(n),
         u = (0, _.KS)(c),
-        { startTime: E, endTime: h } = (0, M.ZP)(n),
-        { startDateTimeString: m, upcomingEvent: I, diffMinutes: g } = (0, j.ub)(E.toISOString(), null == h ? void 0 : h.toISOString()),
+        { startTime: h, endTime: E } = (0, M.ZP)(n),
+        { startDateTimeString: m, upcomingEvent: I, diffMinutes: g } = (0, j.ub)(h.toISOString(), null == E ? void 0 : E.toISOString()),
         p = I ? (g > 0 ? k.Z.Messages.STARTING_IN_MINUTES.format({ minutes: g }) : k.Z.Messages.STARTING_SOON) : k.Z.Messages.STARTING_ON_DATE.format({ date: m });
     return (
         r.useEffect(() => {
@@ -383,17 +383,17 @@ function Q(e) {
         a = t.getGuildId(),
         l = r.useMemo(() => n.slice(0, 3), [n]),
         _ = (0, c.e7)([C.Z], () => C.Z.can(w.Plq.CONNECT, t)),
-        E = (0, f.Z)(t.id),
-        h = k.Z.Messages.JOIN;
+        h = (0, f.Z)(t.id),
+        E = k.Z.Messages.JOIN;
     switch (i) {
         case 1:
-            h = k.Z.Messages.JOIN;
+            E = k.Z.Messages.JOIN;
             break;
         case 2:
-            (h = k.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON), (null == E ? void 0 : E.speaker) ? (h = k.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON) : null != E && (h = k.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON);
+            (E = k.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON), (null == h ? void 0 : h.speaker) ? (E = k.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON) : null != h && (E = k.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON);
             break;
         case 3:
-            h = k.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
+            E = k.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
             break;
         default:
             (0, v.vE)(i);
@@ -422,10 +422,10 @@ function Q(e) {
                         })
                       : null,
                   _ &&
-                      null == E &&
+                      null == h &&
                       (0, s.jsx)(K, {
                           channel: t,
-                          label: h
+                          label: E
                       })
               ]
           });
@@ -435,7 +435,7 @@ function Q(e) {
     (a[(a.STUDY_ROOM = 3)] = 'STUDY_ROOM'),
     (t.ZP = r.memo(function (e) {
         let { guild: t } = e,
-            { showRedesignedLiveChannelNotice: n } = (0, E.o)(!0),
+            { showRedesignedLiveChannelNotice: n } = (0, h.o)(!0),
             i = (0, P.y)(t.id),
             a = (0, D.k5)(t.id),
             r = (0, D.Vm)(t.id),
@@ -450,7 +450,7 @@ function Q(e) {
             ),
             u = null,
             _ = null != l && null != i && !o;
-        if (n) return (0, s.jsx)(h.Z, { guild: t });
+        if (n) return (0, s.jsx)(E.Z, { guild: t });
         null == a || d
             ? _ &&
               (u = (0, s.jsx)(q, {

@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(569545),
     u = n(106301),
     _ = n(590415),
-    E = n(131704),
-    h = n(199902),
+    h = n(131704),
+    E = n(199902),
     m = n(314897),
     I = n(592125),
     g = n(430824),
@@ -93,11 +93,11 @@ function x() {
                     c = e.connected,
                     d = e.connectHasStarted;
                 if ((!d && a) || (r && !o)) {
-                    if (null != n && E.Lr.has(n)) return;
+                    if (null != n && h.Lr.has(n)) return;
                     return 'user_join';
                 }
                 if (c && !i) {
-                    if (s || r || (null != l && E.Lr.has(l))) return;
+                    if (s || r || (null != l && h.Lr.has(l))) return;
                     return 'disconnect';
                 }
             }
@@ -167,7 +167,7 @@ function D() {
 function y() {
     return (
         R(
-            [f.Z, h.Z, m.default, N.Z, I.Z],
+            [f.Z, E.Z, m.default, N.Z, I.Z],
             () => {
                 let e, t;
                 let n = f.Z.getVoiceChannelId(),
@@ -175,15 +175,15 @@ function y() {
                 let a = [],
                     s = null,
                     r = 0,
-                    l = h.Z.getAllActiveStreams();
+                    l = E.Z.getAllActiveStreams();
                 if (null != n) {
                     let i = I.Z.getChannel(n);
-                    null != i && ((e = i.type), (t = A.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0)), (a = h.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
+                    null != i && ((e = i.type), (t = A.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0)), (a = E.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
                 }
                 let o = null;
                 return (
-                    (null == (o = 1 === l.length ? l[0] : h.Z.getCurrentUserActiveStream()) ? void 0 : o.state) === L.jm8.CONNECTING && (o = null),
-                    null != o && ((s = (0, d.V9)(o)), (r = h.Z.getViewerIds(s).filter((e) => e !== i).length)),
+                    (null == (o = 1 === l.length ? l[0] : E.Z.getCurrentUserActiveStream()) ? void 0 : o.state) === L.jm8.CONNECTING && (o = null),
+                    null != o && ((s = (0, d.V9)(o)), (r = E.Z.getViewerIds(s).filter((e) => e !== i).length)),
                     {
                         channelType: e,
                         voiceChannelId: n,
@@ -209,7 +209,7 @@ function y() {
                         let i = g.Z.getGuild(n);
                         return null != i && i.afkChannelId === t.id;
                     })(i) ||
-                    (null != n && E.Lr.has(n))
+                    (null != n && h.Lr.has(n))
                 )
                     return;
                 let c = null != r && e.singleActiveStreamKey === r,

@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(895991),
     u = n(993977),
     _ = n(981631),
-    E = n(689938),
-    h = n(991401);
+    h = n(689938),
+    E = n(991401);
 function m() {
     return (0, i.jsxs)(s.rs, {
         children: [
@@ -19,7 +19,7 @@ function m() {
                 children: (0, i.jsxs)(r.Z, {
                     page: _.ZY5.LIBRARY_SETTINGS,
                     root: !0,
-                    children: [(0, i.jsx)(o.yY, { subsection: E.Z.Messages.SETTINGS }), (0, i.jsx)(u.Z, {})]
+                    children: [(0, i.jsx)(o.yY, { subsection: h.Z.Messages.SETTINGS }), (0, i.jsx)(u.Z, {})]
                 })
             }),
             (0, i.jsx)(l.Z, {
@@ -27,7 +27,7 @@ function m() {
                 children: (0, i.jsxs)(r.Z, {
                     page: _.ZY5.LIBRARY,
                     root: !0,
-                    children: [(0, i.jsx)(o.yY, { subsection: E.Z.Messages.APPLICATION_LIBRARY_MY_GAMES }), (0, i.jsx)(d.Z, {})]
+                    children: [(0, i.jsx)(o.yY, { subsection: h.Z.Messages.APPLICATION_LIBRARY_MY_GAMES }), (0, i.jsx)(d.Z, {})]
                 })
             })
         ]
@@ -39,8 +39,8 @@ t.Z = a.memo(function () {
             (0, c.e)('application_library');
         }, []),
         (0, i.jsxs)('div', {
-            className: h.container,
-            children: [(0, i.jsx)(o.yY, { location: E.Z.Messages.LIBRARY }), (0, i.jsx)(m, {})]
+            className: E.container,
+            children: [(0, i.jsx)(o.yY, { location: h.Z.Messages.LIBRARY }), (0, i.jsx)(m, {})]
         })
     );
 });

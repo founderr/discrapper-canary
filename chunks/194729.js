@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(748780),
     u = n(873546),
     _ = n(442837),
-    E = n(481060),
-    h = n(570140),
+    h = n(481060),
+    E = n(570140),
     m = n(212093),
     I = n(827837),
     g = n(785570),
@@ -75,7 +75,7 @@ class J extends a.PureComponent {
             ((0, I.N)(),
             (0, U.le)(),
             null == b.ZP.getSearchIndex() && (0, m.Ue)(),
-            h.Z.wait(() => {
+            E.Z.wait(() => {
                 (0, g.M)(W.x8Z.SERVER_DISCOVERY_BADGE);
             }),
             !i &&
@@ -96,7 +96,7 @@ class J extends a.PureComponent {
                 filters: { approximate_member_count: D.sq },
                 length: parseInt(n, 10)
             });
-        } else null != l && l !== Y.Hk && h.Z.wait(() => (0, m.uY)(l));
+        } else null != l && l !== Y.Hk && E.Z.wait(() => (0, m.uY)(l));
         let u = null !== (t = null === (e = (0, Z.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
         u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, L.e)('guild_discovery'), (0, S.kR)({ selectedCategoryId: o });
     }
@@ -191,14 +191,14 @@ class J extends a.PureComponent {
             } = this.props,
             { loadingGuildId: u } = this.state,
             _ = c === Y.Hk ? z.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : z.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({ categoryName: d }),
-            E = null !== (t = null === (e = a[n]) || void 0 === e ? void 0 : e[c]) && void 0 !== t ? t : b.xk;
+            h = null !== (t = null === (e = a[n]) || void 0 === e ? void 0 : e[c]) && void 0 !== t ? t : b.xk;
         return (0, i.jsx)(H.Z, {
             loadId: this.loadId,
             availableLanguages: s,
             defaultLanguage: r,
             placeholder: _,
             isFetchingSearch: l,
-            searchResults: E,
+            searchResults: h,
             mostRecentQuery: n,
             loadingGuildId: u,
             currentCategoryId: c,
@@ -253,7 +253,7 @@ class J extends a.PureComponent {
             d = s.length > 0;
         y.w.trackExposure({ location: '54961b_3' });
         let { shouldDisplayRecommendedSearchTags: _ } = y.w.getCurrentConfig({ location: '54961b_4' }, { autoTrackExposure: !1 }),
-            h = l === Y.Hk ? (null === (e = c[W.Lcj.FEATURED]) || void 0 === e ? void 0 : e.guilds) : null === (t = c[l]) || void 0 === t ? void 0 : t.guilds;
+            E = l === Y.Hk ? (null === (e = c[W.Lcj.FEATURED]) || void 0 === e ? void 0 : e.guilds) : null === (t = c[l]) || void 0 === t ? void 0 : t.guilds;
         if (l === Y.U) return (0, i.jsx)(N.Z, { loadId: this.loadId });
         let m = l === Y.Hk ? z.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : z.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({ categoryName: n });
         return (0, i.jsxs)('div', {
@@ -269,7 +269,7 @@ class J extends a.PureComponent {
                 }),
                 (0, i.jsx)('div', { className: r()(K.dragRegion, K.pageHeaderDrag, { [K.searchPageDrag]: d }) }),
                 u.tq && (0, i.jsx)(C.ZP, { children: (0, i.jsx)(a.Fragment, {}) }),
-                (0, i.jsx)(E.AdvancedScrollerAuto, {
+                (0, i.jsx)(h.AdvancedScrollerAuto, {
                     className: K.scroller,
                     ref: this._scroller,
                     onScroll: this.handleScroll,
@@ -277,7 +277,7 @@ class J extends a.PureComponent {
                         className: r()(K.viewWrapper, { [K.searchPage]: d }),
                         children: d
                             ? this.renderSearchResults()
-                            : (0, i.jsxs)(E.HeadingLevel, {
+                            : (0, i.jsxs)(h.HeadingLevel, {
                                   forceLevel: 1,
                                   component: (0, i.jsxs)('div', {
                                       className: K.searchHeader,
@@ -292,12 +292,12 @@ class J extends a.PureComponent {
                                               children: (0, i.jsxs)('div', {
                                                   className: K.headerContent,
                                                   children: [
-                                                      (0, i.jsx)(E.Heading, {
+                                                      (0, i.jsx)(h.Heading, {
                                                           variant: 'heading-xl/semibold',
                                                           className: K.searchTitle,
                                                           children: l === Y.Hk ? z.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : z.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({ categoryName: n })
                                                       }),
-                                                      (0, i.jsx)(E.Text, {
+                                                      (0, i.jsx)(h.Text, {
                                                           variant: 'text-md/normal',
                                                           className: K.searchSubtitle,
                                                           children: l === Y.Hk && z.Z.Messages.GUILD_DISCOVERY_HOME_SUBTITLE
@@ -311,7 +311,7 @@ class J extends a.PureComponent {
                                                               discoveryTagStyle: F.B.LIGHT,
                                                               onTagClick: (e) => this.handleTagSearch(e, void 0, D.P1.HEADER),
                                                               tags: o()
-                                                                  .chain(h)
+                                                                  .chain(E)
                                                                   .flatMap((e) => e.keywords)
                                                                   .compact()
                                                                   .uniq()
@@ -336,14 +336,14 @@ class J extends a.PureComponent {
                                                   src: q,
                                                   className: K.footerImage
                                               }),
-                                              (0, i.jsx)(E.Heading, {
+                                              (0, i.jsx)(h.Heading, {
                                                   variant: 'heading-md/semibold',
                                                   children: z.Z.Messages.GUILD_DISCOVERY_CATEGORY_FOOTER_TITLE
                                               }),
-                                              (0, i.jsx)(E.Button, {
-                                                  look: E.Button.Looks.LINK,
-                                                  color: E.Button.Colors.LINK,
-                                                  size: E.Button.Sizes.MIN,
+                                              (0, i.jsx)(h.Button, {
+                                                  look: h.Button.Looks.LINK,
+                                                  color: h.Button.Colors.LINK,
+                                                  size: h.Button.Sizes.MIN,
                                                   onClick: this.scrollToTop,
                                                   children: z.Z.Messages.GUILD_DISCOVERY_FOOTER_BODY
                                               })

@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(686546),
     u = n(372769),
     _ = n(134432),
-    E = n(451603),
-    h = n(885714),
+    h = n(451603),
+    E = n(885714),
     m = n(768581),
     I = n(900849),
     g = n(556017),
@@ -63,8 +63,8 @@ t.Z = (e) => {
         Y = async (e) => {
             let { className: t } = e.target;
             if (!t.includes('Menu')) {
-                if ((0, E.yU)()) {
-                    (0, h.Z)({
+                if ((0, h.yU)()) {
+                    (0, E.Z)({
                         analyticsSource: { page: f.ZY5.GUILD_DISCOVERY },
                         analyticsLocation: {
                             page: f.ZY5.GUILD_DISCOVERY,

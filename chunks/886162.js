@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(313201),
     u = n(23434),
     _ = n(981631),
-    E = n(689938),
-    h = n(646634);
+    h = n(689938),
+    E = n(646634);
 function m(e) {
     let { transitionState: t } = e,
         m = (0, r.e7)([u.Z], () => u.Z.getAction()),
@@ -43,24 +43,24 @@ function m(e) {
                     separator: !1,
                     children: (0, i.jsx)(l.Heading, {
                         variant: 'heading-lg/semibold',
-                        children: E.Z.Messages.NEW_TERMS_TITLE
+                        children: h.Z.Messages.NEW_TERMS_TITLE
                     })
                 }),
                 (0, i.jsxs)(l.ModalContent, {
                     children: [
                         (0, i.jsx)(l.Text, {
                             variant: 'text-md/normal',
-                            children: m === _.c2C.AGREEMENTS ? E.Z.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
+                            children: m === _.c2C.AGREEMENTS ? h.Z.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
                         }),
                         (0, i.jsxs)('div', {
-                            className: h.container,
+                            className: E.container,
                             children: [
                                 (0, i.jsxs)('ul', {
-                                    className: h.links,
-                                    children: [(0, i.jsx)('li', { children: E.Z.Messages.TERMS_OF_SERVICE.format({ url: _.EYA.TERMS }) }), (0, i.jsx)('li', { children: E.Z.Messages.PAID_SERVICES_TERMS.format({ url: _.EYA.PAID_TERMS }) }), (0, i.jsx)('li', { children: E.Z.Messages.PRIVACY_POLICY.format({ url: _.EYA.PRIVACY }) }), (0, i.jsx)('li', { children: E.Z.Messages.COMMUNITY_GUIDELINES.format({ url: _.EYA.GUIDELINES }) })]
+                                    className: E.links,
+                                    children: [(0, i.jsx)('li', { children: h.Z.Messages.TERMS_OF_SERVICE.format({ url: _.EYA.TERMS }) }), (0, i.jsx)('li', { children: h.Z.Messages.PAID_SERVICES_TERMS.format({ url: _.EYA.PAID_TERMS }) }), (0, i.jsx)('li', { children: h.Z.Messages.PRIVACY_POLICY.format({ url: _.EYA.PRIVACY }) }), (0, i.jsx)('li', { children: h.Z.Messages.COMMUNITY_GUIDELINES.format({ url: _.EYA.GUIDELINES }) })]
                                 }),
                                 (0, i.jsx)('img', {
-                                    className: h.image,
+                                    className: E.image,
                                     alt: '',
                                     src: n(146714)
                                 })
@@ -68,8 +68,8 @@ function m(e) {
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: 'text-md/normal',
-                            className: h.agreementDescription,
-                            children: E.Z.Messages.TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION
+                            className: E.agreementDescription,
+                            children: h.Z.Messages.TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION
                         })
                     ]
                 }),
@@ -78,7 +78,7 @@ function m(e) {
                         submitting: I,
                         onClick: T,
                         color: l.Button.Colors.GREEN,
-                        children: E.Z.Messages.AGREE
+                        children: h.Z.Messages.AGREE
                     })
                 })
             ]

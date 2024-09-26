@@ -118,8 +118,8 @@ t.Z = (e) => {
     let n,
         { className: r, hideCTAs: P = !1, headingOverride: v, hidePill: L = !1, selectedPlanColumnClassName: Z, selectedPlanTier: w = x.p9.TIER_2 } = e,
         { analyticsLocations: y } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        H = (0, o.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
-        k = (0, T.V)(),
+        k = (0, o.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
+        H = (0, T.V)(),
         F = 'PlanComparisonTable';
     (0, d.j)({
         location: F + ' auto on',
@@ -144,7 +144,7 @@ t.Z = (e) => {
         en = (0, m.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
         es = (0, S.n)(et, en, J, ee),
         ea = (0, f.Vi)();
-    if (!H || !k) return null;
+    if (!k || !H) return null;
     let er = {
         label: (0, s.jsx)(c.Heading, {
             className: O.__invalid_textColor,

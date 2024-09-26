@@ -8,7 +8,7 @@ var i = n(735250),
     d = n(726941),
     u = n(370648),
     _ = n(979007),
-    E = n(842221);
+    h = n(842221);
 t.Z = function () {
     let { tabs: e, selectedTab: t, onSelectTab: n } = (0, c.i)();
     return (
@@ -16,7 +16,7 @@ t.Z = function () {
             r.CP();
         }, []),
         (0, i.jsxs)('div', {
-            className: E.container,
+            className: h.container,
             children: [
                 (0, i.jsxs)(l.ZP, {
                     children: [

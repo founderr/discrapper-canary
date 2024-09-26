@@ -20,8 +20,8 @@ var i = n(735250),
     d = n(607070),
     u = n(446411),
     _ = n(468846),
-    E = n(313201),
-    h = n(70097),
+    h = n(313201),
+    E = n(70097),
     m = n(605236),
     I = n(524444),
     g = n(626135),
@@ -74,7 +74,7 @@ let N = [],
 function Z(e) {
     let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: Z, modalTopExtra: L, header: R, headerClassName: O, subHeader: x, subHeaderExtra: b, featureCards: P, changeLogId: M, button: D, body: y } = e,
         { onClose: j, transitionState: U } = n,
-        G = (0, E.Dt)(),
+        G = (0, h.Dt)(),
         w = P.length % 2 == 0,
         k = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         [B, H] = a.useState(Date.now()),
@@ -185,7 +185,7 @@ function Z(e) {
                             children: R
                         }),
                         'video' === s.type
-                            ? (0, i.jsx)(h.Z, {
+                            ? (0, i.jsx)(E.Z, {
                                   className: r()(C.video, A),
                                   autoPlay: !k,
                                   loop: !0,

@@ -9,8 +9,8 @@ var i,
     d = n(5254),
     u = n(441623),
     _ = n(735778),
-    E = n(199902),
-    h = n(271383),
+    h = n(199902),
+    E = n(271383),
     m = n(430824),
     I = n(158776),
     g = n(699516),
@@ -42,13 +42,13 @@ function N(e) {
         status: I.Z.getStatus(e),
         isMobile: I.Z.isMobileOnline(e),
         activities: I.Z.getActivities(e),
-        applicationStream: E.Z.getAnyStreamForUser(e)
+        applicationStream: h.Z.getAnyStreamForUser(e)
     };
 }
 function A(e) {
     let t = [];
     return (
-        s()(h.ZP.memberOf(e))
+        s()(E.ZP.memberOf(e))
             .map(m.Z.getGuild)
             .sortBy((e) => (null != e ? e.name.toLowerCase() : null))
             .forEach((e) => {
@@ -185,7 +185,7 @@ function j(e) {
 }
 class U extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, I.Z, p.default, m.Z, h.ZP, E.Z, d.Z), this.syncWith([g.Z], y), this.syncWith([d.Z], y), this.syncWith([u.Z], y), this.syncWith([p.default], j(C)), this.syncWith([I.Z, E.Z], j(N)), D();
+        this.waitFor(g.Z, I.Z, p.default, m.Z, E.ZP, h.Z, d.Z), this.syncWith([g.Z], y), this.syncWith([d.Z], y), this.syncWith([u.Z], y), this.syncWith([p.default], j(C)), this.syncWith([I.Z, h.Z], j(N)), D();
     }
     getState() {
         return {

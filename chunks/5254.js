@@ -9,8 +9,8 @@ var i,
     d = n(570140),
     u = n(598077),
     _ = n(594174),
-    E = n(388380);
-let h = {},
+    h = n(388380);
+let E = {},
     m = 0,
     I = !1,
     g = !1;
@@ -33,13 +33,13 @@ class T extends (i = c.ZP.Store) {
         return m;
     }
     getSuggestions() {
-        return Object.entries(h).map((e) => {
+        return Object.entries(E).map((e) => {
             let [t, n] = e;
             return n;
         });
     }
     getSuggestion(e) {
-        return h[e];
+        return E[e];
     }
 }
 (r = 'FriendSuggestionStore'),
@@ -53,32 +53,32 @@ class T extends (i = c.ZP.Store) {
         : (a[s] = r),
     (t.Z = new T(d.Z, {
         CONNECTION_OPEN: function (e) {
-            (h = {}), (m = e.friendSuggestionCount) > 0 && ((g = !0), I || !g || ((I = !0), (g = !1), E.Z.fetch()));
+            (E = {}), (m = e.friendSuggestionCount) > 0 && ((g = !0), I || !g || ((I = !0), (g = !1), h.Z.fetch()));
         },
         FRIEND_SUGGESTION_CREATE: function (e) {
             let t = p(e.suggestion);
-            if (null != h[t.key]) return !1;
+            if (null != E[t.key]) return !1;
             m++,
-                (h = {
-                    ...h,
+                (E = {
+                    ...E,
                     [t.key]: t
                 });
         },
         FRIEND_SUGGESTION_DELETE: function (e) {
-            (m = Math.max(0, --m)), delete h[e.suggestedUserId];
+            (m = Math.max(0, --m)), delete E[e.suggestedUserId];
         },
         LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
             var t;
             (I = !1),
                 (t = e.suggestions),
-                (h = o()
+                (E = o()
                     .chain(t)
                     .map((e) => p(e))
                     .keyBy((e) => e.key)
                     .value()),
-                (m = o().keys(h).length);
+                (m = o().keys(E).length);
         },
         LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-            (I = !1), (h = {});
+            (I = !1), (E = {});
         }
     }));

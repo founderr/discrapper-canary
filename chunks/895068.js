@@ -17,8 +17,8 @@ var i,
     d = n.n(c),
     u = n(143927),
     _ = n(442837),
-    E = n(481060),
-    h = n(110924),
+    h = n(481060),
+    E = n(110924),
     m = n(970606),
     I = n(594174),
     g = n(823379),
@@ -78,7 +78,7 @@ t.ZP = o.memo(function (e) {
         { loaded: y, clans: j, searchResult: U, searchCriteria: G, hasError: w } = (0, C.ML)(D, 'saved_guilds' === L),
         k = (0, A.GN)((e) => e.selectedTraits, u.Z),
         B = (0, A.GN)((e) => e.selectedGames, u.Z),
-        H = (0, h.Z)(U),
+        H = (0, E.Z)(U),
         { currentPage: V, updatePage: F, totalItems: Y, pageSize: W } = (0, N.a)(),
         z = (0, _.e7)([I.default], () => I.default.getCurrentUser());
     o.useEffect(() => {
@@ -187,7 +187,7 @@ t.ZP = o.memo(function (e) {
             },
             [q, X, D, V, W]
         ),
-        ee = o.useContext(E.AccessibilityPreferencesContext).reducedMotion.enabled,
+        ee = o.useContext(h.AccessibilityPreferencesContext).reducedMotion.enabled,
         et = o.useCallback(
             (e, t, n) => {
                 let { items: i } = q[e],
@@ -230,7 +230,7 @@ t.ZP = o.memo(function (e) {
                         return (0, l.jsx)(l.Fragment, {
                             children:
                                 Y > W &&
-                                (0, l.jsx)(E.Paginator, {
+                                (0, l.jsx)(h.Paginator, {
                                     className: d()(O.paginationInput),
                                     totalCount: Y,
                                     pageSize: W,
@@ -272,12 +272,12 @@ t.ZP = o.memo(function (e) {
                   'saved_guilds' === L
                       ? (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(E.Heading, {
+                                (0, l.jsx)(h.Heading, {
                                     variant: 'heading-md/medium',
                                     color: 'header-primary',
                                     children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
                                 }),
-                                (0, l.jsx)(E.Text, {
+                                (0, l.jsx)(h.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
                                     children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
@@ -286,12 +286,12 @@ t.ZP = o.memo(function (e) {
                         })
                       : (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(E.Heading, {
+                                (0, l.jsx)(h.Heading, {
                                     variant: 'heading-md/medium',
                                     color: 'header-primary',
                                     children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
                                 }),
-                                (0, l.jsx)(E.Text, {
+                                (0, l.jsx)(h.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
                                     children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION
@@ -308,11 +308,11 @@ t.ZP = o.memo(function (e) {
                         src: x,
                         className: O.errorImage
                     }),
-                    (0, l.jsx)(E.Heading, {
+                    (0, l.jsx)(h.Heading, {
                         variant: 'heading-xl/semibold',
                         children: R.Z.Messages.CLAN_DISCOVERY_ERROR_TITLE
                     }),
-                    (0, l.jsx)(E.Text, {
+                    (0, l.jsx)(h.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: R.Z.Messages.CLAN_DISCOVERY_ERROR_DESCRIPTION

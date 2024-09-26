@@ -37,12 +37,12 @@ class _ {
         o(this, 'guildIds', []), o(this, 'error', null), o(this, 'offset', null), o(this, 'total', null), o(this, 'isFetching', !1), o(this, 'isInitialFetchComplete', !1), o(this, 'lastFetchTimestamp', null);
     }
 }
-function E(e) {
+function h(e) {
     var t;
     let n = null !== (t = c.get(e)) && void 0 !== t ? t : new _();
     return c.set(e, n), n;
 }
-function h(e, t) {
+function E(e, t) {
     let n = c.get(e);
     return null != n ? t(n) : null;
 }
@@ -51,22 +51,22 @@ class m extends (i = a.ZP.Store) {
         return d.get(e);
     }
     getGuildIds(e) {
-        return h(e, (e) => e.guildIds);
+        return E(e, (e) => e.guildIds);
     }
     getIsFetching(e) {
-        return h(e, (e) => e.isFetching);
+        return E(e, (e) => e.isFetching);
     }
     getIsInitialFetchComplete(e) {
-        return h(e, (e) => e.isInitialFetchComplete);
+        return E(e, (e) => e.isInitialFetchComplete);
     }
     getOffset(e) {
-        return h(e, (e) => e.offset);
+        return E(e, (e) => e.offset);
     }
     getTotal(e) {
-        return h(e, (e) => e.total);
+        return E(e, (e) => e.total);
     }
     getLastFetchTimestamp(e) {
-        return h(e, (e) => e.lastFetchTimestamp);
+        return E(e, (e) => e.lastFetchTimestamp);
     }
     getAlgoliaSearchIndex() {
         return u;
@@ -86,11 +86,11 @@ o(m, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_START: function (e) {
             let { id: t, reset: n } = e;
-            n && c.delete(t), E(t).handleSearchStart();
+            n && c.delete(t), h(t).handleSearchStart();
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: function (e) {
             let { id: t, total: n, guilds: i } = e;
-            E(t).handleSearchSuccess({
+            h(t).handleSearchSuccess({
                 total: n,
                 guilds: i
             }),
@@ -100,7 +100,7 @@ o(m, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: function (e) {
             let { id: t, error: n } = e;
-            E(t).handleSearchFailure(n);
+            h(t).handleSearchFailure(n);
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_BULK_CLEAR: function (e) {
             let { ids: t } = e;

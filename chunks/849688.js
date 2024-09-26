@@ -8,11 +8,11 @@ var i = n(735250),
     d = n(678513),
     u = n(981631),
     _ = n(689938),
-    E = n(224719);
+    h = n(224719);
 t.Z = function (e) {
     let { guild: t } = e,
         s = (0, o.e7)([d.Z], () => d.Z.getActiveGuildSignUp(t.id)),
-        h = a.useCallback(() => {
+        E = a.useCallback(() => {
             null != s &&
                 (0, l.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('22862'), n.e('53596')]).then(n.bind(n, 646202));
@@ -33,13 +33,13 @@ t.Z = function (e) {
         theme: u.BRd.DARK,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: r()(E.container, e),
+                className: r()(h.container, e),
                 children: (0, i.jsxs)('div', {
-                    className: E.card,
+                    className: h.card,
                     style: { background: I },
                     children: [
                         (0, i.jsxs)('div', {
-                            className: E.eyebrow,
+                            className: h.eyebrow,
                             children: [
                                 (0, i.jsx)(l.EnvelopeIcon, {
                                     size: 'xxs',
@@ -57,9 +57,9 @@ t.Z = function (e) {
                             children: s.noticeHeader
                         }),
                         (0, i.jsx)(l.Button, {
-                            className: E.button,
+                            className: h.button,
                             color: 'none',
-                            onClick: h,
+                            onClick: E,
                             children: (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'none',
@@ -67,7 +67,7 @@ t.Z = function (e) {
                             })
                         }),
                         (0, i.jsx)('div', {
-                            className: E.dismiss,
+                            className: h.dismiss,
                             children: (0, i.jsx)(l.Clickable, {
                                 onClick: m,
                                 'aria-label': _.Z.Messages.CLOSE,

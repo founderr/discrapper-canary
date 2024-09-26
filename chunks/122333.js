@@ -10,8 +10,8 @@ var s = n(481060),
     d = n(305325),
     u = n(341298),
     _ = n(390885),
-    E = n(524329),
-    h = n(995532),
+    h = n(524329),
+    E = n(995532),
     m = n(486472),
     I = n(430824),
     g = n(914010),
@@ -54,7 +54,7 @@ class O extends l.Z {
             R = g.Z.getGuildId();
         if (r === N.M5.INVITE_UNCLAIMED) {
             let e = I.Z.getGuild(R);
-            (null == e ? void 0 : e.hasVerificationGate()) && ((l = !0), (0, E.RM)(e.id));
+            (null == e ? void 0 : e.hasVerificationGate()) && ((l = !0), (0, h.RM)(e.id));
         }
         let O = () => 0 === m.Z.totalGuilds && !S.isPlatformEmbedded,
             x = o.b();
@@ -144,7 +144,7 @@ class O extends l.Z {
                         },
                         { onCloseCallback: e }
                     ),
-                predicate: () => null != R && null != h.Z.get(R) && h.Z.get(R) !== h.a
+                predicate: () => null != R && null != E.Z.get(R) && E.Z.get(R) !== E.a
             }
         ]),
             (t = () => {

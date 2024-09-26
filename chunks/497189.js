@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(749210),
     u = n(607070),
     _ = n(100527),
-    E = n(931240),
-    h = n(970606),
+    h = n(931240),
+    E = n(970606),
     m = n(963202),
     I = n(650461),
     g = n(353093),
@@ -76,7 +76,7 @@ function M(e) {
     let { selectedGuildId: t, setSelectedGuildId: n, eligibleGuilds: s, onButtonClick: l, buttonText: o, hasCompletedUpsell: d } = e,
         u = (0, m.iN)('clan_discovery_admin_upsell'),
         _ = (0, m.YH)('clan_discovery_admin_upsell'),
-        E = a.useMemo(
+        h = a.useMemo(
             () =>
                 s.map((e) => ({
                     value: e.id,
@@ -87,7 +87,7 @@ function M(e) {
     a.useEffect(() => {
         0 === s.length && _ && (0, C.Ce)();
     }, [s, _]);
-    let h = s.length > 1;
+    let E = s.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             d
@@ -135,11 +135,11 @@ function M(e) {
             (0, i.jsxs)('div', {
                 className: L.upsellButton,
                 children: [
-                    h &&
+                    E &&
                         (0, i.jsx)(c.SearchableSelect, {
                             className: L.upsellSelect,
                             value: t,
-                            options: E,
+                            options: h,
                             onChange: n
                         }),
                     !d &&
@@ -149,7 +149,7 @@ function M(e) {
                                     look: c.ButtonLooks.FILLED,
                                     size: c.ButtonSizes.LARGE,
                                     color: c.ButtonColors.BRAND,
-                                    className: r()(L.reserveButton, { [L.buttonWithSelect]: h }),
+                                    className: r()(L.reserveButton, { [L.buttonWithSelect]: E }),
                                     onClick: l,
                                     children: (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
@@ -194,7 +194,7 @@ t.Z = a.memo(function (e) {
         });
     a.useEffect(() => {
         !r &&
-            (0, h.TE)({
+            (0, E.TE)({
                 guildId: C,
                 location: _.Z.CLAN_DISCOVERY
             });
@@ -203,7 +203,7 @@ t.Z = a.memo(function (e) {
         P = (0, o.e7)([I.ZP], () => (null != C ? I.ZP.getStateForGuild(C).progress : null)),
         D = a.useCallback(() => {
             !r &&
-                ((0, h._9)({
+                ((0, E._9)({
                     guildId: C,
                     location: _.Z.CLAN_DISCOVERY
                 }),
@@ -299,7 +299,7 @@ t.Z = a.memo(function (e) {
         ),
         z = a.useMemo(() => (s ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_LIST_SERVER : null == P ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [P, s]),
         K = a.useCallback(async () => {
-            await (0, E.Zx)(C), d.Z.transitionToGuildSync('936317138904440892');
+            await (0, h.Zx)(C), d.Z.transitionToGuildSync('936317138904440892');
         }, [C]),
         q = a.useCallback(
             (e) =>

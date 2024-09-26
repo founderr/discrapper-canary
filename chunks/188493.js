@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
 var i = n(735250),
@@ -13,11 +13,11 @@ var i = n(735250),
     d = n(726115),
     u = n(731455),
     _ = n(689938);
-function E(e) {
+function h(e) {
     let { loadId: t } = e,
         n = (0, s.e7)([l.default], () => (0, d.Xp)([l.default])),
-        E = (0, c.Dm)(),
-        h = null != E ? E : n,
+        h = (0, c.Dm)(),
+        E = null != h ? h : n,
         m = a.useCallback(
             (e) => {
                 (0, c.LD)({ languageCode: e });
@@ -45,14 +45,14 @@ function E(e) {
         ),
         g = a.useMemo(() => {
             var e;
-            let t = u.dU.find((e) => e.code === h);
+            let t = u.dU.find((e) => e.code === E);
             return null !== (e = null == t ? void 0 : t.name) && void 0 !== e ? e : _.Z.Messages.en;
-        }, [h]);
+        }, [E]);
     return (0, i.jsx)(r.Z, {
         items: I,
         title: g,
         onSelect: m,
-        selected: h,
+        selected: E,
         'aria-label': _.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
     });
 }

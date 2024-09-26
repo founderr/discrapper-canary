@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(283293),
     u = n(469988),
     _ = n(526383),
-    E = n(900849),
-    h = n(294330),
+    h = n(900849),
+    E = n(294330),
     m = n(731455),
     I = n(689938),
     g = n(417712),
@@ -23,7 +23,7 @@ function T(e) {
     let { loadId: t, onScroll: n } = e,
         T = (0, _.Z)();
     a.useEffect(() => {
-        E.Zt({
+        h.Zt({
             loadId: t,
             gamesYouPlayGuilds: [],
             allGuilds: [],
@@ -66,7 +66,7 @@ function T(e) {
                                       children: [
                                           S.map((e) =>
                                               (0, i.jsx)(
-                                                  h.VD,
+                                                  E.VD,
                                                   {
                                                       guild: e,
                                                       onClick: () => r.Z.transitionToGuildSync(e.id)

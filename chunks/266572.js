@@ -10,12 +10,12 @@ var a = n(544891),
     d = n(594174),
     u = n(580130),
     _ = n(695103),
-    E = n(70956),
-    h = n(998502),
+    h = n(70956),
+    E = n(998502),
     m = n(996106),
     I = n(186901),
     g = n(981631);
-let p = 10 * E.Z.Millis.SECOND;
+let p = 10 * h.Z.Millis.SECOND;
 t.Z = {
     [g.Etm.VALIDATE_APPLICATION]: {
         scope: I.lH,
@@ -42,7 +42,7 @@ t.Z = {
             } catch (e) {
                 throw (
                     (e.code === g.lTL.INVALID_ENTITLEMENT &&
-                        (h.ZP.focus(null, !0),
+                        (E.ZP.focus(null, !0),
                         (0, r.openModalLazy)(async () => {
                             let { default: e } = await n.e('48748').then(n.bind(n, 52004));
                             return (t) =>
@@ -75,7 +75,7 @@ t.Z = {
                 })
                 .catch((e) => {
                     throw (
-                        (h.ZP.focus(null, !0),
+                        (E.ZP.focus(null, !0),
                         (0, r.openModalLazy)(async () => {
                             let { default: e } = await n.e('48748').then(n.bind(n, 52004));
                             return (t) =>

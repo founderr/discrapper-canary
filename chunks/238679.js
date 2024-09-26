@@ -3,13 +3,13 @@ n.d(t, {
         return m;
     },
     KW: function () {
-        return E;
+        return h;
     },
     dO: function () {
         return _;
     },
     gQ: function () {
-        return h;
+        return E;
     }
 });
 var i = n(392711),
@@ -37,9 +37,9 @@ function _() {
         }).filter(o.lm)
     };
 }
-let E = { [u.Gp.ANY]: [u.wE] },
-    h = {
-        scope: E,
+let h = { [u.Gp.ANY]: [u.wE] },
+    E = {
+        scope: h,
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = _();

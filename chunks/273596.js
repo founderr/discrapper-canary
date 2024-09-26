@@ -15,8 +15,8 @@ var i = n(735250),
     d = n(229765),
     u = n(626135),
     _ = n(823379),
-    E = n(900849),
-    h = n(356164),
+    h = n(900849),
+    E = n(356164),
     m = n(164991),
     I = n(28494),
     g = n(746728),
@@ -40,13 +40,13 @@ let A = 56,
         left: 32,
         right: 32
     }),
-    R = r().throttle(E.c6, 1000, {
+    R = r().throttle(h.c6, 1000, {
         leading: !1,
         trailing: !0
     });
 function O(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: r } = e,
-        { guildIds: E, loading: O, searchResultsQuery: x, loadMore: b, searchCategoryId: P } = (0, I.f)({ loadId: t }),
+        { guildIds: h, loading: O, searchResultsQuery: x, loadMore: b, searchCategoryId: P } = (0, I.f)({ loadId: t }),
         M = a.useContext(u.AnalyticsContext),
         [D, y] = a.useState((0, c.P)()),
         [j, U] = a.useState(!0),
@@ -74,7 +74,7 @@ function O(e) {
     a.useLayoutEffect(() => {
         var e;
         V(null === (e = F.current) || void 0 === e ? void 0 : e.getBoundingClientRect());
-    }, [F, E, V]),
+    }, [F, h, V]),
         a.useEffect(() => {
             y((0, c.P)());
         }, [x]),
@@ -83,15 +83,15 @@ function O(e) {
                 loadId: t,
                 searchId: D,
                 query: x,
-                guildResults: E.map(h.Z.getGuild).filter(_.lm),
+                guildResults: h.map(E.Z.getGuild).filter(_.lm),
                 analyticsContext: M,
                 categoryId: P
             });
-        }, [M, E, t, P, D, x]);
+        }, [M, h, t, P, D, x]);
     let Y = a.useCallback((e) => n(e, P), [n, P]),
-        W = a.useMemo(() => (O ? [E.length, 0] : [E.length]), [E.length, O]),
+        W = a.useMemo(() => (O ? [h.length, 0] : [h.length]), [h.length, O]),
         z = (0, m.NL)(),
-        K = 0 === E.length && !O,
+        K = 0 === h.length && !O,
         q = a.useCallback(
             (e, n, a) => {
                 switch (e) {
@@ -143,14 +143,14 @@ function O(e) {
             (e, t) => {
                 switch (e) {
                     case 0:
-                        return E[t];
+                        return h[t];
                     case 1:
                         return 'loading';
                     default:
                         throw Error('[getItemKey] Failed for section: '.concat(e));
                 }
             },
-            [E]
+            [h]
         ),
         J = a.useCallback((e) => {
             switch (e) {
@@ -174,7 +174,7 @@ function O(e) {
         ee = a.useCallback(
             (e, t, n, a) => {
                 if (0 === e) {
-                    let e = E[t];
+                    let e = h[t];
                     return (0, i.jsx)(
                         'div',
                         {
@@ -190,7 +190,7 @@ function O(e) {
                 }
                 return null;
             },
-            [E, $, Y, P]
+            [h, $, Y, P]
         );
     a.useEffect(() => {
         let e = H.current;

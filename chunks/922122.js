@@ -15,8 +15,8 @@ var i = n(735250),
     d = n(355932),
     u = n(889711),
     _ = n(79707),
-    E = n(689938),
-    h = n(116155);
+    h = n(689938),
+    E = n(116155);
 function m(e) {
     let { onTabSelect: t, tabs: n, selectedTab: s } = e,
         d = (0, c.ZP)(),
@@ -50,13 +50,13 @@ function m(e) {
                 ...e,
                 id: 'more',
                 color: 'text-muted',
-                className: r()(h.tab, h.more, { [h.selected]: m }),
-                'aria-label': E.Z.Messages.MORE,
+                className: r()(E.tab, E.more, { [E.selected]: m }),
+                'aria-label': h.Z.Messages.MORE,
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/medium',
                         color: I,
-                        children: E.Z.Messages.MORE
+                        children: h.Z.Messages.MORE
                     }),
                     n
                         ? (0, i.jsx)(o.ChevronSmallUpIcon, {
@@ -74,7 +74,7 @@ function m(e) {
 }
 function I(e) {
     let { className: t, selectedTab: n, tabs: s, onTabSelect: l, onAvailableWidthChange: c } = e,
-        [_, E] = a.useState(0),
+        [_, h] = a.useState(0),
         I = a.useRef(_),
         {
             lastVisibleIndex: g,
@@ -94,7 +94,7 @@ function I(e) {
             var e;
             let t = null === (e = N.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             if (null == t || I.current === t.width) return;
-            E(t.width), (I.current = t.width);
+            h(t.width), (I.current = t.width);
             let n = S.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
                 i = t.width - n;
             null == c || c(i);
@@ -105,11 +105,11 @@ function I(e) {
     }, [A]);
     let v = 0 !== _;
     return (0, i.jsxs)('div', {
-        className: r()(h.container, t),
+        className: r()(E.container, t),
         ref: N,
         children: [
             (0, i.jsxs)('div', {
-                className: h.measurements,
+                className: E.measurements,
                 children: [
                     s.map((e, t) =>
                         (0, i.jsx)(
@@ -120,7 +120,7 @@ function I(e) {
                                 children: (0, i.jsx)(o.TabBar.Item, {
                                     id: e.id,
                                     'aria-label': e.label,
-                                    className: h.tab,
+                                    className: E.tab,
                                     children: (0, i.jsx)(o.Text, {
                                         variant: 'text-md/medium',
                                         children: e.label
@@ -146,7 +146,7 @@ function I(e) {
                     look: 'brand',
                     selectedItem: n,
                     onItemSelect: l,
-                    className: h.tabs,
+                    className: E.tabs,
                     children: [
                         f.map((e) =>
                             (0, i.jsx)(
@@ -154,7 +154,7 @@ function I(e) {
                                 {
                                     id: e.id,
                                     'aria-label': e.label,
-                                    className: r()(h.tab, { [h.selected]: n === e.id }),
+                                    className: r()(E.tab, { [E.selected]: n === e.id }),
                                     children: e.label
                                 },
                                 e.id

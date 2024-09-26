@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(594174),
     u = n(626135),
     _ = n(321488),
-    E = n(417183),
-    h = n(170245),
+    h = n(417183),
+    E = n(170245),
     m = n(981631),
     I = n(689938),
     g = n(94455);
@@ -34,7 +34,7 @@ function p(e) {
         },
         A = p === m.Skl.OFFLINE ? m.Skl.UNKNOWN : p,
         v = n === m.OGo.PENDING_INCOMING ? I.Z.Messages.INCOMING_FRIEND_REQUEST : I.Z.Messages.OUTGOING_FRIEND_REQUEST;
-    return (0, i.jsx)(E.Z, {
+    return (0, i.jsx)(h.Z, {
         isFocused: T,
         user: t,
         onClick: () =>
@@ -84,7 +84,7 @@ function p(e) {
             return (0, i.jsxs)('div', {
                 className: g.listItemContents,
                 children: [
-                    (0, i.jsx)(h.Z, {
+                    (0, i.jsx)(E.Z, {
                         user: t,
                         hovered: e,
                         showAccountIdentifier: !0,

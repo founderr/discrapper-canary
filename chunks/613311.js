@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(481060),
     u = n(570140),
     _ = n(659429),
-    E = n(496929),
-    h = n(558381),
+    h = n(496929),
+    E = n(558381),
     m = n(410575),
     I = n(224336),
     g = n(730749),
@@ -81,7 +81,7 @@ class ec extends a.PureComponent {
             let { analyticsSource: e, analyticsProperties: t } = s.state;
             (this._analyticsSource = e), (this._extraAnalyticsProperties = t);
         } else this._analyticsSource = ea.SaU;
-        (null == t || t.isSlimDirectoryVersion()) && r(), null != e && (!n && !a && (0, E.yD)(e.applicationId), i && u.Z.wait(() => (0, _.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
+        (null == t || t.isSlimDirectoryVersion()) && r(), null != e && (!n && !a && (0, h.yD)(e.applicationId), i && u.Z.wait(() => (0, _.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
     }
     componentDidUpdate(e) {
         let { locale: t, sku: n, shouldFetchStatistics: i, skuId: a, storeListingId: s, slug: r, storeListing: l, fetchStoreListing: o } = this.props;
@@ -495,7 +495,7 @@ class ec extends a.PureComponent {
                                           currentStoreListingId: null != s ? s.id : null,
                                           onStoreListingSelect: (e) => {
                                               null != t &&
-                                                  (0, h.yt)(t.id, {
+                                                  (0, E.yt)(t.id, {
                                                       slug: a,
                                                       analyticsSource: {
                                                           page: l.page,

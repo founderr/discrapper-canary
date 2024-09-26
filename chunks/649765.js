@@ -16,8 +16,8 @@ var i = n(735250),
     d = n(119269),
     u = n(938736),
     _ = n(227140),
-    E = n(981631),
-    h = n(921944),
+    h = n(981631),
+    E = n(921944),
     m = n(689938),
     I = n(64123);
 let g = 'url(#dark-purple-gradient)',
@@ -47,7 +47,7 @@ let g = 'url(#dark-purple-gradient)',
                 fill: 'white'
             })
         }),
-    S = () => (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: h.L.TAKE_ACTION }),
+    S = () => (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: E.L.TAKE_ACTION }),
     f = (e) => {
         let { children: t } = e;
         return (0, i.jsx)(r.Popout, {
@@ -62,7 +62,7 @@ let g = 'url(#dark-purple-gradient)',
                     contentClassName: I.incentiveCoachtipContainer,
                     pointerClassName: I.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, c.uL)(E.Z5c.NITRO_HOME), S();
+                        (0, c.uL)(h.Z5c.NITRO_HOME), S();
                     },
                     art: (0, i.jsx)(i.Fragment, {
                         children: (0, i.jsx)(d.Z, {

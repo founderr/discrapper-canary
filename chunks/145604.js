@@ -15,8 +15,8 @@ var i = n(735250),
     d = n(731429),
     u = n(188471),
     _ = n(176881),
-    E = n(318885),
-    h = n(358221),
+    h = n(318885),
+    E = n(358221),
     m = n(710845),
     I = n(581567),
     g = n(594190),
@@ -76,7 +76,7 @@ class W extends a.PureComponent {
                 guild_scheduled_event_id: null == a ? void 0 : a.id,
                 ...(0, c.kO)(e.voiceChannelGuildId, e.voiceChannelId, e.videoEnabled),
                 ...b.Z.getVoiceStateStats(),
-                ...h.Z.getSelectedParticipantStats(e.voiceChannelId)
+                ...E.Z.getSelectedParticipantStats(e.voiceChannelId)
             });
         }
         if (e.voiceChannelId !== a && null != a) {
@@ -113,7 +113,7 @@ class W extends a.PureComponent {
                 (setTimeout(() => {
                     var t;
                     let n = V.ZP.GetWindowFullscreenTypeByPid(L.pid, L.name, L.fullscreenType),
-                        { gameName: i, gameId: r, exe: _, distributor: E } = (0, I.G8)(L);
+                        { gameName: i, gameId: r, exe: _, distributor: h } = (0, I.G8)(L);
                     k.default.track(F.rMx.LAUNCH_GAME, {
                         game: i,
                         game_id: r,
@@ -122,7 +122,7 @@ class W extends a.PureComponent {
                         is_launcher: null !== (t = null == L ? void 0 : L.isLauncher) && void 0 !== t && t,
                         game_platform: F.M7m.DESKTOP,
                         detection_method: d,
-                        distributor: E,
+                        distributor: h,
                         is_overlay_enabled: w.Z.enabled,
                         is_overlay_game_enabled: u.enabled,
                         is_overlay_game_source: u.source,
@@ -152,7 +152,7 @@ class W extends a.PureComponent {
             let e = 'none',
                 t = [C ? 'screen' : null, T ? 'camera' : null].filter(H.lm),
                 n = null;
-            C ? ((e = 'screen'), (n = (0, E.t)())) : T && (e = 'camera'),
+            C ? ((e = 'screen'), (n = (0, h.t)())) : T && (e = 'camera'),
                 k.default.track(F.rMx.VIDEO_INPUT_TOGGLED, {
                     video_input_type: e,
                     video_toggle_source: __OVERLAY__ ? 'overlay' : 'app',
@@ -237,7 +237,7 @@ class W extends a.PureComponent {
 function z() {
     let [e, t] = (0, s.Wu)([P.Z], () => [P.Z.getVoiceChannelId(), P.Z.getChannelId()], []),
         n = (0, s.e7)([v.Z], () => v.Z.getChannel(t), [t]),
-        a = (0, s.e7)([h.Z], () => (null == n ? void 0 : n.id) != null && h.Z.getChatOpen(n.id), [n]),
+        a = (0, s.e7)([E.Z], () => (null == n ? void 0 : n.id) != null && E.Z.getChatOpen(n.id), [n]),
         r = null == n ? void 0 : n.nsfw,
         l = (0, s.e7)([v.Z], () => v.Z.getChannel(e), [e]),
         c = (0, s.e7)([M.Z], () => M.Z.getGuildId(), []),
@@ -251,7 +251,7 @@ function z() {
             },
             [u, c]
         ),
-        E = (0, s.e7)([G.ZP], () => G.ZP.getState().section, []),
+        h = (0, s.e7)([G.ZP], () => G.ZP.getState().section, []),
         m = (0, s.e7)([U.Z], () => U.Z.getHomeLink(), []),
         I = (0, s.e7)([p.Z], () => p.Z.isConnected(), []),
         [S, f] = (0, s.Wu)([O.Z], () => [O.Z.isVideoEnabled(), O.Z.isScreenSharing()], []),
@@ -263,7 +263,7 @@ function z() {
             selectedChannelId: t,
             isNSFWChannel: r,
             selectedGuildId: c,
-            friendsTabSection: E,
+            friendsTabSection: h,
             homeLink: m,
             connected: I,
             videoEnabled: S,

@@ -9,8 +9,8 @@ var i,
     d = n(353926),
     u = n(924301),
     _ = n(786761),
-    E = n(314897),
-    h = n(592125),
+    h = n(314897),
+    E = n(592125),
     m = n(165630),
     I = n(430824),
     g = n(375954),
@@ -215,7 +215,7 @@ function eo(e) {
     let { type: t, messageId: n, userId: i, emoji: a, reactionType: s } = e,
         r = G[n];
     if (null == r || r.type !== N.Rr.MESSAGE) return !1;
-    let l = E.default.getId() === i;
+    let l = h.default.getId() === i;
     'MESSAGE_REACTION_ADD' === t ? (r.message = r.message.addReaction(a, l, e.colors, s)) : (r.message = r.message.removeReaction(a, l, s));
 }
 function ec(e) {
@@ -232,7 +232,7 @@ function ec(e) {
 }
 class ed extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(g.Z, h.Z, p.ZP, d.Z, S.ZP, E.default, A.Z, l.Z), null != e)) {
+        if ((this.waitFor(g.Z, E.Z, p.ZP, d.Z, S.ZP, h.default, A.Z, l.Z), null != e)) {
             var t, n, i, a, s;
             (O = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []).forEach((e) => {
                 U[e.id] = e;
@@ -466,7 +466,7 @@ R(ed, 'displayName', 'GravityStore'),
             let { messageId: t, reactions: n } = e,
                 i = G[t];
             if (null == i || i.type !== N.Rr.MESSAGE) return !1;
-            let a = E.default.getId();
+            let a = h.default.getId();
             i.message = i.message.addReactionBatch(n, a);
         },
         MESSAGE_REACTION_REMOVE: eo,

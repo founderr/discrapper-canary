@@ -17,7 +17,7 @@ var i = n(735250),
     d = n(981631),
     u = n(278737);
 let _ = ['egirl', 'egirls', 'waifu', 'dating', 'nsfw', 'sex', 'playboy', 'stupid', 'harem', 'playgirl', 'shitcoin', 'shitpost', 'porno', 'nudes', 'sexy', 'horny', 'fart', 'tits', 'balls', 'cum'],
-    E = (e) => {
+    h = (e) => {
         let { text: t, onClick: n, className: a, hide: s } = e;
         return (0, i.jsx)('li', {
             className: r()(u.tag, a, { [u.hide]: s }),
@@ -30,7 +30,7 @@ let _ = ['egirl', 'egirls', 'waifu', 'dating', 'nsfw', 'sex', 'playboy', 'stupid
             })
         });
     },
-    h = (e) => {
+    E = (e) => {
         let { tags: t, onTagClick: n, guildId: s, section: r } = e;
         return (
             a.useEffect(() => {
@@ -48,7 +48,7 @@ let _ = ['egirl', 'egirls', 'waifu', 'dating', 'nsfw', 'sex', 'playboy', 'stupid
                 children: (0, i.jsx)('ul', {
                     children: t.map((e) =>
                         (0, i.jsx)(
-                            E,
+                            h,
                             {
                                 onClick: () => n(e),
                                 className: u.tagAlt,
@@ -64,12 +64,12 @@ let _ = ['egirl', 'egirls', 'waifu', 'dating', 'nsfw', 'sex', 'playboy', 'stupid
     m = (e) => {
         let { className: t, count: n } = e;
         return (0, i.jsx)(l.Popout, {
-            renderPopout: () => (0, i.jsx)(h, { ...e }),
+            renderPopout: () => (0, i.jsx)(E, { ...e }),
             position: 'right',
             align: 'top',
             closeOnScroll: !0,
             children: (e) =>
-                (0, i.jsx)(E, {
+                (0, i.jsx)(h, {
                     className: t,
                     ...e,
                     text: '+'.concat(n)
@@ -82,7 +82,7 @@ let _ = ['egirl', 'egirls', 'waifu', 'dating', 'nsfw', 'sex', 'playboy', 'stupid
         ALT: u.tagAlt
     },
     g = (e) => {
-        let { tags: t, onTagClick: n, className: s, discoveryTagStyle: l = I.DEFAULT, hideOverflow: c = !1, guildId: d, section: h } = e,
+        let { tags: t, onTagClick: n, className: s, discoveryTagStyle: l = I.DEFAULT, hideOverflow: c = !1, guildId: d, section: E } = e,
             { ref: g, width: p } = (0, o.Z)(),
             [T, S] = a.useState(null),
             f = t.filter((e) => !_.includes(e.toLowerCase()));
@@ -103,7 +103,7 @@ let _ = ['egirl', 'egirls', 'waifu', 'dating', 'nsfw', 'sex', 'playboy', 'stupid
                 children: [
                     f.map((e, t) =>
                         (0, i.jsx)(
-                            E,
+                            h,
                             {
                                 className: l,
                                 onClick: () => n(e),
@@ -122,7 +122,7 @@ let _ = ['egirl', 'egirls', 'waifu', 'dating', 'nsfw', 'sex', 'playboy', 'stupid
                             tags: f.slice(T),
                             count: f.length - T,
                             guildId: d,
-                            section: h
+                            section: E
                         })
                 ]
             })

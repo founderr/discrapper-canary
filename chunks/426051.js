@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(433355),
     u = n(26373),
     _ = n(486622),
-    E = n(376191),
-    h = n(86203),
+    h = n(376191),
+    E = n(86203),
     m = n(689938),
     I = n(894639);
 function g(e) {
@@ -45,7 +45,7 @@ function g(e) {
     return (0, i.jsxs)('div', {
         className: I.container,
         children: [
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(h.Z, {
                 otherUser: n,
                 channel: g,
                 active: t
@@ -64,7 +64,7 @@ function g(e) {
                         submitting: Z,
                         children: m.Z.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
                     }),
-                    (0, i.jsx)(h.Z, {
+                    (0, i.jsx)(E.Z, {
                         className: I.button,
                         channel: g,
                         buttonSize: r.Button.Sizes.SMALL

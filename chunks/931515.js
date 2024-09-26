@@ -20,8 +20,8 @@ var i = n(470079),
     d = n(963202),
     u = n(823379),
     _ = n(229893),
-    E = n(229765),
-    h = n(286083),
+    h = n(229765),
+    E = n(286083),
     m = n(207796),
     I = n(976757),
     g = n(308083);
@@ -36,13 +36,13 @@ function T() {
         s = (0, d.An)({ location: 'clan_discovery' }),
         c = (0, d.iN)('clan_discovery'),
         { defaultGameId: u } = (0, d.nk)('clan_discovery'),
-        h = null != s ? s : u,
+        E = null != s ? s : u,
         I = (function () {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                 t = (0, l.e7)([_.Z], () => _.Z.hasLoadedStaticClanDiscovery());
             return (
                 i.useEffect(() => {
-                    e && !t && (0, E.XB)();
+                    e && !t && (0, h.XB)();
                 }, [t, e]),
                 t
             );
@@ -50,13 +50,13 @@ function T() {
         T = (0, l.e7)([_.Z], () => _.Z.isLoading());
     return (
         i.useEffect(() => {
-            !(n.length > 0) && !c && (h === g.nJ ? (e(m.hz.VALORANT), t([h])) : h === g.xn ? (e(m.hz.GENSHIN), t([h])) : null == h && (e(m.hz.NONE), t([])));
-        }, [e, t, h, n, c]),
+            !(n.length > 0) && !c && (E === g.nJ ? (e(m.hz.VALORANT), t([E])) : E === g.xn ? (e(m.hz.GENSHIN), t([E])) : null == E && (e(m.hz.NONE), t([])));
+        }, [e, t, E, n, c]),
         i.useEffect(() => {
-            if (c) (0, E.Cg)(a);
+            if (c) (0, h.Cg)(a);
             else {
                 if (!I) return;
-                (0, E.jc)(a);
+                (0, h.jc)(a);
             }
         }, [a, I, c]),
         i.useEffect(() => {
@@ -72,7 +72,7 @@ function S(e) {
         o = (0, c.Z)(r),
         d = i.useRef(new AbortController()),
         u = i.useCallback(async (e) => {
-            n(!0), null != a.current && (d.current.abort(), (d.current = new AbortController())), (a.current = (0, E.$s)(e, d.current.signal)), await a.current, null !== a.current && (n(!1), (a.current = null));
+            n(!0), null != a.current && (d.current.abort(), (d.current = new AbortController())), (a.current = (0, h.$s)(e, d.current.signal)), await a.current, null !== a.current && (n(!1), (a.current = null));
         }, []);
     return (
         i.useEffect(() => {
@@ -98,7 +98,7 @@ function f() {
         r = (0, d.iN)('clan_discovery'),
         o = (0, l.e7)([_.Z], () => _.Z.getSearchResult(n), [n]),
         c = (0, l.Wu)([_.Z], () => (t && null != a ? a.map((e) => _.Z.getGuildProfile(e)).filter(u.lm) : []), [t, a]),
-        E = i.useMemo(() => {
+        h = i.useMemo(() => {
             if ((0, I.Pw)(o)) {
                 let t = o.items;
                 return null != e ? t.slice(0, e) : t;
@@ -119,14 +119,14 @@ function f() {
           }
         : {
               loaded: s || r,
-              clans: E,
+              clans: h,
               searchCriteria: n,
               searchResult: o
           };
 }
 function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { updatePaginationSettings: n, currentColumnCount: a, pageSize: s, chunkedPages: o, currentPage: c, fetchableGuildIds: d } = (0, h.a)(),
+        { updatePaginationSettings: n, currentColumnCount: a, pageSize: s, chunkedPages: o, currentPage: c, fetchableGuildIds: d } = (0, E.a)(),
         g = c - 1,
         T = (0, m.GN)((e) => e.loadingGameApplication, r.Z),
         f = (0, l.e7)([_.Z], () => _.Z.getSavedGuildIds()),
@@ -141,17 +141,17 @@ function C(e) {
             [N]
         );
     i.useEffect(() => {
-        n(e, h.$, { pageMemoryEnabled: !0 });
+        n(e, E.$, { pageMemoryEnabled: !0 });
     }, [e, n, A]),
         S(d),
         i.useEffect(() => {
-            (0, E.IS)();
+            (0, h.IS)();
         }, []),
         S(C),
         !(function () {
             let e = (0, l.e7)([_.Z], () => !_.Z.hasLoadedSavedGuilds());
             i.useEffect(() => {
-                e && (0, E.bO)();
+                e && (0, h.bO)();
             }, [e]);
         })();
     let Z = i.useMemo(() => {

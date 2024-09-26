@@ -9,8 +9,8 @@ var r = n(756647),
     d = n(899742),
     u = n(457330),
     _ = n(533307),
-    E = n(447543),
-    h = n(962220),
+    h = n(447543),
+    E = n(962220),
     m = n(703656),
     I = n(314897),
     g = n(553795),
@@ -48,7 +48,7 @@ function Z(e, t) {
                 let {
                         args: { code: t }
                     } = e,
-                    { invite: n } = await E.Z.resolveInvite(t, 'Desktop Modal');
+                    { invite: n } = await h.Z.resolveInvite(t, 'Desktop Modal');
                 if (null == n) throw new N.Z({ errorCode: v.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(t));
                 return (
                     I.default.isAuthenticated()
@@ -73,7 +73,7 @@ function Z(e, t) {
                     args: { code: t }
                 } = e;
                 if (null == p.default.getCurrentUser()) return;
-                let { guildTemplate: i } = await h.Z.resolveGuildTemplate(t);
+                let { guildTemplate: i } = await E.Z.resolveGuildTemplate(t);
                 if (null == i) throw new N.Z({ errorCode: v.lTL.INVALID_GUILD_TEMPLATE }, 'Invalid guild template id: '.concat(t));
                 return (
                     C.ZP.focus(),
