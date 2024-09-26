@@ -86,8 +86,8 @@ function A(e) {
         C = _.P[A],
         y = t.premiumTier === E.Eu4.TIER_3 ? 1 : O * (C - R) + R,
         {
-            progressBarFillWidthFactor: b,
-            isProgressBarAnimationComplete: L,
+            progressBarFillWidthFactor: L,
+            isProgressBarAnimationComplete: b,
             setShouldFireConfetti: D,
             shouldFireConfetti: M,
             tierMarkerAnimationPosition: P
@@ -125,12 +125,10 @@ function A(e) {
                         (0, i.jsx)(o.animated.div, {
                             className: h.progressBarFill,
                             style: {
-                                width: b
-                                    .to({
-                                        range: [0, 1],
-                                        output: [0, 100]
-                                    })
-                                    .to((e) => ''.concat(e, '%'))
+                                width: L.to({
+                                    range: [0, 1],
+                                    output: [0, 100]
+                                }).to((e) => ''.concat(e, '%'))
                             }
                         }),
                         (0, i.jsx)('div', { className: h.progressBarTrack })
@@ -142,7 +140,7 @@ function A(e) {
                         {
                             confettiTriggerRef: T,
                             guild: t,
-                            isProgressBarAnimationComplete: L,
+                            isProgressBarAnimationComplete: b,
                             setConfettiCount: I,
                             setShouldFireConfetti: D,
                             tier: e,

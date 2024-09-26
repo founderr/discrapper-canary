@@ -30,8 +30,8 @@ var s = n(735250),
     R = n(566006),
     C = n(620652),
     y = n(815605),
-    b = n(222677),
-    L = n(995774),
+    L = n(222677),
+    b = n(995774),
     D = n(665906),
     M = n(210887),
     P = n(314897),
@@ -199,11 +199,11 @@ function ei(e) {
         E = (0, f.e7)([k.Z], () => k.Z.can(W.Plq.MANAGE_MESSAGES, i) && _) || c === n.id,
         h = (0, f.e7)([w.ZP, U.Z, B.Z], () => H.ZP.getName(a, i.id, n));
     function m() {
-        b.WO({
+        L.WO({
             channelId: i.id,
             messageId: r.id,
             emoji: t,
-            location: b.TW.MESSAGE,
+            location: L.TW.MESSAGE,
             userId: n.id,
             options: { burst: o === R.O.BURST }
         }),
@@ -277,22 +277,20 @@ class ea extends l.PureComponent {
         let { message: e, reaction: t, reactionType: n } = this.props,
             { lastId: r } = this.state;
         this.setState({ loadingMore: !0 }),
-            b
-                .U0({
-                    channelId: e.getChannelId(),
-                    messageId: e.id,
-                    emoji: t.emoji,
-                    limit: W.pTL,
-                    after: r,
-                    type: n
-                })
-                .then((e) => {
-                    var t;
-                    return this.setState({
-                        loadingMore: !1,
-                        lastId: null === (t = e[e.length - 1]) || void 0 === t ? void 0 : t.id
-                    });
+            L.U0({
+                channelId: e.getChannelId(),
+                messageId: e.id,
+                emoji: t.emoji,
+                limit: W.pTL,
+                after: r,
+                type: n
+            }).then((e) => {
+                var t;
+                return this.setState({
+                    loadingMore: !1,
+                    lastId: null === (t = e[e.length - 1]) || void 0 === t ? void 0 : t.id
                 });
+            });
     }
     renderSection() {
         return null;
@@ -420,7 +418,7 @@ function el(e, t, n) {
                 null ==
                     n.find((e) => {
                         let t = null != e.me_vote ? R.O.VOTE : e.burst_count > 0 ? R.O.BURST : R.O.NORMAL;
-                        return (0, L.ir)(e.emoji, r.emoji) && t === r.reactionType;
+                        return (0, b.ir)(e.emoji, r.emoji) && t === r.reactionType;
                     }) &&
                 i(t);
         }, [r, i, n, t]),
@@ -454,7 +452,7 @@ function eu(e) {
         ),
         S = l.useMemo(() => {
             var e;
-            return null == I ? null : null !== (e = _.find((e) => (0, L.ir)(e.emoji, I.emoji))) && void 0 !== e ? e : null;
+            return null == I ? null : null !== (e = _.find((e) => (0, b.ir)(e.emoji, I.emoji))) && void 0 !== e ? e : null;
         }, [_, I]),
         A = (0, f.e7)([g.Z], () => g.Z.saturation),
         C = (0, f.e7)([M.Z], () => (0, h.wj)(M.Z.theme));

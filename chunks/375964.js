@@ -10174,6 +10174,7 @@ e.exports = Object.freeze({
     USER_PROFILE_MUTUAL_GUILDS: '{count, plural, =0 {0 Mutual Servers} one {1 Mutual Server} other {{count} Mutual Servers}}',
     USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: 'Mutual Friends',
     USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: 'Mutual Servers',
+    USER_PROFILE_MUTUAL_FRIENDS_AND_SERVERS: 'Mutual Friends & Servers',
     PROFILE_JOIN_VOICE_CHANNEL: 'Join Voice Channel',
     PROFILE_IN_VOICE_CALL: 'In a voice call',
     PROFILE_OPEN_VOICE_CHANNEL: 'Open Voice Channel',

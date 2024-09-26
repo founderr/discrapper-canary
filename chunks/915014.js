@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(735250);
@@ -11,61 +11,62 @@ var i = n(481060),
     s = n(565138),
     l = n(697927),
     u = n(200634),
-    c = n(228168),
-    d = n(182294),
-    _ = n(689938),
-    E = n(352235);
-let f = 3;
-function h(e) {
+    c = n(708108),
+    d = n(146078),
+    _ = n(228168),
+    E = n(182294),
+    f = n(352235);
+let h = 3;
+function p(e) {
     let { user: t, onOpenProfile: n } = e,
-        { mutualFriends: h } = (0, l.Z)(t.id),
-        { mutualGuilds: p } = (0, u.Z)(t.id),
-        m = null != h && h.length > 0,
+        { mutualFriends: p } = (0, l.Z)(t.id),
+        { mutualGuilds: m } = (0, u.Z)(t.id),
         I = null != p && p.length > 0,
-        T = m && I ? 'text-xs/normal' : 'text-sm/normal';
-    if (!m && !I) return null;
-    let g = () =>
-            m
+        T = null != m && m.length > 0,
+        g = I && T ? 'text-xs/normal' : 'text-sm/normal';
+    if (!I && !T) return null;
+    let S = () =>
+            I
                 ? (0, r.jsxs)(i.Clickable, {
-                      className: E.section,
-                      onClick: () => (null == n ? void 0 : n(c.oh.MUTUAL_FRIENDS)),
+                      className: f.section,
+                      onClick: () => (null == n ? void 0 : n(_.oh.MUTUAL_FRIENDS)),
                       children: [
                           (0, r.jsx)(a.Z, {
-                              maxUsers: f,
-                              users: h.map((e) => {
+                              maxUsers: h,
+                              users: p.map((e) => {
                                   let { user: t } = e;
                                   return t;
                               }),
-                              size: d.EF.SIZE_16,
+                              size: E.EF.SIZE_16,
                               hideOverflowCount: !0,
                               disableUsernameTooltip: !0
                           }),
                           (0, r.jsx)(i.Text, {
-                              className: E.text,
-                              variant: T,
+                              className: f.text,
+                              variant: g,
                               color: 'interactive-normal',
-                              children: _.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({ count: h.length })
+                              children: (0, c.Z)(p.length)
                           })
                       ]
                   })
                 : null,
-        S = () =>
-            m && I
+        A = () =>
+            I && T
                 ? (0, r.jsx)('div', {
                       'aria-hidden': 'true',
-                      className: E.spacer
+                      className: f.spacer
                   })
                 : null,
-        A = () =>
-            I
+        v = () =>
+            T
                 ? (0, r.jsxs)(i.Clickable, {
-                      className: E.section,
-                      onClick: () => (null == n ? void 0 : n(c.oh.MUTUAL_GUILDS)),
+                      className: f.section,
+                      onClick: () => (null == n ? void 0 : n(_.oh.MUTUAL_GUILDS)),
                       children: [
-                          !m &&
+                          !I &&
                               (0, r.jsx)(o.Z, {
-                                  maxGuilds: f,
-                                  guilds: p.map((e) => {
+                                  maxGuilds: h,
+                                  guilds: m.map((e) => {
                                       let { guild: t } = e;
                                       return t;
                                   }),
@@ -74,16 +75,16 @@ function h(e) {
                                   disableGuildNameTooltip: !0
                               }),
                           (0, r.jsx)(i.Text, {
-                              className: E.text,
-                              variant: T,
+                              className: f.text,
+                              variant: g,
                               color: 'interactive-normal',
-                              children: _.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: p.length })
+                              children: (0, d.Z)(m.length)
                           })
                       ]
                   })
                 : null;
     return (0, r.jsxs)('div', {
-        className: E.mutuals,
-        children: [g(), S(), A()]
+        className: f.mutuals,
+        children: [S(), A(), v()]
     });
 }
