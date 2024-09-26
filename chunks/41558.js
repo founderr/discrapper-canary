@@ -11,7 +11,7 @@ var i,
     s = t(689938),
     c = t(633236);
 function d(e) {
-    let { title: n, buttonType: t, onClickViewButton: i } = e;
+    let { title: n, buttonType: t, onClickViewButton: i, showViewMore: a } = e;
     return (0, l.jsxs)('div', {
         className: c.header,
         children: [
@@ -22,6 +22,7 @@ function d(e) {
             }),
             null != t &&
                 null != i &&
+                a &&
                 (0, l.jsx)(r.Clickable, {
                     className: c.viewMore,
                     onClick: i,
