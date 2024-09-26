@@ -2691,6 +2691,25 @@ let { Themes: n } = r(15202).V,
                 opacity: 1
             }
         },
+        CUSTOM_STATUS_BUBBLE_BG: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'PRIMARY_800',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'WHITE',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'PLUM_19',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'PLUM_17',
+                opacity: 1
+            }
+        },
         DEPRECATED_CARD_BG: {
             category: 'background',
             [n.DARK]: {

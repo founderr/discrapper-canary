@@ -130,6 +130,7 @@ var n;
         (e.CREATOR_REVENUE_INFO_BOX_BORDER = 'var(--creator-revenue-info-box-border)'),
         (e.CREATOR_REVENUE_LOCKED_CHANNEL_ICON = 'var(--creator-revenue-locked-channel-icon)'),
         (e.CREATOR_REVENUE_PROGRESS_BAR = 'var(--creator-revenue-progress-bar)'),
+        (e.CUSTOM_STATUS_BUBBLE_BG = 'var(--custom-status-bubble-bg)'),
         (e.DEPRECATED_CARD_BG = 'var(--deprecated-card-bg)'),
         (e.DEPRECATED_CARD_EDITABLE_BG = 'var(--deprecated-card-editable-bg)'),
         (e.DEPRECATED_QUICKSWITCHER_INPUT_BACKGROUND = 'var(--deprecated-quickswitcher-input-background)'),
