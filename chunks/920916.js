@@ -33,8 +33,8 @@ var a = n(735250),
     R = n(497505),
     C = n(918701),
     y = n(566078),
-    b = n(114732),
-    L = n(46140),
+    L = n(114732),
+    b = n(46140),
     D = n(675654),
     M = n(689938),
     P = n(837053);
@@ -56,62 +56,63 @@ function w(e) {
 }
 function x(e) {
     var t;
-    let { transitionState: n, onClose: r, quest: i, location: s, reward: c, decoration: E, onUseNow: h } = e,
-        p = o.useRef(null),
-        [m, T] = o.useState(null),
-        g = o.useRef(new u.qA()),
-        S = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
-        A = (0, d.e7)([N.default], () => N.default.getCurrentUser()),
-        v = (0, C.j8)(i),
-        y = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        [L, M] = o.useState(y ? 'claimed' : 'loading');
+    let { transitionState: n, onClose: r, quest: i, location: s, reward: c, decoration: E, onUseNow: h, preview: p } = e,
+        m = o.useRef(null),
+        [T, g] = o.useState(null),
+        S = o.useRef(new u.qA()),
+        A = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
+        v = (0, d.e7)([N.default], () => N.default.getCurrentUser()),
+        y = (0, C.j8)(i),
+        b = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
+        [M, U] = o.useState(!0 === p || b ? 'claimed' : 'loading');
     o.useEffect(() => {
-        !y &&
+        !b &&
+            !0 !== p &&
             (0, O.QB)(i.id, R.y$.CROSS_PLATFORM, s)
-                .then(() => M('claimed'))
-                .catch(() => M('error'));
-    }, [i, s, y]);
-    let U = () => {
-            M('applying'), h().finally(r);
+                .then(() => U('claimed'))
+                .catch(() => U('error'));
+    }, [i, s, b, p]);
+    let w = () => {
+            U('applying'), h().finally(r);
         },
-        w = null == A || null == E || 'loading' === L,
-        x = !S && !y && 'claimed' === L;
+        x = null == v || null == E || 'loading' === M,
+        G = !A && !b && 'claimed' === M;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(u.O_, {
-                ref: T,
+                ref: g,
                 className: P.confettiCanvas,
-                environment: g.current
+                environment: S.current
             }),
             (0, a.jsx)('div', {
-                ref: p,
+                ref: m,
                 children: (0, a.jsx)(_.ModalRoot, {
                     transitionState: n,
                     size: _.ModalSize.DYNAMIC,
-                    className: l()(P.rootContainer, { [P.rootContainerLoading]: w }),
+                    className: l()(P.rootContainer, { [P.rootContainerLoading]: x }),
                     hideShadow: !0,
-                    children: w
+                    children: x
                         ? (0, a.jsx)(_.Spinner, { type: _.Spinner.Type.SPINNING_CIRCLE })
-                        : 'error' === L
-                          ? (0, a.jsx)(b.Z, { onClose: r })
+                        : 'error' === M
+                          ? (0, a.jsx)(L.Z, { onClose: r })
                           : (0, a.jsx)(k, {
                                 quest: i,
-                                user: A,
+                                user: v,
                                 primaryColor: i.config.colors.primary,
                                 secondaryColor: i.config.colors.secondary,
                                 decoration: E,
                                 decorationName: c.messages.name,
-                                backgroundUrl: v,
-                                isSaving: 'applying' === L,
+                                backgroundUrl: y,
+                                isSaving: 'applying' === M,
                                 onClose: r,
-                                onConfirm: U
+                                onConfirm: w
                             })
                 })
             }),
-            x &&
+            G &&
                 (0, a.jsx)(I.Z, {
-                    confettiTarget: p.current,
-                    confettiCanvas: m,
+                    confettiTarget: m.current,
+                    confettiCanvas: T,
                     sprites: D.CA,
                     colors: D.Br
                 })
@@ -206,7 +207,7 @@ function k(e) {
                             onClick: d,
                             children: M.Z.Messages.COLLECTIBLES_USE_NOW
                         }),
-                        (0, C.zK)(t, L.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, a.jsx)(G, { quest: t })
+                        (0, C.zK)(t, b.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, a.jsx)(G, { quest: t })
                     ]
                 })
             })
@@ -215,37 +216,39 @@ function k(e) {
 }
 function B(e) {
     var t, n;
-    let { quest: r, location: i, onClose: s, transitionState: l } = e,
-        u = o.useMemo(() => (0, C.xn)(r.config), [r]),
-        [c, d] = w(null !== (n = null == u ? void 0 : u.skuId) && void 0 !== n ? n : null);
-    if (null == u) return null;
-    let _ = (0, C.zK)(r, L.S7.IN_HOUSE_CONSOLE_QUEST);
-    return (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || _
+    let { quest: r, location: i, onClose: s, transitionState: l, preview: u } = e,
+        c = o.useMemo(() => (0, C.xn)(r.config), [r]),
+        [d, _] = w(null !== (n = null == c ? void 0 : c.skuId) && void 0 !== n ? n : null);
+    if (null == c) return null;
+    let E = (0, C.zK)(r, b.S7.IN_HOUSE_CONSOLE_QUEST);
+    return (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || E
         ? (0, a.jsx)(x, {
               onClose: s,
               transitionState: l,
               quest: r,
               location: i,
-              reward: u,
-              decoration: c,
-              onUseNow: d
+              reward: c,
+              decoration: d,
+              onUseNow: _,
+              preview: u
           })
         : (0, a.jsx)(h.default, {
               transitionState: l,
               onCloseModal: U,
               onClose: s,
               analyticsLocations: [],
-              initialSelectedDecoration: c
+              initialSelectedDecoration: d
           });
 }
-function F(e, t) {
+function F(e, t, r) {
     (0, _.openModalLazy)(async () => {
-        let { default: r } = await Promise.resolve().then(n.bind(n, 920916));
+        let { default: i } = await Promise.resolve().then(n.bind(n, 920916));
         return (n) =>
-            (0, a.jsx)(r, {
+            (0, a.jsx)(i, {
                 ...n,
                 quest: e,
-                location: t
+                location: t,
+                preview: r
             });
     });
 }

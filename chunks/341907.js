@@ -29,15 +29,16 @@ var i = n(481060),
 let _ = 'in-app',
     E = 'Discord Widget';
 function f(e) {
-    let { questId: t, location: a, questContentPosition: o } = e;
+    let { questId: t, location: a, questContentPosition: o, preview: s = !1 } = e;
     (0, i.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e('54535'), n.e('61624')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e('48923'), n.e('64838'), n.e('28044'), n.e('30755')]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(e, {
                 ...n,
                 questId: t,
                 questContentPosition: o,
-                location: a
+                location: a,
+                preview: s
             });
     });
 }
