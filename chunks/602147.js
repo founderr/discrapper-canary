@@ -30,18 +30,17 @@ function Z(e, t) {
     let n = (0, d.a)({ location: 'discovery_button' }),
         i = window.location.pathname.startsWith(C.Z5c.GUILD_DISCOVERY),
         l = m.ZP.getCurrentCategoryId() === I.Gj.Clans;
-    if (n) {
-        if (e === N.F$.QUESTS) {
-            (0, f.navigateToQuestHome)(x.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
-            return;
+    if (n)
+        switch (e) {
+            case N.F$.QUESTS:
+                return (0, f.navigateToQuestHome)(x.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
+            case N.F$.APPS:
+                return (0, _.uL)(C.Z5c.GLOBAL_DISCOVERY_APPS);
+            case N.F$.SERVERS:
+                return (0, _.uL)(C.Z5c.GLOBAL_DISCOVERY_SERVERS);
+            default:
+                return (0, _.uL)(C.Z5c.GLOBAL_DISCOVERY);
         }
-        if (e === N.F$.SERVERS) {
-            (0, _.uL)(C.Z5c.GLOBAL_DISCOVERY_SERVERS);
-            return;
-        }
-        (0, _.uL)(C.Z5c.GLOBAL_DISCOVERY);
-        return;
-    }
     i && !l && ((0, o.AQ)(), (0, o.uY)(t, !0));
     let a = (0, _.s1)().location.search;
     (0, _.uL)(C.Z5c.GUILD_DISCOVERY, { search: a });
