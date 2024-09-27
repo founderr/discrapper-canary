@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(175307),
     u = n(17845),
     _ = n(374939),
-    h = n(611928),
-    E = n(922122),
+    h = n(233374),
+    E = n(611928),
     m = n(283293),
     I = n(63063),
     g = n(113434),
@@ -48,17 +48,8 @@ t.Z = function () {
     return (0, i.jsxs)('div', {
         className: Z.container,
         children: [
-            (0, i.jsxs)(h.ZP, {
-                children: [
-                    (0, i.jsx)('div', { className: Z.dragRegion }),
-                    (0, i.jsx)(h.z6, { scrollPosition: R }),
-                    (0, i.jsx)(h.aV, { icon: r.QuestsIcon }),
-                    (0, i.jsx)(E.Z, {
-                        tabs: e,
-                        selectedTab: t,
-                        onTabSelect: n
-                    })
-                ]
+            (0, i.jsxs)(E.ZP, {
+                children: [(0, i.jsx)('div', { className: Z.dragRegion }), (0, i.jsx)(E.z6, { scrollPosition: R }), (0, i.jsx)(E.aV, { icon: r.QuestsIcon })]
             }),
             (0, i.jsxs)(m.Z, {
                 onScroll: L,
@@ -76,7 +67,17 @@ t.Z = function () {
                             children: (0, i.jsx)('div', { className: Z.bannerGradient })
                         })
                     }),
-                    (0, i.jsx)(_.Z, { children: t === g.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(S.Z, {}) })
+                    (0, i.jsxs)(_.Z, {
+                        children: [
+                            (0, i.jsx)(h.Z, {
+                                tabs: e,
+                                selectedTab: t,
+                                onTabSelect: n,
+                                className: Z.tabs
+                            }),
+                            t === g.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(S.Z, {})
+                        ]
+                    })
                 ]
             })
         ]
