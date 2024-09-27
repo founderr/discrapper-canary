@@ -7,13 +7,13 @@ var t = n(735250);
 n(470079);
 var o = n(481060),
     i = n(239091),
-    r = n(299206),
-    l = n(326103),
+    l = n(299206),
+    r = n(326103),
     s = n(689938);
 function c(e) {
     let { applicationId: a, className: c, viewId: d } = e,
-        u = (0, l.v)('GameProfileOverflowMenu'),
-        m = (0, r.Z)({
+        u = (0, r.v)('GameProfileOverflowMenu'),
+        m = (0, l.Z)({
             id: a,
             label: s.Z.Messages.COPY_ID_APPLICATION
         }),

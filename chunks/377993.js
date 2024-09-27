@@ -35,8 +35,8 @@ var i = n(735250),
     R = n(689938),
     L = n(226686),
     j = n(204394);
-let P = [],
-    O = Z.ZP.getEnableHardwareAcceleration();
+let O = [],
+    P = Z.ZP.getEnableHardwareAcceleration();
 function y(e) {
     let { user: t, channel: s, status: u, activities: d } = e,
         h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(s.id)[t.id]),
@@ -81,7 +81,7 @@ function y(e) {
                     currentUser: m,
                     isOwner: t.id === s.ownerId,
                     ownerTooltipText: R.Z.Messages.GROUP_OWNER,
-                    shouldAnimateStatus: O,
+                    shouldAnimateStatus: P,
                     isTyping: h,
                     status: u,
                     activities: d,
@@ -189,11 +189,11 @@ function k(e) {
                         C.Z.isFriend(t.id) || t.id === (null === (i = T.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                             ? (n[t.id] = {
                                   status: null !== (s = g.Z.getStatus(t.id)) && void 0 !== s ? s : b.Skl.OFFLINE,
-                                  activities: null !== (a = g.Z.getActivities(t.id)) && void 0 !== a ? a : P
+                                  activities: null !== (a = g.Z.getActivities(t.id)) && void 0 !== a ? a : O
                               })
                             : (n[t.id] = {
                                   status: b.Skl.OFFLINE,
-                                  activities: P
+                                  activities: O
                               });
                     }
                     let l = [];

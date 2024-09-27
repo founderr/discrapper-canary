@@ -3,17 +3,17 @@ n.d(t, {
         return s;
     },
     x: function () {
-        return r;
+        return o;
     }
 });
-var a = n(152057),
-    l = n(381338),
-    i = n(99815);
-let r = {
-        [a.v.LEAGUE_OF_LEGENDS_WEEKLY]: {
-            sortByStatisticId: i.E.LOL_TOTAL_KILLS,
+var r = n(152057),
+    i = n(381338),
+    a = n(99815);
+let o = {
+        [r.v.LEAGUE_OF_LEGENDS_WEEKLY]: {
+            sortByStatisticId: a.E.LOL_TOTAL_KILLS,
             sortDesc: !0,
-            intervalType: l.q.WEEKLY
+            intervalType: i.q.WEEKLY
         }
     },
-    s = a.v.LEAGUE_OF_LEGENDS_WEEKLY;
+    s = r.v.LEAGUE_OF_LEGENDS_WEEKLY;

@@ -1,14 +1,14 @@
 n.d(t, {
     C4: function () {
-        return f;
+        return p;
     }
 }),
     n(653041),
     n(627494),
     n(757143),
     n(512722);
-var a = n(913527),
-    l = n.n(a),
+var l = n(913527),
+    a = n.n(l),
     i = n(705512);
 n(812206);
 var r = n(55000);
@@ -24,22 +24,22 @@ n(206295);
 var h = n(737583),
     m = n(169040),
     x = n(689938);
-let E = (e, t) => ({
+let v = (e, t) => ({
         AvatarImage1: e[0],
         ...(null != e[1] && { AvatarImage2: e[1] }),
         ...(null != e[2] && { AvatarImage3: e[2] }),
         ...(null != t && { ApplicationImage: t })
     }),
-    v = (e, t) => {
+    E = (e, t) => {
         let n = [
                 {
                     iconPath: m.NM,
                     text: t
                 }
             ],
-            a = c.default.extractTimestamp(e.extra.application_id);
+            l = c.default.extractTimestamp(e.extra.application_id);
         if (
-            (7 >= l()().diff(l()(a), 'days') &&
+            (7 >= a()().diff(a()(l), 'days') &&
                 n.push({
                     iconPath: m.As,
                     text: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
@@ -93,8 +93,8 @@ let E = (e, t) => ({
         return n;
     },
     _ = (e, t) => {
-        let { timestamp: n, colors: a, description: l, entry: i, numAvatars: o } = t,
-            u = a.map((e, t) => ({
+        let { timestamp: n, colors: l, description: a, entry: i, numAvatars: o } = t,
+            u = l.map((e, t) => ({
                 color: e,
                 stop: t
             }));
@@ -162,7 +162,7 @@ let E = (e, t) => ({
                 truncate: s.GX.Wrap
             }),
             e.drawText(
-                l,
+                a,
                 {
                     x: m.Iq,
                     y: 64,
@@ -171,7 +171,7 @@ let E = (e, t) => ({
                 },
                 !0
             );
-        let c = v(i, n);
+        let c = E(i, n);
         (0, h.J)({
             canvas: e,
             badges: c,
@@ -179,19 +179,19 @@ let E = (e, t) => ({
             maxWidth: m.kC
         });
     },
-    f = async (e) => {
-        let { applicationImageSrc: t, entry: n, avatarSrcs: a, description: l, timestamp: i, colors: r, channelId: u } = e,
+    p = async (e) => {
+        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: u } = e,
             c = n.extra.activity_name,
-            d = E(a, t);
+            d = v(l, t);
         return await (0, o.f)({
             assetsToLoad: d,
             drawImage: (e) =>
                 _(e, {
                     timestamp: i,
                     colors: r,
-                    description: l,
+                    description: a,
                     entry: n,
-                    numAvatars: a.length
+                    numAvatars: l.length
                 }),
             exportConfigs: {
                 format: s.kH.CloudUpload,

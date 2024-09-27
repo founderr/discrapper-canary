@@ -1,11 +1,11 @@
 var t,
     o,
     i,
-    r,
-    l = n(442837),
+    l,
+    r = n(442837),
     s = n(570140);
 let c = {};
-class d extends (r = l.ZP.Store) {
+class d extends (l = r.ZP.Store) {
     getSimilarGames(e) {
         return c[e];
     }

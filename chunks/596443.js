@@ -38,13 +38,13 @@ function Z(e) {
         R = null !== (r = null === (n = I[M.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : '',
         L = x._o.has(M),
         j = x.Qn.includes(o),
-        P = f.length,
-        O = (0, c.e7)([g.Z], () => g.Z.can(S.Plq.MANAGE_ROLES, C), [C]),
+        O = f.length,
+        P = (0, c.e7)([g.Z], () => g.Z.can(S.Plq.MANAGE_ROLES, C), [C]),
         y = s.useCallback(
             async (e) => {
-                if (!!O) await p.Z.open(C.id, S.pNK.ROLES), await p.Z.selectRole(e);
+                if (!!P) await p.Z.open(C.id, S.pNK.ROLES), await p.Z.selectRole(e);
             },
-            [O, C.id]
+            [P, C.id]
         );
     return (0, i.jsxs)('div', {
         className: l()(A.permissionItemContainer, { [A.elevatedPermission]: L }),
@@ -128,7 +128,7 @@ function Z(e) {
                     (0, i.jsx)(u.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({ roleCount: P })
+                        children: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({ roleCount: O })
                     })
                 ]
             }),
@@ -163,7 +163,7 @@ function Z(e) {
                         : (0, i.jsx)(
                               u.Clickable,
                               {
-                                  className: l()(A.roleTooltipItem, { [A.editable]: O && !(0, d.pM)(C.id, e) }),
+                                  className: l()(A.roleTooltipItem, { [A.editable]: P && !(0, d.pM)(C.id, e) }),
                                   onClick: () => y(e),
                                   children: (0, i.jsx)(m.Z, {
                                       role: Z[e],
@@ -190,17 +190,17 @@ function b(e) {
         b = Object.keys(g).length,
         R = s.useMemo(() => (null != m ? I.Z.getGuildPermissionSpecMap(m) : null), [m]),
         L = s.useMemo(() => (null != m ? I.Z.generateGuildPermissionSpec(m) : null), [m]),
-        [j, P] = s.useState(''),
-        [O, y] = s.useState(''),
+        [j, O] = s.useState(''),
+        [P, y] = s.useState(''),
         D = s.useCallback(o()(y, 300), []),
         U = s.useCallback(
             (e) => {
-                P(e), D(e);
+                O(e), D(e);
             },
             [D]
         ),
         k = s.useCallback(() => {
-            P(''), y('');
+            O(''), y('');
         }, []),
         w = s.useMemo(() => {
             if (null == m || null == R || null == p) return null;
@@ -219,7 +219,7 @@ function b(e) {
                             if (null == l) return;
                             let r = g[l];
                             if (null != r) {
-                                if (O.length > 0) {
+                                if (P.length > 0) {
                                     var o, c, u, d, h;
                                     let e = null !== (d = null === (o = R[a.toString()]) || void 0 === o ? void 0 : o.title) && void 0 !== d ? d : (0, _.wt)(a),
                                         t = null !== (h = null === (u = R[a.toString()]) || void 0 === u ? void 0 : null === (c = u.description) || void 0 === c ? void 0 : c.toString()) && void 0 !== h ? h : '',
@@ -227,10 +227,10 @@ function b(e) {
                                         s = x._o.has(a),
                                         r = x.Qn.includes(l),
                                         m = s ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : r ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
-                                        p = M(O, e),
-                                        f = M(O, t),
-                                        E = M(O, i),
-                                        g = null != m && M(O, m);
+                                        p = M(P, e),
+                                        f = M(P, t),
+                                        E = M(P, i),
+                                        g = null != m && M(P, m);
                                     if (!p && !f && !E && !g) return;
                                 }
                                 e.push(
@@ -252,7 +252,7 @@ function b(e) {
                     }),
                 e
             );
-        }, [m, R, p, b, L, g, O, t]);
+        }, [m, R, p, b, L, g, P, t]);
     return null == h || null == p
         ? null
         : (0, i.jsxs)('div', {

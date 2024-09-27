@@ -36,8 +36,8 @@ var i = n(735250),
     R = n(916771),
     L = n(792517),
     j = n(979425),
-    P = n(651183),
-    O = n(623825),
+    O = n(651183),
+    P = n(623825),
     y = n(981631),
     D = n(354459),
     U = n(65154),
@@ -47,10 +47,10 @@ let B = new m.Z('StreamTile');
 function H(e) {
     let { participant: t, selected: n, focused: s, idle: a, width: l, premiumIndicator: o } = e,
         c = (0, r.e7)([T.Z], () => T.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
-        u = (0, O.K)(l);
+        u = (0, P.K)(l);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            n ? null : (0, i.jsx)(P.Z, { participant: t }),
+            n ? null : (0, i.jsx)(O.Z, { participant: t }),
             s || null == c || c.state === y.jm8.ENDED || c.state === y.jm8.FAILED
                 ? null
                 : (0, i.jsx)(E.Z, {
@@ -65,7 +65,7 @@ function H(e) {
     });
 }
 function G(e) {
-    let { participant: t, selected: n, onVideoResize: a, paused: h, fit: m, inPopout: E, width: P, focused: O } = e,
+    let { participant: t, selected: n, onVideoResize: a, paused: h, fit: m, inPopout: E, width: O, focused: P } = e,
         H = v.Z.getVideoComponent(),
         G = (0, r.e7)([x.default], () => x.default.getId()),
         V = (0, p.Z)(),
@@ -77,7 +77,7 @@ function G(e) {
         J = (null == K ? void 0 : K.ownerId) === G,
         Q = J && !X && !E,
         $ = null != K ? (0, _.Z)(K, W, W.id === G, Q) : null,
-        ee = P < 195;
+        ee = O < 195;
     if (
         (s.useEffect(() => {
             !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !J && ((0, u.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
@@ -103,26 +103,26 @@ function G(e) {
         return (0, i.jsx)(b.Z, {
             selected: n,
             stream: K,
-            width: P
+            width: O
         });
     if ((null == K ? void 0 : K.state) === y.jm8.FAILED)
         return (0, i.jsx)(R.Z, {
             selected: n,
             stream: K,
-            width: P
+            width: O
         });
     else if (t.type === D.fO.HIDDEN_STREAM)
         return (0, i.jsx)(L.Z, {
             selected: n,
             participant: t,
-            width: P
+            width: O
         });
     else if (null != K && !n && null != H && v.Z.supports(U.AN.VIDEO))
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 null != Y
                     ? (0, i.jsx)(C.Z, {
-                          focused: O,
+                          focused: P,
                           channelId: Y.id,
                           guildId: Y.guild_id,
                           streamerId: W.id,
@@ -147,7 +147,7 @@ function G(e) {
                 ),
                 null != $
                     ? (0, i.jsx)(I.Z, {
-                          size: (0, Z.L)(P),
+                          size: (0, Z.L)(O),
                           ...$
                       })
                     : null,
@@ -175,7 +175,7 @@ function G(e) {
                                   children: (0, i.jsx)(o.Text, {
                                       variant: ee ? 'text-sm/semibold' : 'text-md/semibold',
                                       color: 'none',
-                                      children: P < 175 ? k.Z.Messages.WATCH : k.Z.Messages.WATCH_STREAM
+                                      children: O < 175 ? k.Z.Messages.WATCH : k.Z.Messages.WATCH_STREAM
                                   })
                               }),
                               q

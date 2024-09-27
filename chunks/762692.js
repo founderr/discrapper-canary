@@ -208,11 +208,11 @@ t.Z = {
     },
     fetchAlgoliaSearchResults: S,
     fetchAlgoliaSearchResultCounts: f,
-    clearAlgoliaSearchResults: function () {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+    clearAlgoliaSearchResults: function (e) {
+        var t;
         d.Z.dispatch({
             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR',
-            ignoreQueries: e
+            ignoreQueries: null !== (t = null == e ? void 0 : e.ignoreQueries) && void 0 !== t ? t : []
         });
     },
     fetchFeaturedGuilds: N,

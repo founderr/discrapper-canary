@@ -7,13 +7,13 @@ n.d(a, {
 var t = n(470079),
     o = n(392711),
     i = n.n(o),
-    r = n(876215),
-    l = n(442837),
+    l = n(876215),
+    r = n(442837),
     s = n(146282),
     c = n(897674),
     d = n(709054),
     u = n(206583);
-let m = new Set([r.s.PLAYED_GAME]),
+let m = new Set([l.s.PLAYED_GAME]),
     p = (e) => m.has(e.content_type);
 function _() {
     let e = (0, c.Z)(u.YN.GAME_PROFILE_FEED),
@@ -29,7 +29,7 @@ function _() {
             [e, a]
         );
     return {
-        requestId: (0, l.e7)([s.Z], () => s.Z.getFeedRequestId(u.YN.GAME_PROFILE_FEED)),
+        requestId: (0, r.e7)([s.Z], () => s.Z.getFeedRequestId(u.YN.GAME_PROFILE_FEED)),
         entries: n
     };
 }

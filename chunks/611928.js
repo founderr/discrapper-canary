@@ -26,19 +26,19 @@ function c(e) {
     });
 }
 function d(e) {
-    let { onClick: t, icon: n } = e;
+    let { onClick: t, icon: n, iconColor: a = l.tokens.colors.HEADER_PRIMARY } = e;
     return null != t
         ? (0, i.jsx)(l.Clickable, {
               className: s()(o.clickable, o.icon),
               onClick: t,
               children: (0, i.jsx)(n, {
-                  color: l.tokens.colors.HEADER_PRIMARY,
+                  color: a,
                   size: 'md'
               })
           })
         : (0, i.jsx)(n, {
               className: o.icon,
-              color: l.tokens.colors.HEADER_PRIMARY,
+              color: a,
               size: 'md'
           });
 }

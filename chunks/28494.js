@@ -18,59 +18,59 @@ var i = n(470079),
     _ = n(128449);
 function h(e) {
     let { loadId: t } = e,
-        n = (0, c.$G)(),
-        s = (0, c.NL)(),
-        r = (0, c.lZ)(),
-        l = (0, c.Dm)(),
-        u = i.useMemo(
+        n = (0, c.NL)(),
+        s = (0, c.lZ)(),
+        r = (0, c.Dm)(),
+        l = i.useMemo(
             () => ({
-                categoryId: r,
-                query: s,
-                languageCode: l
+                categoryId: s,
+                query: n,
+                languageCode: r
             }),
-            [r, l, s]
+            [s, r, n]
         ),
+        u = (0, a.e7)([o.Z], () => {
+            var e;
+            return null !== (e = o.Z.getGuildIds(l)) && void 0 !== e ? e : _.q5;
+        }),
         h = (0, a.e7)([o.Z], () => {
             var e;
-            return null !== (e = o.Z.getGuildIds(u)) && void 0 !== e ? e : _.q5;
+            return null !== (e = o.Z.getIsFetching(l)) && void 0 !== e && e;
         }),
         E = (0, a.e7)([o.Z], () => {
             var e;
-            return null !== (e = o.Z.getIsFetching(u)) && void 0 !== e && e;
+            return null === (e = o.Z.getIsBlocked(n)) || void 0 === e || e;
         }),
-        m = (0, a.e7)([o.Z], () => {
-            var e;
-            return null === (e = o.Z.getIsBlocked(s)) || void 0 === e || e;
-        }),
-        I = n !== s,
+        m = (0, c.$G)(),
+        I = m !== n,
         g = i.useCallback(() => {
-            let e = (0, c.WF)(),
+            let e = (0, c.Zq)(),
                 n = (0, c.lx)(),
-                i = o.Z.getGuildIds(u),
-                a = o.Z.getTotal(u);
+                i = o.Z.getGuildIds(l),
+                a = o.Z.getTotal(l);
             if (null == i || null == a) return;
-            let s = o.Z.getIsFetching(u),
-                r = o.Z.getIsInitialFetchComplete(u);
+            let s = o.Z.getIsFetching(l),
+                r = o.Z.getIsInitialFetchComplete(l);
             if (s || !r || i.length >= a) return;
-            let l = (0, c.a7)();
+            let u = (0, c.a7)();
             (0, d.CD)({
                 loadId: t,
                 categoryId: n,
                 offset: i.length,
                 query: e,
-                languageCode: l
+                languageCode: u
             });
-        }, [t, u]);
+        }, [t, l]);
     return i.useMemo(
         () => ({
-            guildIds: h,
-            loading: !m && (I || E),
-            searchResultsQuery: n,
+            guildIds: u,
+            loading: !E && (I || h),
+            searchResultsQuery: m,
             loadMore: g,
-            searchCategoryId: r,
-            isBlockedSearchQuery: m
+            searchCategoryId: s,
+            isBlockedSearchQuery: E
         }),
-        [h, m, I, E, n, g, r]
+        [u, E, I, h, m, g, s]
     );
 }
 function E(e) {
@@ -103,7 +103,7 @@ function E(e) {
         onClearSearch: _,
         onSearchSubmit: i.useCallback(() => {
             let e = (0, c.uP)(),
-                n = (0, c.WF)();
+                n = (0, c.Zq)();
             if ('' === e.trim() || e === n) return;
             l.Z.clearAlgoliaSearchResults();
             let i = (0, c.a7)(),

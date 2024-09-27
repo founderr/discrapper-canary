@@ -31,9 +31,9 @@ function L() {
     (N = ''), (A = 0), (Z = []), (b = new Set()), (v = !1), (R = null);
 }
 function j(e) {
-    (N = e), (A = 0), P();
+    (N = e), (A = 0), O();
 }
-function P() {
+function O() {
     if (!v) return !1;
     let e = g.Z.getChannel(R);
     if (0 === N.trim().length)
@@ -87,7 +87,7 @@ function P() {
         !1
     );
 }
-function O() {
+function P() {
     if (!v) return !1;
     let e = M;
     return (M = c().some(T.Z.getRelationships(), (e) => e === S.OGo.FRIEND)) !== e;
@@ -117,7 +117,7 @@ function U() {
 }
 function k(e) {
     if (e.key !== S.vTt) return !1;
-    (v = !0), O(), (i = U()), (R = null), j('');
+    (v = !0), P(), (i = U()), (R = null), j('');
 }
 function w(e) {
     if (e.key !== S.vTt) return !1;
@@ -128,7 +128,7 @@ function B() {
 }
 class H extends (s = u.ZP.Store) {
     initialize() {
-        this.waitFor(x.default, g.Z, T.Z, m.Z, C.Z), this.syncWith([x.default, g.Z], P), this.syncWith([T.Z], O);
+        this.waitFor(x.default, g.Z, T.Z, m.Z, C.Z), this.syncWith([x.default, g.Z], O), this.syncWith([T.Z], P);
     }
     getResults() {
         return Z;
@@ -169,12 +169,12 @@ let G = new H(d.Z, {
         let { guildId: t, channelId: n } = e;
         if (null != t) return !1;
         let i = v;
-        return L(), (v = i), (R = n), P();
+        return L(), (v = i), (R = n), O();
     },
     MODAL_PUSH: k,
     SHOW_ACTION_SHEET: k,
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-        (v = !0), O(), (i = U()), (R = e.channelId), j('');
+        (v = !0), P(), (i = U()), (R = e.channelId), j('');
     },
     MODAL_POP: w,
     HIDE_ACTION_SHEET: w,

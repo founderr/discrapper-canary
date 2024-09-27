@@ -35,8 +35,8 @@ var i = n(735250),
     R = n(921944),
     L = n(65154),
     j = n(689938),
-    P = n(648298);
-function O(e, t, n) {
+    O = n(648298);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -124,7 +124,7 @@ class y extends s.PureComponent {
                                 onClick: () => {
                                     t(), a(R.L.UNKNOWN);
                                 },
-                                className: P.tooltip
+                                className: O.tooltip
                             });
                         },
                         children: () => g
@@ -140,29 +140,29 @@ class y extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            O(this, 'handleStartCall', (e, t) => {
+            P(this, 'handleStartCall', (e, t) => {
                 let { channel: n, notFriend: i, appContext: s } = this.props,
                     a = i ? n.getRecipientId() : null,
                     l = () => o.Z.call(n.id, t, !i && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), a);
                 t ? (0, C.Z)(l, s) : l();
             }),
-            O(this, 'handleJoinCall', (e) => {
+            P(this, 'handleJoinCall', (e) => {
                 c.default.selectVoiceChannel(this.props.channel.id, e);
             }),
-            O(this, 'handleVoiceClick', (e) => {
+            P(this, 'handleVoiceClick', (e) => {
                 let { callUnavailable: t, callActive: n, canShowActivityGdmTooltip: i } = this.props;
                 if ((i && (0, p.EW)(l.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: R.L.AUTO }), t));
                 else if (n) return this.handleJoinCall(!1);
                 else return this.handleStartCall(e, !1);
             }),
-            O(this, 'handleStartVideoCall', (e) => {
+            P(this, 'handleStartVideoCall', (e) => {
                 this.handleStartCall(e, !0);
             }),
-            O(this, 'handleJoinVideoCall', () => {
+            P(this, 'handleJoinVideoCall', () => {
                 let { appContext: e } = this.props;
                 (0, C.Z)(() => this.handleJoinCall(!0), e);
             }),
-            O(this, 'handleBrowserNotSupported', () => {
+            P(this, 'handleBrowserNotSupported', () => {
                 (0, g.Z)();
             });
     }
@@ -189,10 +189,10 @@ function D(e) {
         R = (0, h.Z)(n.id),
         L = (0, a.e7)([T.Z], () => T.Z.hasLayers());
     R && !L && M.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
-    let [j, P] = s.useState(!1);
+    let [j, O] = s.useState(!1);
     return (s.useEffect(() => {
         let e = setTimeout(() => {
-            P(!0);
+            O(!0);
         }, 250);
         return () => clearTimeout(e);
     }, []),

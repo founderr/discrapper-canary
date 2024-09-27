@@ -52,10 +52,10 @@ let N = (e) => {
             j = (e, t) => {
                 e.stopPropagation(), (0, f.Zx)(t, !0), L();
             },
-            P = (e, t) => {
+            O = (e, t) => {
                 e.stopPropagation(), (0, f._s)(t.status, t.emoji, !0), L();
             },
-            O = s.useCallback((e) => {
+            P = s.useCallback((e) => {
                 e.stopPropagation(), (0, f.Sc)(!0);
             }, []),
             y = (e) => {
@@ -169,7 +169,7 @@ let N = (e) => {
                                 }),
                                 (0, i.jsx)(d.Clickable, {
                                     'aria-label': S.Z.Messages.STATUS_POPOUT_CLEAR_STATUS,
-                                    onClick: O,
+                                    onClick: P,
                                     onMouseEnter: () => b(null),
                                     children: (0, i.jsx)(N, {
                                         className: v.optionButton,
@@ -196,7 +196,7 @@ let N = (e) => {
                                         {
                                             'aria-label': e.status,
                                             onMouseEnter: () => U(e),
-                                            onClick: r ? void 0 : (t) => P(t, e),
+                                            onClick: r ? void 0 : (t) => O(t, e),
                                             className: v.statusOptionContainer,
                                             children: [
                                                 (0, i.jsx)(N, {

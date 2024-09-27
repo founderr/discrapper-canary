@@ -21,12 +21,12 @@ function h(e) {
         m = a.useCallback(
             (e) => {
                 (0, c.LD)({ languageCode: e });
-                let n = (0, c.WF)();
-                o.Z.clearAlgoliaSearchResults([n]),
+                let n = (0, c.Zq)();
+                o.Z.clearAlgoliaSearchResults({ ignoreQueries: [n] }),
                     (0, d.oT)({
                         loadId: t,
                         categoryId: (0, c.lx)(),
-                        query: (0, c.uP)(),
+                        query: n,
                         languageCode: e
                     });
             },

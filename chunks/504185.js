@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(979696),
     L = n(430824),
     j = n(496675),
-    P = n(944486),
-    O = n(358085),
+    O = n(944486),
+    P = n(358085),
     y = n(998502),
     D = n(922482),
     U = n(431328),
@@ -68,9 +68,9 @@ let $ = 'HasBeenInStageChannel',
 function ei(e) {
     let { channel: t, appContext: n, popoutOpen: a, popoutWindow: l, popoutWindowAlwaysOnTop: r, selectedParticipant: c } = e,
         u = t.getGuildId(),
-        d = (0, o.e7)([P.Z], () => P.Z.getMostRecentSelectedTextChannelId(u), [u]),
+        d = (0, o.e7)([O.Z], () => O.Z.getMostRecentSelectedTextChannelId(u), [u]),
         h = b.default.getId(),
-        m = !(0, o.e7)([f.Z], () => f.Z.isFullscreenInContext(n)) && (!O.isPlatformEmbedded || (O.isPlatformEmbedded && y.ZP.supportsFeature(q.eRX.POPOUT_WINDOWS))),
+        m = !(0, o.e7)([f.Z], () => f.Z.isFullscreenInContext(n)) && (!P.isPlatformEmbedded || (P.isPlatformEmbedded && y.ZP.supportsFeature(q.eRX.POPOUT_WINDOWS))),
         p = null != c && c.type !== X.fO.ACTIVITY && c.user.id !== h,
         _ = s.useMemo(() => {
             var e;
@@ -83,7 +83,7 @@ function ei(e) {
             popoutWindow: l,
             currentWindow: _
         }),
-        C = n === q.IlC.POPOUT && O.isPlatformEmbedded && y.ZP.supportsFeature(q.eRX.POPOUT_WINDOWS);
+        C = n === q.IlC.POPOUT && P.isPlatformEmbedded && y.ZP.supportsFeature(q.eRX.POPOUT_WINDOWS);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             p
@@ -133,7 +133,7 @@ function ea(e) {
     let t,
         { channel: n, toggleRequestToSpeakSidebar: a, showRequestToSpeakSidebar: c, popoutWindow: u, popoutWindowAlwaysOnTop: d, popoutOpen: h, chatOpen: p } = e,
         _ = (0, m.bp)(),
-        E = (0, o.e7)([P.Z], () => P.Z.getVoiceChannelId() === n.id, [n.id]),
+        E = (0, o.e7)([O.Z], () => O.Z.getVoiceChannelId() === n.id, [n.id]),
         C = (0, o.e7)([j.Z], () => j.Z.can(q.Plq.CONNECT, n)),
         I = (0, U.w8)(n.id, k.pV.SPEAKER),
         T = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(n.id)),

@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(47481),
     L = n(977391),
     j = n(73274),
-    P = n(419388),
-    O = n(406534),
+    O = n(419388),
+    P = n(406534),
     y = n(981631),
     D = n(689938),
     U = n(381497);
@@ -60,7 +60,7 @@ let k = s.memo(
                           }),
                 [C, N, d]
             ),
-            H = (0, P.ZP)({
+            H = (0, O.ZP)({
                 messages: _,
                 channel: p,
                 compact: C,
@@ -84,7 +84,7 @@ let k = s.memo(
                 jumpToPresentBar: z,
                 forumPostActionBar: Y,
                 safetyWarningBanner: K
-            } = (0, O.Z)({
+            } = (0, P.Z)({
                 channel: p,
                 messages: _,
                 unreadCount: f,
@@ -217,8 +217,8 @@ t.Z = s.memo(function (e) {
         {
             messageGroupSpacing: L,
             fontSize: j,
-            messageDisplayCompact: P,
-            renderSpoilers: O,
+            messageDisplayCompact: O,
+            renderSpoilers: P,
             keyboardModeEnabled: D
         } = (function () {
             let e = C.jU.useSetting(),
@@ -307,13 +307,13 @@ t.Z = s.memo(function (e) {
             };
         })(t);
     return (0, i.jsx)(p.a.Provider, {
-        value: (0, b.Z)(O, u),
+        value: (0, b.Z)(P, u),
         children: (0, i.jsx)(k, {
             ...c,
             messageGroupSpacing: L,
             showNewMessagesBar: !0,
             channel: t,
-            messageDisplayCompact: !r && (l || P),
+            messageDisplayCompact: !r && (l || O),
             messages: U,
             channelStream: w,
             permissionVersion: E,

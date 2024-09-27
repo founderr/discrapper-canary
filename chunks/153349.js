@@ -76,7 +76,7 @@ let L = l.memo(function (e) {
         function j() {
             (0, x.DT)(t, i.user.id, !0);
         }
-        let P = (e) => {
+        let O = (e) => {
             (0, m.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('91864')]).then(n.bind(n, 757387));
                 return (n) =>
@@ -111,7 +111,7 @@ let L = l.memo(function (e) {
                         var t;
                         return (0, a.jsxs)(h.Clickable, {
                             className: R.participantMemberContainer,
-                            onContextMenu: P,
+                            onContextMenu: O,
                             ...e,
                             children: [
                                 (0, a.jsx)(p.Z, {
@@ -174,7 +174,7 @@ let L = l.memo(function (e) {
             ]
         });
     }),
-    P = l.memo(function (e) {
+    O = l.memo(function (e) {
         let { channel: t } = e,
             [n, i] = (0, A.h)(t.id);
         return (0, a.jsx)(h.FormSwitch, {
@@ -184,7 +184,7 @@ let L = l.memo(function (e) {
             children: b.Z.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
         });
     }),
-    O = l.memo(function () {
+    P = l.memo(function () {
         return (0, a.jsxs)('div', {
             className: R.emptyStateContainer,
             children: [
@@ -236,9 +236,9 @@ function y(e) {
                     let { section: n, row: i } = e;
                     switch (n) {
                         case 0:
-                            return (0, a.jsx)(P, { channel: t }, 'rts-toggle');
+                            return (0, a.jsx)(O, { channel: t }, 'rts-toggle');
                         case 1: {
-                            if (0 === s.length) return (0, a.jsx)(O, {}, 'participants-empty');
+                            if (0 === s.length) return (0, a.jsx)(P, {}, 'participants-empty');
                             let e = s[i];
                             return (0, a.jsx)(
                                 j,

@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(496675),
     L = n(117530),
     j = n(459273),
-    P = n(838440),
-    O = n(127654),
+    O = n(838440),
+    P = n(127654),
     y = n(241309),
     D = n(928477),
     U = n(456077),
@@ -179,7 +179,7 @@ function z(e) {
                                 shouldRefocus: !0
                             };
                         if (null == n) {
-                            let { valid: n } = await (0, P.v)({
+                            let { valid: n } = await (0, O.v)({
                                 content: e,
                                 stickers: s,
                                 uploads: a,
@@ -423,7 +423,7 @@ function q(e) {
                 onBlur: f,
                 onChange: E,
                 onSubmit: I,
-                promptToUpload: O.d
+                promptToUpload: P.d
             })
         ]
     });

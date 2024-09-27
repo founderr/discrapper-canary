@@ -36,8 +36,8 @@ var i,
     R = n(366980),
     L = n(703656),
     j = n(93127),
-    P = n(60349),
-    O = n(428598),
+    O = n(60349),
+    P = n(428598),
     y = n(131704),
     D = n(592125),
     U = n(341165),
@@ -486,7 +486,7 @@ class eu extends (i = a.PureComponent) {
         return {
             affinities: e.map((e) => {
                 var t;
-                let n = O.Z.getUserAffinity(e);
+                let n = P.Z.getUserAffinity(e);
                 return null !== (t = null == n ? void 0 : n.communicationProbability) && void 0 !== t ? t : -1;
             })
         };
@@ -702,7 +702,7 @@ class eu extends (i = a.PureComponent) {
 }
 function ed(e) {
     let { channel: t, ...n } = e;
-    P.Z.useExperiment({ location: 'desktop_dm_list' });
+    O.Z.useExperiment({ location: 'desktop_dm_list' });
     let i = (0, m.cj)([k.Z, U.Z, G.Z], () => {
         let e;
         return (

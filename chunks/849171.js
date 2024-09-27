@@ -37,8 +37,8 @@ var i,
     R = n(594174),
     L = n(823379),
     j = n(5192),
-    P = n(689938),
-    O = n(456608);
+    O = n(689938),
+    P = n(456608);
 ((s = i || (i = {}))[(s.SMALL = 0)] = 'SMALL'), (s[(s.MEDIUM = 1)] = 'MEDIUM'), (s[(s.LARGE = 2)] = 'LARGE');
 let y = ['embedded_background'];
 function D(e) {
@@ -63,7 +63,7 @@ function D(e) {
                         {
                             src: e.getAvatarURL(n, r),
                             alt: t,
-                            className: O.avatar
+                            className: P.avatar
                         },
                         e.id
                     )
@@ -103,7 +103,7 @@ function U(e) {
             launchingComponentId: U
         });
     return (0, a.jsxs)('div', {
-        className: O.splash,
+        className: P.splash,
         children: [
             (0, a.jsx)(D, {
                 avatarSize: I,
@@ -112,29 +112,29 @@ function U(e) {
                 users: T
             }),
             (0, a.jsx)(u.Text, {
-                className: o()(O.subheader, {
-                    [O.small]: 0 === C,
-                    [O.medium]: 1 === C
+                className: o()(P.subheader, {
+                    [P.small]: 0 === C,
+                    [P.medium]: 1 === C
                 }),
                 variant: 'text-sm/normal',
                 children:
                     T.length > 1
-                        ? P.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+                        ? O.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
                               username: Z,
                               count: T.length - 1
                           })
-                        : P.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({ username: Z })
+                        : O.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({ username: Z })
             }),
             (0, a.jsx)(u.Text, {
-                className: o()(O.header, {
-                    [O.small]: 0 === C,
-                    [O.medium]: 1 === C
+                className: o()(P.header, {
+                    [P.small]: 0 === C,
+                    [P.medium]: 1 === C
                 }),
                 variant: 'text-sm/normal',
                 children: f.name
             }),
             (0, a.jsx)('div', {
-                className: O.buttons,
+                className: P.buttons,
                 children: b
                     ? (0, a.jsx)(u.Button, {
                           onClick: function (e) {
@@ -158,9 +158,9 @@ function U(e) {
                                       return u.Button.Sizes.SMALL;
                               }
                           })(C),
-                          className: O.button,
+                          className: P.button,
                           color: u.Button.Colors.PRIMARY,
-                          children: P.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
+                          children: O.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
                       })
                     : null
             })
@@ -198,17 +198,17 @@ function k(e) {
         (0, a.jsx)(v.Gt, {
             value: o,
             children: (0, a.jsx)('div', {
-                className: O.container,
+                className: P.container,
                 children: (0, a.jsxs)(a.Fragment, {
                     children: [
                         _ &&
                             (0, a.jsx)(g.Z, {
-                                className: O.iframe,
+                                className: P.iframe,
                                 embedId: (0, T.Z)(r.id, u)
                             }),
                         I && null != m && null != p && '' !== p
                             ? (0, a.jsx)('img', {
-                                  className: O.splashImage,
+                                  className: P.splashImage,
                                   alt: m.name,
                                   src: p
                               })
@@ -221,7 +221,7 @@ function k(e) {
                                 participants: t.participants,
                                 application: m
                             }),
-                        s || I ? null : (0, a.jsx)('div', { className: O.clickShield })
+                        s || I ? null : (0, a.jsx)('div', { className: P.clickShield })
                     ]
                 })
             })

@@ -50,7 +50,7 @@ function R(e) {
         : null;
 }
 function L(e) {
-    let { participant: t, channel: n, inCall: a, width: o, paused: E, selected: R, fit: L, onVideoResize: j, blocked: P, noVideoRender: O = !1, pulseSpeakingIndicator: y = !1 } = e,
+    let { participant: t, channel: n, inCall: a, width: o, paused: E, selected: R, fit: L, onVideoResize: j, blocked: O, noVideoRender: P = !1, pulseSpeakingIndicator: y = !1 } = e,
         D = I.Z.getVideoComponent(),
         U = (0, r.e7)([g.default], () => g.default.getId()),
         { user: k, streamId: w, speaking: B } = t,
@@ -73,7 +73,7 @@ function L(e) {
     return (s.useEffect(() => {
         n.isGuildStageVoice() && !G && (null == Q ? void 0 : Q.id) === k.id && c.Z.selectParticipant(n.id, null);
     }, [G]),
-    a && !W && !O && G && !R && null != D && I.Z.supports(N.AN.VIDEO))
+    a && !W && !P && G && !R && null != D && I.Z.supports(N.AN.VIDEO))
         ? (0, i.jsx)(
               p.Z,
               {
@@ -91,7 +91,7 @@ function L(e) {
               w
           )
         : (0, i.jsx)('div', {
-              className: l()(Z.content, { [Z.blockedAvatar]: P }),
+              className: l()(Z.content, { [Z.blockedAvatar]: O }),
               children: (0, i.jsx)(m.Z, {
                   'aria-label': Y,
                   src: X,

@@ -21,7 +21,7 @@ function E(e) {
         (0, d.oT)({
             loadId: n,
             categoryId: t,
-            query: (0, c.uP)(),
+            query: (0, c.Zq)(),
             languageCode: (0, c.a7)()
         });
 }

@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(719296),
     L = n(651612),
     j = n(918559),
-    P = n(981631),
-    O = n(689938),
+    O = n(981631),
+    P = n(689938),
     y = n(735299);
 let D = b.u.SIZE_32,
     U = {
@@ -162,7 +162,7 @@ function k(e) {
         );
     };
     return (0, i.jsx)(c.ThemeProvider, {
-        theme: P.BRd.DARK,
+        theme: O.BRd.DARK,
         children: (e) =>
             (0, i.jsxs)('div', {
                 className: l()(y.wrapper, U[Y], e),
@@ -228,7 +228,7 @@ function k(e) {
                                                       })
                                                   }),
                                                   (0, i.jsx)(_.d, {
-                                                      label: O.Z.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
+                                                      label: P.Z.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
                                                       onClick: W,
                                                       iconComponent: c.MinimizeIcon,
                                                       themeable: !0,
@@ -248,10 +248,10 @@ function k(e) {
                               maxHeight: a,
                               resizableNode: z,
                               onResize: (e) => {
-                                  T.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
+                                  T.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
                               },
                               onResizeEnd: (e) => {
-                                  T.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
+                                  T.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
                               }
                           })
                         : null

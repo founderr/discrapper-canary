@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(358221),
     L = n(677601),
     j = n(541716),
-    P = n(236091),
-    O = n(663993),
+    O = n(236091),
+    P = n(663993),
     y = n(252618),
     D = n(201493),
     U = n(605236),
@@ -83,8 +83,8 @@ var i = n(735250),
     eR = n(430670),
     eL = n(524329),
     ej = n(995532),
-    eP = n(738643),
-    eO = n(433355),
+    eO = n(738643),
+    eP = n(433355),
     ey = n(592125),
     eD = n(703558),
     eU = n(486472),
@@ -126,7 +126,7 @@ function e8(e, t, n) {
         e
     );
 }
-let te = (0, O.Un)({
+let te = (0, P.Un)({
     createPromise: () => n.e('49131').then(n.bind(n, 434878)),
     webpackId: 434878,
     renderLoader: () =>
@@ -496,7 +496,7 @@ class tt extends s.PureComponent {
             }),
             e8(this, 'renderClipsEnabledIndicatorToolbarItem', () => {
                 let { inCall: e, voiceChannel: t } = this.props;
-                return e ? (0, i.jsx)(P.Z, { channelId: null != t ? t.id : null }) : null;
+                return e ? (0, i.jsx)(O.Z, { channelId: null != t ? t.id : null }) : null;
             }),
             e8(this, 'renderStreamQualityLiveIndicatorToolbarItem', () => {
                 let { selectedParticipant: e, premiumIndicatorEnabled: t } = this.props;
@@ -720,11 +720,11 @@ t.Z = s.memo(function (e) {
         }),
         L = (0, m.e7)([A.ZP], () => (null != c ? A.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
         j = (0, m.e7)([eH.Z], () => eH.Z.isConnected()),
-        P = (0, N.Z)(j),
-        O = j && !1 === P;
+        O = (0, N.Z)(j),
+        P = j && !1 === O;
     s.useEffect(() => {
-        Z && O && null != L && null != c && E.Z.selectParticipant(c.id, L.applicationId);
-    }, [O, c, Z, L]);
+        Z && P && null != L && null != c && E.Z.selectParticipant(c.id, L.applicationId);
+    }, [P, c, Z, L]);
     let y = (0, m.e7)([A.ZP], () => {
             var e;
             return A.ZP.getSelfEmbeddedActivityForChannel(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : e1.lds);
@@ -741,17 +741,17 @@ t.Z = s.memo(function (e) {
         K = (0, m.e7)([R.Z], () => (null != c ? R.Z.getSelectedParticipant(c.id) : null)),
         q = (0, m.e7)([eW.default], () => eW.default.getCurrentUser()),
         X = (0, eo.Z)(I),
-        J = (0, eP.Z)(V, null == I ? void 0 : I.id),
+        J = (0, eO.Z)(V, null == I ? void 0 : I.id),
         { section: Q, channelSidebarState: $ } = (0, m.cj)(
-            [eO.ZP],
+            [eP.ZP],
             () => ({
-                section: eO.ZP.getSection(r, null == c ? void 0 : c.isDM()),
-                channelSidebarState: eO.ZP.getSidebarState(r)
+                section: eP.ZP.getSection(r, null == c ? void 0 : c.isDM()),
+                channelSidebarState: eP.ZP.getSidebarState(r)
             }),
             [r, c]
         ),
         ee = null == I ? void 0 : I.id,
-        et = (0, m.e7)([eO.ZP], () => eO.ZP.getGuildSidebarState(ee), [ee]),
+        et = (0, m.e7)([eP.ZP], () => eP.ZP.getGuildSidebarState(ee), [ee]),
         en = (0, m.e7)([eF.Z], () => eF.Z.getGuildId()) === e1.I_8,
         ei = (0, em.So)(h.q.STREAM_HIGH_QUALITY),
         es = (0, eh.o)(K, q),

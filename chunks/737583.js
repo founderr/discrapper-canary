@@ -7,25 +7,25 @@ n.d(t, {
     }
 }),
     n(47120);
-var a = n(693824),
-    l = n(169040);
+var l = n(693824),
+    a = n(169040);
 function i(e) {
     let t,
         { canvas: n, badges: i, startPosition: r, maxWidth: s } = e;
     for (let { iconPath: e, text: o } of (n.setFont({
         size: 12,
-        family: l.I8,
-        weight: l.Ue,
-        truncate: a.GX.None
+        family: a.I8,
+        weight: a.Ue,
+        truncate: l.GX.None
     }),
     i)) {
-        let a = null != t ? t.w + t.x + l.PW : r,
-            i = null != t ? t.w + t.x + l.PW + l.NC : r + l.NC;
+        let l = null != t ? t.w + t.x + a.PW : r,
+            i = null != t ? t.w + t.x + a.PW + a.NC : r + a.NC;
         n.drawPath(
             e,
             {
-                x: a,
-                y: l.f0
+                x: l,
+                y: a.f0
             },
             !0,
             0.6
@@ -34,7 +34,7 @@ function i(e) {
                 o,
                 {
                     x: i,
-                    y: l.m2,
+                    y: a.m2,
                     w: s
                 },
                 !0
@@ -45,14 +45,14 @@ function r(e) {
     let {
         canvas: t,
         avatarSrcs: n,
-        position: { x: l, y: i },
+        position: { x: a, y: i },
         avatarImageSize: r
     } = e;
     for (let e = 0; e < n.length; e++)
         e < n.length - 1 &&
             t.clipRoundedRect(
                 {
-                    x: l + (e + 1) * (r - 8) - 2,
+                    x: a + (e + 1) * (r - 8) - 2,
                     y: i - 1,
                     w: r + 2,
                     h: r + 2
@@ -63,7 +63,7 @@ function r(e) {
             t.drawRoundedImage(
                 n[e],
                 {
-                    x: l + e * (r - 8),
+                    x: a + e * (r - 8),
                     y: i
                 },
                 {
@@ -71,7 +71,7 @@ function r(e) {
                     h: r
                 },
                 50,
-                { fillMode: a.JU.Cover }
+                { fillMode: l.JU.Cover }
             ),
             t.restoreContext();
 }

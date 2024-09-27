@@ -18,7 +18,7 @@ t.Z = function (e) {
                 (0, c.oT)({
                     loadId: t,
                     categoryId: d.Hk,
-                    query: (0, o.uP)(),
+                    query: (0, o.Zq)(),
                     languageCode: (0, o.a7)()
                 });
         }, [t]),

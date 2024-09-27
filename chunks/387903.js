@@ -35,8 +35,8 @@ var i,
     R = n(768581),
     L = n(630388),
     j = n(153066),
-    P = n(740265),
-    O = n(122810),
+    O = n(740265),
+    P = n(122810),
     y = n(833664),
     D = n(503438),
     U = n(802856),
@@ -127,7 +127,7 @@ class q extends (s = r.PureComponent) {
                 t = G.Z.Messages.USER_ACTIVITY_HEADER_WATCHING.format({ name: o });
                 break;
             case H.IIU.PLAYING:
-                t = (0, P.Z)(r);
+                t = (0, O.Z)(r);
                 break;
             case H.IIU.COMPETING:
                 t = G.Z.Messages.USER_ACTIVITY_HEADER_COMPETING.format({ name: o });
@@ -283,7 +283,7 @@ class q extends (s = r.PureComponent) {
     }
     renderGameImage(e) {
         let { user: t, type: n, application: i, activityGuild: s } = this.props;
-        return null != e.assets || (0, O.Z)(e) || e.type !== H.IIU.PLAYING || 'ActivityFeed' === n || t.bot
+        return null != e.assets || (0, P.Z)(e) || e.type !== H.IIU.PLAYING || 'ActivityFeed' === n || t.bot
             ? null
             : null == i && null != s
               ? (0, l.jsx)('div', { className: c()(V.gameIcon, V.screenshareIcon) })
@@ -420,7 +420,7 @@ class q extends (s = r.PureComponent) {
         let { timestamps: n } = e;
         return null == n
             ? null
-            : (0, O.Z)(e)
+            : (0, P.Z)(e)
               ? (0, l.jsx)(Y, { timestamps: n })
               : (0, l.jsx)(A.ZP, {
                     start: n.start,

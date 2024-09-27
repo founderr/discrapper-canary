@@ -29,14 +29,14 @@ var i = n(735250),
     R = n(649739),
     L = n(262317),
     j = n(981631),
-    P = n(524484),
-    O = n(373372);
+    O = n(524484),
+    P = n(373372);
 let y = s.memo((e) => {
     var t;
     let { mute: n, deaf: s, user: a, channel: l, sessionId: o, nick: g } = e,
         S = a.id,
-        O = (0, r.e7)([I.default], () => I.default.getId() === S, [S]),
-        [y, D, U] = (0, r.Wu)([x.Z], () => (O ? [!x.Z.isSupported() || x.Z.isSelfMute() || x.Z.isSelfMutedTemporarily(), x.Z.isSelfDeaf(), !1] : [!x.Z.isSupported() || x.Z.isLocalMute(S), !1, x.Z.isLocalVideoDisabled(S)]), [O, S]),
+        P = (0, r.e7)([I.default], () => I.default.getId() === S, [S]),
+        [y, D, U] = (0, r.Wu)([x.Z], () => (P ? [!x.Z.isSupported() || x.Z.isSelfMute() || x.Z.isSelfMutedTemporarily(), x.Z.isSelfDeaf(), !1] : [!x.Z.isSupported() || x.Z.isLocalMute(S), !1, x.Z.isLocalVideoDisabled(S)]), [P, S]),
         k = (0, r.e7)([Z.Z], () => Z.Z.isPrioritySpeaker(S)),
         w = (0, c.Z)({
             userId: S,
@@ -54,7 +54,7 @@ let y = s.memo((e) => {
         ),
         G = (0, h.Z)(null != H ? [H.applicationId] : []),
         V = (0, R.Hr)('voice_users_eligibility_check', !1),
-        F = (0, r.e7)([v.Z, N.Z], () => (O ? N.Z.getActivities() : v.Z.getActivities(S, l.guild_id))).find((e) => null != e.application_id && e.type === j.IIU.PLAYING),
+        F = (0, r.e7)([v.Z, N.Z], () => (P ? N.Z.getActivities() : v.Z.getActivities(S, l.guild_id))).find((e) => null != e.application_id && e.type === j.IIU.PLAYING),
         W = (0, r.e7)([d.Z], () => ((null == F ? void 0 : F.application_id) != null ? d.Z.getApplication(null == F ? void 0 : F.application_id) : void 0));
     null != W && R.ZP.trackExposure({ location: 'voice_users' });
     let [z, Y] = (0, r.Wu)([C.Z], () => [C.Z.getStreamForUser(S, l.getGuildId()), C.Z.getActiveStreamForUser(S, l.getGuildId())], [l, S]),
@@ -66,11 +66,11 @@ let y = s.memo((e) => {
             location: 'VoiceUsers'
         }),
         Q = (0, m.Z)(l, !0, a),
-        $ = (0, r.e7)([_.Z], () => (O ? _.Z.getHangStatusActivity() : null), [O]),
+        $ = (0, r.e7)([_.Z], () => (P ? _.Z.getHangStatusActivity() : null), [P]),
         ee = (0, r.e7)([v.Z], () => v.Z.findActivity(S, (e) => e.type === j.IIU.HANG_STATUS), [S]),
         et = (0, E.Eu)(l.id, S);
     return (0, i.jsx)(f.Z, {
-        shakeLocation: P.oZ.VOICE_USER,
+        shakeLocation: O.oZ.VOICE_USER,
         isShaking: w,
         children: (0, i.jsx)(L.ZP, {
             ...e,
@@ -78,7 +78,7 @@ let y = s.memo((e) => {
             canDrag: e.canDrag && !B,
             otherClientSessionType: null == K ? void 0 : null === (t = K.clientInfo) || void 0 === t ? void 0 : t.os,
             voicePlatform: X,
-            localMute: y && !O,
+            localMute: y && !P,
             localVideoDisabled: U,
             mute: n || y,
             deaf: s || D,
@@ -90,7 +90,7 @@ let y = s.memo((e) => {
             isWatching: null != Y && Y.state !== j.jm8.ENDED,
             isGuest: B,
             showHangStatus: Q && J && (I.default.getId() === a.id || null != ee),
-            hangStatusActivity: O ? $ : ee,
+            hangStatusActivity: P ? $ : ee,
             isSelf: I.default.getId() === a.id,
             application: J || V ? W : void 0
         })
@@ -109,20 +109,20 @@ t.Z = function (e) {
                 N(M.current), (M.current = null);
             })
         ),
-        P = s.useRef(
+        O = s.useRef(
             new o.sW(175, () => {
                 N(null);
             })
         ),
         U = s.useCallback(
             (e) => {
-                t && (Z(!0), P.current.cancel(), (M.current = e), R.current.delay());
+                t && (Z(!0), O.current.cancel(), (M.current = e), R.current.delay());
             },
             [t]
         ),
         k = s.useCallback(
             (e) => {
-                t && (R.current.cancel(), x === e && (Z(!1), P.current.delay()));
+                t && (R.current.cancel(), x === e && (Z(!1), O.current.delay()));
             },
             [t, x]
         ),
@@ -186,9 +186,9 @@ t.Z = function (e) {
     return null == B && null == T
         ? null
         : (0, i.jsxs)(g.e, {
-              className: l()(C, O.list, {
-                  [O.collapsed]: u,
-                  [O.withGuildIcon]: f
+              className: l()(C, P.list, {
+                  [P.collapsed]: u,
+                  [P.withGuildIcon]: f
               }),
               collapsed: u,
               children: [B, T]

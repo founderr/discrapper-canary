@@ -1,8 +1,8 @@
 var t = n(735250),
     o = n(470079),
     i = n(120356),
-    r = n.n(i),
-    l = n(442837),
+    l = n.n(i),
+    r = n(442837),
     s = n(481060),
     c = n(178762),
     d = n(91140),
@@ -11,14 +11,14 @@ var t = n(735250),
     p = n(944486),
     _ = n(594174),
     g = n(5192),
-    f = n(810568),
+    x = n(810568),
     h = n(689938),
-    x = n(501345),
+    f = n(501345),
     I = n(51527);
 a.Z = (e) => {
     let { entry: a, viewId: n, officialGuildId: i, onClose: v } = e,
-        E = (0, l.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getChannelId())),
-        A = (0, l.e7)([_.default], () => _.default.getUser(a.author_id)),
+        E = (0, r.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getChannelId())),
+        A = (0, r.e7)([_.default], () => _.default.getUser(a.author_id)),
         { nick: T, avatar: M } = o.useMemo(() => {
             let e = null == A ? void 0 : A.getAvatarURL(null == E ? void 0 : E.guild_id, 48, !1);
             return {
@@ -31,14 +31,14 @@ a.Z = (e) => {
         : (0, t.jsx)(s.Popout, {
               position: 'right',
               renderPopout: (e) => {
-                  let { closePopout: o, updatePosition: r } = e;
+                  let { closePopout: o, updatePosition: l } = e;
                   return (0, t.jsx)(c.J, {
                       entry: a,
                       closePopout: o,
-                      updatePopoutPosition: r,
+                      updatePopoutPosition: l,
                       onReaction: () => {
-                          (0, f.UE)({
-                              action: f.as.SendMessageUser,
+                          (0, x.UE)({
+                              action: x.as.SendMessageUser,
                               applicationId: a.extra.application_id,
                               gameName: a.extra.game_name,
                               recipientUserId: a.author_id,
@@ -54,8 +54,8 @@ a.Z = (e) => {
               },
               positionKey: 'game-profile-entry-'.concat(a.id),
               onRequestOpen: () => {
-                  (0, f.UE)({
-                      action: f.as.ClickMessageUser,
+                  (0, x.UE)({
+                      action: x.as.ClickMessageUser,
                       applicationId: a.extra.application_id,
                       gameName: a.extra.game_name,
                       recipientUserId: a.author_id,
@@ -66,7 +66,7 @@ a.Z = (e) => {
               children: (e) =>
                   (0, t.jsx)(s.Clickable, {
                       ...e,
-                      className: x.profileEntryCard,
+                      className: f.profileEntryCard,
                       children: (0, t.jsx)(s.FocusRing, {
                           offset: {
                               top: 4,
@@ -77,14 +77,14 @@ a.Z = (e) => {
                           children: (0, t.jsxs)(t.Fragment, {
                               children: [
                                   (0, t.jsx)('img', {
-                                      className: x.avatar,
+                                      className: f.avatar,
                                       src: M,
                                       alt: h.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: T })
                                   }),
                                   (0, t.jsx)('div', {
-                                      className: r()(x.playerInfo),
+                                      className: l()(f.playerInfo),
                                       children: (0, t.jsxs)('div', {
-                                          className: r()(I.column, I.gapXs),
+                                          className: l()(I.column, I.gapXs),
                                           children: [
                                               (0, t.jsx)(s.Text, {
                                                   variant: 'text-md/medium',
@@ -100,7 +100,7 @@ a.Z = (e) => {
                                       })
                                   }),
                                   (0, t.jsx)('div', {
-                                      className: x.reactions,
+                                      className: f.reactions,
                                       children: (0, t.jsx)(s.ArrowAngleLeftUpIcon, {})
                                   })
                               ]

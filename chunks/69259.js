@@ -7,14 +7,14 @@ n.d(t, {
     }
 }),
     n(47120);
-var a = n(626135),
-    l = n(162461),
+var l = n(626135),
+    a = n(162461),
     i = n(206583),
     r = n(981631);
 let s = function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
-        let { trackingEnabled: r } = (0, l.nP)('trackSampledContentEntryAnalytics:'.concat(e));
-        return r ? a.default.track(e, ...n) : Promise.resolve();
+        let { trackingEnabled: r } = (0, a.nP)('trackSampledContentEntryAnalytics:'.concat(e));
+        return r ? l.default.track(e, ...n) : Promise.resolve();
     },
     o = (e, t) => {
         s(r.rMx.RANKING_ITEM_INTERACTED_MUST_BE_SAMPLED, {

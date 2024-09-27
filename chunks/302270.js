@@ -33,8 +33,8 @@ var i = n(735250),
     R = n(146085),
     L = n(427679),
     j = n(592473),
-    P = n(831002),
-    O = n(903108),
+    O = n(831002),
+    P = n(903108),
     y = n(981631),
     D = n(474936),
     U = n(689938),
@@ -57,7 +57,7 @@ function w(e) {
                     align: 'right',
                     renderPopout: (e) =>
                         (0, i.jsx)(T.Z, {
-                            children: (0, i.jsx)(P.Z, {
+                            children: (0, i.jsx)(O.Z, {
                                 ...e,
                                 channelId: n.id,
                                 appContext: m
@@ -122,9 +122,9 @@ function B(e) {
         T = (0, r.e7)([v.Z], () => v.Z.getGuild(a.guild_id), [a.guild_id]),
         x = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         S = (null == T ? void 0 : T.isCommunity()) ? x < y.TU7 : (null == T ? void 0 : T.premiumTier) !== y.Eu4.TIER_3 && x <= y.eez,
-        b = (0, O.Z)(a),
+        b = (0, P.Z)(a),
         j = (0, r.e7)([N.Z], () => N.Z.can(R.yP, a)),
-        P = () => {
+        O = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(a.id, !0),
                 A.default.track(y.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: a.guild_id,
@@ -228,7 +228,7 @@ function B(e) {
                                         children: [
                                             (0, i.jsx)(c.Button, {
                                                 className: k.notNowButton,
-                                                onClick: P,
+                                                onClick: O,
                                                 look: c.Button.Looks.BLANK,
                                                 size: c.Button.Sizes.SMALL,
                                                 children: U.Z.Messages.NOT_NOW
@@ -254,7 +254,7 @@ function B(e) {
                                     })
                                   : (0, i.jsx)(c.Button, {
                                         className: k.notNowButton,
-                                        onClick: P,
+                                        onClick: O,
                                         look: c.Button.Looks.BLANK,
                                         size: c.Button.Sizes.SMALL,
                                         children: U.Z.Messages.DISMISS

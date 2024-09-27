@@ -29,8 +29,8 @@ var i = n(735250),
     N = n(301439);
 function A(e) {
     let { participants: t, onClick: n, onDoubleClick: A, onContextMenu: Z, channel: M, className: b, inCall: R, totalNumberOfParticipants: L, paused: j = !1 } = e,
-        P = (0, c.bp)() === v.IlC.POPOUT,
-        O = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]),
+        O = (0, c.bp)() === v.IlC.POPOUT,
+        P = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]),
         { dismissedActivityEntryPointTileChannel: y } = (0, x.d)(),
         D = (0, r.e7)([m.Z], () => m.Z.getUserParticipantCount(M.id), [M]),
         U = (0, E.bt)(M.id, t),
@@ -46,8 +46,8 @@ function A(e) {
                 x.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [M.id, y]);
-    let w = (0, r.e7)([C.Z], () => M.isPrivate() || (0, _.b)(C.Z, O, M), [O, M]),
-        B = (null == O ? void 0 : O.afkChannelId) === M.id,
+    let w = (0, r.e7)([C.Z], () => M.isPrivate() || (0, _.b)(C.Z, P, M), [P, M]),
+        B = (null == P ? void 0 : P.afkChannelId) === M.id,
         H = M.userLimit <= 0 || M.userLimit > 1,
         G = (0, r.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(M.id).length <= 0),
         V = (0, p.N)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
@@ -67,7 +67,7 @@ function A(e) {
                         onContextMenu: Z,
                         inCall: R,
                         width: t,
-                        inPopout: P
+                        inPopout: O
                     },
                     e.id
                 )
@@ -86,7 +86,7 @@ function A(e) {
         { trackOnInitialLoad: !0 },
         []
     ),
-        null != O &&
+        null != P &&
             !B &&
             (!(D >= 2) || !G || F || V || W
                 ? H &&
@@ -96,9 +96,9 @@ function A(e) {
                       ? z.push((e) =>
                             (0, i.jsx)(I.h, {
                                 channel: M,
-                                guild: O,
+                                guild: P,
                                 width: e,
-                                inPopout: P,
+                                inPopout: O,
                                 handleClose: k,
                                 userParticipantCount: D
                             })
@@ -107,16 +107,16 @@ function A(e) {
                             (0, i.jsx)(S.Z, {
                                 width: e,
                                 channel: M,
-                                guild: O,
-                                inPopout: P
+                                guild: P,
+                                inPopout: O
                             })
                         ))
                 : z.push((e) =>
                       (0, i.jsx)(I.h, {
                           channel: M,
-                          guild: O,
+                          guild: P,
                           width: e,
-                          inPopout: P,
+                          inPopout: O,
                           handleClose: k,
                           userParticipantCount: D
                       })

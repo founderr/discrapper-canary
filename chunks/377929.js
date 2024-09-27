@@ -74,8 +74,8 @@ function A(e) {
         R = (0, h.Z)(t, 'Toolbar Overflow'),
         L = (0, _.Z)(t),
         j = (0, m.Z)(t),
-        P = (0, g.Z)(t),
-        O = T.vF.useSetting(),
+        O = (0, g.Z)(t),
+        P = T.vF.useSetting(),
         y = (0, r.e7)([x.Z], () => !l().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
     return (0, i.jsxs)(o.Menu, {
         navId: 'thread-context',
@@ -91,7 +91,7 @@ function A(e) {
                     A,
                     L,
                     N,
-                    O && !y
+                    P && !y
                         ? (0, i.jsx)(o.MenuItem, {
                               id: 'open',
                               label: v.Z.Messages.OPEN_IN_SPLIT_VIEW,
@@ -103,7 +103,7 @@ function A(e) {
                 ]
             }),
             (0, i.jsxs)(o.MenuGroup, {
-                children: [P, a, I, b]
+                children: [O, a, I, b]
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [M, Z]

@@ -36,8 +36,8 @@ var i = n(735250),
     R = n(594174),
     L = n(101695),
     j = n(683101),
-    P = n(981631),
-    O = n(689938),
+    O = n(981631),
+    P = n(689938),
     y = n(652553);
 function D(e) {
     var t;
@@ -55,14 +55,14 @@ function D(e) {
             (e) => {
                 if (e.blocked)
                     c.Z.show({
-                        title: O.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
-                        body: O.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({ name: e.author.username }),
-                        confirmText: O.Z.Messages.OKAY
+                        title: P.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
+                        body: P.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({ name: e.author.username }),
+                        confirmText: P.Z.Messages.OKAY
                     });
                 else {
                     let t = v.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    u.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: M.Z.getAnalyticsId(a) }), (0, I.uL)(P.Z5c.CHANNEL(n, e.channel_id, e.id));
+                    u.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: M.Z.getAnalyticsId(a) }), (0, I.uL)(O.Z5c.CHANNEL(n, e.channel_id, e.id));
                 }
             },
             [a]
@@ -117,7 +117,7 @@ function D(e) {
             onSelect: D
         }),
         w = M.Z.getQuery(a),
-        B = M.Z.getSearchType(a) === P.aib.FAVORITES,
+        B = M.Z.getSearchType(a) === O.aib.FAVORITES,
         H = (0, h.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ''),
         G = A.map((e) => {
             let { channel: t, results: n, startIndex: s } = e;
@@ -166,7 +166,7 @@ function D(e) {
                           (0, i.jsx)('div', { className: y.resultsBlockedImage }),
                           (0, i.jsx)('div', {
                               className: y.__invalid_resultsBlockedText,
-                              children: x ? O.Z.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({ count: f }) : O.Z.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({ count: f })
+                              children: x ? P.Z.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({ count: f }) : P.Z.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({ count: f })
                           })
                       ]
                   })
@@ -177,7 +177,7 @@ function D(e) {
                     changePage: S,
                     offset: g,
                     totalResults: C,
-                    pageLength: P.vpv
+                    pageLength: O.vpv
                 })
         ]
     });
@@ -217,20 +217,20 @@ function U(e) {
 }
 function k(e) {
     var t, n, a;
-    let { channel: l, results: r, highlighter: c, startIndex: u, resultRefs: d, totalResults: h, scrollTo: m, searchId: I, renderEmbeds: S, offset: M, jumpToMessage: L, listNavigator: O, favoriteSearch: D } = e,
+    let { channel: l, results: r, highlighter: c, startIndex: u, resultRefs: d, totalResults: h, scrollTo: m, searchId: I, renderEmbeds: S, offset: M, jumpToMessage: L, listNavigator: P, favoriteSearch: D } = e,
         k = x.cC.useSetting(),
         w = (0, E.p)(),
         B = s.useCallback((e) => {
             if (e === b.Z.getChannelId()) return;
             let t = v.Z.getChannel(e);
-            if (null != t && !!A.Z.can(P.Plq.VIEW_CHANNEL, t)) (0, T.Kh)(t.id);
+            if (null != t && !!A.Z.can(O.Plq.VIEW_CHANNEL, t)) (0, T.Kh)(t.id);
         }, []),
         H = null != l ? (0, p.F6)(l, R.default, Z.Z, !1) : '???',
         G = D && null != l.guild_id ? (null === (t = N.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name) : null,
         V = (null == l ? void 0 : l.parent_id) != null ? v.Z.getChannel(l.parent_id) : null,
         F = null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : null,
         W = null !== (a = (0, _.KS)(l)) && void 0 !== a ? a : o.TextIcon,
-        z = A.Z.can(P.Plq.MANAGE_MESSAGES, l),
+        z = A.Z.can(O.Plq.MANAGE_MESSAGES, l),
         { content: Y } = (0, C.ZP)(
             {
                 content: H,
@@ -298,7 +298,7 @@ function k(e) {
                             result: e,
                             index: n,
                             onJump: L,
-                            listItemProps: O.getItemProps({ index: n })
+                            listItemProps: P.getItemProps({ index: n })
                         },
                         'search-result-'.concat(n)
                     );

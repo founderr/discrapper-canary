@@ -1,12 +1,12 @@
 n.d(t, {
     A: function () {
-        return r;
+        return o;
     }
 });
-var a = n(512722),
-    l = n.n(a),
-    i = n(463031);
-function r(e) {
-    let t = i.x[e];
-    return l()(null != t, 'Leaderboard settings not found for '.concat(e)), t;
+var r = n(512722),
+    i = n.n(r),
+    a = n(463031);
+function o(e) {
+    let t = a.x[e];
+    return i()(null != t, 'Leaderboard settings not found for '.concat(e)), t;
 }

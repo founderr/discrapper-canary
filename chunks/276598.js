@@ -49,7 +49,7 @@ function N(e) {
         R = (0, r.useModalsStore)(r.hasAnyModalOpenSelector),
         L = (0, _.Z)(),
         j = L.filter((e) => e.twoWayLink),
-        [P, O] = s.useState(!1);
+        [O, P] = s.useState(!1);
     if (null == N && 0 === L.length) return null;
     let y = I.WtW.VOICE !== M && [I.AEg.NO_CHAT, I.AEg.FULL_SCREEN].includes(b) ? 'top' : 'bottom',
         D = [];
@@ -67,8 +67,8 @@ function N(e) {
                             position: y,
                             spacing: o ? 16 : void 0,
                             positionKey: ''.concat(M, ':').concat(b),
-                            onRequestClose: () => O(!1),
-                            shouldShow: (o || P) && !Z && !R,
+                            onRequestClose: () => P(!1),
+                            shouldShow: (o || O) && !Z && !R,
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
                                 return (0, i.jsx)(u.Z, {
@@ -77,7 +77,7 @@ function N(e) {
                                               popoutPosition: y,
                                               onDismiss: () => a(T.L.UNKNOWN),
                                               onAccept: () => {
-                                                  a(T.L.UNKNOWN), O(!0);
+                                                  a(T.L.UNKNOWN), P(!0);
                                               },
                                               gameConsoleAccounts: j
                                           })
@@ -94,7 +94,7 @@ function N(e) {
                                 return (0, i.jsx)(d.Z, {
                                     ...e,
                                     ...g,
-                                    onClick: () => O(!0),
+                                    onClick: () => P(!0),
                                     label: null != (t = A) ? (t === C.YE.XBOX ? x.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : x.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : x.Z.Messages.CONSOLE_TRANSFER,
                                     iconComponent: (0, E.Z)(A)
                                 });

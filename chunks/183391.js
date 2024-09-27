@@ -2,8 +2,8 @@ n(47120);
 var t = n(735250),
     o = n(470079),
     i = n(120356),
-    r = n.n(i),
-    l = n(643872),
+    l = n.n(i),
+    r = n(643872),
     s = n(481060),
     c = n(570140),
     d = n(652898),
@@ -12,13 +12,13 @@ var t = n(735250),
     p = n(810568),
     _ = n(981631),
     g = n(689938),
-    f = n(51527);
-let h = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE],
-    x = (e) => {
+    x = n(51527);
+let h = [r.p.OFFICIAL, r.p.TWITTER, r.p.YOUTUBE],
+    f = (e) => {
         let { invite: a, trackClick: n } = e,
             { approximate_member_count: o, guild: i } = a;
         if (null == i) return null;
-        let l = u.Z.isMember(i.id);
+        let r = u.Z.isMember(i.id);
         if (!(null == i ? void 0 : i.features.includes('VERIFIED')) && !(null == i ? void 0 : i.features.includes('PARTNER'))) return null;
         let d = m.ZP.getGuildIconURL({
             id: i.id,
@@ -26,7 +26,7 @@ let h = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE],
             size: 32
         });
         return (0, t.jsxs)('div', {
-            className: r()(f.column),
+            className: l()(x.column),
             children: [
                 (0, t.jsx)(s.Heading, {
                     variant: 'text-xs/semibold',
@@ -34,15 +34,15 @@ let h = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE],
                     children: g.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
                 }),
                 (0, t.jsxs)('div', {
-                    className: r()(f.row, f.gapMd),
+                    className: l()(x.row, x.gapMd),
                     children: [
                         (0, t.jsx)('img', {
-                            className: f.icon,
+                            className: x.icon,
                             src: d,
                             alt: g.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({ guildName: i.name })
                         }),
                         (0, t.jsxs)('div', {
-                            className: r()(f.gapNone),
+                            className: l()(x.gapNone),
                             children: [
                                 (0, t.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
@@ -68,7 +68,7 @@ let h = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE],
                                 context: _.IlC.APP
                             });
                     },
-                    children: l ? g.Z.Messages.JOINED_GUILD : g.Z.Messages.JOIN_GUILD
+                    children: r ? g.Z.Messages.JOINED_GUILD : g.Z.Messages.JOIN_GUILD
                 })
             ]
         });
@@ -80,7 +80,7 @@ a.Z = (e) => {
                 ? void 0
                 : a.find((e) => {
                       let { category: a } = e;
-                      return a === l.p.DISCORD;
+                      return a === r.p.DISCORD;
                   }),
         [u, m] = o.useState();
     if (
@@ -104,15 +104,15 @@ a.Z = (e) => {
         })
         .sort((e, a) => e.category - a.category);
     return (0, t.jsxs)('div', {
-        className: r()(f.column),
+        className: l()(x.column),
         children: [
             null != u &&
-                (0, t.jsx)(x, {
+                (0, t.jsx)(f, {
                     invite: u,
                     trackClick: n
                 }),
             (0, t.jsxs)('div', {
-                className: r()(f.column, f.gapSm),
+                className: l()(x.column, x.gapSm),
                 children: [
                     (0, t.jsx)(s.Heading, {
                         variant: 'text-xs/semibold',
@@ -120,36 +120,36 @@ a.Z = (e) => {
                         children: g.Z.Messages.GAME_PROFILE_LINKS
                     }),
                     (0, t.jsx)('div', {
-                        className: f.row,
+                        className: x.row,
                         children: _.map((e) => {
                             let a,
                                 o,
-                                { category: i, url: r } = e,
+                                { category: i, url: l } = e,
                                 c = null;
                             switch (i) {
-                                case l.p.OFFICIAL:
-                                    (c = (0, t.jsx)(s.GlobeEarthIcon, { colorClass: f.linkIcon })), (o = p.as.WebsiteLink), (a = g.Z.Messages.GAME_PROFILE_LINK_OFFICIAL);
+                                case r.p.OFFICIAL:
+                                    (c = (0, t.jsx)(s.GlobeEarthIcon, { colorClass: x.linkIcon })), (o = p.as.WebsiteLink), (a = g.Z.Messages.GAME_PROFILE_LINK_OFFICIAL);
                                     break;
-                                case l.p.TWITTER:
-                                    (c = (0, t.jsx)(s.XNeutralIcon, { colorClass: f.linkIcon })), (o = p.as.XLink), (a = g.Z.Messages.GAME_PROFILE_LINK_TWITTER);
+                                case r.p.TWITTER:
+                                    (c = (0, t.jsx)(s.XNeutralIcon, { colorClass: x.linkIcon })), (o = p.as.XLink), (a = g.Z.Messages.GAME_PROFILE_LINK_TWITTER);
                                     break;
-                                case l.p.YOUTUBE:
-                                    (o = p.as.YouTubeLink), (c = (0, t.jsx)(s.YoutubeNeutralIcon, { colorClass: f.linkIcon })), (a = g.Z.Messages.GAME_PROFILE_LINK_YOUTUBE);
+                                case r.p.YOUTUBE:
+                                    (o = p.as.YouTubeLink), (c = (0, t.jsx)(s.YoutubeNeutralIcon, { colorClass: x.linkIcon })), (a = g.Z.Messages.GAME_PROFILE_LINK_YOUTUBE);
                             }
                             return null != c
                                 ? (0, t.jsx)(
                                       s.Anchor,
                                       {
-                                          className: f.linkAnchor,
+                                          className: x.linkAnchor,
                                           title: a,
-                                          href: r,
+                                          href: l,
                                           onClick: () => {
                                               n(o);
                                           },
                                           target: '_blank',
                                           children: c
                                       },
-                                      r
+                                      l
                                   )
                                 : null;
                         })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return P;
     }
 });
 var i = n(735250),
@@ -33,9 +33,9 @@ var i = n(735250),
     R = n(228168),
     L = n(981631),
     j = n(689938),
-    P = n(337319);
-function O(e) {
-    let { user: t, currentUser: n, channel: O } = e,
+    O = n(337319);
+function P(e) {
+    let { user: t, currentUser: n, channel: P } = e,
         y = __OVERLAY__,
         D = (0, _.ZP)(t.id),
         U = (0, o.ZP)(),
@@ -47,7 +47,7 @@ function O(e) {
         w = (0, m.ZB)({
             layout: k ? 'SIMPLIFIED_DM_PANEL' : 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE',
             userId: t.id,
-            channelId: O.id
+            channelId: P.id
         }),
         { analyticsLocations: B } = (0, u.ZP)(c.Z.PROFILE_PANEL),
         H = s.useRef(null),
@@ -72,9 +72,9 @@ function O(e) {
                     displayProfile: D,
                     profileType: R.y0.PANEL,
                     themeOverride: U,
-                    className: P.container,
+                    className: O.container,
                     children: [
-                        null != V.interactionType && (0, i.jsx)('div', { className: P.backdrop }),
+                        null != V.interactionType && (0, i.jsx)('div', { className: O.backdrop }),
                         (0, i.jsxs)(a.u2, {
                             children: [
                                 (0, i.jsxs)(v.Z, {
@@ -88,41 +88,41 @@ function O(e) {
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {
-                                    className: P.header,
+                                    className: O.header,
                                     children: [
                                         (0, i.jsx)(C.Z, {
                                             user: t,
                                             displayProfile: D,
                                             profileType: R.y0.PANEL,
                                             animateOnHover: !G,
-                                            className: P.banner
+                                            className: O.banner
                                         }),
                                         (0, i.jsx)(T.Z, {
                                             userId: t.id,
-                                            className: P.toast
+                                            className: O.toast
                                         }),
                                         (0, i.jsx)(g.Z, {
                                             location: 'UserProfilePanel',
                                             user: t,
                                             displayProfile: D,
-                                            channelId: O.id,
+                                            channelId: P.id,
                                             profileType: R.y0.PANEL,
                                             onOpenProfile: y ? void 0 : F
                                         }),
                                         (0, i.jsx)(I.Z, {
                                             location: 'UserProfilePanel',
                                             user: t,
-                                            channelId: O.id,
+                                            channelId: P.id,
                                             profileType: R.y0.PANEL
                                         }),
-                                        t.isClyde() && (0, i.jsx)(d.Z, { className: P.headerTag })
+                                        t.isClyde() && (0, i.jsx)(d.Z, { className: O.headerTag })
                                     ]
                                 }),
                                 (0, i.jsx)(M.Z, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: D,
-                                    channel: O,
+                                    channel: P,
                                     isHovering: null == V.interactionType && G,
                                     onOpenProfile: y ? void 0 : F
                                 }),
@@ -131,12 +131,12 @@ function O(e) {
                         }),
                         !y &&
                             (0, i.jsx)('footer', {
-                                className: P.footer,
+                                className: O.footer,
                                 children: (0, i.jsx)(l.Button, {
                                     fullWidth: !0,
                                     size: l.Button.Sizes.LARGE,
                                     look: l.Button.Looks.BLANK,
-                                    color: P.footerButtonColor,
+                                    color: O.footerButtonColor,
                                     onClick: () => {
                                         F(),
                                             (0, p.pQ)({

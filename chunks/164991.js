@@ -18,10 +18,10 @@ n.d(t, {
         return N;
     },
     NL: function () {
-        return E;
-    },
-    WF: function () {
         return h;
+    },
+    Zq: function () {
+        return E;
     },
     a7: function () {
         return p;
@@ -63,8 +63,8 @@ function u(e) {
     return n(o.getState());
 }
 let _ = () => d('resultsQuery'),
-    h = () => u('resultsQuery'),
-    E = () => d('fetchedQuery'),
+    h = () => d('fetchedQuery'),
+    E = () => u('fetchedQuery'),
     m = () => d('categoryId'),
     I = () => u('categoryId'),
     g = () => d('languageCode'),

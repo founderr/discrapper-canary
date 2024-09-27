@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return O;
     }
 }),
     n(47120);
@@ -34,31 +34,31 @@ var i = n(735250),
     R = n(981631),
     L = n(689938),
     j = n(293081);
-function P(e) {
+function O(e) {
     let { channel: t } = e,
         [n, a] = s.useState(!1),
         r = (0, _.ZP)(t, !0),
-        P = t.guild_id,
-        O = (0, d.e7)([x.Z], () => (null != P ? x.Z.getRoles(P) : void 0)),
+        O = t.guild_id,
+        P = (0, d.e7)([x.Z], () => (null != O ? x.Z.getRoles(O) : void 0)),
         y = (0, d.e7)([v.default, x.Z], () => {
             var e;
-            return v.default.getUser(null === (e = x.Z.getGuild(P)) || void 0 === e ? void 0 : e.ownerId);
+            return v.default.getUser(null === (e = x.Z.getGuild(O)) || void 0 === e ? void 0 : e.ownerId);
         }),
         D = s.useMemo(
             () =>
-                null != P
-                    ? o()(O)
+                null != O
+                    ? o()(P)
                           .sortBy((e) => -e.position)
-                          .filter((e) => !(0, f.pM)(P, e.id))
+                          .filter((e) => !(0, f.pM)(O, e.id))
                           .value()
                     : [],
-            [P, O]
+            [O, P]
         ),
         U = s.useMemo(
             () =>
                 o()(D)
                     .filter((e) => {
-                        if (null == P) return !1;
+                        if (null == O) return !1;
                         let n = N.I0({
                             forceRoles: { [e.id]: e },
                             context: t
@@ -66,7 +66,7 @@ function P(e) {
                         return c.e$(n, R.Plq.ADMINISTRATOR) || c.e$(n, R.Plq.VIEW_CHANNEL);
                     })
                     .value(),
-            [t, P, D]
+            [t, O, D]
         ),
         k = (0, d.Wu)(
             [v.default],

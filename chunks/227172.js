@@ -3,8 +3,8 @@ n.d(t, {
         return R;
     }
 });
-var a = n(735250),
-    l = n(470079),
+var l = n(735250),
+    a = n(470079),
     i = n(758713),
     r = n(442837),
     s = n(481060),
@@ -15,22 +15,22 @@ var a = n(735250),
     h = n(757182),
     m = n(706454),
     x = n(374129),
-    E = n(639351),
-    v = n(823379),
+    v = n(639351),
+    E = n(823379),
     _ = n(379357),
-    f = n(192918),
+    p = n(192918),
     T = n(22211),
-    p = n(561308),
+    f = n(561308),
     g = n(919394),
     I = n(438226),
-    N = n(206295),
-    C = n(91140),
-    A = n(297781),
+    C = n(206295),
+    N = n(91140),
+    P = n(297781),
     Z = n(591853),
-    P = n(410441),
-    S = n(797342),
-    M = n(981631),
-    O = n(689938);
+    S = n(410441),
+    M = n(797342),
+    y = n(981631),
+    A = n(689938);
 let R = {
     [i.z.DESKTOP]: null,
     [i.z.LINUX]: null,
@@ -38,84 +38,84 @@ let R = {
     [i.z.NINTENDO]: null,
     [i.z.IOS]: null,
     [i.z.ANDROID]: null,
-    [i.z.XBOX]: E.Z,
+    [i.z.XBOX]: v.Z,
     [i.z.PLAYSTATION]: x.Z
 };
 t.Z = (e) => {
-    let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: x, onVoiceChannelPreview: E, onUserPopoutClosed: j } = e,
-        { largeImage: y } = (0, _.rv)({ entry: n }),
-        { user: L, details: w, appName: D, activity: b } = (0, S.n)(n),
-        { primaryColor: U, secondaryColor: B } = (0, N.Z)(null == y ? void 0 : y.src),
+    let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: x, onVoiceChannelPreview: v, onUserPopoutClosed: O } = e,
+        { largeImage: j } = (0, _.rv)({ entry: n }),
+        { user: w, details: L, appName: b, activity: D } = (0, M.n)(n),
+        { primaryColor: U, secondaryColor: B } = (0, C.Z)(null == j ? void 0 : j.src),
         k = (0, r.e7)([m.default], () => m.default.locale),
         { streamPreviewUrl: F, stream: G } = (0, T.Z)(n),
-        { displayParticipants: H, participant1: Y, participant2: z, numOtherParticipants: V } = (0, f.Z)(n, 3),
-        W = l.useCallback(
+        { displayParticipants: H, participant1: V, participant2: Y, numOtherParticipants: z } = (0, p.Z)(n, 3),
+        W = a.useCallback(
             (e) => {
-                if ((null == y ? void 0 : y.src) == null || null == t || null == L) return;
-                let a =
-                    V > 0
+                if ((null == j ? void 0 : j.src) == null || null == t || null == w) return;
+                let l =
+                    z > 0
                         ? (0, I.VY)({
                               entry: n,
                               channel: t,
-                              users: [Y, z],
-                              countOthers: V
+                              users: [V, Y],
+                              countOthers: z
                           })
-                        : (0, I.HV)(n, t, L);
+                        : (0, I.HV)(n, t, w);
                 return (0, g.SO)({
                     entry: n,
-                    applicationImageSrc: null == y ? void 0 : y.src,
+                    applicationImageSrc: null == j ? void 0 : j.src,
                     avatarSrcs: H.map((e) => e.getAvatarURL(t.guild_id, 128)),
-                    description: a,
-                    timestamp: (0, p.yh)(n, k),
+                    description: l,
+                    timestamp: (0, f.yh)(n, k),
                     colors: [U, B],
                     channelId: e
                 });
             },
-            [null == y ? void 0 : y.src, t, H, n, k, V, Y, z, U, B, L]
+            [null == j ? void 0 : j.src, t, H, n, k, z, V, Y, U, B, w]
         );
-    if (null == L) return null;
+    if (null == w) return null;
     let q = null != n.extra.platform ? R[n.extra.platform] : null,
-        K = (0, a.jsx)(A.Gk, {
-            location: null == F ? A.Gt.POPOUT : A.Gt.STREAMING_POPOUT,
-            children: C.W.map((e, t) => (0, a.jsx)(e, { entry: n }, t))
+        J = (0, l.jsx)(P.Gk, {
+            location: null == F ? P.Gt.POPOUT : P.Gt.STREAMING_POPOUT,
+            children: N.W.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
         }),
-        J =
+        K =
             null == F
-                ? (0, a.jsx)(Z.wG, {
+                ? (0, l.jsx)(Z.wG, {
                       channel: t,
                       headerIcons:
                           null == q
                               ? null
-                              : (0, a.jsx)(P.Z, {
+                              : (0, l.jsx)(S.Z, {
                                     Icon: q,
-                                    'aria-label': O.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
+                                    'aria-label': A.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                                 }),
-                      userDescription: (0, p.kr)(n) ? O.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : O.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
-                      title: D,
-                      subtitle: w,
-                      badges: K,
+                      userDescription: (0, f.kr)(n) ? A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+                      title: b,
+                      subtitle: L,
+                      badges: J,
                       entry: n,
                       disableGameProfileLinks: i,
-                      onUserPopoutClosed: j
+                      onUserPopoutClosed: O
                   })
-                : (0, a.jsx)(Z.jL, {
+                : (0, l.jsx)(Z.jL, {
                       channel: t,
                       streamPreviewSrc: F,
                       title: n.extra.game_name,
-                      subtitle: w,
-                      badges: K,
-                      userDescription: O.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING_V2,
+                      subtitle: L,
+                      badges: J,
+                      userDescription: A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING_V2,
                       entry: n,
                       stream: G,
-                      onUserPopoutClosed: j
+                      onUserPopoutClosed: O
                   }),
         X =
-            (0, o.Z)(b, M.xjy.JOIN) || (0, u.Z)(b)
-                ? (0, a.jsx)(d.Z, {
-                      activity: b,
-                      user: L,
+            (0, o.Z)(D, y.xjy.JOIN) || (0, u.Z)(D)
+                ? (0, l.jsx)(d.Z, {
+                      activity: D,
+                      user: w,
                       ButtonComponent: (e) =>
-                          (0, a.jsx)(Z.Ll, {
+                          (0, l.jsx)(Z.Ll, {
                               IconComponent: s.GameControllerIcon,
                               ...e
                           })
@@ -123,28 +123,28 @@ t.Z = (e) => {
                 : null,
         $ = [
             X,
-            (0, c.Z)(b)
-                ? (0, a.jsx)(h.Z, {
-                      activity: b,
+            (0, c.Z)(D)
+                ? (0, l.jsx)(h.Z, {
+                      activity: D,
                       ButtonComponent: (e) =>
-                          (0, a.jsx)(Z.Ll, {
+                          (0, l.jsx)(Z.Ll, {
                               IconComponent: s.EyeIcon,
                               ...e
                           })
                   })
                 : null
-        ].filter(v.lm);
-    return (0, a.jsxs)(Z.yR, {
+        ].filter(E.lm);
+    return (0, l.jsxs)(Z.yR, {
         children: [
-            J,
-            (0, a.jsx)(Z.St, {
-                children: (0, a.jsx)(Z.WT, {
+            K,
+            (0, l.jsx)(Z.St, {
+                children: (0, l.jsx)(Z.WT, {
                     onReaction: x,
-                    onVoiceChannelPreview: E,
-                    user: L,
+                    onVoiceChannelPreview: v,
+                    user: w,
                     channel: t,
                     generateReactionImage: W,
-                    reactionImageAltText: (0, I.IS)(n, L),
+                    reactionImageAltText: (0, I.IS)(n, w),
                     entry: n,
                     buttons: $
                 })
