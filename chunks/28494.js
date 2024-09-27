@@ -66,12 +66,11 @@ function h(e) {
             guildIds: h,
             loading: !m && (I || E),
             searchResultsQuery: n,
-            searchFetchedQuery: s,
             loadMore: g,
             searchCategoryId: r,
             isBlockedSearchQuery: m
         }),
-        [h, m, I, E, n, s, g, r]
+        [h, m, I, E, n, g, r]
     );
 }
 function E(e) {
