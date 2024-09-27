@@ -5,5 +5,6 @@ e.exports = {
     panel: 'panel_b84fc9',
     status: 'status_b84fc9',
     biteSize: 'biteSize_b84fc9',
-    avatar: 'avatar_b84fc9'
+    avatar: 'avatar_b84fc9',
+    customProfileTheme: 'customProfileTheme_b84fc9'
 };
