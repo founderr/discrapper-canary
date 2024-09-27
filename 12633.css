@@ -34604,7 +34604,9 @@ div.popoutCloseButton_d523a2:hover {
     margin: 0 auto;
     width: -moz-fit-content;
     width: fit-content;
-    height: 40px
+    height: 40px;
+    box-shadow: var(--shadow-high);
+    border-radius: 32px
 }
 
 .toastPadding_f3571f {
