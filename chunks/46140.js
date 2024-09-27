@@ -19,6 +19,9 @@ n.d(t, {
     },
     dr: function () {
         return r;
+    },
+    tD: function () {
+        return _;
     }
 });
 var r,
@@ -44,3 +47,4 @@ let u = o.Z.Millis.MINUTE * a.c.ConsecutiveHeartbeatPeriodMinutes,
 !(function (e) {
     (e.CONSOLE = 'CONSOLE'), (e.DESKTOP = 'DESKTOP');
 })(i || (i = {}));
+let _ = 'https://cdn.discordapp.com/assets/quests/';
