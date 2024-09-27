@@ -265,10 +265,11 @@ let er = o().throttle(() => {
                     }))
                 )
             ).filter((e) => {
-                let t = (0, I.NH)('now-playing-view-store') || !0,
+                let t = (0, I.NH)('now-playing-view-store'),
                     n = t && e.partiedMembers.some((e) => D.Z.isBlocked(e.id)),
                     i =
                         t &&
+                        e.voiceChannels.length > 0 &&
                         e.voiceChannels.every((e) => {
                             let { voiceStates: t } = e;
                             return Object.values(t).every((e) => !1 === e.discoverable);
