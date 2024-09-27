@@ -68,6 +68,7 @@ function x(e) {
                         impressionName: i.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL,
                         impressionProperties: N.ZW,
                         children: (0, a.jsx)(r.Z, {
+                            isDsaEligible: T,
                             onClose: M,
                             onNext: p,
                             onBack: P
@@ -78,6 +79,7 @@ function x(e) {
                         impressionName: i.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION,
                         impressionProperties: N.ZW,
                         children: (0, a.jsx)(c.Z, {
+                            isDsaEligible: T,
                             onClose: M,
                             onNext: p,
                             onBack: P

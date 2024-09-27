@@ -20,18 +20,18 @@ var a = s(735250),
     x = s(332384),
     I = s(487043);
 function m(e) {
-    let { className: n, onClose: s, onNext: i, onBack: m } = e,
-        S = (0, N.U0)(),
-        C = (0, o.e7)([_.Z], () => _.Z.getFreeTextAppealReason()),
-        [T, h] = t.useState(''),
-        [L, M] = t.useState(!1);
+    let { className: n, isDsaEligible: s = !1, onClose: i, onNext: m, onBack: S } = e,
+        C = (0, N.U0)(),
+        T = (0, o.e7)([_.Z], () => _.Z.getFreeTextAppealReason()),
+        [h, L] = t.useState(''),
+        [M, p] = t.useState(!1);
     t.useEffect(() => {
-        h(null != C ? C : ''), M(S === u.bK.SOMETHING_ELSE);
-    }, [C, S]);
-    let p = (e) => {
-            M(e === u.bK.SOMETHING_ELSE),
+        L(null != T ? T : ''), p(C === u.bK.SOMETHING_ELSE);
+    }, [T, C, s]);
+    let P = (e) => {
+            p(e === u.bK.SOMETHING_ELSE),
                 e !== u.bK.SOMETHING_ELSE &&
-                    (h(''),
+                    (L(''),
                     c.Z.dispatch({
                         type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
                         userInput: ''
@@ -41,7 +41,7 @@ function m(e) {
                     signal: e
                 });
         },
-        P = u.RY.map((e) => ({
+        O = u.RY.map((e) => ({
             value: e,
             name: (0, E.ox)(e)
         }));
@@ -63,10 +63,10 @@ function m(e) {
                         variant: 'text-md/normal',
                         children: A.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SUBHEADER
                     }),
-                    null != s &&
+                    null != i &&
                         (0, a.jsx)(r.ModalCloseButton, {
                             className: I.closeButton,
-                            onClick: s
+                            onClick: i
                         })
                 ]
             }),
@@ -78,22 +78,23 @@ function m(e) {
                         radioPosition: 'right',
                         radioItemClassName: I.radioItem,
                         size: r.RadioGroup.Sizes.NOT_SET,
-                        value: S,
-                        options: P,
+                        value: C,
+                        options: O,
                         onChange: (e) => {
                             let { value: n } = e;
-                            return p(n);
+                            return P(n);
                         }
                     }),
-                    L &&
+                    s &&
+                        M &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(r.TextArea, {
                                     rows: 4,
                                     maxLength: 1024,
                                     placeholder: A.Z.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_PLACEHOLDER,
-                                    value: T,
-                                    onChange: h,
+                                    value: h,
+                                    onChange: L,
                                     autoFocus: !0
                                 }),
                                 (0, a.jsx)(r.Text, {
@@ -116,9 +117,9 @@ function m(e) {
                         onClick: () => {
                             c.Z.dispatch({
                                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
-                                userInput: T
+                                userInput: h
                             }),
-                                null == i || i();
+                                null == m || m();
                         },
                         color: r.Button.Colors.BRAND,
                         children: A.Z.Messages.NEXT
@@ -127,9 +128,9 @@ function m(e) {
                         onClick: () => {
                             c.Z.dispatch({
                                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
-                                userInput: T
+                                userInput: h
                             }),
-                                null == m || m();
+                                null == S || S();
                         },
                         color: r.Button.Colors.PRIMARY,
                         look: r.Button.Looks.LINK,

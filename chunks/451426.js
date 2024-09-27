@@ -19,30 +19,30 @@ var a = s(735250),
     A = s(6063),
     x = s(487043);
 function I(e) {
-    let { className: n, onClose: s, onNext: I, onBack: m } = e,
-        S = (0, i.e7)([d.Z], () => d.Z.getAppealClassificationId()),
-        { classification: C } = (0, E.YG)(null != S ? S : N.lds),
-        T = (0, _.c7)(null == C ? void 0 : C.description),
-        h = (0, i.e7)([d.Z], () => d.Z.getIsSubmitting()),
-        L = (0, i.e7)([d.Z], () => d.Z.getAppealSignal()),
-        M = (0, i.e7)([d.Z], () => d.Z.getFreeTextAppealReason()),
-        [p, P] = t.useState(!1),
-        [O, g] = t.useState(''),
-        j = t.useCallback((e) => {
+    let { className: n, isDsaEligible: s, onClose: I, onNext: m, onBack: S } = e,
+        C = (0, i.e7)([d.Z], () => d.Z.getAppealClassificationId()),
+        { classification: T } = (0, E.YG)(null != C ? C : N.lds),
+        h = (0, _.c7)(null == T ? void 0 : T.description),
+        L = (0, i.e7)([d.Z], () => d.Z.getIsSubmitting()),
+        M = (0, i.e7)([d.Z], () => d.Z.getAppealSignal()),
+        p = (0, i.e7)([d.Z], () => d.Z.getFreeTextAppealReason()),
+        [P, O] = t.useState(!1),
+        [g, j] = t.useState(''),
+        b = t.useCallback((e) => {
             o.Z.dispatch({
                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
                 userInput: e
             });
         }, []),
         Z = t.useCallback(async () => {
-            if (null !== S)
+            if (null !== C)
                 try {
-                    g(''), await c.uR(S, L, M), null == I || I();
+                    j(''), await c.uR(C, M, p), null == m || m();
                 } catch (n) {
                     var e;
-                    g((0, _.Zs)(null === (e = n.body) || void 0 === e ? void 0 : e.code));
+                    j((0, _.Zs)(null === (e = n.body) || void 0 === e ? void 0 : e.code));
                 }
-        }, [S, L, M, I]);
+        }, [C, M, p, m]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)(l.ModalHeader, {
@@ -61,10 +61,10 @@ function I(e) {
                         variant: 'text-md/normal',
                         children: u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_SUBHEADER
                     }),
-                    null != s &&
+                    null != I &&
                         (0, a.jsx)(l.ModalCloseButton, {
                             className: x.closeButton,
-                            onClick: s
+                            onClick: I
                         })
                 ]
             }),
@@ -74,7 +74,7 @@ function I(e) {
                 children: [
                     (0, a.jsx)('ul', {
                         className: A.listContainer,
-                        children: [(0, _.ox)(L), M]
+                        children: [(0, _.ox)(M), p]
                             .filter((e) => e.length > 0)
                             .map((e, n) =>
                                 (0, a.jsx)(
@@ -91,30 +91,32 @@ function I(e) {
                                 )
                             )
                     }),
-                    (0, a.jsx)('div', {
-                        className: A.anchorContainer,
-                        children: (0, a.jsx)(l.Anchor, {
-                            onClick: () => P((e) => !e),
-                            children: (0, a.jsx)(l.Heading, {
-                                variant: 'heading-md/normal',
-                                color: 'text-link',
-                                children: M.length > 0 ? u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
+                    s &&
+                        (0, a.jsx)('div', {
+                            className: A.anchorContainer,
+                            children: (0, a.jsx)(l.Anchor, {
+                                onClick: () => O((e) => !e),
+                                children: (0, a.jsx)(l.Heading, {
+                                    variant: 'heading-md/normal',
+                                    color: 'text-link',
+                                    children: p.length > 0 ? u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
+                                })
                             })
-                        })
-                    }),
-                    p &&
+                        }),
+                    P &&
+                        s &&
                         (0, a.jsx)('div', {
                             className: A.inputContainer,
                             children: (0, a.jsx)(l.TextArea, {
-                                value: M,
-                                onChange: j
+                                value: p,
+                                onChange: b
                             })
                         }),
                     (0, a.jsx)('div', {
                         className: x.policyContainer,
                         children: (0, a.jsx)(l.Text, {
                             variant: 'text-md/semibold',
-                            children: T
+                            children: h
                         })
                     }),
                     (0, a.jsx)(l.Text, {
@@ -128,12 +130,12 @@ function I(e) {
             (0, a.jsxs)(l.ModalFooter, {
                 direction: r.Z.Direction.VERTICAL,
                 children: [
-                    '' !== O &&
+                    '' !== g &&
                         (0, a.jsx)(l.Text, {
                             className: A.errorText,
                             variant: 'text-lg/normal',
                             color: 'text-danger',
-                            children: O
+                            children: g
                         }),
                     (0, a.jsxs)('div', {
                         className: A.buttonContainer,
@@ -141,14 +143,14 @@ function I(e) {
                             (0, a.jsx)(l.Button, {
                                 look: l.Button.Looks.LINK,
                                 color: l.Button.Colors.PRIMARY,
-                                onClick: m,
-                                disabled: h,
+                                onClick: S,
+                                disabled: L,
                                 children: u.Z.Messages.BACK
                             }),
                             (0, a.jsx)(l.Button, {
                                 onClick: Z,
                                 color: l.Button.Colors.RED,
-                                submitting: h,
+                                submitting: L,
                                 children: u.Z.Messages.SUBMIT
                             })
                         ]
