@@ -3,16 +3,13 @@ n.d(t, {
         return _;
     },
     DP: function () {
-        return p;
+        return h;
     },
     Ly: function () {
         return f;
     },
     SG: function () {
         return E;
-    },
-    ZT: function () {
-        return h;
     }
 });
 var r = n(735250);
@@ -64,13 +61,5 @@ function f(e) {
     return null !== (t = null != o ? o : l) && void 0 !== t ? t : s.ZP.getName(i);
 }
 function h(e) {
-    var t, n;
-    let { pendingProfileEffectId: r, displayProfile: i } = e,
-        a = null == i ? void 0 : null === (t = i._userProfile) || void 0 === t ? void 0 : t.profileEffectId,
-        o = null == i ? void 0 : null === (n = i._guildMemberProfile) || void 0 === n ? void 0 : n.profileEffectId,
-        s = null === r;
-    return s && null != o ? a : s ? null : null != r ? r : null == i ? void 0 : i.profileEffectId;
-}
-function p(e) {
     return (null != e ? (0, i.Bd)(e) : 1) > 0.25;
 }

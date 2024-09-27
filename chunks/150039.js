@@ -14,17 +14,20 @@ n.d(t, {
     Wx: function () {
         return v;
     },
+    ZT: function () {
+        return N;
+    },
     bd: function () {
         return m;
     },
     f$: function () {
-        return O;
+        return R;
     },
     gc: function () {
         return f;
     },
     gd: function () {
-        return N;
+        return O;
     },
     s6: function () {
         return A;
@@ -141,9 +144,17 @@ function v(e, t, n) {
               isUsingGuildValue: !1
           };
 }
-function N(e, t) {
-    return void 0 === e ? null != t : null != e;
+function N(e) {
+    var t, n;
+    let { pendingProfileEffectId: r, displayProfile: i } = e,
+        a = null == i ? void 0 : null === (t = i._userProfile) || void 0 === t ? void 0 : t.profileEffectId,
+        o = null == i ? void 0 : null === (n = i._guildMemberProfile) || void 0 === n ? void 0 : n.profileEffectId,
+        s = null === r;
+    return s && null != o ? a : s ? null : null != r ? r : null == i ? void 0 : i.profileEffectId;
 }
 function O(e, t) {
+    return void 0 === e ? null != t : null != e;
+}
+function R(e, t) {
     return void 0 === e ? null != t : null != e;
 }
