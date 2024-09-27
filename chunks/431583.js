@@ -188,91 +188,93 @@ function L(e) {
     return (0, a.jsx)(f.ThemeProvider, {
         theme: S.BRd.LIGHT,
         children: (e) =>
-            (0, a.jsx)(f.ModalRoot, {
+            (0, a.jsxs)(f.ModalRoot, {
                 className: l()(v.downloadApps, e),
                 transitionState: r,
                 'aria-labelledby': b,
-                children: (0, a.jsx)('div', {
-                    className: v.inner,
-                    children: (0, a.jsxs)(f.HeadingLevel, {
-                        component: (0, a.jsx)(f.HiddenVisually, {
-                            children: (0, a.jsx)(f.H, {
-                                id: b,
-                                children: A.Z.Messages.DOWNLOAD_APP
-                            })
-                        }),
-                        children: [
-                            (0, a.jsx)(f.ModalCloseButton, {
-                                onClick: n,
-                                className: v.modalCloseButton
+                children: [
+                    (0, a.jsx)(f.ModalCloseButton, {
+                        onClick: n,
+                        className: v.modalCloseButton
+                    }),
+                    (0, a.jsx)('div', {
+                        className: v.inner,
+                        children: (0, a.jsxs)(f.HeadingLevel, {
+                            component: (0, a.jsx)(f.HiddenVisually, {
+                                children: (0, a.jsx)(f.H, {
+                                    id: b,
+                                    children: A.Z.Messages.DOWNLOAD_APP
+                                })
                             }),
-                            !d.tq &&
-                                (0, a.jsx)('div', {
-                                    className: v.platformsWrap,
-                                    children: (0, a.jsx)(f.HeadingLevel, {
-                                        component: (0, a.jsx)(f.Heading, {
-                                            variant: 'heading-lg/semibold',
-                                            className: v.header,
-                                            children: A.Z.Messages.DOWNLOAD_DESKTOP_TITLE
-                                        }),
-                                        children: (0, a.jsx)('ul', {
-                                            className: v.platforms,
-                                            children: N.map((e) =>
-                                                (0, a.jsx)(
-                                                    y,
-                                                    {
-                                                        isActive: c === e.platformKey,
-                                                        platform: e,
-                                                        onClick: C,
-                                                        onMouseEnter: L,
-                                                        claimed: u
-                                                    },
-                                                    e.platformKey
-                                                )
-                                            )
-                                        })
-                                    })
-                                }),
-                            (0, a.jsx)('div', {
-                                className: v.platformsWrap,
-                                children: (0, a.jsxs)(f.HeadingLevel, {
-                                    component: (0, a.jsx)(a.Fragment, {
-                                        children:
-                                            !d.tq &&
-                                            (0, a.jsx)(f.Heading, {
+                            children: [
+                                !d.tq &&
+                                    (0, a.jsx)('div', {
+                                        className: v.platformsWrap,
+                                        children: (0, a.jsx)(f.HeadingLevel, {
+                                            component: (0, a.jsx)(f.Heading, {
                                                 variant: 'heading-lg/semibold',
                                                 className: v.header,
-                                                children: A.Z.Messages.DOWNLOAD_MOBILE_TITLE
-                                            })
-                                    }),
-                                    children: [
-                                        (0, a.jsx)('ul', {
-                                            className: v.platforms,
-                                            children: O.map((e) =>
-                                                (0, a.jsx)(
-                                                    y,
-                                                    {
-                                                        isActive: c === e.platformKey,
-                                                        platform: e,
-                                                        onClick: C,
-                                                        onMouseEnter: L,
-                                                        claimed: u
-                                                    },
-                                                    e.platformKey
+                                                children: A.Z.Messages.DOWNLOAD_DESKTOP_TITLE
+                                            }),
+                                            children: (0, a.jsx)('ul', {
+                                                className: v.platforms,
+                                                children: N.map((e) =>
+                                                    (0, a.jsx)(
+                                                        y,
+                                                        {
+                                                            isActive: c === e.platformKey,
+                                                            platform: e,
+                                                            onClick: C,
+                                                            onMouseEnter: L,
+                                                            claimed: u
+                                                        },
+                                                        e.platformKey
+                                                    )
                                                 )
-                                            )
-                                        }),
-                                        (0, a.jsx)(f.Text, {
-                                            className: v.footer,
-                                            variant: 'text-sm/normal',
-                                            children: A.Z.Messages.DOWNLOAD_DESKTOP_FOOTER.format()
+                                            })
                                         })
-                                    ]
+                                    }),
+                                (0, a.jsx)('div', {
+                                    className: v.platformsWrap,
+                                    children: (0, a.jsxs)(f.HeadingLevel, {
+                                        component: (0, a.jsx)(a.Fragment, {
+                                            children:
+                                                !d.tq &&
+                                                (0, a.jsx)(f.Heading, {
+                                                    variant: 'heading-lg/semibold',
+                                                    className: v.header,
+                                                    children: A.Z.Messages.DOWNLOAD_MOBILE_TITLE
+                                                })
+                                        }),
+                                        children: [
+                                            (0, a.jsx)('ul', {
+                                                className: v.platforms,
+                                                children: O.map((e) =>
+                                                    (0, a.jsx)(
+                                                        y,
+                                                        {
+                                                            isActive: c === e.platformKey,
+                                                            platform: e,
+                                                            onClick: C,
+                                                            onMouseEnter: L,
+                                                            claimed: u
+                                                        },
+                                                        e.platformKey
+                                                    )
+                                                )
+                                            }),
+                                            (0, a.jsx)(f.Text, {
+                                                className: v.footer,
+                                                variant: 'text-sm/normal',
+                                                children: A.Z.Messages.DOWNLOAD_DESKTOP_FOOTER.format()
+                                            })
+                                        ]
+                                    })
                                 })
-                            })
-                        ]
+                            ]
+                        })
                     })
-                })
+                ]
             })
     });
 }
