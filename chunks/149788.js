@@ -7,7 +7,7 @@ var i = n(735250),
     a = n(470079),
     s = n(481060),
     r = n(749210),
-    l = n(648113),
+    l = n(322665),
     o = n(17845),
     c = n(374939),
     d = n(283293),
@@ -31,24 +31,23 @@ function T(e) {
         });
     }, [t]);
     let S = a.useMemo(
-            () =>
-                T.map((e) => ({
-                    ...e,
-                    presenceCount: void 0,
-                    memberCount: void 0,
-                    premiumSubscriptionCount: void 0,
-                    emojis: void 0
-                })),
-            [T]
-        ),
-        f = (0, l.C)();
+        () =>
+            T.map((e) => ({
+                ...e,
+                presenceCount: void 0,
+                memberCount: void 0,
+                premiumSubscriptionCount: void 0,
+                emojis: void 0
+            })),
+        [T]
+    );
     return (0, i.jsxs)(d.Z, {
         onScroll: n,
         children: [
             (0, i.jsx)(o.Z, {
                 title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
                 description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
-                className: f
+                children: (0, i.jsx)(l.Z, {})
             }),
             (0, i.jsxs)(c.Z, {
                 children: [

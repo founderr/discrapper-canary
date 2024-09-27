@@ -7,5 +7,7 @@ e.exports = {
     uppercase: 'uppercase_b97772',
     description: 'description_b97772',
     gradient: 'gradient_b97772',
-    clientThemes: 'clientThemes_b97772'
+    clientThemes: 'clientThemes_b97772',
+    gradientOverlay: 'gradientOverlay_b97772',
+    gradientBackground: 'gradientBackground_b97772'
 };

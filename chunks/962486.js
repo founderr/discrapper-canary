@@ -8,7 +8,7 @@ var i = n(735250),
     a = n(470079),
     s = n(481060),
     r = n(229765),
-    l = n(648113),
+    l = n(322665),
     o = n(17845),
     c = n(374939),
     d = n(283293),
@@ -21,8 +21,7 @@ function E(e) {
         T = (0, u.a$)(t),
         S = (0, u.QW)(t),
         f = (0, u.lg)(t),
-        C = (0, l.C)(),
-        N = a.useMemo(() => {
+        C = a.useMemo(() => {
             let e = E ? 30 : n.length,
                 t = [];
             for (let s = 0; s < e; s++) {
@@ -44,7 +43,7 @@ function E(e) {
             (0, i.jsx)(o.Z, {
                 title: p,
                 description: T,
-                className: C
+                children: (0, i.jsx)(l.Z, {})
             }),
             (0, i.jsxs)(c.Z, {
                 children: [
@@ -60,7 +59,7 @@ function E(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: h.content,
-                        children: N
+                        children: C
                     })
                 ]
             })

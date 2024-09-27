@@ -10,7 +10,7 @@ var i = n(735250),
     u = n(963202),
     _ = n(650461),
     h = n(603839),
-    E = n(648113),
+    E = n(322665),
     m = n(17845),
     I = n(374939),
     g = n(283293),
@@ -135,8 +135,7 @@ t.Z = a.memo(function (e) {
                     showAdminGuildPicker: d
                 }),
             [h, d, u]
-        ),
-        v = (0, E.C)();
+        );
     return (0, i.jsxs)(g.Z, {
         ref: _,
         onScroll: c,
@@ -150,7 +149,7 @@ t.Z = a.memo(function (e) {
                 }),
                 description: h ? C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION_NUX_COMPLETED : C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
                 button: f,
-                className: v
+                children: (0, i.jsx)(E.Z, {})
             }),
             (0, i.jsx)(I.Z, {
                 children: (0, i.jsx)(S.ZP, {
