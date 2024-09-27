@@ -38,9 +38,9 @@ function c() {
         if (null == u) return null;
         if (null == t) return u;
         let e = [],
-            n = !0,
-            i = !0;
-        for (let [a, s] of u) a === t && (n = !1), a === o.Hk && (i = !1), e.push([a, s]);
-        return i && e.unshift([o.Hk, d]), n && e.push([t, c]), i || n ? e : u;
+            n = new Set();
+        for (let [t, i] of u) n.add(t), e.push([t, i]);
+        let i = !1;
+        return !n.has(o.Hk) && (n.add(o.Hk), e.unshift([o.Hk, d]), (i = !0)), !n.has(t) && (n.add(t), e.push([t, c]), (i = !0)), i ? e : u;
     }, [u, t, d, c]);
 }

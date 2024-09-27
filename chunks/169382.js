@@ -1,6 +1,6 @@
 t.d(n, {
     l: function () {
-        return r;
+        return c;
     }
 }),
     t(610138),
@@ -8,7 +8,7 @@ t.d(n, {
     t(78328),
     t(815648),
     t(47120);
-var o = t(266067);
-function r() {
-    return new URLSearchParams((0, o.TH)().search);
+var r = t(266067);
+function c() {
+    return new URLSearchParams((0, r.TH)().search);
 }
