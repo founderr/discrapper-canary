@@ -131,13 +131,14 @@ function q(e) {
             }),
             u)
         ) {
-            let e = {
+            let t = {
+                ...e,
                 assignment_fingerprint: n.fingerprint,
                 current_session_id: h.default.getSessionId(),
                 current_fingerprint: h.default.getFingerprint(),
                 current_source: D.source
             };
-            m.default.track(g.rMx.EXPERIMENT_USER_TRIGGERED_IGNORED, e, {
+            m.default.track(g.rMx.EXPERIMENT_USER_TRIGGERED_IGNORED, t, {
                 flush: !0,
                 fingerprint: o
             });
