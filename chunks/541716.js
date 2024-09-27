@@ -63,7 +63,10 @@ let o = {
             autoSave: !0
         },
         emojis: { button: !0 },
-        gifs: { button: !0 },
+        gifs: {
+            button: !0,
+            allowSending: !0
+        },
         gifts: { button: !0 },
         permissions: { requireSendMessages: !0 },
         showThreadPromptOnReply: !0,
