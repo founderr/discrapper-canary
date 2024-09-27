@@ -1,45 +1,44 @@
 n.d(t, {
     Y: function () {
-        return d;
+        return c;
     }
 }),
     n(733860);
 var i = n(470079),
     a = n(963202),
     s = n(169559),
-    r = n(164991),
-    l = n(726115),
-    o = n(859921),
-    c = n(128449);
-function d() {
+    r = n(726115),
+    l = n(859921),
+    o = n(128449);
+function c() {
     let e = (0, s.Z)('global_discovery'),
         { enableClanCreation: t } = (0, a.C3)({
             location: 'global_discovery',
             includeConverted: !0,
             autoTrackExposure: !0
         }),
-        n = (0, o.jg)(),
-        d = i.useMemo(() => {
-            let n = [c.vf.GAMING, c.vf.MUSIC, c.vf.ENTERTAINMENT, c.vf.TECH, c.vf.EDUCATION, c.vf.HUBS];
+        n = (0, l.jg)(),
+        c = i.useMemo(() => {
+            let n = [o.vf.GAMING, o.vf.MUSIC, o.vf.ENTERTAINMENT, o.vf.TECH, o.vf.EDUCATION, o.vf.HUBS];
             return (
-                e || t ? n.unshift(c.vf.GUILDS) : n.unshift(c.vf.FEATURED),
+                e || t ? n.unshift(o.vf.GUILDS) : n.unshift(o.vf.FEATURED),
                 n.map((e) => ({
                     id: e,
-                    label: (0, l.vb)(e)
+                    label: (0, r.vb)(e)
                 }))
             );
         }, [t, e]),
-        u = i.useCallback((e) => {
-            (0, o.jY)({ selectedTab: e }), (0, r.LD)({ categoryId: (0, l.lg)(e) });
+        d = i.useCallback((e) => {
+            (0, l.jY)({ selectedTab: e });
         }, []);
     return (
         i.useEffect(() => {
-            (null == n || !d.some((e) => e.id === n)) && u(d[0].id);
-        }, [n, d, u]),
+            (null == n || !c.some((e) => e.id === n)) && d(c[0].id);
+        }, [n, c, d]),
         {
-            tabs: d,
-            selectedTab: null != n ? n : d[0].id,
-            setSelectedTab: u
+            tabs: c,
+            selectedTab: null != n ? n : c[0].id,
+            setSelectedTab: d
         }
     );
 }

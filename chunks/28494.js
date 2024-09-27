@@ -1,9 +1,9 @@
 n.d(t, {
     H: function () {
-        return E;
+        return m;
     },
     f: function () {
-        return h;
+        return E;
     }
 });
 var i = n(470079),
@@ -15,8 +15,9 @@ var i = n(470079),
     c = n(164991),
     d = n(726115),
     u = n(859921),
-    _ = n(128449);
-function h(e) {
+    _ = n(128449),
+    h = n(731455);
+function E(e) {
     let { loadId: t } = e,
         n = (0, c.NL)(),
         s = (0, c.lZ)(),
@@ -73,7 +74,7 @@ function h(e) {
         [u, E, I, h, m, g, s]
     );
 }
-function E(e) {
+function m(e) {
     let { loadId: t } = e,
         n = (0, u.QQ)(),
         a = (0, c.A3)();
@@ -84,17 +85,17 @@ function E(e) {
             (0, c.LD)({ query: e });
         }, []),
         _ = i.useCallback(() => {
-            r.IZ(t), l.Z.clearAlgoliaSearchResults(), l.Z.resetSearchLayout();
-            let e = (0, u.Iy)(),
-                n = (0, d.lg)(e);
-            (0, c.LD)({
-                query: '',
-                fetchedQuery: '',
-                resultsQuery: '',
-                categoryId: n,
-                resultsInitialCategoryId: null,
-                scrollPosition: null
-            }),
+            r.IZ(t),
+                l.Z.clearAlgoliaSearchResults(),
+                l.Z.resetSearchLayout(),
+                (0, c.LD)({
+                    query: '',
+                    fetchedQuery: '',
+                    resultsQuery: '',
+                    categoryId: h.Hk,
+                    resultsInitialCategoryId: null,
+                    scrollPosition: null
+                }),
                 (0, u.jY)({ isSearchVisible: !1 });
         }, [t]);
     return {

@@ -1,18 +1,15 @@
 n.d(t, {
-    Iy: function () {
+    OI: function () {
         return m;
     },
-    OI: function () {
-        return f;
-    },
     QQ: function () {
-        return u;
+        return d;
     },
     jY: function () {
-        return x;
+        return h;
     },
     jg: function () {
-        return h;
+        return u;
     }
 });
 var r = n(470079),
@@ -25,23 +22,14 @@ let o = Object.freeze({
     }),
     s = (0, a.Z)(() => o);
 function c(e) {
-    return (t) => t[e];
-}
-function d(e) {
     var t;
     return s(r.useRef(((t = e), (e) => e[t])).current, l.Z);
 }
-let u = () => d('isSearchVisible'),
-    h = () => d('selectedTab'),
-    m = () =>
-        (function (e) {
-            var t;
-            let n = ((t = e), (e) => e[t]);
-            return n(s.getState());
-        })('selectedTab'),
-    x = (e) => {
+let d = () => c('isSearchVisible'),
+    u = () => c('selectedTab'),
+    h = (e) => {
         (0, i.j)(() => s.setState(e));
     };
-function f() {
-    x(o);
+function m() {
+    h(o);
 }
