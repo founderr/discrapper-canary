@@ -32,8 +32,8 @@ function _(e) {
 t.Z = function (e) {
     var t, a, i, j, S, I;
     let { sourceURL: E } = e,
-        { videoPlayerRef: T, cropData: y, setCropData: N } = (0, b.S)(),
-        [w, L] = l.useState(((I = !(null === (a = T.current) || void 0 === a ? void 0 : null === (t = a.videoElement) || void 0 === t ? void 0 : t.paused)), I)),
+        { videoPlayerRef: T, cropData: y, setCropData: w } = (0, b.S)(),
+        [N, L] = l.useState(((I = !(null === (a = T.current) || void 0 === a ? void 0 : null === (t = a.videoElement) || void 0 === t ? void 0 : t.paused)), I)),
         k = l.useRef(null),
         [R, M] = l.useState(null),
         [P, Z] = l.useState(),
@@ -81,13 +81,13 @@ t.Z = function (e) {
             (e) => {
                 var t;
                 let a = (0, o.clamp)(e, 0, y.end - h.Hp);
-                N({
+                w({
                     ...y,
                     start: a
                 }),
                     null === (t = T.current) || void 0 === t || t.seek(a);
             },
-            [y, N, T]
+            [y, w, T]
         ),
         $ = l.useCallback(
             (e) => {
@@ -95,13 +95,13 @@ t.Z = function (e) {
                 let n = null === (t = T.current) || void 0 === t ? void 0 : t.videoElement;
                 if (null == n) return;
                 let l = (0, o.clamp)(e, y.start + h.Hp, n.duration);
-                N({
+                w({
                     ...y,
                     end: l
                 }),
                     null === (a = T.current) || void 0 === a || a.seek(l);
             },
-            [y, N, T]
+            [y, w, T]
         ),
         J = l.useCallback(
             (e, t) => {
@@ -111,14 +111,14 @@ t.Z = function (e) {
                 let l = (((0, o.clamp)(e, U.left, U.right) - U.left) / U.width) * P,
                     i = (0, o.clamp)(l, 0, P),
                     r = R;
-                if ((null == r && t && ((r = i <= y.start ? 'start' : i >= y.end ? 'end' : 'playhead'), null === (a = T.current) || void 0 === a || a.pause(), M(r), H(w)), 'start' === r)) q(i);
+                if ((null == r && t && ((r = i <= y.start ? 'start' : i >= y.end ? 'end' : 'playhead'), null === (a = T.current) || void 0 === a || a.pause(), M(r), H(N)), 'start' === r)) q(i);
                 else if ('end' === r) $(i);
                 else if ('playhead' === r) {
                     let e = (0, o.clamp)(i, y.start, y.end);
                     null === (n = T.current) || void 0 === n || n.seek(e);
                 }
             },
-            [P, U, R, y.start, y.end, T, w, q, $]
+            [P, U, R, y.start, y.end, T, N, q, $]
         ),
         ee = l.useCallback(
             (e) => {
@@ -231,10 +231,10 @@ t.Z = function (e) {
                         tabIndex: 0,
                         onClick: () => {
                             var e, t;
-                            return w ? (null === (e = T.current) || void 0 === e ? void 0 : e.pause()) : null === (t = T.current) || void 0 === t ? void 0 : t.play();
+                            return N ? (null === (e = T.current) || void 0 === e ? void 0 : e.pause()) : null === (t = T.current) || void 0 === t ? void 0 : t.play();
                         },
                         className: g.playPauseButton,
-                        children: w
+                        children: N
                             ? (0, n.jsx)(d.PauseIcon, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -277,7 +277,7 @@ t.Z = function (e) {
                                         null === (t = T.current) || void 0 === t || t.seek(e.duration / 2), B(e.duration / 2);
                                     }
                                     0 === y.end &&
-                                        N((t) => ({
+                                        w((t) => ({
                                             ...t,
                                             end: e.duration
                                         }));

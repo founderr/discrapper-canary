@@ -22,7 +22,7 @@ let A = (e) => {
         { location: N } = (0, u.O)(),
         { analyticsLocations: O } = (0, d.ZP)(),
         R = (0, s.e7)([p.Z], () => p.Z.getGuild(n)),
-        { canManageAllExpressions: C } = (0, h.X)(R),
+        { canManageAllExpressions: C } = (0, h.XJ)(R),
         y = null != R && 0 === (0, m.A3)(R.premiumTier) && !R.hasFeature(I.oNc.MORE_STICKERS);
     if (
         (i.useEffect(() => {

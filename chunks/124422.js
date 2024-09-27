@@ -14,7 +14,7 @@ var i = t(442837),
     d = t(689938);
 function o(e, n, o) {
     var c;
-    let { canManageGuildEvent: _ } = (0, s.X)(null != o ? o : n),
+    let { canManageGuildEvent: _ } = (0, s.XJ)(null != o ? o : n),
         Z = (0, i.e7)([a.ZP], () => a.ZP.getGuildScheduledEvent(e), [e]),
         T = _(Z),
         N = null != (0, r.qY)(null !== (c = null == o ? void 0 : o.id) && void 0 !== c ? c : E.lds),

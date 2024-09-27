@@ -23,7 +23,7 @@ function E(e) {
         E = (0, l.bp)(),
         g = (0, p.qY)(t),
         C = (0, s.e7)([u.Z], () => u.Z.getChannel(t), [t]),
-        { canManageGuildEvent: I } = (0, r.X)(C),
+        { canManageGuildEvent: I } = (0, r.XJ)(C),
         T = I(g);
     if (null == g) return null;
     let x = () => {

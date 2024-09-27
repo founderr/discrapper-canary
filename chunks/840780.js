@@ -33,8 +33,8 @@ var i = n(735250),
     O = n(989941),
     j = n(803647),
     D = n(690221),
-    G = n(231664),
-    w = n(759198),
+    w = n(231664),
+    G = n(759198),
     U = n(131704),
     k = n(199902),
     B = n(314897),
@@ -211,7 +211,7 @@ class ec extends l.PureComponent {
                                         size: 'xxs',
                                         color: Z.JX.PREMIUM_TIER_2
                                     }),
-                                    (0, i.jsx)(w.Z, {
+                                    (0, i.jsx)(G.Z, {
                                         className: ea.perksDemoText,
                                         variant: 'text-xxs/semibold',
                                         children: n
@@ -371,7 +371,7 @@ t.Z = (0, _.Z)(function (e) {
         S = (0, c.e7)([Y.Z], () => (null != r ? Y.Z.findActivity(r, (e) => e.type === ei.IIU.PLAYING) : null)),
         v = null != h && h.ownerId === r && h.state !== ei.jm8.ENDED,
         Z = (0, c.e7)([Q.default, K.Z], () => (null != u ? (0, x.F6)(u, Q.default, K.Z) : void 0)),
-        b = (0, G.Z)();
+        b = (0, w.Z)();
     return (0, i.jsx)(ec, {
         ...l,
         guildId: n,

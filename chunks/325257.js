@@ -46,7 +46,7 @@ function y(e, t) {
 }
 t.Z = l.memo(function (e) {
     var t, n, r, p, P;
-    let { guildNode: O, setRef: j, onDragStart: D, onDragEnd: G, route: w, guild: U, animatable: k, selected: B = !1, unread: V = !1, mediaState: H, unavailable: F = !1, badge: W = 0, contextMenu: z = y, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
+    let { guildNode: O, setRef: j, onDragStart: D, onDragEnd: w, route: G, guild: U, animatable: k, selected: B = !1, unread: V = !1, mediaState: H, unavailable: F = !1, badge: W = 0, contextMenu: z = y, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
         { id: X, parentId: J } = O,
         $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, b.Ny)() : null != H ? (0, b.Or)(H) : void 0,
         ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
@@ -64,7 +64,7 @@ t.Z = l.memo(function (e) {
                 }
             ),
             end() {
-                null == G || G(), (0, f.V1)(I.ZP.getCompatibleGuildFolders());
+                null == w || w(), (0, f.V1)(I.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -76,17 +76,17 @@ t.Z = l.memo(function (e) {
         [eh] = l.useState(() => new u.sW(70, () => ed(!0)));
     l.useEffect(() => () => eh.cancel(), [eh]);
     let ep = l.useCallback(() => {
-            if (null != w) {
-                (0, m.uL)(w, { state: L });
+            if (null != G) {
+                (0, m.uL)(G, { state: L });
                 return;
             }
             (0, g.X)(X, { state: L });
-        }, [X, w]),
+        }, [X, G]),
         ef = l.useCallback(() => {
-            if (null != w || null == U || F || !q) return;
+            if (null != G || null == U || F || !q) return;
             let e = (0, _.V)(U.id);
             if (null != e) h.Z.preload(U.id, e);
-        }, [w, U, F, q]),
+        }, [G, U, F, q]),
         e_ = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(X)),
         em = l.useCallback(
             (e) => {

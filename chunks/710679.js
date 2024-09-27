@@ -36,7 +36,7 @@ function T(e) {
         w = (0, t.e7)([o.Z], () => o.Z.getStageInstanceByChannel(D), [D]),
         z = (0, t.e7)([c.Z], () => c.Z.getChannel(D), [D]),
         B = (0, t.e7)([E.default], () => E.default.getUser(S), [S]),
-        { speakers: X } = (0, Z.Z)({
+        { speakers: J } = (0, Z.Z)({
             id: D,
             data: {
                 guild: null,
@@ -49,10 +49,10 @@ function T(e) {
                 instance: w
             }
         }),
-        J = (0, t.e7)([d.Z], () => d.Z.getChannelId()),
+        X = (0, t.e7)([d.Z], () => d.Z.getChannelId()),
         W = (0, h.xt)(i),
-        q = J === D && null != J && W,
-        F = X.filter((e) => e.type === s.Ui.VOICE),
+        q = X === D && null != X && W,
+        F = J.filter((e) => e.type === s.Ui.VOICE),
         K = F.length,
         Y = (0, t.e7)([u.Z], () => u.Z.can(p.Plq.CONNECT, z), [z]),
         Q = (0, v.ZP)(i),

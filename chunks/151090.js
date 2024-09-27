@@ -20,7 +20,7 @@ function I(e) {
         Z = (0, a.e7)([r.ZP, d.Z, u.default, c.Z], () =>
             r.ZP.getFlattenedGuildIds().some((e) => {
                 let n = c.Z.getGuild(e);
-                return null != n && (0, i.G)(n, d.Z, u.default).canCreateExpressions;
+                return null != n && (0, i.Gw)(n, d.Z, u.default).canCreateExpressions;
             })
         );
     return (0, o.jsxs)(l.Menu, {

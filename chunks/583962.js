@@ -79,12 +79,12 @@ t.ZP = (e) => {
     }, [m, P, u]);
     let j = ''.concat(Math.min(100, (u / (0, I.vn)(t.id)[L]) * 100), '%'),
         { current: D } = l.useRef(j),
-        G = {
+        w = {
             from: { width: P === u ? D : '0%' },
             to: { width: j },
             config: y
         },
-        [w, U] = (0, d.useSpring)(() => G),
+        [G, U] = (0, d.useSpring)(() => w),
         k = () => {
             (0, f.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR },
@@ -132,7 +132,7 @@ t.ZP = (e) => {
                     onClick: k,
                     onMouseEnter: () => {
                         var t;
-                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), U(G);
+                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), U(w);
                     },
                     className: a()(b.container, { [b.containerWithMargin]: n }),
                     onContextMenu: (e) => {
@@ -181,7 +181,7 @@ t.ZP = (e) => {
                             children: [
                                 (0, i.jsx)(s.animated.div, {
                                     className: b.progressBar,
-                                    style: w
+                                    style: G
                                 }),
                                 R
                                     ? (0, i.jsx)('span', {

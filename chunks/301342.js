@@ -79,15 +79,15 @@ let Z = l.memo(function (e) {
                         });
                 });
         }, [r]),
-        { role: j, tabIndex: D, ...G } = (0, s.JA)(r.id),
-        w = l.useRef(null),
+        { role: j, tabIndex: D, ...w } = (0, s.JA)(r.id),
+        G = l.useRef(null),
         U = l.useRef(null),
         k = (0, i.jsxs)('li', {
             className: t,
             'data-dnd-name': r.name,
             children: [
                 (0, i.jsx)(c.FocusRing, {
-                    focusTarget: w,
+                    focusTarget: G,
                     ringTarget: U,
                     offset: {
                         left: 4,
@@ -103,10 +103,10 @@ let Z = l.memo(function (e) {
                         onContextMenu: P,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
-                                innerRef: w,
+                                innerRef: G,
                                 className: S.mainContent,
                                 tabIndex: D,
-                                ...G,
+                                ...w,
                                 onClick: y,
                                 'aria-label': x.Z.Messages.CATEGORY_A11Y_LABEL.format({ categoryName: r.name }),
                                 'aria-expanded': !R,

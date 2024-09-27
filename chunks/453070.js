@@ -78,7 +78,7 @@ let O = (e) => {
                 let r = function (t, n) {
                     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                         i = (0, A.J8)(t[0]) ? d.Z.getGuild(t[0].guild_id) : void 0,
-                        { canCreateExpressions: a } = (0, l.G)(i),
+                        { canCreateExpressions: a } = (0, l.Gw)(i),
                         o = _.Z.getGuildId(),
                         s = u.findIndex((e) => e.type === S.Ih.FAVORITE),
                         T = u.findIndex((e) => e.type === S.Ih.RECENT),
@@ -177,7 +177,7 @@ let O = (e) => {
             }
             if ((null == e ? void 0 : e.getGuildId()) != null) {
                 let t = d.Z.getGuild(e.getGuildId()),
-                    { canManageAllExpressions: n } = (0, l.G)(t),
+                    { canManageAllExpressions: n } = (0, l.Gw)(t),
                     a = i.findIndex((t) => t.id === e.getGuildId());
                 a >= 1
                     ? i.unshift(i.splice(a, 1)[0])

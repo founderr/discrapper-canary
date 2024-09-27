@@ -30,7 +30,7 @@ function T(e) {
         { guild_id: p, privacy_level: A } = t,
         k = (0, r.e7)([v.Z], () => v.Z.getChannel(t.channel_id), [t]),
         S = (0, r.e7)([C.Z], () => C.Z.getGuild(p), [p]),
-        { canManageGuildEvent: f } = (0, d.X)(null != k ? k : S),
+        { canManageGuildEvent: f } = (0, d.XJ)(null != k ? k : S),
         Z = f(t),
         L = (0, r.e7)([u.Z], () => u.Z.isLurking(p), [p]),
         y = t.entity_type === E.WX.STAGE_INSTANCE,

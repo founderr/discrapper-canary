@@ -208,7 +208,7 @@ let B = d().throttle(T.OQ, 1000),
     H = (e) => {
         let { emojis: t, guild: n, onEdit: i, editingDisabled: r = !1 } = e,
             l = a.useMemo(() => [...t].reverse(), [t]),
-            { canManageGuildExpression: o } = (0, R.G)(n);
+            { canManageGuildExpression: o } = (0, R.Gw)(n);
         return 0 === t.length
             ? (0, s.jsx)(I.FormText, {
                   type: I.FormTextTypes.DESCRIPTION,
@@ -282,7 +282,7 @@ t.ZP = () => {
         [t, i] = a.useState('');
     o()(null != e, 'ConnectedGuildSettingsEmoji must be rendered within a guild context');
     let r = (0, _.e7)([L.Z], () => L.Z.theme),
-        { canCreateExpressions: l } = (0, R.X)(e),
+        { canCreateExpressions: l } = (0, R.XJ)(e),
         { revision: c, emojis: E } = (0, _.cj)([v.Z], () => ({
             revision: v.Z.getEmojiRevision(e.id),
             emojis: v.Z.getEmojis(e.id)

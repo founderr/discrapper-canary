@@ -17,7 +17,7 @@ var i = t(442837),
 function c(e) {
     let { guildEventId: n, recurrenceId: t, guild: c, channel: _ } = e,
         Z = null != t,
-        { canManageGuildEvent: T } = (0, s.X)(null != _ ? _ : c),
+        { canManageGuildEvent: T } = (0, s.XJ)(null != _ ? _ : c),
         [N, I] = (0, i.Wu)([a.ZP], () => [a.ZP.isActive(n), a.ZP.getGuildScheduledEvent(n)]),
         g = (0, E.Z)(t, null == I ? void 0 : I.id),
         M = null != I && T(I),

@@ -54,7 +54,7 @@ function S(e) {
     let r = e.saveData.messageId,
         i = e.saveData.channelId,
         a = null !== (t = I.get(i)) && void 0 !== t ? t : new Set();
-    a.add(r), I.set(i, a), null == e.message && m.add(r), null != e.saveData.dueAt && new Date() > e.saveData.dueAt && p.add(r);
+    a.add(r), I.set(i, a), null == e.message && m.add(r), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? p.add(r) : p.delete(r);
 }
 function A(e) {
     var t;

@@ -125,7 +125,7 @@ function R(e) {
         b = (0, o.e7)(
             [c.Z],
             () => {
-                let { canCreateExpressions: e } = (0, s.G)(L);
+                let { canCreateExpressions: e } = (0, s.Gw)(L);
                 return e;
             },
             [L]

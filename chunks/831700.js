@@ -40,8 +40,8 @@ var l = n(120356),
     O = n(306680),
     j = n(9156),
     D = n(979651),
-    G = n(934415),
-    w = n(98597),
+    w = n(934415),
+    G = n(98597),
     U = n(648501),
     k = n(473403),
     B = n(830993),
@@ -64,7 +64,7 @@ function K(e, t, n) {
         e
     );
 }
-class q extends w.ZP {
+class q extends G.ZP {
     componentWillUnmount() {
         this.activitiesHideTimeout.stop();
     }
@@ -75,7 +75,7 @@ class q extends w.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, G.rY)(e, D.Z, L.Z);
+        return (0, w.rY)(e, D.Z, L.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -369,7 +369,7 @@ function X(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        G = b && null == L;
+        w = b && null == L;
     return (0, i.jsx)(Q, {
         channelName: m,
         embeddedApps: _,
@@ -383,7 +383,7 @@ function X(e) {
         ...e,
         connected: b,
         isFavoriteSuggestion: r && !Z,
-        forceShowButtons: G,
+        forceShowButtons: w,
         channelInfo: L,
         enableHangStatus: A,
         allowChannelTopic: M,

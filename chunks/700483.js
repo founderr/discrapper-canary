@@ -114,7 +114,7 @@ function ei(e) {
 function es(e) {
     let { channel: t, onSelect: n } = e,
         s = (0, u.bp)(),
-        { canManageGuildEvent: a } = (0, I.X)(t),
+        { canManageGuildEvent: a } = (0, I.XJ)(t),
         c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]),
         d = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
         h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),

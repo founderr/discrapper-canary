@@ -5,5 +5,5 @@ n.d(t, {
     }
 }),
     !(function (e) {
-        (e[(e.REWARD_CODE = 1)] = 'REWARD_CODE'), (e[(e.IN_GAME = 2)] = 'IN_GAME'), (e[(e.COLLECTIBLE = 3)] = 'COLLECTIBLE');
+        (e[(e.REWARD_CODE = 1)] = 'REWARD_CODE'), (e[(e.IN_GAME = 2)] = 'IN_GAME'), (e[(e.COLLECTIBLE = 3)] = 'COLLECTIBLE'), (e[(e.VIRTUAL_CURRENCY = 4)] = 'VIRTUAL_CURRENCY');
     })(r || (r = {}));

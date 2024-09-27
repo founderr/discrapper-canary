@@ -34,7 +34,7 @@ var l,
     f = i(947017);
 function Z(e) {
     let { channel: n, onClick: i } = e,
-        { canManageAllEvents: l } = (0, C.X)(n),
+        { canManageAllEvents: l } = (0, C.XJ)(n),
         a = (0, o.e7)([m.Z], () => !n.isGuildVocal() || m.Z.can(k.Plq.CONNECT, n), [n]),
         r = s.useMemo(() => (0, d.Z)(n), [n]),
         v = (0, h.KS)(n);
@@ -121,8 +121,8 @@ function L(e) {
           });
 }
 function y(e) {
-    let { className: n, guild: i, channel: l, creator: a, name: s, entityType: r, description: o, imageLocation: d = 0, imageSource: h, isActive: v, isUserLurking: C, isJoined: m = !1, isMember: x = !1, isHub: k = !1, speakers: S, speakerCount: Z, rsvped: y, canInvite: w, location: R, truncate: b, onContextMenu: M, onJoinClick: G, onJoinGuildClick: P, onGoToGuildClick: O, onRsvpClick: V, onStartClick: U, onInviteClick: X, onEndClick: B, onClick: D, isNew: W, guildEvent: z, eventPreview: H, recurrenceRule: Y, recurrenceId: K } = e,
-        J = (0, N.Q)(l, r),
+    let { className: n, guild: i, channel: l, creator: a, name: s, entityType: r, description: o, imageLocation: d = 0, imageSource: h, isActive: v, isUserLurking: C, isJoined: m = !1, isMember: x = !1, isHub: k = !1, speakers: S, speakerCount: Z, rsvped: y, canInvite: w, location: R, truncate: b, onContextMenu: M, onJoinClick: G, onJoinGuildClick: P, onGoToGuildClick: O, onRsvpClick: V, onStartClick: U, onInviteClick: X, onEndClick: B, onClick: D, isNew: W, guildEvent: z, eventPreview: H, recurrenceRule: Y, recurrenceId: J } = e,
+        K = (0, N.Q)(l, r),
         q = r === A.WX.EXTERNAL,
         Q = q ? (e) => e.stopPropagation() : void 0,
         F = [];
@@ -133,7 +133,7 @@ function y(e) {
     let $ = F.length > 0;
     return (0, t.jsxs)(u.ClickableContainer, {
         'aria-label': s,
-        onClick: () => (null == D ? void 0 : D(K)),
+        onClick: () => (null == D ? void 0 : D(J)),
         onContextMenu: M,
         className: c()(
             f.card,
@@ -159,7 +159,7 @@ function y(e) {
                         isNew: W,
                         guildEvent: z,
                         eventPreview: H,
-                        recurrenceId: K
+                        recurrenceId: J
                     }),
                     v &&
                         null != i &&
@@ -195,7 +195,7 @@ function y(e) {
                                       onGoToGuildClick: O,
                                       guildName: null == i ? void 0 : i.name,
                                       canInvite: w,
-                                      isChannelPublic: J,
+                                      isChannelPublic: K,
                                       onInviteClick: X
                                   })
                                 : (0, t.jsx)(g.ZP, {
@@ -205,7 +205,7 @@ function y(e) {
                                       isUserLurking: C,
                                       rsvped: y,
                                       canInvite: w,
-                                      isChannelPublic: J,
+                                      isChannelPublic: K,
                                       onContextMenu: M,
                                       onJoinClick: G,
                                       onRsvpClick: V,

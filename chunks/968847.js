@@ -147,14 +147,14 @@ function D(e) {
     let i = C.Z.getGuild(n.guild_id);
     return !!(null != i && i.hasFeature(Z.oNc.COMMUNITY)) && O(n.guild_id);
 }
-function G(e) {
+function w(e) {
     let { channel: t } = e,
         n = g.Z.getChannel(t.id);
     if (null == n) return !1;
     let i = C.Z.getGuild(t.guild_id);
     return !!(null != i && i.hasFeature(Z.oNc.COMMUNITY)) && O(n.guild_id);
 }
-function w(e) {
+function G(e) {
     let { channelId: t } = e,
         n = g.Z.getChannel(t);
     if (null == n) return !1;
@@ -208,24 +208,24 @@ class k extends (l = d.ZP.Store) {
                 n
             );
         },
-        CHANNEL_ACK: w,
-        CHANNEL_DELETE: G,
-        CHANNEL_LOCAL_ACK: w,
-        MESSAGE_ACK: w,
-        MESSAGE_CREATE: w,
-        MESSAGE_DELETE_BULK: w,
-        MESSAGE_DELETE: w,
+        CHANNEL_ACK: G,
+        CHANNEL_DELETE: w,
+        CHANNEL_LOCAL_ACK: G,
+        MESSAGE_ACK: G,
+        MESSAGE_CREATE: G,
+        MESSAGE_DELETE_BULK: G,
+        MESSAGE_DELETE: G,
         PASSIVE_UPDATE_V2: function (e) {
             let t = C.Z.getGuild(e.guildId);
             return !!(e.channels.length > 0 && null != t && t.hasFeature(Z.oNc.COMMUNITY)) && O(e.guildId);
         },
-        RESORT_THREADS: w,
-        THREAD_CREATE: G,
-        THREAD_DELETE: G,
+        RESORT_THREADS: G,
+        THREAD_CREATE: w,
+        THREAD_DELETE: w,
         THREAD_LIST_SYNC: j,
         THREAD_MEMBER_UPDATE: D,
         THREAD_MEMBERS_UPDATE: D,
-        THREAD_UPDATE: G,
+        THREAD_UPDATE: w,
         BULK_CLEAR_RECENTS: j,
         CATEGORY_COLLAPSE_ALL: j,
         CATEGORY_EXPAND_ALL: j,

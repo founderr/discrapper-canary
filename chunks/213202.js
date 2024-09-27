@@ -103,9 +103,9 @@ function k(e) {
         w = (0, I.Z)(n, i, d),
         F = (0, H.Z)(n, i),
         W = (0, U.Z)(n, i),
-        K = (0, b.Z)(n, i.id),
-        z = (0, g.Z)(n, i),
-        J = (0, A.Z)(n, i),
+        J = (0, b.Z)(n, i.id),
+        K = (0, g.Z)(n, i),
+        z = (0, A.Z)(n, i),
         Q = (0, L.Z)(n),
         $ = (0, c.Z)({
             id: n.id,
@@ -142,7 +142,7 @@ function k(e) {
             (0, t.jsxs)(
                 s.MenuGroup,
                 {
-                    children: [K, F, W, q, et, ee]
+                    children: [J, F, W, q, et, ee]
                 },
                 'voice-actions'
             ),
@@ -157,7 +157,7 @@ function k(e) {
             (0, t.jsxs)(
                 s.MenuGroup,
                 {
-                    children: [B, z, J, Q]
+                    children: [B, K, z, Q]
                 },
                 'admin-actions'
             ),

@@ -6,10 +6,10 @@ n.d(t, {
         return U;
     },
     OO: function () {
-        return G;
+        return w;
     },
     TH: function () {
-        return w;
+        return G;
     }
 }),
     n(47120),
@@ -181,7 +181,7 @@ function D(e) {
           })
         : (0, i.jsx)(i.Fragment, { children: t({ onClick: d }) });
 }
-function G(e) {
+function w(e) {
     let { children: t } = e,
         { guilds: n } = (0, _.C3)({
             location: 'GuildsBarClanAdminUpsellPopout',
@@ -207,7 +207,7 @@ function G(e) {
         children: t
     });
 }
-function w(e) {
+function G(e) {
     let { onActivate: t, children: n } = e,
         r = (0, o.e7)([S.Z], () => S.Z.hasJoinRequestCoackmark()),
         a = l.useCallback(() => {

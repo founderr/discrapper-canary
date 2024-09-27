@@ -42,8 +42,8 @@ var i,
     O = n(540126),
     j = n(734307),
     D = n(854444),
-    G = n(761091),
-    w = n(301342),
+    w = n(761091),
+    G = n(301342),
     U = n(471995),
     k = n(906817),
     B = n(429122),
@@ -669,7 +669,7 @@ class eu extends (i = r.PureComponent) {
                         );
                     case er.d4z.GUILD_CATEGORY:
                         if (t !== u.voiceChannelsSectionNumber) return null;
-                        return (0, l.jsx)(w.kw, { channel: v }, 'readonly-'.concat(v.id));
+                        return (0, l.jsx)(G.kw, { channel: v }, 'readonly-'.concat(v.id));
                     case er.d4z.PUBLIC_THREAD:
                     case er.d4z.PRIVATE_THREAD:
                         return (0, l.jsx)(
@@ -819,7 +819,7 @@ function eh(e) {
     });
 }
 function ep(e) {
-    let t = (0, G.Z)(e.guild),
+    let t = (0, w.Z)(e.guild),
         n = (0, u.cj)([j.Z], () => j.Z.getGuild(e.guildId, { guildActionRows: t })),
         i = (0, I.Q)('GuildChannelList');
     return (0, l.jsx)(ed, {

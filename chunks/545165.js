@@ -18,7 +18,7 @@ function i(e, n) {
     let s = l.getChannels(e)[t.Zb],
         i = [];
     for (let { channel: e } of s) {
-        let { canCreateGuildEvent: l, canManageAllEvents: s } = (0, a.G)(e),
+        let { canCreateGuildEvent: l, canManageAllEvents: s } = (0, a.Gw)(e),
             t = l || s;
         if (e.type === n) e.isGuildVoice() && t ? i.push(e) : e.isGuildStageVoice() && t && i.push(e);
     }

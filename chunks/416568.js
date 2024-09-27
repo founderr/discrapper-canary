@@ -33,8 +33,8 @@ var i = n(735250),
     O = n(358085),
     j = n(709054),
     D = n(727258),
-    G = n(605951),
-    w = n(474109),
+    w = n(605951),
+    G = n(474109),
     U = n(741616),
     k = n(187835),
     B = n(118122),
@@ -303,7 +303,7 @@ function eo(e) {
                 return null;
         }
     }
-    (0, G.Z)(eT.scrollToGuild);
+    (0, w.Z)(eT.scrollToGuild);
     let eP = o.getRoots(),
         eO = (0, v.Z)(),
         ej = (0, M.U)(),
@@ -333,7 +333,7 @@ function eo(e) {
                         role: 'tree',
                         className: et.tree,
                         children: [
-                            (0, i.jsx)(w.Z, {
+                            (0, i.jsx)(G.Z, {
                                 ref: eu,
                                 isVisible: eT.isItemVisible,
                                 onJumpTo: eT.handleJumpToGuild,
@@ -406,7 +406,7 @@ function eo(e) {
                                         })
                                     })
                                   : null,
-                            (0, i.jsx)(w.Z, {
+                            (0, i.jsx)(G.Z, {
                                 reverse: !0,
                                 ref: ed,
                                 isVisible: eT.isItemVisible,

@@ -39,7 +39,7 @@ function A(e) {
     var n, t, l, a;
     let { guildId: r, sourceFile: o, existingSound: A, onClose: b, transitionState: M, showGuildPicker: j = !1 } = e,
         [C, I] = s.useState(null !== (t = null !== (n = null == o ? void 0 : o.name) && void 0 !== n ? n : null == A ? void 0 : A.name) && void 0 !== t ? t : ''),
-        [U, w] = s.useState(null !== (l = null == A ? void 0 : A.volume) && void 0 !== l ? l : 1),
+        [w, U] = s.useState(null !== (l = null == A ? void 0 : A.volume) && void 0 !== l ? l : 1),
         [L, Z] = s.useState(null == A ? void 0 : A.emojiId),
         [R, P] = s.useState(null == A ? void 0 : A.emojiName),
         { file: T, loadAudioFromFile: B, maxVolume: k, setMaxVolume: F } = (0, _.p)(),
@@ -122,7 +122,7 @@ function A(e) {
                     readPromise: n,
                     guildId: K,
                     name: C,
-                    volume: U,
+                    volume: w,
                     emojiId: L,
                     emojiName: R
                 }),
@@ -130,7 +130,7 @@ function A(e) {
             } catch (e) {
                 throw new f.Z(e);
             }
-        }, [T, K, C, ea, q, U, L, R]),
+        }, [T, K, C, ea, q, w, L, R]),
         es = s.useCallback(async () => {
             c()(null != K, 'Cannot submit soundboard sound with no guildId'), H(!0), V(null);
             try {
@@ -139,7 +139,7 @@ function A(e) {
                           guildId: K,
                           soundId: A.soundId,
                           name: C,
-                          volume: U,
+                          volume: w,
                           emojiId: L,
                           emojiName: R
                       })
@@ -148,9 +148,9 @@ function A(e) {
             } catch (e) {
                 Q(e);
             } finally {
-                J('ready'), H(!1), w(1), F(1);
+                J('ready'), H(!1), U(1), F(1);
             }
-        }, [et, b, K, A, C, U, L, R, ei, F]);
+        }, [et, b, K, A, C, w, L, R, ei, F]);
     s.useEffect(() => {
         B(null),
             g.default.track(S.rMx.OPEN_MODAL, {
@@ -159,8 +159,8 @@ function A(e) {
             });
     }, []),
         s.useEffect(() => {
-            w(Math.min(U, k));
-        }, [U, w, k]);
+            U(Math.min(w, k));
+        }, [w, U, k]);
     let er = (0, i.jsx)(m.Z, {
         guildId: K,
         emojiId: L,
@@ -209,7 +209,7 @@ function A(e) {
                     (et || null != T) &&
                         (0, i.jsx)(N.Z, {
                             sound: A,
-                            volume: U,
+                            volume: w,
                             disabled: en,
                             onChange: W
                         }),
@@ -251,8 +251,8 @@ function A(e) {
                         className: y.section,
                         title: x.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_VOLUME,
                         children: (0, i.jsx)(d.Slider, {
-                            initialValue: U,
-                            onValueChange: (e) => w(e),
+                            initialValue: w,
+                            onValueChange: (e) => U(e),
                             minValue: 0,
                             maxValue: k
                         })

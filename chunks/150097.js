@@ -30,8 +30,8 @@ var c = n(569471),
     _ = n(723170),
     E = n(695346),
     I = n(131704),
-    T = n(433355),
-    f = n(592125),
+    f = n(433355),
+    T = n(592125),
     N = n(430824),
     g = n(19780),
     C = n(699516),
@@ -58,8 +58,8 @@ function G(e, t) {
     let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     if (null != e.flags && (0, m.yE)(e.flags, M.iLy.SUPPRESS_NOTIFICATIONS)) return !1;
-    let s = f.Z.getChannel(t);
-    e.type === M.uaV.THREAD_STARTER_MESSAGE && (s = f.Z.getChannel(null == s ? void 0 : s.parent_id));
+    let s = T.Z.getChannel(t);
+    e.type === M.uaV.THREAD_STARTER_MESSAGE && (s = T.Z.getChannel(null == s ? void 0 : s.parent_id));
     let o = O.default.getCurrentUser(),
         u = O.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
     if (
@@ -76,7 +76,7 @@ function G(e, t) {
         return !1;
     if (!i) {
         let e = S.Z.getChannelId(A.Z.getGuildId());
-        if (e === s.id || T.ZP.getCurrentSidebarChannelId(e) === s.id) return !1;
+        if (e === s.id || f.ZP.getCurrentSidebarChannelId(e) === s.id) return !1;
     }
     if (C.Z.isBlockedForMessage(e) || (void 0 !== e.activity_instance && null != e.interaction && e.interaction.user.id === o.id)) return !1;
     if (I.Ec.has(s.type)) {
@@ -109,8 +109,8 @@ function G(e, t) {
 function U(e, t) {
     var n;
     if (S.Z.getChannelId(A.Z.getGuildId()) !== t) return !1;
-    let i = f.Z.getChannel(t);
-    e.type === M.uaV.THREAD_STARTER_MESSAGE && (i = f.Z.getChannel(null == i ? void 0 : i.parent_id));
+    let i = T.Z.getChannel(t);
+    e.type === M.uaV.THREAD_STARTER_MESSAGE && (i = T.Z.getChannel(null == i ? void 0 : i.parent_id));
     let l = O.default.getCurrentUser(),
         s = O.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
     return !(null == i || null == l || null == s || i.isManaged() || s.hasFlag(M.xW$.SPAMMER) || C.Z.isBlockedForMessage(e) || s.id === l.id || Z.Z.getStatus() === M.Skl.DND || E.QZ.getSetting() || h.ZP.allowNoMessages(i)) && !0;
@@ -163,8 +163,8 @@ function b(e, t, n) {
         case M.d4z.ANNOUNCEMENT_THREAD:
         case M.d4z.PUBLIC_THREAD:
         case M.d4z.PRIVATE_THREAD:
-            let c = f.Z.getChannel(e.parent_id);
-            t.type === M.uaV.THREAD_STARTER_MESSAGE && null != c ? (r = F(r, c, f.Z.getChannel(c.parent_id))) : (0, d.Z)(t) ? null != N.Z.getGuild(e.getGuildId()) && (r = F(r, e, c)) : (r = F(r, e, c));
+            let c = T.Z.getChannel(e.parent_id);
+            t.type === M.uaV.THREAD_STARTER_MESSAGE && null != c ? (r = F(r, c, T.Z.getChannel(c.parent_id))) : (0, d.Z)(t) ? null != N.Z.getGuild(e.getGuildId()) && (r = F(r, e, c)) : (r = F(r, e, c));
             break;
         case M.d4z.GROUP_DM:
             !(e.isManaged() && n.bot && r === (0, i.F6)(e, O.default, C.Z)) && (r = ''.concat(r, ' (').concat((0, i.F6)(e, O.default, C.Z, !0), ')'));
@@ -191,8 +191,8 @@ function b(e, t, n) {
     else if (t.type === M.uaV.PREMIUM_REFERRAL) o = L.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY_SHORT.format({ username: p.ZP.getName(n) });
     else if (null != t.poll) o = L.Z.Messages.POLL_SENT_NOTIFICATION.format({ question: t.poll.question.text });
     else if (t.type === M.uaV.POLL_RESULT) {
-        var I, T, g;
-        let e = null === (g = t.embeds) || void 0 === g ? void 0 : null === (T = g[0]) || void 0 === T ? void 0 : null === (I = T.fields) || void 0 === I ? void 0 : I.find((e) => ('name' in e ? e.name : e.rawName) === 'poll_question_text'),
+        var I, f, g;
+        let e = null === (g = t.embeds) || void 0 === g ? void 0 : null === (f = g[0]) || void 0 === f ? void 0 : null === (I = f.fields) || void 0 === I ? void 0 : I.find((e) => ('name' in e ? e.name : e.rawName) === 'poll_question_text'),
             n = null != e ? ('value' in e ? e.value : e.rawValue) : '';
         o = L.Z.Messages.POLL_RESULTS_NOTIFICATION.format({ question: n });
     } else o = 0 !== _.length && e.type === M.d4z.DM && !n.bot && _.startsWith('> -# *') ? (o = u.ZP.unparse(_, e.id, !0)).substring(0, 1) + o.substring(4) : u.ZP.unparse(_, e.id, !0);

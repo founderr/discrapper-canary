@@ -29,7 +29,7 @@ var n = a(735250),
     E = a(804553),
     T = a(413135).Buffer;
 function y(e) {
-    let { clip: t, channelId: i, clipName: y, onSetClipName: N, onClose: w } = e,
+    let { clip: t, channelId: i, clipName: y, onSetClipName: w, onClose: N } = e,
         { videoPlayerRef: L, cropData: k, voiceAudioEnabled: R, setVoiceAudioEnabled: M, applicationAudioEnabled: P, setApplicationAudioEnabled: Z } = (0, _.S)(),
         [A, F] = l.useState(null),
         { onShareClick: D } = (0, x.Z)({
@@ -49,7 +49,7 @@ function y(e) {
             (0, s.openModalLazy)(async () => {
                 let { default: i } = await Promise.all([a.e('56035'), a.e('55876')]).then(a.bind(a, 758961)),
                     r = (null == l ? void 0 : l.guild_id) != null ? p.Z.getGuild(l.guild_id) : null,
-                    o = null != r && (0, c.G)(r, v.Z, f.default).canCreateExpressions,
+                    o = null != r && (0, c.Gw)(r, v.Z, f.default).canCreateExpressions,
                     s = null == y || '' === y ? (0, j.yl)(b.default.extractTimestamp(t.id)) : y,
                     u = s.slice(0, S.Ek);
                 return (t) =>
@@ -97,7 +97,7 @@ function y(e) {
                             await a.onClose();
                         },
                         onAfterDelete: async () => {
-                            await a.onClose(), w();
+                            await a.onClose(), N();
                         }
                     });
             });
@@ -113,7 +113,7 @@ function y(e) {
                         title: I.Z.Messages.CLIPS_EDIT_TITLE,
                         children: (0, n.jsx)(s.TextInput, {
                             onChange: (e) => {
-                                '' === e ? N(void 0) : N(e);
+                                '' === e ? w(void 0) : w(e);
                             },
                             value: y,
                             minLength: j.XH,
@@ -179,7 +179,7 @@ function y(e) {
                         disabled: null != A,
                         wrapperClassName: r()(E.clipFormFooterButton, { [E.submittingWrapperFix]: null != A }),
                         color: s.Button.Colors.PRIMARY,
-                        onClick: w,
+                        onClick: N,
                         children: I.Z.Messages.SAVE_CHANGES
                     }),
                     (0, n.jsx)(s.Button, {

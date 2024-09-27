@@ -50,8 +50,8 @@ function y() {
             favoriteServerMuted: S.Z.favoriteServerMuted
         })),
         D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
-        G = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
-        w = (0, g.Z)((e) => e.guildId) === A.I_8,
+        w = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
+        G = (0, g.Z)((e) => e.guildId) === A.I_8,
         { badge: U, unread: k } = (0, Z.Z)(j),
         B = (function (e) {
             let t = (0, o.e7)([E.Z], () => E.Z.getVoiceChannelId()),
@@ -94,7 +94,7 @@ function y() {
     return (0, i.jsxs)(f.H, {
         children: [
             (0, i.jsx)(p.Z, {
-                selected: w,
+                selected: G,
                 hovered: y,
                 unread: k && !O,
                 className: R.pill
@@ -103,7 +103,7 @@ function y() {
                 onShow: H,
                 children: (0, i.jsx)(T.S, {
                     children: (0, i.jsx)(c.BlobMask, {
-                        selected: w || y,
+                        selected: G || y,
                         upperBadge: B,
                         lowerBadge: V,
                         children: (0, i.jsx)(c.NavItem, {
@@ -116,11 +116,11 @@ function y() {
                                 pathname: A.Z5c.CHANNEL(A.I_8, D),
                                 state: L
                             },
-                            selected: w || y,
+                            selected: G || y,
                             onMouseEnter: () => P(!0),
                             onMouseLeave: () => P(!1),
                             onMouseDown: function () {
-                                if (null != G) u.Z.preload(G.guild_id, G.id);
+                                if (null != w) u.Z.preload(w.guild_id, w.id);
                             },
                             onContextMenu: function (e) {
                                 (0, d.jW)(e, async () => {

@@ -46,7 +46,7 @@ function y(e) {
             let e = {};
             for (let n of m.ZP.getFlattenedGuildIds()) {
                 let t = d.Z.getGuild(n);
-                if (null != t) (0, c.G)(t, f.Z, h.default).canCreateExpressions && (e[t.id] = t);
+                if (null != t) (0, c.Gw)(t, f.Z, h.default).canCreateExpressions && (e[t.id] = t);
             }
             return e;
         }),

@@ -42,10 +42,10 @@ function I(e) {
                     [n.channel_id, n.id]
                 ),
                 c = (0, g.useMessageReminderDurationSuggestions)({ createReminder: o }),
-                { dueInText: E } = (0, d.A)({
+                { dueInText: E } = (0, d.AT)({
                     dueAt: null == t ? void 0 : t.saveData.dueAt,
                     now: s,
-                    type: d.h.LONG
+                    type: d.hQ.LONG
                 });
             return (null == t ? void 0 : t.saveData.dueAt) == null
                 ? (0, i.jsx)(l.MenuGroup, {

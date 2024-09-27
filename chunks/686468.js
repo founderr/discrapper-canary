@@ -76,7 +76,7 @@ function x(e) {
     let { channel: t, onContinueClick: n } = e,
         a = (0, s.e7)([m.Z], () => m.Z.can(p.yP, t), [t]),
         r = t.guild_id,
-        { canCreateGuildEvent: o } = (0, h.X)(t),
+        { canCreateGuildEvent: o } = (0, h.XJ)(t),
         x = (0, f.Z)(t.id),
         { usersInSummary: S } = (0, _.Z)(t.id);
     return (0, i.jsxs)('div', {

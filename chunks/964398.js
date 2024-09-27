@@ -135,13 +135,13 @@ t.Z = l.memo(function (e) {
         D = l.useCallback(() => {
             (b.current = null), E(null);
         }, [E]),
-        G = l.useCallback(
+        w = l.useCallback(
             (e) => {
                 D(), (T.current = e);
             },
             [D]
         ),
-        w = l.useCallback((e, t, n) => {
+        G = l.useCallback((e, t, n) => {
             if (T.current) {
                 L({
                     x: 0,
@@ -182,7 +182,7 @@ t.Z = l.memo(function (e) {
                             x: e.clientX,
                             y: e.clientY
                         };
-                    if ((w(a, r, Math.max(t, n)), T.current)) {
+                    if ((G(a, r, Math.max(t, n)), T.current)) {
                         null != I && D();
                         return;
                     }
@@ -198,7 +198,7 @@ t.Z = l.memo(function (e) {
                     }
                     D();
                 }, 16),
-            [I, w, D, j, A, n, t]
+            [I, G, D, j, A, n, t]
         ),
         B = l.useCallback(
             (e) => {
@@ -296,8 +296,8 @@ t.Z = l.memo(function (e) {
                                 C &&
                                     (0, i.jsx)('circle', {
                                         className: u.chatWheelDeadZone,
-                                        onMouseEnter: () => G(!0),
-                                        onMouseLeave: () => G(!1),
+                                        onMouseEnter: () => w(!0),
+                                        onMouseLeave: () => w(!1),
                                         cx: 144,
                                         cy: 144,
                                         r: 28.8
@@ -314,8 +314,8 @@ t.Z = l.memo(function (e) {
                         C &&
                             (0, i.jsx)('circle', {
                                 className: u.chatWheelDeadZone,
-                                onMouseEnter: () => G(!0),
-                                onMouseLeave: () => G(!1),
+                                onMouseEnter: () => w(!0),
+                                onMouseLeave: () => w(!1),
                                 cx: 144,
                                 cy: 144,
                                 r: 28.8,

@@ -80,7 +80,7 @@ function x(e) {
     let D = l.useCallback((e) => {
             (R.current = e), y(null == e ? void 0 : e.soundId);
         }, []),
-        G = l.useCallback(
+        w = l.useCallback(
             (e) => {
                 if (null == e) {
                     D(null);
@@ -91,7 +91,7 @@ function x(e) {
             },
             [D, A]
         ),
-        w = l.useCallback(
+        G = l.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = A[e];
@@ -127,8 +127,8 @@ function x(e) {
                   itemHeight: 52,
                   showDeadZoneIndicator: !v,
                   activeItem: L,
-                  onItemSelect: G,
-                  onItemAction: w,
+                  onItemSelect: w,
+                  onItemAction: G,
                   interactive: Z,
                   children: U
               })

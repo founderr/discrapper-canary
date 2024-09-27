@@ -32,7 +32,7 @@ var t = i(442837),
 function M(e) {
     let { guild: n, channel: M, guildScheduledEvent: k, isActive: P, recurrenceId: G, onActionTaken: D } = e,
         { scheduled_start_time: S, id: y, entity_type: A, guild_id: R } = k,
-        { canManageGuildEvent: U } = (0, u.X)(null != M ? M : n),
+        { canManageGuildEvent: U } = (0, u.XJ)(null != M ? M : n),
         b = U(k),
         V = (0, N.ZP)(k),
         O = (0, f.T)(null == M ? void 0 : M.id, k.id),
@@ -40,11 +40,11 @@ function M(e) {
         w = (0, t.e7)([v.Z], () => (null == M ? !void 0 : !M.isGuildVocal()) || v.Z.can(j.Plq.CONNECT, M), [M]),
         z = (0, c.J)(R),
         B = (0, x.Z)(G, y);
-    function X(e) {
+    function J(e) {
         e.stopPropagation(), (0, p.Z)(y, G, R);
     }
-    async function J(e) {
-        e.stopPropagation(), await s.Z.joinGuild(R), h.Z.addConditionalChangeListener(() => null == h.Z.getGuild(R) || (!P && X(e), W(e), !1));
+    async function X(e) {
+        e.stopPropagation(), await s.Z.joinGuild(R), h.Z.addConditionalChangeListener(() => null == h.Z.getGuild(R) || (!P && J(e), W(e), !1));
     }
     function W(e) {
         e.stopPropagation();
@@ -95,7 +95,7 @@ function M(e) {
                       (null == M ? void 0 : M.isGuildStageVoice()) ? ((0, E.Cq)(M), null == D || D()) : (null == M ? void 0 : M.isGuildVoice()) && (m.Z.joinVoiceEvent(M.guild_id, M.id), null == D || D());
                   }
                 : void 0,
-        onRsvpClick: X,
+        onRsvpClick: J,
         onStartClick:
             b && H && !(null == B ? void 0 : B.is_canceled)
                 ? function (e) {
@@ -160,7 +160,7 @@ function M(e) {
                       );
                   }
                 : void 0,
-        onJoinGuildClick: J,
+        onJoinGuildClick: X,
         onGoToGuildClick: W
     };
 }

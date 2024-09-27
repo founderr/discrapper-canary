@@ -14,7 +14,7 @@ let o = 'bandwidth_estimation',
         treatments: [
             {
                 id: 1,
-                label: 'Golive Simulcast without prober 480p@500k',
+                label: 'Golive Simulcast without prober 720p@500k',
                 config: {
                     enabled: !0,
                     fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/',
@@ -24,7 +24,7 @@ let o = 'bandwidth_estimation',
             },
             {
                 id: 2,
-                label: 'Golive Simulcast 480p@500k',
+                label: 'Golive Simulcast 720p@500k',
                 config: {
                     enabled: !0,
                     fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer,worker-pacer-probe',
@@ -52,7 +52,7 @@ let o = 'bandwidth_estimation',
             },
             {
                 id: 5,
-                label: 'Golive Simulcast 480p@750k',
+                label: 'Golive Simulcast 720p@750k',
                 config: {
                     enabled: !0,
                     fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer-probe,worker-lq-floor-750k',
@@ -62,7 +62,7 @@ let o = 'bandwidth_estimation',
             },
             {
                 id: 6,
-                label: 'Golive Simulcast 480p@1000k',
+                label: 'Golive Simulcast 720p@1000k',
                 config: {
                     enabled: !0,
                     fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer-probe,worker-lq-floor-1000k',

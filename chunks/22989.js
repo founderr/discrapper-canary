@@ -29,7 +29,7 @@ var n = a(735250),
     g = a(948061);
 function C(e) {
     var t, a, C, _, j, S, I, E;
-    let { clip: T, channelId: y, transitionState: N, onClose: w } = e,
+    let { clip: T, channelId: y, transitionState: w, onClose: N } = e,
         [L, k] = l.useState(!0),
         [R, M] = l.useState(null),
         [P, Z] = l.useState(null),
@@ -40,7 +40,7 @@ function C(e) {
             try {
                 e = await s.Z.clips.loadClip(T.filepath);
             } catch {
-                w(),
+                N(),
                     o.Z.show({
                         title: x.Z.Messages.CLIPS_LOAD_ERROR_TITLE,
                         body: x.Z.Messages.CLIPS_LOAD_ERROR_BODY
@@ -53,7 +53,7 @@ function C(e) {
                 l = URL.createObjectURL(new Blob([e.data], { type: 'video/mp4' }));
             Z(n), M(l);
         })();
-    }, [T.filepath, w]),
+    }, [T.filepath, N]),
         l.useEffect(
             () => () => {
                 null != R && URL.revokeObjectURL(R);
@@ -122,7 +122,7 @@ function C(e) {
         impression: { impressionName: i.ImpressionNames.CLIP_EDITOR_VIEWED },
         size: r.ModalSize.DYNAMIC,
         className: g.modalRoot,
-        transitionState: N,
+        transitionState: w,
         children: (0, n.jsx)(d.Gt, {
             value: A,
             children: (0, n.jsx)(r.ModalContent, {
@@ -142,7 +142,7 @@ function C(e) {
                                           isLoading: L,
                                           onDoneLoading: () => k(!1),
                                           audioURL: P,
-                                          transitionState: N
+                                          transitionState: w
                                       }),
                                       !L &&
                                           (0, n.jsx)(b.Z, {
@@ -150,7 +150,7 @@ function C(e) {
                                               onSetClipName: W,
                                               clipName: z,
                                               clip: T,
-                                              onClose: w
+                                              onClose: N
                                           })
                                   ]
                               })

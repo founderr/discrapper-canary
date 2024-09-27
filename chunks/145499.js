@@ -67,7 +67,7 @@ let L = (e, t) => (e < (0, m.A3)(x.Eu4.NONE) ? x.Eu4.NONE : e < (0, m.A3)(x.Eu4.
     M = (e) => {
         let { guild: t } = e,
             { location: n } = (0, d.O)(),
-            { canCreateExpressions: a } = (0, E.X)(t);
+            { canCreateExpressions: a } = (0, E.XJ)(t);
         return (0, s.jsx)(o.Button, {
             size: o.Button.Sizes.SMALL,
             color: o.Button.Colors.BRAND,
@@ -172,7 +172,7 @@ t.Z = (e) => {
         renderTier: (e) => {
             let a,
                 { isAnimatedTo: i, onSetRef: l, tier: c, tiers: u, tierIndex: I } = e,
-                { canCreateExpressions: T, canManageGuildExpression: N } = (0, E.G)(t),
+                { canCreateExpressions: T, canManageGuildExpression: N } = (0, E.Gw)(t),
                 S = u[I - 1],
                 g = null != S ? (0, m.A3)(S.tier) : 0,
                 f = (0, m.A3)(c.tier, t),

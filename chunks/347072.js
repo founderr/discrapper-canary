@@ -14,7 +14,7 @@ var i = n(120356),
     c = n(5477);
 function d(e) {
     let { guild: t, focused: n, onSelectItem: i, refreshEnabled: d, ..._ } = e,
-        { canCreateExpressions: E } = (0, s.X)(t);
+        { canCreateExpressions: E } = (0, s.XJ)(t);
     return (0, r.jsx)(o.Tooltip, {
         text: u.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_BUTTON_DISABLED,
         shouldShow: !E,

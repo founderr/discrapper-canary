@@ -9,10 +9,10 @@ var r = n(735250),
     o = n(533043);
 function s(e) {
     let { reminder: t, throttledNow: n } = e,
-        { dueInText: s, isOverdue: l } = (0, a.A)({
+        { dueInText: s, isOverdue: l } = (0, a.AT)({
             dueAt: null == t ? void 0 : t.saveData.dueAt,
             now: n,
-            type: a.h.SHORT
+            type: a.hQ.SHORT
         });
     if (null == t.saveData.dueAt) return null;
     let u = l ? 'text-danger' : 'text-normal';

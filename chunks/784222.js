@@ -76,7 +76,7 @@ let k = (e) => {
         { topEmojis: Y, newlyAddedEmojis: j } = (0, U.Z)(g, i),
         W = (0, _.Wu)([O.ZP], () => O.ZP.getFlattenedGuildIds(), []),
         K = (0, _.e7)([f.ZP], () => f.ZP.expandedSectionsByGuildIds),
-        { canCreateExpressions: z } = (0, S.X)(T),
+        { canCreateExpressions: z } = (0, S.XJ)(T),
         q = (0, _.e7)([R.default], () => R.default.getCurrentUser()),
         Q = (0, L.I5)(q),
         X = (0, _.e7)([C.ZP], () => C.ZP.inReverseTrial()),

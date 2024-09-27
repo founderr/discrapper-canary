@@ -28,7 +28,7 @@ var l,
             [A, b] = s.useState(0),
             [M, j] = s.useState(!1),
             [C, I] = s.useState(!1),
-            [U, w] = s.useState(!1),
+            [w, U] = s.useState(!1),
             [L, Z] = s.useState(0),
             [R, P] = s.useState(-1),
             T = s.useMemo(() => L / p.fineTuningScale, [p.fineTuningScale, L]);
@@ -48,7 +48,7 @@ var l,
                                 I(!0);
                                 break;
                             case 2:
-                                w(!0);
+                                U(!0);
                         }
                 },
                 [t]
@@ -62,7 +62,7 @@ var l,
                         I(!1);
                         break;
                     case 2:
-                        w(!1);
+                        U(!1);
                 }
                 P(-1);
             }, []),
@@ -85,12 +85,12 @@ var l,
             ),
             H = s.useCallback(
                 (e) => {
-                    if (null == N || !U) return;
+                    if (null == N || !w) return;
                     let n = parseInt(e.target.value),
                         t = n > S ? n : S;
                     l((0, f.my)(S)), E(S), b(t);
                 },
-                [N, l, U, S]
+                [N, l, w, S]
             );
         return (
             s.useEffect(() => {
@@ -118,12 +118,12 @@ var l,
             s.useEffect(() => {
                 if (p.fineTuningDelay <= 0) return;
                 let e = setTimeout(() => {
-                    M && S == S && -1 === R ? P(S) : U && A == A && -1 === R ? P(A) : C && y == y && -1 === R && P(y);
+                    M && S == S && -1 === R ? P(S) : w && A == A && -1 === R ? P(A) : C && y == y && -1 === R && P(y);
                 }, p.fineTuningDelay);
                 return () => {
                     clearTimeout(e);
                 };
-            }, [p.fineTuningDelay, U, A, R, C, y, M, S]),
+            }, [p.fineTuningDelay, w, A, R, C, y, M, S]),
             (0, i.jsxs)('div', {
                 className: u()(g.timeline, { [g.initialized]: _ }),
                 children: [
@@ -182,7 +182,7 @@ var l,
                             (0, i.jsxs)('div', {
                                 className: u()(g.handleFrame, {
                                     [g.startDragging]: M,
-                                    [g.endDragging]: U
+                                    [g.endDragging]: w
                                 }),
                                 style: {
                                     left: ''.concat((0, f.pN)(S, R, T, L), '%'),
@@ -218,7 +218,7 @@ var l,
                             (0, i.jsx)('div', {
                                 className: g.playheadTrack,
                                 children: (0, i.jsx)('div', {
-                                    className: u()(g.playhead, { [g.dragging]: C || M || U || n }),
+                                    className: u()(g.playhead, { [g.dragging]: C || M || w || n }),
                                     style: { left: ''.concat((0, f.pN)(y, R, T, L), '%') }
                                 })
                             })

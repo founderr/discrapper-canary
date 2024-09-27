@@ -112,22 +112,22 @@ class c {
             ? ((this.goliveSimulcastEnabled = !0),
               (this.goliveSimulcastLQBitrate = a.pk),
               (this.goliveSimulcastLQRes = {
-                  width: 854,
-                  height: 480
+                  width: 1280,
+                  height: 720
               }))
             : e.has(a.V8.GOLIVE_SIMULCAST_480P_750K)
               ? ((this.goliveSimulcastEnabled = !0),
                 (this.goliveSimulcastLQBitrate = 750000),
                 (this.goliveSimulcastLQRes = {
-                    width: 854,
+                    width: 1280,
                     height: 480
                 }))
               : e.has(a.V8.GOLIVE_SIMULCAST_480P_1000K) &&
                 ((this.goliveSimulcastEnabled = !0),
                 (this.goliveSimulcastLQBitrate = 1000000),
                 (this.goliveSimulcastLQRes = {
-                    width: 854,
-                    height: 480
+                    width: 1280,
+                    height: 720
                 }));
     }
     getVideoQuality(e) {
@@ -215,8 +215,8 @@ class c {
             (this.goliveSimulcastEnabled = !1),
             (this.goliveSimulcastLQBitrate = a.pk),
             (this.goliveSimulcastLQRes = {
-                width: 854,
-                height: 480
+                width: 1280,
+                height: 720
             });
     }
 }
