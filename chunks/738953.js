@@ -135,7 +135,8 @@ function x(e) {
                                         }),
                                         (0, i.jsx)(v.Z, {
                                             userId: t.id,
-                                            className: w.toast
+                                            className: w.toast,
+                                            onClose: B
                                         }),
                                         (0, i.jsx)(g.Z, {
                                             location: 'UserProfilePopout',
