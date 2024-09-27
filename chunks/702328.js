@@ -229,7 +229,8 @@ t.Z = (e) => {
                 })
             })
         }),
-        eh = (0, s.jsxs)('div', {
+        eh = eM && r === W.EZ.UserSettings,
+        ex = (0, s.jsxs)('div', {
             className: i()(Y.container, { [Y.settingsContainer]: !n }),
             'data-cy': 'tier-0-marketing-page',
             children: [
@@ -269,8 +270,8 @@ t.Z = (e) => {
                     className: Y.promoBannerContainer,
                     children: [(0, s.jsx)(h.Z, { isFullScreen: n }), n && eT && (0, s.jsx)(x.Z, { localizedPricingPromo: eu })]
                 }),
-                eM && r === W.EZ.UserSettings && (0, s.jsx)(P.d, { className: Y.nitroweenGiftCard }),
                 eS,
+                eh && (0, s.jsx)(P.d, { className: Y.nitroweenGiftCard }),
                 (0, s.jsx)($, {
                     isFullscreen: n,
                     inOfferExperience: em,
@@ -340,7 +341,7 @@ t.Z = (e) => {
                   (0, s.jsx)(d.AdvancedScrollerAuto, {
                       className: Y.scroller,
                       ref: U,
-                      children: eh
+                      children: ex
                   }),
                   (0, s.jsx)(F.Z, {
                       previousComponent: k.MQ.MARKETING,
@@ -350,5 +351,5 @@ t.Z = (e) => {
                   })
               ]
           })
-        : eh;
+        : ex;
 };
