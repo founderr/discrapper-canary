@@ -20,8 +20,8 @@ var i,
     _ = n(287734),
     E = n(802098),
     I = n(933557),
-    T = n(456269),
-    f = n(15274),
+    f = n(456269),
+    T = n(15274),
     N = n(336197),
     g = n(355298),
     C = n(601992),
@@ -142,16 +142,16 @@ X(es, 'displayName', 'NotificationStore'),
                       if (d) return !1;
                       let _ = p.Z.getChannel(o),
                           I = F.default.getUser(null === (t = u.author) || void 0 === t ? void 0 : t.id),
-                          T = F.default.getCurrentUser();
+                          f = F.default.getCurrentUser();
                       if (null == _ || null == I) return !1;
-                      let f = (0, k.eF)(u, o, !$),
+                      let T = (0, k.eF)(u, o, !$),
                           N = R.Z.getNotifyMessagesInSelectedChannel() && (0, k.N_)(u, o);
-                      if ((!f && !N) || (u.type === x.uaV.CHANGELOG && (null == u.changelog_id || E.Z.latestChangelogId() !== u.changelog_id))) return !1;
+                      if ((!T && !N) || (u.type === x.uaV.CHANGELOG && (null == u.changelog_id || E.Z.latestChangelogId() !== u.changelog_id))) return !1;
                       let g = !R.Z.isSoundDisabled(K),
-                          Z = Y.ZP.canUseCustomNotificationSounds(T),
+                          Z = Y.ZP.canUseCustomNotificationSounds(f),
                           O = S.Y.getCurrentConfig({ location: 'NotificationStore' }).enabled,
                           m = Z && O && g ? (null !== (s = (0, A.bb)(null !== (l = _.guild_id) && void 0 !== l ? l : x.aIL, o)) && void 0 !== s ? s : (0, A.iD)(_.guild_id)) : void 0;
-                      if ((N && (g && B.GN('message3', 0.4, void 0, m), !$)) || !f) return !1;
+                      if ((N && (g && B.GN('message3', 0.4, void 0, m), !$)) || !T) return !1;
                       let v = n(808506).Z,
                           D = n(237997).Z;
                       if (null != v.getFocusedPID() && D.getTextChatNotificationMode() === x.Ypu.ENABLED && !P.Z.disableNotifications) return !1;
@@ -349,7 +349,7 @@ X(es, 'displayName', 'NotificationStore'),
                                         },
                                         {
                                             onClick() {
-                                                d.Z.transitionToGuildSync(e.guild_id), (0, f.bO)({ eventId: e.id });
+                                                d.Z.transitionToGuildSync(e.guild_id), (0, T.bO)({ eventId: e.id });
                                             }
                                         }
                                     );
@@ -361,7 +361,7 @@ X(es, 'displayName', 'NotificationStore'),
                       if (ei()) return !1;
                       let l = p.Z.getChannel(n.parent_id);
                       if (null == l || !x.TPd.GUILD_THREADS_ONLY.has(l.type) || !i || !(0, k.FI)(n, l, !$)) return !1;
-                      let { author: s, user: o } = (0, T.MC)(n);
+                      let { author: s, user: o } = (0, f.MC)(n);
                       if (null == o) return !1;
                       let a = M.Z.getGuild(l.guild_id);
                       if (null == a) return !1;
@@ -445,8 +445,9 @@ X(es, 'displayName', 'NotificationStore'),
                       (j = t), ee.clear(), n.forEach((e) => e.stage_instances.forEach((e) => ee.add(e.id)));
                   },
                   MESSAGE_REMINDER_DUE: function (e) {
-                      let { savedMessage: t } = e,
-                          n = t.message;
+                      let { savedMessage: t } = e;
+                      if (ei()) return !1;
+                      let n = t.message;
                       if (null == n || null == n.author) return !1;
                       let i = p.Z.getChannel(t.saveData.channelId);
                       if (null == i) return !1;
