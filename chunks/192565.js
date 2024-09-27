@@ -20,7 +20,7 @@ var i = n(735250),
     g = n(359380),
     p = n(308083),
     T = n(689938);
-function S(e) {
+function f(e) {
     let t = (0, o.Wg)(),
         { progress: n, errors: i } = (0, s.cj)([o.ZP], () => {
             var n;
@@ -36,13 +36,13 @@ function S(e) {
         handleClanUpdate: a.useCallback((t) => l._9(e, t), [e])
     };
 }
-let f = {
+let S = {
     [p.Wy.GAMES]: function (e) {
         let { guildId: t } = e;
         a.useEffect(() => {
             r.Z.getDetectableGames();
         }, []);
-        let { progress: n, errors: s, handleClanUpdate: l } = S(t);
+        let { progress: n, errors: s, handleClanUpdate: l } = f(t);
         return (0, i.jsx)(u.Z, {
             title: T.Z.Messages.CLAN_SETUP_GAMES_TITLE,
             description: T.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
@@ -55,7 +55,7 @@ let f = {
     },
     [p.Wy.PLAYSTYLE]: function (e) {
         let { guildId: t } = e,
-            { progress: n, errors: a, handleClanUpdate: s } = S(t);
+            { progress: n, errors: a, handleClanUpdate: s } = f(t);
         return (0, i.jsx)(E.Z, {
             title: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
             description: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
@@ -66,7 +66,7 @@ let f = {
     },
     [p.Wy.UTILITY_TRAITS]: function (e) {
         let { guildId: t } = e,
-            { progress: n, handleClanUpdate: a } = S(t);
+            { progress: n, handleClanUpdate: a } = f(t);
         return (0, i.jsx)(g.Z, {
             guildId: t,
             title: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
@@ -77,7 +77,7 @@ let f = {
     },
     [p.Wy.INTERESTS]: function (e) {
         let { guildId: t } = e,
-            { progress: n, errors: a, handleClanUpdate: s } = S(t);
+            { progress: n, errors: a, handleClanUpdate: s } = f(t);
         return (0, i.jsx)(_.Z, {
             guildId: t,
             handleUpdate: s,
@@ -87,7 +87,7 @@ let f = {
     },
     [p.Wy.DESCRIPTION]: function (e) {
         let { guildId: t } = e,
-            { progress: n, errors: a, handleClanUpdate: s } = S(t);
+            { progress: n, errors: a, handleClanUpdate: s } = f(t);
         return (0, i.jsx)(d.Z, {
             guildId: t,
             handleUpdate: s,
@@ -97,7 +97,7 @@ let f = {
     },
     [p.Wy.CUSTOMIZE_TAG_BADGE]: function (e) {
         let { guildId: t } = e,
-            { progress: n, errors: a, handleClanUpdate: s } = S(t);
+            { progress: n, errors: a, handleClanUpdate: s } = f(t);
         return (0, i.jsx)(m.Z, {
             handleUpdate: s,
             tag: n.tag,
@@ -110,7 +110,7 @@ let f = {
     },
     [p.Wy.CUSTOMIZE_BANNER]: function (e) {
         let { guildId: t } = e,
-            { progress: n, handleClanUpdate: a } = S(t);
+            { progress: n, handleClanUpdate: a } = f(t);
         return (0, i.jsx)(c.Z, {
             handleUpdate: a,
             progress: n,
@@ -119,7 +119,7 @@ let f = {
     },
     [p.Wy.MEMBER_APPLICATION]: function (e) {
         let { guildId: t } = e,
-            { errors: n } = S(t);
+            { errors: n } = f(t);
         return (0, i.jsx)(h.Z, {
             guildId: t,
             error: null == n ? void 0 : n.verificationForm
@@ -130,7 +130,7 @@ function C(e) {
     return e.currentStep.toString();
 }
 function N(e) {
-    let t = f[e.currentStep];
+    let t = S[e.currentStep];
     return (0, i.jsx)(t, { guildId: e.guildId });
 }
 function A(e) {

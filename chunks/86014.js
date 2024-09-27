@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(283293),
     p = n(84615),
     T = n(207796),
-    S = n(895068),
-    f = n(308083),
+    f = n(895068),
+    S = n(308083),
     C = n(689938),
     N = n(641388);
 function A(e) {
@@ -41,7 +41,7 @@ function A(e) {
             [l]
         ),
         g = n && l.length > 0,
-        S = a.useCallback(() => {
+        f = a.useCallback(() => {
             (0, d._9)({
                 guildId: E,
                 location: s ? c.Z.GLOBAL_DISCOVERY : c.Z.CLAN_DISCOVERY
@@ -54,7 +54,7 @@ function A(e) {
                             guildId: E
                         });
                     },
-                    { layerKey: f.Pv }
+                    { layerKey: S.Pv }
                 );
         }, [E, s]),
         A = a.useMemo(
@@ -101,7 +101,7 @@ function A(e) {
                                       size: o.ButtonSizes.MEDIUM,
                                       color: o.ButtonColors.BRAND,
                                       className: N.heroButton,
-                                      onClick: S,
+                                      onClick: f,
                                       children: (0, i.jsx)(o.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
@@ -112,7 +112,7 @@ function A(e) {
                           ]
                       })
                     : null,
-            [n, l.length, I, E, S]
+            [n, l.length, I, E, f]
         );
     return (0, i.jsxs)('div', {
         className: r()(N.contentCtaContainer, { [N.contentCtaContainerSpacing]: !s }),
@@ -120,14 +120,14 @@ function A(e) {
     });
 }
 t.Z = a.memo(function (e) {
-    let { width: t, paddingVertical: n = 16, paddingHorizontal: s = 32, variant: r = S.Bj.DEFAULT, onScroll: c, withAdminContent: d = !1, inGlobalDiscovery: u } = e,
+    let { width: t, paddingVertical: n = 16, paddingHorizontal: s = 32, variant: r = f.Bj.DEFAULT, onScroll: c, withAdminContent: d = !1, inGlobalDiscovery: u } = e,
         _ = a.useRef(null),
         h = (0, T.GN)((e) => e.completedNux, l.Z),
         p = a.useCallback(() => {
             var e;
             null === (e = _.current) || void 0 === e || e.scrollToTop();
         }, []),
-        f = a.useMemo(
+        S = a.useMemo(
             () =>
                 (0, i.jsx)(A, {
                     inGlobalDiscovery: u,
@@ -148,11 +148,11 @@ t.Z = a.memo(function (e) {
                     children: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE_2.format({})
                 }),
                 description: h ? C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION_NUX_COMPLETED : C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
-                button: f,
+                button: S,
                 children: (0, i.jsx)(E.Z, {})
             }),
             (0, i.jsx)(I.Z, {
-                children: (0, i.jsx)(S.ZP, {
+                children: (0, i.jsx)(f.ZP, {
                     width: t,
                     onUpdatePage: p,
                     paddingHorizontal: s,

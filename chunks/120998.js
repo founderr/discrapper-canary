@@ -79,18 +79,18 @@ class u extends (i = s.PureComponent) {
                 let p = Math.floor(i.width / (g - 3)),
                     T = 0.5 * p;
                 h.translate(p - p * _, 0), h.beginPath();
-                let S = -p;
+                let f = -p;
                 a.forEach((e, i) => {
                     (t = {
-                        x: S,
+                        x: f,
                         y: (m * e) / E
                     }),
                         0 === i ? h.moveTo(t.x, t.y) : h.bezierCurveTo(n.x + T, n.y, t.x - T, t.y, t.x, t.y),
                         (n = t),
-                        (S += p);
+                        (f += p);
                 }),
                     h.stroke(),
-                    h.lineTo(S - p, 0),
+                    h.lineTo(f - p, 0),
                     h.lineTo(0, 0),
                     h.fill(),
                     d && _ < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));

@@ -86,7 +86,7 @@ class O extends (r = o.Component) {
         let { error: e, maxLength: t, minLength: n } = this.props,
             r = this.getIsOverflowing() ? h.Z.Messages.MAXIMUM_LENGTH_ERROR.format({ maxLength: t }) : null,
             i = this.getIsUnderflowing() ? h.Z.Messages.MINIMUM_LENGTH_ERROR.format({ minLength: n }) : null;
-        return (null != e && e.length < 1) || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != r ? r : i;
+        return (null != e && '' === e) || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != r ? r : i;
     }
     renderErrorMessage() {
         let e = this.getErrorMessage();

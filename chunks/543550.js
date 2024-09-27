@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return S;
+        return f;
     }
 });
 var i = n(735250),
@@ -29,7 +29,7 @@ let T = (e, t) => {
             return t === I.BRd.DARK ? p.valorantUpsellBackgroundImageDark : p.valorantUpsellBackgroundImageLight;
     }
 };
-function S(e) {
+function f(e) {
     let { onScroll: t } = e,
         n = (0, h.GN)((e) => e.game, l.Z),
         { guilds: s } = (0, d.C3)({
@@ -37,8 +37,8 @@ function S(e) {
             includeConverted: !0
         }),
         I = a.useMemo(() => s.filter((e) => !(0, u.EJ)(e)), [s]),
-        S = (0, c.ZP)(),
-        f = a.useMemo(() => T(n, S), [n, S]);
+        f = (0, c.ZP)(),
+        S = a.useMemo(() => T(n, f), [n, f]);
     return 0 === s.length
         ? null
         : (0, i.jsx)('div', {
@@ -49,7 +49,7 @@ function S(e) {
                   onScroll: t,
                   children: [
                       (0, i.jsxs)('div', {
-                          className: r()(f, p.adminUpsell),
+                          className: r()(S, p.adminUpsell),
                           children: [
                               n !== h.hz.NONE && (0, i.jsx)('div', { className: p.backgroundImageBlur }),
                               (0, i.jsx)(_.Z, {}),

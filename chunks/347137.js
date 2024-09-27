@@ -15,8 +15,8 @@ var i = n(735250),
     g = n(683301),
     p = n(296386),
     T = n(150192),
-    S = n(889010),
-    f = n(488905),
+    f = n(889010),
+    S = n(488905),
     C = n(731455),
     N = n(981631),
     A = n(46140),
@@ -69,7 +69,7 @@ t.Z = function () {
         }, [R, n]),
         (0, i.jsxs)(l.Scroller, {
             children: [
-                (0, i.jsx)(f.V, { text: v.Z.Messages.DISCOVER }),
+                (0, i.jsx)(S.V, { text: v.Z.Messages.DISCOVER }),
                 (0, i.jsx)(
                     u.Z,
                     {
@@ -91,7 +91,7 @@ t.Z = function () {
                     },
                     'clan-discovery-home'
                 ),
-                (0, i.jsx)(S.Z, {
+                (0, i.jsx)(f.Z, {
                     categories: x,
                     handleCategorySelect: b,
                     currentCategoryId: e,

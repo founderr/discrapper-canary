@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(821982),
     p = n(377171),
     T = n(633302),
-    S = n(153066),
-    f = n(335131),
+    f = n(153066),
+    S = n(335131),
     C = n(744112),
     N = n(267097),
     A = n(141594),
@@ -45,7 +45,7 @@ let O = (e) => {
             { analyticsLocations: g } = (0, I.ZP)(E),
             p = a.useCallback(
                 () =>
-                    (0, f.mK)({
+                    (0, S.mK)({
                         openInLayer: !1,
                         analyticsSource: E,
                         analyticsLocations: g
@@ -113,7 +113,7 @@ let O = (e) => {
         });
     }),
     M = (e) => {
-        var t, n, s, l, u, _, m, I, g, p, T, f;
+        var t, n, s, l, u, _, m, I, g, p, T, S;
         let C, N;
         let { selected: A, locationState: v, displayOptions: Z } = e,
             b = (0, o.e7)([E.Z], () => E.Z.useReducedMotion),
@@ -122,7 +122,7 @@ let O = (e) => {
             U = (0, h.ZP)(),
             G = Z.entrypointDecorationAssets,
             w = (0, c.wj)(U);
-        y ? (w ? ((C = null === (t = Z.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (N = null === (s = Z.entrypointBackgroundStyle) || void 0 === s ? void 0 : null === (n = s.hovered) || void 0 === n ? void 0 : n.dark)) : ((C = null === (l = Z.entryPointBackgroundAssets) || void 0 === l ? void 0 : l.srcLightHovered), (N = null === (_ = Z.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (u = _.hovered) || void 0 === u ? void 0 : u.light))) : w ? ((C = null === (m = Z.entryPointBackgroundAssets) || void 0 === m ? void 0 : m.srcDark), (N = null === (g = Z.entrypointBackgroundStyle) || void 0 === g ? void 0 : null === (I = g.resting) || void 0 === I ? void 0 : I.dark)) : ((C = null === (p = Z.entryPointBackgroundAssets) || void 0 === p ? void 0 : p.srcLight), (N = null === (f = Z.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (T = f.resting) || void 0 === T ? void 0 : T.light));
+        y ? (w ? ((C = null === (t = Z.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (N = null === (s = Z.entrypointBackgroundStyle) || void 0 === s ? void 0 : null === (n = s.hovered) || void 0 === n ? void 0 : n.dark)) : ((C = null === (l = Z.entryPointBackgroundAssets) || void 0 === l ? void 0 : l.srcLightHovered), (N = null === (_ = Z.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (u = _.hovered) || void 0 === u ? void 0 : u.light))) : w ? ((C = null === (m = Z.entryPointBackgroundAssets) || void 0 === m ? void 0 : m.srcDark), (N = null === (g = Z.entrypointBackgroundStyle) || void 0 === g ? void 0 : null === (I = g.resting) || void 0 === I ? void 0 : I.dark)) : ((C = null === (p = Z.entryPointBackgroundAssets) || void 0 === p ? void 0 : p.srcLight), (N = null === (S = Z.entrypointBackgroundStyle) || void 0 === S ? void 0 : null === (T = S.resting) || void 0 === T ? void 0 : T.light));
         let k = a.useCallback(
                 (e) => {
                     D((e) => (e + 1) % Z.assetIds.length), j(!0), null == e || e();
@@ -147,7 +147,7 @@ let O = (e) => {
             'aria-label': 'string' == typeof H ? H : L.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
             children: (e) =>
                 (0, i.jsxs)(x, {
-                    className: null != Z.entryPointClassName ? (0, S.l)(R, Z.entryPointClassName) : void 0,
+                    className: null != Z.entryPointClassName ? (0, f.l)(R, Z.entryPointClassName) : void 0,
                     selected: A,
                     locationState: v,
                     icon: Z.entryPointIcon,

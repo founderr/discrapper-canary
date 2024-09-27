@@ -125,7 +125,7 @@ let B = Object.freeze({
                     type: 'EDITOR',
                     isPreview: !0
                 },
-                () => G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({ onPremiumClick: g.z })
+                () => G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({ onPremiumClick: () => g.z })
             )
             .with(
                 {
@@ -141,7 +141,7 @@ let B = Object.freeze({
                 },
                 () => G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION
             )
-            .with({ isPreview: !0 }, () => G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({ onPremiumClick: g.z }))
+            .with({ isPreview: !0 }, () => G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({ onPremiumClick: () => g.z }))
             .otherwise(() => G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
         return l
             ? (0, o.jsxs)('div', {
@@ -179,7 +179,7 @@ let B = Object.freeze({
                     ? (0, o.jsx)(v.ZP, {
                           type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                           subscriptionTier: P.Si.TIER_2,
-                          children: G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({ onPremiumClick: g.z })
+                          children: G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({ onPremiumClick: () => g.z })
                       })
                     : (0, o.jsxs)('div', {
                           className: k.header,

@@ -174,7 +174,7 @@ function F(e) {
             (0, i.jsx)(h.Heading, {
                 variant: 'heading-md/semibold',
                 color: 'text-normal',
-                children: M.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_TRIAL_DESCRIPTION.format({ onClick: R.z })
+                children: M.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_TRIAL_DESCRIPTION.format({ onClick: () => (0, R.z)() })
             }),
             (0, i.jsx)(G, {
                 trialOffer: r,

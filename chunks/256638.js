@@ -610,12 +610,12 @@ let eA = i.memo(function () {
                             null != eZ
                                 ? eh.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
                                       name: ''.concat(eZ),
-                                      progress: ''.concat(eB),
-                                      total: ''.concat(eF)
+                                      progress: eB,
+                                      total: eF
                                   })
                                 : eh.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
-                                      progress: ''.concat(eB),
-                                      total: ''.concat(eF)
+                                      progress: eB,
+                                      total: eF
                                   }),
                             (0, r.jsx)(u.Spinner, {
                                 type: u.Spinner.Type.PULSING_ELLIPSIS,

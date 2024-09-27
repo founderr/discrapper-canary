@@ -9,53 +9,53 @@ var s = n(120356),
     d = n(689938),
     u = n(229361);
 t.Z = (e) => {
-    let { rateLimitPerUser: t, slowmodeCooldownGuess: n, isBypassSlowmode: s, leadingIcon: l = !1 } = e,
-        m = '',
-        h = '';
-    if (t >= c.Z.Seconds.HOUR) {
-        let e = Math.floor(t / c.Z.Seconds.HOUR),
-            n = Math.floor((t - e * c.Z.Seconds.HOUR) / c.Z.Seconds.MINUTE),
-            a = t - e * c.Z.Seconds.HOUR - n * c.Z.Seconds.MINUTE;
-        h = d.Z.Messages.FORUM_SLOWMODE_DESC_HOURS.format({
+    let t,
+        n,
+        { rateLimitPerUser: s, slowmodeCooldownGuess: l, isBypassSlowmode: m, leadingIcon: h = !1 } = e;
+    if (s >= c.Z.Seconds.HOUR) {
+        let e = Math.floor(s / c.Z.Seconds.HOUR),
+            t = Math.floor((s - e * c.Z.Seconds.HOUR) / c.Z.Seconds.MINUTE),
+            a = s - e * c.Z.Seconds.HOUR - t * c.Z.Seconds.MINUTE;
+        n = d.Z.Messages.FORUM_SLOWMODE_DESC_HOURS.format({
             hours: e,
-            minutes: n,
+            minutes: t,
             seconds: a
         });
-    } else if (t >= 60) {
-        let e = Math.floor(t / 60);
-        h = d.Z.Messages.FORUM_SLOWMODE_DESC_MINUTES.format({
+    } else if (s >= 60) {
+        let e = Math.floor(s / 60);
+        n = d.Z.Messages.FORUM_SLOWMODE_DESC_MINUTES.format({
             minutes: e,
-            seconds: t - 60 * e
+            seconds: s - 60 * e
         });
-    } else h = d.Z.Messages.FORUM_SLOWMODE_DESC.format({ seconds: t });
-    if (!s && n > 0) {
-        let e = i().duration(n);
-        if (n > c.Z.Millis.HOUR) {
-            let t = ''.concat(e.minutes()).padStart(2, '0'),
-                n = ''.concat(e.seconds()).padStart(2, '0');
-            m = ''.concat(e.hours(), ':').concat(t, ':').concat(n);
+    } else n = d.Z.Messages.FORUM_SLOWMODE_DESC.format({ seconds: s });
+    if (!m && l > 0) {
+        let e = i().duration(l);
+        if (l > c.Z.Millis.HOUR) {
+            let n = ''.concat(e.minutes()).padStart(2, '0'),
+                a = ''.concat(e.seconds()).padStart(2, '0');
+            t = ''.concat(e.hours(), ':').concat(n, ':').concat(a);
         } else {
-            let t = ''.concat(e.seconds()).padStart(2, '0');
-            m = ''.concat(e.minutes(), ':').concat(t);
+            let n = ''.concat(e.seconds()).padStart(2, '0');
+            t = ''.concat(e.minutes(), ':').concat(n);
         }
-    } else m = s ? d.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : d.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT;
+    } else t = m ? d.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : d.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT;
     let _ = (0, a.jsx)(o.Text, {
             variant: 'text-sm/normal',
             color: 'text-muted',
-            children: m
+            children: t
         }),
         g = (0, a.jsx)(o.TimerIcon, {
             size: 'xs',
             color: 'currentColor',
-            className: r()(u.slowModeIcon, { [u.leadingIcon]: l })
+            className: r()(u.slowModeIcon, { [u.leadingIcon]: h })
         });
     return (0, a.jsx)(o.Tooltip, {
-        text: h,
+        text: n,
         children: (e) =>
             (0, a.jsx)('div', {
                 className: u.cooldownWrapper,
                 ...e,
-                children: l
+                children: h
                     ? (0, a.jsxs)(a.Fragment, {
                           children: [g, _]
                       })

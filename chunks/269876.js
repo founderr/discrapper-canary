@@ -132,7 +132,7 @@ function g() {
                     (0, n.jsx)(_.FormText, {
                         type: _.FormText.Types.DESCRIPTION,
                         className: r()(N.inputDisabledWarning, C.marginBottom8),
-                        children: I.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({ onEnableClick: u.Z.enable })
+                        children: I.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({ onEnableClick: () => u.Z.enable(!0) })
                     })
             ]
         })

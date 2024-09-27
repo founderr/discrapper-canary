@@ -21,8 +21,8 @@ var i,
     g = n(878727),
     p = n(117496),
     T = n(150192),
-    S = n(731455),
-    f = n(981631),
+    f = n(731455),
+    S = n(981631),
     C = n(689938),
     N = n(637962);
 function A(e, t, n) {
@@ -59,8 +59,8 @@ class L extends (i = s.PureComponent) {
         let { loadId: e, searchResults: t, currentCategoryId: n } = this.props,
             { searchId: i, query: a, isHandlingTagSearch: s } = this.state,
             r = this.context;
-        if ((null == h.ZP.getSearchIndex() && _.Ue(), m.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), m.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), a.length > 0)) {
-            let l = n !== S.Hk ? n : null;
+        if ((null == h.ZP.getSearchIndex() && _.Ue(), m.S.subscribe(S.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), m.S.subscribe(S.CkL.TEXTAREA_FOCUS, this.focusInput), a.length > 0)) {
+            let l = n !== f.Hk ? n : null;
             v({
                 loadId: e,
                 searchId: i,
@@ -77,7 +77,7 @@ class L extends (i = s.PureComponent) {
             { isSearching: l, searchId: o, query: c, isHandlingTagSearch: d } = this.state,
             u = this.context,
             _ = e.isFetchingSearch && !i,
-            h = s !== S.Hk ? s : null;
+            h = s !== f.Hk ? s : null;
         (l || d) &&
             _ &&
             (v({
@@ -99,7 +99,7 @@ class L extends (i = s.PureComponent) {
                 });
     }
     componentWillUnmount() {
-        m.S.unsubscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), m.S.unsubscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput);
+        m.S.unsubscribe(S.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), m.S.unsubscribe(S.CkL.TEXTAREA_FOCUS, this.focusInput);
     }
     renderSearchOptions() {
         var e;
@@ -134,7 +134,7 @@ class L extends (i = s.PureComponent) {
                               Z,
                               {
                                   categoryId: n,
-                                  name: n === S.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
+                                  name: n === f.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
                                   onCategoryChange: this.handleCategoryChange,
                                   isSelected: e === n,
                                   count: i
@@ -209,8 +209,8 @@ class L extends (i = s.PureComponent) {
             A(this, 'handleSearchKeyPress', (e) => {
                 let { query: t, queryHasChanged: n } = this.state,
                     { loadId: i, currentCategoryId: a } = this.props,
-                    s = a !== S.Hk ? a : null;
-                this.canSearch(t) && n && e.charCode === f.yXg.ENTER ? (I.tI(i, s), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === f.yXg.ENTER && this.setState({ isSearching: !1 });
+                    s = a !== f.Hk ? a : null;
+                this.canSearch(t) && n && e.charCode === S.yXg.ENTER ? (I.tI(i, s), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === S.yXg.ENTER && this.setState({ isSearching: !1 });
             }),
             A(this, 'handleQueryChanged', (e) => {
                 this.setState({

@@ -366,7 +366,7 @@ t.Z = (e) => {
                     {
                         children: [(0, s.jsx)(x, { ...e }), t < D.length - 1 ? (0, s.jsx)('hr', { className: C.separator }) : null]
                     },
-                    e.name
+                    ''.concat(e.name)
                 )
             )
         ]

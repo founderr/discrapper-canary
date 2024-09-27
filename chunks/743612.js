@@ -14,7 +14,7 @@ t.Z = (e) => {
                 className: r()(l.cardHeading, u),
                 children: c
             }),
-            0 !== T.length &&
+            '' !== T &&
                 (null == d || d(null == _ ? void 0 : _.subtitle)) &&
                 (0, s.jsx)(s.Fragment, {
                     children: (0, s.jsxs)('div', {

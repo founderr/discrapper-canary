@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return f;
     }
 }),
     n(653041),
@@ -23,9 +23,9 @@ var a = n(287734),
     g = n(868854),
     p = n(817915),
     T = n(981631);
-function S(e) {
-    let { party: t, onChannelContextMenu: n, quest: S } = e,
-        f = (0, g.L)(),
+function f(e) {
+    let { party: t, onChannelContextMenu: n, quest: f } = e,
+        S = (0, g.L)(),
         { voiceChannels: C, currentActivities: N, partiedMembers: A, applicationStreams: v, guildContext: Z } = t,
         L = [],
         R = (e) => {
@@ -81,7 +81,7 @@ function S(e) {
         }
     return (
         v.length > 0 &&
-            f &&
+            S &&
             v.forEach((e) => {
                 let { stream: t, streamUser: n, activity: r } = e;
                 R(
@@ -101,7 +101,7 @@ function S(e) {
                 );
             }),
         N.forEach((e, t) => {
-            var n, a, s, h, m, g, f, v, L;
+            var n, a, s, h, m, g, S, v, L;
             let { activity: O, game: x, playingMembers: b, activityUser: P } = e;
             if (null == O || null == O.type) return null;
             if (N.length > 1 && O.type === T.IIU.PLAYING && !(0, r.Z)(O) && null != x)
@@ -190,11 +190,11 @@ function S(e) {
                                     activity: O,
                                     getAssetImage: E.getAssetImage
                                 },
-                                'rich-presence-'.concat(null !== (f = O.session_id) && void 0 !== f ? f : t, '-').concat(P.id)
+                                'rich-presence-'.concat(null !== (S = O.session_id) && void 0 !== S ? S : t, '-').concat(P.id)
                             )
                         )
                       : (0, c.Z)(O) && R((0, i.jsx)(I.Z.XboxSection, { title: x.name }, 'xbox-'.concat(null !== (v = O.session_id) && void 0 !== v ? v : t)));
-            null != S && null != x && (0, u._D)(O, S) && R((0, i.jsx)(_.Z, { quest: S }, 'quest-'.concat(S.id, '-').concat(null !== (L = O.session_id) && void 0 !== L ? L : t)));
+            null != f && null != x && (0, u._D)(O, f) && R((0, i.jsx)(_.Z, { quest: f }, 'quest-'.concat(f.id, '-').concat(null !== (L = O.session_id) && void 0 !== L ? L : t)));
         }),
         L.length > 0 ? (0, i.jsx)(I.Z.Body, { children: L }) : null
     );

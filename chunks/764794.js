@@ -20,7 +20,7 @@ function S(e) {
     let { disabled: t, referralsRemaining: n, channel: r, isResending: S } = e,
         { enabled: A } = _.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
         v = A ? T.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : S ? T.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : T.Z.Messages.SHARE_NITRO_TOOLTIP,
-        N = A ? T.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null,
+        N = A ? T.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : void 0,
         [O, R] = a.useState(!1),
         [C, y] = a.useState(!1),
         L = (0, l.Z)(null, () => y(!1)),
@@ -46,7 +46,7 @@ function S(e) {
                   (0, i.jsx)(o.u, {
                       text: v,
                       shouldShow: !C,
-                      'aria-label': null != N ? N : v,
+                      'aria-label': null != N ? N : v.toString(),
                       children: (e) =>
                           (0, i.jsx)('div', {
                               onMouseEnter: () => {
@@ -66,7 +66,7 @@ function S(e) {
                                   ...e,
                                   innerClassName: g.button,
                                   isActive: C,
-                                  'aria-label': null != N ? N : v,
+                                  'aria-label': null != N ? N : v.toString(),
                                   'aria-haspopup': 'dialog',
                                   onClick: () => {
                                       P(),

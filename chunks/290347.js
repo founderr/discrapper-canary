@@ -27,8 +27,8 @@ var i = n(735250),
     g = n(626135),
     p = n(960048),
     T = n(565216),
-    S = n(981631),
-    f = n(921944),
+    f = n(981631),
+    S = n(921944),
     C = n(67037);
 let N = [],
     A = (e) => {
@@ -139,11 +139,11 @@ function Z(e) {
             () => () => {
                 if ('video' === s.type || 'embed' === s.type) {
                     let [e, t] = es();
-                    g.default.track(S.rMx.CHANGE_LOG_VIDEO_PLAYED, {
+                    g.default.track(f.rMx.CHANGE_LOG_VIDEO_PLAYED, {
                         change_log_id: M,
                         seconds_played: Math.round(e / 1000)
                     }),
-                        g.default.track(S.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
+                        g.default.track(f.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
                             change_log_id: M,
                             seconds_unmuted: Math.round(t / 1000)
                         });
@@ -155,13 +155,13 @@ function Z(e) {
             null != Z && (0, m.kk)(Z);
             let e = Date.now();
             return (
-                g.default.track(S.rMx.CHANGE_LOG_OPENED, { change_log_id: M }),
+                g.default.track(f.rMx.CHANGE_LOG_OPENED, { change_log_id: M }),
                 () => {
-                    g.default.track(S.rMx.CHANGE_LOG_CLOSED, {
+                    g.default.track(f.rMx.CHANGE_LOG_CLOSED, {
                         change_log_id: M,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != Z && (0, m.EW)(Z, { dismissAction: f.L.DISMISS });
+                        null != Z && (0, m.EW)(Z, { dismissAction: S.L.DISMISS });
                 }
             );
         }, [Z, M]),
@@ -195,7 +195,7 @@ function Z(e) {
                                   src: s.src,
                                   poster: s.poster,
                                   onPlay: (e) => {
-                                      g.default.track(S.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: M }), H(Date.now()), K(!0), Q(e.currentTarget.muted);
+                                      g.default.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: M }), H(Date.now()), K(!0), Q(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
                                       es(), Q(e.currentTarget.muted), K(!1);
@@ -240,9 +240,9 @@ function Z(e) {
                                     renderVideoComponent: I.lV,
                                     renderImageComponent: I.Yi,
                                     renderLinkComponent: I.iT,
-                                    renderForwardComponent: S.VqG,
+                                    renderForwardComponent: f.VqG,
                                     onPlay: () => {
-                                        g.default.track(S.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: M });
+                                        g.default.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: M });
                                     }
                                 })
                               : 'image' === s.type

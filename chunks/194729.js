@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(785570),
     p = n(963202),
     T = n(252618),
-    S = n(571457),
-    f = n(440190),
+    f = n(571457),
+    S = n(440190),
     C = n(665149),
     N = n(5955),
     A = n(918701),
@@ -98,7 +98,7 @@ class J extends a.PureComponent {
             });
         } else null != l && l !== Y.Hk && E.Z.wait(() => (0, m.uY)(l));
         let u = null !== (t = null === (e = (0, Z.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
-        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, L.e)('guild_discovery'), (0, S.kR)({ selectedCategoryId: o });
+        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, L.e)('guild_discovery'), (0, f.kR)({ selectedCategoryId: o });
     }
     componentDidUpdate(e) {
         let {
@@ -122,7 +122,7 @@ class J extends a.PureComponent {
             var l;
             null === (l = this._scroller.current) || void 0 === l || l.scrollTo({ to: 0 });
         }
-        e.currentCategoryId !== r && D.Az(this.loadId, Array.from(this._guildIdsSeen)), e.currentCategoryId !== r && (0, S.kR)({ selectedCategoryId: r }), e.mostRecentQuery.length > 0 && a.length < 1 && s !== r && (0, m.uY)(null != s ? s : Y.Hk);
+        e.currentCategoryId !== r && D.Az(this.loadId, Array.from(this._guildIdsSeen)), e.currentCategoryId !== r && (0, f.kR)({ selectedCategoryId: r }), e.mostRecentQuery.length > 0 && a.length < 1 && s !== r && (0, m.uY)(null != s ? s : Y.Hk);
     }
     componentWillUnmount() {
         let { currentCategoryId: e, recommendationsLoadId: t, recommendationsGuilds: n } = this.props;
@@ -451,10 +451,10 @@ function ee(e) {
             fetching: n,
             loadId: a,
             recommendedGuilds: s
-        } = (0, _.cj)([f.Z], () => ({
-            recommendedGuilds: f.Z.getRecommendedGuilds(),
-            loadId: f.Z.getLoadId(),
-            fetching: f.Z.isFetching()
+        } = (0, _.cj)([S.Z], () => ({
+            recommendedGuilds: S.Z.getRecommendedGuilds(),
+            loadId: S.Z.getLoadId(),
+            fetching: S.Z.isFetching()
         }));
     return (0, i.jsx)($, {
         searchRoute: t,

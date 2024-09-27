@@ -16,15 +16,15 @@ var i = n(735250),
     g = n(523924),
     p = n(390500),
     T = n(200305),
-    S = n(981631),
-    f = n(898625),
+    f = n(981631),
+    S = n(898625),
     C = n(689938),
     N = n(250010);
 t.Z = (e) => {
     var t;
     let n, A;
     let { guildId: v, inviteCode: Z } = e,
-        [L, R] = a.useState(f.hO.INITIAL),
+        [L, R] = a.useState(S.hO.INITIAL),
         O = (0, s.e7)([E.Z], () => E.Z.get(v)),
         x = (0, s.e7)([I.Z], () => I.Z.getRequest(v)),
         b = (0, s.e7)([c.Z], () => c.Z.getGuild(v)),
@@ -33,7 +33,7 @@ t.Z = (e) => {
             guildPreviewDisabled: I.Z.getJoinRequestGuild(v)
         }));
     a.useEffect(() => {
-        null != b && (0, o.uL)(S.Z5c.CHANNEL(v));
+        null != b && (0, o.uL)(f.Z5c.CHANNEL(v));
     }, [b, v]),
         a.useEffect(() => {
             !P && _.Z.fetchRequestToJoinGuilds();
@@ -50,7 +50,7 @@ t.Z = (e) => {
     let U =
             ((n = C.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == M ? void 0 : M.toString() })),
             (A = () => {
-                R(Math.max(L, f.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(S.Z5c.ME);
+                R(Math.max(L, S.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(f.Z5c.ME);
             }),
             () => {
                 (0, r.openModal)((e) =>

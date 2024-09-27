@@ -334,7 +334,7 @@ class q extends (s = r.PureComponent) {
             r = n;
         if (e.type === H.IIU.CUSTOM_STATUS) a = i;
         else if (e.type === H.IIU.HANG_STATUS)
-            (a = null != s ? G.Z.Messages.HANG_STATUS_LOCATION.format({ guildName: s.name }) : null),
+            (a = null != s ? G.Z.Messages.HANG_STATUS_LOCATION.format({ guildName: s.name }) : void 0),
                 (t =
                     null != s
                         ? () => {
@@ -362,7 +362,7 @@ class q extends (s = r.PureComponent) {
                 a = null === (o = e.assets) || void 0 === o ? void 0 : o.small_text;
             }
         }
-        return null == a || 0 === a.length
+        return null == a || '' === a
             ? null
             : ((0, k.Z)(e) && (a = G.Z.Messages.STREAMER_PLAYING.format({ game: a })), null != t)
               ? (0, l.jsx)(m.Clickable, {
@@ -468,7 +468,7 @@ class q extends (s = r.PureComponent) {
                               )
                             : u
                 }))),
-        (null != c && 0 !== c.length && e.type !== H.IIU.CUSTOM_STATUS) || (0, b.dS)(e))
+        (null != c && '' !== c && e.type !== H.IIU.CUSTOM_STATUS) || (0, b.dS)(e))
             ? ((null == r ? void 0 : r.size) == null && [B.Zc].includes(null !== (n = e.application_id) && void 0 !== n ? n : '')
                   ? (s = G.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
                         count: '0',

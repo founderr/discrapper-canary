@@ -126,7 +126,7 @@ let eo = s.memo((e) => {
         eK = eW && eF && null != eY,
         eq = (0, M.o)(I, eO),
         eX = (0, Z.lL)('CallTile', !0, eO, eq),
-        eJ = (0, o.e7)([U.Z], () => (null != eP ? U.Z.getEffectForUserId(eP) : null)),
+        eJ = (0, o.e7)([U.Z], () => (I.type === ei.fO.USER && null != eP ? U.Z.getEffectForUserId(eP) : null)),
         eQ = (0, o.e7)([W.Z], () => W.Z.getVoicePlatformForChannel(eh.id, null != eP ? eP : en.lds)),
         { enableHangStatus: e$ } = C.n.useExperiment({
             guildId: eh.guild_id,
@@ -288,7 +288,7 @@ let eo = s.memo((e) => {
                             onKeyDown: eo,
                             focusProps: { offset: 1 },
                             children: [
-                                I.type === ei.fO.USER && null != eP && null != eJ
+                                null != eJ && null != eP
                                     ? (0, i.jsx)(k.Z, {
                                           voiceChannelEffect: eJ,
                                           onComplete: () => (0, U.H)(eP),

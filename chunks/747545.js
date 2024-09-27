@@ -69,7 +69,7 @@ function A(e) {
                           className: p.permissionWarning,
                           color: 'interactive-normal',
                           variant: 'text-sm/normal',
-                          children: I.Z.Messages.FORM_WARNING_VIDEO_PREVIEW.format({ onEnableClick: d.Z.enable })
+                          children: I.Z.Messages.FORM_WARNING_VIDEO_PREVIEW.format({ onEnableClick: () => d.Z.enable(!0) })
                       }),
                 C
                     ? null

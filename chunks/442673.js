@@ -53,7 +53,7 @@ s.default = (e) => {
                                 (0, o.jsx)(r.Heading, {
                                     className: N.headerText,
                                     variant: 'text-lg/bold',
-                                    children: _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_TITLE.format({ isAdult: I })
+                                    children: _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_TITLE.format({ isAdult: String(I) })
                                 }),
                                 (0, o.jsx)(i.Z, {
                                     user: a,

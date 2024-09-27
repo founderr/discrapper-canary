@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(480222),
     p = n(207796),
     T = n(558831),
-    S = n(304231),
-    f = n(981631),
+    f = n(304231),
+    S = n(981631),
     C = n(689938),
     N = n(454042);
 let A = {
@@ -118,17 +118,17 @@ let A = {
                     [e, t, n]
                 ),
                 m = a.useMemo(() => !o()(h, E), [E, h]),
-                S = a.useCallback(() => {
+                f = a.useCallback(() => {
                     var e;
                     p.GN.getState().setSelectedGames(h.games), p.GN.getState().setSelectedPlaystyle(null !== (e = h.playstyle) && void 0 !== e ? e : null), p.GN.getState().setSelectedTraits(h.traits), (0, I.Og)();
                 }, [h.games, h.playstyle, h.traits]),
-                f = a.useCallback(() => {
+                S = a.useCallback(() => {
                     r(new Set(E.games)), c(E.playstyle), _(new Set(E.traits));
                 }, [E.games, E.playstyle, E.traits]);
             return (0, i.jsx)(g.Z, {
                 hasChanges: m,
-                onSave: S,
-                onReset: f,
+                onSave: f,
+                onReset: S,
                 children: (0, i.jsx)(T.Z, {
                     traits: u,
                     gameApplicationIds: s,
@@ -144,7 +144,7 @@ let A = {
                 t = a.useCallback(() => {
                     (0, p.fH)(p.v0.DISCOVERY);
                 }, []),
-                n = a.useMemo(() => (e === f.BRd.DARK ? N.genericOnboardingBackgroundImageDark : N.genericOnboardingBackgroundImageLight), [e]);
+                n = a.useMemo(() => (e === S.BRd.DARK ? N.genericOnboardingBackgroundImageDark : N.genericOnboardingBackgroundImageLight), [e]);
             return (0, i.jsx)('div', {
                 className: N.container,
                 children: (0, i.jsx)('div', {
@@ -155,7 +155,7 @@ let A = {
                             (0, i.jsx)('div', { className: N.backgroundImageBlur }),
                             (0, i.jsx)('div', {
                                 className: N.backgroundImageContent,
-                                children: (0, i.jsx)(S.Z, { onDismiss: t })
+                                children: (0, i.jsx)(f.Z, { onDismiss: t })
                             })
                         ]
                     })

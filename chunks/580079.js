@@ -37,11 +37,11 @@ function T(e, t, n, i) {
             userId: i
         });
 }
-function S(e) {
+function f(e) {
     let { channel: t } = e;
     delete m[t.id], delete I[t.id];
 }
-class f extends (i = c.ZP.Store) {
+class S extends (i = c.ZP.Store) {
     getActiveChannelsFetchStatus(e) {
         return g[e];
     }
@@ -57,7 +57,7 @@ class f extends (i = c.ZP.Store) {
     }
 }
 (r = 'ActiveChannelsStore'),
-    (s = 'displayName') in (a = f)
+    (s = 'displayName') in (a = S)
         ? Object.defineProperty(a, s, {
               value: r,
               enumerable: !0,
@@ -65,7 +65,7 @@ class f extends (i = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = r),
-    new f(d.Z, {
+    new S(d.Z, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
             if (!(0, h.ME)(t) || null == n) return !1;
@@ -99,8 +99,8 @@ class f extends (i = c.ZP.Store) {
             let { guild: t } = e;
             delete E[t.id];
         },
-        CHANNEL_DELETE: S,
-        THREAD_DELETE: S,
+        CHANNEL_DELETE: f,
+        THREAD_DELETE: f,
         ACTIVE_CHANNELS_FETCH_START: function (e) {
             let { guildId: t } = e;
             g[t] = {

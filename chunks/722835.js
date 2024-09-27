@@ -20,8 +20,8 @@ var i = n(553813),
     g = n(74299),
     p = n(299570),
     T = n(960861),
-    S = n(989941),
-    f = n(70722);
+    f = n(989941),
+    S = n(70722);
 function C() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (!(0, g.Z)(u.Z) || null != o.Z.getCurrentUserActiveStream()) return !1;
@@ -30,9 +30,9 @@ function C() {
     if (null == n) return !1;
     let i = n.getGuildId();
     if (!(0, I.JL)(n, d.Z, _.Z, !1)) return !1;
-    if (T.ZP.enabled()) (0, m.isMac)() && a().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, f.jR) ? (0, p.T)() : (0, p.T)('window');
+    if (T.ZP.enabled()) (0, m.isMac)() && a().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, S.jR) ? (0, p.T)() : (0, p.T)('window');
     else {
-        let t = (0, S.Z)(l.ZP, E.Z);
+        let t = (0, f.Z)(l.ZP, E.Z);
         if (null == t || (t.isLauncher && !e)) return !1;
         (0, s.WH)(i, n.id, { pid: t.pid });
     }

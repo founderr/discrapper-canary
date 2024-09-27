@@ -48,29 +48,29 @@ var i = n(735250),
     F = n(438337);
 function W(e) {
     let { channelId: t, guildId: n } = e,
-        s = Date.now(),
-        a = (0, u.e7)([y.Z, U.Z], () =>
-            o()(y.Z.getSpeakers())
+        s = (0, u.Wu)([y.Z, U.Z], () => {
+            let e = Date.now();
+            return o()(y.Z.getSpeakers())
                 .map((e) => U.Z.getParticipant(t, e))
                 .filter((e) => null != e && e.type === H.fO.USER && e.speaking && !(0, v.ZP)(e))
-                .sortBy((e) => -y.Z.getSpeakingDuration(e.user.id, s))
+                .sortBy((t) => -y.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
-                .value()
-        );
-    return 0 === a.length
+                .value();
+        });
+    return 0 === s.length
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: a.map((e, t) =>
+              children: s.map((e, t) =>
                   (0, i.jsx)(
                       d.Tooltip,
                       {
                           position: 'bottom',
                           color: d.Tooltip.Colors.GREY,
                           text: V.Z.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({ username: e.user.username }),
-                          children: (s) =>
+                          children: (a) =>
                               (0, i.jsx)(P.Z, {
-                                  ...s,
-                                  className: l()(F.speaker, { [F.last]: t === a.length - 1 }),
+                                  ...a,
+                                  className: l()(F.speaker, { [F.last]: t === s.length - 1 }),
                                   user: e.user,
                                   speaking: !0,
                                   collapsed: !0,

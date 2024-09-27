@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(121711),
     p = n(823379),
     T = n(571457),
-    S = n(836768),
-    f = n(766219),
+    f = n(836768),
+    S = n(766219),
     C = n(49898),
     N = n(909482);
 function A(e) {
@@ -35,7 +35,7 @@ function A(e) {
         }, [n]),
         a.useEffect(() => {
             (0, o.j)(() => {
-                S.d.setState({ selectedTab: C.F$.SERVERS }), h.GN.setState({ mode: h.v0.DISCOVERY });
+                f.d.setState({ selectedTab: C.F$.SERVERS }), h.GN.setState({ mode: h.v0.DISCOVERY });
             }),
                 null != n &&
                     null == r &&
@@ -54,7 +54,7 @@ function A(e) {
 }
 function v() {
     let e = (0, E.h)({ location: 'DiscoveryUISelectedTab' }),
-        t = (0, S.d)((e) => e.selectedTab, l.Z),
+        t = (0, f.d)((e) => e.selectedTab, l.Z),
         n = (function (e) {
             switch (e) {
                 case C.F$.SERVERS:
@@ -71,15 +71,15 @@ function v() {
     return (
         a.useEffect(() => {
             let t = s.pathname,
-                n = (0, f.IE)(t, e);
-            n !== S.d.getState().selectedTab && (0, o.j)(() => S.d.setState({ selectedTab: n }));
+                n = (0, S.IE)(t, e);
+            n !== f.d.getState().selectedTab && (0, o.j)(() => f.d.setState({ selectedTab: n }));
         }, [e, s.pathname]),
         a.useEffect(() => {
             (0, T.RI)({ selectedTab: t });
         }, [t]),
         (0, i.jsxs)('section', {
             className: N.container,
-            children: [(0, i.jsx)(_.yY, { location: (0, f.sm)(t) }), (0, i.jsx)('div', { className: N.dragRegion }), n]
+            children: [(0, i.jsx)(_.yY, { location: (0, S.sm)(t) }), (0, i.jsx)('div', { className: N.dragRegion }), n]
         })
     );
 }

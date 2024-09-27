@@ -20,55 +20,55 @@ var a = t(512722),
     S = t(689938),
     I = t(405766);
 function N(e) {
-    let { subscription: s, withOverheadSeparator: t } = e,
-        { analyticsLocations: a } = (0, l.ZP)(),
-        [N] = (0, u.ED)({
-            subscriptionId: s.id,
+    let s,
+        { subscription: t, withOverheadSeparator: a } = e,
+        { analyticsLocations: N } = (0, l.ZP)(),
+        [A] = (0, u.ED)({
+            subscriptionId: t.id,
             renewal: !0,
-            analyticsLocations: a,
+            analyticsLocations: N,
             analyticsLocation: o.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
-    if (null == N) return null;
-    let A = t ? I.finePrintWithOverheadSeparator : I.finePrint,
-        C = N.invoiceItems.find((e) => {
+    if (null == A) return null;
+    let C = a ? I.finePrintWithOverheadSeparator : I.finePrint,
+        m = A.invoiceItems.find((e) => {
             let { subscriptionPlanId: s } = e;
             return (0, d.uZ)(s);
         });
-    if (null == C) return null;
-    let m = C.subscriptionPlanId,
-        g = c.Z.get(m);
-    i()(null != g, 'Missing plan');
-    let h = (0, _.T4)(N.total, N.currency),
-        O = '';
+    if (null == m) return null;
+    let g = m.subscriptionPlanId,
+        h = c.Z.get(g);
+    i()(null != h, 'Missing plan');
+    let O = (0, _.T4)(A.total, A.currency);
     return (
-        g.interval === E.rV.YEAR
-            ? (O = S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
-                  price: h,
+        h.interval === E.rV.YEAR
+            ? (s = S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+                  price: O,
                   termsUrl: T.EYA.TERMS,
                   paidURL: T.EYA.PAID_TERMS,
                   privacyUrl: T.EYA.PRIVACY
               }))
-            : g.interval === E.rV.MONTH &&
-              (O =
-                  1 === g.intervalCount
+            : h.interval === E.rV.MONTH &&
+              (s =
+                  1 === h.intervalCount
                       ? S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
-                            price: h,
+                            price: O,
                             termsUrl: T.EYA.TERMS,
                             paidURL: T.EYA.PAID_TERMS,
                             privacyUrl: T.EYA.PRIVACY
                         })
                       : S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
-                            price: h,
+                            price: O,
                             termsUrl: T.EYA.TERMS,
                             paidURL: T.EYA.PAID_TERMS,
                             privacyUrl: T.EYA.PRIVACY,
-                            intervalCount: g.intervalCount
+                            intervalCount: h.intervalCount
                         })),
         (0, n.jsx)(r.Text, {
             color: 'text-muted',
-            className: A,
+            className: C,
             variant: 'text-xs/normal',
-            children: O
+            children: s
         })
     );
 }

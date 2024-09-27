@@ -15,8 +15,8 @@ var i = n(735250),
     g = n(585483),
     p = n(145604),
     T = n(718813),
-    S = n(981631),
-    f = n(119425);
+    f = n(981631),
+    S = n(119425);
 t.Z = a.memo(function () {
     let e = a.useRef(null),
         t = a.useCallback((t) => {
@@ -29,9 +29,9 @@ t.Z = a.memo(function () {
         a.useEffect(() => (u.Z.setLayout(d.ZP), u.Z.enable(), () => u.Z.disable()), []),
         a.useEffect(
             () => (
-                g.S.subscribe(S.CkL.SHAKE_APP, t),
+                g.S.subscribe(f.CkL.SHAKE_APP, t),
                 () => {
-                    g.S.unsubscribe(S.CkL.SHAKE_APP, t);
+                    g.S.unsubscribe(f.CkL.SHAKE_APP, t);
                 }
             ),
             [t]
@@ -39,10 +39,10 @@ t.Z = a.memo(function () {
         (0, h.Z)(),
         (0, i.jsxs)(l.Shakeable, {
             ref: e,
-            className: f.app,
+            className: S.app,
             children: [
                 (0, i.jsx)(T.Z, {
-                    className: f.layers,
+                    className: S.layers,
                     children: (0, i.jsx)(o.Z, {})
                 }),
                 (0, i.jsx)(E.Z, {}),

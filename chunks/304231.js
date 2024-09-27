@@ -31,7 +31,7 @@ function T() {
         minGames: 0
     });
 }
-function S() {
+function f() {
     let e = (0, m.GN)((e) => e.selectedPlaystyle, r.Z),
         t = a.useCallback((e) => m.GN.getState().setSelectedPlaystyle(e), []);
     return (0, i.jsx)(u.Z, {
@@ -41,7 +41,7 @@ function S() {
         playstyle: e
     });
 }
-function f() {
+function S() {
     let e = (0, m.GN)((e) => e.selectedTraits, r.Z),
         t = a.useMemo(() => new Set(e), [e]),
         n = a.useCallback((e) => m.GN.getState().setSelectedTraits([...e]), []);
@@ -141,9 +141,9 @@ t.Z = a.memo(function (e) {
                 case 0:
                     return (0, i.jsx)(T, {});
                 case 1:
-                    return (0, i.jsx)(S, {});
-                case 2:
                     return (0, i.jsx)(f, {});
+                case 2:
+                    return (0, i.jsx)(S, {});
             }
         }, []);
     return (0, i.jsxs)(s.animated.div, {

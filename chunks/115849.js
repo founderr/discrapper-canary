@@ -26,8 +26,8 @@ let p = {
         error: null
     },
     T = (0, u.hQ)(),
-    S = ''.concat(T, '-decription'),
-    f = ''.concat(T, '-error');
+    f = ''.concat(T, '-decription'),
+    S = ''.concat(T, '-error');
 function C(e, t) {
     switch (t.type) {
         case 'RESET':
@@ -94,7 +94,7 @@ function N() {
             autoComplete: 'off',
             children: [
                 (0, i.jsx)(c.FormText, {
-                    id: S,
+                    id: f,
                     type: c.FormText.Types.DESCRIPTION,
                     children: m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION
                 }),
@@ -150,7 +150,7 @@ function N() {
                                 placeholder: m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
                                 'aria-label': m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
                                 'aria-invalid': null != A || void 0,
-                                'aria-describedby': null != A ? f : S
+                                'aria-describedby': null != A ? S : f
                             }),
                             null != u &&
                                 (0, i.jsx)('div', {
@@ -170,7 +170,7 @@ function N() {
                 null != A &&
                     (0, i.jsx)(c.FormText, {
                         role: 'alert',
-                        id: f,
+                        id: S,
                         type: c.FormText.Types.ERROR,
                         className: g.marginTop8,
                         children: A

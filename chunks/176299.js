@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(290297),
     p = n(279240),
     T = n(765717),
-    S = n(358221),
-    f = n(823748),
+    f = n(358221),
+    S = n(823748),
     C = n(626421),
     N = n(963202),
     A = n(118379),
@@ -84,13 +84,13 @@ let eg = 'resizable-sidebar-width',
         name: 'GuildShopPage',
         renderLoader: ep
     }),
-    eS = (0, c.Un)({
+    ef = (0, c.Un)({
         createPromise: () => n.e('44798').then(n.bind(n, 998420)),
         webpackId: 998420,
         name: 'GuildMemberApplicationReview',
         renderLoader: ep
     }),
-    ef = (0, c.Un)({
+    eS = (0, c.Un)({
         createPromise: () => n.e('60493').then(n.bind(n, 231588)),
         webpackId: 231588,
         name: 'GuildHomePage',
@@ -153,9 +153,9 @@ let eg = 'resizable-sidebar-width',
                         initialTab: c
                     });
                 case eE.oC.MEMBER_APPLICATIONS:
-                    return (0, i.jsx)(eS, { guildId: a });
-                case eE.oC.GUILD_HOME:
                     return (0, i.jsx)(ef, { guildId: a });
+                case eE.oC.GUILD_HOME:
+                    return (0, i.jsx)(eS, { guildId: a });
                 case eE.oC.CHANNEL_BROWSER:
                     return (0, i.jsx)(eN, {
                         guildId: a,
@@ -189,7 +189,7 @@ let eg = 'resizable-sidebar-width',
                 n.id
             );
         }
-        return (0, i.jsx)(f.Z, {});
+        return (0, i.jsx)(S.Z, {});
     },
     eZ = a.memo(function () {
         let { guildId: e, channelId: t } = (0, q.Z)(),
@@ -290,7 +290,7 @@ function ek(e) {
     (0, m.t)(!0);
     let c = 'app view user trigger debugging';
     E.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), E.R6.trackExposure({ location: c });
-    let g = (0, u.e7)([S.Z], () => S.Z.isFullscreenInContext()),
+    let g = (0, u.e7)([f.Z], () => f.Z.isFullscreenInContext()),
         p = (0, L.Q)('ChannelSidebar'),
         T = (0, er.A)((e) => !e.isOpen);
     a.useLayoutEffect(() => {
@@ -317,26 +317,26 @@ function ek(e) {
                 Number.isNaN(t) && (t = 268), ew(t);
             }
         }, [T]);
-    let f = a.useRef(null),
+    let S = a.useRef(null),
         C = a.useCallback((e, t) => {
             var n;
             ew(e);
             let i = t < 80;
             er.A.setState({ isOpen: !i }), t < 240 ? document.body.classList.add(eI.collapsing) : document.body.classList.remove(eI.collapsing);
             let a = t - e;
-            null === (n = f.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(a / 76), 0.25))), i && ew(76);
+            null === (n = S.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(a / 76), 0.25))), i && ew(76);
         }, []),
         N = a.useCallback(() => {
             document.body.classList.add(eI.dragging);
         }, []),
         A = a.useCallback((e) => {
             var t;
-            document.body.classList.remove(eI.dragging), document.body.classList.remove(eI.collapsing), null === (t = f.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), _.K.set(eg, e);
+            document.body.classList.remove(eI.dragging), document.body.classList.remove(eI.collapsing), null === (t = S.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), _.K.set(eg, e);
         }, []),
         v = (0, I.Z)({
             minDimension: 240,
             maxDimension: 420,
-            resizableDomNodeRef: f,
+            resizableDomNodeRef: S,
             onElementResize: C,
             onElementResizeStart: N,
             onElementResizeEnd: A,
@@ -358,7 +358,7 @@ function ek(e) {
         theme: n,
         children: (e) =>
             (0, i.jsxs)('div', {
-                ref: p ? f : void 0,
+                ref: p ? S : void 0,
                 'data-collapsed': T,
                 className: r()(eI.sidebar, e, {
                     [eI.hasNotice]: t,
@@ -436,14 +436,14 @@ function eB() {
         m = (null == E ? void 0 : null === (e = E.params) || void 0 === e ? void 0 : e.channelId) === eE.oC.GUILD_ONBOARDING,
         I = s || r || c || _ || m,
         p = a.useCallback(() => F.Z.openSidebar(), []),
-        S = (0, L.Q)('AppView');
+        f = (0, L.Q)('AppView');
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: eI.container,
             children: [
                 h &&
                     !_ &&
-                    !S &&
+                    !f &&
                     (0, i.jsx)(w.Z, {
                         className: eI.guilds,
                         themeOverride: n

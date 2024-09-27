@@ -126,7 +126,7 @@ let b = 150,
             V = null !== Z && [R.Skl.OFFLINE, R.Skl.INVISIBLE].includes(Z),
             H = (0, _.Z)(t, n, void 0, B, F),
             Y = null == H ? void 0 : H.activityText,
-            j = null != Y && Y.length > 0;
+            j = null != Y && '' !== Y;
         return V || (null == k && !j)
             ? null
             : (0, i.jsxs)('div', {

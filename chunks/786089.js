@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(626135),
     p = n(617136),
     T = n(113434),
-    S = n(497505),
-    f = n(918701),
+    f = n(497505),
+    S = n(918701),
     C = n(981631),
     N = n(689938),
     A = n(874976);
@@ -55,15 +55,15 @@ t.Z = (0, a.memo)(function (e) {
     )
         return null;
     let W = (0, c.wj)(w),
-        z = (0, f.Sz)(Z.id, Z.config.assets.logotype, 'dark'),
-        K = (0, f.Sz)(Z.id, null != H.assetVideo ? H.assetVideo : H.asset),
-        q = (0, f.nP)(K),
+        z = (0, S.Sz)(Z.id, Z.config.assets.logotype, 'dark'),
+        K = (0, S.Sz)(Z.id, null != H.assetVideo ? H.assetVideo : H.asset),
+        q = (0, S.nP)(K),
         Q = L ? G + 8 : 0,
         X = () => {
             R(!0),
                 g.default.track(C.rMx.QUEST_HOVER, {
                     quest_id: Z.id,
-                    ...(0, p.mH)(S.jn.TROPHY_CASE_CARD)
+                    ...(0, p.mH)(f.jn.TROPHY_CASE_CARD)
                 });
         },
         J = () => R(!1),
@@ -104,7 +104,7 @@ t.Z = (0, a.memo)(function (e) {
                               autoPlay: !1,
                               children: (0, i.jsx)('source', {
                                   src: K,
-                                  type: (0, f.mN)(K),
+                                  type: (0, S.mN)(K),
                                   onError: () => $(K)
                               })
                           })

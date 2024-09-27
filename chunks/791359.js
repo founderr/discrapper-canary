@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(801077),
     p = n(626135),
     T = n(70956),
-    S = n(225559),
-    f = n(910436),
+    f = n(225559),
+    S = n(910436),
     C = n(203028),
     N = n(358924),
     A = n(292140),
@@ -38,7 +38,7 @@ let x = 15 * T.Z.Millis.MINUTE,
                 party: t,
                 onUserContextMenu: n
             }),
-            c = (0, i.jsx)(f.Z, {
+            c = (0, i.jsx)(S.Z, {
                 party: t,
                 onChannelContextMenu: s,
                 quest: r
@@ -48,7 +48,7 @@ let x = 15 * T.Z.Millis.MINUTE,
             I = _.length,
             g = h.length,
             T = E.length > 0,
-            S = a.useCallback(() => {
+            f = a.useCallback(() => {
                 let e = h
                     .filter((e) => {
                         var t, n;
@@ -63,7 +63,7 @@ let x = 15 * T.Z.Millis.MINUTE,
                     games_detected: e
                 });
             }, [m, I, g, T, h]),
-            v = o()(S, x);
+            v = o()(f, x);
         return null != l || null != c
             ? (0, i.jsx)(d.Popout, {
                   position: 'left',
@@ -107,7 +107,7 @@ function M() {
             currentUser: I.default.getCurrentUser()
         })),
         l = (0, c.e7)([_.Z], () => _.Z.quests);
-    a.useEffect(() => (u.Z.wait(() => S.L()), () => u.Z.wait(() => S.v())), [null == r ? void 0 : r.id]),
+    a.useEffect(() => (u.Z.wait(() => f.L()), () => u.Z.wait(() => f.v())), [null == r ? void 0 : r.id]),
         a.useEffect(() => {
             n && !s && P();
         }, [n, s]);

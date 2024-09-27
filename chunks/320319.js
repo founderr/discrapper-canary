@@ -225,7 +225,7 @@ let L = a.forwardRef((e, t) => {
     var n;
     let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: E, onCtaClick: u, onMouseEnter: T, className: I, perkComponent: R, cardVariant: N, cardType: m, onClick: f, backgroundImage: S, pillText: h, perkImage: x } = e,
         b = m === A.R0.CARD_CAROUSEL_FIRST_ROW || m === A.R0.CARD_CAROUSEL_SECOND_ROW || m === A.R0.CARD_CAROUSEL_THIRD_ROW,
-        P = 0 !== c.length || 0 !== d.length || (0 !== o.length && N === A.zW.REWARD),
+        P = '' !== c || '' !== d || ('' !== o && N === A.zW.REWARD),
         v = (0, g.IB)(),
         [L, Z] = a.useState(N !== A.zW.REWARD || v);
     a.useEffect(() => {

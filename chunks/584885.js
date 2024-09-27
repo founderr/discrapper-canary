@@ -24,9 +24,9 @@ let E = [
     ];
 t.Z = (e) => {
     let t,
-        { title: n, subtitle: I, guildsData: g, analyticsContext: p, theme: T, onViewGuild: S, fetchGuilds: f, onGuildCardSeen: C, currentCategoryId: N, loadId: A, onTagClick: v, showMoreCards: Z = !1 } = e;
+        { title: n, subtitle: I, guildsData: g, analyticsContext: p, theme: T, onViewGuild: f, fetchGuilds: S, onGuildCardSeen: C, currentCategoryId: N, loadId: A, onTagClick: v, showMoreCards: Z = !1 } = e;
     a.useEffect(() => {
-        r.Z.wait(() => f());
+        r.Z.wait(() => S());
     }, [N]);
     let L = (0, u.Z)(Z ? m : E),
         { analyticsLocations: R } = (0, l.ZP)();
@@ -46,7 +46,7 @@ t.Z = (e) => {
             });
         else {
             let t = O.findIndex((t) => t.id === e);
-            await S(e, t, p, A);
+            await f(e, t, p, A);
         }
     };
     if (x || null == O) {

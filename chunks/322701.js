@@ -19,7 +19,7 @@ t.Z = function (e) {
         }),
         p = h !== d.pJs.ONLINE && h !== d.pJs.ALL,
         T = E || '' !== _ || p,
-        S = t.map((e, t) =>
+        f = t.map((e, t) =>
             T
                 ? (0, i.jsx)('div', { children: e.map(n) }, t)
                 : (0, i.jsx)(
@@ -41,7 +41,7 @@ t.Z = function (e) {
                     ref: t,
                     className: u.peopleList,
                     ...n,
-                    children: [S, m]
+                    children: [f, m]
                 });
             }
         })

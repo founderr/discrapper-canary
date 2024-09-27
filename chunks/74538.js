@@ -493,157 +493,157 @@ function ea(e) {
     }
 }
 function eo(e) {
-    var t, n, r, i, a, o, s, l, u, c;
-    let { subscription: d, planId: _, price: f, includePremiumGuilds: p, hasDiscountApplied: m, activeDiscountInfo: I, renewalInvoicePreview: T } = e,
-        g = w.GP[_],
-        A = tA(Y(g.id), g.interval),
-        v = ew(d) || (null == d.paymentSourceId && !d.isPurchasedExternally && !(null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium())),
-        N = null != f,
-        O = d.status === P.O0b.UNPAID && null !== d.latestInvoice && (null === (n = d.latestInvoice) || void 0 === n ? void 0 : n.status) === P.hUK.OPEN,
-        R = v ? P.O0b.CANCELED : O ? P.O0b.UNPAID : d.status,
-        y = null === (a = null !== (i = null == T ? void 0 : T.taxInclusive) && void 0 !== i ? i : null === (r = d.latestInvoice) || void 0 === r ? void 0 : r.taxInclusive) || void 0 === a || a,
-        L = w.cb + (p ? eh(d.additionalPlans) : 0);
-    switch (_) {
+    var t, n, r, i, a, o, s, l, u, c, d, _, f;
+    let { subscription: p, planId: m, price: I, includePremiumGuilds: T, hasDiscountApplied: g, activeDiscountInfo: A, renewalInvoicePreview: v } = e,
+        N = w.GP[m],
+        O = tA(Y(N.id), N.interval),
+        R = ew(p) || (null == p.paymentSourceId && !p.isPurchasedExternally && !(null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium())),
+        y = null != I,
+        L = p.status === P.O0b.UNPAID && null !== p.latestInvoice && (null === (n = p.latestInvoice) || void 0 === n ? void 0 : n.status) === P.hUK.OPEN,
+        b = R ? P.O0b.CANCELED : L ? P.O0b.UNPAID : p.status,
+        D = null === (a = null !== (i = null == v ? void 0 : v.taxInclusive) && void 0 !== i ? i : null === (r = p.latestInvoice) || void 0 === r ? void 0 : r.taxInclusive) || void 0 === a || a,
+        M = w.cb + (T ? eh(p.additionalPlans) : 0);
+    switch (m) {
         case w.Xh.PREMIUM_MONTH_TIER_0:
         case w.Xh.PREMIUM_YEAR_TIER_0:
-            switch (R) {
+            switch (b) {
                 case P.O0b.CANCELED:
-                    return N ? (y ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({ price: f }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_TAX_EXCLUSIVE.format({ price: f })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE;
+                    return y ? (D ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({ price: I }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_TAX_EXCLUSIVE.format({ price: I })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE;
                 case P.O0b.ACCOUNT_HOLD:
-                    return N ? (y ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({ price: f }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({ price: f })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE.format();
+                    return y ? (D ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({ price: I }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({ price: I })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE.format();
                 case P.O0b.UNPAID:
                     return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAYMENT.format();
                 case P.O0b.PAUSE_PENDING:
-                    let b = null != d.pauseEndsAt ? E()(d.pauseEndsAt).diff(d.currentPeriodEnd, 'days') : null;
-                    return null != b
+                    let U = null != p.pauseEndsAt ? E()(p.pauseEndsAt).diff(p.currentPeriodEnd, 'days') : null;
+                    return null != U
                         ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING.format({
-                              pauseDate: d.currentPeriodEnd,
-                              pauseDuration: b
+                              pauseDate: p.currentPeriodEnd,
+                              pauseDuration: U
                           })
-                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING_NO_DURATION.format({ pauseDate: d.currentPeriodEnd });
+                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING_NO_DURATION.format({ pauseDate: p.currentPeriodEnd });
                 case P.O0b.PAUSED:
-                    return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({ resumeDate: d.pauseEndsAt });
+                    return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({ resumeDate: null !== (o = p.pauseEndsAt) && void 0 !== o ? o : void 0 });
                 case P.O0b.PAST_DUE:
                     return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-                        endDate: (0, C.vc)(eA(d).expiresDate, 'LL'),
+                        endDate: (0, C.vc)(eA(p).expiresDate, 'LL'),
                         onClick: () => {
                             (0, h.Z)('https://support.discord.com/hc/articles/23082866222871');
                         }
                     });
                 default:
-                    return N ? (y ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({ price: f }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_TAX_EXCLUSIVE.format({ price: f })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_NO_PRICE;
+                    return y ? (D ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({ price: I }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_TAX_EXCLUSIVE.format({ price: I })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_NO_PRICE;
             }
         case w.Xh.PREMIUM_MONTH_TIER_1:
         case w.Xh.PREMIUM_YEAR_TIER_1:
-            switch (R) {
+            switch (b) {
                 case P.O0b.CANCELED:
-                    return N ? (y ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({ price: f }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_TAX_EXCLUSIVE.format({ price: f })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE;
+                    return y ? (D ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({ price: I }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_TAX_EXCLUSIVE.format({ price: I })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE;
                 case P.O0b.ACCOUNT_HOLD:
-                    return N ? (y ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({ price: f }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({ price: f })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE.format();
+                    return y ? (D ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({ price: I }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({ price: I })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE.format();
                 case P.O0b.UNPAID:
                     return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAYMENT.format();
                 case P.O0b.PAUSE_PENDING:
-                    let D = null != d.pauseEndsAt ? E()(d.pauseEndsAt).diff(d.currentPeriodEnd, 'days') : null;
-                    return null != D
+                    let x = null != p.pauseEndsAt ? E()(p.pauseEndsAt).diff(p.currentPeriodEnd, 'days') : null;
+                    return null != x
                         ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING.format({
-                              pauseDate: d.currentPeriodEnd,
-                              pauseDuration: D
+                              pauseDate: p.currentPeriodEnd,
+                              pauseDuration: x
                           })
-                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING_NO_DURATION.format({ pauseDate: d.currentPeriodEnd });
+                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING_NO_DURATION.format({ pauseDate: p.currentPeriodEnd });
                 case P.O0b.PAUSED:
-                    return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({ resumeDate: d.pauseEndsAt });
+                    return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({ resumeDate: null !== (s = p.pauseEndsAt) && void 0 !== s ? s : void 0 });
                 case P.O0b.PAST_DUE:
                     return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-                        endDate: (0, C.vc)(eA(d).expiresDate, 'LL'),
+                        endDate: (0, C.vc)(eA(p).expiresDate, 'LL'),
                         onClick: () => {
                             (0, h.Z)('https://support.discord.com/hc/articles/23082866222871');
                         }
                     });
                 default:
-                    return N ? (y ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({ price: f }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_TAX_EXCLUSIVE.format({ price: f })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_NO_PRICE;
+                    return y ? (D ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({ price: I }) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_TAX_EXCLUSIVE.format({ price: I })) : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_NO_PRICE;
             }
         case w.Xh.PREMIUM_MONTH_TIER_2:
         case w.Xh.PREMIUM_YEAR_TIER_2:
         case w.Xh.PREMIUM_3_MONTH_TIER_2:
         case w.Xh.PREMIUM_6_MONTH_TIER_2:
-            switch (R) {
+            switch (b) {
                 case P.O0b.CANCELED:
-                    return N
-                        ? y
+                    return y
+                        ? D
                             ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format({
-                                  price: f,
-                                  num: L
+                                  price: I,
+                                  num: M
                               })
                             : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_TAX_EXCLUSIVE.format({
-                                  price: f,
-                                  num: L
+                                  price: I,
+                                  num: M
                               })
-                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE.format({ num: L });
+                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE.format({ num: M });
                 case P.O0b.ACCOUNT_HOLD:
-                    return N
-                        ? y
+                    return y
+                        ? D
                             ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format({
-                                  price: f,
-                                  num: L
+                                  price: I,
+                                  num: M
                               })
                             : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({
-                                  price: f,
-                                  num: L
+                                  price: I,
+                                  num: M
                               })
-                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE.format({ num: L });
+                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE.format({ num: M });
                 case P.O0b.UNPAID:
-                    return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAYMENT.format({ num: L });
+                    return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAYMENT.format({ num: M });
                 case P.O0b.PAUSE_PENDING:
-                    let M = null != d.pauseEndsAt ? E()(d.pauseEndsAt).diff(d.currentPeriodEnd, 'days') : null;
-                    return null != M
+                    let k = null != p.pauseEndsAt ? E()(p.pauseEndsAt).diff(p.currentPeriodEnd, 'days') : null;
+                    return null != k
                         ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING.format({
-                              pauseDate: d.currentPeriodEnd,
-                              pauseDuration: M
+                              pauseDate: p.currentPeriodEnd,
+                              pauseDuration: k
                           })
-                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING_NO_DURATION.format({ pauseDate: d.currentPeriodEnd });
+                        : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING_NO_DURATION.format({ pauseDate: p.currentPeriodEnd });
                 case P.O0b.PAUSED:
-                    return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({ resumeDate: d.pauseEndsAt });
+                    return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({ resumeDate: null !== (l = p.pauseEndsAt) && void 0 !== l ? l : void 0 });
                 case P.O0b.BILLING_RETRY:
-                    return G.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO.format({ endDate: E()(d.currentPeriodStart).add(w.A5, 'days') });
+                    return G.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO.format({ endDate: String(E()(p.currentPeriodStart).add(w.A5, 'days')) });
                 case P.O0b.PAST_DUE:
                     return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-                        endDate: (0, C.vc)(eA(d).expiresDate, 'LL'),
+                        endDate: (0, C.vc)(eA(p).expiresDate, 'LL'),
                         onClick: () => {
                             (0, h.Z)('https://support.discord.com/hc/articles/23082866222871');
                         }
                     });
                 default:
-                    return m
-                        ? _ === w.Xh.PREMIUM_YEAR_TIER_2
+                    return g
+                        ? m === w.Xh.PREMIUM_YEAR_TIER_2
                             ? G.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
-                                  percent: null !== (o = null == I ? void 0 : I.percentage) && void 0 !== o ? o : w.Bo,
-                                  regularPrice: A
+                                  percent: null !== (u = null == A ? void 0 : A.percentage) && void 0 !== u ? u : w.Bo,
+                                  regularPrice: O
                               })
-                            : y
+                            : D
                               ? G.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
-                                    percent: null !== (s = null == I ? void 0 : I.percentage) && void 0 !== s ? s : w.M_,
-                                    regularPrice: A,
-                                    numMonths: null !== (l = null == I ? void 0 : I.duration) && void 0 !== l ? l : w.rt
+                                    percent: null !== (c = null == A ? void 0 : A.percentage) && void 0 !== c ? c : w.M_,
+                                    regularPrice: O,
+                                    numMonths: null !== (d = null == A ? void 0 : A.duration) && void 0 !== d ? d : w.rt
                                 })
                               : G.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC_TAX_EXCLUSIVE.format({
-                                    percent: null !== (u = null == I ? void 0 : I.percentage) && void 0 !== u ? u : w.M_,
-                                    regularPrice: A,
-                                    numMonths: null !== (c = null == I ? void 0 : I.duration) && void 0 !== c ? c : w.rt
+                                    percent: null !== (_ = null == A ? void 0 : A.percentage) && void 0 !== _ ? _ : w.M_,
+                                    regularPrice: O,
+                                    numMonths: null !== (f = null == A ? void 0 : A.duration) && void 0 !== f ? f : w.rt
                                 })
-                        : N
-                          ? y
+                        : y
+                          ? D
                               ? G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
-                                    price: f,
-                                    num: L
+                                    price: I,
+                                    num: M
                                 })
                               : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_TAX_EXCLUSIVE.format({
-                                    price: f,
-                                    num: L
+                                    price: I,
+                                    num: M
                                 })
-                          : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_NO_PRICE.format({ num: L });
+                          : G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_NO_PRICE.format({ num: M });
             }
         default:
-            throw Error('Invalid planId '.concat(_));
+            throw Error('Invalid planId '.concat(m));
     }
 }
 function es(e) {
@@ -673,7 +673,7 @@ function el(e) {
                       return w.Z1.has(t);
                   }),
         a = (null == i ? void 0 : i.planId) === w.Xh.PREMIUM_MONTH_GUILD ? G.Z.Messages.PREMIUM_GUILD_NUM_MONTH_GUILD_SUBSCRIPTIONS_UNFORMATTED : (null == i ? void 0 : i.planId) === w.Xh.PREMIUM_YEAR_GUILD ? G.Z.Messages.PREMIUM_GUILD_NUM_MONTH_GUILD_SUBSCRIPTIONS_UNFORMATTED : null,
-        o = null == a ? void 0 : a.format({ num: null == i ? void 0 : i.quantity });
+        o = null != a ? a.format({ num: null == i ? void 0 : i.quantity }) : void 0;
     if (null != r && null != o)
         return G.Z.Messages.PREMIUM_WITH_PREMIUM_GUILD_EXTERNAL_PLAN_DESCRIPTION.format({
             premiumDescription: r,
@@ -820,8 +820,9 @@ function eA(e) {
     }
 }
 function ev(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = n
+    var n, r, i;
+    let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        o = a
             ? (0, M.T4)(
                   t.invoiceItems
                       .filter((e) => w.UD.has(e.subscriptionPlanId))
@@ -835,51 +836,50 @@ function ev(e, t) {
     if (e.status === P.O0b.PAUSE_PENDING)
         return G.Z.Messages.PREMIUM_SETTINGS_PAUSE_PENDING_INFO.format({
             pauseDate: e.currentPeriodEnd,
-            resumeDate: e.pauseEndsAt
+            resumeDate: null !== (n = e.pauseEndsAt) && void 0 !== n ? n : void 0
         });
     if (e.status === P.O0b.PAUSED)
         return null == e.pauseEndsAt
-            ? n
+            ? a
                 ? G.Z.Messages.PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN.format({
                       planName: G.Z.Messages.PREMIUM,
-                      price: r
+                      price: o
                   })
                 : G.Z.Messages.PREMIUM_SETTINGS_PAUSED_INFO
-            : n
+            : a
               ? G.Z.Messages.PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN.format({
                     planName: G.Z.Messages.PREMIUM,
                     resumeDate: e.pauseEndsAt,
-                    price: r
+                    price: o
                 })
               : G.Z.Messages.PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO.format({ resumeDate: e.pauseEndsAt });
     else if (e.status === P.O0b.PAST_DUE) {
-        var i, a;
         let t = eA(e).expiresDate;
-        return (e.isPurchasedViaGoogle && (null === (i = e.metadata) || void 0 === i ? void 0 : i.google_grace_period_expires_date) != null && (t = E()(e.metadata.google_grace_period_expires_date)), e.isPurchasedViaApple && (null === (a = e.metadata) || void 0 === a ? void 0 : a.apple_grace_period_expires_date) != null && (t = E()(e.metadata.apple_grace_period_expires_date)), e.isPurchasedExternally)
+        return (e.isPurchasedViaGoogle && (null === (r = e.metadata) || void 0 === r ? void 0 : r.google_grace_period_expires_date) != null && (t = E()(e.metadata.google_grace_period_expires_date)), e.isPurchasedViaApple && (null === (i = e.metadata) || void 0 === i ? void 0 : i.apple_grace_period_expires_date) != null && (t = E()(e.metadata.apple_grace_period_expires_date)), e.isPurchasedExternally)
             ? G.Z.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL.format({
-                  endDate: t,
+                  endDate: String(t),
                   paymentGatewayName: x.Vz[e.paymentGateway],
                   paymentSourceLink: ej(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
               })
             : G.Z.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO.format({
-                  endDate: t,
-                  price: r
+                  endDate: String(t),
+                  price: o
               });
     } else if (e.status === P.O0b.BILLING_RETRY)
         return G.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
-            endDate: E()(e.currentPeriodStart).add(w.A5, 'days'),
-            price: r
+            endDate: String(E()(e.currentPeriodStart).add(w.A5, 'days')),
+            price: o
         });
     else if (e.status === P.O0b.ACCOUNT_HOLD)
         return e.isPurchasedViaGoogle && !(0, L.isAndroid)()
             ? G.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
-                  endDate: E()(e.currentPeriodStart).add(w.gh, 'days'),
+                  endDate: String(E()(e.currentPeriodStart).add(w.gh, 'days')),
                   paymentGatewayName: x.Vz[e.paymentGateway],
                   paymentSourceLink: ej(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
               })
             : G.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
-                  endDate: E()(e.currentPeriodStart).add(w.gh, 'days'),
-                  price: r
+                  endDate: String(E()(e.currentPeriodStart).add(w.gh, 'days')),
+                  price: o
               });
     else
         return eR(e)
@@ -892,15 +892,15 @@ function ev(e, t) {
                       paymentGatewayName: x.Vz[e.paymentGateway],
                       subscriptionManagementLink: ej(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
                   })
-                : n
+                : a
                   ? G.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_WITH_PLAN.format({
                         planName: G.Z.Messages.PREMIUM,
                         renewalDate: t.subscriptionPeriodStart,
-                        price: r
+                        price: o
                     })
                   : G.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO.format({
                         renewalDate: t.subscriptionPeriodStart,
-                        price: r
+                        price: o
                     });
 }
 function eN(e) {

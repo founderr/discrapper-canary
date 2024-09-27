@@ -15,8 +15,8 @@ var i = n(735250),
     g = n(981631),
     p = n(46140),
     T = n(689938),
-    S = n(696165);
-function f(e) {
+    f = n(696165);
+function S(e) {
     let { tab: t } = e,
         n = (0, E.d)((e) => e.selectedTab === t, l.Z),
         s = a.useMemo(
@@ -46,10 +46,10 @@ function f(e) {
         }, [t]);
     return (0, i.jsxs)(d.Clickable, {
         onClick: T,
-        className: r()(S.navItem, { [S.selected]: n }),
+        className: r()(f.navItem, { [f.selected]: n }),
         children: [
             (0, i.jsx)('div', {
-                className: S.navItemIcon,
+                className: f.navItemIcon,
                 children: s
             }),
             (0, i.jsx)(d.Text, {
@@ -63,18 +63,18 @@ function f(e) {
 t.Z = function () {
     let e = (0, u.h)({ location: 'GlobalDiscoverySidebar' });
     return (0, i.jsxs)('div', {
-        className: S.container,
+        className: f.container,
         children: [
             (0, i.jsx)('div', {
-                className: S.header,
+                className: f.header,
                 children: (0, i.jsx)(d.Heading, {
                     variant: 'text-lg/semibold',
                     children: T.Z.Messages.GLOBAL_DISCOVERY_TITLE
                 })
             }),
             (0, i.jsx)('nav', {
-                className: S.nav,
-                children: I.mc.map((t) => (t !== I.F$.APPS || e ? (0, i.jsx)(f, { tab: t }, t) : null))
+                className: f.nav,
+                children: I.mc.map((t) => (t !== I.F$.APPS || e ? (0, i.jsx)(S, { tab: t }, t) : null))
             })
         ]
     });

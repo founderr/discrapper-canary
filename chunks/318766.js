@@ -79,7 +79,7 @@ function L(e) {
         Y = (0, u.e7)([_.Z], () => _.Z.useReducedMotion);
     return (0, i.jsx)(d.Tooltip, {
         text: C(),
-        'aria-label': ''.concat(S.Z.Messages.PREMIUM_REVERSE_TRIAL_EMOJI_TOOLTIP.format()),
+        'aria-label': S.Z.Messages.PREMIUM_REVERSE_TRIAL_EMOJI_TOOLTIP.plainFormat(),
         position: 'top',
         shouldShow: U && !o && H,
         tooltipClassName: A.premiumTooltip,
