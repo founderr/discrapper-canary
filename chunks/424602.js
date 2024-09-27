@@ -106,26 +106,17 @@ let a = (0, r.B)({
         id: '2024-08_open_platform_app_launcher_holdout',
         label: 'Open Platform App Launcher Holdout',
         commonTriggerPoint: i.$P.VOICE_CALL,
-        defaultConfig: {
-            enabled: !1,
-            clickOnHomeActivityOpensAppDetail: !0
-        },
+        defaultConfig: { clickOnHomeActivityOpensAppDetail: !0 },
         treatments: [
             {
                 id: 1,
                 label: 'clicking activity in voice app launcher -> performs activity action',
-                config: {
-                    enabled: !0,
-                    clickOnHomeActivityOpensAppDetail: !1
-                }
+                config: { clickOnHomeActivityOpensAppDetail: !1 }
             },
             {
                 id: 2,
                 label: 'clicking activity in voice app launcher -> opens activity detail page',
-                config: {
-                    enabled: !0,
-                    clickOnHomeActivityOpensAppDetail: !0
-                }
+                config: { clickOnHomeActivityOpensAppDetail: !0 }
             }
         ]
     });
