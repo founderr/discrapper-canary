@@ -106,6 +106,7 @@ function b() {
                     !X &&
                         (0, i.jsx)(I.aV, {
                             icon: W ? o.ArrowLargeLeftIcon : o.ServerIcon,
+                            iconColor: W ? o.tokens.colors.INTERACTIVE_NORMAL : void 0,
                             onClick: W ? F : void 0
                         }),
                     !X &&
