@@ -123,7 +123,7 @@ function O(e) {
                                     currentUser: n,
                                     displayProfile: D,
                                     channel: O,
-                                    isHovering: G,
+                                    isHovering: null == V.interactionType && G,
                                     onOpenProfile: y ? void 0 : F
                                 }),
                                 (0, i.jsx)(b.Z, { user: t })

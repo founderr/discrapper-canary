@@ -162,7 +162,7 @@ function x(e) {
                                     currentUser: n,
                                     displayProfile: Q,
                                     guild: W,
-                                    isHovering: X,
+                                    isHovering: null == $.interactionType && X,
                                     onOpenProfile: Z ? void 0 : J,
                                     channelId: x,
                                     onClose: B
