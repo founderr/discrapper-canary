@@ -131,53 +131,52 @@ let el = (0, M.hQ)(),
         };
     })(T.Z);
 function eN(e) {
-    var t;
-    let { channel: s, onChange: i } = e,
-        [a, r] = l.useState(null !== (t = s.rateLimitPerUser) && void 0 !== t ? t : 0),
-        [o, c] = l.useState(null),
-        d = l.useMemo(() => {
-            let e = [...(null != o ? o : q.BiE)];
+    let { channel: t, onChange: s } = e,
+        [i, a] = l.useState(null),
+        r = t.rateLimitPerUser,
+        o = l.useMemo(() => {
+            let e = [...(null != i ? i : q.BiE)];
             return (
-                !e.includes(a) && e.unshift(a),
+                !e.includes(r) && e.unshift(r),
                 e.map((e) => ({
                     label: (0, z.A)(e, !1),
                     value: e
                 }))
             );
-        }, [o, a]),
-        u = l.useCallback(
+        }, [i, r]),
+        c = l.useCallback(
             (e) => {
-                r(e), i(e), c(null);
+                s(e), a(null);
             },
-            [i]
+            [s]
         ),
-        m = l.useCallback((e) => {
+        d = l.useCallback((e) => {
             if ('' === e) {
-                c(null);
+                a(null);
                 return;
             }
             let t = [],
                 s = parseInt(e, 10);
             if (Number.isNaN(s)) {
-                c(null);
+                a(null);
                 return;
             }
             s <= q.GI0 && t.push(s);
             let n = s * k.Z.Seconds.MINUTE;
             n <= q.GI0 && t.push(n);
             let l = s * k.Z.Seconds.HOUR;
-            l <= q.GI0 && t.push(l), c(t);
+            l <= q.GI0 && t.push(l), a(t);
         }, []),
-        g = l.useCallback(() => {
-            c(null);
+        u = l.useCallback(() => {
+            a(null);
         }, []);
     return (0, n.jsx)(h.SearchableSelect, {
         className: es.marginBottom8,
-        value: a,
-        onChange: u,
-        onSearchChange: m,
-        options: d,
-        onBlur: g,
+        value: r,
+        onChange: c,
+        onSearchChange: d,
+        options: o,
+        onBlur: u,
         placeholder: ee.Z.Messages.FORM_LABEL_SLOWMODE_SEARCH_PLACEHOLDER
     });
 }
