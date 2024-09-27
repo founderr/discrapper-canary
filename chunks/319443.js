@@ -2,33 +2,47 @@ var i = n(735250),
     a = n(470079),
     s = n(481060),
     r = n(674588),
-    l = n(611928),
-    o = n(922122),
-    c = n(119014),
-    d = n(726941),
-    u = n(370648),
-    _ = n(979007),
-    h = n(842221);
+    l = n(979233),
+    o = n(611928),
+    c = n(922122),
+    d = n(119014),
+    u = n(726941),
+    _ = n(370648),
+    h = n(979007),
+    E = n(842221);
 t.Z = function () {
-    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, c.i)();
+    let { onScroll: e, scrollPosition: t, resetScrollPosition: n } = (0, l.M)(),
+        { tabs: m, selectedTab: I, onSelectTab: g } = (0, d.i)();
     return (
+        a.useEffect(() => {
+            n();
+        }, [I, n]),
         a.useEffect(() => {
             r.CP();
         }, []),
+        a.useEffect(() => {
+            r.g5();
+        }, []),
         (0, i.jsxs)('div', {
-            className: h.container,
+            className: E.container,
             children: [
-                (0, i.jsxs)(l.ZP, {
+                (0, i.jsxs)(o.ZP, {
                     children: [
-                        (0, i.jsx)(l.aV, { icon: s.AppsIcon }),
-                        (0, i.jsx)(o.Z, {
-                            tabs: e,
-                            selectedTab: t,
-                            onTabSelect: n
+                        (0, i.jsx)(o.z6, { scrollPosition: t }),
+                        (0, i.jsx)(o.aV, { icon: s.AppsIcon }),
+                        (0, i.jsx)(c.Z, {
+                            tabs: m,
+                            selectedTab: I,
+                            onTabSelect: g
                         })
                     ]
                 }),
-                t === _.k ? (0, i.jsx)(u.Z, {}) : (0, i.jsx)(d.Z, { tabId: Number(t) })
+                I === h.k
+                    ? (0, i.jsx)(_.Z, { onScroll: e })
+                    : (0, i.jsx)(u.Z, {
+                          tabId: Number(I),
+                          onScroll: e
+                      })
             ]
         })
     );
