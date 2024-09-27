@@ -136,7 +136,8 @@ function L(e) {
         C = i && n >= m,
         x = a.tier !== S.Eu4.NONE && a.tier !== S.Eu4.TIER_1,
         p = (e, t) => {
-            let { icon: n, className: s } = (0, E.t)(e.icon, t);
+            var n;
+            let { icon: s, className: a } = (0, E.t)(e.icon, t);
             return (0, l.jsxs)(
                 'div',
                 {
@@ -144,9 +145,9 @@ function L(e) {
                     children: [
                         (0, l.jsx)(T.Z, {
                             name: String(e.icon),
-                            icon: n,
+                            icon: s,
                             className: h.perkIcon,
-                            iconClassName: s
+                            iconClassName: a
                         }),
                         (0, l.jsxs)('div', {
                             className: h.perkText,
@@ -171,7 +172,7 @@ function L(e) {
                         })
                     ]
                 },
-                e.title
+                null === (n = e.title) || void 0 === n ? void 0 : n.toString()
             );
         };
     return (0, l.jsxs)(

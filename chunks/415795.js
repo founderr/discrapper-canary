@@ -539,34 +539,33 @@ class U extends i.Component {
 }
 class R extends i.Component {
     renderContent() {
-        let e;
-        let { navigationRecord: s, children: n } = this.props,
-            r = '';
-        switch (s.type) {
+        let e, s;
+        let { navigationRecord: n, children: r } = this.props;
+        switch (n.type) {
             case a.Ky.SHOP:
-                (r = b.Z.Messages.COLLECTIBLES_SHOP),
-                    (e = (0, t.jsx)(l.ShopIcon, {
+                (e = b.Z.Messages.COLLECTIBLES_SHOP),
+                    (s = (0, t.jsx)(l.ShopIcon, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
                 break;
             case a.Ky.NITRO_HOME:
-                (r = b.Z.Messages.PREMIUM),
-                    (e = (0, t.jsx)(l.NitroWheelIcon, {
+                (e = b.Z.Messages.PREMIUM),
+                    (s = (0, t.jsx)(l.NitroWheelIcon, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
                 break;
             case a.Ky.QUEST_HOME:
-                (r = b.Z.Messages.QUESTS),
-                    (e = (0, t.jsx)(l.QuestsIcon, {
+                (e = b.Z.Messages.QUESTS),
+                    (s = (0, t.jsx)(l.QuestsIcon, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
                 break;
             default:
-                (r = s.id),
-                    (e = (0, t.jsx)(l.LinkIcon, {
+                (e = n.id),
+                    (s = (0, t.jsx)(l.LinkIcon, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
@@ -576,12 +575,12 @@ class R extends i.Component {
             children: [
                 (0, t.jsx)('div', {
                     className: _.iconContainer,
-                    children: e
+                    children: s
                 }),
-                r,
+                e,
                 (0, t.jsx)('div', {
                     className: _.misc,
-                    children: n
+                    children: r
                 })
             ]
         });

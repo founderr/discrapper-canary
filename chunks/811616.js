@@ -153,7 +153,9 @@ function h(e) {
                                     regularPrice: (0, E.T4)(Z.amount, Z.currency)
                                 });
                             }
-                            return v ? G.format({ price: (0, E.T4)(Z.amount, Z.currency) }) : (M.interval === N.rV.YEAR && S.Z.Messages.BILLING_YEARLY_PLAN_SAVINGS.format({ percent: j }), null);
+                            if (v) return G.format({ price: (0, E.T4)(Z.amount, Z.currency) });
+                            if (M.interval === N.rV.YEAR) return S.Z.Messages.BILLING_YEARLY_PLAN_SAVINGS.format({ percent: j });
+                            return null;
                         })()
                     })
                 })

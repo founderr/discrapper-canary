@@ -75,30 +75,29 @@ class y extends s.PureComponent {
         );
     }
     renderVoiceCallButton() {
-        let e;
-        let { inCall: t, canShowTooltip: n, callActive: s, callUnavailable: a, isBlocked: o, channel: c, canShowActivityGdmTooltip: u, dismissibleContentTypes: d, isProvisional: h } = this.props;
-        if (t) return null;
-        let m = c.isManaged(),
-            p = '',
+        let e, t;
+        let { inCall: n, canShowTooltip: s, callActive: a, callUnavailable: o, isBlocked: c, channel: u, canShowActivityGdmTooltip: d, dismissibleContentTypes: h, isProvisional: m } = this.props;
+        if (n) return null;
+        let p = u.isManaged(),
             f = !1;
-        h ? ((f = !0), (p = j.Z.Messages.CALL_UNAVAILABLE_PROVISIONAL_USER), (e = r.Tooltip.Colors.RED)) : a ? ((p = m ? j.Z.Messages.VOICE_UNAVAILABLE : j.Z.Messages.CALL_UNAVAILABLE), (e = r.Tooltip.Colors.RED), (f = !0)) : o ? ((p = j.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (f = !0)) : (p = s ? (m ? j.Z.Messages.CONNECT : j.Z.Messages.JOIN_VOICE_CALL) : m ? j.Z.Messages.CONNECT : j.Z.Messages.START_VOICE_CALL);
+        m ? ((f = !0), (e = j.Z.Messages.CALL_UNAVAILABLE_PROVISIONAL_USER), (t = r.Tooltip.Colors.RED)) : o ? ((e = p ? j.Z.Messages.VOICE_UNAVAILABLE : j.Z.Messages.CALL_UNAVAILABLE), (t = r.Tooltip.Colors.RED), (f = !0)) : c ? ((e = j.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (t = r.Tooltip.Colors.RED), (f = !0)) : (e = a ? (p ? j.Z.Messages.CONNECT : j.Z.Messages.JOIN_VOICE_CALL) : p ? j.Z.Messages.CONNECT : j.Z.Messages.START_VOICE_CALL);
         let g = (0, i.jsx)(M.ZP.Icon, {
             icon: r.PhoneCallIcon,
             onClick: this.handleVoiceClick,
             disabled: f,
-            tooltip: p,
-            tooltipColor: e
+            tooltip: e,
+            tooltipColor: t
         });
         return (0, i.jsx)(_.ZP, {
-            contentTypes: d,
+            contentTypes: h,
             children: (e) => {
-                let { visibleContent: s, markAsDismissed: a } = e;
-                if (s === l.z.ACTIVITY_GDM_CALL_TOOLTIP)
+                let { visibleContent: t, markAsDismissed: a } = e;
+                if (t === l.z.ACTIVITY_GDM_CALL_TOOLTIP)
                     return (0, i.jsx)(r.Popout, {
                         position: 'bottom',
                         align: 'center',
                         animation: r.Popout.Animation.TRANSLATE,
-                        shouldShow: n && u && !t,
+                        shouldShow: s && d && !n,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(E.ZP, {

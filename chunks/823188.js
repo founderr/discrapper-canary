@@ -207,22 +207,21 @@ function q(e) {
             n = R.ZP.formatPriceString(R.ZP.getDefaultPrice(t.id), t.interval),
             r = () => {
                 var t, r, a;
-                if (0 === i)
-                    F.Z.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
-                        remainingTime: e,
-                        price: n
-                    });
-                else if (l.planIdFromItems === k.Xh.PREMIUM_YEAR_TIER_2)
-                    return F.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
-                        percent: null !== (t = null == E ? void 0 : E.percentage) && void 0 !== t ? t : k.Bo,
-                        regularPrice: n
-                    });
-                else
-                    return F.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
-                        percent: null !== (r = null == E ? void 0 : E.percentage) && void 0 !== r ? r : k.M_,
-                        regularPrice: n,
-                        numMonths: null !== (a = null == E ? void 0 : E.duration) && void 0 !== a ? a : k.rt
-                    });
+                return 0 === i
+                    ? F.Z.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
+                          remainingTime: e,
+                          price: n
+                      })
+                    : l.planIdFromItems === k.Xh.PREMIUM_YEAR_TIER_2
+                      ? F.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
+                            percent: null !== (t = null == E ? void 0 : E.percentage) && void 0 !== t ? t : k.Bo,
+                            regularPrice: n
+                        })
+                      : F.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
+                            percent: null !== (r = null == E ? void 0 : E.percentage) && void 0 !== r ? r : k.M_,
+                            regularPrice: n,
+                            numMonths: null !== (a = null == E ? void 0 : E.duration) && void 0 !== a ? a : k.rt
+                        });
             };
         return (0, o.jsx)(o.Fragment, {
             children: (0, o.jsx)(f.Heading, {

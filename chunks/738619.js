@@ -133,69 +133,68 @@ class K extends o.PureComponent {
         };
     }
     render() {
-        let e;
-        let { guildId: t, activity: n, showInviteEducation: r, isFocused: i, typingUsers: o, className: s, slowmodeCooldownGuess: u, isBypassSlowmode: d, channel: f, isThreadCreation: h, renderDots: p, poggermodeEnabled: I, isComboing: T } = this.props,
-            { rateLimitPerUser: g } = f,
-            A = P.default.getCurrentUser(),
-            v = C.Z.getGuild(t),
-            O = g > 0,
-            R = h
+        let e, t;
+        let { guildId: n, activity: r, showInviteEducation: i, isFocused: o, typingUsers: s, className: u, slowmodeCooldownGuess: d, isBypassSlowmode: f, channel: h, isThreadCreation: p, renderDots: I, poggermodeEnabled: T, isComboing: g } = this.props,
+            { rateLimitPerUser: A } = h,
+            v = P.default.getCurrentUser(),
+            O = C.Z.getGuild(n),
+            R = A > 0,
+            y = p
                 ? []
-                : c()(o)
+                : c()(s)
                       .keys()
-                      .filter((e) => e !== (null == A ? void 0 : A.id))
+                      .filter((e) => e !== (null == v ? void 0 : v.id))
                       .reject((e) => L.Z.isBlocked(e))
                       .map((e) => P.default.getUser(e))
                       .filter(k.lm)
-                      .map((e) => B.ZP.getName(t, this.props.channel.id, e))
+                      .map((e) => B.ZP.getName(n, this.props.channel.id, e))
                       .value();
-        if (0 === R.length && !O && !T)
-            return r && null != n
+        if (0 === y.length && !R && !g)
+            return i && null != r
                 ? (0, a.jsx)(j, {
-                      activity: n,
-                      isFocused: i
+                      activity: r,
+                      isFocused: o
                   })
                 : (0, a.jsx)(W, {
-                      channel: f,
-                      guild: v
+                      channel: h,
+                      guild: O
                   });
-        let y = '',
-            b = null,
+        let b = null,
             D = '';
-        if (O) {
+        if (R) {
             if (
                 ((b = (0, a.jsx)(m.TimerIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     className: V.slowModeIcon
                 })),
-                (D = (0, S.k)(g)),
-                !d && u > 0)
+                (D = (0, S.k)(A)),
+                !f && d > 0)
             ) {
-                let e = _().duration(u);
-                if (u > G.Z.Millis.HOUR) {
-                    let t = ''.concat(e.minutes()).padStart(2, '0'),
-                        n = ''.concat(e.seconds()).padStart(2, '0');
-                    y = ''.concat(e.hours(), ':').concat(t, ':').concat(n);
+                let t = _().duration(d);
+                if (d > G.Z.Millis.HOUR) {
+                    let n = ''.concat(t.minutes()).padStart(2, '0'),
+                        r = ''.concat(t.seconds()).padStart(2, '0');
+                    e = ''.concat(t.hours(), ':').concat(n, ':').concat(r);
                 } else {
-                    let t = ''.concat(e.seconds()).padStart(2, '0');
-                    y = ''.concat(e.minutes(), ':').concat(t);
+                    let n = ''.concat(t.seconds()).padStart(2, '0');
+                    e = ''.concat(t.minutes(), ':').concat(n);
                 }
-            } else 0 === R.length && (y = d ? Z.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : Z.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT);
+            } else 0 === y.length && (e = f ? Z.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : Z.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT);
         }
-        let [M, U, w] = R;
+        let [M, U, w] = y;
         return (
-            (e =
-                0 === R.length
+            (t =
+                0 === y.length
                     ? ''
-                    : 1 === R.length
+                    : 1 === y.length
                       ? Z.Z.Messages.ONE_USER_TYPING.format({ a: M })
-                      : 2 === R.length
+                      : 2 === y.length
                         ? Z.Z.Messages.TWO_USERS_TYPING.format({
                               a: M,
                               b: U
                           })
-                        : 3 === R.length
+                        : 3 === y.length
                           ? Z.Z.Messages.THREE_USERS_TYPING.format({
                                 a: M,
                                 b: U,
@@ -206,17 +205,17 @@ class K extends o.PureComponent {
                 className: l()(
                     V.typing,
                     {
-                        'stop-animation': !i,
-                        [V.isComboing]: I && T
+                        'stop-animation': !o,
+                        [V.isComboing]: T && g
                     },
-                    s
+                    u
                 ),
                 children: [
                     (0, a.jsxs)('div', {
                         className: V.typingDots,
                         children: [
-                            R.length > 0 &&
-                                !1 !== p &&
+                            y.length > 0 &&
+                                !1 !== I &&
                                 (0, a.jsx)(m.Dots, {
                                     className: V.ellipsis,
                                     dotRadius: 3.5,
@@ -226,22 +225,22 @@ class K extends o.PureComponent {
                                 className: V.text,
                                 'aria-live': 'polite',
                                 'aria-atomic': !0,
-                                children: e
+                                children: t
                             })
                         ]
                     }),
-                    O &&
+                    R &&
                         (0, a.jsx)(m.Tooltip, {
                             text: D,
-                            children: (e) =>
+                            children: (t) =>
                                 (0, a.jsxs)(E.Z.div, {
                                     style: this.getCooldownTextStyle(),
                                     className: V.cooldownWrapper,
-                                    ...e,
-                                    children: [y, b]
+                                    ...t,
+                                    children: [e, b]
                                 })
                         }),
-                    I && T && (0, a.jsx)(N.Z, { channelId: f.id })
+                    T && g && (0, a.jsx)(N.Z, { channelId: h.id })
                 ]
             })
         );
