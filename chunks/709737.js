@@ -1,36 +1,37 @@
 n.d(t, {
     D: function () {
-        return d;
+        return _;
     },
     l: function () {
-        return h;
+        return E;
     }
 });
-var a = n(735250),
-    l = n(470079),
-    i = n(99815),
-    r = n(657707),
+var r = n(735250),
+    i = n(470079),
+    a = n(99815),
+    o = n(657707),
     s = n(297781),
-    o = n(709054),
+    l = n(709054),
     u = n(814059),
     c = n(689938);
 function d(e) {
+    if (e === a.E.LOL_TOTAL_KILLS) return c.Z.Messages.MEMBER_LIST_CONTENT_FEED_LEADERBOARD_KILLS;
+}
+function _(e) {
     let { value: t, statisticId: n } = e,
-        l = (function (e) {
-            if (e === i.E.LOL_TOTAL_KILLS) return c.Z.Messages.MEMBER_LIST_CONTENT_FEED_LEADERBOARD_KILLS;
-        })(n);
-    return null == l
+        i = d(n);
+    return null == i
         ? null
-        : (0, a.jsx)(s.ej, {
-              Icon: r.hAD,
-              text: l.format({ value: t })
+        : (0, r.jsx)(s.ej, {
+              Icon: o.hAD,
+              text: i.format({ value: t })
           });
 }
-function h(e) {
+function E(e) {
     let { intervalEnd: t } = e,
-        n = l.useMemo(() => (0, u.n)(o.default.extractTimestamp(t)), [t]);
-    return (0, a.jsx)(s.ej, {
-        Icon: r.Que,
+        n = i.useMemo(() => (0, u.n)(l.default.extractTimestamp(t)), [t]);
+    return (0, r.jsx)(s.ej, {
+        Icon: o.Que,
         text: n
     });
 }

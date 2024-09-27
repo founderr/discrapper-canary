@@ -1,7 +1,13 @@
-let n = {
+var r = n(381338);
+let i = {
     guild_id: '1266851512559210577',
     leaderboard_id: '1280436307230720000',
     interval_start: '1288198265241600000',
+    settings: {
+        sortByStatisticId: n(99815).E.LOL_TOTAL_KILLS,
+        sortDesc: !0,
+        intervalType: r.q.WEEKLY
+    },
     users: [
         {
             user_id: '213097507503210496',
@@ -23,4 +29,4 @@ let n = {
         }
     ]
 };
-t.Z = n;
+t.Z = i;
