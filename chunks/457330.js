@@ -26,6 +26,26 @@ function T(e, t) {
         oldFormErrors: !0
     });
 }
+function g(e, t, n, r) {
+    return u.tn.post({
+        url: m.ANM.CONNECTIONS_SESSION_HANDOFF(e),
+        body: {
+            state: t,
+            code: n,
+            openid_params: r
+        },
+        oldFormErrors: !0
+    });
+}
+function S(e, t) {
+    let n = new URLSearchParams();
+    n.append('state', t);
+    let r = ''.concat(m.ANM.CONNECTIONS_SESSION_HANDOFF(e), '?').concat(n.toString());
+    return u.tn.get({
+        url: r,
+        body: { state: t }
+    });
+}
 t.Z = {
     fetch: () =>
         u.tn
@@ -200,5 +220,7 @@ t.Z = {
             two_way_link_code: a,
             token_redirect_uri: i
         });
-    }
+    },
+    sessionHandoff: g,
+    getHandoffStatus: S
 };

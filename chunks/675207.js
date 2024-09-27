@@ -1,107 +1,138 @@
 t.r(n),
     t.d(n, {
         VerifyAccountLoading: function () {
-            return v;
+            return g;
         },
         default: function () {
-            return N;
+            return _;
         }
     }),
     t(47120),
     t(757143);
-var o = t(735250),
-    r = t(470079),
-    c = t(266067),
-    l = t(481060),
+var r = t(735250),
+    c = t(470079),
+    o = t(266067),
+    l = t(604039),
+    a = t(481060),
     i = t(457330),
-    a = t(169382),
-    s = t(726542),
-    u = t(536285),
-    d = t(656649),
-    f = t(981631),
-    p = t(689938),
-    C = t(289720);
-let g = null != window.opener;
-function N() {
+    s = t(733427),
+    u = t(169382),
+    f = t(726542),
+    d = t(536285),
+    p = t(591759),
+    C = t(656649),
+    N = t(981631),
+    O = t(689938),
+    S = t(289720);
+let E = null != window.opener;
+function _() {
     var e;
-    let n = (0, c.k6)(),
-        t = (0, a.l)(),
-        l = t.get('code'),
-        p = t.get('oauth_verifier'),
-        C = null !== (e = t.get('state')) && void 0 !== e ? e : '',
-        N = t.get('loading'),
-        { type: m } = (0, c.UO)(),
-        _ = (0, d.vJ)(m),
-        E = null == p ? (null != l ? l : '') : p;
-    return (r.useEffect(() => {
-        (async function e() {
-            let e;
-            if (null != N) return;
-            for (let n of t.keys()) {
-                if (!!n.startsWith('openid.')) null == e && (e = {}), (e[n] = t.get(n));
-            }
-            let o = (e) => {
-                    let { status: o, body: r } = e;
-                    if (null != l) {
-                        if (null == r ? void 0 : r.redirect) {
-                            n.replace(f.Z5c.CONNECTIONS_SUCCESS(l)), (window.location = r.redirect);
-                            return;
-                        }
-                        if ([200, 204].includes(o)) {
-                            n.replace(f.Z5c.CONNECTIONS_SUCCESS(l)), g && window.close();
-                            return;
-                        }
-                        null != r.code && t.append('error-code', r.code), n.replace(''.concat(f.Z5c.CONNECTIONS_ERROR(l), '?').concat(t.toString()));
+    let n = (0, o.k6)(),
+        t = (0, u.l)(),
+        a = t.get('code'),
+        O = t.get('oauth_verifier'),
+        S = null !== (e = t.get('state')) && void 0 !== e ? e : '',
+        _ = t.get('loading'),
+        { type: v } = (0, o.UO)(),
+        m = (0, C.vJ)(v),
+        [A, R] = c.useState(!1),
+        T = (0, s.Z)(),
+        b = null == O ? (null != a ? a : '') : O;
+    return (c.useEffect(() => {
+        let e;
+        if (null != _) return;
+        for (let n of t.keys()) {
+            if (!!n.startsWith('openid.')) null == e && (e = {}), (e[n] = t.get(n));
+        }
+        let r = (0, C.vJ)(v);
+        null != r &&
+            i.Z.sessionHandoff(r, S, b, e)
+                .then(() => {
+                    R(!0);
+                })
+                .catch(async () => {
+                    let r = (e) => {
+                            let { status: r, body: c } = e;
+                            if (null != l) {
+                                if (null == c ? void 0 : c.redirect) {
+                                    n.replace(N.Z5c.CONNECTIONS_SUCCESS(l)), (window.location = c.redirect);
+                                    return;
+                                }
+                                if ([200, 204].includes(r)) {
+                                    n.replace(N.Z5c.CONNECTIONS_SUCCESS(l)), E && window.close();
+                                    return;
+                                }
+                                null != c.code && t.append('error-code', c.code), n.replace(''.concat(N.Z5c.CONNECTIONS_ERROR(l), '?').concat(t.toString()));
+                            }
+                        },
+                        c = {
+                            code: b,
+                            openid_params: e,
+                            state: S
+                        };
+                    async function o(e) {
+                        if (null != l && f.Z.isSupported(l))
+                            try {
+                                let n = await i.Z.callback(l, c, e);
+                                r(n);
+                            } catch (e) {
+                                r(e);
+                            }
                     }
-                },
-                r = {
-                    code: E,
-                    openid_params: e,
-                    state: C
-                };
-            async function c(e) {
-                if (null != l && s.Z.isSupported(l))
+                    if (E) {
+                        await o(!1);
+                        return;
+                    }
+                    let l = (0, C.vJ)(v);
                     try {
-                        let n = await i.Z.callback(l, r, e);
-                        o(n);
+                        let e = await d.default.request(N.Etm.CONNECTIONS_CALLBACK, {
+                            ...c,
+                            providerType: l
+                        });
+                        r(e);
                     } catch (e) {
-                        o(e);
+                        (null == e ? void 0 : e.code) !== N.lTL.BAD_REQUEST_FOR_PROVIDER && (await o('RPCError' !== e.name));
                     }
-            }
-            if (g) {
-                await c(!1);
-                return;
-            }
-            let l = (0, d.vJ)(m);
-            try {
-                let e = await u.default.request(f.Etm.CONNECTIONS_CALLBACK, {
-                    ...r,
-                    providerType: l
+                    d.default.disconnect();
                 });
-                o(e);
-            } catch (e) {
-                (null == e ? void 0 : e.code) !== f.lTL.BAD_REQUEST_FOR_PROVIDER && (await c('RPCError' !== e.name));
+    }, [b, n, _, v, t, S]),
+    c.useEffect(() => {
+        let e;
+        if (!A) return;
+        let t = 0;
+        async function r() {
+            if (null == m) return;
+            let { handoff_status: c, success_redirect: o } = (await i.Z.getHandoffStatus(m, S)).body;
+            if (c === l.g.HANDOFF_SUCCESS) return null != p.Z.toURLSafe(o) ? n.replace(o) : n.replace(N.Z5c.CONNECTIONS_SUCCESS(m));
+            if (c === l.g.HANDOFF_ERROR || t >= 10) return n.replace(N.Z5c.CONNECTIONS_ERROR(m));
+            e = setTimeout(() => {
+                T() && ((t += 1), r());
+            }, 1000);
+        }
+        return (
+            r(),
+            () => {
+                null != e && clearTimeout(e);
             }
-            u.default.disconnect();
-        })();
-    }, [E, n, N, m, t, C]),
-    null != _ && s.Z.isSupported(_))
-        ? (0, o.jsx)(v, { platformType: _ })
+        );
+    }, [T, n, m, A, S]),
+    null != m && f.Z.isSupported(m))
+        ? (0, r.jsx)(g, { platformType: m })
         : null;
 }
-function v(e) {
+function g(e) {
     let { platformType: n } = e;
-    return (0, o.jsxs)(d.UV, {
+    return (0, r.jsxs)(C.UV, {
         platformType: n,
         children: [
-            (0, o.jsx)('div', {
-                className: C.message,
-                children: p.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: platform.name })
+            (0, r.jsx)('div', {
+                className: S.message,
+                children: O.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: platform.name })
             }),
-            (0, o.jsx)(l.Button, {
-                className: C.btn,
+            (0, r.jsx)(a.Button, {
+                className: S.btn,
                 disabled: !0,
-                children: (0, o.jsx)(l.Spinner, { itemClassName: C.spinnerItem })
+                children: (0, r.jsx)(a.Spinner, { itemClassName: S.spinnerItem })
             })
         ]
     });
