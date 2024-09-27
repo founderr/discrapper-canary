@@ -12,26 +12,31 @@ function l() {
     return o.Z.getSavedMessages().map((e) => e.saveData);
 }
 function u() {
-    let [e, t] = a.useState(l);
+    let [e, t] = a.useState(l),
+        n = a.useRef(o.Z.getIsStale());
     return (
         a.useEffect(() => {
             let e = o.Z.getLastChanged();
-            function n() {
-                let n = o.Z.getLastChanged();
-                e !== n &&
-                    ((e = n),
+            function r() {
+                let r = o.Z.getLastChanged();
+                if (e !== r) {
+                    if (((e = r), n.current && !o.Z.getIsStale())) {
+                        (n.current = !1), t(l());
+                        return;
+                    }
                     t((e) => {
                         let t = [...e],
                             n = new Map(o.Z.getSavedMessages().map((e) => [e.saveData.messageId, e]));
                         for (let r of e) n.has(r.messageId) ? n.delete(r.messageId) : t.splice(t.indexOf(r), 1);
                         for (let e of n.values()) t.push(e.saveData);
                         return t;
-                    }));
+                    });
+                }
             }
             return (
-                o.Z.addChangeListener(n),
+                o.Z.addChangeListener(r),
                 () => {
-                    o.Z.removeChangeListener(n);
+                    o.Z.removeChangeListener(r);
                 }
             );
         }, []),
