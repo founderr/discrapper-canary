@@ -51,7 +51,7 @@ let S = 'premiumRetentionEmojiPickerNotice',
                             variant: 'text-xs/normal',
                             children: T.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
                                 planName: h.ZP.getDisplayPremiumType(v.planId),
-                                endsAt: String(O)
+                                endsAt: O.toDate()
                             })
                         }),
                         (0, i.jsx)('div', {

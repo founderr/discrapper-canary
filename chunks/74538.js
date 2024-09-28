@@ -604,7 +604,7 @@ function eo(e) {
                 case P.O0b.PAUSED:
                     return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({ resumeDate: null !== (l = p.pauseEndsAt) && void 0 !== l ? l : void 0 });
                 case P.O0b.BILLING_RETRY:
-                    return G.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO.format({ endDate: String(E()(p.currentPeriodStart).add(w.A5, 'days')) });
+                    return G.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO.format({ endDate: E()(p.currentPeriodStart).add(w.A5, 'days').toDate() });
                 case P.O0b.PAST_DUE:
                     return G.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
                         endDate: (0, C.vc)(eA(p).expiresDate, 'LL'),
@@ -857,28 +857,28 @@ function ev(e, t) {
         let t = eA(e).expiresDate;
         return (e.isPurchasedViaGoogle && (null === (r = e.metadata) || void 0 === r ? void 0 : r.google_grace_period_expires_date) != null && (t = E()(e.metadata.google_grace_period_expires_date)), e.isPurchasedViaApple && (null === (i = e.metadata) || void 0 === i ? void 0 : i.apple_grace_period_expires_date) != null && (t = E()(e.metadata.apple_grace_period_expires_date)), e.isPurchasedExternally)
             ? G.Z.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL.format({
-                  endDate: String(t),
+                  endDate: t.toDate(),
                   paymentGatewayName: x.Vz[e.paymentGateway],
                   paymentSourceLink: ej(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
               })
             : G.Z.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO.format({
-                  endDate: String(t),
+                  endDate: t.toDate(),
                   price: o
               });
     } else if (e.status === P.O0b.BILLING_RETRY)
         return G.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
-            endDate: String(E()(e.currentPeriodStart).add(w.A5, 'days')),
+            endDate: E()(e.currentPeriodStart).add(w.A5, 'days').toDate(),
             price: o
         });
     else if (e.status === P.O0b.ACCOUNT_HOLD)
         return e.isPurchasedViaGoogle && !(0, L.isAndroid)()
             ? G.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
-                  endDate: String(E()(e.currentPeriodStart).add(w.gh, 'days')),
+                  endDate: E()(e.currentPeriodStart).add(w.gh, 'days').toDate(),
                   paymentGatewayName: x.Vz[e.paymentGateway],
                   paymentSourceLink: ej(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
               })
             : G.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
-                  endDate: String(E()(e.currentPeriodStart).add(w.gh, 'days')),
+                  endDate: E()(e.currentPeriodStart).add(w.gh, 'days').toDate(),
                   price: o
               });
     else
