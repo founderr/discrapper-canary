@@ -1,85 +1,216 @@
 n.r(a),
     n.d(a, {
+        FEEDBACK_TYPES: function () {
+            return O;
+        },
+        GameProfileChooseFeedbackTypeModal: function () {
+            return p;
+        },
         GameProfileFeedbackModal: function () {
-            return v;
+            return D;
         },
         GameProfileFeedbackThankYouModal: function () {
-            return b;
+            return G;
+        },
+        GameProfileOtherFeedbackModal: function () {
+            return f;
+        },
+        GameProfileOutdatedFeedbackModal: function () {
+            return T;
+        },
+        GameProfileTitleFeedbackModal: function () {
+            return j;
         }
     }),
-    n(47120);
-var l = n(735250),
+    n(47120),
+    n(653041);
+var s = n(735250),
     t = n(470079),
-    s = n(658722),
-    i = n.n(s),
+    l = n(658722),
+    i = n.n(l),
     o = n(392711),
     d = n(442837),
     r = n(481060),
     c = n(224706),
-    u = n(812206),
+    E = n(812206),
+    u = n(835473),
     m = n(206295),
-    h = n(669764),
-    g = n(690221),
-    x = n(77498),
-    E = n(49012),
-    f = n(810568),
-    _ = n(701488),
-    p = n(689938),
+    _ = n(669764),
+    h = n(925329),
+    g = n(77498),
+    x = n(49012),
+    M = n(810568),
+    A = n(701488),
+    I = n(689938),
     C = n(361357);
-function b(e) {
-    let { transitionState: a, onClose: n } = e;
-    return (0, l.jsxs)(r.ModalRoot, {
-        size: r.ModalSize.SMALL,
-        transitionState: a,
+let F = {
+        CHOOSING_FEEDBACK_TYPE: 1,
+        FILLING_DETAILS: 2,
+        THANK_YOU_SCREEN: 3
+    },
+    O = {
+        WRONG_GAME: 1,
+        OUTDATED: 2,
+        OTHER: 3
+    };
+function G(e) {
+    let { onClose: a } = e;
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, l.jsxs)(r.ModalContent, {
+            (0, s.jsxs)(r.ModalContent, {
                 className: C.content,
                 children: [
-                    (0, l.jsx)(r.Heading, {
+                    (0, s.jsx)(r.Heading, {
                         variant: 'heading-xl/bold',
                         className: C.header,
-                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_HEAD_TY
+                        children: I.Z.Messages.GAME_PROFILE_FEEDBACK_HEAD_TY
                     }),
-                    (0, l.jsx)(r.Text, {
+                    (0, s.jsx)(r.Text, {
                         className: C.tip,
                         variant: 'text-md/medium',
-                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_TY
+                        children: I.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_TY
                     })
                 ]
             }),
-            (0, l.jsx)(r.ModalFooter, {
+            (0, s.jsx)(r.ModalFooter, {
                 className: C.footer,
-                children: (0, l.jsx)(r.Button, {
+                children: (0, s.jsx)(r.Button, {
                     fullWidth: !0,
-                    onClick: n,
-                    children: p.Z.Messages.DONE
+                    onClick: a,
+                    children: I.Z.Messages.DONE
                 })
             })
         ]
     });
 }
-function v(e) {
-    var a, n;
-    let { transitionState: s, applicationId: v, onClose: M, viewId: j } = e,
-        [A, I] = t.useState(!1),
-        [S, D] = t.useState(''),
-        [F, N] = t.useState(''),
-        T = (0, d.e7)([u.Z], () => u.Z.getApplication(v)),
-        [k, L] = t.useState(null != v ? v : null),
-        R = (0, d.e7)([h.Z], () => h.Z.getGame(v)),
-        Z = null !== (a = null == R ? void 0 : R.name) && void 0 !== a ? a : null == T ? void 0 : T.name,
-        B = null == T ? void 0 : T.getIconURL(_.Si.LARGE),
-        { primaryColor: G, secondaryColor: O } = (0, m.Z)(B);
+function T(e) {
+    let { applicationId: a, onSubmitted: n, viewId: t } = e;
+    return (0, s.jsxs)(s.Fragment, {
+        children: [
+            (0, s.jsxs)(r.ModalContent, {
+                className: C.content,
+                children: [
+                    (0, s.jsx)(r.Heading, {
+                        variant: 'heading-xl/bold',
+                        className: C.header,
+                        children: I.Z.Messages.GAME_PROFILE_FEEDBACK_HEAD_OUTDATED
+                    }),
+                    (0, s.jsx)(r.Text, {
+                        className: C.tip,
+                        variant: 'text-md/medium',
+                        children: I.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_OUTDATED
+                    })
+                ]
+            }),
+            (0, s.jsx)(r.ModalFooter, {
+                className: C.footer,
+                children: (0, s.jsx)(r.Button, {
+                    fullWidth: !0,
+                    onClick: () => {
+                        (0, x.q)({
+                            href: 'https://igdb.com',
+                            trusted: !0
+                        }),
+                            (0, M.MH)({
+                                applicationId: a,
+                                submitted: !0,
+                                viewId: t
+                            }),
+                            n();
+                    },
+                    children: I.Z.Messages.GAME_PROFILE_FEEDBACK_VISIT_IGDB
+                })
+            })
+        ]
+    });
+}
+function f(e) {
+    let { applicationId: a, onSubmitted: n, viewId: l } = e,
+        [i, o] = t.useState('');
+    return (0, s.jsxs)(s.Fragment, {
+        children: [
+            (0, s.jsxs)(r.ModalContent, {
+                className: C.content,
+                children: [
+                    (0, s.jsx)(r.Heading, {
+                        variant: 'heading-xl/bold',
+                        className: C.header,
+                        children: I.Z.Messages.GAME_PROFILE_FEEDBACK_HEAD_OTHER
+                    }),
+                    (0, s.jsx)(r.Text, {
+                        className: C.tip,
+                        variant: 'text-md/medium',
+                        children: I.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_OTHER
+                    }),
+                    (0, s.jsx)('div', {
+                        className: C.otherFeedbackInput,
+                        children: (0, s.jsx)(r.TextArea, {
+                            value: i,
+                            onChange: (e) => o(e),
+                            placeholder: I.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_OTHER,
+                            maxLength: 300
+                        })
+                    })
+                ]
+            }),
+            (0, s.jsx)(r.ModalFooter, {
+                className: C.footer,
+                children: (0, s.jsx)(r.Button, {
+                    fullWidth: !0,
+                    onClick: () => {
+                        (0, M.MH)({
+                            applicationId: a,
+                            submitted: !0,
+                            feedback: i,
+                            viewId: l
+                        }),
+                            n();
+                    },
+                    disabled: 0 === i.length,
+                    children: I.Z.Messages.SUBMIT
+                })
+            })
+        ]
+    });
+}
+let N = (e) => {
+    let { name: a, applicationRecord: n } = e;
+    return (0, s.jsxs)('div', {
+        className: C.gameSuggestion,
+        children: [
+            null != n
+                ? (0, s.jsx)(h.Z, {
+                      game: n,
+                      className: C.smolGameIcon
+                  })
+                : (0, s.jsx)(r.Spacer, {
+                      horizontal: !0,
+                      size: 20
+                  }),
+            a
+        ]
+    });
+};
+function j(e) {
+    var a, n, l;
+    let { applicationId: h, onSubmitted: x, viewId: F } = e,
+        [O, G] = t.useState(''),
+        T = (0, d.e7)([E.Z], () => E.Z.getApplication(h)),
+        [f, j] = t.useState(null != h ? h : null),
+        p = (0, d.e7)([_.Z], () => _.Z.getGame(h)),
+        D = null !== (n = null !== (a = null == p ? void 0 : p.name) && void 0 !== a ? a : null == T ? void 0 : T.name) && void 0 !== n ? n : '',
+        b = null == T ? void 0 : T.getIconURL(A.Si.LARGE),
+        { primaryColor: v, secondaryColor: R } = (0, m.Z)(b);
     t.useEffect(() => {
         c.Z.getDetectableGames();
     }, []);
-    let P = (0, d.Wu)(
-            [x.Z],
+    let S = (0, d.Wu)(
+            [g.Z],
             () => {
-                let e = ((null == S ? void 0 : S.length) > 0 ? S : null != Z ? Z : '').toLowerCase(),
-                    a = x.Z.getDetectableGame(v),
-                    n = null != k ? x.Z.getDetectableGame(k) : void 0;
-                return (0, o.chain)(x.Z.games)
+                let e = ((null == O ? void 0 : O.length) > 0 ? O : D).toLowerCase(),
+                    a = g.Z.getDetectableGame(h),
+                    n = null != f ? g.Z.getDetectableGame(f) : void 0;
+                return (0, o.chain)(g.Z.games)
                     .filter((a) => i()(e, a.name.toLowerCase()))
                     .take(3)
                     .concat(null != a ? [a] : [], null != n ? [n] : [])
@@ -87,144 +218,213 @@ function v(e) {
                     .uniqBy('id')
                     .value();
             },
-            [v, k, Z, S]
+            [h, f, D, O]
         ),
-        H = S.length > 0 && !P.map((e) => e.name).includes(S),
-        K = 0 === F.length && (k === v || (null === k && 0 === S.length));
-    if (A)
-        return (0, l.jsx)(b, {
-            transitionState: s,
-            onClose: M
+        B = (0, u.Z)(S.map((e) => e.id)),
+        L = (0, o.chain)(B).compact().keyBy('id').value(),
+        P = O.length > 0 && !S.map((e) => e.name).includes(O),
+        H = f === h || (null === f && 0 === O.length),
+        Z = S.map((e) => {
+            let { name: a, id: n } = e;
+            return {
+                name: (0, s.jsx)(N, {
+                    name: a,
+                    applicationRecord: L[n]
+                }),
+                value: n
+            };
         });
-    let y = (e, a) => {
-        a ? (L(e.id), D(e.name)) : L(v);
-    };
-    return (0, l.jsxs)(r.ModalRoot, {
-        size: r.ModalSize.SMALL,
-        transitionState: s,
+    return (
+        P &&
+            Z.push({
+                name: (0, s.jsx)(N, { name: O }),
+                value: ''
+            }),
+        (0, s.jsxs)(s.Fragment, {
+            children: [
+                (0, s.jsxs)(r.ModalContent, {
+                    className: C.content,
+                    children: [
+                        (0, s.jsx)(r.Heading, {
+                            variant: 'heading-xl/bold',
+                            className: C.header,
+                            children: I.Z.Messages.GAME_PROFILE_FEEDBACK_HEAD_WRONG_GAME
+                        }),
+                        (0, s.jsx)(r.Text, {
+                            className: C.tip,
+                            variant: 'text-md/medium',
+                            children: I.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_WRONG_GAME
+                        }),
+                        (0, s.jsxs)('div', {
+                            className: C.gameInfoBox,
+                            style: { background: 'linear-gradient(45deg, '.concat(v, ', ').concat(R, ')') },
+                            children: [
+                                null != b &&
+                                    (0, s.jsx)('img', {
+                                        className: C.gameIcon,
+                                        src: b,
+                                        alt: ''
+                                    }),
+                                (0, s.jsx)(r.Heading, {
+                                    variant: 'heading-lg/semibold',
+                                    className: C.gameTitle,
+                                    children: null !== (l = null == p ? void 0 : p.name) && void 0 !== l ? l : null == T ? void 0 : T.name
+                                })
+                            ]
+                        }),
+                        (0, s.jsxs)('div', {
+                            className: C.gameSearch,
+                            children: [
+                                (0, s.jsx)(r.SearchBar, {
+                                    className: C.searchBar,
+                                    query: O,
+                                    onChange: (e) => {
+                                        if (0 === e.length) null === f && j(h);
+                                        else {
+                                            var a;
+                                            let n = S.find((a) => a.name === e);
+                                            j(null !== (a = null == n ? void 0 : n.id) && void 0 !== a ? a : null);
+                                        }
+                                        G(e);
+                                    },
+                                    size: r.SearchBar.Sizes.MEDIUM,
+                                    onClear: () => {
+                                        null === f && j(h), G('');
+                                    },
+                                    placeholder: I.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_INCORRECT
+                                }),
+                                (0, s.jsx)(r.RadioGroup, {
+                                    size: r.RadioGroup.Sizes.NONE,
+                                    radioPosition: 'right',
+                                    withTransparentBackground: !0,
+                                    value: null != f ? f : '',
+                                    options: Z,
+                                    onChange: (e) => {
+                                        let { value: a } = e;
+                                        return j(a);
+                                    }
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                (0, s.jsx)(r.ModalFooter, {
+                    className: C.footer,
+                    children: (0, s.jsx)(r.Button, {
+                        fullWidth: !0,
+                        onClick: () => {
+                            (0, M.MH)({
+                                applicationId: h,
+                                suggestedGameApplicationId: f,
+                                suggestedGameName: null == f ? O : void 0,
+                                submitted: !0,
+                                viewId: F
+                            }),
+                                x();
+                        },
+                        disabled: H,
+                        children: I.Z.Messages.SUBMIT
+                    })
+                })
+            ]
+        })
+    );
+}
+function p(e) {
+    let { onChoice: a } = e,
+        [n, l] = t.useState(null),
+        i = [
+            {
+                name: I.Z.Messages.GAME_PROFILE_FEEDBACK_CHOICE_WRONG_GAME,
+                value: O.WRONG_GAME
+            },
+            {
+                name: I.Z.Messages.GAME_PROFILE_FEEDBACK_CHOICE_OUTDATED,
+                value: O.OUTDATED
+            },
+            {
+                name: I.Z.Messages.GAME_PROFILE_FEEDBACK_CHOICE_OTHER,
+                value: O.OTHER
+            }
+        ];
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, l.jsxs)(r.ModalContent, {
+            (0, s.jsxs)(r.ModalContent, {
                 className: C.content,
                 children: [
-                    (0, l.jsx)(r.Heading, {
+                    (0, s.jsx)(r.Heading, {
                         variant: 'heading-xl/bold',
                         className: C.header,
-                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_HEAD_OTHER
+                        children: I.Z.Messages.GAME_PROFILE_FEEDBACK_HEAD_CHOOSE_TYPE
                     }),
-                    (0, l.jsx)(r.Text, {
+                    (0, s.jsx)(r.Text, {
                         className: C.tip,
                         variant: 'text-md/medium',
-                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_OUTDATED
+                        children: I.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_CHOOSE_TYPE
                     }),
-                    (0, l.jsx)(g.Z, {
-                        onClick: () =>
-                            (0, E.q)({
-                                href: 'https://igdb.com',
-                                trusted: !0
-                            }),
-                        children: (0, l.jsxs)(r.Text, {
-                            className: C.tip,
-                            variant: 'text-sm/medium',
-                            color: 'text-secondary',
-                            children: [p.Z.Messages.GAME_PROFILE_FEEDBACK_VISIT_IGDB, ' ', (0, l.jsx)(r.LinkExternalMediumIcon, { size: 'xxs' })]
-                        })
-                    }),
-                    (0, l.jsxs)('div', {
-                        className: C.gameInfoBox,
-                        style: { background: 'linear-gradient(45deg, '.concat(G, ', ').concat(O, ')') },
-                        children: [
-                            null != B &&
-                                (0, l.jsx)('img', {
-                                    className: C.gameIcon,
-                                    src: B,
-                                    alt: ''
-                                }),
-                            (0, l.jsx)(r.Heading, {
-                                variant: 'heading-lg/semibold',
-                                className: C.gameTitle,
-                                children: null !== (n = null == R ? void 0 : R.name) && void 0 !== n ? n : null == T ? void 0 : T.name
-                            })
-                        ]
-                    }),
-                    (0, l.jsxs)('div', {
-                        className: C.inputField,
-                        children: [
-                            (0, l.jsx)(r.SearchBar, {
-                                className: C.searchBar,
-                                query: S,
-                                onChange: (e) => {
-                                    0 === e.length && null === k && L(v), D(e);
-                                },
-                                size: r.SearchBar.Sizes.MEDIUM,
-                                onClear: () => {
-                                    null === k && L(v), D('');
-                                },
-                                placeholder: p.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_INCORRECT
-                            }),
-                            P.map((e) =>
-                                (0, l.jsx)(
-                                    r.Checkbox,
-                                    {
-                                        className: C.gameSuggestion,
-                                        shape: r.Checkbox.Shapes.ROUND,
-                                        reverse: !0,
-                                        value: e.id === k,
-                                        disabled: e.id === k && k === v,
-                                        onChange: (a) => y(e, a.currentTarget.checked),
-                                        children: (0, l.jsx)(r.Text, {
-                                            variant: 'text-md/medium',
-                                            color: 'interactive-normal',
-                                            children: e.name
-                                        })
-                                    },
-                                    e.id
-                                )
-                            ),
-                            H &&
-                                (0, l.jsx)(r.Checkbox, {
-                                    className: C.gameSuggestion,
-                                    shape: r.Checkbox.Shapes.ROUND,
-                                    reverse: !0,
-                                    value: null == k,
-                                    disabled: null == k,
-                                    onChange: () => L(null),
-                                    children: (0, l.jsx)(r.Text, {
-                                        variant: 'text-md/medium',
-                                        color: 'interactive-normal',
-                                        children: S
-                                    })
-                                })
-                        ]
-                    }),
-                    (0, l.jsx)('div', {
-                        className: C.inputField,
-                        children: (0, l.jsx)(r.TextArea, {
-                            value: F,
-                            onChange: (e) => N(e),
-                            placeholder: p.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_OTHER
-                        })
+                    (0, s.jsx)(r.RadioGroup, {
+                        className: C.radioGroup,
+                        options: i,
+                        onChange: (e) => {
+                            let { value: a } = e;
+                            return l(a);
+                        },
+                        value: n
                     })
                 ]
             }),
-            (0, l.jsx)(r.ModalFooter, {
+            (0, s.jsx)(r.ModalFooter, {
                 className: C.footer,
-                children: (0, l.jsx)(r.Button, {
+                children: (0, s.jsx)(r.Button, {
                     fullWidth: !0,
+                    disabled: null === n,
                     onClick: () => {
-                        (0, f.MH)({
-                            applicationId: v,
-                            suggestedGameApplicationId: k,
-                            suggestedGameName: S,
-                            submitted: !0,
-                            feedback: F,
-                            viewId: j
-                        }),
-                            I(!0);
+                        null != n && a(n);
                     },
-                    disabled: K,
-                    children: p.Z.Messages.SUBMIT
+                    children: I.Z.Messages.NEXT
                 })
             })
+        ]
+    });
+}
+function D(e) {
+    let { applicationId: a, viewId: n, transitionState: l, onClose: i } = e,
+        [o, d] = t.useState(F.CHOOSING_FEEDBACK_TYPE),
+        [c, E] = t.useState(null);
+    return (0, s.jsxs)(r.ModalRoot, {
+        size: r.ModalSize.SMALL,
+        transitionState: l,
+        children: [
+            o === F.CHOOSING_FEEDBACK_TYPE &&
+                (0, s.jsx)(p, {
+                    onChoice: (e) => {
+                        E(e), d(F.FILLING_DETAILS);
+                    }
+                }),
+            o === F.FILLING_DETAILS &&
+                (0, s.jsxs)(s.Fragment, {
+                    children: [
+                        c === O.WRONG_GAME &&
+                            (0, s.jsx)(j, {
+                                applicationId: a,
+                                viewId: n,
+                                onSubmitted: () => d(F.THANK_YOU_SCREEN)
+                            }),
+                        c === O.OUTDATED &&
+                            (0, s.jsx)(T, {
+                                applicationId: a,
+                                viewId: n,
+                                onSubmitted: () => i()
+                            }),
+                        c === O.OTHER &&
+                            (0, s.jsx)(f, {
+                                applicationId: a,
+                                viewId: n,
+                                onSubmitted: () => d(F.THANK_YOU_SCREEN)
+                            })
+                    ]
+                }),
+            o === F.THANK_YOU_SCREEN && (0, s.jsx)(G, { onClose: i })
         ]
     });
 }

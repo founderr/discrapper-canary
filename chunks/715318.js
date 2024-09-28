@@ -61,7 +61,10 @@ function c(e) {
                               className: c,
                               ...a,
                               ...e,
-                              children: (0, t.jsx)(o.MoreHorizontalIcon, { size: 'xs' })
+                              children: (0, t.jsx)(o.MoreHorizontalIcon, {
+                                  size: 'xs',
+                                  color: o.tokens.colors.WHITE
+                              })
                           })
                   })
           });
