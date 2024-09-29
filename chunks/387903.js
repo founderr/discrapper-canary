@@ -342,7 +342,7 @@ class q extends (s = r.PureComponent) {
                           }
                         : void 0);
         else if (!(0, y.Z)(e)) {
-            if (((r = a = i), (0, D.Z)(e) && null != i))
+            if (((a = i), (r = i), (0, D.Z)(e) && null != i))
                 a = G.Z.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
                     artists: r,
                     artistsHook: (t, n) =>
@@ -448,9 +448,10 @@ class q extends (s = r.PureComponent) {
         let s;
         let { state: a, party: r, assets: o } = e,
             c = a,
-            u = c;
+            u = a;
         return (!(0, y.Z)(e) &&
-            ((u = c = null == o ? void 0 : o.large_text),
+            ((c = null == o ? void 0 : o.large_text),
+            (u = null == o ? void 0 : o.large_text),
             (0, D.Z)(e) &&
                 null != c &&
                 (c = G.Z.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
