@@ -96,15 +96,15 @@ function X(e, t) {
 }
 async function $(e) {
     var t, n;
-    let { channelId: r, applicationId: i, isStart: a, analyticsLocations: o, locationObject: s, embeddedActivitiesManager: u, componentId: c, commandOrigin: d, sectionName: _, source: E, partyId: S } = e,
-        O = y.Z.getChannel(r),
-        R = null !== (t = null == O ? void 0 : O.getGuildId()) && void 0 !== t ? t : void 0;
-    if (null == R && !(null !== (n = null == O ? void 0 : O.isPrivate()) && void 0 !== n && n)) return !1;
-    let C = (0, N.r)();
+    let { channelId: r, applicationId: i, isStart: a, analyticsLocations: o, locationObject: s, embeddedActivitiesManager: u, componentId: c, commandOrigin: d, sectionName: _, source: E, partyId: S, onExecutedCallback: O } = e,
+        R = y.Z.getChannel(r),
+        C = null !== (t = null == R ? void 0 : R.getGuildId()) && void 0 !== t ? t : void 0;
+    if (null == C && !(null !== (n = null == R ? void 0 : R.isPrivate()) && void 0 !== n && n)) return !1;
+    let b = (0, N.r)();
     try {
         l.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
-            nonce: C,
+            nonce: b,
             applicationId: i,
             channelId: r,
             componentId: c,
@@ -117,9 +117,9 @@ async function $(e) {
                 (0, j.Z)({
                     type: a ? K.q5t.LAUNCH : K.q5t.JOIN,
                     userId: null == e ? void 0 : e.id,
-                    guildId: R,
+                    guildId: C,
                     channelId: r,
-                    channelType: null == O ? void 0 : O.type,
+                    channelType: null == R ? void 0 : R.type,
                     applicationId: i,
                     locationObject: s,
                     analyticsLocations: null != o ? o : [],
@@ -138,12 +138,12 @@ async function $(e) {
                     }
                     if (e.handler === h.VC.APP_HANDLER) {
                         let e =
-                                null != R
+                                null != C
                                     ? await (0, m.FN)({
                                           type: 'guild',
-                                          guildId: R
+                                          guildId: C
                                       })
-                                    : m.ZP.getGuildState(R),
+                                    : m.ZP.getGuildState(C),
                             t = await (0, m.FN)({ type: 'user' });
                         if (
                             !(await (0, p.L)({
@@ -155,7 +155,7 @@ async function $(e) {
                             return !1;
                     }
                     let t = y.Z.getChannel(r),
-                        n = null != R ? L.Z.getGuild(R) : null;
+                        n = null != C ? L.Z.getGuild(C) : null;
                     return (
                         null != t &&
                         (await new Promise((r, i) => {
@@ -170,22 +170,25 @@ async function $(e) {
                                 sectionName: _,
                                 source: E,
                                 interactionLifecycleOptionsFactory: () => ({
-                                    nonce: C,
-                                    onSuccess: () => r(),
+                                    nonce: b,
+                                    onSuccess: () => {
+                                        null == O || O(), r();
+                                    },
                                     onFailure: (e, t, n, r) => {
-                                        null != e && null != t && null != n
-                                            ? i(
-                                                  new f.Z({
-                                                      status: n,
-                                                      body: {
-                                                          message: t,
-                                                          code: e
-                                                      }
-                                                  })
-                                              )
-                                            : null != r && r in v.Z.ReasonCodes
-                                              ? i(new v.Z(r))
-                                              : i(new v.Z(v.Z.ReasonCodes.UNKNOWN));
+                                        null == O || O(),
+                                            null != e && null != t && null != n
+                                                ? i(
+                                                      new f.Z({
+                                                          status: n,
+                                                          body: {
+                                                              message: t,
+                                                              code: e
+                                                          }
+                                                      })
+                                                  )
+                                                : null != r && r in v.Z.ReasonCodes
+                                                  ? i(new v.Z(r))
+                                                  : i(new v.Z(v.Z.ReasonCodes.UNKNOWN));
                                     }
                                 })
                             });
@@ -194,30 +197,29 @@ async function $(e) {
                     );
                 },
                 t = z.Yq.includes(i),
-                n = (null == O ? void 0 : O.type) === K.d4z.GUILD_VOICE,
+                n = (null == R ? void 0 : R.type) === K.d4z.GUILD_VOICE,
                 a = g.Z.getApplication(i),
                 o = null != a && (0, U.yE)(a.flags, K.udG.EMBEDDED),
-                s = (0, G.l5)(O);
+                s = (0, G.l5)(R);
             if (t) {
                 if (!(await e())) throw Error();
             } else if (n) {
                 if (o && !(await e())) throw new A.Z(A.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
             } else if (s && !(await e())) throw new A.Z(A.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
         }
-        if (
-            !a &&
-            !(await J({
+        if (!a) {
+            let e = await J({
                 applicationId: i,
                 channelId: r,
                 embeddedActivitiesManager: u,
                 isStart: a,
-                guildId: R
-            }))
-        )
-            throw new A.Z(A.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
+                guildId: C
+            });
+            if ((null == O || O(), !e)) throw new A.Z(A.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
+        }
         l.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
-            nonce: C,
+            nonce: b,
             applicationId: i,
             channelId: r
         });
@@ -225,8 +227,8 @@ async function $(e) {
         return (
             l.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
-                nonce: C,
-                guildId: R,
+                nonce: b,
+                guildId: C,
                 applicationId: i,
                 channelId: r,
                 isStart: a,

@@ -43501,7 +43501,11 @@ html .progress_e5f4c6 {
 }
 
 .button_d76538 {
-    margin: 0 16px 16px
+    flex: 1
+}
+
+.buttonSecondary_d76538 {
+    color: rgba(255, 255, 255, .5)
 }
 
 .buttonContentContainer_d76538 {
@@ -43511,8 +43515,21 @@ html .progress_e5f4c6 {
 }
 
 .buttonText_d76538 {
-    margin-left: 4px;
+    margin-left: 4px
+}
+
+.buttonTextPrimary_d76538 {
     color: var(--brand-500)
+}
+
+.buttonTextSecondary_d76538 {
+    color: var(--white-500)
+}
+
+.buttonContainer_d76538 {
+    display: flex;
+    padding: 0 16px 16px;
+    gap: 8px
 }
 
 .connector_d76538 {
