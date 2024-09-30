@@ -4,6 +4,7 @@ e.exports = {
     masonryList: 'masonryList_b120dc',
     container: 'container_b120dc',
     spinner: 'spinner_b120dc',
+    spinnerWithSidebar: 'spinnerWithSidebar_b120dc',
     sidebar: 'sidebar_b120dc',
     sidebarContent: 'sidebarContent_b120dc',
     sidebarLanguageSelect: 'sidebarLanguageSelect_b120dc'

@@ -37,25 +37,34 @@ function x() {
         M = (0, S.lg)(b),
         D = !L.MU.has(b),
         y = (0, d.iN)('global_discovery_servers_layout'),
-        { searchBarState: j, onTabsAvailableWidthChange: U, onCollapsedSearchBarClick: G, onSearchBarBlur: w, tabsClassName: k } = (0, m.U)({ isSearchBarVisible: D }),
-        { searchQuery: B, onSearchTextChange: H, onClearSearch: V, onSearchSubmit: F, isSearchVisible: Y } = (0, N.H)({ loadId: e.current }),
+        { searchQuery: j, onSearchTextChange: U, onClearSearch: G, onSearchSubmit: w, isSearchVisible: k } = (0, N.H)({ loadId: e.current }),
+        {
+            searchBarState: B,
+            onTabsAvailableWidthChange: H,
+            onCollapsedSearchBarClick: V,
+            onSearchBarBlur: F,
+            tabsClassName: Y
+        } = (0, m.U)({
+            isSearchBarVisible: D,
+            isSearchBarEmpty: '' === j.trim()
+        }),
         W = (0, T.NL)(),
         z = (0, h.GN)((e) => e.mode, l.Z),
         K = a.useCallback(
             (e) => {
-                P(e), Y && V();
+                P(e), k && G();
             },
-            [Y, V, P]
+            [k, G, P]
         ),
         q = a.useMemo(
             () =>
-                Y
+                k
                     ? x.filter((e) => {
                           let { id: t } = e;
                           return !L.MU.has(t);
                       })
                     : x,
-            [x, Y]
+            [x, k]
         ),
         Q = z === h.v0.SAVED_GUILDS,
         X = a.useRef(new f.Z(M)),
@@ -70,8 +79,8 @@ function x() {
             s();
         }, [b, s]),
         a.useEffect(() => {
-            !Y && (0, T.LD)({ scrollPosition: null });
-        }, [Y]),
+            !k && (0, T.LD)({ scrollPosition: null });
+        }, [k]),
         a.useEffect(() => {
             (0, c.N)();
         }, []);
@@ -84,41 +93,41 @@ function x() {
                 return null;
             default:
                 return (0, i.jsx)(p.Z, {
-                    query: B,
+                    query: j,
                     placeholder: R.Z.Messages.SEARCH,
-                    onTextChange: H,
-                    onClear: V,
-                    onSubmit: F,
-                    onCollapsedClick: G,
-                    state: j,
-                    onBlur: w
+                    onTextChange: U,
+                    onClear: G,
+                    onSubmit: w,
+                    onCollapsedClick: V,
+                    state: B,
+                    onBlur: F
                 });
         }
-    }, [b, y, B, H, V, F, G, j, w, Q]);
+    }, [b, y, j, U, G, w, V, B, F, Q]);
     return (0, i.jsxs)('div', {
         className: O.container,
         children: [
             (0, i.jsxs)(I.ZP, {
-                className: Y ? O.search : void 0,
+                className: k ? O.search : void 0,
                 children: [
-                    !Y && (0, i.jsx)(I.z6, { scrollPosition: n }),
+                    !k && (0, i.jsx)(I.z6, { scrollPosition: n }),
                     !Q &&
                         (0, i.jsx)(I.aV, {
-                            icon: Y ? o.ArrowLargeLeftIcon : o.ServerIcon,
-                            iconColor: Y ? o.tokens.colors.INTERACTIVE_NORMAL : void 0,
-                            onClick: Y ? V : void 0
+                            icon: k ? o.ArrowLargeLeftIcon : o.ServerIcon,
+                            iconColor: k ? o.tokens.colors.INTERACTIVE_NORMAL : void 0,
+                            onClick: k ? G : void 0
                         }),
                     !Q &&
-                        !Y &&
+                        !k &&
                         (0, i.jsx)(g.Z, {
-                            className: k,
+                            className: Y,
                             tabs: q,
-                            selectedTab: Y ? null : b,
+                            selectedTab: k ? null : b,
                             onTabSelect: K,
-                            onAvailableWidthChange: U
+                            onAvailableWidthChange: H
                         }),
                     !Q &&
-                        Y &&
+                        k &&
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
@@ -128,7 +137,7 @@ function x() {
                     ee
                 ]
             }),
-            Y
+            k
                 ? (0, i.jsx)(Z.Z, {
                       loadId: e.current,
                       onGuildCardClick: $,
