@@ -494,15 +494,16 @@ function z(e) {
 }
 function Y(e) {
     let { onSourceSelect: t, onCancel: n } = e,
-        { lastPickerAction: i, lastPickerError: r } = (0, u.e7)([A.ZP], () => A.ZP.getPickerState());
+        { lastPickerAction: i, lastPickerError: r } = (0, u.e7)([A.ZP], () => A.ZP.getPickerState()),
+        [a, o] = s.useState(!1);
     return (
         s.useEffect(() => {
             (0, R.t)();
         }, []),
         (0, A.kE)(),
         s.useEffect(() => {
-            i === A.Uc.Update ? t() : i === A.Uc.Cancel && ((0, R.t)(), n());
-        }, [i, t, n]),
+            a ? (i === A.Uc.Update ? t() : i === A.Uc.Cancel && ((0, R.t)(), n())) : null == i && o(!0);
+        }, [a, i, t, n]),
         i === A.Uc.Error
             ? (0, l.jsx)(m.Text, {
                   className: B.errorMessage,
