@@ -1,17 +1,44 @@
 n.d(t, {
-    S: function () {
-        return a;
+    Hw: function () {
+        return _;
     },
-    c: function () {
-        return s;
+    Ss: function () {
+        return u;
+    },
+    cq: function () {
+        return c;
     }
 });
-var i = n(981631),
-    l = n(176505);
-let r = /^\d+$/;
-function a(e) {
-    return null != e && (!!(e === i.ME || e === i.I_8 || e === i.o_z || r.test(e)) || !1);
+var r = n(47120);
+var i = n(392711);
+var a = n(860911),
+    o = n(981631),
+    s = n(176505);
+let l = /^\d+$/;
+function u(e) {
+    return null != e && (!!(e === o.ME || e === o.I_8 || e === o.o_z || l.test(e)) || !1);
 }
-function s(e) {
-    return !!(null == e || r.test(e) || (0, l.AB)(e)) || !1;
+function c(e) {
+    return !!(null == e || l.test(e) || (0, s.AB)(e)) || !1;
 }
+function d(e, t) {
+    let { optional: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    return new a.Zn(
+        ':'
+            .concat((0, i.escapeRegExp)(e), '(')
+            .concat(t, ')')
+            .concat(n ? '?' : '')
+    );
+}
+let _ = {
+    guildId() {
+        let { name: e = 'guildId', optional: t = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            n = [o.ME, o.I_8, o.o_z].join('|');
+        return d(e, ''.concat(n, '|\\d+'), { optional: t });
+    },
+    channelId() {
+        let { name: e = 'channelId', optional: t = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            n = [...s.Vg].join('|');
+        return d(e, ''.concat(n, '|\\d+'), { optional: t });
+    }
+};
