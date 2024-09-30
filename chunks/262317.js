@@ -37,8 +37,8 @@ var i,
     R = n(979651),
     L = n(981631),
     j = n(927923),
-    O = n(70722),
-    P = n(689938),
+    P = n(70722),
+    O = n(689938),
     y = n(697529);
 function D(e, t, n) {
     return (
@@ -66,7 +66,7 @@ function U(e) {
 }
 function k(e) {
     let { numAudience: t, collapsed: n } = e,
-        i = n ? t : P.Z.Messages.LISTENING_COUNT.format({ count: t });
+        i = n ? t : O.Z.Messages.LISTENING_COUNT.format({ count: t });
     return (0, s.jsxs)('div', {
         className: r()(y.audienceContainer, { [y.audienceContainerCollapsed]: n }),
         children: [
@@ -153,7 +153,7 @@ class w extends (i = a.PureComponent) {
                 let { user: e, channel: t, isWatching: n, hidePreview: i } = this.props;
                 if (!this.canWatchStream) return;
                 let s = {
-                    streamType: O.lo.GUILD,
+                    streamType: P.lo.GUILD,
                     ownerId: e.id,
                     channelId: t.id,
                     guildId: t.guild_id
@@ -211,7 +211,7 @@ class w extends (i = a.PureComponent) {
             }),
             D(this, 'renderUser', (e) => {
                 let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: a, mute: l, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: m, deaf: p, priority: _, collapsed: f, isStreaming: E, isGuest: C, nick: I, video: T, serverMute: x, serverDeaf: S, tabIndex: v, embeddedApplication: N, channel: Z, hangStatusActivity: M, showHangStatus: b, isSelf: R, application: L } = this.props,
-                    { userPopoutOpen: O, isHoveringHangStatus: D } = this.state,
+                    { userPopoutOpen: P, isHoveringHangStatus: D } = this.state,
                     U = j.al.has(null != n ? n : ''),
                     k = {
                         user: m,
@@ -236,7 +236,7 @@ class w extends (i = a.PureComponent) {
                         embeddedApplication: N,
                         avatarContainerClass: r()({ [y.userAvatar]: !0 }),
                         disabled: t && !U,
-                        selected: O,
+                        selected: P,
                         onClick: U ? void 0 : this.handleClickUser,
                         onDoubleClick: this.handleWatchStream,
                         onContextMenu: this.handleUserContextMenu,
@@ -250,7 +250,7 @@ class w extends (i = a.PureComponent) {
                 if (t) {
                     var w;
                     return (0, s.jsx)(u.Tooltip, {
-                        text: null !== (w = (0, g.Z)(n)) && void 0 !== w ? w : P.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+                        text: null !== (w = (0, g.Z)(n)) && void 0 !== w ? w : O.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
                         children: (e) => {
                             let { onClick: t, onContextMenu: n, ...i } = e;
                             return (0, s.jsx)(A.Z, {
@@ -263,7 +263,7 @@ class w extends (i = a.PureComponent) {
                 return (0, s.jsx)(u.Popout, {
                     position: 'right',
                     renderPopout: (b && D) || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
-                    shouldShow: a && !O,
+                    shouldShow: a && !P,
                     onRequestClose: this.handleHidePreview,
                     spacing: 0,
                     children: () =>

@@ -69,13 +69,13 @@ function b(e) {
             },
             [m]
         ),
-        O = s.useCallback(
+        P = s.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), o();
             },
             [o]
         ),
-        P = (0, c.useTransition)(
+        O = (0, c.useTransition)(
             a,
             {
                 from: {
@@ -107,7 +107,7 @@ function b(e) {
         D = y ? Z.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({ guildName: n.name }) : Z.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({ guildName: n.name }),
         U = y ? Z.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : Z.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
         k = y ? Z.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({ guildName: n.name }) : Z.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({ guildName: n.name });
-    return P((e, t) => {
+    return O((e, t) => {
         var s, a;
         return (
             t &&
@@ -122,7 +122,7 @@ function b(e) {
                 ref: E,
                 children: (0, i.jsx)(c.ClickableContainer, {
                     'aria-label': k,
-                    onClick: O,
+                    onClick: P,
                     children: (0, i.jsxs)('div', {
                         className: l()(M.toastContainerInner, p ? M.hovered : null),
                         children: [

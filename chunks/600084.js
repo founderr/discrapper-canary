@@ -33,8 +33,8 @@ var i = n(735250),
     R = n(981631),
     L = n(176505),
     j = n(689938),
-    O = n(113207);
-function P(e) {
+    P = n(113207);
+function O(e) {
     let { canManageRoles: t, channel: n } = e,
         s = t && (0, c.Yk)(n),
         l = (0, a.e7)([f.ZP], () => null != n.guild_id && n === f.ZP.getDefaultChannel(n.guild_id), [n]);
@@ -78,7 +78,7 @@ function y(e) {
                 null != f &&
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-xl/medium',
-                        className: O.marginBottom20,
+                        className: P.marginBottom20,
                         children: x
                     }),
                 j.Z.Messages.BEGINNING_DM.format({ username: u }),
@@ -103,7 +103,7 @@ function y(e) {
                     children: j.Z.Messages.BEGINNING_GROUP_DM.format({ name: u })
                 });
     return Z
-        ? (0, i.jsx)(P, {
+        ? (0, i.jsx)(O, {
               channel: n,
               canManageRoles: N
           })

@@ -28,8 +28,8 @@ var s = n(735250),
     O = n(63063),
     b = n(782605),
     P = n(954824),
-    D = n(588705),
-    M = n(781428),
+    M = n(588705),
+    D = n(781428),
     L = n(423527),
     j = n(981631),
     y = n(188785),
@@ -155,7 +155,7 @@ class z extends r.PureComponent {
         var e, t;
         return (0, s.jsxs)(p.ZP, {
             children: [
-                (0, s.jsx)(D.Z, {
+                (0, s.jsx)(M.Z, {
                     invite: this.props.invite,
                     error: null === (e = this.state.error) || void 0 === e ? void 0 : e.message
                 }),
@@ -194,7 +194,7 @@ class z extends r.PureComponent {
                     channel: e.channel,
                     guildScheduledEvent: e.guild_scheduled_event
                 })
-              : (0, s.jsx)(D.Z, { invite: e });
+              : (0, s.jsx)(M.Z, { invite: e });
     }
     renderAuthenicatedFooter() {
         let { invite: e } = this.props;
@@ -242,7 +242,7 @@ class z extends r.PureComponent {
                 if (n && (0, S.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, o.$.IS_GUEST_INVITE)) return d.Z.openApp(e.code), u.x.set(I.J, e.code), this.renderAppOpened(() => r(j.Z5c.APP));
                 if (n || !B.KO) return this.renderAuthenticatedOrDownload();
                 else if (this.getMode() === H.LOGIN)
-                    return (0, s.jsx)(M.Z, {
+                    return (0, s.jsx)(D.Z, {
                         invite: e,
                         transitionTo: r,
                         location: i

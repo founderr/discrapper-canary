@@ -56,18 +56,18 @@ function d(e) {
                 L = null,
                 j = (0, o.DQ)(e);
             C = C || j;
-            let O = (function (e, t, n) {
+            let P = (function (e, t, n) {
                 if (i.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return u.ys_.MESSAGE_GROUP_BLOCKED;
                 else if ((0, o.P1)(e) && n) return u.ys_.MESSAGE_GROUP_SPAMMER;
                 return null;
             })(h, e, j && _);
-            if (null !== O) {
+            if (null !== P) {
                 let t, n;
                 [L, R] =
                     ((x = g),
                     (S = e),
-                    (v = O),
+                    (v = P),
                     (n = N = R),
                     null == N || N.type !== v
                         ? ((t = {
@@ -108,8 +108,8 @@ function d(e) {
                         }),
                     (I = null));
             (0, c.E)(g, e, h);
-            let P = (null == R ? void 0 : R.type) === u.ys_.MESSAGE ? d : R;
-            (0, r.J)(h, P, e) && (n = e.id);
+            let O = (null == R ? void 0 : R.type) === u.ys_.MESSAGE ? d : R;
+            (0, r.J)(h, O, e) && (n = e.id);
             let y = {
                 type: e.type === u.uaV.THREAD_STARTER_MESSAGE ? u.ys_.THREAD_STARTER_MESSAGE : u.ys_.MESSAGE,
                 content: e,

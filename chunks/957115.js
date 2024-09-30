@@ -1,17 +1,17 @@
-o.d(t, {
+n.d(t, {
     B: function () {
         return s;
     }
 }),
-    o(653041);
-var n = o(392711),
-    a = o.n(n);
+    n(653041);
+var o = n(392711),
+    a = n.n(o);
 let s = (e, t) => {
-    let o = a().shuffle(e),
-        n = o.findIndex((e) => e.value === t);
-    if (n > -1) {
-        let e = o[n];
-        o.splice(n, 1), o.push(e);
+    let n = a().shuffle(e),
+        o = n.findIndex((e) => e.value === t);
+    if (o > -1) {
+        let e = n[o];
+        n.splice(o, 1), n.push(e);
     }
-    return o;
+    return n;
 };

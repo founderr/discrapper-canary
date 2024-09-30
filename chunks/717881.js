@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return O;
+        return P;
     }
 });
 var i = n(735250),
@@ -49,23 +49,23 @@ function j(e) {
         isEmbedded: m
     });
 }
-let O = d.Z.Types;
+let P = d.Z.Types;
 t.Z = function (e) {
-    let { activity: t, user: n, useStoreStream: a = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: h = !1, analyticsParams: M, ...O } = e,
-        P = (0, r.e7)([A.Z, S.Z], () => {
+    let { activity: t, user: n, useStoreStream: a = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: h = !1, analyticsParams: M, ...P } = e,
+        O = (0, r.e7)([A.Z, S.Z], () => {
             var e;
             return S.Z.getChannel(null === (e = A.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
         }),
         { enableHangStatus: y } = I.n.useExperiment(
             {
-                guildId: null == P ? void 0 : P.guild_id,
+                guildId: null == O ? void 0 : O.guild_id,
                 location: 'UserActivityContainer'
             },
             { autoTrackExposure: !1 }
         ),
         D = (0, r.e7)([x.Z], () => (a ? x.Z.getAnyStreamForUser(n.id) : null)),
-        U = y && N.Z.can(b.Plq.CONNECT, P),
-        k = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && U ? P : null,
+        U = y && N.Z.can(b.Plq.CONNECT, O),
+        k = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && U ? O : null,
         w = (0, r.e7)([v.Z, A.Z, S.Z], () => {
             var e, i;
             return (0, c.Z)(t, b.xjy.EMBEDDED) ? v.Z.getGuild(null === (e = S.Z.getChannel(null === (i = A.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? v.Z.getGuild(k.getGuildId()) : null;
@@ -89,7 +89,7 @@ t.Z = function (e) {
     }, [null == t ? void 0 : t.type, U, k]),
     (null == t ? void 0 : t.type) !== b.IIU.HANG_STATUS || U)
         ? (0, i.jsx)(d.Z, {
-              ...O,
+              ...P,
               activity: t,
               user: n,
               application: H,
@@ -97,14 +97,14 @@ t.Z = function (e) {
               activityGuild: null != w ? w : B,
               showReactions: F,
               showChannelDetails: h,
-              channel: h ? P : void 0,
+              channel: h ? O : void 0,
               renderActions: o
                   ? () =>
                         (0, i.jsxs)('div', {
                             className: l()(F && L.actionsWrapper),
                             children: [
                                 (0, i.jsx)(j, {
-                                    ...O,
+                                    ...P,
                                     applicationStream: D,
                                     activity: t,
                                     user: n

@@ -31,9 +31,9 @@ t.Z = (e) => {
         R = (0, r.e7)([_.default], () => _.default.getUser(a)),
         L = (0, r.e7)([p.Z], () => p.Z.getChannelId() === A.id),
         j = (0, r.e7)([m.Z], () => m.Z.can(S.Plq.CONNECT, A)),
-        O = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, A),
-        P = (0, r.e7)([h.ZP], () => (null != A.guild_id && null != R ? h.ZP.getMember(A.guild_id, a) : null)),
-        y = s.useMemo(() => (null != R ? (0, u.SG)(void 0, P, R, { size: 40 }) : void 0), [P, R]);
+        P = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, A),
+        O = (0, r.e7)([h.ZP], () => (null != A.guild_id && null != R ? h.ZP.getMember(A.guild_id, a) : null)),
+        y = s.useMemo(() => (null != R ? (0, u.SG)(void 0, O, R, { size: 40 }) : void 0), [O, R]);
     return (s.useEffect(() => {
         (0, E.UP)();
     }, []),
@@ -124,7 +124,7 @@ t.Z = (e) => {
                                       children: v.Z.Messages.CUSTOM_HANG_STATUS_CTA
                                   })
                                 : null,
-                            L && O
+                            L && P
                                 ? (0, i.jsx)(o.Button, {
                                       className: N.cta,
                                       size: o.Button.Sizes.SMALL,

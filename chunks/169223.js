@@ -46,7 +46,7 @@ class g extends p.Z {
                 let { analyticsData: t } = e;
                 this.possiblyShowFeedbackModal(m.nw.VOICE, () => {
                     (0, a.openModalLazy)(async () => {
-                        let { default: e } = await n.e('96888').then(n.bind(n, 988645));
+                        let { default: e } = await Promise.all([n.e('51514'), n.e('96888')]).then(n.bind(n, 988645));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -128,7 +128,7 @@ class g extends p.Z {
                 let { reportId: t, reportType: r } = e;
                 this.possiblyShowFeedbackModal(m.nw.IN_APP_REPORTS, () => {
                     (0, a.openModalLazy)(async () => {
-                        let { default: e } = await n.e('72135').then(n.bind(n, 442173));
+                        let { default: e } = await Promise.all([n.e('51514'), n.e('72135')]).then(n.bind(n, 442173));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,

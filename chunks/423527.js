@@ -35,8 +35,8 @@ var s,
     O = n(473855),
     b = n(726745),
     P = n(929809),
-    D = n(541692),
-    M = n(986197),
+    M = n(541692),
+    D = n(986197),
     L = n(135200),
     j = n(219496),
     y = n(794099),
@@ -432,7 +432,7 @@ class eo extends (s = i.PureComponent) {
                 hasLoggedInAccounts: b,
                 registrationCopyExperimentConfig: { hasCopyAboveButton: P }
             } = this.props,
-            { subText: D, consentText: j } = this.renderConsentComponents(),
+            { subText: M, consentText: j } = this.renderConsentComponents(),
             y = this.renderErrorMessage(),
             G = (0, r.jsx)(h.Tooltip, {
                 text: !c && I ? et.Z.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
@@ -449,7 +449,7 @@ class eo extends (s = i.PureComponent) {
                     })
             }),
             U = async () => {
-                this.setState({ usernameFocused: !0 }), T && a.length > 0 && !L.Z.wasRegistrationSuggestionFetched(a) && (await M.Z.fetchSuggestionsRegistration(a));
+                this.setState({ usernameFocused: !0 }), T && a.length > 0 && !L.Z.wasRegistrationSuggestionFetched(a) && (await D.Z.fetchSuggestionsRegistration(a));
             },
             F = null != e ? (0, r.jsx)(i.Fragment, { children: e() }, 'custom-header') : (0, r.jsx)(x.Dx, { children: et.Z.Messages.REGISTER_TITLE }, 'title'),
             k = (0, r.jsxs)(x.gO, {
@@ -548,12 +548,12 @@ class eo extends (s = i.PureComponent) {
                         value: u,
                         required: !0
                     }),
-                    P && D,
+                    P && M,
                     (0, r.jsx)(Z.Z, {}),
                     G,
                     y,
                     j,
-                    !P && D,
+                    !P && M,
                     Q.a
                         ? null
                         : (0, r.jsx)(x.zx, {
@@ -714,13 +714,13 @@ class eo extends (s = i.PureComponent) {
     }
 }
 function el(e) {
-    let t = (0, d.cj)([k.Z, F.default, p.Z, D.Z, b.Z], () => ({
+    let t = (0, d.cj)([k.Z, F.default, p.Z, M.Z, b.Z], () => ({
             consentRequired: k.Z.getAuthenticationConsentRequired(),
             registering: F.default.getRegisterStatus() === J.$ib.REGISTERING,
             apiErrors: F.default.getErrors(),
             authenticated: F.default.isAuthenticated(),
             isUnderage: p.Z.isUnderageAnonymous(),
-            country: D.Z.getCountryCode(),
+            country: M.Z.getCountryCode(),
             hasLoggedInAccounts: b.Z.getHasLoggedInAccounts()
         })),
         n = (0, y.F4)(),

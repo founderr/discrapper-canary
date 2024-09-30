@@ -29,9 +29,9 @@ var s = n(120356),
     R = n(757182),
     L = n(910424),
     j = n(981631),
-    O = n(193710);
+    P = n(193710);
 t.Z = (0, u.Z)((e) => {
-    let { activity: t, embeddedActivity: n, user: s, applicationStream: l, className: u, guildId: P, channelId: y, source: D, color: U = c.Button.Colors.WHITE, look: k = c.Button.Looks.OUTLINED, type: w, onAction: B, isEmbedded: H = !1 } = e,
+    let { activity: t, embeddedActivity: n, user: s, applicationStream: l, className: u, guildId: O, channelId: y, source: D, color: U = c.Button.Colors.WHITE, look: k = c.Button.Looks.OUTLINED, type: w, onAction: B, isEmbedded: H = !1 } = e,
         G = (0, o.e7)([_.default], () => {
             let e = _.default.getCurrentUser();
             return r()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
@@ -50,7 +50,7 @@ t.Z = (0, u.Z)((e) => {
         align: h.Z.Align.STRETCH,
         direction: W,
         wrap: K ? h.Z.Wrap.WRAP : h.Z.Wrap.NO_WRAP,
-        className: a()(u, O.buttonsWrapper, K ? O.vertical : O.horizontal),
+        className: a()(u, P.buttonsWrapper, K ? P.vertical : P.horizontal),
         children: (() => {
             if ((0, I.Z)(t))
                 return (0, i.jsx)(
@@ -82,7 +82,7 @@ t.Z = (0, u.Z)((e) => {
                         {
                             activity: t,
                             user: s,
-                            guildId: P,
+                            guildId: O,
                             channelId: y,
                             source: D,
                             look: k,

@@ -1,9 +1,9 @@
-o.d(t, {
+n.d(t, {
     w: function () {
-        return n;
+        return o;
     }
 });
-let n = (0, o(818083).B)({
+let o = (0, n(818083).B)({
     kind: 'user',
     id: '2024-09_feedbackskipbutton',
     label: 'Add a skip button to the feedback modal',

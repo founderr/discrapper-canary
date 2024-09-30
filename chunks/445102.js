@@ -1,27 +1,27 @@
-o.d(t, {
+n.d(t, {
     Z: function () {
-        return l;
+        return i;
     }
 });
-var n = o(131951),
-    a = o(626135),
-    s = o(981631);
-function l(e, t, o, l, i) {
-    let r = n.Z.getSettings(),
-        u = n.Z.getInputDeviceId(),
-        d = n.Z.getInputDevices()[u],
-        c = n.Z.getOutputDeviceId(),
-        _ = n.Z.getOutputDevices()[c],
-        b = n.Z.getVideoDeviceId(),
-        m = n.Z.getVideoDevices()[b],
-        E = n.Z.getNoiseCancellation(),
-        O = n.Z.getMediaEngine().getAudioSubsystem(),
-        h = n.Z.getMediaEngine().getAudioLayer();
+var o = n(131951),
+    a = n(626135),
+    s = n(981631);
+function i(e, t, n, i, l) {
+    let r = o.Z.getSettings(),
+        u = o.Z.getInputDeviceId(),
+        c = o.Z.getInputDevices()[u],
+        d = o.Z.getOutputDeviceId(),
+        _ = o.Z.getOutputDevices()[d],
+        m = o.Z.getVideoDeviceId(),
+        b = o.Z.getVideoDevices()[m],
+        E = o.Z.getNoiseCancellation(),
+        h = o.Z.getMediaEngine().getAudioSubsystem(),
+        f = o.Z.getMediaEngine().getAudioLayer();
     a.default.track(s.rMx.CALL_REPORT_PROBLEM, {
         rating: null != e ? e : 'no response',
         reason_code: t,
-        reason_description: o,
-        feedback: l,
+        reason_description: n,
+        feedback: i,
         audio_input_mode: r.mode,
         automatic_audio_input_sensitivity_enabled: r.modeOptions.autoThreshold,
         audio_input_sensitivity: r.modeOptions.threshold,
@@ -30,12 +30,12 @@ function l(e, t, o, l, i) {
         automatic_gain_control_enabled: r.automaticGainControl,
         voice_output_volume: r.outputVolume,
         noise_cancellation_enabled: E,
-        input_device_name: null == d ? void 0 : d.name,
+        input_device_name: null == c ? void 0 : c.name,
         output_device_name: null == _ ? void 0 : _.name,
-        video_device_name: null == m ? void 0 : m.name,
-        audio_subsystem: O,
-        audio_layer: h,
+        video_device_name: null == b ? void 0 : b.name,
+        audio_subsystem: h,
+        audio_layer: f,
         automatic_audio_subsystem: r.automaticAudioSubsystem,
-        ...i
+        ...l
     });
 }

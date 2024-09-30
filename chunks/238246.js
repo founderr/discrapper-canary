@@ -29,8 +29,8 @@ var i,
     R = n(314910),
     L = n(892254),
     j = n(706454),
-    O = n(210887),
-    P = n(740492),
+    P = n(210887),
+    O = n(740492),
     y = n(451478),
     D = n(358085),
     U = n(998502),
@@ -184,7 +184,7 @@ class F extends (i = a.Component) {
             V(this, 'rootRef', a.createRef()),
             V(this, '_cleanupWindowActionCreators', void 0),
             V(this, 'warnPopoutClose', (e) => {
-                if (this.props.connectedToEmbeddedActivity && !P.ZP.disableEmbeddedActivityPopOutAlert) {
+                if (this.props.connectedToEmbeddedActivity && !O.ZP.disableEmbeddedActivityPopOutAlert) {
                     if (((e.returnValue = H.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE), !!D.isPlatformEmbedded))
                         (0, C.Z)(() => {
                             w.Z.unmountWindow(this.props.windowKey), D.isPlatformEmbedded && U.ZP.close(this.props.windowKey);
@@ -208,9 +208,9 @@ let W = a.forwardRef(function (e, t) {
     }));
     c()(null != n, 'Missing guestWindow reference');
     let a = (0, h.e7)([y.Z], () => y.Z.isFocused()),
-        { locale: l, theme: r } = (0, h.cj)([O.Z, j.default], () => ({
+        { locale: l, theme: r } = (0, h.cj)([P.Z, j.default], () => ({
             locale: j.default.locale,
-            theme: O.Z.theme
+            theme: P.Z.theme
         })),
         o = (0, h.e7)([f.Z], () => (f.Z.useForcedColors ? 'yes' : 'no')),
         { accessibilitySettings: u, appWrapperClassName: d } = (0, A.I)(),

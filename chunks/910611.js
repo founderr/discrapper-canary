@@ -3,7 +3,7 @@ n.d(t, {
         return U;
     },
     ud: function () {
-        return O;
+        return P;
     },
     v0: function () {
         return y;
@@ -110,7 +110,7 @@ function j(e) {
         a
     );
 }
-function O(e) {
+function P(e) {
     let { channel: t, channelName: n, parentChannel: a, guild: r, inSidebar: o = !1, handleClick: u, handleContextMenu: d, handleParentClick: p, handleParentContextMenu: f, renderFollowButton: E } = e,
         C = (0, m.KS)(t, r),
         { prefix: T, level: x } = (function (e, t) {
@@ -271,7 +271,7 @@ function O(e) {
                 ]
             });
         case M.d4z.GUILD_DIRECTORY:
-            let O = (null == r ? void 0 : r.hasFeature(M.oNc.HUB)) ? R.Z.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({ guildName: n }) : n;
+            let P = (null == r ? void 0 : r.hasFeature(M.oNc.HUB)) ? R.Z.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({ guildName: n }) : n;
             return (0, i.jsxs)(s.Fragment, {
                 children: [
                     null !== C
@@ -292,7 +292,7 @@ function O(e) {
                                   })
                                 : null,
                             ' ',
-                            O
+                            P
                         ]
                     })
                 ]
@@ -301,7 +301,7 @@ function O(e) {
             return null;
     }
 }
-let P = (e) => {
+let O = (e) => {
     let { channel: t } = e,
         n = (0, r.e7)([I.default], () => I.default.getCurrentUser()),
         s = (0, r.e7)([I.default], () => I.default.getUser(t.getRecipientId()));
@@ -311,7 +311,7 @@ function y(e, t) {
     switch (e.type) {
         case M.d4z.DM:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(P, { channel: e }), (0, i.jsx)(S.Z, { channel: e }, e.id)]
+                children: [(0, i.jsx)(O, { channel: e }), (0, i.jsx)(S.Z, { channel: e }, e.id)]
             });
         case M.d4z.GUILD_ANNOUNCEMENT:
         case M.d4z.GUILD_TEXT:

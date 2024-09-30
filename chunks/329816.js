@@ -150,17 +150,17 @@ function eu(e) {
                                         (0, a.jsx)(en.Co, {}),
                                         (0, a.jsx)(ee.ZP, {}),
                                         (0, a.jsx)(u.OU, {}),
+                                        null != i
+                                            ? (0, a.jsx)(el, {
+                                                  type: i,
+                                                  themeOverride: f
+                                              })
+                                            : null,
                                         (0, a.jsx)(S.Wu, {
                                             appContext: ei.IlC.APP,
                                             renderWindow: window,
                                             children: (0, a.jsxs)(k.yP, {
                                                 children: [
-                                                    null != i
-                                                        ? (0, a.jsx)(el, {
-                                                              type: i,
-                                                              themeOverride: f
-                                                          })
-                                                        : null,
                                                     (0, a.jsxs)('div', {
                                                         className: l()(eo.appAsidePanelWrapper, s && eo.mobileAppAsidePanelWrapper, { [eo.allowsScrolling]: eS() }),
                                                         children: [

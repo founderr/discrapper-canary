@@ -12,7 +12,7 @@ var n = t(735250),
     l = t(641145),
     c = t(388032);
 function d() {
-    a.useSyncExternalStore(c.NW.onLocaleChange, () => c.NW.currentLocale);
+    a.useSyncExternalStore(c.intl.onLocaleChange, () => c.intl.currentLocale);
     let [, e] = a.useState({});
     return (
         a.useEffect(() => {
@@ -33,8 +33,8 @@ function d() {
                             label: 'French'
                         }
                     ],
-                    isSelected: (e) => e === c.NW.currentLocale,
-                    select: (e) => c.NW.setLocale(e),
+                    isSelected: (e) => e === c.intl.currentLocale,
+                    select: (e) => c.intl.setLocale(e),
                     serialize: (e) => e
                 }),
                 (0, n.jsx)(r.Spacer, { size: 32 }),
@@ -44,37 +44,37 @@ function d() {
                         (0, n.jsx)(r.Text, {
                             tag: 'div',
                             variant: 'heading-lg/bold',
-                            children: c.NW.format(l.Z.JJ0wpK, {})
+                            children: c.intl.format(l.Z.JJ0wpK, {})
                         }),
                         (0, n.jsx)(r.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(o.Z.swfLzc, {})
+                            children: c.intl.format(o.Z.swfLzc, {})
                         }),
                         (0, n.jsx)(r.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(l.Z['rmps8/'], {})
+                            children: c.intl.format(l.Z['rmps8/'], {})
                         }),
                         (0, n.jsx)(r.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(l.Z.uczI4u, { linkTarget: console.log })
+                            children: c.intl.format(l.Z.uczI4u, { linkTarget: console.log })
                         }),
                         (0, n.jsx)(r.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(l.Z.rdfRys, {})
+                            children: c.intl.format(l.Z.rdfRys, {})
                         }),
                         (0, n.jsx)(r.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(l.Z['Q+eyqq'], { count: 1 })
+                            children: c.intl.format(l.Z['Q+eyqq'], { count: 1 })
                         }),
                         (0, n.jsx)(r.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(l.Z.XOdbAw, {
+                            children: c.intl.format(l.Z.XOdbAw, {
                                 username: 'some user',
                                 usernameHook: (e) =>
                                     (0, n.jsx)('span', {

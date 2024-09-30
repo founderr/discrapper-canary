@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(627553),
     L = n(38761),
     j = n(585483),
-    O = n(358085),
-    P = n(127654),
+    P = n(358085),
+    O = n(127654),
     y = n(316595),
     D = n(193910),
     U = n(951211),
@@ -66,8 +66,8 @@ t.Z = s.memo(function (e) {
     (null == ef ? void 0 : ef.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && ea && en && !el && !ei && !er && eu('recentClips');
     let eE = (e, t, n) => {
             null != t && 'ETOOLARGE' === t.code
-                ? (0, P.G)(W, [])
-                : (0, P.d)(e, W, z, {
+                ? (0, O.G)(W, [])
+                : (0, O.d)(e, W, z, {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
@@ -102,7 +102,7 @@ t.Z = s.memo(function (e) {
     });
     let eI = (0, x.NE)(W),
         eT = (0, x.Xu)(W),
-        ex = !v.dN.useSetting() && !(0, O.isAndroidWeb)() && null != window.ResizeObserver,
+        ex = !v.dN.useSetting() && !(0, P.isAndroidWeb)() && null != window.ResizeObserver,
         eS = (0, T.UI)(null != W ? W : void 0),
         ev = (0, c.useRedesignIconContext)().enabled,
         eN = (0, m.qB)(W.id, 'ChannelAttachButton'),

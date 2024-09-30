@@ -28,7 +28,7 @@ var s,
     O = n(981631),
     b = n(689938),
     P = n(113207);
-function D(e, t, n) {
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function D(e, t, n) {
     );
 }
 c.ZP.initialize(), ((r = s || (s = {})).REGISTER = 'register'), (r.LOGIN = 'login');
-class M extends a.PureComponent {
+class D extends a.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
         e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, m.e)('gift_code');
@@ -211,14 +211,14 @@ class M extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            D(this, 'state', {
+            M(this, 'state', {
                 error: null,
                 continueOnWeb: !1,
                 currentUser: null,
                 sentVerification: !1,
                 fetchingUser: !1
             }),
-            D(this, 'refreshUser', () => {
+            M(this, 'refreshUser', () => {
                 this.setState({ fetchingUser: !0 }),
                     E.k({ withAnalyticsToken: !0 })
                         .then((e) =>
@@ -229,14 +229,14 @@ class M extends a.PureComponent {
                         )
                         .catch(() => this.setState({ fetchingUser: !1 }));
             }),
-            D(this, 'handleLogout', () => {
+            M(this, 'handleLogout', () => {
                 let e = this.props.match.params.giftCode;
                 d.Z.logout(O.Z5c.GIFT_CODE_LOGIN(e));
             }),
-            D(this, 'handleResendVerification', () => {
+            M(this, 'handleResendVerification', () => {
                 d.Z.verifyResend(), this.setState({ sentVerification: !0 });
             }),
-            D(this, 'handleAccept', async () => {
+            M(this, 'handleAccept', async () => {
                 let { transitionTo: e, giftCode: t } = this.props;
                 if (null == t) throw Error('Trying to accept gift before resolve');
                 let n = this.getCode();
@@ -246,7 +246,7 @@ class M extends a.PureComponent {
                     this.setState({ error: e });
                 }
             }),
-            D(this, 'resolveGiftCode', () => {
+            M(this, 'resolveGiftCode', () => {
                 let { transitionTo: e } = this.props,
                     t = this.getCode();
                 _.Z.resolveGiftCode(t, !0, !0).then((n) => {
@@ -270,4 +270,4 @@ t.Z = c.ZP.connectStores([N.Z, T.Z, f.default, x.Z, I.Z, g.Z], (e) => {
         libraryApplicationsFetched: T.Z.fetched,
         nativeAppState: g.Z.getState(t)
     };
-})(M);
+})(D);

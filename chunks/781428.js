@@ -32,8 +32,8 @@ var s,
     O = n(952802),
     b = n(108427),
     P = n(365007),
-    D = n(314897),
-    M = n(117240),
+    M = n(314897),
+    D = n(117240),
     L = n(896797),
     j = n(626135),
     y = n(585483),
@@ -154,7 +154,7 @@ class q extends (s = i.PureComponent) {
             let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + w.ANM.SSO,
                 t = {
                     ...r,
-                    token: D.default.getToken()
+                    token: M.default.getToken()
                 };
             window.location = ''.concat(e, '?').concat((0, c.stringify)(t));
         }
@@ -735,16 +735,16 @@ class q extends (s = i.PureComponent) {
 }
 W(q, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
 t.Z = function (e) {
-    let t = (0, d.cj)([M.Z, L.Z, D.default, Z.Z, S.Z], () => ({
-        authenticated: D.default.isAuthenticated(),
-        handoffAvailable: M.Z.isHandoffAvailable(),
-        user: M.Z.user,
-        loginStatus: D.default.getLoginStatus(),
-        mfaTicket: D.default.getMFATicket(),
-        mfaSMS: D.default.getMFASMS(),
-        mfaMethods: D.default.getMFAMethods(),
-        maskedPhone: D.default.getMaskedPhone(),
-        errors: D.default.getErrors(),
+    let t = (0, d.cj)([D.Z, L.Z, M.default, Z.Z, S.Z], () => ({
+        authenticated: M.default.isAuthenticated(),
+        handoffAvailable: D.Z.isHandoffAvailable(),
+        user: D.Z.user,
+        loginStatus: M.default.getLoginStatus(),
+        mfaTicket: M.default.getMFATicket(),
+        mfaSMS: M.default.getMFASMS(),
+        mfaMethods: M.default.getMFAMethods(),
+        maskedPhone: M.default.getMaskedPhone(),
+        errors: M.default.getErrors(),
         defaultRoute: L.Z.defaultRoute,
         country: S.Z.getCountryCode(),
         hasLoggedInAccounts: Z.Z.getHasLoggedInAccounts()

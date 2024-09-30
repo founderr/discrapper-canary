@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(179424),
     L = n(786915),
     j = n(975146),
-    O = n(991617),
-    P = n(597998),
+    P = n(991617),
+    O = n(597998),
     y = n(606304),
     D = n(594174),
     U = n(358221),
@@ -68,7 +68,7 @@ function W(e) {
                           color: d.Tooltip.Colors.GREY,
                           text: V.Z.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({ username: e.user.username }),
                           children: (a) =>
-                              (0, i.jsx)(P.Z, {
+                              (0, i.jsx)(O.Z, {
                                   ...a,
                                   className: l()(F.speaker, { [F.last]: t === s.length - 1 }),
                                   user: e.user,
@@ -86,7 +86,7 @@ function z(e) {
     let { inPopout: t, channel: n, appContext: a, inCall: l, isChatOpen: r, exitFullScreen: o } = e,
         v = n.id,
         {
-            voiceParticipantsHidden: P,
+            voiceParticipantsHidden: O,
             selectedParticipant: y,
             userParticipantCount: V
         } = (0, u.cj)(
@@ -125,7 +125,7 @@ function z(e) {
         );
     }
     return (
-        P &&
+        O &&
             et.push(
                 (0, i.jsx)(
                     W,
@@ -170,7 +170,7 @@ function z(e) {
                     'live-indicator'
                 )
             )),
-        P &&
+        O &&
             et.push(
                 (0, i.jsx)(
                     d.Popout,
@@ -203,7 +203,7 @@ function z(e) {
                           'deselect-participant'
                       )
                     : (0, i.jsx)(
-                          O.Z,
+                          P.Z,
                           {
                               className: F.button,
                               channelId: v,

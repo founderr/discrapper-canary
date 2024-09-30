@@ -30,7 +30,7 @@ let S = s.memo(function (e) {
         R = (0, E.Uj)(b),
         L = (0, c.p)(),
         j = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
-        O = s.useMemo(() => {
+        P = s.useMemo(() => {
             if (null == b) return null;
             let e = (0, r.Z)(b);
             if (e.type === T.uaV.USER_JOIN) {
@@ -95,9 +95,9 @@ let S = s.memo(function (e) {
             }
             return null;
         }, [b, R, v, j, L]),
-        P = (0, a.e7)([p.Z], () => null != b && p.Z.isBlockedForMessage(b), [b]),
+        O = (0, a.e7)([p.Z], () => null != b && p.Z.isBlockedForMessage(b), [b]),
         y = (0, I.wq)(null == b ? void 0 : b.author.id, v.id),
-        D = (0, I.$3)(n, b, P),
+        D = (0, I.$3)(n, b, O),
         U = (0, I.Wl)(b, v, A, M),
         k = (0, I.rY)(Z, M),
         w = s.useCallback(
@@ -115,9 +115,9 @@ let S = s.memo(function (e) {
         channel: v,
         baseAuthor: B,
         referencedMessage: S,
-        content: O,
+        content: P,
         compact: N,
-        isReplyAuthorBlocked: P,
+        isReplyAuthorBlocked: O,
         showAvatarPopout: Z,
         showUsernamePopout: A,
         renderPopout: C.Z,
