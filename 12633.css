@@ -1514,12 +1514,6 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     height: 48px
 }
 
-.visual-refresh .wrapper_c5f96a,
-.visual-refresh .svg_c5f96a {
-    width: 44px;
-    height: 44px
-}
-
 .noContain_c5f96a {
     contain: style
 }
@@ -9456,8 +9450,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .visual-refresh .container_fc4f04 {
-    --__header-bar-background: var(--bg-base-primary);
-    min-height: 40px
+    --__header-bar-background: var(--bg-base-primary)
 }
 
 .upperContainer_fc4f04 {
@@ -12748,10 +12741,6 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 @use postcss-pxtorem;
 
-.visual-refresh {
-    --custom-message-avatar-size: 48px !important
-}
-
 .wrapper_f9f2ca {
     position: relative;
     word-wrap: break-word;
@@ -13172,10 +13161,6 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     word-wrap: pre-wrap
 }
 
-.visual-refresh .cozy_f9f2ca .header_f9f2ca {
-    padding-bottom: 4px
-}
-
 .zalgo_f9f2ca.cozy_f9f2ca .header_f9f2ca {
     overflow: hidden
 }
@@ -13225,11 +13210,6 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     top: .18em;
     margin-left: .1em;
     margin-right: .25em
-}
-
-.visual-refresh .avatar_f9f2ca {
-    width: var(--custom-message-avatar-size);
-    height: var(--custom-message-avatar-size)
 }
 
 .avatar_f9f2ca:before {
@@ -16993,16 +16973,6 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 .theme-light .popoutContent_e58351 {
     background-color: var(--background-floating);
     box-shadow: var(--elevation-high)
-}
-
-.visual-refresh .popoutLoader_e58351,
-.visual-refresh .popoutContent_e58351 {
-    background-color: transparent;
-    background-color: initial
-}
-
-.visual-refresh .guildSection_e58351 {
-    background-color: var(--bg-mod-strong)
 }
 
 .joinGuildLink_e58351 {
