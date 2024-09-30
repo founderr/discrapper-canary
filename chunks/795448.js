@@ -1,15 +1,24 @@
 n.d(t, {
-    G: function () {
-        return s;
+    Gk: function () {
+        return o;
     },
-    k: function () {
+    PV: function () {
         return a;
+    },
+    d$: function () {
+        return i;
     }
 });
-var i = n(570140);
-function a() {
-    i.Z.dispatch({ type: 'GIFT_INTENTS_SHOWN' });
+var r = n(570140);
+function i() {
+    r.Z.dispatch({ type: 'FRIENDS_LIST_GIFT_INTENTS_SHOWN' });
 }
-function s() {
-    i.Z.dispatch({ type: 'FRIENDS_TAB_BADGE_DISMISS' });
+function a(e) {
+    r.Z.dispatch({
+        type: 'MESSAGE_GIFT_INTENT_SHOWN',
+        recipientUserId: e
+    });
+}
+function o() {
+    r.Z.dispatch({ type: 'FRIENDS_TAB_BADGE_DISMISS' });
 }
