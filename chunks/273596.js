@@ -115,7 +115,7 @@ function R(e) {
                             a
                         );
                     case 1:
-                        return (0, i.jsx)(c.Spinner, { className: A.spinner }, a);
+                        return (0, i.jsx)(c.Spinner, { className: r()(A.spinner, { [A.spinnerWithSidebar]: j }) }, a);
                 }
             },
             [b, P, j, t]

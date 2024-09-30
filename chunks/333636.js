@@ -27,7 +27,7 @@ t.default = function (e) {
     let { onClose: t, transitionState: n } = e,
         [u, d] = l.useState(null),
         [h, C] = l.useState(null),
-        [f, A] = l.useState(null),
+        [A, f] = l.useState(null),
         [T, p] = l.useState(''),
         x = async () => {
             if (u) {
@@ -35,7 +35,7 @@ t.default = function (e) {
                 try {
                     await (0, o.qy)(u, {
                         difficulty: null != h ? h : void 0,
-                        should_serve_invisible: null != f ? f : void 0
+                        should_serve_invisible: null != A ? A : void 0
                     });
                 } catch (e) {
                     p(e.message);
@@ -62,7 +62,7 @@ t.default = function (e) {
                         value: u,
                         options: i,
                         onChange: (e) => {
-                            e !== o.fw.HCAPTCHA_RQDATA && (C(null), A(null)), d(e), p('');
+                            e !== o.fw.HCAPTCHA_RQDATA && (C(null), f(null)), d(e), p('');
                         }
                     }),
                     u === o.fw.HCAPTCHA_RQDATA &&
@@ -76,8 +76,8 @@ t.default = function (e) {
                                     }
                                 }),
                                 (0, a.jsx)(r.Checkbox, {
-                                    value: null != f && f,
-                                    onChange: (e, t) => A(t),
+                                    value: null != A && A,
+                                    onChange: (e, t) => f(t),
                                     children: (0, a.jsx)(r.Text, {
                                         variant: 'text-md/normal',
                                         children: 'Should serve invisible?'
