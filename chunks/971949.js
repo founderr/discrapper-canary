@@ -1,74 +1,74 @@
-n.r(s),
-    n.d(s, {
+s.r(a),
+    s.d(a, {
         default: function () {
-            return d;
+            return u;
         }
     });
-var _ = n(735250);
-n(470079);
-var a = n(692547),
-    L = n(481060),
-    t = n(906732),
-    o = n(98278),
-    r = n(790527),
-    c = n(474936),
-    M = n(981631),
-    i = n(689938),
-    A = n(476765),
-    l = n(569548),
-    D = n(483569);
-function u(e, s) {
-    return (0, _.jsx)(
-        L.TextBadge,
+var n = s(735250);
+s(470079);
+var t = s(692547),
+    _ = s(481060),
+    L = s(906732),
+    o = s(98278),
+    r = s(790527),
+    c = s(474936),
+    d = s(981631),
+    i = s(689938),
+    M = s(476765),
+    A = s(569548),
+    l = s(860324);
+function D(e, a) {
+    return (0, n.jsx)(
+        _.TextBadge,
         {
             text: e,
-            className: l.newBadge,
-            color: a.Z.unsafe_rawColors.BRAND_500.css
+            className: A.newBadge,
+            color: t.Z.unsafe_rawColors.BRAND_500.css
         },
-        s
+        a
     );
 }
-function d(e) {
-    var s;
-    let { guildCount: n, onClose: a, analyticsLocations: l, ...d } = e;
+function u(e) {
+    var a;
+    let { guildCount: s, onClose: t, analyticsLocations: A, ...u } = e;
     let f =
-            ((s = a),
-            function (e, n) {
-                return (0, _.jsx)(
-                    L.Clickable,
+            ((a = t),
+            function (e, s) {
+                return (0, n.jsx)(
+                    _.Clickable,
                     {
-                        className: A.learnMoreLink,
+                        className: M.learnMoreLink,
                         tag: 'span',
                         onClick: () => {
-                            s(), (0, o.z)();
+                            a(), (0, o.z)();
                         },
                         children: e
                     },
-                    n
+                    s
                 );
             }),
-        { analyticsLocations: U } = (0, t.ZP)(l);
-    return (0, _.jsx)(t.Gt, {
+        { analyticsLocations: U } = (0, L.ZP)(A);
+    return (0, n.jsx)(L.Gt, {
         value: U,
-        children: (0, _.jsx)(r.Z, {
-            artURL: D,
-            onClose: a,
+        children: (0, n.jsx)(r.Z, {
+            artURL: l.Z,
+            onClose: t,
             type: c.cd.GUILD_CAP_MODAL_UPSELL,
             title: i.Z.Messages.GUILD_CAP_UPSELL_MODAL_TITLE,
             body:
-                n < M.DZw
+                s < d.DZw
                     ? i.Z.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_BODY.format({
-                          guildCount: n,
+                          guildCount: s,
                           onAndMore: f,
-                          newBadgeHook: u
+                          newBadgeHook: D
                       })
                     : i.Z.Messages.GUILD_CAP_UPSELL_MODAL_AT_LIMIT_BODY.format({
                           onAndMore: f,
-                          newBadgeHook: u
+                          newBadgeHook: D
                       }),
-            context: n < M.DZw ? i.Z.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_CONTEXT.format({ guildCount: n }) : i.Z.Messages.GUILD_CAP_UPSELL_MODAL_AT_LIMIT_CONTEXT,
+            context: s < d.DZw ? i.Z.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_CONTEXT.format({ guildCount: s }) : i.Z.Messages.GUILD_CAP_UPSELL_MODAL_AT_LIMIT_CONTEXT,
             glowUp: i.Z.Messages.GUILD_CAP_UPSELL_MODAL_GLOW_UP.format({ onAndMore: f }),
-            ...d
+            ...u
         })
     });
 }

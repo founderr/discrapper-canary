@@ -57,7 +57,7 @@ function Y() {
         })
     });
 }
-function w() {
+function k() {
     let e = (0, o.e7)([L.Z], () => L.Z.getForApplication(B.CL));
     return (
         a.useEffect(() => {
@@ -85,7 +85,7 @@ function w() {
         })
     );
 }
-function k() {
+function w() {
     return (0, n.jsx)('hr', { className: V.hr });
 }
 s.Z = function () {
@@ -141,12 +141,12 @@ s.Z = function () {
                                   : (0, n.jsx)(j.MM, {}),
                               (0, n.jsx)(p.F, {
                                   setting: F.s6.SUBSCRIPTIONS_CREDITS,
-                                  children: (0, n.jsx)(w, {})
+                                  children: (0, n.jsx)(k, {})
                               }),
                               Z > 0 &&
                                   (0, n.jsxs)(n.Fragment, {
                                       children: [
-                                          (0, n.jsx)(k, {}),
+                                          (0, n.jsx)(w, {}),
                                           (0, n.jsx)(m.Z, {
                                               count: Z,
                                               onClickManageSubscription: () => T.Z.setSection(U.oAB.SUBSCRIPTIONS, G.cP)
@@ -156,7 +156,7 @@ s.Z = function () {
                               b > 0 &&
                                   (0, n.jsxs)(n.Fragment, {
                                       children: [
-                                          (0, n.jsx)(k, {}),
+                                          (0, n.jsx)(w, {}),
                                           (0, n.jsx)(h.Z, {
                                               count: b,
                                               onClickManageSubscription: () => {
@@ -165,7 +165,7 @@ s.Z = function () {
                                           })
                                       ]
                                   }),
-                              (0, n.jsx)(k, {}),
+                              (0, n.jsx)(w, {}),
                               null != e
                                   ? (0, n.jsx)(v.Z, {
                                         subscription: e,

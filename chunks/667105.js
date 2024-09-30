@@ -75,7 +75,7 @@ let N = (e) => {
         let { useReducedMotion: t, className: n } = e,
             [r, s] = (0, l.useSpring)(() => ({})),
             u = a.useRef(!1),
-            c = () => {
+            c = (e) => {
                 (u.current = !0),
                     s({
                         from: { rotate: '0deg' },
@@ -85,7 +85,7 @@ let N = (e) => {
                             mass: 5,
                             friction: 100
                         },
-                        loop: () => u.current,
+                        loop: () => (null != e ? e : u.current),
                         immediate: t
                     });
             },

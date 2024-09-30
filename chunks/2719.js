@@ -218,7 +218,7 @@ function Y(e) {
         })
     );
 }
-function w(e) {
+function k(e) {
     let { text: s, censor: t, revealLabel: i, hideLabel: r } = e,
         [o, l] = a.useState(!1),
         c = o ? s : t(s);
@@ -236,7 +236,7 @@ function w(e) {
         ]
     });
 }
-function k(e) {
+function w(e) {
     let s,
         { className: a, user: i } = e;
     if (i.isClaimed()) {
@@ -258,7 +258,7 @@ function k(e) {
                 buttonText: G.Z.Messages.EDIT,
                 buttonAriaLabel: G.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_EMAIL_A11Y_LABEL,
                 buttonColor: _.Button.Colors.PRIMARY,
-                valueMessage: (0, n.jsx)(w, {
+                valueMessage: (0, n.jsx)(k, {
                     text: e,
                     censor: Z.E,
                     revealLabel: G.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
@@ -320,7 +320,7 @@ function H(e) {
         c = null != o;
     return (
         (s = c
-            ? (0, n.jsx)(w, {
+            ? (0, n.jsx)(k, {
                   text: o,
                   censor: Z.n,
                   revealLabel: G.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
@@ -527,7 +527,7 @@ function z() {
                             }),
                             (0, n.jsx)(g.F, {
                                 setting: v.s6.ACCOUNT_EMAIL,
-                                children: (0, n.jsx)(k, {
+                                children: (0, n.jsx)(w, {
                                     className: F.fieldSpacer,
                                     user: s
                                 })

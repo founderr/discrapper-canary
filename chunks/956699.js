@@ -51,7 +51,7 @@ function V(e, s, t) {
     );
 }
 let Y = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios', 'discord_android'],
-    w = [
+    k = [
         {
             value: 'branch',
             label: 'Branch Name'
@@ -61,7 +61,7 @@ let Y = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios'
             label: 'Build ID'
         }
     ];
-function k(e) {
+function w(e) {
     return 'discord_ios' in e || 'discord_android' in e;
 }
 class H extends a.Component {
@@ -84,7 +84,7 @@ class H extends a.Component {
                                 title: 'Override Type',
                                 className: U.item,
                                 children: (0, n.jsx)(u.SingleSelect, {
-                                    options: w,
+                                    options: k,
                                     onChange: this.handleOverrideTypeChanged,
                                     value: s,
                                     isDisabled: a
@@ -243,7 +243,7 @@ class W extends a.Component {
                 (0, n.jsx)(O.Z.Child, {
                     grow: 0,
                     children: (0, n.jsx)(u.Button, {
-                        disabled: k(null != s ? s : {}),
+                        disabled: w(null != s ? s : {}),
                         onClick: this.handleSaveChanges,
                         submitting: e,
                         color: u.Button.Colors.GREEN,
@@ -268,7 +268,7 @@ class W extends a.Component {
         e = s ? (0, n.jsx)(u.Spinner, { className: F.marginTop20 }) : null != a && 0 === Object.keys(a).length ? this.renderEmpty() : this.renderItems();
         let i = !t && !s && this.getAvailableProjects().length > 0,
             r =
-                k(null != a ? a : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL
+                w(null != a ? a : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL
                     ? (0, n.jsx)(u.Text, {
                           color: 'text-danger',
                           variant: 'text-md/normal',
@@ -449,7 +449,7 @@ class W extends a.Component {
 class K extends a.Component {
     isMobile() {
         var e;
-        return k(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
+        return w(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
     }
     renderSettingsForm() {
         let { ttlSeconds: e, releaseChannel: s, userIdEntry: t, userIdEntryError: a, allowedVersions: i, allowedVersionEntry: r, allowedVersionEntryError: o, allowLoggedOut: l, experiments: c, experimentsError: d } = this.state,

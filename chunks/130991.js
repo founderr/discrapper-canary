@@ -74,8 +74,8 @@ function P(e) {
         ),
         V = null !== (s = null == y ? void 0 : y.deleted) && void 0 !== s && s,
         Y = null != y && (0, R.OL)(y),
-        w = (0, R.Jf)(c, y),
-        k = c.status === f.O0b.PAST_DUE,
+        k = (0, R.Jf)(c, y),
+        w = c.status === f.O0b.PAST_DUE,
         { analyticsLocations: H } = (0, _.ZP)(),
         [W] = (0, I.ED)({
             subscriptionId: c.id,
@@ -123,19 +123,19 @@ function P(e) {
                             app: A,
                             sku: y,
                             storeListing: P,
-                            isCancelled: w,
+                            isCancelled: k,
                             navigateToSwitchPlan: E
                         })
                 })
             ]
         }),
         children: [
-            w &&
+            k &&
                 (0, n.jsx)(v, {
                     type: 'warning',
                     title: Y ? D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_APP_CANCELLED.format({ subscriptionPeriodEnd: K }) : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_USER_CANCELLED.format({ subscriptionPeriodEnd: K })
                 }),
-            k &&
+            w &&
                 (0, n.jsx)(v, {
                     type: 'danger',
                     title: D.Z.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING
@@ -184,7 +184,7 @@ function P(e) {
                         content: Z(null !== (r = c.createdAt) && void 0 !== r ? r : c.currentPeriodStart)
                     }),
                     (0, n.jsx)(b, {
-                        title: w ? D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_END_DATE : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RENEWAL_DATE,
+                        title: k ? D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_END_DATE : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RENEWAL_DATE,
                         content: K
                     })
                 ]
@@ -197,7 +197,7 @@ function P(e) {
                         (0, n.jsx)(N.Z, {
                             subscription: c,
                             currentInvoicePreview: W,
-                            disabled: V || w
+                            disabled: V || k
                         })
                 ]
             }),

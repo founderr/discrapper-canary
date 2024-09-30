@@ -45,8 +45,8 @@ var n = t(735250),
     y = t(981631),
     V = t(468788),
     Y = t(689938),
-    w = t(769533),
-    k = t(113207);
+    k = t(769533),
+    w = t(113207);
 function H(e, s, t) {
     return (
         s in e
@@ -63,26 +63,26 @@ function H(e, s, t) {
 function W(e) {
     let { label: s, enabled: t, disabled: a, onPreview: i, onChange: r, tooltip: o } = e;
     return (0, n.jsx)(_.FormSwitch, {
-        className: w.soundRow,
+        className: k.soundRow,
         value: t,
         onChange: r,
         disabled: a,
         tooltipNote: o,
         children: (0, n.jsxs)('div', {
-            className: w.notificationSound,
+            className: k.notificationSound,
             children: [
                 (0, n.jsx)('div', {
-                    className: w.soundName,
+                    className: k.soundName,
                     children: s
                 }),
                 (0, n.jsx)(_.Clickable, {
-                    className: w.soundIcon,
+                    className: k.soundIcon,
                     onClick: i,
                     'aria-label': Y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_PREVIEW_SOUND,
                     children: (0, n.jsx)(_.VoiceNormalIcon, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: w.icon,
+                        className: k.icon,
                         'aria-hidden': !0
                     })
                 })
@@ -269,19 +269,19 @@ function z() {
               children: [
                   (0, n.jsxs)(_.Heading, {
                       variant: 'heading-lg/semibold',
-                      className: r()(w.titleWithBeta, k.marginBottom20),
+                      className: r()(k.titleWithBeta, w.marginBottom20),
                       children: [Y.Z.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, n.jsx)(N.Z, {})]
                   }),
                   (0, n.jsx)(_.FormText, {
                       type: _.FormTextTypes.DESCRIPTION,
-                      className: k.marginBottom20,
+                      className: w.marginBottom20,
                       children: Y.Z.Messages.GUILD_COMMUNITY_ALERTS_DESCRIPTION
                   }),
                   (0, n.jsxs)(_.FormItem, {
                       title: Y.Z.Messages.GUILD_COMMUNITY_ALERTS_CHOOSE_SERVER,
                       children: [
                           (0, n.jsx)(_.SingleSelect, {
-                              className: null != s ? k.marginBottom20 : k.marginBottom40,
+                              className: null != s ? w.marginBottom20 : w.marginBottom40,
                               value: s,
                               onChange: (e) => {
                                   t(e);
@@ -290,13 +290,13 @@ function z() {
                           }),
                           null != s
                               ? (0, n.jsxs)('div', {
-                                    className: k.marginTop20,
+                                    className: w.marginTop20,
                                     children: [
                                         (0, n.jsxs)(f.F, {
                                             setting: F.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
                                             children: [
                                                 (0, n.jsx)(_.FormSwitch, {
-                                                    className: r()(k.marginBottom20),
+                                                    className: r()(w.marginBottom20),
                                                     note: Y.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_DESCRIPTION,
                                                     value: !e[s].disableRaidAlertNag,
                                                     onChange: () => {
@@ -311,14 +311,14 @@ function z() {
                                                     hideBorder: !0,
                                                     children: Y.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER
                                                 }),
-                                                (0, n.jsx)(_.FormDivider, { className: r()(k.marginTop20, k.marginBottom40) })
+                                                (0, n.jsx)(_.FormDivider, { className: r()(w.marginTop20, w.marginBottom40) })
                                             ]
                                         }),
                                         (0, n.jsxs)(f.F, {
                                             setting: F.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
                                             children: [
                                                 (0, n.jsx)(_.FormSwitch, {
-                                                    className: k.marginBottom20,
+                                                    className: w.marginBottom20,
                                                     note: Y.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_DESCRIPTION,
                                                     value: !e[s].disableRaidAlertPush,
                                                     onChange: () => {
@@ -333,13 +333,13 @@ function z() {
                                                     hideBorder: !0,
                                                     children: Y.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_HEADER
                                                 }),
-                                                (0, n.jsx)(_.FormDivider, { className: r()(k.marginTop20, k.marginBottom40) })
+                                                (0, n.jsx)(_.FormDivider, { className: r()(w.marginTop20, w.marginBottom40) })
                                             ]
                                         })
                                     ]
                                 })
                               : null,
-                          null != s ? null : (0, n.jsx)(_.FormDivider, { className: r()(k.marginTop20, k.marginBottom40) })
+                          null != s ? null : (0, n.jsx)(_.FormDivider, { className: r()(w.marginTop20, w.marginBottom40) })
                       ]
                   })
               ]
@@ -377,7 +377,7 @@ class Q extends a.PureComponent {
                 (0, n.jsx)(f.F, {
                     setting: F.s6.NOTIFICATIONS_ENABLE_DESKTOP,
                     children: (0, n.jsx)(_.FormSwitch, {
-                        className: k.marginBottom20,
+                        className: w.marginBottom20,
                         value: e !== y.qrD.NEVER && !d,
                         onChange: this.handleDesktopChange,
                         note: Y.Z.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
@@ -390,7 +390,7 @@ class Q extends a.PureComponent {
                 (0, n.jsx)(f.F, {
                     setting: F.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, n.jsx)(_.FormSwitch, {
-                        className: u ? k.marginBottom20 : k.marginBottom40,
+                        className: u ? w.marginBottom20 : w.marginBottom40,
                         value: !t,
                         note: Y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
                         onChange: this.handleToggleShowUnreadBadge,
@@ -400,7 +400,7 @@ class Q extends a.PureComponent {
                 (0, n.jsx)(f.F, {
                     setting: F.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
                     children: (0, n.jsx)(_.FormSwitch, {
-                        className: k.marginBottom40,
+                        className: w.marginBottom40,
                         value: a,
                         note: Y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_BODY,
                         onChange: this.handleToggleShowFlash,
@@ -421,10 +421,10 @@ class Q extends a.PureComponent {
                             }),
                             (0, n.jsx)(_.FormText, {
                                 type: _.FormTextTypes.DESCRIPTION,
-                                className: k.marginTop8,
+                                className: w.marginTop8,
                                 children: Y.Z.Messages.FORM_DESCRIPTION_PUSH_AFK_TIMEOUT
                             }),
-                            (0, n.jsx)(_.FormDivider, { className: r()(k.marginTop40, k.marginBottom40) })
+                            (0, n.jsx)(_.FormDivider, { className: r()(w.marginTop40, w.marginBottom40) })
                         ]
                     })
                 }),
@@ -473,7 +473,7 @@ class Q extends a.PureComponent {
                             children: [
                                 (0, n.jsx)(_.FormText, {
                                     type: _.FormTextTypes.DESCRIPTION,
-                                    className: k.marginBottom8,
+                                    className: w.marginBottom8,
                                     children: Y.Z.Messages.FORM_DESCRIPTION_TTS
                                 }),
                                 (0, n.jsx)(_.RadioGroup, {
@@ -483,7 +483,7 @@ class Q extends a.PureComponent {
                                 })
                             ]
                         }),
-                        (0, n.jsx)(_.FormDivider, { className: r()(k.marginTop40, k.marginBottom40) })
+                        (0, n.jsx)(_.FormDivider, { className: r()(w.marginTop40, w.marginBottom40) })
                     ]
                 });
             });
@@ -509,7 +509,7 @@ function q() {
         ? (0, n.jsx)(f.F, {
               setting: F.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
               children: (0, n.jsx)(_.FormSwitch, {
-                  className: k.marginBottom20,
+                  className: w.marginBottom20,
                   value: s,
                   onChange: (e) => {
                       T.Z.setAccountFlag(V.c.MENTION_ON_ALL_MESSAGES, e);
@@ -532,7 +532,7 @@ function J() {
                       ? (0, n.jsx)(f.F, {
                             setting: F.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                             children: (0, n.jsx)(_.FormSwitch, {
-                                className: k.marginBottom40,
+                                className: w.marginBottom40,
                                 style: { marginTop: -20 },
                                 value: t,
                                 disabled: i || !t,
@@ -545,7 +545,7 @@ function J() {
                         ? (0, n.jsx)(f.F, {
                               setting: F.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                               children: (0, n.jsx)(_.FormSwitch, {
-                                  className: k.marginBottom40,
+                                  className: w.marginBottom40,
                                   value: t,
                                   disabled: i || t,
                                   note: 'Turns on the new notification system',
@@ -595,7 +595,7 @@ function J() {
                                   ]
                               })
                           }),
-                          (0, n.jsx)(_.FormDivider, { className: r()(k.marginTop40, k.marginBottom40) })
+                          (0, n.jsx)(_.FormDivider, { className: r()(w.marginTop40, w.marginBottom40) })
                       ]
                   })
               ]
@@ -663,7 +663,7 @@ function et() {
                       children: [
                           (0, n.jsx)(_.FormText, {
                               type: _.FormTextTypes.DESCRIPTION,
-                              className: k.marginBottom8,
+                              className: w.marginBottom8,
                               children: Y.Z.Messages.FORM_DESCRIPTION_REACTION_NOTIFICATIONS
                           }),
                           (0, n.jsx)(_.RadioGroup, {
@@ -675,7 +675,7 @@ function et() {
                           })
                       ]
                   }),
-                  (0, n.jsx)(_.FormDivider, { className: r()(k.marginTop40, k.marginBottom40) })
+                  (0, n.jsx)(_.FormDivider, { className: r()(w.marginTop40, w.marginBottom40) })
               ]
           })
         : null;

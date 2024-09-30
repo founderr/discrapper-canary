@@ -161,8 +161,8 @@ s.Z = function (e) {
         { analyticsLocations: V } = (0, u.ZP)(_.Z.SUBSCRIPTION_HEADER),
         { enabled: Y } = (0, R.ZP)({ location: 'subscription_header' });
     (!L.pj.has(a.planId) || !P.JwP.ALL_PAUSEABLE.has(a.status)) && (Y = !1);
-    let w = (0, x.Ng)(),
-        k = null == w ? void 0 : null === (s = w.discount) || void 0 === s ? void 0 : s.amount,
+    let k = (0, x.Ng)(),
+        w = null == k ? void 0 : null === (s = k.discount) || void 0 === s ? void 0 : s.amount,
         H = (0, p.t7)(),
         W = (0, p.lr)(),
         K = (0, l.e7)([N.ZP], () => N.ZP.inReverseTrial()),
@@ -436,6 +436,6 @@ s.Z = function (e) {
         })(),
         statusClasses: ei,
         shouldUseDiscountMarketing: H,
-        discountAmount: k
+        discountAmount: w
     });
 };

@@ -44,8 +44,8 @@ var a = t(990547),
     y = t(998502),
     V = t(392735),
     Y = t(695346),
-    w = t(604227),
-    k = t(38915),
+    k = t(604227),
+    w = t(38915),
     H = t(498639),
     W = t(748717),
     K = t(419636),
@@ -93,12 +93,12 @@ var a = t(990547),
 let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eB = eO.Z,
     eU = (e) => {
-        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eU, impressionSource: eG, numOfPendingFamilyRequests: eF, isOverlaySupported: ey, isClipsBetaTagShowing: eV = !1, shouldMergeGameSettings: eY, isUserSettingsSearchEnabled: ew, isKeywordFilteringEnabled: ek, isStaff: eH, isInappropriateConversationWarningEnabled: eW, paymentsBlocked: eK, isEligibleForQuests: ez, showGiftNitro: eQ, isStricterMessageRequestsEnabled: eX, hasLibraryApplication: eq, hasTOTPEnabled: eJ, developerMode: e$, isSafetySettingsV2Enabled: e0, isAdultUser: e1, hasSecureFramesVerifiedUserIds: e6 } = e;
+        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eU, impressionSource: eG, numOfPendingFamilyRequests: eF, isOverlaySupported: ey, isClipsBetaTagShowing: eV = !1, shouldMergeGameSettings: eY, isUserSettingsSearchEnabled: ek, isKeywordFilteringEnabled: ew, isStaff: eH, isInappropriateConversationWarningEnabled: eW, paymentsBlocked: eK, isEligibleForQuests: ez, showGiftNitro: eQ, isStricterMessageRequestsEnabled: eX, hasLibraryApplication: eq, hasTOTPEnabled: eJ, developerMode: e$, isSafetySettingsV2Enabled: e0, isAdultUser: e1, hasSecureFramesVerifiedUserIds: e6 } = e;
         return Object.freeze({
             [eD.s6.SEARCH_NO_RESULTS]: {
                 section: u.ID.CUSTOM,
                 element: eA.Z,
-                predicate: () => ew
+                predicate: () => ek
             },
             [eD.s6.ACCOUNT]: {
                 section: eL.oAB.ACCOUNT,
@@ -499,13 +499,13 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eL.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eZ.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE, eZ.Z.Messages.USER_KEYWORD_FILTERS_SEARCH_TERM_KEYWORD],
                 parent: eD.s6.PRIVACY_USER_SETTINGS,
-                predicate: () => ek
+                predicate: () => ew
             },
             [eD.s6.PRIVACY_KEYWORD_FILTER_V2]: {
                 section: eL.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eZ.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE, eZ.Z.Messages.USER_KEYWORD_FILTERS_SEARCH_TERM_KEYWORD],
                 parent: eD.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => ek
+                predicate: () => ew
             },
             [eD.s6.PRIVACY_TERMS_POLICY]: {
                 section: eL.oAB.PRIVACY_AND_SAFETY,
@@ -1604,7 +1604,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eL.oAB.HOTSPOT_OPTIONS,
                 searchableTitles: ['Hotspot Options'],
                 label: 'Hotspot Options',
-                element: k.Z,
+                element: w.Z,
                 predicate: () => b.Z.isDeveloper
             },
             [eD.s6.DISMISSIBLE_CONTENT_OPTIONS]: {
@@ -1701,7 +1701,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [eD.s6.CLIENT_DEBUG_INFO]: {
                 section: u.ID.CUSTOM,
-                element: w.Z
+                element: k.Z
             }
         });
     };

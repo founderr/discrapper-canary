@@ -40,11 +40,11 @@ function D(e) {
         G = a.useMemo(() => Object.values(v).filter((e) => !e.invalid), [v]),
         [F, y] = a.useState(!1),
         [V, Y] = a.useState(s.currency),
-        w = async (e, t) => {
+        k = async (e, t) => {
             if (null == s) throw Error('missing subscription and paymentSource');
             null == e ? await u.fG(s, t, U, D) : await u.tq(s, e, t, U, D), y(!1), Y(t);
         },
-        k = async (e, t, n) => {
+        w = async (e, t, n) => {
             y(!0);
             let a = await (0, p.hz)({
                 subscriptionId: s.id,
@@ -73,11 +73,11 @@ function D(e) {
             return n.length > 0 ? n[0] : R.pKx.USD;
         },
         W = (e) => {
-            null != e && k(e, H(e), w);
+            null != e && w(e, H(e), k);
         },
         K = (e) => {
             (0, h.i1)(e.id, (0, O.yb)(s)).then(() => {
-                k(e, H(e), w);
+                w(e, H(e), k);
             }),
                 'function' == typeof t && t(e.id);
         },
@@ -160,7 +160,7 @@ function D(e) {
                                       selectedCurrency: V,
                                       currencies: t,
                                       onChange: (e) => {
-                                          k(void 0, e, w);
+                                          w(void 0, e, k);
                                       }
                                   })
                               ]

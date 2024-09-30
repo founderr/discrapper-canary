@@ -45,21 +45,21 @@ function P(e, n, r) {
     );
 }
 function p(e) {
-    let { user: n, uploadType: s, imageSrc: t, onClose: A, analyticsSource: P, analyticsLocation: p, onSecondaryClick: v, ...N } = e,
-        m = (0, o.ZP)(n.id),
+    let { user: n, uploadType: s, imageSrc: t, onClose: A, analyticsSource: P, analyticsLocation: p, onSecondaryClick: v, ...m } = e,
+        N = (0, o.ZP)(n.id),
         { primaryColor: C, secondaryColor: L } = (0, l.Z)({
             user: n,
-            displayProfile: m,
+            displayProfile: N,
             pendingAvatar: s === E.pC.AVATAR ? t : void 0,
             isPreview: !0
         }),
         T = s === E.pC.AVATAR || s === E.pC.BANNER,
-        R = null != t;
+        f = null != t;
     return T
         ? (0, i.jsx)(c.Z, {
-              artURL: R ? void 0 : a(76096),
-              modalClassName: R ? I.modal : void 0,
-              modalContentClassName: R ? I.modalContent : void 0,
+              artURL: f ? void 0 : a(116909),
+              modalClassName: f ? I.modal : void 0,
+              modalContentClassName: f ? I.modalContent : void 0,
               type: d.cd.CUSTOM_PROFILE_UPSELL,
               title: s === E.pC.AVATAR ? _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_TITLE : _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_TITLE,
               body: s === E.pC.AVATAR ? _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_DESCRIPTION : _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_DESCRIPTION,
@@ -74,7 +74,7 @@ function p(e) {
               analyticsLocation: p,
               hideBackButton: !0,
               showEnhancedUpsell: !0,
-              LeadingComponent: R
+              LeadingComponent: f
                   ? (0, i.jsx)('div', {
                         className: I.previewContainerParent,
                         children: (0, i.jsx)(r.Z, {
@@ -88,7 +88,7 @@ function p(e) {
                         })
                     })
                   : void 0,
-              ...N
+              ...m
           })
         : null;
 }

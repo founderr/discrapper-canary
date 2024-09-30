@@ -325,7 +325,7 @@ function W(e) {
                                       defaultAnimationState: M.SR.LOOP,
                                       giftStyle: ev,
                                       shouldAnimate: !0,
-                                      className: H.__invalid_giftMainAnimation
+                                      className: H.giftMainAnimation
                                   }),
                                   (0, i.jsx)(B.s, { giftRecipient: eP })
                               ]

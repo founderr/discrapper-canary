@@ -46,8 +46,8 @@ function b() {
             pendingBanner: y,
             pendingBio: V,
             pendingPronouns: Y,
-            pendingAccentColor: w,
-            pendingThemeColors: k,
+            pendingAccentColor: k,
+            pendingThemeColors: w,
             errors: H
         } = (0, r.cj)([M.Z], () => {
             let e = M.Z.getAllPending(),
@@ -140,7 +140,7 @@ function b() {
                           (0, n.jsx)(h.Z, {
                               user: B,
                               pendingAvatar: G,
-                              pendingColors: k,
+                              pendingColors: w,
                               onThemeColorsChange: p.z5,
                               forcedDivider: !0
                           })
@@ -151,7 +151,7 @@ function b() {
                       {
                           user: B,
                           savedUserColor: null == U ? void 0 : U.accentColor,
-                          pendingColor: w,
+                          pendingColor: k,
                           setPendingAccentColor: p.CM
                       },
                       'color'

@@ -39,7 +39,7 @@ var n = t(735250),
     y = t(689938),
     V = t(979831),
     Y = t(113207);
-let w = (e) => {
+let k = (e) => {
     var s, t;
     let a,
         { integration: i } = e,
@@ -110,7 +110,7 @@ let w = (e) => {
         })
     );
 };
-function k(e) {
+function w(e) {
     var s, t, i;
     let r,
         o,
@@ -121,7 +121,7 @@ function k(e) {
         [f, D] = a.useState(T.metadataVisibility),
         [L, b] = a.useState(T.showActivity),
         [F, Y] = a.useState(null),
-        [k, H] = a.useState(null),
+        [w, H] = a.useState(null),
         [W, K] = a.useState(!1),
         [z, Q] = a.useState([]),
         X = (0, C.rR)(T.type),
@@ -130,7 +130,7 @@ function k(e) {
         p(T.friendSync), M(T.visibility), D(T.metadataVisibility), b(T.showActivity);
     }, [T]),
         a.useEffect(() => {
-            if (!1 !== T.verified) null != F && (M(F), E.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (D(k), E.Z.setMetadataVisibility(T.type, T.id, k), H(null));
+            if (!1 !== T.verified) null != F && (M(F), E.Z.setVisibility(T.type, T.id, F), Y(null)), null != w && (D(w), E.Z.setMetadataVisibility(T.type, T.id, w), H(null));
         }, [T]);
     function J() {
         (0, g.Z)({
@@ -460,7 +460,7 @@ function k(e) {
                                     children: y.Z.Messages.SUB_ENABLED_SERVERS
                                 })
                             }),
-                            (0, n.jsx)('div', { children: T.integrations.map((e) => (0, n.jsx)(w, { integration: e }, e.id)) })
+                            (0, n.jsx)('div', { children: T.integrations.map((e) => (0, n.jsx)(k, { integration: e }, e.id)) })
                         ]
                     })
                   : void 0
@@ -585,7 +585,7 @@ function z(e) {
                     .filter((e) => A.Z.isSupported(e.type))
                     .map((e, s) =>
                         (0, n.jsx)(
-                            k,
+                            w,
                             {
                                 theme: r,
                                 account: e,

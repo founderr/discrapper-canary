@@ -377,7 +377,7 @@ function Y(e) {
         ]
     });
 }
-let w = () =>
+let k = () =>
     t
         .e('20467')
         .then(t.t.bind(t, 205663, 19))
@@ -385,7 +385,7 @@ let w = () =>
             let { default: s } = e;
             return s;
         });
-function k(e) {
+function w(e) {
     let { onChangePage: s, setShowEnableAnimation: t } = e,
         n = (0, d.cj)([g.Z], () => g.Z.getState()),
         [a, i] = l.useState({
@@ -463,7 +463,7 @@ let H = (e, s, t) => {
         };
         switch (e) {
             case 0:
-                return (0, o.jsx)(k, {
+                return (0, o.jsx)(w, {
                     onChangePage: n(1),
                     setShowEnableAnimation: t
                 });
@@ -502,7 +502,7 @@ function K() {
                     className: c ? M.enableAnimationOverlayVisible : M.enableAnimationOverlayHidden,
                     children: (0, o.jsx)(u.LottieAnimation, {
                         className: M.enableAnimation,
-                        importData: w,
+                        importData: k,
                         shouldAnimate: c,
                         autoplay: !1,
                         resetOnPlay: !0,

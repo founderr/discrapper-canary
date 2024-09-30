@@ -145,7 +145,7 @@ s.Z = (e) => {
                 v(!1);
             }
         },
-        { isCancelled: G, isDeleted: F, isPastDue: y, subscriptionPlanPrice: V, subscribedSinceDate: Y, currentPeriodEndDate: w, currentPeriodEndLabel: k } = m,
+        { isCancelled: G, isDeleted: F, isPastDue: y, subscriptionPlanPrice: V, subscribedSinceDate: Y, currentPeriodEndDate: k, currentPeriodEndLabel: w } = m,
         H = (0, p.KW)(i.skuFlags),
         W = (0, p.KK)(i.skuFlags),
         K = null == g || ((!W || null == d) && !H),
@@ -257,8 +257,8 @@ s.Z = (e) => {
                               className: D.subscriptionInfoCards,
                               children: [
                                   (0, n.jsx)(L, {
-                                      label: k,
-                                      value: f.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_CURRENT_PERIOD_END_DATE.format({ timestamp: w.getTime() })
+                                      label: w,
+                                      value: f.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_CURRENT_PERIOD_END_DATE.format({ timestamp: k.getTime() })
                                   }),
                                   (0, n.jsx)(L, {
                                       label: f.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_PRICE,

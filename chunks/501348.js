@@ -59,8 +59,8 @@ let Y = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    w = (0, C.hQ)(),
     k = (0, C.hQ)(),
+    w = (0, C.hQ)(),
     H = (0, C.hQ)(),
     W = '1337',
     K = (e) => {
@@ -137,7 +137,7 @@ class Q extends a.Component {
                   className: y.marginTop20,
                   children: [
                       (0, n.jsx)(d.FormTitle, {
-                          id: w,
+                          id: k,
                           tag: d.FormTitleTags.H5,
                           className: y.marginBottom8,
                           children: G.Z.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
@@ -150,7 +150,7 @@ class Q extends a.Component {
                           stickToMarkers: !0,
                           onValueChange: this.handleZoomChange,
                           onValueRender: this.handleSliderRender,
-                          'aria-labelledby': w
+                          'aria-labelledby': k
                       }),
                       (0, n.jsx)(d.FormText, {
                           type: d.FormText.Types.DESCRIPTION,
@@ -165,7 +165,7 @@ class Q extends a.Component {
             className: y.marginTop20,
             children: [
                 (0, n.jsx)(d.FormTitle, {
-                    id: k,
+                    id: w,
                     tag: d.FormTitleTags.H5,
                     className: y.marginBottom8,
                     children: G.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
@@ -182,7 +182,7 @@ class Q extends a.Component {
                         onValueRender: this.handleSliderRenderPX,
                         onMarkerRender: this.handleSliderRenderPX,
                         getAriaValueText: this.handleSliderValueText,
-                        'aria-labelledby': k
+                        'aria-labelledby': w
                     })
                 })
             ]

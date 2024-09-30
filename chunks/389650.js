@@ -63,8 +63,8 @@ let Y = l()((0, A.Rv)())
         .filter((e) => e.description !== B.Z.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG)
         .groupBy((e) => e.group)
         .value(),
-    w = _.ZP.connectStores([P.Z], () => ({ theme: P.Z.theme }))(E.EmptyState);
-class k extends a.PureComponent {
+    k = _.ZP.connectStores([P.Z], () => ({ theme: P.Z.theme }))(E.EmptyState);
+class w extends a.PureComponent {
     renderMessage() {
         let { keybind: e } = this.props,
             s = L.BB(e.shortcut);
@@ -307,7 +307,7 @@ class H extends a.PureComponent {
                 {
                     className: U.row,
                     children: (0, n.jsx)(
-                        k,
+                        w,
                         {
                             keybind: e,
                             keybindDescriptions: this.keybindDescriptions,
@@ -322,7 +322,7 @@ class H extends a.PureComponent {
     }
     renderEmpty(e) {
         if (0 === e.length)
-            return (0, n.jsx)(w, {
+            return (0, n.jsx)(k, {
                 className: F.marginTop60,
                 children: (0, n.jsx)(E.EmptyStateImage, {
                     darkSrc: t(572279),

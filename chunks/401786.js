@@ -159,7 +159,7 @@ function j(e) {
             return D.Z1.has(s);
         }),
         V = F || y ? G.total - B.total : -B.total,
-        { interval: Y, intervalCount: w } = L;
+        { interval: Y, intervalCount: k } = L;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(f.Z, { onClose: u }),
@@ -173,7 +173,7 @@ function j(e) {
                             (0, i.jsx)(C.q9, { children: P.Z.Messages.PREMIUM_SUBSCRIPTION_UPDATES }),
                             (0, i.jsx)(C.R$, {
                                 label: P.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format({ subscriptionCount: 1 }),
-                                value: (0, M.og)((0, M.T4)(V, a.currency), Y, w),
+                                value: (0, M.og)((0, M.T4)(V, a.currency), Y, k),
                                 className: b.invoiceCancelRow
                             }),
                             null != U && U.length > 0

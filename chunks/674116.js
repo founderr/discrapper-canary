@@ -67,7 +67,7 @@ function F() {
             experimentalAudioSubsystemSupported: y,
             automaticAudioSubsystemSupported: V,
             sidechainEnabled: Y,
-            sidechainStrength: w
+            sidechainStrength: k
         } = (0, o.cj)([T.Z], () => ({
             inputMode: T.Z.getMode(),
             qosEnabled: T.Z.getQoS(),
@@ -82,14 +82,14 @@ function F() {
             sidechainEnabled: T.Z.getSidechainCompression(),
             sidechainStrength: T.Z.getSidechainCompressionStrength()
         })),
-        k = (0, o.e7)([S.Z], () => S.Z.getSubsection()),
+        w = (0, o.e7)([S.Z], () => S.Z.getSubsection()),
         H = a.createRef();
     a.useEffect(() => {
-        if (k === L.GA) {
+        if (w === L.GA) {
             var e;
             null == H || null === (e = H.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection();
         }
-    }, [H, k]);
+    }, [H, w]);
     let W = u.Z.getCurrentConfig({ location: 'UserSettingsVoiceProcessing' }).sidechainAvailable && !(0, N.isWeb)();
     return (0, n.jsxs)(l.FormSection, {
         tag: l.FormTitleTags.H1,
@@ -222,7 +222,7 @@ function F() {
                                             children: v.Z.Messages.SIDECHAIN_COMPRESSION_STRENGTH
                                         }),
                                         (0, n.jsx)(l.Slider, {
-                                            initialValue: w,
+                                            initialValue: k,
                                             minValue: 1,
                                             onValueChange: (e) => c.Z.setSidechainCompressionStrength(e)
                                         })

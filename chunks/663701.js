@@ -61,7 +61,7 @@ let z = (e) => {
             children: [
                 (0, i.jsx)(k.Qj, {
                     onClick: () => {
-                        u && (m.Z.setSection(V.pJs.ALL), (0, v.G)());
+                        u && (m.Z.setSection(V.pJs.ALL), (0, v.Gk)());
                     },
                     interactiveClassName: u ? W.friendsBadge : void 0,
                     selected: t,

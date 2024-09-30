@@ -67,7 +67,7 @@ s.Z = function () {
         [G, F] = a.useState(L.length > 0 ? L[0].value : null),
         { analyticsLocations: y } = (0, u.ZP)(_.Z.PAYMENT_FLOW_TEST_PAGE),
         [V, Y] = a.useState(''),
-        [w, k] = a.useState(R.lds),
+        [k, w] = a.useState(R.lds),
         [H, W] = a.useState(''),
         [K, z] = a.useState(R.lds),
         [Q, X] = a.useState(R.lds);
@@ -297,14 +297,14 @@ s.Z = function () {
                         }),
                         (0, n.jsx)(o.TextInput, {
                             placeholder: 'Sku Id',
-                            value: w,
-                            onChange: (e) => k(e)
+                            value: k,
+                            onChange: (e) => w(e)
                         }),
                         (0, n.jsx)(o.Button, {
                             onClick: () =>
                                 (0, d.S)({
                                     applicationId: V,
-                                    skuId: w,
+                                    skuId: k,
                                     openPremiumPaymentModal: () => !0,
                                     analyticsLocations: [],
                                     analyticsLocationObject: { page: R.ZY5.IN_APP },

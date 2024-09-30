@@ -129,7 +129,7 @@ s.Z = (e) => {
     let Y = () => {
             null != l && ((0, O.uL)(L.Z5c.CHANNEL(l.id, P.oC.ROLE_SUBSCRIPTIONS)), (0, _.xf)(), u.Z.show(L.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => E.Z.open(L.oAB.SUBSCRIPTIONS, b.cP)));
         },
-        w = () => {
+        k = () => {
             null != l &&
                 (0, f.h)({
                     guildId: l.id,
@@ -138,7 +138,7 @@ s.Z = (e) => {
                     subscription: s
                 });
         },
-        k = async () => {
+        w = async () => {
             try {
                 p(!0), await d.pl(s, F), (0, D.h)();
             } finally {
@@ -278,9 +278,9 @@ s.Z = (e) => {
                                   isCancelled: H,
                                   isResubscribing: h,
                                   shouldHideRoleSubscriptionEntryPoints: y,
-                                  onCancelSubscriptionClick: w,
+                                  onCancelSubscriptionClick: k,
                                   onChangePlanClick: Y,
-                                  onResubscribeClick: k
+                                  onResubscribeClick: w
                               })
                       ]
                   })

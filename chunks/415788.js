@@ -9,49 +9,49 @@ var E = t(735250);
 t(470079);
 var a = t(120356),
     _ = t.n(a),
-    r = t(704215),
-    n = t(100527),
+    n = t(704215),
+    r = t(100527),
     L = t(906732),
-    R = t(243778),
-    o = t(790527),
+    o = t(243778),
+    R = t(790527),
     i = t(474936),
     u = t(981631),
-    S = t(921944),
-    b = t(689938),
-    c = t(114831);
+    c = t(921944),
+    S = t(689938),
+    b = t(114831);
 function A(e) {
     let s,
         a,
         A,
-        { upsellType: T, onClose: U, transitionState: d } = e,
-        I = T === i.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL,
-        [C, O] = (0, R.US)([r.z.REVERSE_TRIAL_ENDED_UPSELL]);
+        { upsellType: d, onClose: T, transitionState: U } = e,
+        I = d === i.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL,
+        [p, C] = (0, o.US)([n.z.REVERSE_TRIAL_ENDED_UPSELL]);
     return (
-        (0, L.ZP)(n.Z.REVERSE_TRIAL_UPSELL_MODAL),
-        I ? ((s = b.Z.Messages.REVERSE_TRIAL_FOLLOW_UP_TRIAL_UPSELL_HEADER), (a = b.Z.Messages.REVERSE_TRIAL_FOLLOW_UP_TRIAL_UPSELL_SUBHEADER), (A = b.Z.Messages.BOGO_CLAIM_OFFER)) : ((s = b.Z.Messages.REVERSE_TRIAL_ENDED_UPSELL_HEADER), (a = b.Z.Messages.REVERSE_TRIAL_ENDED_UPSELL_SUBHEADER), (A = b.Z.Messages.PREMIUM_SETTINGS_GET)),
-        (0, E.jsx)(o.Z, {
-            artURL: t(773585),
-            artContainerClassName: _()(c.artContainer, { [c.grayArt]: !I }),
+        (0, L.ZP)(r.Z.REVERSE_TRIAL_UPSELL_MODAL),
+        I ? ((s = S.Z.Messages.REVERSE_TRIAL_FOLLOW_UP_TRIAL_UPSELL_HEADER), (a = S.Z.Messages.REVERSE_TRIAL_FOLLOW_UP_TRIAL_UPSELL_SUBHEADER), (A = S.Z.Messages.BOGO_CLAIM_OFFER)) : ((s = S.Z.Messages.REVERSE_TRIAL_ENDED_UPSELL_HEADER), (a = S.Z.Messages.REVERSE_TRIAL_ENDED_UPSELL_SUBHEADER), (A = S.Z.Messages.PREMIUM_SETTINGS_GET)),
+        (0, E.jsx)(R.Z, {
+            artURL: t(746458),
+            artContainerClassName: _()(b.artContainer, { [b.grayArt]: !I }),
             enableArtBoxShadow: !1,
-            type: T,
+            type: d,
             title: s,
             body: a,
-            bodyClassName: c.subHeader,
+            bodyClassName: b.subHeader,
             glowUp: a,
             onSubscribeClick: () => {
-                O(S.L.TAKE_ACTION);
+                C(c.L.TAKE_ACTION);
             },
-            backButtonText: b.Z.Messages.CLOSE,
+            backButtonText: S.Z.Messages.CLOSE,
             subscribeButtonText: A,
-            subscribeButtonClassname: c.subscribeButton,
+            subscribeButtonClassname: b.subscribeButton,
             useSubscribeButtonGradient: !0,
             hidePremiumOfferUpsell: !0,
             analyticsLocation: {
                 section: u.jXE.REVERSE_TRIAL_UPSELL_MODAL,
                 object: u.qAy.BUTTON_CTA
             },
-            transitionState: d,
-            onClose: () => (O(S.L.USER_DISMISS), U())
+            transitionState: U,
+            onClose: () => (C(c.L.USER_DISMISS), T())
         })
     );
 }

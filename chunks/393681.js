@@ -39,7 +39,7 @@ var n = t(735250),
     y = t(689938),
     V = t(898005),
     Y = t(113207);
-class w extends a.PureComponent {
+class k extends a.PureComponent {
     componentDidMount() {
         let { currentUser: e } = this.props;
         (0, p.Z)(e.id, e.getAvatarURL(void 0, 80));
@@ -331,7 +331,7 @@ s.Z = () => {
         i = (0, g.b)(),
         r = (0, m.CC)(),
         o = (0, c.e7)([L.default], () => L.default.locale);
-    return (0, n.jsx)(w, {
+    return (0, n.jsx)(k, {
         theme: a,
         currentUser: e,
         backupCodes: s,

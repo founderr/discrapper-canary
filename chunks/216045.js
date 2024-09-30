@@ -73,8 +73,8 @@ function G() {
                 disable: o
             }
         ),
-        [Y, w] = r.useState(0),
-        [k, H] = r.useState(!1),
+        [Y, k] = r.useState(0),
+        [w, H] = r.useState(!1),
         W = r.useMemo(
             () =>
                 y
@@ -109,7 +109,7 @@ function G() {
                           }),
                           options: W,
                           value: Y,
-                          onChange: (e) => w(e.value),
+                          onChange: (e) => k(e.value),
                           look: 'pill'
                       }),
                   K &&
@@ -136,7 +136,7 @@ function G() {
                   V &&
                       (0, i.jsx)(p.p, {
                           className: U.floatingNitroUpsell,
-                          showUpsell: V && !k,
+                          showUpsell: V && !w,
                           text: B.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_UPSELL.format({ onClick: R.openPremiumTryItOutProfileUpsell }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(E.ShinyButton, {
