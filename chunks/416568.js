@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(100527),
     E = n(906732),
     N = n(358221),
-    x = n(963202),
-    S = n(353093),
+    S = n(963202),
+    x = n(353093),
     v = n(706590),
     Z = n(940777),
     T = n(831565),
@@ -205,18 +205,18 @@ function eo(e) {
         eu = l.useRef(null),
         ed = l.useRef(null),
         [eh, ep] = l.useState(!1),
-        { clanDiscoveryEnabled: ef } = (0, x.nk)('guilds_bar'),
-        { guilds: e_ } = (0, x.C3)({
+        { clanDiscoveryEnabled: ef } = (0, S.nk)('guilds_bar'),
+        { guilds: e_ } = (0, S.C3)({
             location: 'guilds_bar',
             includeConverted: !0
         }),
         em = (0, T.v)({ location: 'GuildsBar' }),
         eg = ef || e_.length > 0 || em,
-        eC = l.useMemo(() => e_.filter((e) => !(0, S.EJ)(e)), [e_]).length > 0,
+        eC = l.useMemo(() => e_.filter((e) => !(0, x.EJ)(e)), [e_]).length > 0,
         eI = l.useMemo(() => (eC ? F.OO : ef ? F.KF : void 0), [ef, eC]),
         eE = !eg,
-        { ref: eN, ...ex } = (0, d.OP)(),
-        eS = (0, m.useFocusJumpSection)(),
+        { ref: eN, ...eS } = (0, d.OP)(),
+        ex = (0, m.useFocusJumpSection)(),
         [ev, eZ] = l.useState(!1),
         eT = l.useMemo(
             () =>
@@ -328,8 +328,8 @@ function eo(e) {
                     'aria-label': ee.Z.Messages.GUILDS_BAR_A11Y_LABEL,
                     children: (0, i.jsxs)('ul', {
                         ref: eN,
-                        ...ex,
                         ...eS,
+                        ...ex,
                         role: 'tree',
                         className: et.tree,
                         children: [

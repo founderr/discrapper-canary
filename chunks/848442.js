@@ -23,8 +23,8 @@ var l = n(120356),
     I = n(984933),
     E = n(430824),
     N = n(626135),
-    x = n(434479),
-    S = n(981631),
+    S = n(434479),
+    x = n(981631),
     v = n(176505),
     Z = n(629481),
     T = n(689938),
@@ -33,10 +33,10 @@ function A(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
         _ = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
-        v = (null == _ ? void 0 : _.hasFeature(S.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
+        v = (null == _ ? void 0 : _.hasFeature(x.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         A = 'false' === o.K.get(Z.tM, 'false'),
         M = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
-    return (0, i.jsx)(x.m, {
+    return (0, i.jsx)(S.m, {
         id: 'shop-'.concat(t),
         className: r()(b.previewChannelRow, {
             [b.selected]: n,
@@ -73,14 +73,14 @@ function A(e) {
                             if (
                                 (e.stopPropagation(),
                                 (0, g.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW),
-                                N.default.track(S.rMx.GUILD_SHOP_PREVIEW_CLICK, {
+                                N.default.track(x.rMx.GUILD_SHOP_PREVIEW_CLICK, {
                                     ...(0, h.hH)(t),
                                     action_taken: Z.mz.DISMISS_CHANNEL_ROW
                                 }),
                                 !u || !v)
                             ) {
                                 var n;
-                                (0, C.dL)(S.Z5c.CHANNEL(t, null === (n = I.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
+                                (0, C.dL)(x.Z5c.CHANNEL(t, null === (n = I.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
                             }
                         },
                         'aria-label': T.Z.Messages.CLOSE,
@@ -97,7 +97,7 @@ function M(e) {
     let { guild: t, selected: l } = e,
         r = (0, _.g)(t, 'guild_shop_channel_row'),
         a = () => {
-            o.K.set(Z.tM, 'true'), (0, C.uL)(S.Z5c.CHANNEL(t.id, v.oC.GUILD_SHOP));
+            o.K.set(Z.tM, 'true'), (0, C.uL)(x.Z5c.CHANNEL(t.id, v.oC.GUILD_SHOP));
         };
     return r
         ? (0, i.jsx)(A, {
@@ -105,7 +105,7 @@ function M(e) {
               selected: l,
               handleClick: a
           })
-        : (0, i.jsx)(x.m, {
+        : (0, i.jsx)(S.m, {
               id: 'shop-'.concat(t.id),
               renderIcon: (e) =>
                   (0, i.jsx)(m.Z, {

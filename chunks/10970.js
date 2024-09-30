@@ -90,23 +90,23 @@ function u(e) {
     });
 }
 function E(e) {
-    let { bundleSkuId: s, storeListing: t } = e,
-        { openModal: i } = (0, l.Z)({
-            groupListingId: s,
+    let { storeListing: s } = e,
+        { openModal: t } = (0, l.Z)({
             showBenefitsFirst: !1,
             analyticsLocation: c.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
-            skuId: t.skuId
+            skuId: s.skuId,
+            guildId: null
         });
     return (0, n.jsx)(
         r.Z,
         {
-            storeListing: t,
+            storeListing: s,
             cta: (0, n.jsx)(a.Button, {
                 size: a.Button.Sizes.SMALL,
-                onClick: i,
+                onClick: t,
                 children: d.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CHOOSE_PLAN
             })
         },
-        t.id
+        s.id
     );
 }

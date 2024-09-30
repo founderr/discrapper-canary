@@ -68,19 +68,19 @@ function S(e) {
         o = null == t ? void 0 : t.storeListing,
         s = null == t ? void 0 : t.subscriptionPlans,
         u = a.useCallback(() => {
-            if ((null == r ? void 0 : r.applicationId) == null || (null == r ? void 0 : r.id) == null || (null == n ? void 0 : n.id) == null || (null == r ? void 0 : r.flags) == null) return null;
+            if ((null == r ? void 0 : r.applicationId) == null || (null == r ? void 0 : r.id) == null || (null == r ? void 0 : r.flags) == null) return null;
             (0, l.openModal)((e) => {
-                let { onClose: t, transitionState: a } = e;
+                let { onClose: t, transitionState: n } = e;
                 return (0, i.jsx)(m.SubscriptionDetailsModal, {
                     appId: r.applicationId,
-                    groupListingId: n.id,
                     subscriptionType: (0, c.KW)(r.flags) ? 'user' : 'guild',
                     onClose: t,
                     skuId: r.id,
-                    transitionState: a
+                    transitionState: n,
+                    guildId: null
                 });
             });
-        }, [null == r ? void 0 : r.applicationId, null == r ? void 0 : r.id, null == n ? void 0 : n.id, null == r ? void 0 : r.flags]),
+        }, [null == r ? void 0 : r.applicationId, null == r ? void 0 : r.id, null == r ? void 0 : r.flags]),
         d = a.useCallback(() => {
             if (null == r) return null;
             (0, l.openModal)((e) => {

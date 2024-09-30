@@ -82,6 +82,6 @@ function N() {
         t.searchParams.set(n, r);
     }
     let n = t.pathname + t.search,
-        r = (0, u.U)(n, !1);
+        r = (0, u.Ui)(n, !1);
     (0, E.uL)(r);
 }

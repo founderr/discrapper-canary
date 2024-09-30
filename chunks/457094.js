@@ -161,7 +161,7 @@ let e4 = l.ZP.connectStores([V.Z, eU.Z, eD.default], () => ({
     ),
     e7 = (0, v.e)(L.Z, null, { passProps: !1 }),
     e5 = (0, v.e)(A.default, null, { passProps: !1 }),
-    e3 = [eX.Z5c.GUILD_BOOSTING_MARKETING(':guildId'), ...Array.from(eJ.Vg).map((e) => eX.Z5c.CHANNEL(':guildId', e))];
+    e3 = [eX.Z5c.GUILD_BOOSTING_MARKETING(em.Hw.guildId()), ...Array.from(eJ.Vg).map((e) => eX.Z5c.CHANNEL(em.Hw.guildId(), e))];
 function e2(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: a = null } = e.params;
     return {
@@ -286,7 +286,7 @@ let e9 = [
         isSessionRequired: !0
     },
     {
-        path: [eX.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(':guildId')],
+        path: [eX.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(em.Hw.guildId())],
         render: function (e) {
             let { match: t } = e,
                 { guildId: a } = t.params;
@@ -314,7 +314,7 @@ let e9 = [
         isSessionRequired: !0
     },
     {
-        path: [eX.Z5c.WELCOME(':guildId?', ':channelId?')],
+        path: [eX.Z5c.WELCOME(em.Hw.guildId({ optional: !0 }), em.Hw.channelId({ optional: !0 }))],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, channelId: a } = t.params;
@@ -325,7 +325,7 @@ let e9 = [
         isSessionRequired: !0
     },
     {
-        path: [eX.Z5c.GUILD_EVENT_DETAILS(':guildId?', ':guildEventId')],
+        path: [eX.Z5c.GUILD_EVENT_DETAILS(em.Hw.guildId({ optional: !0 }), ':guildEventId')],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, guildEventId: a } = t.params;
@@ -339,7 +339,7 @@ let e9 = [
         isSessionRequired: !0
     },
     {
-        path: [eX.Z5c.GUILD_SETTINGS(':guildId', ':section?', ':subsection?')],
+        path: [eX.Z5c.GUILD_SETTINGS(em.Hw.guildId(), ':section?', ':subsection?')],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, section: a, subsection: s } = t.params;
@@ -354,7 +354,7 @@ let e9 = [
         isChatRoute: !0
     },
     {
-        path: [eX.Z5c.CHANNEL_THREAD_VIEW(':guildId', ':channelId', ':threadId', ':messageId?'), eX.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?'), eX.Z5c.ACTIVITY, eX.Z5c.ACTIVITIES, eX.Z5c.ACTIVITIES_HAPPENING_NOW, eX.Z5c.ACTIVITY_DETAILS(':applicationId'), eX.Z5c.APPLICATION_LIBRARY, eX.Z5c.APPLICATION_STORE, eX.Z5c.MESSAGE_REQUESTS, eX.Z5c.COLLECTIBLES_SHOP, eX.Z5c.COLLECTIBLES_SHOP_FULLSCREEN, eX.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'), eX.Z5c.DISCOVERY_GUILD_GAME_RESULTS(':gameId'), eX.Z5c.GUILD_DISCOVERY, eX.Z5c.QUEST_HOME, eX.Z5c.GLOBAL_DISCOVERY, eX.Z5c.GUILD_MEMBER_VERIFICATION(':guildId', ':inviteCode?'), eX.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(':guildId', ':inviteCode?'), eX.Z5c.GUILD_BOOSTING_MARKETING(':guildId'), eX.Z5c.FEATURE(':feature'), eX.Z5c.FAMILY_CENTER],
+        path: [eX.Z5c.CHANNEL_THREAD_VIEW(em.Hw.guildId(), em.Hw.channelId(), ':threadId', ':messageId?'), eX.Z5c.CHANNEL(em.Hw.guildId(), em.Hw.channelId({ optional: !0 }), ':messageId?'), eX.Z5c.ACTIVITY, eX.Z5c.ACTIVITIES, eX.Z5c.ACTIVITIES_HAPPENING_NOW, eX.Z5c.ACTIVITY_DETAILS(':applicationId'), eX.Z5c.APPLICATION_LIBRARY, eX.Z5c.APPLICATION_STORE, eX.Z5c.MESSAGE_REQUESTS, eX.Z5c.COLLECTIBLES_SHOP, eX.Z5c.COLLECTIBLES_SHOP_FULLSCREEN, eX.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'), eX.Z5c.DISCOVERY_GUILD_GAME_RESULTS(':gameId'), eX.Z5c.GUILD_DISCOVERY, eX.Z5c.QUEST_HOME, eX.Z5c.GLOBAL_DISCOVERY, eX.Z5c.GUILD_MEMBER_VERIFICATION(em.Hw.guildId(), ':inviteCode?'), eX.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(em.Hw.guildId(), ':inviteCode?'), eX.Z5c.GUILD_BOOSTING_MARKETING(em.Hw.guildId()), eX.Z5c.FEATURE(':feature'), eX.Z5c.FAMILY_CENTER],
         render: e7,
         isSessionRequired: !0,
         isChatRoute: !0
@@ -463,9 +463,9 @@ class te extends a.PureComponent {
                 let n = e6(e);
                 if (null == n) return;
                 let { guildId: i, channelId: a, messageId: l, threadId: o } = e2(n),
-                    c = (0, em.S)(i),
-                    d = (0, em.c)(a),
-                    h = (0, em.c)(o),
+                    c = (0, em.Ss)(i),
+                    d = (0, em.cq)(a),
+                    h = (0, em.cq)(o),
                     E = eH.Z.getGuildId(),
                     m = E !== i;
                 if ((c && m && u.Z.selectGuild(i), c && d)) {
@@ -524,8 +524,8 @@ class te extends a.PureComponent {
             n = e6(t);
         if (null == n) return null;
         let { guildId: i, channelId: a, threadId: s } = e2(n),
-            r = (0, em.S)(i) && i !== eX.ME && i !== eX.I_8;
-        if (null != a && (0, em.c)(a) && !(0, eJ.AB)(a) && r) {
+            r = (0, em.Ss)(i) && i !== eX.ME && i !== eX.I_8;
+        if (null != a && (0, em.cq)(a) && !(0, eJ.AB)(a) && r) {
             let n = ej.Z.getChannel(a);
             if (null == n)
                 ev.Z.loadThread(a).then(() =>
@@ -541,7 +541,7 @@ class te extends a.PureComponent {
                     state: e.state
                 };
             if (null != s) {
-                if (!((0, em.c)(s) && !(0, eJ.AB)(a))) return null;
+                if (!((0, em.cq)(s) && !(0, eJ.AB)(a))) return null;
                 let n = ej.Z.getChannel(s);
                 if (null == n)
                     ev.Z.loadThread(s).then(() =>

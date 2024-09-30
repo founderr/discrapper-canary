@@ -24,8 +24,8 @@ var l = n(120356),
     I = n(430824),
     E = n(496675),
     N = n(306680),
-    x = n(9156),
-    S = n(594174),
+    S = n(9156),
+    x = n(594174),
     v = n(109446),
     Z = n(98597),
     T = n(648501),
@@ -64,7 +64,7 @@ class P extends Z.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: o, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: _, canReorderChannel: m, isSubscriptionGated: g, isFavoriteSuggestion: C, subtitle: I, forceTopLevelThread: E, embeddedApps: N, resolvedUnreadSetting: x, withGuildIcon: S, enableActivities: v } = this.props,
+        let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: o, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: _, canReorderChannel: m, isSubscriptionGated: g, isFavoriteSuggestion: C, subtitle: I, forceTopLevelThread: E, embeddedApps: N, resolvedUnreadSetting: S, withGuildIcon: x, enableActivities: v } = this.props,
             Z = v && null != N && N.length > 0,
             T = (0, f.D)(I),
             A = (0, i.jsx)('li', {
@@ -98,8 +98,8 @@ class P extends Z.ZP {
                             connectDragPreview: m ? _ : null,
                             isFavoriteSuggestion: C,
                             channelTypeOverride: E ? M.d4z.GUILD_TEXT : void 0,
-                            resolvedUnreadSetting: x,
-                            withGuildIcon: S,
+                            resolvedUnreadSetting: S,
+                            withGuildIcon: x,
                             'aria-label': (0, p.ZP)({
                                 channel: e,
                                 unread: a,
@@ -176,7 +176,7 @@ class P extends Z.ZP {
                     return;
                 }
                 if (t.type === M.d4z.DM) {
-                    let l = S.default.getUser(t.getRecipientId());
+                    let l = x.default.getUser(t.getRecipientId());
                     null != l &&
                         (0, c.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('29212')]).then(n.bind(n, 131404));
@@ -213,7 +213,7 @@ function j(e) {
             ackMessageId: N.ZP.ackMessageId(t.id),
             mentionCount: N.ZP.getMentionCount(t.id)
         })),
-        f = (0, a.e7)([x.ZP], () => x.ZP.resolveUnreadSetting(t)),
+        f = (0, a.e7)([S.ZP], () => S.ZP.resolveUnreadSetting(t)),
         I = (0, a.cj)([C.Z, E.Z], () => {
             let e = C.Z.getChannel(t.parent_id);
             return {
@@ -223,11 +223,11 @@ function j(e) {
         }),
         v = (0, a.e7)([m.Z], () => m.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: Z, isSubscriptionGated: b } = (0, _.Z)(t.id),
-        A = (0, a.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)),
+        A = (0, a.e7)([S.ZP], () => S.ZP.isFavorite(n.id, t.id)),
         L = (0, a.e7)(
-            [S.default],
+            [x.default],
             () => {
-                let e = S.default.getCurrentUser();
+                let e = x.default.getCurrentUser();
                 return null != e && (!t.isNSFW() || e.nsfwAllowed);
             },
             [t]

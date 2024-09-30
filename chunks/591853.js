@@ -809,7 +809,7 @@ function ef(e) {
                                     }
                                   : void 0,
                               children: (0, l.jsxs)('div', {
-                                  style: { position: 'relative' },
+                                  className: ec.streamingPopoutPreviewContainer,
                                   children: [
                                       (0, l.jsx)(y.Z, {
                                           className: ec.streamingPopoutImg,

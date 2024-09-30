@@ -11,7 +11,7 @@ var i = n(735250),
     h = n(689938),
     p = n(138592);
 t.Z = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: f, headerClassName: _, contentClassName: m, tryItText: g, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: b = 'top', align: A = 'center', art: M, isPremiumEarlyAccess: R = !1, maxWidth: L = 280, hideDismissButton: y = !1, pointerClassName: P, dismissIconClassName: O, dismissIcon: j, onDismissIconClick: D } = e,
+    let { body: n, header: r, artClassName: f, headerClassName: _, contentClassName: m, tryItText: g, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: S = !1, isPremiumFeature: x = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: b = 'top', align: A = 'center', art: M, isPremiumEarlyAccess: R = !1, maxWidth: L = 280, hideDismissButton: y = !1, pointerClassName: P, dismissIconClassName: O, dismissIcon: j, onDismissIconClick: D } = e,
         w = v ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
         [G, U] = l.useState(!1),
         { ref: k, width: B } = (0, o.Z)();
@@ -32,8 +32,8 @@ t.Z = l.forwardRef(function (e, t) {
             ref: t,
             children: (0, i.jsxs)('div', {
                 className: a()(p.content, m, {
-                    [p.contentNoArt]: null == f || x,
-                    [p.contentPremium]: S || R
+                    [p.contentNoArt]: null == f || S,
+                    [p.contentPremium]: x || R
                 }),
                 children: [
                     null != j &&
@@ -43,18 +43,18 @@ t.Z = l.forwardRef(function (e, t) {
                             children: j
                         }),
                     (0, i.jsxs)('div', {
-                        className: a()(f, x ? p.artInline : p.artAbsolute),
+                        className: a()(f, S ? p.artInline : p.artAbsolute),
                         children: [Z && (0, i.jsx)(u.Z, { className: p.gifTag }), M]
                     }),
                     (0, i.jsxs)('div', {
                         className: p.body,
                         children: [
                             (0, i.jsxs)(s.Heading, {
-                                className: a()(S ? p.headerWithPremiumIcon : p.header, _),
+                                className: a()(x ? p.headerWithPremiumIcon : p.header, _),
                                 variant: 'heading-md/bold',
                                 color: 'always-white',
                                 children: [
-                                    S && !R
+                                    x && !R
                                         ? (0, i.jsx)(s.NitroWheelIcon, {
                                               size: 'md',
                                               color: 'currentColor',
@@ -106,7 +106,7 @@ t.Z = l.forwardRef(function (e, t) {
                                               onClick: (e) => {
                                                   null == E || E(e), I(e), V(d.L.PRIMARY);
                                               },
-                                              color: S || R ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
+                                              color: x || R ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
                                               children: null != g ? g : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
                                           }),
                                           !y &&
@@ -116,8 +116,8 @@ t.Z = l.forwardRef(function (e, t) {
                                                   onClick: (e) => {
                                                       null == E || E(e), V(d.L.DISMISS);
                                                   },
-                                                  color: S || R ? s.Button.Colors.WHITE : s.Button.Colors.BRAND,
-                                                  look: S || R ? s.Button.Looks.LINK : s.Button.Looks.FILLED,
+                                                  color: x || R ? s.Button.Colors.WHITE : s.Button.Colors.BRAND,
+                                                  look: x || R ? s.Button.Looks.LINK : s.Button.Looks.FILLED,
                                                   children: null != C ? C : h.Z.Messages.EDUCATION_NEW_FEATURE_DISMISS
                                               })
                                       ]

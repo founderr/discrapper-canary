@@ -26,8 +26,8 @@ var i = n(735250),
     I = n(267642),
     E = n(624138),
     N = n(667815),
-    x = n(531572),
-    S = n(26323),
+    S = n(531572),
+    x = n(26323),
     v = n(30513),
     Z = n(981631),
     T = n(689938),
@@ -69,9 +69,9 @@ t.ZP = (e) => {
         A = (0, I.FZ)(E, t.id),
         R = null == A,
         L = null != A ? A : E,
-        P = (0, c.e7)([x.Z], () => {
+        P = (0, c.e7)([S.Z], () => {
             var e;
-            return null !== (e = x.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
+            return null !== (e = S.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
         }),
         O = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
@@ -91,7 +91,7 @@ t.ZP = (e) => {
                 guild_id: m,
                 location_stack: r
             }),
-                (0, S.Z)({
+                (0, x.Z)({
                     analyticsLocations: r,
                     analyticsSourceLocation: {
                         page: Z.ZY5.GUILD_CHANNEL,

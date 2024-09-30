@@ -1,59 +1,59 @@
-i.d(e, {
+t.d(n, {
     j: function () {
-        return a;
+        return r;
     }
 });
-var l = i(735250),
-    t = i(470079),
-    r = i(777207),
-    s = i(529079);
-function a(n) {
-    let { title: e, subtitle: i, iconSrc: a, backgroundSrc: d, animatedBackgroundSrc: o, prefersReducedMotion: u = !0 } = n,
-        c = t.useMemo(() => {
-            let n = null != d ? d : a;
-            if (null != n) return { '--custom-background-url': 'url('.concat(n.toString(), ')') };
-        }, [d, a]),
-        p = t.useMemo(() => {
-            if (null == d) return;
-            let n = { '--custom-background-static': 'url('.concat(d.toString()) };
-            return !u && null != o && (n['--custom-background-animated'] = 'url('.concat(o.toString(), ')')), n;
-        }, [o, d, u]);
-    return (0, l.jsxs)('div', {
+var a = t(735250),
+    i = t(470079),
+    l = t(777207),
+    s = t(529079);
+function r(e) {
+    let { title: n, subtitle: t, iconSrc: r, backgroundSrc: o, animatedBackgroundSrc: d, prefersReducedMotion: c = !0 } = e,
+        u = i.useMemo(() => {
+            let e = null != o ? o : r;
+            if (null != e) return { '--custom-background-url': 'url('.concat(e.toString(), ')') };
+        }, [o, r]),
+        p = i.useMemo(() => {
+            if (null == o) return;
+            let e = { '--custom-background-static': 'url('.concat(o.toString()) };
+            return !c && null != d && (e['--custom-background-animated'] = 'url('.concat(d.toString(), ')')), e;
+        }, [d, o, c]);
+    return (0, a.jsxs)('div', {
         className: s.wrapper,
         children: [
-            (0, l.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: s.background,
-                style: c
+                style: u
             }),
-            (0, l.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: s.content,
                 children: [
-                    null != a &&
-                        (0, l.jsx)('div', {
+                    null != r &&
+                        (0, a.jsx)('div', {
                             className: s.icon,
-                            children: (0, l.jsx)('img', {
-                                src: a.toString(),
+                            children: (0, a.jsx)('img', {
+                                src: r.toString(),
                                 alt: ''
                             })
                         }),
-                    (0, l.jsxs)('div', {
+                    (0, a.jsxs)('div', {
                         children: [
-                            (0, l.jsx)(r.x, {
+                            (0, a.jsx)(l.x, {
                                 variant: 'heading-xl/bold',
                                 tag: 'div',
-                                children: e
+                                children: n
                             }),
-                            null != i &&
-                                (0, l.jsxs)(r.x, {
+                            null != t &&
+                                (0, a.jsxs)(l.x, {
                                     variant: 'text-sm/normal',
-                                    children: ['\u201C', i, '\u201D']
+                                    children: ['\u201C', t, '\u201D']
                                 })
                         ]
                     })
                 ]
             }),
-            null != d
-                ? (0, l.jsx)('div', {
+            null != o
+                ? (0, a.jsx)('div', {
                       className: s.image,
                       style: p
                   })

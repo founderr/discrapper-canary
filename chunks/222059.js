@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(417363),
     E = n(941128),
     N = n(780570),
-    x = n(557177),
-    S = n(278464),
+    S = n(557177),
+    x = n(278464),
     v = n(276952),
     Z = n(682662),
     T = n(662146),
@@ -51,11 +51,11 @@ function O(e) {
         m = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [g, C] = l.useState(!1),
         [I, E] = l.useState(!1),
-        [N, S] = l.useState(null),
+        [N, x] = l.useState(null),
         [M, O] = l.useState(0),
         j = (0, r.Ie)('home'),
         D = () => {
-            S(null), O(0), clearTimeout(N);
+            x(null), O(0), clearTimeout(N);
         };
     if (null == n) return null;
     let w = L.Z.Messages.DIRECT_MESSAGES;
@@ -77,12 +77,12 @@ function O(e) {
                 onMouseEnter: () => C(!0),
                 onMouseLeave: () => C(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != N && clearTimeout(N), S(setTimeout(D, 500)), O(M + 1), 15 === M)) {
+                    if (!__OVERLAY__ && (null != N && clearTimeout(N), x(setTimeout(D, 500)), O(M + 1), 15 === M)) {
                         D();
                         let e = !s.K.get(A.wli);
                         s.K.set(A.wli, e),
                             e && s.K.set(R.O5, !0),
-                            e ? (0, x.GN)('discodo') : (0, x.GN)('user_leave'),
+                            e ? (0, S.GN)('discodo') : (0, S.GN)('user_leave'),
                             E(!0),
                             setTimeout(() => {
                                 E(!1);
@@ -131,7 +131,7 @@ function O(e) {
     });
 }
 function j() {
-    let e = (0, S.n)(),
+    let e = (0, x.n)(),
         t = (0, a.e7)([E.Z, I.Z], () => {
             let e = (0, c.E)(E.Z.activeItems, I.Z),
                 { total: t, progress: n } = N.lK(e),
@@ -148,10 +148,10 @@ function j() {
         u = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         d = (0, h.q)(),
         p = n + o + d,
-        x = p === o && o > 0 && n + d === 0,
+        S = p === o && o > 0 && n + d === 0,
         v = C.Z.getHomeLink();
     return (
-        x && (v = A.Z5c.APPLICATION_STORE),
+        S && (v = A.Z5c.APPLICATION_STORE),
         (0, i.jsx)(O, {
             selected: e,
             user: u,

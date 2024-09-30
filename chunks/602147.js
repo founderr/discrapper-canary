@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(731455),
     E = n(921944),
     N = n(49898),
-    x = n(46140),
-    S = n(689938),
+    S = n(46140),
+    x = n(689938),
     v = n(55869);
 function Z(e, t) {
     let n = (0, d.a)({ location: 'discovery_button' }),
@@ -33,7 +33,7 @@ function Z(e, t) {
     if (n)
         switch (e) {
             case N.F$.QUESTS:
-                return (0, f.navigateToQuestHome)(x.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
+                return (0, f.navigateToQuestHome)(S.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
             case N.F$.APPS:
                 return (0, _.uL)(C.Z5c.GLOBAL_DISCOVERY_APPS);
             case N.F$.SERVERS:
@@ -47,15 +47,15 @@ function Z(e, t) {
 }
 let T = l.forwardRef(function (e, t) {
     let { selected: n, className: r, onClick: o } = e,
-        f = (0, d.v)({ location: 'guild_discovery_button' }) ? S.Z.Messages.DISCOVER : S.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
+        f = (0, d.v)({ location: 'guild_discovery_button' }) ? x.Z.Messages.DISCOVER : x.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
         _ = p.d.getState().selectedTab,
         m = (0, c.Z)('discovery_button'),
         C = m ? I.Gj.Clans : I.Hk,
-        [x, T] = (0, u.cv)([a.z.GLOBAL_DISCOVERY_RAPIDASH_NOTIF]),
+        [S, T] = (0, u.cv)([a.z.GLOBAL_DISCOVERY_RAPIDASH_NOTIF]),
         b = l.useCallback(() => {
             null == o || o(), (0, h.k5)({ source: N.JU.GUILDS_BAR_ICON }), Z(_, C), T(E.L.DISMISS);
         }, [o, _, C, T]),
-        A = null != x && m,
+        A = null != S && m,
         M = l.useMemo(
             () => ({
                 lowerBadgeSize: {

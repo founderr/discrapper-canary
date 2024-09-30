@@ -19,8 +19,8 @@ var l = n(392711),
     I = n(626135),
     E = n(74538),
     N = n(557457),
-    x = n(269486),
-    S = n(514851),
+    S = n(269486),
+    x = n(514851),
     v = n(970645),
     Z = n(30684),
     T = n(514701),
@@ -146,7 +146,7 @@ class q extends c.Z {
             }),
             K(this, '_maybeFetchCampaignContext', async () => {
                 let e = g.default.getCurrentUser();
-                null != e && e.verified && S.Z.shouldFetchCampaignContext() && (await (0, x.W)());
+                null != e && e.verified && x.Z.shouldFetchCampaignContext() && (await (0, S.W)());
             }),
             K(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = G.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });

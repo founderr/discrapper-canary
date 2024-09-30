@@ -26,8 +26,8 @@ var i = n(735250),
     I = n(702321),
     E = n(201895),
     N = n(43267),
-    x = n(933557),
-    S = n(979264),
+    S = n(933557),
+    x = n(979264),
     v = n(163889),
     Z = n(111028),
     T = n(853856),
@@ -137,7 +137,7 @@ function K(e) {
         }),
         ee = (0, h.e7)([j.ZP], () => j.ZP.isChannelMuted(t.getGuildId(), t.id)),
         et = (0, h.e7)([P.ZP], () => P.ZP.getMentionCount(t.id) > 0),
-        en = (0, x.ZP)(t),
+        en = (0, S.ZP)(t),
         ei = (0, h.e7)([T.Z], () => T.Z.isFavorite(t.id)),
         el = () => {
             K(!0);
@@ -275,7 +275,7 @@ function K(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           en,
-                          (0, i.jsx)(S.ZP, {
+                          (0, i.jsx)(x.ZP, {
                               clan: null == d ? void 0 : d.clan,
                               userId: null == d ? void 0 : d.id,
                               inline: !0,

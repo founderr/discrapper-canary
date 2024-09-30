@@ -1,42 +1,42 @@
-var r,
-    d,
-    s = t(442837),
-    i = t(570140),
-    l = t(749210);
-((r = d || (d = {}))[(r.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED');
-let u = {},
-    o = 0;
-function a(e) {
-    var n, t;
-    return null !== (t = null === (n = u[e]) || void 0 === n ? void 0 : n.fetchState) && void 0 !== t ? t : 0;
+var i,
+    a,
+    s = n(442837),
+    r = n(570140),
+    l = n(749210);
+((i = a || (a = {}))[(i.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (i[(i.FETCHING = 1)] = 'FETCHING'), (i[(i.FETCHED = 2)] = 'FETCHED');
+let o = {},
+    c = 0;
+function d(e) {
+    var t, n;
+    return null !== (n = null === (t = o[e]) || void 0 === t ? void 0 : t.fetchState) && void 0 !== n ? n : 0;
 }
-function c() {
-    u = {};
+function u() {
+    o = {};
 }
-class m extends s.ZP.Store {
+class _ extends s.ZP.Store {
     isFetchingFriendsForGuild(e) {
-        return 1 === a(e);
+        return 1 === d(e);
     }
-    fetchFriendMembersIfNotFetched(e, n) {
-        0 === a(e) &&
-            ((u[e] = {
+    fetchFriendMembersIfNotFetched(e, t) {
+        0 === d(e) &&
+            ((o[e] = {
                 fetchState: 1,
                 foundMembers: 0,
                 notFoundMembers: 0
             }),
-            (o = n.length),
-            l.Z.requestMembersById(e, n, !1));
+            (c = t.length),
+            l.Z.requestMembersById(e, t, !1));
     }
 }
-n.Z = new m(i.Z, {
-    CONNECTION_OPEN: c,
-    LOGOUT: c,
-    RELATIONSHIP_ADD: c,
-    RELATIONSHIP_REMOVE: c,
+t.Z = new _(r.Z, {
+    CONNECTION_OPEN: u,
+    LOGOUT: u,
+    RELATIONSHIP_ADD: u,
+    RELATIONSHIP_REMOVE: u,
     GUILD_MEMBERS_CHUNK_BATCH: function (e) {
-        var n, t;
-        let r = e.chunks[0],
-            { guildId: d } = r;
-        1 === a(d) && ((u[d].foundMembers += r.members.length), (u[d].notFoundMembers += null !== (t = null === (n = r.notFound) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0), u[d].foundMembers + u[d].notFoundMembers >= o && (u[d].fetchState = 2));
+        var t, n;
+        let i = e.chunks[0],
+            { guildId: a } = i;
+        1 === d(a) && ((o[a].foundMembers += i.members.length), (o[a].notFoundMembers += null !== (n = null === (t = i.notFound) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0), o[a].foundMembers + o[a].notFoundMembers >= c && (o[a].fetchState = 2));
     }
 });

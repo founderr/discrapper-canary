@@ -38,28 +38,28 @@ function v(e) {
 }
 function E(e) {
     let { stream: t, className: n, noText: i = !1 } = e,
-        o = (0, s.e7)([c.Z], () => c.Z.getBasicChannel(t.channelId)),
-        E = (0, s.e7)([d.Z], () => null != o && d.Z.canBasicChannel(h.S7T.CONNECT, o)),
-        { url: _, isLoading: p } = (0, s.cj)([u.Z], () => ({
-            url: E ? u.Z.getPreviewURL(t.guildId, t.channelId, t.ownerId) : null,
-            isLoading: E && u.Z.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
+        r = (0, s.e7)([c.Z], () => c.Z.getBasicChannel(t.channelId)),
+        o = (0, s.e7)([d.Z], () => null != r && d.Z.canBasicChannel(h.S7T.CONNECT, r)),
+        { url: E, isLoading: _ } = (0, s.cj)([u.Z], () => ({
+            url: o ? u.Z.getPreviewURL(t.guildId, t.channelId, t.ownerId) : null,
+            isLoading: o && u.Z.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
         })),
-        T = a.useRef(p ? null : _);
+        p = a.useRef(_ ? null : E);
     a.useEffect(() => {
-        !p && (T.current = _);
-    }, [_, p]);
-    let f = null == _ || p ? T.current : _;
-    return null == f
+        !_ && (p.current = E);
+    }, [E, _]);
+    let T = null == E || _ ? p.current : E;
+    return null == T
         ? (0, l.jsx)(v, {
               className: n,
-              isLoading: p,
+              isLoading: _,
               noText: i,
-              previewText: E ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
+              previewText: o ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
           })
         : (0, l.jsx)('div', {
-              className: r()(n, x.root),
+              className: n,
               children: (0, l.jsx)('img', {
-                  src: f,
+                  src: T,
                   alt: '',
                   className: x.image
               })

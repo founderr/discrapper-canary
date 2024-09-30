@@ -24,8 +24,8 @@ var i,
     I = n(888369),
     E = n(430824),
     N = n(306680),
-    x = n(944486),
-    S = n(938475),
+    S = n(944486),
+    x = n(938475),
     v = n(585483),
     Z = n(63063),
     T = n(51596),
@@ -87,10 +87,10 @@ let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
             category: C.Z.getChannel(t.parent_id)
         };
     })(D),
-    G = c.ZP.connectStores([S.ZP], (e) => {
+    G = c.ZP.connectStores([x.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
-        return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: x.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(D),
     U = c.ZP.connectStores([I.default], (e) => {
         let { guild: t } = e;
@@ -344,7 +344,7 @@ class H extends r.PureComponent {
                                 (0, l.jsx)(e, {
                                     ...n,
                                     channel: t.record,
-                                    selected: x.Z.getChannelId() === t.record.id,
+                                    selected: S.Z.getChannelId() === t.record.id,
                                     onSelect: T.Cp
                                 });
                         });

@@ -13,5 +13,5 @@ var i = n(424602),
     d = n(91641),
     u = n(598984),
     _ = n(987338);
-let h = [u.NR, u.ZI, u.Ob, u.uc, u.m1, a.J$, i.zQ, i.Kv, s.bb, c.g, o.O, l.w, r.I],
+let h = [u.NR, u.ZI, u.Ob, u.uc, u.m1, a.J$, i.zQ, i.Kv, s.bb, c.g, o.O, l.w, r.I, i._f],
     E = new d.E(h, _.$P.CONNECTION_OPEN, { location: 'app open' });

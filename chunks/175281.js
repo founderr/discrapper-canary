@@ -24,8 +24,8 @@ var i,
     I = n(714338),
     E = n(607070),
     N = n(585483),
-    x = n(557177),
-    S = n(264549),
+    S = n(557177),
+    x = n(264549),
     v = n(981631),
     Z = n(689938),
     T = n(126332);
@@ -44,10 +44,10 @@ function b(e, t, n) {
 }
 ((l = i || (i = {})).UP = 'UP'), (l.DOWN = 'DOWN'), (l.LEFT = 'LEFT'), (l.RIGHT = 'RIGHT');
 let A = {
-    UP: h().throttle(() => (0, x.GN)('ddr-up'), 100),
-    DOWN: h().throttle(() => (0, x.GN)('ddr-down'), 100),
-    LEFT: h().throttle(() => (0, x.GN)('ddr-left'), 100),
-    RIGHT: h().throttle(() => (0, x.GN)('ddr-right'), 100)
+    UP: h().throttle(() => (0, S.GN)('ddr-up'), 100),
+    DOWN: h().throttle(() => (0, S.GN)('ddr-down'), 100),
+    LEFT: h().throttle(() => (0, S.GN)('ddr-left'), 100),
+    RIGHT: h().throttle(() => (0, S.GN)('ddr-right'), 100)
 };
 function M(e) {
     switch (e.keyCode) {
@@ -332,7 +332,7 @@ function j(e) {
                     component: 'div',
                     children: i
                         ? (0, r.jsx)(
-                              S.Z,
+                              x.Z,
                               {
                                   handleDemonClose: function () {
                                       c(!1), setTimeout(n, 500);

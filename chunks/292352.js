@@ -95,7 +95,7 @@ let U = 30 * f.Z.Millis.SECOND,
     Z = 4,
     G = 5 * f.Z.Millis.MINUTE,
     h = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    v = (0, O.F)(
+    v = (0, O.Ft)(
         Object.freeze({
             FAMILY_CENTER_SETTINGS: '/family-center/settings',
             FAMILY_CENTER_MY_FAMILY: '/family-center/my-family'

@@ -18,8 +18,8 @@ var i,
     I = n(702321),
     E = n(82295),
     N = n(313201),
-    x = n(860144),
-    S = n(214852),
+    S = n(860144),
+    x = n(214852),
     v = n(518311),
     Z = n(355298),
     T = n(869404),
@@ -398,7 +398,7 @@ t.Z = (e) => {
             },
             []
         );
-    (0, S.z)(x.R);
+    (0, x.z)(S.R);
     let f = (0, h.cj)([m.Z, A.Z, M.Z], () => ({
             theme: A.Z.darkSidebar ? P.BRd.DARK : n,
             keyboardModeEnabled: m.Z.keyboardModeEnabled,

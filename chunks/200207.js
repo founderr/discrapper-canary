@@ -1,68 +1,68 @@
-i.d(e, {
+t.d(n, {
     I: function () {
-        return c;
+        return u;
     }
 });
-var l = i(735250);
-i(470079);
-var t = i(557533),
-    r = i.n(t),
-    s = i(789978),
-    a = i(790472),
-    d = i(777207),
-    o = i(147333),
-    u = i(103077);
-function c(n) {
-    let { title: e, description: i, headerImage: t, onDetails: c, onPurchase: p, PurchaseButton: v, availabilityLabel: m } = n;
-    return (0, l.jsx)(s.tE, {
-        children: (0, l.jsxs)('div', {
-            className: r()(o.wrapper, u.hoverCard),
+var a = t(735250);
+t(470079);
+var i = t(557533),
+    l = t.n(i),
+    s = t(789978),
+    r = t(790472),
+    o = t(777207),
+    d = t(147333),
+    c = t(103077);
+function u(e) {
+    let { title: n, description: t, headerImage: i, onDetails: u, onPurchase: p, PurchaseButton: m, availabilityLabel: v } = e;
+    return (0, a.jsx)(s.tE, {
+        children: (0, a.jsxs)('div', {
+            className: l()(d.wrapper, c.hoverCard),
             tabIndex: 0,
             onClick: () => {
-                null != c ? c() : null != p && p();
+                null != u ? u() : null != p && p();
             },
             children: [
-                (0, l.jsx)('div', {
-                    className: o.cardHeaderImg,
-                    style: null != t ? { backgroundImage: null != t ? 'url('.concat(t.toString(), ')') : void 0 } : void 0,
+                (0, a.jsx)('div', {
+                    className: d.cardHeaderImg,
+                    style: null != i ? { backgroundImage: null != i ? 'url('.concat(i.toString(), ')') : void 0 } : void 0,
                     children:
-                        null == t &&
-                        (0, l.jsx)(a.P, {
+                        null == i &&
+                        (0, a.jsx)(r.P, {
                             color: 'white',
                             size: 'custom',
                             height: 80,
                             width: 80
                         })
                 }),
-                (0, l.jsxs)('div', {
-                    className: o.details,
+                (0, a.jsxs)('div', {
+                    className: d.details,
                     children: [
-                        (0, l.jsx)(d.x, {
+                        (0, a.jsx)(o.x, {
                             color: 'header-primary',
                             variant: 'text-md/semibold',
-                            children: e
+                            children: n
                         }),
-                        null != i &&
-                            (0, l.jsx)(d.x, {
-                                className: o.description,
+                        null != t &&
+                            (0, a.jsx)(o.x, {
+                                className: d.description,
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
-                                children: i
+                                children: t
                             })
                     ]
                 }),
-                null != v &&
-                    (0, l.jsxs)('div', {
-                        className: o.footer,
+                null != m &&
+                    (0, a.jsxs)('div', {
+                        className: d.footer,
                         children: [
-                            (0, l.jsx)(d.x, {
+                            (0, a.jsx)(o.x, {
                                 color: 'interactive-normal',
                                 variant: 'text-sm/normal',
-                                children: m
+                                children: v
                             }),
-                            (0, l.jsx)(v, {
-                                onClick: (n) => {
-                                    n.stopPropagation(), null == p || p();
+                            (0, a.jsx)(m, {
+                                onClick: (e) => {
+                                    e.stopPropagation(), null == p || p();
                                 }
                             })
                         ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return x;
     }
 }),
     n(47120);
@@ -38,7 +38,7 @@ function N(e) {
               tabIndex: -1
           });
 }
-function x(e) {
+function S(e) {
     let t,
         n,
         { folderNode: r, hovered: a, expanded: c } = e,
@@ -46,24 +46,24 @@ function x(e) {
         p = null != u ? u : m.Wyy,
         f = h.map((e) => e.id),
         [_, g] = l.useState(!1),
-        [x, S] = l.useState(c),
+        [S, x] = l.useState(c),
         v = c ? 0 : -E,
         Z = (0, d.useSpring)(
             {
                 transform: 'translate3d(0, '.concat(v, 'px, 0)'),
                 config: { duration: I },
                 onStart() {
-                    g(!0), S(c);
+                    g(!0), x(c);
                 },
                 onRest() {
-                    g(!1), S(c);
+                    g(!1), x(c);
                 }
             },
             'animate-always'
         ),
         T = _ ? Z : void 0;
     return (
-        (_ || x) &&
+        (_ || S) &&
             (t = (0, i.jsx)(s.animated.div, {
                 style: T,
                 className: C.expandedFolderIconWrapper,
@@ -73,7 +73,7 @@ function x(e) {
                     style: { color: (0, o.Rf)(p) }
                 })
             })),
-        (_ || !x) &&
+        (_ || !S) &&
             (n = (0, i.jsx)(s.animated.div, {
                 style: T,
                 className: C.closedFolderIconWrapper,
@@ -96,7 +96,7 @@ function x(e) {
         })
     );
 }
-function S(e) {
+function x(e) {
     let {
             folderNode: t,
             forceCircular: n,
@@ -111,7 +111,7 @@ function S(e) {
             onContextMenu: m,
             onHoverChange: I,
             onKeyDown: E,
-            treeItemProps: { onFocus: N, ...S }
+            treeItemProps: { onFocus: N, ...x }
         } = e,
         [v, Z] = l.useState(!1),
         T = l.useCallback(() => {
@@ -142,7 +142,7 @@ function S(e) {
             'aria-expanded': r,
             'aria-owns': h,
             focusProps: { enabled: !1 },
-            ...S,
+            ...x,
             role: 'treeitem',
             children:
                 null != p
@@ -150,7 +150,7 @@ function S(e) {
                           className: C.expandedFolderIconWrapper,
                           children: p
                       })
-                    : (0, i.jsx)(x, {
+                    : (0, i.jsx)(S, {
                           folderNode: t,
                           hovered: v,
                           expanded: r

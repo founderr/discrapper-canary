@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return S;
     }
 }),
     n(47120),
@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(409673),
     E = n(710111),
     N = n(601539);
-function x(e) {
-    let { guildId: t, channel: n, width: x, height: S, keepOpen: v, interactive: Z = !0, analyticsSource: T, onClose: b } = e,
+function S(e) {
+    let { guildId: t, channel: n, width: S, height: x, keepOpen: v, interactive: Z = !0, analyticsSource: T, onClose: b } = e,
         A = (function (e) {
             let [t, n] = (0, a.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites()]);
             return l.useMemo(() => {
@@ -121,8 +121,8 @@ function x(e) {
         : (0, i.jsx)(o.Gt, {
               value: O,
               children: (0, i.jsx)(C.Z, {
-                  wheelWidth: x,
-                  wheelHeight: S,
+                  wheelWidth: S,
+                  wheelHeight: x,
                   itemWidth: 96,
                   itemHeight: 52,
                   showDeadZoneIndicator: !v,

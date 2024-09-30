@@ -108,7 +108,7 @@ async function h(e) {
     return t;
 }
 function p(e) {
-    a.Z.logout((0, r.U)(e.pathname + e.search, !1));
+    a.Z.logout((0, r.Ui)(e.pathname + e.search, !1));
 }
 async function m(e) {
     return await i.tn.post({

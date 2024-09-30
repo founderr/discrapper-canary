@@ -30,12 +30,12 @@ function N(e, t, n) {
         e
     );
 }
-function x(e, t) {
+function S(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error('TextChannel, preloadChannel: Channel does not have a guildId');
     o.Z.preload(n, t.id);
 }
-class S extends m.ZP {
+class x extends m.ZP {
     render() {
         let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: s } = this.props,
             o = (0, i.jsx)('li', {
@@ -46,7 +46,7 @@ class S extends m.ZP {
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
-                    onMouseDown: x,
+                    onMouseDown: S,
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: s ? r : null,
                     'aria-label': (0, d.ZP)({ channel: e }),
@@ -89,7 +89,7 @@ class S extends m.ZP {
             });
     }
 }
-let v = (0, u.B)(S);
+let v = (0, u.B)(x);
 t.Z = l.memo(function (e) {
     let { channel: t, guild: n, disableSorting: l } = e,
         r = (0, s.cj)([p.Z, _.Z], () => {

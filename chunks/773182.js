@@ -33,8 +33,8 @@ var i = n(735250),
     I = n(243778),
     E = n(669764),
     N = n(210753),
-    x = n(863249),
-    S = n(937111),
+    S = n(863249),
+    x = n(937111),
     v = n(369566),
     Z = n(314897),
     T = n(480294),
@@ -50,9 +50,9 @@ function j(e) {
     let { title: t, message: n, dismissibleContent: r, gameId: a, onPopoutVisible: c, onClick: h, children: p, isEligibleForUpsell: f = !0, withInviteIcon: _ = !0, backgroundImageUrl: g } = e,
         C = (0, s.TH)(),
         [E, N] = (0, I.US)([r], L.R.SIDEBAR),
-        x = E !== r,
-        S = (0, d.Z)(),
-        v = f && !S && !x && C.pathname !== A.Z5c.GUILD_DISCOVERY;
+        S = E !== r,
+        x = (0, d.Z)(),
+        v = f && !x && !S && C.pathname !== A.Z5c.GUILD_DISCOVERY;
     l.useEffect(() => {
         v && c();
     }, [v, c]);
@@ -209,9 +209,9 @@ function w(e) {
 }
 function G(e) {
     let { onActivate: t, children: n } = e,
-        r = (0, o.e7)([S.Z], () => S.Z.hasJoinRequestCoackmark()),
+        r = (0, o.e7)([x.Z], () => x.Z.hasJoinRequestCoackmark()),
         a = l.useCallback(() => {
-            x.ZP.clearCoachmark();
+            S.ZP.clearCoachmark();
         }, []),
         s = (0, h.Z)(r),
         c = l.useRef(null);

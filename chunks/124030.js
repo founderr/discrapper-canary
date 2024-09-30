@@ -1,6 +1,6 @@
 n.d(a, {
     A: function () {
-        return l;
+        return r;
     },
     L: function () {
         return i;
@@ -12,6 +12,6 @@ function i() {
     var e;
     return (null === (e = t.K.get(o)) || void 0 === e ? void 0 : e.hasInteractedWithSurvey) !== !0;
 }
-function l() {
+function r() {
     return t.K.set(o, { hasInteractedWithSurvey: !0 });
 }

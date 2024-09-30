@@ -108,7 +108,7 @@ let _ = (e, t) => {
     };
 };
 t.Z = l.memo(function (e) {
-    let { wheelWidth: t, wheelHeight: n, itemWidth: m, itemHeight: g, showDeadZoneIndicator: C, activeItem: I, onItemSelect: E, onItemAction: N, interactive: x = !0, children: S } = e,
+    let { wheelWidth: t, wheelHeight: n, itemWidth: m, itemHeight: g, showDeadZoneIndicator: C, activeItem: I, onItemSelect: E, onItemAction: N, interactive: S = !0, children: x } = e,
         v = l.useRef(null),
         Z = l.useRef([]),
         T = l.useRef(!1),
@@ -119,7 +119,7 @@ t.Z = l.memo(function (e) {
             y: 0
         }),
         y = Math.abs(R.x) + Math.abs(R.y) > 0,
-        P = l.useMemo(() => a().chunk(S, p), [S]),
+        P = l.useMemo(() => a().chunk(x, p), [x]),
         O = l.useCallback(
             (e, t) => {
                 null == Z.current[A] ? (Z.current[A] = []) : (Z.current[A][t] = e);
@@ -202,17 +202,17 @@ t.Z = l.memo(function (e) {
         ),
         B = l.useCallback(
             (e) => {
-                if (!x) return;
+                if (!S) return;
                 let t = A + (e.deltaY > 0 ? 1 : -1);
                 t >= 0 && t < P.length && (null != b.current && (P[t].length > b.current ? j(t, b.current) : D()), M(t));
             },
-            [x, A, P, j, D]
+            [S, A, P, j, D]
         ),
         V = l.useMemo(
             () =>
                 P[A].map((e, l) => {
                     let r = h[l];
-                    if (null == r) throw Error('Too many items supplied '.concat(S.length, ' expected max of ').concat(h.length));
+                    if (null == r) throw Error('Too many items supplied '.concat(x.length, ' expected max of ').concat(h.length));
                     let a = f(r.x, t, m),
                         s = f(r.y, n, g);
                     return (0, i.jsx)(
@@ -231,7 +231,7 @@ t.Z = l.memo(function (e) {
                         l
                     );
                 }),
-            [P, A, t, m, n, g, S.length, O]
+            [P, A, t, m, n, g, x.length, O]
         );
     return (0, i.jsx)(s.Clickable, {
         className: u.chatWheelMouseInput,
@@ -327,7 +327,7 @@ t.Z = l.memo(function (e) {
                     className: u.innerContent,
                     children: [
                         C && (0, i.jsx)(d, { className: u.chatWheelDeadZoneIcon }),
-                        x && P.length > 1
+                        S && P.length > 1
                             ? (0, i.jsx)('div', {
                                   className: u.paginationHint,
                                   children: c.Z.Messages.CHAT_WHEEL_PAGINATION_HINT

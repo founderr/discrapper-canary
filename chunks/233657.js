@@ -40,7 +40,7 @@ function m(e) {
             (0, o.EW)(r.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let N = (0, c.ZP)(t.id),
-        x = N.length > 0 ? f.Z.Messages.GUILD_EVENTS_PLURAL.format({ number: N.length }) : f.Z.Messages.GUILD_EVENTS;
+        S = N.length > 0 ? f.Z.Messages.GUILD_EVENTS_PLURAL.format({ number: N.length }) : f.Z.Messages.GUILD_EVENTS;
     return (0, i.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
@@ -49,7 +49,7 @@ function m(e) {
                 color: 'currentColor',
                 className: e
             }),
-        text: x,
+        text: S,
         selected: m,
         onClick: E,
         onContextMenu: (e) => {

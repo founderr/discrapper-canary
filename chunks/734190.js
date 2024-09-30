@@ -17,8 +17,8 @@ var i = n(735250),
     I = n(714794),
     E = n(135724),
     N = n(25601),
-    x = n(207055),
-    S = n(981631),
+    S = n(207055),
+    x = n(981631),
     v = n(124368),
     Z = n(689938),
     T = n(872356),
@@ -149,12 +149,12 @@ t.Z = l.memo(function (e) {
                     ]
                 })
             }),
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(S.Z, {
                 channel: t,
                 collapsed: !A,
                 collapsedMax: 6,
                 voiceStates: y,
-                location: S.Sbl.GUILD_CHANNEL_LIST
+                location: x.Sbl.GUILD_CHANNEL_LIST
             })
         ]
     });

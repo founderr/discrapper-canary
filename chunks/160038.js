@@ -103,7 +103,7 @@ t.Z = function (e) {
         }, [e]),
         { connectionState: r, connectionTypeText: s } = e,
         f = d.Sb.getSetting(),
-        x = {
+        S = {
             [g.hes.AWAITING_ENDPOINT]: I.Z.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({ url: g.yXt.STATUS }),
             [g.hes.CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_CONNECTING,
             [g.hes.AUTHENTICATING]: I.Z.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
@@ -117,11 +117,11 @@ t.Z = function (e) {
         }[r];
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            'function' == typeof x
-                ? x()
+            'function' == typeof S
+                ? S()
                 : (0, i.jsx)('p', {
                       className: a()(E.popoutText, E.popoutTextDetails),
-                      children: x
+                      children: S
                   }),
             (0, i.jsx)('hr', { className: E.separator }),
             (0, i.jsxs)('div', {

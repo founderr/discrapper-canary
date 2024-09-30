@@ -431,7 +431,6 @@ function eC(e, t) {
                         [el.highlighted]: eP,
                         [el.textAreaMobileThemed]: E.tq
                     }),
-                    onMouseDown: tD,
                     children: [
                         (0, a.jsx)(J.Z, {
                             type: j,
@@ -467,6 +466,7 @@ function eC(e, t) {
                                         [el.sansAttachButtonCreatePost]: j === q.I.CREATE_FORUM_POST || j === q.I.FORWARD_MESSAGE_INPUT,
                                         [el.sansAttachButtonUserProfileReply]: j === q.I.USER_PROFILE_REPLY
                                     }),
+                                    onMouseDown: tD,
                                     children: [
                                         tU,
                                         (0, a.jsx)(p.FocusRing, {

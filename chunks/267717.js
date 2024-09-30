@@ -41,9 +41,9 @@ function T(e) {
         modalClassName: u.modal,
         modalContentClassName: u.modalContent,
         type: c.cd.APP_ICONS_UPSELL,
-        title: _.Z.Messages.PREMIUM_UPSEL_FEATURE_IN_APP_ICONS_TITLE,
-        body: _.Z.Messages.PREMIUM_UPSELL_FEATURE_IN_APP_ICONS_DESCRIPTION,
-        glowUp: _.Z.Messages.PREMIUM_UPSELL_FEATURE_IN_APP_ICONS_DESCRIPTION,
+        title: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_TITLE,
+        body: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_DESCRIPTION,
+        glowUp: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_TITLE,
         onSecondaryClick: () => {
             (0, o.$)(t);
         },

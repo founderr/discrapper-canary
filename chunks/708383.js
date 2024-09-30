@@ -27,7 +27,7 @@ class h extends s.Component {
                 messageId: i
             };
         })(e);
-        (0, c.S)(t) && (0, c.c)(n)
+        (0, c.Ss)(t) && (0, c.cq)(n)
             ? (o.Z.selectGuild(t),
               r.default.selectChannel({
                   guildId: t,
@@ -44,7 +44,7 @@ t.Z = () =>
     (0, i.jsxs)(a.rs, {
         children: [
             (0, i.jsx)(l.Z, {
-                path: u.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?'),
+                path: u.Z5c.CHANNEL(c.Hw.guildId(), c.Hw.channelId({ optional: !0 }), ':messageId?'),
                 component: h
             }),
             (0, i.jsx)(l.Z, { component: h })

@@ -117,7 +117,7 @@ class I extends i.PureComponent {
             _(this, 'getAppButton', () => {
                 let { token: e, NavigationMessages: t, TrackClick: a, authRedirectTo: i } = this.props,
                     { isAppCompatible: r } = this.state,
-                    l = (0, s.U)(i),
+                    l = (0, s.Ui)(i),
                     o = t.LOGIN;
                 return (
                     null != e && ((l = m.$w.ME), (o = t.OPEN)),

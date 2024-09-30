@@ -25,8 +25,8 @@ var l = n(120356),
     I = n(873696),
     E = n(446226),
     N = n(305325),
-    x = n(281956),
-    S = n(66999),
+    S = n(281956),
+    x = n(66999),
     v = n(554747),
     Z = n(506936),
     T = n(574176),
@@ -120,7 +120,7 @@ class q extends G.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: x, isSubscriptionGated: S, isFavoriteSuggestion: v, withGuildIcon: Z } = this.props,
+        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: S, isSubscriptionGated: x, isFavoriteSuggestion: v, withGuildIcon: Z } = this.props,
             { shouldShowActivities: T, shouldShowGuildVerificationPopout: b } = this.state,
             M = this.getVoiceStatesCount(),
             R = (0, i.jsxs)('li', {
@@ -165,12 +165,12 @@ class q extends G.ZP {
                                                 unread: l,
                                                 mentionCount: s,
                                                 userCount: M,
-                                                embeddedActivitiesCount: x.length,
-                                                isSubscriptionGated: S
+                                                embeddedActivitiesCount: S.length,
+                                                isSubscriptionGated: x
                                             }),
                                             'aria-describedby': (0, m.Z)({
                                                 channel: e,
-                                                embeddedApps: x
+                                                embeddedApps: S
                                             }),
                                             withGuildIcon: Z,
                                             ...h,
@@ -252,7 +252,7 @@ class q extends G.ZP {
             K(this, 'handleClick', () => {
                 let { channel: e } = this.props,
                     t = e.getGuildId();
-                null != t && (0, x.n)(t) && (0, N.hk)(t), this.handleVoiceConnect();
+                null != t && (0, S.n)(t) && (0, N.hk)(t), this.handleVoiceConnect();
             }),
             K(this, 'handleVoiceStatusClick', (e) => {
                 let { connected: t, channel: l } = this.props;
@@ -348,10 +348,10 @@ function X(e) {
         _ = (0, p.ZP)(n),
         m = (0, g.ZP)(n),
         C = (0, v.qY)(n.id),
-        { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, S.Z)(n.id),
-        x = (0, E.Z)(),
+        { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, x.Z)(n.id),
+        S = (0, E.Z)(),
         Z = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)),
-        b = e.connected || (null == x ? void 0 : x.channelId) === n.id,
+        b = e.connected || (null == S ? void 0 : S.channelId) === n.id,
         { enableHangStatus: A, allowChannelTopic: M } = T.n.useExperiment(
             {
                 guildId: n.guild_id,

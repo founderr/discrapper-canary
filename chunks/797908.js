@@ -22,7 +22,7 @@ t.Z = function (e) {
                 u.ZP.getApplicationIconURL({
                     id: p.id,
                     icon: p.icon,
-                    size: 40
+                    size: 48
                 }),
             [p]
         ),
@@ -50,14 +50,14 @@ t.Z = function (e) {
                             className: E.icon,
                             children: (0, i.jsx)(c.ZP, {
                                 mask: c.ZP.Masks.SQUIRCLE,
-                                width: 48,
-                                height: 48,
+                                width: 56,
+                                height: 56,
                                 children: (0, i.jsx)('div', {
                                     className: E.iconMask,
                                     children: (0, i.jsx)(c.ZP, {
                                         mask: c.ZP.Masks.SQUIRCLE,
-                                        width: 40,
-                                        height: 40,
+                                        width: 48,
+                                        height: 48,
                                         children: (0, i.jsx)('img', {
                                             src: A,
                                             alt: '',

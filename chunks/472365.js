@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(973616),
     E = n(594174),
     N = n(855981),
-    x = n(55543),
-    S = n(626135),
+    S = n(55543),
+    x = n(626135),
     v = n(768581),
     Z = n(358085),
     T = n(998502),
@@ -39,7 +39,7 @@ function O() {
     let { analyticsLocations: e, sourceAnalyticsLocations: t } = (0, d.ZP)(u.Z.PREMIUM_UPSELL_TOOLTIP);
     return (
         l.useEffect(() => {
-            S.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
+            x.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: R.cd.GUILD_CAP_INLINE_INVITE_MODAL,
                 location: { page: M.ZY5.NATIVE_INVITE_MODAL },
                 location_stack: t
@@ -88,7 +88,7 @@ function j(e) {
                 width: 40,
                 height: 40
             }),
-            (0, i.jsx)(x.Z, { className: y.iconSparkleStar })
+            (0, i.jsx)(S.Z, { className: y.iconSparkleStar })
         ]
     });
 }
@@ -139,8 +139,8 @@ function w(e) {
     l.useEffect(() => {
         !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
     }, []);
-    let x = (0, m.Dt)(),
-        { analyticsLocations: S } = (0, d.ZP)(u.Z.INVITE_MODAL);
+    let S = (0, m.Dt)(),
+        { analyticsLocations: x } = (0, d.ZP)(u.Z.INVITE_MODAL);
     if (null == _) return null;
     if (_.state === M.r2o.EXPIRED || _.state === M.r2o.BANNED || _.state === M.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
     if (null == _.channel) return null;
@@ -164,10 +164,10 @@ function w(e) {
     return (
         V && (F = L.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON),
         (0, i.jsx)(d.Gt, {
-            value: S,
+            value: x,
             children: (0, i.jsxs)(o.ModalRoot, {
                 size: o.ModalSize.DYNAMIC,
-                'aria-labelledby': x,
+                'aria-labelledby': S,
                 transitionState: r,
                 className: y.container,
                 children: [
@@ -181,7 +181,7 @@ function w(e) {
                                 justify: f.Z.Justify.BETWEEN,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        id: x,
+                                        id: S,
                                         className: P.marginBottom20,
                                         children: (0, i.jsx)(c.Z, {
                                             invite: _,

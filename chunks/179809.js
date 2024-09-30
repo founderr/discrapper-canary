@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(252686),
     E = n(682662),
     N = n(662146),
-    x = n(689938),
-    S = n(115376),
+    S = n(689938),
+    x = n(115376),
     v = n(767573);
 let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     T = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
@@ -61,7 +61,7 @@ function A(e) {
             },
             [D, u]
         ),
-        J = null != B && '' !== B ? B : null != R && '' !== R ? R : x.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
+        J = null != B && '' !== B ? B : null != R && '' !== R ? R : S.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
         $ = (0, c.Ie)(''.concat(k)),
         ee = 'folder-items-'.concat(k),
         et = V.length * (T + b),
@@ -121,13 +121,13 @@ function A(e) {
         });
     return (0, i.jsxs)('div', {
         ref: ei,
-        className: S.wrapper,
+        className: x.wrapper,
         children: [
             !K &&
                 (0, i.jsx)('span', {
-                    className: a()(S.expandedFolderBackground, {
-                        [S.collapsed]: !u,
-                        [S.hover]: Y
+                    className: a()(x.expandedFolderBackground, {
+                        [x.collapsed]: !u,
+                        [x.hover]: Y
                     })
                 }),
             el,
@@ -140,7 +140,7 @@ function A(e) {
                         {
                             id: ee,
                             style: { height: e.height.to((e) => e * et) },
-                            className: S.__invalid_expandedGuilds,
+                            className: x.__invalid_expandedGuilds,
                             role: 'group',
                             children: V.map(G)
                         },
