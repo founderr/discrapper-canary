@@ -1,7 +1,7 @@
 L.r(_),
     L.d(_, {
         default: function () {
-            return a;
+            return t;
         }
     });
 var s = L(735250);
@@ -10,24 +10,25 @@ var e = L(979554),
     A = L(98278),
     O = L(790527),
     P = L(474936),
-    R = L(689938);
-function a(E) {
-    let { collectableType: _, onClose: a, analyticsSource: I, analyticsLocation: n, onSecondaryClick: t, ...M } = E;
+    R = L(689938),
+    a = L(116909);
+function t(E) {
+    let { collectableType: _, onClose: L, analyticsSource: t, analyticsLocation: I, onSecondaryClick: n, ...M } = E;
     return _ === e.Z.AVATAR_DECORATION || _ === e.Z.PROFILE_EFFECT
         ? (0, s.jsx)(O.Z, {
-              artURL: L(116909),
+              artURL: a.default,
               type: P.cd.CUSTOM_PROFILE_UPSELL,
               title: _ === e.Z.AVATAR_DECORATION ? R.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_MODAL_UPSELL_TITLE : R.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_MODAL_UPSELL_TITLE,
               body: _ === e.Z.AVATAR_DECORATION ? R.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_MODAL_UPSELL_DESCRIPTION : R.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_MODAL_UPSELL_DESCRIPTION,
               glowUp: _ === e.Z.AVATAR_DECORATION ? R.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_MODAL_UPSELL_DESCRIPTION : R.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_MODAL_UPSELL_DESCRIPTION,
               onSecondaryClick: () => {
-                  t(), (0, A.$)(a);
+                  n(), (0, A.$)(L);
               },
               secondaryCTA: R.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
-              onClose: a,
+              onClose: L,
               enableArtBoxShadow: !1,
-              analyticsSource: I,
-              analyticsLocation: n,
+              analyticsSource: t,
+              analyticsLocation: I,
               hideBackButton: !0,
               showEnhancedUpsell: !0,
               ...M

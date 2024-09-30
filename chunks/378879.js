@@ -1,10 +1,10 @@
 a.r(n),
     a.d(n, {
         default: function () {
-            return p;
+            return v;
         },
         openProfileUpsellModal: function () {
-            return P;
+            return p;
         }
     });
 var i = a(735250);
@@ -20,8 +20,9 @@ var s = a(481060),
     A = a(981631),
     E = a(486324),
     _ = a(689938),
-    I = a(821774);
-function P(e, n, r) {
+    I = a(821774),
+    P = a(116909);
+function p(e, n, r) {
     let o = t.default.getCurrentUser();
     return (
         null != o &&
@@ -44,33 +45,33 @@ function P(e, n, r) {
         !0)
     );
 }
-function p(e) {
-    let { user: n, uploadType: s, imageSrc: t, onClose: A, analyticsSource: P, analyticsLocation: p, onSecondaryClick: v, ...m } = e,
+function v(e) {
+    let { user: n, uploadType: a, imageSrc: s, onClose: t, analyticsSource: A, analyticsLocation: p, onSecondaryClick: v, ...m } = e,
         N = (0, o.ZP)(n.id),
         { primaryColor: C, secondaryColor: L } = (0, l.Z)({
             user: n,
             displayProfile: N,
-            pendingAvatar: s === E.pC.AVATAR ? t : void 0,
+            pendingAvatar: a === E.pC.AVATAR ? s : void 0,
             isPreview: !0
         }),
-        T = s === E.pC.AVATAR || s === E.pC.BANNER,
-        f = null != t;
+        T = a === E.pC.AVATAR || a === E.pC.BANNER,
+        f = null != s;
     return T
         ? (0, i.jsx)(c.Z, {
-              artURL: f ? void 0 : a(116909),
+              artURL: f ? void 0 : P.default,
               modalClassName: f ? I.modal : void 0,
               modalContentClassName: f ? I.modalContent : void 0,
               type: d.cd.CUSTOM_PROFILE_UPSELL,
-              title: s === E.pC.AVATAR ? _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_TITLE : _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_TITLE,
-              body: s === E.pC.AVATAR ? _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_DESCRIPTION : _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_DESCRIPTION,
-              glowUp: s === E.pC.AVATAR ? _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_DESCRIPTION : _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_DESCRIPTION,
+              title: a === E.pC.AVATAR ? _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_TITLE : _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_TITLE,
+              body: a === E.pC.AVATAR ? _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_DESCRIPTION : _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_DESCRIPTION,
+              glowUp: a === E.pC.AVATAR ? _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_DESCRIPTION : _.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_DESCRIPTION,
               onSecondaryClick: () => {
-                  null == v || v(), (0, u.$)(A);
+                  null == v || v(), (0, u.$)(t);
               },
               secondaryCTA: _.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
-              onClose: A,
+              onClose: t,
               enableArtBoxShadow: !1,
-              analyticsSource: P,
+              analyticsSource: A,
               analyticsLocation: p,
               hideBackButton: !0,
               showEnhancedUpsell: !0,
@@ -82,8 +83,8 @@ function p(e) {
                             user: n,
                             canUsePremiumCustomization: !0,
                             disabledInputs: !0,
-                            pendingAvatar: s === E.pC.AVATAR ? t : void 0,
-                            pendingBanner: s === E.pC.BANNER ? t : void 0,
+                            pendingAvatar: a === E.pC.AVATAR ? s : void 0,
+                            pendingBanner: a === E.pC.BANNER ? s : void 0,
                             pendingThemeColors: [C, L]
                         })
                     })
