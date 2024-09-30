@@ -633,7 +633,8 @@ function e1(e) {
         : (0, i.jsx)(K.Z, {
               giftIntentType: r.giftIntentType,
               recipientUser: a,
-              channel: n
+              channel: n,
+              showSecondaryCta: r.showSecondaryCta
           });
 }
 function e2(e) {

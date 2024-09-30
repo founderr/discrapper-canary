@@ -292,8 +292,8 @@ let ey = {
                 !0
             );
         },
-        sendGiftingPromptSystemMessage(e, t, n) {
-            let r = (0, w.ZP)({
+        sendGiftingPromptSystemMessage(e, t) {
+            let n = (0, w.ZP)({
                 channelId: e,
                 type: eh.uaV.GIFTING_PROMPT,
                 content: '',
@@ -305,15 +305,12 @@ let ey = {
                     avatar: 'gifting_prompt',
                     bot: !0
                 },
-                giftingPrompt: {
-                    giftIntentType: t,
-                    recipientUserId: n
-                }
+                giftingPrompt: t
             });
             eL.receiveMessage(
                 e,
                 {
-                    ...r,
+                    ...n,
                     state: eh.yb.SENT
                 },
                 !0

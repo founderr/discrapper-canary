@@ -44,10 +44,18 @@ class O extends s.Z {
                 return !1;
         }
     }
-    maybeSendGiftingPromptSystemMessageDebounced(e, t, n) {
+    maybeSendGiftingPromptSystemMessageDebounced(e, t, n, r) {
         (0, i.debounce)(() => {
-            let r = f.Z.getChannelId();
-            !T.Z.isGiftIntentMessageInCooldown(n) && e === r && E.Z.isReady(e) && (o.Z.sendGiftingPromptSystemMessage(e, t, n), (0, I.PV)(n));
+            let i = f.Z.getChannelId();
+            !T.Z.isGiftIntentMessageInCooldown(n) &&
+                e === i &&
+                E.Z.isReady(e) &&
+                (o.Z.sendGiftingPromptSystemMessage(e, {
+                    giftIntentType: t,
+                    recipientUserId: n,
+                    showSecondaryCta: r
+                }),
+                (0, I.PV)(n));
         }, N)();
     }
     handleChannelSelect(e, t) {
@@ -61,7 +69,7 @@ class O extends s.Z {
                 a = T.Z.getFriendAnniversaries().filter((e) => t.has(e));
             if (r && a.length > 0) {
                 let e = a[0];
-                this.maybeSendGiftingPromptSystemMessageDebounced(o.id, g.hX.FRIEND_ANNIVERSARY, e);
+                this.maybeSendGiftingPromptSystemMessageDebounced(o.id, g.hX.FRIEND_ANNIVERSARY, e, a.length > 1);
             }
             n &&
                 h.default.track(S.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {

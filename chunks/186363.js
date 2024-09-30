@@ -10,8 +10,12 @@ e.exports = {
     textContainer: 'textContainer_d76538',
     subHeaderText: 'subHeaderText_d76538',
     button: 'button_d76538',
+    buttonSecondary: 'buttonSecondary_d76538',
     buttonContentContainer: 'buttonContentContainer_d76538',
     buttonText: 'buttonText_d76538',
+    buttonTextPrimary: 'buttonTextPrimary_d76538',
+    buttonTextSecondary: 'buttonTextSecondary_d76538',
+    buttonContainer: 'buttonContainer_d76538',
     connector: 'connector_d76538',
     rightPopoutConnector: 'rightPopoutConnector_d76538',
     leftPopoutConnector: 'leftPopoutConnector_d76538'
