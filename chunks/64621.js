@@ -53,33 +53,33 @@ function O(e) {
     let { sourceType: t, children: n, user: r } = e,
         { profileType: I } = (0, f.z)(),
         { avatarReactReplyEnabled: T, statusReactReplyEnabled: g } = (0, E.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
-        O =
-            !(0, o.e7)([_.default], () => {
-                var e;
-                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === r.id;
-            }) &&
-            I === h.y0.BITE_SIZE &&
-            ((t === h.n_.AVATAR && T) || (t === h.n_.STATUS && !T && g)),
-        [R, C] = a.useState(!1);
-    (0, u.Z)(() => C(!0), O ? S : null);
-    let y = R ? [s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK] : [],
-        [L, b] = (0, c.US)(y),
-        { asset: D, assetClassName: M, className: P, content: U, header: w } = N(g, T);
+        O = (0, o.e7)([_.default], () => {
+            var e;
+            return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === r.id;
+        }),
+        R = t === h.n_.AVATAR && T,
+        C = t === h.n_.STATUS && !T && g,
+        y = !O && I === h.y0.BITE_SIZE && (R || C),
+        [L, b] = a.useState(!1);
+    (0, u.Z)(() => b(!0), y ? S : null);
+    let D = L ? [s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK] : [],
+        [M, P] = (0, c.US)(D),
+        { asset: U, assetClassName: w, className: x, content: G, header: k } = N(g, T);
     return (0, i.jsx)(l.Popout, {
         align: 'center',
         position: t === h.n_.AVATAR ? 'left' : 'right',
-        shouldShow: null != L,
+        shouldShow: null != M,
         spacing: t === h.n_.AVATAR ? A : v,
         renderPopout: (e) => {
             let { position: t, closePopout: n, setPopoutRef: r } = e;
             return (0, i.jsx)(l.Dialog, {
                 ref: r,
                 children: (0, i.jsx)(d.ZP, {
-                    className: P,
+                    className: x,
                     asset: (0, i.jsx)('img', {
                         alt: '',
-                        src: D,
-                        className: M
+                        src: U,
+                        className: w
                     }),
                     buttonCTA: p.Z.Messages.TUTORIAL_CLOSE,
                     buttonLayout: d._F.STACKED,
@@ -91,11 +91,11 @@ function O(e) {
                     content: (0, i.jsx)(l.Text, {
                         variant: 'text-xs/normal',
                         color: 'always-white',
-                        children: U
+                        children: G
                     }),
-                    header: w,
+                    header: k,
                     headerClassName: m.tooltipHeader,
-                    markAsDismissed: b,
+                    markAsDismissed: P,
                     onClick: n
                 })
             });
