@@ -22,6 +22,7 @@ e.exports = {
     popoutUsername: 'popoutUsername_a35965',
     streamingPopoutHeader: 'streamingPopoutHeader_a35965',
     streamingPopoutHeaderText: 'streamingPopoutHeaderText_a35965',
+    streamingPopoutPreviewContainer: 'streamingPopoutPreviewContainer_a35965',
     streamingPopoutImg: 'streamingPopoutImg_a35965',
     voiceChannelPopoutReactorHeader: 'voiceChannelPopoutReactorHeader_a35965',
     voiceChannelPopoutReactorChannel: 'voiceChannelPopoutReactorChannel_a35965',
