@@ -1,9 +1,9 @@
 n.d(t, {
     Y: function () {
-        return T;
+        return I;
     },
     p: function () {
-        return I;
+        return m;
     }
 });
 var r = n(735250);
@@ -14,108 +14,98 @@ var i = n(860911),
     s = n(906732),
     l = n(887706),
     u = n(87484),
-    c = n(696906),
-    d = n(703656),
-    _ = n(626135),
-    E = n(937615),
-    f = n(110742),
-    h = n(981631),
-    p = n(689938),
-    m = n(962083);
-function I(e) {
-    let { appId: t, className: n, groupListingId: i, subscriptionType: a, guildId: o, onClick: s, onHasClicked: l, skuId: u, subscriptionPlan: d, icon: _ } = e,
-        { openModal: I } = (0, c.Z)({
-            guildId: o,
-            groupListingId: i,
-            showBenefitsFirst: !1,
-            analyticsLocation: h.Sbl.APP_STOREFRONT,
-            skuId: u
-        }),
-        T = (0, f.M)(u),
-        A = (e) => {
-            (null != s ? s : I)(e), null == l || l();
+    c = n(703656),
+    d = n(626135),
+    _ = n(937615),
+    E = n(110742),
+    f = n(981631),
+    h = n(689938),
+    p = n(962083);
+function m(e) {
+    let { appId: t, className: n, onClick: i, onHasClicked: a, skuId: o, subscriptionPlan: s, icon: l, canPurchase: u, cannotPurchaseReason: c } = e,
+        d = (e) => {
+            i(e), null == a || a();
         };
-    return 'guild' !== a && ('user' !== a || T)
-        ? (0, r.jsx)(S, {
-              className: n,
-              children: p.Z.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
-          })
-        : (0, r.jsx)(g, {
+    return u
+        ? (0, r.jsx)(T, {
               appId: t,
-              skuId: u,
-              onClick: A,
+              skuId: o,
+              onClick: d,
               className: n,
               children: (0, r.jsxs)('div', {
-                  className: m.btnContent,
-                  children: [_, p.Z.Messages.STOREFRONT_SUBSCRIBE_FOR.format({ rate: (0, E.xg)(d) })]
+                  className: p.btnContent,
+                  children: [l, h.Z.Messages.STOREFRONT_SUBSCRIBE_FOR.format({ rate: (0, _.xg)(s) })]
               })
+          })
+        : (0, r.jsx)(g, {
+              className: n,
+              children: c
           });
 }
-function T(e) {
+function I(e) {
     let { appId: t, className: n, onClick: i, onHasClicked: a, sku: l, icon: c } = e,
         { analyticsLocations: d } = (0, s.ZP)(o.Z.APP_STOREFRONT),
-        _ = () => {
+        m = () => {
             (0, u.Z)({
                 applicationId: t,
                 skuId: l.id,
                 analyticsLocations: d
             });
         },
-        I = (0, f.M)(l.id),
-        T = l.type === h.epS.DURABLE && I,
+        I = (0, E.M)(l.id),
+        S = l.type === f.epS.DURABLE && I,
         { price: A } = l;
     if (null == A) return null;
     let v = (e) => {
-        (null != i ? i : _)(e), null == a || a();
+        (null != i ? i : m)(e), null == a || a();
     };
-    return T
-        ? (0, r.jsx)(S, {
+    return S
+        ? (0, r.jsx)(g, {
               className: n,
-              children: p.Z.Messages.COLLECTIBLES_ALREADY_OWNED
+              children: h.Z.Messages.COLLECTIBLES_ALREADY_OWNED
           })
-        : (0, r.jsx)(g, {
+        : (0, r.jsx)(T, {
               appId: t,
               skuId: l.id,
               onClick: v,
               className: n,
               children: (0, r.jsxs)('div', {
-                  className: m.btnContent,
-                  children: [c, p.Z.Messages.STOREFRONT_PURCHASE_FOR.format({ price: (0, E.T4)(A.amount, A.currency) })]
+                  className: p.btnContent,
+                  children: [c, h.Z.Messages.STOREFRONT_PURCHASE_FOR.format({ price: (0, _.T4)(A.amount, A.currency) })]
               })
           });
 }
-function g(e) {
+function T(e) {
     let { appId: t, skuId: n, onClick: o, ...s } = e,
         u = (0, l.Z)(),
-        c = (e) => {
+        _ = (e) => {
             if (
-                (_.default.track(h.rMx.STOREFRONT_PURCHASE_CLICKED, {
+                (d.default.track(f.rMx.STOREFRONT_PURCHASE_CLICKED, {
                     application_id: t,
                     sku_id: n
                 }),
                 !u)
             ) {
                 e.preventDefault(), e.stopPropagation();
-                let r = h.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(t, n),
-                    a = (0, i.U)(r, !1);
-                (0, d.uL)(a);
+                let r = f.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(t, n),
+                    a = (0, i.Ui)(r, !1);
+                (0, c.uL)(a);
                 return;
             }
             null == o || o(e);
         };
     return (0, r.jsx)(a.Button, {
         ...s,
-        onClick: c
+        onClick: _
     });
 }
-function S(e) {
+function g(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)(a.Button, {
         disabled: !0,
         className: t,
         look: a.Button.Looks.OUTLINED,
         color: a.Button.Colors.PRIMARY,
-        size: a.Button.Sizes.SMALL,
         children: n
     });
 }

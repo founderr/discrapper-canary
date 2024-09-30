@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         SubscriptionDetailsModal: function () {
-            return p;
+            return m;
         }
     });
 var r = n(735250),
@@ -12,19 +12,20 @@ var r = n(735250),
     l = n(757746),
     u = n(930155),
     c = n(889989),
-    d = n(73346),
-    _ = n(591759),
-    E = n(886253),
-    f = n(680005),
-    h = n(938337);
-function p(e) {
+    d = n(696906),
+    _ = n(73346),
+    E = n(591759),
+    f = n(886253),
+    h = n(680005),
+    p = n(938337);
+function m(e) {
     var t;
-    let { appId: n, groupListingId: p, subscriptionType: m, guildId: I, onClose: T, skuId: g, transitionState: S, onHeaderTitleClick: A } = e,
-        { data: v } = (0, u.H)(g),
-        { data: N } = (0, l.Z)(g),
+    let { appId: n, subscriptionType: m, onClose: I, skuId: T, guildId: g, transitionState: S, onHeaderTitleClick: A } = e,
+        { data: v } = (0, u.H)(T),
+        { data: N } = (0, l.Z)(T),
         O = i.useMemo(() => {
             var e;
-            return (null == N ? void 0 : N.thumbnail) != null && null !== (e = _.Z.toURLSafe((0, d._W)(n, N.thumbnail, 256))) && void 0 !== e ? e : void 0;
+            return (null == N ? void 0 : N.thumbnail) != null && null !== (e = E.Z.toURLSafe((0, _._W)(n, N.thumbnail, 256))) && void 0 !== e ? e : void 0;
         }, [n, null == N ? void 0 : N.thumbnail]),
         R = i.useMemo(() => {
             let e = null == N ? void 0 : N.benefits;
@@ -35,26 +36,36 @@ function p(e) {
                     description: e.description,
                     icon: (0, c.n)(n, e.icon)
                 }));
-        }, [n, null == N ? void 0 : N.benefits]);
+        }, [n, null == N ? void 0 : N.benefits]),
+        {
+            openModal: C,
+            canOpenModal: y,
+            cannotOpenReason: L
+        } = (0, d.Z)({
+            skuId: T,
+            guildId: g,
+            showBenefitsFirst: !1
+        });
     return null == N || null == v || 0 === v.length
         ? null
-        : (0, r.jsx)(E.A, {
+        : (0, r.jsx)(f.A, {
               appId: n,
-              skuId: g,
+              skuId: T,
               transitionState: S,
-              onHeaderTitleClick: null != A ? A : T,
-              onClose: T,
-              footer: (0, r.jsx)(f.p, {
+              onHeaderTitleClick: null != A ? A : I,
+              onClose: I,
+              footer: (0, r.jsx)(h.p, {
+                  onClick: C,
                   appId: n,
-                  groupListingId: p,
                   subscriptionType: m,
-                  guildId: I,
-                  skuId: g,
-                  subscriptionPlan: v[0]
+                  skuId: T,
+                  subscriptionPlan: v[0],
+                  canPurchase: y,
+                  cannotPurchaseReason: L
               }),
-              children: (0, r.jsx)(h.i, {
+              children: (0, r.jsx)(p.i, {
                   appId: n,
-                  skuId: g,
+                  skuId: T,
                   benefits:
                       null != R
                           ? R.map((e) =>

@@ -50,7 +50,6 @@ function I(e) {
                 (0, r.jsx)(u.Z, {
                     backButtonEligible: !!I || void 0,
                     prevStep: I ? i.h8.BENEFITS : void 0,
-                    showGuildPicker: null == n,
                     eligibleApplicationSubscriptionGuilds: t,
                     ...e
                 }),
