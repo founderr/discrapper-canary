@@ -29,6 +29,9 @@ n.d(t, {
     rf: function () {
         return v;
     },
+    x3: function () {
+        return N;
+    },
     z5: function () {
         return T;
     }
@@ -154,4 +157,11 @@ function v(e) {
         themeColors: e
     }),
         _(d.QP.PROFILE_THEME_COLOR);
+}
+function N(e) {
+    i.Z.dispatch({
+        type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET',
+        preset: e
+    }),
+        _(d.QP.PRESET);
 }

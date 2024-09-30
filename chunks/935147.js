@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return F;
+        return V;
     }
 });
 var n = t(735250),
@@ -16,196 +16,201 @@ var n = t(735250),
     E = t(175756),
     T = t(104494),
     S = t(639119),
-    I = t(81245),
-    N = t(53691),
-    A = t(165583),
-    C = t(197115),
-    m = t(267717),
-    g = t(350327),
-    h = t(996073),
-    O = t(25990),
-    p = t(626135),
-    R = t(74538),
-    x = t(296810),
-    M = t(433411),
-    f = t(532432),
-    D = t(504983),
-    L = t(134795),
-    P = t(513901),
-    b = t(451392),
-    Z = t(649700),
-    v = t(981631),
-    j = t(474936),
-    B = t(526761),
-    U = t(689938),
-    G = t(232335);
-function F(e) {
+    I = t(31590),
+    N = t(81245),
+    A = t(629654),
+    C = t(53691),
+    m = t(165583),
+    g = t(197115),
+    h = t(267717),
+    O = t(350327),
+    p = t(996073),
+    R = t(25990),
+    x = t(626135),
+    M = t(74538),
+    f = t(296810),
+    D = t(433411),
+    L = t(532432),
+    P = t(504983),
+    b = t(134795),
+    Z = t(513901),
+    v = t(451392),
+    j = t(649700),
+    B = t(981631),
+    U = t(474936),
+    G = t(526761),
+    F = t(689938),
+    y = t(232335);
+function V(e) {
     var s, t;
     let { user: i } = e,
-        F = R.ZP.isPremium(i),
+        V = M.ZP.isPremium(i),
         {
-            pendingAvatar: y,
-            pendingThemeColors: V,
-            tryItOutThemeColors: Y,
-            tryItOutAvatar: w,
-            tryItOutBanner: k,
-            tryItOutProfileEffectId: H
-        } = (0, o.cj)([O.Z], () => {
-            let e = O.Z.getAllPending(),
-                s = O.Z.getErrors(),
-                t = O.Z.getAllTryItOut();
+            pendingAvatar: Y,
+            pendingThemeColors: k,
+            tryItOutThemeColors: w,
+            tryItOutAvatar: H,
+            tryItOutBanner: W,
+            tryItOutProfileEffectId: K
+        } = (0, o.cj)([R.Z], () => {
+            let e = R.Z.getAllPending(),
+                s = R.Z.getErrors(),
+                t = R.Z.getAllTryItOut();
             return {
                 ...e,
                 ...t,
                 errors: s
             };
         }),
-        W = (0, E.Z)(H),
-        K = a.useRef(null);
-    (0, h.Z)(K, B.Y_.TRY_IT_OUT);
-    let { analyticsLocations: z, sourceAnalyticsLocations: Q } = (0, u.ZP)(_.Z.USER_SETTINGS_TRY_OUT_PREMIUM);
+        z = (0, E.Z)(K),
+        Q = a.useRef(null);
+    (0, p.Z)(Q, G.Y_.TRY_IT_OUT);
+    let { analyticsLocations: X, sourceAnalyticsLocations: q } = (0, u.ZP)(_.Z.USER_SETTINGS_TRY_OUT_PREMIUM);
     a.useEffect(() => {
-        p.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
-            type: j.cd.PREMIUM_PROFILE_TRY_IT_OUT,
-            location: { page: v.ZY5.USER_SETTINGS },
-            location_stack: Q
+        x.default.track(B.rMx.PREMIUM_UPSELL_VIEWED, {
+            type: U.cd.PREMIUM_PROFILE_TRY_IT_OUT,
+            location: { page: B.ZY5.USER_SETTINGS },
+            location_stack: q
         });
-    }, [Q, i]);
-    let X = (null === (t = (0, S.N)()) || void 0 === t ? void 0 : null === (s = t.subscription_trial) || void 0 === s ? void 0 : s.sku_id) === j.Si.TIER_2,
-        q = (0, T.Ng)(),
-        J = (0, T.Wp)(q, j.Si.TIER_2),
-        $ = 'TryOutPremiumSection';
+    }, [q, i]);
+    let J = (null === (t = (0, S.N)()) || void 0 === t ? void 0 : null === (s = t.subscription_trial) || void 0 === s ? void 0 : s.sku_id) === U.Si.TIER_2,
+        $ = (0, T.Ng)(),
+        ee = (0, T.Wp)($, U.Si.TIER_2),
+        es = 'TryOutPremiumSection';
     (0, d.j)({
-        location: $ + ' auto on',
+        location: es + ' auto on',
         autoTrackExposure: !0
     }),
         (0, d.j)({
-            location: $ + ' auto off',
+            location: es + ' auto off',
             autoTrackExposure: !1
         });
-    let ee = (0, I.Mu)('TryOutPremiumSection');
+    let et = (0, N.Mu)('TryOutPremiumSection'),
+        { enabled: en } = I.Z.useExperiment({ location: 'UserSettingsProfileCustomization' }, { autoTrackExposure: !1 });
     return (0, n.jsx)(u.Gt, {
-        value: z,
-        children: (0, n.jsxs)(D.Z, {
-            ref: K,
-            className: G.tryItOutSection,
-            type: D.Y.PREMIUM,
+        value: X,
+        children: (0, n.jsxs)(P.Z, {
+            ref: Q,
+            className: y.tryItOutSection,
+            type: P.Y.PREMIUM,
             isShown: !0,
             hasBackground: !0,
             children: [
-                (0, n.jsx)(x.Z, {
-                    layoutClassName: G.tryItOutLayout,
+                (0, n.jsx)(f.Z, {
+                    layoutClassName: y.tryItOutLayout,
                     previewTitle: (0, n.jsxs)(n.Fragment, {
                         children: [
                             (0, n.jsx)(l.NitroWheelIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: G.premiumIcon
+                                className: y.premiumIcon
                             }),
-                            U.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW
+                            F.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW
                         ]
                     }),
-                    profilePreview: (0, n.jsx)(Z.Z, { user: i }),
+                    profilePreview: (0, n.jsxs)(n.Fragment, {
+                        children: [en && (0, n.jsx)(A.Z, {}), (0, n.jsx)(j.Z, { user: i })]
+                    }),
                     children: (0, n.jsxs)('div', {
-                        className: G.editor,
+                        className: y.editor,
                         children: [
                             (0, n.jsxs)('div', {
                                 children: [
                                     (0, n.jsx)(l.Heading, {
                                         variant: 'heading-xl/extrabold',
-                                        children: U.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_HEADER
+                                        children: F.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_HEADER
                                     }),
                                     (0, n.jsx)(l.Text, {
-                                        className: G.description,
+                                        className: y.description,
                                         variant: 'text-sm/normal',
-                                        children: U.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_DESCRIPTION
+                                        children: F.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_DESCRIPTION
                                     })
                                 ]
                             }),
-                            (0, n.jsx)(b.Z, {
-                                className: G.customizationSection,
+                            (0, n.jsx)(v.Z, {
+                                className: y.customizationSection,
                                 user: i,
-                                pendingAvatar: null != w ? w : y,
-                                pendingColors: null != Y ? Y : V,
-                                onThemeColorsChange: g.rf,
+                                pendingAvatar: null != H ? H : Y,
+                                pendingColors: null != w ? w : k,
+                                onThemeColorsChange: O.rf,
                                 showPremiumIcon: !1,
                                 preventDisabled: !0
                             }),
-                            (0, n.jsx)(L.Z, {
-                                className: G.customizationSection,
+                            (0, n.jsx)(b.Z, {
+                                className: y.customizationSection,
                                 isTryItOutFlow: !0,
-                                showRemoveBannerButton: null != k,
-                                onBannerChange: g.f4,
+                                showRemoveBannerButton: null != W,
+                                onBannerChange: O.f4,
                                 showPremiumIcon: !1
                             }),
-                            (0, n.jsx)(f.Z, {
-                                className: G.customizationSection,
+                            (0, n.jsx)(L.Z, {
+                                className: y.customizationSection,
                                 isTryItOutFlow: !0,
-                                onAvatarChange: g.c_,
+                                onAvatarChange: O.c_,
                                 showRemoveAvatarButton: !1,
-                                changeAvatarButtonText: U.Z.Messages.USER_SETTINGS_ADD_ANIMATED_AVATAR,
-                                sectionTitle: U.Z.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
+                                changeAvatarButtonText: F.Z.Messages.USER_SETTINGS_ADD_ANIMATED_AVATAR,
+                                sectionTitle: F.Z.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
                             }),
                             (0, n.jsx)(
-                                M.Z,
+                                D.Z,
                                 {
                                     isTryItOutFlow: !0,
-                                    className: G.customizationSection,
+                                    className: y.customizationSection,
                                     user: i,
-                                    sectionTitle: U.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
+                                    sectionTitle: F.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
                                 },
                                 'decoration'
                             ),
                             (0, n.jsx)(
-                                P.Z,
+                                Z.Z,
                                 {
-                                    className: G.customizationSection,
+                                    className: y.customizationSection,
                                     isTryItOutFlow: !0,
-                                    initialSelectedEffectId: W,
+                                    initialSelectedEffectId: z,
                                     user: i,
-                                    sectionTitle: U.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
+                                    sectionTitle: F.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
                                 },
                                 'effect'
                             ),
-                            !X &&
+                            !J &&
                                 (0, n.jsxs)(n.Fragment, {
                                     children: [
                                         (0, n.jsx)(l.Text, {
                                             variant: 'text-sm/normal',
-                                            className: r()({ [G.premiumPerksListTitle]: !ee }),
-                                            children: U.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
+                                            className: r()({ [y.premiumPerksListTitle]: !et }),
+                                            children: F.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
                                         }),
-                                        !ee &&
-                                            (0, n.jsx)(C.Z, {
+                                        !et &&
+                                            (0, n.jsx)(g.Z, {
                                                 onSubscribeModalClose: (e) => {
-                                                    e && ((0, c.I5)(w), (0, g.g_)(k), (0, g.z5)(Y));
+                                                    e && ((0, c.I5)(H), (0, O.g_)(W), (0, O.z5)(w));
                                                 },
-                                                subscriptionTier: j.Si.TIER_2,
-                                                className: G.premiumSubscribeButton,
+                                                subscriptionTier: U.Si.TIER_2,
+                                                className: y.premiumSubscribeButton,
                                                 size: l.Button.Sizes.MEDIUM,
-                                                buttonText: F ? U.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : J ? U.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == q ? void 0 : q.discount.amount }) : U.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+                                                buttonText: V ? F.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : ee ? F.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == $ ? void 0 : $.discount.amount }) : F.Z.Messages.PREMIUM_UPSELL_GET_NITRO
                                             })
                                     ]
                                 })
                         ]
                     })
                 }),
-                X &&
+                J &&
                     (0, n.jsxs)('div', {
                         children: [
-                            (0, n.jsx)('div', { className: G.premiumTier2Divider }),
-                            (0, n.jsx)(A.ZP, {
-                                type: j.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
-                                subscriptionTier: j.Si.TIER_2
+                            (0, n.jsx)('div', { className: y.premiumTier2Divider }),
+                            (0, n.jsx)(m.ZP, {
+                                type: U.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
+                                subscriptionTier: U.Si.TIER_2
                             })
                         ]
                     }),
-                ee &&
-                    (0, n.jsx)(N.p, {
-                        className: G.floatingUpsell,
+                et &&
+                    (0, n.jsx)(C.p, {
+                        className: y.floatingUpsell,
                         showUpsell: !0,
-                        text: U.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_UPSELL.format({ onClick: m.openPremiumTryItOutProfileUpsell }),
-                        button: U.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
+                        text: F.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_UPSELL.format({ onClick: h.openPremiumTryItOutProfileUpsell }),
+                        button: F.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
                         position: 'inline',
                         showShadow: !1
                     })

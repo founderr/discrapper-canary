@@ -97,31 +97,37 @@ function Y(e) {
     let { banner: t } = e;
     p = t;
 }
-function j() {
-    r = void 0;
+function j(e) {
+    let {
+        preset: { themeColors: t, bannerImage: n, avatarDecoration: r }
+    } = e;
+    (_ = t), (p = n), (f = r);
 }
 function W() {
-    N = {};
+    r = void 0;
 }
 function K() {
-    z(), q(), (N = {});
+    N = {};
 }
 function z() {
-    (r = void 0), (i = void 0), (a = void 0), (o = void 0);
+    q(), Q(), (N = {});
 }
 function q() {
-    (s = void 0), (l = void 0), (u = void 0), (c = void 0), (d = void 0), (o = void 0);
+    (r = void 0), (i = void 0), (a = void 0), (o = void 0);
 }
 function Q() {
-    (E = void 0), (f = void 0), (h = void 0), (p = void 0), (_ = void 0);
+    (s = void 0), (l = void 0), (u = void 0), (c = void 0), (d = void 0), (o = void 0);
 }
 function X() {
-    a = void 0;
+    (E = void 0), (f = void 0), (h = void 0), (p = void 0), (_ = void 0);
 }
 function $() {
-    K(), Q(), R();
+    a = void 0;
 }
-class J extends (m = T.ZP.Store) {
+function J() {
+    z(), X(), R();
+}
+class ee extends (m = T.ZP.Store) {
     getFormState() {
         return v;
     }
@@ -199,14 +205,14 @@ class J extends (m = T.ZP.Store) {
         };
     }
 }
-A(J, 'displayName', 'UserSettingsAccountStore'),
-    (t.Z = new J(g.Z, {
+A(ee, 'displayName', 'UserSettingsAccountStore'),
+    (t.Z = new ee(g.Z, {
         USER_SETTINGS_ACCOUNT_INIT: O,
         USER_SETTINGS_MODAL_INIT: O,
         USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: O,
         USER_SETTINGS_MODAL_SET_SECTION: L,
         USER_SETTINGS_ACCOUNT_CLOSE: R,
-        USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: $,
+        USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: J,
         USER_SETTINGS_ACCOUNT_SUBMIT: C,
         USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: y,
         USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: b,
@@ -224,11 +230,12 @@ A(J, 'displayName', 'UserSettingsAccountStore'),
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: H,
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: Y,
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: F,
-        USER_SETTINGS_CLEAR_ERRORS: W,
-        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: z,
-        USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: q,
-        USER_SETTINGS_RESET_ALL_PENDING: K,
-        USER_SETTINGS_RESET_ALL_TRY_IT_OUT: Q,
-        USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: X,
-        LOGOUT: j
+        USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET: j,
+        USER_SETTINGS_CLEAR_ERRORS: K,
+        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: q,
+        USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: Q,
+        USER_SETTINGS_RESET_ALL_PENDING: z,
+        USER_SETTINGS_RESET_ALL_TRY_IT_OUT: X,
+        USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: $,
+        LOGOUT: W
     }));
