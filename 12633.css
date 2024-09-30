@@ -12885,6 +12885,16 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     border-color: var(--interactive-normal)
 }
 
+.repliedMessageSpine_f9f2ca:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    cursor: pointer
+}
+
 .repliedMessageSpine_f9f2ca.repliedMessageContentHovered_f9f2ca {
     border-color: var(--interactive-normal)
 }
