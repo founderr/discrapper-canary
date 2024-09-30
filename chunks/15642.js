@@ -19,6 +19,7 @@ function c(e) {
         iconNode: (0, r.jsx)(i.BellIcon, { colorClass: u.icon }),
         children: (0, r.jsx)(a.Z, {
             giftIntentType: t,
+            premiumGiftIntentCardType: a.U.SYSTEM_MESSAGE,
             recipientUser: n,
             analyticsPage: (0, o.mE)(c),
             analyticsSection: l.jXE.CHANNEL,
