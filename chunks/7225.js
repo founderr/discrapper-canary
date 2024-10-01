@@ -81,12 +81,7 @@ function I(e) {
                                         let e = ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(a, g.ApplicationDirectoryProfileSections.STORE));
                                         (0, p.JG)(e), (0, o.showToast)((0, o.createToast)(f.Z.Messages.COPIED_LINK, o.ToastType.SUCCESS)), (0, m.X)(a, m.B.STORE_MODAL);
                                     },
-                                    children: (0, l.jsx)(o.LinkIcon, {
-                                        size: 'custom',
-                                        width: 20,
-                                        height: 20,
-                                        color: 'var(--white)'
-                                    })
+                                    children: (0, l.jsx)(o.LinkIcon, { size: 'sm' })
                                 }),
                             (0, l.jsx)(o.ModalCloseButton, {
                                 onClick: n,
