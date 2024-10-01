@@ -1,184 +1,193 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return G;
     }
 });
 var r = n(47120);
 var i = n(735250),
     a = n(470079),
-    o = n(442837),
-    s = n(481060),
-    l = n(727637),
-    u = n(58540),
-    c = n(100527),
-    d = n(906732),
-    _ = n(680295),
-    E = n(271383),
-    f = n(430824),
-    h = n(785717),
-    p = n(221292),
-    m = n(687158),
-    I = n(326094),
-    T = n(510659),
-    g = n(113557),
-    S = n(867176),
-    A = n(169979),
-    v = n(119096),
-    N = n(502762),
-    O = n(544989),
-    R = n(481932),
-    C = n(195387),
-    y = n(272510),
-    L = n(171368),
-    b = n(978395),
-    D = n(161572),
-    M = n(228168),
-    P = n(981631),
-    U = n(689938),
-    w = n(451563);
-function x(e) {
-    let { user: t, currentUser: n, guildId: r, channelId: x, messageId: G, roleId: k, closePopout: B, setPopoutRef: F, disableUserProfileLink: Z = __OVERLAY__, newAnalyticsLocations: V = [] } = e,
-        { analyticsLocations: H } = (0, d.ZP)([...V, c.Z.BITE_SIZE_PROFILE_POPOUT]),
-        Y = (0, I.Z)({
+    o = n(526629),
+    s = n(442837),
+    l = n(481060),
+    u = n(727637),
+    c = n(58540),
+    d = n(100527),
+    _ = n(906732),
+    E = n(680295),
+    f = n(271383),
+    h = n(430824),
+    p = n(785717),
+    m = n(221292),
+    I = n(687158),
+    T = n(326094),
+    g = n(510659),
+    S = n(113557),
+    A = n(867176),
+    v = n(169979),
+    N = n(119096),
+    O = n(502762),
+    R = n(544989),
+    C = n(481932),
+    y = n(195387),
+    L = n(272510),
+    b = n(171368),
+    D = n(978395),
+    M = n(161572),
+    P = n(228168),
+    U = n(981631),
+    w = n(689938),
+    x = n(451563);
+function G(e) {
+    let { user: t, currentUser: n, guildId: r, channelId: G, messageId: k, roleId: B, closePopout: F, setPopoutRef: Z, disableUserProfileLink: V = __OVERLAY__, newAnalyticsLocations: H = [] } = e,
+        { analyticsLocations: Y } = (0, _.ZP)([...H, d.Z.BITE_SIZE_PROFILE_POPOUT]),
+        j = (0, T.Z)({
             user: t,
             currentUser: n,
-            location: P.Sbl.BITE_SIZE_POPOUT
+            location: U.Sbl.BITE_SIZE_POPOUT
         }),
-        j = (0, h.ZB)({
-            layout: Y ? 'BITE_SIZE_POPOUT' : 'BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE',
+        W = (0, p.ZB)({
+            layout: j ? 'BITE_SIZE_POPOUT' : 'BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE',
             userId: t.id,
             guildId: r,
-            channelId: x,
-            messageId: G,
-            roleId: k
+            channelId: G,
+            messageId: k,
+            roleId: B
         }),
-        W = (0, o.e7)([f.Z], () => (null != r ? f.Z.getGuild(r) : null)),
-        K = (0, o.e7)([E.ZP], () => (null != r ? E.ZP.getMember(r, t.id) : null)),
-        z = a.useMemo(() => (null != r ? { [r]: [t.id] } : {}), [r, t.id]);
-    (0, u.$)(z);
-    let q = a.useRef(null),
-        Q = (0, m.ZP)(t.id, r),
-        X = (0, l.Z)(q),
-        $ = (0, T.$m)();
+        K = (0, s.e7)([h.Z], () => (null != r ? h.Z.getGuild(r) : null)),
+        z = (0, s.e7)([f.ZP], () => (null != r ? f.ZP.getMember(r, t.id) : null)),
+        q = a.useMemo(() => (null != r ? { [r]: [t.id] } : {}), [r, t.id]);
+    (0, c.$)(q);
+    let Q = a.useRef(null),
+        X = (0, I.ZP)(t.id, r),
+        $ = (0, u.Z)(Q),
+        J = (0, g.$m)(),
+        ee = (0, l.useSpring)({
+            opacity: null != J.interactionType ? 1 : 0,
+            config: { duration: 150 }
+        });
     a.useEffect(() => {
-        null == F || F(null == q ? void 0 : q.current);
-    }, [q, F]);
-    let J = (e) => {
-            null == B || B(),
-                (0, L.openUserProfileModal)({
-                    sourceAnalyticsLocations: H,
-                    ...j,
+        null == Z || Z(null == Q ? void 0 : Q.current);
+    }, [Q, Z]);
+    let et = (e) => {
+            null == F || F(),
+                (0, b.openUserProfileModal)({
+                    sourceAnalyticsLocations: Y,
+                    ...W,
                     ...e
                 });
         },
-        ee = () =>
-            Z
+        en = () =>
+            V
                 ? null
-                : (0, i.jsx)(s.MenuItem, {
+                : (0, i.jsx)(l.MenuItem, {
                       id: 'view-profile',
-                      label: U.Z.Messages.VIEW_FULL_PROFILE,
+                      label: w.Z.Messages.VIEW_FULL_PROFILE,
                       action: () => {
-                          J(),
-                              (0, p.pQ)({
+                          et(),
+                              (0, m.pQ)({
                                   action: 'PRESS_VIEW_PROFILE',
-                                  analyticsLocations: H,
-                                  ...j
+                                  analyticsLocations: Y,
+                                  ...W
                               });
                       }
                   });
-    return (0, i.jsx)(d.Gt, {
-        value: H,
-        children: (0, i.jsx)(h.Mt, {
-            value: j,
-            shouldTrackViewOnMount: null == K || null != K.fullProfileLoadedTimestamp,
-            children: (0, i.jsx)(T.NJ, {
-                value: $,
-                children: (0, i.jsxs)(s.Dialog, {
-                    ref: q,
+    return (0, i.jsx)(_.Gt, {
+        value: Y,
+        children: (0, i.jsx)(p.Mt, {
+            value: W,
+            shouldTrackViewOnMount: null == z || null != z.fullProfileLoadedTimestamp,
+            children: (0, i.jsx)(g.NJ, {
+                value: J,
+                children: (0, i.jsxs)(l.Dialog, {
+                    ref: Q,
                     'aria-label': t.username,
                     children: [
-                        (0, i.jsxs)(N.Z, {
+                        (0, i.jsxs)(O.Z, {
                             user: t,
-                            displayProfile: Q,
-                            profileType: M.y0.BITE_SIZE,
+                            displayProfile: X,
+                            profileType: P.y0.BITE_SIZE,
                             children: [
-                                null != $.interactionType && (0, i.jsx)('div', { className: w.backdrop }),
-                                (0, i.jsxs)(O.Z, {
-                                    profileType: M.y0.BITE_SIZE,
+                                null != J.interactionType &&
+                                    (0, i.jsx)(o.animated.div, {
+                                        style: ee,
+                                        className: x.backdrop
+                                    }),
+                                (0, i.jsxs)(R.Z, {
+                                    profileType: P.y0.BITE_SIZE,
                                     children: [
-                                        (0, i.jsx)(C.Z, {
+                                        (0, i.jsx)(y.Z, {
                                             user: t,
                                             guildId: r,
-                                            channelId: x,
-                                            onClose: B
+                                            channelId: G,
+                                            onClose: F
                                         }),
-                                        (0, i.jsx)(R.Z, {
-                                            profileType: M.y0.BITE_SIZE,
+                                        (0, i.jsx)(C.Z, {
+                                            profileType: P.y0.BITE_SIZE,
                                             user: t
                                         }),
                                         t.id !== n.id &&
-                                            (0, i.jsx)(y.Z, {
+                                            (0, i.jsx)(L.Z, {
                                                 user: t,
                                                 guildId: r,
-                                                viewProfileItem: ee()
+                                                viewProfileItem: en()
                                             })
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {
-                                    className: w.header,
+                                    className: x.header,
                                     children: [
-                                        (0, i.jsx)(S.Z, {
+                                        (0, i.jsx)(A.Z, {
                                             user: t,
-                                            displayProfile: Q,
+                                            displayProfile: X,
                                             guildId: r,
-                                            profileType: M.y0.BITE_SIZE
+                                            profileType: P.y0.BITE_SIZE
+                                        }),
+                                        (0, i.jsx)(N.Z, {
+                                            userId: t.id,
+                                            className: x.toast,
+                                            onClose: F
+                                        }),
+                                        (0, i.jsx)(S.Z, {
+                                            location: 'UserProfilePopout',
+                                            user: t,
+                                            displayProfile: X,
+                                            guildId: r,
+                                            channelId: G,
+                                            profileType: P.y0.BITE_SIZE,
+                                            onOpenProfile: V ? void 0 : et
                                         }),
                                         (0, i.jsx)(v.Z, {
-                                            userId: t.id,
-                                            className: w.toast,
-                                            onClose: B
-                                        }),
-                                        (0, i.jsx)(g.Z, {
-                                            location: 'UserProfilePopout',
-                                            user: t,
-                                            displayProfile: Q,
-                                            guildId: r,
-                                            channelId: x,
-                                            profileType: M.y0.BITE_SIZE,
-                                            onOpenProfile: Z ? void 0 : J
-                                        }),
-                                        (0, i.jsx)(A.Z, {
                                             location: 'UserProfilePopout',
                                             user: t,
                                             guildId: r,
-                                            channelId: x,
-                                            profileType: M.y0.BITE_SIZE,
-                                            onCloseProfile: B
+                                            channelId: G,
+                                            profileType: P.y0.BITE_SIZE,
+                                            onCloseProfile: F
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(b.Z, {
-                                    user: t,
-                                    currentUser: n,
-                                    displayProfile: Q,
-                                    guild: W,
-                                    isHovering: null == $.interactionType && X,
-                                    onOpenProfile: Z ? void 0 : J,
-                                    channelId: x,
-                                    onClose: B
-                                }),
                                 (0, i.jsx)(D.Z, {
                                     user: t,
+                                    currentUser: n,
+                                    displayProfile: X,
+                                    guild: K,
+                                    isHovering: null == J.interactionType && $,
+                                    onOpenProfile: V ? void 0 : et,
+                                    channelId: G,
+                                    onClose: F
+                                }),
+                                (0, i.jsx)(M.Z, {
+                                    user: t,
                                     guildId: r,
-                                    channelId: x,
-                                    onClose: B
+                                    channelId: G,
+                                    onClose: F
                                 })
                             ]
                         }),
-                        (null == Q ? void 0 : Q.profileEffectId) != null &&
-                            (0, i.jsx)(_.Z, {
-                                profileEffectId: null == Q ? void 0 : Q.profileEffectId,
-                                isHovering: X
+                        (null == X ? void 0 : X.profileEffectId) != null &&
+                            (0, i.jsx)(E.Z, {
+                                profileEffectId: null == X ? void 0 : X.profileEffectId,
+                                isHovering: $
                             })
                     ]
                 })
