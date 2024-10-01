@@ -202,10 +202,8 @@ class p extends i.EventEmitter {
                 try {
                     i.assert(
                         t,
-                        i
-                            .object()
+                        (0, d.Z)(i)
                             .required()
-                            .unknown(!0)
                             .keys({
                                 code: i.number().valid(Object.values(_.$VG)).required(),
                                 message: i.string().optional()

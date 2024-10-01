@@ -22,8 +22,7 @@ t.Z = {
                 .required()
                 .keys({
                     pid: e.number().min(0),
-                    activity: e
-                        .object()
+                    activity: (0, _.Z)(e)
                         .keys({
                             state: e.string().min(2).max(128),
                             details: e.string().min(2).max(128),

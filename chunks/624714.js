@@ -15,10 +15,12 @@ var i = n(544891),
 t.Z = {
     [m.Etm.SEND_ANALYTICS_EVENT]: {
         validation: (e) =>
-            (0, _.Z)(e).required().keys({
-                event_name: e.string().required(),
-                event_properties: e.object().required()
-            }),
+            (0, _.Z)(e)
+                .required()
+                .keys({
+                    event_name: e.string().required(),
+                    event_properties: (0, _.Z)(e).required()
+                }),
         handler(e) {
             var t;
             let {
