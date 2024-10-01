@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(5955),
     A = n(918701),
     v = n(121711),
-    L = n(703656),
-    Z = n(108427),
+    Z = n(703656),
+    L = n(108427),
     R = n(706454),
     O = n(210887),
     x = n(480294),
@@ -97,8 +97,8 @@ class J extends a.PureComponent {
                 length: parseInt(n, 10)
             });
         } else null != l && l !== Y.Hk && E.Z.wait(() => (0, m.uY)(l));
-        let u = null !== (t = null === (e = (0, L.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
-        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, Z.e)('guild_discovery'), (0, f.kR)({ selectedCategoryId: o });
+        let u = null !== (t = null === (e = (0, Z.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
+        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, L.e)('guild_discovery'), (0, f.kR)({ selectedCategoryId: o });
     }
     componentDidUpdate(e) {
         let {
@@ -380,8 +380,8 @@ class J extends a.PureComponent {
                     { loadingGuildId: l } = this.state;
                 if (e === l) return;
                 let o = null !== (s = null === (a = this._scroller.current) || void 0 === a ? void 0 : a.getScrollerState().scrollTop) && void 0 !== s ? s : 0,
-                    { location: c } = (0, L.s1)();
-                (0, L.dL)({
+                    { location: c } = (0, Z.s1)();
+                (0, Z.dL)({
                     ...c,
                     state: o
                 }),

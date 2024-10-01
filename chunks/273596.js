@@ -33,13 +33,13 @@ let v = Object.freeze({
         left: 32,
         right: 202
     }),
-    L = Object.freeze({
+    Z = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 32
     }),
-    Z = o().throttle(m.c6, 1000, {
+    L = o().throttle(m.c6, 1000, {
         leading: !1,
         trailing: !0
     });
@@ -80,7 +80,7 @@ function R(e) {
             y((0, u.P)());
         }, [R]),
         a.useEffect(() => {
-            Z({
+            L({
                 loadId: t,
                 searchId: D,
                 query: R,
@@ -225,7 +225,7 @@ function R(e) {
                     { leading: !0 }
                 );
         }, [b, O]),
-        ee = j ? v : L;
+        ee = j ? v : Z;
     return (0, i.jsxs)('div', {
         className: A.container,
         ref: F,

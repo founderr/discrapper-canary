@@ -12,7 +12,7 @@ var r = n(735250),
     u = n(364060);
 function c(e) {
     let { applicationId: t, guildId: n } = e,
-        { data: i } = (0, s.I)(t);
+        { data: i } = (0, s.IX)(t);
     return null == i
         ? null
         : (0, r.jsx)(d, {

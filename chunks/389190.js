@@ -9,8 +9,8 @@ s.d(n, {
 var t = s(735250);
 s(470079);
 var i = s(442837),
-    l = s(481060),
-    o = s(239091),
+    o = s(481060),
+    l = s(239091),
     r = s(129861),
     c = s(906732),
     a = s(158776),
@@ -20,16 +20,16 @@ var i = s(442837),
     _ = s(981631),
     E = s(689938),
     f = s(519294);
-let m = (0, l.getAvatarSize)(l.AvatarSizes.SIZE_40);
+let m = (0, o.getAvatarSize)(o.AvatarSizes.SIZE_40);
 function x(e) {
     let { user: n, status: c, onSelect: d } = e,
         u = (0, i.e7)([a.Z], () => a.Z.isMobileOnline(n.id));
-    return (0, t.jsxs)(l.Clickable, {
+    return (0, t.jsxs)(o.Clickable, {
         focusProps: { offset: { right: 8 } },
         className: f.listRow,
         onClick: d,
         onContextMenu: (e) => {
-            (0, o.jW)(e, async () => {
+            (0, l.jW)(e, async () => {
                 let { default: e } = await Promise.all([s.e('79695'), s.e('69220')]).then(s.bind(s, 881351));
                 return (s) =>
                     (0, t.jsx)(e, {
@@ -39,10 +39,10 @@ function x(e) {
             });
         },
         children: [
-            (0, t.jsx)(l.Avatar, {
+            (0, t.jsx)(o.Avatar, {
                 src: n.getAvatarURL(void 0, m),
                 'aria-label': n.username,
-                size: l.AvatarSizes.SIZE_40,
+                size: o.AvatarSizes.SIZE_40,
                 status: c,
                 isMobile: u,
                 className: f.listAvatar
@@ -58,25 +58,25 @@ function x(e) {
 function Z(e) {
     let { user: n, onClose: s } = e,
         { mutualFriends: i } = (0, u.Z)(n.id),
-        { analyticsLocations: o } = (0, c.ZP)(),
+        { analyticsLocations: l } = (0, c.ZP)(),
         { context: r, trackUserProfileAction: a } = (0, d.KZ)(),
         m = (e) => {
             s(),
                 (0, I.openUserProfileModal)({
                     ...r,
                     userId: e,
-                    sourceAnalyticsLocations: o,
+                    sourceAnalyticsLocations: l,
                     analyticsLocation: { section: _.jXE.USER_PROFILE_MUTUAL_FRIENDS }
                 });
         };
-    return (0, t.jsx)(l.ScrollerThin, {
+    return (0, t.jsx)(o.ScrollerThin, {
         className: f.listScroller,
         fade: !0,
         children:
             null == i
                 ? (0, t.jsx)('div', {
                       className: f.empty,
-                      children: (0, t.jsx)(l.Spinner, {})
+                      children: (0, t.jsx)(o.Spinner, {})
                   })
                 : 0 === i.length
                   ? (0, t.jsxs)('div', {

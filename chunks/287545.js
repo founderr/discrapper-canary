@@ -354,7 +354,7 @@ class Q extends c.Z {
                 if (void 0 === l || (I.tx.has(null == l ? void 0 : l.type) && A.Z.getVoiceChannelId() !== i)) return;
                 let u = D.ZP.getSelfEmbeddedActivityForChannel(i);
                 if ((null == u ? void 0 : u.applicationId) === a) return;
-                let c = await d.Z.fetchApplication(a);
+                let c = await d.ZP.fetchApplication(a);
                 if (!(0, w.a)(l)) {
                     this.showLaunchErrorModal(F.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
                     return;

@@ -43,7 +43,7 @@ let R = (e) => {
         B = (0, g.CR)(k, y),
         F = B.some((e) => e.id === s) ? s : null === (n = B[0]) || void 0 === n ? void 0 : n.id,
         Z = (null == M ? void 0 : M.published) === !0 && (null == D ? void 0 : D.isAvailable()) === !0,
-        { data: V } = (0, f.I)(k),
+        { data: V } = (0, f.IX)(k),
         { analyticsLocations: H } = (0, _.ZP)(),
         { activeSubscription: Y, activeEntitlement: j } = (0, g.C9)(U, F),
         W = (0, E.Z)(),

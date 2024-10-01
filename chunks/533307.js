@@ -21,7 +21,7 @@ async function E(e) {
             let e = s.Z.getApplication(r.application_id);
             if (null == e)
                 try {
-                    await o.Z.fetchApplication(r.application_id);
+                    await o.ZP.fetchApplication(r.application_id);
                 } catch (e) {}
         }
         if (r.application_id === d.XAJ)

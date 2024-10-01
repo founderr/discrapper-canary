@@ -164,7 +164,7 @@ function ep(e) {
         }, [ey, null == ef ? void 0 : ef.length, O, eI]),
         [eJ, e0] = _.useState(null);
     _.useEffect(() => {
-        e$ && U.Z.fetchApplication(m).then((e) => e0(F.Z.createFromServer(e)));
+        e$ && U.ZP.fetchApplication(m).then((e) => e0(F.Z.createFromServer(e)));
     }, [m, e$]);
     let e1 = _.useMemo(() => {
             var e, t;

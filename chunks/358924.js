@@ -22,8 +22,8 @@ var i,
     N = n(812206),
     A = n(933557),
     v = n(194082),
-    L = n(264165),
-    Z = n(630186),
+    Z = n(264165),
+    L = n(630186),
     R = n(925329),
     O = n(382182),
     x = n(871118),
@@ -219,7 +219,7 @@ $.Icon = J;
 let ee = (e) => {
     let { children: t, className: n, ...i } = e;
     return (0, s.jsx)(u.FocusRing, {
-        children: (0, s.jsx)(Z.Z, {
+        children: (0, s.jsx)(L.Z, {
             className: o()(n, F.wrapper),
             padded: !0,
             ...i,
@@ -230,7 +230,7 @@ let ee = (e) => {
 (ee.Header = $),
     (ee.Body = (e) => {
         let { children: t } = e;
-        return (0, s.jsx)(Z.Z, {
+        return (0, s.jsx)(L.Z, {
             inset: !0,
             padded: !1,
             className: F.body,
@@ -390,7 +390,7 @@ let ee = (e) => {
             { name: c, details: d, assets: _, application_id: h } = i;
         if (null != _ && (0, f.Z)(i)) {
             var m;
-            t = (0, s.jsx)(L.Z, {
+            t = (0, s.jsx)(Z.Z, {
                 className: F.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, s.jsxs)(u.Clickable, {

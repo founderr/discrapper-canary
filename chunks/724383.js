@@ -42,7 +42,7 @@ function A(e) {
                     ((0, o.j)(() => {
                         h.GN.setState({ loadingGameApplication: !0 });
                     }),
-                    d.Z.fetchApplication(n).finally(() => {
+                    d.ZP.fetchApplication(n).finally(() => {
                         (0, o.j)(() => {
                             h.GN.setState({ loadingGameApplication: !1 });
                         });

@@ -739,7 +739,7 @@ function eh(e) {
     return (a.useEffect(() => {
         (0, j._)();
     }, []),
-    (null !== (t = null == g ? void 0 : g.bot) && void 0 !== t && t) || (null !== (n = null == g ? void 0 : g.isProvisional()) && void 0 !== n && n))
+    (null !== (t = null == g ? void 0 : g.bot) && void 0 !== t && t) || (null !== (n = null == g ? void 0 : g.isProvisional) && void 0 !== n && n))
         ? null
         : (0, s.jsx)(p.Popout, {
               renderPopout: (e) =>

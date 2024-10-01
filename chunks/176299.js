@@ -27,8 +27,8 @@ var i = n(735250),
     N = n(963202),
     A = n(118379),
     v = n(652515),
-    L = n(544978),
-    Z = n(540059),
+    Z = n(544978),
+    L = n(540059),
     R = n(194729),
     O = n(668940),
     x = n(831565),
@@ -115,7 +115,7 @@ let ep = 'resizable-sidebar-width',
         name: 'GuildOnboardingPage',
         renderLoader: eT
     }),
-    eL = (e) => {
+    eZ = (e) => {
         let { match: t } = e,
             n = (0, u.e7)([$.Z, en.Z], () => {
                 let e = en.Z.getChannelId();
@@ -130,9 +130,9 @@ let ep = 'resizable-sidebar-width',
                 if ((null == e ? void 0 : e.type) === H.z.SERVER_SHOP)
                     switch (e.initialTab) {
                         case 'role_subscriptions':
-                            return L.y.GUILD_ROLE_SUBSCRIPTIONS;
+                            return Z.y.GUILD_ROLE_SUBSCRIPTIONS;
                         case 'guild_products':
-                            return L.y.GUILD_PRODUCTS;
+                            return Z.y.GUILD_PRODUCTS;
                         default:
                             return;
                     }
@@ -144,7 +144,7 @@ let ep = 'resizable-sidebar-width',
                     return d
                         ? (0, i.jsx)(ef, {
                               guildId: a,
-                              initialTab: L.y.GUILD_ROLE_SUBSCRIPTIONS
+                              initialTab: Z.y.GUILD_ROLE_SUBSCRIPTIONS
                           })
                         : (0, i.jsx)(U.Z, { guildId: a });
                 case em.oC.GUILD_SHOP:
@@ -192,7 +192,7 @@ let ep = 'resizable-sidebar-width',
         }
         return (0, i.jsx)(S.Z, {});
     },
-    eZ = a.memo(function () {
+    eL = a.memo(function () {
         let { guildId: e, channelId: t } = (0, q.Z)(),
             n = (0, u.e7)([en.Z], () => (null != t ? t : en.Z.getChannelId(e))),
             a = (0, x.v)({ location: 'sidebar' });
@@ -216,7 +216,7 @@ let ep = 'resizable-sidebar-width',
               )
             : (0, i.jsx)(eu.Z, {});
     }),
-    eR = (e) => (0, i.jsx)(eL, { ...e }),
+    eR = (e) => (0, i.jsx)(eZ, { ...e }),
     eO = (e) => {
         let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null,
             n = (0, x.a)({ location: 'sidebar' });
@@ -292,7 +292,7 @@ function eB(e) {
     let c = 'app view user trigger debugging';
     E.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), E.R6.trackExposure({ location: c });
     let g = (0, u.e7)([f.Z], () => f.Z.isFullscreenInContext()),
-        p = (0, Z.Q)('ChannelSidebar'),
+        p = (0, L.Q)('ChannelSidebar'),
         T = (0, el.A)((e) => !e.isOpen);
     a.useLayoutEffect(() => {
         if (p) {
@@ -344,7 +344,7 @@ function eB(e) {
             orientation: I.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
         }),
-        L = a.useCallback(() => {
+        Z = a.useCallback(() => {
             el.A.setState((e) => ({ isOpen: !e.isOpen }));
         }, []);
     if (
@@ -376,11 +376,11 @@ function eB(e) {
                         }),
                     (0, i.jsx)(R, {
                         className: eg.sidebarList,
-                        children: (0, i.jsx)(eZ, {})
+                        children: (0, i.jsx)(eL, {})
                     }),
                     p
                         ? (0, i.jsx)(h.Clickable, {
-                              onClick: L,
+                              onClick: Z,
                               'aria-label': 'Resize Sidebar',
                               className: eg.sidebarResizeHandle,
                               onMouseDown: v
@@ -437,7 +437,7 @@ function eH() {
         m = (null == E ? void 0 : null === (e = E.params) || void 0 === e ? void 0 : e.channelId) === em.oC.GUILD_ONBOARDING,
         I = s || r || c || _ || m,
         p = a.useCallback(() => F.Z.openSidebar(), []),
-        f = (0, Z.Q)('AppView');
+        f = (0, L.Q)('AppView');
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: eg.container,

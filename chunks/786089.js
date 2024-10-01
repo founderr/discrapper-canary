@@ -23,8 +23,8 @@ var i = n(735250),
     A = n(874976);
 t.Z = (0, a.memo)(function (e) {
     var t, n, s, v;
-    let { quest: L } = e,
-        [Z, R] = (0, a.useState)(!1),
+    let { quest: Z } = e,
+        [L, R] = (0, a.useState)(!1),
         [O, x] = (0, a.useState)(24),
         [b, P] = (0, a.useState)(!1),
         M = (0, a.useRef)(null),
@@ -33,12 +33,12 @@ t.Z = (0, a.memo)(function (e) {
         j = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
         { ref: U, height: G = 0 } = (0, u.Z)(),
         w = (0, _.ZP)(),
-        k = (0, T.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
+        k = (0, T.B6)(null === (t = Z.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
-        B = null !== (v = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
-        H = L.config.rewards[B],
+        B = null !== (v = null === (n = Z.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
+        H = Z.config.rewards[B],
         V = (null == H ? void 0 : H.type) === l.w.COLLECTIBLE,
         { product: F } = (0, E.T)(V && null != H ? H.skuId : null),
         Y = null == F ? void 0 : null === (s = F.items) || void 0 === s ? void 0 : s[0];
@@ -55,14 +55,14 @@ t.Z = (0, a.memo)(function (e) {
     )
         return null;
     let W = (0, c.wj)(w),
-        z = (0, S.Sz)(L.id, L.config.assets.logotype, 'dark'),
-        K = (0, S.Sz)(L.id, null != H.assetVideo ? H.assetVideo : H.asset),
+        z = (0, S.Sz)(Z.id, Z.config.assets.logotype, 'dark'),
+        K = (0, S.Sz)(Z.id, null != H.assetVideo ? H.assetVideo : H.asset),
         q = (0, S.nP)(K),
-        Q = Z ? G + 8 : 0,
+        Q = L ? G + 8 : 0,
         X = () => {
             R(!0),
                 g.default.track(C.rMx.QUEST_HOVER, {
-                    quest_id: L.id,
+                    quest_id: Z.id,
                     ...(0, p.mH)(f.jn.TROPHY_CASE_CARD)
                 });
         },
@@ -72,7 +72,7 @@ t.Z = (0, a.memo)(function (e) {
                 g.default.track(C.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
-                    quest_id: L.id
+                    quest_id: Z.id
                 });
         };
     return (0, i.jsx)(d.FocusRing, {
@@ -83,7 +83,7 @@ t.Z = (0, a.memo)(function (e) {
             onBlur: J,
             onMouseEnter: X,
             onMouseLeave: J,
-            className: r()(A.container, { [A.hovered]: Z }),
+            className: r()(A.container, { [A.hovered]: L }),
             children: [
                 null != j &&
                     V &&
@@ -112,7 +112,7 @@ t.Z = (0, a.memo)(function (e) {
                     : (0, i.jsx)('img', {
                           className: A.image,
                           src: K,
-                          alt: L.config.messages.questName,
+                          alt: Z.config.messages.questName,
                           onError: () => $(K)
                       }),
                 (0, i.jsx)('div', {
@@ -128,7 +128,7 @@ t.Z = (0, a.memo)(function (e) {
                     children: (0, i.jsx)('img', {
                         className: A.logo,
                         src: z,
-                        alt: L.config.messages.gameTitle
+                        alt: Z.config.messages.gameTitle
                     })
                 }),
                 (0, i.jsxs)('div', {
@@ -139,7 +139,7 @@ t.Z = (0, a.memo)(function (e) {
                             className: A.title,
                             variant: 'heading-md/semibold',
                             color: 'always-white',
-                            children: N.Z.Messages.QUEST.format({ questName: L.config.messages.questName })
+                            children: N.Z.Messages.QUEST.format({ questName: Z.config.messages.questName })
                         }),
                         (0, i.jsx)(d.Text, {
                             variant: 'text-sm/medium',

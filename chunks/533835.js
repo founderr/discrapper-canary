@@ -7,8 +7,8 @@ s.r(n),
     s(47120);
 var t = s(735250),
     i = s(470079),
-    l = s(512722),
-    o = s.n(l),
+    o = s(512722),
+    l = s.n(o),
     r = s(442837),
     c = s(100527),
     a = s(699516),
@@ -21,8 +21,8 @@ var t = s(735250),
 let m = [c.Z.BITE_SIZE_PROFILE_POPOUT, c.Z.PROFILE_PANEL];
 function x(e) {
     let { user: n, ...s } = e,
-        l = (0, r.e7)([d.default], () => d.default.getCurrentUser());
-    o()(null != l, 'UserProfileModalWrapper: currentUser cannot be undefined');
+        o = (0, r.e7)([d.default], () => d.default.getCurrentUser());
+    l()(null != o, 'UserProfileModalWrapper: currentUser cannot be undefined');
     let c = (0, r.e7)([a.Z], () => a.Z.isBlocked(n.id)),
         [x, Z] = i.useState(c),
         p = (0, u.sS)({ location: 'UserProfileModalWrapper' });
@@ -36,7 +36,7 @@ function x(e) {
     return x && p && h
         ? (0, t.jsx)(I.Z, {
               user: n,
-              currentUser: l,
+              currentUser: o,
               onViewBlockedProfileClick: () => Z(!1),
               ...s
           })
@@ -44,17 +44,17 @@ function x(e) {
           ? (0, t.jsx)(E.Z, {
                 ...s,
                 user: n,
-                currentUser: l
+                currentUser: o
             })
           : n.bot
             ? (0, t.jsx)(_.Z, {
                   ...s,
                   user: n,
-                  currentUser: l
+                  currentUser: o
               })
             : (0, t.jsx)(f.Z, {
                   ...s,
                   user: n,
-                  currentUser: l
+                  currentUser: o
               });
 }

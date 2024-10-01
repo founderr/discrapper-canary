@@ -1139,7 +1139,7 @@ function tx(e) {
     let { channelId: t, messageId: n, manual: r, newMentionCount: i } = e,
         a = eB.get(t);
     return r
-        ? (a.rebuildChannelState(n, !0, i), !0)
+        ? (a.rebuildChannelState(n, !0, i), a.clearOutgoingAck(), !0)
         : n !== a._ackMessageId &&
               a.ack({
                   messageId: n,

@@ -13,8 +13,8 @@ var t = n(735250),
     _ = n(981631),
     g = n(689938),
     x = n(51527);
-let h = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE],
-    f = (e) => {
+let f = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE],
+    h = (e) => {
         let { invite: a, trackClick: n } = e,
             { approximate_member_count: o, guild: i } = a;
         if (null == i) return null;
@@ -100,14 +100,14 @@ a.Z = (e) => {
     let _ = a
         .filter((e) => {
             let { category: a } = e;
-            return h.includes(a);
+            return f.includes(a);
         })
         .sort((e, a) => e.category - a.category);
     return (0, t.jsxs)('div', {
         className: r()(x.column),
         children: [
             null != u &&
-                (0, t.jsx)(f, {
+                (0, t.jsx)(h, {
                     invite: u,
                     trackClick: n
                 }),

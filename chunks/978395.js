@@ -92,7 +92,7 @@ function C(e) {
                     inline: !1,
                     profileViewedAnalytics: G
                 }),
-            t.isProvisional()
+            t.isProvisional
                 ? (0, r.jsx)(u.Z, { look: 'profile' })
                 : (0, r.jsx)(g.Z, {
                       user: t,

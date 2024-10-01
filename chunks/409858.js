@@ -81,7 +81,7 @@ let W = (e) => {
 class q extends n.Component {
     componentDidMount() {
         let { application: e, sku: t, customGiftMessage: s, giftCode: i, emojiName: n } = this.props;
-        null == e && null != t && g.Z.fetchApplication(t.applicationId);
+        null == e && null != t && g.ZP.fetchApplication(t.applicationId);
         let a = null != s || null != i.giftStyle,
             l = (0, Z.mO)(i),
             r = null != n ? M.ZP.getURL(n) : void 0;

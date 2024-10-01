@@ -63,7 +63,7 @@ async function I(e) {
         g = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == r || e.launchId === r)),
         S = a;
     if (null == S) {
-        let e = await i.Z.fetchApplication(n);
+        let e = await i.ZP.fetchApplication(n);
         S = o.Z.createFromServer(e);
     }
     if (null == g || null == S) return;

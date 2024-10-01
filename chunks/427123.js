@@ -54,7 +54,7 @@ function R() {
         if (N.includes(t)) continue;
         let r = f.Z.getApplication(n);
         if (null == r) {
-            !f.Z.isFetchingApplication(n) && !f.Z.didFetchingApplicationFail(n) && E.Z.fetchApplication(n);
+            !f.Z.isFetchingApplication(n) && !f.Z.didFetchingApplicationFail(n) && E.ZP.fetchApplication(n);
             continue;
         }
         let i = I.Z.get(t);

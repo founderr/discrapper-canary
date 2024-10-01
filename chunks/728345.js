@@ -1,5 +1,5 @@
 n.d(t, {
-    I: function () {
+    IX: function () {
         return p;
     }
 });
@@ -46,7 +46,7 @@ async function h(e) {
         );
     }
 }
-t.Z = {
+t.ZP = {
     async createApplication(e) {
         let { name: t, guildId: n, type: r, teamId: i } = e,
             a = (
@@ -112,7 +112,7 @@ t.Z = {
             let t = (e) => {
                 var t, n;
                 let r = E.Z.getApplication(e),
-                    i = (0, _.yE)(null !== (n = null == r ? void 0 : r.flags) && void 0 !== n ? n : 0, f.udG.EMBEDDED) && (null == r ? void 0 : null === (t = r.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null;
+                    i = (0, _.yE)(null !== (n = null == r ? void 0 : r.flags) && void 0 !== n ? n : 0, f.udG.EMBEDDED) && ((null == r ? void 0 : null === (t = r.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null || (null == r ? void 0 : r.bot) == null);
                 return !(null != r && !i) && !E.Z.isFetchingApplication(e) && !E.Z.didFetchingApplicationFail(e) && e.length > 0;
             };
             n = e.filter(t);

@@ -6,8 +6,8 @@ s.d(n, {
     s(47120);
 var t = s(735250),
     i = s(470079),
-    l = s(442837),
-    o = s(706898),
+    o = s(442837),
+    l = s(706898),
     r = s(481060),
     c = s(246946),
     a = s(785717),
@@ -22,11 +22,11 @@ var t = s(735250),
     Z = s(519294),
     p = s(722849);
 function h(e) {
-    let { section: n, subsection: s, user: i, currentUser: l, displayProfile: o, onClose: r } = e;
+    let { section: n, subsection: s, user: i, currentUser: o, displayProfile: l, onClose: r } = e;
     return n === m.oh.ACTIVITY
         ? (0, t.jsx)(I.Z, {
               user: i,
-              currentUser: l,
+              currentUser: o,
               onClose: r
           })
         : n === m.oh.MUTUAL_FRIENDS
@@ -44,15 +44,15 @@ function h(e) {
               : n === m.oh.BOT_INFO
                 ? (0, t.jsx)(u.Z, {
                       user: i,
-                      currentUser: l,
-                      displayProfile: o,
+                      currentUser: o,
+                      displayProfile: l,
                       subsection: s,
                       onClose: r
                   })
                 : (0, t.jsx)(_.Z, {
                       user: i,
-                      currentUser: l,
-                      displayProfile: o,
+                      currentUser: o,
+                      displayProfile: l,
                       subsection: s,
                       onClose: r
                   });
@@ -61,7 +61,7 @@ function v(e) {
     var n, s, d;
     let { user: u, currentUser: I, displayProfile: _, items: E, initialSection: f = m.oh.USER_INFO, initialSubsection: v, onClose: S } = e,
         { trackUserProfileAction: T } = (0, a.KZ)(),
-        g = (0, l.e7)([c.Z], () => c.Z.hidePersonalInformation),
+        g = (0, o.e7)([c.Z], () => c.Z.hidePersonalInformation),
         [{ section: A, subsection: N }, j] = i.useState({
             section:
                 null !==
@@ -116,7 +116,7 @@ function v(e) {
         : (0, t.jsxs)('div', {
               className: p.container,
               children: [
-                  (0, t.jsx)(o.n, {
+                  (0, t.jsx)(l.n, {
                       className: p.tabBar,
                       type: 'top',
                       selectedItem: A,
@@ -124,7 +124,7 @@ function v(e) {
                       children: E.map((e) => {
                           let { section: n, text: s } = e;
                           return (0, t.jsx)(
-                              o.n.Item,
+                              l.n.Item,
                               {
                                   className: p.tabBarItem,
                                   id: n,

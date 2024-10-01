@@ -8,14 +8,14 @@ n(470079);
 var i = n(120356),
     a = n.n(i),
     o = n(766646),
-    s = n(112831),
+    s = n(481060),
     l = n(689938),
     u = n(753328);
 function c(e) {
     let { children: t, className: n, disabled: i, required: c = !1, ...d } = e;
-    return (0, r.jsxs)(s.Z, {
+    return (0, r.jsxs)(s.Text, {
         tag: 'label',
-        color: s.Z.Colors.HEADER_SECONDARY,
+        variant: 'heading-deprecated-12/normal',
         className: a()(u.label, n, {
             [u.defaultMargin]: null == n,
             [u.disabled]: i

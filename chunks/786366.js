@@ -7,8 +7,8 @@ s.d(n, {
 var t = s(735250);
 s(470079);
 var i = s(597312),
-    l = s(442837),
-    o = s(481060),
+    o = s(442837),
+    l = s(481060),
     r = s(860719),
     c = s(621853),
     a = s(689938),
@@ -30,11 +30,11 @@ function u(e) {
             (0, t.jsxs)('div', {
                 className: d.rowText,
                 children: [
-                    (0, t.jsx)(o.Heading, {
+                    (0, t.jsx)(l.Heading, {
                         variant: 'text-xs/semibold',
                         children: s
                     }),
-                    (0, t.jsx)(o.Text, {
+                    (0, t.jsx)(l.Text, {
                         variant: 'text-sm/normal',
                         children: i
                     })
@@ -45,7 +45,7 @@ function u(e) {
 }
 function I(e) {
     let { user: n } = e,
-        s = (0, l.e7)([c.Z], () => {
+        s = (0, o.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
         }),
@@ -56,23 +56,23 @@ function I(e) {
         children: [
             I &&
                 (0, t.jsx)(u, {
-                    icon: o.ChatIcon,
+                    icon: l.ChatIcon,
                     title: a.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
                     description: a.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
                 }),
             _ &&
                 (0, t.jsx)(u, {
-                    icon: o.GameControllerIcon,
+                    icon: l.GameControllerIcon,
                     title: a.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
                     description: a.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
                 }),
             E &&
                 (0, t.jsx)(u, {
-                    icon: o.GroupIcon,
+                    icon: l.GroupIcon,
                     title: a.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
                     description: a.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
                 }),
-            (0, t.jsx)(o.Text, {
+            (0, t.jsx)(l.Text, {
                 variant: 'text-xs/normal',
                 children: a.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({ helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
             })

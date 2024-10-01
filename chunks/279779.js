@@ -46,7 +46,7 @@ function P(e) {
         id: e.id,
         username: '0' !== e.discriminator ? ''.concat(e.username, '#').concat(e.discriminator) : e.username
     };
-    if ((null != L.ZP.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), e instanceof g.Z)) t.isProvisional = e.isProvisional();
+    if ((null != L.ZP.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), e instanceof g.Z)) t.isProvisional = e.isProvisional;
     else if ('flags' in e) {
         var n;
         t.isProvisional = O.yE(null !== (n = e.flags) && void 0 !== n ? n : 0, b.xW$.PROVISIONAL_ACCOUNT);

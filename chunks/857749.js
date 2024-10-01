@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(735250),
     i = n(470079),
-    a = n(526629),
+    a = n(212433),
     o = n(481060);
 function s(e) {
     let { shouldAnimate: t = 'respect-motion-settings', ...n } = e,

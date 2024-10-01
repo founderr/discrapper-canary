@@ -7,8 +7,8 @@ n.d(t, {
     }
 }),
     n(47120);
-var l = n(735250),
-    a = n(470079),
+var a = n(735250),
+    l = n(470079),
     i = n(120356),
     r = n.n(i),
     s = n(481060),
@@ -22,37 +22,37 @@ var l = n(735250),
     v = n(142550),
     E = n(981631),
     _ = n(689938),
-    p = n(793834);
-let T = (0, x.kt)({
+    f = n(793834);
+let p = (0, x.kt)({
         id: '1',
         type: E.d4z.DM
     }),
-    f = a.forwardRef(function (e, t) {
-        let { placeholder: n, headerText: a, onEnter: i, showPopout: u, children: c, body: d, hide: h } = e,
+    T = l.forwardRef(function (e, t) {
+        let { placeholder: n, headerText: l, onEnter: i, showPopout: u, children: c, body: d, hide: h } = e,
             m = (0, o.ZP)();
-        return (0, l.jsx)(s.Popout, {
+        return (0, a.jsx)(s.Popout, {
             align: 'right',
             position: 'bottom',
             shouldShow: u,
             disablePointerEvents: !1,
             renderPopout: () =>
-                (0, l.jsx)(s.ThemeProvider, {
+                (0, a.jsx)(s.ThemeProvider, {
                     theme: m,
                     children: (e) =>
-                        (0, l.jsx)('div', {
-                            className: r()([p.reply, e]),
+                        (0, a.jsx)('div', {
+                            className: r()([f.reply, e]),
                             ref: t,
-                            children: (0, l.jsx)(s.FocusLock, {
+                            children: (0, a.jsx)(s.FocusLock, {
                                 containerRef: t,
-                                children: (0, l.jsxs)('div', {
+                                children: (0, a.jsxs)('div', {
                                     children: [
-                                        (0, l.jsx)(s.Text, {
+                                        (0, a.jsx)(s.Text, {
                                             variant: 'text-xs/bold',
-                                            className: p.replyHeader,
-                                            children: null != a ? a : _.Z.Messages.CHAT
+                                            className: f.replyHeader,
+                                            children: null != l ? l : _.Z.Messages.CHAT
                                         }),
                                         d,
-                                        (0, l.jsx)(g, {
+                                        (0, a.jsx)(g, {
                                             onEnter: (e) => {
                                                 i(e), h();
                                             },
@@ -68,24 +68,24 @@ let T = (0, x.kt)({
     });
 function g(e) {
     let { placeholder: t, onEnter: n, setEditorRef: i, showEmojiButton: s = !1, renderAttachButton: o, autoFocus: h = !0, onFocus: m, channel: x, className: E } = e,
-        [_, f] = a.useState(''),
-        [g, I] = a.useState((0, c.JM)('')),
+        [_, T] = l.useState(''),
+        [g, I] = l.useState((0, c.JM)('')),
         C = () => {
-            f(''), I((0, c.JM)(''));
+            T(''), I((0, c.JM)(''));
         },
         N = u.I.ATOMIC_REACTOR_REPLY_INPUT,
-        P = a.useRef(null);
-    return (0, l.jsx)(d.Z, {
+        P = l.useRef(null);
+    return (0, a.jsx)(d.Z, {
         ref: P,
         placeholder: t,
         editorClassName: E,
-        className: r()(p.replyInput, E),
+        className: r()(f.replyInput, E),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
         maxCharacterCount: v.z,
-        channel: null != x ? x : T,
+        channel: null != x ? x : p,
         onChange: (e, t, n) => {
-            f(t), I(n);
+            T(t), I(n);
         },
         type: s
             ? {
@@ -125,19 +125,19 @@ function g(e) {
     });
 }
 let I = (e, t) => {
-        a.useEffect(() => {
+        l.useEffect(() => {
             let n = (t) => {
                     'Escape' === t.key && e();
                 },
-                l = (n) => {
-                    var l;
-                    null != n.target && !(null == t ? void 0 : null === (l = t.current) || void 0 === l ? void 0 : l.contains(null == n ? void 0 : n.target)) && e();
+                a = (n) => {
+                    var a;
+                    null != n.target && !(null == t ? void 0 : null === (a = t.current) || void 0 === a ? void 0 : a.contains(null == n ? void 0 : n.target)) && e();
                 };
             return (
                 document.addEventListener('keydown', n),
-                document.addEventListener('mousedown', l),
+                document.addEventListener('mousedown', a),
                 () => {
-                    document.removeEventListener('keydown', n), document.removeEventListener('mousedown', l);
+                    document.removeEventListener('keydown', n), document.removeEventListener('mousedown', a);
                 }
             );
         }, [e, t]);
@@ -145,42 +145,42 @@ let I = (e, t) => {
     C = (e) => {
         let { onSelectEmoji: t, onClick: n } = e,
             i = (0, o.ZP)(),
-            [r, u] = a.useState(!1),
-            c = a.useRef(null);
+            [r, u] = l.useState(!1),
+            c = l.useRef(null);
         return (
             I(() => u(!1), c),
-            (0, l.jsx)(s.Popout, {
+            (0, a.jsx)(s.Popout, {
                 align: 'right',
                 position: 'top',
                 shouldShow: r,
                 disablePointerEvents: !1,
                 renderPopout: () =>
-                    (0, l.jsx)(s.ThemeProvider, {
+                    (0, a.jsx)(s.ThemeProvider, {
                         theme: i,
                         children: (e) =>
-                            (0, l.jsx)('div', {
+                            (0, a.jsx)('div', {
                                 className: e,
                                 ref: c,
-                                children: (0, l.jsx)(m.$, {
+                                children: (0, a.jsx)(m.$, {
                                     messageId: E.lds,
-                                    channel: T,
+                                    channel: p,
                                     closePopout: () => {
                                         u(!1);
                                     },
-                                    onSelectEmoji: (e, n, l) => {
-                                        null != e && (t(e, n, l), u(!1));
+                                    onSelectEmoji: (e, n, a) => {
+                                        null != e && (t(e, n, a), u(!1));
                                     }
                                 })
                             })
                     }),
                 children: () =>
-                    (0, l.jsx)(s.Tooltip, {
+                    (0, a.jsx)(s.Tooltip, {
                         text: _.Z.Messages.ADD_REACTION,
                         children: (e) =>
-                            (0, l.jsx)('div', {
+                            (0, a.jsx)('div', {
                                 ...e,
-                                className: p.reaction,
-                                children: (0, l.jsx)(h.Z, {
+                                className: f.reaction,
+                                children: (0, a.jsx)(h.Z, {
                                     active: !1,
                                     tabIndex: 0,
                                     onClick: () => {
@@ -195,16 +195,16 @@ let I = (e, t) => {
 t.ZP = (e) => {
     let { onInteraction: t, showReact: n = !0, showReply: i = !0, popoutProps: o = {} } = e,
         { replyHeaderText: u, replyPlaceholder: c, popoutBody: d } = o,
-        [h, m] = a.useState(!1),
-        x = a.useRef(null);
+        [h, m] = l.useState(!1),
+        x = l.useRef(null);
     return (
         I(() => m(!1), x),
-        (0, l.jsx)(l.Fragment, {
-            children: (0, l.jsxs)('div', {
-                className: p.reactions,
+        (0, a.jsx)(a.Fragment, {
+            children: (0, a.jsxs)('div', {
+                className: f.reactions,
                 children: [
                     n &&
-                        (0, l.jsx)(C, {
+                        (0, a.jsx)(C, {
                             onSelectEmoji: (e) => {
                                 null != e &&
                                     t({
@@ -223,7 +223,7 @@ t.ZP = (e) => {
                             }
                         }),
                     i &&
-                        (0, l.jsx)(f, {
+                        (0, a.jsx)(T, {
                             hide: () => m(!1),
                             ref: x,
                             headerText: u,
@@ -237,12 +237,12 @@ t.ZP = (e) => {
                                     reply: e
                                 });
                             },
-                            children: (0, l.jsx)(s.Tooltip, {
+                            children: (0, a.jsx)(s.Tooltip, {
                                 text: _.Z.Messages.MESSAGE_ACTION_REPLY,
                                 children: (e) =>
-                                    (0, l.jsx)('button', {
+                                    (0, a.jsx)('button', {
                                         ...e,
-                                        className: r()(p.reaction, p.emojiButton),
+                                        className: r()(f.reaction, f.emojiButton),
                                         onClick: () => {
                                             t({
                                                 interactionType: v.L.ReplyBegin,
@@ -251,7 +251,7 @@ t.ZP = (e) => {
                                             }),
                                                 m(!0);
                                         },
-                                        children: (0, l.jsx)(s.ArrowAngleLeftUpIcon, {})
+                                        children: (0, a.jsx)(s.ArrowAngleLeftUpIcon, {})
                                     })
                             })
                         })

@@ -29,8 +29,8 @@ var a = r(735250),
     k = r(1870),
     j = r(884697),
     R = r(664018),
-    A = r(890249),
-    P = r(635552),
+    P = r(890249),
+    A = r(635552),
     Z = r(724994),
     M = r(390698),
     y = r(813083),
@@ -72,8 +72,8 @@ let Y = (e) => {
         });
     };
 t.Z = function (e) {
-    let { product: t, user: r, category: s, onMount: o, isGiftEasterEggEnabled: X, isInFeedView: $ } = e,
-        { analyticsLocations: q } = (0, E.ZP)([...($ ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
+    let { product: t, user: r, category: s, onMount: o, isGiftEasterEggEnabled: $, isInFeedView: X } = e,
+        { analyticsLocations: q } = (0, E.ZP)([...(X ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
         Q = n.useRef(null),
         J = (0, g.Z)(Q),
         [ee, et] = n.useState(!1),
@@ -88,7 +88,7 @@ t.Z = function (e) {
         { isPurchased: ed, isPartiallyPurchased: eu } = (0, Z.L)(t),
         [ef, ep] = (0, p.Wu)([k.Z], () => [k.Z.isClaiming === t.skuId, null != k.Z.isClaiming && k.Z.isClaiming !== t.skuId]),
         em = (0, p.e7)([N.Z], () => (0, m.wj)(N.Z.theme)),
-        eC = (0, A.m)('CollectiblesCollectedModal'),
+        eC = (0, P.m)('CollectiblesCollectedModal'),
         e_ = (0, j.x6)(t) || eC,
         eg = (0, j.Yq)(t.skuId),
         { hoverVariant: eh } = (0, R.E)('CollectiblesShopTallCard'),
@@ -110,7 +110,7 @@ t.Z = function (e) {
         }, [o]);
     let eE = (0, v.Z)({ analyticsLocations: q }),
         eI = n.useRef(null),
-        { handleUseNow: ex, isApplying: eT } = (0, P.W)({ product: t }),
+        { handleUseNow: ex, isApplying: eT } = (0, A.W)({ product: t }),
         ev = () => {
             if (((0, _.xf)(), eE(), t.type === f.Z.AVATAR_DECORATION && null != ea)) {
                 l()(ea.type === t.type, "product type is equivlant to first item's check for avatar deco"),
@@ -176,7 +176,7 @@ t.Z = function (e) {
                   : (0, a.jsx)(w.Z, {
                         product: t,
                         returnRef: Q,
-                        isGiftEasterEggEnabled: X,
+                        isGiftEasterEggEnabled: $,
                         disableCustomColor: !0,
                         tooltipDelay: 250
                     }),

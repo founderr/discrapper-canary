@@ -10,6 +10,6 @@ function s(e) {
     return (0, i.e7)([a.Z, r.default], () => {
         let n = a.Z.isFriend(e.id),
             t = r.default.getId() === e.id;
-        return n && !t && !e.bot && !e.system && !e.isProvisional();
+        return n && !t && !e.bot && !e.system && !e.isProvisional;
     });
 }

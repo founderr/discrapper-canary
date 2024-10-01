@@ -6,8 +6,8 @@ s.d(n, {
 var t = s(735250);
 s(470079);
 var i = s(481060),
-    l = s(194359),
-    o = s(906732),
+    o = s(194359),
+    l = s(906732),
     r = s(475413),
     c = s(934861),
     a = s(981631),
@@ -15,7 +15,7 @@ var i = s(481060),
     u = s(266580);
 function I(e) {
     let { isCurrentUser: n, user: s, relationshipType: I, friendToken: _, onClose: E } = e,
-        { newestAnalyticsLocation: f } = (0, o.ZP)();
+        { newestAnalyticsLocation: f } = (0, l.ZP)();
     return n || I === a.OGo.BLOCKED
         ? null
         : I === a.OGo.FRIEND || s.bot
@@ -54,7 +54,7 @@ function I(e) {
                           text: d.Z.Messages.USER_PROFILE_ADD_FRIEND,
                           color: i.Button.Colors.BRAND,
                           onClick: () => {
-                              l.Z.addRelationship({
+                              o.Z.addRelationship({
                                   userId: s.id,
                                   context: { location: f },
                                   friendToken: _

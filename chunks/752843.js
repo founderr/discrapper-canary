@@ -20,11 +20,11 @@ function u(e) {
             'user' === t
                 ? (0, r.jsx)(a.t, {
                       size: 'xxs',
-                      color: 'var(--text-positive)'
+                      color: 'var(--interactive-normal)'
                   })
                 : (0, r.jsx)(i.Q, {
                       size: 'xxs',
-                      color: 'var(--text-brand)'
+                      color: 'var(--interactive-normal)'
                   }),
         text: 'user' === t ? s.Z.Messages.Storefront.USER_SUBSCRIPTION : s.Z.Messages.Storefront.SERVER_SUBSCRIPTION
     });

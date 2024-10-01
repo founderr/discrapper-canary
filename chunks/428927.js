@@ -9,8 +9,8 @@ s.d(n, {
 var t = s(735250);
 s(470079);
 var i = s(120356),
-    l = s.n(i),
-    o = s(780384),
+    o = s.n(i),
+    l = s(780384),
     r = s(481060),
     c = s(239091),
     a = s(37234),
@@ -49,8 +49,8 @@ function T(e) {
                 tabIndex: -1,
                 guild: i,
                 showBadge: !0,
-                className: l()(h.listAvatar, null == i.icon ? v.guildAvatarWithoutIcon : null),
-                badgeStrokeColor: (0, u.Lq)((0, o.wj)(d) ? Z.Ilk.PRIMARY_600 : Z.Ilk.WHITE_500),
+                className: o()(h.listAvatar, null == i.icon ? v.guildAvatarWithoutIcon : null),
+                badgeStrokeColor: (0, u.Lq)((0, l.wj)(d) ? Z.Ilk.PRIMARY_600 : Z.Ilk.WHITE_500),
                 badgeTooltipColor: r.TooltipColors.PRIMARY,
                 badgeTooltipDelay: x.vB,
                 size: I.Z.Sizes.MEDIUM,
@@ -86,8 +86,8 @@ function T(e) {
 function g(e) {
     let { user: n, onClose: s } = e,
         { trackUserProfileAction: i } = (0, f.KZ)(),
-        { mutualGuilds: l } = (0, m.Z)(n.id),
-        o = (0, d.ZP)(),
+        { mutualGuilds: o } = (0, m.Z)(n.id),
+        l = (0, d.ZP)(),
         c = (e) => {
             (0, _.X)(e), s(), (0, a.xf)();
         };
@@ -95,12 +95,12 @@ function g(e) {
         className: h.listScroller,
         fade: !0,
         children:
-            null == l
+            null == o
                 ? (0, t.jsx)('div', {
                       className: h.empty,
                       children: (0, t.jsx)(r.Spinner, {})
                   })
-                : 0 === l.length
+                : 0 === o.length
                   ? (0, t.jsxs)('div', {
                         className: h.empty,
                         children: [
@@ -111,15 +111,15 @@ function g(e) {
                             })
                         ]
                     })
-                  : l.map((e) => {
-                        let { guild: s, nick: l } = e;
+                  : o.map((e) => {
+                        let { guild: s, nick: o } = e;
                         return (0, t.jsx)(
                             T,
                             {
                                 user: n,
                                 guild: s,
-                                nick: l,
-                                theme: o,
+                                nick: o,
+                                theme: l,
                                 onSelect: () => {
                                     i({ action: 'PRESS_MUTUAL_GUILD' }), c(s.id);
                                 }

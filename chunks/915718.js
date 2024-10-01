@@ -202,7 +202,7 @@ function D(e) {
               mode: o,
               inCall: c,
               callActive: _,
-              isProvisional: null !== (t = null == A ? void 0 : A.isProvisional()) && void 0 !== t && t,
+              isProvisional: null !== (t = null == A ? void 0 : A.isProvisional) && void 0 !== t && t,
               callUnavailable: E,
               notFriend: C,
               isBlocked: x,

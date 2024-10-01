@@ -1,12 +1,12 @@
 n.d(t, {
     SO: function () {
-        return p;
+        return f;
     }
 }),
     n(653041),
     n(512722);
-var l = n(913527),
-    a = n.n(l),
+var a = n(913527),
+    l = n.n(a),
     i = n(705512);
 n(812206);
 var r = n(55000);
@@ -35,9 +35,9 @@ let v = (e, t) => ({
                     text: t
                 }
             ],
-            l = c.default.extractTimestamp(e.extra.application_id);
+            a = c.default.extractTimestamp(e.extra.application_id);
         if (
-            (7 >= a()().diff(a()(l), 'days') &&
+            (7 >= l()().diff(l()(a), 'days') &&
                 n.push({
                     iconPath: m.As,
                     text: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
@@ -91,8 +91,8 @@ let v = (e, t) => ({
         return n;
     },
     _ = (e, t) => {
-        let { timestamp: n, colors: l, description: a, entry: i, numAvatars: o } = t,
-            u = l.map((e, t) => ({
+        let { timestamp: n, colors: a, description: l, entry: i, numAvatars: o } = t,
+            u = a.map((e, t) => ({
                 color: e,
                 stop: t
             }));
@@ -160,7 +160,7 @@ let v = (e, t) => ({
                 truncate: s.GX.Wrap
             }),
             e.drawText(
-                a,
+                l,
                 {
                     x: m.Iq,
                     y: 64,
@@ -177,19 +177,19 @@ let v = (e, t) => ({
             maxWidth: m.kC
         });
     },
-    p = async (e) => {
-        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: u } = e,
+    f = async (e) => {
+        let { applicationImageSrc: t, entry: n, avatarSrcs: a, description: l, timestamp: i, colors: r, channelId: u } = e,
             c = n.extra.game_name,
-            d = v(l, t);
+            d = v(a, t);
         return await (0, o.f)({
             assetsToLoad: d,
             drawImage: (e) =>
                 _(e, {
                     timestamp: i,
                     colors: r,
-                    description: a,
+                    description: l,
                     entry: n,
-                    numAvatars: l.length
+                    numAvatars: a.length
                 }),
             exportConfigs: {
                 format: s.kH.CloudUpload,

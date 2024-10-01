@@ -290,7 +290,7 @@ function v() {
         autoWidth: !0
     });
 }
-function L(e) {
+function Z(e) {
     let { title: t, onNavigateBack: n } = e;
     return null == t
         ? null
@@ -310,14 +310,14 @@ function L(e) {
               ]
           });
 }
-function Z(e) {
+function L(e) {
     let { className: t, onNavigateBack: n } = e;
     return (0, i.jsxs)('div', {
         className: r()(T.toolbar, t),
         children: [
             (0, i.jsx)('div', {
                 className: T.backToDiscovery,
-                children: (0, i.jsx)(L, {
+                children: (0, i.jsx)(Z, {
                     title: p.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
                     onNavigateBack: n
                 })
@@ -356,7 +356,7 @@ function O(e) {
         }, [s]),
         h = a.useCallback(() => (0, I.fH)(I.v0.DISCOVERY), []);
     return s === I.v0.SAVED_GUILDS
-        ? (0, i.jsx)(Z, {
+        ? (0, i.jsx)(L, {
               className: n,
               onNavigateBack: h
           })
@@ -387,7 +387,7 @@ t.Z = function (e) {
               className: n
           })
         : a === I.v0.SAVED_GUILDS
-          ? (0, i.jsx)(Z, { className: n })
+          ? (0, i.jsx)(L, { className: n })
           : (0, i.jsxs)('div', {
                 className: r()(T.toolbar, n),
                 children: [

@@ -29,8 +29,8 @@ var a = r(735250),
     k = r(328347),
     j = r(307043),
     R = r(223143),
-    A = r(298228),
-    P = r(937510),
+    P = r(298228),
+    A = r(937510),
     Z = r(309956),
     M = r(853748),
     y = r(426171),
@@ -45,8 +45,8 @@ var a = r(735250),
     z = r(558117),
     Y = r(141594),
     K = r(566564),
-    X = r(531864),
-    $ = r(302800),
+    $ = r(531864),
+    X = r(302800),
     q = r(215023),
     Q = r(981631),
     J = r(921944),
@@ -95,7 +95,7 @@ function ea(e) {
 }
 function en(e) {
     let { category: t, initialItemCardRef: r, ...s } = e,
-        i = (0, P.l)(t.products),
+        i = (0, A.l)(t.products),
         l = (0, c.e7)([k.Z], () => k.Z.initialProductSkuId),
         d = n.useCallback(
             (e) => (t) => {
@@ -117,7 +117,7 @@ function es(e) {
     let { category: t, isPremiumUser: r, initialItemCardRef: s, isGiftEasterEggEnabled: o, setIsGiftEasterEggEnabled: l, showEasterEggToggle: c, isFullScreen: d } = e,
         u = n.useRef(10 + 70 * Math.random()),
         [p, C] = n.useState(!1),
-        _ = (0, $.M7)(t.skuId),
+        _ = (0, X.M7)(t.skuId),
         g = (0, m.O)(
             (e) => {
                 C(e && null != _);
@@ -165,9 +165,9 @@ t.default = function (e) {
     let r = (0, j.u)('CollectiblesShop'),
         { analyticsSource: s, analyticsLocations: o } = (0, c.cj)([k.Z], () => k.Z.getAnalytics()),
         { analyticsLocations: m } = (0, _.ZP)([...o, C.Z.COLLECTIBLES_SHOP]),
-        { sessionId: I, scrollerRef: x, scrollHandler: P } = (0, g._)(Q.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
+        { sessionId: I, scrollerRef: x, scrollHandler: A } = (0, g._)(Q.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
         { feedState: M, catalogState: w, transitionToCatalog: W, transitionToFeed: V } = (0, Z.B)(r, x),
-        [z, $] = n.useState(!1),
+        [z, X] = n.useState(!1),
         [ea, en] = n.useState(q.IV),
         [ei, eo] = n.useState(),
         [el, ec] = n.useState(),
@@ -178,7 +178,7 @@ t.default = function (e) {
         em = N.ZP.canUseCollectibles(ep),
         { categories: eC, isFetchingCategories: e_, error: eg, refreshCategories: eh } = (0, R.Z)();
     (0, T.P)();
-    let eb = (0, A.O)(eC),
+    let eb = (0, P.O)(eC),
         eE = n.useRef(null),
         [eI, ex] = n.useState(!1);
     (0, y.Kp)({
@@ -258,9 +258,9 @@ t.default = function (e) {
                     className: er.shopScroll,
                     ref: x,
                     onScroll: () => {
-                        if ((P(), null != x.current)) {
+                        if ((A(), null != x.current)) {
                             let e = x.current.getDistanceFromBottom();
-                            ea >= q.iA ? $(e < 20) : e <= 200 && en(ea + q.IV);
+                            ea >= q.iA ? X(e < 20) : e <= 200 && en(ea + q.IV);
                         }
                     },
                     children: [
@@ -347,11 +347,11 @@ t.default = function (e) {
                 w !== q.f7.VISIBLE &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(X.Z, {
+                        (0, a.jsx)($.Z, {
                             peaking: z,
                             transitioning: M === q.f7.OUT
                         }),
-                        (0, a.jsx)(X.Z, {
+                        (0, a.jsx)($.Z, {
                             style: { left: 1850 },
                             peaking: z,
                             transitioning: M === q.f7.OUT

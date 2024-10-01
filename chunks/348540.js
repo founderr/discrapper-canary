@@ -66,7 +66,7 @@ function N(e) {
                         channelId: A.id
                     })
                 }),
-            t.isProvisional() && (0, i.jsx)(a.Z, { look: 'profile' }),
+            t.isProvisional && (0, i.jsx)(a.Z, { look: 'profile' }),
             (0, i.jsx)(m.Z, {
                 user: t,
                 currentUser: n,

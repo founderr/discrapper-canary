@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return Z;
     }
 }),
     n(653041),
@@ -28,10 +28,10 @@ var i = n(735250),
     N = n(981631),
     A = n(689938);
 let v = d.Z.get(N.ABu.XBOX).name;
-function L(e) {
+function Z(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
-        L = (function (e) {
+        Z = (function (e) {
             let { currentActivities: t } = e,
                 n = (0, s.e7)([I.Z], () => I.Z.getAccounts().some((e) => e.type === d.Z.get(N.ABu.XBOX).type)),
                 a = t.some((e) => {
@@ -46,7 +46,7 @@ function L(e) {
                       label: A.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: v })
                   });
         })(e),
-        Z = (function (e) {
+        L = (function (e) {
             let { currentActivities: t } = e,
                 n = a.useContext(f.AnalyticsContext);
             return (0, s.Wu)(
@@ -78,7 +78,7 @@ function L(e) {
             );
         })(e),
         R = [];
-    for (let e of Z) {
+    for (let e of L) {
         let { activity: t } = e;
         null != t &&
             null != t.type &&
@@ -124,5 +124,5 @@ function L(e) {
                 })(e, n)
             );
     }
-    return [L, ...R];
+    return [Z, ...R];
 }

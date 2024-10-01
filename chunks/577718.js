@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(921944),
     A = n(30513),
     v = n(474936),
-    L = n(689938),
-    Z = n(541194),
+    Z = n(689938),
+    L = n(541194),
     R = n(592827),
     O = n(741160),
     x = n(829972),
@@ -94,15 +94,15 @@ t.Z = a.memo(function (e) {
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(T.ZP, {
                             onComponentMount: A,
-                            header: L.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
+                            header: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: G,
                                 className: R.fullWidthImage
                             }),
-                            content: L.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
-                            buttonCTA: L.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
-                            secondaryButtonCTA: L.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
+                            content: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
+                            buttonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
+                            secondaryButtonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
                             onSecondaryClick: () => M(),
                             onClick: () => M(a),
                             markAsDismissed: k
@@ -113,15 +113,15 @@ t.Z = a.memo(function (e) {
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(T.ZP, {
                             onComponentMount: A,
-                            header: L.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
+                            header: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: G,
                                 className: R.fullWidthImage
                             }),
-                            content: L.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
-                            buttonCTA: L.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
-                            secondaryButtonCTA: L.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
+                            content: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
+                            buttonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
+                            secondaryButtonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
                             onSecondaryClick: () => M(),
                             onClick: () => M(a),
                             markAsDismissed: k
@@ -154,12 +154,12 @@ t.Z = a.memo(function (e) {
                         renderGuildHeaderDropdownButton: l
                     });
                 case s.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, S.f2)(a, C.Eu4.TIER_1) ? L.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : L.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({ boostCount: (0, S.KK)(a, C.Eu4.TIER_1) }),
-                        t = (0, S.f2)(a, C.Eu4.TIER_1) ? L.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : L.Z.Messages.LEARN_MORE;
+                    let e = (0, S.f2)(a, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({ boostCount: (0, S.KK)(a, C.Eu4.TIER_1) }),
+                        t = (0, S.f2)(a, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : Z.Z.Messages.LEARN_MORE;
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(T.ZP, {
                             onComponentMount: U,
-                            header: L.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
+                            header: Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: O,
@@ -167,7 +167,7 @@ t.Z = a.memo(function (e) {
                             }),
                             content: e,
                             buttonCTA: t,
-                            secondaryButtonCTA: L.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
+                            secondaryButtonCTA: Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
                             onSecondaryClick: () => y(_),
                             onClick: () => y(_, a),
                             markAsDismissed: k
@@ -182,10 +182,10 @@ t.Z = a.memo(function (e) {
                 case s.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(T.ZP, {
-                            className: Z.tooltipOverrideColor,
-                            header: L.Z.Messages.ACTIVE_THREADS_UPSELL_HEADER,
-                            content: L.Z.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
-                            buttonCTA: L.Z.Messages.GOT_IT,
+                            className: L.tooltipOverrideColor,
+                            header: Z.Z.Messages.ACTIVE_THREADS_UPSELL_HEADER,
+                            content: Z.Z.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
+                            buttonCTA: Z.Z.Messages.GOT_IT,
                             onClick: () => k(N.L.UNKNOWN),
                             markAsDismissed: k
                         }),
@@ -194,17 +194,17 @@ t.Z = a.memo(function (e) {
                 case s.z.GUILD_HEADER_SOUNDBOARD_PERMISSION:
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(T.ZP, {
-                            header: L.Z.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
-                            content: L.Z.Messages.SOUNDBOARD_TOOLTIP_BODY,
-                            buttonCTA: L.Z.Messages.CHECK_IT_OUT,
-                            secondaryButtonCTA: L.Z.Messages.NO_THANKS,
+                            header: Z.Z.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
+                            content: Z.Z.Messages.SOUNDBOARD_TOOLTIP_BODY,
+                            buttonCTA: Z.Z.Messages.CHECK_IT_OUT,
+                            secondaryButtonCTA: Z.Z.Messages.NO_THANKS,
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: P,
                                 className: R.fullWidthImage
                             }),
                             onClick: () => {
-                                m.Z.open(a.id, C.pNK.ROLES), m.Z.selectRole(a.getEveryoneRoleId(), L.Z.Messages.USE_SOUNDBOARD);
+                                m.Z.open(a.id, C.pNK.ROLES), m.Z.selectRole(a.getEveryoneRoleId(), Z.Z.Messages.USE_SOUNDBOARD);
                             },
                             markAsDismissed: k
                         }),

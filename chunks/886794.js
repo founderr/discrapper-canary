@@ -6,8 +6,8 @@ s.d(n, {
     s(47120);
 var t = s(735250),
     i = s(470079),
-    l = s(481060),
-    o = s(727637),
+    o = s(481060),
+    l = s(727637),
     r = s(100527),
     c = s(906732),
     a = s(680295),
@@ -45,12 +45,12 @@ function L(e) {
             roleId: O
         }),
         G = i.createRef(),
-        w = (0, o.Z)(G);
+        w = (0, l.Z)(G);
     return (0, t.jsx)(c.Gt, {
         value: B,
         children: (0, t.jsx)(u.Mt, {
             value: F,
-            children: (0, t.jsxs)(l.ModalRoot, {
+            children: (0, t.jsxs)(o.ModalRoot, {
                 transitionState: C,
                 className: N.root,
                 hideShadow: !0,
@@ -105,18 +105,18 @@ function L(e) {
                                         children: (0, t.jsxs)('div', {
                                             className: b.container,
                                             children: [
-                                                (0, t.jsx)(l.TabBar, {
+                                                (0, t.jsx)(o.TabBar, {
                                                     className: b.tabBar,
                                                     type: 'top',
                                                     selectedItem: T.oh.BOT_INFO,
                                                     onItemSelect: g.dG4,
                                                     children: (0, t.jsx)(
-                                                        l.TabBar.Item,
+                                                        o.TabBar.Item,
                                                         {
                                                             className: b.tabBarItem,
                                                             id: T.oh.BOT_INFO,
                                                             'aria-label': A.Z.Messages.USER_PROFILE_ABOUT_ME,
-                                                            children: (0, t.jsx)(l.Text, {
+                                                            children: (0, t.jsx)(o.Text, {
                                                                 variant: 'text-sm/normal',
                                                                 children: A.Z.Messages.USER_PROFILE_ABOUT_ME
                                                             })
@@ -124,7 +124,7 @@ function L(e) {
                                                         T.oh.BOT_INFO
                                                     )
                                                 }),
-                                                (0, t.jsxs)(l.ScrollerThin, {
+                                                (0, t.jsxs)(o.ScrollerThin, {
                                                     fade: !0,
                                                     className: j.scroller,
                                                     children: [

@@ -6,8 +6,8 @@ s.d(n, {
 var t = s(735250);
 s(470079);
 var i = s(442837),
-    l = s(979264),
-    o = s(699516),
+    o = s(979264),
+    l = s(699516),
     r = s(5192),
     c = s(648052),
     a = s(681837),
@@ -22,7 +22,7 @@ var i = s(442837),
 function Z(e) {
     var n;
     let { user: s, currentUser: Z, channelId: p, displayProfile: h, initialSection: v, initialSubsection: S, friendToken: T, onClose: g } = e,
-        A = (0, i.e7)([o.Z], () => o.Z.getRelationshipType(s.id)),
+        A = (0, i.e7)([l.Z], () => l.Z.getRelationshipType(s.id)),
         N = (0, E.Z)({
             user: s,
             currentUser: Z
@@ -43,7 +43,7 @@ function Z(e) {
                     onClose: g
                 })
             }),
-            (0, t.jsx)(l.ZP, { userId: s.id }),
+            (0, t.jsx)(o.ZP, { userId: s.id }),
             A === m.OGo.PENDING_INCOMING &&
                 (0, t.jsx)(u.Z.Overlay, {
                     className: x.friendRequestBannerOverlay,

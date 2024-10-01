@@ -46,7 +46,7 @@ function I(e) {
         O = !Z.isGuildInstalled && !Z.isUserInstalled;
     return (
         a.useEffect(() => {
-            O ? d.ZP.queryInstallOnDemandApp(P.id, t.id) : d.ZP.maybeQueryForInstallLessApps(P.id, t.id);
+            O && d.ZP.queryInstallOnDemandApp(P.id, t.id);
         }, [P.id, t.id, O]),
         (0, i.jsxs)(r.ScrollerNone, {
             className: x.container,

@@ -12,14 +12,14 @@ var t = n(735250),
     _ = n(594174),
     g = n(5192),
     x = n(810568),
-    h = n(689938),
-    f = n(501345),
+    f = n(689938),
+    h = n(501345),
     I = n(51527);
 a.Z = (e) => {
     let { entry: a, viewId: n, officialGuildId: i, onClose: v } = e,
         E = (0, l.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getChannelId())),
         A = (0, l.e7)([_.default], () => _.default.getUser(a.author_id)),
-        { nick: T, avatar: M } = o.useMemo(() => {
+        { nick: T, avatar: P } = o.useMemo(() => {
             let e = null == A ? void 0 : A.getAvatarURL(null == E ? void 0 : E.guild_id, 48, !1);
             return {
                 nick: g.ZP.getName(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, A),
@@ -66,7 +66,7 @@ a.Z = (e) => {
               children: (e) =>
                   (0, t.jsx)(s.Clickable, {
                       ...e,
-                      className: f.profileEntryCard,
+                      className: h.profileEntryCard,
                       children: (0, t.jsx)(s.FocusRing, {
                           offset: {
                               top: 4,
@@ -77,12 +77,12 @@ a.Z = (e) => {
                           children: (0, t.jsxs)(t.Fragment, {
                               children: [
                                   (0, t.jsx)('img', {
-                                      className: f.avatar,
-                                      src: M,
-                                      alt: h.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: T })
+                                      className: h.avatar,
+                                      src: P,
+                                      alt: f.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: T })
                                   }),
                                   (0, t.jsx)('div', {
-                                      className: r()(f.playerInfo),
+                                      className: r()(h.playerInfo),
                                       children: (0, t.jsxs)('div', {
                                           className: r()(I.column, I.gapXs),
                                           children: [
@@ -100,7 +100,7 @@ a.Z = (e) => {
                                       })
                                   }),
                                   (0, t.jsx)('div', {
-                                      className: f.reactions,
+                                      className: h.reactions,
                                       children: (0, t.jsx)(s.ArrowAngleLeftUpIcon, {})
                                   })
                               ]

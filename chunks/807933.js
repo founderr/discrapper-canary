@@ -5,7 +5,7 @@ var i = n(735250),
     r = n.n(s),
     l = n(348327),
     o = n.n(l),
-    c = n(526629),
+    c = n(212433),
     d = n(143927),
     u = n(481060),
     _ = n(410030),
@@ -163,7 +163,7 @@ let A = {
             });
         }
     };
-function L(e) {
+function Z(e) {
     let { item: t, state: n, cleanUp: s } = e,
         r = a.useMemo(() => {
             let e = v[t];
@@ -182,12 +182,12 @@ function L(e) {
         children: r
     });
 }
-function Z(e) {
+function L(e) {
     return e;
 }
 function R(e, t, n, a) {
     return (0, i.jsx)(
-        L,
+        Z,
         {
             item: t,
             state: n,
@@ -202,6 +202,6 @@ t.Z = a.memo(function (e) {
     return (0, i.jsx)(u.TransitionGroup, {
         items: n,
         renderItem: R,
-        getItemKey: Z
+        getItemKey: L
     });
 });

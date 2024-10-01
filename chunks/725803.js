@@ -18,7 +18,7 @@ function l(e, A) {
             if (null == t && null != e) {
                 C(!0), i(!0);
                 try {
-                    await r.Z.getApplicationsForGuild(e, {
+                    await r.ZP.getApplicationsForGuild(e, {
                         type: A,
                         includeTeam: !0
                     });

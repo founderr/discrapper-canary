@@ -4,8 +4,8 @@ n.d(t, {
     }
 }),
     n(653041);
-var l = n(55000),
-    a = n(693824),
+var a = n(55000),
+    l = n(693824),
     i = n(690725),
     r = n(737583),
     s = n(169040);
@@ -78,9 +78,9 @@ let o = (e, t, n) => ({
                         h: s.Pu
                     },
                     8,
-                    { fillMode: a.JU.Contain }
+                    { fillMode: l.JU.Contain }
                 );
-                n === a.vP.Failure &&
+                n === l.vP.Failure &&
                     (n = e.drawRoundedImage(
                         'ApplicationImage',
                         {
@@ -93,9 +93,9 @@ let o = (e, t, n) => ({
                         },
                         8
                     )),
-                    n === a.vP.Failure &&
+                    n === l.vP.Failure &&
                         e.drawPath(
-                            l.Cv,
+                            a.Cv,
                             {
                                 x: s.sB,
                                 y: s.sB
@@ -119,7 +119,7 @@ let o = (e, t, n) => ({
                         size: 16,
                         family: s.I8,
                         weight: s.Ue,
-                        truncate: a.GX.Wrap
+                        truncate: l.GX.Wrap
                     }),
                     e.drawText(
                         d,
@@ -140,7 +140,7 @@ let o = (e, t, n) => ({
                 });
             },
             exportConfigs: {
-                format: a.kH.CloudUpload,
+                format: l.kH.CloudUpload,
                 quality: 1,
                 fileName: 'user-reacting-to-'.concat(E, '.png').toLowerCase(),
                 fileType: 'png',

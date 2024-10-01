@@ -1,6 +1,6 @@
 n.d(t, {
     Y: function () {
-        return L;
+        return Z;
     }
 }),
     n(47120);
@@ -27,10 +27,10 @@ var i = n(735250),
     N = n(932901),
     A = n(129512),
     v = n(330065);
-let L = () => (0, i.jsx)('div', { className: N.placeholder });
+let Z = () => (0, i.jsx)('div', { className: N.placeholder });
 t.Z = (e) => {
     var t;
-    let { guild: s, theme: L, onView: Z, onTagClick: R } = e,
+    let { guild: s, theme: Z, onView: L, onTagClick: R } = e,
         { id: O, discoverySplash: x, icon: b, name: P, description: M, presenceCount: D, memberCount: y, keywords: j } = s,
         [U, G] = a.useState(!1),
         [w, k] = a.useState(!1),
@@ -50,7 +50,7 @@ t.Z = (e) => {
                           case S.BRd.LIGHT:
                               return v;
                       }
-                  })(L),
+                  })(Z),
         F =
             null !==
                 (t = m.ZP.getGuildIconURL({
@@ -76,7 +76,7 @@ t.Z = (e) => {
                 }
                 k(!0);
                 try {
-                    null != Z && (await Z(s.id));
+                    null != L && (await L(s.id));
                 } finally {
                     k(!1);
                 }

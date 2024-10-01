@@ -5,8 +5,8 @@ s.d(n, {
 });
 var t = s(735250),
     i = s(470079),
-    l = s(704215),
-    o = s(481060),
+    o = s(704215),
+    l = s(481060),
     r = s(605236),
     c = s(63063),
     a = s(369566),
@@ -22,16 +22,16 @@ function Z(e) {
     let { user: n, currentUser: s, onClose: Z } = e,
         { live: p, recent: h, stream: v } = (0, a.Z)(n.id),
         S = n.id === s.id,
-        T = (0, r.wE)(l.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+        T = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
         i.useEffect(() => {
             if (!!S && !T)
-                (0, r.EW)(l.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
+                (0, r.EW)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
                     dismissAction: f.L.AUTO_DISMISS,
                     forceTrack: !0
                 });
         }, [S, T]),
-        (0, t.jsxs)(o.ScrollerThin, {
+        (0, t.jsxs)(l.ScrollerThin, {
             className: x.scroller,
             fade: !0,
             children: [
@@ -64,7 +64,7 @@ function Z(e) {
                         ? m.Z.Messages.USER_RECENT_ACTIVITY_LEARN_MORE.format({
                               learnMoreHook: (e, n) =>
                                   (0, t.jsx)(
-                                      o.Anchor,
+                                      l.Anchor,
                                       {
                                           href: c.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
                                           children: e

@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return d;
+        return c;
     }
 }),
     t(47120);
@@ -13,9 +13,9 @@ var n = t(735250),
     E = t(25990),
     _ = t(689938),
     N = t(859565);
-function d(e) {
+function c(e) {
     var s;
-    let { isSlideReady: t, error: d, setEmailToken: c, setError: A, onNext: u, onClose: C } = e,
+    let { isSlideReady: t, error: c, setEmailToken: d, setError: u, onNext: A, onClose: C } = e,
         [M, S] = o.useState(!1),
         [m, I] = o.useState(''),
         [x, T] = o.useState(!1),
@@ -28,12 +28,12 @@ function d(e) {
         }
     }, [t]);
     let h = async (e) => {
-            e.preventDefault(), A(null), S(!0);
+            e.preventDefault(), u(null), S(!0);
             try {
                 let { token: e } = await (0, i.w)(m);
-                c(e), u();
+                d(e), A();
             } catch (e) {
-                A(new r.Z(e).getAnyErrorMessage());
+                u(new r.Z(e).getAnyErrorMessage());
             } finally {
                 S(!1);
             }
@@ -80,7 +80,7 @@ function d(e) {
                 children: [
                     (0, n.jsx)(l.FormItem, {
                         title: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
-                        error: null != d ? d : null == R ? void 0 : null === (s = R.email_token) || void 0 === s ? void 0 : s[0],
+                        error: null != c ? c : null == R ? void 0 : null === (s = R.email_token) || void 0 === s ? void 0 : s[0],
                         children: (0, n.jsx)(l.TextInput, {
                             value: m,
                             onChange: I,

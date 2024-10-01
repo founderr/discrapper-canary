@@ -6,8 +6,8 @@ s.d(n, {
 var t = s(735250);
 s(470079);
 var i = s(442837),
-    l = s(481060),
-    o = s(666520),
+    o = s(481060),
+    l = s(666520),
     r = s(189156),
     c = s(706454),
     a = s(430824),
@@ -34,7 +34,7 @@ function T(e) {
         O = (0, i.e7)([c.default], () => c.default.locale),
         R = (0, _.Z)(n.id),
         C = (0, I.Z)(n.id);
-    return (0, t.jsxs)(l.ScrollerThin, {
+    return (0, t.jsxs)(o.ScrollerThin, {
         fade: !0,
         className: S.scroller,
         children: [
@@ -51,7 +51,7 @@ function T(e) {
                     guild: L,
                     scrollIntoView: g === h.Tb.ROLES
                 }),
-            n.isProvisional() && (0, t.jsx)(r.Z, { look: 'profile_modal' }),
+            n.isProvisional && (0, t.jsx)(r.Z, { look: 'profile_modal' }),
             (0, t.jsx)(x.Z, {
                 heading: v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                 children: (0, t.jsx)(m.Z, {
@@ -94,7 +94,7 @@ function T(e) {
             (0, t.jsx)(x.Z, {
                 heading: v.Z.Messages.NOTE,
                 scrollIntoView: g === h.Tb.NOTE,
-                children: (0, t.jsx)(o.Z, {
+                children: (0, t.jsx)(l.Z, {
                     userId: n.id,
                     className: S.note,
                     autoFocus: g === h.Tb.NOTE,

@@ -6,8 +6,8 @@ s.d(n, {
     s(47120);
 var t = s(735250),
     i = s(470079),
-    l = s(481060),
-    o = s(100527),
+    o = s(481060),
+    l = s(100527),
     r = s(906732),
     c = s(138201),
     a = s(785717),
@@ -24,7 +24,7 @@ var t = s(735250),
 function h(e) {
     let { user: n, guildId: s, channelId: h, messageId: v, roleId: S, transitionState: T, onViewBlockedProfileClick: g, showGuildProfile: A = !0, sourceAnalyticsLocations: N = [] } = e,
         j = s === m.ME ? void 0 : s,
-        { analyticsLocations: b } = (0, r.ZP)([...N, o.Z.BLOCKED_PROFILE_MODAL]),
+        { analyticsLocations: b } = (0, r.ZP)([...N, l.Z.BLOCKED_PROFILE_MODAL]),
         L = (0, a.ZB)({
             layout: 'BLOCKED_PROFILE_MODAL',
             userId: n.id,
@@ -36,11 +36,11 @@ function h(e) {
         }),
         M = [
             {
-                icon: l.BellSlashIcon,
+                icon: o.BellSlashIcon,
                 description: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_NOTIFIED
             },
             {
-                icon: l.DenyIcon,
+                icon: o.DenyIcon,
                 description: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED
             }
         ],
@@ -50,7 +50,7 @@ function h(e) {
         value: b,
         children: (0, t.jsx)(a.Mt, {
             value: L,
-            children: (0, t.jsx)(l.ModalRoot, {
+            children: (0, t.jsx)(o.ModalRoot, {
                 transitionState: T,
                 className: Z.root,
                 hideShadow: !0,
@@ -76,16 +76,16 @@ function h(e) {
                                         user: n,
                                         guildId: j
                                     }),
-                                    (0, t.jsx)(l.Heading, {
+                                    (0, t.jsx)(o.Heading, {
                                         variant: 'heading-xl/bold',
                                         className: Z.header,
                                         children: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
                                     }),
-                                    (0, t.jsx)(l.Text, {
+                                    (0, t.jsx)(o.Text, {
                                         variant: 'text-md/medium',
                                         children: x.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({ username: n.username })
                                     }),
-                                    (0, t.jsx)(l.Text, {
+                                    (0, t.jsx)(o.Text, {
                                         variant: 'text-md/medium',
                                         children: x.Z.Messages.USER_PROFILE_BLOCKED_MODAL_BODY_CONFIRMATION
                                     }),

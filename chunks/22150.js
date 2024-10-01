@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return d;
+        return c;
     }
 }),
     t(47120);
@@ -13,23 +13,23 @@ var n = t(735250),
     E = t(594174),
     _ = t(689938),
     N = t(859565);
-function d(e) {
+function c(e) {
     let { onNext: s, onClose: t } = e,
-        [d, c] = o.useState(!1),
-        A = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
-        u = async (e) => {
-            e.preventDefault(), c(!0);
+        [c, d] = o.useState(!1),
+        u = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
+        A = async (e) => {
+            e.preventDefault(), d(!0);
             try {
                 await (0, i.i)(), s();
             } catch (s) {
                 let e = new r.Z(s).getAnyErrorMessage();
                 null != e && (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
             } finally {
-                c(!1);
+                d(!1);
             }
         };
     return (0, n.jsxs)('form', {
-        onSubmit: u,
+        onSubmit: A,
         children: [
             (0, n.jsxs)(l.ModalHeader, {
                 separator: !1,
@@ -51,7 +51,7 @@ function d(e) {
                 children: (0, n.jsx)(l.Text, {
                     className: N.description,
                     variant: 'text-md/normal',
-                    children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_DESCRIPTION_NO_LINK.format({ oldEmail: null == A ? void 0 : A.email })
+                    children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_DESCRIPTION_NO_LINK.format({ oldEmail: null == u ? void 0 : u.email })
                 })
             }),
             (0, n.jsxs)(l.ModalFooter, {
@@ -61,7 +61,7 @@ function d(e) {
                         type: 'submit',
                         color: l.Button.Colors.BRAND,
                         size: l.Button.Sizes.MEDIUM,
-                        submitting: d,
+                        submitting: c,
                         className: N.__invalid_submit,
                         children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_BUTTON
                     }),

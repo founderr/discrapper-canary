@@ -27,8 +27,8 @@ var i = n(735250),
     N = n(631885),
     A = n(522558),
     v = n(795448),
-    L = n(441623),
-    Z = n(457396),
+    Z = n(441623),
+    L = n(457396),
     R = n(108989),
     O = n(51596),
     x = n(905423),
@@ -52,7 +52,7 @@ let z = (e) => {
         let { selected: t, ...n } = e,
             s = (0, o.JA)('friends'),
             r = (0, d.e7)([y.Z], () => y.Z.getPendingCount()),
-            l = (0, d.e7)([L.Z], () => L.Z.canShowFriendsTabBadge()),
+            l = (0, d.e7)([Z.Z], () => Z.Z.canShowFriendsTabBadge()),
             { enabled: c } = A.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
             u = l && c,
             [_, E] = a.useState(!1);
@@ -239,7 +239,7 @@ let et = (e) => {
                           )
                         : null,
                     (0, i.jsx)(
-                        Z.g,
+                        L.g,
                         {
                             selected: null == u ? o : u.startsWith(V.Z5c.APPLICATION_STORE),
                             route: null == s || location.pathname.startsWith(V.Z5c.ACTIVITIES) || location.pathname.startsWith(V.Z5c.APPLICATION_STORE) ? V.Z5c.APPLICATION_STORE : s,

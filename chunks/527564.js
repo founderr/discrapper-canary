@@ -19,8 +19,8 @@ var i = a(735250),
     g = a(55563),
     I = a(147890),
     h = a(272242),
-    v = a(981631),
-    x = a(689938),
+    x = a(981631),
+    v = a(689938),
     f = a(778452);
 function C(e) {
     let { appId: n } = e,
@@ -33,7 +33,7 @@ function C(e) {
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: x.Z.Messages.STOREFRONT_APP_SUBSCRIPTIONS
+                            children: v.Z.Messages.STOREFRONT_APP_SUBSCRIPTIONS
                         }),
                         (0, i.jsx)('div', {
                             className: l()(f.productList, f.subList),
@@ -63,7 +63,7 @@ function C(e) {
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: x.Z.Messages.STOREFRONT_APP_PRODUCTS
+                            children: v.Z.Messages.STOREFRONT_APP_PRODUCTS
                         }),
                         (0, i.jsx)('div', {
                             className: l()(f.productList, f.itemList),
@@ -87,7 +87,7 @@ function C(e) {
                     ]
                 }),
             (0, i.jsx)(c.Z, {
-                path: v.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
+                path: x.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
                 render: (e) => (0, i.jsx)(E, { ...e })
             })
@@ -106,8 +106,8 @@ function E(e) {
     return (
         t.useLayoutEffect(() => {
             switch (null == r ? void 0 : r.type) {
-                case v.epS.CONSUMABLE:
-                case v.epS.DURABLE:
+                case x.epS.CONSUMABLE:
+                case x.epS.DURABLE:
                     return (function (e, n, a) {
                         (0, o.openModal)(
                             (e) => {
@@ -131,7 +131,7 @@ function E(e) {
                             }
                         );
                     })(c, n, a);
-                case v.epS.SUBSCRIPTION:
+                case x.epS.SUBSCRIPTION:
                     if ((null == l ? void 0 : l.flags) == null) return;
                     return (function (e, n, a, t) {
                         (0, o.openModal)(

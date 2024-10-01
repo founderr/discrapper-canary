@@ -19,9 +19,9 @@ t.Z = () => {
         C = (null == S ? void 0 : S.dismissibleContent) === l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
         N = i.useMemo(() => ((0, d.Fc)(T) && f && null != S && !C ? [S.dismissibleContent] : []), [T, f, S, C]),
         [A, v] = (0, o.US)(N, void 0, !0),
-        [L, Z] = (0, o.XR)(C && (null == S ? void 0 : S.type) === s.Z.COACHTIP ? l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == S ? void 0 : S.version) && void 0 !== e ? e : 0, void 0, !0),
+        [Z, L] = (0, o.XR)(C && (null == S ? void 0 : S.type) === s.Z.COACHTIP ? l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == S ? void 0 : S.version) && void 0 !== e ? e : 0, void 0, !0),
         R = null;
-    if ((null != A || null != L) && f && null != S && S.type === s.Z.COACHTIP) {
+    if ((null != A || null != Z) && f && null != S && S.type === s.Z.COACHTIP) {
         R = {
             type: h.k2.COACHTIP,
             title: () => S.title,
@@ -42,7 +42,7 @@ t.Z = () => {
     return {
         collectiblesShopTabNewBadgeDisplayOptions: R,
         dismissCollectiblesShopTabNewBadge: () => {
-            let e = C ? Z : v;
+            let e = C ? L : v;
             null != R && e(E.L.AUTO);
         }
     };

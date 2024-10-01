@@ -21,10 +21,10 @@ var i = n(735250),
     N = n(46140),
     A = n(981631),
     v = n(689938),
-    L = n(431418);
+    Z = n(431418);
 t.Z = function () {
     let { tabs: e, selectedTab: t, onSelectTab: n } = (0, C.z)(),
-        { onScroll: Z, scrollPosition: R } = (0, c.M)(),
+        { onScroll: L, scrollPosition: R } = (0, c.M)(),
         O = T.Z.getState().getUtmCurrentContext(),
         x = (0, p._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? S.Z : S.j;
     a.useEffect(() => {
@@ -46,13 +46,13 @@ t.Z = function () {
     (0, o.Tt)({ location: v.Z.Messages.QUESTS });
     let P = a.useMemo(() => [v.Z.Messages.QUESTS_HOME_PART_ONE, v.Z.Messages.QUESTS_HOME_PART_TWO], []);
     return (0, i.jsxs)('div', {
-        className: L.container,
+        className: Z.container,
         children: [
             (0, i.jsxs)(E.ZP, {
-                children: [(0, i.jsx)('div', { className: L.dragRegion }), (0, i.jsx)(E.z6, { scrollPosition: R }), (0, i.jsx)(E.aV, { icon: r.QuestsIcon })]
+                children: [(0, i.jsx)('div', { className: Z.dragRegion }), (0, i.jsx)(E.z6, { scrollPosition: R }), (0, i.jsx)(E.aV, { icon: r.QuestsIcon })]
             }),
             (0, i.jsxs)(m.Z, {
-                onScroll: Z,
+                onScroll: L,
                 children: [
                     (0, i.jsx)(u.Z, {
                         title: P,
@@ -61,10 +61,10 @@ t.Z = function () {
                             text: v.Z.Messages.LEARN_MORE,
                             onClick: b
                         }),
-                        className: L.bannerContainer,
+                        className: Z.bannerContainer,
                         children: (0, i.jsx)('div', {
-                            className: L.bannerImage,
-                            children: (0, i.jsx)('div', { className: L.bannerGradient })
+                            className: Z.bannerImage,
+                            children: (0, i.jsx)('div', { className: Z.bannerGradient })
                         })
                     }),
                     (0, i.jsxs)(_.Z, {
@@ -73,7 +73,7 @@ t.Z = function () {
                                 tabs: e,
                                 selectedTab: t,
                                 onTabSelect: n,
-                                className: L.tabs
+                                className: Z.tabs
                             }),
                             t === g.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(f.Z, {})
                         ]

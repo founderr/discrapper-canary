@@ -18,7 +18,7 @@ function d(e) {
     let t = r.useRef([]);
     return (
         r.useEffect(() => {
-            !(0, s.E)(e, t.current) && (u.Z.fetchApplications(a()(e).filter(l.lm).uniq().value(), !1), (t.current = e));
+            !(0, s.E)(e, t.current) && (u.ZP.fetchApplications(a()(e).filter(l.lm).uniq().value(), !1), (t.current = e));
         }, [e]),
         (0, o.Wu)([c.Z], () => e.map((e) => (null != e ? c.Z.getApplication(e) : void 0)))
     );

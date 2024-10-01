@@ -11,7 +11,7 @@ let s = (e) => {
     let t = Math.max(0, i()(e).diff(i()(), 's'));
     if (t < a.Z.Seconds.DAY) {
         let e = Math.round(t / a.Z.Seconds.HOUR);
-        return o.Z.Messages.LEADERBOARD_INTERVAL_END_DAYS_LEFT.format({ count: e });
+        return o.Z.Messages.LEADERBOARD_INTERVAL_END_HOURS_LEFT.format({ count: e });
     }
     {
         let e = Math.round(t / a.Z.Seconds.DAY);

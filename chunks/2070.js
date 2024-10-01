@@ -16,7 +16,7 @@ function r() {
             r(void 0);
             try {
                 if ((t(!0), null == l.current)) {
-                    let t = await i.Z.createApplication({
+                    let t = await i.ZP.createApplication({
                         name: o,
                         guildId: e.id,
                         type: s,
@@ -25,7 +25,7 @@ function r() {
                     l.current = t;
                 }
                 return (
-                    await i.Z.getApplicationsForGuild(e.id, {
+                    await i.ZP.getApplicationsForGuild(e.id, {
                         type: s,
                         includeTeam: !0
                     }),

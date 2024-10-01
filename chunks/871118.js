@@ -3,8 +3,8 @@ n.d(t, {
         return E;
     }
 });
-var l = n(735250),
-    a = n(470079),
+var a = n(735250),
+    l = n(470079),
     i = n(120356),
     r = n.n(i),
     s = n(442837),
@@ -16,21 +16,21 @@ var l = n(735250),
     m = n(689938),
     x = n(445524);
 function v(e) {
-    let { isLoading: t, noText: n, previewText: a, className: i } = e;
-    return (0, l.jsx)('div', {
+    let { isLoading: t, noText: n, previewText: l, className: i } = e;
+    return (0, a.jsx)('div', {
         className: r()(x.emptyPreviewContainer, i),
         children: t
-            ? (0, l.jsx)(o.Spinner, {})
-            : (0, l.jsxs)(l.Fragment, {
+            ? (0, a.jsx)(o.Spinner, {})
+            : (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, l.jsx)('div', { className: x.emptyPreviewImage }),
+                      (0, a.jsx)('div', { className: x.emptyPreviewImage }),
                       n
                           ? null
-                          : (0, l.jsx)(o.Text, {
+                          : (0, a.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'none',
                                 className: x.emptyPreviewText,
-                                children: null != a ? a : m.Z.Messages.STREAM_NO_PREVIEW
+                                children: null != l ? l : m.Z.Messages.STREAM_NO_PREVIEW
                             })
                   ]
               })
@@ -44,22 +44,22 @@ function E(e) {
             url: o ? u.Z.getPreviewURL(t.guildId, t.channelId, t.ownerId) : null,
             isLoading: o && u.Z.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
         })),
-        p = a.useRef(_ ? null : E);
-    a.useEffect(() => {
-        !_ && (p.current = E);
+        f = l.useRef(_ ? null : E);
+    l.useEffect(() => {
+        !_ && (f.current = E);
     }, [E, _]);
-    let T = null == E || _ ? p.current : E;
-    return null == T
-        ? (0, l.jsx)(v, {
+    let p = null == E || _ ? f.current : E;
+    return null == p
+        ? (0, a.jsx)(v, {
               className: n,
               isLoading: _,
               noText: i,
               previewText: o ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
           })
-        : (0, l.jsx)('div', {
+        : (0, a.jsx)('div', {
               className: n,
-              children: (0, l.jsx)('img', {
-                  src: T,
+              children: (0, a.jsx)('img', {
+                  src: p,
                   alt: '',
                   className: x.image
               })

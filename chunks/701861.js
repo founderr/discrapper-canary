@@ -34,7 +34,7 @@ function v(e, t, n) {
         e
     );
 }
-function L(e) {
+function Z(e) {
     let { user: t, onSelect: n } = e,
         a = () => {
             u.Z.removeFriend(t.id, { location: 'Friends' });
@@ -85,7 +85,7 @@ function L(e) {
         ]
     });
 }
-class Z extends a.PureComponent {
+class L extends a.PureComponent {
     componentWillLeave(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
     }
@@ -163,7 +163,7 @@ class Z extends a.PureComponent {
                 (0, d.vq)(
                     e,
                     (e) =>
-                        (0, i.jsx)(L, {
+                        (0, i.jsx)(Z, {
                             ...e,
                             user: t
                         }),
@@ -177,4 +177,4 @@ class Z extends a.PureComponent {
             });
     }
 }
-t.Z = Z;
+t.Z = L;

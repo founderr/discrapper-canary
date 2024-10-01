@@ -24,9 +24,9 @@ var i = a(735250),
     g = a(214912),
     I = a(290247),
     h = a(981631),
-    v = a(689938),
-    x = a(319333);
-let f = v.Z.getAvailableLocales();
+    x = a(689938),
+    v = a(319333);
+let f = x.Z.getAvailableLocales();
 function C(e) {
     var n, a, t;
     let { onClick: r, url: l, children: c } = e,
@@ -48,7 +48,7 @@ function E(e) {
         m = null;
     null != n
         ? (m = (0, i.jsx)(n, {
-              className: x.listIcon,
+              className: v.listIcon,
               color: null != t ? t : 'currentColor',
               width: 20,
               height: 20,
@@ -56,7 +56,7 @@ function E(e) {
           }))
         : null != a &&
           (m = (0, i.jsx)('img', {
-              className: x.listImage,
+              className: v.listImage,
               src: a,
               alt: ''
           }));
@@ -64,7 +64,7 @@ function E(e) {
         children: [
             m,
             (0, i.jsx)(o.Text, {
-                className: x.listText,
+                className: v.listText,
                 variant: 'text-md/normal',
                 selectable: !0,
                 children: d
@@ -73,7 +73,7 @@ function E(e) {
     });
     return (0, i.jsx)(c.Z, {
         href: r,
-        className: l()(x.listItem, x.linkItem),
+        className: l()(v.listItem, v.linkItem),
         onClick: () => (u(r, s), !1),
         trusted: !_,
         useDefaultUnderlineStyles: !1,
@@ -83,14 +83,14 @@ function E(e) {
 function P(e) {
     var n, a, r;
     let { application: s, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: p } = e,
-        [P, R] = t.useState(null),
-        b = [],
+        [P, b] = t.useState(null),
+        R = [],
         A = null !== (a = null == s ? void 0 : null === (n = s.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== a ? a : [];
     t.useEffect(() => {
         var e;
         if ((null === (e = s.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
             let e = new Set(s.directory_entry.supported_locales);
-            R(f.filter((n) => e.has(n.value)).map((e) => e.localizedName));
+            b(f.filter((n) => e.has(n.value)).map((e) => e.localizedName));
         }
     }, [s.directory_entry]);
     let N = (e, n) => {
@@ -104,16 +104,16 @@ function P(e) {
     return (
         null != s.categories &&
             s.categories.length > 0 &&
-            b.push(
+            R.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.Heading, {
-                            className: x.sectionHeader,
+                            className: v.sectionHeader,
                             variant: 'eyebrow',
-                            children: v.Z.Messages.APP_DIRECTORY_PROFILE_CATEGORIES_HEADING
+                            children: x.Z.Messages.APP_DIRECTORY_PROFILE_CATEGORIES_HEADING
                         }),
                         (0, i.jsx)('div', {
-                            className: x.categories,
+                            className: v.categories,
                             children: (null !== (r = s.categories) && void 0 !== r ? r : []).map((e) => {
                                 let n = new URLSearchParams();
                                 return (
@@ -123,7 +123,7 @@ function P(e) {
                                         {
                                             href: ''.concat(h.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(n),
                                             children: (0, i.jsx)(o.Clickable, {
-                                                className: x.category,
+                                                className: v.category,
                                                 onClick: () => u(e),
                                                 children: (0, i.jsx)(o.Text, {
                                                     variant: 'text-sm/normal',
@@ -142,26 +142,26 @@ function P(e) {
             ),
         null != P &&
             P.length > 0 &&
-            b.push(
+            R.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.Heading, {
-                            className: x.sectionHeader,
+                            className: v.sectionHeader,
                             variant: 'eyebrow',
-                            children: v.Z.Messages.APP_DIRECTORY_PROFILE_LANGUAGES_HEADING
+                            children: x.Z.Messages.APP_DIRECTORY_PROFILE_LANGUAGES_HEADING
                         }),
                         (0, i.jsx)(I.Z, { supportedLanguages: P })
                     ]
                 })
             ),
         (null != s.terms_of_service_url || null != s.privacy_policy_url || A.length > 0) &&
-            b.push(
+            R.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.Heading, {
-                            className: x.sectionHeader,
+                            className: v.sectionHeader,
                             variant: 'eyebrow',
-                            children: v.Z.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
+                            children: x.Z.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
                         }),
                         A.map((e, n) =>
                             (0, i.jsx)(
@@ -180,7 +180,7 @@ function P(e) {
                                   onClick: N,
                                   url: s.terms_of_service_url,
                                   type: 'tos',
-                                  children: v.Z.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
+                                  children: x.Z.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
                               })
                             : null,
                         null != s.privacy_policy_url
@@ -189,7 +189,7 @@ function P(e) {
                                   onClick: N,
                                   url: s.privacy_policy_url,
                                   type: 'policy',
-                                  children: v.Z.Messages.APP_DIRECTORY_PROFILE_PRIVACY_LINK
+                                  children: x.Z.Messages.APP_DIRECTORY_PROFILE_PRIVACY_LINK
                               })
                             : null
                     ]
@@ -197,13 +197,13 @@ function P(e) {
             ),
         null != s.guild &&
             s.guild.features.includes(h.oNc.DISCOVERABLE) &&
-            b.push(
+            R.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.Heading, {
-                            className: x.sectionHeader,
+                            className: v.sectionHeader,
                             variant: 'eyebrow',
-                            children: v.Z.Messages.APP_DIRECTORY_PROFILE_SERVER_HEADING
+                            children: x.Z.Messages.APP_DIRECTORY_PROFILE_SERVER_HEADING
                         }),
                         (0, i.jsx)(g.Z, {
                             guild: s.guild,
@@ -213,15 +213,15 @@ function P(e) {
                 })
             ),
         (0, i.jsx)('div', {
-            className: l()(x.sidebar, d),
+            className: l()(v.sidebar, d),
             children:
-                b.length > 0
+                R.length > 0
                     ? (0, i.jsx)(i.Fragment, {
-                          children: b.map((e, n) =>
+                          children: R.map((e, n) =>
                               (0, i.jsx)(
                                   'div',
                                   {
-                                      className: x.section,
+                                      className: v.section,
                                       children: e
                                   },
                                   n

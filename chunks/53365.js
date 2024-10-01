@@ -93,7 +93,7 @@ async function x(e) {
 async function p(e) {
     return (
         await x(e),
-        await i.Z.getApplicationsForGuild(e, {
+        await i.ZP.getApplicationsForGuild(e, {
             type: o.wW.GUILD_ROLE_SUBSCRIPTIONS,
             includeTeam: !0
         })

@@ -22,8 +22,8 @@ var i = n(913527),
     N = n(51144),
     A = n(196051),
     v = n(441729),
-    L = n(653477),
-    Z = n(981631),
+    Z = n(653477),
+    L = n(981631),
     R = n(689938);
 let O = [],
     x = null,
@@ -96,7 +96,7 @@ function w() {
 function k(e) {
     var t, n, i;
     let { message: a, channel: s } = e,
-        r = a.type === Z.uaV.REPLY ? c.Z.getMessageByReference(a.messageReference) : null,
+        r = a.type === L.uaV.REPLY ? c.Z.getMessageByReference(a.messageReference) : null,
         l = (null == r ? void 0 : r.state) === c.Y.LOADED ? (null == r ? void 0 : null === (t = r.message) || void 0 === t ? void 0 : t.author) : null,
         o = null != l ? (null !== (n = m.ZP.getNick(s.guild_id, null == l ? void 0 : l.id)) && void 0 !== n ? n : N.ZP.getName(l)) : null,
         d = s.getGuildId(),
@@ -114,16 +114,16 @@ function B(e) {
         A = l === I || l === C,
         v = u.OW.getSetting() && o.tts && A,
         R = p.Z.getTTSType(),
-        x = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== _.default.getId() && (R === Z.PrB.ALL_CHANNELS || (R === Z.PrB.SELECTED_CHANNEL && A));
+        x = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== _.default.getId() && (R === L.PrB.ALL_CHANNELS || (R === L.PrB.SELECTED_CHANNEL && A));
     if ((v || x) && !T.Z.isBlockedForMessage(o)) {
         if (O.indexOf(o.id) >= 0) return !1;
         O.unshift(o.id) > 10 && O.pop();
         let e = d.getGuildId();
         if (null != e && S.ZP.getMutedChannels(e).has(l)) return !1;
         let t = null !== (s = null !== (a = m.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== a ? a : N.ZP.getName(o.author)) && void 0 !== s ? s : '',
-            c = o.type === Z.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
+            c = o.type === L.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
             u = null != c ? (null !== (r = m.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== r ? r : N.ZP.getName(c)) : null;
-        U(D(o.content, t, e, u), !1, d.id, o.id, L.f);
+        U(D(o.content, t, e, u), !1, d.id, o.id, Z.f);
     }
     return !1;
 }

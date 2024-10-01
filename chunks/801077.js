@@ -282,7 +282,7 @@ let er = o().throttle(() => {
             !(function () {
                 if (Y.size > 0) {
                     let e = Array.from(Y);
-                    g.Z.fetchApplications(e), e.forEach((e) => K.add(e)), Y.clear();
+                    g.ZP.fetchApplications(e), e.forEach((e) => K.add(e)), Y.clear();
                 }
             })(),
             (V = !0);

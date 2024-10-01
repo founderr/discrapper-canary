@@ -6,8 +6,8 @@ s.d(n, {
     s(47120);
 var t,
     i = s(735250),
-    l = s(470079),
-    o = s(699581),
+    o = s(470079),
+    l = s(699581),
     r = s(442837),
     c = s(481060),
     a = s(34854),
@@ -29,10 +29,10 @@ function f(e, n, s) {
         e
     );
 }
-class m extends (t = l.PureComponent) {
+class m extends (t = o.PureComponent) {
     componentDidMount() {
         if (this.props.autoFocus && !this.props.hideNote) {
-            let e = o.findDOMNode(this.noteRef.current);
+            let e = l.findDOMNode(this.noteRef.current);
             null != e && null != e.selectionStart && (e.focus(), (e.selectionStart = e.selectionEnd = e.value.length));
         }
     }
@@ -57,7 +57,7 @@ class m extends (t = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'noteRef', l.createRef()),
+            f(this, 'noteRef', o.createRef()),
             f(this, 'handleBlur', (e) => {
                 let n = e.currentTarget.value,
                     { note: s, userId: t, onUpdate: i } = this.props;

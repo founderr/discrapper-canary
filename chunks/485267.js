@@ -9,9 +9,9 @@ n.d(t, {
         return u;
     }
 });
-var l = n(570140);
+var a = n(570140);
 n(100527), n(592125);
-var a = n(944486),
+var l = n(944486),
     i = n(914010);
 n(594174);
 var r = n(626135),
@@ -19,16 +19,16 @@ var r = n(626135),
 n(295955);
 var o = n(981631);
 let u = () => {
-    l.Z.dispatch({ type: 'CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN' }),
+    a.Z.dispatch({ type: 'CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN' }),
         r.default.track(o.rMx.MEMBERLIST_CONTENT_FEED_HIDDEN, {
-            channel_id: a.Z.getChannelId(),
+            channel_id: l.Z.getChannelId(),
             guild_id: i.Z.getGuildId(),
             hidden: s.Z.hidden
         });
 };
 function c() {
-    l.Z.dispatch({ type: 'GAME_PROFILE_OPEN' });
+    a.Z.dispatch({ type: 'GAME_PROFILE_OPEN' });
 }
 function d() {
-    l.Z.dispatch({ type: 'CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR' });
+    a.Z.dispatch({ type: 'CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR' });
 }

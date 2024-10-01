@@ -51,7 +51,7 @@ class Z extends s.PureComponent {
     }
     fetchApplication() {
         let { activity: e, application: t } = this.props;
-        null != e.application_id && null == t && m.Z.fetchApplication(e.application_id);
+        null != e.application_id && null == t && m.ZP.fetchApplication(e.application_id);
     }
     renderTitle() {
         let { activity: e } = this.props;

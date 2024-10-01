@@ -1,10 +1,10 @@
-o.d(e, {
+a.d(e, {
     P: function () {
         return n;
     }
 });
-var a = o(481060),
-    s = o(689938);
+var o = a(481060),
+    s = a(689938);
 function n() {
-    (0, a.showToast)((0, a.createToast)(s.Z.Messages.USER_SETTINGS_UPDATE_FAILURE, a.ToastType.FAILURE));
+    (0, o.showToast)((0, o.createToast)(s.Z.Messages.USER_SETTINGS_UPDATE_FAILURE, o.ToastType.FAILURE));
 }

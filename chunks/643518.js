@@ -6,8 +6,8 @@ s.d(n, {
     s(653041);
 var t = s(697927),
     i = s(200634),
-    l = s(369566),
-    o = s(326094),
+    o = s(369566),
+    l = s(326094),
     r = s(708108),
     c = s(146078),
     a = s(228168),
@@ -16,10 +16,10 @@ var t = s(697927),
 function I(e) {
     var n, s;
     let { user: I, currentUser: _ } = e,
-        { live: E, recent: f, stream: m } = (0, l.Z)(I.id),
+        { live: E, recent: f, stream: m } = (0, o.Z)(I.id),
         x = null === (n = (0, t.Z)(I.id, I.id !== (null == _ ? void 0 : _.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
         Z = null === (s = (0, i.Z)(I.id, I.id !== (null == _ ? void 0 : _.id)).mutualGuilds) || void 0 === s ? void 0 : s.length,
-        p = (0, o.Z)({
+        p = (0, l.Z)({
             user: I,
             currentUser: _,
             location: d.Sbl.PROFILE_MODAL_TABS

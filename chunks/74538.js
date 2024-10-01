@@ -1387,7 +1387,7 @@ function tO(e) {
     return null != e && w.OT.includes(e) ? 1 : 2;
 }
 function tR(e) {
-    return null != e && !e.isProvisional() && !e.bot;
+    return null != e && !e.isProvisional && !e.bot;
 }
 t.ZP = Object.freeze({
     isNewUser: e6,

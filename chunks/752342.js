@@ -7,8 +7,8 @@ s.d(n, {
 var t = s(735250);
 s(470079);
 var i = s(481060),
-    l = s(100527),
-    o = s(906732),
+    o = s(100527),
+    l = s(906732),
     r = s(5192),
     c = s(785717),
     a = s(687158),
@@ -34,7 +34,7 @@ function b(e) {
     let { user: n, currentUser: s, guildId: b, channelId: L, messageId: M, roleId: O, sessionId: R, initialSection: C, initialSubsection: P, transitionState: y, onClose: U, sourceAnalyticsLocations: D = [] } = e,
         B = b === A.ME ? void 0 : b,
         F = (0, a.ZP)(n.id, B),
-        { analyticsLocations: G } = (0, o.ZP)([...D, l.Z.SIMPLIFIED_PROFILE_MODAL]),
+        { analyticsLocations: G } = (0, l.ZP)([...D, o.Z.SIMPLIFIED_PROFILE_MODAL]),
         w = (0, c.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
@@ -45,7 +45,7 @@ function b(e) {
             roleId: O
         }),
         k = (0, T.Z)(n);
-    return (0, t.jsx)(o.Gt, {
+    return (0, t.jsx)(l.Gt, {
         value: G,
         children: (0, t.jsx)(c.Mt, {
             value: w,

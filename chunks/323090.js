@@ -6,8 +6,8 @@ s.d(n, {
 var t = s(735250);
 s(470079);
 var i = s(442837),
-    l = s(481060),
-    o = s(666520),
+    o = s(481060),
+    l = s(666520),
     r = s(592125),
     c = s(430824),
     a = s(944486),
@@ -31,7 +31,7 @@ function h(e) {
             return null === (e = u.Z.getUserProfile(s.id)) || void 0 === e ? void 0 : e.application;
         }),
         j = (0, i.e7)([r.Z, a.Z], () => r.Z.getChannel(a.Z.getChannelId()));
-    return (0, t.jsxs)(l.ScrollerThin, {
+    return (0, t.jsxs)(o.ScrollerThin, {
         fade: !0,
         className: p.scroller,
         children: [
@@ -68,7 +68,7 @@ function h(e) {
             (0, t.jsx)(f.Z, {
                 heading: Z.Z.Messages.NOTE,
                 scrollIntoView: S === x.Tb.NOTE,
-                children: (0, t.jsx)(o.Z, {
+                children: (0, t.jsx)(l.Z, {
                     userId: s.id,
                     className: p.note,
                     autoFocus: S === x.Tb.NOTE,

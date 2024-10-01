@@ -37,7 +37,7 @@ function g(e) {
                         let { type: t } = e;
                         return t !== m.IIU.CUSTOM_STATUS;
                     }),
-                    (e, t) => null != e.application_id && null != t.application_id && e.application_id === t.application_id
+                    (e, t) => (null != e.application_id && null != t.application_id && e.application_id === t.application_id) || (null != e.name && null != t.name && e.name === t.name)
                 ),
                 t = null == S ? void 0 : S.entries.filter((t) => ((0, u.y0)(t) ? !e.some((e) => null != e && (0, c.RL)(t, e)) : (0, p.Z)(t) && !(0, d.kr)(t)));
             return {

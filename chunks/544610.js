@@ -46,7 +46,7 @@ function P() {
                     t
                         .reduce((e, t) => {
                             let n = x.default.getUser(t);
-                            return null == n || n.isProvisional() ? e : (e.push({ user: n }), e);
+                            return null == n || n.isProvisional ? e : (e.push({ user: n }), e);
                         }, [])
                         .sort(y)
                 );

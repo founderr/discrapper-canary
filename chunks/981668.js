@@ -27,7 +27,7 @@ function p(e) {
     return e.filter((e) => e.type === f.IIU.PLAYING && e.application_id).map((e) => e.application_id);
 }
 async function m(e) {
-    await o.Z.fetchApplications(e, !1);
+    await o.ZP.fetchApplications(e, !1);
 }
 async function I(e) {
     if (null == e) return;

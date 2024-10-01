@@ -28,7 +28,7 @@ async function f(e, t) {
     try {
         if (!(await (0, o.W5)(e))) throw Error('Do not have access!');
         let n = l.Z.getApplication(e);
-        null == n && (n = u.Z.createFromServer(await s.Z.fetchApplication(e)));
+        null == n && (n = u.Z.createFromServer(await s.ZP.fetchApplication(e)));
         let r = (0, c.yE)(n.flags, E.udG.EMBEDDED);
         if (r && (null == t || !d.Z.URL_REGEX.test(t))) throw Error('Invalid Origin URL for embedded application');
         return (

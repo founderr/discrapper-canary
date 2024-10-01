@@ -82,7 +82,7 @@ function y(e) {
                         children: x
                     }),
                 j.Z.Messages.BEGINNING_DM.format({ username: u }),
-                (null == f ? void 0 : f.isProvisional()) && (0, i.jsx)(d.Z, { look: 'channel_header' }),
+                (null == f ? void 0 : f.isProvisional) && (0, i.jsx)(d.Z, { look: 'channel_header' }),
                 (0, i.jsx)(I.Z, {
                     userId: n.getRecipientId(),
                     channel: n,

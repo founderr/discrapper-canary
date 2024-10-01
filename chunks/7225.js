@@ -35,7 +35,7 @@ function I(e) {
     s.useEffect(() => {
         0 === N.status &&
             (T({ status: 1 }),
-            d.Z.fetchApplication(a)
+            d.ZP.fetchApplication(a)
                 .then(() => {
                     T({ status: 2 });
                 })

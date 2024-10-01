@@ -32,7 +32,7 @@ function S(e) {
             [C]
         ),
         u = (null == S ? void 0 : null === (s = S.team) || void 0 === s ? void 0 : s.id) !== A,
-        [g, { loading: m, error: R }] = (0, E.Z)(o.Z.transferApplication),
+        [g, { loading: m, error: R }] = (0, E.Z)(o.ZP.transferApplication),
         x = async () => {
             i()(null != S, 'no application'),
                 i()(null != A, 'no team selected'),
