@@ -1,10 +1,9 @@
 n.d(t, {
-    E: function () {
+    f: function () {
         return m;
     }
 }),
     n(47120),
-    n(653041),
     n(789020);
 var i = n(602715),
     s = n(812206),
@@ -15,35 +14,29 @@ var i = n(602715),
     c = n(3148),
     u = n(981631);
 let d = new Map();
-function h(e, t, n) {
-    let i = (0, c.ZP)({
-            channelId: n,
+function h(e, t) {
+    let n = (0, c.ZP)({
+            channelId: t,
             type: u.uaV.IN_GAME_MESSAGE_NUX,
             content: '',
-            author: t.author,
+            author: e.author,
             flags: u.iLy.EPHEMERAL,
             state: u.yb.SENT
         }),
-        s = (0, o.e5)(i);
-    (s.applicationId = t.applicationId),
-        e.push({
-            type: u.ys_.MESSAGE,
-            content: s,
-            groupId: i.id
-        });
+        i = (0, o.e5)(n);
+    return (i.applicationId = e.applicationId), (i.timestamp = e.timestamp), i;
 }
-function m(e, t, n) {
-    !(function (e, t, n) {
-        var o, c;
-        if (d.get(n.id) === t.id) {
-            h(e, t, n.id);
-            return;
-        }
-        if (null == t.applicationId || !n.isDM() || t.author.id === l.default.getId() || (0, r.yE)(null !== (o = n.recipientFlags) && void 0 !== o ? o : 0, i.V.DISMISSED_IN_GAME_MESSAGE_NUX) || d.has(n.id)) return;
-        let m = s.Z.getApplication(t.applicationId);
-        if (null == m || !(0, r.yE)(m.flags, u.udG.SOCIAL_LAYER_INTEGRATION)) return;
-        h(e, t, n.id), d.set(n.id, t.id);
-        let p = (0, r.mB)(null !== (c = n.recipientFlags) && void 0 !== c ? c : 0, i.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
-        a.Z.updatePrivateChannelRecipientFlags(n.id, p);
-    })(e, t, n);
+function m(e, t) {
+    let n = (function (e, t) {
+        var n, o;
+        if (d.get(t.id) === e.id) return h(e, t.id);
+        if (null == e.applicationId || !t.isDM() || e.author.id === l.default.getId() || (0, r.yE)(null !== (n = t.recipientFlags) && void 0 !== n ? n : 0, i.V.DISMISSED_IN_GAME_MESSAGE_NUX) || d.has(t.id)) return null;
+        let c = s.Z.getApplication(e.applicationId);
+        if (null == c || !(0, r.yE)(c.flags, u.udG.SOCIAL_LAYER_INTEGRATION)) return null;
+        let m = h(e, t.id);
+        d.set(t.id, e.id);
+        let p = (0, r.mB)(null !== (o = t.recipientFlags) && void 0 !== o ? o : 0, i.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
+        return a.Z.updatePrivateChannelRecipientFlags(t.id, p), m;
+    })(e, t);
+    return null != n ? n : null;
 }

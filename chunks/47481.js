@@ -107,18 +107,24 @@ function d(e) {
                             unreadId: e.id
                         }),
                     (I = null));
-            (0, c.E)(g, e, h);
-            let O = (null == R ? void 0 : R.type) === u.ys_.MESSAGE ? d : R;
-            (0, r.J)(h, O, e) && (n = e.id);
-            let y = {
+            let O = (0, c.f)(e, h);
+            null != O &&
+                g.push({
+                    type: u.ys_.MESSAGE,
+                    content: O,
+                    groupId: O.id
+                });
+            let y = (null == R ? void 0 : R.type) === u.ys_.MESSAGE ? d : R;
+            (0, r.J)(h, y, e) && (n = e.id);
+            let D = {
                 type: e.type === u.uaV.THREAD_STARTER_MESSAGE ? u.ys_.THREAD_STARTER_MESSAGE : u.ys_.MESSAGE,
                 content: e,
                 groupId: n
             };
-            n === e.id && (d = y);
-            let { jumpSequenceId: D, jumpFlash: U, jumpTargetId: k } = m;
-            U && e.id === k && null != D && (y.flashKey = D),
-                m.jumpTargetId === e.id && (y.jumpTarget = !0),
+            n === e.id && (d = D);
+            let { jumpSequenceId: U, jumpFlash: k, jumpTargetId: w } = m;
+            k && e.id === w && null != U && (D.flashKey = U),
+                m.jumpTargetId === e.id && (D.jumpTarget = !0),
                 null != E &&
                     e.id === E.startId &&
                     E.count > 1 &&
@@ -128,7 +134,7 @@ function d(e) {
                         contentKey: E.startId,
                         isSummaryDivider: !0
                     }),
-                null !== L ? (L.content.push(y), y.jumpTarget && (L.hasJumpTarget = !0)) : g.push(y),
+                null !== L ? (L.content.push(D), D.jumpTarget && (L.hasJumpTarget = !0)) : g.push(D),
                 e.isFirstMessageInForumPost(h) && g.push({ type: u.ys_.FORUM_POST_ACTION_BAR }),
                 null != E &&
                     e.id === E.endId &&
