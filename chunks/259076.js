@@ -6,6 +6,9 @@ t.d(s, {
     j1: function () {
         return r;
     },
+    mF: function () {
+        return i;
+    },
     pw: function () {
         return n;
     },
@@ -20,4 +23,5 @@ t.d(s, {
     (o[(o.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE');
 let a = [0, 1, 2, 3],
     l = new Set([0, 1]),
-    r = 'https://discord.com/safety/understanding-and-avoiding-common-scams';
+    r = 'https://discord.com/safety/understanding-and-avoiding-common-scams',
+    i = 1024;
