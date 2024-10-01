@@ -28,8 +28,7 @@ function c(e) {
                     'aria-label': o.Z.Messages.FOR_LATER,
                     tooltip: t ? null : o.Z.Messages.FOR_LATER,
                     selected: t,
-                    showBadge: a,
-                    badgePosition: 'top'
+                    showBadge: a
                 })
             })
     });
