@@ -15,7 +15,7 @@ var n = t(735250),
     _ = t(906732),
     u = t(601911),
     E = t(283836),
-    T = t(812206),
+    T = t(728345),
     S = t(565138),
     I = t(374649),
     N = t(908951),
@@ -33,11 +33,10 @@ var n = t(735250),
     D = t(689938),
     L = t(73282);
 function P(e) {
-    var s, t, a, r;
-    let { subscription: c, navigateToSwitchPlan: E } = e,
+    var s, t, r, c;
+    let { subscription: E, navigateToSwitchPlan: A } = e,
         {
-            app: A,
-            appIcon: x,
+            appId: x,
             plan: f,
             storeListing: P,
             price: U,
@@ -45,54 +44,53 @@ function P(e) {
             subscriptionForGuild: F,
             sku: y
         } = (0, o.cj)(
-            [g.Z, O.Z, m.Z, T.Z, C.Z, h.Z],
+            [g.Z, m.Z, O.Z, C.Z, h.Z],
             () => {
-                let e = g.Z.getForSubscription(c.id),
+                let e = g.Z.getForSubscription(E.id),
                     s = null != e && e.size > 0 ? Array.from(e)[0] : null,
                     t = null == s ? void 0 : s.applicationId,
-                    n = c.planId,
+                    n = E.planId,
                     a = m.Z.get(n),
-                    i = null != t ? T.Z.getApplication(t) : null,
-                    r = null != i ? (0, u.y)(i, 100) : null,
-                    o = null != a ? O.Z.getForSKU(a.skuId) : null,
-                    l = null != a ? (0, p.og)((0, p.T4)(a.price, a.currency), a.interval, a.intervalCount) : null,
-                    d = null != o && (0, R.KK)(o.skuFlags),
-                    _ = d && null != s ? C.Z.getGuild(s.guildId) : void 0,
-                    E = null != o ? h.Z.get(o.skuId) : null;
+                    i = null != a ? O.Z.getForSKU(a.skuId) : null,
+                    r = null != a ? (0, p.og)((0, p.T4)(a.price, a.currency), a.interval, a.intervalCount) : null,
+                    o = null != i && (0, R.KK)(i.skuFlags),
+                    l = o && null != s ? C.Z.getGuild(s.guildId) : void 0,
+                    c = null != i ? h.Z.get(i.skuId) : null;
                 return {
-                    app: i,
-                    appIcon: r,
-                    isGuildSubscription: d,
+                    appId: t,
+                    isGuildSubscription: o,
                     plan: a,
-                    price: l,
-                    sku: null != E ? E : void 0,
-                    storeListing: o,
-                    subscriptionForGuild: _
+                    price: r,
+                    sku: null != c ? c : void 0,
+                    storeListing: i,
+                    subscriptionForGuild: l
                 };
             },
-            [c]
+            [E.id, E.planId]
         ),
-        V = null !== (s = null == y ? void 0 : y.deleted) && void 0 !== s && s,
-        Y = null != y && (0, R.OL)(y),
-        k = (0, R.Jf)(c, y),
-        w = c.status === M.O0b.PAST_DUE,
-        { analyticsLocations: H } = (0, _.ZP)(),
-        [W] = (0, I.ED)({
-            subscriptionId: c.id,
+        { data: V } = (0, T.IX)(x),
+        Y = a.useMemo(() => (null != V ? (0, u.y)(V, 100) : null), [V]),
+        k = null !== (s = null == y ? void 0 : y.deleted) && void 0 !== s && s,
+        w = null != y && (0, R.OL)(y),
+        H = (0, R.Jf)(E, y),
+        W = E.status === M.O0b.PAST_DUE,
+        { analyticsLocations: K } = (0, _.ZP)(),
+        [z] = (0, I.ED)({
+            subscriptionId: E.id,
             renewal: !0,
-            analyticsLocations: H,
+            analyticsLocations: K,
             analyticsLocation: d.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
         }),
-        K = Z(c.currentPeriodEnd);
+        Q = Z(E.currentPeriodEnd);
     return (0, n.jsxs)(i.l, {
         header: (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)('div', {
                     className: L.headerContent,
                     children: [
-                        null != x &&
+                        null != Y &&
                             (0, n.jsx)(l.Image, {
-                                src: x.href,
+                                src: Y.href,
                                 imageClassName: L.appIcon,
                                 width: 40,
                                 height: 40
@@ -101,12 +99,12 @@ function P(e) {
                             children: [
                                 (0, n.jsx)(l.Heading, {
                                     variant: 'heading-md/semibold',
-                                    children: null !== (t = null == A ? void 0 : A.name) && void 0 !== t ? t : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_APPLICATION_NAME_UNAVAILABLE
+                                    children: null !== (t = null == V ? void 0 : V.name) && void 0 !== t ? t : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_APPLICATION_NAME_UNAVAILABLE
                                 }),
                                 (0, n.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: null !== (a = null == f ? void 0 : f.name) && void 0 !== a ? a : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PLAN_NAME_UNAVAILABLE
+                                    children: null !== (r = null == f ? void 0 : f.name) && void 0 !== r ? r : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PLAN_NAME_UNAVAILABLE
                                 })
                             ]
                         })
@@ -115,27 +113,27 @@ function P(e) {
                 (0, n.jsx)('div', {
                     className: L.headerButtons,
                     children:
-                        null != A &&
+                        null != V &&
                         null != P &&
                         null != y &&
                         (0, n.jsx)(j, {
-                            subscription: c,
-                            app: A,
+                            subscription: E,
+                            app: V,
                             sku: y,
                             storeListing: P,
-                            isCancelled: k,
-                            navigateToSwitchPlan: E
+                            isCancelled: H,
+                            navigateToSwitchPlan: A
                         })
                 })
             ]
         }),
         children: [
-            k &&
+            H &&
                 (0, n.jsx)(v, {
                     type: 'warning',
-                    title: Y ? D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_APP_CANCELLED.format({ subscriptionPeriodEnd: K }) : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_USER_CANCELLED.format({ subscriptionPeriodEnd: K })
+                    title: w ? D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_APP_CANCELLED.format({ subscriptionPeriodEnd: Q }) : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_USER_CANCELLED.format({ subscriptionPeriodEnd: Q })
                 }),
-            w &&
+            W &&
                 (0, n.jsx)(v, {
                     type: 'danger',
                     title: D.Z.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING
@@ -181,11 +179,11 @@ function P(e) {
                         }),
                     (0, n.jsx)(b, {
                         title: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_START_DATE,
-                        content: Z(null !== (r = c.createdAt) && void 0 !== r ? r : c.currentPeriodStart)
+                        content: Z(null !== (c = E.createdAt) && void 0 !== c ? c : E.currentPeriodStart)
                     }),
                     (0, n.jsx)(b, {
-                        title: k ? D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_END_DATE : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RENEWAL_DATE,
-                        content: K
+                        title: H ? D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_END_DATE : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RENEWAL_DATE,
+                        content: Q
                     })
                 ]
             }),
@@ -193,18 +191,18 @@ function P(e) {
                 className: L.payment,
                 children: [
                     (0, n.jsx)(l.FormTitle, { children: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL }),
-                    null != W &&
+                    null != z &&
                         (0, n.jsx)(N.Z, {
-                            subscription: c,
-                            currentInvoicePreview: W,
-                            disabled: V || k
+                            subscription: E,
+                            currentInvoicePreview: z,
+                            disabled: k || H
                         })
                 ]
             }),
-            null != A &&
+            null != V &&
                 (null == P ? void 0 : P.benefits) != null &&
                 (0, n.jsx)(B, {
-                    appId: A.id,
+                    appId: V.id,
                     listingBenefits: P.benefits
                 })
         ]
