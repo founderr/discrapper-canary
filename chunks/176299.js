@@ -354,7 +354,8 @@ function eB(e) {
         s)
     )
         return null;
-    let R = p ? 'div' : a.Fragment;
+    let R = p ? 'div' : a.Fragment,
+        O = p ? { className: eg.sidebarList } : {};
     return (0, i.jsx)(h.ThemeProvider, {
         theme: n,
         children: (e) =>
@@ -375,7 +376,7 @@ function eB(e) {
                             themeOverride: n
                         }),
                     (0, i.jsx)(R, {
-                        className: eg.sidebarList,
+                        ...O,
                         children: (0, i.jsx)(eL, {})
                     }),
                     p
