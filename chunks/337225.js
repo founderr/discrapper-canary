@@ -18,7 +18,6 @@ e.exports = {
     emojiAliasInputDisabled: 'emojiAliasInputDisabled_dc1809',
     emojiDisabled: 'emojiDisabled_dc1809',
     uploader: 'uploader_dc1809',
-    avatar: 'avatar_dc1809',
     emojiUploadUploadRequirementsHeading: 'emojiUploadUploadRequirementsHeading_dc1809',
     emojiUploadUploadRequirementsList: 'emojiUploadUploadRequirementsList_dc1809',
     emojiSettings: 'emojiSettings_dc1809',
