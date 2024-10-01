@@ -444,14 +444,7 @@ let ey = {
                     oldFormErrors: !0
                 })
                 .then((e) => {
-                    if (e.body.length > 0)
-                        return (
-                            c.Z.dispatch({
-                                type: 'REACTION_MESSAGE_FETCHED',
-                                message: e.body[0]
-                            }),
-                            (0, M.e5)(e.body[0])
-                        );
+                    if (e.body.length > 0) return (0, M.e5)(e.body[0]);
                 });
         },
         fetchMessages(e) {

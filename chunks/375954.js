@@ -141,18 +141,13 @@ function X(e) {
     null != n.nonce && n.state !== x.yb.SENDING && k.has(n.nonce) && ((i = i.remove(n.nonce)), k.delete(n.nonce)), (i = i.receiveMessage(n, !0 === C.Z.isAtBottom(t))), _.Z.commit(i);
 }
 function $(e) {
-    let { message: t } = e,
-        n = _.Z.getOrCreate(t.channel_id);
-    B.log('Inserting message from a reaction in-app notification', t.id, t.channel_id), _.Z.commit(n.receiveReactionInAppNotification(t));
-}
-function J(e) {
     let { channelId: t, messageId: n, reason: r } = e,
         i = _.Z.getOrCreate(t);
     if (null == i || !i.has(n)) return !1;
     let a = i.get(n, !0);
     (i = (null == a ? void 0 : a.isPoll()) === !0 ? i.remove(n) : i.update(n, (e) => ((e = e.set('state', x.yb.SEND_FAILED)).isCommandType() ? (e = (e = e.set('interactionError', null != r ? r : '')).set('flags', (0, v.pj)(e.flags, x.iLy.EPHEMERAL))) : null != r && (e = e.set('interactionError', null != r ? r : '')), e))), _.Z.commit(i);
 }
-function ee(e) {
+function J(e) {
     let { id: t, channelId: n } = e,
         r = _.Z.getOrCreate(n);
     if (null == r || !r.has(t)) return !1;
@@ -162,7 +157,7 @@ function ee(e) {
     }
     (r = r.remove(t)), _.Z.commit(r), k.delete(t);
 }
-function et(e) {
+function ee(e) {
     let { ids: t, channelId: n } = e,
         r = _.Z.getOrCreate(n);
     if (null == r) return !1;
@@ -177,27 +172,27 @@ function et(e) {
             k.delete(e);
         });
 }
-function en(e) {
+function et(e) {
     let t = e.message.id,
         n = e.message.channel_id,
         r = _.Z.getOrCreate(n);
     if (null == r || !r.has(t)) return !1;
     (r = r.update(t, (t) => (0, I.wi)(t, e.message))), _.Z.commit(r);
 }
-function er(e) {
+function en(e) {
     let { messageId: t, channelId: n } = e,
         r = _.Z.get(n);
     if (null == r || !r.has(t)) return !1;
     (r = r.update(t, h.Cm)), _.Z.commit(r);
 }
-function ei(e) {
+function er(e) {
     let t = e.messageId,
         n = e.channelId,
         r = _.Z.get(n);
     if (null == r || !r.has(t)) return !1;
     (r = r.update(t, (t) => t.set('interactionData', e.interactionData))), _.Z.commit(r);
 }
-function ea(e) {
+function ei(e) {
     let { channelId: t } = e,
         n = _.Z.getOrCreate(t);
     (n = n.loadComplete({
@@ -207,32 +202,32 @@ function ea(e) {
     })),
         _.Z.commit(n);
 }
-function eo() {
+function ea() {
     _.Z.forEach((e) => {
         let { channelId: t } = e;
         null == R.Z.getChannel(t) && _.Z.clear(t);
     });
 }
-function es() {
+function eo() {
     _.Z.forEach((e) => {
         _.Z.commit(e.reset(e.map((e) => e.set('blocked', M.Z.isBlockedForMessage(e)))));
     });
 }
-function el(e) {
+function es(e) {
     let { channelId: t, messageId: n } = e,
         r = _.Z.getOrCreate(t);
     _.Z.commit(r.mutate({ revealedMessageId: n }));
 }
+function el(e) {}
 function eu(e) {}
-function ec(e) {}
-function ed(e) {
+function ec(e) {
     let { type: t, channelId: n, messageId: r, userId: i, emoji: a, reactionType: o } = e,
         s = _.Z.get(n);
     if (null == s || !(0, S.sm)(e)) return !1;
     let l = O.default.getId() === i;
     (s = s.update(r, (n) => ('MESSAGE_REACTION_ADD' === t ? n.addReaction(a, l, e.colors, o) : n.removeReaction(a, l, o)))), _.Z.commit(s);
 }
-function e_(e) {
+function ed(e) {
     let { channelId: t, messageId: n, reactions: r } = e,
         i = _.Z.get(t);
     if (null == i) return !1;
@@ -242,7 +237,7 @@ function e_(e) {
     })),
         _.Z.commit(i);
 }
-function eE(e) {
+function e_(e) {
     let { type: t, messageData: n } = e,
         { message: r } = n,
         i = (0, E.hc)(n),
@@ -255,40 +250,40 @@ function eE(e) {
     })),
         _.Z.commit(o);
 }
-function ef(e) {
+function eE(e) {
     let { channelId: t, messageId: n } = e,
         r = _.Z.get(t);
     if (null == r) return !1;
     (r = r.update(n, (e) => e.set('reactions', []))), _.Z.commit(r);
 }
-function eh(e) {
+function ef(e) {
     let { channelId: t, messageId: n, emoji: r } = e,
         i = _.Z.get(t);
     if (null == i) return !1;
     (i = i.update(n, (e) => e.removeReactionsForEmoji(r))), _.Z.commit(i);
 }
-function ep() {
+function eh() {
     _.Z.forEach((e) => {
         _.Z.clear(e.channelId);
     }),
         k.clear();
 }
-function em(e) {
+function ep(e) {
     for (let [t, n] of N.default.entries(e.messages)) {
         let e = _.Z.getOrCreate(t).addCachedMessages(n, !0);
         _.Z.commit(e);
     }
 }
-function eI(e) {
+function em(e) {
     let t = _.Z.getOrCreate(e.channelId);
     (t.cached || !t.ready) && _.Z.commit(t.addCachedMessages(e.messages, e.stale));
 }
-function eT(e) {
+function eI(e) {
     let { message: t } = e,
         n = w.default.getCurrentUser();
     null != t && null != t.author && null != n && t.author.id === n.id && (F = !0);
 }
-class eg extends (r = c.ZP.Store) {
+class eT extends (r = c.ZP.Store) {
     initialize() {
         this.waitFor(w.default, R.Z, C.Z, L.ZP, A.default, P.Z, U.Z, b.Z, M.Z, y.ZP), this.syncWith([m.Z], () => {});
     }
@@ -356,45 +351,44 @@ class eg extends (r = c.ZP.Store) {
         return F;
     }
 }
-G(eg, 'displayName', 'MessageStore'),
-    (t.Z = new eg(d.Z, {
+G(eT, 'displayName', 'MessageStore'),
+    (t.Z = new eT(d.Z, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: V,
         CONNECTION_OPEN: Z,
         OVERLAY_INITIALIZE: Z,
-        CACHE_LOADED: em,
+        CACHE_LOADED: ep,
         LOAD_MESSAGES: H,
         LOAD_MESSAGES_SUCCESS: K,
         LOAD_MESSAGES_FAILURE: z,
         LOAD_MESSAGES_SUCCESS_CACHED: W,
-        LOCAL_MESSAGES_LOADED: eI,
-        LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: ei,
+        LOCAL_MESSAGES_LOADED: em,
+        LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: er,
         TRUNCATE_MESSAGES: Y,
         CLEAR_MESSAGES: j,
         MESSAGE_CREATE: X,
-        MESSAGE_SEND_FAILED: J,
-        MESSAGE_SEND_FAILED_AUTOMOD: eE,
-        MESSAGE_EDIT_FAILED_AUTOMOD: eE,
-        MESSAGE_UPDATE: en,
-        MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: er,
-        MESSAGE_DELETE: ee,
-        MESSAGE_DELETE_BULK: et,
-        MESSAGE_REVEAL: el,
-        THREAD_CREATE_LOCAL: ea,
-        CHANNEL_DELETE: eo,
-        THREAD_DELETE: eo,
-        GUILD_DELETE: eo,
-        RELATIONSHIP_ADD: es,
-        RELATIONSHIP_REMOVE: es,
-        GUILD_MEMBERS_CHUNK_BATCH: eu,
-        THREAD_MEMBER_LIST_UPDATE: ec,
-        MESSAGE_REACTION_ADD: ed,
-        MESSAGE_REACTION_ADD_MANY: e_,
-        MESSAGE_REACTION_REMOVE: ed,
-        MESSAGE_REACTION_REMOVE_ALL: ef,
-        MESSAGE_REACTION_REMOVE_EMOJI: eh,
-        LOGOUT: ep,
+        MESSAGE_SEND_FAILED: $,
+        MESSAGE_SEND_FAILED_AUTOMOD: e_,
+        MESSAGE_EDIT_FAILED_AUTOMOD: e_,
+        MESSAGE_UPDATE: et,
+        MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: en,
+        MESSAGE_DELETE: J,
+        MESSAGE_DELETE_BULK: ee,
+        MESSAGE_REVEAL: es,
+        THREAD_CREATE_LOCAL: ei,
+        CHANNEL_DELETE: ea,
+        THREAD_DELETE: ea,
+        GUILD_DELETE: ea,
+        RELATIONSHIP_ADD: eo,
+        RELATIONSHIP_REMOVE: eo,
+        GUILD_MEMBERS_CHUNK_BATCH: el,
+        THREAD_MEMBER_LIST_UPDATE: eu,
+        MESSAGE_REACTION_ADD: ec,
+        MESSAGE_REACTION_ADD_MANY: ed,
+        MESSAGE_REACTION_REMOVE: ec,
+        MESSAGE_REACTION_REMOVE_ALL: eE,
+        MESSAGE_REACTION_REMOVE_EMOJI: ef,
+        LOGOUT: eh,
         UPLOAD_START: q,
         UPLOAD_FAIL: Q,
-        LOCAL_MESSAGE_CREATE: eT,
-        REACTION_MESSAGE_FETCHED: $
+        LOCAL_MESSAGE_CREATE: eI
     }));
