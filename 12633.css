@@ -38038,6 +38038,7 @@ html .progress_e5f4c6 {
 
 .container_e8df26 {
     background: var(--background-secondary);
+    max-height: calc(100vh - 280px);
     width: calc(100vw - 60px);
     max-width: 621px;
     box-sizing: border-box;
@@ -38093,6 +38094,10 @@ html .progress_e5f4c6 {
     max-width: 100%;
     border-radius: 8px;
     box-shadow: var(--shadow-high)
+}
+
+.scroller_e8df26 {
+    height: 100%
 }
 
 .scrollContent_e8df26 {
