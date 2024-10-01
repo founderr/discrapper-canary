@@ -26,27 +26,26 @@ function E(e) {
         { analyticsLocations: h } = (0, s.ZP)(o.Z.USERNAME),
         p = _(t, n);
     return i.useCallback(
-        (e) => (o, _) => {
-            let m = (t, n) =>
-                    (0, i.createElement)(a.NameWithRoleAnchor, {
+        (e) => (i, o) => {
+            let _ = (t) =>
+                    (0, r.jsx)(a.NameWithRoleAnchor, {
                         ...(null != t ? t : {}),
-                        key: n,
                         onContextMenu: p,
-                        name: o,
+                        name: i,
                         color: null == e ? void 0 : e.colorString,
                         roleName: null == e ? void 0 : e.colorRoleName,
                         'aria-label': f
                     }),
-                I = (e) => (t) => {
+                m = (e) => (t) => {
                     E && t.stopPropagation(), e(t);
                 };
-            return (0, r.jsx)(s.Gt, {
-                value: h,
-                children:
-                    null != t
-                        ? (0, r.jsx)(
-                              a.Popout,
-                              {
+            return (0, r.jsx)(
+                s.Gt,
+                {
+                    value: h,
+                    children:
+                        null != t
+                            ? (0, r.jsx)(a.Popout, {
                                   position: 'right',
                                   preload: () =>
                                       (0, l.Z)(t.id, t.getAvatarURL(c, 80), {
@@ -64,16 +63,16 @@ function E(e) {
                                       }),
                                   children: (e) => {
                                       let { onClick: t, ...n } = e;
-                                      return m({
-                                          onClick: I(t),
+                                      return _({
+                                          onClick: m(t),
                                           ...n
                                       });
                                   }
-                              },
-                              _
-                          )
-                        : m(void 0, _)
-            });
+                              })
+                            : _(void 0)
+                },
+                o
+            );
         },
         [h, t, n, c, d, p, E, f]
     );
