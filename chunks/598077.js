@@ -80,18 +80,7 @@ class h extends o.Z {
                     )
                 );
         }
-        return l.ZP.getAnimatableSourceWithFallback(t, (e) =>
-            l.ZP.getUserAvatarSource(
-                {
-                    id: this.id,
-                    avatar: this.avatar,
-                    discriminator: this.discriminator,
-                    bot: this.bot
-                },
-                e,
-                n
-            )
-        );
+        return l.ZP.getAnimatableSourceWithFallback(t, (e) => l.ZP.getUserAvatarSource(this, e, n));
     }
     isClaimed() {
         return null != this.email || null != this.phone;
@@ -152,7 +141,7 @@ class h extends o.Z {
     isPomelo() {
         return '0' === this.discriminator;
     }
-    isProvisional() {
+    get isProvisional() {
         return this.hasFlag(c.xW$.PROVISIONAL_ACCOUNT);
     }
     get avatarDecoration() {

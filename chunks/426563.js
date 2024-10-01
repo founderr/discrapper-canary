@@ -1,6 +1,6 @@
 n.d(t, {
     j: function () {
-        return y;
+        return w;
     }
 });
 var r = n(526167),
@@ -22,26 +22,34 @@ var r = n(526167),
     T = n(669730),
     g = n(666828),
     S = n(131999),
-    A = n(185672),
-    v = n(235731);
-let N = [a, o, s, l, u, c],
-    O = [d, _, E, f, h, p, m, I],
-    R = {
-        clyde: A,
+    A = n(649272),
+    v = n(241372),
+    N = n(538387),
+    O = n(213921),
+    R = n(34721),
+    C = n(410693),
+    y = n(185672),
+    L = n(235731);
+let b = [a, o, s, l, u, c],
+    D = [d, _, E, f, h, p, m, I],
+    M = [A, v, N, O, R, C],
+    P = {
+        clyde: y,
         nitro: g,
         nitro_wumpus: S
     };
-function C() {
+function U() {
     return r.og();
 }
-function y() {
+function w() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return e ? v : i;
+    return e ? L : i;
 }
 t.Z = {
-    DEFAULT_AVATARS: N,
-    DEFAULT_GROUP_DM_AVATARS: O,
-    BOT_AVATARS: R,
+    DEFAULT_AVATARS: b,
+    DEFAULT_PROVISIONAL_AVATARS: M,
+    DEFAULT_GROUP_DM_AVATARS: D,
+    BOT_AVATARS: P,
     DEFAULT_CHANNEL_ICON: T,
-    canUseWebp: C
+    canUseWebp: U
 };
