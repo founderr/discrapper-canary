@@ -7989,6 +7989,7 @@ e.exports = Object.freeze({
     BILLING_ERROR_PENDING_PAYMENT: 'Unable to process change due to pending payment.',
     BILLING_ERROR_INVALID_CAPTCHA_RESPONSE: 'Invalid captcha response. Please try again.',
     BILLING_ERROR_INVALID_BILLING_ADDRESS: 'Invalid payment source billing address. Please update your payment source and try again.',
+    BILLING_ERROR_DECLINED_BY_ISSUER: 'This payment method was declined by issuer. Please try a different payment method.',
     BILLING_PREMIUM_PLANS: 'Nitro Plans',
     BILLING_PREMIUM_AND_PREMIUM_GUILD_PLANS: 'Nitro + Boost Plans',
     BILLING_PREMIUM_GUILD_PLANS: 'Boost Plans',
