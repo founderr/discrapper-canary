@@ -324,6 +324,10 @@ function P(e) {
             let t = !1;
             return 'function' == typeof v.window.isAlwaysOnTop && (t = await v.window.isAlwaysOnTop(e)), t;
         },
+        setMinimumSize(e, t) {
+            var n, r;
+            null == v || null === (r = v.window) || void 0 === r || null === (n = r.setMinimumSize) || void 0 === n || n.call(r, e, t);
+        },
         purgeMemory() {
             if (!!T.isPlatformEmbedded) v.processUtils.purgeMemory();
         },

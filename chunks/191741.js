@@ -1,106 +1,113 @@
 n.d(t, {
     A: function () {
-        return S;
+        return N;
     },
     U: function () {
-        return A;
+        return O;
     }
 });
-var r = n(735250);
-n(470079);
-var i = n(652874),
-    a = n(442837),
-    o = n(481060),
-    s = n(230711),
-    l = n(174556),
-    u = n(565138),
-    c = n(300986),
-    d = n(314451),
-    _ = n(35583),
-    E = n(51596),
-    f = n(141321),
-    h = n(703656),
-    p = n(592125),
-    m = n(430824),
-    I = n(944486),
-    T = n(981631),
-    g = n(350133);
-let S = (0, i.Z)(() => ({ isOpen: !0 }));
-function A() {
-    let e = (0, a.e7)([I.Z], () => I.Z.getChannelId()),
-        t = (0, a.e7)([p.Z], () => p.Z.getChannel(e), [e]),
-        n = m.Z.getGuild(null == t ? void 0 : t.guild_id),
-        i = S((e) => e.isOpen),
-        { hasBugReporterAccess: A } = l.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
-    return (0, r.jsxs)('div', {
-        className: g.bar,
-        children: [
-            (0, r.jsxs)('div', {
-                className: g.sidebar,
-                'data-sidebar-collapsed': !i,
-                children: [
-                    !i &&
-                        (0, r.jsxs)(r.Fragment, {
+var r = n(735250),
+    i = n(470079),
+    a = n(652874),
+    o = n(442837),
+    s = n(481060),
+    l = n(230711),
+    u = n(174556),
+    c = n(565138),
+    d = n(300986),
+    _ = n(314451),
+    E = n(35583),
+    f = n(51596),
+    h = n(141321),
+    p = n(703656),
+    m = n(592125),
+    I = n(430824),
+    T = n(944486),
+    g = n(998502),
+    S = n(981631),
+    A = n(741764),
+    v = n(350133);
+let N = (0, a.Z)(() => ({ isOpen: !0 }));
+function O() {
+    let e = (0, o.e7)([T.Z], () => T.Z.getChannelId()),
+        t = (0, o.e7)([m.Z], () => m.Z.getChannel(e), [e]),
+        n = I.Z.getGuild(null == t ? void 0 : t.guild_id),
+        a = N((e) => e.isOpen),
+        { hasBugReporterAccess: O } = u.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
+    return (
+        i.useLayoutEffect(() => {
+            g.ZP.setMinimumSize(A.J, A.N);
+        }, []),
+        (0, r.jsxs)('div', {
+            className: v.bar,
+            children: [
+                (0, r.jsxs)('div', {
+                    className: v.sidebar,
+                    'data-sidebar-collapsed': !a,
+                    children: [
+                        !a &&
+                            (0, r.jsxs)(r.Fragment, {
+                                children: [
+                                    (0, r.jsx)(s.Clickable, {
+                                        onClick: () => {
+                                            N.setState({ isOpen: !N.getState().isOpen });
+                                        },
+                                        children: (0, r.jsx)(R, {})
+                                    }),
+                                    (0, r.jsx)(s.Clickable, {
+                                        onClick: () => {
+                                            l.Z.open(S.oAB.ACCOUNT);
+                                        },
+                                        children: (0, r.jsx)(s.SettingsIcon, { size: 'xs' })
+                                    })
+                                ]
+                            }),
+                        (0, r.jsx)(s.Clickable, {
+                            onClick: () => (0, f.$Z)('APP_BAR'),
+                            children: (0, r.jsx)(s.MagnifyingGlassIcon, { size: 'xs' })
+                        }),
+                        (0, r.jsx)(s.Clickable, {
+                            onClick: p.op,
+                            children: (0, r.jsx)(s.ArrowSmallLeftIcon, { size: 'sm' })
+                        }),
+                        (0, r.jsx)(s.Clickable, {
+                            onClick: p.eH,
+                            children: (0, r.jsx)(s.ArrowSmallRightIcon, { size: 'sm' })
+                        })
+                    ]
+                }),
+                (0, r.jsx)('div', {
+                    className: v.center,
+                    children:
+                        null != n &&
+                        (0, r.jsxs)('div', {
+                            className: v.guild,
                             children: [
-                                (0, r.jsx)(o.Clickable, {
-                                    onClick: () => {
-                                        S.setState({ isOpen: !S.getState().isOpen });
-                                    },
-                                    children: (0, r.jsx)(v, {})
+                                (0, r.jsx)(c.Z, {
+                                    guild: n,
+                                    size: c.Z.Sizes.SMALLER,
+                                    active: !0,
+                                    className: v.icon
                                 }),
-                                (0, r.jsx)(o.Clickable, {
-                                    onClick: () => {
-                                        s.Z.open(T.oAB.ACCOUNT);
-                                    },
-                                    children: (0, r.jsx)(o.SettingsIcon, { size: 'xs' })
+                                (0, r.jsx)(s.Text, {
+                                    variant: 'text-sm/medium',
+                                    children: n.name
                                 })
                             ]
-                        }),
-                    (0, r.jsx)(o.Clickable, {
-                        onClick: () => (0, E.$Z)('APP_BAR'),
-                        children: (0, r.jsx)(o.MagnifyingGlassIcon, { size: 'xs' })
-                    }),
-                    (0, r.jsx)(o.Clickable, {
-                        onClick: h.op,
-                        children: (0, r.jsx)(o.ArrowSmallLeftIcon, { size: 'sm' })
-                    }),
-                    (0, r.jsx)(o.Clickable, {
-                        onClick: h.eH,
-                        children: (0, r.jsx)(o.ArrowSmallRightIcon, { size: 'sm' })
-                    })
-                ]
-            }),
-            (0, r.jsx)('div', {
-                className: g.center,
-                children:
-                    null != n &&
-                    (0, r.jsxs)('div', {
-                        className: g.guild,
-                        children: [
-                            (0, r.jsx)(u.Z, {
-                                guild: n,
-                                size: u.Z.Sizes.SMALLER,
-                                active: !0,
-                                className: g.icon
-                            }),
-                            (0, r.jsx)(o.Text, {
-                                variant: 'text-sm/medium',
-                                children: n.name
-                            })
-                        ]
-                    })
-            }),
-            (0, r.jsxs)('div', {
-                className: g.right,
-                children: [(0, r.jsx)(f.Z, {}), A ? (0, r.jsx)(d.Z, {}) : (0, r.jsx)(c.Z, {}), (0, r.jsx)(_.Z, {})]
-            })
-        ]
-    });
+                        })
+                }),
+                (0, r.jsxs)('div', {
+                    className: v.right,
+                    children: [(0, r.jsx)(h.Z, {}), O ? (0, r.jsx)(_.Z, {}) : (0, r.jsx)(d.Z, {}), (0, r.jsx)(E.Z, {})]
+                })
+            ]
+        })
+    );
 }
-function v() {
+function R() {
     return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: g.icon,
+        className: v.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',
