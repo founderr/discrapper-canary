@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     v: function () {
-        return u;
+        return c;
     }
 });
 var r,
@@ -12,10 +12,12 @@ n(470079);
 var a = n(120356),
     o = n.n(a),
     s = n(481060),
-    l = n(326460);
-function u(e) {
+    l = n(15127),
+    u = n(326460);
+function c(e) {
     let t,
-        { tag: n = 'h5', children: r, className: a, faded: u, disabled: c, required: d = !1, error: _, errorId: E, ...f } = e;
+        { tag: n = 'h5', children: r, className: a, faded: c, disabled: d, required: _ = !1, error: E, errorId: f, ...h } = e,
+        { isFocused: p, hasValue: m } = (0, l.Gc)();
     switch (n) {
         case 'legend':
         case 'label':
@@ -25,33 +27,35 @@ function u(e) {
             t = s.H;
     }
     return (0, i.jsxs)(t, {
-        className: o()(l[n], 'h5' !== n ? l.defaultColor : null, a, {
-            [l['defaultMargin'.concat(n)]]: null == a,
-            [l.faded]: u,
-            [l.disabled]: c,
-            [l.error]: null != _
+        className: o()(u[n], 'h5' !== n ? u.defaultColor : null, a, {
+            [u['defaultMargin'.concat(n)]]: null == a,
+            [u.faded]: c,
+            [u.disabled]: d,
+            [u.error]: null != E,
+            [u.floatingAbove]: p || m,
+            [u.floatingOn]: !1 === p && !1 === m
         }),
-        ...f,
+        ...h,
         children: [
             r,
-            d && null == _
+            _ && null == E
                 ? (0, i.jsx)('span', {
-                      className: l.required,
+                      className: u.required,
                       children: '*'
                   })
                 : null,
-            null != _
+            null != E
                 ? (0, i.jsxs)('span', {
-                      id: E,
-                      className: l.errorMessage,
+                      id: f,
+                      className: u.errorMessage,
                       children: [
                           null != r
                               ? (0, i.jsx)('span', {
-                                    className: l.errorSeparator,
+                                    className: u.errorSeparator,
                                     children: '-'
                                 })
                               : null,
-                          _
+                          E
                       ]
                   })
                 : null

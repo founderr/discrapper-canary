@@ -3643,6 +3643,82 @@ let { Themes: n } = r(15202).V,
                 }
             }
         },
+        INPUT_BORDER: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'PLUM_11',
+                opacity: 0.32
+            },
+            [n.LIGHT]: {
+                raw: 'PLUM_11',
+                opacity: 0.32
+            },
+            [n.MIDNIGHT]: {
+                raw: 'PLUM_11',
+                opacity: 0.32
+            },
+            [n.DARKER]: {
+                raw: 'PLUM_11',
+                opacity: 0.32
+            }
+        },
+        INPUT_ERROR_BACKGROUND: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'RED_500',
+                opacity: 0.12
+            },
+            [n.LIGHT]: {
+                raw: 'RED_500',
+                opacity: 0.12
+            },
+            [n.MIDNIGHT]: {
+                raw: 'RED_500',
+                opacity: 0.12
+            },
+            [n.DARKER]: {
+                raw: 'RED_500',
+                opacity: 0.12
+            }
+        },
+        INPUT_ERROR_BORDER: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'RED_360',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'RED_360',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'RED_360',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'RED_360',
+                opacity: 1
+            }
+        },
+        INPUT_ERROR_TEXT: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'RED_260',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'RED_700',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'RED_260',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'RED_260',
+                opacity: 1
+            }
+        },
         INPUT_FOCUSED_BORDER: {
             category: 'background',
             [n.DARK]: {

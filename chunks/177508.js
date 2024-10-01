@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return u;
+        return E;
     }
 }),
     t(390547),
@@ -13,22 +13,35 @@ var n = t(735250),
     l = t(481060),
     c = t(303431);
 let d = Object.keys(l.Button.Colors).filter((e) => 'CUSTOM' !== e),
-    _ = Object.keys(l.Button.Looks).filter((e) => 'BLANK' !== e);
-function u() {
+    _ = Object.keys(l.Button.Looks).filter((e) => 'BLANK' !== e),
+    u = Object.keys(l.Button.Sizes).filter((e) => 'NONE' !== e);
+function E() {
     let e = d.flatMap((e) => [
-        ..._.map((s) =>
-            (0, n.jsxs)(
-                l.Button,
-                {
-                    color: l.Button.Colors[e],
-                    look: l.Button.Looks[s],
-                    children: [e, ' - ', s]
-                },
-                e + s
-            )
-        ),
-        (0, n.jsx)('hr', { className: c.sectionDivider }, e + 'divider')
-    ]);
+            ..._.map((s) =>
+                (0, n.jsxs)(
+                    l.Button,
+                    {
+                        color: l.Button.Colors[e],
+                        look: l.Button.Looks[s],
+                        fullWidth: !0,
+                        style: { textTransform: 'capitalize' },
+                        children: [e.toLowerCase(), ' - ', s.toLowerCase()]
+                    },
+                    e + s
+                )
+            ),
+            (0, n.jsx)('hr', { className: c.sectionDivider }, e + 'divider')
+        ]),
+        s = u.flatMap((e) =>
+            (0, n.jsx)(l.Button, {
+                color: l.Button.Colors.BRAND,
+                look: l.Button.Looks.FILLED,
+                size: l.Button.Sizes[e],
+                fullWidth: !0,
+                style: { textTransform: 'capitalize' },
+                children: e.toLowerCase()
+            })
+        );
     return (0, n.jsxs)('div', {
         children: [
             (0, n.jsx)(l.Heading, {
@@ -39,21 +52,47 @@ function u() {
                 className: c.buttons,
                 children: [
                     (0, n.jsx)('div', {
-                        className: r()('theme-dark', c.section),
+                        className: r()('theme-darker', c.section),
                         children: e
                     }),
                     (0, n.jsx)('div', {
                         className: r()('theme-light', c.section),
                         children: e
+                    }),
+                    (0, n.jsxs)('div', {
+                        className: r()('theme-darker', c.section),
+                        children: [
+                            (0, n.jsx)(l.Button, {
+                                color: l.Button.Colors.BRAND,
+                                look: l.Button.Looks.FILLED,
+                                disabled: !0,
+                                children: 'Disabled'
+                            }),
+                            s
+                        ]
+                    }),
+                    (0, n.jsxs)('div', {
+                        className: r()('theme-light', c.section),
+                        children: [
+                            (0, n.jsx)(l.Button, {
+                                color: l.Button.Colors.BRAND,
+                                look: l.Button.Looks.FILLED,
+                                disabled: !0,
+                                children: 'Disabled'
+                            }),
+                            s
+                        ]
                     })
                 ]
             }),
-            (0, n.jsx)(E, {}),
-            (0, n.jsx)(T, {})
+            (0, n.jsx)(T, {}),
+            (0, n.jsx)(S, {}),
+            (0, n.jsx)(I, {}),
+            (0, n.jsx)(N, {})
         ]
     });
 }
-function E() {
+function T() {
     return (0, n.jsxs)('div', {
         className: c.shinyButtonExamples,
         children: [
@@ -73,7 +112,7 @@ function E() {
         ]
     });
 }
-function T() {
+function S() {
     let [e, s] = a.useState(null),
         [t, i] = a.useState(null),
         [r, d] = a.useState([]),
@@ -134,6 +173,87 @@ function T() {
                             children: e.label
                         })
                     })
+            })
+        ]
+    });
+}
+function I() {
+    let e = Object.keys(l.FormTitleTags);
+    return (0, n.jsxs)('div', {
+        className: c.section,
+        children: [
+            (0, n.jsx)(l.Heading, {
+                variant: 'heading-xl/semibold',
+                children: 'Form Labels'
+            }),
+            e.flatMap((e) =>
+                (0, n.jsxs)(l.FormTitle, {
+                    tag: l.FormTitleTags[e],
+                    children: ['Form title - ', e]
+                })
+            ),
+            (0, n.jsx)(l.FormTitle, {
+                faded: !0,
+                children: 'Form title - faded'
+            }),
+            (0, n.jsx)(l.FormTitle, {
+                disabled: !0,
+                children: 'Form title - disabled'
+            }),
+            (0, n.jsx)(l.FormTitle, {
+                required: !0,
+                children: 'Form title - required'
+            }),
+            (0, n.jsx)(l.FormLabel, { children: 'Form title - required' })
+        ]
+    });
+}
+function N() {
+    let [e, s] = a.useState('');
+    return (0, n.jsxs)('div', {
+        className: c.section,
+        children: [
+            (0, n.jsx)(l.Heading, {
+                variant: 'heading-xl/semibold',
+                children: 'TextInput'
+            }),
+            (0, n.jsx)(l.FormItem, { children: (0, n.jsx)(l.TextInput, { placeholder: 'Search - placeholder only' }) }),
+            (0, n.jsx)(l.FormItem, {
+                title: 'Disabled',
+                disabled: !0,
+                children: (0, n.jsx)(l.TextInput, {
+                    placeholder: 'Disabled',
+                    disabled: !0
+                })
+            }),
+            (0, n.jsx)(l.FormItem, {
+                title: 'Error',
+                children: (0, n.jsx)(l.TextInput, {
+                    required: !0,
+                    error: 'This must have a value'
+                })
+            }),
+            (0, n.jsx)(l.FormItem, {
+                title: 'Error',
+                children: (0, n.jsx)(l.TextInput, {
+                    defaultValue: 'Not a valid value',
+                    error: 'This has an error.'
+                })
+            }),
+            (0, n.jsx)(l.FormItem, {
+                title: 'Read only',
+                children: (0, n.jsx)(l.TextInput, {
+                    value: 'Read-only, not-editable field',
+                    editable: !1
+                })
+            }),
+            (0, n.jsx)(l.FormItem, {
+                title: 'Input with a label',
+                children: (0, n.jsx)(l.TextInput, {
+                    placeholder: 'Real placeholder',
+                    value: e,
+                    onChange: s
+                })
             })
         ]
     });
