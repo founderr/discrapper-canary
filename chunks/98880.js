@@ -32,8 +32,8 @@ var i,
     A = t(778569),
     E = t(182906),
     N = t(823531),
-    x = t(367907),
-    v = t(220082),
+    v = t(367907),
+    x = t(220082),
     I = t(70097),
     g = t(695346),
     P = t(973616),
@@ -45,8 +45,8 @@ var i,
     M = t(695676),
     y = t(176412),
     j = t(226026),
-    Z = t(753972),
-    O = t(981631),
+    O = t(753972),
+    Z = t(981631),
     H = t(217702),
     U = t(689938),
     B = t(127935),
@@ -104,15 +104,14 @@ function V(e) {
             sectionName: a,
             sectionPosition: r
         }),
-        x = o.useMemo(() => {
+        v = o.useMemo(() => {
             let e = m ? B.containerDisabled : B.container;
             return s()(
                 e,
                 {
                     [B.containerBorderRadius]: 'row' !== _,
                     [B.rowContainer]: 'row' === _,
-                    [B.iconCard]: 'icon' === _,
-                    [B.appNameContainer]: 'app_name' === _
+                    [B.iconCard]: 'icon' === _
                 },
                 p
             );
@@ -120,12 +119,12 @@ function V(e) {
     return m
         ? (0, l.jsx)('div', {
               ref: c ? E : void 0,
-              className: x,
+              className: v,
               children: i
           })
         : (0, l.jsx)(d.Clickable, {
               innerRef: c ? E : void 0,
-              className: x,
+              className: v,
               onClick: t,
               onContextMenu: h,
               'aria-label': U.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
@@ -147,7 +146,7 @@ function W(e) {
                 className: s()(B.iconContainer, t),
                 ...n,
                 children: [
-                    (0, l.jsx)(Z.Z, {
+                    (0, l.jsx)(O.Z, {
                         src: r,
                         className: B.iconCard,
                         'aria-hidden': !0,
@@ -163,12 +162,12 @@ function F(e) {
     let { application: n, look: t, imageStyle: i, enableVideoBanner: a, disableBannerFadeIn: r, children: u } = e,
         { iconURL: m, name: p, description: C } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: D }), [n]),
         h = o.useMemo(() => (null == C ? null : (0, y.ae)(C)), [C]),
-        f = (0, v.ZP)(m, ''),
+        f = (0, x.ZP)(m, ''),
         [A, E] = o.useState(!1),
         N = o.useCallback(() => {
             !0 === a && E(!0);
         }, [a]),
-        x = (0, T.lf)(n),
+        v = (0, T.lf)(n),
         I = 'large_banner' === t || 'medium_banner' === t,
         g = o.useCallback(() => E(!1), []),
         P = (0, c.e7)([_.Z, L.Z], () => _.Z.inDevModeForApplication(n.id) || L.Z.inTestModeForApplication(n.id), [n.id]);
@@ -196,11 +195,11 @@ function F(e) {
                     I
                         ? (0, l.jsxs)(l.Fragment, {
                               children: [
-                                  P || x
+                                  P || v
                                       ? (0, l.jsxs)('div', {
                                             className: B.bannerUpperRightContainer,
                                             children: [
-                                                x &&
+                                                v &&
                                                     (0, l.jsx)('div', {
                                                         className: B.promotedLabelWrapperBanner,
                                                         children: (0, l.jsx)(d.Heading, {
@@ -225,9 +224,9 @@ function F(e) {
             (0, l.jsxs)('div', {
                 className: s()(B.appDetailsContainer, { [B.appDetailsRowContainer]: 'row' === t }),
                 children: [
-                    (0, l.jsx)(Z.Z, {
+                    (0, l.jsx)(O.Z, {
                         src: m,
-                        className: s()(B.icon, { [B.rowIcon]: 'row' === t }, { [B.appNameIcon]: 'app_name' === t }),
+                        className: s()(B.icon, { [B.rowIcon]: 'row' === t }),
                         'aria-hidden': !0,
                         rendersPlaceholder: !0
                     }),
@@ -238,12 +237,12 @@ function F(e) {
                                 className: B.appDetailsHeaderContainer,
                                 children: [
                                     (0, l.jsx)(d.Heading, {
-                                        variant: 'app_name' === t ? 'text-xs/bold' : 'heading-md/semibold',
+                                        variant: 'heading-md/semibold',
                                         color: 'header-primary',
                                         lineClamp: 1,
                                         children: p
                                     }),
-                                    !I && x
+                                    !I && v
                                         ? (0, l.jsx)('div', {
                                               className: B.promotedLabelWrapperNonBanner,
                                               children: (0, l.jsx)(d.Text, {
@@ -260,7 +259,7 @@ function F(e) {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
                                 lineClamp: 1,
-                                children: 'app_name' === t ? null : h
+                                children: h
                             })
                         ]
                     }),
@@ -396,7 +395,7 @@ function Q(e) {
     return o.useCallback(
         (e) => {
             e.stopPropagation(),
-                (0, x.yw)(O.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                (0, v.yw)(Z.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                     application_id: n.id,
                     section_name: t,
                     search_results_position: i,
@@ -490,4 +489,4 @@ function $(e) {
         })
     });
 }
-((a = i || (i = {})).ICON = 'icon'), (a.ROW = 'row'), (a.NO_BANNER = 'no_banner'), (a.MEDIUM_BANNER = 'medium_banner'), (a.LARGE_BANNER = 'large_banner'), (a.APP_NAME = 'app_name');
+((a = i || (i = {})).ICON = 'icon'), (a.ROW = 'row'), (a.NO_BANNER = 'no_banner'), (a.MEDIUM_BANNER = 'medium_banner'), (a.LARGE_BANNER = 'large_banner');

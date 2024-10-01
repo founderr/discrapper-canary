@@ -24,8 +24,8 @@ var i = t(735250),
     A = t(399654),
     E = t(844439),
     N = t(254711),
-    x = t(213459),
-    v = t(10718),
+    v = t(213459),
+    x = t(10718),
     I = t(895924),
     g = t(148958),
     P = t(541099),
@@ -37,8 +37,8 @@ var i = t(735250),
     M = t(98880),
     y = t(804307),
     j = t(888617),
-    Z = t(561160),
-    O = t(41558),
+    O = t(561160),
+    Z = t(41558),
     H = t(105862),
     U = t(28147),
     B = t(981631),
@@ -46,7 +46,7 @@ var i = t(735250),
     k = t(689938),
     w = t(597976);
 let V = [],
-    W = [, , ,].fill(0).map((e, n) => n),
+    W = [, , , ,].fill(0).map((e, n) => n),
     F = [
         {
             cards: [, , , ,].fill(0).map((e, n) => n),
@@ -69,10 +69,10 @@ function Y(e) {
         h = !(0, R.Yn)(t),
         f = t === L._b.TEXT,
         [A, E] = $(!0),
-        [N, x] = $(_),
-        [v, I] = $(C),
+        [N, v] = $(_),
+        [x, I] = $(C),
         [g, P] = $(h),
-        S = A && N && v && g,
+        S = A && N && x && g,
         b = (C || _) && !S,
         T = h && u;
     a.useEffect(() => {
@@ -115,7 +115,7 @@ function Y(e) {
                               _ &&
                                   (0, i.jsx)(X, {
                                       channel: n,
-                                      onEmptyState: x
+                                      onEmptyState: v
                                   }),
                               C &&
                                   (0, i.jsx)(Q, {
@@ -129,7 +129,7 @@ function Y(e) {
                                       onEmptyState: P
                                   }),
                               S &&
-                                  (0, i.jsx)(Z.A, {
+                                  (0, i.jsx)(O.A, {
                                       type: L.LG.HOME_EMPTY,
                                       textContent: t === L._b.TEXT ? k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
                                   }),
@@ -256,9 +256,9 @@ function q(e) {
         ? null
         : (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(O.Z, {
+                  (0, i.jsx)(Z.Z, {
                       title: d,
-                      buttonType: O.Z.buttonTypes.VIEW_MORE,
+                      buttonType: Z.Z.buttonTypes.VIEW_MORE,
                       onClickViewButton: p
                   }),
                   (0, i.jsx)('div', {
@@ -319,7 +319,7 @@ function J(e) {
               children: [
                   (0, i.jsx)('div', {
                       ref: (e) => (r.current = e),
-                      children: (0, i.jsx)(O.Z, { title: k.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE })
+                      children: (0, i.jsx)(Z.Z, { title: k.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE })
                   }),
                   (0, i.jsx)('div', {
                       className: w.sectionTwoColumnContentContainer,
@@ -346,8 +346,8 @@ function J(e) {
 function X(e) {
     var n;
     let { channel: t, onEmptyState: l } = e,
-        r = (0, x.LD)(t.guild_id, !0),
-        { commandsByActiveSection: s, loading: c } = v.wi(
+        r = (0, v.LD)(t.guild_id, !0),
+        { commandsByActiveSection: s, loading: c } = x.wi(
             t,
             {
                 commandTypes: [u.yU.CHAT, u.yU.PRIMARY_ENTRY_POINT]
@@ -389,35 +389,33 @@ function X(e) {
                     .map((e) => ({ application: e })),
             [p]
         ),
-        { items: h, handleViewMore: f } = ee(k.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, M.U4.ROW, C, 3, _),
+        { items: h, handleViewMore: f } = ee(k.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, M.U4.ROW, C, 4, _),
         { trackSectionImpressionRef: A } = (0, j.Z)({
             sectionName: _,
             numItems: C.length,
             numVisibleItems: h.length
         }),
         E = r.fetchState.fetching || c.current,
-        P = !E && 0 === h.length,
-        S = C.length > 3;
+        P = !E && 0 === h.length;
     return (a.useEffect(() => {
         l(P);
     }, [P, l]),
-    E || P)
+    P)
         ? null
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)('div', {
                       ref: (e) => (A.current = e),
-                      children: (0, i.jsx)(O.Z, {
+                      children: (0, i.jsx)(Z.Z, {
                           title: k.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
-                          buttonType: O.Z.buttonTypes.VIEW_MORE,
-                          onClickViewButton: f,
-                          showViewMore: S
+                          buttonType: Z.Z.buttonTypes.VIEW_MORE,
+                          onClickViewButton: f
                       })
                   }),
                   (0, i.jsx)('div', {
-                      className: w.sectionSingleRowContentContainer,
+                      className: w.sectionRowsContentContainer,
                       children: E
-                          ? W.map((e) => (0, i.jsx)(y.Z, { look: M.U4.APP_NAME }, e))
+                          ? W.map((e) => (0, i.jsx)(y.Z, { look: M.U4.ROW }, e))
                           : h.map((e, n) => {
                                 let { application: t } = e;
                                 return null != t
@@ -425,7 +423,7 @@ function X(e) {
                                           M.kA,
                                           {
                                               application: t,
-                                              look: M.U4.APP_NAME,
+                                              look: M.U4.ROW,
                                               sectionName: _,
                                               resultsPosition: n,
                                               location: I.Vh.APP_LAUNCHER_HOME
@@ -454,7 +452,7 @@ function Q(e) {
                     withCommands: !1
                 });
             }, [i, t]);
-            let { sectionDescriptors: l } = v.wi(
+            let { sectionDescriptors: l } = x.wi(
                     n,
                     { commandTypes: [u.yU.CHAT] },
                     {
@@ -521,7 +519,7 @@ function Q(e) {
                             'div',
                             {
                                 children: [
-                                    (0, i.jsx)(O.Z.Loading, {}),
+                                    (0, i.jsx)(Z.Z.Loading, {}),
                                     (0, i.jsx)('div', {
                                         className: a === M.U4.ROW ? w.sectionRowsContentContainer : w.sectionTwoColumnContentContainer,
                                         children: t.map((e) => (0, i.jsx)(y.Z, { look: a }, e))
@@ -602,9 +600,9 @@ function K(e) {
         children: [
             (0, i.jsx)('div', {
                 ref: (e) => (_.current = e),
-                children: (0, i.jsx)(O.Z, {
+                children: (0, i.jsx)(Z.Z, {
                     title: l.section_title,
-                    buttonType: O.Z.buttonTypes.VIEW_MORE,
+                    buttonType: Z.Z.buttonTypes.VIEW_MORE,
                     onClickViewButton: p
                 })
             }),

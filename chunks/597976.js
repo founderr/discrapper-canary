@@ -7,6 +7,5 @@ e.exports = {
     sectionContentContainer: 'sectionContentContainer_c7c1c7',
     sectionTwoColumnContentContainer: 'sectionTwoColumnContentContainer_c7c1c7 sectionContentContainer_c7c1c7',
     sectionRowsContentContainer: 'sectionRowsContentContainer_c7c1c7 sectionContentContainer_c7c1c7',
-    sectionSingleRowContentContainer: 'sectionSingleRowContentContainer_c7c1c7 sectionContentContainer_c7c1c7',
     frecentList: 'frecentList_c7c1c7'
 };
