@@ -4,7 +4,8 @@ n.d(t, {
     }
 }),
     n(47120),
-    n(757143);
+    n(757143),
+    n(627494);
 var i = n(302454),
     s = n.n(i),
     a = n(969812),
@@ -50,8 +51,10 @@ let p = /\\([*?+/])/g,
                 if (null == a || null == a.id) return { content: '' };
                 let [, r, o] = Array.from(null !== (n = e.match(this.match.regex)) && void 0 !== n ? n : []);
                 (r = r.replace(p, (e, t) => t)), (o = o.replace(p, (e, t) => t));
-                let c = a.content.replace(r, o);
-                return (null == c || '' === c) && 0 === a.attachments.length ? l.Z.deleteMessage(s.id, a.id) : e !== a.content && l.Z.editMessage(s.id, a.id, { content: c }), { content: '' };
+                let c = !1;
+                o.endsWith('/g') && ((o = o.slice(0, -2)), (c = !0));
+                let u = c ? a.content.replaceAll(r, o) : a.content.replace(r, o);
+                return (null == u || '' === u) && 0 === a.attachments.length ? l.Z.deleteMessage(s.id, a.id) : e !== a.content && l.Z.editMessage(s.id, a.id, { content: u }), { content: '' };
             }
         },
         spoiler: { action: (e) => ({ content: (0, m.XmY)(e).trim() }) }
