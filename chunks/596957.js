@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(696577),
     A = n(163417),
     v = n(492347),
-    Z = n(42575),
-    L = n(617015),
+    L = n(42575),
+    Z = n(617015),
     R = n(981631),
     O = n(689938),
     x = n(522756);
@@ -87,7 +87,7 @@ t.Z = function (e) {
     let V = [H],
         F = 0 === H.length && '' !== j[t],
         Y = H.filter((e) => e.type === R.OGo.PENDING_INCOMING).length,
-        W = t === R.pJs.PENDING && Y > 0 && Y >= L.yf;
+        W = t === R.pJs.PENDING && Y > 0 && Y >= Z.yf;
     return (0, i.jsx)(E.Gt, {
         value: b,
         children: (0, i.jsxs)(u.Z, {
@@ -155,7 +155,7 @@ t.Z = function (e) {
                                           isFocused: D
                                       });
                                   case R.pJs.SUGGESTIONS:
-                                      return (0, i.jsx)(Z.Z, {
+                                      return (0, i.jsx)(L.Z, {
                                           ...e,
                                           isFocused: D
                                       });

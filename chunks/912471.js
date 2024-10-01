@@ -1,6 +1,6 @@
 n.d(t, {
     DL: function () {
-        return Z;
+        return L;
     }
 }),
     n(411104);
@@ -90,10 +90,10 @@ function v() {
             if (!!T) (T = !1), _.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, h.fr)(!1), S(), (0, s.Z)();
         })();
 }
-function Z() {
-    _.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(R), a.Z.subscribe('WINDOW_FOCUS', O), a.Z.subscribe('APP_STATE_UPDATE', x), a.Z.subscribe('LOGIN_SUCCESS', L), v();
-}
 function L() {
+    _.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(R), a.Z.subscribe('WINDOW_FOCUS', O), a.Z.subscribe('APP_STATE_UPDATE', x), a.Z.subscribe('LOGIN_SUCCESS', Z), v();
+}
+function Z() {
     C();
 }
 function R() {

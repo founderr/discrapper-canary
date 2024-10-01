@@ -51,15 +51,15 @@ let N = (0, m.Un)({
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    Z = (0, m.Un)({
+    L = (0, m.Un)({
         createPromise: () => Promise.all([n.e('96427'), n.e('33053'), n.e('37581'), n.e('7654'), n.e('44156'), n.e('44294'), n.e('85552'), n.e('58227'), n.e('36897')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    L = {
+    Z = {
         [f.S9g.USER_SETTINGS]: () => (0, a.jsx)(N, {}),
         [f.S9g.CHANNEL_SETTINGS]: () => (0, a.jsx)(A, {}),
-        [f.S9g.GUILD_SETTINGS]: () => (0, a.jsx)(Z, {}),
+        [f.S9g.GUILD_SETTINGS]: () => (0, a.jsx)(L, {}),
         [f.S9g.COLLECTIBLES_SHOP]: () => (0, a.jsx)(v, {})
     },
     R = 'SHOWN',
@@ -215,7 +215,7 @@ class M extends s.PureComponent {
     renderComponent(e, t, n) {
         let i;
         return (
-            (i = 'string' == typeof e ? L[e]() : (0, a.jsx)(e, {})),
+            (i = 'string' == typeof e ? Z[e]() : (0, a.jsx)(e, {})),
             (0, a.jsxs)(
                 P,
                 {

@@ -37,7 +37,7 @@ let v = (e) => {
                 return f.fW.Discover;
         }
     },
-    Z = () => {
+    L = () => {
         let { currentCategoryId: e, isViewingSearchResults: t } = (0, s.cj)([m.ZP], () => ({
                 currentCategoryId: m.ZP.getCurrentCategoryId(),
                 isViewingSearchResults: m.ZP.getMostRecentQuery().length > 0
@@ -82,5 +82,5 @@ t.Z = function () {
         }),
         t = e.length > 0,
         { clanDiscoveryEnabled: n } = (0, o.nk)('guild_discovery_sidebar');
-    return t || n ? (0, i.jsx)(T.Z, {}) : (0, i.jsx)(Z, {});
+    return t || n ? (0, i.jsx)(T.Z, {}) : (0, i.jsx)(L, {});
 };

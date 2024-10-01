@@ -42,7 +42,7 @@ let v = c().throttle(I.c6, 1000, {
         leading: !1,
         trailing: !0
     }),
-    Z = (e) => {
+    L = (e) => {
         let { isSelected: t, onCategoryChange: n, categoryId: i, name: s, count: r } = e;
         return (0, a.jsx)(u.Clickable, {
             onClick: () => n(i),
@@ -54,7 +54,7 @@ let v = c().throttle(I.c6, 1000, {
             })
         });
     };
-class L extends (i = s.PureComponent) {
+class Z extends (i = s.PureComponent) {
     componentDidMount() {
         let { loadId: e, searchResults: t, currentCategoryId: n } = this.props,
             { searchId: i, query: a, isHandlingTagSearch: s } = this.state,
@@ -131,7 +131,7 @@ class L extends (i = s.PureComponent) {
                     : t.map((t) => {
                           let [n, i] = t;
                           return (0, a.jsx)(
-                              Z,
+                              L,
                               {
                                   categoryId: n,
                                   name: n === f.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
@@ -258,10 +258,10 @@ class L extends (i = s.PureComponent) {
 function R(e) {
     let t = (0, d.e7)([T.Z], () => T.Z.getDiscoveryCategories(), [], T.j),
         n = (0, d.e7)([h.ZP], () => h.ZP.getTopCategoryCounts(e.mostRecentQuery));
-    return (0, a.jsx)(L, {
+    return (0, a.jsx)(Z, {
         ...e,
         categories: t,
         countsByCategory: n
     });
 }
-A(L, 'contextType', void 0), (L.contextType = E.AnalyticsContext);
+A(Z, 'contextType', void 0), (Z.contextType = E.AnalyticsContext);

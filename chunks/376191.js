@@ -59,7 +59,7 @@ function A(e) {
         p = (0, a.e7)([E.Z], () => (null == c ? null : E.Z.getNickname(c.id))),
         A = !I && h,
         v = (0, g.c)(n),
-        { avatarDecorationSrc: Z } = (0, u.Z)({
+        { avatarDecorationSrc: L } = (0, u.Z)({
             user: c,
             size: (0, d.y9)(s.AvatarSizes.SIZE_40),
             onlyAnimateOnHover: !0
@@ -69,7 +69,7 @@ function A(e) {
             (0, i.jsx)(N, {
                 className: S.avatar,
                 src: (0, _.x)(n, 40, A),
-                avatarDecoration: Z,
+                avatarDecoration: L,
                 size: s.AvatarSizes.SIZE_40,
                 'aria-label': null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : f.Z.Messages.UNKNOWN_USER
             }),

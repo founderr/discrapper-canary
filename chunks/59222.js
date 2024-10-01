@@ -63,7 +63,7 @@ let S = 12,
             ]
         });
 t.Z = (e) => {
-    let { loadId: t, searchResults: n, mostRecentQuery: s, defaultLanguage: l, availableLanguages: u, isFetchingSearch: v, scroller: Z, loadingGuildId: L, theme: R, currentCategoryId: O, currentCategoryName: x, onViewGuild: b, onGuildCardSeen: P, placeholder: M, onTagClick: D } = e,
+    let { loadId: t, searchResults: n, mostRecentQuery: s, defaultLanguage: l, availableLanguages: u, isFetchingSearch: v, scroller: L, loadingGuildId: Z, theme: R, currentCategoryId: O, currentCategoryName: x, onViewGuild: b, onGuildCardSeen: P, placeholder: M, onTagClick: D } = e,
         y = r().uniqueId('GuildDiscovery'),
         { guilds: j, loading: U, total: G } = n,
         [w, k] = a.useState(!1),
@@ -81,7 +81,7 @@ t.Z = (e) => {
                 k(!1);
         },
         W = () => {
-            null == Z || Z.scrollTo({ to: 0 });
+            null == L || L.scrollTo({ to: 0 });
         };
     a.useEffect(() => {
         let { offset: e, tag: t } = C(),
@@ -161,7 +161,7 @@ t.Z = (e) => {
                                             loading: U,
                                             loadingPlaceholderCount: S,
                                             onViewGuild: b,
-                                            loadingGuildId: L,
+                                            loadingGuildId: Z,
                                             theme: R,
                                             analyticsContext: E.P1.SEARCH,
                                             onGuildCardSeen: P,

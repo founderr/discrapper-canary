@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(661599),
     A = n(617899),
     v = n(8521),
-    Z = n(760326),
-    L = n(536687),
+    L = n(760326),
+    Z = n(536687),
     R = n(652785),
     O = n(981631),
     x = n(921944);
@@ -75,7 +75,7 @@ function P(e) {
                                 markAsDismissed: s
                             });
                         case r.z.CHANNEL_NOTICE_QUICKSWITCHER:
-                            return (0, i.jsx)(Z.Z, {
+                            return (0, i.jsx)(L.Z, {
                                 guild: n,
                                 markAsDismissed: s
                             });
@@ -110,24 +110,24 @@ function P(e) {
 }
 t.Z = (e) => {
     let { guild: t } = e;
-    switch ((0, L.Z)(t)) {
-        case L.R.ENABLE_PUBLIC_GUILD:
+    switch ((0, Z.Z)(t)) {
+        case Z.R.ENABLE_PUBLIC_GUILD:
             return (0, i.jsx)(f.Z, { guild: t });
-        case L.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
+        case Z.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
             return (0, i.jsx)(_.Z, { guild: t });
-        case L.R.MAX_MEMBER_COUNT:
+        case Z.R.MAX_MEMBER_COUNT:
             return (0, i.jsx)(v.Z, { guild: t });
-        case L.R.GUILD_LIVE_CHANNEL:
+        case Z.R.GUILD_LIVE_CHANNEL:
             return (0, i.jsx)(m.ZP, { guild: t });
-        case L.R.GUILD_MFA_WARNING:
+        case Z.R.GUILD_MFA_WARNING:
             return (0, i.jsx)(N.Z, { guild: t });
-        case L.R.COMMANDS_MIGRATION:
+        case Z.R.COMMANDS_MIGRATION:
             return (0, i.jsx)(p.Z, { guild: t });
-        case L.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
+        case Z.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, i.jsx)(T.Z, { guild: t });
-        case L.R.HUB_STUDY_ROOM:
+        case Z.R.HUB_STUDY_ROOM:
             return (0, i.jsx)(g.Z, { guild: t });
-        case L.R.SIGNUP:
+        case Z.R.SIGNUP:
             return (0, i.jsx)(S.Z, { guild: t });
     }
     return C.s.isDisallowPopupsSet() ? null : (0, i.jsx)(P, { guild: e.guild });

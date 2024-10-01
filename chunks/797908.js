@@ -27,7 +27,7 @@ t.Z = function (e) {
             [p]
         ),
         v = (null !== (I = null === (n = p.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || f.length > 0,
-        Z = (0, i.jsx)(l.Z, {
+        L = (0, i.jsx)(l.Z, {
             application: p,
             textVariant: 'text-xs/normal',
             mutualGuilds: f,
@@ -112,7 +112,7 @@ t.Z = function (e) {
                         v
                             ? (0, i.jsx)('div', {
                                   className: E.memberDetails,
-                                  children: Z
+                                  children: L
                               })
                             : null
                     ]

@@ -39,13 +39,13 @@ function A(e) {
             isGracePeriodVisible: p.Z.isVisible(n)
         })),
         v = (0, r.e7)([E.Z], () => E.Z.isVisible(e)),
-        Z = (0, r.e7)([f.Z], () => f.Z.isVisible(e)),
-        L = (0, r.e7)([g.Z], () => g.Z.can(N.Plq.ADMINISTRATOR, e)),
+        L = (0, r.e7)([f.Z], () => f.Z.isVisible(e)),
+        Z = (0, r.e7)([g.Z], () => g.Z.can(N.Plq.ADMINISTRATOR, e)),
         R = null != a && Date.now() - a <= N.Dge,
         O = null != e ? e.premiumSubscriberCount : 0,
         x = (0, C.rF)(O, n) !== N.Eu4.NONE,
         b = null != i && Date.now() - i <= 43200000,
-        P = !b && !R && L && x,
+        P = !b && !R && Z && x,
         M = (0, c.m)(n),
         D = (0, r.e7)([T.Z], () => T.Z.isVisible(e)),
         y = _.Z.useShouldShowChannelNotice(n),
@@ -78,7 +78,7 @@ function A(e) {
     )
         return 0;
     if (A) return 1;
-    if (Z) return 2;
+    if (L) return 2;
     else if (M || null != k) return 3;
     else if (D) return 4;
     else if (y) return 5;

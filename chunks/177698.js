@@ -15,12 +15,12 @@ var a = n(481060),
 t.Z = (0, h.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: c, scopes: d, parsedPermissions: u, responseType: h, redirectUri: I, codeChallenge: g, codeChallengeMethod: p, state: T, guildId: f, channelId: S, prompt: C, disableGuildSelect: N, disclosures: A, integrationType: v, pid: Z } = e,
-            L = 'OAuth2Authorize_'.concat(n, '_').concat(f, '_').concat(S),
+        let { clientId: n, authorizations: c, scopes: d, parsedPermissions: u, responseType: h, redirectUri: I, codeChallenge: g, codeChallengeMethod: p, state: T, guildId: f, channelId: S, prompt: C, disableGuildSelect: N, disclosures: A, integrationType: v, pid: L } = e,
+            Z = 'OAuth2Authorize_'.concat(n, '_').concat(f, '_').concat(S),
             R = null != v ? (null == c ? void 0 : c.get(v)) : void 0,
             O = null !== (t = null == R ? void 0 : R.application) && void 0 !== t ? t : l.Z.getApplication(n);
         return new Promise((e, t) => {
-            let l = (0, E.jU)(Z),
+            let l = (0, E.jU)(L),
                 R = (i) => {
                     let { clientId: a, location: r } = i;
                     if (null == a || a === n) l.lock(), s.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', R), null != location ? e(r) : t(new _.Z({ errorCode: m.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
@@ -72,9 +72,9 @@ t.Z = (0, h.Z)(
                         integrationType: v
                     }),
                 {
-                    modalKey: L,
+                    modalKey: Z,
                     onCloseRequest: () => {
-                        (0, a.closeModal)(L), t(new _.Z({ errorCode: m.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
+                        (0, a.closeModal)(Z), t(new _.Z({ errorCode: m.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                     }
                 },
                 null != O && (0, r.Z)(O, S) ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT

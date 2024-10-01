@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(811066),
     A = n(252618),
     v = n(100159),
-    Z = n(646288),
-    L = n(984370),
+    L = n(646288),
+    Z = n(984370),
     R = n(706454),
     O = n(210887),
     x = n(430824),
@@ -134,24 +134,24 @@ class ec extends a.PureComponent {
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: s } = this.props;
-        return (0, i.jsx)(L.Z, {
+        return (0, i.jsx)(Z.Z, {
             isAuthenticated: s,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, i.jsxs)(a.Fragment, {
                           children: [
-                              (0, i.jsx)(L.Z.Icon, {
+                              (0, i.jsx)(Z.Z.Icon, {
                                   icon: d.TagIcon,
                                   'aria-label': er.Z.Messages.STORE_CHANNEL
                               }),
-                              (0, i.jsx)(L.Z.Title, { children: n.name })
+                              (0, i.jsx)(Z.Z.Title, { children: n.name })
                           ]
                       })
                     : null != t && t.premium
                       ? (0, i.jsxs)(a.Fragment, {
                             children: [
-                                (0, i.jsx)(L.Z.Icon, {
+                                (0, i.jsx)(Z.Z.Icon, {
                                     icon: d.NitroWheelIcon,
                                     'aria-label': er.Z.Messages.PREMIUM
                                 }),
@@ -161,11 +161,11 @@ class ec extends a.PureComponent {
                       : null != t
                         ? (0, i.jsxs)(a.Fragment, {
                               children: [
-                                  (0, i.jsx)(L.Z.Icon, {
+                                  (0, i.jsx)(Z.Z.Icon, {
                                       icon: d.TagIcon,
                                       'aria-label': er.Z.Messages.STORE_CHANNEL
                                   }),
-                                  (0, i.jsx)(L.Z.Title, { children: t.name })
+                                  (0, i.jsx)(Z.Z.Title, { children: t.name })
                               ]
                           })
                         : null
@@ -513,7 +513,7 @@ class ec extends a.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: r()(el.headerPurchase, { [el.active]: o }),
                                 children: [
-                                    null != t ? (0, Z.Z)(t) : null,
+                                    null != t ? (0, L.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(X.Z, {
                                         messageStyle: X.G.SHORT,

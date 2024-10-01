@@ -22,8 +22,8 @@ var i = n(392711),
     N = n(863141),
     A = n(186901),
     v = n(981631);
-let Z = (e) => (0, f.Z)(e).required().keys({ channel_id: e.string().required() });
-function L(e) {
+let L = (e) => (0, f.Z)(e).required().keys({ channel_id: e.string().required() });
+function Z(e) {
     var t;
     let {
             args: { channel_id: n },
@@ -166,18 +166,18 @@ let x = {
     },
     [v.zMe.MESSAGE_CREATE]: {
         scope: s.x.RPC,
-        validation: Z,
-        handler: L
+        validation: L,
+        handler: Z
     },
     [v.zMe.MESSAGE_UPDATE]: {
         scope: s.x.RPC,
-        validation: Z,
-        handler: L
+        validation: L,
+        handler: Z
     },
     [v.zMe.MESSAGE_DELETE]: {
         scope: s.x.RPC,
-        validation: Z,
-        handler: L
+        validation: L,
+        handler: Z
     },
     [v.zMe.SPEAKING_START]: {
         scope: {

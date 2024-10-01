@@ -30,7 +30,7 @@ let N = {
 function A(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: s, shouldHighlight: A } = e,
         { analyticsLocations: v } = (0, d.ZP)(),
-        { isHovered: Z, setIsHovered: L, onMouseEnter: R, onMouseLeave: O } = (0, _.Z)(200, 300),
+        { isHovered: L, setIsHovered: Z, onMouseEnter: R, onMouseLeave: O } = (0, _.Z)(200, 300),
         { enableEmojiCTA: x } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 }),
         b = a.useCallback(
             (e) => {
@@ -105,12 +105,12 @@ function A(e) {
         animation: c.Popout.Animation.FADE,
         nudgeAlignIntoViewport: !1,
         closeOnScroll: !0,
-        shouldShow: Z,
+        shouldShow: L,
         position: 'right',
         align: 'top',
         spacing: 9,
         onRequestClose: () => {
-            L(!1);
+            Z(!1);
         },
         renderPopout: (e) =>
             (0, i.jsx)(g.Z, {
