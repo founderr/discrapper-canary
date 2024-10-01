@@ -546,17 +546,23 @@ function em(e, t) {
             n = window.location.pathname.startsWith(ec.ANM.CHANNELS);
         e.enabled && null != t.application && null == t.guild && n
             ? H.S.safeDispatch(ec.CkL.SHOW_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { application: t.application })
-            : (0, N.h7)((e) =>
-                  (0, d.jsx)(eo.j, {
+            : (0, N.h7)((e) => {
+                  let n = (0, d.jsx)(es._Z, {
+                      guild: t.guild,
+                      application: t.application,
+                      onClose: e.onClose
+                  });
+                  return (0, d.jsx)(eo.j, {
                       ...e,
                       'aria-labelledby': eE,
+                      footer: n,
                       children: (0, d.jsx)(es.Jh, {
                           guild: t.guild,
                           application: t.application,
                           onClose: e.onClose
                       })
-                  })
-              );
+                  });
+              });
     } else if (a && (null == r ? void 0 : r.startsWith(ec.Z5c.OAUTH2_ERROR)))
         (0, N.h7)((e) => {
             let t = i.error_description || i.error || ed.Z.Messages.OAUTH2_UNKNOWN_ERROR;

@@ -6,8 +6,6 @@ e.exports = {
     cta: 'cta_e1a4cf',
     headerSuccess: 'headerSuccess_e1a4cf',
     headerFailure: 'headerFailure_e1a4cf',
-    closeButton: 'closeButton_e1a4cf',
     authorizedSuccessWrapper: 'authorizedSuccessWrapper_e1a4cf',
-    buttonsContainer: 'buttonsContainer_e1a4cf',
-    button: 'button_e1a4cf'
+    buttonsContainer: 'buttonsContainer_e1a4cf'
 };
