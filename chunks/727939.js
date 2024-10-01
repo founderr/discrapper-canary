@@ -3,28 +3,26 @@ var i = n(735250),
     a = n(470079),
     o = n(112724),
     s = n(241915),
-    l = n(981631),
-    u = n(354459);
-let c = 48,
+    l = n(981631);
+let u = 48,
+    c = 32,
     d = 32,
-    _ = 32,
-    E = 32;
-function f(e) {
-    let { className: t, defaultPosition: n = l.VD2.BOTTOM_RIGHT, children: r, width: o, height: f } = e,
-        [h, p] = a.useState(n);
+    _ = 32;
+function E(e) {
+    let { className: t, defaultPosition: n = l.VD2.BOTTOM_RIGHT, children: r, width: o, height: E } = e,
+        [f, h] = a.useState(n);
     return (0, i.jsx)(s._, {
         className: t,
-        position: h,
+        position: f,
         id: 0,
-        type: u.cL.VIDEO,
-        onMove: (e, t) => p(t),
+        onMove: (e, t) => h(t),
         maxX: o,
-        maxY: f,
-        edgeOffsetTop: c,
-        edgeOffsetBottom: d,
-        edgeOffsetLeft: _,
-        edgeOffsetRight: E,
+        maxY: E,
+        edgeOffsetTop: u,
+        edgeOffsetBottom: c,
+        edgeOffsetLeft: d,
+        edgeOffsetRight: _,
         children: r
     });
 }
-t.Z = (0, o.Z)(f);
+t.Z = (0, o.Z)(E);

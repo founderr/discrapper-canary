@@ -35,26 +35,30 @@ function R(e, t, n) {
     );
 }
 let C = {
-    [v.NYg.VIDEO]: m.Z,
-    [v.NYg.EMBED_IFRAME]: d.Z
-};
-class y extends a.PureComponent {
+        [v.NYg.VIDEO]: m.Z,
+        [v.NYg.EMBED_IFRAME]: d.Z
+    },
+    y = {
+        minWidth: O.Rv[O.cL.VIDEO],
+        maxWidth: O.$i[O.cL.VIDEO]
+    };
+class L extends a.PureComponent {
     render() {
-        let { selectedPIPWindow: e, pipWindows: t, pipType: n, pipWidth: r, maxX: a, maxY: o, theme: s, dockedRect: l, appContext: u, roundCorners: c } = this.props;
+        let { selectedPIPWindow: e, pipWindows: t, pipWidth: n, maxX: r, maxY: a, theme: o, dockedRect: s, appContext: l, roundCorners: u } = this.props;
         return (0, i.jsx)(E.Z, {
             pictureInPictureComponents: C,
             selectedPIPWindow: e,
             pipWindows: t,
-            pipType: n,
-            pipWidth: r,
-            maxX: a,
-            maxY: o,
-            dockedRect: l,
-            theme: s,
+            pipWidth: n,
+            maxX: r,
+            maxY: a,
+            dockedRect: s,
+            theme: o,
             onWindowMove: this.handleWindowMove,
             onWindowResize: this.handleWindowResize,
-            appContext: u,
-            roundCorners: c
+            appContext: l,
+            roundCorners: u,
+            resizeConfig: y
         });
     }
     constructor(...e) {
@@ -63,7 +67,7 @@ class y extends a.PureComponent {
                 s.Ao(e, t);
             }),
             R(this, 'handleWindowResize', (e) => {
-                s.d7(e, this.props.pipType);
+                s.d7(e, O.cL.VIDEO);
             });
     }
 }
@@ -90,28 +94,26 @@ t.Z = o.ZP.connectStores([f.Z, l.ZP, S.Z, h.Z, I.Z, g.Z, T.Z, _.Z, p.ZP], (e) =>
     }
     let L = o ? v.IlC.POPOUT : v.IlC.APP;
     a = o && E ? null : o || !s || E ? (null != d && R ? (null !== (n = T.Z.pipActivityWindow) && void 0 !== n ? n : T.Z.pipVideoWindow) : null !== (r = T.Z.pipVideoWindow) && void 0 !== r ? r : T.Z.pipActivityWindow) : null;
-    let b = O.cL.VIDEO,
-        D = Array.from(T.Z.pipWindows.values()),
-        M = T.Z.pipWidth(b),
-        P = D.find((e) => e.component === v.NYg.VIDEO),
-        U = [P, D.find((e) => e.component === v.NYg.EMBED_IFRAME)].filter(A.lm),
-        w = p.ZP.callChatSidebarWidth,
-        x = g.Z.getVoiceChannelId(),
-        G = g.Z.getChannelId() === x,
-        k = null != x && _.Z.getChatOpen(x),
-        B = R || C,
-        F = B && null != d && (0, u.q)(d.applicationId),
-        Z = !B && null != a && G && k;
+    let b = Array.from(T.Z.pipWindows.values()),
+        D = T.Z.pipWidth(O.cL.VIDEO),
+        M = b.find((e) => e.component === v.NYg.VIDEO),
+        P = [M, b.find((e) => e.component === v.NYg.EMBED_IFRAME)].filter(A.lm),
+        U = p.ZP.callChatSidebarWidth,
+        w = g.Z.getVoiceChannelId(),
+        x = g.Z.getChannelId() === w,
+        G = null != w && _.Z.getChatOpen(w),
+        k = R || C,
+        B = k && null != d && (0, u.q)(d.applicationId),
+        F = !k && null != a && x && G;
     return {
         selectedPIPWindow: a,
-        pipWindows: U,
-        pipWidth: M,
-        pipType: b,
-        maxX: y.width - (Z ? w : 0),
+        pipWindows: P,
+        pipWidth: D,
+        maxX: y.width - (F ? U : 0),
         maxY: y.height,
         theme: h.Z.theme,
         dockedRect: T.Z.getDockedRect(null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : ''),
         appContext: L,
-        roundCorners: !F
+        roundCorners: !B
     };
-})(y);
+})(L);

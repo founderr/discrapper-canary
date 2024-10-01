@@ -50,13 +50,13 @@ let I = 200,
     };
 function R(e, t) {
     let n = Math.round(e / g) * g;
-    return (0, u.clamp)(n, h.Rv[t], h.$i[t]);
+    return (0, u.clamp)(n, t.minWidth, t.maxWidth);
 }
 function C(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: r, pipType: i, position: s } = e,
+    let { resizableNode: t, onResize: n, onResizeEnd: r, resizeConfig: i, position: s } = e,
         u = (0, d.Z)({
-            minDimension: h.Rv[i],
-            maxDimension: h.$i[i] + g / 2,
+            minDimension: i.minWidth,
+            maxDimension: i.maxWidth + g / 2,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: r,
@@ -79,6 +79,11 @@ class y extends (r = o.PureComponent) {
         this.setPosition(this.props.position);
     }
     componentDidUpdate(e) {
+        if (null != this.props.width && null != this.props.resizeConfig && e.width !== this.props.width) {
+            var t, n;
+            let r = null !== (n = null !== (t = this._width) && void 0 !== t ? t : e.width) && void 0 !== n ? n : this.props.width;
+            (this._width = this.props.width), null != this._innerDivRef.current && (Math.abs(r - this._width) > g && (this._innerDivRef.current.style.transition = 'none'), (this._innerDivRef.current.style.width = ''.concat(this.props.width, 'px')));
+        }
         (e.edgeOffsetTop !== this.props.edgeOffsetTop || e.edgeOffsetLeft !== this.props.edgeOffsetLeft || e.edgeOffsetBottom !== this.props.edgeOffsetBottom || e.edgeOffsetRight !== this.props.edgeOffsetRight || e.maxX !== this.props.maxX || e.maxY !== this.props.maxY || e.dockedRect !== this.props.dockedRect || e.roundCorners !== this.props.roundCorners) && (this.ensureIsInPosition(), this.ensureWidth());
     }
     componentWillUnmount() {
@@ -172,19 +177,19 @@ class y extends (r = o.PureComponent) {
         return this.props.appContext === f.IlC.POPOUT;
     }
     render() {
-        let { maxX: e, maxY: t, dockedRect: n, hidden: r, roundCorners: i, className: o, position: s, type: u, isResizable: c = !1 } = this.props,
-            d = this.getWidth(),
-            E = {};
+        let { maxX: e, maxY: t, dockedRect: n, hidden: r, roundCorners: i, className: o, position: s, resizeConfig: u } = this.props,
+            c = this.getWidth(),
+            d = {};
         return (
             null != n
-                ? (E = {
+                ? (d = {
                       transform: 'translate3d('.concat(n.x, ', ').concat(n.y, ', 0)'),
                       width: n.width,
                       height: n.height
                   })
-                : c &&
-                  (E = {
-                      width: d,
+                : null != u &&
+                  (d = {
+                      width: c,
                       transition: this.state.isResizing ? 'none' : 'width 0.2s ease-in-out'
                   }),
             (0, a.jsxs)(_.Z, {
@@ -203,15 +208,15 @@ class y extends (r = o.PureComponent) {
                 children: [
                     (0, a.jsx)('div', {
                         ref: this.handleSetInnerDivRef,
-                        style: E,
+                        style: d,
                         children: this.props.children
                     }),
-                    c
+                    null != u
                         ? (0, a.jsx)(C, {
                               onResize: this.handleResize,
                               onResizeEnd: this.handleResizeEnd,
                               resizableNode: this._innerDivRef,
-                              pipType: u,
+                              resizeConfig: u,
                               position: s
                           })
                         : null
@@ -237,10 +242,10 @@ class y extends (r = o.PureComponent) {
                 this.setPosition(this.props.position);
             }),
             m(this, 'ensureWidth', () => {
-                let { onResize: e, edgeOffsetLeft: t, edgeOffsetRight: n, maxX: r, type: i, isResizable: a } = this.props;
-                if (!a) return;
-                let o = R(r - (t + n), i);
-                this.getWidth() > o && ((this._width = o), null == e || e(o));
+                let { onResize: e, edgeOffsetLeft: t, edgeOffsetRight: n, maxX: r, resizeConfig: i } = this.props;
+                if (null == i) return;
+                let a = R(r - (t + n), i);
+                this.getWidth() > a && ((this._width = a), null == e || e(a));
             }),
             m(this, 'handleSetInnerDivRef', (e) => {
                 this._innerDivRef.current = e;
@@ -257,8 +262,9 @@ class y extends (r = o.PureComponent) {
                 (this._width = e), !this.state.isResizing && this.setState({ isResizing: !0 });
             }),
             m(this, 'handleResizeEnd', (e) => {
-                let { onResize: t, type: n } = this.props,
-                    r = R(e, n);
+                let { onResize: t, resizeConfig: n } = this.props;
+                if (null == n) return;
+                let r = R(e, n);
                 (this._width = r), null == t || t(r), this.setState({ isResizing: !1 }), this.ensureWidth();
             }),
             m(this, 'handleDragStart', (e, t) => {
@@ -287,16 +293,16 @@ m(y, 'defaultProps', {
     roundCorners: !0
 });
 let L = (e) => {
-    let { selectedPIPWindow: t, pipWindows: n, pipType: r, pipWidth: i, maxX: o, maxY: s, onWindowMove: l, onWindowResize: u, dockedRect: c, pictureInPictureComponents: d, appContext: _, roundCorners: E } = e,
+    let { selectedPIPWindow: t, pipWindows: n, pipWidth: r, maxX: i, maxY: o, onWindowMove: s, onWindowResize: l, dockedRect: u, pictureInPictureComponents: c, appContext: d, roundCorners: _, resizeConfig: E } = e,
         h = () => {
             if (null == t) return null;
             let e = n.map((e) => {
                     if (e.id !== t.id && e.component !== f.NYg.EMBED_IFRAME) return null;
-                    let n = 'string' == typeof e.component ? d[e.component] : e.component;
+                    let n = 'string' == typeof e.component ? c[e.component] : e.component;
                     return (0, a.jsx)(
                         n,
                         {
-                            width: i,
+                            width: r,
                             ...e.props
                         },
                         e.id
@@ -304,23 +310,22 @@ let L = (e) => {
                 }),
                 h = n.some((e) => e.component === f.NYg.EMBED_IFRAME);
             return (0, a.jsx)(y, {
-                appContext: _,
+                appContext: d,
                 position: t.position,
                 id: t.id,
-                type: r,
                 hidden: t.hidden,
-                onMove: l,
-                onResize: u,
-                maxX: o,
-                maxY: s,
-                width: i,
-                dockedRect: c,
+                onMove: s,
+                onResize: l,
+                maxX: i,
+                maxY: o,
+                width: r,
+                dockedRect: u,
                 edgeOffsetTop: S,
                 edgeOffsetBottom: A,
                 edgeOffsetLeft: v,
                 edgeOffsetRight: S,
-                roundCorners: E,
-                isResizable: !h,
+                roundCorners: _,
+                resizeConfig: h ? void 0 : E,
                 children: e
             });
         };
