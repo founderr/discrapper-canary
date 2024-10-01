@@ -3,6 +3,7 @@ let i = {
     guild_id: '1266851512559210577',
     leaderboard_id: '1280436307230720000',
     interval_start: '1288198265241600000',
+    interval_end: '1290734980300800000',
     settings: {
         sortByStatisticId: n(99815).E.LOL_TOTAL_KILLS,
         sortDesc: !0,

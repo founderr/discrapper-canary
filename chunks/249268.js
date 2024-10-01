@@ -1,101 +1,97 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return f;
     }
 });
 var r = n(735250),
     i = n(470079),
-    a = n(913527),
-    o = n.n(a),
-    s = n(442837),
-    l = n(481060),
-    u = n(297781),
-    c = n(594174),
-    d = n(5192),
-    _ = n(709054),
-    E = n(873128),
-    f = n(709737),
-    h = n(689938),
-    p = n(20037);
-function m(e) {
+    a = n(442837),
+    o = n(481060),
+    s = n(297781),
+    l = n(594174),
+    u = n(5192),
+    c = n(873128),
+    d = n(709737),
+    _ = n(689938),
+    E = n(20037);
+function f(e) {
     var t;
-    let { userId: n, guildId: a, leaderboardId: m, intervalOffset: I } = e,
-        T = (0, s.e7)([c.default], () => c.default.getUser(n)),
-        g = (0, E.Z)({
-            guildId: a,
-            leaderboardId: m,
-            intervalOffset: I
+    let { userId: n, guildId: f, leaderboardId: h, intervalOffset: p } = e,
+        m = (0, a.e7)([l.default], () => l.default.getUser(n)),
+        I = (0, c.Z)({
+            guildId: f,
+            leaderboardId: h,
+            intervalOffset: p
         }),
-        S = i.useMemo(() => {
+        T = i.useMemo(() => {
             var e;
-            if (null == g) return null;
-            let { sortByStatisticId: t } = g.settings;
-            return null === (e = g.users.find((e) => e.user_id === n)) || void 0 === e ? void 0 : e.statistics[t];
-        }, [g, n]);
-    if (null == T || null == g) return null;
-    let { sortByStatisticId: A } = g.settings,
-        v = _.default.fromTimestamp(1000 * o()(_.default.extractTimestamp(g.interval_start)).add(1, 'week').unix()),
-        N = d.ZP.getName(a, void 0, T);
+            if (null == I) return null;
+            let { sortByStatisticId: t } = I.settings;
+            return null === (e = I.users.find((e) => e.user_id === n)) || void 0 === e ? void 0 : e.statistics[t];
+        }, [I, n]);
+    if (null == m || null == I) return null;
+    let { sortByStatisticId: g } = I.settings,
+        S = u.ZP.getName(f, void 0, m);
     return (0, r.jsxs)('div', {
-        className: p.container,
+        className: E.container,
         children: [
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-xs/semibold',
                 color: 'interactive-active',
-                children: h.Z.Messages.LEADERBOARD_LOL_SUMMONERS_RIFT
+                children: _.Z.Messages.LEADERBOARD_LOL_SUMMONERS_RIFT
             }),
-            (0, r.jsx)(l.Spacer, { size: 8 }),
+            (0, r.jsx)(o.Spacer, { size: 8 }),
             (0, r.jsxs)('div', {
-                className: p.userContainer,
+                className: E.userContainer,
                 children: [
-                    (0, r.jsx)(l.Avatar, {
-                        src: T.getAvatarURL(a, 32),
-                        size: l.AvatarSizes.SIZE_32,
+                    (0, r.jsx)(o.Avatar, {
+                        src: m.getAvatarURL(f, 32),
+                        size: o.AvatarSizes.SIZE_32,
                         'aria-label': 'avatar'
                     }),
-                    (0, r.jsx)(l.Spacer, {
+                    (0, r.jsx)(o.Spacer, {
                         size: 8,
                         horizontal: !0
                     }),
                     (0, r.jsxs)('div', {
                         children: [
                             (0, r.jsxs)('div', {
-                                className: p.userNameContainer,
+                                className: E.userNameContainer,
                                 children: [
-                                    (0, r.jsx)(l.Text, {
+                                    (0, r.jsx)(o.Text, {
                                         variant: 'text-sm/semibold',
-                                        className: p.userName,
-                                        children: N
+                                        className: E.userName,
+                                        children: S
                                     }),
-                                    (0, r.jsx)(l.Spacer, {
+                                    (0, r.jsx)(o.Spacer, {
                                         size: 4,
                                         horizontal: !0
                                     }),
-                                    (0, r.jsx)(l.LeagueOfLegendsBrandIcon, {
+                                    (0, r.jsx)(o.LeagueOfLegendsBrandIcon, {
                                         size: 'custom',
                                         width: 14,
                                         height: 14
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-xs/normal',
-                                className: p.userSubtitle,
-                                children: h.Z.Messages.LEADERBOARD_CURRENT_CHAMPION
+                                className: E.userSubtitle,
+                                children: _.Z.Messages.LEADERBOARD_CURRENT_CHAMPION
                             })
                         ]
                     })
                 ]
             }),
-            (0, r.jsx)(l.Spacer, { size: 8 }),
-            (0, r.jsxs)(u.Gk, {
-                location: u.Gt.LEADERBOARD_POPOUT,
+            (0, r.jsx)(o.Spacer, { size: 8 }),
+            (0, r.jsxs)(s.Gk, {
+                location: s.Gt.LEADERBOARD_POPOUT,
                 children: [
-                    (0, r.jsx)(f.D, {
-                        value: null !== (t = null == S ? void 0 : S.value) && void 0 !== t ? t : 0,
-                        statisticId: A
+                    (0, r.jsx)(d.D, {
+                        value: null !== (t = null == T ? void 0 : T.value) && void 0 !== t ? t : 0,
+                        statisticId: g
                     }),
-                    (0, r.jsx)(f.l, { intervalEnd: v })
+                    (0, r.jsx)(d.l, { intervalEnd: I.interval_end })
                 ]
             })
         ]

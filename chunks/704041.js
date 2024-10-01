@@ -6,83 +6,98 @@ var i = n(735250),
     l = n(154658),
     u = n(370611),
     c = n(463031),
-    d = n(689938),
-    _ = n(304818);
-let E = (e) => {
+    d = n(231338),
+    _ = n(689938),
+    E = n(304818);
+function f(e) {
+    let { children: t } = e;
+    return (0, i.jsx)(o.ThemeProvider, {
+        theme: d.BR.DARK,
+        children: (e) =>
+            (0, i.jsx)('div', {
+                'data-disable-adaptive-theme': !0,
+                className: e,
+                children: t
+            })
+    });
+}
+let h = (e) => {
     let { guildId: t, previewMode: n = !1 } = e,
-        [r, E] = a.useState(n),
-        f = a.useRef(null);
-    return ((0, o.useFocusLock)(f), null == t)
+        [r, d] = a.useState(n),
+        h = a.useRef(null);
+    return ((0, o.useFocusLock)(h), null == t)
         ? null
-        : (0, i.jsxs)('div', {
-              className: _.popout,
-              ref: f,
-              children: [
-                  (0, i.jsxs)('div', {
-                      className: _.content,
-                      children: [
-                          (0, i.jsxs)('div', {
-                              className: _.header,
-                              children: [
-                                  (0, i.jsx)(o.LeagueOfLegendsBrandIcon, { size: 'md' }),
-                                  (0, i.jsx)(o.Spacer, {
-                                      size: 8,
-                                      horizontal: !0
-                                  }),
-                                  (0, i.jsx)(o.Heading, {
-                                      variant: 'heading-sm/normal',
-                                      className: _.leaderboardTitle,
-                                      children: d.Z.Messages.LEADERBOARD_POPOUT_TITLE.format({
-                                          leaderboardName: 'League of Legends',
-                                          leaderboardNameHook: (e, t) =>
-                                              (0, i.jsx)(
-                                                  o.Text,
-                                                  {
-                                                      variant: 'text-sm/medium',
-                                                      className: _.leaderboardName,
-                                                      children: e
-                                                  },
-                                                  t
-                                              )
-                                      })
-                                  }),
-                                  (0, i.jsx)(s.Z, {})
-                              ]
-                          }),
-                          (0, i.jsx)(u.Z, {
-                              guildId: t,
-                              leaderboardId: c._,
-                              intervalOffset: 0,
-                              previewMode: r
-                          }),
-                          r
-                              ? null
-                              : (0, i.jsx)(i.Fragment, {
-                                    children: (0, i.jsx)(l.Z, {
-                                        className: _.previousChampion,
-                                        guildId: t,
-                                        leaderboardId: c._,
-                                        intervalOffset: -1
+        : (0, i.jsx)(f, {
+              children: (0, i.jsxs)('div', {
+                  className: E.popout,
+                  ref: h,
+                  children: [
+                      (0, i.jsxs)('div', {
+                          className: E.content,
+                          children: [
+                              (0, i.jsxs)('div', {
+                                  className: E.header,
+                                  children: [
+                                      (0, i.jsx)(o.LeagueOfLegendsBrandIcon, { size: 'md' }),
+                                      (0, i.jsx)(o.Spacer, {
+                                          size: 8,
+                                          horizontal: !0
+                                      }),
+                                      (0, i.jsx)(o.Heading, {
+                                          variant: 'heading-sm/normal',
+                                          className: E.leaderboardTitle,
+                                          children: _.Z.Messages.LEADERBOARD_POPOUT_TITLE.format({
+                                              leaderboardName: 'League of Legends',
+                                              leaderboardNameHook: (e, t) =>
+                                                  (0, i.jsx)(
+                                                      o.Text,
+                                                      {
+                                                          variant: 'text-sm/medium',
+                                                          className: E.leaderboardName,
+                                                          children: e
+                                                      },
+                                                      t
+                                                  )
+                                          })
+                                      }),
+                                      (0, i.jsx)(s.Z, {})
+                                  ]
+                              }),
+                              (0, i.jsx)(u.Z, {
+                                  guildId: t,
+                                  leaderboardId: c._,
+                                  intervalOffset: 0,
+                                  previewMode: r
+                              }),
+                              r
+                                  ? null
+                                  : (0, i.jsx)(i.Fragment, {
+                                        children: (0, i.jsx)(l.Z, {
+                                            className: E.previousChampion,
+                                            guildId: t,
+                                            leaderboardId: c._,
+                                            intervalOffset: -1
+                                        })
                                     })
-                                })
-                      ]
-                  }),
-                  r
-                      ? (0, i.jsx)(i.Fragment, {
-                            children: (0, i.jsx)(o.Clickable, {
-                                onClick: () => E(!1),
-                                children: (0, i.jsx)('div', {
-                                    className: _.exitPreviewModeButton,
-                                    children: (0, i.jsx)(o.Text, {
-                                        variant: 'text-sm/medium',
-                                        className: _.exitPreviewModeText,
-                                        children: d.Z.Messages.LEADERBOARD_POPOUT_PREVIEW_SHOW_FULL_LEADERBOARD
+                          ]
+                      }),
+                      r
+                          ? (0, i.jsx)(i.Fragment, {
+                                children: (0, i.jsx)(o.Clickable, {
+                                    onClick: () => d(!1),
+                                    children: (0, i.jsx)('div', {
+                                        className: E.exitPreviewModeButton,
+                                        children: (0, i.jsx)(o.Text, {
+                                            variant: 'text-sm/medium',
+                                            className: E.exitPreviewModeText,
+                                            children: _.Z.Messages.LEADERBOARD_POPOUT_PREVIEW_SHOW_FULL_LEADERBOARD
+                                        })
                                     })
                                 })
                             })
-                        })
-                      : null
-              ]
+                          : null
+                  ]
+              })
           });
 };
-t.Z = E;
+t.Z = h;
