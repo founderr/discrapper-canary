@@ -38536,10 +38536,10 @@ html .progress_e5f4c6 {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    height: -moz-fit-content;
-    height: fit-content;
     background-color: var(--background-modifier-hover);
-    border: 1px solid var(--background-modifier-accent)
+    border: 1px solid var(--background-modifier-accent);
+    display: flex;
+    flex-direction: column
 }
 
 .image_f91bb7 {
@@ -38591,6 +38591,7 @@ html .progress_e5f4c6 {
 
 .benefits_f91bb7 {
     background-color: var(--background-secondary);
+    flex-grow: 1;
     padding: 16px
 }
 
