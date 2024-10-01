@@ -134,6 +134,7 @@ function eN(e) {
                 trackGuildAndChannelMetadata: !0
             });
         else if (t === g.g.DISCOVERY_GAME);
+        else if (t === g.g.APP_OAUTH2_LINK);
         else throw Error('Unknown coded link type: '.concat(t));
     });
 }

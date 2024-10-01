@@ -29,6 +29,7 @@ function c(e) {
             else if (t === l.g.APP_DIRECTORY_STOREFRONT);
             else if (t === l.g.APP_DIRECTORY_STOREFRONT_SKU);
             else if (t === l.g.DISCOVERY_GAME);
+            else if (t === l.g.APP_OAUTH2_LINK);
             else throw Error('Unknown coded link type: '.concat(t));
         });
 }
