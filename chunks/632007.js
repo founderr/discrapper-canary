@@ -10,7 +10,6 @@ e.exports = {
     bannerShadow: 'bannerShadow_ebba41',
     left: 'left_ebba41',
     right: 'right_ebba41',
-    darker: 'darker_ebba41',
     featuredBlocksContainer: 'featuredBlocksContainer_ebba41',
     featuredBlock: 'featuredBlock_ebba41',
     featuredBlockBadge: 'featuredBlockBadge_ebba41',
