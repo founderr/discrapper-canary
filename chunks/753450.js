@@ -27,14 +27,14 @@ var i = a(735250),
     g = a(692547),
     I = a(477690),
     h = a(481060),
-    v = a(995648),
-    x = a(445986),
+    x = a(995648),
+    v = a(445986),
     f = a(9807),
     C = a(911969),
     E = a(330726),
     P = a(782568),
-    R = a(581364),
-    b = a(970321),
+    b = a(581364),
+    R = a(970321),
     A = a(283836),
     N = a(220082),
     T = a(252618),
@@ -81,8 +81,8 @@ var i = a(735250),
 let eg = d().parserFor(el.Z),
     eI = d().reactFor(d().ruleOutput(el.Z, 'react')),
     eh = (0, m.Mg)(I.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
-    ev = 'redirect_to_support_server',
-    ex = 'start_application_install',
+    ex = 'redirect_to_support_server',
+    ev = 'start_application_install',
     ef = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(ed.Z5c.APPLICATION_DIRECTORY_PROFILE(e)),
     eC = (e) => {
         if (null == e) return null;
@@ -125,7 +125,7 @@ function eE(e) {
                 }
             );
         }),
-        eb = t.useMemo(() => (null == eC ? void 0 : eC.slice(0, 3)), [eC]),
+        eR = t.useMemo(() => (null == eC ? void 0 : eC.slice(0, 3)), [eC]),
         eN = (0, p.e7)([Y.Z], () => Y.Z.getApplicationFetchState(m)),
         [eT, ej] = t.useState(void 0),
         eS = t.useCallback(
@@ -168,15 +168,15 @@ function eE(e) {
     t.useEffect(() => {
         if (null == eD) return;
         let e = new URL(location.href);
-        if (C && null != eZ && 'true' === e.searchParams.get(ev)) {
-            e.searchParams.delete(ev);
+        if (C && null != eZ && 'true' === e.searchParams.get(ex)) {
+            e.searchParams.delete(ex);
             let n = e.pathname + e.search;
             (0, L.dL)(n), ek();
         }
     }, [C, ek, eZ, eD]);
     let ew = t.useCallback(() => {
             var e;
-            null != (null == eD ? void 0 : null === (e = eD.guild) || void 0 === e ? void 0 : e.id) && (C ? ek() : (0, K.rf)({ [ev]: 'true' }));
+            null != (null == eD ? void 0 : null === (e = eD.guild) || void 0 === e ? void 0 : e.id) && (C ? ek() : (0, K.rf)({ [ex]: 'true' }));
         }, [eD, C, ek]),
         eB = t.useCallback(() => {
             (0, ee.replaceAppDirectoryURLWith)(''.concat(ed.Z5c.APPLICATION_DIRECTORY_PROFILE(m)).concat(location.search));
@@ -194,7 +194,7 @@ function eE(e) {
                 null != n
                     ? ej(
                           n.map((e) =>
-                              (0, R.Z8)({
+                              (0, b.Z8)({
                                   rootCommand: e,
                                   command: e,
                                   applicationId: e.application_id
@@ -255,7 +255,7 @@ function eE(e) {
                         t = n.findIndex((n) => n === e);
                     if (t < 0) return;
                     let r = n.map((e) => ({
-                        src: (0, x.Q)(e.src),
+                        src: (0, v.Q)(e.src),
                         width: e.width,
                         height: e.height
                     }));
@@ -356,8 +356,8 @@ function eE(e) {
         }, [eD, e0, I]);
     t.useEffect(() => {
         let e = new URL(location.href);
-        if (C && 'true' === e.searchParams.get(ex)) {
-            e.searchParams.delete(ex);
+        if (C && 'true' === e.searchParams.get(ev)) {
+            e.searchParams.delete(ev);
             let n = e.pathname + e.search;
             (0, L.dL)(n), eY('product_page');
         }
@@ -373,7 +373,7 @@ function eE(e) {
                           source: 'product_page',
                           device_platform: u.tq ? 'mobile_web' : 'desktop_web'
                       }),
-                      (0, K.rf)({ [ex]: 'true' })));
+                      (0, K.rf)({ [ev]: 'true' })));
         }, [eD, C, eY, m, I]),
         e5 = (null == eD ? void 0 : eD.id) === eu.g,
         [e8, e2] = t.useState(!1),
@@ -384,7 +384,7 @@ function eE(e) {
         },
         nn = null != eW && eW.length > 0,
         na = (null == eD ? void 0 : eD.flags) != null,
-        ni = (0, b.R)(null != m ? m : '');
+        ni = (0, R.R)(null != m ? m : '');
     t.useEffect(() => {
         ni && null != m && (0, A.Z)(m);
     }, [ni, m]);
@@ -419,7 +419,7 @@ function eE(e) {
                                           })
                                       }),
                                       (e8 || e3) &&
-                                          (0, i.jsx)(eR, {
+                                          (0, i.jsx)(eb, {
                                               isViewAll: e3,
                                               onToggle: () => {
                                                   e4((e) => !e);
@@ -531,7 +531,7 @@ function eE(e) {
                                         variant: 'heading-md/semibold',
                                         children: e_.Z.Messages.APP_DIRECTORY_PROFILE_REQUIRED_PERMISSIONS_HEADING
                                     }),
-                                    (0, i.jsx)(v.Z, {
+                                    (0, i.jsx)(x.Z, {
                                         className: em.commandList,
                                         grantedPermissions: eW,
                                         grantedPermissionsHeader: e_.Z.Messages.APP_DIRECTORY_PROFILE_REQUIRED_PERMISSIONS_SUB_HEADING
@@ -736,7 +736,7 @@ function eE(e) {
                                               className: em.content,
                                               children: [
                                                   nt,
-                                                  null != eb && eb.length > 0
+                                                  null != eR && eR.length > 0
                                                       ? (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 e9 && (0, i.jsx)('div', { className: em.separator }),
@@ -751,7 +751,7 @@ function eE(e) {
                                                                         (0, i.jsx)(J.Z, {
                                                                             loading: N,
                                                                             children: (0, i.jsx)(q.Z, {
-                                                                                applications: eb,
+                                                                                applications: eR,
                                                                                 onViewOne: eX
                                                                             })
                                                                         })
@@ -799,7 +799,7 @@ function eP(e) {
     }
     return console.warn('Unsupported carousel item', e), null;
 }
-let eR = (e) => {
+let eb = (e) => {
         let n,
             { onToggle: a, isViewAll: t } = e;
         return (
@@ -832,7 +832,7 @@ let eR = (e) => {
                           })
                       ]
                   })),
-            (0, i.jsx)(eb, {
+            (0, i.jsx)(eR, {
                 children: (0, i.jsx)(h.Button, {
                     look: h.Button.Looks.BLANK,
                     color: h.Button.Colors.TRANSPARENT,
@@ -845,7 +845,7 @@ let eR = (e) => {
             })
         );
     },
-    eb = (e) => {
+    eR = (e) => {
         let { className: n, contentClassName: a, children: t } = e;
         return (0, i.jsxs)('div', {
             className: l()([em.dividerContainer, n]),
@@ -879,18 +879,21 @@ function eA(e) {
                     canAnimate: !1
                 });
                 null != n && ((e['--custom-background-static'] = 'url('.concat(n)), (e.height = 'auto'));
-                let a = (0, w.aN)({
-                    id: l.id,
-                    banner: l.banner,
-                    size: 1024,
-                    canAnimate: !0
-                });
+                let a = (0, w.xR)(l.banner)
+                    ? (0, w.aN)({
+                          id: l.id,
+                          banner: l.banner,
+                          size: 1024,
+                          canAnimate: !0
+                      })
+                    : null;
                 null != a && (e['--custom-background-animated'] = 'url('.concat(a));
             }
             return e;
         }, [r, l]);
     return (0, i.jsx)('div', {
         style: s,
-        className: em.headerBanner
+        className: em.headerBanner,
+        'data-has-animated': '--custom-background-animated' in s
     });
 }
