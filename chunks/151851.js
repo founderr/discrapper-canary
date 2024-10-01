@@ -153,6 +153,11 @@ function D(e) {
                 children: m
             });
         default:
-            return null;
+            return p
+                ? (0, r.jsx)('div', {
+                      className: N.children,
+                      children: m
+                  })
+                : null;
     }
 }

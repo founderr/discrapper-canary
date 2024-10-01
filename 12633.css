@@ -51107,6 +51107,12 @@ html .progress_e5f4c6 {
     padding-top: 4px
 }
 
+.visual-refresh .children_a934d8 {
+    height: 40px;
+    display: flex;
+    justify-content: center
+}
+
 .tile_dc5fc4 {
     position: relative;
     background-color: var(--primary-700);

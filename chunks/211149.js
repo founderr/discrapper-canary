@@ -12,5 +12,6 @@ e.exports = {
     macButtonMinimize: 'macButtonMinimize_a934d8 macButton_a934d8',
     macButtonMaximize: 'macButtonMaximize_a934d8 macButton_a934d8',
     unfocused: 'unfocused_a934d8',
-    withBackgroundOverride: 'withBackgroundOverride_a934d8'
+    withBackgroundOverride: 'withBackgroundOverride_a934d8',
+    children: 'children_a934d8'
 };
