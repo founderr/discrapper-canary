@@ -7,7 +7,7 @@ var i = n(735250),
     c = n(686546),
     d = n(66637),
     u = n(768581),
-    _ = n(956965),
+    _ = n(420372),
     h = n(689938),
     E = n(923592);
 t.Z = function (e) {
@@ -27,7 +27,7 @@ t.Z = function (e) {
             [p]
         ),
         v = (null !== (I = null === (n = p.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || f.length > 0,
-        L = (0, i.jsx)(l.Z, {
+        Z = (0, i.jsx)(l.Z, {
             application: p,
             textVariant: 'text-xs/normal',
             mutualGuilds: f,
@@ -45,7 +45,10 @@ t.Z = function (e) {
                 (0, i.jsxs)('div', {
                     className: E.header,
                     children: [
-                        (0, i.jsx)(_.Z, { iconURL: A }),
+                        (0, i.jsx)(_.Z, {
+                            application: p,
+                            iconURL: A
+                        }),
                         (0, i.jsx)('div', {
                             className: E.icon,
                             children: (0, i.jsx)(c.ZP, {
@@ -112,7 +115,7 @@ t.Z = function (e) {
                         v
                             ? (0, i.jsx)('div', {
                                   className: E.memberDetails,
-                                  children: L
+                                  children: Z
                               })
                             : null
                     ]
