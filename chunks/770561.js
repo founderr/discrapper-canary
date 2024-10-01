@@ -3,6 +3,7 @@ e.exports = {
     header: 'header_e8df26',
     headerBackground: 'headerBackground_e8df26',
     headerImage: 'headerImage_e8df26',
+    scroller: 'scroller_e8df26',
     scrollContent: 'scrollContent_e8df26',
     details: 'details_e8df26',
     benefits: 'benefits_e8df26',

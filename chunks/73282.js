@@ -8,6 +8,7 @@ e.exports = {
     rowContent: 'rowContent_df137d',
     subscriptionTypeRow: 'subscriptionTypeRow_df137d',
     guildSubscriptionContentRow: 'guildSubscriptionContentRow_df137d',
+    noticeBanner: 'noticeBanner_df137d',
     payment: 'payment_df137d',
     benefits: 'benefits_df137d',
     benefitsHeader: 'benefitsHeader_df137d',

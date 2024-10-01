@@ -19,6 +19,7 @@ function c(e) {
     return (0, r.jsx)('div', {
         className: l.container,
         children: (0, r.jsx)(o.Z, {
+            className: l.scroller,
             children: (0, r.jsxs)('div', {
                 className: l.scrollContent,
                 children: [
