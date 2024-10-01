@@ -41,7 +41,7 @@ function p() {
     let C = () => {
             l.tn.post({ url: m.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG });
         },
-        [p, M] = a.useState(new Set());
+        [p, f] = a.useState(new Set());
     return i
         ? (0, n.jsx)(u.Z, {})
         : ((e =
@@ -86,7 +86,7 @@ function p() {
                                                               checked: p.has(e.id_hash),
                                                               setChecked: (s) => {
                                                                   let t = new Set(p);
-                                                                  s ? t.add(e.id_hash) : t.delete(e.id_hash), M(t);
+                                                                  s ? t.add(e.id_hash) : t.delete(e.id_hash), f(t);
                                                               }
                                                           },
                                                           e.id_hash

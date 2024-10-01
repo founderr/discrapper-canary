@@ -28,8 +28,8 @@ var n = t(735250),
     p = t(937615),
     R = t(171246),
     x = t(889989),
-    M = t(547283),
-    f = t(981631),
+    f = t(547283),
+    M = t(981631),
     D = t(689938),
     L = t(73282);
 function P(e) {
@@ -37,7 +37,7 @@ function P(e) {
     let { subscription: E, navigateToSwitchPlan: A } = e,
         {
             appId: x,
-            plan: M,
+            plan: f,
             storeListing: P,
             price: U,
             isGuildSubscription: G,
@@ -73,7 +73,7 @@ function P(e) {
         k = null !== (s = null == y ? void 0 : y.deleted) && void 0 !== s && s,
         w = null != y && (0, R.OL)(y),
         H = (0, R.Jf)(E, y),
-        W = E.status === f.O0b.PAST_DUE,
+        W = E.status === M.O0b.PAST_DUE,
         { analyticsLocations: K } = (0, _.ZP)(),
         [z] = (0, I.ED)({
             subscriptionId: E.id,
@@ -104,7 +104,7 @@ function P(e) {
                                 (0, n.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: null !== (r = null == M ? void 0 : M.name) && void 0 !== r ? r : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PLAN_NAME_UNAVAILABLE
+                                    children: null !== (r = null == f ? void 0 : f.name) && void 0 !== r ? r : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PLAN_NAME_UNAVAILABLE
                                 })
                             ]
                         })
@@ -246,9 +246,9 @@ function j(e) {
         [C, m] = a.useState(!1),
         g = (0, E.q)(s.id),
         O = (0, o.e7)([h.Z], () => h.Z.getParentSKU(i.skuId), [i.skuId]),
-        p = a.useMemo(() => (null == O ? [] : (0, M.$)(i.id, O, g)), [i.id, g, O]),
+        p = a.useMemo(() => (null == O ? [] : (0, f.$)(i.id, O, g)), [i.id, g, O]),
         x = 0 !== p.length,
-        f = async () => {
+        M = async () => {
             try {
                 m(!0);
                 let { subscription: e } = await (0, c.pl)(d, N);
@@ -275,7 +275,7 @@ function j(e) {
                   ? (0, n.jsx)(l.Button, {
                         color: l.Button.Colors.PRIMARY,
                         size: l.Button.Sizes.SMALL,
-                        onClick: f,
+                        onClick: M,
                         submitting: C,
                         children: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RESUME_PLAN
                     })

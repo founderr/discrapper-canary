@@ -28,8 +28,8 @@ var n = t(735250),
     p = t(714565),
     R = t(202858),
     x = t(726985),
-    M = t(981631),
-    f = t(815660),
+    f = t(981631),
+    M = t(815660),
     D = t(689938),
     L = t(898005),
     P = t(113207);
@@ -89,7 +89,7 @@ class v extends a.PureComponent {
         let { revealed: t } = this.state,
             { currentUser: a, togglingSMS: i } = this.props,
             r = null != a.phone,
-            o = a.hasFlag(M.xW$.MFA_SMS);
+            o = a.hasFlag(f.xW$.MFA_SMS);
         if (r || o) {
             let e = t ? a.phone : this.maskPhoneNumber(a.phone);
             s = (0, n.jsxs)(l.FormText, {
@@ -317,7 +317,7 @@ class v extends a.PureComponent {
                     ...s,
                     ...e
                 }),
-            { modalKey: f.M }
+            { modalKey: M.M }
         );
     }
     constructor(...e) {

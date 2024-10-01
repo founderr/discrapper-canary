@@ -23,8 +23,8 @@ var n = t(735250),
     p = t(703656),
     R = t(594174),
     x = t(580130),
-    M = t(669079),
-    f = t(74538),
+    f = t(669079),
+    M = t(74538),
     D = t(317941),
     L = t(981631),
     P = t(474936),
@@ -63,7 +63,7 @@ function v(e) {
               }));
     let p = h ? b.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : b.Z.Messages.PROMOTION_CARD_ACTION_CLAIM,
         R = a.useCallback(() => E(!1), []),
-        { outboundTitle: x, outboundTermsAndConditions: M } = t;
+        { outboundTitle: x, outboundTermsAndConditions: f } = t;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)('div', {
@@ -114,7 +114,7 @@ function v(e) {
                             className: Z.promotionLegalese,
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            children: I.Z.parse(M, !1, { allowLinks: !0 })
+                            children: I.Z.parse(f, !1, { allowLinks: !0 })
                         })
                 ]
             }),
@@ -139,8 +139,8 @@ s.Z = function () {
             let { giftCodeBatchId: s } = e;
             return null == s;
         }),
-        i = (0, c.e7)([R.default], () => f.ZP.isPremiumExactly(R.default.getCurrentUser(), P.p9.TIER_2)),
-        o = l().groupBy(s, (e) => (0, M.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
+        i = (0, c.e7)([R.default], () => M.ZP.isPremiumExactly(R.default.getCurrentUser(), P.p9.TIER_2)),
+        o = l().groupBy(s, (e) => (0, f.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
         [S, I] = a.useState(!1);
     a.useEffect(() => {
         _.Z.wait(() => {
@@ -249,7 +249,7 @@ s.Z = function () {
                                                 entitlements: [s],
                                                 giftCodeBatchId: P.m8
                                             },
-                                            (0, M.Bg)(s.skuId, s.subscriptionPlanId)
+                                            (0, f.Bg)(s.skuId, s.subscriptionPlanId)
                                         )
                                       : null,
                                   o.length > 0
@@ -262,7 +262,7 @@ s.Z = function () {
                                                 entitlements: o,
                                                 giftCodeBatchId: P.rX
                                             },
-                                            (0, M.Bg)(o[0].skuId, o[0].subscriptionPlanId)
+                                            (0, f.Bg)(o[0].skuId, o[0].subscriptionPlanId)
                                         )
                                       : null,
                                   c.length > 0
@@ -275,7 +275,7 @@ s.Z = function () {
                                                 entitlements: c,
                                                 giftCodeBatchId: P.rX
                                             },
-                                            (0, M.Bg)(c[0].skuId, c[0].subscriptionPlanId)
+                                            (0, f.Bg)(c[0].skuId, c[0].subscriptionPlanId)
                                         )
                                       : null
                               ]
@@ -309,7 +309,7 @@ s.Z = function () {
                                   : l()
                                         .keys(o)
                                         .map((e) => {
-                                            let { skuId: s, subscriptionPlanId: t, giftStyle: a } = (0, M.Z0)(e);
+                                            let { skuId: s, subscriptionPlanId: t, giftStyle: a } = (0, f.Z0)(e);
                                             return (0, n.jsx)(
                                                 D.Z,
                                                 {

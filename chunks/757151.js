@@ -27,8 +27,8 @@ var n = t(735250),
     p = t(540204),
     R = t(546957),
     x = t(893996),
-    M = t(864239),
-    f = t(190014),
+    f = t(864239),
+    M = t(190014),
     D = t(301812),
     L = t(988043),
     P = t(919539),
@@ -50,7 +50,7 @@ let U = () =>
                     (0, n.jsx)(L.Z, {}),
                     (0, n.jsx)(P.Z, {}),
                     (0, n.jsx)(D.Z, {}),
-                    (0, n.jsx)(f.Z, {})
+                    (0, n.jsx)(M.Z, {})
                 ]
             })
         }),
@@ -60,7 +60,7 @@ let U = () =>
                 (0, n.jsxs)(x.Z, {
                     title: j.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_CONTENT,
                     webSetting: Z.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                    children: [(0, n.jsx)(m.P, {}), (0, n.jsx)(T.Z, {}), (0, n.jsx)(h.Z, {}), (0, n.jsx)(E.Z, {}), (0, n.jsx)(u.Z, {}), (0, n.jsx)(M.Z, {})]
+                    children: [(0, n.jsx)(m.P, {}), (0, n.jsx)(T.Z, {}), (0, n.jsx)(h.Z, {}), (0, n.jsx)(E.Z, {}), (0, n.jsx)(u.Z, {}), (0, n.jsx)(f.Z, {})]
                 }),
                 (0, n.jsx)(U, {}),
                 (0, n.jsx)(x.Z, {

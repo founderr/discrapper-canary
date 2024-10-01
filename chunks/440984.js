@@ -26,7 +26,7 @@ function m(e) {
         p = (0, l.ZP)(),
         R = (0, r.wj)(p) ? A : C,
         x = a.useRef(null),
-        [M, f] = a.useState(!1),
+        [f, M] = a.useState(!1),
         D = (0, E._)(s, S.Xh.PREMIUM_MONTH_TIER_2, O),
         L = (0, _.aS)(S.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: s.currency,
@@ -36,8 +36,8 @@ function m(e) {
         b = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
         (a.useEffect(() => {
-            null != x.current && null != D && f(!0);
-        }, [x, M, D]),
+            null != x.current && null != D && M(!0);
+        }, [x, f, D]),
         null == O || null == D)
     )
         return null;
@@ -94,7 +94,7 @@ function m(e) {
                 })
             }),
             !b &&
-                M &&
+                f &&
                 (0, n.jsx)(d.Z, {
                     confettiTarget: x.current,
                     confettiCanvas: g,

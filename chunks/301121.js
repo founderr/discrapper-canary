@@ -30,8 +30,8 @@ var n,
     p = t(163268),
     R = t(294602),
     x = t(778825),
-    M = t(856768),
-    f = t(592204),
+    f = t(856768),
+    M = t(592204),
     D = t(712950),
     L = t(880257),
     P = t(16703),
@@ -105,7 +105,7 @@ function eu() {
               tag: S.FormTitleTags.H1,
               title: eo.Z.Messages.PRIVACY_AND_SAFETY,
               children: [
-                  (0, i.jsx)(M.Z, {
+                  (0, i.jsx)(f.Z, {
                       className: ec.guildSelector,
                       guildId: t.id,
                       onChange: n
@@ -955,7 +955,7 @@ function eg() {
         t = (0, E.e7)([Z.Z], () => Z.Z.getFetchError()),
         n = (0, E.e7)([V.Z], () => V.Z.getSubsection()),
         a = (0, O.yh)(),
-        r = (0, f.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
+        r = (0, M.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
         { hasSearchResults: o, searchResults: l } = (0, ee.E)(),
         c = (0, D.p)(),
         _ = (0, L.Z)(),

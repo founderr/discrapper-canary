@@ -29,8 +29,8 @@ var n = t(735250),
     p = t(374649),
     R = t(981631),
     x = t(689938),
-    M = t(348893),
-    f = t(739017);
+    f = t(348893),
+    M = t(739017);
 function D(e) {
     let { subscription: s, onPaymentSourceAdded: t, highlightAddPaymentMethodButton: i, dropdownClassName: o, analyticsLocation: D, currentInvoicePreview: P, disabled: b = !1 } = e,
         Z = (0, c.e7)([A.Z], () => A.Z.hidePersonalInformation),
@@ -104,7 +104,7 @@ function D(e) {
             return (0, n.jsx)(d.Anchor, {
                 href: s,
                 useDefaultUnderlineStyles: !1,
-                className: M.externalLink,
+                className: f.externalLink,
                 children: (0, n.jsx)(d.Button, {
                     fullWidth: !0,
                     look: d.Button.Looks.FILLED,
@@ -152,11 +152,11 @@ function D(e) {
                     ? (0, n.jsx)(T.b, {
                           currencies: t,
                           children: (0, n.jsxs)('div', {
-                              className: r()(M.currency, f.flex, f.alignCenter),
+                              className: r()(f.currency, M.flex, M.alignCenter),
                               children: [
                                   (0, n.jsx)('div', { children: x.Z.Messages.PAYMENT_CURRENCY_PAYING_IN }),
                                   (0, n.jsx)(T.Z, {
-                                      className: M.currencyDropdown,
+                                      className: f.currencyDropdown,
                                       selectedCurrency: V,
                                       currencies: t,
                                       onChange: (e) => {

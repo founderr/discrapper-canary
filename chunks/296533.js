@@ -1,9 +1,9 @@
 t.d(s, {
     Z: function () {
-        return f;
+        return M;
     },
     r: function () {
-        return M;
+        return f;
     }
 }),
     t(653041),
@@ -226,7 +226,7 @@ function x(e) {
         ]
     });
 }
-function M(e) {
+function f(e) {
     let { appliedGuildBoosts: s, premiumSubscription: t } = e,
         i = a.useMemo(() => {
             let e = {};
@@ -261,7 +261,7 @@ function M(e) {
               ]
           });
 }
-function f(e) {
+function M(e) {
     let { guildBoostSlots: s, premiumSubscription: t } = e,
         [i, r] = a.useState(!1),
         o = (0, _.Vp)();

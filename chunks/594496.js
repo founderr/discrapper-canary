@@ -28,8 +28,8 @@ var a = t(512722),
     p = t(52597),
     R = t(430131),
     x = t(133484),
-    M = t(689938),
-    f = t(944167);
+    f = t(689938),
+    M = t(944167);
 function D(e) {
     var s, t, a, D;
     let { guild: L } = e,
@@ -74,7 +74,7 @@ function D(e) {
             t(null != e ? e : null != s ? null : void 0);
         };
     return (0, n.jsxs)('div', {
-        className: f.sectionsContainer,
+        className: M.sectionsContainer,
         children: [
             (0, n.jsx)(
                 R.Z,
@@ -90,7 +90,7 @@ function D(e) {
             (0, n.jsx)(
                 I.Z,
                 {
-                    sectionTitle: M.Z.Messages.USER_SETTINGS_PRONOUNS,
+                    sectionTitle: f.Z.Messages.USER_SETTINGS_PRONOUNS,
                     errors: null == G ? void 0 : G.pronouns,
                     onPronounsChange: (e) => {
                         (0, p.xs)(e, Q);
@@ -109,15 +109,15 @@ function D(e) {
                         {
                             sectionTitle: (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    M.Z.Messages.USER_SETTINGS_AVATAR,
+                                    f.Z.Messages.USER_SETTINGS_AVATAR,
                                     (0, n.jsx)(o.Tooltip, {
-                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                        text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
                                         children: (e) =>
                                             (0, n.jsx)(o.NitroWheelIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
                                                 ...e,
-                                                className: f.nitroWheel
+                                                className: M.nitroWheel
                                             })
                                     })
                                 ]
@@ -135,15 +135,15 @@ function D(e) {
                         {
                             sectionTitle: (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    M.Z.Messages.USER_SETTINGS_AVATAR_DECORATION,
+                                    f.Z.Messages.USER_SETTINGS_AVATAR_DECORATION,
                                     (0, n.jsx)(o.Tooltip, {
-                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                        text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
                                         children: (e) =>
                                             (0, n.jsx)(o.NitroWheelIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
                                                 ...e,
-                                                className: f.nitroWheel
+                                                className: M.nitroWheel
                                             })
                                     })
                                 ]
@@ -158,15 +158,15 @@ function D(e) {
                         {
                             sectionTitle: (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    M.Z.Messages.USER_SETTINGS_PROFILE_EFFECT,
+                                    f.Z.Messages.USER_SETTINGS_PROFILE_EFFECT,
                                     (0, n.jsx)(o.Tooltip, {
-                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                        text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
                                         children: (e) =>
                                             (0, n.jsx)(o.NitroWheelIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
                                                 ...e,
-                                                className: f.nitroWheel
+                                                className: M.nitroWheel
                                             })
                                     })
                                 ]
@@ -200,18 +200,18 @@ function D(e) {
                     (0, n.jsx)(
                         d.Z,
                         {
-                            placeholder: M.Z.Messages.CHANGE_IDENTITY_BIO_PLACEHOLDER,
+                            placeholder: f.Z.Messages.CHANGE_IDENTITY_BIO_PLACEHOLDER,
                             sectionTitle: (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    M.Z.Messages.USER_PROFILE_ABOUT_ME,
+                                    f.Z.Messages.USER_PROFILE_ABOUT_ME,
                                     (0, n.jsx)(o.Tooltip, {
-                                        text: M.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                                        text: f.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
                                         children: (e) =>
                                             (0, n.jsx)(o.NitroWheelIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
                                                 ...e,
-                                                className: f.nitroWheel
+                                                className: M.nitroWheel
                                             })
                                     })
                                 ]

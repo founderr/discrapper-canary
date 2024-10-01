@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     },
     LL: function () {
-        return y;
+        return L;
     },
     N_: function () {
         return U;
@@ -40,14 +40,14 @@ var c = n(569471),
     Z = n(885110),
     h = n(9156),
     O = n(594174),
-    m = n(630388),
-    v = n(5192),
+    v = n(630388),
+    m = n(5192),
     D = n(352736),
     p = n(51144),
     M = n(981631),
     R = n(124368),
-    L = n(689938);
-function y(e, t, n) {
+    y = n(689938);
+function L(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (t.hasFlag(M.xW$.SPAMMER) || n.isManaged()) return !1;
     let l = n.getGuildId();
@@ -57,7 +57,7 @@ function G(e, t) {
     var n;
     let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    if (null != e.flags && (0, m.yE)(e.flags, M.iLy.SUPPRESS_NOTIFICATIONS)) return !1;
+    if (null != e.flags && (0, v.yE)(e.flags, M.iLy.SUPPRESS_NOTIFICATIONS)) return !1;
     let s = T.Z.getChannel(t);
     e.type === M.uaV.THREAD_STARTER_MESSAGE && (s = T.Z.getChannel(null == s ? void 0 : s.parent_id));
     let o = O.default.getCurrentUser(),
@@ -67,7 +67,7 @@ function G(e, t) {
         null == o ||
         null == u ||
         (s.type === M.d4z.GROUP_DM && e.type === M.uaV.RECIPIENT_REMOVE) ||
-        !y(o, u, s, {
+        !L(o, u, s, {
             ignoreStatus: l,
             ignoreSameUser: M.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)
         }) ||
@@ -125,7 +125,7 @@ function P(e, t) {
             null == t ||
             null == l ||
             null == s ||
-            !y(l, s, t, {
+            !L(l, s, t, {
                 ignoreStatus: i,
                 ignoreNoMessagesSetting: !0
             }) ||
@@ -154,7 +154,7 @@ function w(e, t, n, i) {
 }
 function b(e, t, n) {
     let o;
-    let a = v.ZP.getName(e.getGuildId(), e.id, n),
+    let a = m.ZP.getName(e.getGuildId(), e.id, n),
         r = a;
     switch (e.type) {
         case M.d4z.GUILD_ANNOUNCEMENT:
@@ -172,29 +172,29 @@ function b(e, t, n) {
     let _ = t.content;
     if ((0, d.Z)(t) && null == (_ = D.Z.stringify(t, e))) throw (new l.Z('NotificationTextUtils').warn('SystemMessageUtils.stringify(...) could not convert', t), Error('failed to stringify system message'));
     let E = 'sticker_items' in t ? t.sticker_items : t.stickers;
-    if ('message_reference' in t ? (0, s.s)(t) : (0, s.Z)(t)) o = L.Z.Messages.MESSAGE_FORWARDED_NOTIFICATION_BODY;
+    if ('message_reference' in t ? (0, s.s)(t) : (0, s.Z)(t)) o = y.Z.Messages.MESSAGE_FORWARDED_NOTIFICATION_BODY;
     else if (null != t.activity && null != t.application)
         o =
             t.activity.type === M.mFx.JOIN
-                ? w(e, L.Z.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, L.Z.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_JOIN, L.Z.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN).format({
+                ? w(e, y.Z.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, y.Z.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_JOIN, y.Z.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN).format({
                       user: a,
                       game: t.application.name
                   })
                 : t.activity.type === M.mFx.JOIN_REQUEST
-                  ? w(e, L.Z.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, L.Z.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, L.Z.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST).format({
+                  ? w(e, y.Z.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, y.Z.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, y.Z.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST).format({
                         user: a,
                         game: t.application.name
                     })
                   : '';
-    else if (null != t.activity && t.activity.type === M.mFx.LISTEN) o = w(e, L.Z.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_LISTEN, L.Z.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_LISTEN, L.Z.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_LISTEN).format({ user: a });
-    else if (null != E && E.length > 0) o = L.Z.Messages.STICKER_NOTIFICATION_BODY.format({ stickerName: E[0].name });
-    else if (t.type === M.uaV.PREMIUM_REFERRAL) o = L.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY_SHORT.format({ username: p.ZP.getName(n) });
-    else if (null != t.poll) o = L.Z.Messages.POLL_SENT_NOTIFICATION.format({ question: t.poll.question.text });
+    else if (null != t.activity && t.activity.type === M.mFx.LISTEN) o = w(e, y.Z.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_LISTEN, y.Z.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_LISTEN, y.Z.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_LISTEN).format({ user: a });
+    else if (null != E && E.length > 0) o = y.Z.Messages.STICKER_NOTIFICATION_BODY.format({ stickerName: E[0].name });
+    else if (t.type === M.uaV.PREMIUM_REFERRAL) o = y.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY_SHORT.format({ username: p.ZP.getName(n) });
+    else if (null != t.poll) o = y.Z.Messages.POLL_SENT_NOTIFICATION.format({ question: t.poll.question.text });
     else if (t.type === M.uaV.POLL_RESULT) {
         var I, f, g;
         let e = null === (g = t.embeds) || void 0 === g ? void 0 : null === (f = g[0]) || void 0 === f ? void 0 : null === (I = f.fields) || void 0 === I ? void 0 : I.find((e) => ('name' in e ? e.name : e.rawName) === 'poll_question_text'),
             n = null != e ? ('value' in e ? e.value : e.rawValue) : '';
-        o = L.Z.Messages.POLL_RESULTS_NOTIFICATION.format({ question: n });
+        o = y.Z.Messages.POLL_RESULTS_NOTIFICATION.format({ question: n });
     } else o = 0 !== _.length && e.type === M.d4z.DM && !n.bot && _.startsWith('> -# *') ? (o = u.ZP.unparse(_, e.id, !0)).substring(0, 1) + o.substring(4) : u.ZP.unparse(_, e.id, !0);
     return (
         0 === o.length &&
@@ -213,10 +213,10 @@ function b(e, t, n) {
                         return ''.concat(n, ' ').concat(i);
                     }
                 }
-                if ((0, m.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, M.iLy.IS_VOICE_MESSAGE)) return L.Z.Messages.VOICE_MESSAGES_SENT_NOTIFICATION;
+                if ((0, v.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, M.iLy.IS_VOICE_MESSAGE)) return y.Z.Messages.VOICE_MESSAGES_SENT_NOTIFICATION;
                 if (void 0 !== e.attachments && e.attachments.length > 0) {
                     let t = e.attachments[0].filename;
-                    return L.Z.Messages.NOTIFICATION_BODY_ATTACHMENT.format({ filename: t });
+                    return y.Z.Messages.NOTIFICATION_BODY_ATTACHMENT.format({ filename: t });
                 }
                 return '';
             })(t)),

@@ -33,12 +33,12 @@ function d(e, t) {
 let _ = {
     guildId() {
         let { name: e = 'guildId', optional: t = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            n = [o.ME, o.I_8, o.o_z].join('|');
+            n = [o.ME, o.I_8, o.o_z].map(i.escapeRegExp).join('|');
         return d(e, ''.concat(n, '|\\d+'), { optional: t });
     },
     channelId() {
         let { name: e = 'channelId', optional: t = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            n = [...s.Vg].join('|');
+            n = [...s.Vg].map(i.escapeRegExp).join('|');
         return d(e, ''.concat(n, '|\\d+'), { optional: t });
     }
 };

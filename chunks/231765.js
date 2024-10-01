@@ -28,8 +28,8 @@ var n,
     p = t(524484),
     R = t(981631),
     x = t(689938),
-    M = t(771830);
-let f = {
+    f = t(771830);
+let M = {
         enabled: !0,
         combosEnabled: !0,
         screenshakeEnabled: !1,
@@ -105,7 +105,7 @@ function j(e) {
 function B(e) {
     let { children: s } = e;
     return (0, o.jsx)(u.Text, {
-        className: M.sliderDescription,
+        className: f.sliderDescription,
         variant: 'text-sm/normal',
         color: 'header-secondary',
         children: s
@@ -131,7 +131,7 @@ function U(e) {
                               onConfirm: () =>
                                   n(
                                       a
-                                          ? f
+                                          ? M
                                           : {
                                                 enabled: !0,
                                                 warningSeen: !0
@@ -169,7 +169,7 @@ function G(e) {
             (0, o.jsxs)(u.FormItem, {
                 disabled: l,
                 title: x.Z.Messages.POGGERMODE_CONFETTI_COUNT,
-                className: M.formItem,
+                className: f.formItem,
                 children: [
                     (0, o.jsx)(B, { children: x.Z.Messages.POGGERMODE_CONFETTI_COUNT_DESCRIPTION }),
                     (0, o.jsx)(u.Slider, {
@@ -187,7 +187,7 @@ function G(e) {
             (0, o.jsxs)(u.FormItem, {
                 disabled: l,
                 title: x.Z.Messages.POGGERMODE_CONFETTI_SIZE,
-                className: M.formItem,
+                className: f.formItem,
                 children: [
                     (0, o.jsx)(B, { children: x.Z.Messages.POGGERMODE_CONFETTI_SIZE_DESCRIPTION }),
                     (0, o.jsx)(u.Slider, {
@@ -238,7 +238,7 @@ function F(e) {
             (0, o.jsxs)(u.FormItem, {
                 disabled: r,
                 title: x.Z.Messages.POGGERMODE_COMBOS_REQUIRED,
-                className: M.formItem,
+                className: f.formItem,
                 children: [
                     (0, o.jsx)(B, { children: x.Z.Messages.POGGERMODE_COMBOS_REQUIRED_DESCRIPTION }),
                     (0, o.jsx)(u.Slider, {
@@ -253,7 +253,7 @@ function F(e) {
                     })
                 ]
             }),
-            (0, o.jsx)(u.FormDivider, { className: M.divider })
+            (0, o.jsx)(u.FormDivider, { className: f.divider })
         ]
     });
 }
@@ -282,7 +282,7 @@ function y(e) {
             (0, o.jsxs)(u.FormItem, {
                 disabled: l,
                 title: x.Z.Messages.POGGERMODE_SCREENSHAKE,
-                className: M.formItem,
+                className: f.formItem,
                 children: [
                     (0, o.jsx)(B, { children: x.Z.Messages.POGGERMODE_SCREENSHAKE_DESCRIPTION }),
                     (0, o.jsx)(u.Slider, {
@@ -313,14 +313,14 @@ function V(e) {
         tag: u.FormTitleTags.H1,
         title: x.Z.Messages.POGGERMODE_SETTINGS_CUSTOMIZATION,
         children: (0, o.jsxs)(u.FormItem, {
-            className: M.formItem,
+            className: f.formItem,
             children: [
                 (0, o.jsx)(u.FormText, {
-                    className: M.formItem,
+                    className: f.formItem,
                     children: x.Z.Messages.POGGERMODE_HIDE_SETTINGS_DESCRIPTION
                 }),
                 (0, o.jsx)(u.Button, {
-                    className: M.hideButton,
+                    className: f.hideButton,
                     size: u.Button.Sizes.SMALL,
                     onClick: () => {
                         s({
@@ -341,17 +341,17 @@ function Y(e) {
         children: [
             (0, o.jsxs)(u.Clickable, {
                 onClick: () => s(1),
-                className: M.achievementContainer,
+                className: f.achievementContainer,
                 children: [
                     (0, o.jsx)('div', {
-                        className: M.achievementIconContainer,
+                        className: f.achievementIconContainer,
                         children: (0, o.jsx)(u.TrophyIcon, {
                             size: 'md',
                             color: _.Z.unsafe_rawColors.ORANGE_345.css
                         })
                     }),
                     (0, o.jsxs)('div', {
-                        className: M.achievementTextContainer,
+                        className: f.achievementTextContainer,
                         children: [
                             (0, o.jsx)(u.Heading, {
                                 variant: 'heading-md/semibold',
@@ -369,11 +369,11 @@ function Y(e) {
                         size: 'custom',
                         color: 'currentColor',
                         width: 16,
-                        className: M.rightCaretIcon
+                        className: f.rightCaretIcon
                     })
                 ]
             }),
-            (0, o.jsx)(u.FormDivider, { className: M.divider })
+            (0, o.jsx)(u.FormDivider, { className: f.divider })
         ]
     });
 }
@@ -432,7 +432,7 @@ function w(e) {
             children: [
                 (0, o.jsx)(u.Heading, {
                     variant: 'heading-lg/semibold',
-                    className: M.title,
+                    className: f.title,
                     children: x.Z.Messages.POGGERMODE
                 }),
                 (0, o.jsx)(U, {
@@ -493,15 +493,15 @@ function K() {
         (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsx)(S.Z, {
-                    className: M.slideAnimator,
+                    className: f.slideAnimator,
                     step: e,
                     direction: t,
                     children: H(e, s, i)
                 }),
                 (0, o.jsx)('div', {
-                    className: c ? M.enableAnimationOverlayVisible : M.enableAnimationOverlayHidden,
+                    className: c ? f.enableAnimationOverlayVisible : f.enableAnimationOverlayHidden,
                     children: (0, o.jsx)(u.LottieAnimation, {
-                        className: M.enableAnimation,
+                        className: f.enableAnimation,
                         importData: k,
                         shouldAnimate: c,
                         autoplay: !1,

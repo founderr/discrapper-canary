@@ -23,8 +23,8 @@ var n = t(735250),
     p = t(484459),
     R = t(430824),
     x = t(325067),
-    M = t(246946),
-    f = t(594174),
+    f = t(246946),
+    M = t(594174),
     D = t(709054),
     L = t(706454),
     P = t(210887),
@@ -321,12 +321,12 @@ class k extends a.PureComponent {
     }
 }
 s.Z = () => {
-    let e = (0, c.e7)([f.default], () => {
-            let e = f.default.getCurrentUser();
+    let e = (0, c.e7)([M.default], () => {
+            let e = M.default.getCurrentUser();
             return l()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
         }),
         s = (0, c.e7)([x.Z], () => x.Z.getBackupCodes()),
-        t = (0, c.e7)([M.Z], () => M.Z.hidePersonalInformation),
+        t = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
         a = (0, c.e7)([P.Z], () => P.Z.theme),
         i = (0, g.b)(),
         r = (0, m.CC)(),

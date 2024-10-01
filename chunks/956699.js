@@ -23,8 +23,8 @@ var n = t(735250),
     p = t(112831),
     R = t(482215),
     x = t(38618),
-    M = t(921801),
-    f = t(857192),
+    f = t(921801),
+    M = t(857192),
     D = t(558724),
     L = t(808506),
     P = t(998502),
@@ -275,7 +275,7 @@ class W extends a.Component {
                           children: 'Mobile build overrides must be generated using the desktop/web stable client for now!'
                       })
                     : null;
-        return (0, n.jsx)(M.F, {
+        return (0, n.jsx)(f.F, {
             setting: v.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
             children: (0, n.jsxs)(u.FormSection, {
                 className: F.marginTop60,
@@ -787,7 +787,7 @@ function z(e) {
                 tag: u.FormTitleTags.H1,
                 children: 'Design Tools'
             }),
-            (0, n.jsx)(M.F, {
+            (0, n.jsx)(f.F, {
                 setting: v.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
                 children: (0, n.jsx)(u.FormSwitch, {
                     value: t,
@@ -798,7 +798,7 @@ function z(e) {
                     children: 'Enable CSS Debugging'
                 })
             }),
-            (0, n.jsx)(M.F, {
+            (0, n.jsx)(f.F, {
                 setting: v.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
                 children: (0, n.jsx)(u.FormSwitch, {
                     value: s,
@@ -809,7 +809,7 @@ function z(e) {
                     children: 'Enable Layout Debugging'
                 })
             }),
-            (0, n.jsxs)(M.F, {
+            (0, n.jsxs)(f.F, {
                 setting: v.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
                 children: [
                     (0, n.jsxs)(u.FormSection, {
@@ -877,7 +877,7 @@ function X() {
                   (0, n.jsxs)('div', {
                       className: [U.buttonsContainer, F.marginBottom20].join(' '),
                       children: [
-                          (0, n.jsx)(M.F, {
+                          (0, n.jsx)(f.F, {
                               setting: v.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
                               children: (0, n.jsx)(u.Button, {
                                   onClick: () => window.open(t, '_blank'),
@@ -885,7 +885,7 @@ function X() {
                                   children: 'Open Overlay'
                               })
                           }),
-                          (0, n.jsx)(M.F, {
+                          (0, n.jsx)(f.F, {
                               setting: v.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
                               children: (0, n.jsx)(u.Button, {
                                   onClick: () => {
@@ -894,7 +894,7 @@ function X() {
                                   children: 'Reset Socket'
                               })
                           }),
-                          (0, n.jsx)(M.F, {
+                          (0, n.jsx)(f.F, {
                               setting: v.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
                               children: (0, n.jsx)(u.Button, {
                                   onClick: () => {
@@ -910,7 +910,7 @@ function X() {
                           })
                       ]
                   }),
-                  (0, n.jsx)(M.F, {
+                  (0, n.jsx)(f.F, {
                       setting: v.s6.DEVELOPER_OPTIONS_CRASHES,
                       children: (0, n.jsx)(u.FormSection, {
                           title: 'Crashes',
@@ -988,30 +988,30 @@ function X() {
               ]
           });
 }
-let q = d.ZP.connectStores([f.default], () => ({
-    isTracingRequests: f.default.isTracingRequests,
-    isForcedCanary: f.default.isForcedCanary,
-    isLoggingGatewayEvents: f.default.isLoggingGatewayEvents,
-    isLoggingOverlayEvents: f.default.isLoggingOverlayEvents,
-    isLoggingAnalyticsEvents: f.default.isLoggingAnalyticsEvents,
-    isAxeEnabled: f.default.isAxeEnabled,
-    cssDebuggingEnabled: f.default.cssDebuggingEnabled,
-    layoutDebuggingEnabled: f.default.layoutDebuggingEnabled,
-    isSourceMapsEnabled: f.default.sourceMapsEnabled,
-    isAnalyticsDebuggerEnabled: f.default.isAnalyticsDebuggerEnabled,
-    isIdleStatusIndicatorEnabled: f.default.isIdleStatusIndicatorEnabled,
-    appDirectoryIncludesInactiveCollections: f.default.appDirectoryIncludesInactiveCollections
+let q = d.ZP.connectStores([M.default], () => ({
+    isTracingRequests: M.default.isTracingRequests,
+    isForcedCanary: M.default.isForcedCanary,
+    isLoggingGatewayEvents: M.default.isLoggingGatewayEvents,
+    isLoggingOverlayEvents: M.default.isLoggingOverlayEvents,
+    isLoggingAnalyticsEvents: M.default.isLoggingAnalyticsEvents,
+    isAxeEnabled: M.default.isAxeEnabled,
+    cssDebuggingEnabled: M.default.cssDebuggingEnabled,
+    layoutDebuggingEnabled: M.default.layoutDebuggingEnabled,
+    isSourceMapsEnabled: M.default.sourceMapsEnabled,
+    isAnalyticsDebuggerEnabled: M.default.isAnalyticsDebuggerEnabled,
+    isIdleStatusIndicatorEnabled: M.default.isIdleStatusIndicatorEnabled,
+    appDirectoryIncludesInactiveCollections: M.default.appDirectoryIncludesInactiveCollections
 }))((e) => {
     let { isTracingRequests: s, isForcedCanary: t, isLoggingGatewayEvents: a, isLoggingOverlayEvents: i, isLoggingAnalyticsEvents: r, isAxeEnabled: o, cssDebuggingEnabled: l, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: _, isIdleStatusIndicatorEnabled: E, appDirectoryIncludesInactiveCollections: T } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(M.F, {
+            (0, n.jsx)(f.F, {
                 setting: v.s6.DEVELOPER_OPTIONS_FLAGS,
                 children: (0, n.jsxs)(u.FormSection, {
                     title: 'Developer Flags',
                     tag: u.FormTitleTags.H1,
                     children: [
-                        (0, n.jsx)(M.F, {
+                        (0, n.jsx)(f.F, {
                             setting: v.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
                             children: (0, n.jsx)(u.FormSwitch, {
                                 value: s,
@@ -1020,7 +1020,7 @@ let q = d.ZP.connectStores([f.default], () => ({
                                 children: 'Enable Tracing Requests'
                             })
                         }),
-                        (0, n.jsx)(M.F, {
+                        (0, n.jsx)(f.F, {
                             setting: v.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
                             children: (0, n.jsx)(u.FormSwitch, {
                                 value: t,
@@ -1029,7 +1029,7 @@ let q = d.ZP.connectStores([f.default], () => ({
                                 children: 'Enable Forced Canary'
                             })
                         }),
-                        (0, n.jsx)(M.F, {
+                        (0, n.jsx)(f.F, {
                             setting: v.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
                             children: (0, n.jsx)(u.FormSwitch, {
                                 value: a,
@@ -1038,7 +1038,7 @@ let q = d.ZP.connectStores([f.default], () => ({
                                 children: 'Enable Logging of Gateway Events to Console'
                             })
                         }),
-                        (0, n.jsx)(M.F, {
+                        (0, n.jsx)(f.F, {
                             setting: v.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
                             children: (0, n.jsx)(u.FormSwitch, {
                                 value: i,
@@ -1047,7 +1047,7 @@ let q = d.ZP.connectStores([f.default], () => ({
                                 children: 'Enable Logging of Overlay RPC Events & Commands'
                             })
                         }),
-                        (0, n.jsx)(M.F, {
+                        (0, n.jsx)(f.F, {
                             setting: v.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
                             children: (0, n.jsx)(u.FormSwitch, {
                                 value: r,
@@ -1056,7 +1056,7 @@ let q = d.ZP.connectStores([f.default], () => ({
                                 children: 'Enable Logging of Analytics Events'
                             })
                         }),
-                        (0, n.jsx)(M.F, {
+                        (0, n.jsx)(f.F, {
                             setting: v.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
                             children: (0, n.jsx)(u.FormSwitch, {
                                 value: d,
@@ -1065,7 +1065,7 @@ let q = d.ZP.connectStores([f.default], () => ({
                                 children: 'Enable source maps to be loaded on this client'
                             })
                         }),
-                        (0, n.jsx)(M.F, {
+                        (0, n.jsx)(f.F, {
                             setting: v.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
                             children: (0, n.jsx)(u.FormSwitch, {
                                 value: _,
@@ -1074,7 +1074,7 @@ let q = d.ZP.connectStores([f.default], () => ({
                                 children: 'Enable standard analytics debugger view'
                             })
                         }),
-                        (0, n.jsx)(M.F, {
+                        (0, n.jsx)(f.F, {
                             setting: v.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
                             children: (0, n.jsx)(u.FormSwitch, {
                                 value: E,
@@ -1083,7 +1083,7 @@ let q = d.ZP.connectStores([f.default], () => ({
                                 children: 'Enable idle status indicator'
                             })
                         }),
-                        (0, n.jsx)(M.F, {
+                        (0, n.jsx)(f.F, {
                             setting: v.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
                             children: (0, n.jsx)(u.FormSwitch, {
                                 value: o,
@@ -1092,7 +1092,7 @@ let q = d.ZP.connectStores([f.default], () => ({
                                 children: 'Enable Accessibility Auditing'
                             })
                         }),
-                        (0, n.jsx)(M.F, {
+                        (0, n.jsx)(f.F, {
                             setting: v.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
                             children: (0, n.jsx)(u.FormSwitch, {
                                 value: T,
@@ -1101,7 +1101,7 @@ let q = d.ZP.connectStores([f.default], () => ({
                                 children: 'Preview Unpublished Collections on App Directory Homepage'
                             })
                         }),
-                        (0, n.jsxs)(M.F, {
+                        (0, n.jsxs)(f.F, {
                             setting: v.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
                             children: [
                                 (0, n.jsx)('div', {
@@ -1124,7 +1124,7 @@ let q = d.ZP.connectStores([f.default], () => ({
 function J() {
     let e = (0, d.e7)([D.Z], () => D.Z.getSurveyOverride()),
         [s, t] = a.useState(null != e ? e : '');
-    return (0, n.jsx)(M.F, {
+    return (0, n.jsx)(f.F, {
         setting: v.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
         children: (0, n.jsxs)(u.FormSection, {
             tag: u.FormTitleTags.H1,
@@ -1157,7 +1157,7 @@ function $() {
     var e;
     let s = (0, d.e7)([g.Z], () => g.Z.overrideId()),
         [t, i] = a.useState(null !== (e = g.Z.overrideId()) && void 0 !== e ? e : '');
-    return (0, n.jsx)(M.F, {
+    return (0, n.jsx)(f.F, {
         setting: v.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
         children: (0, n.jsxs)(u.FormSection, {
             tag: u.FormTitleTags.H1,

@@ -37,7 +37,7 @@ function O(e) {
             paymentSourceId: s.paymentSourceId,
             currency: s.currency
         }),
-        M = (0, m.og)((0, m.T4)(x.amount, x.currency), R.interval, R.intervalCount);
+        f = (0, m.og)((0, m.T4)(x.amount, x.currency), R.interval, R.intervalCount);
     return (0, n.jsxs)(_.ModalRoot, {
         transitionState: a,
         'aria-label': g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
@@ -58,12 +58,12 @@ function O(e) {
                 children: (0, N.Q0)(s.planId)
                     ? g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
                           downgradedPlan: C.ZP.getDisplayName(t.planId),
-                          existingRate: M
+                          existingRate: f
                       })
                     : g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
                           existingPlan: C.ZP.getDisplayName(s.planId),
                           downgradedPlan: C.ZP.getDisplayName(t.planId),
-                          existingRate: M
+                          existingRate: f
                       })
             }),
             (0, n.jsxs)(_.ModalFooter, {

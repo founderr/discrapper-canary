@@ -36,7 +36,7 @@ function u(e) {
             };
         }),
         { enabled: x } = l.Z.useExperiment({ location: 'TryItOutPreview' }, { autoTrackExposure: !1 }),
-        M = (0, o.Z)(p, !x);
+        f = (0, o.Z)(p, !x);
     return (0, n.jsx)(d.Z, {
         containerClassName: T,
         user: u,
@@ -45,7 +45,7 @@ function u(e) {
         pendingBanner: null !== (s = null != O ? O : N) && void 0 !== s ? s : t(466045),
         pendingAvatar: null != h ? h : I,
         pendingThemeColors: null != g ? g : A,
-        pendingAvatarDecoration: M,
+        pendingAvatarDecoration: f,
         pendingProfileEffectId: R,
         avatarClassName: null != h || null != I || S.enabled ? void 0 : _.spinningAvatar,
         canUsePremiumCustomization: !0,

@@ -75,7 +75,7 @@ function R(e) {
             children: [
                 (0, n.jsx)('div', {
                     className: N.selectedVoiceChannel,
-                    children: (0, n.jsx)(M, { channelId: d })
+                    children: (0, n.jsx)(f, { channelId: d })
                 }),
                 (0, n.jsx)(c.Z.Child, {
                     grow: 0,
@@ -112,8 +112,8 @@ function x(e) {
             };
         })(),
         {
-            query: M,
-            updateQuery: f,
+            query: f,
+            updateQuery: M,
             queryResults: D
         } = (0, l.Z)({
             visible: !0,
@@ -137,7 +137,7 @@ function x(e) {
                     [s]
                 );
             return s ? null : t;
-        })(M),
+        })(f),
         { focusedIndex: P, setFocusedIndex: b } = (function (e) {
             let [s, t] = a.useState(0),
                 n = a.useRef(e);
@@ -149,7 +149,7 @@ function x(e) {
                     setFocusedIndex: t
                 }
             );
-        })(M);
+        })(f);
     a.useEffect(() => {
         let { current: e } = A;
         !(null == e || e.isItemVisible(0, P, !0)) &&
@@ -178,8 +178,8 @@ function x(e) {
                 (0, n.jsx)('div', {
                     className: N.inputWrapper,
                     children: (0, n.jsx)(r.TextInput, {
-                        value: M,
-                        onChange: f,
+                        value: f,
+                        onChange: M,
                         onKeyDown: function (e) {
                             x();
                             let s = e.key.toLowerCase();
@@ -213,8 +213,8 @@ function x(e) {
                         spellCheck: !1
                     })
                 }),
-                0 === Z && '' !== M && (0, n.jsx)(p, {}),
-                (Z > 0 || '' === M) &&
+                0 === Z && '' !== f && (0, n.jsx)(p, {}),
+                (Z > 0 || '' === f) &&
                     (0, n.jsx)(r.ListThin, {
                         innerId: c,
                         innerRole: 'listbox',
@@ -266,7 +266,7 @@ function x(e) {
         })
     });
 }
-function M(e) {
+function f(e) {
     let { channelId: s } = e,
         {
             channel: t,

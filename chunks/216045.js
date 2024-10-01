@@ -28,8 +28,8 @@ var n,
     p = t(53691),
     R = t(267717),
     x = t(296810),
-    M = t(921813),
-    f = t(935147),
+    f = t(921813),
+    M = t(935147),
     D = t(246946),
     L = t(25990),
     P = t(594174),
@@ -114,7 +114,7 @@ function G() {
                       }),
                   K &&
                       (0, i.jsx)(x.Z, {
-                          profilePreview: (0, i.jsx)(M.Z, {
+                          profilePreview: (0, i.jsx)(f.Z, {
                               user: e,
                               canUsePremiumCustomization: o,
                               onUpsellClick: v.Z,
@@ -130,7 +130,7 @@ function G() {
                           active: V,
                           children: (0, i.jsx)('div', {
                               ref: Q,
-                              children: (0, i.jsx)(f.Z, { user: e })
+                              children: (0, i.jsx)(M.Z, { user: e })
                           })
                       }),
                   V &&

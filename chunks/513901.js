@@ -23,26 +23,26 @@ function C(e) {
     let { user: s, guild: t, className: i, sectionTitle: C, forcedDivider: m = !1, withTutorial: g = !1, showBorder: h = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: p } = e,
         R = (0, u.Kg)(s, t),
         x = _.ZP.canUsePremiumProfileCustomization(s),
-        { analyticsLocations: M } = (0, l.ZP)(),
-        { pendingProfileEffectId: f, errors: D } = (0, u.bd)(t),
+        { analyticsLocations: f } = (0, l.ZP)(),
+        { pendingProfileEffectId: M, errors: D } = (0, u.bd)(t),
         L = a.useCallback(
             () =>
                 (0, c.H)({
-                    analyticsLocations: M,
+                    analyticsLocations: f,
                     initialSelectedEffectId: p,
                     guild: t
                 }),
-            [M, p, t]
+            [f, p, t]
         );
     a.useEffect(() => {
         x &&
             d.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: I.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: M
+                location_stack: f
             });
-    }, [x, M]);
+    }, [x, f]);
     let P = null != t,
-        b = O || void 0 !== f ? null != f : null != R,
+        b = O || void 0 !== M ? null != M : null != R,
         Z = g ? o.ShinyButton : o.Button;
     return (0, n.jsx)(E.Z, {
         forcedDivider: m,

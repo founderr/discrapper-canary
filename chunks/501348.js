@@ -28,8 +28,8 @@ var n = t(735250),
     p = t(753206),
     R = t(311476),
     x = t(921801),
-    M = t(594174),
-    f = t(358085),
+    f = t(594174),
+    M = t(358085),
     D = t(210887),
     L = t(740492),
     P = t(695346),
@@ -132,7 +132,7 @@ let Y = {
     };
 class Q extends a.Component {
     renderZoomSlider() {
-        return f.isPlatformEmbedded
+        return M.isPlatformEmbedded
             ? (0, n.jsxs)(d.FormItem, {
                   className: y.marginTop20,
                   children: [
@@ -401,7 +401,7 @@ function q() {
     a.useEffect(() => {
         X(l.z.CLIENT_THEMES_SETTINGS_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     }, []);
-    let r = (0, o.cj)([D.Z, L.ZP, S.Z, M.default, N.Z], () => {
+    let r = (0, o.cj)([D.Z, L.ZP, S.Z, f.default, N.Z], () => {
         var e, s;
         return {
             theme: D.Z.theme,
@@ -412,7 +412,7 @@ function q() {
             zoom: S.Z.zoom,
             messageGroupSpacing: S.Z.messageGroupSpacing,
             displayCompactAvatars: L.ZP.displayCompactAvatars,
-            isStaff: null !== (s = null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== s && s,
+            isStaff: null !== (s = null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== s && s,
             gradientPreset: N.Z.gradientPreset
         };
     });

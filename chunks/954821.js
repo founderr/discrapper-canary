@@ -43,8 +43,8 @@ let A = (e) => {
             h = (0, E.YB)(i),
             O = (null == h ? void 0 : null === (s = h.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null ? (0, u._W)(h.cover_image_asset.application_id, h.cover_image_asset, 440) : void 0,
             { analyticsLocations: p } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: R, error: x, submitting: M } = A(p),
-            f = async () => {
+            { cancelSubscription: R, error: x, submitting: f } = A(p),
+            M = async () => {
                 (await R(C.id)) && m();
             },
             D = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.CHANNEL),
@@ -101,8 +101,8 @@ let A = (e) => {
                     children: [
                         (0, n.jsx)(o.Button, {
                             color: o.Button.Colors.RED,
-                            onClick: f,
-                            submitting: M,
+                            onClick: M,
+                            submitting: f,
                             children: I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
                         }),
                         (0, n.jsx)(o.Button, {

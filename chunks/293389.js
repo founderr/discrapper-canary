@@ -23,8 +23,8 @@ var n = t(735250),
     p = t(545217),
     R = t(852401),
     x = t(739017),
-    M = t(869042),
-    f = t(113207);
+    f = t(869042),
+    M = t(113207);
 let D = o.ZP.connectStores([g.Z], () => ({ theme: g.Z.theme }))(c.EmptyState),
     L = (0, m.isWindows)();
 function P(e) {
@@ -55,7 +55,7 @@ function P(e) {
                         children: e.label
                     })
             }),
-            (0, n.jsx)(c.FormDivider, { className: r()(f.marginTop8, f.marginBottom8) }),
+            (0, n.jsx)(c.FormDivider, { className: r()(M.marginTop8, M.marginBottom8) }),
             (0, n.jsxs)('div', {
                 className: r()(p.actions, x.horizontal),
                 children: [
@@ -83,11 +83,11 @@ function b(e) {
     let { rawGame: t, nowPlaying: i = !1, isOverride: T } = e,
         C = (0, o.cj)([I.Z, E.ZP, N.Z], () => (0, E.FZ)(t)),
         [m, g] = a.useState(!1),
-        [R, f] = a.useState(null !== (s = C.name) && void 0 !== s ? s : '???'),
+        [R, M] = a.useState(null !== (s = C.name) && void 0 !== s ? s : '???'),
         D = r()(x.flexCenter, {
             [p.game]: !i,
             [p.activeGame]: i,
-            [M.card]: !i,
+            [f.card]: !i,
             [p.nowPlaying]: null != C && i
         });
     function P() {
@@ -151,7 +151,7 @@ function b(e) {
                               value: R,
                               onBlur: b,
                               onKeyDown: Z,
-                              onChange: (e) => f(e.target.value)
+                              onChange: (e) => M(e.target.value)
                           }),
                     (function () {
                         let e;
@@ -308,7 +308,7 @@ function Z() {
 function v(e) {
     let { children: s } = e;
     return (0, n.jsxs)(D, {
-        className: f.marginTop40,
+        className: M.marginTop40,
         children: [
             (0, n.jsx)(c.EmptyStateImage, {
                 darkSrc: t(879601),
@@ -350,7 +350,7 @@ s.Z = function (e) {
                       )
                     : (0, n.jsx)(Z, {}),
                 (0, n.jsxs)('div', {
-                    className: r()(p.nowPlayingAdd, f.marginReset, f.marginTop8, f.marginBottom20),
+                    className: r()(p.nowPlayingAdd, M.marginReset, M.marginTop8, M.marginBottom20),
                     children: [
                         (0, n.jsx)('span', { children: O.Z.Messages.SETTINGS_GAMES_NOT_SEEING_GAME }),
                         (0, n.jsx)(c.Popout, {
@@ -374,10 +374,10 @@ s.Z = function (e) {
                 0 === i.length
                     ? (0, n.jsx)(v, { children: (0, n.jsx)(c.EmptyStateText, { children: O.Z.Messages.SETTINGS_GAMES_NO_GAMES_HEADER }) })
                     : (0, n.jsxs)(c.FormSection, {
-                          className: f.marginTop40,
+                          className: M.marginTop40,
                           children: [
                               (0, n.jsx)(c.FormTitle, {
-                                  className: f.marginBottom4,
+                                  className: M.marginBottom4,
                                   children: O.Z.Messages.SETTINGS_GAMES_ADDED_GAMES_LABEL
                               }),
                               (0, n.jsx)(c.FormText, {

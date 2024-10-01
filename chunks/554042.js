@@ -74,11 +74,11 @@ function h() {
             });
     }, []);
     let x = I.isPlatformEmbedded ? t : e,
-        M = (0, o.e7)([T.C], () => {
+        f = (0, o.e7)([T.C], () => {
             var e, s;
             return (0, S.fD)() ? (null === (s = T.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
-        [f, D] = (0, u.R)('playground-overrideText', null),
+        [M, D] = (0, u.R)('playground-overrideText', null),
         [L, P] = (0, u.R)('playground-defaultText', g[0].value),
         b = a.useCallback(
             (e) => {
@@ -110,7 +110,7 @@ function h() {
                                     style: { display: 'inline-block' },
                                     children: ['Zoom: ', x, '%']
                                 }),
-                                null != M
+                                null != f
                                     ? (0, n.jsxs)(l.Text, {
                                           tag: 'div',
                                           variant: 'heading-lg/bold',
@@ -119,7 +119,7 @@ function h() {
                                               marginLeft: '1em'
                                           },
                                           color: 'header-secondary',
-                                          children: ['(', M.id, ')']
+                                          children: ['(', f.id, ')']
                                       })
                                     : null
                             ]
@@ -137,7 +137,7 @@ function h() {
                                 className: m.input,
                                 children: (0, n.jsx)(l.TextInput, {
                                     placeholder: 'Enter custom input...',
-                                    value: null != f ? f : '',
+                                    value: null != M ? M : '',
                                     onChange: b
                                 })
                             })
@@ -238,7 +238,7 @@ function h() {
                                         ),
                                         p.map((s) => {
                                             var t;
-                                            let a = null !== (t = 'custom' === L ? f : L) && void 0 !== t ? t : '';
+                                            let a = null !== (t = 'custom' === L ? M : L) && void 0 !== t ? t : '';
                                             return (0, n.jsx)(
                                                 'div',
                                                 {

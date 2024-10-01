@@ -23,8 +23,8 @@ var n = t(735250),
     p = t(565138),
     R = t(297700),
     x = t(553795),
-    M = t(430824),
-    f = t(771845),
+    f = t(430824),
+    M = t(771845),
     D = t(246946),
     L = t(626135),
     P = t(63063),
@@ -56,7 +56,7 @@ let k = (e) => {
             }),
             [i.id]
         ),
-        d = null != (0, o.e7)([M.Z], () => M.Z.getGuild(i.guild.id), [i.guild.id]);
+        d = null != (0, o.e7)([f.Z], () => f.Z.getGuild(i.guild.id), [i.guild.id]);
     return (
         !d &&
             (a = (0, n.jsx)(_.Button, {
@@ -117,8 +117,8 @@ function w(e) {
         l,
         { onDisconnect: u, account: T, theme: S, locale: N } = e,
         [O, p] = a.useState(T.friendSync),
-        [x, M] = a.useState(T.visibility),
-        [f, D] = a.useState(T.metadataVisibility),
+        [x, f] = a.useState(T.visibility),
+        [M, D] = a.useState(T.metadataVisibility),
         [L, b] = a.useState(T.showActivity),
         [F, Y] = a.useState(null),
         [w, H] = a.useState(null),
@@ -127,10 +127,10 @@ function w(e) {
         X = (0, C.rR)(T.type),
         q = A.Z.get(X);
     a.useEffect(() => {
-        p(T.friendSync), M(T.visibility), D(T.metadataVisibility), b(T.showActivity);
+        p(T.friendSync), f(T.visibility), D(T.metadataVisibility), b(T.showActivity);
     }, [T]),
         a.useEffect(() => {
-            if (!1 !== T.verified) null != F && (M(F), E.Z.setVisibility(T.type, T.id, F), Y(null)), null != w && (D(w), E.Z.setMetadataVisibility(T.type, T.id, w), H(null));
+            if (!1 !== T.verified) null != F && (f(F), E.Z.setVisibility(T.type, T.id, F), Y(null)), null != w && (D(w), E.Z.setMetadataVisibility(T.type, T.id, w), H(null));
         }, [T]);
     function J() {
         (0, g.Z)({
@@ -173,7 +173,7 @@ function w(e) {
                 });
             return;
         }
-        M(t), E.Z.setVisibility(T.type, T.id, t);
+        f(t), E.Z.setVisibility(T.type, T.id, t);
     }
     function es(e) {
         let { verified: s } = T,
@@ -409,7 +409,7 @@ function w(e) {
                 (l = (0, n.jsx)(_.FormSwitch, {
                     className: V.connectionOptionSwitch,
                     hideBorder: !0,
-                    value: 1 === f,
+                    value: 1 === M,
                     onChange: es,
                     disabled: 1 !== x || null == T.metadata,
                     children: (0, n.jsx)(_.Text, {
@@ -610,7 +610,7 @@ s.Z = () => {
         s = (0, o.e7)([x.Z], () => x.Z.isFetching()),
         t = (0, o.e7)([x.Z], () => x.Z.getAccounts()),
         i = (0, N.ZP)();
-    (0, o.e7)([f.ZP], () => f.ZP.getFlattenedGuildIds());
+    (0, o.e7)([M.ZP], () => M.ZP.getFlattenedGuildIds());
     let r = (0, o.e7)([b.default], () => b.default.locale);
     return (a.useEffect(() => {
         E.Z.fetch();

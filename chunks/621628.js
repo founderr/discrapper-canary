@@ -106,8 +106,8 @@ function O() {
             });
         },
         x = s.map((e) => l.z[e]),
-        M = O.filter((e) => e.toLowerCase().includes(u.toLowerCase())).filter((e) => !x.includes(e)),
-        f = Object.keys(l.z)
+        f = O.filter((e) => e.toLowerCase().includes(u.toLowerCase())).filter((e) => !x.includes(e)),
+        M = Object.keys(l.z)
             .filter((e) => !x.includes(e))
             .filter((e) => !O.includes(e))
             .filter((e) => e.toLowerCase().includes(u.toLowerCase()))
@@ -184,7 +184,7 @@ function O() {
                               ]
                           })
                         : null,
-                    M.length > 0
+                    f.length > 0
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
                                   (0, n.jsx)('div', {
@@ -192,7 +192,7 @@ function O() {
                                       children: (0, n.jsx)(d.FormTitle, { children: 'Recent Overrides' })
                                   }),
                                   (0, n.jsx)(h, {
-                                      items: M,
+                                      items: f,
                                       dismissedContents: g,
                                       handleChange: R
                                   })
@@ -204,7 +204,7 @@ function O() {
                         children: (0, n.jsx)(d.FormTitle, { children: 'Available Dismissible Contents' })
                     }),
                     (0, n.jsx)(h, {
-                        items: f,
+                        items: M,
                         dismissedContents: g,
                         handleChange: R
                     })

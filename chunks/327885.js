@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return f;
+        return M;
     }
 });
 var n = t(735250);
@@ -45,7 +45,7 @@ function x(e) {
         old_enabled: null !== (s = null == e ? void 0 : e.enabled) && void 0 !== s ? s : A.Z.enabled
     };
 }
-function M(e) {
+function f(e) {
     let { children: s, title: t } = e;
     return (0, n.jsx)(c.FormItem, {
         title: t,
@@ -53,7 +53,7 @@ function M(e) {
         children: s
     });
 }
-function f(e) {
+function M(e) {
     let { className: s, showHeader: t = !0 } = e,
         { enabled: a, legacyEnabled: r } = (0, l.cj)([A.Z], () => ({
             enabled: A.Z.enabled,
@@ -61,7 +61,7 @@ function f(e) {
         })),
         {
             avatarSizeMode: g,
-            displayNameMode: f,
+            displayNameMode: M,
             displayUserMode: D,
             notificationPositionMode: L,
             textChatNotificationMode: P,
@@ -160,7 +160,7 @@ function f(e) {
                                 })
                             ]
                         }),
-                        (0, n.jsx)(M, {
+                        (0, n.jsx)(f, {
                             title: O.Z.Messages.FORM_LABEL_AVATAR_SIZE,
                             children: (0, n.jsx)(c.RadioGroup, {
                                 options: [
@@ -180,7 +180,7 @@ function f(e) {
                                 value: g
                             })
                         }),
-                        (0, n.jsx)(M, {
+                        (0, n.jsx)(f, {
                             title: O.Z.Messages.FORM_LABEL_DISPLAY_NAMES,
                             children: (0, n.jsx)(c.RadioGroup, {
                                 options: [
@@ -201,10 +201,10 @@ function f(e) {
                                     let { value: s } = e;
                                     return _.Z.setDisplayNameMode(s);
                                 },
-                                value: f
+                                value: M
                             })
                         }),
-                        (0, n.jsx)(M, {
+                        (0, n.jsx)(f, {
                             title: O.Z.Messages.FORM_LABEL_DISPLAY_USERS,
                             children: (0, n.jsx)(c.RadioGroup, {
                                 options: [
@@ -225,7 +225,7 @@ function f(e) {
                             })
                         }),
                         v &&
-                            (0, n.jsx)(M, {
+                            (0, n.jsx)(f, {
                                 children: (0, n.jsx)(c.FormSwitch, {
                                     value: b,
                                     onChange: (e) => _.Z.setShowKeybindIndicators(e),
@@ -240,7 +240,7 @@ function f(e) {
                     title: O.Z.Messages.OVERLAY_NOTIFICATIONS_SETTINGS,
                     className: p.notificationSection,
                     children: [
-                        (0, n.jsx)(M, {
+                        (0, n.jsx)(f, {
                             title: O.Z.Messages.FORM_LABEL_NOTIFICATION_POSITION,
                             children: (0, n.jsx)('div', {
                                 className: p.notificationSettings,
@@ -250,7 +250,7 @@ function f(e) {
                                 })
                             })
                         }),
-                        (0, n.jsx)(M, {
+                        (0, n.jsx)(f, {
                             children: (0, n.jsx)(c.FormSwitch, {
                                 value: L !== h._vf.DISABLED && P === h.Ypu.ENABLED,
                                 disabled: L === h._vf.DISABLED,
