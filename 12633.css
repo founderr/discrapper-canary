@@ -5755,7 +5755,8 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .authorizedSuccessSubtext_e1a4cf {
     margin-top: 16px;
-    text-align: center
+    text-align: center;
+    max-width: 274px
 }
 
 .cta_e1a4cf {
@@ -5786,12 +5787,12 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .buttonsContainer_e1a4cf {
-    margin-top: 24px;
-    width: 100%
-}
-
-.button_e1a4cf+.button_e1a4cf {
-    margin-top: 12px
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
 }
 
 .theme-dark .headerFailure_e1a4cf {

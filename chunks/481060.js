@@ -1629,6 +1629,9 @@ n.r(t),
         SpringConfig: function () {
             return s.SpringConfig;
         },
+        Stack: function () {
+            return K.Kq;
+        },
         StackedProgress: function () {
             return eI.y;
         },
