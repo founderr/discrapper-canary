@@ -68,6 +68,12 @@ let f = 200,
             chance: 1,
             hotspot: l.v6.USER_DM_MUTE_FEEDBACK,
             storageKey: 'userDmMute'
+        },
+        [_.nw.BLOCK_USER]: {
+            cooldown: 0,
+            chance: 1,
+            hotspot: l.v6.BLOCK_USER_FEEDBACK,
+            storageKey: 'blockUser'
         }
     };
 function m(e) {
