@@ -130,18 +130,16 @@ function y(e) {
 }
 let L = (e) => {
         let [t, n] = o.useState(!1),
-            r = o.useMemo(() => e.map(S.bZ), [e]),
-            i = (0, u.Wu)([E.Z], () => r.filter((e) => null == E.Z.get(e)), [r]);
+            r = o.useMemo(() => e.map(S.bZ), [e]);
         return (
             o.useEffect(() => {
-                i.length > 0 &&
-                    (n(!0),
-                    Promise.all(i.map((e) => (0, I.vY)(e)))
+                n(!0),
+                    Promise.all(r.map((e) => (0, I.vY)(e)))
                         .catch(() => {})
                         .then(() => {
                             n(!1);
-                        }));
-            }, [i]),
+                        });
+            }, [r]),
             { loading: t }
         );
     },
@@ -150,11 +148,18 @@ let L = (e) => {
         return (
             o.useEffect(() => {
                 t(1),
-                    (0, c.p0)({
-                        withSku: !0,
-                        withApplication: !0,
-                        entitlementType: A.qc2.APPLICATION_SUBSCRIPTION
-                    })
+                    Promise.all([
+                        (0, c.p0)({
+                            withSku: !0,
+                            withApplication: !0,
+                            entitlementType: A.qc2.APPLICATION_SUBSCRIPTION
+                        }),
+                        (0, c.p0)({
+                            withSku: !0,
+                            withApplication: !0,
+                            entitlementType: A.qc2.PURCHASE
+                        })
+                    ])
                         .catch(() => {
                             t(3);
                         })

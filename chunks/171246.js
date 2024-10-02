@@ -38,7 +38,8 @@ function d(e) {
     return (0, s.yE)(e, l.l4R.APPLICATION_USER_SUBSCRIPTION);
 }
 function _(e, t, n, r, i) {
-    if (n.type === l.NYc.APPLICATION && n.status === l.O0b.ACTIVE && !!r.isValid(null, o.Z))
+    var a;
+    if (n.type === l.NYc.APPLICATION && n.status === l.O0b.ACTIVE && !!r.isValid(null, o.Z) && (null === (a = n.metadata) || void 0 === a ? void 0 : a.application_subscription_guild_id) === i)
         return n.items
             .map((t) => e.get(t.planId))
             .filter((e) => null != e)
