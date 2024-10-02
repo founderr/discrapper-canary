@@ -1,25 +1,41 @@
-n.d(t, {
-    YP: function () {
-        return f;
-    }
-});
+n.r(t),
+    n.d(t, {
+        getOrParseBioAST: function () {
+            return m;
+        },
+        parseBioReact: function () {
+            return h;
+        },
+        parseBioReactWithCachedAST: function () {
+            return I;
+        },
+        parseBioReactWithoutScrolling: function () {
+            return g;
+        }
+    });
 var r = n(392711),
     i = n.n(r),
     a = n(31775),
     o = n.n(a),
-    s = n(302454);
-var l = n(25209),
-    u = n(691424),
-    c = n(428595);
+    s = n(302454),
+    l = n.n(s),
+    u = n(25209),
+    c = n(691424),
+    d = n(428595);
 n(454585);
-var d = n(364458);
-let _ = (0, d.Z)([c.Z.PROFILE_BIO_RULES, (0, u.Z)({ enableBuildOverrides: !1 })]),
-    E = new (o())({ max: 2000 }),
-    f = l.w4(_),
-    h = void 0;
-function p(e) {
-    let t = E.get(e);
-    return null != t ? t : ((t = h(e, !0)), E.set(e, t), t);
+var _ = n(364458);
+let E = (0, _.Z)([d.Z.PROFILE_BIO_RULES, (0, c.Z)({ enableBuildOverrides: !1 })]),
+    f = new (o())({ max: 2000 }),
+    h = u.w4(E),
+    p = void 0;
+function m(e) {
+    let t = f.get(e);
+    return null != t ? t : ((t = p(e, !0)), f.set(e, t), t);
 }
-let m = ['link', 'url', 'autolink', 'customEmoji', 'emoji', 'commandMention'];
-l.w4((0, d.Z)([i().omit(_, m), { emoji: { react: () => null } }]));
+function I(e) {
+    if (0 === e.trim().length) return null;
+    let t = m(e);
+    return l().reactFor(l().ruleOutput(E, 'react'))(t);
+}
+let T = ['link', 'url', 'autolink', 'customEmoji', 'emoji', 'commandMention'],
+    g = u.w4((0, _.Z)([i().omit(E, T), { emoji: { react: () => null } }]));

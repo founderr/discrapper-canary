@@ -108,12 +108,12 @@ function ef() {
 }
 function eh(e) {
     let { transitionState: t, ...n } = e,
-        { header: r, body: i, footer: a, nextStep: o, appDetails: s, hasContentBackground: l } = ep({ ...n }),
-        u = (0, d.jsxs)(d.Fragment, {
+        { header: r, body: i, footer: a, nextStep: o, appDetails: s, hasContentBackground: l, minimalPadding: u } = ep({ ...n }),
+        c = (0, d.jsxs)(d.Fragment, {
             children: [
                 r,
                 (0, d.jsxs)('div', {
-                    className: f()(e_.content, l ? e_.contentBackground : null),
+                    className: f()(e_.content, l ? e_.contentBackground : null, u ? e_.minimalPadding : null),
                     children: [i, null == o ? s : null]
                 })
             ]
@@ -126,7 +126,7 @@ function eh(e) {
             className: f()(e_.authorize),
             children: (0, d.jsx)(O.zJ, {
                 orientation: 'auto',
-                children: u
+                children: c
             })
         })
     });
@@ -366,7 +366,8 @@ function ep(e) {
         tc = !1,
         td = !0,
         t_ = !0,
-        tE = !0;
+        tE = !0,
+        tf = !1;
     switch (eP) {
         case null:
             return { body: (0, d.jsx)(R.$, { className: e_.spinner }) };
@@ -374,18 +375,20 @@ function ep(e) {
             if (null == eJ) return { body: (0, d.jsx)(R.$, { className: e_.spinner }) };
             (o = (0, d.jsx)(ea.Z, {
                 application: eJ,
-                onSelect: ts
+                onSelect: ts,
+                onClose: eR
             })),
                 (td = !1),
                 (t_ = !1),
-                (tE = !1);
+                (tE = !1),
+                (tf = !0);
             break;
         case 'AUTHORIZE_SCOPES':
             if (null == eD || null == ez || null == eQ) return { body: (0, d.jsx)(R.$, { className: e_.spinner }) };
-            let tf = null == ew || ew instanceof Error ? {} : ew,
-                th = null == eZ ? void 0 : eZ.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
-                tp = eQ === I.Y.GUILD_INSTALL && e2.includes(T.x.WEBHOOK_INCOMING),
-                tm = tp || (eQ === I.Y.GUILD_INSTALL && (e2.includes(T.x.BOT) || e2.includes(T.x.APPLICATIONS_COMMANDS)));
+            let th = null == ew || ew instanceof Error ? {} : ew,
+                tp = null == eZ ? void 0 : eZ.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
+                tm = eQ === I.Y.GUILD_INSTALL && e2.includes(T.x.WEBHOOK_INCOMING),
+                tI = tm || (eQ === I.Y.GUILD_INSTALL && (e2.includes(T.x.BOT) || e2.includes(T.x.APPLICATIONS_COMMANDS)));
             (o = (0, d.jsxs)(d.Fragment, {
                 children: [
                     (0, d.jsx)(ee.Z, { accountScopes: e3 }),
@@ -394,25 +397,25 @@ function ep(e) {
                         accountScopes: e3,
                         requestedScopes: e2,
                         integrationType: eQ,
-                        errors: tf,
+                        errors: th,
                         isTrustedName: eA
                     }),
                     (0, d.jsx)('div', {
                         className: e_.intObserver,
                         ref: to
                     }),
-                    tm
+                    tI
                         ? (0, d.jsx)(er.Z, {
-                              error: (null !== (n = null !== (t = tf[T.x.BOT]) && void 0 !== t ? t : tf[T.x.APPLICATIONS_COMMANDS]) && void 0 !== n ? n : [])[0],
+                              error: (null !== (n = null !== (t = th[T.x.BOT]) && void 0 !== t ? t : th[T.x.APPLICATIONS_COMMANDS]) && void 0 !== n ? n : [])[0],
                               selectedGuildId: eV,
                               onGuildChange: eH,
-                              guilds: null != th ? th : [],
+                              guilds: null != tp ? tp : [],
                               disabled: '' !== eV && null != eV && !0 === eT
                           })
                         : null,
-                    tp
+                    tm
                         ? (0, d.jsx)(el.Z, {
-                              error: (null !== (r = tf[T.x.WEBHOOK_INCOMING]) && void 0 !== r ? r : [])[0],
+                              error: (null !== (r = th[T.x.WEBHOOK_INCOMING]) && void 0 !== r ? r : [])[0],
                               selectedChannelId: eY,
                               selectedGuildId: eV,
                               onChannelChange: ej
@@ -422,7 +425,7 @@ function ep(e) {
             })),
                 e2.includes(T.x.BOT) && !g.fS(e4, j.Hn) && (l = 'AUTHORIZE_BOT_PERMISSIONS'),
                 tr.length > 1 && (s = 'SELECT_INSTALL_TYPE'),
-                (tc = (tm && null == eq) || (tp && null == eY)),
+                (tc = (tI && null == eq) || (tm && null == eY)),
                 (tu = !0);
             break;
         case 'AUTHORIZE_BOT_PERMISSIONS':
@@ -533,7 +536,8 @@ function ep(e) {
             nextStep: l,
             appDetails: u,
             sendAuthorize: te,
-            hasContentBackground: tu
+            hasContentBackground: tu,
+            minimalPadding: tf
         }
     );
 }

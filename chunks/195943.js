@@ -5,6 +5,7 @@ e.exports = {
     action: 'action_c5a065',
     tooltip: 'tooltip_c5a065',
     content: 'content_c5a065',
+    minimalPadding: 'minimalPadding_c5a065',
     contentBackground: 'contentBackground_c5a065',
     intObserver: 'intObserver_c5a065',
     emoji: 'emoji_c5a065',
