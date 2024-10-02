@@ -61,13 +61,13 @@ function m(e) {
         ? (0, i.jsx)(u.Z, {
               artURL: R || a === E.pC.AVATAR ? void 0 : p.Z,
               artElement:
-                  a === E.pC.AVATAR
-                      ? (0, i.jsx)('img', {
+                  R || a !== E.pC.AVATAR
+                      ? void 0
+                      : (0, i.jsx)('img', {
                             className: I.avatarImage,
                             alt: '',
                             src: P
-                        })
-                      : void 0,
+                        }),
               modalClassName: R ? I.modal : void 0,
               modalContentClassName: R ? I.modalContent : void 0,
               type: d.cd.CUSTOM_PROFILE_UPSELL,

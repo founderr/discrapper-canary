@@ -117,7 +117,7 @@ function E() {
             location: 'DevToolsContentInventory',
             source: b.m1.DevTools
         }),
-        P = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
+        L = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -126,7 +126,7 @@ function E() {
                 let [t] = e;
                 return t;
             }),
-        A = (0, f.Z)(P).filter(j.lm);
+        A = (0, f.Z)(L).filter(j.lm);
     return (0, r.jsx)('div', {
         className: i()(k.panel),
         children: (0, r.jsxs)(h.ScrollerThin, {

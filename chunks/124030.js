@@ -1,17 +1,17 @@
-n.d(a, {
+a.d(n, {
     A: function () {
         return r;
     },
     L: function () {
-        return i;
+        return o;
     }
 });
-var t = n(433517);
-let o = 'GameFollowSurveyModal';
-function i() {
+var t = a(433517);
+let i = 'GameFollowSurveyModal';
+function o() {
     var e;
-    return (null === (e = t.K.get(o)) || void 0 === e ? void 0 : e.hasInteractedWithSurvey) !== !0;
+    return (null === (e = t.K.get(i)) || void 0 === e ? void 0 : e.hasInteractedWithSurvey) !== !0;
 }
 function r() {
-    return t.K.set(o, { hasInteractedWithSurvey: !0 });
+    return t.K.set(i, { hasInteractedWithSurvey: !0 });
 }

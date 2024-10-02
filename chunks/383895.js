@@ -1,25 +1,25 @@
-var t = n(735250),
-    o = n(470079),
-    i = n(120356),
-    r = n.n(i),
-    l = n(442837),
-    s = n(481060),
-    c = n(178762),
-    d = n(91140),
-    u = n(297781),
-    m = n(592125),
-    p = n(944486),
-    _ = n(594174),
-    g = n(5192),
-    x = n(810568),
-    f = n(689938),
-    h = n(501345),
-    I = n(51527);
-a.Z = (e) => {
-    let { entry: a, viewId: n, officialGuildId: i, onClose: v } = e,
+var t = a(735250),
+    i = a(470079),
+    o = a(120356),
+    r = a.n(o),
+    l = a(442837),
+    s = a(481060),
+    c = a(178762),
+    d = a(91140),
+    u = a(297781),
+    m = a(592125),
+    p = a(944486),
+    _ = a(594174),
+    g = a(5192),
+    f = a(810568),
+    x = a(689938),
+    I = a(501345),
+    h = a(51527);
+n.Z = (e) => {
+    let { entry: n, viewId: a, officialGuildId: o, onClose: v } = e,
         E = (0, l.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getChannelId())),
-        A = (0, l.e7)([_.default], () => _.default.getUser(a.author_id)),
-        { nick: T, avatar: P } = o.useMemo(() => {
+        A = (0, l.e7)([_.default], () => _.default.getUser(n.author_id)),
+        { nick: T, avatar: M } = i.useMemo(() => {
             let e = null == A ? void 0 : A.getAvatarURL(null == E ? void 0 : E.guild_id, 48, !1);
             return {
                 nick: g.ZP.getName(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, A),
@@ -31,42 +31,42 @@ a.Z = (e) => {
         : (0, t.jsx)(s.Popout, {
               position: 'right',
               renderPopout: (e) => {
-                  let { closePopout: o, updatePosition: r } = e;
+                  let { closePopout: i, updatePosition: r } = e;
                   return (0, t.jsx)(c.J, {
-                      entry: a,
-                      closePopout: o,
+                      entry: n,
+                      closePopout: i,
                       updatePopoutPosition: r,
                       onReaction: () => {
-                          (0, x.UE)({
-                              action: x.as.SendMessageUser,
-                              applicationId: a.extra.application_id,
-                              gameName: a.extra.game_name,
-                              recipientUserId: a.author_id,
-                              viewId: n,
-                              officialGuildId: i
+                          (0, f.UE)({
+                              action: f.as.SendMessageUser,
+                              applicationId: n.extra.application_id,
+                              gameName: n.extra.game_name,
+                              recipientUserId: n.author_id,
+                              viewId: a,
+                              officialGuildId: o
                           }),
                               v(),
-                              o();
+                              i();
                       },
-                      onUserPopoutClosed: () => o(),
+                      onUserPopoutClosed: () => i(),
                       disableGameProfileLinks: !0
                   });
               },
-              positionKey: 'game-profile-entry-'.concat(a.id),
+              positionKey: 'game-profile-entry-'.concat(n.id),
               onRequestOpen: () => {
-                  (0, x.UE)({
-                      action: x.as.ClickMessageUser,
-                      applicationId: a.extra.application_id,
-                      gameName: a.extra.game_name,
-                      recipientUserId: a.author_id,
-                      viewId: n,
-                      officialGuildId: i
+                  (0, f.UE)({
+                      action: f.as.ClickMessageUser,
+                      applicationId: n.extra.application_id,
+                      gameName: n.extra.game_name,
+                      recipientUserId: n.author_id,
+                      viewId: a,
+                      officialGuildId: o
                   });
               },
               children: (e) =>
                   (0, t.jsx)(s.Clickable, {
                       ...e,
-                      className: h.profileEntryCard,
+                      className: I.profileEntryCard,
                       children: (0, t.jsx)(s.FocusRing, {
                           offset: {
                               top: 4,
@@ -77,14 +77,14 @@ a.Z = (e) => {
                           children: (0, t.jsxs)(t.Fragment, {
                               children: [
                                   (0, t.jsx)('img', {
-                                      className: h.avatar,
-                                      src: P,
-                                      alt: f.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: T })
+                                      className: I.avatar,
+                                      src: M,
+                                      alt: x.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: T })
                                   }),
                                   (0, t.jsx)('div', {
-                                      className: r()(h.playerInfo),
+                                      className: r()(I.playerInfo),
                                       children: (0, t.jsxs)('div', {
-                                          className: r()(I.column, I.gapXs),
+                                          className: r()(h.column, h.gapXs),
                                           children: [
                                               (0, t.jsx)(s.Text, {
                                                   variant: 'text-md/medium',
@@ -94,13 +94,13 @@ a.Z = (e) => {
                                               }),
                                               (0, t.jsx)(u.Gk, {
                                                   location: u.Gt.GAME_PROFILE,
-                                                  children: d.W.map((e, n) => (0, t.jsx)(e, { entry: a }, n))
+                                                  children: d.W.map((e, a) => (0, t.jsx)(e, { entry: n }, a))
                                               })
                                           ]
                                       })
                                   }),
                                   (0, t.jsx)('div', {
-                                      className: h.reactions,
+                                      className: I.reactions,
                                       children: (0, t.jsx)(s.ArrowAngleLeftUpIcon, {})
                                   })
                               ]

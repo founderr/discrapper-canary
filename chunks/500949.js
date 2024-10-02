@@ -101,12 +101,12 @@ var r,
     R = n(341901),
     O = n(856308),
     B = n(665352),
-    P = n(394900),
+    L = n(394900),
     A = n(661105),
-    L = n(525169),
+    P = n(525169),
     F = n(433517),
-    M = n(190558),
-    D = n(231338);
+    D = n(190558),
+    M = n(231338);
 let H = {
         sRGB: s.Z,
         A98RGB: c.Z,
@@ -137,7 +137,7 @@ let H = {
     },
     G = Object.fromEntries(Object.keys(H).map((e) => [e, e]));
 Object.values(H).forEach((e) => B.Z.register(e));
-let { SemanticColors: z } = M.V,
+let { SemanticColors: z } = D.V,
     U = z,
     V = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function W(e, t) {
@@ -157,7 +157,7 @@ function K(e) {
     return {
         name: e,
         colors: Object.fromEntries(
-            Object.values(D.BR).map((e) => [
+            Object.values(M.BR).map((e) => [
                 e,
                 {
                     color: t[e].raw,
@@ -188,7 +188,7 @@ function q(e) {
     };
 }
 function X(e) {
-    return (0, P.Z)((0, A.Z)(e, s.Z), { format: 'hex' });
+    return (0, L.Z)((0, A.Z)(e, s.Z), { format: 'hex' });
 }
 function $() {
     return (function (e, t) {
@@ -240,23 +240,23 @@ function en(e) {
     let { name: t, base: n, steps: r = 26, darkness: a, lightness: l, easingStrength: i = 1 } = e,
         o = H[e.colorSpace],
         c = (0, A.Z)(n, o),
-        d = (0, L.CD)(c, 'white', 1 - a, {
+        d = (0, P.CD)(c, 'white', 1 - a, {
             space: o,
             outputSpace: s.Z
         }),
-        u = (0, L.CD)(c, 'black', 1 - l, {
+        u = (0, P.CD)(c, 'black', 1 - l, {
             space: o,
             outputSpace: s.Z
         }),
         h = Math.floor(r / 2),
         m = r - h,
-        x = (0, L.w6)(d, c, {
+        x = (0, P.w6)(d, c, {
             steps: h,
             outputSpace: o,
             space: o,
             progression: (e) => e ** i
         }),
-        f = (0, L.w6)(u, c, {
+        f = (0, P.w6)(u, c, {
             steps: m,
             outputSpace: o,
             space: o,

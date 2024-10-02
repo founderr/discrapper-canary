@@ -1,69 +1,69 @@
-n.d(a, {
+a.d(n, {
     Z: function () {
         return c;
     }
 });
-var t = n(735250);
-n(470079);
-var o = n(481060),
-    i = n(239091),
-    r = n(299206),
-    l = n(326103),
-    s = n(689938);
+var t = a(735250);
+a(470079);
+var i = a(481060),
+    o = a(239091),
+    r = a(299206),
+    l = a(326103),
+    s = a(689938);
 function c(e) {
-    let { applicationId: a, className: c, viewId: d } = e,
+    let { applicationId: n, className: c, viewId: d } = e,
         u = (0, l.v)('GameProfileOverflowMenu'),
         m = (0, r.Z)({
-            id: a,
+            id: n,
             label: s.Z.Messages.COPY_ID_APPLICATION
         }),
         p = u
-            ? (0, t.jsx)(o.MenuItem, {
+            ? (0, t.jsx)(i.MenuItem, {
                   id: 'game-profile-something-wrong',
                   label: s.Z.Messages.GAME_PROFILE_SOMETHING_WENT_WRONG,
                   action: () =>
-                      (0, o.openModalLazy)(async () => {
-                          let { GameProfileFeedbackModal: e } = await n.e('1011').then(n.bind(n, 943350));
-                          return (n) =>
+                      (0, i.openModalLazy)(async () => {
+                          let { GameProfileFeedbackModal: e } = await a.e('1011').then(a.bind(a, 943350));
+                          return (a) =>
                               (0, t.jsx)(e, {
-                                  applicationId: a,
+                                  applicationId: n,
                                   viewId: d,
-                                  ...n
+                                  ...a
                               });
                       })
               })
             : null;
     return null == m && null == p
         ? null
-        : (0, t.jsx)(o.Popout, {
+        : (0, t.jsx)(i.Popout, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
-                  let { closePopout: a } = e;
-                  return (0, t.jsx)(o.Menu, {
+                  let { closePopout: n } = e;
+                  return (0, t.jsx)(i.Menu, {
                       navId: 'game-profile-context',
                       onClose: () => {
-                          (0, i.Zy)(), a();
+                          (0, o.Zy)(), n();
                       },
                       'aria-label': s.Z.Messages.GAME_PROFILE_VIEW_MORE,
                       onSelect: () => {},
                       children: (0, t.jsxs)(t.Fragment, {
-                          children: [(0, t.jsx)(o.MenuGroup, { children: m }), (0, t.jsx)(o.MenuGroup, { children: p })]
+                          children: [(0, t.jsx)(i.MenuGroup, { children: m }), (0, t.jsx)(i.MenuGroup, { children: p })]
                       })
                   });
               },
               children: (e) =>
-                  (0, t.jsx)(o.Tooltip, {
+                  (0, t.jsx)(i.Tooltip, {
                       text: s.Z.Messages.MORE,
-                      children: (a) =>
-                          (0, t.jsx)(o.Clickable, {
+                      children: (n) =>
+                          (0, t.jsx)(i.Clickable, {
                               className: c,
-                              ...a,
+                              ...n,
                               ...e,
-                              children: (0, t.jsx)(o.MoreHorizontalIcon, {
+                              children: (0, t.jsx)(i.MoreHorizontalIcon, {
                                   size: 'xs',
-                                  color: o.tokens.colors.WHITE
+                                  color: i.tokens.colors.WHITE
                               })
                           })
                   })

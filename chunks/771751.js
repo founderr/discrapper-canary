@@ -103,7 +103,7 @@ function y(e) {
                 : 'Unknown',
         O = null != w,
         B = null != w && new Date(w).getTime() < Date.now(),
-        P = (null == Z ? void 0 : Z.sku_id) === b.Si.TIER_0,
+        L = (null == Z ? void 0 : Z.sku_id) === b.Si.TIER_0,
         A = async () => {
             T(!0), O ? await S(k, 'trial') : await (0, d.a)(s), h(), T(!1);
         };
@@ -125,12 +125,12 @@ function y(e) {
             };
         }
     }, [f, g]);
-    let L = 'Active';
+    let P = 'Active';
     return (
-        O && (L = 'Acknowledged'),
-        B && (L = 'Expired'),
+        O && (P = 'Acknowledged'),
+        B && (P = 'Expired'),
         (0, r.jsxs)('div', {
-            className: i()(v.card, P ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
+            className: i()(v.card, L ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
             children: [
                 (0, r.jsxs)('div', {
                     className: i()(v.row, v.nameRow),
@@ -226,8 +226,8 @@ function y(e) {
                             }),
                             children: (0, r.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acknowledged' === L ? void 0 : 'always-white',
-                                children: L
+                                color: 'Acknowledged' === P ? void 0 : 'always-white',
+                                children: P
                             })
                         }),
                         null != I &&
