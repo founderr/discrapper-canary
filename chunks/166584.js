@@ -43,37 +43,44 @@ function L(e) {
         [M, P] = o.useState(R),
         [U, w] = o.useState(!1),
         x = o.useRef(null),
-        G = o.useRef(null);
+        G = o.useRef(null),
+        k = o.useRef(0);
     o.useLayoutEffect(() => {
-        if (U) return;
-        let e = y(x.current),
-            t = y(G.current),
-            n = [],
-            r = R - e - t;
-        for (let e = 0; e < C; e++) {
-            let t = e === C - 1 ? r : R;
-            for (let e = 0, r = n.length; r < c.length; r++) {
-                let i = c[r],
-                    a = p.current[i.id];
-                if (null == a) continue;
-                let o = Math.min(a.getBoundingClientRect().width, t);
-                if (e + o > t) break;
-                (e += o + O), n.push(i);
+        k.current = 0;
+    }, [c]),
+        o.useLayoutEffect(() => {
+            if (U) return;
+            let e = y(x.current),
+                t = y(G.current),
+                n = [],
+                r = R - e - t;
+            for (let e = 0; e < C; e++) {
+                let t = e === C - 1 ? r : R;
+                for (let e = 0, r = n.length; r < c.length; r++) {
+                    let i = c[r],
+                        a = p.current[i.id];
+                    if (null == a) {
+                        0 === k.current && n.push(i);
+                        continue;
+                    }
+                    let o = Math.min(a.getBoundingClientRect().width, t);
+                    if (e + o > t) break;
+                    (e += o + O), n.push(i);
+                }
             }
-        }
-        D(n.length === b.length ? b : n), P(r);
-    }, [c, b, U]);
-    let k = o.useMemo(() => 'roles-'.concat((0, s.Z)()), []),
-        B = (0, l.ZP)({
-            id: k,
+            D(n.length === b.length ? b : n), P(r), k.current++;
+        }, [c, b, U]);
+    let B = o.useMemo(() => 'roles-'.concat((0, s.Z)()), []),
+        F = (0, l.ZP)({
+            id: B,
             isEnabled: !0,
             scrollToStart: A.Cyb,
             scrollToEnd: A.Cyb,
             wrap: !0
         }),
-        F = c.length,
-        Z = 0 === F ? v.Z.Messages.ROLE_LIST_EMPTY : v.Z.Messages.ROLES_LIST.format({ numRoles: F }),
-        V = (U ? c : b).map((e, i) => {
+        Z = c.length,
+        V = 0 === Z ? v.Z.Messages.ROLE_LIST_EMPTY : v.Z.Messages.ROLES_LIST.format({ numRoles: Z }),
+        H = (U ? c : b).map((e, i) => {
             var o;
             return (0, a.jsx)(
                 g.Z,
@@ -89,62 +96,62 @@ function L(e) {
                 e.id
             );
         }),
-        { trackUserProfileAction: H } = (0, T.KZ)(),
-        Y = o.useCallback(() => {
-            w(!0), H({ action: 'EXPAND_ROLES' });
-        }, [H]),
+        { trackUserProfileAction: Y } = (0, T.KZ)(),
         j = o.useCallback(() => {
-            w(!1), H({ action: 'COLLAPSE_ROLES' });
-        }, [H]);
+            w(!0), Y({ action: 'EXPAND_ROLES' });
+        }, [Y]),
+        W = o.useCallback(() => {
+            w(!1), Y({ action: 'COLLAPSE_ROLES' });
+        }, [Y]);
     return (0, a.jsx)(u.bG, {
-        navigator: B,
+        navigator: F,
         children: (0, a.jsx)(u.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;
                 return (0, a.jsxs)('div', {
                     className: N.root,
-                    'aria-label': Z,
+                    'aria-label': V,
                     ref: t,
                     ...n,
                     children: [
-                        V,
-                        !U &&
-                            b.length < c.length &&
-                            (0, a.jsx)(d.TooltipContainer, {
-                                text: v.Z.Messages.VIEW_ALL_ROLES,
-                                children: (0, a.jsx)(d.Clickable, {
-                                    innerRef: x,
-                                    onClick: Y,
-                                    className: N.expandButton,
-                                    children: (0, a.jsx)(d.Text, {
-                                        variant: 'text-xs/medium',
-                                        children: '+'.concat(c.length - b.length)
-                                    })
-                                })
-                            }),
-                        U &&
-                            (0, a.jsx)(d.TooltipContainer, {
-                                text: v.Z.Messages.COLLAPSE_ROLES,
-                                children: (0, a.jsx)(d.Clickable, {
-                                    onClick: j,
-                                    className: N.collapseButton,
-                                    children: (0, a.jsx)(m.Z, {
-                                        direction: m.Z.Directions.LEFT,
-                                        width: 12,
-                                        height: 12
-                                    })
-                                })
-                            }),
-                        E &&
-                            null != i &&
-                            (0, a.jsx)(S.Z, {
-                                buttonRef: G,
-                                guild: r,
-                                guildMember: i,
-                                numRoles: F,
-                                highestRole: _,
-                                onAddRole: f
-                            })
+                        H,
+                        b.length < c.length
+                            ? U
+                                ? (0, a.jsx)(d.TooltipContainer, {
+                                      text: v.Z.Messages.COLLAPSE_ROLES,
+                                      children: (0, a.jsx)(d.Clickable, {
+                                          onClick: W,
+                                          className: N.collapseButton,
+                                          children: (0, a.jsx)(m.Z, {
+                                              direction: m.Z.Directions.LEFT,
+                                              width: 12,
+                                              height: 12
+                                          })
+                                      })
+                                  })
+                                : (0, a.jsx)(d.TooltipContainer, {
+                                      text: v.Z.Messages.VIEW_ALL_ROLES,
+                                      children: (0, a.jsx)(d.Clickable, {
+                                          innerRef: x,
+                                          onClick: j,
+                                          className: N.expandButton,
+                                          children: (0, a.jsx)(d.Text, {
+                                              variant: 'text-xs/medium',
+                                              children: '+'.concat(c.length - b.length)
+                                          })
+                                      })
+                                  })
+                            : null,
+                        E && null != i
+                            ? (0, a.jsx)(S.Z, {
+                                  buttonRef: G,
+                                  guild: r,
+                                  guildMember: i,
+                                  numRoles: Z,
+                                  highestRole: _,
+                                  onAddRole: f
+                              })
+                            : null
                     ]
                 });
             }
@@ -192,18 +199,16 @@ function b(e) {
         ),
         N = g && null != s;
     return 0 !== d.length || N
-        ? (0, a.jsx)('div', {
-              children: (0, a.jsx)(L, {
-                  user: t,
-                  currentUser: n,
-                  guild: r,
-                  guildMember: s,
-                  roles: d,
-                  highestRole: m,
-                  canManageRoles: g,
-                  onAddRole: v,
-                  onRemoveRole: S
-              })
+        ? (0, a.jsx)(L, {
+              user: t,
+              currentUser: n,
+              guild: r,
+              guildMember: s,
+              roles: d,
+              highestRole: m,
+              canManageRoles: g,
+              onAddRole: v,
+              onRemoveRole: S
           })
         : null;
 }
