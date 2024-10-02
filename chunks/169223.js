@@ -40,8 +40,7 @@ class g extends p.Z {
                 VIDEO_BACKGROUND_SHOW_FEEDBACK: (e) => this.handleVideoBackgroundShowFeedback(e),
                 EMBEDDED_ACTIVITY_CLOSE: (e) => this.handleActivityClose(e),
                 IN_APP_REPORTS_SHOW_FEEDBACK: (e) => this.handleInAppReportsFeedback(e),
-                USER_DM_MUTE_SHOW_FEEDBACK: (e) => this.handleUserDmMuteFeedback(e),
-                BLOCK_USER_SHOW_FEEDBACK: () => this.handleBlockUserFeedback()
+                USER_DM_MUTE_SHOW_FEEDBACK: (e) => this.handleUserDmMuteFeedback(e)
             }),
             T(this, 'handleVoiceChannelFeedback', (e) => {
                 let { analyticsData: t } = e;
@@ -149,14 +148,6 @@ class g extends p.Z {
                                 ...n,
                                 channel: t
                             });
-                    });
-                });
-            }),
-            T(this, 'handleBlockUserFeedback', () => {
-                this.possiblyShowFeedbackModal(m.nw.BLOCK_USER, () => {
-                    (0, a.openModalLazy)(async () => {
-                        let { default: e } = await n.e('87995').then(n.bind(n, 180970));
-                        return (t) => (0, i.jsx)(e, { ...t });
                     });
                 });
             });
