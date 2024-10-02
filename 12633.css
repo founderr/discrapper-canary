@@ -22343,18 +22343,18 @@ span.clanTag_a31c43 {
     background-color: #091f0f
 }
 
-.table_cf8a7d {
-    gap: 12px;
+.rows_cf8a7d {
     display: flex;
     flex-direction: column;
-    padding: 16px;
-    padding-top: 8px
+    max-height: 312px;
+    padding-bottom: 6px
 }
 
 .headerRow_cf8a7d {
     display: flex;
     justify-content: center;
-    gap: 12px
+    gap: 12px;
+    padding: 8px 16px 6px
 }
 
 .headerRank_cf8a7d,
@@ -22375,7 +22375,24 @@ span.clanTag_a31c43 {
 .userRow_cf8a7d {
     display: flex;
     align-items: center;
-    gap: 12px
+    gap: 12px;
+    padding: 6px 16px;
+    overflow: hidden;
+    position: relative
+}
+
+.userRow_cf8a7d:hover {
+    background: var(--bg-overlay-5, var(--background-modifier-hover))
+}
+
+.rankChangeIndicator_cf8a7d {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 11px;
+    left: -4px;
+    border-radius: 4px;
+    background-color: var(--header-primary)
 }
 
 .userRank_cf8a7d {
@@ -22388,6 +22405,34 @@ span.clanTag_a31c43 {
     flex: 1;
     display: flex;
     align-items: center
+}
+
+.joinLeaderboardCTAContainer_cf8a7d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-top: 12px;
+    margin-bottom: 6px
+}
+
+.joinLeaderboardCTA_cf8a7d {
+    color: var(--content-inventory-overlay-text-secondary)
+}
+
+.joinLeaderboardCTAIcon_cf8a7d path {
+    fill: var(--content-inventory-overlay-text-secondary)
+}
+
+.rankChangeBadge_cf8a7d {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px 0 2px;
+    background-color: var(--border-subtle);
+    border-radius: 4px;
+    margin-left: 4px;
+    height: 16px
 }
 
 .popout_b245a4 {
@@ -37987,7 +38032,7 @@ html .progress_e5f4c6 {
 
 .container_c99f26 {
     align-items: center;
-    background: var(--primary-530);
+    background: var(--background-tertiary);
     border-radius: 12px;
     display: inline-flex;
     gap: 4px;

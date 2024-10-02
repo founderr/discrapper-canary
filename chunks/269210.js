@@ -1,9 +1,9 @@
 n.d(t, {
     G: function () {
-        return m;
+        return p;
     },
     U: function () {
-        return p;
+        return h;
     }
 });
 var r = n(735250);
@@ -13,104 +13,100 @@ var i = n(557533),
     o = n(789978),
     s = n(368072),
     l = n(777207),
-    u = n(752843),
-    c = n(330711),
-    d = n(56273),
-    _ = n(103077),
-    E = n(692547);
-let f = 48,
-    h = 3;
-function p(e) {
-    let { description: t, imgSrc: n, renderPurchaseButton: i, onPurchase: p, subscriptionType: m, title: I, onDetails: T, benefitItems: g, benefitsSummary: S } = e;
+    u = n(330711),
+    c = n(56273),
+    d = n(103077),
+    _ = n(692547);
+let E = 48,
+    f = 3;
+function h(e) {
+    let { description: t, imgSrc: n, renderPurchaseButton: i, onPurchase: h, title: p, onDetails: m, benefitItems: I, benefitsSummary: T } = e;
     return (0, r.jsx)(o.tE, {
         children: (0, r.jsxs)('div', {
-            className: a()(d.container, _.hoverCard),
+            className: a()(c.container, d.hoverCard),
             tabIndex: 0,
             onClick: () => {
-                null != T ? T() : null != p && p();
+                null != m ? m() : null != h && h();
             },
             children: [
-                (0, r.jsxs)('div', {
-                    className: d.card,
-                    children: [
-                        null != m && (0, r.jsx)(u.Z, { type: m }),
-                        (0, r.jsxs)('div', {
-                            className: d.body,
-                            children: [
+                (0, r.jsx)('div', {
+                    className: c.card,
+                    children: (0, r.jsxs)('div', {
+                        className: c.body,
+                        children: [
+                            (0, r.jsx)(l.x, {
+                                tag: 'div',
+                                variant: 'heading-lg/semibold',
+                                children: p
+                            }),
+                            (0, r.jsx)('div', {
+                                className: c.image,
+                                children:
+                                    null != n
+                                        ? (0, r.jsx)('img', {
+                                              src: n.toString(),
+                                              alt: ''
+                                          })
+                                        : (0, r.jsx)(s.V, {
+                                              color: _.Z.colors.ICON_PRIMARY,
+                                              size: 'custom',
+                                              height: E,
+                                              width: E
+                                          })
+                            }),
+                            null != i
+                                ? i({
+                                      className: c.purchaseBtn,
+                                      onClick: (e) => {
+                                          e.stopPropagation(), null == h || h();
+                                      }
+                                  })
+                                : null,
+                            null != t &&
+                                '' !== t &&
                                 (0, r.jsx)(l.x, {
-                                    tag: 'div',
-                                    variant: 'heading-lg/semibold',
-                                    children: I
-                                }),
-                                (0, r.jsx)('div', {
-                                    className: d.image,
-                                    children:
-                                        null != n
-                                            ? (0, r.jsx)('img', {
-                                                  src: n.toString(),
-                                                  alt: ''
-                                              })
-                                            : (0, r.jsx)(s.V, {
-                                                  color: E.Z.colors.ICON_PRIMARY,
-                                                  size: 'custom',
-                                                  height: f,
-                                                  width: f
-                                              })
-                                }),
-                                null != i
-                                    ? i({
-                                          className: d.purchaseBtn,
-                                          onClick: (e) => {
-                                              e.stopPropagation(), null == p || p();
-                                          }
-                                      })
-                                    : null,
-                                null != t &&
-                                    '' !== t &&
-                                    (0, r.jsx)(l.x, {
-                                        className: d.description,
-                                        color: 'text-normal',
-                                        variant: 'text-sm/medium',
-                                        children: t
-                                    })
-                            ]
-                        })
-                    ]
+                                    className: c.description,
+                                    color: 'text-normal',
+                                    variant: 'text-sm/medium',
+                                    children: t
+                                })
+                        ]
+                    })
                 }),
-                null != S &&
+                null != T &&
                     (0, r.jsx)('div', {
-                        className: d.benefitsSummary,
+                        className: c.benefitsSummary,
                         children: (0, r.jsx)(l.x, {
                             color: 'interactive-normal',
                             variant: 'text-sm/medium',
-                            children: c.Z.Messages.Storefront.BENEFITS_SUMMARY.format({ count: S })
+                            children: u.Z.Messages.Storefront.BENEFITS_SUMMARY.format({ count: T })
                         })
                     }),
-                null != g &&
+                null != I &&
                     (0, r.jsx)('div', {
-                        className: d.benefits,
+                        className: c.benefits,
                         children: (0, r.jsx)('div', {
-                            className: d.benefitsContainer,
+                            className: c.benefitsContainer,
                             children: (0, r.jsxs)('div', {
-                                className: d.benefitsList,
+                                className: c.benefitsList,
                                 children: [
                                     (0, r.jsx)(l.x, {
                                         color: 'header-secondary',
                                         variant: 'eyebrow',
-                                        children: c.Z.Messages.Storefront.BENEFITS_TITLE
+                                        children: u.Z.Messages.Storefront.BENEFITS_TITLE
                                     }),
-                                    g.length > h
+                                    I.length > f
                                         ? (0, r.jsxs)(r.Fragment, {
                                               children: [
-                                                  g.slice(0, h),
+                                                  I.slice(0, f),
                                                   (0, r.jsx)(l.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
-                                                      children: c.Z.Messages.Storefront.MORE_BENEFITS.format({ count: g.length - h })
+                                                      children: u.Z.Messages.Storefront.MORE_BENEFITS.format({ count: I.length - f })
                                                   })
                                               ]
                                           })
-                                        : g
+                                        : I
                                 ]
                             })
                         })
@@ -119,13 +115,13 @@ function p(e) {
         })
     });
 }
-function m(e) {
+function p(e) {
     let { icon: t, name: n, description: i } = e;
     return (0, r.jsxs)('div', {
-        className: d.cardBenefit,
+        className: c.cardBenefit,
         children: [
             (0, r.jsx)('div', {
-                className: d.cardBenefitIcon,
+                className: c.cardBenefitIcon,
                 children: t
             }),
             (0, r.jsxs)('div', {
