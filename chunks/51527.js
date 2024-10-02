@@ -23,7 +23,6 @@ e.exports = {
     sidebar: 'sidebar_e881fc',
     sections: 'sections_e881fc',
     sectionHeader: 'sectionHeader_e881fc',
-    translatedInfo: 'translatedInfo_e881fc',
     imageScroller: 'imageScroller_e881fc',
     mediaModal: 'mediaModal_e881fc',
     gameArtwork: 'gameArtwork_e881fc',

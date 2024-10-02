@@ -19,31 +19,30 @@ var t = a(735250),
     g = a(981631),
     f = a(689938),
     x = a(51527),
-    I = a(479537);
+    v = a(479537);
 function h(e) {
-    let { websites: n, trackClick: a, onInviteResolved: o } = e,
-        [h, v] = i.useState(),
+    let { detectedGame: n, trackClick: a, onInviteResolved: o } = e,
+        [h, I] = i.useState(),
         E = (0, s.e7)([m.Z], () => {
             var e, n;
             return (null == h ? void 0 : null === (e = h.guild) || void 0 === e ? void 0 : e.id) != null && m.Z.isMember(null == h ? void 0 : null === (n = h.guild) || void 0 === n ? void 0 : n.id);
         }),
-        A = i.useMemo(
-            () =>
-                null == n
-                    ? void 0
-                    : n.find((e) => {
-                          let { category: n } = e;
-                          return n === l.p.DISCORD;
-                      }),
-            [n]
-        );
+        A = i.useMemo(() => {
+            var e;
+            return null === (e = n.websites) || void 0 === e
+                ? void 0
+                : e.find((e) => {
+                      let { category: n } = e;
+                      return n === l.p.DISCORD;
+                  });
+        }, [n.websites]);
     if (
         (i.useEffect(() => {
             let e = async (e) => {
                 let n = e.split('/').pop();
                 if (null != n) {
                     let e = await (0, u.Z)(n);
-                    !0 !== e.banned && (v(e.invite), null != e.invite && (null == o || o(e.invite)));
+                    !0 !== e.banned && (I(e.invite), null != e.invite && (null == o || o(e.invite)));
                 }
             };
             null != A && e(A.url);
@@ -51,7 +50,7 @@ function h(e) {
         null == h || null == h.guild || (!h.guild.features.includes('VERIFIED') && !h.guild.features.includes('PARTNER')))
     )
         return null;
-    let T = p.ZP.getGuildIconURL({
+    let j = p.ZP.getGuildIconURL({
         id: h.guild.id,
         icon: h.guild.icon,
         size: 32
@@ -69,12 +68,12 @@ function h(e) {
                 className: r()(x.row, x.gapMd),
                 children: [
                     (0, t.jsx)('img', {
-                        className: I.guildIcon,
-                        src: T,
+                        className: v.guildIcon,
+                        src: j,
                         alt: f.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({ guildName: h.guild.name })
                     }),
                     (0, t.jsxs)('div', {
-                        className: I.inviteInfo,
+                        className: v.inviteInfo,
                         children: [
                             (0, t.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
