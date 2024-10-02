@@ -19,7 +19,10 @@ function _(e) {
         _ =
             null != n && null != t
                 ? () => {
-                      (0, l._)(t.id, n.id);
+                      (0, l._)({
+                          riotConnectionId: t.id,
+                          lolConnectionId: n.id
+                      });
                   }
                 : u.dG4;
     return (0, r.jsx)(a.Popout, {

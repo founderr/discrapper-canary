@@ -48,15 +48,19 @@ let d = 900000,
             throw new s.Hx(e);
         }
     },
-    E = async (e, t) => {
+    E = async (e) => {
+        let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: r } = e;
         try {
-            await o.tn.post({
-                url: c.ANM.UPDATE_MY_LOL_LEADERBOARD(),
-                body: {
-                    riot_connection_id: e,
-                    lol_connection_id: t
-                }
-            });
+            return (
+                await o.tn.post({
+                    url: c.ANM.UPDATE_MY_LOL_LEADERBOARD(),
+                    body: {
+                        riot_connection_id: t,
+                        lol_connection_id: n,
+                        only_update_if_stale: r
+                    }
+                })
+            ).body;
         } catch (e) {
             throw new s.Hx(e);
         }
