@@ -36336,11 +36336,6 @@ html .progress_e5f4c6 {
     overflow: hidden
 }
 
-.buttonIcon_d9a510 {
-    width: 20px;
-    height: 20px
-}
-
 @use postcss-pxtorem;
 
 .theme-dark.custom-theme-background .embedFull_b0068a {
