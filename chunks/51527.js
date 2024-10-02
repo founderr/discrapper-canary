@@ -22,9 +22,5 @@ e.exports = {
     mainContent: 'mainContent_e881fc',
     sidebar: 'sidebar_e881fc',
     sections: 'sections_e881fc',
-    sectionHeader: 'sectionHeader_e881fc',
-    imageScroller: 'imageScroller_e881fc',
-    mediaModal: 'mediaModal_e881fc',
-    gameArtwork: 'gameArtwork_e881fc',
-    gameArtworkFocusRing: 'gameArtworkFocusRing_e881fc'
+    sectionHeader: 'sectionHeader_e881fc'
 };
