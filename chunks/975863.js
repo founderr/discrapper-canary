@@ -1,46 +1,47 @@
-s.r(t),
-    s.d(t, {
+t.r(s),
+    t.d(s, {
         default: function () {
-            return f;
+            return O;
         }
     });
-var a = s(735250);
-s(470079);
-var n = s(442837),
-    c = s(654904),
-    o = s(594174),
-    r = s(74538),
-    _ = s(98278),
-    d = s(790527),
-    i = s(474936),
-    E = s(981631),
-    u = s(486324),
-    U = s(689938);
-function f(e) {
-    let { onClose: t, source: f, ...I } = e,
-        O = (0, n.e7)([o.default], () => o.default.getCurrentUser()),
-        T = r.ZP.isPremium(O) ? U.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPGRADE_BODY : U.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPSELL_BODY,
-        M = T.format({
+var a = t(735250);
+t(470079);
+var n = t(442837),
+    c = t(654904),
+    o = t(594174),
+    r = t(74538),
+    _ = t(98278),
+    i = t(790527),
+    E = t(474936),
+    d = t(981631),
+    U = t(486324),
+    u = t(689938),
+    I = t(89671);
+function O(e) {
+    let { onClose: s, source: t, ...O } = e,
+        T = (0, n.e7)([o.default], () => o.default.getCurrentUser()),
+        f = r.ZP.isPremium(T) ? u.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPGRADE_BODY : u.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPSELL_BODY,
+        M = f.format({
             onLearnMore: function () {
-                t(), (0, _.z)(!0);
+                s(), (0, _.z)(!0);
             }
         });
-    return (0, a.jsx)(d.Z, {
-        artURL: s(89671),
-        type: i.cd.CUSTOM_PROFILE_UPSELL,
-        title: U.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPSELL_HEADER,
+    return (0, a.jsx)(i.Z, {
+        artURL: I.Z,
+        type: E.cd.CUSTOM_PROFILE_UPSELL,
+        title: u.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPSELL_HEADER,
         body: M,
         glowUp: M,
         onSecondaryClick: () => {
-            t(), (0, c.$r)(u.pC.BANNER);
+            s(), (0, c.$r)(U.pC.BANNER);
         },
-        secondaryCTA: U.Z.Messages.USER_SETTINGS_TRY_IT_OUT,
-        analyticsSource: f,
+        secondaryCTA: u.Z.Messages.USER_SETTINGS_TRY_IT_OUT,
+        analyticsSource: t,
         analyticsLocation: {
-            section: E.jXE.USER_PROFILE,
-            object: E.qAy.BUTTON_CTA
+            section: d.jXE.USER_PROFILE,
+            object: d.qAy.BUTTON_CTA
         },
-        onClose: t,
-        ...I
+        onClose: s,
+        ...O
     });
 }
