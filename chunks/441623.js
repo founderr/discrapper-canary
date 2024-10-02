@@ -27,116 +27,118 @@ function I(e, t, n) {
     );
 }
 let T = 5,
-    g = 7,
-    S = 604800000,
-    A = 1209600000;
-function v() {
+    g = 15,
+    S = 7,
+    A = 604800000,
+    v = 1209600000;
+function N() {
     return {
         messageGiftIntentLastShownMap: {},
         lastShownFriendsListGiftIntents: [],
         friendsTabBadgeLastDismissedTime: null
     };
 }
-let N = v(),
-    O = [],
-    R = new Set(),
-    C = {};
-function y(e, t) {
+let O = N(),
+    R = [],
+    C = new Set(),
+    y = {};
+function L(e, t) {
     let n = new Date(),
         r = new Date(e.getTime());
     r.setFullYear(t);
     let i = new Date(r.getTime());
-    i.setDate(r.getDate() - g);
+    i.setDate(r.getDate() - S);
     let a = new Date(r.getTime());
-    return a.setDate(r.getDate() + g), n > i && n < a;
+    return a.setDate(r.getDate() + S), n > i && n < a;
 }
-function L(e) {
-    return !y(e, e.getFullYear()) && y(e, new Date().getFullYear());
+function b(e) {
+    return !L(e, e.getFullYear()) && L(e, new Date().getFullYear());
 }
-function b() {
-    if ((P(), !_.Z.hasConsented(m.pjP.PERSONALIZATION))) return;
+function D() {
+    if ((U(), !_.Z.hasConsented(m.pjP.PERSONALIZATION))) return;
     let { enabled: e } = p.G.getCurrentConfig({ location: 'PremiumGiftingIntentStore updateFriendAnniversaries' }, { autoTrackExposure: !1 }),
         { enabled: t } = h.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore updateFriendAnniversaries' }, { autoTrackExposure: !1 });
-    if (!(e || t)) return;
-    let n = E.Z.getRelationships();
-    f.default.keys(n).forEach((e) => {
-        let t = E.Z.getSince(e),
-            n = d.Z.getUserAffinity(e);
-        if (E.Z.getRelationshipType(e) === m.OGo.FRIEND && null != n && n.affinity > 0 && null != t) {
-            let n = new Date(t);
-            L(n) && (O.push(e), (C[e] = { friendsSince: n }));
+    if (!!(e || t)) {
+        for (let e of f.default.keys(E.Z.getRelationships())) {
+            if (R.length >= g) break;
+            let t = E.Z.getSince(e),
+                n = d.Z.getUserAffinity(e);
+            if (E.Z.getRelationshipType(e) === m.OGo.FRIEND && null != n && n.affinity > 0 && null != t) {
+                let n = new Date(t);
+                b(n) && (R.push(e), (y[e] = { friendsSince: n }));
+            }
         }
-    }),
-        O.sort((e, t) => {
+        R.sort((e, t) => {
             let n = d.Z.getUserAffinity(e),
                 r = d.Z.getUserAffinity(t),
                 i = null != n ? n.affinity : 0;
             return (null != r ? r.affinity : 0) - i;
         }),
-        (R = new Set(O.slice(0, T)));
+            (C = new Set(R.slice(0, T)));
+    }
 }
-function D(e) {
+function M(e) {
     return Math.round(s()().diff(e, 'years', !0));
 }
-function M() {
-    return Array.from(R).some((e) => !N.lastShownFriendsListGiftIntents.includes(e));
-}
 function P() {
-    (O.length = 0), R.clear(), (C = {});
+    return Array.from(C).some((e) => !O.lastShownFriendsListGiftIntents.includes(e));
 }
 function U() {
-    P();
+    (R.length = 0), C.clear(), (y = {});
 }
 function w() {
-    (N = v()), P();
+    U();
 }
 function x() {
-    N.lastShownFriendsListGiftIntents = Array.from(R);
+    (O = N()), U();
 }
-function G(e) {
+function G() {
+    O.lastShownFriendsListGiftIntents = Array.from(C);
+}
+function k(e) {
     let { recipientUserId: t } = e;
-    N.messageGiftIntentLastShownMap[t] = Date.now();
-}
-function k() {
-    N.friendsTabBadgeLastDismissedTime = Date.now();
+    O.messageGiftIntentLastShownMap[t] = Date.now();
 }
 function B() {
-    for (let e in N.messageGiftIntentLastShownMap) {
-        let t = N.messageGiftIntentLastShownMap[e];
-        Date.now() - t > A && delete N.messageGiftIntentLastShownMap[e];
+    O.friendsTabBadgeLastDismissedTime = Date.now();
+}
+function F() {
+    for (let e in O.messageGiftIntentLastShownMap) {
+        let t = O.messageGiftIntentLastShownMap[e];
+        Date.now() - t > v && delete O.messageGiftIntentLastShownMap[e];
     }
 }
-class F extends (r = l.ZP.PersistedStore) {
+class Z extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        (N = v()), null != e && ((N.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (N.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (N.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap })), this.syncWith([E.Z, d.Z, _.Z, c.Z], b), B();
+        (O = N()), null != e && ((O.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (O.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (O.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap })), this.syncWith([E.Z, d.Z, _.Z, c.Z], D), F();
     }
     getState() {
-        return N;
+        return O;
     }
     getFriendAnniversaries() {
-        return O;
+        return R;
     }
     isTopAffinityFriendAnniversary(e) {
         let { userId: t } = e,
             { enabled: n } = h.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore isTopAffinityFriendAnniversary' }, { autoTrackExposure: !1 });
-        return !!n && R.has(t);
+        return !!n && C.has(t);
     }
     canShowFriendsTabBadge() {
         var e;
-        let t = null !== (e = N.friendsTabBadgeLastDismissedTime) && void 0 !== e ? e : 0;
-        return !(Date.now() - t <= S) && M();
+        let t = null !== (e = O.friendsTabBadgeLastDismissedTime) && void 0 !== e ? e : 0;
+        return !(Date.now() - t <= A) && P();
     }
     getFriendAnniversaryYears(e) {
-        let t = C[e];
-        return null == t ? 0 : D(t.friendsSince);
+        let t = y[e];
+        return null == t ? 0 : M(t.friendsSince);
     }
     isGiftIntentMessageInCooldown(e) {
-        return null != N.messageGiftIntentLastShownMap[e];
+        return null != O.messageGiftIntentLastShownMap[e];
     }
 }
-I(F, 'displayName', 'PremiumGiftingIntentStore'),
-    I(F, 'persistKey', 'PremiumGiftingIntentStore'),
-    I(F, 'migrations', [
+I(Z, 'displayName', 'PremiumGiftingIntentStore'),
+    I(Z, 'persistKey', 'PremiumGiftingIntentStore'),
+    I(Z, 'migrations', [
         (e) => {
             var t, n;
             return null == e
@@ -148,10 +150,10 @@ I(F, 'displayName', 'PremiumGiftingIntentStore'),
                   };
         }
     ]),
-    (t.Z = new F(u.Z, {
-        CONNECTION_OPEN: U,
-        LOGOUT: w,
-        MESSAGE_GIFT_INTENT_SHOWN: G,
-        FRIENDS_LIST_GIFT_INTENTS_SHOWN: x,
-        FRIENDS_TAB_BADGE_DISMISS: k
+    (t.Z = new Z(u.Z, {
+        CONNECTION_OPEN: w,
+        LOGOUT: x,
+        MESSAGE_GIFT_INTENT_SHOWN: k,
+        FRIENDS_LIST_GIFT_INTENTS_SHOWN: G,
+        FRIENDS_TAB_BADGE_DISMISS: B
     }));
