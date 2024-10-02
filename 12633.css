@@ -24576,7 +24576,7 @@ img.thumbnail_c64476 {
 
 .heading-sm\/normal_ec1c2d {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 400
 }
@@ -24587,7 +24587,7 @@ img.thumbnail_c64476 {
 
 .heading-sm\/medium_ec1c2d {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 500
 }
@@ -24598,7 +24598,7 @@ img.thumbnail_c64476 {
 
 .heading-sm\/semibold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 600
 }
@@ -24609,7 +24609,7 @@ img.thumbnail_c64476 {
 
 .heading-sm\/bold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 700
 }
@@ -24620,7 +24620,7 @@ img.thumbnail_c64476 {
 
 .heading-sm\/extrabold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 800
 }
@@ -24631,7 +24631,7 @@ img.thumbnail_c64476 {
 
 .heading-md\/normal_ec1c2d {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -24642,7 +24642,7 @@ img.thumbnail_c64476 {
 
 .heading-md\/medium_ec1c2d {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -24653,7 +24653,7 @@ img.thumbnail_c64476 {
 
 .heading-md\/semibold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -24664,7 +24664,7 @@ img.thumbnail_c64476 {
 
 .heading-md\/bold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -24675,7 +24675,7 @@ img.thumbnail_c64476 {
 
 .heading-md\/extrabold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 800
 }
@@ -24686,7 +24686,7 @@ img.thumbnail_c64476 {
 
 .heading-lg\/normal_ec1c2d {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 400
 }
@@ -24697,7 +24697,7 @@ img.thumbnail_c64476 {
 
 .heading-lg\/medium_ec1c2d {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 500
 }
@@ -24708,7 +24708,7 @@ img.thumbnail_c64476 {
 
 .heading-lg\/semibold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 600
 }
@@ -24719,7 +24719,7 @@ img.thumbnail_c64476 {
 
 .heading-lg\/bold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 700
 }
@@ -24730,7 +24730,7 @@ img.thumbnail_c64476 {
 
 .heading-lg\/extrabold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 800
 }
@@ -24741,7 +24741,7 @@ img.thumbnail_c64476 {
 
 .heading-xl\/normal_ec1c2d {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -24752,7 +24752,7 @@ img.thumbnail_c64476 {
 
 .heading-xl\/medium_ec1c2d {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -24763,7 +24763,7 @@ img.thumbnail_c64476 {
 
 .heading-xl\/semibold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -24774,7 +24774,7 @@ img.thumbnail_c64476 {
 
 .heading-xl\/bold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -24785,7 +24785,7 @@ img.thumbnail_c64476 {
 
 .heading-xl\/extrabold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 800
 }
@@ -24796,7 +24796,7 @@ img.thumbnail_c64476 {
 
 .heading-xxl\/normal_ec1c2d {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -24807,7 +24807,7 @@ img.thumbnail_c64476 {
 
 .heading-xxl\/medium_ec1c2d {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -24818,7 +24818,7 @@ img.thumbnail_c64476 {
 
 .heading-xxl\/semibold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -24829,7 +24829,7 @@ img.thumbnail_c64476 {
 
 .heading-xxl\/bold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -24840,7 +24840,7 @@ img.thumbnail_c64476 {
 
 .heading-xxl\/extrabold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 800
 }
@@ -24851,7 +24851,7 @@ img.thumbnail_c64476 {
 
 .eyebrow_ec1c2d {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700;
     text-transform: uppercase;
@@ -24864,7 +24864,7 @@ img.thumbnail_c64476 {
 
 .heading-deprecated-12\/normal_ec1c2d {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -24875,7 +24875,7 @@ img.thumbnail_c64476 {
 
 .heading-deprecated-12\/medium_ec1c2d {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -24886,7 +24886,7 @@ img.thumbnail_c64476 {
 
 .heading-deprecated-12\/semibold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -24897,7 +24897,7 @@ img.thumbnail_c64476 {
 
 .heading-deprecated-12\/bold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -24908,7 +24908,7 @@ img.thumbnail_c64476 {
 
 .heading-deprecated-12\/extrabold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 800
 }
@@ -24919,7 +24919,7 @@ img.thumbnail_c64476 {
 
 .redesign\/heading-18\/bold_ec1c2d {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -24930,7 +24930,7 @@ img.thumbnail_c64476 {
 
 .text-xxs\/normal_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 400
 }
@@ -24941,7 +24941,7 @@ img.thumbnail_c64476 {
 
 .text-xxs\/medium_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 500
 }
@@ -24952,7 +24952,7 @@ img.thumbnail_c64476 {
 
 .text-xxs\/semibold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 600
 }
@@ -24963,7 +24963,7 @@ img.thumbnail_c64476 {
 
 .text-xxs\/bold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 700
 }
@@ -24974,7 +24974,7 @@ img.thumbnail_c64476 {
 
 .text-xs\/normal_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -24985,7 +24985,7 @@ img.thumbnail_c64476 {
 
 .text-xs\/medium_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -24996,7 +24996,7 @@ img.thumbnail_c64476 {
 
 .text-xs\/semibold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -25007,7 +25007,7 @@ img.thumbnail_c64476 {
 
 .text-xs\/bold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -25018,7 +25018,7 @@ img.thumbnail_c64476 {
 
 .text-sm\/normal_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 400
 }
@@ -25029,7 +25029,7 @@ img.thumbnail_c64476 {
 
 .text-sm\/medium_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 500
 }
@@ -25040,7 +25040,7 @@ img.thumbnail_c64476 {
 
 .text-sm\/semibold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 600
 }
@@ -25051,7 +25051,7 @@ img.thumbnail_c64476 {
 
 .text-sm\/bold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 700
 }
@@ -25062,7 +25062,7 @@ img.thumbnail_c64476 {
 
 .text-md\/normal_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -25073,7 +25073,7 @@ img.thumbnail_c64476 {
 
 .text-md\/medium_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -25084,7 +25084,7 @@ img.thumbnail_c64476 {
 
 .text-md\/semibold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -25095,7 +25095,7 @@ img.thumbnail_c64476 {
 
 .text-md\/bold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -25106,7 +25106,7 @@ img.thumbnail_c64476 {
 
 .text-lg\/normal_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 400
 }
@@ -25117,7 +25117,7 @@ img.thumbnail_c64476 {
 
 .text-lg\/medium_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 500
 }
@@ -25128,7 +25128,7 @@ img.thumbnail_c64476 {
 
 .text-lg\/semibold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 600
 }
@@ -25139,7 +25139,7 @@ img.thumbnail_c64476 {
 
 .text-lg\/bold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 700
 }
@@ -25150,7 +25150,7 @@ img.thumbnail_c64476 {
 
 .redesign\/message-preview\/normal_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -25161,7 +25161,7 @@ img.thumbnail_c64476 {
 
 .redesign\/message-preview\/medium_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -25172,7 +25172,7 @@ img.thumbnail_c64476 {
 
 .redesign\/message-preview\/semibold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -25183,7 +25183,7 @@ img.thumbnail_c64476 {
 
 .redesign\/message-preview\/bold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -25194,7 +25194,7 @@ img.thumbnail_c64476 {
 
 .redesign\/channel-title\/normal_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 400
 }
@@ -25205,7 +25205,7 @@ img.thumbnail_c64476 {
 
 .redesign\/channel-title\/medium_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 500
 }
@@ -25216,7 +25216,7 @@ img.thumbnail_c64476 {
 
 .redesign\/channel-title\/semibold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 600
 }
@@ -25227,7 +25227,7 @@ img.thumbnail_c64476 {
 
 .redesign\/channel-title\/bold_ec1c2d {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 700
 }
@@ -25238,7 +25238,7 @@ img.thumbnail_c64476 {
 
 .display-sm_ec1c2d {
     font-family: var(--font-headline);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1;
     font-weight: 800
 }
@@ -25249,7 +25249,7 @@ img.thumbnail_c64476 {
 
 .display-md_ec1c2d {
     font-family: var(--font-headline);
-    font-size: 34px;
+    font-size: 2.125rem;
     line-height: 1.0588235294117647;
     font-weight: 800
 }
@@ -25260,7 +25260,7 @@ img.thumbnail_c64476 {
 
 .display-lg_ec1c2d {
     font-family: var(--font-headline);
-    font-size: 44px;
+    font-size: 2.75rem;
     line-height: .9545454545454546;
     font-weight: 800
 }
@@ -25271,7 +25271,7 @@ img.thumbnail_c64476 {
 
 .code_ec1c2d {
     font-family: var(--font-code);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -25302,8 +25302,8 @@ img.thumbnail_c64476 {
 }
 
 .liveLarge_ec1c2d {
-    font-size: 14px;
-    line-height: 16px
+    font-size: .875rem;
+    line-height: 1rem
 }
 
 .heading_a08002 {
