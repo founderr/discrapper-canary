@@ -10,8 +10,8 @@ var i = a(735250),
     t = a(442837),
     l = a(481060),
     s = a(100527),
-    c = a(906732),
-    r = a(807582),
+    r = a(906732),
+    c = a(807582),
     d = a(813197),
     f = a(81245),
     u = a(530329),
@@ -71,7 +71,7 @@ function T(e) {
         ? null
         : (0, i.jsx)('div', {
               className: E.pillWrapper,
-              children: (0, i.jsx)(r.Z, {
+              children: (0, i.jsx)(c.Z, {
                   guildFeature: n,
                   guild: a,
                   hideTooltip: !0
@@ -123,7 +123,7 @@ function O(e) {
     });
 }
 function k(e) {
-    let { transitionState: n, onClose: r, onComplete: b, uploadType: M, maxFileSizeBytes: T, showUpsellHeader: k, filters: y, analyticsLocation: P, analyticsLocations: Z = [], modalSubTitle: F, imageSpecifications: U, modalTitle: R = v.Z.Messages.SELECT_IMAGE_MODAL_TITLE, uploadOptionTitle: D = v.Z.Messages.UPLOAD_IMAGE } = e,
+    let { transitionState: n, onClose: c, onComplete: b, uploadType: M, maxFileSizeBytes: T, showUpsellHeader: k, filters: y, analyticsLocation: P, analyticsLocations: Z = [], modalSubTitle: F, imageSpecifications: U, modalTitle: R = v.Z.Messages.SELECT_IMAGE_MODAL_TITLE, uploadOptionTitle: D = v.Z.Messages.UPLOAD_IMAGE } = e,
         B = (0, t.e7)([m.Z], () => m.Z.isFocused()),
         S = (0, t.e7)([_.default], () => _.default.getCurrentUser()),
         G = (0, t.e7)([x.Z], () => x.Z.getGuildId()),
@@ -131,10 +131,10 @@ function k(e) {
         { reducedMotion: H } = o.useContext(l.AccessibilityPreferencesContext),
         W = (0, l.useModalContext)(),
         z = !C.ZP.canUseAnimatedAvatar(S) && M === N.pC.AVATAR,
-        { analyticsLocations: K } = (0, c.ZP)(Z, s.Z.SELECT_IMAGE_MODAL);
+        { analyticsLocations: K } = (0, r.ZP)(Z, s.Z.SELECT_IMAGE_MODAL);
     function V(e, n) {
         let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        r(), b(e, n, a);
+        c(), b(e, n, a);
     }
     o.useEffect(() => {
         z &&
@@ -173,7 +173,7 @@ function k(e) {
                         ]
                     }),
                     (0, i.jsx)(l.ModalCloseButton, {
-                        onClick: r,
+                        onClick: c,
                         className: E.modalCloseButton
                     })
                 ]
@@ -227,7 +227,7 @@ function k(e) {
                                         },
                                         maxFileSizeBytes: T,
                                         onFileSizeError: function () {
-                                            r(), (0, h.Z)(T);
+                                            c(), (0, h.Z)(T);
                                         },
                                         filters: y
                                     })
@@ -294,8 +294,7 @@ function k(e) {
                             showUpsell: !0,
                             position: 'inline',
                             showShadow: !1,
-                            className: E.nitroUpsell,
-                            onSecondaryClick: r
+                            className: E.nitroUpsell
                         })
                 ]
             })

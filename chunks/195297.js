@@ -26,8 +26,8 @@ var o = n(735250),
 function x(e) {
     let { transitionState: t, onClose: a, onComplete: x, uploadType: I, showUpsellHeader: m, analyticsPage: L } = e,
         [M, P] = i.useState(!1),
-        C = (0, r.useModalContext)(),
-        Z = (0, d.Dt)(),
+        Z = (0, r.useModalContext)(),
+        C = (0, d.Dt)(),
         { analyticsLocations: j } = (0, c.ZP)(l.Z.GIF_PICKER);
     async function B(e) {
         let { gifSrc: t } = e;
@@ -50,7 +50,7 @@ function x(e) {
                             ...t
                         });
                 },
-                { contextKey: C }
+                { contextKey: Z }
             );
     }
     i.useEffect(() => {
@@ -59,17 +59,17 @@ function x(e) {
             location: { page: L }
         });
     }, [L]);
-    let S = I === h.pC.AVATAR || I === h.pC.BANNER,
-        U = (0, _.Mu)('GIFPickerCroppingModal', !S);
+    let U = I === h.pC.AVATAR || I === h.pC.BANNER,
+        S = (0, _.Mu)('GIFPickerCroppingModal', !U);
     return (0, o.jsx)(c.Gt, {
         value: j,
         children: (0, o.jsxs)(r.ModalRoot, {
-            'aria-labelledby': Z,
+            'aria-labelledby': C,
             transitionState: t,
             size: r.ModalSize.SMALL,
             children: [
                 m &&
-                    !U &&
+                    !S &&
                     (0, o.jsx)(p.Z, {
                         type: I,
                         analyticsPage: L,
@@ -94,7 +94,7 @@ function x(e) {
                 (0, o.jsxs)('div', {
                     children: [
                         (0, o.jsx)(u.Z, {
-                            contentClassName: s()({ [R.gifPickerContent]: m && U }),
+                            contentClassName: s()({ [R.gifPickerContent]: m && S }),
                             className: s()(R.gifPicker, { [R.loadingOverlay]: M }),
                             onSelectGIF: B,
                             hideFavorites: !0
@@ -103,12 +103,11 @@ function x(e) {
                     ]
                 }),
                 m &&
-                    U &&
+                    S &&
                     (0, o.jsx)(f.Z, {
                         uploadType: I,
                         showUpsell: !0,
-                        className: R.nitroUpsell,
-                        onSecondaryClick: a
+                        className: R.nitroUpsell
                     })
             ]
         })
