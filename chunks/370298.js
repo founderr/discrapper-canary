@@ -74,9 +74,10 @@ function w(e) {
                               onMouseLeave: f.onMouseLeave,
                               'aria-label': P.Z.Messages.APP_IMAGE_REC_MENU_HEADER,
                               children: (0, a.jsx)(E, {
-                                  size: 'sm',
-                                  color: 'currentColor',
-                                  className: U.buttonIcon
+                                  size: 'custom',
+                                  width: 20,
+                                  height: 20,
+                                  color: 'currentColor'
                               })
                           })
                   });
