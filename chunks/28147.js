@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return Z;
+        return O;
     }
 }),
     t(47120);
@@ -22,8 +22,8 @@ var i = t(735250),
     A = t(392370),
     E = t(98880),
     N = t(804307),
-    x = t(520315),
-    v = t(532309),
+    v = t(520315),
+    x = t(532309),
     I = t(561160),
     g = t(41558),
     P = t(106771),
@@ -37,10 +37,10 @@ let M = Array(6)
         .map((e, n) => n),
     y = [, , ,].fill(0).map((e, n) => n),
     j = [, , , ,].fill(0).map((e, n) => n);
-function Z(e) {
-    return (0, i.jsx)(O, { ...e });
-}
 function O(e) {
+    return (0, i.jsx)(Z, { ...e });
+}
+function Z(e) {
     let { channel: n, query: t, entrypoint: l, isScrollCloseToBottom: s } = e,
         c = l === f._b.TEXT,
         d = l === f._b.TEXT,
@@ -60,7 +60,7 @@ function O(e) {
         {
             fetchState: E,
             applicationResults: N,
-            fetchNextPage: x
+            fetchNextPage: v
         } = (0, A.Q2)({
             query: t,
             channel: n,
@@ -69,9 +69,9 @@ function O(e) {
             entrypoint: l
         });
     a.useEffect(() => {
-        s && E === m.M.FETCHED && x();
-    }, [x, E, s]);
-    let v = null == E || E === m.M.FETCHING,
+        s && E === m.M.FETCHED && v();
+    }, [v, E, s]);
+    let x = null == E || E === m.M.FETCHING,
         g = a.useMemo(() => {
             let e = h.map((e) => ({
                     application: e,
@@ -98,7 +98,7 @@ function O(e) {
             ];
         }, [N, h]),
         P = g.length > 0,
-        L = p && !P && !v;
+        L = p && !P && !x;
     return u
         ? (0, i.jsx)(k, {})
         : L
@@ -115,10 +115,10 @@ function O(e) {
                             commandResults: _,
                             query: t
                         }),
-                    (P || v) &&
+                    (P || x) &&
                         (0, i.jsx)(B, {
                             applicationResults: g,
-                            includePlaceholder: v,
+                            includePlaceholder: x,
                             query: t,
                             searchesBots: d
                         })
@@ -131,7 +131,7 @@ function H(e) {
         m = o.length > 4,
         A = a.useMemo(() => (m ? o.slice(0, 4) : o), [o, m]),
         [E, N] = a.useState(!1),
-        v = null !== (n = (0, s.Z)(E)) && void 0 !== n ? n : E,
+        x = null !== (n = (0, s.Z)(E)) && void 0 !== n ? n : E,
         I = a.useCallback(() => N((e) => !e), []),
         L = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
         M = E && !L;
@@ -139,25 +139,25 @@ function H(e) {
     let {
         ref: y,
         isTransitioning: j,
-        onTransitionEnd: Z
-    } = (0, x.Z)({
+        onTransitionEnd: O
+    } = (0, v.Z)({
         key: r,
         isExpanded: M,
         durationMs: 200,
         maxAnimationHeight: S.K7
     });
     a.useEffect(() => {
-        !v &&
+        !x &&
             E &&
             (0, c.yw)(b.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: f.L3.SEARCH,
                 source: h.Z.entrypoint(),
                 num: o.length
             });
-    }, [o.length, v, E]);
-    let O = M || j,
+    }, [o.length, x, E]);
+    let Z = M || j,
         H = M ? g.Z.buttonTypes.VIEW_LESS : g.Z.buttonTypes.VIEW_MORE,
-        U = O ? o : A;
+        U = Z ? o : A;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(g.Z, {
@@ -168,7 +168,7 @@ function H(e) {
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
                 ref: y,
-                onTransitionEnd: Z,
+                onTransitionEnd: O,
                 children: U.map((e, n) => {
                     let { command: t, application: a, section: o } = e;
                     return (0, i.jsx)(
@@ -209,7 +209,7 @@ function H(e) {
     });
 }
 function U(e) {
-    let { trackSearchResultsItemImpressionRef: n } = (0, v.Z)({
+    let { trackSearchResultsItemImpressionRef: n } = (0, x.Z)({
         applicationId: e.application.id,
         query: e.query,
         searchResultsPosition: e.resultsPosition

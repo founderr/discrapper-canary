@@ -22,8 +22,8 @@ var i = t(735250),
     A = t(890280),
     E = t(176412),
     N = t(231338),
-    x = t(689938),
-    v = t(94958);
+    v = t(689938),
+    x = t(94958);
 function I(e) {
     let { channel: n, application: t, sectionName: I, primaryEntryPointCommand: g, buttonSize: P = o.ButtonSizes.MEDIUM } = e,
         L = a.useId(),
@@ -43,8 +43,8 @@ function I(e) {
         }),
         j = a.useMemo(() => (0, f.XZ)(g.displayName), [g.displayName]),
         {
-            onActivityItemSelected: Z,
-            buttonColor: O,
+            onActivityItemSelected: O,
+            buttonColor: Z,
             buttonText: H
         } = (0, E.P7)({
             channel: n,
@@ -61,7 +61,7 @@ function I(e) {
                 a = (0, l.e7)([p.Z], () => p.Z.can(N.Pl.USE_EMBEDDED_ACTIVITIES, n)),
                 o = (0, s.KF)(n.id),
                 u = !1,
-                C = x.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START;
+                C = v.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START;
             switch (i) {
                 case d.JS.LEAVE:
                     u = !1;
@@ -75,7 +75,7 @@ function I(e) {
             if (i !== d.JS.LEAVE) {
                 let e = t instanceof m.Z ? t.embeddedActivityConfig : t.embedded_activity_config,
                     i = (0, c.Z)((0, _.getOS)());
-                null == e || e.supported_platforms.includes(i) ? n.isThread() && ((u = !0), (C = x.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_IN_THREAD)) : ((u = !0), (C = x.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_ON_DEVICE));
+                null == e || e.supported_platforms.includes(i) ? n.isThread() && ((u = !0), (C = v.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_IN_THREAD)) : ((u = !0), (C = v.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_ON_DEVICE));
             }
             return {
                 disabled: u,
@@ -88,7 +88,7 @@ function I(e) {
         });
     return (0, i.jsx)(o.Tooltip, {
         shouldShow: U,
-        tooltipContentClassName: v.tooltipContent,
+        tooltipContentClassName: x.tooltipContent,
         text: B,
         children: (e) => {
             let { onClick: n, ...a } = e;
@@ -96,13 +96,13 @@ function I(e) {
                 ...a,
                 type: 'submit',
                 size: P,
-                color: O,
+                color: Z,
                 disabled: U,
                 submitting: T,
                 onClick: () => {
-                    M(!0), Z(), null == n || n();
+                    M(!0), O(), null == n || n();
                 },
-                'aria-label': x.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
+                'aria-label': v.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
                     buttonText: H,
                     applicationName: t.name
                 }),

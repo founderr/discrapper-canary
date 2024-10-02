@@ -22,8 +22,8 @@ var i = t(735250),
     A = t(585483),
     E = t(499254),
     N = t(541099),
-    x = t(827498),
-    v = t(496158),
+    v = t(827498),
+    x = t(496158),
     I = t(676161),
     g = t(660090),
     P = t(783097),
@@ -35,14 +35,14 @@ var i = t(735250),
     M = t(689938),
     y = t(32950),
     j = t(818931);
-let Z = 'placeholder',
-    O = [, , , , ,].fill(Z);
+let O = 'placeholder',
+    Z = [, , , , ,].fill(O);
 function H(e) {
     var n, t;
     let { channel: l, command: o, section: s, sectionName: c } = e,
         u = a.useCallback(() => {
             let e = N.Z.entrypoint();
-            E.y(x.ti.COMMAND),
+            E.y(v.ti.COMMAND),
                 (0, f.Mo)({
                     command: o,
                     location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -154,7 +154,7 @@ function B(e) {
     let { channel: n, command: t, sectionName: l } = e,
         o = (0, _.PL)(!0, !0),
         r = (0, _.LD)(n.guild_id, !0),
-        c = (0, v.D)(n),
+        c = (0, x.D)(n),
         [u, m] = a.useState(!1),
         p = a.useCallback(
             async (e) => {
@@ -175,7 +175,7 @@ function B(e) {
                             context: c,
                             sectionName: l
                         }),
-                        E.y(x.ti.COMMAND));
+                        E.y(v.ti.COMMAND));
                 } finally {
                     m(!1);
                 }
@@ -224,7 +224,7 @@ function D(e) {
                       className: j.commandContainer,
                       'aria-label': l,
                       children: t.map((e, t) =>
-                          e === Z
+                          e === O
                               ? (0, i.jsx)(U, {}, e + t)
                               : (0, i.jsx)(
                                     H,
@@ -296,7 +296,7 @@ function k(e) {
                   (0, i.jsx)(D, {
                       channel: t,
                       section: _,
-                      commands: p.current ? O : A,
+                      commands: p.current ? Z : A,
                       headerName: M.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
                       sectionName: o,
                       children:

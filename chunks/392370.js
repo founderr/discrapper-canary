@@ -27,8 +27,8 @@ var i = t(470079),
     A = t(631827),
     E = t(827498),
     N = t(783097),
-    x = t(689079),
-    v = t(665692);
+    v = t(689079),
+    x = t(665692);
 function I(e, n) {
     let t = f.Z.getScoreWithoutLoadingLatest(e.id);
     return f.Z.getScoreWithoutLoadingLatest(n.id) - t;
@@ -43,7 +43,7 @@ function P(e, n) {
 }
 function L(e) {
     let { channel: n, query: t, commandLimit: a, applicationLimit: o, searchesCommands: r = !0, searchesBots: s = !0, searchesActivities: C = !0 } = e;
-    t.startsWith(''.concat(v.GI)) && (t = t.substring(1));
+    t.startsWith(''.concat(x.GI)) && (t = t.substring(1));
     let {
             commands: h,
             commandSectionMap: f,
@@ -58,7 +58,7 @@ function L(e) {
                 let c = null !== (t = null === (e = r.result) || void 0 === e ? void 0 : e.sections) && void 0 !== t ? t : {},
                     d = null !== (i = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {},
                     u = [...Object.keys(c), ...Object.keys(d).filter((e) => !(e in c))];
-                l && u.push(x.bi.BUILT_IN);
+                l && u.push(v.bi.BUILT_IN);
                 let p = [],
                     _ = {};
                 for (let e of u) {
@@ -310,7 +310,7 @@ function L(e) {
 }
 function S(e) {
     let { channel: n, query: t, fetches: a = !0, pageLimit: l = 1 / 0, entrypoint: c } = e;
-    t.startsWith(''.concat(v.GI)) && (t = t.substring(1));
+    t.startsWith(''.concat(x.GI)) && (t = t.substring(1));
     let d = c === E._b.VOICE,
         [u, m] = i.useState(1),
         p = i.useRef(u);
@@ -383,7 +383,7 @@ function S(e) {
             let e = A.length;
             _ === h.M.FETCHED && e === p.current && e > 0 && e < f && e < l && A[e - 1].length > 0 && (p.current++, m((e) => e + 1));
         }, [_, l, A, f]),
-        x = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 let { query: n, page: t, guildId: i } = e;
                 C.yC({
@@ -405,12 +405,12 @@ function S(e) {
     return (
         i.useEffect(() => {
             if (!!a)
-                x({
+                v({
                     query: t,
                     page: u,
                     guildId: n.guild_id
                 });
-        }, [t, n.guild_id, x, u, a]),
+        }, [t, n.guild_id, v, u, a]),
         i.useEffect(() => {
             m(1);
         }, [n.guild_id, t]),

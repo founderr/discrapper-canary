@@ -22,8 +22,8 @@ var i = t(735250),
     A = t(675993),
     E = t(689079),
     N = t(689938),
-    x = t(804978),
-    v = t(413097);
+    v = t(804978),
+    x = t(413097);
 function I(e) {
     var n;
     let { channel: t, application: s, sectionName: c } = e,
@@ -35,21 +35,21 @@ function I(e) {
         { iconURL: T, name: M } = a.useMemo(
             () =>
                 (0, _.sl)(P, {
-                    fakeAppIconURL: v,
+                    fakeAppIconURL: x,
                     size: 84
                 }),
             [P]
         ),
         y = (0, d.PL)(!0, !0),
         j = (0, d.LD)(t.guild_id, !0),
-        Z = a.useMemo(() => (0, d.If)(t, P.id), [y, j, t, P.id]),
-        O = !Z.isGuildInstalled && !Z.isUserInstalled;
+        O = a.useMemo(() => (0, d.If)(t, P.id), [y, j, t, P.id]),
+        Z = !O.isGuildInstalled && !O.isUserInstalled;
     return (
         a.useEffect(() => {
-            O && d.ZP.queryInstallOnDemandApp(P.id, t.id);
-        }, [P.id, t.id, O]),
+            Z && d.ZP.queryInstallOnDemandApp(P.id, t.id);
+        }, [P.id, t.id, Z]),
         (0, i.jsxs)(r.ScrollerNone, {
-            className: x.container,
+            className: v.container,
             fade: !0,
             ref: S,
             role: 'region',
@@ -65,7 +65,7 @@ function I(e) {
                 null != T &&
                     (0, i.jsx)(C.Z, {
                         src: T,
-                        className: x.appIcon
+                        className: v.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
                 (0, i.jsx)(L, {
@@ -79,7 +79,7 @@ function I(e) {
                           channel: t,
                           application: P,
                           sectionName: c,
-                          installOnDemand: O,
+                          installOnDemand: Z,
                           setHasCommands: R
                       })
                     : null
