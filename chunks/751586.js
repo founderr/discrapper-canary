@@ -95,52 +95,53 @@ function v(e) {
           });
 }
 function N(e) {
-    let { src: t, original: n, placeholder: r, width: o, height: s, animated: u, children: c, responsive: d, renderLinkComponent: _, renderForwardComponent: h, maxWidth: m, maxHeight: T, shouldAnimate: N, onClose: O, shouldHideMediaOptions: R = !1, obscure: C = !1, ...y } = e,
-        { width: L, height: b } = (0, f.zp)(o, s),
-        D = l.tq && null != O;
+    let { src: t, original: n, placeholder: r, width: o, height: s, animated: u, children: c, responsive: d, renderLinkComponent: _, renderForwardComponent: h, maxWidth: m, maxHeight: T, shouldAnimate: N, srcIsAnimated: O, onClose: R, shouldHideMediaOptions: C = !1, obscure: y = !1, ...L } = e,
+        { width: b, height: D } = (0, f.zp)(o, s),
+        M = l.tq && null != R;
     a.useEffect(() => {
-        if (null != O)
+        if (null != R)
             return (
-                E.S.subscribe(I.CkL.MEDIA_MODAL_CLOSE, O),
+                E.S.subscribe(I.CkL.MEDIA_MODAL_CLOSE, R),
                 () => {
-                    E.S.unsubscribe(I.CkL.MEDIA_MODAL_CLOSE, O);
+                    E.S.unsubscribe(I.CkL.MEDIA_MODAL_CLOSE, R);
                 }
             );
-    }, [O]);
-    let M = R
+    }, [R]);
+    let P = C
         ? (e) => {
               e.stopPropagation(), e.preventDefault();
           }
-        : y.onContextMenu;
+        : L.onContextMenu;
     return (0, i.jsxs)('div', {
         className: g.wrapper,
         children: [
-            D ? (0, i.jsx)(S, { onClose: O }) : null,
+            M ? (0, i.jsx)(S, { onClose: R }) : null,
             (0, i.jsx)(A, {
-                isObscured: C,
+                isObscured: y,
                 src: t,
                 children: (e) =>
                     (0, i.jsx)(
-                        p.Z,
+                        p.ZP,
                         {
                             src: t,
                             placeholder: r,
                             shouldLink: !1,
                             width: o,
                             height: s,
-                            maxWidth: L,
-                            maxHeight: b,
+                            maxWidth: b,
+                            maxHeight: D,
                             children: c,
                             animated: !e && u,
                             autoPlay: !e,
                             responsive: d,
-                            onContextMenu: M,
-                            ...y
+                            srcIsAnimated: O,
+                            onContextMenu: P,
+                            ...L
                         },
                         t
                     )
             }),
-            null == n || R
+            null == n || C
                 ? null
                 : (0, i.jsx)(v, {
                       src: n,

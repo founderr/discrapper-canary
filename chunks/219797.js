@@ -41,28 +41,31 @@ var i = n(735250),
     g = n(689938),
     S = n(120131);
 function A(e) {
-    let t = e.item.originalItem;
+    var t;
+    let n = e.item.originalItem;
     return (0, I.Yi)({
         ...e,
-        alt: t.description,
+        alt: n.description,
         src: (0, f.q)({
-            proxyURL: t.proxy_url,
-            url: t.url
+            proxyURL: n.proxy_url,
+            url: n.url
         }),
-        original: t.url,
-        placeholder: t.placeholder,
-        placeholderVersion: t.placeholder_version,
+        original: n.url,
+        placeholder: n.placeholder,
+        placeholderVersion: n.placeholder_version,
+        srcIsAnimated: (0, h.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, T.J0y.IS_ANIMATED),
         renderForwardComponent: (0, d.s)(e.message, {
             type: 'attachment',
-            attachmentId: t.id
+            attachmentId: n.id
         })
     });
 }
 function v(e) {
-    let t = e.item.originalItem,
-        n = a.useCallback(() => {
+    var t;
+    let n = e.item.originalItem,
+        r = a.useCallback(() => {
             var e;
-            return (0, h.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, T.J0y.IS_CLIP)
+            return (0, h.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, T.J0y.IS_CLIP)
                 ? (0, i.jsxs)(l.DY, {
                       text: g.Z.Messages.CLIPS_BETA_TAG_HOVER,
                       className: S.clipPill,
@@ -79,24 +82,25 @@ function v(e) {
                       ]
                   })
                 : null;
-        }, [t]),
-        r = p.Z.toURLSafe(t.proxy_url);
-    return null == r
+        }, [n]),
+        o = p.Z.toURLSafe(n.proxy_url);
+    return null == o
         ? null
-        : (r.searchParams.append('format', 'webp'),
+        : (o.searchParams.append('format', 'webp'),
           (0, I.lV)({
               ...e,
-              alt: t.description,
-              poster: r.toString(),
-              fileSize: t.size,
-              fileName: (0, m.Z)(t),
-              src: t.url,
-              placeholder: t.placeholder,
-              placeholderVersion: t.placeholder_version,
-              renderOverlayContent: n,
+              alt: n.description,
+              poster: o.toString(),
+              fileSize: n.size,
+              fileName: (0, m.Z)(n),
+              src: n.url,
+              placeholder: n.placeholder,
+              placeholderVersion: n.placeholder_version,
+              srcIsAnimated: (0, h.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, T.J0y.IS_ANIMATED),
+              renderOverlayContent: r,
               renderForwardComponent: (0, d.s)(e.message, {
                   type: 'attachment',
-                  attachmentId: t.id
+                  attachmentId: n.id
               })
           }));
 }

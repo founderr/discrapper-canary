@@ -35,7 +35,7 @@ function T(e, t, n) {
 class g extends (r = o.PureComponent) {
     render() {
         let { appContext: e, isWindowFocused: t, ...n } = this.props;
-        return (0, a.jsx)(c.Z, {
+        return (0, a.jsx)(c.ZP, {
             ...n,
             onZoom: this.onZoom,
             onMouseEnter: this.onMouseEnter,
@@ -56,19 +56,20 @@ class g extends (r = o.PureComponent) {
             T(this, 'onZoom', (e, t) => {
                 let { zoomThumbnailPlaceholder: n, trigger: r } = t;
                 e.preventDefault();
-                let { alt: i, src: o, original: u, width: c, height: E, animated: f, children: T, renderLinkComponent: g, renderForwardComponent: S, isWindowFocused: A, shouldHideMediaOptions: v = !1 } = this.props,
-                    N = {
+                let { alt: i, src: o, original: u, width: c, height: E, animated: f, srcIsAnimated: T, children: g, renderLinkComponent: S, renderForwardComponent: A, isWindowFocused: v, shouldHideMediaOptions: N = !1 } = this.props,
+                    O = {
                         alt: i,
                         src: o,
                         original: null != u ? u : o,
                         width: c,
                         height: E,
                         animated: f,
-                        children: T,
+                        children: g,
                         zoomThumbnailPlaceholder: n,
-                        renderLinkComponent: g,
-                        renderForwardComponent: S,
-                        onContextMenu: v
+                        srcIsAnimated: T,
+                        renderLinkComponent: S,
+                        renderForwardComponent: A,
+                        onContextMenu: N
                             ? (e) => {
                                   e.stopPropagation(), e.preventDefault();
                               }
@@ -85,11 +86,11 @@ class g extends (r = o.PureComponent) {
                                 size: l.ModalSize.DYNAMIC,
                                 'aria-label': m.Z.Messages.IMAGE,
                                 children: (0, a.jsx)(d.y, {
-                                    ...N,
+                                    ...O,
                                     className: I.image,
-                                    shouldAnimate: A,
+                                    shouldAnimate: v,
                                     onClose: this.onCloseImage,
-                                    shouldHideMediaOptions: v
+                                    shouldHideMediaOptions: N
                                 })
                             }),
                         { modalKey: p.c },

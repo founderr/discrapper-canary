@@ -483,7 +483,7 @@ class Q extends (r = s.PureComponent) {
         if (null == i) return null;
         let m = (0, O.q)(i),
             T = null == l ? {} : (0, S.Cx)(l.map((e) => (0, S.nP)(e, E))),
-            g = I.Z.isAnimated({
+            g = I.ZP.isAnimated({
                 src: (0, O.q)(i),
                 original: i.url,
                 animated: !1
@@ -510,12 +510,13 @@ class Q extends (r = s.PureComponent) {
                 hiddenSpoilers: n,
                 placeholder: i.placeholder,
                 placeholderVersion: i.placeholderVersion,
+                srcIsAnimated: i.srcIsAnimated,
                 renderForwardComponent: E
             };
         m in T && (A.onClick = T[m]);
         let v = null !== (t = null === (e = i.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0]) && void 0 !== t ? t : '';
         'jpg' === v && (v = 'jpeg');
-        let N = null != i && !I.W.test(null == i ? void 0 : i.url),
+        let N = null != i && !I.uo.test(null == i ? void 0 : i.url) && !(i.srcIsAnimated && I.YG.test(null == i ? void 0 : i.url)),
             R = !0 !== this.props.isSearchResult && r && null != this.props.channelId && void 0 !== this.props.channelId && N && !X(i) && null != v;
         return (0, o.jsx)(h.h.Consumer, {
             children: (e) =>

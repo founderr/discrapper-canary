@@ -119,27 +119,28 @@ function v(e) {
     return [t, l.parse(n)];
 }
 function N(e) {
-    let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: i, targetHeight: o, format: s = null, quality: u = null, animated: c = !1 } = e,
-        [d, _] = v(t);
-    return null != s && (_.format = s), null != u && (_.quality = u), c && f.test(t) && (_.animated = !0), (i !== n || o !== r) && ((_.width = 0 | i), (_.height = 0 | o)), !a().isEmpty(_) && (d += '?' + l.stringify(_)), d;
+    let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: i, targetHeight: o, format: s = null, quality: u = null, animated: c = !1, srcIsAnimated: d = !1 } = e,
+        [_, E] = v(t);
+    return null != s && (E.format = s), null != u && (E.quality = u), c && d && f.test(t) && (E.animated = !0), (i !== n || o !== r) && ((E.width = 0 | i), (E.height = 0 | o)), !a().isEmpty(E) && (_ += '?' + l.stringify(E)), _;
 }
 function O(e) {
-    let { src: t, width: n, height: r, maxWidth: i, maxHeight: a, ratio: o = 1, format: s = null, quality: l = null, animated: u = !1 } = e,
-        c = n,
-        _ = r;
-    o < 1 && ((c = Math.round(n * o)), (_ = Math.round(r * o))), null != i && (c = Math.min(c, i)), null != a && (_ = Math.min(_, a));
-    let E = (0, d.Z)();
+    let { src: t, width: n, height: r, maxWidth: i, maxHeight: a, ratio: o = 1, format: s = null, quality: l = null, animated: u = !1, srcIsAnimated: c = !1 } = e,
+        _ = n,
+        E = r;
+    o < 1 && ((_ = Math.round(n * o)), (E = Math.round(r * o))), null != i && (_ = Math.min(_, i)), null != a && (E = Math.min(E, a));
+    let f = (0, d.Z)();
     return (
-        (c *= E),
+        (_ *= f),
         N({
             src: t,
             sourceWidth: n,
             sourceHeight: r,
-            targetWidth: c,
-            targetHeight: (_ *= E),
+            targetWidth: _,
+            targetHeight: (E *= f),
             format: s,
             quality: l,
-            animated: u
+            animated: u,
+            srcIsAnimated: c
         })
     );
 }
