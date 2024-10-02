@@ -22,8 +22,8 @@ var i = t(735250),
     A = t(675993),
     E = t(689079),
     N = t(689938),
-    v = t(804978),
-    x = t(413097);
+    x = t(804978),
+    v = t(413097);
 function I(e) {
     var n;
     let { channel: t, application: s, sectionName: c } = e,
@@ -31,25 +31,25 @@ function I(e) {
         P = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
         L = (0, _.ye)(P) ? g : A.Z,
         S = a.useRef(null),
-        [b, R] = a.useState(!1),
-        { iconURL: T, name: M } = a.useMemo(
+        [b, T] = a.useState(!1),
+        { iconURL: R, name: M } = a.useMemo(
             () =>
                 (0, _.sl)(P, {
-                    fakeAppIconURL: x,
+                    fakeAppIconURL: v,
                     size: 84
                 }),
             [P]
         ),
-        y = (0, d.PL)(!0, !0),
-        j = (0, d.LD)(t.guild_id, !0),
-        O = a.useMemo(() => (0, d.If)(t, P.id), [y, j, t, P.id]),
+        j = (0, d.PL)(!0, !0),
+        y = (0, d.LD)(t.guild_id, !0),
+        O = a.useMemo(() => (0, d.If)(t, P.id), [j, y, t, P.id]),
         Z = !O.isGuildInstalled && !O.isUserInstalled;
     return (
         a.useEffect(() => {
             Z && d.ZP.queryInstallOnDemandApp(P.id, t.id);
         }, [P.id, t.id, Z]),
         (0, i.jsxs)(r.ScrollerNone, {
-            className: v.container,
+            className: x.container,
             fade: !0,
             ref: S,
             role: 'region',
@@ -58,14 +58,14 @@ function I(e) {
                 (0, i.jsx)(f.Z, {
                     application: P,
                     name: M,
-                    iconURL: T,
+                    iconURL: R,
                     scrollerRef: S,
                     sectionName: c
                 }),
-                null != T &&
+                null != R &&
                     (0, i.jsx)(C.Z, {
-                        src: T,
-                        className: v.appIcon
+                        src: R,
+                        className: x.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
                 (0, i.jsx)(L, {
@@ -80,7 +80,7 @@ function I(e) {
                           application: P,
                           sectionName: c,
                           installOnDemand: Z,
-                          setHasCommands: R
+                          setHasCommands: T
                       })
                     : null
             ]

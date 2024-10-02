@@ -72,7 +72,7 @@ function K(e) {
         i = o.useMemo(() => r.map((e) => e.id), [r]),
         a = (0, d.e7)([k.ZP], () => k.ZP.getVoiceStates(t), [t]),
         s = (0, d.Wu)([w.Z], () => w.Z.getBlockedIDs()),
-        l = (0, p.aK)('guild-tooltip'),
+        l = (0, p.ci)('guild-tooltip'),
         u = c().flatMap(n, (t) => {
             var n;
             if (t === e.afkChannelId) return [];

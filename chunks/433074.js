@@ -82,7 +82,7 @@ function R(e) {
         },
         B = () => {
             if (null != y)
-                (0, m.L)({
+                (0, m.LO)({
                     applicationId: R,
                     customInstallUrl: y.custom_install_url,
                     installParams: y.install_params,
@@ -121,7 +121,7 @@ function R(e) {
             compactDisplay: 'short'
         }),
         Z = null !== (n = null === (t = y.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
-        V = (0, m.E)({
+        V = (0, m.Eb)({
             customInstallUrl: y.custom_install_url,
             installParams: y.install_params,
             integrationTypesConfig: y.integration_types_config

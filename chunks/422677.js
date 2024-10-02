@@ -1,55 +1,55 @@
-e.r(n),
-    e.d(n, {
+n.r(e),
+    n.d(e, {
         default: function () {
             return g;
         }
     }),
-    e(47120);
-var i = e(735250),
-    o = e(470079),
-    t = e(729594),
-    l = e(243814),
-    s = e(481060),
-    c = e(367907),
-    d = e(906732),
-    r = e(240991),
-    p = e(69580),
-    m = e(484459),
-    u = e(171368),
-    N = e(768581),
-    _ = e(63063),
-    A = e(591759),
-    C = e(556084),
-    h = e(981631),
-    x = e(689938),
-    I = e(516579),
-    R = e(367424);
+    n(47120);
+var i = n(735250),
+    o = n(470079),
+    t = n(729594),
+    l = n(243814),
+    s = n(481060),
+    c = n(367907),
+    d = n(906732),
+    r = n(240991),
+    p = n(69580),
+    m = n(484459),
+    u = n(171368),
+    N = n(768581),
+    _ = n(63063),
+    A = n(591759),
+    C = n(556084),
+    h = n(981631),
+    x = n(689938),
+    I = n(516579),
+    R = n(367424);
 let E = new Set(['Spacebar', ' ', 'Enter']);
 function g(a) {
-    let { channelId: n, transitionState: e, onClose: g } = a,
+    let { channelId: e, transitionState: n, onClose: g } = a,
         { analyticsLocations: M } = (0, d.ZP)(),
-        { fetched: T, applicationsShelf: j, installedIntegrations: L } = (0, C.j)({ channelId: n });
+        { fetched: T, applicationsShelf: j, installedIntegrations: L } = (0, C.j)({ channelId: e });
     o.useEffect(() => {
         (0, c.yw)(h.rMx.GDM_STARTER_APPS_VIEWED);
     }, []);
     let P = (a) => {
-            var n;
-            (0, m.Z)(null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : '', null == a ? void 0 : a.getAvatarURL(void 0, 80), { dispatchWait: !0 });
+            var e;
+            (0, m.Z)(null !== (e = null == a ? void 0 : a.id) && void 0 !== e ? e : '', null == a ? void 0 : a.getAvatarURL(void 0, 80), { dispatchWait: !0 });
         },
-        w = (a, n) => {
-            E.has(a.key) && P(n);
+        w = (a, e) => {
+            E.has(a.key) && P(e);
         },
         k = o.useCallback(
             (a) => {
-                let { application: n, location: e } = a;
-                if (null == e) return !1;
-                let { host: i, path: o } = t.parse(e, !0);
-                return (!!A.Z.isDiscordHostname(i) || window.location.host === i) && o === h.Z5c.OAUTH2_AUTHORIZED && (null != n && g(), !0);
+                let { application: e, location: n } = a;
+                if (null == n) return !1;
+                let { host: i, path: o } = t.parse(n, !0);
+                return (!!A.Z.isDiscordHostname(i) || window.location.host === i) && o === h.Z5c.OAUTH2_AUTHORIZED && (null != e && g(), !0);
             },
             [g]
         );
     return (0, i.jsxs)(s.ModalRoot, {
-        transitionState: e,
+        transitionState: n,
         size: s.ModalSize.DYNAMIC,
         className: I.modal,
         children: [
@@ -81,8 +81,8 @@ function g(a) {
                             className: I.applicationRowContainer,
                             children: T
                                 ? j.map((a) => {
-                                      if (null != L.find((n) => n.application.id === a.id)) return null;
-                                      let e = null != a.description ? (0, r.YP)(a.description) : null,
+                                      if (null != L.find((e) => e.application.id === a.id)) return null;
+                                      let n = null != a.description ? (0, r.parseBioReact)(a.description) : null,
                                           o = N.ZP.getApplicationIconURL({
                                               id: a.id,
                                               icon: a.icon,
@@ -114,19 +114,19 @@ function g(a) {
                                                                           variant: 'text-sm/normal',
                                                                           color: 'text-muted',
                                                                           lineClamp: 1,
-                                                                          children: e
+                                                                          children: n
                                                                       })
                                                               ]
                                                           }),
                                                           (0, i.jsx)(s.Button, {
                                                               type: 'button',
                                                               innerClassName: I.applicationButtonHack,
-                                                              onClick: (e) => {
-                                                                  e.stopPropagation(),
+                                                              onClick: (n) => {
+                                                                  n.stopPropagation(),
                                                                       (0, p.openOAuth2Modal)({
                                                                           clientId: a.id,
                                                                           scopes: [l.x.APPLICATIONS_COMMANDS],
-                                                                          channelId: n,
+                                                                          channelId: e,
                                                                           disableGuildSelect: !0,
                                                                           callback: k
                                                                       });
@@ -149,7 +149,7 @@ function g(a) {
                                                     className: I.applicationRow,
                                                     onClick: () => {
                                                         (0, u.openUserProfileModal)({
-                                                            channelId: n,
+                                                            channelId: e,
                                                             userId: c.id,
                                                             sourceAnalyticsLocations: M,
                                                             analyticsLocation: { section: h.jXE.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL }

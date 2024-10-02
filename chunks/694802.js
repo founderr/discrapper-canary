@@ -24,7 +24,7 @@ function u(e) {
                         height: 16
                     }),
                     (0, s.jsx)(o.Heading, {
-                        color: 'always-white',
+                        color: 'text-normal',
                         variant: 'heading-sm/medium',
                         children: t
                     })

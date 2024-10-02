@@ -100,12 +100,12 @@ function E() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: N, onMouseDown: S, disableBannerAnimation: x, 'aria-expanded': v, 'aria-controls': Z, guild: T, guildBanner: b, animationOverlayHeight: A, children: M, headerClassName: R, communityInfoVisible: L, hasSubheader: y } = e,
+    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: N, onMouseDown: S, disableBannerAnimation: v, 'aria-expanded': x, 'aria-controls': Z, guild: T, guildBanner: b, animationOverlayHeight: A, children: M, headerClassName: R, communityInfoVisible: L, hasSubheader: y } = e,
         P = T.hasFeature(f.oNc.ANIMATED_BANNER),
         O = (0, u.Z)(T),
         j = !O && T.hasCommunityInfoSubheader(),
         D = !O && L,
-        w = (0, h.xR)(b) && P && !x,
+        w = (0, h.xR)(b) && P && !v,
         [G, U] = l.useState(!1),
         k = l.useRef(),
         B = l.useRef(null),
@@ -141,7 +141,7 @@ t.ZP = l.memo(function (e) {
                         className: a()(r, {
                             [g.container]: !0,
                             [g.clickable]: null != s,
-                            [g.selected]: null != s && v,
+                            [g.selected]: null != s && x,
                             [g.hasBanner]: F(),
                             [g.bannerVisible]: t,
                             [e]: t,
@@ -172,7 +172,7 @@ t.ZP = l.memo(function (e) {
                                                 (0, i.jsx)(c.Clickable, {
                                                     className: g.headerButton,
                                                     'aria-controls': Z,
-                                                    'aria-expanded': v,
+                                                    'aria-expanded': x,
                                                     focusProps: {
                                                         ringTarget: B,
                                                         offset: 4

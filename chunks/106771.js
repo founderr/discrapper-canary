@@ -20,7 +20,7 @@ function h(e) {
     var n;
     let { command: t, application: h, onClick: f, query: A, searchResultsPosition: E } = e,
         N = s.Sb.useSetting(),
-        v = a.useCallback(
+        x = a.useCallback(
             (e) => {
                 if ((0, d.BQ)(h) && N) {
                     let n = h instanceof c.Z ? h : c.Z.createFromServer(h);
@@ -34,7 +34,7 @@ function h(e) {
             },
             [h, N]
         ),
-        { iconURL: x, name: I, description: g } = a.useMemo(() => (0, d.sl)(h, { fakeAppIconURL: C }), [h]),
+        { iconURL: v, name: I, description: g } = a.useMemo(() => (0, d.sl)(h, { fakeAppIconURL: C }), [h]),
         P = a.useMemo(() => {
             var e;
             let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : g;
@@ -50,12 +50,12 @@ function h(e) {
         className: _.clickable,
         innerRef: (e) => (L.current = e),
         onClick: f,
-        onContextMenu: v,
+        onContextMenu: x,
         children: (0, i.jsxs)(l.FocusBlock, {
             className: _.focusBlock,
             children: [
                 (0, i.jsx)(m.Z, {
-                    src: x,
+                    src: v,
                     className: _.icon,
                     'aria-hidden': !0,
                     rendersPlaceholder: !0

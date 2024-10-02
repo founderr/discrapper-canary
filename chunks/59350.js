@@ -48,8 +48,8 @@ var l = t(735250),
     F = t(290511),
     z = t(981631),
     V = t(176505),
-    Y = t(490897),
-    q = t(689938),
+    q = t(490897),
+    Y = t(689938),
     X = t(302137),
     Q = t(784237),
     K = t(554034);
@@ -84,7 +84,7 @@ function ee(e) {
     a.useEffect(() => {
         (0, T.Z)(i.id, i.getAvatarURL(t.id, (0, _.getAvatarSize)(J)), { guildId: t.id });
     }, []);
-    let b = (0, E.YP)(null == I ? void 0 : I.bio),
+    let b = (0, E.parseBioReact)(null == I ? void 0 : I.bio),
         R = L.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
     return (0, l.jsxs)('div', {
         className: X.profile,
@@ -92,12 +92,12 @@ function ee(e) {
             (0, l.jsx)(_.Heading, {
                 variant: 'heading-md/semibold',
                 color: 'header-primary',
-                children: q.Z.Messages.CUSTOMIZE_COMMUNITY_PROFILE
+                children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_PROFILE
             }),
             (0, l.jsx)(_.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
-                children: q.Z.Messages.CUSTOMIZE_COMMUNITY_PROFILE_DESCRIPTION
+                children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_PROFILE_DESCRIPTION
             }),
             (0, l.jsxs)('div', {
                 className: X.profileCard,
@@ -132,7 +132,7 @@ function ee(e) {
                                     variant: 'text-xs/semibold',
                                     color: 'text-muted',
                                     className: X.title,
-                                    children: q.Z.Messages.ROLES
+                                    children: Y.Z.Messages.ROLES
                                 }),
                                 (0, l.jsx)('div', {
                                     className: X.roles,
@@ -217,7 +217,7 @@ function en(e) {
                 t.isNew &&
                     (0, l.jsx)(_.TextBadge, {
                         color: (0, N.Lq)(z.Ilk.BRAND_260),
-                        text: q.Z.Messages.NEW,
+                        text: Y.Z.Messages.NEW,
                         className: X.newBadge
                     }),
                 (0, l.jsxs)(_.Heading, {
@@ -317,7 +317,7 @@ function et(e) {
                 t.isNew &&
                     (0, l.jsx)(_.TextBadge, {
                         color: (0, N.Lq)(z.Ilk.BRAND_260),
-                        text: q.Z.Messages.NEW,
+                        text: Y.Z.Messages.NEW,
                         className: X.newBadge
                     }),
                 (0, l.jsxs)(_.Heading, {
@@ -370,7 +370,7 @@ function el(e) {
         d = a.useCallback(() => {
             (0, b.uL)(z.Z5c.CHANNEL(n, V.oC.CHANNEL_BROWSER)), null == t || t();
         }, [n, t]),
-        h = (0, u.e7)([R.ZP], () => R.ZP.hasUnread(n, Y.W.GUILD_ONBOARDING_QUESTION)),
+        h = (0, u.e7)([R.ZP], () => R.ZP.hasUnread(n, q.W.GUILD_ONBOARDING_QUESTION)),
         { onboardingPromptsRaw: x, newOnboardingPrompts: g, onboardingPromptsWithNewAnswers: E, newAnswersCount: Z, onboardingPrompts: v } = (0, D.Z)(n);
     a.useEffect(() => {
         if ((null == s ? void 0 : s.id) != null) !I.Z.isFullServerPreview(s.id) && (P.Z.shouldFetchPrompts(s.id) || h) && (0, w.eM)(s.id);
@@ -379,7 +379,7 @@ function el(e) {
             if ((null == s ? void 0 : s.id) != null) {
                 if (!I.Z.isFullServerPreview(s.id))
                     return () => {
-                        (0, f.Ju)(s.id, Y.W.GUILD_ONBOARDING_QUESTION, P.Z.ackIdForGuild(s.id)), M.Z.updateOnboardingResponses(s.id);
+                        (0, f.Ju)(s.id, q.W.GUILD_ONBOARDING_QUESTION, P.Z.ackIdForGuild(s.id)), M.Z.updateOnboardingResponses(s.id);
                     };
             }
         }, [null == s ? void 0 : s.id]);
@@ -428,11 +428,11 @@ function el(e) {
                     (0, l.jsx)(_.Heading, {
                         className: X.emptyHeader,
                         variant: 'heading-md/semibold',
-                        children: q.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_HEADER
+                        children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_HEADER
                     }),
                     (0, l.jsx)(_.Text, {
                         variant: 'text-sm/medium',
-                        children: q.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_SUBHEADER.format({ onBrowseChannels: d })
+                        children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_SUBHEADER.format({ onBrowseChannels: d })
                     })
                 ]
             })
@@ -452,7 +452,7 @@ function el(e) {
                                     children: (0, l.jsx)(_.Heading, {
                                         variant: 'heading-md/semibold',
                                         color: 'header-primary',
-                                        children: q.Z.Messages.ONBOARDING_PROMPT_ANSWERS_NEW.format({ count: g.length + Z })
+                                        children: Y.Z.Messages.ONBOARDING_PROMPT_ANSWERS_NEW.format({ count: g.length + Z })
                                     })
                                 }),
                                 g.map(T),
@@ -468,12 +468,12 @@ function el(e) {
                                         (0, l.jsx)(_.Heading, {
                                             variant: 'heading-md/semibold',
                                             color: 'header-primary',
-                                            children: q.Z.Messages.ONBOARDING_PROMPT_QUESTIONS_HEADER.format({ count: v.length })
+                                            children: Y.Z.Messages.ONBOARDING_PROMPT_QUESTIONS_HEADER.format({ count: v.length })
                                         }),
                                         (0, l.jsx)(_.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
-                                            children: q.Z.Messages.ONBOARDING_PROMPT_MEMBER_DESCRIPTION
+                                            children: Y.Z.Messages.ONBOARDING_PROMPT_MEMBER_DESCRIPTION
                                         })
                                     ]
                                 }),

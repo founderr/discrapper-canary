@@ -25,8 +25,8 @@ var i,
     E = n(430824),
     N = n(306680),
     S = n(944486),
-    x = n(938475),
-    v = n(585483),
+    v = n(938475),
+    x = n(585483),
     Z = n(63063),
     T = n(51596),
     b = n(823385),
@@ -87,10 +87,10 @@ let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
             category: C.Z.getChannel(t.parent_id)
         };
     })(D),
-    G = c.ZP.connectStores([x.ZP], (e) => {
+    G = c.ZP.connectStores([v.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
-        return { voiceStates: x.ZP.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: v.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(D),
     U = c.ZP.connectStores([I.default], (e) => {
         let { guild: t } = e;
@@ -197,7 +197,7 @@ class H extends r.PureComponent {
                 });
     }
     focusNode(e) {
-        v.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        x.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);

@@ -17,7 +17,7 @@ var a = t(735250),
     m = t(734888);
 function C(e) {
     var n, t, l, C;
-    let { application: p, className: f, childrenClassName: h, showAdd: x, showMutualGuilds: I, showPrimaryCategory: R, children: T, onView: b, guildCountPosition: A = 'top', subheaderTextVariant: v = 'text-sm/normal', mutualGuildShownMax: E, guildIconSize: P, source: N } = e,
+    let { application: p, className: f, childrenClassName: h, showAdd: x, showMutualGuilds: I, showPrimaryCategory: R, children: b, onView: T, guildCountPosition: A = 'top', subheaderTextVariant: v = 'text-sm/normal', mutualGuildShownMax: E, guildIconSize: P, source: N } = e,
         j = (0, r.JA)(p.id),
         S = o.ZP.getApplicationIconURL({
             id: p.id,
@@ -128,10 +128,10 @@ function C(e) {
                             : null
                     ]
                 }),
-                null != T || null != h
+                null != b || null != h
                     ? (0, a.jsx)('div', {
                           className: s()(h, m.__invalid_children),
-                          children: T
+                          children: b
                       })
                     : null,
                 U
@@ -142,10 +142,10 @@ function C(e) {
                     : null
             ]
         });
-    return null != b
+    return null != T
         ? (0, a.jsx)(c.Clickable, {
               tag: 'li',
-              onClick: () => b({ mutualGuilds: M }),
+              onClick: () => T({ mutualGuilds: M }),
               className: s()(f, m.listing, m.clickable),
               ...j,
               children: w

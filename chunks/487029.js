@@ -25,7 +25,7 @@ var i = n(735250),
     E = n(710111),
     N = n(601539);
 function S(e) {
-    let { guildId: t, channel: n, width: S, height: x, keepOpen: v, interactive: Z = !0, analyticsSource: T, onClose: b } = e,
+    let { guildId: t, channel: n, width: S, height: v, keepOpen: x, interactive: Z = !0, analyticsSource: T, onClose: b } = e,
         A = (function (e) {
             let [t, n] = (0, a.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites()]);
             return l.useMemo(() => {
@@ -61,9 +61,9 @@ function S(e) {
         l.useEffect(
             () => () => {
                 let e = R.current;
-                !v && null != e && j(e);
+                !x && null != e && j(e);
             },
-            [v, j]
+            [x, j]
         ),
         (0, c.Z)(
             {
@@ -122,10 +122,10 @@ function S(e) {
               value: O,
               children: (0, i.jsx)(C.Z, {
                   wheelWidth: S,
-                  wheelHeight: x,
+                  wheelHeight: v,
                   itemWidth: 96,
                   itemHeight: 52,
-                  showDeadZoneIndicator: !v,
+                  showDeadZoneIndicator: !x,
                   activeItem: L,
                   onItemSelect: w,
                   onItemAction: G,

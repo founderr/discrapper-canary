@@ -14,7 +14,7 @@ var i = n(735250),
     m = n(490897),
     g = n(872356);
 let C = (0, c.B)(function (e) {
-    let { guild: t, selectedChannelId: r, position: c, disableManageChannels: C, sorting: I, sortingType: E, sortingPosition: N, connectChannelDragSource: S, connectChannelDropTarget: x, tabIndex: v } = e,
+    let { guild: t, selectedChannelId: r, position: c, disableManageChannels: C, sorting: I, sortingType: E, sortingPosition: N, connectChannelDragSource: S, connectChannelDropTarget: v, tabIndex: x } = e,
         Z = (0, s.e7)([u.Z, d.ZP], () => {
             let e = d.ZP.getDirectoryChannelIds(t.id);
             return 0 === e.length ? null : u.Z.getChannel(e[0]);
@@ -56,16 +56,16 @@ let C = (0, c.B)(function (e) {
                 children: [
                     (0, i.jsx)(p.eP, {
                         channel: Z,
-                        tabIndex: v
+                        tabIndex: x
                     }),
                     (0, i.jsx)(p.hR, {
                         channel: Z,
                         disableManageChannels: C,
-                        tabIndex: v
+                        tabIndex: x
                     })
                 ]
             })
         });
-    return A && (y = x(S(y))), y;
+    return A && (y = v(S(y))), y;
 });
 t.Z = C;

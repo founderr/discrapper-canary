@@ -15,7 +15,7 @@ var r = n(735250),
     _ = n(554034);
 function E(e) {
     let { userBio: t, className: n, animateOnHover: a = !1, isHovering: E = !1, lineClamp: f = 6, setLineClamp: h = !0, textColor: p, userId: m } = e,
-        I = i.useMemo(() => ((0, u.Z)(m) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.YP)(t)), [m, t]);
+        I = i.useMemo(() => ((0, u.Z)(m) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.parseBioReact)(t)), [m, t]);
     return null == I
         ? null
         : (0, r.jsx)('div', {

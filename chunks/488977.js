@@ -22,7 +22,7 @@ var a = t(120356),
 function A(e) {
     let { application: n, className: t, sectionName: a } = e,
         A = (0, p.L1)(n),
-        E = (0, u.E)(A),
+        E = (0, u.Eb)(A),
         N = {
             location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: n.id,
@@ -45,7 +45,7 @@ function A(e) {
                               label: h.Z.Messages.APPLICATION_ADD_BUTTON,
                               action: () => {
                                   null == A.customInstallUrl && (0, r.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, N),
-                                      (0, u.L)({
+                                      (0, u.LO)({
                                           ...A,
                                           oauth2Callback: (e) => {
                                               let { location: n } = e;

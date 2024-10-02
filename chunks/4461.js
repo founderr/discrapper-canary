@@ -9,7 +9,7 @@ function l(e, n) {
     let t = a.useMemo(
         () =>
             null != e &&
-            (0, i.E)({
+            (0, i.Eb)({
                 customInstallUrl: e.custom_install_url,
                 installParams: e.install_params,
                 integrationTypesConfig: e.integration_types_config
@@ -21,7 +21,7 @@ function l(e, n) {
         install: a.useCallback(
             (t) => {
                 if (null != e)
-                    (0, i.L)({
+                    (0, i.LO)({
                         applicationId: e.id,
                         customInstallUrl: e.custom_install_url,
                         installParams: e.install_params,

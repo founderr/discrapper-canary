@@ -24,8 +24,8 @@ var i = n(735250),
     E = n(921944),
     N = n(49898),
     S = n(46140),
-    x = n(689938),
-    v = n(55869);
+    v = n(689938),
+    x = n(55869);
 function Z(e, t) {
     let n = (0, d.a)({ location: 'discovery_button' }),
         i = window.location.pathname.startsWith(C.Z5c.GUILD_DISCOVERY),
@@ -47,7 +47,7 @@ function Z(e, t) {
 }
 let T = l.forwardRef(function (e, t) {
     let { selected: n, className: r, onClick: o } = e,
-        f = (0, d.v)({ location: 'guild_discovery_button' }) ? x.Z.Messages.DISCOVER : x.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
+        f = (0, d.v)({ location: 'guild_discovery_button' }) ? v.Z.Messages.DISCOVER : v.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
         _ = p.d.getState().selectedTab,
         m = (0, c.Z)('discovery_button'),
         C = m ? I.Gj.Clans : I.Hk,
@@ -62,7 +62,7 @@ let T = l.forwardRef(function (e, t) {
                     width: 12,
                     height: 12
                 },
-                lowerBadge: A ? (0, i.jsx)('div', { className: v.guildNotif }) : void 0
+                lowerBadge: A ? (0, i.jsx)('div', { className: x.guildNotif }) : void 0
             }),
             [A]
         );

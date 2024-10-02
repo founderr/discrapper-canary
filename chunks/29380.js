@@ -23,7 +23,7 @@ function h(e) {
         N = a.useCallback(() => {
             s.y(c.ti.ACTIVITY);
         }, []),
-        { submitting: v, wasSubmitting: x } = (0, m.Z)({
+        { submitting: x, wasSubmitting: v } = (0, m.Z)({
             applicationId: t.id,
             channelId: n.id,
             launchingComponentId: E,
@@ -38,7 +38,7 @@ function h(e) {
         {
             onActivityItemSelected: S,
             buttonColor: b,
-            buttonText: R
+            buttonText: T
         } = (0, p.P7)({
             channel: n,
             application: t,
@@ -47,15 +47,15 @@ function h(e) {
             commandName: L,
             autoDismissOnClick: P === o.JS.LEAVE,
             launchingComponentId: E,
-            submitting: null != x ? x : v
+            submitting: null != v ? v : x
         }),
-        { disabled: T, reason: M } = (0, d.Z)({
+        { disabled: R, reason: M } = (0, d.Z)({
             channelId: n.id,
             application: t,
             activityAction: P
         });
     return (0, i.jsx)(l.Tooltip, {
-        shouldShow: T,
+        shouldShow: R,
         tooltipContentClassName: C.tooltipContent,
         text: M,
         children: (e) => {
@@ -65,16 +65,16 @@ function h(e) {
                 type: 'submit',
                 size: A,
                 color: b,
-                disabled: T,
+                disabled: R,
                 submitting: I,
                 onClick: () => {
                     g(!0), S(), null == n || n();
                 },
                 'aria-label': _.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
-                    buttonText: R,
+                    buttonText: T,
                     applicationName: t.name
                 }),
-                children: R
+                children: T
             });
         }
     });

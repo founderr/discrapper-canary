@@ -35,20 +35,20 @@ var i,
     E = n(199902),
     N = n(430824),
     S = n(496675),
-    x = n(914010),
-    v = n(281029),
+    v = n(914010),
+    x = n(281029),
     Z = n(981631),
     T = n(689938),
     b = n(872356);
 function A(e, t, n) {
-    return null != t && !!t && !(0, v.ig)(n, e.type);
+    return null != t && !!t && !(0, x.ig)(n, e.type);
 }
 function M(e, t) {
     return null == t ? b.containerDefault : e > t ? b.containerDragAfter : b.containerDragBefore;
 }
 function R(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
-    if ((0, d.e7)([S.Z, x.Z], () => n || x.Z.getGuildId() === Z.I_8 || (!S.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !S.Z.can(Z.Plq.MANAGE_ROLES, t) && !S.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, I.r8)(t.type) && !S.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !S.Z.can(Z.Plq.CONNECT, t)) || !I.dF.has(t.type))) return null;
+    if ((0, d.e7)([S.Z, v.Z], () => n || v.Z.getGuildId() === Z.I_8 || (!S.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !S.Z.can(Z.Plq.MANAGE_ROLES, t) && !S.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, I.r8)(t.type) && !S.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !S.Z.can(Z.Plq.CONNECT, t)) || !I.dF.has(t.type))) return null;
     function a() {
         p.ZP.open(t.id);
     }
@@ -80,9 +80,9 @@ function L(e) {
         p = (0, d.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         m = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
         I = (0, d.e7)([S.Z], () => (0, _.b)(S.Z, c, t, p)),
-        x = (0, d.e7)([S.Z], () => (S.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? T.Z.Messages.CREATE_INSTANT_INVITE : T.Z.Messages.INVITE_TO_SERVER));
+        v = (0, d.e7)([S.Z], () => (S.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? T.Z.Messages.CREATE_INSTANT_INVITE : T.Z.Messages.INVITE_TO_SERVER));
     if (l || !I) return null;
-    function v() {
+    function x() {
         if (null != c) {
             let e = E.Z.getAllActiveStreams().filter((e) => e.state !== Z.jm8.ENDED && e.channelId === t.id);
             (0, h.openModalLazy)(async () => {
@@ -112,14 +112,14 @@ function L(e) {
                 children: (0, s.jsx)('div', { children: A })
             })),
         (0, s.jsx)(h.Tooltip, {
-            text: x,
+            text: v,
             children: (e) =>
                 (0, s.jsx)(h.Clickable, {
                     className: u()(b.iconItem, a ? b.alwaysShown : void 0, o ? b.iconWithChannelInfo : b.iconNoChannelInfo),
                     ...e,
-                    onClick: v,
+                    onClick: x,
                     tabIndex: r,
-                    'aria-label': x,
+                    'aria-label': v,
                     children: A
                 })
         })

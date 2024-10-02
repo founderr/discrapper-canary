@@ -368,7 +368,7 @@ let i = {
         inlineRequire: () => n(35260).Z
     },
     LeagueOfLegendsLifecycleManager: {
-        actions: ['RUNNING_GAMES_CHANGE'],
+        actions: ['RUNNING_GAMES_CHANGE', 'POST_CONNECTION_OPEN'],
         inlineRequire: () => n(614571).Z,
         neverLoadBeforeConnectionOpen: !0
     },

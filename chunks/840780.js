@@ -19,8 +19,8 @@ var i = n(735250),
     E = n(513202),
     N = n(835473),
     S = n(933557),
-    x = n(194082),
-    v = n(311352),
+    v = n(194082),
+    x = n(311352),
     Z = n(436774),
     T = n(594190),
     b = n(925329),
@@ -194,9 +194,9 @@ class ec extends l.PureComponent {
             children: [
                 e
                     ? (0, i.jsx)(P.Z, { title: r })
-                    : (0, i.jsx)(x.ZP, {
-                          look: x.ZP.Looks.GRAY,
-                          size: x.ZP.Sizes.SMALL,
+                    : (0, i.jsx)(v.ZP, {
+                          look: v.ZP.Looks.GRAY,
+                          size: v.ZP.Sizes.SMALL,
                           className: ea.liveIndicator
                       }),
                 (0, i.jsxs)('div', {
@@ -318,7 +318,7 @@ class ec extends l.PureComponent {
             }),
             es(this, 'renderClipsButton', () => {
                 let { stream: e } = this.props;
-                return null == e ? null : (0, i.jsx)(v.Z, {});
+                return null == e ? null : (0, i.jsx)(x.Z, {});
             }),
             es(this, 'handleApplicationLinkClick', () => {
                 var e;
@@ -368,21 +368,21 @@ t.Z = (0, _.Z)(function (e) {
                 : ''
         ]),
         E = (0, c.e7)([W.Z], () => (0, L.Z)(W.Z) && (0, $.isWindows)()),
-        x = (0, c.e7)([Y.Z], () => (null != r ? Y.Z.findActivity(r, (e) => e.type === ei.IIU.PLAYING) : null)),
-        v = null != h && h.ownerId === r && h.state !== ei.jm8.ENDED,
+        v = (0, c.e7)([Y.Z], () => (null != r ? Y.Z.findActivity(r, (e) => e.type === ei.IIU.PLAYING) : null)),
+        x = null != h && h.ownerId === r && h.state !== ei.jm8.ENDED,
         Z = (0, c.e7)([Q.default, K.Z], () => (null != u ? (0, S.F6)(u, Q.default, K.Z) : void 0)),
         b = (0, w.Z)();
     return (0, i.jsx)(ec, {
         ...l,
         guildId: n,
         canGoLive: E,
-        activity: x,
+        activity: v,
         embeddedActivity: _,
         userId: r,
         runningGame: a,
         application: I,
         useReducedMotion: f,
-        isStreaming: v,
+        isStreaming: x,
         channel: u,
         canStream: g,
         stream: h,

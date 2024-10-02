@@ -108,8 +108,8 @@ let _ = (e, t) => {
     };
 };
 t.Z = l.memo(function (e) {
-    let { wheelWidth: t, wheelHeight: n, itemWidth: m, itemHeight: g, showDeadZoneIndicator: C, activeItem: I, onItemSelect: E, onItemAction: N, interactive: S = !0, children: x } = e,
-        v = l.useRef(null),
+    let { wheelWidth: t, wheelHeight: n, itemWidth: m, itemHeight: g, showDeadZoneIndicator: C, activeItem: I, onItemSelect: E, onItemAction: N, interactive: S = !0, children: v } = e,
+        x = l.useRef(null),
         Z = l.useRef([]),
         T = l.useRef(!1),
         b = l.useRef(null),
@@ -119,7 +119,7 @@ t.Z = l.memo(function (e) {
             y: 0
         }),
         y = Math.abs(R.x) + Math.abs(R.y) > 0,
-        P = l.useMemo(() => a().chunk(x, p), [x]),
+        P = l.useMemo(() => a().chunk(v, p), [v]),
         O = l.useCallback(
             (e, t) => {
                 null == Z.current[A] ? (Z.current[A] = []) : (Z.current[A][t] = e);
@@ -171,8 +171,8 @@ t.Z = l.memo(function (e) {
         k = l.useMemo(
             () =>
                 (0, r.throttle)((e) => {
-                    if (null == v.current) return;
-                    let i = v.current.getBoundingClientRect(),
+                    if (null == x.current) return;
+                    let i = x.current.getBoundingClientRect(),
                         l = i.left + i.width / 2,
                         r = {
                             x: l,
@@ -212,7 +212,7 @@ t.Z = l.memo(function (e) {
             () =>
                 P[A].map((e, l) => {
                     let r = h[l];
-                    if (null == r) throw Error('Too many items supplied '.concat(x.length, ' expected max of ').concat(h.length));
+                    if (null == r) throw Error('Too many items supplied '.concat(v.length, ' expected max of ').concat(h.length));
                     let a = f(r.x, t, m),
                         s = f(r.y, n, g);
                     return (0, i.jsx)(
@@ -231,7 +231,7 @@ t.Z = l.memo(function (e) {
                         l
                     );
                 }),
-            [P, A, t, m, n, g, x.length, O]
+            [P, A, t, m, n, g, v.length, O]
         );
     return (0, i.jsx)(s.Clickable, {
         className: u.chatWheelMouseInput,
@@ -239,7 +239,7 @@ t.Z = l.memo(function (e) {
         onWheel: B,
         onClick: U,
         children: (0, i.jsxs)('div', {
-            ref: v,
+            ref: x,
             className: u.chatWheel,
             style: {
                 width: t,

@@ -24,8 +24,8 @@ var i = n(735250),
     E = n(594174),
     N = n(855981),
     S = n(55543),
-    x = n(626135),
-    v = n(768581),
+    v = n(626135),
+    x = n(768581),
     Z = n(358085),
     T = n(998502),
     b = n(379164),
@@ -39,7 +39,7 @@ function O() {
     let { analyticsLocations: e, sourceAnalyticsLocations: t } = (0, d.ZP)(u.Z.PREMIUM_UPSELL_TOOLTIP);
     return (
         l.useEffect(() => {
-            x.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
+            v.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: R.cd.GUILD_CAP_INLINE_INVITE_MODAL,
                 location: { page: M.ZY5.NATIVE_INVITE_MODAL },
                 location_stack: t
@@ -140,7 +140,7 @@ function w(e) {
         !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
     }, []);
     let S = (0, m.Dt)(),
-        { analyticsLocations: x } = (0, d.ZP)(u.Z.INVITE_MODAL);
+        { analyticsLocations: v } = (0, d.ZP)(u.Z.INVITE_MODAL);
     if (null == _) return null;
     if (_.state === M.r2o.EXPIRED || _.state === M.r2o.BANNED || _.state === M.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
     if (null == _.channel) return null;
@@ -154,7 +154,7 @@ function w(e) {
     if (null != U) (t = null == j ? void 0 : j.name), (n = I.Z.createFromServer(U).getCoverImageURL(1024));
     else if (null != j)
         (t = j.name),
-            (n = v.ZP.getGuildSplashURL({
+            (n = x.ZP.getGuildSplashURL({
                 id: j.id,
                 splash: j.splash
             }));
@@ -164,7 +164,7 @@ function w(e) {
     return (
         V && (F = L.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON),
         (0, i.jsx)(d.Gt, {
-            value: x,
+            value: v,
             children: (0, i.jsxs)(o.ModalRoot, {
                 size: o.ModalSize.DYNAMIC,
                 'aria-labelledby': S,

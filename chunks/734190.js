@@ -18,8 +18,8 @@ var i = n(735250),
     E = n(135724),
     N = n(25601),
     S = n(207055),
-    x = n(981631),
-    v = n(124368),
+    v = n(981631),
+    x = n(124368),
     Z = n(689938),
     T = n(872356),
     b = n(206197),
@@ -51,7 +51,7 @@ t.Z = l.memo(function (e) {
         D = (0, o.e7)([p.Z], () => p.Z.isMuted(t.id)),
         w = l.useCallback(
             (e) => {
-                (0, f.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
+                (0, f.ok)(t, !e.shiftKey, x.on.CHANNEL_LIST);
             },
             [t]
         ),
@@ -154,7 +154,7 @@ t.Z = l.memo(function (e) {
                 collapsed: !A,
                 collapsedMax: 6,
                 voiceStates: y,
-                location: x.Sbl.GUILD_CHANNEL_LIST
+                location: v.Sbl.GUILD_CHANNEL_LIST
             })
         ]
     });

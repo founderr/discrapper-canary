@@ -24,19 +24,19 @@ var i = t(735250),
     A = t(399654),
     E = t(844439),
     N = t(254711),
-    v = t(213459),
-    x = t(10718),
+    x = t(213459),
+    v = t(10718),
     I = t(895924),
     g = t(148958),
     P = t(541099),
     L = t(827498),
     S = t(87005),
     b = t(106066),
-    R = t(783097),
-    T = t(695676),
+    T = t(783097),
+    R = t(695676),
     M = t(98880),
-    y = t(804307),
-    j = t(888617),
+    j = t(804307),
+    y = t(888617),
     O = t(561160),
     Z = t(41558),
     H = t(105862),
@@ -65,16 +65,16 @@ function Y(e) {
     let { channel: n, entrypoint: t, searchQuery: l, setSearchQuery: o, setScroller: r, isScrollCloseToBottom: s } = e,
         u = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []),
         _ = t === L._b.TEXT && !n.isPrivate(),
-        C = (0, R.Yn)(t),
-        h = !(0, R.Yn)(t),
+        C = (0, T.Yn)(t),
+        h = !(0, T.Yn)(t),
         f = t === L._b.TEXT,
         [A, E] = $(!0),
-        [N, v] = $(_),
-        [x, I] = $(C),
+        [N, x] = $(_),
+        [v, I] = $(C),
         [g, P] = $(h),
-        S = A && N && x && g,
+        S = A && N && v && g,
         b = (C || _) && !S,
-        T = h && u;
+        R = h && u;
     a.useEffect(() => {
         (0, p.w1)({
             guildId: n.guild_id,
@@ -88,7 +88,7 @@ function Y(e) {
     return (0, i.jsxs)('div', {
         className: w.container,
         children: [
-            T ? (0, i.jsx)(G, {}) : null,
+            R ? (0, i.jsx)(G, {}) : null,
             (0, i.jsx)(z, {
                 searchQuery: l,
                 setSearchQuery: o,
@@ -107,15 +107,15 @@ function Y(e) {
                       })
                     : (0, i.jsxs)('div', {
                           children: [
-                              (0, i.jsx)(q, {
+                              (0, i.jsx)(J, {
                                   channel: n,
                                   entrypoint: t,
                                   onEmptyState: E
                               }),
                               _ &&
-                                  (0, i.jsx)(X, {
+                                  (0, i.jsx)(q, {
                                       channel: n,
-                                      onEmptyState: v
+                                      onEmptyState: x
                                   }),
                               C &&
                                   (0, i.jsx)(Q, {
@@ -124,7 +124,7 @@ function Y(e) {
                                       onEmptyState: I
                                   }),
                               h &&
-                                  (0, i.jsx)(J, {
+                                  (0, i.jsx)(X, {
                                       channel: n,
                                       onEmptyState: P
                                   }),
@@ -224,7 +224,7 @@ function z(e) {
         })
     );
 }
-function q(e) {
+function J(e) {
     let { channel: n, entrypoint: t, onEmptyState: l } = e,
         o = t === L._b.VOICE,
         { frecentApps: r, loading: s } = (0, S.f)(n, o),
@@ -298,12 +298,12 @@ function q(e) {
               ]
           });
 }
-function J(e) {
+function X(e) {
     let { channel: n, onEmptyState: t } = e;
     (0, C.g)();
     let l = (0, _.Z)({ guildId: n.getGuildId() }),
         o = M.U4.LARGE_BANNER,
-        { trackSectionImpressionRef: r } = (0, j.Z)({
+        { trackSectionImpressionRef: r } = (0, y.Z)({
             sectionName: L.L3.ACTIVITIES,
             numItems: l.length,
             numVisibleItems: l.length
@@ -343,11 +343,11 @@ function J(e) {
               ]
           });
 }
-function X(e) {
+function q(e) {
     var n;
     let { channel: t, onEmptyState: l } = e,
-        r = (0, v.LD)(t.guild_id, !0),
-        { commandsByActiveSection: s, loading: c } = x.wi(
+        r = (0, x.LD)(t.guild_id, !0),
+        { commandsByActiveSection: s, loading: c } = v.wi(
             t,
             {
                 commandTypes: [u.yU.CHAT, u.yU.PRIMARY_ENTRY_POINT]
@@ -390,7 +390,7 @@ function X(e) {
             [p]
         ),
         { items: h, handleViewMore: f } = ee(k.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, M.U4.ROW, C, 4, _),
-        { trackSectionImpressionRef: A } = (0, j.Z)({
+        { trackSectionImpressionRef: A } = (0, y.Z)({
             sectionName: _,
             numItems: C.length,
             numVisibleItems: h.length
@@ -415,7 +415,7 @@ function X(e) {
                   (0, i.jsx)('div', {
                       className: w.sectionRowsContentContainer,
                       children: E
-                          ? W.map((e) => (0, i.jsx)(y.Z, { look: M.U4.ROW }, e))
+                          ? W.map((e) => (0, i.jsx)(j.Z, { look: M.U4.ROW }, e))
                           : h.map((e, n) => {
                                 let { application: t } = e;
                                 return null != t
@@ -452,7 +452,7 @@ function Q(e) {
                     withCommands: !1
                 });
             }, [i, t]);
-            let { sectionDescriptors: l } = x.wi(
+            let { sectionDescriptors: l } = v.wi(
                     n,
                     { commandTypes: [u.yU.CHAT] },
                     {
@@ -477,7 +477,7 @@ function Q(e) {
                 m = t === r.I.APP_LAUNCHER_VOICE;
             return {
                 fetchState: s,
-                recommendationsSections: a.useMemo(() => (m ? (0, R.pF)(d) : d), [d, m]),
+                recommendationsSections: a.useMemo(() => (m ? (0, T.pF)(d) : d), [d, m]),
                 isInstallOnDemand: o
             };
         })({
@@ -522,7 +522,7 @@ function Q(e) {
                                     (0, i.jsx)(Z.Z.Loading, {}),
                                     (0, i.jsx)('div', {
                                         className: a === M.U4.ROW ? w.sectionRowsContentContainer : w.sectionTwoColumnContentContainer,
-                                        children: t.map((e) => (0, i.jsx)(y.Z, { look: a }, e))
+                                        children: t.map((e) => (0, i.jsx)(j.Z, { look: a }, e))
                                     })
                                 ]
                             },
@@ -590,7 +590,7 @@ function K(e) {
             t = 4;
     }
     let { items: m, handleViewMore: p } = ee(c, n, d, t, u),
-        { trackSectionImpressionRef: _ } = (0, j.Z)({
+        { trackSectionImpressionRef: _ } = (0, y.Z)({
             sectionName: u,
             numItems: d.length,
             numVisibleItems: m.length
@@ -639,7 +639,7 @@ function $(e) {
     ];
 }
 function ee(e, n, t, i, l) {
-    let { pushHistory: o } = (0, T.hH)();
+    let { pushHistory: o } = (0, R.hH)();
     return a.useMemo(
         () =>
             t.length <= i
@@ -656,7 +656,7 @@ function ee(e, n, t, i, l) {
                               num: t.length
                           }),
                               o({
-                                  type: T.gc.LIST,
+                                  type: R.gc.LIST,
                                   title: e,
                                   look: n,
                                   items: t,

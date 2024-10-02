@@ -30,7 +30,7 @@ function v(e) {
         null == n && !r && !s && h.ZP.fetchApplication(t);
     }, [n, r, s, t]),
     null != n &&
-        (0, f.E)({
+        (0, f.Eb)({
             customInstallUrl: n.customInstallUrl,
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
@@ -57,7 +57,7 @@ function N(e) {
             [t]
         ),
         d = () => {
-            (0, f.L)({
+            (0, f.LO)({
                 applicationId: t.id,
                 customInstallUrl: t.customInstallUrl,
                 installParams: t.installParams,

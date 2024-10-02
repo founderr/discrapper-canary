@@ -194,7 +194,7 @@ let M = a.memo(function () {
             z = R.Z.Messages.CHANNEL_BROWSER_VIEW;
         n.isGuildStageVoice() || n.isGuildVoice() ? (z = R.Z.Messages.JOIN) : n.isForumLikeChannel() && (z = R.Z.Messages.OPEN);
         let V = y ? 'text-muted' : 'text-normal',
-            Y = (0, d.useToken)(y ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_NORMAL).hex();
+            q = (0, d.useToken)(y ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_NORMAL).hex();
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(d.Tooltip, {
@@ -234,7 +234,7 @@ let M = a.memo(function () {
                                                 }),
                                                 L
                                                     ? (0, l.jsx)(f.Z, {
-                                                          color: Y,
+                                                          color: q,
                                                           className: A.premiumIcon
                                                       })
                                                     : null,

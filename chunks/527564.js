@@ -19,8 +19,8 @@ var i = n(735250),
     g = n(171246),
     I = n(55563),
     h = n(147890),
-    x = n(272242),
-    f = n(981631),
+    f = n(272242),
+    x = n(981631),
     C = n(689938),
     v = n(778452);
 function E(e) {
@@ -85,7 +85,7 @@ function E(e) {
                     ]
                 }),
             (0, i.jsx)(c.Z, {
-                path: f.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
+                path: x.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
                 render: (e) => (0, i.jsx)(P, { ...e })
             })
@@ -104,8 +104,8 @@ function P(e) {
     return (
         t.useLayoutEffect(() => {
             switch (null == r ? void 0 : r.type) {
-                case f.epS.CONSUMABLE:
-                case f.epS.DURABLE:
+                case x.epS.CONSUMABLE:
+                case x.epS.DURABLE:
                     return (function (e, a, n) {
                         (0, o.openModal)(
                             (e) => {
@@ -123,13 +123,13 @@ function P(e) {
                                     !b() &&
                                         (0, h.goToApplicationSection)({
                                             applicationId: a,
-                                            section: x.ApplicationDirectoryProfileSections.STORE
+                                            section: f.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }
                         );
                     })(c, a, n);
-                case f.epS.SUBSCRIPTION:
+                case x.epS.SUBSCRIPTION:
                     if ((null == l ? void 0 : l.flags) == null) return;
                     return (function (e, a, n, t) {
                         (0, o.openModal)(
@@ -150,7 +150,7 @@ function P(e) {
                                     !b() &&
                                         (0, h.goToApplicationSection)({
                                             applicationId: a,
-                                            section: x.ApplicationDirectoryProfileSections.STORE
+                                            section: f.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }

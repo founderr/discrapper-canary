@@ -17,8 +17,8 @@ t.Z = l.memo(function (e) {
         { id: g, name: C, color: I, children: E } = t,
         N = E.map((e) => e.id),
         S = (0, o.Z)((e) => e.guildId),
-        x = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(g)),
-        v = (function (e) {
+        v = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(g)),
+        x = (function (e) {
             let t = e.children
                     .map((e) => {
                         let t = e.id,
@@ -58,12 +58,12 @@ t.Z = l.memo(function (e) {
     return (0, i.jsx)(p.Z, {
         ...m,
         folderNode: t,
-        expanded: x,
+        expanded: v,
         selected: null != S && N.includes(S),
         mentionCount: T,
         unread: b,
         mediaState: Z,
-        defaultFolderName: v,
+        defaultFolderName: x,
         onExpandCollapse: A,
         onContextMenu: M
     });

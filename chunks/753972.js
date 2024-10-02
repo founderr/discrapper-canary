@@ -1,36 +1,36 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return d;
+        return c;
     }
 });
-var i = t(735250),
-    a = t(470079),
-    l = t(120356),
-    o = t.n(l),
-    r = t(768581),
-    s = t(689938),
-    c = t(90043);
-function d(e) {
-    let { application: n, src: t, className: l, size: d, botIconFirst: u, fallbackAvatar: m, rendersPlaceholder: p = !1 } = e,
-        _ = a.useMemo(
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    o = n.n(a),
+    s = n(768581),
+    l = n(689938),
+    u = n(90043);
+function c(e) {
+    let { application: t, src: n, className: a, size: c, botIconFirst: d, fallbackAvatar: _, rendersPlaceholder: E = !1 } = e,
+        f = i.useMemo(
             () =>
-                null != n
-                    ? r.ZP.getApplicationIconURL({
-                          id: n.id,
-                          icon: n.icon,
-                          bot: n.bot,
-                          size: d,
-                          botIconFirst: u,
-                          fallbackAvatar: m
+                null != t
+                    ? s.ZP.getApplicationIconURL({
+                          id: t.id,
+                          icon: t.icon,
+                          bot: t.bot,
+                          size: c,
+                          botIconFirst: d,
+                          fallbackAvatar: _
                       })
-                    : t,
-            [n, t, d, u, m]
+                    : n,
+            [t, n, c, d, _]
         );
-    if (null == _) return p ? (0, i.jsx)('div', { className: o()(c.icon, c.placeholder, l) }) : null;
-    return (0, i.jsx)('img', {
-        className: o()(c.icon, l),
-        alt: s.Z.Messages.IMAGE,
-        src: _,
+    if (null == f) return E ? (0, r.jsx)('div', { className: o()(u.icon, u.placeholder, a) }) : null;
+    return (0, r.jsx)('img', {
+        className: o()(u.icon, a),
+        alt: l.Z.Messages.IMAGE,
+        src: f,
         'aria-hidden': !0,
         draggable: !1
     });

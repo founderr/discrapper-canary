@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return v;
     }
 }),
     n(47120);
@@ -46,17 +46,17 @@ function S(e) {
         p = null != u ? u : m.Wyy,
         f = h.map((e) => e.id),
         [_, g] = l.useState(!1),
-        [S, x] = l.useState(c),
-        v = c ? 0 : -E,
+        [S, v] = l.useState(c),
+        x = c ? 0 : -E,
         Z = (0, d.useSpring)(
             {
-                transform: 'translate3d(0, '.concat(v, 'px, 0)'),
+                transform: 'translate3d(0, '.concat(x, 'px, 0)'),
                 config: { duration: I },
                 onStart() {
-                    g(!0), x(c);
+                    g(!0), v(c);
                 },
                 onRest() {
-                    g(!1), x(c);
+                    g(!1), v(c);
                 }
             },
             'animate-always'
@@ -96,7 +96,7 @@ function S(e) {
         })
     );
 }
-function x(e) {
+function v(e) {
     let {
             folderNode: t,
             forceCircular: n,
@@ -111,9 +111,9 @@ function x(e) {
             onContextMenu: m,
             onHoverChange: I,
             onKeyDown: E,
-            treeItemProps: { onFocus: N, ...x }
+            treeItemProps: { onFocus: N, ...v }
         } = e,
-        [v, Z] = l.useState(!1),
+        [x, Z] = l.useState(!1),
         T = l.useCallback(() => {
             s || Z(!0), null == I || I(!0);
         }, [s, I]),
@@ -128,7 +128,7 @@ function x(e) {
         lowerBadge: M,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
-            className: a()(C.folder, { [C.hover]: v }),
+            className: a()(C.folder, { [C.hover]: x }),
             onClick: f,
             onContextMenu: m,
             onMouseEnter: T,
@@ -142,7 +142,7 @@ function x(e) {
             'aria-expanded': r,
             'aria-owns': h,
             focusProps: { enabled: !1 },
-            ...x,
+            ...v,
             role: 'treeitem',
             children:
                 null != p
@@ -152,7 +152,7 @@ function x(e) {
                       })
                     : (0, i.jsx)(S, {
                           folderNode: t,
-                          hovered: v,
+                          hovered: x,
                           expanded: r
                       })
         })

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return b;
+        return T;
     }
 }),
     t(47120);
@@ -64,7 +64,7 @@ function R(e) {
               secondaryInfo: C.Z.Messages.APP_DIRECTORY_ACTIVITY_LABEL
           });
 }
-function T(e) {
+function b(e) {
     let n,
         t,
         i,
@@ -94,7 +94,7 @@ function T(e) {
                 secondaryInfo: C.Z.Messages.APP_DIRECTORY_CONNECTION_LABEL
             });
 }
-function b(e) {
+function T(e) {
     let { results: n, guildId: t } = e;
     return (0, a.jsxs)('div', {
         className: p.container,
@@ -108,7 +108,7 @@ function b(e) {
                     if (e.type === i.s.ACTIVITY_APPLICATION) return (0, a.jsx)(R, { result: e }, l);
                     if (e.type === i.s.CONNECTION)
                         return (0, a.jsx)(
-                            T,
+                            b,
                             {
                                 guildId: t,
                                 result: e

@@ -20,7 +20,7 @@ function E(e) {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
-    if (null == E || !(0, u.E)(E)) return null;
+    if (null == E || !(0, u.Eb)(E)) return null;
     let { customInstallUrl: f } = E,
         h = null == f || l.Z.isDiscordUrl(f) ? a.PlusSmallIcon : a.LinkExternalSmallIcon;
     return s.wS
@@ -49,7 +49,7 @@ function E(e) {
                       icon: h,
                       onContextMenu: t,
                       onClick: () =>
-                          (0, u.L)({
+                          (0, u.LO)({
                               applicationId: E.id,
                               ...E
                           }),
@@ -63,7 +63,7 @@ function E(e) {
               text: _.Z.Messages.APPLICATION_ADD_BUTTON,
               icon: h,
               onClick: () =>
-                  (0, u.L)({
+                  (0, u.LO)({
                       applicationId: E.id,
                       ...E
                   }),

@@ -23,15 +23,15 @@ var s = a(481060),
     I = a(821774),
     P = a(842786),
     p = a(89671);
-function v(e, n, r) {
-    let o = t.default.getCurrentUser();
+function v(e, n) {
+    let r = t.default.getCurrentUser();
     return (
-        null != o &&
+        null != r &&
         ((0, s.openModalLazy)(async () => {
-            let { default: s } = await Promise.resolve().then(a.bind(a, 378879));
+            let { default: o } = await Promise.resolve().then(a.bind(a, 378879));
             return (a) =>
-                (0, i.jsx)(s, {
-                    user: o,
+                (0, i.jsx)(o, {
+                    user: r,
                     imageSrc: n,
                     uploadType: e,
                     analyticsSource: A.Sbl.PROFILE_PANEL,
@@ -39,7 +39,7 @@ function v(e, n, r) {
                         section: A.jXE.USER_PROFILE,
                         object: A.qAy.BUTTON_CTA
                     },
-                    onSecondaryClick: r,
+                    onSecondaryClick: s.closeAllModals,
                     ...a
                 });
         }),

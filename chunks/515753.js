@@ -27,8 +27,8 @@ var i = n(735250),
     E = n(201895),
     N = n(43267),
     S = n(933557),
-    x = n(979264),
-    v = n(163889),
+    v = n(979264),
+    x = n(163889),
     Z = n(111028),
     T = n(853856),
     b = n(93687),
@@ -82,7 +82,7 @@ let H = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
 class Y extends l.Component {
     render() {
         let { route: e, selected: t, icon: n, iconClassName: l, interactiveClassName: r, text: s, children: o, locationState: u, onClick: h, className: f, role: _, 'aria-posinset': m, 'aria-setsize': g, ...I } = this.props;
-        return (0, i.jsx)(v.Z, {
+        return (0, i.jsx)(x.Z, {
             className: a()(V.channel, { [V.fullWidth]: d.tq }, f),
             onClick: h,
             role: _,
@@ -275,7 +275,7 @@ function K(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           en,
-                          (0, i.jsx)(x.ZP, {
+                          (0, i.jsx)(v.ZP, {
                               clan: null == d ? void 0 : d.clan,
                               userId: null == d ? void 0 : d.id,
                               inline: !0,
@@ -288,7 +288,7 @@ function K(e) {
         id: t.id,
         children: (e) => {
             let { role: n, ...l } = e;
-            return (0, i.jsx)(v.Z, {
+            return (0, i.jsx)(x.Z, {
                 className: V.channel,
                 role: n,
                 focusProps: {

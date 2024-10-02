@@ -32,17 +32,17 @@ function A(e) {
 }
 function E(e) {
     let { application: n, name: t, iconURL: f, scrollerRef: E, sectionName: N } = e,
-        v = m.zQ.useExperiment({ location: 'AppLauncherAppHeader' }, { autoTrackExposure: !1 }).enabled,
-        x = (0, o.ap)((0, s.ZP)()),
+        x = m.zQ.useExperiment({ location: 'AppLauncherAppHeader' }, { autoTrackExposure: !1 }).enabled,
+        v = (0, o.ap)((0, s.ZP)()),
         I = a.useRef(null),
         g = a.useRef(null),
         P = a.useRef(null),
         L = a.useRef(null),
         S = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
         b = (0, c.ZP)('number' == typeof f ? '' : f, null != S ? S : ''),
-        R = a.useMemo(() => {
+        T = a.useMemo(() => {
             var e, n;
-            let t = (0, l.compact)([d.Z.parseHexString(b), d.Z.parseHexString(x ? '#000000' : '#ffffff')]);
+            let t = (0, l.compact)([d.Z.parseHexString(b), d.Z.parseHexString(v ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -55,16 +55,16 @@ function E(e) {
                         : e.toHexString()) && void 0 !== n
                 ? n
                 : b;
-        }, [b, x]),
-        T = A(I),
+        }, [b, v]),
+        R = A(I),
         M = A(g),
-        y = a.useCallback(() => {
+        j = a.useCallback(() => {
             var e, n, t, i, a, o, r, s, c, d;
             let u = E.current,
                 m = I.current,
                 p = P.current,
                 _ = null == L ? void 0 : L.current,
-                C = parseInt(null !== (e = null == T ? void 0 : T.height) && void 0 !== e ? e : ''),
+                C = parseInt(null !== (e = null == R ? void 0 : R.height) && void 0 !== e ? e : ''),
                 h = parseInt(null !== (n = null == M ? void 0 : M.height) && void 0 !== n ? n : '');
             if (null != u && null != m && null != p && !isNaN(C) && !isNaN(h)) {
                 let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0,
@@ -74,11 +74,11 @@ function E(e) {
                     E = (0, l.clamp)(n - f, A + 1, h + 20);
                 let N = ((i = e), (a = A) === (o = E) ? 1 : (0, l.clamp)((i - a) / (o - a), 0, 1));
                 if (
-                    ((m.style.filter = 'brightness('.concat(1 + ((x ? 1.4 : 0.6) - (r = 1)) * N, ')')),
+                    ((m.style.filter = 'brightness('.concat(1 + ((v ? 1.4 : 0.6) - (r = 1)) * N, ')')),
                     (m.style.backgroundColor = 'color-mix(in oklab,'
                         .concat(b, ' ')
                         .concat((1 - N) * 100, '%, ')
-                        .concat(R, ')')),
+                        .concat(T, ')')),
                     (p.style.opacity = ''.concat(0 + (1 - (s = 0)) * N)),
                     (p.style.transform = 'translateY('.concat((c = C / 4) + (0 - c) * N, 'px)')),
                     null != _)
@@ -86,15 +86,15 @@ function E(e) {
                     _.style.opacity = ''.concat(1 + (0 - (d = 1)) * N);
                 }
             }
-        }, [R, b, null == M ? void 0 : M.height, x, E, null == T ? void 0 : T.height]);
+        }, [T, b, null == M ? void 0 : M.height, v, E, null == R ? void 0 : R.height]);
     return (
         a.useEffect(() => {
-            y();
-        }, [y, x]),
+            j();
+        }, [j, v]),
         a.useEffect(() => {
             let e = E.current,
                 n = () => {
-                    y();
+                    j();
                 };
             return (
                 null == e || e.addEventListener('scroll', n),
@@ -102,7 +102,7 @@ function E(e) {
                     null == e || e.removeEventListener('scroll', n);
                 }
             );
-        }, [E, y]),
+        }, [E, j]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -130,7 +130,7 @@ function E(e) {
                         })
                     ]
                 }),
-                (0, p.BQ)(n) && v
+                (0, p.BQ)(n) && x
                     ? (0, i.jsx)('div', {
                           ref: L,
                           className: h.moreMenuButtonContainer,

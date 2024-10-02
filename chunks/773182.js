@@ -34,8 +34,8 @@ var i = n(735250),
     E = n(669764),
     N = n(210753),
     S = n(863249),
-    x = n(937111),
-    v = n(369566),
+    v = n(937111),
+    x = n(369566),
     Z = n(314897),
     T = n(480294),
     b = n(602147),
@@ -51,11 +51,11 @@ function j(e) {
         C = (0, s.TH)(),
         [E, N] = (0, I.US)([r], L.R.SIDEBAR),
         S = E !== r,
-        x = (0, d.Z)(),
-        v = f && !x && !S && C.pathname !== A.Z5c.GUILD_DISCOVERY;
+        v = (0, d.Z)(),
+        x = f && !v && !S && C.pathname !== A.Z5c.GUILD_DISCOVERY;
     l.useEffect(() => {
-        v && c();
-    }, [v, c]);
+        x && c();
+    }, [x, c]);
     let Z = l.useCallback(() => {
             N(L.L.TAKE_ACTION), h();
         }, [N, h]),
@@ -71,7 +71,7 @@ function j(e) {
         className: O.container,
         children: [
             (0, i.jsx)(u.Popout, {
-                shouldShow: v,
+                shouldShow: x,
                 renderPopout: (e) => {
                     let { closePopout: l } = e;
                     return (0, i.jsxs)('div', {
@@ -121,7 +121,7 @@ function D(e) {
         } = (function () {
             var e;
             let t = (0, o.e7)([Z.default], () => Z.default.getId()),
-                { recent: n, outbox: i } = (0, v.Z)(t),
+                { recent: n, outbox: i } = (0, x.Z)(t),
                 r = (0, o.e7)([C.Z], () => C.Z.hasInitialized),
                 a = (0, o.e7)([T.Z], () => T.Z.hasConsented(A.pjP.PERSONALIZATION)),
                 s = null == i && r,
@@ -209,7 +209,7 @@ function w(e) {
 }
 function G(e) {
     let { onActivate: t, children: n } = e,
-        r = (0, o.e7)([x.Z], () => x.Z.hasJoinRequestCoackmark()),
+        r = (0, o.e7)([v.Z], () => v.Z.hasJoinRequestCoackmark()),
         a = l.useCallback(() => {
             S.ZP.clearCoachmark();
         }, []),
