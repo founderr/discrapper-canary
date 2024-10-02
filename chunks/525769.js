@@ -21,6 +21,7 @@ n.d(t, {
             (e.APP_LAUNCHER_ITEM = 'impression_app_launcher_item'),
             (e.APP_LAUNCHER_SEARCH_RESULTS_ITEM = 'impression_app_launcher_search_results_item'),
             (e.APP_LAUNCHER_SECTION = 'impression_app_launcher_section'),
+            (e.APP_OAUTH2_LINK_EMBED = 'impression_app_oauth2_link_embed'),
             (e.APPEAL_INGESTION_COLLECT_SIGNAL = 'impression_appeal_ingestion_collect_signal'),
             (e.APPEAL_INGESTION_CONFIRM_SUBMISSION = 'impression_appeal_ingestion_confirm_submission'),
             (e.APPEAL_INGESTION_REQUEST_SENT = 'impression_appeal_ingestion_request_sent'),
