@@ -319,21 +319,21 @@ var t, r;
                     if ('array' === j((e = X(e, 'hcg'))) && 3 === e.length) return 'hcg';
                 }
             });
-        var q = _.unpack,
-            z = _.last,
-            J = Math.round,
+        var J = _.unpack,
+            q = _.last,
+            z = Math.round,
             Q = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-                var r = q(e, 'rgba'),
+                var r = J(e, 'rgba'),
                     n = r[0],
                     a = r[1],
                     o = r[2],
                     i = r[3],
-                    _ = z(e) || 'auto';
-                void 0 === i && (i = 1), 'auto' === _ && (_ = i < 1 ? 'rgba' : 'rgb'), (n = J(n)), (a = J(a));
-                var E = '000000' + ((n << 16) | (a << 8) | (o = J(o))).toString(16);
+                    _ = q(e) || 'auto';
+                void 0 === i && (i = 1), 'auto' === _ && (_ = i < 1 ? 'rgba' : 'rgb'), (n = z(n)), (a = z(a));
+                var E = '000000' + ((n << 16) | (a << 8) | (o = z(o))).toString(16);
                 E = E.substr(E.length - 6);
-                var s = '0' + J(255 * i).toString(16);
+                var s = '0' + z(255 * i).toString(16);
                 switch (((s = s.substr(s.length - 2)), _.toLowerCase())) {
                     case 'rgba':
                         return '#' + E + s;
@@ -583,20 +583,20 @@ var t, r;
             eX = _.unpack,
             ej = _.unpack,
             e$ = _.DEG2RAD,
-            eq = Math.sin,
-            ez = Math.cos,
-            eJ = function () {
+            eJ = Math.sin,
+            eq = Math.cos,
+            ez = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
                 var r = ej(e, 'lch'),
                     n = r[0],
                     a = r[1],
                     o = r[2];
-                return isNaN(o) && (o = 0), [n, ez((o *= e$)) * a, eq(o) * a];
+                return isNaN(o) && (o = 0), [n, eq((o *= e$)) * a, eJ(o) * a];
             },
             eQ = _.unpack,
             eZ = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-                var r = eJ((e = eQ(e, 'lch'))[0], e[1], e[2]),
+                var r = ez((e = eQ(e, 'lch'))[0], e[1], e[2]),
                     n = ew(r[0], r[1], r[2]);
                 return [n[0], n[1], n[2], e.length > 3 ? e[3] : 1];
             },
@@ -978,7 +978,7 @@ var t, r;
             }),
             (E.format.oklch = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-                var r = eJ((e = tS(e, 'lch'))[0], e[1], e[2]),
+                var r = ez((e = tS(e, 'lch'))[0], e[1], e[2]),
                     n = td(r[0], r[1], r[2]);
                 return [n[0], n[1], n[2], e.length > 3 ? e[3] : 1];
             }),
@@ -1174,7 +1174,7 @@ var t, r;
             },
             tj = _.type,
             t$ = Math.pow,
-            tq = function (e) {
+            tJ = function (e) {
                 var t = 'rgb',
                     r = l('#ccc'),
                     n = 0,
@@ -1365,14 +1365,14 @@ var t, r;
                     L
                 );
             },
-            tz = function (e) {
+            tq = function (e) {
                 for (var t = [1, 1], r = 1; r < e; r++) {
                     for (var n = [1], a = 1; a <= t.length; a++) n[a] = (t[a] || 0) + t[a - 1];
                     t = n;
                 }
                 return t;
             },
-            tJ = function (e) {
+            tz = function (e) {
                 var t, r, n, a, o, i, _, E, s, c, I;
                 if (
                     2 ===
@@ -1425,7 +1425,7 @@ var t, r;
                     (s = e.map(function (e) {
                         return e.lab();
                     })),
-                        (c = tz((I = e.length - 1))),
+                        (c = tq((I = e.length - 1))),
                         (a = function (e) {
                             var t = 1 - e;
                             return new u(
@@ -1713,10 +1713,10 @@ var t, r;
                 return (l /= n), new u(i, t).alpha(l > 0.99999 ? 1 : l, !0);
             }),
             (l.bezier = function (e) {
-                var t = tJ(e);
+                var t = tz(e);
                 return (
                     (t.scale = function () {
-                        return tq(t);
+                        return tJ(t);
                     }),
                     t
                 );
@@ -1763,7 +1763,7 @@ var t, r;
                 for (var e = '#', t = 0; t < 6; t++) e += '0123456789abcdef'.charAt(t8(16 * t7()));
                 return new u(e, 'hex');
             }),
-            (l.scale = tq),
+            (l.scale = tJ),
             (l.analyze = ro),
             (l.contrast = function (e, t) {
                 (e = new u(e)), (t = new u(t));
@@ -1834,10 +1834,10 @@ var t, r;
             }),
             (l.scales = {
                 cool: function () {
-                    return tq([l.hsl(180, 1, 0.9), l.hsl(250, 0.7, 0.4)]);
+                    return tJ([l.hsl(180, 1, 0.9), l.hsl(250, 0.7, 0.4)]);
                 },
                 hot: function () {
-                    return tq(['#000', '#f00', '#ff0', '#fff']).mode('rgb');
+                    return tJ(['#000', '#f00', '#ff0', '#fff']).mode('rgb');
                 }
             }),
             (l.colors = e6),

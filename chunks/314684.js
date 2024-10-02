@@ -18,7 +18,7 @@ n.d(t, {
         return O;
     },
     nY: function () {
-        return x;
+        return b;
     },
     rM: function () {
         return P;
@@ -105,7 +105,7 @@ function h() {
         }
     }, [l, t, e, o]);
 }
-function x(e) {
+function b(e) {
     let { showAnimations: t } = e,
         n = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
         s = h();
@@ -119,13 +119,13 @@ function x(e) {
         percentage: d
     };
 }
-let b = new Set();
+let x = new Set();
 function O() {
     let e = (0, i.e7)(
             [I.Z],
             () => {
                 var e;
-                return null !== (e = I.Z.getForApplication(p.CL)) && void 0 !== e ? e : b;
+                return null !== (e = I.Z.getForApplication(p.CL)) && void 0 !== e ? e : x;
             },
             [],
             g.OL

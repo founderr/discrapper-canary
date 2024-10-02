@@ -22,8 +22,8 @@ function R(e) {
     let { user: n, displayProfile: R, guild: g, pendingAvatar: N, pendingNickname: C, pendingGlobalName: m, pendingBio: f, pendingPronouns: A, isTryItOutFlow: p, hideBioSection: M } = e,
         S = (0, a.e7)([_.ZP], () => (null == g ? null : _.ZP.getMember(g.id, n.id))),
         h = (0, a.e7)([E.Z], () => E.Z.hidePersonalInformation),
-        x = (0, r.Z)('ProfileCustomizationPreviewBody'),
-        b = null == R ? void 0 : null === (t = R.getPreviewBio(f)) || void 0 === t ? void 0 : t.value,
+        b = (0, r.Z)('ProfileCustomizationPreviewBody'),
+        x = null == R ? void 0 : null === (t = R.getPreviewBio(f)) || void 0 === t ? void 0 : t.value,
         O = null != A ? A : null == R ? void 0 : R.pronouns,
         P = (0, u.Ly)({
             pendingNickname: C,
@@ -54,17 +54,17 @@ function R(e) {
                     profileType: T.y0.BITE_SIZE
                 })
             }),
-            x &&
+            b &&
                 (0, s.jsx)(i.ZP, {
                     userId: n.id,
                     inline: !1
                 }),
             !M &&
-                null != b &&
-                '' !== b &&
+                null != x &&
+                '' !== x &&
                 (0, s.jsx)(c.Z, {
                     user: n,
-                    bio: b,
+                    bio: x,
                     hidePersonalInformation: h,
                     viewFullBioDisabled: !0
                 })

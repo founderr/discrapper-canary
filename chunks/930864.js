@@ -32,7 +32,7 @@ var l = t(735250),
     b = t(621054);
 function L(e) {
     let { channelId: n, messageId: L, initialSelectedDestinations: R, forwardOptions: I, onClose: w, onRequestSent: y, ...T } = e,
-        { hasOneTapSendButton: j, hasMessageInput: P, hasPreview: D } = (0, S.yk)({ location: 'ForwardModal' }),
+        { hasOneTapSendButton: P, hasMessageInput: j, hasPreview: D } = (0, S.yk)({ location: 'ForwardModal' }),
         O = s.useMemo(() => (0, u.dL)(n), [n]),
         [k, W] = s.useState(!1),
         G = (0, r.e7)([h.Z], () => h.Z.getMessage(n, L), [n, L]),
@@ -214,10 +214,10 @@ function L(e) {
                       paddingBottom: 16,
                       paddingTop: 16,
                       rowData: $,
-                      rowMode: j ? v.G.SEND : v.G.TOGGLE,
+                      rowMode: P ? v.G.SEND : v.G.TOGGLE,
                       message: G,
                       originChannel: U,
-                      handleToggleDestination: j ? eu : ea,
+                      handleToggleDestination: P ? eu : ea,
                       selectedDestinations: V,
                       disableSelection: K
                   })
@@ -261,7 +261,7 @@ function L(e) {
                                               color: 'text-warning',
                                               children: Z.Z.Messages.MESSAGES_FORWARD_MAX_DESTINATION_COUNT.format({ count: C.G })
                                           })
-                                        : (j || P) &&
+                                        : (P || j) &&
                                           (0, l.jsx)(i.Heading, {
                                               variant: 'heading-sm/normal',
                                               color: 'header-muted',
@@ -275,7 +275,7 @@ function L(e) {
                             })
                         ]
                     }),
-                    j &&
+                    P &&
                         D &&
                         (0, l.jsx)('div', {
                             className: A.forwardPreviewWrapperInset,
@@ -297,8 +297,8 @@ function L(e) {
                 ]
             }),
             ec,
-            !j &&
-                (P
+            !P &&
+                (j
                     ? (0, l.jsx)(p.n, {
                           message: G,
                           forwardOptions: I,

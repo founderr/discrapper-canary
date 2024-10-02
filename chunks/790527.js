@@ -100,7 +100,7 @@ function C(e) {
               }))
             : null != ei.artElement && (eh = ei.artElement),
         (0, r.jsxs)(l.ModalRoot, {
-            className: o()(O.root, w),
+            className: o()(O.root, !el && w),
             'aria-label': C,
             transitionState: F,
             children: [
@@ -120,7 +120,7 @@ function C(e) {
                     }),
                 (0, r.jsx)(l.ModalContent, {
                     scrollbarType: 'none',
-                    className: o()($ ? O.enhancedContent : O.content, x),
+                    className: o()($ ? O.enhancedContent : O.content, !el && x),
                     children: q
                         ? (0, r.jsx)(l.Spinner, {})
                         : (0, r.jsx)(r.Fragment, {

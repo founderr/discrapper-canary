@@ -72,7 +72,7 @@ let S = {
             className: v.videoWrapper,
             mediaPlayerClassName: v.mediaPlayer
         }),
-    O = (e) => (0, i.jsx)(I.Z, { ...e }),
+    O = (e) => (0, i.jsx)(I.ZP, { ...e }),
     j = (e) => {
         let t,
             s,

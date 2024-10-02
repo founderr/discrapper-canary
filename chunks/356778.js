@@ -75,7 +75,7 @@ function I(e, t, n) {
         case 'media':
             return {
                 author_id: e,
-                attachment_extension: ['png', 'jpg', 'webp', 'mov', 'mp4', 'gif', 'mp3', 'wav', 'flac', 'ogg'],
+                attachment_extension: ['png', 'jpg', 'webp', 'mov', 'mp4', 'gif', 'mp3', 'wav', 'flac', 'ogg', 'opus'],
                 ...i
             };
         case 'all_counts':

@@ -13,7 +13,7 @@ var r = n(735250),
 class c extends i.Component {
     render() {
         let { src: e, fileSize: t, className: n, mediaPlayerClassName: i, poster: c, fileName: d, naturalWidth: _, naturalHeight: E, playable: f, downloadable: h = !0, volume: p, autoPlay: m, autoMute: I, responsive: T, mediaLayoutType: g, mimeType: S, renderOverlayContent: A, renderLinkComponent: v, onClick: N, onPlay: O, onPause: R, onEnded: C, onControlsShow: y, onControlsHide: L, onVolumeChange: b, onMute: D, alt: M = u.Z.Messages.VIDEO, ...P } = this.props;
-        return (0, r.jsx)(o.Z, {
+        return (0, r.jsx)(o.ZP, {
             alt: M,
             className: n,
             src: c,

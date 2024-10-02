@@ -162,7 +162,7 @@ let e3 = 15 * eA.Z.Millis.MINUTE,
     },
     e6 = (e) => () => {
         let { url: t, proxyUrl: n, width: r, height: i } = e;
-        return null != r && null != i && J.W.test(n)
+        return null != r && null != i && J.uo.test(n)
             ? (0, l.jsx)(eG.Z, {
                   width: r,
                   height: i,

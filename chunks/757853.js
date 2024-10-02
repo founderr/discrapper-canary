@@ -38,8 +38,8 @@ var l,
     w = t(823379),
     y = t(51144),
     T = t(784384),
-    j = t(981631),
-    P = t(490897),
+    P = t(981631),
+    j = t(490897),
     D = t(689938),
     O = t(463061);
 function k(e) {
@@ -55,7 +55,7 @@ function k(e) {
             null == m || m(t);
         }, [l, m, t]),
         N = r.useCallback(() => {
-            R.default.track(j.rMx.FORWARD_ONE_TAP_VIEW, {
+            R.default.track(P.rMx.FORWARD_ONE_TAP_VIEW, {
                 channel_id: n.channel_id,
                 message_id: n.id
             }),
@@ -69,7 +69,7 @@ function k(e) {
         C = r.useCallback(() => {
             v(!1),
                 (p.current = !1),
-                R.default.track(j.rMx.FORWARD_ONE_TAP_UNDO, {
+                R.default.track(P.rMx.FORWARD_ONE_TAP_UNDO, {
                     channel_id: n.channel_id,
                     message_id: n.id
                 });
@@ -207,7 +207,7 @@ function U(e) {
             let e = N.Z.getChannel(n.parent_id);
             return null == e ? null : (0, S.F6)(e, L.default, b.Z, !1);
         }),
-        o = (0, h.e7)([A.ZP], () => A.ZP.lastMessageTimestamp(n.id, P.W.CHANNEL)),
+        o = (0, h.e7)([A.ZP], () => A.ZP.lastMessageTimestamp(n.id, j.W.CHANNEL)),
         u = null == s ? void 0 : s.name;
     if (n.isThread() || n.isForumPost()) {
         let e = n.isForumPost() ? f.ForumIcon : f.TextIcon;

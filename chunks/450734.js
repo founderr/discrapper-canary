@@ -22,8 +22,8 @@ function g(e) {
     let { user: t, guild: n, displayProfile: a, canUsePremiumCustomization: _, previewAvatar: g, previewAvatarDecoration: N, previewTheme: C, previewPrimaryColor: m, className: f, disabledInputs: A, isTryItOutFlow: p, onUpsellClick: M } = e,
         { analyticsLocations: S } = (0, o.ZP)(),
         h = (0, i.e7)([d.Z], () => d.Z.getStatus(t.id)),
-        x = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || _,
-        b = (0, s.jsx)(R, {
+        b = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || _,
+        x = (0, s.jsx)(R, {
             src: g,
             avatarDecoration: N,
             imageClassName: r()(f, { [I.overlay]: !A }),
@@ -36,9 +36,9 @@ function g(e) {
     return A
         ? (0, s.jsx)('div', {
               className: I.avatar,
-              children: b
+              children: x
           })
-        : x
+        : b
           ? (0, s.jsx)(l.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
@@ -60,7 +60,7 @@ function g(e) {
                         ...e,
                         className: r()(I.avatar, I.clickable),
                         children: [
-                            b,
+                            x,
                             (0, s.jsx)(l.PencilIcon, {
                                 size: 'custom',
                                 className: I.overlayIcon,
@@ -75,7 +75,7 @@ function g(e) {
                 onClick: M,
                 className: r()(I.avatar, I.clickable),
                 children: [
-                    b,
+                    x,
                     (0, s.jsx)(l.NitroWheelIcon, {
                         size: 'custom',
                         className: I.overlayIcon,

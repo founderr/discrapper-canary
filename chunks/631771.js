@@ -114,7 +114,7 @@ function c(e) {
         case o.cd.UPLOAD_ERROR_UPSELL:
             return l.getCurrentConfig({ location: 'File Upload Roadblock' }, { autoTrackExposure: !1 }).addSocialProof && !(0, i.XS)();
         case o.cd.CLIENT_THEMES_UPSELL:
-        case o.cd.APP_ICONS_UPSELL:
+        case o.cd.APP_ICON_UPSELL:
             return a.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
         case o.cd.FOR_LATER_MODAL_UPSELL:
             return !0;

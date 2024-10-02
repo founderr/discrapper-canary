@@ -60,7 +60,7 @@ let S = (e) => {
             children: [(0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar1 : M.settingsSparkleStar1 }), (0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar2 : M.settingsSparkleStar2 }), (0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar3 : M.settingsSparkleStar3 }), (0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar4 : M.settingsSparkleStar4 })]
         });
     };
-function x(e) {
+function b(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0 } = e,
         a = (0, N.$)();
     return (0, s.jsx)(l.Text, {
@@ -71,7 +71,7 @@ function x(e) {
     });
 }
 t.Z = (e) => {
-    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: N, hideSubscribeAndGiftButton: f, entrypoint: b } = e,
+    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: N, hideSubscribeAndGiftButton: f, entrypoint: x } = e,
         { analyticsLocations: O } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         P = (0, u._O)(),
         v = (0, E.Nx)(),
@@ -79,7 +79,7 @@ t.Z = (e) => {
         Z = (0, i.e7)([_.Z], () => _.Z.affinities),
         D = (0, I.Z)(),
         { enabled: B } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        U = b === A.EZ.ApplicationStoreHome && null != D && B,
+        U = x === A.EZ.ApplicationStoreHome && null != D && B,
         j = Z.length > 0;
     return (0, s.jsx)(c.Gt, {
         value: O,
@@ -108,7 +108,7 @@ t.Z = (e) => {
                                         smallerText: !t
                                     })
                                 })
-                              : (0, s.jsx)(x, {}),
+                              : (0, s.jsx)(b, {}),
                         L
                             ? (0, s.jsx)('div', {
                                   className: M.buttonContainer,
@@ -127,7 +127,7 @@ t.Z = (e) => {
                                 }),
                         j &&
                             !U &&
-                            (0, s.jsx)(x, {
+                            (0, s.jsx)(b, {
                                 variant: 'text-md/normal',
                                 withBottomMargin: !1
                             })

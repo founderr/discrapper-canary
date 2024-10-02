@@ -34,15 +34,15 @@ t.Z = (e) => {
             intervalCount: null == M ? void 0 : M.interval_count
         }),
         h = (0, c.Ng)(),
-        x = null != M && n === M.sku_id,
-        { enabled: b } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
-        O = b && (null == p ? void 0 : p.trial_id) === E.a7,
+        b = null != M && n === M.sku_id,
+        { enabled: x } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
+        O = x && (null == p ? void 0 : p.trial_id) === E.a7,
         P = g
             ? u.Z.Messages.BOGO_CLAIM_OFFER
             : null != h
               ? R(n, C, N, h.discount.amount)
               : I({
-                    showTrialCTA: x,
+                    showTrialCTA: b,
                     subscriptionTier: n,
                     shouldShowUpsells: !1,
                     trialDurationCopy: S,
@@ -54,7 +54,7 @@ t.Z = (e) => {
         color: A ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
         buttonShineClassName: 'buttonShineClassName' in m ? m.buttonShineClassName : A ? T.brandShine : void 0,
         buttonText: P,
-        buttonTextClassName: x ? T.freeTrialText : void 0,
+        buttonTextClassName: b ? T.freeTrialText : void 0,
         onlyShineOnHover: !0,
         subscriptionTier: n,
         ...m

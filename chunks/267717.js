@@ -40,7 +40,7 @@ function T(e) {
     return (0, n.jsx)(l.Z, {
         modalClassName: u.modal,
         modalContentClassName: u.modalContent,
-        type: c.cd.APP_ICONS_UPSELL,
+        type: c.cd.TRY_IT_OUT_MODAL_UPSELL,
         title: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_TITLE,
         body: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_DESCRIPTION,
         glowUp: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_TITLE,

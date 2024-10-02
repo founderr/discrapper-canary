@@ -23,8 +23,8 @@ var s = n(735250),
     M = n(658370),
     S = n(735825),
     h = n(981631),
-    x = n(921944),
-    b = n(689938),
+    b = n(921944),
+    x = n(689938),
     O = n(977341);
 let P = {
         xMin: -80,
@@ -88,7 +88,7 @@ let P = {
         };
         let es = z !== r || null == r || j || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
         return (a.useEffect(() => {
-            D && B && (G(!0), R.default.track(h.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION));
+            D && B && (G(!0), R.default.track(h.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(b.L.TAKE_ACTION));
         }, [D, B, r, t, Q]),
         (0, u.Z)(
             {
@@ -183,7 +183,7 @@ let P = {
                                 [O.reducedMotion]: D
                             }),
                             onTransitionEnd: (e) => {
-                                if (!!B && 'transform' === e.propertyName && !!e.target.classList.contains(O.flipCard)) G(!0), R.default.track(h.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION);
+                                if (!!B && 'transform' === e.propertyName && !!e.target.classList.contains(O.flipCard)) G(!0), R.default.track(h.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(b.L.TAKE_ACTION);
                             },
                             children: [
                                 (0, s.jsx)('div', {
@@ -209,7 +209,7 @@ let P = {
                                     className: O.flipCardButtonContainer,
                                     children: (0, s.jsx)(_.Button, {
                                         onClick: () => U(!0),
-                                        children: b.Z.Messages.REVEAL
+                                        children: x.Z.Messages.REVEAL
                                     })
                                 })
                             ]
@@ -223,8 +223,8 @@ let P = {
 v.displayName = 'PerkDiscoverabilityCard';
 let L = a.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: E, onCtaClick: u, onMouseEnter: T, className: I, perkComponent: R, cardVariant: N, cardType: m, onClick: f, backgroundImage: S, pillText: h, perkImage: x } = e,
-        b = m === A.R0.CARD_CAROUSEL_FIRST_ROW || m === A.R0.CARD_CAROUSEL_SECOND_ROW || m === A.R0.CARD_CAROUSEL_THIRD_ROW,
+    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: E, onCtaClick: u, onMouseEnter: T, className: I, perkComponent: R, cardVariant: N, cardType: m, onClick: f, backgroundImage: S, pillText: h, perkImage: b } = e,
+        x = m === A.R0.CARD_CAROUSEL_FIRST_ROW || m === A.R0.CARD_CAROUSEL_SECOND_ROW || m === A.R0.CARD_CAROUSEL_THIRD_ROW,
         P = '' !== c || '' !== d || ('' !== o && N === A.zW.REWARD),
         v = (0, g.IB)(),
         [L, Z] = a.useState(N !== A.zW.REWARD || v);
@@ -235,7 +235,7 @@ let L = a.forwardRef((e, t) => {
     return (0, s.jsxs)(_.Clickable, {
         className: i()(O.card, I, !0 === L ? (null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className) : void 0, {
             [O.clickable]: null != f,
-            [O.hideOverflow]: b
+            [O.hideOverflow]: x
         }),
         onMouseEnter: T,
         style: { backgroundImage: null != S ? 'url('.concat(S, ')') : void 0 },
@@ -252,8 +252,8 @@ let L = a.forwardRef((e, t) => {
                 title: r,
                 titleClassName: l,
                 subtitle: o,
-                perkImage: x,
-                isCarousel: b,
+                perkImage: b,
+                isCarousel: x,
                 descriptionCta: d,
                 onCtaClick: u,
                 perkComponent: R,

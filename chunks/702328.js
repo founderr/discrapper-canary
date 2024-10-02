@@ -23,8 +23,8 @@ var s = n(735250),
     M = n(104494),
     S = n(639119),
     h = n(8647),
-    x = n(568126),
-    b = n(605289),
+    b = n(568126),
+    x = n(605289),
     O = n(248042),
     P = n(218390),
     v = n(823188),
@@ -230,7 +230,7 @@ t.Z = (e) => {
             })
         }),
         eh = eM && r === W.EZ.UserSettings,
-        ex = (0, s.jsxs)('div', {
+        eb = (0, s.jsxs)('div', {
             className: i()(Y.container, { [Y.settingsContainer]: !n }),
             'data-cy': 'tier-0-marketing-page',
             children: [
@@ -244,7 +244,7 @@ t.Z = (e) => {
                     inOfferExperience: em
                 }),
                 !n && eT
-                    ? (0, s.jsx)(b.Z, {
+                    ? (0, s.jsx)(x.Z, {
                           localizedPricingPromo: eu,
                           smallGap: !0
                       })
@@ -268,7 +268,7 @@ t.Z = (e) => {
                       }),
                 (0, s.jsxs)('div', {
                     className: Y.promoBannerContainer,
-                    children: [(0, s.jsx)(h.Z, { isFullScreen: n }), n && eT && (0, s.jsx)(x.Z, { localizedPricingPromo: eu })]
+                    children: [(0, s.jsx)(h.Z, { isFullScreen: n }), n && eT && (0, s.jsx)(b.Z, { localizedPricingPromo: eu })]
                 }),
                 eS,
                 eh && (0, s.jsx)(P.d, { className: Y.nitroweenGiftCard }),
@@ -341,7 +341,7 @@ t.Z = (e) => {
                   (0, s.jsx)(d.AdvancedScrollerAuto, {
                       className: Y.scroller,
                       ref: U,
-                      children: ex
+                      children: eb
                   }),
                   (0, s.jsx)(F.Z, {
                       previousComponent: k.MQ.MARKETING,
@@ -351,5 +351,5 @@ t.Z = (e) => {
                   })
               ]
           })
-        : ex;
+        : eb;
 };

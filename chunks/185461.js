@@ -162,9 +162,9 @@ let b =
         confirmButtonLabel: X = A,
         emailLabel: j = N,
         emailPlaceholder: $ = d,
-        formTitle: q = T,
-        isRequiredLabel: z = D,
-        messageLabel: J = O,
+        formTitle: J = T,
+        isRequiredLabel: q = D,
+        messageLabel: z = O,
         messagePlaceholder: Q = p,
         nameLabel: Z = S,
         namePlaceholder: ee = f,
@@ -198,15 +198,15 @@ let b =
                 cancelButtonLabel: W,
                 submitButtonLabel: er,
                 confirmButtonLabel: X,
-                formTitle: q,
+                formTitle: J,
                 emailLabel: j,
                 emailPlaceholder: $,
-                messageLabel: J,
+                messageLabel: z,
                 messagePlaceholder: Q,
                 nameLabel: Z,
                 namePlaceholder: ee,
                 successMessageText: en,
-                isRequiredLabel: z,
+                isRequiredLabel: q,
                 addScreenshotButtonLabel: F,
                 removeScreenshotButtonLabel: et,
                 onFormClose: e_,
@@ -492,20 +492,20 @@ function $(e, t) {
     for (var r in t) e[r] = t[r];
     return e;
 }
-function q(e) {
+function J(e) {
     var t = e.parentNode;
     t && t.removeChild(e);
 }
-function z(e, t, r) {
+function q(e, t, r) {
     var n,
         a,
         o,
         i = {};
     for (o in t) 'key' == o ? (n = t[o]) : 'ref' == o ? (a = t[o]) : (i[o] = t[o]);
     if ((arguments.length > 2 && (i.children = arguments.length > 3 ? w.call(arguments, 2) : r), 'function' == typeof e && null != e.defaultProps)) for (o in e.defaultProps) void 0 === i[o] && (i[o] = e.defaultProps[o]);
-    return J(e, i, n, a, null);
+    return z(e, i, n, a, null);
 }
-function J(e, t, r, n, a) {
+function z(e, t, r, n, a) {
     var o = {
         type: e,
         props: t,
@@ -599,7 +599,7 @@ function en(e, t, r, n, a, o, i, _, E, s, c) {
                     c = s,
                     I = 0;
                 for (e.__k = [], n = 0; n < E; n++)
-                    null != (a = e.__k[n] = null == (a = t[n]) || 'boolean' == typeof a || 'function' == typeof a ? null : 'string' == typeof a || 'number' == typeof a || 'bigint' == typeof a || a.constructor == String ? J(null, a, null, null, a) : j(a) ? J(Q, { children: a }, null, null, null) : void 0 === a.constructor && a.__b > 0 ? J(a.type, a.props, a.key, a.ref ? a.ref : null, a.__v) : a)
+                    null != (a = e.__k[n] = null == (a = t[n]) || 'boolean' == typeof a || 'function' == typeof a ? null : 'string' == typeof a || 'number' == typeof a || 'bigint' == typeof a || a.constructor == String ? z(null, a, null, null, a) : j(a) ? z(Q, { children: a }, null, null, null) : void 0 === a.constructor && a.__b > 0 ? z(a.type, a.props, a.key, a.ref ? a.ref : null, a.__v) : a)
                         ? ((a.__ = e),
                           (a.__b = e.__b + 1),
                           (_ = (function (e, t, r, n) {
@@ -782,7 +782,7 @@ function eE(e, t, r, n, a, o, i, _, E, s) {
                       for (s in T) (l = T[s]), 'children' == s || ('dangerouslySetInnerHTML' == s ? (I = l) : 'key' === s || s in d || eo(e, s, null, l, a));
                       for (s in d) (l = d[s]), 'children' == s ? (u = l) : 'dangerouslySetInnerHTML' == s ? (c = l) : 'value' == s ? (R = l) : 'checked' == s ? (A = l) : 'key' === s || (_ && 'function' != typeof l) || T[s] === l || eo(e, s, l, T[s], a);
                       if (c) _ || (I && (c.__html === I.__html || c.__html === e.innerHTML)) || (e.innerHTML = c.__html), (t.__k = []);
-                      else if ((I && (e.innerHTML = ''), en(e, j(u) ? u : [u], t, r, n, a && 'foreignObject' !== N, o, i, o ? o[0] : r.__k && ee(r, 0), _, E), null != o)) for (s = o.length; s--; ) null != o[s] && q(o[s]);
+                      else if ((I && (e.innerHTML = ''), en(e, j(u) ? u : [u], t, r, n, a && 'foreignObject' !== N, o, i, o ? o[0] : r.__k && ee(r, 0), _, E), null != o)) for (s = o.length; s--; ) null != o[s] && J(o[s]);
                       _ || ((s = 'value'), void 0 === R || (R === e[s] && ('progress' !== N || R) && ('option' !== N || R === T[s])) || eo(e, s, R, T[s], !1), (s = 'checked'), void 0 !== A && A !== e[s] && eo(e, s, A, T[s], !1));
                   }
                   return e;
@@ -823,7 +823,7 @@ function eI(e, t, r) {
         (n.base = n.__P = null), (e.__c = void 0);
     }
     if ((n = e.__k)) for (a = 0; a < n.length; a++) n[a] && eI(n[a], t, r || 'function' != typeof e.type);
-    r || null == e.__e || q(e.__e), (e.__ = e.__e = e.__d = void 0);
+    r || null == e.__e || J(e.__e), (e.__ = e.__e = e.__d = void 0);
 }
 function eu(e, t, r) {
     return this.constructor(e, r);
@@ -1151,7 +1151,7 @@ function eV({ options: e }) {
         }),
         []
     );
-    return z(
+    return q(
         'h2',
         {
             class: 'dialog__header',
@@ -1163,7 +1163,7 @@ function eV({ options: e }) {
         },
         e.formTitle,
         e.showBranding
-            ? z('a', {
+            ? q('a', {
                   class: 'brand-link',
                   target: '_blank',
                   href: 'https://sentry.io/welcome/',
@@ -1209,7 +1209,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
             },
             [A, d, N, p, f]
         );
-    return z(
+    return q(
         'form',
         {
             class: 'form',
@@ -1252,7 +1252,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
             }
         },
         m && g
-            ? z(m, {
+            ? q(m, {
                   onError: y,
                   __self: this,
                   __source: {
@@ -1261,7 +1261,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                   }
               })
             : null,
-        z(
+        q(
             'div',
             {
                 class: 'form__right',
@@ -1272,7 +1272,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                     lineNumber: 149
                 }
             },
-            z(
+            q(
                 'div',
                 {
                     class: 'form__top',
@@ -1283,7 +1283,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                     }
                 },
                 h
-                    ? z(
+                    ? q(
                           'div',
                           {
                               class: 'form__error-container',
@@ -1297,7 +1297,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                       )
                     : null,
                 s
-                    ? z(
+                    ? q(
                           'label',
                           {
                               for: 'name',
@@ -1308,7 +1308,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                   lineNumber: 154
                               }
                           },
-                          z(eW, {
+                          q(eW, {
                               label: f,
                               isRequiredLabel: D,
                               isRequired: N,
@@ -1318,7 +1318,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                   lineNumber: 155
                               }
                           }),
-                          z('input', {
+                          q('input', {
                               class: 'form__input',
                               defaultValue: r,
                               id: 'name',
@@ -1333,7 +1333,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               }
                           })
                       )
-                    : z('input', {
+                    : q('input', {
                           'aria-hidden': !0,
                           value: r,
                           name: 'name',
@@ -1345,7 +1345,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                           }
                       }),
                 E
-                    ? z(
+                    ? q(
                           'label',
                           {
                               for: 'email',
@@ -1356,7 +1356,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                   lineNumber: 171
                               }
                           },
-                          z(eW, {
+                          q(eW, {
                               label: A,
                               isRequiredLabel: D,
                               isRequired: d,
@@ -1366,7 +1366,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                   lineNumber: 172
                               }
                           }),
-                          z('input', {
+                          q('input', {
                               class: 'form__input',
                               defaultValue: t,
                               id: 'email',
@@ -1381,7 +1381,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               }
                           })
                       )
-                    : z('input', {
+                    : q('input', {
                           'aria-hidden': !0,
                           value: t,
                           name: 'email',
@@ -1392,7 +1392,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               lineNumber: 184
                           }
                       }),
-                z(
+                q(
                     'label',
                     {
                         for: 'message',
@@ -1403,7 +1403,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                             lineNumber: 187
                         }
                     },
-                    z(eW, {
+                    q(eW, {
                         label: p,
                         isRequiredLabel: D,
                         isRequired: !0,
@@ -1413,7 +1413,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                             lineNumber: 188
                         }
                     }),
-                    z('textarea', {
+                    q('textarea', {
                         autoFocus: !0,
                         class: 'form__input form__input--textarea',
                         id: 'message',
@@ -1429,7 +1429,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                     })
                 ),
                 m
-                    ? z(
+                    ? q(
                           'label',
                           {
                               for: 'screenshot',
@@ -1440,7 +1440,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                   lineNumber: 201
                               }
                           },
-                          z(
+                          q(
                               'button',
                               {
                                   class: 'btn btn--default',
@@ -1457,7 +1457,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               g ? l : u
                           ),
                           U
-                              ? z(
+                              ? q(
                                     'div',
                                     {
                                         class: 'form__error-container',
@@ -1473,7 +1473,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                       )
                     : null
             ),
-            z(
+            q(
                 'div',
                 {
                     class: 'btn-group',
@@ -1483,7 +1483,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                         lineNumber: 216
                     }
                 },
-                z(
+                q(
                     'button',
                     {
                         class: 'btn btn--primary',
@@ -1496,7 +1496,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                     },
                     L
                 ),
-                z(
+                q(
                     'button',
                     {
                         class: 'btn btn--default',
@@ -1515,7 +1515,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
     );
 }
 function eW({ label: e, isRequired: t, isRequiredLabel: r }) {
-    return z(
+    return q(
         'span',
         {
             class: 'form__label__text',
@@ -1527,7 +1527,7 @@ function eW({ label: e, isRequired: t, isRequiredLabel: r }) {
         },
         e,
         t &&
-            z(
+            q(
                 'span',
                 {
                     class: 'form__label__text--required',
@@ -1590,7 +1590,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
             },
             [t]
         );
-    return z(
+    return q(
         Q,
         {
             __self: this,
@@ -1600,7 +1600,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
             }
         },
         o
-            ? z(
+            ? q(
                   'div',
                   {
                       class: 'success__position',
@@ -1611,7 +1611,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
                           lineNumber: 50
                       }
                   },
-                  z(
+                  q(
                       'div',
                       {
                           class: 'success__content',
@@ -1622,7 +1622,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
                           }
                       },
                       n.successMessageText,
-                      z('span', {
+                      q('span', {
                           class: 'success__icon',
                           dangerouslySetInnerHTML: a,
                           __self: this,
@@ -1633,7 +1633,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
                       })
                   )
               )
-            : z(
+            : q(
                   'dialog',
                   {
                       class: 'dialog',
@@ -1645,7 +1645,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
                           lineNumber: 57
                       }
                   },
-                  z(
+                  q(
                       'div',
                       {
                           class: 'dialog__position',
@@ -1655,7 +1655,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
                               lineNumber: 58
                           }
                       },
-                      z(
+                      q(
                           'div',
                           {
                               class: 'dialog__content',
@@ -1668,7 +1668,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
                                   lineNumber: 59
                               }
                           },
-                          z(eV, {
+                          q(eV, {
                               options: n,
                               __self: this,
                               __source: {
@@ -1676,7 +1676,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
                                   lineNumber: 66
                               }
                           }),
-                          z(eF, {
+                          q(eF, {
                               ...r,
                               onSubmitSuccess: E,
                               __self: this,
@@ -1762,7 +1762,7 @@ let e$ = `
   transition: transform 0.2s ease-in-out;
 }
 `,
-    eq = `
+    eJ = `
 .dialog__header {
   display: flex;
   align-items: center;
@@ -1778,7 +1778,7 @@ let e$ = `
   outline: var(--outline);
 }
 `,
-    ez = `
+    eq = `
 .form {
   display: flex;
   overflow: auto;
@@ -1865,7 +1865,7 @@ let e$ = `
   fill: var(--error-color);
 }
 `,
-    eJ = `
+    ez = `
 .btn-group {
   display: grid;
   gap: 8px;
@@ -1976,9 +1976,9 @@ let e$ = `
 }
 
 ${e$}
+${eJ}
 ${eq}
 ${ez}
-${eJ}
 ${eQ}
 `),
                         e
@@ -2005,14 +2005,14 @@ ${eQ}
                 u =
                     t &&
                     t.createInput({
-                        h: z,
+                        h: q,
                         hooks: eY,
                         dialog: I,
                         options: e
                     }),
                 l = (t) => {
                     var n, a, E, s, c, I, R;
-                    (n = z(ej, {
+                    (n = q(ej, {
                         options: e,
                         screenshotInput: u,
                         showName: e.showName || e.isNameRequired,
@@ -2044,7 +2044,7 @@ ${eQ}
                         (c = ((s = false), (E && E.__k) || a.__k)),
                         (I = []),
                         (R = []),
-                        eE(a, (n = ((!s && E) || a).__k = z(Q, null, [n])), c || F, F, void 0 !== a.ownerSVGElement, !s && E ? [E] : c ? null : a.firstChild ? w.call(a.childNodes) : null, I, !s && E ? E : c ? c.__e : a.firstChild, s, R),
+                        eE(a, (n = ((!s && E) || a).__k = q(Q, null, [n])), c || F, F, void 0 !== a.ownerSVGElement, !s && E ? [E] : c ? null : a.firstChild ? w.call(a.childNodes) : null, I, !s && E ? E : c ? c.__e : a.firstChild, s, R),
                         (n.__d = void 0),
                         es(I, n, R);
                 };

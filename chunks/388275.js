@@ -40,14 +40,14 @@ function x(e) {
         ),
         y = (0, _.y)(C),
         T = (0, E.Ad)(),
-        [j, P] = s.useState(() => (0, u.H2)()),
-        { textValue: D, richValue: O } = j,
+        [P, j] = s.useState(() => (0, u.H2)()),
+        { textValue: D, richValue: O } = P,
         [k, W] = s.useState(!1),
         G = s.useCallback(() => W(!0), []),
         U = s.useCallback(() => W(!1), []),
         F = s.useCallback(
             (e, t, l) => {
-                P({
+                j({
                     textValue: t,
                     richValue: l
                 }),

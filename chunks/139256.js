@@ -187,7 +187,7 @@ function U(e) {
         i = (0, I.n)(),
         o = h.QK.useSetting(),
         s = 212;
-    return (0, a.jsx)(f.Z, {
+    return (0, a.jsx)(f.ZP, {
         className: r,
         imageClassName: R.attachmentImage,
         src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,

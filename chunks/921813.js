@@ -23,7 +23,7 @@ var a = n(120356),
     C = n(228168),
     m = n(706995);
 function f(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: a, onUpsellClick: f, pendingBanner: A, pendingBio: p, pendingPronouns: M, pendingAvatar: S, pendingAvatarDecoration: h, pendingNickname: x, pendingGlobalName: b, pendingThemeColors: O, pendingProfileEffectId: P, avatarClassName: v, containerClassName: L, isTryItOutFlow: Z = !1, disabledInputs: D = !1, hideCustomStatus: B = !1, hideBioSection: U = !1, hideMessageInput: j = !0, hideExampleButton: G = !1 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: a, onUpsellClick: f, pendingBanner: A, pendingBio: p, pendingPronouns: M, pendingAvatar: S, pendingAvatarDecoration: h, pendingNickname: b, pendingGlobalName: x, pendingThemeColors: O, pendingProfileEffectId: P, avatarClassName: v, containerClassName: L, isTryItOutFlow: Z = !1, disabledInputs: D = !1, hideCustomStatus: B = !1, hideBioSection: U = !1, hideMessageInput: j = !0, hideExampleButton: G = !1 } = e,
         w = (0, o.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: y, avatarDecorationSrc: H } = (0, d.Z)({
             user: t,
@@ -91,8 +91,8 @@ function f(e) {
                 displayProfile: w,
                 guild: n,
                 pendingAvatar: S,
-                pendingNickname: x,
-                pendingGlobalName: b,
+                pendingNickname: b,
+                pendingGlobalName: x,
                 pendingBio: p,
                 pendingPronouns: M,
                 isTryItOutFlow: Z,

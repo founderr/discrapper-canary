@@ -28,8 +28,8 @@ var s = n(735250),
     M = n(15640),
     S = n(89057),
     h = n(406128),
-    x = n(703656),
-    b = n(246946),
+    b = n(703656),
+    x = n(246946),
     O = n(78839),
     P = n(483444),
     v = n(626135),
@@ -128,7 +128,7 @@ function q() {
                                 target: 'premium home page'
                             }),
                                 (0, I.xf)(),
-                                (0, x.uL)(V.Z5c.APPLICATION_STORE);
+                                (0, b.uL)(V.Z5c.APPLICATION_STORE);
                         },
                         children: (0, s.jsx)(E.Text, {
                             className: K.tierCardButtonCTA,
@@ -265,7 +265,7 @@ t.Z = function () {
         [l, o] = a.useState(!0),
         _ = (0, B.n)(),
         I = null == _ ? void 0 : _.countryCode,
-        g = (0, c.e7)([b.Z], () => b.Z.enabled),
+        g = (0, c.e7)([x.Z], () => x.Z.enabled),
         m = 'PremiumManagementSettings';
     (0, C.j)({
         location: m + ' auto on',
@@ -276,7 +276,7 @@ t.Z = function () {
             autoTrackExposure: !1
         }),
         (0, U.B)('PremiumManagementSettings');
-    let x = (0, H.bD)('PremiumManagementSettings'),
+    let b = (0, H.bD)('PremiumManagementSettings'),
         P = (0, H.pn)('PremiumManagementSettings');
     a.useEffect(() => {
         u.Z.wait(async () => {
@@ -301,7 +301,7 @@ t.Z = function () {
                     className: K.__invalid_container,
                     children: [
                         (0, s.jsx)(q, {}),
-                        (x || P) && (0, s.jsx)(k.Z, { isInSettings: !0 }),
+                        (b || P) && (0, s.jsx)(k.Z, { isInSettings: !0 }),
                         (0, s.jsx)(ee, {}),
                         (0, s.jsx)(y.Z, {
                             className: K.__invalid_planComparisonTable,

@@ -24,8 +24,8 @@ var s = n(735250),
 t.Z = (e) => {
     let t,
         n,
-        { isAllPerksVisible: r, setIsAllPerksVisible: S, previousComponent: h, isFullScreen: x } = e,
-        b = a.useRef(null),
+        { isAllPerksVisible: r, setIsAllPerksVisible: S, previousComponent: h, isFullScreen: b } = e,
+        x = a.useRef(null),
         O = Object.entries((0, N.Z)()).reduce((e, t) => {
             let [n, s] = t;
             return !1 !== s.canReveal && 'upcomingDropUntimed' !== s.name && (e[n] = s), e;
@@ -43,7 +43,7 @@ t.Z = (e) => {
                 [p.open]: r,
                 [p.openCloseReduceMotion]: B
             }),
-            ref: b,
+            ref: x,
             children: (0, s.jsx)('div', {
                 className: p.container,
                 children: (0, s.jsxs)(E.Gt, {
@@ -77,7 +77,7 @@ t.Z = (e) => {
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
                                         isPremiumSubscriber: U,
-                                        isFullScreen: x
+                                        isFullScreen: b
                                     }),
                                     cardType: C.R0.CARD_CAROUSEL_FIRST_ROW
                                 }),
@@ -95,7 +95,7 @@ t.Z = (e) => {
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
                                         isPremiumSubscriber: U,
-                                        isFullScreen: x
+                                        isFullScreen: b
                                     }),
                                     cardType: C.R0.CARD_CAROUSEL_SECOND_ROW
                                 }),
@@ -113,7 +113,7 @@ t.Z = (e) => {
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
                                         isPremiumSubscriber: U,
-                                        isFullScreen: x
+                                        isFullScreen: b
                                     }),
                                     cardType: C.R0.CARD_CAROUSEL_THIRD_ROW
                                 })

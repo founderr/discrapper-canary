@@ -50,33 +50,33 @@ t.Z = (e) => {
     let { className: n, variant: r = I.R0.PERKS_DISCOVERABILITY, noBackground: m = !1, leftAlignHeaders: f = !1, showAllPerksButton: A, headerClassname: p, isFullScreen: M = !0 } = e,
         S = a.useRef(null),
         h = (0, _.yQ)(),
-        x = (0, E.Ag)(h),
-        b = (0, c.ZP)('perks-discoverability');
+        b = (0, E.Ag)(h),
+        x = (0, c.ZP)('perks-discoverability');
     (0, E.I2)();
     let O = (0, d.HI)({ location: I.R0.PERKS_DISCOVERABILITY }),
         P = r === I.R0.WHATS_NEW,
         v = (0, _.IY)(),
         L = (0, T.x$)();
     a.useEffect(() => {
-        P && !x && (v(), L());
-    }, [v, L, P, x]),
+        P && !b && (v(), L());
+    }, [v, L, P, b]),
         a.useEffect(() => {
             let e = S.current;
-            if (null == e || !x || !P) return;
+            if (null == e || !b || !P) return;
             let t = requestAnimationFrame(() => {
                 e.scrollIntoView({ behavior: 'smooth' }), P && v();
             });
             return () => {
                 cancelAnimationFrame(t), P && v();
             };
-        }, [S, x, P, v]);
+        }, [S, b, P, v]);
     let Z = (0, R.Op)(P),
         D = (0, u.Z)(),
         B = (0, R.mN)(),
         U = (0, R.sP)({
             perksCards: D,
             variant: r,
-            shopMarketingVariation: b,
+            shopMarketingVariation: x,
             isFullScreen: M,
             showTenureCard: null == h ? void 0 : h.showCard,
             tileOrderVariant: O,

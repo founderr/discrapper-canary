@@ -22,7 +22,7 @@ var s = n(735250),
     M = n(689938),
     S = n(837661),
     h = n(691766);
-let x = (e) => {
+let b = (e) => {
         let { userRecord: t, placement: n, trialStatus: a } = e,
             { avatarSrc: r, eventHandlers: l } = (0, E.Z)({
                 user: t,
@@ -65,7 +65,7 @@ let x = (e) => {
                 })
         });
     },
-    b = (e) => {
+    x = (e) => {
         let { numSentReferrals: t, placement: n } = e;
         return (0, s.jsxs)('div', {
             className: S.avatarProgressBarUnitConnectorContainer,
@@ -89,25 +89,25 @@ let x = (e) => {
         return (0, s.jsxs)('div', {
             className: S.userAvatarProgressBarContainer,
             children: [
-                (0, s.jsx)(x, {
+                (0, s.jsx)(b, {
                     userRecord: r,
                     placement: 1,
                     trialStatus: (null == r ? void 0 : r.id) != null ? n.get(null == r ? void 0 : r.id) : void 0
                 }),
-                (0, s.jsx)(b, {
+                (0, s.jsx)(x, {
                     numSentReferrals: a,
                     placement: 1
                 }),
-                (0, s.jsx)(x, {
+                (0, s.jsx)(b, {
                     userRecord: i,
                     placement: 2,
                     trialStatus: (null == i ? void 0 : i.id) != null ? n.get(null == i ? void 0 : i.id) : void 0
                 }),
-                (0, s.jsx)(b, {
+                (0, s.jsx)(x, {
                     numSentReferrals: a,
                     placement: 2
                 }),
-                (0, s.jsx)(x, {
+                (0, s.jsx)(b, {
                     userRecord: l,
                     placement: 3,
                     trialStatus: (null == l ? void 0 : l.id) != null ? n.get(null == l ? void 0 : l.id) : void 0
@@ -119,27 +119,27 @@ t.Z = (e) => {
     let t,
         r,
         { isInSettings: E = !1 } = e,
-        x = (0, l.Wu)([N.Z], () => N.Z.getSentUserIds()),
-        b = (0, l.e7)([N.Z], () => N.Z.getRecipientStatus()),
+        b = (0, l.Wu)([N.Z], () => N.Z.getSentUserIds()),
+        x = (0, l.e7)([N.Z], () => N.Z.getRecipientStatus()),
         P = (0, A.uv)('ReferralProgramProgressBar'),
         v = (0, A.TW)('ReferralProgramProgressBar'),
-        L = (0, l.Wu)([T.default], () => x.map((e) => T.default.getUser(e)).filter((e) => null != e)),
+        L = (0, l.Wu)([T.default], () => b.map((e) => T.default.getUser(e)).filter((e) => null != e)),
         Z = a.useMemo(() => L.map((e) => new u.Z(e)), [L]),
         D = (0, l.e7)([N.Z], () => N.Z.getRefreshAt()),
         { subscriberHomeVariant: B } = C.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
         U = P === p.g2L.UNAPPLIED || P === p.g2L.QUALIFIED,
         j = B === C.p.VARIANT_2;
     a.useEffect(() => {
-        x.forEach((e) => {
+        b.forEach((e) => {
             (0, c.PR)(e);
         });
-    }, [x]);
+    }, [b]);
     let G = {
         redeemed: 0,
         converted: 0,
-        sent: b.size
+        sent: x.size
     };
-    b.forEach((e) => {
+    x.forEach((e) => {
         e === g.Fe.REDEEMED && G.redeemed++, e === g.Fe.CONVERTED && (G.redeemed++, G.converted++);
     });
     let w = G.sent === A.Q_,
@@ -192,7 +192,7 @@ t.Z = (e) => {
                               })
                             : (0, s.jsx)(O, {
                                   userRecords: Z,
-                                  recipientStatus: b
+                                  recipientStatus: x
                               }),
                         (0, s.jsx)(o.Text, {
                             variant: E ? 'text-sm/normal' : 'text-lg/medium',
@@ -249,7 +249,7 @@ t.Z = (e) => {
                 })
             ]
         }),
-        Y = x.length === A.Q_,
+        Y = b.length === A.Q_,
         z = G.redeemed === A.Q_;
     return (0, s.jsx)(_.Gt, {
         value: H,

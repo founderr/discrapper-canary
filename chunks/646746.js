@@ -66,7 +66,7 @@ function E(e) {
                 ? (C = (0, l.jsxs)('div', {
                       className: r()(_.attachmentPreview, _.attachmentPreviewVideo),
                       children: [
-                          (0, l.jsx)(c.Z, {
+                          (0, l.jsx)(c.ZP, {
                               className: _.thumbnail,
                               src: a[0].proxy_url,
                               width: 56,
@@ -82,7 +82,7 @@ function E(e) {
                 : p > 0
                   ? (C = (0, l.jsx)('div', {
                         className: _.attachmentPreview,
-                        children: (0, l.jsx)(c.Z, {
+                        children: (0, l.jsx)(c.ZP, {
                             src: a[0].proxy_url,
                             width: 56,
                             height: 56
@@ -91,7 +91,7 @@ function E(e) {
                   : (null === (A = E[0]) || void 0 === A ? void 0 : null === (Z = A.thumbnail) || void 0 === Z ? void 0 : Z.proxyURL) != null &&
                     (C = (0, l.jsx)('div', {
                         className: _.attachmentPreview,
-                        children: (0, l.jsx)(c.Z, {
+                        children: (0, l.jsx)(c.ZP, {
                             src: E[0].thumbnail.proxyURL,
                             width: 56,
                             height: 56

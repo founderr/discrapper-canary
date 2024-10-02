@@ -61,14 +61,14 @@ function $(e) {
     return r;
 }
 ((s = A || (A = {}))[(s.Document = 0)] = 'Document'), (s[(s.DocumentType = 1)] = 'DocumentType'), (s[(s.Element = 2)] = 'Element'), (s[(s.Text = 3)] = 'Text'), (s[(s.CDATA = 4)] = 'CDATA'), (s[(s.Comment = 5)] = 'Comment');
-function q(e) {
+function J(e) {
     let t = $([e, 'optionalAccess', (e) => e.host]);
     return $([t, 'optionalAccess', (e) => e.shadowRoot]) === e;
 }
-function z(e) {
+function q(e) {
     return '[object ShadowRoot]' === Object.prototype.toString.call(e);
 }
-function J(e) {
+function z(e) {
     try {
         var t;
         let r = e.rules || e.cssRules;
@@ -86,7 +86,7 @@ function Q(e) {
     )
         try {
             t =
-                J(e.styleSheet) ||
+                z(e.styleSheet) ||
                 (function (e) {
                     let { cssText: t } = e;
                     if (t.split('"').length < 3) return t;
@@ -405,10 +405,10 @@ function em(e, t) {
                         if ('link' === g && c) {
                             let t = Array.from(i.styleSheets).find((t) => t.href === e.href),
                                 r = null;
-                            t && (r = J(t)), r && (delete M.rel, delete M.href, (M._cssText = ep(r, t.href)));
+                            t && (r = z(t)), r && (delete M.rel, delete M.href, (M._cssText = ep(r, t.href)));
                         }
                         if ('style' === g && e.sheet && !(e.innerText || e.textContent || '').trim().length) {
-                            let t = J(e.sheet);
+                            let t = z(e.sheet);
                             t && (M._cssText = ep(t, eL()));
                         }
                         if ('input' === g || 'textarea' === g || 'select' === g || 'option' === g) {
@@ -523,7 +523,7 @@ function em(e, t) {
                             T = 'TEXTAREA' === I || void 0;
                         if (l && u) {
                             try {
-                                e.nextSibling || e.previousSibling || ($([e, 'access', (e) => e.parentNode, 'access', (e) => e.sheet, 'optionalAccess', (e) => e.cssRules]) && (u = J(e.parentNode.sheet)));
+                                e.nextSibling || e.previousSibling || ($([e, 'access', (e) => e.parentNode, 'access', (e) => e.sheet, 'optionalAccess', (e) => e.cssRules]) && (u = z(e.parentNode.sheet)));
                             } catch (t) {
                                 console.warn(`Cannot get CSS styles from text's parentNode. Error: ${t}`, e);
                             }
@@ -637,7 +637,7 @@ function em(e, t) {
     if (b.type === A.Element) {
         (B = B && !b.needBlock), delete b.needBlock;
         let t = e.shadowRoot;
-        t && z(t) && (b.isShadowHost = !0);
+        t && q(t) && (b.isShadowHost = !0);
     }
     if ((b.type === A.Document || b.type === A.Element) && B) {
         var w;
@@ -678,11 +678,11 @@ function em(e, t) {
         if ((w = e).nodeType === w.ELEMENT_NODE && e.shadowRoot)
             for (let r of Array.from(e.shadowRoot.childNodes)) {
                 let n = em(r, t);
-                n && (z(e.shadowRoot) && (n.isShadow = !0), b.childNodes.push(n));
+                n && (q(e.shadowRoot) && (n.isShadow = !0), b.childNodes.push(n));
             }
     }
     return (
-        e.parentNode && q(e.parentNode) && z(e.parentNode) && (b.isShadow = !0),
+        e.parentNode && J(e.parentNode) && q(e.parentNode) && (b.isShadow = !0),
         b.type === A.Element &&
             'iframe' === b.tagName &&
             !(function (e, t, r) {
@@ -955,11 +955,11 @@ class e$ {
         return this.id++;
     }
 }
-function eq(e) {
+function eJ(e) {
     let t = null;
     return eU([e, 'access', (e) => e.getRootNode, 'optionalCall', (e) => e(), 'optionalAccess', (e) => e.nodeType]) === Node.DOCUMENT_FRAGMENT_NODE && e.getRootNode().host && (t = e.getRootNode().host), t;
 }
-function ez(e) {
+function eq(e) {
     let t = e.ownerDocument;
     return (
         !!t &&
@@ -970,16 +970,16 @@ function ez(e) {
                 let r = (function (e) {
                     let t,
                         r = e;
-                    for (; (t = eq(r)); ) r = t;
+                    for (; (t = eJ(r)); ) r = t;
                     return r;
                 })(e);
                 return t.contains(r);
             })(e))
     );
 }
-let eJ = {};
+let ez = {};
 function eQ(e) {
-    let t = eJ[e];
+    let t = ez[e];
     if (t) return t;
     let r = window.document,
         n = window[e];
@@ -990,7 +990,7 @@ function eQ(e) {
             let a = t.contentWindow;
             a && a[e] && (n = a[e]), r.head.removeChild(t);
         } catch (e) {}
-    return (eJ[e] = n.bind(window));
+    return (ez[e] = n.bind(window));
 }
 function eZ(...e) {
     return eQ('setTimeout')(...e);
@@ -1074,8 +1074,8 @@ class e8 {
                         return r;
                     },
                     a = (a) => {
-                        if (!a.parentNode || !ez(a)) return;
-                        let o = q(a.parentNode) ? this.mirror.getId(eq(a)) : this.mirror.getId(a.parentNode),
+                        if (!a.parentNode || !eq(a)) return;
+                        let o = J(a.parentNode) ? this.mirror.getId(eJ(a)) : this.mirror.getId(a.parentNode),
                             i = n(a);
                         if (-1 === o || -1 === i) return r.addNode(a);
                         let _ = em(a, {
@@ -1262,13 +1262,13 @@ class e8 {
                                 e.removedNodes.forEach((t) => {
                                     var r;
                                     let n = this.mirror.getId(t),
-                                        a = q(e.target) ? this.mirror.getId(e.target.host) : this.mirror.getId(e.target);
+                                        a = J(e.target) ? this.mirror.getId(e.target.host) : this.mirror.getId(e.target);
                                     if (!(ek(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) || ex(t, this.mirror)) && ((r = t), -1 !== this.mirror.getId(r)))
                                         this.addedSet.has(t)
                                             ? (e7(this.addedSet, t), this.droppedSet.add(t))
                                             : (this.addedSet.has(e.target) && -1 === n) ||
                                               (function e(t, r) {
-                                                  if (q(t)) return !1;
+                                                  if (J(t)) return !1;
                                                   let n = r.getId(t);
                                                   return !r.has(n) || ((!t.parentNode || t.parentNode.nodeType !== t.DOCUMENT_NODE) && (!t.parentNode || e(t.parentNode, r)));
                                               })(e.target, this.mirror) ||
@@ -1277,7 +1277,7 @@ class e8 {
                                                   : this.removes.push({
                                                         parentId: a,
                                                         id: n,
-                                                        isShadow: !!(q(e.target) && z(e.target)) || void 0
+                                                        isShadow: !!(J(e.target) && q(e.target)) || void 0
                                                     })),
                                             this.mapRemoves.push(t);
                                 });
@@ -2300,7 +2300,7 @@ class tO {
         this.reset(), this.patchAttachShadow(Element, document);
     }
     addShadowRoot(e, t) {
-        if (!z(e) || this.shadowDoms.has(e)) return;
+        if (!q(e) || this.shadowDoms.has(e)) return;
         this.shadowDoms.add(e), this.bypassOptions.canvasManager.addShadowRoot(e);
         let r = to(
             {
@@ -2343,7 +2343,7 @@ class tO {
             eB(e.prototype, 'attachShadow', function (e) {
                 return function (n) {
                     let a = e.call(this, n);
-                    return this.shadowRoot && ez(this) && r.addShadowRoot(this.shadowRoot, t), a;
+                    return this.shadowRoot && eq(this) && r.addShadowRoot(this.shadowRoot, t), a;
                 };
             })
         );
@@ -2520,16 +2520,16 @@ function th(e = {}) {
                 });
     })();
     let $ = 0,
-        q = (e) => {
+        J = (e) => {
             for (let t of H || []) t.eventProcessor && (e = t.eventProcessor(e));
             return g && !W && (e = g(e)), e;
         };
     i = (e, o) => {
-        if (((e.timestamp = ew()), (0, N.x)([tn, 'access', (e) => e[0], 'optionalAccess', (e) => e.isFrozen, 'call', (e) => e()]) && e.type !== e0.FullSnapshot && !(e.type === e0.IncrementalSnapshot && e.data.source === e1.Mutation) && tn.forEach((e) => e.unfreeze()), F)) (0, N.x)([r, 'optionalCall', (t) => t(q(e), o)]);
+        if (((e.timestamp = ew()), (0, N.x)([tn, 'access', (e) => e[0], 'optionalAccess', (e) => e.isFrozen, 'call', (e) => e()]) && e.type !== e0.FullSnapshot && !(e.type === e0.IncrementalSnapshot && e.data.source === e1.Mutation) && tn.forEach((e) => e.unfreeze()), F)) (0, N.x)([r, 'optionalCall', (t) => t(J(e), o)]);
         else if (W) {
             let t = {
                 type: 'rrweb',
-                event: q(e),
+                event: J(e),
                 origin: window.location.origin,
                 isCheckout: o
             };
@@ -2544,7 +2544,7 @@ function th(e = {}) {
             (r || o) && eo(!0);
         }
     };
-    let z = (e) => {
+    let q = (e) => {
             i({
                 type: e0.IncrementalSnapshot,
                 data: {
@@ -2553,7 +2553,7 @@ function th(e = {}) {
                 }
             });
         },
-        J = (e) =>
+        z = (e) =>
             i({
                 type: e0.IncrementalSnapshot,
                 data: {
@@ -2570,7 +2570,7 @@ function th(e = {}) {
                 }
             }),
         ee = new tS({
-            mutationCb: z,
+            mutationCb: q,
             adoptedStyleSheetCb: (e) =>
                 i({
                     type: e0.IncrementalSnapshot,
@@ -2585,7 +2585,7 @@ function th(e = {}) {
                 ? new td()
                 : new tN({
                       mirror: tD,
-                      mutationCb: z,
+                      mutationCb: q,
                       stylesheetManager: ee,
                       recordCrossOriginIframes: y,
                       wrappedEmit: i
@@ -2628,8 +2628,8 @@ function th(e = {}) {
             'boolean' == typeof __RRWEB_EXCLUDE_SHADOW_DOM__ && __RRWEB_EXCLUDE_SHADOW_DOM__
                 ? new tp()
                 : new tO({
-                      mutationCb: z,
-                      scrollCb: J,
+                      mutationCb: q,
+                      scrollCb: z,
                       bypassOptions: {
                           onMutation: k,
                           blockClass: E,
@@ -2791,7 +2791,7 @@ function th(e = {}) {
                 tt(tu)(
                     {
                         onMutation: k,
-                        mutationCb: z,
+                        mutationCb: q,
                         mousemoveCb: (e, t) =>
                             i({
                                 type: e0.IncrementalSnapshot,
@@ -2808,7 +2808,7 @@ function th(e = {}) {
                                     ...e
                                 }
                             }),
-                        scrollCb: J,
+                        scrollCb: z,
                         viewportResizeCb: (e) =>
                             i({
                                 type: e0.IncrementalSnapshot,
@@ -3338,18 +3338,18 @@ function tj(e, t, r) {
     };
 }
 let t$ = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
-function tq(e, t) {
-    if (!!t$) G.kg.info(e), t && tJ(e);
+function tJ(e, t) {
+    if (!!t$) G.kg.info(e), t && tz(e);
 }
-function tz(e, t) {
+function tq(e, t) {
     if (!!t$)
         G.kg.info(e),
             t &&
                 (0, Y.iK)(() => {
-                    tJ(e);
+                    tz(e);
                 }, 0);
 }
-function tJ(e) {
+function tz(e) {
     (0, p.n)(
         {
             category: 'console',
@@ -3423,7 +3423,7 @@ class t0 {
               this._ensureReadyPromise);
     }
     destroy() {
-        tq('[Replay] Destroying compression worker'), this._worker.terminate();
+        tJ('[Replay] Destroying compression worker'), this._worker.terminate();
     }
     postMessage(e, t) {
         let r = this._getAndIncrementId();
@@ -3531,7 +3531,7 @@ class t3 {
         try {
             await this._compression.ensureReady();
         } catch (e) {
-            tq('[Replay] Failed to load the compression worker, falling back to simple buffer');
+            tJ('[Replay] Failed to load the compression worker, falling back to simple buffer');
             return;
         }
         await this._switchToCompressionWorker();
@@ -3613,7 +3613,7 @@ function rt({ traceInternals: e, sessionIdleExpire: t, maxReplayDuration: r, pre
                 let t = F.sessionStorage.getItem(W);
                 if (!t) return null;
                 let r = JSON.parse(t);
-                return tz('[Replay] Loading existing session', e), t5(r);
+                return tq('[Replay] Loading existing session', e), t5(r);
             } catch (e) {
                 return null;
             }
@@ -3623,9 +3623,9 @@ function rt({ traceInternals: e, sessionIdleExpire: t, maxReplayDuration: r, pre
               sessionIdleExpire: t,
               maxReplayDuration: r
           })
-            ? (tz('[Replay] Session in sessionStorage is expired, creating new one...'), t8(a, { previousSessionId: o.id }))
+            ? (tq('[Replay] Session in sessionStorage is expired, creating new one...'), t8(a, { previousSessionId: o.id }))
             : o
-        : (tz('[Replay] Creating new session', e), t8(a, { previousSessionId: n }));
+        : (tq('[Replay] Creating new session', e), t8(a, { previousSessionId: n }));
 }
 function rr(e, t, r) {
     return !!ra(e, t) && (rn(e, t, r), !0);
@@ -3655,7 +3655,7 @@ async function rn(e, t, r) {
 function ra(e, t) {
     if (!e.eventBuffer || e.isPaused() || !e.isEnabled()) return !1;
     let r = tC(t.timestamp);
-    return !(r + e.timeouts.sessionIdlePause < Date.now()) && (!(r > e.getContext().initialTimestamp + e.getOptions().maxReplayDuration) || (tz(`[Replay] Skipping event with timestamp ${r} because it is after maxReplayDuration`, e.getOptions()._experiments.traceInternals), !1));
+    return !(r + e.timeouts.sessionIdlePause < Date.now()) && (!(r > e.getContext().initialTimestamp + e.getOptions().maxReplayDuration) || (tq(`[Replay] Skipping event with timestamp ${r} because it is after maxReplayDuration`, e.getOptions()._experiments.traceInternals), !1));
 }
 function ro(e) {
     return !e.type;
@@ -4087,7 +4087,7 @@ async function rG({ recordingData: e, replayId: t, segmentId: r, eventContext: n
             replayId: t,
             event: f
         });
-    if (!S) return T.recordDroppedEvent('event_processor', 'replay', f), tq('An event processor returned `null`, will not send event.'), (0, B.WD)({});
+    if (!S) return T.recordDroppedEvent('event_processor', 'replay', f), tJ('An event processor returned `null`, will not send event.'), (0, B.WD)({});
     delete S.sdkProcessingMetadata;
     let L =
         ((i = S),
@@ -4278,7 +4278,7 @@ class rw {
             this.handleException(Error('Unable to initialize and create session'));
             return;
         }
-        if (!1 !== this.session.sampled) (this.recordingMode = 'buffer' === this.session.sampled && 0 === this.session.segmentId ? 'buffer' : 'session'), tz(`[Replay] Starting replay in ${this.recordingMode} mode`, this._options._experiments.traceInternals), this._initializeRecording();
+        if (!1 !== this.session.sampled) (this.recordingMode = 'buffer' === this.session.sampled && 0 === this.session.segmentId ? 'buffer' : 'session'), tq(`[Replay] Starting replay in ${this.recordingMode} mode`, this._options._experiments.traceInternals), this._initializeRecording();
     }
     start() {
         if (this._isEnabled && 'session' === this.recordingMode) {
@@ -4289,7 +4289,7 @@ class rw {
             t$ && G.kg.info('[Replay] Buffering is in progress, call `flush()` to save the replay');
             return;
         }
-        tz('[Replay] Starting replay in session mode', this._options._experiments.traceInternals), this._updateUserActivity();
+        tq('[Replay] Starting replay in session mode', this._options._experiments.traceInternals), this._updateUserActivity();
         let e = rt(
             {
                 maxReplayDuration: this._options.maxReplayDuration,
@@ -4309,7 +4309,7 @@ class rw {
             t$ && G.kg.info('[Replay] Buffering is in progress, call `flush()` to save the replay');
             return;
         }
-        tz('[Replay] Starting replay in buffer mode', this._options._experiments.traceInternals);
+        tq('[Replay] Starting replay in buffer mode', this._options._experiments.traceInternals);
         let e = rt(
             {
                 sessionIdleExpire: this.timeouts.sessionIdleExpire,
@@ -4405,7 +4405,7 @@ class rw {
                                     return !0;
                                 if ('buffer' === e.recordingMode && e.session && e.eventBuffer) {
                                     let t = e.eventBuffer.getEarliestTimestamp();
-                                    t && (tq(`[Replay] Updating session start time to earliest event in buffer to ${new Date(t)}`, e.getOptions()._experiments.traceInternals), (e.session.started = t), e.getOptions().stickySession && t4(e.session));
+                                    t && (tJ(`[Replay] Updating session start time to earliest event in buffer to ${new Date(t)}`, e.getOptions()._experiments.traceInternals), (e.session.started = t), e.getOptions().stickySession && t4(e.session));
                                 }
                                 return 'session' === e.recordingMode && e.flush(), !0;
                             });
@@ -4436,7 +4436,7 @@ class rw {
             this._isEnabled = !1;
             try {
                 var r;
-                tq(`[Replay] Stopping Replay${t ? ` triggered by ${t}` : ''}`, this._options._experiments.traceInternals),
+                tJ(`[Replay] Stopping Replay${t ? ` triggered by ${t}` : ''}`, this._options._experiments.traceInternals),
                     this._removeListeners(),
                     this.stopRecording(),
                     this._debouncedFlush.cancel(),
@@ -4457,15 +4457,15 @@ class rw {
         }
     }
     pause() {
-        if (!this._isPaused) (this._isPaused = !0), this.stopRecording(), tq('[Replay] Pausing replay', this._options._experiments.traceInternals);
+        if (!this._isPaused) (this._isPaused = !0), this.stopRecording(), tJ('[Replay] Pausing replay', this._options._experiments.traceInternals);
     }
     resume() {
-        if (!!this._isPaused && !!this._checkSession()) (this._isPaused = !1), this.startRecording(), tq('[Replay] Resuming replay', this._options._experiments.traceInternals);
+        if (!!this._isPaused && !!this._checkSession()) (this._isPaused = !1), this.startRecording(), tJ('[Replay] Resuming replay', this._options._experiments.traceInternals);
     }
     async sendBufferedReplayOrFlush({ continueRecording: e = !0 } = {}) {
         if ('session' === this.recordingMode) return this.flushImmediate();
         let t = Date.now();
-        tq('[Replay] Converting buffer to session', this._options._experiments.traceInternals), await this.flushImmediate();
+        tJ('[Replay] Converting buffer to session', this._options._experiments.traceInternals), await this.flushImmediate();
         let r = this.stopRecording();
         if (!!e && !!r && 'session' !== this.recordingMode) (this.recordingMode = 'session'), this.session && (this._updateUserActivity(t), this._updateSessionActivity(t), this._maybeSaveSession()), this.startRecording();
     }
@@ -4556,16 +4556,16 @@ class rw {
                                           })();
                                 })();
                             if (!t) return;
-                            tq(`[Replay] Using compression worker${e ? ` from ${e}` : ''}`);
+                            tJ(`[Replay] Using compression worker${e ? ` from ${e}` : ''}`);
                             let r = new Worker(t);
                             return new t3(r);
                         } catch (e) {
-                            tq('[Replay] Failed to create compression worker');
+                            tJ('[Replay] Failed to create compression worker');
                         }
                     })(t);
                     if (e) return e;
                 }
-                return tq('[Replay] Using simple buffer'), new tZ();
+                return tJ('[Replay] Using simple buffer'), new tZ();
             })({
                 useCompression: this._options.useCompression,
                 workerUrl: this._options.workerUrl
@@ -4947,7 +4947,7 @@ class rw {
     _doChangeToForegroundTasks(e) {
         if (!!this.session) {
             if (!this.checkAndHandleExpiredSession()) {
-                tq('[Replay] Document has become active, but session has expired');
+                tJ('[Replay] Document has become active, but session has expired');
                 return;
             }
             e && this._createCustomBreadcrumb(e);
@@ -5039,11 +5039,11 @@ class rw {
             let n = r < this._options.minReplayDuration,
                 a = r > this._options.maxReplayDuration + 5000;
             if (n || a) {
-                tq(`[Replay] Session duration (${Math.floor(r / 1000)}s) is too ${n ? 'short' : 'long'}, not sending replay.`, this._options._experiments.traceInternals), n && this._debouncedFlush();
+                tJ(`[Replay] Session duration (${Math.floor(r / 1000)}s) is too ${n ? 'short' : 'long'}, not sending replay.`, this._options._experiments.traceInternals), n && this._debouncedFlush();
                 return;
             }
             let o = this.eventBuffer;
-            if ((o && 0 === this.session.segmentId && !o.hasCheckout && tq('[Replay] Flushing initial segment without checkout.', this._options._experiments.traceInternals), !this._flushLock)) {
+            if ((o && 0 === this.session.segmentId && !o.hasCheckout && tJ('[Replay] Flushing initial segment without checkout.', this._options._experiments.traceInternals), !this._flushLock)) {
                 (this._flushLock = this._runFlush()), await this._flushLock, (this._flushLock = void 0);
                 return;
             }

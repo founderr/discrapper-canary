@@ -40,7 +40,7 @@ let v = (e) => {
     },
     b = (e) => {
         let { containerClassName: t, className: s, ...n } = e;
-        return (0, i.jsx)(p.Z, {
+        return (0, i.jsx)(p.ZP, {
             ...n,
             className: l()(s, t)
         });

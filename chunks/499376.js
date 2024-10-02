@@ -17,7 +17,7 @@ var i = n(630388),
     a = n(406432),
     o = n(828061),
     s = n(981631);
-let l = /\.(mp3|m4a|ogg|wav|flac)$/i,
+let l = /\.(mp3|m4a|ogg|opus|wav|flac)$/i,
     u = (e) => 'IMAGE' === e || 'VIDEO' === e || 'CLIP' === e,
     c = (e) => 'IMAGE' === e || 'VIDEO' === e;
 function d(e, t) {

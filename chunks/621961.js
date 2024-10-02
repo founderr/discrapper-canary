@@ -1,4 +1,4 @@
-i.d(n, {
+a.d(n, {
     C: function () {
         return t;
     },
@@ -6,11 +6,11 @@ i.d(n, {
         return l;
     }
 });
-var a = i(981631),
-    o = i(486324);
+var i = a(981631),
+    o = a(486324);
 function t(e, n) {
-    let { isGIF: i } = n;
-    if (e === o.pC.GUILD_BANNER) return i ? a.oNc.ANIMATED_BANNER : a.oNc.BANNER;
+    let { isGIF: a } = n;
+    if (e === o.pC.GUILD_BANNER) return a ? i.oNc.ANIMATED_BANNER : i.oNc.BANNER;
 }
 function l(e) {
     return e === o.pC.AVATAR || e === o.pC.BANNER;

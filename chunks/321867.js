@@ -26,19 +26,19 @@ function N(e) {
         x = g.ZP.canUseAnimatedAvatar(N),
         I = g.ZP.canUsePremiumProfileCustomization(N),
         R = (n === b.pC.BANNER && I) || (n === b.pC.AVATAR && x),
-        { sourceAnalyticsLocations: A } = (0, l.ZP)(s.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
+        { sourceAnalyticsLocations: v } = (0, l.ZP)(s.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
     if (
         (a.useEffect(() => {
             !R &&
                 h.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: t,
-                    location_stack: A
+                    location_stack: v
                 });
-        }, [R, t, A]),
+        }, [R, t, v]),
         R)
     )
         return null;
-    let L = (0, i.jsx)(u.Z, {
+    let A = (0, i.jsx)(u.Z, {
         className: m.__invalid_getNitroLink,
         size: r.Button.Sizes.SMALL,
         look: r.Button.Looks.LINK,
@@ -58,6 +58,6 @@ function N(e) {
         text: E.Z.Messages.PREMIUM_PREVIEW.format(),
         textSize: c.Z.Sizes.SIZE_14,
         textColor: c.Z.Colors.HEADER_PRIMARY,
-        button: L
+        button: A
     });
 }

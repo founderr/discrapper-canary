@@ -18,8 +18,8 @@ let N = (e) => {
     let { name: t, title: n, description: r, descriptionCta: R, previewImage: N, videoUrl: C, shouldLoadVideo: m, isCompact: f, onClick: A, index: p } = e,
         M = (0, _.rO)(),
         S = a.useRef(null),
-        [h, x] = a.useState(0),
-        b = (function (e) {
+        [h, b] = a.useState(0),
+        x = (function (e) {
             let t;
             switch (e) {
                 case u.dm.EMOJIS:
@@ -52,7 +52,7 @@ let N = (e) => {
             null != S.current && ((S.current.currentTime = h), S.current.play());
         },
         v = () => {
-            null != S.current && (x(S.current.currentTime), S.current.pause());
+            null != S.current && (b(S.current.currentTime), S.current.pause());
         },
         L = () =>
             (0, s.jsxs)('div', {
@@ -123,7 +123,7 @@ let N = (e) => {
         };
     return p % 2 != 0
         ? (0, s.jsxs)('div', {
-              className: i()(b, {
+              className: i()(x, {
                   [g.whatsNewBoxContainer]: !f,
                   [g.compactBoxContainer]: f
               }),
@@ -134,10 +134,10 @@ let N = (e) => {
               children: [(0, s.jsx)(L, {}), (0, s.jsx)(Z, { isLeft: !1 })]
           })
         : (0, s.jsxs)('div', {
-              className: i()(b, {
+              className: i()(x, {
                   [g.whatsNewBoxContainer]: !f,
                   [g.compactBoxContainer]: f,
-                  boxBackgroundColor: b
+                  boxBackgroundColor: x
               }),
               onMouseEnter: P,
               onFocus: P,

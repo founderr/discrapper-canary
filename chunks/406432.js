@@ -35,7 +35,7 @@ let a = (e, t) => {
     u = (e) => o(e, 'image'),
     c = /\.(webp|gif)$/i,
     d = (e) => a(e, c),
-    _ = /\.(mp3|m4a|wav|aif|aiff|ogg)$/i,
+    _ = /\.(mp3|m4a|wav|aif|aiff|ogg|opus)$/i,
     E = /\.(mp3|m4a|wav|ogg|opus|flac)$/i,
     f = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
     h = (0, i.isIOS)() ? _ : (0, i.isAndroid)() ? E : f,

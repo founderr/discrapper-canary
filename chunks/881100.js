@@ -27,8 +27,8 @@ var s = n(399606),
     M = n(302036),
     S = n(994554),
     h = n(1549),
-    x = n(13327),
-    b = n(59137),
+    b = n(13327),
+    x = n(59137),
     O = n(405991),
     P = n(24615),
     v = n(193943),
@@ -152,7 +152,7 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             superReactions: {
                 title: u.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
                 description: u.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-                imageSource: w(n, h, x),
+                imageSource: w(n, h, b),
                 imageClassName: t.superReactionsImage
             },
             upload: {
@@ -164,7 +164,7 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             videoBackground: {
                 title: u.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
                 description: u.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-                imageSource: w(n, b, O),
+                imageSource: w(n, x, O),
                 imageClassName: t.videoBackgroundImage
             }
         };
