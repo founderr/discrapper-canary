@@ -317,7 +317,7 @@ class ed extends (r = o.PureComponent) {
                 this.hideTimeout.stop(), this.isReactionEventActive && (this.updateTooltipText(), G.Z.addChangeListener(this.updateTooltipText));
             }),
             er(this, 'showTooltip', () => {
-                this.handleShowTooltip(), this.isReactionEventActive && this.trackReactionTooltipViewed(), (this.hasShownTooltip = !0);
+                !this.props.readOnly && (this.handleShowTooltip(), this.isReactionEventActive && this.trackReactionTooltipViewed(), (this.hasShownTooltip = !0));
             }),
             er(this, 'handleLeave', () => {
                 (this.isReactionEventActive = !1), (this.isKeyboardNavigation = !1), this.timeout.stop(), G.Z.removeChangeListener(this.updateTooltipText), this.hideTimeout.start(200, this.hideTooltip, !1);

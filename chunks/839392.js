@@ -2,8 +2,8 @@ var t,
     i,
     o,
     r,
-    l = a(442837),
-    s = a(570140);
+    l = n(442837),
+    s = n(570140);
 let c = {};
 class d extends (r = l.ZP.Store) {
     getSimilarGames(e) {
@@ -19,9 +19,9 @@ class d extends (r = l.ZP.Store) {
               writable: !0
           })
         : (t[i] = o),
-    (n.Z = new d(s.Z, {
+    (a.Z = new d(s.Z, {
         GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
-            let { applicationId: n, games: a } = e;
-            c[n] = a;
+            let { applicationId: a, games: n } = e;
+            c[a] = n;
         }
     }));

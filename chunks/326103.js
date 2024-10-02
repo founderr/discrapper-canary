@@ -1,9 +1,9 @@
-a.d(n, {
+n.d(a, {
     v: function () {
         return i;
     }
 });
-let t = (0, a(818083).B)({
+let t = (0, n(818083).B)({
     kind: 'user',
     id: '2024-09_game_profile_feedback_flow',
     label: 'Game Profile Feedback Flow',
@@ -17,7 +17,7 @@ let t = (0, a(818083).B)({
     ]
 });
 function i(e) {
-    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        { enabled: a } = t.useExperiment({ location: e }, { autoTrackExposure: n });
-    return a;
+    let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        { enabled: n } = t.useExperiment({ location: e }, { autoTrackExposure: a });
+    return n;
 }

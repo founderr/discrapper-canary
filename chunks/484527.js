@@ -1,47 +1,47 @@
-a.d(n, {
+n.d(a, {
     Z: function () {
         return h;
     }
 }),
-    a(47120);
-var t = a(735250),
-    i = a(470079),
-    o = a(120356),
-    r = a.n(o),
-    l = a(643872),
-    s = a(442837),
-    c = a(481060),
-    d = a(570140),
-    u = a(652898),
-    m = a(93093),
-    p = a(768581),
-    _ = a(810568),
-    g = a(981631),
-    f = a(689938),
-    x = a(51527),
-    v = a(479537);
+    n(47120);
+var t = n(735250),
+    i = n(470079),
+    o = n(120356),
+    r = n.n(o),
+    l = n(643872),
+    s = n(442837),
+    c = n(481060),
+    d = n(570140),
+    u = n(652898),
+    m = n(93093),
+    p = n(768581),
+    g = n(810568),
+    f = n(981631),
+    _ = n(689938),
+    x = n(51527),
+    v = n(479537);
 function h(e) {
-    let { detectedGame: n, trackClick: a, onInviteResolved: o } = e,
+    let { detectedGame: a, trackClick: n, onInviteResolved: o } = e,
         [h, I] = i.useState(),
         E = (0, s.e7)([m.Z], () => {
-            var e, n;
-            return (null == h ? void 0 : null === (e = h.guild) || void 0 === e ? void 0 : e.id) != null && m.Z.isMember(null == h ? void 0 : null === (n = h.guild) || void 0 === n ? void 0 : n.id);
+            var e, a;
+            return (null == h ? void 0 : null === (e = h.guild) || void 0 === e ? void 0 : e.id) != null && m.Z.isMember(null == h ? void 0 : null === (a = h.guild) || void 0 === a ? void 0 : a.id);
         }),
         A = i.useMemo(() => {
             var e;
-            return null === (e = n.websites) || void 0 === e
+            return null === (e = a.websites) || void 0 === e
                 ? void 0
                 : e.find((e) => {
-                      let { category: n } = e;
-                      return n === l.p.DISCORD;
+                      let { category: a } = e;
+                      return a === l.p.DISCORD;
                   });
-        }, [n.websites]);
+        }, [a.websites]);
     if (
         (i.useEffect(() => {
             let e = async (e) => {
-                let n = e.split('/').pop();
-                if (null != n) {
-                    let e = await (0, u.Z)(n);
+                let a = e.split('/').pop();
+                if (null != a) {
+                    let e = await (0, u.Z)(a);
                     !0 !== e.banned && (I(e.invite), null != e.invite && (null == o || o(e.invite)));
                 }
             };
@@ -62,7 +62,7 @@ function h(e) {
                 className: x.sectionHeader,
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                children: f.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
+                children: _.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
             }),
             (0, t.jsxs)('div', {
                 className: r()(x.row, x.gapMd),
@@ -70,7 +70,7 @@ function h(e) {
                     (0, t.jsx)('img', {
                         className: v.guildIcon,
                         src: j,
-                        alt: f.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({ guildName: h.guild.name })
+                        alt: _.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({ guildName: h.guild.name })
                     }),
                     (0, t.jsxs)('div', {
                         className: v.inviteInfo,
@@ -82,7 +82,7 @@ function h(e) {
                             null != h.approximate_member_count &&
                                 (0, t.jsx)(c.Text, {
                                     variant: 'text-xxs/normal',
-                                    children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: h.approximate_member_count })
+                                    children: _.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: h.approximate_member_count })
                                 })
                         ]
                     })
@@ -91,15 +91,15 @@ function h(e) {
             (0, t.jsx)(c.Button, {
                 color: c.ButtonColors.PRIMARY,
                 onClick: () => {
-                    a(_.as.JoinOfficialServer),
+                    n(g.as.JoinOfficialServer),
                         d.Z.dispatch({
                             type: 'INVITE_MODAL_OPEN',
                             invite: h,
                             code: h.code,
-                            context: g.IlC.APP
+                            context: f.IlC.APP
                         });
                 },
-                children: E ? f.Z.Messages.JOINED_GUILD : f.Z.Messages.JOIN_GUILD
+                children: E ? _.Z.Messages.JOINED_GUILD : _.Z.Messages.JOIN_GUILD
             })
         ]
     });

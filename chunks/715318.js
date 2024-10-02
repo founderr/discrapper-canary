@@ -1,20 +1,20 @@
-a.d(n, {
+n.d(a, {
     Z: function () {
         return c;
     }
 });
-var t = a(735250);
-a(470079);
-var i = a(481060),
-    o = a(239091),
-    r = a(299206),
-    l = a(326103),
-    s = a(689938);
+var t = n(735250);
+n(470079);
+var i = n(481060),
+    o = n(239091),
+    r = n(299206),
+    l = n(326103),
+    s = n(689938);
 function c(e) {
-    let { applicationId: n, className: c, viewId: d } = e,
+    let { applicationId: a, className: c, viewId: d } = e,
         u = (0, l.v)('GameProfileOverflowMenu'),
         m = (0, r.Z)({
-            id: n,
+            id: a,
             label: s.Z.Messages.COPY_ID_APPLICATION
         }),
         p = u
@@ -23,12 +23,12 @@ function c(e) {
                   label: s.Z.Messages.GAME_PROFILE_SOMETHING_WENT_WRONG,
                   action: () =>
                       (0, i.openModalLazy)(async () => {
-                          let { GameProfileFeedbackModal: e } = await a.e('1011').then(a.bind(a, 943350));
-                          return (a) =>
+                          let { GameProfileFeedbackModal: e } = await n.e('1011').then(n.bind(n, 943350));
+                          return (n) =>
                               (0, t.jsx)(e, {
-                                  applicationId: n,
+                                  applicationId: a,
                                   viewId: d,
-                                  ...a
+                                  ...n
                               });
                       })
               })
@@ -40,11 +40,11 @@ function c(e) {
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
-                  let { closePopout: n } = e;
+                  let { closePopout: a } = e;
                   return (0, t.jsx)(i.Menu, {
                       navId: 'game-profile-context',
                       onClose: () => {
-                          (0, o.Zy)(), n();
+                          (0, o.Zy)(), a();
                       },
                       'aria-label': s.Z.Messages.GAME_PROFILE_VIEW_MORE,
                       onSelect: () => {},
@@ -56,10 +56,10 @@ function c(e) {
               children: (e) =>
                   (0, t.jsx)(i.Tooltip, {
                       text: s.Z.Messages.MORE,
-                      children: (n) =>
+                      children: (a) =>
                           (0, t.jsx)(i.Clickable, {
                               className: c,
-                              ...n,
+                              ...a,
                               ...e,
                               children: (0, t.jsx)(i.MoreHorizontalIcon, {
                                   size: 'xs',
