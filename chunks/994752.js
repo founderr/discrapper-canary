@@ -39,7 +39,7 @@ class E extends (r = a.ZP.Store) {
     get(e, t) {
         var n;
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return u ? s.Z : null === (n = this.getLeaderboardResponse(e, t, r)) || void 0 === n ? void 0 : n.leaderboard;
+        return u ? s.Z : null === (n = this.getLeaderboardResponse(e, t, r - 1)) || void 0 === n ? void 0 : n.leaderboard;
     }
     getLeaderboardResponse(e, t) {
         var n, r;

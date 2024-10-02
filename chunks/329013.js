@@ -30,8 +30,8 @@ var n = t(735250),
     p = t(474936),
     R = t(689938),
     x = t(394246),
-    f = t(113207);
-let M = () => {
+    M = t(113207);
+let f = () => {
         (0, T.EW)(r.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: O.L.PRIMARY,
             forceTrack: !0
@@ -62,7 +62,7 @@ let M = () => {
                           children: [
                               (0, n.jsx)(o.Button, {
                                   color: D ? o.Button.Colors.BRAND : o.Button.Colors.PRIMARY,
-                                  onClick: () => M(),
+                                  onClick: () => f(),
                                   children: D ? R.Z.Messages.PREVIEW : R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
                               }),
                               (0, n.jsx)(C.Z, {
@@ -109,7 +109,7 @@ let M = () => {
                                                           (0, n.jsx)(o.Button, {
                                                               className: x.previewThemeButtonWide,
                                                               color: o.Button.Colors.PRIMARY,
-                                                              onClick: () => M(),
+                                                              onClick: () => f(),
                                                               children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
                                                           }),
                                                           (0, n.jsx)('div', { className: x.premiumTier2Divider }),
@@ -124,7 +124,7 @@ let M = () => {
                                   ]
                               })
                     }),
-                    (0, n.jsx)(o.FormDivider, { className: f.marginTop20 })
+                    (0, n.jsx)(o.FormDivider, { className: M.marginTop20 })
                 ]
             })
         );
@@ -134,6 +134,6 @@ let M = () => {
             ? null
             : (0, n.jsx)(o.Button, {
                   size: o.ButtonSizes.SMALL,
-                  onClick: () => M(),
+                  onClick: () => f(),
                   children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEMES_TITLE
               });

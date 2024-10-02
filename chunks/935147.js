@@ -27,8 +27,8 @@ var n = t(735250),
     p = t(996073),
     R = t(25990),
     x = t(626135),
-    f = t(74538),
-    M = t(296810),
+    M = t(74538),
+    f = t(296810),
     D = t(433411),
     L = t(532432),
     P = t(504983),
@@ -44,7 +44,7 @@ var n = t(735250),
 function V(e) {
     var s, t;
     let { user: i } = e,
-        V = f.ZP.isPremium(i),
+        V = M.ZP.isPremium(i),
         {
             pendingAvatar: Y,
             pendingThemeColors: k,
@@ -96,7 +96,7 @@ function V(e) {
             isShown: !0,
             hasBackground: !0,
             children: [
-                (0, n.jsx)(M.Z, {
+                (0, n.jsx)(f.Z, {
                     layoutClassName: y.tryItOutLayout,
                     previewTitle: (0, n.jsxs)(n.Fragment, {
                         children: [

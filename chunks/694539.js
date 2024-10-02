@@ -32,7 +32,7 @@ s.Z = (e) => {
         [h, O] = a.useState(!0),
         p = a.useRef(null),
         [R, x] = a.useState(!1),
-        [f, M] = a.useState(!1),
+        [M, f] = a.useState(!1),
         [D, L] = a.useState(!1),
         [P, b] = a.useState([]),
         [Z, v] = a.useState(s.name);
@@ -141,10 +141,10 @@ s.Z = (e) => {
                                                   }),
                                                   (0, n.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: f,
+                                                      checked: M,
                                                       className: N.checkBox,
                                                       onChange: () => {
-                                                          M(!f);
+                                                          f(!M);
                                                       }
                                                   })
                                               ]
@@ -270,7 +270,7 @@ s.Z = (e) => {
                                       }),
                                   (0, n.jsx)('div', {
                                       children:
-                                          f &&
+                                          M &&
                                           (0, n.jsxs)('div', {
                                               className: r()(N.userProfilePreview, N.preview),
                                               children: [

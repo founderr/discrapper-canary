@@ -1,6 +1,6 @@
 n(47120);
-var a = n(512722),
-    l = n.n(a),
+var l = n(512722),
+    a = n.n(l),
     i = n(921608),
     r = n(693824);
 function s(e, t, n) {
@@ -24,11 +24,11 @@ t.Z = class e {
         this.color = e;
     }
     setFont(e) {
-        var t, n, a, l, i;
-        (this.font.style = null !== (t = e.style) && void 0 !== t ? t : this.font.style), (this.font.size = null !== (n = e.size) && void 0 !== n ? n : this.font.size), (this.font.weight = null !== (a = e.weight) && void 0 !== a ? a : this.font.weight), (this.font.family = null !== (l = e.family) && void 0 !== l ? l : this.font.family), (this.font.truncate = null !== (i = e.truncate) && void 0 !== i ? i : this.font.truncate);
+        var t, n, l, a, i;
+        (this.font.style = null !== (t = e.style) && void 0 !== t ? t : this.font.style), (this.font.size = null !== (n = e.size) && void 0 !== n ? n : this.font.size), (this.font.weight = null !== (l = e.weight) && void 0 !== l ? l : this.font.weight), (this.font.family = null !== (a = e.family) && void 0 !== a ? a : this.font.family), (this.font.truncate = null !== (i = e.truncate) && void 0 !== i ? i : this.font.truncate);
     }
     getLoadedImage(e) {
-        l()(null != this.assetMap, 'DiscordCanvas: An AssetStore has not been initialized.');
+        a()(null != this.assetMap, 'DiscordCanvas: An AssetStore has not been initialized.');
         let t = this.assetMap.get(e);
         if (void 0 === t) {
             console.error("DiscordCanvas: AssetMap hasn't loaded ".concat(e, '.  Make sure to load it before trying to render.'));
@@ -36,9 +36,9 @@ t.Z = class e {
         }
         return t;
     }
-    drawRoundedImageWithFallbacks(e, t, n, a, l) {
+    drawRoundedImageWithFallbacks(e, t, n, l, a) {
         for (let i of e) {
-            let e = this.drawRoundedImage(i, t, n, a, l);
+            let e = this.drawRoundedImage(i, t, n, l, a);
             if (e !== r.vP.Failure) return e;
         }
         return r.vP.Failure;

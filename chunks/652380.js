@@ -7,8 +7,8 @@ t.d(s, {
     t(627341);
 var n = t(735250),
     r = t(470079),
-    i = t(278074),
-    a = t(754700),
+    a = t(278074),
+    i = t(754700),
     l = t(887003),
     o = t(742635),
     d = t(458708),
@@ -33,7 +33,7 @@ var n = t(735250),
     P = t(815183),
     b = t(899457),
     O = t(720778);
-function D(e, s, t) {
+function R(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -46,9 +46,9 @@ function D(e, s, t) {
         e
     );
 }
-let F = ['svg', 'png', 'gif', 'webp'],
-    R = [...F, 'jpg', 'jpeg'],
-    B = Array.from(new Set([...R, 'gif', 'mp4', 'webm']));
+let D = ['svg', 'png', 'gif', 'webp'],
+    F = [...D, 'jpg', 'jpeg'],
+    B = Array.from(new Set([...F, 'gif', 'mp4', 'webm']));
 function Z(e) {
     var s, t;
     return {
@@ -60,7 +60,7 @@ function Z(e) {
         claimedAt: null !== (t = null === (s = e.userStatus) || void 0 === s ? void 0 : s.claimedAt) && void 0 !== t ? t : ''
     };
 }
-function A() {
+function L() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: s = 0, completedAt: t = null, enrolledAt: n = null, claimedAt: r = null } = e;
     return {
@@ -76,12 +76,12 @@ function A() {
         progress: {}
     };
 }
-let M = '1193992107035983872',
-    L = {
-        id: M,
+let A = '1193992107035983872',
+    M = {
+        id: A,
         preview: !0,
         config: {
-            id: M,
+            id: A,
             configVersion: 2,
             startsAt: '2024-01-01T00:00:00+00:00',
             expiresAt: '2030-01-01T00:00:00+00:00',
@@ -135,8 +135,8 @@ let M = '1193992107035983872',
                 type: o.L.FIRST_PARTY,
                 joinOperator: d.r.AND,
                 tasks: {
-                    [a.X.PLAY_ON_DESKTOP]: {
-                        eventName: a.X.PLAY_ON_DESKTOP,
+                    [i.X.PLAY_ON_DESKTOP]: {
+                        eventName: i.X.PLAY_ON_DESKTOP,
                         target: 300,
                         externalIds: []
                     }
@@ -148,18 +148,18 @@ let M = '1193992107035983872',
         targetedContent: []
     };
 function H() {
-    var e, s, t, a, l;
-    let [o, d] = r.useState(L),
-        [D, Z] = r.useState(b.a.UNENROLLED),
-        [M, H] = r.useState(!1),
+    var e, s, t, i, l;
+    let [o, d] = r.useState(M),
+        [R, Z] = r.useState(b.a.UNENROLLED),
+        [A, H] = r.useState(!1),
         [_, V] = r.useState(!1),
         [q, k] = r.useState(null);
     let Q =
         ((l = o.config),
-        (0, i.EQ)(l)
+        (0, a.EQ)(l)
             .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewards)
             .exhaustive());
-    function K(e, s) {
+    function U(e, s) {
         var t, n;
         if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e || 'heroVideo' === e || 'questBarHeroVideo' === e)
             d({
@@ -167,7 +167,7 @@ function H() {
                 config:
                     ((t = o.config),
                     (n = { [e]: s }),
-                    (0, i.EQ)(t)
+                    (0, a.EQ)(t)
                         .with({ configVersion: 2 }, (e) => ({
                             ...e,
                             assets: {
@@ -178,7 +178,7 @@ function H() {
                         .exhaustive())
             });
     }
-    function U(e, s) {
+    function K(e, s) {
         var t, n;
         if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
             d({
@@ -186,7 +186,7 @@ function H() {
                 config:
                     ((t = o.config),
                     (n = { [e]: s }),
-                    (0, i.EQ)(t)
+                    (0, a.EQ)(t)
                         .with({ configVersion: 2 }, (e) => ({
                             ...e,
                             messages: {
@@ -198,21 +198,21 @@ function H() {
             });
     }
     function W(e, s, t) {
-        var n, r, a;
+        var n, r, i;
         if ('name' === e || 'nameWithArticle' === e)
             d({
                 ...o,
                 config:
                     ((n = o.config),
                     (r = { [e]: s }),
-                    (a = t),
-                    (0, i.EQ)(n)
+                    (i = t),
+                    (0, a.EQ)(n)
                         .with({ configVersion: 2 }, (e) => ({
                             ...e,
                             rewardsConfig: {
                                 ...e.rewardsConfig,
                                 rewards: e.rewardsConfig.rewards.map((e, s) =>
-                                    s === a
+                                    s === i
                                         ? {
                                               ...e,
                                               messages: {
@@ -275,19 +275,19 @@ function H() {
                     (0, n.jsx)(y.Z, {
                         title: 'Quest Name',
                         assetKey: 'questName',
-                        onMessageChange: U,
+                        onMessageChange: K,
                         initialValue: o.config.messages.questName
                     }),
                     (0, n.jsx)(y.Z, {
                         title: 'Game Title',
                         assetKey: 'gameTitle',
-                        onMessageChange: U,
+                        onMessageChange: K,
                         initialValue: o.config.messages.gameTitle
                     }),
                     (0, n.jsx)(y.Z, {
                         title: 'Game Publisher',
                         assetKey: 'gamePublisher',
-                        onMessageChange: U,
+                        onMessageChange: K,
                         initialValue: o.config.messages.gamePublisher
                     })
                 ]
@@ -303,43 +303,43 @@ function H() {
                     (0, n.jsx)(N.Z, {
                         title: 'Hero',
                         assetKey: 'hero',
-                        onFileChange: K,
+                        onFileChange: U,
                         filters: B,
                         initialValue: o.config.assets.hero
                     }),
                     (0, n.jsx)(N.Z, {
                         title: 'Hero Video (optional)',
                         assetKey: 'heroVideo',
-                        onFileChange: K,
+                        onFileChange: U,
                         filters: B,
                         initialValue: null !== (t = o.config.assets.heroVideo) && void 0 !== t ? t : void 0
                     }),
                     (0, n.jsx)(N.Z, {
                         title: 'Quest Bar Hero',
                         assetKey: 'questBarHero',
-                        onFileChange: K,
+                        onFileChange: U,
                         filters: B,
                         initialValue: o.config.assets.questBarHero
                     }),
                     (0, n.jsx)(N.Z, {
                         title: 'Quest Bar Hero Video (optional)',
                         assetKey: 'questBarHeroVideo',
-                        onFileChange: K,
+                        onFileChange: U,
                         filters: B,
-                        initialValue: null !== (a = o.config.assets.questBarHeroVideo) && void 0 !== a ? a : void 0
+                        initialValue: null !== (i = o.config.assets.questBarHeroVideo) && void 0 !== i ? i : void 0
                     }),
                     (0, n.jsx)(N.Z, {
                         title: 'Game Tile',
                         assetKey: 'gameTile',
-                        onFileChange: K,
-                        filters: R,
+                        onFileChange: U,
+                        filters: F,
                         initialValue: o.config.assets.gameTile
                     }),
                     (0, n.jsx)(N.Z, {
                         title: 'Logotype',
                         assetKey: 'logotype',
-                        onFileChange: K,
-                        filters: F,
+                        onFileChange: U,
+                        filters: D,
                         initialValue: o.config.assets.logotype
                     })
                 ]
@@ -374,21 +374,21 @@ function H() {
                                         assetKey: 'asset',
                                         onFileChange: (e, t) =>
                                             (function (e, s, t) {
-                                                var n, r, a;
+                                                var n, r, i;
                                                 if ('asset' === e)
                                                     d({
                                                         ...o,
                                                         config:
                                                             ((n = o.config),
                                                             (r = s),
-                                                            (a = t),
-                                                            (0, i.EQ)(n)
+                                                            (i = t),
+                                                            (0, a.EQ)(n)
                                                                 .with({ configVersion: 2 }, (e) => ({
                                                                     ...e,
                                                                     rewardsConfig: {
                                                                         ...e.rewardsConfig,
                                                                         rewards: e.rewardsConfig.rewards.map((e, s) =>
-                                                                            s === a
+                                                                            s === i
                                                                                 ? {
                                                                                       ...e,
                                                                                       asset: r
@@ -462,13 +462,13 @@ function H() {
                                 case b.a.ENROLLED:
                                     d({
                                         ...o,
-                                        userStatus: A({ enrolledAt: new Date().toISOString() })
+                                        userStatus: L({ enrolledAt: new Date().toISOString() })
                                     });
                                     break;
                                 case b.a.COMPLETED_25:
                                     d({
                                         ...o,
-                                        userStatus: A({
+                                        userStatus: L({
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: 10 * u.Z.Seconds.MINUTE * 0.25
                                         })
@@ -477,7 +477,7 @@ function H() {
                                 case b.a.COMPLETED_50:
                                     d({
                                         ...o,
-                                        userStatus: A({
+                                        userStatus: L({
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: 10 * u.Z.Seconds.MINUTE * 0.5
                                         })
@@ -486,7 +486,7 @@ function H() {
                                 case b.a.COMPLETED_75:
                                     d({
                                         ...o,
-                                        userStatus: A({
+                                        userStatus: L({
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: 10 * u.Z.Seconds.MINUTE * 0.75
                                         })
@@ -495,7 +495,7 @@ function H() {
                                 case b.a.COMPLETED_100:
                                     d({
                                         ...o,
-                                        userStatus: A({
+                                        userStatus: L({
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: 10 * u.Z.Seconds.MINUTE
@@ -505,7 +505,7 @@ function H() {
                                 case b.a.CLAIMED:
                                     d({
                                         ...o,
-                                        userStatus: A({
+                                        userStatus: L({
                                             claimedAt: new Date().toISOString(),
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
@@ -514,7 +514,7 @@ function H() {
                                     });
                             }
                         },
-                        value: D
+                        value: R
                     })
                 ]
             }),
@@ -591,7 +591,7 @@ function H() {
                                         children: (0, n.jsx)(p.Z, {
                                             channelId: '123',
                                             previewQuest: o,
-                                            isParticipatingOverride: M
+                                            isParticipatingOverride: A
                                         })
                                     })
                                 })
@@ -602,7 +602,7 @@ function H() {
                         className: O.toggleSwitch,
                         children: (0, n.jsx)(c.FormItem, {
                             children: (0, n.jsx)(c.FormSwitch, {
-                                value: M,
+                                value: A,
                                 onChange: function (e) {
                                     H(e);
                                 },
@@ -677,11 +677,11 @@ class _ extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            D(this, 'state', {
+            R(this, 'state', {
                 error: null,
                 renderKey: 0
             }),
-            D(this, 'handleResetState', () => {
+            R(this, 'handleResetState', () => {
                 this.setState((e) => ({
                     error: null,
                     renderKey: e.renderKey + 1

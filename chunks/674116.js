@@ -28,8 +28,8 @@ var n = t(735250),
     p = t(546997),
     R = t(520384),
     x = t(167540),
-    f = t(803567),
-    M = t(269876),
+    M = t(803567),
+    f = t(269876),
     D = t(976758),
     L = t(526761),
     P = t(726985),
@@ -121,7 +121,7 @@ function F() {
             }),
             (0, n.jsxs)(E.F, {
                 setting: P.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                children: [e === Z.pM.VOICE_ACTIVITY && (0, n.jsx)(M.Z, {}), (0, n.jsx)(l.FormDivider, { className: j.marginBottom40 })]
+                children: [e === Z.pM.VOICE_ACTIVITY && (0, n.jsx)(f.Z, {}), (0, n.jsx)(l.FormDivider, { className: j.marginBottom40 })]
             }),
             (0, n.jsx)(E.F, {
                 setting: P.s6.VOICE_AND_VIDEO_SOUNDBOARD,
@@ -150,7 +150,7 @@ function F() {
                         (0, n.jsx)(C.Z, {}),
                         (0, n.jsx)(E.F, {
                             setting: P.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                            children: (0, n.jsx)(f.Z, {})
+                            children: (0, n.jsx)(M.Z, {})
                         }),
                         (0, n.jsx)(R.Z, {}),
                         (0, n.jsx)(E.F, {

@@ -32,12 +32,12 @@ function x() {
         s = (0, C.Z)(),
         t = (0, i.e7)([_.Z, I.Z], () => _.Z.showNotice() || I.Z.showNotice()),
         x = null != e ? e : s,
-        f = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
-        { subsection: M, setSubsection: D } = (0, m.Z)(),
+        M = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
+        { subsection: f, setSubsection: D } = (0, m.Z)(),
         { analyticsLocations: L } = (0, l.ZP)(),
         { hasSearchResults: P, searchResults: b } = (0, S.E)();
     function Z(s) {
-        if (M !== s) {
+        if (f !== s) {
             if (t) {
                 A.S.dispatch(g.CkL.SHAKE_APP, {
                     duration: 300,
@@ -50,8 +50,8 @@ function x() {
         }
     }
     a.useEffect(() => {
-        null != f && (0, E.Z)(f.id, f.getAvatarURL(null == x ? void 0 : x.id, 80), { guildId: null == x ? void 0 : x.id });
-    }, [null == x ? void 0 : x.id, f]);
+        null != M && (0, E.Z)(M.id, M.getAvatarURL(null == x ? void 0 : x.id, 80), { guildId: null == x ? void 0 : x.id });
+    }, [null == x ? void 0 : x.id, M]);
     let v = !0,
         j = !0;
     return (
@@ -68,7 +68,7 @@ function x() {
                         className: R.tabBar,
                         type: 'top',
                         look: 'brand',
-                        selectedItem: M,
+                        selectedItem: f,
                         onItemSelect: Z,
                         children: [
                             j
@@ -95,7 +95,7 @@ function x() {
                                 : null
                         ]
                     }),
-                    M === h.NB.GUILD ? (0, n.jsx)(u.Z, { selectedGuild: x }) : (0, n.jsx)(T.Z, {})
+                    f === h.NB.GUILD ? (0, n.jsx)(u.Z, { selectedGuild: x }) : (0, n.jsx)(T.Z, {})
                 ]
             })
         })

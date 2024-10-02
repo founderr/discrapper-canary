@@ -21,7 +21,7 @@ var i = n(735250),
     v = n(617136),
     N = n(113434),
     O = n(497505),
-    R = n(918701),
+    R = n(475595),
     C = n(602667),
     y = n(644646),
     L = n(667105),
@@ -256,7 +256,7 @@ function F(e) {
                                                         gamePublisher: m.config.messages.gamePublisher
                                                     }),
                                                     className: w.assetTile,
-                                                    src: (0, R.uo)(m, q)
+                                                    src: (0, R.fh)(m, R.Bd.GAME_TILE, q).url
                                                 }),
                                             'reward' === ed.tileAssetType &&
                                                 (0, i.jsx)(y.Z, {

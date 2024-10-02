@@ -18,7 +18,7 @@ var s = n(735250),
     h = n(46140),
     S = n(689938),
     T = n(161548);
-function N(e) {
+function v(e) {
     let { children: t, isComplete: n, hasNextStep: o } = e;
     return (0, s.jsxs)('li', {
         className: a()(T.stepWrapper, { [T.stepWrapperComplete]: n }, { [T.stepWrapperWithNextStep]: o }),
@@ -45,7 +45,7 @@ function N(e) {
         ]
     });
 }
-function v(e) {
+function N(e) {
     return (0, s.jsx)(c.Text, {
         className: T.microphoneUnitBodyText,
         color: 'text-muted',
@@ -60,7 +60,7 @@ function j(e) {
         d = (0, f.g2)({ useReducedMotion: n }),
         {
             errorHints: E,
-            startingConsoleQuest: N,
+            startingConsoleQuest: v,
             startConsoleQuest: j
         } = (0, x.GI)({
             questId: t.id,
@@ -84,7 +84,7 @@ function j(e) {
                                     r = (0, C.C9)(e),
                                     a = (0, C._j)(e);
                                 return (0, s.jsx)(
-                                    v,
+                                    N,
                                     {
                                         children: r.format({
                                             account_name: null == o ? void 0 : o.name,
@@ -105,7 +105,7 @@ function j(e) {
                                     n
                                 );
                             }
-                            return (0, s.jsx)(v, { children: e.message }, n);
+                            return (0, s.jsx)(N, { children: e.message }, n);
                         })
                     });
             if ((0, C.zK)(t, h.S7.IN_HOUSE_CONSOLE_QUEST))
@@ -153,15 +153,15 @@ function j(e) {
                         children: A
                     }),
                     (0, s.jsx)(c.Clickable, {
-                        className: a()(T.microphoneUnitRefreshIconWrapper, { [T.disabled]: N }),
+                        className: a()(T.microphoneUnitRefreshIconWrapper, { [T.disabled]: v }),
                         onClick: () => j(),
                         children: d.render()
                     })
                 ]
             }),
             (0, s.jsxs)('div', {
-                className: a()({ [T.opacity_50]: N }),
-                children: [R(), 0 === E.length ? null : (0, s.jsx)(v, { children: i })]
+                className: a()({ [T.opacity_50]: v }),
+                children: [R(), 0 === E.length ? null : (0, s.jsx)(N, { children: i })]
             })
         ]
     });
@@ -231,7 +231,7 @@ t.Z = function (e) {
                     (0, s.jsx)('ul', {
                         children: l.map((e, t) =>
                             (0, s.jsx)(
-                                N,
+                                v,
                                 {
                                     isComplete: e.isComplete,
                                     hasNextStep: t < l.length - 1,

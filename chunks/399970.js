@@ -36,8 +36,8 @@ function C(e) {
         [h, O] = r.useState('8080'),
         [p, R] = r.useState('localhost'),
         x = (0, E.Dt)(),
-        f = A.test(m);
-    async function M() {
+        M = A.test(m);
+    async function f() {
         d.q$();
         let e = (function (e, s, t) {
             if (null == e) return null;
@@ -56,7 +56,7 @@ function C(e) {
             ? function () {
                   d.mc(), g(''), R(null);
               }
-            : M;
+            : f;
     return (0, i.jsxs)(l.ModalRoot, {
         'aria-labelledby': x,
         transitionState: t,
@@ -103,7 +103,7 @@ function C(e) {
                                     children: (0, i.jsx)(l.TextInput, {
                                         value: m,
                                         maxLength: 19,
-                                        error: f ? null : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
+                                        error: M ? null : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
                                         onChange: function (e) {
                                             g(e);
                                         },
@@ -114,7 +114,7 @@ function C(e) {
                                     className: I.inputWrapper,
                                     title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
                                     children: (0, i.jsx)(l.SingleSelect, {
-                                        isDisabled: !f || '' === m,
+                                        isDisabled: !M || '' === m,
                                         value: p,
                                         options: [
                                             {
@@ -150,7 +150,7 @@ function C(e) {
                                 (0, i.jsx)(l.Button, {
                                     submitting: C,
                                     type: 'submit',
-                                    disabled: !f || 0 === m.length || ('localhost' === p && 0 === h.length),
+                                    disabled: !M || 0 === m.length || ('localhost' === p && 0 === h.length),
                                     color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
                                     children: D ? S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
                                 })

@@ -17,7 +17,7 @@ var s = n(735250),
     E = n(689938),
     h = n(404846);
 t.Z = (e) => {
-    let { quest: t, expansionSpring: r, onCtxMenuSelect: S, onCtxMenuOpen: T, onCtxMenuClose: N, useReducedMotion: v, isExpanded: j, isExpansionAnimationComplete: A } = e,
+    let { quest: t, expansionSpring: r, onCtxMenuSelect: S, onCtxMenuOpen: T, onCtxMenuClose: v, useReducedMotion: N, isExpanded: j, isExpansionAnimationComplete: A } = e,
         R = o.useCallback(() => {
             (0, _.openDisclosureModal)(t, {
                 content: d.jn.QUEST_BAR_V2,
@@ -91,7 +91,7 @@ t.Z = (e) => {
                     className: h.background,
                     animationClassName: h.backgroundAnimation,
                     quest: t,
-                    useReducedMotion: v
+                    useReducedMotion: N
                 })
             }),
             I
@@ -100,7 +100,7 @@ t.Z = (e) => {
                       expansionSpring: r,
                       isFullyExpanded: B,
                       partnerBranding: O,
-                      useReducedMotion: v
+                      useReducedMotion: N
                   })
                 : (0, s.jsxs)(s.Fragment, {
                       children: [
@@ -189,7 +189,7 @@ t.Z = (e) => {
                     }),
                     (0, s.jsx)(x.r, {
                         onOpen: T,
-                        onClose: N,
+                        onClose: v,
                         onSelect: S,
                         questContent: d.jn.QUEST_BAR_V2,
                         quest: t,

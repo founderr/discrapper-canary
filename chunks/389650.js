@@ -29,8 +29,8 @@ var n = t(735250),
     p = t(960861),
     R = t(131951),
     x = t(556296),
-    f = t(808506),
-    M = t(63063),
+    M = t(808506),
+    f = t(63063),
     D = t(358085),
     L = t(13140),
     P = t(210887),
@@ -80,7 +80,7 @@ class w extends a.PureComponent {
                     className: U.keybindMessage,
                     type: E.FormTextTypes.DESCRIPTION,
                     style: { color: u.Z.unsafe_rawColors.RED_400.css },
-                    children: B.Z.Messages.KEYBIND_NAVIGATION_CONFLICT.format({ keyboardNavArticle: M.Z.getArticleURL(Z.BhN.KEYBOARD_NAVIGATION) })
+                    children: B.Z.Messages.KEYBIND_NAVIGATION_CONFLICT.format({ keyboardNavArticle: f.Z.getArticleURL(Z.BhN.KEYBOARD_NAVIGATION) })
                 })
               : (0, n.jsx)(E.FormText, {
                     className: U.keybindMessage,
@@ -478,7 +478,7 @@ class H extends a.PureComponent {
 function W() {
     let e = (0, _.e7)([x.Z], () => x.Z.getState()),
         s = (0, _.e7)([R.Z], () => (0, O.Z)(R.Z)),
-        t = (0, _.e7)([f.Z], () => f.Z.isSupported()),
+        t = (0, _.e7)([M.Z], () => M.Z.isSupported()),
         a = (0, g.Go)();
     return (0, n.jsx)(H, {
         keybinds: e,

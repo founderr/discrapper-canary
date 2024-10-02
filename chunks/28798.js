@@ -4,7 +4,7 @@ var s = n(442837),
     i = n(780384),
     r = n(481060),
     a = n(210887),
-    o = n(918701),
+    o = n(475595),
     c = n(231338),
     d = n(689938),
     u = n(971704);
@@ -18,7 +18,7 @@ t.Z = function (e) {
             className: u.content,
             children: [
                 (0, l.jsx)('img', {
-                    src: (0, o.uo)(t, f),
+                    src: (0, o.fh)(t, o.Bd.GAME_TILE, f).url,
                     alt: '',
                     className: u.gameTile
                 }),

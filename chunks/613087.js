@@ -56,12 +56,12 @@ let c = o.createContext({
         );
         (0, l.P)(f, S);
         let T = null === (n = g.get(d)) || void 0 === n ? void 0 : n.current,
-            N = null;
+            v = null;
         return (
             null == T
-                ? (N = null)
+                ? (v = null)
                 : p && null != C
-                  ? (N = (0, s.jsxs)(s.Fragment, {
+                  ? (v = (0, s.jsxs)(s.Fragment, {
                         children: [
                             'collapsed' === u &&
                                 (0, r.createPortal)(
@@ -93,11 +93,11 @@ let c = o.createContext({
                                 )
                         ]
                     }))
-                  : 'collapsed' === u && (N = (0, r.createPortal)(i(E), T)),
+                  : 'collapsed' === u && (v = (0, r.createPortal)(i(E), T)),
             (0, s.jsxs)('div', {
-                style: { opacity: (null == N && 'collapsed' === u) || null == T ? 1 : 0 },
+                style: { opacity: (null == v && 'collapsed' === u) || null == T ? 1 : 0 },
                 ref: t,
-                children: [i(f), N]
+                children: [i(f), v]
             })
         );
     }),

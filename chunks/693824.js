@@ -1,10 +1,10 @@
-var a, l, i, r, s, o, u, c;
+var l, a, i, r, s, o, u, c;
 n.d(t, {
     GX: function () {
-        return a;
+        return l;
     },
     JU: function () {
-        return l;
+        return a;
     },
     kH: function () {
         return i;
@@ -13,10 +13,10 @@ n.d(t, {
         return r;
     }
 }),
-    ((s = a || (a = {}))[(s.None = 0)] = 'None'),
+    ((s = l || (l = {}))[(s.None = 0)] = 'None'),
     (s[(s.Truncate = 1)] = 'Truncate'),
     (s[(s.Wrap = 2)] = 'Wrap'),
-    ((o = l || (l = {}))[(o.Stretch = 0)] = 'Stretch'),
+    ((o = a || (a = {}))[(o.Stretch = 0)] = 'Stretch'),
     (o[(o.Contain = 1)] = 'Contain'),
     (o[(o.Cover = 2)] = 'Cover'),
     ((u = i || (i = {}))[(u.Base64 = 0)] = 'Base64'),

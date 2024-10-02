@@ -30,8 +30,8 @@ var n,
     p = t(78839),
     R = t(267642),
     x = t(74538),
-    f = t(937615),
-    M = t(518062),
+    M = t(937615),
+    f = t(518062),
     D = t(474936),
     L = t(231338),
     P = t(689938),
@@ -162,7 +162,7 @@ function j(e) {
         { interval: Y, intervalCount: k } = L;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(M.Z, { onClose: u }),
+            (0, i.jsx)(f.Z, { onClose: u }),
             (0, i.jsxs)(d.ModalContent, {
                 className: b.body,
                 children: [
@@ -173,7 +173,7 @@ function j(e) {
                             (0, i.jsx)(C.q9, { children: P.Z.Messages.PREMIUM_SUBSCRIPTION_UPDATES }),
                             (0, i.jsx)(C.R$, {
                                 label: P.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format({ subscriptionCount: 1 }),
-                                value: (0, f.og)((0, f.T4)(V, a.currency), Y, k),
+                                value: (0, M.og)((0, M.T4)(V, a.currency), Y, k),
                                 className: b.invoiceCancelRow
                             }),
                             null != U && U.length > 0

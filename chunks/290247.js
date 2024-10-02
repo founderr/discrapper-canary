@@ -1,19 +1,19 @@
-a.d(n, {
+n.d(a, {
     Z: function () {
         return o;
     }
 });
-var i = a(735250);
-a(470079);
-var t = a(120356),
-    r = a.n(t),
-    l = a(481060),
-    s = a(769003);
+var i = n(735250);
+n(470079);
+var t = n(120356),
+    r = n.n(t),
+    l = n(481060),
+    s = n(769003);
 function o(e) {
-    let { supportedLanguages: n } = e;
+    let { supportedLanguages: a } = e;
     return (0, i.jsx)('ul', {
         className: s.outerContainer,
-        children: n.map((e) =>
+        children: a.map((e) =>
             (0, i.jsx)(
                 'li',
                 {

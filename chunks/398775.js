@@ -117,22 +117,22 @@ function g(e) {
         p = (0, _.ZP)(),
         R = null,
         x = null,
-        f = [I.O0b.PAST_DUE, I.O0b.PAUSED].includes(s.status) ? s.currentPeriodStart : s.currentPeriodEnd,
-        M = r()(f).add(o, 'days').toDate();
+        M = [I.O0b.PAST_DUE, I.O0b.PAUSED].includes(s.status) ? s.currentPeriodStart : s.currentPeriodEnd,
+        f = r()(M).add(o, 'days').toDate();
     switch (s.status) {
         case I.O0b.PAST_DUE:
             x = N.Z.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
                 pauseDuration: o,
-                resumeDate: M
+                resumeDate: f
             });
             break;
         case I.O0b.PAUSED:
-            x = N.Z.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({ resumeDate: M });
+            x = N.Z.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({ resumeDate: f });
             break;
         default:
             x = N.Z.Messages.PREMIUM_PAUSE_CONFIRM_BODY.format({
-                pauseDate: f,
-                resumeDate: M,
+                pauseDate: M,
+                resumeDate: f,
                 pauseDuration: o
             });
     }

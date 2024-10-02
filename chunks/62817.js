@@ -1,6 +1,6 @@
 n(47120), n(177593);
-var a,
-    l,
+var l,
+    a,
     i,
     r,
     s = n(442837),
@@ -16,11 +16,11 @@ function E(e, t) {}
 function _() {
     v = {};
 }
-function f(e, t) {
+function p(e, t) {
     let n = d[e];
     return null != n && ((d[e] = n.filter((e) => e.id !== t)), delete h[t], delete m[t], n.length !== d[e].length);
 }
-function p(e, t) {
+function f(e, t) {
     let n = d[e];
     if (null == n) return !1;
     d[e] = n.map((e) =>
@@ -31,15 +31,15 @@ function p(e, t) {
               }
             : e
     );
-    let a = m[t.id];
-    null != a &&
-        null != x[a.id] &&
-        (x[a.id] = {
-            ...x[a.id],
+    let l = m[t.id];
+    null != l &&
+        null != x[l.id] &&
+        (x[l.id] = {
+            ...x[l.id],
             ...t
         });
 }
-class T extends (a = s.ZP.Store) {
+class T extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
@@ -58,14 +58,14 @@ class T extends (a = s.ZP.Store) {
     }
 }
 (r = 'UploadStore'),
-    (i = 'displayName') in (l = T)
-        ? Object.defineProperty(l, i, {
+    (i = 'displayName') in (a = T)
+        ? Object.defineProperty(a, i, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[i] = r),
+        : (a[i] = r),
     (t.Z = new T(o.Z, {
         CONNECTION_OPEN: function () {
             v = {};
@@ -75,33 +75,33 @@ class T extends (a = s.ZP.Store) {
         },
         UPLOAD_START: function (e) {
             var t;
-            let { channelId: n, file: a, uploader: l, message: i } = e;
-            if (l._aborted || l._errored) return;
+            let { channelId: n, file: l, uploader: a, message: i } = e;
+            if (a._aborted || a._errored) return;
             let r = null !== (t = d[n]) && void 0 !== t ? t : c;
-            (h[a.id] = l), (d[n] = [...r, a]), (m[a.id] = i);
-            let { items: s } = a;
+            (h[l.id] = a), (d[n] = [...r, l]), (m[l.id] = i);
+            let { items: s } = l;
             null != s &&
                 (x[i.id] = {
-                    ...a,
+                    ...l,
                     items: s
                 }),
-                E(i.nonce, a);
+                E(i.nonce, l);
         },
         UPLOAD_COMPRESSION_PROGRESS: function (e) {
             let { channelId: t, file: n } = e;
-            p(t, n);
+            f(t, n);
         },
         UPLOAD_PROGRESS: function (e) {
             let { channelId: t, file: n } = e;
-            p(t, n);
+            f(t, n);
         },
         UPLOAD_COMPLETE: function (e) {
             let { channelId: t, file: n } = e;
-            return f(t, n.id);
+            return p(t, n.id);
         },
         UPLOAD_FAIL: function (e) {
             let { channelId: t, file: n } = e;
-            return f(t, n.id);
+            return p(t, n.id);
         },
         UPLOAD_CANCEL_REQUEST: function (e) {
             let { file: t } = e,
@@ -114,14 +114,14 @@ class T extends (a = s.ZP.Store) {
         },
         UPLOAD_ITEM_CANCEL_REQUEST: function (e) {
             let { file: t, itemId: n } = e,
-                a = h[t.id];
-            if (null == a) return !1;
-            setImmediate(() => a.cancelItem(n));
+                l = h[t.id];
+            if (null == l) return !1;
+            setImmediate(() => l.cancelItem(n));
         },
         UPLOAD_FILE_UPDATE: function (e) {
             let { channelId: t, file: n } = e,
-                a = m[n.id];
-            null != a && E(a.nonce, n), p(t, n);
+                l = m[n.id];
+            null != l && E(l.nonce, n), f(t, n);
         },
         UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
             let { file: t, messageId: n } = e;

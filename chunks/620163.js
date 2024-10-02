@@ -28,8 +28,8 @@ var a = t(990547),
     p = t(351780),
     R = t(231765),
     x = t(813732),
-    f = t(398140),
-    M = t(564344),
+    M = t(398140),
+    f = t(564344),
     D = t(746263),
     L = t(977156),
     P = t(652380),
@@ -82,8 +82,8 @@ var a = t(990547),
     ep = t(287490),
     eR = t(706060),
     ex = t(168308),
-    ef = t(277329),
-    eM = t(674116),
+    eM = t(277329),
+    ef = t(674116),
     eD = t(726985),
     eL = t(981631),
     eP = t(46140),
@@ -199,7 +199,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.GAMES],
                 label: eZ.Z.Messages.GAMES,
                 ariaLabel: eZ.Z.Messages.GAMES,
-                element: ef.Z,
+                element: eM.Z,
                 predicate: () => eY
             },
             [eD.s6.GAMES_MY_GAMES]: {
@@ -228,11 +228,11 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.USER_SETTINGS_PROFILES],
                 label: eZ.Z.Messages.USER_SETTINGS_PROFILES,
                 ariaLabel: eZ.Z.Messages.USER_SETTINGS_PROFILES,
-                element: M.Z,
+                element: f.Z,
                 newIndicator: (0, n.jsx)(o.PremiumBadge, { text: eZ.Z.Messages.NEW }),
                 notice: {
                     stores: [j.Z, h.Z],
-                    element: f.Z
+                    element: M.Z
                 },
                 onSettingsClose: () => {
                     l.Z.wait(() => {
@@ -858,7 +858,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.VOICE_AND_VIDEO],
                 label: eZ.Z.Messages.VOICE_AND_VIDEO,
                 ariaLabel: eZ.Z.Messages.VOICE_AND_VIDEO,
-                element: eM.Z,
+                element: ef.Z,
                 predicate: () => v.Z.isSupported()
             },
             [eD.s6.VOICE_AND_VIDEO_DEVICES]: {

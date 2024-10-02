@@ -56,29 +56,29 @@ function S(e) {
 }
 function T(e) {
     var t, n, r, T;
-    let { quest: N, location: v, onReceiveErrorHints: j, contentPosition: A, rowIndex: R } = e,
+    let { quest: v, location: N, onReceiveErrorHints: j, contentPosition: A, rowIndex: R } = e,
         b = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         B = (0, _.g2)({ useReducedMotion: b }),
-        I = (0, u._s)({ quest: N }),
-        M = (0, u.z)(N),
-        O = (0, u.B6)(N.config.expiresAt, {
+        I = (0, u._s)({ quest: v }),
+        M = (0, u.z)(v),
+        O = (0, u.B6)(v.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         }),
         { isClaiming: y, isEnrolling: L } = (0, l.cj)([p.Z], () => ({
-            isClaiming: p.Z.isClaimingReward(N.id) || p.Z.isFetchingRewardCode(N.id),
-            isEnrolling: p.Z.isEnrolling(N.id)
+            isClaiming: p.Z.isClaimingReward(v.id) || p.Z.isFetchingRewardCode(v.id),
+            isEnrolling: p.Z.isEnrolling(v.id)
         })),
-        w = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        k = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        U = k && (null === (r = N.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null,
-        Z = (0, x.iQ)(N),
-        q = !(0, x.zi)(N),
-        P = (0, u._Q)(N),
-        Q = (0, x.zK)(N, g.S7.IN_HOUSE_CONSOLE_QUEST),
-        D = (0, x.Xv)(N.config),
-        W = (0, u.Rf)(N),
-        [H, V, z] = (0, u.me)(N, W),
+        w = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        k = (null === (n = v.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        U = k && (null === (r = v.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null,
+        Z = (0, x.iQ)(v),
+        q = !(0, x.zi)(v),
+        P = (0, u._Q)(v),
+        Q = (0, x.zK)(v, g.S7.IN_HOUSE_CONSOLE_QUEST),
+        D = (0, x.Xv)(v.config),
+        W = (0, u.Rf)(v),
+        [H, V, z] = (0, u.me)(v, W),
         G = q && P === u.OH.ACCEPTED,
         F = G && H === m.LI.SELECT,
         K = G && !F && V.length > 1,
@@ -90,21 +90,21 @@ function T(e) {
         ),
         { text: X, onClick: J } = (0, _.Ks)({
             progressState: P,
-            quest: N,
+            quest: v,
             isInHouseQuest: Q,
-            location: v,
+            location: N,
             isCollectibleQuest: D,
             questContentPosition: A,
             questContentRowIndex: R,
             inGiftInventory: !0
         }),
         { startingConsoleQuest: $, startConsoleQuest: ee } = (0, u.GI)({
-            questId: N.id,
+            questId: v.id,
             beforeRequest: () => {
                 B.startAnimation(),
                     (0, d._3)({
-                        questId: N.id,
-                        questContent: v,
+                        questId: v.id,
+                        questContent: N,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
                         questContentPosition: A,
                         questContentRowIndex: R
@@ -114,7 +114,7 @@ function T(e) {
                 B.stopAnimation(), j(e);
             }
         }),
-        et = (null === (T = N.userStatus) || void 0 === T ? void 0 : T.claimedAt) != null,
+        et = (null === (T = v.userStatus) || void 0 === T ? void 0 : T.claimedAt) != null,
         en = null;
     return (Z && U
         ? (en = (0, s.jsx)(i.Button, {
@@ -158,7 +158,7 @@ function T(e) {
                                   }
                               }
                           })
-                        : (0, x.$J)(N) && !M && H !== m.LI.DESKTOP
+                        : (0, x.$J)(v) && !M && H !== m.LI.DESKTOP
                           ? I
                               ? (0, s.jsx)(i.Button, {
                                     color: i.ButtonColors.PRIMARY,
@@ -206,7 +206,7 @@ function T(e) {
                   K &&
                       (0, s.jsx)(C.U, {
                           onSelect: Y,
-                          quest: N,
+                          quest: v,
                           questContent: m.jn.ACTIVITY_PANEL,
                           children: (e) =>
                               (0, s.jsx)(i.Button, {

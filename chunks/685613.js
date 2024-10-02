@@ -9,8 +9,8 @@ n(470079);
 var a = n(120356),
     o = n.n(a),
     s = n(780384),
-    l = n(918701),
-    u = n(302245),
+    l = n(302245),
+    u = n(475595),
     c = n(78826),
     d = n(46140),
     _ = n(981631),
@@ -26,7 +26,7 @@ function f(e) {
 function h(e) {
     let { className: t, gameTileSize: n = 24, quest: r, theme: a = _.BRd.DARK, withGameTile: h = !0 } = e,
         p = (0, s.wj)(a) ? _.BRd.DARK : _.BRd.LIGHT,
-        m = (0, u.vI)(r, d.dr.QUESTS_BAR);
+        m = (0, l.vI)(r, d.dr.QUESTS_BAR);
     return (0, i.jsxs)('div', {
         className: o()(E.partnerBranding, t),
         children: [
@@ -38,7 +38,7 @@ function h(e) {
                             ref: e,
                             className: E.partnerBrandingGameTile,
                             alt: '',
-                            src: (0, l.uo)(r, p),
+                            src: (0, u.fh)(r, u.Bd.GAME_TILE, p).url,
                             style: {
                                 borderRadius: f(n),
                                 width: n,
@@ -53,7 +53,7 @@ function h(e) {
                         ref: e,
                         className: o()(E.partnerBrandingLogotype, { [E.rewardHighlightLogotype]: m }),
                         alt: r.config.messages.gameTitle,
-                        src: (0, l.Gs)(r, p)
+                        src: (0, u.fh)(r, u.Bd.LOGO_TYPE, p).url
                     })
             })
         ]

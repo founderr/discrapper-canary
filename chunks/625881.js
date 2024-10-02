@@ -21,10 +21,10 @@ var n = t(735250),
 s.Z = function (e) {
     let { premiumSubscription: s, premiumType: t, onClose: i, onConfirm: h, userDiscountOffer: O } = e,
         [p, R] = a.useState(!1),
-        [x, f] = a.useState(!1),
-        M = async (e) => {
+        [x, M] = a.useState(!1),
+        f = async (e) => {
             try {
-                f(!0),
+                M(!0),
                     R(!1),
                     await o.tn.post({
                         url: N.ANM.USER_OFFER_REDEEM,
@@ -34,7 +34,7 @@ s.Z = function (e) {
             } catch (e) {
                 R(!0);
             }
-            f(!1);
+            M(!1);
         },
         D = (0, d.ZP)(),
         L = (0, l.wj)(D) ? m : g,
@@ -116,7 +116,7 @@ s.Z = function (e) {
                                       (0, n.jsx)(c.Button, {
                                           size: c.ButtonSizes.SMALL,
                                           submitting: x,
-                                          onClick: () => M(O.id),
+                                          onClick: () => f(O.id),
                                           children: A.Z.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
                                       })
                                   ]

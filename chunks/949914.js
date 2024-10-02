@@ -23,8 +23,8 @@ var n = t(735250),
     p = t(853872),
     R = t(245950),
     x = t(404203),
-    f = t(330181),
-    M = t(954821),
+    M = t(330181),
+    f = t(954821),
     D = t(980864),
     L = t(981631),
     P = t(176505),
@@ -131,7 +131,7 @@ s.Z = (e) => {
         },
         k = () => {
             null != l &&
-                (0, M.h)({
+                (0, f.h)({
                     guildId: l.id,
                     groupListing: i,
                     listing: t,
@@ -242,7 +242,7 @@ s.Z = (e) => {
                       id: G,
                       children: [
                           (0, n.jsx)('div', { className: v.divider }),
-                          (0, n.jsx)(f.Z, {
+                          (0, n.jsx)(M.Z, {
                               groupListingId: i.id,
                               subscription: s,
                               className: v.changePlanNotice

@@ -24,8 +24,8 @@ var s = n(735250),
     h = n(5881),
     S = n(602667),
     T = n(78826),
-    N = n(693900),
-    v = n(617889),
+    v = n(693900),
+    N = n(617889),
     j = n(46140),
     A = n(981631),
     R = n(604330);
@@ -49,7 +49,7 @@ function b(e) {
         { hasError: q, isLoading: P } = (0, T.d7)(),
         Q = B && !U && !k && !Z && !P,
         D = o.useRef(Q),
-        W = (0, v.B)(_, Q && !q),
+        W = (0, N.B)(_, Q && !q),
         H = (0, f.vI)(_, j.dr.QUESTS_BAR) ? f.WV : W.collapsedHeight,
         V = o.useRef(-1),
         z = o.useRef(!1),
@@ -207,7 +207,7 @@ function b(e) {
                                   backgroundColor: W.preEnrollmentBackgroundColor,
                                   backgroundImage: O ? W.postEnrollmentBackgroundImage : void 0
                               },
-                              children: (0, s.jsx)(N.t, {
+                              children: (0, s.jsx)(v.t, {
                                   springConfig: e_,
                                   isExpanded: K,
                                   children: (0, s.jsx)(e, {

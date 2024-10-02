@@ -1,55 +1,55 @@
-a.d(n, {
+n.d(a, {
     Z: function () {
-        return v;
+        return f;
     }
 });
-var i = a(735250);
-a(470079);
-var t = a(120356),
-    r = a.n(t),
-    l = a(481060),
-    s = a(410030),
-    o = a(686546),
-    c = a(565138),
-    d = a(372769),
-    u = a(134432),
-    _ = a(601964),
-    m = a(768581),
-    p = a(981631),
-    g = a(689938),
-    I = a(660857),
-    h = a(129512),
-    x = a(330065);
-function v(e) {
-    let { guild: n, className: a, onClick: t } = e,
-        v = (0, s.ZP)(),
-        f = new _.ZP({
-            name: n.name,
-            icon: n.icon
+var i = n(735250);
+n(470079);
+var t = n(120356),
+    r = n.n(t),
+    l = n(481060),
+    s = n(410030),
+    o = n(686546),
+    c = n(565138),
+    d = n(372769),
+    u = n(134432),
+    _ = n(601964),
+    p = n(768581),
+    m = n(981631),
+    g = n(689938),
+    I = n(660857),
+    h = n(129512),
+    x = n(330065);
+function f(e) {
+    let { guild: a, className: n, onClick: t } = e,
+        f = (0, s.ZP)(),
+        C = new _.ZP({
+            name: a.name,
+            icon: a.icon
         }),
-        C = m.ZP.getGuildDiscoverySplashURL({
-            id: n.id,
-            splash: n.discovery_splash,
+        v = p.ZP.getGuildDiscoverySplashURL({
+            id: a.id,
+            splash: a.discovery_splash,
             size: 192 * (0, u.x_)()
         }),
         E =
-            null != C
-                ? C
+            null != v
+                ? v
                 : (function (e) {
                       switch (e) {
-                          case p.BRd.DARK:
+                          case m.BRd.DARK:
                               return h;
-                          case p.BRd.LIGHT:
+                          case m.BRd.LIGHT:
                               return x;
                       }
-                  })(v),
-        P = m.ZP.getGuildIconURL({
-            id: n.id,
-            icon: n.icon,
+                  })(f),
+        P = p.ZP.getGuildIconURL({
+            id: a.id,
+            icon: a.icon,
             size: 50
         });
     return (0, i.jsxs)(l.Clickable, {
-        className: r()(I.card, a),
+        className: r()(I.card, n),
         onClick: t,
         'aria-label': g.Z.Messages.APP_DIRECTORY_JOIN_SERVER_LABEL,
         children: [
@@ -72,7 +72,7 @@ function v(e) {
                                 children: (0, i.jsx)(c.Z, {
                                     className: I.__invalid_icon,
                                     iconSrc: P,
-                                    guild: f,
+                                    guild: C,
                                     size: c.Z.Sizes.LARGE
                                 })
                             })
@@ -88,13 +88,13 @@ function v(e) {
                         children: [
                             (0, i.jsx)(d.Z, {
                                 className: I.guildBadge,
-                                guild: n,
+                                guild: a,
                                 tooltipColor: l.Tooltip.Colors.PRIMARY
                             }),
                             (0, i.jsx)(l.Heading, {
                                 variant: 'heading-md/semibold',
                                 className: I.guildName,
-                                children: n.name
+                                children: a.name
                             })
                         ]
                     }),
@@ -103,7 +103,7 @@ function v(e) {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         lineClamp: 2,
-                        children: n.description
+                        children: a.description
                     }),
                     (0, i.jsx)('div', {
                         className: I.memberInfo,
@@ -118,7 +118,7 @@ function v(e) {
                                 (0, i.jsx)(l.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-secondary',
-                                    children: g.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: n.approximate_member_count })
+                                    children: g.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: a.approximate_member_count })
                                 })
                             ]
                         })

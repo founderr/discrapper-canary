@@ -28,17 +28,17 @@ function A(e) {
             pendingThemeColors: a,
             isPreview: !0
         }),
-        f = E.ZP.canUsePremiumProfileCustomization(s),
-        M = null != t ? t : s.getAvatarURL(C, 80),
+        M = E.ZP.canUsePremiumProfileCustomization(s),
+        f = null != t ? t : s.getAvatarURL(C, 80),
         D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(),
-        L = (0, d.Cf)(M, D, !1);
+        L = (0, d.Cf)(f, D, !1);
     if (null == R || null == x) return null;
     let P = (e) => {
         r(o()(e, null == p ? void 0 : p.themeColors) ? void 0 : e);
     };
     return (0, n.jsx)(S.Z, {
         title: I.Z.Messages.USER_SETTINGS_PROFILE_THEME,
-        disabled: !f && !A,
+        disabled: !M && !A,
         className: i()(N.__invalid_profileThemesSection, m),
         showPremiumIcon: g,
         forcedDivider: O,

@@ -27,8 +27,8 @@ var n = t(735250),
     p = t(726985),
     R = t(981631),
     x = t(689938),
-    f = t(467174);
-class M extends a.PureComponent {
+    M = t(467174);
+class f extends a.PureComponent {
     componentDidMount() {
         c.Z.wait(() => {
             d.tZ(), d.jg();
@@ -42,11 +42,11 @@ class M extends a.PureComponent {
         return s
             ? (0, n.jsx)(u.Z, {})
             : (0, n.jsxs)('div', {
-                  className: f.__invalid_userSettingsBilling,
+                  className: M.__invalid_userSettingsBilling,
                   children: [
                       e && 0 === Object.keys(t).length
                           ? (0, n.jsx)('div', {
-                                className: f.syncing,
+                                className: M.syncing,
                                 children: (0, n.jsx)(l.Spinner, {})
                             })
                           : (0, n.jsx)(N.F, {
@@ -63,7 +63,7 @@ class M extends a.PureComponent {
                       (0, n.jsx)(N.F, {
                           setting: p.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, n.jsx)('div', {
-                              className: f.paymentHistory,
+                              className: M.paymentHistory,
                               children: (0, n.jsxs)(l.HeadingLevel, {
                                   component: (0, n.jsx)(l.FormTitle, {
                                       tag: 'h1',
@@ -74,7 +74,7 @@ class M extends a.PureComponent {
                           })
                       }),
                       (0, n.jsx)(l.Card, {
-                          className: f.codeRedemptionRedirect,
+                          className: M.codeRedemptionRedirect,
                           type: l.Card.Types.CUSTOM,
                           children: x.Z.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({ onClick: this.handleRedemptionRedirect })
                       }),
@@ -103,5 +103,5 @@ function D() {
             }
         );
     });
-    return (0, n.jsx)(M, { ...e });
+    return (0, n.jsx)(f, { ...e });
 }

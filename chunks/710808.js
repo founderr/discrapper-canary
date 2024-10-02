@@ -55,7 +55,7 @@ function R() {
         })),
         R = (0, i.e7)([T.default], () => T.default.isStreamInfoOverlayEnabled),
         x = (0, i.e7)([I.ZP], () => I.ZP.shouldRecordNextConnection());
-    async function f() {
+    async function M() {
         s(!0);
         try {
             await S.Z.getMediaEngine().writeAudioDebugState(),
@@ -164,7 +164,7 @@ function R() {
                                     children: (0, n.jsx)(r.Button, {
                                         disabled: e,
                                         size: r.Button.Sizes.SMALL,
-                                        onClick: f,
+                                        onClick: M,
                                         children: g.Z.Messages.UPLOAD
                                     })
                                 }),

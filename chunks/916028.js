@@ -2,16 +2,16 @@ t(47120);
 var n = t(735250);
 t(470079);
 var r = t(481060),
-    i = t(113434);
+    a = t(113434);
 s.Z = function (e) {
     let { onSelect: s, quest: t } = e,
-        { quests: a } = (0, i.J2)({ fetchPolicy: 'cache-and-network' }),
+        { quests: i } = (0, a.J2)({ fetchPolicy: 'cache-and-network' }),
         l = [
             {
                 label: 'NONE',
                 value: null
             },
-            ...a.map((e) => ({
+            ...i.map((e) => ({
                 label: e.config.messages.questName,
                 value: e
             }))

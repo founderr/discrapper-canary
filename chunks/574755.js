@@ -29,8 +29,8 @@ function p(e) {
         p = _.tU.useSetting(),
         { enableViewerClipping: R } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
         { analyticsLocations: x } = (0, l.ZP)(),
-        f = (0, E.Go)(),
-        { viewerClipsEnabled: M } = (0, i.cj)([T.Z], () => T.Z.getSettings()),
+        M = (0, E.Go)(),
+        { viewerClipsEnabled: f } = (0, i.cj)([T.Z], () => T.Z.getSettings()),
         D = (0, S.Z)(u.Z);
     return (
         a.useEffect(() => {
@@ -39,7 +39,7 @@ function p(e) {
         (0, n.jsxs)(l.Gt, {
             value: x,
             children: [
-                (f || t) &&
+                (M || t) &&
                     (0, n.jsx)(o.FormSection, {
                         className: s,
                         tag: o.FormTitleTags.H1,
@@ -50,15 +50,15 @@ function p(e) {
                               })
                             : null,
                         children:
-                            f &&
+                            M &&
                             (0, n.jsxs)('form', {
                                 onSubmit: (e) => e.preventDefault(),
                                 children: [(0, n.jsx)(A.Z, {}), (0, n.jsx)(C.Z, {})]
                             })
                     }),
-                f && (0, n.jsx)(o.FormDivider, {}),
+                M && (0, n.jsx)(o.FormDivider, {}),
                 (0, n.jsxs)(o.FormSection, {
-                    className: t || f ? O.marginTop20 : s,
+                    className: t || M ? O.marginTop20 : s,
                     children: [
                         (0, n.jsx)(o.FormSwitch, {
                             hideBorder: !0,
@@ -73,7 +73,7 @@ function p(e) {
                             (0, n.jsx)(o.FormSwitch, {
                                 hideBorder: !0,
                                 className: h.formItem,
-                                value: M,
+                                value: f,
                                 note: m.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
                                 onChange: (e) =>
                                     I.yl({

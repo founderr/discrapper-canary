@@ -51,8 +51,8 @@ function m() {
                 className: C.marginTop8,
                 children: N.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, S.y)('Help Text Output Devices') })
             }));
-    let f = i()(R).values().first(),
-        M = null != f ? f.disabled : null != e,
+    let M = i()(R).values().first(),
+        f = null != M ? M.disabled : null != e,
         D = i()(x).values().first(),
         L = null != D ? D.disabled : null != s;
     function P(e) {
@@ -109,7 +109,7 @@ function m() {
                                 label: t
                             };
                         }),
-                        isDisabled: M,
+                        isDisabled: f,
                         renderOptionValue: b,
                         renderOptionLabel: P
                     }),

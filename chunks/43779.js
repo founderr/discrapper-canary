@@ -24,7 +24,7 @@ var s = n(735250),
 let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function T(e) {
     var t, n, r;
-    let { quest: T, questContent: N, isHovering: v, contentPosition: j, rowIndex: A, onReceiveErrorHints: R } = e,
+    let { quest: T, questContent: v, isHovering: N, contentPosition: j, rowIndex: A, onReceiveErrorHints: R } = e,
         b = m.r.build(T.config),
         B = b.defaultReward.messages.name,
         I = b.defaultReward.messages.nameWithArticle,
@@ -32,7 +32,7 @@ function T(e) {
         { ref: O, scrollHeight: y } = (0, d.Z)(),
         L = 104 !== y,
         { expansionSpring: w } = (0, c.useSpring)({
-            expansionSpring: v ? 1 : 0,
+            expansionSpring: N ? 1 : 0,
             config: {
                 ...f.Y,
                 clamp: !0
@@ -93,12 +93,12 @@ function T(e) {
                                               quest: T,
                                               size: 76,
                                               percentComplete: Z,
-                                              percentCompleteText: v ? q : void 0,
+                                              percentCompleteText: N ? q : void 0,
                                               children: (0, s.jsx)('div', {
                                                   className: h.circularRewardTileWrapper,
                                                   children: (0, s.jsx)(_.Z, {
                                                       quest: T,
-                                                      questContent: N,
+                                                      questContent: v,
                                                       className: h.circularQuestRewardTileAsset,
                                                       location: g.dr.QUEST_HOME_DESKTOP
                                                   })
@@ -108,8 +108,8 @@ function T(e) {
                                   })
                                 : (0, s.jsx)(_.Z, {
                                       quest: T,
-                                      autoplay: v,
-                                      questContent: N,
+                                      autoplay: N,
+                                      questContent: v,
                                       className: h.questRewardTileAsset,
                                       location: g.dr.QUEST_HOME_DESKTOP
                                   })
@@ -145,7 +145,7 @@ function T(e) {
             }),
             (0, s.jsx)(C.Z, {
                 quest: T,
-                location: N,
+                location: v,
                 contentPosition: j,
                 rowIndex: A,
                 onReceiveErrorHints: R

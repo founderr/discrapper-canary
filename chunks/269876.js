@@ -38,7 +38,7 @@ function g() {
     function x(e, t) {
         s(e), i((t & S.Dg.VOICE) === S.Dg.VOICE);
     }
-    function f(e, s) {
+    function M(e, s) {
         u.Z.setMode(O, {
             threshold: e,
             autoThreshold: s
@@ -55,12 +55,12 @@ function g() {
             }
         );
     }, []);
-    let M = (0, n.jsx)('section', {
+    let f = (0, n.jsx)('section', {
         className: r()(N.inputSensitivityToggle, N.manual),
         children: (0, n.jsx)(_.Slider, {
             initialValue: g + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => f(-((100 - e) * 1), h),
+            onValueChange: (e) => M(-((100 - e) * 1), h),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
             'aria-labelledby': m,
@@ -78,7 +78,7 @@ function g() {
     });
     return (
         h &&
-            (M = (0, n.jsxs)('section', {
+            (f = (0, n.jsxs)('section', {
                 className: N.inputSensitivityToggle,
                 children: [
                     (0, n.jsx)('div', {
@@ -120,12 +120,12 @@ function g() {
                                             (0, n.jsx)(_.Switch, {
                                                 id: e,
                                                 checked: h,
-                                                onChange: (e) => f(g, e)
+                                                onChange: (e) => M(g, e)
                                             })
                                         ]
                                     })
                             }),
-                        M
+                        f
                     ]
                 }),
                 !R &&

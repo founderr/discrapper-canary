@@ -25,7 +25,7 @@ function d(e) {
     (0, o.q)(t.id);
     let c = i.useCallback(() => {
         (0, a.openModalLazy)(async () => {
-            let { default: e } = await n.e('98538').then(n.bind(n, 7225));
+            let { default: e } = await Promise.all([n.e('77803'), n.e('44797')]).then(n.bind(n, 7225));
             return (n) =>
                 (0, r.jsx)(e, {
                     appId: t.id,

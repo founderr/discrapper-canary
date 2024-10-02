@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return f;
+        return M;
     }
 }),
     t(47120);
@@ -34,14 +34,14 @@ function x(e) {
         return E.Z.getSound(s === h.hY ? h.X8 : s, t);
     });
 }
-function f() {
+function M() {
     let { analyticsLocations: e } = (0, l.ZP)(),
         [s, t] = a.useState(h.hY),
         o = (0, S.tT)(s),
         A = x(o),
-        f = (0, i.e7)([E.Z], () => E.Z.hasFetchedAllSounds()),
+        M = (0, i.e7)([E.Z], () => E.Z.hasFetchedAllSounds()),
         D = (null == o ? void 0 : o.type) === S.zx.GLOBAL,
-        L = f && null != o && null == A;
+        L = M && null != o && null == A;
     a.useEffect(() => {
         L && (0, T.tt)({ location: e });
     }, [L, e]),
@@ -50,7 +50,7 @@ function f() {
         }, []);
     let P = a.useCallback((e, s) => {
         let { inDropdown: t } = s;
-        return null == e ? null : t ? (0, n.jsx)(M, { guildId: e.value }) : null;
+        return null == e ? null : t ? (0, n.jsx)(f, { guildId: e.value }) : null;
     }, []);
     return (0, n.jsxs)(r.FormSection, {
         className: p.container,
@@ -120,7 +120,7 @@ function f() {
         ]
     });
 }
-function M(e) {
+function f(e) {
     let { guildId: s } = e,
         t = (0, i.e7)([A.Z], () => {
             var e, t, n;

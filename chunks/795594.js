@@ -23,8 +23,8 @@ var n = t(735250),
     p = t(246946),
     R = t(768581),
     x = t(585483),
-    f = t(49012),
-    M = t(709054),
+    M = t(49012),
+    f = t(709054),
     D = t(706454),
     L = t(210887),
     P = t(436267),
@@ -113,14 +113,14 @@ let y = (e) => {
             },
             _ = () => {
                 null != t.terms_of_service_url &&
-                    (0, f.q)({
+                    (0, M.q)({
                         href: t.terms_of_service_url,
                         shouldConfirm: !0
                     });
             },
             T = () => {
                 null != t.privacy_policy_url &&
-                    (0, f.q)({
+                    (0, M.q)({
                         href: t.privacy_policy_url,
                         shouldConfirm: !0
                     });
@@ -146,7 +146,7 @@ let y = (e) => {
                                       })
                                   })
                                 : null,
-                        a = new Date(M.default.extractTimestamp(l)).toLocaleDateString(o);
+                        a = new Date(f.default.extractTimestamp(l)).toLocaleDateString(o);
                     return (0, n.jsxs)('div', {
                         className: r()(B.header, U.marginBottom20),
                         children: [

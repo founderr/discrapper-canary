@@ -30,7 +30,7 @@ function h(e) {
         [N, h] = a.useState(''),
         [O, p] = a.useState(!0),
         [R, x] = a.useState(A.x.INIT),
-        [f, M] = a.useState(''),
+        [M, f] = a.useState(''),
         [D, L] = a.useState(null),
         P = async () => {
             let e;
@@ -42,7 +42,7 @@ function h(e) {
                 T.Z.captureException(e), L(m.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(A.x.INIT);
                 return;
             }
-            M(e), x(A.x.NAME);
+            f(e), x(A.x.NAME);
         };
     return (0, n.jsxs)(o.ModalRoot, {
         transitionState: s,
@@ -134,7 +134,7 @@ function h(e) {
                         children: (0, n.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, I.Sr)(N, l, f)
+                                    (0, I.Sr)(N, l, M)
                                         .then(async () => {
                                             await (0, _.Yn)(!1);
                                         })

@@ -30,8 +30,8 @@ var n,
     p = t(942833),
     R = t(400916),
     x = t(916001),
-    f = t(539290),
-    M = t(336197),
+    M = t(539290),
+    f = t(336197),
     D = t(690221),
     L = t(219929),
     P = t(307643),
@@ -130,7 +130,7 @@ function eo(e) {
         i = (0, T.e7)([j.Z], () => j.Z.getGuild(s)),
         l = (null == n ? void 0 : n.role_id) != null && (null == n ? void 0 : n.attachments_count) === 0 ? q.Z.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : a,
         c = o.useCallback(async () => {
-            (null == i ? void 0 : i.hasFeature(z.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, M.Z)(z.Z5c.GUILD_PRODUCT(s, t)) : await (0, M.Z)(z.Z5c.CHANNEL(s)), (0, I.xf)();
+            (null == i ? void 0 : i.hasFeature(z.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, f.Z)(z.Z5c.GUILD_PRODUCT(s, t)) : await (0, f.Z)(z.Z5c.CHANNEL(s)), (0, I.xf)();
         }, [i, s, t]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -615,9 +615,9 @@ class ec extends (a = o.PureComponent) {
                   children: [
                       (0, r.jsx)('div', { className: J.sectionDivider }),
                       e.isSoftDeletedProduct
-                          ? (0, r.jsx)(f.Z, {
+                          ? (0, r.jsx)(M.Z, {
                                 className: J.warningBlock,
-                                buttonPosition: f.E.RIGHT,
+                                buttonPosition: M.E.RIGHT,
                                 notice: q.Z.Messages.GUILD_PRODUCT_BILLING_PRODUCT_UNAVAILABLE,
                                 ctaLabel: q.Z.Messages.GUILD_PRODUCT_BILLING_CONTACT_SUPPORT,
                                 onClick: () => (0, N.Z)(ee(t))

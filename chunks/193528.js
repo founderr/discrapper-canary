@@ -24,8 +24,8 @@ function N(e) {
         p = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         R = c.Z.colors.BACKGROUND_ACCENT.css,
         x = (0, E.DP)(i),
-        f = (0, l.Rf)(i),
-        M = f === p ? R : f,
+        M = (0, l.Rf)(i),
+        f = M === p ? R : M,
         D = (0, u.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530),
         L = (0, _.Z)(m),
         P = (0, _.Z)(g),
@@ -58,8 +58,8 @@ function N(e) {
                             tabIndex: A ? -1 : 0,
                             onClick: A ? T.dG4 : s,
                             style: {
-                                backgroundColor: f,
-                                borderColor: M
+                                backgroundColor: M,
+                                borderColor: f
                             },
                             className: I.swatch,
                             'aria-label': S.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,

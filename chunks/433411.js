@@ -22,8 +22,8 @@ function N(e) {
         { analyticsLocations: g } = (0, l.ZP)(),
         h = null != t,
         { userAvatarDecoration: O, guildAvatarDecoration: p, pendingAvatarDecoration: R, pendingErrors: x } = (0, E.$U)(s, t),
-        f = (0, _.Z)('enable_avatar_decoration_uploads'),
-        M = a.useCallback(
+        M = (0, _.Z)('enable_avatar_decoration_uploads'),
+        f = a.useCallback(
             () =>
                 (0, d.ps)({
                     analyticsLocations: g,
@@ -46,7 +46,7 @@ function N(e) {
                 children: [
                     (0, n.jsx)(L, {
                         size: o.Button.Sizes.SMALL,
-                        onClick: M,
+                        onClick: f,
                         className: r()({ [I.buttonHighlighted]: C }),
                         children: S.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
                     }),
@@ -63,7 +63,7 @@ function N(e) {
                         })
                 ]
             }),
-            s.isStaff() && f && (0, n.jsx)(A, { user: s })
+            s.isStaff() && M && (0, n.jsx)(A, { user: s })
         ]
     });
 }

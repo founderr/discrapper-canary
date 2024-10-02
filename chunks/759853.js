@@ -18,8 +18,8 @@ let f = ['#51BC9D'];
 t.Z = (e) => {
     var t;
     let { expansionSpring: n, overlayRef: r, quest: E, progressBarRef: h, isExpanded: S } = e,
-        { completionSpring: T, startCompletionAnimation: N } = (0, x.GX)(),
-        v = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+        { completionSpring: T, startCompletionAnimation: v } = (0, x.GX)(),
+        N = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         j = o.useRef(!1),
         A = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         R = o.useRef(null),
@@ -92,19 +92,19 @@ t.Z = (e) => {
         }, [h, R, w, A]),
         U = (0, u.Z)(S);
     return (o.useEffect(() => {
-        v && S && !U && (N(), k());
-    }, [S, v, N, k, U]),
+        N && S && !U && (v(), k());
+    }, [S, N, v, k, U]),
     o.useEffect(() => {
-        v &&
+        N &&
             !b &&
             B &&
             setTimeout(() => {
-                N(), k();
+                v(), k();
             }, 200);
-    }, [v, B, b, N, k]),
+    }, [N, B, b, v, k]),
     o.useEffect(() => {
-        if (!!w.isReady) !j.current && v && (N(), k()), (j.current = v);
-    }, [v, j, k, N, w]),
+        if (!!w.isReady) !j.current && N && (v(), k()), (j.current = N);
+    }, [N, j, k, v, w]),
     A)
         ? null
         : (0, s.jsxs)('div', {

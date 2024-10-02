@@ -5,20 +5,20 @@ t.d(s, {
 });
 var n,
     r,
-    i = t(735250);
+    a = t(735250);
 t(470079);
-var a = t(481060);
+var i = t(481060);
 ((n = r || (r = {}))[(n.UNENROLLED = 0)] = 'UNENROLLED'), (n[(n.ENROLLED = 1)] = 'ENROLLED'), (n[(n.COMPLETED_25 = 2)] = 'COMPLETED_25'), (n[(n.COMPLETED_50 = 3)] = 'COMPLETED_50'), (n[(n.COMPLETED_75 = 4)] = 'COMPLETED_75'), (n[(n.COMPLETED_100 = 5)] = 'COMPLETED_100'), (n[(n.CLAIMED = 6)] = 'CLAIMED');
 s.Z = function (e) {
     let { onChange: s, value: t } = e;
-    return (0, i.jsxs)(a.FormItem, {
+    return (0, a.jsxs)(i.FormItem, {
         children: [
-            (0, i.jsx)(a.FormTitle, {
-                tag: a.FormTitleTags.H5,
+            (0, a.jsx)(i.FormTitle, {
+                tag: i.FormTitleTags.H5,
                 children: 'User State'
             }),
-            (0, i.jsx)(a.FormText, {
-                children: (0, i.jsx)(a.Select, {
+            (0, a.jsx)(i.FormText, {
+                children: (0, a.jsx)(i.Select, {
                     'aria-label': 'User State',
                     options: [
                         {
