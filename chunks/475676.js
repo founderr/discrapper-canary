@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return I;
     }
 }),
     n(47120);
-var a = n(735250),
-    l = n(470079),
+var l = n(735250),
+    a = n(470079),
     i = n(120356),
     r = n.n(i),
     s = n(442837),
@@ -14,32 +14,33 @@ var a = n(735250),
     c = n(443487),
     d = n(314897),
     h = n(594174),
-    m = n(873128),
-    x = n(246627),
-    v = n(709737),
-    E = n(463031),
-    _ = n(689938),
+    m = n(5192),
+    x = n(873128),
+    v = n(246627),
+    E = n(709737),
+    _ = n(463031),
+    p = n(689938),
     f = n(835777);
-let p = {
+let T = {
     1: f.rankFirstPlace,
     2: f.rankSecondPlace,
     3: f.rankThirdPlace
 };
-function T(e) {
-    let { rank: t, userId: n, guildId: l } = e,
+function g(e) {
+    let { rank: t, userId: n, guildId: a } = e,
         i = (0, s.e7)([h.default], () => h.default.getUser(n));
     if (null == t || null == n) return null;
-    let u = p[t];
-    return (0, a.jsxs)('div', {
+    let u = T[t];
+    return (0, l.jsxs)('div', {
         className: r()(f.rankContainer, u),
         children: [
-            (0, a.jsx)(o.Text, {
+            (0, l.jsx)(o.Text, {
                 variant: 'text-sm/medium',
                 className: f.rankText,
                 children: t
             }),
-            (0, a.jsx)(o.Avatar, {
-                src: null == i ? void 0 : i.getAvatarURL(l, 16),
+            (0, l.jsx)(o.Avatar, {
+                src: null == i ? void 0 : i.getAvatarURL(a, 16),
                 size: o.AvatarSizes.SIZE_16,
                 'aria-label': 'avatar',
                 className: f.rankAvatar
@@ -47,67 +48,75 @@ function T(e) {
         ]
     });
 }
-function g(e) {
+function I(e) {
     var t, n, i, r;
-    let h,
-        { selected: p, channel: g } = e,
-        I = g.guild_id,
-        C = (0, m.Z)({
-            guildId: I,
-            leaderboardId: E._,
+    let T,
+        { selected: I, channel: C } = e,
+        N = C.guild_id,
+        P = (0, x.Z)({
+            guildId: N,
+            leaderboardId: _._,
             intervalOffset: 0
         }),
-        { rankChanges: N } = (0, x.Z)({
-            guildId: I,
-            leaderboardId: E._,
-            intervalStart: null !== (i = null == C ? void 0 : C.interval_start) && void 0 !== i ? i : ''
+        { rankChanges: Z } = (0, v.Z)({
+            guildId: N,
+            leaderboardId: _._,
+            intervalStart: null !== (i = null == P ? void 0 : P.interval_start) && void 0 !== i ? i : ''
         }),
-        P = (0, s.e7)([d.default], () => d.default.getId()),
-        [Z, S] = l.useMemo(() => {
-            let e = N.find((e) => e.userId === P),
-                t = N[0],
+        A = (0, s.e7)([d.default], () => d.default.getId()),
+        [S, M] = a.useMemo(() => {
+            let e = Z.find((e) => e.userId === A),
+                t = Z[0],
                 n = null != e ? e : t,
-                a = null == C ? void 0 : C.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
-            return [n, a];
-        }, [C, N, P]);
-    if (null == C) return null;
-    let { sortByStatisticId: A } = C.settings,
-        R = null !== (r = null == S ? void 0 : null === (n = S.statistics) || void 0 === n ? void 0 : null === (t = n[A]) || void 0 === t ? void 0 : t.value) && void 0 !== r ? r : 0;
-    if (null != Z) {
-        let { currentRank: e } = Z;
-        h = Z.userId === P ? _.Z.Messages.LEADERBOARD_RANK_CHANGE_CURRENT_USER.format({ rank: e }) : _.Z.Messages.LEADERBOARD_RANK_CHANGE_OTHER_USER.format({ rank: e });
-    } else h = _.Z.Messages.LEADERBOARD_RANK_CHANGE_NEW_CHAMPION;
-    return (0, a.jsxs)(c.Zb, {
-        selected: p,
+                l = null == P ? void 0 : P.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
+            return [n, l];
+        }, [P, Z, A]),
+        y = (0, s.e7)([h.default], () => h.default.getUser(null == S ? void 0 : S.userId)),
+        R = m.ZP.getName(N, void 0, y);
+    if (null == P) return null;
+    let { sortByStatisticId: O } = P.settings,
+        j = null !== (r = null == M ? void 0 : null === (n = M.statistics) || void 0 === n ? void 0 : null === (t = n[O]) || void 0 === t ? void 0 : t.value) && void 0 !== r ? r : 0;
+    if (null != S) {
+        let { currentRank: e } = S;
+        T =
+            S.userId === A
+                ? p.Z.Messages.LEADERBOARD_RANK_CHANGE_CURRENT_USER.format({ rank: e })
+                : p.Z.Messages.LEADERBOARD_RANK_CHANGE_OTHER_USER.format({
+                      rank: e,
+                      username: R
+                  });
+    } else T = p.Z.Messages.LEADERBOARD_RANK_CHANGE_NEW_CHAMPION;
+    return (0, l.jsxs)(c.Zb, {
+        selected: I,
         children: [
-            (0, a.jsxs)(c.e$, {
+            (0, l.jsxs)(c.e$, {
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, l.jsxs)('div', {
                         className: f.gameTitleContainer,
                         children: [
-                            (0, a.jsx)(o.LeagueOfLegendsBrandIcon, { size: 'xs' }),
-                            (0, a.jsx)(o.Text, {
+                            (0, l.jsx)(o.LeagueOfLegendsBrandIcon, { size: 'xs' }),
+                            (0, l.jsx)(o.Text, {
                                 variant: 'text-sm/medium',
                                 className: f.gameTitle,
                                 children: 'League of Legends'
                             })
                         ]
                     }),
-                    (0, a.jsx)(o.Spacer, { size: 2 }),
-                    (0, a.jsx)(c.ll, { children: h }),
-                    (0, a.jsx)(u.Gk, {
+                    (0, l.jsx)(o.Spacer, { size: 2 }),
+                    (0, l.jsx)(c.ll, { children: T }),
+                    (0, l.jsx)(u.Gk, {
                         location: u.Gt.CARD,
-                        children: (0, a.jsx)(v.D, {
-                            value: R,
-                            statisticId: A
+                        children: (0, l.jsx)(E.D, {
+                            value: j,
+                            statisticId: O
                         })
                     })
                 ]
             }),
-            (0, a.jsx)(T, {
-                userId: null == Z ? void 0 : Z.userId,
-                rank: null == Z ? void 0 : Z.currentRank,
-                guildId: g.guild_id
+            (0, l.jsx)(g, {
+                userId: null == S ? void 0 : S.userId,
+                rank: null == S ? void 0 : S.currentRank,
+                guildId: C.guild_id
             })
         ]
     });
