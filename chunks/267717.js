@@ -18,25 +18,26 @@ var a = t(481060),
     d = t(981631),
     _ = t(689938),
     u = t(821774);
-function E() {
-    let e = r.default.getCurrentUser();
-    if (null != e)
+function E(e) {
+    let s = r.default.getCurrentUser();
+    if (null != s)
         (0, a.openModalLazy)(async () => {
-            let { default: s } = await Promise.resolve().then(t.bind(t, 267717));
+            let { default: a } = await Promise.resolve().then(t.bind(t, 267717));
             return (t) =>
-                (0, n.jsx)(s, {
-                    user: e,
+                (0, n.jsx)(a, {
+                    user: s,
                     analyticsSource: d.Sbl.PROFILE_PANEL,
                     analyticsLocation: {
                         section: d.jXE.USER_PROFILE,
                         object: d.qAy.BUTTON_CTA
                     },
+                    onSubscribeFinish: e,
                     ...t
                 });
         });
 }
 function T(e) {
-    let { user: s, onClose: t, analyticsSource: a, analyticsLocation: r, ...d } = e;
+    let { user: s, onClose: t, ...a } = e;
     return (0, n.jsx)(l.Z, {
         modalClassName: u.modal,
         modalContentClassName: u.modalContent,
@@ -48,8 +49,6 @@ function T(e) {
             (0, o.$)(t);
         },
         secondaryCTA: _.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
-        analyticsSource: a,
-        analyticsLocation: r,
         onClose: t,
         enableArtBoxShadow: !1,
         hideBackButton: !0,
@@ -62,6 +61,6 @@ function T(e) {
                 disabledInputs: !0
             })
         }),
-        ...d
+        ...a
     });
 }

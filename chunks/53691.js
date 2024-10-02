@@ -14,8 +14,8 @@ var i = n(120356),
     c = n(474936),
     d = n(422455);
 function _(e) {
-    let { showUpsell: t, text: n, textVariant: i, button: _, buttonAnalyticsObject: E, className: f, showShadow: h = !0, position: p = 'floating' } = e,
-        m = (0, s.useSpring)({
+    let { showUpsell: t, text: n, textVariant: i, button: _, buttonAnalyticsObject: E, className: f, onSubscribeModalClose: h, showShadow: p = !0, position: m = 'floating' } = e,
+        I = (0, s.useSpring)({
             transform: t ? 'translateY(0%)' : 'translateY(120%)',
             opacity: t ? 1 : 0,
             config: {
@@ -24,13 +24,13 @@ function _(e) {
             }
         });
     return (0, r.jsxs)(o.animated.div, {
-        style: { ...m },
+        style: { ...I },
         className: a()(
             d.upsellContainer,
             {
-                [d.upsellContainerShadow]: h,
-                [d.upsellContainerFloating]: 'floating' === p,
-                [d.upsellContainerInline]: 'inline' === p
+                [d.upsellContainerShadow]: p,
+                [d.upsellContainerFloating]: 'floating' === m,
+                [d.upsellContainerInline]: 'inline' === m
             },
             f
         ),
@@ -52,7 +52,8 @@ function _(e) {
                       subscriptionTier: c.Si.TIER_2,
                       buttonText: _,
                       premiumModalAnalyticsLocation: E,
-                      tabIndex: t ? 0 : -1
+                      tabIndex: t ? 0 : -1,
+                      onSubscribeModalClose: h
                   })
                 : _
         ]

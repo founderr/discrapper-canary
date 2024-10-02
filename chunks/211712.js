@@ -1,88 +1,93 @@
 t.d(s, {
     J2: function () {
-        return A;
+        return m;
     },
     _h: function () {
-        return C;
+        return g;
     },
     eQ: function () {
         return a;
     },
-    j_: function () {
-        return m;
+    m4: function () {
+        return h;
     }
 });
 var n,
     a,
-    i = t(597688),
-    r = t(350327),
-    o = t(689938),
-    l = t(201016),
-    c = t(673497),
-    d = t(421450),
-    _ = t(977787),
-    u = t(187812),
-    E = t(947557),
-    T = t(808236),
-    S = t(265665),
-    I = t(181793),
-    N = t(338430);
+    i = t(470079),
+    r = t(442837),
+    o = t(597688),
+    l = t(350327),
+    c = t(689938),
+    d = t(201016),
+    _ = t(673497),
+    u = t(421450),
+    E = t(977787),
+    T = t(187812),
+    S = t(947557),
+    I = t(808236),
+    N = t(265665),
+    A = t(181793),
+    C = t(338430);
 ((n = a || (a = {}))[(n.ABOVE_THE_CLOUDS = 0)] = 'ABOVE_THE_CLOUDS'), (n[(n.CYBERPUNK = 1)] = 'CYBERPUNK'), (n[(n.STARLIT_DREAM = 2)] = 'STARLIT_DREAM'), (n[(n.SHADOW_REALM = 3)] = 'SHADOW_REALM'), (n[(n.NEON_SPACE = 4)] = 'NEON_SPACE');
-let A = {
+let m = {
     0: {
         presetName: 0,
-        presetBackgroundUrl: E.Z,
+        presetBackgroundUrl: S.Z,
         themeColors: [752280, 9215590],
-        bannerImageUrl: l.Z,
+        bannerImageUrl: d.Z,
         avatarDecorationSkuId: '1144059132517826601'
     },
     1: {
         presetName: 1,
-        presetBackgroundUrl: T.Z,
+        presetBackgroundUrl: I.Z,
         themeColors: [1967991, 742532],
-        bannerImageUrl: c.Z
-    },
-    2: {
-        presetName: 2,
-        presetBackgroundUrl: S.Z,
-        themeColors: [0, 4458504],
-        bannerImageUrl: d.Z,
-        avatarDecorationSkuId: '1144058522808614923'
+        bannerImageUrl: _.Z
     },
     3: {
         presetName: 3,
-        presetBackgroundUrl: I.Z,
+        presetBackgroundUrl: N.Z,
+        themeColors: [0, 4458504],
+        bannerImageUrl: u.Z,
+        avatarDecorationSkuId: '1144058522808614923'
+    },
+    2: {
+        presetName: 2,
+        presetBackgroundUrl: A.Z,
         themeColors: [5123751, 590625],
-        bannerImageUrl: _.Z,
+        bannerImageUrl: E.Z,
         avatarDecorationSkuId: '1144058844004233369'
     },
     4: {
         presetName: 4,
-        presetBackgroundUrl: N.Z,
+        presetBackgroundUrl: C.Z,
         themeColors: [6094952, 1007678],
-        bannerImageUrl: u.Z
+        bannerImageUrl: T.Z
     }
 };
-function C(e) {
+function g(e) {
     switch (e) {
         case 0:
-            return o.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_ABOVE_THE_CLOUDS;
+            return c.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_ABOVE_THE_CLOUDS;
         case 1:
-            return o.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_CYBERPUNK;
+            return c.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_CYBERPUNK;
         case 2:
-            return o.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_STARLIT_DREAM;
+            return c.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_STARLIT_DREAM;
         case 3:
-            return o.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_SHADOW_REALM;
+            return c.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_SHADOW_REALM;
         case 4:
-            return o.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_NEON_SPACE;
+            return c.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_NEON_SPACE;
     }
 }
-function m(e) {
-    var s;
-    let t = A[e];
-    (0, r.x3)({
-        bannerImage: t.bannerImageUrl,
-        themeColors: t.themeColors,
-        avatarDecoration: null != t.avatarDecorationSkuId ? (null === (s = i.Z.getProduct(t.avatarDecorationSkuId)) || void 0 === s ? void 0 : s.items[0]) : void 0
-    });
+function h(e) {
+    let s = (0, r.e7)([o.Z], () => o.Z.lastSuccessfulFetch);
+    i.useEffect(() => {
+        var s;
+        let t = m[e];
+        (0, l.x3)({
+            bannerImage: t.bannerImageUrl,
+            themeColors: t.themeColors,
+            avatarDecoration: null != t.avatarDecorationSkuId ? (null === (s = o.Z.getProduct(t.avatarDecorationSkuId)) || void 0 === s ? void 0 : s.items[0]) : void 0
+        });
+    }, [s, e]);
 }

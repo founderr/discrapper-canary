@@ -31,9 +31,7 @@ function _() {
             onShuffle: i
         };
     })();
-    a.useEffect(() => {
-        (0, c.j_)(e);
-    }, [e]);
+    (0, c.m4)(e);
     let t = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         _ = (0, l.g2)({ useReducedMotion: t });
     return (0, n.jsxs)('div', {
