@@ -149,12 +149,10 @@ function P(e) {
         d = null != c ? f.ScreenArrowIcon : (0, T.Mq)(t) ? f.AppsIcon : f.GameControllerIcon;
     return (0, i.jsxs)(b, {
         children: [
-            3 === o
-                ? null
-                : (0, i.jsx)(d, {
-                      size: 'xxs',
-                      color: l
-                  }),
+            (0, i.jsx)(d, {
+                size: 'xxs',
+                color: l
+            }),
             (0, i.jsx)(v.ZP, {
                 entry: t,
                 textColor: u,

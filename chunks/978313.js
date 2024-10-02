@@ -1,40 +1,42 @@
-a.d(n, {
+n.d(a, {
     Z: function () {
-        return g;
+        return x;
     }
 }),
-    a(47120);
-var t = a(735250),
-    i = a(470079),
-    o = a(120356),
-    r = a.n(o),
-    l = a(657707),
-    s = a(793030),
-    c = a(692547),
-    d = a(481060),
-    u = a(962250),
-    m = a(810568),
-    p = a(689938),
-    _ = a(51527);
-function g(e) {
-    let { detectedGame: n, trackAction: a } = e,
-        [o, g] = i.useState((null == n ? void 0 : n.summaryLocalized) != null),
-        [f, x] = i.useState(!0),
-        [v, h] = i.useState(!1),
-        I = i.useRef(null),
-        { width: E, height: A } = (0, u.b)();
+    n(47120);
+var t = n(735250),
+    i = n(470079),
+    o = n(120356),
+    r = n.n(o),
+    l = n(657707),
+    s = n(793030),
+    c = n(692547),
+    d = n(481060),
+    u = n(962250),
+    m = n(810568),
+    p = n(221370),
+    g = n(689938),
+    f = n(51527),
+    _ = n(110367);
+function x(e) {
+    let { detectedGame: a, trackAction: n } = e,
+        [o, x] = i.useState((null == a ? void 0 : a.summaryLocalized) != null),
+        [v, h] = i.useState(!0),
+        [I, E] = i.useState(!1),
+        A = i.useRef(null),
+        { width: b, height: j } = (0, u.b)();
     return (i.useEffect(() => {
-        let e = I.current;
-        null != e && h(e.scrollHeight - e.clientHeight > 1);
-    }, [I, E, A]),
-    null == n.summary)
+        let e = A.current;
+        null != e && E(e.scrollHeight - e.clientHeight > 1);
+    }, [A, b, j]),
+    null == a.summary)
         ? null
         : (0, t.jsxs)('div', {
-              className: r()(_.column, _.gapSm),
+              className: r()(f.column, f.gapSm),
               children: [
-                  null != n.summaryLocalized &&
+                  null != a.summaryLocalized &&
                       (0, t.jsxs)('div', {
-                          className: r()(_.row, _.gapSm),
+                          className: r()(f.row, f.gapSm),
                           children: [
                               (0, t.jsx)(l.SxY, {
                                   color: c.Z.colors.HEADER_SECONDARY,
@@ -43,27 +45,31 @@ function g(e) {
                               (0, t.jsx)(s.xv, {
                                   variant: 'text-xs/medium',
                                   color: 'header-secondary',
-                                  children: o ? p.Z.Messages.MACHINE_TRANSLATED_TRANSLATED.format({ onShowOriginal: () => g(!1) }) : p.Z.Messages.MACHINE_TRANSLATED_ORIGINAL.format({ onShowTranslated: () => g(!0) })
+                                  children: o ? g.Z.Messages.MACHINE_TRANSLATED_TRANSLATED.format({ onShowOriginal: () => x(!1) }) : g.Z.Messages.MACHINE_TRANSLATED_ORIGINAL.format({ onShowTranslated: () => x(!0) })
                               })
                           ]
                       }),
                   (0, t.jsx)(s.xv, {
-                      ref: I,
-                      lineClamp: f ? 8 : void 0,
+                      ref: A,
+                      lineClamp: v ? 8 : void 0,
                       variant: 'text-sm/normal',
-                      children: o ? n.summaryLocalized : n.summary
+                      children: o ? a.summaryLocalized : a.summary
                   }),
-                  (v || !f) &&
+                  (I || !v) &&
                       (0, t.jsx)(d.Clickable, {
-                          className: _.clickable,
+                          className: f.clickable,
                           onClick: () => {
-                              a(f ? m.as.ShowMore : m.as.ShowLess), x(!f);
+                              n(v ? m.as.ShowMore : m.as.ShowLess), h(!v);
                           },
                           children: (0, t.jsx)(s.xv, {
                               variant: 'text-sm/semibold',
-                              children: f ? p.Z.Messages.EXPANDABLE_TEXT_SHOW_MORE : p.Z.Messages.EXPANDABLE_TEXT_SHOW_LESS
+                              children: v ? g.Z.Messages.EXPANDABLE_TEXT_SHOW_MORE : g.Z.Messages.EXPANDABLE_TEXT_SHOW_LESS
                           })
-                      })
+                      }),
+                  (0, t.jsx)(p.Z, {
+                      className: _.platforms,
+                      detectedGame: a
+                  })
               ]
           });
 }
