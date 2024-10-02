@@ -171,6 +171,10 @@ let U = {
         throttleKeys: (e) => [e.application_id, e.event],
         throttlePercent: b
     },
+    [p.rMx.ACTIVITY_HANDSHAKE]: {
+        throttlePeriod: y,
+        throttleKeys: (e) => [e.application_id]
+    },
     [p.rMx.CHANNEL_BANNER_VIEWED]: {
         throttlePeriod: y,
         throttleKeys: (e) => [e.banner_type, e.channel_id]

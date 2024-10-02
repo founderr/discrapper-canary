@@ -156,43 +156,48 @@ class p extends i.EventEmitter {
             h(this, 'handleHandshake', async (e, t, i) => {
                 let a;
                 null != this.handshakeFailureTimeoutId && clearTimeout(this.handshakeFailureTimeoutId);
-                let s = (await n.e('56268').then(n.t.bind(n, 826753, 23))).default;
+                let r = (await n.e('56268').then(n.t.bind(n, 826753, 23))).default;
                 try {
-                    s.assert(
+                    r.assert(
                         t,
-                        (0, d.Z)(s)
+                        (0, d.Z)(r)
                             .required()
                             .keys({
-                                v: s.number().min(1).max(1).required(),
-                                encoding: s.string().equal('json').optional(),
-                                client_id: s.string().required(),
-                                frame_id: s.string().required(),
-                                sdk_version: s.string().optional()
+                                v: r.number().min(1).max(1).required(),
+                                encoding: r.string().equal('json').optional(),
+                                client_id: r.string().required(),
+                                frame_id: r.string().required(),
+                                sdk_version: r.string().optional()
                             })
                     );
                 } catch (e) {
                     throw new o.Z({ closeCode: _.$VG.CLOSE_UNSUPPORTED }, e.message);
                 }
-                let r = t.frame_id;
-                if (!I.has(r)) throw (this.logger.error('Unrecognized frame ID '.concat(r)), new o.Z({ closeCode: _.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(r)));
+                let l = t.frame_id;
+                if (!I.has(l)) throw (this.logger.error('Unrecognized frame ID '.concat(l)), new o.Z({ closeCode: _.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(l)));
+                null != t.sdk_version &&
+                    s.default.track(_.rMx.ACTIVITY_HANDSHAKE, {
+                        application_id: t.client_id,
+                        sdk_version: t.sdk_version
+                    });
                 try {
-                    var l;
+                    var c;
                     a = this.createPostMessageProxySocket({
                         origin: e,
                         postMessageToRPCClient: i,
-                        frameId: r,
+                        frameId: l,
                         version: Number(t.v),
                         logger: this.logger,
                         postClose: g,
-                        encoding: null !== (l = t.encoding) && void 0 !== l ? l : 'json'
+                        encoding: null !== (c = t.encoding) && void 0 !== c ? c : 'json'
                     });
                 } catch (e) {
                     throw (this.logger.error('Error opening window socket '.concat(e)), e);
                 }
                 this.logger.info('Socket Opened: '.concat(a.id));
                 try {
-                    if ((await this.validateSocketClient(a, e, t.client_id), !I.has(r))) throw (this.logger.error('Frame ID '.concat(r, ' no longer exists')), new o.Z({ closeCode: _.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(r)));
-                    m.set(e, a), I.delete(r), a.authorization.scopes.push(u.b_), this.emit('connect', a), this.logger.info('Socket Validated: '.concat(a.id));
+                    if ((await this.validateSocketClient(a, e, t.client_id), !I.has(l))) throw (this.logger.error('Frame ID '.concat(l, ' no longer exists')), new o.Z({ closeCode: _.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(l)));
+                    m.set(e, a), I.delete(l), a.authorization.scopes.push(u.b_), this.emit('connect', a), this.logger.info('Socket Validated: '.concat(a.id));
                 } catch (e) {
                     throw (this.logger.info('Socket Closed: '.concat(a.id, ', ').concat(e.message)), e);
                 }
