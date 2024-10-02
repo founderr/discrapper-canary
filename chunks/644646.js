@@ -8,8 +8,8 @@ var r = n(735250),
     c = n(607070),
     d = n(70097),
     _ = n(617136),
-    E = n(918701),
-    f = n(302245),
+    E = n(302245),
+    f = n(475595),
     h = n(566078),
     p = n(78826),
     m = n(341907),
@@ -19,9 +19,8 @@ var r = n(735250),
 function S(e) {
     let { className: t, quest: n, autoplay: a = !0, learnMoreStyle: S = null } = e,
         A = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        v = (0, E.gO)(n),
-        N = i.useMemo(() => (0, E.nP)(v.name), [v.name]),
-        O = i.useCallback(
+        v = i.useMemo(() => (0, f.fh)(n, f.Bd.REWARD), [n]),
+        N = i.useCallback(
             (t) => {
                 var r;
                 (0, s.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
@@ -36,25 +35,26 @@ function S(e) {
             },
             [n.id, e]
         ),
-        R = (0, f.vI)(n, I.dr.QUESTS_BAR),
-        C = i.useRef(null),
-        y = i.useRef(a);
+        O = (0, E.vI)(n, I.dr.QUESTS_BAR),
+        R = i.useRef(null),
+        C = i.useRef(a);
     i.useEffect(() => {
-        if (null != C.current) {
-            if (!N || A) {
-                (C.current.currentTime = 0), C.current.pause();
+        if (null != R.current) {
+            if (!v.isAnimated || A) {
+                (R.current.currentTime = 0), R.current.pause();
                 return;
             }
-            a && !y.current ? C.current.play() : !a && y.current && ((C.current.currentTime = 0), C.current.pause()), (y.current = a);
+            a && !C.current ? R.current.play() : !a && C.current && ((R.current.currentTime = 0), R.current.pause()), (C.current = a);
         }
-    }, [a, N, A]);
-    let L = N
+    }, [a, v, A]);
+    let y = v.isAnimated
         ? (0, r.jsx)(p.Fl, {
               id: 'QuestRewardTile_rewardTileAnimated',
-              children: (e) =>
-                  (0, r.jsx)(d.Z, {
+              children: (e) => {
+                  var t;
+                  return (0, r.jsx)(d.Z, {
                       ref: (t) => {
-                          (e.current = t), (C.current = t);
+                          (e.current = t), (R.current = t);
                       },
                       autoPlay: !A && a,
                       loop: !0,
@@ -64,9 +64,10 @@ function S(e) {
                       controls: !1,
                       children: (0, r.jsx)('source', {
                           src: v.url,
-                          type: (0, E.mN)(v.url)
+                          type: null !== (t = v.mimetype) && void 0 !== t ? t : void 0
                       })
-                  })
+                  });
+              }
           })
         : (0, r.jsx)(p.Fl, {
               id: 'QuestRewardTile_rewardTileStatic',
@@ -81,22 +82,22 @@ function S(e) {
     return null == S
         ? (0, r.jsx)('div', {
               className: o()(g.questRewardTile, t),
-              children: L
+              children: y
           })
         : (0, r.jsxs)(u.Clickable, {
               className: o()(
                   g.questRewardTileInteractive,
                   g.questRewardTile,
                   {
-                      [g.rewardHighlight]: R,
-                      [g.borderOverlay]: !R
+                      [g.rewardHighlight]: O,
+                      [g.borderOverlay]: !O
                   },
                   t
               ),
-              onClick: O,
+              onClick: N,
               children: [
-                  L,
-                  R &&
+                  y,
+                  O &&
                       (0, r.jsx)(u.Shine, {
                           className: g.shine,
                           shineSize: u.ShineSizes.SMALL

@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return T;
+            return v;
         },
         openConsoleConnectionErrorsModal: function () {
-            return v;
+            return j;
         }
     }),
     n(47120);
@@ -22,140 +22,141 @@ var s = n(735250),
     x = n(113434),
     _ = n(497505),
     C = n(918701),
-    g = n(667105),
-    f = n(981631),
-    E = n(689938),
-    h = n(24444),
-    S = n(708901);
-function T(e) {
-    let { questId: t, errorHints: n, transitionState: r, onClose: T } = e,
-        v = (0, x.B4)(t);
-    null == v && T();
-    let [j, A] = (0, o.useState)(n),
-        R = (0, x.KX)(),
-        b = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        B = (0, g.g2)({
-            useReducedMotion: b,
-            className: h.colorTransition
+    g = n(475595),
+    f = n(667105),
+    E = n(981631),
+    h = n(689938),
+    S = n(24444),
+    T = n(708901);
+function v(e) {
+    let { questId: t, errorHints: n, transitionState: r, onClose: v } = e,
+        j = (0, x.B4)(t);
+    null == j && v();
+    let [A, R] = (0, o.useState)(n),
+        b = (0, x.KX)(),
+        B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        I = (0, f.g2)({
+            useReducedMotion: B,
+            className: S.colorTransition
         }),
-        I = j.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        M = (0, C.Bz)(v),
-        O = (0, l.e7)([p.Z], () => p.Z.getState().theme),
-        y = (0, i.wj)(O) ? f.BRd.DARK : f.BRd.LIGHT,
-        { startConsoleQuest: L, startingConsoleQuest: w } = (0, x.GI)({
-            questId: v.id,
+        M = A.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
+        O = (0, C.Bz)(j),
+        y = (0, l.e7)([p.Z], () => p.Z.getState().theme),
+        L = (0, i.wj)(y) ? E.BRd.DARK : E.BRd.LIGHT,
+        { startConsoleQuest: w, startingConsoleQuest: k } = (0, x.GI)({
+            questId: j.id,
             beforeRequest: () => {
-                B.startAnimation(),
+                I.startAnimation(),
                     (0, m._3)({
-                        questId: v.id,
+                        questId: j.id,
                         questContent: _.jn.CONNECTIONS_MODAL,
                         questContentCTA: m.jZ.DEFIBRILLATOR
                     });
             },
             afterRequest: (e) => {
-                B.stopAnimation(), A(e);
+                I.stopAnimation(), R(e);
             }
         });
     return (0, s.jsxs)(c.ModalRoot, {
         transitionState: r,
         size: c.ModalSize.DYNAMIC,
-        className: h.modalRoot,
+        className: S.modalRoot,
         children: [
             (0, s.jsxs)(c.ModalHeader, {
                 direction: u.Z.Direction.VERTICAL,
                 separator: !1,
-                className: h.modalHeader,
+                className: S.modalHeader,
                 children: [
                     (0, s.jsxs)('div', {
-                        className: h.modalTop,
+                        className: S.modalTop,
                         children: [
                             (0, s.jsx)('div', {
-                                className: h.iconFrame,
+                                className: S.iconFrame,
                                 children: (0, s.jsx)('img', {
-                                    className: h.icon,
+                                    className: S.icon,
                                     alt: '',
-                                    src: S
+                                    src: T
                                 })
                             }),
                             (0, s.jsx)(c.ModalCloseButton, {
-                                className: h.closeBtn,
-                                onClick: T
+                                className: S.closeBtn,
+                                onClick: v
                             })
                         ]
                     }),
                     (0, s.jsx)(c.Heading, {
                         variant: 'heading-xl/bold',
-                        children: E.Z.Messages.QUESTS_CONNECTION_MODAL_ERROR_HEADER
+                        children: h.Z.Messages.QUESTS_CONNECTION_MODAL_ERROR_HEADER
                     }),
                     (0, s.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        className: h.upperBodyText,
-                        children: R.message
+                        className: S.upperBodyText,
+                        children: b.message
                     })
                 ]
             }),
             (0, s.jsxs)(c.ModalContent, {
-                className: h.modalContent,
+                className: S.modalContent,
                 children: [
                     (0, s.jsxs)('div', {
-                        className: h.contentHeader,
+                        className: S.contentHeader,
                         children: [
                             (0, s.jsx)(c.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: E.Z.Messages.CONNECTED_ACCOUNTS
+                                children: h.Z.Messages.CONNECTED_ACCOUNTS
                             }),
                             (0, s.jsxs)(c.Clickable, {
-                                className: a()(h.refreshWrapper, { [h.disabled]: w }),
-                                onClick: L,
+                                className: a()(S.refreshWrapper, { [S.disabled]: k }),
+                                onClick: w,
                                 children: [
-                                    B.render(),
+                                    I.render(),
                                     (0, s.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'currentColor',
-                                        className: h.colorTransition,
-                                        children: E.Z.Messages.REFRESH
+                                        className: S.colorTransition,
+                                        children: h.Z.Messages.REFRESH
                                     })
                                 ]
                             })
                         ]
                     }),
                     (0, s.jsxs)('div', {
-                        className: h.accountsWrapper,
+                        className: S.accountsWrapper,
                         children: [
                             (0, s.jsx)(N, {
                                 icon: (0, s.jsx)(c.ScreenIcon, { size: 'sm' }),
-                                text: E.Z.Messages.QUESTS_THIS_PC
+                                text: h.Z.Messages.QUESTS_THIS_PC
                             }),
                             (0, s.jsx)(N, {
                                 icon: (0, s.jsx)(c.GameControllerIcon, { size: 'sm' }),
-                                text: E.Z.Messages.QUESTS_CONNECTED_CONSOLES,
-                                errors: M ? void 0 : I.map((e) => e.message),
-                                gameTile: M
+                                text: h.Z.Messages.QUESTS_CONNECTED_CONSOLES,
+                                errors: O ? void 0 : M.map((e) => e.message),
+                                gameTile: O
                                     ? (0, s.jsx)(c.Tooltip, {
-                                          'aria-label': v.config.messages.gameTitle,
+                                          'aria-label': j.config.messages.gameTitle,
                                           text: () =>
                                               (0, s.jsxs)('div', {
-                                                  className: h.tooltip,
+                                                  className: S.tooltip,
                                                   children: [
                                                       (0, s.jsx)(c.Text, {
                                                           variant: 'text-sm/medium',
-                                                          children: v.config.messages.gameTitle
+                                                          children: j.config.messages.gameTitle
                                                       }),
                                                       (0, s.jsx)(c.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'text-muted',
-                                                          children: E.Z.Messages.QUESTS_GAME_DETECTED
+                                                          children: h.Z.Messages.QUESTS_GAME_DETECTED
                                                       })
                                                   ]
                                               }),
                                           children: (e) =>
                                               (0, s.jsx)('img', {
                                                   ...e,
-                                                  className: h.gameTile,
-                                                  alt: v.config.messages.gameTitle,
-                                                  src: (0, C.uo)(v, y)
+                                                  className: S.gameTile,
+                                                  alt: j.config.messages.gameTitle,
+                                                  src: (0, g.fh)(j, g.Bd.GAME_TILE, L).url
                                               })
                                       })
                                     : null
@@ -165,28 +166,28 @@ function T(e) {
                 ]
             }),
             (0, s.jsxs)(c.ModalFooter, {
-                className: h.footer,
+                className: S.footer,
                 children: [
                     (0, s.jsx)(c.Button, {
                         size: c.ButtonSizes.MIN,
-                        onClick: T,
-                        className: h.footerCloseButton,
-                        children: E.Z.Messages.CLOSE
+                        onClick: v,
+                        className: S.footerCloseButton,
+                        children: h.Z.Messages.CLOSE
                     }),
                     (0, s.jsx)(c.Button, {
                         look: c.ButtonLooks.LINK,
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
-                            T(),
+                            v(),
                                 (0, C.V$)(
-                                    { quest: v },
+                                    { quest: j },
                                     {
                                         content: _.jn.CONNECTIONS_MODAL,
                                         ctaContent: m.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
                                     }
                                 );
                         },
-                        children: E.Z.Messages.QUESTS_SHOW_CONNECTIONS
+                        children: h.Z.Messages.QUESTS_SHOW_CONNECTIONS
                     })
                 ]
             })
@@ -198,13 +199,13 @@ function N(e) {
         l = o.length > 0,
         i = l ? c.ConnectionUnknownIcon : c.ConnectionFineIcon;
     return (0, s.jsxs)('div', {
-        className: h.connectionRow,
+        className: S.connectionRow,
         children: [
             (0, s.jsxs)('div', {
-                className: a()(h.connectionRowHeader, { [h.connectionRowHeaderError]: l }),
+                className: a()(S.connectionRowHeader, { [S.connectionRowHeaderError]: l }),
                 children: [
                     (0, s.jsxs)('div', {
-                        className: h.connectionRowHeaderContent,
+                        className: S.connectionRowHeaderContent,
                         children: [
                             t,
                             (0, s.jsx)(c.Text, {
@@ -215,15 +216,15 @@ function N(e) {
                         ]
                     }),
                     (0, s.jsxs)('div', {
-                        className: h.connectionRowHeaderContent,
+                        className: S.connectionRowHeaderContent,
                         children: [
                             r,
                             (0, s.jsx)(i, {
                                 color: 'currentColor',
                                 size: 'sm',
                                 className: a()({
-                                    [h.success]: !l,
-                                    [h.error]: l
+                                    [S.success]: !l,
+                                    [S.error]: l
                                 })
                             })
                         ]
@@ -231,17 +232,17 @@ function N(e) {
                 ]
             }),
             (0, s.jsx)('div', {
-                className: h.errorsContainer,
+                className: S.errorsContainer,
                 children: o.map((e) =>
                     (0, s.jsxs)(
                         'div',
                         {
-                            className: h.errorRow,
+                            className: S.errorRow,
                             children: [
                                 (0, s.jsx)(c.WarningIcon, {
                                     size: 'sm',
                                     color: 'currentColor',
-                                    className: h.error
+                                    className: S.error
                                 }),
                                 (0, s.jsx)(c.Text, {
                                     variant: 'text-xs/medium',
@@ -257,7 +258,7 @@ function N(e) {
         ]
     });
 }
-function v(e) {
+function j(e) {
     (0, c.openModalLazy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
         return (n) =>
