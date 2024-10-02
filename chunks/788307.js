@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return L;
+        return D;
     }
 });
 var r = n(47120);
@@ -24,17 +24,19 @@ var i = n(735250),
     S = n(592125),
     A = n(496675),
     v = n(158776),
-    N = n(979651),
-    O = n(6074),
-    R = n(981631),
-    C = n(23952);
-let y = '14px';
-function L(e) {
+    N = n(699516),
+    O = n(979651),
+    R = n(6074),
+    C = n(626135),
+    y = n(981631),
+    L = n(23952);
+let b = '14px';
+function D(e) {
     let { emoji: t, className: n, animate: r = !0, hideTooltip: a, tooltipDelay: o } = e,
         l = T.Yk.useSetting(),
         d = null != t.id ? ':'.concat(t.name, ':') : h.ZP.translateSurrogatesToInlineEmoji(t.name),
         _ = {
-            className: s()(C.emoji, n),
+            className: s()(L.emoji, n),
             emojiId: t.id,
             emojiName: t.name,
             autoplay: !0,
@@ -52,8 +54,8 @@ function L(e) {
                   })
           });
 }
-let b = 150,
-    D = (e) => {
+let M = 150,
+    P = (e) => {
         let { className: t, text: n } = e,
             r = a.useRef(null),
             o = a.useRef(null),
@@ -66,7 +68,7 @@ let b = 150,
             }, [n]),
             (0, i.jsx)(u.Tooltip, {
                 text: l || null == n || '' === n ? null : n,
-                delay: b,
+                delay: M,
                 'aria-label': !1,
                 children: (e) =>
                     (0, i.jsxs)(i.Fragment, {
@@ -78,7 +80,7 @@ let b = 150,
                                 children: n
                             }),
                             (0, i.jsx)('div', {
-                                className: s()(C.textRuler, t),
+                                className: s()(L.textRuler, t),
                                 ref: o,
                                 'aria-hidden': !0,
                                 children: n
@@ -88,71 +90,85 @@ let b = 150,
             })
         );
     },
-    M = (e) => {
-        let { activities: t, applicationStream: n, className: r, textClassName: a, emojiClassName: o, animate: s = !0, hideTooltip: c = !1, hideEmoji: h = !1, user: T, hasQuest: b } = e,
-            M = null != t ? t.find((e) => e.type === R.IIU.CUSTOM_STATUS) : null,
-            P = (0, l.e7)([g.default], () => g.default.getId() === (null == T ? void 0 : T.id)),
-            U = (0, l.e7)([m.Z], () => (P ? m.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === R.IIU.HANG_STATUS) : null)),
-            w = (0, l.e7)([N.Z, S.Z], () => {
+    U = (e) => {
+        let { activities: t, applicationStream: n, className: r, textClassName: o, emojiClassName: s, animate: c = !0, hideTooltip: h = !1, hideEmoji: T = !1, user: M, hasQuest: U } = e,
+            w = null != t ? t.find((e) => e.type === y.IIU.CUSTOM_STATUS) : null,
+            x = (0, l.e7)([g.default], () => g.default.getId() === (null == M ? void 0 : M.id)),
+            G = (0, l.e7)([m.Z], () => (x ? m.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === y.IIU.HANG_STATUS) : null)),
+            k = (0, l.e7)([O.Z, S.Z], () => {
                 var e;
-                return null != U && null != T ? S.Z.getChannel(null === (e = N.Z.getVoiceStateForUser(T.id)) || void 0 === e ? void 0 : e.channelId) : null;
+                return null != G && null != M ? S.Z.getChannel(null === (e = O.Z.getVoiceStateForUser(M.id)) || void 0 === e ? void 0 : e.channelId) : null;
             }),
-            { enableHangStatus: x } = p.n.useExperiment(
+            { enableHangStatus: B } = p.n.useExperiment(
                 {
-                    guildId: null == w ? void 0 : w.guild_id,
+                    guildId: null == k ? void 0 : k.guild_id,
                     location: 'ActivityStatus'
                 },
                 { autoTrackExposure: !1 }
             ),
-            G = (0, f.Sl)(R.Ilk.BRAND_345),
-            k = null,
-            B = x && null != U && A.Z.can(R.Plq.CONNECT, w);
-        B
-            ? (k = (0, i.jsx)(I.Z, {
-                  className: o,
-                  hangStatusActivity: U
+            F = (0, f.Sl)(y.Ilk.BRAND_345),
+            Z = null,
+            V = B && null != G && A.Z.can(y.Plq.CONNECT, k);
+        V
+            ? (Z = (0, i.jsx)(I.Z, {
+                  className: s,
+                  hangStatusActivity: G
               }))
-            : null != M &&
-              null != M.emoji &&
-              !h &&
-              (k = (0, i.jsx)(L, {
-                  emoji: M.emoji,
-                  animate: s,
-                  hideTooltip: c,
-                  className: o
+            : null != w &&
+              null != w.emoji &&
+              !T &&
+              (Z = (0, i.jsx)(D, {
+                  emoji: w.emoji,
+                  animate: c,
+                  hideTooltip: h,
+                  className: s
               }));
-        let F = (0, E.aK)('activity-status-web'),
-            Z = (0, l.e7)([v.Z], () => (null != T ? v.Z.getStatus(T.id) : null)),
-            V = null !== Z && [R.Skl.OFFLINE, R.Skl.INVISIBLE].includes(Z),
-            H = (0, _.Z)(t, n, void 0, B, F),
-            Y = null == H ? void 0 : H.activityText,
-            j = null != Y && '' !== Y;
-        return V || (null == k && !j)
+        let H = (0, E.Q9)('activity-status-web'),
+            Y = (0, l.e7)([N.Z], () => (null != M ? N.Z.getRelationshipType(M.id) : y.OGo.NONE)),
+            j = (0, l.e7)([v.Z], () => (null != M ? v.Z.getStatus(M.id) : null)),
+            W = null !== j && [y.Skl.OFFLINE, y.Skl.INVISIBLE].includes(j),
+            K = (0, _.Z)(t, n, void 0, V, H),
+            z = (0, _.Z)(t, n, void 0, V, !1);
+        a.useEffect(() => {
+            if (null != z && null == z.activity && null != n) {
+                var e;
+                C.default.track(y.rMx.USER_VOICE_ACTIVITY_VIEWED, {
+                    activity_user_id: null == M ? void 0 : M.id,
+                    discoverable: null === (e = n.discoverable) || void 0 === e || e,
+                    surface: 'activity-status-web',
+                    relationship_type: Y,
+                    treatment: H && !1 === n.discoverable ? E.h9.HIDE : E.h9.SHOW
+                });
+            }
+        }, [H, M, n, z, Y]);
+        let q = null == K ? void 0 : K.activityText,
+            Q = null != q && '' !== q;
+        return W || (null == Z && !Q)
             ? null
             : (0, i.jsxs)('div', {
                   className: r,
                   children: [
-                      k,
-                      (0, i.jsx)(D, {
-                          text: Y,
-                          className: a
+                      Z,
+                      (0, i.jsx)(P, {
+                          text: q,
+                          className: o
                       }),
-                      b &&
+                      U &&
                           (0, i.jsx)(u.QuestsIcon, {
                               size: 'custom',
-                              className: C.questsIcon,
-                              height: y,
-                              width: y,
-                              color: G.hex
+                              className: L.questsIcon,
+                              height: b,
+                              width: b,
+                              color: F.hex
                           }),
-                      null != t && t.some((e) => (0, d.Z)(e, B))
-                          ? (0, i.jsx)(O.Z, {
+                      null != t && t.some((e) => (0, d.Z)(e, V))
+                          ? (0, i.jsx)(R.Z, {
                                 width: 16,
                                 height: 16,
-                                className: C.icon
+                                className: L.icon
                             })
                           : null
                   ]
               });
     };
-t.Z = M;
+t.Z = U;

@@ -1,87 +1,89 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return Y;
     }
 });
 var r = n(47120);
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    o = n.n(a),
-    s = n(442837),
-    l = n(481060),
-    u = n(287734),
-    c = n(872810),
-    d = n(110924),
-    _ = n(100527),
-    E = n(906732),
-    f = n(750881),
-    h = n(194082),
-    p = n(318374),
-    m = n(382182),
-    I = n(769654),
-    T = n(543882),
-    g = n(592125),
-    S = n(430824),
-    A = n(496675),
-    v = n(938475),
-    N = n(960870),
-    O = n(139793),
-    R = n(502762),
-    C = n(652853),
-    y = n(194811),
-    L = n(373826),
-    b = n(315324),
-    D = n(582123),
-    M = n(648926),
-    P = n(290274),
-    U = n(228168),
-    w = n(981631),
-    x = n(689938),
-    G = n(676411),
-    k = n(380934),
-    B = n(924482),
-    F = n(774797);
-function Z(e) {
-    let { user: t, currentUser: n, stream: r, className: a, onClose: Z } = e,
-        { profileType: V, theme: H } = (0, C.z)(),
-        Y = {
-            [k.fullSize]: V === U.y0.FULL_SIZE,
-            [G.fullSize]: V === U.y0.FULL_SIZE
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(442837),
+    u = n(481060),
+    c = n(287734),
+    d = n(872810),
+    _ = n(110924),
+    E = n(100527),
+    f = n(906732),
+    h = n(750881),
+    p = n(194082),
+    m = n(318374),
+    I = n(382182),
+    T = n(769654),
+    g = n(543882),
+    S = n(592125),
+    A = n(430824),
+    v = n(496675),
+    N = n(699516),
+    O = n(938475),
+    R = n(626135),
+    C = n(960870),
+    y = n(139793),
+    L = n(502762),
+    b = n(652853),
+    D = n(194811),
+    M = n(373826),
+    P = n(315324),
+    U = n(582123),
+    w = n(648926),
+    x = n(290274),
+    G = n(228168),
+    k = n(981631),
+    B = n(689938),
+    F = n(676411),
+    Z = n(380934),
+    V = n(924482),
+    H = n(774797);
+function Y(e) {
+    let { user: t, currentUser: n, stream: r, className: o, onClose: Y } = e,
+        { profileType: j, theme: W } = (0, b.z)(),
+        K = {
+            [Z.fullSize]: j === G.y0.FULL_SIZE,
+            [F.fullSize]: j === G.y0.FULL_SIZE
         },
-        j = (0, f.aK)('user-profile-stream-activity-card-web'),
-        { analyticsLocations: W } = (0, E.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        K = (0, N.Z)({
+        z = (0, h.Q9)('user-profile-stream-activity-card-web'),
+        { analyticsLocations: q } = (0, f.ZP)(E.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        Q = (0, C.Z)({
             display: 'live',
             user: t,
             stream: r,
-            analyticsLocations: W
+            analyticsLocations: q
         }),
-        z = (0, O.Z)({
+        X = (0, y.Z)({
             userId: t.id,
-            onAction: K
+            onAction: Q
         }),
-        q = (0, s.e7)([S.Z], () => S.Z.getGuild(null == r ? void 0 : r.guildId)),
-        Q = (0, s.e7)([g.Z], () => g.Z.getChannel(null == r ? void 0 : r.channelId)),
-        X = (0, s.Wu)([v.ZP], () =>
-            null != Q
-                ? v.ZP.getVoiceStatesForChannel(Q).map((e) => {
+        $ = (0, l.e7)([A.Z], () => A.Z.getGuild(null == r ? void 0 : r.guildId)),
+        J = (0, l.e7)([S.Z], () => S.Z.getChannel(null == r ? void 0 : r.channelId)),
+        ee = (0, l.Wu)([O.ZP], () =>
+            null != J
+                ? O.ZP.getVoiceStatesForChannel(J).map((e) => {
                       let { user: t } = e;
                       return t;
                   })
                 : []
         ),
-        [$, J] = (0, m.wq)(Q),
+        [et, en] = (0, I.wq)(J),
         {
-            url: ee,
-            isLoading: et,
-            canSeePreview: en
-        } = (0, s.cj)([A.Z, T.Z], () => {
-            let e = null != Q && A.Z.canBasicChannel(w.S7T.CONNECT, Q);
+            url: er,
+            isLoading: ei,
+            canSeePreview: ea
+        } = (0, l.cj)([v.Z, g.Z], () => {
+            let e = null != J && v.Z.canBasicChannel(k.S7T.CONNECT, J);
             return e
                 ? {
-                      url: T.Z.getPreviewURL(r.guildId, r.channelId, r.ownerId),
-                      isLoading: T.Z.getIsPreviewLoading(r.guildId, r.channelId, r.ownerId),
+                      url: g.Z.getPreviewURL(r.guildId, r.channelId, r.ownerId),
+                      isLoading: g.Z.getIsPreviewLoading(r.guildId, r.channelId, r.ownerId),
                       canSeePreview: e
                   }
                 : {
@@ -90,96 +92,107 @@ function Z(e) {
                       canSeePreview: e
                   };
         }),
-        er = (0, d.Z)(et ? null : ee),
-        ei = et || null == ee ? er : ee;
-    if (null == q || null == Q || (j && !1 === r.discoverable)) return null;
-    let ea = () => {
-            let e = o()(k.preview, Y),
+        eo = (0, l.e7)([N.Z], () => N.Z.getRelationshipType(t.id));
+    a.useEffect(() => {
+        var e;
+        R.default.track(k.rMx.USER_VOICE_ACTIVITY_VIEWED, {
+            activity_user_id: t.id,
+            discoverable: null === (e = r.discoverable) || void 0 === e || e,
+            surface: 'user-profile-stream-activity-card',
+            relationship_type: eo,
+            treatment: z && !1 === r.discoverable ? h.h9.HIDE : h.h9.SHOW
+        });
+    }, [t, eo, z, r]);
+    let es = (0, _.Z)(ei ? null : er),
+        el = ei || null == er ? es : er;
+    if (null == $ || null == J || (z && !1 === r.discoverable)) return null;
+    let eu = () => {
+            let e = s()(Z.preview, K),
                 t = () => {
-                    K({ action: 'PRESS_STREAM_IMAGE' }), u.default.selectVoiceChannel(r.channelId), (0, c.iV)(r), null == Z || Z();
+                    Q({ action: 'PRESS_STREAM_IMAGE' }), c.default.selectVoiceChannel(r.channelId), (0, d.iV)(r), null == Y || Y();
                 };
-            return null == ei && et
+            return null == el && ei
                 ? (0, i.jsx)('div', {
                       className: e,
-                      children: (0, i.jsx)(l.Spinner, {})
+                      children: (0, i.jsx)(u.Spinner, {})
                   })
-                : null == ei
-                  ? (0, i.jsxs)(l.Clickable, {
-                        className: o()(e, { [k.clickable]: $ }),
-                        onClick: $ ? t : void 0,
+                : null == el
+                  ? (0, i.jsxs)(u.Clickable, {
+                        className: s()(e, { [Z.clickable]: et }),
+                        onClick: et ? t : void 0,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: H === w.BRd.LIGHT ? F : B
+                                src: W === k.BRd.LIGHT ? H : V
                             }),
-                            V !== U.y0.FULL_SIZE &&
-                                (0, i.jsx)(l.Text, {
+                            j !== G.y0.FULL_SIZE &&
+                                (0, i.jsx)(u.Text, {
                                     variant: 'text-xs/normal',
-                                    children: en ? x.Z.Messages.STREAM_NO_PREVIEW : x.Z.Messages.STREAM_NO_PERMISSION_CTA
+                                    children: ea ? B.Z.Messages.STREAM_NO_PREVIEW : B.Z.Messages.STREAM_NO_PERMISSION_CTA
                                 })
                         ]
                     })
-                  : (0, i.jsxs)(l.Clickable, {
-                        className: o()(e, k.overlay, { [k.clickable]: $ }),
-                        onClick: $ ? t : void 0,
+                  : (0, i.jsxs)(u.Clickable, {
+                        className: s()(e, Z.overlay, { [Z.clickable]: et }),
+                        onClick: et ? t : void 0,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: ei,
-                                className: k.image
+                                src: el,
+                                className: Z.image
                             }),
-                            V === U.y0.BITE_SIZE &&
-                                (0, i.jsx)(l.ClydeIcon, {
+                            j === G.y0.BITE_SIZE &&
+                                (0, i.jsx)(u.ClydeIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: k.clyde
+                                    className: Z.clyde
                                 })
                         ]
                     });
         },
-        eo = () => {
-            if (V !== U.y0.FULL_SIZE) return null;
+        ec = () => {
+            if (j !== G.y0.FULL_SIZE) return null;
             let e = () => {
-                    u.default.selectVoiceChannel(Q.id), (0, I.X)(q.id), null == K || K({ action: 'OPEN_VOICE_CHANNEL' }), null == Z || Z();
+                    c.default.selectVoiceChannel(J.id), (0, T.X)($.id), null == Q || Q({ action: 'OPEN_VOICE_CHANNEL' }), null == Y || Y();
                 },
                 n = () => {
-                    (0, I.X)(q.id), K({ action: 'OPEN_VOICE_GUILD' }), null == Z || Z();
+                    (0, T.X)($.id), Q({ action: 'OPEN_VOICE_GUILD' }), null == Y || Y();
                 };
             return (0, i.jsxs)('div', {
-                className: G.details,
+                className: F.details,
                 children: [
                     (0, i.jsxs)('div', {
                         children: [
-                            (0, i.jsxs)(l.Heading, {
+                            (0, i.jsxs)(u.Heading, {
                                 variant: 'heading-sm/semibold',
                                 color: 'text-normal',
-                                className: G.voiceChannelHeading,
+                                className: F.voiceChannelHeading,
                                 children: [
-                                    (0, i.jsx)(l.VoiceNormalIcon, {
+                                    (0, i.jsx)(u.VoiceNormalIcon, {
                                         size: 'xxs',
-                                        color: l.tokens.colors.TEXT_NORMAL,
-                                        className: G.voiceIcon
+                                        color: u.tokens.colors.TEXT_NORMAL,
+                                        className: F.voiceIcon
                                     }),
-                                    (0, i.jsx)(l.Clickable, {
-                                        className: o()(G.clickable, G.inline),
+                                    (0, i.jsx)(u.Clickable, {
+                                        className: s()(F.clickable, F.inline),
                                         onClick: e,
-                                        children: Q.name
+                                        children: J.name
                                     })
                                 ]
                             }),
-                            (0, i.jsx)(L.Z, {
+                            (0, i.jsx)(M.Z, {
                                 variant: 'text-xs/normal',
-                                text: x.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({ guildName: q.name }),
+                                text: B.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({ guildName: $.name }),
                                 onClick: n
                             })
                         ]
                     }),
-                    (0, i.jsx)(p.Z, {
-                        users: X,
-                        guildId: q.id,
-                        channelId: Q.id,
-                        maxUsers: b.W,
-                        size: l.AvatarSizes.SIZE_16,
+                    (0, i.jsx)(m.Z, {
+                        users: ee,
+                        guildId: $.id,
+                        channelId: J.id,
+                        maxUsers: P.W,
+                        size: u.AvatarSizes.SIZE_16,
                         disableUserPopout: (e) => e === t.id,
                         overflowCountVariant: 'text-xxs/semibold',
                         overflowCountColor: 'text-muted'
@@ -187,67 +200,67 @@ function Z(e) {
                 ]
             });
         },
-        es = () =>
-            V === U.y0.FULL_SIZE
+        ed = () =>
+            j === G.y0.FULL_SIZE
                 ? null
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)('div', { className: G.voiceChannelDivider }),
-                          (0, i.jsx)(b.Z, {
+                          (0, i.jsx)('div', { className: F.voiceChannelDivider }),
+                          (0, i.jsx)(P.Z, {
                               user: t,
-                              guild: q,
-                              channel: Q,
-                              onAction: K,
-                              onClose: Z
+                              guild: $,
+                              channel: J,
+                              onAction: Q,
+                              onClose: Y
                           })
                       ]
                   }),
-        el = () =>
+        e_ = () =>
             t.id === n.id
                 ? null
                 : (0, i.jsx)('div', {
-                      className: o()(G.actions, Y),
-                      children: (0, i.jsx)(M.Z, {
+                      className: s()(F.actions, K),
+                      children: (0, i.jsx)(w.Z, {
                           stream: r,
-                          canWatch: $,
-                          unavailableReason: J,
-                          onAction: K,
-                          onClose: Z
+                          canWatch: et,
+                          unavailableReason: en,
+                          onAction: Q,
+                          onClose: Y
                       })
                   });
-    return (0, i.jsx)(E.Gt, {
-        value: W,
-        children: (0, i.jsx)(D.Z, {
+    return (0, i.jsx)(f.Gt, {
+        value: q,
+        children: (0, i.jsx)(U.Z, {
             user: t,
-            onClose: Z,
+            onClose: Y,
             children: (e) => {
                 let { onAutoDismiss: n } = e;
-                return (0, i.jsxs)(R.Z.Overlay, {
-                    className: o()(G.card, a),
-                    ref: z,
+                return (0, i.jsxs)(L.Z.Overlay, {
+                    className: s()(F.card, o),
+                    ref: X,
                     children: [
-                        (0, i.jsx)(y.Z, {
+                        (0, i.jsx)(D.Z, {
                             text: (0, i.jsxs)(i.Fragment, {
-                                children: [x.Z.Messages.USER_ACTIVITY_STREAMING, (0, i.jsx)(h.ZP, { size: h.OH.SMALL })]
+                                children: [B.Z.Messages.USER_ACTIVITY_STREAMING, (0, i.jsx)(p.ZP, { size: p.OH.SMALL })]
                             }),
-                            contextMenu: (0, i.jsx)(P.Z, {
+                            contextMenu: (0, i.jsx)(x.Z, {
                                 display: 'live',
                                 user: t,
-                                onClose: Z,
+                                onClose: Y,
                                 onRequestOpen: n
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: G.body,
+                            className: F.body,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: o()(G.content, Y),
-                                    children: [ea(), eo(), V === U.y0.FULL_SIZE && el()]
+                                    className: s()(F.content, K),
+                                    children: [eu(), ec(), j === G.y0.FULL_SIZE && e_()]
                                 }),
-                                es()
+                                ed()
                             ]
                         }),
-                        V !== U.y0.FULL_SIZE && el()
+                        j !== G.y0.FULL_SIZE && e_()
                     ]
                 });
             }

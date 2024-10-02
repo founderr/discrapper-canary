@@ -239,6 +239,10 @@ let U = {
     [p.rMx.MEDIA_OUTPUT_VOLUME_CHANGED]: {
         throttlePeriod: O,
         throttleKeys: (e) => [e.location_stack]
+    },
+    [p.rMx.USER_VOICE_ACTIVITY_VIEWED]: {
+        throttlePeriod: O,
+        throttleKeys: (e) => [e.activity_user_id, e.relationship_type, e.surface, e.discoverable]
     }
 };
 function w(e) {
