@@ -105,25 +105,35 @@ function k(e) {
             });
 }
 function B(e) {
-    let { traits: t, traitsToHighlight: n } = e,
-        r = a.useMemo(() => (null == n ? new Set() : new Set(n)), [n]),
-        o = a.useCallback(
+    let { traits: t, traitsToHighlight: n, onInteraction: r } = e,
+        o = a.useMemo(() => (null == n ? new Set() : new Set(n)), [n]),
+        l = a.useCallback(
             (e) =>
                 (0, i.jsx)(
                     g.Z,
                     {
-                        className: s()(w.thinTrait, { [w.selectedTrait]: r.has(e) }),
+                        className: s()(w.thinTrait, { [w.selectedTrait]: o.has(e) }),
                         text: e,
-                        selected: r.has(e)
+                        selected: o.has(e)
                     },
                     e
                 ),
-            [r]
+            [o]
+        ),
+        u = a.useCallback(
+            (e) =>
+                (0, i.jsx)(D.te, {
+                    items: e,
+                    renderItem: l,
+                    onTooltipShow: r
+                }),
+            [l, r]
         );
     return (0, i.jsx)(D.ZP, {
         className: w.traitsContainer,
         items: t,
-        renderItem: o,
+        renderItem: l,
+        renderOverflow: u,
         maxLines: 2,
         itemGapPx: 4
     });
@@ -381,7 +391,8 @@ function Z(e) {
                     }),
                     (0, i.jsx)(B, {
                         traits: ec,
-                        traitsToHighlight: d
+                        traitsToHighlight: d,
+                        onInteraction: ed('traits')
                     })
                 ]
             }),
@@ -404,7 +415,8 @@ function Z(e) {
                         children: (0, i.jsx)(b.Z, {
                             games: W,
                             prioritizedGameIds: h,
-                            gameActivity: j
+                            gameActivity: j,
+                            onInteraction: ed('games')
                         })
                     })
                 ]

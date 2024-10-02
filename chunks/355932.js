@@ -2,6 +2,9 @@ n.d(t, {
     AJ: function () {
         return p;
     },
+    te: function () {
+        return h;
+    },
     zP: function () {
         return f;
     }
@@ -81,8 +84,9 @@ function f(e) {
     );
 }
 function h(e) {
-    let { items: t, renderItem: n } = e;
+    let { items: t, renderItem: n, ...r } = e;
     return (0, i.jsx)(l.Tooltip, {
+        ...r,
         text: (0, i.jsx)('div', {
             className: d.tooltip,
             children: t.map(n)

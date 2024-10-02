@@ -137,27 +137,28 @@ function S(e) {
     });
 }
 t.Z = a.memo(function (e) {
-    let { games: t, prioritizedGameIds: n = new Set(), gameActivity: r = {} } = e,
-        o = a.useMemo(() => {
+    let { games: t, prioritizedGameIds: n = new Set(), gameActivity: r = {}, onInteraction: o } = e,
+        s = a.useMemo(() => {
             let e = t.filter((e) => null != e && null != e.icon),
                 i = e.filter((e) => !n.has(e.id)).sort(g(r));
             return [...e.filter((e) => n.has(e.id)).sort(g(r)), ...i];
         }, [r, t, n]),
-        s = o.slice(0, h - 1),
-        l = a.useMemo(() => {
+        l = s.slice(0, h - 1),
+        d = a.useMemo(() => {
             var e;
-            let t = o[h - 1];
+            let t = s[h - 1];
             if (null == t) return null;
             let n = t.getIconURL(24);
             if (null == n) return null;
-            if (o.length <= h)
+            if (s.length <= h)
                 return (0, i.jsx)(T, {
                     game: t,
                     gameActivity: r
                 });
-            let a = o.slice(h - 1);
+            let a = s.slice(h - 1);
             return (0, i.jsx)(u.Tooltip, {
                 'aria-label': null !== (e = (0, c.f6)(a.map((e) => e.name))) && void 0 !== e ? e : '',
+                onTooltipShow: () => (null == o ? void 0 : o()),
                 text: (0, i.jsx)(I, {
                     games: a,
                     gameActivity: r
@@ -184,10 +185,10 @@ t.Z = a.memo(function (e) {
                         ]
                     })
             });
-        }, [r, o]);
+        }, [r, s, o]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            s.map((e) =>
+            l.map((e) =>
                 (0, i.jsx)(
                     T,
                     {
@@ -198,7 +199,7 @@ t.Z = a.memo(function (e) {
                     e.id
                 )
             ),
-            l
+            d
         ]
     });
 });
