@@ -7,8 +7,10 @@ var a = n(392711),
     u = n(959546),
     c = n(283595),
     d = n(780570),
-    _ = n(55563);
-function E(e, t, n) {
+    _ = n(55563),
+    E = n(981631),
+    f = n(474936);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,106 +23,107 @@ function E(e, t, n) {
         e
     );
 }
-let f = {},
-    h = {},
-    p = {},
+let p = {},
     m = {},
-    I = !1,
-    T = !1,
-    g = new Set(),
-    S = new Set(),
-    A = {};
-function v() {
-    (f = {}), (p = {}), (m = {}), (I = !1), (T = !1), (g = new Set()), (S = new Set());
+    I = {},
+    T = {},
+    g = !1,
+    S = !1,
+    A = new Set(),
+    v = new Set(),
+    N = {},
+    O = [];
+function R() {
+    (p = {}), (I = {}), (T = {}), (g = !1), (S = !1), (A = new Set()), (v = new Set()), (O = []);
 }
-function N(e) {
-    (f[e.id] = u.Z.createFromServer(e)), null == p[e.sku_id] && (p[e.sku_id] = new Set()), null == m[e.application_id] && (m[e.application_id] = new Set()), null != e.subscription_id && (null == A[e.subscription_id] && (A[e.subscription_id] = new Set()), A[e.subscription_id].add(e.id)), m[e.application_id].add(e.id), p[e.sku_id].add(e.id);
+function C(e) {
+    (p[e.id] = u.Z.createFromServer(e)), null == I[e.sku_id] && (I[e.sku_id] = new Set()), null == T[e.application_id] && (T[e.application_id] = new Set()), null != e.subscription_id && (null == N[e.subscription_id] && (N[e.subscription_id] = new Set()), N[e.subscription_id].add(e.id)), T[e.application_id].add(e.id), I[e.sku_id].add(e.id);
 }
-function O(e) {
-    h[e.id] = u.Z.createFromServer(e);
+function y(e) {
+    m[e.id] = u.Z.createFromServer(e);
 }
-function R(e) {
-    delete f[e.id];
-    let t = m[e.application_id];
+function L(e) {
+    delete p[e.id];
+    let t = T[e.application_id];
     null != t && t.delete(e.id);
-    let n = p[e.sku_id];
+    let n = I[e.sku_id];
     if ((null != n && n.delete(e.id), null != e.subscription_id)) {
-        let t = A[e.subscription_id];
+        let t = N[e.subscription_id];
         null != t && t.delete(e.id);
     }
 }
-function C(e) {
+function b(e) {
     let { applicationId: t } = e;
-    g.add(t);
+    A.add(t);
 }
-function y(e) {
+function D(e) {
     let { applicationId: t, entitlements: n } = e;
-    for (let e of (g.delete(t), S.add(t), n)) !0 !== e.consumed && N(e);
-}
-function L(e) {
-    let { entitlements: t } = e;
-    (h = {}), t.forEach(O);
-}
-function b() {}
-function D() {
-    I = !0;
+    for (let e of (A.delete(t), v.add(t), n)) !0 !== e.consumed && C(e);
 }
 function M(e) {
     let { entitlements: t } = e;
-    for (let e of ((T = !0), (I = !1), t)) N(e);
+    (m = {}), t.forEach(y);
 }
-function P() {
-    (T = !1), (I = !1);
-}
-function U(e) {
-    let { entitlements: t } = e;
-    for (let e of t) N(e);
+function P() {}
+function U() {
+    g = !0;
 }
 function w(e) {
-    let { libraryApplications: t } = e;
-    for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) N(t);
+    let { entitlements: t } = e;
+    for (let e of ((S = !0), (g = !1), t)) C(e);
 }
-function x(e) {
-    return N(e.entitlement);
+function x() {
+    (S = !1), (g = !1);
 }
 function G(e) {
-    return R(e.entitlement);
+    let { entitlements: t } = e;
+    for (let e of t) C(e);
 }
-class k extends (r = s.yh) {
+function k(e) {
+    let { libraryApplications: t } = e;
+    for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) C(t);
+}
+function B(e) {
+    return C(e.entitlement);
+}
+function F(e) {
+    return L(e.entitlement);
+}
+class Z extends (r = s.yh) {
     initialize() {
         this.syncWith([c.Z], () => !0);
     }
     get(e) {
-        return f[e];
+        return p[e];
     }
     getGiftable() {
-        return o().values(h);
+        return o().values(m);
     }
     getForApplication(e) {
-        let t = m[e];
+        let t = T[e];
         if (null == t) return null;
         let n = new Set();
-        for (let e of t) n.add(f[e]);
+        for (let e of t) n.add(p[e]);
         return n;
     }
     getForSku(e) {
-        let t = p[e];
+        let t = I[e];
         if (null == t) return null;
         let n = new Set();
-        for (let e of t) n.add(f[e]);
+        for (let e of t) n.add(p[e]);
         return n;
     }
     get fetchingAllEntitlements() {
-        return I;
-    }
-    get fetchedAllEntitlements() {
-        return T;
-    }
-    get applicationIdsFetching() {
         return g;
     }
-    get applicationIdsFetched() {
+    get fetchedAllEntitlements() {
         return S;
+    }
+    get applicationIdsFetching() {
+        return A;
+    }
+    get applicationIdsFetched() {
+        return v;
     }
     isFetchingForApplication(e) {
         return this.fetchingAllEntitlements || (null != e && this.applicationIdsFetching.has(e));
@@ -129,41 +132,54 @@ class k extends (r = s.yh) {
         return this.fetchedAllEntitlements || (null != e && this.applicationIdsFetched.has(e));
     }
     getForSubscription(e) {
-        let t = A[e];
+        let t = N[e];
         if (null == t) return null;
         let n = new Set();
-        for (let e of t) n.add(f[e]);
+        for (let e of t) n.add(p[e]);
         return n;
     }
     isEntitledToSku(e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-            i = p[t];
+            i = I[t];
         if (null != i)
             for (let t of i) {
-                let n = f[t];
+                let n = p[t];
                 if (null != n && n.isValid(e, _.Z, r)) return !0;
             }
-        if (S.has(n)) return !1;
+        if (v.has(n)) return !1;
         let a = null != r ? c.Z.getLibraryApplication(n, r) : c.Z.getActiveLibraryApplication(n);
         return !!(null != a && a.sku.id === t && (0, d.Je)(a)) || null;
     }
     hasFetchedForApplicationIds(e) {
-        return e.every((e) => S.has(e));
+        return e.every((e) => v.has(e));
+    }
+    getFractionalPremium(e) {
+        var t;
+        let n = new Set([]);
+        return (
+            null === (t = this.getForApplication(f.CL)) ||
+                void 0 === t ||
+                t.forEach((t) => {
+                    t.type === E.qc2.FRACTIONAL_REDEMPTION && t.consumed === e && n.add(t);
+                }),
+            n.symmetricDifference(new Set(O)).size > 0 && (O = Array.from(n.values())),
+            O
+        );
     }
 }
-E(k, 'displayName', 'EntitlementStore'),
-    (t.Z = new k(l.Z, {
-        ENTITLEMENT_FETCH_APPLICATION_START: C,
-        ENTITLEMENT_FETCH_APPLICATION_SUCCESS: y,
-        ENTITLEMENT_FETCH_APPLICATION_FAIL: b,
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: L,
-        SKU_PURCHASE_SUCCESS: U,
-        LIBRARY_FETCH_SUCCESS: w,
-        ENTITLEMENT_CREATE: x,
-        ENTITLEMENT_UPDATE: x,
-        ENTITLEMENT_DELETE: G,
-        LOGOUT: v,
-        ENTITLEMENTS_FETCH_FOR_USER_START: D,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
-        ENTITLEMENTS_FETCH_FOR_USER_FAIL: P
+h(Z, 'displayName', 'EntitlementStore'),
+    (t.Z = new Z(l.Z, {
+        ENTITLEMENT_FETCH_APPLICATION_START: b,
+        ENTITLEMENT_FETCH_APPLICATION_SUCCESS: D,
+        ENTITLEMENT_FETCH_APPLICATION_FAIL: P,
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: M,
+        SKU_PURCHASE_SUCCESS: G,
+        LIBRARY_FETCH_SUCCESS: k,
+        ENTITLEMENT_CREATE: B,
+        ENTITLEMENT_UPDATE: B,
+        ENTITLEMENT_DELETE: F,
+        LOGOUT: R,
+        ENTITLEMENTS_FETCH_FOR_USER_START: U,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: w,
+        ENTITLEMENTS_FETCH_FOR_USER_FAIL: x
     }));
