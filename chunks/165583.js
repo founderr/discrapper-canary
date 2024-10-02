@@ -193,10 +193,10 @@ function F(e) {
 }
 function Z(e) {
     let { headingText: t, context: n, children: r, trialOffer: a, discountOffer: o } = e;
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, i.jsxs)('div', {
+        className: P.contentContainer,
         children: [
             (0, i.jsx)(h.Heading, {
-                className: P.__invalid_header,
                 variant: 'heading-xl/semibold',
                 children: t
             }),
@@ -501,6 +501,9 @@ function V(e) {
         case b.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
         case b.cd.EMOJI_PICKER_EMOJI_CLICKED:
         case b.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL:
+        case b.cd.APP_ICON_UPSELL:
+        case b.cd.CLIENT_THEMES_UPSELL:
+        case b.cd.TRY_IT_OUT_MODAL_UPSELL:
             return (0, i.jsx)(Z, {
                 trialOffer: g,
                 discountOffer: S,

@@ -49,35 +49,36 @@ function G() {
     }, [e.id]);
     let s = (0, _.e7)([D.Z], () => D.Z.hidePersonalInformation),
         { pendingBio: t, ...n } = (0, _.cj)([L.Z], () => L.Z.getAllPending()),
-        a = Z.dN.useSetting() && null != t ? h.ZP.parse(void 0, t).content : t,
-        o = b.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: c } = (0, m.ZP)(C.Z.PROFILE);
+        a = (0, _.e7)([L.Z], () => L.Z.showNotice()),
+        o = Z.dN.useSetting() && null != t ? h.ZP.parse(void 0, t).content : t,
+        c = b.ZP.canUsePremiumProfileCustomization(e),
+        { analyticsLocations: G } = (0, m.ZP)(C.Z.PROFILE);
     r.useEffect(() => () => T.Z.wait(I.W3), []);
-    let G = 'UserSettingsProfileCustomization';
+    let F = 'UserSettingsProfileCustomization';
     (0, A.j)({
-        location: G + ' auto on',
+        location: F + ' auto on',
         autoTrackExposure: !0
     }),
         (0, A.j)({
-            location: G + ' auto off',
+            location: F + ' auto off',
             autoTrackExposure: !1
         });
     let {
-            enabled: F,
-            showSegmentedControl: y,
-            showFloatingUpsell: V
+            enabled: y,
+            showSegmentedControl: V,
+            showFloatingUpsell: Y
         } = O.Z.useExperiment(
             { location: 'UserSettingsProfileCustomization' },
             {
-                autoTrackExposure: !o,
-                disable: o
+                autoTrackExposure: !c,
+                disable: c
             }
         ),
-        [Y, k] = r.useState(0),
-        [w, H] = r.useState(!1),
-        W = r.useMemo(
+        [k, w] = r.useState(0),
+        [H, W] = r.useState(!1),
+        K = r.useMemo(
             () =>
-                y
+                V
                     ? [
                           {
                               name: B.Z.Messages.PREMIUM_UPSELL_PROFILE_SEGMENTED_CONTROL_NON_NITRO,
@@ -89,54 +90,55 @@ function G() {
                           }
                       ]
                     : [],
-            [y]
+            [V]
         ),
-        K = !F || V || (y && 0 === Y),
-        z = !o && (!F || V || (y && 1 === Y)),
-        Q = r.useRef(null);
+        z = !y || Y || (V && 0 === k),
+        Q = !c && (!y || Y || (V && 1 === k)),
+        X = r.useRef(null);
     return s
         ? (0, i.jsx)(N.Z, {})
         : (0, i.jsxs)(m.Gt, {
-              value: c,
+              value: G,
               children: [
                   (0, i.jsx)(g.Z, {}),
-                  y &&
-                      !o &&
+                  V &&
+                      !c &&
                       (0, i.jsx)(E.SegmentedControl, {
                           className: l()({
-                              [U.segmentedControlNonNitro]: 0 === Y,
-                              [U.segmentedControlTryItOut]: 1 === Y
+                              [U.segmentedControlNonNitro]: 0 === k,
+                              [U.segmentedControlTryItOut]: 1 === k
                           }),
-                          options: W,
-                          value: Y,
-                          onChange: (e) => k(e.value),
+                          options: K,
+                          value: k,
+                          onChange: (e) => w(e.value),
                           look: 'pill'
                       }),
-                  K &&
+                  z &&
                       (0, i.jsx)(x.Z, {
                           profilePreview: (0, i.jsx)(f.Z, {
                               user: e,
-                              canUsePremiumCustomization: o,
+                              canUsePremiumCustomization: c,
                               onUpsellClick: v.Z,
-                              pendingBio: a,
+                              pendingBio: o,
                               ...n
                           }),
                           children: (0, i.jsx)(j.Z, {})
                       }),
-                  z &&
+                  Q &&
                       (0, i.jsx)(u.$, {
-                          onChange: (e) => H(e),
+                          onChange: (e) => W(e),
                           threshold: 0.25,
-                          active: V,
+                          active: Y,
                           children: (0, i.jsx)('div', {
-                              ref: Q,
+                              ref: X,
                               children: (0, i.jsx)(M.Z, { user: e })
                           })
                       }),
-                  V &&
+                  Y &&
+                      !a &&
                       (0, i.jsx)(p.p, {
                           className: U.floatingNitroUpsell,
-                          showUpsell: V && !w,
+                          showUpsell: Y && !H,
                           text: B.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_UPSELL.format({ onClick: R.openPremiumTryItOutProfileUpsell }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(E.ShinyButton, {
@@ -144,7 +146,7 @@ function G() {
                               innerClassName: U.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  return null == Q ? void 0 : null === (e = Q.current) || void 0 === e ? void 0 : e.scrollIntoView({ behavior: 'smooth' });
+                                  return null == X ? void 0 : null === (e = X.current) || void 0 === e ? void 0 : e.scrollIntoView({ behavior: 'smooth' });
                               },
                               color: E.Button.Colors.GREEN,
                               size: E.ButtonSizes.MEDIUM,
