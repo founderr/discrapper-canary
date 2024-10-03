@@ -31,7 +31,8 @@ function p(e) {
         ),
         S = () => {
             o.default.selectVoiceChannel(p.id), (0, c.X)(n.id), null == m || m({ action: 'OPEN_VOICE_CHANNEL' }), null == I || I();
-        };
+        },
+        A = p.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon;
     return (0, r.jsxs)('div', {
         className: f.voiceChannel,
         children: [
@@ -48,7 +49,7 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: f.voiceChannelText,
                 children: [
-                    (0, r.jsx)(a.VoiceNormalIcon, {
+                    (0, r.jsx)(A, {
                         size: 'xxs',
                         color: a.tokens.colors.INTERACTIVE_NORMAL,
                         className: f.voiceIcon
