@@ -1,50 +1,53 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return A;
     }
 });
 var r = n(47120);
 var i = n(735250),
     a = n(470079),
-    o = n(99815),
-    s = n(442837),
-    l = n(481060),
-    u = n(314897),
-    c = n(594174),
-    d = n(5192),
-    _ = n(873128),
-    E = n(246627),
-    f = n(249268),
-    h = n(689938),
-    p = n(881894);
-let m = 10;
-function I(e) {
-    if (e === o.E.LOL_TOTAL_KILLS) return h.Z.Messages.LEADERBOARD_TABLE_HEADER_WEEKLY_KILLS;
+    o = n(120356),
+    s = n.n(o),
+    l = n(99815),
+    u = n(442837),
+    c = n(481060),
+    d = n(314897),
+    _ = n(594174),
+    E = n(5192),
+    f = n(873128),
+    h = n(246627),
+    p = n(249268),
+    m = n(689938),
+    I = n(881894),
+    T = n(721191);
+let g = 10;
+function S(e) {
+    if (e === l.E.LOL_TOTAL_KILLS) return m.Z.Messages.LEADERBOARD_TABLE_HEADER_WEEKLY_KILLS;
     return 'Unknown statistic';
 }
-function T(e) {
+function A(e) {
     var t;
-    let { guildId: n, leaderboardId: r, intervalOffset: o, previewMode: c = !1 } = e,
-        d = (0, s.e7)([u.default], () => u.default.getId()),
-        T = (0, _.Z)({
+    let { guildId: n, leaderboardId: r, intervalOffset: o, previewMode: s = !1 } = e,
+        l = (0, u.e7)([d.default], () => d.default.getId()),
+        _ = (0, f.Z)({
             guildId: n,
             leaderboardId: r,
             intervalOffset: o
         }),
-        { rankChanges: A } = (0, E.Z)({
+        { rankChanges: E } = (0, h.Z)({
             guildId: n,
             leaderboardId: r,
-            intervalStart: null !== (t = null == T ? void 0 : T.interval_start) && void 0 !== t ? t : ''
+            intervalStart: null !== (t = null == _ ? void 0 : _.interval_start) && void 0 !== t ? t : ''
         }),
-        v = a.useMemo(() => {
-            if (null == T) return [];
+        T = a.useMemo(() => {
+            if (null == _) return [];
             let e = new Map();
-            A.forEach((t) => {
+            E.forEach((t) => {
                 let { userId: n, previousRank: r } = t;
                 e.set(n, r);
             });
-            let { sortByStatisticId: t } = T.settings;
-            return T.users.map((n, r) => {
+            let { sortByStatisticId: t } = _.settings;
+            return _.users.map((n, r) => {
                 var i, a;
                 return {
                     userId: n.user_id,
@@ -53,56 +56,57 @@ function T(e) {
                     previousRank: e.get(n.user_id)
                 };
             });
-        }, [T, A]),
-        N = a.useMemo(() => null == v.find((e) => e.userId === d) && v.length <= m, [v, d]);
-    if (null == T) return null;
-    let { sortByStatisticId: O } = T.settings,
-        R = v[0];
+        }, [_, E]),
+        A = a.useMemo(() => null == T.find((e) => e.userId === l) && T.length <= g, [T, l]);
+    if (null == _) return null;
+    if (0 === _.users.length) return (0, i.jsx)(v, {});
+    let { sortByStatisticId: R } = _.settings,
+        C = T[0];
     return (0, i.jsxs)('div', {
-        className: p.container,
+        className: I.container,
         children: [
-            (0, i.jsx)(f.Z, {
-                userId: null == R ? void 0 : R.userId,
+            (0, i.jsx)(p.Z, {
+                userId: null == C ? void 0 : C.userId,
                 guildId: n,
                 leaderboardId: r,
                 intervalOffset: o
             }),
-            c
+            s
                 ? null
                 : (0, i.jsx)(i.Fragment, {
                       children: (0, i.jsxs)('div', {
                           children: [
                               (0, i.jsxs)('div', {
-                                  className: p.headerRow,
+                                  className: I.headerRow,
                                   children: [
-                                      (0, i.jsx)(l.Text, {
+                                      (0, i.jsx)(c.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: p.headerRank,
+                                          className: I.headerRank,
                                           children: '#'
                                       }),
-                                      (0, i.jsx)(l.Text, {
+                                      (0, i.jsx)(c.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: p.headerPlayer,
-                                          children: h.Z.Messages.LEADERBOARD_TABLE_HEADER_PLAYER
+                                          className: I.headerPlayer,
+                                          children: m.Z.Messages.LEADERBOARD_TABLE_HEADER_PLAYER
                                       }),
-                                      (0, i.jsx)(l.Text, {
+                                      (0, i.jsx)(c.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: p.headerValue,
-                                          children: I(O)
+                                          className: I.headerValue,
+                                          children: S(R)
                                       })
                                   ]
                               }),
-                              (0, i.jsxs)(l.ScrollerNone, {
-                                  className: p.rows,
+                              (0, i.jsxs)(c.ScrollerNone, {
+                                  className: I.rows,
                                   children: [
-                                      v.map((e) =>
-                                          (0, a.createElement)(g, {
+                                      T.map((e) =>
+                                          (0, a.createElement)(N, {
                                               ...e,
                                               key: e.userId,
                                               guildId: n
                                           })
                                       ),
-                                      N ? (0, i.jsx)(S, {}) : null
+                                      A ? (0, i.jsx)(O, {}) : null
                                   ]
                               })
                           ]
@@ -111,45 +115,74 @@ function T(e) {
         ]
     });
 }
-function g(e) {
-    let { userId: t, rank: n, value: r, guildId: a, previousRank: o } = e,
-        u = (0, s.e7)([c.default], () => c.default.getUser(t)),
-        _ = d.ZP.getName(a, void 0, u),
-        E = null != o && o > n;
+function v() {
     return (0, i.jsxs)('div', {
-        className: p.userRow,
+        className: I.emptyContainer,
         children: [
-            E ? (0, i.jsx)('div', { className: p.rankChangeIndicator }) : null,
-            (0, i.jsx)(l.Text, {
+            (0, i.jsxs)('span', {
+                className: I.emptyTitleContainer,
+                children: [
+                    (0, i.jsx)(c.Text, {
+                        tag: 'span',
+                        variant: 'text-lg/normal',
+                        className: I.emptyTitle,
+                        children: m.Z.Messages.LEADERBOARD_START_PLAYING_CTA
+                    }),
+                    (0, i.jsx)(c.LeagueOfLegendsBrandIcon, {
+                        size: 'custom',
+                        width: 16,
+                        height: 16,
+                        className: s()(I.leagueIcon, I.emptyCrownIcon)
+                    })
+                ]
+            }),
+            (0, i.jsx)('img', {
+                src: T.Z,
+                alt: 'Vi',
+                className: I.emptySplash
+            })
+        ]
+    });
+}
+function N(e) {
+    let { userId: t, rank: n, value: r, guildId: a, previousRank: o } = e,
+        s = (0, u.e7)([_.default], () => _.default.getUser(t)),
+        l = E.ZP.getName(a, void 0, s),
+        d = null != o && o > n;
+    return (0, i.jsxs)('div', {
+        className: I.userRow,
+        children: [
+            d ? (0, i.jsx)('div', { className: I.rankChangeIndicator }) : null,
+            (0, i.jsx)(c.Text, {
                 variant: 'text-xxs/medium',
-                className: p.userRank,
+                className: I.userRank,
                 children: n
             }),
             (0, i.jsxs)('div', {
-                className: p.userPlayer,
+                className: I.userPlayer,
                 children: [
-                    (0, i.jsx)(l.Avatar, {
-                        src: null == u ? void 0 : u.getAvatarURL(a, 16),
-                        size: l.AvatarSizes.SIZE_16,
+                    (0, i.jsx)(c.Avatar, {
+                        src: null == s ? void 0 : s.getAvatarURL(a, 16),
+                        size: c.AvatarSizes.SIZE_16,
                         'aria-label': 'avatar'
                     }),
-                    (0, i.jsx)(l.Spacer, {
+                    (0, i.jsx)(c.Spacer, {
                         size: 6,
                         horizontal: !0
                     }),
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(c.Heading, {
                         variant: 'heading-sm/medium',
                         color: 'header-primary',
-                        children: _
+                        children: l
                     }),
                     1 === n
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(l.Spacer, {
+                                  (0, i.jsx)(c.Spacer, {
                                       size: 4,
                                       horizontal: !0
                                   }),
-                                  (0, i.jsx)(l.LeagueOfLegendsBrandIcon, {
+                                  (0, i.jsx)(c.LeagueOfLegendsBrandIcon, {
                                       size: 'custom',
                                       width: 14,
                                       height: 14
@@ -157,10 +190,10 @@ function g(e) {
                               ]
                           })
                         : null,
-                    E ? (0, i.jsx)(A, { rankChange: o - n }) : null
+                    d ? (0, i.jsx)(R, { rankChange: o - n }) : null
                 ]
             }),
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(c.Heading, {
                 variant: 'heading-sm/medium',
                 color: 'header-primary',
                 children: r
@@ -168,34 +201,34 @@ function g(e) {
         ]
     });
 }
-function S() {
+function O() {
     return (0, i.jsxs)('div', {
-        className: p.joinLeaderboardCTAContainer,
+        className: I.joinLeaderboardCTAContainer,
         children: [
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
-                className: p.joinLeaderboardCTA,
-                children: h.Z.Messages.LEADERBOARD_START_PLAYING_CTA
+                className: I.joinLeaderboardCTA,
+                children: m.Z.Messages.LEADERBOARD_START_PLAYING_CTA
             }),
-            (0, i.jsx)(l.LeagueOfLegendsBrandIcon, {
+            (0, i.jsx)(c.LeagueOfLegendsBrandIcon, {
                 size: 'custom',
                 width: 14,
                 height: 14,
-                className: p.joinLeaderboardCTAIcon
+                className: I.leagueIcon
             })
         ]
     });
 }
-function A(e) {
+function R(e) {
     let { rankChange: t } = e;
     return (0, i.jsxs)('div', {
-        className: p.rankChangeBadge,
+        className: I.rankChangeBadge,
         children: [
-            (0, i.jsx)(l.ArrowSmallUpIcon, {
+            (0, i.jsx)(c.ArrowSmallUpIcon, {
                 size: 'xxs',
-                color: l.tokens.colors.TEXT_MUTED
+                color: c.tokens.colors.TEXT_MUTED
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(c.Text, {
                 variant: 'text-xs/medium',
                 color: 'text-muted',
                 children: t
