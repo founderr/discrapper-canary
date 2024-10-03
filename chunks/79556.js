@@ -25,8 +25,8 @@ var l = n(120356),
     E = n(496675),
     N = n(306680),
     S = n(9156),
-    v = n(594174),
-    x = n(109446),
+    x = n(594174),
+    v = n(109446),
     Z = n(98597),
     T = n(648501),
     b = n(473403),
@@ -64,8 +64,8 @@ class P extends Z.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: o, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: _, canReorderChannel: m, isSubscriptionGated: g, isFavoriteSuggestion: C, subtitle: I, forceTopLevelThread: E, embeddedApps: N, resolvedUnreadSetting: S, withGuildIcon: v, enableActivities: x } = this.props,
-            Z = x && null != N && N.length > 0,
+        let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: o, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: _, canReorderChannel: m, isSubscriptionGated: g, isFavoriteSuggestion: C, subtitle: I, forceTopLevelThread: E, embeddedApps: N, resolvedUnreadSetting: S, withGuildIcon: x, enableActivities: v } = this.props,
+            Z = v && null != N && N.length > 0,
             T = (0, f.D)(I),
             A = (0, i.jsx)('li', {
                 className: r()(this.getClassName(), {
@@ -99,7 +99,7 @@ class P extends Z.ZP {
                             isFavoriteSuggestion: C,
                             channelTypeOverride: E ? M.d4z.GUILD_TEXT : void 0,
                             resolvedUnreadSetting: S,
-                            withGuildIcon: v,
+                            withGuildIcon: x,
                             'aria-label': (0, p.ZP)({
                                 channel: e,
                                 unread: a,
@@ -156,7 +156,7 @@ class P extends Z.ZP {
                           onAction: this.handleActivitiesPopoutClose,
                           channel: t
                       })
-                    : (0, i.jsx)(x.Z, {
+                    : (0, i.jsx)(v.Z, {
                           ...e,
                           channel: this.props.channel
                       });
@@ -176,7 +176,7 @@ class P extends Z.ZP {
                     return;
                 }
                 if (t.type === M.d4z.DM) {
-                    let l = v.default.getUser(t.getRecipientId());
+                    let l = x.default.getUser(t.getRecipientId());
                     null != l &&
                         (0, c.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('29212')]).then(n.bind(n, 131404));
@@ -221,13 +221,13 @@ function j(e) {
                 canReorderChannel: !0 !== l && (n.id === R._ || (null != e ? E.Z.can(M.Plq.MANAGE_CHANNELS, e) : E.Z.can(M.Plq.MANAGE_CHANNELS, n)))
             };
         }),
-        x = (0, a.e7)([m.Z], () => m.Z.shouldIndicateNewChannel(n.id, t.id)),
+        v = (0, a.e7)([m.Z], () => m.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: Z, isSubscriptionGated: b } = (0, _.Z)(t.id),
         A = (0, a.e7)([S.ZP], () => S.ZP.isFavorite(n.id, t.id)),
         L = (0, a.e7)(
-            [v.default],
+            [x.default],
             () => {
-                let e = v.default.getCurrentUser();
+                let e = x.default.getCurrentUser();
                 return null != e && (!t.isNSFW() || e.nsfwAllowed);
             },
             [t]
@@ -239,7 +239,7 @@ function j(e) {
             isChannelSelected: o,
             isSubscriptionGated: b,
             needSubscriptionToAccess: Z,
-            isNewChannel: x,
+            isNewChannel: v,
             muted: s,
             enableActivities: y,
             resolvedUnreadSetting: f
@@ -253,7 +253,7 @@ function j(e) {
         hasMoreActiveThreads: u,
         isSubscriptionGated: b,
         needSubscriptionToAccess: Z,
-        isNewChannel: x && e.canBeNewChannel,
+        isNewChannel: v && e.canBeNewChannel,
         isFavoriteSuggestion: r && !A,
         canShowThreadPreviewForUser: L,
         channelInfo: P,

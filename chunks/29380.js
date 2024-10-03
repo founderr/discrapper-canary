@@ -55,7 +55,7 @@ function h(e) {
             activityAction: P
         });
     return (0, i.jsx)(l.Tooltip, {
-        shouldShow: R,
+        shouldShow: null != M,
         tooltipContentClassName: C.tooltipContent,
         text: M,
         children: (e) => {

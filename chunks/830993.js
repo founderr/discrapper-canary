@@ -25,8 +25,8 @@ var i = n(735250),
     E = n(135724),
     N = n(543432),
     S = n(981631),
-    v = n(689938),
-    x = n(289223);
+    x = n(689938),
+    v = n(289223);
 function Z(e) {
     var t, d;
     let { channel: h, guild: p, onAction: _, voiceStates: g, isChannelSelected: I, shouldShowSettingNudge: E } = e;
@@ -81,14 +81,14 @@ function Z(e) {
     return M.length + Z.length === 0
         ? null
         : (0, i.jsxs)(a.Scroller, {
-              className: x.container,
+              className: v.container,
               children: [
                   (0, i.jsx)(T, {
                       channel: h,
                       isChannelSelected: I,
                       voiceStatesCount: null !== (d = null == g ? void 0 : g.length) && void 0 !== d ? d : 0
                   }),
-                  (0, i.jsx)('div', { className: x.headerDivider }),
+                  (0, i.jsx)('div', { className: v.headerDivider }),
                   Z.map((e, t) => {
                       var n;
                       return (0, i.jsx)(
@@ -118,13 +118,13 @@ function Z(e) {
                   E &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)('div', { className: x.headerDivider }),
+                              (0, i.jsx)('div', { className: v.headerDivider }),
                               (0, i.jsx)('div', {
-                                  className: x.settingNudgeText,
+                                  className: v.settingNudgeText,
                                   children: (0, i.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
-                                      children: v.Z.Messages.VOICE_CHANNEL_ACTIVITY_STATUS_REDIRECT.format({
+                                      children: x.Z.Messages.VOICE_CHANNEL_ACTIVITY_STATUS_REDIRECT.format({
                                           onClick: () => {
                                               (0, a.openModalLazy)(async () => {
                                                   let { default: e } = await Promise.all([n.e('96427'), n.e('51514'), n.e('81039'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('68136'), n.e('76540'), n.e('87624'), n.e('22646'), n.e('25183'), n.e('5528'), n.e('57674'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('52619'), n.e('18815'), n.e('18146'), n.e('37229'), n.e('28044'), n.e('74925'), n.e('6294')]).then(n.bind(n, 241420));
@@ -157,7 +157,7 @@ function T(e) {
     return null == (0, d.KS)(t, c)
         ? null
         : (0, i.jsxs)('div', {
-              className: x.popoutHeaderContainer,
+              className: v.popoutHeaderContainer,
               children: [
                   (0, i.jsx)(I.Z, { channel: t }),
                   o

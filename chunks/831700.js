@@ -26,8 +26,8 @@ var l = n(120356),
     E = n(446226),
     N = n(305325),
     S = n(281956),
-    v = n(66999),
-    x = n(554747),
+    x = n(66999),
+    v = n(554747),
     Z = n(506936),
     T = n(574176),
     b = n(359110),
@@ -120,7 +120,7 @@ class q extends G.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: S, isSubscriptionGated: v, isFavoriteSuggestion: x, withGuildIcon: Z } = this.props,
+        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: S, isSubscriptionGated: x, isFavoriteSuggestion: v, withGuildIcon: Z } = this.props,
             { shouldShowActivities: T, shouldShowGuildVerificationPopout: b } = this.state,
             M = this.getVoiceStatesCount(),
             R = (0, i.jsxs)('li', {
@@ -145,7 +145,7 @@ class q extends G.ZP {
                                             className: Y.iconVisibility,
                                             iconClassName: r()({ [Y.iconLive]: N }),
                                             channel: e,
-                                            selected: !x && t,
+                                            selected: !v && t,
                                             connected: n,
                                             unread: n ? l : void 0,
                                             resolvedUnreadSetting: a,
@@ -159,14 +159,14 @@ class q extends G.ZP {
                                                 this.handleContextMenu(e), null == d || d();
                                             },
                                             connectDragPreview: g,
-                                            isFavoriteSuggestion: x,
+                                            isFavoriteSuggestion: v,
                                             'aria-label': (0, _.ZP)({
                                                 channel: e,
                                                 unread: l,
                                                 mentionCount: s,
                                                 userCount: M,
                                                 embeddedActivitiesCount: S.length,
-                                                isSubscriptionGated: v
+                                                isSubscriptionGated: x
                                             }),
                                             'aria-describedby': (0, m.Z)({
                                                 channel: e,
@@ -174,7 +174,7 @@ class q extends G.ZP {
                                             }),
                                             withGuildIcon: Z,
                                             ...h,
-                                            children: [x && this.renderAcceptSuggestionButton(), x && this.renderRemoveSuggestionButton(), !x && this.renderOpenChatButton(), !x && this.renderInviteButton(), !x && this.renderEditButton(), !x && this.renderChannelInfo()]
+                                            children: [v && this.renderAcceptSuggestionButton(), v && this.renderRemoveSuggestionButton(), !v && this.renderOpenChatButton(), !v && this.renderInviteButton(), !v && this.renderEditButton(), !v && this.renderChannelInfo()]
                                         });
                                     }
                                 })
@@ -347,8 +347,8 @@ function X(e) {
         f = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)),
         _ = (0, p.ZP)(n),
         m = (0, g.ZP)(n),
-        C = (0, x.qY)(n.id),
-        { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, v.Z)(n.id),
+        C = (0, v.qY)(n.id),
+        { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, x.Z)(n.id),
         S = (0, E.Z)(),
         Z = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)),
         b = e.connected || (null == S ? void 0 : S.channelId) === n.id,

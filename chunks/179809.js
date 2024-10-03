@@ -24,8 +24,8 @@ var i = n(735250),
     E = n(682662),
     N = n(662146),
     S = n(689938),
-    v = n(115376),
-    x = n(767573);
+    x = n(115376),
+    v = n(767573);
 let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     T = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     b = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
@@ -79,7 +79,7 @@ function A(e) {
                     hovered: H,
                     selected: r,
                     unread: M,
-                    className: x.pill
+                    className: v.pill
                 }),
                 (0, i.jsx)(N.Z, {
                     text: J,
@@ -88,7 +88,7 @@ function A(e) {
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
                         ref: y ? q : void 0,
-                        className: a()({ [x.wobble]: !K && W && !u }),
+                        className: a()({ [v.wobble]: !K && W && !u }),
                         'data-dnd-name': J,
                         children: K
                             ? (0, i.jsx)(I.Z, {})
@@ -121,13 +121,13 @@ function A(e) {
         });
     return (0, i.jsxs)('div', {
         ref: ei,
-        className: v.wrapper,
+        className: x.wrapper,
         children: [
             !K &&
                 (0, i.jsx)('span', {
-                    className: a()(v.expandedFolderBackground, {
-                        [v.collapsed]: !u,
-                        [v.hover]: Y
+                    className: a()(x.expandedFolderBackground, {
+                        [x.collapsed]: !u,
+                        [x.hover]: Y
                     })
                 }),
             el,
@@ -140,7 +140,7 @@ function A(e) {
                         {
                             id: ee,
                             style: { height: e.height.to((e) => e * et) },
-                            className: v.__invalid_expandedGuilds,
+                            className: x.__invalid_expandedGuilds,
                             role: 'group',
                             children: V.map(G)
                         },

@@ -27,8 +27,8 @@ var i = n(735250),
     E = n(624138),
     N = n(667815),
     S = n(531572),
-    v = n(26323),
-    x = n(30513),
+    x = n(26323),
+    v = n(30513),
     Z = n(981631),
     T = n(689938),
     b = n(402723);
@@ -91,7 +91,7 @@ t.ZP = (e) => {
                 guild_id: m,
                 location_stack: r
             }),
-                (0, v.Z)({
+                (0, x.Z)({
                     analyticsLocations: r,
                     analyticsSourceLocation: {
                         page: Z.ZY5.GUILD_CHANNEL,
@@ -99,7 +99,7 @@ t.ZP = (e) => {
                         object: Z.qAy.TOOLTIP
                     },
                     guild: t,
-                    perks: (0, x.VF)(),
+                    perks: (0, v.VF)(),
                     perkIntro: T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_PROGRESS_BAR_HEADER
                 });
         },

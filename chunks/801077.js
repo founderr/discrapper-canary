@@ -19,8 +19,8 @@ var i,
     E = n(710845),
     N = n(38618),
     S = n(656063),
-    v = n(761282),
-    x = n(814443),
+    x = n(761282),
+    v = n(814443),
     Z = n(789407),
     T = n(974543),
     b = n(250889),
@@ -48,7 +48,7 @@ let V = !1,
     q = new Set();
 function Q() {
     let e = D.Z.getFriendIDs();
-    return R.Z.hasConsented(B.pjP.PERSONALIZATION) ? new Set([...x.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e);
+    return R.Z.hasConsented(B.pjP.PERSONALIZATION) ? new Set([...v.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e);
 }
 function X(e) {
     return j.Z.findActivity(e, (e) => e.type !== B.IIU.CUSTOM_STATUS);
@@ -97,7 +97,7 @@ function el(e, t, n) {
         g = t.filter((t) => e.has(t.id)),
         I = !1,
         N = [],
-        x = new Set(),
+        v = new Set(),
         R = !1,
         D = [];
     for (let e of t) {
@@ -141,7 +141,7 @@ function el(e, t, n) {
             )
                 continue;
         } else if (null == m) continue;
-        if (!v.JE(s) || null == u || x.has(u.id)) continue;
+        if (!x.JE(s) || null == u || v.has(u.id)) continue;
         let g = null != s ? et(s) : null;
         (null == g || g.id !== u.id) && (s = null);
         let j = [];
@@ -157,7 +157,7 @@ function el(e, t, n) {
                       return null != n && n.id === u.id;
                   })),
             (j = o().orderBy(j, [ei], ['desc'])).length !== t.length && (I = !0),
-            x.add(u.id),
+            v.add(u.id),
             N.push({
                 game: u,
                 activity: s,
@@ -309,7 +309,7 @@ function eu() {
 }
 class ed extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([w.default, C.Z, j.Z, L.Z, G.Z, A.Z, D.Z, R.Z, x.Z], eu), this.waitFor(N.Z, P.Z, C.Z, w.default, x.Z);
+        this.syncWith([w.default, C.Z, j.Z, L.Z, G.Z, A.Z, D.Z, R.Z, v.Z], eu), this.waitFor(N.Z, P.Z, C.Z, w.default, v.Z);
     }
     get currentActivityParties() {
         return F;

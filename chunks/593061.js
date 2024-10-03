@@ -35,7 +35,7 @@ function E(e) {
                 let t = await u(s.id);
                 i(t);
                 let n = e ? t.refundInvoiceLinks[0] : t.invoiceLink;
-                window.open(n, '_blank');
+                window.open(n, '_blank'), E(null);
             } catch (e) {
                 var t;
                 E(null === (t = e.body) || void 0 === t ? void 0 : t.message);

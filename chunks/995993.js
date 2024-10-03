@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return x;
+        return v;
     }
 });
 var i = n(735250),
@@ -23,9 +23,9 @@ var i = n(735250),
     E = n(176505),
     N = n(490897),
     S = n(689938),
-    v = n(718317);
-function x(e) {
-    let { guild: t, selected: x } = e,
+    x = n(718317);
+function v(e) {
+    let { guild: t, selected: v } = e,
         Z = (0, h.Z)(t),
         T = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         b = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
@@ -57,12 +57,12 @@ function x(e) {
         P = null;
     return (
         (!T || A || M) &&
-            !x &&
+            !v &&
             !R &&
             (P = (0, i.jsx)(o.TextBadge, {
                 color: s.Z.colors.BADGE_BRAND_BG.css,
                 text: S.Z.Messages.NEW,
-                className: v.newChannel
+                className: x.newChannel
             })),
         (0, i.jsx)(C.m, {
             id: 'channels-'.concat(t.id),
@@ -73,7 +73,7 @@ function x(e) {
                     className: e
                 }),
             text: Z ? S.Z.Messages.CHANNELS_AND_ROLES : S.Z.Messages.CHANNEL_BROWSER_TITLE,
-            selected: x,
+            selected: v,
             onClick: L,
             onContextMenu: y,
             trailing: P

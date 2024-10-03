@@ -19,8 +19,8 @@ var i,
     E = n(82295),
     N = n(313201),
     S = n(860144),
-    v = n(214852),
-    x = n(518311),
+    x = n(214852),
+    v = n(518311),
     Z = n(355298),
     T = n(869404),
     b = n(333984),
@@ -364,7 +364,7 @@ class G extends (l = s.Component) {
                                       className: j.headerText,
                                       children: O.Z.Messages.DIRECT_MESSAGES
                                   }),
-                                  (0, a.jsx)(x.Z, {
+                                  (0, a.jsx)(v.Z, {
                                       tooltip: O.Z.Messages.CREATE_DM,
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
@@ -398,7 +398,7 @@ t.Z = (e) => {
             },
             []
         );
-    (0, v.z)(S.R);
+    (0, x.z)(S.R);
     let f = (0, h.cj)([m.Z, A.Z, M.Z], () => ({
             theme: A.Z.darkSidebar ? P.BRd.DARK : n,
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
@@ -443,7 +443,7 @@ t.Z = (e) => {
             []
         ),
         E = (0, N.Dt)(),
-        x = (0, d.ZP)({
+        v = (0, d.ZP)({
             id: 'private-channels-'.concat(E),
             isEnabled: f.keyboardModeEnabled,
             scrollToStart: C,
@@ -452,7 +452,7 @@ t.Z = (e) => {
             setFocus: g
         });
     return (0, a.jsx)(u.bG, {
-        navigator: x,
+        navigator: v,
         children: (0, a.jsx)(G, {
             channels: c,
             privateChannelIds: p,

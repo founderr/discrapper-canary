@@ -20,8 +20,8 @@ var l = n(392711),
     E = n(74538),
     N = n(557457),
     S = n(269486),
-    v = n(514851),
-    x = n(970645),
+    x = n(514851),
+    v = n(970645),
     Z = n(30684),
     T = n(514701),
     b = n(6242),
@@ -142,11 +142,11 @@ class q extends c.Z {
             }),
             K(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = g.default.getCurrentUser();
-                null != e && e.verified && !(0, E.I5)(e) && Z.Z.shouldFetchCheckoutRecovery() && (await (0, x.o)());
+                null != e && e.verified && !(0, E.I5)(e) && Z.Z.shouldFetchCheckoutRecovery() && (await (0, v.o)());
             }),
             K(this, '_maybeFetchCampaignContext', async () => {
                 let e = g.default.getCurrentUser();
-                null != e && e.verified && v.Z.shouldFetchCampaignContext() && (await (0, S.W)());
+                null != e && e.verified && x.Z.shouldFetchCampaignContext() && (await (0, S.W)());
             }),
             K(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = G.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });

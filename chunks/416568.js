@@ -19,8 +19,8 @@ var i = n(735250),
     E = n(906732),
     N = n(358221),
     S = n(963202),
-    v = n(353093),
-    x = n(706590),
+    x = n(353093),
+    v = n(706590),
     Z = n(940777),
     T = n(831565),
     b = n(41776),
@@ -212,12 +212,12 @@ function eo(e) {
         }),
         em = (0, T.v)({ location: 'GuildsBar' }),
         eg = ef || e_.length > 0 || em,
-        eC = l.useMemo(() => e_.filter((e) => !(0, v.EJ)(e)), [e_]).length > 0,
+        eC = l.useMemo(() => e_.filter((e) => !(0, x.EJ)(e)), [e_]).length > 0,
         eI = l.useMemo(() => (eC ? F.OO : ef ? F.KF : void 0), [ef, eC]),
         eE = !eg,
         { ref: eN, ...eS } = (0, d.OP)(),
-        ev = (0, m.useFocusJumpSection)(),
-        [ex, eZ] = l.useState(!1),
+        ex = (0, m.useFocusJumpSection)(),
+        [ev, eZ] = l.useState(!1),
         eT = l.useMemo(
             () =>
                 new es(
@@ -305,7 +305,7 @@ function eo(e) {
     }
     (0, w.Z)(eT.scrollToGuild);
     let eP = o.getRoots(),
-        eO = (0, x.Z)(),
+        eO = (0, v.Z)(),
         ej = (0, M.U)(),
         eD = en.map((e) =>
             (0, i.jsx)(
@@ -329,7 +329,7 @@ function eo(e) {
                     children: (0, i.jsxs)('ul', {
                         ref: eN,
                         ...eS,
-                        ...ev,
+                        ...ex,
                         role: 'tree',
                         className: et.tree,
                         children: [
@@ -343,7 +343,7 @@ function eo(e) {
                             (0, i.jsxs)(m.AdvancedScrollerNone, {
                                 className: a()({
                                     [et.scroller]: !0,
-                                    [et.scrolling]: ex
+                                    [et.scrolling]: ev
                                 }),
                                 ref: eT.scrollerRef,
                                 onScroll: eT.handleScroll,

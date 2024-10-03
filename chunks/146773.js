@@ -24,8 +24,8 @@ var l = n(582966),
     E = n(281029),
     N = n(700785),
     S = n(981631);
-let v = 'DRAGGABLE_GUILD_CHANNEL';
-function x(e, t) {
+let x = 'DRAGGABLE_GUILD_CHANNEL';
+function v(e, t) {
     var n, i;
     if (null == e || null == t) return null;
     if (e !== S.I_8) return f.Z.getChannel(t);
@@ -35,20 +35,20 @@ function x(e, t) {
 }
 function Z(e) {
     return (0, l.G)(
-        v,
+        x,
         {
             drop(e, t) {
                 let n;
                 let l = I.Z.getGuildId(),
                     r = t.getItem(),
-                    a = (0, E.if)(x(l, r.id), r.position, e.channel, e.position, r.channelList);
+                    a = (0, E.if)(v(l, r.id), r.position, e.channel, e.position, r.channelList);
                 if (null == a) return;
-                let u = x(l, r.id);
+                let u = v(l, r.id);
                 if (null == u) return;
                 let h = _.Z.getCategories(l),
                     p = g.Z.getGuild(l);
                 if (null == p) return;
-                let m = (0, E.Dn)(u, x(l, a.referenceId), a.parentId, h);
+                let m = (0, E.Dn)(u, v(l, a.referenceId), a.parentId, h);
                 if (0 !== m.length) {
                     if (l === S.I_8) {
                         (0, d.s3)(m);
@@ -128,7 +128,7 @@ function Z(e) {
         }
     )(
         (0, r.E)(
-            v,
+            x,
             {
                 canDrag(e) {
                     let { channel: t } = e;

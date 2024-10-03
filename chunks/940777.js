@@ -26,8 +26,8 @@ var i = n(735250),
     E = n(944486),
     N = n(979651),
     S = n(709054),
-    v = n(853856),
-    x = n(593214),
+    x = n(853856),
+    v = n(593214),
     Z = n(919755),
     T = n(110977),
     b = n(603274),
@@ -43,11 +43,11 @@ let L = {
 };
 function y() {
     let e = (0, s.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, x.up)(),
+        { favoriteAdded: t, clearFavoriteAdded: r } = (0, v.up)(),
         [y, P] = l.useState(!1),
-        { favoriteServerMuted: O, favoriteChannels: j } = (0, o.cj)([v.Z], () => ({
-            favoriteChannels: v.Z.getFavoriteChannels(),
-            favoriteServerMuted: v.Z.favoriteServerMuted
+        { favoriteServerMuted: O, favoriteChannels: j } = (0, o.cj)([x.Z], () => ({
+            favoriteChannels: x.Z.getFavoriteChannels(),
+            favoriteServerMuted: x.Z.favoriteServerMuted
         })),
         D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
         w = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
