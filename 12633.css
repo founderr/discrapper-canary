@@ -43250,10 +43250,19 @@ html .progress_e5f4c6 {
     box-shadow: 0 0 20px var(--brand-500)
 }
 
+.contentCoachmark_d76538 {
+    background: var(--background-floating)
+}
+
 .innerContent_d76538 {
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px rgba(255, 186, 219, .2)inset
+}
+
+.innerContentCoachmark_d76538 {
+    display: flex;
+    flex-direction: column
 }
 
 .contentTextCTAPopout_d76538 {
@@ -43262,7 +43271,7 @@ html .progress_e5f4c6 {
 
 .subContent_d76538 {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin: 16px
 }
 
@@ -43275,12 +43284,24 @@ html .progress_e5f4c6 {
     background-color: var(--brand-500)
 }
 
+.recipientUserAvatarCoachmark_d76538 {
+    background-color: var(--background-primary)
+}
+
 .currentUserAvatar_d76538 {
     position: absolute;
     border: 2px solid var(--brand-500);
     background-color: var(--background-primary);
-    bottom: 1px;
-    right: 1px
+    bottom: -3px;
+    right: -2px
+}
+
+.currentUserAvatarCoachmark_d76538 {
+    position: absolute;
+    border: 2px solid var(--background-primary);
+    background-color: var(--background-primary);
+    bottom: -3px;
+    right: -2px
 }
 
 .textContainer_d76538 {
@@ -43291,6 +43312,11 @@ html .progress_e5f4c6 {
 
 .subHeaderText_d76538 {
     color: white;
+    opacity: .8
+}
+
+.subHeaderTextCoachmark_d76538 {
+    color: black;
     opacity: .8
 }
 
@@ -43314,6 +43340,10 @@ html .progress_e5f4c6 {
 
 .buttonTextPrimary_d76538 {
     color: var(--brand-500)
+}
+
+.buttonTextPrimaryCoachmark_d76538 {
+    color: white
 }
 
 .buttonTextSecondary_d76538 {
@@ -43342,6 +43372,11 @@ html .progress_e5f4c6 {
 .leftPopoutConnector_d76538 {
     left: 100%;
     top: 12%
+}
+
+.theme-dark .subHeaderTextCoachmark_d76538 {
+    color: white;
+    opacity: .8
 }
 
 .messageContentContainer_f93a69 {

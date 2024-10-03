@@ -85,16 +85,26 @@ function L(e) {
         },
         j = (e) => {
             e.stopPropagation(), (0, m.uL)(O.Z5c.FRIENDS), _.Z.setSection(O.pJs.ALL);
-        };
+        },
+        W = 'coachmark' === n,
+        K = W ? y.innerContentCoachmark : y.innerContent,
+        z = W ? y.recipientUserAvatarCoachmark : y.recipientUserAvatar,
+        q = W ? y.currentUserAvatarCoachmark : y.currentUserAvatar,
+        Q = W ? 'header-primary' : 'always-white',
+        X = W ? y.subHeaderTextCoachmark : y.subHeaderText,
+        $ = W ? d.Button.Colors.BRAND : d.Button.Colors.WHITE,
+        J = W ? c.Z.colors.WHITE : c.Z.colors.BG_BRAND,
+        ee = W ? y.buttonTextPrimaryCoachmark : y.buttonTextPrimary;
     return (0, i.jsx)('div', {
         className: s()(y.content, {
             [y.contentTextCTAPopout]: B,
-            [y.contentGlow]: P
+            [y.contentGlow]: P,
+            [y.contentCoachmark]: W
         }),
         onMouseEnter: o,
         onMouseLeave: L,
         children: (0, i.jsxs)('div', {
-            className: y.innerContent,
+            className: K,
             children: [
                 (0, i.jsxs)('div', {
                     className: y.subContent,
@@ -103,14 +113,14 @@ function L(e) {
                             className: y.avatars,
                             children: [
                                 (0, i.jsx)(E.Z, {
-                                    className: y.recipientUserAvatar,
+                                    className: z,
                                     user: r,
                                     'aria-label': r.username,
                                     size: R.EF.SIZE_56
                                 }),
                                 null != w &&
                                     (0, i.jsx)(E.Z, {
-                                        className: y.currentUserAvatar,
+                                        className: q,
                                         user: w,
                                         'aria-label': r.username,
                                         size: R.EF.SIZE_24
@@ -122,12 +132,12 @@ function L(e) {
                             children: [
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-md/medium',
-                                    color: 'always-white',
+                                    color: Q,
                                     lineClamp: 3,
                                     children: F()
                                 }),
                                 (0, i.jsx)(d.Text, {
-                                    className: y.subHeaderText,
+                                    className: X,
                                     variant: 'text-sm/normal',
                                     children: Z()
                                 })
@@ -158,19 +168,19 @@ function L(e) {
                             className: y.button,
                             onClick: Y,
                             size: d.Button.Sizes.MEDIUM,
-                            color: d.Button.Colors.WHITE,
+                            color: $,
                             children: (0, i.jsxs)('div', {
                                 className: y.buttonContentContainer,
                                 children: [
                                     (0, i.jsx)(d.GiftIcon, {
-                                        color: c.Z.colors.BG_BRAND,
+                                        color: J,
                                         size: 'custom',
                                         width: '14',
                                         height: '14'
                                     }),
                                     (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/medium',
-                                        className: s()(y.buttonText, y.buttonTextPrimary),
+                                        className: s()(y.buttonText, ee),
                                         children: C.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_PRIMARY_CTA
                                     })
                                 ]

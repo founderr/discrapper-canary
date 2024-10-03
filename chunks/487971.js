@@ -121,7 +121,8 @@ function A(e) {
                 onMouseLeave: O,
                 popoutPosition: e.position,
                 analyticsPage: s,
-                analyticsSection: T.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT
+                analyticsSection: T.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
+                glow: !0
             }),
         children: () => y()
     });
