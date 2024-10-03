@@ -238,9 +238,16 @@ t.default = function (e) {
         }, [eh]),
         { setCategoryRef: eS, handleScrollToCategory: eL } = (0, y.xV)(x.current),
         { reducedMotion: eN } = n.useContext(f.AccessibilityPreferencesContext),
-        eO = n.useRef(null);
-    (0, f.useFocusLock)(eO);
-    let eB = n.useCallback(
+        eO = n.useRef(null),
+        eB = n.useRef(null);
+    (0, f.useFocusLock)(eO),
+        n.useEffect(() => {
+            if (!t) {
+                var e;
+                null === (e = eB.current) || void 0 === e || e.focus();
+            }
+        }, [t]);
+    let ek = n.useCallback(
         async (e, r, a) => {
             let n = a && !t && !eN.enabled;
             ec(e), eo(r), await W(n), r && eL(r);
@@ -252,7 +259,7 @@ t.default = function (e) {
         children: [
             (0, a.jsx)('div', {
                 className: er.shop,
-                ref: eO,
+                ref: t ? eO : eB,
                 tabIndex: -1,
                 children: (0, a.jsxs)(f.AdvancedScroller, {
                     className: er.shopScroll,
@@ -280,7 +287,7 @@ t.default = function (e) {
                                         transparent: !0
                                     }),
                                     (0, a.jsx)(K.Z, {
-                                        handleTransition: eB,
+                                        handleTransition: ek,
                                         numVisibleItems: ea
                                     })
                                 ]
