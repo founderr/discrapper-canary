@@ -1,21 +1,31 @@
 n.d(t, {
+    J0: function () {
+        return d;
+    },
     _O: function () {
-        return o;
+        return u;
     },
     rT: function () {
-        return s;
+        return c;
     }
 });
 var r = n(442837),
     i = n(594174),
-    a = n(78839);
-n(474936);
-let o = () => {
+    a = n(78839),
+    o = n(295226),
+    s = n(786397),
+    l = n(474936);
+let u = () => {
     let e = (0, r.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription());
     return (null == e ? void 0 : e.trialId) != null;
 };
-function s() {
+function c() {
     let e = (0, r.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription()),
         t = (0, r.e7)([i.default], () => i.default.getCurrentUser());
     return (null == e ? void 0 : e.trialId) != null ? (null == t ? void 0 : t.premiumType) : null;
+}
+function d() {
+    return l.CR.map((e) => o.Z.getUserTrialOffer(e))
+        .filter((e) => null != e && !(0, s.B)(e))
+        .shift();
 }

@@ -11,11 +11,11 @@ var a = n(873546),
     u = n(295226),
     _ = n(74538),
     h = n(374023),
-    E = n(913976),
-    m = n(533990),
-    I = n(104494),
-    g = n(29920),
-    p = n(786397),
+    E = n(775412),
+    m = n(913976),
+    I = n(533990),
+    g = n(104494),
+    p = n(29920),
     T = n(248042),
     f = n(278945),
     S = n(727310),
@@ -77,19 +77,16 @@ class Z extends o.Z {
                 if ((0, _.I5)(e)) return {};
                 let t = [N.hs, N.RU, N.rB, N.ih]
                     .map((e) => u.Z.getUserDiscountOffer(e))
-                    .filter((e) => null != e && !(0, I.kA)(e))
+                    .filter((e) => null != e && !(0, g.kA)(e))
                     .shift();
                 if (null != t) return { userDiscountOffer: t };
-                let n = [N.i_, N.Cn, N.wh, N.AU, N.TL, N.ET, N.C2, N.Hk, N.Rt]
-                    .map((e) => u.Z.getUserTrialOffer(e))
-                    .filter((e) => null != e && !(0, p.B)(e))
-                    .shift();
+                let n = (0, E.J0)();
                 return null != n ? { userTrialOffer: n } : {};
             }),
             A(this, 'mayShowAnnouncementModal', async () => {
                 if ((await (0, T.l2)(), h.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
-                    t = m.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || m.Z.isAAMode({ location: 'announcementManager' }),
+                    t = I.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || I.Z.isAAMode({ location: 'announcementManager' }),
                     n = (0, c.un)(s.z.REVERSE_TRIAL_ENDED_UPSELL),
                     i = d.default.getCurrentUser();
                 if (t && !n && !(0, r.hasAnyModalOpen)() && !(0, _.I5)(i)) {
@@ -97,8 +94,8 @@ class Z extends o.Z {
                     null != t && (0, S.Z)({ upsellType: t });
                 }
                 if (null == i || !!i.verified) {
-                    if (!(0, r.hasAnyModalOpen)() && E.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !a.tq) {
-                        for (let t of await (0, g.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
+                    if (!(0, r.hasAnyModalOpen)() && m.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !a.tq) {
+                        for (let t of await (0, p.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                     }
                 }
             });

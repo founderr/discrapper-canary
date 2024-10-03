@@ -3,13 +3,13 @@ n.d(t, {
         return q;
     },
     $8: function () {
-        return ex;
+        return ek;
     },
     $e: function () {
         return b;
     },
     $n: function () {
-        return eQ;
+        return e$;
     },
     A5: function () {
         return $;
@@ -18,13 +18,16 @@ n.d(t, {
         return es;
     },
     Bo: function () {
-        return eJ;
+        return e1;
     },
     C2: function () {
         return ec;
     },
     CL: function () {
         return D;
+    },
+    CR: function () {
+        return em;
     },
     Cj: function () {
         return h;
@@ -48,7 +51,7 @@ n.d(t, {
         return Z;
     },
     HO: function () {
-        return ek;
+        return eF;
     },
     Hk: function () {
         return eu;
@@ -57,31 +60,31 @@ n.d(t, {
         return B;
     },
     Lw: function () {
-        return eb;
+        return eM;
     },
     M_: function () {
-        return e$;
+        return e0;
     },
     Nl: function () {
-        return eN;
+        return eR;
     },
     No: function () {
         return k;
     },
     OT: function () {
-        return em;
+        return eT;
     },
     QI: function () {
-        return eW;
+        return ez;
     },
     QP: function () {
         return c;
     },
     RQ: function () {
-        return eK;
+        return eq;
     },
     RU: function () {
-        return eT;
+        return eS;
     },
     Rg: function () {
         return er;
@@ -90,7 +93,7 @@ n.d(t, {
         return W;
     },
     Rt: function () {
-        return ef;
+        return eh;
     },
     Si: function () {
         return i;
@@ -99,13 +102,13 @@ n.d(t, {
         return T;
     },
     TD: function () {
-        return eV;
+        return eY;
     },
     TL: function () {
         return el;
     },
     Tp: function () {
-        return eY;
+        return eW;
     },
     UA: function () {
         return z;
@@ -117,10 +120,10 @@ n.d(t, {
         return Q;
     },
     Uq: function () {
-        return eM;
+        return eU;
     },
     V4: function () {
-        return ez;
+        return eQ;
     },
     VU: function () {
         return A;
@@ -129,7 +132,7 @@ n.d(t, {
         return a;
     },
     Y1: function () {
-        return eB;
+        return eZ;
     },
     YQ: function () {
         return M;
@@ -141,10 +144,10 @@ n.d(t, {
         return y;
     },
     _k: function () {
-        return eG;
+        return eB;
     },
     a1: function () {
-        return eH;
+        return ej;
     },
     a7: function () {
         return ed;
@@ -153,7 +156,7 @@ n.d(t, {
         return L;
     },
     bg: function () {
-        return eZ;
+        return eH;
     },
     cb: function () {
         return K;
@@ -162,22 +165,22 @@ n.d(t, {
         return l;
     },
     dB: function () {
-        return eS;
+        return ev;
     },
     dJ: function () {
         return U;
     },
     dT: function () {
-        return eg;
+        return eA;
     },
     eG: function () {
-        return e0;
+        return e2;
     },
     eZ: function () {
-        return eq;
+        return eX;
     },
     ee: function () {
-        return eC;
+        return eL;
     },
     ff: function () {
         return en;
@@ -186,7 +189,7 @@ n.d(t, {
         return g;
     },
     gW: function () {
-        return eO;
+        return eC;
     },
     gh: function () {
         return J;
@@ -195,25 +198,25 @@ n.d(t, {
         return d;
     },
     h8: function () {
-        return ep;
+        return eI;
     },
     hX: function () {
         return S;
     },
     hs: function () {
-        return eI;
+        return eg;
     },
     i_: function () {
         return ei;
     },
     ih: function () {
-        return ev;
+        return eO;
     },
     in: function () {
         return u;
     },
     jy: function () {
-        return ej;
+        return eK;
     },
     m8: function () {
         return ee;
@@ -222,13 +225,13 @@ n.d(t, {
         return F;
     },
     n5: function () {
-        return eR;
-    },
-    nG: function () {
         return ey;
     },
+    nG: function () {
+        return eb;
+    },
     nH: function () {
-        return eF;
+        return eV;
     },
     nL: function () {
         return f;
@@ -240,13 +243,13 @@ n.d(t, {
         return r;
     },
     pH: function () {
-        return ew;
+        return eG;
     },
     pj: function () {
         return V;
     },
     rB: function () {
-        return eA;
+        return eN;
     },
     rV: function () {
         return o;
@@ -255,10 +258,10 @@ n.d(t, {
         return et;
     },
     rt: function () {
-        return eX;
+        return eJ;
     },
     vL: function () {
-        return eL;
+        return eD;
     },
     wh: function () {
         return eo;
@@ -531,21 +534,23 @@ let Z = Object.freeze({
     ed = '1073698058383917056',
     e_ = '1070132870233980928',
     eE = '1267968635301789696',
-    ef = '1268347360493174784',
-    eh = '1271484512081285191',
-    ep = [eE, '1267969164312576000', eh],
-    em = [eE, eh],
-    eI = '1150904354090532864',
-    eT = '1199128659810582528',
-    eg = '1204865493622587392',
-    eS = '1204867673024888832',
-    eA = '1215346678383509504',
-    ev = '1215366184820539392',
-    eN = '1223319122125783040',
-    eO = '1223380890109870080',
-    eR = '1265748546523762828',
-    eC = [eN, eO],
-    ey = Object.freeze({
+    ef = '1267969164312576000',
+    eh = '1268347360493174784',
+    ep = '1271484512081285191',
+    em = [ei, ea, eo, es, el, eu, ec, ed, e_, eE, ef, eh, ep],
+    eI = [eE, ef, ep],
+    eT = [eE, ep],
+    eg = '1150904354090532864',
+    eS = '1199128659810582528',
+    eA = '1204865493622587392',
+    ev = '1204867673024888832',
+    eN = '1215346678383509504',
+    eO = '1215366184820539392',
+    eR = '1223319122125783040',
+    eC = '1223380890109870080',
+    ey = '1265748546523762828',
+    eL = [eR, eC],
+    eb = Object.freeze({
         [ei]: {
             id: ei,
             skus: ['521847234246082599']
@@ -582,8 +587,8 @@ let Z = Object.freeze({
             id: eu,
             skus: ['521847234246082599']
         },
-        [ef]: {
-            id: ef,
+        [eh]: {
+            id: eh,
             skus: ['521847234246082599']
         }
     });
@@ -681,36 +686,36 @@ let Z = Object.freeze({
     !(function (e) {
         (e[(e.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'), (e[(e.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'), (e[(e.GUILD_BOOST = 4)] = 'GUILD_BOOST'), (e[(e.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0');
     })(u || (u = {}));
-let eL = Object.freeze({
+let eD = Object.freeze({
         '978380684370378762': 8,
         '521846918637420545': 1,
         '521847234246082599': 2,
         '590663762298667008': 4
     }),
-    eb = 52428800,
-    eD = 52428800,
-    eM = 524288000,
+    eM = 52428800,
     eP = 52428800,
-    eU = 104857600,
-    ew = {
+    eU = 524288000,
+    ew = 52428800,
+    ex = 104857600,
+    eG = {
         [O.Eu4.NONE]: 5,
         [O.Eu4.TIER_1]: 10,
         [O.Eu4.TIER_2]: 15,
         [O.Eu4.TIER_3]: 30
     },
-    ex = {
-        [O.Eu4.NONE]: ew[O.Eu4.NONE],
-        [O.Eu4.TIER_1]: ew[O.Eu4.NONE] + ew[O.Eu4.TIER_1],
-        [O.Eu4.TIER_2]: ew[O.Eu4.NONE] + ew[O.Eu4.TIER_1] + ew[O.Eu4.TIER_2],
-        [O.Eu4.TIER_3]: ew[O.Eu4.NONE] + ew[O.Eu4.TIER_1] + ew[O.Eu4.TIER_2] + ew[O.Eu4.TIER_3]
+    ek = {
+        [O.Eu4.NONE]: eG[O.Eu4.NONE],
+        [O.Eu4.TIER_1]: eG[O.Eu4.NONE] + eG[O.Eu4.TIER_1],
+        [O.Eu4.TIER_2]: eG[O.Eu4.NONE] + eG[O.Eu4.TIER_1] + eG[O.Eu4.TIER_2],
+        [O.Eu4.TIER_3]: eG[O.Eu4.NONE] + eG[O.Eu4.TIER_1] + eG[O.Eu4.TIER_2] + eG[O.Eu4.TIER_3]
     },
-    eG = {
+    eB = {
         [O.Eu4.NONE]: 8,
         [O.Eu4.TIER_1]: 24,
         [O.Eu4.TIER_2]: 36,
         [O.Eu4.TIER_3]: 48
     },
-    ek = Object.freeze({
+    eF = Object.freeze({
         [O.Eu4.NONE]: {
             features: [],
             limits: {
@@ -719,9 +724,9 @@ let eL = Object.freeze({
                 fileSize: O.mBz,
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eG[O.Eu4.NONE],
+                soundboardSounds: eB[O.Eu4.NONE],
                 maxConcurrentActivities: 2,
-                stickers: ex[O.Eu4.NONE],
+                stickers: ek[O.Eu4.NONE],
                 stageVideoUsers: O.B9o
             }
         },
@@ -733,9 +738,9 @@ let eL = Object.freeze({
                 fileSize: O.mBz,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eG[O.Eu4.TIER_1],
+                soundboardSounds: eB[O.Eu4.TIER_1],
                 maxConcurrentActivities: 3,
-                stickers: ex[O.Eu4.TIER_1],
+                stickers: ek[O.Eu4.TIER_1],
                 stageVideoUsers: O.B9o
             }
         },
@@ -744,12 +749,12 @@ let eL = Object.freeze({
             limits: {
                 emoji: 150,
                 bitrate: 256000,
-                fileSize: eP,
+                fileSize: ew,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eG[O.Eu4.TIER_2],
+                soundboardSounds: eB[O.Eu4.TIER_2],
                 maxConcurrentActivities: 5,
-                stickers: ex[O.Eu4.TIER_2],
+                stickers: ek[O.Eu4.TIER_2],
                 stageVideoUsers: O.eez
             }
         },
@@ -758,24 +763,24 @@ let eL = Object.freeze({
             limits: {
                 emoji: 250,
                 bitrate: 384000,
-                fileSize: eU,
+                fileSize: ex,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eG[O.Eu4.TIER_3],
+                soundboardSounds: eB[O.Eu4.TIER_3],
                 maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-                stickers: ex[O.Eu4.TIER_3],
+                stickers: ek[O.Eu4.TIER_3],
                 stageVideoUsers: O.RcX
             }
         }
     }),
-    eB = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
+    eZ = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
 !(function (e) {
     (e.SOUNDBOARD_PLAY = 'soundboard play'), (e.PROFILE_THEME_COLOR = 'profile_theme_color'), (e.PROFILE_BANNER = 'profile_banner'), (e.ANIMATED_AVATAR = 'animated_avatar'), (e.AVATAR_DECORATION = 'avatar_decoration'), (e.CLIENT_THEME = 'client_theme'), (e.SHARED_CANVAS = 'shared_canvas'), (e.PROFILE_EFFECT = 'profile_effect'), (e.PRESET = 'preset');
 })(c || (c = {})),
     !(function (e) {
         (e.FREE = 'free'), (e.PREMIUM_STANDARD = 'premium-standard');
     })(d || (d = {}));
-let eF = {
+let eV = {
     '1024422698568122368': H,
     '511651876987469824': H,
     '511651885459963904': H,
@@ -785,7 +790,7 @@ let eF = {
 !(function (e) {
     (e.HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (e.MID_STREAMING_QUALITY = 'mid_streaming_quality');
 })(_ || (_ = {}));
-let eZ = Object.freeze({
+let eH = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1
 });
@@ -801,15 +806,15 @@ let eZ = Object.freeze({
     !(function (e) {
         (e.USER_NOT_VERIFIED = 'user_not_verified'), (e.NO_CODE_BODY = 'no_code_body'), (e.NO_PROMOTION = 'no_promotion'), (e.CODE_CLAIMED = 'code_claimed'), (e.EXISTING_SUBSCRIBER = 'existing_subscriber'), (e.PREVIOUS_SUBSCRIBER = 'previous_subscriber'), (e.BLOCKED_PAYMENT = 'blocked_payment');
     })(p || (p = {}));
-let eV = Object.freeze({
+let eY = Object.freeze({
         IS_BLOCKED_IOS: 32,
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128
     }),
-    eH = Object.freeze({
-        3: { fileSize: eb },
-        1: { fileSize: eD },
-        2: { fileSize: eM }
+    ej = Object.freeze({
+        3: { fileSize: eM },
+        1: { fileSize: eP },
+        2: { fileSize: eU }
     });
 !(function (e) {
     (e.EXPLORE_ALL_PERKS_CLICKED = 'explore_all_perks_clicked'), (e.HELPER_COLLAPSED = 'helper_collapsed'), (e.HELPER_UNCOLLAPSED = 'helper_uncollapsed'), (e.UNLOCK_EMOJI_CLICKED = 'unlock_emoji_clicked'), (e.CUSTOM_PROFILES_CLICKED = 'custom_profiles_clicked'), (e.SERVER_BOOSTS_CLICKED = 'server_boosts_clicked'), (e.HELPER_DISMISSED = 'premium_feature_helper_dismissed'), (e.HELPER_RENDERED = 'premium_feature_helper_rendered');
@@ -823,23 +828,23 @@ let eV = Object.freeze({
     !(function (e) {
         (e.BADGE_TOOLTIP_VIEWED = 'share_nitro_bagde_tooltip_viewed'), (e.BADGE_CLICKED = 'share_nitro_badge_clicked'), (e.FLOW_STARTED = 'share_nitro_flow_started'), (e.FLOW_COMPLETED = 'share_nitro_flow_completed');
     })(g || (g = {}));
-let eY = new Set(['PL', 'TR']),
-    ej = [1, 2, 3],
-    eW = [4, 5, 7, 6],
-    eK = [12, 5, 7, 6],
-    ez = [8, 9, 11, 10],
-    eq = ez.concat(ej),
-    eQ = 190;
+let eW = new Set(['PL', 'TR']),
+    eK = [1, 2, 3],
+    ez = [4, 5, 7, 6],
+    eq = [12, 5, 7, 6],
+    eQ = [8, 9, 11, 10],
+    eX = eQ.concat(eK),
+    e$ = 190;
 !(function (e) {
     e[(e.FRIEND_ANNIVERSARY = 0)] = 'FRIEND_ANNIVERSARY';
 })(S || (S = {}));
-let eX = 3,
-    e$ = 30,
-    eJ = 20;
+let eJ = 3,
+    e0 = 30,
+    e1 = 20;
 !(function (e) {
     (e.PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month'), (e.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month'), (e.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month'), (e.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month'), (e.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month'), (e.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month'), (e.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month'), (e.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month');
 })(A || (A = {}));
-let e0 = {
+let e2 = {
     premium_tenure_1_month: 1,
     premium_tenure_3_month: 3,
     premium_tenure_6_month: 6,

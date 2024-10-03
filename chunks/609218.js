@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return N;
     },
     p: function () {
         return r;
@@ -18,98 +18,105 @@ var r,
     _ = n(174609),
     E = n(703656),
     f = n(626135),
-    h = n(357355),
-    p = n(197115),
-    m = n(302945),
-    I = n(474936),
-    T = n(981631),
-    g = n(689938),
-    S = n(739626);
-function A(e) {
-    let { containerContext: t, image: n, title: r, description: o, enableSocialProof: A, analyticsLocationSection: v, upsellViewedTrackingData: N, onClose: O, onDisplay: R, onLearnMore: C } = e,
-        y = (0, l.e7)([h.Z], () => h.Z.affinities),
-        L = (0, l.e7)([h.Z], () => h.Z.hasFetched);
+    h = n(74538),
+    p = n(357355),
+    m = n(639119),
+    I = n(197115),
+    T = n(302945),
+    g = n(474936),
+    S = n(981631),
+    A = n(689938),
+    v = n(739626);
+function N(e) {
+    let { containerContext: t, image: n, title: r, description: o, enableSocialProof: N, analyticsLocationSection: O, upsellViewedTrackingData: R, onClose: C, onDisplay: y, onLearnMore: L } = e,
+        b = (0, l.e7)([p.Z], () => p.Z.affinities),
+        D = (0, l.e7)([p.Z], () => p.Z.hasFetched);
     a.useEffect(() => {
-        !L && A && c.MH();
-    }, [L, A]),
+        !D && N && c.MH();
+    }, [D, N]),
         a.useEffect(() => {
-            f.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, N), null == R || R();
-        }, [R, N]);
-    let b = y.length > 1 && A,
-        D = () => (2 === t ? S.hasTabParentContainer : 1 === t ? S.hasParentContainer : S.noParentContainer),
-        M = () => {
-            f.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: v,
-                location_object: T.qAy.NAVIGATION_LINK
+            f.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, R), null == y || y();
+        }, [y, R]);
+    let M = b.length > 1 && N,
+        P = () => (2 === t ? v.hasTabParentContainer : 1 === t ? v.hasParentContainer : v.noParentContainer),
+        U = () => {
+            f.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
+                location_section: O,
+                location_object: S.qAy.NAVIGATION_LINK
             }),
-                null == C || C(),
+                null == L || L(),
                 (0, _.Z)(),
-                O(),
+                C(),
                 (0, d.xf)(),
-                (0, E.uL)(T.Z5c.APPLICATION_STORE);
-        };
+                (0, E.uL)(S.Z5c.APPLICATION_STORE);
+        },
+        w = (0, m.N)(),
+        x = a.useCallback(() => {
+            var e;
+            return null !== (e = (0, h.fr)(w)) && void 0 !== e ? e : A.Z.Messages.PREMIUM_UPSELL_GET_NITRO;
+        }, [w]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(u.Backdrop, {
                 backdropStyle: u.BackdropStyles.DARK,
-                onClose: O,
-                'aria-label': g.Z.Messages.CLOSE,
+                onClose: C,
+                'aria-label': A.Z.Messages.CLOSE,
                 isVisible: !0
             }),
             (0, i.jsxs)('div', {
-                className: s()(S.container, D()),
+                className: s()(v.container, P()),
                 children: [
                     (0, i.jsx)(u.ModalCloseButton, {
-                        onClick: O,
-                        className: S.closeButton
+                        onClick: C,
+                        className: v.closeButton
                     }),
                     (0, i.jsxs)('div', {
-                        className: S.contentContainer,
+                        className: v.contentContainer,
                         children: [
                             (0, i.jsx)('img', {
-                                className: S.image,
+                                className: v.image,
                                 width: n.width,
                                 height: n.height,
                                 src: n.url,
                                 alt: 'Nitro Perk'
                             }),
                             (0, i.jsx)(u.Heading, {
-                                className: s()(S.title, { [S.titleNoSocialProof]: !b }),
+                                className: s()(v.title, { [v.titleNoSocialProof]: !M }),
                                 variant: 'heading-xl/bold',
                                 children: r
                             }),
-                            b && (0, i.jsx)(m.Z, { affinities: y }),
+                            M && (0, i.jsx)(T.Z, { affinities: b }),
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
-                                className: S.body,
+                                className: v.body,
                                 children: o
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: S.ctaContainer,
+                        className: v.ctaContainer,
                         children: [
                             (0, i.jsx)(u.Button, {
-                                className: S.secondaryCTA,
+                                className: v.secondaryCTA,
                                 size: u.Button.Sizes.SMALL,
                                 color: u.Button.Colors.CUSTOM,
                                 look: u.Button.Looks.LINK,
-                                onClick: M,
-                                children: g.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA
+                                onClick: U,
+                                children: A.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA
                             }),
-                            (0, i.jsx)(p.Z, {
+                            (0, i.jsx)(I.Z, {
                                 showGradient: !0,
                                 premiumModalAnalyticsLocation: {
-                                    section: v,
-                                    object: T.qAy.BUTTON_CTA
+                                    section: O,
+                                    object: S.qAy.BUTTON_CTA
                                 },
-                                subscriptionTier: I.Si.TIER_2,
+                                subscriptionTier: g.Si.TIER_2,
                                 size: u.Button.Sizes.SMALL,
                                 color: u.Button.Colors.CUSTOM,
                                 onClick: () => {
-                                    O();
+                                    C();
                                 },
-                                buttonText: g.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+                                buttonText: x()
                             })
                         ]
                     })
