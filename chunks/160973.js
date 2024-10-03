@@ -15,29 +15,32 @@ var i = t(442837),
     m = t(231338),
     p = t(689938);
 function _(e) {
-    let { channelId: n, application: t, activityAction: _ } = e,
-        C = (0, i.e7)([c.Z], () => c.Z.getChannel(n)),
-        h = (0, i.e7)([d.Z], () => d.Z.can(m.Pl.USE_EMBEDDED_ACTIVITIES, C)),
-        f = (0, l.KF)(null == C ? void 0 : C.id),
-        A = !1,
-        E = p.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START;
-    switch (_) {
+    let n,
+        { channelId: t, application: _, activityAction: C } = e,
+        h = (0, i.e7)([c.Z], () => c.Z.getChannel(t)),
+        f = (0, i.e7)([d.Z], () => d.Z.can(m.Pl.USE_EMBEDDED_ACTIVITIES, h)),
+        A = (0, l.KF)(null == h ? void 0 : h.id),
+        E = !1;
+    switch (C) {
         case r.JS.LEAVE:
-            A = !1;
+            E = !1;
             break;
         case r.JS.START:
-            (null == C ? void 0 : C.isGuildVoice()) ? f !== l.jy.CAN_LAUNCH && (A = !0) : !(0, a.WS)(C) && (A = !0);
+            (null == h ? void 0 : h.isGuildVoice()) ? A !== l.jy.CAN_LAUNCH && (E = !0) : !(0, a.WS)(h) && (E = !0);
             break;
         case r.JS.JOIN:
-            (null == C ? void 0 : C.isGuildVoice()) ? (A = !h) : !(0, a.WS)(C) && (A = !0);
+            (null == h ? void 0 : h.isGuildVoice()) ? (E = !f) : !(0, a.WS)(h) && (E = !0);
     }
-    if (_ !== r.JS.LEAVE) {
-        let e = t instanceof s.Z ? t.embeddedActivityConfig : t.embedded_activity_config,
-            n = (0, o.Z)((0, u.getOS)());
-        null == e || e.supported_platforms.includes(n) ? (null == C ? void 0 : C.isThread()) && ((A = !0), (E = p.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_IN_THREAD)) : ((A = !0), (E = p.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_ON_DEVICE));
+    if (C !== r.JS.LEAVE) {
+        let e = _ instanceof s.Z ? _.embeddedActivityConfig : _.embedded_activity_config,
+            t = (0, o.Z)((0, u.getOS)());
+        null == e || e.supported_platforms.includes(t) ? (null == h ? void 0 : h.isThread()) && ((E = !0), (n = p.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_IN_THREAD)) : ((E = !1), (n = p.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_ON_DEVICE));
     }
-    return {
-        disabled: A,
-        reason: E
-    };
+    return (
+        E && null == n && (n = p.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START),
+        {
+            disabled: E,
+            reason: n
+        }
+    );
 }
