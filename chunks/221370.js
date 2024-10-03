@@ -7,8 +7,8 @@ n.d(a, {
     n(653041);
 var t = n(735250),
     i = n(470079),
-    o = n(120356),
-    r = n.n(o),
+    r = n(120356),
+    o = n.n(r),
     l = n(758713),
     s = n(657707),
     c = n(793030),
@@ -32,7 +32,7 @@ function m(e) {
 function p(e) {
     let { platforms: a } = e;
     return (0, t.jsxs)('div', {
-        className: r()(d.row, d.gapSm),
+        className: o()(d.row, d.gapSm),
         style: { alignItems: 'center' },
         children: [
             (0, t.jsx)(c.xv, {
@@ -45,15 +45,15 @@ function p(e) {
 }
 function g(e) {
     let { detectedGame: a, className: n } = e,
-        o = i.useMemo(() => {
+        r = i.useMemo(() => {
             let e = new Set(a.platforms),
                 n = [...e];
             return !e.has(l.z.DESKTOP) && (e.has(l.z.MACOS) || e.has(l.z.LINUX)) && n.push(l.z.DESKTOP), n.filter((e) => u.includes(e));
         }, [a.platforms]);
-    return 0 === o.length
+    return 0 === r.length
         ? null
         : (0, t.jsx)('div', {
-              className: r()(d.column, d.gapLg, n),
-              children: o.length > 0 && (0, t.jsx)(p, { platforms: o })
+              className: o()(d.column, d.gapLg, n),
+              children: r.length > 0 && (0, t.jsx)(p, { platforms: r })
           });
 }

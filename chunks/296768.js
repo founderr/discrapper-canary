@@ -6,8 +6,8 @@ n.d(a, {
     n(47120);
 var t = n(735250),
     i = n(470079),
-    o = n(120356),
-    r = n.n(o),
+    r = n(120356),
+    o = n.n(r),
     l = n(392711),
     s = n.n(l),
     c = n(442837),
@@ -16,24 +16,22 @@ var t = n(735250),
     m = n(812206),
     p = n(669764),
     g = n(810568),
-    f = n(839392),
-    _ = n(774073),
+    _ = n(839392),
+    f = n(774073),
     x = n(644941),
-    v = n(689938),
-    h = n(51527),
+    h = n(689938),
+    v = n(51527),
     I = n(796805);
 let E = (e) => {
     let { game: a, onClose: n, trackClick: i } = e,
-        o = (0, c.e7)([m.Z], () => ((null == a ? void 0 : a.applicationId) != null ? m.Z.getApplication(null == a ? void 0 : a.applicationId) : null));
-    if (null == a) return null;
-    let r = a.coverImageUrl;
+        r = (0, c.e7)([m.Z], () => m.Z.getApplication(a.applicationId));
     return (0, t.jsx)(d.Tooltip, {
         text: a.name,
         children: (e) => {
-            var l;
+            var o;
             return (0, t.jsx)(d.Clickable, {
                 ...e,
-                className: h.clickable,
+                className: I.similarGameImageClickable,
                 onClick: async () => {
                     i(g.as.ClickSimilarGame, a.applicationId),
                         (0, d.openModalLazy)(() =>
@@ -49,25 +47,27 @@ let E = (e) => {
                         n();
                 },
                 children: (0, t.jsx)('img', {
-                    src: r,
+                    src: a.coverImageUrl,
                     className: I.similarGameImage,
-                    alt: v.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: null !== (l = null == o ? void 0 : o.name) && void 0 !== l ? l : null == a ? void 0 : a.name })
+                    alt: h.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: null !== (o = null == r ? void 0 : r.name) && void 0 !== o ? o : null == a ? void 0 : a.name })
                 })
             });
         }
     });
 };
 function A(e) {
-    let { applicationId: a, onClose: n, trackAction: o, similarGames: l, similarGamesError: m } = e,
-        g = (0, c.e7)([f.Z, p.Z], () => {
-            let e = void 0 === f.Z.getSimilarGames(a),
+    let { applicationId: a, onClose: n, trackAction: r, similarGames: l, similarGamesError: m } = e,
+        g = (0, c.e7)([_.Z, p.Z], () => {
+            let e = void 0 === _.Z.getSimilarGames(a),
                 n = l.some((e) => p.Z.isFetching(e));
             return e || n;
         }),
         x = (0, c.Wu)([p.Z], () =>
             l
                 .map((e) => p.Z.getGame(e))
-                .filter(_.W1)
+                .filter((e) => null != e)
+                .filter((e) => null != e.coverImageUrl)
+                .filter(f.W1)
                 .slice(0, 5)
         );
     return (i.useEffect(() => {
@@ -76,9 +76,9 @@ function A(e) {
     g && null == m)
         ? (0, t.jsxs)('div', {
               children: [
-                  (0, t.jsx)('div', { className: r()(I.loadingHeading, h.sectionHeader) }),
+                  (0, t.jsx)('div', { className: o()(I.loadingHeading, v.sectionHeader) }),
                   (0, t.jsx)('div', {
-                      className: r()(h.row, h.gapLg),
+                      className: o()(v.row, v.gapLg),
                       children: s()
                           .range(0, 5)
                           .map((e) => (0, t.jsx)('div', { className: I.loadingArtwork }, e))
@@ -89,13 +89,13 @@ function A(e) {
           ? (0, t.jsxs)('div', {
                 children: [
                     (0, t.jsx)(d.Heading, {
-                        className: h.sectionHeader,
+                        className: v.sectionHeader,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: v.Z.Messages.GAME_PROFILE_ALSO_PLAYING
+                        children: h.Z.Messages.GAME_PROFILE_ALSO_PLAYING
                     }),
                     (0, t.jsx)('div', {
-                        className: r()(h.row, h.gapLg),
+                        className: o()(v.row, v.gapLg),
                         style: {},
                         children: x.map((e) =>
                             (0, t.jsx)(
@@ -103,9 +103,9 @@ function A(e) {
                                 {
                                     game: e,
                                     onClose: n,
-                                    trackClick: o
+                                    trackClick: r
                                 },
-                                null == e ? void 0 : e.applicationId
+                                e.applicationId
                             )
                         )
                     })

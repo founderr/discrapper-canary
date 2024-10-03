@@ -6,8 +6,8 @@ n.d(a, {
 var t = n(735250);
 n(470079);
 var i = n(793030),
-    o = n(689938),
-    r = n(51527);
+    r = n(689938),
+    o = n(51527);
 function l(e) {
     let { detectedGame: a } = e;
     return 0 === a.publishers.length
@@ -15,10 +15,10 @@ function l(e) {
         : (0, t.jsxs)('div', {
               children: [
                   (0, t.jsx)(i.X6, {
-                      className: r.sectionHeader,
+                      className: o.sectionHeader,
                       variant: 'text-xs/semibold',
                       color: 'header-secondary',
-                      children: o.Z.Messages.GAME_PROFILE_PUBLISHER
+                      children: r.Z.Messages.GAME_PROFILE_PUBLISHER
                   }),
                   (0, t.jsx)(i.xv, {
                       variant: 'text-sm/normal',

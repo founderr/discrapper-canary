@@ -6,21 +6,21 @@ n.d(a, {
     n(47120);
 var t = n(470079),
     i = n(392711),
-    o = n.n(i),
-    r = n(876215),
+    r = n.n(i),
+    o = n(876215),
     l = n(442837),
     s = n(146282),
     c = n(897674),
     d = n(709054),
     u = n(206583);
-let m = new Set([r.s.PLAYED_GAME]),
+let m = new Set([o.s.PLAYED_GAME]),
     p = (e) => m.has(e.content_type);
 function g() {
     let e = (0, c.Z)(u.YN.GAME_PROFILE_FEED),
         a = (0, c.Z)(u.YN.GLOBAL_FEED),
         n = t.useMemo(
             () =>
-                o()(a)
+                r()(a)
                     .unionBy(e, (e) => e.id)
                     .filter(p)
                     .orderBy((e) => d.default.extractTimestamp(e.id), 'desc')

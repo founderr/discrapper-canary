@@ -6,8 +6,8 @@ n.d(a, {
     n(47120);
 var t = n(735250),
     i = n(470079),
-    o = n(481060),
-    r = n(810568),
+    r = n(481060),
+    o = n(810568),
     l = n(689938),
     s = n(51527),
     c = n(133512);
@@ -31,7 +31,7 @@ function d(e) {
         ? null
         : (0, t.jsxs)('div', {
               children: [
-                  (0, t.jsx)(o.Heading, {
+                  (0, t.jsx)(r.Heading, {
                       className: s.sectionHeader,
                       variant: 'text-md/semibold',
                       color: 'header-primary',
@@ -40,13 +40,13 @@ function d(e) {
                   (0, t.jsxs)('div', {
                       className: p ? c.gameProfileMediaSmall : c.gameProfileMediaLarge,
                       children: [
-                          (0, t.jsx)(o.AdvancedScrollerNone, {
+                          (0, t.jsx)(r.AdvancedScrollerNone, {
                               ref: u,
                               className: c.imageScroller,
                               orientation: 'horizontal',
                               children: m.map((e, a) =>
                                   (0, t.jsx)(
-                                      o.Clickable,
+                                      r.Clickable,
                                       {
                                           className: c.imageClickable,
                                           focusProps: {
@@ -54,8 +54,8 @@ function d(e) {
                                               ringClassName: c.gameArtworkFocusRing
                                           },
                                           onClick: () => {
-                                              d(r.as.ClickImage),
-                                                  (0, o.openModalLazy)(async () => {
+                                              d(o.as.ClickImage),
+                                                  (0, r.openModalLazy)(async () => {
                                                       let { default: e } = await n.e('99857').then(n.bind(n, 895023));
                                                       return (n) => {
                                                           let { ...i } = n;
@@ -83,19 +83,19 @@ function d(e) {
                                   className: c.mediaOverlay,
                                   children: [
                                       (0, t.jsx)('div', { className: c.gradientLeft }),
-                                      (0, t.jsx)(o.Clickable, {
+                                      (0, t.jsx)(r.Clickable, {
                                           className: c.arrowClickable,
                                           onClick: () => g(-1),
-                                          children: (0, t.jsx)(o.ArrowSmallLeftIcon, {
+                                          children: (0, t.jsx)(r.ArrowSmallLeftIcon, {
                                               className: c.arrow,
                                               color: 'currentColor'
                                           })
                                       }),
                                       (0, t.jsx)('div', { className: c.gradientRight }),
-                                      (0, t.jsx)(o.Clickable, {
+                                      (0, t.jsx)(r.Clickable, {
                                           className: c.arrowClickable,
                                           onClick: () => g(1),
-                                          children: (0, t.jsx)(o.ArrowSmallRightIcon, {
+                                          children: (0, t.jsx)(r.ArrowSmallRightIcon, {
                                               className: c.arrow,
                                               color: 'currentColor'
                                           })

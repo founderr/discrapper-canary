@@ -6,14 +6,14 @@ n.d(a, {
 var t = n(735250);
 n(470079);
 var i = n(481060),
-    o = n(239091),
-    r = n(299206),
+    r = n(239091),
+    o = n(299206),
     l = n(326103),
     s = n(689938);
 function c(e) {
     let { applicationId: a, className: c, viewId: d } = e,
         u = (0, l.v)('GameProfileOverflowMenu'),
-        m = (0, r.Z)({
+        m = (0, o.Z)({
             id: a,
             label: s.Z.Messages.COPY_ID_APPLICATION
         }),
@@ -44,7 +44,7 @@ function c(e) {
                   return (0, t.jsx)(i.Menu, {
                       navId: 'game-profile-context',
                       onClose: () => {
-                          (0, o.Zy)(), a();
+                          (0, r.Zy)(), a();
                       },
                       'aria-label': s.Z.Messages.GAME_PROFILE_VIEW_MORE,
                       onSelect: () => {},

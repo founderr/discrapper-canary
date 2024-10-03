@@ -6,8 +6,8 @@ n.d(a, {
     n(47120);
 var t = n(735250),
     i = n(470079),
-    o = n(120356),
-    r = n.n(o),
+    r = n(120356),
+    o = n.n(r),
     l = n(793030),
     s = n(481060),
     c = n(383895),
@@ -15,10 +15,10 @@ var t = n(735250),
     u = n(51527),
     m = n(268236);
 function p(e) {
-    let { entries: a, viewId: n, officialGuildId: o, onClose: p } = e,
+    let { entries: a, viewId: n, officialGuildId: r, onClose: p } = e,
         g = a.length > 7,
-        [f, _] = i.useState(!1),
-        x = i.useMemo(() => a.slice(0, g && !f ? 6 : void 0), [a, g, f]);
+        [_, f] = i.useState(!1),
+        x = i.useMemo(() => a.slice(0, g && !_ ? 6 : void 0), [a, g, _]);
     return (0, t.jsxs)('div', {
         children: [
             (0, t.jsx)(l.X6, {
@@ -37,7 +37,7 @@ function p(e) {
                 : (0, t.jsxs)(t.Fragment, {
                       children: [
                           (0, t.jsx)('div', {
-                              className: r()(m.friends, { [m.fadedEntries]: g && !f }),
+                              className: o()(m.friends, { [m.fadedEntries]: g && !_ }),
                               children: (0, t.jsx)('div', {
                                   className: u.column,
                                   children: x.map((e) =>
@@ -47,7 +47,7 @@ function p(e) {
                                               entry: e,
                                               viewId: n,
                                               onClose: p,
-                                              officialGuildId: o
+                                              officialGuildId: r
                                           },
                                           e.id
                                       )
@@ -55,10 +55,10 @@ function p(e) {
                               })
                           }),
                           g &&
-                              !f &&
+                              !_ &&
                               (0, t.jsxs)(s.Clickable, {
                                   className: m.expandEntriesButton,
-                                  onClick: () => _(!0),
+                                  onClick: () => f(!0),
                                   children: [
                                       (0, t.jsx)(l.xv, {
                                           variant: 'text-xs/semibold',
