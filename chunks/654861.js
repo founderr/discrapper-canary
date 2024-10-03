@@ -754,16 +754,16 @@ var n = (function (e) {
                 c.push(W(e.slice(u + 1, o)));
             } else throw Error(s + ' is not a valid character');
         }
-        return V(c, t, I);
+        return k(c, t, I);
     };
-    function V(e, t, r) {
+    function k(e, t, r) {
         var n,
             a = o[0],
             i = o[1];
         for (n = e.length - 1; n >= 0; n--) (a = a.add(e[n].times(i))), (i = i.times(t));
         return r ? a.negate() : a;
     }
-    function k(e, t) {
+    function V(e, t) {
         if ((t = n(t)).isZero()) {
             if (e.isZero())
                 return {
@@ -817,7 +817,7 @@ var n = (function (e) {
         );
     }
     function x(e, t, n) {
-        var a = k(e, t);
+        var a = V(e, t);
         return (
             (a.isNegative ? '-' : '') +
             a.value
@@ -852,13 +852,13 @@ var n = (function (e) {
         return u(l), new i(l, r);
     }
     (i.prototype.toArray = function (e) {
-        return k(this, e);
+        return V(this, e);
     }),
         (_.prototype.toArray = function (e) {
-            return k(this, e);
+            return V(this, e);
         }),
         (E.prototype.toArray = function (e) {
-            return k(this, e);
+            return V(this, e);
         }),
         (i.prototype.toString = function (t, r) {
             if ((e === t && (t = 10), 10 !== t)) return x(this, t, r);
@@ -923,7 +923,7 @@ var n = (function (e) {
                 a = H(e, t),
                 i = w(e, t).subtract(a).add(1);
             if (i.isSmall) return a.add(Math.floor(n() * i));
-            for (var _ = k(i, 10000000).value, E = [], s = !0, c = 0; c < _.length; c++) {
+            for (var _ = V(i, 10000000).value, E = [], s = !0, c = 0; c < _.length; c++) {
                 var I = s ? _[c] : 10000000,
                     u = R(n() * I);
                 E.push(u), u < I && (s = !1);
@@ -931,7 +931,7 @@ var n = (function (e) {
             return a.add(o.fromArray(E, 10000000, !1));
         }),
         (o.fromArray = function (e, t, r) {
-            return V(e.map(W), W(t || 10), r);
+            return k(e.map(W), W(t || 10), r);
         }),
         o
     );

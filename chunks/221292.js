@@ -53,7 +53,7 @@ let T = (e) => {
             n = u.Z.isMobileOnline(e);
         return t === I.Sk.ONLINE && n ? ''.concat(t, '-mobile') : t === I.Sk.ONLINE ? ''.concat(t, '-desktop') : t;
     },
-    S = (e) => (null == e ? e : Object.keys(m.IIU)[Object.values(m.IIU).indexOf(e)]),
+    S = (e) => (null == e ? e : 'VOICE' === e ? 'VOICE' : Object.keys(m.IIU)[Object.values(m.IIU).indexOf(e)]),
     A = (e) => {
         var t, n;
         let { layout: r, userId: i, guildId: a, sessionId: o, sourceSessionId: s, showGuildProfile: c = !0 } = e,

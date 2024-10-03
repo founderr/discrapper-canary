@@ -154,8 +154,8 @@ let b =
             name: 'username'
         },
         tags: K,
-        colorScheme: V = 'system',
-        themeLight: k = {},
+        colorScheme: k = 'system',
+        themeLight: V = {},
         themeDark: x = {},
         addScreenshotButtonLabel: F = h,
         cancelButtonLabel: W = l,
@@ -190,9 +190,9 @@ let b =
                 enableScreenshot: H,
                 useSentryUser: Y,
                 tags: K,
-                colorScheme: V,
+                colorScheme: k,
                 themeDark: x,
-                themeLight: k,
+                themeLight: V,
                 triggerLabel: ea,
                 triggerAriaLabel: eo,
                 cancelButtonLabel: W,
@@ -481,8 +481,8 @@ var w,
     H,
     Y,
     K,
-    V,
     k,
+    V,
     x,
     F = {},
     W = [],
@@ -536,7 +536,7 @@ function ee(e, t) {
     return 'function' == typeof e.type ? ee(e) : null;
 }
 function et(e) {
-    ((!e.__d && (e.__d = !0) && K.push(e) && !er.__r++) || V !== H.debounceRendering) && ((V = H.debounceRendering) || k)(er);
+    ((!e.__d && (e.__d = !0) && K.push(e) && !er.__r++) || k !== H.debounceRendering) && ((k = H.debounceRendering) || V)(er);
 }
 function er() {
     var e,
@@ -851,7 +851,7 @@ function eu(e, t, r) {
     }),
     (Z.prototype.render = Q),
     (K = []),
-    (k = 'function' == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout),
+    (V = 'function' == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout),
     (x = function (e, t) {
         return e.__v.__b - t.__v.__b;
     }),
@@ -1131,7 +1131,7 @@ let eY = {
         useState: eM
     },
     eK = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/DialogHeader.tsx';
-function eV({ options: e }) {
+function ek({ options: e }) {
     let t = eU(
         () => ({
             __html: (function () {
@@ -1179,7 +1179,7 @@ function eV({ options: e }) {
             : null
     );
 }
-let ek = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/Form.tsx';
+let eV = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/Form.tsx';
 function ex(e, t) {
     let r = e.get(t);
     return 'string' == typeof r ? r.trim() : '';
@@ -1247,7 +1247,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
             ),
             __self: this,
             __source: {
-                fileName: ek,
+                fileName: eV,
                 lineNumber: 144
             }
         },
@@ -1256,7 +1256,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                   onError: y,
                   __self: this,
                   __source: {
-                      fileName: ek,
+                      fileName: eV,
                       lineNumber: 146
                   }
               })
@@ -1268,7 +1268,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                 'data-sentry-feedback': !0,
                 __self: this,
                 __source: {
-                    fileName: ek,
+                    fileName: eV,
                     lineNumber: 149
                 }
             },
@@ -1278,7 +1278,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                     class: 'form__top',
                     __self: this,
                     __source: {
-                        fileName: ek,
+                        fileName: eV,
                         lineNumber: 150
                     }
                 },
@@ -1289,7 +1289,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               class: 'form__error-container',
                               __self: this,
                               __source: {
-                                  fileName: ek,
+                                  fileName: eV,
                                   lineNumber: 151
                               }
                           },
@@ -1304,7 +1304,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               class: 'form__label',
                               __self: this,
                               __source: {
-                                  fileName: ek,
+                                  fileName: eV,
                                   lineNumber: 154
                               }
                           },
@@ -1314,7 +1314,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               isRequired: N,
                               __self: this,
                               __source: {
-                                  fileName: ek,
+                                  fileName: eV,
                                   lineNumber: 155
                               }
                           }),
@@ -1328,7 +1328,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               type: 'text',
                               __self: this,
                               __source: {
-                                  fileName: ek,
+                                  fileName: eV,
                                   lineNumber: 156
                               }
                           })
@@ -1340,7 +1340,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                           type: 'hidden',
                           __self: this,
                           __source: {
-                              fileName: ek,
+                              fileName: eV,
                               lineNumber: 167
                           }
                       }),
@@ -1352,7 +1352,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               class: 'form__label',
                               __self: this,
                               __source: {
-                                  fileName: ek,
+                                  fileName: eV,
                                   lineNumber: 171
                               }
                           },
@@ -1362,7 +1362,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               isRequired: d,
                               __self: this,
                               __source: {
-                                  fileName: ek,
+                                  fileName: eV,
                                   lineNumber: 172
                               }
                           }),
@@ -1376,7 +1376,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               type: 'email',
                               __self: this,
                               __source: {
-                                  fileName: ek,
+                                  fileName: eV,
                                   lineNumber: 173
                               }
                           })
@@ -1388,7 +1388,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                           type: 'hidden',
                           __self: this,
                           __source: {
-                              fileName: ek,
+                              fileName: eV,
                               lineNumber: 184
                           }
                       }),
@@ -1399,7 +1399,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                         class: 'form__label',
                         __self: this,
                         __source: {
-                            fileName: ek,
+                            fileName: eV,
                             lineNumber: 187
                         }
                     },
@@ -1409,7 +1409,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                         isRequired: !0,
                         __self: this,
                         __source: {
-                            fileName: ek,
+                            fileName: eV,
                             lineNumber: 188
                         }
                     }),
@@ -1423,7 +1423,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                         rows: 5,
                         __self: this,
                         __source: {
-                            fileName: ek,
+                            fileName: eV,
                             lineNumber: 189
                         }
                     })
@@ -1436,7 +1436,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                               class: 'form__label',
                               __self: this,
                               __source: {
-                                  fileName: ek,
+                                  fileName: eV,
                                   lineNumber: 201
                               }
                           },
@@ -1450,7 +1450,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                   },
                                   __self: this,
                                   __source: {
-                                      fileName: ek,
+                                      fileName: eV,
                                       lineNumber: 202
                                   }
                               },
@@ -1463,7 +1463,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                         class: 'form__error-container',
                                         __self: this,
                                         __source: {
-                                            fileName: ek,
+                                            fileName: eV,
                                             lineNumber: 212
                                         }
                                     },
@@ -1479,7 +1479,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                     class: 'btn-group',
                     __self: this,
                     __source: {
-                        fileName: ek,
+                        fileName: eV,
                         lineNumber: 216
                     }
                 },
@@ -1490,7 +1490,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                         type: 'submit',
                         __self: this,
                         __source: {
-                            fileName: ek,
+                            fileName: eV,
                             lineNumber: 217
                         }
                     },
@@ -1504,7 +1504,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                         onClick: n,
                         __self: this,
                         __source: {
-                            fileName: ek,
+                            fileName: eV,
                             lineNumber: 220
                         }
                     },
@@ -1521,7 +1521,7 @@ function eW({ label: e, isRequired: t, isRequiredLabel: r }) {
             class: 'form__label__text',
             __self: this,
             __source: {
-                fileName: ek,
+                fileName: eV,
                 lineNumber: 239
             }
         },
@@ -1533,7 +1533,7 @@ function eW({ label: e, isRequired: t, isRequiredLabel: r }) {
                     class: 'form__label__text--required',
                     __self: this,
                     __source: {
-                        fileName: ek,
+                        fileName: eV,
                         lineNumber: 241
                     }
                 },
@@ -1668,7 +1668,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
                                   lineNumber: 59
                               }
                           },
-                          q(eV, {
+                          q(ek, {
                               options: n,
                               __self: this,
                               __source: {

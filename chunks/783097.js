@@ -93,9 +93,9 @@ function L(e) {
     return v(e) && R(e) ? (e instanceof f.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function b(e) {
-    let { command: t, optionValues: n, context: r, commandTargetId: i, maxSizeCallback: a, sectionName: o } = e,
-        { channel: s } = r,
-        c = async () => {
+    let { command: t, optionValues: n, context: r, commandTargetId: i, maxSizeCallback: a, sectionName: o, commandOrigin: s = d.bB.APPLICATION_LAUNCHER } = e,
+        { channel: c } = r,
+        f = async () => {
             try {
                 let l = await (0, _.Z)({
                     command: t,
@@ -103,13 +103,13 @@ function b(e) {
                     context: r,
                     commandTargetId: i,
                     maxSizeCallback: a,
-                    commandOrigin: d.bB.APPLICATION_LAUNCHER,
+                    commandOrigin: s,
                     sectionName: o,
                     source: m.Z.entrypoint()
                 });
                 if (t.inputType === d.iw.BUILT_IN_TEXT && null != l) {
                     var e;
-                    let t = E.ZP.parse(s, l.content);
+                    let t = E.ZP.parse(c, l.content);
                     (t.tts = null !== (e = l.tts) && void 0 !== e && e), u.Z.sendMessage(r.channel.id, t);
                 }
             } catch (e) {
@@ -118,13 +118,13 @@ function b(e) {
                         title: S.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
                         body: S.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
                         confirmText: S.Z.Messages.RETRY,
-                        onConfirm: () => c()
+                        onConfirm: () => f()
                     }),
                     e)
                 );
             }
         };
-    return c();
+    return f();
 }
 function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
