@@ -1,8 +1,11 @@
 n.d(t, {
-    D: function () {
+    DC: function () {
         return _;
     },
-    l: function () {
+    ZR: function () {
+        return f;
+    },
+    l8: function () {
         return E;
     }
 });
@@ -20,12 +23,7 @@ function d(e) {
 function _(e) {
     let { value: t, statisticId: n } = e,
         i = d(n);
-    return null == i
-        ? null
-        : (0, r.jsx)(s.ej, {
-              Icon: o.hAD,
-              text: i.format({ value: t })
-          });
+    return null == i ? null : (0, r.jsx)(f, { text: i.format({ value: t }) });
 }
 function E(e) {
     let { intervalEnd: t } = e,
@@ -33,5 +31,12 @@ function E(e) {
     return (0, r.jsx)(s.ej, {
         Icon: o.Que,
         text: n
+    });
+}
+function f(e) {
+    let { text: t } = e;
+    return (0, r.jsx)(s.ej, {
+        Icon: o.hAD,
+        text: t
     });
 }
