@@ -1,37 +1,44 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(544891),
-    i = n(569471),
-    a = n(346479),
-    o = n(592125),
-    s = n(375954),
-    l = n(306680),
-    u = n(594174),
-    c = n(709054),
-    d = n(981631);
-async function _(e, t) {
-    let n = u.default.getCurrentUser();
+    i = n(710845),
+    a = n(569471),
+    o = n(346479),
+    s = n(592125),
+    l = n(375954),
+    u = n(306680),
+    c = n(594174),
+    d = n(709054),
+    _ = n(981631);
+let E = new i.Z('markUnread');
+async function f(e, t) {
+    let n = c.default.getCurrentUser();
     if (null == n) return;
-    let _ = s.Z.getMessages(e),
-        E = _.toArray()
-            .filter((e) => 0 > c.default.compare(e.id, t))
-            .sort((e, t) => c.default.compare(e.id, t.id))
+    let i = l.Z.getMessages(e),
+        f = i
+            .toArray()
+            .filter((e) => 0 > d.default.compare(e.id, t))
+            .sort((e, t) => d.default.compare(e.id, t.id))
             .reverse()[0],
-        f = null == E ? c.default.atPreviousMillisecond(t) : E.id,
-        h = 0;
-    _.forAll((e) => {
-        c.default.compare(e.id, f) > 0 && (0, l.Ex)(e, n) && h++;
+        h = null == f ? d.default.atPreviousMillisecond(t) : f.id,
+        p = 0;
+    i.forAll((e) => {
+        d.default.compare(e.id, h) > 0 && (0, u.Ex)(e, n) && p++;
     });
-    let p = o.Z.getChannel(e);
-    null != p && p.isThread() && (p.isArchivedThread() && (await a.Z.unarchiveThread(p, !1)), !i.Z.hasJoined(e) && (await a.Z.joinThread(p, 'Mark Unread'))),
+    let m = s.Z.getChannel(e);
+    null != m && m.isThread() && (m.isArchivedThread() && (await o.Z.unarchiveThread(m, !1)), !a.Z.hasJoined(e) && (await o.Z.joinThread(m, 'Mark Unread'))),
+        E.log('Marking unread', {
+            channelId: e,
+            messageId: t
+        }),
         r.tn.post({
-            url: d.ANM.MESSAGE_ACK(e, f),
+            url: _.ANM.MESSAGE_ACK(e, h),
             body: {
                 manual: !0,
-                mention_count: h
+                mention_count: p
             },
             oldFormErrors: !0
         });
