@@ -230,6 +230,7 @@ var n;
         (e.STAGE_VIDEO_LIMIT = 'stage video limit'),
         (e.ACTIVITIES_MINI_SHELF = 'activities mini shelf'),
         (e.ACTIVITIES_MINI_SHELF_BANNER = 'activities mini shelf banner'),
+        (e.APP_DMS_ENTRY_POINT_COMMAND_BUTTON = 'app_dms_entry_point_command_button'),
         (e.APP_LAUNCHER = 'app launcher'),
         (e.APP_DETAIL = 'app detail'),
         (e.VC_TILE_ACTIVITY_INVITE = 'vc tile activity invite'),

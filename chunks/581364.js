@@ -297,6 +297,7 @@ function w(e) {
     switch (e) {
         case I.bB.CHAT:
         case I.bB.APPLICATION_LAUNCHER:
+        case I.bB.APP_LAUNCHER_APPLICATION_VIEW:
         case I.bB.CONTEXT_MENU:
         case I.bB.VOICE_UI:
         case I.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
@@ -307,6 +308,7 @@ function w(e) {
         case I.bB.ACTIVITIES_HOME:
         case I.bB.ACTIVITY_INSTANCE_EMBED:
         case I.bB.ACTIVITY_BOOKMARK_EMBED:
+        case I.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
         case I.bB.IMAGE_RECS_MENU:
         case I.bB.IMAGE_RECS_SUBMENU:
             return m.d.SlashCommand;

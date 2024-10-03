@@ -1,10 +1,10 @@
-var r, i, a;
+var r, i, a, o;
 n.d(t, {
     G0: function () {
-        return s;
+        return l;
     },
     L3: function () {
-        return o;
+        return s;
     },
     LG: function () {
         return i;
@@ -19,7 +19,7 @@ n.d(t, {
     !(function (e) {
         (e.NONE = 'NONE'), (e.TEXT = 'TEXT'), (e.VOICE = 'VOICE');
     })(r || (r = {}));
-let o = {
+let s = {
         SEARCH: 'search',
         RECENT: 'recent',
         INSTALLED: 'installed',
@@ -29,7 +29,7 @@ let o = {
         NEW_TO_APPS: 'new_to_apps',
         APPS_IN_THIS_SERVER: 'apps_in_this_server'
     },
-    s = {
+    l = {
         HOME: 'home',
         APP_DETAIL: 'app_detail'
     };
@@ -38,4 +38,7 @@ let o = {
 })(i || (i = {})),
     !(function (e) {
         (e[(e.DISMISSED = 0)] = 'DISMISSED'), (e[(e.COMMAND = 1)] = 'COMMAND'), (e[(e.ACTIVITY = 2)] = 'ACTIVITY');
-    })(a || (a = {}));
+    })(a || (a = {})),
+    !(function (e) {
+        (e.OPEN_APP_DM = 'open_app_dm'), (e.USE_APP_COMMAND = 'use_app_command');
+    })(o || (o = {}));

@@ -396,6 +396,8 @@ function ee(e) {
     switch (e) {
         case B.bB.APPLICATION_LAUNCHER:
             return B.Vh.APP_LAUNCHER;
+        case B.bB.APP_LAUNCHER_APPLICATION_VIEW:
+            return B.Vh.APP_LAUNCHER_APPLICATION_VIEW;
         case B.bB.IMAGE_RECS_MENU:
             return B.Vh.IMAGE_RECS_MENU;
         case B.bB.IMAGE_RECS_SUBMENU:
@@ -408,6 +410,8 @@ function ee(e) {
             return B.Vh.ACTIVITIES_MINI_SHELF;
         case B.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
             return B.Vh.VC_TILE_ACTIVITY_SUGGESTION;
+        case B.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
+            return B.Vh.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
         default:
             return B.Vh.SLASH_UI;
     }
