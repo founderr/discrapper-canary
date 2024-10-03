@@ -41,15 +41,7 @@ function O(e) {
         (p = {}),
         (m = {}),
         e.relationships.forEach((e) => {
-            (h[e.id] = e.type),
-                null != e.nickname && (p[e.id] = e.nickname),
-                null != e.since && (m[e.id] = e.since),
-                e.is_spam_request &&
-                    (0, u.A)({
-                        location: 'friend_request_spam_inbox',
-                        trackExposure: !0
-                    }) &&
-                    I.add(e.id);
+            (h[e.id] = e.type), null != e.nickname && (p[e.id] = e.nickname), null != e.since && (m[e.id] = e.since), e.is_spam_request && (0, u.A)({ location: 'friend_request_spam_inbox' }) && I.add(e.id);
         }),
         N();
 }
