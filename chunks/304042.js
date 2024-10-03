@@ -118,7 +118,7 @@ function Y(e) {
                   })
                 : null == el
                   ? (0, i.jsxs)(u.Clickable, {
-                        className: s()(e, { [Z.clickable]: et }),
+                        className: s()(e, Z.overlay, { [Z.clickable]: et }),
                         onClick: et ? t : void 0,
                         children: [
                             (0, i.jsx)('img', {
@@ -126,9 +126,19 @@ function Y(e) {
                                 src: W === k.BRd.LIGHT ? H : V
                             }),
                             j !== G.y0.FULL_SIZE &&
-                                (0, i.jsx)(u.Text, {
-                                    variant: 'text-xs/normal',
-                                    children: ea ? B.Z.Messages.STREAM_NO_PREVIEW : B.Z.Messages.STREAM_NO_PERMISSION_CTA
+                                (0, i.jsxs)(i.Fragment, {
+                                    children: [
+                                        (0, i.jsx)(u.Text, {
+                                            className: Z.overlayText,
+                                            variant: 'text-sm/medium',
+                                            color: 'always-white',
+                                            children: (0, I.P9)(en)
+                                        }),
+                                        (0, i.jsx)(u.Text, {
+                                            variant: 'text-sm/medium',
+                                            children: ea ? B.Z.Messages.STREAM_NO_PREVIEW : B.Z.Messages.STREAM_NO_PERMISSION_CTA
+                                        })
+                                    ]
                                 })
                         ]
                     })
@@ -141,11 +151,21 @@ function Y(e) {
                                 src: el,
                                 className: Z.image
                             }),
-                            j === G.y0.BITE_SIZE &&
-                                (0, i.jsx)(u.ClydeIcon, {
-                                    size: 'xs',
-                                    color: 'currentColor',
-                                    className: Z.clyde
+                            j !== G.y0.FULL_SIZE &&
+                                (0, i.jsxs)(i.Fragment, {
+                                    children: [
+                                        (0, i.jsx)(u.Text, {
+                                            className: Z.overlayText,
+                                            variant: 'text-sm/medium',
+                                            color: 'always-white',
+                                            children: (0, I.P9)(en)
+                                        }),
+                                        (0, i.jsx)(u.ClydeIcon, {
+                                            size: 'xs',
+                                            color: 'currentColor',
+                                            className: Z.clyde
+                                        })
+                                    ]
                                 })
                         ]
                     });

@@ -455,12 +455,11 @@ let ee = (e) => {
                         stream: r,
                         className: F.applicationStreamingPreviewSize
                     }),
-                    (0, s.jsx)('div', {
-                        className: F.applicationStreamingHoverWrapper,
-                        children: (0, s.jsx)('div', {
-                            className: F.applicationStreamingHoverText,
-                            children: (0, O.P9)(h)
-                        })
+                    (0, s.jsx)(u.Text, {
+                        className: F.applicationStreamingHoverText,
+                        variant: 'text-sm/medium',
+                        color: 'always-white',
+                        children: (0, O.P9)(h)
                     })
                 ]
             }),
