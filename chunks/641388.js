@@ -3,6 +3,7 @@ e.exports = {
     section: 'section_a24e0c',
     sectionHeader: 'sectionHeader_a24e0c',
     sectionContent: 'sectionContent_a24e0c',
+    gameArt: 'gameArt_a24e0c',
     animatedCard: 'animatedCard_a24e0c',
     errorPage: 'errorPage_a24e0c',
     emptySavedGuilds: 'emptySavedGuilds_a24e0c',
@@ -21,5 +22,6 @@ e.exports = {
     upsellSelect: 'upsellSelect_a24e0c',
     heroButton: 'heroButton_a24e0c',
     heroButtonInner: 'heroButtonInner_a24e0c',
-    globalDiscoveryTitle: 'globalDiscoveryTitle_a24e0c'
+    globalDiscoveryTitle: 'globalDiscoveryTitle_a24e0c',
+    customDiscoveryTitle: 'customDiscoveryTitle_a24e0c'
 };

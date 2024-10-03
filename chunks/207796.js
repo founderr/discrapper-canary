@@ -53,6 +53,7 @@ let _ = (0, s.Z)(
             selectedPlaystyle: null,
             selectedTraits: [],
             dismissedPilotAdminNux: !1,
+            entrypointGameId: null,
             setSavedGuildIds: (t) => (0, u.j)(() => e({ savedGuildIds: t })),
             setGame: (t) => (0, u.j)(() => e({ game: t })),
             setSelectedGames: (t) => {
@@ -131,7 +132,8 @@ function f() {
             savedGuildIds: [],
             selectedGames: [],
             selectedPlaystyle: null,
-            selectedTraits: []
+            selectedTraits: [],
+            entrypointGameId: null
         });
     });
 }

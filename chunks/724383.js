@@ -1,86 +1,47 @@
-n.d(t, {
-    V: function () {
-        return A;
-    }
-}),
-    n(773603);
 var i = n(735250),
     a = n(470079),
-    s = n(664751),
-    r = n(266067),
-    l = n(143927),
-    o = n(731965),
-    c = n(442837),
-    d = n(728345),
-    u = n(812206),
-    _ = n(252618),
-    h = n(207796),
-    E = n(352057),
-    m = n(319443),
-    I = n(106075),
-    g = n(121711),
-    p = n(823379),
-    T = n(571457),
-    f = n(836768),
-    S = n(766219),
-    C = n(49898),
-    N = n(909482);
-function A(e) {
-    let { searchRoute: t } = e,
-        { game: n } = s.parse(t),
-        r = (0, c.e7)([u.Z], () => (null != n ? u.Z.getApplication(n) : null));
-    return (
-        a.useEffect(() => {
-            (0, T.$X)({ gameId: n });
-        }, [n]),
-        a.useEffect(() => {
-            (0, o.j)(() => {
-                f.d.setState({ selectedTab: C.F$.SERVERS }), h.GN.setState({ mode: h.v0.DISCOVERY });
-            }),
-                null != n &&
-                    null == r &&
-                    ((0, o.j)(() => {
-                        h.GN.setState({ loadingGameApplication: !0 });
-                    }),
-                    d.ZP.fetchApplication(n).finally(() => {
-                        (0, o.j)(() => {
-                            h.GN.setState({ loadingGameApplication: !1 });
-                        });
-                    })),
-                null != n && null != r && h.GN.getState().setSelectedGames([n]);
-        }, [r, n]),
-        (0, i.jsx)(v, {})
-    );
-}
-function v() {
-    let e = (0, E.h)({ location: 'DiscoveryUISelectedTab' }),
-        t = (0, f.d)((e) => e.selectedTab, l.Z),
+    s = n(266067),
+    r = n(143927),
+    l = n(731965),
+    o = n(252618),
+    c = n(352057),
+    d = n(319443),
+    u = n(106075),
+    _ = n(121711),
+    h = n(823379),
+    E = n(571457),
+    m = n(836768),
+    I = n(766219),
+    g = n(49898),
+    p = n(909482);
+t.Z = function () {
+    let e = (0, c.h)({ location: 'DiscoveryUISelectedTab' }),
+        t = (0, m.d)((e) => e.selectedTab, r.Z),
         n = (function (e) {
             switch (e) {
-                case C.F$.SERVERS:
-                    return (0, i.jsx)(I.Z, {});
-                case C.F$.APPS:
-                    return (0, i.jsx)(m.Z, {});
-                case C.F$.QUESTS:
-                    return (0, i.jsx)(g.Z, {});
+                case g.F$.SERVERS:
+                    return (0, i.jsx)(u.Z, {});
+                case g.F$.APPS:
+                    return (0, i.jsx)(d.Z, {});
+                case g.F$.QUESTS:
+                    return (0, i.jsx)(_.Z, {});
                 default:
-                    (0, p.vE)(e);
+                    (0, h.vE)(e);
             }
         })(t),
-        s = (0, r.TH)();
+        T = (0, s.TH)();
     return (
         a.useEffect(() => {
-            let t = s.pathname,
-                n = (0, S.IE)(t, e);
-            n !== f.d.getState().selectedTab && (0, o.j)(() => f.d.setState({ selectedTab: n }));
-        }, [e, s.pathname]),
+            let t = T.pathname,
+                n = (0, I.IE)(t, e);
+            n !== m.d.getState().selectedTab && (0, l.j)(() => m.d.setState({ selectedTab: n }));
+        }, [e, T.pathname]),
         a.useEffect(() => {
-            (0, T.RI)({ selectedTab: t });
+            (0, E.RI)({ selectedTab: t });
         }, [t]),
         (0, i.jsxs)('section', {
-            className: N.container,
-            children: [(0, i.jsx)(_.yY, { location: (0, S.sm)(t) }), (0, i.jsx)('div', { className: N.dragRegion }), n]
+            className: p.container,
+            children: [(0, i.jsx)(o.yY, { location: (0, I.sm)(t) }), (0, i.jsx)('div', { className: p.dragRegion }), n]
         })
     );
-}
-t.Z = v;
+};

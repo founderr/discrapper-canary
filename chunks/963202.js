@@ -17,6 +17,9 @@ n.d(t, {
     iN: function () {
         return E;
     },
+    io: function () {
+        return x;
+    },
     nk: function () {
         return C;
     },
@@ -333,4 +336,20 @@ let P = (0, o.B)({
 });
 function U(e) {
     return P.useExperiment({ location: e }).canAdminsBrowse;
+}
+let w = (0, o.B)({
+    kind: 'user',
+    id: '2024-10_rapidash_discovery_entrypoint',
+    label: 'Rapidash Discovery Entrypoint',
+    defaultConfig: { showDiscovery: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Enable',
+            config: { showDiscovery: !0 }
+        }
+    ]
+});
+function x(e) {
+    return w.useExperiment({ location: e }).showDiscovery;
 }

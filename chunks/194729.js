@@ -89,13 +89,15 @@ class J extends a.PureComponent {
             null != r)
         ) {
             let { query: e, offset: t, limit: n, preferredLocale: i, categoryId: a } = c.parse(r);
-            (0, m.bR)(e, {
-                categoryId: parseInt(a, 10),
-                preferredLocale: i,
-                offset: parseInt(t, 10),
-                filters: { approximate_member_count: D.sq },
-                length: parseInt(n, 10)
-            });
+            null != e &&
+                e.length > 0 &&
+                (0, m.bR)(e, {
+                    categoryId: parseInt(a, 10),
+                    preferredLocale: i,
+                    offset: parseInt(t, 10),
+                    filters: { approximate_member_count: D.sq },
+                    length: parseInt(n, 10)
+                });
         } else null != l && l !== Y.Hk && E.Z.wait(() => (0, m.uY)(l));
         let u = null !== (t = null === (e = (0, Z.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
         u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, L.e)('guild_discovery'), (0, f.kR)({ selectedCategoryId: o });
