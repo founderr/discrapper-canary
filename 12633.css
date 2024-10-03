@@ -16280,7 +16280,7 @@ span.clanTag_a31c43 {
     color: var(--content-inventory-overlay-text-secondary)
 }
 
-.joinLeaderboardCTAIcon_cf8a7d path {
+.leagueIcon_cf8a7d path {
     fill: var(--content-inventory-overlay-text-secondary)
 }
 
@@ -16293,6 +16293,41 @@ span.clanTag_a31c43 {
     border-radius: 4px;
     margin-left: 4px;
     height: 16px
+}
+
+.emptyContainer_cf8a7d {
+    height: 112px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #1f1a36 0%, #4e334a 100%);
+    border-radius: var(--radius-md)
+}
+
+.emptyTitleContainer_cf8a7d {
+    margin-left: 16px;
+    max-width: 148px
+}
+
+.emptyTitle_cf8a7d {
+    color: var(--content-inventory-overlay-text-primary)
+}
+
+.emptySplash_cf8a7d {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: var(--radius-md);
+    border-bottom-right-radius: var(--radius-md);
+    -webkit-mask-image: linear-gradient(270deg, #000 0, #000 40px, rgba(0, 0, 0, 0)176px);
+    mask-image: linear-gradient(270deg, #000 0, #000 40px, rgba(0, 0, 0, 0)176px)
+}
+
+.emptyCrownIcon_cf8a7d {
+    position: relative;
+    top: 2px;
+    left: 2px
 }
 
 .popout_b245a4 {

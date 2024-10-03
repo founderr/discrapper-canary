@@ -186,7 +186,10 @@ function eP(e) {
         g === ed.ApplicationDirectoryProfileSections.GENERAL && eG();
     }, [eG, g]),
         t.useEffect(() => {
-            null != p && F.i6(p);
+            if (null != p) {
+                let e = 'true' === new URLSearchParams(location.search).get('preview') || void 0;
+                F.i6(p, { noCache: e });
+            }
         }, [p]),
         t.useEffect(() => {
             if ((null == eM ? void 0 : eM.directory_entry) != null) {

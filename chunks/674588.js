@@ -84,9 +84,9 @@ async function v(e) {
         n = Date.now(),
         r = u.Z.getApplicationFetchState(e),
         i = u.Z.getApplicationLastFetchTime(e),
-        { dontRefetchMs: a } = t,
-        c = null != i && i + (null != a ? a : g) > n;
-    if (r !== u.M.FETCHING && !c) {
+        { dontRefetchMs: a, noCache: c } = t,
+        d = null != i && i + (null != a ? a : g) > n;
+    if (r !== u.M.FETCHING && !d) {
         s.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_APPLICATION',
             applicationId: e
@@ -94,7 +94,10 @@ async function v(e) {
         try {
             let t = await o.tn.get({
                 url: h.ANM.APPLICATION_DIRECTORY_APPLICATION(e),
-                query: { locale: l.default.locale }
+                query: {
+                    locale: l.default.locale,
+                    nocache: c
+                }
             });
             s.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS',
