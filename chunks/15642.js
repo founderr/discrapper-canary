@@ -23,8 +23,7 @@ function c(e) {
             recipientUser: n,
             analyticsPage: (0, o.mE)(d),
             analyticsSection: l.jXE.CHANNEL,
-            showSecondaryCta: c,
-            glow: !0
+            showSecondaryCta: c
         })
     });
 }

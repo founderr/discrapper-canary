@@ -1,8 +1,9 @@
 e.exports = {
     content: 'content_d76538',
-    contentGlow: 'contentGlow_d76538',
     contentCoachmark: 'contentCoachmark_d76538',
     innerContent: 'innerContent_d76538',
+    innerGlow: 'innerGlow_d76538',
+    outerGlow: 'outerGlow_d76538',
     innerContentCoachmark: 'innerContentCoachmark_d76538',
     contentTextCTAPopout: 'contentTextCTAPopout_d76538',
     subContent: 'subContent_d76538',
