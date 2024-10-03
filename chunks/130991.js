@@ -199,6 +199,7 @@ function L(e) {
             }),
             null != Y &&
                 (null == U ? void 0 : U.benefits) != null &&
+                U.benefits.length > 0 &&
                 (0, n.jsx)(j, {
                     appId: Y.id,
                     listingBenefits: U.benefits
@@ -303,10 +304,11 @@ function v(e) {
                     size: l.Button.Sizes.SMALL,
                     onClick: () => {
                         S({
-                            alternativeSubscriptions: R,
+                            currentSubscription: d,
+                            alternativeListings: R,
                             app: s,
                             bundleSku: O,
-                            currentSubscription: i
+                            currentListing: i
                         });
                     },
                     children: f.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SWITCH_PLAN

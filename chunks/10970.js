@@ -1,85 +1,115 @@
 t.d(s, {
     Z: function () {
-        return u;
+        return S;
     }
 }),
     t(789020);
 var n = t(735250);
 t(470079);
-var a = t(481060),
-    i = t(601911),
-    r = t(824856),
-    o = t(171246),
-    l = t(696906),
-    c = t(981631),
-    d = t(689938),
-    _ = t(438578);
-function u(e) {
-    let { app: s, currentSubscription: t, alternativeSubscriptions: l, bundleSku: c } = e,
-        u = (0, i.y)(s, 100),
-        T = (0, o.KK)(c.flags),
-        S = T ? a.ServerIcon : a.UserIcon,
-        I = T ? d.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SERVER_SUBSCRIPTIONS : d.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PERSONAL_SUBSCRIPTIONS;
+var a = t(442837),
+    i = t(481060),
+    r = t(601911),
+    o = t(824856),
+    l = t(565138),
+    c = t(430824),
+    d = t(171246),
+    _ = t(696906),
+    u = t(981631),
+    E = t(689938),
+    T = t(438578);
+function S(e) {
+    var s;
+    let { app: t, currentSubscription: _, currentListing: u, alternativeListings: S, bundleSku: N } = e,
+        A = (0, r.y)(t, 100),
+        C = (0, d.KK)(N.flags),
+        m = C ? i.ServerIcon : i.UserIcon,
+        g = C ? E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SERVER_SUBSCRIPTIONS : E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PERSONAL_SUBSCRIPTIONS,
+        h = null === (s = _.metadata) || void 0 === s ? void 0 : s.application_subscription_guild_id,
+        O = (0, a.e7)([c.Z], () => (C && null != h ? c.Z.getGuild(h) : void 0), [h, C]);
     return (0, n.jsxs)('div', {
         children: [
             (0, n.jsxs)('div', {
-                className: _.header,
+                className: T.header,
                 children: [
-                    null != u &&
-                        (0, n.jsx)(a.Image, {
-                            src: u.href,
-                            imageClassName: _.appIcon,
+                    null != A &&
+                        (0, n.jsx)(i.Image, {
+                            src: A.href,
+                            imageClassName: T.appIcon,
                             width: 48,
                             height: 48
                         }),
                     (0, n.jsxs)('div', {
                         children: [
-                            (0, n.jsx)(a.Heading, {
+                            (0, n.jsx)(i.Heading, {
                                 variant: 'heading-xl/semibold',
-                                children: s.name
+                                children: t.name
                             }),
-                            (0, n.jsx)('div', {
-                                className: _.subInfo,
-                                children: (0, n.jsx)('div', {
-                                    children: (0, n.jsxs)(a.Heading, {
+                            (0, n.jsxs)('div', {
+                                className: T.subInfo,
+                                children: [
+                                    (0, n.jsxs)(i.Heading, {
                                         variant: 'heading-md/normal',
-                                        className: _.subInfoType,
+                                        className: T.subInfoType,
                                         children: [
-                                            (0, n.jsx)(S, {
+                                            (0, n.jsx)(m, {
                                                 size: 'xs',
                                                 color: 'currentColor'
                                             }),
                                             ' ',
-                                            I
+                                            g
                                         ]
-                                    })
-                                })
+                                    }),
+                                    null != O &&
+                                        (0, n.jsxs)(n.Fragment, {
+                                            children: [
+                                                (0, n.jsx)(i.Text, {
+                                                    variant: 'text-md/normal',
+                                                    children: '\u2022'
+                                                }),
+                                                (0, n.jsxs)('span', {
+                                                    className: T.guildSubscription,
+                                                    children: [
+                                                        (0, n.jsx)(l.Z, {
+                                                            guild: O,
+                                                            size: l.Z.Sizes.SMOL
+                                                        }),
+                                                        (0, n.jsx)(i.Heading, {
+                                                            variant: 'heading-md/semibold',
+                                                            color: 'text-muted',
+                                                            children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SUBSCRIPTION_USED_IN.format({ guildName: O.name })
+                                                        })
+                                                    ]
+                                                })
+                                            ]
+                                        })
+                                ]
                             })
                         ]
                     })
                 ]
             }),
-            (0, n.jsx)(a.Text, {
+            (0, n.jsx)(i.Text, {
                 variant: 'text-md/normal',
-                children: d.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PLAN_SWITCH_NOTICE
+                children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PLAN_SWITCH_NOTICE
             }),
             (0, n.jsxs)('div', {
-                className: _.subscriptions,
+                className: T.subscriptions,
                 children: [
-                    (0, n.jsx)(r.Z, {
-                        storeListing: t,
-                        cta: (0, n.jsx)(a.Text, {
+                    (0, n.jsx)(o.Z, {
+                        storeListing: u,
+                        className: T.activeSubscriptionCard,
+                        cta: (0, n.jsx)(i.Text, {
                             variant: 'eyebrow',
                             color: 'text-brand',
-                            children: d.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CURRENT_PLAN
+                            children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CURRENT_PLAN
                         })
                     }),
-                    l.map((e) =>
+                    S.map((e) =>
                         (0, n.jsx)(
-                            E,
+                            I,
                             {
                                 storeListing: e,
-                                bundleSkuId: c.id
+                                bundleSkuId: N.id
                             },
                             e.id
                         )
@@ -89,22 +119,22 @@ function u(e) {
         ]
     });
 }
-function E(e) {
+function I(e) {
     let { storeListing: s } = e,
-        { openModal: t } = (0, l.Z)({
+        { openModal: t } = (0, _.Z)({
             showBenefitsFirst: !1,
-            analyticsLocation: c.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
+            analyticsLocation: u.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
             skuId: s.skuId,
             guildId: null
         });
     return (0, n.jsx)(
-        r.Z,
+        o.Z,
         {
             storeListing: s,
-            cta: (0, n.jsx)(a.Button, {
-                size: a.Button.Sizes.SMALL,
+            cta: (0, n.jsx)(i.Button, {
+                size: i.Button.Sizes.SMALL,
                 onClick: t,
-                children: d.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CHOOSE_PLAN
+                children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CHOOSE_PLAN
             })
         },
         s.id

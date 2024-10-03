@@ -1,53 +1,56 @@
 t.d(s, {
     Z: function () {
-        return E;
+        return I;
     }
 });
 var n = t(735250),
     a = t(470079),
-    i = t(561537),
-    r = t(269210),
-    o = t(481060),
-    l = t(58385),
-    c = t(889989),
-    d = t(937615),
-    _ = t(150414),
-    u = t(319978);
-function E(e) {
-    let { cta: s, storeListing: t } = e,
-        { applicationId: E, benefits: T, description: S } = t,
-        I = a.useMemo(() => (null == t.thumbnail ? null : (0, _.q)(E, t.thumbnail, 256)), [E, t.thumbnail]),
-        { data: N } = (0, l.X)(t.skuId),
-        A = a.useMemo(() => {
-            if (null == N || 0 === N.length) return null;
-            let e = N[0];
-            return (0, d.xg)(e);
-        }, [N]);
-    return null == A
+    i = t(120356),
+    r = t.n(i),
+    o = t(561537),
+    l = t(269210),
+    c = t(481060),
+    d = t(58385),
+    _ = t(889989),
+    u = t(937615),
+    E = t(624138),
+    T = t(150414),
+    S = t(319978);
+function I(e) {
+    let { cta: s, storeListing: t, className: i } = e,
+        { applicationId: I, benefits: N, description: A } = t,
+        C = a.useMemo(() => (null == t.thumbnail ? null : (0, T.q)(I, t.thumbnail, 256)), [I, t.thumbnail]),
+        { data: m } = (0, d.X)(t.skuId),
+        g = a.useMemo(() => {
+            if (null == m || 0 === m.length) return null;
+            let e = m[0];
+            return (0, u.xg)(e);
+        }, [m]);
+    return null == g
         ? null
-        : (0, n.jsxs)(i.l, {
-              className: u.wrapper,
+        : (0, n.jsxs)(o.l, {
+              className: r()(S.wrapper, i),
               header: (0, n.jsxs)(n.Fragment, {
                   children: [
                       (0, n.jsxs)('div', {
-                          className: u.headerTitle,
+                          className: S.headerTitle,
                           children: [
-                              null != I &&
-                                  (0, n.jsx)(o.Image, {
-                                      src: I.href,
-                                      imageClassName: u.subscriptionImg,
+                              null != C &&
+                                  (0, n.jsx)(c.Image, {
+                                      src: C.href,
+                                      imageClassName: S.subscriptionImg,
                                       width: 48,
                                       height: 48
                                   }),
                               (0, n.jsxs)('div', {
                                   children: [
-                                      (0, n.jsx)(o.Heading, {
+                                      (0, n.jsx)(c.Heading, {
                                           variant: 'heading-md/bold',
                                           children: t.summary
                                       }),
-                                      (0, n.jsx)(o.Text, {
+                                      (0, n.jsx)(c.Text, {
                                           variant: 'text-md/medium',
-                                          children: A
+                                          children: g
                                       })
                                   ]
                               })
@@ -57,24 +60,25 @@ function E(e) {
                   ]
               }),
               children: [
-                  '' !== S &&
+                  !(0, E.Ew)(A) &&
                       (0, n.jsx)('div', {
-                          className: u.description,
-                          children: (0, n.jsx)(o.Text, {
+                          className: S.description,
+                          children: (0, n.jsx)(c.Text, {
                               variant: 'text-sm/medium',
-                              children: S
+                              children: A
                           })
                       }),
-                  null != T &&
+                  null != N &&
+                      N.length > 0 &&
                       (0, n.jsx)('div', {
-                          className: u.benefits,
-                          children: T.map((e) => {
+                          className: S.benefits,
+                          children: N.map((e) => {
                               let { id: s, name: t, description: a, icon: i } = e;
                               return (0, n.jsx)(
-                                  r.G,
+                                  l.G,
                                   {
                                       name: t,
-                                      icon: (0, c.n)(E, i),
+                                      icon: (0, _.n)(I, i),
                                       description: a
                                   },
                                   s

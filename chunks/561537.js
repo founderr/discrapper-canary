@@ -1,26 +1,35 @@
 t.d(s, {
     l: function () {
-        return o;
+        return l;
     }
 });
-var n = t(735250);
-t(470079);
-var a = t(557533),
-    i = t.n(a),
-    r = t(329363);
-function o(e) {
-    let { className: s, header: t, children: a } = e;
+var n = t(735250),
+    a = t(470079),
+    i = t(557533),
+    r = t.n(i),
+    o = t(329363);
+function l(e) {
+    let { className: s, header: t, children: i } = e,
+        l = a.useMemo(() => {
+            let e = !1;
+            return (
+                a.Children.forEach(i, (s) => {
+                    null != s && (e = !0);
+                }),
+                e
+            );
+        }, [i]);
     return (0, n.jsxs)('div', {
-        className: i()(r.wrapper, s),
+        className: r()(o.wrapper, s),
         children: [
             (0, n.jsx)('div', {
-                className: r.header,
+                className: o.header,
                 children: t
             }),
-            null != a &&
+            l &&
                 (0, n.jsx)('div', {
-                    className: r.content,
-                    children: a
+                    className: o.content,
+                    children: i
                 })
         ]
     });
