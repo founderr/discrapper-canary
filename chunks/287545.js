@@ -294,7 +294,7 @@ class Q extends c.Z {
                             d = F.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
                             break;
                         case B.evJ.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
-                            d = F.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE;
+                            d = F.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_USER_INSTALL_IN_LARGE_GUILD;
                             break;
                         case B.evJ.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM:
                             d = F.Z.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS;
