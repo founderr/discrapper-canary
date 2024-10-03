@@ -1,6 +1,6 @@
 n.d(t, {
     C4: function () {
-        return p;
+        return C;
     }
 }),
     n(653041),
@@ -24,13 +24,13 @@ n(206295);
 var h = n(737583),
     m = n(169040),
     x = n(689938);
-let v = (e, t) => ({
+let E = (e, t) => ({
         AvatarImage1: e[0],
         ...(null != e[1] && { AvatarImage2: e[1] }),
         ...(null != e[2] && { AvatarImage3: e[2] }),
         ...(null != t && { ApplicationImage: t })
     }),
-    E = (e, t) => {
+    v = (e, t) => {
         let n = [
                 {
                     iconPath: m.NM,
@@ -171,7 +171,7 @@ let v = (e, t) => ({
                 },
                 !0
             );
-        let c = E(i, n);
+        let c = v(i, n);
         (0, h.J)({
             canvas: e,
             badges: c,
@@ -179,10 +179,10 @@ let v = (e, t) => ({
             maxWidth: m.kC
         });
     },
-    p = async (e) => {
+    C = async (e) => {
         let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: u } = e,
             c = n.extra.activity_name,
-            d = v(l, t);
+            d = E(l, t);
         return await (0, o.f)({
             assetsToLoad: d,
             drawImage: (e) =>

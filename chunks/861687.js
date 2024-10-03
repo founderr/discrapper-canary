@@ -1251,7 +1251,7 @@ class eT extends m.Z {
                 });
         } else
             i === es.Yn.STREAM &&
-                ((this._goLiveQualityManager = new y.Z(!0)),
+                ((this._goLiveQualityManager = new y.Z(!1)),
                 this._goLiveQualityManager.on(y.y.RequestedSSRCsUpdate, (e, t, n) => {
                     var r;
                     null === (r = this._connection) || void 0 === r || r.createUser(e, t, n);

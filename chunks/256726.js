@@ -53,7 +53,7 @@ let d = (e) => {
                 avatarSrc: t.getAvatarURL(n.guild_id, 128),
                 mediaImageSrc: l
             }),
-            v = s.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
+            E = s.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
         return await (0, r.f)({
             assetsToLoad: x,
             drawImage: (e) => {
@@ -155,7 +155,7 @@ let d = (e) => {
             exportConfigs: {
                 format: i.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(v, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(E, '.png').toLowerCase(),
                 fileType: 'png',
                 channelId: n.id
             }

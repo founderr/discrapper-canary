@@ -1,27 +1,27 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    r = t(346479),
-    l = t(665906),
-    u = t(689938);
-function s(e) {
-    let n = (0, l.Xb)(e),
-        t = e.isLockedThread();
-    if (n)
-        return t
-            ? (0, i.jsx)(a.MenuItem, {
+var i = n(735250);
+n(470079);
+var s = n(481060),
+    a = n(346479),
+    l = n(665906),
+    r = n(689938);
+function o(e) {
+    let t = (0, l.Xb)(e),
+        n = e.isLockedThread();
+    if (t)
+        return n
+            ? (0, i.jsx)(s.MenuItem, {
                   id: 'unlock-thread',
-                  label: e.isForumPost() ? u.Z.Messages.UNLOCK_FORUM_POST : u.Z.Messages.UNLOCK_THREAD,
-                  action: () => r.Z.unlockThread(e)
+                  label: e.isForumPost() ? r.Z.Messages.UNLOCK_FORUM_POST : r.Z.Messages.UNLOCK_THREAD,
+                  action: () => a.Z.unlockThread(e)
               })
-            : (0, i.jsx)(a.MenuItem, {
+            : (0, i.jsx)(s.MenuItem, {
                   id: 'lock-thread',
-                  label: e.isForumPost() ? u.Z.Messages.LOCK_FORUM_POST : u.Z.Messages.LOCK_THREAD,
-                  action: () => r.Z.lockThread(e)
+                  label: e.isForumPost() ? r.Z.Messages.LOCK_FORUM_POST : r.Z.Messages.LOCK_THREAD,
+                  action: () => a.Z.lockThread(e)
               });
 }

@@ -1,15 +1,15 @@
 n.d(t, {
     $S: function () {
-        return p;
+        return C;
     },
     As: function () {
         return m;
     },
     I8: function () {
-        return P;
+        return Z;
     },
     Iq: function () {
-        return f;
+        return p;
     },
     Md: function () {
         return o;
@@ -24,25 +24,25 @@ n.d(t, {
         return h;
     },
     PW: function () {
-        return C;
+        return I;
     },
     Pu: function () {
         return _;
     },
     Ue: function () {
-        return Z;
+        return P;
     },
     Z: function () {
         return c;
     },
     bg: function () {
-        return v;
+        return E;
     },
     eF: function () {
         return u;
     },
     f0: function () {
-        return g;
+        return T;
     },
     fO: function () {
         return a;
@@ -54,10 +54,10 @@ n.d(t, {
         return i;
     },
     kC: function () {
-        return T;
+        return f;
     },
     m2: function () {
-        return I;
+        return g;
     },
     mb: function () {
         return r;
@@ -66,7 +66,7 @@ n.d(t, {
         return x;
     },
     sB: function () {
-        return E;
+        return v;
     },
     t1: function () {
         return d;
@@ -84,15 +84,15 @@ let l = 'M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
     h = 'M3 14a9 9 0 1 0 18 0c0-2.63-.61-5.22-1.79-7.58L18.2 4.38a.7.7 0 0 0-1.3.18l-.78 3.9a.66.66 0 0 1-1.27.11L12.22 1.6a.9.9 0 0 0-1.48-.33l-4.2 4.2A12.07 12.07 0 0 0 3 14Zm9.26-.84a.57.57 0 0 0-1-.23L9.6 15a3.08 3.08 0 1 0 5.12.48c-.14-.26-.5-.28-.71-.06L13 16.5l-.74-3.34Z',
     m = 'M17.93 1.51a.74.74 0 0 0-1.41 0l-1.13 3.47h-3.65a.74.74 0 0 0-.43 1.35l2.95 2.14-1.13 3.47a.74.74 0 0 0 1.14.83l2.95-2.15 2.96 2.15a.74.74 0 0 0 1.14-.83l-1.13-3.47 2.95-2.14a.74.74 0 0 0-.43-1.35h-3.65l-1.13-3.47ZM10.7 14.7a1 1 0 0 0-1.4-1.4l-8 8a1 1 0 1 0 1.4 1.4l8-8ZM9.7 8.3a1 1 0 0 1 0 1.4l-6 6a1 1 0 0 1-1.4-1.4l6-6a1 1 0 0 1 1.4 0ZM15.7 15.7a1 1 0 0 0-1.4-1.4l-6 6a1 1 0 1 0 1.4 1.4l6-6Z',
     x = 400,
-    v = 120,
-    E = 12,
+    E = 120,
+    v = 12,
     _ = 96,
-    p = 32,
-    f = 120,
-    T = 260,
-    g = 88,
-    I = 99,
-    C = 12,
+    C = 32,
+    p = 120,
+    f = 260,
+    T = 88,
+    g = 99,
+    I = 12,
     N = 18,
-    P = ['gg sans', 'sans-serif'],
-    Z = 500;
+    Z = ['gg sans', 'sans-serif'],
+    P = 500;

@@ -11,14 +11,14 @@ var l = n(735250),
     h = n(379357),
     m = n(561308),
     x = n(644810),
-    v = n(206295),
-    E = n(335326),
+    E = n(206295),
+    v = n(335326),
     _ = n(297781),
-    p = n(591853),
-    f = n(410441),
-    T = n(689938);
-let g = (e, t, n) => {
-        let l = T.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
+    C = n(591853),
+    p = n(410441),
+    f = n(689938);
+let T = (e, t, n) => {
+        let l = f.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
             a = c.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
             i = e.extra.media_title;
         return l
@@ -29,33 +29,33 @@ let g = (e, t, n) => {
             })
             .replaceAll('*', '');
     },
-    I = (e, t) =>
-        T.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+    g = (e, t) =>
+        f.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
             username: t.username,
             activity: e.extra.media_title
         });
 t.Z = (e) => {
-    let { channel: t, entry: n, onReaction: c, onVoiceChannelPreview: C } = e,
+    let { channel: t, entry: n, onReaction: c, onVoiceChannelPreview: I } = e,
         N = (0, i.e7)([o.default], () => o.default.getUser(n.author_id)),
-        { largeImage: P } = (0, h.rv)({ entry: n }),
-        { primaryColor: Z, secondaryColor: A } = (0, v.Z)(null == P ? void 0 : P.src),
-        S = (0, i.e7)([s.default], () => s.default.locale),
-        M = (0, m.ap)(n.extra.media_assets_large_text),
-        y = a.useCallback(
+        { largeImage: Z } = (0, h.rv)({ entry: n }),
+        { primaryColor: P, secondaryColor: M } = (0, E.Z)(null == Z ? void 0 : Z.src),
+        L = (0, i.e7)([s.default], () => s.default.locale),
+        S = (0, m.ap)(n.extra.media_assets_large_text),
+        A = a.useCallback(
             (e) => {
-                if (null != N && (null == P ? void 0 : P.src) != null)
+                if (null != N && (null == Z ? void 0 : Z.src) != null)
                     return (0, x.B)({
                         entry: n,
-                        mediaImageSrc: null == P ? void 0 : P.src,
+                        mediaImageSrc: null == Z ? void 0 : Z.src,
                         avatarSrc: N.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
-                        description: g(n, t, N),
-                        timestamp: (0, m.yh)(n, S),
-                        episodeDescription: M,
-                        colors: [Z, A],
+                        description: T(n, t, N),
+                        timestamp: (0, m.yh)(n, L),
+                        episodeDescription: S,
+                        colors: [P, M],
                         channelId: e
                     });
             },
-            [t, n, M, S, null == P ? void 0 : P.src, Z, A, N]
+            [t, n, S, L, null == Z ? void 0 : Z.src, P, M, N]
         ),
         R = () => {
             if (null == n.extra.url) return;
@@ -68,33 +68,33 @@ t.Z = (e) => {
         };
     return null == N
         ? null
-        : (0, l.jsxs)(p.yR, {
+        : (0, l.jsxs)(C.yR, {
               children: [
-                  (0, l.jsx)(p.wG, {
+                  (0, l.jsx)(C.wG, {
                       channel: t,
                       entry: n,
-                      userDescription: (0, m.kr)(n) ? T.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : T.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
+                      userDescription: (0, m.kr)(n) ? f.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : f.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
                       title: n.extra.media_title,
                       subtitle: n.extra.media_subtitle,
-                      headerIcons: (0, l.jsx)(f.Z, {
+                      headerIcons: (0, l.jsx)(p.Z, {
                           Icon: r.CrunchyrollNeutralIcon,
-                          'aria-label': T.Z.Messages.CRUNCHYROLL
+                          'aria-label': f.Z.Messages.CRUNCHYROLL
                       }),
                       badges: (0, l.jsx)(_.Gk, {
                           location: _.Gt.POPOUT,
-                          children: E.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
+                          children: v.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                       }),
                       onClickTitle: R,
                       onClickThumbnail: R
                   }),
-                  (0, l.jsx)(p.St, {
-                      children: (0, l.jsx)(p.WT, {
+                  (0, l.jsx)(C.St, {
+                      children: (0, l.jsx)(C.WT, {
                           onReaction: c,
-                          onVoiceChannelPreview: C,
+                          onVoiceChannelPreview: I,
                           user: N,
                           channel: t,
-                          generateReactionImage: y,
-                          reactionImageAltText: I(n, N),
+                          generateReactionImage: A,
+                          reactionImageAltText: g(n, N),
                           entry: n
                       })
                   })

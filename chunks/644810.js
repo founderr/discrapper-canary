@@ -31,8 +31,8 @@ let o = (e, t, n) => ({
         );
     },
     c = async (e) => {
-        let { mediaImageSrc: t, entry: n, avatarSrc: c, description: d, timestamp: h, episodeDescription: m, colors: x, channelId: v } = e,
-            E = n.extra.media_title,
+        let { mediaImageSrc: t, entry: n, avatarSrc: c, description: d, timestamp: h, episodeDescription: m, colors: x, channelId: E } = e,
+            v = n.extra.media_title,
             _ = o(c, t);
         return await (0, i.f)({
             assetsToLoad: _,
@@ -142,9 +142,9 @@ let o = (e, t, n) => ({
             exportConfigs: {
                 format: a.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(E, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(v, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: v
+                channelId: E
             }
         });
     };

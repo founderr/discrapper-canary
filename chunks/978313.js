@@ -24,11 +24,11 @@ function x(e) {
         [h, v] = i.useState(!0),
         [I, E] = i.useState(!1),
         A = i.useRef(null),
-        { width: b, height: C } = (0, u.b)();
+        { width: C, height: b } = (0, u.b)();
     return (i.useEffect(() => {
         let e = A.current;
         null != e && E(e.scrollHeight - e.clientHeight > 1);
-    }, [A, b, C]),
+    }, [A, C, b]),
     null == a.summary)
         ? null
         : (0, t.jsxs)('div', {

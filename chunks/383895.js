@@ -19,7 +19,7 @@ a.Z = (e) => {
     let { entry: a, viewId: n, officialGuildId: r, onClose: I } = e,
         E = (0, l.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getChannelId())),
         A = (0, l.e7)([g.default], () => g.default.getUser(a.author_id)),
-        { nick: b, avatar: C } = i.useMemo(() => {
+        { nick: C, avatar: b } = i.useMemo(() => {
             let e = null == A ? void 0 : A.getAvatarURL(null == E ? void 0 : E.guild_id, 48, !1);
             return {
                 nick: _.ZP.getName(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, A),
@@ -78,8 +78,8 @@ a.Z = (e) => {
                               children: [
                                   (0, t.jsx)('img', {
                                       className: h.avatar,
-                                      src: C,
-                                      alt: x.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: b })
+                                      src: b,
+                                      alt: x.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: C })
                                   }),
                                   (0, t.jsx)('div', {
                                       className: o()(h.playerInfo),
@@ -90,7 +90,7 @@ a.Z = (e) => {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
-                                                  children: b
+                                                  children: C
                                               }),
                                               (0, t.jsx)(u.Gk, {
                                                   location: u.Gt.GAME_PROFILE,

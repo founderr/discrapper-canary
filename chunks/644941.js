@@ -19,8 +19,8 @@ var t = n(735250),
     I = n(706454),
     E = n(768581),
     A = n(814225),
-    b = n(709054),
-    C = n(810568),
+    C = n(709054),
+    b = n(810568),
     j = n(998058),
     M = n(839392),
     P = n(96856),
@@ -29,14 +29,14 @@ var t = n(735250),
     S = n(124030),
     L = n(715318),
     w = n(38516),
-    k = n(891949),
-    G = n(252547),
-    O = n(484527),
-    y = n(131033),
+    G = n(891949),
+    O = n(252547),
+    y = n(484527),
+    k = n(131033),
     R = n(296768),
     Z = n(978313),
-    F = n(206583),
-    H = n(689938),
+    H = n(206583),
+    F = n(689938),
     D = n(51527);
 let B = 'GameProfileModal',
     W = () =>
@@ -47,7 +47,7 @@ let B = 'GameProfileModal',
                 (0, t.jsx)(m.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-muted',
-                    children: H.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+                    children: F.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
                 })
             ]
         });
@@ -74,18 +74,18 @@ function U(e) {
             return '';
         }, [l]),
         M = null == d ? void 0 : d.getIconURL(160, E.$k ? 'webp' : 'png'),
-        T = b.default.extractTimestamp(d.id),
+        T = C.default.extractTimestamp(d.id),
         N = null !== (a = l.coverImageUrl) && void 0 !== a ? a : M,
-        w = s()().diff(s()(T), 'days') <= F.G,
-        k = p.some((e) => (0, h.ig)(e) === c.o.GLOBAL),
-        G = null !== (r = l.name) && void 0 !== r ? r : null == d ? void 0 : d.name,
-        O = i.useCallback(
+        w = s()().diff(s()(T), 'days') <= H.G,
+        G = p.some((e) => (0, h.ig)(e) === c.o.GLOBAL),
+        O = null !== (r = l.name) && void 0 !== r ? r : null == d ? void 0 : d.name,
+        y = i.useCallback(
             () => () => {
                 var e;
                 let a = null !== (e = u.K.get(B)) && void 0 !== e ? e : {};
                 (a[d.id] = !a[d.id]),
                     u.K.set(B, a),
-                    _(a[d.id] ? C.as.FollowGame : C.as.UnfollowGame),
+                    _(a[d.id] ? b.as.FollowGame : b.as.UnfollowGame),
                     a[d.id] &&
                         (0, S.L)() &&
                         (0, m.openModalLazy)(async () => {
@@ -121,7 +121,7 @@ function U(e) {
                                     (0, t.jsx)('img', {
                                         className: D.logo,
                                         src: N,
-                                        alt: H.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: G })
+                                        alt: F.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: O })
                                     })
                             }),
                             (0, t.jsx)(L.Z, {
@@ -138,7 +138,7 @@ function U(e) {
                                 children: [
                                     (0, t.jsx)(m.Heading, {
                                         variant: 'heading-xl/bold',
-                                        children: G
+                                        children: O
                                     }),
                                     (0, t.jsxs)('div', {
                                         className: o()(D.row, D.gapSm),
@@ -147,7 +147,7 @@ function U(e) {
                                                 (0, t.jsx)('img', {
                                                     src: M,
                                                     height: 16,
-                                                    alt: H.Z.Messages.GAME_PROFILE_GAME_ICON_ALT.format({ game: G })
+                                                    alt: F.Z.Messages.GAME_PROFILE_GAME_ICON_ALT.format({ game: O })
                                                 }),
                                             (0, t.jsx)(m.Text, {
                                                 variant: 'text-sm/semibold',
@@ -158,9 +158,9 @@ function U(e) {
                                                 (0, t.jsx)(m.Text, {
                                                     variant: 'eyebrow',
                                                     className: D.newBadge,
-                                                    children: H.Z.Messages.NEW
+                                                    children: F.Z.Messages.NEW
                                                 }),
-                                            k &&
+                                            G &&
                                                 (0, t.jsxs)(t.Fragment, {
                                                     children: [
                                                         (0, t.jsx)(m.Text, {
@@ -178,14 +178,14 @@ function U(e) {
                                 children:
                                     v &&
                                     (0, t.jsx)(m.Tooltip, {
-                                        text: f ? H.Z.Messages.GAME_PROFILE_UNFOLLOW_TOOLTIP : H.Z.Messages.GAME_PROFILE_FOLLOW_TOOLTIP,
+                                        text: f ? F.Z.Messages.GAME_PROFILE_UNFOLLOW_TOOLTIP : F.Z.Messages.GAME_PROFILE_FOLLOW_TOOLTIP,
                                         children: (e) =>
                                             (0, t.jsxs)(m.Button, {
                                                 ...e,
                                                 innerClassName: D.followButton,
                                                 color: f ? m.Button.Colors.PRIMARY : m.Button.Colors.BRAND,
-                                                onClick: O,
-                                                children: [f ? (0, t.jsx)(m.BellSlashIcon, { color: 'white' }) : (0, t.jsx)(m.BellIcon, { color: 'white' }), f ? H.Z.Messages.GAME_PROFILE_UNFOLLOW_GAME : H.Z.Messages.FOLLOW]
+                                                onClick: y,
+                                                children: [f ? (0, t.jsx)(m.BellSlashIcon, { color: 'white' }) : (0, t.jsx)(m.BellIcon, { color: 'white' }), f ? F.Z.Messages.GAME_PROFILE_UNFOLLOW_GAME : F.Z.Messages.FOLLOW]
                                             })
                                     })
                             })
@@ -202,13 +202,13 @@ function z(e) {
     return (0, t.jsxs)('div', {
         className: D.sections,
         children: [
-            (0, t.jsx)(G.Z, {
+            (0, t.jsx)(O.Z, {
                 entries: r,
                 viewId: d,
                 officialGuildId: null == o ? void 0 : null === (a = o.guild) || void 0 === a ? void 0 : a.id,
                 onClose: c
             }),
-            (0, t.jsx)(k.Z, {
+            (0, t.jsx)(G.Z, {
                 detectedGame: n,
                 trackAction: u
             }),
@@ -229,7 +229,7 @@ function Y(e) {
         children: [
             (0, t.jsx)(m.Heading, {
                 variant: 'heading-md/bold',
-                children: H.Z.Messages.ABOUT
+                children: F.Z.Messages.ABOUT
             }),
             (0, t.jsxs)('div', {
                 className: D.sections,
@@ -238,7 +238,7 @@ function Y(e) {
                         detectedGame: a,
                         trackAction: i
                     }),
-                    (0, t.jsx)(O.Z, {
+                    (0, t.jsx)(y.Z, {
                         detectedGame: a,
                         trackClick: i,
                         onInviteResolved: n
@@ -247,7 +247,7 @@ function Y(e) {
                         detectedGame: a,
                         trackClick: i
                     }),
-                    (0, t.jsx)(y.Z, { detectedGame: a })
+                    (0, t.jsx)(k.Z, { detectedGame: a })
                 ]
             })
         ]
@@ -258,23 +258,23 @@ a.default = (e) => {
     let { applicationId: a, source: n, sourceUserId: r, transitionState: l, onClose: s } = e,
         { clientThemesClassName: c } = (0, _.ZP)(),
         u = (0, d.e7)([I.default], () => I.default.locale),
-        E = i.useMemo(() => (0, C.fP)(), []),
+        E = i.useMemo(() => (0, b.fP)(), []),
         A = (0, d.Wu)([M.Z], () => {
             var e;
             return (null !== (e = M.Z.getSimilarGames(a)) && void 0 !== e ? e : []).slice(0, 25);
         }),
-        [b, P] = i.useState(null),
+        [C, P] = i.useState(null),
         { entries: N } = (0, T.Z)(),
         S = i.useMemo(() => {
             var e;
             return null !== (e = null == N ? void 0 : N.filter((e) => (0, x.dX)(e) && e.extra.application_id === a)) && void 0 !== e ? e : [];
         }, [N, a]),
         [L, w] = i.useState(null),
-        k = (0, g.q)(a),
-        G = (0, d.e7)([v.Z], () => v.Z.getGame(a)),
-        O = (e, n) => {
+        G = (0, g.q)(a),
+        O = (0, d.e7)([v.Z], () => v.Z.getGame(a)),
+        y = (e, n) => {
             var t;
-            (0, C.UE)({
+            (0, b.UE)({
                 gameName: null != name ? name : '',
                 applicationId: a,
                 action: e,
@@ -285,11 +285,11 @@ a.default = (e) => {
         };
     return (i.useEffect(() => {
         var e, t;
-        (0, C.IS)({
+        (0, b.IS)({
             source: n,
             viewId: E,
             applicationId: a,
-            gameName: null !== (t = null !== (e = null == G ? void 0 : G.name) && void 0 !== e ? e : null == k ? void 0 : k.name) && void 0 !== t ? t : '',
+            gameName: null !== (t = null !== (e = null == O ? void 0 : O.name) && void 0 !== e ? e : null == G ? void 0 : G.name) && void 0 !== t ? t : '',
             authorId: r
         });
     }, []),
@@ -319,17 +319,17 @@ a.default = (e) => {
                     time_played: a
                 });
             });
-        (0, C.wz)({
+        (0, b.wz)({
             viewId: E,
             applicationId: a,
-            gameName: null !== (t = null !== (n = null == G ? void 0 : G.name) && void 0 !== n ? n : null == k ? void 0 : k.name) && void 0 !== t ? t : '',
+            gameName: null !== (t = null !== (n = null == O ? void 0 : O.name) && void 0 !== n ? n : null == G ? void 0 : G.name) && void 0 !== t ? t : '',
             playedFriendIds: S.map((e) => e.author_id),
             playedFriendsData: r,
             similarGames: K(A),
             officialGuildId: null == L ? void 0 : null === (e = L.guild) || void 0 === e ? void 0 : e.id
         });
     }),
-    null == G || null == k)
+    null == O || null == G)
         ? null
         : (0, t.jsx)(m.ModalRoot, {
               transitionState: l,
@@ -339,31 +339,31 @@ a.default = (e) => {
                   className: D.scrollable,
                   children: [
                       (0, t.jsx)(U, {
-                          detectedGame: G,
-                          application: k,
+                          detectedGame: O,
+                          application: G,
                           entries: S,
                           viewId: E,
-                          trackAction: O
+                          trackAction: y
                       }),
                       (0, t.jsx)(m.HeadingLevel, {
                           children: (0, t.jsxs)('div', {
                               className: o()(D.content, D.mainContent),
                               children: [
                                   (0, t.jsx)(z, {
-                                      detectedGame: G,
-                                      application: k,
+                                      detectedGame: O,
+                                      application: G,
                                       entries: S,
                                       officialGuildInvite: L,
                                       similarGames: A,
-                                      similarGamesError: b,
+                                      similarGamesError: C,
                                       onClose: s,
                                       viewId: E,
-                                      trackAction: O
+                                      trackAction: y
                                   }),
                                   (0, t.jsx)(Y, {
-                                      detectedGame: G,
+                                      detectedGame: O,
                                       setOfficialGuildInvite: w,
-                                      trackAction: O
+                                      trackAction: y
                                   })
                               ]
                           })

@@ -50,7 +50,7 @@ function v(e) {
         null == v || null == v.guild || (!v.guild.features.includes('VERIFIED') && !v.guild.features.includes('PARTNER')))
     )
         return null;
-    let b = p.ZP.getGuildIconURL({
+    let C = p.ZP.getGuildIconURL({
         id: v.guild.id,
         icon: v.guild.icon,
         size: 32
@@ -69,7 +69,7 @@ function v(e) {
                 children: [
                     (0, t.jsx)('img', {
                         className: h.guildIcon,
-                        src: b,
+                        src: C,
                         alt: f.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({ guildName: v.guild.name })
                     }),
                     (0, t.jsxs)('div', {

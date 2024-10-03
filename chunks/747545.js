@@ -1,14 +1,14 @@
 s.d(n, {
     S: function () {
-        return x;
+        return A;
     },
     Z: function () {
-        return A;
+        return x;
     }
 }),
     s(47120);
-var t = s(735250),
-    a = s(470079),
+var a = s(735250),
+    t = s(470079),
     o = s(120356),
     l = s.n(o),
     i = s(442837),
@@ -23,10 +23,10 @@ var t = s(735250),
     m = s(981631),
     I = s(689938),
     p = s(332564);
-function x() {
-    let [e, n] = a.useState(!1),
+function A() {
+    let [e, n] = t.useState(!1),
         s = (0, i.e7)([O.Z], () => O.Z.isMediaFilterSettingLoading());
-    return (a.useEffect(() => {
+    return (t.useEffect(() => {
         let e = new c.V7();
         return (
             s
@@ -38,14 +38,14 @@ function x() {
         );
     }, [s]),
     e)
-        ? (0, t.jsx)('div', {
+        ? (0, a.jsx)('div', {
               className: p.filterLoadingIndicator,
-              children: (0, t.jsx)(r.Spinner, {})
+              children: (0, a.jsx)(r.Spinner, {})
           })
         : null;
 }
-function A(e) {
-    let { hideDeviceSelector: n = !1, hideDeviceHeader: s = !1, onLearnMore: o, selectedBackgroundOption: c, onSelectBackgroundOption: x, renderCamera: A, hidePreviewToggle: C = !1, showSmallBackgroundOptions: N = !1 } = e,
+function x(e) {
+    let { hideDeviceSelector: n = !1, hideDeviceHeader: s = !1, onLearnMore: o, selectedBackgroundOption: c, onSelectBackgroundOption: A, renderCamera: x, hidePreviewToggle: C = !1, showSmallBackgroundOptions: N = !1 } = e,
         M = (0, i.e7)([O.Z], () => O.Z.getVideoDeviceId()),
         R = (0, i.Wu)([O.Z], () => Object.values(O.Z.getVideoDevices())),
         k = u.qF.useSetting(),
@@ -57,15 +57,15 @@ function A(e) {
             };
         });
     return (
-        a.useEffect(() => {
+        t.useEffect(() => {
             (0, _.XV)();
         }, []),
-        (0, t.jsxs)(t.Fragment, {
+        (0, a.jsxs)(a.Fragment, {
             children: [
-                A(M),
+                x(M),
                 O.Z.isEnabled()
                     ? null
-                    : (0, t.jsx)(r.Text, {
+                    : (0, a.jsx)(r.Text, {
                           className: p.permissionWarning,
                           color: 'interactive-normal',
                           variant: 'text-sm/normal',
@@ -73,7 +73,7 @@ function A(e) {
                       }),
                 C
                     ? null
-                    : (0, t.jsx)(r.FormSwitch, {
+                    : (0, a.jsx)(r.FormSwitch, {
                           className: p.previewToggle,
                           note: I.Z.Messages.CAMERA_PREVIEW_ALWAYS_PREVIEW_NOTE,
                           onChange: (e) => {
@@ -81,24 +81,24 @@ function A(e) {
                           },
                           value: k,
                           hideBorder: !0,
-                          children: (0, t.jsx)('div', {
+                          children: (0, a.jsx)('div', {
                               className: p.cameraPreviewTitle,
                               children: I.Z.Messages.CAMERA_PREVIEW_ALWAYS_PREVIEW
                           })
                       }),
                 n
                     ? null
-                    : (0, t.jsxs)(t.Fragment, {
+                    : (0, a.jsxs)(a.Fragment, {
                           children: [
                               s
                                   ? null
-                                  : (0, t.jsx)(r.Heading, {
+                                  : (0, a.jsx)(r.Heading, {
                                         className: p.spacingTop24,
                                         variant: 'eyebrow',
                                         color: 'header-secondary',
                                         children: I.Z.Messages.CAMERA_PREVIEW_CAMERA
                                     }),
-                              (0, t.jsx)(r.SingleSelect, {
+                              (0, a.jsx)(r.SingleSelect, {
                                   placeholder: I.Z.Messages.CHANGE_CAMERA,
                                   className: l()(p.selector, { [p.selectorNoHeader]: s }),
                                   options: D,
@@ -107,10 +107,10 @@ function A(e) {
                               })
                           ]
                       }),
-                (0, t.jsx)(E.Z, {
+                (0, a.jsx)(E.Z, {
                     onLearnMore: o,
                     selectedBackgroundOption: c,
-                    onSelectBackgroundOption: x,
+                    onSelectBackgroundOption: A,
                     currentDeviceId: M,
                     smallerBackgroundOptions: N
                 })

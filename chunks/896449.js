@@ -16,23 +16,23 @@ var a = n(481060),
     h = n(301698);
 function m(e) {
     var t;
-    let { user: n, guildId: m, channel: x, entry: v, onSelect: E, disableGameProfileLinks: _ } = e,
-        p = (0, u.Z)({
+    let { user: n, guildId: m, channel: x, entry: E, onSelect: v, disableGameProfileLinks: _ } = e,
+        C = (0, u.Z)({
             userId: n.id,
             guildId: m,
             channelId: null == x ? void 0 : x.id
         }),
-        f = (0, r.Z)({
+        p = (0, r.Z)({
             id: n.id,
             label: d.Z.Messages.COPY_ID_USER
         }),
-        T = (0, c.dX)(v),
-        g = (0, o.Z)({
+        f = (0, c.dX)(E),
+        T = (0, o.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: T && !0 !== _ ? (null === (t = v.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: f && !0 !== _ ? (null === (t = E.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: s.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
-            sourceUserId: v.author_id
+            sourceUserId: E.author_id
         });
     return (0, l.jsx)(a.Popout, {
         align: 'top',
@@ -46,21 +46,21 @@ function m(e) {
                     (0, i.Zy)(), t();
                 },
                 'aria-label': d.Z.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: E,
+                onSelect: v,
                 children: (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsxs)(a.MenuGroup, {
                             children: [
-                                p,
-                                null != g &&
+                                C,
+                                null != T &&
                                     (0, l.jsx)(a.MenuItem, {
                                         id: 'game-profile',
                                         label: d.Z.Messages.GAME_PROFILE,
-                                        action: g
+                                        action: T
                                     })
                             ]
                         }),
-                        (0, l.jsx)(a.MenuGroup, { children: f })
+                        (0, l.jsx)(a.MenuGroup, { children: p })
                     ]
                 })
             });

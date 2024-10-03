@@ -87,11 +87,11 @@ function f(e) {
             (0, r.jsxs)(s.Gk, {
                 location: s.Gt.LEADERBOARD_POPOUT,
                 children: [
-                    (0, r.jsx)(d.D, {
+                    (0, r.jsx)(d.DC, {
                         value: null !== (t = null == T ? void 0 : T.value) && void 0 !== t ? t : 0,
                         statisticId: g
                     }),
-                    (0, r.jsx)(d.l, { intervalEnd: I.interval_end })
+                    (0, r.jsx)(d.l8, { intervalEnd: I.interval_end })
                 ]
             })
         ]

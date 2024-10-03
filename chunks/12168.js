@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return L;
     },
     u: function () {
-        return Z;
+        return P;
     }
 }),
     n(47120);
@@ -19,18 +19,18 @@ var l = n(735250),
     h = n(313201),
     m = n(543241),
     x = n(318766),
-    v = n(907040),
-    E = n(633302),
+    E = n(907040),
+    v = n(633302),
     _ = n(806966),
-    p = n(176354),
-    f = n(823379),
-    T = n(354459),
-    g = n(185923),
-    I = n(420212),
-    C = n(264699);
-let N = g.Hz.CHAT,
-    P = [E.ZP.getByName('thumbsup'), E.ZP.getByName('eyes'), E.ZP.getByName('laughing'), E.ZP.getByName('watermelon'), E.ZP.getByName('fork_and_knife'), E.ZP.getByName('yum')].filter(f.lm);
-function Z(e) {
+    C = n(176354),
+    p = n(823379),
+    f = n(354459),
+    T = n(185923),
+    g = n(420212),
+    I = n(264699);
+let N = T.Hz.CHAT,
+    Z = [v.ZP.getByName('thumbsup'), v.ZP.getByName('eyes'), v.ZP.getByName('laughing'), v.ZP.getByName('watermelon'), v.ZP.getByName('fork_and_knife'), v.ZP.getByName('yum')].filter(p.lm);
+function P(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: s } = e,
         h = a.useRef(null),
         m = (0, d.Z)(h);
@@ -52,7 +52,7 @@ function Z(e) {
                             transform: a.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                         },
                         children: (0, l.jsx)(c.Z, {
-                            className: r()(C.emoji, s, { [C.emojiItemDisabled]: n }),
+                            className: r()(I.emoji, s, { [I.emojiItemDisabled]: n }),
                             emojiId: t.id,
                             emojiName: null == t ? void 0 : t.surrogates,
                             animated: t.animated
@@ -63,115 +63,115 @@ function Z(e) {
         })
     });
 }
-function A(e) {
+function M(e) {
     let { otherAccessories: t, isEmojiPickerExpanded: n, onSetExpanded: a, onFocus: i } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             t,
             (0, l.jsx)(u.Clickable, {
-                className: C.dropDownContainer,
+                className: I.dropDownContainer,
                 onClick: () => {
                     a(!n), i();
                 },
                 children: (0, l.jsx)(u.ChevronSmallDownIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: r()(C.dropDown, { [C.dropDownOpen]: n })
+                    className: r()(I.dropDown, { [I.dropDownOpen]: n })
                 })
             })
         ]
     });
 }
-function S(e) {
-    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: E, recentlyUsedEmojis: f, analyticsOverride: S } = e,
-        M = (0, h.Dt)(),
-        [y, R] = a.useState(!1),
-        O = (0, m.wC)(t.guild_id),
-        j = (0, s.uniqBy)([...O, ...P], 'name')
+function L(e) {
+    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: v, recentlyUsedEmojis: p, analyticsOverride: L } = e,
+        S = (0, h.Dt)(),
+        [A, R] = a.useState(!1),
+        y = (0, m.wC)(t.guild_id),
+        O = (0, s.uniqBy)([...y, ...Z], 'name')
             .filter(
                 (e) =>
-                    !p.ZP.isEmojiFilteredOrLocked({
+                    !C.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: t,
                         intention: N
                     })
             )
-            .slice(0, T.e5);
-    null != f && f.length > 0 && j.splice(j.length - 1, 1, f[0]);
-    let w = (e) => {
+            .slice(0, f.e5);
+    null != p && p.length > 0 && O.splice(O.length - 1, 1, p[0]);
+    let j = (e) => {
             R(e), null == x || x(e);
         },
-        L = (e, t) => {
+        w = (e, t) => {
             if (null == e && t) {
                 i();
                 return;
             }
             null != e && c(e);
-            w(!t), t && _.kJ.setSearchPlaceholder(null);
+            j(!t), t && _.kJ.setSearchPlaceholder(null);
         };
     return (0, l.jsxs)(u.Dialog, {
-        'aria-labelledby': M,
+        'aria-labelledby': S,
         children: [
             (0, l.jsx)(u.HeadingLevel, {
                 forceLevel: 2,
                 children: (0, l.jsx)(u.HiddenVisually, {
                     children: (0, l.jsx)(u.H, {
-                        id: M,
+                        id: S,
                         children: n
                     })
                 })
             }),
             (0, l.jsxs)('div', {
-                className: C.container,
+                className: I.container,
                 children: [
-                    (0, l.jsx)(v.Z, {
-                        analyticsOverride: S,
+                    (0, l.jsx)(E.Z, {
+                        analyticsOverride: L,
                         channel: t,
-                        className: r()(C.animatedPicker, { [C.animatedPickerTall]: y }),
-                        headerClassName: r()(C.emojiPickerHeader, { [C.emojiPickerHeaderExpanded]: y }),
+                        className: r()(I.animatedPicker, { [I.animatedPickerTall]: A }),
+                        headerClassName: r()(I.emojiPickerHeader, { [I.emojiPickerHeaderExpanded]: A }),
                         closePopout: i,
-                        onSelectEmoji: y ? L : () => {},
-                        shouldHidePickerActions: !y,
+                        onSelectEmoji: A ? w : () => {},
+                        shouldHidePickerActions: !A,
                         wrapper: 'div',
                         pickerIntention: N,
                         searchProps: {
-                            ...E,
-                            accessory: (0, l.jsx)(A, {
-                                otherAccessories: null == E ? void 0 : E.accessory,
-                                isEmojiPickerExpanded: y,
-                                onSetExpanded: w,
+                            ...v,
+                            accessory: (0, l.jsx)(M, {
+                                otherAccessories: null == v ? void 0 : v.accessory,
+                                isEmojiPickerExpanded: A,
+                                onSetExpanded: j,
                                 onFocus: o
                             }),
                             onKeyDown: (e) => {
-                                null != e && e.key !== I.vn.TAB && (e.key !== I.vn.ENTER || e.shiftKey ? w(!0) : w(!y));
+                                null != e && e.key !== g.vn.TAB && (e.key !== g.vn.ENTER || e.shiftKey ? j(!0) : j(!A));
                             }
                         }
                     }),
                     (0, l.jsx)('div', {
-                        className: C.slotsContainer,
+                        className: I.slotsContainer,
                         children: (0, l.jsx)('div', {
-                            className: r()(C.slots, C.slotsWide),
-                            children: j.map((e) => {
-                                let n = p.ZP.isEmojiDisabled({
+                            className: r()(I.slots, I.slotsWide),
+                            children: O.map((e) => {
+                                let n = C.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,
-                                    intention: g.Hz.CHAT
+                                    intention: T.Hz.CHAT
                                 });
                                 return (0, l.jsx)(
                                     'div',
                                     {
-                                        className: C.slot,
+                                        className: I.slot,
                                         children: (0, l.jsx)(u.TooltipContainer, {
                                             text: e.name,
                                             position: 'top',
                                             'aria-label': e.name,
-                                            tooltipClassName: C.tooltipContainer,
+                                            tooltipClassName: I.tooltipContainer,
                                             color: u.Tooltip.Colors.BRAND,
-                                            children: (0, l.jsx)(Z, {
+                                            children: (0, l.jsx)(P, {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {
-                                                    n ? null == d || d(e) : L(e, !0);
+                                                    n ? null == d || d(e) : w(e, !0);
                                                 }
                                             })
                                         })

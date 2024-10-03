@@ -4,8 +4,8 @@ s.d(n, {
     }
 }),
     s(47120);
-var t = s(735250),
-    a = s(470079),
+var a = s(735250),
+    t = s(470079),
     o = s(442837),
     l = s(481060),
     i = s(2052),
@@ -20,57 +20,57 @@ var t = s(735250),
     m = s(678916),
     I = s(981631),
     p = s(869783),
-    x = s(689938),
-    A = s(266129);
+    A = s(689938),
+    x = s(266129);
 function C(e) {
     let { onLearnMore: n, selectedBackgroundOption: C, onSelectBackgroundOption: N, currentDeviceId: M, smallerBackgroundOptions: R } = e,
         k = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
-        [D, j] = a.useState(null),
+        [D, j] = t.useState(null),
         T = (0, O.Z)(),
         h = r.ZP.canUseCustomBackgrounds(k),
-        f = (0, o.cj)([u.Z], () => (h ? u.Z.videoFilterAssets : {})),
-        U = a.useMemo(() => Object.values(f).filter((e) => e.type === m.xV.BACKGROUND), [f]),
-        B = (0, i.O)();
-    a.useEffect(() => {
+        U = (0, o.cj)([u.Z], () => (h ? u.Z.videoFilterAssets : {})),
+        B = t.useMemo(() => Object.values(U).filter((e) => e.type === m.xV.BACKGROUND), [U]),
+        v = (0, i.O)();
+    t.useEffect(() => {
         T ? (0, E.FU)(C, M, { track: !1 }).catch(() => N(null)) : null != C && N(null);
     }, [M]);
-    let v = (e) => {
+    let f = (e) => {
         N(e),
-            (0, E.FU)(e, M, { location: B.location })
+            (0, E.FU)(e, M, { location: v.location })
                 .then(() => j(null))
                 .catch(() => {
-                    j(x.Z.Messages.VIDEO_BACKGROUND_ERROR_APPLY), (0, E.FU)(null, M, { location: B.location });
+                    j(A.Z.Messages.VIDEO_BACKGROUND_ERROR_APPLY), (0, E.FU)(null, M, { location: v.location });
                 });
     };
     return T
-        ? (0, t.jsxs)(t.Fragment, {
+        ? (0, a.jsxs)(a.Fragment, {
               children: [
-                  (0, t.jsx)(l.Heading, {
-                      className: A.spacingTop24,
+                  (0, a.jsx)(l.Heading, {
+                      className: x.spacingTop24,
                       variant: 'eyebrow',
                       color: 'header-secondary',
-                      children: x.Z.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND
+                      children: A.Z.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND
                   }),
                   null != D
-                      ? (0, t.jsx)(l.FormErrorBlock, {
-                            className: A.videoBackgroundError,
+                      ? (0, a.jsx)(l.FormErrorBlock, {
+                            className: x.videoBackgroundError,
                             children: D
                         })
                       : null,
-                  (0, t.jsx)(g.Z, {
+                  (0, a.jsx)(g.Z, {
                       canUseCustomBackgrounds: h,
-                      customBackgroundOptions: U,
+                      customBackgroundOptions: B,
                       selectedOption: C,
-                      onSelectOption: v,
+                      onSelectOption: f,
                       onUpsellClick: () => {
                           (0, l.openModalLazy)(async () => {
                               let { default: e } = await s.e('87200').then(s.bind(s, 592163));
                               return (s) =>
-                                  (0, t.jsx)(e, {
+                                  (0, a.jsx)(e, {
                                       ...s,
                                       onLearnMore: n,
                                       analyticsSource: {
-                                          ...B.location,
+                                          ...v.location,
                                           object: I.qAy.BUTTON_CTA
                                       }
                                   });
@@ -78,14 +78,14 @@ function C(e) {
                       },
                       onAddBackgroundImage: function (e, n) {
                           let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                          return new Promise(async (t) => {
+                          return new Promise(async (a) => {
                               try {
-                                  let t = await (0, d.Ff)(e, m.xV.BACKGROUND);
-                                  v(t), (0, _.g5)(t, n.type === p.m.MP4, s), j(null);
+                                  let a = await (0, d.Ff)(e, m.xV.BACKGROUND);
+                                  f(a), (0, _.g5)(a, n.type === p.m.MP4, s), j(null);
                               } catch (e) {
                                   j(e.message);
                               }
-                              t();
+                              a();
                           });
                       },
                       smallerOptions: R

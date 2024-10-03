@@ -11,16 +11,16 @@ let c = Object.freeze([]),
     h = {},
     m = {},
     x = {},
-    v = {};
-function E(e, t) {}
+    E = {};
+function v(e, t) {}
 function _() {
-    v = {};
+    E = {};
 }
-function p(e, t) {
+function C(e, t) {
     let n = d[e];
     return null != n && ((d[e] = n.filter((e) => e.id !== t)), delete h[t], delete m[t], n.length !== d[e].length);
 }
-function f(e, t) {
+function p(e, t) {
     let n = d[e];
     if (null == n) return !1;
     d[e] = n.map((e) =>
@@ -39,7 +39,7 @@ function f(e, t) {
             ...t
         });
 }
-class T extends (l = s.ZP.Store) {
+class f extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
@@ -54,11 +54,11 @@ class T extends (l = s.ZP.Store) {
         return x[e];
     }
     getUploadAttachments(e) {
-        if (null != e) return v[e];
+        if (null != e) return E[e];
     }
 }
 (r = 'UploadStore'),
-    (i = 'displayName') in (a = T)
+    (i = 'displayName') in (a = f)
         ? Object.defineProperty(a, i, {
               value: r,
               enumerable: !0,
@@ -66,12 +66,12 @@ class T extends (l = s.ZP.Store) {
               writable: !0
           })
         : (a[i] = r),
-    (t.Z = new T(o.Z, {
+    (t.Z = new f(o.Z, {
         CONNECTION_OPEN: function () {
-            v = {};
+            E = {};
         },
         LOGOUT: function () {
-            v = {};
+            E = {};
         },
         UPLOAD_START: function (e) {
             var t;
@@ -85,23 +85,23 @@ class T extends (l = s.ZP.Store) {
                     ...l,
                     items: s
                 }),
-                E(i.nonce, l);
+                v(i.nonce, l);
         },
         UPLOAD_COMPRESSION_PROGRESS: function (e) {
             let { channelId: t, file: n } = e;
-            f(t, n);
+            p(t, n);
         },
         UPLOAD_PROGRESS: function (e) {
             let { channelId: t, file: n } = e;
-            f(t, n);
+            p(t, n);
         },
         UPLOAD_COMPLETE: function (e) {
             let { channelId: t, file: n } = e;
-            return p(t, n.id);
+            return C(t, n.id);
         },
         UPLOAD_FAIL: function (e) {
             let { channelId: t, file: n } = e;
-            return p(t, n.id);
+            return C(t, n.id);
         },
         UPLOAD_CANCEL_REQUEST: function (e) {
             let { file: t } = e,
@@ -121,7 +121,7 @@ class T extends (l = s.ZP.Store) {
         UPLOAD_FILE_UPDATE: function (e) {
             let { channelId: t, file: n } = e,
                 l = m[n.id];
-            null != l && E(l.nonce, n), f(t, n);
+            null != l && v(l.nonce, n), p(t, n);
         },
         UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
             let { file: t, messageId: n } = e;
