@@ -136,7 +136,8 @@ async function X(e) {
                     guildId: I,
                     commandOrigin: d,
                     sectionName: _,
-                    source: f
+                    source: f,
+                    onExecutedCallback: p
                 }))
             )
                 throw new S.Z(S.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
