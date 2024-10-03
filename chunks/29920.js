@@ -20,6 +20,6 @@ async function r(e) {
         if (e.ok) return e.body;
         return a.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), [];
     } catch (e) {
-        return a.Z.captureException(e), [];
+        return [];
     }
 }

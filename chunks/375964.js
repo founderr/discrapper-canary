@@ -14816,7 +14816,7 @@ e.exports = Object.freeze({
     APPLICATION_MANAGE_SUBSCRIPTION_SERVER_SUBSCRIPTIONS: 'Server Subscriptions',
     APPLICATION_MANAGE_SUBSCRIPTION_PERSONAL_SUBSCRIPTIONS: 'Personal Subscriptions',
     APPLICATION_MANAGE_SUBSCRIPTION_PLAN_SWITCH_NOTICE: 'Choosing a subscription plan will replace your current one. Your plan will start today and will be pro-rated based on your current plan. After the first month, you will be billed the full amount.',
-    APPLICATION_MANAGE_SUBSCRIPTION_CHOOSE_PLAN: 'Choose a Subscription Plan',
+    APPLICATION_MANAGE_SUBSCRIPTION_CHOOSE_A_SUBSCRIPTION_PLAN: 'Choose a Subscription Plan',
     APPLICATION_MANAGE_SUBSCRIPTION_CURRENT_PLAN: 'Current Plan',
     BUY_ONE_GET_ONE_FREE: 'Buy One, Get One Free',
     BUY_ONE_GET_ONE_FREE_NEWLINE: 'Buy One,\n\nGet One Free',

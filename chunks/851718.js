@@ -20,7 +20,7 @@ function d(e) {
                 route: o.j.SWITCH_APP_PLANS,
                 ...e
             }),
-                t(c.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CHOOSE_PLAN, () => {
+                t(c.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CHOOSE_A_SUBSCRIPTION_PLAN, () => {
                     _({ route: o.j.HOME });
                 });
         };

@@ -98,13 +98,13 @@ function L(e) {
     return (0, i.jsx)('div', {
         className: s()(y.content, {
             [y.contentTextCTAPopout]: B,
-            [y.contentGlow]: P,
+            [y.outerGlow]: P,
             [y.contentCoachmark]: W
         }),
         onMouseEnter: o,
         onMouseLeave: L,
         children: (0, i.jsxs)('div', {
-            className: K,
+            className: s()(K, { [y.innerGlow]: P }),
             children: [
                 (0, i.jsxs)('div', {
                     className: y.subContent,
