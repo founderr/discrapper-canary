@@ -391,34 +391,33 @@ K(eo, 'displayName', 'NotificationStore'),
                       );
                   },
                   GENERIC_PUSH_NOTIFICATION_SENT: function (e) {
-                      let { icon: t, title: n, body: i, route: l, trackingType: s, tag: o } = e;
-                      if (el() || null == n || null == i || null == s) return !1;
-                      if ('reactions_push_notification' === s) {
-                          var a;
-                          let { channelId: e, guildId: t } =
-                              null !== (a = (0, N.Qj)(l)) && void 0 !== a
-                                  ? a
+                      let t,
+                          { icon: n, title: i, body: l, route: s, trackingType: o, tag: a } = e;
+                      if (el() || null == i || null == l || null == o) return !1;
+                      if ('reactions_push_notification' === o) {
+                          var u;
+                          let e =
+                              null !== (u = (0, N.Qj)(s)) && void 0 !== u
+                                  ? u
                                   : {
                                         channelId: null,
                                         guildId: null
                                     };
-                          if (null == e || null == t || (U.Z.getCurrentlySelectedChannelId() === e && j)) return !1;
+                          if (null == (t = e.channelId) || null == e.guildId || (U.Z.getCurrentlySelectedChannelId() === t && j)) return !1;
                       }
-                      return (
-                          H.Z.showNotification(
-                              t,
-                              n,
-                              i,
-                              { notif_type: s },
-                              {
-                                  onClick() {
-                                      null != l && ((0, h.uL)(l), c.default.clickedNotification());
-                                  },
-                                  tag: o
-                              }
-                          ),
-                          !1
+                      let r = H.Z.showNotification(
+                          n,
+                          i,
+                          l,
+                          { notif_type: o },
+                          {
+                              onClick() {
+                                  null != s && ((0, g.Z)(s), c.default.clickedNotification());
+                              },
+                              tag: a
+                          }
                       );
+                      null != r && null != t && ei.track(t, r);
                   },
                   WINDOW_HIDDEN: function () {
                       let e = (0, Y.isWindows)(),
