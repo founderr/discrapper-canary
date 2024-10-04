@@ -3,6 +3,7 @@ e.exports = {
     section: 'section_a24e0c',
     sectionHeader: 'sectionHeader_a24e0c',
     sectionContent: 'sectionContent_a24e0c',
+    imageBackdrop: 'imageBackdrop_a24e0c',
     gameArt: 'gameArt_a24e0c',
     animatedCard: 'animatedCard_a24e0c',
     errorPage: 'errorPage_a24e0c',
