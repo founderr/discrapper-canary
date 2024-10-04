@@ -75,40 +75,47 @@ function D(e) {
                 skipLocalFetch: s,
                 jumpType: o
             });
-        else if ((null == u ? void 0 : u.isThread()) && U(n))
-            b.log('Jumping to start of thread '.concat(u.id)),
-                c.Z.fetchMessages({
+        else {
+            if ((null == u ? void 0 : u.isThread()) && U(n))
+                return (
+                    b.log('Jumping to start of thread '.concat(u.id)),
+                    c.Z.fetchMessages({
+                        channelId: n,
+                        limit: R.AQB,
+                        jump: {
+                            messageId: n,
+                            flash: !1
+                        },
+                        isPreload: a,
+                        skipLocalFetch: s
+                    })
+                );
+            if (!((null == u ? void 0 : u.isThread()) && S.ZP.hasTrackedUnread(u.id)) || _.ready)
+                return c.Z.fetchMessages({
                     channelId: n,
                     limit: R.AQB,
-                    jump: {
-                        messageId: n,
-                        flash: !1
-                    },
                     isPreload: a,
-                    skipLocalFetch: s
+                    skipLocalFetch: s,
+                    jump: { jumpType: d.SR.ANIMATED }
                 });
-        else if ((null == u ? void 0 : u.isThread()) && S.ZP.hasTrackedUnread(u.id) && !_.ready) {
-            let e = S.ZP.getTrackedAckMessageId(u.id);
-            b.log('Jumping to most recent message in thread '.concat(u.id, ' - ').concat(e)),
-                c.Z.fetchMessages({
-                    channelId: n,
-                    limit: R.AQB,
-                    jump: {
-                        messageId: e,
-                        flash: !1,
-                        offset: 1
-                    },
-                    isPreload: a,
-                    skipLocalFetch: s
-                });
-        } else
-            c.Z.fetchMessages({
-                channelId: n,
-                limit: R.AQB,
-                isPreload: a,
-                skipLocalFetch: s,
-                jump: { jumpType: d.SR.ANIMATED }
-            });
+            else {
+                let e = S.ZP.getTrackedAckMessageId(u.id);
+                return (
+                    b.log('Jumping to most recent message in thread '.concat(u.id, ' - ').concat(e)),
+                    c.Z.fetchMessages({
+                        channelId: n,
+                        limit: R.AQB,
+                        jump: {
+                            messageId: e,
+                            flash: !1,
+                            offset: 1
+                        },
+                        isPreload: a,
+                        skipLocalFetch: s
+                    })
+                );
+            }
+        }
     }
 }
 let M = 90 * N.Z.Millis.DAY,
