@@ -1,20 +1,19 @@
 n.d(a, {
     Z: function () {
-        return g;
+        return p;
     }
 }),
     n(47120),
     n(653041);
 var t = n(735250),
     i = n(470079),
-    r = n(120356),
-    o = n.n(r),
+    o = n(120356),
+    r = n.n(o),
     l = n(758713),
     s = n(657707),
-    c = n(793030),
-    d = n(51527);
-let u = [l.z.DESKTOP, l.z.XBOX, l.z.PLAYSTATION, l.z.NINTENDO];
-function m(e) {
+    c = n(51527);
+let d = [l.z.DESKTOP, l.z.XBOX, l.z.PLAYSTATION, l.z.NINTENDO];
+function u(e) {
     let { platform: a } = e;
     switch (a) {
         case l.z.DESKTOP:
@@ -29,31 +28,25 @@ function m(e) {
             return null;
     }
 }
-function p(e) {
+function m(e) {
     let { platforms: a } = e;
-    return (0, t.jsxs)('div', {
-        className: o()(d.row, d.gapSm),
+    return (0, t.jsx)('div', {
+        className: r()(c.row, c.gapSm),
         style: { alignItems: 'center' },
-        children: [
-            (0, t.jsx)(c.xv, {
-                variant: 'text-sm/normal',
-                children: ' \xB7 '
-            }),
-            a.map((e) => (0, t.jsx)(m, { platform: e }, e))
-        ]
+        children: a.map((e) => (0, t.jsx)(u, { platform: e }, e))
     });
 }
-function g(e) {
+function p(e) {
     let { detectedGame: a, className: n } = e,
-        r = i.useMemo(() => {
+        o = i.useMemo(() => {
             let e = new Set(a.platforms),
                 n = [...e];
-            return !e.has(l.z.DESKTOP) && (e.has(l.z.MACOS) || e.has(l.z.LINUX)) && n.push(l.z.DESKTOP), n.filter((e) => u.includes(e));
+            return !e.has(l.z.DESKTOP) && (e.has(l.z.MACOS) || e.has(l.z.LINUX)) && n.push(l.z.DESKTOP), n.filter((e) => d.includes(e));
         }, [a.platforms]);
-    return 0 === r.length
+    return 0 === o.length
         ? null
         : (0, t.jsx)('div', {
-              className: o()(d.column, d.gapLg, n),
-              children: r.length > 0 && (0, t.jsx)(p, { platforms: r })
+              className: r()(c.column, c.gapLg, n),
+              children: o.length > 0 && (0, t.jsx)(m, { platforms: o })
           });
 }
