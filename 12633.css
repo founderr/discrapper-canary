@@ -5597,7 +5597,8 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px
+    gap: 16px;
+    margin-bottom: 16px
 }
 
 .container_c2f3ef {
@@ -5674,11 +5675,9 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .detailsContainer_c2f3ef {
-    --custom-disclosure-spacing: var(--spacing-12);
     gap: var(--custom-disclosure-spacing);
     display: flex;
-    flex-direction: column;
-    margin-bottom: var(--custom-disclosure-spacing)
+    flex-direction: column
 }
 
 .overviewContainerNoVideo_c2f3ef {
