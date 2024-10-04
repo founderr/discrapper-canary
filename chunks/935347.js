@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(433517),
     u = n(481060),
     _ = n(205355),
-    h = n(607070),
-    E = n(38618),
+    E = n(607070),
+    h = n(38618),
     m = n(197344),
     I = n(474873),
-    g = n(706454),
-    p = n(215427),
+    p = n(706454),
+    g = n(215427),
     T = n(820254),
     f = n(358085),
     S = n(557177),
@@ -338,7 +338,7 @@ class R extends a.PureComponent {
                                 )
                         })
                     ];
-                    return g.default.locale.startsWith('en-') && e.push(v.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)];
+                    return p.default.locale.startsWith('en-') && e.push(v.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)];
                 })()
             ),
             L(
@@ -371,12 +371,12 @@ class R extends a.PureComponent {
             (this._connectedSound.volume = 1);
     }
 }
-t.Z = c.ZP.connectStores([E.Z, p.Z, I.Z, h.Z], () => ({
-    isTryingToConnect: E.Z.isTryingToConnect(),
-    connected: E.Z.isConnected(),
-    incident: p.Z.getIncident(),
+t.Z = c.ZP.connectStores([h.Z, g.Z, I.Z, E.Z], () => ({
+    isTryingToConnect: h.Z.isTryingToConnect(),
+    connected: h.Z.isConnected(),
+    incident: g.Z.getIncident(),
     soundpack: I.Z.getSoundpack(),
-    reducedMotion: h.Z.useReducedMotion
+    reducedMotion: E.Z.useReducedMotion
 }))((e) => {
     let { isTryingToConnect: t, connected: n, incident: a, soundpack: s, reducedMotion: r } = e;
     return t

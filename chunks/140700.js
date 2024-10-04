@@ -14,13 +14,13 @@ var i = n(735250),
     d = n(112471),
     u = n(746728),
     _ = n(689938),
-    h = n(868095);
-function E(e) {
+    E = n(868095);
+function h(e) {
     let { count: t, categoryId: n } = e,
         a = t.toLocaleString(l.default.locale),
         r = (0, c.E)({ categoryId: n });
     return (0, i.jsxs)('div', {
-        className: h.label,
+        className: E.label,
         children: [
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/medium',
@@ -49,7 +49,7 @@ function m(e) {
             },
             [t]
         ),
-        g = a.useMemo(
+        p = a.useMemo(
             () =>
                 null == l
                     ? []
@@ -57,7 +57,7 @@ function m(e) {
                           let [t, n] = e;
                           return {
                               id: ''.concat(t),
-                              label: (0, i.jsx)(E, {
+                              label: (0, i.jsx)(h, {
                                   categoryId: t,
                                   count: n
                               })
@@ -68,7 +68,7 @@ function m(e) {
     return null == l
         ? null
         : (0, i.jsxs)('div', {
-              className: h.container,
+              className: E.container,
               children: [
                   (0, i.jsx)(s.Text, {
                       variant: 'text-sm/medium',
@@ -76,8 +76,8 @@ function m(e) {
                       children: _.Z.Messages.GLOBAL_DISCOVERY_SHOW
                   }),
                   (0, i.jsx)(r.Z, {
-                      className: h.filter,
-                      items: g,
+                      className: E.filter,
+                      items: p,
                       title: m,
                       onSelect: I,
                       selected: ''.concat(n),

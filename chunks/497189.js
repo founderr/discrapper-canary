@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(749210),
     u = n(607070),
     _ = n(100527),
-    h = n(931240),
-    E = n(970606),
+    E = n(931240),
+    h = n(970606),
     m = n(963202),
     I = n(650461),
-    g = n(353093),
-    p = n(603839),
+    p = n(353093),
+    g = n(603839),
     T = n(84615),
     f = n(430824),
     S = n(231467),
@@ -54,7 +54,7 @@ function b(e) {
         ]
     });
 }
-function P(e) {
+function M(e) {
     let { text: t, icon: n } = e;
     return (0, i.jsxs)('div', {
         className: L.upsellDetail,
@@ -72,11 +72,11 @@ function P(e) {
         ]
     });
 }
-function M(e) {
+function P(e) {
     let { selectedGuildId: t, setSelectedGuildId: n, eligibleGuilds: s, onButtonClick: l, buttonText: o, hasCompletedUpsell: d } = e,
         u = (0, m.iN)('clan_discovery_admin_upsell'),
         _ = (0, m.YH)('clan_discovery_admin_upsell'),
-        h = a.useMemo(
+        E = a.useMemo(
             () =>
                 s.map((e) => ({
                     value: e.id,
@@ -87,7 +87,7 @@ function M(e) {
     a.useEffect(() => {
         0 === s.length && _ && (0, C.Ce)();
     }, [s, _]);
-    let E = s.length > 1;
+    let h = s.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             d
@@ -116,15 +116,15 @@ function M(e) {
                           (0, i.jsxs)('div', {
                               className: L.upsellDetails,
                               children: [
-                                  (0, i.jsx)(P, {
+                                  (0, i.jsx)(M, {
                                       icon: c.CompassIcon,
                                       text: Z.Z.Messages.CLAN_DISCOVERY_UPSELL_VIBES_OR_SKILL
                                   }),
-                                  (0, i.jsx)(P, {
+                                  (0, i.jsx)(M, {
                                       icon: c.CircleCheckIcon,
                                       text: Z.Z.Messages.CLAN_DISCOVERY_UPSELL_APPLICATIONS
                                   }),
-                                  (0, i.jsx)(P, {
+                                  (0, i.jsx)(M, {
                                       icon: c.GroupIcon,
                                       text: Z.Z.Messages.CLAN_DISCOVERY_UPSELL_MAX_SIZE
                                   })
@@ -135,11 +135,11 @@ function M(e) {
             (0, i.jsxs)('div', {
                 className: L.upsellButton,
                 children: [
-                    E &&
+                    h &&
                         (0, i.jsx)(c.SearchableSelect, {
                             className: L.upsellSelect,
                             value: t,
-                            options: h,
+                            options: E,
                             onChange: n
                         }),
                     !d &&
@@ -149,7 +149,7 @@ function M(e) {
                                     look: c.ButtonLooks.FILLED,
                                     size: c.ButtonSizes.LARGE,
                                     color: c.ButtonColors.BRAND,
-                                    className: r()(L.reserveButton, { [L.buttonWithSelect]: E }),
+                                    className: r()(L.reserveButton, { [L.buttonWithSelect]: h }),
                                     onClick: l,
                                     children: (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
@@ -194,23 +194,23 @@ t.Z = a.memo(function (e) {
         });
     a.useEffect(() => {
         !r &&
-            (0, E.TE)({
+            (0, h.TE)({
                 guildId: C,
                 location: _.Z.CLAN_DISCOVERY
             });
     }, [r, C]);
     let O = (0, o.e7)([f.Z], () => f.Z.getGuild(C)),
-        P = (0, o.e7)([I.ZP], () => (null != C ? I.ZP.getStateForGuild(C).progress : null)),
+        M = (0, o.e7)([I.ZP], () => (null != C ? I.ZP.getStateForGuild(C).progress : null)),
         D = a.useCallback(() => {
             !r &&
-                ((0, E._9)({
+                ((0, h._9)({
                     guildId: C,
                     location: _.Z.CLAN_DISCOVERY
                 }),
                 (0, T.q4)(
                     (e) => {
                         let { closeLayer: t } = e;
-                        return (0, i.jsx)(p.Z, {
+                        return (0, i.jsx)(g.Z, {
                             onClose: t,
                             guildId: C
                         });
@@ -240,7 +240,7 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        H = (0, c.useSpring)(
+        V = (0, c.useSpring)(
             {
                 from: y ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(176px, -24px) rotate(4deg) scale(1.1111)' },
                 to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
@@ -249,7 +249,7 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        V = (0, c.useSpring)(
+        H = (0, c.useSpring)(
             {
                 from: y ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(-176px, -24px) rotate(-4deg) scale(1.1111)' },
                 to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
@@ -287,7 +287,7 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        W = (0, c.useSpring)(
+        z = (0, c.useSpring)(
             {
                 from: y ? { transform: 'translateY(0px)' } : { transform: 'translateY(240px)' },
                 to: { transform: 'translateY(0px)' },
@@ -297,9 +297,9 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        z = a.useMemo(() => (s ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_LIST_SERVER : null == P ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [P, s]),
+        W = a.useMemo(() => (s ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_LIST_SERVER : null == M ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [M, s]),
         K = a.useCallback(async () => {
-            await (0, h.Zx)(C), d.Z.transitionToGuildSync('936317138904440892');
+            await (0, E.Zx)(C), d.Z.transitionToGuildSync('936317138904440892');
         }, [C]),
         q = a.useCallback(
             (e) =>
@@ -336,7 +336,7 @@ t.Z = a.memo(function (e) {
                     (0, i.jsx)(l.animated.div, {
                         className: L.clanCardInnerContainer,
                         style: {
-                            ...H,
+                            ...V,
                             ...k
                         },
                         children: (0, i.jsx)(S.xV, {
@@ -353,11 +353,11 @@ t.Z = a.memo(function (e) {
                                     className: L.clanCardCenterContainer,
                                     style: { overflow: G ? 'hidden' : 'visible' },
                                     children: (0, i.jsx)(l.animated.div, {
-                                        style: W,
+                                        style: z,
                                         children: (0, i.jsx)(S.xV, {
                                             clan: j,
                                             className: L.clanCardCenter,
-                                            bannerUrl: (0, g.pY)(U[4].id, U[4].bannerHash)
+                                            bannerUrl: (0, p.pY)(U[4].id, U[4].bannerHash)
                                         })
                                     })
                                 })
@@ -366,7 +366,7 @@ t.Z = a.memo(function (e) {
                     (0, i.jsx)(l.animated.div, {
                         className: L.clanCardInnerContainer,
                         style: {
-                            ...V,
+                            ...H,
                             ...k
                         },
                         children: (0, i.jsx)(S.xV, {
@@ -389,12 +389,12 @@ t.Z = a.memo(function (e) {
             }),
             (0, i.jsx)('div', {
                 className: L.upsellCtaContainer,
-                children: (0, i.jsx)(M, {
+                children: (0, i.jsx)(P, {
                     selectedGuildId: C,
                     setSelectedGuildId: R,
                     eligibleGuilds: t,
                     onButtonClick: D,
-                    buttonText: z,
+                    buttonText: W,
                     hasCompletedUpsell: r
                 })
             }),

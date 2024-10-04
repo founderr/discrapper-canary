@@ -3,10 +3,10 @@ n.d(t, {
         return _;
     },
     PB: function () {
-        return h;
+        return E;
     },
     eq: function () {
-        return E;
+        return h;
     }
 }),
     n(47120);
@@ -20,22 +20,22 @@ var i = n(735250),
     d = n(475413),
     u = n(217593);
 function _(e) {
-    let { id: t, label: n, icon: c, hint: _, renderSubmenu: h, ...E } = e,
+    let { id: t, label: n, icon: c, hint: _, renderSubmenu: E, ...h } = e,
         { onFocus: m, ...I } = (0, r.JA)(t),
-        { id: g } = (0, r.f$)(),
-        [p, T] = a.useState(!1),
-        f = null != h;
+        { id: p } = (0, r.f$)(),
+        [g, T] = a.useState(!1),
+        f = null != E;
     a.useLayoutEffect(() => {
         if (!!f)
-            return (0, s.N)(g, (e) => {
+            return (0, s.N)(p, (e) => {
                 T(e === t);
             });
-    }, [t, g, f]);
+    }, [t, p, f]);
     let S = (e) =>
         (0, i.jsxs)(d.kF, {
             ...e,
             ...I,
-            ...E,
+            ...h,
             role: 'button',
             look: o.Button.Looks.BLANK,
             innerClassName: u.menuItemInner,
@@ -65,14 +65,14 @@ function _(e) {
     return f
         ? (0, i.jsx)(o.Popout, {
               spacing: 0,
-              renderPopout: h,
-              shouldShow: p,
+              renderPopout: E,
+              shouldShow: g,
               onRequestClose: () => T(!1),
               children: S
           })
         : S();
 }
-function h(e) {
+function E(e) {
     let { id: t, children: n } = e,
         a = (0, c.Z)(t);
     return (0, i.jsx)(r.bG, {
@@ -90,7 +90,7 @@ function h(e) {
         })
     });
 }
-function E(e) {
+function h(e) {
     return (0, i.jsx)('div', {
         className: u.submenuPaddingContainer,
         children: (0, i.jsx)(o.Menu, {

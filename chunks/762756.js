@@ -9,12 +9,12 @@ var i,
     d = n(599857),
     u = n(600164),
     _ = n(63063),
-    h = n(1964),
-    E = n(981631),
+    E = n(1964),
+    h = n(981631),
     m = n(689938),
     I = n(311501),
-    g = n(113207);
-function p(e, t, n) {
+    p = n(113207);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,13 +27,13 @@ function p(e, t, n) {
         e
     );
 }
-let T = _.Z.getArticleURL(E.BhN.VERIFICATION_FAQ);
+let T = _.Z.getArticleURL(h.BhN.VERIFICATION_FAQ);
 class f extends (i = s.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: i } = this.props;
         return (0, a.jsx)(a.Fragment, {
             children: e.map((e) =>
-                e === E.PUi.CAPTCHA
+                e === h.PUi.CAPTCHA
                     ? (0, a.jsx)(
                           d.Z,
                           {
@@ -45,9 +45,9 @@ class f extends (i = s.PureComponent) {
                     : (0, a.jsx)(
                           c.Button,
                           {
-                              className: l()(g.marginBottom20),
+                              className: l()(p.marginBottom20),
                               onClick: () => this.handleClick(e),
-                              children: h.Z.getButtonTitle(e)
+                              children: E.Z.getButtonTitle(e)
                           },
                           e
                       )
@@ -68,11 +68,11 @@ class f extends (i = s.PureComponent) {
                     children: [
                         (0, a.jsx)('div', { className: I.image }),
                         (0, a.jsx)('div', {
-                            className: l()(I.title, g.marginTop20),
+                            className: l()(I.title, p.marginTop20),
                             children: m.Z.Messages.VERIFICATION_TITLE
                         }),
                         (0, a.jsx)('div', {
-                            className: l()(I.body, g.marginTop4, g.marginBottom20),
+                            className: l()(I.body, p.marginTop4, p.marginBottom20),
                             children: m.Z.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({ helpCenterURL: T })
                         }),
                         (0, a.jsx)(u.Z, {
@@ -84,11 +84,11 @@ class f extends (i = s.PureComponent) {
                     ]
                 }),
                 (0, a.jsx)('div', {
-                    className: l()(I.footer, g.marginTop20),
+                    className: l()(I.footer, p.marginTop20),
                     children: m.Z.Messages.VERIFICATION_FOOTER
                 }),
                 (0, a.jsxs)(u.Z, {
-                    className: l()(g.marginTop4, g.marginBottom20),
+                    className: l()(p.marginTop4, p.marginBottom20),
                     grow: 0,
                     children: [
                         (0, a.jsx)('div', {
@@ -110,15 +110,15 @@ class f extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'handleClick', (e) => {
+            g(this, 'handleClick', (e) => {
                 let { onClick: t } = this.props;
                 null == t || t(e);
             });
     }
 }
-p(f, 'defaultProps', {
-    types: [E.PUi.CAPTCHA],
-    onCaptchaVerify: E.dG4,
-    onLogout: E.dG4
+g(f, 'defaultProps', {
+    types: [h.PUi.CAPTCHA],
+    onCaptchaVerify: h.dG4,
+    onLogout: h.dG4
 }),
     (t.Z = f);

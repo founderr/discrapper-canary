@@ -16,12 +16,12 @@ var i = n(735250),
     d = n(119269),
     u = n(938736),
     _ = n(227140),
-    h = n(981631),
-    E = n(921944),
+    E = n(981631),
+    h = n(921944),
     m = n(689938),
     I = n(64123);
-let g = 'url(#dark-purple-gradient)',
-    p = () =>
+let p = 'url(#dark-purple-gradient)',
+    g = () =>
         (0, i.jsxs)('div', {
             className: I.coachtipContent,
             children: [
@@ -47,7 +47,7 @@ let g = 'url(#dark-purple-gradient)',
                 fill: 'white'
             })
         }),
-    f = () => (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: E.L.TAKE_ACTION }),
+    f = () => (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: h.L.TAKE_ACTION }),
     S = (e) => {
         let { children: t } = e;
         return (0, i.jsx)(r.Popout, {
@@ -62,7 +62,7 @@ let g = 'url(#dark-purple-gradient)',
                     contentClassName: I.incentiveCoachtipContainer,
                     pointerClassName: I.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, c.uL)(h.Z5c.NITRO_HOME), f();
+                        (0, c.uL)(E.Z5c.NITRO_HOME), f();
                     },
                     art: (0, i.jsx)(i.Fragment, {
                         children: (0, i.jsx)(d.Z, {
@@ -71,8 +71,8 @@ let g = 'url(#dark-purple-gradient)',
                             showAnimations: !1,
                             progressCircleVariation: d.Q.NITRO_LOGO,
                             ellipseOpacity: 1,
-                            circleColor: g,
-                            circleStroke: g,
+                            circleColor: p,
+                            circleStroke: p,
                             progressCircleStrokeSize: 4
                         })
                     }),
@@ -105,7 +105,7 @@ let g = 'url(#dark-purple-gradient)',
                             circleColor: 'url(#purple-gradient)'
                         })
                     }),
-                    (0, i.jsx)(p, {})
+                    (0, i.jsx)(g, {})
                 ]
             });
         return (0, i.jsx)(r.Tooltip, {

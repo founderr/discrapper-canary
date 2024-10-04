@@ -1,6 +1,6 @@
 n.d(t, {
     W: function () {
-        return g;
+        return p;
     }
 });
 var i = n(424602),
@@ -13,8 +13,8 @@ var i = n(424602),
     d = n(599659),
     u = n(163684),
     _ = n(735778),
-    h = n(91641),
-    E = n(598984),
+    E = n(91641),
+    h = n(598984),
     m = n(987338);
-let I = [E.NR, E.ZI, E.Ob, E.uc, E.m1, r.J$, i.zQ, i.Kv, l.bb, u.g, d.O, c.w, o.I, i._f, a.Z, s.I, _.l],
-    g = new h.E(I, m.$P.CONNECTION_OPEN, { location: 'app open' });
+let I = [h.NR, h.ZI, h.Ob, h.uc, h.m1, r.J$, i.zQ, i.Kv, l.bb, u.g, d.O, c.w, o.I, i._f, a.Z, s.I, _.l],
+    p = new E.E(I, m.$P.CONNECTION_OPEN, { location: 'app open' });

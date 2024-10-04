@@ -21,14 +21,14 @@ function _(e, t, n) {
         e
     );
 }
-let h = new Set(),
-    E = new Set(),
+let E = new Set(),
+    h = new Set(),
     m = null;
 function I() {
-    for (let e of h) a.Z.setDisableLocalVideo(e, d.ZUi.MANUAL_ENABLED, u.Yn.DEFAULT, !1);
-    E.clear(), h.clear();
+    for (let e of E) a.Z.setDisableLocalVideo(e, d.ZUi.MANUAL_ENABLED, u.Yn.DEFAULT, !1);
+    h.clear(), E.clear();
 }
-class g extends s.Z {
+class p extends s.Z {
     _initialize() {
         i.Z.subscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), i.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), i.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), i.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), l.Z.addChangeListener(this.handlePopoutChange);
     }
@@ -42,12 +42,12 @@ class g extends s.Z {
             _ = c.Z.isVisible(),
             m = l.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT),
             I = o.Z.isLocalVideoDisabled(t, n),
-            g = E.has(t);
-        s && !_ && !m && !I && !g && (h.add(t), a.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
+            p = h.has(t);
+        s && !_ && !m && !I && !p && (E.add(t), a.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
     }
     handleManualLocalVideoToggle(e) {
         let { userId: t, persist: n } = e;
-        n && (E.add(t), h.delete(t));
+        n && (h.add(t), E.delete(t));
     }
     constructor(...e) {
         super(...e),
@@ -64,4 +64,4 @@ class g extends s.Z {
             });
     }
 }
-t.Z = new g();
+t.Z = new p();

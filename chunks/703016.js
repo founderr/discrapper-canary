@@ -9,12 +9,12 @@ var i = n(913527),
     d = n(706454),
     u = n(695346),
     _ = n(314897),
-    h = n(433355),
-    E = n(592125),
+    E = n(433355),
+    h = n(592125),
     m = n(271383),
     I = n(430824),
-    g = n(131951),
-    p = n(292959),
+    p = n(131951),
+    g = n(292959),
     T = n(699516),
     f = n(944486),
     S = n(9156),
@@ -28,12 +28,12 @@ var i = n(913527),
 let O = [],
     x = null,
     b = null,
-    P = null,
-    M = /\|\|([\s\S]+?)\|\|/g;
+    M = null,
+    P = /\|\|([\s\S]+?)\|\|/g;
 function D(e, t, n, i) {
     let s = I.Z.getGuild(n),
         r = e
-            .replace(M, R.Z.Messages.SPOILER)
+            .replace(P, R.Z.Messages.SPOILER)
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var i;
                 let a = C.default.getUser(t);
@@ -45,7 +45,7 @@ function D(e, t, n, i) {
                 return null != n && null != n.name ? n.name : R.Z.Messages.MESSAGE_TTS_DELETED_ROLE;
             })
             .replace(/<#(\d+)>/g, (e, t) => {
-                let n = E.Z.getChannel(t);
+                let n = h.Z.getChannel(t);
                 return null == n ? e : (0, l.F6)(n, C.default, T.Z);
             })
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(R.Z.Messages.EMOJI, ' ').concat(t))
@@ -70,11 +70,11 @@ function D(e, t, n, i) {
 function y() {
     if (!r.Zh) return !1;
     let e = d.default.locale;
-    if (null == P) {
+    if (null == M) {
         var t;
-        P = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices();
+        M = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices();
     }
-    let n = P.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e || !1);
+    let n = M.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e || !1);
     b = n.length > 0 ? n[0] : null;
 }
 async function j(e, t, n, i, a) {
@@ -106,14 +106,14 @@ function k(e) {
 function B(e) {
     var t, n, i, a, s, r;
     let { channelId: l, message: o, optimistic: c } = e;
-    if (c || g.Z.isSelfDeaf()) return !1;
-    let d = E.Z.getChannel(l);
+    if (c || p.Z.isSelfDeaf()) return !1;
+    let d = h.Z.getChannel(l);
     if (null == d) return !1;
     let I = f.Z.getChannelId(),
-        C = h.ZP.getCurrentSidebarChannelId(I),
+        C = E.ZP.getCurrentSidebarChannelId(I),
         A = l === I || l === C,
         v = u.OW.getSetting() && o.tts && A,
-        R = p.Z.getTTSType(),
+        R = g.Z.getTTSType(),
         x = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== _.default.getId() && (R === L.PrB.ALL_CHANNELS || (R === L.PrB.SELECTED_CHANNEL && A));
     if ((v || x) && !T.Z.isBlockedForMessage(o)) {
         if (O.indexOf(o.id) >= 0) return !1;
@@ -127,16 +127,16 @@ function B(e) {
     }
     return !1;
 }
-function H(e) {
+function V(e) {
     let { id: t, channelId: n } = e,
         i = v.Z.currentMessage;
     return null != i && t === i.messageId && n === i.channelId && ((0, A.NB)(), !0);
 }
-function V() {
-    g.Z.isSelfDeaf() && r.M9();
+function H() {
+    p.Z.isSelfDeaf() && r.M9();
 }
 t.Z = {
     init() {
-        s.Z.subscribe('SPEAK_TEXT', G), s.Z.subscribe('SPEAK_MESSAGE', k), s.Z.subscribe('STOP_SPEAKING', w), s.Z.subscribe('MESSAGE_CREATE', B), s.Z.subscribe('MESSAGE_DELETE', H), s.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', V), s.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', y), s.Z.subscribe('I18N_LOAD_SUCCESS', y);
+        s.Z.subscribe('SPEAK_TEXT', G), s.Z.subscribe('SPEAK_MESSAGE', k), s.Z.subscribe('STOP_SPEAKING', w), s.Z.subscribe('MESSAGE_CREATE', B), s.Z.subscribe('MESSAGE_DELETE', V), s.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', H), s.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', y), s.Z.subscribe('I18N_LOAD_SUCCESS', y);
     }
 };

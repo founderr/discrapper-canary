@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(184107),
     u = n(410575),
     _ = n(613311),
-    h = n(601564),
-    E = n(981631),
+    E = n(601564),
+    h = n(981631),
     m = n(256109);
 function I(e, t, n) {
     return (
@@ -25,14 +25,14 @@ function I(e, t, n) {
         e
     );
 }
-class g extends a.Component {
+class p extends a.Component {
     componentDidMount() {
         this.fetchStoreListing(), (0, c.e)('channel_store_listing');
     }
     render() {
         return null != this.props.skuId
             ? (0, i.jsx)(u.Z, {
-                  page: E.ZY5.CHANNEL_STORE_LISTING,
+                  page: h.ZY5.CHANNEL_STORE_LISTING,
                   root: !0,
                   children: (0, i.jsx)('div', {
                       className: m.applicationStore,
@@ -58,7 +58,7 @@ class g extends a.Component {
                     inputSkuId: a,
                     fetchStoreListing: this.fetchStoreListing,
                     location: t,
-                    pageSize: (0, h.getPageSize)(s)
+                    pageSize: (0, E.getPageSize)(s)
                 });
             });
     }
@@ -67,5 +67,5 @@ t.Z = (0, o.Z)(
     r.ZP.connectStores([d.Z], (e) => {
         let { channel: t, inputSkuId: n } = e;
         return { skuId: null != n ? n : d.Z.getSkuIdForChannel(t.id) };
-    })(g)
+    })(p)
 );

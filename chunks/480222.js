@@ -14,14 +14,14 @@ let _ = {
     clamp: !0
 };
 t.Z = function (e) {
-    let { children: t, hasChanges: n, onClose: h, onSave: E, onReset: m } = e,
+    let { children: t, hasChanges: n, onClose: E, onSave: h, onReset: m } = e,
         I = a.useCallback(() => {
-            (0, o.fH)(o.v0.DISCOVERY), null == h || h();
-        }, [h]),
-        g = a.useCallback(() => {
-            null == E || E(), null == I || I();
-        }, [E, I]),
+            (0, o.fH)(o.v0.DISCOVERY), null == E || E();
+        }, [E]),
         p = a.useCallback(() => {
+            null == h || h(), null == I || I();
+        }, [h, I]),
+        g = a.useCallback(() => {
             null == m || m();
         }, [m]);
     a.useEffect(() => {
@@ -83,14 +83,14 @@ t.Z = function (e) {
                                 className: u.saveToolbarActions,
                                 children: [
                                     (0, i.jsx)(r.Button, {
-                                        onClick: p,
+                                        onClick: g,
                                         size: r.ButtonSizes.SMALL,
                                         look: r.ButtonLooks.LINK,
                                         color: r.ButtonColors.WHITE,
                                         children: d.Z.Messages.RESET
                                     }),
                                     (0, i.jsx)(r.Button, {
-                                        onClick: g,
+                                        onClick: p,
                                         size: r.ButtonSizes.SMALL,
                                         look: r.ButtonLooks.FILLED,
                                         color: r.ButtonColors.BRAND,

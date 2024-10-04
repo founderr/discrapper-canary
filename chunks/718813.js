@@ -14,12 +14,12 @@ var i,
     d = n(215569),
     u = n(481060),
     _ = n(37234),
-    h = n(134616),
-    E = n(714338),
+    E = n(134616),
+    h = n(714338),
     m = n(663993),
     I = n(84615),
-    g = n(210887),
-    p = n(819640),
+    p = n(210887),
+    g = n(819640),
     T = n(585483),
     f = n(981631),
     S = n(736366);
@@ -37,12 +37,12 @@ function C(e, t, n) {
     );
 }
 let N = (0, m.Un)({
-        createPromise: () => Promise.all([n.e('96427'), n.e('51514'), n.e('81039'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('68136'), n.e('76540'), n.e('87624'), n.e('22646'), n.e('25183'), n.e('57674'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('52619'), n.e('8821'), n.e('18815'), n.e('10837')]).then(n.bind(n, 989804)),
+        createPromise: () => Promise.all([n.e('96427'), n.e('51514'), n.e('81039'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('68136'), n.e('76540'), n.e('87624'), n.e('22646'), n.e('25183'), n.e('57674'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('52619'), n.e('8821'), n.e('18815'), n.e('51862')]).then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
     }),
     A = (0, m.Un)({
-        createPromise: () => Promise.all([n.e('33053'), n.e('7654'), n.e('44294'), n.e('75116')]).then(n.bind(n, 869779)),
+        createPromise: () => Promise.all([n.e('33053'), n.e('7654'), n.e('35994'), n.e('75116')]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: 'ChannelSettings'
     }),
@@ -52,7 +52,7 @@ let N = (0, m.Un)({
         name: 'CollectiblesShop'
     }),
     Z = (0, m.Un)({
-        createPromise: () => Promise.all([n.e('96427'), n.e('33053'), n.e('37581'), n.e('7654'), n.e('44156'), n.e('44294'), n.e('85552'), n.e('58227'), n.e('36897')]).then(n.bind(n, 994763)),
+        createPromise: () => Promise.all([n.e('96427'), n.e('33053'), n.e('37581'), n.e('7654'), n.e('44156'), n.e('35994'), n.e('85552'), n.e('58227'), n.e('36897')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
@@ -69,9 +69,9 @@ let N = (0, m.Un)({
         tension: 100
     };
 function b() {
-    return s.useEffect(() => (E.Z.enable(), E.Z.enableTemp(h.u), () => E.Z.disableTemp()), []), null;
+    return s.useEffect(() => (h.Z.enable(), h.Z.enableTemp(E.u), () => h.Z.disableTemp()), []), null;
 }
-class P extends (i = s.PureComponent) {
+class M extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -184,8 +184,8 @@ class P extends (i = s.PureComponent) {
             });
     }
 }
-C(P, 'defaultProps', { baseLayer: !1 }), C(P, 'contextType', u.AccessibilityPreferencesContext);
-class M extends s.PureComponent {
+C(M, 'defaultProps', { baseLayer: !1 }), C(M, 'contextType', u.AccessibilityPreferencesContext);
+class P extends s.PureComponent {
     componentDidMount() {
         T.S.subscribe(f.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
     }
@@ -199,7 +199,7 @@ class M extends s.PureComponent {
         return (
             s.push(
                 (0, a.jsx)(
-                    P,
+                    M,
                     {
                         mode: 0 !== i || n ? O : R,
                         baseLayer: !0,
@@ -217,7 +217,7 @@ class M extends s.PureComponent {
         return (
             (i = 'string' == typeof e ? L[e]() : (0, a.jsx)(e, {})),
             (0, a.jsxs)(
-                P,
+                M,
                 {
                     mode: t === n - 1 ? R : O,
                     children: [(0, a.jsx)(b, {}), i]
@@ -246,10 +246,10 @@ class M extends s.PureComponent {
     }
 }
 function D(e) {
-    let t = (0, c.e7)([g.Z], () => g.Z.darkSidebar) ? f.BRd.DARK : void 0,
-        n = (0, c.e7)([p.Z], () => p.Z.getLayers()),
+    let t = (0, c.e7)([p.Z], () => p.Z.darkSidebar) ? f.BRd.DARK : void 0,
+        n = (0, c.e7)([g.Z], () => g.Z.getLayers()),
         i = (0, I.QP)((e) => e.fullScreenLayers.length > 0);
-    return (0, a.jsx)(M, {
+    return (0, a.jsx)(P, {
         ...e,
         sidebarTheme: t,
         layers: n,

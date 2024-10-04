@@ -20,15 +20,15 @@ function _(e) {
         if (null != o.Z.getLastClipsError()) return !0;
         if (!s.Z.hasConsented(u.pjP.PERSONALIZATION) || null == a.ZP.getVisibleGame()) return !1;
         let {
-            clipsEducationState: { dismissedAt: i, numberOfGamesLaunchedSinceDismissal: _, numberOfTimesDismissed: h },
-            hasTakenDecoupledClip: E,
+            clipsEducationState: { dismissedAt: i, numberOfGamesLaunchedSinceDismissal: _, numberOfTimesDismissed: E },
+            hasTakenDecoupledClip: h,
             clipsSettings: { clipsEnabled: m }
         } = o.Z.getState();
         if (null === i) return !0;
         if (!(null != e && (0, l.xt)(e))) return !1;
         let I = Date.now() - i > d.xx,
-            g = _ >= d._U,
-            p = m ? d.xd : d.A5;
-        return I && g && h < p && !E;
+            p = _ >= d._U,
+            g = m ? d.xd : d.A5;
+        return I && p && E < g && !h;
     });
 }

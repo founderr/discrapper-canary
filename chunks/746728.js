@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return E;
+        return h;
     }
 }),
     n(47120);
@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(726115),
     u = n(783393),
     _ = n(112471),
-    h = n(249379);
-function E(e) {
+    E = n(249379);
+function h(e) {
     let { categoryId: t, loadId: n } = e;
     (0, c.LD)({ categoryId: t }),
         (0, d.oT)({
@@ -28,7 +28,7 @@ function E(e) {
 function m(e) {
     let { loadId: t, categoryId: n, count: s } = e,
         d = a.useCallback(() => {
-            E({
+            h({
                 categoryId: n,
                 loadId: t
             });
@@ -38,16 +38,16 @@ function m(e) {
         I = (0, u.E)({ categoryId: n });
     return (0, i.jsxs)(l.Clickable, {
         onClick: d,
-        className: r()(h.category, { [h.selected]: _ }),
+        className: r()(E.category, { [E.selected]: _ }),
         children: [
             (0, i.jsx)(l.Text, {
-                className: h.name,
+                className: E.name,
                 variant: 'text-sm/medium',
                 color: 'header-primary',
                 children: I
             }),
             (0, i.jsx)(l.Text, {
-                className: h.count,
+                className: E.count,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: m
@@ -61,7 +61,7 @@ t.Z = function (e) {
     return null == n
         ? null
         : (0, i.jsx)('div', {
-              className: h.categories,
+              className: E.categories,
               children: n.map((e) => {
                   let [n, a] = e;
                   return (0, i.jsx)(

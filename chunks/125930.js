@@ -9,19 +9,19 @@ var i = n(735250),
     d = n(424218),
     u = n(823379),
     _ = n(358085),
-    h = n(843445),
-    E = n(981631),
+    E = n(843445),
+    h = n(981631),
     m = n(689938),
     I = n(803215);
-let g = {
-    [E.TaA.WINDOWS]: _.PlatformTypes.WINDOWS,
-    [E.TaA.MACOS]: _.PlatformTypes.OSX,
-    [E.TaA.LINUX]: _.PlatformTypes.LINUX
+let p = {
+    [h.TaA.WINDOWS]: _.PlatformTypes.WINDOWS,
+    [h.TaA.MACOS]: _.PlatformTypes.OSX,
+    [h.TaA.LINUX]: _.PlatformTypes.LINUX
 };
-class p extends a.PureComponent {
+class g extends a.PureComponent {
     render() {
         let { active: e, children: t, pageSize: n, onClick: a } = this.props,
-            s = n === h.b.LARGE;
+            s = n === E.b.LARGE;
         return (0, i.jsx)(l.Button, {
             size: s ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
             fullWidth: !s,
@@ -90,18 +90,18 @@ class f extends a.PureComponent {
                       (0, i.jsx)('div', { className: I.separator }),
                       a.map((t) =>
                           (0, i.jsx)(
-                              p,
+                              g,
                               {
                                   active: t === n,
                                   onClick: () => this.handleSelectOperatingSystem(t),
                                   pageSize: e,
                                   children: (function (e) {
                                       switch (e) {
-                                          case E.TaA.WINDOWS:
+                                          case h.TaA.WINDOWS:
                                               return m.Z.Messages.WINDOWS;
-                                          case E.TaA.MACOS:
+                                          case h.TaA.MACOS:
                                               return m.Z.Messages.MACOS;
-                                          case E.TaA.LINUX:
+                                          case h.TaA.LINUX:
                                               return m.Z.Messages.LINUX;
                                       }
                                   })(t)
@@ -178,7 +178,7 @@ class f extends a.PureComponent {
         let a = (0, _.getPlatform)(),
             s = Object.keys(e.systemRequirements),
             r = s[0];
-        for (let e of s) g[e] === a && (r = e);
+        for (let e of s) p[e] === a && (r = e);
         this.state = { selectedOperatingSystem: r };
     }
 }

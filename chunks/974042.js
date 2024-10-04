@@ -9,12 +9,12 @@ var i,
     d = n(5254),
     u = n(441623),
     _ = n(735778),
-    h = n(199902),
-    E = n(271383),
+    E = n(199902),
+    h = n(271383),
     m = n(430824),
     I = n(158776),
-    g = n(699516),
-    p = n(594174),
+    p = n(699516),
+    g = n(594174),
     T = n(981631),
     f = n(474936);
 function S(e, t, n) {
@@ -31,7 +31,7 @@ function S(e, t, n) {
     );
 }
 function C(e) {
-    let t = p.default.getUser(e);
+    let t = g.default.getUser(e);
     return {
         user: t,
         usernameLower: null != t ? t.username.toLowerCase() : null
@@ -42,13 +42,13 @@ function N(e) {
         status: I.Z.getStatus(e),
         isMobile: I.Z.isMobileOnline(e),
         activities: I.Z.getActivities(e),
-        applicationStream: h.Z.getAnyStreamForUser(e)
+        applicationStream: E.Z.getAnyStreamForUser(e)
     };
 }
 function A(e) {
     let t = [];
     return (
-        s()(E.ZP.memberOf(e))
+        s()(h.ZP.memberOf(e))
             .map(m.Z.getGuild)
             .sortBy((e) => (null != e ? e.name.toLowerCase() : null))
             .forEach((e) => {
@@ -72,16 +72,16 @@ class v extends c.Z {
 class Z {
     reset() {
         let e = s().map(
-                g.Z.getRelationships(),
+                p.Z.getRelationships(),
                 (e, t) =>
                     new v({
                         key: t,
                         type: e,
-                        nickname: g.Z.getNickname(t),
+                        nickname: p.Z.getNickname(t),
                         ...C(t),
                         ...N(t),
                         ...A(t),
-                        spam: (0, _.A)({ location: 'friend-store' }) && g.Z.isSpam(t),
+                        spam: (0, _.A)({ location: 'friend-store' }) && p.Z.isSpam(t),
                         giftIntentType: e === T.OGo.FRIEND && u.Z.isTopAffinityFriendAnniversary({ userId: t }) ? f.hX.FRIEND_ANNIVERSARY : void 0
                     })
             ),
@@ -165,13 +165,13 @@ let L = !0,
     O = T.pJs.ONLINE,
     x = new Z(),
     b = !0,
-    P = !1;
-function M() {
+    M = !1;
+function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     L && (e || (O !== T.pJs.ONLINE && O !== T.pJs.ADD_FRIEND)) && !R && ((L = !1), (R = !0), o.Z.fetchRelationships());
 }
 function D() {
-    if (((L = !0), b ? (R = !1) : M(), (x = x.reset()), P)) return;
+    if (((L = !0), b ? (R = !1) : P(), (x = x.reset()), M)) return;
     let e = x.getRelationshipCounts();
     O = 0 === e[T.OGo.FRIEND] ? (0 !== e[T.OGo.PENDING_INCOMING] ? T.pJs.PENDING : T.pJs.ADD_FRIEND) : T.pJs.ONLINE;
 }
@@ -185,13 +185,13 @@ function j(e) {
 }
 class U extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, I.Z, p.default, m.Z, E.ZP, h.Z, d.Z), this.syncWith([g.Z], y), this.syncWith([d.Z], y), this.syncWith([u.Z], y), this.syncWith([p.default], j(C)), this.syncWith([I.Z, h.Z], j(N)), D();
+        this.waitFor(p.Z, I.Z, g.default, m.Z, h.ZP, E.Z, d.Z), this.syncWith([p.Z], y), this.syncWith([d.Z], y), this.syncWith([u.Z], y), this.syncWith([g.default], j(C)), this.syncWith([I.Z, E.Z], j(N)), D();
     }
     getState() {
         return {
             fetching: R,
             section: O,
-            pendingCount: g.Z.getPendingCount(),
+            pendingCount: p.Z.getPendingCount(),
             rows: x
         };
     }
@@ -202,7 +202,7 @@ S(U, 'displayName', 'FriendsStore'),
             D();
         },
         FRIENDS_SET_SECTION: function (e) {
-            (O = e.section), M();
+            (O = e.section), P();
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
@@ -219,6 +219,6 @@ S(U, 'displayName', 'FriendsStore'),
             return (b = t !== T.cII.FRIENDS), y(), !b;
         },
         FRIENDS_SET_INITIAL_SECTION: function (e) {
-            (O = e.section), (P = !0);
+            (O = e.section), (M = !0);
         }
     }));

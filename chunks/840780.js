@@ -34,8 +34,8 @@ var i = n(735250),
     j = n(803647),
     D = n(690221),
     w = n(231664),
-    G = n(759198),
-    U = n(131704),
+    U = n(759198),
+    G = n(131704),
     k = n(199902),
     B = n(314897),
     V = n(592125),
@@ -83,7 +83,7 @@ class ec extends l.PureComponent {
         let e, t, n, l;
         let { canGoLive: r, guildId: a, isStreaming: s, channel: o, canStream: c, runningGame: d, embeddedActivity: h } = this.props;
         return (null != d || null == h) && (s || (r && null != d))
-            ? (s ? ((e = !1), (t = this.handleClickStopStreamingButton), (n = u.ScreenXIcon), (l = er.Z.Messages.STOP_STREAMING)) : c ? ((e = !1), (t = this.handleClickGoLiveButton), (n = u.ScreenArrowIcon), (l = null != d ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({ game: d.name }) : er.Z.Messages.ACTIVITY_PANEL_GO_LIVE)) : ((e = !0), (t = null), (n = u.ScreenArrowIcon), (l = null != o && (0, U.vd)(o.type) ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != a ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD)),
+            ? (s ? ((e = !1), (t = this.handleClickStopStreamingButton), (n = u.ScreenXIcon), (l = er.Z.Messages.STOP_STREAMING)) : c ? ((e = !1), (t = this.handleClickGoLiveButton), (n = u.ScreenArrowIcon), (l = null != d ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({ game: d.name }) : er.Z.Messages.ACTIVITY_PANEL_GO_LIVE)) : ((e = !0), (t = null), (n = u.ScreenArrowIcon), (l = null != o && (0, G.vd)(o.type) ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != a ? er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : er.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD)),
               (0, i.jsx)('div', {
                   className: ea.panelButtonContainer,
                   children: (0, i.jsx)(ee.Z, {
@@ -211,7 +211,7 @@ class ec extends l.PureComponent {
                                         size: 'xxs',
                                         color: Z.JX.PREMIUM_TIER_2
                                     }),
-                                    (0, i.jsx)(G.Z, {
+                                    (0, i.jsx)(U.Z, {
                                         className: ea.perksDemoText,
                                         variant: 'text-xxs/semibold',
                                         children: n
@@ -257,7 +257,7 @@ class ec extends l.PureComponent {
                                 children: t.name
                             })
                         }),
-                        (0, U.Qm)(l.type) ? c : (0, i.jsx)(eo, { timestamps: s })
+                        (0, G.Qm)(l.type) ? c : (0, i.jsx)(eo, { timestamps: s })
                     ]
                 })
             ]
@@ -280,7 +280,7 @@ class ec extends l.PureComponent {
             es(this, 'modalKey', void 0),
             es(this, 'handleClickGoLiveButton', () => {
                 let { guildId: e, channel: t } = this.props,
-                    l = null != t && (0, U.vd)(t.type) ? t : null,
+                    l = null != t && (0, G.vd)(t.type) ? t : null,
                     r = null != l ? l.getGuildId() : e;
                 (0, u.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('46746'), n.e('41720')]).then(n.bind(n, 60594));
@@ -323,7 +323,7 @@ class ec extends l.PureComponent {
             es(this, 'handleApplicationLinkClick', () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
-                o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, U.vd)(t.type) && h.Z.selectParticipant(t.id, n.applicationId), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ei.ME, t.id), (0, U.Qm)(t.type) && (0, g.tg)(el.Ez.PANEL);
+                o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, G.vd)(t.type) && h.Z.selectParticipant(t.id, n.applicationId), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ei.ME, t.id), (0, G.Qm)(t.type) && (0, g.tg)(el.Ez.PANEL);
             });
     }
 }

@@ -10,16 +10,16 @@ var a = n(481060),
     d = n(293273),
     u = n(885110),
     _ = n(996106),
-    h = n(914946),
-    E = n(452426),
+    E = n(914946),
+    h = n(452426),
     m = n(852926),
     I = n(186901),
-    g = n(981631);
+    p = n(981631);
 t.Z = {
-    [g.Etm.SET_OVERLAY_LOCKED]: {
+    [p.Etm.SET_OVERLAY_LOCKED]: {
         scope: I.lH,
         validation: (e) =>
-            (0, E.Z)(e)
+            (0, h.Z)(e)
                 .required()
                 .keys({
                     locked: e.boolean().required(),
@@ -30,17 +30,17 @@ t.Z = {
                 args: { locked: t, pid: n },
                 socket: { application: i }
             } = e;
-            if (null == i.id) throw new _.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
+            if (null == i.id) throw new _.Z({ errorCode: p.lTL.INVALID_COMMAND }, 'No application.');
             o.Z.setLocked(t, n);
         }
     },
-    [g.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
+    [p.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
         scope: I.lH,
         validation: (e) =>
-            (0, E.Z)(e)
+            (0, h.Z)(e)
                 .required()
                 .keys({
-                    type: e.number().required().valid([g.mFx.JOIN]),
+                    type: e.number().required().valid([p.mFx.JOIN]),
                     pid: e.number().min(0).required()
                 }),
         handler(e) {
@@ -49,20 +49,20 @@ t.Z = {
                     args: { type: n, pid: i }
                 } = e,
                 a = t.application.id;
-            if (null == a) throw new _.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
+            if (null == a) throw new _.Z({ errorCode: p.lTL.INVALID_COMMAND }, 'No application.');
             let s = d.Z.getApplicationActivity(a);
-            if (null == s || null == s.secrets || !(0, h.t9)(n, s.party, s.secrets)) throw new _.Z({ errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
+            if (null == s || null == s.secrets || !(0, E.t9)(n, s.party, s.secrets)) throw new _.Z({ errorCode: p.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
             let { lock: l } = (0, m.jU)(i),
                 o = (0, c.Z)(s, u.Z);
             return (0, r.h7)(s, o).then(() => {
-                if ((l(), o)) throw new _.Z({ errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
+                if ((l(), o)) throw new _.Z({ errorCode: p.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
             });
         }
     },
-    [g.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
+    [p.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
         scope: I.lH,
         validation: (e) =>
-            (0, E.Z)(e)
+            (0, h.Z)(e)
                 .required()
                 .keys({
                     code: e.string().required(),
@@ -73,10 +73,10 @@ t.Z = {
                 args: { code: t, pid: n },
                 socket: i
             } = e;
-            if (null == i.application.id) throw new _.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
+            if (null == i.application.id) throw new _.Z({ errorCode: p.lTL.INVALID_COMMAND }, 'No application.');
             return l.Z.resolveInvite(t, 'Game SDK').then((e) => {
                 let { invite: t, code: i } = e;
-                if (null == t) throw new _.Z({ errorCode: g.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(i));
+                if (null == t) throw new _.Z({ errorCode: p.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(i));
                 let { context: a, lock: r } = (0, m.jU)(n);
                 return new Promise((e) => {
                     s.Z.dispatch({
@@ -90,10 +90,10 @@ t.Z = {
             });
         }
     },
-    [g.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
+    [p.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
         scope: I.lH,
         validation: (e) =>
-            (0, E.Z)(e)
+            (0, h.Z)(e)
                 .required()
                 .keys({ pid: e.number().min(0).required() }),
         handler(e) {
@@ -102,7 +102,7 @@ t.Z = {
                     socket: s
                 } = e,
                 r = s.application.id;
-            if (null == r) throw new _.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
+            if (null == r) throw new _.Z({ errorCode: p.lTL.INVALID_COMMAND }, 'No application.');
             let { lock: l } = (0, m.jU)(t);
             return new Promise((e) => {
                 (0, a.openModalLazy)(async () => {

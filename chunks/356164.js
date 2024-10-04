@@ -21,8 +21,8 @@ function c(e, t, n) {
 let d = new Map(),
     u = new Map(),
     _ = new Set(),
-    h = null;
-function E(e) {
+    E = null;
+function h(e) {
     return [o.BP, e.query, o.t0, e.categoryId, o.KL, e.languageCode].join('-');
 }
 class m {
@@ -44,59 +44,59 @@ class m {
 }
 function I(e) {
     var t;
-    let n = E(e),
+    let n = h(e),
         i = null !== (t = d.get(n)) && void 0 !== t ? t : new m({ query: e.query });
     return d.set(n, i), i;
 }
-function g(e, t) {
-    let n = E(e),
+function p(e, t) {
+    let n = h(e),
         i = d.get(n);
     return null != i ? t(i) : null;
 }
-class p extends (i = a.ZP.Store) {
+class g extends (i = a.ZP.Store) {
     getGuild(e) {
         return u.get(e);
     }
     getGuildIds(e) {
-        return g(e, (e) => e.guildIds);
+        return p(e, (e) => e.guildIds);
     }
     getIsFetching(e) {
-        return g(e, (e) => e.isFetching);
+        return p(e, (e) => e.isFetching);
     }
     getIsInitialFetchComplete(e) {
-        return g(e, (e) => e.isInitialFetchComplete);
+        return p(e, (e) => e.isInitialFetchComplete);
     }
     getOffset(e) {
-        return g(e, (e) => e.offset);
+        return p(e, (e) => e.offset);
     }
     getTotal(e) {
-        return g(e, (e) => e.total);
+        return p(e, (e) => e.total);
     }
     getLastFetchTimestamp(e) {
-        return g(e, (e) => e.lastFetchTimestamp);
+        return p(e, (e) => e.lastFetchTimestamp);
     }
     getAlgoliaSearchIndex() {
-        return h;
+        return E;
     }
     getIsAlgoliaInitialized() {
-        return null != h;
+        return null != E;
     }
     getIsBlocked(e) {
         return _.has(e);
     }
 }
-c(p, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
-    (t.Z = new p(s.Z, {
+c(g, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
+    (t.Z = new g(s.Z, {
         CONNECTION_OPEN: function () {
-            d.clear(), u.clear(), _.clear(), (h = null);
+            d.clear(), u.clear(), _.clear(), (E = null);
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_INITIALIZED: function (e) {
             let { algoliaSearchIndex: t } = e;
-            h = t;
+            E = t;
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_START: function (e) {
             let { query: t, categoryId: n, languageCode: i, reset: a } = e,
-                s = E({
+                s = h({
                     query: t,
                     categoryId: n,
                     languageCode: i

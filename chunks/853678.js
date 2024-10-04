@@ -9,7 +9,7 @@ var i = n(230711),
     d = n(186901),
     u = n(981631),
     _ = n(701488);
-let h = new Set([_.Fu, _.JT]);
+let E = new Set([_.Fu, _.JT]);
 t.Z = {
     [u.Etm.OPEN_EXTERNAL_LINK]: {
         scope: {
@@ -37,7 +37,7 @@ t.Z = {
             let { socket: t } = e;
             (0, o.bu)(t.transport);
             let n = (0, o._f)(t.application);
-            if (!h.has(n)) throw new l.Z({ errorCode: u.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+            if (!E.has(n)) throw new l.Z({ errorCode: u.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
             i.Z.open(u.oAB.CONNECTIONS);
         }
     }

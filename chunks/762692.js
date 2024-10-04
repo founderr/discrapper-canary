@@ -9,12 +9,12 @@ var i = n(807034),
     d = n(570140),
     u = n(70956),
     _ = n(900849),
-    h = n(356164),
-    E = n(726115),
+    E = n(356164),
+    h = n(726115),
     m = n(981631),
     I = n(731455);
-let g = window.GLOBAL_ENV.ALGOLIA_KEY,
-    p = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
+let p = window.GLOBAL_ENV.ALGOLIA_KEY,
+    g = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
     T = {
         'auto_removed:': !1,
         approximate_presence_count: '> 0',
@@ -22,8 +22,8 @@ let g = window.GLOBAL_ENV.ALGOLIA_KEY,
     };
 async function f(e, t, n) {
     let { categoryId: i, languageCode: a, offset: s, length: r } = t,
-        l = h.Z.getAlgoliaSearchIndex();
-    if (null == l || h.Z.getIsBlocked(e)) return;
+        l = E.Z.getAlgoliaSearchIndex();
+    if (null == l || E.Z.getIsBlocked(e)) return;
     d.Z.dispatch({
         type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_START',
         query: e,
@@ -33,15 +33,15 @@ async function f(e, t, n) {
     let o = Object.assign({}, T, t.filters),
         m = Object.keys(o).map((e) => ''.concat(e).concat(o[e]));
     i !== I.Hk && m.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
-    let g = m.join(' AND '),
-        p = null != a ? a : (0, E.Xp)();
+    let p = m.join(' AND '),
+        g = null != a ? a : (0, h.Xp)();
     try {
         let { hits: t, nbHits: n } = await l.search(e, {
-            filters: g,
-            optionalFilters: ['preferred_locale: '.concat(p)],
+            filters: p,
+            optionalFilters: ['preferred_locale: '.concat(g)],
             length: r,
             offset: s,
-            restrictSearchableAttributes: ['name', 'description', 'keywords', 'categories.name', 'categories.name_localizations.'.concat(p), 'primary_category.name', 'primary_category.name_localizations.'.concat(p), 'vanity_url_code']
+            restrictSearchableAttributes: ['name', 'description', 'keywords', 'categories.name', 'categories.name_localizations.'.concat(g), 'primary_category.name', 'primary_category.name_localizations.'.concat(g), 'vanity_url_code']
         });
         d.Z.dispatch({
             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS',
@@ -60,7 +60,7 @@ async function f(e, t, n) {
         var S;
         let s = new c.Hx(o),
             r = null !== (S = null == n ? void 0 : n.isRetry) && void 0 !== S && S;
-        o.body.retry_after > 0 && l === h.Z.getAlgoliaSearchIndex()
+        o.body.retry_after > 0 && l === E.Z.getAlgoliaSearchIndex()
             ? (_.m9({
                   categoryId: i,
                   error: s,
@@ -85,8 +85,8 @@ async function f(e, t, n) {
 }
 async function S(e) {
     let { query: t, algoliaFilters: n, onComplete: i } = e,
-        a = h.Z.getAlgoliaSearchIndex();
-    if (null == a || h.Z.getIsBlocked(t)) return;
+        a = E.Z.getAlgoliaSearchIndex();
+    if (null == a || E.Z.getIsBlocked(t)) return;
     let s = Object.assign({}, T, n),
         l = Object.keys(s).map((e) => ''.concat(e).concat(s[e]));
     try {
@@ -125,8 +125,8 @@ async function S(e) {
 }
 async function C(e) {
     let { categoryId: t } = e,
-        n = h.Z.getLastFetchTimestamp({ categoryId: t });
-    if ((0, E.Ew)(n)) {
+        n = E.Z.getLastFetchTimestamp({ categoryId: t });
+    if ((0, h.Ew)(n)) {
         d.Z.dispatch({
             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_START',
             categoryId: t,
@@ -157,8 +157,8 @@ async function C(e) {
     }
 }
 async function N() {
-    let e = h.Z.getLastFetchTimestamp({ categoryId: I.Hk });
-    if ((0, E.Ew)(e)) {
+    let e = E.Z.getLastFetchTimestamp({ categoryId: I.Hk });
+    if ((0, h.Ew)(e)) {
         d.Z.dispatch({
             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_START',
             categoryId: I.Hk,
@@ -199,8 +199,8 @@ t.Z = {
         });
     },
     createAlgoliaIndex: function () {
-        if (null == g) return;
-        let e = s()('NKTZZ4AIZU', g, { responsesCache: (0, i.A)() }).initIndex(p);
+        if (null == p) return;
+        let e = s()('NKTZZ4AIZU', p, { responsesCache: (0, i.A)() }).initIndex(g);
         d.Z.dispatch({
             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_INITIALIZED',
             algoliaSearchIndex: e

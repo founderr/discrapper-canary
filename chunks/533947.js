@@ -7,12 +7,12 @@ var r,
     d = n(392711),
     u = n.n(d),
     _ = n(442837),
-    h = n(570140),
-    E = n(308063),
+    E = n(570140),
+    h = n(308063),
     m = n(388610),
     I = n(430824),
-    g = n(496675),
-    p = n(855674),
+    p = n(496675),
+    g = n(855674),
     T = n(981631);
 let f = [],
     S = null,
@@ -22,7 +22,7 @@ let f = [],
     v = !1,
     Z = null;
 function L() {
-    if (((i = null != (a = m.Z.getChannel()) ? I.Z.getGuild(a.guild_id) : null), (f = null != a && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, a) ? p.Z.getWebhooksForChannel(i.id, a.id) : []), null != S)) {
+    if (((i = null != (a = m.Z.getChannel()) ? I.Z.getGuild(a.guild_id) : null), (f = null != a && null != i && p.Z.can(T.Plq.MANAGE_WEBHOOKS, a) ? g.Z.getWebhooksForChannel(i.id, a.id) : []), null != S)) {
         let e = O(S.id);
         null != e && (S = e);
     }
@@ -39,7 +39,7 @@ function O(e) {
 }
 class x extends (r = _.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, I.Z, p.Z, g.Z);
+        this.waitFor(m.Z, I.Z, g.Z, p.Z);
     }
     hasChanges() {
         return v;
@@ -82,7 +82,7 @@ class x extends (r = _.ZP.Store) {
           })
         : (l[o] = c);
 let b = new x(
-    h.Z,
+    E.Z,
     __OVERLAY__
         ? {}
         : {
@@ -94,7 +94,7 @@ let b = new x(
                   if (((s = T.b4C.OVERVIEW), null == i)) {
                       let e = m.Z.getChannel(),
                           t = null == e ? void 0 : e.getGuildId();
-                      null != e && null != t && (E.Z.fetchForChannel(t, e.id), (C = !0)), L();
+                      null != e && null != t && (h.Z.fetchForChannel(t, e.id), (C = !0)), L();
                   }
               },
               INTEGRATION_SETTINGS_SET_SECTION: function (e) {

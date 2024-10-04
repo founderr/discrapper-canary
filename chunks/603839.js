@@ -14,12 +14,12 @@ var i = n(735250),
     d = n(481060),
     u = n(207796),
     _ = n(889711),
-    h = n(931240),
-    E = n(970606),
+    E = n(931240),
+    h = n(970606),
     m = n(650461),
     I = n(35313),
-    g = n(284019),
-    p = n(672775),
+    p = n(284019),
+    g = n(672775),
     T = n(601463),
     f = n(192565),
     S = n(641037),
@@ -48,24 +48,24 @@ function v(e) {
         }),
         R = a.useMemo(() => (0, S.G)(Z), [Z]),
         [O, x] = a.useState(!1),
-        [b, P] = a.useState(window.innerWidth),
-        [M, D] = a.useState(1),
+        [b, M] = a.useState(window.innerWidth),
+        [P, D] = a.useState(1),
         [y, j] = a.useState(!0),
         U = (0, I.f)(),
         G = (0, d.useSpring)({
-            opacity: M,
+            opacity: P,
             config: A,
             onStart: () => j(!0),
-            onRest: () => j(1 === M)
+            onRest: () => j(1 === P)
         }),
         w = (0, d.useSpring)(
             {
-                transform: 'translateX('.concat(1 === M ? 0 : (-1 * (b - 380)) / 2 + 47.5, 'px)'),
+                transform: 'translateX('.concat(1 === P ? 0 : (-1 * (b - 380)) / 2 + 47.5, 'px)'),
                 config: A
             },
             'respect-motion-settings'
         ),
-        k = (0, d.useTransition)(0 === M, {
+        k = (0, d.useTransition)(0 === P, {
             from: { opacity: 0 },
             enter: {
                 opacity: 1,
@@ -73,50 +73,50 @@ function v(e) {
             },
             config: A
         }),
-        B = (0, d.useTransition)(0 === M, {
+        B = (0, d.useTransition)(0 === P, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
             config: A
         }),
-        H = a.useCallback(
+        V = a.useCallback(
             (e) => {
-                if (e === R.length) D(0), (0, E.Lp)(t, 'signature');
-                else if (0 === M) D(1);
+                if (e === R.length) D(0), (0, h.Lp)(t, 'signature');
+                else if (0 === P) D(1);
                 else {
                     var n;
-                    h._9(t, {
+                    E._9(t, {
                         currentStep: e,
                         furthestStep: Math.max(null !== (n = v.furthestStep) && void 0 !== n ? n : 0, e)
                     });
                 }
             },
-            [M, t, v.furthestStep, R.length]
+            [P, t, v.furthestStep, R.length]
         );
     a.useEffect(() => {
-        (0, E.Lp)(t, (0, E.Qh)(v.currentStep));
+        (0, h.Lp)(t, (0, h.Qh)(v.currentStep));
     }, [t, v.currentStep]),
         a.useEffect(() => {
-            let e = (0, _.pP)((0, l.debounce)(() => P(window.innerWidth), 250));
+            let e = (0, _.pP)((0, l.debounce)(() => M(window.innerWidth), 250));
             return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
-        }, [M, y]);
-    let V = a.useMemo(() => null != Z && Object.values(Z).some((e) => null != e), [Z]),
+        }, [P, y]);
+    let H = a.useMemo(() => null != Z && Object.values(Z).some((e) => null != e), [Z]),
         F = a.useMemo(() => (null != Z && Object.values(Z).length > 0 ? (0, S.G)(Z).find((e) => e.hasError) : null), [Z]),
         Y = a.useCallback(() => {
-            D(1), h._9(t, { currentStep: null == F ? void 0 : F.index });
+            D(1), E._9(t, { currentStep: null == F ? void 0 : F.index });
         }, [null == F ? void 0 : F.index, t]),
-        W = a.useCallback(() => {
+        z = a.useCallback(() => {
             (0, u.fH)(u.v0.ADMIN_UPSELL);
         }, []),
-        z = a.useCallback(() => {
+        W = a.useCallback(() => {
             (0, S.V)({
                 guildId: t,
                 onSuccess: () => {
-                    W(), n();
+                    z(), n();
                 },
                 progress: v
             });
-        }, [t, v, W, n]),
+        }, [t, v, z, n]),
         K = a.useRef(null),
         q =
             null != F
@@ -184,10 +184,10 @@ function v(e) {
                                 }),
                                 (0, i.jsx)('div', {
                                     className: r()(N.navigationContainer, { [N.elevatedNavigationContainer]: !y }),
-                                    children: (0, i.jsx)(p.Z, {
+                                    children: (0, i.jsx)(g.Z, {
                                         steps: R,
                                         progress: v,
-                                        updateCurrentStep: H,
+                                        updateCurrentStep: V,
                                         animationStyle: G,
                                         animationClassName: r()({ [N.hidden]: !y })
                                     })
@@ -230,15 +230,15 @@ function v(e) {
                                 shouldShow: null != F,
                                 forceOpen: null != F,
                                 children: (e) =>
-                                    (0, i.jsx)(g.Z, {
+                                    (0, i.jsx)(p.Z, {
                                         ...e,
                                         themeColor: v.brandPrimaryColor,
-                                        disabled: !O || V,
+                                        disabled: !O || H,
                                         submitting: L,
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,
                                         color: d.Button.Colors.BRAND,
-                                        onClick: z,
+                                        onClick: W,
                                         children: C.Z.Messages.FINISH
                                     })
                             })

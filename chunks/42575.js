@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return p;
     }
 });
 var i = n(735250),
@@ -13,12 +13,12 @@ var i = n(735250),
     d = n(626135),
     u = n(321488),
     _ = n(417183),
-    h = n(170245),
-    E = n(981631),
+    E = n(170245),
+    h = n(981631),
     m = n(689938),
     I = n(796147);
-function g(e) {
-    let { user: t, nickname: n, status: g, isFocused: p } = e,
+function p(e) {
+    let { user: t, nickname: n, status: p, isFocused: g } = e,
         T = a.useContext(d.AnalyticsContext),
         { analyticsLocations: f } = (0, l.ZP)(),
         S = (e) => {
@@ -34,9 +34,9 @@ function g(e) {
         C = (e) => {
             null == e || e.stopPropagation(), o.Z.ignore(t.id);
         },
-        N = g === E.Skl.OFFLINE ? E.Skl.UNKNOWN : g;
+        N = p === h.Skl.OFFLINE ? h.Skl.UNKNOWN : p;
     return (0, i.jsx)(_.Z, {
-        isFocused: p,
+        isFocused: g,
         user: t,
         onClick: () =>
             (0, c.openUserProfileModal)({
@@ -66,7 +66,7 @@ function g(e) {
             return (0, i.jsxs)('div', {
                 className: I.listItemContents,
                 children: [
-                    (0, i.jsx)(h.Z, {
+                    (0, i.jsx)(E.Z, {
                         user: t,
                         hovered: e,
                         status: N,

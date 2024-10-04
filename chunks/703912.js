@@ -15,12 +15,12 @@ var i = n(664751),
     d = n(570140),
     u = n(812206),
     _ = n(979200),
-    h = n(489863),
-    E = n(166148),
+    E = n(489863),
+    h = n(166148),
     m = n(307643),
     I = n(973616),
-    g = n(594174),
-    p = n(630388),
+    p = n(594174),
+    g = n(630388),
     T = n(700785),
     f = n(996106),
     S = n(186901),
@@ -33,12 +33,12 @@ async function A(e, t, n) {
         c,
         d,
         S,
-        { client_id: N, response_type: A = 'code', redirect_uri: v, code_challenge: Z, code_challenge_method: L, state: R, nonce: O, scope: x, permissions: b, guild_id: P, channel_id: M, prompt: D, disable_guild_select: y, integration_type: j, pid: U, signal: G } = e;
+        { client_id: N, response_type: A = 'code', redirect_uri: v, code_challenge: Z, code_challenge_method: L, state: R, nonce: O, scope: x, permissions: b, guild_id: M, channel_id: P, prompt: D, disable_guild_select: y, integration_type: j, pid: U, signal: G } = e;
     if (null == G ? void 0 : G.aborted) throw new f.Z({ errorCode: C.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == N) throw new f.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != v) throw new f.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let w = [];
-    if (('string' == typeof x ? (w = x.split(' ').filter((e) => e.length > 0)) : Array.isArray(x) && (w = x), null == g.default.getCurrentUser())) throw new f.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'Client is not logged in');
+    if (('string' == typeof x ? (w = x.split(' ').filter((e) => e.length > 0)) : Array.isArray(x) && (w = x), null == p.default.getCurrentUser())) throw new f.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'Client is not logged in');
     let k = null !== (s = u.Z.getApplication(N)) && void 0 !== s ? s : null;
     (null == k ||
         (function (e) {
@@ -47,10 +47,10 @@ async function A(e, t, n) {
             return n < Date.now() - 5000;
         })(k.id)) &&
         (k = I.Z.createFromServer(await (0, m.UM)(N, G)));
-    let B = null != k && (0, p.yE)(k.flags, C.udG.EMBEDDED) && (null === (i = k.integrationTypesConfig) || void 0 === i ? void 0 : i[a.Y.USER_INSTALL]) != null;
+    let B = null != k && (0, g.yE)(k.flags, C.udG.EMBEDDED) && (null === (i = k.integrationTypesConfig) || void 0 === i ? void 0 : i[a.Y.USER_INSTALL]) != null;
     o = null == j ? (B ? a.Y.USER_INSTALL : a.Y.GUILD_INSTALL) : Number(j);
     try {
-        c = await (0, h.Ww)({
+        c = await (0, E.Ww)({
             clientId: N,
             scopes: w,
             responseType: A,
@@ -71,10 +71,10 @@ async function A(e, t, n) {
         let { body: e } = t;
         throw new f.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'OAuth2 Authorization Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
     }
-    if (D === E.s.NONE && null != c && c.authorized && S)
+    if (D === h.s.NONE && null != c && c.authorized && S)
         try {
             return (
-                await (0, h.Iq)({
+                await (0, E.Iq)({
                     authorize: !0,
                     clientId: N,
                     scopes: w,
@@ -91,10 +91,10 @@ async function A(e, t, n) {
             let { body: e } = t;
             throw new f.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'OAuth2 Authorize Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
         }
-    null == n || n(c.application, M, U);
-    let H = T.Hn;
+    null == n || n(c.application, P, U);
+    let V = T.Hn;
     try {
-        H = r.vB(null != b ? b : 0);
+        V = r.vB(null != b ? b : 0);
     } catch (e) {}
     return (
         null != c.integration_type && Object.values(a.Y).includes(c.integration_type) && (l = new Map()).set(c.integration_type, c),
@@ -102,14 +102,14 @@ async function A(e, t, n) {
             clientId: N,
             authorizations: l,
             scopes: w,
-            parsedPermissions: H,
+            parsedPermissions: V,
             responseType: A,
             redirectUri: v,
             codeChallenge: Z,
             codeChallengeMethod: L,
             state: R,
-            guildId: P,
-            channelId: M,
+            guildId: M,
+            channelId: P,
             prompt: D,
             disableGuildSelect: y,
             disclosures: d,
@@ -134,7 +134,7 @@ function v(e, t) {
                     e.authorization.authing = !1;
                     let { application: i, user: a, scopes: s, expires: r } = n.body;
                     if (e.application.id !== i.id) throw new f.Z({ errorCode: C.lTL.INVALID_CLIENTID }, "Application does not match the connection's");
-                    let l = g.default.getCurrentUser();
+                    let l = p.default.getCurrentUser();
                     if (null == l || !a || l.id !== a.id) throw new f.Z({ errorCode: C.lTL.INVALID_TOKEN }, 'Token does not match current user');
                     return (
                         (e.authorization.scopes = [...e.authorization.scopes, ...s, S.wE]),

@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(143927),
     u = n(481060),
     _ = n(410030),
-    h = n(950279),
-    E = n(741595),
+    E = n(950279),
+    h = n(741595),
     m = n(359380),
     I = n(766219),
-    g = n(480222),
-    p = n(207796),
+    p = n(480222),
+    g = n(207796),
     T = n(558831),
     f = n(304231),
     S = n(981631),
@@ -27,21 +27,21 @@ let A = {
         clamp: !0
     },
     v = {
-        [p.v0.PLAYSTYLE]: function () {
-            let e = (0, p.GN)((e) => e.selectedPlaystyle, d.Z),
-                [t, n] = a.useState(p.GN.getState().selectedPlaystyle),
+        [g.v0.PLAYSTYLE]: function () {
+            let e = (0, g.GN)((e) => e.selectedPlaystyle, d.Z),
+                [t, n] = a.useState(g.GN.getState().selectedPlaystyle),
                 s = a.useCallback(() => {
-                    p.GN.getState().setSelectedPlaystyle(t);
+                    g.GN.getState().setSelectedPlaystyle(t);
                 }, [t]),
                 r = a.useCallback(() => {
                     n(e);
                 }, [e]),
                 l = a.useMemo(() => !o()(t, e), [t, e]);
-            return (0, i.jsx)(g.Z, {
+            return (0, i.jsx)(p.Z, {
                 hasChanges: l,
                 onSave: s,
                 onReset: r,
-                children: (0, i.jsx)(E.Z, {
+                children: (0, i.jsx)(h.Z, {
                     title: C.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
                     description: C.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
                     onUpdatePlaystyle: n,
@@ -49,17 +49,17 @@ let A = {
                 })
             });
         },
-        [p.v0.TRAITS]: function () {
-            let e = (0, p.GN)((e) => e.selectedTraits, d.Z),
+        [g.v0.TRAITS]: function () {
+            let e = (0, g.GN)((e) => e.selectedTraits, d.Z),
                 [t, n] = a.useState(new Set(e)),
                 s = a.useCallback(() => {
-                    p.GN.getState().setSelectedTraits(Array.from(t));
+                    g.GN.getState().setSelectedTraits(Array.from(t));
                 }, [t]),
                 r = a.useCallback(() => {
                     n(new Set(e));
                 }, [e]),
                 l = a.useMemo(() => !o()(t, e), [t, e]);
-            return (0, i.jsx)(g.Z, {
+            return (0, i.jsx)(p.Z, {
                 hasChanges: l,
                 onSave: s,
                 onReset: r,
@@ -72,21 +72,21 @@ let A = {
                 })
             });
         },
-        [p.v0.GAMES]: function () {
-            let e = (0, p.GN)((e) => e.selectedGames, d.Z),
+        [g.v0.GAMES]: function () {
+            let e = (0, g.GN)((e) => e.selectedGames, d.Z),
                 [t, n] = a.useState(new Set(e)),
                 s = a.useCallback(() => {
-                    p.GN.getState().setSelectedGames(Array.from(t));
+                    g.GN.getState().setSelectedGames(Array.from(t));
                 }, [t]),
                 r = a.useCallback(() => {
                     n(new Set(e));
                 }, [e]),
                 l = a.useMemo(() => !o()(t, e), [t, e]);
-            return (0, i.jsx)(g.Z, {
+            return (0, i.jsx)(p.Z, {
                 hasChanges: l,
                 onSave: s,
                 onReset: r,
-                children: (0, i.jsx)(h.Z, {
+                children: (0, i.jsx)(E.Z, {
                     title: C.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
                     description: C.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
                     onUpdateGames: n,
@@ -94,14 +94,14 @@ let A = {
                 })
             });
         },
-        [p.v0.PREFERENCES]: function () {
-            let e = (0, p.GN)((e) => e.selectedGames, d.Z),
-                t = (0, p.GN)((e) => e.selectedPlaystyle, d.Z),
-                n = (0, p.GN)((e) => e.selectedTraits, d.Z),
+        [g.v0.PREFERENCES]: function () {
+            let e = (0, g.GN)((e) => e.selectedGames, d.Z),
+                t = (0, g.GN)((e) => e.selectedPlaystyle, d.Z),
+                n = (0, g.GN)((e) => e.selectedTraits, d.Z),
                 [s, r] = a.useState(new Set(e)),
                 [l, c] = a.useState(t),
                 [u, _] = a.useState(new Set(n)),
-                h = a.useMemo(
+                E = a.useMemo(
                     () => ({
                         games: Array.from(s),
                         playstyle: l,
@@ -109,7 +109,7 @@ let A = {
                     }),
                     [s, l, u]
                 ),
-                E = a.useMemo(
+                h = a.useMemo(
                     () => ({
                         games: e,
                         playstyle: t,
@@ -117,15 +117,15 @@ let A = {
                     }),
                     [e, t, n]
                 ),
-                m = a.useMemo(() => !o()(h, E), [E, h]),
+                m = a.useMemo(() => !o()(E, h), [h, E]),
                 f = a.useCallback(() => {
                     var e;
-                    p.GN.getState().setSelectedGames(h.games), p.GN.getState().setSelectedPlaystyle(null !== (e = h.playstyle) && void 0 !== e ? e : null), p.GN.getState().setSelectedTraits(h.traits), (0, I.Og)();
-                }, [h.games, h.playstyle, h.traits]),
+                    g.GN.getState().setSelectedGames(E.games), g.GN.getState().setSelectedPlaystyle(null !== (e = E.playstyle) && void 0 !== e ? e : null), g.GN.getState().setSelectedTraits(E.traits), (0, I.Og)();
+                }, [E.games, E.playstyle, E.traits]),
                 S = a.useCallback(() => {
-                    r(new Set(E.games)), c(E.playstyle), _(new Set(E.traits));
-                }, [E.games, E.playstyle, E.traits]);
-            return (0, i.jsx)(g.Z, {
+                    r(new Set(h.games)), c(h.playstyle), _(new Set(h.traits));
+                }, [h.games, h.playstyle, h.traits]);
+            return (0, i.jsx)(p.Z, {
                 hasChanges: m,
                 onSave: f,
                 onReset: S,
@@ -139,10 +139,10 @@ let A = {
                 })
             });
         },
-        [p.v0.GET_STARTED]: function () {
+        [g.v0.GET_STARTED]: function () {
             let e = (0, _.ZP)(),
                 t = a.useCallback(() => {
-                    (0, p.fH)(p.v0.DISCOVERY);
+                    (0, g.fH)(g.v0.DISCOVERY);
                 }, []),
                 n = a.useMemo(() => (e === S.BRd.DARK ? N.genericOnboardingBackgroundImageDark : N.genericOnboardingBackgroundImageLight), [e]);
             return (0, i.jsx)('div', {

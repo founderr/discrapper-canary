@@ -17,8 +17,8 @@ var i,
     p = a(231338),
     N = a(436620),
     k = a(330711),
-    _ = a(126839);
-function f(e, t, a) {
+    f = a(126839);
+function _(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -192,14 +192,14 @@ let g = 'Footer Navigation',
     v = (e) => {
         let { colorVariant: t, animate: a } = e;
         return (0, r.jsx)('svg', {
-            className: (0, u.l)(_, 'footerBackground', t),
+            className: (0, u.l)(f, 'footerBackground', t),
             preserveAspectRatio: 'none',
             width: '1920',
             height: '100%',
             viewBox: '0 0 1920 330',
             version: '1.1',
             children: (0, r.jsx)('path', {
-                className: (0, u.l)(_, 'footerBackground', a ? 'Play' : 'Paused'),
+                className: (0, u.l)(f, 'footerBackground', a ? 'Play' : 'Paused'),
                 fill: '#1a1c1e',
                 fillOpacity: '0.3',
                 d: 'M140.881198,194.260295 C257.600568,129.32862 342.939626,119.84993 418.009939,203.154617 C493.080251,286.459305 545.728689,70.9046172 636.439626,63.9593047 C727.150564,57.0139922 768.99822,139.670242 858.802907,119.431961 C948.607595,99.1936797 1071.91228,-32.9977266 1243.91228,7.75227342 C1415.91228,48.5022734 1404.10369,208.584305 1508.27166,178.709305 C1612.43963,148.834305 1633.73291,79.913472 1711.63588,98.8569055 C1776.28676,114.577866 1819.96778,221.391836 1889.37253,185.808108 C2017.32661,120.206212 2004.01952,336.769569 2004.01952,336.769569 L271.635881,337 L-149.063338,337 C-149.063338,337 -245.850307,175.637635 -58.0633382,228.867188 C33.8652851,254.92501 64.1722713,236.933925 140.881198,194.260295 Z'
@@ -228,7 +228,7 @@ class C extends (i = l.PureComponent) {
                 },
                 alt: 'Download Discord',
                 target: '_blank',
-                className: (0, u.l)(_, 'button', o),
+                className: (0, u.l)(f, 'button', o),
                 href: t,
                 children: i
             });
@@ -242,7 +242,7 @@ class C extends (i = l.PureComponent) {
                     'Referring Location': 'Footer'
                 },
                 alt: 'Download Discord',
-                className: (0, u.l)(_, 'button', o),
+                className: (0, u.l)(f, 'button', o),
                 href: p.am.DOWNLOAD,
                 children: k.Z.Messages.Navigation.DOWNLOAD
             });
@@ -252,7 +252,7 @@ class C extends (i = l.PureComponent) {
             e && ((d = p.$w.ME), (h = k.Z.Messages.Common.OPEN_DISCORD)),
             (0, r.jsx)(n, {
                 eventName: g,
-                className: (0, u.l)(_, 'button', this.props.variant),
+                className: (0, u.l)(f, 'button', this.props.variant),
                 data: {
                     linkClicked: e ? 'open' : 'login',
                     googleAnalytics: !0
@@ -271,7 +271,7 @@ class C extends (i = l.PureComponent) {
                         ? (0, r.jsx)(
                               n,
                               {
-                                  className: _.route,
+                                  className: f.route,
                                   eventName: g,
                                   data: { linkClicked: e.tracking },
                                   href: e.link,
@@ -285,7 +285,7 @@ class C extends (i = l.PureComponent) {
                                   avoidRouter: l,
                                   to: e.link,
                                   from: 'footer_navigation',
-                                  className: _.route,
+                                  className: f.route,
                                   children: (0, r.jsx)(n, {
                                       tag: 'span',
                                       eventName: g,
@@ -299,10 +299,10 @@ class C extends (i = l.PureComponent) {
                 return (0, r.jsxs)(
                     'div',
                     {
-                        className: _.navigationSection,
+                        className: f.navigationSection,
                         children: [
                             (0, r.jsx)('h3', {
-                                className: _.navigationHeader,
+                                className: f.navigationHeader,
                                 children: e.title
                             }),
                             t
@@ -314,7 +314,7 @@ class C extends (i = l.PureComponent) {
         return (0, r.jsx)(c.$, {
             onChange: this.handleVisibility,
             children: (0, r.jsxs)('footer', {
-                className: s()((0, u.l)(_, 'footer', e), i),
+                className: s()((0, u.l)(f, 'footer', e), i),
                 style: t,
                 children: [
                     o
@@ -324,15 +324,15 @@ class C extends (i = l.PureComponent) {
                           })
                         : null,
                     (0, r.jsxs)('div', {
-                        className: _.footerContent,
+                        className: f.footerContent,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: _.navigation,
+                                className: f.navigation,
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: _.logoWrap,
+                                        className: f.logoWrap,
                                         children: (0, r.jsx)(n, {
-                                            className: _.logo,
+                                            className: f.logo,
                                             href: p.am.INDEX,
                                             eventName: g,
                                             data: { linkClicked: 'logo' },
@@ -345,19 +345,19 @@ class C extends (i = l.PureComponent) {
                                     N
                                 ]
                             }),
-                            (0, r.jsx)('div', { className: _.separator }),
+                            (0, r.jsx)('div', { className: f.separator }),
                             (0, r.jsxs)('div', {
-                                className: _.joinDiscord,
+                                className: f.joinDiscord,
                                 children: [
                                     (0, r.jsxs)('div', {
-                                        className: _.stats,
+                                        className: f.stats,
                                         children: [
                                             (0, r.jsx)('h2', {
-                                                className: _.readyToJoin,
+                                                className: f.readyToJoin,
                                                 children: k.Z.Messages.Footer.READY_TO_TRY_DISCORD
                                             }),
                                             (0, r.jsx)('h3', {
-                                                className: _.joinOtherPlayers,
+                                                className: f.joinOtherPlayers,
                                                 children: k.Z.Messages.Footer.JOIN_OVER_PLAYERS_TODAY.format({ num: p.vS })
                                             })
                                         ]
@@ -373,13 +373,13 @@ class C extends (i = l.PureComponent) {
     }
     constructor(e) {
         super(e),
-            f(this, 'state', {
+            _(this, 'state', {
                 animateBackground: !1,
                 isMobile: null,
                 token: null,
                 isAppCompatible: !0
             }),
-            f(this, 'handleVisibility', (e) => {
+            _(this, 'handleVisibility', (e) => {
                 this.setState({ animateBackground: e });
             }),
             null != e.locale && k.Z.setLocale(e.locale),
@@ -391,8 +391,8 @@ class C extends (i = l.PureComponent) {
                 }));
     }
 }
-f(C, 'Variants', I),
-    f(C, 'defaultProps', {
+_(C, 'Variants', I),
+    _(C, 'defaultProps', {
         variant: I.PRIMARY,
         showWave: !0
     });

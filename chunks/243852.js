@@ -9,12 +9,12 @@ var i,
     d = n(846519),
     u = n(570140),
     _ = n(278323),
-    h = n(581567),
-    E = n(594190),
+    E = n(581567),
+    h = n(594190),
     m = n(581883),
     I = n(70956),
-    g = n(780570),
-    p = n(314897),
+    p = n(780570),
+    g = n(314897),
     T = n(77498),
     f = n(283595),
     S = n(19780),
@@ -37,9 +37,9 @@ function b(e) {
         n = Date.now(),
         i = null != e.updatedAt ? n - e.updatedAt : 0;
     i > v + Z && (i = 0);
-    let a = (0, g.OT)(e.applicationId, f.Z),
+    let a = (0, p.OT)(e.applicationId, f.Z),
         s = C.Z.getVoiceChannelId(),
-        r = p.default.getSessionId(),
+        r = g.default.getSessionId(),
         l = S.Z.getMediaSessionId();
     _.Z.updateActivity({
         applicationId: e.applicationId,
@@ -57,9 +57,9 @@ function b(e) {
     let o = R[e.applicationId];
     null == o && (o = R[e.applicationId] = new d.Xp()).start(v, () => b(e)), !t && ((L[e.applicationId] = e), c.K.set(A, L));
 }
-function P() {
+function M() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        t = E.ZP.getVisibleRunningGames(),
+        t = h.ZP.getVisibleRunningGames(),
         n = new Set();
     for (let { name: e, distributor: i, exePath: a } of t) {
         let t = T.Z.getGameByName(e);
@@ -70,18 +70,18 @@ function P() {
                         applicationId: t.id,
                         updatedAt: Date.now(),
                         distributor: i,
-                        exePath: (0, h.N6)(null != a ? a : '')
+                        exePath: (0, E.N6)(null != a ? a : '')
                     });
     }
     for (let t of Object.keys(L)) !n.has(t) && x(L[t], e);
 }
-function M() {
+function P() {
     for (let e of Object.keys(L)) x(L[e]);
     O = !1;
 }
 class D extends (a = o.ZP.Store) {
     initialize() {
-        this.waitFor(E.ZP, m.Z, f.Z), this.syncWith([m.Z], P);
+        this.waitFor(h.ZP, m.Z, f.Z), this.syncWith([m.Z], M);
     }
     getActivities() {
         return L;
@@ -97,17 +97,17 @@ class D extends (a = o.ZP.Store) {
           })
         : (s[r] = l),
     new D(u.Z, {
-        RUNNING_GAMES_CHANGE: () => P(),
+        RUNNING_GAMES_CHANGE: () => M(),
         CONNECTION_OPEN: function () {
             if (O) return !1;
             for (let e of Object.keys(L)) b(L[e]);
-            P(!1), (O = !0);
+            M(!1), (O = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
-            4004 === t && M();
+            4004 === t && P();
         },
-        LOGOUT: M,
+        LOGOUT: P,
         ACTIVITY_UPDATE_SUCCESS: function (e) {
             let { applicationId: t, token: n } = e,
                 i = L[t];

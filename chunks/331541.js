@@ -13,12 +13,12 @@ var i = n(735250),
     d = n(788307),
     u = n(2052),
     _ = n(393238),
-    h = n(727637),
-    E = n(100527),
+    E = n(727637),
+    h = n(100527),
     m = n(906732),
     I = n(676035),
-    g = n(440051),
-    p = n(734934),
+    p = n(440051),
+    g = n(734934),
     T = n(158238),
     f = n(300284),
     S = n(680295),
@@ -32,8 +32,8 @@ var i = n(735250),
     O = n(438163),
     x = n(483424),
     b = n(681837),
-    P = n(502762),
-    M = n(530),
+    M = n(502762),
+    P = n(530),
     D = n(544989),
     y = n(309494),
     j = n(969205),
@@ -42,12 +42,12 @@ var i = n(735250),
     w = n(695346),
     k = n(158776),
     B = n(246946),
-    H = n(572004),
-    V = n(70956),
+    V = n(572004),
+    H = n(70956),
     F = n(5192),
     Y = n(51144),
-    W = n(246133),
-    z = n(474376),
+    z = n(246133),
+    W = n(474376),
     K = n(435478),
     q = n(383832),
     Q = n(981631),
@@ -57,23 +57,23 @@ var i = n(735250),
     ee = n(451563);
 let et = [
     {
-        duration: 30 * V.Z.Millis.MINUTE,
+        duration: 30 * H.Z.Millis.MINUTE,
         label: () => J.Z.Messages.MUTE_DURATION_30_MINUTES
     },
     {
-        duration: V.Z.Millis.HOUR,
+        duration: H.Z.Millis.HOUR,
         label: () => J.Z.Messages.MUTE_DURATION_1_HOUR
     },
     {
-        duration: 3 * V.Z.Millis.HOUR,
+        duration: 3 * H.Z.Millis.HOUR,
         label: () => J.Z.Messages.MUTE_DURATION_3_HOURS
     },
     {
-        duration: 8 * V.Z.Millis.HOUR,
+        duration: 8 * H.Z.Millis.HOUR,
         label: () => J.Z.Messages.MUTE_DURATION_8_HOURS
     },
     {
-        duration: V.Z.Millis.DAY,
+        duration: H.Z.Millis.DAY,
         label: () => J.Z.Messages.MUTE_DURATION_24_HOURS
     },
     {
@@ -90,7 +90,7 @@ function en(e, t, n) {
                 {
                     id: ''.concat(e, '-').concat(a),
                     label: s(),
-                    action: () => (0, W.Z)(e, t, void 0, a),
+                    action: () => (0, z.Z)(e, t, void 0, a),
                     dontCloseOnAction: !0
                 },
                 a
@@ -125,7 +125,7 @@ function en(e, t, n) {
                 ]
             });
         },
-        action: () => (0, W.Z)(e, t),
+        action: () => (0, z.Z)(e, t),
         dontCloseOnAction: !0,
         children: e !== Q.Skl.ONLINE ? a : void 0
     });
@@ -157,35 +157,35 @@ function ei(e, t, n) {
                 ]
             });
         },
-        action: () => (0, W.Z)(e, t),
+        action: () => (0, z.Z)(e, t),
         dontCloseOnAction: !0
     });
 }
 function ea(e) {
     var t;
-    let { currentUser: V, onClose: W, setPopoutRef: ea } = e,
+    let { currentUser: H, onClose: z, setPopoutRef: ea } = e,
         es = __OVERLAY__,
-        er = (0, v.ZP)(V.id),
+        er = (0, v.ZP)(H.id),
         el = (0, u.O)(),
-        { analyticsLocations: eo } = (0, m.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT),
+        { analyticsLocations: eo } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
         ec = (0, C.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
-            userId: V.id
+            userId: H.id
         }),
         { ref: ed } = (0, _.Z)(),
-        eu = (0, h.Z)(ed);
+        eu = (0, E.Z)(ed);
     a.useEffect(() => {
         null == ea || ea(ed.current);
     }, [ed, ea]);
-    let e_ = (0, o.e7)([k.Z], () => k.Z.getStatus(V.id)),
-        eh = (0, o.e7)([B.Z], () => B.Z.hidePersonalInformation),
-        eE = (0, p.p)(),
+    let e_ = (0, o.e7)([k.Z], () => k.Z.getStatus(H.id)),
+        eE = (0, o.e7)([B.Z], () => B.Z.hidePersonalInformation),
+        eh = (0, g.p)(),
         em = w.Sb.useSetting(),
         eI = (0, I.a)(),
-        eg = (function (e) {
-            let t = g.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
+        ep = (function (e) {
+            let t = p.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
                 n = w.Cr.useSetting(),
-                a = (0, p.p)(),
+                a = (0, g.p)(),
                 r = T.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || a,
                 l = w.fv.useSetting(),
                 o = e === Q.Skl.DND,
@@ -220,7 +220,7 @@ function ea(e) {
                                 id: ''.concat(e, '-').concat(n),
                                 label: a(),
                                 action: () => {
-                                    (0, p.oW)(!0, n);
+                                    (0, g.oW)(!0, n);
                                 },
                                 dontCloseOnAction: !0
                             },
@@ -282,7 +282,7 @@ function ea(e) {
                                                   ]
                                               }),
                                           action: () => {
-                                              (0, p.oW)(!a);
+                                              (0, g.oW)(!a);
                                           },
                                           dontCloseOnAction: !0,
                                           children: u
@@ -295,11 +295,11 @@ function ea(e) {
                 ]
             });
         })(e_),
-        ep = (0, z.g)(W),
+        eg = (0, W.g)(z),
         eT = (0, f.Z)({ analyticsLocations: eo }),
         { customStatusBubbleEditEnabled: ef } = (0, A.K)({ location: 'AccountProfilePopout' }),
         eS = (e) => {
-            null == W || W(),
+            null == z || z(),
                 (0, U.openUserProfileModal)({
                     sourceAnalyticsLocations: eo,
                     ...ec,
@@ -323,10 +323,10 @@ function ea(e) {
             value: ec,
             children: (0, i.jsx)(c.Dialog, {
                 ref: ed,
-                'aria-label': V.username,
-                children: (0, i.jsxs)(P.Z, {
+                'aria-label': H.username,
+                children: (0, i.jsxs)(M.Z, {
                     className: $.themeContainer,
-                    user: V,
+                    user: H,
                     displayProfile: er,
                     profileType: X.y0.BITE_SIZE,
                     children: [
@@ -334,28 +334,28 @@ function ea(e) {
                             (0, i.jsx)(D.Z, {
                                 profileType: X.y0.BITE_SIZE,
                                 children: (0, i.jsx)(j.Z, {
-                                    userId: V.id,
-                                    onClose: W
+                                    userId: H.id,
+                                    onClose: z
                                 })
                             }),
                         (0, i.jsxs)('header', {
                             className: ee.header,
                             children: [
                                 (0, i.jsx)(R.Z, {
-                                    user: V,
+                                    user: H,
                                     displayProfile: er,
                                     profileType: X.y0.BITE_SIZE
                                 }),
                                 (0, i.jsx)(Z.Z, {
-                                    user: V,
+                                    user: H,
                                     displayProfile: er,
                                     profileType: X.y0.BITE_SIZE,
                                     onOpenProfile: es ? void 0 : eS
                                 }),
                                 (0, i.jsx)(O.Z, {
-                                    user: V,
+                                    user: H,
                                     profileType: X.y0.BITE_SIZE,
-                                    onCloseProfile: W
+                                    onCloseProfile: z
                                 })
                             ]
                         }),
@@ -367,46 +367,46 @@ function ea(e) {
                         (0, i.jsxs)(c.Scroller, {
                             className: $.body,
                             children: [
-                                (0, i.jsx)(M.Z, {
-                                    user: V,
+                                (0, i.jsx)(P.Z, {
+                                    user: H,
                                     className: $.username,
                                     profileType: X.y0.BITE_SIZE,
-                                    nickname: F.ZP.getName(null, null, V),
+                                    nickname: F.ZP.getName(null, null, H),
                                     onOpenProfile: es ? void 0 : eS,
                                     pronouns: null == er ? void 0 : er.pronouns,
                                     tags: (0, i.jsx)(L.Z, {
                                         displayProfile: er,
                                         profileType: X.y0.BITE_SIZE,
-                                        onClose: W
+                                        onClose: z
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(b.Z, { userId: V.id }),
+                                            (0, i.jsx)(b.Z, { userId: H.id }),
                                             (0, i.jsx)(y.Z, {
-                                                user: V,
+                                                user: H,
                                                 isHovering: eu
                                             })
                                         ]
                                     })
                                 }),
                                 (0, i.jsx)(G.Z, {
-                                    user: V,
+                                    user: H,
                                     bio: null == er ? void 0 : er.bio,
-                                    hidePersonalInformation: eh,
-                                    onClose: W
+                                    hidePersonalInformation: eE,
+                                    onClose: z
                                 }),
                                 (0, i.jsx)(x.Z, {
-                                    user: V,
-                                    currentUser: V,
-                                    onClose: W
+                                    user: H,
+                                    currentUser: H,
+                                    onClose: z
                                 }),
                                 (0, i.jsxs)('div', {
                                     className: $.menus,
                                     children: [
-                                        (0, i.jsx)(P.Z.Overlay, {
+                                        (0, i.jsx)(M.Z.Overlay, {
                                             className: $.menuOverlay,
                                             children: (0, i.jsxs)(K.PB, {
-                                                id: 'profile-'.concat(V.id),
+                                                id: 'profile-'.concat(H.id),
                                                 children: [
                                                     ef &&
                                                         (0, i.jsxs)(i.Fragment, {
@@ -417,7 +417,7 @@ function ea(e) {
                                                                     label: J.Z.Messages.EDIT_PROFILE,
                                                                     icon: c.PencilIcon,
                                                                     onClick: () => {
-                                                                        eT(), W();
+                                                                        eT(), z();
                                                                     }
                                                                 }),
                                                                 (0, i.jsx)('div', { className: $.menuDivider })
@@ -432,7 +432,7 @@ function ea(e) {
                                                                 status: e_,
                                                                 size: 12
                                                             }),
-                                                        hint: (eE || e_ === Q.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
+                                                        hint: (eh || e_ === Q.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
                                                         renderSubmenu: r.tq
                                                             ? void 0
                                                             : (e) => {
@@ -442,12 +442,12 @@ function ea(e) {
                                                                       className: $.statusPickerModalMenu,
                                                                       'aria-label': J.Z.Messages.STATUS_MENU_LABEL,
                                                                       onClose: t,
-                                                                      children: eg
+                                                                      children: ep
                                                                   });
                                                               },
                                                         onClick: r.tq
                                                             ? () => {
-                                                                  W(),
+                                                                  z(),
                                                                       (0, c.openModalLazy)(
                                                                           () =>
                                                                               new Promise((e) =>
@@ -466,7 +466,7 @@ function ea(e) {
                                                                                               hideScroller: !0,
                                                                                               onClose: t,
                                                                                               onSelect: void 0,
-                                                                                              children: eg
+                                                                                              children: ep
                                                                                           })
                                                                                       });
                                                                                   })
@@ -486,7 +486,7 @@ function ea(e) {
                                                                           label: J.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
                                                                           icon: () => (0, i.jsx)('div', { className: $.customEmojiPlaceholder }),
                                                                           onClick: () => {
-                                                                              W(), eC();
+                                                                              z(), eC();
                                                                           }
                                                                       })
                                                                     : (0, i.jsx)(K.Mv, {
@@ -518,7 +518,7 @@ function ea(e) {
                                                                               })
                                                                           }),
                                                                           onClick: () => {
-                                                                              W(), eC();
+                                                                              z(), eC();
                                                                           }
                                                                       })
                                                             ]
@@ -526,10 +526,10 @@ function ea(e) {
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(P.Z.Overlay, {
+                                        (0, i.jsx)(M.Z.Overlay, {
                                             className: $.menuOverlay,
                                             children: (0, i.jsxs)(K.PB, {
-                                                id: 'account-'.concat(V.id),
+                                                id: 'account-'.concat(H.id),
                                                 children: [
                                                     (0, i.jsx)(K.Mv, {
                                                         id: 'switch-accounts',
@@ -537,7 +537,7 @@ function ea(e) {
                                                         icon: c.UserCircleIcon,
                                                         label: J.Z.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
                                                         onClick: () => {
-                                                            W(), (0, q.Z)();
+                                                            z(), (0, q.Z)();
                                                         },
                                                         renderSubmenu: (e) => {
                                                             let { closePopout: t } = e;
@@ -545,12 +545,12 @@ function ea(e) {
                                                                 navId: 'switch-accounts-submenu',
                                                                 'aria-label': J.Z.Messages.MULTI_ACCOUNT_MENU_LABEL,
                                                                 onClose: t,
-                                                                children: ep
+                                                                children: eg
                                                             });
                                                         }
                                                     }),
                                                     !__OVERLAY__ &&
-                                                        H.wS &&
+                                                        V.wS &&
                                                         em &&
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
@@ -561,7 +561,7 @@ function ea(e) {
                                                                     icon: c.IdIcon,
                                                                     label: J.Z.Messages.COPY_ID_USER,
                                                                     onClick: () => {
-                                                                        (0, l.J)(V.id), W();
+                                                                        (0, l.J)(H.id), z();
                                                                     }
                                                                 })
                                                             ]

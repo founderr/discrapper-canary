@@ -13,12 +13,12 @@ var i = n(735250),
     d = n(906732),
     u = n(963249),
     _ = n(579185),
-    h = n(479446),
-    E = n(522558),
+    E = n(479446),
+    h = n(522558),
     m = n(441623),
     I = n(317271),
-    g = n(16474),
-    p = n(474936),
+    p = n(16474),
+    g = n(474936),
     T = n(981631),
     f = n(689938),
     S = n(551370),
@@ -31,14 +31,14 @@ function A(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: s, shouldHighlight: A } = e,
         { analyticsLocations: v } = (0, d.ZP)(),
         { isHovered: Z, setIsHovered: L, onMouseEnter: R, onMouseLeave: O } = (0, _.Z)(200, 300),
-        { enableEmojiCTA: x } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 }),
+        { enableEmojiCTA: x } = h.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 }),
         b = a.useCallback(
             (e) => {
                 'focus' !== e.type && R();
             },
             [R]
         ),
-        P = (e) => {
+        M = (e) => {
             e.stopPropagation(),
                 (0, u.Z)({
                     isGift: !0,
@@ -52,22 +52,22 @@ function A(e) {
                         object: T.qAy.BUTTON_CTA,
                         objectType: T.Qqv.GIFT
                     },
-                    giftMessage: M()
+                    giftMessage: P()
                 });
         },
-        M = () => {
-            if (n === p.hX.FRIEND_ANNIVERSARY) return f.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: m.Z.getFriendAnniversaryYears(t.id) });
-            return (0, h.Ou)(n);
+        P = () => {
+            if (n === g.hX.FRIEND_ANNIVERSARY) return f.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: m.Z.getFriendAnniversaryYears(t.id) });
+            return (0, E.Ou)(n);
         },
         D = () => {
-            if (n === p.hX.FRIEND_ANNIVERSARY) return f.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY;
-            return (0, h.Ou)(n);
+            if (n === g.hX.FRIEND_ANNIVERSARY) return f.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY;
+            return (0, E.Ou)(n);
         },
         y = () =>
             x
                 ? (0, i.jsx)(c.Clickable, {
                       'aria-label': D(),
-                      onClick: P,
+                      onClick: M,
                       className: r()(C.actionButton, S.popoutButton, {
                           [C.highlight]: A,
                           [C.actionButtonMobile]: o.tq
@@ -80,7 +80,7 @@ function A(e) {
                       })
                   })
                 : (0, i.jsx)(c.Button, {
-                      onClick: P,
+                      onClick: M,
                       onMouseEnter: b,
                       onMouseLeave: O,
                       children: (0, i.jsxs)('div', {
@@ -113,9 +113,9 @@ function A(e) {
             L(!1);
         },
         renderPopout: (e) =>
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(p.Z, {
                 giftIntentType: n,
-                premiumGiftIntentCardType: g.U.COACHMARK,
+                premiumGiftIntentCardType: p.U.COACHMARK,
                 recipientUser: t,
                 onMouseEnter: R,
                 onMouseLeave: O,

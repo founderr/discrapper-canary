@@ -13,12 +13,12 @@ var i = n(735250),
     d = n(183126),
     u = n(209613),
     _ = n(82295),
-    h = n(797614),
-    E = n(626135),
+    E = n(797614),
+    h = n(626135),
     m = n(26373),
     I = n(486622),
-    g = n(922409),
-    p = n(727813),
+    p = n(922409),
+    g = n(727813),
     T = n(355350),
     f = n(307947),
     S = n(125855),
@@ -28,12 +28,12 @@ var i = n(735250),
     v = n(908120);
 function Z() {
     let e = a.useRef(null),
-        t = (0, p.Z)(),
+        t = (0, g.Z)(),
         n = (0, T.w)(),
         s = (0, m.V)(),
         Z = (0, d.N)(),
         L = (0, u.Z)('message-requests-spam-list'),
-        { channelId: R } = (0, g._)(),
+        { channelId: R } = (0, p._)(),
         O = a.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(A.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE));
         }, []),
@@ -42,9 +42,9 @@ function Z() {
             x(t.map((e) => e.channel.id));
         }, [t, x]);
     a.useEffect(() => {
-        E.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), h.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+        h.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), E.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
-    let P = a.useCallback(
+    let M = a.useCallback(
             (e) => {
                 var n, a;
                 let { row: l } = e,
@@ -68,7 +68,7 @@ function Z() {
             },
             [t, s, R]
         ),
-        M = a.useCallback(
+        P = a.useCallback(
             () =>
                 (0, i.jsxs)(
                     _.Z,
@@ -125,8 +125,8 @@ function Z() {
                               paddingBottom: 24,
                               sectionHeight: C.oi,
                               rowHeight: C.WN,
-                              renderSection: M,
-                              renderRow: P,
+                              renderSection: P,
+                              renderRow: M,
                               sections: [t.length],
                               chunkSize: 30,
                               fade: !0,

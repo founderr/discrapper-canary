@@ -106,7 +106,7 @@ t.ZP = l.memo(function (e) {
         j = !O && T.hasCommunityInfoSubheader(),
         D = !O && L,
         w = (0, h.xR)(b) && P && !x,
-        [G, U] = l.useState(!1),
+        [U, G] = l.useState(!1),
         k = l.useRef(),
         B = l.useRef(null),
         V = l.useRef(),
@@ -114,9 +114,9 @@ t.ZP = l.memo(function (e) {
     l.useEffect(() => {
         if (w && t && !k.current && H)
             return (
-                U(!0),
+                G(!0),
                 (V.current = setTimeout(() => {
-                    U(!1);
+                    G(!1);
                 }, 5000)),
                 () => {
                     clearTimeout(V.current);
@@ -201,7 +201,7 @@ t.ZP = l.memo(function (e) {
                                       guild: T,
                                       controller: n,
                                       guildBanner: b,
-                                      animate: G
+                                      animate: U
                                   })
                                 : null
                         ]
@@ -210,9 +210,9 @@ t.ZP = l.memo(function (e) {
                         ? (0, i.jsx)('div', {
                               className: g.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  U(!0), clearTimeout(V.current);
+                                  G(!0), clearTimeout(V.current);
                               },
-                              onMouseLeave: () => U(!1),
+                              onMouseLeave: () => G(!1),
                               style: { height: A }
                           })
                         : null

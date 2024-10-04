@@ -9,13 +9,13 @@ var i,
     d = n(131951),
     u = n(292959),
     _ = n(19780),
-    h = n(699516),
-    E = n(606304),
+    E = n(699516),
+    h = n(606304),
     m = n(358085),
     I = n(998502),
-    g = n(981631);
+    p = n(981631);
 ((a = i || (i = {})).DEFAULT = 'DEFAULT'), (a.UNREAD = 'UNREAD'), (a.CONNECTED = 'CONNECTED'), (a.SPEAKING = 'SPEAKING'), (a.MUTED = 'MUTED'), (a.DEAFENED = 'DEAFENED');
-let p = (0, m.isMac)() ? null : 'DEFAULT';
+let g = (0, m.isMac)() ? null : 'DEFAULT';
 class T extends s.PureComponent {
     componentDidMount() {
         I.ZP.setSystemTrayIcon(this.getIcon());
@@ -24,7 +24,7 @@ class T extends s.PureComponent {
         I.ZP.setSystemTrayIcon(this.getIcon());
     }
     componentWillUnmount() {
-        I.ZP.setSystemTrayIcon(p);
+        I.ZP.setSystemTrayIcon(g);
     }
     render() {
         return null;
@@ -36,7 +36,7 @@ class T extends s.PureComponent {
             (n = 'getIcon'),
             (i = () => {
                 let { deafened: e, muted: t, speaking: n, connected: i, unread: a } = this.props,
-                    s = p;
+                    s = g;
                 return (0, m.isMac)() && !i ? s : (0, m.isLinux)() || !i ? (a && (s = 'UNREAD'), s) : (s = e ? 'DEAFENED' : t ? 'MUTED' : n ? 'SPEAKING' : 'CONNECTED');
             }),
             n in t
@@ -54,16 +54,16 @@ m.isPlatformEmbedded &&
     (I.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => l.Z.toggleSelfMute({ location: 'System Tray' })),
     I.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => l.Z.toggleSelfDeaf()),
     I.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
-        o.Z.open(g.oAB.VOICE);
+        o.Z.open(p.oAB.VOICE);
     }),
-    (f = r.ZP.connectStores([_.Z, d.Z, E.Z, c.default, h.Z, u.Z], () => {
+    (f = r.ZP.connectStores([_.Z, d.Z, h.Z, c.default, E.Z, u.Z], () => {
         let e = c.default.getTotalMentionCount(),
             t = c.default.hasAnyUnread(),
-            n = h.Z.getPendingCount(),
+            n = E.Z.getPendingCount(),
             i = u.Z.getDisableUnreadBadge();
         return {
             connected: _.Z.isConnected(),
-            speaking: E.Z.isCurrentUserSpeaking(),
+            speaking: h.Z.isCurrentUserSpeaking(),
             muted: d.Z.isSelfMute() || d.Z.isSelfMutedTemporarily(),
             deafened: d.Z.isSelfDeaf(),
             unread: !i && !!(t || e + n > 0)

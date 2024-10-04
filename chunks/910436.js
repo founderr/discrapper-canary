@@ -16,16 +16,16 @@ var a = n(287734),
     d = n(420660),
     u = n(918701),
     _ = n(23404),
-    h = n(769654),
-    E = n(81063),
+    E = n(769654),
+    h = n(81063),
     m = n(761282),
     I = n(358924),
-    g = n(868854),
-    p = n(817915),
+    p = n(868854),
+    g = n(817915),
     T = n(981631);
 function f(e) {
     let { party: t, onChannelContextMenu: n, quest: f } = e,
-        S = (0, g.L)(),
+        S = (0, p.L)(),
         { voiceChannels: C, currentActivities: N, partiedMembers: A, applicationStreams: v, guildContext: Z } = t,
         L = [],
         R = (e) => {
@@ -64,7 +64,7 @@ function f(e) {
                         })(t),
                         onChannelContextMenu: n,
                         onGuildClick: () => {
-                            (0, h.X)(s.id);
+                            (0, E.X)(s.id);
                         }
                     },
                     'voice-'.concat(a.id)
@@ -101,15 +101,15 @@ function f(e) {
                 );
             }),
         N.forEach((e, t) => {
-            var n, a, s, h, m, g, S, v, L;
-            let { activity: O, game: x, playingMembers: b, activityUser: P } = e;
+            var n, a, s, E, m, p, S, v, L;
+            let { activity: O, game: x, playingMembers: b, activityUser: M } = e;
             if (null == O || null == O.type) return null;
             if (N.length > 1 && O.type === T.IIU.PLAYING && !(0, r.Z)(O) && null != x)
                 R(
                     (0, i.jsx)(
                         I.Z.GameSection,
                         {
-                            icon: x.getIconURL(p.Z),
+                            icon: x.getIconURL(g.Z),
                             name: x.name,
                             partySize: {
                                 knownSize: b.length,
@@ -143,9 +143,9 @@ function f(e) {
                         I.Z.RichPresenceSection,
                         {
                             activity: O,
-                            getAssetImage: E.getAssetImage
+                            getAssetImage: h.getAssetImage
                         },
-                        'rich-presence-'.concat(null !== (h = O.session_id) && void 0 !== h ? h : t, '-').concat(P.id)
+                        'rich-presence-'.concat(null !== (E = O.session_id) && void 0 !== E ? E : t, '-').concat(M.id)
                     )
                 );
             else if ((0, d.Z)(O)) {
@@ -157,8 +157,8 @@ function f(e) {
                         {
                             guildId: null == Z ? void 0 : Z.id,
                             activity: O,
-                            user: e || n ? P : null,
-                            getAssetImage: E.getAssetImage
+                            user: e || n ? M : null,
+                            getAssetImage: h.getAssetImage
                         },
                         'streaming-'.concat(null !== (m = O.session_id) && void 0 !== m ? m : t)
                     )
@@ -176,10 +176,10 @@ function f(e) {
                                       unknownSize: 0,
                                       totalSize: b.length
                                   },
-                                  getAssetImage: E.getAssetImage,
+                                  getAssetImage: h.getAssetImage,
                                   members: b
                               },
-                              'spotify-'.concat(null !== (g = O.session_id) && void 0 !== g ? g : t, '-').concat(P.id)
+                              'spotify-'.concat(null !== (p = O.session_id) && void 0 !== p ? p : t, '-').concat(M.id)
                           )
                       )
                     : (null != O.assets || (0, r.Z)(O)) && O.type === T.IIU.LISTENING
@@ -188,9 +188,9 @@ function f(e) {
                                 I.Z.RichPresenceSection,
                                 {
                                     activity: O,
-                                    getAssetImage: E.getAssetImage
+                                    getAssetImage: h.getAssetImage
                                 },
-                                'rich-presence-'.concat(null !== (S = O.session_id) && void 0 !== S ? S : t, '-').concat(P.id)
+                                'rich-presence-'.concat(null !== (S = O.session_id) && void 0 !== S ? S : t, '-').concat(M.id)
                             )
                         )
                       : (0, c.Z)(O) && R((0, i.jsx)(I.Z.XboxSection, { title: x.name }, 'xbox-'.concat(null !== (v = O.session_id) && void 0 !== v ? v : t)));

@@ -15,12 +15,12 @@ var i,
     d = n(846519),
     u = n(477690),
     _ = n(481060),
-    h = n(570140),
-    E = n(239091),
+    E = n(570140),
+    h = n(239091),
     m = n(287259),
     I = n(785547),
-    g = n(600164),
-    p = n(167533),
+    p = n(600164),
+    g = n(167533),
     T = n(925329),
     f = n(707409),
     S = n(490983),
@@ -46,8 +46,8 @@ function x(e, t, n) {
     );
 }
 let b = (0, v.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
-    P = (0, v.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
-    M = Object.freeze({
+    M = (0, v.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+    P = Object.freeze({
         [L.iEv.PLATFORM]: 'Platform',
         [L.iEv.LAST_PLAYED]: 'Last Played',
         [L.iEv.NAME]: 'Name'
@@ -72,8 +72,8 @@ let b = (0, v.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
             cellClassName: O.nameCell,
             bodyCellClassName: O.nameBodyCell,
             render: (e) =>
-                (0, a.jsxs)(g.Z, {
-                    align: g.Z.Align.CENTER,
+                (0, a.jsxs)(p.Z, {
+                    align: p.Z.Align.CENTER,
                     children: [
                         (0, a.jsx)(T.Z, {
                             game: e.application,
@@ -112,8 +112,8 @@ let b = (0, v.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
             bodyCellClassName: O.textCell,
             render(e) {
                 let t = e.libraryApplication.getDistributor();
-                return (0, a.jsx)(g.Z, {
-                    align: g.Z.Align.CENTER,
+                return (0, a.jsx)(p.Z, {
+                    align: p.Z.Align.CENTER,
                     children: null != t ? L.EOG[t] : R.Z.Messages.GAME_LIBRARY_NOT_APPLICABLE
                 });
             }
@@ -137,8 +137,8 @@ let b = (0, v.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                   location: f.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
                               })
                             : R.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE),
-                    (0, a.jsx)(g.Z, {
-                        align: g.Z.Align.CENTER,
+                    (0, a.jsx)(p.Z, {
+                        align: p.Z.Align.CENTER,
                         className: l()({ [O.lastPlayedCellNew]: e.isNew }),
                         children: t
                     })
@@ -178,7 +178,7 @@ let b = (0, v.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                         }),
                         (0, A.Je)(e.libraryApplication)
                             ? (0, a.jsx)(I.Z, {
-                                  analyticsListSort: ((i = t.sortKey), (r = t.sortDirection), ''.concat(M[i], ' ').concat(r === L.sHY.ASCENDING ? 'ASC' : 'DESC')),
+                                  analyticsListSort: ((i = t.sortKey), (r = t.sortDirection), ''.concat(P[i], ' ').concat(r === L.sHY.ASCENDING ? 'ASC' : 'DESC')),
                                   analyticsListIndex: n,
                                   source: L.Sbl.APPLICATION_LIBRARY,
                                   libraryApplication: e.libraryApplication,
@@ -226,7 +226,7 @@ class U extends (i = s.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (h.Z.wait(E.Zy), this.props.scrollToRow(e, b));
+            null != e && (E.Z.wait(h.Zy), this.props.scrollToRow(e, b));
         }
     }
     handleHighlightedApplicationKey() {
@@ -234,7 +234,7 @@ class U extends (i = s.PureComponent) {
         null != e &&
             null != this._rowRefs[e] &&
             (this.props.scrollToRow(this._rowRefs[e], b),
-            new d.V7().start(P, () => {
+            new d.V7().start(M, () => {
                 !this._didUnmount && this.setState({ highlightedApplicationKey: null });
             }));
     }
@@ -298,10 +298,10 @@ class U extends (i = s.PureComponent) {
                   className: i ? O.emptyStateSmall : O.emptyStateLarge,
                   children: [
                       (0, a.jsx)('div', { className: O.emptyWumpus }),
-                      (0, a.jsx)(g.Z, {
+                      (0, a.jsx)(p.Z, {
                           grow: 0,
                           shrink: i ? 1 : 0,
-                          direction: g.Z.Direction.VERTICAL,
+                          direction: p.Z.Direction.VERTICAL,
                           children: (0, a.jsxs)('div', {
                               className: O.emptyStateText,
                               children: [
@@ -325,7 +325,7 @@ class U extends (i = s.PureComponent) {
         return (0, a.jsxs)(s.Fragment, {
             children: [
                 n.length > 0
-                    ? (0, a.jsx)(p.Z, {
+                    ? (0, a.jsx)(g.Z, {
                           columns: y,
                           data: n,
                           sortData: !1,
@@ -388,7 +388,7 @@ class U extends (i = s.PureComponent) {
             x(this, 'handleApplicationContextMenu', (e, t) => {
                 this.setActiveRowKey(t);
                 let { analyticsContext: i } = this.props;
-                (0, E.jW)(
+                (0, h.jW)(
                     e,
                     async () => {
                         let { default: e } = await n.e('98335').then(n.bind(n, 485292));
@@ -421,7 +421,7 @@ function G(e) {
             sortKey: d,
             sortDirection: u,
             activeRowKey: _,
-            isNavigatingByKeyboard: h
+            isNavigatingByKeyboard: E
         } = (0, c.cj)([C.Z], () => ({
             sortKey: C.Z.sortKey,
             sortDirection: C.Z.sortDirection,
@@ -438,7 +438,7 @@ function G(e) {
         sortKey: d,
         sortDirection: u,
         activeRowKey: _,
-        isNavigatingByKeyboard: h
+        isNavigatingByKeyboard: E
     });
 }
 x(U, 'defaultProps', { stickyHeader: !1 });

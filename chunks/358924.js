@@ -9,12 +9,12 @@ var i,
     d = n(692547),
     u = n(481060),
     _ = n(438139),
-    h = n(2052),
-    E = n(726542),
+    E = n(2052),
+    h = n(726542),
     m = n(638880),
     I = n(655922),
-    g = n(122810),
-    p = n(833664),
+    p = n(122810),
+    g = n(833664),
     T = n(503438),
     f = n(420660),
     S = n(74433),
@@ -28,8 +28,8 @@ var i,
     O = n(382182),
     x = n(871118),
     b = n(707409),
-    P = n(849171),
-    M = n(314897),
+    M = n(849171),
+    P = n(314897),
     D = n(592125),
     y = n(594174),
     j = n(395361),
@@ -38,15 +38,15 @@ var i,
     w = n(823379),
     k = n(51144),
     B = n(599706),
-    H = n(981631),
-    V = n(689938),
+    V = n(981631),
+    H = n(689938),
     F = n(534255);
 let Y = {
         SMALL: 64,
         LARGE: 160
     },
-    W = [14, 14, 12, 12, 10, 8, 6],
-    z = function (e) {
+    z = [14, 14, 12, 12, 10, 8, 6],
+    W = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, s.jsx)(u.Text, {
             className: o()(F.textContent, t),
@@ -81,10 +81,10 @@ class X extends r.Component {
         let e;
         let { activity: t } = this.props,
             { timestamps: n } = t;
-        return null == n || !(0, p.Z)(t) || (0, T.Z)(t)
+        return null == n || !(0, g.Z)(t) || (0, T.Z)(t)
             ? null
             : K(
-                  (e = (0, g.Z)(t)
+                  (e = (0, p.Z)(t)
                       ? (0, s.jsx)(q, { timestamps: n })
                       : (0, s.jsx)(b.ZP, {
                             start: n.start,
@@ -131,7 +131,7 @@ class X extends r.Component {
                               })
                           }),
                     (0, s.jsxs)('div', {
-                        children: [z(null != a && '' !== a ? a : V.Z.Messages.USER_ACTIVITY_HEADER_PLAYING), null != r ? K(r) : null, this.renderTimePlayed()]
+                        children: [W(null != a && '' !== a ? a : H.Z.Messages.USER_ACTIVITY_HEADER_PLAYING), null != r ? K(r) : null, this.renderTimePlayed()]
                     })
                 ]
             })
@@ -244,12 +244,12 @@ let ee = (e) => {
     (ee.VoiceSection = (e) => {
         var t, n;
         let { guild: i, channel: a, onGuildClick: l, partySize: c, members: d, onChannelContextMenu: _ } = e,
-            h = r.useRef(null),
-            E = (0, A.ZP)(a, !0);
+            E = r.useRef(null),
+            h = (0, A.ZP)(a, !0);
         return (0, s.jsx)(Q, {
             children: (0, s.jsxs)('div', {
                 className: F.voiceSection,
-                ref: h,
+                ref: E,
                 onContextMenu: (e) => _(e, a),
                 children: [
                     (0, s.jsx)(u.Clickable, {
@@ -269,7 +269,7 @@ let ee = (e) => {
                                           className: F.voiceSectionNoGuildImageWrapper,
                                           children: (0, s.jsx)('div', {
                                               className: F.voiceSectionNoGuildImage,
-                                              style: { fontSize: null !== (n = W[i.acronym.length]) && void 0 !== n ? n : W[W.length - 1] },
+                                              style: { fontSize: null !== (n = z[i.acronym.length]) && void 0 !== n ? n : z[z.length - 1] },
                                               children: i.acronym
                                           })
                                       }),
@@ -286,10 +286,10 @@ let ee = (e) => {
                     }),
                     (0, s.jsx)(u.Clickable, {
                         onClick: l,
-                        focusProps: { ringTarget: h },
+                        focusProps: { ringTarget: E },
                         children: (0, s.jsxs)('div', {
                             className: F.voiceSectionDetails,
-                            children: [z(i.toString(), F.voiceSectionText), K(E, F.voiceSectionText)]
+                            children: [W(i.toString(), F.voiceSectionText), K(h, F.voiceSectionText)]
                         })
                     }),
                     (0, s.jsx)(B.Z, {
@@ -315,7 +315,7 @@ let ee = (e) => {
                           })
                         : null,
                     (0, s.jsxs)('div', {
-                        children: [z(n), K(V.Z.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({ memberCount: i.totalSize }))]
+                        children: [W(n), K(H.Z.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({ memberCount: i.totalSize }))]
                     }),
                     (0, s.jsx)(B.Z, {
                         partySize: i,
@@ -335,7 +335,7 @@ let ee = (e) => {
                     (0, s.jsx)(U.Z, { className: F.xboxSectionIcon }),
                     (0, s.jsxs)('div', {
                         className: F.__invalid_xboxSectionDetails,
-                        children: [z(t), K(V.Z.Messages.GAME_FEED_ACTIVITY_PLAYING_XBOX)]
+                        children: [W(t), K(H.Z.Messages.GAME_FEED_ACTIVITY_PLAYING_XBOX)]
                     })
                 ]
             })
@@ -373,7 +373,7 @@ let ee = (e) => {
                           })
                         : (0, s.jsx)('div', {}),
                     (0, s.jsxs)('div', {
-                        children: [null != i ? z(i) : null, null != a ? K(a) : null]
+                        children: [null != i ? W(i) : null, null != a ? K(a) : null]
                     }),
                     (0, s.jsx)(B.Z, {
                         minAvatarsShown: u ? 2 : 1,
@@ -387,7 +387,7 @@ let ee = (e) => {
     (ee.TwitchSection = (e) => {
         let t,
             { activity: i, user: a, getAssetImage: r, guildId: l } = e,
-            { name: c, details: d, assets: _, application_id: h } = i;
+            { name: c, details: d, assets: _, application_id: E } = i;
         if (null != _ && (0, f.Z)(i)) {
             var m;
             t = (0, s.jsx)(Z.Z, {
@@ -400,7 +400,7 @@ let ee = (e) => {
                     children: [
                         (0, s.jsx)('img', {
                             alt: null !== (m = _.large_text) && void 0 !== m ? m : '',
-                            src: r(h, _.large_image, [900, 500]),
+                            src: r(E, _.large_image, [900, 500]),
                             className: F.twitchSectionPreview
                         }),
                         (0, s.jsx)('img', {
@@ -422,11 +422,11 @@ let ee = (e) => {
                     children: [
                         (0, s.jsx)('img', {
                             alt: '',
-                            src: E.Z.get(H.ABu.TWITCH).icon.lightSVG,
+                            src: h.Z.get(V.ABu.TWITCH).icon.lightSVG,
                             className: F.twitchSectionIcon
                         }),
                         (0, s.jsxs)('div', {
-                            children: [z(c), null != d ? K(d) : null]
+                            children: [W(c), null != d ? K(d) : null]
                         }),
                         null != a
                             ? (0, s.jsx)(u.Avatar, {
@@ -446,8 +446,8 @@ let ee = (e) => {
         var t, n;
         let { activity: i, user: a, applicationStream: r, onPreviewClick: l, guildId: o } = e,
             d = (0, c.e7)([D.Z], () => D.Z.getChannel(r.channelId)),
-            [_, h] = (0, O.wq)(d),
-            E = (0, s.jsxs)(u.Clickable, {
+            [_, E] = (0, O.wq)(d),
+            h = (0, s.jsxs)(u.Clickable, {
                 onClick: _ ? l : void 0,
                 className: F.applicationStreamingPreviewWrapper,
                 children: [
@@ -459,11 +459,11 @@ let ee = (e) => {
                         className: F.applicationStreamingHoverText,
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: (0, O.P9)(h)
+                        children: (0, O.P9)(E)
                     })
                 ]
             }),
-            m = null !== (n = null === (t = (0, S.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : V.Z.Messages.SHARING_SCREEN;
+            m = null !== (n = null === (t = (0, S.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : H.Z.Messages.SHARING_SCREEN;
         return (0, s.jsxs)(Q, {
             children: [
                 (0, s.jsxs)('div', {
@@ -476,12 +476,12 @@ let ee = (e) => {
                             className: F.applicationStreamingAvatar
                         }),
                         (0, s.jsxs)('div', {
-                            children: [z(k.ZP.getName(a)), K(m)]
+                            children: [W(k.ZP.getName(a)), K(m)]
                         }),
                         (0, s.jsx)(v.ZP, { size: v.ZP.Sizes.SMALL })
                     ]
                 }),
-                E
+                h
             ]
         });
     }),
@@ -496,25 +496,25 @@ let ee = (e) => {
                     return o(t);
                 });
         }, [d]);
-        let _ = (0, c.Wu)([y.default, M.default], () =>
+        let _ = (0, c.Wu)([y.default, P.default], () =>
                 Array.from(a)
-                    .map((e) => (M.default.getId() === e ? null : y.default.getUser(e)))
+                    .map((e) => (P.default.getId() === e ? null : y.default.getUser(e)))
                     .filter(w.lm)
             ),
-            E = (0, h.O)(),
+            h = (0, E.O)(),
             { analyticsLocations: I } = (0, C.ZP)();
         if (null == d) return null;
-        let g = N.Z.getApplication(d);
-        if (null == g) return null;
-        let p = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            T = (0, G.getAssetImage)(g.id, l, 300);
+        let p = N.Z.getApplication(d);
+        if (null == p) return null;
+        let g = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
+            T = (0, G.getAssetImage)(p.id, l, 300);
         return (0, s.jsxs)(Q, {
             children: [
                 (0, s.jsxs)('div', {
                     className: F.embeddedActivityTopRow,
                     children: [
                         (0, s.jsx)(R.Z, {
-                            game: g,
+                            game: p,
                             size: R.Z.Sizes.XSMALL,
                             className: F.embeddedActivityIcon
                         }),
@@ -522,16 +522,16 @@ let ee = (e) => {
                             className: F.embeddedActivityName,
                             children: (0, s.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
-                                children: g.name
+                                children: p.name
                             })
                         }),
-                        null != p
+                        null != g
                             ? (0, s.jsx)('div', {
                                   className: F.embeddedActivityTimeElapsed,
                                   children: (0, s.jsx)(u.Text, {
                                       color: 'text-muted',
                                       variant: 'text-sm/normal',
-                                      children: (0, s.jsx)(q, { timestamps: p })
+                                      children: (0, s.jsx)(q, { timestamps: g })
                                   })
                               })
                             : null
@@ -543,14 +543,14 @@ let ee = (e) => {
                         null != T
                             ? (0, s.jsx)('img', {
                                   src: T,
-                                  alt: g.name,
+                                  alt: p.name,
                                   className: F.embeddedActivityImage
                               })
                             : null,
                         (0, s.jsxs)('div', {
                             className: F.embeddedActivityImageOverlay,
                             children: [
-                                (0, s.jsx)(P.OV, {
+                                (0, s.jsx)(M.OV, {
                                     users: _,
                                     guildId: i,
                                     channelId: n.id
@@ -564,11 +564,11 @@ let ee = (e) => {
                                                 (0, m.Z)({
                                                     applicationId: d,
                                                     activityChannelId: n.id,
-                                                    locationObject: E.location,
+                                                    locationObject: h.location,
                                                     analyticsLocations: I
                                                 });
                                         },
-                                        children: V.Z.Messages.JOIN
+                                        children: H.Z.Messages.JOIN
                                     })
                                 })
                             ]

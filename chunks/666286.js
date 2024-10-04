@@ -8,7 +8,7 @@ var i = n(735250),
     d = n(981631),
     u = n(689938),
     _ = n(908061);
-function h() {
+function E() {
     return (0, i.jsxs)('header', {
         className: _.header,
         children: [
@@ -24,7 +24,7 @@ function h() {
 t.Z = function () {
     return (0, i.jsxs)(a.Fragment, {
         children: [
-            (0, i.jsx)(h, {}),
+            (0, i.jsx)(E, {}),
             (0, l.b)() && (0, i.jsx)(o.Z, {}),
             (0, i.jsx)('div', {
                 className: _.emptyState,

@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(224706),
     u = n(100527),
     _ = n(812206),
-    h = n(970606),
-    E = n(963202),
+    E = n(970606),
+    h = n(963202),
     m = n(650461),
     I = n(603839),
-    g = n(669764),
-    p = n(322665),
+    p = n(669764),
+    g = n(322665),
     T = n(17845),
     f = n(374939),
     S = n(283293),
@@ -26,7 +26,7 @@ var i = n(735250),
     L = n(641388);
 function R(e) {
     let { showPickGameButton: t, showAdminGuildPicker: n, inGlobalDiscovery: s } = e,
-        { guilds: l } = (0, E.C3)({
+        { guilds: l } = (0, h.C3)({
             location: 'ClanDiscoveryContentCtaContent',
             includeConverted: !1
         }),
@@ -44,9 +44,9 @@ function R(e) {
                 })),
             [l]
         ),
-        g = n && l.length > 0,
-        p = a.useCallback(() => {
-            (0, h._9)({
+        p = n && l.length > 0,
+        g = a.useCallback(() => {
+            (0, E._9)({
                 guildId: o,
                 location: s ? u.Z.GLOBAL_DISCOVERY : u.Z.CLAN_DISCOVERY
             }),
@@ -68,11 +68,11 @@ function R(e) {
                           children: (0, i.jsxs)(c.Button, {
                               look: c.ButtonLooks.FILLED,
                               size: c.ButtonSizes.LARGE,
-                              color: g ? c.ButtonColors.TRANSPARENT : c.ButtonColors.BRAND,
+                              color: p ? c.ButtonColors.TRANSPARENT : c.ButtonColors.BRAND,
                               className: L.heroButton,
                               innerClassName: L.heroButtonInner,
                               onClick: () => {
-                                  (0, h.GS)({ location: s ? u.Z.GLOBAL_DISCOVERY : u.Z.CLAN_DISCOVERY }), (0, N.fH)(N.v0.GET_STARTED);
+                                  (0, E.GS)({ location: s ? u.Z.GLOBAL_DISCOVERY : u.Z.CLAN_DISCOVERY }), (0, N.fH)(N.v0.GET_STARTED);
                               },
                               children: [
                                   (0, i.jsx)(c.Text, {
@@ -85,7 +85,7 @@ function R(e) {
                           })
                       })
                     : null,
-            [t, g, s]
+            [t, p, s]
         ),
         f = a.useMemo(
             () =>
@@ -105,7 +105,7 @@ function R(e) {
                                       size: c.ButtonSizes.MEDIUM,
                                       color: c.ButtonColors.BRAND,
                                       className: L.heroButton,
-                                      onClick: p,
+                                      onClick: g,
                                       children: (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
@@ -116,7 +116,7 @@ function R(e) {
                           ]
                       })
                     : null,
-            [n, l.length, _, o, p]
+            [n, l.length, _, o, g]
         );
     return (0, i.jsxs)('div', {
         className: r()(L.contentCtaContainer, { [L.contentCtaContainerSpacing]: !s }),
@@ -126,15 +126,15 @@ function R(e) {
 t.Z = a.memo(function (e) {
     var t, n;
     let s,
-        { width: u, paddingVertical: h = 16, paddingHorizontal: E = 32, variant: m = A.Bj.DEFAULT, onScroll: I, withAdminContent: C = !1, inGlobalDiscovery: v } = e,
+        { width: u, paddingVertical: E = 16, paddingHorizontal: h = 32, variant: m = A.Bj.DEFAULT, onScroll: I, withAdminContent: C = !1, inGlobalDiscovery: v } = e,
         O = a.useRef(null),
         x = (0, N.GN)((e) => e.completedNux, l.Z),
         b = (0, N.GN)((e) => e.entrypointGameId, l.Z),
-        P = (0, o.e7)([_.Z], () => (null != b ? _.Z.getApplication(b) : null)),
-        M = (0, o.e7)([g.Z], () => (null != b ? g.Z.getGame(b) : null));
+        M = (0, o.e7)([_.Z], () => (null != b ? _.Z.getApplication(b) : null)),
+        P = (0, o.e7)([p.Z], () => (null != b ? p.Z.getGame(b) : null));
     a.useEffect(() => {
-        null != b && null == M && d.Z.getDetectableGamesSupplemental([b]);
-    }, [b, M]);
+        null != b && null == P && d.Z.getDetectableGamesSupplemental([b]);
+    }, [b, P]);
     let D = a.useCallback(() => {
             var e;
             null === (e = O.current) || void 0 === e || e.scrollToTop();
@@ -149,8 +149,8 @@ t.Z = a.memo(function (e) {
             [x, C, v]
         ),
         j = a.useMemo(() => {
-            if (null == M) return '';
-            let { artwork: e, screenshots: t } = M;
+            if (null == P) return '';
+            let { artwork: e, screenshots: t } = P;
             if (e.length > 0) {
                 let t = Math.floor(Math.random() * (e.length - 1));
                 return e[t];
@@ -160,11 +160,11 @@ t.Z = a.memo(function (e) {
                 return t[e];
             }
             return '';
-        }, [M]),
-        U = null !== (n = null !== (t = null == M ? void 0 : M.name) && void 0 !== t ? t : null == P ? void 0 : P.name) && void 0 !== n ? n : '';
+        }, [P]),
+        U = null !== (n = null !== (t = null == P ? void 0 : P.name) && void 0 !== t ? t : null == M ? void 0 : M.name) && void 0 !== n ? n : '';
     return (
         (s =
-            null != b && (null != M || null != P)
+            null != b && (null != P || null != M)
                 ? (0, i.jsxs)(T.Z, {
                       title: (0, i.jsx)(c.Text, {
                           className: r()(L.globalDiscoveryTitle, L.customDiscoveryTitle),
@@ -187,7 +187,7 @@ t.Z = a.memo(function (e) {
                           })
                       }),
                       children: [
-                          (0, i.jsx)(p.Z, {}),
+                          (0, i.jsx)(g.Z, {}),
                           (0, i.jsx)('div', {
                               className: L.gameArt,
                               style: { backgroundImage: 'url("'.concat(j, '")') }
@@ -204,7 +204,7 @@ t.Z = a.memo(function (e) {
                       }),
                       description: x ? Z.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION_NUX_COMPLETED : Z.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
                       button: y,
-                      children: (0, i.jsx)(p.Z, {})
+                      children: (0, i.jsx)(g.Z, {})
                   })),
         (0, i.jsxs)(S.Z, {
             ref: O,
@@ -215,8 +215,8 @@ t.Z = a.memo(function (e) {
                     children: (0, i.jsx)(A.ZP, {
                         width: u,
                         onUpdatePage: D,
-                        paddingHorizontal: E,
-                        paddingVertical: h,
+                        paddingHorizontal: h,
+                        paddingVertical: E,
                         variant: m
                     })
                 })

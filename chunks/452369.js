@@ -15,17 +15,17 @@ function _(e) {
     if (!(0, l.w)({ location: 'VoiceChannelBlockedUserStore_blockStateChange' })) return !1;
     if (t.type === o.OGo.BLOCKED) {
         let e = r.Z.getVoiceStateForUser(t.id);
-        if (null != e && null != e.channelId) return h(e.channelId, t.id);
+        if (null != e && null != e.channelId) return E(e.channelId, t.id);
     }
     return !1;
 }
-function h(e, t) {
+function E(e, t) {
     let n = !1,
         i = new Set(c[e]),
         a = s.Z.isBlocked(t);
     return a && !i.has(t) ? (i.add(t), (n = !0)) : !a && (n = i.delete(t)), 0 === i.size && n ? delete c[e] : n && (c[e] = i), n;
 }
-class E extends i.ZP.Store {
+class h extends i.ZP.Store {
     initialize() {
         this.waitFor(s.Z, r.Z);
     }
@@ -34,14 +34,14 @@ class E extends i.ZP.Store {
         return (0, l.w)({ location: 'VoiceChannelBlockedUserStore_getBlockedUsersForVoiceChannel' }) ? (null !== (t = c[e]) && void 0 !== t ? t : d) : d;
     }
 }
-new E(a.Z, {
+new h(a.Z, {
     CONNECTION_OPEN: u,
     LOGOUT: u,
     OVERLAY_INITIALIZE: function () {
         if ((u(), !(0, l.w)({ location: 'VoiceChannelBlockedUserStore_open' }))) return !1;
         let e = r.Z.getAllVoiceStates(),
             t = !1;
-        for (let n of Object.values(e)) for (let e of Object.values(n)) null != e.channelId && (t = h(e.channelId, e.userId) || t);
+        for (let n of Object.values(e)) for (let e of Object.values(n)) null != e.channelId && (t = E(e.channelId, e.userId) || t);
         return t;
     },
     VOICE_STATE_UPDATES: function (e) {
@@ -54,7 +54,7 @@ new E(a.Z, {
                     var t;
                     null === (t = c[e.oldChannelId]) || void 0 === t || t.delete(e.userId), (n = !0);
                 }
-                null != e.channelId && (n = h(e.channelId, e.userId) || n);
+                null != e.channelId && (n = E(e.channelId, e.userId) || n);
             }),
             n
         );

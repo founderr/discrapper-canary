@@ -8,11 +8,11 @@ var i,
     d = n(814443),
     u = n(158776),
     _ = n(594174),
-    h = n(981631);
-let E = !1,
+    E = n(981631);
+let h = !1,
     m = {},
     I = {};
-function g(e) {
+function p(e) {
     let t = !1;
     return (
         e.forEach((e) => {
@@ -21,7 +21,7 @@ function g(e) {
         t
     );
 }
-function p(e) {
+function g(e) {
     let t = I[e];
     if (null == t) return !1;
     let n = t.gameId;
@@ -30,17 +30,17 @@ function p(e) {
 function T(e) {
     let { user: t, activities: n } = e;
     if (null == t) return !1;
-    let i = n.filter((e) => e.type !== h.IIU.CUSTOM_STATUS);
-    if (0 === i.length) return p(t.id);
+    let i = n.filter((e) => e.type !== E.IIU.CUSTOM_STATUS);
+    if (0 === i.length) return g(t.id);
     let a = !1;
     return (
         i.forEach((e) => {
             (function (e, t) {
                 var n, i, a, s;
                 let r = (0, c.Z)(e);
-                if (null == r) return p(t.id);
+                if (null == r) return g(t.id);
                 let l = I[t.id];
-                null != l && l.gameId !== r && p(t.id);
+                null != l && l.gameId !== r && g(t.id);
                 let o = null !== (i = null === (n = e.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : Date.now(),
                     d = {
                         userId: t.id,
@@ -73,7 +73,7 @@ function T(e) {
 }
 function f() {
     let e = !1;
-    if (!d.Z.needsRefresh() && !E) {
+    if (!d.Z.needsRefresh() && !h) {
         let t;
         (m = {}),
             (I = {}),
@@ -89,7 +89,7 @@ function f() {
             }),
             (e = t);
     }
-    return (E = !d.Z.needsRefresh()), e;
+    return (h = !d.Z.needsRefresh()), e;
 }
 class S extends (r = l.ZP.Store) {
     initialize() {
@@ -129,9 +129,9 @@ class S extends (r = l.ZP.Store) {
                 i = !1;
             return (
                 t.forEach((e) => {
-                    g(e.presences) && (i = !0);
+                    p(e.presences) && (i = !0);
                 }),
-                g(n) && (i = !0),
+                p(n) && (i = !0),
                 i
             );
         },
@@ -144,6 +144,6 @@ class S extends (r = l.ZP.Store) {
         },
         PRESENCES_REPLACE: function (e) {
             let { presences: t } = e;
-            return g(t);
+            return p(t);
         }
     }));

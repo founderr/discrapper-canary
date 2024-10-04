@@ -14,12 +14,12 @@ var i = n(392711),
     d = n(271383),
     u = n(430824),
     _ = n(131951),
-    h = n(158776),
-    E = n(19780),
+    E = n(158776),
+    h = n(19780),
     m = n(699516),
     I = n(944486),
-    g = n(594174),
-    p = n(979651),
+    p = n(594174),
+    g = n(979651),
     T = n(626135),
     f = n(823379),
     S = n(358085),
@@ -49,7 +49,7 @@ class O {
         for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t);
     }
     init() {
-        (this.rpcServer.getCurrentUser = () => g.default.getCurrentUser()),
+        (this.rpcServer.getCurrentUser = () => p.default.getCurrentUser()),
             (this.rpcServer.onConnect = (e) => {
                 r.Z.dispatch({
                     type: 'RPC_APP_CONNECTED',
@@ -69,7 +69,7 @@ class O {
                     reason: t
                 });
             });
-        let e = [c.Z, d.ZP, h.Z, p.Z, _.Z, E.Z];
+        let e = [c.Z, d.ZP, E.Z, g.Z, _.Z, h.Z];
         new s.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), r.Z.subscribe('MESSAGE_CREATE', (e) => this.handleMessage(e)), r.Z.subscribe('MESSAGE_UPDATE', (e) => this.handleMessage(e)), r.Z.subscribe('MESSAGE_DELETE', (e) => this.handleMessage(e)), r.Z.subscribe('SPEAKING', (e) => this.handleSpeaking(e)), r.Z.subscribe('OAUTH2_TOKEN_REVOKE', (e) => this.handleOAuth2TokenRevoke(e)), r.Z.subscribe('GUILD_CREATE', (e) => this.handleGuildCreate(e)), r.Z.subscribe('CHANNEL_CREATE', (e) => this.handleChannelCreate(e)), r.Z.subscribe('LOGOUT', () => this.handleLogout()), r.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => this.handleVoiceChannelSelect(e)), r.Z.subscribe('RPC_NOTIFICATION_CREATE', (e) => this.handleNotificationCreate(e)), r.Z.subscribe('ACTIVITY_JOIN', (e) => this.handleActivityJoin(e)), r.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', (e) => this.handleActivityLayoutModeUpdate(e)), r.Z.subscribe('THERMAL_STATE_CHANGE', (e) => this.handleThermalStateChange(e)), r.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', (e) => this.handleScreenOrientationUpdate(e)), (0, N.HU)((e) => this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), r.Z.subscribe('RELATIONSHIP_ADD', (e) => this.handleRelationshipAdd(e)), r.Z.subscribe('RELATIONSHIP_REMOVE', (e) => this.handleRelationshipRemove(e)), r.Z.subscribe('PRESENCE_UPDATES', (e) => this.handlePresenceUpdate(e)), r.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), r.Z.subscribe('ENTITLEMENT_CREATE', (e) => this.handleEntitlementCreate(e)), r.Z.subscribe('ENTITLEMENT_DELETE', (e) => this.handleEntitlementDelete(e)), r.Z.subscribe('USER_ACHIEVEMENT_UPDATE', (e) => this.handleUserAchievementUpdate(e));
     }
     handleMessage(e) {
@@ -110,7 +110,7 @@ class O {
             if (null != n) {
                 let i = c.Z.getChannel(n);
                 if (null == i) return;
-                let a = p.Z.getVoiceState(i.getGuildId(), e.userId);
+                let a = g.Z.getVoiceState(i.getGuildId(), e.userId);
                 if (null == a) return;
                 this.rpcServer.dispatchToSubscriptions(
                     t,
@@ -179,11 +179,11 @@ class O {
         if (0 === this.rpcServer.subscriptions.length) return;
         let { application: a, activity: s } = i;
         if (null == a || null == s || null == s.party_id) return;
-        let r = g.default.getUser(null === (t = i.author) || void 0 === t ? void 0 : t.id);
+        let r = p.default.getUser(null === (t = i.author) || void 0 === t ? void 0 : t.id);
         if (null == r) return;
-        let l = g.default.getCurrentUser();
+        let l = p.default.getCurrentUser();
         if (null == l || r.id === l.id) return;
-        let o = s.type === v.mFx.JOIN_REQUEST ? h.Z.getApplicationActivity(l.id, a.id) : h.Z.getApplicationActivity(r.id, a.id);
+        let o = s.type === v.mFx.JOIN_REQUEST ? E.Z.getApplicationActivity(l.id, a.id) : E.Z.getApplicationActivity(r.id, a.id);
         if (null == o || null == o.party || o.party.id !== s.party_id) return;
         let c = o.application_id;
         switch (s.type) {

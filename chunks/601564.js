@@ -15,12 +15,12 @@ var i = n(735250),
     d = n(410575),
     u = n(666743),
     _ = n(112724),
-    h = n(447269),
-    E = n(612226),
+    E = n(447269),
+    h = n(612226),
     m = n(714338),
     I = n(663993),
-    g = n(628123),
-    p = n(703656),
+    p = n(628123),
+    g = n(703656),
     T = n(108427),
     f = n(911314),
     S = n(429899),
@@ -52,17 +52,17 @@ l.ZP.initialize();
 class O extends a.PureComponent {
     componentDidMount() {
         (0, o.Y)(this.props.location),
-            (this.stopListeningToHistory = (0, p.s1)().listen((e) => {
+            (this.stopListeningToHistory = (0, g.s1)().listen((e) => {
                 e.pathname.startsWith(N.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
             })),
             this.props.isAuthenticated && (0, c.tZ)(),
             m.Z.disable(),
-            m.Z.setLayout(h.r),
+            m.Z.setLayout(E.r),
             m.Z.enable(),
             (0, T.e)('application_store');
     }
     componentWillUnmount() {
-        null != this.stopListeningToHistory && this.stopListeningToHistory(), m.Z.disable(), m.Z.setLayout(E.oT), m.Z.enable();
+        null != this.stopListeningToHistory && this.stopListeningToHistory(), m.Z.disable(), m.Z.setLayout(h.oT), m.Z.enable();
     }
     renderCustomErrorMessage() {
         return (0, i.jsxs)('div', {
@@ -81,7 +81,7 @@ class O extends a.PureComponent {
                       location: t,
                       render: this.renderContent
                   });
-        return (0, i.jsx)(g.Z, {
+        return (0, i.jsx)(p.Z, {
             renderCustomMessage: this.renderCustomErrorMessage,
             children: n
         });

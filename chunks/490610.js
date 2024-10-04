@@ -9,15 +9,15 @@ var i = n(735250),
     d = n(945124),
     u = n(231467),
     _ = n(931515),
-    h = n(207796),
-    E = n(777734),
+    E = n(207796),
+    h = n(777734),
     m = n(976757),
     I = n(981631),
-    g = n(641388);
+    p = n(641388);
 t.Z = a.memo(function (e) {
     let { title: t, subtitle: n, className: s } = e,
-        { loaded: p, clans: T, searchResult: f, searchCriteria: S } = (0, _.Qc)(20),
-        C = (0, h.GN)((e) => e.selectedTraits, l.Z),
+        { loaded: g, clans: T, searchResult: f, searchCriteria: S } = (0, _.Qc)(20),
+        C = (0, E.GN)((e) => e.selectedTraits, l.Z),
         N = a.useMemo(() => new Set(S.games), [S.games]),
         A = a.useCallback(
             (e) => {
@@ -26,7 +26,7 @@ t.Z = a.memo(function (e) {
                     u.ZP,
                     {
                         clan: e,
-                        className: g.card,
+                        className: p.card,
                         affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.y)(e, S),
                         traitsToHighlight: C,
                         source: I.jXE.DISCOVER_SEARCH,
@@ -45,22 +45,22 @@ t.Z = a.memo(function (e) {
             },
             [S]
         );
-    return 0 !== T.length && p
+    return 0 !== T.length && g
         ? (0, i.jsx)(o.$, {
               onChange: Z,
               threshold: 0.25,
               children: (0, i.jsxs)('div', {
-                  className: r()(g.previewListContainer, s),
+                  className: r()(p.previewListContainer, s),
                   children: [
                       (0, i.jsx)('div', {
-                          className: g.previewListSection,
-                          children: (0, i.jsx)(E.Z, {
+                          className: p.previewListSection,
+                          children: (0, i.jsx)(h.Z, {
                               title: t,
                               subtitle: n
                           })
                       }),
                       (0, i.jsx)('div', {
-                          className: g.previewList,
+                          className: p.previewList,
                           children: v.map((e) => A(e))
                       })
                   ]

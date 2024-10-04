@@ -12,12 +12,12 @@ var i = n(735250),
     c = n(689938),
     d = n(837275);
 function u(e) {
-    let { guildId: t, signed: n, setSigned: u, sidebarWidth: _, windowWidth: h, transition: E, brandPrimaryColor: m } = e,
-        I = a.useMemo(() => (h - _) / 2, [_, h]);
+    let { guildId: t, signed: n, setSigned: u, sidebarWidth: _, windowWidth: E, transition: h, brandPrimaryColor: m } = e,
+        I = a.useMemo(() => (E - _) / 2, [_, E]);
     return (0, i.jsxs)('div', {
         className: d.sidebarContent,
         children: [
-            E(
+            h(
                 (e, t) =>
                     t &&
                     (0, i.jsx)(s.animated.div, {

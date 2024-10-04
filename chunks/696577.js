@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return g;
     }
 });
 var i = n(735250),
@@ -13,13 +13,13 @@ var i = n(735250),
     d = n(594174),
     u = n(626135),
     _ = n(321488),
-    h = n(417183),
-    E = n(170245),
+    E = n(417183),
+    h = n(170245),
     m = n(981631),
     I = n(689938),
-    g = n(94455);
-function p(e) {
-    let { user: t, type: n, status: p, isFocused: T } = e,
+    p = n(94455);
+function g(e) {
+    let { user: t, type: n, status: g, isFocused: T } = e,
         f = a.useContext(u.AnalyticsContext),
         { analyticsLocations: S } = (0, o.ZP)(),
         C = (e) => {
@@ -32,9 +32,9 @@ function p(e) {
                     context: { location: 'Friends' }
                 });
         },
-        A = p === m.Skl.OFFLINE ? m.Skl.UNKNOWN : p,
+        A = g === m.Skl.OFFLINE ? m.Skl.UNKNOWN : g,
         v = n === m.OGo.PENDING_INCOMING ? I.Z.Messages.INCOMING_FRIEND_REQUEST : I.Z.Messages.OUTGOING_FRIEND_REQUEST;
-    return (0, i.jsx)(h.Z, {
+    return (0, i.jsx)(E.Z, {
         isFocused: T,
         user: t,
         onClick: () =>
@@ -52,7 +52,7 @@ function p(e) {
                               (null === (a = d.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()) &&
                                   (null == t ? void 0 : t.isStaff()) &&
                                   (0, i.jsx)('div', {
-                                      className: g.staffIndicator,
+                                      className: p.staffIndicator,
                                       children: (0, i.jsx)(r.TextBadge, {
                                           color: s.Z.unsafe_rawColors.BRAND_500.css,
                                           text: I.Z.Messages.STAFF_BADGE_TOOLTIP
@@ -82,9 +82,9 @@ function p(e) {
                           shouldHighlight: e
                       });
             return (0, i.jsxs)('div', {
-                className: g.listItemContents,
+                className: p.listItemContents,
                 children: [
-                    (0, i.jsx)(E.Z, {
+                    (0, i.jsx)(h.Z, {
                         user: t,
                         hovered: e,
                         showAccountIdentifier: !0,
@@ -92,7 +92,7 @@ function p(e) {
                         subText: v
                     }),
                     (0, i.jsx)('div', {
-                        className: g.actions,
+                        className: p.actions,
                         children: l
                     })
                 ]

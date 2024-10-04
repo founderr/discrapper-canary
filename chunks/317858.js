@@ -14,15 +14,15 @@ var i = n(470079),
     d = n(292959),
     u = n(699516),
     _ = n(340895),
-    h = n(358085),
-    E = n(998502),
+    E = n(358085),
+    h = n(998502),
     m = n(252618),
     I = n(981631),
-    g = n(689938);
-let p = new Set(['Blink', 'Gecko', 'WebKit']),
+    p = n(689938);
+let g = new Set(['Blink', 'Gecko', 'WebKit']),
     T = I.dG4;
-if (h.isPlatformEmbedded) T = (e) => E.ZP.setBadge(e);
-else if (p.has(l().layout)) {
+if (E.isPlatformEmbedded) T = (e) => h.ZP.setBadge(e);
+else if (g.has(l().layout)) {
     let e = new (s())({ animation: 'none' });
     T = (t) => {
         try {
@@ -42,9 +42,9 @@ function f() {
         });
     i.useEffect(() => {
         if (!e) return;
-        let t = E.ZP.bounceDock('critical'),
+        let t = h.ZP.bounceDock('critical'),
             n = (0, m.EM)({
-                messages: [g.Z.Messages.INCOMING_CALL],
+                messages: [p.Z.Messages.INCOMING_CALL],
                 count: 50
             });
         return () => {

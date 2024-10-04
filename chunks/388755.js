@@ -1,6 +1,6 @@
 a.d(t, {
     D: function () {
-        return f;
+        return _;
     }
 }),
     a(47120);
@@ -30,8 +30,8 @@ function k(e, t, a) {
         e
     );
 }
-let _ = m.j_.MAIN_NAVIGATION_MENU;
-class f extends i.PureComponent {
+let f = m.j_.MAIN_NAVIGATION_MENU;
+class _ extends i.PureComponent {
     componentDidMount() {
         window.addEventListener('keydown', this.handleKeyDown);
     }
@@ -48,7 +48,7 @@ class f extends i.PureComponent {
                 children: [
                     (0, n.jsx)(a, {
                         tag: 'div',
-                        eventName: _,
+                        eventName: f,
                         className: N.headerLogo,
                         data: { linkClicked: 'logo' },
                         children: (0, n.jsx)(d.Z, {
@@ -67,7 +67,7 @@ class f extends i.PureComponent {
                     (0, n.jsx)(a, {
                         tag: 'div',
                         className: N.hamburgerButton,
-                        eventName: _,
+                        eventName: f,
                         data: { linkClicked: 'mobile-menu' },
                         children: (0, n.jsx)(c.r, {
                             open: k,

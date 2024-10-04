@@ -13,13 +13,13 @@ var i = n(735250),
     d = n(321488),
     u = n(417183),
     _ = n(170245),
-    h = n(981631),
-    E = n(689938),
+    E = n(981631),
+    h = n(689938),
     m = n(171449);
 function I(e) {
     let { user: t, key: n, isFocused: I } = e,
-        g = a.useContext(c.AnalyticsContext),
-        { analyticsLocations: p } = (0, l.ZP)(),
+        p = a.useContext(c.AnalyticsContext),
+        { analyticsLocations: g } = (0, l.ZP)(),
         T = (e) => {
             e.stopPropagation(), r.Z.unblockUser(t.id, { location: 'Friends' });
         };
@@ -30,8 +30,8 @@ function I(e) {
             onClick: () =>
                 (0, o.openUserProfileModal)({
                     userId: t.id,
-                    sourceAnalyticsLocations: p,
-                    analyticsLocation: g.location
+                    sourceAnalyticsLocations: g,
+                    analyticsLocation: p.location
                 }),
             user: t,
             children: (e) =>
@@ -41,13 +41,13 @@ function I(e) {
                         (0, i.jsx)(_.Z, {
                             user: t,
                             hovered: e,
-                            status: h.Skl.UNKNOWN,
-                            subText: E.Z.Messages.BLOCKED
+                            status: E.Skl.UNKNOWN,
+                            subText: h.Z.Messages.BLOCKED
                         }),
                         (0, i.jsx)(d.Z, {
                             icon: s.UserMinusIcon,
                             actionType: d.Z.ActionTypes.DENY,
-                            tooltip: E.Z.Messages.UNBLOCK,
+                            tooltip: h.Z.Messages.UNBLOCK,
                             onClick: T,
                             shouldHighlight: e
                         })

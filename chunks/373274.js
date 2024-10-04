@@ -43,8 +43,8 @@ var i,
     j = n(854444),
     D = n(761091),
     w = n(301342),
-    G = n(906817),
-    U = n(429122),
+    U = n(906817),
+    G = n(429122),
     k = n(285573),
     B = n(995993),
     V = n(910595),
@@ -380,11 +380,11 @@ class eo extends (i = r.PureComponent) {
             ),
             es(this, 'getSectionHeight', (e) => {
                 let { guild: t, guildChannels: n } = this.props;
-                return (0, G.EM)(e, t, n);
+                return (0, U.EM)(e, t, n);
             }),
             es(this, 'getSectionFooterHeight', (e) => {
                 let { guildChannels: t, voiceStates: n, selectedVoiceChannelId: i, selectedChannelId: l, optInEnabled: r, guildChannelsVersion: a } = this.props;
-                return (0, U.dt)({
+                return (0, G.dt)({
                     sectionIndex: e,
                     guildChannels: t,
                     guildChannelsVersion: a,
@@ -443,7 +443,7 @@ class eo extends (i = r.PureComponent) {
                 let { section: t } = e,
                     { guildChannels: n, guildChannelsVersion: i, guild: r, selectedChannelId: a, disableManageChannels: s } = this.props;
                 return (0, l.jsx)(
-                    G.ZP,
+                    U.ZP,
                     {
                         sectionIndex: t,
                         guild: r,
@@ -452,7 +452,7 @@ class eo extends (i = r.PureComponent) {
                         selectedChannelId: a,
                         disableManageChannels: s
                     },
-                    (0, G.WW)(t, n)
+                    (0, U.WW)(t, n)
                 );
             }),
             es(this, 'renderRow', (e) => {
@@ -684,7 +684,7 @@ class eo extends (i = r.PureComponent) {
                 let { section: t } = e,
                     { guildChannels: n, guildChannelsVersion: i, voiceStates: r, selectedChannelId: a, selectedVoiceChannelId: s, optInEnabled: o, guildId: c } = this.props;
                 return (0, l.jsx)(
-                    U.ZP,
+                    G.ZP,
                     {
                         guildId: c,
                         guildChannels: n,
@@ -695,7 +695,7 @@ class eo extends (i = r.PureComponent) {
                         selectedVoiceChannelId: s,
                         optInEnabled: o
                     },
-                    (0, U.eo)(t, n, o)
+                    (0, G.eo)(t, n, o)
                 );
             }),
             es(this, 'getAnchorId', (e, t) => {

@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(705348),
     u = n(243778),
     _ = n(360453),
-    h = n(377743),
-    E = n(834743),
+    E = n(377743),
+    h = n(834743),
     m = n(862099),
     I = n(704631),
-    g = n(819792),
-    p = n(919285),
+    p = n(819792),
+    g = n(919285),
     T = n(118470),
     f = n(413307),
     S = n(849688),
@@ -30,14 +30,14 @@ var i = n(735250),
 function b(e) {
     e.stopPropagation();
 }
-function P(e) {
+function M(e) {
     var t;
     let { guild: n } = e,
         [_, m] = a.useState(null !== (t = l.K.get(R.Iv)) && void 0 !== t ? t : 0),
-        g = (e) => {
+        p = (e) => {
             l.K.set(R.Iv, e), m(e);
         },
-        { defaultGameId: p, enableClanCreation: T } = (0, o.St)({
+        { defaultGameId: g, enableClanCreation: T } = (0, o.St)({
             guild: n,
             location: 'ChannelNoticesGuard',
             includeConverted: !1
@@ -55,7 +55,7 @@ function P(e) {
         children: (e) => {
             let { visibleContent: t, markAsDismissed: a } = e,
                 s = () => {
-                    g(Date.now()), a(x.L.UNKNOWN);
+                    p(Date.now()), a(x.L.UNKNOWN);
                 },
                 l = (() => {
                     switch (t) {
@@ -70,7 +70,7 @@ function P(e) {
                                 markAsDismissed: s
                             });
                         case r.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
-                            return (0, i.jsx)(E.Z, {
+                            return (0, i.jsx)(h.Z, {
                                 guild: n,
                                 markAsDismissed: s
                             });
@@ -80,7 +80,7 @@ function P(e) {
                                 markAsDismissed: s
                             });
                         case r.z.CHANNEL_NOTICE_GUILD_BANNER:
-                            return (0, i.jsx)(h.Z, {
+                            return (0, i.jsx)(E.Z, {
                                 guild: n,
                                 markAsDismissed: s
                             });
@@ -93,7 +93,7 @@ function P(e) {
                             return (0, i.jsx)(c.ZP, {
                                 guild: n,
                                 markAsDismissed: s,
-                                defaultGameId: p
+                                defaultGameId: g
                             });
                         default:
                             return null;
@@ -122,13 +122,13 @@ t.Z = (e) => {
         case L.R.GUILD_MFA_WARNING:
             return (0, i.jsx)(N.Z, { guild: t });
         case L.R.COMMANDS_MIGRATION:
-            return (0, i.jsx)(p.Z, { guild: t });
+            return (0, i.jsx)(g.Z, { guild: t });
         case L.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, i.jsx)(T.Z, { guild: t });
         case L.R.HUB_STUDY_ROOM:
-            return (0, i.jsx)(g.Z, { guild: t });
+            return (0, i.jsx)(p.Z, { guild: t });
         case L.R.SIGNUP:
             return (0, i.jsx)(S.Z, { guild: t });
     }
-    return C.s.isDisallowPopupsSet() ? null : (0, i.jsx)(P, { guild: e.guild });
+    return C.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, { guild: e.guild });
 };

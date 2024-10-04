@@ -1,6 +1,6 @@
 n.d(t, {
     $U: function () {
-        return g;
+        return p;
     },
     Rm: function () {
         return f;
@@ -12,13 +12,13 @@ n.d(t, {
         return m;
     },
     jv: function () {
-        return E;
+        return h;
     },
     mV: function () {
         return T;
     },
     rK: function () {
-        return p;
+        return g;
     },
     wV: function () {
         return I;
@@ -40,9 +40,9 @@ var o = n(306680),
 n(109911);
 var u = n(265164),
     _ = n(761080),
-    h = n(584925);
+    E = n(584925);
 n(981631);
-function E(e) {
+function h(e) {
     return e < -1.5 ? 4 : e < 0 ? 3 : e > 0 ? 2 : 1;
 }
 async function m(e, t, n) {
@@ -116,11 +116,11 @@ function I(e, t) {
         source: e.source
     };
 }
-function g(e, t) {
+function p(e, t) {
     let n = o.ZP.getTrackedAckMessageId(e);
     return null == n || c.default.extractTimestamp(t) > c.default.extractTimestamp(n);
 }
-function p(e) {
+function g(e) {
     return !1;
 }
 function T(e) {
@@ -148,8 +148,8 @@ function T(e) {
     };
 }
 function f(e, t, n) {
-    let i = h.Z.getReadTimestamp(e);
+    let i = E.Z.getReadTimestamp(e);
     null == i && (i = null == n ? void 0 : n[e]);
-    let a = h.Z.getReadTimestamp(t);
+    let a = E.Z.getReadTimestamp(t);
     return (null == a && (a = null == n ? void 0 : n[t]), null == i && null == a) ? 0 : null == i ? -1 : null == a ? 1 : a - i;
 }

@@ -14,12 +14,12 @@ var i = n(735250),
     d = n(274616),
     u = n(827837),
     _ = n(410575),
-    h = n(3570),
-    E = n(237919),
+    E = n(3570),
+    h = n(237919),
     m = n(957657),
     I = n(665307),
-    g = n(530151),
-    p = n(981631),
+    p = n(530151),
+    g = n(981631),
     T = n(186901),
     f = n(862830);
 function S(e, t, n) {
@@ -37,23 +37,23 @@ function S(e, t, n) {
 }
 class C extends a.PureComponent {
     componentDidMount() {
-        c.Y(p.Z5c.APPLICATION_LIBRARY), (0, h.T)(T.jE.LIBRARY), o.Z.wait(() => (0, d.o)()), (0, u.N)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
+        c.Y(g.Z5c.APPLICATION_LIBRARY), (0, E.T)(T.jE.LIBRARY), o.Z.wait(() => (0, d.o)()), (0, u.N)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
     }
     renderToolbar() {
-        return (0, i.jsx)(E.Z, {});
+        return (0, i.jsx)(h.Z, {});
     }
     render() {
         let { includeUpdatesInScroller: e } = this.state,
             t = (0, i.jsx)('div', {
                 children: (0, i.jsx)(_.Z, {
-                    section: p.jXE.LIBRARY_INSTALL_MODULE,
-                    children: (0, i.jsx)(g.Z, { onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange })
+                    section: g.jXE.LIBRARY_INSTALL_MODULE,
+                    children: (0, i.jsx)(p.Z, { onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange })
                 })
             });
         return (0, i.jsxs)(a.Fragment, {
             children: [
                 (0, i.jsx)(m.Z, {
-                    currentRoute: p.Z5c.APPLICATION_LIBRARY,
+                    currentRoute: g.Z5c.APPLICATION_LIBRARY,
                     renderToolbar: this.renderToolbar
                 }),
                 e ? null : t,
@@ -63,7 +63,7 @@ class C extends a.PureComponent {
                     children: [
                         e ? t : null,
                         (0, i.jsx)(_.Z, {
-                            section: p.jXE.LIBRARY_APPLICATION_LIST,
+                            section: g.jXE.LIBRARY_APPLICATION_LIST,
                             children: (0, i.jsx)(I.Z, {
                                 stickyHeader: !e,
                                 scrollToRow: this.scrollToRow

@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(359380),
     u = n(689938),
     _ = n(131325),
-    h = n(602075);
-function E(e) {
+    E = n(602075);
+function h(e) {
     let { gameApplicationIds: t, onUpdateGames: n, error: s } = e,
         r = a.useCallback(
             (e) => {
@@ -109,34 +109,34 @@ function I(e) {
 t.Z = (e) => {
     let { traits: t, gameApplicationIds: n, playstyle: a, onUpdateTraits: s, onUpdateGames: o, onUpdatePlaystyle: c } = e;
     return (0, i.jsxs)('div', {
-        className: r()(h.slideContent, _.container),
+        className: r()(E.slideContent, _.container),
         children: [
             (0, i.jsxs)('div', {
                 className: _.mainHeader,
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-xxl/medium',
-                        className: h.title,
+                        className: E.title,
                         children: u.Z.Messages.CLAN_DISCOVERY_PREFERENCES_TITLE
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: h.subtitle,
+                        className: E.subtitle,
                         children: u.Z.Messages.CLAN_DISCOVERY_PREFERENCES_DESCRIPTION
                     })
                 ]
             }),
-            (0, i.jsx)(E, {
+            (0, i.jsx)(h, {
                 gameApplicationIds: n,
                 onUpdateGames: o
             }),
-            (0, i.jsx)('hr', { className: h.divider }),
+            (0, i.jsx)('hr', { className: E.divider }),
             (0, i.jsx)(I, {
                 playstyle: a,
                 onUpdatePlaystyle: c
             }),
-            (0, i.jsx)('hr', { className: h.divider }),
+            (0, i.jsx)('hr', { className: E.divider }),
             (0, i.jsx)(m, {
                 traits: t,
                 onUpdateTraits: s

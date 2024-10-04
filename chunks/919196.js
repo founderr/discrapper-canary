@@ -21,8 +21,8 @@ var i = t(735250),
     E = t(486199),
     T = t(366598),
     h = t(125657),
-    g = t(725875),
-    p = t(981631),
+    p = t(725875),
+    g = t(981631),
     f = t(689938),
     x = t(695768);
 function C(e) {
@@ -50,8 +50,8 @@ function O(e) {
     var n;
     let { guild: t, applicationIntegration: r, selectableWebhookChannels: c, editedWebhook: O, errors: S, canNavigate: A } = e,
         { application: R, integration: b, webhooks: Z } = r,
-        [v, M] = (0, s.Wu)([I.Z], () => [I.Z.can(p.Plq.MANAGE_ROLES, t), null == R.bot || I.Z.canManageUser(p.Plq.MANAGE_GUILD, R.bot.id, t)], [R.bot, t]),
-        L = (0, s.e7)([I.Z], () => I.Z.can(p.Plq.MANAGE_WEBHOOKS, t), [t]),
+        [v, M] = (0, s.Wu)([I.Z], () => [I.Z.can(g.Plq.MANAGE_ROLES, t), null == R.bot || I.Z.canManageUser(g.Plq.MANAGE_GUILD, R.bot.id, t)], [R.bot, t]),
+        L = (0, s.e7)([I.Z], () => I.Z.can(g.Plq.MANAGE_WEBHOOKS, t), [t]),
         j = a.useCallback(() => {
             A() &&
                 (0, l.openModal)((e) =>
@@ -145,7 +145,7 @@ function O(e) {
                         title: f.Z.Messages.INTEGRATIONS_APPLICATION_WEBHOOKS
                     }),
                     Z.length > 0
-                        ? (0, i.jsx)(g.Z, {
+                        ? (0, i.jsx)(p.Z, {
                               webhooks: Z,
                               editedWebhook: O,
                               selectableWebhookChannels: c,

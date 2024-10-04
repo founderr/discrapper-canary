@@ -10,7 +10,7 @@ let u = [];
 function _() {
     u = [];
 }
-class h extends (r = l.ZP.Store) {
+class E extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, d.Z);
     }
@@ -19,7 +19,7 @@ class h extends (r = l.ZP.Store) {
     }
 }
 (s = 'GlobalDiscoveryServersSearchLayoutStore'),
-    (a = 'displayName') in (i = h)
+    (a = 'displayName') in (i = E)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -27,7 +27,7 @@ class h extends (r = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new h(o.Z, {
+    (t.Z = new E(o.Z, {
         CONNECTION_OPEN: _,
         GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: _,
         GLOBAL_DISCOVERY_SERVERS_SEARCH_BLOCKED: _,

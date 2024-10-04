@@ -10,12 +10,12 @@ var a = n(873546),
     d = n(594174),
     u = n(295226),
     _ = n(74538),
-    h = n(374023),
-    E = n(775412),
+    E = n(374023),
+    h = n(775412),
     m = n(913976),
     I = n(533990),
-    g = n(104494),
-    p = n(29920),
+    p = n(104494),
+    g = n(29920),
     T = n(248042),
     f = n(278945),
     S = n(727310),
@@ -77,14 +77,14 @@ class Z extends o.Z {
                 if ((0, _.I5)(e)) return {};
                 let t = [N.hs, N.RU, N.rB, N.ih]
                     .map((e) => u.Z.getUserDiscountOffer(e))
-                    .filter((e) => null != e && !(0, g.kA)(e))
+                    .filter((e) => null != e && !(0, p.kA)(e))
                     .shift();
                 if (null != t) return { userDiscountOffer: t };
-                let n = (0, E.J0)();
+                let n = (0, h.J0)();
                 return null != n ? { userTrialOffer: n } : {};
             }),
             A(this, 'mayShowAnnouncementModal', async () => {
-                if ((await (0, T.l2)(), h.s.isDisallowPopupsSet())) return;
+                if ((await (0, T.l2)(), E.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = I.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || I.Z.isAAMode({ location: 'announcementManager' }),
                     n = (0, c.un)(s.z.REVERSE_TRIAL_ENDED_UPSELL),
@@ -95,7 +95,7 @@ class Z extends o.Z {
                 }
                 if (null == i || !!i.verified) {
                     if (!(0, r.hasAnyModalOpen)() && m.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !a.tq) {
-                        for (let t of await (0, p.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
+                        for (let t of await (0, g.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                     }
                 }
             });

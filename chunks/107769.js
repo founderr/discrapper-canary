@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
 var i = n(735250),
@@ -22,7 +22,7 @@ let _ = (e) => {
             })
         });
     },
-    h = (e) => {
+    E = (e) => {
         let { circle: t, smallHeader: n, text: a, className: s } = e;
         return (0, i.jsxs)('div', {
             className: r()(u.recommendationReason, s),
@@ -46,18 +46,18 @@ let _ = (e) => {
             ]
         });
     };
-class E extends a.Component {
+class h extends a.Component {
     render() {
         let { reason: e, className: t } = this.props;
         if (e.type === c.AzA.RECENT_RELEASE_DATE)
-            return (0, i.jsx)(h, {
+            return (0, i.jsx)(E, {
                 className: t,
                 circle: (0, i.jsx)(_, { IconComponent: l.CalendarIcon }),
                 smallHeader: d.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
                 text: (0, o.vc)(e.releaseDate, 'LL')
             });
         if (e.type === c.AzA.RELEASE_DATE)
-            return (0, i.jsx)(h, {
+            return (0, i.jsx)(E, {
                 className: t,
                 circle: (0, i.jsx)(_, { IconComponent: l.CalendarIcon }),
                 smallHeader: d.Z.Messages.APPLICATION_STORE_DETAILS_RELEASE_DATE,
@@ -65,7 +65,7 @@ class E extends a.Component {
             });
         if (e.type === c.AzA.EARLY_ACCESS)
             return null != e.releaseDate
-                ? (0, i.jsx)(h, {
+                ? (0, i.jsx)(E, {
                       className: t,
                       circle: (0, i.jsx)(_, {
                           IconComponent: l.LockUnlockedIcon,
@@ -74,7 +74,7 @@ class E extends a.Component {
                       smallHeader: d.Z.Messages.APPLICATION_STORE_EARLY_ACCESS,
                       text: (0, o.vc)(e.releaseDate, 'LL')
                   })
-                : (0, i.jsx)(h, {
+                : (0, i.jsx)(E, {
                       className: t,
                       circle: (0, i.jsx)(_, {
                           IconComponent: l.LockUnlockedIcon,
@@ -83,13 +83,13 @@ class E extends a.Component {
                       text: d.Z.Messages.APPLICATION_STORE_EARLY_ACCESS
                   });
         return e.type === c.AzA.FLAVOR_TEXT
-            ? (0, i.jsx)(h, {
+            ? (0, i.jsx)(E, {
                   circle: (0, i.jsx)(_, { IconComponent: l.CheckmarkLargeIcon }),
                   text: e.flavorText,
                   className: t
               })
             : e.type === c.AzA.HAS_FREE_PREMIUM_CONTENT
-              ? (0, i.jsx)(h, {
+              ? (0, i.jsx)(E, {
                     className: t,
                     circle: (0, i.jsx)(_, {
                         IconComponent: l.NitroWheelIcon,

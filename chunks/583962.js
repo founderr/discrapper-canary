@@ -84,7 +84,7 @@ t.ZP = (e) => {
             to: { width: j },
             config: y
         },
-        [G, U] = (0, d.useSpring)(() => w),
+        [U, G] = (0, d.useSpring)(() => w),
         k = () => {
             (0, f.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR },
@@ -132,7 +132,7 @@ t.ZP = (e) => {
                     onClick: k,
                     onMouseEnter: () => {
                         var t;
-                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), U(w);
+                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), G(w);
                     },
                     className: a()(b.container, { [b.containerWithMargin]: n }),
                     onContextMenu: (e) => {
@@ -181,7 +181,7 @@ t.ZP = (e) => {
                             children: [
                                 (0, i.jsx)(s.animated.div, {
                                     className: b.progressBar,
-                                    style: G
+                                    style: U
                                 }),
                                 R
                                     ? (0, i.jsx)('span', {

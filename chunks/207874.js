@@ -3,10 +3,10 @@ n.d(t, {
         return d;
     }
 });
-var i = n(735250),
-    s = n(470079),
-    l = n(442837),
-    r = n(461745),
+var s = n(735250),
+    i = n(470079),
+    r = n(442837),
+    l = n(461745),
     o = n(663389),
     a = n(5967),
     c = n(996733),
@@ -14,28 +14,28 @@ var i = n(735250),
 function d(e) {
     let { style: t } = e,
         n = (0, c.Z7)(),
-        d = s.useCallback((e, t) => {
+        d = i.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), (0, c.QH)(e);
         }, []),
-        h = s.useCallback(() => {
+        h = i.useCallback(() => {
             (0, c.QH)(!1), (0, c.yN)('');
         }, []),
-        m = s.useRef(null),
-        p = (0, l.e7)([o.Z], () => o.Z.getSection());
+        m = i.useRef(null),
+        f = (0, r.e7)([o.Z], () => o.Z.getSection());
     return (
-        s.useEffect(() => {
+        i.useEffect(() => {
             let e = (e) => {
                 var t;
                 let n = m.current;
                 (null === (t = (0, a.uB)(e)) || void 0 === t ? void 0 : t.activeElement) === document.body && (null == n || n.focus());
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
-        }, [p]),
-        (0, i.jsx)('div', {
+        }, [f]),
+        (0, s.jsx)('div', {
             style: { marginBottom: '8px' },
-            children: (0, i.jsx)(r.ZP, {
+            children: (0, s.jsx)(l.ZP, {
                 ref: m,
-                size: r.ZP.Sizes.MEDIUM,
+                size: l.ZP.Sizes.MEDIUM,
                 query: n,
                 onClear: h,
                 onQueryChange: c.yN,

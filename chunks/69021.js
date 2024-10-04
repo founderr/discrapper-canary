@@ -9,8 +9,8 @@ t(470079);
 var r = t(442837),
     a = t(481060),
     i = t(179658),
-    c = t(482215),
-    l = t(906467),
+    l = t(482215),
+    c = t(906467),
     u = t(857192),
     s = t(594174);
 function d() {
@@ -18,21 +18,21 @@ function d() {
             layoutDebuggingEnabled: e,
             isStaff: n,
             isDeveloper: t
-        } = (0, r.cj)([u.default, s.default, l.Z], () => {
+        } = (0, r.cj)([u.default, s.default, c.Z], () => {
             var e;
             return {
                 layoutDebuggingEnabled: u.default.layoutDebuggingEnabled,
                 isStaff: (null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) === !0,
-                isDeveloper: l.Z.isDeveloper
+                isDeveloper: c.Z.isDeveloper
             };
         }),
-        { horizontalSpacing: d, verticalSpacing: _, maxHorizontalSpacing: S, maxVerticalSpacing: g } = (0, c.i)(),
-        { setHorizontalSpacing: E, setVerticalSpacing: m } = c.i.getState(),
-        I = [];
+        { horizontalSpacing: d, verticalSpacing: _, maxHorizontalSpacing: S, maxVerticalSpacing: g } = (0, l.i)(),
+        { setHorizontalSpacing: E, setVerticalSpacing: m } = l.i.getState(),
+        b = [];
     return (
         n &&
             t &&
-            (I.push(
+            (b.push(
                 (0, o.jsx)(
                     a.MenuCheckboxItem,
                     {
@@ -47,7 +47,7 @@ function d() {
                 )
             ),
             e &&
-                (I.push(
+                (b.push(
                     (0, o.jsx)(
                         a.MenuControlItem,
                         {
@@ -68,7 +68,7 @@ function d() {
                         'horizontal-spacing'
                     )
                 ),
-                I.push(
+                b.push(
                     (0, o.jsx)(
                         a.MenuControlItem,
                         {
@@ -89,6 +89,6 @@ function d() {
                         'vertical-spacing'
                     )
                 ))),
-        0 === I.length ? null : (0, o.jsx)(o.Fragment, { children: I })
+        0 === b.length ? null : (0, o.jsx)(o.Fragment, { children: b })
     );
 }

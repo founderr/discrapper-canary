@@ -10,11 +10,11 @@ var i = n(735250),
     u = n(687683),
     _ = n(454515);
 t.Z = function (e) {
-    let { index: t, children: s, user: h, channel: E, onClick: m, isFocused: I, isActive: g, onOtherHover: p, className: T } = e,
+    let { index: t, children: s, user: E, channel: h, onClick: m, isFocused: I, isActive: p, onOtherHover: g, className: T } = e,
         [f, S] = a.useState(!1),
         [C, N] = a.useState(!1),
         A = () => {
-            S(!0), I && !g && !C && (null == p || p());
+            S(!0), I && !p && !C && (null == g || g());
         },
         v = () => {
             S(!1);
@@ -40,7 +40,7 @@ t.Z = function (e) {
                     );
         };
     return (0, i.jsx)(o.mh, {
-        id: E.id,
+        id: h.id,
         children: (e) =>
             (0, i.jsx)(c.FocusRing, {
                 offset: {
@@ -49,10 +49,10 @@ t.Z = function (e) {
                 },
                 children: (0, i.jsx)(l.Z.div, {
                     className: r()(_.messageRequestItem, T, {
-                        [_.active]: g || C,
+                        [_.active]: p || C,
                         [_.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => Z(e, h),
+                    onContextMenu: (e) => Z(e, E),
                     onMouseEnter: A,
                     onMouseLeave: v,
                     onClick: null != m ? m : void 0,
@@ -61,7 +61,7 @@ t.Z = function (e) {
                         opacity: 1
                     },
                     ...e,
-                    children: s(f || g || C)
+                    children: s(f || p || C)
                 })
             })
     });

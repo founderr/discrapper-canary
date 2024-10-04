@@ -48,7 +48,7 @@ function u(e) {
             [m]
         ),
         h = m.type === r.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon,
-        g = (0, o.gw)(m.type, m.displayName);
+        p = (0, o.gw)(m.type, m.displayName);
     return (0, i.jsxs)(s.Clickable, {
         onClick: E,
         className: d.item,
@@ -64,7 +64,7 @@ function u(e) {
                     }),
                     (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        children: g
+                        children: p
                     })
                 ]
             }),

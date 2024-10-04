@@ -1,6 +1,6 @@
 n.d(t, {
     HG: function () {
-        return h;
+        return E;
     },
     Iv: function () {
         return u;
@@ -53,4 +53,4 @@ let u = 'lastHiddenChannelNotice',
             dismissibleContentType: i.z.LINKED_ROLE_ADMIN_GUILD
         }
     ],
-    h = _.map((e) => e.store).filter(c.lm);
+    E = _.map((e) => e.store).filter(c.lm);

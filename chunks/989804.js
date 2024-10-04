@@ -19,13 +19,13 @@ var o = n(735250),
     I = n(996733),
     C = n(394644),
     N = n(295545),
-    R = n(839469),
-    k = n(981631),
-    p = n(689938);
+    p = n(839469),
+    R = n(981631),
+    k = n(689938);
 let Z = a.forwardRef(function () {
     g.Z.trackExposure({ location: 'cd25e4_1' }), S.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), S.Z.trackExposure({ location: 'user_setting_manual' });
     let e = (0, c.e7)([E.Z], () => E.Z.theme),
-        t = (0, c.e7)([E.Z], () => (E.Z.darkSidebar ? k.BRd.DARK : void 0)),
+        t = (0, c.e7)([E.Z], () => (E.Z.darkSidebar ? R.BRd.DARK : void 0)),
         {
             section: n,
             subsection: Z,
@@ -50,7 +50,7 @@ let Z = a.forwardRef(function () {
         if (!!(null != n && (n !== h || Z !== A)))
             !(function (e) {
                 let { destinationPane: t, originPane: n = null, source: o = null, subsection: a = null, locationStack: c = null, searchQuery: i = null } = e;
-                _.ZP.trackWithMetadata(k.rMx.SETTINGS_PANE_VIEWED, {
+                _.ZP.trackWithMetadata(R.rMx.SETTINGS_PANE_VIEWED, {
                     settings_type: 'user',
                     origin_pane: n,
                     destination_pane: t,
@@ -69,7 +69,7 @@ let Z = a.forwardRef(function () {
             });
     }, [n, h, Z, A, B, G, P]);
     let x = (0, N.eA)({ location: 'user_settings' }),
-        { hasSearchResults: U, searchResults: O } = (0, R.E)(),
+        { hasSearchResults: U, searchResults: O } = (0, p.E)(),
         D = a.useMemo(() => x && U, [x, U]),
         W = (0, C.VO)(),
         v = (0, C.q8)(O),
@@ -83,10 +83,10 @@ let Z = a.forwardRef(function () {
         value: M,
         children: (0, o.jsx)(l.Z, {
             root: !0,
-            page: k.ZY5.USER_SETTINGS,
+            page: R.ZY5.USER_SETTINGS,
             children: (0, o.jsx)(s.ZP, {
                 theme: e,
-                title: p.Z.Messages.USER_SETTINGS,
+                title: k.Z.Messages.USER_SETTINGS,
                 sidebarTheme: t,
                 section: n,
                 onSetSection: L,

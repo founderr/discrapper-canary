@@ -14,12 +14,12 @@ var i = n(735250),
     d = n(490983),
     u = n(626135),
     _ = n(630388),
-    h = n(804739),
-    E = n(957657),
+    E = n(804739),
+    h = n(957657),
     m = n(34305),
     I = n(981631),
-    g = n(689938),
-    p = n(8347);
+    p = n(689938),
+    g = n(8347);
 function T(e) {
     let { applicationViewItems: t, restoreApplication: n } = e;
     if (0 === t.length) return null;
@@ -28,31 +28,31 @@ function T(e) {
         return (0, i.jsxs)(
             'div',
             {
-                className: p.hiddenLibraryApplication,
+                className: g.hiddenLibraryApplication,
                 children: [
                     (0, i.jsxs)(o.Z, {
                         direction: o.Z.Direction.VERTICAL,
-                        className: p.hiddenLibraryApplicationContent,
+                        className: g.hiddenLibraryApplicationContent,
                         children: [
                             (0, i.jsx)('div', {
-                                className: p.applicationName,
+                                className: g.applicationName,
                                 children: e.libraryApplication.getBranchedName(e.application)
                             }),
                             null != t
                                 ? (0, i.jsx)('div', {
-                                      className: p.applicationSubText,
+                                      className: g.applicationSubText,
                                       children: I.EOG[t]
                                   })
                                 : null
                         ]
                     }),
                     (0, i.jsx)(r.Clickable, {
-                        className: p.restoreButton,
+                        className: g.restoreButton,
                         onClick: () => n(e.libraryApplication),
                         children: (0, i.jsx)(r.XSmallIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: p.restoreIcon
+                            className: g.restoreIcon
                         })
                     })
                 ]
@@ -61,11 +61,11 @@ function T(e) {
         );
     });
     return (0, i.jsxs)(r.FormSection, {
-        className: p.hiddenLibraryApplications,
+        className: g.hiddenLibraryApplications,
         children: [
             (0, i.jsx)(r.FormTitle, {
-                className: p.hiddenLibraryApplicationsTitle,
-                children: g.Z.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
+                className: g.hiddenLibraryApplicationsTitle,
+                children: p.Z.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
             }),
             a
         ]
@@ -87,22 +87,22 @@ class f extends a.PureComponent {
     renderBody() {
         let { hiddenLibraryApplicationViewItems: e, installShortcutDesktop: t, installShortcutStartMenu: n } = this.props;
         return (0, i.jsxs)('div', {
-            className: p.body,
+            className: g.body,
             children: [
-                (0, h.Q)()
+                (0, E.Q)()
                     ? (0, i.jsxs)(a.Fragment, {
                           children: [
                               (0, i.jsx)(r.FormSwitch, {
                                   value: t,
                                   onChange: this.handleToggleShortcutDesktop,
-                                  note: g.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
-                                  children: g.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
+                                  note: p.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
+                                  children: p.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
                               }),
                               (0, i.jsx)(r.FormSwitch, {
                                   value: n,
                                   onChange: this.handleToggleShortcutStartMenu,
-                                  note: g.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
-                                  children: g.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
+                                  note: p.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
+                                  children: p.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
                               }),
                               (0, i.jsx)(m.Z, {})
                           ]
@@ -118,9 +118,9 @@ class f extends a.PureComponent {
     render() {
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(E.Z, { currentRoute: I.Z5c.APPLICATION_LIBRARY_SETTINGS }),
+                (0, i.jsx)(h.Z, { currentRoute: I.Z5c.APPLICATION_LIBRARY_SETTINGS }),
                 (0, i.jsx)(r.ScrollerAuto, {
-                    className: p.scroller,
+                    className: g.scroller,
                     children: this.renderBody()
                 })
             ]

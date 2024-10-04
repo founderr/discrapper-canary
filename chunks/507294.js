@@ -16,12 +16,12 @@ var i = n(735250),
     d = n(239091),
     u = n(749210),
     _ = n(410030),
-    h = n(726542),
-    E = n(884338),
+    E = n(726542),
+    h = n(884338),
     m = n(367907),
     I = n(313201),
-    g = n(598077),
-    p = n(314897),
+    p = n(598077),
+    g = n(314897),
     T = n(271383),
     f = n(430824),
     S = n(626135),
@@ -46,8 +46,8 @@ function O(e, t) {
 t.default = function (e) {
     let { guildId: t, transitionState: s, onClose: x } = e,
         b = (0, l.e7)([f.Z], () => f.Z.getRoles(t)),
-        P = (0, l.e7)([p.default], () => p.default.getId()),
-        M = (0, l.e7)([T.ZP], () => T.ZP.getMember(t, P)),
+        M = (0, l.e7)([g.default], () => g.default.getId()),
+        P = (0, l.e7)([T.ZP], () => T.ZP.getMember(t, M)),
         [D, y] = a.useState([]),
         j = (0, _.ZP)(),
         U = (0, I.Dt)();
@@ -65,7 +65,7 @@ t.default = function (e) {
         a.useEffect(() => {
             u.Z.getGuildRoleConnectionsConfigurations(t).then((e) => y(e));
         }, [t]),
-        null == M)
+        null == P)
     )
         return null;
     let G = Object.values(b).filter((e) => {
@@ -106,7 +106,7 @@ t.default = function (e) {
                     (0, i.jsx)('div', {
                         className: L.verifiedRoles,
                         children: G.map((e) => {
-                            let s = M.roles.includes(e.id),
+                            let s = P.roles.includes(e.id),
                                 l = (function (e) {
                                     let n = D.find((t) => {
                                         let { role_id: n } = t;
@@ -122,13 +122,13 @@ t.default = function (e) {
                                             l =
                                                 (null == a ? void 0 : a.bot) != null
                                                     ? (0, i.jsx)('img', {
-                                                          src: new g.Z(a.bot).getAvatarURL(t, 24),
+                                                          src: new p.Z(a.bot).getAvatarURL(t, 24),
                                                           alt: '',
                                                           className: r()(L.botAvatar, R.avatar)
                                                       })
                                                     : null;
                                         } else {
-                                            let t = h.Z.get(e.connection_type);
+                                            let t = E.Z.get(e.connection_type);
                                             l = (0, i.jsx)('img', {
                                                 src: (0, o.ap)(j) ? t.icon.lightSVG : t.icon.darkSVG,
                                                 alt: '',
@@ -197,7 +197,7 @@ t.default = function (e) {
                                                     : null
                                             ]
                                         }),
-                                        (0, i.jsx)(E.Z, {
+                                        (0, i.jsx)(h.Z, {
                                             showUserPopout: !1,
                                             guildId: t,
                                             users: l.map(() => null),

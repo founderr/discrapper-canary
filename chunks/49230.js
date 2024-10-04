@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     h: function () {
-        return h;
+        return E;
     }
 }),
     n(47120);
@@ -40,7 +40,7 @@ function _(e) {
             });
     });
 }
-function h(e, t) {
+function E(e, t) {
     let { soundKey: n, soundURL: i, soundVolume: a, reportSoundStartedPlaying: s } = e,
         r = t.get(n);
     if (null != r) {

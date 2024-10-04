@@ -9,12 +9,12 @@ var i,
     d = n(570140),
     u = n(598077),
     _ = n(594174),
-    h = n(388380);
-let E = {},
+    E = n(388380);
+let h = {},
     m = 0,
     I = !1,
-    g = !1;
-function p(e) {
+    p = !1;
+function g(e) {
     var t;
     let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
@@ -33,13 +33,13 @@ class T extends (i = c.ZP.Store) {
         return m;
     }
     getSuggestions() {
-        return Object.entries(E).map((e) => {
+        return Object.entries(h).map((e) => {
             let [t, n] = e;
             return n;
         });
     }
     getSuggestion(e) {
-        return E[e];
+        return h[e];
     }
 }
 (r = 'FriendSuggestionStore'),
@@ -53,32 +53,32 @@ class T extends (i = c.ZP.Store) {
         : (a[s] = r),
     (t.Z = new T(d.Z, {
         CONNECTION_OPEN: function (e) {
-            (E = {}), (m = e.friendSuggestionCount) > 0 && ((g = !0), I || !g || ((I = !0), (g = !1), h.Z.fetch()));
+            (h = {}), (m = e.friendSuggestionCount) > 0 && ((p = !0), I || !p || ((I = !0), (p = !1), E.Z.fetch()));
         },
         FRIEND_SUGGESTION_CREATE: function (e) {
-            let t = p(e.suggestion);
-            if (null != E[t.key]) return !1;
+            let t = g(e.suggestion);
+            if (null != h[t.key]) return !1;
             m++,
-                (E = {
-                    ...E,
+                (h = {
+                    ...h,
                     [t.key]: t
                 });
         },
         FRIEND_SUGGESTION_DELETE: function (e) {
-            (m = Math.max(0, --m)), delete E[e.suggestedUserId];
+            (m = Math.max(0, --m)), delete h[e.suggestedUserId];
         },
         LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
             var t;
             (I = !1),
                 (t = e.suggestions),
-                (E = o()
+                (h = o()
                     .chain(t)
-                    .map((e) => p(e))
+                    .map((e) => g(e))
                     .keyBy((e) => e.key)
                     .value()),
-                (m = o().keys(E).length);
+                (m = o().keys(h).length);
         },
         LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-            (I = !1), (E = {});
+            (I = !1), (h = {});
         }
     }));

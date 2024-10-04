@@ -14,12 +14,12 @@ var i = n(735250),
     d = n(481060),
     u = n(596454),
     _ = n(515753),
-    h = n(410030),
-    E = n(607070),
+    E = n(410030),
+    h = n(607070),
     m = n(100527),
     I = n(906732),
-    g = n(821982),
-    p = n(377171),
+    p = n(821982),
+    g = n(377171),
     T = n(633302),
     f = n(153066),
     S = n(335131),
@@ -34,23 +34,23 @@ let O = (e) => {
         let { color: t } = e;
         return (0, i.jsx)(d.TextBadge, {
             className: R.newBadge,
-            color: null != t ? t : p.Z.STATUS_DANGER_BACKGROUND,
+            color: null != t ? t : g.Z.STATUS_DANGER_BACKGROUND,
             text: L.Z.Messages.NEW
         });
     },
     x = (e) => {
         let { selected: t, locationState: n, icon: s, onMouseEnter: r, onMouseLeave: o, children: c, ...u } = e,
-            h = (0, l.JA)('shop'),
-            E = m.Z.HOME_PAGE_SHOP_TAB,
-            { analyticsLocations: g } = (0, I.ZP)(E),
-            p = a.useCallback(
+            E = (0, l.JA)('shop'),
+            h = m.Z.HOME_PAGE_SHOP_TAB,
+            { analyticsLocations: p } = (0, I.ZP)(h),
+            g = a.useCallback(
                 () =>
                     (0, S.mK)({
                         openInLayer: !1,
-                        analyticsSource: E,
-                        analyticsLocations: g
+                        analyticsSource: h,
+                        analyticsLocations: p
                     }),
-                [E, g]
+                [h, p]
             );
         return (0, i.jsx)(_.Qj, {
             selected: t,
@@ -58,11 +58,11 @@ let O = (e) => {
             icon: null != s ? s : d.ShopIcon,
             text: L.Z.Messages.COLLECTIBLES_SHOP,
             locationState: n,
-            ...h,
+            ...E,
             ...u,
             onMouseEnter: r,
             onMouseLeave: o,
-            onClick: p,
+            onClick: g,
             children: c
         });
     },
@@ -74,10 +74,10 @@ let O = (e) => {
             children: (0, i.jsx)(O, {})
         });
     },
-    P = a.memo(function (e) {
+    M = a.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: a, reducedMotion: s = !1 } = e,
-            r = null != a ? (0, g.Z)(a, d.AvatarSizes.SIZE_80, !s) : void 0,
+            r = null != a ? (0, p.Z)(a, d.AvatarSizes.SIZE_80, !s) : void 0,
             l = n.title(),
             o = null === (t = n.body) || void 0 === t ? void 0 : t.call(n),
             c = null == o || '' === o;
@@ -112,17 +112,17 @@ let O = (e) => {
             ]
         });
     }),
-    M = (e) => {
-        var t, n, s, l, u, _, m, I, g, p, T, S;
+    P = (e) => {
+        var t, n, s, l, u, _, m, I, p, g, T, S;
         let C, N;
         let { selected: A, locationState: v, displayOptions: Z } = e,
-            b = (0, o.e7)([E.Z], () => E.Z.useReducedMotion),
-            [M, D] = a.useState(0),
+            b = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
+            [P, D] = a.useState(0),
             [y, j] = a.useState(!1),
-            U = (0, h.ZP)(),
+            U = (0, E.ZP)(),
             G = Z.entrypointDecorationAssets,
             w = (0, c.wj)(U);
-        y ? (w ? ((C = null === (t = Z.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (N = null === (s = Z.entrypointBackgroundStyle) || void 0 === s ? void 0 : null === (n = s.hovered) || void 0 === n ? void 0 : n.dark)) : ((C = null === (l = Z.entryPointBackgroundAssets) || void 0 === l ? void 0 : l.srcLightHovered), (N = null === (_ = Z.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (u = _.hovered) || void 0 === u ? void 0 : u.light))) : w ? ((C = null === (m = Z.entryPointBackgroundAssets) || void 0 === m ? void 0 : m.srcDark), (N = null === (g = Z.entrypointBackgroundStyle) || void 0 === g ? void 0 : null === (I = g.resting) || void 0 === I ? void 0 : I.dark)) : ((C = null === (p = Z.entryPointBackgroundAssets) || void 0 === p ? void 0 : p.srcLight), (N = null === (S = Z.entrypointBackgroundStyle) || void 0 === S ? void 0 : null === (T = S.resting) || void 0 === T ? void 0 : T.light));
+        y ? (w ? ((C = null === (t = Z.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (N = null === (s = Z.entrypointBackgroundStyle) || void 0 === s ? void 0 : null === (n = s.hovered) || void 0 === n ? void 0 : n.dark)) : ((C = null === (l = Z.entryPointBackgroundAssets) || void 0 === l ? void 0 : l.srcLightHovered), (N = null === (_ = Z.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (u = _.hovered) || void 0 === u ? void 0 : u.light))) : w ? ((C = null === (m = Z.entryPointBackgroundAssets) || void 0 === m ? void 0 : m.srcDark), (N = null === (p = Z.entrypointBackgroundStyle) || void 0 === p ? void 0 : null === (I = p.resting) || void 0 === I ? void 0 : I.dark)) : ((C = null === (g = Z.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcLight), (N = null === (S = Z.entrypointBackgroundStyle) || void 0 === S ? void 0 : null === (T = S.resting) || void 0 === T ? void 0 : T.light));
         let k = a.useCallback(
                 (e) => {
                     D((e) => (e + 1) % Z.assetIds.length), j(!0), null == e || e();
@@ -132,11 +132,11 @@ let O = (e) => {
             B = a.useCallback((e) => {
                 j(!1), null == e || e();
             }, []),
-            H = Z.title();
+            V = Z.title();
         return (0, i.jsx)(d.Tooltip, {
-            text: (0, i.jsx)(P, {
+            text: (0, i.jsx)(M, {
                 displayOptions: Z,
-                assetId: Z.assetIds[M],
+                assetId: Z.assetIds[P],
                 reducedMotion: b
             }),
             tooltipClassName: R.marketingBadgeTooltip,
@@ -144,7 +144,7 @@ let O = (e) => {
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            'aria-label': 'string' == typeof H ? H : L.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
+            'aria-label': 'string' == typeof V ? V : L.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
             children: (e) =>
                 (0, i.jsxs)(x, {
                     className: null != Z.entryPointClassName ? (0, f.l)(R, Z.entryPointClassName) : void 0,
@@ -221,7 +221,7 @@ let O = (e) => {
                         displayOptions: a
                     });
                 case v.k2.COACHTIP:
-                    return (0, i.jsx)(M, {
+                    return (0, i.jsx)(P, {
                         selected: t,
                         locationState: n,
                         displayOptions: a

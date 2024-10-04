@@ -9,10 +9,10 @@ var i = n(470079),
     d = n(51144),
     u = n(874703),
     _ = n(105622),
-    h = n(302800),
-    E = n(921944);
+    E = n(302800),
+    h = n(921944);
 t.Z = () => {
-    var e, t, n, m, I, g, p;
+    var e, t, n, m, I, p, g;
     let T = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
         f = (0, _.J)('useCollectiblesShopTabNewBadge'),
         S = (0, r.e7)([u.Z], () => u.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
@@ -23,7 +23,7 @@ t.Z = () => {
         R = null;
     if ((null != A || null != Z) && f && null != S && S.type === s.Z.COACHTIP) {
         R = {
-            type: h.k2.COACHTIP,
+            type: E.k2.COACHTIP,
             title: () => S.title,
             body: () => S.body,
             imageSrc: S.avatar,
@@ -35,15 +35,15 @@ t.Z = () => {
             (R.entryPointBackgroundAssets = {
                 srcDark: null === (m = e.resting) || void 0 === m ? void 0 : m.dark,
                 srcLight: null === (I = e.resting) || void 0 === I ? void 0 : I.light,
-                srcDarkHovered: null === (g = e.hovered) || void 0 === g ? void 0 : g.dark,
-                srcLightHovered: null === (p = e.hovered) || void 0 === p ? void 0 : p.light
+                srcDarkHovered: null === (p = e.hovered) || void 0 === p ? void 0 : p.dark,
+                srcLightHovered: null === (g = e.hovered) || void 0 === g ? void 0 : g.light
             });
     }
     return {
         collectiblesShopTabNewBadgeDisplayOptions: R,
         dismissCollectiblesShopTabNewBadge: () => {
             let e = C ? L : v;
-            null != R && e(E.L.AUTO);
+            null != R && e(h.L.AUTO);
         }
     };
 };

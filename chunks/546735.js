@@ -9,42 +9,42 @@ var i = n(470079),
 function r(e) {
     let { progress: t, updateCurrentStep: n } = e,
         { currentStep: r, gameApplicationIds: l, playstyle: o, interests: c, description: d, tag: u, verificationForm: _ } = t,
-        h = i.useMemo(() => null != _ && _.formFields.some((e) => !(0, a.J)(e)), [_]),
-        E = i.useMemo(() => Array.from(c).filter((e) => !s.WZ.has(e) && !s.gh.has(e)), [c]),
+        E = i.useMemo(() => null != _ && _.formFields.some((e) => !(0, a.J)(e)), [_]),
+        h = i.useMemo(() => Array.from(c).filter((e) => !s.WZ.has(e) && !s.gh.has(e)), [c]),
         m = i.useCallback(() => {
             n(r + 1);
         }, [r, n]),
         I = i.useCallback(() => {
             n(r - 1);
         }, [r, n]),
-        g = i.useCallback((e) => n(e), [n]),
-        p = i.useMemo(() => {
+        p = i.useCallback((e) => n(e), [n]),
+        g = i.useMemo(() => {
             switch (r) {
                 case s.Wy.GAMES:
                     return 0 === l.size;
                 case s.Wy.PLAYSTYLE:
                     return o === s.zv.NONE;
                 case s.Wy.INTERESTS:
-                    return E.length < 3;
+                    return h.length < 3;
                 case s.Wy.DESCRIPTION:
                     return 0 === d.length;
                 case s.Wy.CUSTOMIZE_TAG_BADGE:
                     return u.length < 2;
                 case s.Wy.MEMBER_APPLICATION:
-                    return !h;
+                    return !E;
                 default:
                     return !1;
             }
-        }, [r, d.length, l.size, h, E.length, o, u.length]),
+        }, [r, d.length, l.size, E, h.length, o, u.length]),
         T = 0 === r;
     return i.useMemo(
         () => ({
-            onStepClick: g,
+            onStepClick: p,
             onNextClick: m,
             onBackClick: I,
-            isNextDisabled: p,
+            isNextDisabled: g,
             isBackDisabled: T
         }),
-        [T, p, I, m, g]
+        [T, g, I, m, p]
     );
 }

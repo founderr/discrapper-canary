@@ -41,8 +41,8 @@ var l = n(120356),
     j = n(648501),
     D = n(473403),
     w = n(207055),
-    G = n(981631),
-    U = n(647086),
+    U = n(981631),
+    G = n(647086),
     k = n(689938),
     B = n(872356),
     V = n(411740);
@@ -82,7 +82,7 @@ class F extends O.ZP {
             voiceStates: l,
             collapsed: t,
             tabIndex: n,
-            location: G.Sbl.GUILD_CHANNEL_LIST,
+            location: U.Sbl.GUILD_CHANNEL_LIST,
             numAudience: r
         });
     }
@@ -235,11 +235,11 @@ function z(e) {
             let e = T.Z.getChannel(n.parent_id),
                 i = A.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: null != t && M.Z.can(G.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === U._ || (null != e ? M.Z.can(G.Plq.MANAGE_CHANNELS, e) : M.Z.can(G.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: M.Z.can(G.Plq.MOVE_MEMBERS, n),
-                locked: !M.Z.can(G.Plq.CONNECT, n),
-                bypassLimit: M.Z.can(G.Plq.MOVE_MEMBERS, n),
+                canManageChannel: null != t && M.Z.can(U.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== l && (t.id === G._ || (null != e ? M.Z.can(U.Plq.MANAGE_CHANNELS, e) : M.Z.can(U.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: M.Z.can(U.Plq.MOVE_MEMBERS, n),
+                locked: !M.Z.can(U.Plq.CONNECT, n),
+                bypassLimit: M.Z.can(U.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
         }),
@@ -257,7 +257,7 @@ function z(e) {
             voiceStates: o,
             isSubscriptionGated: g,
             needSubscriptionToAccess: C,
-            enableConnectedUserLimit: b || (n.userLimit > 0 && n.userLimit < G.xGv)
+            enableConnectedUserLimit: b || (n.userLimit > 0 && n.userLimit < U.xGv)
         }),
         P = e.connected && null == y;
     return (0, i.jsx)(W, {

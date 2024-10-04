@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(749210),
     u = n(558381),
     _ = n(666743),
-    h = n(770146),
-    E = n(600164),
+    E = n(770146),
+    h = n(600164),
     m = n(565138),
     I = n(41776),
-    g = n(703656),
-    p = n(769654),
+    p = n(703656),
+    g = n(769654),
     T = n(601964),
     f = n(430824),
     S = n(843445),
@@ -39,9 +39,9 @@ class Z extends a.PureComponent {
         let { approximateMemberCount: e, approximatePresenceCount: t } = this.props.guild;
         return null == e || null == t
             ? null
-            : (0, i.jsxs)(E.Z, {
+            : (0, i.jsxs)(h.Z, {
                   className: A.memberInfo,
-                  align: E.Z.Align.CENTER,
+                  align: h.Z.Align.CENTER,
                   children: [
                       (0, i.jsx)('div', { className: A.dotOnline }),
                       (0, i.jsx)('span', {
@@ -63,14 +63,14 @@ class Z extends a.PureComponent {
             u = N.Z.Messages.LURKER_MODE_VIEW_GUILD,
             _ = this.handleJoinOrView,
             I = c.Button.Looks.FILLED,
-            g = c.Button.Colors.PRIMARY;
+            p = c.Button.Colors.PRIMARY;
         return (
             s
                 ? n
                     ? ((I = c.Button.Looks.OUTLINED),
-                      (g = A.buttonColorInGuild),
-                      (u = (0, i.jsxs)(E.Z, {
-                          align: E.Z.Align.CENTER,
+                      (p = A.buttonColorInGuild),
+                      (u = (0, i.jsxs)(h.Z, {
+                          align: h.Z.Align.CENTER,
                           children: [
                               (0, i.jsx)('div', { children: N.Z.Messages.JOINED_GUILD }),
                               (0, i.jsx)(c.CheckmarkLargeIcon, {
@@ -85,7 +85,7 @@ class Z extends a.PureComponent {
             (0, i.jsxs)('div', {
                 className: r()(l, o === S.b.SMALL ? A.inviteSmall : A.inviteLarge),
                 children: [
-                    (0, i.jsx)(h.Z, { children: N.Z.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD }),
+                    (0, i.jsx)(E.Z, { children: N.Z.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD }),
                     (0, i.jsxs)('div', {
                         className: A.content,
                         children: [
@@ -114,7 +114,7 @@ class Z extends a.PureComponent {
                                 size: c.Button.Sizes.SMALL,
                                 className: A.actionButton,
                                 fullWidth: !0,
-                                color: g,
+                                color: p,
                                 look: I,
                                 onClick: _,
                                 children: u
@@ -129,7 +129,7 @@ class Z extends a.PureComponent {
         super(...e),
             v(this, 'handleJoinOrView', async () => {
                 let { guild: e, skuId: t, isInGuild: n, isLurking: i } = this.props,
-                    a = () => (0, p.X)(e.id);
+                    a = () => (0, g.X)(e.id);
                 if (i) (0, u.Oj)(t).then(a);
                 else if (n) a();
                 else
@@ -143,7 +143,7 @@ class Z extends a.PureComponent {
             }),
             v(this, 'handleLogin', () => {
                 let e = { redirect_to: C.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
-                (0, g.uL)(C.Z5c.LOGIN, { search: (0, l.stringify)(e) });
+                (0, p.uL)(C.Z5c.LOGIN, { search: (0, l.stringify)(e) });
             });
     }
 }

@@ -17,12 +17,12 @@ var i,
     d = n.n(c),
     u = n(143927),
     _ = n(442837),
-    h = n(481060),
-    E = n(110924),
+    E = n(481060),
+    h = n(110924),
     m = n(970606),
     I = n(594174),
-    g = n(823379),
-    p = n(51144),
+    p = n(823379),
+    g = n(51144),
     T = n(945124),
     f = n(231467),
     S = n(301544),
@@ -39,7 +39,7 @@ function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
     return e === A.v0.SAVED_GUILDS ? 'saved_guilds' : t;
 }
-function P(e) {
+function M(e) {
     var t;
     let { clan: n, entranceDelay: i = 0, hide: a, searchCriteria: s, className: r, source: o, ...c } = e;
     return (0, l.jsx)('div', {
@@ -66,30 +66,30 @@ function P(e) {
 t.ZP = o.memo(function (e) {
     var t, n, i, a, s, r;
     let { width: c, paddingVertical: T = 16, paddingHorizontal: f = 32, variant: L = 'default', onUpdatePage: b } = e,
-        M = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * f, 0), [c, f]),
+        P = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * f, 0), [c, f]),
         D = o.useMemo(() => {
-            if (0 === M) return 1;
-            let e = M / 256,
-                t = M / 376,
-                n = M / e,
-                i = M / t;
+            if (0 === P) return 1;
+            let e = P / 256,
+                t = P / 376,
+                n = P / e,
+                i = P / t;
             return i > 360 ? Math.max(Math.floor(t - (t - e) / 2), 1) : n < 240 ? Math.max(Math.max(e, t), 1) : Math.max(e, 1);
-        }, [M]),
+        }, [P]),
         { loaded: y, clans: j, searchResult: U, searchCriteria: G, hasError: w } = (0, C.ML)(D, 'saved_guilds' === L),
         k = (0, A.GN)((e) => e.selectedTraits, u.Z),
         B = (0, A.GN)((e) => e.selectedGames, u.Z),
-        H = (0, E.Z)(U),
-        { currentPage: V, updatePage: F, totalItems: Y, pageSize: W } = (0, N.a)(),
-        z = (0, _.e7)([I.default], () => I.default.getCurrentUser());
+        V = (0, h.Z)(U),
+        { currentPage: H, updatePage: F, totalItems: Y, pageSize: z } = (0, N.a)(),
+        W = (0, _.e7)([I.default], () => I.default.getCurrentUser());
     o.useEffect(() => {
-        if (null != U && !!(0, Z.Pw)(U)) (!(null != H && (0, Z.Pw)(H)) || !(H.loadedAt >= U.loadedAt)) && (0, m.Oe)('top_picks', G);
-    }, [G, U, H]);
-    let K = B.length > 0 || k.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != z ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: p.ZP.getName(z) }) : '';
+        if (null != U && !!(0, Z.Pw)(U)) (!(null != V && (0, Z.Pw)(V)) || !(V.loadedAt >= U.loadedAt)) && (0, m.Oe)('top_picks', G);
+    }, [G, U, V]);
+    let K = B.length > 0 || k.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != W ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: g.ZP.getName(W) }) : '';
     let q =
             ((t = j),
             (n = D),
             (i = L),
-            (a = V),
+            (a = H),
             (s = K),
             (r = y),
             o.useMemo(() => {
@@ -143,7 +143,7 @@ t.ZP = o.memo(function (e) {
                                 itemHeight: 0,
                                 sectionHeight: 86
                             }
-                        ].filter(g.lm);
+                        ].filter(p.lm);
                     default:
                         return [];
                 }
@@ -152,19 +152,19 @@ t.ZP = o.memo(function (e) {
             (e) => {
                 F(e),
                     (0, m.Lx)({
-                        fromPage: V,
+                        fromPage: H,
                         toPage: e
                     }),
                     null == b || b();
             },
-            [F, b, V]
+            [F, b, H]
         ),
         [, X] = o.useState(new Set()),
         J = o.useMemo(() => new Set(G.games), [G.games]),
         $ = o.useCallback(
             (e, t, n, i) => {
                 let { items: a } = q[e],
-                    s = (V - 1) * W + (e * D + t),
+                    s = (H - 1) * z + (e * D + t),
                     r = a[t];
                 null != r && n
                     ? (i.current = setTimeout(
@@ -185,18 +185,18 @@ t.ZP = o.memo(function (e) {
                       ))
                     : clearTimeout(i.current);
             },
-            [q, X, D, V, W]
+            [q, X, D, H, z]
         ),
-        ee = o.useContext(h.AccessibilityPreferencesContext).reducedMotion.enabled,
+        ee = o.useContext(E.AccessibilityPreferencesContext).reducedMotion.enabled,
         et = o.useCallback(
             (e, t, n) => {
                 let { items: i } = q[e],
                     a = e * D + t,
-                    s = (V - 1) * W + a,
+                    s = (H - 1) * z + a,
                     r = i[t],
                     o = ee ? 0 : Math.min(125 * Math.floor(a / D) + (a % D) * 25, 1000);
                 return (0, l.jsx)(
-                    P,
+                    M,
                     {
                         clan: r,
                         index: a,
@@ -211,7 +211,7 @@ t.ZP = o.memo(function (e) {
                     ''.concat(r.id, ':').concat(L)
                 );
             },
-            [q, D, V, W, ee, L, G, k, J, $]
+            [q, D, H, z, ee, L, G, k, J, $]
         ),
         en = o.useCallback((e) => (0, l.jsx)(S.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
         ei = o.useCallback(
@@ -229,14 +229,14 @@ t.ZP = o.memo(function (e) {
                     case 'pagination':
                         return (0, l.jsx)(l.Fragment, {
                             children:
-                                Y > W &&
-                                (0, l.jsx)(h.Paginator, {
+                                Y > z &&
+                                (0, l.jsx)(E.Paginator, {
                                     className: d()(O.paginationInput),
                                     totalCount: Y,
-                                    pageSize: W,
+                                    pageSize: z,
                                     disablePaginationGap: !0,
                                     hideMaxPage: !0,
-                                    currentPage: V,
+                                    currentPage: H,
                                     onPageChange: Q
                                 })
                         });
@@ -250,7 +250,7 @@ t.ZP = o.memo(function (e) {
                         });
                 }
             },
-            [V, Q, W, q, Y]
+            [H, Q, z, q, Y]
         ),
         ea = o.useMemo(
             () =>
@@ -272,12 +272,12 @@ t.ZP = o.memo(function (e) {
                   'saved_guilds' === L
                       ? (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(h.Heading, {
+                                (0, l.jsx)(E.Heading, {
                                     variant: 'heading-md/medium',
                                     color: 'header-primary',
                                     children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
                                 }),
-                                (0, l.jsx)(h.Text, {
+                                (0, l.jsx)(E.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
                                     children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
@@ -286,12 +286,12 @@ t.ZP = o.memo(function (e) {
                         })
                       : (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(h.Heading, {
+                                (0, l.jsx)(E.Heading, {
                                     variant: 'heading-md/medium',
                                     color: 'header-primary',
                                     children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
                                 }),
-                                (0, l.jsx)(h.Text, {
+                                (0, l.jsx)(E.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
                                     children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION
@@ -308,11 +308,11 @@ t.ZP = o.memo(function (e) {
                         src: x,
                         className: O.errorImage
                     }),
-                    (0, l.jsx)(h.Heading, {
+                    (0, l.jsx)(E.Heading, {
                         variant: 'heading-xl/semibold',
                         children: R.Z.Messages.CLAN_DISCOVERY_ERROR_TITLE
                     }),
-                    (0, l.jsx)(h.Text, {
+                    (0, l.jsx)(E.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: R.Z.Messages.CLAN_DISCOVERY_ERROR_DESCRIPTION

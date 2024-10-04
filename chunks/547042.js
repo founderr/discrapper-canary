@@ -16,12 +16,12 @@ var i,
     d = n(566620),
     u = n(403404),
     _ = n(100527),
-    h = n(906732),
-    E = n(70097),
+    E = n(906732),
+    h = n(70097),
     m = n(592125),
     I = n(626135),
-    g = n(981631),
-    p = n(921944),
+    p = n(981631),
+    g = n(921944),
     T = n(689938),
     f = n(118441);
 ((i = a || (a = {})).BOOSTING = 'BOOSTING'), (i.NITRO = 'NITRO'), (i.BASH_OUT = 'BASH_OUT'), (i.GAME_NIGHT = 'GAME_NIGHT');
@@ -104,14 +104,14 @@ let S = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         };
                 }
             })(i),
-            { analyticsLocations: P } = (0, h.ZP)(a);
+            { analyticsLocations: M } = (0, E.ZP)(a);
         r.useEffect(() => {
-            I.default.track(g.rMx.TOOLTIP_VIEWED, { type: N });
+            I.default.track(p.rMx.TOOLTIP_VIEWED, { type: N });
         }, [N]);
-        let M = (0, c.bp)() === g.IlC.POPOUT,
+        let P = (0, c.bp)() === p.IlC.POPOUT,
             D = (0, l.e7)([m.Z], () => m.Z.getChannel(t), [t]);
-        return (0, s.jsx)(h.Gt, {
-            value: P,
+        return (0, s.jsx)(E.Gt, {
+            value: M,
             children: (0, s.jsx)('div', {
                 className: f.wrapper,
                 children: (0, s.jsx)('div', {
@@ -119,7 +119,7 @@ let S = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                     children: (0, s.jsxs)('div', {
                         className: f.content,
                         children: [
-                            (0, s.jsx)(E.Z, {
+                            (0, s.jsx)(h.Z, {
                                 className: f.video,
                                 src: x,
                                 poster: O,
@@ -164,7 +164,7 @@ let S = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                     (0, s.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND,
                                         onClick: () => {
-                                            n(p.L.UNKNOWN);
+                                            n(g.L.UNKNOWN);
                                         },
                                         children: v
                                     }),
@@ -174,18 +174,18 @@ let S = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                             null != b
                                                 ? b
                                                 : () => {
-                                                      if ((n(p.L.UNKNOWN), null != D))
+                                                      if ((n(g.L.UNKNOWN), null != D))
                                                           (0, u.Z)({
                                                               channel: D.isGuildVoice() ? D : void 0,
                                                               guildId: D.guild_id,
                                                               locationObject: {
-                                                                  page: g.ZY5.GUILD_CHANNEL,
-                                                                  section: g.jXE.GUILD_CHANNEL_LIST,
-                                                                  object: g.qAy.ACTIVITIES_COACH_MARK,
-                                                                  objectType: g.Qqv.ACTIVITY
+                                                                  page: p.ZY5.GUILD_CHANNEL,
+                                                                  section: p.jXE.GUILD_CHANNEL_LIST,
+                                                                  object: p.qAy.ACTIVITIES_COACH_MARK,
+                                                                  objectType: p.Qqv.ACTIVITY
                                                               },
-                                                              openInPopout: M,
-                                                              analyticsLocations: P,
+                                                              openInPopout: P,
+                                                              analyticsLocations: M,
                                                               opensAppLauncherModal: !0
                                                           }),
                                                               (0, d.w1)({ guildId: D.guild_id });

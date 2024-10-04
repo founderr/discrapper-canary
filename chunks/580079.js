@@ -10,12 +10,12 @@ var i,
     u = n(592125);
 n(914010);
 var _ = n(709054),
-    h = n(176505);
-let E = {},
+    E = n(176505);
+let h = {},
     m = {},
     I = {},
-    g = {};
-function p(e) {
+    p = {};
+function g(e) {
     let t = m[e];
     if (null == t) return;
     let n = _.default.fromTimestamp(Date.now() - 900000),
@@ -28,9 +28,9 @@ function p(e) {
     I[e] = Date.now();
 }
 function T(e, t, n, i) {
-    E[e].add(t);
+    h[e].add(t);
     let a = I[t];
-    (null == a || a + 300000 > Date.now()) && p(t),
+    (null == a || a + 300000 > Date.now()) && g(t),
         null == m[t] && (m[t] = []),
         m[t].push({
             id: n,
@@ -43,17 +43,17 @@ function f(e) {
 }
 class S extends (i = c.ZP.Store) {
     getActiveChannelsFetchStatus(e) {
-        return g[e];
+        return p[e];
     }
     getActiveChannelIds(e) {
-        return E[e];
+        return h[e];
     }
     getChannelMessageData(e) {
         return m[e];
     }
     shouldFetch(e) {
         var t;
-        return null == E[e] && !(null === (t = g[e]) || void 0 === t ? void 0 : t.loading);
+        return null == h[e] && !(null === (t = p[e]) || void 0 === t ? void 0 : t.loading);
     }
 }
 (r = 'ActiveChannelsStore'),
@@ -68,12 +68,12 @@ class S extends (i = c.ZP.Store) {
     new S(d.Z, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
-            if (!(0, h.ME)(t) || null == n) return !1;
-            let i = E[n];
+            if (!(0, E.ME)(t) || null == n) return !1;
+            let i = h[n];
             if (null == i) return !1;
             i.forEach((e) => {
                 var t;
-                p(e), (null === (t = m[e]) || void 0 === t ? void 0 : t.length) === 0 && delete m[e];
+                g(e), (null === (t = m[e]) || void 0 === t ? void 0 : t.length) === 0 && delete m[e];
             });
             let a = o()
                 .chain(Array.from(i))
@@ -83,7 +83,7 @@ class S extends (i = c.ZP.Store) {
                     return -(null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0);
                 })
                 .value();
-            E[n] = new Set(a);
+            h[n] = new Set(a);
         },
         MESSAGE_CREATE: function (e) {
             var t;
@@ -92,18 +92,18 @@ class S extends (i = c.ZP.Store) {
             let r = u.Z.getChannel(n);
             if (null == r) return !1;
             let l = r.guild_id;
-            if (null == l || null == E[l]) return !1;
+            if (null == l || null == h[l]) return !1;
             T(l, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            delete E[t.id];
+            delete h[t.id];
         },
         CHANNEL_DELETE: f,
         THREAD_DELETE: f,
         ACTIVE_CHANNELS_FETCH_START: function (e) {
             let { guildId: t } = e;
-            g[t] = {
+            p[t] = {
                 loading: !0,
                 error: null,
                 fetchedAt: Date.now()
@@ -111,12 +111,12 @@ class S extends (i = c.ZP.Store) {
         },
         ACTIVE_CHANNELS_FETCH_SUCCESS: function (e) {
             let { guildId: t, channels: n } = e;
-            (g[t] = {
+            (p[t] = {
                 loading: !1,
                 error: null,
                 fetchedAt: Date.now()
             }),
-                (E[t] = new Set()),
+                (h[t] = new Set()),
                 n.forEach((e) => {
                     let { channel_id: n, messages: i } = e;
                     i.forEach((e) => {
@@ -126,7 +126,7 @@ class S extends (i = c.ZP.Store) {
         },
         ACTIVE_CHANNELS_FETCH_FAILURE: function (e) {
             let { guildId: t, error: n } = e;
-            g[t] = {
+            p[t] = {
                 loading: !1,
                 error: n,
                 fetchedAt: null

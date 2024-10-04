@@ -1,6 +1,6 @@
 a.d(t, {
     h: function () {
-        return _;
+        return f;
     }
 });
 var n,
@@ -17,7 +17,7 @@ var n,
     p = a(231338),
     N = a(913835);
 let k = p.j_.MAIN_NAVIGATION_MENU;
-class _ extends (l = s.PureComponent) {
+class f extends (l = s.PureComponent) {
     render() {
         let e = (0, u.fQ)(this.context.router),
             { isOpen: t, dropdownLinks: a, TrackClick: n, avoidRouter: i, id: r, 'aria-label': l } = this.props,
@@ -73,7 +73,7 @@ class _ extends (l = s.PureComponent) {
         });
     }
 }
-(n = _),
+(n = f),
     (i = 'contextTypes'),
     (r = { router: d().object.isRequired }),
     i in n

@@ -8,12 +8,12 @@ var i = n(735250),
     d = n(674588),
     u = n(368862),
     _ = n(125909),
-    h = n(857192),
-    E = n(797908),
+    E = n(857192),
+    h = n(797908),
     m = n(292191),
     I = n(253509);
 t.Z = function () {
-    let e = (0, o.e7)([h.default], () => h.default.appDirectoryIncludesInactiveCollections),
+    let e = (0, o.e7)([E.default], () => E.default.appDirectoryIncludesInactiveCollections),
         t = (0, o.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: e })),
         n = (0, o.e7)([u.Z], () => u.Z.getCollections({ includesInactive: e }));
     a.useEffect(() => {
@@ -48,7 +48,7 @@ t.Z = function () {
                                                 return null == n
                                                     ? null
                                                     : (0, i.jsx)(
-                                                          E.Z,
+                                                          h.Z,
                                                           {
                                                               application: n,
                                                               showCategory: !0

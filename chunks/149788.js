@@ -13,17 +13,17 @@ var i = n(735250),
     d = n(283293),
     u = n(469988),
     _ = n(526383),
-    h = n(900849),
-    E = n(294330),
+    E = n(900849),
+    h = n(294330),
     m = n(731455),
     I = n(689938),
-    g = n(417712),
-    p = n(157770);
+    p = n(417712),
+    g = n(157770);
 function T(e) {
     let { loadId: t, onScroll: n } = e,
         T = (0, _.Z)();
     a.useEffect(() => {
-        h.Zt({
+        E.Zt({
             loadId: t,
             gamesYouPlayGuilds: [],
             allGuilds: [],
@@ -55,17 +55,17 @@ function T(e) {
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(s.Heading, {
-                                      className: g.sectionTitle,
+                                      className: p.sectionTitle,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
                                       children: I.Z.Messages.YOUR_HUB
                                   }),
                                   (0, i.jsxs)('div', {
-                                      className: g.content,
+                                      className: p.content,
                                       children: [
                                           f.map((e) =>
                                               (0, i.jsx)(
-                                                  E.VD,
+                                                  h.VD,
                                                   {
                                                       guild: e,
                                                       onClick: () => r.Z.transitionToGuildSync(e.id)
@@ -79,21 +79,21 @@ function T(e) {
                               ]
                           })
                         : (0, i.jsx)('div', {
-                              className: g.content,
+                              className: p.content,
                               children: (0, i.jsx)(u.Z, { hasHub: !1 })
                           }),
-                    (0, i.jsx)('div', { className: p.divider }),
+                    (0, i.jsx)('div', { className: g.divider }),
                     (0, i.jsxs)('div', {
-                        className: p.disclaimer,
+                        className: g.disclaimer,
                         children: [
                             (0, i.jsxs)(s.Text, {
-                                className: p.text,
+                                className: g.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
                                 children: [I.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_2, ' ']
                             }),
                             (0, i.jsx)(s.Text, {
-                                className: p.text,
+                                className: g.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
                                 children: I.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_4

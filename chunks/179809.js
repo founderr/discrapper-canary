@@ -30,7 +30,7 @@ let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     T = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     b = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function A(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: M = !1, defaultFolderName: R, useCircleMask: L = !1, draggable: y = !1, sorting: P = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: G, folderIconContent: U } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: M = !1, defaultFolderName: R, useCircleMask: L = !1, draggable: y = !1, sorting: P = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
         { id: k, name: B, children: V } = t,
         [H, F] = l.useState(!1),
         [W, z] = l.useState(!1),
@@ -106,7 +106,7 @@ function A(e) {
                                   onHoverChange: F,
                                   onKeyDown: X,
                                   treeItemProps: $,
-                                  folderIconContent: U
+                                  folderIconContent: G
                               })
                     })
                 }),
@@ -142,7 +142,7 @@ function A(e) {
                             style: { height: e.height.to((e) => e * et) },
                             className: x.__invalid_expandedGuilds,
                             role: 'group',
-                            children: V.map(G)
+                            children: V.map(U)
                         },
                         l
                     )

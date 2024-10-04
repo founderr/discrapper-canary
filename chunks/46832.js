@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return g;
     }
 }),
     n(47120),
@@ -15,7 +15,7 @@ var i = n(836560),
     d = n(452426),
     u = n(186901),
     _ = n(981631);
-function h(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,13 +28,13 @@ function h(e, t, n) {
         e
     );
 }
-let E = 10 * l.Z.Millis.SECOND,
+let h = 10 * l.Z.Millis.SECOND,
     m = new Map(),
     I = new Set(),
-    g = (e, t, n) => {
+    p = (e, t, n) => {
         n([c.Z.CLOSE, t], e);
     };
-class p extends i.EventEmitter {
+class g extends i.EventEmitter {
     routeEvent(e, t, n, i) {
         if (!Array.isArray(n)) {
             console.warn('[PostMessageTransport] Protocol error: event data should be an Array!');
@@ -59,12 +59,12 @@ class p extends i.EventEmitter {
         var c;
         super(),
             (c = this),
-            h(this, 'validateSocketClient', void 0),
-            h(this, 'logger', void 0),
-            h(this, 'createPostMessageProxySocket', void 0),
-            h(this, 'onFrameHandled', void 0),
-            h(this, 'handshakeFailureTimeoutId', void 0),
-            h(this, 'disconnectSocket', function (e, t) {
+            E(this, 'validateSocketClient', void 0),
+            E(this, 'logger', void 0),
+            E(this, 'createPostMessageProxySocket', void 0),
+            E(this, 'onFrameHandled', void 0),
+            E(this, 'handshakeFailureTimeoutId', void 0),
+            E(this, 'disconnectSocket', function (e, t) {
                 var n, i;
                 let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                 c.emit('disconnect', e, a ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : 'Unknown');
@@ -78,7 +78,7 @@ class p extends i.EventEmitter {
                         : [null, null];
                 null != s && m.delete(s);
             }),
-            h(this, 'handleIFrameMount', (e) => {
+            E(this, 'handleIFrameMount', (e) => {
                 let { id: t } = e;
                 I.add(t),
                     (this.handshakeFailureTimeoutId = setTimeout(() => {
@@ -88,12 +88,12 @@ class p extends i.EventEmitter {
                                 application_id: t,
                                 channel_id: n.channelId,
                                 guild_id: n.guildId,
-                                timeout_ms: E
+                                timeout_ms: h
                             });
                         });
-                    }, E));
+                    }, h));
             }),
-            h(this, 'handleIFrameUnmount', (e) => {
+            E(this, 'handleIFrameUnmount', (e) => {
                 var t;
                 let { id: n } = e;
                 I.delete(n);
@@ -117,7 +117,7 @@ class p extends i.EventEmitter {
                     ),
                     m.delete(i));
             }),
-            h(this, 'handleMessage', (e, t, n) => {
+            E(this, 'handleMessage', (e, t, n) => {
                 let i = m.get(t);
                 try {
                     this.routeEvent(i, t, e, n);
@@ -132,7 +132,7 @@ class p extends i.EventEmitter {
                               },
                               !0
                           )
-                        : g(
+                        : p(
                               t,
                               {
                                   code: e.code,
@@ -142,7 +142,7 @@ class p extends i.EventEmitter {
                           );
                 }
             }),
-            h(this, 'handleFrame', (e, t, n) => {
+            E(this, 'handleFrame', (e, t, n) => {
                 var i;
                 let a;
                 if (e !== t.origin) throw new o.Z({ closeCode: _.$VG.INVALID_ORIGIN }, 'Origin has changed');
@@ -153,7 +153,7 @@ class p extends i.EventEmitter {
                 }
                 null === (i = this.onFrameHandled) || void 0 === i || i.call(this, a, this.logger, t), this.emit('request', t, a);
             }),
-            h(this, 'handleHandshake', async (e, t, i) => {
+            E(this, 'handleHandshake', async (e, t, i) => {
                 let a;
                 null != this.handshakeFailureTimeoutId && clearTimeout(this.handshakeFailureTimeoutId);
                 let r = (await n.e('56268').then(n.t.bind(n, 826753, 23))).default;
@@ -188,7 +188,7 @@ class p extends i.EventEmitter {
                         frameId: l,
                         version: Number(t.v),
                         logger: this.logger,
-                        postClose: g,
+                        postClose: p,
                         encoding: null !== (c = t.encoding) && void 0 !== c ? c : 'json'
                     });
                 } catch (e) {
@@ -202,7 +202,7 @@ class p extends i.EventEmitter {
                     throw (this.logger.info('Socket Closed: '.concat(a.id, ', ').concat(e.message)), e);
                 }
             }),
-            h(this, 'handleClose', async (e, t) => {
+            E(this, 'handleClose', async (e, t) => {
                 let i = (await n.e('56268').then(n.t.bind(n, 826753, 23))).default;
                 try {
                     i.assert(

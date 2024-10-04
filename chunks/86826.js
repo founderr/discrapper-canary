@@ -10,9 +10,9 @@ var a = n(120356),
     u = n(378088);
 t.Z = function (e) {
     var t;
-    let { title: n, className: a, color: _, animate: h, gradientStopColor: E, getHistoricalTotalBytes: m } = e,
+    let { title: n, className: a, color: _, animate: E, gradientStopColor: h, getHistoricalTotalBytes: m } = e,
         I = (0, r.Sl)(_).hex,
-        g = null === (t = (0, r.Sl)(E)) || void 0 === t ? void 0 : t.hex;
+        p = null === (t = (0, r.Sl)(h)) || void 0 === t ? void 0 : t.hex;
     return (0, i.jsx)(c.Z, {
         getHistoricalTotalBytes: m,
         children: (e, t, r) => {
@@ -44,9 +44,9 @@ t.Z = function (e) {
                                 className: u.sparkChart,
                                 updateInterval: t,
                                 color: I,
-                                gradientStopColor: g,
+                                gradientStopColor: p,
                                 numUpdatesToShow: r,
-                                animate: h,
+                                animate: E,
                                 pixelWidth: 600,
                                 pixelHeight: 48,
                                 lineWidth: 4

@@ -9,7 +9,7 @@ var i = n(735250),
     d = n(960048),
     u = n(699910),
     _ = n(981631);
-function h(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function h(e, t, n) {
         e
     );
 }
-let E = 'CollectiblesExpiryModal';
+let h = 'CollectiblesExpiryModal';
 class m extends r.Z {
     _initialize() {
         s.Z.subscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), s.Z.subscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal);
@@ -32,24 +32,24 @@ class m extends r.Z {
     }
     constructor(...e) {
         super(...e),
-            h(this, 'timeout', null),
-            h(this, 'handleMaybeOpenModal', () => {
+            E(this, 'timeout', null),
+            E(this, 'handleMaybeOpenModal', () => {
                 var e, t;
                 let n = o.default.getCurrentUser(),
                     i = null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
                     a = null == n ? void 0 : null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
                 if ((('1251324401459265537' === i || '1252353273256480818' === i) && (a = 1726106879), null != a && !!(0, u.v)('CollectiblesExpiryManager'))) !this.maybeOpenModal() && (null != this.timeout && clearTimeout(this.timeout), (this.timeout = setTimeout(this.maybeOpenModal, 1000 * a - Date.now() + 1000)));
             }),
-            h(this, 'maybeOpenModal', () => {
+            E(this, 'maybeOpenModal', () => {
                 var e, t, s, r, u;
-                let h = o.default.getCurrentUser(),
+                let E = o.default.getCurrentUser(),
                     m = l.Z.getState(),
-                    I = null == h ? void 0 : null === (e = h.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
-                    g = null == h ? void 0 : null === (t = h.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
-                if ((('1251324401459265537' === I || '1252353273256480818' === I) && (g = 1726106879), null == h)) return !1;
-                let p = c.Z.getVoiceStateForUser(h.id);
-                return null != g && 1000 * g < Date.now() && m !== _.hes.RTC_CONNECTED
-                    ? ((0, a.closeModal)(E),
+                    I = null == E ? void 0 : null === (e = E.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
+                    p = null == E ? void 0 : null === (t = E.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
+                if ((('1251324401459265537' === I || '1252353273256480818' === I) && (p = 1726106879), null == E)) return !1;
+                let g = c.Z.getVoiceStateForUser(E.id);
+                return null != p && 1000 * p < Date.now() && m !== _.hes.RTC_CONNECTED
+                    ? ((0, a.closeModal)(h),
                       (0, a.openModalLazy)(
                           async () => {
                               let { default: e } = await n.e('77370').then(n.bind(n, 83950));
@@ -59,18 +59,18 @@ class m extends r.Z {
                                       skuId: I
                                   });
                           },
-                          { modalKey: E }
+                          { modalKey: h }
                       ),
                       d.Z.captureMessage('Collectible expiry modal shown'),
                       !0)
                     : (('1251324401459265537' === I || '1252353273256480818' === I) &&
                           d.Z.captureMessage('Collectible expiry modal not shown', {
                               tags: {
-                                  isExpired: (null != g && 1000 * g < Date.now()).toString(),
+                                  isExpired: (null != p && 1000 * p < Date.now()).toString(),
                                   rtcConnected: (m === _.hes.RTC_CONNECTED).toString(),
-                                  decoExpiresAt: null !== (r = null == g ? void 0 : g.toString()) && void 0 !== r ? r : 'N/A',
-                                  voiceStateAvailable: (null != p).toString(),
-                                  selfStream: null !== (u = null == p ? void 0 : null === (s = p.selfStream) || void 0 === s ? void 0 : s.toString()) && void 0 !== u ? u : 'N/A'
+                                  decoExpiresAt: null !== (r = null == p ? void 0 : p.toString()) && void 0 !== r ? r : 'N/A',
+                                  voiceStateAvailable: (null != g).toString(),
+                                  selfStream: null !== (u = null == g ? void 0 : null === (s = g.selfStream) || void 0 === s ? void 0 : s.toString()) && void 0 !== u ? u : 'N/A'
                               }
                           }),
                       !1);

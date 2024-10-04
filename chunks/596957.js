@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(194359),
     u = n(410575),
     _ = n(607070),
-    h = n(100527),
-    E = n(906732),
+    E = n(100527),
+    h = n(906732),
     m = n(795448),
     I = n(735778),
-    g = n(699516),
-    p = n(974042),
+    p = n(699516),
+    g = n(974042),
     T = n(451478),
     f = n(434184),
     S = n(701861),
@@ -29,10 +29,10 @@ var i = n(735250),
     x = n(522756);
 t.Z = function (e) {
     let { sectionFilter: t, titleId: s } = e,
-        { analyticsLocations: b } = (0, E.ZP)(h.Z.FRIENDS_LIST),
-        { rows: P, section: M } = (0, l.cj)([p.ZP], () => p.ZP.getState()),
+        { analyticsLocations: b } = (0, h.ZP)(E.Z.FRIENDS_LIST),
+        { rows: M, section: P } = (0, l.cj)([g.ZP], () => g.ZP.getState()),
         D = (0, l.e7)([T.Z], () => T.Z.isFocused()),
-        y = (0, l.e7)([g.Z], () => g.Z.getRelationshipCount()),
+        y = (0, l.e7)([p.Z], () => p.Z.getRelationshipCount()),
         [j, U] = a.useState(() => {
             let e = {};
             for (let t of Object.values(R.pJs)) e[t] = '';
@@ -59,13 +59,13 @@ t.Z = function (e) {
                 [t]: ''
             });
         }, [j, t]),
-        B = (0, I.A)({ location: 'people_list' }) && t === R.pJs.PENDING && P.filter(R.pJs.SPAM).length > 0,
-        H = P.filter(t, j[t]);
+        B = (0, I.A)({ location: 'people_list' }) && t === R.pJs.PENDING && M.filter(R.pJs.SPAM).length > 0,
+        V = M.filter(t, j[t]);
     if (
         (a.useEffect(() => {
             t === R.pJs.ALL && (0, m.d$)();
         }, [t]),
-        0 === H.length && '' === j[t])
+        0 === V.length && '' === j[t])
     )
         return (0, i.jsx)('div', {
             className: x.emptyStateContainer,
@@ -81,14 +81,14 @@ t.Z = function (e) {
                             }
                           : void 0
                 },
-                M
+                P
             )
         });
-    let V = [H],
-        F = 0 === H.length && '' !== j[t],
-        Y = H.filter((e) => e.type === R.OGo.PENDING_INCOMING).length,
-        W = t === R.pJs.PENDING && Y > 0 && Y >= L.yf;
-    return (0, i.jsx)(E.Gt, {
+    let H = [V],
+        F = 0 === V.length && '' !== j[t],
+        Y = V.filter((e) => e.type === R.OGo.PENDING_INCOMING).length,
+        z = t === R.pJs.PENDING && Y > 0 && Y >= L.yf;
+    return (0, i.jsx)(h.Gt, {
         value: b,
         children: (0, i.jsxs)(u.Z, {
             section: R.jXE.FRIENDS_LIST,
@@ -118,9 +118,9 @@ t.Z = function (e) {
                                     default:
                                         return O.Z.Messages.FRIENDS_ALL_HEADER.format({ count: t.toString() });
                                 }
-                            })(t, H.length)
+                            })(t, V.length)
                         }),
-                        W &&
+                        z &&
                             (0, i.jsx)(o.Button, {
                                 look: o.ButtonLooks.LINK,
                                 color: o.ButtonColors.LINK,
@@ -137,11 +137,11 @@ t.Z = function (e) {
                 F
                     ? (0, i.jsx)('div', {
                           className: x.emptyStateContainer,
-                          children: (0, i.jsx)(C.Z, { type: C.j.SECTION_NO_RESULTS }, M)
+                          children: (0, i.jsx)(C.Z, { type: C.j.SECTION_NO_RESULTS }, P)
                       })
                     : (0, i.jsx)(A.Z, {
                           relationshipCount: y,
-                          statusSections: V,
+                          statusSections: H,
                           renderRow: function (e) {
                               switch (t) {
                                   case R.pJs.BLOCKED:

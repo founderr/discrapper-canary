@@ -15,12 +15,12 @@ var r = n(91192),
     d = n(515753),
     u = n(605236),
     _ = n(243778),
-    h = n(819640),
-    E = n(594174),
+    E = n(819640),
+    h = n(594174),
     m = n(351402),
     I = n(78839),
-    g = n(626135),
-    p = n(74538),
+    p = n(626135),
+    g = n(74538),
     T = n(502087),
     f = n(650032),
     S = n(104494),
@@ -34,8 +34,8 @@ var r = n(91192),
     O = n(565626),
     x = n(976465),
     b = n(701910),
-    P = n(938736),
-    M = n(227140),
+    M = n(938736),
+    P = n(227140),
     D = n(474936),
     y = n(981631),
     j = n(921944),
@@ -48,11 +48,11 @@ let B = (e) => {
     let t,
         n,
         i,
-        { selected: a, route: B, locationState: H, ...V } = e,
-        F = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
+        { selected: a, route: B, locationState: V, ...H } = e,
+        F = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
         Y = (0, l.e7)([I.ZP], () => I.ZP.getPremiumTypeSubscription()),
-        W = (0, p.Qo)(F, Y),
-        z = (0, r.JA)('nitro'),
+        z = (0, g.Qo)(F, Y),
+        W = (0, r.JA)('nitro'),
         K = (0, C.N)(),
         q = (0, S.Ng)(),
         Q = (0, l.e7)([I.ZP], () => I.ZP.inReverseTrial()),
@@ -61,13 +61,13 @@ let B = (e) => {
         $ = (0, O.ZP)(),
         ee = (0, A.$_)(),
         et = (0, x.V6)(),
-        en = (0, P.Kn)(w),
-        ei = (0, P.vx)(w),
-        ea = (0, P.wG)(w),
+        en = (0, M.Kn)(w),
+        ei = (0, M.vx)(w),
+        ea = (0, M.wG)(w),
         es = (0, l.e7)([T.Z], () => T.Z.getCreatedAtOverride()),
-        er = (0, l.e7)([h.Z], () => h.Z.hasLayers()),
+        er = (0, l.e7)([E.Z], () => E.Z.hasLayers()),
         el = null != es ? es : null == F ? void 0 : F.createdAt,
-        eo = a || null != K || null != q || J || ei || ea || $ || null != ee || null != et || W,
+        eo = a || null != K || null != q || J || ei || ea || $ || null != ee || null != et || z,
         { enabled: ec } = f._.useExperiment({ location: w }, { autoTrackExposure: !1 }),
         ed = ec && (null == K ? void 0 : K.trial_id) === D.a7,
         [eu, e_] = (0, _.US)(Q ? [o.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
@@ -79,7 +79,7 @@ let B = (e) => {
           : J
             ? ((n = (0, s.jsx)(N.Z, {})), (i = 0))
             : null != eu && eu === o.z.REVERSE_TRIAL_NITRO_TAB_BADGE
-              ? ((n = (0, s.jsx)(M.Z, {
+              ? ((n = (0, s.jsx)(P.Z, {
                     copy: U.Z.Messages.PREMIUM_REVERSE_TRIAL_BADGE,
                     showStars: !1
                 })),
@@ -110,23 +110,23 @@ let B = (e) => {
                               isTabSelected: a
                           })),
                           (i = 4));
-    let eh = (0, s.jsx)(d.Qj, {
+    let eE = (0, s.jsx)(d.Qj, {
         selected: a,
         route: B,
         icon: c.NitroWheelIcon,
         text: U.Z.Messages.PREMIUM,
-        locationState: H,
+        locationState: V,
         onClick: () => {
-            g.default.track(y.rMx.NITRO_TAB_VISITED, {
+            p.default.track(y.rMx.NITRO_TAB_VISITED, {
                 badge_decorator: i,
-                has_premium: W
+                has_premium: z
             }),
                 ei || ea ? ((0, u.EW)(o.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: j.L.TAKE_ACTION }), ea && (0, u.EW)(o.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: j.L.TAKE_ACTION })) : null != eu && e_(j.L.USER_DISMISS);
         },
-        ...V,
-        ...z,
+        ...H,
+        ...W,
         className: t,
         children: n
     });
-    return en ? (0, s.jsx)(R.Em, { children: eh }) : ei && !er ? (0, s.jsx)(R.A7, { children: () => eh }) : eh;
+    return en ? (0, s.jsx)(R.Em, { children: eE }) : ei && !er ? (0, s.jsx)(R.A7, { children: () => eE }) : eE;
 };

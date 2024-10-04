@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     f: function () {
-        return E;
+        return h;
     }
 });
 var i = n(470079),
@@ -16,8 +16,8 @@ var i = n(470079),
     d = n(726115),
     u = n(859921),
     _ = n(128449),
-    h = n(731455);
-function E(e) {
+    E = n(731455);
+function h(e) {
     let { loadId: t } = e,
         n = (0, c.NL)(),
         s = (0, c.lZ)(),
@@ -34,17 +34,17 @@ function E(e) {
             var e;
             return null !== (e = o.Z.getGuildIds(l)) && void 0 !== e ? e : _.q5;
         }),
-        h = (0, a.e7)([o.Z], () => {
+        E = (0, a.e7)([o.Z], () => {
             var e;
             return null !== (e = o.Z.getIsFetching(l)) && void 0 !== e && e;
         }),
-        E = (0, a.e7)([o.Z], () => {
+        h = (0, a.e7)([o.Z], () => {
             var e;
             return null === (e = o.Z.getIsBlocked(n)) || void 0 === e || e;
         }),
         m = (0, c.$G)(),
         I = m !== n,
-        g = i.useCallback(() => {
+        p = i.useCallback(() => {
             let e = (0, c.Zq)(),
                 n = (0, c.lx)(),
                 i = o.Z.getGuildIds(l),
@@ -65,13 +65,13 @@ function E(e) {
     return i.useMemo(
         () => ({
             guildIds: u,
-            loading: !E && (I || h),
+            loading: !h && (I || E),
             searchResultsQuery: m,
-            loadMore: g,
+            loadMore: p,
             searchCategoryId: s,
-            isBlockedSearchQuery: E
+            isBlockedSearchQuery: h
         }),
-        [u, E, I, h, m, g, s]
+        [u, h, I, E, m, p, s]
     );
 }
 function m(e) {
@@ -92,7 +92,7 @@ function m(e) {
                     query: '',
                     fetchedQuery: '',
                     resultsQuery: '',
-                    categoryId: h.Hk,
+                    categoryId: E.Hk,
                     resultsInitialCategoryId: null,
                     scrollPosition: null
                 }),

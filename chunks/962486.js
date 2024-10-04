@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 }),
     n(653041);
@@ -14,15 +14,15 @@ var i = n(735250),
     d = n(283293),
     u = n(726115),
     _ = n(294330),
-    h = n(417712);
-function E(e) {
-    let { tab: t, guildIds: n, loading: E, onScroll: m, onGuildCardClick: I, onGuildCardSeen: g } = e,
-        p = (0, u.Mf)(t),
+    E = n(417712);
+function h(e) {
+    let { tab: t, guildIds: n, loading: h, onScroll: m, onGuildCardClick: I, onGuildCardSeen: p } = e,
+        g = (0, u.Mf)(t),
         T = (0, u.a$)(t),
         f = (0, u.QW)(t),
         S = (0, u.lg)(t),
         C = a.useMemo(() => {
-            let e = E ? 30 : n.length,
+            let e = h ? 30 : n.length,
                 t = [];
             for (let s = 0; s < e; s++) {
                 var a;
@@ -31,17 +31,17 @@ function E(e) {
                         guildId: null !== (a = n[s]) && void 0 !== a ? a : null,
                         index: s,
                         onClick: (e) => I(e, s, S),
-                        onView: (e) => g(e, S)
+                        onView: (e) => p(e, S)
                     })
                 );
             }
             return t;
-        }, [S, n, E, I, g]);
+        }, [S, n, h, I, p]);
     return (0, i.jsxs)(d.Z, {
         onScroll: m,
         children: [
             (0, i.jsx)(o.Z, {
-                title: p,
+                title: g,
                 description: T,
                 children: (0, i.jsx)(l.Z, {})
             }),
@@ -52,13 +52,13 @@ function E(e) {
                         query: t
                     }),
                     (0, i.jsx)(s.Heading, {
-                        className: h.sectionTitle,
+                        className: E.sectionTitle,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
                         children: f
                     }),
                     (0, i.jsx)('div', {
-                        className: h.content,
+                        className: E.content,
                         children: C
                     })
                 ]

@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(950279),
     u = n(741595),
     _ = n(754961),
-    h = n(363915),
-    E = n(359380),
+    E = n(363915),
+    h = n(359380),
     m = n(207796),
     I = n(689938),
-    g = n(908310);
-let p = {
+    p = n(908310);
+let g = {
     mass: 1,
     tension: 600,
     friction: 60
@@ -45,7 +45,7 @@ function S() {
     let e = (0, m.GN)((e) => e.selectedTraits, r.Z),
         t = a.useMemo(() => new Set(e), [e]),
         n = a.useCallback((e) => m.GN.getState().setSelectedTraits([...e]), []);
-    return (0, i.jsx)(E.Z, {
+    return (0, i.jsx)(h.Z, {
         title: I.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
         description: I.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
         onUpdateTraits: n,
@@ -61,7 +61,7 @@ t.Z = a.memo(function (e) {
         n = a.useRef(null),
         d = a.useRef(null),
         u = a.useRef(null),
-        E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        h = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         [N, A] = a.useState(0),
         [v, Z] = a.useState(0),
         L = (0, m.GN)((e) => e.selectedPlaystyle, r.Z),
@@ -78,7 +78,7 @@ t.Z = a.memo(function (e) {
             2 === N ? t() : R(N + 1);
         }, [N, R, t]),
         b = a.useMemo(() => 1 === N && null == L, [L, N]),
-        P = a.useMemo(
+        M = a.useMemo(
             () => [
                 {
                     index: 0,
@@ -95,12 +95,12 @@ t.Z = a.memo(function (e) {
             ],
             []
         ),
-        M = (0, o.useSpring)(
+        P = (0, o.useSpring)(
             {
                 ref: n,
                 from: { opacity: 0 },
                 to: { opacity: 1 },
-                config: p
+                config: g
             },
             'animate-always'
         ),
@@ -109,13 +109,13 @@ t.Z = a.memo(function (e) {
                 ref: d,
                 from: {
                     opacity: 0,
-                    transform: E ? 'translateY(0px)' : 'translateY(40px)'
+                    transform: h ? 'translateY(0px)' : 'translateY(40px)'
                 },
                 to: {
                     opacity: 1,
                     transform: 'translateY(0px)'
                 },
-                config: p
+                config: g
             },
             'animate-always'
         ),
@@ -124,13 +124,13 @@ t.Z = a.memo(function (e) {
                 ref: u,
                 from: {
                     opacity: 0,
-                    transform: E ? 'translateY(0px)' : 'translateY(40px)'
+                    transform: h ? 'translateY(0px)' : 'translateY(40px)'
                 },
                 to: {
                     opacity: 1,
                     transform: 'translateY(0px)'
                 },
-                config: p
+                config: g
             },
             'animate-always'
         );
@@ -147,13 +147,13 @@ t.Z = a.memo(function (e) {
             }
         }, []);
     return (0, i.jsxs)(s.animated.div, {
-        className: g.container,
-        style: M,
+        className: p.container,
+        style: P,
         children: [
             (0, i.jsx)(s.animated.div, {
-                className: g.sequencer,
+                className: p.sequencer,
                 style: D,
-                children: (0, i.jsx)(h.Z, {
+                children: (0, i.jsx)(E.Z, {
                     currentStep: N,
                     items: j,
                     renderItem: U,
@@ -161,17 +161,17 @@ t.Z = a.memo(function (e) {
                 })
             }),
             (0, i.jsxs)(s.animated.div, {
-                className: g.footer,
+                className: p.footer,
                 style: y,
                 children: [
                     (0, i.jsx)(_.T, {
                         currentStepIndex: N,
-                        steps: P,
+                        steps: M,
                         furthestStepIndex: v,
                         onStepClick: R
                     }),
                     (0, i.jsx)(_.i, {
-                        className: g.footerButtons,
+                        className: p.footerButtons,
                         isBackDisabled: !1,
                         isNextDisabled: b,
                         onNextClick: x,

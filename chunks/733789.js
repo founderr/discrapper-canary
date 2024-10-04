@@ -9,11 +9,11 @@ var i = n(735250),
     d = n(184301),
     u = n(347475),
     _ = n(237583),
-    h = n(51144),
-    E = n(981631),
+    E = n(51144),
+    h = n(981631),
     m = n(689938),
     I = n(31848);
-function g(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,8 +26,8 @@ function g(e, t, n) {
         e
     );
 }
-let p = {
-    [E.AzA.NOW_PLAYING]: {
+let g = {
+    [h.AzA.NOW_PLAYING]: {
         single: (e, t) =>
             m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
                 user1: e.username,
@@ -42,7 +42,7 @@ let p = {
             }),
         other: (e) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_OTHER.format({ count: e })
     },
-    [E.AzA.RECENTLY_PLAYED]: {
+    [h.AzA.RECENTLY_PLAYED]: {
         single: (e, t) =>
             m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_SINGLE.format({
                 user1: e.username,
@@ -57,7 +57,7 @@ let p = {
             }),
         other: (e) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_OTHER.format({ count: e })
     },
-    [E.AzA.EVER_PLAYED]: {
+    [h.AzA.EVER_PLAYED]: {
         single: (e, t) =>
             m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_SINGLE.format({
                 user1: e.username,
@@ -75,7 +75,7 @@ let p = {
 };
 class T extends a.PureComponent {
     renderDescription(e, t) {
-        let n = p[e];
+        let n = g[e];
         return 1 === t.length ? n.single(t[0].user, (e) => this.renderActivityDiscordTag(e)) : 2 === t.length ? n.double(t[0].user, t[1].user, (e) => this.renderActivityDiscordTag(e)) : n.other(t.length);
     }
     renderActivityDiscordTag(e) {
@@ -127,11 +127,11 @@ class T extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            g(this, 'renderUserTooltip', (e, t, n) =>
+            p(this, 'renderUserTooltip', (e, t, n) =>
                 (0, i.jsxs)('div', {
                     className: I.tooltip,
                     children: [
-                        (0, i.jsx)('div', { children: h.ZP.getUserTag(e) }),
+                        (0, i.jsx)('div', { children: E.ZP.getUserTag(e) }),
                         (0, i.jsx)(c.ZP, {
                             className: I.tooltipTimestamp,
                             start: t,
@@ -141,7 +141,7 @@ class T extends a.PureComponent {
                     ]
                 })
             ),
-            g(this, 'renderPlayer', (e, t, n, a) => {
+            p(this, 'renderPlayer', (e, t, n, a) => {
                 if (null == e) return null;
                 let s = this.props.reason.userInfo.find((t) => t.user === e);
                 return null == s
@@ -160,7 +160,7 @@ class T extends a.PureComponent {
                               children: (t) =>
                                   (0, i.jsx)(l.Tooltip, {
                                       text: this.renderUserTooltip(e, s.startTime, s.endTime),
-                                      'aria-label': (0, h.W5)(e, { decoration: 'never' }),
+                                      'aria-label': (0, E.W5)(e, { decoration: 'never' }),
                                       children: (n) =>
                                           (0, i.jsx)(l.Avatar, {
                                               className: r()(I.playerAvatar, { [I.avatarMasked]: !a }),
@@ -175,7 +175,7 @@ class T extends a.PureComponent {
                           e.id
                       );
             }),
-            g(this, 'renderPlayerOverflow', (e, t, n) =>
+            p(this, 'renderPlayerOverflow', (e, t, n) =>
                 (0, i.jsx)(
                     'div',
                     {

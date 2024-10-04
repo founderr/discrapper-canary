@@ -32,13 +32,13 @@ function b(e) {
     var t;
     let { channel: n, isChannelSelected: b, isChannelCollapsed: A, voiceStates: M, enableConnectedUserLimit: R, enableActivities: L, isSubscriptionGated: y, needSubscriptionToAccess: P, isNewChannel: O, muted: j, resolvedUnreadSetting: D } = e,
         w = (0, l.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
-        G = (0, s.ZP)(n),
-        U = (0, l.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, n)),
+        U = (0, s.ZP)(n),
+        G = (0, l.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, n)),
         k = (0, l.e7)([_.Z], () => _.Z.hasVideo(n.id)),
         B = (0, u.PK)(n.id) && n.isGuildStageVoice(),
         V = (0, I.ZP)({
             channel: n,
-            locked: U,
+            locked: G,
             video: k || B,
             selected: b
         }),
@@ -80,9 +80,9 @@ function b(e) {
                 text: Z.Z.Messages.LIVE,
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
-          : null != L && L && (0, g.u)(G)
+          : null != L && L && (0, g.u)(U)
             ? (0, i.jsx)(E.Z, {
-                  embeddedApps: G,
+                  embeddedApps: U,
                   muted: j
               })
             : null;

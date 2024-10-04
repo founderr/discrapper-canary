@@ -13,13 +13,13 @@ var i = n(735250),
     d = n(244080),
     u = n(247530),
     _ = n(260889),
-    h = n(981631),
-    E = n(674563),
+    E = n(981631),
+    h = n(674563),
     m = n(689938);
 function I(e) {
     let { party: t, close: n, onSelect: I } = e,
-        g = (0, c.Z)(t),
-        p = (0, _.Z)(t),
+        p = (0, c.Z)(t),
+        g = (0, _.Z)(t),
         T = (0, u.Z)(t),
         f = (0, d.Z)(t),
         S = (0, l.Z)(t),
@@ -29,10 +29,10 @@ function I(e) {
             let e = t.currentActivities
                 .filter((e) => {
                     var t, n;
-                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === E.wW.GAME;
+                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === h.wW.GAME;
                 })
                 .map((e) => e.game.name);
-            r.default.track(h.rMx.OPEN_POPOUT, {
+            r.default.track(E.rMx.OPEN_POPOUT, {
                 type: 'Now Playing Card Popout',
                 games_detected: e
             });
@@ -43,9 +43,9 @@ function I(e) {
             'aria-label': m.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
             onSelect: I,
             children: [
-                g,
+                p,
                 (0, i.jsxs)(s.MenuGroup, {
-                    children: [p, T]
+                    children: [g, T]
                 }),
                 (0, i.jsx)(s.MenuGroup, { children: f }),
                 (0, i.jsx)(s.MenuGroup, { children: S }),

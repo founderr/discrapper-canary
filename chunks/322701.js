@@ -9,16 +9,16 @@ var a = n(924826),
     d = n(981631),
     u = n(522756);
 t.Z = function (e) {
-    let { statusSections: t, renderRow: n, searchQuery: _, sectionFilter: h, useReducedMotion: E, footer: m } = e,
+    let { statusSections: t, renderRow: n, searchQuery: _, sectionFilter: E, useReducedMotion: h, footer: m } = e,
         I = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled),
-        g = (0, a.ZP)({
+        p = (0, a.ZP)({
             id: 'people',
             isEnabled: I,
             async scrollToStart() {},
             async scrollToEnd() {}
         }),
-        p = h !== d.pJs.ONLINE && h !== d.pJs.ALL,
-        T = E || '' !== _ || p,
+        g = E !== d.pJs.ONLINE && E !== d.pJs.ALL,
+        T = h || '' !== _ || g,
         f = t.map((e, t) =>
             T
                 ? (0, i.jsx)('div', { children: e.map(n) }, t)
@@ -33,7 +33,7 @@ t.Z = function (e) {
                   )
         );
     return (0, i.jsx)(s.bG, {
-        navigator: g,
+        navigator: p,
         children: (0, i.jsx)(s.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;

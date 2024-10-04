@@ -19,7 +19,7 @@ var n = a(735250),
     p = a(436620),
     N = a(431138),
     k = a(625797);
-function _(e, t, a) {
+function f(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function _(e, t, a) {
         e
     );
 }
-let f = m.j_.MAIN_NAVIGATION_MENU,
+let _ = m.j_.MAIN_NAVIGATION_MENU,
     g = () => [
         {
             route: (0, o.L)(m.RK.TWITTER),
@@ -70,7 +70,7 @@ class I extends i.PureComponent {
                             children: [
                                 (0, n.jsx)(o, {
                                     tag: 'div',
-                                    eventName: f,
+                                    eventName: _,
                                     data: { linkClicked: 'logo' },
                                     children: (0, n.jsx)(c.Z, {
                                         avoidRouter: s,
@@ -113,8 +113,8 @@ class I extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'state', { isAppCompatible: !0 }),
-            _(this, 'getAppButton', () => {
+            f(this, 'state', { isAppCompatible: !0 }),
+            f(this, 'getAppButton', () => {
                 let { token: e, NavigationMessages: t, TrackClick: a, authRedirectTo: i } = this.props,
                     { isAppCompatible: r } = this.state,
                     l = (0, s.Ui)(i),
@@ -127,7 +127,7 @@ class I extends i.PureComponent {
                               {
                                   className: k.listItemInactive,
                                   children: (0, n.jsx)(a, {
-                                      eventName: f,
+                                      eventName: _,
                                       className: k.appButton,
                                       data: {
                                           linkClicked: e ? 'open' : 'login',
@@ -142,7 +142,7 @@ class I extends i.PureComponent {
                         : null
                 );
             }),
-            _(this, 'renderSocialMediaNav', () => {
+            f(this, 'renderSocialMediaNav', () => {
                 let { TrackClick: e } = this.props,
                     t = g().map((t) =>
                         (0, n.jsx)(
@@ -150,7 +150,7 @@ class I extends i.PureComponent {
                             {
                                 className: l()(k.listItemInactive, k.listItemSocialMedia),
                                 children: (0, n.jsx)(e, {
-                                    eventName: f,
+                                    eventName: _,
                                     className: k.rightNavLink,
                                     data: { linkClicked: t.linkClicked },
                                     href: t.route,

@@ -9,26 +9,26 @@ var i = n(735250),
     u = n(27471),
     _ = n(364632);
 t.Z = (e) => {
-    let { headerId: t, reapplyText: n, onReapply: h, confirmText: E, onWithdrawApplication: m, rejectionReason: I = null, guild: g = null } = e,
-        p = (0, s.e7)([c.Z], () => {
+    let { headerId: t, reapplyText: n, onReapply: E, confirmText: h, onWithdrawApplication: m, rejectionReason: I = null, guild: p = null } = e,
+        g = (0, s.e7)([c.Z], () => {
             var e;
-            return c.Z.getCooldown(null !== (e = null == g ? void 0 : g.id) && void 0 !== e ? e : '0');
+            return c.Z.getCooldown(null !== (e = null == p ? void 0 : p.id) && void 0 !== e ? e : '0');
         });
     a.useEffect(() => {
-        null == p && null != g && o.Z.fetchJoinRequestCooldown(g.id);
-    }, [p, g]);
-    let T = (null != p ? p : 0) > 0,
-        f = T && null != p ? Math.ceil((1000 * p - Date.now()) / 86400000) : 0;
+        null == g && null != p && o.Z.fetchJoinRequestCooldown(p.id);
+    }, [g, p]);
+    let T = (null != g ? g : 0) > 0,
+        f = T && null != g ? Math.ceil((1000 * g - Date.now()) / 86400000) : 0;
     return (0, i.jsxs)('div', {
         className: u.confirmation,
         children: [
             (0, i.jsxs)('div', {
                 className: u.confirmationContent,
                 children: [
-                    null !== g
+                    null !== p
                         ? (0, i.jsx)(l.Z, {
                               size: l.Z.Sizes.LARGER,
-                              guild: g,
+                              guild: p,
                               className: u.guildIcon
                           })
                         : (0, i.jsx)('img', {
@@ -40,7 +40,7 @@ t.Z = (e) => {
                         id: t,
                         variant: 'heading-xl/semibold',
                         className: u.header,
-                        children: (null == g ? void 0 : g.name) != null ? d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE_WITH_GUILD_NAME.format({ guildName: g.name }) : d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE
+                        children: (null == p ? void 0 : p.name) != null ? d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE_WITH_GUILD_NAME.format({ guildName: p.name }) : d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE
                     }),
                     null != I && '' !== I
                         ? (0, i.jsx)(i.Fragment, {
@@ -70,9 +70,9 @@ t.Z = (e) => {
                         'aria-label': T ? d.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY_COOLDOWN.format({ days: f }) : void 0,
                         children: (0, i.jsx)(r.Button, {
                             className: u.confirmationTooltipContents,
-                            onClick: h,
+                            onClick: E,
                             color: r.Button.Colors.PRIMARY,
-                            submitting: null == p,
+                            submitting: null == g,
                             disabled: T,
                             children: n
                         })
@@ -81,7 +81,7 @@ t.Z = (e) => {
                         onClick: m,
                         color: r.Button.Colors.RED,
                         className: u.confirmationButton,
-                        children: E
+                        children: h
                     })
                 ]
             })

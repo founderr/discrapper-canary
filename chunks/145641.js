@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(617015),
     u = n(522756);
 t.Z = function (e) {
-    let { statusSections: t, renderRow: n, searchQuery: _, footer: h } = e,
-        E = (e) => {
+    let { statusSections: t, renderRow: n, searchQuery: _, footer: E } = e,
+        h = (e) => {
             let { section: i, row: a } = e,
                 s = t[i];
             if (null == s || null == a) return null;
@@ -18,7 +18,7 @@ t.Z = function (e) {
         },
         m = (0, l.e7)([c.Z], () => c.Z.keyboardModeEnabled),
         I = a.useRef(null),
-        g = a.useCallback(
+        p = a.useCallback(
             () =>
                 new Promise((e) => {
                     let t = I.current;
@@ -27,7 +27,7 @@ t.Z = function (e) {
                 }),
             []
         ),
-        p = a.useCallback(
+        g = a.useCallback(
             () =>
                 new Promise((e) => {
                     let t = I.current;
@@ -50,8 +50,8 @@ t.Z = function (e) {
         f = (0, s.ZP)({
             id: 'people-list',
             isEnabled: m,
-            scrollToStart: g,
-            scrollToEnd: p,
+            scrollToStart: p,
+            scrollToEnd: g,
             setFocus: T
         });
     return (0, i.jsx)(r.bG, {
@@ -67,13 +67,13 @@ t.Z = function (e) {
                                 (I.current = e), (n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
                             },
                             sectionHeight: 0,
-                            renderRow: E,
+                            renderRow: h,
                             rowHeight: d.NV,
                             sections: t.map((e) => ('' !== _ && 0 === e.length ? e.length + 1 : e.length)),
                             className: u.peopleList,
                             ...a
                         }),
-                        h
+                        E
                     ]
                 });
             }

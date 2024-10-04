@@ -10,7 +10,7 @@ var i = n(735250),
 t.Z = function (e) {
     let { tabId: t, onScroll: n } = e,
         _ = (0, s.e7)([r.Z], () => r.Z.getCategories()),
-        h = a.useMemo(() => {
+        E = a.useMemo(() => {
             var e, n;
             return [null !== (n = null === (e = _.find((e) => e.id === t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '', u.Z.Messages.GLOBAL_DISCOVERY_APPS_CATEGORY_TITLE_END];
         }, [_, t]);
@@ -18,7 +18,7 @@ t.Z = function (e) {
         onScroll: n,
         children: [
             (0, i.jsx)(o.Z, {
-                title: h,
+                title: E,
                 description: '',
                 children: (0, i.jsx)(l.Z, {})
             }),

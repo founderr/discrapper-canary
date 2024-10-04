@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(481060),
     u = n(570140),
     _ = n(659429),
-    h = n(496929),
-    E = n(558381),
+    E = n(496929),
+    h = n(558381),
     m = n(410575),
     I = n(224336),
-    g = n(730749),
-    p = n(666743),
+    p = n(730749),
+    g = n(666743),
     T = n(115130),
     f = n(812206),
     S = n(770146),
@@ -28,8 +28,8 @@ var i = n(735250),
     O = n(210887),
     x = n(430824),
     b = n(496675),
-    P = n(525395),
-    M = n(558314),
+    M = n(525395),
+    P = n(558314),
     D = n(580130),
     y = n(55563),
     j = n(551428),
@@ -38,12 +38,12 @@ var i = n(735250),
     w = n(626135),
     k = n(572004),
     B = n(630388),
-    H = n(937615),
-    V = n(73346),
+    V = n(937615),
+    H = n(73346),
     F = n(3570),
     Y = n(689796),
-    W = n(15470),
-    z = n(506648),
+    z = n(15470),
+    W = n(506648),
     K = n(449275),
     q = n(445986),
     Q = n(119520),
@@ -81,7 +81,7 @@ class ec extends a.PureComponent {
             let { analyticsSource: e, analyticsProperties: t } = s.state;
             (this._analyticsSource = e), (this._extraAnalyticsProperties = t);
         } else this._analyticsSource = ea.SaU;
-        (null == t || t.isSlimDirectoryVersion()) && r(), null != e && (!n && !a && (0, h.yD)(e.applicationId), i && u.Z.wait(() => (0, _.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
+        (null == t || t.isSlimDirectoryVersion()) && r(), null != e && (!n && !a && (0, E.yD)(e.applicationId), i && u.Z.wait(() => (0, _.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
     }
     componentDidUpdate(e) {
         let { locale: t, sku: n, shouldFetchStatistics: i, skuId: a, storeListingId: s, slug: r, storeListing: l, fetchStoreListing: o } = this.props;
@@ -181,14 +181,14 @@ class ec extends a.PureComponent {
                 return t.mimeType.startsWith('video/')
                     ? {
                           type: ea.s9s.VIDEO,
-                          thumbnailSrc: (0, V._W)(e.id, t, 1024, 'webp'),
-                          src: (0, V._W)(e.id, t),
+                          thumbnailSrc: (0, H._W)(e.id, t, 1024, 'webp'),
+                          src: (0, H._W)(e.id, t),
                           height: i,
                           width: n
                       }
                     : {
                           type: ea.s9s.IMG,
-                          src: (0, V._W)(e.id, t, 1024),
+                          src: (0, H._W)(e.id, t, 1024),
                           height: i,
                           width: n
                       };
@@ -212,11 +212,11 @@ class ec extends a.PureComponent {
                   children: [
                       (0, i.jsx)('div', {
                           className: el.headerBackground,
-                          style: { backgroundImage: 'url('.concat((0, V._W)(e.id, s, 1024, 'png'), ')') }
+                          style: { backgroundImage: 'url('.concat((0, H._W)(e.id, s, 1024, 'png'), ')') }
                       }),
                       (0, i.jsx)('img', {
                           className: el.headerLogo,
-                          src: (0, V._W)(e.id, r, 1024, 'png'),
+                          src: (0, H._W)(e.id, r, 1024, 'png'),
                           alt: n.name
                       })
                   ]
@@ -241,7 +241,7 @@ class ec extends a.PureComponent {
         });
     }
     renderFeatures(e) {
-        return (0, i.jsx)(z.Z, { sku: e });
+        return (0, i.jsx)(W.Z, { sku: e });
     }
     renderSystemRequirements(e) {
         return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length
@@ -262,7 +262,7 @@ class ec extends a.PureComponent {
                     children: er.Z.Messages.APPLICATION_STORE_ABOUT_HEADER.format({ name: n.name })
                 }),
                 (0, i.jsx)(I.Z, {}),
-                (0, i.jsx)(W.Z, {
+                (0, i.jsx)(z.Z, {
                     applicationId: e.id,
                     blurb: t.summary,
                     description: s,
@@ -289,7 +289,7 @@ class ec extends a.PureComponent {
         if (null == e || null == t || null == n) return null;
         let a = [],
             s = n.getSplashURL(1024);
-        null != s && a.push(s), null != t.headerLogoLightTheme && a.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
+        null != s && a.push(s), null != t.headerLogoLightTheme && a.unshift((0, H._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
         let r = N.Z.Product({
                 name: e.name,
                 description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
@@ -301,7 +301,7 @@ class ec extends a.PureComponent {
             let { amount: e, currency: t } = l;
             r.offers = N.Z.Offer({
                 priceCurrency: t.toUpperCase(),
-                price: (0, H.T4)(e, t, { style: 'decimal' })
+                price: (0, V.T4)(e, t, { style: 'decimal' })
             });
         }
         let o = N.Z.ItemPage({ mainEntity: r });
@@ -495,7 +495,7 @@ class ec extends a.PureComponent {
                                           currentStoreListingId: null != s ? s.id : null,
                                           onStoreListingSelect: (e) => {
                                               null != t &&
-                                                  (0, E.yt)(t.id, {
+                                                  (0, h.yt)(t.id, {
                                                       slug: a,
                                                       analyticsSource: {
                                                           page: l.page,
@@ -554,9 +554,9 @@ class ec extends a.PureComponent {
             });
     }
 }
-t.Z = (0, g.Z)(
-    (0, p.Z)(
-        l.ZP.connectStores([M.Z, O.Z, R.default, G.Z, j.Z, y.Z, U.Z, T.Z, f.Z, P.Z, x.Z, D.Z], (e) => {
+t.Z = (0, p.Z)(
+    (0, g.Z)(
+        l.ZP.connectStores([P.Z, O.Z, R.default, G.Z, j.Z, y.Z, U.Z, T.Z, f.Z, M.Z, x.Z, D.Z], (e) => {
             let t,
                 n,
                 i,
@@ -575,7 +575,7 @@ t.Z = (0, g.Z)(
                 application: null != s ? f.Z.getApplication(s) : null,
                 isFetchingEntitlements: null != s && D.Z.applicationIdsFetching.has(s),
                 didFetchEntitlements: null != s && D.Z.applicationIdsFetched.has(s),
-                shouldFetchStatistics: l && null != s && P.Z.shouldFetchStatisticsForApplication(s),
+                shouldFetchStatistics: l && null != s && M.Z.shouldFetchStatisticsForApplication(s),
                 sku: n,
                 isFocused: G.Z.isFocused(),
                 storeListing: j.Z.getStoreListing({
@@ -585,7 +585,7 @@ t.Z = (0, g.Z)(
                     isTestMode: c
                 }),
                 isInTestMode: null != s && c,
-                matureAgree: M.Z.didMatureAgree,
+                matureAgree: P.Z.didMatureAgree,
                 theme: O.Z.theme,
                 locale: R.default.locale,
                 guild: null != o ? x.Z.getGuild(o.getGuildId()) : null

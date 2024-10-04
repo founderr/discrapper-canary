@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(239091),
     u = n(194359),
     _ = n(487971),
-    h = n(703656),
-    E = n(592125),
+    E = n(703656),
+    h = n(592125),
     m = n(131951),
     I = n(51144),
-    g = n(321488),
-    p = n(417183),
+    p = n(321488),
+    g = n(417183),
     T = n(825682),
     f = n(170245),
     S = n(981631),
@@ -95,7 +95,7 @@ class L extends a.PureComponent {
     render() {
         let { user: e, isFocused: t, activities: n, applicationStream: a, status: s, isMobile: r, giftIntentType: l } = this.props,
             { isActiveRow: c } = this.state;
-        return (0, i.jsx)(p.Z, {
+        return (0, i.jsx)(g.Z, {
             ref: this.peopleListItemRef,
             isFocused: t,
             isActive: c,
@@ -130,13 +130,13 @@ class L extends a.PureComponent {
                                         analyticsPage: S.ZY5.FRIENDS_LIST,
                                         shouldHighlight: t
                                     }),
-                                (0, i.jsx)(g.Z, {
+                                (0, i.jsx)(p.Z, {
                                     icon: o.ChatIcon,
                                     tooltip: N.Z.Messages.SEND_DM,
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t
                                 }),
-                                (0, i.jsx)(g.Z, {
+                                (0, i.jsx)(p.Z, {
                                     icon: o.MoreVerticalIcon,
                                     tooltip: N.Z.Messages.MORE,
                                     onClick: this.handleOpenActionsMenu,
@@ -155,8 +155,8 @@ class L extends a.PureComponent {
             v(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
-                let n = r().find(E.Z.getMutablePrivateChannels(), (e) => e.type === S.d4z.DM && e.getRecipientId() === t.id);
-                null != n ? (0, h.uL)(S.Z5c.CHANNEL(S.ME, n.id)) : c.Z.openPrivateChannel(t.id);
+                let n = r().find(h.Z.getMutablePrivateChannels(), (e) => e.type === S.d4z.DM && e.getRecipientId() === t.id);
+                null != n ? (0, E.uL)(S.Z5c.CHANNEL(S.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
             v(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t } = this.props;

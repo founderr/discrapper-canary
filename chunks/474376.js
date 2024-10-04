@@ -15,33 +15,33 @@ var a = n(442837),
     d = n(626135),
     u = n(51144),
     _ = n(480387),
-    h = n(726745),
-    E = n(251423),
+    E = n(726745),
+    h = n(251423),
     m = n(383832),
     I = n(981631),
-    g = n(689938),
-    p = n(703864);
+    p = n(689938),
+    g = n(703864);
 function T(e) {
     let t = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         n = (0, a.e7)([o.Z], () => o.Z.hidePersonalInformation),
-        { multiAccountUsers: T } = (0, E.L)(),
+        { multiAccountUsers: T } = (0, h.L)(),
         f = (e) => {
             if (e !== (null == t ? void 0 : t.id)) d.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.USER_PROFILE } }), _.yD(e);
         },
         S = T.map((a) => {
             let o = new l.Z(a),
                 c = o.id === (null == t ? void 0 : t.id),
-                d = a.tokenStatus === h.q.INVALID,
+                d = a.tokenStatus === E.q.INVALID,
                 _ = n ? null : '#'.concat(o.discriminator);
             return (0, i.jsx)(
                 s.MenuItem,
                 {
                     id: o.id,
-                    focusedClassName: p.focused,
+                    focusedClassName: g.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
                         return (0, i.jsxs)('div', {
-                            className: p.userMenuItem,
+                            className: g.userMenuItem,
                             children: [
                                 (0, i.jsx)(s.Avatar, {
                                     src: o.getAvatarURL(void 0, 40),
@@ -49,10 +49,10 @@ function T(e) {
                                     'aria-label': a.username
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: p.userMenuUsername,
+                                    className: g.userMenuUsername,
                                     children: [
                                         (0, i.jsx)(s.Text, {
-                                            className: p.userMenuText,
+                                            className: g.userMenuText,
                                             variant: 'text-sm/normal',
                                             children: u.ZP.getUserTag(o, {
                                                 mode: 'username',
@@ -61,7 +61,7 @@ function T(e) {
                                         }),
                                         !o.isPomelo() &&
                                             (0, i.jsx)(s.Text, {
-                                                className: p.userMenuDiscriminator,
+                                                className: g.userMenuDiscriminator,
                                                 variant: 'text-sm/normal',
                                                 children: _
                                             })
@@ -72,14 +72,14 @@ function T(e) {
                                         size: 'sm',
                                         color: (0, r.Lq)(t ? I.Ilk.WHITE_500 : I.Ilk.BRAND_500),
                                         secondaryColor: (0, r.Lq)(t ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
-                                        className: p.activeIcon
+                                        className: g.activeIcon
                                     }),
                                 d &&
                                     (0, i.jsx)(s.CircleWarningIcon, {
                                         color: (0, r.Lq)(I.Ilk.RED_400),
                                         secondaryColor: (0, r.Lq)(I.Ilk.WHITE_500),
                                         size: 'xs',
-                                        className: p.activeIcon
+                                        className: g.activeIcon
                                     })
                             ]
                         });
@@ -98,7 +98,7 @@ function T(e) {
                     (0, i.jsx)(s.MenuSeparator, {}),
                     (0, i.jsx)(s.MenuItem, {
                         id: 'manage-accounts',
-                        label: g.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
+                        label: p.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
                         action: () => {
                             null == e || e(), (0, m.Z)();
                         }

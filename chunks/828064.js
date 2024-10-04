@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return c;
+        return l;
     }
 });
 var o = t(735250);
@@ -8,7 +8,7 @@ t(470079);
 var r = t(481060),
     a = t(547972),
     i = t(326528);
-function c() {
+function l() {
     let e = (0, i.b)().map((e) =>
         (0, o.jsx)(
             r.MenuItem,

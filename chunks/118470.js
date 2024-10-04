@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 }),
     n(47120),
@@ -15,14 +15,14 @@ var i = n(735250),
     d = n(270144),
     u = n(981631),
     _ = n(689938),
-    h = n(466389);
-function E(e) {
+    E = n(466389);
+function h(e) {
     let t,
         { guild: n } = e,
-        E = (0, d.h6)(n),
+        h = (0, d.h6)(n),
         m = () => (0, c.sB)(n.id),
-        I = a.useMemo(() => new Set(E.map((e) => e.applicationId)), [E]),
-        g = (0, s.Wu)(
+        I = a.useMemo(() => new Set(h.map((e) => e.applicationId)), [h]),
+        p = (0, s.Wu)(
             [r.Z],
             () => {
                 let e = [];
@@ -34,21 +34,21 @@ function E(e) {
             },
             [I]
         );
-    return 0 === g.length
+    return 0 === p.length
         ? null
         : ((t =
-              1 === g.length
-                  ? _.Z.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({ a: g[0].name })
-                  : 2 === g.length
+              1 === p.length
+                  ? _.Z.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({ a: p[0].name })
+                  : 2 === p.length
                     ? _.Z.Messages.TWO_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
-                          a: g[0].name,
-                          b: g[1].name
+                          a: p[0].name,
+                          b: p[1].name
                       })
-                    : 3 === g.length
+                    : 3 === p.length
                       ? _.Z.Messages.THREE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
-                            a: g[0].name,
-                            b: g[1].name,
-                            c: g[2].name
+                            a: p[0].name,
+                            b: p[1].name,
+                            c: p[2].name
                         })
                       : _.Z.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT),
           (0, i.jsx)(l.Z, {
@@ -56,7 +56,7 @@ function E(e) {
               onDismissed: m,
               message: t,
               type: u.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
-              image: h,
+              image: E,
               onClick: () => {
                   m(), o.Z.open(n.id, u.pNK.INTEGRATIONS);
               },

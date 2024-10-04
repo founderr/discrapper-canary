@@ -14,8 +14,8 @@ var s,
     E = t(999382),
     T = t(981631);
 let h = [],
-    g = [],
-    p = null,
+    p = [],
+    g = null,
     f = null,
     x = null,
     C = !1,
@@ -37,7 +37,7 @@ function v(e) {
         let e = E.Z.getProps().integrations;
         null == e && (O = !0), (h = null != e ? e : []);
     } else h = [];
-    if (((g = null != i && _.Z.can(T.Plq.MANAGE_WEBHOOKS, i) ? N.Z.getWebhooksForGuild(i.id) : []), !e && null != f)) {
+    if (((p = null != i && _.Z.can(T.Plq.MANAGE_WEBHOOKS, i) ? N.Z.getWebhooksForGuild(i.id) : []), !e && null != f)) {
         let e = L(f.id);
         null != e && (f = e);
     }
@@ -45,7 +45,7 @@ function v(e) {
         let e = j(x.id);
         null != e && (x = e);
     }
-    (p = null), (S = T.QZA.OPEN), (A = {}), (R = !1);
+    (g = null), (S = T.QZA.OPEN), (A = {}), (R = !1);
 }
 let M = d().debounce(() => {
     R && (null != f ? d().isEqual(f, L(f.id)) && (R = !1) : null != x && d().isEqual(x, j(x.id)) && (R = !1), !R && P.emitChange());
@@ -57,7 +57,7 @@ function L(e) {
     });
 }
 function j(e) {
-    return g.find((n) => {
+    return p.find((n) => {
         let { id: t } = n;
         return t === e;
     });
@@ -76,10 +76,10 @@ class D extends (s = u.ZP.Store) {
         return h;
     }
     get webhooks() {
-        return g;
+        return p;
     }
     get editedCommandId() {
-        return p;
+        return g;
     }
     get editedIntegration() {
         return f;
@@ -150,18 +150,18 @@ let P = new D(
               },
               INTEGRATION_SETTINGS_START_EDITING_COMMAND: function (e) {
                   let { commandId: n } = e;
-                  (p = n), (f = null), (x = null), (A = {}), (R = !0);
+                  (g = n), (f = null), (x = null), (A = {}), (R = !0);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: function (e) {
                   let { commandId: n } = e;
-                  if (null == p || p !== n) return !1;
-                  (p = null), (A = {}), (R = !1);
+                  if (null == g || g !== n) return !1;
+                  (g = null), (A = {}), (R = !1);
               },
               INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: function (e) {
                   let { integrationId: n } = e,
                       t = L(n);
                   if (null == t) return !1;
-                  (f = t), (p = null), (x = null), (A = {}), (R = !1);
+                  (f = t), (g = null), (x = null), (A = {}), (R = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: function () {
                   (f = null), (A = {}), (R = !1);
@@ -180,13 +180,13 @@ let P = new D(
                   let { webhookId: n } = e,
                       t = j(n);
                   if (null == t) return !1;
-                  (x = t), (p = null), (f = null), (A = {}), (R = !1);
+                  (x = t), (g = null), (f = null), (A = {}), (R = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
                   (x = null), (A = {}), (R = !1);
               },
               GUILD_SETTINGS_CLOSE: function () {
-                  (i = null), (h = []), (g = []), (p = null), (f = null), (x = null), (S = T.QZA.CLOSED), (R = !1);
+                  (i = null), (h = []), (p = []), (g = null), (f = null), (x = null), (S = T.QZA.CLOSED), (R = !1);
               },
               GUILD_SETTINGS_LOADED_INTEGRATIONS: function (e) {
                   let { guildId: n, integrations: t } = e;
@@ -222,8 +222,8 @@ let P = new D(
                   let { guildId: n, channelId: t, webhooks: a } = e;
                   if (null == i || n !== i.id || null == a || S === T.QZA.SUBMITTING) return !1;
                   C = !1;
-                  for (let e = g.length - 1; e >= 0; e--) {
-                      let n = g[e];
+                  for (let e = p.length - 1; e >= 0; e--) {
+                      let n = p[e];
                       if (null != t && (null == n ? void 0 : n.channel_id) !== t) continue;
                       let i = a.find((e) => {
                           let { id: t } = e;
@@ -234,16 +234,16 @@ let P = new D(
                               ...n,
                               ...i
                           };
-                          (g[e] = t), !R && (null == x ? void 0 : x.id) === t.id && (x = t);
-                      } else (null == x ? void 0 : x.id) === n.id && (x = null), g.splice(e, 1);
+                          (p[e] = t), !R && (null == x ? void 0 : x.id) === t.id && (x = t);
+                      } else (null == x ? void 0 : x.id) === n.id && (x = null), p.splice(e, 1);
                   }
                   for (let e of a)
                       null ==
-                          g.find((n) => {
+                          p.find((n) => {
                               let { id: t } = n;
                               if (t === e.id) return !0;
-                          }) && g.push(e);
-                  (g = [...g]), M();
+                          }) && p.push(e);
+                  (p = [...p]), M();
               },
               INTEGRATION_SETTINGS_SUBMITTING: function () {
                   (S = T.QZA.SUBMITTING), (A = {});

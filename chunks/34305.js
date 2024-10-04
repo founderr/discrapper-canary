@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(579022),
     u = n(391690),
     _ = n(424218),
-    h = n(358085),
-    E = n(998502),
+    E = n(358085),
+    h = n(998502),
     m = n(689938),
     I = n(325343),
-    g = n(113207);
-function p(e, t, n) {
+    p = n(113207);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -115,7 +115,7 @@ class T extends a.PureComponent {
                             }),
                             (0, i.jsx)(r.FormItem, {
                                 title: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION,
-                                className: g.marginTop20,
+                                className: p.marginTop20,
                                 children: (0, i.jsx)(r.TextInput, {
                                     disabled: !0,
                                     value: e
@@ -172,11 +172,11 @@ class T extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'state', {
+            g(this, 'state', {
                 label: void 0,
                 isDefault: null
             }),
-            p(this, 'handleStartEditing', () => {
+            g(this, 'handleStartEditing', () => {
                 let { path: e, label: t, isDefault: n, onToggleEditing: i } = this.props;
                 i(e),
                     this.setState({
@@ -184,7 +184,7 @@ class T extends a.PureComponent {
                         isDefault: n
                     });
             }),
-            p(this, 'handleStopEditing', () => {
+            g(this, 'handleStopEditing', () => {
                 let { onToggleEditing: e } = this.props;
                 e(null),
                     this.setState({
@@ -192,7 +192,7 @@ class T extends a.PureComponent {
                         isDefault: null
                     });
             }),
-            p(this, 'handleRemoveLocation', () => {
+            g(this, 'handleRemoveLocation', () => {
                 (0, r.openModal)((e) =>
                     (0, i.jsx)(r.ConfirmModal, {
                         ...e,
@@ -209,17 +209,17 @@ class T extends a.PureComponent {
                     })
                 );
             }),
-            p(this, 'handleSaveChanges', () => {
+            g(this, 'handleSaveChanges', () => {
                 (0, l.Tb)(this.props.path, {
                     label: null != this.state.label ? this.state.label : this.props.label,
                     isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault
                 }),
                     this.handleStopEditing();
             }),
-            p(this, 'handleLabelChange', (e) => {
+            g(this, 'handleLabelChange', (e) => {
                 this.setState({ label: e });
             }),
-            p(this, 'handleToggleDefault', () => {
+            g(this, 'handleToggleDefault', () => {
                 this.setState({ isDefault: !this.state.isDefault });
             });
     }
@@ -259,7 +259,7 @@ class f extends a.PureComponent {
                 (0, i.jsx)('div', {
                     className: I.buttonRowWrapper,
                     children: (0, i.jsx)(r.Button, {
-                        disabled: !h.isPlatformEmbedded,
+                        disabled: !E.isPlatformEmbedded,
                         onClick: this.handleAddInstallationLocation,
                         size: r.Button.Sizes.SMALL,
                         children: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD
@@ -270,13 +270,13 @@ class f extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'state', { editingPath: null }),
-            p(this, 'handleAddInstallationLocation', () => {
-                E.ZP.showOpenDialog(['openDirectory']).then((e) => {
+            g(this, 'state', { editingPath: null }),
+            g(this, 'handleAddInstallationLocation', () => {
+                h.ZP.showOpenDialog(['openDirectory']).then((e) => {
                     if (null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0]) (0, l.RY)(e[0]);
                 });
             }),
-            p(this, 'handleToggleEditing', (e) => {
+            g(this, 'handleToggleEditing', (e) => {
                 this.setState({ editingPath: e });
             });
     }

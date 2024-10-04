@@ -14,12 +14,12 @@ var i = n(735250),
     d = n(194359),
     u = n(313201),
     _ = n(657682),
-    h = n(981631),
-    E = n(420212),
+    E = n(981631),
+    h = n(420212),
     m = n(689938),
     I = n(467189),
-    g = n(113207);
-let p = {
+    p = n(113207);
+let g = {
         canSend: !1,
         hint: null,
         success: null,
@@ -31,15 +31,15 @@ let p = {
 function C(e, t) {
     switch (t.type) {
         case 'RESET':
-            return p;
+            return g;
         case 'SUCCESS':
             return {
-                ...p,
+                ...g,
                 success: t.text
             };
         case 'HINT':
             return {
-                ...p,
+                ...g,
                 canSend: !0,
                 hint: t.text
             };
@@ -54,7 +54,7 @@ function C(e, t) {
 function N() {
     let e = a.createRef(),
         t = a.createRef(),
-        [n, s] = a.useReducer(C, p),
+        [n, s] = a.useReducer(C, g),
         { canSend: l, hint: u, success: N, error: A } = n;
     return (
         a.useEffect(() => {
@@ -116,12 +116,12 @@ function N() {
                                 inputClassName: I.input,
                                 onKeyPress: (t) => {
                                     let n = t.currentTarget.value;
-                                    if (t.key !== E.mR.Enter) {
+                                    if (t.key !== h.mR.Enter) {
                                         if (n.includes('#')) {
                                             o()(null != e.current, 'Input is handling keypress when not mounted');
                                             let i = n.indexOf('#'),
                                                 a = e.current.selectionStart,
-                                                s = t.key === E.mR.Backspace || t.key === E.mR.ArrowRight || t.key === E.mR.ArrowLeft,
+                                                s = t.key === h.mR.Backspace || t.key === h.mR.ArrowRight || t.key === h.mR.ArrowLeft,
                                                 r = t.which >= 48 && t.which <= 57;
                                             null != a && a > i && /^(.+?#\d{4})$/.test(n) && !s ? t.preventDefault() : null != a && a > i && !r && !s && t.preventDefault();
                                         }
@@ -134,7 +134,7 @@ function N() {
                                     }
                                     let t = '',
                                         [, n] = e.split('#');
-                                    null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)),
+                                    null != n && (t = e + E.LYt.slice(null != n ? n.length + 1 : 0)),
                                         s({
                                             type: 'HINT',
                                             text: t
@@ -172,14 +172,14 @@ function N() {
                         role: 'alert',
                         id: S,
                         type: c.FormText.Types.ERROR,
-                        className: g.marginTop8,
+                        className: p.marginTop8,
                         children: A
                     }),
                 null != N &&
                     (0, i.jsx)(c.FormText, {
                         role: 'status',
                         type: c.FormText.Types.SUCCESS,
-                        className: g.marginTop8,
+                        className: p.marginTop8,
                         children: N
                     })
             ]

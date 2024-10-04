@@ -20,12 +20,12 @@ var i = n(735250),
     d = n(37234),
     u = n(809206),
     _ = n(110924),
-    h = n(714338),
-    E = n(213609),
+    E = n(714338),
+    h = n(213609),
     m = n(429142),
     I = n(144114),
-    g = n(210887),
-    p = n(23434),
+    p = n(210887),
+    g = n(23434),
     T = n(1964),
     f = n(762756),
     S = n(981631),
@@ -34,14 +34,14 @@ var i = n(735250),
 let A = 'Email Verification',
     v = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
 function Z() {
-    let { action: e, theme: t } = (0, r.cj)([p.Z, g.Z], () => ({
-            action: p.Z.getAction(),
-            theme: g.Z.theme
+    let { action: e, theme: t } = (0, r.cj)([g.Z, p.Z], () => ({
+            action: g.Z.getAction(),
+            theme: p.Z.theme
         })),
         Z = T.Z.getVerificationTypes(e),
         [L, R] = a.useState(0),
         O = (0, _.Z)(Z);
-    (0, E.Z)(
+    (0, h.Z)(
         {
             type: s.ImpressionTypes.MODAL,
             name: s.ImpressionNames.USER_ACTION_REQUIRED,
@@ -85,9 +85,9 @@ function Z() {
     return (
         a.useEffect(
             () => (
-                h.Z.disable(),
+                E.Z.disable(),
                 () => {
-                    h.Z.enable();
+                    E.Z.enable();
                 }
             ),
             []

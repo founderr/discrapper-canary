@@ -9,7 +9,7 @@ var i = n(735250),
     d = n(921944),
     u = n(689938),
     _ = n(241626);
-class h extends a.PureComponent {
+class E extends a.PureComponent {
     render() {
         let { guild: e, memberCount: t, markAsDismissed: n } = this.props;
         return (0, i.jsx)(r.Z, {
@@ -52,4 +52,4 @@ class h extends a.PureComponent {
 t.Z = s.ZP.connectStores([o.Z], (e) => {
     let { guild: t } = e;
     return { memberCount: o.Z.getMemberCount(t.id) };
-})(h);
+})(E);

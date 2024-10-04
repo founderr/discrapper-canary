@@ -60,18 +60,18 @@ function O(e) {
     if (null == n) return null;
     let w = L.Z.Messages.DIRECT_MESSAGES;
     I && (w = s.K.get(A.wli) ? L.Z.Messages.DISCODO_ENABLED : L.Z.Messages.DISCODO_DISABLED);
-    let G = null;
+    let U = null;
     !t &&
         _ &&
-        (G = (0, i.jsx)(c.Z, {
+        (U = (0, i.jsx)(c.Z, {
             className: y.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let U = t || g || m,
+    let G = t || g || m,
         k = (0, i.jsx)(o.BlobMask, {
-            selected: U,
+            selected: G,
             lowerBadge: h > 0 ? (0, b.Ne)(h) : null,
-            upperBadge: G,
+            upperBadge: U,
             lowerBadgeSize: { width: (0, o.getBadgeWidthForValue)(h) },
             children: (0, i.jsx)(o.NavItem, {
                 onMouseEnter: () => C(!0),
@@ -89,7 +89,7 @@ function O(e) {
                             }, 1000);
                     }
                 },
-                selected: U,
+                selected: G,
                 ariaLabel: L.Z.Messages.DIRECT_MESSAGES,
                 ...j,
                 to: {

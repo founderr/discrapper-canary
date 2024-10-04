@@ -22,8 +22,8 @@ let o = {
     };
 function d(e) {
     var t, n, a;
-    let { state: d, direction: u, cleanUp: _, children: h } = e;
-    let E = (0, r.useSpring)(
+    let { state: d, direction: u, cleanUp: _, children: E } = e;
+    let h = (0, r.useSpring)(
         ((t = d),
         (n = u),
         (a = _),
@@ -69,11 +69,11 @@ function d(e) {
                 })
     );
     return (0, i.jsx)(s.animated.div, {
-        style: E,
+        style: h,
         className: l.step,
         children: (0, i.jsx)(r.ScrollerThin, {
             className: l.scroller,
-            children: h
+            children: E
         })
     });
 }

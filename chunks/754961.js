@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return E;
+        return h;
     },
     i: function () {
         return m;
@@ -16,11 +16,11 @@ var i = n(735250),
     d = n(284019),
     u = n(689938),
     _ = n(117931);
-function h(e) {
-    let { index: t, onClick: n, name: s, isActive: d, animate: h, fillBackgroundColor: E, hasError: m } = e,
+function E(e) {
+    let { index: t, onClick: n, name: s, isActive: d, animate: E, fillBackgroundColor: h, hasError: m } = e,
         I = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY),
-        g = a.useMemo(() => (0, c.j1)(E, I.hex()), [E, I]),
-        p = null != g,
+        p = a.useMemo(() => (0, c.j1)(h, I.hex()), [h, I]),
+        g = null != p,
         T = (0, o.useSpring)(
             {
                 transform: d ? 'translateX(0%)' : 'translateX(-100%)',
@@ -29,7 +29,7 @@ function h(e) {
                     clamp: !0
                 }
             },
-            h ? 'respect-motion-settings' : 'animate-never'
+            E ? 'respect-motion-settings' : 'animate-never'
         ),
         f = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -50,8 +50,8 @@ function h(e) {
         text: m ? f : s,
         'aria-label': m ? u.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : s,
         shouldShow: null != n,
-        tooltipStyle: g,
-        tooltipClassName: r()(_.progressStepTooltip, { [_.progressStepTooltipCustomColors]: !m && null != g }),
+        tooltipStyle: p,
+        tooltipClassName: r()(_.progressStepTooltip, { [_.progressStepTooltipCustomColors]: !m && null != p }),
         children: (e) =>
             (0, i.jsxs)(o.Clickable, {
                 ...e,
@@ -71,16 +71,16 @@ function h(e) {
                         children: (0, i.jsx)(l.animated.div, {
                             style: {
                                 ...T,
-                                ...g
+                                ...p
                             },
-                            className: r()(_.progressStepFill, { [_.customProgressStepFill]: p })
+                            className: r()(_.progressStepFill, { [_.customProgressStepFill]: g })
                         })
                     })
                 ]
             })
     });
 }
-function E(e) {
+function h(e) {
     let { steps: t, currentStepIndex: n, furthestStepIndex: a, onStepClick: s, stepFillColor: o, animationStyle: c, className: d } = e;
     return (0, i.jsx)(l.animated.div, {
         style: c,
@@ -88,7 +88,7 @@ function E(e) {
         children: t.map((e) => {
             let { index: t, name: r, hasError: l } = e;
             return (0, i.jsx)(
-                h,
+                E,
                 {
                     name: r,
                     onClick: t <= a ? () => s(t) : void 0,
@@ -104,7 +104,7 @@ function E(e) {
     });
 }
 function m(e) {
-    let { className: t, isBackDisabled: n, isNextDisabled: a, onNextClick: s, onBackClick: c, nextButtonBackgroundColor: h, nextButtonClassName: E, nextButtonAnimationStyle: m } = e;
+    let { className: t, isBackDisabled: n, isNextDisabled: a, onNextClick: s, onBackClick: c, nextButtonBackgroundColor: E, nextButtonClassName: h, nextButtonAnimationStyle: m } = e;
     return (0, i.jsxs)('div', {
         className: r()(_.buttonsContainer, t),
         children: [
@@ -119,8 +119,8 @@ function m(e) {
             (0, i.jsx)(l.animated.div, {
                 style: m,
                 children: (0, i.jsx)(d.Z, {
-                    className: E,
-                    themeColor: h,
+                    className: h,
+                    themeColor: E,
                     color: o.Button.Colors.BRAND,
                     look: o.Button.Looks.FILLED,
                     size: o.Button.Sizes.MEDIUM,

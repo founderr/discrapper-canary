@@ -8,11 +8,11 @@ var i = n(735250),
     d = n(986332),
     u = n(428695),
     _ = n(981631),
-    h = n(689938),
-    E = n(768336);
+    E = n(689938),
+    h = n(768336);
 let m = r().debounce(o.ZP.trackWithMetadata, 500),
     I = (e) => {
-        let { guild: t, title: n, message: s, image: r, type: d, imageMarginX: u, imageMarginTop: I, trackingSource: g, undismissable: p, onDismissed: T, onClick: f, cta: S, ctaColor: C } = e;
+        let { guild: t, title: n, message: s, image: r, type: d, imageMarginX: u, imageMarginTop: I, trackingSource: p, undismissable: g, onDismissed: T, onClick: f, cta: S, ctaColor: C } = e;
         a.useEffect(() => {
             m(_.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: d,
@@ -24,12 +24,12 @@ let m = r().debounce(o.ZP.trackWithMetadata, 500),
             ? (N = S())
             : null != S &&
               (N = (0, i.jsx)(l.Button, {
-                  className: E.btn,
+                  className: h.btn,
                   size: l.Button.Sizes.SMALL,
                   onClick: () => {
                       null != d &&
                           c.default.track(_.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
-                              source: g,
+                              source: p,
                               guild_id: t.id,
                               notice_type: d
                           }),
@@ -41,42 +41,42 @@ let m = r().debounce(o.ZP.trackWithMetadata, 500),
               }));
         let A = null != u ? ''.concat(u, 'px') : '16px';
         return (0, i.jsxs)('div', {
-            className: E.channelNotice,
+            className: h.channelNotice,
             children: [
-                !0 === p
+                !0 === g
                     ? null
                     : (0, i.jsx)(l.Clickable, {
                           onClick: () => {
                               o.ZP.trackWithMetadata(_.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == T || T();
                           },
-                          className: E.close,
-                          'aria-label': h.Z.Messages.DISMISS,
+                          className: h.close,
+                          'aria-label': E.Z.Messages.DISMISS,
                           children: (0, i.jsx)(l.XSmallIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: E.closeIcon
+                              className: h.closeIcon
                           })
                       }),
                 (0, i.jsx)('div', {
-                    className: E.imageContainer,
+                    className: h.imageContainer,
                     style: {
                         marginTop: ''.concat(I, 'px'),
                         marginLeft: A,
                         marginRight: A
                     },
                     children: (0, i.jsx)('img', {
-                        className: E.image,
+                        className: h.image,
                         src: r,
                         alt: ''
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: E.message,
+                    className: h.message,
                     children: [
                         null != n
                             ? (0, i.jsx)(l.Heading, {
                                   variant: 'heading-md/semibold',
-                                  className: E.title,
+                                  className: h.title,
                                   children: n
                               })
                             : null,

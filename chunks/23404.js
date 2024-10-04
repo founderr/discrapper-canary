@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(210887),
     u = n(617136),
     _ = n(272008),
-    h = n(113434),
-    E = n(569984),
+    E = n(113434),
+    h = n(569984),
     m = n(497505),
     I = n(918701),
-    g = n(585500),
-    p = n(475595),
+    p = n(585500),
+    g = n(475595),
     T = n(566078),
     f = n(602667),
     S = n(611855),
@@ -29,8 +29,8 @@ var i = n(735250),
 function x(e) {
     var t;
     let { quest: n } = e,
-        a = (0, h.B6)(n.config.expiresAt),
-        s = (0, h.B6)(T.r.build(n.config).rewardsExpireAt),
+        a = (0, E.B6)(n.config.expiresAt),
+        s = (0, E.B6)(T.r.build(n.config).rewardsExpireAt),
         r = (0, l.e7)([d.Z], () => d.Z.getState().theme),
         u = (0, o.wj)(r) ? L.BRd.DARK : L.BRd.LIGHT,
         _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
@@ -40,7 +40,7 @@ function x(e) {
             (0, i.jsx)('img', {
                 className: O.headingGameTile,
                 alt: '',
-                src: (0, p.fh)(n, p.Bd.GAME_TILE, u).url
+                src: (0, g.fh)(n, g.Bd.GAME_TILE, u).url
             }),
             (0, i.jsxs)('div', {
                 className: O.headingCopy,
@@ -63,14 +63,14 @@ function x(e) {
 t.Z = function (e) {
     var t, n, s;
     let { quest: o } = e,
-        d = (0, l.e7)([E.Z], () => E.Z.isEnrolling(o.id), [o]),
-        [p, T] = a.useState(!1),
+        d = (0, l.e7)([h.Z], () => h.Z.isEnrolling(o.id), [o]),
+        [g, T] = a.useState(!1),
         L = a.useCallback(() => T(!0), []),
         b = a.useCallback(() => T(!1), []),
-        P = a.useCallback((e) => {
+        M = a.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        M = a.useCallback(() => {
+        P = a.useCallback(() => {
             (0, _.AH)(o.id, {
                 questContent: m.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
@@ -97,15 +97,15 @@ t.Z = function (e) {
             quest: o,
             location: m.jn.ACTIVITY_PANEL
         }),
-        U = (0, h.tP)(o),
+        U = (0, E.tP)(o),
         G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         w = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         k = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
         B = (null == o ? void 0 : o.userStatus) == null || (0, I.zE)(o.userStatus, m.jn.ACTIVITY_PANEL),
-        H = (0, h.Rf)(o),
-        V = (0, g.D)({
+        V = (0, E.Rf)(o),
+        H = (0, p.D)({
             quest: o,
-            taskDetails: H,
+            taskDetails: V,
             location: Z.dr.ACTIVITY_PANEL,
             questContent: m.jn.ACTIVITY_PANEL
         });
@@ -121,8 +121,8 @@ t.Z = function (e) {
                           e.current = t;
                       },
                       className: r()(O.wrapper, { [O.wrapperQuestAccepted]: G }),
-                      onClick: P,
-                      onKeyPress: P,
+                      onClick: M,
+                      onKeyPress: M,
                       onFocus: L,
                       onMouseEnter: L,
                       onBlur: b,
@@ -158,19 +158,19 @@ t.Z = function (e) {
                                           className: O.instructions,
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
-                                          children: V
+                                          children: H
                                       })
                                   ]
                               }),
                           G &&
                               !w &&
                               (0, i.jsx)(A.Z, {
-                                  autoplay: p,
+                                  autoplay: g,
                                   className: O.rewardTileWithInstructions,
                                   quest: o,
                                   questContent: m.jn.ACTIVITY_PANEL,
                                   location: Z.dr.ACTIVITY_PANEL,
-                                  taskDetails: H
+                                  taskDetails: V
                               }),
                           (0, i.jsxs)('div', {
                               className: O.ctas,
@@ -190,7 +190,7 @@ t.Z = function (e) {
                                                   className: O.cta,
                                                   color: c.Button.Colors.BRAND,
                                                   fullWidth: !0,
-                                                  onClick: M,
+                                                  onClick: P,
                                                   size: c.Button.Sizes.SMALL,
                                                   submitting: d,
                                                   children: R.Z.Messages.QUESTS_ACCEPT_QUEST

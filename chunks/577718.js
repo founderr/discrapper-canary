@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(282051),
     u = n(243778),
     _ = n(26323),
-    h = n(433280),
-    E = n(34131),
+    E = n(433280),
+    h = n(34131),
     m = n(434404),
     I = n(567458),
-    g = n(782959),
-    p = n(276645),
+    p = n(782959),
+    g = n(276645),
     T = n(970731),
     f = n(626135),
     S = n(267642),
@@ -28,8 +28,8 @@ var i = n(735250),
     O = n(741160),
     x = n(829972),
     b = n(31932),
-    P = n(642301);
-function M(e) {
+    M = n(642301);
+function P(e) {
     if (null != e) m.Z.open(e.id, C.pNK.OVERVIEW, { section: C.jXE.PREMIUM_GUILD_PROGRESS_BAR }, C.KsC.DISPLAY);
 }
 function D(e, t) {
@@ -84,7 +84,7 @@ t.Z = a.memo(function (e) {
             switch (w) {
                 case s.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK:
                     return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(p.Z, {
+                        renderPopout: (0, i.jsx)(g.Z, {
                             guildId: a.id,
                             markAsDismissed: k
                         }),
@@ -103,8 +103,8 @@ t.Z = a.memo(function (e) {
                             content: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
                             buttonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
                             secondaryButtonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
-                            onSecondaryClick: () => M(),
-                            onClick: () => M(a),
+                            onSecondaryClick: () => P(),
+                            onClick: () => P(a),
                             markAsDismissed: k
                         }),
                         renderGuildHeaderDropdownButton: l
@@ -122,15 +122,15 @@ t.Z = a.memo(function (e) {
                             content: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
                             buttonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
                             secondaryButtonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
-                            onSecondaryClick: () => M(),
-                            onClick: () => M(a),
+                            onSecondaryClick: () => P(),
+                            onClick: () => P(a),
                             markAsDismissed: k
                         }),
                         renderGuildHeaderDropdownButton: l
                     });
                 case s.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
                     return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(h.Z, {
+                        renderPopout: (0, i.jsx)(E.Z, {
                             guildId: a.id,
                             markAsDismissed: k
                         }),
@@ -200,7 +200,7 @@ t.Z = a.memo(function (e) {
                             secondaryButtonCTA: Z.Z.Messages.NO_THANKS,
                             asset: (0, i.jsx)('img', {
                                 alt: '',
-                                src: P,
+                                src: M,
                                 className: R.fullWidthImage
                             }),
                             onClick: () => {
@@ -212,7 +212,7 @@ t.Z = a.memo(function (e) {
                     });
                 case s.z.MEDIA_CHANNEL_UPSELL:
                     return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(g.Z, {
+                        renderPopout: (0, i.jsx)(p.Z, {
                             guildId: a.id,
                             markAsDismissed: k
                         }),
@@ -220,7 +220,7 @@ t.Z = a.memo(function (e) {
                     });
                 case s.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
                     return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(E.Z, {
+                        renderPopout: (0, i.jsx)(h.Z, {
                             guildId: a.id,
                             markAsDismissed: k
                         }),

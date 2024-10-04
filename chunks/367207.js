@@ -35,8 +35,8 @@ var l = n(392711),
     j = n(937579),
     D = n(1163),
     w = n(841174),
-    G = n(522558),
-    U = n(879463),
+    U = n(522558),
+    G = n(879463),
     k = n(822070),
     B = n(520540),
     V = n(11352),
@@ -82,7 +82,7 @@ class q extends c.Z {
         if (P.Z.getIsFetchingReferralIncentiveEligibility() || !(0, E.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
-        if (!!B.g.getCurrentConfig(t, n).enabled && !U.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, y.bq)();
+        if (!!B.g.getCurrentConfig(t, n).enabled && !G.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, y.bq)();
     }
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
@@ -149,7 +149,7 @@ class q extends c.Z {
                 null != e && e.verified && x.Z.shouldFetchCampaignContext() && (await (0, S.W)());
             }),
             K(this, '_maybeFetchUserAffinities', () => {
-                let { enabled: e } = G.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
+                let { enabled: e } = U.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
                 e && (0, p.W)();
             }),
             K(this, '_trackCustomNotificationSoundsExposure', () => {

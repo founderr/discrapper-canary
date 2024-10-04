@@ -8,12 +8,12 @@ var i = n(735250),
     d = n(612226),
     u = n(714338),
     _ = n(607070),
-    h = n(317858),
-    E = n(635395),
+    E = n(317858),
+    h = n(635395),
     m = n(5560),
     I = n(451478),
-    g = n(585483),
-    p = n(145604),
+    p = n(585483),
+    g = n(145604),
     T = n(718813),
     f = n(981631),
     S = n(119425);
@@ -29,14 +29,14 @@ t.Z = a.memo(function () {
         a.useEffect(() => (u.Z.setLayout(d.ZP), u.Z.enable(), () => u.Z.disable()), []),
         a.useEffect(
             () => (
-                g.S.subscribe(f.CkL.SHAKE_APP, t),
+                p.S.subscribe(f.CkL.SHAKE_APP, t),
                 () => {
-                    g.S.unsubscribe(f.CkL.SHAKE_APP, t);
+                    p.S.unsubscribe(f.CkL.SHAKE_APP, t);
                 }
             ),
             [t]
         ),
-        (0, h.Z)(),
+        (0, E.Z)(),
         (0, i.jsxs)(l.Shakeable, {
             ref: e,
             className: S.app,
@@ -45,9 +45,9 @@ t.Z = a.memo(function () {
                     className: S.layers,
                     children: (0, i.jsx)(o.Z, {})
                 }),
-                (0, i.jsx)(E.Z, {}),
+                (0, i.jsx)(h.Z, {}),
                 (0, i.jsx)(c.Z, {}),
-                (0, i.jsx)(p.Z, {}),
+                (0, i.jsx)(g.Z, {}),
                 (0, i.jsx)(m.Z, {}),
                 (0, i.jsx)(l.DnDKeyboardHelpBar, {})
             ]

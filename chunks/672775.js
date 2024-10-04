@@ -14,13 +14,13 @@ function l(e) {
             onStepClick: d,
             onNextClick: u,
             onBackClick: _,
-            isNextDisabled: h,
-            isBackDisabled: E
+            isNextDisabled: E,
+            isBackDisabled: h
         } = (0, a.Z)({
             progress: n,
             updateCurrentStep: l
         }),
-        { currentStep: m, furthestStep: I, brandPrimaryColor: g } = n;
+        { currentStep: m, furthestStep: I, brandPrimaryColor: p } = n;
     return (0, i.jsxs)('div', {
         className: r.navigation,
         children: [
@@ -31,14 +31,14 @@ function l(e) {
                 currentStepIndex: m,
                 furthestStepIndex: I,
                 onStepClick: d,
-                stepFillColor: g
+                stepFillColor: p
             }),
             (0, i.jsx)(s.i, {
-                isBackDisabled: E,
-                isNextDisabled: h,
+                isBackDisabled: h,
+                isNextDisabled: E,
                 onNextClick: u,
                 onBackClick: _,
-                nextButtonBackgroundColor: g,
+                nextButtonBackgroundColor: p,
                 nextButtonClassName: c,
                 nextButtonAnimationStyle: o
             })

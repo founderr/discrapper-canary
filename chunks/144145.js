@@ -15,12 +15,12 @@ var i = n(735250),
     d = n(726542),
     u = n(620662),
     _ = n(841784),
-    h = n(802856),
-    E = n(594190),
+    E = n(802856),
+    h = n(594190),
     m = n(592745),
     I = n(553795),
-    g = n(757266),
-    p = n(283595),
+    p = n(757266),
+    g = n(283595),
     T = n(417363),
     f = n(626135),
     S = n(804739),
@@ -36,7 +36,7 @@ function Z(e) {
                 n = (0, s.e7)([I.Z], () => I.Z.getAccounts().some((e) => e.type === d.Z.get(N.ABu.XBOX).type)),
                 a = t.some((e) => {
                     let { activity: t } = e;
-                    return (0, h.Z)(t);
+                    return (0, E.Z)(t);
                 });
             return n || !a
                 ? null
@@ -50,27 +50,27 @@ function Z(e) {
             let { currentActivities: t } = e,
                 n = a.useContext(f.AnalyticsContext);
             return (0, s.Wu)(
-                [E.ZP, p.Z, m.Z, T.Z, g.Z],
+                [h.ZP, g.Z, m.Z, T.Z, p.Z],
                 () =>
                     t
                         .filter((e) => !(0, _.Z)(e.activity))
                         .map((e) => {
                             let { activity: t, game: i } = e,
-                                a = p.Z.getActiveLibraryApplication(i.id);
+                                a = g.Z.getActiveLibraryApplication(i.id);
                             return {
                                 ...e,
                                 libraryApplication: a,
                                 canJoin: null != t && (0, u.Z)(t, N.xjy.JOIN) && t.type === N.IIU.PLAYING,
                                 canPlay: (0, S.t)({
-                                    LibraryApplicationStore: p.Z,
+                                    LibraryApplicationStore: g.Z,
                                     LaunchableGameStore: m.Z,
                                     DispatchApplicationStore: T.Z,
-                                    ConnectedAppsStore: g.Z,
+                                    ConnectedAppsStore: p.Z,
                                     applicationId: i.id,
                                     branchId: null != a ? a.branchId : null
                                 }),
                                 isLaunching: m.Z.launchingGames.has(i.id),
-                                isRunning: E.ZP.getRunningVerifiedApplicationIds().includes(i.id),
+                                isRunning: h.ZP.getRunningVerifiedApplicationIds().includes(i.id),
                                 location: n.location
                             };
                         }),

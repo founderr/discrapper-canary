@@ -13,12 +13,12 @@ var i = n(735250),
     d = n(963202),
     u = n(117496),
     _ = n(702646),
-    h = n(207796),
-    E = n(979233),
+    E = n(207796),
+    h = n(979233),
     m = n(88693),
     I = n(611928),
-    g = n(922122),
-    p = n(680180),
+    p = n(922122),
+    g = n(680180),
     T = n(164991),
     f = n(444324),
     S = n(726115),
@@ -32,29 +32,29 @@ var i = n(735250),
     O = n(636872);
 function x() {
     let e = a.useRef((0, u.P)()),
-        { onScroll: t, scrollPosition: n, resetScrollPosition: s } = (0, E.M)(),
-        { tabs: x, selectedTab: b, setSelectedTab: P } = (0, A.Y)(),
-        M = (0, S.lg)(b),
+        { onScroll: t, scrollPosition: n, resetScrollPosition: s } = (0, h.M)(),
+        { tabs: x, selectedTab: b, setSelectedTab: M } = (0, A.Y)(),
+        P = (0, S.lg)(b),
         D = !L.MU.has(b),
         y = (0, d.iN)('global_discovery_servers_layout'),
         { searchQuery: j, onSearchTextChange: U, onClearSearch: G, onSearchSubmit: w, isSearchVisible: k } = (0, N.H)({ loadId: e.current }),
         {
             searchBarState: B,
-            onTabsAvailableWidthChange: H,
-            onCollapsedSearchBarClick: V,
+            onTabsAvailableWidthChange: V,
+            onCollapsedSearchBarClick: H,
             onSearchBarBlur: F,
             tabsClassName: Y
         } = (0, m.U)({
             isSearchBarVisible: D,
             isSearchBarEmpty: '' === j.trim()
         }),
-        W = (0, T.NL)(),
-        z = (0, h.GN)((e) => e.mode, l.Z),
+        z = (0, T.NL)(),
+        W = (0, E.GN)((e) => e.mode, l.Z),
         K = a.useCallback(
             (e) => {
-                P(e), k && G();
+                M(e), k && G();
             },
-            [k, G, P]
+            [k, G, M]
         ),
         q = a.useMemo(
             () =>
@@ -66,15 +66,15 @@ function x() {
                     : x,
             [x, k]
         ),
-        Q = z === h.v0.SAVED_GUILDS,
-        X = a.useRef(new f.Z(M)),
+        Q = W === E.v0.SAVED_GUILDS,
+        X = a.useRef(new f.Z(P)),
         { onGuildCardSeen: J, onGuildCardClick: $ } = (0, C.H)({
             guildDiscoveryCardSeenManager: X.current,
             loadId: e.current
         });
     a.useEffect(() => {
         X.current.flushSeenGuilds(e.current);
-    }, [M]),
+    }, [P]),
         a.useEffect(() => {
             s();
         }, [b, s]),
@@ -92,18 +92,18 @@ function x() {
                 if (y) return (0, i.jsx)(_.Z, { className: r()(O.clanDiscoveryToolbar, !Q && O.rightAlignedToolbar) });
                 return null;
             default:
-                return (0, i.jsx)(p.Z, {
+                return (0, i.jsx)(g.Z, {
                     query: j,
                     placeholder: R.Z.Messages.SEARCH,
                     onTextChange: U,
                     onClear: G,
                     onSubmit: w,
-                    onCollapsedClick: V,
+                    onCollapsedClick: H,
                     state: B,
                     onBlur: F
                 });
         }
-    }, [b, y, j, U, G, w, V, B, F, Q]);
+    }, [b, y, j, U, G, w, H, B, F, Q]);
     return (0, i.jsxs)('div', {
         className: O.container,
         children: [
@@ -119,12 +119,12 @@ function x() {
                         }),
                     !Q &&
                         !k &&
-                        (0, i.jsx)(g.Z, {
+                        (0, i.jsx)(p.Z, {
                             className: Y,
                             tabs: q,
                             selectedTab: k ? null : b,
                             onTabSelect: K,
-                            onAvailableWidthChange: H
+                            onAvailableWidthChange: V
                         }),
                     !Q &&
                         k &&
@@ -132,7 +132,7 @@ function x() {
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
                             className: O.searchResultsHeader,
-                            children: R.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: W })
+                            children: R.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: z })
                         }),
                     ee
                 ]

@@ -14,12 +14,12 @@ var i,
     d = n(692547),
     u = n(481060),
     _ = n(232567),
-    h = n(100527),
-    E = n(471445),
+    E = n(100527),
+    h = n(471445),
     m = n(15274),
     I = n(924301),
-    g = n(504160),
-    p = n(151864),
+    p = n(504160),
+    g = n(151864),
     T = n(725436),
     f = n(497656),
     S = n(554747),
@@ -33,8 +33,8 @@ var i,
     O = n(448206),
     x = n(184301),
     b = n(347475),
-    P = n(496675),
-    M = n(594174),
+    M = n(496675),
+    P = n(594174),
     D = n(662868),
     y = n(981631),
     j = n(765305),
@@ -47,23 +47,23 @@ function w(e) {
         a = (0, S.k5)(t.id),
         l = (0, c.e7)([R.Z], () => R.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
         { isStageNoticeHidden: w, isEventNoticeHidden: k } = (0, c.cj)(
-            [p.Z],
+            [g.Z],
             () => ({
-                isStageNoticeHidden: p.Z.isLiveChannelNoticeHidden({ stageId: null == l ? void 0 : l.id }),
-                isEventNoticeHidden: p.Z.isLiveChannelNoticeHidden({ eventId: null == a ? void 0 : a.id })
+                isStageNoticeHidden: g.Z.isLiveChannelNoticeHidden({ stageId: null == l ? void 0 : l.id }),
+                isEventNoticeHidden: g.Z.isLiveChannelNoticeHidden({ eventId: null == a ? void 0 : a.id })
             }),
             [l, a]
         ),
         B = null == i ? void 0 : i.id,
-        H = (0, c.Wu)([Z.Z], () => [...new Set(Z.Z.getMutableParticipants(B, L.pV.SPEAKER).map((e) => e.user))], [B]),
-        V = (0, c.e7)([Z.Z], () => (null != B ? Z.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0), [B]),
-        F = (0, c.e7)([P.Z], () => P.Z.can(y.Plq.CONNECT, i)),
+        V = (0, c.Wu)([Z.Z], () => [...new Set(Z.Z.getMutableParticipants(B, L.pV.SPEAKER).map((e) => e.user))], [B]),
+        H = (0, c.e7)([Z.Z], () => (null != B ? Z.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0), [B]),
+        F = (0, c.e7)([M.Z], () => M.Z.can(y.Plq.CONNECT, i)),
         Y = (0, O.Z)(null == i ? void 0 : i.id),
-        W = null == a ? void 0 : a.creator_id,
-        z = (0, c.e7)([M.default], () => M.default.getUser(W), [W]);
+        z = null == a ? void 0 : a.creator_id,
+        W = (0, c.e7)([P.default], () => P.default.getUser(z), [z]);
     r.useEffect(() => {
-        null != W && (0, _.PR)(W);
-    }, [W]);
+        null != z && (0, _.PR)(z);
+    }, [z]);
     let {
         noticeType: K,
         title: q,
@@ -77,11 +77,11 @@ function w(e) {
     } = r.useMemo(
         () =>
             (function (e) {
-                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: a, myRole: r, eventCreator: l, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: _, isStudyRoomNotice: h } = e,
+                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: a, myRole: r, eventCreator: l, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: _, isStudyRoomNotice: E } = e,
                     m = null != n && null != i && !_,
-                    p = null != t ? (0, N.DK)(t) : null;
-                if (h && null != i) {
-                    let e = (0, E.KS)(i);
+                    g = null != t ? (0, N.DK)(t) : null;
+                if (E && null != i) {
+                    let e = (0, h.KS)(i);
                     return {
                         noticeType: 3,
                         title: '\uD83D\uDCDA\u2615 '.concat(i.name),
@@ -118,7 +118,7 @@ function w(e) {
                                 }),
                                 canListenIn: a,
                                 buttonText: e,
-                                onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
+                                onClose: () => (0, p.ji)({ stageId: null == n ? void 0 : n.id }),
                                 users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
                                     c < 1
@@ -162,7 +162,7 @@ function w(e) {
                                 }),
                                 canListenIn: a,
                                 buttonText: e,
-                                onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
+                                onClose: () => (0, p.ji)({ stageId: null == n ? void 0 : n.id }),
                                 users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
                                     c < 1
@@ -191,7 +191,7 @@ function w(e) {
                     if (t.entity_type === j.WX.EXTERNAL) {
                         let e = (0, C.cS)(t);
                         if (null == e) return { noticeType: null };
-                        let n = I.ZP.getUserCount(t.id, p);
+                        let n = I.ZP.getUserCount(t.id, g);
                         return {
                             noticeType: 1,
                             title: t.name,
@@ -205,7 +205,7 @@ function w(e) {
                             }),
                             canListenIn: !1,
                             buttonText: U.Z.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE,
-                            onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
+                            onClose: () => (0, p.ji)({ eventId: null == t ? void 0 : t.id }),
                             users: null == l ? [] : [l],
                             overflowUsers:
                                 n < 1
@@ -230,8 +230,8 @@ function w(e) {
                                       })
                         };
                     } else if (t.entity_type === j.WX.VOICE && null != i) {
-                        let e = (0, E.KS)(i),
-                            n = I.ZP.getUserCount(t.id, p);
+                        let e = (0, h.KS)(i),
+                            n = I.ZP.getUserCount(t.id, g);
                         return {
                             noticeType: 2,
                             title: t.name,
@@ -246,7 +246,7 @@ function w(e) {
                                     : null,
                             canListenIn: a,
                             buttonText: U.Z.Messages.GUILD_EVENT_JOIN,
-                            onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
+                            onClose: () => (0, p.ji)({ eventId: null == t ? void 0 : t.id }),
                             users: null == l ? [] : [l],
                             overflowUsers:
                                 n < 1
@@ -279,14 +279,14 @@ function w(e) {
                 activeChannel: i,
                 canConnect: F,
                 myRole: Y,
-                eventCreator: z,
-                speakers: H,
-                listenerCount: V,
+                eventCreator: W,
+                speakers: V,
+                listenerCount: H,
                 isEventNoticeHidden: k,
                 isStageNoticeHidden: w,
                 isStudyRoomNotice: n
             }),
-        [a, l, i, F, Y, z, H, V, k, w, n]
+        [a, l, i, F, Y, W, V, H, k, w, n]
     );
     return null == K
         ? null
@@ -334,7 +334,7 @@ function w(e) {
                                                   ...n,
                                                   userId: e.id,
                                                   guildId: t.id,
-                                                  newAnalyticsLocations: [h.Z.AVATAR]
+                                                  newAnalyticsLocations: [E.Z.AVATAR]
                                               }),
                                           position: 'right',
                                           children: (n) =>

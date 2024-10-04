@@ -15,13 +15,13 @@ var a = n(512722),
     d = n(51144),
     u = n(761282),
     _ = n(358924),
-    h = n(817915),
-    E = n(981631),
+    E = n(817915),
+    h = n(981631),
     m = n(689938);
 function I(e) {
     let { party: t, onUserContextMenu: a } = e,
-        { priorityMembers: I, guildContext: g } = t,
-        p = I[0],
+        { priorityMembers: I, guildContext: p } = t,
+        g = I[0],
         T = (function (e) {
             let { priorityMembers: t, partiedMembers: n } = e,
                 i = new Set(
@@ -51,10 +51,10 @@ function I(e) {
         })(t),
         { subtitle: f, icon: S } = (function (e) {
             var t;
-            let { priorityMembers: a, partiedMembers: d, voiceChannels: I, currentActivities: g } = e,
-                p = a.length,
-                T = d.length - p,
-                f = g[0],
+            let { priorityMembers: a, partiedMembers: d, voiceChannels: I, currentActivities: p } = e,
+                g = a.length,
+                T = d.length - g,
+                f = p[0],
                 S = null == f ? void 0 : f.activity,
                 C = null == f ? void 0 : f.startedPlayingTime,
                 N = { name: null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : '' };
@@ -67,7 +67,7 @@ function I(e) {
                     }),
                     icon: null
                 };
-            if (p + T === 1 && null != f) {
+            if (g + T === 1 && null != f) {
                 let { game: e } = f;
                 if (null == S)
                     return {
@@ -77,7 +77,7 @@ function I(e) {
                 let t = u.dc(S);
                 if (null != t) return t;
                 switch (S.type) {
-                    case E.IIU.PLAYING:
+                    case h.IIU.PLAYING:
                         if ((0, o.Z)(S))
                             return {
                                 subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
@@ -89,26 +89,26 @@ function I(e) {
                                 location: c.ZP.Locations.ACTIVITY_FEED_NEW,
                                 messageProps: N
                             }),
-                            icon: null != e ? (0, i.jsx)(_.Z.Header.Icon, { src: null != e.getIconURL(h.Z) ? e.getIconURL(h.Z) : n(211827) }) : null
+                            icon: null != e ? (0, i.jsx)(_.Z.Header.Icon, { src: null != e.getIconURL(E.Z) ? e.getIconURL(E.Z) : n(211827) }) : null
                         };
-                    case E.IIU.STREAMING:
+                    case h.IIU.STREAMING:
                         return {
                             subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH,
-                            icon: null != e && null != e.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(h.Z) }) : null
+                            icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) }) : null
                         };
-                    case E.IIU.LISTENING:
+                    case h.IIU.LISTENING:
                         let a;
                         return (
-                            (a = (0, l.Z)(S) ? (0, i.jsx)(_.Z.Header.Icon, { src: _.Z.Header.Icon.Src.SPOTIFY }) : null != e.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(h.Z) }) : (0, i.jsx)(_.Z.Header.Icon, { src: n(211827) })),
+                            (a = (0, l.Z)(S) ? (0, i.jsx)(_.Z.Header.Icon, { src: _.Z.Header.Icon.Src.SPOTIFY }) : null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) }) : (0, i.jsx)(_.Z.Header.Icon, { src: n(211827) })),
                             {
                                 subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({ name: S.name }),
                                 icon: a
                             }
                         );
-                    case E.IIU.WATCHING:
+                    case h.IIU.WATCHING:
                         return {
                             subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING,
-                            icon: null != e && null != e.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(h.Z) }) : null
+                            icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) }) : null
                         };
                     default:
                         return {
@@ -117,27 +117,27 @@ function I(e) {
                         };
                 }
             }
-            if (0 === g.length) {
+            if (0 === p.length) {
                 if (I.length > 0)
                     return {
                         subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
                         icon: null
                     };
-                let e = g[0];
+                let e = p[0];
                 if (null != e) {
                     let { activity: t } = e;
                     if (null != t) {
                         let e = u.dc(t);
                         if (null != e) return e;
                     }
-                    if (null != t && t.type === E.IIU.LISTENING)
+                    if (null != t && t.type === h.IIU.LISTENING)
                         return {
                             subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_SPOTIFY,
                             icon: (0, i.jsx)(_.Z.Header.Icon, { src: _.Z.Header.Icon.Src.SPOTIFY })
                         };
                 }
-            } else if (1 === g.length) {
-                let e = g.find((e) => null != e.activity);
+            } else if (1 === p.length) {
+                let e = p.find((e) => null != e.activity);
                 if (null == e)
                     return {
                         subtitle: null,
@@ -152,7 +152,7 @@ function I(e) {
                             location: c.ZP.Locations.ACTIVITY_FEED_NEW,
                             messageProps: N
                         }),
-                        icon: null != n && null != n.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: n.getIconURL(h.Z) }) : null
+                        icon: null != n && null != n.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: n.getIconURL(E.Z) }) : null
                     }
                 );
             }
@@ -162,11 +162,11 @@ function I(e) {
             };
         })(t);
     return (0, i.jsx)(_.Z.Header, {
-        priorityUser: p,
-        guildId: null == g ? void 0 : g.id,
+        priorityUser: g,
+        guildId: null == p ? void 0 : p.id,
         title: T,
         subtitle: f,
         icon: S,
-        onContextMenu: (e) => a(e, p.user)
+        onContextMenu: (e) => a(e, g.user)
     });
 }

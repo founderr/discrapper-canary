@@ -12,19 +12,19 @@ n.d(t, {
         return C;
     },
     Dm: function () {
-        return g;
+        return p;
     },
     LD: function () {
         return N;
     },
     NL: function () {
-        return h;
-    },
-    Zq: function () {
         return E;
     },
+    Zq: function () {
+        return h;
+    },
     a7: function () {
-        return p;
+        return g;
     },
     lZ: function () {
         return m;
@@ -63,12 +63,12 @@ function u(e) {
     return n(o.getState());
 }
 let _ = () => d('resultsQuery'),
-    h = () => d('fetchedQuery'),
-    E = () => u('fetchedQuery'),
+    E = () => d('fetchedQuery'),
+    h = () => u('fetchedQuery'),
     m = () => d('categoryId'),
     I = () => u('categoryId'),
-    g = () => d('languageCode'),
-    p = () => u('languageCode'),
+    p = () => d('languageCode'),
+    g = () => u('languageCode'),
     T = () => d('query'),
     f = () => u('query'),
     S = () => u('scrollPosition'),

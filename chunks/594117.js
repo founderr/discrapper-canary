@@ -14,7 +14,7 @@ var a = n(685072),
     d = n(870569),
     u = n(689938),
     _ = n(209263);
-function h(e) {
+function E(e) {
     let { tooltipText: t, onClick: n } = e,
         s = (0, a.K)();
     return (0, i.jsx)(d.Z, {
@@ -25,9 +25,9 @@ function h(e) {
         icon: s.Component
     });
 }
-function E(e) {
+function h(e) {
     let { channel: t } = e;
-    return (0, i.jsx)(h, {
+    return (0, i.jsx)(E, {
         tooltipText: u.Z.Messages.AUDIENCE_DISCONNECT,
         onClick: () => {
             if ((0, c.Z)(t)) {
@@ -40,7 +40,7 @@ function E(e) {
 }
 function m(e) {
     let { channel: t } = e;
-    return (0, i.jsx)(h, {
+    return (0, i.jsx)(E, {
         tooltipText: u.Z.Messages.DISCONNECT_SELF,
         onClick: () => {
             if ((0, l.Z)(t)) {
@@ -53,5 +53,5 @@ function m(e) {
 }
 function I(e) {
     let { channel: t } = e;
-    return t.isGuildStageVoice() ? (0, i.jsx)(E, { channel: t }) : (0, i.jsx)(m, { channel: t });
+    return t.isGuildStageVoice() ? (0, i.jsx)(h, { channel: t }) : (0, i.jsx)(m, { channel: t });
 }

@@ -46,7 +46,7 @@ function A(e) {
                 let { userId: n, previousRank: r } = t;
                 e.set(n, r);
             });
-            let { sortByStatisticId: t } = _.settings;
+            let { sort_by_statistic_id: t } = _.settings;
             return _.users.map((n, r) => {
                 var i, a;
                 return {
@@ -60,7 +60,7 @@ function A(e) {
         A = a.useMemo(() => null == T.find((e) => e.userId === l) && T.length <= g, [T, l]);
     if (null == _) return null;
     if (0 === _.users.length) return (0, i.jsx)(v, {});
-    let { sortByStatisticId: R } = _.settings,
+    let { sort_by_statistic_id: R } = _.settings,
         C = T[0];
     return (0, i.jsxs)('div', {
         className: I.container,

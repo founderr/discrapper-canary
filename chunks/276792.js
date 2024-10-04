@@ -1,6 +1,6 @@
 n.d(t, {
     N: function () {
-        return g;
+        return p;
     }
 });
 var i = n(735250);
@@ -14,21 +14,21 @@ var a = n(704215),
     d = n(63063),
     u = n(823188),
     _ = n(474936),
-    h = n(981631),
-    E = n(689938),
+    E = n(981631),
+    h = n(689938),
     m = n(566851),
     I = n(74316);
-function g(e) {
+function p(e) {
     var t, n;
-    let { content: g, renderModalProps: p, analyticsLocations: T, analyticsLocation: f, isLightTheme: S } = e,
-        C = 'AnnouncementModalVariant1_'.concat(a.z[Number(g.dismissKey)]),
-        { onClose: N } = p,
-        A = null != g.button && '' !== g.button.copy ? g.button.copy : E.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN,
-        v = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === s.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
+    let { content: p, renderModalProps: g, analyticsLocations: T, analyticsLocation: f, isLightTheme: S } = e,
+        C = 'AnnouncementModalVariant1_'.concat(a.z[Number(p.dismissKey)]),
+        { onClose: N } = g,
+        A = null != p.button && '' !== p.button.copy ? p.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN,
+        v = (null === (t = p.button) || void 0 === t ? void 0 : t.buttonAction) === s.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
         Z =
-            (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === s.Wc.OPEN_MARKETING_PAGE
+            (null === (n = p.button) || void 0 === n ? void 0 : n.buttonAction) === s.Wc.OPEN_MARKETING_PAGE
                 ? () => {
-                      (0, o.uL)(h.Z5c.APPLICATION_STORE), N();
+                      (0, o.uL)(E.Z5c.APPLICATION_STORE), N();
                   }
                 : () =>
                       (0, l.Z)({
@@ -36,56 +36,56 @@ function g(e) {
                           analyticsLocations: T,
                           analyticsObject: {
                               ...f,
-                              object: h.qAy.BUTTON_CTA,
-                              objectType: h.Qqv.TIER_2
+                              object: E.qAy.BUTTON_CTA,
+                              objectType: E.Qqv.TIER_2
                           },
                           onClose: (e) => {
                               e && N();
                           }
                       }),
         L =
-            '' !== g.helpArticleId
+            '' !== p.helpArticleId
                 ? () =>
                       (0, i.jsx)(r.Anchor, {
                           className: m.termsApplyAnchor,
-                          href: d.Z.getArticleURL(g.helpArticleId),
-                          children: E.Z.Messages.BOGO_TERMS_APPLY
+                          href: d.Z.getArticleURL(p.helpArticleId),
+                          children: h.Z.Messages.BOGO_TERMS_APPLY
                       })
                 : void 0,
         R = {
             type: 'video',
-            src: S ? g.heroArtVideoLinkLightTheme : g.videoLink
+            src: S ? p.heroArtVideoLinkLightTheme : p.videoLink
         };
-    null != g.heroArtVideoSubtitles &&
-        (R.subtitles = g.heroArtVideoSubtitles.map((e) => ({
+    null != p.heroArtVideoSubtitles &&
+        (R.subtitles = p.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1
         }))),
-        ('' !== g.heroArtImageLinkDarkTheme || '' !== g.heroArtImageLinkLightTheme) &&
+        ('' !== p.heroArtImageLinkDarkTheme || '' !== p.heroArtImageLinkLightTheme) &&
             (R = {
                 type: 'image',
-                src: S ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
+                src: S ? p.heroArtImageLinkLightTheme : p.heroArtImageLinkDarkTheme
             });
     let O = S ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
         x =
-            '' !== g.modalTopPill
+            '' !== p.modalTopPill
                 ? () =>
                       (0, i.jsx)(u.Cy, {
-                          text: g.modalTopPill,
+                          text: p.modalTopPill,
                           className: m.modalTopPill,
                           colorOptions: O
                       })
                 : void 0;
     return {
-        renderModalProps: p,
-        header: g.header,
+        renderModalProps: g,
+        header: p.header,
         modalTopExtra: x,
-        subHeader: g.subheader,
+        subHeader: p.subheader,
         subHeaderExtra: L,
-        body: g.body,
+        body: p.body,
         heroArt: R,
-        featureCards: g.featureCards.map((e) => ({
+        featureCards: p.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
             imageSrc: S ? e.imageLinkLightTheme : e.imageLink,
@@ -100,7 +100,7 @@ function g(e) {
                 wrapperClassName: m.tier2Gradient,
                 size: r.Button.Sizes.SMALL,
                 onClick: () => {
-                    c.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
+                    c.default.track(E.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: C,
                         cta_type: v,
                         seconds_open: Math.round((Date.now() - e) / 1000),
@@ -118,6 +118,6 @@ function g(e) {
                 ]
             });
         },
-        modalDismissibleContent: '' !== g.dismissKey ? Number(g.dismissKey) : void 0
+        modalDismissibleContent: '' !== p.dismissKey ? Number(p.dismissKey) : void 0
     };
 }

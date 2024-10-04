@@ -5,9 +5,9 @@ let i = {
     interval_start: '1288198265241600000',
     interval_end: '1290734980300800000',
     settings: {
-        sortByStatisticId: n(99815).E.LOL_TOTAL_KILLS,
-        sortDesc: !0,
-        intervalType: r.q.WEEKLY
+        sort_by_statistic_id: n(99815).E.LOL_TOTAL_KILLS,
+        sort_desc: !0,
+        interval_type: r.q.WEEKLY
     },
     users: [
         {

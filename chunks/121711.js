@@ -8,12 +8,12 @@ var i = n(735250),
     d = n(175307),
     u = n(17845),
     _ = n(374939),
-    h = n(233374),
-    E = n(611928),
+    E = n(233374),
+    h = n(611928),
     m = n(283293),
     I = n(63063),
-    g = n(113434),
-    p = n(833435),
+    p = n(113434),
+    g = n(833435),
     T = n(150560),
     f = n(558652),
     S = n(736683),
@@ -26,7 +26,7 @@ t.Z = function () {
     let { tabs: e, selectedTab: t, onSelectTab: n } = (0, C.z)(),
         { onScroll: L, scrollPosition: R } = (0, c.M)(),
         O = T.Z.getState().getUtmCurrentContext(),
-        x = (0, p._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? S.Z : S.j;
+        x = (0, g._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? S.Z : S.j;
     a.useEffect(() => {
         (0, l.h)({
             name: s.ImpressionNames.QUEST_HOME,
@@ -44,18 +44,18 @@ t.Z = function () {
         window.open(I.Z.getArticleURL(A.BhN.QUESTS_LEARN_MORE));
     }, []);
     (0, o.Tt)({ location: v.Z.Messages.QUESTS });
-    let P = a.useMemo(() => [v.Z.Messages.QUESTS_HOME_PART_ONE, v.Z.Messages.QUESTS_HOME_PART_TWO], []);
+    let M = a.useMemo(() => [v.Z.Messages.QUESTS_HOME_PART_ONE, v.Z.Messages.QUESTS_HOME_PART_TWO], []);
     return (0, i.jsxs)('div', {
         className: Z.container,
         children: [
-            (0, i.jsxs)(E.ZP, {
-                children: [(0, i.jsx)('div', { className: Z.dragRegion }), (0, i.jsx)(E.z6, { scrollPosition: R }), (0, i.jsx)(E.aV, { icon: r.QuestsIcon })]
+            (0, i.jsxs)(h.ZP, {
+                children: [(0, i.jsx)('div', { className: Z.dragRegion }), (0, i.jsx)(h.z6, { scrollPosition: R }), (0, i.jsx)(h.aV, { icon: r.QuestsIcon })]
             }),
             (0, i.jsxs)(m.Z, {
                 onScroll: L,
                 children: [
                     (0, i.jsx)(u.Z, {
-                        title: P,
+                        title: M,
                         description: v.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
                         button: (0, i.jsx)(d.u, {
                             text: v.Z.Messages.LEARN_MORE,
@@ -69,13 +69,13 @@ t.Z = function () {
                     }),
                     (0, i.jsxs)(_.Z, {
                         children: [
-                            (0, i.jsx)(h.Z, {
+                            (0, i.jsx)(E.Z, {
                                 tabs: e,
                                 selectedTab: t,
                                 onTabSelect: n,
                                 className: Z.tabs
                             }),
-                            t === g.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(f.Z, {})
+                            t === p.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(f.Z, {})
                         ]
                     })
                 ]

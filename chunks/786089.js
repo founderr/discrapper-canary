@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(481060),
     u = n(393238),
     _ = n(410030),
-    h = n(204418),
-    E = n(583434),
+    E = n(204418),
+    h = n(583434),
     m = n(70097),
     I = n(594174),
-    g = n(626135),
-    p = n(617136),
+    p = n(626135),
+    g = n(617136),
     T = n(113434),
     f = n(497505),
     S = n(475595),
@@ -26,7 +26,7 @@ t.Z = (0, a.memo)(function (e) {
     let { quest: L } = e,
         [R, O] = (0, a.useState)(!1),
         [x, b] = (0, a.useState)(24),
-        [P, M] = (0, a.useState)(!1),
+        [M, P] = (0, a.useState)(!1),
         D = (0, a.useRef)(null),
         y = (0, a.useRef)(null),
         j = (0, a.useRef)(null),
@@ -37,11 +37,11 @@ t.Z = (0, a.memo)(function (e) {
             month: 'numeric',
             day: 'numeric'
         }),
-        H = null !== (v = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
-        V = L.config.rewards[H],
-        F = (null == V ? void 0 : V.type) === l.w.COLLECTIBLE,
-        { product: Y } = (0, E.T)(F && null != V ? V.skuId : null),
-        W = null == Y ? void 0 : null === (s = Y.items) || void 0 === s ? void 0 : s[0];
+        V = null !== (v = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
+        H = L.config.rewards[V],
+        F = (null == H ? void 0 : H.type) === l.w.COLLECTIBLE,
+        { product: Y } = (0, h.T)(F && null != H ? H.skuId : null),
+        z = null == Y ? void 0 : null === (s = Y.items) || void 0 === s ? void 0 : s[0];
     (0, u.P)(D, (e) => {
         let { height: t } = e;
         if (!F || null == t || null == y.current || null == D.current || null == j.current) return;
@@ -50,27 +50,27 @@ t.Z = (0, a.memo)(function (e) {
             a = j.current.getBoundingClientRect();
         b((i.top - n.top - a.height) / 2);
     });
-    let z = (0, c.wj)(k),
+    let W = (0, c.wj)(k),
         K = (0, a.useMemo)(() => (0, S.fh)(L, S.Bd.LOGO_TYPE, 'dark'), [L]),
         q = (0, a.useMemo)(() => (0, S.fh)(L, S.Bd.REWARD), [L]),
         Q = R ? w + 8 : 0,
         X = () => {
             O(!0),
-                g.default.track(C.rMx.QUEST_HOVER, {
+                p.default.track(C.rMx.QUEST_HOVER, {
                     quest_id: L.id,
-                    ...(0, p.mH)(f.jn.TROPHY_CASE_CARD)
+                    ...(0, g.mH)(f.jn.TROPHY_CASE_CARD)
                 });
         },
         J = () => O(!1),
         $ = (e) => {
-            M(!0),
-                g.default.track(C.rMx.QUEST_ASSET_LOADING_FAILURE, {
+            P(!0),
+                p.default.track(C.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
                     quest_id: L.id
                 });
         };
-    return null == V || P
+    return null == H || M
         ? null
         : (0, i.jsx)(d.FocusRing, {
               children: (0, i.jsxs)('div', {
@@ -88,8 +88,8 @@ t.Z = (0, a.memo)(function (e) {
                               ref: j,
                               className: A.decoWrapper,
                               style: { top: x },
-                              children: (0, i.jsx)(h.Z, {
-                                  avatarDecorationOverride: W,
+                              children: (0, i.jsx)(E.Z, {
+                                  avatarDecorationOverride: z,
                                   user: U,
                                   guildId: null
                               })
@@ -114,8 +114,8 @@ t.Z = (0, a.memo)(function (e) {
                             }),
                       (0, i.jsx)('div', {
                           className: r()(A.overlay, {
-                              [A.darkThemeGradient]: z,
-                              [A.lightThemeGradient]: !z
+                              [A.darkThemeGradient]: W,
+                              [A.lightThemeGradient]: !W
                           })
                       }),
                       (0, i.jsx)('div', {
@@ -140,10 +140,10 @@ t.Z = (0, a.memo)(function (e) {
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
-                                  color: z ? 'text-muted' : 'always-white',
-                                  style: { opacity: z ? 1 : 0.75 },
+                                  color: W ? 'text-muted' : 'always-white',
+                                  style: { opacity: W ? 1 : 0.75 },
                                   children: N.Z.Messages.QUEST_REWARD_CLAIMED.format({
-                                      reward: V.name,
+                                      reward: H.name,
                                       claimedDate: B
                                   })
                               })

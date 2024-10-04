@@ -9,12 +9,12 @@ var i = n(392711),
     d = n(592125),
     u = n(430824),
     _ = n(496675),
-    h = n(944486),
-    E = n(979651),
+    E = n(944486),
+    h = n(979651),
     m = n(934415),
     I = n(996106),
-    g = n(914946),
-    p = n(452426),
+    p = n(914946),
+    g = n(452426),
     T = n(561205),
     f = n(186901),
     S = n(981631);
@@ -34,7 +34,7 @@ t.Z = {
                 let e = n.authorization.scopes;
                 if (!e.includes(s.x.RPC) && !e.includes(s.x.DM_CHANNELS_READ)) throw new I.Z({ errorCode: S.lTL.INVALID_PERMISSIONS }, 'Invalid scope');
             }
-            return (0, g.T5)(i, (0, g.zM)(i, n.application.id, n.authorization.scopes));
+            return (0, p.T5)(i, (0, p.zM)(i, n.application.id, n.authorization.scopes));
         }
     },
     [S.Etm.GET_CHANNELS]: {
@@ -79,7 +79,7 @@ t.Z = {
     [S.Etm.SELECT_VOICE_CHANNEL]: {
         scope: s.x.RPC,
         validation: (e) =>
-            (0, p.Z)(e)
+            (0, g.Z)(e)
                 .required()
                 .keys({
                     channel_id: e.string().allow(null),
@@ -94,8 +94,8 @@ t.Z = {
                 args: { channel_id: i, timeout: a = 0, force: s = !1, navigate: r = !1 }
             } = e;
             if (!i) return l.default.selectVoiceChannel(null), null;
-            let p = h.Z.getVoiceChannelId();
-            if (null != p && p !== i && !1 === s) throw new I.Z({ errorCode: S.lTL.SELECT_VOICE_FORCE_REQUIRED }, 'User is already joined to a voice channel.');
+            let g = E.Z.getVoiceChannelId();
+            if (null != g && g !== i && !1 === s) throw new I.Z({ errorCode: S.lTL.SELECT_VOICE_FORCE_REQUIRED }, 'User is already joined to a voice channel.');
             return t
                 .storeWait(n, () => d.Z.getChannel(i), a)
                 .catch(() => {
@@ -104,12 +104,12 @@ t.Z = {
                 .then((e) => {
                     if (null == e) throw new I.Z({ errorCode: S.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(i));
                     if (!(0, c.vd)(e.type)) throw new I.Z({ errorCode: S.lTL.INVALID_CHANNEL }, 'Channel is not a voice channel');
-                    return Promise.all([Promise.resolve(e), (0, g.T5)(e, (0, g.zM)(e, n.application.id, n.authorization.scopes))]);
+                    return Promise.all([Promise.resolve(e), (0, p.T5)(e, (0, p.zM)(e, n.application.id, n.authorization.scopes))]);
                 })
                 .then((e) => {
                     let [t, n] = e;
                     if (n.guild_id) {
-                        if ((0, m.rY)(t, E.Z, u.Z)) throw new I.Z({ errorCode: S.lTL.INVALID_CHANNEL }, 'Channel is full');
+                        if ((0, m.rY)(t, h.Z, u.Z)) throw new I.Z({ errorCode: S.lTL.INVALID_CHANNEL }, 'Channel is full');
                         if (!_.Z.can(S.Plq.CONNECT, t)) throw new I.Z({ errorCode: S.lTL.INVALID_PERMISSIONS }, 'Connect permission required to join channel');
                     }
                     return l.default.selectVoiceChannel(t.id), r && (0, o.dL)(S.Z5c.CHANNEL(t.guild_id, t.id)), n;
@@ -122,15 +122,15 @@ t.Z = {
         },
         handler(e) {
             let { socket: t } = e,
-                n = h.Z.getVoiceChannelId(),
+                n = E.Z.getVoiceChannelId(),
                 i = null != n ? d.Z.getChannel(n) : null;
-            return null != i ? (0, g.T5)(i, (0, g.zM)(i, t.application.id, t.authorization.scopes)) : null;
+            return null != i ? (0, p.T5)(i, (0, p.zM)(i, t.application.id, t.authorization.scopes)) : null;
         }
     },
     [S.Etm.SELECT_TEXT_CHANNEL]: {
         scope: s.x.RPC,
         validation: (e) =>
-            (0, p.Z)(e)
+            (0, g.Z)(e)
                 .required()
                 .keys({
                     channel_id: e.string().allow(null),
@@ -151,7 +151,7 @@ t.Z = {
                       .then((e) => {
                           if (null == e) throw new I.Z({ errorCode: S.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(i));
                           if (!(0, c.Qm)(e.type)) throw new I.Z({ errorCode: S.lTL.INVALID_CHANNEL }, 'Channel is not a text channel');
-                          return Promise.all([Promise.resolve(e), (0, g.T5)(e, (0, g.zM)(e, n.application.id, n.authorization.scopes))]);
+                          return Promise.all([Promise.resolve(e), (0, p.T5)(e, (0, p.zM)(e, n.application.id, n.authorization.scopes))]);
                       })
                       .then((e) => {
                           let [t, n] = e;

@@ -21,8 +21,8 @@ var i = t(735250),
     E = t(626135),
     T = t(486199),
     h = t(929507),
-    g = t(981631),
-    p = t(689938),
+    p = t(981631),
+    g = t(689938),
     f = t(556208);
 function x(e) {
     var n, t, s, x, C, O, S;
@@ -66,7 +66,7 @@ function x(e) {
         Y = H && !k && !F && void 0 !== G && null != j;
     a.useEffect(() => {
         Y &&
-            E.default.track(g.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
+            E.default.track(p.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
                 ...(0, d.hH)(G),
                 application_id: null == j ? void 0 : j.application.id,
                 location: 'overview'
@@ -80,7 +80,7 @@ function x(e) {
                               e.stopPropagation(), V(!0), h.Z.dismissOverviewTooltip(G, j.integration);
                           },
                           children: (0, i.jsx)(_.ZP, {
-                              content: p.Z.Messages.COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP,
+                              content: g.Z.Messages.COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP,
                               onClick: () => {}
                           })
                       }),
@@ -128,7 +128,7 @@ function x(e) {
                                                 c.TooltipContainer,
                                                 {
                                                     forceOpen: n,
-                                                    text: new N.Z(l.bot).isVerifiedBot() ? p.Z.Messages.INTEGRATIONS_APPLICATION_VERIFIED_BOT : p.Z.Messages.INTEGRATIONS_APPLICATION_BOT,
+                                                    text: new N.Z(l.bot).isVerifiedBot() ? g.Z.Messages.INTEGRATIONS_APPLICATION_VERIFIED_BOT : g.Z.Messages.INTEGRATIONS_APPLICATION_BOT,
                                                     className: f.feature,
                                                     children: (0, i.jsx)(c.RobotIcon, {
                                                         size: 'md',
@@ -145,7 +145,7 @@ function x(e) {
                                                 c.TooltipContainer,
                                                 {
                                                     forceOpen: n,
-                                                    text: p.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({ count: d.length }),
+                                                    text: g.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({ count: d.length }),
                                                     className: f.feature,
                                                     children: (0, i.jsx)(c.WebhookIcon, {
                                                         size: 'md',

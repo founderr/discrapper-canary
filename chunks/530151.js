@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(692547),
     u = n(780384),
     _ = n(481060),
-    h = n(570140),
-    E = n(239091),
+    E = n(570140),
+    h = n(239091),
     m = n(51025),
     I = n(785547),
-    g = n(730749),
-    p = n(112724),
+    p = n(730749),
+    g = n(112724),
     T = n(812206),
     f = n(44315),
     S = n(600164),
@@ -28,8 +28,8 @@ var i = n(735250),
     O = n(451478),
     x = n(424218),
     b = n(780570),
-    P = n(353042),
-    M = n(86826),
+    M = n(353042),
+    P = n(86826),
     D = n(981631),
     y = n(689938),
     j = n(734744);
@@ -86,7 +86,7 @@ function B(e, t) {
             return (0, x.BU)(e, { useKibibytes: !0 });
     }
 }
-let H = {
+let V = {
     [D.vxO.INSTALLING]: {
         [A.J6.NONE]: (e, t, n, i) =>
             y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
@@ -175,8 +175,8 @@ let H = {
             })
     }
 };
-function V(e, t, n, i, a) {
-    let s = H[t],
+function H(e, t, n, i, a) {
+    let s = V[t],
         r = null != s ? Object.keys(s) : [],
         { unit: l, time: o } = (0, A.CI)(null != e ? e / 60 : null, r);
     if (null != s && null != l) {
@@ -202,7 +202,7 @@ function F(e) {
         case D.f07.ALLOCATING_DISK:
             return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_ALLOCATING_DISK.format({ percent: i });
         case D.f07.PATCHING:
-            return V(r, t, i, o, l);
+            return H(r, t, i, o, l);
         case D.f07.FINALIZING:
             return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINALIZING.format({ percent: i });
         case D.f07.PAUSING:
@@ -224,7 +224,7 @@ function F(e) {
                 total: l
             });
         case D.f07.REPAIRING:
-            if (t === D.vxO.REPAIRING) return V(r, t, i, o, l);
+            if (t === D.vxO.REPAIRING) return H(r, t, i, o, l);
             return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_REPAIRING.format({
                 percent: i,
                 progress: o,
@@ -234,8 +234,8 @@ function F(e) {
     throw Error('Invalid Dispatch stage');
 }
 let Y = 'name',
-    W = 'progress',
-    z = 'actions';
+    z = 'progress',
+    W = 'actions';
 class K extends a.PureComponent {
     get isFocused() {
         let { cellProps: e } = this.props;
@@ -344,7 +344,7 @@ class K extends a.PureComponent {
         });
     }
     renderProgressPatching() {
-        return (0, i.jsx)(P.Z, {
+        return (0, i.jsx)(M.Z, {
             getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
@@ -463,7 +463,7 @@ let q = () =>
                 })
         },
         {
-            key: W,
+            key: z,
             cellClassName: j.progressCell,
             headerCellClassName: j.progressCellHeader,
             bodyCellClassName: j.progressCellBody,
@@ -474,7 +474,7 @@ let q = () =>
                 })
         },
         {
-            key: z,
+            key: W,
             cellClassName: j.actionsCell,
             render(e, t) {
                 let n, a;
@@ -511,7 +511,7 @@ class ee extends a.PureComponent {
         let { applications: e } = this.props;
         e.forEach((e) => {
             e.finished &&
-                h.Z.wait(() => {
+                E.Z.wait(() => {
                     m.wi(e.applicationId, e.branchId);
                 });
         }),
@@ -528,14 +528,14 @@ class ee extends a.PureComponent {
                       (0, i.jsxs)('div', {
                           className: j.headerRow,
                           children: [
-                              (0, i.jsx)(M.Z, {
+                              (0, i.jsx)(P.Z, {
                                   className: r()(j.headerCell, j.networkProgress),
                                   title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
                                   getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesDownloaded,
                                   color: D.Ilk.GREEN_360,
                                   animate: a
                               }),
-                              (0, i.jsx)(M.Z, {
+                              (0, i.jsx)(P.Z, {
                                   className: r()(j.headerCell, j.diskProgress),
                                   title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
                                   getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesWritten,
@@ -563,7 +563,7 @@ class ee extends a.PureComponent {
                                       (a = e),
                                       (s = t),
                                       (r = l),
-                                      void E.jW(a, async () => {
+                                      void h.jW(a, async () => {
                                           let { default: e } = await n.e('98335').then(n.bind(n, 485292));
                                           return (t) =>
                                               (0, i.jsx)(e, {
@@ -618,7 +618,7 @@ function et(e, t, n, i) {
         );
     }, []);
 }
-t.Z = (0, p.Z)(
+t.Z = (0, g.Z)(
     c.ZP.connectStores([T.Z, L.Z, R.Z, v.Z, O.Z], () => {
         let e = et(R.Z.activeItems, !1, T.Z, L.Z);
         return {
@@ -627,5 +627,5 @@ t.Z = (0, p.Z)(
             isFocused: O.Z.isFocused(),
             theme: v.Z.theme
         };
-    })((0, g.Z)(ee))
+    })((0, p.Z)(ee))
 );

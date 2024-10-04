@@ -147,18 +147,18 @@ function w(e) {
     function R() {
         null != _ && b.Z.acceptInvite(_);
     }
-    let { guild: j, channel: w, inviter: G, target_application: U } = _,
+    let { guild: j, channel: w, inviter: U, target_application: G } = _,
         k = null != j,
         B = null != _.stage_instance,
         V = null == _.guild && null == _.channel && null != _.inviter;
-    if (null != U) (t = null == j ? void 0 : j.name), (n = I.Z.createFromServer(U).getCoverImageURL(1024));
+    if (null != G) (t = null == j ? void 0 : j.name), (n = I.Z.createFromServer(G).getCoverImageURL(1024));
     else if (null != j)
         (t = j.name),
             (n = v.ZP.getGuildSplashURL({
                 id: j.id,
                 splash: j.splash
             }));
-    else if (((null == (t = w.name) || '' === t) && null != G && (t = G.username), null == t)) throw Error('no name for group DM invite');
+    else if (((null == (t = w.name) || '' === t) && null != U && (t = U.username), null == t)) throw Error('no name for group DM invite');
     let H = (0, g.yU)(),
         F = B ? L.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : L.Z.Messages.INVITE_MODAL_BUTTON.format({ guildName: t });
     return (
@@ -202,7 +202,7 @@ function w(e) {
                                     (0, i.jsxs)('div', {
                                         children: [
                                             H ? (0, i.jsx)(O, {}) : null,
-                                            null == U
+                                            null == G
                                                 ? (0, i.jsx)(o.Tooltip, {
                                                       text: H ? L.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                                                       position: 'bottom',

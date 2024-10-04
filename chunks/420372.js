@@ -9,11 +9,11 @@ var i = n(735250),
     d = n(361213),
     u = n(778569),
     _ = n(783097),
-    h = n(220082),
-    E = n(70097),
+    E = n(220082),
+    h = n(70097),
     m = n(768581),
     I = n(803537);
-function g(e) {
+function p(e) {
     let { application: t, isHovered: n, botBannerUrl: s, botBannerUrlAnimated: r } = e,
         l = (0, u.Z)({
             applicationId: t.id,
@@ -24,7 +24,7 @@ function g(e) {
             let e = (0, _.yJ)(t);
             return null != e && null != e.activity_preview_video_asset_id ? (0, d.Z)(t.id, e.activity_preview_video_asset_id) : null;
         }, [t]),
-        { imageUrl: c, imageUrlAnimated: h } = a.useMemo(
+        { imageUrl: c, imageUrlAnimated: E } = a.useMemo(
             () =>
                 'fetched' === l.state && null != l.url
                     ? { imageUrl: l.url }
@@ -35,9 +35,9 @@ function g(e) {
             [l.state, l.url, s, r]
         ),
         m = null != c,
-        g = null != o;
+        p = null != o;
     if ('loading' !== l.state) {
-        if (g)
+        if (p)
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(T, {
@@ -46,12 +46,12 @@ function g(e) {
                         isVideo: !0
                     }),
                     m
-                        ? (0, i.jsx)(p, {
+                        ? (0, i.jsx)(g, {
                               isHovered: n,
                               url: c,
                               animatedUrl: void 0
                           })
-                        : (0, i.jsx)(E.Z, {
+                        : (0, i.jsx)(h.Z, {
                               src: o,
                               className: I.bannerImage,
                               muted: !0
@@ -59,15 +59,15 @@ function g(e) {
                 ]
             });
         if (m)
-            return (0, i.jsx)(p, {
+            return (0, i.jsx)(g, {
                 isHovered: n,
                 url: c,
-                animatedUrl: h
+                animatedUrl: E
             });
     }
     return null;
 }
-function p(e) {
+function g(e) {
     let { isHovered: t, url: n, animatedUrl: a } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -97,7 +97,7 @@ function T(e) {
               className: r()(I.activityAnimatedContainer, { [I.videoFadeOut]: !t }),
               onAnimationEnd: () => (t ? null : o(!1)),
               children: s
-                  ? (0, i.jsx)(E.Z, {
+                  ? (0, i.jsx)(h.Z, {
                         src: n,
                         className: I.activityVideo,
                         loop: !0,
@@ -119,10 +119,10 @@ t.Z = function (e) {
         u = a.useCallback(() => {
             d(!0);
         }, []),
-        E = a.useCallback(() => d(!1), []),
+        h = a.useCallback(() => d(!1), []),
         T = (0, _.ye)(t),
         f = (0, o.useToken)(o.tokens.colors.BACKGROUND_PRIMARY).hex(),
-        S = (0, h.ZP)(n, f),
+        S = (0, E.ZP)(n, f),
         C = t.bot,
         { botBannerUrl: N, botBannerUrlAnimated: A } = a.useMemo(
             () =>
@@ -151,17 +151,17 @@ t.Z = function (e) {
         style: { backgroundColor: S },
         onMouseEnter: u,
         onFocus: u,
-        onMouseLeave: E,
-        onBlur: E,
+        onMouseLeave: h,
+        onBlur: h,
         children: T
-            ? (0, i.jsx)(g, {
+            ? (0, i.jsx)(p, {
                   application: t,
                   isHovered: r,
                   botBannerUrl: null == N ? void 0 : N,
                   botBannerUrlAnimated: null == A ? void 0 : A
               })
             : null != N
-              ? (0, i.jsx)(p, {
+              ? (0, i.jsx)(g, {
                     isHovered: r,
                     url: N,
                     animatedUrl: A

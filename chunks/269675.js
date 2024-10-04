@@ -13,12 +13,12 @@ var i = n(735250),
     d = n(252618),
     u = n(423000),
     _ = n(200876),
-    h = n(674180),
-    E = n(38618),
+    E = n(674180),
+    h = n(38618),
     m = n(984370),
     I = n(430824),
-    g = n(351402),
-    p = n(730647),
+    p = n(351402),
+    g = n(730647),
     T = n(772021),
     f = n(396828),
     S = n(293423),
@@ -31,19 +31,19 @@ var i = n(735250),
 function R(e) {
     let { guildId: t } = e,
         n = (0, r.e7)([I.Z], () => I.Z.getGuild(t), [t]),
-        R = (0, r.e7)([E.Z], () => E.Z.isConnected()),
+        R = (0, r.e7)([h.Z], () => h.Z.isConnected()),
         O = (0, _.Z)(t),
         x = (0, T.Z)(t),
-        b = (0, r.e7)([g.Z], () => g.Z.isSubscriptionFetching),
-        P = (0, p.f)(),
-        { shouldHideGuildPurchaseEntryPoints: M, restrictionsLoading: D } = (0, h.uP)(t),
-        y = null == n || !P || b || D;
+        b = (0, r.e7)([p.Z], () => p.Z.isSubscriptionFetching),
+        M = (0, g.f)(),
+        { shouldHideGuildPurchaseEntryPoints: P, restrictionsLoading: D } = (0, E.uP)(t),
+        y = null == n || !M || b || D;
     (0, d.Tt)({
         subsection: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
         location: null == n ? void 0 : n.name
     }),
         (0, c.Z)(s.tq ? 'role-subscriptions-overview' : void 0);
-    let j = R && (null == n || !(O || x) || (M && !D));
+    let j = R && (null == n || !(O || x) || (P && !D));
     if (
         (a.useEffect(() => {
             o.jg();
@@ -88,7 +88,7 @@ function R(e) {
 }
 function O(e) {
     let { guildId: t } = e;
-    return (0, i.jsx)(p.l, {
+    return (0, i.jsx)(g.l, {
         guildId: t,
         refetchOnMount: !0,
         children: (0, i.jsx)(R, { guildId: t })

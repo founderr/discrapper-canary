@@ -141,7 +141,7 @@ t.Z = l.memo(function (e) {
             },
             [D]
         ),
-        G = l.useCallback((e, t, n) => {
+        U = l.useCallback((e, t, n) => {
             if (T.current) {
                 L({
                     x: 0,
@@ -162,7 +162,7 @@ t.Z = l.memo(function (e) {
                 y: (r ? Math.max(i.y, -a.y) : Math.min(i.y, a.y)) / 2
             });
         }, []),
-        U = l.useCallback(
+        G = l.useCallback(
             (e) => {
                 if (null != b.current) e.preventDefault(), e.stopPropagation(), null == N || N(p * A + b.current);
             },
@@ -182,7 +182,7 @@ t.Z = l.memo(function (e) {
                             x: e.clientX,
                             y: e.clientY
                         };
-                    if ((G(a, r, Math.max(t, n)), T.current)) {
+                    if ((U(a, r, Math.max(t, n)), T.current)) {
                         null != I && D();
                         return;
                     }
@@ -198,7 +198,7 @@ t.Z = l.memo(function (e) {
                     }
                     D();
                 }, 16),
-            [I, G, D, j, A, n, t]
+            [I, U, D, j, A, n, t]
         ),
         B = l.useCallback(
             (e) => {
@@ -237,7 +237,7 @@ t.Z = l.memo(function (e) {
         className: u.chatWheelMouseInput,
         onMouseMove: k,
         onWheel: B,
-        onClick: U,
+        onClick: G,
         children: (0, i.jsxs)('div', {
             ref: v,
             className: u.chatWheel,

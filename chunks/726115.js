@@ -6,7 +6,7 @@ n.d(t, {
         return S;
     },
     Mf: function () {
-        return g;
+        return p;
     },
     NL: function () {
         return R;
@@ -21,7 +21,7 @@ n.d(t, {
         return N;
     },
     a$: function () {
-        return p;
+        return g;
     },
     lg: function () {
         return f;
@@ -45,8 +45,8 @@ var i = n(544891),
     d = n(356164),
     u = n(164991),
     _ = n(128449),
-    h = n(981631),
-    E = n(731455),
+    E = n(981631),
+    h = n(731455),
     m = n(689938);
 function I(e) {
     switch (e) {
@@ -68,7 +68,7 @@ function I(e) {
             return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUBS_CATEGORY;
     }
 }
-function g(e) {
+function p(e) {
     switch (e) {
         case _.vf.FEATURED:
             return m.Z.Messages.GUILD_DISCOVERY_HOME_TITLE;
@@ -88,7 +88,7 @@ function g(e) {
             throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
     }
 }
-function p(e) {
+function g(e) {
     switch (e) {
         case _.vf.FEATURED:
             return m.Z.Messages.GUILD_DISCOVERY_HOME_SUBTITLE;
@@ -127,22 +127,22 @@ function T(e) {
     }
 }
 function f(e) {
-    if (null == e) return E.Hk;
+    if (null == e) return h.Hk;
     switch (e) {
         case _.vf.FEATURED:
         case _.vf.GUILDS:
         case _.vf.HUBS:
-            return E.Hk;
+            return h.Hk;
         case _.vf.GAMING:
-            return E.Gj.Activity;
+            return h.Gj.Activity;
         case _.vf.MUSIC:
-            return E.Gj.Music;
+            return h.Gj.Music;
         case _.vf.ENTERTAINMENT:
-            return E.Gj.Television;
+            return h.Gj.Television;
         case _.vf.TECH:
-            return E.Gj.Science;
+            return h.Gj.Science;
         case _.vf.EDUCATION:
-            return E.Gj.Education;
+            return h.Gj.Education;
         default:
             (0, r.vE)(e);
     }
@@ -171,7 +171,7 @@ function C(e) {
 function N() {
     var e;
     let [t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [s.default],
-        n = E.dU,
+        n = h.dU,
         i = t.locale;
     return (null !== (e = n.find((e) => e.code === i)) && void 0 !== e ? e : n[0]).code;
 }
@@ -236,7 +236,7 @@ async function L(e) {
         !(0, a.x)(e) &&
         (
             await i.tn.get({
-                url: h.ANM.GUILD_DISCOVERY_VALID_TERM,
+                url: E.ANM.GUILD_DISCOVERY_VALID_TERM,
                 query: { term: e },
                 oldFormErrors: !0
             })

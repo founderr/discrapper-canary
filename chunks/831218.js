@@ -194,7 +194,7 @@ let w = s.memo(function () {
         ]
     });
 });
-class G extends (l = s.Component) {
+class U extends (l = s.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -384,7 +384,7 @@ class G extends (l = s.Component) {
             });
     }
 }
-D(G, 'defaultProps', { padding: 8 });
+D(U, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = s.Children.count(i),
@@ -453,7 +453,7 @@ t.Z = (e) => {
         });
     return (0, a.jsx)(u.bG, {
         navigator: v,
-        children: (0, a.jsx)(G, {
+        children: (0, a.jsx)(U, {
             channels: c,
             privateChannelIds: p,
             listRef: _,

@@ -13,12 +13,12 @@ var i = n(735250),
     d = n(745628),
     u = n(950279),
     _ = n(796918),
-    h = n(513532),
-    E = n(741595),
+    E = n(513532),
+    h = n(741595),
     m = n(974842),
     I = n(363915),
-    g = n(359380),
-    p = n(308083),
+    p = n(359380),
+    g = n(308083),
     T = n(689938);
 function f(e) {
     let t = (0, o.Wg)(),
@@ -37,7 +37,7 @@ function f(e) {
     };
 }
 let S = {
-    [p.Wy.GAMES]: function (e) {
+    [g.Wy.GAMES]: function (e) {
         let { guildId: t } = e;
         a.useEffect(() => {
             r.Z.getDetectableGames();
@@ -53,10 +53,10 @@ let S = {
             includeSuggestedGames: !0
         });
     },
-    [p.Wy.PLAYSTYLE]: function (e) {
+    [g.Wy.PLAYSTYLE]: function (e) {
         let { guildId: t } = e,
             { progress: n, errors: a, handleClanUpdate: s } = f(t);
-        return (0, i.jsx)(E.Z, {
+        return (0, i.jsx)(h.Z, {
             title: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
             description: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
             onUpdatePlaystyle: (e) => s({ playstyle: e }),
@@ -64,10 +64,10 @@ let S = {
             error: null == a ? void 0 : a.playstyle
         });
     },
-    [p.Wy.UTILITY_TRAITS]: function (e) {
+    [g.Wy.UTILITY_TRAITS]: function (e) {
         let { guildId: t } = e,
             { progress: n, handleClanUpdate: a } = f(t);
-        return (0, i.jsx)(g.Z, {
+        return (0, i.jsx)(p.Z, {
             guildId: t,
             title: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
             description: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
@@ -75,7 +75,7 @@ let S = {
             progress: n
         });
     },
-    [p.Wy.INTERESTS]: function (e) {
+    [g.Wy.INTERESTS]: function (e) {
         let { guildId: t } = e,
             { progress: n, errors: a, handleClanUpdate: s } = f(t);
         return (0, i.jsx)(_.Z, {
@@ -85,7 +85,7 @@ let S = {
             error: null == a ? void 0 : a.interests
         });
     },
-    [p.Wy.DESCRIPTION]: function (e) {
+    [g.Wy.DESCRIPTION]: function (e) {
         let { guildId: t } = e,
             { progress: n, errors: a, handleClanUpdate: s } = f(t);
         return (0, i.jsx)(d.Z, {
@@ -95,7 +95,7 @@ let S = {
             errors: a
         });
     },
-    [p.Wy.CUSTOMIZE_TAG_BADGE]: function (e) {
+    [g.Wy.CUSTOMIZE_TAG_BADGE]: function (e) {
         let { guildId: t } = e,
             { progress: n, errors: a, handleClanUpdate: s } = f(t);
         return (0, i.jsx)(m.Z, {
@@ -108,7 +108,7 @@ let S = {
             furthestStep: n.furthestStep
         });
     },
-    [p.Wy.CUSTOMIZE_BANNER]: function (e) {
+    [g.Wy.CUSTOMIZE_BANNER]: function (e) {
         let { guildId: t } = e,
             { progress: n, handleClanUpdate: a } = f(t);
         return (0, i.jsx)(c.Z, {
@@ -117,10 +117,10 @@ let S = {
             guildId: t
         });
     },
-    [p.Wy.MEMBER_APPLICATION]: function (e) {
+    [g.Wy.MEMBER_APPLICATION]: function (e) {
         let { guildId: t } = e,
             { errors: n } = f(t);
-        return (0, i.jsx)(h.Z, {
+        return (0, i.jsx)(E.Z, {
             guildId: t,
             error: null == n ? void 0 : n.verificationForm
         });

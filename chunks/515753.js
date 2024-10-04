@@ -42,12 +42,12 @@ var i = n(735250),
     j = n(9156),
     D = n(594174),
     w = n(709054),
-    G = n(998502),
-    U = n(788307),
+    U = n(998502),
+    G = n(788307),
     k = n(981631),
     B = n(689938),
     V = n(931450);
-let H = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
+let H = U.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
     F = {
         offset: {
             top: 2,
@@ -122,7 +122,7 @@ class Y extends l.Component {
     }
 }
 function K(e) {
-    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: b, applicationStream: L, isTyping: y, status: O, isMobile: D, 'aria-posinset': w, 'aria-setsize': G } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: b, applicationStream: L, isTyping: y, status: O, isMobile: D, 'aria-posinset': w, 'aria-setsize': U } = e,
         [Y, K] = l.useState(!1),
         q = l.useRef(null),
         Q = l.useRef(null),
@@ -220,7 +220,7 @@ function K(e) {
                         children: B.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
                     })
                   : null != b && b.length > 0
-                    ? (0, i.jsx)(U.Z, {
+                    ? (0, i.jsx)(G.Z, {
                           ...e,
                           activities: b,
                           applicationStream: L,
@@ -301,7 +301,7 @@ function K(e) {
                 onMouseLeave: er,
                 onMouseDown: es,
                 onContextMenu: eu,
-                'aria-setsize': G,
+                'aria-setsize': U,
                 'aria-posinset': w,
                 children: (0, i.jsxs)(p.Interactive, {
                     className: a()(V.interactive, {

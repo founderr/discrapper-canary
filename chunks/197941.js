@@ -10,25 +10,25 @@ var a = n(243814),
     d = n(173507),
     u = n(199902),
     _ = n(131951),
-    h = n(449224),
-    E = n(358085),
+    E = n(449224),
+    h = n(358085),
     m = n(452426),
     I = n(736045),
-    g = n(186901),
-    p = n(981631);
+    p = n(186901),
+    g = n(981631);
 t.Z = {
-    [p.Etm.TOGGLE_VIDEO]: {
+    [g.Etm.TOGGLE_VIDEO]: {
         scope: {
-            [g.Gp.ALL]: [a.x.RPC, a.x.RPC_VIDEO_WRITE]
+            [p.Gp.ALL]: [a.x.RPC, a.x.RPC_VIDEO_WRITE]
         },
         handler() {
             let e = _.Z.isVideoEnabled();
-            if (null != (0, I.Z)()) e ? r.Z.setVideoEnabled(!1) : (0, d.Z)(() => r.Z.setVideoEnabled(!0), p.IlC.APP);
+            if (null != (0, I.Z)()) e ? r.Z.setVideoEnabled(!1) : (0, d.Z)(() => r.Z.setVideoEnabled(!0), g.IlC.APP);
         }
     },
-    [p.Etm.TOGGLE_SCREENSHARE]: {
+    [g.Etm.TOGGLE_SCREENSHARE]: {
         scope: {
-            [g.Gp.ALL]: [a.x.RPC, a.x.RPC_SCREENSHARE_WRITE]
+            [p.Gp.ALL]: [a.x.RPC, a.x.RPC_SCREENSHARE_WRITE]
         },
         validation: (e) =>
             (0, m.Z)(e)
@@ -40,14 +40,14 @@ t.Z = {
                 } = e,
                 a = u.Z.getCurrentUserActiveStream(),
                 r = u.Z.getStreamerActiveStreamMetadata(),
-                d = (0, c.Z)(o.ZP, h.Z),
+                d = (0, c.Z)(o.ZP, E.Z),
                 _ = (0, I.Z)();
             if (null != _)
-                null != t && null != r && r.pid !== t && (0, E.isWindows)()
+                null != t && null != r && r.pid !== t && (0, h.isWindows)()
                     ? (0, l.WH)(_.guild_id, _.id, { pid: t })
                     : null != a
                       ? (0, l.L6)(!1)
-                      : null != t && (0, E.isWindows)()
+                      : null != t && (0, h.isWindows)()
                         ? (0, l.WH)(_.guild_id, _.id, { pid: t })
                         : null != d
                           ? (0, l.WH)(_.guild_id, _.id, { pid: d.pid })
@@ -57,7 +57,7 @@ t.Z = {
                                     (0, i.jsx)(e, {
                                         ...t,
                                         guildId: _.guild_id,
-                                        analyticsLocation: p.Sbl.ACTIVITY_RPC
+                                        analyticsLocation: g.Sbl.ACTIVITY_RPC
                                     });
                             });
         }

@@ -13,12 +13,12 @@ var i = n(735250),
     d = n(931515),
     u = n(807933),
     _ = n(207796),
-    h = n(497189),
-    E = n(86014),
+    E = n(497189),
+    h = n(86014),
     m = n(895068),
     I = n(490610),
-    g = n(322665),
-    p = n(689938),
+    p = n(322665),
+    g = n(689938),
     T = n(590522);
 function f(e) {
     let { onScroll: t } = e,
@@ -37,17 +37,17 @@ function f(e) {
                 (0, i.jsxs)('div', {
                     className: T.adminUpsell,
                     children: [
-                        (0, i.jsx)(g.Z, {}),
+                        (0, i.jsx)(p.Z, {}),
                         (0, i.jsx)('div', {
                             className: T.backgroundImageContent,
-                            children: (0, i.jsx)(h.Z, {
+                            children: (0, i.jsx)(E.Z, {
                                 eligibleGuilds: s,
                                 eligibleGuildsIncludingConverted: n
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(I.Z, { title: p.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE })
+                (0, i.jsx)(I.Z, { title: g.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE })
             ]
         })
     });
@@ -62,7 +62,7 @@ function S(e) {
         children: [
             (0, i.jsx)('div', {
                 className: T.list,
-                children: (0, i.jsx)(E.Z, {
+                children: (0, i.jsx)(h.Z, {
                     inGlobalDiscovery: !0,
                     width: o,
                     variant: (0, m.s)(a, m.Bj.GLOBAL_DISCOVERY),

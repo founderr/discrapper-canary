@@ -9,11 +9,11 @@ var i = n(846519),
     d = n(517100),
     u = n(19780),
     _ = n(70956),
-    h = n(358085),
-    E = n(981631);
+    E = n(358085),
+    h = n(981631);
 let m = new i.V7(),
     I = new i.V7();
-class g extends r.Z {
+class p extends r.Z {
     _initialize() {
         a.Z.subscribe('IDLE', this.handleIdleUpdate);
     }
@@ -22,8 +22,8 @@ class g extends r.Z {
     }
     handleIdleUpdate() {
         let e = d.Z.getIdleSince();
-        if (!h.isPlatformEmbedded) return;
-        for (let e of (m.stop(), I.stop(), l.Z.getAllActiveStreams())) if (e.state !== E.jm8.ENDED) return;
+        if (!E.isPlatformEmbedded) return;
+        for (let e of (m.stop(), I.stop(), l.Z.getAllActiveStreams())) if (e.state !== h.jm8.ENDED) return;
         if (null == e) return;
         let t = u.Z.getChannelId();
         if (null == t) return;
@@ -40,4 +40,4 @@ class g extends r.Z {
                 });
     }
 }
-t.Z = new g();
+t.Z = new p();

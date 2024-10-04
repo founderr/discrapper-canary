@@ -9,12 +9,12 @@ var i = n(735250),
     d = n(100527),
     u = n(600164),
     _ = n(184301),
-    h = n(347475),
-    E = n(237583),
+    E = n(347475),
+    h = n(237583),
     m = n(63063),
     I = n(870569),
-    g = n(345243),
-    p = n(115530),
+    p = n(345243),
+    g = n(115530),
     T = n(981631),
     f = n(689938),
     S = n(129223);
@@ -42,7 +42,7 @@ class A extends a.PureComponent {
     }
     renderTitle() {
         return (0, i.jsxs)('div', {
-            children: [(0, i.jsx)(p.Z, { children: this.isHost() ? f.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({ count: this.props.party.length }) : f.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER }), (0, i.jsx)(g.Z, { children: f.Z.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER })]
+            children: [(0, i.jsx)(g.Z, { children: this.isHost() ? f.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({ count: this.props.party.length }) : f.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER }), (0, i.jsx)(p.Z, { children: f.Z.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER })]
         });
     }
     renderStopListeningButton() {
@@ -74,7 +74,7 @@ class A extends a.PureComponent {
                 (0, i.jsx)(u.Z, {
                     justify: u.Z.Justify.END,
                     className: S.party,
-                    children: (0, i.jsx)(E.Z, {
+                    children: (0, i.jsx)(h.Z, {
                         users: this.props.party,
                         max: this.isHost() ? N.HOST : N.LISTENER,
                         renderUser: this.renderPartyMember,
@@ -102,7 +102,7 @@ class A extends a.PureComponent {
                             preload: () => (0, _.Z)(e.id, e.getAvatarURL(void 0, 80)),
                             renderPopout: (t) => (
                                 o()(null != e, ''),
-                                (0, i.jsx)(h.Z, {
+                                (0, i.jsx)(E.Z, {
                                     ...t,
                                     userId: e.id,
                                     newAnalyticsLocations: [d.Z.AVATAR]

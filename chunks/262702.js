@@ -9,7 +9,7 @@ var i = n(570140),
     d = n(592125),
     u = n(131951),
     _ = n(590415);
-function h(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function h(e, t, n) {
         e
     );
 }
-class E extends r.Z {
+class h extends r.Z {
     _initialize() {
         i.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
@@ -31,7 +31,7 @@ class E extends r.Z {
     }
     constructor(...e) {
         super(...e),
-            h(this, 'handleVoiceStateUpdates', (e) => {
+            E(this, 'handleVoiceStateUpdates', (e) => {
                 let { voiceStates: t } = e,
                     n = c.default.getId();
                 t.forEach((e) => {
@@ -39,13 +39,13 @@ class E extends r.Z {
                     if (e.userId === n && !!(null === (t = d.Z.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice())) (0, _.gf)(e) !== _.xO.ON_STAGE && (this.handleStopStream(e), this.handleStopUserVideo());
                 });
             }),
-            h(this, 'handleStopStream', (e) => {
+            E(this, 'handleStopStream', (e) => {
                 let t = o.Z.getActiveStreamForUser(e.userId, e.guildId);
                 if (null != t) (0, s.g)((0, l.V9)(t), !1);
             }),
-            h(this, 'handleStopUserVideo', () => {
+            E(this, 'handleStopUserVideo', () => {
                 u.Z.isVideoEnabled() && a.Z.setVideoEnabled(!1);
             });
     }
 }
-t.Z = new E();
+t.Z = new h();

@@ -14,18 +14,18 @@ var a = n(442837),
     d = n(1585),
     u = n(125988),
     _ = n(43267),
-    h = n(522289),
-    E = n(699516),
+    E = n(522289),
+    h = n(699516),
     m = n(51144),
     I = n(998502),
-    g = n(620924),
-    p = n(332712),
+    p = n(620924),
+    g = n(332712),
     T = n(81471),
     f = n(689938),
     S = n(562352);
 let C = (e) => {
         let { userId: t } = e,
-            n = (0, p.O)(t);
+            n = (0, g.O)(t);
         return null == n || 0 === n.length
             ? (0, i.jsx)(s.Text, {
                   className: S.mutualGuilds,
@@ -36,7 +36,7 @@ let C = (e) => {
             : (0, i.jsxs)('div', {
                   className: S.mutualGuildsContainer,
                   children: [
-                      (0, i.jsx)(h.Z, {
+                      (0, i.jsx)(E.Z, {
                           guilds: n,
                           maxGuilds: 3,
                           size: c.Vj.Sizes.SMOL,
@@ -54,11 +54,11 @@ let C = (e) => {
     N = I.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 function A(e) {
     var t;
-    let { channel: n, otherUser: c, active: h } = e,
+    let { channel: n, otherUser: c, active: E } = e,
         I = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-        p = (0, a.e7)([E.Z], () => (null == c ? null : E.Z.getNickname(c.id))),
-        A = !I && h,
-        v = (0, g.c)(n),
+        g = (0, a.e7)([h.Z], () => (null == c ? null : h.Z.getNickname(c.id))),
+        A = !I && E,
+        v = (0, p.c)(n),
         { avatarDecorationSrc: Z } = (0, u.Z)({
             user: c,
             size: (0, d.y9)(s.AvatarSizes.SIZE_40),
@@ -80,7 +80,7 @@ function A(e) {
                         className: S.userContainerWithPreview,
                         children: [
                             (0, i.jsx)(r.Z, {
-                                nick: p,
+                                nick: g,
                                 user: c,
                                 showAccountIdentifier: !0,
                                 className: S.tagContainer,
@@ -97,7 +97,7 @@ function A(e) {
                     }),
                     (0, i.jsx)(o.Z, {
                         hoverText: (0, i.jsx)(T.Z, { channel: n }),
-                        forceHover: h,
+                        forceHover: E,
                         children: (0, i.jsx)(C, { userId: c.id })
                     })
                 ]
