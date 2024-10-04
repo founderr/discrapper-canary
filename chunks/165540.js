@@ -38,7 +38,7 @@ let b = s.forwardRef(function (e, t) {
         [E]
     );
     let C = s.useCallback(() => {
-        (0, d.yw)(S.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, I.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h._(_._b.TEXT, n)), g();
+        (0, d.yw)(S.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.yT(_.ti.DISMISSED) : ((0, I.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h.__(_._b.TEXT, n)), g();
     }, [m, n, g]);
     return (0, i.jsx)('div', {
         className: l()(Z.buttonContainer, v.t4),

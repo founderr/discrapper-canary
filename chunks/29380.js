@@ -21,7 +21,7 @@ function h(e) {
     let { channel: n, application: t, sectionName: h, primaryEntryPointCommand: f, buttonSize: A = l.ButtonSizes.MEDIUM } = e,
         E = a.useId(),
         N = a.useCallback(() => {
-            s.y(c.ti.ACTIVITY);
+            s.yT(c.ti.ACTIVITY);
         }, []),
         { submitting: x, wasSubmitting: v } = (0, m.Z)({
             applicationId: t.id,
@@ -37,8 +37,8 @@ function h(e) {
         L = a.useMemo(() => (0, u.XZ)(f.displayName), [f.displayName]),
         {
             onActivityItemSelected: S,
-            buttonColor: b,
-            buttonText: T
+            buttonColor: T,
+            buttonText: b
         } = (0, p.P7)({
             channel: n,
             application: t,
@@ -64,17 +64,17 @@ function h(e) {
                 ...a,
                 type: 'submit',
                 size: A,
-                color: b,
+                color: T,
                 disabled: R,
                 submitting: I,
                 onClick: () => {
                     g(!0), S(), null == n || n();
                 },
                 'aria-label': _.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
-                    buttonText: T,
+                    buttonText: b,
                     applicationName: t.name
                 }),
-                children: T
+                children: b
             });
         }
     });

@@ -61,7 +61,7 @@ function L(e) {
             locationObject: h.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e;
-                r && f.y(E.ti.ACTIVITY),
+                r && f.yT(E.ti.ACTIVITY),
                     (0, m.yw)(x.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,
@@ -76,14 +76,14 @@ function L(e) {
             source: P
         }),
         S = s.ButtonColors.BRAND,
-        b = null != l ? l : v.Z.Messages.LAUNCH;
+        T = null != l ? l : v.Z.Messages.LAUNCH;
     return (
-        g === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (b = v.Z.Messages.JOIN_ACTIVITY)) : g === d.JS.LEAVE && !C && ((S = s.ButtonColors.RED), (b = v.Z.Messages.LEAVE)),
+        g === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (T = v.Z.Messages.JOIN_ACTIVITY)) : g === d.JS.LEAVE && !C && ((S = s.ButtonColors.RED), (T = v.Z.Messages.LEAVE)),
         {
             onActivityItemSelected: L,
             activityAction: g,
             buttonColor: S,
-            buttonText: b
+            buttonText: T
         }
     );
 }

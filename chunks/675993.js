@@ -71,7 +71,7 @@ function I(e) {
                             children: [
                                 (0, i.jsx)(P, { application: t }),
                                 (0, i.jsx)(L, { application: t }),
-                                _.length > 0 ? (0, i.jsx)(T, { description: _ }) : null,
+                                _.length > 0 ? (0, i.jsx)(b, { description: _ }) : null,
                                 C
                                     ? (0, i.jsx)('div', {
                                           className: x.developerShelfControlsContainer,
@@ -81,7 +81,7 @@ function I(e) {
                                           })
                                       })
                                     : null,
-                                (0, i.jsx)(b, {
+                                (0, i.jsx)(T, {
                                     channel: n,
                                     application: t,
                                     sectionName: d,
@@ -216,7 +216,7 @@ function S(e) {
         ]
     });
 }
-function b(e) {
+function T(e) {
     let { channel: n, application: t, sectionName: a, hasCommands: l, isDeveloperOfThisApp: o } = e,
         r = (0, m.Fs)(n, t.id);
     return (0, h.BQ)(t)
@@ -240,7 +240,7 @@ function b(e) {
               : null
         : null;
 }
-function T(e) {
+function b(e) {
     let { description: n } = e,
         [t, l] = a.useState(!0);
     a.useLayoutEffect(() => l(!1), []);

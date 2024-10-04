@@ -29,8 +29,8 @@ var i = t(735250),
     P = t(783097),
     L = t(845936),
     S = t(176412),
-    b = t(870205),
-    T = t(981631),
+    T = t(870205),
+    b = t(981631),
     R = t(689079),
     M = t(689938),
     j = t(32950),
@@ -42,7 +42,7 @@ function H(e) {
     let { channel: l, command: o, section: s, sectionName: c } = e,
         u = a.useCallback(() => {
             let e = N.Z.entrypoint();
-            E.y(x.ti.COMMAND),
+            E.yT(x.ti.COMMAND),
                 (0, f.Mo)({
                     command: o,
                     location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -57,7 +57,7 @@ function H(e) {
                     source: e,
                     commandOrigin: h.bB.APPLICATION_LAUNCHER
                 }),
-                A.S.dispatch(T.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                A.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
         }, [l.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
         _ = a.useMemo(() => (0, S.ae)(o.displayDescription, void 0), [o.displayDescription]),
@@ -175,7 +175,7 @@ function B(e) {
                             context: c,
                             sectionName: l
                         }),
-                        E.y(x.ti.COMMAND));
+                        E.yT(x.ti.COMMAND));
                 } finally {
                     m(!1);
                 }
@@ -301,7 +301,7 @@ function k(e) {
                       sectionName: o,
                       children:
                           E &&
-                          (0, i.jsx)(b.Z, {
+                          (0, i.jsx)(T.Z, {
                               sortOrder: h,
                               onSortOptionClick: f
                           })

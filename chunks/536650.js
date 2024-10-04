@@ -39,10 +39,10 @@ function E(e) {
         P = a.useRef(null),
         L = a.useRef(null),
         S = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        b = (0, c.ZP)('number' == typeof f ? '' : f, null != S ? S : ''),
-        T = a.useMemo(() => {
+        T = (0, c.ZP)('number' == typeof f ? '' : f, null != S ? S : ''),
+        b = a.useMemo(() => {
             var e, n;
-            let t = (0, l.compact)([d.Z.parseHexString(b), d.Z.parseHexString(v ? '#000000' : '#ffffff')]);
+            let t = (0, l.compact)([d.Z.parseHexString(T), d.Z.parseHexString(v ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -54,8 +54,8 @@ function E(e) {
                         ? void 0
                         : e.toHexString()) && void 0 !== n
                 ? n
-                : b;
-        }, [b, v]),
+                : T;
+        }, [T, v]),
         R = A(I),
         M = A(g),
         j = a.useCallback(() => {
@@ -76,9 +76,9 @@ function E(e) {
                 if (
                     ((m.style.filter = 'brightness('.concat(1 + ((v ? 1.4 : 0.6) - (r = 1)) * N, ')')),
                     (m.style.backgroundColor = 'color-mix(in oklab,'
-                        .concat(b, ' ')
+                        .concat(T, ' ')
                         .concat((1 - N) * 100, '%, ')
-                        .concat(T, ')')),
+                        .concat(b, ')')),
                     (p.style.opacity = ''.concat(0 + (1 - (s = 0)) * N)),
                     (p.style.transform = 'translateY('.concat((c = C / 4) + (0 - c) * N, 'px)')),
                     null != _)
@@ -86,7 +86,7 @@ function E(e) {
                     _.style.opacity = ''.concat(1 + (0 - (d = 1)) * N);
                 }
             }
-        }, [T, b, null == M ? void 0 : M.height, v, E, null == R ? void 0 : R.height]);
+        }, [b, T, null == M ? void 0 : M.height, v, E, null == R ? void 0 : R.height]);
     return (
         a.useEffect(() => {
             j();
@@ -144,7 +144,7 @@ function E(e) {
                 (0, i.jsx)('div', {
                     ref: g,
                     className: h.bannerBackground,
-                    style: { backgroundColor: b }
+                    style: { backgroundColor: T }
                 })
             ]
         })

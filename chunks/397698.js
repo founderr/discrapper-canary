@@ -17,7 +17,7 @@ function _(e) {
     let { channel: t, openInPopout: _, analyticsLocation: E } = e;
     _ && (0, a.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
     let f = _ ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
-    (0, l.y)(u.ti.DISMISSED), (0, l._)(u._b.VOICE);
+    (0, l.yT)(u.ti.DISMISSED), (0, l.__)(u._b.VOICE);
     let h = t.id,
         p = o.ZP.hasUnread(h) || o.ZP.getMentionCount(h) > 0;
     return (

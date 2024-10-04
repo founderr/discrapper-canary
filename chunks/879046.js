@@ -18,7 +18,7 @@ function c(e) {
         _ = (0, s.kr)(t) && !(0, s.n2)(t) ? u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
         E = {
             onClick: () => {
-                r._(i._b.TEXT, o.I.NORMAL, { applicationId: t.extra.application_id });
+                r.__(i._b.TEXT, o.I.NORMAL, { applicationId: t.extra.application_id });
             },
             ariaDescription: u.Z.Messages.CONTENT_INVENTORY_OPEN_ACTIVITY_A11Y_DESCRIPTION.format({ title: d })
         };

@@ -21,7 +21,7 @@ var i = n(735250),
     x = n(767346);
 let S = { height: C.lv };
 function v() {
-    p.y(f.ti.DISMISSED);
+    p.yT(f.ti.DISMISSED);
 }
 function N(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: d } = e,

@@ -31,8 +31,8 @@ var i = t(735250),
     P = t(541099),
     L = t(827498),
     S = t(87005),
-    b = t(106066),
-    T = t(783097),
+    T = t(106066),
+    b = t(783097),
     R = t(695676),
     M = t(98880),
     j = t(804307),
@@ -65,15 +65,15 @@ function Y(e) {
     let { channel: n, entrypoint: t, searchQuery: l, setSearchQuery: o, setScroller: r, isScrollCloseToBottom: s } = e,
         u = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []),
         _ = t === L._b.TEXT && !n.isPrivate(),
-        C = (0, T.Yn)(t),
-        h = !(0, T.Yn)(t),
+        C = (0, b.Yn)(t),
+        h = !(0, b.Yn)(t),
         f = t === L._b.TEXT,
         [A, E] = $(!0),
         [N, x] = $(_),
         [v, I] = $(C),
         [g, P] = $(h),
         S = A && N && v && g,
-        b = (C || _) && !S,
+        T = (C || _) && !S,
         R = h && u;
     a.useEffect(() => {
         (0, p.w1)({
@@ -133,7 +133,7 @@ function Y(e) {
                                       type: L.LG.HOME_EMPTY,
                                       textContent: t === L._b.TEXT ? k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
                                   }),
-                              b && (0, i.jsx)(H.Z, {})
+                              T && (0, i.jsx)(H.Z, {})
                           ]
                       })
             })
@@ -308,7 +308,7 @@ function X(e) {
             numItems: l.length,
             numVisibleItems: l.length
         }),
-        s = (0, b.s)('ActivitiesShelfSection'),
+        s = (0, T.s)('ActivitiesShelfSection'),
         c = 0 === l.length;
     return (a.useEffect(() => {
         t(c);
@@ -477,7 +477,7 @@ function Q(e) {
                 m = t === r.I.APP_LAUNCHER_VOICE;
             return {
                 fetchState: s,
-                recommendationsSections: a.useMemo(() => (m ? (0, T.pF)(d) : d), [d, m]),
+                recommendationsSections: a.useMemo(() => (m ? (0, b.pF)(d) : d), [d, m]),
                 isInstallOnDemand: o
             };
         })({

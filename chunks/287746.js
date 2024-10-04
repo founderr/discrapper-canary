@@ -678,7 +678,7 @@ class eG extends s.PureComponent {
             }),
             eU(this, 'handleOpenAppLauncher', (e) => {
                 let { applicationId: t } = e;
-                return x._(v._b.TEXT, this.props.chatInputType, { applicationId: t });
+                return x.__(v._b.TEXT, this.props.chatInputType, { applicationId: t });
             }),
             eU(this, 'handleChatInteract', () => {
                 var e;
