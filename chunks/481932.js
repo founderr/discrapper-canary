@@ -18,19 +18,19 @@ var i = n(442837),
     f = n(981631),
     h = n(689938);
 function p(e) {
-    let { user: t, friendToken: n, profileType: p } = e,
-        { newestAnalyticsLocation: m } = (0, s.ZP)(),
-        { trackUserProfileAction: I } = (0, d.KZ)(),
-        T = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)),
-        g = (0, i.e7)([c.Z], () => (null != t ? c.Z.getRelationshipType(t.id) : f.OGo.NONE)),
-        S = (0, l.Z)({
+    let { user: t, friendToken: n, profileType: p, shouldShowTooltip: m } = e,
+        { newestAnalyticsLocation: I } = (0, s.ZP)(),
+        { trackUserProfileAction: T } = (0, d.KZ)(),
+        g = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)),
+        S = (0, i.e7)([c.Z], () => (null != t ? c.Z.getRelationshipType(t.id) : f.OGo.NONE)),
+        A = (0, l.Z)({
             user: t,
             color: 'danger',
-            location: m,
-            onAction: () => I({ action: 'REMOVE_FRIEND' })
+            location: I,
+            onAction: () => T({ action: 'REMOVE_FRIEND' })
         });
-    if (null == t || t.bot || T || g === f.OGo.BLOCKED) return null;
-    let A = () =>
+    if (null == t || t.bot || g || S === f.OGo.BLOCKED) return null;
+    let v = () =>
             (0, r.jsx)(a.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
@@ -39,28 +39,22 @@ function p(e) {
                         onSelect: void 0,
                         onClose: t,
                         'aria-label': h.Z.Messages.FRIEND_ACTIONS_MENU_LABEL,
-                        children: S
+                        children: A
                     });
                 },
                 children: (e) =>
                     (0, r.jsx)(_.oY, {
+                        shouldShowTooltip: m,
                         icon: a.UserCheckIcon,
                         tooltipText: h.Z.Messages.FRIENDS,
                         ...e
                     })
             }),
-        v = () =>
-            p === E.y0.FULL_SIZE
-                ? null
-                : (0, r.jsx)(_.oY, {
-                      icon: a.UserClockIcon,
-                      tooltipText: h.Z.Messages.FRIENDS_SECTION_PENDING,
-                      disabled: !0
-                  }),
         N = () =>
             p === E.y0.FULL_SIZE
                 ? null
                 : (0, r.jsx)(_.oY, {
+                      shouldShowTooltip: m,
                       icon: a.UserClockIcon,
                       tooltipText: h.Z.Messages.FRIENDS_SECTION_PENDING,
                       disabled: !0
@@ -69,16 +63,26 @@ function p(e) {
             p === E.y0.FULL_SIZE
                 ? null
                 : (0, r.jsx)(_.oY, {
+                      shouldShowTooltip: m,
+                      icon: a.UserClockIcon,
+                      tooltipText: h.Z.Messages.FRIENDS_SECTION_PENDING,
+                      disabled: !0
+                  }),
+        R = () =>
+            p === E.y0.FULL_SIZE
+                ? null
+                : (0, r.jsx)(_.oY, {
                       action: 'SEND_FRIEND_REQUEST',
                       icon: a.UserPlusIcon,
                       tooltipText: h.Z.Messages.ADD_FRIEND,
+                      shouldShowTooltip: m,
                       onClick: () => {
                           o.Z.addRelationship({
                               userId: t.id,
                               friendToken: n,
-                              context: { location: m }
+                              context: { location: I }
                           });
                       }
                   });
-    return g === f.OGo.FRIEND ? A() : g === f.OGo.PENDING_INCOMING ? v() : g === f.OGo.PENDING_OUTGOING ? N() : O();
+    return S === f.OGo.FRIEND ? v() : S === f.OGo.PENDING_INCOMING ? N() : S === f.OGo.PENDING_OUTGOING ? O() : R();
 }

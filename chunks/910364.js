@@ -133,12 +133,14 @@ function D(e) {
                                     profileType: C.y0.FULL_SIZE,
                                     children: [
                                         (0, t.jsx)(b.Z, {
+                                            shouldShowTooltip: null === $.interactionType,
                                             user: n,
                                             guildId: q,
                                             channelId: B,
                                             onClose: K
                                         }),
                                         (0, t.jsx)(j.Z, {
+                                            shouldShowTooltip: null === $.interactionType,
                                             profileType: C.y0.FULL_SIZE,
                                             user: n,
                                             friendToken: k

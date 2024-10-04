@@ -60,11 +60,12 @@ function _(e) {
     });
 }
 function E(e) {
-    let { icon: t, tooltipText: n, tooltipDelay: i, tooltipClassName: l, tooltipContainerClassName: c, className: _, innerClassName: E, ...f } = e;
+    let { icon: t, tooltipText: n, tooltipDelay: i, tooltipClassName: l, tooltipContainerClassName: c, className: _, innerClassName: E, shouldShowTooltip: f = !0, ...h } = e;
     return (0, r.jsx)(s.TooltipContainer, {
         text: n,
         'aria-label': !1,
         delay: i,
+        shouldShow: f,
         className: c,
         tooltipClassName: l,
         children: (0, r.jsx)(d, {
@@ -74,7 +75,7 @@ function E(e) {
             size: o.zx.Sizes.NONE,
             grow: !1,
             'aria-label': n,
-            ...f,
+            ...h,
             children: (0, r.jsx)(t, {
                 size: 'xs',
                 color: 'currentColor'

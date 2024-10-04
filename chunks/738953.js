@@ -116,12 +116,14 @@ function G(e) {
                                     profileType: P.y0.BITE_SIZE,
                                     children: [
                                         (0, i.jsx)(y.Z, {
+                                            shouldShowTooltip: null === J.interactionType,
                                             user: t,
                                             guildId: r,
                                             channelId: G,
                                             onClose: F
                                         }),
                                         (0, i.jsx)(C.Z, {
+                                            shouldShowTooltip: null === J.interactionType,
                                             profileType: P.y0.BITE_SIZE,
                                             user: t
                                         }),
