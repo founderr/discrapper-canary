@@ -355,6 +355,13 @@ t.Z = {
                 enabled: e
             });
     },
+    setUseSystemScreensharePicker(e) {
+        !T() &&
+            r.Z.dispatch({
+                type: 'MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER',
+                enabled: e
+            });
+    },
     setAudioSubsystem(e) {
         !T() &&
             r.Z.dispatch({

@@ -13,23 +13,25 @@ var a = n(481060),
     f = n(594174),
     h = n(449753),
     p = n(569545),
-    m = n(803647),
-    I = n(70722),
-    T = n(981631);
-let g = (0, i.debounce)(l.xc, 1000);
+    m = n(960861),
+    I = n(803647),
+    T = n(70722),
+    g = n(981631);
+let S = (0, i.debounce)(l.xc, 1000);
 t.Z = {
     init() {
         h.Z.init(),
+            m.ZP.initializeIfNeeded(),
             o.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e,
                     n = c.Z.getCurrentUserActiveStream();
                 if (null != n) {
-                    let e = t === T.FQ1.PAUSED;
+                    let e = t === g.FQ1.PAUSED;
                     (0, l.tK)(n, e);
                 }
             }),
             o.Z.subscribe('STREAM_DELETE', (e) => {
-                e.reason === T.si2.STREAM_FULL &&
+                e.reason === g.si2.STREAM_FULL &&
                     ((0, l.aP)(e.streamKey, !1),
                     (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('63757').then(n.bind(n, 309690));
@@ -52,7 +54,7 @@ t.Z = {
                     let n = c.Z.getAllActiveStreams(),
                         r = E.Z.getChannelId();
                     n.forEach((e) => {
-                        e.channelId !== r && (0, m.Z)(e, !1);
+                        e.channelId !== r && (0, I.Z)(e, !1);
                     });
                 });
             }),
@@ -62,7 +64,7 @@ t.Z = {
                     { ownerId: r, guildId: i } = (0, p.my)(n);
                 if (null == i || null == r || r !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
                 let a = _.Z.getMemberCount(i);
-                if (null != a && !(a < 2) && !(a > I.tB)) u.eo.getSetting() && g(n);
+                if (null != a && !(a < 2) && !(a > T.tB)) u.eo.getSetting() && S(n);
             });
     }
 };
