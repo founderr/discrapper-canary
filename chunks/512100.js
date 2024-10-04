@@ -14,8 +14,7 @@ let u = 96;
 function c(e) {
     let { benefits: t, description: n, imgSrc: c, title: d, tag: _, FallbackIcon: E } = e,
         f = null != c ? { '--custom-background-url': 'url('.concat(c.toString(), ')') } : void 0,
-        h = null != n && '' !== n,
-        p = h || null != t;
+        h = null != n && '' !== n;
     return (0, r.jsx)('div', {
         className: l.container,
         children: (0, r.jsx)(o.Z, {
@@ -47,24 +46,28 @@ function c(e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)('div', { children: _ }),
-                    (0, r.jsx)(i.X, {
-                        color: 'header-primary',
-                        variant: 'heading-xl/semibold',
-                        children: d
-                    }),
-                    h &&
-                        (0, r.jsx)(a.x, {
-                            color: 'text-normal',
-                            variant: 'text-md/normal',
-                            className: l.description,
-                            children: n
-                        }),
-                    p &&
-                        (0, r.jsx)('div', {
-                            className: l.details,
-                            children:
-                                null != t &&
+                    (0, r.jsxs)('div', {
+                        className: l.content,
+                        children: [
+                            (0, r.jsxs)('div', {
+                                className: l.details,
+                                children: [
+                                    null != _ && (0, r.jsx)('div', { children: _ }),
+                                    (0, r.jsx)(i.X, {
+                                        color: 'header-primary',
+                                        variant: 'heading-xl/semibold',
+                                        children: d
+                                    }),
+                                    h &&
+                                        (0, r.jsx)(a.x, {
+                                            color: 'text-normal',
+                                            variant: 'text-md/normal',
+                                            className: l.description,
+                                            children: n
+                                        })
+                                ]
+                            }),
+                            null != t &&
                                 (0, r.jsxs)('div', {
                                     className: l.benefits,
                                     children: [
@@ -76,7 +79,8 @@ function c(e) {
                                         t
                                     ]
                                 })
-                        })
+                        ]
+                    })
                 ]
             })
         })

@@ -5,6 +5,7 @@ e.exports = {
     headerImage: 'headerImage_e8df26',
     scroller: 'scroller_e8df26',
     scrollContent: 'scrollContent_e8df26',
+    content: 'content_e8df26',
     details: 'details_e8df26',
     benefits: 'benefits_e8df26',
     description: 'description_e8df26'

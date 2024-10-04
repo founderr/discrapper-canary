@@ -38332,29 +38332,33 @@ html .progress_e5f4c6 {
 }
 
 .scroller_e8df26 {
-    height: 100%
+    height: 100%;
+    scrollbar-width: thin
 }
 
 .scrollContent_e8df26 {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 0 20px 32px
+    padding-bottom: 32px
+}
+
+.content_e8df26 {
+    padding: 0 16px
 }
 
 .details_e8df26 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.benefits_e8df26 {
     align-items: flex-start;
     border-top-color: var(--background-modifier-selected);
     border-top-style: solid;
     border-top-width: 1px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 8px;
-    padding-top: 16px
-}
-
-.benefits_e8df26 {
+    margin-top: 16px;
+    padding-top: 16px;
     display: flex;
     flex-direction: column;
     gap: 16px
