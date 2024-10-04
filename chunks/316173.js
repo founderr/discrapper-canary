@@ -42,7 +42,7 @@ t.Z = () => {
         : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
           ? (0, i.jsxs)('div', {
                 className: r()(E.devBanner, E.staging),
-                children: [(0, i.jsx)(_.Z, { className: E.icon }), h.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '333109' }), (0, i.jsx)(g, {})]
+                children: [(0, i.jsx)(_.Z, { className: E.icon }), h.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '333160' }), (0, i.jsx)(g, {})]
             })
           : null;
 };

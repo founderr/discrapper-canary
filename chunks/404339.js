@@ -15,7 +15,7 @@ var a = n(481060),
     c = n(689938);
 function u(e) {
     let { channelId: t, blockedUserId: n, transitionState: u, onClose: _ } = e;
-    if (!(0, l.F)({ location: 'warning_modal' })) return null;
+    if (!(0, l.w)({ location: 'warning_modal' })) return null;
     let N = r.default.getUser(n),
         x = [
             {
