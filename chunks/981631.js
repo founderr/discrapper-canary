@@ -4952,7 +4952,6 @@ let it = Object.freeze({
     (nf.GUILD_GAME_DISCOVERY_ENTRYPOINT_VIEWED = 'guild_game_discovery_entrypoint_viewed'),
     (nf.GUILD_GAME_DISCOVERY_ENTRYPOINT_DEEP_LINK_TO_DESKTOP = 'guild_game_discovery_entrypoint_deep_link_to_desktop'),
     (nf.GLOBAL_DISCOVERY_WITH_GAME_VIEWED = 'global_discovery_with_game_viewed'),
-    (nf.USER_VOICE_ACTIVITY_VIEWED = 'user_voice_activity_viewed'),
     ((nS = eW || (eW = {})).CANARY = 'canary'),
     (nS.PTB = 'ptb'),
     (nS.STABLE = 'stable'),
