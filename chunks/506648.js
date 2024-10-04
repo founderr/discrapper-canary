@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(39377),
     u = n(981631),
     _ = n(689938),
-    h = n(947441);
-let E = [
+    E = n(947441);
+let h = [
         {
             feature: u.Qa3.SINGLE_PLAYER,
             getText: () => _.Z.Messages.APPLICATION_STORE_SINGLE_PLAYER,
@@ -92,24 +92,24 @@ let E = [
     m = (e) => {
         let { IconComponent: t, text: n, tooltip: a } = e;
         return (0, i.jsxs)('div', {
-            className: h.row,
+            className: E.row,
             children: [
                 (0, i.jsx)(s.Tooltip, {
                     text: a,
                     children: (e) =>
                         (0, i.jsx)(t, {
-                            className: h.featureIcon,
+                            className: E.featureIcon,
                             ...e
                         })
                 }),
                 (0, i.jsx)('span', {
-                    className: h.featureText,
+                    className: E.featureText,
                     children: n
                 }),
                 (0, i.jsx)(s.CheckmarkLargeIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: h.checkmarkIcon
+                    className: E.checkmarkIcon
                 })
             ]
         });
@@ -117,25 +117,27 @@ let E = [
 class I extends a.PureComponent {
     render() {
         let { sku: e } = this.props,
-            t = E.filter((t) => {
-                let { feature: n } = t;
-                return e.features.has(n);
-            }).map((e) => {
-                let { feature: t, IconComponent: n, getText: a, getTooltip: s } = e;
-                return (0, i.jsx)(
-                    m,
-                    {
-                        IconComponent: n,
-                        text: a(),
-                        tooltip: s()
-                    },
-                    t
-                );
-            });
+            t = h
+                .filter((t) => {
+                    let { feature: n } = t;
+                    return e.features.has(n);
+                })
+                .map((e) => {
+                    let { feature: t, IconComponent: n, getText: a, getTooltip: s } = e;
+                    return (0, i.jsx)(
+                        m,
+                        {
+                            IconComponent: n,
+                            text: a(),
+                            tooltip: s()
+                        },
+                        t
+                    );
+                });
         return 0 === t.length
             ? null
             : (0, i.jsxs)('div', {
-                  className: h.features,
+                  className: E.features,
                   children: [(0, i.jsx)(r.Z, { children: _.Z.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES }), t]
               });
     }

@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     },
     Eg: function () {
-        return L;
+        return y;
     },
     IZ: function () {
         return A;
@@ -24,19 +24,16 @@ n.d(t, {
         return T;
     },
     c6: function () {
-        return C;
-    },
-    j$: function () {
-        return N;
+        return R;
     },
     m9: function () {
-        return O;
+        return N;
     },
     mT: function () {
-        return y;
+        return C;
     },
     rC: function () {
-        return R;
+        return O;
     },
     sq: function () {
         return h;
@@ -177,19 +174,7 @@ function v(e, t) {
         category_id: t
     });
 }
-function N(e, t, n, r) {
-    E.default.track(f.rMx.SEARCH_STARTED, {
-        search_type: f.aib.GUILD_DISCOVERY_TAG,
-        load_id: e,
-        location: {
-            page: f.ZY5.GUILD_DISCOVERY,
-            section: n
-        },
-        category_id: t,
-        guild_id: r
-    });
-}
-function O(e) {
+function N(e) {
     let { categoryId: t, error: n, willRequestRetry: r, isRequestRetry: i } = e;
     E.default.track(f.rMx.GUILD_DISCOVERY_SEARCH_FAILED, {
         category_id: t,
@@ -199,11 +184,11 @@ function O(e) {
         is_request_retry: i
     });
 }
-function R(e) {
+function O(e) {
     let { categoryId: t } = e;
     E.default.track(f.rMx.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function C(e) {
+function R(e) {
     let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: o, isTagSearch: s } = e;
     E.default.track(f.rMx.SEARCH_RESULT_VIEWED, {
         search_type: s ? f.aib.GUILD_DISCOVERY_TAG : f.aib.GUILD_DISCOVERY,
@@ -216,7 +201,7 @@ function C(e) {
         category_id: o
     });
 }
-function y(e) {
+function C(e) {
     let t = l.Z.getLoadId(e);
     E.default.track(f.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,
@@ -224,7 +209,7 @@ function y(e) {
         guild_size: d.Z.getMemberCount(e)
     });
 }
-async function L(e) {
+async function y(e) {
     try {
         var t, n;
         let r = await o.tn.get({

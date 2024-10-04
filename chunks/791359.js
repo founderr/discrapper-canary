@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return P;
     }
 }),
     n(47120);
@@ -14,12 +14,12 @@ var i = n(735250),
     d = n(481060),
     u = n(570140),
     _ = n(569984),
-    h = n(918701),
-    E = n(93127),
+    E = n(918701),
+    h = n(93127),
     m = n(814443),
     I = n(594174),
-    g = n(801077),
-    p = n(626135),
+    p = n(801077),
+    g = n(626135),
     T = n(70956),
     f = n(225559),
     S = n(910436),
@@ -43,26 +43,24 @@ let x = 15 * T.Z.Millis.MINUTE,
                 onChannelContextMenu: s,
                 quest: r
             }),
-            { partiedMembers: u, applicationStreams: _, currentActivities: h, voiceChannels: E } = t,
+            { partiedMembers: u, applicationStreams: _, currentActivities: E, voiceChannels: h } = t,
             m = u.length,
             I = _.length,
-            g = h.length,
-            T = E.length > 0,
+            p = E.length,
+            T = h.length > 0,
             f = a.useCallback(() => {
-                let e = h
-                    .filter((e) => {
-                        var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
-                    })
-                    .map((e) => e.game.name);
-                p.default.track(Z.rMx.NOW_PLAYING_CARD_HOVERED, {
+                let e = E.filter((e) => {
+                    var t, n;
+                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
+                }).map((e) => e.game.name);
+                g.default.track(Z.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: m,
                     num_streams: I,
-                    num_activities: g,
+                    num_activities: p,
                     in_voice_channel: T,
                     games_detected: e
                 });
-            }, [m, I, g, T, h]),
+            }, [m, I, p, T, E]),
             v = o()(f, x);
         return null != l || null != c
             ? (0, i.jsx)(d.Popout, {
@@ -91,17 +89,17 @@ let x = 15 * T.Z.Millis.MINUTE,
               })
             : null;
     }),
-    P = r().throttle(() => E.W(!1), 300000);
-function M() {
+    M = r().throttle(() => h.W(!1), 300000);
+function P() {
     let {
             nowPlayingCards: e,
             loaded: t,
             needsRefresh: n,
             fetching: s,
             currentUser: r
-        } = (0, c.cj)([g.Z, m.Z, I.default], () => ({
-            nowPlayingCards: g.Z.nowPlayingCards,
-            loaded: g.Z.loaded,
+        } = (0, c.cj)([p.Z, m.Z, I.default], () => ({
+            nowPlayingCards: p.Z.nowPlayingCards,
+            loaded: p.Z.loaded,
             needsRefresh: m.Z.needsRefresh(),
             fetching: m.Z.getFetching(),
             currentUser: I.default.getCurrentUser()
@@ -109,7 +107,7 @@ function M() {
         l = (0, c.e7)([_.Z], () => _.Z.quests);
     a.useEffect(() => (u.Z.wait(() => f.L()), () => u.Z.wait(() => f.v())), [null == r ? void 0 : r.id]),
         a.useEffect(() => {
-            n && !s && P();
+            n && !s && M();
         }, [n, s]);
     let o = a.useMemo(() => {
             let t = new Map(),
@@ -118,15 +116,15 @@ function M() {
                 i.party.currentActivities.forEach((e) => {
                     let { activity: a } = e;
                     if (null != a) {
-                        let e = (0, h.ZZ)(l, a);
+                        let e = (0, E.ZZ)(l, a);
                         null != e && !n.has(e.id) && (t.set(i.party.id, e), n.add(e.id));
                     }
                 });
             return t;
         }, [e, l]),
-        E = null;
+        h = null;
     return t
-        ? ((E =
+        ? ((h =
               e.length > 0
                   ? e.map((e) => {
                         let { party: t } = e;
@@ -155,7 +153,7 @@ function M() {
                             })
                         ]
                     })),
-          (0, i.jsx)(i.Fragment, { children: E }))
+          (0, i.jsx)(i.Fragment, { children: h }))
         : (0, i.jsx)('div', {
               className: O.emptyCard,
               children: (0, i.jsx)(d.Spinner, {})

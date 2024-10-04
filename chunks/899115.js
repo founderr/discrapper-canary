@@ -1,6 +1,5 @@
 e.exports = {
     toolbar: 'toolbar_ac1501',
-    guildsIconContainer: 'guildsIconContainer_ac1501',
     toolbarIcon: 'toolbarIcon_ac1501',
     preferences: 'preferences_ac1501',
     actions: 'actions_ac1501',
