@@ -15005,28 +15005,28 @@ span.clanTag_a31c43 {
     margin-bottom: var(--reply-spacing)
 }
 
-.cozy_f9f2ca .repliedMessageOriginalSpine_f9f2ca:before,
-.cozy_f9f2ca .repliedMessageSpine_f9f2ca {
+.cozy_f9f2ca .messageSpine_f9f2ca:before,
+.cozy_f9f2ca .repliedMessageClickableSpine_f9f2ca {
     --avatar-size: 40px;
     --gutter: var(--custom-message-margin-horizontal)
 }
 
-.a11y-font-scaled-down .cozy_f9f2ca .repliedMessageOriginalSpine_f9f2ca:before,
-.a11y-font-scaled-down .cozy_f9f2ca .repliedMessageSpine_f9f2ca {
+.a11y-font-scaled-down .cozy_f9f2ca .messageSpine_f9f2ca:before,
+.a11y-font-scaled-down .cozy_f9f2ca .repliedMessageClickableSpine_f9f2ca {
     --avatar-size: 2.5rem;
     --wrapper-padding-left: 4.5rem;
     --avatar-position-left: 1rem;
     --gutter: calc(var(--wrapper-padding-left) - var(--avatar-position-left) - var(--avatar-size))
 }
 
-.compact_f9f2ca .repliedMessageOriginalSpine_f9f2ca:before,
-.compact_f9f2ca .repliedMessageSpine_f9f2ca {
+.compact_f9f2ca .messageSpine_f9f2ca:before,
+.compact_f9f2ca .repliedMessageClickableSpine_f9f2ca {
     --avatar-size: var(--timestamp-width);
     --gutter: var(--custom-message-meta-space)
 }
 
-.repliedMessageOriginalSpine_f9f2ca:before,
-.repliedMessageSpine_f9f2ca {
+.messageSpine_f9f2ca:before,
+.repliedMessageClickableSpine_f9f2ca {
     --spine-width: 2px;
     content: "";
     display: block;
@@ -15049,21 +15049,21 @@ span.clanTag_a31c43 {
     border-top-left-radius: 6px
 }
 
-.compact_f9f2ca .repliedMessageOriginalSpine_f9f2ca:before,
-.compact_f9f2ca .repliedMessageSpine_f9f2ca {
+.compact_f9f2ca .messageSpine_f9f2ca:before,
+.compact_f9f2ca .repliedMessageClickableSpine_f9f2ca {
     right: calc(100% - var(--custom-message-reply-indent))
 }
 
-.repliedMessageSpine_f9f2ca {
+.repliedMessageClickableSpine_f9f2ca {
     cursor: pointer;
     transition: border 50ms
 }
 
-.repliedMessageSpine_f9f2ca:hover {
+.repliedMessageClickableSpine_f9f2ca:hover {
     border-color: var(--interactive-normal)
 }
 
-.repliedMessageSpine_f9f2ca:before {
+.repliedMessageClickableSpine_f9f2ca:before {
     content: "";
     position: absolute;
     top: -10px;
@@ -15073,7 +15073,7 @@ span.clanTag_a31c43 {
     cursor: pointer
 }
 
-.repliedMessageSpine_f9f2ca.repliedMessageContentHovered_f9f2ca {
+.repliedMessageClickableSpine_f9f2ca.repliedMessageContentHovered_f9f2ca {
     border-color: var(--interactive-normal)
 }
 
@@ -15224,10 +15224,6 @@ span.clanTag_a31c43 {
     margin-right: 4px
 }
 
-.executedCommand_f9f2ca .repliedMessage_f9f2ca:before {
-    display: none
-}
-
 .executedCommandSeparator_f9f2ca {
     flex-shrink: 0;
     margin-right: 2px
@@ -15271,7 +15267,7 @@ span.clanTag_a31c43 {
 }
 
 .repliedTextPreview_f9f2ca.clickable_f9f2ca:hover,
-.repliedTextPreview_f9f2ca.repliedMessageSpineHovered_f9f2ca {
+.repliedTextPreview_f9f2ca.repliedMessageClickableSpineHovered_f9f2ca {
     color: var(--header-primary)
 }
 
