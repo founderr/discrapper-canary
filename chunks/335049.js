@@ -19,8 +19,8 @@ var i = t(735250),
     E = t(91218),
     T = t(518738),
     h = t(592125),
-    p = t(271383),
-    g = t(430824),
+    g = t(271383),
+    p = t(430824),
     f = t(246946),
     x = t(594174),
     C = t(51144),
@@ -136,7 +136,7 @@ function b(e) {
 function Z(e) {
     var n;
     let { guild: s, id: r, isLocked: o, lockTooltipText: m } = e,
-        _ = (0, d.e7)([g.Z], () => g.Z.getRole(s.id, r)),
+        _ = (0, d.e7)([p.Z], () => p.Z.getRole(s.id, r)),
         N = (0, T.p9)({
             guildId: s.id,
             roleId: r,
@@ -189,10 +189,10 @@ function v(e) {
     let { guild: n, id: t, isLocked: a, lockTooltipText: s, openEntryContextMenu: l } = e,
         r = (0, d.e7)([x.default], () => x.default.getUser(t)),
         o = (0, d.e7)(
-            [p.ZP],
+            [g.ZP],
             () => {
                 var e;
-                return null === (e = p.ZP.getMember(n.id, t)) || void 0 === e ? void 0 : e.nick;
+                return null === (e = g.ZP.getMember(n.id, t)) || void 0 === e ? void 0 : e.nick;
             },
             [n.id, t]
         ),

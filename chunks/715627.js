@@ -12,15 +12,15 @@ let o = {
     },
     c = (e, t, n) => (null == n ? t : (e * n) / 100),
     d = a.memo(function (e) {
-        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: _, particlesPerBurst: E, offsetXPercentageMax: u, offsetXPercentageMin: T, offsetYPercentageMax: I, offsetYPercentageMin: R, customConfettiCanvas: g, speedValues: N = o, dragCoefficientValue: C = 0.001, onAnimationEnd: m } = e,
-            [f, A] = a.useState(null),
-            { confettiCanvas: p } = a.useContext(i.h),
-            M = (0, r.uR)(null != g ? g : p, f),
+        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: _, particlesPerBurst: E, offsetXPercentageMax: u, offsetXPercentageMin: T, offsetYPercentageMax: I, offsetYPercentageMin: R, customConfettiCanvas: g, speedValues: N = o, dragCoefficientValue: m = 0.001, onAnimationEnd: C } = e,
+            [f, p] = a.useState(null),
+            { confettiCanvas: A } = a.useContext(i.h),
+            M = (0, r.uR)(null != g ? g : A, f),
             [S, h] = a.useState(!1);
         a.useEffect(() => {
-            S && (null == m || m());
+            S && (null == C || C());
         });
-        let b = a.useMemo(() => {
+        let x = a.useMemo(() => {
             if (null != d)
                 return [
                     {
@@ -79,20 +79,20 @@ let o = {
                                             value: i
                                         }
                                     };
-                                })(t.getBoundingClientRect(), u, T, I, R, N, C),
+                                })(t.getBoundingClientRect(), u, T, I, R, N, m),
                                 null != E ? E : 50
                             ),
-                                s === e.length - 1 && null != m && h(!0);
+                                s === e.length - 1 && null != C && h(!0);
                         }, 60 * s)
                     )),
                     () => {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [M, t, _, E, u, T, I, R, N, C, m]),
+            }, [M, t, _, E, u, T, I, R, N, m, C]),
             (0, s.jsx)(r.Ji, {
-                ref: A,
-                sprites: null != b ? b : l.CA,
+                ref: p,
+                sprites: null != x ? x : l.CA,
                 colors: null != n ? n : l.Br,
                 spriteWidth: l.Ko,
                 spriteHeight: l.Ko

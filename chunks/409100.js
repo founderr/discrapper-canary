@@ -24,25 +24,25 @@ let I = (e) => {
     },
     R = (e, t, n, s) => (t || n ? u.Z.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === E.Si.TIER_2 ? u.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: s }) : void 0);
 t.Z = (e) => {
-    let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: g = !1, isPersistentCTA: N = !1, useShorterCTA: C = !1, ...m } = e,
+    let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: g = !1, isPersistentCTA: N = !1, useShorterCTA: m = !1, ...C } = e,
         f = (0, i.ZP)(),
-        A = (0, a.wj)(f) || t,
-        p = (0, d.N)(),
-        M = null == p ? void 0 : p.subscription_trial,
+        p = (0, a.wj)(f) || t,
+        A = (0, d.N)(),
+        M = null == A ? void 0 : A.subscription_trial,
         S = (0, l.a5)({
             intervalType: null == M ? void 0 : M.interval,
             intervalCount: null == M ? void 0 : M.interval_count
         }),
         h = (0, c.Ng)(),
-        b = null != M && n === M.sku_id,
-        { enabled: x } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
-        O = x && (null == p ? void 0 : p.trial_id) === E.a7,
+        x = null != M && n === M.sku_id,
+        { enabled: b } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
+        O = b && (null == A ? void 0 : A.trial_id) === E.a7,
         P = g
             ? u.Z.Messages.BOGO_CLAIM_OFFER
             : null != h
-              ? R(n, C, N, h.discount.amount)
+              ? R(n, m, N, h.discount.amount)
               : I({
-                    showTrialCTA: b,
+                    showTrialCTA: x,
                     subscriptionTier: n,
                     shouldShowUpsells: !1,
                     trialDurationCopy: S,
@@ -51,12 +51,12 @@ t.Z = (e) => {
                     subscriptionTrial: M
                 });
     return (0, s.jsx)(_.Z, {
-        color: A ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
-        buttonShineClassName: 'buttonShineClassName' in m ? m.buttonShineClassName : A ? T.brandShine : void 0,
+        color: p ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
+        buttonShineClassName: 'buttonShineClassName' in C ? C.buttonShineClassName : p ? T.brandShine : void 0,
         buttonText: P,
-        buttonTextClassName: b ? T.freeTrialText : void 0,
+        buttonTextClassName: x ? T.freeTrialText : void 0,
         onlyShineOnHover: !0,
         subscriptionTier: n,
-        ...m
+        ...C
     });
 };

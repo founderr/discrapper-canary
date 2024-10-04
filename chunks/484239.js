@@ -15,11 +15,11 @@ t.Z = (e) => {
     var t;
     let n,
         a,
-        { title: I, titleClassName: R, buttonClassName: g, perkImage: N, isCarousel: C, onCtaClick: m, perkComponent: f, subtitle: A = '', descriptionCta: p = '', cardVariant: M, subtitleClassName: S } = e,
+        { title: I, titleClassName: R, buttonClassName: g, perkImage: N, isCarousel: m, onCtaClick: C, perkComponent: f, subtitle: p = '', descriptionCta: A = '', cardVariant: M, subtitleClassName: S } = e,
         h = (0, o._)(M),
-        b = (0, l.yQ)(),
-        x = (null == b ? void 0 : b.nitroTenureStatus) === d.EB.REDEEMABLE;
-    switch (null == b ? void 0 : b.nitroTenureStatus) {
+        x = (0, l.yQ)(),
+        b = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
+    switch (null == x ? void 0 : x.nitroTenureStatus) {
         case d.EB.REDEEMABLE:
             (n = T), (a = 'unlocked icon');
             break;
@@ -40,7 +40,7 @@ t.Z = (e) => {
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
                 cardVariantStyleInfo: h,
                 titleClassName: R,
-                subtitle: A,
+                subtitle: p,
                 subtitleClassName: S
             }),
             null != N &&
@@ -48,8 +48,8 @@ t.Z = (e) => {
                     src: N,
                     alt: '',
                     className: r()({
-                        [_.cardImage]: !C,
-                        [_.carouselCardImage]: C
+                        [_.cardImage]: !m,
+                        [_.carouselCardImage]: m
                     })
                 }),
             null != f &&
@@ -58,13 +58,13 @@ t.Z = (e) => {
                         className: _.cardIllustrationNoHover,
                         children: [
                             f,
-                            0 !== p.length &&
-                                null != m &&
+                            0 !== A.length &&
+                                null != C &&
                                 (0, s.jsx)(i.Button, {
                                     className: g,
-                                    disabled: !x,
+                                    disabled: !b,
                                     fullWidth: !0,
-                                    onClick: m,
+                                    onClick: C,
                                     children: (0, s.jsxs)('div', {
                                         className: null == h ? void 0 : null === (t = h.descriptionCta) || void 0 === t ? void 0 : t.className,
                                         children: [
@@ -72,7 +72,7 @@ t.Z = (e) => {
                                                 alt: a,
                                                 src: n
                                             }),
-                                            p
+                                            A
                                         ]
                                     })
                                 })

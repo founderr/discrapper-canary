@@ -1,32 +1,32 @@
-t.d(n, {
+n.d(a, {
     Z: function () {
         return c;
     }
 });
-var i = t(735250);
-t(470079);
-var a = t(120356),
-    s = t.n(a),
-    l = t(481060),
-    r = t(422559),
-    o = t(594045);
+var i = n(735250);
+n(470079);
+var t = n(120356),
+    r = n.n(t),
+    l = n(481060),
+    s = n(422559),
+    o = n(594045);
 function c(e) {
-    let { grantedPermissions: n, disabledPermissions: t, grantedPermissionsHeader: a, disabledPermissionsHeader: c, className: d } = e;
+    let { grantedPermissions: a, disabledPermissions: n, grantedPermissionsHeader: t, disabledPermissionsHeader: c, className: d } = e;
     return (0, i.jsxs)('div', {
-        className: s()(o.list, d),
+        className: r()(o.list, d),
         children: [
-            null != n && n.length > 0
+            null != a && a.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != a
+                          null != t
                               ? (0, i.jsx)(l.FormTitle, {
                                     className: o.permissionHeader,
-                                    children: a
+                                    children: t
                                 })
                               : null,
                           (0, i.jsx)('div', {
                               className: o.container,
-                              children: n.map((e) =>
+                              children: a.map((e) =>
                                   (0, i.jsxs)(
                                       'div',
                                       {
@@ -39,7 +39,7 @@ function c(e) {
                                               }),
                                               (0, i.jsx)(l.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: (0, r.wt)(e)
+                                                  children: (0, s.wt)(e)
                                               })
                                           ]
                                       },
@@ -50,7 +50,7 @@ function c(e) {
                       ]
                   })
                 : null,
-            null != t && t.length > 0
+            null != n && n.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != c
@@ -61,7 +61,7 @@ function c(e) {
                               : null,
                           (0, i.jsx)('div', {
                               className: o.container,
-                              children: t.map((e) =>
+                              children: n.map((e) =>
                                   (0, i.jsxs)(
                                       'div',
                                       {
@@ -74,7 +74,7 @@ function c(e) {
                                               }),
                                               (0, i.jsx)(l.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: (0, r.wt)(e)
+                                                  children: (0, s.wt)(e)
                                               })
                                           ]
                                       },

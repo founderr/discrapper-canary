@@ -39,18 +39,18 @@ t.Z = (e) => {
     let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: u = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
         g = 43 + T / 2,
         N = 2 * Math.PI * g,
-        [C, m] = a.useState(u);
+        [m, C] = a.useState(u);
     a.useEffect(() => {
         let e = setTimeout(() => {
-            m(t);
+            C(t);
         }, 200);
         return () => clearTimeout(e);
     }, [t]);
     let f = (0, i.ZP)(),
-        A = (0, r.ap)(f),
-        p = _(I),
-        M = d(I, A),
-        S = null != R ? R : E(A, I);
+        p = (0, r.ap)(f),
+        A = _(I),
+        M = d(I, p),
+        S = null != R ? R : E(p, I);
     return (0, s.jsxs)('div', {
         className: o.circleContainer,
         children: [
@@ -65,7 +65,7 @@ t.Z = (e) => {
                         r: ''.concat(g),
                         cx: '50%',
                         cy: '50%',
-                        stroke: p,
+                        stroke: A,
                         strokeOpacity: M
                     }),
                     (0, s.jsx)('circle', {
@@ -74,7 +74,7 @@ t.Z = (e) => {
                         strokeLinecap: 'round',
                         strokeDasharray: ''.concat(N, ' ').concat(N),
                         className: c,
-                        style: { strokeDashoffset: (1 - C / 100) * N },
+                        style: { strokeDashoffset: (1 - m / 100) * N },
                         r: ''.concat(g),
                         cx: '50%',
                         cy: '50%'

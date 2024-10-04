@@ -21,7 +21,7 @@ var i = t(735250),
     T = t(408942);
 function h(e) {
     let n,
-        { guild: t, channel: h, customWebhooks: p, editedWebhook: g, selectableWebhookChannels: f, refToScroller: x, errors: C, canNavigate: O } = e,
+        { guild: t, channel: h, customWebhooks: g, editedWebhook: p, selectableWebhookChannels: f, refToScroller: x, errors: C, canNavigate: O } = e,
         S = (0, c.ZP)(),
         [A, R] = a.useState(null),
         [b, Z] = a.useState(null);
@@ -56,7 +56,7 @@ function h(e) {
         }
     }, [O, n, t]);
     a.useEffect(() => {
-        0 === p.length && v();
+        0 === g.length && v();
     }, []);
     let M = null !== n;
     return (0, i.jsxs)(l.FormSection, {
@@ -69,7 +69,7 @@ function h(e) {
                 })
             }),
             (0, i.jsx)(l.FormDivider, { className: N.headerDivider }),
-            p.length > 0
+            g.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(l.Button, {
@@ -80,8 +80,8 @@ function h(e) {
                               children: _.Z.Messages.INTEGRATIONS_WEBHOOKS_CREATE
                           }),
                           (0, i.jsx)(I.Z, {
-                              webhooks: p,
-                              editedWebhook: g,
+                              webhooks: g,
+                              editedWebhook: p,
                               selectableWebhookChannels: f,
                               lastCreatedWebhookId: null == A ? void 0 : A.id,
                               errors: C,

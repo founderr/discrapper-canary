@@ -19,16 +19,16 @@ var s = n(399606),
     R = n(450598),
     g = n(633030),
     N = n(97942),
-    C = n(269987),
-    m = n(548629),
+    m = n(269987),
+    C = n(548629),
     f = n(507084),
-    A = n(680313),
-    p = n(926433),
+    p = n(680313),
+    A = n(926433),
     M = n(302036),
     S = n(994554),
     h = n(1549),
-    b = n(13327),
-    x = n(59137),
+    x = n(13327),
+    b = n(59137),
     O = n(405991),
     P = n(24615),
     v = n(193943),
@@ -109,20 +109,20 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             moreGuildsAlt: {
                 title: u.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                 description: u.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                imageSource: w(n, f, A),
+                imageSource: w(n, f, p),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
                 title: u.Z.Messages.REMIXING_PERKS_CARD_TITLE,
                 description: u.Z.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-                imageSource: w(n, C, m),
+                imageSource: w(n, m, C),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },
             soundboard: {
                 title: u.Z.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
                 description: u.Z.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-                imageSource: w(n, p, M),
+                imageSource: w(n, A, M),
                 imageClassName: t.soundboardImage
             },
             stickers: {
@@ -152,7 +152,7 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             superReactions: {
                 title: u.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
                 description: u.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-                imageSource: w(n, h, b),
+                imageSource: w(n, h, x),
                 imageClassName: t.superReactionsImage
             },
             upload: {
@@ -164,7 +164,7 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             videoBackground: {
                 title: u.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
                 description: u.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-                imageSource: w(n, x, O),
+                imageSource: w(n, b, O),
                 imageClassName: t.videoBackgroundImage
             }
         };

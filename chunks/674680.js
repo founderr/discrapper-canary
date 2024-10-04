@@ -30,14 +30,14 @@ function T(e) {
         R = (0, c.oX)(n);
     if (null == R) return null;
     let g = (0, r.getAvatarSpecs)(T),
-        { name: N, rarity: C } = R,
-        { color: m } = (0, c.F7)(C),
+        { name: N, rarity: m } = R,
+        { color: C } = (0, c.F7)(m),
         f = (0, a.wj)(I) ? E : u,
-        A = (g.size - g.offset - 2 * g.stroke) * 0.8,
-        p = g.size - g.stroke,
+        p = (g.size - g.offset - 2 * g.stroke) * 0.8,
+        A = g.size - g.stroke,
         M = {
-            width: 0.4 * A,
-            height: 0.4 * A
+            width: 0.4 * p,
+            height: 0.4 * p
         },
         S = {
             width: M.width + 1,
@@ -49,8 +49,8 @@ function T(e) {
     return (0, s.jsxs)('div', {
         className: _.container,
         style: {
-            width: p,
-            height: p,
+            width: A,
+            height: A,
             padding: g.stroke
         },
         'aria-label': ''.concat(null !== (t = N()) && void 0 !== t ? t : ''),
@@ -59,9 +59,9 @@ function T(e) {
                 className: _.trophyIconContainer,
                 children: (0, s.jsx)(r.TrophyIcon, {
                     size: 'custom',
-                    color: d ? m : (0, l.Lq)(f.trophy),
-                    width: A,
-                    height: A
+                    color: d ? C : (0, l.Lq)(f.trophy),
+                    width: p,
+                    height: p
                 })
             }),
             !d &&
@@ -75,7 +75,7 @@ function T(e) {
                     })
                 }),
             d &&
-                C === c.EP.LEGENDARY &&
+                m === c.EP.LEGENDARY &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
                     style: S,

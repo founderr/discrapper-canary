@@ -1,109 +1,109 @@
-n.d(t, {
+a.d(n, {
     Z: function () {
-        return f;
+        return C;
     }
 });
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
-    l = n(680295),
-    o = n(687158),
-    c = n(576635),
-    d = n(518950),
-    _ = n(438163),
-    E = n(502762),
-    u = n(150039),
-    T = n(450734),
-    I = n(225089),
-    R = n(853726),
-    g = n(165747),
-    N = n(981631),
-    C = n(228168),
-    m = n(706995);
-function f(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: a, onUpsellClick: f, pendingBanner: A, pendingBio: p, pendingPronouns: M, pendingAvatar: S, pendingAvatarDecoration: h, pendingNickname: b, pendingGlobalName: x, pendingThemeColors: O, pendingProfileEffectId: P, avatarClassName: v, containerClassName: L, isTryItOutFlow: Z = !1, disabledInputs: D = !1, hideCustomStatus: B = !1, hideBioSection: U = !1, hideMessageInput: j = !0, hideExampleButton: G = !1 } = e,
-        w = (0, o.ZP)(t.id, null == n ? void 0 : n.id),
-        { avatarSrc: y, avatarDecorationSrc: H } = (0, d.Z)({
-            user: t,
-            guildId: null == n ? void 0 : n.id,
-            avatarDecorationOverride: h,
-            avatarOverride: S,
-            size: i.AvatarSizes.SIZE_80,
+var i = a(735250);
+a(470079);
+var s = a(120356),
+    r = a.n(s),
+    o = a(481060),
+    l = a(680295),
+    t = a(687158),
+    c = a(576635),
+    u = a(518950),
+    d = a(438163),
+    A = a(502762),
+    E = a(150039),
+    _ = a(450734),
+    I = a(225089),
+    P = a(853726),
+    p = a(165747),
+    v = a(981631),
+    m = a(228168),
+    N = a(706995);
+function C(e) {
+    let { user: n, guild: a, canUsePremiumCustomization: s, onUpsellClick: C, pendingBanner: f, pendingBio: T, pendingPronouns: L, pendingAvatar: R, pendingAvatarDecoration: M, pendingNickname: Z, pendingGlobalName: S, pendingThemeColors: g, pendingProfileEffectId: h, avatarClassName: U, containerClassName: x, isTryItOutFlow: j = !1, disabledInputs: y = !1, hideCustomStatus: O = !1, hideBioSection: B = !1, hideMessageInput: b = !0, hideExampleButton: w = !1 } = e,
+        D = (0, t.ZP)(n.id, null == a ? void 0 : a.id),
+        { avatarSrc: k, avatarDecorationSrc: V } = (0, u.Z)({
+            user: n,
+            guildId: null == a ? void 0 : a.id,
+            avatarDecorationOverride: M,
+            avatarOverride: R,
+            size: o.AvatarSizes.SIZE_80,
             showPending: !0
         }),
-        k = (0, u.ZT)({
-            pendingProfileEffectId: P,
-            displayProfile: w
+        F = (0, E.ZT)({
+            pendingProfileEffectId: h,
+            displayProfile: D
         }),
-        { theme: F, primaryColor: V } = (0, c.Z)({
-            user: t,
-            displayProfile: w,
-            pendingThemeColors: O,
-            isPreview: a
+        { theme: z, primaryColor: G } = (0, c.Z)({
+            user: n,
+            displayProfile: D,
+            pendingThemeColors: g,
+            isPreview: s
         });
-    return (0, s.jsxs)(E.Z, {
-        user: t,
-        displayProfile: w,
-        profileType: C.y0.BITE_SIZE,
-        pendingThemeColors: O,
-        pendingProfileEffectId: k,
-        className: r()(m.container, L),
-        forceShowPremium: a,
+    return (0, i.jsxs)(A.Z, {
+        user: n,
+        displayProfile: D,
+        profileType: m.y0.BITE_SIZE,
+        pendingThemeColors: g,
+        pendingProfileEffectId: F,
+        className: r()(N.container, x),
+        forceShowPremium: s,
         children: [
-            (0, s.jsxs)('header', {
-                className: m.header,
+            (0, i.jsxs)('header', {
+                className: N.header,
                 children: [
-                    (0, s.jsx)(I.Z, {
-                        user: t,
-                        displayProfile: w,
-                        guildId: null == n ? void 0 : n.id,
-                        canUsePremiumCustomization: a,
-                        pendingBanner: A,
-                        isTryItOutFlow: Z,
-                        disabledInputs: D,
-                        onUpsellClick: () => (null == f ? void 0 : f({ object: N.qAy.EDIT_PROFILE_BANNER }))
+                    (0, i.jsx)(I.Z, {
+                        user: n,
+                        displayProfile: D,
+                        guildId: null == a ? void 0 : a.id,
+                        canUsePremiumCustomization: s,
+                        pendingBanner: f,
+                        isTryItOutFlow: j,
+                        disabledInputs: y,
+                        onUpsellClick: () => (null == C ? void 0 : C({ object: v.qAy.EDIT_PROFILE_BANNER }))
                     }),
-                    (0, s.jsx)(T.Z, {
-                        user: t,
-                        guild: n,
-                        displayProfile: w,
-                        canUsePremiumCustomization: a,
-                        previewAvatar: y,
-                        previewAvatarDecoration: H,
-                        previewTheme: F,
-                        previewPrimaryColor: V,
-                        className: v,
-                        disabledInputs: D,
-                        isTryItOutFlow: Z,
-                        onUpsellClick: () => (null == f ? void 0 : f({ object: N.qAy.AVATAR }))
+                    (0, i.jsx)(_.Z, {
+                        user: n,
+                        guild: a,
+                        displayProfile: D,
+                        canUsePremiumCustomization: s,
+                        previewAvatar: k,
+                        previewAvatarDecoration: V,
+                        previewTheme: z,
+                        previewPrimaryColor: G,
+                        className: U,
+                        disabledInputs: y,
+                        isTryItOutFlow: j,
+                        onUpsellClick: () => (null == C ? void 0 : C({ object: v.qAy.AVATAR }))
                     }),
-                    !B &&
-                        (0, s.jsx)(_.Z, {
-                            user: t,
-                            profileType: C.y0.BITE_SIZE
+                    !O &&
+                        (0, i.jsx)(d.Z, {
+                            user: n,
+                            profileType: m.y0.BITE_SIZE
                         })
                 ]
             }),
-            (0, s.jsx)(R.Z, {
-                user: t,
-                displayProfile: w,
-                guild: n,
-                pendingAvatar: S,
-                pendingNickname: b,
-                pendingGlobalName: x,
-                pendingBio: p,
-                pendingPronouns: M,
-                isTryItOutFlow: Z,
-                hideBioSection: U
+            (0, i.jsx)(P.Z, {
+                user: n,
+                displayProfile: D,
+                guild: a,
+                pendingAvatar: R,
+                pendingNickname: Z,
+                pendingGlobalName: S,
+                pendingBio: T,
+                pendingPronouns: L,
+                isTryItOutFlow: j,
+                hideBioSection: B
             }),
-            (0, s.jsx)(g.Z, {
-                user: t,
-                hideMessageInput: j,
-                hideExampleButton: G
+            (0, i.jsx)(p.Z, {
+                user: n,
+                hideMessageInput: b,
+                hideExampleButton: w
             }),
-            null != k && (0, s.jsx)(l.Z, { profileEffectId: k })
+            null != F && (0, i.jsx)(l.Z, { profileEffectId: F })
         ]
     });
 }

@@ -1,71 +1,71 @@
-n.d(t, {
+a.d(n, {
     Z: function () {
-        return R;
+        return P;
     }
 });
-var s = n(735250);
-n(470079);
-var a = n(442837),
-    r = n(954138),
-    i = n(979264),
-    l = n(648052),
-    o = n(530),
-    c = n(420654),
-    d = n(116854),
-    _ = n(271383),
-    E = n(246946),
-    u = n(654904),
-    T = n(228168),
-    I = n(451563);
-function R(e) {
-    var t;
-    let { user: n, displayProfile: R, guild: g, pendingAvatar: N, pendingNickname: C, pendingGlobalName: m, pendingBio: f, pendingPronouns: A, isTryItOutFlow: p, hideBioSection: M } = e,
-        S = (0, a.e7)([_.ZP], () => (null == g ? null : _.ZP.getMember(g.id, n.id))),
-        h = (0, a.e7)([E.Z], () => E.Z.hidePersonalInformation),
-        b = (0, r.Z)('ProfileCustomizationPreviewBody'),
-        x = null == R ? void 0 : null === (t = R.getPreviewBio(f)) || void 0 === t ? void 0 : t.value,
-        O = null != A ? A : null == R ? void 0 : R.pronouns,
-        P = (0, u.Ly)({
-            pendingNickname: C,
-            pendingGlobalName: m,
-            user: n,
-            guildMember: S
+var i = a(735250);
+a(470079);
+var s = a(442837),
+    r = a(954138),
+    o = a(979264),
+    l = a(648052),
+    t = a(530),
+    c = a(420654),
+    u = a(116854),
+    d = a(271383),
+    A = a(246946),
+    E = a(654904),
+    _ = a(228168),
+    I = a(451563);
+function P(e) {
+    var n;
+    let { user: a, displayProfile: P, guild: p, pendingAvatar: v, pendingNickname: m, pendingGlobalName: N, pendingBio: C, pendingPronouns: f, isTryItOutFlow: T, hideBioSection: L } = e,
+        R = (0, s.e7)([d.ZP], () => (null == p ? null : d.ZP.getMember(p.id, a.id))),
+        M = (0, s.e7)([A.Z], () => A.Z.hidePersonalInformation),
+        Z = (0, r.Z)('ProfileCustomizationPreviewBody'),
+        S = null == P ? void 0 : null === (n = P.getPreviewBio(C)) || void 0 === n ? void 0 : n.value,
+        g = null != f ? f : null == P ? void 0 : P.pronouns,
+        h = (0, E.Ly)({
+            pendingNickname: m,
+            pendingGlobalName: N,
+            user: a,
+            guildMember: R
         });
-    return (0, s.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         inert: '',
         className: I.body,
         children: [
-            (0, s.jsx)(o.Z, {
-                user: n,
-                profileType: T.y0.BITE_SIZE,
+            (0, i.jsx)(t.Z, {
+                user: a,
+                profileType: _.y0.BITE_SIZE,
                 usernameIcon: (() => {
-                    if (!(null != S)) return;
-                    if (null !== N && !!(null != S.avatar || null != N))
-                        return (0, s.jsx)(d.Z, {
-                            user: n,
-                            nickname: P
+                    if (!(null != R)) return;
+                    if (null !== v && !!(null != R.avatar || null != v))
+                        return (0, i.jsx)(u.Z, {
+                            user: a,
+                            nickname: h
                         });
                 })(),
-                nickname: P,
-                pronouns: O,
-                isTryItOut: p,
-                tags: (0, s.jsx)(l.Z, {
-                    displayProfile: R,
-                    profileType: T.y0.BITE_SIZE
+                nickname: h,
+                pronouns: g,
+                isTryItOut: T,
+                tags: (0, i.jsx)(l.Z, {
+                    displayProfile: P,
+                    profileType: _.y0.BITE_SIZE
                 })
             }),
-            b &&
-                (0, s.jsx)(i.ZP, {
-                    userId: n.id,
+            Z &&
+                (0, i.jsx)(o.ZP, {
+                    userId: a.id,
                     inline: !1
                 }),
-            !M &&
-                null != x &&
-                '' !== x &&
-                (0, s.jsx)(c.Z, {
-                    user: n,
-                    bio: x,
-                    hidePersonalInformation: h,
+            !L &&
+                null != S &&
+                '' !== S &&
+                (0, i.jsx)(c.Z, {
+                    user: a,
+                    bio: S,
+                    hidePersonalInformation: M,
                     viewFullBioDisabled: !0
                 })
         ]

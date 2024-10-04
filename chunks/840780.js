@@ -283,7 +283,7 @@ class ec extends l.PureComponent {
                     l = null != t && (0, G.vd)(t.type) ? t : null,
                     r = null != l ? l.getGuildId() : e;
                 (0, u.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e('46746'), n.e('41720')]).then(n.bind(n, 60594));
+                    let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,

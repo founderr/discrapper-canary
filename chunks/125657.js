@@ -21,8 +21,8 @@ var i = t(735250),
     E = t(430824),
     T = t(823379),
     h = t(700785),
-    p = t(689938),
-    g = t(452199);
+    g = t(689938),
+    p = t(452199);
 function f(e) {
     var n;
     let { guild: t, applicationIntegration: f } = e,
@@ -46,7 +46,7 @@ function f(e) {
         ? null
         : (0, i.jsx)(r.Card, {
               editable: !0,
-              className: g.card,
+              className: p.card,
               children: (0, i.jsxs)(I.Z, {
                   direction: I.Z.Direction.VERTICAL,
                   children: [
@@ -56,15 +56,15 @@ function f(e) {
                               (0, i.jsx)('img', {
                                   alt: '',
                                   src: O.getAvatarURL(t.id, 32),
-                                  className: g.iconWrapper
+                                  className: p.iconWrapper
                               }),
                               (0, i.jsx)(r.Text, {
                                   color: 'header-primary',
                                   variant: 'text-sm/normal',
-                                  children: p.Z.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({ user: O })
+                                  children: g.Z.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({ user: O })
                               }),
                               (0, i.jsx)(u.Z, {
-                                  className: g.tag,
+                                  className: p.tag,
                                   verified: O.isVerifiedBot()
                               })
                           ]
@@ -75,16 +75,16 @@ function f(e) {
                           for (let e of m.VY) s.e$(a, e) ? l.push(e) : o.push(e);
                           return (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(r.FormDivider, { className: g.divider }),
+                                  (0, i.jsx)(r.FormDivider, { className: p.divider }),
                                   t.length > 0
                                       ? (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 (0, i.jsx)(r.FormTitle, {
-                                                    className: g.permissionHeader,
-                                                    children: p.Z.Messages.ROLES_LIST.format({ numRoles: t.length })
+                                                    className: p.permissionHeader,
+                                                    children: g.Z.Messages.ROLES_LIST.format({ numRoles: t.length })
                                                 }),
                                                 (0, i.jsx)(c.ZP, {
-                                                    className: g.rolePills,
+                                                    className: p.rolePills,
                                                     user: e,
                                                     guild: n,
                                                     userRoles: t,
@@ -96,11 +96,11 @@ function f(e) {
                                       : null,
                                   l.length > 0 || o.length > 0
                                       ? (0, i.jsx)(d.Z, {
-                                            className: g.permissionList,
+                                            className: p.permissionList,
                                             grantedPermissions: l,
-                                            grantedPermissionsHeader: p.Z.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
+                                            grantedPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
                                             disabledPermissions: o,
-                                            disabledPermissionsHeader: p.Z.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
+                                            disabledPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
                                         })
                                       : null
                               ]

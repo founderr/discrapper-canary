@@ -81,8 +81,8 @@ function u(e) {
         };
     }, []);
     let N = null != R && n,
-        C = N ? l.Clickable : 'div';
-    return (0, s.jsxs)(C, {
+        m = N ? l.Clickable : 'div';
+    return (0, s.jsxs)(m, {
         className: i()(_.container, N && _.actionable),
         onClick: () => {
             N && R();

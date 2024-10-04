@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return D;
+        return S;
     },
     a: function () {
         return y;
@@ -59,17 +59,17 @@ function y(e) {
         );
     return t;
 }
-let S = {
+let D = {
     ssrc: 1,
     codec: 2
 };
-function D(e, t, n, a, D) {
-    return e.map((R, b) => {
-        var v, E;
+function S(e, t, n, a, S) {
+    return e.map((R, v) => {
+        var b, E;
         let Z = [];
         for (let e of Object.keys(R).sort((e, t) => {
-            let n = S[e],
-                r = S[t];
+            let n = D[e],
+                r = D[t];
             if (n !== r) return void 0 === n ? 1 : void 0 === r ? -1 : n - r;
             return m.Pz[e] !== m.Pz[t] ? (m.Pz[e] ? 1 : -1) : e > t ? 1 : -1;
         })) {
@@ -97,7 +97,7 @@ function D(e, t, n, a, D) {
                     'video' === R.type &&
                         null != n &&
                         null != a &&
-                        null != D &&
+                        null != S &&
                         (function (e, t, n, a) {
                             let o = a.get(t, n, e.ssrc);
                             return null != o
@@ -112,14 +112,14 @@ function D(e, t, n, a, D) {
                                       })
                                   })
                                 : null;
-                        })(R, n, a, D),
+                        })(R, n, a, S),
                     y(Z),
                     'video' === R.type &&
-                        b === e.length - 1 &&
+                        v === e.length - 1 &&
                         null != n &&
                         null != a &&
-                        null != D &&
-                        ((v = a),
+                        null != S &&
+                        ((b = a),
                         (E = t),
                         (0, r.jsx)(c.Z, {
                             className: f.marginBottom20,
@@ -132,9 +132,9 @@ function D(e, t, n, a, D) {
                                         children: 'Simulcast Override'
                                     }),
                                     (0, r.jsx)(o.SingleSelect, {
-                                        value: m.ZP.getSimulcastDebugOverride(v, E),
+                                        value: m.ZP.getSimulcastDebugOverride(b, E),
                                         onChange: (e) => {
-                                            s.MS(v, E, e);
+                                            s.MS(b, E, e);
                                         },
                                         options: Object.values(h.Z).map((e) => ({
                                             value: e,

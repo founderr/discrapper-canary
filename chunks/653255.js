@@ -3,41 +3,41 @@ var r,
     u,
     l,
     o = n(442837),
-    c = n(570140),
-    a = n(358085),
-    s = n(998502),
+    a = n(570140),
+    s = n(358085),
+    c = n(998502),
     d = n(869614),
     f = n(281083),
-    E = n(672598);
-let v = !1,
-    p = !0,
-    S = !1;
-class P extends (l = o.ZP.Store) {
+    v = n(672598);
+let p = !1,
+    h = !0,
+    g = !1;
+class m extends (l = o.ZP.Store) {
     initialize() {
-        !(!a.isPlatformEmbedded || __OVERLAY__) &&
-            s.ZP.getGPUDriverVersions().then((e) => {
-                (v = (0, E.Z)(e)), (p = (0, d.Z)(e)), (S = (0, f.Z)(e)), this.emitChange();
+        !(!s.isPlatformEmbedded || __OVERLAY__) &&
+            c.ZP.getGPUDriverVersions().then((e) => {
+                (p = (0, v.Z)(e)), (h = (0, d.Z)(e)), (g = (0, f.Z)(e)), this.emitChange();
             });
     }
     get GPUDriversOutdated() {
-        return v;
-    }
-    get canUseHardwareAcceleration() {
         return p;
     }
+    get canUseHardwareAcceleration() {
+        return h;
+    }
     get problematicGPUDriver() {
-        return S;
+        return g;
     }
     getState() {
         return {
-            GPUDriversOutdated: v,
-            canUseHardwareAcceleration: p,
-            problematicGPUDriver: S
+            GPUDriversOutdated: p,
+            canUseHardwareAcceleration: h,
+            problematicGPUDriver: g
         };
     }
 }
 (u = 'StreamingCapabilitiesStore'),
-    (i = 'displayName') in (r = P)
+    (i = 'displayName') in (r = m)
         ? Object.defineProperty(r, i, {
               value: u,
               enumerable: !0,
@@ -45,9 +45,9 @@ class P extends (l = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = u),
-    (t.Z = new P(c.Z, {
+    (t.Z = new m(a.Z, {
         OVERLAY_INITIALIZE: function (e) {
             let { streamingCapabilitiesStoreState: t } = e;
-            (v = t.GPUDriversOutdated), (p = t.canUseHardwareAcceleration);
+            (p = t.GPUDriversOutdated), (h = t.canUseHardwareAcceleration);
         }
     }));

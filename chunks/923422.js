@@ -3,8 +3,8 @@ var o = t(735250),
     r = t(470079),
     a = t(481060),
     i = t(239091),
-    l = t(230711),
-    c = t(493544),
+    c = t(230711),
+    l = t(493544),
     u = t(108843),
     s = t(100527),
     d = t(906732),
@@ -13,28 +13,28 @@ var o = t(735250),
     g = t(394644),
     E = t(606669),
     m = t(53432),
-    b = t(74869),
-    I = t(828064),
+    I = t(74869),
+    b = t(828064),
     T = t(308512),
     f = t(594791),
     M = t(393431),
-    p = t(69021),
-    C = t(981631),
+    C = t(69021),
+    p = t(981631),
     h = t(689938);
 n.default = (0, u.Z)(
     function (e) {
         let { webBuildOverride: n, onSelect: t } = e,
             [u, s] = r.useState(!1),
-            Z = (0, I.Z)(),
+            Z = (0, b.Z)(),
             R = (0, T.Z)(),
             N = (0, m.Z)(),
             x = (0, E.Z)(),
             A = (0, M.Z)(),
             B = (0, f.Z)(),
-            G = (0, b.Z)(),
-            k = (0, p.Z)(),
-            { analyticsLocations: v } = (0, d.ZP)(),
-            O = r.useMemo(() => (0, S.j)(), []);
+            G = (0, I.Z)(),
+            v = (0, C.Z)(),
+            { analyticsLocations: O } = (0, d.ZP)(),
+            k = r.useMemo(() => (0, S.j)(), []);
         async function D() {
             try {
                 s(!0), await (0, _.bF)(), window.location.reload(!0);
@@ -44,22 +44,22 @@ n.default = (0, u.Z)(
         }
         let j = (e) => {
                 switch (e) {
-                    case C.oAB.GAMES:
+                    case p.oAB.GAMES:
                         return Z;
-                    case C.oAB.STREAMER_MODE:
+                    case p.oAB.STREAMER_MODE:
                         return R;
-                    case C.oAB.APPEARANCE:
+                    case p.oAB.APPEARANCE:
                         return N;
-                    case C.oAB.ACCESSIBILITY:
+                    case p.oAB.ACCESSIBILITY:
                         return x;
-                    case C.oAB.VOICE:
+                    case p.oAB.VOICE:
                         return A;
-                    case C.oAB.TEXT:
+                    case p.oAB.TEXT:
                         return B;
-                    case C.oAB.EXPERIMENTS:
+                    case p.oAB.EXPERIMENTS:
                         return G;
-                    case C.oAB.DEVELOPER_OPTIONS:
-                        return k;
+                    case p.oAB.DEVELOPER_OPTIONS:
+                        return v;
                     default:
                         return null;
                 }
@@ -67,11 +67,11 @@ n.default = (0, u.Z)(
             L = (0, g.VO)()
                 .filter((e) => {
                     let { section: n } = e;
-                    return n !== c.ID.HEADER && n !== c.ID.CUSTOM && n !== c.ID.DIVIDER && 'logout' !== n;
+                    return n !== l.ID.HEADER && n !== l.ID.CUSTOM && n !== l.ID.DIVIDER && 'logout' !== n;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
         return (0, o.jsx)(d.Gt, {
-            value: v,
+            value: O,
             children: (0, o.jsxs)(a.Menu, {
                 navId: 'user-settings-cog',
                 onClose: i.Zy,
@@ -90,20 +90,20 @@ n.default = (0, u.Z)(
                                     null != r
                                         ? r()
                                         : (function (e, n) {
-                                              let t = Object.values(C.oAB).filter((n) => n === e)[0];
-                                              null != t && l.Z.open(t, void 0, { analyticsLocations: n });
-                                          })(n, v),
+                                              let t = Object.values(p.oAB).filter((n) => n === e)[0];
+                                              null != t && c.Z.open(t, void 0, { analyticsLocations: n });
+                                          })(n, O),
                                 children: j(n)
                             },
                             i
                         );
                     }),
-                    e.user.isStaff() && O.length > 0
+                    e.user.isStaff() && k.length > 0
                         ? (0, o.jsx)(a.MenuItem, {
                               label: 'Build overrides',
                               id: 'build_overrides',
                               children: (0, o.jsx)(a.MenuGroup, {
-                                  children: O.map((e) =>
+                                  children: k.map((e) =>
                                       (0, o.jsx)(
                                           a.MenuRadioItem,
                                           {

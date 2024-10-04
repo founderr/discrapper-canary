@@ -18,8 +18,8 @@ var i = t(735250),
     _ = t(689938),
     N = t(176662);
 function E(e) {
-    let { webhook: n, editedWebhook: t, channelOptions: E, isExpanded: T, errors: h, onToggleExpand: p } = e,
-        g = a.useMemo(() => {
+    let { webhook: n, editedWebhook: t, channelOptions: E, isExpanded: T, errors: h, onToggleExpand: g } = e,
+        p = a.useMemo(() => {
             var e, t;
             return (
                 (e = n),
@@ -149,13 +149,13 @@ function E(e) {
                     (0, i.jsx)(s.Clickable, {
                         className: N.header,
                         'aria-expanded': T,
-                        onClick: p,
+                        onClick: g,
                         children: (0, i.jsxs)(c.Z, {
                             align: c.Z.Align.CENTER,
                             children: [
                                 (0, i.jsx)(I.Z, {
                                     name: n.name,
-                                    imageSrc: g,
+                                    imageSrc: p,
                                     detailsClassName: N.__invalid_description,
                                     details: x
                                 }),

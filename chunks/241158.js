@@ -15,11 +15,11 @@ var s = n(735250),
     R = n(689938),
     g = n(916548);
 let N = (e) => {
-    let { name: t, title: n, description: r, descriptionCta: R, previewImage: N, videoUrl: C, shouldLoadVideo: m, isCompact: f, onClick: A, index: p } = e,
+    let { name: t, title: n, description: r, descriptionCta: R, previewImage: N, videoUrl: m, shouldLoadVideo: C, isCompact: f, onClick: p, index: A } = e,
         M = (0, _.rO)(),
         S = a.useRef(null),
-        [h, b] = a.useState(0),
-        x = (function (e) {
+        [h, x] = a.useState(0),
+        b = (function (e) {
             let t;
             switch (e) {
                 case u.dm.EMOJIS:
@@ -52,7 +52,7 @@ let N = (e) => {
             null != S.current && ((S.current.currentTime = h), S.current.play());
         },
         v = () => {
-            null != S.current && (b(S.current.currentTime), S.current.pause());
+            null != S.current && (x(S.current.currentTime), S.current.pause());
         },
         L = () =>
             (0, s.jsxs)('div', {
@@ -77,11 +77,11 @@ let N = (e) => {
                         children: r
                     }),
                     null != R &&
-                        (null != A
+                        (null != p
                             ? (0, s.jsx)(o.Button, {
                                   className: g.whatsNewBoxButton,
                                   onClick: () => {
-                                      O(), A();
+                                      O(), p();
                                   },
                                   children: R
                               })
@@ -104,7 +104,7 @@ let N = (e) => {
                 }),
                 children: (0, s.jsx)(c.Z, {
                     playsInline: !0,
-                    preload: m ? 'auto' : 'none',
+                    preload: C ? 'auto' : 'none',
                     muted: !0,
                     poster: N,
                     loop: !0,
@@ -115,15 +115,15 @@ let N = (e) => {
                     }),
                     ref: S,
                     children: (0, s.jsx)('source', {
-                        src: C,
+                        src: m,
                         type: M ? I.m.MP4 : I.m.WEBM
                     })
                 })
             });
         };
-    return p % 2 != 0
+    return A % 2 != 0
         ? (0, s.jsxs)('div', {
-              className: i()(x, {
+              className: i()(b, {
                   [g.whatsNewBoxContainer]: !f,
                   [g.compactBoxContainer]: f
               }),
@@ -134,10 +134,10 @@ let N = (e) => {
               children: [(0, s.jsx)(L, {}), (0, s.jsx)(Z, { isLeft: !1 })]
           })
         : (0, s.jsxs)('div', {
-              className: i()(x, {
+              className: i()(b, {
                   [g.whatsNewBoxContainer]: !f,
                   [g.compactBoxContainer]: f,
-                  boxBackgroundColor: x
+                  boxBackgroundColor: b
               }),
               onMouseEnter: P,
               onFocus: P,

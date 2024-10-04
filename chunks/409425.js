@@ -1,22 +1,22 @@
-i.d(t, {
+n.d(a, {
     Z: function () {
         return d;
     }
 });
-var n = i(735250);
-i(470079);
-var a = i(120356),
-    r = i.n(a),
-    s = i(481060),
-    o = i(377171),
-    l = i(689938),
-    c = i(274679);
+var i = n(735250);
+n(470079);
+var t = n(120356),
+    r = n.n(t),
+    l = n(481060),
+    s = n(377171),
+    o = n(689938),
+    c = n(274679);
 function d(e) {
-    let { className: t, ...i } = e;
-    return (0, n.jsx)(s.TextBadge, {
-        ...i,
-        text: l.Z.Messages.APP_DIRECTORY_PARTNER,
-        color: o.Z.BACKGROUND_TERTIARY,
-        className: r()(t, c.partnerBadge)
+    let { className: a, ...n } = e;
+    return (0, i.jsx)(l.TextBadge, {
+        ...n,
+        text: o.Z.Messages.APP_DIRECTORY_PARTNER,
+        color: s.Z.BACKGROUND_TERTIARY,
+        className: r()(a, c.partnerBadge)
     });
 }

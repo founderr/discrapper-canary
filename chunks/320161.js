@@ -20,9 +20,9 @@ let u = d.Z.Millis.SECOND,
     R = [() => E.Z.Messages.COPY_SUCCESS_1, () => E.Z.Messages.COPY_SUCCESS_2, () => E.Z.Messages.COPY_SUCCESS_3, () => E.Z.Messages.COPY_SUCCESS_4, () => E.Z.Messages.COPY_SUCCESS_5, () => E.Z.Messages.COPY_SUCCESS_6, () => E.Z.Messages.COPY_SUCCESS_7, () => E.Z.Messages.COPY_SUCCESS_8, () => E.Z.Messages.COPY_SUCCESS_9, () => E.Z.Messages.COPY_SUCCESS_10, () => E.Z.Messages.COPY_SUCCESS_11];
 function g(e) {
     let { text: t, copyValue: n, children: d, onCopy: E, 'aria-label': g, delay: N = I } = e,
-        [C, m] = a.useState(0),
-        [f, A] = a.useState(!1),
-        [p, M] = a.useState(!1),
+        [m, C] = a.useState(0),
+        [f, p] = a.useState(!1),
+        [A, M] = a.useState(!1),
         [S] = a.useState(() => new i.V7()),
         [h] = a.useState(() => new i.V7());
     if (
@@ -35,29 +35,29 @@ function g(e) {
         !c.wS)
     )
         return (0, s.jsx)(s.Fragment, { children: d({}) });
-    let b = C >= R.length - 1,
-        x = b ? l.TooltipColors.RED : l.TooltipColors.GREEN,
-        O = f ? x : l.TooltipColors.PRIMARY,
+    let x = m >= R.length - 1,
+        b = x ? l.TooltipColors.RED : l.TooltipColors.GREEN,
+        O = f ? b : l.TooltipColors.PRIMARY,
         P = () => {
-            null == E || E(), (0, c.JG)(n), o.default.track(_.rMx.TEXT_COPIED), !p && m(C + 1), M(!0), A(!0), S.start(u, () => M(!1)), h.start(T, () => m(0));
+            null == E || E(), (0, c.JG)(n), o.default.track(_.rMx.TEXT_COPIED), !A && C(m + 1), M(!0), p(!0), S.start(u, () => M(!1)), h.start(T, () => C(0));
         };
     return (0, s.jsx)(l.Tooltip, {
         text: (() => {
             var e;
             if (!f) return t;
-            let n = (0, r.clamp)(C - 1, 0, R.length - 1),
+            let n = (0, r.clamp)(m - 1, 0, R.length - 1),
                 a = null !== (e = R[n]) && void 0 !== e ? e : R[0];
             return (0, s.jsx)(l.Shaker, {
-                isShaking: b,
+                isShaking: x,
                 children: a()
             });
         })(),
         delay: N,
         'aria-label': g,
         color: O,
-        forceOpen: p,
+        forceOpen: A,
         onAnimationRest: (e, t) => {
-            !p && f && t.phase === _.UkZ.LEAVE && A(!1);
+            !A && f && t.phase === _.UkZ.LEAVE && p(!1);
         },
         children: (e) => {
             let { onClick: t, onMouseEnter: n, ...s } = e;

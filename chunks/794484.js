@@ -15,7 +15,7 @@ var s = n(735250),
     R = n(75077),
     g = n(320319),
     N = n(821912);
-let C = (e) => {
+let m = (e) => {
     let { showAllPerksButton: t, leftAlignHeaders: n, title: a, headerClassname: r } = e,
         i = (0, s.jsx)(o.Heading, {
             variant: 'heading-xxl/extrabold',
@@ -47,36 +47,36 @@ let C = (e) => {
 };
 t.Z = (e) => {
     var t;
-    let { className: n, variant: r = I.R0.PERKS_DISCOVERABILITY, noBackground: m = !1, leftAlignHeaders: f = !1, showAllPerksButton: A, headerClassname: p, isFullScreen: M = !0 } = e,
+    let { className: n, variant: r = I.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: f = !1, showAllPerksButton: p, headerClassname: A, isFullScreen: M = !0 } = e,
         S = a.useRef(null),
         h = (0, _.yQ)(),
-        b = (0, E.Ag)(h),
-        x = (0, c.ZP)('perks-discoverability');
+        x = (0, E.Ag)(h),
+        b = (0, c.ZP)('perks-discoverability');
     (0, E.I2)();
     let O = (0, d.HI)({ location: I.R0.PERKS_DISCOVERABILITY }),
         P = r === I.R0.WHATS_NEW,
         v = (0, _.IY)(),
         L = (0, T.x$)();
     a.useEffect(() => {
-        P && !b && (v(), L());
-    }, [v, L, P, b]),
+        P && !x && (v(), L());
+    }, [v, L, P, x]),
         a.useEffect(() => {
             let e = S.current;
-            if (null == e || !b || !P) return;
+            if (null == e || !x || !P) return;
             let t = requestAnimationFrame(() => {
                 e.scrollIntoView({ behavior: 'smooth' }), P && v();
             });
             return () => {
                 cancelAnimationFrame(t), P && v();
             };
-        }, [S, b, P, v]);
+        }, [S, x, P, v]);
     let Z = (0, R.Op)(P),
         D = (0, u.Z)(),
         B = (0, R.mN)(),
         U = (0, R.sP)({
             perksCards: D,
             variant: r,
-            shopMarketingVariation: x,
+            shopMarketingVariation: b,
             isFullScreen: M,
             showTenureCard: null == h ? void 0 : h.showCard,
             tileOrderVariant: O,
@@ -104,18 +104,18 @@ t.Z = (e) => {
                     n
                 ),
                 children: [
-                    (0, s.jsx)(C, {
-                        showAllPerksButton: A,
+                    (0, s.jsx)(m, {
+                        showAllPerksButton: p,
                         leftAlignHeaders: f,
                         title: Z.title,
-                        headerClassname: p
+                        headerClassname: A
                     }),
                     (0, s.jsx)(o.Text, {
                         variant: 'text-lg/normal',
                         color: 'header-primary',
                         className: i()(N.subtitle, {
-                            [N.subtitle]: null == A || f,
-                            [N.subtitleWithButton]: null != A && !f,
+                            [N.subtitle]: null == p || f,
+                            [N.subtitleWithButton]: null != p && !f,
                             [N.fullWidth]: P || f,
                             [N.moreSubtitleMargin]: j,
                             [N.leftAlignSubtitle]: f,
@@ -124,10 +124,10 @@ t.Z = (e) => {
                         children: Z.subtitle
                     }),
                     !f &&
-                        null != A &&
+                        null != p &&
                         (0, s.jsx)('div', {
                             className: i()(N.showAllPerksButtonCenter),
-                            children: A
+                            children: p
                         }),
                     (0, s.jsx)('div', {
                         className: i()({
@@ -140,7 +140,7 @@ t.Z = (e) => {
                                 {
                                     confettiCanvas: e.name === u.u.FREE_BOOST ? G : void 0,
                                     ...e,
-                                    forceShadow: m
+                                    forceShadow: C
                                 },
                                 ''.concat(e.name, '_').concat(t)
                             )

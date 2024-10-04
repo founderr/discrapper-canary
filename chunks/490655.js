@@ -15,8 +15,8 @@ var i = t(735250),
     E = t(496675),
     T = t(585483),
     h = t(63063),
-    p = t(919196),
-    g = t(731072),
+    g = t(919196),
+    p = t(731072),
     f = t(494118),
     x = t(491500),
     C = t(351644),
@@ -134,7 +134,7 @@ n.Z = a.memo(function (e) {
     switch (n) {
         case S.b4C.TWITCH:
             null != X[S.ABu.TWITCH] &&
-                ($ = (0, i.jsx)(g.Z, {
+                ($ = (0, i.jsx)(p.Z, {
                     guild: s,
                     integrations: X[S.ABu.TWITCH],
                     editedIntegration: M,
@@ -154,7 +154,7 @@ n.Z = a.memo(function (e) {
             break;
         case S.b4C.YOUTUBE:
             null != X[S.ABu.YOUTUBE] &&
-                ($ = (0, i.jsx)(g.Z, {
+                ($ = (0, i.jsx)(p.Z, {
                     guild: s,
                     integrations: X[S.ABu.YOUTUBE],
                     editedIntegration: M,
@@ -172,7 +172,7 @@ n.Z = a.memo(function (e) {
             var ee;
             let en = null != W ? (null !== (ee = z[q[W]]) && void 0 !== ee ? ee : z[W]) : null;
             null != en &&
-                ($ = (0, i.jsx)(p.Z, {
+                ($ = (0, i.jsx)(g.Z, {
                     guild: s,
                     applicationIntegration: en,
                     editedWebhook: j,

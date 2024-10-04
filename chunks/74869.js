@@ -8,8 +8,8 @@ var o = t(735250),
     r = t(470079),
     a = t(348327),
     i = t.n(a),
-    l = t(658722),
-    c = t.n(l),
+    c = t(658722),
+    l = t.n(c),
     u = t(442837),
     s = t(481060),
     d = t(492435),
@@ -72,13 +72,13 @@ function m() {
             i()
         ),
         [n, t] = r.useState(''),
-        [a, l] = r.useState([]);
+        [a, c] = r.useState([]);
     r.useEffect(() => {
         if (0 === n.trim().length) {
-            l(e);
+            c(e);
             return;
         }
-        l(e.filter((e) => c()(n, e.experiment.title.toLowerCase())));
+        c(e.filter((e) => l()(n, e.experiment.title.toLowerCase())));
     }, [e, n]);
     let d = r.useMemo(
             () =>
@@ -97,7 +97,7 @@ function m() {
             [a]
         ),
         m = r.useMemo(() => d.map(E), [d]),
-        b = r.useMemo(() => S.map(E), [S]);
+        I = r.useMemo(() => S.map(E), [S]);
     return [
         (0, o.jsx)(
             s.MenuControlItem,
@@ -117,6 +117,6 @@ function m() {
         (0, o.jsx)(s.MenuSeparator, {}, 'separator'),
         ...m,
         m.length > 0 ? (0, o.jsx)(s.MenuSeparator, {}, 'separator-2') : null,
-        ...b
+        ...I
     ];
 }

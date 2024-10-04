@@ -5,18 +5,18 @@ i.d(e, {
 });
 var l = i(735250);
 i(470079);
-var t = i(557533),
-    s = i.n(t),
+var s = i(557533),
+    t = i.n(s),
     r = i(789978),
     a = i(790472),
     o = i(777207),
     d = i(147333),
     u = i(103077);
 function c(n) {
-    let { title: e, description: i, headerImage: t, onDetails: c, onPurchase: m, PurchaseButton: v, availabilityLabel: p } = n;
+    let { title: e, description: i, headerImage: s, onDetails: c, onPurchase: m, PurchaseButton: v, availabilityLabel: p } = n;
     return (0, l.jsx)(r.tE, {
         children: (0, l.jsxs)('div', {
-            className: s()(d.wrapper, u.hoverCard),
+            className: t()(d.wrapper, u.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != c ? c() : null != m && m();
@@ -24,9 +24,9 @@ function c(n) {
             children: [
                 (0, l.jsx)('div', {
                     className: d.cardHeaderImg,
-                    style: null != t ? { backgroundImage: null != t ? 'url('.concat(t.toString(), ')') : void 0 } : void 0,
+                    style: null != s ? { backgroundImage: null != s ? 'url('.concat(s.toString(), ')') : void 0 } : void 0,
                     children:
-                        null == t &&
+                        null == s &&
                         (0, l.jsx)(a.P, {
                             color: 'white',
                             size: 'custom',

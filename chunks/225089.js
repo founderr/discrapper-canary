@@ -1,50 +1,50 @@
-n.d(t, {
+a.d(n, {
     Z: function () {
-        return E;
+        return A;
     }
 });
-var s = n(735250);
-n(470079);
-var a = n(481060),
-    r = n(81245),
-    i = n(867176),
-    l = n(654904),
-    o = n(486324),
-    c = n(228168),
-    d = n(689938),
-    _ = n(892532);
-function E(e) {
-    let { user: t, displayProfile: n, guildId: E, canUsePremiumCustomization: u, pendingBanner: T, isTryItOutFlow: I, disabledInputs: R, onUpsellClick: g } = e,
-        N = u || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
-        C = N ? a.PencilIcon : a.NitroWheelIcon,
-        m = (0, r.Mu)('ProfileCustomizationPreviewBanner', N);
-    return (0, s.jsx)(i.Z, {
-        user: t,
-        displayProfile: n,
-        guildId: E,
+var i = a(735250);
+a(470079);
+var s = a(481060),
+    r = a(81245),
+    o = a(867176),
+    l = a(654904),
+    t = a(486324),
+    c = a(228168),
+    u = a(689938),
+    d = a(892532);
+function A(e) {
+    let { user: n, displayProfile: a, guildId: A, canUsePremiumCustomization: E, pendingBanner: _, isTryItOutFlow: I, disabledInputs: P, onUpsellClick: p } = e,
+        v = E || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || !1,
+        m = v ? s.PencilIcon : s.NitroWheelIcon,
+        N = (0, r.Mu)('ProfileCustomizationPreviewBanner', v);
+    return (0, i.jsx)(o.Z, {
+        user: n,
+        displayProfile: a,
+        guildId: A,
         profileType: c.y0.BITE_SIZE,
-        pendingBanner: T,
-        canUsePremiumProfileCustomization: u,
+        pendingBanner: _,
+        canUsePremiumProfileCustomization: E,
         children:
-            !R &&
-            (0, s.jsxs)(a.Clickable, {
+            !P &&
+            (0, i.jsxs)(s.Clickable, {
                 onClick: () => {
-                    if (!N && !m) {
-                        null == g || g();
+                    if (!v && !N) {
+                        null == p || p();
                         return;
                     }
-                    (0, l.$r)(o.pC.BANNER, E, I);
+                    (0, l.$r)(t.pC.BANNER, A, I);
                 },
-                className: _.clickable,
+                className: d.clickable,
                 children: [
-                    (0, s.jsx)(C, {
+                    (0, i.jsx)(m, {
                         size: 'xs',
                         color: 'white'
                     }),
-                    (0, s.jsx)(a.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: N || m ? d.Z.Messages.CHANGE_BANNER : d.Z.Messages.USER_SETTINGS_UNLOCK_BANNER
+                        children: v || N ? u.Z.Messages.CHANGE_BANNER : u.Z.Messages.USER_SETTINGS_UNLOCK_BANNER
                     })
                 ]
             })

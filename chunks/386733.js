@@ -14,22 +14,22 @@ var s = n(735250),
     R = n(63063),
     g = n(281494),
     N = n(276444),
-    C = n(520540),
-    m = n(197115),
+    m = n(520540),
+    C = n(197115),
     f = n(119269),
-    A = n(938736),
-    p = n(981631),
+    p = n(938736),
+    A = n(981631),
     M = n(689938),
     S = n(837661),
     h = n(691766);
-let b = (e) => {
+let x = (e) => {
         let { userRecord: t, placement: n, trialStatus: a } = e,
             { avatarSrc: r, eventHandlers: l } = (0, E.Z)({
                 user: t,
                 size: o.AvatarSizes.SIZE_32,
                 animateOnHover: !0
             }),
-            c = (0, A.TW)('UserAvatarProgressBarUnit'),
+            c = (0, p.TW)('UserAvatarProgressBarUnit'),
             d = null != t,
             _ = d
                 ? (0, s.jsx)(o.Avatar, {
@@ -65,7 +65,7 @@ let b = (e) => {
                 })
         });
     },
-    x = (e) => {
+    b = (e) => {
         let { numSentReferrals: t, placement: n } = e;
         return (0, s.jsxs)('div', {
             className: S.avatarProgressBarUnitConnectorContainer,
@@ -89,25 +89,25 @@ let b = (e) => {
         return (0, s.jsxs)('div', {
             className: S.userAvatarProgressBarContainer,
             children: [
-                (0, s.jsx)(b, {
+                (0, s.jsx)(x, {
                     userRecord: r,
                     placement: 1,
                     trialStatus: (null == r ? void 0 : r.id) != null ? n.get(null == r ? void 0 : r.id) : void 0
                 }),
-                (0, s.jsx)(x, {
+                (0, s.jsx)(b, {
                     numSentReferrals: a,
                     placement: 1
                 }),
-                (0, s.jsx)(b, {
+                (0, s.jsx)(x, {
                     userRecord: i,
                     placement: 2,
                     trialStatus: (null == i ? void 0 : i.id) != null ? n.get(null == i ? void 0 : i.id) : void 0
                 }),
-                (0, s.jsx)(x, {
+                (0, s.jsx)(b, {
                     numSentReferrals: a,
                     placement: 2
                 }),
-                (0, s.jsx)(b, {
+                (0, s.jsx)(x, {
                     userRecord: l,
                     placement: 3,
                     trialStatus: (null == l ? void 0 : l.id) != null ? n.get(null == l ? void 0 : l.id) : void 0
@@ -119,36 +119,36 @@ t.Z = (e) => {
     let t,
         r,
         { isInSettings: E = !1 } = e,
-        b = (0, l.Wu)([N.Z], () => N.Z.getSentUserIds()),
-        x = (0, l.e7)([N.Z], () => N.Z.getRecipientStatus()),
-        P = (0, A.uv)('ReferralProgramProgressBar'),
-        v = (0, A.TW)('ReferralProgramProgressBar'),
-        L = (0, l.Wu)([T.default], () => b.map((e) => T.default.getUser(e)).filter((e) => null != e)),
+        x = (0, l.Wu)([N.Z], () => N.Z.getSentUserIds()),
+        b = (0, l.e7)([N.Z], () => N.Z.getRecipientStatus()),
+        P = (0, p.uv)('ReferralProgramProgressBar'),
+        v = (0, p.TW)('ReferralProgramProgressBar'),
+        L = (0, l.Wu)([T.default], () => x.map((e) => T.default.getUser(e)).filter((e) => null != e)),
         Z = a.useMemo(() => L.map((e) => new u.Z(e)), [L]),
         D = (0, l.e7)([N.Z], () => N.Z.getRefreshAt()),
-        { subscriberHomeVariant: B } = C.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-        U = P === p.g2L.UNAPPLIED || P === p.g2L.QUALIFIED,
-        j = B === C.p.VARIANT_2;
+        { subscriberHomeVariant: B } = m.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+        U = P === A.g2L.UNAPPLIED || P === A.g2L.QUALIFIED,
+        j = B === m.p.VARIANT_2;
     a.useEffect(() => {
-        b.forEach((e) => {
+        x.forEach((e) => {
             (0, c.PR)(e);
         });
-    }, [b]);
+    }, [x]);
     let G = {
         redeemed: 0,
         converted: 0,
-        sent: x.size
+        sent: b.size
     };
-    x.forEach((e) => {
+    b.forEach((e) => {
         e === g.Fe.REDEEMED && G.redeemed++, e === g.Fe.CONVERTED && (G.redeemed++, G.converted++);
     });
-    let w = G.sent === A.Q_,
-        y = R.Z.getArticleURL(p.BhN.REFERRAL_PROGRAM),
+    let w = G.sent === p.Q_,
+        y = R.Z.getArticleURL(A.BhN.REFERRAL_PROGRAM),
         { analyticsLocations: H } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
         k = a.useRef(null),
-        F = (G.sent / A.Q_) * 100,
+        F = (G.sent / p.Q_) * 100,
         V = !1;
-    v && null != D && ((V = 0 < (t = Math.ceil((new Date(D).getTime() - new Date().getTime()) / 86400000)) && t < A.AV), (r = (100 * (A.AV - t)) / A.AV));
+    v && null != D && ((V = 0 < (t = Math.ceil((new Date(D).getTime() - new Date().getTime()) / 86400000)) && t < p.AV), (r = (100 * (p.AV - t)) / p.AV));
     let W = V && null != t,
         K = (0, s.jsxs)('div', {
             className: S.referralInfoContent,
@@ -167,7 +167,7 @@ t.Z = (e) => {
                         (0, s.jsx)(o.Heading, {
                             variant: E ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
                             className: S.expandedProgressBarHeader,
-                            children: (0, A.$s)({
+                            children: (0, p.$s)({
                                 referralIncentiveLifecycleState: P,
                                 hasSentAll: w,
                                 referralsStatuses: G
@@ -192,11 +192,11 @@ t.Z = (e) => {
                               })
                             : (0, s.jsx)(O, {
                                   userRecords: Z,
-                                  recipientStatus: x
+                                  recipientStatus: b
                               }),
                         (0, s.jsx)(o.Text, {
                             variant: E ? 'text-sm/normal' : 'text-lg/medium',
-                            children: (0, A.Hg)({
+                            children: (0, p.Hg)({
                                 helpdeskArticle: y,
                                 referralIncentiveLifecycleState: P,
                                 referralsStatuses: G,
@@ -208,7 +208,7 @@ t.Z = (e) => {
                             children: [
                                 !E &&
                                     !j &&
-                                    (0, s.jsx)(m.Z, {
+                                    (0, s.jsx)(C.Z, {
                                         color: o.ButtonColors.CUSTOM,
                                         buttonText: M.Z.Messages.GIFT_NITRO,
                                         className: i()(S.expandedProgressBarGiftingCTA, { [S.expandedProgressBarGiftingCTALayout]: !E }),
@@ -220,7 +220,7 @@ t.Z = (e) => {
                                         className: S.expandedProgressBarSelectFriendsCTA,
                                         color: o.ButtonColors.CUSTOM,
                                         onClick: () => {
-                                            I.default.track(p.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: H }),
+                                            I.default.track(A.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: H }),
                                                 (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                                                     return (t) =>
@@ -249,8 +249,8 @@ t.Z = (e) => {
                 })
             ]
         }),
-        Y = b.length === A.Q_,
-        z = G.redeemed === A.Q_;
+        Y = x.length === p.Q_,
+        z = G.redeemed === p.Q_;
     return (0, s.jsx)(_.Gt, {
         value: H,
         children: (0, s.jsx)('div', {
@@ -285,7 +285,7 @@ t.Z = (e) => {
                                 color: 'always-white',
                                 variant: 'heading-md/extrabold',
                                 children: M.Z.Messages.REFERRAL_INCENTIVE_YOU_EARNED_DISCOUNT.format({
-                                    discountRate: A.Nq,
+                                    discountRate: p.Nq,
                                     subscriptionInterval: M.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
                                 })
                             })

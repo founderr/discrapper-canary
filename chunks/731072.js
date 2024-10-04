@@ -15,13 +15,13 @@ var i = t(735250),
 function I(e) {
     let { integrations: n, editedIntegration: t, guild: I, platformType: m, labelText: _, descriptionText: N, helpText: E, canNavigate: T } = e,
         h = r.Z.get(m),
-        p = a.useCallback(
+        g = a.useCallback(
             async (e) => {
                 T() && (await o.Z.enableIntegration(I.id, e.type, e.id), l.Z.startEditingIntegration(e.id));
             },
             [T, I.id]
         ),
-        g = a.useCallback(
+        p = a.useCallback(
             (e) => {
                 T() && (e.id === (null == t ? void 0 : t.id) && l.Z.stopEditingIntegration(), o.Z.disableIntegration(I.id, e.id));
             },
@@ -52,8 +52,8 @@ function I(e) {
                         editedIntegration: t,
                         guild: I,
                         isExpanded: (null == t ? void 0 : t.id) === e.id,
-                        onEnable: p,
-                        onDisable: g,
+                        onEnable: g,
+                        onDisable: p,
                         onToggleExpand: () => f(e.id)
                     },
                     e.id

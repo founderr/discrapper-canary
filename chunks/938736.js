@@ -30,10 +30,10 @@ n.d(t, {
         return f;
     },
     vx: function () {
-        return C;
+        return m;
     },
     wG: function () {
-        return p;
+        return A;
     }
 });
 var s = n(442837),
@@ -80,12 +80,12 @@ let E = '40%',
         if (!n) return !!(a.size > 0) || !1;
         return !0;
     },
-    C = (e) => {
-        let t = m(e),
+    m = (e) => {
+        let t = C(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
         return t && !n;
     },
-    m = (e) => {
+    C = (e) => {
         let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
             a = (0, s.e7)([i.Z], () => i.Z.getIsSenderEligibleForIncentive());
@@ -98,12 +98,12 @@ let E = '40%',
             r = (0, s.e7)([i.Z], () => i.Z.getSenderIncentiveState());
         return a ? d.g2L.NOT_ELIGIBLE : n && t ? r : d.g2L.NOT_ELIGIBLE;
     },
-    A = (e) => {
+    p = (e) => {
         let t = f(e);
         return t === d.g2L.COOLDOWN || t === d.g2L.UNAPPLIED || t === d.g2L.QUALIFIED;
     },
-    p = (e) => {
-        let t = A(e),
+    A = (e) => {
+        let t = p(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !n;
     },

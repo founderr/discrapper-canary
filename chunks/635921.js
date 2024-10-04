@@ -15,11 +15,11 @@ var a = n(120356),
     R = n(248042),
     g = n(422034),
     N = n(206127),
-    C = n(710220),
-    m = n(318747),
+    m = n(710220),
+    C = n(318747),
     f = n(409100),
-    A = n(474936),
-    p = n(689938),
+    p = n(474936),
+    A = n(689938),
     M = n(679757);
 let S = (e) => {
         let { inOfferExperience: t, inTrial: n, subscriptionTier: a, buttonClassName: i } = e,
@@ -33,7 +33,7 @@ let S = (e) => {
                         className: r()(M.button, i),
                         subscriptionTier: a
                     }),
-                    (0, s.jsx)(m.Z, {
+                    (0, s.jsx)(C.Z, {
                         className: r()(M.button, i),
                         forceWhite: !0
                     })
@@ -44,7 +44,7 @@ let S = (e) => {
             n &&
                 (o = (0, s.jsx)('div', {
                     className: M.buttonContainer,
-                    children: (0, s.jsx)(m.Z, {
+                    children: (0, s.jsx)(C.Z, {
                         className: r()(M.button, i),
                         forceWhite: !0
                     })
@@ -60,18 +60,18 @@ let S = (e) => {
             children: [(0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar1 : M.settingsSparkleStar1 }), (0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar2 : M.settingsSparkleStar2 }), (0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar3 : M.settingsSparkleStar3 }), (0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar4 : M.settingsSparkleStar4 })]
         });
     };
-function b(e) {
+function x(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0 } = e,
         a = (0, N.$)();
     return (0, s.jsx)(l.Text, {
         variant: t,
         color: 'always-white',
         className: r()(M.description, { [M.descriptionBottomMargin]: n }),
-        children: p.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({ cheapestMonthlyPrice: a })
+        children: A.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({ cheapestMonthlyPrice: a })
     });
 }
 t.Z = (e) => {
-    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: N, hideSubscribeAndGiftButton: f, entrypoint: x } = e,
+    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: N, hideSubscribeAndGiftButton: f, entrypoint: b } = e,
         { analyticsLocations: O } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         P = (0, u._O)(),
         v = (0, E.Nx)(),
@@ -79,7 +79,7 @@ t.Z = (e) => {
         Z = (0, i.e7)([_.Z], () => _.Z.affinities),
         D = (0, I.Z)(),
         { enabled: B } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        U = x === A.EZ.ApplicationStoreHome && null != D && B,
+        U = b === p.EZ.ApplicationStoreHome && null != D && B,
         j = Z.length > 0;
     return (0, s.jsx)(c.Gt, {
         value: O,
@@ -96,10 +96,10 @@ t.Z = (e) => {
                         (0, s.jsx)(l.Heading, {
                             variant: t ? 'display-lg' : 'display-md',
                             color: 'always-white',
-                            children: p.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
+                            children: A.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
                         }),
                         U
-                            ? (0, s.jsx)(C.Z, { referrer: D })
+                            ? (0, s.jsx)(m.Z, { referrer: D })
                             : j
                               ? (0, s.jsx)('div', {
                                     className: r()(M.affinityDescription),
@@ -108,11 +108,11 @@ t.Z = (e) => {
                                         smallerText: !t
                                     })
                                 })
-                              : (0, s.jsx)(b, {}),
+                              : (0, s.jsx)(x, {}),
                         L
                             ? (0, s.jsx)('div', {
                                   className: M.buttonContainer,
-                                  children: (0, s.jsx)(m.Z, {
+                                  children: (0, s.jsx)(C.Z, {
                                       className: r()(M.button, a),
                                       forceWhite: !0
                                   })
@@ -127,7 +127,7 @@ t.Z = (e) => {
                                 }),
                         j &&
                             !U &&
-                            (0, s.jsx)(b, {
+                            (0, s.jsx)(x, {
                                 variant: 'text-md/normal',
                                 withBottomMargin: !1
                             })

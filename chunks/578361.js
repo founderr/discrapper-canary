@@ -1,24 +1,24 @@
-i.d(t, {
+n.d(a, {
     n: function () {
-        return a;
+        return t;
     }
 });
-var n,
-    a,
-    r = i(735250),
-    s = i(470079),
-    o = i(120356),
-    l = i.n(o),
-    c = i(748780),
-    d = i(215569),
-    u = i(189682);
-((n = a || (a = {}))[(n.RIGHT = -1)] = 'RIGHT'), (n[(n.LEFT = 1)] = 'LEFT');
-let h = {
+var i,
+    t,
+    r = n(735250),
+    l = n(470079),
+    s = n(120356),
+    o = n.n(s),
+    c = n(748780),
+    d = n(215569),
+    u = n(189682);
+((i = t || (t = {}))[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT');
+let _ = {
     friction: 7,
     tension: 40,
     clamp: !0
 };
-class _ extends s.PureComponent {
+class p extends l.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
             c.Z.spring(this._animated, {
@@ -63,35 +63,35 @@ class _ extends s.PureComponent {
         });
     }
     constructor(e) {
-        var t, i, n;
+        var a, n, i;
         super(e),
-            (t = this),
-            (n = void 0),
-            (i = '_animated') in t
-                ? Object.defineProperty(t, i, {
-                      value: n,
+            (a = this),
+            (i = void 0),
+            (n = '_animated') in a
+                ? Object.defineProperty(a, n, {
+                      value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[i] = n),
+                : (a[n] = i),
             (this._animated = new c.Z.Value(-1 * e.direction));
     }
 }
-t.Z = (e) => {
-    let { children: t, step: i, direction: n, className: a, springSettings: s = h, fadeInOut: o = !1 } = e;
+a.Z = (e) => {
+    let { children: a, step: n, direction: i, className: t, springSettings: l = _, fadeInOut: s = !1 } = e;
     return (0, r.jsx)(d.W, {
         component: 'div',
-        className: l()(u.animator, a),
+        className: o()(u.animator, t),
         children: (0, r.jsx)(
-            _,
+            p,
             {
-                direction: n,
-                springSettings: s,
-                fadeInOut: o,
-                children: t
+                direction: i,
+                springSettings: l,
+                fadeInOut: s,
+                children: a
             },
-            i
+            n
         )
     });
 };

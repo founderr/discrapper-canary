@@ -16,20 +16,20 @@ var a = n(120356),
 t.Z = (e) => {
     var t;
     let n;
-    let { title: a, titleClassName: g = '', buttonClassName: N = '', subtitle: C = '', description: m = '', descriptionCta: f = '', isPremiumGetCta: A, onCtaClick: p, cardVariant: M } = e,
+    let { title: a, titleClassName: g = '', buttonClassName: N = '', subtitle: m = '', description: C = '', descriptionCta: f = '', isPremiumGetCta: p, onCtaClick: A, cardVariant: M } = e,
         S = (0, d.N)(),
         h = null == S ? void 0 : S.subscription_trial,
-        b = (0, c.Ng)(),
-        x = (0, l.Rt)({
+        x = (0, c.Ng)(),
+        b = (0, l.Rt)({
             intervalType: null == h ? void 0 : h.interval,
             intervalCount: null == h ? void 0 : h.interval_count
         }),
         O = (0, o._)({
             defaultResponse: I.Z.Messages.PREMIUM_SETTINGS_GET,
             onNonTier2Subscriber: I.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE,
-            onTier2TrialOffer: x,
-            onTier0TrialOffer: x,
-            onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == b ? void 0 : b.discount.amount })
+            onTier2TrialOffer: b,
+            onTier0TrialOffer: b,
+            onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == x ? void 0 : x.discount.amount })
         }),
         P = (0, _._)(M);
     return (0, s.jsxs)('div', {
@@ -39,10 +39,10 @@ t.Z = (e) => {
                 title: a,
                 cardVariantStyleInfo: P,
                 titleClassName: g,
-                subtitle: C,
-                description: m
+                subtitle: m,
+                description: C
             }),
-            A &&
+            p &&
                 (0, s.jsx)(u.Z, {
                     className: N,
                     subscriptionTier: T.Si.TIER_2,
@@ -52,10 +52,10 @@ t.Z = (e) => {
                 }),
             0 !== f.length &&
                 (null == (n = null == P ? void 0 : P.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
-                null != p &&
+                null != A &&
                 (0, s.jsx)(i.Button, {
                     className: N,
-                    onClick: p,
+                    onClick: A,
                     children: f
                 })
         ]

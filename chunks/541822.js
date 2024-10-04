@@ -21,8 +21,8 @@ function c(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.h2, {
-                ...r,
                 fade: !0,
+                ...r,
                 ref: (e) => {
                     null != e && ((o.current = e), _());
                 },
