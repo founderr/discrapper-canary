@@ -1,67 +1,45 @@
 n.d(t, {
     _: function () {
-        return E;
+        return l;
     },
     p: function () {
-        return _;
+        return s;
     }
 });
-var r = n(392711);
-var i = n(913527),
-    a = n.n(i),
-    o = n(544891),
-    s = n(881052),
-    l = n(709054),
-    u = n(235070),
-    c = n(981631);
-let d = 900000,
-    _ = async (e) => {
-        let { guildId: t, leaderboardId: n, intervalOffset: i = 0 } = e;
+var r = n(544891),
+    i = n(881052),
+    a = n(981631);
+let o = 900000,
+    s = async (e) => {
+        let { guildId: t, leaderboardId: n, intervalOffset: s = 0 } = e;
         try {
-            var _;
+            var l;
             let e = (
-                    await o.tn.get({
-                        url: c.ANM.GUILD_LEADERBOARD(t, n),
-                        query: { interval_offset: i }
+                    await r.tn.get({
+                        url: a.ANM.GUILD_LEADERBOARD(t, n),
+                        query: { interval_offset: s }
                     })
                 ).body,
-                s = null !== (_ = e.wait_ms_until_next_fetch) && void 0 !== _ ? _ : d;
-            null != s && (e.expires_at = Date.now() + s);
-            let E = (0, u.A)(n),
-                { sortByStatisticId: f, sortDesc: h } = E,
-                p = h ? -1 / 0 : 1 / 0,
-                m = h ? 'desc' : 'asc';
-            return (
-                (e.leaderboard.users = (0, r.orderBy)(
-                    e.leaderboard.users,
-                    (e) => {
-                        var t, n;
-                        return null !== (n = null === (t = e.statistics[f]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : p;
-                    },
-                    m
-                )),
-                (e.leaderboard.settings = E),
-                (e.leaderboard.interval_end = l.default.fromTimestamp(1000 * a()(l.default.extractTimestamp(e.leaderboard.interval_start)).add(1, 'week').unix())),
-                e
-            );
+                i = null !== (l = e.wait_ms_until_next_fetch) && void 0 !== l ? l : o;
+            return null != i && (e.expires_at = Date.now() + i), e;
         } catch (e) {
-            throw new s.Hx(e);
+            throw new i.Hx(e);
         }
     },
-    E = async (e) => {
-        let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: r } = e;
+    l = async (e) => {
+        let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: o } = e;
         try {
             return (
-                await o.tn.post({
-                    url: c.ANM.UPDATE_MY_LOL_LEADERBOARD(),
+                await r.tn.post({
+                    url: a.ANM.UPDATE_MY_LOL_LEADERBOARD(),
                     body: {
                         riot_connection_id: t,
                         lol_connection_id: n,
-                        only_update_if_stale: r
+                        only_update_if_stale: o
                     }
                 })
             ).body;
         } catch (e) {
-            throw new s.Hx(e);
+            throw new i.Hx(e);
         }
     };

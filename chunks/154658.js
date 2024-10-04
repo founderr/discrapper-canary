@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 });
 var r = n(735250);
@@ -12,45 +12,43 @@ var i = n(120356),
     l = n(481060),
     u = n(594174),
     c = n(5192),
-    d = n(235070),
-    _ = n(873128),
-    E = n(689938),
-    f = n(98518);
-function h(e) {
+    d = n(873128),
+    _ = n(689938),
+    E = n(98518);
+function f(e) {
     switch (e) {
         case o.q.DAILY:
-            return E.Z.Messages.LEADERBOARD_YESTERDAYS_CHAMPION;
+            return _.Z.Messages.LEADERBOARD_YESTERDAYS_CHAMPION;
         case o.q.WEEKLY:
-            return E.Z.Messages.LEADERBOARD_LAST_WEEKS_CHAMPION;
+            return _.Z.Messages.LEADERBOARD_LAST_WEEKS_CHAMPION;
         case o.q.MONTHLY:
-            return E.Z.Messages.LEADERBOARD_LAST_MONTHS_CHAMPION;
+            return _.Z.Messages.LEADERBOARD_LAST_MONTHS_CHAMPION;
         default:
-            return E.Z.Messages.LEADERBOARD_LAST_CHAMPION;
+            return _.Z.Messages.LEADERBOARD_LAST_CHAMPION;
     }
 }
-function p(e) {
+function h(e) {
     var t;
-    let { guildId: n, leaderboardId: i, intervalOffset: o = -1, className: E } = e,
-        { intervalType: p } = (0, d.A)(i),
-        m = (0, _.Z)({
+    let { guildId: n, leaderboardId: i, intervalOffset: o = -1, className: _ } = e,
+        h = (0, d.Z)({
             guildId: n,
             leaderboardId: i,
             intervalOffset: o
         }),
-        I = null == m ? void 0 : null === (t = m.users) || void 0 === t ? void 0 : t[0],
-        T = (0, s.e7)([u.default], () => u.default.getUser(null == I ? void 0 : I.user_id));
-    if (null == T) return null;
-    let g = c.ZP.getName(n, void 0, T);
+        p = null == h ? void 0 : null === (t = h.users) || void 0 === t ? void 0 : t[0],
+        m = (0, s.e7)([u.default], () => u.default.getUser(null == p ? void 0 : p.user_id));
+    if (null == m || null == h) return null;
+    let I = c.ZP.getName(n, void 0, m);
     return (0, r.jsxs)('div', {
-        className: a()(f.container, E),
+        className: a()(E.container, _),
         children: [
             (0, r.jsx)(l.Text, {
                 variant: 'text-xs/medium',
-                className: f.title,
-                children: h(p)
+                className: E.title,
+                children: f(h.settings.interval_type)
             }),
             (0, r.jsx)(l.Avatar, {
-                src: T.getAvatarURL(n, 16),
+                src: m.getAvatarURL(n, 16),
                 size: l.AvatarSizes.SIZE_16,
                 'aria-label': 'avatar'
             }),
@@ -61,7 +59,7 @@ function p(e) {
             (0, r.jsx)(l.Text, {
                 variant: 'text-xs/semibold',
                 color: 'header-primary',
-                children: g
+                children: I
             })
         ]
     });
