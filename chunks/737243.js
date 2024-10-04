@@ -40,20 +40,18 @@ let m = s.memo(function (e) {
         ),
         O = s.useCallback(
             () =>
-                (0, h.Z)(
-                    {
-                        message: m,
-                        channel: p,
-                        compact: _
-                    },
-                    T,
-                    {
-                        referencedUsernameProfile: C,
-                        referencedAvatarProfile: I
-                    },
-                    m.messageReference,
-                    S
-                ),
+                (0, h.Z)({
+                    message: m,
+                    channel: p,
+                    compact: _,
+                    setPopout: T,
+                    referencedUsernameProfile: C,
+                    referencedAvatarProfile: I,
+                    replyReference: m.messageReference,
+                    replyMessage: S,
+                    isReplySpineClickable: !1,
+                    showReplySpine: !1
+                }),
             [p, _, m, I, S, C, T]
         );
     return (0, i.jsx)(u.Z, {

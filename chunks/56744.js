@@ -38,7 +38,9 @@ let E = i.memo(function (e) {
         referencedMessage: _,
         content: p,
         compact: E,
-        isReplyAuthorBlocked: m
+        isReplyAuthorBlocked: m,
+        isReplySpineClickable: !1,
+        showReplySpine: !0
     });
 });
 function f(e, t, n, i, a) {

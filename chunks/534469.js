@@ -171,7 +171,17 @@ function X(e) {
                 onKeyDown: ec,
                 onFocus: k,
                 onBlur: H,
-                childrenRepliedMessage: r.type === W.uaV.REPLY && (0, G.Z)(e, X, K, N, $),
+                childrenRepliedMessage:
+                    r.type === W.uaV.REPLY &&
+                    (0, G.Z)({
+                        ...e,
+                        setPopout: X,
+                        referencedUsernameProfile: K.referencedAvatarProfile,
+                        referencedAvatarProfile: K.referencedAvatarProfile,
+                        replyReference: N,
+                        replyMessage: $,
+                        isReplySpineClickable: !0
+                    }),
                 childrenHeader: (0, w.Z)({
                     messageProps: e,
                     setPopout: X,
@@ -301,7 +311,18 @@ t.ZP = s.memo(function (e) {
                         [Y.automodMessage]: ew
                     }),
                     zalgo: !eI,
-                    childrenRepliedMessage: ee || g.type !== W.uaV.REPLY ? void 0 : (0, G.Z)(e, ec, er, et, el),
+                    childrenRepliedMessage:
+                        ee || g.type !== W.uaV.REPLY
+                            ? void 0
+                            : (0, G.Z)({
+                                  ...e,
+                                  setPopout: ec,
+                                  referencedUsernameProfile: er.referencedAvatarProfile,
+                                  referencedAvatarProfile: er.referencedAvatarProfile,
+                                  replyReference: et,
+                                  replyMessage: el,
+                                  isReplySpineClickable: !0
+                              }),
                     childrenExecutedCommand: (0, H.Z)(e, ec, er),
                     childrenHeader: ee
                         ? void 0

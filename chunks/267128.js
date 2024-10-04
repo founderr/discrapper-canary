@@ -163,7 +163,7 @@ function G(e, t, n) {
                 children: [
                     _,
                     (0, i.jsx)(c.Clickable, {
-                        className: s()(D.repliedTextPreview, D.clickable, { [D.repliedMessageSpineHovered]: t }),
+                        className: s()(D.repliedTextPreview, D.clickable, { [D.repliedMessageClickableSpineHovered]: t }),
                         onClick: u,
                         onMouseEnter: n,
                         onMouseLeave: n,
@@ -295,15 +295,15 @@ function k(e, t, n, r, a) {
 }
 function B(e) {
     let t;
-    let { repliedAuthor: n, baseAuthor: r, baseMessage: o, referencedMessage: l, renderPopout: d } = e,
-        { canShowReactionsOnMessageHover: _ } = E.ZP.useExperiment({ location: 'RepliedMessage' }, { autoTrackExposure: !1 }),
-        [f, h] = a.useState(!1),
-        p = a.useMemo(() => (null != d && l.state === I.Y.LOADED ? (e) => d(e, l.message) : void 0), [l, d]),
-        m = a.useCallback(() => h((e) => !e), []),
-        T = w(e, p, o.type),
-        g = x(e, p),
-        S = G(e, f, m),
-        v = a.useMemo(() => (e.compact ? (0, C.Z)((0, A.vc)(u()(), 'LT')) : null), [e.compact]);
+    let { repliedAuthor: n, baseAuthor: r, baseMessage: o, referencedMessage: l, renderPopout: d, isReplySpineClickable: _, showReplySpine: f } = e,
+        { canShowReactionsOnMessageHover: h } = E.ZP.useExperiment({ location: 'RepliedMessage' }, { autoTrackExposure: !1 }),
+        [p, m] = a.useState(!1),
+        T = a.useMemo(() => (null != d && l.state === I.Y.LOADED ? (e) => d(e, l.message) : void 0), [l, d]),
+        g = a.useCallback(() => m((e) => !e), []),
+        S = w(e, T, o.type),
+        v = x(e, T),
+        O = G(e, p, g),
+        R = a.useMemo(() => (e.compact ? (0, C.Z)((0, A.vc)(u()(), 'LT')) : null), [e.compact]);
     return (
         null != n &&
             null != r &&
@@ -313,21 +313,23 @@ function B(e) {
             })),
         (0, i.jsxs)('div', {
             id: (0, N.Gq)(o),
-            className: s()(D.repliedMessage, v, { [D.repliedMessageOriginalSpine]: !_ }),
+            className: s()(D.repliedMessage, R, { [D.messageSpine]: !h || (!_ && f) }),
             'aria-label': t,
             children: [
-                _ &&
+                h &&
+                    _ &&
+                    f &&
                     (0, i.jsx)(c.Clickable, {
                         tag: 'div',
                         'aria-label': b.Z.Messages.JUMP_TO_REPLY,
-                        className: s()(D.repliedMessageSpine, { [D.repliedMessageContentHovered]: f }),
+                        className: s()(D.repliedMessageClickableSpine, { [D.repliedMessageContentHovered]: p }),
                         onClick: e.onClickReply,
-                        onMouseEnter: m,
-                        onMouseLeave: m
+                        onMouseEnter: g,
+                        onMouseLeave: g
                     }),
-                T,
-                g,
-                S
+                S,
+                v,
+                O
             ]
         })
     );

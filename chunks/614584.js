@@ -25,19 +25,19 @@ var i = n(735250),
     x = n(689938);
 let S = s.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: S, channel: v, compact: N = !1, referencedUsernameProfile: A, referencedAvatarProfile: Z, setPopout: M } = e,
-        b = S.state === m.Y.LOADED ? S.message : void 0,
-        R = (0, E.Uj)(b),
-        L = (0, c.p)(),
-        j = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
-        P = s.useMemo(() => {
-            if (null == b) return null;
-            let e = (0, r.Z)(b);
+    let { baseMessage: n, referencedMessage: S, channel: v, compact: N = !1, referencedUsernameProfile: A, referencedAvatarProfile: Z, setPopout: M, isReplySpineClickable: b, showReplySpine: R } = e,
+        L = S.state === m.Y.LOADED ? S.message : void 0,
+        j = (0, E.Uj)(L),
+        P = (0, c.p)(),
+        O = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
+        y = s.useMemo(() => {
+            if (null == L) return null;
+            let e = (0, r.Z)(L);
             if (e.type === T.uaV.USER_JOIN) {
                 let t = _.Z.getWelcomeMessageKind(v.guild_id);
                 return (0, l.Rp)(
                     _.Z.getSystemMessageUserJoin(e.id, t).astFormat({
-                        username: null != R ? R.nick : e.author.username,
+                        username: null != j ? j.nick : e.author.username,
                         usernameHook: (e) => e
                     })
                 );
@@ -45,7 +45,7 @@ let S = s.memo(function (e) {
             if (e.type === T.uaV.ROLE_SUBSCRIPTION_PURCHASE)
                 return (0, l.Rp)(
                     (0, o.PA)({
-                        username: null != R ? R.nick : e.author.username,
+                        username: null != j ? j.nick : e.author.username,
                         guildId: null == v ? void 0 : v.guild_id,
                         roleSubscriptionData: e.roleSubscriptionData
                     })
@@ -54,21 +54,21 @@ let S = s.memo(function (e) {
                 return (0, l.Rp)(
                     (0, d.Y)({
                         application: null == e ? void 0 : e.application,
-                        username: null == R ? void 0 : R.nick
+                        username: null == j ? void 0 : j.nick
                     })
                 );
             else if (e.type === T.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
                 return (0, l.Rp)(
                     (0, h.B2)({
                         application: null == e ? void 0 : e.application,
-                        username: null == R ? void 0 : R.nick
+                        username: null == j ? void 0 : j.nick
                     })
                 );
             else if (e.type === T.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
                 return (0, l.Rp)(
                     (0, h.hj)({
                         application: null == e ? void 0 : e.application,
-                        username: null == R ? void 0 : R.nick
+                        username: null == j ? void 0 : j.nick
                     })
                 );
             else if (e.type === T.uaV.GUILD_DEADCHAT_REVIVE_PROMPT) return '' !== e.content ? e.content : x.Z.Messages.DEADCHAT_PROMPT_1;
@@ -76,7 +76,7 @@ let S = s.memo(function (e) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: L
+                        shouldFilterKeywords: P
                     },
                     n = e.isFirstMessageInForumPost(v)
                         ? {
@@ -88,19 +88,19 @@ let S = s.memo(function (e) {
                         : {
                               ...t,
                               formatInline: !0,
-                              allowHeading: j,
-                              allowList: j
+                              allowHeading: O,
+                              allowList: O
                           };
                 return (0, f.ZP)(e, n).content;
             }
             return null;
-        }, [b, R, v, j, L]),
-        O = (0, a.e7)([p.Z], () => null != b && p.Z.isBlockedForMessage(b), [b]),
-        y = (0, I.wq)(null == b ? void 0 : b.author.id, v.id),
-        D = (0, I.$3)(n, b, O),
-        U = (0, I.Wl)(b, v, A, M),
-        k = (0, I.rY)(Z, M),
-        w = s.useCallback(
+        }, [L, j, v, O, P]),
+        D = (0, a.e7)([p.Z], () => null != L && p.Z.isBlockedForMessage(L), [L]),
+        U = (0, I.wq)(null == L ? void 0 : L.author.id, v.id),
+        k = (0, I.$3)(n, L, D),
+        w = (0, I.Wl)(L, v, A, M),
+        B = (0, I.rY)(Z, M),
+        H = s.useCallback(
             () =>
                 M({
                     referencedUsernameProfile: !1,
@@ -108,40 +108,43 @@ let S = s.memo(function (e) {
                 }),
             [M]
         ),
-        B = (0, E.Uj)(n);
+        G = (0, E.Uj)(n);
     return (0, i.jsx)(g.Z, {
-        repliedAuthor: R,
+        repliedAuthor: j,
         baseMessage: n,
         channel: v,
-        baseAuthor: B,
+        baseAuthor: G,
         referencedMessage: S,
-        content: P,
+        content: y,
         compact: N,
-        isReplyAuthorBlocked: O,
+        isReplyAuthorBlocked: D,
         showAvatarPopout: Z,
         showUsernamePopout: A,
         renderPopout: C.Z,
-        onClickAvatar: k,
-        onClickUsername: U,
-        onClickReply: D,
-        onContextMenu: y,
-        onPopoutRequestClose: w
+        onClickAvatar: B,
+        onClickUsername: w,
+        onClickReply: k,
+        onContextMenu: U,
+        onPopoutRequestClose: H,
+        isReplySpineClickable: b,
+        showReplySpine: R
     });
 });
-function v(e, t, n, s, a) {
-    let { message: l, channel: r, compact: o } = e,
-        { referencedUsernameProfile: c, referencedAvatarProfile: u } = n,
-        d =
-            null != s &&
+function v(e) {
+    let { message: t, channel: n, compact: s, setPopout: a, referencedUsernameProfile: l, referencedAvatarProfile: r, replyReference: o, replyMessage: c, isReplySpineClickable: u, showReplySpine: d = !0 } = e,
+        h =
+            null != o &&
             (0, i.jsx)(S, {
-                baseMessage: l,
-                replyReference: s,
-                referencedMessage: a,
-                channel: r,
-                compact: o,
-                setPopout: t,
-                referencedUsernameProfile: c,
-                referencedAvatarProfile: u
+                baseMessage: t,
+                replyReference: o,
+                referencedMessage: c,
+                channel: n,
+                compact: s,
+                setPopout: a,
+                referencedUsernameProfile: l,
+                referencedAvatarProfile: r,
+                isReplySpineClickable: u,
+                showReplySpine: d
             });
-    return (0, i.jsx)(i.Fragment, { children: d });
+    return (0, i.jsx)(i.Fragment, { children: h });
 }
