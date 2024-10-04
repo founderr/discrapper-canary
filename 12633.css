@@ -22975,7 +22975,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 }
 
 .upsellText_ad7baa {
-    margin: auto 16px auto 4px
+    margin: auto 16px auto 8px;
+    flex: 1
 }
 
 .nitroTopDividerContainer_e8f337 {
