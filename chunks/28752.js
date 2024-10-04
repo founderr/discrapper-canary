@@ -129,13 +129,15 @@ function m(e) {
 function I(e) {
     let { application: t } = e,
         n = t.description;
-    return (0, i.jsx)('div', {
-        className: E.detailsContainer,
-        children: (0, i.jsx)('div', {
-            className: E.overviewContainerNoVideo,
-            children: null != n && n.length > 0 ? (0, i.jsx)(S, { description: n }) : null
-        })
-    });
+    return null == n || 0 === n.length
+        ? null
+        : (0, i.jsx)('div', {
+              className: E.detailsContainer,
+              children: (0, i.jsx)('div', {
+                  className: E.overviewContainerNoVideo,
+                  children: null != n && n.length > 0 ? (0, i.jsx)(S, { description: n }) : null
+              })
+          });
 }
 function T(e) {
     let { application: t } = e,
@@ -162,7 +164,7 @@ function T(e) {
         ]
     });
 }
-let g = 1;
+let g = 3;
 function S(e) {
     let { description: t } = e,
         [r, o] = a.useState(!0);
