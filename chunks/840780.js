@@ -28,8 +28,8 @@ var i = n(735250),
     M = n(168524),
     R = n(382182),
     L = n(74299),
-    y = n(914923),
-    P = n(165393),
+    P = n(914923),
+    y = n(165393),
     O = n(989941),
     j = n(803647),
     D = n(690221),
@@ -188,12 +188,12 @@ class ec extends l.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: l, sanitizedTitle: r } = (0, y.Z)(t);
+            { title: l, sanitizedTitle: r } = (0, P.Z)(t);
         return (0, i.jsxs)('div', {
             className: ea.gameWrapper,
             children: [
                 e
-                    ? (0, i.jsx)(P.Z, { title: r })
+                    ? (0, i.jsx)(y.Z, { title: r })
                     : (0, i.jsx)(x.ZP, {
                           look: x.ZP.Looks.GRAY,
                           size: x.ZP.Sizes.SMALL,

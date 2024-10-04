@@ -52,10 +52,10 @@ function L(e) {
         l = N.ZP.isChannelMuted(n, t.id);
     return (!i || !l) && I.ZP.getMentionCount(e) > 0;
 }
-function y(e) {
+function P(e) {
     return !N.ZP.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? f.Z.getMutableParticipants(e.id, _.pV.SPEAKER).length > 0 : S.ZP.getVoiceStatesForChannel(e).length > 0);
 }
-function P(e) {
+function y(e) {
     var t, n, i;
     let { guildChannels: l } = v.Z.getGuildWithoutChangingGuildActionRows(e),
         r = l.getChannels(null !== (t = M[e]) && void 0 !== t ? t : []);
@@ -91,14 +91,14 @@ function P(e) {
         }
     let Z = null,
         b = null,
-        P = null !== (i = null == f ? void 0 : f.getChannelRecords()) && void 0 !== i ? i : [];
+        y = null !== (i = null == f ? void 0 : f.getChannelRecords()) && void 0 !== i ? i : [];
     d && S > 0
         ? (Z = {
               mode: 'mentions',
               mentionCount: S,
               targetChannelId: o
           })
-        : !p && u().some(P, y)
+        : !p && u().some(y, P)
           ? (Z = {
                 mode: 'voice-channels',
                 mentionCount: 0,
@@ -134,7 +134,7 @@ function P(e) {
         !0
     );
 }
-let O = u().throttle(P, 200);
+let O = u().throttle(y, 200);
 function j(e) {
     let { guildId: t } = e,
         n = C.Z.getGuild(t);
@@ -187,7 +187,7 @@ class k extends (l = d.ZP.Store) {
         UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
             let { guildId: t, channelIds: n } = e,
                 i = C.Z.getGuild(t);
-            return !!(null != i && i.hasFeature(Z.oNc.COMMUNITY)) && null != n && !u().isEqual(M[t], n) && ((M[t] = n), P(t));
+            return !!(null != i && i.hasFeature(Z.oNc.COMMUNITY)) && null != n && !u().isEqual(M[t], n) && ((M[t] = n), y(t));
         },
         BULK_ACK: function (e) {
             let { channels: t } = e,

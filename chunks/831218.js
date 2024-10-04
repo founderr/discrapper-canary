@@ -28,8 +28,8 @@ var i,
     M = n(592125),
     R = n(158776),
     L = n(55589),
-    y = n(515753),
-    P = n(981631),
+    P = n(515753),
+    y = n(981631),
     O = n(689938),
     j = n(156762);
 function D(e, t, n) {
@@ -299,7 +299,7 @@ class U extends (l = s.Component) {
                         num_users_visible_with_mobile_indicator: o.filter((e) => null != e && R.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
-                    g.ZP.trackWithMetadata(P.rMx.DM_LIST_VIEWED, {
+                    g.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
                         ...u,
                         ...(0, C.X)(),
                         changelog_dm_visible: c
@@ -315,7 +315,7 @@ class U extends (l = s.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && _.Z.updateChannelListScroll(P.ME, e.scrollTop);
+                        null != e && _.Z.updateChannelListScroll(y.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -326,7 +326,7 @@ class U extends (l = s.Component) {
                 return null == o
                     ? null
                     : (0, a.jsx)(
-                          y.ZP,
+                          P.ZP,
                           {
                               channel: o,
                               selected: o.id === l,
@@ -400,7 +400,7 @@ t.Z = (e) => {
         );
     (0, x.z)(S.R);
     let f = (0, h.cj)([m.Z, A.Z, M.Z], () => ({
-            theme: A.Z.darkSidebar ? P.BRd.DARK : n,
+            theme: A.Z.darkSidebar ? y.BRd.DARK : n,
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version: null != t ? ''.concat(t, ':').concat(M.Z.getPrivateChannelsVersion()) : M.Z.getPrivateChannelsVersion()
         })),

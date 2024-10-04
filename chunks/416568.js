@@ -28,8 +28,8 @@ var i = n(735250),
     M = n(271383),
     R = n(430824),
     L = n(771845),
-    y = n(358085),
-    P = n(709054),
+    P = n(358085),
+    y = n(709054),
     O = n(727258),
     j = n(605951),
     D = n(474109),
@@ -64,7 +64,7 @@ function ee(e, t, n) {
     );
 }
 let et = 56,
-    en = (0, y.isWindows)() ? 4 : (0, y.isMac)() ? 0 : 12,
+    en = (0, P.isWindows)() ? 4 : (0, P.isMac)() ? 0 : 12,
     ei = et - 16,
     el = en + 10;
 class er {
@@ -166,14 +166,14 @@ class er {
     }
 }
 function ea(e) {
-    let { disableAppDownload: t = y.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: s } = e,
+    let { disableAppDownload: t = P.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: s } = e,
         [o] = (0, h.Wu)([L.ZP], () => {
             let e = L.ZP.getGuildsTree();
             return [e, e.version];
         }),
         d = (0, h.e7)([Z.Z], () => Z.Z.lurkingGuildIds()),
         p = l.useMemo(() => (n ? [] : d), [d, n]),
-        m = (0, h.Wu)([R.Z, M.ZP], () => P.default.keys(R.Z.getGuilds()).filter((e) => M.ZP.isCurrentUserGuest(e))),
+        m = (0, h.Wu)([R.Z, M.ZP], () => y.default.keys(R.Z.getGuilds()).filter((e) => M.ZP.isCurrentUserGuest(e))),
         g = p.concat(m),
         ee = (0, h.e7)([E.Z], () => E.Z.isFullscreenInContext()),
         et = (0, h.e7)([R.Z], () => R.Z.getGeoRestrictedGuilds()),
@@ -283,7 +283,7 @@ function ea(e) {
     let eM = o.getRoots(),
         eR = (0, x.Z)(),
         eL = (0, b.U)(),
-        ey = et.map((e) =>
+        eP = et.map((e) =>
             (0, i.jsx)(
                 k.Z,
                 {
@@ -336,7 +336,7 @@ function ea(e) {
                                         'aria-label': J.Z.Messages.SERVERS,
                                         children: eM.map(eA)
                                     }),
-                                    ey,
+                                    eP,
                                     n
                                         ? null
                                         : (0, i.jsx)(G.Z, {

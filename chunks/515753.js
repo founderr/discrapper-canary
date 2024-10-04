@@ -36,8 +36,8 @@ var i = n(735250),
     M = n(878857),
     R = n(518950),
     L = n(199902),
-    y = n(158776),
-    P = n(306680),
+    P = n(158776),
+    y = n(306680),
     O = n(111583),
     j = n(9156),
     D = n(594174),
@@ -122,7 +122,7 @@ class Y extends l.Component {
     }
 }
 function K(e) {
-    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: b, applicationStream: L, isTyping: y, status: O, isMobile: D, 'aria-posinset': w, 'aria-setsize': U } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: b, applicationStream: L, isTyping: P, status: O, isMobile: D, 'aria-posinset': w, 'aria-setsize': U } = e,
         [Y, K] = l.useState(!1),
         q = l.useRef(null),
         Q = l.useRef(null),
@@ -136,7 +136,7 @@ function K(e) {
             animateOnHover: !(s || Y)
         }),
         ee = (0, h.e7)([j.ZP], () => j.ZP.isChannelMuted(t.getGuildId(), t.id)),
-        et = (0, h.e7)([P.ZP], () => P.ZP.getMentionCount(t.id) > 0),
+        et = (0, h.e7)([y.ZP], () => y.ZP.getMentionCount(t.id) > 0),
         en = (0, S.ZP)(t),
         ei = (0, h.e7)([T.Z], () => T.Z.isFavorite(t.id)),
         el = () => {
@@ -238,7 +238,7 @@ function K(e) {
                           'aria-hidden': !0,
                           recipients: t.recipients,
                           size: e,
-                          isTyping: y,
+                          isTyping: P,
                           status: O
                       })
                     : (0, i.jsx)(H, {
@@ -246,8 +246,8 @@ function K(e) {
                           src: (0, N.x)(t),
                           'aria-hidden': !0,
                           size: e,
-                          status: y ? k.Skl.ONLINE : O,
-                          isTyping: y
+                          status: P ? k.Skl.ONLINE : O,
+                          isTyping: P
                       });
             o()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let n = null;
@@ -260,7 +260,7 @@ function K(e) {
                     avatarDecoration: J,
                     status: n,
                     isMobile: D,
-                    isTyping: y,
+                    isTyping: P,
                     'aria-label': d.username,
                     statusTooltip: !0
                 })
@@ -359,20 +359,20 @@ t.ZP = (e) => {
         { isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: s, isFacepileEnabled: o } = b.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
         c = null == r ? void 0 : r.id,
         u = (0, h.cj)(
-            [y.Z, L.Z],
+            [P.Z, L.Z],
             () => {
                 let e;
                 if (t.isMultiUserDM()) {
                     if (a) {
-                        let n = y.Z.getState().statuses;
+                        let n = P.Z.getState().statuses;
                         t.recipients.some((e) => n[e] === k.Skl.ONLINE) && (e = k.Skl.ONLINE);
                     }
-                } else null != c && (e = y.Z.getStatus(c));
+                } else null != c && (e = P.Z.getStatus(c));
                 return {
                     status: e,
-                    activities: null != c ? y.Z.getActivities(c) : null,
+                    activities: null != c ? P.Z.getActivities(c) : null,
                     applicationStream: null != c ? L.Z.getAnyStreamForUser(c) : null,
-                    isMobile: null != c && y.Z.isMobileOnline(c)
+                    isMobile: null != c && P.Z.isMobileOnline(c)
                 };
             },
             [t, c, a]

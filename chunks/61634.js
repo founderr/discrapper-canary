@@ -33,8 +33,8 @@ var i = n(470079),
     M = n(510601),
     R = n(901621),
     L = n(981631);
-let y = [];
-function P(e, t) {
+let P = [];
+function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : x.Z;
     return null != e && e.type !== a.d.GUILD_STAGE_VOICE && t !== e.id && n.canBasicChannel(L.S7T.VIEW_CHANNEL, e);
 }
@@ -53,9 +53,9 @@ function O(e) {
             d = (0, s.cj)(
                 [b.Z],
                 () => {
-                    if (!a || t || u) return y;
+                    if (!a || t || u) return P;
                     let n = Object.keys(b.Z.getVoiceStates(e));
-                    return 0 === n.length ? y : n.slice(0, 50);
+                    return 0 === n.length ? P : n.slice(0, 50);
                 },
                 [e, t, u, a]
             );
@@ -80,7 +80,7 @@ function O(e) {
             );
     })(e, n);
     let a = (0, R.Z)(e),
-        L = (0, p.ci)('use-guild-media-state'),
+        L = (0, p.aK)('use-guild-media-state'),
         O = (0, s.Wu)([d.ZP, v.Z], () => {
             let t = d.ZP.getEmbeddedActivitiesForGuild(e);
             return L ? t.filter((e) => !(0, h.Wu)([...e.userIds], v.Z.getBlockedIDs())) : t;
@@ -100,14 +100,14 @@ function O(e) {
                     a = L ? (0, h.DX)(b.Z.getVoiceStates(e)) : b.Z.getVoiceStates(e),
                     s = (() => {
                         if (n) return !1;
-                        for (let e in a) if (P(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, x.Z)) return !0;
+                        for (let e in a) if (y(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, x.Z)) return !0;
                         return !1;
                     })();
                 return {
                     guildHasVoice: s,
                     guildHasVideo: (() => {
                         if (n) return !1;
-                        for (let e of r) if (P(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, x.Z)) return !0;
+                        for (let e of r) if (y(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, x.Z)) return !0;
                         return !1;
                     })(),
                     selectedVoiceChannelHasVideo: null != i && b.Z.hasVideo(i)
@@ -155,9 +155,9 @@ function O(e) {
                     }
                     return !1;
                 })(),
-                y = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
+                P = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                o ? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === s), (p = v), (f = M), (I = T), (N = y)) : ((c = D), (u = null != l), (p = S), (f = w), (I = b), (N = R)),
+                o ? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === s), (p = v), (f = M), (I = T), (N = P)) : ((c = D), (u = null != l), (p = S), (f = w), (I = b), (N = R)),
                 {
                     audio: c,
                     video: f,

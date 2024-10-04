@@ -30,14 +30,14 @@ let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     T = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     b = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function A(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: M = !1, defaultFolderName: R, useCircleMask: L = !1, draggable: y = !1, sorting: P = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: M = !1, defaultFolderName: R, useCircleMask: L = !1, draggable: P = !1, sorting: y = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
         { id: k, name: B, children: V } = t,
         [H, F] = l.useState(!1),
         [W, z] = l.useState(!1),
         Y = H || W;
     l.useEffect(() => {
-        P && F(!1);
-    }, [P]);
+        y && F(!1);
+    }, [y]);
     let [{ dragging: K }, q] = (0, s.c)({
             type: _.eD.FOLDER,
             item: () => (
@@ -83,11 +83,11 @@ function A(e) {
                 }),
                 (0, i.jsx)(N.Z, {
                     text: J,
-                    disabled: P,
+                    disabled: y,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
-                        ref: y ? q : void 0,
+                        ref: P ? q : void 0,
                         className: a()({ [v.wobble]: !K && W && !u }),
                         'data-dnd-name': J,
                         children: K
@@ -96,7 +96,7 @@ function A(e) {
                                   folderNode: t,
                                   expanded: u,
                                   forceCircular: L,
-                                  sorting: P,
+                                  sorting: y,
                                   mediaState: f,
                                   mentionCount: A,
                                   tooltipName: J,
@@ -110,7 +110,7 @@ function A(e) {
                               })
                     })
                 }),
-                y
+                P
                     ? (0, i.jsx)(C.ZP, {
                           name: J,
                           targetNode: t,
@@ -148,7 +148,7 @@ function A(e) {
                     )
                 );
             }),
-            y && u
+            P && u
                 ? (0, i.jsx)(C.Zu, {
                       name: J,
                       targetNode: t

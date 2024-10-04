@@ -57,7 +57,7 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     },
     R = 57,
     L = 57 + A,
-    y = {
+    P = {
         tension: 180,
         friction: 80
     };
@@ -69,20 +69,20 @@ t.ZP = (e) => {
         A = (0, I.FZ)(E, t.id),
         R = null == A,
         L = null != A ? A : E,
-        P = (0, c.e7)([S.Z], () => {
+        y = (0, c.e7)([S.Z], () => {
             var e;
             return null !== (e = S.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
         }),
         O = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        P !== u && (0, N.v)(m, u);
-    }, [m, P, u]);
+        y !== u && (0, N.v)(m, u);
+    }, [m, y, u]);
     let j = ''.concat(Math.min(100, (u / (0, I.vn)(t.id)[L]) * 100), '%'),
         { current: D } = l.useRef(j),
         w = {
-            from: { width: P === u ? D : '0%' },
+            from: { width: y === u ? D : '0%' },
             to: { width: j },
-            config: y
+            config: P
         },
         [U, G] = (0, d.useSpring)(() => w),
         k = () => {

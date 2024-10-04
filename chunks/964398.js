@@ -118,8 +118,8 @@ t.Z = l.memo(function (e) {
             x: 0,
             y: 0
         }),
-        y = Math.abs(R.x) + Math.abs(R.y) > 0,
-        P = l.useMemo(() => a().chunk(x, p), [x]),
+        P = Math.abs(R.x) + Math.abs(R.y) > 0,
+        y = l.useMemo(() => a().chunk(x, p), [x]),
         O = l.useCallback(
             (e, t) => {
                 null == Z.current[A] ? (Z.current[A] = []) : (Z.current[A][t] = e);
@@ -204,13 +204,13 @@ t.Z = l.memo(function (e) {
             (e) => {
                 if (!S) return;
                 let t = A + (e.deltaY > 0 ? 1 : -1);
-                t >= 0 && t < P.length && (null != b.current && (P[t].length > b.current ? j(t, b.current) : D()), M(t));
+                t >= 0 && t < y.length && (null != b.current && (y[t].length > b.current ? j(t, b.current) : D()), M(t));
             },
-            [S, A, P, j, D]
+            [S, A, y, j, D]
         ),
         V = l.useMemo(
             () =>
-                P[A].map((e, l) => {
+                y[A].map((e, l) => {
                     let r = h[l];
                     if (null == r) throw Error('Too many items supplied '.concat(x.length, ' expected max of ').concat(h.length));
                     let a = f(r.x, t, m),
@@ -231,7 +231,7 @@ t.Z = l.memo(function (e) {
                         l
                     );
                 }),
-            [P, A, t, m, n, g, x.length, O]
+            [y, A, t, m, n, g, x.length, O]
         );
     return (0, i.jsx)(s.Clickable, {
         className: u.chatWheelMouseInput,
@@ -302,7 +302,7 @@ t.Z = l.memo(function (e) {
                                         cy: 144,
                                         r: 28.8
                                     }),
-                                y &&
+                                P &&
                                     (0, i.jsx)('circle', {
                                         className: u.chatWheelCenter,
                                         cx: 144 + R.x,
@@ -327,7 +327,7 @@ t.Z = l.memo(function (e) {
                     className: u.innerContent,
                     children: [
                         C && (0, i.jsx)(d, { className: u.chatWheelDeadZoneIcon }),
-                        S && P.length > 1
+                        S && y.length > 1
                             ? (0, i.jsx)('div', {
                                   className: u.paginationHint,
                                   children: c.Z.Messages.CHAT_WHEEL_PAGINATION_HINT

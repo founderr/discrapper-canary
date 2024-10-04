@@ -33,8 +33,8 @@ var i = n(735250),
     M = n(474936),
     R = n(871465),
     L = n(689938),
-    y = n(342824);
-let P = {
+    P = n(342824);
+let y = {
     origin: {
         x: -16,
         y: 0
@@ -64,7 +64,7 @@ function O(e) {
     !t &&
         _ &&
         (U = (0, i.jsx)(c.Z, {
-            className: y.downloadProgress,
+            className: P.downloadProgress,
             determineOwnVisibility: !1
         }));
     let G = t || g || m,
@@ -106,9 +106,9 @@ function O(e) {
             })
         });
     return (0, i.jsx)('div', {
-        className: y.tutorialContainer,
+        className: P.tutorialContainer,
         children: (0, i.jsx)(p.Z, {
-            inlineSpecs: P,
+            inlineSpecs: y,
             tutorialId: 'friends-list',
             position: 'right',
             children: (0, i.jsxs)(Z.H, {
@@ -116,7 +116,7 @@ function O(e) {
                     (0, i.jsx)(v.Z, {
                         selected: t,
                         hovered: g,
-                        className: y.pill
+                        className: P.pill
                     }),
                     (0, i.jsx)(T.Z, {
                         color: o.Tooltip.Colors.PRIMARY,

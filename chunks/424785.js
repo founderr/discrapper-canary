@@ -35,8 +35,8 @@ var l = n(120356),
     M = n(496675),
     R = n(306680),
     L = n(9156),
-    y = n(979651),
-    P = n(934415),
+    P = n(979651),
+    y = n(934415),
     O = n(98597),
     j = n(648501),
     D = n(473403),
@@ -67,7 +67,7 @@ class F extends O.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, P.rY)(e, y.Z, b.Z);
+        return (0, y.rY)(e, P.Z, b.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -250,7 +250,7 @@ function z(e) {
         { isSubscriptionGated: g, needSubscriptionToAccess: C } = (0, m.Z)(n.id),
         I = (0, a.e7)([L.ZP], () => L.ZP.isFavorite(t.id, n.id)),
         b = (0, x.xJ)(n.id),
-        y = (0, j.Z)({
+        P = (0, j.Z)({
             channel: n,
             isChannelSelected: !1,
             isChannelCollapsed: s,
@@ -259,7 +259,7 @@ function z(e) {
             needSubscriptionToAccess: C,
             enableConnectedUserLimit: b || (n.userLimit > 0 && n.userLimit < U.xGv)
         }),
-        P = e.connected && null == y;
+        y = e.connected && null == P;
     return (0, i.jsx)(W, {
         categoryCollapsed: h,
         connectAction: p,
@@ -271,8 +271,8 @@ function z(e) {
         ...d,
         ...e,
         isFavoriteSuggestion: r && !I,
-        forceShowButtons: P,
-        channelInfo: y,
+        forceShowButtons: y,
+        channelInfo: P,
         resolvedUnreadSetting: u
     });
 }

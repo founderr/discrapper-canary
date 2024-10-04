@@ -306,7 +306,7 @@ function F(e) {
     return (0, i.jsx)(I.Gt, {
         value: l,
         children: (0, i.jsx)('div', {
-            className: s()(P.repliedMessage, P.repliedMessageOriginalSpine, P.executedCommand, F),
+            className: s()(P.repliedMessage, P.messageSpine, P.executedCommand, F),
             'aria-hidden': !e.compact,
             children: n
         })

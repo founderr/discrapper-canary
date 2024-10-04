@@ -43,10 +43,10 @@ let Z = l.memo(function (e) {
         R = (0, o.e7)([_.Z], () => _.Z.isCollapsed(r.id)),
         L = (0, o.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_CHANNELS, r));
     t = null != T ? (Z > T ? x.containerDragAfter : x.containerDragBefore) : x.containerDefault;
-    let y = l.useCallback(() => {
+    let P = l.useCallback(() => {
             R ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
         }, [r.id, R]),
-        P = l.useCallback(
+        y = l.useCallback(
             (e) => {
                 if ('null' !== r.id) {
                     let t = m.Z.getGuild(r.getGuildId());
@@ -100,14 +100,14 @@ let Z = l.memo(function (e) {
                             [x.muted]: M,
                             [x.clickable]: !0
                         }),
-                        onContextMenu: P,
+                        onContextMenu: y,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
                                 innerRef: U,
                                 className: x.mainContent,
                                 tabIndex: D,
                                 ...w,
-                                onClick: y,
+                                onClick: P,
                                 'aria-label': S.Z.Messages.CATEGORY_A11Y_LABEL.format({ categoryName: r.name }),
                                 'aria-expanded': !R,
                                 focusProps: { enabled: !1 },
