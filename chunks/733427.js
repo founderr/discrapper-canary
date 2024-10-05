@@ -1,5 +1,5 @@
-var r = n(470079);
-let i = () => {
+var r = t(470079);
+n.Z = () => {
     let e = r.useRef(!0);
     return (
         r.useEffect(
@@ -11,4 +11,3 @@ let i = () => {
         r.useCallback(() => e.current, [])
     );
 };
-t.Z = i;

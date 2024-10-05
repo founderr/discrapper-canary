@@ -4,6 +4,5 @@ n.d(t, {
         return i;
     }
 });
-r = n(66511).Z;
-let i = r.openMemberVerificationModal;
+let i = (r = n(66511).Z).openMemberVerificationModal;
 r.closeMemberVerificationModal;

@@ -1,73 +1,76 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return g;
     }
-});
-var r = n(47120);
+}),
+    n(47120);
 var i = n(735250),
     a = n(470079),
-    o = n(442837),
-    s = n(524437),
-    l = n(481060),
-    u = n(140155),
+    s = n(442837),
+    l = n(524437),
+    r = n(481060),
+    o = n(140155),
     c = n(497089),
     d = n(178480),
-    _ = n(11799),
-    E = n(632523),
-    f = n(695346),
-    h = n(626135),
-    p = n(709054),
-    m = n(791914),
-    I = n(981631),
-    T = n(689938),
-    g = n(802840),
-    S = n(811304);
-function A(e) {
+    u = n(11799),
+    _ = n(632523),
+    E = n(695346),
+    I = n(626135),
+    m = n(709054),
+    T = n(791914),
+    N = n(981631),
+    h = n(689938),
+    C = n(802840),
+    p = n(811304);
+function f(e) {
     let { onClick: t } = e;
-    return (0, i.jsx)(l.CircleIconButton, {
-        tooltip: T.Z.Messages.MARK_ALL_AS_READ,
-        color: l.CircleIconButtonColors.TERTIARY,
-        icon: (0, i.jsx)(l.DoubleCheckmarkIcon, {
+    return (0, i.jsx)(r.CircleIconButton, {
+        tooltip: h.Z.Messages.MARK_ALL_AS_READ,
+        color: r.CircleIconButtonColors.TERTIARY,
+        icon: (0, i.jsx)(r.DoubleCheckmarkIcon, {
             size: 'xs',
             color: 'currentColor'
         }),
-        className: S.controlButton,
+        className: p.controlButton,
         onClick: t
     });
 }
-function v(e) {
+function g(e) {
     let { setTab: t, badgeState: n, closePopout: r } = e,
-        { initialized: l, items: T, loading: S, loadMore: v } = (0, _.y6)(),
-        N = (0, o.e7)([u.Z], () => u.Z.localItems),
-        O = a.useMemo(() => [...[...T, ...N].sort((e, t) => -1 * p.default.compare(e.id, t.id))], [T, N]),
-        R = T.length > 0 ? T[0] : null,
-        C = f.d$.useSetting(),
-        y = a.useMemo(() => {
-            if (null != R && 0 >= p.default.compare(R.id, C)) return !1;
-            for (let e of O) {
-                if (0 >= p.default.compare(e.id, C)) break;
-                if (!(0, d.r)(e, C)) return !0;
+        { initialized: h, items: p, loading: g, loadMore: A } = (0, u.y6)(),
+        S = (0, s.e7)([o.Z], () => o.Z.localItems),
+        M = a.useMemo(() => [...[...p, ...S].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [p, S]),
+        x = p.length > 0 ? p[0] : null,
+        O = E.d$.useSetting(),
+        R = a.useMemo(() => {
+            if (null != x && 0 >= m.default.compare(x.id, O)) return !1;
+            for (let e of M) {
+                if (0 >= m.default.compare(e.id, O)) break;
+                if (!(0, d.r)(e, O)) return !0;
             }
             return !1;
-        }, [R, C, O]),
-        L = () => {
-            null != R && (f.d$.updateSetting(R.id), h.default.track(I.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
-        };
+        }, [x, O, M]);
     return (0, i.jsxs)('div', {
-        className: g.container,
+        className: C.container,
         children: [
-            (0, i.jsx)(m.Z, {
-                tab: s.X.FOR_YOU,
+            (0, i.jsx)(T.Z, {
+                tab: l.X.FOR_YOU,
                 setTab: t,
                 badgeState: n,
                 closePopout: r,
-                children: y ? (0, i.jsx)(A, { onClick: L }) : null
+                children: R
+                    ? (0, i.jsx)(f, {
+                          onClick: () => {
+                              null != x && (E.d$.updateSetting(x.id), I.default.track(N.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+                          }
+                      })
+                    : null
             }),
-            (0, i.jsx)(E.Z, {
-                initialized: l,
-                items: O,
-                loading: S,
-                loadMore: v
+            (0, i.jsx)(_.Z, {
+                initialized: h,
+                items: M,
+                loading: g,
+                loadMore: A
             })
         ]
     });

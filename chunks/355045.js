@@ -1,8 +1,8 @@
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(442837),
+    s = n.n(a),
+    o = n(442837),
     l = n(622535),
     u = n(481060),
     c = n(906732),
@@ -12,108 +12,79 @@ var r = n(735250),
     f = n(314884),
     h = n(709586),
     p = n(74538),
-    m = n(678558),
-    I = n(981631),
+    I = n(678558),
+    m = n(981631),
     T = n(474936),
-    g = n(689938),
-    S = n(933815);
-function A(e) {
+    S = n(689938),
+    g = n(933815);
+t.Z = function (e) {
     let { closeLayer: t, guild: n, onCtaVisibilityChange: a } = e,
-        A = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
-        v = (0, s.e7)([f.Z], () => f.Z.boostSlots),
-        { analyticsLocations: N } = (0, c.ZP)(),
-        O = i.useMemo(
+        A = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
+        N = (0, o.e7)([f.Z], () => f.Z.boostSlots),
+        { analyticsLocations: O } = (0, c.ZP)(),
+        R = i.useMemo(
             () =>
-                Object.keys(v).filter((e) => {
-                    let t = v[e];
+                Object.keys(N).filter((e) => {
+                    let t = N[e];
                     return null != t.premiumGuildSubscription && t.premiumGuildSubscription.guildId === n.id;
                 }),
-            [v, n.id]
+            [N, n.id]
         );
-    function R() {
-        (0, _.Z)({
-            initialPlanId: null,
-            subscriptionTier: T.Si.TIER_2,
-            analyticsLocations: N,
-            analyticsObject: {
-                page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                object: I.qAy.BUTTON_ICON,
-                objectType: I.Qqv.BUY
-            },
-            onClose: (e) => e && t()
-        });
-    }
-    function C() {
-        (0, _.Z)({
-            initialPlanId: null,
-            subscriptionTier: T.Si.TIER_2,
-            isGift: !0,
-            analyticsLocations: N,
-            analyticsObject: {
-                page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                object: I.qAy.BUTTON_ICON,
-                objectType: I.Qqv.GIFT
-            },
-            onClose: (e) => e && t()
-        });
-    }
     return (0, r.jsxs)('div', {
-        className: S.guildStatus,
+        className: g.guildStatus,
         children: [
             (0, r.jsx)(d.Z, {
-                className: S.guildIcon,
+                className: g.guildIcon,
                 guild: n,
                 size: d.Z.Sizes.LARGER
             }),
             (0, r.jsx)(u.Heading, {
-                className: S.guildName,
+                className: g.guildName,
                 color: 'always-white',
                 variant: 'text-lg/bold',
                 children: n.name
             }),
             (0, r.jsxs)('div', {
-                className: S.guildBoostCountWrapper,
+                className: g.guildBoostCountWrapper,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: S.guildBoostCount,
+                        className: g.guildBoostCount,
                         children: [
-                            (0, r.jsx)(h.Z, { className: o()(S.guildBoostBadge, { [S.guildBoostBadgeWithBoosts]: n.premiumSubscriberCount > 0 }) }),
+                            (0, r.jsx)(h.Z, { className: s()(g.guildBoostBadge, { [g.guildBoostBadgeWithBoosts]: n.premiumSubscriberCount > 0 }) }),
                             (0, r.jsx)(u.Text, {
-                                className: S.guildStatusCopy,
+                                className: g.guildStatusCopy,
                                 variant: 'text-md/bold',
-                                children: g.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({ subscriptions: n.premiumSubscriberCount })
+                                children: S.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({ subscriptions: n.premiumSubscriberCount })
                             })
                         ]
                     }),
-                    O.length > 0
+                    R.length > 0
                         ? (0, r.jsx)(u.Text, {
-                              className: S.guildBoostCountCurrentUser,
+                              className: g.guildBoostCountCurrentUser,
                               variant: 'text-sm/normal',
-                              children: g.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_USER_SUBSCRIPTION_COUNT.format({ numSubscriptions: O.length })
+                              children: S.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_USER_SUBSCRIPTION_COUNT.format({ numSubscriptions: R.length })
                           })
                         : null
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: S.guildBoostCtas,
+                className: g.guildBoostCtas,
                 children: [
                     (0, r.jsx)(l.$, {
                         onChange: a,
                         threshold: 0.9,
                         children: (0, r.jsx)('div', {
-                            className: o()(S.guildBoostCta, S.guildBoostCtaBoostWrapper),
-                            children: (0, r.jsx)(m.Z, {
-                                className: S.guildBoostCtaBoost,
-                                innerClassName: o()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaBoostContent),
-                                buttonShineClassName: S.guildBoostCtaBoostShine,
+                            className: s()(g.guildBoostCta, g.guildBoostCtaBoostWrapper),
+                            children: (0, r.jsx)(I.Z, {
+                                className: g.guildBoostCtaBoost,
+                                innerClassName: s()(g.__invalid_guildBoostCtaContent, g.guildBoostCtaBoostContent),
+                                buttonShineClassName: g.guildBoostCtaBoostShine,
                                 guild: n,
                                 analyticsLocation: {
-                                    page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                                    section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                    object: I.qAy.BUTTON_CTA,
-                                    objectType: I.Qqv.BUY
+                                    page: m.ZY5.PREMIUM_GUILD_USER_MODAL,
+                                    section: m.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                    object: m.qAy.BUTTON_CTA,
+                                    objectType: m.Qqv.BUY
                                 },
                                 closeLayer: t,
                                 color: u.Button.Colors.WHITE,
@@ -124,33 +95,59 @@ function A(e) {
                     }),
                     p.ZP.hasFreeBoosts(A) || p.ZP.isPremium(A, T.p9.TIER_2)
                         ? (0, r.jsxs)(u.Button, {
-                              className: o()(S.guildBoostCta, S.guildBoostCtaSecondary),
-                              innerClassName: o()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaGiftContent),
+                              className: s()(g.guildBoostCta, g.guildBoostCtaSecondary),
+                              innerClassName: s()(g.__invalid_guildBoostCtaContent, g.guildBoostCtaGiftContent),
                               look: u.Button.Looks.OUTLINED,
                               color: u.Button.Colors.WHITE,
-                              onClick: C,
+                              onClick: function () {
+                                  (0, _.Z)({
+                                      initialPlanId: null,
+                                      subscriptionTier: T.Si.TIER_2,
+                                      isGift: !0,
+                                      analyticsLocations: O,
+                                      analyticsObject: {
+                                          page: m.ZY5.PREMIUM_GUILD_USER_MODAL,
+                                          section: m.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                          object: m.qAy.BUTTON_ICON,
+                                          objectType: m.Qqv.GIFT
+                                      },
+                                      onClose: (e) => e && t()
+                                  });
+                              },
                               size: u.Button.Sizes.LARGE,
                               children: [
                                   (0, r.jsx)(u.GiftIcon, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: S.guildBoostCtaGiftIcon
+                                      className: g.guildBoostCtaGiftIcon
                                   }),
-                                  g.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_GIFT_NITRO
+                                  S.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_GIFT_NITRO
                               ]
                           })
                         : (0, r.jsx)(u.Button, {
-                              className: o()(S.guildBoostCta, S.guildBoostCtaSecondary),
-                              innerClassName: o()(S.__invalid_guildBoostCtaContent, S.__invalid_guildBoostCtaSubscribeContent),
+                              className: s()(g.guildBoostCta, g.guildBoostCtaSecondary),
+                              innerClassName: s()(g.__invalid_guildBoostCtaContent, g.__invalid_guildBoostCtaSubscribeContent),
                               look: u.Button.Looks.OUTLINED,
                               color: u.Button.Colors.WHITE,
-                              onClick: R,
+                              onClick: function () {
+                                  (0, _.Z)({
+                                      initialPlanId: null,
+                                      subscriptionTier: T.Si.TIER_2,
+                                      analyticsLocations: O,
+                                      analyticsObject: {
+                                          page: m.ZY5.PREMIUM_GUILD_USER_MODAL,
+                                          section: m.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                          object: m.qAy.BUTTON_ICON,
+                                          objectType: m.Qqv.BUY
+                                      },
+                                      onClose: (e) => e && t()
+                                  });
+                              },
                               size: u.Button.Sizes.LARGE,
-                              children: g.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_SUBSCRIBE_WITH_FREE_BOOSTS
+                              children: S.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_SUBSCRIBE_WITH_FREE_BOOSTS
                           })
                 ]
             })
         ]
     });
-}
-t.Z = A;
+};

@@ -1,8 +1,8 @@
 var r = n(740078),
     i = n(343713),
     a = n(49691),
-    o = n(285363),
-    s = n(874900),
+    s = n(285363),
+    o = n(874900),
     l = n(126387),
     u = n(632471),
     c = n(894417),
@@ -12,120 +12,118 @@ var r = n(740078),
         bottom: 'auto',
         left: 'auto'
     };
-function _(e, t) {
-    var n = e.x,
-        r = e.y,
-        i = t.devicePixelRatio || 1;
-    return {
-        x: (0, c.NM)(n * i) / i || 0,
-        y: (0, c.NM)(r * i) / i || 0
-    };
-}
-function E(e) {
+function _(e) {
     var t,
         n,
-        l = e.popper,
-        u = e.popperRect,
-        c = e.placement,
-        E = e.variation,
-        f = e.offsets,
-        h = e.position,
-        p = e.gpuAcceleration,
-        m = e.adaptive,
-        I = e.roundOffsets,
-        T = e.isFixed,
-        g = f.x,
-        S = void 0 === g ? 0 : g,
-        A = f.y,
-        v = void 0 === A ? 0 : A,
-        N =
-            'function' == typeof I
-                ? I({
-                      x: S,
-                      y: v
+        l,
+        u,
+        _,
+        E,
+        f,
+        h = e.popper,
+        p = e.popperRect,
+        I = e.placement,
+        m = e.variation,
+        T = e.offsets,
+        S = e.position,
+        g = e.gpuAcceleration,
+        A = e.adaptive,
+        N = e.roundOffsets,
+        O = e.isFixed,
+        R = T.x,
+        v = void 0 === R ? 0 : R,
+        C = T.y,
+        L = void 0 === C ? 0 : C,
+        D =
+            'function' == typeof N
+                ? N({
+                      x: v,
+                      y: L
                   })
                 : {
-                      x: S,
-                      y: v
+                      x: v,
+                      y: L
                   };
-    (S = N.x), (v = N.y);
-    var O = f.hasOwnProperty('x'),
-        R = f.hasOwnProperty('y'),
-        C = r.t$,
-        y = r.we,
-        L = window;
-    if (m) {
-        var b = (0, i.Z)(l),
-            D = 'clientHeight',
-            M = 'clientWidth';
-        b === (0, a.Z)(l) && ((b = (0, o.Z)(l)), 'static' !== (0, s.Z)(b).position && 'absolute' === h && ((D = 'scrollHeight'), (M = 'scrollWidth')));
-        (c === r.we || ((c === r.t$ || c === r.F2) && E === r.ut)) && ((y = r.I), (v -= (T && b === L && L.visualViewport ? L.visualViewport.height : b[D]) - u.height), (v *= p ? 1 : -1)), (c === r.t$ || ((c === r.we || c === r.I) && E === r.ut)) && ((C = r.F2), (S -= (T && b === L && L.visualViewport ? L.visualViewport.width : b[M]) - u.width), (S *= p ? 1 : -1));
+    (v = D.x), (L = D.y);
+    var y = T.hasOwnProperty('x'),
+        b = T.hasOwnProperty('y'),
+        M = r.t$,
+        P = r.we,
+        U = window;
+    if (A) {
+        var w = (0, i.Z)(h),
+            x = 'clientHeight',
+            G = 'clientWidth';
+        w === (0, a.Z)(h) && ((w = (0, s.Z)(h)), 'static' !== (0, o.Z)(w).position && 'absolute' === S && ((x = 'scrollHeight'), (G = 'scrollWidth')));
+        (I === r.we || ((I === r.t$ || I === r.F2) && m === r.ut)) && ((P = r.I), (L -= (O && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height), (L *= g ? 1 : -1)), (I === r.t$ || ((I === r.we || I === r.I) && m === r.ut)) && ((M = r.F2), (v -= (O && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width), (v *= g ? 1 : -1));
     }
-    var P = Object.assign({ position: h }, m && d),
-        U =
-            !0 === I
-                ? _(
-                      {
-                          x: S,
-                          y: v
-                      },
-                      (0, a.Z)(l)
-                  )
-                : {
-                      x: S,
-                      y: v
-                  };
-    return ((S = U.x), (v = U.y), p) ? Object.assign({}, P, (((n = {})[y] = R ? '0' : ''), (n[C] = O ? '0' : ''), (n.transform = 1 >= (L.devicePixelRatio || 1) ? 'translate(' + S + 'px, ' + v + 'px)' : 'translate3d(' + S + 'px, ' + v + 'px, 0)'), n)) : Object.assign({}, P, (((t = {})[y] = R ? v + 'px' : ''), (t[C] = O ? S + 'px' : ''), (t.transform = ''), t));
-}
-function f(e) {
-    var t = e.state,
-        n = e.options,
-        r = n.gpuAcceleration,
-        i = void 0 === r || r,
-        a = n.adaptive,
-        o = void 0 === a || a,
-        s = n.roundOffsets,
-        c = void 0 === s || s,
-        d = {
-            placement: (0, l.Z)(t.placement),
-            variation: (0, u.Z)(t.placement),
-            popper: t.elements.popper,
-            popperRect: t.rects.popper,
-            gpuAcceleration: i,
-            isFixed: 'fixed' === t.options.strategy
-        };
-    null != t.modifiersData.popperOffsets &&
-        (t.styles.popper = Object.assign(
-            {},
-            t.styles.popper,
-            E(
-                Object.assign({}, d, {
-                    offsets: t.modifiersData.popperOffsets,
-                    position: t.options.strategy,
-                    adaptive: o,
-                    roundOffsets: c
-                })
-            )
-        )),
-        null != t.modifiersData.arrow &&
-            (t.styles.arrow = Object.assign(
-                {},
-                t.styles.arrow,
-                E(
-                    Object.assign({}, d, {
-                        offsets: t.modifiersData.arrow,
-                        position: 'absolute',
-                        adaptive: !1,
-                        roundOffsets: c
-                    })
-                )
-            )),
-        (t.attributes.popper = Object.assign({}, t.attributes.popper, { 'data-popper-placement': t.placement }));
+    var k = Object.assign({ position: S }, A && d);
+    var B =
+        !0 === N
+            ? ((t = {
+                  x: v,
+                  y: L
+              }),
+              (n = (0, a.Z)(h)),
+              (l = t.x),
+              (u = t.y),
+              (_ = n.devicePixelRatio || 1),
+              {
+                  x: (0, c.NM)(l * _) / _ || 0,
+                  y: (0, c.NM)(u * _) / _ || 0
+              })
+            : {
+                  x: v,
+                  y: L
+              };
+    return ((v = B.x), (L = B.y), g) ? Object.assign({}, k, (((f = {})[P] = b ? '0' : ''), (f[M] = y ? '0' : ''), (f.transform = 1 >= (U.devicePixelRatio || 1) ? 'translate(' + v + 'px, ' + L + 'px)' : 'translate3d(' + v + 'px, ' + L + 'px, 0)'), f)) : Object.assign({}, k, (((E = {})[P] = b ? L + 'px' : ''), (E[M] = y ? v + 'px' : ''), (E.transform = ''), E));
 }
 t.Z = {
     name: 'computeStyles',
     enabled: !0,
     phase: 'beforeWrite',
-    fn: f,
+    fn: function (e) {
+        var t = e.state,
+            n = e.options,
+            r = n.gpuAcceleration,
+            i = n.adaptive,
+            a = n.roundOffsets,
+            s = void 0 === a || a,
+            o = {
+                placement: (0, l.Z)(t.placement),
+                variation: (0, u.Z)(t.placement),
+                popper: t.elements.popper,
+                popperRect: t.rects.popper,
+                gpuAcceleration: void 0 === r || r,
+                isFixed: 'fixed' === t.options.strategy
+            };
+        null != t.modifiersData.popperOffsets &&
+            (t.styles.popper = Object.assign(
+                {},
+                t.styles.popper,
+                _(
+                    Object.assign({}, o, {
+                        offsets: t.modifiersData.popperOffsets,
+                        position: t.options.strategy,
+                        adaptive: void 0 === i || i,
+                        roundOffsets: s
+                    })
+                )
+            )),
+            null != t.modifiersData.arrow &&
+                (t.styles.arrow = Object.assign(
+                    {},
+                    t.styles.arrow,
+                    _(
+                        Object.assign({}, o, {
+                            offsets: t.modifiersData.arrow,
+                            position: 'absolute',
+                            adaptive: !1,
+                            roundOffsets: s
+                        })
+                    )
+                )),
+            (t.attributes.popper = Object.assign({}, t.attributes.popper, { 'data-popper-placement': t.placement }));
+    },
     data: {}
 };

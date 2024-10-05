@@ -1,64 +1,63 @@
 var r = n(544891),
     i = n(570140),
     a = n(626135),
-    o = n(741847),
-    s = n(981631);
-function l(e) {
-    return i.Z.isDispatching()
-        ? Promise.resolve().then(() => l(e))
-        : (i.Z.dispatch({
-              type: 'GUILD_TEMPLATE_RESOLVE',
-              code: e
-          }),
-          r.tn
-              .get({
-                  url: s.ANM.UNRESOLVED_GUILD_TEMPLATE(e),
-                  oldFormErrors: !0
-              })
-              .then(
-                  (t) => {
-                      let n = t.body;
-                      return (
-                          a.default.track(s.rMx.GUILD_TEMPLATE_RESOLVED, {
-                              resolved: !0,
-                              guild_template_code: e,
-                              guild_template_name: n.name,
-                              guild_template_description: n.description,
-                              guild_template_guild_id: n.source_guild_id
+    s = n(741847),
+    o = n(981631);
+t.Z = {
+    resolveGuildTemplate: function e(t) {
+        return i.Z.isDispatching()
+            ? Promise.resolve().then(() => e(t))
+            : (i.Z.dispatch({
+                  type: 'GUILD_TEMPLATE_RESOLVE',
+                  code: t
+              }),
+              r.tn
+                  .get({
+                      url: o.ANM.UNRESOLVED_GUILD_TEMPLATE(t),
+                      oldFormErrors: !0
+                  })
+                  .then(
+                      (e) => {
+                          let n = e.body;
+                          return (
+                              a.default.track(o.rMx.GUILD_TEMPLATE_RESOLVED, {
+                                  resolved: !0,
+                                  guild_template_code: t,
+                                  guild_template_name: n.name,
+                                  guild_template_description: n.description,
+                                  guild_template_guild_id: n.source_guild_id
+                              }),
+                              i.Z.dispatch({
+                                  type: 'GUILD_TEMPLATE_RESOLVE_SUCCESS',
+                                  guildTemplate: n,
+                                  code: t
+                              }),
+                              {
+                                  guildTemplate: (0, s.Z)(n),
+                                  code: t
+                              }
+                          );
+                      },
+                      () => (
+                          a.default.track(o.rMx.GUILD_TEMPLATE_RESOLVED, {
+                              resolved: !1,
+                              guild_template_code: t
                           }),
                           i.Z.dispatch({
-                              type: 'GUILD_TEMPLATE_RESOLVE_SUCCESS',
-                              guildTemplate: n,
-                              code: e
+                              type: 'GUILD_TEMPLATE_RESOLVE_FAILURE',
+                              code: t
                           }),
                           {
-                              guildTemplate: (0, o.Z)(n),
-                              code: e
+                              guildTemplate: null,
+                              code: t
                           }
-                      );
-                  },
-                  () => (
-                      a.default.track(s.rMx.GUILD_TEMPLATE_RESOLVED, {
-                          resolved: !1,
-                          guild_template_code: e
-                      }),
-                      i.Z.dispatch({
-                          type: 'GUILD_TEMPLATE_RESOLVE_FAILURE',
-                          code: e
-                      }),
-                      {
-                          guildTemplate: null,
-                          code: e
-                      }
-                  )
-              ));
-}
-t.Z = {
-    resolveGuildTemplate: l,
+                      )
+                  ));
+    },
     loadTemplatesForGuild: (e) =>
         r.tn
             .get({
-                url: s.ANM.GUILD_TEMPLATES(e),
+                url: o.ANM.GUILD_TEMPLATES(e),
                 oldFormErrors: !0
             })
             .then(
@@ -73,7 +72,7 @@ t.Z = {
     createGuildTemplate: (e, t, n) =>
         r.tn
             .post({
-                url: s.ANM.GUILD_TEMPLATES(e),
+                url: o.ANM.GUILD_TEMPLATES(e),
                 body: {
                     name: t,
                     description: n
@@ -90,7 +89,7 @@ t.Z = {
     syncGuildTemplate: (e, t) =>
         r.tn
             .put({
-                url: s.ANM.GUILD_TEMPLATE(e, t),
+                url: o.ANM.GUILD_TEMPLATE(e, t),
                 oldFormErrors: !0
             })
             .then((e) => {
@@ -103,7 +102,7 @@ t.Z = {
     updateGuildTemplate: (e, t, n, a) =>
         r.tn
             .patch({
-                url: s.ANM.GUILD_TEMPLATE(e, t),
+                url: o.ANM.GUILD_TEMPLATE(e, t),
                 body: {
                     name: n,
                     description: a
@@ -120,7 +119,7 @@ t.Z = {
     deleteGuildTemplate: (e, t) =>
         r.tn
             .del({
-                url: s.ANM.GUILD_TEMPLATE(e, t),
+                url: o.ANM.GUILD_TEMPLATE(e, t),
                 oldFormErrors: !0
             })
             .then(() => {

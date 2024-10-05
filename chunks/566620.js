@@ -1,122 +1,122 @@
 n.d(t, {
     $h: function () {
-        return en;
+        return J;
     },
     W5: function () {
-        return eu;
-    },
-    af: function () {
-        return X;
-    },
-    cG: function () {
-        return Q;
-    },
-    gC: function () {
-        return ed;
-    },
-    kv: function () {
-        return er;
-    },
-    mW: function () {
-        return et;
-    },
-    pu: function () {
         return es;
     },
-    sN: function () {
-        return eo;
+    af: function () {
+        return q;
     },
-    tg: function () {
-        return ec;
+    cG: function () {
+        return z;
     },
-    ux: function () {
+    gC: function () {
         return el;
     },
-    w1: function () {
+    kv: function () {
+        return ee;
+    },
+    mW: function () {
+        return $;
+    },
+    pu: function () {
+        return ei;
+    },
+    sN: function () {
+        return er;
+    },
+    tg: function () {
+        return eo;
+    },
+    ux: function () {
         return ea;
+    },
+    w1: function () {
+        return en;
     }
-});
-var r = n(789020);
-var i = n(47120);
-var a = n(990547),
-    o = n(544891),
-    s = n(570140),
-    l = n(668781),
-    u = n(493683),
-    c = n(475179),
-    d = n(447543),
-    _ = n(904245),
-    E = n(479531),
-    f = n(911969),
-    h = n(845936),
-    p = n(213459),
-    m = n(667204),
-    I = n(812236),
-    T = n(812206),
-    g = n(358221),
-    S = n(233764),
-    A = n(375824),
-    v = n(48854),
-    N = n(835873),
-    O = n(973616),
-    R = n(314897),
-    C = n(592125),
-    y = n(430824),
-    L = n(496675),
-    b = n(594174),
+}),
+    n(789020),
+    n(47120);
+var r = n(990547),
+    i = n(544891),
+    a = n(570140),
+    s = n(668781),
+    o = n(493683),
+    l = n(475179),
+    u = n(447543),
+    c = n(904245),
+    d = n(479531),
+    _ = n(911969),
+    E = n(845936),
+    f = n(213459),
+    h = n(667204),
+    p = n(812236),
+    I = n(812206),
+    m = n(358221),
+    T = n(233764),
+    S = n(375824),
+    g = n(48854),
+    A = n(835873),
+    N = n(973616),
+    O = n(314897),
+    R = n(592125),
+    v = n(430824),
+    C = n(496675),
+    L = n(594174),
     D = n(979651),
-    M = n(585483),
-    P = n(630388),
-    U = n(823379),
-    w = n(573261),
-    x = n(595519),
-    G = n(317381),
-    k = n(672181),
-    B = n(882347),
-    F = n(224189),
-    Z = n(374065),
-    V = n(917107),
-    H = n(89425),
-    Y = n(275920),
-    j = n(701488),
-    W = n(981631),
-    K = n(674563),
-    z = n(245335),
-    q = n(689938);
-function Q(e, t) {
+    y = n(585483),
+    b = n(630388),
+    M = n(823379),
+    P = n(573261),
+    U = n(595519),
+    w = n(317381),
+    x = n(672181),
+    G = n(882347),
+    k = n(224189),
+    B = n(374065),
+    F = n(917107),
+    V = n(89425),
+    H = n(275920),
+    Z = n(701488),
+    Y = n(981631),
+    j = n(674563),
+    W = n(245335),
+    K = n(689938);
+function z(e, t) {
     var n;
-    let r = G.ZP.getSelfEmbeddedActivityForChannel(e);
-    et({
+    let r = w.ZP.getSelfEmbeddedActivityForChannel(e);
+    $({
         channelId: e,
         applicationId: null !== (n = null == r ? void 0 : r.applicationId) && void 0 !== n ? n : t,
         showFeedback: !1
     }),
-        (0, k.Z)(e);
+        (0, x.Z)(e);
 }
-async function X(e) {
+async function q(e) {
     var t, n;
-    let { channelId: r, applicationId: i, isStart: a, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c, commandOrigin: d, sectionName: _, source: f, partyId: h, onExecutedCallback: p } = e,
-        m = C.Z.getChannel(r),
-        I = null !== (t = null == m ? void 0 : m.getGuildId()) && void 0 !== t ? t : void 0;
-    if (null == I && !(null !== (n = null == m ? void 0 : m.isPrivate()) && void 0 !== n && n)) return !1;
-    let T = (0, v.r)();
+    let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c, commandOrigin: _, sectionName: E, source: f, partyId: h, onExecutedCallback: p } = e,
+        m = R.Z.getChannel(r),
+        A = null !== (t = null == m ? void 0 : m.getGuildId()) && void 0 !== t ? t : void 0;
+    if (null == A && !(null !== (n = null == m ? void 0 : m.isPrivate()) && void 0 !== n && n)) return !1;
+    let N = (0, g.r)();
     try {
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
-            nonce: T,
+            nonce: N,
             applicationId: i,
             channelId: r,
             componentId: c,
             analyticsLocations: o,
             source: f
         });
-        let e = b.default.getCurrentUser();
+        let e = L.default.getCurrentUser();
         if (
             (null != e &&
-                (0, Y.Z)({
-                    type: a ? W.q5t.LAUNCH : W.q5t.JOIN,
+                (0, H.Z)({
+                    type: s ? Y.q5t.LAUNCH : Y.q5t.JOIN,
                     userId: null == e ? void 0 : e.id,
-                    guildId: I,
+                    guildId: A,
                     channelId: r,
                     channelType: null == m ? void 0 : m.type,
                     applicationId: i,
@@ -125,81 +125,83 @@ async function X(e) {
                     source: f,
                     partyId: h
                 }),
-            a)
+            s)
         ) {
-            if (!$(i, m)) throw new S.Z(S.Z.Reasons.INVALID_CHANNEL);
             if (
-                !(await J({
+                !(function (e, t) {
+                    let n = (null == t ? void 0 : t.type) === Y.d4z.GUILD_VOICE,
+                        r = I.Z.getApplication(e),
+                        i = null != r && (0, b.yE)(r.flags, Y.udG.EMBEDDED),
+                        a = (0, U.l5)(t);
+                    return (n && i) || a;
+                })(i, m)
+            )
+                throw new T.Z(T.Z.Reasons.INVALID_CHANNEL);
+            if (
+                !(await Q({
                     applicationId: i,
-                    nonce: T,
+                    nonce: N,
                     channelId: r,
-                    guildId: I,
-                    commandOrigin: d,
-                    sectionName: _,
+                    guildId: A,
+                    commandOrigin: _,
+                    sectionName: E,
                     source: f,
                     onExecutedCallback: p
                 }))
             )
-                throw new S.Z(S.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+                throw new T.Z(T.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
         } else {
-            let e = await ee({
+            let e = await X({
                 applicationId: i,
                 channelId: r,
                 embeddedActivitiesManager: u,
-                isStart: a,
-                guildId: I
+                isStart: s,
+                guildId: A
             });
-            if ((null == p || p(), !e)) throw new S.Z(S.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
+            if ((null == p || p(), !e)) throw new T.Z(T.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
         }
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
-            nonce: T,
+            nonce: N,
             applicationId: i,
             channelId: r
         });
     } catch (e) {
         return (
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
-                nonce: T,
-                guildId: I,
+                nonce: N,
+                guildId: A,
                 applicationId: i,
                 channelId: r,
-                isStart: a,
-                error: e instanceof S.Z || e instanceof E.Z || e instanceof A.Z ? e : new E.Z(e)
+                isStart: s,
+                error: e instanceof T.Z || e instanceof d.Z || e instanceof S.Z ? e : new d.Z(e)
             }),
             !1
         );
     }
     return !0;
 }
-function $(e, t) {
-    let n = (null == t ? void 0 : t.type) === W.d4z.GUILD_VOICE,
-        r = T.Z.getApplication(e),
-        i = null != r && (0, P.yE)(r.flags, W.udG.EMBEDDED),
-        a = (0, x.l5)(t);
-    return (n && i) || a;
-}
-async function J(e) {
-    let { applicationId: t, nonce: n, channelId: r, guildId: i, commandOrigin: a, sectionName: o, source: s, onExecutedCallback: l } = e,
+async function Q(e) {
+    let { applicationId: t, nonce: n, channelId: r, guildId: i, commandOrigin: a, sectionName: s, source: o, onExecutedCallback: l } = e,
         u = null;
     try {
-        u = await (0, I.ZP)(r, t);
+        u = await (0, p.ZP)(r, t);
     } catch (e) {
-        if (e.message === I.sV) return !1;
+        if (e.message === p.sV) return !1;
         throw e;
     }
-    if (!(u.handler !== f.VC.APP_HANDLER || K.Yq.includes(t))) {
+    if (!(u.handler !== _.VC.APP_HANDLER || j.Yq.includes(t))) {
         let e =
                 null != i
-                    ? await (0, p.FN)({
+                    ? await (0, f.FN)({
                           type: 'guild',
                           guildId: i
                       })
-                    : p.ZP.getGuildState(i),
-            n = await (0, p.FN)({ type: 'user' });
+                    : f.ZP.getGuildState(i),
+            n = await (0, f.FN)({ type: 'user' });
         if (
-            !(await (0, h.L)({
+            !(await (0, E.L)({
                 applicationId: t,
                 userIndexState: n,
                 guildIndexState: e
@@ -207,21 +209,21 @@ async function J(e) {
         )
             return !1;
     }
-    let c = C.Z.getChannel(r),
-        d = null != i ? y.Z.getGuild(i) : null;
+    let c = R.Z.getChannel(r),
+        I = null != i ? v.Z.getGuild(i) : null;
     return (
         null != c &&
         (await new Promise((e, t) => {
-            (0, m.Z)({
+            (0, h.Z)({
                 command: u,
                 optionValues: {},
                 context: {
                     channel: c,
-                    guild: d
+                    guild: I
                 },
                 commandOrigin: a,
-                sectionName: o,
-                source: s,
+                sectionName: s,
+                source: o,
                 interactionLifecycleOptionsFactory: () => ({
                     nonce: n,
                     onSuccess: () => {
@@ -231,7 +233,7 @@ async function J(e) {
                         null == l || l(),
                             null != e && null != n && null != r
                                 ? t(
-                                      new E.Z({
+                                      new d.Z({
                                           status: r,
                                           body: {
                                               message: n,
@@ -239,9 +241,9 @@ async function J(e) {
                                           }
                                       })
                                   )
-                                : null != i && i in A.Z.ReasonCodes
-                                  ? t(new A.Z(i))
-                                  : t(new A.Z(A.Z.ReasonCodes.UNKNOWN));
+                                : null != i && i in S.Z.ReasonCodes
+                                  ? t(new S.Z(i))
+                                  : t(new S.Z(S.Z.ReasonCodes.UNKNOWN));
                     }
                 })
             });
@@ -249,78 +251,77 @@ async function J(e) {
         !0)
     );
 }
-async function ee(e) {
+async function X(e) {
     let t,
-        { applicationId: n, channelId: r, embeddedActivitiesManager: i, isStart: o, guildId: s } = e,
-        u = R.default.getSessionId(),
-        c = b.default.getCurrentUser(),
-        d = n;
-    if (null == d) return !1;
-    let _ = await (0, F.Z)(d, r);
-    if (null == r) return M.S.dispatch(W.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: d }), !1;
-    let E = C.Z.getChannel(r);
-    if (null == E || null == c || null == _) return !1;
-    let f =
-        null != r
-            ? (0, Z.e4)({
-                  channelId: r,
-                  ChannelStore: C.Z,
-                  GuildStore: y.Z,
-                  PermissionStore: L.Z,
+        { applicationId: n, channelId: i, embeddedActivitiesManager: a, isStart: o, guildId: l } = e,
+        u = O.default.getSessionId(),
+        c = L.default.getCurrentUser();
+    if (null == n) return !1;
+    let d = await (0, k.Z)(n, i);
+    if (null == i) return y.S.dispatch(Y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
+    let _ = R.Z.getChannel(i);
+    if (null == _ || null == c || null == d) return !1;
+    let E =
+        null != i
+            ? (0, B.e4)({
+                  channelId: i,
+                  ChannelStore: R.Z,
+                  GuildStore: v.Z,
+                  PermissionStore: C.Z,
                   VoiceStateStore: D.Z
               })
-            : Z.jy.NO_CHANNEL;
-    if (f !== Z.jy.CAN_LAUNCH)
+            : B.jy.NO_CHANNEL;
+    if (E !== B.jy.CAN_LAUNCH)
         return (
-            f === Z.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
-                ? (0, N.w)()
-                : f === Z.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
-                  l.Z.show({
-                      title: q.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
-                      body: q.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+            E === B.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
+                ? (0, A.w)()
+                : E === B.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
+                  s.Z.show({
+                      title: K.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
+                      body: K.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
                       hideActionSheet: !1
                   }),
             !1
         );
-    let h = G.ZP.getCurrentEmbeddedActivity();
+    let f = w.ZP.getCurrentEmbeddedActivity();
     if (
-        ((null == h ? void 0 : h.applicationId) != null && (t = T.Z.getApplication(null == h ? void 0 : h.applicationId)),
+        ((null == f ? void 0 : f.applicationId) != null && (t = I.Z.getApplication(null == f ? void 0 : f.applicationId)),
         !(
             !o ||
-            (await (0, B.p)({
+            (await (0, G.p)({
                 applicationId: n,
-                application: _,
-                channel: E,
+                application: d,
+                channel: _,
                 currentEmbeddedApplication: t,
-                embeddedActivitiesManager: i,
+                embeddedActivitiesManager: a,
                 user: c
             }))
         ))
     )
         return !1;
-    let p = (0, V.Z)(r),
-        m = j.wP.includes(E.type);
-    if (p) {
+    let h = (0, F.Z)(i),
+        p = Z.wP.includes(_.type);
+    if (h) {
         if (
-            !(await (0, H.Z)({
-                channelId: r,
+            !(await (0, V.Z)({
+                channelId: i,
                 bypassChangeModal: null != t
             }))
         )
             return !1;
-    } else if (!(0, x.WS)(E) || !m) return !1;
+    } else if (!(0, U.WS)(_) || !p) return !1;
     return (
-        await w.Z.post({
-            url: W.ANM.ACTIVITY_CHANNEL_LAUNCH(r, n),
+        await P.Z.post({
+            url: Y.ANM.ACTIVITY_CHANNEL_LAUNCH(i, n),
             body: {
                 session_id: u,
-                guild_id: null != s ? s : void 0
+                guild_id: null != l ? l : void 0
             },
             trackedActionData: {
-                event: a.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
+                event: r.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
                 properties: {
-                    guild_id: s,
-                    channel_id: r,
+                    guild_id: l,
+                    channel_id: i,
                     application_id: n,
                     session_id: u
                 }
@@ -331,50 +332,50 @@ async function ee(e) {
         !0
     );
 }
-function et(e) {
+function $(e) {
     var t, n;
-    let { channelId: r, applicationId: i, showFeedback: a = !0 } = e,
-        o = G.ZP.getSelfEmbeddedActivityForChannel(r);
-    s.Z.dispatch({
+    let { channelId: r, applicationId: i, showFeedback: s = !0 } = e,
+        o = w.ZP.getSelfEmbeddedActivityForChannel(r);
+    a.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_CLOSE',
         channelId: r,
         applicationId: i,
         locationId: null == o ? void 0 : null === (t = o.location) || void 0 === t ? void 0 : t.id,
         instanceId: null == o ? void 0 : o.launchId,
-        showFeedback: a
+        showFeedback: s
     });
-    let l = g.Z.getSelectedParticipantId(r),
-        u = null === (n = b.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-    if (null != G.ZP.getEmbeddedActivitiesForChannel(r).find((e) => e.applicationId === i) && null != u && '' !== u) l === i && c.Z.selectParticipant(r, null);
+    let u = m.Z.getSelectedParticipantId(r),
+        c = null === (n = L.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+    if (null != w.ZP.getEmbeddedActivitiesForChannel(r).find((e) => e.applicationId === i) && null != c && '' !== c) u === i && l.Z.selectParticipant(r, null);
 }
-async function en() {
+async function J() {
     try {
-        s.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_START' });
-        let e = await o.tn.get({
-                url: W.ANM.APPLICATIONS_WITH_ASSETS,
+        a.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_START' });
+        let e = await i.tn.get({
+                url: Y.ANM.APPLICATIONS_WITH_ASSETS,
                 query: { with_team_applications: !0 },
                 oldFormErrors: !0
             }),
             t = e.body.applications,
-            n = t.map((e) => O.Z.createFromServer(e));
-        s.Z.dispatch({
+            n = t.map((e) => N.Z.createFromServer(e));
+        a.Z.dispatch({
             type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS',
             applications: n,
             assets: e.body.assets
         }),
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'APPLICATIONS_FETCH_SUCCESS',
                 applications: t
             });
     } catch (e) {
-        s.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL' });
+        a.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL' });
     }
 }
-async function er(e, t, n) {
+async function ee(e, t, n) {
     try {
-        s.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START' });
-        let r = await o.tn.post({
-            url: W.ANM.APPLICATION_UPLOAD_ATTACHMENT(e),
+        a.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START' });
+        let r = await i.tn.post({
+            url: Y.ANM.APPLICATION_UPLOAD_ATTACHMENT(e),
             query: { channel_id: t },
             attachments: [
                 {
@@ -384,35 +385,35 @@ async function er(e, t, n) {
             ]
         });
         return (
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_SUCCESS',
                 attachment: r.body.attachment
             }),
             r.body.attachment
         );
     } catch (e) {
-        return s.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL' }), new E.Z(e);
+        return a.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL' }), new d.Z(e);
     }
 }
-let ei = (e, t, n) => {
+let et = (e, t, n) => {
     let { guildId: r } = n;
     (r === e || (null == r && null == e)) && t();
 };
-async function ea(e) {
-    var t, n, r, i;
+async function en(e) {
+    var t, n, i, s;
     let { guildId: o, force: l = !1 } = e,
-        u = G.ZP.getShelfActivities(o),
-        c = u.map((e) => T.Z.getApplication(e.application_id)).filter(U.lm);
-    if (!l && !G.ZP.shouldFetchShelf(o)) {
-        if (null === (t = G.ZP.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
+        u = w.ZP.getShelfActivities(o),
+        c = u.map((e) => I.Z.getApplication(e.application_id)).filter(M.lm);
+    if (!l && !w.ZP.shouldFetchShelf(o)) {
+        if (null === (t = w.ZP.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
             let e, t;
             let n = new Promise((t) => {
-                    (e = ei.bind(null, o, t)), s.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e);
+                    (e = et.bind(null, o, t)), a.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e);
                 }),
                 r = new Promise((e) => {
-                    (t = ei.bind(null, o, e)), s.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t);
+                    (t = et.bind(null, o, e)), a.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t);
                 });
-            await Promise.race([n, r]), null != e && (s.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e), (e = null)), null != t && (s.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t), (t = null));
+            await Promise.race([n, r]), null != e && (a.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e), (e = null)), null != t && (a.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t), (t = null));
         }
         return {
             activityConfigs: u,
@@ -420,26 +421,26 @@ async function ea(e) {
         };
     }
     try {
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_FETCH_SHELF',
             guildId: o
         });
         let e = void 0 !== o && '' !== o ? { guild_id: o } : void 0,
-            t = await w.Z.get({
-                url: W.ANM.ACTIVITY_SHELF,
+            t = await P.Z.get({
+                url: Y.ANM.ACTIVITY_SHELF,
                 query: e,
                 trackedActionData: {
-                    event: a.NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF,
+                    event: r.NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF,
                     properties: { guild_id: o }
                 },
                 retries: 3,
                 oldFormErrors: !0
             }),
             l = null !== (n = t.body.activities) && void 0 !== n ? n : [],
-            u = null !== (r = t.body.applications) && void 0 !== r ? r : [],
-            c = null !== (i = t.body.assets) && void 0 !== i ? i : {};
+            u = null !== (i = t.body.applications) && void 0 !== i ? i : [],
+            c = null !== (s = t.body.assets) && void 0 !== s ? s : {};
         return (
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS',
                 guildId: o,
                 activities: l,
@@ -447,18 +448,18 @@ async function ea(e) {
                 assets: c
             }),
             u.length > 0 &&
-                s.Z.dispatch({
+                a.Z.dispatch({
                     type: 'APPLICATIONS_FETCH_SUCCESS',
                     applications: u
                 }),
             {
                 activityConfigs: l,
-                applications: u.map((e) => O.Z.createFromServer(e))
+                applications: u.map((e) => N.Z.createFromServer(e))
             }
         );
     } catch (e) {
         return (
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL',
                 guildId: o
             }),
@@ -469,40 +470,40 @@ async function ea(e) {
         );
     }
 }
-async function eo(e) {
+async function er(e) {
     let { activityChannelId: t, invitedChannelId: n, applicationId: r, location: i } = e,
-        a = await d.Z.createInvite(
+        a = await u.Z.createInvite(
             t,
             {
-                target_type: z.Iq.EMBEDDED_APPLICATION,
+                target_type: W.Iq.EMBEDDED_APPLICATION,
                 target_application_id: r
             },
             i
         );
-    null != C.Z.getChannel(n) && _.Z.sendInvite(n, a.code, i, null);
+    null != R.Z.getChannel(n) && c.Z.sendInvite(n, a.code, i, null);
 }
-async function es(e) {
+async function ei(e) {
     let { channelId: t, applicationId: n, userId: r, location: i } = e,
-        a = await d.Z.createInvite(
+        a = await u.Z.createInvite(
             t,
             {
-                target_type: z.Iq.EMBEDDED_APPLICATION,
+                target_type: W.Iq.EMBEDDED_APPLICATION,
                 target_application_id: n
             },
             i
         );
-    u.Z.ensurePrivateChannel(r).then((e) => {
-        null != C.Z.getChannel(e) && _.Z.sendInvite(e, a.code, i, null);
+    o.Z.ensurePrivateChannel(r).then((e) => {
+        null != R.Z.getChannel(e) && c.Z.sendInvite(e, a.code, i, null);
     });
 }
-function el() {
-    s.Z.dispatch({ type: 'EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR' });
+function ea() {
+    a.Z.dispatch({ type: 'EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR' });
 }
-async function eu(e) {
-    let t = W.ANM.ACTIVITY_TEST_MODE(e);
+async function es(e) {
+    let t = Y.ANM.ACTIVITY_TEST_MODE(e);
     try {
         return (
-            await o.tn.get({
+            await i.tn.get({
                 url: t,
                 oldFormErrors: !0
             }),
@@ -512,14 +513,14 @@ async function eu(e) {
         return !1;
     }
 }
-function ec(e) {
-    s.Z.dispatch({
+function eo(e) {
+    a.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_SET_PANEL_MODE',
         activityPanelMode: e
     });
 }
-function ed(e) {
-    s.Z.dispatch({
+function el(e) {
+    a.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT',
         focusedActivityLayout: e
     });

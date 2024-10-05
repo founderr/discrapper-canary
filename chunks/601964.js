@@ -1,20 +1,20 @@
 n.d(t, {
     Bg: function () {
-        return f;
+        return _;
     },
     ZP: function () {
-        return E;
+        return d;
     }
-});
-var r = n(47120);
-var i = n(81825),
-    a = n(768581),
-    o = n(709054),
+}),
+    n(47120);
+var r = n(81825),
+    i = n(768581),
+    a = n(709054),
     s = n(624138),
-    l = n(981631),
-    u = n(185923),
-    c = n(474936);
-function d(e, t, n) {
+    o = n(981631),
+    l = n(185923),
+    u = n(474936);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,8 +27,7 @@ function d(e, t, n) {
         e
     );
 }
-let _ = 200;
-class E extends i.Z {
+class d extends r.Z {
     merge(e) {
         let { features: t } = e;
         if (null != t) {
@@ -51,7 +50,7 @@ class E extends i.Z {
     }
     getIconURL(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return a.ZP.getGuildIconURL({
+        return i.ZP.getGuildIconURL({
             id: this.id,
             size: e,
             icon: this.icon,
@@ -60,8 +59,8 @@ class E extends i.Z {
     }
     getIconSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return a.ZP.getAnimatableSourceWithFallback(t, (t) =>
-            a.ZP.getGuildIconSource({
+        return i.ZP.getAnimatableSourceWithFallback(t, (t) =>
+            i.ZP.getGuildIconSource({
                 id: this.id,
                 size: e,
                 icon: this.icon,
@@ -84,11 +83,11 @@ class E extends i.Z {
         return this.ownerId === t;
     }
     isOwnerWithRequiredMfaLevel(e) {
-        return (!!e.mfaEnabled || this.mfaLevel !== l.BpS.ELEVATED) && this.isOwner(e);
+        return (!!e.mfaEnabled || this.mfaLevel !== o.BpS.ELEVATED) && this.isOwner(e);
     }
     isNew() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 7,
-            t = o.default.extractTimestamp(this.id);
+            t = a.default.extractTimestamp(this.id);
         return Date.now() - t < 86400000 * e;
     }
     isLurker() {
@@ -98,42 +97,42 @@ class E extends i.Z {
         return this.features.has(e);
     }
     getEveryoneRoleId() {
-        return o.default.castGuildIdAsEveryoneGuildRoleId(this.id);
+        return a.default.castGuildIdAsEveryoneGuildRoleId(this.id);
     }
     getMaxEmojiSlots() {
-        return Math.max(this.hasFeature(l.oNc.MORE_EMOJI) ? _ : u.jZ, c.HO[this.premiumTier].limits.emoji);
+        return Math.max(this.hasFeature(o.oNc.MORE_EMOJI) ? 200 : l.jZ, u.HO[this.premiumTier].limits.emoji);
     }
     getMaxRoleSubscriptionEmojiSlots() {
         return 25;
     }
     getMaxSoundboardSlots() {
-        return c.HO[this.premiumTier].limits.soundboardSounds;
+        return u.HO[this.premiumTier].limits.soundboardSounds;
     }
     isCommunity() {
-        return this.hasFeature(l.oNc.COMMUNITY);
+        return this.hasFeature(o.oNc.COMMUNITY);
     }
     hasVerificationGate() {
-        return this.hasFeature(l.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && (this.hasFeature(l.oNc.COMMUNITY) || this.hasFeature(l.oNc.CLAN));
+        return this.hasFeature(o.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && (this.hasFeature(o.oNc.COMMUNITY) || this.hasFeature(o.oNc.CLAN));
     }
     hasCommunityInfoSubheader() {
-        return this.hasFeature(l.oNc.COMMUNITY) && this.hasFeature(l.oNc.DISCOVERABLE);
+        return this.hasFeature(o.oNc.COMMUNITY) && this.hasFeature(o.oNc.DISCOVERABLE);
     }
     canHaveRaidActivityAlerts() {
-        return (!this.hasFeature(l.oNc.COMMUNITY) && this.hasFeature(l.oNc.NON_COMMUNITY_RAID_ALERTS)) || (this.hasFeature(l.oNc.COMMUNITY) && !this.hasFeature(l.oNc.RAID_ALERTS_DISABLED));
+        return (!this.hasFeature(o.oNc.COMMUNITY) && this.hasFeature(o.oNc.NON_COMMUNITY_RAID_ALERTS)) || (this.hasFeature(o.oNc.COMMUNITY) && !this.hasFeature(o.oNc.RAID_ALERTS_DISABLED));
     }
     updateJoinedAt(e) {
         return this.set('joinedAt', 'string' == typeof e ? new Date(e) : e);
     }
     constructor(e) {
         var t, n, r;
-        super(), d(this, 'id', void 0), d(this, 'name', void 0), d(this, 'description', void 0), d(this, 'ownerId', void 0), d(this, 'icon', void 0), d(this, 'splash', void 0), d(this, 'banner', void 0), d(this, 'homeHeader', void 0), d(this, 'preferredLocale', void 0), d(this, 'features', void 0), d(this, 'afkChannelId', void 0), d(this, 'afkTimeout', void 0), d(this, 'systemChannelId', void 0), d(this, 'verificationLevel', void 0), d(this, 'joinedAt', void 0), d(this, 'defaultMessageNotifications', void 0), d(this, 'mfaLevel', void 0), d(this, 'application_id', void 0), d(this, 'explicitContentFilter', void 0), d(this, 'vanityURLCode', void 0), d(this, 'premiumTier', void 0), d(this, 'premiumSubscriberCount', void 0), d(this, 'premiumProgressBarEnabled', void 0), d(this, 'systemChannelFlags', void 0), d(this, 'rulesChannelId', void 0), d(this, 'safetyAlertsChannelId', void 0), d(this, 'discoverySplash', void 0), d(this, 'publicUpdatesChannelId', void 0), d(this, 'maxStageVideoChannelUsers', void 0), d(this, 'maxVideoChannelUsers', void 0), d(this, 'maxMembers', void 0), d(this, 'nsfwLevel', void 0), d(this, 'hubType', void 0), d(this, 'latestOnboardingQuestionId', void 0), d(this, 'clan', void 0);
+        super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'description', void 0), c(this, 'ownerId', void 0), c(this, 'icon', void 0), c(this, 'splash', void 0), c(this, 'banner', void 0), c(this, 'homeHeader', void 0), c(this, 'preferredLocale', void 0), c(this, 'features', void 0), c(this, 'afkChannelId', void 0), c(this, 'afkTimeout', void 0), c(this, 'systemChannelId', void 0), c(this, 'verificationLevel', void 0), c(this, 'joinedAt', void 0), c(this, 'defaultMessageNotifications', void 0), c(this, 'mfaLevel', void 0), c(this, 'application_id', void 0), c(this, 'explicitContentFilter', void 0), c(this, 'vanityURLCode', void 0), c(this, 'premiumTier', void 0), c(this, 'premiumSubscriberCount', void 0), c(this, 'premiumProgressBarEnabled', void 0), c(this, 'systemChannelFlags', void 0), c(this, 'rulesChannelId', void 0), c(this, 'safetyAlertsChannelId', void 0), c(this, 'discoverySplash', void 0), c(this, 'publicUpdatesChannelId', void 0), c(this, 'maxStageVideoChannelUsers', void 0), c(this, 'maxVideoChannelUsers', void 0), c(this, 'maxMembers', void 0), c(this, 'nsfwLevel', void 0), c(this, 'hubType', void 0), c(this, 'latestOnboardingQuestionId', void 0), c(this, 'clan', void 0);
         let i = e.features instanceof Set ? e.features : new Set(Array.from(e.features || []));
-        (this.id = e.id), (this.name = e.name || ''), (this.description = e.description || null), (this.ownerId = e.ownerId || null), (this.icon = e.icon || null), (this.splash = e.splash || null), (this.banner = e.banner || null), (this.homeHeader = e.homeHeader || null), (this.features = i), (this.preferredLocale = e.preferredLocale || 'en-US'), (this.afkChannelId = e.afkChannelId || null), (this.afkTimeout = e.afkTimeout), (this.systemChannelId = e.systemChannelId || null), (this.verificationLevel = e.verificationLevel || l.sFg.NONE), (this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : new Date(e.joinedAt)), (this.defaultMessageNotifications = e.defaultMessageNotifications || l.bL.ALL_MESSAGES), (this.mfaLevel = e.mfaLevel || l.BpS.NONE), (this.application_id = e.application_id || null), (this.explicitContentFilter = e.explicitContentFilter || l.lxg.DISABLED), (this.vanityURLCode = e.vanityURLCode || void 0), (this.premiumTier = e.premiumTier || l.Eu4.NONE), (this.premiumSubscriberCount = e.premiumSubscriberCount || 0), (this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1), (this.systemChannelFlags = e.systemChannelFlags), (this.discoverySplash = e.discoverySplash || null), (this.rulesChannelId = e.rulesChannelId || null), (this.safetyAlertsChannelId = e.safetyAlertsChannelId || null), (this.publicUpdatesChannelId = e.publicUpdatesChannelId || null), (this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1), (this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1), (this.maxMembers = e.maxMembers || -1), (this.nsfwLevel = null !== (t = e.nsfwLevel) && void 0 !== t ? t : l.V_K.DEFAULT), (this.hubType = e.hubType), (this.latestOnboardingQuestionId = null !== (n = e.latestOnboardingQuestionId) && void 0 !== n ? n : null), (this.clan = null !== (r = e.clan) && void 0 !== r ? r : null);
+        (this.id = e.id), (this.name = e.name || ''), (this.description = e.description || null), (this.ownerId = e.ownerId || null), (this.icon = e.icon || null), (this.splash = e.splash || null), (this.banner = e.banner || null), (this.homeHeader = e.homeHeader || null), (this.features = i), (this.preferredLocale = e.preferredLocale || 'en-US'), (this.afkChannelId = e.afkChannelId || null), (this.afkTimeout = e.afkTimeout), (this.systemChannelId = e.systemChannelId || null), (this.verificationLevel = e.verificationLevel || o.sFg.NONE), (this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : new Date(e.joinedAt)), (this.defaultMessageNotifications = e.defaultMessageNotifications || o.bL.ALL_MESSAGES), (this.mfaLevel = e.mfaLevel || o.BpS.NONE), (this.application_id = e.application_id || null), (this.explicitContentFilter = e.explicitContentFilter || o.lxg.DISABLED), (this.vanityURLCode = e.vanityURLCode || void 0), (this.premiumTier = e.premiumTier || o.Eu4.NONE), (this.premiumSubscriberCount = e.premiumSubscriberCount || 0), (this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1), (this.systemChannelFlags = e.systemChannelFlags), (this.discoverySplash = e.discoverySplash || null), (this.rulesChannelId = e.rulesChannelId || null), (this.safetyAlertsChannelId = e.safetyAlertsChannelId || null), (this.publicUpdatesChannelId = e.publicUpdatesChannelId || null), (this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1), (this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1), (this.maxMembers = e.maxMembers || -1), (this.nsfwLevel = null !== (t = e.nsfwLevel) && void 0 !== t ? t : o.V_K.DEFAULT), (this.hubType = e.hubType), (this.latestOnboardingQuestionId = null !== (n = e.latestOnboardingQuestionId) && void 0 !== n ? n : null), (this.clan = null !== (r = e.clan) && void 0 !== r ? r : null);
     }
 }
-class f extends E {
+class _ extends d {
     constructor(e) {
         var t;
-        super(e), d(this, 'roles', void 0), (this.roles = null !== (t = e.roles) && void 0 !== t ? t : {});
+        super(e), c(this, 'roles', void 0), (this.roles = null !== (t = e.roles) && void 0 !== t ? t : {});
     }
 }

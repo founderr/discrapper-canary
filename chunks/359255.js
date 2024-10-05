@@ -1,65 +1,62 @@
 n.d(t, {
     F: function () {
-        return d;
+        return c;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(481060),
-    u = n(799248);
-function c(e) {
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(799248);
+function u(e) {
     return '' === e || '-' === e;
 }
-let d = (e) => {
-    let { value: t, onChange: n, className: r, minValue: o, maxValue: d } = e,
-        [_, E] = a.useState(t),
-        f = c(_) || (null != o && _ <= o),
-        h = c(_) || (null != d && _ >= d),
+let c = (e) => {
+    let { value: t, onChange: n, className: a, minValue: c, maxValue: d } = e,
+        [_, E] = i.useState(t),
+        f = u(_) || (null != c && _ <= c),
+        h = u(_) || (null != d && _ >= d),
         p = (e) => {
-            n(c(e) ? (null != o ? o : 0) : e), E(e);
-        },
-        m = (e) => {
-            if ((e.stopPropagation(), !f)) p(_ - 1);
-        },
-        I = (e) => {
-            if ((e.stopPropagation(), !h)) p(_ + 1);
-        },
-        T = (e) => {
-            if (c(e)) return p(e);
-            let t = parseInt(e);
-            return isNaN(t) ? void 0 : null != d && t >= d ? p(d) : null != o && t <= o ? p(o) : p(t);
+            n(u(e) ? (null != c ? c : 0) : e), E(e);
         };
-    return (0, i.jsx)(l.FocusRing, {
+    return (0, r.jsx)(o.FocusRing, {
         within: !0,
-        children: (0, i.jsxs)('div', {
-            className: s()(u.actions, r),
+        children: (0, r.jsxs)('div', {
+            className: s()(l.actions, a),
             children: [
-                (0, i.jsx)(l.Clickable, {
-                    onClick: m,
+                (0, r.jsx)(o.Clickable, {
+                    onClick: (e) => {
+                        if ((e.stopPropagation(), !f)) p(_ - 1);
+                    },
                     tabIndex: -1,
-                    className: s()(u.iconWrapper, u.__invalid_subtract, { [u.disabled]: f }),
-                    children: (0, i.jsx)(l.MinusIcon, {
+                    className: s()(l.iconWrapper, l.__invalid_subtract, { [l.disabled]: f }),
+                    children: (0, r.jsx)(o.MinusIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: s()(u.icon, { [u.disabled]: f })
+                        className: s()(l.icon, { [l.disabled]: f })
                     })
                 }),
-                (0, i.jsx)(l.TextInput, {
+                (0, r.jsx)(o.TextInput, {
                     value: ''.concat(_),
-                    onChange: T,
-                    inputClassName: u.value
+                    onChange: (e) => {
+                        if (u(e)) return p(e);
+                        let t = parseInt(e);
+                        return isNaN(t) ? void 0 : null != d && t >= d ? p(d) : null != c && t <= c ? p(c) : p(t);
+                    },
+                    inputClassName: l.value
                 }),
-                (0, i.jsx)(l.Clickable, {
-                    onClick: I,
+                (0, r.jsx)(o.Clickable, {
+                    onClick: (e) => {
+                        if ((e.stopPropagation(), !h)) p(_ + 1);
+                    },
                     tabIndex: -1,
-                    className: s()(u.iconWrapper, u.__invalid_add, { [u.disabled]: h }),
-                    children: (0, i.jsx)(l.PlusSmallIcon, {
+                    className: s()(l.iconWrapper, l.__invalid_add, { [l.disabled]: h }),
+                    children: (0, r.jsx)(o.PlusSmallIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: s()(u.icon, { [u.disabled]: h })
+                        className: s()(l.icon, { [l.disabled]: h })
                     })
                 })
             ]

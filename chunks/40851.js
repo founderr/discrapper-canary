@@ -1,90 +1,88 @@
 n.d(t, {
     Aq: function () {
-        return g;
-    },
-    GB: function () {
-        return m;
-    },
-    J5: function () {
-        return f;
-    },
-    UI: function () {
-        return c;
-    },
-    Wu: function () {
         return I;
     },
+    GB: function () {
+        return f;
+    },
+    J5: function () {
+        return _;
+    },
+    UI: function () {
+        return u;
+    },
+    Wu: function () {
+        return h;
+    },
     bp: function () {
-        return T;
+        return p;
     },
     g0: function () {
-        return p;
+        return E;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(585483),
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(585483),
     s = n(830917),
-    l = n(919570),
-    u = n(981631);
-let c = new o.b(),
-    d = a.createContext({
-        appContext: u.IlC.APP,
+    o = n(919570),
+    l = n(981631);
+let u = new a.b(),
+    c = i.createContext({
+        appContext: l.IlC.APP,
         renderWindow: window,
-        windowDispatch: c,
+        windowDispatch: u,
         windowId: (0, s.UU)()
     }),
-    _ = new Map();
-function E(e, t) {
-    let n = (0, s.ZY)(t),
-        r = _.get(n);
-    return (
-        null == r &&
-            ((r = {
-                appContext: e,
-                renderWindow: t,
-                windowDispatch: new o.b(),
-                windowId: n
-            }),
-            _.set(n, r),
-            t.addEventListener('unload', () => {
-                _.delete(n);
-            })),
-        r
-    );
-}
-function f(e) {
+    d = new Map();
+function _(e) {
     var t;
     let n = e.ownerDocument.defaultView;
     if (null == n) return;
     let r = (0, s.ZY)(n);
-    return null === (t = _.get(r)) || void 0 === t ? void 0 : t.windowDispatch;
+    return null === (t = d.get(r)) || void 0 === t ? void 0 : t.windowDispatch;
 }
-function h() {
-    var e;
-    let t = (0, l.GR)();
-    return null == t ? null : null !== (e = _.get(t)) && void 0 !== e ? e : null;
+function E(e) {
+    return d.get(e);
 }
-function p(e) {
-    return _.get(e);
-}
-function m() {
-    let e = h();
+function f() {
+    let e = (function () {
+        var e;
+        let t = (0, o.GR)();
+        return null == t ? null : null !== (e = d.get(t)) && void 0 !== e ? e : null;
+    })();
     return null != e ? e.appContext : null;
 }
-function I(e) {
-    let { appContext: t, renderWindow: n, children: r } = e,
-        a = E(t, n);
-    return (0, i.jsx)(d.Provider, {
-        value: a,
-        children: r
+function h(e) {
+    let { appContext: t, renderWindow: n, children: i } = e,
+        o = (function (e, t) {
+            let n = (0, s.ZY)(t),
+                r = d.get(n);
+            return (
+                null == r &&
+                    ((r = {
+                        appContext: e,
+                        renderWindow: t,
+                        windowDispatch: new a.b(),
+                        windowId: n
+                    }),
+                    d.set(n, r),
+                    t.addEventListener('unload', () => {
+                        d.delete(n);
+                    })),
+                r
+            );
+        })(t, n);
+    return (0, r.jsx)(c.Provider, {
+        value: o,
+        children: i
     });
 }
-function T() {
-    return a.useContext(d).appContext;
+function p() {
+    return i.useContext(c).appContext;
 }
-function g() {
-    return a.useContext(d).windowDispatch;
+function I() {
+    return i.useContext(c).windowDispatch;
 }
-t.ZP = d;
+t.ZP = c;

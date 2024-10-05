@@ -1,7 +1,7 @@
-var r = n(47120);
-var i = n(710845),
-    a = n(430824),
-    o = n(287328);
+n(47120);
+var r = n(710845),
+    i = n(430824),
+    a = n(287328);
 function s(e, t, n) {
     return (
         t in e
@@ -15,23 +15,23 @@ function s(e, t, n) {
         e
     );
 }
-let l = new i.Z('GuildVersions');
-class u {
+let o = new r.Z('GuildVersions');
+t.Z = new (class e {
     async getCommittedVersions() {
         try {
-            let e = o.Z.guildVersions();
+            let e = a.Z.guildVersions();
             if (null == e) return {};
             let t = (await e.getMany()).map((e) => [e.id, e.version]);
             return Object.fromEntries(null != t ? t : []);
         } catch (e) {
-            return l.warn("couldn't load guild versions", e), {};
+            return o.warn("couldn't load guild versions", e), {};
         }
     }
     remove(e, t) {
         this.deleteWith(e), this.commit(t);
     }
     handleBackgroundSync(e, t) {
-        for (let n of e.guilds) 'unavailable' !== n.data_mode && this.updateWith(n.id, [n]), null == a.Z.getGuild(n.id) && this.remove(n.id, t);
+        for (let n of e.guilds) 'unavailable' !== n.data_mode && this.updateWith(n.id, [n]), null == i.Z.getGuild(n.id) && this.remove(n.id, t);
         this.commit(t);
     }
     handleConnectionOpen(e, t) {
@@ -101,7 +101,7 @@ class u {
     }
     commit(e) {
         if (this.pending.size > 0) {
-            let t = o.Z.guildVersionsTransaction(e);
+            let t = a.Z.guildVersionsTransaction(e);
             for (let [e, n] of this.pending)
                 null != n
                     ? (t.put({
@@ -132,5 +132,4 @@ class u {
                 GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t)
             });
     }
-}
-t.Z = new u();
+})();

@@ -1,10 +1,7 @@
 var r = n(56135),
     i = n(440693),
     a = n(766598),
-    o = '[object Null]',
-    s = '[object Undefined]',
-    l = r ? r.toStringTag : void 0;
-function u(e) {
-    return null == e ? (void 0 === e ? s : o) : l && l in Object(e) ? i(e) : a(e);
-}
-e.exports = u;
+    s = r ? r.toStringTag : void 0;
+e.exports = function (e) {
+    return null == e ? (void 0 === e ? '[object Undefined]' : '[object Null]') : s && s in Object(e) ? i(e) : a(e);
+};

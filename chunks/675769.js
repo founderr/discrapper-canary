@@ -1,12 +1,12 @@
 var r = n(661233),
     i = n(158698),
     a = 0 / 0,
-    o = /^\s+|\s+$/g,
-    s = /^[-+]0x[0-9a-f]+$/i,
+    s = /^\s+|\s+$/g,
+    o = /^[-+]0x[0-9a-f]+$/i,
     l = /^0b[01]+$/i,
     u = /^0o[0-7]+$/i,
     c = parseInt;
-function d(e) {
+e.exports = function (e) {
     if ('number' == typeof e) return e;
     if (i(e)) return a;
     if (r(e)) {
@@ -14,8 +14,7 @@ function d(e) {
         e = r(t) ? t + '' : t;
     }
     if ('string' != typeof e) return 0 === e ? e : +e;
-    e = e.replace(o, '');
+    e = e.replace(s, '');
     var n = l.test(e);
-    return n || u.test(e) ? c(e.slice(2), n ? 2 : 8) : s.test(e) ? a : +e;
-}
-e.exports = d;
+    return n || u.test(e) ? c(e.slice(2), n ? 2 : 8) : o.test(e) ? a : +e;
+};

@@ -1,8 +1,8 @@
 var r = n(161581),
     i = n(173850),
     a = n(936940),
-    o = n(526988),
-    s = n(976418),
+    s = n(526988),
+    o = n(976418),
     l = n(192291),
     u = n(679622),
     c = n(310731),
@@ -12,7 +12,7 @@ var r = n(161581),
     f = l.exportTypedArrayMethod,
     h = r.Uint16Array,
     p = h && i(h.prototype.sort),
-    m =
+    I =
         !!p &&
         !(
             a(function () {
@@ -22,7 +22,7 @@ var r = n(161581),
                 p(new h(2), {});
             })
         ),
-    I =
+    m =
         !!p &&
         !a(function () {
             if (d) return d < 74;
@@ -43,16 +43,19 @@ var r = n(161581),
                 e++
             )
                 if (n[e] !== r[e]) return !0;
-        }),
-    T = function (e) {
-        return function (t, n) {
-            return void 0 !== e ? +e(t, n) || 0 : n != n ? -1 : t != t ? 1 : 0 === t && 0 === n ? (1 / t > 0 && 1 / n < 0 ? 1 : -1) : t > n;
-        };
-    };
+        });
 f(
     'sort',
     function (e) {
-        return (void 0 !== e && o(e), I) ? p(this, e) : s(E(this), T(e));
+        var t;
+        if ((void 0 !== e && s(e), m)) return p(this, e);
+        return o(
+            E(this),
+            ((t = e),
+            function (e, n) {
+                return void 0 !== t ? +t(e, n) || 0 : n != n ? -1 : e != e ? 1 : 0 === e && 0 === n ? (1 / e > 0 && 1 / n < 0 ? 1 : -1) : e > n;
+            })
+        );
     },
-    !I || m
+    !m || I
 );

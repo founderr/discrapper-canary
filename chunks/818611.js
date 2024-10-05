@@ -1,210 +1,201 @@
-var r = n(627341);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(278074),
-    u = n(831209),
-    c = n(399606),
-    d = n(481060),
-    _ = n(727637),
-    E = n(597688),
-    f = n(884697),
-    h = n(74538),
-    p = n(864106),
-    m = n(439959),
+n(627341);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(278074),
+    l = n(831209),
+    u = n(399606),
+    c = n(481060),
+    d = n(727637),
+    _ = n(597688),
+    E = n(884697),
+    f = n(74538),
+    h = n(864106),
+    p = n(439959),
     I = n(125988),
-    T = n(689938),
-    g = n(236676);
-let S = 3,
-    A = 80,
-    v = 12,
-    N = 16,
-    O = () => A,
-    R = (e) => {
-        let { children: t, className: n, onSelect: r, isSelected: a = !1, ...o } = e;
-        return (0, i.jsx)(d.Clickable, {
-            className: s()(g.decorationGridItem, a ? g.selected : void 0, n),
+    m = n(689938),
+    T = n(236676);
+let S = () => 80,
+    g = (e) => {
+        let { children: t, className: n, onSelect: i, isSelected: a = !1, ...o } = e;
+        return (0, r.jsx)(c.Clickable, {
+            className: s()(T.decorationGridItem, a ? T.selected : void 0, n),
             ...o,
-            onClick: r,
+            onClick: i,
             children: t
         });
     },
-    C = (e) => {
-        let { user: t, avatarDecoration: n, innerRef: r, section: o, isSelected: s = !1, ...l } = e,
-            p = (0, c.e7)([E.Z], () => {
-                let e = E.Z.getProduct(n.skuId);
-                return (0, f.G1)(e);
+    A = (e) => {
+        let { user: t, avatarDecoration: n, innerRef: a, section: s, isSelected: o = !1, ...h } = e,
+            S = (0, u.e7)([_.Z], () => {
+                let e = _.Z.getProduct(n.skuId);
+                return (0, E.G1)(e);
             }),
-            S = (0, f.Yq)(n.skuId),
-            v = h.ZP.canUseCollectibles(t),
-            N = o === m.$0.PREMIUM_PURCHASE && !v,
-            O = a.useRef(null),
-            C = (0, _.Z)(null != r ? r : O),
-            { avatarDecorationSrc: y } = (0, I.Z)({
+            A = (0, E.Yq)(n.skuId),
+            N = f.ZP.canUseCollectibles(t),
+            O = s === p.$0.PREMIUM_PURCHASE && !N,
+            R = i.useRef(null),
+            v = (0, d.Z)(null != a ? a : R),
+            { avatarDecorationSrc: C } = (0, I.Z)({
                 user: t,
                 avatarDecorationOverride: n,
-                size: A,
-                onlyAnimateOnHover: !C
-            }),
-            L = () =>
-                o === m.$0.PURCHASE || (o === m.$0.PREMIUM_PURCHASE && v)
+                size: 80,
+                onlyAnimateOnHover: !v
+            });
+        return (0, r.jsxs)(g, {
+            className: O ? T.decorationGridItemChurned : void 0,
+            innerRef: null != a ? a : R,
+            isSelected: o,
+            ...h,
+            children: [
+                (0, r.jsx)('img', {
+                    className: T.presetDecorationImg,
+                    src: C,
+                    alt: n.label
+                }),
+                s === p.$0.PURCHASE || (s === p.$0.PREMIUM_PURCHASE && N)
                     ? null
-                    : S
-                      ? (0, i.jsx)(d.PremiumBadge, {
-                            className: g.newBadge,
-                            text: (0, i.jsxs)('div', {
-                                className: g.newBadgeText,
+                    : A
+                      ? (0, r.jsx)(c.PremiumBadge, {
+                            className: T.newBadge,
+                            text: (0, r.jsxs)('div', {
+                                className: T.newBadgeText,
                                 children: [
-                                    (0, i.jsx)(d.LockIcon, {
+                                    (0, r.jsx)(c.LockIcon, {
                                         size: 'xxs',
                                         color: 'currentColor'
                                     }),
-                                    T.Z.Messages.NEW
+                                    m.Z.Messages.NEW
                                 ]
                             })
                         })
-                      : (0, i.jsx)(d.IconBadge, {
-                            icon: p
+                      : (0, r.jsx)(c.IconBadge, {
+                            icon: S
                                 ? () =>
-                                      (0, i.jsx)(d.NitroWheelIcon, {
+                                      (0, r.jsx)(c.NitroWheelIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 14,
                                           height: 14
                                       })
                                 : () =>
-                                      (0, i.jsx)(d.LockIcon, {
+                                      (0, r.jsx)(c.LockIcon, {
                                           size: 'xxs',
                                           color: 'currentColor'
                                       }),
-                            color: u.Z.BACKGROUND_ACCENT,
-                            className: g.iconBadge
-                        });
-        return (0, i.jsxs)(R, {
-            className: N ? g.decorationGridItemChurned : void 0,
-            innerRef: null != r ? r : O,
-            isSelected: s,
-            ...l,
-            children: [
-                (0, i.jsx)('img', {
-                    className: g.presetDecorationImg,
-                    src: y,
-                    alt: n.label
-                }),
-                L()
+                            color: l.Z.BACKGROUND_ACCENT,
+                            className: T.iconBadge
+                        })
             ]
         });
-    },
-    y = (e) => {
-        let { user: t, guild: n, pendingAvatarDecoration: r, selectedAvatarDecorationRef: o, onSelect: s, onOpenShop: u } = e,
-            c = (0, m.ZP)(),
-            _ = a.useCallback(() => {
-                u(void 0);
-            }, [u]),
-            E = (e, a, u, E) => {
-                let { section: f, items: h } = c[e];
-                return (0, l.EQ)(h[a])
-                    .with(m.Tm, () =>
-                        (0, i.jsxs)(
-                            R,
-                            {
-                                style: { ...u },
-                                isSelected: null === r,
-                                onSelect: () => s(null),
-                                children: [
-                                    (0, i.jsx)(d.DenyIcon, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: g.notAllowedIcon
-                                    }),
-                                    (0, i.jsx)(d.Text, {
-                                        variant: 'text-xs/normal',
-                                        color: 'header-primary',
-                                        children: (0, p.ad)(t, n) ? T.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : T.Z.Messages.NONE
-                                    })
-                                ]
-                            },
-                            E
-                        )
-                    )
-                    .with(m.oT, () =>
-                        (0, i.jsxs)(
-                            R,
-                            {
-                                style: u,
-                                onSelect: _,
-                                children: [
-                                    (0, i.jsx)(d.ShopIcon, {
-                                        size: 'custom',
-                                        width: 23,
-                                        height: 23,
-                                        color: 'currentColor',
-                                        className: g.shopIcon
-                                    }),
-                                    (0, i.jsx)(d.Text, {
-                                        variant: 'text-xs/normal',
-                                        color: 'header-primary',
-                                        children: T.Z.Messages.COLLECTIBLES_SHOP
-                                    })
-                                ]
-                            },
-                            E
-                        )
-                    )
-                    .otherwise((e) => {
-                        let n = (null == r ? void 0 : r.id) === e.id;
-                        return (0, i.jsx)(
-                            C,
-                            {
-                                style: { ...u },
-                                user: t,
-                                avatarDecoration: e,
-                                section: f,
-                                innerRef: n ? o : void 0,
-                                isSelected: n,
-                                onSelect: () => s(e)
-                            },
-                            E
-                        );
-                    });
-            },
-            f = (e, t) => {
-                let { header: n } = c[e];
-                return (0, i.jsx)('div', {
-                    className: g.headings,
-                    style: {
-                        ...t,
-                        position: 'absolute'
-                    },
-                    children: (0, i.jsx)(d.HeadingLevel, {
-                        forceLevel: 5,
-                        children: (0, i.jsx)(d.Heading, {
-                            variant: 'eyebrow',
-                            color: 'header-secondary',
-                            children: n
-                        })
-                    })
-                });
-            };
-        return (0, i.jsx)(d.MasonryList, {
-            fade: !0,
-            className: g.list,
-            columns: S,
-            sections: c.map((e) => {
-                let { items: t } = e;
-                return t.length;
-            }),
-            sectionGutter: N,
-            itemGutter: v,
-            paddingHorizontal: v,
-            paddingVertical: 0,
-            removeEdgeItemGutters: !0,
-            renderItem: E,
-            renderSection: f,
-            getSectionHeight: (e) => c[e].height,
-            getItemKey: (e, t) => c[e].items[t].id,
-            getItemHeight: O
-        });
     };
-t.Z = y;
+t.Z = (e) => {
+    let { user: t, guild: n, pendingAvatarDecoration: a, selectedAvatarDecorationRef: s, onSelect: l, onOpenShop: u } = e,
+        d = (0, p.ZP)(),
+        _ = i.useCallback(() => {
+            u(void 0);
+        }, [u]);
+    return (0, r.jsx)(c.MasonryList, {
+        fade: !0,
+        className: T.list,
+        columns: 3,
+        sections: d.map((e) => {
+            let { items: t } = e;
+            return t.length;
+        }),
+        sectionGutter: 16,
+        itemGutter: 12,
+        paddingHorizontal: 12,
+        paddingVertical: 0,
+        removeEdgeItemGutters: !0,
+        renderItem: (e, i, u, E) => {
+            let { section: f, items: I } = d[e];
+            return (0, o.EQ)(I[i])
+                .with(p.Tm, () =>
+                    (0, r.jsxs)(
+                        g,
+                        {
+                            style: { ...u },
+                            isSelected: null === a,
+                            onSelect: () => l(null),
+                            children: [
+                                (0, r.jsx)(c.DenyIcon, {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: T.notAllowedIcon
+                                }),
+                                (0, r.jsx)(c.Text, {
+                                    variant: 'text-xs/normal',
+                                    color: 'header-primary',
+                                    children: (0, h.ad)(t, n) ? m.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : m.Z.Messages.NONE
+                                })
+                            ]
+                        },
+                        E
+                    )
+                )
+                .with(p.oT, () =>
+                    (0, r.jsxs)(
+                        g,
+                        {
+                            style: u,
+                            onSelect: _,
+                            children: [
+                                (0, r.jsx)(c.ShopIcon, {
+                                    size: 'custom',
+                                    width: 23,
+                                    height: 23,
+                                    color: 'currentColor',
+                                    className: T.shopIcon
+                                }),
+                                (0, r.jsx)(c.Text, {
+                                    variant: 'text-xs/normal',
+                                    color: 'header-primary',
+                                    children: m.Z.Messages.COLLECTIBLES_SHOP
+                                })
+                            ]
+                        },
+                        E
+                    )
+                )
+                .otherwise((e) => {
+                    let n = (null == a ? void 0 : a.id) === e.id;
+                    return (0, r.jsx)(
+                        A,
+                        {
+                            style: { ...u },
+                            user: t,
+                            avatarDecoration: e,
+                            section: f,
+                            innerRef: n ? s : void 0,
+                            isSelected: n,
+                            onSelect: () => l(e)
+                        },
+                        E
+                    );
+                });
+        },
+        renderSection: (e, t) => {
+            let { header: n } = d[e];
+            return (0, r.jsx)('div', {
+                className: T.headings,
+                style: {
+                    ...t,
+                    position: 'absolute'
+                },
+                children: (0, r.jsx)(c.HeadingLevel, {
+                    forceLevel: 5,
+                    children: (0, r.jsx)(c.Heading, {
+                        variant: 'eyebrow',
+                        color: 'header-secondary',
+                        children: n
+                    })
+                })
+            });
+        },
+        getSectionHeight: (e) => d[e].height,
+        getItemKey: (e, t) => d[e].items[t].id,
+        getItemHeight: S
+    });
+};

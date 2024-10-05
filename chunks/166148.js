@@ -1,9 +1,8 @@
-var r;
+var r, i;
 n.d(t, {
     s: function () {
         return r;
     }
 }),
-    !(function (e) {
-        (e.NONE = 'none'), (e.CONSENT = 'consent');
-    })(r || (r = {}));
+    ((i = r || (r = {})).NONE = 'none'),
+    (i.CONSENT = 'consent');

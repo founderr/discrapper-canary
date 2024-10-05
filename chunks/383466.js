@@ -1,6 +1,6 @@
 n.d(t, {
     jD: function () {
-        return o;
+        return s;
     },
     kK: function () {
         return a;
@@ -22,18 +22,16 @@ var r = function (e) {
                 i = t.height;
             return !n && !i;
         }
-        var a = e,
-            o = a.offsetWidth,
-            s = a.offsetHeight;
-        return !(o || s || e.getClientRects().length);
+        var a = e.offsetWidth,
+            s = e.offsetHeight;
+        return !(a || s || e.getClientRects().length);
     },
     a = function (e) {
         var t,
-            n,
-            r = null === (n = null === (t = e) || void 0 === t ? void 0 : t.ownerDocument) || void 0 === n ? void 0 : n.defaultView;
-        return !!(r && e instanceof r.Element);
+            n = null === (t = null == e ? void 0 : e.ownerDocument) || void 0 === t ? void 0 : t.defaultView;
+        return !!(n && e instanceof n.Element);
     },
-    o = function (e) {
+    s = function (e) {
         switch (e.tagName) {
             case 'INPUT':
                 if ('image' !== e.type) break;

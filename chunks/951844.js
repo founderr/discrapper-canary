@@ -1,44 +1,34 @@
-var r,
-    i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(481060),
-    u = n(689938),
-    c = n(720670);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let _ = {
-    BLOCK: c.block,
-    INLINE: c.inline
+var i,
+    a,
+    s,
+    l,
+    r = n(735250),
+    o = n(470079),
+    c = n(120356),
+    d = n.n(c),
+    u = n(481060),
+    _ = n(689938),
+    E = n(720670);
+let I = {
+    BLOCK: E.block,
+    INLINE: E.inline
 };
-class E extends (r = a.PureComponent) {
+class m extends (l = o.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: r = _.BLOCK, style: a } = this.props;
-        return (0, i.jsxs)('div', {
-            className: s()(t, r),
+        let { children: e, className: t, textClassName: n, type: i = I.BLOCK, style: a } = this.props;
+        return (0, r.jsxs)('div', {
+            className: d()(t, i),
             style: a,
             children: [
-                (0, i.jsxs)(l.Text, {
+                (0, r.jsxs)(u.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-positive',
-                    className: c.pro,
-                    children: [u.Z.Messages.FORM_LABEL_ROLES_PRO_TIP, ':']
+                    className: E.pro,
+                    children: [_.Z.Messages.FORM_LABEL_ROLES_PRO_TIP, ':']
                 }),
-                (0, i.jsx)(l.Text, {
-                    className: s()(c.tip, n),
+                (0, r.jsx)(u.Text, {
+                    className: d()(E.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })
@@ -46,4 +36,15 @@ class E extends (r = a.PureComponent) {
         });
     }
 }
-d(E, 'Types', _), (t.Z = E);
+(i = m),
+    (a = 'Types'),
+    (s = I),
+    a in i
+        ? Object.defineProperty(i, a, {
+              value: s,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (i[a] = s),
+    (t.Z = m);

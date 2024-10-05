@@ -1,8 +1,8 @@
 var r,
     i = n(442837),
     a = n(570140),
-    o = n(871465);
-function s(e, t, n) {
+    s = n(871465);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,12 +15,8 @@ function s(e, t, n) {
         e
     );
 }
-let l = { soundpack: o.YC.CLASSIC };
-function u(e) {
-    let { soundpack: t } = e;
-    l = { soundpack: t };
-}
-class c extends (r = i.ZP.PersistedStore) {
+let l = { soundpack: s.YC.CLASSIC };
+class u extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e && (l = e);
     }
@@ -28,7 +24,14 @@ class c extends (r = i.ZP.PersistedStore) {
         return l;
     }
     getSoundpack() {
-        return o.YC.CLASSIC;
+        return s.YC.CLASSIC;
     }
 }
-s(c, 'displayName', 'SoundpackStore'), s(c, 'persistKey', 'SoundpackStore'), (t.Z = new c(a.Z, { SET_SOUNDPACK: u }));
+o(u, 'displayName', 'SoundpackStore'),
+    o(u, 'persistKey', 'SoundpackStore'),
+    (t.Z = new u(a.Z, {
+        SET_SOUNDPACK: function (e) {
+            let { soundpack: t } = e;
+            l = { soundpack: t };
+        }
+    }));

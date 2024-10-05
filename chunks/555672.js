@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(317261),
-    o = n(379357),
-    s = n(442550),
+    s = n(379357),
+    o = n(442550),
     l = n(561308),
     u = n(297781),
     c = n(443487),
@@ -18,12 +18,11 @@ var r = n(735250),
 let _ = [u.E6],
     E = [a._.WEEK];
 function f(e) {
-    let t = E;
-    return null != e && t.includes(e);
+    return null != e && E.includes(e);
 }
-let h = (e) => {
+t.ZP = i.memo((e) => {
     let { entry: t, channel: n, selected: i } = e,
-        { largeImage: a } = (0, o.rv)({ entry: t }),
+        { largeImage: a } = (0, s.rv)({ entry: t }),
         E = (0, l.Nq)(t);
     return null != E && f(E)
         ? (0, r.jsxs)(c.Zb, {
@@ -43,7 +42,7 @@ let h = (e) => {
                           })
                       ]
                   }),
-                  (0, r.jsx)(s.f, {
+                  (0, r.jsx)(o.f, {
                       src: null == a ? void 0 : a.src,
                       size: 48,
                       className: d.thumbnail,
@@ -52,5 +51,4 @@ let h = (e) => {
               ]
           })
         : null;
-};
-t.ZP = i.memo(h);
+});

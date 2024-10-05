@@ -406,8 +406,9 @@ var t = {
         return e.replace(r, function (e) {
             return t[e];
         });
-    },
-    o = function (e) {
-        return !!e.match(i);
     };
-(e.exports = a), (e.exports.has = o), (e.exports.remove = a);
+(e.exports = a),
+    (e.exports.has = function (e) {
+        return !!e.match(i);
+    }),
+    (e.exports.remove = a);

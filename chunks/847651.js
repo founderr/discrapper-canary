@@ -1,5 +1,11 @@
-var n = t;
-function r(e, t) {
+function n(e) {
+    return 1 === e.length ? '0' + e : e;
+}
+function r(e) {
+    for (var t = '', r = 0; r < e.length; r++) t += n(e[r].toString(16));
+    return t;
+}
+(t.toArray = function (e, t) {
     if (Array.isArray(e)) return e.slice();
     if (!e) return [];
     var n = [];
@@ -14,21 +20,13 @@ function r(e, t) {
         for (var r = 0; r < e.length; r++) {
             var i = e.charCodeAt(r),
                 a = i >> 8,
-                o = 255 & i;
-            a ? n.push(a, o) : n.push(o);
+                s = 255 & i;
+            a ? n.push(a, s) : n.push(s);
         }
     return n;
-}
-function i(e) {
-    return 1 === e.length ? '0' + e : e;
-}
-function a(e) {
-    for (var t = '', n = 0; n < e.length; n++) t += i(e[n].toString(16));
-    return t;
-}
-(n.toArray = r),
-    (n.zero2 = i),
-    (n.toHex = a),
-    (n.encode = function (e, t) {
-        return 'hex' === t ? a(e) : e;
+}),
+    (t.zero2 = n),
+    (t.toHex = r),
+    (t.encode = function (e, t) {
+        return 'hex' === t ? r(e) : e;
     });

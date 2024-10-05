@@ -1,67 +1,64 @@
-function t(e) {
-    let t = ['bool', 'byte', 'char', 'decimal', 'delegate', 'double', 'dynamic', 'enum', 'float', 'int', 'long', 'nint', 'nuint', 'object', 'sbyte', 'short', 'string', 'ulong', 'uint', 'ushort'],
-        n = ['public', 'private', 'protected', 'static', 'internal', 'protected', 'abstract', 'async', 'extern', 'override', 'unsafe', 'virtual', 'new', 'sealed', 'partial'],
-        r = ['default', 'false', 'null', 'true'],
-        i = {
+e.exports = function (e) {
+    let t = {
             keyword: ['abstract', 'as', 'base', 'break', 'case', 'catch', 'class', 'const', 'continue', 'do', 'else', 'event', 'explicit', 'extern', 'finally', 'fixed', 'for', 'foreach', 'goto', 'if', 'implicit', 'in', 'interface', 'internal', 'is', 'lock', 'namespace', 'new', 'operator', 'out', 'override', 'params', 'private', 'protected', 'public', 'readonly', 'record', 'ref', 'return', 'scoped', 'sealed', 'sizeof', 'stackalloc', 'static', 'struct', 'switch', 'this', 'throw', 'try', 'typeof', 'unchecked', 'unsafe', 'using', 'virtual', 'void', 'volatile', 'while'].concat(['add', 'alias', 'and', 'ascending', 'async', 'await', 'by', 'descending', 'equals', 'from', 'get', 'global', 'group', 'init', 'into', 'join', 'let', 'nameof', 'not', 'notnull', 'on', 'or', 'orderby', 'partial', 'remove', 'select', 'set', 'unmanaged', 'value|0', 'var', 'when', 'where', 'with', 'yield']),
-            built_in: t,
-            literal: r
+            built_in: ['bool', 'byte', 'char', 'decimal', 'delegate', 'double', 'dynamic', 'enum', 'float', 'int', 'long', 'nint', 'nuint', 'object', 'sbyte', 'short', 'string', 'ulong', 'uint', 'ushort'],
+            literal: ['default', 'false', 'null', 'true']
         },
-        a = e.inherit(e.TITLE_MODE, { begin: '[a-zA-Z](\\.?\\w)*' }),
-        o = {
+        n = e.inherit(e.TITLE_MODE, { begin: '[a-zA-Z](\\.?\\w)*' }),
+        r = {
             className: 'number',
             variants: [{ begin: "\\b(0b[01']+)" }, { begin: "(-?)\\b([\\d']+(\\.[\\d']*)?|\\.[\\d']+)(u|U|l|L|ul|UL|f|F|b|B)" }, { begin: "(-?)(\\b0[xX][a-fA-F0-9']+|(\\b[\\d']+(\\.[\\d']*)?|\\.[\\d']+)([eE][-+]?[\\d']+)?)" }],
             relevance: 0
         },
-        s = {
+        i = {
             className: 'string',
             begin: '@"',
             end: '"',
             contains: [{ begin: '""' }]
         },
-        l = e.inherit(s, { illegal: /\n/ }),
-        u = {
+        a = e.inherit(i, { illegal: /\n/ }),
+        s = {
             className: 'subst',
             begin: /\{/,
             end: /\}/,
-            keywords: i
+            keywords: t
         },
-        c = e.inherit(u, { illegal: /\n/ }),
-        d = {
+        o = e.inherit(s, { illegal: /\n/ }),
+        l = {
             className: 'string',
             begin: /\$"/,
             end: '"',
             illegal: /\n/,
-            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, e.BACKSLASH_ESCAPE, c]
+            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, e.BACKSLASH_ESCAPE, o]
         },
-        _ = {
+        u = {
             className: 'string',
             begin: /\$@"/,
             end: '"',
-            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, u]
+            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, s]
         },
-        E = e.inherit(_, {
+        c = e.inherit(u, {
             illegal: /\n/,
-            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, c]
+            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, o]
         });
-    (u.contains = [_, d, s, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.C_BLOCK_COMMENT_MODE]), (c.contains = [E, d, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]);
-    let f = {
-            variants: [_, d, s, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
+    (s.contains = [u, l, i, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, r, e.C_BLOCK_COMMENT_MODE]), (o.contains = [c, l, a, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, r, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]);
+    let d = {
+            variants: [u, l, i, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
         },
-        h = {
+        _ = {
             begin: '<',
             end: '>',
-            contains: [{ beginKeywords: 'in out' }, a]
+            contains: [{ beginKeywords: 'in out' }, n]
         },
-        p = e.IDENT_RE + '(<' + e.IDENT_RE + '(\\s*,\\s*' + e.IDENT_RE + ')*>)?(\\[\\])?',
-        m = {
+        E = e.IDENT_RE + '(<' + e.IDENT_RE + '(\\s*,\\s*' + e.IDENT_RE + ')*>)?(\\[\\])?',
+        f = {
             begin: '@' + e.IDENT_RE,
             relevance: 0
         };
     return {
         name: 'C#',
         aliases: ['cs', 'c#'],
-        keywords: i,
+        keywords: t,
         illegal: /::/,
         contains: [
             e.COMMENT('///', '$', {
@@ -91,28 +88,28 @@ function t(e) {
                 end: '$',
                 keywords: { keyword: 'if else elif endif define undef warning error line region endregion pragma checksum' }
             },
-            f,
-            o,
+            d,
+            r,
             {
                 beginKeywords: 'class interface',
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:,]/,
-                contains: [{ beginKeywords: 'where class' }, a, h, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [{ beginKeywords: 'where class' }, n, _, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 beginKeywords: 'namespace',
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:]/,
-                contains: [a, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [n, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 beginKeywords: 'record',
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:]/,
-                contains: [a, h, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [n, _, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 className: 'meta',
@@ -134,20 +131,20 @@ function t(e) {
             },
             {
                 className: 'function',
-                begin: '(' + p + '\\s+)+' + e.IDENT_RE + '\\s*(<[^=]+>\\s*)?\\(',
+                begin: '(' + E + '\\s+)+' + e.IDENT_RE + '\\s*(<[^=]+>\\s*)?\\(',
                 returnBegin: !0,
                 end: /\s*[{;=]/,
                 excludeEnd: !0,
-                keywords: i,
+                keywords: t,
                 contains: [
                     {
-                        beginKeywords: n.join(' '),
+                        beginKeywords: 'public private protected static internal protected abstract async extern override unsafe virtual new sealed partial',
                         relevance: 0
                     },
                     {
                         begin: e.IDENT_RE + '\\s*(<[^=]+>\\s*)?\\(',
                         returnBegin: !0,
-                        contains: [e.TITLE_MODE, h],
+                        contains: [e.TITLE_MODE, _],
                         relevance: 0
                     },
                     { match: /\(\)/ },
@@ -157,16 +154,15 @@ function t(e) {
                         end: /\)/,
                         excludeBegin: !0,
                         excludeEnd: !0,
-                        keywords: i,
+                        keywords: t,
                         relevance: 0,
-                        contains: [f, o, e.C_BLOCK_COMMENT_MODE]
+                        contains: [d, r, e.C_BLOCK_COMMENT_MODE]
                     },
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE
                 ]
             },
-            m
+            f
         ]
     };
-}
-e.exports = t;
+};

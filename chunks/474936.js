@@ -1,99 +1,99 @@
 n.d(t, {
     $7: function () {
-        return q;
+        return e_;
     },
     $8: function () {
-        return ek;
-    },
-    $e: function () {
-        return b;
-    },
-    $n: function () {
         return e$;
     },
+    $e: function () {
+        return Q;
+    },
+    $n: function () {
+        return tn;
+    },
     A5: function () {
-        return $;
+        return eh;
     },
     AU: function () {
-        return es;
+        return eO;
     },
     Bo: function () {
-        return e1;
+        return ta;
     },
     C2: function () {
-        return ec;
+        return eC;
     },
     CL: function () {
-        return D;
+        return X;
     },
     CR: function () {
-        return em;
+        return eU;
     },
     Cj: function () {
         return h;
     },
     Cn: function () {
-        return ea;
+        return eA;
     },
     EA: function () {
-        return s;
+        return o;
     },
     ET: function () {
-        return e_;
+        return eD;
     },
     EZ: function () {
         return E;
     },
     F_: function () {
-        return C;
+        return K;
     },
     GP: function () {
-        return Z;
+        return eo;
     },
     HO: function () {
-        return eF;
-    },
-    Hk: function () {
-        return eu;
-    },
-    IW: function () {
-        return B;
-    },
-    Lw: function () {
-        return eM;
-    },
-    M_: function () {
         return e0;
     },
+    Hk: function () {
+        return ev;
+    },
+    IW: function () {
+        return ea;
+    },
+    Lw: function () {
+        return eq;
+    },
+    M_: function () {
+        return ti;
+    },
     Nl: function () {
-        return eR;
+        return eZ;
     },
     No: function () {
-        return k;
+        return ei;
     },
     OT: function () {
-        return eT;
+        return ex;
     },
     QI: function () {
-        return ez;
+        return e8;
     },
     QP: function () {
         return c;
     },
     RQ: function () {
-        return eq;
+        return e9;
     },
     RU: function () {
-        return eS;
+        return ek;
     },
     Rg: function () {
-        return er;
+        return eS;
     },
     Rr: function () {
-        return W;
+        return eu;
     },
     Rt: function () {
-        return eh;
+        return eM;
     },
     Si: function () {
         return i;
@@ -102,28 +102,28 @@ n.d(t, {
         return T;
     },
     TD: function () {
-        return eY;
+        return e4;
     },
     TL: function () {
-        return el;
+        return eR;
     },
     Tp: function () {
-        return eW;
+        return e6;
     },
     UA: function () {
-        return z;
+        return ed;
     },
     UD: function () {
-        return w;
+        return et;
     },
     Ue: function () {
-        return Q;
+        return eE;
     },
     Uq: function () {
-        return eU;
+        return eQ;
     },
     V4: function () {
-        return eQ;
+        return te;
     },
     VU: function () {
         return A;
@@ -132,155 +132,156 @@ n.d(t, {
         return a;
     },
     Y1: function () {
-        return eZ;
+        return e1;
     },
     YQ: function () {
-        return M;
+        return $;
     },
     Z1: function () {
-        return x;
+        return en;
     },
     Zh: function () {
-        return y;
+        return z;
     },
     _k: function () {
-        return eB;
+        return eJ;
     },
     a1: function () {
-        return ej;
+        return e5;
     },
     a7: function () {
-        return ed;
+        return eL;
     },
     b6: function () {
-        return L;
+        return q;
     },
     bg: function () {
-        return eH;
+        return e3;
     },
     cb: function () {
-        return K;
+        return ec;
     },
     cd: function () {
         return l;
     },
     dB: function () {
-        return ev;
+        return eF;
     },
     dJ: function () {
-        return U;
+        return ee;
     },
     dT: function () {
-        return eA;
+        return eB;
     },
     eG: function () {
-        return e2;
+        return ts;
     },
     eZ: function () {
-        return eX;
+        return tt;
     },
     ee: function () {
-        return eL;
+        return eW;
     },
     ff: function () {
-        return en;
+        return eT;
     },
     fz: function () {
-        return g;
+        return S;
     },
     gW: function () {
-        return eC;
+        return eY;
     },
     gh: function () {
-        return J;
+        return ep;
     },
     h1: function () {
         return d;
     },
     h8: function () {
-        return eI;
+        return ew;
     },
     hX: function () {
-        return S;
+        return g;
     },
     hs: function () {
-        return eg;
+        return eG;
     },
     i_: function () {
-        return ei;
+        return eg;
     },
     ih: function () {
-        return eO;
+        return eH;
     },
     in: function () {
         return u;
     },
     jy: function () {
-        return eK;
+        return e7;
     },
     m8: function () {
-        return ee;
+        return eI;
     },
     mn: function () {
-        return F;
+        return es;
     },
     n5: function () {
-        return ey;
+        return ej;
     },
     nG: function () {
-        return eb;
+        return eK;
     },
     nH: function () {
-        return eV;
+        return e2;
     },
     nL: function () {
         return f;
     },
     o4: function () {
-        return G;
+        return er;
     },
     p9: function () {
         return r;
     },
     pH: function () {
-        return eG;
+        return eX;
     },
     pj: function () {
-        return V;
+        return el;
     },
     rB: function () {
-        return eN;
+        return eV;
     },
     rV: function () {
-        return o;
+        return s;
     },
     rX: function () {
-        return et;
+        return em;
     },
     rt: function () {
-        return eJ;
+        return tr;
     },
     vL: function () {
-        return eD;
+        return ez;
     },
     wh: function () {
-        return eo;
+        return eN;
     },
     y7: function () {
-        return P;
+        return J;
     },
     ys: function () {
         return _;
     },
     zp: function () {
-        return X;
+        return ef;
     }
-});
+}),
+    n(47120);
 var r,
     i,
     a,
-    o,
     s,
+    o,
     l,
     u,
     c,
@@ -290,22 +291,40 @@ var r,
     f,
     h,
     p,
-    m,
     I,
+    m,
     T,
-    g,
     S,
+    g,
     A,
+    N,
+    O,
+    R,
     v,
-    N = n(47120);
-var O = n(981631),
-    R = n(185923);
-!(function (e) {
-    (e[(e.TIER_1 = 1)] = 'TIER_1'), (e[(e.TIER_2 = 2)] = 'TIER_2'), (e[(e.TIER_0 = 3)] = 'TIER_0');
-})(r || (r = {}));
-let C = void 0,
-    y = void 0,
-    L = [
+    C,
+    L,
+    D,
+    y,
+    b,
+    M,
+    P,
+    U,
+    w,
+    x,
+    G,
+    k,
+    B,
+    F,
+    V,
+    H,
+    Z,
+    Y,
+    j = n(981631),
+    W = n(185923);
+((O = r || (r = {}))[(O.TIER_1 = 1)] = 'TIER_1'), (O[(O.TIER_2 = 2)] = 'TIER_2'), (O[(O.TIER_0 = 3)] = 'TIER_0');
+let K = void 0,
+    z = void 0,
+    q = [
         {
             value: null,
             label: 'Non-Nitro'
@@ -323,32 +342,28 @@ let C = void 0,
             label: 'Standard'
         }
     ],
-    b = Object.freeze({
+    Q = Object.freeze({
         3: 0,
         1: 1,
         2: 2
     }),
-    D = '521842831262875670';
-!(function (e) {
-    (e.NONE = '628379670982688768'), (e.TIER_0 = '978380684370378762'), (e.TIER_1 = '521846918637420545'), (e.TIER_2 = '521847234246082599'), (e.GUILD = '590663762298667008'), (e.LEGACY = '521842865731534868');
-})(i || (i = {}));
-let M = ['628379670982688768', '978380684370378762', '521846918637420545', '521847234246082599', '590663762298667008'],
-    P = Object.freeze({
+    X = '521842831262875670';
+((R = i || (i = {})).NONE = '628379670982688768'), (R.TIER_0 = '978380684370378762'), (R.TIER_1 = '521846918637420545'), (R.TIER_2 = '521847234246082599'), (R.GUILD = '590663762298667008'), (R.LEGACY = '521842865731534868');
+let $ = ['628379670982688768', '978380684370378762', '521846918637420545', '521847234246082599', '590663762298667008'],
+    J = Object.freeze({
         '978380684370378762': 3,
         '521846918637420545': 1,
         '521847234246082599': 2,
         '628379670982688768': 2,
         '521842865731534868': 2
     });
-!(function (e) {
-    (e.NONE_MONTH = '628379151761408000'), (e.NONE_YEAR = '628381571568631808'), (e.PREMIUM_MONTH_TIER_0 = '978380692553465866'), (e.PREMIUM_YEAR_TIER_0 = '1024422698568122368'), (e.PREMIUM_MONTH_TIER_1 = '511651871736201216'), (e.PREMIUM_YEAR_TIER_1 = '511651876987469824'), (e.PREMIUM_MONTH_TIER_2 = '511651880837840896'), (e.PREMIUM_YEAR_TIER_2 = '511651885459963904'), (e.PREMIUM_MONTH_GUILD = '590665532894740483'), (e.PREMIUM_YEAR_GUILD = '590665538238152709'), (e.NONE_3_MONTH = '944265614527037440'), (e.NONE_6_MONTH = '944265636643602432'), (e.PREMIUM_3_MONTH_TIER_2 = '642251038925127690'), (e.PREMIUM_6_MONTH_TIER_2 = '944037208325619722'), (e.PREMIUM_3_MONTH_GUILD = '944037355453415424'), (e.PREMIUM_6_MONTH_GUILD = '944037391444738048'), (e.PREMIUM_MONTH_LEGACY = '511651856145973248'), (e.PREMIUM_YEAR_LEGACY = '511651860671627264');
-})(a || (a = {}));
-let U = new Set(['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904', '511651856145973248', '511651860671627264']),
-    w = new Set(['511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904']),
-    x = new Set(['590665532894740483', '944037355453415424', '944037391444738048', '590665538238152709']),
-    G = new Set(['642251038925127690', '944037208325619722', '944037355453415424', '944037391444738048']),
-    k = new Set(['978380692553465866', '511651871736201216', '511651880837840896']),
-    B = Object.freeze({
+((v = a || (a = {})).NONE_MONTH = '628379151761408000'), (v.NONE_YEAR = '628381571568631808'), (v.PREMIUM_MONTH_TIER_0 = '978380692553465866'), (v.PREMIUM_YEAR_TIER_0 = '1024422698568122368'), (v.PREMIUM_MONTH_TIER_1 = '511651871736201216'), (v.PREMIUM_YEAR_TIER_1 = '511651876987469824'), (v.PREMIUM_MONTH_TIER_2 = '511651880837840896'), (v.PREMIUM_YEAR_TIER_2 = '511651885459963904'), (v.PREMIUM_MONTH_GUILD = '590665532894740483'), (v.PREMIUM_YEAR_GUILD = '590665538238152709'), (v.NONE_3_MONTH = '944265614527037440'), (v.NONE_6_MONTH = '944265636643602432'), (v.PREMIUM_3_MONTH_TIER_2 = '642251038925127690'), (v.PREMIUM_6_MONTH_TIER_2 = '944037208325619722'), (v.PREMIUM_3_MONTH_GUILD = '944037355453415424'), (v.PREMIUM_6_MONTH_GUILD = '944037391444738048'), (v.PREMIUM_MONTH_LEGACY = '511651856145973248'), (v.PREMIUM_YEAR_LEGACY = '511651860671627264');
+let ee = new Set(['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904', '511651856145973248', '511651860671627264']),
+    et = new Set(['511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904']),
+    en = new Set(['590665532894740483', '944037355453415424', '944037391444738048', '590665538238152709']),
+    er = new Set(['642251038925127690', '944037208325619722', '944037355453415424', '944037391444738048']),
+    ei = new Set(['978380692553465866', '511651871736201216', '511651880837840896']),
+    ea = Object.freeze({
         '978380684370378762': '978380692553465866',
         '521846918637420545': '511651871736201216',
         '521847234246082599': '511651880837840896',
@@ -356,7 +371,7 @@ let U = new Set(['978380692553465866', '1024422698568122368', '51165187173620121
         '590663762298667008': void 0,
         '521842865731534868': void 0
     }),
-    F = Object.freeze({
+    es = Object.freeze({
         '978380684370378762': '1024422698568122368',
         '521846918637420545': '511651876987469824',
         '521847234246082599': '511651885459963904',
@@ -364,13 +379,8 @@ let U = new Set(['978380692553465866', '1024422698568122368', '51165187173620121
         '590663762298667008': void 0,
         '521842865731534868': void 0
     });
-!(function (e) {
-    (e[(e.MONTH = 1)] = 'MONTH'), (e[(e.YEAR = 2)] = 'YEAR'), (e[(e.DAY = 3)] = 'DAY');
-})(o || (o = {})),
-    !(function (e) {
-        (e[(e.DAY = 1)] = 'DAY'), (e[(e.WEEK = 2)] = 'WEEK'), (e[(e.MONTH = 3)] = 'MONTH'), (e[(e.YEAR = 4)] = 'YEAR');
-    })(s || (s = {}));
-let Z = Object.freeze({
+((C = s || (s = {}))[(C.MONTH = 1)] = 'MONTH'), (C[(C.YEAR = 2)] = 'YEAR'), (C[(C.DAY = 3)] = 'DAY'), ((L = o || (o = {}))[(L.DAY = 1)] = 'DAY'), (L[(L.WEEK = 2)] = 'WEEK'), (L[(L.MONTH = 3)] = 'MONTH'), (L[(L.YEAR = 4)] = 'YEAR');
+let eo = Object.freeze({
         628379151761408000: {
             id: '628379151761408000',
             name: 'None Monthly',
@@ -508,343 +518,303 @@ let Z = Object.freeze({
             intervalCount: 1
         }
     }),
-    V = new Set(['511651880837840896']),
-    H = 16,
-    Y = 8,
-    j = 5,
-    W = 30,
-    K = 2,
-    z = 3,
-    q = 28,
-    Q = 30,
-    X = 7,
-    $ = 7,
-    J = 30,
-    ee = '775514091874680832',
-    et = '845031178288889946',
-    en = 432000000,
-    er = 14,
-    ei = '520373071933079552',
-    ea = '902329034132684800',
-    eo = '983601860436819968',
-    es = '983601860436819969',
-    el = '984244797441048577',
-    eu = '1215818925846036480',
-    ec = '1004850445463584768',
-    ed = '1073698058383917056',
-    e_ = '1070132870233980928',
-    eE = '1267968635301789696',
-    ef = '1267969164312576000',
-    eh = '1268347360493174784',
-    ep = '1271484512081285191',
-    em = [ei, ea, eo, es, el, eu, ec, ed, e_, eE, ef, eh, ep],
-    eI = [eE, ef, ep],
-    eT = [eE, ep],
-    eg = '1150904354090532864',
-    eS = '1199128659810582528',
-    eA = '1204865493622587392',
-    ev = '1204867673024888832',
-    eN = '1215346678383509504',
-    eO = '1215366184820539392',
-    eR = '1223319122125783040',
-    eC = '1223380890109870080',
-    ey = '1265748546523762828',
-    eL = [eR, eC],
-    eb = Object.freeze({
-        [ei]: {
-            id: ei,
+    el = new Set(['511651880837840896']),
+    eu = 30,
+    ec = 2,
+    ed = 3,
+    e_ = 28,
+    eE = 30,
+    ef = 7,
+    eh = 7,
+    ep = 30,
+    eI = '775514091874680832',
+    em = '845031178288889946',
+    eT = 432000000,
+    eS = 14,
+    eg = '520373071933079552',
+    eA = '902329034132684800',
+    eN = '983601860436819968',
+    eO = '983601860436819969',
+    eR = '984244797441048577',
+    ev = '1215818925846036480',
+    eC = '1004850445463584768',
+    eL = '1073698058383917056',
+    eD = '1070132870233980928',
+    ey = '1267968635301789696',
+    eb = '1267969164312576000',
+    eM = '1268347360493174784',
+    eP = '1271484512081285191',
+    eU = [eg, eA, eN, eO, eR, ev, eC, eL, eD, ey, eb, eM, eP],
+    ew = [ey, eb, eP],
+    ex = [ey, eP],
+    eG = '1150904354090532864',
+    ek = '1199128659810582528',
+    eB = '1204865493622587392',
+    eF = '1204867673024888832',
+    eV = '1215346678383509504',
+    eH = '1215366184820539392',
+    eZ = '1223319122125783040',
+    eY = '1223380890109870080',
+    ej = '1265748546523762828',
+    eW = [eZ, eY],
+    eK = Object.freeze({
+        [eg]: {
+            id: eg,
             skus: ['521847234246082599']
         },
-        [ea]: {
-            id: ea,
+        [eA]: {
+            id: eA,
             skus: ['521847234246082599']
         },
-        [eo]: {
-            id: eo,
+        [eN]: {
+            id: eN,
             skus: ['521847234246082599']
         },
-        [es]: {
-            id: es,
+        [eO]: {
+            id: eO,
             skus: ['521847234246082599']
         },
-        [el]: {
-            id: el,
+        [eR]: {
+            id: eR,
             skus: ['521847234246082599']
         },
-        [ec]: {
-            id: ec,
+        [eC]: {
+            id: eC,
             skus: ['521847234246082599']
         },
-        [e_]: {
-            id: e_,
+        [eD]: {
+            id: eD,
             skus: ['978380684370378762']
         },
-        [ed]: {
-            id: ed,
+        [eL]: {
+            id: eL,
             skus: ['521847234246082599']
         },
-        [eu]: {
-            id: eu,
+        [ev]: {
+            id: ev,
             skus: ['521847234246082599']
         },
-        [eh]: {
-            id: eh,
+        [eM]: {
+            id: eM,
             skus: ['521847234246082599']
         }
     });
-!(function (e) {
-    (e.ANIMATED_GUILD_BANNER_TOOLTIP = 'animated_guild_banner_tooltip'),
-        (e.EMOJI_PICKER_SEARCH = 'emoji_picker_search'),
-        (e.EMOJI_PICKER_EMOJI_CLICKED = 'emoji_picker_emoji_clicked'),
-        (e.EMOJI_PICKER_STICKER_CLICKED = 'emoji_picker_sticker_clicked'),
-        (e.EMOJI_PICKER_REACTION_EMOJI_CLICKED = 'emoji_picker_reaction_emoji_clicked'),
-        (e.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED = 'emoji_picker_super_reaction_emoji_clicked'),
-        (e.EMOJI_PICKER_STATUS_EMOJI_CLICKED = 'emoji_picker_status_emoji_clicked'),
-        (e.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED = 'emoji_picker_top_server_emoji_clicked'),
-        (e.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED = 'emoji_picker_newly_added_emoji_clicked'),
-        (e.EMOJI_AUTOSUGGEST_CLICKED = 'emoji_autosuggest_clicked'),
-        (e.EMOJI_AUTOCOMPLETE_INLINE = 'emoji_autocomplete_inline'),
-        (e.EMOJI_AUTOCOMPLETE_MODAL = 'emoji_autocomplete_modal'),
-        (e.EMOJI_IN_MESSAGE_HOVER = 'emoji_in_message_hover'),
-        (e.EMOJI_IN_REACTION_HOVER = 'emoji_in_reaction_hover'),
-        (e.EMOJI_IN_BURST_REACTION_HOVER = 'emoji_in_burst_reaction_hover'),
-        (e.EMOJI_IN_BURST_REACTION_HOVER_UPSELL = 'emoji_in_burst_reaction_hover_upsell'),
-        (e.EMOJI_PICKER_FLOATING_UPSELL = 'emoji_picker_floating_upsell'),
-        (e.STICKER_IN_MESSAGE_HOVER = 'sticker_in_message_hover'),
-        (e.EMPTY_STICKER_PICKER_UPSELL = 'empty_sticker_picker_upsell'),
-        (e.STREAM_QUALITY_INDICATOR = 'stream_quality_indicator'),
-        (e.GIFT_STREAM_QUALITY_INDICATOR = 'gift_stream_quality_indicator'),
-        (e.STREAM_QUALITY_UPSELL = 'stream_quality_upsell'),
-        (e.MESSAGE_LENGTH_UPSELL = 'message_length_upsell'),
-        (e.MESSAGE_LENGTH_IN_EDITOR_UPSELL = 'message_length_in_editor_upsell'),
-        (e.CUSTOM_PROFILE_UPSELL = 'custom profiles upsell modal'),
-        (e.CUSTOM_PROFILE_TRY_OUT_UPSELL = 'try out custom profile in settings upsell'),
-        (e.VIDEO_BACKGROUNDS_MODAL = 'video backgrounds modal'),
-        (e.VIDEO_BACKGROUNDS_INLINE = 'video backgrounds inline'),
-        (e.GUILD_CAP_INLINE_SERVER_LIST = 'guild_cap_inline_server_list'),
-        (e.GUILD_PREMIUM_UPSELL_MODAL = 'premium guild premium upsell modal'),
-        (e.GUILD_CAP_INLINE_INVITE_MODAL = 'guild_cap_inline_invite_modal'),
-        (e.GUILD_CAP_MODAL_UPSELL = 'guild_cap_modal_upsell'),
-        (e.PREMIUM_GUILD_IDENTITY_MODAL = 'premium guild identity upsell alert'),
-        (e.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON = 'custom profiles settings banner upsell'),
-        (e.STICKER_PICKER_UPSELL = 'sticker_picker_upsell'),
-        (e.ANIMATED_AVATAR_PREVIEW_GIF_MODAL = 'animated avatar preview gif modal'),
-        (e.PREMIUM_PROGRESS_BAR = 'premium_progress_bar_tooltip'),
-        (e.INVITE_SPLASH_UPSELL = 'premium_invite_splash_upsell'),
-        (e.ANIMATED_USER_AVATAR_MODAL = 'animated user avatar upsell modal'),
-        (e.UPLOAD_ERROR_UPSELL = 'upload error upsell'),
-        (e.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE = 'premium guild member profile upsell inline'),
-        (e.CONCURRENT_ACTIVITIES = 'Concurrent Activities'),
-        (e.PREMIUM_UNCANCEL_WINBACK_MODAL_VIEWED = 'premium_uncancel_winback_modal_viewed'),
-        (e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET = 'animated_video_background_new_preset'),
-        (e.LOW_PRICE_EXPERIMENT_TOOLTIP = 'low_price_experiment_tooltip'),
-        (e.PREMIUM_PROFILE_BADGE_UPSELL = 'premium_profile_badge_upsell'),
-        (e.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI = 'emoji'),
-        (e.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_PROFILE_CUSTOMIZATION = 'profile customization'),
-        (e.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_HD_STREAMING = 'hd streaming'),
-        (e.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_LARGER_FILE_UPLOADS = 'larger file uploads'),
-        (e.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_BOGO = 'bogo'),
-        (e.VOICE_CHANNEL_EFFECTS_UPSELL = 'voice_channel_effects_upsell'),
-        (e.VOICE_CHANNEL_EFFECTS_BAR_EMOJI_UPSELL = 'Voice Channel Effect Bar Emoji Upsell'),
-        (e.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED = 'voice_channel_effects_toggle_clicked'),
-        (e.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED = 'voice_channel_effects_toggle_clicked_expanded'),
-        (e.PROFILE_EFFECTS_INLINE_SETTINGS = 'profile_effects_inline_settings'),
-        (e.PROFILE_EFFECTS_INLINE_SETTINGS_MOBILE = 'profile_effects_inline_settings_mobile'),
-        (e.HIGH_VIDEO_QUALITY_UPSELL = 'high_video_quality_upsell'),
-        (e.PREMIUM_PROFILE_TRY_IT_OUT = 'premium_profile_try_it_out'),
-        (e.BURST_REACTION_RAIL_UPSELL = 'burst_reaction_rail_upsell'),
-        (e.BURST_REACTION_UPSELL = 'burst_reaction_upsell'),
-        (e.BURST_REACTION_QUICK_ACTION_UPSELL = 'burst_reaction_quick_action_upsell'),
-        (e.BURST_REACTION_CONTEXT_MENU_UPSELL = 'burst_reaction_context_menu_upsell'),
-        (e.PREMIUM_CLIENT_THEME_TRY_IT_OUT = 'premium_client_theme_try_it_out'),
-        (e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL = 'premium_client_theme_settings_upsell'),
-        (e.VIDEO_STAGE_LIMIT = 'video_stage_limit'),
-        (e.SOUND_PICKER_SOUND_CLICKED = 'sound_picker_sound_clicked'),
-        (e.APP_ICON_UPSELL = 'app_icon_upsell'),
-        (e.COLLECTIBLES_SHOP = 'collectibles_shop'),
-        (e.COLLECTIBLES_PROFILE_SETTINGS_UPSELL = 'collectibles_profile_settings_upsell'),
-        (e.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL = 'collectibles_premium_marketing_page_upsell'),
-        (e.CLIPS_GUILD_SIDEBAR_COACHMARK_PREMIUM_EARLY_ACCESS_UPSELL = 'clips_guild_sidebar_coachmark_premium_early_access_upsell'),
-        (e.CLIPS_GO_LIVE_PREMIUM_EARLY_ACCESS_ROADBLOCK_UPSELL = 'clips_go_live_premium_early_access_roadblock_upsell'),
-        (e.CUSTOM_NOTIFICATION_SOUNDS_UPSELL = 'custom_notification_sounds_upsell'),
-        (e.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL = 'custom_notification_sounds_settings_inline_upsell'),
-        (e.HD_STREAMING_VIEWER_UPSELL = 'hd_streaming_viewer_upsell'),
-        (e.REVERSE_TRIAL_ENDED_UPSELL = 'reverse_trial_ended_upsell'),
-        (e.REVERSE_TRIAL_FOLLOWUP_UPSELL = 'reverse_trial_followup_upsell'),
-        (e.FOR_LATER_MODAL_UPSELL = 'for_later_modal_upsell'),
-        (e.TRY_IT_OUT_MODAL_UPSELL = 'try_it_out_modal_upsell'),
-        (e.EMOJI_EVERYWHERE_INLINE_UPSELL = 'emoji_everywhere_inline_upsell'),
-        (e.EMOJI_EVERYWHERE_UPSELL = 'emoji_everywhere_upsell'),
-        (e.SOUNDBOARD_EVERYWHERE_INLINE_UPSELL = 'soundboard_everywhere_inline_upsell'),
-        (e.SOUNDBOARD_EVERYWHERE_UPSELL = 'soundboard_everywhere_upsell'),
-        (e.LARGER_FILE_UPLOAD_INLINE_UPSELL = 'larger_file_upload_inline_upsell'),
-        (e.LARGER_FILE_UPLOAD_UPSELL = 'larger_file_upload_upsell'),
-        (e.ANIMATED_EMOJI_UPSELL = 'animated_emoji_upsell'),
-        (e.CLIENT_THEMES_UPSELL = 'client_themes_upsell'),
-        (e.APP_ICON_INLINE_UPSELL = 'app_icons_inline_upsell');
-})(l || (l = {})),
-    !(function (e) {
-        (e[(e.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'), (e[(e.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'), (e[(e.GUILD_BOOST = 4)] = 'GUILD_BOOST'), (e[(e.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0');
-    })(u || (u = {}));
-let eD = Object.freeze({
+((D = l || (l = {})).ANIMATED_GUILD_BANNER_TOOLTIP = 'animated_guild_banner_tooltip'),
+    (D.EMOJI_PICKER_SEARCH = 'emoji_picker_search'),
+    (D.EMOJI_PICKER_EMOJI_CLICKED = 'emoji_picker_emoji_clicked'),
+    (D.EMOJI_PICKER_STICKER_CLICKED = 'emoji_picker_sticker_clicked'),
+    (D.EMOJI_PICKER_REACTION_EMOJI_CLICKED = 'emoji_picker_reaction_emoji_clicked'),
+    (D.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED = 'emoji_picker_super_reaction_emoji_clicked'),
+    (D.EMOJI_PICKER_STATUS_EMOJI_CLICKED = 'emoji_picker_status_emoji_clicked'),
+    (D.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED = 'emoji_picker_top_server_emoji_clicked'),
+    (D.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED = 'emoji_picker_newly_added_emoji_clicked'),
+    (D.EMOJI_AUTOSUGGEST_CLICKED = 'emoji_autosuggest_clicked'),
+    (D.EMOJI_AUTOCOMPLETE_INLINE = 'emoji_autocomplete_inline'),
+    (D.EMOJI_AUTOCOMPLETE_MODAL = 'emoji_autocomplete_modal'),
+    (D.EMOJI_IN_MESSAGE_HOVER = 'emoji_in_message_hover'),
+    (D.EMOJI_IN_REACTION_HOVER = 'emoji_in_reaction_hover'),
+    (D.EMOJI_IN_BURST_REACTION_HOVER = 'emoji_in_burst_reaction_hover'),
+    (D.EMOJI_IN_BURST_REACTION_HOVER_UPSELL = 'emoji_in_burst_reaction_hover_upsell'),
+    (D.EMOJI_PICKER_FLOATING_UPSELL = 'emoji_picker_floating_upsell'),
+    (D.STICKER_IN_MESSAGE_HOVER = 'sticker_in_message_hover'),
+    (D.EMPTY_STICKER_PICKER_UPSELL = 'empty_sticker_picker_upsell'),
+    (D.STREAM_QUALITY_INDICATOR = 'stream_quality_indicator'),
+    (D.GIFT_STREAM_QUALITY_INDICATOR = 'gift_stream_quality_indicator'),
+    (D.STREAM_QUALITY_UPSELL = 'stream_quality_upsell'),
+    (D.MESSAGE_LENGTH_UPSELL = 'message_length_upsell'),
+    (D.MESSAGE_LENGTH_IN_EDITOR_UPSELL = 'message_length_in_editor_upsell'),
+    (D.CUSTOM_PROFILE_UPSELL = 'custom profiles upsell modal'),
+    (D.CUSTOM_PROFILE_TRY_OUT_UPSELL = 'try out custom profile in settings upsell'),
+    (D.VIDEO_BACKGROUNDS_MODAL = 'video backgrounds modal'),
+    (D.VIDEO_BACKGROUNDS_INLINE = 'video backgrounds inline'),
+    (D.GUILD_CAP_INLINE_SERVER_LIST = 'guild_cap_inline_server_list'),
+    (D.GUILD_PREMIUM_UPSELL_MODAL = 'premium guild premium upsell modal'),
+    (D.GUILD_CAP_INLINE_INVITE_MODAL = 'guild_cap_inline_invite_modal'),
+    (D.GUILD_CAP_MODAL_UPSELL = 'guild_cap_modal_upsell'),
+    (D.PREMIUM_GUILD_IDENTITY_MODAL = 'premium guild identity upsell alert'),
+    (D.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON = 'custom profiles settings banner upsell'),
+    (D.STICKER_PICKER_UPSELL = 'sticker_picker_upsell'),
+    (D.ANIMATED_AVATAR_PREVIEW_GIF_MODAL = 'animated avatar preview gif modal'),
+    (D.PREMIUM_PROGRESS_BAR = 'premium_progress_bar_tooltip'),
+    (D.INVITE_SPLASH_UPSELL = 'premium_invite_splash_upsell'),
+    (D.ANIMATED_USER_AVATAR_MODAL = 'animated user avatar upsell modal'),
+    (D.UPLOAD_ERROR_UPSELL = 'upload error upsell'),
+    (D.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE = 'premium guild member profile upsell inline'),
+    (D.CONCURRENT_ACTIVITIES = 'Concurrent Activities'),
+    (D.PREMIUM_UNCANCEL_WINBACK_MODAL_VIEWED = 'premium_uncancel_winback_modal_viewed'),
+    (D.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET = 'animated_video_background_new_preset'),
+    (D.LOW_PRICE_EXPERIMENT_TOOLTIP = 'low_price_experiment_tooltip'),
+    (D.PREMIUM_PROFILE_BADGE_UPSELL = 'premium_profile_badge_upsell'),
+    (D.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI = 'emoji'),
+    (D.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_PROFILE_CUSTOMIZATION = 'profile customization'),
+    (D.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_HD_STREAMING = 'hd streaming'),
+    (D.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_LARGER_FILE_UPLOADS = 'larger file uploads'),
+    (D.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_BOGO = 'bogo'),
+    (D.VOICE_CHANNEL_EFFECTS_UPSELL = 'voice_channel_effects_upsell'),
+    (D.VOICE_CHANNEL_EFFECTS_BAR_EMOJI_UPSELL = 'Voice Channel Effect Bar Emoji Upsell'),
+    (D.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED = 'voice_channel_effects_toggle_clicked'),
+    (D.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED = 'voice_channel_effects_toggle_clicked_expanded'),
+    (D.PROFILE_EFFECTS_INLINE_SETTINGS = 'profile_effects_inline_settings'),
+    (D.PROFILE_EFFECTS_INLINE_SETTINGS_MOBILE = 'profile_effects_inline_settings_mobile'),
+    (D.HIGH_VIDEO_QUALITY_UPSELL = 'high_video_quality_upsell'),
+    (D.PREMIUM_PROFILE_TRY_IT_OUT = 'premium_profile_try_it_out'),
+    (D.BURST_REACTION_RAIL_UPSELL = 'burst_reaction_rail_upsell'),
+    (D.BURST_REACTION_UPSELL = 'burst_reaction_upsell'),
+    (D.BURST_REACTION_QUICK_ACTION_UPSELL = 'burst_reaction_quick_action_upsell'),
+    (D.BURST_REACTION_CONTEXT_MENU_UPSELL = 'burst_reaction_context_menu_upsell'),
+    (D.PREMIUM_CLIENT_THEME_TRY_IT_OUT = 'premium_client_theme_try_it_out'),
+    (D.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL = 'premium_client_theme_settings_upsell'),
+    (D.VIDEO_STAGE_LIMIT = 'video_stage_limit'),
+    (D.SOUND_PICKER_SOUND_CLICKED = 'sound_picker_sound_clicked'),
+    (D.APP_ICON_UPSELL = 'app_icon_upsell'),
+    (D.COLLECTIBLES_SHOP = 'collectibles_shop'),
+    (D.COLLECTIBLES_PROFILE_SETTINGS_UPSELL = 'collectibles_profile_settings_upsell'),
+    (D.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL = 'collectibles_premium_marketing_page_upsell'),
+    (D.CLIPS_GUILD_SIDEBAR_COACHMARK_PREMIUM_EARLY_ACCESS_UPSELL = 'clips_guild_sidebar_coachmark_premium_early_access_upsell'),
+    (D.CLIPS_GO_LIVE_PREMIUM_EARLY_ACCESS_ROADBLOCK_UPSELL = 'clips_go_live_premium_early_access_roadblock_upsell'),
+    (D.CUSTOM_NOTIFICATION_SOUNDS_UPSELL = 'custom_notification_sounds_upsell'),
+    (D.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL = 'custom_notification_sounds_settings_inline_upsell'),
+    (D.HD_STREAMING_VIEWER_UPSELL = 'hd_streaming_viewer_upsell'),
+    (D.REVERSE_TRIAL_ENDED_UPSELL = 'reverse_trial_ended_upsell'),
+    (D.REVERSE_TRIAL_FOLLOWUP_UPSELL = 'reverse_trial_followup_upsell'),
+    (D.FOR_LATER_MODAL_UPSELL = 'for_later_modal_upsell'),
+    (D.TRY_IT_OUT_MODAL_UPSELL = 'try_it_out_modal_upsell'),
+    (D.EMOJI_EVERYWHERE_INLINE_UPSELL = 'emoji_everywhere_inline_upsell'),
+    (D.EMOJI_EVERYWHERE_UPSELL = 'emoji_everywhere_upsell'),
+    (D.SOUNDBOARD_EVERYWHERE_INLINE_UPSELL = 'soundboard_everywhere_inline_upsell'),
+    (D.SOUNDBOARD_EVERYWHERE_UPSELL = 'soundboard_everywhere_upsell'),
+    (D.LARGER_FILE_UPLOAD_INLINE_UPSELL = 'larger_file_upload_inline_upsell'),
+    (D.LARGER_FILE_UPLOAD_UPSELL = 'larger_file_upload_upsell'),
+    (D.ANIMATED_EMOJI_UPSELL = 'animated_emoji_upsell'),
+    (D.CLIENT_THEMES_UPSELL = 'client_themes_upsell'),
+    (D.APP_ICON_INLINE_UPSELL = 'app_icons_inline_upsell'),
+    ((y = u || (u = {}))[(y.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'),
+    (y[(y.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'),
+    (y[(y.GUILD_BOOST = 4)] = 'GUILD_BOOST'),
+    (y[(y.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0');
+let ez = Object.freeze({
         '978380684370378762': 8,
         '521846918637420545': 1,
         '521847234246082599': 2,
         '590663762298667008': 4
     }),
-    eM = 52428800,
-    eP = 52428800,
-    eU = 524288000,
-    ew = 52428800,
-    ex = 104857600,
-    eG = {
-        [O.Eu4.NONE]: 5,
-        [O.Eu4.TIER_1]: 10,
-        [O.Eu4.TIER_2]: 15,
-        [O.Eu4.TIER_3]: 30
+    eq = 52428800,
+    eQ = 524288000,
+    eX = {
+        [j.Eu4.NONE]: 5,
+        [j.Eu4.TIER_1]: 10,
+        [j.Eu4.TIER_2]: 15,
+        [j.Eu4.TIER_3]: 30
     },
-    ek = {
-        [O.Eu4.NONE]: eG[O.Eu4.NONE],
-        [O.Eu4.TIER_1]: eG[O.Eu4.NONE] + eG[O.Eu4.TIER_1],
-        [O.Eu4.TIER_2]: eG[O.Eu4.NONE] + eG[O.Eu4.TIER_1] + eG[O.Eu4.TIER_2],
-        [O.Eu4.TIER_3]: eG[O.Eu4.NONE] + eG[O.Eu4.TIER_1] + eG[O.Eu4.TIER_2] + eG[O.Eu4.TIER_3]
+    e$ = {
+        [j.Eu4.NONE]: eX[j.Eu4.NONE],
+        [j.Eu4.TIER_1]: eX[j.Eu4.NONE] + eX[j.Eu4.TIER_1],
+        [j.Eu4.TIER_2]: eX[j.Eu4.NONE] + eX[j.Eu4.TIER_1] + eX[j.Eu4.TIER_2],
+        [j.Eu4.TIER_3]: eX[j.Eu4.NONE] + eX[j.Eu4.TIER_1] + eX[j.Eu4.TIER_2] + eX[j.Eu4.TIER_3]
     },
-    eB = {
-        [O.Eu4.NONE]: 8,
-        [O.Eu4.TIER_1]: 24,
-        [O.Eu4.TIER_2]: 36,
-        [O.Eu4.TIER_3]: 48
+    eJ = {
+        [j.Eu4.NONE]: 8,
+        [j.Eu4.TIER_1]: 24,
+        [j.Eu4.TIER_2]: 36,
+        [j.Eu4.TIER_3]: 48
     },
-    eF = Object.freeze({
-        [O.Eu4.NONE]: {
+    e0 = Object.freeze({
+        [j.Eu4.NONE]: {
             features: [],
             limits: {
-                emoji: R.jZ,
-                bitrate: O.eWB,
-                fileSize: O.mBz,
+                emoji: W.jZ,
+                bitrate: j.eWB,
+                fileSize: j.mBz,
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eB[O.Eu4.NONE],
+                soundboardSounds: eJ[j.Eu4.NONE],
                 maxConcurrentActivities: 2,
-                stickers: ek[O.Eu4.NONE],
-                stageVideoUsers: O.B9o
+                stickers: e$[j.Eu4.NONE],
+                stageVideoUsers: j.B9o
             }
         },
-        [O.Eu4.TIER_1]: {
-            features: [O.oNc.INVITE_SPLASH, O.oNc.ANIMATED_ICON],
+        [j.Eu4.TIER_1]: {
+            features: [j.oNc.INVITE_SPLASH, j.oNc.ANIMATED_ICON],
             limits: {
                 emoji: 100,
                 bitrate: 128000,
-                fileSize: O.mBz,
+                fileSize: j.mBz,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eB[O.Eu4.TIER_1],
+                soundboardSounds: eJ[j.Eu4.TIER_1],
                 maxConcurrentActivities: 3,
-                stickers: ek[O.Eu4.TIER_1],
-                stageVideoUsers: O.B9o
+                stickers: e$[j.Eu4.TIER_1],
+                stageVideoUsers: j.B9o
             }
         },
-        [O.Eu4.TIER_2]: {
-            features: [O.oNc.INVITE_SPLASH, O.oNc.ANIMATED_ICON, O.oNc.BANNER, O.oNc.ROLE_ICONS],
+        [j.Eu4.TIER_2]: {
+            features: [j.oNc.INVITE_SPLASH, j.oNc.ANIMATED_ICON, j.oNc.BANNER, j.oNc.ROLE_ICONS],
             limits: {
                 emoji: 150,
                 bitrate: 256000,
-                fileSize: ew,
+                fileSize: 52428800,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eB[O.Eu4.TIER_2],
+                soundboardSounds: eJ[j.Eu4.TIER_2],
                 maxConcurrentActivities: 5,
-                stickers: ek[O.Eu4.TIER_2],
-                stageVideoUsers: O.eez
+                stickers: e$[j.Eu4.TIER_2],
+                stageVideoUsers: j.eez
             }
         },
-        [O.Eu4.TIER_3]: {
-            features: [O.oNc.INVITE_SPLASH, O.oNc.ANIMATED_ICON, O.oNc.BANNER, O.oNc.ANIMATED_BANNER, O.oNc.VANITY_URL, O.oNc.ROLE_ICONS],
+        [j.Eu4.TIER_3]: {
+            features: [j.oNc.INVITE_SPLASH, j.oNc.ANIMATED_ICON, j.oNc.BANNER, j.oNc.ANIMATED_BANNER, j.oNc.VANITY_URL, j.oNc.ROLE_ICONS],
             limits: {
                 emoji: 250,
                 bitrate: 384000,
-                fileSize: ex,
+                fileSize: 104857600,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eB[O.Eu4.TIER_3],
+                soundboardSounds: eJ[j.Eu4.TIER_3],
                 maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-                stickers: ek[O.Eu4.TIER_3],
-                stageVideoUsers: O.RcX
+                stickers: e$[j.Eu4.TIER_3],
+                stageVideoUsers: j.RcX
             }
         }
     }),
-    eZ = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
-!(function (e) {
-    (e.SOUNDBOARD_PLAY = 'soundboard play'), (e.PROFILE_THEME_COLOR = 'profile_theme_color'), (e.PROFILE_BANNER = 'profile_banner'), (e.ANIMATED_AVATAR = 'animated_avatar'), (e.AVATAR_DECORATION = 'avatar_decoration'), (e.CLIENT_THEME = 'client_theme'), (e.SHARED_CANVAS = 'shared_canvas'), (e.PROFILE_EFFECT = 'profile_effect'), (e.PRESET = 'preset');
-})(c || (c = {})),
-    !(function (e) {
-        (e.FREE = 'free'), (e.PREMIUM_STANDARD = 'premium-standard');
-    })(d || (d = {}));
-let eV = {
-    '1024422698568122368': H,
-    '511651876987469824': H,
-    '511651885459963904': H,
-    '944037208325619722': Y,
-    '642251038925127690': j
+    e1 = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
+((b = c || (c = {})).SOUNDBOARD_PLAY = 'soundboard play'), (b.PROFILE_THEME_COLOR = 'profile_theme_color'), (b.PROFILE_BANNER = 'profile_banner'), (b.ANIMATED_AVATAR = 'animated_avatar'), (b.AVATAR_DECORATION = 'avatar_decoration'), (b.CLIENT_THEME = 'client_theme'), (b.SHARED_CANVAS = 'shared_canvas'), (b.PROFILE_EFFECT = 'profile_effect'), (b.PRESET = 'preset'), ((M = d || (d = {})).FREE = 'free'), (M.PREMIUM_STANDARD = 'premium-standard');
+let e2 = {
+    '1024422698568122368': 16,
+    '511651876987469824': 16,
+    '511651885459963904': 16,
+    '944037208325619722': 8,
+    '642251038925127690': 5
 };
-!(function (e) {
-    (e.HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (e.MID_STREAMING_QUALITY = 'mid_streaming_quality');
-})(_ || (_ = {}));
-let eH = Object.freeze({
+((P = _ || (_ = {})).HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (P.MID_STREAMING_QUALITY = 'mid_streaming_quality');
+let e3 = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1
 });
-!(function (e) {
-    (e[(e.UserSettings = 0)] = 'UserSettings'), (e[(e.ApplicationStoreHome = 1)] = 'ApplicationStoreHome');
-})(E || (E = {})),
-    !(function (e) {
-        (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.WINTER = 1)] = 'WINTER');
-    })(f || (f = {})),
-    !(function (e) {
-        (e[(e.SNOWGLOBE = 1)] = 'SNOWGLOBE'), (e[(e.BOX = 2)] = 'BOX'), (e[(e.CUP = 3)] = 'CUP'), (e[(e.STANDARD_BOX = 4)] = 'STANDARD_BOX'), (e[(e.CAKE = 5)] = 'CAKE'), (e[(e.CHEST = 6)] = 'CHEST'), (e[(e.COFFEE = 7)] = 'COFFEE'), (e[(e.SEASONAL_STANDARD_BOX = 8)] = 'SEASONAL_STANDARD_BOX'), (e[(e.SEASONAL_CAKE = 9)] = 'SEASONAL_CAKE'), (e[(e.SEASONAL_CHEST = 10)] = 'SEASONAL_CHEST'), (e[(e.SEASONAL_COFFEE = 11)] = 'SEASONAL_COFFEE'), (e[(e.NITROWEEN_STANDARD = 12)] = 'NITROWEEN_STANDARD');
-    })(h || (h = {})),
-    !(function (e) {
-        (e.USER_NOT_VERIFIED = 'user_not_verified'), (e.NO_CODE_BODY = 'no_code_body'), (e.NO_PROMOTION = 'no_promotion'), (e.CODE_CLAIMED = 'code_claimed'), (e.EXISTING_SUBSCRIBER = 'existing_subscriber'), (e.PREVIOUS_SUBSCRIBER = 'previous_subscriber'), (e.BLOCKED_PAYMENT = 'blocked_payment');
-    })(p || (p = {}));
-let eY = Object.freeze({
+((U = E || (E = {}))[(U.UserSettings = 0)] = 'UserSettings'), (U[(U.ApplicationStoreHome = 1)] = 'ApplicationStoreHome'), ((w = f || (f = {}))[(w.DEFAULT = 0)] = 'DEFAULT'), (w[(w.WINTER = 1)] = 'WINTER'), ((x = h || (h = {}))[(x.SNOWGLOBE = 1)] = 'SNOWGLOBE'), (x[(x.BOX = 2)] = 'BOX'), (x[(x.CUP = 3)] = 'CUP'), (x[(x.STANDARD_BOX = 4)] = 'STANDARD_BOX'), (x[(x.CAKE = 5)] = 'CAKE'), (x[(x.CHEST = 6)] = 'CHEST'), (x[(x.COFFEE = 7)] = 'COFFEE'), (x[(x.SEASONAL_STANDARD_BOX = 8)] = 'SEASONAL_STANDARD_BOX'), (x[(x.SEASONAL_CAKE = 9)] = 'SEASONAL_CAKE'), (x[(x.SEASONAL_CHEST = 10)] = 'SEASONAL_CHEST'), (x[(x.SEASONAL_COFFEE = 11)] = 'SEASONAL_COFFEE'), (x[(x.NITROWEEN_STANDARD = 12)] = 'NITROWEEN_STANDARD'), ((G = p || (p = {})).USER_NOT_VERIFIED = 'user_not_verified'), (G.NO_CODE_BODY = 'no_code_body'), (G.NO_PROMOTION = 'no_promotion'), (G.CODE_CLAIMED = 'code_claimed'), (G.EXISTING_SUBSCRIBER = 'existing_subscriber'), (G.PREVIOUS_SUBSCRIBER = 'previous_subscriber'), (G.BLOCKED_PAYMENT = 'blocked_payment');
+let e4 = Object.freeze({
         IS_BLOCKED_IOS: 32,
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128
     }),
-    ej = Object.freeze({
-        3: { fileSize: eM },
-        1: { fileSize: eP },
-        2: { fileSize: eU }
+    e5 = Object.freeze({
+        3: { fileSize: eq },
+        1: { fileSize: 52428800 },
+        2: { fileSize: eQ }
     });
-!(function (e) {
-    (e.EXPLORE_ALL_PERKS_CLICKED = 'explore_all_perks_clicked'), (e.HELPER_COLLAPSED = 'helper_collapsed'), (e.HELPER_UNCOLLAPSED = 'helper_uncollapsed'), (e.UNLOCK_EMOJI_CLICKED = 'unlock_emoji_clicked'), (e.CUSTOM_PROFILES_CLICKED = 'custom_profiles_clicked'), (e.SERVER_BOOSTS_CLICKED = 'server_boosts_clicked'), (e.HELPER_DISMISSED = 'premium_feature_helper_dismissed'), (e.HELPER_RENDERED = 'premium_feature_helper_rendered');
-})(m || (m = {})),
-    !(function (e) {
-        (e.EMOJI_TUTORIAL_STARTED = 'emoji_tutorial_started'), (e.EMOJI_INTRO_VIEWED = 'emoji_intro_viewed'), (e.EMOJI_PROMPT_VIEWED = 'emoji_prompt_viewed'), (e.CUSTOM_PROFILE_TUTORIAL_STARTED = 'custom_profile_tutorial_started'), (e.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = 'custom_profile_avatar_intro_viewed'), (e.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = 'custom_profile_avatar_decorations_viewed'), (e.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = 'custom_profile_banner_intro_viewed'), (e.CUSTOM_PROFILE_THEME_INTRO_VIEWED = 'custom_profile_theme_intro_viewed'), (e.SERVER_PROFILE_INTRO_VIEWED = 'server_profile_intro_viewed'), (e.SERVER_BOOST_TUTORIAL_STARTED = 'server_boost_tutorial_started'), (e.BOOST_INTRO_VIEWED = 'boost_intro_viewed'), (e.BOOST_PROMPT_VIEWED = 'boost_prompt_viewed');
-    })(I || (I = {})),
-    !(function (e) {
-        (e.BOOST = 'boost'), (e.DISMISS = 'dismiss');
-    })(T || (T = {})),
-    !(function (e) {
-        (e.BADGE_TOOLTIP_VIEWED = 'share_nitro_bagde_tooltip_viewed'), (e.BADGE_CLICKED = 'share_nitro_badge_clicked'), (e.FLOW_STARTED = 'share_nitro_flow_started'), (e.FLOW_COMPLETED = 'share_nitro_flow_completed');
-    })(g || (g = {}));
-let eW = new Set(['PL', 'TR']),
-    eK = [1, 2, 3],
-    ez = [4, 5, 7, 6],
-    eq = [12, 5, 7, 6],
-    eQ = [8, 9, 11, 10],
-    eX = eQ.concat(eK),
-    e$ = 190;
-!(function (e) {
-    e[(e.FRIEND_ANNIVERSARY = 0)] = 'FRIEND_ANNIVERSARY';
-})(S || (S = {}));
-let eJ = 3,
-    e0 = 30,
-    e1 = 20;
-!(function (e) {
-    (e.PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month'), (e.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month'), (e.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month'), (e.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month'), (e.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month'), (e.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month'), (e.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month'), (e.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month');
-})(A || (A = {}));
-let e2 = {
+((k = I || (I = {})).EXPLORE_ALL_PERKS_CLICKED = 'explore_all_perks_clicked'), (k.HELPER_COLLAPSED = 'helper_collapsed'), (k.HELPER_UNCOLLAPSED = 'helper_uncollapsed'), (k.UNLOCK_EMOJI_CLICKED = 'unlock_emoji_clicked'), (k.CUSTOM_PROFILES_CLICKED = 'custom_profiles_clicked'), (k.SERVER_BOOSTS_CLICKED = 'server_boosts_clicked'), (k.HELPER_DISMISSED = 'premium_feature_helper_dismissed'), (k.HELPER_RENDERED = 'premium_feature_helper_rendered'), ((B = m || (m = {})).EMOJI_TUTORIAL_STARTED = 'emoji_tutorial_started'), (B.EMOJI_INTRO_VIEWED = 'emoji_intro_viewed'), (B.EMOJI_PROMPT_VIEWED = 'emoji_prompt_viewed'), (B.CUSTOM_PROFILE_TUTORIAL_STARTED = 'custom_profile_tutorial_started'), (B.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = 'custom_profile_avatar_intro_viewed'), (B.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = 'custom_profile_avatar_decorations_viewed'), (B.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = 'custom_profile_banner_intro_viewed'), (B.CUSTOM_PROFILE_THEME_INTRO_VIEWED = 'custom_profile_theme_intro_viewed'), (B.SERVER_PROFILE_INTRO_VIEWED = 'server_profile_intro_viewed'), (B.SERVER_BOOST_TUTORIAL_STARTED = 'server_boost_tutorial_started'), (B.BOOST_INTRO_VIEWED = 'boost_intro_viewed'), (B.BOOST_PROMPT_VIEWED = 'boost_prompt_viewed'), ((F = T || (T = {})).BOOST = 'boost'), (F.DISMISS = 'dismiss'), ((V = S || (S = {})).BADGE_TOOLTIP_VIEWED = 'share_nitro_bagde_tooltip_viewed'), (V.BADGE_CLICKED = 'share_nitro_badge_clicked'), (V.FLOW_STARTED = 'share_nitro_flow_started'), (V.FLOW_COMPLETED = 'share_nitro_flow_completed');
+let e6 = new Set(['PL', 'TR']),
+    e7 = [1, 2, 3],
+    e8 = [4, 5, 7, 6],
+    e9 = [12, 5, 7, 6],
+    te = [8, 9, 11, 10],
+    tt = te.concat(e7),
+    tn = 190;
+(H = g || (g = {}))[(H.FRIEND_ANNIVERSARY = 0)] = 'FRIEND_ANNIVERSARY';
+let tr = 3,
+    ti = 30,
+    ta = 20;
+((Z = A || (A = {})).PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month'), (Z.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month'), (Z.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month'), (Z.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month'), (Z.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month'), (Z.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month'), (Z.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month'), (Z.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month');
+let ts = {
     premium_tenure_1_month: 1,
     premium_tenure_3_month: 3,
     premium_tenure_6_month: 6,
@@ -854,6 +824,4 @@ let e2 = {
     premium_tenure_60_month: 60,
     premium_tenure_72_month: 72
 };
-!(function (e) {
-    (e[(e.NONE = 0)] = 'NONE'), (e[(e.FP_ONLY = 1)] = 'FP_ONLY'), (e[(e.FP_SUB = 2)] = 'FP_SUB');
-})(v || (v = {}));
+((Y = N || (N = {}))[(Y.NONE = 0)] = 'NONE'), (Y[(Y.FP_ONLY = 1)] = 'FP_ONLY'), (Y[(Y.FP_SUB = 2)] = 'FP_SUB');

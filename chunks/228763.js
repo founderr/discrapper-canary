@@ -1,20 +1,16 @@
 n.d(t, {
     d: function () {
-        return a;
+        return i;
     }
 });
 var r = n(149765);
 function i(e) {
-    return e.map((e) => ({
+    if (null == e.guilds) return e;
+    return {
         ...e,
-        permissions: r.vB(e.permissions)
-    }));
-}
-function a(e) {
-    return null == e.guilds
-        ? e
-        : {
-              ...e,
-              guilds: i(e.guilds)
-          };
+        guilds: e.guilds.map((e) => ({
+            ...e,
+            permissions: r.vB(e.permissions)
+        }))
+    };
 }

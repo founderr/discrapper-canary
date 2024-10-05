@@ -1,103 +1,101 @@
 n.d(t, {
     l: function () {
-        return T;
+        return N;
     }
-});
-var r = n(47120);
+}),
+    n(47120);
 var i = n(735250),
     a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(866442),
-    u = n(596454),
+    s = n(120356),
+    l = n.n(s),
+    r = n(866442),
+    o = n(596454),
     c = n(434650),
     d = n(446489),
-    _ = n(56314),
-    E = n(566006),
-    f = n(287151),
-    h = n(96042),
-    p = n(968661);
-let m = a.memo(function (e) {
-    let t,
-        n,
-        { useChatFontScaling: r, hideEmoji: a, emoji: o, className: c, count: m, me: I, me_burst: T, burst_count: g, burst_colors: S, readOnly: A, isLurking: v, isGuest: N, isPendingMember: O, type: R } = e,
-        C = R === E.O.BURST,
-        y = (0, f.y4)(I, T, R),
-        L = (0, _.v)(C && null != S ? S : []),
-        b = r ? p : h,
-        D = C ? g : m,
-        M = (0, d.y)(D, f.aO),
-        P = {};
-    if (C && null != L) {
-        var U;
-        let { accentColor: e, backgroundColor: r, opacity: i } = L,
-            a = null !== (U = (0, l.wK)(null != r ? r : '', i)) && void 0 !== U ? U : '';
-        y && (P.borderColor = r), (P.background = a), (t = e), (n = e);
-    }
-    let w = {
-        minWidth: M,
-        color: t,
-        borderColor: n
-    };
-    return (0, i.jsxs)('div', {
-        className: s()(b.reaction, b.reactionInner, c, {
-            [b.reactionMe]: y,
-            [b.reactionReadOnly]: A && !v && !O && !N
-        }),
-        style: P,
-        children: [
-            (0, i.jsx)(u.Z, {
-                className: s()({ [b.hideEmoji]: a }),
-                emojiId: o.id,
-                emojiName: o.name,
-                size: 'reaction',
-                animated: C && o.animated
-            }),
-            (0, i.jsx)('div', {
-                className: b.reactionCount,
-                style: w,
-                children: D
-            })
-        ]
-    });
-});
-function I(e) {
-    var t;
-    return ''
-        .concat(e.type === E.O.BURST ? 'burst:' : '')
-        .concat(null !== (t = e.emoji.id) && void 0 !== t ? t : 0, ':')
-        .concat(e.emoji.name);
-}
+    u = n(56314),
+    _ = n(566006),
+    E = n(287151),
+    I = n(96042),
+    m = n(968661);
 let T = a.memo(function (e) {
-    let { showImmediate: t, reactions: n, ...r } = e,
-        [o, s] = a.useState(!1),
-        [l, u] = a.useTransition(),
-        d = a.useCallback(
-            (e) => {
-                e &&
-                    !o &&
-                    !l &&
-                    u(() => {
-                        s(!0);
-                    });
-            },
-            [o, l]
-        ),
-        _ = (0, c.O)(d),
-        E = (o && !l) || t ? f.le : m;
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            (0, i.jsx)('div', { ref: _ }),
-            n.map((e) =>
-                (0, i.jsx)(
-                    E,
-                    {
-                        ...r,
-                        ...e
-                    },
-                    I(e)
-                )
-            )
-        ]
+        let t,
+            n,
+            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: T, count: N, me: h, me_burst: C, burst_count: p, burst_colors: f, readOnly: g, isLurking: A, isGuest: S, isPendingMember: M, type: x } = e,
+            O = x === _.O.BURST,
+            R = (0, E.y4)(h, C, x),
+            v = (0, u.v)(O && null != f ? f : []),
+            L = a ? m : I,
+            Z = O ? p : N,
+            P = (0, d.y)(Z, E.aO),
+            D = {};
+        if (O && null != v) {
+            var b;
+            let { accentColor: e, backgroundColor: i, opacity: a } = v,
+                s = null !== (b = (0, r.wK)(null != i ? i : '', a)) && void 0 !== b ? b : '';
+            R && (D.borderColor = i), (D.background = s), (t = e), (n = e);
+        }
+        let j = {
+            minWidth: P,
+            color: t,
+            borderColor: n
+        };
+        return (0, i.jsxs)('div', {
+            className: l()(L.reaction, L.reactionInner, T, {
+                [L.reactionMe]: R,
+                [L.reactionReadOnly]: g && !A && !M && !S
+            }),
+            style: D,
+            children: [
+                (0, i.jsx)(o.Z, {
+                    className: l()({ [L.hideEmoji]: s }),
+                    emojiId: c.id,
+                    emojiName: c.name,
+                    size: 'reaction',
+                    animated: O && c.animated
+                }),
+                (0, i.jsx)('div', {
+                    className: L.reactionCount,
+                    style: j,
+                    children: Z
+                })
+            ]
+        });
+    }),
+    N = a.memo(function (e) {
+        let { showImmediate: t, reactions: n, ...s } = e,
+            [l, r] = a.useState(!1),
+            [o, d] = a.useTransition(),
+            u = a.useCallback(
+                (e) => {
+                    e &&
+                        !l &&
+                        !o &&
+                        d(() => {
+                            r(!0);
+                        });
+                },
+                [l, o]
+            ),
+            I = (0, c.O)(u),
+            m = (l && !o) || t ? E.le : T;
+        return (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsx)('div', { ref: I }),
+                n.map((e) => {
+                    var t, n;
+                    return (0, i.jsx)(
+                        m,
+                        {
+                            ...s,
+                            ...e
+                        },
+                        ((t = e),
+                        ''
+                            .concat(t.type === _.O.BURST ? 'burst:' : '')
+                            .concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ':')
+                            .concat(t.emoji.name))
+                    );
+                })
+            ]
+        });
     });
-});

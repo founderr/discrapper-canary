@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(4313),
     i = n(493623),
     a = n(620720),
-    o = n(343713),
-    s = n(540321),
+    s = n(343713),
+    o = n(540321),
     l = n(609027),
     u = n(375317),
     c = n(882159),
@@ -44,34 +44,49 @@ function E(e) {
                 styles: {}
             },
             p = [],
-            m = !1,
-            I = {
+            I = !1,
+            m = {
                 state: f,
                 setOptions: function (n) {
                     var r = 'function' == typeof n ? n(f.options) : n;
-                    g(),
+                    T(),
                         (f.options = Object.assign({}, h, f.options, r)),
                         (f.scrollParents = {
                             reference: (0, c.kK)(e) ? (0, a.Z)(e) : e.contextElement ? (0, a.Z)(e.contextElement) : [],
                             popper: (0, a.Z)(t)
                         });
-                    var i = (0, s.Z)((0, u.Z)([].concat(E, f.options.modifiers)));
+                    var i = (0, o.Z)((0, u.Z)([].concat(E, f.options.modifiers)));
                     return (
                         (f.orderedModifiers = i.filter(function (e) {
                             return e.enabled;
                         })),
-                        T(),
-                        I.update()
+                        (function () {
+                            f.orderedModifiers.forEach(function (e) {
+                                var t = e.name,
+                                    n = e.options,
+                                    r = e.effect;
+                                if ('function' == typeof r) {
+                                    var i = r({
+                                        state: f,
+                                        name: t,
+                                        instance: m,
+                                        options: void 0 === n ? {} : n
+                                    });
+                                    p.push(i || function () {});
+                                }
+                            });
+                        })(),
+                        m.update()
                     );
                 },
                 forceUpdate: function () {
-                    if (m) return;
+                    if (I) return;
                     var e = f.elements,
                         t = e.reference,
                         n = e.popper;
                     if (!!_(t, n)) {
                         (f.rects = {
-                            reference: (0, r.Z)(t, (0, o.Z)(n), 'fixed' === f.options.strategy),
+                            reference: (0, r.Z)(t, (0, s.Z)(n), 'fixed' === f.options.strategy),
                             popper: (0, i.Z)(n)
                         }),
                             (f.reset = !1),
@@ -84,61 +99,41 @@ function E(e) {
                                 (f.reset = !1), (a = -1);
                                 continue;
                             }
-                            var s = f.orderedModifiers[a],
-                                l = s.fn,
-                                u = s.options,
+                            var o = f.orderedModifiers[a],
+                                l = o.fn,
+                                u = o.options,
                                 c = void 0 === u ? {} : u,
-                                d = s.name;
+                                d = o.name;
                             'function' == typeof l &&
                                 (f =
                                     l({
                                         state: f,
                                         options: c,
                                         name: d,
-                                        instance: I
+                                        instance: m
                                     }) || f);
                         }
                     }
                 },
                 update: (0, l.Z)(function () {
                     return new Promise(function (e) {
-                        I.forceUpdate(), e(f);
+                        m.forceUpdate(), e(f);
                     });
                 }),
                 destroy: function () {
-                    g(), (m = !0);
+                    T(), (I = !0);
                 }
             };
-        if (!_(e, t)) return I;
+        if (!_(e, t)) return m;
+        m.setOptions(n).then(function (e) {
+            !I && n.onFirstUpdate && n.onFirstUpdate(e);
+        });
         function T() {
-            f.orderedModifiers.forEach(function (e) {
-                var t = e.name,
-                    n = e.options,
-                    r = void 0 === n ? {} : n,
-                    i = e.effect;
-                if ('function' == typeof i) {
-                    var a = i({
-                            state: f,
-                            name: t,
-                            instance: I,
-                            options: r
-                        }),
-                        o = function () {};
-                    p.push(a || o);
-                }
-            });
-        }
-        function g() {
             p.forEach(function (e) {
                 return e();
             }),
                 (p = []);
         }
-        return (
-            I.setOptions(n).then(function (e) {
-                !m && n.onFirstUpdate && n.onFirstUpdate(e);
-            }),
-            I
-        );
+        return m;
     };
 }

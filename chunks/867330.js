@@ -1,18 +1,19 @@
-function n(e) {
-    var t,
-        r,
-        i = '';
-    if ('string' == typeof e || 'number' == typeof e) i += e;
-    else if ('object' == typeof e) {
-        if (Array.isArray(e)) {
-            var a = e.length;
-            for (t = 0; t < a; t++) e[t] && (r = n(e[t])) && (i && (i += ' '), (i += r));
-        } else for (r in e) e[r] && (i && (i += ' '), (i += r));
-    }
-    return i;
-}
-function r() {
-    for (var e, t, r = 0, i = '', a = arguments.length; r < a; r++) (e = arguments[r]) && (t = n(e)) && (i && (i += ' '), (i += t));
-    return i;
-}
-t.Z = r;
+t.Z = function () {
+    for (var e, t, n = 0, r = '', i = arguments.length; n < i; n++)
+        (e = arguments[n]) &&
+            (t = (function e(t) {
+                var n,
+                    r,
+                    i = '';
+                if ('string' == typeof t || 'number' == typeof t) i += t;
+                else if ('object' == typeof t) {
+                    if (Array.isArray(t)) {
+                        var a = t.length;
+                        for (n = 0; n < a; n++) t[n] && (r = e(t[n])) && (i && (i += ' '), (i += r));
+                    } else for (r in t) t[r] && (i && (i += ' '), (i += r));
+                }
+                return i;
+            })(e)) &&
+            (r && (r += ' '), (r += t));
+    return r;
+};

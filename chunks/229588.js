@@ -1,53 +1,49 @@
 n.d(t, {
     f: function () {
-        return c;
+        return _;
     }
 });
 var r,
-    i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = !1,
-    l = null,
-    u = null;
-function c(e) {
-    d({ locale: e });
-}
-function d(e) {
-    let { locale: t } = e;
-    (s = !0), (l = t);
-}
+    i,
+    a,
+    s,
+    o = n(442837),
+    l = n(570140);
+let u = !1,
+    c = null,
+    d = null;
 function _(e) {
-    let { locale: t } = e;
-    t === l && ((s = !1), (u = null), (l = null));
+    E({ locale: e });
 }
 function E(e) {
-    let { error: t, locale: n } = e;
-    n === l && ((s = !1), (u = null != t ? t : null), (l = null));
+    let { locale: t } = e;
+    (u = !0), (c = t);
 }
-class f extends (r = i.ZP.Store) {
+class f extends (s = o.ZP.Store) {
     isLoading() {
-        return s;
-    }
-    getError() {
         return u;
     }
+    getError() {
+        return d;
+    }
 }
-o(f, 'displayName', 'I18nLoaderStore'),
-    (t.Z = new f(a.Z, {
-        I18N_LOAD_START: d,
-        I18N_LOAD_SUCCESS: _,
-        I18N_LOAD_ERROR: E
+(a = 'I18nLoaderStore'),
+    (i = 'displayName') in (r = f)
+        ? Object.defineProperty(r, i, {
+              value: a,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (r[i] = a),
+    (t.Z = new f(l.Z, {
+        I18N_LOAD_START: E,
+        I18N_LOAD_SUCCESS: function (e) {
+            let { locale: t } = e;
+            t === c && ((u = !1), (d = null), (c = null));
+        },
+        I18N_LOAD_ERROR: function (e) {
+            let { error: t, locale: n } = e;
+            n === c && ((u = !1), (d = null != t ? t : null), (c = null));
+        }
     }));

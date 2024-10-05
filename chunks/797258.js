@@ -1,58 +1,56 @@
 var r,
-    i = n(392711),
-    a = n.n(i),
-    o = n(442837),
-    s = n(570140),
-    l = n(314897);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = Object.freeze([]),
-    d = {};
-function _(e) {
-    (d = {}),
+    i,
+    a,
+    s,
+    o = n(392711),
+    l = n.n(o),
+    u = n(442837),
+    c = n(570140),
+    d = n(314897);
+let _ = Object.freeze([]),
+    E = {};
+function f(e) {
+    (E = {}),
         e.sessions.forEach((e) => {
-            d[e.sessionId] = e;
+            E[e.sessionId] = e;
         });
 }
-class E extends (r = o.ZP.Store) {
+class h extends (s = u.ZP.Store) {
     initialize() {
-        this.waitFor(l.default);
+        this.waitFor(d.default);
     }
     getSessions() {
-        return d;
+        return E;
     }
     getSession() {
-        let e = l.default.getSessionId();
+        let e = d.default.getSessionId();
         return null != e ? this.getSessionById(e) : null;
     }
     getRemoteActivities() {
-        let e = l.default.getSessionId(),
-            t = a().find(d, (t) => t.active && t.sessionId !== e);
-        return null != t ? t.activities : c;
+        let e = d.default.getSessionId(),
+            t = l().find(E, (t) => t.active && t.sessionId !== e);
+        return null != t ? t.activities : _;
     }
     getSessionById(e) {
-        return d[e];
+        return E[e];
     }
     getActiveSession() {
-        return a().find(d, (e) => {
+        return l().find(E, (e) => {
             let { active: t } = e;
             return t;
         });
     }
 }
-u(E, 'displayName', 'SessionsStore'),
-    (t.Z = new E(s.Z, {
-        CONNECTION_OPEN: _,
-        SESSIONS_REPLACE: _
+(a = 'SessionsStore'),
+    (i = 'displayName') in (r = h)
+        ? Object.defineProperty(r, i, {
+              value: a,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (r[i] = a),
+    (t.Z = new h(c.Z, {
+        CONNECTION_OPEN: f,
+        SESSIONS_REPLACE: f
     }));

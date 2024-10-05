@@ -1,4 +1,4 @@
-let n = {
+t.Z = {
     aa: 'aa-ET',
     af: 'af-ZA',
     ak: 'ak-GH',
@@ -137,4 +137,3 @@ let n = {
     zh: 'zh-CN',
     zu: 'zu-ZA'
 };
-t.Z = n;

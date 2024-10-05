@@ -1,12 +1,11 @@
-var r = n(47120);
-var i = n(653041);
-var a = n(31775),
-    o = n.n(a),
-    s = n(147913),
-    l = n(626135),
-    u = n(709054),
-    c = n(981631);
-function d(e, t, n) {
+n(47120), n(653041);
+var r = n(31775),
+    i = n.n(r),
+    a = n(147913),
+    s = n(626135),
+    o = n(709054),
+    l = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,20 +18,15 @@ function d(e, t, n) {
         e
     );
 }
-let _ = 60000,
-    E = 1000,
-    f = 10,
-    h = 2000,
-    p = 500;
-class m extends s.Z {
+class c extends a.Z {
     handleMessageBecameVisible(e) {
         let { messageId: t } = e;
         if (null != this.currentlyVisibleMessageTimers[t] || this.viewsInCurrentChannel.has(t)) return;
         let n = this.recentViewTimes.get(t);
-        if (null != n && Date.now() - n < _) return;
+        if (null != n && Date.now() - n < 60000) return;
         let r = setTimeout(() => {
             delete this.currentlyVisibleMessageTimers[t], this.viewsInCurrentChannel.add(t), this.recentViewTimes.set(t, Date.now()), this.bufferViewTrack(e);
-        }, E);
+        }, 1000);
         this.currentlyVisibleMessageTimers[t] = r;
     }
     handleMessageLostVisibility(e) {
@@ -42,7 +36,7 @@ class m extends s.Z {
     handleMessageListVisibilityChange(e) {
         for (let t of e) this.handleMessageBecameVisible(t);
         let t = new Set(e.map((e) => e.messageId));
-        for (let e of u.default.keys(this.currentlyVisibleMessageTimers)) !t.has(e) && this.handleMessageLostVisibility(e);
+        for (let e of o.default.keys(this.currentlyVisibleMessageTimers)) !t.has(e) && this.handleMessageLostVisibility(e);
     }
     handleChannelSelect() {
         for (let e of Object.values(this.currentlyVisibleMessageTimers)) clearTimeout(e);
@@ -50,7 +44,7 @@ class m extends s.Z {
     }
     drainBuffer() {
         for (let e of this.batchBuffer)
-            l.default.track(c.rMx.ANNOUNCEMENT_MESSAGE_VIEWED, {
+            s.default.track(l.rMx.ANNOUNCEMENT_MESSAGE_VIEWED, {
                 message_id: e.messageId,
                 channel_id: e.channelId,
                 guild_id: e.guildId,
@@ -60,23 +54,23 @@ class m extends s.Z {
         (this.batchBuffer = []), null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null));
     }
     bufferViewTrack(e) {
-        this.batchBuffer.length >= f && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), h));
+        this.batchBuffer.length >= 10 && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2000));
     }
     constructor(...e) {
         super(...e),
-            d(this, 'currentlyVisibleMessageTimers', {}),
-            d(this, 'viewsInCurrentChannel', new Set()),
-            d(
+            u(this, 'currentlyVisibleMessageTimers', {}),
+            u(this, 'viewsInCurrentChannel', new Set()),
+            u(
                 this,
                 'recentViewTimes',
-                new (o())({
-                    max: p,
-                    maxAge: _
+                new (i())({
+                    max: 500,
+                    maxAge: 60000
                 })
             ),
-            d(this, 'batchBuffer', []),
-            d(this, 'batchTimerId', null),
-            d(this, 'actions', { CHANNEL_SELECT: () => this.handleChannelSelect() });
+            u(this, 'batchBuffer', []),
+            u(this, 'batchTimerId', null),
+            u(this, 'actions', { CHANNEL_SELECT: () => this.handleChannelSelect() });
     }
 }
-t.Z = new m();
+t.Z = new c();

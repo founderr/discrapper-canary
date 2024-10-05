@@ -1,12 +1,7 @@
 var r = n(903425),
-    i = n(661233),
-    a = '[object AsyncFunction]',
-    o = '[object Function]',
-    s = '[object GeneratorFunction]',
-    l = '[object Proxy]';
-function u(e) {
+    i = n(661233);
+e.exports = function (e) {
     if (!i(e)) return !1;
     var t = r(e);
-    return t == o || t == s || t == a || t == l;
-}
-e.exports = u;
+    return '[object Function]' == t || '[object GeneratorFunction]' == t || '[object AsyncFunction]' == t || '[object Proxy]' == t;
+};

@@ -1,50 +1,45 @@
 n.d(t, {
     s: function () {
-        return f;
+        return d;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(1561),
+    s = n.n(a),
+    o = n(1561),
     l = n(993365),
     u = n(593270);
 function c(e) {
-    switch (e) {
-        case 'tab':
-        default:
-            return u.tabContainer;
-        case 'pill':
-            return u.pillContainer;
-    }
-}
-function d(e) {
-    switch (e) {
-        case 'tab':
-        default:
-            return u.tabItem;
-        case 'pill':
-            return u.pillItem;
-    }
-}
-function _(e) {
-    switch (e) {
-        case 'tab':
-        default:
-            return u.tabItemSelected;
-        case 'pill':
-            return u.pillItemSelected;
-    }
-}
-function E(e) {
-    let { option: t, selected: n, onClick: a, look: u, className: c, selectedClassName: E } = e,
-        f = { [_(u)]: n };
-    null != E && (f[E] = n);
-    let h = i.useCallback((e) => a(t, e), [a, t]);
-    return (0, r.jsx)(s.P, {
-        className: o()(d(u), c, f),
-        onClick: h,
+    let { option: t, selected: n, onClick: a, look: c, className: d, selectedClassName: _ } = e,
+        E = {
+            [(function (e) {
+                switch (e) {
+                    case 'tab':
+                    default:
+                        return u.tabItemSelected;
+                    case 'pill':
+                        return u.pillItemSelected;
+                }
+            })(c)]: n
+        };
+    null != _ && (E[_] = n);
+    let f = i.useCallback((e) => a(t, e), [a, t]);
+    return (0, r.jsx)(o.P, {
+        className: s()(
+            (function (e) {
+                switch (e) {
+                    case 'tab':
+                    default:
+                        return u.tabItem;
+                    case 'pill':
+                        return u.pillItem;
+                }
+            })(c),
+            d,
+            E
+        ),
+        onClick: f,
         children: (0, r.jsx)(l.x, {
             variant: 'text-sm/medium',
             color: 'none',
@@ -52,29 +47,40 @@ function E(e) {
         })
     });
 }
-function f(e) {
-    let { options: t, value: n, onChange: a, look: s = 'tab', className: l, optionClassName: u, selectedOptionClassName: d } = e,
-        _ = i.useCallback(
+function d(e) {
+    let { options: t, value: n, onChange: a, look: o = 'tab', className: l, optionClassName: d, selectedOptionClassName: _ } = e,
+        E = i.useCallback(
             (e) => {
                 var t;
                 let i = n === e.value;
                 return (0, r.jsx)(
-                    E,
+                    c,
                     {
                         selected: i,
                         option: e,
-                        look: s,
+                        look: o,
                         onClick: a,
-                        className: u,
-                        selectedClassName: d
+                        className: d,
+                        selectedClassName: _
                     },
                     null !== (t = e.key) && void 0 !== t ? t : String(e.value)
                 );
             },
-            [n, s, a, u, d]
+            [n, o, a, d, _]
         );
     return (0, r.jsx)('div', {
-        className: o()(c(s), l),
-        children: t.map(_)
+        className: s()(
+            (function (e) {
+                switch (e) {
+                    case 'tab':
+                    default:
+                        return u.tabContainer;
+                    case 'pill':
+                        return u.pillContainer;
+                }
+            })(o),
+            l
+        ),
+        children: t.map(E)
     });
 }

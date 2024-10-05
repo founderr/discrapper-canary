@@ -1,9 +1,8 @@
-var r;
+var r, i;
 n.d(t, {
     P: function () {
         return r;
     }
 }),
-    !(function (e) {
-        (e.BLOCKED = 'blocked'), (e.FLAGGED = 'flagged');
-    })(r || (r = {}));
+    ((i = r || (r = {})).BLOCKED = 'blocked'),
+    (i.FLAGGED = 'flagged');

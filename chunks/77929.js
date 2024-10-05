@@ -1,10 +1,6 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.COMMENT(/\(\*/, /\*\)/),
         n = {
-            className: 'attribute',
-            begin: /^[ ]*[a-zA-Z]+([\s_-]+[a-zA-Z]+)*/
-        },
-        r = {
             begin: /=/,
             end: /[.;]/,
             contains: [
@@ -29,7 +25,13 @@ function t(e) {
     return {
         name: 'Extended Backus-Naur Form',
         illegal: /\S/,
-        contains: [t, n, r]
+        contains: [
+            t,
+            {
+                className: 'attribute',
+                begin: /^[ ]*[a-zA-Z]+([\s_-]+[a-zA-Z]+)*/
+            },
+            n
+        ]
     };
-}
-e.exports = t;
+};

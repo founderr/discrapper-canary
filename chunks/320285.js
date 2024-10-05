@@ -1,9 +1,10 @@
-var r;
+var i, a;
 n.d(t, {
     p: function () {
-        return r;
+        return i;
     }
 }),
-    !(function (e) {
-        (e.RAID = 'raid'), (e.MENTION_RAID = 'mention_raid'), (e.ACTIVITY_ALERTS_ENABLED = 'activity_alerts_enabled'), (e.INTERACTION_BLOCKED = 'interaction_blocked');
-    })(r || (r = {}));
+    ((a = i || (i = {})).RAID = 'raid'),
+    (a.MENTION_RAID = 'mention_raid'),
+    (a.ACTIVITY_ALERTS_ENABLED = 'activity_alerts_enabled'),
+    (a.INTERACTION_BLOCKED = 'interaction_blocked');

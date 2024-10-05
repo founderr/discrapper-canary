@@ -1,8 +1,8 @@
 var r,
     i = n(442837),
     a = n(570140),
-    o = n(41776),
-    s = n(222677),
+    s = n(41776),
+    o = n(222677),
     l = n(598077),
     u = n(592125),
     c = n(594174);
@@ -34,30 +34,22 @@ class E {
         d(this, 'users', void 0), d(this, 'fetched', void 0), (this.fetched = !1), (this.users = {});
     }
 }
-function f() {
-    _ = {};
-}
-function h(e) {
+function f(e) {
     let { type: t, messageId: n, userId: r, emoji: i, reactionType: a } = e,
-        o = E.ensure(n, i, a);
+        s = E.ensure(n, i, a);
     if ('MESSAGE_REACTION_ADD' === t) {
         let e = c.default.getUser(r);
-        null != e && (o.users[r] = e);
-    } else delete o.users[r];
+        null != e && (s.users[r] = e);
+    } else delete s.users[r];
 }
-function p(e) {
-    let { messageId: t, users: n, emoji: r, reactionType: i } = e,
-        a = E.ensure(t, r, i);
-    n.forEach((e) => (a.users[e.id] = new l.Z(e)));
-}
-class m extends (r = i.ZP.Store) {
+class h extends (r = i.ZP.Store) {
     getReactions(e, t, n, r, i) {
         let a = E.ensure(t, n, i);
         if (!a.fetched) {
             let l = u.Z.getChannel(e),
                 c = null != l ? l.getGuildId() : null;
-            if (null != c && o.Z.isLurking(c)) return;
-            s.U0({
+            if (null != c && s.Z.isLurking(c)) return;
+            o.U0({
                 channelId: e,
                 messageId: t,
                 emoji: n,
@@ -69,10 +61,16 @@ class m extends (r = i.ZP.Store) {
         return a.users;
     }
 }
-d(m, 'displayName', 'MessageReactionsStore'),
-    (t.Z = new m(a.Z, {
-        CONNECTION_OPEN: f,
-        MESSAGE_REACTION_ADD: h,
-        MESSAGE_REACTION_REMOVE: h,
-        MESSAGE_REACTION_ADD_USERS: p
+d(h, 'displayName', 'MessageReactionsStore'),
+    (t.Z = new h(a.Z, {
+        CONNECTION_OPEN: function () {
+            _ = {};
+        },
+        MESSAGE_REACTION_ADD: f,
+        MESSAGE_REACTION_REMOVE: f,
+        MESSAGE_REACTION_ADD_USERS: function (e) {
+            let { messageId: t, users: n, emoji: r, reactionType: i } = e,
+                a = E.ensure(t, r, i);
+            n.forEach((e) => (a.users[e.id] = new l.Z(e)));
+        }
     }));

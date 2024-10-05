@@ -1,37 +1,33 @@
-var r,
-    i = n(442837),
-    a = n(570140),
-    o = n(186901);
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = null,
-    u = [o.ff.REDISTRIBUTABLE_INSTALL_FAILED, o.ff.POST_INSTALL_FAILED, o.ff.POST_INSTALL_CANCELLED],
-    c = [o.ff.APPLICATION_NOT_FOUND, o.ff.APPLICATION_LOAD_FAILED, o.ff.INTERRUPTED, o.ff.DESERIALIZATION_FAILED];
-function d(e) {
-    let { error: t } = e;
-    l = null != t.code && c.includes(t.code) ? null : t;
-}
-function _() {
-    null != l && null != l.code && u.includes(l.code) && (l = null);
-}
-class E extends (r = i.ZP.Store) {
+var i,
+    a,
+    s,
+    l,
+    r = n(442837),
+    o = n(570140),
+    c = n(186901);
+let d = null,
+    u = [c.ff.REDISTRIBUTABLE_INSTALL_FAILED, c.ff.POST_INSTALL_FAILED, c.ff.POST_INSTALL_CANCELLED],
+    _ = [c.ff.APPLICATION_NOT_FOUND, c.ff.APPLICATION_LOAD_FAILED, c.ff.INTERRUPTED, c.ff.DESERIALIZATION_FAILED];
+class E extends (l = r.ZP.Store) {
     getLastError() {
-        return l;
+        return d;
     }
 }
-s(E, 'displayName', 'DispatchApplicationErrorStore'),
-    (t.Z = new E(a.Z, {
-        DISPATCH_APPLICATION_LAUNCH_SETUP_START: _,
-        DISPATCH_APPLICATION_ERROR: d
+(s = 'DispatchApplicationErrorStore'),
+    (a = 'displayName') in (i = E)
+        ? Object.defineProperty(i, a, {
+              value: s,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (i[a] = s),
+    (t.Z = new E(o.Z, {
+        DISPATCH_APPLICATION_LAUNCH_SETUP_START: function () {
+            null != d && null != d.code && u.includes(d.code) && (d = null);
+        },
+        DISPATCH_APPLICATION_ERROR: function (e) {
+            let { error: t } = e;
+            d = null != t.code && _.includes(t.code) ? null : t;
+        }
     }));

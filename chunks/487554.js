@@ -3,67 +3,59 @@ n.d(t, {
         return r;
     }
 });
-var r,
-    i,
-    a = n(442837),
-    o = n(570140);
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-!(function (e) {
-    (e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.FAILED = 3)] = 'FAILED');
-})(r || (r = {}));
-let l = {},
-    u = {};
-function c() {
-    (l = {}), (u = {});
-}
-function d(e) {
-    let { threadId: t } = e;
-    u[t] = 1;
-}
-function _(e) {
-    let { threadId: t, mediaPostEmbed: n } = e;
-    (l = {
-        ...l,
-        [t]: n
-    }),
-        (u[t] = 2);
-}
-function E(e) {
-    let { threadId: t } = e;
-    u[t] = 3;
-}
-function f(e) {
-    !e.isSwitchingAccount && ((l = {}), (u = {}));
-}
-class h extends (i = a.ZP.Store) {
+var i,
+    a,
+    s,
+    l,
+    r,
+    o,
+    c = n(442837),
+    d = n(570140);
+((i = r || (r = {}))[(i.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (i[(i.FETCHING = 1)] = 'FETCHING'), (i[(i.FETCHED = 2)] = 'FETCHED'), (i[(i.FAILED = 3)] = 'FAILED');
+let u = {},
+    _ = {};
+class E extends (o = c.ZP.Store) {
     getMediaPostEmbed(e) {
-        if (null != e) return l[e];
+        if (null != e) return u[e];
     }
     getEmbedFetchState(e) {
         var t;
-        return null !== (t = u[e]) && void 0 !== t ? t : 0;
+        return null !== (t = _[e]) && void 0 !== t ? t : 0;
     }
     getMediaPostEmbeds() {
-        return l;
+        return u;
     }
 }
-s(h, 'displayName', 'MediaPostEmbedStore'),
-    (t.Z = new h(o.Z, {
-        CONNECTION_OPEN: c,
-        MEDIA_POST_EMBED_FETCH: d,
-        MEDIA_POST_EMBED_FETCH_SUCCESS: _,
-        MEDIA_POST_EMBED_FETCH_FAILURE: E,
-        LOGOUT: f
+(l = 'MediaPostEmbedStore'),
+    (s = 'displayName') in (a = E)
+        ? Object.defineProperty(a, s, {
+              value: l,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (a[s] = l),
+    (t.Z = new E(d.Z, {
+        CONNECTION_OPEN: function () {
+            (u = {}), (_ = {});
+        },
+        MEDIA_POST_EMBED_FETCH: function (e) {
+            let { threadId: t } = e;
+            _[t] = 1;
+        },
+        MEDIA_POST_EMBED_FETCH_SUCCESS: function (e) {
+            let { threadId: t, mediaPostEmbed: n } = e;
+            (u = {
+                ...u,
+                [t]: n
+            }),
+                (_[t] = 2);
+        },
+        MEDIA_POST_EMBED_FETCH_FAILURE: function (e) {
+            let { threadId: t } = e;
+            _[t] = 3;
+        },
+        LOGOUT: function (e) {
+            !e.isSwitchingAccount && ((u = {}), (_ = {}));
+        }
     }));

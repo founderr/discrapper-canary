@@ -1,8 +1,8 @@
 var r = n(161581),
     i = n(581031),
     a = n(325008),
-    o = n(212036),
-    s = n(539459),
+    s = n(212036),
+    o = n(539459),
     l = n(251069),
     u = n(4340),
     c = n(90338),
@@ -12,199 +12,197 @@ var r = n(161581),
     f = n(552028),
     h = n(646328),
     p = n(339399),
-    m = n(144748),
-    I = n(276321),
+    I = n(144748),
+    m = n(276321),
     T = n(537443).f,
-    g = n(692994),
-    S = n(175440),
+    S = n(692994),
+    g = n(175440),
     A = n(865312),
-    v = n(644659),
-    N = s.PROPER,
-    O = s.CONFIGURABLE,
-    R = 'ArrayBuffer',
+    N = n(644659),
+    O = o.PROPER,
+    R = o.CONFIGURABLE,
+    v = 'ArrayBuffer',
     C = 'DataView',
-    y = 'prototype',
-    L = 'Wrong length',
-    b = 'Wrong index',
-    D = v.getterFor(R),
-    M = v.getterFor(C),
-    P = v.set,
-    U = r[R],
-    w = U,
-    x = w && w[y],
-    G = r[C],
-    k = G && G[y],
-    B = Object.prototype,
-    F = r.Array,
-    Z = r.RangeError,
-    V = i(g),
+    L = 'prototype',
+    D = 'Wrong index',
+    y = N.getterFor(v),
+    b = N.getterFor(C),
+    M = N.set,
+    P = r[v],
+    U = P,
+    w = U && U[L],
+    x = r[C],
+    G = x && x[L],
+    k = Object.prototype,
+    B = r.Array,
+    F = r.RangeError,
+    V = i(S),
     H = i([].reverse),
-    Y = p.pack,
-    j = p.unpack,
-    W = function (e) {
+    Z = p.pack,
+    Y = p.unpack,
+    j = function (e) {
         return [255 & e];
     },
-    K = function (e) {
+    W = function (e) {
         return [255 & e, (e >> 8) & 255];
     },
-    z = function (e) {
+    K = function (e) {
         return [255 & e, (e >> 8) & 255, (e >> 16) & 255, (e >> 24) & 255];
     },
-    q = function (e) {
+    z = function (e) {
         return (e[3] << 24) | (e[2] << 16) | (e[1] << 8) | e[0];
     },
+    q = function (e) {
+        return Z(e, 23, 4);
+    },
     Q = function (e) {
-        return Y(e, 23, 4);
+        return Z(e, 52, 8);
     },
-    X = function (e) {
-        return Y(e, 52, 8);
-    },
-    $ = function (e, t, n) {
-        u(e[y], t, {
+    X = function (e, t, n) {
+        u(e[L], t, {
             configurable: !0,
             get: function () {
                 return n(this)[t];
             }
         });
     },
-    J = function (e, t, n, r) {
-        var i = M(e),
-            a = h(n),
-            o = !!r;
-        if (a + t > i.byteLength) throw Z(b);
+    $ = function (e, t, n, r) {
+        var i = b(e),
+            a = h(n);
+        if (a + t > i.byteLength) throw F(D);
         var s = i.bytes,
-            l = a + i.byteOffset,
-            u = S(s, l, l + t);
-        return o ? u : H(u);
+            o = a + i.byteOffset,
+            l = g(s, o, o + t);
+        return r ? l : H(l);
     },
-    ee = function (e, t, n, r, i, a) {
-        var o = M(e),
-            s = h(n),
+    J = function (e, t, n, r, i, a) {
+        var s = b(e),
+            o = h(n),
             l = r(+i),
             u = !!a;
-        if (s + t > o.byteLength) throw Z(b);
-        for (var c = o.bytes, d = s + o.byteOffset, _ = 0; _ < t; _++) c[d + _] = l[u ? _ : t - _ - 1];
+        if (o + t > s.byteLength) throw F(D);
+        for (var c = s.bytes, d = o + s.byteOffset, _ = 0; _ < t; _++) c[d + _] = l[u ? _ : t - _ - 1];
     };
-if (o) {
-    var et = N && U.name !== R;
+if (s) {
+    var ee = O && P.name !== v;
     if (
         !d(function () {
-            U(1);
+            P(1);
         }) ||
         !d(function () {
-            new U(-1);
+            new P(-1);
         }) ||
         d(function () {
-            return new U(), new U(1.5), new U(NaN), 1 !== U.length || (et && !O);
+            return new P(), new P(1.5), new P(NaN), 1 !== P.length || (ee && !R);
         })
     ) {
-        (w = function (e) {
-            return _(this, x), new U(h(e));
-        })[y] = x;
-        for (var en, er = T(U), ei = 0; er.length > ei; ) !((en = er[ei++]) in w) && l(w, en, U[en]);
-        x.constructor = w;
-    } else et && O && l(U, 'name', R);
-    I && m(k) !== B && I(k, B);
-    var ea = new G(new w(2)),
-        eo = i(k.setInt8);
-    ea.setInt8(0, 2147483648),
-        ea.setInt8(1, 2147483649),
-        (ea.getInt8(0) || !ea.getInt8(1)) &&
+        (U = function (e) {
+            return _(this, w), new P(h(e));
+        })[L] = w;
+        for (var et, en = T(P), er = 0; en.length > er; ) !((et = en[er++]) in U) && l(U, et, P[et]);
+        w.constructor = U;
+    } else ee && R && l(P, 'name', v);
+    m && I(G) !== k && m(G, k);
+    var ei = new x(new U(2)),
+        ea = i(G.setInt8);
+    ei.setInt8(0, 2147483648),
+        ei.setInt8(1, 2147483649),
+        (ei.getInt8(0) || !ei.getInt8(1)) &&
             c(
-                k,
+                G,
                 {
                     setInt8: function (e, t) {
-                        eo(this, e, (t << 24) >> 24);
+                        ea(this, e, (t << 24) >> 24);
                     },
                     setUint8: function (e, t) {
-                        eo(this, e, (t << 24) >> 24);
+                        ea(this, e, (t << 24) >> 24);
                     }
                 },
                 { unsafe: !0 }
             );
 } else
-    (x = (w = function (e) {
-        _(this, x);
+    (w = (U = function (e) {
+        _(this, w);
         var t = h(e);
-        P(this, {
-            type: R,
-            bytes: V(F(t), 0),
+        M(this, {
+            type: v,
+            bytes: V(B(t), 0),
             byteLength: t
         }),
             !a && ((this.byteLength = t), (this.detached = !1));
-    })[y]),
-        (k = (G = function (e, t, n) {
-            _(this, k), _(e, x);
-            var r = D(e),
+    })[L]),
+        (G = (x = function (e, t, n) {
+            _(this, G), _(e, w);
+            var r = y(e),
                 i = r.byteLength,
-                o = E(t);
-            if (o < 0 || o > i) throw Z('Wrong offset');
-            if (((n = void 0 === n ? i - o : f(n)), o + n > i)) throw Z(L);
-            P(this, {
+                s = E(t);
+            if (s < 0 || s > i) throw F('Wrong offset');
+            if (((n = void 0 === n ? i - s : f(n)), s + n > i)) throw F('Wrong length');
+            M(this, {
                 type: C,
                 buffer: e,
                 byteLength: n,
-                byteOffset: o,
+                byteOffset: s,
                 bytes: r.bytes
             }),
-                !a && ((this.buffer = e), (this.byteLength = n), (this.byteOffset = o));
-        })[y]),
-        a && ($(w, 'byteLength', D), $(G, 'buffer', M), $(G, 'byteLength', M), $(G, 'byteOffset', M)),
-        c(k, {
+                !a && ((this.buffer = e), (this.byteLength = n), (this.byteOffset = s));
+        })[L]),
+        a && (X(U, 'byteLength', y), X(x, 'buffer', b), X(x, 'byteLength', b), X(x, 'byteOffset', b)),
+        c(G, {
             getInt8: function (e) {
-                return (J(this, 1, e)[0] << 24) >> 24;
+                return ($(this, 1, e)[0] << 24) >> 24;
             },
             getUint8: function (e) {
-                return J(this, 1, e)[0];
+                return $(this, 1, e)[0];
             },
             getInt16: function (e) {
-                var t = J(this, 2, e, arguments.length > 1 && arguments[1]);
+                var t = $(this, 2, e, arguments.length > 1 && arguments[1]);
                 return (((t[1] << 8) | t[0]) << 16) >> 16;
             },
             getUint16: function (e) {
-                var t = J(this, 2, e, arguments.length > 1 && arguments[1]);
+                var t = $(this, 2, e, arguments.length > 1 && arguments[1]);
                 return (t[1] << 8) | t[0];
             },
             getInt32: function (e) {
-                return q(J(this, 4, e, arguments.length > 1 && arguments[1]));
+                return z($(this, 4, e, arguments.length > 1 && arguments[1]));
             },
             getUint32: function (e) {
-                return q(J(this, 4, e, arguments.length > 1 && arguments[1])) >>> 0;
+                return z($(this, 4, e, arguments.length > 1 && arguments[1])) >>> 0;
             },
             getFloat32: function (e) {
-                return j(J(this, 4, e, arguments.length > 1 && arguments[1]), 23);
+                return Y($(this, 4, e, arguments.length > 1 && arguments[1]), 23);
             },
             getFloat64: function (e) {
-                return j(J(this, 8, e, arguments.length > 1 && arguments[1]), 52);
+                return Y($(this, 8, e, arguments.length > 1 && arguments[1]), 52);
             },
             setInt8: function (e, t) {
-                ee(this, 1, e, W, t);
+                J(this, 1, e, j, t);
             },
             setUint8: function (e, t) {
-                ee(this, 1, e, W, t);
+                J(this, 1, e, j, t);
             },
             setInt16: function (e, t) {
-                ee(this, 2, e, K, t, arguments.length > 2 && arguments[2]);
+                J(this, 2, e, W, t, arguments.length > 2 && arguments[2]);
             },
             setUint16: function (e, t) {
-                ee(this, 2, e, K, t, arguments.length > 2 && arguments[2]);
+                J(this, 2, e, W, t, arguments.length > 2 && arguments[2]);
             },
             setInt32: function (e, t) {
-                ee(this, 4, e, z, t, arguments.length > 2 && arguments[2]);
+                J(this, 4, e, K, t, arguments.length > 2 && arguments[2]);
             },
             setUint32: function (e, t) {
-                ee(this, 4, e, z, t, arguments.length > 2 && arguments[2]);
+                J(this, 4, e, K, t, arguments.length > 2 && arguments[2]);
             },
             setFloat32: function (e, t) {
-                ee(this, 4, e, Q, t, arguments.length > 2 && arguments[2]);
+                J(this, 4, e, q, t, arguments.length > 2 && arguments[2]);
             },
             setFloat64: function (e, t) {
-                ee(this, 8, e, X, t, arguments.length > 2 && arguments[2]);
+                J(this, 8, e, Q, t, arguments.length > 2 && arguments[2]);
             }
         });
-A(w, R),
-    A(G, C),
+A(U, v),
+    A(x, C),
     (e.exports = {
-        ArrayBuffer: w,
-        DataView: G
+        ArrayBuffer: U,
+        DataView: x
     });

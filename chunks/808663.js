@@ -1,18 +1,5 @@
-var r = n(653041);
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a {
+n(653041);
+t.Z = new (class e {
     enqueue(e) {
         this.queue.push(e);
     }
@@ -23,7 +10,16 @@ class a {
         }
     }
     constructor() {
-        i(this, 'queue', []);
+        var e, t, n;
+        (e = this),
+            (n = []),
+            (t = 'queue') in e
+                ? Object.defineProperty(e, t, {
+                      value: n,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (e[t] = n);
     }
-}
-t.Z = new a();
+})();

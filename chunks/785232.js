@@ -1,30 +1,29 @@
-var r = n(735250);
+var l = n(735250);
 n(470079);
-var i = n(442837),
-    a = n(481060),
-    o = n(289823),
-    s = n(594174);
-function l(e) {
-    let { recipients: t, size: n, status: l, isTyping: u, className: c, ...d } = e,
-        _ = a.AvatarSizeSpecs[n],
-        E = (0, i.Wu)(
-            [s.default],
+var a = n(442837),
+    s = n(481060),
+    i = n(289823),
+    r = n(594174);
+t.Z = function (e) {
+    let { recipients: t, size: n, status: o, isTyping: c, className: u, ...d } = e,
+        h = s.AvatarSizeSpecs[n],
+        _ = (0, a.Wu)(
+            [r.default],
             () =>
                 t.slice(0, 2).map((e) => {
-                    let t = s.default.getUser(e);
-                    if (null != t) return t.getAvatarURL(void 0, _.size, !1);
+                    let t = r.default.getUser(e);
+                    if (null != t) return t.getAvatarURL(void 0, h.size, !1);
                 }),
-            [t, _.size]
+            [t, h.size]
         );
-    return (0, r.jsx)(o.Z, {
+    return (0, l.jsx)(i.Z, {
         'aria-label': d['aria-label'],
         'aria-hidden': d['aria-hidden'],
-        backSrc: E[0],
-        frontSrc: E[1],
+        backSrc: _[0],
+        frontSrc: _[1],
         size: n,
-        status: l,
-        isTyping: null != u && u,
-        className: c
+        status: o,
+        isTyping: null != c && c,
+        className: u
     });
-}
-t.Z = l;
+};

@@ -1,25 +1,25 @@
 n.d(t, {
     a: function () {
-        return x;
+        return v;
     }
-});
+}),
+    n(47120);
 var r,
     i,
-    a = n(47120);
-var o = n(735250),
+    a = n(735250),
     s = n(470079),
-    l = n(120356),
-    u = n.n(l),
-    c = n(96355);
-var d = n(47759),
-    _ = n.n(d),
-    E = n(212433),
-    f = n(772848),
-    h = n(722770),
-    p = n(846519),
-    m = n(215569),
+    o = n(120356),
+    l = n.n(o),
+    u = n(96355),
+    c = n(47759),
+    d = n.n(c),
+    _ = n(212433),
+    E = n(772848),
+    f = n(722770),
+    h = n(846519),
+    p = n(215569),
     I = n(225772);
-function T(e, t, n) {
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,37 +32,28 @@ function T(e, t, n) {
         e
     );
 }
-let g = 10800000,
-    S = 18000000,
-    A = 16,
-    v = 24,
-    N = 4,
-    O = 48,
-    R = 2,
-    C = {
+let T = {
         friction: 13,
         tension: 240,
         duration: 150
     },
-    y = {
+    S = {
         duration: 150,
         friction: 3
     },
-    L = {
+    g = {
         friction: 30,
         tension: 900,
         mass: 1
     },
-    b = {
+    A = {
         duration: 150,
         friction: 10,
         tension: 100,
         mass: 1
     },
-    D = 'M0 24C0 16.5449 0 12.8174 1.21793 9.87706C2.84183 5.95662 5.95662 2.84183 9.87706 1.21793C12.8174 0 16.5449 0 24 0C31.4551 0 35.1826 0 38.1229 1.21793C42.0434 2.84183 45.1582 5.95662 46.7821 9.87706C48 12.8174 48 16.5449 48 24C48 31.4551 48 35.1826 46.7821 38.1229C45.1582 42.0434 42.0434 45.1582 38.1229 46.7821C35.1826 48 31.4551 48 24 48C16.5449 48 12.8174 48 9.87706 46.7821C5.95662 45.1582 2.84183 42.0434 1.21793 38.1229C0 35.1826 0 31.4551 0 24Z',
-    M = 'M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z',
-    P = (null === (r = window.SVGPathElement) || void 0 === r ? void 0 : r.prototype.getTotalLength) != null ? (0, c.interpolate)(M, D, { maxSegmentLength: 1.5 }) : (e) => ''.concat(e);
-class U extends s.Component {
+    N = (null === (r = window.SVGPathElement) || void 0 === r ? void 0 : r.prototype.getTotalLength) != null ? (0, u.interpolate)('M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z', 'M0 24C0 16.5449 0 12.8174 1.21793 9.87706C2.84183 5.95662 5.95662 2.84183 9.87706 1.21793C12.8174 0 16.5449 0 24 0C31.4551 0 35.1826 0 38.1229 1.21793C42.0434 2.84183 45.1582 5.95662 46.7821 9.87706C48 12.8174 48 16.5449 48 24C48 31.4551 48 35.1826 46.7821 38.1229C45.1582 42.0434 42.0434 45.1582 38.1229 46.7821C35.1826 48 31.4551 48 24 48C16.5449 48 12.8174 48 9.87706 46.7821C5.95662 45.1582 2.84183 42.0434 1.21793 38.1229C0 35.1826 0 31.4551 0 24Z', { maxSegmentLength: 1.5 }) : (e) => ''.concat(e);
+class O extends s.Component {
     componentDidMount() {
         this.forceUpdate();
     }
@@ -80,36 +71,36 @@ class U extends s.Component {
     }
     render() {
         let { children: e, className: t, animatedStyle: n } = this.props;
-        return (0, o.jsx)(E.animated.div, {
+        return (0, a.jsx)(_.animated.div, {
             className: t,
             style: n,
             children: e
         });
     }
     constructor(...e) {
-        super(...e), T(this, 'timeoutId', void 0);
+        super(...e), m(this, 'timeoutId', void 0);
     }
 }
-function w(e) {
+function R(e) {
     let { selected: t, upperBadge: n, lowerBadge: r, highlight: i } = e;
     return t || null != n || null != r || !!i;
 }
-class x extends (i = s.Component) {
+class v extends (i = s.Component) {
     static getDerivedStateFromProps(e, t) {
-        let { hasRenderedBadge: n, upperBadgeMask: r, lowerBadgeMask: i, borderRadiusMask: a, renderComplex: o } = t,
-            { upperBadge: s, lowerBadge: l } = e,
+        let { hasRenderedBadge: n, upperBadgeMask: r, lowerBadgeMask: i, borderRadiusMask: a, renderComplex: s } = t,
+            { upperBadge: o, lowerBadge: l } = e,
             u = !1;
         return (
-            ((null != s && null == r) || (null != l && null == i)) && ((u = !0), (n = !0), (r = new E.Controller({ spring: 0 })), (i = new E.Controller({ spring: 0 }))),
-            w(e) && null == a && ((u = !0), (a = new E.Controller({ spring: 0 }))),
-            !o && w(e) && ((u = !0), (o = !0)),
+            ((null != o && null == r) || (null != l && null == i)) && ((u = !0), (n = !0), (r = new _.Controller({ spring: 0 })), (i = new _.Controller({ spring: 0 }))),
+            R(e) && null == a && ((u = !0), (a = new _.Controller({ spring: 0 }))),
+            !s && R(e) && ((u = !0), (s = !0)),
             u
                 ? {
                       hasRenderedBadge: n,
                       lowerBadgeMask: i,
                       upperBadgeMask: r,
                       borderRadiusMask: a,
-                      renderComplex: o
+                      renderComplex: s
                   }
                 : null
         );
@@ -145,14 +136,14 @@ class x extends (i = s.Component) {
     }
     componentDidUpdate(e) {
         let { selected: t, lowerBadge: n, upperBadge: r } = this.props,
-            { borderRadiusMask: i, lowerBadgeMask: a, upperBadgeMask: o, renderComplex: s } = this.state;
+            { borderRadiusMask: i, lowerBadgeMask: a, upperBadgeMask: s, renderComplex: o } = this.state;
         t && !e.selected
             ? null == i ||
               i
                   .update({
                       spring: 1,
                       immediate: !1,
-                      config: C
+                      config: T
                   })
                   .start()
             : !t &&
@@ -162,7 +153,7 @@ class x extends (i = s.Component) {
                       .update({
                           spring: 0,
                           immediate: !1,
-                          config: y
+                          config: S
                       })
                       .start()),
             null != n && null == e.lowerBadge
@@ -171,7 +162,7 @@ class x extends (i = s.Component) {
                       .update({
                           spring: 1,
                           immediate: !document.hasFocus(),
-                          config: L
+                          config: g
                       })
                       .start()
                 : null == n &&
@@ -181,33 +172,33 @@ class x extends (i = s.Component) {
                           .update({
                               spring: 0,
                               immediate: !document.hasFocus(),
-                              config: b
+                              config: A
                           })
                           .start()),
             null != r && null == e.upperBadge
-                ? null == o ||
-                  o
+                ? null == s ||
+                  s
                       .update({
                           spring: 1,
                           immediate: !document.hasFocus(),
-                          config: L
+                          config: g
                       })
                       .start()
                 : null == r &&
                   null != e.upperBadge &&
-                  (null == o ||
-                      o
+                  (null == s ||
+                      s
                           .update({
                               spring: 0,
                               immediate: !document.hasFocus(),
-                              config: b
+                              config: A
                           })
                           .start()),
-            !s || w(this.props) || this.timeout.isStarted() ? w(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(_()(g, S), this.handleTimeout);
+            !o || R(this.props) || this.timeout.isStarted() ? R(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(d()(10800000, 18000000), this.handleTimeout);
     }
     getBadgePositionInterpolation(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : A + N;
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20;
         if (null == e) return;
         let { spring: r } = e.springs;
         return r.to([0, 1], [n, 0]).to((e) => 'translate('.concat(e, ' ').concat(e * t, ')'));
@@ -217,8 +208,8 @@ class x extends (i = s.Component) {
             { lowerBadgeSize: t } = this.props;
         if (null == e) return;
         let { spring: n } = e.springs,
-            r = (null == t ? void 0 : t.width) != null ? t.width : A,
-            i = (null == t ? void 0 : t.height) != null ? t.height : A;
+            r = (null == t ? void 0 : t.width) != null ? t.width : 16,
+            i = (null == t ? void 0 : t.height) != null ? t.height : 16;
         return {
             opacity: n.to([0, 0.5, 1], [0, 0, 1]),
             transform: n.to((e) => 'translate('.concat(r - e * r, 'px, ').concat(i - e * i, 'px)'))
@@ -235,38 +226,38 @@ class x extends (i = s.Component) {
     }
     getPathInterpolation() {
         var e;
-        return null === (e = this.state.borderRadiusMask) || void 0 === e ? void 0 : e.springs.spring.to(P);
+        return null === (e = this.state.borderRadiusMask) || void 0 === e ? void 0 : e.springs.spring.to(N);
     }
     render() {
-        let { children: e, className: t, innerClassName: n, lowerBadge: r, lowerBadgeSize: i, style: a, upperBadge: l, highlight: c } = this.props,
-            { maskId: d, lowerBadgeMask: _, upperBadgeMask: f, focused: p, hasRenderedBadge: T, renderComplex: g } = this.state;
-        if (!g)
-            return (0, o.jsx)(
+        let { children: e, className: t, innerClassName: n, lowerBadge: r, lowerBadgeSize: i, style: o, upperBadge: u, highlight: c } = this.props,
+            { maskId: d, lowerBadgeMask: E, upperBadgeMask: h, focused: m, hasRenderedBadge: T, renderComplex: S } = this.state;
+        if (!S)
+            return (0, a.jsx)(
                 'div',
                 {
-                    className: u()(t, {
+                    className: l()(t, {
                         [I.wrapperSimple]: !0,
-                        [I.simpleFocused]: p
+                        [I.simpleFocused]: m
                     }),
-                    style: a,
+                    style: o,
                     onFocus: this.handleFocus,
                     onBlur: this.handleBlur,
-                    children: (0, o.jsx)(
+                    children: (0, a.jsx)(
                         'svg',
                         {
-                            width: O,
-                            height: O,
-                            viewBox: '0 0 '.concat(O, ' ').concat(O),
+                            width: 48,
+                            height: 48,
+                            viewBox: '0 0 '.concat(48, ' ').concat(48),
                             className: I.svg,
                             overflow: 'visible',
-                            children: (0, o.jsx)(
+                            children: (0, a.jsx)(
                                 'foreignObject',
                                 {
                                     x: 0,
                                     y: 0,
                                     className: n,
-                                    width: O,
-                                    height: O,
+                                    width: 48,
+                                    height: 48,
                                     children: e
                                 },
                                 'foreign-object'
@@ -277,94 +268,94 @@ class x extends (i = s.Component) {
                 },
                 'wrapper'
             );
-        let S = ''.concat(d, '-upper_badge_masks'),
-            C = ''.concat(d, '-lower_badge_masks'),
-            y = ''.concat(d, '-blob_mask'),
-            L = ''.concat(d, '-stroke_mask'),
-            b = ''.concat(d, '-highlight_mask'),
-            D = (null == i ? void 0 : i.width) != null ? i.width : A,
-            M = (null == i ? void 0 : i.height) != null ? i.height : A;
-        return (0, o.jsxs)(
+        let g = ''.concat(d, '-upper_badge_masks'),
+            A = ''.concat(d, '-lower_badge_masks'),
+            N = ''.concat(d, '-blob_mask'),
+            R = ''.concat(d, '-stroke_mask'),
+            v = ''.concat(d, '-highlight_mask'),
+            C = (null == i ? void 0 : i.width) != null ? i.width : 16,
+            L = (null == i ? void 0 : i.height) != null ? i.height : 16;
+        return (0, a.jsxs)(
             'div',
             {
-                className: u()(t, I.wrapper),
-                style: a,
+                className: l()(t, I.wrapper),
+                style: o,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 children: [
-                    (0, o.jsxs)(
+                    (0, a.jsxs)(
                         'svg',
                         {
-                            width: O,
-                            height: O,
-                            viewBox: '0 0 '.concat(O, ' ').concat(O),
-                            className: u()(I.svg, { [I.noContain]: c }),
+                            width: 48,
+                            height: 48,
+                            viewBox: '0 0 '.concat(48, ' ').concat(48),
+                            className: l()(I.svg, { [I.noContain]: c }),
                             overflow: 'visible',
                             children: [
-                                (0, o.jsxs)('defs', {
+                                (0, a.jsxs)('defs', {
                                     children: [
                                         c &&
-                                            (0, o.jsx)(E.animated.path, {
+                                            (0, a.jsx)(_.animated.path, {
                                                 d: this.getPathInterpolation(),
-                                                id: b
+                                                id: v
                                             }),
-                                        (0, o.jsx)(E.animated.path, {
+                                        (0, a.jsx)(_.animated.path, {
                                             d: this.getPathInterpolation(),
-                                            id: y
+                                            id: N
                                         }),
                                         T
-                                            ? (0, o.jsx)(E.animated.rect, {
-                                                  id: S,
-                                                  x: O - v + N,
-                                                  y: -N,
-                                                  width: v,
-                                                  height: v,
-                                                  rx: v / 2,
-                                                  ry: v / 2,
-                                                  transform: this.getBadgePositionInterpolation(f, -1)
+                                            ? (0, a.jsx)(_.animated.rect, {
+                                                  id: g,
+                                                  x: 28,
+                                                  y: -4,
+                                                  width: 24,
+                                                  height: 24,
+                                                  rx: 12,
+                                                  ry: 12,
+                                                  transform: this.getBadgePositionInterpolation(h, -1)
                                               })
                                             : null,
                                         T
-                                            ? (0, o.jsx)(E.animated.rect, {
-                                                  id: C,
-                                                  x: O - (D + 2 * N) + N,
-                                                  y: O - (M + 2 * N) + N,
-                                                  width: D + 2 * N,
-                                                  height: M + 2 * N,
-                                                  rx: v / 2,
-                                                  ry: v / 2,
-                                                  transform: this.getBadgePositionInterpolation(_, 1, D + N)
+                                            ? (0, a.jsx)(_.animated.rect, {
+                                                  id: A,
+                                                  x: 48 - (C + 8) + 4,
+                                                  y: 48 - (L + 8) + 4,
+                                                  width: C + 8,
+                                                  height: L + 8,
+                                                  rx: 12,
+                                                  ry: 12,
+                                                  transform: this.getBadgePositionInterpolation(E, 1, C + 4)
                                               })
                                             : null
                                     ]
                                 }),
-                                (0, o.jsxs)('mask', {
+                                (0, a.jsxs)('mask', {
                                     id: d,
                                     fill: 'black',
                                     x: 0,
                                     y: 0,
-                                    width: O,
-                                    height: O,
+                                    width: 48,
+                                    height: 48,
                                     children: [
                                         c &&
-                                            (0, o.jsx)('use', {
-                                                href: '#'.concat(b),
+                                            (0, a.jsx)('use', {
+                                                href: '#'.concat(v),
                                                 fill: 'black'
                                             }),
-                                        (0, o.jsx)('use', {
-                                            href: '#'.concat(y),
+                                        (0, a.jsx)('use', {
+                                            href: '#'.concat(N),
                                             fill: 'white',
-                                            className: u()({ [I.isHighlighted]: c })
+                                            className: l()({ [I.isHighlighted]: c })
                                         }),
                                         T
-                                            ? (0, o.jsxs)(o.Fragment, {
+                                            ? (0, a.jsxs)(a.Fragment, {
                                                   children: [
-                                                      (0, o.jsx)('use', {
-                                                          href: '#'.concat(S),
+                                                      (0, a.jsx)('use', {
+                                                          href: '#'.concat(g),
                                                           fill: 'black'
                                                       }),
-                                                      (0, o.jsx)('use', {
-                                                          href: '#'.concat(C),
+                                                      (0, a.jsx)('use', {
+                                                          href: '#'.concat(A),
                                                           fill: 'black'
                                                       })
                                                   ]
@@ -373,59 +364,59 @@ class x extends (i = s.Component) {
                                     ]
                                 }),
                                 T
-                                    ? (0, o.jsxs)('mask', {
-                                          id: L,
+                                    ? (0, a.jsxs)('mask', {
+                                          id: R,
                                           children: [
-                                              (0, o.jsx)('rect', {
+                                              (0, a.jsx)('rect', {
                                                   width: '150%',
                                                   height: '150%',
                                                   x: '-25%',
                                                   y: '-25%',
                                                   fill: 'white'
                                               }),
-                                              (0, o.jsx)('use', {
-                                                  href: '#'.concat(S),
+                                              (0, a.jsx)('use', {
+                                                  href: '#'.concat(g),
                                                   fill: 'black'
                                               }),
-                                              (0, o.jsx)('use', {
-                                                  href: '#'.concat(C),
+                                              (0, a.jsx)('use', {
+                                                  href: '#'.concat(A),
                                                   fill: 'black'
                                               })
                                           ]
                                       })
                                     : null,
-                                p
-                                    ? (0, o.jsxs)(s.Fragment, {
+                                m
+                                    ? (0, a.jsxs)(s.Fragment, {
                                           children: [
-                                              (0, o.jsx)('g', {
+                                              (0, a.jsx)('g', {
                                                   className: I.focusStroke,
-                                                  mask: 'url(#'.concat(L, ')'),
-                                                  children: (0, o.jsx)('use', { href: '#'.concat(y) })
+                                                  mask: 'url(#'.concat(R, ')'),
+                                                  children: (0, a.jsx)('use', { href: '#'.concat(N) })
                                               }),
-                                              (0, o.jsxs)('g', {
+                                              (0, a.jsxs)('g', {
                                                   className: I.focusFill,
-                                                  children: [null != l ? (0, o.jsx)('use', { href: '#'.concat(S) }) : null, null != r ? (0, o.jsx)('use', { href: '#'.concat(C) }) : null]
+                                                  children: [null != u ? (0, a.jsx)('use', { href: '#'.concat(g) }) : null, null != r ? (0, a.jsx)('use', { href: '#'.concat(A) }) : null]
                                               })
                                           ]
                                       })
                                     : null,
                                 c &&
-                                    (0, o.jsx)(E.animated.path, {
+                                    (0, a.jsx)(_.animated.path, {
                                         d: this.getPathInterpolation(),
-                                        stroke: h.Z.BRAND_500,
-                                        'stroke-width': R,
+                                        stroke: f.Z.BRAND_500,
+                                        'stroke-width': 2,
                                         className: I.highlight,
-                                        mask: 'url(#'.concat(L, ')')
+                                        mask: 'url(#'.concat(R, ')')
                                     }),
-                                (0, o.jsx)(
+                                (0, a.jsx)(
                                     'foreignObject',
                                     {
                                         mask: 'url(#'.concat(d, ')'),
                                         x: 0,
                                         y: 0,
                                         className: n,
-                                        width: O,
-                                        height: O,
+                                        width: 48,
+                                        height: 48,
                                         children: e
                                     },
                                     'foreign-object'
@@ -434,12 +425,12 @@ class x extends (i = s.Component) {
                         },
                         'svg'
                     ),
-                    (0, o.jsxs)(m.W, {
+                    (0, a.jsxs)(p.W, {
                         component: s.Fragment,
                         children: [
                             null != r
-                                ? (0, o.jsx)(
-                                      U,
+                                ? (0, a.jsx)(
+                                      O,
                                       {
                                           className: I.lowerBadge,
                                           animatedStyle: this.getLowerBadgeStyles(),
@@ -448,13 +439,13 @@ class x extends (i = s.Component) {
                                       'lower-badge'
                                   )
                                 : null,
-                            null != l
-                                ? (0, o.jsx)(
-                                      U,
+                            null != u
+                                ? (0, a.jsx)(
+                                      O,
                                       {
                                           className: I.upperBadge,
                                           animatedStyle: this.getUpperBadgeStyles(),
-                                          children: l
+                                          children: u
                                       },
                                       'upper-badge'
                                   )
@@ -468,29 +459,29 @@ class x extends (i = s.Component) {
     }
     constructor(...e) {
         super(...e),
-            T(this, 'timeout', new p.V7()),
-            T(this, 'state', {
+            m(this, 'timeout', new h.V7()),
+            m(this, 'state', {
                 renderComplex: !1,
                 hasRenderedBadge: !1,
-                maskId: (0, f.Z)(),
+                maskId: (0, E.Z)(),
                 focused: !1
             }),
-            T(this, 'handleTimeout', () => {
+            m(this, 'handleTimeout', () => {
                 this.timeout.stop(), this.setState({ renderComplex: !1 });
             }),
-            T(this, 'handleFocus', () => {
+            m(this, 'handleFocus', () => {
                 this.setState({ focused: !0 });
             }),
-            T(this, 'handleBlur', () => {
+            m(this, 'handleBlur', () => {
                 this.setState({ focused: !1 });
             });
     }
 }
-T(x, 'defaultProps', {
+m(v, 'defaultProps', {
     selected: !1,
     lowerBadgeSize: {
-        width: A,
-        height: A
+        width: 16,
+        height: 16
     },
     highlight: !1
 });

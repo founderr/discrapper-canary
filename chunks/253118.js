@@ -1,65 +1,64 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(904245),
-    o = n(739566),
-    s = n(834129),
-    l = n(689938);
-function u(e) {
-    let { message: t, usernameHook: u, onClickPins: c, compact: d } = e,
-        _ = (0, o.ZP)(t),
+var a = n(481060),
+    s = n(904245),
+    l = n(739566),
+    r = n(834129),
+    o = n(689938);
+function c(e) {
+    let { message: t, usernameHook: c, onClickPins: d, compact: u } = e,
+        _ = (0, l.ZP)(t),
         E = _.nick,
-        f = u(_),
-        h = () => {
+        I = c(_),
+        m = () => {
             if (null == t.messageReference) return;
             let { channel_id: e, message_id: n } = t.messageReference;
-            a.Z.jumpToMessage({
+            s.Z.jumpToMessage({
                 channelId: e,
                 messageId: n,
                 flash: !0
             });
         },
-        p = () =>
-            null != t.messageReference
-                ? null == c
-                    ? l.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({
-                          usernameHook: f,
-                          username: E,
-                          messageOnClick: h
-                      })
-                    : l.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_WITH_MESSAGE.format({
-                          usernameHook: f,
-                          username: E,
-                          pinsActionOnClick: c,
-                          messageOnClick: h
-                      })
-                : null == c
-                  ? l.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_HOOK.format({
-                        usernameHook: f,
-                        username: E
-                    })
-                  : l.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE.format({
-                        usernameHook: f,
-                        username: E,
-                        pinsActionOnClick: c
-                    }),
-        m = (0, i.useRedesignIconContext)().enabled
+        T = (0, a.useRedesignIconContext)().enabled
             ? {
-                  iconNode: (0, r.jsx)(i.PinIcon, {
+                  iconNode: (0, i.jsx)(a.PinIcon, {
                       size: 'sm',
                       color: 'currentColor'
                   })
               }
             : { icon: n(879066) };
-    return (0, r.jsx)(s.Z, {
-        ...m,
+    return (0, i.jsx)(r.Z, {
+        ...T,
         timestamp: t.timestamp,
-        compact: d,
-        children: p()
+        compact: u,
+        children:
+            null != t.messageReference
+                ? null == d
+                    ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({
+                          usernameHook: I,
+                          username: E,
+                          messageOnClick: m
+                      })
+                    : o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_WITH_MESSAGE.format({
+                          usernameHook: I,
+                          username: E,
+                          pinsActionOnClick: d,
+                          messageOnClick: m
+                      })
+                : null == d
+                  ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_HOOK.format({
+                        usernameHook: I,
+                        username: E
+                    })
+                  : o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE.format({
+                        usernameHook: I,
+                        username: E,
+                        pinsActionOnClick: d
+                    })
     });
 }

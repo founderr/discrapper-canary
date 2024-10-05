@@ -1,29 +1,15 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             className: 'keyword',
             begin: '\\$(f[asn]|t|vp[rtd]|children)'
         },
         n = {
-            className: 'literal',
-            begin: 'false|true|PI|undef'
-        },
-        r = {
             className: 'number',
             begin: '\\b\\d+(\\.\\d+)?(e-?\\d+)?',
             relevance: 0
         },
-        i = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        a = {
-            className: 'meta',
-            keywords: { keyword: 'include use' },
-            begin: 'include|use <',
-            end: '>'
-        },
-        o = {
-            begin: '[*!#%]',
-            relevance: 0
-        },
-        s = {
+        r = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        i = {
             className: 'function',
             beginKeywords: 'module function',
             end: /=|\{/,
@@ -32,7 +18,16 @@ function t(e) {
                     className: 'params',
                     begin: '\\(',
                     end: '\\)',
-                    contains: ['self', r, i, t, n]
+                    contains: [
+                        'self',
+                        n,
+                        r,
+                        t,
+                        {
+                            className: 'literal',
+                            begin: 'false|true|PI|undef'
+                        }
+                    ]
                 },
                 e.UNDERSCORE_TITLE_MODE
             ]
@@ -45,7 +40,23 @@ function t(e) {
             literal: 'false true PI undef',
             built_in: 'circle square polygon text sphere cube cylinder polyhedron translate rotate scale resize mirror multmatrix color offset hull minkowski union difference intersection abs sign sin cos tan acos asin atan atan2 floor round ceil ln log pow sqrt exp rands min max concat lookup str chr search version version_num norm cross parent_module echo import import_dxf dxf_linear_extrude linear_extrude rotate_extrude surface projection render children dxf_cross dxf_dim let assign'
         },
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, r, a, i, t, o, s]
+        contains: [
+            e.C_LINE_COMMENT_MODE,
+            e.C_BLOCK_COMMENT_MODE,
+            n,
+            {
+                className: 'meta',
+                keywords: { keyword: 'include use' },
+                begin: 'include|use <',
+                end: '>'
+            },
+            r,
+            t,
+            {
+                begin: '[*!#%]',
+                relevance: 0
+            },
+            i
+        ]
     };
-}
-e.exports = t;
+};

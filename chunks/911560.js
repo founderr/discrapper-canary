@@ -1,8 +1,8 @@
 var r = n(266067),
     i = n(544891),
     a = n(570140),
-    o = n(38618),
-    s = n(893607),
+    s = n(38618),
+    o = n(893607),
     l = n(131704),
     u = n(592125),
     c = n(944486),
@@ -10,26 +10,27 @@ var r = n(266067),
     _ = n(176505);
 let E = {},
     f = !1;
-function h() {
-    !f &&
-        ((f = !0),
-        a.Z.subscribe('CONNECTION_OPEN', () => {
-            E = {};
-            let e = c.Z.getChannelId(),
-                t = u.Z.getChannel(e);
-            null != e && null == t && p(e);
-        }));
-}
-function p(e) {
+function h(e) {
     if (null == e || e === _.V || (0, _.AB)(e) || null != u.Z.getChannel(e)) return Promise.resolve();
-    if ((h(), !o.Z.isConnected())) return Promise.resolve();
+    if (
+        (f ||
+            ((f = !0),
+            a.Z.subscribe('CONNECTION_OPEN', () => {
+                E = {};
+                let e = c.Z.getChannelId(),
+                    t = u.Z.getChannel(e);
+                null != e && null == t && h(e);
+            })),
+        !s.Z.isConnected())
+    )
+        return Promise.resolve();
     let t = E[e];
     if (null != t) return 'LOADING' === t.type ? t.promise : Promise.resolve();
     let n = (0, r.LX)(location.pathname, {
-            path: d.Z5c.CHANNEL(s.Hw.guildId(), s.Hw.channelId(), ':messageId'),
+            path: d.Z5c.CHANNEL(o.Hw.guildId(), o.Hw.channelId(), ':messageId'),
             exact: !0
         }),
-        c = i.tn
+        p = i.tn
             .get(d.ANM.CHANNEL(e))
             .then((t) => {
                 let { body: r } = t;
@@ -57,9 +58,9 @@ function p(e) {
     return (
         (E[e] = {
             type: 'LOADING',
-            promise: c
+            promise: p
         }),
-        c
+        p
     );
 }
-t.Z = { loadThread: p };
+t.Z = { loadThread: h };

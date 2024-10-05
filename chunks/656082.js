@@ -1,15 +1,18 @@
 var t = '_erd';
 function n(e) {
-    return (e[t] = {}), r(e);
-}
-function r(e) {
     return e[t];
 }
-function i(e) {
-    delete e[t];
-}
 e.exports = {
-    initState: n,
-    getState: r,
-    cleanState: i
+    initState: function (e) {
+        return (
+            (e[t] = {}),
+            (function (e) {
+                return e[t];
+            })(e)
+        );
+    },
+    getState: n,
+    cleanState: function (e) {
+        delete e[t];
+    }
 };

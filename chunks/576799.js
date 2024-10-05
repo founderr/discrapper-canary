@@ -1,76 +1,75 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 });
-var r = n(735250),
-    i = n(470079),
-    a = n(442837),
-    o = n(58540),
-    s = n(905405),
-    l = n(937889),
-    u = n(267128),
-    c = n(123145),
-    d = n(699516),
+var i = n(735250),
+    a = n(470079),
+    s = n(442837),
+    l = n(58540),
+    r = n(905405),
+    o = n(937889),
+    c = n(267128),
+    d = n(123145),
+    u = n(699516),
     _ = n(217702),
     E = n(825193);
-function f(e) {
+function I(e) {
     let { message: t, channel: n } = e,
-        u = (0, a.e7)([d.Z], () => d.Z.isBlockedForMessage(t)),
-        _ = (0, s.p)(),
-        f = i.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
-    (0, o.$)(f);
-    let p = i.useMemo(
+        I = (0, s.e7)([u.Z], () => u.Z.isBlockedForMessage(t)),
+        m = (0, r.p)(),
+        T = a.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
+    (0, l.$)(T);
+    let N = a.useMemo(
         () =>
             null != t.content && '' !== t.content
-                ? (0, l.ZP)(t, {
+                ? (0, o.ZP)(t, {
                       formatInline: !0,
-                      shouldFilterKeywords: _
+                      shouldFilterKeywords: m
                   }).content
                 : null,
-        [t, _]
+        [t, m]
     );
-    return (0, r.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: E.threadMessageAccessory,
         children: [
-            (0, r.jsx)('img', {
+            (0, i.jsx)('img', {
                 alt: '',
                 src: t.author.getAvatarURL(n.guild_id, 16),
                 className: E.threadMessageAccessoryAvatar
             }),
-            (0, r.jsx)(c.Z, {
+            (0, i.jsx)(d.Z, {
                 message: t,
                 channel: n,
                 compact: !0
             }),
-            (0, r.jsx)('div', {
+            (0, i.jsx)('div', {
                 className: E.threadMessageAccessoryPreview,
-                children: h(t, p, u)
+                children: (function (e, t, n) {
+                    let {
+                        contentPlaceholder: a,
+                        renderedContent: s,
+                        leadingIcon: l,
+                        trailingIcon: r
+                    } = (0, c.f)(e, t, n, E.threadMessageAccessoryContent, {
+                        trailingIconClass: E.threadMessageAccessoryContentTrailingIcon,
+                        leadingIconClass: E.threadMessageAccessoryContentLeadingIcon,
+                        iconSize: _.WW
+                    });
+                    return (0, i.jsxs)(i.Fragment, {
+                        children: [
+                            l,
+                            null != s
+                                ? s
+                                : (0, i.jsx)('span', {
+                                      className: E.threadMessageAccessoryPlaceholder,
+                                      children: a
+                                  }),
+                            r
+                        ]
+                    });
+                })(t, N, I)
             })
-        ]
-    });
-}
-function h(e, t, n) {
-    let {
-        contentPlaceholder: i,
-        renderedContent: a,
-        leadingIcon: o,
-        trailingIcon: s
-    } = (0, u.f)(e, t, n, E.threadMessageAccessoryContent, {
-        trailingIconClass: E.threadMessageAccessoryContentTrailingIcon,
-        leadingIconClass: E.threadMessageAccessoryContentLeadingIcon,
-        iconSize: _.WW
-    });
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            o,
-            null != a
-                ? a
-                : (0, r.jsx)('span', {
-                      className: E.threadMessageAccessoryPlaceholder,
-                      children: i
-                  }),
-            s
         ]
     });
 }

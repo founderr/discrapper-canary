@@ -1,7 +1,7 @@
 function t(e, t = {}) {
     return (t.variants = e), t;
 }
-function n(e) {
+e.exports = function (e) {
     let n = e.regex,
         r = '[A-Za-z0-9_$]+',
         i = t([
@@ -26,8 +26,8 @@ function n(e) {
             begin: /~?\/[^\/\n]+\//,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        o = t([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
-        s = t(
+        s = t([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
+        o = t(
             [
                 {
                     begin: /"""/,
@@ -68,9 +68,9 @@ function n(e) {
                 relevance: 10
             }),
             i,
-            s,
-            a,
             o,
+            a,
+            s,
             l,
             {
                 className: 'meta',
@@ -86,7 +86,7 @@ function n(e) {
                 begin: /\?/,
                 end: /:/,
                 relevance: 0,
-                contains: [i, s, a, o, 'self']
+                contains: [i, o, a, s, 'self']
             },
             {
                 className: 'symbol',
@@ -98,5 +98,4 @@ function n(e) {
         ],
         illegal: /#|<\//
     };
-}
-e.exports = n;
+};

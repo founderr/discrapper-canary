@@ -1,8 +1,9 @@
+n(47120);
 var r,
     i,
-    a = n(47120);
-var o = n(735250),
-    s = n(470079),
+    a,
+    s = n(735250),
+    o = n(470079),
     l = n(120356),
     u = n.n(l),
     c = n(481060),
@@ -21,35 +22,33 @@ function E(e, t, n) {
         e
     );
 }
-!(function (e) {
-    (e.SINGLE_AVATAR = '1'), (e.MULTIPLE_AVATAR = '2');
-})(r || (r = {}));
+((a = r || (r = {})).SINGLE_AVATAR = '1'), (a.MULTIPLE_AVATAR = '2');
 let f = {
     [c.AvatarSizes.SIZE_32]: _.avatarSmall,
     [c.AvatarSizes.SIZE_40]: _.avatarLarge
 };
-class h extends (i = s.Component) {
+class h extends (i = o.Component) {
     render() {
         let { type: e, avatarSize: t, className: n } = this.props;
         return '2' === e
-            ? (0, o.jsxs)('div', {
+            ? (0, s.jsxs)('div', {
                   className: u()(_.multiplePlaceholder, n),
                   children: [
-                      (0, o.jsxs)(d.Z, {
-                          children: [(0, o.jsx)('div', { className: u()(_.placeholderAvatar, f[t], _.avatarMasked) }), (0, o.jsx)('div', { className: u()(_.placeholderAvatar, f[t], _.avatarMasked) }), (0, o.jsx)('div', { className: u()(_.placeholderAvatar, f[t]) })]
+                      (0, s.jsxs)(d.Z, {
+                          children: [(0, s.jsx)('div', { className: u()(_.placeholderAvatar, f[t], _.avatarMasked) }), (0, s.jsx)('div', { className: u()(_.placeholderAvatar, f[t], _.avatarMasked) }), (0, s.jsx)('div', { className: u()(_.placeholderAvatar, f[t]) })]
                       }),
-                      (0, o.jsx)(d.Z, {
+                      (0, s.jsx)(d.Z, {
                           grow: 1,
                           className: _.mulitplePlaceholderUsername,
                           style: { maxWidth: this.placeholderMaxWidth }
                       })
                   ]
               })
-            : (0, o.jsxs)(d.Z, {
+            : (0, s.jsxs)(d.Z, {
                   className: u()(_.placeholder, n),
                   children: [
-                      (0, o.jsx)('div', { className: u()(_.placeholderAvatar, f[t]) }),
-                      (0, o.jsx)(d.Z, {
+                      (0, s.jsx)('div', { className: u()(_.placeholderAvatar, f[t]) }),
+                      (0, s.jsx)(d.Z, {
                           grow: 1,
                           className: _.placeholderUsername,
                           style: { maxWidth: this.placeholderMaxWidth }

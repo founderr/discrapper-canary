@@ -1,37 +1,36 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return _;
     },
     o: function () {
-        return E;
+        return d;
     }
-});
-var r = n(47120);
-var i = n(392711),
-    a = n.n(i),
-    o = n(544891),
+}),
+    n(47120);
+var r = n(392711),
+    i = n.n(r),
+    a = n(544891),
     s = n(570140),
-    l = n(503013),
-    u = n(283595),
-    c = n(804739),
-    d = n(981631);
-let _ = 50;
-async function E() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Z.entitledBranchIds;
-    if (!(0, c.Q)() || 0 === e.length) return [];
-    let t = a().chunk(e, _);
+    o = n(503013),
+    l = n(283595),
+    u = n(804739),
+    c = n(981631);
+async function d() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z.entitledBranchIds;
+    if (!(0, u.Q)() || 0 === e.length) return [];
+    let t = i().chunk(e, 50);
     try {
         let e = t.map(async (e) =>
                 (
-                    await o.tn.post({
-                        url: d.ANM.APPLICATION_BRANCHES,
+                    await a.tn.post({
+                        url: c.ANM.APPLICATION_BRANCHES,
                         body: { branch_ids: e },
                         oldFormErrors: !0
                     })
-                ).body.map(l.Z.createFromServer)
+                ).body.map(o.Z.createFromServer)
             ),
             n = await Promise.all(e),
-            r = a().flatten(n);
+            r = i().flatten(n);
         return (
             s.Z.dispatch({
                 type: 'APPLICATION_BRANCHES_FETCH_SUCCESS',
@@ -49,13 +48,13 @@ async function E() {
         );
     }
 }
-async function f(e) {
+async function _(e) {
     try {
-        let t = await o.tn.get({
-                url: d.ANM.OWNED_APPLICATION_BRANCHES(e),
+        let t = await a.tn.get({
+                url: c.ANM.OWNED_APPLICATION_BRANCHES(e),
                 oldFormErrors: !0
             }),
-            n = Array.isArray(t.body) ? t.body.map(l.Z.createFromServer) : [];
+            n = Array.isArray(t.body) ? t.body.map(o.Z.createFromServer) : [];
         return (
             s.Z.dispatch({
                 type: 'OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS',

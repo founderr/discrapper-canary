@@ -1,19 +1,20 @@
 n.d(t, {
     W: function () {
-        return d;
+        return c;
     },
     s: function () {
         return r;
     }
-});
+}),
+    n(47120),
+    n(653041);
 var r,
     i,
-    a = n(47120);
-var o = n(653041);
-var s = n(470079),
-    l = n(392711),
-    u = n.n(l);
-function c(e, t, n) {
+    a,
+    s = n(470079),
+    o = n(392711),
+    l = n.n(o);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,17 +27,15 @@ function c(e, t, n) {
         e
     );
 }
-!(function (e) {
-    (e.PAGE = 'PAGE'), (e.GAP = 'GAP'), (e.BACK = 'BACK'), (e.NEXT = 'NEXT');
-})(r || (r = {}));
-class d extends (i = s.PureComponent) {
+((a = r || (r = {})).PAGE = 'PAGE'), (a.GAP = 'GAP'), (a.BACK = 'BACK'), (a.NEXT = 'NEXT');
+class c extends (i = s.PureComponent) {
     getNeighborBounds() {
         let { totalPageCount: e, maxVisiblePages: t, selectedPage: n } = this.props,
             r = Math.ceil(t / 2),
             i = Math.floor(t / 2),
             a = [1, e],
-            [o, s] = (a = n <= r ? [1, t] : n > e - i ? [e - t + 1, e] : [n - r + 1, n + i]);
-        return [Math.max(o, 1), Math.min(s, e)];
+            [s, o] = (a = n <= r ? [1, t] : n > e - i ? [e - t + 1, e] : [n - r + 1, n + i]);
+        return [Math.max(s, 1), Math.min(o, e)];
     }
     getPageList() {
         let { totalPageCount: e, selectedPage: t, hideMaxPage: n } = this.props,
@@ -48,18 +47,18 @@ class d extends (i = s.PureComponent) {
                 selected: !1,
                 navigateToPage: this.handleBackward
             },
-            o = {
+            s = {
                 type: 'NEXT',
                 key: 'next',
                 disabled: t === e,
                 selected: !1,
                 navigateToPage: this.handleForward
             },
-            s = [],
-            l = [];
+            o = [],
+            u = [];
         return (
             r > 1 &&
-                ((s = [
+                ((o = [
                     {
                         type: 'PAGE',
                         key: 'page-1',
@@ -73,14 +72,14 @@ class d extends (i = s.PureComponent) {
                 ]),
                 (r += 2)),
             i < e &&
-                ((l = [
+                ((u = [
                     {
                         type: 'GAP',
                         key: 'right-gap'
                     }
                 ]),
                 !n &&
-                    l.push({
+                    u.push({
                         type: 'PAGE',
                         key: 'page-'.concat(e),
                         targetPage: e,
@@ -89,8 +88,8 @@ class d extends (i = s.PureComponent) {
                 (i -= 2)),
             [
                 a,
-                ...s,
-                ...u()
+                ...o,
+                ...l()
                     .range(r, i + 1)
                     .map((e) => ({
                         type: 'PAGE',
@@ -100,8 +99,8 @@ class d extends (i = s.PureComponent) {
                         disabled: !1,
                         navigateToPage: () => this.handleJump(e)
                     })),
-                ...l,
-                o
+                ...u,
+                s
             ]
         );
     }
@@ -114,22 +113,22 @@ class d extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            c(this, 'changePageTo', (e) => {
+            u(this, 'changePageTo', (e) => {
                 let { selectedPage: t, onPageChange: n } = this.props;
                 t !== e && null != n && n(e);
             }),
-            c(this, 'handleForward', () => {
+            u(this, 'handleForward', () => {
                 this.changePageTo(Math.min(this.props.selectedPage + 1, this.props.totalPageCount));
             }),
-            c(this, 'handleBackward', () => {
+            u(this, 'handleBackward', () => {
                 this.changePageTo(Math.max(this.props.selectedPage - 1, 1));
             }),
-            c(this, 'handleJump', (e) => {
+            u(this, 'handleJump', (e) => {
                 this.changePageTo(e);
             });
     }
 }
-c(d, 'defaultProps', {
+u(c, 'defaultProps', {
     maxVisiblePages: 9,
     hideMaxPage: !1
 });

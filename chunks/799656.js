@@ -2,17 +2,16 @@ var r = n(735250);
 n(470079);
 var i = n(266067),
     a = n(442837),
-    o = n(353926),
-    s = n(314897),
+    s = n(353926),
+    o = n(314897),
     l = n(981631);
-let u = (e) => {
-    let { hasLoadedExperiments: t, token: n } = e;
-    return null != n ? (0, r.jsx)(i.l_, { to: l.Z5c.APP }) : t ? (0, r.jsx)(i.l_, { to: l.Z5c.DEFAULT_LOGGED_OUT }) : null;
-};
-t.Z = a.ZP.connectStores([o.Z, s.default], () => {
-    let e = s.default.getToken();
+t.Z = a.ZP.connectStores([s.Z, o.default], () => {
+    let e = o.default.getToken();
     return {
         token: e,
-        hasLoadedExperiments: null != e || o.Z.hasLoadedExperiments
+        hasLoadedExperiments: null != e || s.Z.hasLoadedExperiments
     };
-})(u);
+})((e) => {
+    let { hasLoadedExperiments: t, token: n } = e;
+    return null != n ? (0, r.jsx)(i.l_, { to: l.Z5c.APP }) : t ? (0, r.jsx)(i.l_, { to: l.Z5c.DEFAULT_LOGGED_OUT }) : null;
+});

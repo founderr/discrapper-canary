@@ -1,58 +1,56 @@
 n.d(t, {
     Q4: function () {
-        return O;
-    },
-    Vv: function () {
-        return g;
-    },
-    oO: function () {
-        return A;
-    },
-    po: function () {
         return S;
     },
+    Vv: function () {
+        return I;
+    },
+    oO: function () {
+        return T;
+    },
+    po: function () {
+        return m;
+    },
     x_: function () {
-        return d.Z;
+        return c.Z;
     }
-});
-var r = n(47120);
-var i = n(392711),
-    a = n.n(i),
-    o = n(31775),
-    s = n.n(o),
-    l = n(664751),
-    u = n(261470),
-    c = n(931619),
-    d = n(921948),
-    _ = n(981631);
-let E = 5,
-    f = /\.webp($|\?|#)/i,
-    h = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
-    p = new (s())({ max: 1000 });
-function m(e, t) {
-    null == e.backoff && (e.backoff = new u.Z());
-    let { backoff: n } = e;
-    return async () => {
-        await c.Z.isOnline(),
-            n.fails < E
-                ? n.fail(() => {
-                      I(e);
-                  })
-                : T(!0, e, t);
-    };
-}
-function I(e) {
+}),
+    n(47120);
+var r = n(392711),
+    i = n.n(r),
+    a = n(31775),
+    s = n.n(a),
+    o = n(664751),
+    l = n(261470),
+    u = n(931619),
+    c = n(921948),
+    d = n(981631);
+let _ = /\.webp($|\?|#)/i,
+    E = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
+    f = new (s())({ max: 1000 });
+function h(e) {
     let t = new Image();
-    (t.onerror = m(e, t)),
+    (t.onerror = (function (e, t) {
+        null == e.backoff && (e.backoff = new l.Z());
+        let { backoff: n } = e;
+        return async () => {
+            await u.Z.isOnline(),
+                n.fails < 5
+                    ? n.fail(() => {
+                          h(e);
+                      })
+                    : p(!0, e, t);
+        };
+    })(e, t)),
         (t.onload = () => {
             let { backoff: n } = e;
-            null != n && n.succeed(), T(!1, e, t);
+            null != n && n.succeed(), p(!1, e, t);
         }),
         (t.src = e.url);
 }
-function T(e, t, n) {
+function p(e, t, n) {
     let { callbacks: r, url: i } = t;
-    if (e) p.del(i);
+    if (e) f.del(i);
     else {
         let { width: e, height: r } = n;
         (t = {
@@ -61,20 +59,20 @@ function T(e, t, n) {
             width: e,
             height: r
         }),
-            p.set(i, t);
+            f.set(i, t);
     }
     null != r && r.forEach((n) => n(e, t));
 }
-function g(e) {
-    let t = p.get(e);
+function I(e) {
+    let t = f.get(e);
     return null != t && t.loaded;
 }
-function S(e, t) {
-    let n = p.get(e);
+function m(e, t) {
+    let n = f.get(e);
     if (null != n && n.loaded)
         return (
             null != t &&
-                c.Z.awaitOnline().then(() => {
+                u.Z.awaitOnline().then(() => {
                     null != n &&
                         null != n.callbacks &&
                         n.callbacks.forEach((t) => {
@@ -86,7 +84,7 @@ function S(e, t) {
                                   });
                         });
                 }),
-            _.dG4
+            d.dG4
         );
     {
         let r;
@@ -96,8 +94,8 @@ function S(e, t) {
                     url: e,
                     loaded: !1
                 }),
-                p.set(e, n),
-                I(n)),
+                f.set(e, n),
+                h(n)),
             null != t && ((r = t.bind(null)), null == n.callbacks && (n.callbacks = new Set()), n.callbacks.add(r)),
             () => {
                 null != r && null != n && (null != n.callbacks && n.callbacks.delete(r), null != n.backoff && n.backoff.cancel());
@@ -105,42 +103,40 @@ function S(e, t) {
         );
     }
 }
-function A(e) {
+function T(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (n) {
-        let t = h.filter((t) => t <= e).pop();
+        let t = E.filter((t) => t <= e).pop();
         if (null != t && e / t <= 1.25) return t;
     }
-    return null !== (t = h.find((t) => e <= t)) && void 0 !== t ? t : h[h.length - 1];
+    return null !== (t = E.find((t) => e <= t)) && void 0 !== t ? t : E[E.length - 1];
 }
-function v(e) {
-    let [t, n] = e.split('?');
-    return [t, l.parse(n)];
-}
-function N(e) {
-    let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: i, targetHeight: o, format: s = null, quality: u = null, animated: c = !1, srcIsAnimated: d = !1 } = e,
-        [_, E] = v(t);
-    return null != s && (E.format = s), null != u && (E.quality = u), c && d && f.test(t) && (E.animated = !0), (i !== n || o !== r) && ((E.width = 0 | i), (E.height = 0 | o)), !a().isEmpty(E) && (_ += '?' + l.stringify(E)), _;
-}
-function O(e) {
-    let { src: t, width: n, height: r, maxWidth: i, maxHeight: a, ratio: o = 1, format: s = null, quality: l = null, animated: u = !1, srcIsAnimated: c = !1 } = e,
-        _ = n,
-        E = r;
-    o < 1 && ((_ = Math.round(n * o)), (E = Math.round(r * o))), null != i && (_ = Math.min(_, i)), null != a && (E = Math.min(E, a));
-    let f = (0, d.Z)();
+function S(e) {
+    let { src: t, width: n, height: r, maxWidth: a, maxHeight: s, ratio: l = 1, format: u = null, quality: d = null, animated: E = !1, srcIsAnimated: f = !1 } = e,
+        h = n,
+        p = r;
+    l < 1 && ((h = Math.round(n * l)), (p = Math.round(r * l))), null != a && (h = Math.min(h, a)), null != s && (p = Math.min(p, s));
+    let I = (0, c.Z)();
     return (
-        (_ *= f),
-        N({
+        (h *= I),
+        (function (e) {
+            let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: s, format: l = null, quality: u = null, animated: c = !1, srcIsAnimated: d = !1 } = e,
+                [E, f] = (function (e) {
+                    let [t, n] = e.split('?');
+                    return [t, o.parse(n)];
+                })(t);
+            return null != l && (f.format = l), null != u && (f.quality = u), c && d && _.test(t) && (f.animated = !0), (a !== n || s !== r) && ((f.width = 0 | a), (f.height = 0 | s)), !i().isEmpty(f) && (E += '?' + o.stringify(f)), E;
+        })({
             src: t,
             sourceWidth: n,
             sourceHeight: r,
-            targetWidth: _,
-            targetHeight: (E *= f),
-            format: s,
-            quality: l,
-            animated: u,
-            srcIsAnimated: c
+            targetWidth: h,
+            targetHeight: (p *= I),
+            format: u,
+            quality: d,
+            animated: E,
+            srcIsAnimated: f
         })
     );
 }

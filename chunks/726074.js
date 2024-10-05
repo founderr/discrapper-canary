@@ -17,15 +17,17 @@ function a(e) {
         }
     };
 }
-function o(e) {
-    let t = 1,
-        n = new i(e),
-        r = document.createTextNode('');
-    return (
-        n.observe(r, { characterData: !0 }),
-        function () {
-            (t = -t), (r.data = t);
-        }
-    );
-}
-let s = 'function' == typeof i ? o : a;
+let s =
+    'function' == typeof i
+        ? function (e) {
+              let t = 1,
+                  n = new i(e),
+                  r = document.createTextNode('');
+              return (
+                  n.observe(r, { characterData: !0 }),
+                  function () {
+                      (t = -t), (r.data = t);
+                  }
+              );
+          }
+        : a;

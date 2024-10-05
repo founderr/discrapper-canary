@@ -1,52 +1,51 @@
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(481060),
+n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(481060),
     s = n(367907),
-    l = n(434404),
-    u = n(138201),
-    c = n(430824),
-    d = n(981631),
-    _ = n(689938);
-let E = (e) => {
+    o = n(434404),
+    l = n(138201),
+    u = n(430824),
+    c = n(981631),
+    d = n(689938);
+t.Z = (e) => {
     let { guildId: t, reportId: n } = e,
-        [r, E] = a.useState(!1),
-        f = c.Z.getGuild(t),
+        [_, E] = i.useState(!1),
+        f = u.Z.getGuild(t),
         h = null != f;
-    a.useEffect(() => {
+    i.useEffect(() => {
         E(!h);
     }, [h]);
-    let p = a.useCallback(() => {
+    let p = i.useCallback(() => {
         E(!0),
-            s.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
+            s.ZP.trackWithMetadata(c.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
                 guild_id: t,
                 report_id: n
             }),
-            l.Z.leaveGuild(t);
+            o.Z.leaveGuild(t);
     }, [t, n]);
-    if (null == f) return null;
-    let m = () => {
-        (0, o.openModal)((e) =>
-            (0, i.jsx)(o.ConfirmModal, {
-                header: _.Z.Messages.LEAVE_SERVER_TITLE.format({ name: f.name }),
-                confirmText: _.Z.Messages.LEAVE_SERVER,
-                cancelText: _.Z.Messages.CANCEL,
-                onConfirm: p,
-                ...e,
-                children: (0, i.jsx)(o.Text, {
-                    variant: 'text-md/normal',
-                    children: _.Z.Messages.LEAVE_SERVER_BODY.format({ name: f.name })
-                })
-            })
-        );
-    };
-    return (0, i.jsx)(u.Z, {
-        title: _.Z.Messages.IAR_UPSELLS_LEAVE_SERVER_TITLE,
-        description: _.Z.Messages.IAR_UPSELLS_LEAVE_SERVER_DESCRIPTION.format({ guildName: null == f ? void 0 : f.name }),
-        buttonText: r ? _.Z.Messages.IAR_UPSELLS_LEFT_SERVER_BUTTON : _.Z.Messages.IAR_UPSELLS_LEAVE_SERVER_BUTTON,
-        buttonDisabled: r,
-        buttonColor: o.Button.Colors.RED,
-        onButtonPress: m
-    });
+    return null == f
+        ? null
+        : (0, r.jsx)(l.Z, {
+              title: d.Z.Messages.IAR_UPSELLS_LEAVE_SERVER_TITLE,
+              description: d.Z.Messages.IAR_UPSELLS_LEAVE_SERVER_DESCRIPTION.format({ guildName: null == f ? void 0 : f.name }),
+              buttonText: _ ? d.Z.Messages.IAR_UPSELLS_LEFT_SERVER_BUTTON : d.Z.Messages.IAR_UPSELLS_LEAVE_SERVER_BUTTON,
+              buttonDisabled: _,
+              buttonColor: a.Button.Colors.RED,
+              onButtonPress: () => {
+                  (0, a.openModal)((e) =>
+                      (0, r.jsx)(a.ConfirmModal, {
+                          header: d.Z.Messages.LEAVE_SERVER_TITLE.format({ name: f.name }),
+                          confirmText: d.Z.Messages.LEAVE_SERVER,
+                          cancelText: d.Z.Messages.CANCEL,
+                          onConfirm: p,
+                          ...e,
+                          children: (0, r.jsx)(a.Text, {
+                              variant: 'text-md/normal',
+                              children: d.Z.Messages.LEAVE_SERVER_BODY.format({ name: f.name })
+                          })
+                      })
+                  );
+              }
+          });
 };
-t.Z = E;

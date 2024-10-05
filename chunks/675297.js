@@ -1,55 +1,45 @@
 n.d(t, {
     H: function () {
-        return g;
+        return C;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(399606),
-    a = n(166081),
-    o = n(54797),
-    s = n(674180),
-    l = n(430824),
-    u = n(572004),
-    c = n(267101),
-    d = n(863663),
+var a = n(399606),
+    s = n(166081),
+    l = n(54797),
+    r = n(674180),
+    o = n(430824),
+    c = n(572004),
+    d = n(267101),
+    u = n(863663),
     _ = n(676651),
     E = n(623488),
-    f = n(942833),
-    h = n(391181),
-    p = n(964793),
-    m = n(226060),
-    I = n(981631);
-let T = 600;
-function g(e) {
-    let { guildProductListing: t, guildId: n, location: g, shouldShowFullDescriptionButton: S = !0, hideRoleTag: A = !1, lineClamp: v = 1, cardWidth: N, cardHeight: O, thumbnailHeight: R, descriptionTextVariant: C = 'text-sm/normal', showOpaqueBackground: y = !1 } = e,
-        L = (0, i.e7)([l.Z], () => l.Z.getGuild(n), [n]),
-        b = (0, i.e7)([l.Z], () => {
+    I = n(942833),
+    m = n(391181),
+    T = n(964793),
+    N = n(226060),
+    h = n(981631);
+function C(e) {
+    let { guildProductListing: t, guildId: n, location: C, shouldShowFullDescriptionButton: p = !0, hideRoleTag: f = !1, lineClamp: g = 1, cardWidth: A, cardHeight: S, thumbnailHeight: M, descriptionTextVariant: x = 'text-sm/normal', showOpaqueBackground: O = !1 } = e,
+        R = (0, a.e7)([o.Z], () => o.Z.getGuild(n), [n]),
+        v = (0, a.e7)([o.Z], () => {
             var e;
-            return l.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : I.lds);
+            return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : h.lds);
         }),
-        D = (0, a.U)(t, T),
-        M = (0, f.C)(t),
-        P = (0, c.SO)(L),
-        { shouldHideGuildPurchaseEntryPoints: U } = (0, s.uP)(n),
-        w = (0, f.k)(t);
-    if (null == L || U) return null;
-    let x = () =>
-            (0, p.e)({
+        L = (0, s.U)(t, 600),
+        Z = (0, I.C)(t),
+        P = (0, d.SO)(R),
+        { shouldHideGuildPurchaseEntryPoints: D } = (0, r.uP)(n),
+        b = (0, I.k)(t);
+    if (null == R || D) return null;
+    let j = () =>
+            (0, T.e)({
                 guildId: n,
                 guildProductListingId: t.id,
-                analyticsLocation: g
+                analyticsLocation: C
             }),
-        G = () => {
-            _.h(L.id, t.id);
-        },
-        k = () => {
-            (0, o.x)({ listing: t });
-        },
-        B = () => {
-            (0, u.JG)((0, d.ar)(n, t.id));
-        },
-        F = (0, r.jsx)(h.m, {
+        U = (0, i.jsx)(m.m, {
             product: t,
             guildId: n,
             showEditProduct: P,
@@ -58,38 +48,46 @@ function g(e) {
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: P ? G : () => {},
+            onEditProduct: P
+                ? () => {
+                      _.h(R.id, t.id);
+                  }
+                : () => {},
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
-            onReportProduct: k,
-            onCopyProductLink: B,
+            onReportProduct: () => {
+                (0, l.x)({ listing: t });
+            },
+            onCopyProductLink: () => {
+                (0, c.JG)((0, u.ar)(n, t.id));
+            },
             onTestDownload: () => {}
         });
-    return (0, r.jsx)(
+    return (0, i.jsx)(
         E.Z,
         {
-            imageUrl: D,
+            imageUrl: L,
             name: t.name,
             description: t.description,
-            formattedPrice: w,
-            role: b,
-            ctaComponent: (0, r.jsx)(m.Z, {
+            formattedPrice: b,
+            role: v,
+            ctaComponent: (0, i.jsx)(N.Z, {
                 guildId: n,
                 guildProductListingId: t.id,
-                sourceAnalyticsLocations: g
+                sourceAnalyticsLocations: C
             }),
-            productType: M,
-            shouldShowFullDescriptionButton: S,
-            onShowFullDescription: x,
-            onTapCard: x,
-            actionMenu: F,
-            showOpaqueBackground: y,
-            hideRoleTag: A,
-            lineClamp: v,
-            cardWidth: N,
-            cardHeight: O,
-            thumbnailHeight: R,
-            descriptionTextVariant: C,
+            productType: Z,
+            shouldShowFullDescriptionButton: p,
+            onShowFullDescription: j,
+            onTapCard: j,
+            actionMenu: U,
+            showOpaqueBackground: O,
+            hideRoleTag: f,
+            lineClamp: g,
+            cardWidth: A,
+            cardHeight: S,
+            thumbnailHeight: M,
+            descriptionTextVariant: x,
             isDraft: !t.published
         },
         t.id

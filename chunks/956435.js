@@ -1,29 +1,11 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = e.COMMENT('--', '$'),
-        r = {
-            className: 'string',
-            variants: [
-                {
-                    begin: /'/,
-                    end: /'/,
-                    contains: [{ begin: /''/ }]
-                }
-            ]
-        },
-        i = {
-            begin: /"/,
-            end: /"/,
-            contains: [{ begin: /""/ }]
-        },
-        a = ['true', 'false', 'unknown'],
-        o = ['double precision', 'large object', 'with timezone', 'without timezone'],
-        s = ['bigint', 'binary', 'blob', 'boolean', 'char', 'character', 'clob', 'date', 'dec', 'decfloat', 'decimal', 'float', 'int', 'integer', 'interval', 'nchar', 'nclob', 'national', 'numeric', 'real', 'row', 'smallint', 'time', 'timestamp', 'varchar', 'varying', 'varbinary'],
-        l = ['abs', 'acos', 'array_agg', 'asin', 'atan', 'avg', 'cast', 'ceil', 'ceiling', 'coalesce', 'corr', 'cos', 'cosh', 'count', 'covar_pop', 'covar_samp', 'cume_dist', 'dense_rank', 'deref', 'element', 'exp', 'extract', 'first_value', 'floor', 'json_array', 'json_arrayagg', 'json_exists', 'json_object', 'json_objectagg', 'json_query', 'json_table', 'json_table_primitive', 'json_value', 'lag', 'last_value', 'lead', 'listagg', 'ln', 'log', 'log10', 'lower', 'max', 'min', 'mod', 'nth_value', 'ntile', 'nullif', 'percent_rank', 'percentile_cont', 'percentile_disc', 'position', 'position_regex', 'power', 'rank', 'regr_avgx', 'regr_avgy', 'regr_count', 'regr_intercept', 'regr_r2', 'regr_slope', 'regr_sxx', 'regr_sxy', 'regr_syy', 'row_number', 'sin', 'sinh', 'sqrt', 'stddev_pop', 'stddev_samp', 'substring', 'substring_regex', 'sum', 'tan', 'tanh', 'translate', 'translate_regex', 'treat', 'trim', 'trim_array', 'unnest', 'upper', 'value_of', 'var_pop', 'var_samp', 'width_bucket'],
-        u = ['current_catalog', 'current_date', 'current_default_transform_group', 'current_path', 'current_role', 'current_schema', 'current_transform_group_for_type', 'current_user', 'session_user', 'system_time', 'system_user', 'current_time', 'localtime', 'current_timestamp', 'localtimestamp'],
-        c = ['create table', 'insert into', 'primary key', 'foreign key', 'not null', 'alter table', 'add constraint', 'grouping sets', 'on overflow', 'character set', 'respect nulls', 'ignore nulls', 'nulls first', 'nulls last', 'depth first', 'breadth first'],
-        d = l,
-        _ = [
+        r = ['true', 'false', 'unknown'],
+        i = ['bigint', 'binary', 'blob', 'boolean', 'char', 'character', 'clob', 'date', 'dec', 'decfloat', 'decimal', 'float', 'int', 'integer', 'interval', 'nchar', 'nclob', 'national', 'numeric', 'real', 'row', 'smallint', 'time', 'timestamp', 'varchar', 'varying', 'varbinary'],
+        a = ['abs', 'acos', 'array_agg', 'asin', 'atan', 'avg', 'cast', 'ceil', 'ceiling', 'coalesce', 'corr', 'cos', 'cosh', 'count', 'covar_pop', 'covar_samp', 'cume_dist', 'dense_rank', 'deref', 'element', 'exp', 'extract', 'first_value', 'floor', 'json_array', 'json_arrayagg', 'json_exists', 'json_object', 'json_objectagg', 'json_query', 'json_table', 'json_table_primitive', 'json_value', 'lag', 'last_value', 'lead', 'listagg', 'ln', 'log', 'log10', 'lower', 'max', 'min', 'mod', 'nth_value', 'ntile', 'nullif', 'percent_rank', 'percentile_cont', 'percentile_disc', 'position', 'position_regex', 'power', 'rank', 'regr_avgx', 'regr_avgy', 'regr_count', 'regr_intercept', 'regr_r2', 'regr_slope', 'regr_sxx', 'regr_sxy', 'regr_syy', 'row_number', 'sin', 'sinh', 'sqrt', 'stddev_pop', 'stddev_samp', 'substring', 'substring_regex', 'sum', 'tan', 'tanh', 'translate', 'translate_regex', 'treat', 'trim', 'trim_array', 'unnest', 'upper', 'value_of', 'var_pop', 'var_samp', 'width_bucket'],
+        s = ['create table', 'insert into', 'primary key', 'foreign key', 'not null', 'alter table', 'add constraint', 'grouping sets', 'on overflow', 'character set', 'respect nulls', 'ignore nulls', 'nulls first', 'nulls last', 'depth first', 'breadth first'],
+        o = [
             'abs',
             'acos',
             'all',
@@ -398,20 +380,11 @@ function t(e) {
             'first',
             'last',
             'view'
-        ].filter((e) => !l.includes(e)),
-        E = {
-            className: 'variable',
-            begin: /@[a-z0-9]+/
-        },
-        f = {
-            className: 'operator',
-            begin: /[-+*/=%^~]|&&?|\|\|?|!=?|<(?:=>?|<|>)?|>[>=]?/,
-            relevance: 0
-        },
-        h = {
-            begin: t.concat(/\b/, t.either(...d), /\s*\(/),
+        ].filter((e) => !a.includes(e)),
+        l = {
+            begin: t.concat(/\b/, t.either(...a), /\s*\(/),
             relevance: 0,
-            keywords: { built_in: d }
+            keywords: { built_in: a }
         };
     return {
         name: 'SQL',
@@ -419,38 +392,56 @@ function t(e) {
         illegal: /[{}]|<\//,
         keywords: {
             $pattern: /\b[\w\.]+/,
-            keyword: (function e(e, { exceptions: t, when: n } = {}) {
-                let r = n;
-                return (t = t || []), e.map((e) => (e.match(/\|\d+$/) || t.includes(e) ? e : r(e) ? `${e}|0` : e));
-            })(_, { when: (e) => e.length < 3 }),
-            literal: a,
-            type: s,
-            built_in: u
+            keyword: (function (e, { exceptions: t, when: n } = {}) {
+                return (t = t || []), e.map((e) => (e.match(/\|\d+$/) || t.includes(e) ? e : n(e) ? `${e}|0` : e));
+            })(o, { when: (e) => e.length < 3 }),
+            literal: r,
+            type: i,
+            built_in: ['current_catalog', 'current_date', 'current_default_transform_group', 'current_path', 'current_role', 'current_schema', 'current_transform_group_for_type', 'current_user', 'session_user', 'system_time', 'system_user', 'current_time', 'localtime', 'current_timestamp', 'localtimestamp']
         },
         contains: [
             {
-                begin: t.either(...c),
+                begin: t.either(...s),
                 relevance: 0,
                 keywords: {
                     $pattern: /[\w\.]+/,
-                    keyword: _.concat(c),
-                    literal: a,
-                    type: s
+                    keyword: o.concat(s),
+                    literal: r,
+                    type: i
                 }
             },
             {
                 className: 'type',
-                begin: t.either(...o)
+                begin: t.either('double precision', 'large object', 'with timezone', 'without timezone')
             },
-            h,
-            E,
-            r,
-            i,
+            l,
+            {
+                className: 'variable',
+                begin: /@[a-z0-9]+/
+            },
+            {
+                className: 'string',
+                variants: [
+                    {
+                        begin: /'/,
+                        end: /'/,
+                        contains: [{ begin: /''/ }]
+                    }
+                ]
+            },
+            {
+                begin: /"/,
+                end: /"/,
+                contains: [{ begin: /""/ }]
+            },
             e.C_NUMBER_MODE,
             e.C_BLOCK_COMMENT_MODE,
             n,
-            f
+            {
+                className: 'operator',
+                begin: /[-+*/=%^~]|&&?|\|\|?|!=?|<(?:=>?|<|>)?|>[>=]?/,
+                relevance: 0
+            }
         ]
     };
-}
-e.exports = t;
+};

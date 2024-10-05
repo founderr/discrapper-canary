@@ -1,7 +1,5 @@
-function t(e) {
-    let t = ['add', 'and', 'cmp', 'cmpg', 'cmpl', 'const', 'div', 'double', 'float', 'goto', 'if', 'int', 'long', 'move', 'mul', 'neg', 'new', 'nop', 'not', 'or', 'rem', 'return', 'shl', 'shr', 'sput', 'sub', 'throw', 'ushr', 'xor'],
-        n = ['aget', 'aput', 'array', 'check', 'execute', 'fill', 'filled', 'goto/16', 'goto/32', 'iget', 'instance', 'invoke', 'iput', 'monitor', 'packed', 'sget', 'sparse'],
-        r = ['transient', 'constructor', 'abstract', 'final', 'synthetic', 'public', 'private', 'protected', 'static', 'bridge', 'system'];
+e.exports = function (e) {
+    let t = ['add', 'and', 'cmp', 'cmpg', 'cmpl', 'const', 'div', 'double', 'float', 'goto', 'if', 'int', 'long', 'move', 'mul', 'neg', 'new', 'nop', 'not', 'or', 'rem', 'return', 'shl', 'shr', 'sput', 'sub', 'throw', 'ushr', 'xor'];
     return {
         name: 'Smali',
         contains: [
@@ -24,7 +22,7 @@ function t(e) {
                         begin: '\\s:[a-zA-Z_0-9]*',
                         relevance: 0
                     },
-                    { begin: '\\s(' + r.join('|') + ')' }
+                    { begin: '\\s(' + 'transient|constructor|abstract|final|synthetic|public|private|protected|static|bridge|system)' }
                 ]
             },
             {
@@ -36,7 +34,7 @@ function t(e) {
                         relevance: 10
                     },
                     {
-                        begin: '\\s(' + n.join('|') + ')((-|/)[a-zA-Z0-9]+)*\\s',
+                        begin: '\\s(' + 'aget|aput|array|check|execute|fill|filled|goto/16|goto/32|iget|instance|invoke|iput|monitor|packed|sget|sparse)((-|/)[a-zA-Z0-9]+)*\\s',
                         relevance: 10
                     }
                 ]
@@ -49,5 +47,4 @@ function t(e) {
             { begin: '[vp][0-9]+' }
         ]
     };
-}
-e.exports = t;
+};

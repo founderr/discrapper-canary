@@ -1,12 +1,11 @@
-var r = n(447631),
-    i = n(141603),
-    a = Function.prototype,
-    o = r && Object.getOwnPropertyDescriptor,
-    s = i(a, 'name'),
-    l = s && 'something' === function () {}.name,
-    u = s && (!r || (r && o(a, 'name').configurable));
-e.exports = {
+var e = n(447631),
+    o = n(141603),
+    i = Function.prototype,
+    u = e && Object.getOwnPropertyDescriptor,
+    s = o(i, 'name'),
+    c = s && (!e || (e && u(i, 'name').configurable));
+t.exports = {
     EXISTS: s,
-    PROPER: l,
-    CONFIGURABLE: u
+    PROPER: s && 'something' === function () {}.name,
+    CONFIGURABLE: c
 };

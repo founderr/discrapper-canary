@@ -1,8 +1,8 @@
 var r = n(690244),
     i = n(192853),
     a = n(813426),
-    o = r('%TypeError%'),
-    s = r('%WeakMap%', !0),
+    s = r('%TypeError%'),
+    o = r('%WeakMap%', !0),
     l = r('%Map%', !0),
     u = i('WeakMap.prototype.get', !0),
     c = i('WeakMap.prototype.set', !0),
@@ -17,7 +17,7 @@ var r = n(690244),
         var n = h(e, t);
         return n && n.value;
     },
-    m = function (e, t, n) {
+    I = function (e, t, n) {
         var r = h(e, t);
         r
             ? (r.value = n)
@@ -26,9 +26,6 @@ var r = n(690244),
                   next: e.next,
                   value: n
               });
-    },
-    I = function (e, t) {
-        return !!h(e, t);
     };
 e.exports = function () {
     var e,
@@ -36,26 +33,26 @@ e.exports = function () {
         n,
         r = {
             assert: function (e) {
-                if (!r.has(e)) throw new o('Side channel does not contain ' + a(e));
+                if (!r.has(e)) throw new s('Side channel does not contain ' + a(e));
             },
             get: function (r) {
-                if (s && r && ('object' == typeof r || 'function' == typeof r)) {
+                if (o && r && ('object' == typeof r || 'function' == typeof r)) {
                     if (e) return u(e, r);
                 } else if (l) {
                     if (t) return _(t, r);
                 } else if (n) return p(n, r);
             },
             has: function (r) {
-                if (s && r && ('object' == typeof r || 'function' == typeof r)) {
+                if (o && r && ('object' == typeof r || 'function' == typeof r)) {
                     if (e) return d(e, r);
                 } else if (l) {
                     if (t) return f(t, r);
-                } else if (n) return I(n, r);
+                } else if (n) return !!h(n, r);
                 return !1;
             },
             set: function (r, i) {
-                s && r && ('object' == typeof r || 'function' == typeof r)
-                    ? (!e && (e = new s()), c(e, r, i))
+                o && r && ('object' == typeof r || 'function' == typeof r)
+                    ? (!e && (e = new o()), c(e, r, i))
                     : l
                       ? (!t && (t = new l()), E(t, r, i))
                       : (!n &&
@@ -63,7 +60,7 @@ e.exports = function () {
                                 key: {},
                                 next: null
                             }),
-                        m(n, r, i));
+                        I(n, r, i));
             }
         };
     return r;

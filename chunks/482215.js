@@ -1,38 +1,36 @@
 n.d(t, {
     K: function () {
-        return d;
+        return u;
     },
     i: function () {
-        return c;
+        return l;
     }
 });
 var r = n(735250),
     i = n(652874),
     a = n(442837),
-    o = n(857192),
-    s = n(90362);
-let l = 8,
-    u = 64,
-    c = (0, i.Z)((e) => ({
-        horizontalSpacing: l,
-        verticalSpacing: l,
-        maxHorizontalSpacing: u,
-        maxVerticalSpacing: u,
-        setHorizontalSpacing: (t) => {
-            e({ horizontalSpacing: Math.round(Math.min(Math.max(t, 0), u)) });
-        },
-        setVerticalSpacing: (t) => {
-            e({ verticalSpacing: Math.round(Math.min(Math.max(t, 0), u)) });
-        }
-    }));
-function d() {
-    let e = (0, a.e7)([o.default], () => o.default.layoutDebuggingEnabled),
-        { horizontalSpacing: t, verticalSpacing: n } = c();
+    s = n(857192),
+    o = n(90362);
+let l = (0, i.Z)((e) => ({
+    horizontalSpacing: 8,
+    verticalSpacing: 8,
+    maxHorizontalSpacing: 64,
+    maxVerticalSpacing: 64,
+    setHorizontalSpacing: (t) => {
+        e({ horizontalSpacing: Math.round(Math.min(Math.max(t, 0), 64)) });
+    },
+    setVerticalSpacing: (t) => {
+        e({ verticalSpacing: Math.round(Math.min(Math.max(t, 0), 64)) });
+    }
+}));
+function u() {
+    let e = (0, a.e7)([s.default], () => s.default.layoutDebuggingEnabled),
+        { horizontalSpacing: t, verticalSpacing: n } = l();
     return e
         ? (0, r.jsx)('div', {
-              className: s.container,
+              className: o.container,
               children: (0, r.jsx)('div', {
-                  className: s.gridOverlay,
+                  className: o.gridOverlay,
                   'data-horizontal': t > 0,
                   'data-vertical': n > 0,
                   style: {

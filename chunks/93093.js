@@ -1,20 +1,7 @@
-var r = n(47120);
-var i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class s extends i.ZP.Store {
+n(47120);
+var r = n(442837),
+    i = n(570140);
+class a extends r.ZP.Store {
     allGuildIds() {
         return this.guildIds;
     }
@@ -37,8 +24,9 @@ class s extends i.ZP.Store {
         !0 !== e.guild.unavailable && this.guildIds.delete(e.guild.id);
     }
     constructor() {
+        var e, t, n;
         super(
-            a.Z,
+            i.Z,
             {
                 CACHE_LOADED: (e) => this.handleCacheLoaded(e),
                 CACHE_LOADED_LAZY: (e) => this.handleCacheLoadedLazy(e),
@@ -46,9 +34,19 @@ class s extends i.ZP.Store {
                 GUILD_CREATE: (e) => this.handleGuildCreate(e),
                 GUILD_DELETE: (e) => this.handleGuildDelete(e)
             },
-            a.c.Early
+            i.c.Early
         ),
-            o(this, 'guildIds', new Set());
+            (e = this),
+            (t = 'guildIds'),
+            (n = new Set()),
+            t in e
+                ? Object.defineProperty(e, t, {
+                      value: n,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (e[t] = n);
     }
 }
-t.Z = new s();
+t.Z = new a();

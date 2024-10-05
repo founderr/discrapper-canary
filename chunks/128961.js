@@ -21,14 +21,16 @@ var n = function (e, t) {
             default:
                 return t.time({ width: 'full' });
         }
-    },
-    i = function (e, t) {
+    };
+t.Z = {
+    p: r,
+    P: function (e, t) {
         var i,
             a = e.match(/(P+)(p+)?/) || [],
-            o = a[1],
-            s = a[2];
-        if (!s) return n(e, t);
-        switch (o) {
+            s = a[1],
+            o = a[2];
+        if (!o) return n(e, t);
+        switch (s) {
             case 'P':
                 i = t.dateTime({ width: 'short' });
                 break;
@@ -41,10 +43,6 @@ var n = function (e, t) {
             default:
                 i = t.dateTime({ width: 'full' });
         }
-        return i.replace('{{date}}', n(o, t)).replace('{{time}}', r(s, t));
-    },
-    a = {
-        p: r,
-        P: i
-    };
-t.Z = a;
+        return i.replace('{{date}}', n(s, t)).replace('{{time}}', r(o, t));
+    }
+};

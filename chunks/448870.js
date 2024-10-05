@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = /[\p{XID_Start}_]\p{XID_Continue}*/u,
         r = ['and', 'as', 'assert', 'async', 'await', 'break', 'case', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'match', 'nonlocal|10', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'],
@@ -13,14 +13,14 @@ function t(e) {
             className: 'meta',
             begin: /^(>>>|\.\.\.) /
         },
-        o = {
+        s = {
             className: 'subst',
             begin: /\{/,
             end: /\}/,
             keywords: i,
             illegal: /#/
         },
-        s = {
+        o = {
             begin: /\{\{/,
             relevance: 0
         },
@@ -43,12 +43,12 @@ function t(e) {
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'''/,
                     end: /'''/,
-                    contains: [e.BACKSLASH_ESCAPE, a, s, o]
+                    contains: [e.BACKSLASH_ESCAPE, a, o, s]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"""/,
                     end: /"""/,
-                    contains: [e.BACKSLASH_ESCAPE, a, s, o]
+                    contains: [e.BACKSLASH_ESCAPE, a, o, s]
                 },
                 {
                     begin: /([uU]|[rR])'/,
@@ -71,12 +71,12 @@ function t(e) {
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'/,
                     end: /'/,
-                    contains: [e.BACKSLASH_ESCAPE, s, o]
+                    contains: [e.BACKSLASH_ESCAPE, o, s]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"/,
                     end: /"/,
-                    contains: [e.BACKSLASH_ESCAPE, s, o]
+                    contains: [e.BACKSLASH_ESCAPE, o, s]
                 },
                 e.APOS_STRING_MODE,
                 e.QUOTE_STRING_MODE
@@ -123,7 +123,7 @@ function t(e) {
             ]
         };
     return (
-        (o.contains = [l, _, a]),
+        (s.contains = [l, _, a]),
         {
             name: 'Python',
             aliases: ['py', 'gyp', 'ipython'],
@@ -173,5 +173,4 @@ function t(e) {
             ]
         }
     );
-}
-e.exports = t;
+};

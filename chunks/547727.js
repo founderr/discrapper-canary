@@ -1,5 +1,4 @@
-class n {
+t.Z = new (class e {
     nativeMuteChanged(e) {}
     updateNativeMute() {}
-}
-t.Z = new n();
+})();

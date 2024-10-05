@@ -1,48 +1,47 @@
 n.d(t, {
     z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(735250),
-    i = n(470079),
-    a = n(481060),
-    o = n(833592),
-    s = n(689938);
-let l = (e) => {
+var i = n(735250),
+    a = n(470079),
+    s = n(481060),
+    l = n(833592),
+    r = n(689938);
+let o = (e) => {
         let { item: t, closePopout: n } = e;
-        return (0, r.jsx)(a.Menu, {
+        return (0, i.jsx)(s.Menu, {
             navId: 'notification-actions',
             onClose: n,
             onSelect: n,
-            'aria-label': s.Z.Messages.RECENTS_NOTIFICATIONS_MENU_LABEL,
-            children: (0, r.jsx)(a.MenuItem, {
+            'aria-label': r.Z.Messages.RECENTS_NOTIFICATIONS_MENU_LABEL,
+            children: (0, i.jsx)(s.MenuItem, {
                 id: 'delete',
-                label: s.Z.Messages.DELETE,
-                icon: a.TrashIcon,
+                label: r.Z.Messages.DELETE,
+                icon: s.TrashIcon,
                 action: async () => {
-                    await (0, o.g3)(t);
+                    await (0, l.g3)(t);
                 }
             })
         });
     },
-    u = i.memo(function (e) {
-        let { item: t } = e,
-            n = (e) =>
-                (0, r.jsx)(l, {
+    c = a.memo(function (e) {
+        let { item: t } = e;
+        return (0, i.jsx)(s.Popout, {
+            renderPopout: (e) =>
+                (0, i.jsx)(o, {
                     ...e,
                     item: t
-                });
-        return (0, r.jsx)(a.Popout, {
-            renderPopout: n,
+                }),
             position: 'bottom',
             align: 'right',
-            animation: a.Popout.Animation.NONE,
+            animation: s.Popout.Animation.NONE,
             children: (e) => {
                 let { onClick: t } = e;
-                return (0, r.jsx)(a.CircleIconButton, {
-                    tooltip: s.Z.Messages.MORE,
-                    color: a.CircleIconButtonColors.TERTIARY,
-                    icon: (0, r.jsx)(a.MoreHorizontalIcon, {
+                return (0, i.jsx)(s.CircleIconButton, {
+                    tooltip: r.Z.Messages.MORE,
+                    color: s.CircleIconButtonColors.TERTIARY,
+                    icon: (0, i.jsx)(s.MoreHorizontalIcon, {
                         size: 'xs',
                         color: 'currentColor'
                     }),

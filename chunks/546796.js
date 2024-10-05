@@ -1,53 +1,45 @@
 let r, i;
 n.d(t, {
     Z: function () {
-        return f;
+        return c;
     }
-});
-var a = n(411104);
-var o = n(594174),
+}),
+    n(411104);
+var a = n(594174),
     s = n(831160);
-let l = () => {
+let o = () => {
     throw Error('updateModal has not been implemented.');
 };
 {
     let e = n(169480);
-    (r = e.showModal), (l = e.updateModalProps), (i = n(952265).Mr);
+    (r = e.showModal), (o = e.updateModalProps), (i = n(952265).Mr);
 }
-let u = 60008;
-function c() {
-    var e, t;
-    return null !== (t = null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.mfaEnabled) && void 0 !== t && t;
-}
-function d(e, t) {
-    return (e.body && e.body.code === u) || (t && 429 === e.status);
-}
-function _(e) {
-    let { promiseFn: t, resolve: n, reject: a, modalProps: o = {}, hooks: { onEarlyClose: s } = {} } = e;
+function l(e) {
+    let { promiseFn: t, resolve: n, reject: a, modalProps: s = {}, hooks: { onEarlyClose: l } = {} } = e;
     if (null == r) {
-        null == s || s();
+        null == l || l();
         return;
     }
-    let u = r(f, c, o);
-    function c() {
-        null == s || s();
-    }
-    function d(e) {
-        i(u), n(e);
+    let c = r(f, d, s);
+    function d() {
+        null == l || l();
     }
     function _(e) {
-        i(u), a(e);
+        i(c), n(e);
+    }
+    function E(e) {
+        i(c), a(e);
     }
     function f(e) {
         return (
-            l(u, f, c, {
-                ...o,
+            o(c, f, d, {
+                ...s,
                 isLoading: !0
             }),
-            E({
+            u({
                 promiseFn: t,
-                resolve: d,
-                reject: _,
+                resolve: _,
+                reject: E,
                 code: e,
                 mfaCodeHandler: h,
                 isModalOpen: !0
@@ -56,34 +48,36 @@ function _(e) {
     }
     function h(e) {
         let { res: t } = e;
-        l(u, f, c, {
-            ...o,
+        o(c, f, d, {
+            ...s,
             error: t.body.message
         });
     }
 }
-function E(e) {
-    let { promiseFn: t, resolve: n, reject: r, code: i, mfaCodeHandler: a = _, isModalOpen: o = !1, ...s } = e;
+function u(e) {
+    let { promiseFn: t, resolve: n, reject: r, code: i, mfaCodeHandler: a = l, isModalOpen: s = !1, ...o } = e;
     return t(null != i ? { code: i } : {}).then(n, (e) => {
-        if (d(e, o))
+        var i, l;
+        if (((i = e), (l = s), (i.body && 60008 === i.body.code) || (l && 429 === i.status)))
             return a({
                 promiseFn: t,
                 resolve: n,
                 reject: r,
                 res: e,
-                ...s
+                ...o
             });
         r(e);
     });
 }
-function f(e, t) {
-    let { checkEnabled: n = c(), ...r } = null != t ? t : {};
-    return new Promise((t, i) => {
-        ((0, s.d)(n) ? _ : E)({
+function c(e, t) {
+    var n, r;
+    let { checkEnabled: i = null !== (r = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== r && r, ...o } = null != t ? t : {};
+    return new Promise((t, n) => {
+        ((0, s.d)(i) ? l : u)({
             promiseFn: e,
             resolve: t,
-            reject: i,
-            ...r
+            reject: n,
+            ...o
         });
     });
 }

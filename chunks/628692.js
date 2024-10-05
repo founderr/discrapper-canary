@@ -1,113 +1,112 @@
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(399606),
-    u = n(481060),
-    c = n(596454),
-    d = n(315744),
-    _ = n(208049),
-    E = n(135869),
-    f = n(763296),
-    h = n(22382),
-    p = n(747071),
-    m = n(42693);
-function I(e) {
+n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(399606),
+    l = n(481060),
+    u = n(596454),
+    c = n(315744),
+    d = n(208049),
+    _ = n(135869),
+    E = n(763296),
+    f = n(22382),
+    h = n(747071),
+    p = n(42693);
+t.Z = function (e) {
     let { soundId: t, jumbo: n = !1 } = e,
-        { currentPreviewRef: r } = a.useContext(E.Z),
-        o = (0, l.e7)([f.Z], () => f.Z.getSoundById(t)),
-        I = (null == o ? void 0 : o.emojiId) != null || (null == o ? void 0 : o.emojiName) != null,
-        [T, g] = a.useState(!1),
-        S = (0, d.P)('soundmoji_chat_mention'),
-        A = a.useCallback(() => {
+        { currentPreviewRef: a } = i.useContext(_.Z),
+        I = (0, o.e7)([E.Z], () => E.Z.getSoundById(t)),
+        m = (null == I ? void 0 : I.emojiId) != null || (null == I ? void 0 : I.emojiName) != null,
+        [T, S] = i.useState(!1),
+        g = (0, c.P)('soundmoji_chat_mention'),
+        A = i.useCallback(() => {
             var e;
-            null == o && (0, _.w)();
-            let n = new Audio((0, h.Z)(t));
-            null != r.current && r.current.pause(),
-                (r.current = n),
+            null == I && (0, d.w)();
+            let n = new Audio((0, f.Z)(t));
+            null != a.current && a.current.pause(),
+                (a.current = n),
                 (n.currentTime = 0),
-                (n.volume = (0, p.Z)(null !== (e = null == o ? void 0 : o.volume) && void 0 !== e ? e : 0.5)),
-                g(!0),
+                (n.volume = (0, h.Z)(null !== (e = null == I ? void 0 : I.volume) && void 0 !== e ? e : 0.5)),
+                S(!0),
                 n.play(),
                 n.addEventListener(
                     'ended',
                     () => {
-                        g(!1);
+                        S(!1);
                     },
                     { once: !0 }
                 );
-        }, [t, o, r, g]);
-    return S
-        ? null == o
-            ? (0, i.jsxs)(u.Clickable, {
+        }, [t, I, a, S]);
+    return g
+        ? null == I
+            ? (0, r.jsxs)(l.Clickable, {
                   title: 'Risky Click',
                   tag: 'span',
                   onClick: A,
-                  className: m.container,
+                  className: p.container,
                   children: [
-                      (0, i.jsx)(u.VoiceNormalIcon, {
+                      (0, r.jsx)(l.VoiceNormalIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: m.unknownSound
+                          className: p.unknownSound
                       }),
-                      (0, i.jsx)(u.Text, {
+                      (0, r.jsx)(l.Text, {
                           tag: 'span',
                           variant: 'text-md/normal',
                           color: 'none',
-                          className: m.text,
+                          className: p.text,
                           children: 'Unknown'
                       })
                   ]
               })
             : n
-              ? (0, i.jsxs)(u.Clickable, {
+              ? (0, r.jsxs)(l.Clickable, {
                     onClick: A,
-                    className: m.jumboContainer,
+                    className: p.jumboContainer,
                     children: [
-                        (0, i.jsx)('div', {
-                            className: s()(m.jumboOverlay, { [m.playing]: T }),
-                            children: (0, i.jsx)(u.CirclePlayIcon, {
+                        (0, r.jsx)('div', {
+                            className: s()(p.jumboOverlay, { [p.playing]: T }),
+                            children: (0, r.jsx)(l.CirclePlayIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: m.__invalid_jumboPlayIcon
+                                className: p.__invalid_jumboPlayIcon
                             })
                         }),
-                        I &&
-                            (0, i.jsx)(c.Z, {
-                                emojiId: null == o ? void 0 : o.emojiId,
-                                emojiName: null == o ? void 0 : o.emojiName,
-                                className: m.jumboEmoji
+                        m &&
+                            (0, r.jsx)(u.Z, {
+                                emojiId: null == I ? void 0 : I.emojiId,
+                                emojiName: null == I ? void 0 : I.emojiName,
+                                className: p.jumboEmoji
                             }),
-                        (0, i.jsx)(u.Text, {
+                        (0, r.jsx)(l.Text, {
                             tag: 'span',
                             variant: 'text-lg/normal',
                             color: 'none',
-                            className: m.text,
-                            children: o.name
+                            className: p.text,
+                            children: I.name
                         })
                     ]
                 })
-              : (0, i.jsxs)(u.Clickable, {
+              : (0, r.jsxs)(l.Clickable, {
                     tag: 'span',
                     onClick: A,
-                    className: m.container,
+                    className: p.container,
                     children: [
-                        I &&
-                            (0, i.jsx)(c.Z, {
-                                emojiId: null == o ? void 0 : o.emojiId,
-                                emojiName: null == o ? void 0 : o.emojiName,
-                                className: m.emoji
+                        m &&
+                            (0, r.jsx)(u.Z, {
+                                emojiId: null == I ? void 0 : I.emojiId,
+                                emojiName: null == I ? void 0 : I.emojiName,
+                                className: p.emoji
                             }),
-                        (0, i.jsx)(u.Text, {
+                        (0, r.jsx)(l.Text, {
                             tag: 'span',
                             variant: 'text-md/normal',
                             color: 'none',
-                            className: m.text,
-                            children: o.name
+                            className: p.text,
+                            children: I.name
                         })
                     ]
                 })
         : null;
-}
-t.Z = I;
+};

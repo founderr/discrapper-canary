@@ -1,190 +1,183 @@
 n.d(t, {
     D: function () {
-        return S;
+        return E;
     }
-});
-var r = n(47120);
-var i = n(113434),
-    a = n(918701),
-    o = n(5881),
+}),
+    n(47120);
+var r = n(113434),
+    i = n(918701),
+    a = n(5881),
     s = n(665430),
-    l = n(566078),
-    u = n(46140),
-    c = n(689938);
-let d = (0, o.T)({});
-function _(e, t, n) {
+    o = n(566078),
+    l = n(46140),
+    u = n(689938);
+let c = (0, a.T)({});
+function d(e, t, n) {
     return n ? e.astFormat(t) : e.format(t);
 }
-function E(e) {
-    var t;
-    let { quest: n, taskDetails: r, withoutMarkdown: i } = e,
-        o = l.r.build(n.config).defaultReward.messages.nameWithArticle,
-        s = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        u = (0, a.Kr)(n.config),
-        { targetMinutes: d } = r;
-    return _(
-        s ? c.Z.Messages.QUEST_REWARD_WITH_EXPIRATION : c.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_ANY_GAME_ON_CONNECTED_CONSOLE,
-        {
-            targetMinutes: d,
-            rewardNameWithArticle: o,
-            reward: o,
-            duration: u
-        },
-        i
-    );
-}
-function f(e) {
-    var t;
-    let { quest: n, taskDetails: r, connectedConsoleLinkOnClick: i, withoutMarkdown: o, isEligibleForMobileGA: s } = e,
-        u = l.r.build(n.config).defaultReward.messages.nameWithArticle,
-        d = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        E = (0, a.Kr)(n.config),
-        { targetMinutes: f } = r,
-        h = n.config.messages.gameTitle;
-    return _(
-        null != E ? (d && !s ? c.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD : c.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD) : c.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME,
-        {
-            gameTitle: h,
-            reward: u,
-            streamingDurationRequirement: f,
-            rewardNameWithArticle: u,
-            targetMinutes: f,
-            onClick: i,
-            duration: E
-        },
-        o
-    );
-}
-function h(e) {
-    let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
-        i = l.r.build(t.config).defaultReward.messages.nameWithArticle,
-        o = (0, a.Kr)(t.config),
-        { targetMinutes: s } = n,
-        u = t.config.messages.gameTitle;
-    return _(
-        null != o ? c.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD : c.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME,
-        {
-            gameTitle: u,
-            targetMinutes: s,
-            rewardNameWithArticle: i,
-            duration: o
-        },
-        r
-    );
-}
-function p(e) {
-    let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
-        i = l.r.build(t.config).defaultReward.messages.nameWithArticle,
-        o = (0, a.Kr)(t.config),
-        { targetMinutes: s } = n,
-        u = t.config.messages.gameTitle;
-    return _(
-        null != o ? c.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD : c.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD,
-        {
-            gameTitle: u,
-            streamingDurationRequirement: s,
-            rewardNameWithArticle: i,
-            duration: o,
-            questReward: i
-        },
-        r
-    );
-}
-function m(e) {
-    let { useV2Variants: t, quest: n, taskDetails: r, withoutMarkdown: i } = e,
-        { targetMinutes: a } = r,
-        o = n.config.messages.gameTitle;
-    return _(
-        t ? c.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2 : c.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED,
-        {
-            gameTitle: o,
-            streamingDurationRequirement: a
-        },
-        i
-    );
-}
-function I(e) {
-    let { quest: t, taskDetails: n, isEligibleForMobileGA: r, useV2Variants: i = !1, connectedConsoleLinkOnClick: o, thirdPartyTaskDetails: s, withoutMarkdown: d } = e,
-        I = t.config.messages.gameTitle,
-        T = l.r.build(t.config).defaultReward.messages.nameWithArticle,
-        { targetMinutes: g } = n,
-        S = (0, a.zK)(t, u.S7.IN_HOUSE_CONSOLE_QUEST),
-        A = (0, a.Kr)(t.config),
-        v = (0, a.$J)(t) && (0, a.$H)(t);
-    if (S && null != A)
-        return E({
-            quest: t,
-            taskDetails: n,
-            withoutMarkdown: d
-        });
-    if (v)
-        return f({
-            quest: t,
-            taskDetails: n,
-            connectedConsoleLinkOnClick: o,
-            withoutMarkdown: d,
-            isEligibleForMobileGA: r
-        });
-    if ((0, a.$J)(t))
-        return h({
-            quest: t,
-            taskDetails: n,
-            withoutMarkdown: d
-        });
-    else if ((0, a.$H)(t))
-        return p({
-            quest: t,
-            taskDetails: n,
-            withoutMarkdown: d
-        });
-    else if ((0, a.oo)({ quest: t }))
-        return m({
-            useV2Variants: i,
-            quest: t,
-            taskDetails: n,
-            withoutMarkdown: d
-        });
-    return null != s
-        ? s.description
-        : _(
-              null != A ? c.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD : i ? c.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2 : c.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD,
-              {
-                  gameTitle: I,
-                  streamingDurationRequirement: g,
-                  questReward: T,
-                  duration: A
-              },
-              d
-          );
-}
-let T = (e) => {
+let _ = (e) => {
     try {
         let t = '';
         if ('string' == typeof e) return e;
         if (Array.isArray(e)) {
-            for (let n of e) t += T(n.content);
+            for (let n of e) t += _(n.content);
             return t;
         }
-        return T(e.content);
+        return _(e.content);
     } catch (e) {
-        return d.error('Failed to convert ASTNode to string', e), '';
+        return c.error('Failed to convert ASTNode to string', e), '';
     }
 };
-function g(e) {
-    let t = I(e);
-    return e.withoutMarkdown ? T(t) : t;
-}
-function S(e) {
-    let { quest: t, location: n, questContent: r } = e,
-        a = (0, s.pF)({ location: n }),
-        o = (0, i.uA)({
+function E(e) {
+    let { quest: t, location: n, questContent: a } = e,
+        c = (0, s.pF)({ location: n }),
+        E = (0, r.uA)({
             quest: t,
-            questContent: r
+            questContent: a
         });
-    return g({
+    return (function (e) {
+        let t = (function (e) {
+            let { quest: t, taskDetails: n, isEligibleForMobileGA: r, useV2Variants: a = !1, connectedConsoleLinkOnClick: s, thirdPartyTaskDetails: c, withoutMarkdown: _ } = e,
+                E = t.config.messages.gameTitle,
+                f = o.r.build(t.config).defaultReward.messages.nameWithArticle,
+                { targetMinutes: h } = n,
+                p = (0, i.zK)(t, l.S7.IN_HOUSE_CONSOLE_QUEST),
+                I = (0, i.Kr)(t.config),
+                m = (0, i.$J)(t) && (0, i.$H)(t);
+            if (p && null != I)
+                return (function (e) {
+                    var t;
+                    let { quest: n, taskDetails: r, withoutMarkdown: a } = e,
+                        s = o.r.build(n.config).defaultReward.messages.nameWithArticle,
+                        l = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+                        c = (0, i.Kr)(n.config),
+                        { targetMinutes: _ } = r;
+                    return d(
+                        l ? u.Z.Messages.QUEST_REWARD_WITH_EXPIRATION : u.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_ANY_GAME_ON_CONNECTED_CONSOLE,
+                        {
+                            targetMinutes: _,
+                            rewardNameWithArticle: s,
+                            reward: s,
+                            duration: c
+                        },
+                        a
+                    );
+                })({
+                    quest: t,
+                    taskDetails: n,
+                    withoutMarkdown: _
+                });
+            if (m)
+                return (function (e) {
+                    var t;
+                    let { quest: n, taskDetails: r, connectedConsoleLinkOnClick: a, withoutMarkdown: s, isEligibleForMobileGA: l } = e,
+                        c = o.r.build(n.config).defaultReward.messages.nameWithArticle,
+                        _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+                        E = (0, i.Kr)(n.config),
+                        { targetMinutes: f } = r,
+                        h = n.config.messages.gameTitle;
+                    return d(
+                        null != E ? (_ && !l ? u.Z.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD : u.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD) : u.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME,
+                        {
+                            gameTitle: h,
+                            reward: c,
+                            streamingDurationRequirement: f,
+                            rewardNameWithArticle: c,
+                            targetMinutes: f,
+                            onClick: a,
+                            duration: E
+                        },
+                        s
+                    );
+                })({
+                    quest: t,
+                    taskDetails: n,
+                    connectedConsoleLinkOnClick: s,
+                    withoutMarkdown: _,
+                    isEligibleForMobileGA: r
+                });
+            if ((0, i.$J)(t))
+                return (function (e) {
+                    let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
+                        a = o.r.build(t.config).defaultReward.messages.nameWithArticle,
+                        s = (0, i.Kr)(t.config),
+                        { targetMinutes: l } = n,
+                        c = t.config.messages.gameTitle;
+                    return d(
+                        null != s ? u.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD : u.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME,
+                        {
+                            gameTitle: c,
+                            targetMinutes: l,
+                            rewardNameWithArticle: a,
+                            duration: s
+                        },
+                        r
+                    );
+                })({
+                    quest: t,
+                    taskDetails: n,
+                    withoutMarkdown: _
+                });
+            else if ((0, i.$H)(t))
+                return (function (e) {
+                    let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
+                        a = o.r.build(t.config).defaultReward.messages.nameWithArticle,
+                        s = (0, i.Kr)(t.config),
+                        { targetMinutes: l } = n,
+                        c = t.config.messages.gameTitle;
+                    return d(
+                        null != s ? u.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD : u.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD,
+                        {
+                            gameTitle: c,
+                            streamingDurationRequirement: l,
+                            rewardNameWithArticle: a,
+                            duration: s,
+                            questReward: a
+                        },
+                        r
+                    );
+                })({
+                    quest: t,
+                    taskDetails: n,
+                    withoutMarkdown: _
+                });
+            else if ((0, i.oo)({ quest: t }))
+                return (function (e) {
+                    let { useV2Variants: t, quest: n, taskDetails: r, withoutMarkdown: i } = e,
+                        { targetMinutes: a } = r,
+                        s = n.config.messages.gameTitle;
+                    return d(
+                        t ? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2 : u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED,
+                        {
+                            gameTitle: s,
+                            streamingDurationRequirement: a
+                        },
+                        i
+                    );
+                })({
+                    useV2Variants: a,
+                    quest: t,
+                    taskDetails: n,
+                    withoutMarkdown: _
+                });
+            return null != c
+                ? c.description
+                : d(
+                      null != I ? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD : a ? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2 : u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD,
+                      {
+                          gameTitle: E,
+                          streamingDurationRequirement: h,
+                          questReward: f,
+                          duration: I
+                      },
+                      _
+                  );
+        })(e);
+        return e.withoutMarkdown ? _(t) : t;
+    })({
         ...e,
-        isEligibleForMobileGA: a,
-        connectedConsoleLinkOnClick: o,
+        isEligibleForMobileGA: c,
+        connectedConsoleLinkOnClick: E,
         withoutMarkdown: !1
     });
 }

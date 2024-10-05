@@ -33,7 +33,7 @@ let t = (e) => ({
     r = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'],
     i = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'],
     a = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'],
-    o = [
+    s = [
         'align-content',
         'align-items',
         'align-self',
@@ -393,15 +393,13 @@ let t = (e) => ({
         'writing-mode',
         'z-index'
     ].reverse();
-function s(e) {
-    let s = t(e),
-        l = 'and or not only',
-        u = {
+e.exports = function (e) {
+    let o = t(e),
+        l = {
             className: 'variable',
             begin: '\\$' + e.IDENT_RE
         },
-        c = ['charset', 'css', 'debug', 'extend', 'font-face', 'for', 'import', 'include', 'keyframes', 'media', 'mixin', 'page', 'warn', 'while'],
-        d = '(?=[.\\s\\n[:,(])';
+        u = '(?=[.\\s\\n[:,(])';
     return {
         name: 'Stylus',
         aliases: ['styl'],
@@ -413,28 +411,28 @@ function s(e) {
             e.APOS_STRING_MODE,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            s.HEXCOLOR,
+            o.HEXCOLOR,
             {
-                begin: '\\.[a-zA-Z][a-zA-Z0-9_-]*' + d,
+                begin: '\\.[a-zA-Z][a-zA-Z0-9_-]*' + u,
                 className: 'selector-class'
             },
             {
-                begin: '#[a-zA-Z][a-zA-Z0-9_-]*' + d,
+                begin: '#[a-zA-Z][a-zA-Z0-9_-]*' + u,
                 className: 'selector-id'
             },
             {
-                begin: '\\b(' + n.join('|') + ')' + d,
+                begin: '\\b(' + n.join('|') + ')' + u,
                 className: 'selector-tag'
             },
             {
                 className: 'selector-pseudo',
-                begin: '&?:(' + i.join('|') + ')' + d
+                begin: '&?:(' + i.join('|') + ')' + u
             },
             {
                 className: 'selector-pseudo',
-                begin: '&?:(:)?(' + a.join('|') + ')' + d
+                begin: '&?:(:)?(' + a.join('|') + ')' + u
             },
-            s.ATTRIBUTE_SELECTOR_MODE,
+            o.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: 'keyword',
                 begin: /@media/,
@@ -442,18 +440,18 @@ function s(e) {
                     end: /[{;}]/,
                     keywords: {
                         $pattern: /[a-z-]+/,
-                        keyword: l,
+                        keyword: 'and or not only',
                         attribute: r.join(' ')
                     },
-                    contains: [s.CSS_NUMBER_MODE]
+                    contains: [o.CSS_NUMBER_MODE]
                 }
             },
             {
                 className: 'keyword',
-                begin: '@((-(o|moz|ms|webkit)-)?(' + c.join('|') + '))\\b'
+                begin: '@((-(o|moz|ms|webkit)-)?(' + 'charset|css|debug|extend|font-face|for|import|include|keyframes|media|mixin|page|warn|while))\\b'
             },
-            u,
-            s.CSS_NUMBER_MODE,
+            l,
+            o.CSS_NUMBER_MODE,
             {
                 className: 'function',
                 begin: '^[a-zA-Z][a-zA-Z0-9_-]*\\(.*\\)',
@@ -468,23 +466,22 @@ function s(e) {
                         className: 'params',
                         begin: /\(/,
                         end: /\)/,
-                        contains: [s.HEXCOLOR, u, e.APOS_STRING_MODE, s.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE]
+                        contains: [o.HEXCOLOR, l, e.APOS_STRING_MODE, o.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE]
                     }
                 ]
             },
-            s.CSS_VARIABLE,
+            o.CSS_VARIABLE,
             {
                 className: 'attribute',
-                begin: '\\b(' + o.join('|') + ')\\b',
+                begin: '\\b(' + s.join('|') + ')\\b',
                 starts: {
                     end: /;|$/,
-                    contains: [s.HEXCOLOR, u, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, s.CSS_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE, s.IMPORTANT, s.FUNCTION_DISPATCH],
+                    contains: [o.HEXCOLOR, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o.CSS_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE, o.IMPORTANT, o.FUNCTION_DISPATCH],
                     illegal: /\./,
                     relevance: 0
                 }
             },
-            s.FUNCTION_DISPATCH
+            o.FUNCTION_DISPATCH
         ]
     };
-}
-e.exports = s;
+};

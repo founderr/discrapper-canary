@@ -1,9 +1,8 @@
-var r;
+var r, i;
 n.d(t, {
     t: function () {
         return r;
     }
 }),
-    !(function (e) {
-        (e.SOURCE = 'SOURCE'), (e.TARGET = 'TARGET');
-    })(r || (r = {}));
+    ((i = r || (r = {})).SOURCE = 'SOURCE'),
+    (i.TARGET = 'TARGET');

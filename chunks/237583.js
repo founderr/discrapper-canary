@@ -1,100 +1,98 @@
-var r,
-    i = n(653041);
-var a = n(47120);
-var o = n(735250),
-    s = n(470079),
-    l = n(120356),
-    u = n.n(l),
-    c = n(481060),
-    d = n(598077),
-    _ = n(908860),
-    E = n(579861);
-function f(e, t, n) {
+t(653041), t(47120);
+var a,
+    r = t(735250),
+    s = t(470079),
+    i = t(120356),
+    o = t.n(i),
+    l = t(481060),
+    c = t(598077),
+    d = t(908860),
+    u = t(579861);
+function _(e, n, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = t),
         e
     );
 }
-function h(e, t, n) {
-    return (0, o.jsx)(
-        'div',
-        {
-            className: t,
-            children: e
-        },
-        n
-    );
-}
-class p extends (r = s.PureComponent) {
+class E extends (a = s.PureComponent) {
     renderUsers() {
-        let { users: e, max: t, renderUser: n = this.defaultRenderUser, renderMoreUsers: r } = this.props,
-            i = [],
-            a = e.length === t ? e.length : t - 1,
-            o = 0;
-        for (; o < a && o < e.length; ) {
-            let t = o === e.length - 1;
-            i.push(n(e[o] || null, t ? null : _.avatarMasked, 'user-'.concat(o), t)), o++;
+        let { users: e, max: n, renderUser: t = this.defaultRenderUser, renderMoreUsers: a } = this.props,
+            r = [],
+            s = e.length === n ? e.length : n - 1,
+            i = 0;
+        for (; i < s && i < e.length; ) {
+            let n = i === e.length - 1;
+            r.push(t(e[i] || null, n ? null : d.avatarMasked, 'user-'.concat(i), n)), i++;
         }
-        if (o < e.length) {
-            let t = Math.min(e.length - o, 99);
-            i.push(r('+'.concat(t), _.moreUsers, 'more-users', t));
+        if (i < e.length) {
+            let n = Math.min(e.length - i, 99);
+            r.push(a('+'.concat(n), d.moreUsers, 'more-users', n));
         }
-        return i;
+        return r;
     }
     renderIcon() {
         return this.props.icon
-            ? (0, o.jsx)('div', {
-                  className: _.iconContainer,
-                  children: (0, o.jsx)(c.VoiceNormalIcon, {
+            ? (0, r.jsx)('div', {
+                  className: d.iconContainer,
+                  children: (0, r.jsx)(l.VoiceNormalIcon, {
                       size: 'xs',
                       color: 'currentColor',
-                      colorClass: _.foreground,
-                      className: _.icon
+                      colorClass: d.foreground,
+                      className: d.icon
                   })
               })
             : null;
     }
     render() {
         let { className: e } = this.props;
-        return (0, o.jsxs)('div', {
-            className: u()(e, _.container),
+        return (0, r.jsxs)('div', {
+            className: o()(e, d.container),
             ref: (e) => (this._ref = e),
             children: [this.renderIcon(), this.renderUsers()]
         });
     }
     constructor(...e) {
         super(...e),
-            f(this, '_ref', void 0),
-            f(this, 'defaultRenderUser', (e, t, n, r) => {
-                let { onClick: i, size: a, guildId: s } = this.props,
-                    l = e instanceof d.Z ? e : null != e ? e.user : null;
-                return null == l
-                    ? (0, o.jsx)('div', { className: u()(_.emptyUser, t) }, n)
-                    : (0, o.jsx)(
-                          c.Avatar,
+            _(this, '_ref', void 0),
+            _(this, 'defaultRenderUser', (e, n, t, a) => {
+                let { onClick: s, size: i, guildId: _ } = this.props,
+                    E = e instanceof c.Z ? e : null != e ? e.user : null;
+                return null == E
+                    ? (0, r.jsx)('div', { className: o()(d.emptyUser, n) }, t)
+                    : (0, r.jsx)(
+                          l.Avatar,
                           {
                               tabIndex: 0,
-                              src: l.getAvatarURL(s, (0, c.getAvatarSize)(a)),
-                              size: a,
-                              'aria-label': l.username,
-                              className: u()(t, E.cursorPointer, _.avatarSize),
-                              onClick: (e) => (null != i ? i(e, l, this._ref) : null)
+                              src: E.getAvatarURL(_, (0, l.getAvatarSize)(i)),
+                              size: i,
+                              'aria-label': E.username,
+                              className: o()(n, u.cursorPointer, d.avatarSize),
+                              onClick: (e) => (null != s ? s(e, E, this._ref) : null)
                           },
-                          l.id
+                          E.id
                       );
             });
     }
 }
-f(p, 'defaultProps', {
+_(E, 'defaultProps', {
     max: 10,
-    renderMoreUsers: h,
-    size: c.AvatarSizes.SIZE_24
+    renderMoreUsers: function (e, n, t) {
+        return (0, r.jsx)(
+            'div',
+            {
+                className: n,
+                children: e
+            },
+            t
+        );
+    },
+    size: l.AvatarSizes.SIZE_24
 }),
-    (t.Z = p);
+    (n.Z = E);

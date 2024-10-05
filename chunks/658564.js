@@ -1,20 +1,8 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
-            className: 'number',
-            begin: /[$%]\d+/
-        },
-        n = {
-            className: 'number',
-            begin: /\b\d+/
-        },
-        r = {
-            className: 'number',
-            begin: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?/
-        },
-        i = {
-            className: 'number',
-            begin: /:\d{1,5}/
-        };
+        className: 'number',
+        begin: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?/
+    };
     return {
         name: 'Apache config',
         aliases: ['apacheconf'],
@@ -25,7 +13,14 @@ function t(e) {
                 className: 'section',
                 begin: /<\/?/,
                 end: />/,
-                contains: [r, i, e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })]
+                contains: [
+                    t,
+                    {
+                        className: 'number',
+                        begin: /:\d{1,5}/
+                    },
+                    e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })
+                ]
             },
             {
                 className: 'attribute',
@@ -48,10 +43,19 @@ function t(e) {
                             className: 'variable',
                             begin: /[\$%]\{/,
                             end: /\}/,
-                            contains: ['self', t]
+                            contains: [
+                                'self',
+                                {
+                                    className: 'number',
+                                    begin: /[$%]\d+/
+                                }
+                            ]
                         },
-                        r,
-                        n,
+                        t,
+                        {
+                            className: 'number',
+                            begin: /\b\d+/
+                        },
                         e.QUOTE_STRING_MODE
                     ]
                 }
@@ -59,5 +63,4 @@ function t(e) {
         ],
         illegal: /\S/
     };
-}
-e.exports = t;
+};

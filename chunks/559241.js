@@ -12,7 +12,7 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+t.Z = new (class e {
     constructor() {
         i(this, 'filterTagIds', null),
             i(this, 'sortOrder', null),
@@ -37,5 +37,4 @@ class a {
                 return null !== (t = this.layout) && void 0 !== t ? t : null == n ? void 0 : n.getDefaultLayout();
             });
     }
-}
-t.Z = new a();
+})();

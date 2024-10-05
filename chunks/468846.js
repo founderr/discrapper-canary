@@ -1,40 +1,40 @@
 n.d(t, {
     ZP: function () {
-        return _;
+        return h;
     },
     pn: function () {
         return r;
     }
 });
-var r,
+var l,
+    r,
     i = n(735250),
     a = n(470079),
     o = n(729594),
     s = n(269625);
-let l = 'https://www.tiktok.com';
-function u(e) {
+function d(e) {
     let { autoMute: t, ...n } = e,
-        r = a.useRef(null),
-        o = a.useCallback(
+        l = a.useRef(null),
+        r = a.useCallback(
             (e) => {
-                if (!!e.data['x-tiktok-player'] && e.origin === l) {
+                if (!!e.data['x-tiktok-player'] && 'https://www.tiktok.com' === e.origin) {
                     if ('onPlayerReady' === e.data.type) {
-                        var n, i, a, o;
+                        var n, r, i, a;
                         t &&
-                            (null === (o = r.current) ||
-                                void 0 === o ||
-                                null === (a = o.contentWindow) ||
+                            (null === (a = l.current) ||
                                 void 0 === a ||
-                                a.postMessage(
+                                null === (i = a.contentWindow) ||
+                                void 0 === i ||
+                                i.postMessage(
                                     {
                                         type: 'mute',
                                         'x-tiktok-player': !0
                                     },
                                     e.origin
                                 )),
-                            null === (i = r.current) ||
-                                void 0 === i ||
-                                null === (n = i.contentWindow) ||
+                            null === (r = l.current) ||
+                                void 0 === r ||
+                                null === (n = r.contentWindow) ||
                                 void 0 === n ||
                                 n.postMessage(
                                     {
@@ -49,30 +49,30 @@ function u(e) {
             [t]
         );
     return (
-        a.useEffect(() => (window.addEventListener('message', o), () => window.removeEventListener('message', o)), [o]),
-        (0, i.jsx)(d, {
-            ref: r,
+        a.useEffect(() => (window.addEventListener('message', r), () => window.removeEventListener('message', r)), [r]),
+        (0, i.jsx)(m, {
+            ref: l,
             ...n
         })
     );
 }
-function c(e) {
-    let { src: t, autoMute: n, ...r } = e,
-        a = o.parse(null != t ? t : '', !0);
-    (a.query = {
-        ...a.query,
+function u(e) {
+    let { src: t, autoMute: n, ...l } = e,
+        r = o.parse(null != t ? t : '', !0);
+    (r.query = {
+        ...r.query,
         autoplay: '1',
         auto_play: '1'
     }),
-        n && (a.query.mute = '1'),
-        (a.search = null);
-    let s = o.format(a);
-    return (0, i.jsx)(d, {
-        src: s,
-        ...r
+        n && (r.query.mute = '1'),
+        (r.search = null);
+    let a = o.format(r);
+    return (0, i.jsx)(m, {
+        src: a,
+        ...l
     });
 }
-let d = a.forwardRef(function (e, t) {
+let m = a.forwardRef(function (e, t) {
     return (0, i.jsx)('iframe', {
         ref: t,
         className: s.embedIframe,
@@ -83,16 +83,14 @@ let d = a.forwardRef(function (e, t) {
         ...e
     });
 });
-function _(e) {
+function h(e) {
     switch (e.provider) {
         case 'YouTube':
-            return (0, i.jsx)(c, { ...e });
-        case 'TikTok':
             return (0, i.jsx)(u, { ...e });
-        default:
+        case 'TikTok':
             return (0, i.jsx)(d, { ...e });
+        default:
+            return (0, i.jsx)(m, { ...e });
     }
 }
-!(function (e) {
-    (e.YOUTUBE = 'YouTube'), (e.TIKTOK = 'TikTok');
-})(r || (r = {}));
+((l = r || (r = {})).YOUTUBE = 'YouTube'), (l.TIKTOK = 'TikTok');

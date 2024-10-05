@@ -6624,67 +6624,17 @@ let t = [
     '$WolframID',
     '$WolframUUID'
 ];
-function n(e) {
+e.exports = function (e) {
     let n = e.regex,
-        r = /([2-9]|[1-2]\d|[3][0-5])\^\^/,
-        i = /(\w*\.\w+|\w+\.\w*|\w+)/,
-        a = /(\d*\.\d+|\d+\.\d*|\d+)/,
-        o = n.either(n.concat(r, i), a),
-        s = /``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/,
-        l = /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/,
-        u = n.either(s, l),
-        c = /\*\^[+-]?\d+/,
-        d = {
-            className: 'number',
-            relevance: 0,
-            begin: n.concat(o, n.optional(u), n.optional(c))
-        },
-        _ = /[a-zA-Z$][a-zA-Z0-9$]*/,
-        E = new Set(t),
-        f = {
-            variants: [
-                {
-                    className: 'builtin-symbol',
-                    begin: _,
-                    'on:begin': (e, t) => {
-                        !E.has(e[0]) && t.ignoreMatch();
-                    }
-                },
-                {
-                    className: 'symbol',
-                    relevance: 0,
-                    begin: _
-                }
-            ]
-        },
-        h = {
-            className: 'named-character',
-            begin: /\\\[[$a-zA-Z][$a-zA-Z0-9]+\]/
-        },
-        p = {
-            className: 'operator',
-            relevance: 0,
-            begin: /[+\-*/,;.:@~=><&|_`'^?!%]+/
-        },
-        m = {
-            className: 'pattern',
-            relevance: 0,
-            begin: /([a-zA-Z$][a-zA-Z0-9$]*)?_+([a-zA-Z$][a-zA-Z0-9$]*)?/
-        },
-        I = {
-            className: 'slot',
-            relevance: 0,
-            begin: /#[a-zA-Z$][a-zA-Z0-9$]*|#+[0-9]?/
-        },
-        T = {
-            className: 'brace',
-            relevance: 0,
-            begin: /[[\](){}]/
-        },
-        g = {
+        r = n.either(n.concat(/([2-9]|[1-2]\d|[3][0-5])\^\^/, /(\w*\.\w+|\w+\.\w*|\w+)/), /(\d*\.\d+|\d+\.\d*|\d+)/),
+        i = n.either(/``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/, /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/),
+        a = n.concat(r, n.optional(i), n.optional(/\*\^[+-]?\d+/)),
+        s = /[a-zA-Z$][a-zA-Z0-9$]*/,
+        o = new Set(t),
+        l = {
             className: 'message-name',
             relevance: 0,
-            begin: n.concat('::', _)
+            begin: n.concat('::', s)
         };
     return {
         name: 'Mathematica',
@@ -6698,7 +6648,55 @@ function n(e) {
             'builtin-symbol': 'built_in',
             'message-name': 'string'
         },
-        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }), m, I, g, f, h, e.QUOTE_STRING_MODE, d, p, T]
+        contains: [
+            e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }),
+            {
+                className: 'pattern',
+                relevance: 0,
+                begin: /([a-zA-Z$][a-zA-Z0-9$]*)?_+([a-zA-Z$][a-zA-Z0-9$]*)?/
+            },
+            {
+                className: 'slot',
+                relevance: 0,
+                begin: /#[a-zA-Z$][a-zA-Z0-9$]*|#+[0-9]?/
+            },
+            l,
+            {
+                variants: [
+                    {
+                        className: 'builtin-symbol',
+                        begin: s,
+                        'on:begin': (e, t) => {
+                            !o.has(e[0]) && t.ignoreMatch();
+                        }
+                    },
+                    {
+                        className: 'symbol',
+                        relevance: 0,
+                        begin: s
+                    }
+                ]
+            },
+            {
+                className: 'named-character',
+                begin: /\\\[[$a-zA-Z][$a-zA-Z0-9]+\]/
+            },
+            e.QUOTE_STRING_MODE,
+            {
+                className: 'number',
+                relevance: 0,
+                begin: a
+            },
+            {
+                className: 'operator',
+                relevance: 0,
+                begin: /[+\-*/,;.:@~=><&|_`'^?!%]+/
+            },
+            {
+                className: 'brace',
+                relevance: 0,
+                begin: /[[\](){}]/
+            }
+        ]
     };
-}
-e.exports = n;
+};

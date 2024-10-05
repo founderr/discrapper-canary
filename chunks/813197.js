@@ -1,19 +1,19 @@
 n.d(t, {
     Fq: function () {
-        return E;
+        return d;
     },
     Zj: function () {
-        return d;
+        return c;
     }
-});
+}),
+    n(47120);
 var r,
-    i = n(47120);
-var a = n(735250),
-    o = n(470079),
+    i = n(735250),
+    a = n(470079),
     s = n(53281),
-    l = n(869783),
-    u = n(689938);
-function c(e, t, n) {
+    o = n(869783),
+    l = n(689938);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,27 +26,26 @@ function c(e, t, n) {
         e
     );
 }
-function d() {
+function c() {
     return [
         {
-            name: u.Z.Messages.IMAGES,
+            name: l.Z.Messages.IMAGES,
             extensions: ['jpg', 'jpeg', 'png', 'gif']
         }
     ];
 }
-function _(e, t) {
-    if (null != e) {
-        let n = new FileReader();
-        (n.onload = (n) => {
-            var r;
-            'string' == typeof (null === (r = n.target) || void 0 === r ? void 0 : r.result) && t(n.target.result, e);
-        }),
-            n.readAsDataURL(e);
-    }
-}
-function E(e, t, n) {
-    _(e, (r) => {
-        if (e.type === l.m.MP4) return t(r, e);
+function d(e, t, n) {
+    !(function (e, t) {
+        if (null != e) {
+            let n = new FileReader();
+            (n.onload = (n) => {
+                var r;
+                'string' == typeof (null === (r = n.target) || void 0 === r ? void 0 : r.result) && t(n.target.result, e);
+            }),
+                n.readAsDataURL(e);
+        }
+    })(e, (r) => {
+        if (e.type === o.m.MP4) return t(r, e);
         let i = new Image();
         (i.src = r),
             (i.onload = () => {
@@ -57,7 +56,7 @@ function E(e, t, n) {
             });
     });
 }
-class f extends (r = o.PureComponent) {
+class _ extends (r = a.PureComponent) {
     componentDidMount() {
         this._isMounted = !0;
     }
@@ -66,23 +65,23 @@ class f extends (r = o.PureComponent) {
         null === (e = this._ref.current) || void 0 === e || e.activateUploadDialogue();
     }
     render() {
-        let { multiple: e, disabled: t, className: n, tabIndex: r, 'aria-label': i, filters: o } = this.props;
-        return (0, a.jsx)(s.Z, {
+        let { multiple: e, disabled: t, className: n, tabIndex: r, 'aria-label': a, filters: o } = this.props;
+        return (0, i.jsx)(s.Z, {
             ref: this._ref,
             onChange: this.handleFileChange,
-            filters: null != o ? o : d(),
+            filters: null != o ? o : c(),
             multiple: e,
             disabled: t,
             className: n,
             tabIndex: r,
-            'aria-label': i
+            'aria-label': a
         });
     }
     constructor(...e) {
         super(...e),
-            c(this, '_ref', o.createRef()),
-            c(this, '_isMounted', !1),
-            c(this, 'handleFileChange', (e) => {
+            u(this, '_ref', a.createRef()),
+            u(this, '_isMounted', !1),
+            u(this, 'handleFileChange', (e) => {
                 let { onFileSizeError: t, maxFileSizeBytes: n } = this.props;
                 if ((e.stopPropagation(), e.preventDefault(), null != e.currentTarget.files))
                     for (let r = 0; r < e.currentTarget.files.length; r++) {
@@ -91,25 +90,25 @@ class f extends (r = o.PureComponent) {
                             null == t || t(n, i.size);
                             continue;
                         }
-                        E(i, this.handleFileRead, this.handleFileError);
+                        d(i, this.handleFileRead, this.handleFileError);
                     }
             }),
-            c(this, 'handleFileRead', (e, t) => {
+            u(this, 'handleFileRead', (e, t) => {
                 let { onChange: n } = this.props;
                 this._isMounted && n(e, t);
             }),
-            c(this, 'handleFileError', async () => {
+            u(this, 'handleFileError', async () => {
                 let { openUploadError: e } = await Promise.resolve().then(n.bind(n, 531643));
                 e({
-                    title: u.Z.Messages.PREMIUM_ALERT_ERROR_TITLE,
-                    help: u.Z.Messages.UNABLE_TO_PROCESS_IMAGE
+                    title: l.Z.Messages.PREMIUM_ALERT_ERROR_TITLE,
+                    help: l.Z.Messages.UNABLE_TO_PROCESS_IMAGE
                 });
             });
     }
 }
-c(f, 'defaultProps', {
+u(_, 'defaultProps', {
     multiple: !0,
     tabIndex: -1,
     maxFileSizeBytes: 1 / 0
 }),
-    (t.ZP = f);
+    (t.ZP = _);

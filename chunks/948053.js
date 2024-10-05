@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = /(?![A-Za-z0-9])(?![$])/,
         r = t.concat(/[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*/, n),
@@ -6,21 +6,6 @@ function t(e) {
         a = {
             scope: 'variable',
             match: '\\$+' + r
-        },
-        o = {
-            scope: 'meta',
-            variants: [
-                {
-                    begin: /<\?php/,
-                    relevance: 10
-                },
-                { begin: /<\?=/ },
-                {
-                    begin: /<\?/,
-                    relevance: 0.1
-                },
-                { begin: /\?>/ }
-            ]
         },
         s = {
             scope: 'subst',
@@ -32,31 +17,31 @@ function t(e) {
                 }
             ]
         },
-        l = e.inherit(e.APOS_STRING_MODE, { illegal: null }),
-        u = e.inherit(e.QUOTE_STRING_MODE, {
+        o = e.inherit(e.APOS_STRING_MODE, { illegal: null }),
+        l = e.inherit(e.QUOTE_STRING_MODE, {
             illegal: null,
             contains: e.QUOTE_STRING_MODE.contains.concat(s)
         }),
-        c = e.END_SAME_AS_BEGIN({
+        u = e.END_SAME_AS_BEGIN({
             begin: /<<<[ \t]*(\w+)\n/,
             end: /[ \t]*(\w+)\b/,
             contains: e.QUOTE_STRING_MODE.contains.concat(s)
         }),
-        d = '[ \t\n]',
-        _ = {
+        c = '[ \t\n]',
+        d = {
             scope: 'string',
-            variants: [u, l, c]
+            variants: [l, o, u]
         },
-        E = {
+        _ = {
             scope: 'number',
             variants: [{ begin: '\\b0[bB][01]+(?:_[01]+)*\\b' }, { begin: '\\b0[oO][0-7]+(?:_[0-7]+)*\\b' }, { begin: '\\b0[xX][\\da-fA-F]+(?:_[\\da-fA-F]+)*\\b' }, { begin: '(?:\\b\\d+(?:_\\d+)*(\\.(?:\\d+(?:_\\d+)*))?|\\B\\.\\d+)(?:[eE][+-]?\\d+)?' }],
             relevance: 0
         },
-        f = ['false', 'null', 'true'],
-        h = ['__CLASS__', '__DIR__', '__FILE__', '__FUNCTION__', '__COMPILER_HALT_OFFSET__', '__LINE__', '__METHOD__', '__NAMESPACE__', '__TRAIT__', 'die', 'echo', 'exit', 'include', 'include_once', 'print', 'require', 'require_once', 'array', 'abstract', 'and', 'as', 'binary', 'bool', 'boolean', 'break', 'callable', 'case', 'catch', 'class', 'clone', 'const', 'continue', 'declare', 'default', 'do', 'double', 'else', 'elseif', 'empty', 'enddeclare', 'endfor', 'endforeach', 'endif', 'endswitch', 'endwhile', 'enum', 'eval', 'extends', 'final', 'finally', 'float', 'for', 'foreach', 'from', 'global', 'goto', 'if', 'implements', 'instanceof', 'insteadof', 'int', 'integer', 'interface', 'isset', 'iterable', 'list', 'match|0', 'mixed', 'new', 'never', 'object', 'or', 'private', 'protected', 'public', 'readonly', 'real', 'return', 'string', 'switch', 'throw', 'trait', 'try', 'unset', 'use', 'var', 'void', 'while', 'xor', 'yield'],
-        p = ['Error|0', 'AppendIterator', 'ArgumentCountError', 'ArithmeticError', 'ArrayIterator', 'ArrayObject', 'AssertionError', 'BadFunctionCallException', 'BadMethodCallException', 'CachingIterator', 'CallbackFilterIterator', 'CompileError', 'Countable', 'DirectoryIterator', 'DivisionByZeroError', 'DomainException', 'EmptyIterator', 'ErrorException', 'Exception', 'FilesystemIterator', 'FilterIterator', 'GlobIterator', 'InfiniteIterator', 'InvalidArgumentException', 'IteratorIterator', 'LengthException', 'LimitIterator', 'LogicException', 'MultipleIterator', 'NoRewindIterator', 'OutOfBoundsException', 'OutOfRangeException', 'OuterIterator', 'OverflowException', 'ParentIterator', 'ParseError', 'RangeException', 'RecursiveArrayIterator', 'RecursiveCachingIterator', 'RecursiveCallbackFilterIterator', 'RecursiveDirectoryIterator', 'RecursiveFilterIterator', 'RecursiveIterator', 'RecursiveIteratorIterator', 'RecursiveRegexIterator', 'RecursiveTreeIterator', 'RegexIterator', 'RuntimeException', 'SeekableIterator', 'SplDoublyLinkedList', 'SplFileInfo', 'SplFileObject', 'SplFixedArray', 'SplHeap', 'SplMaxHeap', 'SplMinHeap', 'SplObjectStorage', 'SplObserver', 'SplPriorityQueue', 'SplQueue', 'SplStack', 'SplSubject', 'SplTempFileObject', 'TypeError', 'UnderflowException', 'UnexpectedValueException', 'UnhandledMatchError', 'ArrayAccess', 'BackedEnum', 'Closure', 'Fiber', 'Generator', 'Iterator', 'IteratorAggregate', 'Serializable', 'Stringable', 'Throwable', 'Traversable', 'UnitEnum', 'WeakReference', 'WeakMap', 'Directory', '__PHP_Incomplete_Class', 'parent', 'php_user_filter', 'self', 'static', 'stdClass'],
-        m = {
-            keyword: h,
+        E = ['false', 'null', 'true'],
+        f = ['__CLASS__', '__DIR__', '__FILE__', '__FUNCTION__', '__COMPILER_HALT_OFFSET__', '__LINE__', '__METHOD__', '__NAMESPACE__', '__TRAIT__', 'die', 'echo', 'exit', 'include', 'include_once', 'print', 'require', 'require_once', 'array', 'abstract', 'and', 'as', 'binary', 'bool', 'boolean', 'break', 'callable', 'case', 'catch', 'class', 'clone', 'const', 'continue', 'declare', 'default', 'do', 'double', 'else', 'elseif', 'empty', 'enddeclare', 'endfor', 'endforeach', 'endif', 'endswitch', 'endwhile', 'enum', 'eval', 'extends', 'final', 'finally', 'float', 'for', 'foreach', 'from', 'global', 'goto', 'if', 'implements', 'instanceof', 'insteadof', 'int', 'integer', 'interface', 'isset', 'iterable', 'list', 'match|0', 'mixed', 'new', 'never', 'object', 'or', 'private', 'protected', 'public', 'readonly', 'real', 'return', 'string', 'switch', 'throw', 'trait', 'try', 'unset', 'use', 'var', 'void', 'while', 'xor', 'yield'],
+        h = ['Error|0', 'AppendIterator', 'ArgumentCountError', 'ArithmeticError', 'ArrayIterator', 'ArrayObject', 'AssertionError', 'BadFunctionCallException', 'BadMethodCallException', 'CachingIterator', 'CallbackFilterIterator', 'CompileError', 'Countable', 'DirectoryIterator', 'DivisionByZeroError', 'DomainException', 'EmptyIterator', 'ErrorException', 'Exception', 'FilesystemIterator', 'FilterIterator', 'GlobIterator', 'InfiniteIterator', 'InvalidArgumentException', 'IteratorIterator', 'LengthException', 'LimitIterator', 'LogicException', 'MultipleIterator', 'NoRewindIterator', 'OutOfBoundsException', 'OutOfRangeException', 'OuterIterator', 'OverflowException', 'ParentIterator', 'ParseError', 'RangeException', 'RecursiveArrayIterator', 'RecursiveCachingIterator', 'RecursiveCallbackFilterIterator', 'RecursiveDirectoryIterator', 'RecursiveFilterIterator', 'RecursiveIterator', 'RecursiveIteratorIterator', 'RecursiveRegexIterator', 'RecursiveTreeIterator', 'RegexIterator', 'RuntimeException', 'SeekableIterator', 'SplDoublyLinkedList', 'SplFileInfo', 'SplFileObject', 'SplFixedArray', 'SplHeap', 'SplMaxHeap', 'SplMinHeap', 'SplObjectStorage', 'SplObserver', 'SplPriorityQueue', 'SplQueue', 'SplStack', 'SplSubject', 'SplTempFileObject', 'TypeError', 'UnderflowException', 'UnexpectedValueException', 'UnhandledMatchError', 'ArrayAccess', 'BackedEnum', 'Closure', 'Fiber', 'Generator', 'Iterator', 'IteratorAggregate', 'Serializable', 'Stringable', 'Throwable', 'Traversable', 'UnitEnum', 'WeakReference', 'WeakMap', 'Directory', '__PHP_Incomplete_Class', 'parent', 'php_user_filter', 'self', 'static', 'stdClass'],
+        p = {
+            keyword: f,
             literal: ((e) => {
                 let t = [];
                 return (
@@ -65,14 +50,14 @@ function t(e) {
                     }),
                     t
                 );
-            })(f),
-            built_in: p
+            })(E),
+            built_in: h
         },
         I = (e) => e.map((e) => e.replace(/\|\d+$/, '')),
-        T = {
+        m = {
             variants: [
                 {
-                    match: [/new/, t.concat(d, '+'), t.concat('(?!', I(p).join('\\b|'), '\\b)'), i],
+                    match: [/new/, t.concat(c, '+'), t.concat('(?!', I(h).join('\\b|'), '\\b)'), i],
                     scope: {
                         1: 'keyword',
                         4: 'title.class'
@@ -80,11 +65,11 @@ function t(e) {
                 }
             ]
         },
-        g = t.concat(r, '\\b(?!\\()'),
+        T = t.concat(r, '\\b(?!\\()'),
         S = {
             variants: [
                 {
-                    match: [t.concat(/::/, t.lookahead(/(?!class\b)/)), g],
+                    match: [t.concat(/::/, t.lookahead(/(?!class\b)/)), T],
                     scope: { 2: 'variable.constant' }
                 },
                 {
@@ -92,7 +77,7 @@ function t(e) {
                     scope: { 2: 'variable.language' }
                 },
                 {
-                    match: [i, t.concat(/::/, t.lookahead(/(?!class\b)/)), g],
+                    match: [i, t.concat(/::/, t.lookahead(/(?!class\b)/)), T],
                     scope: {
                         1: 'title.class',
                         3: 'variable.constant'
@@ -111,28 +96,28 @@ function t(e) {
                 }
             ]
         },
-        A = {
+        g = {
             scope: 'attr',
             match: t.concat(r, t.lookahead(':'), t.lookahead(/(?!::)/))
         },
-        v = {
+        A = {
             relevance: 0,
             begin: /\(/,
             end: /\)/,
-            keywords: m,
-            contains: [A, a, S, e.C_BLOCK_COMMENT_MODE, _, E, T]
+            keywords: p,
+            contains: [g, a, S, e.C_BLOCK_COMMENT_MODE, d, _, m]
         },
         N = {
             relevance: 0,
-            match: [/\b/, t.concat('(?!fn\\b|function\\b|', I(h).join('\\b|'), '|', I(p).join('\\b|'), '\\b)'), r, t.concat(d, '*'), t.lookahead(/(?=\()/)],
+            match: [/\b/, t.concat('(?!fn\\b|function\\b|', I(f).join('\\b|'), '|', I(h).join('\\b|'), '\\b)'), r, t.concat(c, '*'), t.lookahead(/(?=\()/)],
             scope: { 3: 'title.function.invoke' },
-            contains: [v]
+            contains: [A]
         };
-    v.contains.push(N);
-    let O = [A, S, e.C_BLOCK_COMMENT_MODE, _, E, T];
+    A.contains.push(N);
+    let O = [g, S, e.C_BLOCK_COMMENT_MODE, d, _, m];
     return {
         case_insensitive: !1,
-        keywords: m,
+        keywords: p,
         contains: [
             {
                 begin: t.concat(/#\[\s*/, i),
@@ -140,7 +125,7 @@ function t(e) {
                 end: /]/,
                 endScope: 'meta',
                 keywords: {
-                    literal: f,
+                    literal: E,
                     keyword: ['new', 'array']
                 },
                 contains: [
@@ -148,7 +133,7 @@ function t(e) {
                         begin: /\[/,
                         end: /]/,
                         keywords: {
-                            literal: f,
+                            literal: E,
                             keyword: ['new', 'array']
                         },
                         contains: ['self', ...O]
@@ -185,7 +170,21 @@ function t(e) {
                     ]
                 }
             },
-            o,
+            {
+                scope: 'meta',
+                variants: [
+                    {
+                        begin: /<\?php/,
+                        relevance: 10
+                    },
+                    { begin: /<\?=/ },
+                    {
+                        begin: /<\?/,
+                        relevance: 0.1
+                    },
+                    { begin: /\?>/ }
+                ]
+            },
             {
                 scope: 'variable.language',
                 match: /\$this\b/
@@ -200,7 +199,7 @@ function t(e) {
                     3: 'variable.constant'
                 }
             },
-            T,
+            m,
             {
                 scope: 'function',
                 relevance: 0,
@@ -221,8 +220,8 @@ function t(e) {
                         end: '\\)',
                         excludeBegin: !0,
                         excludeEnd: !0,
-                        keywords: m,
-                        contains: ['self', a, S, e.C_BLOCK_COMMENT_MODE, _, E]
+                        keywords: p,
+                        contains: ['self', a, S, e.C_BLOCK_COMMENT_MODE, d, _]
                     }
                 ]
             },
@@ -262,9 +261,8 @@ function t(e) {
                     e.UNDERSCORE_TITLE_MODE
                 ]
             },
-            _,
-            E
+            d,
+            _
         ]
     };
-}
-e.exports = t;
+};

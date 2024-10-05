@@ -1,33 +1,32 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return r;
     }
 });
-let r = 5;
-function i(e, t, n) {
-    let { onChange: i } = e,
-        a = !1,
-        o = !1;
+function r(e, t, n) {
+    let { onChange: r } = e,
+        i = !1,
+        a = !1;
     return (
         (e.onChange = () => {
-            if (a) {
-                o = !0;
+            if (i) {
+                a = !0;
                 return;
             }
-            a = !0;
+            i = !0;
             try {
                 let e = 0;
                 do {
-                    if (((o = !1), e++ >= r)) break;
+                    if (((a = !1), e++ >= 5)) break;
                     null == t || t();
                     try {
-                        i();
+                        r();
                     } finally {
                         null == n || n();
                     }
-                } while (o);
+                } while (a);
             } finally {
-                a = !1;
+                i = !1;
             }
         }),
         e

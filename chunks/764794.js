@@ -1,85 +1,82 @@
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(981729),
+n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(981729),
     s = n(780384),
-    l = n(351773),
-    u = n(410030),
-    c = n(100527),
-    d = n(906732),
-    _ = n(790368),
-    E = n(704440),
-    f = n(632583),
-    h = n(626135),
-    p = n(443603),
-    m = n(981631),
+    o = n(351773),
+    l = n(410030),
+    u = n(100527),
+    c = n(906732),
+    d = n(790368),
+    _ = n(704440),
+    E = n(632583),
+    f = n(626135),
+    h = n(443603),
+    p = n(981631),
     I = n(474936),
-    T = n(689938),
-    g = n(933283);
-function S(e) {
-    let { disabled: t, referralsRemaining: n, channel: r, isResending: S } = e,
-        { enabled: A } = _.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
-        v = A ? T.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : S ? T.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : T.Z.Messages.SHARE_NITRO_TOOLTIP,
-        N = A ? T.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : void 0,
-        [O, R] = a.useState(!1),
-        [C, y] = a.useState(!1),
-        L = (0, l.Z)(null, () => y(!1)),
-        { analyticsLocations: b } = (0, d.ZP)(c.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
-        D = r.isDM() && void 0 !== r.recipients ? r.recipients[0] : null,
-        M = (0, u.ZP)();
-    function P() {
-        y((e) => !e);
-    }
+    m = n(689938),
+    T = n(933283);
+t.Z = i.memo(function (e) {
+    let { disabled: t, referralsRemaining: n, channel: S, isResending: g } = e,
+        { enabled: A } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
+        N = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : g ? m.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : m.Z.Messages.SHARE_NITRO_TOOLTIP,
+        O = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : void 0,
+        [R, v] = i.useState(!1),
+        [C, L] = i.useState(!1),
+        D = (0, o.Z)(null, () => L(!1)),
+        { analyticsLocations: y } = (0, c.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
+        b = S.isDM() && void 0 !== S.recipients ? S.recipients[0] : null,
+        M = (0, l.ZP)();
     return t
         ? null
-        : (0, i.jsxs)('div', {
-              ref: L,
-              className: g.buttonContainer,
+        : (0, r.jsxs)('div', {
+              ref: D,
+              className: T.buttonContainer,
               children: [
-                  (0, i.jsx)(E.Z, {
+                  (0, r.jsx)(_.Z, {
                       shouldShowPopout: C,
                       referralsRemaining: n,
-                      channel: r,
-                      onClose: () => y(!1),
-                      isResending: S
+                      channel: S,
+                      onClose: () => L(!1),
+                      isResending: g
                   }),
-                  (0, i.jsx)(o.u, {
-                      text: v,
+                  (0, r.jsx)(a.u, {
+                      text: N,
                       shouldShow: !C,
-                      'aria-label': null != N ? N : v.toString(),
+                      'aria-label': null != O ? O : N.toString(),
                       children: (e) =>
-                          (0, i.jsx)('div', {
+                          (0, r.jsx)('div', {
                               onMouseEnter: () => {
                                   !C &&
-                                      !O &&
-                                      (R(!0),
-                                      h.default.track(m.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                          location_stack: b,
+                                      !R &&
+                                      (v(!0),
+                                      f.default.track(p.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                          location_stack: y,
                                           step: I.fz.BADGE_TOOLTIP_VIEWED,
-                                          other_user_id: Number(D)
+                                          other_user_id: Number(b)
                                       }));
                               },
                               onMouseLeave: () => {
-                                  R(!1);
+                                  v(!1);
                               },
-                              children: (0, i.jsx)(p.Z, {
+                              children: (0, r.jsx)(h.Z, {
                                   ...e,
-                                  innerClassName: g.button,
+                                  innerClassName: T.button,
                                   isActive: C,
-                                  'aria-label': null != N ? N : v.toString(),
+                                  'aria-label': null != O ? O : N.toString(),
                                   'aria-haspopup': 'dialog',
                                   onClick: () => {
-                                      P(),
-                                          h.default.track(m.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                              location_stack: b,
+                                      L((e) => !e),
+                                          f.default.track(p.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                              location_stack: y,
                                               step: I.fz.BADGE_CLICKED,
-                                              other_user_id: Number(D)
+                                              other_user_id: Number(b)
                                           });
                                   },
-                                  children: (0, i.jsx)(f.Z, {
+                                  children: (0, r.jsx)(E.Z, {
                                       referralsRemaining: n,
-                                      hovered: O,
-                                      isResending: S,
+                                      hovered: R,
+                                      isResending: g,
                                       shouldShowBirthdayUX: A,
                                       isLightTheme: (0, s.ap)(M)
                                   })
@@ -88,5 +85,4 @@ function S(e) {
                   })
               ]
           });
-}
-t.Z = a.memo(S);
+});

@@ -1,55 +1,52 @@
+n(47120);
 var r,
-    i = n(47120);
-var a = n(442837),
-    o = n(570140);
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = new Set(),
-    u = {};
-function c(e) {
-    let { gameId: t, isLaunchable: n } = e;
-    u[t] = n;
-}
+    i,
+    a,
+    s,
+    o = n(442837),
+    l = n(570140);
+let u = new Set(),
+    c = {};
 function d(e) {
     let { applicationId: t } = e;
-    l.add(t);
+    u.add(t);
 }
 function _(e) {
     let { applicationId: t } = e;
-    l.delete(t);
+    u.delete(t);
 }
-class E extends (r = a.ZP.Store) {
+class E extends (r = o.ZP.Store) {
     get launchingGames() {
-        return l;
-    }
-    get launchableGames() {
         return u;
     }
+    get launchableGames() {
+        return c;
+    }
     isLaunchable(e) {
-        return null != u[e]
-            ? u[e]
-            : ((u[e] = !1),
-              o.Z.dispatch({
+        return null != c[e]
+            ? c[e]
+            : ((c[e] = !1),
+              l.Z.dispatch({
                   type: 'CHECK_LAUNCHABLE_GAME',
                   gameId: e
               }),
               !1);
     }
 }
-s(E, 'displayName', 'LaunchableGameStore'),
-    (t.Z = new E(o.Z, {
-        GAME_LAUNCHABLE_UPDATE: c,
+(s = 'LaunchableGameStore'),
+    (a = 'displayName') in (i = E)
+        ? Object.defineProperty(i, a, {
+              value: s,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (i[a] = s),
+    (t.Z = new E(l.Z, {
+        GAME_LAUNCHABLE_UPDATE: function (e) {
+            let { gameId: t, isLaunchable: n } = e;
+            c[t] = n;
+        },
         GAME_CLOUD_SYNC_START: d,
         GAME_LAUNCH_START: d,
         GAME_LAUNCH_SUCCESS: _,

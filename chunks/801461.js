@@ -1,39 +1,34 @@
-var r, i;
+var r, i, a, s;
 n.d(t, {
     Kq: function () {
         return i;
     },
     RN: function () {
-        return a;
+        return o;
     },
     Wq: function () {
         return r;
     },
     en: function () {
-        return c;
+        return _;
     },
     hy: function () {
-        return s;
-    },
-    iF: function () {
-        return o;
-    },
-    kt: function () {
         return u;
     },
-    nA: function () {
+    iF: function () {
         return l;
+    },
+    kt: function () {
+        return d;
+    },
+    nA: function () {
+        return c;
     }
 });
-let a = /([^A-Za-z0-9_.]+)/g,
-    o = /\.+/g;
-!(function (e) {
-    (e.NONE = 'none'), (e.EDIT_DISPLAY_NAME = 'display-name'), (e.EDIT_USERNAME = 'username'), (e.PREVIEW = 'preview'), (e.SUGGESTION = 'suggestion');
-})(r || (r = {})),
-    !(function (e) {
-        (e.APP_START = 'app start'), (e.NOTICE = 'notice'), (e.USER_SETTINGS = 'user settings'), (e.USER_SETTINGS_EDIT = 'user settings edit'), (e.YOU_TAB = 'you tab');
-    })(i || (i = {}));
-let s = 32,
-    l = 'pomelo',
-    u = [1564, 917505, 12644, 65279, 173, 6068, 10240, 4447, 847, 4448, 65440],
-    c = 2000;
+let o = /([^A-Za-z0-9_.]+)/g,
+    l = /\.+/g;
+((a = r || (r = {})).NONE = 'none'), (a.EDIT_DISPLAY_NAME = 'display-name'), (a.EDIT_USERNAME = 'username'), (a.PREVIEW = 'preview'), (a.SUGGESTION = 'suggestion'), ((s = i || (i = {})).APP_START = 'app start'), (s.NOTICE = 'notice'), (s.USER_SETTINGS = 'user settings'), (s.USER_SETTINGS_EDIT = 'user settings edit'), (s.YOU_TAB = 'you tab');
+let u = 32,
+    c = 'pomelo',
+    d = [1564, 917505, 12644, 65279, 173, 6068, 10240, 4447, 847, 4448, 65440],
+    _ = 2000;

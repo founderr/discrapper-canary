@@ -1,36 +1,39 @@
 n.d(t, {
     G: function () {
-        return m;
+        return s;
     },
     N: function () {
-        return h;
+        return a;
     }
-});
-var r = n(518263);
-var i = n(970173);
-var a = n(520712);
-var o = n(268111);
-var s = n(941497);
-var l = n(32026);
-var u = n(480839);
-var c = n(744285);
-var d = n(492257);
-var _ = n(873817);
-var E = n(998502);
-let f = null;
-function h() {
-    return null == f && (f = p()), f;
+}),
+    n(518263),
+    n(970173),
+    n(520712),
+    n(268111),
+    n(941497),
+    n(32026),
+    n(480839),
+    n(744285),
+    n(492257),
+    n(873817);
+var r = n(998502);
+let i = null;
+function a() {
+    return (
+        null == i &&
+            (i = (function () {
+                if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder) return !1;
+                try {
+                    return r.ZP.requireModule('discord_zstd'), !0;
+                } catch (e) {
+                    if (e.message.includes('Cannot find')) return r.ZP.ensureModule('discord_zstd').catch((e) => {}), !1;
+                    throw e;
+                }
+            })()),
+        i
+    );
 }
-function p() {
-    if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder) return !1;
-    try {
-        return E.ZP.requireModule('discord_zstd'), !0;
-    } catch (e) {
-        if (e.message.includes('Cannot find')) return E.ZP.ensureModule('discord_zstd').catch((e) => {}), !1;
-        throw e;
-    }
-}
-function m() {
-    let { createContext: e } = E.ZP.requireModule('discord_zstd');
+function s() {
+    let { createContext: e } = r.ZP.requireModule('discord_zstd');
     return e();
 }

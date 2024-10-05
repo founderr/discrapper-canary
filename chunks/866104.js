@@ -1,83 +1,67 @@
 n.d(t, {
     C: function () {
-        return b;
+        return R;
     },
     Z: function () {
-        return L;
+        return O;
     }
-});
-var r = n(47120);
+}),
+    n(47120);
 var i = n(735250),
     a = n(470079),
-    o = n(512722),
-    s = n.n(o),
-    l = n(442837),
-    u = n(481060),
+    s = n(512722),
+    l = n.n(s),
+    r = n(442837),
+    o = n(481060),
     c = n(131388),
     d = n(357352),
-    _ = n(70097),
-    E = n(565138),
-    f = n(353254),
-    h = n(695346),
-    p = n(271383),
-    m = n(594174),
-    I = n(671533),
-    T = n(51144),
-    g = n(506071),
-    S = n(696014),
-    A = n(847033),
-    v = n(544978),
-    N = n(893182),
-    O = n(689938),
-    R = n(687006);
-function C(e) {
+    u = n(70097),
+    _ = n(565138),
+    E = n(353254),
+    I = n(695346),
+    m = n(271383),
+    T = n(594174),
+    N = n(671533),
+    h = n(51144),
+    C = n(506071),
+    p = n(696014),
+    f = n(847033),
+    g = n(544978),
+    A = n(893182),
+    S = n(689938),
+    M = n(687006);
+function x(e) {
     let { onClick: t } = e;
-    return (0, i.jsxs)(u.Clickable, {
+    return (0, i.jsxs)(o.Clickable, {
         onClick: t,
-        className: R.showMoreButton,
+        className: M.showMoreButton,
         children: [
-            (0, i.jsx)(u.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: 'text-sm/medium',
                 color: 'header-primary',
-                children: O.Z.Messages.GUILD_STORE_HERO_SHOW_MORE_DESCRIPTION_LABEL
+                children: S.Z.Messages.GUILD_STORE_HERO_SHOW_MORE_DESCRIPTION_LABEL
             }),
-            (0, i.jsx)(u.Spacer, {
+            (0, i.jsx)(o.Spacer, {
                 size: 4,
                 horizontal: !0
             }),
-            (0, i.jsx)(I.Z, {
-                direction: I.Z.Directions.RIGHT,
-                className: R.showMoreArrow
+            (0, i.jsx)(N.Z, {
+                direction: N.Z.Directions.RIGHT,
+                className: M.showMoreArrow
             })
         ]
     });
 }
-function y(e) {
-    return (0, l.cj)(
-        [p.ZP, m.default],
-        () => {
-            var t, n;
-            let r = m.default.getCurrentUser();
-            s()(null != r, 'user cannot be null');
-            let i = p.ZP.getMember(e, r.id);
-            return {
-                nickname: null !== (t = null == i ? void 0 : i.nick) && void 0 !== t ? t : T.ZP.getName(r),
-                nickcolor: null !== (n = null == i ? void 0 : i.colorString) && void 0 !== n ? n : void 0
-            };
-        },
-        [e]
-    );
-}
-function L(e) {
+function O(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
-        r = h.QK.useSetting(),
-        a = (0, g.n)() && r,
-        [o, s] = (0, f.Z)(t, a),
-        l = a
-            ? (0, i.jsx)(_.Z, {
+        a = I.QK.useSetting(),
+        s = (0, C.n)() && a,
+        [l, r] = (0, E.Z)(t, s),
+        o = s
+            ? (0, i.jsx)(u.Z, {
                   autoPlay: !0,
                   loop: !0,
-                  className: R.coverImage,
+                  className: M.coverImage,
                   width: 655,
                   poster: (0, d.b)('server_products/storefront/default-header.png'),
                   src: (0, d.b)('server_products/storefront/default-header.mov')
@@ -85,118 +69,130 @@ function L(e) {
             : (0, i.jsx)('img', {
                   src: (0, d.b)('server_products/storefront/default-header.png'),
                   alt: '',
-                  className: R.coverImage
+                  className: M.coverImage
               });
     return (0, i.jsx)('div', {
-        ref: o,
-        className: R.coverImageContainer,
+        ref: l,
+        className: M.coverImageContainer,
         children:
-            null == s || n
-                ? l
+            null == r || n
+                ? o
                 : (0, i.jsx)('img', {
-                      src: s,
+                      src: r,
                       alt: '',
-                      className: R.coverImage
+                      className: M.coverImage
                   })
     });
 }
-function b(e) {
-    var t, n;
-    let { guild: r, subscriptionsSettings: o } = e,
-        s = r.id,
-        { nickname: l, nickcolor: _ } = y(s),
-        { isTruncated: f, ExpandableTextContainer: h } = (0, S.s)(),
-        p = () => (0, N.Z)({ guildId: s }),
-        m = (null !== (n = null == o ? void 0 : null === (t = o.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
-        [I, T] = a.useState(1),
-        g = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: b, isPhantomPreview: D } = (0, A.m)(),
-        M = b === v.y.GUILD_PRODUCTS_PREVIEW ? O.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : O.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
-        P = (e) => {
-            null != e && e.clientHeight > 30 && T(2);
-        };
-    function U(e, t) {
-        return (0, i.jsx)(
-            'span',
-            {
-                style: { color: _ },
-                children: e
-            },
-            t
-        );
-    }
-    let w = m
-        ? (0, i.jsxs)(i.Fragment, {
-              children: [
-                  (0, i.jsx)(h, {
-                      lineClamp: g || 2 === I ? 2 : 3,
-                      children: (0, i.jsx)(u.Text, {
-                          variant: 'text-sm/normal',
-                          color: 'text-normal',
-                          children: null == o ? void 0 : o.description
-                      })
-                  }),
-                  f &&
-                      (0, i.jsxs)(i.Fragment, {
-                          children: [(0, i.jsx)(u.Spacer, { size: 4 }), (0, i.jsx)(C, { onClick: p })]
-                      })
-              ]
-          })
-        : (0, i.jsx)(u.Text, {
-              variant: 'text-sm/normal',
-              color: 'text-normal',
-              children: D ? M : O.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
-          });
+function R(e) {
+    var t, n, s;
+    let { guild: u, subscriptionsSettings: E } = e,
+        I = u.id;
+    let { nickname: N, nickcolor: C } =
+            ((s = I),
+            (0, r.cj)(
+                [m.ZP, T.default],
+                () => {
+                    var e, t;
+                    let n = T.default.getCurrentUser();
+                    l()(null != n, 'user cannot be null');
+                    let i = m.ZP.getMember(s, n.id);
+                    return {
+                        nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : h.ZP.getName(n),
+                        nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
+                    };
+                },
+                [s]
+            )),
+        { isTruncated: R, ExpandableTextContainer: v } = (0, p.s)(),
+        L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
+        [Z, P] = a.useState(1),
+        D = (0, c.Z)('(max-width: 1439px)'),
+        { selectedTab: b, isPhantomPreview: j } = (0, f.m)(),
+        U = b === g.y.GUILD_PRODUCTS_PREVIEW ? S.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : S.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
+        y = L
+            ? (0, i.jsxs)(i.Fragment, {
+                  children: [
+                      (0, i.jsx)(v, {
+                          lineClamp: D || 2 === Z ? 2 : 3,
+                          children: (0, i.jsx)(o.Text, {
+                              variant: 'text-sm/normal',
+                              color: 'text-normal',
+                              children: null == E ? void 0 : E.description
+                          })
+                      }),
+                      R &&
+                          (0, i.jsxs)(i.Fragment, {
+                              children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(x, { onClick: () => (0, A.Z)({ guildId: I }) })]
+                          })
+                  ]
+              })
+            : (0, i.jsx)(o.Text, {
+                  variant: 'text-sm/normal',
+                  color: 'text-normal',
+                  children: j ? U : S.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
+              });
     return (0, i.jsxs)('div', {
-        className: R.container,
+        className: M.container,
         children: [
             (0, i.jsxs)('div', {
-                className: R.infoContainer,
+                className: M.infoContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        children: (0, i.jsx)(E.Z, {
-                            guild: r,
-                            size: E.Z.Sizes.LARGER,
-                            iconSrc: null == r.icon || D ? (0, d.b)('server_products/storefront/default-guild-icon.jpg') : void 0
+                        children: (0, i.jsx)(_.Z, {
+                            guild: u,
+                            size: _.Z.Sizes.LARGER,
+                            iconSrc: null == u.icon || j ? (0, d.b)('server_products/storefront/default-guild-icon.jpg') : void 0
                         })
                     }),
-                    (0, i.jsx)(u.Spacer, {
+                    (0, i.jsx)(o.Spacer, {
                         size: 16,
                         horizontal: !0
                     }),
                     (0, i.jsxs)('div', {
                         children: [
                             (0, i.jsx)('div', {
-                                ref: P,
-                                children: (0, i.jsx)(u.Heading, {
+                                ref: (e) => {
+                                    null != e && e.clientHeight > 30 && P(2);
+                                },
+                                children: (0, i.jsx)(o.Heading, {
                                     variant: 'heading-xl/semibold',
                                     color: 'header-primary',
                                     lineClamp: 2,
-                                    children: D ? O.Z.Messages.GUILD_STORE_HERO_PREVIEW_TITLE : O.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: r.name })
+                                    children: j ? S.Z.Messages.GUILD_STORE_HERO_PREVIEW_TITLE : S.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: u.name })
                                 })
                             }),
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)(u.Spacer, { size: 8 }),
-                                    (0, i.jsx)(u.Text, {
+                                    (0, i.jsx)(o.Spacer, { size: 8 }),
+                                    (0, i.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-normal',
-                                        children: O.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_GREETING.format({
-                                            username: l,
-                                            usernameHook: U
+                                        children: S.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_GREETING.format({
+                                            username: N,
+                                            usernameHook: function (e, t) {
+                                                return (0, i.jsx)(
+                                                    'span',
+                                                    {
+                                                        style: { color: C },
+                                                        children: e
+                                                    },
+                                                    t
+                                                );
+                                            }
                                         })
                                     }),
-                                    (0, i.jsx)(u.Spacer, { size: 9 }),
-                                    w
+                                    (0, i.jsx)(o.Spacer, { size: 9 }),
+                                    y
                                 ]
                             })
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)(L, {
-                coverImageAsset: null == o ? void 0 : o.cover_image_asset,
-                isPreview: D
+            (0, i.jsx)(O, {
+                coverImageAsset: null == E ? void 0 : E.cover_image_asset,
+                isPreview: j
             })
         ]
     });

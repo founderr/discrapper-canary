@@ -6,15 +6,17 @@ n.d(t, {
         return C;
     },
     hc: function () {
-        return y;
+        return L;
     }
-});
+}),
+    n(653041),
+    n(47120);
 var r,
     i,
-    a = n(653041);
-var o = n(47120);
-var s = n(512722),
-    l = n.n(s),
+    a,
+    s,
+    o = n(512722),
+    l = n.n(o),
     u = n(544891),
     c = n(911969),
     d = n(367907),
@@ -23,14 +25,14 @@ var s = n(512722),
     f = n(873741),
     h = n(314897),
     p = n(866960),
-    m = n(70956),
-    I = n(403182),
+    I = n(70956),
+    m = n(403182),
     T = n(651655),
-    g = n(861990),
-    S = n(141795),
+    S = n(861990),
+    g = n(141795),
     A = n(981631),
-    v = n(959517);
-function N(e, t, n) {
+    N = n(959517);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,19 +45,13 @@ function N(e, t, n) {
         e
     );
 }
-let O = null;
-__OVERLAY__ && (O = n(237997).Z),
-    !(function (e) {
-        (e.OVERLAY_UNLOCKED = 'overlay_unlocked'), (e.OVERLAY_UNLOCKED_PINNED = 'overlay_unlocked_pinned'), (e.OVERLAY_LOCKED_ACTIVATED = 'overlay_locked_activated');
-    })(r || (r = {})),
-    !(function (e) {
-        (e[(e.SEND = 0)] = 'SEND'), (e[(e.EDIT = 1)] = 'EDIT'), (e[(e.COMMAND = 2)] = 'COMMAND');
-    })(i || (i = {}));
-let R = (e) => 0 === e.type,
+let R = null;
+__OVERLAY__ && (R = n(237997).Z), ((a = r || (r = {})).OVERLAY_UNLOCKED = 'overlay_unlocked'), (a.OVERLAY_UNLOCKED_PINNED = 'overlay_unlocked_pinned'), (a.OVERLAY_LOCKED_ACTIVATED = 'overlay_locked_activated'), ((s = i || (i = {}))[(s.SEND = 0)] = 'SEND'), (s[(s.EDIT = 1)] = 'EDIT'), (s[(s.COMMAND = 2)] = 'COMMAND');
+let v = (e) => 0 === e.type,
     C = (e) => 1 === e.type,
-    y = (e) => (R(e) ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id),
-    L = [1 * m.Z.Millis.MINUTE, 5 * m.Z.Millis.MINUTE];
-class b extends T.Z {
+    L = (e) => (v(e) ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id),
+    D = [1 * I.Z.Millis.MINUTE, 5 * I.Z.Millis.MINUTE];
+class y extends T.Z {
     isFull() {
         return this.queue.length >= this.maxSize;
     }
@@ -86,7 +82,7 @@ class b extends T.Z {
         return this.queue.push(...n), this.logger.log('Cancel pending send requests', t.length), t;
     }
     startQueueMetricTimers(e) {
-        let t = L.map((e) =>
+        let t = D.map((e) =>
             setTimeout(() => {
                 (0, d.yw)(A.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e)
@@ -103,7 +99,7 @@ class b extends T.Z {
             if (null != n.body && (n.body.code === A.evJ.SLOWMODE_RATE_LIMITED || n.body.code === A.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)) t(null, n);
             else if (429 === n.status) {
                 let e = parseInt(n.headers['retry-after']);
-                isNaN(e) ? t(null, n) : t({ retryAfter: e * m.Z.Millis.SECOND });
+                isNaN(e) ? t(null, n) : t({ retryAfter: e * I.Z.Millis.SECOND });
             } else t(null, n);
         };
     }
@@ -111,7 +107,7 @@ class b extends T.Z {
         let n;
         let { channelId: r, ...i } = e,
             a = (0, f.d)(),
-            o = {
+            s = {
                 mobile_network_type: p.Z.getType(),
                 ...i,
                 ...(null != a && { signal_strength: a })
@@ -128,23 +124,23 @@ class b extends T.Z {
                 });
             return;
         }
-        null != O && (O.isInstanceUILocked() ? (n = { location: 'overlay_locked_activated' }) : !O.isInstanceUILocked() && (n = O.isPinned(A.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
-        let s = this.createResponseHandler(e.nonce, t),
+        null != R && (R.isInstanceUILocked() ? (n = { location: 'overlay_locked_activated' }) : !R.isInstanceUILocked() && (n = R.isPinned(A.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
+        let o = this.createResponseHandler(e.nonce, t),
             l = new AbortController();
         this.startQueueMetricTimers(e.nonce),
             u.tn.post(
                 {
                     url: A.ANM.MESSAGES(r),
-                    body: o,
+                    body: s,
                     context: n,
                     oldFormErrors: !0,
-                    ...v.hs,
+                    ...N.hs,
                     signal: l.signal,
                     onRequestCreated: () => {
                         null != e.nonce && this.requests.set(e.nonce, l);
                     }
                 },
-                s
+                o
             );
     }
     handleEdit(e, t) {
@@ -166,23 +162,22 @@ class b extends T.Z {
     }
     handleCommand(e, t) {
         let n,
-            { applicationId: r, guildId: i, channelId: a, data: o, nonce: s, attachments: d, maxSizeCallback: _, analytics_location: E, sectionName: f, source: p } = e,
-            m = {
+            { applicationId: r, guildId: i, channelId: a, data: s, nonce: o, attachments: d, maxSizeCallback: _, analytics_location: E, sectionName: f, source: p } = e,
+            I = {
                 type: c.B8.APPLICATION_COMMAND,
                 application_id: r,
                 guild_id: i,
                 channel_id: a,
                 session_id: h.default.getSessionId(),
-                data: o,
-                nonce: s,
+                data: s,
+                nonce: o,
                 analytics_location: E,
                 section_name: f,
                 source: p
             };
         if (null != d) {
-            (m.data.attachments = []), (n = []);
-            let e = d;
-            m.data.attachments = e.map((e, t) => (l()(e.status === S.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, g.B)(e, t)));
+            (I.data.attachments = []), (n = []);
+            I.data.attachments = d.map((e, t) => (l()(e.status === g.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, S.B)(e, t)));
         }
         let T = new AbortController();
         u.tn.post(
@@ -191,25 +186,25 @@ class b extends T.Z {
                 fields: [
                     {
                         name: 'payload_json',
-                        value: JSON.stringify(m)
+                        value: JSON.stringify(I)
                     }
                 ],
                 attachments: n,
                 signal: T.signal,
                 onRequestCreated: (e) => {
-                    this.requests.set(s, T),
+                    this.requests.set(o, T),
                         e.on('progress', (e) => {
                             let { total: t } = e,
-                                n = (0, I.dg)(i);
-                            null != t && t > n && (this.cancelRequest(s), null == _ || _(n));
+                                n = (0, m.dg)(i);
+                            null != t && t > n && (this.cancelRequest(o), null == _ || _(n));
                         });
                 }
             },
-            this.createResponseHandler(s, t)
+            this.createResponseHandler(o, t)
         );
     }
     constructor(e = 5) {
-        super(new _.Z('MessageQueue')), N(this, 'maxSize', void 0), N(this, 'requests', void 0), N(this, 'analyticsTimeouts', void 0), (this.maxSize = e), (this.requests = new Map()), (this.analyticsTimeouts = new Map());
+        super(new _.Z('MessageQueue')), O(this, 'maxSize', void 0), O(this, 'requests', void 0), O(this, 'analyticsTimeouts', void 0), (this.maxSize = e), (this.requests = new Map()), (this.analyticsTimeouts = new Map());
     }
 }
-t.ZP = new b();
+t.ZP = new y();

@@ -17,38 +17,35 @@ var r =
         return function (t, n, r) {
             return n && e(t.prototype, n), r && e(t, r), t;
         };
-    })();
-function a(e, t) {
-    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-}
-function o(e, t) {
-    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-}
-function s(e, t) {
-    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
-        }
-    })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-}
-var l = n(968598),
-    u = n(261469),
-    c = n(213749),
-    d = n(661493),
-    _ = (function (e) {
+    })(),
+    a = n(968598),
+    s = n(261469),
+    o = n(213749),
+    l = n(661493),
+    u = (function (e) {
         function t(e) {
-            a(this, t);
-            var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (e = d.current(e) || {}).transform && !(e.transform instanceof l) && (e = r({}, e, { transform: new c(e.transform) })), (n._style = e), n;
+            !(function (e, t) {
+                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+            })(this, t);
+            var n = (function (e, t) {
+                if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
+            })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            return (e = l.current(e) || {}).transform && !(e.transform instanceof a) && (e = r({}, e, { transform: new o(e.transform) })), (n._style = e), n;
         }
         return (
-            s(t, e),
+            !(function (e, t) {
+                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+                (e.prototype = Object.create(t && t.prototype, {
+                    constructor: {
+                        value: e,
+                        enumerable: !1,
+                        writable: !0,
+                        configurable: !0
+                    }
+                })),
+                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+            })(t, e),
             i(t, [
                 {
                     key: '__getValue',
@@ -56,7 +53,7 @@ var l = n(968598),
                         var e = {};
                         for (var t in this._style) {
                             var n = this._style[t];
-                            n instanceof l ? (e[t] = n.__getValue()) : (e[t] = n);
+                            n instanceof a ? (e[t] = n.__getValue()) : (e[t] = n);
                         }
                         return e;
                     }
@@ -67,7 +64,7 @@ var l = n(968598),
                         var e = {};
                         for (var t in this._style) {
                             var n = this._style[t];
-                            n instanceof l && (e[t] = n.__getAnimatedValue());
+                            n instanceof a && (e[t] = n.__getAnimatedValue());
                         }
                         return e;
                     }
@@ -77,7 +74,7 @@ var l = n(968598),
                     value: function () {
                         for (var e in this._style) {
                             var t = this._style[e];
-                            t instanceof l && t.__addChild(this);
+                            t instanceof a && t.__addChild(this);
                         }
                     }
                 },
@@ -86,12 +83,12 @@ var l = n(968598),
                     value: function () {
                         for (var e in this._style) {
                             var t = this._style[e];
-                            t instanceof l && t.__removeChild(this);
+                            t instanceof a && t.__removeChild(this);
                         }
                     }
                 }
             ]),
             t
         );
-    })(u);
-e.exports = _;
+    })(s);
+e.exports = u;

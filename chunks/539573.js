@@ -1,43 +1,46 @@
 n.d(t, {
     $q: function () {
-        return _;
+        return c;
     },
     U8: function () {
-        return d;
-    },
-    V6: function () {
         return u;
     },
+    V6: function () {
+        return o;
+    },
     uF: function () {
-        return f;
+        return d;
     },
     uS: function () {
-        return c;
+        return l;
     }
-});
-var r = n(411104);
-var i = n(47120);
-var a = n(673750),
-    o = n(592125),
-    s = n(981631),
-    l = n(689938);
-class u extends Error {}
-class c extends Error {}
-let d = new Set([s.evJ.AUTOMOD_MESSAGE_BLOCKED, s.evJ.AUTOMOD_TITLE_BLOCKED, s.evJ.AUTOMOD_INVALID_RUST_SERVICE_RESPONSE]);
-function _(e, t) {
+}),
+    n(411104),
+    n(47120);
+var r = n(673750),
+    i = n(592125),
+    a = n(981631),
+    s = n(689938);
+class o extends Error {}
+class l extends Error {}
+let u = new Set([a.evJ.AUTOMOD_MESSAGE_BLOCKED, a.evJ.AUTOMOD_TITLE_BLOCKED, a.evJ.AUTOMOD_INVALID_RUST_SERVICE_RESPONSE]);
+function c(e, t) {
     if (null == e) return null;
     let { code: n, message: r } = e;
-    if (!d.has(n)) return null;
+    if (!u.has(n)) return null;
     if (null != r) return r;
     if (null == t) return null;
-    let i = o.Z.getChannel(t);
-    return (null == i ? void 0 : i.isThread()) ? l.Z.Messages.THREAD_AUTOMOD_ERROR : ((null == i ? void 0 : i.isForumPost()) || (null == i ? void 0 : i.isForumLikeChannel())) && (n === s.evJ.AUTOMOD_TITLE_BLOCKED || n === s.evJ.AUTOMOD_MESSAGE_BLOCKED) ? l.Z.Messages.FORUM_POST_AUTOMOD_ERROR : null;
+    let o = i.Z.getChannel(t);
+    return (null == o ? void 0 : o.isThread()) ? s.Z.Messages.THREAD_AUTOMOD_ERROR : ((null == o ? void 0 : o.isForumPost()) || (null == o ? void 0 : o.isForumLikeChannel())) && (n === a.evJ.AUTOMOD_TITLE_BLOCKED || n === a.evJ.AUTOMOD_MESSAGE_BLOCKED) ? s.Z.Messages.FORUM_POST_AUTOMOD_ERROR : null;
 }
-function E(e) {
-    let t = o.Z.getChannel(e.message.channelId);
-    return (0, a.Bz)(e) ? l.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_NOTICE : (null == t ? void 0 : t.isThread()) ? l.Z.Messages.THREAD_AUTOMOD_ERROR : (null == t ? void 0 : t.isForumPost()) || (null == t ? void 0 : t.isForumLikeChannel()) ? l.Z.Messages.FORUM_POST_AUTOMOD_ERROR : l.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE;
-}
-function f(e, t) {
-    let n = _(t);
-    return null != n ? n : null == e ? l.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE : E(e);
+function d(e, t) {
+    let n = c(t);
+    return null != n
+        ? n
+        : null == e
+          ? s.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE
+          : (function (e) {
+                let t = i.Z.getChannel(e.message.channelId);
+                return (0, r.Bz)(e) ? s.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_NOTICE : (null == t ? void 0 : t.isThread()) ? s.Z.Messages.THREAD_AUTOMOD_ERROR : (null == t ? void 0 : t.isForumPost()) || (null == t ? void 0 : t.isForumLikeChannel()) ? s.Z.Messages.FORUM_POST_AUTOMOD_ERROR : s.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE;
+            })(e);
 }

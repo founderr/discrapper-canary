@@ -1,8 +1,8 @@
 var r = n(470079),
     i = n(476400),
     a = n.n(i),
-    o = n(844303),
-    s = n(329022),
+    s = n(844303),
+    o = n(329022),
     l = n(829307),
     u = n(705513),
     c = n(464854),
@@ -15,10 +15,8 @@ var r = n(470079),
             u = e.colors,
             _ = e.hex,
             E = e.styles,
-            f = void 0 === E ? {} : E,
-            h = e.className,
-            p = void 0 === h ? '' : h,
-            m = (0, o.default)(
+            f = e.className,
+            h = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -34,10 +32,10 @@ var r = n(470079),
                             clear: { clear: 'both' }
                         }
                     },
-                    f
+                    void 0 === E ? {} : E
                 )
             ),
-            I = function (e, t) {
+            p = function (e, t) {
                 return i(
                     {
                         hex: e,
@@ -49,28 +47,28 @@ var r = n(470079),
         return r.createElement(
             'div',
             {
-                style: m.picker,
-                className: 'swatches-picker ' + p
+                style: h.picker,
+                className: 'swatches-picker ' + (void 0 === f ? '' : f)
             },
             r.createElement(
                 c.xZ,
                 null,
                 r.createElement(
                     'div',
-                    { style: m.overflow },
+                    { style: h.overflow },
                     r.createElement(
                         'div',
-                        { style: m.body },
-                        (0, s.Z)(u, function (e) {
+                        { style: h.body },
+                        (0, o.Z)(u, function (e) {
                             return r.createElement(d.Z, {
                                 key: e.toString(),
                                 group: e,
                                 active: _,
-                                onClick: I,
+                                onClick: p,
                                 onSwatchHover: a
                             });
                         }),
-                        r.createElement('div', { style: m.clear })
+                        r.createElement('div', { style: h.clear })
                     )
                 )
             )

@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = "[a-z'][a-zA-Z0-9_']*",
         n = '(' + t + ':' + t + '|' + t + ')',
         r = {
@@ -11,8 +11,8 @@ function t(e) {
             begin: '\\b(\\d+(_\\d+)*#[a-fA-F0-9]+(_[a-fA-F0-9]+)*|\\d+(_\\d+)*(\\.\\d+(_\\d+)*)?([eE][-+]?\\d+)?)',
             relevance: 0
         },
-        o = { begin: 'fun\\s+' + t + '/\\d+' },
-        s = {
+        s = { begin: 'fun\\s+' + t + '/\\d+' },
+        o = {
             begin: n + '\\(',
             end: '\\)',
             returnBegin: !0,
@@ -65,16 +65,15 @@ function t(e) {
             end: 'end',
             keywords: r
         };
-    _.contains = [i, o, e.inherit(e.APOS_STRING_MODE, { className: '' }), _, s, e.QUOTE_STRING_MODE, a, l, u, c, d];
-    let E = [i, o, _, s, e.QUOTE_STRING_MODE, a, l, u, c, d];
-    (s.contains[1].contains = E), (l.contains = E), (d.contains[1].contains = E);
-    let f = ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec'],
-        h = {
-            className: 'params',
-            begin: '\\(',
-            end: '\\)',
-            contains: E
-        };
+    _.contains = [i, s, e.inherit(e.APOS_STRING_MODE, { className: '' }), _, o, e.QUOTE_STRING_MODE, a, l, u, c, d];
+    let E = [i, s, _, o, e.QUOTE_STRING_MODE, a, l, u, c, d];
+    (o.contains[1].contains = E), (l.contains = E), (d.contains[1].contains = E);
+    let f = {
+        className: 'params',
+        begin: '\\(',
+        end: '\\)',
+        contains: E
+    };
     return {
         name: 'Erlang',
         aliases: ['erl'],
@@ -87,7 +86,7 @@ function t(e) {
                 end: '->',
                 returnBegin: !0,
                 illegal: '\\(|#|//|/\\*|\\\\|:|;',
-                contains: [h, e.inherit(e.TITLE_MODE, { begin: t })],
+                contains: [f, e.inherit(e.TITLE_MODE, { begin: t })],
                 starts: {
                     end: ';|\\.',
                     keywords: r,
@@ -103,9 +102,9 @@ function t(e) {
                 returnBegin: !0,
                 keywords: {
                     $pattern: '-' + e.IDENT_RE,
-                    keyword: f.map((e) => `${e}|1.5`).join(' ')
+                    keyword: ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec'].map((e) => `${e}|1.5`).join(' ')
                 },
-                contains: [h]
+                contains: [f]
             },
             a,
             e.QUOTE_STRING_MODE,
@@ -116,5 +115,4 @@ function t(e) {
             { begin: /\.$/ }
         ]
     };
-}
-e.exports = t;
+};

@@ -1,53 +1,53 @@
-var r = n(735250),
-    i = n(470079),
-    a = n(442837),
-    o = n(481060),
-    s = n(528963),
-    l = n(143740),
-    u = n(528144),
-    c = n(212342),
-    d = n(689938),
+var i = n(735250),
+    a = n(470079),
+    s = n(442837),
+    l = n(481060),
+    r = n(528963),
+    o = n(143740),
+    c = n(528144),
+    d = n(212342),
+    u = n(689938),
     _ = n(196273);
-let E = (e) => {
+t.Z = (e) => {
     let { channelId: t, messageId: n } = e,
-        E = (0, a.e7)([c.Z], () => c.Z.shouldShowBump(n), [n]),
-        f = i.useCallback(() => {
-            s.Z.dismissPublishBump(n), (0, l.Z)(t, n);
+        E = (0, s.e7)([d.Z], () => d.Z.shouldShowBump(n), [n]),
+        I = a.useCallback(() => {
+            r.Z.dismissPublishBump(n), (0, o.Z)(t, n);
         }, [t, n]),
-        h = i.useCallback(() => {
-            s.Z.dismissPublishBump(n);
+        m = a.useCallback(() => {
+            r.Z.dismissPublishBump(n);
         }, [n]),
-        p = i.useCallback(() => {
-            s.Z.permanentlyHidePublishBump(t);
+        T = a.useCallback(() => {
+            r.Z.permanentlyHidePublishBump(t);
         }, [t]);
     return E
-        ? (0, r.jsxs)('div', {
+        ? (0, i.jsxs)('div', {
               className: _.container,
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, i.jsxs)('div', {
                       className: _.bumpBox,
                       children: [
-                          (0, r.jsx)(o.AnnouncementsIcon, {
+                          (0, i.jsx)(l.AnnouncementsIcon, {
                               size: 'xs',
                               color: 'currentColor',
                               className: _.icon
                           }),
-                          (0, r.jsx)(u.Z, {
+                          (0, i.jsx)(c.Z, {
                               className: _.tagline,
-                              size: u.Z.Sizes.SIZE_14,
-                              children: d.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP
+                              size: c.Z.Sizes.SIZE_14,
+                              children: u.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP
                           }),
-                          (0, r.jsx)(o.Button, {
-                              color: o.Button.Colors.LINK,
-                              look: o.Button.Looks.LINK,
-                              size: o.Button.Sizes.MIN,
+                          (0, i.jsx)(l.Button, {
+                              color: l.Button.Colors.LINK,
+                              look: l.Button.Looks.LINK,
+                              size: l.Button.Sizes.MIN,
                               className: _.publish,
-                              onClick: f,
-                              children: d.Z.Messages.NEWS_CHANNEL_PUBLISH
+                              onClick: I,
+                              children: u.Z.Messages.NEWS_CHANNEL_PUBLISH
                           }),
-                          (0, r.jsx)(o.Clickable, {
-                              onClick: h,
-                              children: (0, r.jsx)(o.CircleXIcon, {
+                          (0, i.jsx)(l.Clickable, {
+                              onClick: m,
+                              children: (0, i.jsx)(l.CircleXIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
                                   className: _.closeIcon
@@ -55,17 +55,16 @@ let E = (e) => {
                           })
                       ]
                   }),
-                  (0, r.jsx)(o.Text, {
+                  (0, i.jsx)(l.Text, {
                       color: 'text-muted',
                       className: _.hidePermanently,
                       variant: 'text-sm/normal',
-                      children: (0, r.jsx)(o.Clickable, {
-                          onClick: p,
-                          children: d.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
+                      children: (0, i.jsx)(l.Clickable, {
+                          onClick: T,
+                          children: u.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
                       })
                   })
               ]
           })
         : null;
 };
-t.Z = E;

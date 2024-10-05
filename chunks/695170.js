@@ -1,21 +1,21 @@
 n.d(t, {
     $e: function () {
-        return g;
+        return T;
     },
     DY: function () {
-        return v;
+        return A;
     },
     Eg: function () {
-        return c;
+        return u;
     },
     FO: function () {
         return I;
     },
     J_: function () {
-        return d;
+        return c;
     },
     L1: function () {
-        return A;
+        return g;
     },
     Od: function () {
         return N;
@@ -24,28 +24,28 @@ n.d(t, {
         return s;
     },
     ZY: function () {
-        return C;
+        return v;
     },
     d9: function () {
         return S;
     },
     fv: function () {
-        return h;
+        return f;
     },
     gE: function () {
         return O;
     },
     qb: function () {
-        return _;
+        return d;
     },
     t2: function () {
         return i;
     },
     wz: function () {
-        return T;
+        return m;
     },
     zU: function () {
-        return p;
+        return h;
     }
 });
 var r = n(686942),
@@ -53,53 +53,54 @@ var r = n(686942),
         return void 0 === r && (r = 0), void 0 === i && (i = 0), void 0 === a && (a = 0), new Date(Date.UTC(e, t - 1, n, r, i, a));
     },
     a = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-    o = 86400000,
     s = 9999,
-    l = i(1970, 1, 1),
-    u = [6, 0, 1, 2, 3, 4, 5],
-    c = function (e) {
+    o = i(1970, 1, 1),
+    l = [6, 0, 1, 2, 3, 4, 5],
+    u = function (e) {
         return (e % 4 == 0 && e % 100 != 0) || e % 400 == 0;
     },
-    d = function (e) {
+    c = function (e) {
         return e instanceof Date;
     },
-    _ = function (e) {
-        return d(e) && !isNaN(e.getTime());
+    d = function (e) {
+        return c(e) && !isNaN(e.getTime());
     },
-    E = function (e) {
+    _ = function (e) {
         return 60000 * e.getTimezoneOffset();
     },
-    f = function (e, t) {
-        return Math.round((e.getTime() - E(e) - (t.getTime() - E(t))) / o);
+    E = function (e, t) {
+        var n = e.getTime() - _(e),
+            r = t.getTime() - _(t);
+        return Math.round((n - r) / 86400000);
+    },
+    f = function (e) {
+        return E(e, o);
     },
     h = function (e) {
-        return f(e, l);
+        return new Date(o.getTime() + 86400000 * e);
     },
     p = function (e) {
-        return new Date(l.getTime() + e * o);
-    },
-    m = function (e) {
         var t = e.getUTCMonth();
-        return 1 === t && c(e.getUTCFullYear()) ? 29 : a[t];
+        return 1 === t && u(e.getUTCFullYear()) ? 29 : a[t];
     },
     I = function (e) {
-        return u[e.getUTCDay()];
+        return l[e.getUTCDay()];
+    },
+    m = function (e, t) {
+        var n = i(e, t + 1, 1);
+        return [I(n), p(n)];
     },
     T = function (e, t) {
-        var n = i(e, t + 1, 1);
-        return [I(n), m(n)];
-    },
-    g = function (e, t) {
         return (t = t || e), new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth(), e.getUTCDate(), t.getHours(), t.getMinutes(), t.getSeconds(), t.getMilliseconds()));
     },
     S = function (e) {
         return new Date(e.getTime());
     },
-    A = function (e) {
+    g = function (e) {
         for (var t = [], n = 0; n < e.length; n++) t.push(S(e[n]));
         return t;
     },
-    v = function (e) {
+    A = function (e) {
         e.sort(function (e, t) {
             return e.getTime() - t.getTime();
         });
@@ -117,7 +118,7 @@ var r = n(686942),
     R = function (e, t) {
         return e.toLocaleString('sv-SE', { timeZone: t }).replace(' ', 'T') + 'Z';
     },
-    C = function (e, t) {
+    v = function (e, t) {
         var n = new Date(R(e, Intl.DateTimeFormat().resolvedOptions().timeZone)),
             r = new Date(R(e, null != t ? t : 'UTC')).getTime() - n.getTime();
         return new Date(e.getTime() - r);

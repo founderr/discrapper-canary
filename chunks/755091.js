@@ -4,49 +4,15 @@ function r(e) {
 Object.defineProperty(t, '__esModule', { value: !0 });
 var i = r(n(449686)),
     a = n(372542),
-    o = n(699581),
-    s = n(179237),
+    s = n(699581),
+    o = n(179237),
     l = r(n(865481)),
     u = n(560656),
     c = n(698091),
     d = r(n(624482)),
-    _ = /^--/;
-function E(e, t) {
-    return null == t || 'boolean' == typeof t || '' === t ? '' : 'number' != typeof t || 0 === t || _.test(e) || (p.hasOwnProperty(e) && p[e]) ? ('' + t).trim() : t + 'px';
-}
-var f = {};
-function h(e, t) {
-    if (!e.nodeType || !e.setAttribute) return !1;
-    var n = 'filter' === e.nodeName || (e.parentNode && 'filter' === e.parentNode.nodeName),
-        r = t,
-        a = r.style,
-        o = r.children,
-        s = r.scrollTop,
-        l = r.scrollLeft,
-        u = i(r, ['style', 'children', 'scrollTop', 'scrollLeft']),
-        d = Object.values(u),
-        h = Object.keys(u).map(function (t) {
-            return n || e.hasAttribute(t)
-                ? t
-                : f[t] ||
-                      (f[t] = t.replace(/([A-Z])/g, function (e) {
-                          return '-' + e.toLowerCase();
-                      }));
-        });
-    c.Globals.frameLoop.onWrite(function () {
-        for (var t in (void 0 !== o && (e.textContent = o), a))
-            if (a.hasOwnProperty(t)) {
-                var n = E(t, a[t]);
-                'float' === t ? (t = 'cssFloat') : _.test(t) ? e.style.setProperty(t, n) : (e.style[t] = n);
-            }
-        h.forEach(function (t, n) {
-            e.setAttribute(t, d[n]);
-        }),
-            void 0 !== s && (e.scrollTop = s),
-            void 0 !== l && (e.scrollLeft = l);
-    });
-}
-var p = {
+    _ = /^--/,
+    E = {},
+    f = {
         animationIterationCount: !0,
         borderImageOutset: !0,
         borderImageSlice: !0,
@@ -89,25 +55,23 @@ var p = {
         strokeOpacity: !0,
         strokeWidth: !0
     },
-    m = function (e, t) {
-        return e + t.charAt(0).toUpperCase() + t.substring(1);
-    },
-    I = ['Webkit', 'Ms', 'Moz', 'O'];
-p = Object.keys(p).reduce(function (e, t) {
+    h = ['Webkit', 'Ms', 'Moz', 'O'];
+f = Object.keys(f).reduce(function (e, t) {
     return (
-        I.forEach(function (n) {
-            return (e[m(n, t)] = e[t]);
+        h.forEach(function (n) {
+            var r;
+            return (e[n + (r = t).charAt(0).toUpperCase() + r.substring(1)] = e[t]);
         }),
         e
     );
-}, p);
-var T = /^(matrix|translate|scale|rotate|skew)/,
-    g = /^(translate)/,
-    S = /^(rotate|skew)/,
-    A = function (e, t) {
+}, f);
+var p = /^(matrix|translate|scale|rotate|skew)/,
+    I = /^(translate)/,
+    m = /^(rotate|skew)/,
+    T = function (e, t) {
         return c.is.num(e) && 0 !== e ? e + t : e;
     },
-    v = function e(t, n) {
+    S = function e(t, n) {
         return c.is.arr(t)
             ? t.every(function (t) {
                   return e(t, n);
@@ -116,39 +80,39 @@ var T = /^(matrix|translate|scale|rotate|skew)/,
               ? t === n
               : parseFloat(t) === n;
     },
-    N = (function (e) {
+    g = (function (e) {
         function t(t) {
             var n = t.x,
                 r = t.y,
                 a = t.z,
-                o = i(t, ['x', 'y', 'z']),
-                s = [],
+                s = i(t, ['x', 'y', 'z']),
+                o = [],
                 l = [];
             return (
                 (n || r || a) &&
-                    (s.push([n || 0, r || 0, a || 0]),
+                    (o.push([n || 0, r || 0, a || 0]),
                     l.push(function (e) {
                         return [
                             'translate3d(' +
                                 e
                                     .map(function (e) {
-                                        return A(e, 'px');
+                                        return T(e, 'px');
                                     })
                                     .join(',') +
                                 ')',
-                            v(e, 0)
+                            S(e, 0)
                         ];
                     })),
-                c.each(o, function (e, t) {
+                c.each(s, function (e, t) {
                     if ('transform' === t)
-                        s.push([e || '']),
+                        o.push([e || '']),
                             l.push(function (e) {
                                 return [e, '' === e];
                             });
-                    else if (T.test(t)) {
-                        if ((delete o[t], c.is.und(e))) return;
-                        var n = g.test(t) ? 'px' : S.test(t) ? 'deg' : '';
-                        s.push(c.toArray(e)),
+                    else if (p.test(t)) {
+                        if ((delete s[t], c.is.und(e))) return;
+                        var n = I.test(t) ? 'px' : m.test(t) ? 'deg' : '';
+                        o.push(c.toArray(e)),
                             l.push(
                                 'rotate3d' === t
                                     ? function (e) {
@@ -156,7 +120,7 @@ var T = /^(matrix|translate|scale|rotate|skew)/,
                                               r = e[1],
                                               i = e[2],
                                               a = e[3];
-                                          return ['rotate3d(' + t + ',' + r + ',' + i + ',' + A(a, n) + ')', v(a, 0)];
+                                          return ['rotate3d(' + t + ',' + r + ',' + i + ',' + T(a, n) + ')', S(a, 0)];
                                       }
                                     : function (e) {
                                           return [
@@ -164,23 +128,23 @@ var T = /^(matrix|translate|scale|rotate|skew)/,
                                                   '(' +
                                                   e
                                                       .map(function (e) {
-                                                          return A(e, n);
+                                                          return T(e, n);
                                                       })
                                                       .join(',') +
                                                   ')',
-                                              v(e, t.startsWith('scale') ? 1 : 0)
+                                              S(e, t.startsWith('scale') ? 1 : 0)
                                           ];
                                       }
                             );
                     }
                 }),
-                s.length && (o.transform = new O(s, l)),
-                e.call(this, o) || this
+                o.length && (s.transform = new A(o, l)),
+                e.call(this, s) || this
             );
         }
         return d(t, e), t;
     })(u.AnimatedObject),
-    O = (function (e) {
+    A = (function (e) {
         function t(t, n) {
             var r;
             return ((r = e.call(this) || this).inputs = t), (r.transforms = n), (r._value = null), (r._children = new Set()), r;
@@ -198,10 +162,10 @@ var T = /^(matrix|translate|scale|rotate|skew)/,
                 return (
                     c.each(this.inputs, function (r, i) {
                         var a = c.getFluidValue(r[0]),
-                            o = e.transforms[i](c.is.arr(a) ? a : r.map(c.getFluidValue)),
-                            s = o[0],
-                            l = o[1];
-                        (t += ' ' + s), (n = n && l);
+                            s = e.transforms[i](c.is.arr(a) ? a : r.map(c.getFluidValue)),
+                            o = s[0],
+                            l = s[1];
+                        (t += ' ' + o), (n = n && l);
                     }),
                     n ? 'none' : t
                 );
@@ -236,17 +200,47 @@ var T = /^(matrix|translate|scale|rotate|skew)/,
             }),
             t
         );
-    })(c.FluidValue),
-    R = ['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'cite', 'code', 'col', 'colgroup', 'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'keygen', 'label', 'legend', 'li', 'link', 'main', 'map', 'mark', 'menu', 'menuitem', 'meta', 'meter', 'nav', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output', 'p', 'param', 'picture', 'pre', 'progress', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strong', 'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 'ul', 'var', 'video', 'wbr', 'circle', 'clipPath', 'defs', 'ellipse', 'foreignObject', 'g', 'image', 'line', 'linearGradient', 'mask', 'path', 'pattern', 'polygon', 'polyline', 'radialGradient', 'rect', 'stop', 'svg', 'text', 'tspan'];
+    })(c.FluidValue);
 a.Globals.assign({
     colorNames: l,
-    createStringInterpolator: s.createStringInterpolator,
-    batchedUpdates: o.unstable_batchedUpdates
+    createStringInterpolator: o.createStringInterpolator,
+    batchedUpdates: s.unstable_batchedUpdates
 });
-var C = u.createHost(R, {
-    applyAnimatedValues: h,
+var N = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'cite', 'code', 'col', 'colgroup', 'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'keygen', 'label', 'legend', 'li', 'link', 'main', 'map', 'mark', 'menu', 'menuitem', 'meta', 'meter', 'nav', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output', 'p', 'param', 'picture', 'pre', 'progress', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strong', 'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 'ul', 'var', 'video', 'wbr', 'circle', 'clipPath', 'defs', 'ellipse', 'foreignObject', 'g', 'image', 'line', 'linearGradient', 'mask', 'path', 'pattern', 'polygon', 'polyline', 'radialGradient', 'rect', 'stop', 'svg', 'text', 'tspan'], {
+    applyAnimatedValues: function (e, t) {
+        if (!e.nodeType || !e.setAttribute) return !1;
+        var n = 'filter' === e.nodeName || (e.parentNode && 'filter' === e.parentNode.nodeName),
+            r = t.style,
+            a = t.children,
+            s = t.scrollTop,
+            o = t.scrollLeft,
+            l = i(t, ['style', 'children', 'scrollTop', 'scrollLeft']),
+            u = Object.values(l),
+            d = Object.keys(l).map(function (t) {
+                return n || e.hasAttribute(t)
+                    ? t
+                    : E[t] ||
+                          (E[t] = t.replace(/([A-Z])/g, function (e) {
+                              return '-' + e.toLowerCase();
+                          }));
+            });
+        c.Globals.frameLoop.onWrite(function () {
+            for (var t in (void 0 !== a && (e.textContent = a), r))
+                if (r.hasOwnProperty(t)) {
+                    var n,
+                        i,
+                        l = ((n = t), null == (i = r[t]) || 'boolean' == typeof i || '' === i ? '' : 'number' != typeof i || 0 === i || _.test(n) || (f.hasOwnProperty(n) && f[n]) ? ('' + i).trim() : i + 'px');
+                    'float' === t ? (t = 'cssFloat') : _.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
+                }
+            d.forEach(function (t, n) {
+                e.setAttribute(t, u[n]);
+            }),
+                void 0 !== s && (e.scrollTop = s),
+                void 0 !== o && (e.scrollLeft = o);
+        });
+    },
     createAnimatedStyle: function (e) {
-        return new N(e);
+        return new g(e);
     },
     getComponentProps: function (e) {
         return e.scrollTop, e.scrollLeft, i(e, ['scrollTop', 'scrollLeft']);
@@ -261,5 +255,5 @@ Object.keys(a).forEach(function (e) {
             }
         });
 }),
-    (t.a = C),
-    (t.animated = C);
+    (t.a = N),
+    (t.animated = N);

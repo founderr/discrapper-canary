@@ -1,112 +1,108 @@
-var r = n(47120);
-var i = n(733860);
-var a = n(735250),
-    o = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    u = n(392711),
-    c = n.n(u),
-    d = n(212433),
-    _ = n(91192),
-    E = n(946188),
-    f = n(477690),
-    h = n(481060),
-    p = n(80932),
-    m = n(351773),
-    I = n(209613),
-    T = n(313201),
-    g = n(633302),
-    S = n(176354),
-    A = n(624138),
-    v = n(981631),
-    N = n(689938),
-    O = n(731319);
-let R = 20,
-    C = 125,
-    y = (0, T.hQ)(),
-    L = E.Z.convert.fromCodePoint('1f44f'),
-    b = (0, A.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-    D = (0, A.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE);
-function M(e) {
-    switch (E.Z.convert.toCodePoint(e)) {
-        case '1f3fb':
-            return N.Z.Messages.EMOJI_MODIFIER_LIGHT_SKIN_TONE;
-        case '1f3fc':
-            return N.Z.Messages.EMOJI_MODIFIER_MEDIUM_LIGHT_SKIN_TONE;
-        case '1f3fd':
-            return N.Z.Messages.EMOJI_MODIFIER_MEDIUM_SKIN_TONE;
-        case '1f3fe':
-            return N.Z.Messages.EMOJI_MODIFIER_MEDIUM_DARK_SKIN_TONE;
-        case '1f3ff':
-            return N.Z.Messages.EMOJI_MODIFIER_DARK_SKIN_TONE;
-        default:
-            return N.Z.Messages.EMOJI_MODIFIER_NONE;
-    }
-}
-let P = (e) => {
-        let { fade: t, surrogate: n, onClick: r, delay: i, index: o } = e,
-            s = (0, _.JA)('item-'.concat(o)),
-            l = S.ZP.getURL(L + n),
-            u = (0, h.useSpring)(
+n(47120), n(733860);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(392711),
+    l = n.n(o),
+    u = n(212433),
+    c = n(91192),
+    d = n(946188),
+    _ = n(477690),
+    E = n(481060),
+    f = n(80932),
+    h = n(351773),
+    p = n(209613),
+    I = n(313201),
+    m = n(633302),
+    T = n(176354),
+    S = n(624138),
+    g = n(981631),
+    A = n(689938),
+    N = n(731319);
+let O = (0, I.hQ)(),
+    R = d.Z.convert.fromCodePoint('1f44f'),
+    v = (0, S.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+    C = (0, S.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
+    L = (e) => {
+        let { fade: t, surrogate: n, onClick: i, delay: a, index: s } = e,
+            o = (0, c.JA)('item-'.concat(s)),
+            l = T.ZP.getURL(R + n),
+            _ = (0, E.useSpring)(
                 {
                     opacity: 1,
                     from: { opacity: t ? 0 : 1 },
-                    delay: i
+                    delay: a
                 },
                 'animate-always'
             );
-        return (0, a.jsx)(h.Clickable, {
-            ...s,
+        return (0, r.jsx)(E.Clickable, {
+            ...o,
             role: 'option',
-            'aria-selected': 0 === o,
-            onClick: () => r(n),
-            className: O.diversityEmojiItem,
-            children: (0, a.jsx)(d.animated.div, {
-                'aria-label': M(n),
-                className: O.diversityEmojiItemImage,
+            'aria-selected': 0 === s,
+            onClick: () => i(n),
+            className: N.diversityEmojiItem,
+            children: (0, r.jsx)(u.animated.div, {
+                'aria-label': (function (e) {
+                    switch (d.Z.convert.toCodePoint(e)) {
+                        case '1f3fb':
+                            return A.Z.Messages.EMOJI_MODIFIER_LIGHT_SKIN_TONE;
+                        case '1f3fc':
+                            return A.Z.Messages.EMOJI_MODIFIER_MEDIUM_LIGHT_SKIN_TONE;
+                        case '1f3fd':
+                            return A.Z.Messages.EMOJI_MODIFIER_MEDIUM_SKIN_TONE;
+                        case '1f3fe':
+                            return A.Z.Messages.EMOJI_MODIFIER_MEDIUM_DARK_SKIN_TONE;
+                        case '1f3ff':
+                            return A.Z.Messages.EMOJI_MODIFIER_DARK_SKIN_TONE;
+                        default:
+                            return A.Z.Messages.EMOJI_MODIFIER_NONE;
+                    }
+                })(n),
+                className: N.diversityEmojiItemImage,
                 style: {
                     backgroundImage: 'url("'.concat(l, '")'),
-                    ...u
+                    ..._
                 }
             })
         });
     },
-    U = (e) => {
-        let { id: t, selectedSurrogate: n, onClick: r, hasTabWrapper: i } = e,
-            s = (0, I.Z)('diversity'),
-            u = (0, h.useSpring)({
-                height: (D + 2 * b) * (g.gw.length + 1),
-                from: { height: D },
-                config: { duration: C }
+    D = (e) => {
+        let { id: t, selectedSurrogate: n, onClick: a, hasTabWrapper: o } = e,
+            d = (0, p.Z)('diversity'),
+            _ = (0, E.useSpring)({
+                height: (C + 2 * v) * (m.gw.length + 1),
+                from: { height: C },
+                config: { duration: 125 }
             });
-        o.useEffect(() => {
-            s.focusFirstVisibleItem();
-        }, [s]);
-        let E = ['', ...g.gw];
+        i.useEffect(() => {
+            d.focusFirstVisibleItem();
+        }, [d]);
+        let f = ['', ...m.gw];
         return (
-            c().remove(E, (e) => e === n),
-            E.unshift(n),
-            (0, a.jsx)(_.bG, {
-                navigator: s,
-                children: (0, a.jsx)(_.SJ, {
+            l().remove(f, (e) => e === n),
+            f.unshift(n),
+            (0, r.jsx)(c.bG, {
+                navigator: d,
+                children: (0, r.jsx)(c.SJ, {
                     children: (e) => {
-                        let { ref: n, ...o } = e;
-                        return (0, a.jsx)(d.animated.div, {
-                            ...o,
+                        let { ref: n, ...i } = e;
+                        return (0, r.jsx)(u.animated.div, {
+                            ...i,
                             id: t,
                             ref: n,
-                            className: l()(O.diversitySelectorOptions, { [O.diversitySelectorOptionsHasTabWrapper]: i }),
-                            style: u,
+                            className: s()(N.diversitySelectorOptions, { [N.diversitySelectorOptionsHasTabWrapper]: o }),
+                            style: _,
                             role: 'listbox',
-                            children: E.map((e, t) =>
-                                (0, a.jsx)(
-                                    P,
+                            children: f.map((e, t) =>
+                                (0, r.jsx)(
+                                    L,
                                     {
                                         index: t,
                                         fade: 0 !== t,
-                                        delay: t * R,
+                                        delay: 20 * t,
                                         surrogate: e,
-                                        onClick: r
+                                        onClick: a
                                     },
                                     t
                                 )
@@ -116,53 +112,49 @@ let P = (e) => {
                 })
             })
         );
-    },
-    w = (e) => {
-        let { searchBarRef: t, selectedSurrogate: n, className: r, hasTabWrapper: i } = e,
-            s = S.ZP.getURL(L + n),
-            [l, u] = o.useState(!1),
-            c = (0, m.Z)(null, () => u(!1)),
-            d = o.useRef(null),
-            _ = () => {
-                u(!0);
-            },
-            E = (e) => {
-                e.keyCode === v.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus());
-            },
-            f = (e) => {
-                var n;
-                (0, p.t0)(e), u(!1), null === (n = t.current) || void 0 === n || n.focus();
-            };
-        return (0, a.jsxs)('div', {
-            ref: c,
-            className: r,
-            children: [
-                (0, a.jsx)(h.Clickable, {
-                    innerRef: d,
-                    className: O.diversitySelectorButton,
-                    onClick: _,
-                    'aria-label': N.Z.Messages.EMOJI_MODIFIER_MENU_BUTTON,
-                    'aria-haspopup': !0,
-                    'aria-expanded': l,
-                    'aria-controls': y,
-                    tabIndex: l ? -1 : 0,
-                    children: (0, a.jsx)('div', {
-                        className: O.diversityEmojiItemImage,
-                        style: { backgroundImage: 'url("'.concat(s, '")') }
-                    })
-                }),
-                l
-                    ? (0, a.jsx)('div', {
-                          onKeyDown: E,
-                          children: (0, a.jsx)(U, {
-                              id: y,
-                              hasTabWrapper: i,
-                              selectedSurrogate: n,
-                              onClick: f
-                          })
-                      })
-                    : null
-            ]
-        });
     };
-t.Z = w;
+t.Z = (e) => {
+    let { searchBarRef: t, selectedSurrogate: n, className: a, hasTabWrapper: s } = e,
+        o = T.ZP.getURL(R + n),
+        [l, u] = i.useState(!1),
+        c = (0, h.Z)(null, () => u(!1)),
+        d = i.useRef(null);
+    return (0, r.jsxs)('div', {
+        ref: c,
+        className: a,
+        children: [
+            (0, r.jsx)(E.Clickable, {
+                innerRef: d,
+                className: N.diversitySelectorButton,
+                onClick: () => {
+                    u(!0);
+                },
+                'aria-label': A.Z.Messages.EMOJI_MODIFIER_MENU_BUTTON,
+                'aria-haspopup': !0,
+                'aria-expanded': l,
+                'aria-controls': O,
+                tabIndex: l ? -1 : 0,
+                children: (0, r.jsx)('div', {
+                    className: N.diversityEmojiItemImage,
+                    style: { backgroundImage: 'url("'.concat(o, '")') }
+                })
+            }),
+            l
+                ? (0, r.jsx)('div', {
+                      onKeyDown: (e) => {
+                          e.keyCode === g.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus());
+                      },
+                      children: (0, r.jsx)(D, {
+                          id: O,
+                          hasTabWrapper: s,
+                          selectedSurrogate: n,
+                          onClick: (e) => {
+                              var n;
+                              (0, f.t0)(e), u(!1), null === (n = t.current) || void 0 === n || n.focus();
+                          }
+                      })
+                  })
+                : null
+        ]
+    });
+};

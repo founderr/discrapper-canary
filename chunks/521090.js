@@ -1,46 +1,45 @@
-var r = n(733860);
-var i = n(47120);
-var a = n(106351),
-    o = n(212819),
-    s = n(588468),
-    l = n(933557),
-    u = n(592125),
-    c = n(984933),
-    d = n(483360),
-    _ = n(877565),
-    E = n(590921),
-    f = n(665692),
-    h = n(176505),
-    p = n(689938);
-let m = {
-    sentinel: f.zy,
-    matches: (e, t, n, r, i) => i.mentions.channel !== E.nS.DENY && !e.isPrivate(),
-    queryResults(e, t, n, r, i) {
-        let a,
-            s,
-            l = c.sH;
+n(733860), n(47120);
+var r = n(106351),
+    i = n(212819),
+    a = n(588468),
+    s = n(933557),
+    o = n(592125),
+    l = n(984933),
+    u = n(483360),
+    c = n(877565),
+    d = n(590921),
+    _ = n(665692),
+    E = n(176505),
+    f = n(689938);
+let h = {
+    sentinel: _.zy,
+    matches: (e, t, n, r, i) => i.mentions.channel !== d.nS.DENY && !e.isPrivate(),
+    queryResults(e, t, n, r, a) {
+        let s,
+            o,
+            c = l.sH;
         return (
-            n.charAt(0) === o.xQ.VOICE_CHANNEL && ((l = c.Zb), (n = n.substring(1))),
+            n.charAt(0) === i.xQ.VOICE_CHANNEL && ((c = l.Zb), (n = n.substring(1))),
             r.forNonStringCommandOption
-                ? (a = d.ZP.queryApplicationCommandChannelResults({
+                ? (s = u.ZP.queryApplicationCommandChannelResults({
                       query: n,
                       channel: e,
                       channelTypes: r.allowedChannelTypes
                   }))
-                : ((a = d.ZP.queryChannelResults({
+                : ((s = u.ZP.queryChannelResults({
                       query: n,
                       channel: e,
-                      type: l
+                      type: c
                   })),
                   null != t &&
-                      ((s = d.ZP.queryStaticRouteChannels({
+                      ((o = u.ZP.queryStaticRouteChannels({
                           query: n,
                           guild: t
                       })),
-                      a.channels.unshift(...s))),
+                      s.channels.unshift(...o))),
             {
-                results: a,
-                staticRouteChannels: s
+                results: s,
+                staticRouteChannels: o
             }
         );
     },
@@ -49,30 +48,30 @@ let m = {
             n,
             {
                 results: { channels: r },
-                selectedIndex: i,
-                query: a,
-                options: l,
-                onHover: c,
-                onClick: d
+                selectedIndex: s,
+                query: l,
+                options: u,
+                onHover: d,
+                onClick: E
             } = e,
-            E = a.charAt(0) === o.xQ.VOICE_CHANNEL;
+            h = l.charAt(0) === i.xQ.VOICE_CHANNEL;
         return (
-            E ? ((t = p.Z.Messages.VOICE_CHANNELS_MATCHING), (n = p.Z.Messages.VOICE_CHANNELS), (a = a.substring(1))) : l.forNonStringCommandOption ? ((t = p.Z.Messages.CHANNELS_MATCHING), (n = p.Z.Messages.CHANNELS)) : ((t = p.Z.Messages.TEXT_CHANNELS_MATCHING), (n = p.Z.Messages.TEXT_CHANNELS)),
-            (0, _.HI)({
-                query: a,
-                selectedIndex: i,
+            h ? ((t = f.Z.Messages.VOICE_CHANNELS_MATCHING), (n = f.Z.Messages.VOICE_CHANNELS), (l = l.substring(1))) : u.forNonStringCommandOption ? ((t = f.Z.Messages.CHANNELS_MATCHING), (n = f.Z.Messages.CHANNELS)) : ((t = f.Z.Messages.TEXT_CHANNELS_MATCHING), (n = f.Z.Messages.TEXT_CHANNELS)),
+            (0, c.HI)({
+                query: l,
+                selectedIndex: s,
                 autocompletes: r,
-                onHover: c,
-                onClick: d,
+                onHover: d,
+                onClick: E,
                 titleWithQuery: t,
                 titleWithoutQuery: n,
-                Component: s.ZP.Channel,
+                Component: a.ZP.Channel,
                 getProps: (e) => ({
                     channel: e,
                     key: e.id,
-                    category: u.Z.getChannel(e.parent_id)
+                    category: o.Z.getChannel(e.parent_id)
                 }),
-                getQuery: (e) => (E ? ''.concat(f.zy).concat(o.xQ.VOICE_CHANNEL).concat(e) : ''.concat(f.zy).concat(e)),
+                getQuery: (e) => (h ? ''.concat(_.zy).concat(i.xQ.VOICE_CHANNEL).concat(e) : ''.concat(_.zy).concat(e)),
                 key: 'channels'
             })
         );
@@ -81,27 +80,31 @@ let m = {
         let {
                 results: { channels: t },
                 index: n,
-                options: r
+                options: i
             } = e,
-            i = t[n];
-        return r.insertText(I(i), T(i)), { type: E.z2.CHANNEL };
+            a = t[n];
+        return (
+            i.insertText(
+                (function (e) {
+                    switch (e.type) {
+                        case r.d.PUBLIC_THREAD:
+                        case r.d.PRIVATE_THREAD:
+                        case r.d.ANNOUNCEMENT_THREAD:
+                        case r.d.GUILD_VOICE:
+                        case r.d.GUILD_STAGE_VOICE:
+                        case r.d.GUILD_CATEGORY:
+                            return '#"'.concat((0, s.le)(e.name), '"');
+                        default:
+                            let t = l.ZP.getTextChannelNameDisambiguations(e.guild_id)[e.id];
+                            return '#'.concat(null != t ? t.name : e.name);
+                    }
+                })(a),
+                (function (e) {
+                    return E.EC.has(e.id) ? '<id:'.concat(e.id, '>') : '<#'.concat(e.id, '>');
+                })(a)
+            ),
+            { type: d.z2.CHANNEL }
+        );
     }
 };
-function I(e) {
-    switch (e.type) {
-        case a.d.PUBLIC_THREAD:
-        case a.d.PRIVATE_THREAD:
-        case a.d.ANNOUNCEMENT_THREAD:
-        case a.d.GUILD_VOICE:
-        case a.d.GUILD_STAGE_VOICE:
-        case a.d.GUILD_CATEGORY:
-            return '#"'.concat((0, l.le)(e.name), '"');
-        default:
-            let t = c.ZP.getTextChannelNameDisambiguations(e.guild_id)[e.id];
-            return '#'.concat(null != t ? t.name : e.name);
-    }
-}
-function T(e) {
-    return h.EC.has(e.id) ? '<id:'.concat(e.id, '>') : '<#'.concat(e.id, '>');
-}
-t.Z = m;
+t.Z = h;

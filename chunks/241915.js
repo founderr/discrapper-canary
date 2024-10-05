@@ -1,23 +1,23 @@
 n.d(t, {
     _: function () {
-        return y;
+        return O;
     }
-});
+}),
+    n(47120);
 var r,
-    i = n(47120);
-var a = n(735250),
-    o = n(470079),
+    i = n(735250),
+    a = n(470079),
     s = n(120356),
-    l = n.n(s),
-    u = n(392711);
-var c = n(699581),
-    d = n(347469),
-    _ = n(689425),
-    E = n(358085),
-    f = n(981631),
-    h = n(354459),
-    p = n(844233);
-function m(e, t, n) {
+    o = n.n(s),
+    l = n(392711),
+    u = n(699581),
+    c = n(347469),
+    d = n(689425),
+    _ = n(358085),
+    E = n(981631),
+    f = n(354459),
+    h = n(844233);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,51 +30,48 @@ function m(e, t, n) {
         e
     );
 }
-let I = 200,
-    T = 22,
-    g = 40,
-    S = 80,
-    A = 132,
-    v = 80,
-    N = {
-        [f.VD2.TOP_RIGHT]: p.resizeHandleTopRight,
-        [f.VD2.TOP_LEFT]: p.resizeHandleTopLeft,
-        [f.VD2.BOTTOM_LEFT]: p.resizeHandleBottomLeft,
-        [f.VD2.BOTTOM_RIGHT]: p.resizeHandleBottomRight
+let I = 80,
+    m = 132,
+    T = 80,
+    S = {
+        [E.VD2.TOP_RIGHT]: h.resizeHandleTopRight,
+        [E.VD2.TOP_LEFT]: h.resizeHandleTopLeft,
+        [E.VD2.BOTTOM_LEFT]: h.resizeHandleBottomLeft,
+        [E.VD2.BOTTOM_RIGHT]: h.resizeHandleBottomRight
     },
-    O = {
-        [f.VD2.TOP_RIGHT]: d.y.HORIZONTAL_LEFT,
-        [f.VD2.TOP_LEFT]: d.y.HORIZONTAL_RIGHT,
-        [f.VD2.BOTTOM_LEFT]: d.y.HORIZONTAL_RIGHT,
-        [f.VD2.BOTTOM_RIGHT]: d.y.HORIZONTAL_LEFT
+    g = {
+        [E.VD2.TOP_RIGHT]: c.y.HORIZONTAL_LEFT,
+        [E.VD2.TOP_LEFT]: c.y.HORIZONTAL_RIGHT,
+        [E.VD2.BOTTOM_LEFT]: c.y.HORIZONTAL_RIGHT,
+        [E.VD2.BOTTOM_RIGHT]: c.y.HORIZONTAL_LEFT
     };
-function R(e, t) {
-    let n = Math.round(e / g) * g;
-    return (0, u.clamp)(n, t.minWidth, t.maxWidth);
+function A(e, t) {
+    let n = 40 * Math.round(e / 40);
+    return (0, l.clamp)(n, t.minWidth, t.maxWidth);
 }
-function C(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: r, resizeConfig: i, position: s } = e,
-        u = (0, d.Z)({
-            minDimension: i.minWidth,
-            maxDimension: i.maxWidth + g / 2,
+function N(e) {
+    let { resizableNode: t, onResize: n, onResizeEnd: r, resizeConfig: s, position: l } = e,
+        u = (0, c.Z)({
+            minDimension: s.minWidth,
+            maxDimension: s.maxWidth + 20,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: r,
-            orientation: O[s],
+            orientation: g[l],
             usePointerEvents: !0
         }),
-        c = o.useCallback(
+        d = a.useCallback(
             (e) => {
                 e.stopPropagation(), u(e);
             },
             [u]
         );
-    return (0, a.jsx)('div', {
-        onMouseDown: c,
-        className: l()(p.resizeHandle, N[s])
+    return (0, i.jsx)('div', {
+        onMouseDown: d,
+        className: o()(h.resizeHandle, S[l])
     });
 }
-class y extends (r = o.PureComponent) {
+class O extends (r = a.PureComponent) {
     componentDidMount() {
         this.setPosition(this.props.position);
     }
@@ -82,7 +79,7 @@ class y extends (r = o.PureComponent) {
         if (null != this.props.width && null != this.props.resizeConfig && e.width !== this.props.width) {
             var t, n;
             let r = null !== (n = null !== (t = this._width) && void 0 !== t ? t : e.width) && void 0 !== n ? n : this.props.width;
-            (this._width = this.props.width), null != this._innerDivRef.current && (Math.abs(r - this._width) > g && (this._innerDivRef.current.style.transition = 'none'), (this._innerDivRef.current.style.width = ''.concat(this.props.width, 'px')));
+            (this._width = this.props.width), null != this._innerDivRef.current && (Math.abs(r - this._width) > 40 && (this._innerDivRef.current.style.transition = 'none'), (this._innerDivRef.current.style.width = ''.concat(this.props.width, 'px')));
         }
         (e.edgeOffsetTop !== this.props.edgeOffsetTop || e.edgeOffsetLeft !== this.props.edgeOffsetLeft || e.edgeOffsetBottom !== this.props.edgeOffsetBottom || e.edgeOffsetRight !== this.props.edgeOffsetRight || e.maxX !== this.props.maxX || e.maxY !== this.props.maxY || e.dockedRect !== this.props.dockedRect || e.roundCorners !== this.props.roundCorners) && (this.ensureIsInPosition(), this.ensureWidth());
     }
@@ -91,38 +88,38 @@ class y extends (r = o.PureComponent) {
         null === (e = this._resizeObserver) || void 0 === e || e.disconnect();
     }
     getPosition(e) {
-        let t = (0, c.findDOMNode)(this._innerDivRef.current);
+        let t = (0, u.findDOMNode)(this._innerDivRef.current);
         if (null != t) {
             let e = t.getBoundingClientRect();
             (this._boundWidth = e.width), (this._boundHeight = e.height);
         }
-        let { edgeOffsetTop: n, edgeOffsetLeft: r, edgeOffsetBottom: i, edgeOffsetRight: a, maxX: o, maxY: s, dockedRect: l } = this.props,
-            u = Math.round(n),
-            d = Math.round(s - i - this._boundHeight),
-            _ = Math.round(r),
-            h = Math.round(o - a - this._boundWidth),
-            p = (0, E.getPlatform)() !== E.PlatformTypes.WEB && this.inPopout ? T : 0;
+        let { edgeOffsetTop: n, edgeOffsetLeft: r, edgeOffsetBottom: i, edgeOffsetRight: a, maxX: s, maxY: o, dockedRect: l } = this.props,
+            c = Math.round(n),
+            d = Math.round(o - i - this._boundHeight),
+            f = Math.round(r),
+            h = Math.round(s - a - this._boundWidth),
+            p = (0, _.getPlatform)() !== _.PlatformTypes.WEB && this.inPopout ? 22 : 0;
         if (null != l) {
-            var m, I;
+            var I, m;
             return {
-                y: (null !== (m = null == l ? void 0 : l.y) && void 0 !== m ? m : 0) - p,
-                x: null !== (I = null == l ? void 0 : l.x) && void 0 !== I ? I : 0
+                y: (null !== (I = null == l ? void 0 : l.y) && void 0 !== I ? I : 0) - p,
+                x: null !== (m = null == l ? void 0 : l.x) && void 0 !== m ? m : 0
             };
         }
         switch (e) {
-            case f.VD2.TOP_LEFT:
+            case E.VD2.TOP_LEFT:
                 return {
-                    y: u,
-                    x: _
+                    y: c,
+                    x: f
                 };
-            case f.VD2.BOTTOM_LEFT:
+            case E.VD2.BOTTOM_LEFT:
                 return {
                     y: d,
-                    x: _
+                    x: f
                 };
-            case f.VD2.TOP_RIGHT:
+            case E.VD2.TOP_RIGHT:
                 return {
-                    y: u,
+                    y: c,
                     x: h
                 };
             default:
@@ -144,15 +141,15 @@ class y extends (r = o.PureComponent) {
     }
     calculateDecayingPosition(e, t, n, r) {
         return {
-            x: e + n * I,
-            y: t + r * I
+            x: e + 200 * n,
+            y: t + 200 * r
         };
     }
     getXOffset() {
         let { position: e, edgeOffsetLeft: t, edgeOffsetRight: n } = this.props;
         switch (e) {
-            case f.VD2.TOP_LEFT:
-            case f.VD2.BOTTOM_LEFT:
+            case E.VD2.TOP_LEFT:
+            case E.VD2.BOTTOM_LEFT:
                 return -t;
             default:
                 return n;
@@ -161,8 +158,8 @@ class y extends (r = o.PureComponent) {
     getYOffset() {
         let { position: e, edgeOffsetTop: t, edgeOffsetBottom: n } = this.props;
         switch (e) {
-            case f.VD2.TOP_LEFT:
-            case f.VD2.TOP_RIGHT:
+            case E.VD2.TOP_LEFT:
+            case E.VD2.TOP_RIGHT:
                 return -t;
             default:
                 return n;
@@ -171,33 +168,33 @@ class y extends (r = o.PureComponent) {
     getWidth() {
         var e, t;
         let { width: n } = this.props;
-        return null !== (t = null !== (e = this._width) && void 0 !== e ? e : n) && void 0 !== t ? t : h.l8[h.cL.VIDEO];
+        return null !== (t = null !== (e = this._width) && void 0 !== e ? e : n) && void 0 !== t ? t : f.l8[f.cL.VIDEO];
     }
     get inPopout() {
-        return this.props.appContext === f.IlC.POPOUT;
+        return this.props.appContext === E.IlC.POPOUT;
     }
     render() {
-        let { maxX: e, maxY: t, dockedRect: n, hidden: r, roundCorners: i, className: o, position: s, resizeConfig: u } = this.props,
+        let { maxX: e, maxY: t, dockedRect: n, hidden: r, roundCorners: a, className: s, position: l, resizeConfig: u } = this.props,
             c = this.getWidth(),
-            d = {};
+            _ = {};
         return (
             null != n
-                ? (d = {
+                ? (_ = {
                       transform: 'translate3d('.concat(n.x, ', ').concat(n.y, ', 0)'),
                       width: n.width,
                       height: n.height
                   })
                 : null != u &&
-                  (d = {
+                  (_ = {
                       width: c,
                       transition: this.state.isResizing ? 'none' : 'width 0.2s ease-in-out'
                   }),
-            (0, a.jsxs)(_.Z, {
+            (0, i.jsxs)(d.Z, {
                 dragAnywhere: !0,
                 ref: this.handleSetDraggableRef,
-                className: l()(p.pictureInPictureWindow, o, {
-                    [p.hidden]: r,
-                    [p.borderRadius]: i
+                className: o()(h.pictureInPictureWindow, s, {
+                    [h.hidden]: r,
+                    [h.borderRadius]: a
                 }),
                 maxX: e,
                 maxY: t,
@@ -206,18 +203,18 @@ class y extends (r = o.PureComponent) {
                 onDrag: this.handleDrag,
                 onDragEnd: this.handleDragEnd,
                 children: [
-                    (0, a.jsx)('div', {
+                    (0, i.jsx)('div', {
                         ref: this.handleSetInnerDivRef,
-                        style: d,
+                        style: _,
                         children: this.props.children
                     }),
                     null != u
-                        ? (0, a.jsx)(C, {
+                        ? (0, i.jsx)(N, {
                               onResize: this.handleResize,
                               onResizeEnd: this.handleResizeEnd,
                               resizableNode: this._innerDivRef,
                               resizeConfig: u,
-                              position: s
+                              position: l
                           })
                         : null
                 ]
@@ -226,28 +223,28 @@ class y extends (r = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'state', { isResizing: !1 }),
-            m(this, '_draggable', void 0),
-            m(this, '_innerDivRef', o.createRef()),
-            m(this, '_resizeObserver', void 0),
-            m(this, '_width', null),
-            m(this, '_boundWidth', 0),
-            m(this, '_boundHeight', 0),
-            m(this, '_velocityX', 0),
-            m(this, '_velocityY', 0),
-            m(this, '_lastMoveTime', void 0),
-            m(this, '_lastMoveX', 0),
-            m(this, '_lastMoveY', 0),
-            m(this, 'ensureIsInPosition', () => {
+            p(this, 'state', { isResizing: !1 }),
+            p(this, '_draggable', void 0),
+            p(this, '_innerDivRef', a.createRef()),
+            p(this, '_resizeObserver', void 0),
+            p(this, '_width', null),
+            p(this, '_boundWidth', 0),
+            p(this, '_boundHeight', 0),
+            p(this, '_velocityX', 0),
+            p(this, '_velocityY', 0),
+            p(this, '_lastMoveTime', void 0),
+            p(this, '_lastMoveX', 0),
+            p(this, '_lastMoveY', 0),
+            p(this, 'ensureIsInPosition', () => {
                 this.setPosition(this.props.position);
             }),
-            m(this, 'ensureWidth', () => {
+            p(this, 'ensureWidth', () => {
                 let { onResize: e, edgeOffsetLeft: t, edgeOffsetRight: n, maxX: r, resizeConfig: i } = this.props;
                 if (null == i) return;
-                let a = R(r - (t + n), i);
+                let a = A(r - (t + n), i);
                 this.getWidth() > a && ((this._width = a), null == e || e(a));
             }),
-            m(this, 'handleSetInnerDivRef', (e) => {
+            p(this, 'handleSetInnerDivRef', (e) => {
                 this._innerDivRef.current = e;
                 let t = null == e ? void 0 : e.ownerDocument.defaultView;
                 if (null != e && null != t) {
@@ -255,51 +252,53 @@ class y extends (r = o.PureComponent) {
                     (this._resizeObserver = new t.ResizeObserver(this.ensureIsInPosition)), null === (n = this._resizeObserver) || void 0 === n || n.observe(e);
                 }
             }),
-            m(this, 'handleSetDraggableRef', (e) => {
+            p(this, 'handleSetDraggableRef', (e) => {
                 this._draggable = e;
             }),
-            m(this, 'handleResize', (e) => {
+            p(this, 'handleResize', (e) => {
                 (this._width = e), !this.state.isResizing && this.setState({ isResizing: !0 });
             }),
-            m(this, 'handleResizeEnd', (e) => {
+            p(this, 'handleResizeEnd', (e) => {
                 let { onResize: t, resizeConfig: n } = this.props;
                 if (null == n) return;
-                let r = R(e, n);
+                let r = A(e, n);
                 (this._width = r), null == t || t(r), this.setState({ isResizing: !1 }), this.ensureWidth();
             }),
-            m(this, 'handleDragStart', (e, t) => {
+            p(this, 'handleDragStart', (e, t) => {
                 (this._velocityX = 0), (this._velocityY = 0), (this._lastMoveX = e), (this._lastMoveY = t), (this._lastMoveTime = new Date());
             }),
-            m(this, 'handleDrag', (e, t) => {
+            p(this, 'handleDrag', (e, t) => {
                 let n = new Date(),
                     r = Number(n) - Number(this._lastMoveTime);
                 0 !== r && ((this._velocityX = (e - this._lastMoveX) / r), (this._velocityY = (t - this._lastMoveY) / r), (this._lastMoveX = e), (this._lastMoveY = t), (this._lastMoveTime = n));
             }),
-            m(this, 'handleDragEnd', (e, t) => {
+            p(this, 'handleDragEnd', (e, t) => {
                 let n;
                 let { maxX: r, maxY: i } = this.props,
                     a = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY),
-                    o = !0,
-                    s = !0;
-                if ((a.x > r / 2 && (s = !1), a.y > i / 2 && (o = !1), (n = o && s ? f.VD2.TOP_LEFT : o && !s ? f.VD2.TOP_RIGHT : !o && s ? f.VD2.BOTTOM_LEFT : f.VD2.BOTTOM_RIGHT), this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position)) {
+                    s = !0,
+                    o = !0;
+                if ((a.x > r / 2 && (o = !1), a.y > i / 2 && (s = !1), (n = s && o ? E.VD2.TOP_LEFT : s && !o ? E.VD2.TOP_RIGHT : !s && o ? E.VD2.BOTTOM_LEFT : E.VD2.BOTTOM_RIGHT), this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position)) {
                     let { id: e, onMove: t } = this.props;
                     null == t || t(e, n);
                 }
             });
     }
 }
-m(y, 'defaultProps', {
+p(O, 'defaultProps', {
     hidden: !1,
     roundCorners: !0
 });
-let L = (e) => {
-    let { selectedPIPWindow: t, pipWindows: n, pipWidth: r, maxX: i, maxY: o, onWindowMove: s, onWindowResize: l, dockedRect: u, pictureInPictureComponents: c, appContext: d, roundCorners: _, resizeConfig: E } = e,
-        h = () => {
+t.Z = a.memo((e) => {
+    let { selectedPIPWindow: t, pipWindows: n, pipWidth: r, maxX: a, maxY: s, onWindowMove: o, onWindowResize: l, dockedRect: u, pictureInPictureComponents: c, appContext: d, roundCorners: _, resizeConfig: f } = e;
+    return (0, i.jsx)('div', {
+        className: h.pictureInPicture,
+        children: (() => {
             if (null == t) return null;
             let e = n.map((e) => {
-                    if (e.id !== t.id && e.component !== f.NYg.EMBED_IFRAME) return null;
+                    if (e.id !== t.id && e.component !== E.NYg.EMBED_IFRAME) return null;
                     let n = 'string' == typeof e.component ? c[e.component] : e.component;
-                    return (0, a.jsx)(
+                    return (0, i.jsx)(
                         n,
                         {
                             width: r,
@@ -308,30 +307,26 @@ let L = (e) => {
                         e.id
                     );
                 }),
-                h = n.some((e) => e.component === f.NYg.EMBED_IFRAME);
-            return (0, a.jsx)(y, {
+                h = n.some((e) => e.component === E.NYg.EMBED_IFRAME);
+            return (0, i.jsx)(O, {
                 appContext: d,
                 position: t.position,
                 id: t.id,
                 hidden: t.hidden,
-                onMove: s,
+                onMove: o,
                 onResize: l,
-                maxX: i,
-                maxY: o,
+                maxX: a,
+                maxY: s,
                 width: r,
                 dockedRect: u,
-                edgeOffsetTop: S,
-                edgeOffsetBottom: A,
-                edgeOffsetLeft: v,
-                edgeOffsetRight: S,
+                edgeOffsetTop: I,
+                edgeOffsetBottom: m,
+                edgeOffsetLeft: T,
+                edgeOffsetRight: I,
                 roundCorners: _,
-                resizeConfig: h ? void 0 : E,
+                resizeConfig: h ? void 0 : f,
                 children: e
             });
-        };
-    return (0, a.jsx)('div', {
-        className: p.pictureInPicture,
-        children: h()
+        })()
     });
-};
-t.Z = o.memo(L);
+});

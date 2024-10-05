@@ -1,91 +1,85 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return I;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-    a = n(481060),
-    o = n(235820),
-    s = n(592125),
-    l = n(944486),
-    u = n(455199);
+var a = n(442837),
+    s = n(481060),
+    l = n(235820),
+    r = n(592125),
+    o = n(944486),
+    c = n(455199);
 n(288552);
-var c = n(981631),
-    d = n(689938),
+var d = n(981631),
+    u = n(689938),
     _ = n(811304);
-let E = 'Everyone',
-    f = 'Roles',
-    h = 'All Servers';
-function p(e) {
+function E(e) {
     let { closePopout: t, onSelect: n } = e,
-        _ = (0, i.e7)([s.Z, l.Z], () => s.Z.getChannel(l.Z.getChannelId())),
+        _ = (0, a.e7)([r.Z, o.Z], () => r.Z.getChannel(o.Z.getChannelId())),
         {
-            everyoneFilter: p,
-            roleFilter: m,
-            guildFilter: I
-        } = (0, i.cj)([u.Z], () => {
-            let { everyoneFilter: e, roleFilter: t, guildFilter: n } = u.Z;
+            everyoneFilter: E,
+            roleFilter: I,
+            guildFilter: m
+        } = (0, a.cj)([c.Z], () => {
+            let { everyoneFilter: e, roleFilter: t, guildFilter: n } = c.Z;
             return {
                 everyoneFilter: e,
                 roleFilter: t,
                 guildFilter: n
             };
         });
-    function T() {
-        o.Z.setGuildFilter({ guildFilter: I === c.NgX.THIS_SERVER ? c.NgX.ALL_SERVERS : c.NgX.THIS_SERVER });
-    }
-    function g() {
-        o.Z.setGuildFilter({ roleFilter: !m });
-    }
-    function S() {
-        o.Z.setGuildFilter({ everyoneFilter: !p });
-    }
-    return (0, r.jsxs)(a.Menu, {
+    return (0, i.jsxs)(s.Menu, {
         navId: 'mentions-filter',
-        'aria-label': d.Z.Messages.FILTER,
+        'aria-label': u.Z.Messages.FILTER,
         onClose: t,
         onSelect: n,
         children: [
-            (0, r.jsx)(a.MenuCheckboxItem, {
-                id: E,
-                label: d.Z.Messages.RECENT_MENTIONS_FILTER_EVERYONE,
-                action: S,
-                checked: p
+            (0, i.jsx)(s.MenuCheckboxItem, {
+                id: 'Everyone',
+                label: u.Z.Messages.RECENT_MENTIONS_FILTER_EVERYONE,
+                action: function () {
+                    l.Z.setGuildFilter({ everyoneFilter: !E });
+                },
+                checked: E
             }),
-            (0, r.jsx)(a.MenuCheckboxItem, {
-                id: f,
-                label: d.Z.Messages.RECENT_MENTIONS_FILTER_ROLES,
-                action: g,
-                checked: m
+            (0, i.jsx)(s.MenuCheckboxItem, {
+                id: 'Roles',
+                label: u.Z.Messages.RECENT_MENTIONS_FILTER_ROLES,
+                action: function () {
+                    l.Z.setGuildFilter({ roleFilter: !I });
+                },
+                checked: I
             }),
             null == _ || _.isPrivate()
                 ? null
-                : (0, r.jsx)(a.MenuCheckboxItem, {
-                      id: h,
-                      label: d.Z.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
-                      action: T,
-                      checked: I === c.NgX.ALL_SERVERS
+                : (0, i.jsx)(s.MenuCheckboxItem, {
+                      id: 'All Servers',
+                      label: u.Z.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
+                      action: function () {
+                          l.Z.setGuildFilter({ guildFilter: m === d.NgX.THIS_SERVER ? d.NgX.ALL_SERVERS : d.NgX.THIS_SERVER });
+                      },
+                      checked: m === d.NgX.ALL_SERVERS
                   })
         ]
     });
 }
-function m() {
-    return (0, r.jsx)(a.Popout, {
+function I() {
+    return (0, i.jsx)(s.Popout, {
         align: 'right',
-        animation: a.Popout.Animation.NONE,
+        animation: s.Popout.Animation.NONE,
         position: 'bottom',
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(p, { closePopout: t });
+            return (0, i.jsx)(E, { closePopout: t });
         },
         children: (e) => {
             let { onClick: t } = e;
-            return (0, r.jsx)(a.CircleIconButton, {
-                tooltip: d.Z.Messages.FILTER,
-                color: a.CircleIconButtonColors.TERTIARY,
-                icon: (0, r.jsx)(a.FiltersHorizontalIcon, {
+            return (0, i.jsx)(s.CircleIconButton, {
+                tooltip: u.Z.Messages.FILTER,
+                color: s.CircleIconButtonColors.TERTIARY,
+                icon: (0, i.jsx)(s.FiltersHorizontalIcon, {
                     size: 'xs',
                     color: 'currentColor'
                 }),

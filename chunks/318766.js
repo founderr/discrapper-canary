@@ -1,134 +1,130 @@
 n.d(t, {
     u: function () {
-        return R;
+        return A;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(212433),
-    u = n(442837),
-    c = n(704215),
-    d = n(481060),
-    _ = n(607070),
-    E = n(243778),
-    f = n(130402),
-    h = n(78839),
-    p = n(626135),
-    m = n(153066),
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(212433),
+    l = n(442837),
+    u = n(704215),
+    c = n(481060),
+    d = n(607070),
+    _ = n(243778),
+    E = n(130402),
+    f = n(78839),
+    h = n(626135),
+    p = n(153066),
     I = n(981631),
-    T = n(921944),
-    g = n(185923),
+    m = n(921944),
+    T = n(185923),
     S = n(689938),
-    A = n(427522);
-let v = 20,
-    N = 24,
-    O = 77,
-    R = {
+    g = n(427522);
+let A = {
         tension: 800,
         friction: 24
     },
-    C = () => {
-        let e = (0, u.e7)([_.Z], () => _.Z.useReducedMotion);
-        return (0, i.jsxs)('div', {
-            className: A.premiumTooltipContainer,
+    N = () => {
+        let e = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
+        return (0, r.jsxs)('div', {
+            className: g.premiumTooltipContainer,
             children: [
-                (0, i.jsx)(d.LottieAnimation, {
-                    className: s()(A.premiumUnlockAnimation, { [A.reducedMotion]: e }),
+                (0, r.jsx)(c.LottieAnimation, {
+                    className: s()(g.premiumUnlockAnimation, { [g.reducedMotion]: e }),
                     loop: !1,
                     shouldAnimate: !e,
                     pauseAtFrame: e ? 149 : void 0,
                     importData: () => n.e('21812').then(n.t.bind(n, 741855, 19))
                 }),
-                (0, i.jsx)(d.Text, {
+                (0, r.jsx)(c.Text, {
                     variant: 'text-sm/medium',
-                    className: A.premiumTooltipText,
+                    className: g.premiumTooltipText,
                     children: S.Z.Messages.PREMIUM_REVERSE_TRIAL_EMOJI_TOOLTIP.format()
                 })
             ]
         });
     };
-function y(e) {
-    return {
-        '--custom-emoji-sprite-size': ''.concat(N, 'px'),
-        '--custom-emoji-sprite-row': Math.floor(e / v),
-        '--custom-emoji-sprite-col': e % v
-    };
-}
-function L(e) {
-    let { tabIndex: t, className: n, renderButtonContents: r, active: o, onClick: v, 'aria-controls': N, focusProps: L } = e,
-        [b, D] = a.useState(!1),
-        [M, P] = a.useState(50),
-        U = (0, u.e7)([h.ZP], () => h.ZP.inReverseTrial()),
-        w = b || o,
-        x = (0, m.l)(A, 'emojiButton', w ? 'Hovered' : 'Normal'),
-        G = y(M),
-        k = a.useCallback(() => {
-            if (w) return;
-            let e = Math.floor(Math.random() * O);
-            D(!0), P(e), (0, f.x)(g.qR.EmojiButtonMouseEntered);
-        }, [w, D, P]),
-        B = a.useCallback(() => {
-            D(!1);
-        }, [D]),
-        F = a.useCallback(() => (0, f.x)(g.qR.EmojiButtonFocused), []),
-        [Z, V] = (0, E.US)(U ? [c.z.REVERSE_TRIAL_EMOJI_BUTTON] : [], void 0, !0),
-        H = Z === c.z.REVERSE_TRIAL_EMOJI_BUTTON,
-        Y = (0, u.e7)([_.Z], () => _.Z.useReducedMotion);
-    return (0, i.jsx)(d.Tooltip, {
-        text: C(),
+t.Z = function (e) {
+    var t;
+    let { tabIndex: n, className: a, renderButtonContents: O, active: R, onClick: v, 'aria-controls': C, focusProps: L } = e,
+        [D, y] = i.useState(!1),
+        [b, M] = i.useState(50),
+        P = (0, l.e7)([f.ZP], () => f.ZP.inReverseTrial()),
+        U = D || R,
+        w = (0, p.l)(g, 'emojiButton', U ? 'Hovered' : 'Normal');
+    let x =
+            ((t = b),
+            {
+                '--custom-emoji-sprite-size': ''.concat(24, 'px'),
+                '--custom-emoji-sprite-row': Math.floor(t / 20),
+                '--custom-emoji-sprite-col': t % 20
+            }),
+        G = i.useCallback(() => {
+            if (U) return;
+            let e = Math.floor(77 * Math.random());
+            y(!0), M(e), (0, E.x)(T.qR.EmojiButtonMouseEntered);
+        }, [U, y, M]),
+        k = i.useCallback(() => {
+            y(!1);
+        }, [y]),
+        B = i.useCallback(() => (0, E.x)(T.qR.EmojiButtonFocused), []),
+        [F, V] = (0, _.US)(P ? [u.z.REVERSE_TRIAL_EMOJI_BUTTON] : [], void 0, !0),
+        H = F === u.z.REVERSE_TRIAL_EMOJI_BUTTON,
+        Z = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
+    return (0, r.jsx)(c.Tooltip, {
+        text: N(),
         'aria-label': S.Z.Messages.PREMIUM_REVERSE_TRIAL_EMOJI_TOOLTIP.plainFormat(),
         position: 'top',
-        shouldShow: U && !o && H,
-        tooltipClassName: A.premiumTooltip,
-        tooltipContentClassName: A.premiumTooltipContainer,
+        shouldShow: P && !R && H,
+        tooltipClassName: g.premiumTooltip,
+        tooltipContentClassName: g.premiumTooltipContainer,
         children: (e) =>
-            (0, i.jsx)(d.Button, {
-                look: d.Button.Looks.BLANK,
-                size: d.Button.Sizes.NONE,
-                tabIndex: t,
-                className: s()(x, n),
+            (0, r.jsx)(c.Button, {
+                look: c.Button.Looks.BLANK,
+                size: c.Button.Sizes.NONE,
+                tabIndex: n,
+                className: s()(w, a),
                 onMouseEnter: () => {
                     var t;
-                    k(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), p.default.track(I.rMx.EMOJI_PICKER_BUTTON_HOVERED);
+                    G(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), h.default.track(I.rMx.EMOJI_PICKER_BUTTON_HOVERED);
                 },
-                onMouseOver: k,
+                onMouseOver: G,
                 onMouseLeave: () => {
                     var t;
-                    B(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e), H && V(T.L.USER_DISMISS);
+                    k(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e), H && V(m.L.USER_DISMISS);
                 },
-                onFocus: F,
+                onFocus: B,
                 onClick: (t) => {
                     var n;
                     null == v || v(t), null === (n = e.onClick) || void 0 === n || n.call(e);
                 },
                 'aria-label': S.Z.Messages.SELECT_EMOJI,
-                'aria-controls': N,
-                'aria-expanded': o,
+                'aria-controls': C,
+                'aria-expanded': R,
                 'aria-haspopup': 'dialog',
                 focusProps: L,
                 onContextMenu: e.onContextMenu,
                 children:
-                    null != r
-                        ? r()
-                        : (0, i.jsx)(d.Spring, {
-                              config: R,
-                              to: { value: w ? 1 : 0 },
+                    null != O
+                        ? O()
+                        : (0, r.jsx)(c.Spring, {
+                              config: A,
+                              to: { value: U ? 1 : 0 },
                               children: (e) => {
                                   let { value: t } = e;
-                                  return (0, i.jsxs)(l.animated.div, {
-                                      className: A.spriteContainer,
+                                  return (0, r.jsxs)(o.animated.div, {
+                                      className: g.spriteContainer,
                                       style: {
-                                          ...G,
+                                          ...x,
                                           transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                       },
-                                      children: [(0, i.jsx)('div', { className: s()(A.sprite, A.spriteColored, w ? A.active : A.inactive) }), (0, i.jsx)('div', { className: s()(A.sprite, U && H ? A.spritePremiumColored : A.spriteGreyscale, w ? A.inactive : A.active, { [A.reducedMotion]: Y }) })]
+                                      children: [(0, r.jsx)('div', { className: s()(g.sprite, g.spriteColored, U ? g.active : g.inactive) }), (0, r.jsx)('div', { className: s()(g.sprite, P && H ? g.spritePremiumColored : g.spriteGreyscale, U ? g.inactive : g.active, { [g.reducedMotion]: Z }) })]
                                   });
                               }
                           })
             })
     });
-}
-t.Z = L;
+};

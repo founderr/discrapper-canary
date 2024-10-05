@@ -1,39 +1,40 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return i;
     }
 });
 var r = n(740078);
 function i(e) {
-    var t = new Map(),
-        n = new Set(),
-        r = [];
-    function i(e) {
-        n.add(e.name),
-            [].concat(e.requires || [], e.requiresIfExists || []).forEach(function (e) {
-                if (!n.has(e)) {
-                    var r = t.get(e);
-                    r && i(r);
-                }
+    var t,
+        n,
+        i,
+        a,
+        s =
+            ((t = e),
+            (n = new Map()),
+            (i = new Set()),
+            (a = []),
+            t.forEach(function (e) {
+                n.set(e.name, e);
             }),
-            r.push(e);
-    }
-    return (
-        e.forEach(function (e) {
-            t.set(e.name, e);
-        }),
-        e.forEach(function (e) {
-            !n.has(e.name) && i(e);
-        }),
-        r
-    );
-}
-function a(e) {
-    var t = i(e);
-    return r.xs.reduce(function (e, n) {
+            t.forEach(function (e) {
+                !i.has(e.name) &&
+                    !(function e(t) {
+                        i.add(t.name),
+                            [].concat(t.requires || [], t.requiresIfExists || []).forEach(function (t) {
+                                if (!i.has(t)) {
+                                    var r = n.get(t);
+                                    r && e(r);
+                                }
+                            }),
+                            a.push(t);
+                    })(e);
+            }),
+            a);
+    return r.xs.reduce(function (e, t) {
         return e.concat(
-            t.filter(function (e) {
-                return e.phase === n;
+            s.filter(function (e) {
+                return e.phase === t;
             })
         );
     }, []);

@@ -1,161 +1,154 @@
 n.d(t, {
     EO: function () {
-        return N;
+        return T;
     },
     Fc: function () {
-        return v;
-    },
-    Ft: function () {
-        return y;
-    },
-    W5: function () {
-        return R;
-    },
-    _T: function () {
-        return I;
-    },
-    oY: function () {
         return m;
     },
+    Ft: function () {
+        return A;
+    },
+    W5: function () {
+        return g;
+    },
+    _T: function () {
+        return f;
+    },
+    oY: function () {
+        return E;
+    },
     u5: function () {
-        return S;
+        return p;
     }
-});
-var r = n(411104);
-var i = n(442837),
-    a = n(246946),
-    o = n(594174),
+}),
+    n(411104);
+var r = n(442837),
+    i = n(246946),
+    a = n(594174),
     s = n(981631),
-    l = n(689938);
-let u = 86400000,
-    c = '???',
-    d = (e) => ''.concat(e[0], '...'),
-    _ = (e) => '@'.concat(e),
-    E = (e) => 4 === e.length && e.endsWith('...'),
-    f = {
+    o = n(689938);
+let l = (e) => ''.concat(e[0], '...'),
+    u = (e) => '@'.concat(e),
+    c = {
         mode: 'full',
         decoration: 'never',
         identifiable: 'auto',
         forcePomelo: !1
     };
-function h(e) {
+function d(e) {
     return !!(null != e && e.length > 0);
 }
-function p(e) {
-    if (h(e.global_name)) return e.global_name;
-    if (h(e.globalName)) return e.globalName;
-    if (h(e.username)) return e.username;
-    else return c;
+function _(e) {
+    if (d(e.global_name)) return e.global_name;
+    if (d(e.globalName)) return e.globalName;
+    if (d(e.username)) return e.username;
+    else return '???';
 }
-function m(e) {
+function E(e) {
     var t;
     if (null == e) return;
-    let n = a.Z.hidePersonalInformation,
-        r = p(e);
-    return n && r.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (r = d(r)), r;
+    let n = i.Z.hidePersonalInformation,
+        r = _(e);
+    return n && r.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (r = l(r)), r;
 }
-function I(e) {
+function f(e) {
     var t;
-    let n = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation);
+    let n = (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation);
     if (null == e) return;
-    let r = p(e);
-    return n && r.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (r = d(r)), r;
+    let a = _(e);
+    return n && a.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (a = l(a)), a;
 }
-function T(e) {
+function h(e) {
     if (null != e) {
-        if (h(e.globalName)) return e.globalName;
-        else if (h(e.global_name)) return e.global_name;
+        if (d(e.globalName)) return e.globalName;
+        else if (d(e.global_name)) return e.global_name;
         else return;
     }
 }
-function g(e) {
-    var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (null == e) return c;
-    let r = T(e),
-        i = n ? R(e) : null !== (t = e.username) && void 0 !== t ? t : c;
-    return r === i ? r : null != r ? ''.concat(r, ' (').concat(i, ')') : i;
-}
-function S(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (e) {
         case s.Skl.ONLINE:
-            return t ? l.Z.Messages.STATUS_ONLINE_MOBILE : l.Z.Messages.STATUS_ONLINE;
+            return t ? o.Z.Messages.STATUS_ONLINE_MOBILE : o.Z.Messages.STATUS_ONLINE;
         case s.Skl.OFFLINE:
-            return l.Z.Messages.STATUS_OFFLINE;
+            return o.Z.Messages.STATUS_OFFLINE;
         case s.Skl.IDLE:
-            return l.Z.Messages.STATUS_IDLE;
+            return o.Z.Messages.STATUS_IDLE;
         case s.Skl.DND:
-            return l.Z.Messages.STATUS_DND;
+            return o.Z.Messages.STATUS_DND;
         case s.Skl.INVISIBLE:
-            return l.Z.Messages.STATUS_INVISIBLE;
+            return o.Z.Messages.STATUS_INVISIBLE;
         case s.Skl.STREAMING:
-            return l.Z.Messages.STATUS_STREAMING;
+            return o.Z.Messages.STATUS_STREAMING;
         case s.Skl.UNKNOWN:
         default:
             return null;
     }
 }
-function A(e, t) {
+function I(e, t) {
     let { maxDaysOld: n, minDaysOld: r = 0 } = t;
     if (null == e) return !1;
-    let i = Date.now() - e.createdAt.getTime(),
-        a = null == n || i <= u * n,
-        o = i >= u * r;
-    return (!!a && !!o) || !1;
+    let i = Date.now() - e.createdAt.getTime();
+    return ((null == n || !!(i <= 86400000 * n)) && !!(i >= 86400000 * r)) || !1;
 }
-function v(e) {
-    return !A(e, {
+function m(e) {
+    return !I(e, {
         minDaysOld: 0,
         maxDaysOld: 30
     });
 }
-function N(e) {
-    return A(e, {
+function T(e) {
+    return I(e, {
         minDaysOld: 0,
         maxDaysOld: 7
     });
 }
-function O(e, t, n) {
-    if (null == e) return l.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER;
-    if (!h(e.username)) return c;
+function S(e, t, n) {
+    if (null == e) return o.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER;
+    if (!d(e.username)) return '???';
     let r = n;
     if (('always' === t.identifiable ? (r = !1) : 'never' === t.identifiable && (r = !0), '0' !== e.discriminator && e.discriminator !== s.fo$ && !t.forcePomelo)) return 'username' === t.mode ? e.username : r ? e.username : ''.concat(e.username, '#').concat(e.discriminator);
-    let i = r ? d(e.username) : e.username;
-    return 'never' !== t.decoration ? _(i) : i;
+    let i = r ? l(e.username) : e.username;
+    return 'never' !== t.decoration ? u(i) : i;
 }
-function R(e, t) {
+function g(e, t) {
     let n = {
-            ...f,
+            ...c,
             ...t
         },
-        r = 'auto' !== n.identifiable || a.Z.hidePersonalInformation;
-    return O(e, n, r);
+        r = 'auto' !== n.identifiable || i.Z.hidePersonalInformation;
+    return S(e, n, r);
 }
-function C(e, t) {
-    let n = {
-        ...f,
-        ...t
-    };
-    return O(
-        e,
-        n,
-        (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation)
-    );
-}
-function y(e) {
-    return (0, i.e7)([o.default], () => {
-        if (null != e) return e.isPrivate() && e.isDM() ? o.default.getUser(e.getRecipientId()) : null;
+function A(e) {
+    return (0, r.e7)([a.default], () => {
+        if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
 t.ZP = {
-    getName: m,
-    useName: I,
-    isNameConcealed: E,
-    getUserTag: R,
-    useUserTag: C,
-    getFormattedName: g,
-    getGlobalName: T,
-    humanizeStatus: S,
-    useDirectMessageRecipient: y
+    getName: E,
+    useName: f,
+    isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
+    getUserTag: g,
+    useUserTag: function (e, t) {
+        let n = {
+            ...c,
+            ...t
+        };
+        return S(
+            e,
+            n,
+            (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation)
+        );
+    },
+    getFormattedName: function (e) {
+        var t;
+        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (null == e) return '???';
+        let r = h(e),
+            i = n ? g(e) : null !== (t = e.username) && void 0 !== t ? t : '???';
+        return r === i ? r : null != r ? ''.concat(r, ' (').concat(i, ')') : i;
+    },
+    getGlobalName: h,
+    humanizeStatus: p,
+    useDirectMessageRecipient: A
 };

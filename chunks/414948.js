@@ -1,186 +1,98 @@
 n.d(t, {
     B3: function () {
-        return C;
+        return p;
     },
     Pf: function () {
-        return H;
+        return O;
     },
     bt: function () {
         return a;
     },
     dG: function () {
-        return _;
+        return o;
     },
     gn: function () {
-        return V;
+        return N;
     },
     lq: function () {
-        return E;
+        return l;
     },
     nP: function () {
-        return P;
+        return T;
     },
     yU: function () {
-        return L;
+        return I;
     },
     zL: function () {
-        return m;
+        return _;
     }
 });
 var r = n(470079),
     i = n(819841);
-let a = 'undefined' != typeof document ? r.useLayoutEffect : () => {};
-function o(e) {
-    let t = $12uGp$useRef(null);
-    return (
-        a(() => {
-            t.current = e;
-        }, [e]),
-        $12uGp$useCallback((...e) => (0, t.current)(...e), [])
-    );
-}
-function s(e) {
-    let [t, n] = $12uGp$useState(e),
-        r = $12uGp$useRef(null),
-        i = o(() => {
-            let e = r.current.next();
-            if (e.done) {
-                r.current = null;
-                return;
-            }
-            t === e.value ? i() : n(e.value);
-        });
-    a(() => {
-        r.current && i();
-    });
-    let s = o((e) => {
-        (r.current = e(t)), i();
-    });
-    return [t, s];
-}
-let l = new Map();
-function u(e) {
-    let [t, n] = $12uGp$useState(e),
-        r = $12uGp$useRef(null),
-        i = $12uGp$useSSRSafeId(t),
-        o = $12uGp$useCallback((e) => {
-            r.current = e;
-        }, []);
-    return (
-        l.set(i, o),
-        a(() => {
-            let e = i;
-            return () => {
-                l.delete(e);
-            };
-        }, [i]),
-        $12uGp$useEffect(() => {
-            let e = r.current;
-            e && ((r.current = null), n(e));
-        }),
-        i
-    );
-}
-function c(e, t) {
-    if (e === t) return e;
-    let n = l.get(e);
-    if (n) return n(t), t;
-    let r = l.get(t);
-    return r ? (r(e), e) : t;
-}
-function d(...e) {
-    return (...t) => {
-        for (let n of e) 'function' == typeof n && n(...t);
-    };
-}
-function _(...e) {
+let a = 'undefined' != typeof document ? r.useLayoutEffect : () => {},
+    s = new Map();
+function o(...e) {
     let t = { ...e[0] };
     for (let n = 1; n < e.length; n++) {
         let r = e[n];
         for (let e in r) {
             let n = t[e],
                 a = r[e];
-            'function' == typeof n && 'function' == typeof a && 'o' === e[0] && 'n' === e[1] && e.charCodeAt(2) >= 65 && 90 >= e.charCodeAt(2) ? (t[e] = d(n, a)) : ('className' === e || 'UNSAFE_className' === e) && 'string' == typeof n && 'string' == typeof a ? (t[e] = (0, i.Z)(n, a)) : 'id' === e && n && a ? (t.id = c(n, a)) : (t[e] = void 0 !== a ? a : n);
+            'function' == typeof n && 'function' == typeof a && 'o' === e[0] && 'n' === e[1] && e.charCodeAt(2) >= 65 && 90 >= e.charCodeAt(2)
+                ? (t[e] = (function (...e) {
+                      return (...t) => {
+                          for (let n of e) 'function' == typeof n && n(...t);
+                      };
+                  })(n, a))
+                : ('className' === e || 'UNSAFE_className' === e) && 'string' == typeof n && 'string' == typeof a
+                  ? (t[e] = (0, i.Z)(n, a))
+                  : 'id' === e && n && a
+                    ? (t.id = (function (e, t) {
+                          if (e === t) return e;
+                          let n = s.get(e);
+                          if (n) return n(t), t;
+                          let r = s.get(t);
+                          return r ? (r(e), e) : t;
+                      })(n, a))
+                    : (t[e] = void 0 !== a ? a : n);
         }
     }
     return t;
 }
-function E(...e) {
+function l(...e) {
     return 1 === e.length
         ? e[0]
         : (t) => {
               for (let n of e) 'function' == typeof n ? n(t) : null != n && (n.current = t);
           };
 }
-let f = new Set(['id']),
-    h = new Set(['aria-label', 'aria-labelledby', 'aria-describedby', 'aria-details']),
-    p = /^(data-.*)$/;
-function m(e, t = {}) {
+let u = new Set(['id']),
+    c = new Set(['aria-label', 'aria-labelledby', 'aria-describedby', 'aria-details']),
+    d = /^(data-.*)$/;
+function _(e, t = {}) {
     let { labelable: n, propNames: r } = t,
         i = {};
-    for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (f.has(t) || (n && h.has(t)) || (null == r ? void 0 : r.has(t)) || p.test(t)) && (i[t] = e[t]);
+    for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (u.has(t) || (n && c.has(t)) || (null == r ? void 0 : r.has(t)) || d.test(t)) && (i[t] = e[t]);
     return i;
 }
-let I = null;
-function T() {
-    if (null == I) {
-        I = !1;
-        try {
-            document.createElement('div').focus({
-                get preventScroll() {
-                    return (I = !0), !0;
-                }
-            });
-        } catch (e) {}
-    }
-    return I;
-}
-function g(e) {
-    for (var t = e.parentNode, n = [], r = document.scrollingElement || document.documentElement; t instanceof HTMLElement && t !== r; )
-        (t.offsetHeight < t.scrollHeight || t.offsetWidth < t.scrollWidth) &&
-            n.push({
-                element: t,
-                scrollTop: t.scrollTop,
-                scrollLeft: t.scrollLeft
-            }),
-            (t = t.parentNode);
-    return (
-        r instanceof HTMLElement &&
-            n.push({
-                element: r,
-                scrollTop: r.scrollTop,
-                scrollLeft: r.scrollLeft
-            }),
-        n
-    );
-}
-function S(e) {
-    for (let { element: t, scrollTop: n, scrollLeft: r } of e) (t.scrollTop = n), (t.scrollLeft = r);
-}
-function A(e, t, n = 'horizontal') {
-    let r = e.getBoundingClientRect();
-    return t ? ('horizontal' === n ? r.right : r.bottom) : 'horizontal' === n ? r.left : r.top;
-}
-let v = new Map(),
-    N = new Set();
-function O() {
+let E = new Map(),
+    f = new Set();
+function h() {
     if ('undefined' == typeof window) return;
-    let e = (e) => {
-            let n = v.get(e.target);
-            !n && ((n = new Set()), v.set(e.target, n), e.target.addEventListener('transitioncancel', t)), n.add(e.propertyName);
-        },
-        t = (e) => {
-            let n = v.get(e.target);
-            if (n && (n.delete(e.propertyName), 0 === n.size && (e.target.removeEventListener('transitioncancel', t), v.delete(e.target)), 0 === v.size)) {
-                for (let e of N) e();
-                N.clear();
-            }
-        };
-    document.body.addEventListener('transitionrun', e), document.body.addEventListener('transitionend', t);
+    let e = (t) => {
+        let n = E.get(t.target);
+        if (n && (n.delete(t.propertyName), 0 === n.size && (t.target.removeEventListener('transitioncancel', e), E.delete(t.target)), 0 === E.size)) {
+            for (let e of f) e();
+            f.clear();
+        }
+    };
+    document.body.addEventListener('transitionrun', (t) => {
+        let n = E.get(t.target);
+        !n && ((n = new Set()), E.set(t.target, n), t.target.addEventListener('transitioncancel', e)), n.add(t.propertyName);
+    }),
+        document.body.addEventListener('transitionend', e);
 }
-'undefined' != typeof document && ('loading' !== document.readyState ? O() : document.addEventListener('DOMContentLoaded', O));
-let R = null;
-function C(e) {
+function p(e) {
     let t = (0, r.useRef)();
     return (0, r.useMemo)(
         () => ({
@@ -194,15 +106,13 @@ function C(e) {
         [e]
     );
 }
-function y() {
-    return void 0 !== window.ResizeObserver;
-}
-function L(e) {
+'undefined' != typeof document && ('loading' !== document.readyState ? h() : document.addEventListener('DOMContentLoaded', h));
+function I(e) {
     let { ref: t, onResize: n } = e;
     (0, r.useEffect)(() => {
         let e = null == t ? void 0 : t.current;
         if (e) {
-            if (!y())
+            if (!(void 0 !== window.ResizeObserver))
                 return (
                     window.addEventListener('resize', n, !1),
                     () => {
@@ -223,95 +133,49 @@ function L(e) {
         }
     }, [n, t]);
 }
-function b(e) {
-    for (D(e) && (e = e.parentElement); e && !D(e); ) e = e.parentElement;
-    return e || document.scrollingElement || document.documentElement;
-}
-function D(e) {
-    let t = window.getComputedStyle(e);
-    return /(auto|scroll)/.test(t.overflow + t.overflowX + t.overflowY);
-}
-let M = 'undefined' != typeof document && window.visualViewport;
-function P() {
-    let [e, t] = (0, r.useState)(() => U());
+let m = 'undefined' != typeof document && window.visualViewport;
+function T() {
+    let [e, t] = (0, r.useState)(() => S());
     return (
         (0, r.useEffect)(() => {
             let e = () => {
                 t((e) => {
-                    let t = U();
+                    let t = S();
                     return t.width === e.width && t.height === e.height ? e : t;
                 });
             };
             return (
-                M ? M.addEventListener('resize', e) : window.addEventListener('resize', e),
+                m ? m.addEventListener('resize', e) : window.addEventListener('resize', e),
                 () => {
-                    M ? M.removeEventListener('resize', e) : window.removeEventListener('resize', e);
+                    m ? m.removeEventListener('resize', e) : window.removeEventListener('resize', e);
                 }
             );
         }, []),
         e
     );
 }
-function U() {
+function S() {
     return {
-        width: (null == M ? void 0 : M.width) || window.innerWidth,
-        height: (null == M ? void 0 : M.height) || window.innerHeight
+        width: (null == m ? void 0 : m.width) || window.innerWidth,
+        height: (null == m ? void 0 : m.height) || window.innerHeight
     };
 }
-let w = 0,
-    x = new Map();
-function G(e) {
+function g(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
-function k(e) {
+function A(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && e.test((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.platform) || window.navigator.platform);
 }
-function B() {
-    return k(/^Mac/i);
+function N() {
+    return A(/^iPhone/i) || A(/^iPad/i) || (A(/^Mac/i) && navigator.maxTouchPoints > 1);
 }
-function F() {
-    return k(/^iPhone/i);
-}
-function Z() {
-    return k(/^iPad/i) || (B() && navigator.maxTouchPoints > 1);
-}
-function V() {
-    return F() || Z();
-}
-function H() {
-    return G(/AppleWebKit/i) && !Y();
-}
-function Y() {
-    return G(/Chrome/i);
-}
-function j() {
-    return G(/Android/i);
-}
-function W(e, t) {
-    let n = K(e, t, 'left'),
-        r = K(e, t, 'top'),
-        i = t.offsetWidth,
-        a = t.offsetHeight,
-        o = e.scrollLeft,
-        s = e.scrollTop,
-        { borderTopWidth: l, borderLeftWidth: u } = getComputedStyle(e),
-        c = e.scrollLeft + parseInt(u, 10),
-        d = e.scrollTop + parseInt(l, 10),
-        _ = c + e.clientWidth,
-        E = d + e.clientHeight;
-    n <= o ? (o = n - parseInt(u, 10)) : n + i > _ && (o += n + i - _), r <= d ? (s = r - parseInt(l, 10)) : r + a > E && (s += r + a - E), (e.scrollLeft = o), (e.scrollTop = s);
-}
-function K(e, t, n) {
-    let r = 'left' === n ? 'offsetLeft' : 'offsetTop',
-        i = 0;
-    for (; t.offsetParent && ((i += t[r]), t.offsetParent !== e); ) {
-        if (t.offsetParent.contains(e)) {
-            i -= e[r];
-            break;
-        }
-        t = t.offsetParent;
-    }
-    return i;
+function O() {
+    return (
+        g(/AppleWebKit/i) &&
+        !(function () {
+            return g(/Chrome/i);
+        })()
+    );
 }

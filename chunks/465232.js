@@ -2,17 +2,16 @@ e.exports = function (e, t) {
     var r,
         i,
         a,
-        o,
         s,
+        o,
         l,
-        u = this,
-        c = [];
-    for (a = 0, r = n(727729)(e), o = n(862546), s = n(861391), l = n(64000); a < r.length; ++a) o[(i = r[a])] && (i = o[i]), t && 'keypress' !== t && s[i] && ((i = s[i]), c.push('shift')), l(i) && c.push(i);
+        u = [];
+    for (a = 0, r = n(727729)(e), s = n(862546), o = n(861391), l = n(64000); a < r.length; ++a) s[(i = r[a])] && (i = s[i]), t && 'keypress' !== t && o[i] && ((i = o[i]), u.push('shift')), l(i) && u.push(i);
     return (
-        (t = u.pickBestAction(i, c, t)),
+        (t = this.pickBestAction(i, u, t)),
         {
             key: i,
-            modifiers: c,
+            modifiers: u,
             action: t
         }
     );

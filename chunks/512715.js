@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             $pattern: /[a-zA-Z][a-zA-Z0-9_?]*/,
             keyword: ['if', 'then', 'else', 'do', 'while', 'until', 'for', 'loop', 'import', 'with', 'is', 'as', 'where', 'when', 'by', 'data', 'constant', 'integer', 'real', 'text', 'name', 'boolean', 'symbol', 'infix', 'prefix', 'postfix', 'block', 'tree'],
@@ -12,27 +12,6 @@ function t(e) {
             illegal: '\\n'
         },
         r = {
-            className: 'string',
-            begin: "'",
-            end: "'",
-            illegal: '\\n'
-        },
-        i = {
-            className: 'string',
-            begin: '<<',
-            end: '>>'
-        },
-        a = {
-            className: 'number',
-            begin: '[0-9]+#[0-9A-Z_]+(\\.[0-9-A-Z_]+)?#?([Ee][+-]?[0-9]+)?'
-        },
-        o = {
-            beginKeywords: 'import',
-            end: '$',
-            keywords: t,
-            contains: [n]
-        },
-        s = {
             className: 'function',
             begin: /[a-z][^\n]*->/,
             returnBegin: !0,
@@ -50,7 +29,33 @@ function t(e) {
         name: 'XL',
         aliases: ['tao'],
         keywords: t,
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, n, r, i, s, o, a, e.NUMBER_MODE]
+        contains: [
+            e.C_LINE_COMMENT_MODE,
+            e.C_BLOCK_COMMENT_MODE,
+            n,
+            {
+                className: 'string',
+                begin: "'",
+                end: "'",
+                illegal: '\\n'
+            },
+            {
+                className: 'string',
+                begin: '<<',
+                end: '>>'
+            },
+            r,
+            {
+                beginKeywords: 'import',
+                end: '$',
+                keywords: t,
+                contains: [n]
+            },
+            {
+                className: 'number',
+                begin: '[0-9]+#[0-9A-Z_]+(\\.[0-9-A-Z_]+)?#?([Ee][+-]?[0-9]+)?'
+            },
+            e.NUMBER_MODE
+        ]
     };
-}
-e.exports = t;
+};

@@ -1,88 +1,87 @@
 n.d(t, {
     N: function () {
-        return p;
+        return f;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(212433),
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(212433),
     s = n(481060),
-    l = n(450096),
-    u = n(981631),
-    c = n(459127);
-let d = 200,
-    _ = {
+    o = n(450096),
+    l = n(981631),
+    u = n(459127);
+let c = {
         from: { opacity: 1 },
         enter: { opacity: 1 },
         leave: { opacity: 0 },
         config: { duration: 200 }
     },
-    E = {
-        ..._,
+    d = {
+        ...c,
         config: { duration: 50 }
     },
-    f = {
-        ..._,
+    _ = {
+        ...c,
         config: (e, t) => (t ? { duration: 800 } : { duration: 200 })
     };
-function h(e) {
-    let { readyState: t, placeholderImg: n, placeholderStyle: r } = e,
-        l = t === u.zo9.LOADING,
-        [f] = a.useState(() => Date.now()),
-        h = t === u.zo9.READY && Date.now() - f < d,
-        p = (0, s.useTransition)(l && null != n, h ? E : _);
-    return (0, i.jsx)(i.Fragment, {
-        children: p(
+function E(e) {
+    let { readyState: t, placeholderImg: n, placeholderStyle: o } = e,
+        _ = t === l.zo9.LOADING,
+        [E] = i.useState(() => Date.now()),
+        f = t === l.zo9.READY && Date.now() - E < 200,
+        h = (0, s.useTransition)(_ && null != n, f ? d : c);
+    return (0, r.jsx)(r.Fragment, {
+        children: h(
             (e, t) =>
                 t &&
-                (0, i.jsx)(o.animated.img, {
+                (0, r.jsx)(a.animated.img, {
                     style: {
-                        ...r,
+                        ...o,
                         ...e
                     },
-                    className: c.imagePlaceholder,
+                    className: u.imagePlaceholder,
                     src: n,
                     alt: ''
                 })
         )
     });
 }
-function p(e) {
-    let { readyState: t, aspectRatio: n, placeholder: r, placeholderVersion: d, placeholderStyle: _, children: E } = e,
-        p = t === u.zo9.LOADING,
-        [m] = a.useState(p),
-        [I, T] = a.useState(!1),
-        g = (0, l.L)(r, d, m);
-    a.useEffect(() => {
+function f(e) {
+    let { readyState: t, aspectRatio: n, placeholder: c, placeholderVersion: d, placeholderStyle: f, children: h } = e,
+        p = t === l.zo9.LOADING,
+        [I] = i.useState(p),
+        [m, T] = i.useState(!1),
+        S = (0, o.L)(c, d, I);
+    i.useEffect(() => {
         let e = setTimeout(() => {
             T(!0);
         }, 2000);
         return () => {
             clearTimeout(e);
         };
-    }, [m]);
-    let S = (0, s.useTransition)(p && I, f);
-    return (0, i.jsxs)('div', {
-        className: c.loadingOverlay,
+    }, [I]);
+    let g = (0, s.useTransition)(p && m, _);
+    return (0, r.jsxs)('div', {
+        className: u.loadingOverlay,
         style: { aspectRatio: n },
         children: [
-            E,
-            null != g &&
-                (0, i.jsx)(h, {
+            h,
+            null != S &&
+                (0, r.jsx)(E, {
                     readyState: t,
-                    placeholderImg: g,
-                    placeholderStyle: _
+                    placeholderImg: S,
+                    placeholderStyle: f
                 }),
-            S(
+            g(
                 (e, t) =>
                     t &&
-                    (0, i.jsx)(o.animated.div, {
+                    (0, r.jsx)(a.animated.div, {
                         style: e,
-                        className: c.imageLoadingOverlay,
-                        children: (0, i.jsx)(s.Spinner, {
+                        className: u.imageLoadingOverlay,
+                        children: (0, r.jsx)(s.Spinner, {
                             type: s.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
-                            className: c.cornerLoadingSpinner
+                            className: u.cornerLoadingSpinner
                         })
                     })
             )

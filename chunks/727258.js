@@ -1,24 +1,25 @@
 n.d(t, {
     Mg: function () {
-        return _;
+        return d;
     },
     eD: function () {
         return r;
     },
     g8: function () {
-        return d;
+        return c;
     },
     qQ: function () {
-        return E;
+        return _;
     }
-});
+}),
+    n(47120),
+    n(536091);
 var r,
-    i = n(47120);
-var a = n(536091);
-var o = n(512722),
-    s = n.n(o),
-    l = n(392711);
-function u(e, t, n) {
+    i,
+    a = n(512722),
+    s = n.n(a),
+    o = n(392711);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,13 +32,11 @@ function u(e, t, n) {
         e
     );
 }
-function c() {
+function u() {
     return Math.floor(4294967296 * Math.random());
 }
-!(function (e) {
-    (e.ROOT = 'root'), (e.FOLDER = 'folder'), (e.GUILD = 'guild');
-})(r || (r = {}));
-class d {
+((i = r || (r = {})).ROOT = 'root'), (i.FOLDER = 'folder'), (i.GUILD = 'guild');
+class c {
     getSnapshot() {
         return {
             root: this.root,
@@ -52,9 +51,7 @@ class d {
         this._pluckNode(e);
         let r = null != t.parentId ? this.nodes[t.parentId] : this.root,
             i = r.children.indexOf(t);
-        s()(!('folder' === e.type && 'folder' === r.type), '[GUILDS TREE] Tried moving a folder ('.concat(e.id, ') inside of another folder (').concat(r.id, ')')), s()(i >= 0, '[GUILDS TREE] target node ('.concat(t.id, ') did not exist within its specified parent (').concat(t.parentId, ')'));
-        let a = n ? 1 : 0;
-        return (r.children = [...r.children]), r.children.splice(i + a, 0, e), (e.parentId = r.id), this.version++, this;
+        return s()(!('folder' === e.type && 'folder' === r.type), '[GUILDS TREE] Tried moving a folder ('.concat(e.id, ') inside of another folder (').concat(r.id, ')')), s()(i >= 0, '[GUILDS TREE] target node ('.concat(t.id, ') did not exist within its specified parent (').concat(t.parentId, ')')), (r.children = [...r.children]), r.children.splice(i + (n ? 1 : 0), 0, e), (e.parentId = r.id), this.version++, this;
     }
     moveInto(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -77,11 +74,11 @@ class d {
         return s()(r >= 0, '[GUILDS TREE] existing node ('.concat(e.id, ') did not exist within its specified parent (').concat(e.parentId, ')')), (n.children = [...n.children]), n.children.splice(r, 1, t), (t.parentId = n.id), (e.parentId = void 0), delete this.nodes[e.id], (this.nodes[t.id] = t), this.version++, this;
     }
     cloneNode(e) {
-        return (0, l.clone)(e);
+        return (0, o.clone)(e);
     }
     convertToFolder(e) {
-        let t = c();
-        for (; null != this.getNode(t); ) t = c();
+        let t = u();
+        for (; null != this.getNode(t); ) t = u();
         let n = {
             type: 'folder',
             id: t,
@@ -103,10 +100,9 @@ class d {
         return this.allNodes().length;
     }
     sortedGuildNodes() {
-        function e(t) {
+        return (function e(t) {
             return 'guild' === t.type ? [t] : null == t.children ? [] : t.children.map((t) => e(t)).flat();
-        }
-        return e(this.root);
+        })(this.root);
     }
     _pluckNode(e) {
         let t = null != e.parentId ? this.nodes[e.parentId] : this.root;
@@ -115,9 +111,9 @@ class d {
         s()(null != n, '[GUILDS TREE] source node ('.concat(e.id, ') had a parent id (').concat(e.parentId, ') which contains no children')), (t.children = n.filter((t) => t !== e)), (e.parentId = void 0), this.version++;
     }
     constructor() {
-        u(this, 'root', void 0),
-            u(this, 'nodes', void 0),
-            u(this, 'version', void 0),
+        l(this, 'root', void 0),
+            l(this, 'nodes', void 0),
+            l(this, 'version', void 0),
             (this.root = {
                 type: 'root',
                 children: []
@@ -126,7 +122,7 @@ class d {
             (this.version = 0);
     }
 }
-function _(e, t) {
+function d(e, t) {
     return {
         type: 'guild',
         id: e,
@@ -135,7 +131,7 @@ function _(e, t) {
         unavailable: !1
     };
 }
-function E(e, t, n) {
+function _(e, t, n) {
     var r, i, a;
     return {
         type: 'folder',

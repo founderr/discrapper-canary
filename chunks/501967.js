@@ -1,13 +1,13 @@
 n.d(t, {
     B: function () {
-        return m;
+        return p;
     }
 });
 var r,
     i = n(735250),
     a = n(470079),
-    o = n(120356),
-    s = n.n(o),
+    s = n(120356),
+    o = n.n(s),
     l = n(748780),
     u = n(846519),
     c = n(215569),
@@ -27,14 +27,13 @@ function f(e, t, n) {
         e
     );
 }
-let h = 3000,
-    p = {
-        [_.AEg.NORMAL]: E.normal,
-        [_.AEg.MINIMUM]: E.minimum,
-        [_.AEg.NO_CHAT]: E.noChat,
-        [_.AEg.FULL_SCREEN]: E.fullScreen
-    };
-class m extends a.PureComponent {
+let h = {
+    [_.AEg.NORMAL]: E.normal,
+    [_.AEg.MINIMUM]: E.minimum,
+    [_.AEg.NO_CHAT]: E.noChat,
+    [_.AEg.FULL_SCREEN]: E.fullScreen
+};
+class p extends a.PureComponent {
     componentDidAppear() {
         this.state.animation.setValue(1);
     }
@@ -54,7 +53,7 @@ class m extends a.PureComponent {
     }
     render() {
         return (0, i.jsx)(l.Z.div, {
-            className: s()(E.videoBackgroundTransition, this.props.className),
+            className: o()(E.videoBackgroundTransition, this.props.className),
             style: { opacity: this.state.animation },
             children: this.props.children
         });
@@ -89,14 +88,14 @@ class I extends (r = a.PureComponent) {
         return (0, i.jsx)(c.W, {
             className: E.videoBackground,
             component: 'div',
-            children: (0, i.jsx)(m, { children: e }, r)
+            children: (0, i.jsx)(p, { children: e }, r)
         });
     }
     renderContents() {
         let { top: e, center: t, bottom: n, layout: r, focused: a } = this.props,
-            { idle: o } = this.state;
+            { idle: s } = this.state;
         return (0, i.jsx)(d.Z, {
-            className: s()(E.video, p[r], { [E.idle]: o }),
+            className: o()(E.video, h[r], { [E.idle]: s }),
             direction: d.Z.Direction.VERTICAL,
             justify: d.Z.Justify.CENTER,
             children: (0, i.jsxs)(d.Z, {
@@ -105,7 +104,7 @@ class I extends (r = a.PureComponent) {
                 children: [
                     this.renderBackground(),
                     (0, i.jsxs)(d.Z, {
-                        className: s()(E.videoInner, { [E.focused]: a }),
+                        className: o()(E.videoInner, { [E.focused]: a }),
                         direction: d.Z.Direction.VERTICAL,
                         justify: d.Z.Justify.BETWEEN,
                         children: [
@@ -132,7 +131,7 @@ class I extends (r = a.PureComponent) {
     render() {
         let { layout: e, className: t, animated: n } = this.props;
         return (0, i.jsx)('div', {
-            className: s()(E.videoHeight, p[e], t, { [E.animated]: n }),
+            className: o()(E.videoHeight, h[e], t, { [E.animated]: n }),
             children: this.renderContents()
         });
     }
@@ -141,7 +140,7 @@ class I extends (r = a.PureComponent) {
             f(this, '_timeout', new u.V7()),
             f(this, 'handleMouseEvent', () => {
                 let { layout: e } = this.props;
-                if (e === _.AEg.FULL_SCREEN || e === _.AEg.NO_CHAT) this._timeout.start(h, () => this.setState({ idle: !0 })), this.state.idle && this.setState({ idle: !1 });
+                if (e === _.AEg.FULL_SCREEN || e === _.AEg.NO_CHAT) this._timeout.start(3000, () => this.setState({ idle: !0 })), this.state.idle && this.setState({ idle: !1 });
             }),
             (this.state = {
                 idle: !1,

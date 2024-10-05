@@ -1,9 +1,10 @@
-var r;
+var r, i;
 n.d(t, {
     Z: function () {
         return r;
     }
 }),
-    !(function (e) {
-        (e[(e.NONE = 100)] = 'NONE'), (e[(e.AVATAR_DECORATION = 0)] = 'AVATAR_DECORATION'), (e[(e.PROFILE_EFFECT = 1)] = 'PROFILE_EFFECT'), (e[(e.BUNDLE = 1000)] = 'BUNDLE');
-    })(r || (r = {}));
+    ((i = r || (r = {}))[(i.NONE = 100)] = 'NONE'),
+    (i[(i.AVATAR_DECORATION = 0)] = 'AVATAR_DECORATION'),
+    (i[(i.PROFILE_EFFECT = 1)] = 'PROFILE_EFFECT'),
+    (i[(i.BUNDLE = 1000)] = 'BUNDLE');

@@ -1,9 +1,6 @@
-var r = n(451530),
-    i = (function () {
-        var e = /[^.]+$/.exec((r.Z && r.Z.keys && r.Z.keys.IE_PROTO) || '');
-        return e ? 'Symbol(src)_1.' + e : '';
-    })();
-function a(e) {
-    return !!i && i in e;
-}
-t.Z = a;
+var r,
+    i = n(451530);
+var a = (r = /[^.]+$/.exec((i.Z && i.Z.keys && i.Z.keys.IE_PROTO) || '')) ? 'Symbol(src)_1.' + r : '';
+t.Z = function (e) {
+    return !!a && a in e;
+};

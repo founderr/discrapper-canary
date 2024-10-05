@@ -1,21 +1,21 @@
 n.d(t, {
     $P: function () {
-        return u;
+        return l;
     },
     P1: function () {
-        return _;
+        return c;
     },
     TY: function () {
-        return c;
+        return u;
     },
     Tx: function () {
         return s;
     },
     VR: function () {
-        return E;
+        return d;
     },
     W6: function () {
-        return l;
+        return o;
     },
     wx: function () {
         return a.wx;
@@ -24,28 +24,25 @@ n.d(t, {
 var r = n(924301),
     i = n(131704),
     a = n(245335);
-function o(e) {
-    return e.type === a.wx.GROUP_DM || (null != e.channel && (0, i.bc)(e.channel.type));
-}
 function s(e) {
     let t = e.guild_scheduled_event;
     return null != t && (0, r.Ld)(t);
 }
-function l(e) {
+function o(e) {
     return e.target_type === a.Iq.ROLE_SUBSCRIPTIONS_PURCHASE;
 }
-function u(e) {
+function l(e) {
     return null != e.channel && null != e.stage_instance;
 }
-function c(e) {
+function u(e) {
     return e.target_type === a.Iq.STREAM && null != e.target_user;
 }
-function d(e) {
-    return e.type === a.wx.FRIEND || (null == e.guild && null != e.inviter);
-}
-function _(e) {
+function c(e) {
     return e.target_type === a.Iq.EMBEDDED_APPLICATION;
 }
-function E(e) {
-    return 'number' == typeof e.type ? e.type : o(e) ? a.wx.GROUP_DM : d(e) ? a.wx.FRIEND : a.wx.GUILD;
+function d(e) {
+    var t, n;
+    if ('number' == typeof e.type) return e.type;
+    if ((t = e).type === a.wx.GROUP_DM || (null != t.channel && (0, i.bc)(t.channel.type))) return a.wx.GROUP_DM;
+    return (n = e).type === a.wx.FRIEND || (null == n.guild && null != n.inviter) ? a.wx.FRIEND : a.wx.GUILD;
 }

@@ -9,16 +9,16 @@ n.d(t, {
         return U;
     },
     Ox: function () {
-        return L;
+        return D;
     },
     Vq: function () {
-        return D;
+        return b;
     },
     Wf: function () {
         return w;
     },
     cB: function () {
-        return b;
+        return y;
     },
     dy: function () {
         return C;
@@ -27,15 +27,15 @@ n.d(t, {
         return P;
     },
     wP: function () {
-        return y;
+        return L;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(442837),
     a = n(481060),
-    o = n(596454),
-    s = n(99690),
+    s = n(596454),
+    o = n(99690),
     l = n(607070),
     u = n(797610),
     c = n(754688),
@@ -45,16 +45,16 @@ var i = n(442837),
     f = n(692629),
     h = n(763296),
     p = n(592125),
-    m = n(430824),
-    I = n(246946),
+    I = n(430824),
+    m = n(246946),
     T = n(594174),
-    g = n(934415),
-    S = n(5192),
+    S = n(934415),
+    g = n(5192),
     A = n(51144),
-    v = n(377668),
-    N = n(689938),
-    O = n(124158),
-    R = n(554034);
+    N = n(377668),
+    O = n(689938),
+    R = n(124158),
+    v = n(554034);
 function C(e) {
     let { emoji: t } = e;
     return (0, r.jsx)(a.Tooltip, {
@@ -62,7 +62,7 @@ function C(e) {
         delay: 750,
         position: 'top',
         children: (e) =>
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(s.Z, {
                 src: t.src,
                 emojiName: t.name,
                 animated: !1,
@@ -70,14 +70,14 @@ function C(e) {
             })
     });
 }
-function y(e) {
+function L(e) {
     let { emoji: t } = e;
     return (0, r.jsx)(a.Tooltip, {
         text: t.name,
         delay: 750,
         position: 'top',
         children: (e) =>
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(s.Z, {
                 emojiId: t.emojiId,
                 emojiName: t.name,
                 animated: t.animated,
@@ -85,40 +85,40 @@ function y(e) {
             })
     });
 }
-function L(e) {
+function D(e) {
     let { text: t, channelId: n, guildId: i } = e,
-        a = m.Z.getGuild(i),
-        o = p.Z.getChannel(n),
-        s = (0, u.Ib)(a, o) && '@Clyde' === t ? v.jM : null;
+        a = I.Z.getGuild(i),
+        s = p.Z.getChannel(n),
+        o = (0, u.Ib)(a, s) && '@Clyde' === t ? N.jM : null;
     return (0, r.jsx)(E.Z, {
-        color: s,
+        color: o,
         children: t
     });
 }
-function b(e) {
-    let { id: t, guildId: n, channelId: o } = e,
+function y(e) {
+    let { id: t, guildId: n, channelId: s } = e,
         l = (0, i.e7)([T.default], () => T.default.getUser(t)),
-        u = (0, i.e7)([I.Z], () => I.Z.hidePersonalInformation),
-        c = S.ZP.useName(n, o, l),
+        u = (0, i.e7)([m.Z], () => m.Z.hidePersonalInformation),
+        c = g.ZP.useName(n, s, l),
         d = (0, r.jsx)(E.Z, { children: null == c ? '<@'.concat(t, '>') : '@'.concat(c) });
     if (null != l) {
         let e = u || l.isPomelo() ? null : '#'.concat(l.discriminator);
         return (0, r.jsx)(a.Tooltip, {
             text: (0, r.jsxs)('div', {
-                className: O.userTooltip,
+                className: R.userTooltip,
                 children: [
-                    (0, r.jsx)(s.Z, {
+                    (0, r.jsx)(o.Z, {
                         user: l,
                         animate: !0,
                         size: a.AvatarSizes.SIZE_16,
-                        className: O.avatar
+                        className: R.avatar
                     }),
                     A.ZP.getUserTag(l, {
                         mode: 'username',
                         identifiable: u ? 'never' : 'always'
                     }),
                     (0, r.jsx)('span', {
-                        className: O.discriminator,
+                        className: R.discriminator,
                         children: e
                     })
                 ]
@@ -136,44 +136,42 @@ function b(e) {
     }
     return d;
 }
-function D(e) {
+function b(e) {
     let { id: t, guildId: n } = e,
-        o = (0, i.e7)([m.Z], () => (null != n ? m.Z.getRole(n, t) : void 0)),
-        s = (0, i.e7)([l.Z], () => l.Z.roleStyle);
-    if (null == o)
+        s = (0, i.e7)([I.Z], () => (null != n ? I.Z.getRole(n, t) : void 0)),
+        o = (0, i.e7)([l.Z], () => l.Z.roleStyle);
+    if (null == s)
         return (0, r.jsxs)('span', {
-            children: ['@', N.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER]
+            children: ['@', O.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER]
         });
-    let u = null != o.color && 0 !== o.color,
-        c = 'dot' === s,
-        d = 'username' === s && u;
+    let u = null != s.color && 0 !== s.color;
     return (0, r.jsxs)(E.Z, {
-        color: d ? o.color : null,
+        color: 'username' === o && u ? s.color : null,
         children: [
-            c &&
+            'dot' === o &&
                 (0, r.jsx)(a.RoleDot, {
-                    color: o.colorString,
+                    color: s.colorString,
                     background: !1,
                     tooltip: !1
                 }),
             '@',
-            o.name
+            s.name
         ]
     });
 }
 function M(e) {
     let { id: t } = e,
         n = (0, i.e7)([p.Z], () => p.Z.getChannel(t)),
-        a = N.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(),
-        o = 'text',
-        s = !0;
+        a = O.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(),
+        s = 'text',
+        o = !0;
     if (null != n) {
         var l;
-        (a = (0, c.YO)(n) ? n.name : N.Z.Messages.NO_ACCESS), (o = (0, c.YO)(n) ? (null !== (l = (0, g.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'), (s = (0, d.B)(n.type));
+        (a = (0, c.YO)(n) ? n.name : O.Z.Messages.NO_ACCESS), (s = (0, c.YO)(n) ? (null !== (l = (0, S.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'), (o = (0, d.B)(n.type));
     }
-    return s
+    return o
         ? (0, r.jsx)(E.Z, {
-              iconType: o,
+              iconType: s,
               children: a
           })
         : (0, r.jsx)('span', { children: '#' + a });
@@ -187,10 +185,10 @@ function P(e) {
 function U(e) {
     let { id: t, itemId: n, guildId: i } = e,
         a = (0, _.l)(t),
-        o = (0, _.W)(t, n, i);
+        s = (0, _.W)(t, n, i);
     return (0, r.jsxs)(E.Z, {
         iconType: t,
-        children: [a, null != o && (0, r.jsx)(f.Z, {}), o]
+        children: [a, null != s && (0, r.jsx)(f.Z, {}), s]
     });
 }
 function w(e) {
@@ -202,7 +200,7 @@ function w(e) {
 function x(e) {
     let { timestamp: t } = e;
     return (0, r.jsx)('span', {
-        className: R.timestamp,
+        className: v.timestamp,
         children: t.formatted
     });
 }

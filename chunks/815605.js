@@ -3,50 +3,47 @@ n.d(t, {
         return c;
     },
     Zn: function () {
-        return f;
+        return u;
     },
     aB: function () {
-        return E;
+        return d;
     }
-});
-var r = n(757143);
-var i = n(392711);
-var a = n(772848),
+}),
+    n(757143);
+var i = n(392711),
+    s = n(772848),
     o = n(134432),
-    s = n(963838),
+    a = n(963838),
     l = n(302221),
-    u = n(347904);
+    r = n(347904);
 let c = 7.5,
-    d = 128,
-    _ = 32,
-    E = (0, i.memoize)(
-        (e, t, n, r) =>
+    d = (0, i.memoize)(
+        (e, t, n, i) =>
             new Promise((e) => {
-                let i = new Image();
-                (i.src = t),
-                    (i.crossOrigin = 'Anonymous'),
-                    (i.onload = () => {
-                        let t = _ * (0, o.x_)(),
+                let s = new Image();
+                (s.src = t),
+                    (s.crossOrigin = 'Anonymous'),
+                    (s.onload = () => {
+                        let t = 32 * (0, o.x_)(),
                             a = JSON.stringify(n);
-                        if ((null != r && (a = (0, u.s4)(a, (0, l.oo)(r))), (i.width === t && i.height === t) || (0 === i.width && 0 === i.height))) e(JSON.parse(a));
+                        if ((null != i && (a = (0, r.s4)(a, (0, l.oo)(i))), (s.width === t && s.height === t) || (0 === s.width && 0 === s.height))) e(JSON.parse(a));
                         else {
-                            let t = (d / i.width) * i.height;
+                            let t = (128 / s.width) * s.height;
                             e(JSON.parse((a = (a = a.replace(/"w":128,"h":128/, '"w":128,"h":'.concat(t))).replace(/"a":{"a":0,"k":\[64,64/, '"a":{"a":0,"k":[64,'.concat(t / 2)))));
                         }
                     });
             })
     );
-function f(e, t, n, r) {
-    let { emojiSize: i, key: o, messageId: l } = null != r ? r : {},
-        u = null != i ? 2 * i : void 0,
-        c = (0, s._r)(e, u);
+function u(e, t, n, i) {
+    let { emojiSize: o, key: l, messageId: r } = null != i ? i : {},
+        c = (0, a._r)(e, null != o ? 2 * o : void 0);
     return {
         channelId: n,
-        messageId: l,
+        messageId: r,
         emoji: e,
-        animationId: (0, a.Z)(),
+        animationId: (0, s.Z)(),
         url: c,
-        key: o,
+        key: l,
         color: t
     };
 }

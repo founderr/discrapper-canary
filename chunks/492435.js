@@ -3,35 +3,20 @@ n.d(t, {
         return s;
     },
     Xz: function () {
-        return l;
+        return o;
     },
     gK: function () {
-        return u;
+        return l;
     },
     rX: function () {
-        return c;
+        return u;
     }
 });
 var r = n(570140),
     i = n(353926),
     a = n(987338);
-let o = !1;
 function s(e, t, n) {
-    if (o) {
-        var s, l;
-        let o = null == n ? void 0 : n.location,
-            u = (null == n ? void 0 : n.exposureType) === a.a0.AUTO_FALLBACK,
-            c = i.Z.hasExperimentTrackedExposure(e, t, o, u);
-        r.Z.dispatch({
-            type: 'TRACK_TRIGGER',
-            experimentId: e,
-            descriptor: t,
-            previouslyTracked: c,
-            exposureType: null !== (s = null == n ? void 0 : n.exposureType) && void 0 !== s ? s : 'unknown',
-            excluded: null !== (l = null == n ? void 0 : n.excluded) && void 0 !== l && l,
-            location: null != o ? o : 'unknown'
-        });
-    }
+    var r, a;
     i.Z.trackExposure({
         experimentId: e,
         descriptor: t,
@@ -42,35 +27,35 @@ function s(e, t, n) {
         exposureType: null == n ? void 0 : n.exposureType
     });
 }
-function l(e) {
-    let { id: t, title: n, description: r, buckets: o, commonTriggerPoint: s } = e;
+function o(e) {
+    let { id: t, title: n, description: r, buckets: s, commonTriggerPoint: o } = e;
     return (
         (0, i.V)({
             experimentId: t,
             experimentType: a.xY.USER,
             title: n,
             description: r,
-            buckets: o,
-            commonTriggerPoint: s
+            buckets: s,
+            commonTriggerPoint: o
         }),
         { id: t }
     );
 }
-function u(e) {
-    let { id: t, title: n, description: r, buckets: o, commonTriggerPoint: s } = e;
+function l(e) {
+    let { id: t, title: n, description: r, buckets: s, commonTriggerPoint: o } = e;
     return (
         (0, i.V)({
             experimentId: t,
             experimentType: a.xY.GUILD,
             title: n,
             description: r,
-            buckets: o,
-            commonTriggerPoint: s
+            buckets: s,
+            commonTriggerPoint: o
         }),
         { id: t }
     );
 }
-function c(e, t) {
+function u(e, t) {
     r.Z.dispatch({
         type: 'EXPERIMENT_OVERRIDE_BUCKET',
         experimentId: e,

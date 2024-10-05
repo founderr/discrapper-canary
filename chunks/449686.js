@@ -1,4 +1,4 @@
-function t(e, t) {
+(e.exports = function (e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -6,5 +6,6 @@ function t(e, t) {
         a = Object.keys(e);
     for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && (i[n] = e[n]);
     return i;
-}
-(e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+}),
+    (e.exports.__esModule = !0),
+    (e.exports.default = e.exports);

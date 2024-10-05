@@ -1,86 +1,85 @@
 let r;
+n(47120);
 var i,
-    a = n(47120);
-var o = n(442837),
-    s = n(570140),
-    l = n(70956),
-    u = n(709054);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
+    a,
+    s,
+    o,
+    l = n(442837),
+    u = n(570140),
+    c = n(70956),
+    d = n(709054);
+let _ = 14 * c.Z.Millis.DAY,
+    E = Object.freeze([]);
+let f = {},
+    h = {};
+function p() {
+    (f = {}), (h = {});
 }
-let d = 14 * l.Z.Millis.DAY,
-    _ = Object.freeze([]);
-let E = {},
-    f = {};
-function h(e) {
-    var t;
-    let { messageId: n, channelId: r, attachments: i } = e,
-        a = {
-            messageId: n,
-            channelId: r,
-            attachments: i,
-            reportSubmit: !1
-        },
-        o = null !== (t = f[r]) && void 0 !== t ? t : _;
-    (f[r] = [...o, a]), (E[n] = a);
-}
-function p(e) {
-    let { messageId: t, channelId: n } = e,
-        r = f[n];
-    null != r &&
-        ((f[n] = r.map((e) =>
-            e.messageId === t
-                ? {
-                      ...e,
-                      reportSubmit: !0
-                  }
-                : e
-        )),
-        (E[t] = {
-            ...E[t],
-            reportSubmit: !0
-        }));
-}
-function m() {
-    T();
-}
-function I(e) {
-    let { explicitContentScanVersion: t } = e;
-    (r = t), T();
-}
-function T() {
-    (E = {}), (f = {});
-}
-class g extends (i = o.ZP.Store) {
+class I extends (i = l.ZP.Store) {
     getFpMessageInfo(e) {
-        return E[e];
+        return f[e];
     }
     getChannelFpInfo(e) {
         var t;
-        return null !== (t = f[e]) && void 0 !== t ? t : _;
+        return null !== (t = h[e]) && void 0 !== t ? t : E;
     }
     canSubmitFpReport(e) {
-        let t = E[e];
-        return null != t && !t.reportSubmit && u.default.age(t.messageId) < d;
+        let t = f[e];
+        return null != t && !t.reportSubmit && d.default.age(t.messageId) < _;
     }
     get validContentScanVersion() {
         return r;
     }
 }
-c(g, 'displayName', 'FalsePositiveStore'),
-    (t.Z = new g(s.Z, {
-        LOGOUT: m,
-        CONNECTION_OPEN: I,
-        MESSAGE_EXPLICIT_CONTENT_FP_CREATE: h,
-        MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: p
+(o = 'FalsePositiveStore'),
+    (s = 'displayName') in (a = I)
+        ? Object.defineProperty(a, s, {
+              value: o,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (a[s] = o),
+    (t.Z = new I(u.Z, {
+        LOGOUT: function () {
+            (function () {
+                (f = {}), (h = {});
+            })();
+        },
+        CONNECTION_OPEN: function (e) {
+            let { explicitContentScanVersion: t } = e;
+            (r = t),
+                (function () {
+                    (f = {}), (h = {});
+                })();
+        },
+        MESSAGE_EXPLICIT_CONTENT_FP_CREATE: function (e) {
+            var t;
+            let { messageId: n, channelId: r, attachments: i } = e,
+                a = {
+                    messageId: n,
+                    channelId: r,
+                    attachments: i,
+                    reportSubmit: !1
+                },
+                s = null !== (t = h[r]) && void 0 !== t ? t : E;
+            (h[r] = [...s, a]), (f[n] = a);
+        },
+        MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: function (e) {
+            let { messageId: t, channelId: n } = e,
+                r = h[n];
+            null != r &&
+                ((h[n] = r.map((e) =>
+                    e.messageId === t
+                        ? {
+                              ...e,
+                              reportSubmit: !0
+                          }
+                        : e
+                )),
+                (f[t] = {
+                    ...f[t],
+                    reportSubmit: !0
+                }));
+        }
     }));

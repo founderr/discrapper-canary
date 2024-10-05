@@ -1,11 +1,6 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
-        n = {
-            begin: "^'{3,}[ \\t]*$",
-            relevance: 10
-        },
-        r = [{ begin: /\\[*_`]/ }, { begin: /\\\\\*{2}[^\n]*?\*{2}/ }, { begin: /\\\\_{2}[^\n]*_{2}/ }, { begin: /\\\\`{2}[^\n]*`{2}/ }, { begin: /[:;}][*_`](?![*_`])/ }],
-        i = [
+        n = [
             {
                 className: 'strong',
                 begin: /\*{2}([^\n]+?)\*{2}/
@@ -24,7 +19,7 @@ function t(e) {
                 begin: /\*[^\s]([^\n]+\n)+([^\n]+)\*/
             }
         ],
-        a = [
+        r = [
             {
                 className: 'emphasis',
                 begin: /_{2}([^\n]+?)_{2}/
@@ -54,16 +49,7 @@ function t(e) {
                 ],
                 relevance: 0
             }
-        ],
-        o = {
-            className: 'symbol',
-            begin: '^(NOTE|TIP|IMPORTANT|WARNING|CAUTION):\\s+',
-            relevance: 10
-        },
-        s = {
-            className: 'bullet',
-            begin: '^(\\*+|-+|\\.+|[^\\n]+?::)\\s+'
-        };
+        ];
     return {
         name: 'AsciiDoc',
         aliases: ['adoc'],
@@ -121,11 +107,22 @@ function t(e) {
                 ],
                 relevance: 10
             },
-            s,
-            o,
+            {
+                className: 'bullet',
+                begin: '^(\\*+|-+|\\.+|[^\\n]+?::)\\s+'
+            },
+            {
+                className: 'symbol',
+                begin: '^(NOTE|TIP|IMPORTANT|WARNING|CAUTION):\\s+',
+                relevance: 10
+            },
+            { begin: /\\[*_`]/ },
+            { begin: /\\\\\*{2}[^\n]*?\*{2}/ },
+            { begin: /\\\\_{2}[^\n]*_{2}/ },
+            { begin: /\\\\`{2}[^\n]*`{2}/ },
+            { begin: /[:;}][*_`](?![*_`])/ },
+            ...n,
             ...r,
-            ...i,
-            ...a,
             {
                 className: 'string',
                 variants: [{ begin: "``.+?''" }, { begin: "`.+?'" }]
@@ -146,7 +143,10 @@ function t(e) {
                 end: '$',
                 relevance: 0
             },
-            n,
+            {
+                begin: "^'{3,}[ \\t]*$",
+                relevance: 10
+            },
             {
                 begin: '(link:)?(http|https|ftp|file|irc|image:?):\\S+?\\[[^[]*?\\]',
                 returnBegin: !0,
@@ -174,5 +174,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

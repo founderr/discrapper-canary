@@ -1,19 +1,19 @@
 let r;
 n.d(t, {
     y: function () {
-        return m;
+        return E;
     }
-});
-var i = n(177593);
-var a = n(47120);
-var o = n(653041);
-var s = n(512722),
-    l = n.n(s),
-    u = n(956067);
+}),
+    n(177593),
+    n(47120),
+    n(653041);
+var i = n(512722),
+    a = n.n(i),
+    s = n(956067);
 n(17089);
-var c = n(673011),
-    d = n(153102);
-function _(e, t, n) {
+var o = n(673011),
+    l = n(153102);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,46 +26,29 @@ function _(e, t, n) {
         e
     );
 }
-let E = [],
-    f = !1,
-    h = new Promise((e) => {
+let c = [],
+    d = !1,
+    _ = new Promise((e) => {
         r = () => {
             e(), (r = null);
         };
     });
-function p(e, t) {
-    let n = null;
-    return 0 === e
-        ? function () {
-              clearImmediate(n), (n = setImmediate(t));
-          }
-        : function () {
-              null == n &&
-                  (n = setTimeout(() => {
-                      try {
-                          t();
-                      } finally {
-                          n = null;
-                      }
-                  }, e));
-          };
-}
-class m {
+class E {
     static initialize() {
-        (f = !0), E.forEach((e) => e.initializeIfNeeded()), null != r && r();
+        (d = !0), c.forEach((e) => e.initializeIfNeeded()), null != r && r();
     }
     static destroy() {
-        (E.length = 0), d.Z.destroy();
+        (c.length = 0), l.Z.destroy();
     }
     static getAll() {
-        return E;
+        return c;
     }
     registerActionHandlers(e, t) {
         this._dispatcher.register(
             this.getName(),
             e,
             (e) => {
-                (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) && (d.Z.markChanged(this), d.Z.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && d.Z.resume(!1));
+                (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) && (l.Z.markChanged(this), l.Z.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && l.Z.resume(!1));
             },
             t,
             this._dispatchToken
@@ -80,17 +63,37 @@ class m {
             let e = Date.now();
             this.initialize(), (this._isInitialized = !0);
             let t = Date.now() - e;
-            t > 5 && u.Z.mark('\uD83E\uDDA5', this.getName() + '.initialize()', t);
+            t > 5 && s.Z.mark('\uD83E\uDDA5', this.getName() + '.initialize()', t);
         }
     }
     initialize() {}
     syncWith(e, t, n) {
         if ((this.waitFor(...e), null != n)) {
-            let r = 0,
-                i = () => {
-                    r !== d.Z.getChangeSentinel() && ((r = d.Z.getChangeSentinel()), !1 !== t() && this.emitChange());
+            var r, i;
+            let a,
+                s = 0,
+                o = () => {
+                    s !== l.Z.getChangeSentinel() && ((s = l.Z.getChangeSentinel()), !1 !== t() && this.emitChange());
                 };
-            (i = p(null != n ? n : 0, i)), e.forEach((e) => e.addChangeListener(i));
+            (r = null != n ? n : 0),
+                (i = o),
+                (a = null),
+                (o =
+                    0 === r
+                        ? function () {
+                              clearImmediate(a), (a = setImmediate(i));
+                          }
+                        : function () {
+                              null == a &&
+                                  (a = setTimeout(() => {
+                                      try {
+                                          i();
+                                      } finally {
+                                          a = null;
+                                      }
+                                  }, r));
+                          }),
+                e.forEach((e) => e.addChangeListener(o));
         } else
             e.forEach((e) => {
                 e._syncWiths.push({
@@ -101,14 +104,14 @@ class m {
     }
     waitFor() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-        let r = t.map((e, t) => ((l()(null != e, 'Store.waitFor(...) called with null Store at index '.concat(t, ' for store ').concat(this.getName())), null != e._dispatcher) ? (l()(e._dispatcher === this._dispatcher, 'Stores belong to two separate dispatchers.'), e.getDispatchToken()) : null));
+        let r = t.map((e, t) => ((a()(null != e, 'Store.waitFor(...) called with null Store at index '.concat(t, ' for store ').concat(this.getName())), null != e._dispatcher) ? (a()(e._dispatcher === this._dispatcher, 'Stores belong to two separate dispatchers.'), e.getDispatchToken()) : null));
         this._dispatcher.addDependencies(
             this.getDispatchToken(),
             r.filter((e) => null != e)
         );
     }
     emitChange() {
-        d.Z.markChanged(this);
+        l.Z.markChanged(this);
     }
     getDispatchToken() {
         return this._dispatchToken;
@@ -118,8 +121,8 @@ class m {
         this._mustEmitChanges = e;
     }
     constructor(e, t, n) {
-        _(this, '_changeCallbacks', new c.Z()), _(this, '_reactChangeCallbacks', new c.Z()), _(this, '_syncWiths', []), _(this, '_dispatchToken', void 0), _(this, '_dispatcher', void 0), _(this, '_mustEmitChanges', void 0), _(this, '_isInitialized', !1), _(this, '__getLocalVars', void 0), _(this, 'addChangeListener', this._changeCallbacks.add), _(this, 'addConditionalChangeListener', this._changeCallbacks.addConditional), _(this, 'removeChangeListener', this._changeCallbacks.remove), _(this, 'addReactChangeListener', this._reactChangeCallbacks.add), _(this, 'removeReactChangeListener', this._reactChangeCallbacks.remove), (this._dispatcher = e), (this._dispatchToken = this._dispatcher.createToken()), this.registerActionHandlers(null != t ? t : {}, n), E.push(this);
-        f && this.initializeIfNeeded();
+        u(this, '_changeCallbacks', new o.Z()), u(this, '_reactChangeCallbacks', new o.Z()), u(this, '_syncWiths', []), u(this, '_dispatchToken', void 0), u(this, '_dispatcher', void 0), u(this, '_mustEmitChanges', void 0), u(this, '_isInitialized', !1), u(this, '__getLocalVars', void 0), u(this, 'addChangeListener', this._changeCallbacks.add), u(this, 'addConditionalChangeListener', this._changeCallbacks.addConditional), u(this, 'removeChangeListener', this._changeCallbacks.remove), u(this, 'addReactChangeListener', this._reactChangeCallbacks.add), u(this, 'removeReactChangeListener', this._reactChangeCallbacks.remove), (this._dispatcher = e), (this._dispatchToken = this._dispatcher.createToken()), this.registerActionHandlers(null != t ? t : {}, n), c.push(this);
+        d && this.initializeIfNeeded();
     }
 }
-_(m, 'displayName', void 0), _(m, 'initialized', h);
+u(E, 'displayName', void 0), u(E, 'initialized', _);

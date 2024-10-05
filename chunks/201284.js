@@ -1,12 +1,12 @@
 n.d(t, {
     PS: function () {
-        return o;
+        return s;
     },
     Q3: function () {
         return u;
     },
     W0: function () {
-        return h;
+        return E;
     },
     tL: function () {
         return l;
@@ -31,12 +31,12 @@ let i = {
         customError: !0,
         valid: !1
     },
-    o = {
+    s = {
         isInvalid: !1,
         validationDetails: i,
         validationErrors: []
     },
-    s = (0, r.createContext)({}),
+    o = (0, r.createContext)({}),
     l = '__formValidationState' + Date.now();
 function u(e) {
     if (e[l]) {
@@ -49,65 +49,67 @@ function u(e) {
             commitValidation: a
         };
     }
-    return c(e);
+    return (function (e) {
+        let { isInvalid: t, validationState: n, name: i, value: l, builtinValidation: u, validate: E, validationBehavior: f = 'aria' } = e;
+        n && (t || (t = 'invalid' === n));
+        let h = t
+                ? {
+                      isInvalid: !0,
+                      validationErrors: [],
+                      validationDetails: a
+                  }
+                : null,
+            p = (0, r.useMemo)(
+                () =>
+                    d(
+                        (function (e, t) {
+                            if ('function' == typeof e) {
+                                let n = e(t);
+                                if (n && 'boolean' != typeof n) return c(n);
+                            }
+                            return [];
+                        })(E, l)
+                    ),
+                [E, l]
+            );
+        (null == u ? void 0 : u.validationDetails.valid) && (u = null);
+        let I = (0, r.useContext)(o),
+            m = (0, r.useMemo)(() => (i ? (Array.isArray(i) ? i.flatMap((e) => c(I[e])) : c(I[i])) : []), [I, i]),
+            [T, S] = (0, r.useState)(I),
+            [g, A] = (0, r.useState)(!1);
+        I !== T && (S(I), A(!1));
+        let N = (0, r.useMemo)(() => d(g ? [] : m), [g, m]),
+            O = (0, r.useRef)(s),
+            [R, v] = (0, r.useState)(s),
+            C = (0, r.useRef)(s),
+            [L, D] = (0, r.useState)(!1);
+        return (
+            (0, r.useEffect)(() => {
+                if (!L) return;
+                D(!1);
+                let e = p || u || O.current;
+                !_(e, C.current) && ((C.current = e), v(e));
+            }),
+            {
+                realtimeValidation: h || N || p || u || s,
+                displayValidation: 'native' === f ? h || N || R : h || N || p || u || R,
+                updateValidation(e) {
+                    'aria' !== f || _(R, e) ? (O.current = e) : v(e);
+                },
+                resetValidation() {
+                    !_(s, C.current) && ((C.current = s), v(s)), 'native' === f && D(!1), A(!0);
+                },
+                commitValidation() {
+                    'native' === f && D(!0), A(!0);
+                }
+            }
+        );
+    })(e);
 }
 function c(e) {
-    let { isInvalid: t, validationState: n, name: i, value: l, builtinValidation: u, validate: c, validationBehavior: h = 'aria' } = e;
-    n && (t || (t = 'invalid' === n));
-    let p = t
-            ? {
-                  isInvalid: !0,
-                  validationErrors: [],
-                  validationDetails: a
-              }
-            : null,
-        m = (0, r.useMemo)(() => E(_(c, l)), [c, l]);
-    (null == u ? void 0 : u.validationDetails.valid) && (u = null);
-    let I = (0, r.useContext)(s),
-        T = (0, r.useMemo)(() => (i ? (Array.isArray(i) ? i.flatMap((e) => d(I[e])) : d(I[i])) : []), [I, i]),
-        [g, S] = (0, r.useState)(I),
-        [A, v] = (0, r.useState)(!1);
-    I !== g && (S(I), v(!1));
-    let N = (0, r.useMemo)(() => E(A ? [] : T), [A, T]),
-        O = (0, r.useRef)(o),
-        [R, C] = (0, r.useState)(o),
-        y = (0, r.useRef)(o),
-        L = () => {
-            if (!b) return;
-            D(!1);
-            let e = m || u || O.current;
-            !f(e, y.current) && ((y.current = e), C(e));
-        },
-        [b, D] = (0, r.useState)(!1);
-    return (
-        (0, r.useEffect)(L),
-        {
-            realtimeValidation: p || N || m || u || o,
-            displayValidation: 'native' === h ? p || N || R : p || N || m || u || R,
-            updateValidation(e) {
-                'aria' !== h || f(R, e) ? (O.current = e) : C(e);
-            },
-            resetValidation() {
-                let e = o;
-                !f(e, y.current) && ((y.current = e), C(e)), 'native' === h && D(!1), v(!0);
-            },
-            commitValidation() {
-                'native' === h && D(!0), v(!0);
-            }
-        }
-    );
-}
-function d(e) {
     return e ? (Array.isArray(e) ? e : [e]) : [];
 }
-function _(e, t) {
-    if ('function' == typeof e) {
-        let n = e(t);
-        if (n && 'boolean' != typeof n) return d(n);
-    }
-    return [];
-}
-function E(e) {
+function d(e) {
     return e.length
         ? {
               isInvalid: !0,
@@ -116,17 +118,16 @@ function E(e) {
           }
         : null;
 }
-function f(e, t) {
+function _(e, t) {
     return e === t || (e && t && e.isInvalid === t.isInvalid && e.validationErrors.length === t.validationErrors.length && e.validationErrors.every((e, n) => e === t.validationErrors[n]) && Object.entries(e.validationDetails).every(([e, n]) => t.validationDetails[e] === n));
 }
-function h(...e) {
+function E(...e) {
     let t = new Set(),
         n = !1,
         r = { ...i };
     for (let i of e) {
-        var a, o;
         for (let e of i.validationErrors) t.add(e);
-        for (let e in (n || (n = i.isInvalid), r)) (a = r)[(o = e)] || (a[o] = i.validationDetails[e]);
+        for (let e in (n || (n = i.isInvalid), r)) r[e] || (r[e] = i.validationDetails[e]);
     }
     return (
         (r.valid = !n),

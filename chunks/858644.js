@@ -6,9 +6,9 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(112456),
-    l = n.n(s),
+    s = n.n(a),
+    o = n(112456),
+    l = n.n(o),
     u = n(481060),
     c = n(403182),
     d = n(689938),
@@ -25,11 +25,11 @@ let E = (e) => {
         });
     },
     f = (e) => {
-        let { className: t, filename: n, size: i, progress: a, onCancelUpload: s, onClick: c, onContextMenu: f } = e,
+        let { className: t, filename: n, size: i, progress: a, onCancelUpload: o, onClick: c, onContextMenu: f } = e,
             h = 100 === a,
             p = !h && i > 0;
         return (0, r.jsxs)('div', {
-            className: o()(_.attachment, t),
+            className: s()(_.attachment, t),
             children: [
                 (0, r.jsx)(E, { filename: n }),
                 (0, r.jsxs)('div', {
@@ -66,7 +66,7 @@ let E = (e) => {
                 h
                     ? null
                     : (0, r.jsx)(u.Clickable, {
-                          onClick: s,
+                          onClick: o,
                           children: (0, r.jsx)(u.XSmallIcon, {
                               size: 'md',
                               color: 'currentColor',
@@ -75,38 +75,37 @@ let E = (e) => {
                       })
             ]
         });
-    },
-    h = (e) => {
-        let { className: t, url: n, fileName: a, fileSize: s, onClick: c, onContextMenu: d, renderAdjacentContent: f } = e;
-        return (0, r.jsxs)(i.Fragment, {
-            children: [
-                (0, r.jsxs)('div', {
-                    className: o()(_.attachment, _.newMosaicStyle, t),
-                    children: [
-                        (0, r.jsx)(E, { filename: a }),
-                        (0, r.jsxs)('div', {
-                            className: _.attachmentInner,
-                            children: [
-                                (0, r.jsx)('div', {
-                                    className: _.filenameLinkWrapper,
-                                    children: (0, r.jsx)(u.Anchor, {
-                                        className: _.fileNameLink,
-                                        href: n,
-                                        onClick: c,
-                                        onContextMenu: d,
-                                        children: a
-                                    })
-                                }),
-                                (0, r.jsx)('div', {
-                                    className: _.metadata,
-                                    children: l().filesize(s)
-                                })
-                            ]
-                        })
-                    ]
-                }),
-                null != f && f()
-            ]
-        });
     };
-t.Z = h;
+t.Z = (e) => {
+    let { className: t, url: n, fileName: a, fileSize: o, onClick: c, onContextMenu: d, renderAdjacentContent: f } = e;
+    return (0, r.jsxs)(i.Fragment, {
+        children: [
+            (0, r.jsxs)('div', {
+                className: s()(_.attachment, _.newMosaicStyle, t),
+                children: [
+                    (0, r.jsx)(E, { filename: a }),
+                    (0, r.jsxs)('div', {
+                        className: _.attachmentInner,
+                        children: [
+                            (0, r.jsx)('div', {
+                                className: _.filenameLinkWrapper,
+                                children: (0, r.jsx)(u.Anchor, {
+                                    className: _.fileNameLink,
+                                    href: n,
+                                    onClick: c,
+                                    onContextMenu: d,
+                                    children: a
+                                })
+                            }),
+                            (0, r.jsx)('div', {
+                                className: _.metadata,
+                                children: l().filesize(o)
+                            })
+                        ]
+                    })
+                ]
+            }),
+            null != f && f()
+        ]
+    });
+};

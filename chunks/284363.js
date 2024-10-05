@@ -1,16 +1,15 @@
 n.d(t, {
     Q: function () {
-        return r;
+        return i;
     },
     i: function () {
-        return a;
+        return s;
     }
 });
 var r,
-    i = n(854218);
-function a(e) {
-    return e.staff ? 5 : e.verified && e.partnered ? 2 : e.verified ? 1 : e.partnered ? 0 : e.community && e.visibility === i.PZ.PUBLIC ? 4 : e.clan ? 6 : e.community ? 3 : 7;
+    i,
+    a = n(854218);
+function s(e) {
+    return e.staff ? 5 : e.verified && e.partnered ? 2 : e.verified ? 1 : e.partnered ? 0 : e.community && e.visibility === a.PZ.PUBLIC ? 4 : e.clan ? 6 : e.community ? 3 : 7;
 }
-!(function (e) {
-    (e[(e.PARTNERED = 0)] = 'PARTNERED'), (e[(e.VERIFIED = 1)] = 'VERIFIED'), (e[(e.VERIFIED_AND_PARTNERED = 2)] = 'VERIFIED_AND_PARTNERED'), (e[(e.COMMUNITY = 3)] = 'COMMUNITY'), (e[(e.DISCOVERABLE = 4)] = 'DISCOVERABLE'), (e[(e.STAFF = 5)] = 'STAFF'), (e[(e.CLAN = 6)] = 'CLAN'), (e[(e.NONE = 7)] = 'NONE');
-})(r || (r = {}));
+((r = i || (i = {}))[(r.PARTNERED = 0)] = 'PARTNERED'), (r[(r.VERIFIED = 1)] = 'VERIFIED'), (r[(r.VERIFIED_AND_PARTNERED = 2)] = 'VERIFIED_AND_PARTNERED'), (r[(r.COMMUNITY = 3)] = 'COMMUNITY'), (r[(r.DISCOVERABLE = 4)] = 'DISCOVERABLE'), (r[(r.STAFF = 5)] = 'STAFF'), (r[(r.CLAN = 6)] = 'CLAN'), (r[(r.NONE = 7)] = 'NONE');

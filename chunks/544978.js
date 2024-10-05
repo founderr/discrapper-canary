@@ -1,9 +1,10 @@
-var r;
+var i, a;
 n.d(t, {
     y: function () {
-        return r;
+        return i;
     }
 }),
-    !(function (e) {
-        (e.GUILD_PRODUCTS = 'guild_products'), (e.GUILD_ROLE_SUBSCRIPTIONS = 'guild_role_subscriptions'), (e.GUILD_PRODUCTS_PREVIEW = 'guild_products_preview'), (e.GUILD_SHOP_FULL_PREVIEW = 'guild_shop_full_preview');
-    })(r || (r = {}));
+    ((a = i || (i = {})).GUILD_PRODUCTS = 'guild_products'),
+    (a.GUILD_ROLE_SUBSCRIPTIONS = 'guild_role_subscriptions'),
+    (a.GUILD_PRODUCTS_PREVIEW = 'guild_products_preview'),
+    (a.GUILD_SHOP_FULL_PREVIEW = 'guild_shop_full_preview');

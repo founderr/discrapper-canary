@@ -1,96 +1,96 @@
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(481060),
+n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(481060),
     s = n(114201),
-    l = n(154658),
-    u = n(370611),
-    c = n(463031),
-    d = n(231338),
-    _ = n(689938),
-    E = n(304818);
-function f(e) {
+    o = n(154658),
+    l = n(370611),
+    u = n(463031),
+    c = n(231338),
+    d = n(689938),
+    _ = n(304818);
+function E(e) {
     let { children: t } = e;
-    return (0, i.jsx)(o.ThemeProvider, {
-        theme: d.BR.DARK,
+    return (0, r.jsx)(a.ThemeProvider, {
+        theme: c.BR.DARK,
         children: (e) =>
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 'data-disable-adaptive-theme': !0,
                 className: e,
                 children: t
             })
     });
 }
-let h = (e) => {
+t.Z = (e) => {
     let { guildId: t, previewMode: n = !1 } = e,
-        [r, d] = a.useState(n),
-        h = a.useRef(null);
-    return ((0, o.useFocusLock)(h), null == t)
+        [c, f] = i.useState(n),
+        h = i.useRef(null);
+    return ((0, a.useFocusLock)(h), null == t)
         ? null
-        : (0, i.jsx)(f, {
-              children: (0, i.jsxs)('div', {
-                  className: E.popout,
+        : (0, r.jsx)(E, {
+              children: (0, r.jsxs)('div', {
+                  className: _.popout,
                   ref: h,
                   children: [
-                      (0, i.jsxs)('div', {
-                          className: E.content,
+                      (0, r.jsxs)('div', {
+                          className: _.content,
                           children: [
-                              (0, i.jsxs)('div', {
-                                  className: E.header,
+                              (0, r.jsxs)('div', {
+                                  className: _.header,
                                   children: [
-                                      (0, i.jsx)(o.LeagueOfLegendsBrandIcon, { size: 'md' }),
-                                      (0, i.jsx)(o.Spacer, {
+                                      (0, r.jsx)(a.LeagueOfLegendsBrandIcon, { size: 'md' }),
+                                      (0, r.jsx)(a.Spacer, {
                                           size: 8,
                                           horizontal: !0
                                       }),
-                                      (0, i.jsx)(o.Heading, {
+                                      (0, r.jsx)(a.Heading, {
                                           variant: 'heading-sm/normal',
-                                          className: E.leaderboardTitle,
-                                          children: _.Z.Messages.LEADERBOARD_POPOUT_TITLE.format({
+                                          className: _.leaderboardTitle,
+                                          children: d.Z.Messages.LEADERBOARD_POPOUT_TITLE.format({
                                               leaderboardName: 'League of Legends',
                                               leaderboardNameHook: (e, t) =>
-                                                  (0, i.jsx)(
-                                                      o.Text,
+                                                  (0, r.jsx)(
+                                                      a.Text,
                                                       {
                                                           variant: 'text-sm/medium',
-                                                          className: E.leaderboardName,
+                                                          className: _.leaderboardName,
                                                           children: e
                                                       },
                                                       t
                                                   )
                                           })
                                       }),
-                                      (0, i.jsx)(s.Z, {})
+                                      (0, r.jsx)(s.Z, {})
                                   ]
                               }),
-                              (0, i.jsx)(u.Z, {
+                              (0, r.jsx)(l.Z, {
                                   guildId: t,
-                                  leaderboardId: c._,
+                                  leaderboardId: u._,
                                   intervalOffset: 0,
-                                  previewMode: r
+                                  previewMode: c
                               }),
-                              r
+                              c
                                   ? null
-                                  : (0, i.jsx)(i.Fragment, {
-                                        children: (0, i.jsx)(l.Z, {
-                                            className: E.previousChampion,
+                                  : (0, r.jsx)(r.Fragment, {
+                                        children: (0, r.jsx)(o.Z, {
+                                            className: _.previousChampion,
                                             guildId: t,
-                                            leaderboardId: c._,
+                                            leaderboardId: u._,
                                             intervalOffset: -1
                                         })
                                     })
                           ]
                       }),
-                      r
-                          ? (0, i.jsx)(i.Fragment, {
-                                children: (0, i.jsx)(o.Clickable, {
-                                    onClick: () => d(!1),
-                                    children: (0, i.jsx)('div', {
-                                        className: E.exitPreviewModeButton,
-                                        children: (0, i.jsx)(o.Text, {
+                      c
+                          ? (0, r.jsx)(r.Fragment, {
+                                children: (0, r.jsx)(a.Clickable, {
+                                    onClick: () => f(!1),
+                                    children: (0, r.jsx)('div', {
+                                        className: _.exitPreviewModeButton,
+                                        children: (0, r.jsx)(a.Text, {
                                             variant: 'text-sm/medium',
-                                            className: E.exitPreviewModeText,
-                                            children: _.Z.Messages.LEADERBOARD_POPOUT_PREVIEW_SHOW_FULL_LEADERBOARD
+                                            className: _.exitPreviewModeText,
+                                            children: d.Z.Messages.LEADERBOARD_POPOUT_PREVIEW_SHOW_FULL_LEADERBOARD
                                         })
                                     })
                                 })
@@ -100,4 +100,3 @@ let h = (e) => {
               })
           });
 };
-t.Z = h;

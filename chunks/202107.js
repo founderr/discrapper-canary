@@ -1,46 +1,31 @@
-var r = n(47120);
-var i = n(570140),
-    a = n(147913),
-    o = n(271383),
+n(47120);
+var r = n(570140),
+    i = n(147913),
+    a = n(271383),
     s = n(594174),
-    l = n(69882);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = 10000,
-    d = null,
-    _ = () => {
-        let e = o.ZP.getCommunicationDisabledUserMap();
+    o = n(69882);
+let l = null,
+    u = () => {
+        let e = a.ZP.getCommunicationDisabledUserMap();
         Object.keys(e).forEach((t) => {
-            let n = t,
-                r = (0, o.O5)(n),
-                i = (0, o.V6)(n),
-                a = e[n];
-            !(0, l.J)(a) && E(r, i);
+            let n = (0, a.O5)(t),
+                r = (0, a.V6)(t),
+                i = e[t];
+            !(0, o.J)(i) && c(n, r);
         });
     },
-    E = (e, t) => {
-        var n, r, a, u, c, d;
-        let _ = o.ZP.getMember(e, t),
+    c = (e, t) => {
+        var n, i, l, u, c, d;
+        let _ = a.ZP.getMember(e, t),
             E = s.default.getUser(t);
-        if (null == _ || null == E || (0, l.b)(_)) return;
+        if (null == _ || null == E || (0, o.b)(_)) return;
         let f = {
             ..._,
             guildId: e,
             nick: null !== (n = _.nick) && void 0 !== n ? n : E.username,
-            avatar: null !== (r = _.avatar) && void 0 !== r ? r : void 0,
+            avatar: null !== (i = _.avatar) && void 0 !== i ? i : void 0,
             avatarDecoration: null != _.avatarDecoration ? { ..._.avatarDecoration } : void 0,
-            premiumSince: null !== (a = _.premiumSince) && void 0 !== a ? a : void 0,
+            premiumSince: null !== (l = _.premiumSince) && void 0 !== l ? l : void 0,
             isPending: null !== (u = _.isPending) && void 0 !== u && u,
             user: {
                 ...E,
@@ -49,20 +34,32 @@ let c = 10000,
             },
             communicationDisabledUntil: null
         };
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'GUILD_MEMBER_UPDATE',
             ...f
         });
     };
-class f extends a.Z {
+class d extends i.Z {
     _initialize() {
-        d = setInterval(() => _(), c);
+        l = setInterval(() => u(), 10000);
     }
     _terminate() {
-        clearInterval(d);
+        clearInterval(l);
     }
     constructor(...e) {
-        super(...e), u(this, 'clearGuildMemberTimeout', E);
+        var t, n, r;
+        super(...e),
+            (t = this),
+            (n = 'clearGuildMemberTimeout'),
+            (r = c),
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: r,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (t[n] = r);
     }
 }
-t.Z = new f();
+t.Z = new d();

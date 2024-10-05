@@ -1,9 +1,8 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return r;
     }
 });
-let r = 32;
-function i(e, t) {
-    return ''.concat(e.toLowerCase().padEnd(r, '!')).concat(t.id);
+function r(e, t) {
+    return ''.concat(e.toLowerCase().padEnd(32, '!')).concat(t.id);
 }

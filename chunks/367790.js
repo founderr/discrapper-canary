@@ -1,4 +1,4 @@
-var r, i;
+var r, i, a, s;
 n.d(t, {
     D: function () {
         return i;
@@ -7,9 +7,10 @@ n.d(t, {
         return r;
     }
 }),
-    !(function (e) {
-        (e.NONE = 'none'), (e.APPLICATION_ONLY = 'application_only'), (e.COMMAND_ONLY = 'command_only'), (e.COMMAND_OR_APPLICATION = 'command_or_application');
-    })(r || (r = {})),
-    !(function (e) {
-        (e.ALLOW = 'allow'), (e.ONLY_TEXT = 'only_text'), (e.DENY = 'deny');
-    })(i || (i = {}));
+    ((a = r || (r = {})).NONE = 'none'),
+    (a.APPLICATION_ONLY = 'application_only'),
+    (a.COMMAND_ONLY = 'command_only'),
+    (a.COMMAND_OR_APPLICATION = 'command_or_application'),
+    ((s = i || (i = {})).ALLOW = 'allow'),
+    (s.ONLY_TEXT = 'only_text'),
+    (s.DENY = 'deny');

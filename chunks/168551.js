@@ -1,38 +1,38 @@
 n.d(t, {
     PQ: function () {
-        return c;
+        return u;
     },
     e3: function () {
-        return d;
+        return c;
     }
-});
-var r = n(47120);
-var i = n(470079),
-    a = n(691324),
-    o = n(442837),
+}),
+    n(47120);
+var r = n(470079),
+    i = n(691324),
+    a = n(442837),
     s = n(780384),
-    l = n(514361),
-    u = n(629935);
-let c = 'data-client-themes',
-    d = 'custom-theme-background',
-    _ = () => {
-        let e = (0, o.e7)([l.Z], () => l.Z.gradientPreset);
-        return (0, i.useMemo)(() => {
+    o = n(514361),
+    l = n(629935);
+let u = 'data-client-themes',
+    c = 'custom-theme-background',
+    d = () => {
+        let e = (0, a.e7)([o.Z], () => o.Z.gradientPreset);
+        return (0, r.useMemo)(() => {
             if (null == e) return null;
-            let t = l.Z.getLinearGradient();
+            let t = o.Z.getLinearGradient();
             if (null == t) return null;
             let [n, r] = [...e.colors]
                     .sort((e, t) => t.stop - e.stop)
                     .slice(0, 2)
-                    .map((e) => a.b[e.token].hex),
-                i = (0, u.W4)({
+                    .map((e) => i.b[e.token].hex),
+                a = (0, l.W4)({
                     enabled: !0,
                     primaryColor: n,
                     secondaryColor: r,
                     isDarkTheme: (0, s.wj)(e.theme)
                 }),
-                o = '\n      '.concat(
-                    Object.entries(i)
+                u = '\n      '.concat(
+                    Object.entries(a)
                         .map((e) => {
                             let [t, n] = e;
                             return ''.concat(t, ': ').concat(n, ';');
@@ -40,19 +40,18 @@ let c = 'data-client-themes',
                         .join('\n'),
                     '\n    '
                 );
-            return '.'.concat(d, ' {\n      --custom-theme-background: ').concat(t, ';\n      ').concat(o, '\n    }');
+            return '.'.concat(c, ' {\n      --custom-theme-background: ').concat(t, ';\n      ').concat(u, '\n    }');
         }, [e]);
-    },
-    E = () => {
-        let e = _();
-        return null === e
-            ? {
-                  clientThemesCSS: '',
-                  clientThemesClassName: ''
-              }
-            : {
-                  clientThemesCSS: e,
-                  clientThemesClassName: d
-              };
     };
-t.ZP = E;
+t.ZP = () => {
+    let e = d();
+    return null === e
+        ? {
+              clientThemesCSS: '',
+              clientThemesClassName: ''
+          }
+        : {
+              clientThemesCSS: e,
+              clientThemesClassName: c
+          };
+};

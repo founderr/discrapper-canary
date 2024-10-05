@@ -1,42 +1,40 @@
 var r,
-    i = n(442837),
-    a = n(570140),
-    o = n(931619),
-    s = n(981631);
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let u = s.IWh.UNKNOWN,
-    c = s.IyS.UNKNOWN,
-    d = null;
-function _(e) {
+    i,
+    a,
+    s,
+    o = n(442837),
+    l = n(570140),
+    u = n(931619),
+    c = n(981631);
+let d = c.IWh.UNKNOWN,
+    _ = c.IyS.UNKNOWN,
+    E = null;
+function f(e) {
     var t;
-    (u = null != e.type ? e.type : s.IWh.UNKNOWN), (c = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : s.IyS.UNKNOWN), (d = e.serviceProvider), f.emitChange();
+    (d = null != e.type ? e.type : c.IWh.UNKNOWN), (_ = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : c.IyS.UNKNOWN), (E = e.serviceProvider), p.emitChange();
 }
-class E extends (r = i.ZP.Store) {
+class h extends (s = o.ZP.Store) {
     initialize() {
-        o.Z.getNetworkInformation().then(_), o.Z.addChangeCallback(_);
+        u.Z.getNetworkInformation().then(f), u.Z.addChangeCallback(f);
     }
     getType() {
-        return u;
-    }
-    getEffectiveConnectionSpeed() {
-        return c;
-    }
-    getServiceProvider() {
         return d;
     }
+    getEffectiveConnectionSpeed() {
+        return _;
+    }
+    getServiceProvider() {
+        return E;
+    }
 }
-l(E, 'displayName', 'NetworkStore');
-let f = new E(a.Z, {});
-t.Z = f;
+(a = 'NetworkStore'),
+    (i = 'displayName') in (r = h)
+        ? Object.defineProperty(r, i, {
+              value: a,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (r[i] = a);
+let p = new h(l.Z, {});
+t.Z = p;

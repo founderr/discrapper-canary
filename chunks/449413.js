@@ -1,17 +1,17 @@
 var r = n(735250),
     i = n(470079),
     a = n(481060),
-    o = n(454585),
-    s = n(273744),
+    s = n(454585),
+    o = n(273744),
     l = n(754048);
-let u = (e) => {
+t.Z = (e) => {
     let {
             node: { info: t }
         } = e,
         n = i.useRef(
-            o.Z.reactParserFor({
-                ...o.Z.defaultRules,
-                link: s.s
+            s.Z.reactParserFor({
+                ...s.Z.defaultRules,
+                link: o.s
             })
         );
     return null == t
@@ -22,4 +22,3 @@ let u = (e) => {
               children: n.current(t)
           });
 };
-t.Z = u;

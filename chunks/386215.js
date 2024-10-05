@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             className: 'string',
             variants: [
@@ -52,18 +52,6 @@ function t(e) {
         i = {
             className: 'variable',
             begin: /&[a-z\d_]*\b/
-        },
-        a = {
-            className: 'params',
-            relevance: 0,
-            begin: '<',
-            end: '>',
-            contains: [n, i]
-        },
-        o = {
-            scope: 'punctuation',
-            relevance: 0,
-            match: /\};|[;{}]/
         };
     return {
         name: 'Device Tree',
@@ -100,18 +88,27 @@ function t(e) {
                 relevance: 0,
                 scope: 'attr'
             },
-            a,
+            {
+                className: 'params',
+                relevance: 0,
+                begin: '<',
+                end: '>',
+                contains: [n, i]
+            },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             n,
             t,
             r,
-            o,
+            {
+                scope: 'punctuation',
+                relevance: 0,
+                match: /\};|[;{}]/
+            },
             {
                 begin: e.IDENT_RE + '::',
                 keywords: ''
             }
         ]
     };
-}
-e.exports = t;
+};

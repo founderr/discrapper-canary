@@ -1,45 +1,43 @@
-var r;
+var r, i;
 n.d(t, {
     ED: function () {
-        return a;
+        return s;
     },
     Ht: function () {
-        return d;
+        return _;
     },
     Ks: function () {
-        return u;
+        return c;
     },
     OC: function () {
-        return _;
+        return E;
     },
     Vr: function () {
         return o;
     },
     Wt: function () {
-        return c;
+        return d;
     },
     c: function () {
-        return s;
-    },
-    lE: function () {
         return l;
     },
+    lE: function () {
+        return u;
+    },
     nZ: function () {
-        return i;
+        return a;
     },
     yr: function () {
         return r;
     }
 });
-let i = 'sticker-picker-tab-panel',
-    a = 'sticker-picker-tab',
+let a = 'sticker-picker-tab-panel',
+    s = 'sticker-picker-tab',
     o = 'sticker-picker-grid',
-    s = -1,
-    l = 160,
-    u = '710982414301790216',
-    c = ['781323769960202280', '809209266556764241', '818597810047680532', '819129296374595614'],
-    d = 524288,
-    _ = 1572864;
-!(function (e) {
-    (e[(e.ALWAYS_ANIMATE = 0)] = 'ALWAYS_ANIMATE'), (e[(e.ANIMATE_ON_INTERACTION = 1)] = 'ANIMATE_ON_INTERACTION'), (e[(e.NEVER_ANIMATE = 2)] = 'NEVER_ANIMATE');
-})(r || (r = {}));
+    l = -1,
+    u = 160,
+    c = '710982414301790216',
+    d = ['781323769960202280', '809209266556764241', '818597810047680532', '819129296374595614'],
+    _ = 524288,
+    E = 1572864;
+((i = r || (r = {}))[(i.ALWAYS_ANIMATE = 0)] = 'ALWAYS_ANIMATE'), (i[(i.ANIMATE_ON_INTERACTION = 1)] = 'ANIMATE_ON_INTERACTION'), (i[(i.NEVER_ANIMATE = 2)] = 'NEVER_ANIMATE');

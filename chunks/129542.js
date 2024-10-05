@@ -1,26 +1,25 @@
 n.d(t, {
     D: function () {
-        return s;
+        return o;
     }
-});
+}),
+    n(411104);
 var r,
-    i = n(411104);
-var a = n(358085),
-    o = n(981631);
-function s() {
+    i,
+    a = n(358085),
+    s = n(981631);
+function o() {
     switch ((0, a.getPlatform)()) {
         case a.PlatformTypes.WINDOWS:
             let e = 'x86';
-            if ((null != window.DiscordNative && (e = window.DiscordNative.os.arch), 'x86' === e || 'ia32' === e)) return o.QR$.WIN32;
-            return o.QR$.WIN64;
+            if ((null != window.DiscordNative && (e = window.DiscordNative.os.arch), 'x86' === e || 'ia32' === e)) return s.QR$.WIN32;
+            return s.QR$.WIN64;
         case a.PlatformTypes.OSX:
-            return o.QR$.MACOS;
+            return s.QR$.MACOS;
         case a.PlatformTypes.LINUX:
-            return o.QR$.LINUX;
+            return s.QR$.LINUX;
         default:
             throw Error('Unsupported build type');
     }
 }
-!(function (e) {
-    (e.X86 = 'x86'), (e.IA32 = 'ia32');
-})(r || (r = {}));
+((i = r || (r = {})).X86 = 'x86'), (i.IA32 = 'ia32');

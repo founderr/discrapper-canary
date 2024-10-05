@@ -1,9 +1,8 @@
-var r;
+var r, i;
 n.d(t, {
     i: function () {
         return r;
     }
 }),
-    !(function (e) {
-        (e[(e.AUTHOR_TYPE_UNSPECIFIED = 0)] = 'AUTHOR_TYPE_UNSPECIFIED'), (e[(e.USER = 1)] = 'USER');
-    })(r || (r = {}));
+    ((i = r || (r = {}))[(i.AUTHOR_TYPE_UNSPECIFIED = 0)] = 'AUTHOR_TYPE_UNSPECIFIED'),
+    (i[(i.USER = 1)] = 'USER');

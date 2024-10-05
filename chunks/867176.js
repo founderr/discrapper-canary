@@ -3,79 +3,78 @@ n.d(t, {
         return N;
     },
     b: function () {
-        return v;
+        return A;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(866442),
-    u = n(442837),
-    c = n(692547),
-    d = n(481060),
-    _ = n(220082),
-    E = n(583405),
-    f = n(313201),
-    h = n(279745),
-    p = n(695346),
-    m = n(451478),
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(866442),
+    l = n(442837),
+    u = n(692547),
+    c = n(481060),
+    d = n(220082),
+    _ = n(583405),
+    E = n(313201),
+    f = n(279745),
+    h = n(695346),
+    p = n(451478),
     I = n(768581),
-    T = n(28660),
-    g = n(462997),
+    m = n(28660),
+    T = n(462997),
     S = n(431405);
-let A = (e) => {
-    let { size: t, stroke: n } = (0, d.getAvatarSpecs)(e);
+let g = (e) => {
+    let { size: t, stroke: n } = (0, c.getAvatarSpecs)(e);
     return t / 2 + n;
 };
-function v(e) {
+function A(e) {
     var t;
-    let { user: n, displayProfile: r, guildId: o, pendingBanner: g, children: v, className: N, avatarSize: O, avatarOffsetX: R, avatarOffsetY: C, bannerWidth: y, bannerHeight: L, themePadding: b, animateOnHover: D = !1 } = e,
-        M = (0, f.Dt)(),
-        [P, U] = a.useState(!1),
-        w = (0, u.e7)([m.Z], () => m.Z.isFocused()),
-        x = p.QK.getSetting(),
-        { bannerSrc: G, status: k } = (0, T.Z)({
-            displayProfile: r,
-            pendingBanner: g,
-            size: y,
-            canAnimate: D || !x ? P : w
+    let { user: n, displayProfile: a, guildId: T, pendingBanner: A, children: N, className: O, avatarSize: R, avatarOffsetX: v, avatarOffsetY: C, bannerWidth: L, bannerHeight: D, themePadding: y, animateOnHover: b = !1 } = e,
+        M = (0, E.Dt)(),
+        [P, U] = i.useState(!1),
+        w = (0, l.e7)([p.Z], () => p.Z.isFocused()),
+        x = h.QK.getSetting(),
+        { bannerSrc: G, status: k } = (0, m.Z)({
+            displayProfile: a,
+            pendingBanner: A,
+            size: L,
+            canAnimate: b || !x ? P : w
         }),
-        B = (0, d.useToken)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
-        F = n.getAvatarURL(o, (0, d.getAvatarSize)(O)),
-        Z = (0, l._i)((0, _.ZP)(F, B, !1)),
-        V = (0, E.Z)(null !== (t = null == r ? void 0 : r.primaryColor) && void 0 !== t ? t : Z).hex,
-        H = A(O),
-        Y = H + R - b,
-        j = L - C - b;
-    return (0, i.jsxs)('svg', {
+        B = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(),
+        F = n.getAvatarURL(T, (0, c.getAvatarSize)(R)),
+        V = (0, o._i)((0, d.ZP)(F, B, !1)),
+        H = (0, _.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : V).hex,
+        Z = g(R),
+        Y = D - C - y;
+    return (0, r.jsxs)('svg', {
         className: S.mask,
-        viewBox: '0 0 '.concat(y, ' ').concat(L),
+        viewBox: '0 0 '.concat(L, ' ').concat(D),
         style: {
-            minWidth: y,
-            minHeight: L
+            minWidth: L,
+            minHeight: D
         },
         children: [
-            (0, i.jsxs)('mask', {
+            (0, r.jsxs)('mask', {
                 id: M,
                 children: [
-                    (0, i.jsx)('rect', {
+                    (0, r.jsx)('rect', {
                         fill: 'white',
                         x: '0',
                         y: '0',
                         width: '100%',
                         height: '100%'
                     }),
-                    (0, i.jsx)('circle', {
+                    (0, r.jsx)('circle', {
                         fill: 'black',
-                        cx: Y,
-                        cy: j,
-                        r: H
+                        cx: Z + v - y,
+                        cy: Y,
+                        r: Z
                     })
                 ]
             }),
-            (0, i.jsxs)('foreignObject', {
+            (0, r.jsxs)('foreignObject', {
                 x: '0',
                 y: '0',
                 width: '100%',
@@ -83,18 +82,18 @@ function v(e) {
                 overflow: 'visible',
                 mask: 'url(#'.concat(M, ')'),
                 children: [
-                    v,
-                    (0, i.jsxs)('div', {
-                        className: s()(S.banner, N),
+                    N,
+                    (0, r.jsxs)('div', {
+                        className: s()(S.banner, O),
                         onMouseMove: () => U(!0),
                         onMouseLeave: () => U(!1),
                         style: {
-                            height: L,
-                            minHeight: L,
+                            height: D,
+                            minHeight: D,
                             backgroundImage: null != G ? 'url('.concat(G, ')') : void 0,
-                            backgroundColor: 'COMPLETE' !== k ? c.Z.unsafe_rawColors.PRIMARY_800.css : V
+                            backgroundColor: 'COMPLETE' !== k ? u.Z.unsafe_rawColors.PRIMARY_800.css : H
                         },
-                        children: [!x && (0, I.F8)(G) && (0, i.jsx)(h.Z, { className: S.gifTag }), v]
+                        children: [!x && (0, I.F8)(G) && (0, r.jsx)(f.Z, { className: S.gifTag }), N]
                     })
                 ]
             })
@@ -102,13 +101,13 @@ function v(e) {
     });
 }
 function N(e) {
-    let { profileType: t, displayProfile: n, canUsePremiumProfileCustomization: r = !1, ...a } = e,
-        o = g.q[t],
-        s = r || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
-    return (0, i.jsx)(v, {
+    let { profileType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1, ...a } = e,
+        s = T.q[t],
+        o = i || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
+    return (0, r.jsx)(A, {
         ...a,
-        ...o,
+        ...s,
         displayProfile: n,
-        themePadding: s ? o.themePadding : 0
+        themePadding: o ? s.themePadding : 0
     });
 }

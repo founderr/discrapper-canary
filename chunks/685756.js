@@ -1,37 +1,41 @@
 n.d(t, {
     V: function () {
-        return o;
+        return s;
     },
     Z: function () {
-        return Y;
+        return L;
     }
-});
+}),
+    n(518263),
+    n(970173),
+    n(520712),
+    n(268111),
+    n(941497),
+    n(32026),
+    n(480839),
+    n(744285),
+    n(492257),
+    n(873817),
+    n(47120),
+    n(789020);
 var r,
     i,
     a,
+    s,
     o,
-    s = n(518263);
-var l = n(970173);
-var u = n(520712);
-var c = n(268111);
-var d = n(941497);
-var _ = n(32026);
-var E = n(480839);
-var f = n(744285);
-var h = n(492257);
-var p = n(873817);
-var m = n(47120);
-var I = n(789020);
-var T = n(512722),
-    g = n.n(T),
-    S = n(261470),
-    A = n(47770),
-    v = n(710845),
-    N = n(857192),
-    O = n(70956),
-    R = n(358085),
-    C = n(65154);
-function y(e, t, n) {
+    l,
+    u,
+    c,
+    d = n(512722),
+    _ = n.n(d),
+    E = n(261470),
+    f = n(47770),
+    h = n(710845),
+    p = n(857192),
+    I = n(70956),
+    m = n(358085),
+    T = n(65154);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,27 +48,12 @@ function y(e, t, n) {
         e
     );
 }
-let L = 3,
-    b = 8;
-function D() {}
-!(function (e) {
-    (e[(e.IDENTIFY = 0)] = 'IDENTIFY'), (e[(e.SELECT_PROTOCOL = 1)] = 'SELECT_PROTOCOL'), (e[(e.READY = 2)] = 'READY'), (e[(e.HEARTBEAT = 3)] = 'HEARTBEAT'), (e[(e.SELECT_PROTOCOL_ACK = 4)] = 'SELECT_PROTOCOL_ACK'), (e[(e.SPEAKING = 5)] = 'SPEAKING'), (e[(e.HEARTBEAT_ACK = 6)] = 'HEARTBEAT_ACK'), (e[(e.RESUME = 7)] = 'RESUME'), (e[(e.HELLO = 8)] = 'HELLO'), (e[(e.RESUMED = 9)] = 'RESUMED'), (e[(e.CLIENT_CONNECT = 11)] = 'CLIENT_CONNECT'), (e[(e.VIDEO = 12)] = 'VIDEO'), (e[(e.CLIENT_DISCONNECT = 13)] = 'CLIENT_DISCONNECT'), (e[(e.SESSION_UPDATE = 14)] = 'SESSION_UPDATE'), (e[(e.MEDIA_SINK_WANTS = 15)] = 'MEDIA_SINK_WANTS'), (e[(e.VOICE_BACKEND_VERSION = 16)] = 'VOICE_BACKEND_VERSION'), (e[(e.CHANNEL_OPTIONS_UPDATE = 17)] = 'CHANNEL_OPTIONS_UPDATE'), (e[(e.FLAGS = 18)] = 'FLAGS'), (e[(e.PLATFORM = 20)] = 'PLATFORM'), (e[(e.DAVE_PROTOCOL_PREPARE_TRANSITION = 21)] = 'DAVE_PROTOCOL_PREPARE_TRANSITION'), (e[(e.DAVE_PROTOCOL_EXECUTE_TRANSITION = 22)] = 'DAVE_PROTOCOL_EXECUTE_TRANSITION'), (e[(e.DAVE_PROTOCOL_READY_FOR_TRANSITION = 23)] = 'DAVE_PROTOCOL_READY_FOR_TRANSITION'), (e[(e.DAVE_PROTOCOL_PREPARE_EPOCH = 24)] = 'DAVE_PROTOCOL_PREPARE_EPOCH'), (e[(e.MLS_EXTERNAL_SENDER_PACKAGE = 25)] = 'MLS_EXTERNAL_SENDER_PACKAGE'), (e[(e.MLS_KEY_PACKAGE = 26)] = 'MLS_KEY_PACKAGE'), (e[(e.MLS_PROPOSALS = 27)] = 'MLS_PROPOSALS'), (e[(e.MLS_COMMIT_WELCOME = 28)] = 'MLS_COMMIT_WELCOME'), (e[(e.MLS_PREPARE_COMMIT_TRANSITION = 29)] = 'MLS_PREPARE_COMMIT_TRANSITION'), (e[(e.MLS_WELCOME = 30)] = 'MLS_WELCOME'), (e[(e.MLS_INVALID_COMMIT_WELCOME = 31)] = 'MLS_INVALID_COMMIT_WELCOME'), (e[(e.CLIENT_CANNOT_REACH_RTC_SERVER = 32)] = 'CLIENT_CANNOT_REACH_RTC_SERVER');
-})(r || (r = {})),
-    !(function (e) {
-        (e[(e.AUTHENTICATION_FAILED = 4004)] = 'AUTHENTICATION_FAILED'), (e[(e.INVALID_SESSION = 4006)] = 'INVALID_SESSION'), (e[(e.SERVER_NOT_FOUND = 4011)] = 'SERVER_NOT_FOUND'), (e[(e.SERVER_CRASH = 4015)] = 'SERVER_CRASH'), (e[(e.CANCELED = 4016)] = 'CANCELED'), (e[(e.HEARTBEAT_TIMEOUT = 4800)] = 'HEARTBEAT_TIMEOUT'), (e[(e.UNRESUMABLE = 4801)] = 'UNRESUMABLE'), (e[(e.RESET_BACKOFF = 4802)] = 'RESET_BACKOFF');
-    })(i || (i = {})),
-    !(function (e) {
-        (e[(e.DISCONNECTED = 0)] = 'DISCONNECTED'), (e[(e.CONNECTING = 1)] = 'CONNECTING'), (e[(e.IDENTIFYING = 2)] = 'IDENTIFYING'), (e[(e.RESUMING = 3)] = 'RESUMING'), (e[(e.CONNECTED = 4)] = 'CONNECTED'), (e[(e.RECONNECTING = 5)] = 'RECONNECTING');
-    })(a || (a = {}));
-let M = 20 * O.Z.Millis.SECOND,
-    P = 3,
-    U = 1 * O.Z.Millis.MINUTE,
-    w = 0.25,
-    x = 0.1,
-    G = 5 * O.Z.Millis.SECOND,
-    k = 2,
-    B = 8;
-function F(e) {
+function g() {}
+((o = r || (r = {}))[(o.IDENTIFY = 0)] = 'IDENTIFY'), (o[(o.SELECT_PROTOCOL = 1)] = 'SELECT_PROTOCOL'), (o[(o.READY = 2)] = 'READY'), (o[(o.HEARTBEAT = 3)] = 'HEARTBEAT'), (o[(o.SELECT_PROTOCOL_ACK = 4)] = 'SELECT_PROTOCOL_ACK'), (o[(o.SPEAKING = 5)] = 'SPEAKING'), (o[(o.HEARTBEAT_ACK = 6)] = 'HEARTBEAT_ACK'), (o[(o.RESUME = 7)] = 'RESUME'), (o[(o.HELLO = 8)] = 'HELLO'), (o[(o.RESUMED = 9)] = 'RESUMED'), (o[(o.CLIENT_CONNECT = 11)] = 'CLIENT_CONNECT'), (o[(o.VIDEO = 12)] = 'VIDEO'), (o[(o.CLIENT_DISCONNECT = 13)] = 'CLIENT_DISCONNECT'), (o[(o.SESSION_UPDATE = 14)] = 'SESSION_UPDATE'), (o[(o.MEDIA_SINK_WANTS = 15)] = 'MEDIA_SINK_WANTS'), (o[(o.VOICE_BACKEND_VERSION = 16)] = 'VOICE_BACKEND_VERSION'), (o[(o.CHANNEL_OPTIONS_UPDATE = 17)] = 'CHANNEL_OPTIONS_UPDATE'), (o[(o.FLAGS = 18)] = 'FLAGS'), (o[(o.PLATFORM = 20)] = 'PLATFORM'), (o[(o.DAVE_PROTOCOL_PREPARE_TRANSITION = 21)] = 'DAVE_PROTOCOL_PREPARE_TRANSITION'), (o[(o.DAVE_PROTOCOL_EXECUTE_TRANSITION = 22)] = 'DAVE_PROTOCOL_EXECUTE_TRANSITION'), (o[(o.DAVE_PROTOCOL_READY_FOR_TRANSITION = 23)] = 'DAVE_PROTOCOL_READY_FOR_TRANSITION'), (o[(o.DAVE_PROTOCOL_PREPARE_EPOCH = 24)] = 'DAVE_PROTOCOL_PREPARE_EPOCH'), (o[(o.MLS_EXTERNAL_SENDER_PACKAGE = 25)] = 'MLS_EXTERNAL_SENDER_PACKAGE'), (o[(o.MLS_KEY_PACKAGE = 26)] = 'MLS_KEY_PACKAGE'), (o[(o.MLS_PROPOSALS = 27)] = 'MLS_PROPOSALS'), (o[(o.MLS_COMMIT_WELCOME = 28)] = 'MLS_COMMIT_WELCOME'), (o[(o.MLS_PREPARE_COMMIT_TRANSITION = 29)] = 'MLS_PREPARE_COMMIT_TRANSITION'), (o[(o.MLS_WELCOME = 30)] = 'MLS_WELCOME'), (o[(o.MLS_INVALID_COMMIT_WELCOME = 31)] = 'MLS_INVALID_COMMIT_WELCOME'), (o[(o.CLIENT_CANNOT_REACH_RTC_SERVER = 32)] = 'CLIENT_CANNOT_REACH_RTC_SERVER'), ((l = i || (i = {}))[(l.AUTHENTICATION_FAILED = 4004)] = 'AUTHENTICATION_FAILED'), (l[(l.INVALID_SESSION = 4006)] = 'INVALID_SESSION'), (l[(l.SERVER_NOT_FOUND = 4011)] = 'SERVER_NOT_FOUND'), (l[(l.SERVER_CRASH = 4015)] = 'SERVER_CRASH'), (l[(l.CANCELED = 4016)] = 'CANCELED'), (l[(l.HEARTBEAT_TIMEOUT = 4800)] = 'HEARTBEAT_TIMEOUT'), (l[(l.UNRESUMABLE = 4801)] = 'UNRESUMABLE'), (l[(l.RESET_BACKOFF = 4802)] = 'RESET_BACKOFF'), ((u = a || (a = {}))[(u.DISCONNECTED = 0)] = 'DISCONNECTED'), (u[(u.CONNECTING = 1)] = 'CONNECTING'), (u[(u.IDENTIFYING = 2)] = 'IDENTIFYING'), (u[(u.RESUMING = 3)] = 'RESUMING'), (u[(u.CONNECTED = 4)] = 'CONNECTED'), (u[(u.RECONNECTING = 5)] = 'RECONNECTING');
+let A = 20 * I.Z.Millis.SECOND,
+    N = 1 * I.Z.Millis.MINUTE,
+    O = 5 * I.Z.Millis.SECOND;
+function R(e) {
     return e.map((e) => ({
         name: e.name,
         type: e.type,
@@ -75,7 +64,7 @@ function F(e) {
         decode: e.decode
     }));
 }
-function Z(e) {
+function v(e) {
     return null == e
         ? void 0
         : e.map((e) => ({
@@ -97,20 +86,19 @@ function Z(e) {
                       : void 0
           }));
 }
-function V(e) {
-    if ('audio' === e) return C.Tr.AUDIO;
-    if ('test' === e) return C.Tr.TEST;
-    if ('screen' === e) return C.Tr.SCREEN;
-    else return C.Tr.VIDEO;
-}
-function H(e) {
+function C(e) {
     var t;
     return null !==
         (t =
             null == e
                 ? void 0
                 : e.map((e) => ({
-                      type: V(e.type),
+                      type: (function (e) {
+                          if ('audio' === e) return T.Tr.AUDIO;
+                          if ('test' === e) return T.Tr.TEST;
+                          if ('screen' === e) return T.Tr.SCREEN;
+                          else return T.Tr.VIDEO;
+                      })(e.type),
                       rid: e.rid,
                       ssrc: e.ssrc,
                       rtxSsrc: e.rtx_ssrc,
@@ -130,10 +118,8 @@ function H(e) {
         ? t
         : [];
 }
-!(function (e) {
-    (e.Connecting = 'connecting'), (e.Connect = 'connect'), (e.Disconnect = 'disconnect'), (e.Resuming = 'resuming'), (e.Ready = 'ready'), (e.Speaking = 'speaking'), (e.Video = 'video'), (e.Ping = 'ping'), (e.ClientConnect = 'client-connect'), (e.ClientDisconnect = 'client-disconnect'), (e.Codecs = 'codecs'), (e.MediaSessionId = 'media-session-id'), (e.MediaSinkWants = 'media-sink-wants'), (e.VoiceBackendVersion = 'voice-backend-version'), (e.KeyframeInterval = 'keyframe-interval'), (e.ChannelOptionsUpdateSecureFramesProtocol = 'update-secure-frames-protocol'), (e.Flags = 'flags'), (e.Platform = 'platform'), (e.SDP = 'sdp'), (e.Encryption = 'encryption'), (e.BandwidthEstimationExperiment = 'bandwidth-estimation-experiment'), (e.SecureFramesInit = 'secure-frames-init'), (e.SecureFramesPrepareTransition = 'secure-frames-prepare-transition'), (e.SecureFramesExecuteTransition = 'secure-frames-execute-transition'), (e.SecureFramesPrepareEpoch = 'secure-frames-prepare-epoch'), (e.MLSExternalSenderPackage = 'mls-external-sender-package'), (e.MLSProposals = 'mls-proposals'), (e.MLSPrepareCommitTransition = 'mls-prepare-commit-transition'), (e.MLSWelcome = 'mls-welcome');
-})(o || (o = {}));
-class Y extends A.Z {
+((c = s || (s = {})).Connecting = 'connecting'), (c.Connect = 'connect'), (c.Disconnect = 'disconnect'), (c.Resuming = 'resuming'), (c.Ready = 'ready'), (c.Speaking = 'speaking'), (c.Video = 'video'), (c.Ping = 'ping'), (c.ClientConnect = 'client-connect'), (c.ClientDisconnect = 'client-disconnect'), (c.Codecs = 'codecs'), (c.MediaSessionId = 'media-session-id'), (c.MediaSinkWants = 'media-sink-wants'), (c.VoiceBackendVersion = 'voice-backend-version'), (c.KeyframeInterval = 'keyframe-interval'), (c.ChannelOptionsUpdateSecureFramesProtocol = 'update-secure-frames-protocol'), (c.Flags = 'flags'), (c.Platform = 'platform'), (c.SDP = 'sdp'), (c.Encryption = 'encryption'), (c.BandwidthEstimationExperiment = 'bandwidth-estimation-experiment'), (c.SecureFramesInit = 'secure-frames-init'), (c.SecureFramesPrepareTransition = 'secure-frames-prepare-transition'), (c.SecureFramesExecuteTransition = 'secure-frames-execute-transition'), (c.SecureFramesPrepareEpoch = 'secure-frames-prepare-epoch'), (c.MLSExternalSenderPackage = 'mls-external-sender-package'), (c.MLSProposals = 'mls-proposals'), (c.MLSPrepareCommitTransition = 'mls-prepare-commit-transition'), (c.MLSWelcome = 'mls-welcome');
+class L extends f.Z {
     createWebSocket() {
         this.logger.info('[CONNECT] '.concat(this.url)),
             null !== this.webSocket && (this.logger.error('Connect called with already existing websocket'), this.cleanupWebSocket((e) => e.close(4000))),
@@ -141,8 +127,8 @@ class Y extends A.Z {
             (this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
                 this.handleClose(!1, 0, 'The connection timed out after '.concat(e, ' ms - did not receive OP_HELLO in time.'));
-            }, M));
-        let e = (this.webSocket = new WebSocket(''.concat(this.url, '?v=').concat(b)));
+            }, A));
+        let e = (this.webSocket = new WebSocket(''.concat(this.url, '?v=').concat(8)));
         (e.binaryType = 'arraybuffer'),
             (e.onopen = () => {
                 1 === this.connectionState ? this.emit('connect') : 5 === this.connectionState && this.doResumeOrClose(), (this.connectionState = 4);
@@ -151,7 +137,7 @@ class Y extends A.Z {
             }),
             (e.onmessage = (e) => {
                 let { op: t, seq: n, d: r } = this.parseWebSocketMessage(e);
-                if ((n && (this.lastRecvSeqNum = n), N.default.isLoggingGatewayEvents)) {
+                if ((n && (this.lastRecvSeqNum = n), p.default.isLoggingGatewayEvents)) {
                     if (r instanceof Uint8Array) {
                         let e = [...r].map((e) => e.toString(16).padStart(2, '0')).join('');
                         this.logger.info('~> '.concat(t, ': 0x').concat(e));
@@ -172,7 +158,7 @@ class Y extends A.Z {
                         break;
                     case 5:
                         let i = r.speaking;
-                        'boolean' == typeof i && (i = i ? C.Dg.VOICE : C.Dg.NONE), this.emit('speaking', r.user_id, r.ssrc, i);
+                        'boolean' == typeof i && (i = i ? T.Dg.VOICE : T.Dg.NONE), this.emit('speaking', r.user_id, r.ssrc, i);
                         break;
                     case 3:
                         this.sendHeartbeat();
@@ -181,7 +167,7 @@ class Y extends A.Z {
                         this.handleHeartbeatAck(r);
                         break;
                     case 12:
-                        this.emit('video', r.user_id, r.audio_ssrc, r.video_ssrc, H(r.streams));
+                        this.emit('video', r.user_id, r.audio_ssrc, r.video_ssrc, C(r.streams));
                         break;
                     case 11:
                         this.emit('client-connect', r.user_ids);
@@ -220,14 +206,14 @@ class Y extends A.Z {
                         this.emit('mls-proposals', r);
                         break;
                     case 29: {
-                        let e = new DataView(r.buffer, r.byteOffset, k).getUint16(0, !1),
-                            t = r.slice(k);
+                        let e = new DataView(r.buffer, r.byteOffset, 2).getUint16(0, !1),
+                            t = r.slice(2);
                         this.emit('mls-prepare-commit-transition', e, t);
                         break;
                     }
                     case 30: {
-                        let e = new DataView(r.buffer, r.byteOffset, k).getUint16(0, !1),
-                            t = r.slice(k);
+                        let e = new DataView(r.buffer, r.byteOffset, 2).getUint16(0, !1),
+                            t = r.slice(2);
                         this.emit('mls-welcome', e, t);
                         break;
                     }
@@ -249,7 +235,7 @@ class Y extends A.Z {
             op: e,
             d: t
         });
-        N.default.isLoggingGatewayEvents && this.logger.info('<~ '.concat(r));
+        p.default.isLoggingGatewayEvents && this.logger.info('<~ '.concat(r));
         try {
             n.send(r);
         } catch (e) {}
@@ -268,7 +254,7 @@ class Y extends A.Z {
     }
     doResumeOrClose() {
         let e = Date.now();
-        null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= U) ? (this.doResume(), (this.lastHeartbeatAckTime = e)) : this.disconnect(!1, 4801, 'Cannot resume connection.');
+        null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= N) ? (this.doResume(), (this.lastHeartbeatAckTime = e)) : this.disconnect(!1, 4801, 'Cannot resume connection.');
     }
     doResume() {
         var e, t, n;
@@ -290,10 +276,10 @@ class Y extends A.Z {
     }
     handleHello(e) {
         var t, n, r;
-        if (((this.serverVersion = null !== (t = e.v) && void 0 !== t ? t : L), this.serverVersion <= 3)) {
-            let t = R.isPlatformEmbedded ? w : x;
+        if (((this.serverVersion = null !== (t = e.v) && void 0 !== t ? t : 3), this.serverVersion <= 3)) {
+            let t = m.isPlatformEmbedded ? 0.25 : 0.1;
             this.heartbeatInterval = e.heartbeat_interval * t;
-        } else (this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier), !R.isPlatformEmbedded && (this.heartbeatInterval = Math.min(G, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
+        } else (this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier), !m.isPlatformEmbedded && (this.heartbeatInterval = Math.min(O, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
         let i = Date.now() - this.connectionStartTime;
         this.logger.info(
             '[HELLO] heartbeat interval: '
@@ -306,14 +292,14 @@ class Y extends A.Z {
     handleReady(e) {
         this.backoff.succeed();
         let t = Date.now() - this.connectionStartTime;
-        this.logger.info('[READY] took '.concat(t, ' ms')), this.serverVersion >= 6 && this.send(16, {}), this.emit('ready', e.ip, e.port, e.modes, e.ssrc, H(e.streams), e.experiments);
+        this.logger.info('[READY] took '.concat(t, ' ms')), this.serverVersion >= 6 && this.send(16, {}), this.emit('ready', e.ip, e.port, e.modes, e.ssrc, C(e.streams), e.experiments);
     }
     handleResumed(e) {
         this.backoff.succeed();
     }
     handleClose(e, t, n) {
         if (((this.connectionState = 0), (e = e || !1), this.cleanupWebSocket(), 4004 === t || 4015 === t || 4011 === t || 4006 === t)) return this.disconnect(e, t, n);
-        if (this.backoff.fails > P) this.logger.warn('[WS CLOSED] Backoff exceed. Resetting.'), this.disconnect(e, t, n);
+        if (this.backoff.fails > 3) this.logger.warn('[WS CLOSED] Backoff exceed. Resetting.'), this.disconnect(e, t, n);
         else {
             let r = this.backoff.fail(() => this.reconnect(e, t, n));
             this.logger.warn(
@@ -334,7 +320,7 @@ class Y extends A.Z {
     cleanupWebSocket(e) {
         this.stopHeartbeater(), this.clearHelloTimeout();
         let t = this.webSocket;
-        (this.webSocket = null), null != t && ((t.onopen = D), (t.onmessage = D), (t.onerror = D), (t.onclose = D), null == e || e(t)), this.backoff.cancel();
+        (this.webSocket = null), null != t && ((t.onopen = g), (t.onmessage = g), (t.onerror = g), (t.onclose = g), null == e || e(t)), this.backoff.cancel();
     }
     cleanupState() {
         (this.serverId = null), (this.sessionId = null), (this.token = null), (this.resumable = !1), (this.lastRecvSeqNum = null);
@@ -344,13 +330,12 @@ class Y extends A.Z {
         {
             let t = new Uint8Array(e.data),
                 n = null;
-            this.serverVersion >= B && (n = new DataView(t.buffer).getUint16(0, !1));
-            let r = this.serverVersion >= B ? 2 : 0,
-                i = 1;
+            this.serverVersion >= 8 && (n = new DataView(t.buffer).getUint16(0, !1));
+            let r = this.serverVersion >= 8 ? 2 : 0;
             return {
                 op: t[r],
                 seq: n,
-                d: t.subarray(r + i)
+                d: t.subarray(r + 1)
             };
         }
     }
@@ -360,7 +345,7 @@ class Y extends A.Z {
     handleHeartbeatAck(e) {
         this.logger.info('Heartbeat ACK received');
         let t = null;
-        (t = this.serverVersion >= B ? e.t : e), this.emit('ping', Date.now() - t), (this.lastHeartbeatAckTime = Date.now()), (this.heartbeatAck = !0), null !== this.expeditedHeartbeatTimeout && (clearTimeout(this.expeditedHeartbeatTimeout), (this.expeditedHeartbeatTimeout = null), this.logger.info('Expedited heartbeat succeeded'));
+        (t = this.serverVersion >= 8 ? e.t : e), this.emit('ping', Date.now() - t), (this.lastHeartbeatAckTime = Date.now()), (this.heartbeatAck = !0), null !== this.expeditedHeartbeatTimeout && (clearTimeout(this.expeditedHeartbeatTimeout), (this.expeditedHeartbeatTimeout = null), this.logger.info('Expedited heartbeat succeeded'));
     }
     handleHeartbeatTimeout() {
         this.cleanupWebSocket((e) => e.close(4000));
@@ -368,7 +353,7 @@ class Y extends A.Z {
         this.logger.warn('[HEARTBEAT ACK TIMEOUT] reconnecting in '.concat((e / 1000).toFixed(2), ' seconds.'));
     }
     startHeartbeater() {
-        g()(null != this.heartbeatInterval, 'RTCControlSocket: Heartbeat interval should never null here.'),
+        _()(null != this.heartbeatInterval, 'RTCControlSocket: Heartbeat interval should never null here.'),
             this.logger.info('Starting heartbeat with interval: '.concat(this.heartbeatInterval)),
             null !== this.heartbeater && clearInterval(this.heartbeater),
             (this.heartbeatAck = !0),
@@ -377,7 +362,7 @@ class Y extends A.Z {
             }, this.heartbeatInterval));
     }
     sendHeartbeat() {
-        if (this.serverVersion >= B) {
+        if (this.serverVersion >= 8) {
             var e;
             let t = null !== (e = this.lastRecvSeqNum) && void 0 !== e ? e : -1;
             this.logger.info('Sending heartbeat with last received sequence number: '.concat(t)),
@@ -394,7 +379,7 @@ class Y extends A.Z {
         return 0 !== this.connectionState ? (this.logger.error('Cannot start a new connection, connection state is not disconnected'), !1) : ((this.connectionState = 1), this.createWebSocket(), this.emit('connecting'), !0);
     }
     identify(e) {
-        let { serverId: t, userId: n, sessionId: r, token: i, maxDaveProtocolVersion: a, video: o = !1, streamParameters: s } = e;
+        let { serverId: t, userId: n, sessionId: r, token: i, maxDaveProtocolVersion: a, video: s = !1, streamParameters: o } = e;
         (this.serverId = t),
             (this.sessionId = r),
             (this.token = i),
@@ -405,8 +390,8 @@ class Y extends A.Z {
                 session_id: r,
                 token: i,
                 max_dave_protocol_version: a,
-                video: o,
-                streams: Z(s)
+                video: s,
+                streams: v(o)
             });
     }
     expeditedHeartbeat(e) {
@@ -445,7 +430,7 @@ class Y extends A.Z {
               ? ((i = n.sdp),
                 (a = {
                     ...n,
-                    codecs: F(n.codecs),
+                    codecs: R(n.codecs),
                     rtc_connection_id: t
                 }))
               : 'address' in n &&
@@ -461,7 +446,7 @@ class Y extends A.Z {
                 }),
                 (a = {
                     ...n,
-                    codecs: F(n.codecs),
+                    codecs: R(n.codecs),
                     rtc_connection_id: t,
                     experiments: r
                 })),
@@ -472,7 +457,7 @@ class Y extends A.Z {
             });
     }
     updateSession(e) {
-        this.send(14, { codecs: F(e.codecs) });
+        this.send(14, { codecs: R(e.codecs) });
     }
     speaking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
@@ -488,7 +473,7 @@ class Y extends A.Z {
             audio_ssrc: e,
             video_ssrc: t,
             rtx_ssrc: n,
-            streams: Z(r)
+            streams: v(r)
         });
     }
     mediaSinkWants(e) {
@@ -512,7 +497,7 @@ class Y extends A.Z {
     setHeartbeatIntervalModifier(e) {
         this.heartbeatIntervalModifier = e;
     }
-    constructor(e, t = C.Yn.DEFAULT) {
-        super(), y(this, 'url', void 0), y(this, 'logger', void 0), y(this, 'backoff', new S.Z(1000, 5000)), y(this, 'webSocket', void 0), y(this, 'connectionState', void 0), y(this, 'heartbeatInterval', void 0), y(this, 'helloTimeout', void 0), y(this, 'heartbeater', void 0), y(this, 'lastHeartbeatAckTime', void 0), y(this, 'expeditedHeartbeatTimeout', void 0), y(this, 'heartbeatAck', void 0), y(this, 'heartbeatIntervalModifier', void 0), y(this, 'connectionStartTime', void 0), y(this, 'lastRecvSeqNum', void 0), y(this, 'sessionId', void 0), y(this, 'serverId', void 0), y(this, 'token', void 0), y(this, 'resumable', void 0), y(this, 'serverVersion', 0), (this.url = e), (this.logger = new v.Z('RTCControlSocket('.concat(t, ')'))), (this.webSocket = null), (this.connectionState = 0), (this.helloTimeout = null), (this.lastHeartbeatAckTime = null), (this.heartbeatInterval = null), (this.heartbeater = null), (this.heartbeatAck = !0), (this.expeditedHeartbeatTimeout = null), (this.heartbeatIntervalModifier = 1), (this.connectionStartTime = 0), (this.lastRecvSeqNum = null), (this.sessionId = null), (this.serverId = null), (this.token = null), (this.resumable = !1);
+    constructor(e, t = T.Yn.DEFAULT) {
+        super(), S(this, 'url', void 0), S(this, 'logger', void 0), S(this, 'backoff', new E.Z(1000, 5000)), S(this, 'webSocket', void 0), S(this, 'connectionState', void 0), S(this, 'heartbeatInterval', void 0), S(this, 'helloTimeout', void 0), S(this, 'heartbeater', void 0), S(this, 'lastHeartbeatAckTime', void 0), S(this, 'expeditedHeartbeatTimeout', void 0), S(this, 'heartbeatAck', void 0), S(this, 'heartbeatIntervalModifier', void 0), S(this, 'connectionStartTime', void 0), S(this, 'lastRecvSeqNum', void 0), S(this, 'sessionId', void 0), S(this, 'serverId', void 0), S(this, 'token', void 0), S(this, 'resumable', void 0), S(this, 'serverVersion', 0), (this.url = e), (this.logger = new h.Z('RTCControlSocket('.concat(t, ')'))), (this.webSocket = null), (this.connectionState = 0), (this.helloTimeout = null), (this.lastHeartbeatAckTime = null), (this.heartbeatInterval = null), (this.heartbeater = null), (this.heartbeatAck = !0), (this.expeditedHeartbeatTimeout = null), (this.heartbeatIntervalModifier = 1), (this.connectionStartTime = 0), (this.lastRecvSeqNum = null), (this.sessionId = null), (this.serverId = null), (this.token = null), (this.resumable = !1);
     }
 }

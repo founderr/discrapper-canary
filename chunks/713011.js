@@ -9,11 +9,10 @@ function a(e) {
     return function () {
         var t = e.getMonitor(),
             n = e.getRegistry();
-        o(t);
-        var r = t.getSourceId();
-        return null != r && (n.getSource(r, !0).endDrag(t, r), n.unpinSource()), { type: i.Bs };
+        (function (e) {
+            (0, r.k)(e.isDragging(), 'Cannot call endDrag while not dragging.');
+        })(t);
+        var a = t.getSourceId();
+        return null != a && (n.getSource(a, !0).endDrag(t, a), n.unpinSource()), { type: i.Bs };
     };
-}
-function o(e) {
-    (0, r.k)(e.isDragging(), 'Cannot call endDrag while not dragging.');
 }

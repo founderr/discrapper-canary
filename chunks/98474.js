@@ -1,40 +1,38 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return T;
     }
-});
-var r = n(47120);
+}),
+    n(47120);
 var i = n(735250),
-    a = n(470079),
+    s = n(470079),
     o = n(887024),
-    s = n(212433),
+    a = n(212433),
     l = n(748780),
-    u = n(481060),
+    r = n(481060),
     c = n(596454),
     d = n(745510),
-    _ = n(314910),
-    E = n(912893),
-    f = n(768581),
-    h = n(176354),
-    p = n(675654),
-    m = n(867494);
-let I = 450,
-    T = 0.5,
-    g = [];
-function S(e) {
-    let { messageId: t, emoji: n, startPosition: r, targetPosition: S } = e,
-        [A, v] = a.useState(0),
-        [N, O] = a.useState(0),
-        [R, C] = a.useState(null),
-        { confettiCanvas: y } = a.useContext(d.h),
-        L = (0, o.uR)(y, R),
-        b = a.useMemo(
+    u = n(314910),
+    h = n(912893),
+    m = n(768581),
+    p = n(176354),
+    f = n(675654),
+    g = n(867494);
+let _ = [];
+function T(e) {
+    let { messageId: t, emoji: n, startPosition: T, targetPosition: v } = e,
+        [E, b] = s.useState(0),
+        [I, C] = s.useState(0),
+        [S, R] = s.useState(null),
+        { confettiCanvas: x } = s.useContext(d.h),
+        N = (0, o.uR)(x, S),
+        O = s.useMemo(
             () => [
                 {
                     src:
                         null == n.id
-                            ? h.ZP.getURL(n.name)
-                            : f.ZP.getEmojiURL({
+                            ? p.ZP.getURL(n.name)
+                            : m.ZP.getEmojiURL({
                                   id: n.id,
                                   animated: !1,
                                   size: 22
@@ -44,78 +42,78 @@ function S(e) {
             ],
             [n.name, n.id]
         ),
-        D = S.x - (S.width / 2) * T,
-        M = S.y - (S.height / 2) * T,
-        P = (0, u.useSpring)({
-            from: { y: r.y },
-            to: { y: M },
+        Z = v.x - (v.width / 2) * 0.5,
+        A = v.y - (v.height / 2) * 0.5,
+        j = (0, r.useSpring)({
+            from: { y: T.y },
+            to: { y: A },
             config: {
-                duration: I,
+                duration: 450,
                 easing: l.Z.Easing.in(l.Z.Easing.exp)
             },
             onChange: (e) => {
                 let { y: t } = e;
-                O(t);
+                C(t);
             }
         }),
-        U = (0, u.useSpring)({
+        M = (0, r.useSpring)({
             from: {
-                x: r.x,
+                x: T.x,
                 scale: 1,
                 opacity: 1
             },
             to: {
-                x: D,
-                scale: T,
+                x: Z,
+                scale: 0.5,
                 opacity: 0.4
             },
             config: {
-                duration: I,
+                duration: 450,
                 easing: l.Z.Easing.in(l.Z.Easing.ease)
             },
             onRest: () => {
-                (0, E.G)(t, n.name, n.id);
+                (0, h.G)(t, n.name, n.id);
             },
             onChange: (e) => {
                 let { x: t } = e;
-                v(t);
+                b(t);
             }
         });
     return (
-        a.useEffect(() => {
-            A > 0 &&
-                N > 0 &&
-                L.createConfetti({
-                    ...p.We,
+        s.useEffect(() => {
+            E > 0 &&
+                I > 0 &&
+                N.createConfetti({
+                    ...f.We,
                     position: {
                         type: 'static',
                         value: {
-                            x: A,
-                            y: N
+                            x: E,
+                            y: I
                         }
                     }
                 });
-        }, [L, A, N]),
+        }, [N, E, I]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Ji, {
-                    ref: C,
-                    sprites: b,
-                    colors: g,
-                    spriteWidth: p.Ko,
-                    spriteHeight: p.Ko
+                    ref: R,
+                    sprites: O,
+                    colors: _,
+                    spriteWidth: f.Ko,
+                    spriteHeight: f.Ko
                 }),
-                (0, i.jsx)(_.ZP, {
-                    children: (0, i.jsx)(s.animated.div, {
-                        style: { ...P },
-                        className: m.emojiContainer,
-                        children: (0, i.jsx)(s.animated.div, {
+                (0, i.jsx)(u.ZP, {
+                    children: (0, i.jsx)(a.animated.div, {
+                        style: { ...j },
+                        className: g.emojiContainer,
+                        children: (0, i.jsx)(a.animated.div, {
                             style: {
-                                ...U,
-                                opacity: U.opacity
+                                ...M,
+                                opacity: M.opacity
                             },
                             children: (0, i.jsx)(c.Z, {
-                                className: m.emoji,
+                                className: g.emoji,
                                 emojiId: n.id,
                                 emojiName: n.name,
                                 animated: n.animated,

@@ -1,31 +1,31 @@
 n.d(t, {
     VF: function () {
-        return P;
-    },
-    WW: function () {
         return b;
     },
+    WW: function () {
+        return L;
+    },
     XO: function () {
-        return y;
+        return v;
     },
     Yp: function () {
-        return C;
+        return R;
     },
     hC: function () {
-        return M;
+        return y;
     },
     o9: function () {
         return D;
     },
     zC: function () {
-        return L;
+        return C;
     }
 });
 var r = n(692547),
     i = n(481060),
     a = n(15385),
-    o = n(709586),
-    s = n(123245),
+    s = n(709586),
+    o = n(123245),
     l = n(981631);
 n(474936);
 var u = n(689938);
@@ -65,15 +65,7 @@ let c = () => ({
             description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_STICKERS
         };
     },
-    p = function () {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tokens.unsafe_rawColors.PREMIUM_PERK_YELLOW.css;
-        return {
-            color: e,
-            icon: StickerIcon,
-            description: i18n.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_STICKERS_UPLOAD.format({ numStickers: TotalStickerCountsByTier[BoostedGuildTiers.TIER_1] })
-        };
-    },
-    m = function (e) {
+    p = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
             n = 0,
             a = 0;
@@ -101,12 +93,12 @@ let c = () => ({
         icon: i.StarIcon,
         description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_VANITY_URL
     }),
-    T = () => ({
+    m = () => ({
         icon: a.Z,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
     }),
-    g = () => ({
-        icon: o.Z,
+    T = () => ({
+        icon: s.Z,
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PINK.css,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_BOOST_CRYSTAL
     }),
@@ -115,12 +107,12 @@ let c = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_YELLOW.css,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_SPECIAL_ROLE
     }),
-    A = () => ({
+    g = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
         icon: i.ReactionIcon,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_OTHERS
     }),
-    v = function () {
+    A = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_OTHER;
         return {
             color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
@@ -130,15 +122,10 @@ let c = () => ({
     },
     N = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
-        icon: s.Z,
+        icon: o.Z,
         description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_FILE_UPLOAD_TIER_3
     }),
-    O = () => ({
-        color: tokens.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
-        icon: ScreenArrowIcon,
-        description: i18n.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_SCREEN_SHARE_720P
-    }),
-    R = function () {
+    O = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css;
         return {
             color: e,
@@ -146,24 +133,24 @@ let c = () => ({
             description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_SCREEN_SHARE_1080P
         };
     };
-function C() {
-    return [f(), _(), h(), v()];
+function R() {
+    return [f(), _(), h(), A()];
 }
-function y() {
-    return [f(), m(l.Eu4.TIER_2), R(), v()];
+function v() {
+    return [f(), p(l.Eu4.TIER_2), O(), A()];
+}
+function C() {
+    return [p(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), N(), I(), A()];
 }
 function L() {
-    return [m(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), N(), I(), v()];
-}
-function b() {
-    return [I(), E(), m(l.Eu4.TIER_3), v()];
+    return [I(), E(), p(l.Eu4.TIER_3), A()];
 }
 function D() {
-    return [c(), h(), d(), v()];
+    return [c(), h(), d(), A()];
 }
-function M() {
-    return [h(), v()];
+function y() {
+    return [h(), A()];
 }
-function P() {
-    return [g(), S(), T(), A()];
+function b() {
+    return [T(), S(), m(), g()];
 }

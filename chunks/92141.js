@@ -1,34 +1,32 @@
 var r = n(821164),
-    i = 1,
-    a = Object.prototype.hasOwnProperty;
-function o(e, t, n, o, s, l) {
-    var u = n & i,
-        c = r(e),
-        d = c.length;
-    if (d != r(t).length && !u) return !1;
-    for (var _ = d; _--; ) {
-        var E = c[_];
-        if (!(u ? E in t : a.call(t, E))) return !1;
+    i = Object.prototype.hasOwnProperty;
+e.exports = function (e, t, n, a, s, o) {
+    var l = 1 & n,
+        u = r(e),
+        c = u.length;
+    if (c != r(t).length && !l) return !1;
+    for (var d = c; d--; ) {
+        var _ = u[d];
+        if (!(l ? _ in t : i.call(t, _))) return !1;
     }
-    var f = l.get(e);
-    if (f && l.get(t)) return f == t;
-    var h = !0;
-    l.set(e, t), l.set(t, e);
-    for (var p = u; ++_ < d; ) {
-        var m = e[(E = c[_])],
-            I = t[E];
-        if (o) var T = u ? o(I, m, E, t, e, l) : o(m, I, E, e, t, l);
-        if (!(void 0 === T ? m === I || s(m, I, n, o, l) : T)) {
-            h = !1;
+    var E = o.get(e);
+    if (E && o.get(t)) return E == t;
+    var f = !0;
+    o.set(e, t), o.set(t, e);
+    for (var h = l; ++d < c; ) {
+        var p = e[(_ = u[d])],
+            I = t[_];
+        if (a) var m = l ? a(I, p, _, t, e, o) : a(p, I, _, e, t, o);
+        if (!(void 0 === m ? p === I || s(p, I, n, a, o) : m)) {
+            f = !1;
             break;
         }
-        p || (p = 'constructor' == E);
+        h || (h = 'constructor' == _);
     }
-    if (h && !p) {
-        var g = e.constructor,
+    if (f && !h) {
+        var T = e.constructor,
             S = t.constructor;
-        g != S && 'constructor' in e && 'constructor' in t && !('function' == typeof g && g instanceof g && 'function' == typeof S && S instanceof S) && (h = !1);
+        T != S && 'constructor' in e && 'constructor' in t && !('function' == typeof T && T instanceof T && 'function' == typeof S && S instanceof S) && (f = !1);
     }
-    return l.delete(e), l.delete(t), h;
-}
-e.exports = o;
+    return o.delete(e), o.delete(t), f;
+};

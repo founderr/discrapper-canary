@@ -3,28 +3,28 @@ n.d(t, {
         return r;
     },
     BO: function () {
-        return eu;
+        return es;
     },
     DR: function () {
-        return er;
+        return et;
     },
     G5: function () {
-        return eo;
-    },
-    LE: function () {
-        return ea;
-    },
-    Rp: function () {
         return ei;
     },
+    LE: function () {
+        return er;
+    },
+    Rp: function () {
+        return en;
+    },
     SE: function () {
-        return e_;
+        return eu;
     },
     W_: function () {
-        return ed;
+        return el;
     },
     Y: function () {
-        return ec;
+        return eo;
     },
     Yi: function () {
         return X;
@@ -50,13 +50,14 @@ n.d(t, {
     xi: function () {
         return J;
     }
-});
+}),
+    n(47120);
 var r,
-    i = n(47120);
-var a = n(735250),
-    o = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    i,
+    a = n(735250),
+    s = n(470079),
+    o = n(120356),
+    l = n.n(o),
     u = n(392711),
     c = n.n(u),
     d = n(374470),
@@ -65,21 +66,21 @@ var a = n(735250),
     f = n(904245),
     h = n(45114),
     p = n(431279),
-    m = n(794295),
-    I = n(593472),
+    I = n(794295),
+    m = n(593472),
     T = n(110924),
-    g = n(858644),
-    S = n(249458),
+    S = n(858644),
+    g = n(249458),
     A = n(313201),
-    v = n(688465),
-    N = n(425886),
-    O = n(80966),
-    R = n(593545),
+    N = n(688465),
+    O = n(425886),
+    R = n(80966),
+    v = n(593545),
     C = n(479313),
-    y = n(765104),
-    L = n(505953),
-    b = n(695346),
-    D = n(201542),
+    L = n(765104),
+    D = n(505953),
+    y = n(695346),
+    b = n(201542),
     M = n(306680),
     P = n(594174),
     U = n(259580),
@@ -89,9 +90,9 @@ var a = n(735250),
     k = n(709054),
     B = n(217702),
     F = n(981631),
-    Z = n(420212),
-    V = n(814249),
-    H = n(689938),
+    V = n(420212),
+    H = n(814249),
+    Z = n(689938),
     Y = n(650968);
 let j = {
         delay: 300,
@@ -104,17 +105,17 @@ let j = {
         null == e || e(t), (0, G.Zj)(t);
     };
 function z(e) {
-    let { onVolumeChange: t, onMute: n, volume: r, autoMute: i, alt: s, renderAdjacentContent: l, renderOverlayContent: u, ...c } = e,
+    let { onVolumeChange: t, onMute: n, volume: r, autoMute: i, alt: o, renderAdjacentContent: l, renderOverlayContent: u, ...c } = e,
         d = W(t),
         _ = K(n);
     return (
         (r = null == r ? G.FC : r),
         (i = null == i ? G.rs : i),
-        (0, a.jsxs)(o.Fragment, {
+        (0, a.jsxs)(s.Fragment, {
             children: [
-                (0, a.jsx)(O.Z, {
+                (0, a.jsx)(R.Z, {
                     ...c,
-                    alt: s,
+                    alt: o,
                     volume: r,
                     autoMute: i,
                     onVolumeChange: d,
@@ -128,53 +129,54 @@ function z(e) {
     );
 }
 function q(e) {
-    let { onVolumeChange: t, volume: n, onMute: r, onVolumeShow: i, onVolumeHide: s, renderAdjacentContent: l, ...u } = e,
+    let { onVolumeChange: t, volume: n, onMute: r, onVolumeShow: i, onVolumeHide: o, renderAdjacentContent: l, ...u } = e,
         c = W(t),
         d = K(r);
-    n = null == n ? G.FC : n;
-    let _ = () => !1;
-    return (0, a.jsxs)(o.Fragment, {
-        children: [
-            (0, a.jsx)(N.Z, {
-                ...u,
-                onVolumeChange: c,
-                onMute: d,
-                onVolumeShow: i,
-                onVolumeHide: s,
-                volume: n,
-                autoMute: _,
-                renderLinkComponent: $
-            }),
-            null != l && l()
-        ]
-    });
+    return (
+        (n = null == n ? G.FC : n),
+        (0, a.jsxs)(s.Fragment, {
+            children: [
+                (0, a.jsx)(O.Z, {
+                    ...u,
+                    onVolumeChange: c,
+                    onMute: d,
+                    onVolumeShow: i,
+                    onVolumeHide: o,
+                    volume: n,
+                    autoMute: () => !1,
+                    renderLinkComponent: $
+                }),
+                null != l && l()
+            ]
+        })
+    );
 }
 function Q(e) {
     let { onVolumeChange: t, volume: n, onMute: r, ...i } = e,
-        o = W(t),
-        s = K(r);
+        s = W(t),
+        o = K(r);
     return (
         (n = null == n ? G.FC : n),
-        (0, a.jsx)(D.Z, {
+        (0, a.jsx)(b.Z, {
             ...i,
-            onVolumeChange: o,
-            onMute: s,
+            onVolumeChange: s,
+            onMute: o,
             volume: n
         })
     );
 }
 function X(e) {
     var t;
-    let { alt: n, hiddenSpoilers: r, renderAdjacentContent: i, containerClassName: s, imageContainerClassName: u, disableAltTextDisplay: c = !1, mediaLayoutType: d, imageContainerStyle: _, renderForwardComponent: f } = e,
+    let { alt: n, hiddenSpoilers: r, renderAdjacentContent: i, containerClassName: o, imageContainerClassName: u, disableAltTextDisplay: c = !1, mediaLayoutType: d, imageContainerStyle: _, renderForwardComponent: f } = e,
         h = d === B.hV.MOSAIC,
-        m = !c && b.H1.getSetting() && null != n && '' !== n && !0 !== r,
-        I = (e) => {
+        I = !c && y.H1.getSetting() && null != n && '' !== n && !0 !== r,
+        m = (e) => {
             let { altText: t } = e;
             return (0, a.jsxs)(E.Dialog, {
-                'aria-label': H.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE,
+                'aria-label': Z.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE,
                 className: Y.mediaMosaicAltTextPopout,
                 onKeyDown: (e) => {
-                    e.key === Z.mR.Escape &&
+                    e.key === V.mR.Escape &&
                         setTimeout(() => {
                             var e;
                             return null === (e = T.current) || void 0 === e ? void 0 : e.focus();
@@ -183,7 +185,7 @@ function X(e) {
                 children: [
                     (0, a.jsx)('span', {
                         className: Y.mediaMosaicAltTextPopoutTitle,
-                        children: H.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE
+                        children: Z.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE
                     }),
                     (0, a.jsx)('span', {
                         className: Y.mediaMosaicAltTextPopoutDescription,
@@ -192,15 +194,15 @@ function X(e) {
                 ]
             });
         },
-        T = o.createRef(),
-        g = (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Safari';
+        T = s.createRef(),
+        S = (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Safari';
     return (0, a.jsxs)('div', {
         className: l()(
             {
-                [Y.imageContentSafari]: g,
-                [Y.imageContent]: !g
+                [Y.imageContentSafari]: S,
+                [Y.imageContent]: !S
             },
-            s
+            o
         ),
         children: [
             (0, a.jsxs)('div', {
@@ -216,12 +218,12 @@ function X(e) {
                 ]
             }),
             h &&
-                m &&
+                I &&
                 (0, a.jsx)('div', {
                     className: Y.mediaMosaicAltTextContainer,
                     children: (0, a.jsx)(E.Popout, {
                         animation: E.Popout.Animation.FADE,
-                        renderPopout: () => (0, a.jsx)(I, { altText: n }),
+                        renderPopout: () => (0, a.jsx)(m, { altText: n }),
                         children: (e) =>
                             (0, a.jsx)(E.FocusRing, {
                                 offset: 4,
@@ -229,15 +231,15 @@ function X(e) {
                                     ...e,
                                     type: 'button',
                                     ref: T,
-                                    'aria-label': H.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE,
+                                    'aria-label': Z.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE,
                                     className: Y.mediaMosaicAltText,
-                                    children: H.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_CTA
+                                    children: Z.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_CTA
                                 })
                             })
                     })
                 }),
             !h &&
-                m &&
+                I &&
                 (0, a.jsx)('span', {
                     className: Y.altText,
                     children: n
@@ -246,43 +248,21 @@ function X(e) {
     });
 }
 function $(e) {
-    return (0, a.jsx)(m.Z, { ...e });
+    return (0, a.jsx)(I.Z, { ...e });
 }
 function J(e) {
     let { renderAdjacentContent: t, ...n } = e;
-    return (0, a.jsxs)(o.Fragment, {
-        children: [(0, a.jsx)(R.Z, { ...n }), null != t && t()]
+    return (0, a.jsxs)(s.Fragment, {
+        children: [(0, a.jsx)(v.Z, { ...n }), null != t && t()]
     });
 }
 function ee(e) {
-    return (0, a.jsx)(g.Z, { ...e });
+    return (0, a.jsx)(S.Z, { ...e });
 }
-function et(e) {
-    switch (e) {
-        case 0:
-            return H.Z.Messages.YOURE_VIEWING_OLDER_MESSAGES;
-        case 1:
-            return H.Z.Messages.JUMP_BAR_VIEWING_REPLY;
-        default:
-            return (0, x.vE)(e);
-    }
-}
-function en(e) {
-    switch (e) {
-        case 0:
-            return H.Z.Messages.JUMP_TO_PRESENT;
-        case 1:
-            return H.Z.Messages.JUMP_TO_ORIGINAL_MESSAGE;
-        default:
-            return (0, x.vE)(e);
-    }
-}
-!(function (e) {
-    (e[(e.OLD_MESSAGES = 0)] = 'OLD_MESSAGES'), (e[(e.REPLY = 1)] = 'REPLY');
-})(r || (r = {}));
-let er = (e) => {
+((i = r || (r = {}))[(i.OLD_MESSAGES = 0)] = 'OLD_MESSAGES'), (i[(i.REPLY = 1)] = 'REPLY');
+let et = (e) => {
         let { type: t = 0, onClick: n } = e;
-        return (0, a.jsx)(S.G.Consumer, {
+        return (0, a.jsx)(g.G.Consumer, {
             children: (e) =>
                 e.disableInteractions
                     ? null
@@ -295,7 +275,16 @@ let er = (e) => {
                                       type: 'button',
                                       onClick: n,
                                       className: Y.barButtonMain,
-                                      children: et(t)
+                                      children: (function (e) {
+                                          switch (e) {
+                                              case 0:
+                                                  return Z.Z.Messages.YOURE_VIEWING_OLDER_MESSAGES;
+                                              case 1:
+                                                  return Z.Z.Messages.JUMP_BAR_VIEWING_REPLY;
+                                              default:
+                                                  return (0, x.vE)(e);
+                                          }
+                                      })(t)
                                   })
                               }),
                               null != n
@@ -305,7 +294,19 @@ let er = (e) => {
                                             type: 'button',
                                             onClick: n,
                                             className: Y.barButtonAlt,
-                                            children: [en(t), (0, a.jsx)(U.Z, { className: Y.barButtonIcon })]
+                                            children: [
+                                                (function (e) {
+                                                    switch (e) {
+                                                        case 0:
+                                                            return Z.Z.Messages.JUMP_TO_PRESENT;
+                                                        case 1:
+                                                            return Z.Z.Messages.JUMP_TO_ORIGINAL_MESSAGE;
+                                                        default:
+                                                            return (0, x.vE)(e);
+                                                    }
+                                                })(t),
+                                                (0, a.jsx)(U.Z, { className: Y.barButtonIcon })
+                                            ]
                                         })
                                     })
                                   : (0, a.jsx)(E.Spinner, {
@@ -317,9 +318,9 @@ let er = (e) => {
                       })
         });
     },
-    ei = (e) => {
+    en = (e) => {
         let { onClick: t, loading: n } = e;
-        return (0, a.jsx)(S.G.Consumer, {
+        return (0, a.jsx)(g.G.Consumer, {
             children: (e) =>
                 e.disableInteractions
                     ? null
@@ -337,7 +338,7 @@ let er = (e) => {
                           children: [
                               (0, a.jsx)('div', {
                                   className: Y.barButtonMain,
-                                  children: H.Z.Messages.MESSAGES_FAILED_TO_LOAD
+                                  children: Z.Z.Messages.MESSAGES_FAILED_TO_LOAD
                               }),
                               n
                                   ? (0, a.jsx)(E.Spinner, {
@@ -347,16 +348,16 @@ let er = (e) => {
                                     })
                                   : (0, a.jsx)('div', {
                                         className: Y.barButtonAlt,
-                                        children: H.Z.Messages.MESSAGES_FAILED_TO_LOAD_TRY_AGAIN
+                                        children: Z.Z.Messages.MESSAGES_FAILED_TO_LOAD_TRY_AGAIN
                                     })
                           ]
                       })
         });
     };
-function ea(e) {
+function er(e) {
     let { content: t, channelId: n } = e,
-        [r] = o.useState(() => (0, A.hQ)('NewMessagesBarJumpToNewMessages_')),
-        i = o.useCallback(() => {
+        [r] = s.useState(() => (0, A.hQ)('NewMessagesBarJumpToNewMessages_')),
+        i = s.useCallback(() => {
             let e = M.ZP.ackMessageId(n);
             null != e
                 ? f.Z.jumpToMessage({
@@ -372,10 +373,10 @@ function ea(e) {
                       context: 'Mark As Read'
                   });
         }, [n]),
-        s = o.useCallback(() => {
+        o = s.useCallback(() => {
             (0, h.In)(n);
         }, [n]),
-        { disableInteractions: u } = o.useContext(S.G);
+        { disableInteractions: u } = s.useContext(g.G);
     return u
         ? null
         : (0, a.jsxs)('div', {
@@ -387,7 +388,7 @@ function ea(e) {
                           type: 'button',
                           className: Y.barButtonMain,
                           onClick: i,
-                          'aria-label': H.Z.Messages.JUMP_TO_LAST_UNREAD_MESSAGE,
+                          'aria-label': Z.Z.Messages.JUMP_TO_LAST_UNREAD_MESSAGE,
                           'aria-describedby': r,
                           children: (0, a.jsx)('span', {
                               id: r,
@@ -400,10 +401,10 @@ function ea(e) {
                       offset: 4,
                       children: (0, a.jsxs)('button', {
                           type: 'button',
-                          onClick: s,
+                          onClick: o,
                           className: Y.barButtonAlt,
                           children: [
-                              H.Z.Messages.MARK_AS_READ,
+                              Z.Z.Messages.MARK_AS_READ,
                               (0, a.jsx)(E.ChatCheckIcon, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -415,45 +416,45 @@ function ea(e) {
               ]
           });
 }
-function eo(e) {
+function ei(e) {
     var t, n, r;
-    let { channel: i, content: s, scrollManager: u } = e,
-        { disableInteractions: p } = o.useContext(S.G),
-        [m, g] = o.useState(null),
-        A = o.useRef(null),
-        [N, O] = o.useState(null),
-        R = o.useRef(null),
-        b = (0, _.Wu)(
-            [y.Z],
+    let { channel: i, content: o, scrollManager: u } = e,
+        { disableInteractions: p } = s.useContext(g.G),
+        [I, S] = s.useState(null),
+        A = s.useRef(null),
+        [O, R] = s.useState(null),
+        v = s.useRef(null),
+        y = (0, _.Wu)(
+            [L.Z],
             () => {
                 var e;
-                return null !== (e = y.Z.summaries(i.id)) && void 0 !== e ? e : [];
+                return null !== (e = L.Z.summaries(i.id)) && void 0 !== e ? e : [];
             },
             [i]
         ),
-        D = (0, T.Z)(b);
-    o.useEffect(() => {
-        !c().isEqual(D, b) &&
+        b = (0, T.Z)(y);
+    s.useEffect(() => {
+        !c().isEqual(b, y) &&
             w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
-                num_summaries: b.length,
-                message_counts: b.map((e) => e.count),
-                start_message_ids: b.map((e) => e.startId),
-                end_message_ids: b.map((e) => e.endId),
-                num_participants: b.map((e) => e.people.length),
+                num_summaries: y.length,
+                message_counts: y.map((e) => e.count),
+                start_message_ids: y.map((e) => e.startId),
+                end_message_ids: y.map((e) => e.endId),
+                num_participants: y.map((e) => e.people.length),
                 guild_id: i.guild_id,
                 channel_id: i.id,
                 channel_type: i.type
             });
-    }, [b, D, i.guild_id, i.id, i.type]);
+    }, [y, b, i.guild_id, i.id, i.type]);
     let G = (0, _.e7)(
             [P.default],
             () => {
                 var e;
                 return null !==
                     (e =
-                        null == b
+                        null == y
                             ? void 0
-                            : b.map((e) => {
+                            : y.map((e) => {
                                   var t;
                                   return null === (t = e.people) || void 0 === t
                                       ? void 0
@@ -467,21 +468,21 @@ function eo(e) {
                     ? e
                     : [];
             },
-            [b],
-            el
+            [y],
+            ea
         ),
-        B = null !== (n = (0, _.e7)([y.Z], () => y.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-        Z = null == b ? void 0 : null === (t = b[B]) || void 0 === t ? void 0 : t.topic;
-    null == Z && null == m && (null == b ? void 0 : b.length) >= 1 && (Z = null === (r = b[0]) || void 0 === r ? void 0 : r.topic);
-    let j = o.useMemo(
+        B = null !== (n = (0, _.e7)([L.Z], () => L.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+        V = null == y ? void 0 : null === (t = y[B]) || void 0 === t ? void 0 : t.topic;
+    null == V && null == I && (null == y ? void 0 : y.length) >= 1 && (V = null === (r = y[0]) || void 0 === r ? void 0 : r.topic);
+    let j = s.useMemo(
             () =>
                 c().debounce((e) => {
                     var t;
-                    g(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null);
+                    S(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null);
                 }, 64),
-            [g]
+            [S]
         ),
-        W = o.useMemo(
+        W = s.useMemo(
             () =>
                 c().throttle(
                     () => {
@@ -492,31 +493,31 @@ function eo(e) {
                 ),
             []
         ),
-        K = o.useCallback(
+        K = s.useCallback(
             (e) => {
                 W(), j(e);
             },
             [j, W]
         ),
-        [z, q] = o.useState(!1),
-        Q = o.useCallback(() => {
+        [z, q] = s.useState(!1),
+        Q = s.useCallback(() => {
             w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !z,
-                num_summaries: b.length,
-                message_counts: b.map((e) => e.count),
-                start_message_ids: b.map((e) => e.startId),
-                end_message_ids: b.map((e) => e.endId),
-                num_participants: b.map((e) => e.people.length),
+                num_summaries: y.length,
+                message_counts: y.map((e) => e.count),
+                start_message_ids: y.map((e) => e.startId),
+                end_message_ids: y.map((e) => e.endId),
+                num_participants: y.map((e) => e.people.length),
                 guild_id: i.guild_id,
                 channel_id: i.id,
                 channel_type: i.type
             }),
                 q(!z);
-        }, [z, b, q, i]),
-        X = o.useCallback(
+        }, [z, y, q, i]),
+        X = s.useCallback(
             function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : V.DZ.PILL_DROPDOWN,
-                    n = b[e];
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : H.DZ.PILL_DROPDOWN,
+                    n = y[e];
                 if (null == n) return;
                 (0, C.wv)(i.id, n.id), (0, C.yK)(i.id, n.id);
                 let r = () => {
@@ -539,45 +540,45 @@ function eo(e) {
                         messageId: n.startId,
                         flash: !0,
                         offset: 0,
-                        jumpType: I.SR.ANIMATED,
+                        jumpType: m.SR.ANIMATED,
                         context: 'Summary Jump'
                     });
             },
-            [b, i, K, u]
+            [y, i, K, u]
         ),
-        $ = o.useCallback((e) => {
+        $ = s.useCallback((e) => {
             var t;
             q(e);
-            let n = null === (t = R.current) || void 0 === t ? void 0 : t.scrollTop;
-            null != n && O(n);
+            let n = null === (t = v.current) || void 0 === t ? void 0 : t.scrollTop;
+            null != n && R(n);
         }, []);
-    o.useEffect(() => {
-        if (null != N && z) {
+    s.useEffect(() => {
+        if (null != O && z) {
             var e;
-            null === (e = R.current) || void 0 === e || e.scrollTo({ top: N });
+            null === (e = v.current) || void 0 === e || e.scrollTo({ top: O });
         }
-    }, [N, z]);
-    let J = o.useCallback(
+    }, [O, z]);
+    let J = s.useCallback(
         (e) => {
             var t;
             if (!((0, d.k)(e.target) && (null === (t = A.current) || void 0 === t ? void 0 : t.contains(e.target))))
                 z &&
                     w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
-                        num_summaries: b.length,
-                        message_counts: b.map((e) => e.count),
-                        start_message_ids: b.map((e) => e.startId),
-                        end_message_ids: b.map((e) => e.endId),
-                        num_participants: b.map((e) => e.people.length),
+                        num_summaries: y.length,
+                        message_counts: y.map((e) => e.count),
+                        start_message_ids: y.map((e) => e.startId),
+                        end_message_ids: y.map((e) => e.endId),
+                        num_participants: y.map((e) => e.people.length),
                         guild_id: i.guild_id,
                         channel_id: i.id,
                         channel_type: i.type
                     }),
                     $(!1);
         },
-        [z, b, i, $]
+        [z, y, i, $]
     );
-    o.useEffect(
+    s.useEffect(
         () => (
             u.addAutomaticAnchorCallback(K),
             () => {
@@ -586,10 +587,10 @@ function eo(e) {
         ),
         [u, K]
     ),
-        o.useEffect(() => {
+        s.useEffect(() => {
             (0, C.G1)(i.id);
         }, [i.id]),
-        o.useEffect(
+        s.useEffect(
             () => (
                 document.addEventListener('mousedown', J),
                 () => {
@@ -598,18 +599,18 @@ function eo(e) {
             ),
             [J]
         );
-    let ee = o.useMemo(
+    let ee = s.useMemo(
             () =>
-                (0, a.jsx)(L.Z, {
+                (0, a.jsx)(D.Z, {
                     channel: i,
-                    summaries: b,
+                    summaries: y,
                     summariesMembers: G,
                     selectTopic: X,
                     setOpen: $
                 }),
-            [b, G, X, $, i]
+            [y, G, X, $, i]
         ),
-        et = o.useCallback(() => {
+        et = s.useCallback(() => {
             let e = M.ZP.ackMessageId(i.id);
             null != e
                 ? f.Z.jumpToMessage({
@@ -625,12 +626,12 @@ function eo(e) {
                       context: 'Mark As Read'
                   });
         }, [i.id]),
-        en = o.useCallback(() => {
+        en = s.useCallback(() => {
             (0, h.In)(i.id);
         }, [i.id]),
-        er = H.Z.Messages.SUMMARIES_NO_SUMMARIES;
+        er = Z.Z.Messages.SUMMARIES_NO_SUMMARIES;
     return (
-        b.length > 0 && (er = '' === Z || null == Z ? H.Z.Messages.SUMMARIES_VIEW_ALL : Z),
+        y.length > 0 && (er = '' === V || null == V ? Z.Z.Messages.SUMMARIES_VIEW_ALL : V),
         p
             ? null
             : (0, a.jsxs)('div', {
@@ -641,7 +642,7 @@ function eo(e) {
                           className: l()(Y.newTopicsBarTopicSection),
                           children: (0, a.jsx)(E.Clickable, {
                               className: Y.newTopicsBarTextClickable,
-                              'aria-label': H.Z.Messages.SUMMARY_PILL,
+                              'aria-label': Z.Z.Messages.SUMMARY_PILL,
                               onClick: Q,
                               children: (0, a.jsxs)('div', {
                                   className: l()({
@@ -672,7 +673,7 @@ function eo(e) {
                       (0, a.jsx)(E.Clickable, {
                           onClick: et,
                           className: l()(Y.barButtonMain, Y.newTopicsBarInitial),
-                          children: s
+                          children: o
                       }),
                       (0, a.jsxs)(E.Clickable, {
                           onClick: en,
@@ -680,7 +681,7 @@ function eo(e) {
                           children: [
                               (0, a.jsx)('div', {
                                   className: Y.newTopicsBarCompact,
-                                  children: H.Z.Messages.MARK_AS_READ
+                                  children: Z.Z.Messages.MARK_AS_READ
                               }),
                               (0, a.jsx)(E.ChatCheckIcon, {
                                   size: 'md',
@@ -710,13 +711,13 @@ function eo(e) {
                                                       variant: 'heading-md/bold',
                                                       color: 'header-primary',
                                                       lineClamp: 1,
-                                                      children: H.Z.Messages.SUMMARIES
+                                                      children: Z.Z.Messages.SUMMARIES
                                                   }),
-                                                  (0, a.jsx)(v.Z, { className: Y.summariesBetaTag })
+                                                  (0, a.jsx)(N.Z, { className: Y.summariesBetaTag })
                                               ]
                                           }),
                                           (0, a.jsx)(E.Clickable, {
-                                              'aria-label': H.Z.Messages.CLOSE,
+                                              'aria-label': Z.Z.Messages.CLOSE,
                                               onClick: Q,
                                               className: Y.topicsDropdownClose,
                                               children: (0, a.jsx)(E.XSmallIcon, {
@@ -727,7 +728,7 @@ function eo(e) {
                                       ]
                                   }),
                                   (0, a.jsx)(E.Scroller, {
-                                      ref: R,
+                                      ref: v,
                                       className: Y.topicsScroller,
                                       fade: !0,
                                       children: ee
@@ -738,51 +739,55 @@ function eo(e) {
               })
     );
 }
-function es(e, t) {
-    return null != t && e.length === t.length && !e.some((e, n) => t[n] !== e);
+function ea(e, t) {
+    return (
+        null != t &&
+        e.length === t.length &&
+        !e.some((e, n) => {
+            var r, i;
+            return (r = e), null == (i = t[n]) || r.length !== i.length || !!r.some((e, t) => i[t] !== e);
+        })
+    );
 }
-function el(e, t) {
-    return null != t && e.length === t.length && !e.some((e, n) => !es(e, t[n]));
-}
-function eu(e) {
+function es(e) {
     var t, n, r;
-    let { channel: i, scrollManager: s } = e,
-        { disableInteractions: u } = o.useContext(S.G),
-        [h, p] = o.useState(null),
-        m = o.useRef(null),
-        [g, A] = o.useState(null),
-        N = o.useRef(null),
-        O = (0, _.Wu)(
-            [y.Z],
+    let { channel: i, scrollManager: o } = e,
+        { disableInteractions: u } = s.useContext(g.G),
+        [h, p] = s.useState(null),
+        I = s.useRef(null),
+        [S, A] = s.useState(null),
+        O = s.useRef(null),
+        R = (0, _.Wu)(
+            [L.Z],
             () => {
                 var e;
-                return null !== (e = y.Z.summaries(i.id)) && void 0 !== e ? e : [];
+                return null !== (e = L.Z.summaries(i.id)) && void 0 !== e ? e : [];
             },
             [i]
         ),
-        R = (0, T.Z)(O);
-    o.useEffect(() => {
-        !c().isEqual(R, O) &&
+        v = (0, T.Z)(R);
+    s.useEffect(() => {
+        !c().isEqual(v, R) &&
             w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
-                num_summaries: O.length,
-                message_counts: O.map((e) => e.count),
-                start_message_ids: O.map((e) => e.startId),
-                end_message_ids: O.map((e) => e.endId),
-                num_participants: O.map((e) => e.people.length),
+                num_summaries: R.length,
+                message_counts: R.map((e) => e.count),
+                start_message_ids: R.map((e) => e.startId),
+                end_message_ids: R.map((e) => e.endId),
+                num_participants: R.map((e) => e.people.length),
                 guild_id: i.guild_id,
                 channel_id: i.id,
                 channel_type: i.type
             });
-    }, [O, R, i.guild_id, i.id, i.type]);
-    let b = (0, _.e7)(
+    }, [R, v, i.guild_id, i.id, i.type]);
+    let y = (0, _.e7)(
             [P.default],
             () => {
                 var e;
                 return null !==
                     (e =
-                        null == O
+                        null == R
                             ? void 0
-                            : O.map((e) => {
+                            : R.map((e) => {
                                   var t;
                                   return null === (t = e.people) || void 0 === t
                                       ? void 0
@@ -796,15 +801,15 @@ function eu(e) {
                     ? e
                     : [];
             },
-            [O],
-            el
+            [R],
+            ea
         ),
-        D = null !== (n = (0, _.e7)([y.Z], () => y.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-        M = null == O ? void 0 : null === (t = O[D]) || void 0 === t ? void 0 : t.topic;
-    null == M && null == h && (null == O ? void 0 : O.length) >= 1 && (M = null === (r = O[0]) || void 0 === r ? void 0 : r.topic);
-    let G = o.useMemo(() => c().get(O, D - 1), [D, O]),
-        k = o.useMemo(() => c().get(O, D + 1), [D, O]),
-        B = o.useMemo(
+        b = null !== (n = (0, _.e7)([L.Z], () => L.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+        M = null == R ? void 0 : null === (t = R[b]) || void 0 === t ? void 0 : t.topic;
+    null == M && null == h && (null == R ? void 0 : R.length) >= 1 && (M = null === (r = R[0]) || void 0 === r ? void 0 : r.topic);
+    let G = s.useMemo(() => c().get(R, b - 1), [b, R]),
+        k = s.useMemo(() => c().get(R, b + 1), [b, R]),
+        B = s.useMemo(
             () =>
                 c().debounce((e) => {
                     var t;
@@ -812,7 +817,7 @@ function eu(e) {
                 }, 64),
             [p]
         ),
-        Z = o.useMemo(
+        V = s.useMemo(
             () =>
                 c().throttle(
                     () => {
@@ -823,41 +828,41 @@ function eu(e) {
                 ),
             []
         ),
-        j = o.useCallback(
+        j = s.useCallback(
             (e) => {
-                Z(), B(e);
+                V(), B(e);
             },
-            [B, Z]
+            [B, V]
         ),
-        [W, K] = o.useState(!1),
-        z = o.useCallback(() => {
+        [W, K] = s.useState(!1),
+        z = s.useCallback(() => {
             w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !W,
-                num_summaries: O.length,
-                message_counts: O.map((e) => e.count),
-                start_message_ids: O.map((e) => e.startId),
-                end_message_ids: O.map((e) => e.endId),
-                num_participants: O.map((e) => e.people.length),
+                num_summaries: R.length,
+                message_counts: R.map((e) => e.count),
+                start_message_ids: R.map((e) => e.startId),
+                end_message_ids: R.map((e) => e.endId),
+                num_participants: R.map((e) => e.people.length),
                 guild_id: i.guild_id,
                 channel_id: i.id,
                 channel_type: i.type
             }),
                 K(!W);
-        }, [W, O, K, i]),
-        q = o.useCallback(
+        }, [W, R, K, i]),
+        q = s.useCallback(
             function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : V.DZ.PILL_DROPDOWN,
-                    n = O[e];
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : H.DZ.PILL_DROPDOWN,
+                    n = R[e];
                 if (null == n) return;
                 (0, C.wv)(i.id, n.id), (0, C.yK)(i.id, n.id);
                 let r = () => {
-                    s.removeScrollCompleteCallback(r),
+                    o.removeScrollCompleteCallback(r),
                         setTimeout(() => {
-                            s.addAutomaticAnchorCallback(j, !1);
+                            o.addAutomaticAnchorCallback(j, !1);
                         }, 100);
                 };
-                s.removeAutomaticAnchorCallback(j),
-                    s.addScrollCompleteCallback(r),
+                o.removeAutomaticAnchorCallback(j),
+                    o.addScrollCompleteCallback(r),
                     w.default.track(F.rMx.SUMMARIES_TOPIC_CLICKED, {
                         source: t,
                         message_id: n.startId,
@@ -870,63 +875,63 @@ function eu(e) {
                         messageId: n.startId,
                         flash: !0,
                         offset: 0,
-                        jumpType: I.SR.ANIMATED,
+                        jumpType: m.SR.ANIMATED,
                         context: 'Summary Jump'
                     });
             },
-            [O, i, j, s]
+            [R, i, j, o]
         ),
-        Q = o.useCallback(() => {
-            q(D - 1, V.DZ.PILL_NEXT_ARROW);
-        }, [q, D]),
-        X = o.useCallback(() => {
-            q(D + 1, V.DZ.PILL_PREVIOUS_ARROW);
-        }, [D, q]),
-        $ = o.useCallback((e) => {
+        Q = s.useCallback(() => {
+            q(b - 1, H.DZ.PILL_NEXT_ARROW);
+        }, [q, b]),
+        X = s.useCallback(() => {
+            q(b + 1, H.DZ.PILL_PREVIOUS_ARROW);
+        }, [b, q]),
+        $ = s.useCallback((e) => {
             var t;
             K(e);
-            let n = null === (t = N.current) || void 0 === t ? void 0 : t.scrollTop;
+            let n = null === (t = O.current) || void 0 === t ? void 0 : t.scrollTop;
             null != n && A(n);
         }, []);
-    o.useEffect(() => {
-        if (null != g && W) {
+    s.useEffect(() => {
+        if (null != S && W) {
             var e;
-            null === (e = N.current) || void 0 === e || e.scrollTo({ top: g });
+            null === (e = O.current) || void 0 === e || e.scrollTo({ top: S });
         }
-    }, [g, W]);
-    let J = o.useCallback(
+    }, [S, W]);
+    let J = s.useCallback(
         (e) => {
             var t;
-            if (!((0, d.k)(e.target) && (null === (t = m.current) || void 0 === t ? void 0 : t.contains(e.target))))
+            if (!((0, d.k)(e.target) && (null === (t = I.current) || void 0 === t ? void 0 : t.contains(e.target))))
                 W &&
                     w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
-                        num_summaries: O.length,
-                        message_counts: O.map((e) => e.count),
-                        start_message_ids: O.map((e) => e.startId),
-                        end_message_ids: O.map((e) => e.endId),
-                        num_participants: O.map((e) => e.people.length),
+                        num_summaries: R.length,
+                        message_counts: R.map((e) => e.count),
+                        start_message_ids: R.map((e) => e.startId),
+                        end_message_ids: R.map((e) => e.endId),
+                        num_participants: R.map((e) => e.people.length),
                         guild_id: i.guild_id,
                         channel_id: i.id,
                         channel_type: i.type
                     }),
                     $(!1);
         },
-        [W, O, i, $]
+        [W, R, i, $]
     );
-    o.useEffect(
+    s.useEffect(
         () => (
-            s.addAutomaticAnchorCallback(j),
+            o.addAutomaticAnchorCallback(j),
             () => {
-                s.removeAutomaticAnchorCallback(j);
+                o.removeAutomaticAnchorCallback(j);
             }
         ),
-        [s, j]
+        [o, j]
     ),
-        o.useEffect(() => {
+        s.useEffect(() => {
             (0, C.G1)(i.id);
         }, [i.id]),
-        o.useEffect(
+        s.useEffect(
             () => (
                 document.addEventListener('mousedown', J),
                 () => {
@@ -935,25 +940,25 @@ function eu(e) {
             ),
             [J]
         );
-    let ee = o.useMemo(
+    let ee = s.useMemo(
         () =>
-            (0, a.jsx)(L.Z, {
+            (0, a.jsx)(D.Z, {
                 channel: i,
-                summaries: O,
-                summariesMembers: b,
+                summaries: R,
+                summariesMembers: y,
                 selectTopic: q,
                 setOpen: $
             }),
-        [O, b, q, $, i]
+        [R, y, q, $, i]
     );
-    if (!(0, _.e7)([y.Z], () => y.Z.shouldShowTopicsBar())) return null;
-    let et = H.Z.Messages.SUMMARIES_NO_SUMMARIES;
+    if (!(0, _.e7)([L.Z], () => L.Z.shouldShowTopicsBar())) return null;
+    let et = Z.Z.Messages.SUMMARIES_NO_SUMMARIES;
     return (
-        O.length > 0 && (et = '' === M || null == M ? H.Z.Messages.SUMMARIES_VIEW_ALL : M),
+        R.length > 0 && (et = '' === M || null == M ? Z.Z.Messages.SUMMARIES_VIEW_ALL : M),
         u
             ? null
             : (0, a.jsxs)('div', {
-                  ref: m,
+                  ref: I,
                   className: l()(Y.topicsPillContainer, Y.containerMarginTop),
                   children: [
                       (0, a.jsxs)('div', {
@@ -961,7 +966,7 @@ function eu(e) {
                           children: [
                               (0, a.jsx)(E.Clickable, {
                                   className: Y.topicsPillText,
-                                  'aria-label': H.Z.Messages.SUMMARY_PILL,
+                                  'aria-label': Z.Z.Messages.SUMMARY_PILL,
                                   onClick: z,
                                   children: (0, a.jsxs)('div', {
                                       className: l()({
@@ -992,7 +997,7 @@ function eu(e) {
                                   className: Y.topicsPillCarets,
                                   children: [
                                       (0, a.jsx)(E.Clickable, {
-                                          'aria-label': H.Z.Messages.SUMMARY_PILL_NEXT,
+                                          'aria-label': Z.Z.Messages.SUMMARY_PILL_NEXT,
                                           onClick: X,
                                           className: l()(Y.topicsPillCaret, Y.topicsCaretLeft, { [Y.topicsPillCaretDisabled]: null == k }),
                                           children: (0, a.jsx)(U.Z, {
@@ -1002,7 +1007,7 @@ function eu(e) {
                                           })
                                       }),
                                       (0, a.jsx)(E.Clickable, {
-                                          'aria-label': H.Z.Messages.SUMMARY_PILL_PREVIOUS,
+                                          'aria-label': Z.Z.Messages.SUMMARY_PILL_PREVIOUS,
                                           onClick: Q,
                                           className: l()(Y.topicsPillCaret, Y.topicsCaretRight, { [Y.topicsPillCaretDisabled]: null == G }),
                                           children: (0, a.jsx)(U.Z, {
@@ -1036,13 +1041,13 @@ function eu(e) {
                                                       variant: 'heading-md/bold',
                                                       color: 'header-primary',
                                                       lineClamp: 1,
-                                                      children: H.Z.Messages.SUMMARIES
+                                                      children: Z.Z.Messages.SUMMARIES
                                                   }),
-                                                  (0, a.jsx)(v.Z, { className: Y.summariesBetaTag })
+                                                  (0, a.jsx)(N.Z, { className: Y.summariesBetaTag })
                                               ]
                                           }),
                                           (0, a.jsx)(E.Clickable, {
-                                              'aria-label': H.Z.Messages.CLOSE,
+                                              'aria-label': Z.Z.Messages.CLOSE,
                                               onClick: z,
                                               className: Y.topicsDropdownClose,
                                               children: (0, a.jsx)(E.XSmallIcon, {
@@ -1053,7 +1058,7 @@ function eu(e) {
                                       ]
                                   }),
                                   (0, a.jsx)(E.Scroller, {
-                                      ref: N,
+                                      ref: O,
                                       className: Y.topicsScroller,
                                       fade: !0,
                                       children: ee
@@ -1064,7 +1069,7 @@ function eu(e) {
               })
     );
 }
-let ec = function (e) {
+let eo = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return (0, a.jsxs)('div', {
             className: Y.tooltip,
@@ -1081,21 +1086,21 @@ let ec = function (e) {
                         className: Y.clickCTA,
                         color: 'text-muted',
                         variant: 'text-sm/normal',
-                        children: H.Z.Messages.EMOJI_TOOLTIP_CLICK_CTA
+                        children: Z.Z.Messages.EMOJI_TOOLTIP_CLICK_CTA
                     })
             ]
         });
     },
-    ed = (e) => {
+    el = (e) => {
         let { children: t, className: n } = e;
         return (0, a.jsx)('div', {
             className: l()(Y.popoutContainer, n),
             children: t
         });
     },
-    e_ = (e) => {
+    eu = (e) => {
         let { className: t } = e;
-        return (0, a.jsx)(ed, {
+        return (0, a.jsx)(el, {
             className: t,
             children: (0, a.jsx)('div', {
                 className: Y.popoutLoadingBackground,

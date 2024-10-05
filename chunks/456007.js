@@ -1,52 +1,31 @@
 let r, i, a;
 n.d(t, {
     AS: function () {
-        return T;
-    },
-    Dw: function () {
-        return g;
-    },
-    KF: function () {
-        return m;
-    },
-    OU: function () {
         return _;
     },
+    Dw: function () {
+        return E;
+    },
+    KF: function () {
+        return c;
+    },
+    OU: function () {
+        return u;
+    },
     li: function () {
-        return I;
+        return d;
     }
-});
-var o = n(757143);
-var s = n(47120);
-var l = n(512722);
-var u = n(911969),
-    c = n(93725),
-    d = n(226951);
-function _(e) {
+}),
+    n(757143),
+    n(47120),
+    n(512722);
+var s = n(911969),
+    o = n(93725),
+    l = n(226951);
+function u(e) {
     return null == e ? [] : e.filter((t, n) => 'text' !== t.type || (n > 0 && n < e.length - 1 ? '' !== t.text : '' !== t.text.trim()));
 }
-function E(e, t) {
-    var n;
-    let r = _(e[t]);
-    return invariant(1 === r.length, 'Contains multiple values'), invariant((null === (n = r[0]) || void 0 === n ? void 0 : n.type) === 'text', 'First value is not text'), r[0].text === TRUE_OPTION_NAME;
-}
-n(689079);
-function f(e, t) {
-    var n;
-    let r = _(e[t]);
-    return invariant(1 === r.length, 'Contains multiple values'), invariant((null === (n = r[0]) || void 0 === n ? void 0 : n.type) === 'channelMention', 'First value is not a channel mention'), r[0].channelId;
-}
-function h(e, t) {
-    var n;
-    let r = _(e[t]);
-    return invariant(1 === r.length, 'Contains multiple values'), invariant((null === (n = r[0]) || void 0 === n ? void 0 : n.type) === 'userMention', 'First value is not a user mention'), r[0].userId;
-}
-function p(e, t) {
-    var n;
-    let r = _(e[t]);
-    return invariant(1 === r.length, 'Contains multiple values'), invariant((null === (n = r[0]) || void 0 === n ? void 0 : n.type) === 'roleMention', 'First value is not a role mention'), r[0].roleId;
-}
-function m(e, t) {
+function c(e, t) {
     let n = e[t],
         r = '';
     for (let e of n)
@@ -75,24 +54,25 @@ function m(e, t) {
         }
     return r;
 }
-function I(e, t) {
-    return null == e[t] ? null : m(e, t);
+function d(e, t) {
+    return null == e[t] ? null : c(e, t);
 }
-function T(e, t) {
+function _(e, t) {
     if (e !== a) {
         var n;
         a = e;
-        let { group: t, decimal: o } = null !== (n = c.L[e]) && void 0 !== n ? n : c.L['en-US'];
-        (r = RegExp(d.Z.escape(t), 'g')), (i = RegExp(d.Z.escape(o), 'g'));
+        let { group: t, decimal: s } = null !== (n = o.L[e]) && void 0 !== n ? n : o.L['en-US'];
+        (r = RegExp(l.Z.escape(t), 'g')), (i = RegExp(l.Z.escape(s), 'g'));
     }
     return t.replace(r, '').replace(i, '.');
 }
-function g(e, t) {
+function E(e, t) {
     let n = {};
     for (let i of t) {
         var r;
         let t = null === (r = e.options) || void 0 === r ? void 0 : r.find((e) => e.name === i.name);
-        if (i.type !== u.jw.ATTACHMENT && (null == t ? !void 0 : !t.autocomplete)) n[i.name] = i;
+        if (i.type !== s.jw.ATTACHMENT && (null == t ? !void 0 : !t.autocomplete)) n[i.name] = i;
     }
     return n;
 }
+n(689079);

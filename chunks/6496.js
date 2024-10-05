@@ -1,156 +1,152 @@
 n.d(t, {
     RR: function () {
-        return O;
+        return A;
     },
     WW: function () {
-        return v;
+        return S;
     },
     bE: function () {
-        return C;
+        return O;
     },
     n4: function () {
-        return U;
+        return C;
     },
     q8: function () {
-        return R;
-    },
-    t$: function () {
         return N;
     },
+    t$: function () {
+        return g;
+    },
     xl: function () {
-        return P;
+        return v;
     }
-});
-var r = n(411104);
-var i = n(47120);
-var a = n(724458);
-var o = n(683860),
-    s = n(344185),
-    l = n(569471),
-    u = n(260483),
-    c = n(144140),
-    d = n(592125),
-    _ = n(703558),
-    E = n(496675),
-    f = n(117530),
-    h = n(709054),
-    p = n(660189),
-    m = n(559241),
-    I = n(474387),
-    T = n(702225),
-    g = n(981631),
-    S = n(176505),
-    A = n(124368);
-function v(e) {
-    return T.Z.getForumChannelSessionId(e);
+}),
+    n(411104),
+    n(47120),
+    n(724458);
+var r = n(683860),
+    i = n(344185),
+    a = n(569471),
+    s = n(260483),
+    o = n(144140),
+    l = n(592125),
+    u = n(703558),
+    c = n(496675),
+    d = n(117530),
+    _ = n(709054),
+    E = n(660189),
+    f = n(559241),
+    h = n(474387),
+    p = n(702225),
+    I = n(981631),
+    m = n(176505),
+    T = n(124368);
+function S(e) {
+    return p.Z.getForumChannelSessionId(e);
 }
-function N(e) {
+function g(e) {
     switch (e) {
-        case o.z.CREATION_DATE:
-            return A.SX.CREATION_DATE;
-        case o.z.LATEST_ACTIVITY:
-            return A.SX.LATEST_ACTIVITY;
+        case r.z.CREATION_DATE:
+            return T.SX.CREATION_DATE;
+        case r.z.LATEST_ACTIVITY:
+            return T.SX.LATEST_ACTIVITY;
         default:
             throw Error('Unexpected sort order '.concat(e));
     }
 }
-function O(e) {
-    return f.Z.getUploads(e, _.d.FirstThreadMessage).length;
+function A(e) {
+    return d.Z.getUploads(e, u.d.FirstThreadMessage).length;
+}
+function N(e) {
+    var t, n;
+    let r = l.Z.getChannel(e);
+    if (null == r) return [];
+    let i = l.Z.getChannel(r.parent_id),
+        a = null == i ? void 0 : i.availableTags;
+    if (null == i || null == a) return [];
+    let s = null !== (n = null === (t = u.Z.getThreadSettings(e)) || void 0 === t ? void 0 : t.appliedTags) && void 0 !== n ? n : new Set(),
+        o = new Set(a.map((e) => e.id));
+    return Array.from(s).filter((e) => o.has(e));
+}
+function O(e, t) {
+    return Object.keys(i.Z.getThreadsForParent(e, t)).length;
 }
 function R(e) {
-    var t, n;
-    let r = d.Z.getChannel(e);
-    if (null == r) return [];
-    let i = d.Z.getChannel(r.parent_id),
-        a = null == i ? void 0 : i.availableTags;
-    if (null == i || null == a) return [];
-    let o = null !== (n = null === (t = _.Z.getThreadSettings(e)) || void 0 === t ? void 0 : t.appliedTags) && void 0 !== n ? n : new Set(),
-        s = new Set(a.map((e) => e.id));
-    return Array.from(o).filter((e) => s.has(e));
-}
-function C(e, t) {
-    return Object.keys(s.Z.getThreadsForParent(e, t)).length;
-}
-function y(e) {
-    let { loaded: t, firstMessage: n } = p.Z.getMessage(e);
+    let { loaded: t, firstMessage: n } = E.Z.getMessage(e);
     return t ? n : null;
 }
-function L(e) {
-    let t = y(e);
-    return null == t ? 0 : t.reactions.length;
-}
-function b(e) {
-    let t = y(e);
-    return null == t ? 0 : t.reactions.reduce((e, t) => e + t.count, 0);
-}
-function D(e) {
-    var t, n;
-    let r = d.Z.getChannel(e);
-    if (null == r) return [];
-    let i = d.Z.getChannel(r.parent_id),
-        a = null == i ? void 0 : i.availableTags;
-    if (null == i || null == a) return [];
-    let o = new Set(a.map((e) => e.id));
-    return null !== (n = null === (t = r.appliedTags) || void 0 === t ? void 0 : t.filter((e) => o.has(e))) && void 0 !== n ? n : [];
-}
-function M(e) {
-    let t = y(e);
-    return null == t
-        ? []
-        : t.attachments.map((e) => {
-              var t;
-              return null !== (t = e.content_type) && void 0 !== t ? t : 'unknown';
-          });
-}
-function P(e) {
+function v(e) {
     var t, n, r, i;
-    let { channelId: a, sessionId: o } = e,
-        s = d.Z.getChannel(a);
-    return null != s && s.isForumLikeChannel()
+    let { channelId: a, sessionId: s } = e,
+        o = l.Z.getChannel(a);
+    return null != o && o.isForumLikeChannel()
         ? {
-              forum_channel_has_guidelines: null != s.topic && s.topic.trim().length > 0,
-              forum_channel_default_emoji_reaction_id: null === (t = s.defaultReactionEmoji) || void 0 === t ? void 0 : t.emojiId,
-              forum_channel_default_emoji_reaction_name: null === (n = s.defaultReactionEmoji) || void 0 === n ? void 0 : n.emojiName,
-              forum_channel_available_tag_ids: null !== (i = null === (r = s.availableTags) || void 0 === r ? void 0 : r.map((e) => e.id)) && void 0 !== i ? i : [],
-              forum_channel_tag_required: s.hasFlag(S.zZ.REQUIRE_TAG),
-              forum_channel_can_create_post: E.Z.can(g.Plq.SEND_MESSAGES, s),
-              forum_channel_filter_tag_ids: m.Z.getFilterTagIdsAnalytics(),
-              forum_channel_sort_order: m.Z.getSortOrderAnalytics(s.id),
-              forum_channel_session_id: null != o ? o : v(s.id),
-              forum_channel_layout: m.Z.getLayoutAnalytics(s.id),
-              forum_channel_default_sort_order: s.defaultSortOrder,
-              forum_channel_default_layout: s.defaultForumLayout
+              forum_channel_has_guidelines: null != o.topic && o.topic.trim().length > 0,
+              forum_channel_default_emoji_reaction_id: null === (t = o.defaultReactionEmoji) || void 0 === t ? void 0 : t.emojiId,
+              forum_channel_default_emoji_reaction_name: null === (n = o.defaultReactionEmoji) || void 0 === n ? void 0 : n.emojiName,
+              forum_channel_available_tag_ids: null !== (i = null === (r = o.availableTags) || void 0 === r ? void 0 : r.map((e) => e.id)) && void 0 !== i ? i : [],
+              forum_channel_tag_required: o.hasFlag(m.zZ.REQUIRE_TAG),
+              forum_channel_can_create_post: c.Z.can(I.Plq.SEND_MESSAGES, o),
+              forum_channel_filter_tag_ids: f.Z.getFilterTagIdsAnalytics(),
+              forum_channel_sort_order: f.Z.getSortOrderAnalytics(o.id),
+              forum_channel_session_id: null != s ? s : S(o.id),
+              forum_channel_layout: f.Z.getLayoutAnalytics(o.id),
+              forum_channel_default_sort_order: o.defaultSortOrder,
+              forum_channel_default_layout: o.defaultForumLayout
           }
         : null;
 }
-function U(e) {
-    var t, n, r, i, a, o, s;
-    let { channelId: _, sessionId: E } = e,
-        f = d.Z.getChannel(_);
-    if (null == f || !f.isForumPost()) return null;
-    let p = d.Z.getChannel(f.parent_id);
-    return null != p && p.isForumLikeChannel()
+function C(e) {
+    var t, n, r, i, u, c, d;
+    let { channelId: E, sessionId: f } = e,
+        p = l.Z.getChannel(E);
+    if (null == p || !p.isForumPost()) return null;
+    let I = l.Z.getChannel(p.parent_id);
+    return null != I && I.isForumLikeChannel()
         ? {
-              ...P({
-                  channelId: p.id,
-                  sessionId: E
+              ...v({
+                  channelId: I.id,
+                  sessionId: f
               }),
-              thread_approximate_member_count: u.Z.getMemberCount(_),
-              thread_approximate_message_count: c.Z.getCount(_),
-              thread_archived: (null === (t = f.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
-              thread_locked: null !== (o = null === (n = f.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== o && o,
-              thread_auto_archive_duration_minutes: null !== (s = null === (r = f.threadMetadata) || void 0 === r ? void 0 : r.autoArchiveDuration) && void 0 !== s ? s : 0,
-              thread_approximate_creation_date: h.default.extractTimestamp(_),
-              forum_post_id: f.id,
-              forum_post_first_message_id: h.default.castChannelIdAsMessageId(f.id),
-              forum_post_num_reactions: b(f.id),
-              forum_post_num_unique_reactions: L(f.id),
-              forum_post_applied_tag_ids: D(f.id),
-              forum_post_is_pinned: f.hasFlag(S.zZ.PINNED),
-              forum_post_is_new: null === (i = I.Z.getReadStateSnapshotAnalytics(f.id)) || void 0 === i ? void 0 : i.isNew,
-              forum_post_is_unread: null === (a = I.Z.getReadStateSnapshotAnalytics(f.id)) || void 0 === a ? void 0 : a.hasUnreads,
-              forum_post_is_following: l.Z.hasJoined(f.id),
-              forum_post_attachment_mimetypes: M(f.id)
+              thread_approximate_member_count: s.Z.getMemberCount(E),
+              thread_approximate_message_count: o.Z.getCount(E),
+              thread_archived: (null === (t = p.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
+              thread_locked: null !== (c = null === (n = p.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== c && c,
+              thread_auto_archive_duration_minutes: null !== (d = null === (r = p.threadMetadata) || void 0 === r ? void 0 : r.autoArchiveDuration) && void 0 !== d ? d : 0,
+              thread_approximate_creation_date: _.default.extractTimestamp(E),
+              forum_post_id: p.id,
+              forum_post_first_message_id: _.default.castChannelIdAsMessageId(p.id),
+              forum_post_num_reactions: (function (e) {
+                  let t = R(e);
+                  return null == t ? 0 : t.reactions.reduce((e, t) => e + t.count, 0);
+              })(p.id),
+              forum_post_num_unique_reactions: (function (e) {
+                  let t = R(e);
+                  return null == t ? 0 : t.reactions.length;
+              })(p.id),
+              forum_post_applied_tag_ids: (function (e) {
+                  var t, n;
+                  let r = l.Z.getChannel(e);
+                  if (null == r) return [];
+                  let i = l.Z.getChannel(r.parent_id),
+                      a = null == i ? void 0 : i.availableTags;
+                  if (null == i || null == a) return [];
+                  let s = new Set(a.map((e) => e.id));
+                  return null !== (n = null === (t = r.appliedTags) || void 0 === t ? void 0 : t.filter((e) => s.has(e))) && void 0 !== n ? n : [];
+              })(p.id),
+              forum_post_is_pinned: p.hasFlag(m.zZ.PINNED),
+              forum_post_is_new: null === (i = h.Z.getReadStateSnapshotAnalytics(p.id)) || void 0 === i ? void 0 : i.isNew,
+              forum_post_is_unread: null === (u = h.Z.getReadStateSnapshotAnalytics(p.id)) || void 0 === u ? void 0 : u.hasUnreads,
+              forum_post_is_following: a.Z.hasJoined(p.id),
+              forum_post_attachment_mimetypes: (function (e) {
+                  let t = R(e);
+                  return null == t
+                      ? []
+                      : t.attachments.map((e) => {
+                            var t;
+                            return null !== (t = e.content_type) && void 0 !== t ? t : 'unknown';
+                        });
+              })(p.id)
           }
         : null;
 }

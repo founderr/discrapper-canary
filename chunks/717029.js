@@ -1,27 +1,25 @@
 n.d(t, {
     _: function () {
-        return s;
+        return a;
     }
 });
 var r = n(608297);
 function i(e, t) {
-    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-}
-function a(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function o(e, t, n) {
-    return t && a(e.prototype, t), n && a(e, n), e;
-}
-var s = (function () {
-    function e() {
-        i(this, e);
+var a = (function () {
+    var e, t, n;
+    function a() {
+        !(function (e, t) {
+            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+        })(this, a);
     }
     return (
-        o(e, [
+        (e = a),
+        (t = [
             {
                 key: 'run',
                 value: function (e, t, n, i) {
@@ -41,6 +39,7 @@ var s = (function () {
                 }
             }
         ]),
-        e
+        i(e.prototype, t),
+        a
     );
 })();

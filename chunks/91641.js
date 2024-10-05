@@ -1,11 +1,4 @@
-n.d(t, {
-    E: function () {
-        return s;
-    }
-});
-var r = n(411104);
-var i = n(47120);
-function a(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,20 +11,26 @@ function a(e, t, n) {
         e
     );
 }
-function o(e, t, n) {
-    t.forEach((e) => {
-        e.trackExposure(n);
-    });
-}
-class s {
+n.d(t, {
+    E: function () {
+        return i;
+    }
+}),
+    n(411104),
+    n(47120);
+class i {
     registeredExperimentIds() {
         return this.experiments.map((e) => e.definition.id);
     }
     trigger() {
-        o(this.triggerPoint, this.experiments, this.params);
+        !(function (e, t, n) {
+            t.forEach((e) => {
+                e.trackExposure(n);
+            });
+        })(this.triggerPoint, this.experiments, this.params);
     }
     constructor(e, t, n) {
-        a(this, 'experiments', void 0), a(this, 'triggerPoint', void 0), a(this, 'params', void 0);
+        r(this, 'experiments', void 0), r(this, 'triggerPoint', void 0), r(this, 'params', void 0);
         (this.experiments = e), (this.triggerPoint = t), (this.params = n);
     }
 }

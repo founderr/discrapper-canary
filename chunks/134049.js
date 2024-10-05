@@ -1,38 +1,37 @@
 n.d(t, {
     i: function () {
-        return E;
+        return d;
     },
     l: function () {
-        return f;
+        return _;
     }
-});
-var r = n(47120);
-var i = n(652874),
-    a = n(143927),
-    o = n(12336),
+}),
+    n(47120);
+var r = n(652874),
+    i = n(143927),
+    a = n(12336),
     s = n(731965),
-    l = n(433517),
-    u = n(590433);
-function c() {
-    var e;
-    return new Set(null !== (e = l.K.get(u.hL)) && void 0 !== e ? e : []);
-}
-let d = (0, o.Z)((e, t) => ({
-        notificationDismissedInGuilds: c(),
-        dismissNotification: (n) => {
-            let r = t().notificationDismissedInGuilds;
-            r.add(n), l.K.set(u.hL, r), (0, s.j)(() => e({ notificationDismissedInGuilds: r }));
-        },
-        resetNotification: (n) => {
-            let r = t().notificationDismissedInGuilds;
-            r.has(n) && (r.delete(n), l.K.set(u.hL, r), (0, s.j)(() => e({ notificationDismissedInGuilds: r })));
-        }
-    })),
-    _ = (0, i.Z)(d);
-function E(e) {
-    let [t, n] = _((e) => [e.notificationDismissedInGuilds, e.dismissNotification], a.Z);
+    o = n(433517),
+    l = n(590433);
+let u = (0, a.Z)((e, t) => {
+        var n;
+        return {
+            notificationDismissedInGuilds: new Set(null !== (n = o.K.get(l.hL)) && void 0 !== n ? n : []),
+            dismissNotification: (n) => {
+                let r = t().notificationDismissedInGuilds;
+                r.add(n), o.K.set(l.hL, r), (0, s.j)(() => e({ notificationDismissedInGuilds: r }));
+            },
+            resetNotification: (n) => {
+                let r = t().notificationDismissedInGuilds;
+                r.has(n) && (r.delete(n), o.K.set(l.hL, r), (0, s.j)(() => e({ notificationDismissedInGuilds: r })));
+            }
+        };
+    }),
+    c = (0, r.Z)(u);
+function d(e) {
+    let [t, n] = c((e) => [e.notificationDismissedInGuilds, e.dismissNotification], i.Z);
     return [!t.has(e), n];
 }
-function f(e) {
-    return d.getState().resetNotification(e);
+function _(e) {
+    return u.getState().resetNotification(e);
 }

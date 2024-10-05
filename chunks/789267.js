@@ -1,59 +1,58 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return r;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(739566),
-    a = n(834129),
-    o = n(689938);
-function s(e) {
-    let t = null != e.call ? e.call.duration : null;
-    return null != t ? t.humanize() : null;
-}
-function l(e) {
-    let { message: t, compact: l, missed: u, joinable: c, usernameHook: d, onClickJoinCall: _ } = e,
-        E = (0, i.ZP)(t),
-        f = E.nick,
-        h = d(E),
-        p = s(t);
-    return u
-        ? (0, r.jsx)(a.Z, {
+var a = n(739566),
+    s = n(834129),
+    l = n(689938);
+function r(e) {
+    let { message: t, compact: r, missed: o, joinable: c, usernameHook: d, onClickJoinCall: u } = e,
+        _ = (0, a.ZP)(t),
+        E = _.nick,
+        I = d(_),
+        m = (function (e) {
+            let t = null != e.call ? e.call.duration : null;
+            return null != t ? t.humanize() : null;
+        })(t);
+    return o
+        ? (0, i.jsx)(s.Z, {
               icon: n(154239),
               timestamp: t.timestamp,
-              compact: l,
+              compact: r,
               children:
-                  null != p
-                      ? o.Z.Messages.SYSTEM_MESSAGE_CALL_MISSED_WITH_DURATION_HOOK.format({
-                            username: f,
-                            usernameHook: h,
-                            callDuration: p
+                  null != m
+                      ? l.Z.Messages.SYSTEM_MESSAGE_CALL_MISSED_WITH_DURATION_HOOK.format({
+                            username: E,
+                            usernameHook: I,
+                            callDuration: m
                         })
-                      : o.Z.Messages.SYSTEM_MESSAGE_CALL_MISSED_HOOK.format({
-                            username: f,
-                            usernameHook: h
+                      : l.Z.Messages.SYSTEM_MESSAGE_CALL_MISSED_HOOK.format({
+                            username: E,
+                            usernameHook: I
                         })
           })
-        : (0, r.jsxs)(a.Z, {
+        : (0, i.jsxs)(s.Z, {
               icon: n(344163),
               timestamp: t.timestamp,
-              compact: l,
+              compact: r,
               children: [
-                  null != p
-                      ? o.Z.Messages.SYSTEM_MESSAGE_CALL_STARTED_WITH_DURATION_HOOK.format({
-                            username: f,
-                            usernameHook: h,
-                            callDuration: p
+                  null != m
+                      ? l.Z.Messages.SYSTEM_MESSAGE_CALL_STARTED_WITH_DURATION_HOOK.format({
+                            username: E,
+                            usernameHook: I,
+                            callDuration: m
                         })
-                      : o.Z.Messages.SYSTEM_MESSAGE_CALL_STARTED_HOOK.format({
-                            username: f,
-                            usernameHook: h
+                      : l.Z.Messages.SYSTEM_MESSAGE_CALL_STARTED_HOOK.format({
+                            username: E,
+                            usernameHook: I
                         }),
                   c
-                      ? (0, r.jsx)(a.Z.Action, {
-                            onClick: _,
-                            children: o.Z.Messages.SYSTEM_MESSAGE_JOIN_CALL
+                      ? (0, i.jsx)(s.Z.Action, {
+                            onClick: u,
+                            children: l.Z.Messages.SYSTEM_MESSAGE_JOIN_CALL
                         })
                       : null
               ]

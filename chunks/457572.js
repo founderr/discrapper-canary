@@ -1,10 +1,10 @@
-var r = n(47120);
-var i = n(570140),
-    a = n(147913),
-    o = n(70956),
+n(47120);
+var r = n(570140),
+    i = n(147913),
+    a = n(70956),
     s = n(2818),
-    l = n(768943);
-function u(e, t, n) {
+    o = n(768943);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,40 +17,44 @@ function u(e, t, n) {
         e
     );
 }
-let c = null;
-function d(e) {
-    let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
-    if (!!t)
-        i.Z.dispatch({
-            type: 'MESSAGE_REMINDER_DUE',
-            savedMessage: e
-        }),
-            _();
-}
-function _() {
+let u = null;
+function c() {
     var e;
     let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
     if (!t) return;
-    null != c && clearTimeout(c);
-    let n = l.Z.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
+    null != u && clearTimeout(u);
+    let n = o.Z.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
     if ((null == n ? void 0 : null === (e = n.saveData) || void 0 === e ? void 0 : e.dueAt) == null) {
-        c = null;
+        u = null;
         return;
     }
-    let r = Date.now() + o.Z.Millis.WEEK;
-    if (!(n.saveData.dueAt.getTime() > r)) c = setTimeout(() => d(n), n.saveData.dueAt.getTime() - Date.now());
+    let i = Date.now() + a.Z.Millis.WEEK;
+    if (!(n.saveData.dueAt.getTime() > i))
+        u = setTimeout(
+            () =>
+                (function (e) {
+                    let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
+                    if (!!t)
+                        r.Z.dispatch({
+                            type: 'MESSAGE_REMINDER_DUE',
+                            savedMessage: e
+                        }),
+                            c();
+                })(n),
+            n.saveData.dueAt.getTime() - Date.now()
+        );
 }
-class E extends a.Z {
+class d extends i.Z {
     constructor(...e) {
         super(...e),
-            u(this, 'actions', {
+            l(this, 'actions', {
                 SAVED_MESSAGES_UPDATE: () => this.handleUpdates(),
                 SAVED_MESSAGE_CREATE: () => this.handleUpdates(),
                 SAVED_MESSAGE_DELETE: () => this.handleUpdates()
             }),
-            u(this, 'handleUpdates', () => {
-                _();
+            l(this, 'handleUpdates', () => {
+                c();
             });
     }
 }
-t.Z = new E();
+t.Z = new d();

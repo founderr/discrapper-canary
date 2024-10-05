@@ -1,35 +1,33 @@
 var r = n(347941),
-    i = 1,
-    a = Object.prototype.hasOwnProperty;
-function o(e, t, n, o, s, l) {
-    var u = n & i,
-        c = (0, r.Z)(e),
-        d = c.length;
-    if (d != (0, r.Z)(t).length && !u) return !1;
-    for (var _ = d; _--; ) {
-        var E = c[_];
-        if (!(u ? E in t : a.call(t, E))) return !1;
+    i = Object.prototype.hasOwnProperty;
+t.Z = function (e, t, n, a, s, o) {
+    var l = 1 & n,
+        u = (0, r.Z)(e),
+        c = u.length;
+    if (c != (0, r.Z)(t).length && !l) return !1;
+    for (var d = c; d--; ) {
+        var _ = u[d];
+        if (!(l ? _ in t : i.call(t, _))) return !1;
     }
-    var f = l.get(e),
-        h = l.get(t);
-    if (f && h) return f == t && h == e;
-    var p = !0;
-    l.set(e, t), l.set(t, e);
-    for (var m = u; ++_ < d; ) {
-        var I = e[(E = c[_])],
-            T = t[E];
-        if (o) var g = u ? o(T, I, E, t, e, l) : o(I, T, E, e, t, l);
-        if (!(void 0 === g ? I === T || s(I, T, n, o, l) : g)) {
-            p = !1;
+    var E = o.get(e),
+        f = o.get(t);
+    if (E && f) return E == t && f == e;
+    var h = !0;
+    o.set(e, t), o.set(t, e);
+    for (var p = l; ++d < c; ) {
+        var I = e[(_ = u[d])],
+            m = t[_];
+        if (a) var T = l ? a(m, I, _, t, e, o) : a(I, m, _, e, t, o);
+        if (!(void 0 === T ? I === m || s(I, m, n, a, o) : T)) {
+            h = !1;
             break;
         }
-        m || (m = 'constructor' == E);
+        p || (p = 'constructor' == _);
     }
-    if (p && !m) {
+    if (h && !p) {
         var S = e.constructor,
-            A = t.constructor;
-        S != A && 'constructor' in e && 'constructor' in t && !('function' == typeof S && S instanceof S && 'function' == typeof A && A instanceof A) && (p = !1);
+            g = t.constructor;
+        S != g && 'constructor' in e && 'constructor' in t && !('function' == typeof S && S instanceof S && 'function' == typeof g && g instanceof g) && (h = !1);
     }
-    return l.delete(e), l.delete(t), p;
-}
-t.Z = o;
+    return o.delete(e), o.delete(t), h;
+};

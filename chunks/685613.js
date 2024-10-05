@@ -1,46 +1,47 @@
 n.d(t, {
     f: function () {
-        return r;
+        return a;
     }
 });
-var r,
+var s,
+    a,
     i = n(735250);
 n(470079);
-var a = n(120356),
-    o = n.n(a),
-    s = n(780384),
-    l = n(302245),
-    u = n(475595),
+var o = n(120356),
+    r = n.n(o),
+    l = n(780384),
+    u = n(302245),
+    d = n(475595),
     c = n(78826),
-    d = n(46140),
-    _ = n(981631),
-    E = n(789935);
-function f(e) {
-    switch (e) {
-        case 24:
-            return 3;
-        case 32:
-            return 4;
-    }
-}
-function h(e) {
-    let { className: t, gameTileSize: n = 24, quest: r, theme: a = _.BRd.DARK, withGameTile: h = !0 } = e,
-        p = (0, s.wj)(a) ? _.BRd.DARK : _.BRd.LIGHT,
-        m = (0, l.vI)(r, d.dr.QUESTS_BAR);
+    m = n(46140),
+    E = n(981631),
+    x = n(789935);
+((s = a || (a = {}))[(s.SMALL = 24)] = 'SMALL'), (s[(s.MEDIUM = 32)] = 'MEDIUM');
+t.Z = function (e) {
+    let { className: t, gameTileSize: n = 24, quest: s, theme: a = E.BRd.DARK, withGameTile: o = !0 } = e,
+        C = (0, l.wj)(a) ? E.BRd.DARK : E.BRd.LIGHT,
+        h = (0, u.vI)(s, m.dr.QUESTS_BAR);
     return (0, i.jsxs)('div', {
-        className: o()(E.partnerBranding, t),
+        className: r()(x.partnerBranding, t),
         children: [
-            h &&
+            o &&
                 (0, i.jsx)(c.Fl, {
                     id: 'QuestPartnerBranding_gameTile',
                     children: (e) =>
                         (0, i.jsx)('img', {
                             ref: e,
-                            className: E.partnerBrandingGameTile,
+                            className: x.partnerBrandingGameTile,
                             alt: '',
-                            src: (0, u.fh)(r, u.Bd.GAME_TILE, p).url,
+                            src: (0, d.fh)(s, d.Bd.GAME_TILE, C).url,
                             style: {
-                                borderRadius: f(n),
+                                borderRadius: (function (e) {
+                                    switch (e) {
+                                        case 24:
+                                            return 3;
+                                        case 32:
+                                            return 4;
+                                    }
+                                })(n),
                                 width: n,
                                 height: n
                             }
@@ -51,15 +52,11 @@ function h(e) {
                 children: (e) =>
                     (0, i.jsx)('img', {
                         ref: e,
-                        className: o()(E.partnerBrandingLogotype, { [E.rewardHighlightLogotype]: m }),
-                        alt: r.config.messages.gameTitle,
-                        src: (0, u.fh)(r, u.Bd.LOGO_TYPE, p).url
+                        className: r()(x.partnerBrandingLogotype, { [x.rewardHighlightLogotype]: h }),
+                        alt: s.config.messages.gameTitle,
+                        src: (0, d.fh)(s, d.Bd.LOGO_TYPE, C).url
                     })
             })
         ]
     });
-}
-!(function (e) {
-    (e[(e.SMALL = 24)] = 'SMALL'), (e[(e.MEDIUM = 32)] = 'MEDIUM');
-})(r || (r = {})),
-    (t.Z = h);
+};

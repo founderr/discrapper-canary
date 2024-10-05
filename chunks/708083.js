@@ -20,44 +20,30 @@ var r =
         };
     })(),
     a = n(470079),
-    o = d(a),
-    s = d(n(844303)),
-    l = c(n(531262)),
-    u = d(n(263081));
+    s = c(a),
+    o = c(n(844303)),
+    l = (function (e) {
+        if (e && e.__esModule) return e;
+        var t = {};
+        if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+        return (t.default = e), t;
+    })(n(531262)),
+    u = c(n(263081));
 function c(e) {
-    if (e && e.__esModule) return e;
-    var t = {};
-    if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-    return (t.default = e), t;
-}
-function d(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function _(e, t) {
-    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-}
-function E(e, t) {
+function d(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function f(e, t) {
-    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
-        }
-    })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-}
-var h = (t.Alpha = (function (e) {
+var _ = (t.Alpha = (function (e) {
     function t() {
-        _(this, t);
-        for (var e, n, r, i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
+        !(function (e, t) {
+            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+        })(this, t);
+        for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
         return (
-            (n = r = E(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
+            (n = r = d(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
             (r.handleChange = function (e) {
                 var t = l.calculateChange(e, r.props.hsl, r.props.direction, r.props.a, r.container);
                 t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
@@ -71,11 +57,22 @@ var h = (t.Alpha = (function (e) {
             (r.unbindEventListeners = function () {
                 window.removeEventListener('mousemove', r.handleChange), window.removeEventListener('mouseup', r.handleMouseUp);
             }),
-            E(r, n)
+            d(r, n)
         );
     }
     return (
-        f(t, e),
+        !(function (e, t) {
+            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+            (e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            })),
+                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+        })(t, e),
         i(t, [
             {
                 key: 'componentWillUnmount',
@@ -88,7 +85,7 @@ var h = (t.Alpha = (function (e) {
                 value: function () {
                     var e = this,
                         t = this.props.rgb,
-                        n = (0, s.default)(
+                        n = (0, o.default)(
                             {
                                 default: {
                                     alpha: {
@@ -139,12 +136,12 @@ var h = (t.Alpha = (function (e) {
                                 overwrite: !0
                             }
                         );
-                    return o.default.createElement(
+                    return s.default.createElement(
                         'div',
                         { style: n.alpha },
-                        o.default.createElement('div', { style: n.checkboard }, o.default.createElement(u.default, { renderers: this.props.renderers })),
-                        o.default.createElement('div', { style: n.gradient }),
-                        o.default.createElement(
+                        s.default.createElement('div', { style: n.checkboard }, s.default.createElement(u.default, { renderers: this.props.renderers })),
+                        s.default.createElement('div', { style: n.gradient }),
+                        s.default.createElement(
                             'div',
                             {
                                 style: n.container,
@@ -155,7 +152,7 @@ var h = (t.Alpha = (function (e) {
                                 onTouchMove: this.handleChange,
                                 onTouchStart: this.handleChange
                             },
-                            o.default.createElement('div', { style: n.pointer }, this.props.pointer ? o.default.createElement(this.props.pointer, this.props) : o.default.createElement('div', { style: n.slider }))
+                            s.default.createElement('div', { style: n.pointer }, this.props.pointer ? s.default.createElement(this.props.pointer, this.props) : s.default.createElement('div', { style: n.slider }))
                         )
                     );
                 }
@@ -164,4 +161,4 @@ var h = (t.Alpha = (function (e) {
         t
     );
 })(a.PureComponent || a.Component));
-t.default = h;
+t.default = _;

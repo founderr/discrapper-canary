@@ -1,28 +1,27 @@
-var r = n(735250),
-    i = n(470079),
-    a = n(481060),
-    o = n(43267),
-    s = n(93687),
-    l = n(785232);
-function u(e) {
-    let { channel: t, size: n, facepileSizeOverride: i, experimentLocation: u, isTyping: c, status: d, className: _, animated: E = !1, ...f } = e,
-        { isFacepileEnabled: h } = s.Z.useExperiment({ location: u }, { autoTrackExposure: !0 });
-    return t.recipients.length >= 2 && h && null == t.icon
-        ? (0, r.jsx)(l.Z, {
+var l = n(735250),
+    a = n(470079),
+    s = n(481060),
+    i = n(43267),
+    r = n(93687),
+    o = n(785232);
+t.Z = a.memo(function (e) {
+    let { channel: t, size: n, facepileSizeOverride: a, experimentLocation: c, isTyping: u, status: d, className: h, animated: _ = !1, ...f } = e,
+        { isFacepileEnabled: E } = r.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
+    return t.recipients.length >= 2 && E && null == t.icon
+        ? (0, l.jsx)(o.Z, {
               'aria-label': f['aria-label'],
               'aria-hidden': f['aria-hidden'],
-              className: _,
+              className: h,
               recipients: t.recipients,
-              size: null != i ? i : n,
-              isTyping: c,
+              size: null != a ? a : n,
+              isTyping: u,
               status: d
           })
-        : (0, r.jsx)(a.Avatar, {
+        : (0, l.jsx)(s.Avatar, {
               'aria-hidden': f['aria-hidden'],
               'aria-label': f['aria-label'],
-              className: _,
+              className: h,
               size: n,
-              src: (0, o.x)(t, 80, E)
+              src: (0, i.x)(t, 80, _)
           });
-}
-t.Z = i.memo(u);
+});

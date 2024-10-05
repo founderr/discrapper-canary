@@ -1,38 +1,37 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return r;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(689938),
-    o = n(128037);
-function s(e) {
-    let { message: t } = e,
-        s = () => {
-            (0, i.openModalLazy)(async () => {
+var a = n(481060),
+    s = n(689938),
+    l = n(128037);
+function r(e) {
+    let { message: t } = e;
+    return (0, i.jsxs)(a.Clickable, {
+        onClick: () => {
+            (0, a.openModalLazy)(async () => {
                 let { default: e } = await n.e('14021').then(n.bind(n, 910673));
                 return (n) =>
-                    (0, r.jsx)(e, {
+                    (0, i.jsx)(e, {
                         channelId: t.channel_id,
                         messageId: t.id,
                         ...n
                     });
             });
-        };
-    return (0, r.jsxs)(i.Clickable, {
-        onClick: s,
-        className: o.accessory,
+        },
+        className: l.accessory,
         children: [
-            (0, r.jsx)(i.CircleInformationIcon, {
+            (0, i.jsx)(a.CircleInformationIcon, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, r.jsx)(i.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-xs/normal',
-                className: o.accessoryText,
-                children: a.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_MESSAGE_LABEL
+                className: l.accessoryText,
+                children: s.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_MESSAGE_LABEL
             })
         ]
     });

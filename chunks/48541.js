@@ -1,9 +1,10 @@
-var r;
+var r, i;
 n.d(t, {
     C: function () {
         return r;
     }
 }),
-    !(function (e) {
-        (e.STAGING = 'staging'), (e.DEVELOPMENT = 'development'), (e.PRODUCTION = 'production'), (e.TEST = 'test');
-    })(r || (r = {}));
+    ((i = r || (r = {})).STAGING = 'staging'),
+    (i.DEVELOPMENT = 'development'),
+    (i.PRODUCTION = 'production'),
+    (i.TEST = 'test');

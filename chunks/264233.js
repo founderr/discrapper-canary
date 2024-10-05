@@ -1,98 +1,97 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return N;
     }
-});
-var r = n(47120);
+}),
+    n(47120);
 var i = n(735250),
     a = n(470079),
-    o = n(392711),
-    s = n.n(o),
-    l = n(442837),
-    u = n(524437),
+    s = n(392711),
+    l = n.n(s),
+    r = n(442837),
+    o = n(524437),
     c = n(481060),
     d = n(317632),
-    _ = n(174767),
-    E = n(240126),
-    f = n(791914),
-    h = n(326838),
-    p = n(689938),
-    m = n(706897);
-function I(e) {
-    let { setTab: t, badgeState: r, closePopout: o } = e,
-        I = (0, l.Wu)([d.Z], () => d.Z.getInvites()),
-        g = (0, l.e7)([d.Z], () => d.Z.getInviteStatuses()),
-        [S, A] = a.useMemo(
+    u = n(174767),
+    _ = n(240126),
+    E = n(791914),
+    I = n(326838),
+    m = n(689938),
+    T = n(706897);
+function N(e) {
+    let { setTab: t, badgeState: s, closePopout: N } = e,
+        C = (0, r.Wu)([d.Z], () => d.Z.getInvites()),
+        p = (0, r.e7)([d.Z], () => d.Z.getInviteStatuses()),
+        [f, g] = a.useMemo(
             () =>
-                s().partition(I, (e) => {
+                l().partition(C, (e) => {
                     var t;
-                    return (null === (t = g[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+                    return (null === (t = p[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
                 }),
-            [I, g]
+            [C, p]
         );
-    function v() {
-        (0, c.openModalLazy)(async () => {
-            let { default: e } = await n.e('13111').then(n.bind(n, 93756));
-            return (t) =>
-                (0, i.jsx)(e, {
-                    ...t,
-                    onDelete: async () => {
-                        await t.onClose();
-                    }
-                });
-        });
-    }
     return (a.useEffect(() => {
-        (0, _.sJ)();
+        (0, u.sJ)();
     }),
-    0 === I.length)
+    0 === C.length)
         ? (0, i.jsxs)('div', {
-              className: m.container,
+              className: T.container,
               children: [
-                  (0, i.jsx)(f.Z, {
-                      tab: u.X.GAME_INVITES,
+                  (0, i.jsx)(E.Z, {
+                      tab: o.X.GAME_INVITES,
                       setTab: t,
-                      badgeState: r,
-                      closePopout: o
+                      badgeState: s,
+                      closePopout: N
                   }),
                   (0, i.jsx)('div', {
-                      className: m.__invalid_emptyStateContainer,
-                      children: (0, i.jsx)(E.Z, {
+                      className: T.__invalid_emptyStateContainer,
+                      children: (0, i.jsx)(_.Z, {
                           Icon: c.GameControllerIcon,
-                          header: p.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
-                          tip: p.Z.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
+                          header: m.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
+                          tip: m.Z.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
                       })
                   })
               ]
           })
         : (0, i.jsxs)('div', {
-              className: m.container,
+              className: T.container,
               children: [
-                  (0, i.jsx)(f.Z, {
-                      tab: u.X.GAME_INVITES,
+                  (0, i.jsx)(E.Z, {
+                      tab: o.X.GAME_INVITES,
                       setTab: t,
-                      badgeState: r,
-                      closePopout: o,
+                      badgeState: s,
+                      closePopout: N,
                       children: (0, i.jsx)(c.CircleIconButton, {
-                          className: m.__invalid_deleteButton,
-                          tooltip: p.Z.Messages.GAME_INVITES_DELETE_ALL,
+                          className: T.__invalid_deleteButton,
+                          tooltip: m.Z.Messages.GAME_INVITES_DELETE_ALL,
                           color: c.CircleIconButtonColors.SECONDARY,
                           icon: (0, i.jsx)(c.TrashIcon, { size: 'xs' }),
-                          onClick: v
+                          onClick: function () {
+                              (0, c.openModalLazy)(async () => {
+                                  let { default: e } = await n.e('13111').then(n.bind(n, 93756));
+                                  return (t) =>
+                                      (0, i.jsx)(e, {
+                                          ...t,
+                                          onDelete: async () => {
+                                              await t.onClose();
+                                          }
+                                      });
+                              });
+                          }
                       })
                   }),
                   (0, i.jsx)(c.AdvancedScrollerThin, {
                       children: (0, i.jsxs)('div', {
-                          className: m.invitesContainer,
+                          className: T.invitesContainer,
                           children: [
-                              S.length > 0 &&
+                              f.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(T, { title: p.Z.Messages.GAME_INVITES_RECENT_HEADER }),
+                                          (0, i.jsx)(h, { title: m.Z.Messages.GAME_INVITES_RECENT_HEADER }),
                                           (0, i.jsx)(i.Fragment, {
-                                              children: S.map((e) =>
+                                              children: f.map((e) =>
                                                   (0, i.jsx)(
-                                                      h.Z,
+                                                      I.Z,
                                                       {
                                                           invite: e,
                                                           expired: !1
@@ -103,14 +102,14 @@ function I(e) {
                                           })
                                       ]
                                   }),
-                              A.length > 0 &&
+                              g.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(T, { title: p.Z.Messages.GAME_INVITES_EXPIRED_HEADER }),
+                                          (0, i.jsx)(h, { title: m.Z.Messages.GAME_INVITES_EXPIRED_HEADER }),
                                           (0, i.jsx)(i.Fragment, {
-                                              children: A.map((e) =>
+                                              children: g.map((e) =>
                                                   (0, i.jsx)(
-                                                      h.Z,
+                                                      I.Z,
                                                       {
                                                           invite: e,
                                                           expired: !0
@@ -127,18 +126,18 @@ function I(e) {
               ]
           });
 }
-function T(e) {
+function h(e) {
     let { title: t } = e;
     return (0, i.jsxs)('div', {
-        className: m.headerContainer,
+        className: T.headerContainer,
         children: [
             (0, i.jsx)(c.Text, {
-                className: m.headerTitle,
+                className: T.headerTitle,
                 variant: 'text-xs/semibold',
                 color: 'interactive-normal',
                 children: t
             }),
-            (0, i.jsx)('div', { className: m.headerDivider })
+            (0, i.jsx)('div', { className: T.headerDivider })
         ]
     });
 }

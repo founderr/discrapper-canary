@@ -2,7 +2,7 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(322231);
-let o = (e) => {
+t.Z = (e) => {
     let { size: t } = e;
     return (0, r.jsx)('div', {
         className: a.unownedStickerLockContainer,
@@ -17,4 +17,3 @@ let o = (e) => {
         })
     });
 };
-t.Z = o;

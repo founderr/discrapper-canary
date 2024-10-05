@@ -1,18 +1,18 @@
 n.d(t, {
     ZP: function () {
-        return E;
+        return c;
     },
     tJ: function () {
-        return f;
+        return d;
     }
-});
-var r = n(411104);
-var i = n(664751),
-    a = n(544891),
-    o = n(710845),
+}),
+    n(411104);
+var r = n(664751),
+    i = n(544891),
+    a = n(710845),
     s = n(70956),
-    l = n(981631);
-function u(e, t, n) {
+    o = n(981631);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,9 +25,7 @@ function u(e, t, n) {
         e
     );
 }
-let c = 5000,
-    d = 5;
-class _ {
+class u {
     async fetch(e, t, n) {
         if (!this.isCanceled)
             try {
@@ -36,12 +34,12 @@ class _ {
                 if (200 === i.status) e(i);
                 else if (202 === i.status) {
                     var r;
-                    if (((this.query.attempts = (null !== (r = this.query.attempts) && void 0 !== r ? r : 0) + 1), this.query.attempts > d)) return;
+                    if (((this.query.attempts = (null !== (r = this.query.attempts) && void 0 !== r ? r : 0) + 1), this.query.attempts > 5)) return;
                     let a = parseInt(i.headers['retry-after']);
-                    (this.retryDelay = isNaN(a) || 0 === a ? c : a * s.Z.Millis.SECOND), this.retryLater(e, t, n), t(i);
+                    (this.retryDelay = isNaN(a) || 0 === a ? 5000 : a * s.Z.Millis.SECOND), this.retryLater(e, t, n), t(i);
                 }
             } catch (e) {
-                new o.Z('SearchFetcher').error(e), n(e);
+                new a.Z('SearchFetcher').error(e), n(e);
             }
     }
     cancel() {
@@ -51,22 +49,22 @@ class _ {
         null != this.indexingPollId && clearTimeout(this.indexingPollId), (this.indexingPollId = setTimeout(this.fetch.bind(this, e, t, n), this.retryDelay));
     }
     constructor(e, t, n) {
-        u(this, 'indexingPollId', void 0), u(this, 'searchId', void 0), u(this, 'searchType', void 0), u(this, 'query', void 0), u(this, 'retryDelay', void 0), u(this, 'isCanceled', !1), (this.searchId = e), (this.searchType = t), (this.query = n);
+        l(this, 'indexingPollId', void 0), l(this, 'searchId', void 0), l(this, 'searchType', void 0), l(this, 'query', void 0), l(this, 'retryDelay', void 0), l(this, 'isCanceled', !1), (this.searchId = e), (this.searchType = t), (this.query = n);
     }
 }
-class E extends _ {
+class c extends u {
     getEndpoint() {
         switch (this.searchType) {
-            case l.aib.DMS:
-                return l.ANM.SEARCH_DMS;
-            case l.aib.FAVORITES:
-                return l.ANM.SEARCH_FAVORITES;
-            case l.aib.GUILD:
+            case o.aib.DMS:
+                return o.ANM.SEARCH_DMS;
+            case o.aib.FAVORITES:
+                return o.ANM.SEARCH_FAVORITES;
+            case o.aib.GUILD:
                 if (null == this.searchId || '' === this.searchId) return;
-                return l.ANM.SEARCH_GUILD(this.searchId);
-            case l.aib.CHANNEL:
+                return o.ANM.SEARCH_GUILD(this.searchId);
+            case o.aib.CHANNEL:
                 if (null == this.searchId || '' === this.searchId) return;
-                return l.ANM.SEARCH_CHANNEL(this.searchId);
+                return o.ANM.SEARCH_CHANNEL(this.searchId);
             default:
                 throw Error('[SearchFetcher] Unhandled search type: '.concat(this.searchType));
         }
@@ -75,25 +73,25 @@ class E extends _ {
         let e = this.getEndpoint();
         return null == e
             ? null
-            : a.tn.get({
+            : i.tn.get({
                   url: e,
-                  query: i.stringify(this.query),
+                  query: r.stringify(this.query),
                   oldFormErrors: !0
               });
     }
 }
-class f extends _ {
+class d extends u {
     getEndpoint() {
         switch (this.searchType) {
-            case l.aib.DMS:
-                return l.ANM.SEARCH_TABS_DMS;
-            case l.aib.GUILD_CHANNEL:
-            case l.aib.GUILD:
+            case o.aib.DMS:
+                return o.ANM.SEARCH_TABS_DMS;
+            case o.aib.GUILD_CHANNEL:
+            case o.aib.GUILD:
                 if (null == this.searchId || '' === this.searchId) return;
-                return l.ANM.SEARCH_TABS_GUILD(this.searchId);
-            case l.aib.CHANNEL:
+                return o.ANM.SEARCH_TABS_GUILD(this.searchId);
+            case o.aib.CHANNEL:
                 if (null == this.searchId || '' === this.searchId) return;
-                return l.ANM.SEARCH_TABS_CHANNEL(this.searchId);
+                return o.ANM.SEARCH_TABS_CHANNEL(this.searchId);
             default:
                 throw Error('[SearchFetcher] Unhandled search type: '.concat(this.searchType));
         }
@@ -102,13 +100,13 @@ class f extends _ {
         let e = this.getEndpoint();
         return null == e
             ? null
-            : a.tn.post({
+            : i.tn.post({
                   url: e,
                   body: this.payload,
                   oldFormErrors: !0
               });
     }
     constructor(e, t, n, r) {
-        super(e, t, n), u(this, 'payload', void 0), (this.payload = r);
+        super(e, t, n), l(this, 'payload', void 0), (this.payload = r);
     }
 }

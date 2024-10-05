@@ -10,177 +10,187 @@ function r(e) {
 function i(...e) {
     return e.map((e) => n(e)).join('');
 }
-function a(e) {
-    let t = e[e.length - 1];
-    return 'object' == typeof t && t.constructor === Object ? (e.splice(e.length - 1, 1), t) : {};
+function a(...e) {
+    return (
+        '(' +
+        ((function (e) {
+            let t = e[e.length - 1];
+            return 'object' == typeof t && t.constructor === Object ? (e.splice(e.length - 1, 1), t) : {};
+        })(e).capture
+            ? ''
+            : '?:') +
+        e.map((e) => n(e)).join('|') +
+        ')'
+    );
 }
-function o(...e) {
-    return '(' + (a(e).capture ? '' : '?:') + e.map((e) => n(e)).join('|') + ')';
-}
-function s(e) {
+e.exports = function (e) {
     let n = {
             scope: 'keyword',
             match: /\b(yield|return|let|do|match|use)!/
         },
-        a = ['if', 'else', 'endif', 'line', 'nowarn', 'light', 'r', 'i', 'I', 'load', 'time', 'help', 'quit'],
         s = ['bool', 'byte', 'sbyte', 'int8', 'int16', 'int32', 'uint8', 'uint16', 'uint32', 'int', 'uint', 'int64', 'uint64', 'nativeint', 'unativeint', 'decimal', 'float', 'double', 'float32', 'single', 'char', 'string', 'unit', 'bigint', 'option', 'voption', 'list', 'array', 'seq', 'byref', 'exn', 'inref', 'nativeptr', 'obj', 'outref', 'voidptr', 'Result'],
-        l = {
+        o = {
             keyword: ['abstract', 'and', 'as', 'assert', 'base', 'begin', 'class', 'default', 'delegate', 'do', 'done', 'downcast', 'downto', 'elif', 'else', 'end', 'exception', 'extern', 'finally', 'fixed', 'for', 'fun', 'function', 'global', 'if', 'in', 'inherit', 'inline', 'interface', 'internal', 'lazy', 'let', 'match', 'member', 'module', 'mutable', 'namespace', 'new', 'of', 'open', 'or', 'override', 'private', 'public', 'rec', 'return', 'static', 'struct', 'then', 'to', 'try', 'type', 'upcast', 'use', 'val', 'void', 'when', 'while', 'with', 'yield'],
             literal: ['true', 'false', 'null', 'Some', 'None', 'Ok', 'Error', 'infinity', 'infinityf', 'nan', 'nanf'],
             built_in: ['not', 'ref', 'raise', 'reraise', 'dict', 'readOnlyDict', 'set', 'get', 'enum', 'sizeof', 'typeof', 'typedefof', 'nameof', 'nullArg', 'invalidArg', 'invalidOp', 'id', 'fst', 'snd', 'ignore', 'lock', 'using', 'box', 'unbox', 'tryUnbox', 'printf', 'printfn', 'sprintf', 'eprintf', 'eprintfn', 'fprintf', 'fprintfn', 'failwith', 'failwithf'],
             'variable.constant': ['__LINE__', '__SOURCE_DIRECTORY__', '__SOURCE_FILE__']
         },
-        u = {
+        l = {
             variants: [e.COMMENT(/\(\*(?!\))/, /\*\)/, { contains: ['self'] }), e.C_LINE_COMMENT_MODE]
         },
-        c = /[a-zA-Z_](\w|')*/,
-        d = {
+        u = {
             scope: 'variable',
             begin: /``/,
             end: /``/
         },
-        _ = /\B('|\^)/,
-        E = {
+        c = /\B('|\^)/,
+        d = {
             scope: 'symbol',
-            variants: [{ match: i(_, /``.*?``/) }, { match: i(_, e.UNDERSCORE_IDENT_RE) }],
+            variants: [{ match: i(c, /``.*?``/) }, { match: i(c, e.UNDERSCORE_IDENT_RE) }],
             relevance: 0
         },
-        f = function ({ includeEqual: e }) {
+        _ = function ({ includeEqual: e }) {
             let n;
-            let a = i('[', ...Array.from((n = e ? '!%&*+-/<=>@^|~?' : '!%&*+-/<>@^|~?')).map(t), ']'),
-                s = o(a, /\./),
-                l = i(s, r(s)),
-                u = o(i(l, s, '*'), i(a, '+'));
+            let s = i('[', ...Array.from((n = e ? '!%&*+-/<=>@^|~?' : '!%&*+-/<>@^|~?')).map(t), ']'),
+                o = a(s, /\./),
+                l = i(o, r(o)),
+                u = a(i(l, o, '*'), i(s, '+'));
             return {
                 scope: 'operator',
-                match: o(u, /:\?>/, /:\?/, /:>/, /:=/, /::?/, /\$/),
+                match: a(u, /:\?>/, /:\?/, /:>/, /:=/, /::?/, /\$/),
                 relevance: 0
             };
         },
-        h = f({ includeEqual: !0 }),
-        p = f({ includeEqual: !1 }),
-        m = function (t, n) {
+        E = _({ includeEqual: !0 }),
+        f = _({ includeEqual: !1 }),
+        h = function (t, n) {
             return {
-                begin: i(t, r(i(/\s*/, o(/\w/, /'/, /\^/, /#/, /``/, /\(/, /{\|/)))),
+                begin: i(t, r(i(/\s*/, a(/\w/, /'/, /\^/, /#/, /``/, /\(/, /{\|/)))),
                 beginScope: n,
-                end: r(o(/\n/, /=/)),
+                end: r(a(/\n/, /=/)),
                 relevance: 0,
-                keywords: e.inherit(l, { type: s }),
-                contains: [u, E, e.inherit(d, { scope: null }), p]
+                keywords: e.inherit(o, { type: s }),
+                contains: [l, d, e.inherit(u, { scope: null }), f]
             };
         },
-        I = m(/:/, 'operator'),
-        T = m(/\bof\b/, 'keyword'),
-        g = {
-            begin: [/(^|\s+)/, /type/, /\s+/, c],
+        p = h(/:/, 'operator'),
+        I = h(/\bof\b/, 'keyword'),
+        m = {
+            begin: [/(^|\s+)/, /type/, /\s+/, /[a-zA-Z_](\w|')*/],
             beginScope: {
                 2: 'keyword',
                 4: 'title.class'
             },
             end: r(/\(|=|$/),
-            keywords: l,
+            keywords: o,
             contains: [
-                u,
-                e.inherit(d, { scope: null }),
-                E,
+                l,
+                e.inherit(u, { scope: null }),
+                d,
                 {
                     scope: 'operator',
                     match: /<|>/
                 },
-                I
+                p
             ]
         },
-        S = {
+        T = {
             scope: 'computation-expression',
             match: /\b[_a-z]\w*(?=\s*\{)/
         },
-        A = {
-            begin: [/^\s*/, i(/#/, o(...a)), /\b/],
+        S = {
+            begin: [/^\s*/, i(/#/, a('if', 'else', 'endif', 'line', 'nowarn', 'light', 'r', 'i', 'I', 'load', 'time', 'help', 'quit')), /\b/],
             beginScope: { 2: 'meta' },
             end: r(/\s|$/)
         },
-        v = {
+        g = {
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]
         },
-        N = {
+        A = {
             scope: 'string',
             begin: /"/,
             end: /"/,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        O = {
+        N = {
             scope: 'string',
             begin: /@"/,
             end: /"/,
             contains: [{ match: /""/ }, e.BACKSLASH_ESCAPE]
         },
-        R = {
+        O = {
             scope: 'string',
             begin: /"""/,
             end: /"""/,
             relevance: 2
         },
-        C = {
+        R = {
             scope: 'subst',
             begin: /\{/,
             end: /\}/,
-            keywords: l
+            keywords: o
         },
-        y = {
+        v = {
             scope: 'string',
             begin: /\$"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, C]
+            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, R]
         },
-        L = {
+        C = {
             scope: 'string',
             begin: /(\$@|@\$)"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, C]
+            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, R]
         },
-        b = {
+        L = {
             scope: 'string',
-            begin: /\$"""/,
-            end: /"""/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, C],
-            relevance: 2
-        },
-        D = {
-            scope: 'string',
-            match: i(/'/, o(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
+            match: i(/'/, a(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (C.contains = [L, y, O, N, D, n, u, d, I, S, A, v, E, h]),
+        (R.contains = [C, v, N, A, L, n, l, u, p, T, S, g, d, E]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
-            keywords: l,
+            keywords: o,
             illegal: /\/\*/,
             classNameAliases: { 'computation-expression': 'keyword' },
             contains: [
                 n,
                 {
-                    variants: [b, L, y, R, O, N, D]
+                    variants: [
+                        {
+                            scope: 'string',
+                            begin: /\$"""/,
+                            end: /"""/,
+                            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, R],
+                            relevance: 2
+                        },
+                        C,
+                        v,
+                        O,
+                        N,
+                        A,
+                        L
+                    ]
                 },
+                l,
                 u,
-                d,
-                g,
+                m,
                 {
                     scope: 'meta',
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [d, R, O, N, D, v]
+                    contains: [u, O, N, A, L, g]
                 },
-                T,
                 I,
+                p,
+                T,
                 S,
-                A,
-                v,
-                E,
-                h
+                g,
+                d,
+                E
             ]
         }
     );
-}
-e.exports = s;
+};

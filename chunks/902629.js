@@ -1,34 +1,32 @@
-var r = n(47120);
-var i = n(147913),
-    a = n(313261),
-    o = n(38618);
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class l extends i.Z {
+n(47120);
+var r = n(147913),
+    i = n(313261),
+    a = n(38618);
+class s extends r.Z {
     handleCheckExperiments() {
-        let { enabled: e } = a.O.getCurrentConfig({ location: 'gateway' }, { autoTrackExposure: !0 });
-        o.Z.getSocket().dispatcher.toggleRequestIdleCallback(e);
+        let { enabled: e } = i.O.getCurrentConfig({ location: 'gateway' }, { autoTrackExposure: !0 });
+        a.Z.getSocket().dispatcher.toggleRequestIdleCallback(e);
     }
     constructor(...e) {
+        var t, n, r;
         super(...e),
-            s(this, 'actions', {
+            (t = this),
+            (n = 'actions'),
+            (r = {
                 EXPERIMENT_OVERRIDE_BUCKET: this.handleCheckExperiments,
                 LOGIN_SUCCESS: this.handleCheckExperiments,
                 EXPERIMENTS_FETCH_SUCCESS: this.handleCheckExperiments,
                 POST_CONNECTION_OPEN: this.handleCheckExperiments,
                 CACHE_LOADED: this.handleCheckExperiments
-            });
+            }),
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: r,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (t[n] = r);
     }
 }
-t.Z = new l();
+t.Z = new s();

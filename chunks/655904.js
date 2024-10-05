@@ -1,45 +1,44 @@
 n.d(t, {
     E: function () {
-        return d;
+        return _;
     }
 });
 var r,
-    i = n(735250),
-    a = n(470079),
+    i,
+    a = n(735250),
+    s = n(470079),
     o = n(120356),
-    s = n.n(o),
-    l = n(692547),
-    u = n(351533);
-!(function (e) {
-    (e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large');
-})(r || (r = {}));
-let c = 'indeterminate';
-function d(e) {
+    l = n.n(o),
+    u = n(692547),
+    c = n(351533);
+((r = i || (i = {})).XSMALL = 'xsmall'), (r.SMALL = 'small'), (r.LARGE = 'large');
+let d = 'indeterminate';
+function _(e) {
     let t,
-        { className: n, percent: r, size: o = 'small', foregroundColor: d = l.Z.unsafe_rawColors.BRAND_500.css, backgroundColor: _ = 'var(--background-modifier-active)', foregroundGradientColor: E, animate: f = !0 } = e,
+        { className: n, percent: r, size: i = 'small', foregroundColor: o = u.Z.unsafe_rawColors.BRAND_500.css, backgroundColor: _ = 'var(--background-modifier-active)', foregroundGradientColor: E, animate: f = !0 } = e,
         h = null != r ? r : 0;
     return (
-        (t = null != E ? { background: 'linear-gradient(to right, '.concat(E[0], ', ').concat(E[1], ')') } : { backgroundColor: d }),
-        (0, i.jsx)('div', {
-            className: s()(n, u.progress, u[o]),
+        (t = null != E ? { background: 'linear-gradient(to right, '.concat(E[0], ', ').concat(E[1], ')') } : { backgroundColor: o }),
+        (0, a.jsx)('div', {
+            className: l()(n, c.progress, c[i]),
             style: { backgroundColor: _ },
             children:
-                h !== c && 'number' == typeof h
-                    ? (0, i.jsx)('div', {
-                          className: s()(u.progressBar, u[o], { [u.animating]: f }),
+                h !== d && 'number' == typeof h
+                    ? (0, a.jsx)('div', {
+                          className: l()(c.progressBar, c[i], { [c.animating]: f }),
                           style: {
                               transform: 'translate3d('.concat(Math.min(Math.max(0, h), 100) - 100, '%, 0, 0)'),
                               ...t
                           }
                       })
-                    : (0, i.jsxs)(a.Fragment, {
+                    : (0, a.jsxs)(s.Fragment, {
                           children: [
-                              (0, i.jsx)('div', {
-                                  className: s()(u.indeterminateBar1, u[o], { [u.animating]: f }),
+                              (0, a.jsx)('div', {
+                                  className: l()(c.indeterminateBar1, c[i], { [c.animating]: f }),
                                   style: t
                               }),
-                              (0, i.jsx)('div', {
-                                  className: s()(u.indeterminateBar2, u[o], { [u.animating]: f }),
+                              (0, a.jsx)('div', {
+                                  className: l()(c.indeterminateBar2, c[i], { [c.animating]: f }),
                                   style: t
                               })
                           ]
@@ -47,4 +46,4 @@ function d(e) {
         })
     );
 }
-(d.Sizes = r), (d.INDETERMINATE = c);
+(_.Sizes = i), (_.INDETERMINATE = d);

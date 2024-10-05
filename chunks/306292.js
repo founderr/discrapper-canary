@@ -1,5 +1,4 @@
 var r = n(473547);
-function i(e) {
+t.Z = function (e) {
     return null == e ? '' : (0, r.Z)(e);
-}
-t.Z = i;
+};

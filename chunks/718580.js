@@ -1,6 +1,6 @@
 n.d(t, {
     H: function () {
-        return T;
+        return m;
     },
     M: function () {
         return I;
@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(212433),
-    o = n(990547),
-    s = n(873546),
+    s = n(990547),
+    o = n(873546),
     l = n(186325),
     u = n(481060),
     c = n(393238),
@@ -25,9 +25,6 @@ let h = {
     clamp: !0
 };
 function p(e, t) {
-    return null == e ? null : e.index > t.index ? 'backwards' : e.index < t.index ? 'forwards' : null;
-}
-function m(e, t) {
     return (n) => {
         if (0 === n) return 'auto';
         let r = 'forwards' === t.current,
@@ -39,107 +36,107 @@ function m(e, t) {
 function I(e) {
     return null;
 }
-function T(e) {
-    var t, n, I;
-    let { contentDisplay: T, fadeInOut: g = !1, ...S } = e,
-        A = {},
-        { analyticsLocations: v } = (0, E.ZP)();
-    i.Children.forEach(S.children, (e, t) => {
-        A[e.props.id] = {
+function m(e) {
+    var t, n, I, m, T;
+    let { contentDisplay: S, fadeInOut: g = !1, ...A } = e,
+        N = {},
+        { analyticsLocations: O } = (0, E.ZP)();
+    i.Children.forEach(A.children, (e, t) => {
+        N[e.props.id] = {
             children: e.props.children,
             impressionName: e.props.impressionName,
             impressionProperties: e.props.impressionProperties,
             index: t
         };
     });
-    let N = S.activeSlide,
-        O = (0, d.Z)(S.activeSlide),
-        R = null !== (t = S.directionOverride) && void 0 !== t ? t : p(null != O ? A[O] : null, A[N]),
-        { reducedMotion: C } = i.useContext(l.S),
-        y = i.useContext(_.Z),
-        L = A[N].impressionName,
+    let R = A.activeSlide,
+        v = (0, d.Z)(A.activeSlide);
+    let C = null !== (t = A.directionOverride) && void 0 !== t ? t : ((m = null != v ? N[v] : null), (T = N[R]), null == m ? null : m.index > T.index ? 'backwards' : m.index < T.index ? 'forwards' : null),
+        { reducedMotion: L } = i.useContext(l.S),
+        D = i.useContext(_.Z),
+        y = N[R].impressionName,
         b = {
-            ...A[N].impressionProperties,
-            location_stack: v
+            ...N[R].impressionProperties,
+            location_stack: O
         };
-    y({
-        type: o.ImpressionTypes.MODAL,
-        name: L,
+    D({
+        type: s.ImpressionTypes.MODAL,
+        name: y,
         properties: b,
         _stackContext: { isSlide: !0 }
     });
-    let { ref: D, width: M = 0, height: P = 0 } = (0, c.Z)(N),
-        U = {
+    let { ref: M, width: P = 0, height: U = 0 } = (0, c.Z)(R),
+        w = {
             ...h,
-            ...S.springConfig,
-            ...(C.enabled ? { clamp: !0 } : null)
+            ...A.springConfig,
+            ...(L.enabled ? { clamp: !0 } : null)
         },
-        w = (0, u.useSpring)(
+        x = (0, u.useSpring)(
             {
-                width: null !== (n = S.width) && void 0 !== n ? n : M,
-                height: P,
-                config: U
+                width: null !== (n = A.width) && void 0 !== n ? n : P,
+                height: U,
+                config: w
             },
-            null == O ? 'animate-never' : 'respect-motion-settings'
+            null == v ? 'animate-never' : 'respect-motion-settings'
         ),
-        x = (0, u.useTransition)(
-            N,
+        G = (0, u.useTransition)(
+            R,
             {
                 value: 0,
                 from: { value: 1 },
                 enter: { value: 0 },
                 leave: { value: -1 },
-                config: U,
+                config: w,
                 onRest: (e, t) => {
                     let { item: n } = t;
-                    n === N && null != S.onSlideReady && S.onSlideReady(n);
+                    n === R && null != A.onSlideReady && A.onSlideReady(n);
                 }
             },
-            null == O ? 'animate-never' : 'respect-motion-settings'
+            null == v ? 'animate-never' : 'respect-motion-settings'
         ),
-        G = (0, f.Z)(R),
-        { width: k, centered: B = !0 } = S,
-        F = s.tq ? '100%' : w.width.to((e) => Math.round(e)),
-        Z = s.tq ? '100%' : w.height.to((e) => Math.round(e)),
-        V = s.tq
+        k = (0, f.Z)(C),
+        { width: B, centered: F = !0 } = A,
+        V = o.tq ? '100%' : x.width.to((e) => Math.round(e)),
+        H = o.tq ? '100%' : x.height.to((e) => Math.round(e)),
+        Z = o.tq
             ? {}
-            : B
+            : F
               ? {
                     transform: 'translate3d(0, -50%, 0) scale(1.0, 1.0)',
                     top: '50%'
                 }
               : { transform: 'scale(1.0, 1.0)' },
-        H = s.tq ? {} : { overflow: null !== (I = S.overflow) && void 0 !== I ? I : 'hidden' };
+        Y = o.tq ? {} : { overflow: null !== (I = A.overflow) && void 0 !== I ? I : 'hidden' };
     return (0, r.jsx)(a.animated.div, {
         style: {
             position: 'relative',
-            width: F,
-            height: Z,
-            ...H
+            width: V,
+            height: H,
+            ...Y
         },
-        children: x((e, t, n) => {
+        children: G((e, t, n) => {
             let { key: i } = n,
-                o = { opacity: e.value.to((e) => 1 - Math.abs(e)) };
+                s = { opacity: e.value.to((e) => 1 - Math.abs(e)) };
             return (0, r.jsx)(
                 a.animated.div,
                 {
-                    ref: t === N ? D : null,
+                    ref: t === R ? M : null,
                     style: {
                         position: 'absolute',
-                        display: T,
+                        display: S,
                         flexDirection: 'column',
                         backfaceVisibility: 'hidden',
-                        width: s.tq ? '100%' : k,
-                        ...V,
-                        ...(C.enabled
-                            ? o
+                        width: o.tq ? '100%' : B,
+                        ...Z,
+                        ...(L.enabled
+                            ? s
                             : {
-                                  left: e.value.to(m('left', G)),
-                                  right: e.value.to(m('right', G)),
-                                  ...(g && o)
+                                  left: e.value.to(p('left', k)),
+                                  right: e.value.to(p('right', k)),
+                                  ...(g && s)
                               })
                     },
-                    children: A[t].children
+                    children: N[t].children
                 },
                 i
             );

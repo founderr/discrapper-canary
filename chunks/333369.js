@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = {
             begin: /<\/?[A-Za-z_]/,
@@ -7,62 +7,6 @@ function t(e) {
             relevance: 0
         },
         r = {
-            begin: '^[-\\*]{3,}',
-            end: '$'
-        },
-        i = {
-            className: 'code',
-            variants: [
-                { begin: '(`{3,})[^`](.|\\n)*?\\1`*[ ]*' },
-                { begin: '(~{3,})[^~](.|\\n)*?\\1~*[ ]*' },
-                {
-                    begin: '```',
-                    end: '```+[ ]*$'
-                },
-                {
-                    begin: '~~~',
-                    end: '~~~+[ ]*$'
-                },
-                { begin: '`.+?`' },
-                {
-                    begin: '(?=^( {4}|\\t))',
-                    contains: [
-                        {
-                            begin: '^( {4}|\\t)',
-                            end: '(\\n)$'
-                        }
-                    ],
-                    relevance: 0
-                }
-            ]
-        },
-        a = {
-            className: 'bullet',
-            begin: '^[ \t]*([*+-]|(\\d+\\.))(?=\\s+)',
-            end: '\\s+',
-            excludeEnd: !0
-        },
-        o = {
-            begin: /^\[[^\n]+\]:/,
-            returnBegin: !0,
-            contains: [
-                {
-                    className: 'symbol',
-                    begin: /\[/,
-                    end: /\]/,
-                    excludeBegin: !0,
-                    excludeEnd: !0
-                },
-                {
-                    className: 'link',
-                    begin: /:\s*/,
-                    end: /$/,
-                    excludeBegin: !0
-                }
-            ]
-        },
-        s = /[A-Za-z][A-Za-z0-9+.-]*/,
-        l = {
             variants: [
                 {
                     begin: /\[.+?\]\[.*?\]/,
@@ -73,7 +17,7 @@ function t(e) {
                     relevance: 2
                 },
                 {
-                    begin: t.concat(/\[.+?\]\(/, s, /:\/\/.*?\)/),
+                    begin: t.concat(/\[.+?\]\(/, /[A-Za-z][A-Za-z0-9+.-]*/, /:\/\/.*?\)/),
                     relevance: 2
                 },
                 {
@@ -114,7 +58,7 @@ function t(e) {
                 }
             ]
         },
-        u = {
+        i = {
             className: 'strong',
             contains: [],
             variants: [
@@ -128,7 +72,7 @@ function t(e) {
                 }
             ]
         },
-        c = {
+        a = {
             className: 'emphasis',
             contains: [],
             variants: [
@@ -143,20 +87,20 @@ function t(e) {
                 }
             ]
         },
-        d = e.inherit(u, { contains: [] }),
-        _ = e.inherit(c, { contains: [] });
-    u.contains.push(_), c.contains.push(d);
-    let E = [n, l];
-    [u, c, d, _].forEach((e) => {
-        e.contains = e.contains.concat(E);
+        s = e.inherit(i, { contains: [] }),
+        o = e.inherit(a, { contains: [] });
+    i.contains.push(o), a.contains.push(s);
+    let l = [n, r];
+    [i, a, s, o].forEach((e) => {
+        e.contains = e.contains.concat(l);
     });
-    let f = {
+    let u = {
         className: 'section',
         variants: [
             {
                 begin: '^#{1,6}',
                 end: '$',
-                contains: (E = E.concat(u, c))
+                contains: (l = l.concat(i, a))
             },
             {
                 begin: '(?=^.+?\\n[=-]{2,}$)',
@@ -165,7 +109,7 @@ function t(e) {
                     {
                         begin: '^',
                         end: '\\n',
-                        contains: E
+                        contains: l
                     }
                 ]
             }
@@ -175,22 +119,72 @@ function t(e) {
         name: 'Markdown',
         aliases: ['md', 'mkdown', 'mkd'],
         contains: [
-            f,
-            n,
-            a,
             u,
-            c,
+            n,
+            {
+                className: 'bullet',
+                begin: '^[ \t]*([*+-]|(\\d+\\.))(?=\\s+)',
+                end: '\\s+',
+                excludeEnd: !0
+            },
+            i,
+            a,
             {
                 className: 'quote',
                 begin: '^>\\s+',
-                contains: E,
+                contains: l,
                 end: '$'
             },
-            i,
+            {
+                className: 'code',
+                variants: [
+                    { begin: '(`{3,})[^`](.|\\n)*?\\1`*[ ]*' },
+                    { begin: '(~{3,})[^~](.|\\n)*?\\1~*[ ]*' },
+                    {
+                        begin: '```',
+                        end: '```+[ ]*$'
+                    },
+                    {
+                        begin: '~~~',
+                        end: '~~~+[ ]*$'
+                    },
+                    { begin: '`.+?`' },
+                    {
+                        begin: '(?=^( {4}|\\t))',
+                        contains: [
+                            {
+                                begin: '^( {4}|\\t)',
+                                end: '(\\n)$'
+                            }
+                        ],
+                        relevance: 0
+                    }
+                ]
+            },
+            {
+                begin: '^[-\\*]{3,}',
+                end: '$'
+            },
             r,
-            l,
-            o
+            {
+                begin: /^\[[^\n]+\]:/,
+                returnBegin: !0,
+                contains: [
+                    {
+                        className: 'symbol',
+                        begin: /\[/,
+                        end: /\]/,
+                        excludeBegin: !0,
+                        excludeEnd: !0
+                    },
+                    {
+                        className: 'link',
+                        begin: /:\s*/,
+                        end: /$/,
+                        excludeBegin: !0
+                    }
+                ]
+            }
         ]
     };
-}
-e.exports = t;
+};

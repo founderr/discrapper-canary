@@ -10,53 +10,18 @@ var r = n(470079),
         return function (t, n, r) {
             return n && e(t.prototype, n), r && e(t, r), t;
         };
-    })();
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function s(e, t) {
-    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-}
-function l(e, t) {
-    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-}
-function u(e, t) {
-    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
-        }
-    })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-}
-var c = 1,
-    d = 38,
-    _ = [38, 40],
-    E = function (e) {
-        return _.indexOf(e) > -1;
-    },
-    f = function (e) {
-        return Number(String(e).replace(/%/g, ''));
-    },
-    h = 1,
-    p = (function (e) {
+    })(),
+    s = [38, 40],
+    o = 1,
+    l = (function (e) {
         function t(e) {
-            s(this, t);
-            var n = l(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            !(function (e, t) {
+                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+            })(this, t);
+            var n = (function (e, t) {
+                if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
+            })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
             return (
                 (n.handleBlur = function () {
                     n.state.blurValue &&
@@ -69,11 +34,12 @@ var c = 1,
                     n.setUpdatedValue(e.target.value, e);
                 }),
                 (n.handleKeyDown = function (e) {
-                    var t = f(e.target.value);
-                    if (!isNaN(t) && E(e.keyCode)) {
-                        var r = n.getArrowOffset(),
-                            i = e.keyCode === d ? t + r : t - r;
-                        n.setUpdatedValue(i, e);
+                    var t,
+                        r = Number(String(e.target.value).replace(/%/g, ''));
+                    if (!isNaN(r) && ((t = e.keyCode), s.indexOf(t) > -1)) {
+                        var i = n.getArrowOffset(),
+                            a = 38 === e.keyCode ? r + i : r - i;
+                        n.setUpdatedValue(a, e);
                     }
                 }),
                 (n.handleDrag = function (e) {
@@ -95,12 +61,23 @@ var c = 1,
                     value: String(e.value).toUpperCase(),
                     blurValue: String(e.value).toUpperCase()
                 }),
-                (n.inputId = 'rc-editable-input-' + h++),
+                (n.inputId = 'rc-editable-input-' + o++),
                 n
             );
         }
         return (
-            u(t, e),
+            !(function (e, t) {
+                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+                (e.prototype = Object.create(t && t.prototype, {
+                    constructor: {
+                        value: e,
+                        enumerable: !1,
+                        writable: !0,
+                        configurable: !0
+                    }
+                })),
+                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+            })(t, e),
             a(t, [
                 {
                     key: 'componentDidUpdate',
@@ -124,13 +101,27 @@ var c = 1,
                 {
                     key: 'getValueObjectWithLabel',
                     value: function (e) {
-                        return o({}, this.props.label, e);
+                        var t, n, r;
+                        return (
+                            (t = {}),
+                            (n = this.props.label),
+                            (r = e),
+                            n in t
+                                ? Object.defineProperty(t, n, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (t[n] = r),
+                            t
+                        );
                     }
                 },
                 {
                     key: 'getArrowOffset',
                     value: function () {
-                        return this.props.arrowOffset || c;
+                        return this.props.arrowOffset || 1;
                     }
                 },
                 {
@@ -191,4 +182,4 @@ var c = 1,
             t
         );
     })(r.PureComponent || r.Component);
-t.Z = p;
+t.Z = l;

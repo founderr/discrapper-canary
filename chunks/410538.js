@@ -1,56 +1,59 @@
-var r = n(470079);
-function i(e, t) {
-    return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
-}
-var a = 'function' == typeof Object.is ? Object.is : i,
-    o = r.useState,
+var r = n(470079),
+    i =
+        'function' == typeof Object.is
+            ? Object.is
+            : function (e, t) {
+                  return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
+              },
+    a = r.useState,
     s = r.useEffect,
-    l = r.useLayoutEffect,
-    u = r.useDebugValue;
-function c(e, t) {
-    var n = t(),
-        r = o({
-            inst: {
-                value: n,
-                getSnapshot: t
-            }
-        }),
-        i = r[0].inst,
-        a = r[1];
-    return (
-        l(
-            function () {
-                (i.value = n), (i.getSnapshot = t), d(i) && a({ inst: i });
-            },
-            [e, n, t]
-        ),
-        s(
-            function () {
-                return (
-                    d(i) && a({ inst: i }),
-                    e(function () {
-                        d(i) && a({ inst: i });
-                    })
-                );
-            },
-            [e]
-        ),
-        u(n),
-        n
-    );
-}
-function d(e) {
+    o = r.useLayoutEffect,
+    l = r.useDebugValue;
+function u(e) {
     var t = e.getSnapshot;
     e = e.value;
     try {
         var n = t();
-        return !a(e, n);
+        return !i(e, n);
     } catch (e) {
         return !0;
     }
 }
-function _(e, t) {
-    return t();
-}
-var E = 'undefined' == typeof window || void 0 === window.document || void 0 === window.document.createElement ? _ : c;
-t.useSyncExternalStore = void 0 !== r.useSyncExternalStore ? r.useSyncExternalStore : E;
+var c =
+    'undefined' == typeof window || void 0 === window.document || void 0 === window.document.createElement
+        ? function (e, t) {
+              return t();
+          }
+        : function (e, t) {
+              var n = t(),
+                  r = a({
+                      inst: {
+                          value: n,
+                          getSnapshot: t
+                      }
+                  }),
+                  i = r[0].inst,
+                  c = r[1];
+              return (
+                  o(
+                      function () {
+                          (i.value = n), (i.getSnapshot = t), u(i) && c({ inst: i });
+                      },
+                      [e, n, t]
+                  ),
+                  s(
+                      function () {
+                          return (
+                              u(i) && c({ inst: i }),
+                              e(function () {
+                                  u(i) && c({ inst: i });
+                              })
+                          );
+                      },
+                      [e]
+                  ),
+                  l(n),
+                  n
+              );
+          };
+t.useSyncExternalStore = void 0 !== r.useSyncExternalStore ? r.useSyncExternalStore : c;

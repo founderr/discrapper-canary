@@ -8,11 +8,10 @@ var r = n(470079),
 function a(e) {
     let t = (0, i.Z)(e);
     (0, r.useEffect)(() => {
-        function e() {
+        let e = requestAnimationFrame(function n() {
             var r;
-            null === (r = t.current) || void 0 === r || r.call(t), (n = requestAnimationFrame(e));
-        }
-        let n = requestAnimationFrame(e);
-        return () => cancelAnimationFrame(n);
+            null === (r = t.current) || void 0 === r || r.call(t), (e = requestAnimationFrame(n));
+        });
+        return () => cancelAnimationFrame(e);
     }, []);
 }

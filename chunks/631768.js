@@ -1,26 +1,27 @@
 var r,
-    i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = n(981631).Ucd.AUTO;
-function l(e) {
-    s = e.mode;
-}
-class u extends (r = i.ZP.Store) {
+    i,
+    a,
+    s,
+    o = n(442837),
+    l = n(570140),
+    u = n(981631);
+let c = u.Ucd.AUTO;
+class d extends (s = o.ZP.Store) {
     get mode() {
-        return s;
+        return c;
     }
 }
-o(u, 'displayName', 'VideoQualityModeStore'), (t.Z = new u(a.Z, { SET_CHANNEL_VIDEO_QUALITY_MODE: l }));
+(a = 'VideoQualityModeStore'),
+    (i = 'displayName') in (r = d)
+        ? Object.defineProperty(r, i, {
+              value: a,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (r[i] = a),
+    (t.Z = new d(l.Z, {
+        SET_CHANNEL_VIDEO_QUALITY_MODE: function (e) {
+            c = e.mode;
+        }
+    }));

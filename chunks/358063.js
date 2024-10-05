@@ -1,5 +1,4 @@
-let r = t;
-(r._reverse = function (e) {
+(t._reverse = function (e) {
     let t = {};
     return (
         Object.keys(e).forEach(function (n) {
@@ -8,4 +7,4 @@ let r = t;
         t
     );
 }),
-    (r.der = n(375990));
+    (t.der = n(375990));

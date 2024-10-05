@@ -1,14 +1,14 @@
+n(47120);
 var r,
-    i = n(47120);
-var a = n(735250),
-    o = n(470079),
+    i = n(735250),
+    a = n(470079),
     s = n(120356),
-    l = n.n(s),
-    u = n(481060),
-    c = n(540026),
-    d = n(689938),
-    _ = n(493464);
-function E(e, t, n) {
+    o = n.n(s),
+    l = n(481060),
+    u = n(540026),
+    c = n(689938),
+    d = n(493464);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,8 +21,7 @@ function E(e, t, n) {
         e
     );
 }
-let f = 150;
-class h extends (r = o.PureComponent) {
+class E extends (r = a.PureComponent) {
     componentDidMount() {
         this.updateMediaBar();
     }
@@ -35,52 +34,52 @@ class h extends (r = o.PureComponent) {
         null != r && (e ? r.setGrabber(0) : r.setGrabber(t / n));
     }
     render() {
-        let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: i, currentWindow: o, muted: s, minValue: E, maxValue: h, value: p, onVolumeShow: m, onVolumeHide: I } = this.props,
-            { hovered: T, focused: g, dragging: S } = this.state,
-            A = u.VoiceNormalIcon;
+        let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: a, currentWindow: s, muted: _, minValue: E, maxValue: f, value: h, onVolumeShow: p, onVolumeHide: I } = this.props,
+            { hovered: m, focused: T, dragging: S } = this.state,
+            g = l.VoiceNormalIcon;
         return (
-            s || p === E ? (A = u.VoiceXIcon) : p < h / 2 && (A = u.VoiceLowIcon),
-            (0, a.jsxs)('div', {
-                className: l()(n, _.container),
+            _ || h === E ? (g = l.VoiceXIcon) : h < f / 2 && (g = l.VoiceLowIcon),
+            (0, i.jsxs)('div', {
+                className: o()(n, d.container),
                 onMouseEnter: () => {
-                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), null == m || m();
+                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), null == p || p();
                 },
                 onMouseLeave: () => {
                     clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
                             this.setState({ hovered: !1 }), null == I || I();
-                        }, f));
+                        }, 150));
                 },
                 onFocus: () => this.setState({ focused: !0 }),
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
                 children: [
-                    (0, a.jsx)('div', {
-                        className: l()(_.volumeButtonSlider, r, { [_.sliderVisible]: T || g || S }),
+                    (0, i.jsx)('div', {
+                        className: o()(d.volumeButtonSlider, r, { [d.sliderVisible]: m || T || S }),
                         onMouseEnter: () => {
                             clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
                         },
                         onMouseLeave: () => {
-                            clearTimeout(this._hoverTimeout), (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), f));
+                            clearTimeout(this._hoverTimeout), (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150));
                         },
-                        children: (0, a.jsx)(c.Z, {
-                            sliderClassName: i,
-                            type: c.Z.Types.VOLUME,
-                            value: p / h,
+                        children: (0, i.jsx)(u.Z, {
+                            sliderClassName: a,
+                            type: u.Z.Types.VOLUME,
+                            value: h / f,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
-                            currentWindow: o,
+                            currentWindow: s,
                             ref: this._mediaBar
                         })
                     }),
-                    (0, a.jsx)(u.Button, {
-                        className: _.volumeButton,
-                        'aria-label': d.Z.Messages.CONTROL_VOLUME,
-                        size: u.Button.Sizes.NONE,
-                        look: u.Button.Looks.BLANK,
+                    (0, i.jsx)(l.Button, {
+                        className: d.volumeButton,
+                        'aria-label': c.Z.Messages.CONTROL_VOLUME,
+                        size: l.Button.Sizes.NONE,
+                        look: l.Button.Looks.BLANK,
                         onClick: this.handleToggleMute,
-                        children: (0, a.jsx)(A, {
+                        children: (0, i.jsx)(g, {
                             color: t,
                             className: e
                         })
@@ -91,23 +90,22 @@ class h extends (r = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            E(this, '_mediaBar', o.createRef()),
-            E(this, '_hoverTimeout', void 0),
-            E(this, 'state', {
+            _(this, '_mediaBar', a.createRef()),
+            _(this, '_hoverTimeout', void 0),
+            _(this, 'state', {
                 hovered: !1,
                 focused: !1,
                 dragging: !1
             }),
-            E(this, 'handleValueChange', (e) => {
-                let { maxValue: t, onValueChange: n } = this.props,
-                    r = e * t;
-                null == n || n(r);
+            _(this, 'handleValueChange', (e) => {
+                let { maxValue: t, onValueChange: n } = this.props;
+                null == n || n(e * t);
             }),
-            E(this, 'handleToggleMute', () => {
+            _(this, 'handleToggleMute', () => {
                 let { onToggleMute: e } = this.props;
                 null == e || e();
             }),
-            E(this, 'handleKeyDown', (e) => {
+            _(this, 'handleKeyDown', (e) => {
                 let { minValue: t, value: n, maxValue: r, onValueChange: i } = this.props,
                     a = 0.05 * (r - t);
                 switch (e.key) {
@@ -118,20 +116,20 @@ class h extends (r = o.PureComponent) {
                         e.stopPropagation(), e.preventDefault(), null == i || i(Math.max(t, n - a));
                 }
             }),
-            E(this, 'handleDragStart', () => {
+            _(this, 'handleDragStart', () => {
                 this.setState({ dragging: !0 });
             }),
-            E(this, 'handleDragEnd', () => {
+            _(this, 'handleDragEnd', () => {
                 this.setState({ dragging: !1 });
             }),
-            E(this, 'blur', () => {
+            _(this, 'blur', () => {
                 this.setState({ focused: !1 });
             });
     }
 }
-E(h, 'defaultProps', {
+_(E, 'defaultProps', {
     minValue: 0,
     maxValue: 100,
     handleSize: 16
 }),
-    (t.Z = h);
+    (t.Z = E);

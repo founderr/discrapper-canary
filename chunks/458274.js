@@ -33,7 +33,7 @@ let t = (e) => ({
     r = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'],
     i = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'],
     a = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'],
-    o = [
+    s = [
         'align-content',
         'align-items',
         'align-self',
@@ -393,14 +393,10 @@ let t = (e) => ({
         'writing-mode',
         'z-index'
     ].reverse();
-function s(e) {
-    let s = e.regex,
+e.exports = function (e) {
+    let o = e.regex,
         l = t(e),
-        u = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
-        c = 'and or not only',
-        d = /@-?\w[\w]*(-\w+)*/,
-        _ = '[a-zA-Z-][a-zA-Z0-9_-]*',
-        E = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
+        u = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
     return {
         name: 'CSS',
         case_insensitive: !0,
@@ -409,7 +405,7 @@ function s(e) {
         classNameAliases: { keyframePosition: 'selector-tag' },
         contains: [
             l.BLOCK_COMMENT,
-            u,
+            { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
             l.CSS_NUMBER_MODE,
             {
                 className: 'selector-id',
@@ -418,7 +414,7 @@ function s(e) {
             },
             {
                 className: 'selector-class',
-                begin: '\\.' + _,
+                begin: '\\.[a-zA-Z-][a-zA-Z0-9_-]*',
                 relevance: 0
             },
             l.ATTRIBUTE_SELECTOR_MODE,
@@ -429,7 +425,7 @@ function s(e) {
             l.CSS_VARIABLE,
             {
                 className: 'attribute',
-                begin: '\\b(' + o.join('|') + ')\\b'
+                begin: '\\b(' + s.join('|') + ')\\b'
             },
             {
                 begin: /:/,
@@ -439,14 +435,14 @@ function s(e) {
                     l.HEXCOLOR,
                     l.IMPORTANT,
                     l.CSS_NUMBER_MODE,
-                    ...E,
+                    ...u,
                     {
                         begin: /(url|data-uri)\(/,
                         end: /\)/,
                         relevance: 0,
                         keywords: { built_in: 'url data-uri' },
                         contains: [
-                            ...E,
+                            ...u,
                             {
                                 className: 'string',
                                 begin: /[^)]/,
@@ -459,14 +455,14 @@ function s(e) {
                 ]
             },
             {
-                begin: s.lookahead(/@/),
+                begin: o.lookahead(/@/),
                 end: '[{;]',
                 relevance: 0,
                 illegal: /:/,
                 contains: [
                     {
                         className: 'keyword',
-                        begin: d
+                        begin: /@-?\w[\w]*(-\w+)*/
                     },
                     {
                         begin: /\s/,
@@ -475,7 +471,7 @@ function s(e) {
                         relevance: 0,
                         keywords: {
                             $pattern: /[a-z-]+/,
-                            keyword: c,
+                            keyword: 'and or not only',
                             attribute: r.join(' ')
                         },
                         contains: [
@@ -483,7 +479,7 @@ function s(e) {
                                 begin: /[a-z-]+(?=:)/,
                                 className: 'attribute'
                             },
-                            ...E,
+                            ...u,
                             l.CSS_NUMBER_MODE
                         ]
                     }
@@ -495,5 +491,4 @@ function s(e) {
             }
         ]
     };
-}
-e.exports = s;
+};

@@ -1,198 +1,187 @@
 var r,
-    i = n(392711),
-    a = n.n(i),
-    o = n(442837),
-    s = n(570140),
-    l = n(594174),
-    u = n(981631);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let d = u.QZA.CLOSED,
-    _ = null,
-    E = null,
-    f = {},
-    h = {},
+    i,
+    a,
+    s,
+    o = n(392711),
+    l = n.n(o),
+    u = n(442837),
+    c = n(570140),
+    d = n(594174),
+    _ = n(981631);
+let E = _.QZA.CLOSED,
+    f = null,
+    h = null,
     p = {},
-    m = null,
-    I = null,
-    T = !1,
-    g = !1,
+    I = {},
+    m = {},
+    T = null,
     S = null,
-    A = null,
-    v = null,
-    N = [],
+    g = !1,
+    A = !1,
+    N = null,
     O = null,
-    R = null;
-function C(e) {
-    (T = !0), y(e);
-}
-function y(e) {
-    var t, n, r, i, a, o;
-    let s = l.default.getCurrentUser();
-    if (null == s) return L();
-    (E = null !== (t = e.section) && void 0 !== t ? t : E),
-        (O = null !== (n = e.section) && void 0 !== n ? n : E),
-        null != e.subsection && null != E && (f[E] = e.subsection),
-        null != e.scrollPosition && null != E && (h[E] = e.scrollPosition),
-        (g = !!e.openWithoutBackstack),
-        (d = u.QZA.OPEN),
-        (p = {}),
-        (I = {
-            ...(m = {
-                [u.oAB.ACCOUNT]: {
-                    userId: s.id,
-                    username: s.username,
-                    discriminator: s.discriminator,
-                    email: s.email,
-                    avatar: s.avatar,
+    R = null,
+    v = [],
+    C = null,
+    L = null;
+function D(e) {
+    var t, n, r, i, a, s;
+    let o = d.default.getCurrentUser();
+    if (null == o) return y();
+    (h = null !== (t = e.section) && void 0 !== t ? t : h),
+        (C = null !== (n = e.section) && void 0 !== n ? n : h),
+        null != e.subsection && null != h && (p[h] = e.subsection),
+        null != e.scrollPosition && null != h && (I[h] = e.scrollPosition),
+        (A = !!e.openWithoutBackstack),
+        (E = _.QZA.OPEN),
+        (m = {}),
+        (S = {
+            ...(T = {
+                [_.oAB.ACCOUNT]: {
+                    userId: o.id,
+                    username: o.username,
+                    discriminator: o.discriminator,
+                    email: o.email,
+                    avatar: o.avatar,
                     password: '',
                     newPassword: null,
-                    claimed: s.isClaimed()
+                    claimed: o.isClaimed()
                 }
             })
         }),
-        (A = null !== (r = e.onClose) && void 0 !== r ? r : null),
-        (v = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null),
-        (N = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
-        (R = null !== (o = e.impressionSource) && void 0 !== o ? o : null);
+        (O = null !== (r = e.onClose) && void 0 !== r ? r : null),
+        (R = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null),
+        (v = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
+        (L = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
-function L() {
-    (d = u.QZA.CLOSED), (T = !1), (m = null), (O = null), (I = null), (_ = null), (E = null), (f = {}), (h = {}), (A = null), (v = null), (N = []), (R = null);
+function y() {
+    (E = _.QZA.CLOSED), (g = !1), (T = null), (C = null), (S = null), (f = null), (h = null), (p = {}), (I = {}), (O = null), (R = null), (v = []), (L = null);
 }
-function b(e) {
-    var t;
-    (_ = E), (E = e.section), (v = null), (N = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (f[E] = e.subsection);
+function b() {
+    (E = _.QZA.OPEN), (m = {});
 }
-function D(e) {
-    let { forSection: t } = e;
-    null != t ? delete f[t] : null != E && delete f[E];
-}
-function M(e) {
-    let { forSection: t } = e;
-    null != t ? delete h[t] : null != E && delete h[E];
-}
-function P(e) {
-    let { settings: t } = e;
-    null == I && (I = {});
-    let n = I[u.oAB.ACCOUNT];
-    I[u.oAB.ACCOUNT] = {
-        ...n,
-        ...t
-    };
-}
-function U() {
-    d = u.QZA.SUBMITTING;
-}
-function w() {
-    let e = l.default.getCurrentUser();
-    x(),
-        null != e &&
-            (I = {
-                ...(m = {
-                    [u.oAB.ACCOUNT]: {
-                        userId: e.id,
-                        username: e.username,
-                        discriminator: e.discriminator,
-                        email: e.email,
-                        avatar: e.avatar,
-                        password: '',
-                        newPassword: null,
-                        claimed: e.isClaimed()
-                    }
-                })
-            });
-}
-function x() {
-    (d = u.QZA.OPEN), (p = {});
-}
-function G(e) {
-    var t;
-    if (d !== u.QZA.SUBMITTING) return !1;
-    (d = u.QZA.OPEN), (E = u.oAB.ACCOUNT), (p = null !== (t = e.errors) && void 0 !== t ? t : {});
-}
-function k(e) {
-    return (
-        (S = e.tab),
-        null == E &&
-            S === u.cII.USER_SETTINGS &&
-            y({
-                type: 'USER_SETTINGS_MODAL_INIT',
-                section: null,
-                subsection: null,
-                scrollPosition: null,
-                openWithoutBackstack: !1
-            })
-    );
-}
-class B extends (r = o.ZP.Store) {
+class M extends (s = u.ZP.Store) {
     initialize() {
-        this.waitFor(l.default);
+        this.waitFor(d.default);
     }
     hasChanges() {
-        return null != I && null != m && (!!this.isOpen() || S === u.cII.USER_SETTINGS) && !a().isEqual(I, m);
+        return null != S && null != T && (!!this.isOpen() || N === _.cII.USER_SETTINGS) && !l().isEqual(S, T);
     }
     isOpen() {
-        return T;
+        return g;
     }
     getPreviousSection() {
-        return _;
+        return f;
     }
     getSection() {
-        return E;
+        return h;
     }
     getSubsection() {
-        return null != E ? f[E] : null;
+        return null != h ? p[h] : null;
     }
     getScrollPosition() {
-        return null != E ? h[E] : null;
+        return null != h ? I[h] : null;
     }
     shouldOpenWithoutBackstack() {
-        return g;
+        return A;
     }
     getProps() {
         return {
-            submitting: d === u.QZA.SUBMITTING,
-            section: E,
-            subsection: null != E ? f[E] : null,
-            scrollPosition: null != E ? h[E] : null,
-            settings: I,
-            errors: p,
+            submitting: E === _.QZA.SUBMITTING,
+            section: h,
+            subsection: null != h ? p[h] : null,
+            scrollPosition: null != h ? I[h] : null,
+            settings: S,
+            errors: m,
             hasChanges: this.hasChanges(),
-            openWithoutBackstack: g,
-            analyticsLocation: v,
-            analyticsLocations: N,
-            initialSection: O,
-            impressionSource: R
+            openWithoutBackstack: A,
+            analyticsLocation: R,
+            analyticsLocations: v,
+            initialSection: C,
+            impressionSource: L
         };
     }
     get onClose() {
-        return A;
+        return O;
     }
 }
-c(B, 'displayName', 'UserSettingsModalStore'),
-    (t.Z = new B(s.Z, {
-        USER_SETTINGS_MODAL_OPEN: C,
-        USER_SETTINGS_MODAL_INIT: y,
-        USER_SETTINGS_MODAL_CLOSE: L,
-        LOGOUT: L,
-        USER_SETTINGS_MODAL_SUBMIT: U,
-        USER_SETTINGS_MODAL_SUBMIT_FAILURE: G,
-        USER_SETTINGS_MODAL_SET_SECTION: b,
-        USER_SETTINGS_MODAL_CLEAR_SUBSECTION: D,
-        USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: M,
-        USER_SETTINGS_MODAL_UPDATE_ACCOUNT: P,
-        USER_SETTINGS_MODAL_SUBMIT_COMPLETE: x,
-        USER_SETTINGS_MODAL_RESET: w,
-        DRAWER_SELECT_TAB: k
+(a = 'UserSettingsModalStore'),
+    (i = 'displayName') in (r = M)
+        ? Object.defineProperty(r, i, {
+              value: a,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (r[i] = a),
+    (t.Z = new M(c.Z, {
+        USER_SETTINGS_MODAL_OPEN: function (e) {
+            (g = !0), D(e);
+        },
+        USER_SETTINGS_MODAL_INIT: D,
+        USER_SETTINGS_MODAL_CLOSE: y,
+        LOGOUT: y,
+        USER_SETTINGS_MODAL_SUBMIT: function () {
+            E = _.QZA.SUBMITTING;
+        },
+        USER_SETTINGS_MODAL_SUBMIT_FAILURE: function (e) {
+            var t;
+            if (E !== _.QZA.SUBMITTING) return !1;
+            (E = _.QZA.OPEN), (h = _.oAB.ACCOUNT), (m = null !== (t = e.errors) && void 0 !== t ? t : {});
+        },
+        USER_SETTINGS_MODAL_SET_SECTION: function (e) {
+            var t;
+            (f = h), (h = e.section), (R = null), (v = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (p[h] = e.subsection);
+        },
+        USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function (e) {
+            let { forSection: t } = e;
+            null != t ? delete p[t] : null != h && delete p[h];
+        },
+        USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: function (e) {
+            let { forSection: t } = e;
+            null != t ? delete I[t] : null != h && delete I[h];
+        },
+        USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function (e) {
+            let { settings: t } = e;
+            null == S && (S = {});
+            let n = S[_.oAB.ACCOUNT];
+            S[_.oAB.ACCOUNT] = {
+                ...n,
+                ...t
+            };
+        },
+        USER_SETTINGS_MODAL_SUBMIT_COMPLETE: b,
+        USER_SETTINGS_MODAL_RESET: function () {
+            let e = d.default.getCurrentUser();
+            b(),
+                null != e &&
+                    (S = {
+                        ...(T = {
+                            [_.oAB.ACCOUNT]: {
+                                userId: e.id,
+                                username: e.username,
+                                discriminator: e.discriminator,
+                                email: e.email,
+                                avatar: e.avatar,
+                                password: '',
+                                newPassword: null,
+                                claimed: e.isClaimed()
+                            }
+                        })
+                    });
+        },
+        DRAWER_SELECT_TAB: function (e) {
+            return (
+                (N = e.tab),
+                null == h &&
+                    N === _.cII.USER_SETTINGS &&
+                    D({
+                        type: 'USER_SETTINGS_MODAL_INIT',
+                        section: null,
+                        subsection: null,
+                        scrollPosition: null,
+                        openWithoutBackstack: !1
+                    })
+            );
+        }
     }));

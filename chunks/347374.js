@@ -1,16 +1,15 @@
-var r = n(47120);
-var i = n(633302);
-let a = (e) => {
+n(47120);
+var r = n(633302);
+t.Z = (e) => {
     let t = new Map();
-    for (let r of e) {
+    for (let i of e) {
         var n;
-        if (null != r.id) {
-            t.set(r.id, r);
+        if (null != i.id) {
+            t.set(i.id, i);
             continue;
         }
-        let e = null !== (n = i.ZP.convertSurrogateToBase(r.surrogates)) && void 0 !== n ? n : r;
+        let e = null !== (n = r.ZP.convertSurrogateToBase(i.surrogates)) && void 0 !== n ? n : i;
         t.set(e.name, e);
     }
     return t;
 };
-t.Z = a;

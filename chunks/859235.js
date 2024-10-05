@@ -1,72 +1,73 @@
 n.d(t, {
     q: function () {
-        return r;
+        return i;
     }
 });
 var r,
-    i = n(735250),
-    a = n(470079),
+    i,
+    a = n(735250),
+    s = n(470079),
     o = n(120356),
-    s = n.n(o),
-    l = n(91192),
-    u = n(481060),
-    c = n(166459),
-    d = n(951394),
-    _ = n(585483),
-    E = n(43085),
-    f = n(981631),
-    h = n(689938),
-    p = n(57604);
+    l = n.n(o),
+    u = n(91192),
+    c = n(481060),
+    d = n(166459),
+    _ = n(951394),
+    E = n(585483),
+    f = n(43085),
+    h = n(981631),
+    p = n(689938),
+    I = n(57604);
 function m(e) {
     e.stopPropagation();
 }
-function I(e, t) {
-    let { id: n, channelId: r, className: a, children: o, actions: I, handleEditModal: T, keyboardModeEnabled: g, onKeyDown: S, draftType: A, size: v = 1 } = e,
-        { onFocus: N, ...O } = (0, l.JA)(n),
-        { handleFocus: R, handleBlur: C } = (0, E.b)(N),
-        y = 0 === v,
-        L = null != I,
-        b = (e) => {
-            if (!!g) {
-                switch (e.which) {
-                    case f.yXg.D:
-                        e.preventDefault(), c.Z.remove(r, n, A);
-                        return;
-                    case f.yXg.E:
-                        null != T && (e.preventDefault(), T(e));
-                        return;
-                    case f.yXg.BACKSPACE:
-                        e.ctrlKey ? (e.preventDefault(), c.Z.clearAll(r, A)) : (e.preventDefault(), c.Z.remove(r, n, A));
-                        return;
-                    case f.yXg.ARROW_UP:
-                        if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
-                        e.preventDefault(), _.S.dispatchToLastSubscribed(f.CkL.FOCUS_MESSAGES, { atEnd: !0 });
-                }
-                null == S || S(e);
-            }
-        };
-    return (0, i.jsx)(u.FocusRing, {
-        children: (0, i.jsx)('li', {
-            ...O,
-            onFocus: R,
+((r = i || (i = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (r[(r.CLIP = 2)] = 'CLIP');
+t.Z = s.forwardRef(function (e, t) {
+    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: T, keyboardModeEnabled: S, onKeyDown: g, draftType: A, size: N = 1 } = e,
+        { onFocus: O, ...R } = (0, u.JA)(n),
+        { handleFocus: v, handleBlur: C } = (0, f.b)(O),
+        L = 0 === N,
+        D = null != o;
+    return (0, a.jsx)(c.FocusRing, {
+        children: (0, a.jsx)('li', {
+            ...R,
+            onFocus: v,
             onBlur: C,
-            onKeyDown: b,
-            className: s()(p.upload, a, { [p.sizeClip]: 2 === v }),
+            onKeyDown: (e) => {
+                if (!!S) {
+                    switch (e.which) {
+                        case h.yXg.D:
+                            e.preventDefault(), d.Z.remove(r, n, A);
+                            return;
+                        case h.yXg.E:
+                            null != T && (e.preventDefault(), T(e));
+                            return;
+                        case h.yXg.BACKSPACE:
+                            e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(r, A)) : (e.preventDefault(), d.Z.remove(r, n, A));
+                            return;
+                        case h.yXg.ARROW_UP:
+                            if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
+                            e.preventDefault(), E.S.dispatchToLastSubscribed(h.CkL.FOCUS_MESSAGES, { atEnd: !0 });
+                    }
+                    null == g || g(e);
+                }
+            },
+            className: l()(I.upload, i, { [I.sizeClip]: 2 === N }),
             ref: t,
-            children: (0, i.jsxs)('div', {
-                className: p.uploadContainer,
+            children: (0, a.jsxs)('div', {
+                className: I.uploadContainer,
                 children: [
-                    o,
-                    L
-                        ? (0, i.jsx)('div', {
-                              className: p.actionBarContainer,
-                              children: (0, i.jsx)('div', {
-                                  className: s()(p.actionBar, { [p.smallActionBar]: y }),
+                    s,
+                    D
+                        ? (0, a.jsx)('div', {
+                              className: I.actionBarContainer,
+                              children: (0, a.jsx)('div', {
+                                  className: l()(I.actionBar, { [I.smallActionBar]: L }),
                                   onContextMenu: m,
-                                  'aria-label': h.Z.Messages.ATTACHMENT_UTILITIES,
-                                  children: (0, i.jsx)(d.ZP, {
-                                      className: s()({ [p.miniPopover]: y }),
-                                      children: I
+                                  'aria-label': p.Z.Messages.ATTACHMENT_UTILITIES,
+                                  children: (0, a.jsx)(_.ZP, {
+                                      className: l()({ [I.miniPopover]: L }),
+                                      children: o
                                   })
                               })
                           })
@@ -75,8 +76,4 @@ function I(e, t) {
             })
         })
     });
-}
-!(function (e) {
-    (e[(e.SMALL = 0)] = 'SMALL'), (e[(e.MEDIUM = 1)] = 'MEDIUM'), (e[(e.CLIP = 2)] = 'CLIP');
-})(r || (r = {})),
-    (t.Z = a.forwardRef(I));
+});

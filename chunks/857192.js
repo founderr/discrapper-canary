@@ -1,43 +1,32 @@
-n.r(t);
+n.r(t), n(789020);
 var r,
-    i = n(789020);
-var a = n(261470),
-    o = n(213919),
-    s = n(442837),
-    l = n(544891),
-    u = n(433517),
-    c = n(570140),
-    d = n(179658),
-    _ = n(70956),
-    E = n(960048),
-    f = n(981631);
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let p = (() => {
+    i,
+    a,
+    s,
+    o = n(261470),
+    l = n(213919),
+    u = n(442837),
+    c = n(544891),
+    d = n(433517),
+    _ = n(570140),
+    E = n(179658),
+    f = n(70956),
+    h = n(960048),
+    p = n(981631);
+let I = (() => {
         let e = ''.concat(location.protocol, '//').concat(location.host, '/__development/source_maps'),
             t = null,
-            n = new a.Z(5 * _.Z.Millis.SECOND, 1 * _.Z.Millis.MINUTE, !0),
+            n = new o.Z(5 * f.Z.Millis.SECOND, 1 * f.Z.Millis.MINUTE, !0),
             r = () => {
-                l.tn
+                c.tn
                     .put({
                         url: e,
-                        headers: { Authorization: o.getToken() },
+                        headers: { Authorization: l.getToken() },
                         oldFormErrors: !0
                     })
                     .then(
                         (e) => {
-                            401 === e.status || 403 === e.status ? ((t = null), (0, d.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (t = setTimeout(r, n.fail())) : (n.succeed(), (t = setTimeout(r, e.body.sourceMapCookieTTLSeconds * _.Z.Millis.SECOND * 0.75)));
+                            401 === e.status || 403 === e.status ? ((t = null), (0, E.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (t = setTimeout(r, n.fail())) : (n.succeed(), (t = setTimeout(r, e.body.sourceMapCookieTTLSeconds * f.Z.Millis.SECOND * 0.75)));
                         },
                         () => {
                             t = setTimeout(r, n.fail());
@@ -51,16 +40,16 @@ let p = (() => {
                         ? (t = setTimeout(r, 0))
                         : (clearTimeout(t),
                           (t = null),
-                          l.tn.del({
+                          c.tn.del({
                               url: e,
-                              headers: { Authorization: o.getToken() },
+                              headers: { Authorization: l.getToken() },
                               oldFormErrors: !0
                           }));
             }
         };
     })(),
     m = 'DeveloperOptionsStore',
-    I = {
+    T = {
         trace: !1,
         canary: !1,
         logGatewayEvents: !1,
@@ -76,92 +65,97 @@ let p = (() => {
         appDirectoryIncludesInactiveCollections: !1,
         isStreamInfoOverlayEnabled: !1
     },
-    T = { ...I };
+    S = { ...T };
 function g(e) {
-    (T = {
-        ...I,
+    (S = {
         ...T,
+        ...S,
         ...e
     }),
-        p.set(T.sourceMapsEnabled),
-        u.K.set(m, T);
+        I.set(S.sourceMapsEnabled),
+        d.K.set(m, S);
 }
-function S(e) {
-    let { settings: t } = e;
-    g(t);
-}
-function A(e) {
-    g(I);
-}
-function v(e) {
-    var t;
-    let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & f.xW$.STAFF) === f.xW$.STAFF,
-        r = n || null != e.user.personal_connection_id;
-    n && p.set(T.sourceMapsEnabled), E.Z.setTags({ isStaff: r.toString() });
-}
-class N extends (r = s.ZP.Store) {
+class A extends (r = u.ZP.Store) {
     initialize() {
-        let e = u.K.get(m);
+        let e = d.K.get(m);
         null != e &&
-            (T = {
-                ...I,
+            (S = {
+                ...T,
                 ...e
             });
     }
     get isTracingRequests() {
-        return T.trace;
+        return S.trace;
     }
     get isForcedCanary() {
-        return T.canary;
+        return S.canary;
     }
     get isLoggingGatewayEvents() {
-        return T.logGatewayEvents;
+        return S.logGatewayEvents;
     }
     get isLoggingOverlayEvents() {
-        return T.logOverlayEvents;
+        return S.logOverlayEvents;
     }
     get isLoggingAnalyticsEvents() {
-        return T.logAnalyticsEvents;
+        return S.logAnalyticsEvents;
     }
     get isAxeEnabled() {
-        return T.axeEnabled;
+        return S.axeEnabled;
     }
     get cssDebuggingEnabled() {
-        return T.cssDebuggingEnabled;
+        return S.cssDebuggingEnabled;
     }
     get layoutDebuggingEnabled() {
-        return T.layoutDebuggingEnabled;
+        return S.layoutDebuggingEnabled;
     }
     get sourceMapsEnabled() {
-        return T.sourceMapsEnabled;
+        return S.sourceMapsEnabled;
     }
     get isAnalyticsDebuggerEnabled() {
-        return T.analyticsDebuggerEnabled;
+        return S.analyticsDebuggerEnabled;
     }
     get isBugReporterEnabled() {
-        return T.bugReporterEnabled;
+        return S.bugReporterEnabled;
     }
     get isIdleStatusIndicatorEnabled() {
-        return T.idleStatusIndicatorEnabled;
+        return S.idleStatusIndicatorEnabled;
     }
     get appDirectoryIncludesInactiveCollections() {
-        return T.appDirectoryIncludesInactiveCollections;
+        return S.appDirectoryIncludesInactiveCollections;
     }
     get isStreamInfoOverlayEnabled() {
-        return T.isStreamInfoOverlayEnabled;
+        return S.isStreamInfoOverlayEnabled;
     }
     getDebugOptionsHeaderValue() {
         return (
-            Object.keys(T).map((e) => T[e]),
-            Object.keys(T)
-                .filter((e) => T[e])
+            Object.keys(S).map((e) => S[e]),
+            Object.keys(S)
+                .filter((e) => S[e])
                 .join(',')
         );
     }
 }
-h(N, 'displayName', 'DeveloperOptionsStore'),
-    (t.default = new N(c.Z, {
-        LOGOUT: A,
-        CONNECTION_OPEN: v,
-        DEVELOPER_OPTIONS_UPDATE_SETTINGS: S
+(s = 'DeveloperOptionsStore'),
+    (a = 'displayName') in (i = A)
+        ? Object.defineProperty(i, a, {
+              value: s,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (i[a] = s),
+    (t.default = new A(_.Z, {
+        LOGOUT: function (e) {
+            g(T);
+        },
+        CONNECTION_OPEN: function (e) {
+            var t;
+            let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & p.xW$.STAFF) === p.xW$.STAFF,
+                r = n || null != e.user.personal_connection_id;
+            n && I.set(S.sourceMapsEnabled), h.Z.setTags({ isStaff: r.toString() });
+        },
+        DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
+            let { settings: t } = e;
+            g(t);
+        }
     }));

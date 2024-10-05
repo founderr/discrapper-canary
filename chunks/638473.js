@@ -1,6 +1,6 @@
 var r = n(809948),
     i = n(670097);
-function a(e, t) {
+t.Z = function (e, t) {
     var n = -1,
         a = (0, i.Z)(e) ? Array(e.length) : [];
     return (
@@ -9,5 +9,4 @@ function a(e, t) {
         }),
         a
     );
-}
-t.Z = a;
+};

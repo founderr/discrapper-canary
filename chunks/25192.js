@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'BASIC',
         case_insensitive: !0,
@@ -31,5 +31,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

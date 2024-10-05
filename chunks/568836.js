@@ -1,43 +1,41 @@
 n.d(t, {
     $G: function () {
-        return u;
-    },
-    OR: function () {
         return c;
     },
+    OR: function () {
+        return d;
+    },
     aL: function () {
-        return l;
+        return o;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-    a = n.n(i),
-    o = n(345898),
-    s = n(289659);
-let l = 660,
-    u = (e) =>
-        (0, r.jsx)(o.Z, {
+var a = n(120356),
+    s = n.n(a),
+    l = n(345898),
+    r = n(289659);
+let o = 660,
+    c = (e) =>
+        (0, i.jsx)(l.Z, {
             ...e,
-            className: a()(e.className, {
-                [s.embedVertical]: !e.isHorizontal,
-                [s.embedHorizontal]: e.isHorizontal
+            className: s()(e.className, {
+                [r.embedVertical]: !e.isHorizontal,
+                [r.embedHorizontal]: e.isHorizontal
             })
         }),
-    c = (e) => {
-        let { isHorizontal: t } = e,
-            n = () => (0, r.jsx)('div', { className: a()(s.loadingImage, { [s.loadingImageHorizontal]: t }) }),
-            i = () =>
-                (0, r.jsx)('div', {
-                    className: a()(s.loadingDescription),
-                    children: (0, r.jsx)('div', {
-                        className: a()(s.loadingBackgroundWrapper, { [s.loadingBackgroundWrapperHorizontal]: t }),
-                        children: (0, r.jsx)('div', { className: s.loadingBackground })
-                    })
-                });
-        return (0, r.jsx)(u, {
+    d = (e) => {
+        let { isHorizontal: t } = e;
+        return (0, i.jsx)(c, {
             ...e,
-            media: i,
-            title: n
+            media: () =>
+                (0, i.jsx)('div', {
+                    className: s()(r.loadingDescription),
+                    children: (0, i.jsx)('div', {
+                        className: s()(r.loadingBackgroundWrapper, { [r.loadingBackgroundWrapperHorizontal]: t }),
+                        children: (0, i.jsx)('div', { className: r.loadingBackground })
+                    })
+                }),
+            title: () => (0, i.jsx)('div', { className: s()(r.loadingImage, { [r.loadingImageHorizontal]: t }) })
         });
     };

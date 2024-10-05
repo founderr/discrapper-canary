@@ -1,11 +1,4 @@
-n.d(t, {
-    b: function () {
-        return o;
-    }
-});
-var r,
-    i,
-    a = n(47120);
+var r, i, a, s;
 function o(e, t) {
     return {
         id: e.id,
@@ -20,9 +13,14 @@ function o(e, t) {
         type: e.type
     };
 }
-!(function (e) {
-    (e[(e.SOURCE_0 = 0)] = 'SOURCE_0'), (e[(e.SOURCE_1 = 1)] = 'SOURCE_1');
-})(r || (r = {})),
-    !(function (e) {
-        (e[(e.UNSET = 0)] = 'UNSET'), (e[(e.SOURCE_1 = 1)] = 'SOURCE_1'), (e[(e.SOURCE_2 = 2)] = 'SOURCE_2');
-    })(i || (i = {}));
+n.d(t, {
+    b: function () {
+        return o;
+    }
+}),
+    n(47120),
+    ((a = r || (r = {}))[(a.SOURCE_0 = 0)] = 'SOURCE_0'),
+    (a[(a.SOURCE_1 = 1)] = 'SOURCE_1'),
+    ((s = i || (i = {}))[(s.UNSET = 0)] = 'UNSET'),
+    (s[(s.SOURCE_1 = 1)] = 'SOURCE_1'),
+    (s[(s.SOURCE_2 = 2)] = 'SOURCE_2');

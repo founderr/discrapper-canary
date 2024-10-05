@@ -1,173 +1,169 @@
 n.d(t, {
     AJ: function () {
-        return p;
+        return E;
     },
     te: function () {
-        return h;
+        return _;
     },
     zP: function () {
-        return f;
+        return d;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(481060),
-    u = n(393903),
-    c = n(689938),
-    d = n(516617);
-function _(e) {
-    let { items: t, maxLines: n, itemWidths: r, itemGapPx: i, containerWidth: a, overflowWidth: o } = e,
-        s = 0,
-        l = 0,
-        u = 0;
-    for (let e = 0; e < t.length; e++) {
-        let c = r[e];
-        if (isNaN(c) || c > a) continue;
-        let d = s === n - 1,
-            _ = e === t.length - 1;
-        if (!(Math.round(l + c + (d && !_ ? o + i : 0)) < Math.round(a))) {
-            if (d) break;
-            s++, (l = 0);
-        }
-        (u = e), (l += c + i);
-    }
-    return u;
-}
-function E() {
-    let [e, t] = a.useState(0);
-    return {
-        ref: (0, u.y)((e) => {
-            let n = null == e ? void 0 : e.getBoundingClientRect();
-            null != n && t(n.width);
-        }),
-        width: e
-    };
-}
-function f(e) {
-    let { itemGapPx: t, items: n, maxLines: r, containerWidth: i } = e,
-        [o, s] = a.useState(0),
-        l = a.useRef([]),
-        u = a.useRef(0),
-        c = a.useRef(0),
-        d = a.useRef(null),
-        E = a.useCallback((e, t) => {
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(393903),
+    u = n(689938),
+    c = n(516617);
+function d(e) {
+    let { itemGapPx: t, items: n, maxLines: r, containerWidth: a } = e,
+        [s, o] = i.useState(0),
+        l = i.useRef([]),
+        u = i.useRef(0),
+        c = i.useRef(0),
+        d = i.useRef(null),
+        _ = i.useCallback((e, t) => {
             l.current[e] = t;
         }, []);
     return (
-        a.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
             var e;
             if (null == d.current) return;
             (l.current.length = n.length), (u.current = null !== (e = d.current.getBoundingClientRect().width) && void 0 !== e ? e : 0);
-            let a = _({
+            let i = (function (e) {
+                let { items: t, maxLines: n, itemWidths: r, itemGapPx: i, containerWidth: a, overflowWidth: s } = e,
+                    o = 0,
+                    l = 0,
+                    u = 0;
+                for (let e = 0; e < t.length; e++) {
+                    let c = r[e];
+                    if (isNaN(c) || c > a) continue;
+                    let d = o === n - 1,
+                        _ = e === t.length - 1;
+                    if (!(Math.round(l + c + (d && !_ ? s + i : 0)) < Math.round(a))) {
+                        if (d) break;
+                        o++, (l = 0);
+                    }
+                    (u = e), (l += c + i);
+                }
+                return u;
+            })({
                 items: n,
                 maxLines: r,
                 itemGapPx: t,
-                containerWidth: i,
+                containerWidth: a,
                 itemWidths: l.current,
                 overflowWidth: u.current
             });
-            a !== c.current && ((c.current = a), s((e) => e + 1));
-        }, [i, t, n, r]),
-        a.useMemo(
+            i !== c.current && ((c.current = i), o((e) => e + 1));
+        }, [a, t, n, r]),
+        i.useMemo(
             () => ({
                 lastVisibleIndex: c.current,
-                onItemLayout: E,
+                onItemLayout: _,
                 overflowItemsRef: d,
                 itemWidthsRef: l,
-                version: o
+                version: s
             }),
-            [E, o]
+            [_, s]
         )
     );
 }
-function h(e) {
-    let { items: t, renderItem: n, ...r } = e;
-    return (0, i.jsx)(l.Tooltip, {
-        ...r,
-        text: (0, i.jsx)('div', {
-            className: d.tooltip,
+function _(e) {
+    let { items: t, renderItem: n, ...i } = e;
+    return (0, r.jsx)(o.Tooltip, {
+        ...i,
+        text: (0, r.jsx)('div', {
+            className: c.tooltip,
             children: t.map(n)
         }),
         'aria-label': 'overflow',
         children: (e) =>
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 ...e,
-                children: n(c.Z.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({ count: t.length }))
+                children: n(u.Z.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({ count: t.length }))
             })
     });
 }
-function p(e) {
-    let { onItemLayout: t, index: n, children: r } = e,
-        o = a.useRef(null);
+function E(e) {
+    let { onItemLayout: t, index: n, children: a } = e,
+        s = i.useRef(null);
     return (
-        a.useLayoutEffect(() => {
-            if (null != o.current) t(n, o.current.getBoundingClientRect().width);
+        i.useLayoutEffect(() => {
+            if (null != s.current) t(n, s.current.getBoundingClientRect().width);
         }),
-        (0, i.jsx)('div', {
-            ref: o,
-            children: r
+        (0, r.jsx)('div', {
+            ref: s,
+            children: a
         })
     );
 }
-function m(e) {
-    let { className: t, items: n, renderItem: r, itemGapPx: o = 0, maxLines: l, renderOverflow: u } = e,
-        { ref: _, width: m } = E(),
+t.ZP = function (e) {
+    let { className: t, items: n, renderItem: a, itemGapPx: o = 0, maxLines: f, renderOverflow: h } = e,
+        { ref: p, width: I } = (function () {
+            let [e, t] = i.useState(0);
+            return {
+                ref: (0, l.y)((e) => {
+                    let n = null == e ? void 0 : e.getBoundingClientRect();
+                    null != n && t(n.width);
+                }),
+                width: e
+            };
+        })(),
         {
-            lastVisibleIndex: I,
+            lastVisibleIndex: m,
             onItemLayout: T,
-            overflowItemsRef: g
-        } = f({
+            overflowItemsRef: S
+        } = d({
             items: n,
             itemGapPx: o,
-            maxLines: l,
-            containerWidth: m
+            maxLines: f,
+            containerWidth: I
         }),
-        S = a.useCallback(
+        g = i.useCallback(
             (e) =>
-                (0, i.jsx)(h, {
+                (0, r.jsx)(_, {
                     items: e,
-                    renderItem: r
+                    renderItem: a
                 }),
-            [r]
+            [a]
         ),
-        A = null != u ? u : S,
-        v = a.useMemo(() => n.slice(0, I + 1), [n, I]),
-        N = a.useMemo(() => n.slice(I + 1), [n, I]);
-    return (0, i.jsxs)('div', {
-        className: s()(t, d.items),
-        ref: _,
+        A = i.useMemo(() => n.slice(0, m + 1), [n, m]),
+        N = i.useMemo(() => n.slice(m + 1), [n, m]);
+    return (0, r.jsxs)('div', {
+        className: s()(t, c.items),
+        ref: p,
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 'aria-hidden': !0,
-                className: d.measurements,
+                className: c.measurements,
                 children: [
-                    (0, i.jsx)('div', {
-                        className: d.itemMeasurements,
+                    (0, r.jsx)('div', {
+                        className: c.itemMeasurements,
                         children: n.map((e, t) =>
-                            (0, i.jsx)(
-                                p,
+                            (0, r.jsx)(
+                                E,
                                 {
                                     index: t,
                                     onItemLayout: T,
-                                    children: r(e)
+                                    children: a(e)
                                 },
                                 e
                             )
                         )
                     }),
-                    (0, i.jsx)('div', {
-                        className: d.overflowMeasurement,
-                        ref: g,
-                        children: r(c.Z.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({ count: Number('1'.concat(n.length)) }))
+                    (0, r.jsx)('div', {
+                        className: c.overflowMeasurement,
+                        ref: S,
+                        children: a(u.Z.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({ count: Number('1'.concat(n.length)) }))
                     })
                 ]
             }),
-            v.map(r),
-            N.length > 0 && A(N)
+            A.map(a),
+            N.length > 0 && (null != h ? h : g)(N)
         ]
     });
-}
-t.ZP = m;
+};

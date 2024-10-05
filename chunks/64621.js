@@ -1,105 +1,108 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return S;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(442837),
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(442837),
     s = n(704215),
-    l = n(481060),
-    u = n(980591),
-    c = n(243778),
-    d = n(970731),
-    _ = n(594174),
-    E = n(718107),
-    f = n(652853),
-    h = n(228168),
-    p = n(689938),
-    m = n(671511),
+    o = n(481060),
+    l = n(980591),
+    u = n(243778),
+    c = n(970731),
+    d = n(594174),
+    _ = n(718107),
+    E = n(652853),
+    f = n(228168),
+    h = n(689938),
+    p = n(671511),
     I = n(895982),
-    T = n(685741),
-    g = n(20818);
-let S = 200,
-    A = 30,
-    v = 16;
-function N(e, t) {
-    return e && t
+    m = n(685741),
+    T = n(20818);
+function S(e) {
+    var t, n;
+    let { sourceType: S, children: g, user: A } = e,
+        { profileType: N } = (0, E.z)(),
+        { avatarReactReplyEnabled: O, statusReactReplyEnabled: R } = (0, _.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        v = (0, a.e7)([d.default], () => {
+            var e;
+            return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === A.id;
+        }),
+        C = S === f.n_.AVATAR && O,
+        L = S === f.n_.STATUS && !O && R,
+        D = !v && N === f.y0.BITE_SIZE && (C || L),
+        [y, b] = i.useState(!1);
+    (0, l.Z)(() => b(!0), D ? 200 : null);
+    let M = y ? [s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK] : [],
+        [P, U] = (0, u.US)(M);
+    let {
+        asset: w,
+        assetClassName: x,
+        className: G,
+        content: k,
+        header: B
+    } = ((t = R),
+    (n = O),
+    t && n
         ? {
-              asset: T,
-              assetClassName: m.profileImage,
-              className: m.profileCoachmark,
-              content: p.Z.Messages.USER_PROFILE_PROFILES_REACT_COACHMARK_BODY,
-              header: p.Z.Messages.USER_PROFILE_PROFILES_REACT_COACHMARK_TITLE
+              asset: m,
+              assetClassName: p.profileImage,
+              className: p.profileCoachmark,
+              content: h.Z.Messages.USER_PROFILE_PROFILES_REACT_COACHMARK_BODY,
+              header: h.Z.Messages.USER_PROFILE_PROFILES_REACT_COACHMARK_TITLE
           }
-        : e
+        : t
           ? {
-                asset: g,
+                asset: T,
                 assetClassName: void 0,
-                className: m.statusCoachmark,
-                content: p.Z.Messages.USER_PROFILE_STATUS_REACT_COACHMARK_BODY,
-                header: p.Z.Messages.USER_PROFILE_STATUS_REACT_COACHMARK_TITLE
+                className: p.statusCoachmark,
+                content: h.Z.Messages.USER_PROFILE_STATUS_REACT_COACHMARK_BODY,
+                header: h.Z.Messages.USER_PROFILE_STATUS_REACT_COACHMARK_TITLE
             }
           : {
                 asset: I,
-                assetClassName: m.avatarImage,
-                className: m.avatarCoachmark,
-                content: p.Z.Messages.USER_PROFILE_AVATAR_REACT_COACHMARK_BODY,
-                header: p.Z.Messages.USER_PROFILE_AVATAR_REACT_COACHMARK_TITLE
-            };
-}
-function O(e) {
-    let { sourceType: t, children: n, user: r } = e,
-        { profileType: I } = (0, f.z)(),
-        { avatarReactReplyEnabled: T, statusReactReplyEnabled: g } = (0, E.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
-        O = (0, o.e7)([_.default], () => {
-            var e;
-            return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === r.id;
-        }),
-        R = t === h.n_.AVATAR && T,
-        C = t === h.n_.STATUS && !T && g,
-        y = !O && I === h.y0.BITE_SIZE && (R || C),
-        [L, b] = a.useState(!1);
-    (0, u.Z)(() => b(!0), y ? S : null);
-    let D = L ? [s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK] : [],
-        [M, P] = (0, c.US)(D),
-        { asset: U, assetClassName: w, className: x, content: G, header: k } = N(g, T);
-    return (0, i.jsx)(l.Popout, {
+                assetClassName: p.avatarImage,
+                className: p.avatarCoachmark,
+                content: h.Z.Messages.USER_PROFILE_AVATAR_REACT_COACHMARK_BODY,
+                header: h.Z.Messages.USER_PROFILE_AVATAR_REACT_COACHMARK_TITLE
+            });
+    return (0, r.jsx)(o.Popout, {
         align: 'center',
-        position: t === h.n_.AVATAR ? 'left' : 'right',
-        shouldShow: null != M,
-        spacing: t === h.n_.AVATAR ? A : v,
+        position: S === f.n_.AVATAR ? 'left' : 'right',
+        shouldShow: null != P,
+        spacing: S === f.n_.AVATAR ? 30 : 16,
         renderPopout: (e) => {
-            let { position: t, closePopout: n, setPopoutRef: r } = e;
-            return (0, i.jsx)(l.Dialog, {
-                ref: r,
-                children: (0, i.jsx)(d.ZP, {
-                    className: x,
-                    asset: (0, i.jsx)('img', {
+            let { position: t, closePopout: n, setPopoutRef: i } = e;
+            return (0, r.jsx)(o.Dialog, {
+                ref: i,
+                children: (0, r.jsx)(c.ZP, {
+                    className: G,
+                    asset: (0, r.jsx)('img', {
                         alt: '',
-                        src: U,
-                        className: w
+                        src: w,
+                        className: x
                     }),
-                    buttonCTA: p.Z.Messages.TUTORIAL_CLOSE,
-                    buttonLayout: d._F.STACKED,
+                    buttonCTA: h.Z.Messages.TUTORIAL_CLOSE,
+                    buttonLayout: c._F.STACKED,
                     buttonProps: {
-                        color: l.ButtonColors.BRAND_INVERTED,
-                        size: l.Button.Sizes.SMALL
+                        color: o.ButtonColors.BRAND_INVERTED,
+                        size: o.Button.Sizes.SMALL
                     },
-                    caretPosition: 'right' === t ? d.DF.LEFT_CENTER : d.DF.RIGHT_CENTER,
-                    content: (0, i.jsx)(l.Text, {
+                    caretPosition: 'right' === t ? c.DF.LEFT_CENTER : c.DF.RIGHT_CENTER,
+                    content: (0, r.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: 'always-white',
-                        children: G
+                        children: k
                     }),
-                    header: k,
-                    headerClassName: m.tooltipHeader,
-                    markAsDismissed: P,
+                    header: B,
+                    headerClassName: p.tooltipHeader,
+                    markAsDismissed: U,
                     onClick: n
                 })
             });
         },
-        children: () => n
+        children: () => g
     });
 }

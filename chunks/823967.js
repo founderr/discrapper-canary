@@ -1,5 +1,5 @@
 var r = n(570140);
-class i {
+t.Z = class e {
     static setPermission(e, t) {
         r.Z.dispatch({
             type: 'SET_NATIVE_PERMISSION',
@@ -7,5 +7,4 @@ class i {
             state: t
         });
     }
-}
-t.Z = i;
+};

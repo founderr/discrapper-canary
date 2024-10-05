@@ -1,10 +1,10 @@
+n(47120);
 var r,
-    i = n(47120);
-var a = n(442837),
-    o = n(433517),
+    i = n(442837),
+    a = n(433517),
     s = n(570140),
-    l = n(581883);
-function u(e, t, n) {
+    o = n(581883);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,74 +17,66 @@ function u(e, t, n) {
         e
     );
 }
-let c = {},
-    d = {};
-function _() {
+let u = {},
+    c = {};
+function d() {
     var e, t, n, r, i, a;
-    let o = l.Z.settings;
+    let s = o.Z.settings;
     return {
-        gifAutoPlay: null === (t = o.textAndImages) || void 0 === t ? void 0 : null === (e = t.gifAutoPlay) || void 0 === e ? void 0 : e.value,
-        animateEmoji: null === (r = o.textAndImages) || void 0 === r ? void 0 : null === (n = r.animateEmoji) || void 0 === n ? void 0 : n.value,
-        animateStickers: null === (a = o.textAndImages) || void 0 === a ? void 0 : null === (i = a.animateStickers) || void 0 === i ? void 0 : i.value
+        gifAutoPlay: null === (t = s.textAndImages) || void 0 === t ? void 0 : null === (e = t.gifAutoPlay) || void 0 === e ? void 0 : e.value,
+        animateEmoji: null === (r = s.textAndImages) || void 0 === r ? void 0 : null === (n = r.animateEmoji) || void 0 === n ? void 0 : n.value,
+        animateStickers: null === (a = s.textAndImages) || void 0 === a ? void 0 : null === (i = a.animateStickers) || void 0 === i ? void 0 : i.value
     };
 }
-function E() {
-    return (d = _()), !1;
+function _() {
+    return (c = d()), !1;
 }
-function f() {
-    c = {};
-}
-function h() {
-    c = {};
-}
-function p(e) {
-    let { settings: t } = e;
-    c = {
-        ...c,
-        ...t
-    };
-}
-function m(e) {
-    let { settings: t } = e;
-    for (let e of t) delete c[e];
-}
-function I() {
-    let e = _(),
-        t = !1;
-    for (let n in e) {
-        let r = n;
-        e[r] !== d[r] && (delete c[r], (t = !0));
-    }
-    return t;
-}
-class T extends (r = a.ZP.PersistedStore) {
+class E extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (c = null != e ? e : {}), this.syncWith([l.Z], E);
+        (u = null != e ? e : {}), this.syncWith([o.Z], _);
     }
     getState() {
-        return c;
+        return u;
     }
     getAppliedOverrideReasonKey(e) {
         var t;
-        return null === (t = c[e]) || void 0 === t ? void 0 : t.reasonKey;
+        return null === (t = u[e]) || void 0 === t ? void 0 : t.reasonKey;
     }
     getOverride(e) {
-        return c[e];
+        return u[e];
     }
 }
-u(T, 'displayName', 'UserSettingsOverridesStore'),
-    u(T, 'persistKey', 'UserSettingsOverridesStore'),
-    u(T, 'migrations', [
+l(E, 'displayName', 'UserSettingsOverridesStore'),
+    l(E, 'persistKey', 'UserSettingsOverridesStore'),
+    l(E, 'migrations', [
         () => {
             var e;
-            let t = null !== (e = o.K.get('UserSettingsStoreOverrides')) && void 0 !== e ? e : {};
-            return o.K.remove('UserSettingsStoreOverrides'), t;
+            let t = null !== (e = a.K.get('UserSettingsStoreOverrides')) && void 0 !== e ? e : {};
+            return a.K.remove('UserSettingsStoreOverrides'), t;
         }
     ]),
-    (t.Z = new T(s.Z, {
-        USER_SETTINGS_PROTO_UPDATE: I,
-        USER_SETTINGS_OVERRIDE_APPLY: p,
-        USER_SETTINGS_OVERRIDE_CLEAR: m,
-        LOGOUT: f,
-        LOGIN_SUCCESS: h
+    (t.Z = new E(s.Z, {
+        USER_SETTINGS_PROTO_UPDATE: function () {
+            let e = d(),
+                t = !1;
+            for (let n in e) e[n] !== c[n] && (delete u[n], (t = !0));
+            return t;
+        },
+        USER_SETTINGS_OVERRIDE_APPLY: function (e) {
+            let { settings: t } = e;
+            u = {
+                ...u,
+                ...t
+            };
+        },
+        USER_SETTINGS_OVERRIDE_CLEAR: function (e) {
+            let { settings: t } = e;
+            for (let e of t) delete u[e];
+        },
+        LOGOUT: function () {
+            u = {};
+        },
+        LOGIN_SUCCESS: function () {
+            u = {};
+        }
     }));

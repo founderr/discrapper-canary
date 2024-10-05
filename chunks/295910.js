@@ -1,25 +1,21 @@
 let t = ['as', 'in', 'of', 'if', 'for', 'while', 'finally', 'var', 'new', 'function', 'do', 'return', 'void', 'else', 'break', 'catch', 'instanceof', 'with', 'throw', 'case', 'default', 'try', 'switch', 'continue', 'typeof', 'delete', 'let', 'yield', 'const', 'class', 'debugger', 'async', 'await', 'static', 'import', 'from', 'export', 'extends'],
     n = ['true', 'false', 'null', 'undefined', 'NaN', 'Infinity'],
     r = [].concat(['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'], ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'], ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError']);
-function i(e) {
-    let i = ['npm', 'print'],
-        a = ['yes', 'no', 'on', 'off'],
-        o = ['then', 'unless', 'until', 'loop', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not'],
-        s = ['var', 'const', 'let', 'function', 'static'],
-        l = (e) => (t) => !e.includes(t),
-        u = {
-            keyword: t.concat(o).filter(l(s)),
-            literal: n.concat(a),
-            built_in: r.concat(i)
+e.exports = function (e) {
+    let i;
+    let a = {
+            keyword: t.concat(['then', 'unless', 'until', 'loop', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not']).filter(((i = ['var', 'const', 'let', 'function', 'static']), (e) => !i.includes(e))),
+            literal: n.concat(['yes', 'no', 'on', 'off']),
+            built_in: r.concat(['npm', 'print'])
         },
-        c = '[A-Za-z$_][0-9A-Za-z$_]*',
-        d = {
+        s = '[A-Za-z$_][0-9A-Za-z$_]*',
+        o = {
             className: 'subst',
             begin: /#\{/,
             end: /\}/,
-            keywords: u
+            keywords: a
         },
-        _ = [
+        l = [
             e.BINARY_NUMBER_MODE,
             e.inherit(e.C_NUMBER_MODE, {
                 starts: {
@@ -43,12 +39,12 @@ function i(e) {
                     {
                         begin: /"""/,
                         end: /"""/,
-                        contains: [e.BACKSLASH_ESCAPE, d]
+                        contains: [e.BACKSLASH_ESCAPE, o]
                     },
                     {
                         begin: /"/,
                         end: /"/,
-                        contains: [e.BACKSLASH_ESCAPE, d]
+                        contains: [e.BACKSLASH_ESCAPE, o]
                     }
                 ]
             },
@@ -58,7 +54,7 @@ function i(e) {
                     {
                         begin: '///',
                         end: '///',
-                        contains: [d, e.HASH_COMMENT_MODE]
+                        contains: [o, e.HASH_COMMENT_MODE]
                     },
                     {
                         begin: '//[gim]{0,3}(?=\\W)',
@@ -67,7 +63,7 @@ function i(e) {
                     { begin: /\/(?![ *]).*?(?![\\]).\/[gim]{0,3}(?=\W)/ }
                 ]
             },
-            { begin: '@' + c },
+            { begin: '@' + s },
             {
                 subLanguage: 'javascript',
                 excludeBegin: !0,
@@ -84,10 +80,10 @@ function i(e) {
                 ]
             }
         ];
-    d.contains = _;
-    let E = e.inherit(e.TITLE_MODE, { begin: c }),
-        f = '(\\(.*\\)\\s*)?\\B[-=]>',
-        h = {
+    o.contains = l;
+    let u = e.inherit(e.TITLE_MODE, { begin: s }),
+        c = '(\\(.*\\)\\s*)?\\B[-=]>',
+        d = {
             className: 'params',
             begin: '\\([^\\(]',
             returnBegin: !0,
@@ -95,41 +91,26 @@ function i(e) {
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: u,
-                    contains: ['self'].concat(_)
+                    keywords: a,
+                    contains: ['self'].concat(l)
                 }
             ]
-        },
-        p = {
-            variants: [
-                {
-                    match: [/class\s+/, c, /\s+extends\s+/, c]
-                },
-                {
-                    match: [/class\s+/, c]
-                }
-            ],
-            scope: {
-                2: 'title.class',
-                4: 'title.class.inherited'
-            },
-            keywords: u
         };
     return {
         name: 'CoffeeScript',
         aliases: ['coffee', 'cson', 'iced'],
-        keywords: u,
+        keywords: a,
         illegal: /\/\*/,
         contains: [
-            ..._,
+            ...l,
             e.COMMENT('###', '###'),
             e.HASH_COMMENT_MODE,
             {
                 className: 'function',
-                begin: '^\\s*' + c + '\\s*=\\s*' + f,
+                begin: '^\\s*' + s + '\\s*=\\s*' + c,
                 end: '[-=]>',
                 returnBegin: !0,
-                contains: [E, h]
+                contains: [u, d]
             },
             {
                 begin: /[:\(,=]\s*/,
@@ -137,16 +118,30 @@ function i(e) {
                 contains: [
                     {
                         className: 'function',
-                        begin: f,
+                        begin: c,
                         end: '[-=]>',
                         returnBegin: !0,
-                        contains: [h]
+                        contains: [d]
                     }
                 ]
             },
-            p,
             {
-                begin: c + ':',
+                variants: [
+                    {
+                        match: [/class\s+/, s, /\s+extends\s+/, s]
+                    },
+                    {
+                        match: [/class\s+/, s]
+                    }
+                ],
+                scope: {
+                    2: 'title.class',
+                    4: 'title.class.inherited'
+                },
+                keywords: a
+            },
+            {
+                begin: s + ':',
                 end: ':',
                 returnBegin: !0,
                 returnEnd: !0,
@@ -154,5 +149,4 @@ function i(e) {
             }
         ]
     };
-}
-e.exports = i;
+};

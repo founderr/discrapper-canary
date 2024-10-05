@@ -21,89 +21,102 @@ var r = n(957578).Buffer,
         };
 function a(e) {
     var t;
-    if (!e) return 'utf8';
-    for (;;)
-        switch (e) {
-            case 'utf8':
-            case 'utf-8':
-                return 'utf8';
-            case 'ucs2':
-            case 'ucs-2':
-            case 'utf16le':
-            case 'utf-16le':
-                return 'utf16le';
-            case 'latin1':
-            case 'binary':
-                return 'latin1';
-            case 'base64':
-            case 'ascii':
-            case 'hex':
-                return e;
-            default:
-                if (t) return;
-                (e = ('' + e).toLowerCase()), (t = !0);
-        }
-}
-function o(e) {
-    var t = a(e);
-    if ('string' != typeof t && (r.isEncoding === i || !i(e))) throw Error('Unknown encoding: ' + e);
-    return t || e;
-}
-function s(e) {
-    var t;
-    switch (((this.encoding = o(e)), this.encoding)) {
+    switch (
+        ((this.encoding = (function (e) {
+            var t = (function (e) {
+                var t;
+                if (!e) return 'utf8';
+                for (;;)
+                    switch (e) {
+                        case 'utf8':
+                        case 'utf-8':
+                            return 'utf8';
+                        case 'ucs2':
+                        case 'ucs-2':
+                        case 'utf16le':
+                        case 'utf-16le':
+                            return 'utf16le';
+                        case 'latin1':
+                        case 'binary':
+                            return 'latin1';
+                        case 'base64':
+                        case 'ascii':
+                        case 'hex':
+                            return e;
+                        default:
+                            if (t) return;
+                            (e = ('' + e).toLowerCase()), (t = !0);
+                    }
+            })(e);
+            if ('string' != typeof t && (r.isEncoding === i || !i(e))) throw Error('Unknown encoding: ' + e);
+            return t || e;
+        })(e)),
+        this.encoding)
+    ) {
         case 'utf16le':
-            (this.text = f), (this.end = h), (t = 4);
+            (this.text = l), (this.end = u), (t = 4);
             break;
         case 'utf8':
-            (this.fillLast = d), (t = 4);
+            (this.fillLast = o), (t = 4);
             break;
         case 'base64':
-            (this.text = p), (this.end = m), (t = 3);
+            (this.text = c), (this.end = d), (t = 3);
             break;
         default:
-            (this.write = I), (this.end = T);
+            (this.write = _), (this.end = E);
             return;
     }
     (this.lastNeed = 0), (this.lastTotal = 0), (this.lastChar = r.allocUnsafe(t));
 }
-function l(e) {
+function s(e) {
     if (e <= 127) return 0;
     if (e >> 5 == 6) return 2;
     if (e >> 4 == 14) return 3;
     else if (e >> 3 == 30) return 4;
     return e >> 6 == 2 ? -1 : -2;
 }
-function u(e, t, n) {
-    var r = t.length - 1;
-    if (r < n) return 0;
-    var i = l(t[r]);
-    return i >= 0 ? (i > 0 && (e.lastNeed = i - 1), i) : --r < n || -2 === i ? 0 : (i = l(t[r])) >= 0 ? (i > 0 && (e.lastNeed = i - 2), i) : --r < n || -2 === i ? 0 : (i = l(t[r])) >= 0 ? (i > 0 && (2 === i ? (i = 0) : (e.lastNeed = i - 3)), i) : 0;
-}
-function c(e, t, n) {
-    if ((192 & t[0]) != 128) return (e.lastNeed = 0), '\uFFFD';
-    if (e.lastNeed > 1 && t.length > 1) {
-        if ((192 & t[1]) != 128) return (e.lastNeed = 1), '\uFFFD';
-        if (e.lastNeed > 2 && t.length > 2 && (192 & t[2]) != 128) return (e.lastNeed = 2), '\uFFFD';
-    }
-}
-function d(e) {
+(t.StringDecoder = a),
+    (a.prototype.write = function (e) {
+        var t, n;
+        if (0 === e.length) return '';
+        if (this.lastNeed) {
+            if (void 0 === (t = this.fillLast(e))) return '';
+            (n = this.lastNeed), (this.lastNeed = 0);
+        } else n = 0;
+        return n < e.length ? (t ? t + this.text(e, n) : this.text(e, n)) : t || '';
+    }),
+    (a.prototype.end = function (e) {
+        var t = e && e.length ? this.write(e) : '';
+        return this.lastNeed ? t + '\uFFFD' : t;
+    }),
+    (a.prototype.text = function (e, t) {
+        var n = (function (e, t, n) {
+            var r = t.length - 1;
+            if (r < n) return 0;
+            var i = s(t[r]);
+            return i >= 0 ? (i > 0 && (e.lastNeed = i - 1), i) : --r < n || -2 === i ? 0 : (i = s(t[r])) >= 0 ? (i > 0 && (e.lastNeed = i - 2), i) : --r < n || -2 === i ? 0 : (i = s(t[r])) >= 0 ? (i > 0 && (2 === i ? (i = 0) : (e.lastNeed = i - 3)), i) : 0;
+        })(this, e, t);
+        if (!this.lastNeed) return e.toString('utf8', t);
+        this.lastTotal = n;
+        var r = e.length - (n - this.lastNeed);
+        return e.copy(this.lastChar, 0, r), e.toString('utf8', t, r);
+    }),
+    (a.prototype.fillLast = function (e) {
+        if (this.lastNeed <= e.length) return e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed), this.lastChar.toString(this.encoding, 0, this.lastTotal);
+        e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, e.length), (this.lastNeed -= e.length);
+    });
+function o(e) {
     var t = this.lastTotal - this.lastNeed,
-        n = c(this, e, t);
+        n = (function (e, t, n) {
+            if ((192 & t[0]) != 128) return (e.lastNeed = 0), '\uFFFD';
+            if (e.lastNeed > 1 && t.length > 1) {
+                if ((192 & t[1]) != 128) return (e.lastNeed = 1), '\uFFFD';
+                if (e.lastNeed > 2 && t.length > 2 && (192 & t[2]) != 128) return (e.lastNeed = 2), '\uFFFD';
+            }
+        })(this, e, 0);
     return void 0 !== n ? n : this.lastNeed <= e.length ? (e.copy(this.lastChar, t, 0, this.lastNeed), this.lastChar.toString(this.encoding, 0, this.lastTotal)) : void (e.copy(this.lastChar, t, 0, e.length), (this.lastNeed -= e.length));
 }
-function _(e, t) {
-    var n = u(this, e, t);
-    if (!this.lastNeed) return e.toString('utf8', t);
-    this.lastTotal = n;
-    var r = e.length - (n - this.lastNeed);
-    return e.copy(this.lastChar, 0, r), e.toString('utf8', t, r);
-}
-function E(e) {
-    var t = e && e.length ? this.write(e) : '';
-    return this.lastNeed ? t + '\uFFFD' : t;
-}
-function f(e, t) {
+function l(e, t) {
     if ((e.length - t) % 2 == 0) {
         var n = e.toString('utf16le', t);
         if (n) {
@@ -114,7 +127,7 @@ function f(e, t) {
     }
     return (this.lastNeed = 1), (this.lastTotal = 2), (this.lastChar[0] = e[e.length - 1]), e.toString('utf16le', t, e.length - 1);
 }
-function h(e) {
+function u(e) {
     var t = e && e.length ? this.write(e) : '';
     if (this.lastNeed) {
         var n = this.lastTotal - this.lastNeed;
@@ -122,33 +135,17 @@ function h(e) {
     }
     return t;
 }
-function p(e, t) {
+function c(e, t) {
     var n = (e.length - t) % 3;
     return 0 === n ? e.toString('base64', t) : ((this.lastNeed = 3 - n), (this.lastTotal = 3), 1 === n ? (this.lastChar[0] = e[e.length - 1]) : ((this.lastChar[0] = e[e.length - 2]), (this.lastChar[1] = e[e.length - 1])), e.toString('base64', t, e.length - n));
 }
-function m(e) {
+function d(e) {
     var t = e && e.length ? this.write(e) : '';
     return this.lastNeed ? t + this.lastChar.toString('base64', 0, 3 - this.lastNeed) : t;
 }
-function I(e) {
+function _(e) {
     return e.toString(this.encoding);
 }
-function T(e) {
+function E(e) {
     return e && e.length ? this.write(e) : '';
 }
-(t.StringDecoder = s),
-    (s.prototype.write = function (e) {
-        var t, n;
-        if (0 === e.length) return '';
-        if (this.lastNeed) {
-            if (void 0 === (t = this.fillLast(e))) return '';
-            (n = this.lastNeed), (this.lastNeed = 0);
-        } else n = 0;
-        return n < e.length ? (t ? t + this.text(e, n) : this.text(e, n)) : t || '';
-    }),
-    (s.prototype.end = E),
-    (s.prototype.text = _),
-    (s.prototype.fillLast = function (e) {
-        if (this.lastNeed <= e.length) return e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed), this.lastChar.toString(this.encoding, 0, this.lastTotal);
-        e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, e.length), (this.lastNeed -= e.length);
-    });

@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             variants: [e.COMMENT('--', '$'), e.COMMENT(/\{-/, /-\}/, { contains: ['self'] })]
         },
@@ -23,12 +23,6 @@ function t(e) {
             begin: /\{/,
             end: /\}/,
             contains: r.contains
-        },
-        a = {
-            className: 'string',
-            begin: "'\\\\?.",
-            end: "'",
-            illegal: '.'
         };
     return {
         name: 'Elm',
@@ -65,7 +59,12 @@ function t(e) {
                 keywords: 'port',
                 contains: [t]
             },
-            a,
+            {
+                className: 'string',
+                begin: "'\\\\?.",
+                end: "'",
+                illegal: '.'
+            },
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
             n,
@@ -75,5 +74,4 @@ function t(e) {
         ],
         illegal: /;/
     };
-}
-e.exports = t;
+};

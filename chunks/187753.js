@@ -1,9 +1,8 @@
-var r;
-n.d(t, {
+var r, i;
+t.d(n, {
     T: function () {
         return r;
     }
 }),
-    !(function (e) {
-        (e[(e.STORE_ASSET = 1)] = 'STORE_ASSET'), (e[(e.EMOJI = 2)] = 'EMOJI');
-    })(r || (r = {}));
+    ((i = r || (r = {}))[(i.STORE_ASSET = 1)] = 'STORE_ASSET'),
+    (i[(i.EMOJI = 2)] = 'EMOJI');

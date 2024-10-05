@@ -1,115 +1,106 @@
 n.d(t, {
     x: function () {
-        return u;
+        return s;
     }
 });
 var r = n(882932),
     i = n(697898),
     a = n(470079);
-let o = 0,
-    s = 100,
-    l = 1;
-function u(e) {
+function s(e) {
     var t;
-    let { isDisabled: n = !1, minValue: u = o, maxValue: E = s, numberFormatter: f, step: h = l, orientation: p = 'horizontal' } = e,
-        m = (0, a.useMemo)(() => {
-            let e = (E - u) / 10;
-            return Math.max((e = (0, r.N4)(e, 0, e + h, h)), h);
-        }, [h, E, u]),
-        I = (0, a.useMemo)(() => d(e.value), [e.value]),
-        T = (0, a.useMemo)(() => (null !== (t = d(e.defaultValue)) && void 0 !== t ? t : [u]), [e.defaultValue, u]),
-        g = _(e.value, e.defaultValue, e.onChange),
-        S = _(e.value, e.defaultValue, e.onChangeEnd),
-        [A, v] = (0, i.zk)(I, T, g),
-        [N, O] = (0, a.useState)(Array(A.length).fill(!1)),
-        R = (0, a.useRef)(Array(A.length).fill(!0)),
-        [C, y] = (0, a.useState)(void 0),
-        L = (0, a.useRef)(A),
-        b = (0, a.useRef)(N),
-        D = (e) => {
-            (L.current = e), v(e);
+    let { isDisabled: n = !1, minValue: s = 0, maxValue: c = 100, numberFormatter: d, step: _ = 1, orientation: E = 'horizontal' } = e,
+        f = (0, a.useMemo)(() => {
+            let e = (c - s) / 10;
+            return Math.max((e = (0, r.N4)(e, 0, e + _, _)), _);
+        }, [_, c, s]),
+        h = (0, a.useMemo)(() => l(e.value), [e.value]),
+        p = (0, a.useMemo)(() => (null !== (t = l(e.defaultValue)) && void 0 !== t ? t : [s]), [e.defaultValue, s]),
+        I = u(e.value, e.defaultValue, e.onChange),
+        m = u(e.value, e.defaultValue, e.onChangeEnd),
+        [T, S] = (0, i.zk)(h, p, I),
+        [g, A] = (0, a.useState)(Array(T.length).fill(!1)),
+        N = (0, a.useRef)(Array(T.length).fill(!0)),
+        [O, R] = (0, a.useState)(void 0),
+        v = (0, a.useRef)(T),
+        C = (0, a.useRef)(g),
+        L = (e) => {
+            (v.current = e), S(e);
         },
-        M = (e) => {
-            (b.current = e), O(e);
+        D = (e) => {
+            (C.current = e), A(e);
         };
-    function P(e) {
-        return (e - u) / (E - u);
+    function y(e) {
+        return (e - s) / (c - s);
     }
-    function U(e) {
-        return 0 === e ? u : A[e - 1];
+    function b(e) {
+        return 0 === e ? s : T[e - 1];
+    }
+    function M(e) {
+        return e === T.length - 1 ? c : T[e + 1];
+    }
+    function P(e) {
+        return N.current[e];
+    }
+    function U(e, t) {
+        if (n || !P(e)) return;
+        let i = b(e),
+            a = M(e);
+        (t = (0, r.N4)(t, i, a, _)), L(o(v.current, e, t));
     }
     function w(e) {
-        return e === A.length - 1 ? E : A[e + 1];
+        return d.format(e);
     }
     function x(e) {
-        return R.current[e];
-    }
-    function G(e, t) {
-        if (n || !x(e)) return;
-        let i = U(e),
-            a = w(e);
-        (t = (0, r.N4)(t, i, a, h)), D(c(L.current, e, t));
-    }
-    function k(e) {
-        return f.format(e);
-    }
-    function B(e, t) {
-        G(e, Z(t));
-    }
-    function F(e) {
-        return Math.round((e - u) / h) * h + u;
-    }
-    function Z(e) {
-        let t = e * (E - u) + u;
-        return (0, r.uZ)(F(t), u, E);
-    }
-    function V(e, t = 1) {
-        let n = Math.max(t, h);
-        G(e, (0, r.N4)(A[e] + n, u, E, h));
-    }
-    function H(e, t = 1) {
-        let n = Math.max(t, h);
-        G(e, (0, r.N4)(A[e] - n, u, E, h));
+        let t = e * (c - s) + s;
+        return (0, r.uZ)(Math.round((t - s) / _) * _ + s, s, c);
     }
     return {
-        values: A,
-        getThumbValue: (e) => A[e],
-        setThumbValue: G,
-        setThumbPercent: B,
-        isThumbDragging: (e) => N[e],
-        setThumbDragging: function e(e, t) {
-            if (n || !x(e)) return;
-            let r = b.current[e];
-            (b.current = c(b.current, e, t)), M(b.current), S && r && !b.current.some(Boolean) && S(L.current);
+        values: T,
+        getThumbValue: (e) => T[e],
+        setThumbValue: U,
+        setThumbPercent: function (e, t) {
+            U(e, x(t));
         },
-        focusedThumb: C,
-        setFocusedThumb: y,
-        getThumbPercent: (e) => P(A[e]),
-        getValuePercent: P,
-        getThumbValueLabel: (e) => k(A[e]),
-        getFormattedValue: k,
-        getThumbMinValue: U,
-        getThumbMaxValue: w,
-        getPercentValue: Z,
-        isThumbEditable: x,
-        setThumbEditable: function e(e, t) {
-            R.current[e] = t;
+        isThumbDragging: (e) => g[e],
+        setThumbDragging: function (e, t) {
+            if (n || !P(e)) return;
+            let r = C.current[e];
+            (C.current = o(C.current, e, t)), D(C.current), m && r && !C.current.some(Boolean) && m(v.current);
         },
-        incrementThumb: V,
-        decrementThumb: H,
-        step: h,
-        pageSize: m,
-        orientation: p,
+        focusedThumb: O,
+        setFocusedThumb: R,
+        getThumbPercent: (e) => y(T[e]),
+        getValuePercent: y,
+        getThumbValueLabel: (e) => w(T[e]),
+        getFormattedValue: w,
+        getThumbMinValue: b,
+        getThumbMaxValue: M,
+        getPercentValue: x,
+        isThumbEditable: P,
+        setThumbEditable: function (e, t) {
+            N.current[e] = t;
+        },
+        incrementThumb: function (e, t = 1) {
+            let n = Math.max(t, _);
+            U(e, (0, r.N4)(T[e] + n, s, c, _));
+        },
+        decrementThumb: function (e, t = 1) {
+            let n = Math.max(t, _);
+            U(e, (0, r.N4)(T[e] - n, s, c, _));
+        },
+        step: _,
+        pageSize: f,
+        orientation: E,
         isDisabled: n
     };
 }
-function c(e, t, n) {
+function o(e, t, n) {
     return e[t] === n ? e : [...e.slice(0, t), n, ...e.slice(t + 1)];
 }
-function d(e) {
+function l(e) {
     if (null != e) return Array.isArray(e) ? e : [e];
 }
-function _(e, t, n) {
+function u(e, t, n) {
     return (r) => {
         'number' == typeof e || 'number' == typeof t ? null == n || n(r[0]) : null == n || n(r);
     };

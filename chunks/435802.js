@@ -1,30 +1,21 @@
 var r = n(599295),
     i = n(781212),
-    a = n(919499),
-    o = n(476400);
+    a = n(919499);
+n(476400);
 var s = n(898061),
-    l = n(862127),
-    u = n(470079),
-    c = n(73793),
-    d = function (e, t) {
+    o = n(862127),
+    l = n(470079),
+    u = n(73793),
+    c = function (e, t) {
         return (
             e &&
             t &&
             t.split(' ').forEach(function (t) {
-                return (0, s.Z)(e, t);
+                return (0, o.Z)(e, t);
             })
         );
     },
-    _ = function (e, t) {
-        return (
-            e &&
-            t &&
-            t.split(' ').forEach(function (t) {
-                return (0, l.Z)(e, t);
-            })
-        );
-    },
-    E = (function (e) {
+    d = (function (e) {
         function t() {
             for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
             return (
@@ -37,8 +28,7 @@ var s = n(898061),
                     t.removeClasses(e, 'exit'), t.addClass(e, n ? 'appear' : 'enter', 'base'), t.props.onEnter && t.props.onEnter(e, n);
                 }),
                 (t.onEntering = function (e, n) {
-                    var r = n ? 'appear' : 'enter';
-                    t.addClass(e, r, 'active'), t.props.onEntering && t.props.onEntering(e, n);
+                    t.addClass(e, n ? 'appear' : 'enter', 'active'), t.props.onEntering && t.props.onEntering(e, n);
                 }),
                 (t.onEntered = function (e, n) {
                     var r = n ? 'appear' : 'enter';
@@ -58,12 +48,12 @@ var s = n(898061),
                         r = 'string' == typeof n,
                         i = r && n ? n + '-' : '',
                         a = r ? '' + i + e : n[e],
-                        o = r ? a + '-active' : n[e + 'Active'],
-                        s = r ? a + '-done' : n[e + 'Done'];
+                        s = r ? a + '-active' : n[e + 'Active'],
+                        o = r ? a + '-done' : n[e + 'Done'];
                     return {
                         baseClassName: a,
-                        activeClassName: o,
-                        doneClassName: s
+                        activeClassName: s,
+                        doneClassName: o
                     };
                 }),
                 t
@@ -73,21 +63,32 @@ var s = n(898061),
         var n = t.prototype;
         return (
             (n.addClass = function (e, t, n) {
-                var r = this.getClassNames(t)[n + 'ClassName'];
-                'appear' === t && 'done' === n && (r += ' ' + this.getClassNames('enter').doneClassName), 'active' === n && e && e.scrollTop, (this.appliedClasses[t][n] = r), d(e, r);
+                var r,
+                    i,
+                    a = this.getClassNames(t)[n + 'ClassName'];
+                'appear' === t && 'done' === n && (a += ' ' + this.getClassNames('enter').doneClassName),
+                    'active' === n && e && e.scrollTop,
+                    (this.appliedClasses[t][n] = a),
+                    (r = e),
+                    (i = a),
+                    r &&
+                        i &&
+                        i.split(' ').forEach(function (e) {
+                            return (0, s.Z)(r, e);
+                        });
             }),
             (n.removeClasses = function (e, t) {
                 var n = this.appliedClasses[t],
                     r = n.base,
                     i = n.active,
                     a = n.done;
-                (this.appliedClasses[t] = {}), r && _(e, r), i && _(e, i), a && _(e, a);
+                (this.appliedClasses[t] = {}), r && c(e, r), i && c(e, i), a && c(e, a);
             }),
             (n.render = function () {
                 var e = this.props,
                     t = (e.classNames, (0, i.Z)(e, ['classNames']));
-                return u.createElement(
-                    c.ZP,
+                return l.createElement(
+                    u.ZP,
                     (0, r.Z)({}, t, {
                         onEnter: this.onEnter,
                         onEntered: this.onEntered,
@@ -100,5 +101,5 @@ var s = n(898061),
             }),
             t
         );
-    })(u.Component);
-(E.defaultProps = { classNames: '' }), (E.propTypes = {}), (t.Z = E);
+    })(l.Component);
+(d.defaultProps = { classNames: '' }), (d.propTypes = {}), (t.Z = d);

@@ -1,5 +1,5 @@
 var n = Function.prototype.toString;
-function r(e) {
+t.Z = function (e) {
     if (null != e) {
         try {
             return n.call(e);
@@ -9,5 +9,4 @@ function r(e) {
         } catch (e) {}
     }
     return '';
-}
-t.Z = r;
+};

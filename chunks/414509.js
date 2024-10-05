@@ -1,59 +1,57 @@
-var r = n(47120);
-var i = n(147913),
-    a = n(592125),
-    o = n(699516),
+n(47120);
+var r = n(147913),
+    i = n(592125),
+    a = n(699516),
     s = n(944486),
-    l = n(979651),
-    u = n(70956),
-    c = n(280006),
-    d = n(33194),
-    _ = n(807031),
-    E = n(189275),
-    f = n(451092);
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let p = 1 * u.Z.Millis.HOUR;
-function m(e) {
+    o = n(979651),
+    l = n(70956),
+    u = n(280006),
+    c = n(33194),
+    d = n(807031),
+    _ = n(189275),
+    E = n(451092);
+let f = 1 * l.Z.Millis.HOUR;
+function h(e) {
     let { channelId: t } = e;
     if (null == t) return;
-    let n = a.Z.getChannel(t);
+    let n = i.Z.getChannel(t);
     if (null != n && n.isGroupDM()) {
-        let e = n.recipients.filter((e) => o.Z.isBlocked(e));
+        let e = n.recipients.filter((e) => a.Z.isBlocked(e));
         e.length > 0 &&
-            c.E.getCurrentConfig({ location: 'channel_select' }, { autoTrackExposure: !0 }).showAsModal &&
+            u.E.getCurrentConfig({ location: 'channel_select' }, { autoTrackExposure: !0 }).showAsModal &&
             !n.blockedUserWarningDismissed &&
-            (0, E.O)({
+            (0, _.O)({
                 channelId: t,
                 blockedUserIds: e
             });
     }
 }
-function I(e) {
+function p(e) {
     let { voiceStates: t } = e,
         n = s.Z.getVoiceChannelId();
-    if (!l.Z.isInChannel(n) || null == n || (0, d.Iu)(n) > Date.now() - p) return;
-    let r = o.Z.getBlockedIDs(),
+    if (!o.Z.isInChannel(n) || null == n || (0, c.Iu)(n) > Date.now() - f) return;
+    let r = a.Z.getBlockedIDs(),
         i = t.find((e) => r.includes(e.userId) && e.channelId === n);
-    null != i && (0, _.w)({ location: 'warning_manager' }) && ((0, f.H)(n, i.userId), _.r.trackExposure({ location: 'warning_manager' }));
+    null != i && (0, d.w)({ location: 'warning_manager' }) && ((0, E.H)(n, i.userId), d.r.trackExposure({ location: 'warning_manager' }));
 }
-class T extends i.Z {
+class I extends r.Z {
     constructor(...e) {
+        var t, n, r;
         super(...e),
-            h(this, 'actions', {
-                CHANNEL_SELECT: m,
-                VOICE_STATE_UPDATES: I
-            });
+            (t = this),
+            (n = 'actions'),
+            (r = {
+                CHANNEL_SELECT: h,
+                VOICE_STATE_UPDATES: p
+            }),
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: r,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (t[n] = r);
     }
 }
-t.Z = new T();
+t.Z = new I();

@@ -1,11 +1,10 @@
 var r = n(584428),
     i = n(438330);
-function a(e) {
+e.exports = function (e) {
     for (var t = i(e), n = t.length; n--; ) {
         var a = t[n],
-            o = e[a];
-        t[n] = [a, o, r(o)];
+            s = e[a];
+        t[n] = [a, s, r(s)];
     }
     return t;
-}
-e.exports = a;
+};

@@ -1,114 +1,104 @@
 var r,
-    i = n(442837),
-    a = n(570140),
-    o = n(786761),
-    s = n(592125),
-    l = n(594174),
-    u = n(823379),
-    c = n(709054);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let _ = {};
-function E(e) {
+    i,
+    a,
+    s,
+    o = n(442837),
+    l = n(570140),
+    u = n(786761),
+    c = n(592125),
+    d = n(594174),
+    _ = n(823379),
+    E = n(709054);
+let f = {};
+function h(e) {
     var t;
-    let n = s.Z.getChannel(null == e ? void 0 : e.channel_id);
+    let n = c.Z.getChannel(null == e ? void 0 : e.channel_id);
     if (null == n || !n.isForumPost()) return !1;
-    let r = _[n.id];
-    return c.default.compare(null == e ? void 0 : e.id, null == r ? void 0 : null === (t = r.message) || void 0 === t ? void 0 : t.id) > -1;
+    let r = f[n.id];
+    return E.default.compare(null == e ? void 0 : e.id, null == r ? void 0 : null === (t = r.message) || void 0 === t ? void 0 : t.id) > -1;
 }
-function f(e, t) {
-    let n = null == t ? null : (0, o.e5)(t);
+function p(e, t) {
+    let n = null == t ? null : (0, u.e5)(t);
     return (
-        (_[e] = {
+        (f[e] = {
             loaded: !0,
             message: n
         }),
         !0
     );
 }
-function h(e, t) {
-    let n = m(e),
-        r = I(e);
-    return (
-        null != n &&
-        null != r &&
-        ((_[e] = {
-            ...n,
-            message: (0, o.wi)(r, t)
-        }),
-        !0)
-    );
-}
-function p(e, t) {
-    let n = I(e);
-    return (null == n ? void 0 : n.id) === t && (delete _[e], !0);
+function I(e) {
+    return f[e];
 }
 function m(e) {
-    return _[e];
-}
-function I(e) {
     var t;
-    return null === (t = m(e)) || void 0 === t ? void 0 : t.message;
+    return null === (t = f[e]) || void 0 === t ? void 0 : t.message;
 }
-function T() {
-    _ = {};
-}
-function g(e) {
-    let { threads: t } = e;
-    for (let e in t) f(e, t[e].most_recent_message);
-}
-function S(e) {
-    if (e.isPushNotification || !E(e.message)) return !1;
-    e.message.channel_id === c.default.castMessageIdAsChannelId(e.message.id) ? f(e.message.channel_id, null) : f(e.message.channel_id, e.message);
-}
-function A(e) {
-    if (!E(e.message) || e.message.channel_id === e.message.id) return !1;
-    h(e.message.channel_id, e.message);
-}
-function v(e) {
-    return p(e.channelId, e.id);
-}
-function N(e) {
+function T(e) {
     let { threads: t, mostRecentMessages: n } = e;
-    t.forEach((e) => f(e.id, null)),
+    t.forEach((e) => p(e.id, null)),
         null == n ||
-            n.filter(u.lm).forEach((e) => {
-                f(e.channel_id, e);
+            n.filter(_.lm).forEach((e) => {
+                p(e.channel_id, e);
             });
 }
-class O extends (r = i.ZP.Store) {
+class S extends (s = o.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z, l.default);
+        this.waitFor(c.Z, d.default);
     }
     getMessageState(e) {
         return (
-            !(e in _) &&
-                (_[e] = {
+            !(e in f) &&
+                (f[e] = {
                     loaded: !1,
                     message: null
                 }),
-            _[e]
+            f[e]
         );
     }
 }
-d(O, 'displayName', 'ForumPostRecentMessageStore'),
-    new O(a.Z, {
-        CONNECTION_OPEN: T,
-        MESSAGE_CREATE: S,
-        MESSAGE_UPDATE: A,
-        MESSAGE_DELETE: v,
-        LOAD_FORUM_POSTS: g,
-        LOAD_ARCHIVED_THREADS_SUCCESS: N,
-        LOAD_THREADS_SUCCESS: N
+(a = 'ForumPostRecentMessageStore'),
+    (i = 'displayName') in (r = S)
+        ? Object.defineProperty(r, i, {
+              value: a,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (r[i] = a),
+    new S(l.Z, {
+        CONNECTION_OPEN: function () {
+            f = {};
+        },
+        MESSAGE_CREATE: function (e) {
+            if (e.isPushNotification || !h(e.message)) return !1;
+            e.message.channel_id === E.default.castMessageIdAsChannelId(e.message.id) ? p(e.message.channel_id, null) : p(e.message.channel_id, e.message);
+        },
+        MESSAGE_UPDATE: function (e) {
+            if (!h(e.message) || e.message.channel_id === e.message.id) return !1;
+            !(function (e, t) {
+                let n = (function (e) {
+                        return f[e];
+                    })(e),
+                    r = m(e);
+                null != n &&
+                    null != r &&
+                    (f[e] = {
+                        ...n,
+                        message: (0, u.wi)(r, t)
+                    });
+            })(e.message.channel_id, e.message);
+        },
+        MESSAGE_DELETE: function (e) {
+            return (function (e, t) {
+                let n = m(e);
+                return (null == n ? void 0 : n.id) === t && (delete f[e], !0);
+            })(e.channelId, e.id);
+        },
+        LOAD_FORUM_POSTS: function (e) {
+            let { threads: t } = e;
+            for (let e in t) p(e, t[e].most_recent_message);
+        },
+        LOAD_ARCHIVED_THREADS_SUCCESS: T,
+        LOAD_THREADS_SUCCESS: T
     });

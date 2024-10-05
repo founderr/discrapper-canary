@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             className: 'variable',
             variants: [
@@ -15,29 +15,7 @@ function t(e) {
             end: /"/,
             contains: [e.BACKSLASH_ESCAPE, t]
         },
-        r = {
-            className: 'variable',
-            begin: /\$\([\w-]+\s/,
-            end: /\)/,
-            keywords: { built_in: 'subst patsubst strip findstring filter filter-out sort word wordlist firstword lastword dir notdir suffix basename addsuffix addprefix join wildcard realpath abspath error warning shell origin flavor foreach if or and call eval file value' },
-            contains: [t]
-        },
-        i = { begin: '^' + e.UNDERSCORE_IDENT_RE + '\\s*(?=[:+?]?=)' },
-        a = {
-            className: 'meta',
-            begin: /^\.PHONY:/,
-            end: /$/,
-            keywords: {
-                $pattern: /[\.\w]+/,
-                keyword: '.PHONY'
-            }
-        },
-        o = {
-            className: 'section',
-            begin: /^[^\s]+:/,
-            end: /$/,
-            contains: [t]
-        };
+        r = { begin: '^' + e.UNDERSCORE_IDENT_RE + '\\s*(?=[:+?]?=)' };
     return {
         name: 'Makefile',
         aliases: ['mk', 'mak', 'make'],
@@ -45,7 +23,33 @@ function t(e) {
             $pattern: /[\w-]+/,
             keyword: 'define endef undefine ifdef ifndef ifeq ifneq else endif include -include sinclude override export unexport private vpath'
         },
-        contains: [e.HASH_COMMENT_MODE, t, n, r, i, a, o]
+        contains: [
+            e.HASH_COMMENT_MODE,
+            t,
+            n,
+            {
+                className: 'variable',
+                begin: /\$\([\w-]+\s/,
+                end: /\)/,
+                keywords: { built_in: 'subst patsubst strip findstring filter filter-out sort word wordlist firstword lastword dir notdir suffix basename addsuffix addprefix join wildcard realpath abspath error warning shell origin flavor foreach if or and call eval file value' },
+                contains: [t]
+            },
+            r,
+            {
+                className: 'meta',
+                begin: /^\.PHONY:/,
+                end: /$/,
+                keywords: {
+                    $pattern: /[\.\w]+/,
+                    keyword: '.PHONY'
+                }
+            },
+            {
+                className: 'section',
+                begin: /^[^\s]+:/,
+                end: /$/,
+                contains: [t]
+            }
+        ]
     };
-}
-e.exports = t;
+};

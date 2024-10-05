@@ -1,37 +1,36 @@
-var r = n(47120);
-var i = n(147913),
-    a = n(474873),
-    o = n(523746),
+n(47120);
+var r = n(147913),
+    i = n(474873),
+    a = n(523746),
     s = n(292959),
-    l = n(246946),
-    u = n(979651),
-    c = n(938475),
-    d = n(557177);
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let E = (0, d.uk)('call_calling', a.Z.getSoundpack());
-class f extends i.Z {
+    o = n(246946),
+    l = n(979651),
+    u = n(938475),
+    c = n(557177);
+let d = (0, c.uk)('call_calling', i.Z.getSoundpack());
+class _ extends r.Z {
     handleSoundpackUpdate() {
-        E.stop(), (E = (0, d.uk)('call_calling', a.Z.getSoundpack()));
+        d.stop(), (d = (0, c.uk)('call_calling', i.Z.getSoundpack()));
     }
     handleRingUpdate() {
-        let e = o.Z.getCalls().filter((e) => e.ringing.length > 0 && u.Z.getCurrentClientVoiceChannelId(null) === e.channelId),
-            t = u.Z.getCurrentClientVoiceChannelId(null);
-        (null != t && c.ZP.countVoiceStatesForChannel(t) >= 2) || !(e.length > 0) || s.Z.isSoundDisabled('call_calling') || l.Z.disableSounds ? E.stop() : E.loop();
+        let e = a.Z.getCalls().filter((e) => e.ringing.length > 0 && l.Z.getCurrentClientVoiceChannelId(null) === e.channelId),
+            t = l.Z.getCurrentClientVoiceChannelId(null);
+        (null != t && u.ZP.countVoiceStatesForChannel(t) >= 2) || !(e.length > 0) || s.Z.isSoundDisabled('call_calling') || o.Z.disableSounds ? d.stop() : d.loop();
     }
     constructor(...e) {
-        super(...e), _(this, 'stores', new Map().set(o.Z, this.handleRingUpdate).set(s.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(a.Z, this.handleSoundpackUpdate));
+        var t, n, r;
+        super(...e),
+            (t = this),
+            (n = 'stores'),
+            (r = new Map().set(a.Z, this.handleRingUpdate).set(s.Z, this.handleRingUpdate).set(o.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(i.Z, this.handleSoundpackUpdate)),
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: r,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (t[n] = r);
     }
 }
-t.Z = new f();
+t.Z = new _();

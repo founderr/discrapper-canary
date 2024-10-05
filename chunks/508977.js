@@ -1,11 +1,10 @@
 var r = n(854441),
     i = n(917430);
-function a(e) {
+t.Z = function (e) {
     for (var t = (0, i.Z)(e), n = t.length; n--; ) {
         var a = t[n],
-            o = e[a];
-        t[n] = [a, o, (0, r.Z)(o)];
+            s = e[a];
+        t[n] = [a, s, (0, r.Z)(s)];
     }
     return t;
-}
-t.Z = a;
+};

@@ -1,69 +1,67 @@
 var r = n(470079),
     i = n(844303),
     a = n(13942),
-    o = n(464854),
-    s = n(191731),
-    l = function (e) {
-        var t = e.color,
-            n = e.onClick,
-            l = void 0 === n ? function () {} : n,
-            u = e.onSwatchHover,
-            c = e.first,
-            d = e.last,
-            _ = e.active,
-            E = (0, i.default)(
-                {
-                    default: {
-                        color: {
-                            width: '40px',
-                            height: '24px',
-                            cursor: 'pointer',
-                            background: t,
-                            marginBottom: '1px'
-                        },
-                        check: {
-                            color: a.Qg(t),
-                            marginLeft: '8px',
-                            display: 'none'
-                        }
-                    },
-                    first: {
-                        color: {
-                            overflow: 'hidden',
-                            borderRadius: '2px 2px 0 0'
-                        }
-                    },
-                    last: {
-                        color: {
-                            overflow: 'hidden',
-                            borderRadius: '0 0 2px 2px'
-                        }
-                    },
-                    active: { check: { display: 'block' } },
-                    'color-#FFFFFF': {
-                        color: { boxShadow: 'inset 0 0 0 1px #ddd' },
-                        check: { color: '#333' }
-                    },
-                    transparent: { check: { color: '#333' } }
-                },
-                {
-                    first: c,
-                    last: d,
-                    active: _,
-                    'color-#FFFFFF': '#FFFFFF' === t,
-                    transparent: 'transparent' === t
-                }
-            );
-        return r.createElement(
-            o.m4,
+    s = n(464854),
+    o = n(191731);
+t.Z = function (e) {
+    var t = e.color,
+        n = e.onClick,
+        l = e.onSwatchHover,
+        u = e.first,
+        c = e.last,
+        d = e.active,
+        _ = (0, i.default)(
             {
-                color: t,
-                style: E.color,
-                onClick: l,
-                onHover: u,
-                focusStyle: { boxShadow: '0 0 4px ' + t }
+                default: {
+                    color: {
+                        width: '40px',
+                        height: '24px',
+                        cursor: 'pointer',
+                        background: t,
+                        marginBottom: '1px'
+                    },
+                    check: {
+                        color: a.Qg(t),
+                        marginLeft: '8px',
+                        display: 'none'
+                    }
+                },
+                first: {
+                    color: {
+                        overflow: 'hidden',
+                        borderRadius: '2px 2px 0 0'
+                    }
+                },
+                last: {
+                    color: {
+                        overflow: 'hidden',
+                        borderRadius: '0 0 2px 2px'
+                    }
+                },
+                active: { check: { display: 'block' } },
+                'color-#FFFFFF': {
+                    color: { boxShadow: 'inset 0 0 0 1px #ddd' },
+                    check: { color: '#333' }
+                },
+                transparent: { check: { color: '#333' } }
             },
-            r.createElement('div', { style: E.check }, r.createElement(s.default, null))
+            {
+                first: u,
+                last: c,
+                active: d,
+                'color-#FFFFFF': '#FFFFFF' === t,
+                transparent: 'transparent' === t
+            }
         );
-    };
-t.Z = l;
+    return r.createElement(
+        s.m4,
+        {
+            color: t,
+            style: _.color,
+            onClick: void 0 === n ? function () {} : n,
+            onHover: l,
+            focusStyle: { boxShadow: '0 0 4px ' + t }
+        },
+        r.createElement('div', { style: _.check }, r.createElement(o.default, null))
+    );
+};

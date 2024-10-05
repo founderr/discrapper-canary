@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(470079),
     i = n(721535),
     a = n(275857),
-    o = n(697898);
-class s {
+    s = n(697898);
+class o {
     *[Symbol.iterator]() {
         yield* this.iterable;
     }
@@ -51,30 +51,32 @@ class s {
     }
 }
 function l(e) {
-    let [t, n] = (0, o.zk)(e.expandedKeys ? new Set(e.expandedKeys) : void 0, e.defaultExpandedKeys ? new Set(e.defaultExpandedKeys) : new Set(), e.onExpandedChange),
+    let [t, n] = (0, s.zk)(e.expandedKeys ? new Set(e.expandedKeys) : void 0, e.defaultExpandedKeys ? new Set(e.defaultExpandedKeys) : new Set(), e.onExpandedChange),
         l = (0, i.q)(e),
-        c = (0, r.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
-        d = (0, a.Kx)(
+        u = (0, r.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
+        c = (0, a.Kx)(
             e,
-            (0, r.useCallback)((e) => new s(e, { expandedKeys: t }), [t]),
+            (0, r.useCallback)((e) => new o(e, { expandedKeys: t }), [t]),
             null
         );
-    (0, r.useEffect)(() => {
-        null != l.focusedKey && !d.getItem(l.focusedKey) && l.setFocusedKey(null);
-    }, [d, l.focusedKey]);
-    let _ = (e) => {
-        n(u(t, e));
-    };
-    return {
-        collection: d,
-        expandedKeys: t,
-        disabledKeys: c,
-        toggleKey: _,
-        setExpandedKeys: n,
-        selectionManager: new i.Z(d, l)
-    };
-}
-function u(e, t) {
-    let n = new Set(e);
-    return n.has(t) ? n.delete(t) : n.add(t), n;
+    return (
+        (0, r.useEffect)(() => {
+            null != l.focusedKey && !c.getItem(l.focusedKey) && l.setFocusedKey(null);
+        }, [c, l.focusedKey]),
+        {
+            collection: c,
+            expandedKeys: t,
+            disabledKeys: u,
+            toggleKey: (e) => {
+                n(
+                    (function (e, t) {
+                        let n = new Set(e);
+                        return n.has(t) ? n.delete(t) : n.add(t), n;
+                    })(t, e)
+                );
+            },
+            setExpandedKeys: n,
+            selectionManager: new i.Z(c, l)
+        }
+    );
 }

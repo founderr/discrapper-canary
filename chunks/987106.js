@@ -1,140 +1,139 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return g;
+        return E;
     }
 });
-var r = n(735250);
-n(470079);
-var i = n(120356),
-    a = n.n(i),
-    o = n(392711);
-var s = n(481060),
-    l = n(239091),
-    u = n(596454),
-    c = n(911969),
-    d = n(744969),
-    _ = n(572004),
-    E = n(49012),
-    f = n(970184),
-    h = n(280501),
-    p = n(689938),
-    m = n(948489);
+var l = t(735250);
+t(470079);
+var i = t(120356),
+    a = t.n(i),
+    r = t(392711),
+    o = t(481060),
+    s = t(239091),
+    c = t(596454),
+    u = t(911969),
+    d = t(744969),
+    m = t(572004),
+    _ = t(49012),
+    f = t(970184),
+    p = t(280501),
+    C = t(689938),
+    h = t(948489);
 function I(e) {
-    switch (e) {
-        case c.ZJ.PRIMARY:
-        case c.ZJ.PREMIUM:
-            return s.Button.Colors.BRAND;
-        case c.ZJ.SUCCESS:
-            return s.Button.Colors.GREEN;
-        case c.ZJ.DESTRUCTIVE:
-            return s.Button.Colors.RED;
-        default:
-            return s.Button.Colors.PRIMARY;
-    }
-}
-function T(e) {
-    let { url: t, onSelect: n } = e;
-    return _.wS && null != t
-        ? (0, r.jsx)(s.Menu, {
+    let { url: n, onSelect: t } = e;
+    return m.wS && null != n
+        ? (0, l.jsx)(o.Menu, {
               navId: 'component-button',
-              onClose: l.Zy,
-              'aria-label': p.Z.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_NAME,
-              onSelect: n,
-              children: (0, r.jsx)(s.MenuGroup, {
-                  children: (0, r.jsx)(s.MenuItem, {
+              onClose: s.Zy,
+              'aria-label': C.Z.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_NAME,
+              onSelect: t,
+              children: (0, l.jsx)(o.MenuGroup, {
+                  children: (0, l.jsx)(o.MenuItem, {
                       id: 'copy',
-                      label: p.Z.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_COPY,
-                      action: () => (0, _.JG)(t)
+                      label: C.Z.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_COPY,
+                      action: () => (0, m.JG)(n)
                   })
               })
           })
         : null;
 }
-function g(e) {
-    let t;
-    let { label: n, style: i, disabled: _, emoji: p, url: g, skuId: S } = e,
-        { executeStateUpdate: A, visualState: v, isDisabled: N } = (0, f.Ee)(e),
-        O = (0, d.s)(S),
-        R = null != S && i === c.ZJ.PREMIUM,
-        C = R && (null == O ? void 0 : O.disabled),
-        y = R ? (null == O ? void 0 : O.label) : n,
-        L = null != p,
-        b = null != y && y.length > 0,
-        D = i === c.ZJ.LINK && null != g && g.length > 0,
-        M = v === h.gH.LOADING || (R && null == O);
+function E(e) {
+    let n;
+    let { label: t, style: i, disabled: m, emoji: C, url: E, skuId: x } = e,
+        { executeStateUpdate: v, visualState: T, isDisabled: N } = (0, f.Ee)(e),
+        b = (0, d.s)(x),
+        g = null != x && i === u.ZJ.PREMIUM,
+        S = g && (null == b ? void 0 : b.disabled),
+        O = g ? (null == b ? void 0 : b.label) : t,
+        j = null != C,
+        M = null != O && O.length > 0,
+        Z = i === u.ZJ.LINK && null != E && E.length > 0,
+        y = T === p.gH.LOADING || (g && null == b);
     return (
-        (t = D
+        (n = Z
             ? () => {
-                  (0, E.q)({
-                      href: null != g ? g : '',
+                  (0, _.q)({
+                      href: null != E ? E : '',
                       shouldConfirm: !0
                   });
               }
-            : R
-              ? null != O && !1 === O.disabled
-                  ? O.onClick
-                  : o.noop
-              : () => A()),
-        (0, r.jsxs)(s.Button, {
-            color: I(i),
-            size: s.Button.Sizes.SMALL,
-            disabled: _ || v === h.gH.DISABLED || N || C,
-            onClick: t,
+            : g
+              ? null != b && !1 === b.disabled
+                  ? b.onClick
+                  : r.noop
+              : () => v()),
+        (0, l.jsxs)(o.Button, {
+            color: (function (e) {
+                switch (e) {
+                    case u.ZJ.PRIMARY:
+                    case u.ZJ.PREMIUM:
+                        return o.Button.Colors.BRAND;
+                    case u.ZJ.SUCCESS:
+                        return o.Button.Colors.GREEN;
+                    case u.ZJ.DESTRUCTIVE:
+                        return o.Button.Colors.RED;
+                    default:
+                        return o.Button.Colors.PRIMARY;
+                }
+            })(i),
+            size: o.Button.Sizes.SMALL,
+            disabled: m || T === p.gH.DISABLED || N || S,
+            onClick: n,
             onContextMenu: (e) => {
-                D &&
-                    (0, l.vq)(e, (e) =>
-                        (0, r.jsx)(T, {
+                Z &&
+                    (0, s.vq)(e, (e) =>
+                        (0, l.jsx)(I, {
                             ...e,
-                            url: g
+                            url: E
                         })
                     );
             },
-            role: D ? 'link' : 'button',
+            role: Z ? 'link' : 'button',
             children: [
-                (0, r.jsxs)('div', {
-                    className: a()(m.content, {
-                        [m.hidden]: M,
-                        [m.premium]: R
+                (0, l.jsxs)('div', {
+                    className: a()(h.content, {
+                        [h.hidden]: y,
+                        [h.premium]: g
                     }),
-                    'aria-hidden': M,
+                    'aria-hidden': y,
                     children: [
-                        R
-                            ? (0, r.jsx)('div', {
-                                  className: m.shopIcon,
-                                  children: (0, r.jsx)(s.ShopIcon, {
+                        g
+                            ? (0, l.jsx)('div', {
+                                  className: h.shopIcon,
+                                  children: (0, l.jsx)(o.ShopIcon, {
                                       size: 'xs',
                                       color: 'white'
                                   })
                               })
                             : null,
-                        L
-                            ? (0, r.jsx)(u.Z, {
-                                  className: a()({ [m.textEmoji]: b }),
-                                  src: p.src,
-                                  emojiId: p.id,
-                                  emojiName: p.name,
-                                  animated: p.animated
+                        j
+                            ? (0, l.jsx)(c.Z, {
+                                  className: a()({ [h.textEmoji]: M }),
+                                  src: C.src,
+                                  emojiId: C.id,
+                                  emojiName: C.name,
+                                  animated: C.animated
                               })
                             : null,
-                        b
-                            ? (0, r.jsx)('div', {
-                                  className: m.label,
-                                  children: y
+                        M
+                            ? (0, l.jsx)('div', {
+                                  className: h.label,
+                                  children: O
                               })
                             : null,
-                        D
-                            ? (0, r.jsx)(s.WindowLaunchIcon, {
+                        Z
+                            ? (0, l.jsx)(o.WindowLaunchIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: m.launchIcon
+                                  className: h.launchIcon
                               })
                             : null
                     ]
                 }),
-                M
-                    ? (0, r.jsx)('div', {
-                          className: m.loading,
-                          children: (0, r.jsx)(s.Dots, {
+                y
+                    ? (0, l.jsx)('div', {
+                          className: h.loading,
+                          children: (0, l.jsx)(o.Dots, {
                               dotRadius: 3.5,
                               themed: !0
                           })

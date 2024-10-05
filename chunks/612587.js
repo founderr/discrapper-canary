@@ -1,14 +1,7 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = /[a-zA-Z_$][a-zA-Z0-9_$]*/,
-        r = t.concat(n, t.concat('(\\.', n, ')*')),
-        i = /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/,
-        a = {
-            className: 'rest_arg',
-            begin: /[.]{3}/,
-            end: n,
-            relevance: 10
-        };
+        r = t.concat(n, t.concat('(\\.', n, ')*'));
     return {
         name: 'ActionScript',
         aliases: ['as'],
@@ -53,14 +46,24 @@ function t(e) {
                         className: 'params',
                         begin: /\(/,
                         end: /\)/,
-                        contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, a]
+                        contains: [
+                            e.APOS_STRING_MODE,
+                            e.QUOTE_STRING_MODE,
+                            e.C_LINE_COMMENT_MODE,
+                            e.C_BLOCK_COMMENT_MODE,
+                            {
+                                className: 'rest_arg',
+                                begin: /[.]{3}/,
+                                end: n,
+                                relevance: 10
+                            }
+                        ]
                     },
-                    { begin: t.concat(/:\s*/, i) }
+                    { begin: t.concat(/:\s*/, /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/) }
                 ]
             },
             e.METHOD_GUARD
         ],
         illegal: /#/
     };
-}
-e.exports = t;
+};

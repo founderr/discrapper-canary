@@ -1,22 +1,21 @@
-var r = n(47120);
-var i = n(411104);
-var a = n(464847),
-    o = n(289182),
-    s = n(358085),
-    l = n(998502);
-function u() {
-    var e, t, n, r, i, a;
-    let o = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    s.isPlatformEmbedded &&
-        l.ZP.updateCrashReporter({
-            user_id: null !== (e = o.id) && void 0 !== e ? e : '',
-            username: null !== (t = o.username) && void 0 !== t ? t : '',
-            email: null !== (n = o.email) && void 0 !== n ? n : '',
+n(47120), n(411104);
+var r = n(464847),
+    i = n(289182),
+    a = n(358085),
+    s = n(998502);
+function o() {
+    var e, t, n, r, i, o;
+    let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    a.isPlatformEmbedded &&
+        s.ZP.updateCrashReporter({
+            user_id: null !== (e = l.id) && void 0 !== e ? e : '',
+            username: null !== (t = l.username) && void 0 !== t ? t : '',
+            email: null !== (n = l.email) && void 0 !== n ? n : '',
             sentry: {
                 user: {
-                    id: null !== (r = o.id) && void 0 !== r ? r : '',
-                    username: null !== (i = o.username) && void 0 !== i ? i : '',
-                    email: null !== (a = o.email) && void 0 !== a ? a : ''
+                    id: null !== (r = l.id) && void 0 !== r ? r : '',
+                    username: null !== (i = l.username) && void 0 !== i ? i : '',
+                    email: null !== (o = l.email) && void 0 !== o ? o : ''
                 }
             }
         });
@@ -30,11 +29,11 @@ t.Z = {
             email: n,
             staff: r
         };
-        null === (i = window.DiscordSentry) || void 0 === i || i.getCurrentScope().setUser(a), u(a);
+        null === (i = window.DiscordSentry) || void 0 === i || i.getCurrentScope().setUser(a), o(a);
     },
     clearUser() {
         var e;
-        null === (e = window.DiscordSentry) || void 0 === e || e.getCurrentScope().setUser(null), u();
+        null === (e = window.DiscordSentry) || void 0 === e || e.getCurrentScope().setUser(null), o();
     },
     setTags(e) {
         var t;
@@ -46,7 +45,7 @@ t.Z = {
     },
     captureException(e, t) {
         var n;
-        let r = (0, o.v)(t);
+        let r = (0, i.v)(t);
         null === (n = window.DiscordSentry) ||
             void 0 === n ||
             n.withScope((t) => {
@@ -57,13 +56,13 @@ t.Z = {
     captureCrash(e, t) {
         var n;
         let r;
-        let i = (0, o.v)(t);
+        let a = (0, i.v)(t);
         return (
             null === (n = window.DiscordSentry) ||
                 void 0 === n ||
                 n.withScope((t) => {
                     var n;
-                    t.setExtras(i.extra),
+                    t.setExtras(a.extra),
                         t.setTag('crash', 'true'),
                         t.setLevel('fatal'),
                         t.addEventProcessor((e) => {
@@ -85,7 +84,7 @@ t.Z = {
     },
     captureMessage(e, t) {
         var n;
-        let r = (0, o.v)(t);
+        let r = (0, i.v)(t);
         null === (n = window.DiscordSentry) ||
             void 0 === n ||
             n.withScope((t) => {
@@ -94,7 +93,7 @@ t.Z = {
             });
     },
     addBreadcrumb(e) {
-        (0, a.Z)(e);
+        (0, r.Z)(e);
     },
     profiledRootComponent: (e) => e,
     crash() {

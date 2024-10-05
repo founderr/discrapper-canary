@@ -1,9 +1,10 @@
-var r;
+var E, r;
 n.d(t, {
     A: function () {
-        return r;
+        return E;
     }
 }),
-    !(function (e) {
-        (e.WAITING = 'WAITING'), (e.PURCHASING = 'PURCHASING'), (e.FAIL = 'FAIL'), (e.COMPLETED = 'COMPLETED');
-    })(r || (r = {}));
+    ((r = E || (E = {})).WAITING = 'WAITING'),
+    (r.PURCHASING = 'PURCHASING'),
+    (r.FAIL = 'FAIL'),
+    (r.COMPLETED = 'COMPLETED');

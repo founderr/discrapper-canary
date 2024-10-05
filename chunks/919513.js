@@ -1,9 +1,17 @@
 n.d(t, {
     JP: function () {
-        return o;
+        return s;
     },
     sM: function () {
-        return s;
+        return function e(t, n) {
+            if (n && Array.isArray(t)) {
+                t.forEach(function (t) {
+                    return e(t, !1);
+                });
+                return;
+            }
+            (0, r.k)('string' == typeof t || 'symbol' === i(t), n ? 'Type can only be a string, a symbol, or an array of either.' : 'Type can only be a string or a symbol.');
+        };
     },
     up: function () {
         return a;
@@ -23,15 +31,6 @@ function i(e) {
 function a(e) {
     (0, r.k)('function' == typeof e.canDrag, 'Expected canDrag to be a function.'), (0, r.k)('function' == typeof e.beginDrag, 'Expected beginDrag to be a function.'), (0, r.k)('function' == typeof e.endDrag, 'Expected endDrag to be a function.');
 }
-function o(e) {
+function s(e) {
     (0, r.k)('function' == typeof e.canDrop, 'Expected canDrop to be a function.'), (0, r.k)('function' == typeof e.hover, 'Expected hover to be a function.'), (0, r.k)('function' == typeof e.drop, 'Expected beginDrag to be a function.');
-}
-function s(e, t) {
-    if (t && Array.isArray(e)) {
-        e.forEach(function (e) {
-            return s(e, !1);
-        });
-        return;
-    }
-    (0, r.k)('string' == typeof e || 'symbol' === i(e), t ? 'Type can only be a string, a symbol, or an array of either.' : 'Type can only be a string or a symbol.');
 }

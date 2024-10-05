@@ -1,17 +1,17 @@
 n.d(t, {
     q: function () {
-        return I;
+        return p;
     }
-});
+}),
+    n(47120);
 var r,
-    i = n(47120);
-var a = n(442837),
-    o = n(570140),
+    i = n(442837),
+    a = n(570140),
     s = n(353926),
-    l = n(626135),
-    u = n(358085),
-    c = n(998502);
-function d(e, t, n) {
+    o = n(626135),
+    l = n(358085),
+    u = n(998502);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,47 +24,48 @@ function d(e, t, n) {
         e
     );
 }
-let _ = { hashes: {} };
-async function E() {
-    if (!u.isPlatformEmbedded || !(0, u.isWindows)()) return [];
-    await c.ZP.ensureModule('discord_media');
-    let e = c.ZP.requireModule('discord_media');
+let d = { hashes: {} };
+async function _() {
+    if (!l.isPlatformEmbedded || !(0, l.isWindows)()) return [];
+    await u.ZP.ensureModule('discord_media');
+    let e = u.ZP.requireModule('discord_media');
     return (await e.getSystemAnalyticsBlob()) || [];
 }
-async function f() {
+async function E() {
     try {
-        let t = (await E()).filter((e) => _.hashes[e.name] !== e.hash);
+        let t = (await _()).filter((e) => d.hashes[e.name] !== e.hash);
         for (let { name: n, hash: r, data: i } of t) {
             var e;
             let t = {
                 ...i,
                 gpus: null === (e = i.gpus) || void 0 === e ? void 0 : e.map((e) => JSON.stringify(e))
             };
-            l.default.track(n, t), ((_ = { hashes: { ..._.hashes } }).hashes[n] = r);
+            o.default.track(n, t), ((d = { hashes: { ...d.hashes } }).hashes[n] = r);
         }
-        t.length > 0 && m.emitChange();
+        t.length > 0 && h.emitChange();
     } catch (e) {}
 }
-function h() {
-    return f(), !1;
-}
-class p extends (r = a.ZP.PersistedStore) {
+class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (_ = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.Z);
+        (d = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.Z);
     }
     getState() {
-        return _;
+        return d;
     }
     async info() {
         try {
-            let e = (await E()).find((e) => 'hardware_detected' === e.name);
+            let e = (await _()).find((e) => 'hardware_detected' === e.name);
             if (null == e) return null;
             return e.data;
         } catch (e) {}
     }
 }
-d(p, 'displayName', 'SystemAnalyticsStore'), d(p, 'persistKey', 'SystemAnalyticsStore');
-let m = new p(o.Z, { START_SESSION: h });
-function I() {
-    return m.info();
+c(f, 'displayName', 'SystemAnalyticsStore'), c(f, 'persistKey', 'SystemAnalyticsStore');
+let h = new f(a.Z, {
+    START_SESSION: function () {
+        return E(), !1;
+    }
+});
+function p() {
+    return h.info();
 }

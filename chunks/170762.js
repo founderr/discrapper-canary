@@ -2,23 +2,23 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(921944),
-    o = n(689938),
-    s = n(359325);
-let l = (e) => {
+    s = n(689938),
+    o = n(359325);
+t.Z = (e) => {
     let { markAsDismissed: t } = e;
     return (0, r.jsxs)('div', {
-        className: s.wrapper,
+        className: o.wrapper,
         children: [
             (0, r.jsx)(i.HeartIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: s.icon
+                className: o.icon
             }),
             (0, r.jsx)('div', {
-                className: s.content,
+                className: o.content,
                 children: (0, r.jsx)(i.Text, {
                     variant: 'text-xs/normal',
-                    children: o.Z.Messages.EMOJI_PICKER_FAVORITES_TIP
+                    children: s.Z.Messages.EMOJI_PICKER_FAVORITES_TIP
                 })
             }),
             (0, r.jsx)(i.Clickable, {
@@ -26,10 +26,9 @@ let l = (e) => {
                 children: (0, r.jsx)(i.XSmallIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: s.close
+                    className: o.close
                 })
             })
         ]
     });
 };
-t.Z = l;

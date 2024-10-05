@@ -1,77 +1,77 @@
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(481060),
-    u = n(63063),
-    c = n(981631),
-    d = n(689938),
-    _ = n(326954);
-let E = [
+n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(63063),
+    u = n(981631),
+    c = n(689938),
+    d = n(326954);
+let _ = [
     {
-        getQuestion: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_1,
-        getAnswer: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_1
+        getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_1,
+        getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_1
     },
     {
-        getQuestion: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_2,
-        getAnswer: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_2.format({ helpCenterUrl: u.Z.getArticleURL(c.BhN.GUILD_BOOSTING_FAQ) })
+        getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_2,
+        getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_2.format({ helpCenterUrl: l.Z.getArticleURL(u.BhN.GUILD_BOOSTING_FAQ) })
     },
     {
-        getQuestion: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_3,
-        getAnswer: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_3
+        getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_3,
+        getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_3
     },
     {
-        getQuestion: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_4,
-        getAnswer: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_4
+        getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_4,
+        getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_4
     }
 ];
-function f(e) {
+t.Z = function (e) {
     let { className: t } = e,
-        [n, r] = a.useState(null);
-    return (0, i.jsxs)('div', {
-        className: s()(_.wrapper, t),
+        [n, a] = i.useState(null);
+    return (0, r.jsxs)('div', {
+        className: s()(d.wrapper, t),
         children: [
-            (0, i.jsx)(l.Heading, {
-                className: _.heading,
+            (0, r.jsx)(o.Heading, {
+                className: d.heading,
                 variant: 'heading-xxl/bold',
-                children: d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_HEADING
+                children: c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_HEADING
             }),
-            (0, i.jsx)('ul', {
-                className: _.list,
-                children: E.map((e, t) => {
-                    let a = n === t;
-                    return (0, i.jsxs)(
+            (0, r.jsx)('ul', {
+                className: d.list,
+                children: _.map((e, t) => {
+                    let i = n === t;
+                    return (0, r.jsxs)(
                         'div',
                         {
-                            className: _.listItem,
+                            className: d.listItem,
                             children: [
-                                (0, i.jsxs)(l.Clickable, {
-                                    className: s()(_.questionWrapper, { [_.questionWrapperExpanded]: a }),
-                                    onClick: () => r((e) => (e === t ? null : t)),
+                                (0, r.jsxs)(o.Clickable, {
+                                    className: s()(d.questionWrapper, { [d.questionWrapperExpanded]: i }),
+                                    onClick: () => a((e) => (e === t ? null : t)),
                                     tag: 'li',
                                     children: [
-                                        (0, i.jsx)(l.Text, {
-                                            className: _.question,
+                                        (0, r.jsx)(o.Text, {
+                                            className: d.question,
                                             variant: 'text-lg/normal',
                                             children: e.getQuestion()
                                         }),
-                                        a
-                                            ? (0, i.jsx)(l.MinusIcon, {
+                                        i
+                                            ? (0, r.jsx)(o.MinusIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: _.questionIcon
+                                                  className: d.questionIcon
                                               })
-                                            : (0, i.jsx)(l.PlusSmallIcon, {
+                                            : (0, r.jsx)(o.PlusSmallIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: _.questionIcon
+                                                  className: d.questionIcon
                                               })
                                     ]
                                 }),
-                                a &&
-                                    (0, i.jsx)(l.Text, {
-                                        className: _.answer,
+                                i &&
+                                    (0, r.jsx)(o.Text, {
+                                        className: d.answer,
                                         color: 'text-normal',
                                         variant: 'text-md/normal',
                                         children: e.getAnswer()
@@ -84,5 +84,4 @@ function f(e) {
             })
         ]
     });
-}
-t.Z = f;
+};

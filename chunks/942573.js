@@ -1,12 +1,11 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = t.concat(/[\p{L}_]/u, t.optional(/[\p{L}0-9_.-]*:/u), /[\p{L}0-9_.-]*/u),
-        r = /[\p{L}0-9._:-]+/u,
-        i = {
+        r = {
             className: 'symbol',
             begin: /&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;/
         },
-        a = {
+        i = {
             begin: /\s/,
             contains: [
                 {
@@ -16,20 +15,20 @@ function t(e) {
                 }
             ]
         },
-        o = e.inherit(a, {
+        a = e.inherit(i, {
             begin: /\(/,
             end: /\)/
         }),
         s = e.inherit(e.APOS_STRING_MODE, { className: 'string' }),
-        l = e.inherit(e.QUOTE_STRING_MODE, { className: 'string' }),
-        u = {
+        o = e.inherit(e.QUOTE_STRING_MODE, { className: 'string' }),
+        l = {
             endsWithParent: !0,
             illegal: /</,
             relevance: 0,
             contains: [
                 {
                     className: 'attr',
-                    begin: r,
+                    begin: /[\p{L}0-9._:-]+/u,
                     relevance: 0
                 },
                 {
@@ -43,12 +42,12 @@ function t(e) {
                                 {
                                     begin: /"/,
                                     end: /"/,
-                                    contains: [i]
+                                    contains: [r]
                                 },
                                 {
                                     begin: /'/,
                                     end: /'/,
-                                    contains: [i]
+                                    contains: [r]
                                 },
                                 { begin: /[^\s"'=<>`]+/ }
                             ]
@@ -69,10 +68,10 @@ function t(e) {
                 end: />/,
                 relevance: 10,
                 contains: [
-                    a,
-                    l,
-                    s,
+                    i,
                     o,
+                    s,
+                    a,
                     {
                         begin: /\[/,
                         end: /\]/,
@@ -81,7 +80,7 @@ function t(e) {
                                 className: 'meta',
                                 begin: /<![a-z]/,
                                 end: />/,
-                                contains: [a, o, l, s]
+                                contains: [i, a, o, s]
                             }
                         ]
                     }
@@ -93,7 +92,7 @@ function t(e) {
                 end: /\]\]>/,
                 relevance: 10
             },
-            i,
+            r,
             {
                 className: 'meta',
                 end: /\?>/,
@@ -101,7 +100,7 @@ function t(e) {
                     {
                         begin: /<\?xml/,
                         relevance: 10,
-                        contains: [l]
+                        contains: [o]
                     },
                     { begin: /<\?[a-z][a-z0-9]+/ }
                 ]
@@ -111,7 +110,7 @@ function t(e) {
                 begin: /<style(?=\s|>)/,
                 end: />/,
                 keywords: { name: 'style' },
-                contains: [u],
+                contains: [l],
                 starts: {
                     end: /<\/style>/,
                     returnEnd: !0,
@@ -123,7 +122,7 @@ function t(e) {
                 begin: /<script(?=\s|>)/,
                 end: />/,
                 keywords: { name: 'script' },
-                contains: [u],
+                contains: [l],
                 starts: {
                     end: /<\/script>/,
                     returnEnd: !0,
@@ -143,7 +142,7 @@ function t(e) {
                         className: 'name',
                         begin: n,
                         relevance: 0,
-                        starts: u
+                        starts: l
                     }
                 ]
             },
@@ -165,5 +164,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

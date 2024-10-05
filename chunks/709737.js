@@ -1,42 +1,41 @@
 n.d(t, {
     DC: function () {
-        return _;
+        return d;
     },
     ZR: function () {
-        return f;
+        return E;
     },
     l8: function () {
-        return E;
+        return _;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(99815),
-    o = n(657707),
-    s = n(297781),
+    s = n(657707),
+    o = n(297781),
     l = n(709054),
     u = n(814059),
     c = n(689938);
 function d(e) {
-    if (e === a.E.LOL_TOTAL_KILLS) return c.Z.Messages.MEMBER_LIST_CONTENT_FEED_LEADERBOARD_KILLS;
+    let { value: t, statisticId: n } = e,
+        i = (function (e) {
+            if (e === a.E.LOL_TOTAL_KILLS) return c.Z.Messages.MEMBER_LIST_CONTENT_FEED_LEADERBOARD_KILLS;
+        })(n);
+    return null == i ? null : (0, r.jsx)(E, { text: i.format({ value: t }) });
 }
 function _(e) {
-    let { value: t, statisticId: n } = e,
-        i = d(n);
-    return null == i ? null : (0, r.jsx)(f, { text: i.format({ value: t }) });
-}
-function E(e) {
     let { intervalEnd: t } = e,
         n = i.useMemo(() => (0, u.n)(l.default.extractTimestamp(t)), [t]);
-    return (0, r.jsx)(s.ej, {
-        Icon: o.Que,
+    return (0, r.jsx)(o.ej, {
+        Icon: s.Que,
         text: n
     });
 }
-function f(e) {
+function E(e) {
     let { text: t } = e;
-    return (0, r.jsx)(s.ej, {
-        Icon: o.hAD,
+    return (0, r.jsx)(o.ej, {
+        Icon: s.hAD,
         text: t
     });
 }

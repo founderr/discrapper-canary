@@ -1,71 +1,70 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return I;
     }
-});
-var r = n(47120);
+}),
+    n(47120);
 var i = n(735250);
 n(470079);
 var a = n(120356),
-    o = n.n(a),
-    s = n(481060),
-    l = n(446411),
-    u = n(454585),
+    s = n.n(a),
+    l = n(481060),
+    r = n(446411),
+    o = n(454585),
     c = n(834129),
     d = n(553385),
-    _ = n(981631),
-    E = n(689938),
-    f = n(677436);
-function h(e) {
-    let { message: t, channel: r, compact: a } = e,
-        l = null != t.embeds && t.embeds.length > 0;
+    u = n(981631),
+    _ = n(689938),
+    E = n(677436);
+function I(e) {
+    let { message: t, channel: a, compact: r } = e,
+        o = null != t.embeds && t.embeds.length > 0;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(c.Z, {
-                className: o()(f.mainContainer, { [f.compact]: a }),
+                className: s()(E.mainContainer, { [E.compact]: r }),
                 icon: n(570111),
-                compact: a,
+                compact: r,
                 children: (0, i.jsx)('div', {
-                    className: o()(f.__invalid_content, { [f.compact]: a }),
+                    className: s()(E.__invalid_content, { [E.compact]: r }),
                     children: (0, i.jsx)('div', {
-                        className: o()(f.__invalid_messageContent, { [f.compact]: a }),
+                        className: s()(E.__invalid_messageContent, { [E.compact]: r }),
                         children: t.content
                     })
                 })
             }),
             (0, i.jsx)('div', {
-                className: o()(f.__invalid_embedContent, { [f.compact]: a }),
-                children: (0, i.jsx)(p, { message: t })
+                className: s()(E.__invalid_embedContent, { [E.compact]: r }),
+                children: (0, i.jsx)(m, { message: t })
             }),
             (0, i.jsx)('div', {
-                className: f.actions,
-                children: (0, i.jsx)(s.Button, {
-                    color: s.Button.Colors.PRIMARY,
+                className: E.actions,
+                children: (0, i.jsx)(l.Button, {
+                    color: l.Button.Colors.PRIMARY,
                     onClick: () => {
-                        l ? (0, d.z$)(t) : (0, d.XP)(r.guild_id, r.id, t.id);
+                        o ? (0, d.z$)(t) : (0, d.XP)(a.guild_id, a.id, t.id);
                     },
-                    children: E.Z.Messages.SYSTEM_MESSAGE_GET_GAMING_STATS
+                    children: _.Z.Messages.SYSTEM_MESSAGE_GET_GAMING_STATS
                 })
             })
         ]
     });
 }
-function p(e) {
+function m(e) {
     var t;
     let { message: n } = e,
-        [r] = null !== (t = n.embeds) && void 0 !== t ? t : [];
-    if (null == r) return null;
-    let a = (e, t) => u.Z.parseEmbedTitle(t, !0, { channelId: n.channel_id }),
-        o = (e, t, r) => u.Z.parse(t, !0, { channelId: n.channel_id });
-    return (0, i.jsx)(l.ZP, {
-        className: f.embed,
-        embed: r,
-        renderTitle: a,
-        renderDescription: o,
-        autoPlayGif: !1,
-        renderImageComponent: _.VqG,
-        renderVideoComponent: _.VqG,
-        renderLinkComponent: _.VqG,
-        renderForwardComponent: _.VqG
-    });
+        [a] = null !== (t = n.embeds) && void 0 !== t ? t : [];
+    return null == a
+        ? null
+        : (0, i.jsx)(r.ZP, {
+              className: E.embed,
+              embed: a,
+              renderTitle: (e, t) => o.Z.parseEmbedTitle(t, !0, { channelId: n.channel_id }),
+              renderDescription: (e, t, i) => o.Z.parse(t, !0, { channelId: n.channel_id }),
+              autoPlayGif: !1,
+              renderImageComponent: u.VqG,
+              renderVideoComponent: u.VqG,
+              renderLinkComponent: u.VqG,
+              renderForwardComponent: u.VqG
+          });
 }

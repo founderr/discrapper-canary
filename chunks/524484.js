@@ -1,9 +1,10 @@
+var r, i, a, s, o, l;
 n.d(t, {
     Hn: function () {
         return r;
     },
     JR: function () {
-        return u;
+        return c;
     },
     oZ: function () {
         return i;
@@ -12,24 +13,24 @@ n.d(t, {
         return a;
     },
     u4: function () {
-        return c;
+        return d;
     }
-});
-var r,
-    i,
-    a,
-    o = n(724458);
-var s = n(47120);
-!(function (e) {
-    (e[(e.CHAT_INPUT = 0)] = 'CHAT_INPUT'), (e[(e.REACTION = 1)] = 'REACTION'), (e[(e.MEMBER_USER = 2)] = 'MEMBER_USER'), (e[(e.CALL_TILE = 3)] = 'CALL_TILE');
-})(r || (r = {})),
-    !(function (e) {
-        (e[(e.CHAT_INPUT = 0)] = 'CHAT_INPUT'), (e[(e.VOICE_USER = 1)] = 'VOICE_USER'), (e[(e.MENTION = 2)] = 'MENTION');
-    })(i || (i = {})),
-    !(function (e) {
-        (e[(e.LEVEL_1 = 0)] = 'LEVEL_1'), (e[(e.LEVEL_2 = 1)] = 'LEVEL_2'), (e[(e.LEVEL_3 = 2)] = 'LEVEL_3'), (e[(e.LEVEL_4 = 3)] = 'LEVEL_4'), (e[(e.LEVEL_5 = 4)] = 'LEVEL_5');
-    })(a || (a = {}));
-let l = {
+}),
+    n(724458),
+    n(47120),
+    ((s = r || (r = {}))[(s.CHAT_INPUT = 0)] = 'CHAT_INPUT'),
+    (s[(s.REACTION = 1)] = 'REACTION'),
+    (s[(s.MEMBER_USER = 2)] = 'MEMBER_USER'),
+    (s[(s.CALL_TILE = 3)] = 'CALL_TILE'),
+    ((o = i || (i = {}))[(o.CHAT_INPUT = 0)] = 'CHAT_INPUT'),
+    (o[(o.VOICE_USER = 1)] = 'VOICE_USER'),
+    (o[(o.MENTION = 2)] = 'MENTION'),
+    ((l = a || (a = {}))[(l.LEVEL_1 = 0)] = 'LEVEL_1'),
+    (l[(l.LEVEL_2 = 1)] = 'LEVEL_2'),
+    (l[(l.LEVEL_3 = 2)] = 'LEVEL_3'),
+    (l[(l.LEVEL_4 = 3)] = 'LEVEL_4'),
+    (l[(l.LEVEL_5 = 4)] = 'LEVEL_5');
+let u = {
         0: [
             [1, 0.0001],
             [25, 0.05],
@@ -81,10 +82,10 @@ let l = {
             [9001, 10000]
         ]
     },
-    u = Object.keys(l).reduce(
+    c = Object.keys(u).reduce(
         (e, t) => ({
             ...e,
-            [t]: l[t].map((e) => {
+            [t]: u[t].map((e) => {
                 let [t] = e;
                 return t;
             })
@@ -97,10 +98,10 @@ let l = {
             4: []
         }
     ),
-    c = Object.keys(l).reduce(
+    d = Object.keys(u).reduce(
         (e, t) => ({
             ...e,
-            [t]: l[t].map((e) => {
+            [t]: u[t].map((e) => {
                 let [t, n] = e;
                 return n;
             })

@@ -1,9 +1,8 @@
-var r;
+var r, i;
 n.d(t, {
     p: function () {
         return r;
     }
 }),
-    !(function (e) {
-        (e[(e.PROVIDER_UNSPECIFIED = 0)] = 'PROVIDER_UNSPECIFIED'), (e[(e.SPOTIFY = 1)] = 'SPOTIFY');
-    })(r || (r = {}));
+    ((i = r || (r = {}))[(i.PROVIDER_UNSPECIFIED = 0)] = 'PROVIDER_UNSPECIFIED'),
+    (i[(i.SPOTIFY = 1)] = 'SPOTIFY');

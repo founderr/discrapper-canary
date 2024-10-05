@@ -3,19 +3,18 @@ n.d(t, {
         return o;
     }
 });
-var r = n(735250);
+var a = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(406877);
+var r = n(481060),
+    i = n(406877);
 function o(e) {
     let { guildId: t, productId: n, attachmentId: o, ...s } = e,
-        { isLoading: l, downloadAttachment: u } = (0, a.Z)(t, n);
-    function c() {
-        u(o);
-    }
-    return (0, r.jsx)(i.Button, {
+        { isLoading: l, downloadAttachment: c } = (0, i.Z)(t, n);
+    return (0, a.jsx)(r.Button, {
         ...s,
         submitting: l,
-        onClick: c
+        onClick: function () {
+            c(o);
+        }
     });
 }

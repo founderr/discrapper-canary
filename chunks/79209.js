@@ -1,12 +1,13 @@
-let t = {
+e.exports = {
+    Common: {
         OPEN_DISCORD: 'Open Discord',
         SIGN_UP_NOW: 'Sign Up Now'
     },
-    n = {
+    Footer: {
         READY_TO_TRY_DISCORD: "Ready to try Discord? It's free!",
         JOIN_OVER_PLAYERS_TODAY: 'JOIN OVER {num} MILLION PLAYERS TODAY'
     },
-    r = {
+    Navigation: {
         HOME: 'Home',
         FEATURES: 'Features',
         NITRO: 'Nitro',
@@ -47,23 +48,16 @@ let t = {
         DISCOVER: 'Discover',
         CAREERS: 'Careers'
     },
-    i = {
+    NumberAbbreviations: {
+        MILLION: '{num}M',
+        THOUSAND: '{num}K'
+    },
+    DynamicLinks: { IOS_APP_PREVIEW_DESCRIPTION: 'Your place to talk with communities and friends.' },
+    Storefront: {
         BENEFITS_SUMMARY: '{count, plural, one {# exclusive benefit} other {# exclusive benefits}}',
         BENEFITS_TITLE: 'Exclusive to this tier',
         SERVER_SUBSCRIPTION: 'Server subscription',
         USER_SUBSCRIPTION: 'Personal subscription',
         MORE_BENEFITS: '+ {count, plural, one {# more benefit} other {# more benefits}}'
-    },
-    a = {
-        MILLION: '{num}M',
-        THOUSAND: '{num}K'
-    },
-    o = { IOS_APP_PREVIEW_DESCRIPTION: 'Your place to talk with communities and friends.' };
-e.exports = {
-    Common: t,
-    Footer: n,
-    Navigation: r,
-    NumberAbbreviations: a,
-    DynamicLinks: o,
-    Storefront: i
+    }
 };

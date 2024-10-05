@@ -1,84 +1,83 @@
 n.d(t, {
     R: function () {
-        return p;
+        return f;
     }
-});
-var r = n(47120);
-var i = n(735250);
+}),
+    n(47120);
+var r = n(735250);
 n(470079);
-var a = n(544891),
-    o = n(433517),
+var i = n(544891),
+    a = n(433517),
     s = n(481060),
-    l = n(147913),
-    u = n(480294),
-    c = n(9156),
-    d = n(312400),
-    _ = n(115345),
-    E = n(981631);
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class h extends l.Z {
+    o = n(147913),
+    l = n(480294),
+    u = n(9156),
+    c = n(312400),
+    d = n(115345),
+    _ = n(981631);
+class E extends o.Z {
     handlePostConnectionOpen() {
-        if (!o.K.get('turnedOffNewNotifications')) {
-            if (u.Z.hasConsented(E.pjP.PERSONALIZATION)) {
-                if (!d.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled || c.ZP.useNewNotifications) return;
+        if (!a.K.get('turnedOffNewNotifications')) {
+            if (l.Z.hasConsented(_.pjP.PERSONALIZATION)) {
+                if (!c.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled || u.ZP.useNewNotifications) return;
                 this.checkOldUserExperiment(), this.checkNewUserExperiment();
             }
         }
     }
     async checkOldUserExperiment() {
-        let { logExposure: e, autoOpen: t } = d.fs.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
+        let { logExposure: e, autoOpen: t } = c.fs.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
         if (!e) return;
         let {
-                body: { guild_noise: r, usage: o }
-            } = await a.tn.get('/users/@me/notification-migration-data2'),
-            l = (0, _._Y)(o),
+                body: { guild_noise: a, usage: o }
+            } = await i.tn.get('/users/@me/notification-migration-data2'),
+            l = (0, d._Y)(o),
             { default: u } = await n.e('53512').then(n.bind(n, 753521));
         if ((0, s.hasAnyModalOpen)()) return;
-        if ((d.fs.trackExposure({ location: 'NotificationMigrationManager' }), !!t))
-            (0, _.cG)(r, l)
+        if ((c.fs.trackExposure({ location: 'NotificationMigrationManager' }), !!t))
+            (0, d.cG)(a, l)
                 ? (0, s.openModal)(
                       (e) =>
-                          (0, i.jsx)(u, {
+                          (0, r.jsx)(u, {
                               ...e,
                               dismissable: !1,
-                              guildPain: r,
+                              guildPain: a,
                               myUsage: l
                           }),
                       {
                           onCloseRequest: () => {}
                       }
                   )
-                : (0, _.ly)();
+                : (0, d.ly)();
     }
     checkNewUserExperiment() {
-        let { logExposure: e, enabled: t } = d.ad.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
-        if (!!e) d.ad.trackExposure({ location: 'NotificationMigrationManager' }), t && (0, _.ly)();
+        let { logExposure: e, enabled: t } = c.ad.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
+        if (!!e) c.ad.trackExposure({ location: 'NotificationMigrationManager' }), t && (0, d.ly)();
     }
     constructor(...e) {
-        super(...e), f(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
+        var t, n, r;
+        super(...e),
+            (t = this),
+            (n = 'actions'),
+            (r = { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }),
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: r,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (t[n] = r);
     }
 }
-async function p(e) {
+async function f(e) {
     let {
-            body: { guild_noise: t, usage: r }
-        } = await a.tn.get('/users/@me/notification-migration-data2'),
-        o = (0, _._Y)(r);
+            body: { guild_noise: t, usage: a }
+        } = await i.tn.get('/users/@me/notification-migration-data2'),
+        o = (0, d._Y)(a);
     (0, s.openModalLazy)(async () => {
-        let { default: r } = await n.e('53512').then(n.bind(n, 753521));
+        let { default: i } = await n.e('53512').then(n.bind(n, 753521));
         return (n) =>
-            (0, i.jsx)(r, {
+            (0, r.jsx)(i, {
                 ...n,
                 dismissable: e,
                 guildPain: t,
@@ -86,4 +85,4 @@ async function p(e) {
             });
     });
 }
-t.Z = new h();
+t.Z = new E();

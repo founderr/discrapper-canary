@@ -1,12 +1,10 @@
 n.d(t, {
     t: function () {
-        return s;
+        return a;
     }
 });
 var r = n(638214);
-let i = 16,
-    a = 32768,
-    o = 30717;
-function s() {
-    return (0, r.P)() ? o | a : o;
+let i = 30717;
+function a() {
+    return (0, r.P)() ? 32768 | i : i;
 }

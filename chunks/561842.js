@@ -1,9 +1,8 @@
-var r;
+var r, i;
 n.d(t, {
     h: function () {
         return r;
     }
 }),
-    !(function (e) {
-        (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE');
-    })(r || (r = {}));
+    ((i = r || (r = {}))[(i.DESKTOP = 0)] = 'DESKTOP'),
+    (i[(i.MOBILE = 1)] = 'MOBILE');

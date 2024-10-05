@@ -1,9 +1,8 @@
 n.d(t, {
     O: function () {
-        return i;
+        return r;
     }
 });
-let r = !1;
-function i() {
-    return r;
+function r() {
+    return !1;
 }

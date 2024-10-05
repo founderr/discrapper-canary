@@ -6,20 +6,20 @@ n.d(t, {
         return ee;
     },
     O7: function () {
-        return ea;
+        return ei;
     },
     kt: function () {
         return en;
     },
     wE: function () {
-        return es;
+        return ea;
     }
 });
 var r = n(852163),
     i = n(907572),
     a = n(634060),
-    o = n(411746),
-    s = n(778679),
+    s = n(411746),
+    o = n(778679),
     l = n(978714),
     u = n(385350),
     c = n(247099),
@@ -29,21 +29,21 @@ var r = n(852163),
     f = n(949041),
     h = n(937285),
     p = n(21913),
-    m = n(867597),
-    I = n(117603),
+    I = n(867597),
+    m = n(117603),
     T = n(583404),
-    g = n(143558),
-    S = n(904656),
+    S = n(143558),
+    g = n(904656),
     A = n(83632),
-    v = n(446405),
-    N = n(17749),
-    O = n(360587),
-    R = n(651847),
+    N = n(446405),
+    O = n(17749),
+    R = n(360587),
+    v = n(651847),
     C = n(483578),
-    y = n(392107),
-    L = n(747658),
-    b = n(123143),
-    D = n(95988),
+    L = n(392107),
+    D = n(747658),
+    y = n(123143),
+    b = n(95988),
     M = n(695474),
     P = n(85074),
     U = n(201646),
@@ -53,9 +53,9 @@ var r = n(852163),
     k = n(182823),
     B = n(201284),
     F = n(470079),
-    Z = n(251433),
-    V = n(612001),
-    H = n(616073),
+    V = n(251433),
+    H = n(612001),
+    Z = n(616073),
     Y = n(705782),
     j = n(387103),
     W = n(881085),
@@ -65,21 +65,9 @@ function z(e) {
 }
 var q = {};
 function Q(e, t, n) {
-    let { direction: r } = (0, H.bU)(),
+    let { direction: r } = (0, Z.bU)(),
         i = (0, F.useMemo)(() => (0, G.E7)(t), [t]),
-        a = (t) => {
-            if (!!t.currentTarget.contains(t.target)) {
-                if ((t.altKey && ('ArrowDown' === t.key || 'ArrowUp' === t.key) && 'setOpen' in e && (t.preventDefault(), t.stopPropagation(), e.setOpen(!0)), !n))
-                    switch (t.key) {
-                        case 'ArrowLeft':
-                            t.preventDefault(), t.stopPropagation(), 'rtl' === r ? i.focusNext() : i.focusPrevious();
-                            break;
-                        case 'ArrowRight':
-                            t.preventDefault(), t.stopPropagation(), 'rtl' === r ? i.focusPrevious() : i.focusNext();
-                    }
-            }
-        },
-        o = () => {
+        a = () => {
             var e;
             let n = null === (e = window.event) || void 0 === e ? void 0 : e.target,
                 r = (0, G.QL)(t.current, { tabbable: !0 });
@@ -95,24 +83,37 @@ function Q(e, t, n) {
             }
             n && n.focus();
         },
-        { pressProps: s } = (0, V.r7)({
+        { pressProps: s } = (0, H.r7)({
             preventFocusOnPress: !0,
             allowTextSelectionOnPress: !0,
             onPressStart(e) {
-                'mouse' === e.pointerType && o();
+                'mouse' === e.pointerType && a();
             },
             onPress(e) {
-                'mouse' !== e.pointerType && o();
+                'mouse' !== e.pointerType && a();
             }
         });
-    return (0, k.dG)(s, { onKeyDown: a });
+    return (0, k.dG)(s, {
+        onKeyDown: (t) => {
+            if (!!t.currentTarget.contains(t.target)) {
+                if ((t.altKey && ('ArrowDown' === t.key || 'ArrowUp' === t.key) && 'setOpen' in e && (t.preventDefault(), t.stopPropagation(), e.setOpen(!0)), !n))
+                    switch (t.key) {
+                        case 'ArrowLeft':
+                            t.preventDefault(), t.stopPropagation(), 'rtl' === r ? i.focusNext() : i.focusPrevious();
+                            break;
+                        case 'ArrowRight':
+                            t.preventDefault(), t.stopPropagation(), 'rtl' === r ? i.focusPrevious() : i.focusNext();
+                    }
+            }
+        }
+    });
 }
 q = {
     'ar-AE': r.Z,
     'bg-BG': i.Z,
     'cs-CZ': a.Z,
-    'da-DK': o.Z,
-    'de-DE': s.Z,
+    'da-DK': s.Z,
+    'de-DE': o.Z,
     'el-GR': l.Z,
     'en-US': u.Z,
     'es-ES': c.Z,
@@ -122,21 +123,21 @@ q = {
     'he-IL': f.Z,
     'hr-HR': h.Z,
     'hu-HU': p.Z,
-    'it-IT': m.Z,
-    'ja-JP': I.Z,
+    'it-IT': I.Z,
+    'ja-JP': m.Z,
     'ko-KR': T.Z,
-    'lt-LT': g.Z,
-    'lv-LV': S.Z,
+    'lt-LT': S.Z,
+    'lv-LV': g.Z,
     'nb-NO': A.Z,
-    'nl-NL': v.Z,
-    'pl-PL': N.Z,
-    'pt-BR': O.Z,
-    'pt-PT': R.Z,
+    'nl-NL': N.Z,
+    'pl-PL': O.Z,
+    'pt-BR': R.Z,
+    'pt-PT': v.Z,
     'ro-RO': C.Z,
-    'ru-RU': y.Z,
-    'sk-SK': L.Z,
-    'sl-SI': b.Z,
-    'sr-SP': D.Z,
+    'ru-RU': L.Z,
+    'sk-SK': D.Z,
+    'sl-SI': y.Z,
+    'sr-SP': b.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,
     'uk-UA': U.Z,
@@ -149,20 +150,20 @@ let X = new WeakMap(),
 function ee(e, t, n) {
     var r;
     let i;
-    let { isInvalid: a, validationErrors: o, validationDetails: s } = t.displayValidation,
+    let { isInvalid: a, validationErrors: s, validationDetails: o } = t.displayValidation,
         {
             labelProps: l,
             fieldProps: u,
             descriptionProps: c,
             errorMessageProps: d
-        } = (0, Z.U)({
+        } = (0, V.U)({
             ...e,
             labelElementType: 'span',
             isInvalid: a,
-            errorMessage: e.errorMessage || o
+            errorMessage: e.errorMessage || s
         }),
         _ = (0, F.useRef)(null),
-        { focusWithinProps: E } = (0, V.L_)({
+        { focusWithinProps: E } = (0, H.L_)({
             ...e,
             onFocusWithin(n) {
                 var r;
@@ -174,22 +175,22 @@ function ee(e, t, n) {
             },
             onFocusWithinChange: e.onFocusChange
         }),
-        f = (0, H.qb)(z(q), '@react-aria/datepicker'),
+        f = (0, Z.qb)(z(q), '@react-aria/datepicker'),
         h = 'hour' === t.maxGranularity ? 'selectedTimeDescription' : 'selectedDateDescription',
         p = 'hour' === t.maxGranularity ? 'time' : 'date',
-        m = t.value ? f.format(h, { [p]: t.formatValue({ month: 'long' }) }) : '',
-        I = (0, k.PK)(m),
-        T = 'presentation' === e[$] ? u['aria-describedby'] : [I['aria-describedby'], u['aria-describedby']].filter(Boolean).join(' ') || void 0,
-        g = e[J],
-        S = (0, F.useMemo)(() => g || (0, G.E7)(n), [g, n]),
+        I = t.value ? f.format(h, { [p]: t.formatValue({ month: 'long' }) }) : '',
+        m = (0, k.PK)(I),
+        T = 'presentation' === e[$] ? u['aria-describedby'] : [m['aria-describedby'], u['aria-describedby']].filter(Boolean).join(' ') || void 0,
+        S = e[J],
+        g = (0, F.useMemo)(() => S || (0, G.E7)(n), [S, n]),
         A = Q(t, n, 'presentation' === e[$]);
     X.set(t, {
         ariaLabel: e['aria-label'],
         ariaLabelledBy: [l.id, e['aria-labelledby']].filter(Boolean).join(' ') || void 0,
         ariaDescribedBy: T,
-        focusManager: S
+        focusManager: g
     });
-    let v = (0, F.useRef)(e.autoFocus);
+    let N = (0, F.useRef)(e.autoFocus);
     (i =
         'presentation' === e[$]
             ? { role: 'presentation' }
@@ -199,34 +200,34 @@ function ee(e, t, n) {
                   'aria-describedby': T
               })),
         (0, F.useEffect)(() => {
-            v.current && S.focusFirst(), (v.current = !1);
-        }, [S]),
+            N.current && g.focusFirst(), (N.current = !1);
+        }, [g]),
         (0, k.y$)(e.inputRef, t.value, t.setValue),
         (0, Y.Q)(
             {
                 ...e,
                 focus() {
-                    S.focusFirst();
+                    g.focusFirst();
                 }
             },
             t,
             e.inputRef
         );
-    let N = {
+    let O = {
         type: 'hidden',
         name: e.name,
         value: (null === (r = t.value) || void 0 === r ? void 0 : r.toString()) || ''
     };
-    'native' === e.validationBehavior && ((N.type = 'text'), (N.hidden = !0), (N.required = e.isRequired), (N.onChange = () => {}));
-    let O = (0, k.zL)(e);
+    'native' === e.validationBehavior && ((O.type = 'text'), (O.hidden = !0), (O.required = e.isRequired), (O.onChange = () => {}));
+    let R = (0, k.zL)(e);
     return {
         labelProps: {
             ...l,
             onClick: () => {
-                S.focusFirst();
+                g.focusFirst();
             }
         },
-        fieldProps: (0, k.dG)(O, i, A, E, {
+        fieldProps: (0, k.dG)(R, i, A, E, {
             onKeyDown(t) {
                 e.onKeyDown && e.onKeyDown(t);
             },
@@ -234,12 +235,12 @@ function ee(e, t, n) {
                 e.onKeyUp && e.onKeyUp(t);
             }
         }),
-        inputProps: N,
+        inputProps: O,
         descriptionProps: c,
         errorMessageProps: d,
         isInvalid: a,
-        validationErrors: o,
-        validationDetails: s
+        validationErrors: s,
+        validationDetails: o
     };
 }
 function et(e, t, n) {
@@ -251,29 +252,29 @@ function en(e, t, n) {
     let r = (0, k.Me)(),
         i = (0, k.Me)(),
         a = (0, k.Me)(),
-        o = (0, H.qb)(z(q), '@react-aria/datepicker'),
-        { isInvalid: s, validationErrors: l, validationDetails: u } = t.displayValidation,
+        s = (0, Z.qb)(z(q), '@react-aria/datepicker'),
+        { isInvalid: o, validationErrors: l, validationDetails: u } = t.displayValidation,
         {
             labelProps: c,
             fieldProps: d,
             descriptionProps: _,
             errorMessageProps: E
-        } = (0, Z.U)({
+        } = (0, V.U)({
             ...e,
             labelElementType: 'span',
-            isInvalid: s,
+            isInvalid: o,
             errorMessage: e.errorMessage || l
         }),
         f = Q(t, n),
         h = d['aria-labelledby'] || d.id,
-        { locale: p } = (0, H.bU)(),
-        m = t.formatValue(p, { month: 'long' }),
-        I = m ? o.format('selectedDateDescription', { date: m }) : '',
-        T = (0, k.PK)(I),
-        g = [T['aria-describedby'], d['aria-describedby']].filter(Boolean).join(' ') || void 0,
-        S = (0, k.zL)(e),
+        { locale: p } = (0, Z.bU)(),
+        I = t.formatValue(p, { month: 'long' }),
+        m = I ? s.format('selectedDateDescription', { date: I }) : '',
+        T = (0, k.PK)(m),
+        S = [T['aria-describedby'], d['aria-describedby']].filter(Boolean).join(' ') || void 0,
+        g = (0, k.zL)(e),
         A = (0, F.useMemo)(() => (0, G.E7)(n), [n]),
-        { focusWithinProps: v } = (0, V.L_)({
+        { focusWithinProps: N } = (0, H.L_)({
             ...e,
             isDisabled: t.isOpen,
             onBlurWithin: e.onBlur,
@@ -281,11 +282,11 @@ function en(e, t, n) {
             onFocusWithinChange: e.onFocusChange
         });
     return {
-        groupProps: (0, k.dG)(S, f, d, T, v, {
+        groupProps: (0, k.dG)(g, f, d, T, N, {
             role: 'group',
             'aria-disabled': e.isDisabled || null,
             'aria-labelledby': h,
-            'aria-describedby': g,
+            'aria-describedby': S,
             onKeyDown(n) {
                 !t.isOpen && e.onKeyDown && e.onKeyDown(n);
             },
@@ -303,7 +304,7 @@ function en(e, t, n) {
             ...d,
             id: a,
             [$]: 'presentation',
-            'aria-describedby': g,
+            'aria-describedby': S,
             value: t.value,
             onChange: t.setValue,
             placeholderValue: e.placeholderValue,
@@ -325,9 +326,9 @@ function en(e, t, n) {
             ...T,
             id: r,
             'aria-haspopup': 'dialog',
-            'aria-label': o.format('calendar'),
+            'aria-label': s.format('calendar'),
             'aria-labelledby': `${r} ${h}`,
-            'aria-describedby': g,
+            'aria-describedby': S,
             'aria-expanded': t.isOpen,
             isDisabled: e.isDisabled || e.isReadOnly,
             onPress: () => t.setOpen(!0)
@@ -349,23 +350,12 @@ function en(e, t, n) {
             isInvalid: t.isInvalid,
             errorMessage: 'function' == typeof e.errorMessage ? e.errorMessage(t.displayValidation) : e.errorMessage || t.displayValidation.validationErrors.join(' ')
         },
-        isInvalid: s,
+        isInvalid: o,
         validationErrors: l,
         validationDetails: u
     };
 }
-function er() {
-    let { locale: e } = (0, H.bU)(),
-        t = (0, H.Kq)(z(q), '@react-aria/datepicker');
-    return (0, F.useMemo)(() => {
-        try {
-            return new Intl.DisplayNames(e, { type: 'dateTimeField' });
-        } catch (n) {
-            return new ei(e, t);
-        }
-    }, [e, t]);
-}
-class ei {
+class er {
     of(e) {
         return this.dictionary.getStringForLocale(e, this.locale);
     }
@@ -373,18 +363,28 @@ class ei {
         (this.locale = e), (this.dictionary = t);
     }
 }
-function ea(e, t, n) {
+function ei(e, t, n) {
     let r = (0, F.useRef)(''),
-        { locale: i } = (0, H.bU)(),
-        a = er(),
-        { ariaLabel: o, ariaLabelledBy: s, ariaDescribedBy: l, focusManager: u } = X.get(t),
+        { locale: i } = (0, Z.bU)(),
+        a = (function () {
+            let { locale: e } = (0, Z.bU)(),
+                t = (0, Z.Kq)(z(q), '@react-aria/datepicker');
+            return (0, F.useMemo)(() => {
+                try {
+                    return new Intl.DisplayNames(e, { type: 'dateTimeField' });
+                } catch (n) {
+                    return new er(e, t);
+                }
+            }, [e, t]);
+        })(),
+        { ariaLabel: s, ariaLabelledBy: o, ariaDescribedBy: l, focusManager: u } = X.get(t),
         c = e.isPlaceholder ? '' : e.text,
         d = (0, F.useMemo)(() => t.dateFormatter.resolvedOptions(), [t.dateFormatter]),
-        _ = (0, H.aQ)({
+        _ = (0, Z.aQ)({
             month: 'long',
             timeZone: d.timeZone
         }),
-        E = (0, H.aQ)({
+        E = (0, Z.aQ)({
             hour: 'numeric',
             hour12: d.hour12,
             timeZone: d.timeZone
@@ -430,33 +430,25 @@ function ea(e, t, n) {
                 0 === n.length || 0 === i ? t.clearSegment(e.type) : t.setSegment(e.type, i), (r.current = n);
             }
         },
-        m = (e) => {
-            if (('a' === e.key && ((0, k.V5)() ? e.metaKey : e.ctrlKey) && e.preventDefault(), !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey))
-                switch (e.key) {
-                    case 'Backspace':
-                    case 'Delete':
-                        e.preventDefault(), e.stopPropagation(), p();
-                }
-        },
-        { startsWith: I } = (0, H.L0)({ sensitivity: 'base' }),
-        T = (0, H.aQ)({
+        { startsWith: I } = (0, Z.L0)({ sensitivity: 'base' }),
+        m = (0, Z.aQ)({
             hour: 'numeric',
             hour12: !0
         }),
-        g = (0, F.useMemo)(() => {
+        T = (0, F.useMemo)(() => {
             let e = new Date();
-            return e.setHours(0), T.formatToParts(e).find((e) => 'dayPeriod' === e.type).value;
-        }, [T]),
+            return e.setHours(0), m.formatToParts(e).find((e) => 'dayPeriod' === e.type).value;
+        }, [m]),
         S = (0, F.useMemo)(() => {
             let e = new Date();
-            return e.setHours(12), T.formatToParts(e).find((e) => 'dayPeriod' === e.type).value;
-        }, [T]),
-        A = (0, H.aQ)({
+            return e.setHours(12), m.formatToParts(e).find((e) => 'dayPeriod' === e.type).value;
+        }, [m]),
+        g = (0, Z.aQ)({
             year: 'numeric',
             era: 'narrow',
             timeZone: 'UTC'
         }),
-        v = (0, F.useMemo)(() => {
+        A = (0, F.useMemo)(() => {
             if ('era' !== e.type) return [];
             let n = (0, j.Mw)(new j.aw(1, 1, 1), t.calendar),
                 r = t.calendar.getEras().map((e) => {
@@ -470,25 +462,31 @@ function ea(e, t, n) {
                         .toDate('UTC');
                     return {
                         era: e,
-                        formatted: A.formatToParts(t).find((e) => 'era' === e.type).value
+                        formatted: g.formatToParts(t).find((e) => 'era' === e.type).value
                     };
                 }),
-                i = eo(r.map((e) => e.formatted));
+                i = (function (e) {
+                    e.sort();
+                    let t = e[0],
+                        n = e[e.length - 1];
+                    for (let e = 0; e < t.length; e++) if (t[e] !== n[e]) return e;
+                    return 0;
+                })(r.map((e) => e.formatted));
             if (i) for (let e of r) e.formatted = e.formatted.slice(i);
             return r;
-        }, [A, t.calendar, e.type]),
+        }, [g, t.calendar, e.type]),
         N = (n) => {
             if (t.isDisabled || t.isReadOnly) return;
             let i = r.current + n;
             switch (e.type) {
                 case 'dayPeriod':
-                    if (I(g, n)) t.setSegment('dayPeriod', 0);
+                    if (I(T, n)) t.setSegment('dayPeriod', 0);
                     else if (I(S, n)) t.setSegment('dayPeriod', 12);
                     else break;
                     u.focusNext();
                     break;
                 case 'era': {
-                    let e = v.find((e) => I(e.formatted, n));
+                    let e = A.find((e) => I(e.formatted, n));
                     e && (t.setSegment('era', e.era), u.focusNext());
                     break;
                 }
@@ -500,28 +498,25 @@ function ea(e, t, n) {
                 case 'year': {
                     if (!h.isValidPartialNumber(i)) return;
                     let a = h.parse(i),
-                        o = a,
-                        s = 0 === e.minValue;
+                        s = a,
+                        o = 0 === e.minValue;
                     if ('hour' === e.type && t.dateFormatter.resolvedOptions().hour12) {
                         switch (t.dateFormatter.resolvedOptions().hourCycle) {
                             case 'h11':
-                                a > 11 && (o = h.parse(n));
+                                a > 11 && (s = h.parse(n));
                                 break;
                             case 'h12':
-                                (s = !1), a > 12 && (o = h.parse(n));
+                                (o = !1), a > 12 && (s = h.parse(n));
                         }
                         e.value >= 12 && a > 1 && (a += 12);
-                    } else a > e.maxValue && (o = h.parse(n));
+                    } else a > e.maxValue && (s = h.parse(n));
                     if (isNaN(a)) return;
-                    let l = 0 !== o || s;
-                    l && t.setSegment(e.type, o), Number(a + '0') > e.maxValue || i.length >= String(e.maxValue).length ? ((r.current = ''), l && u.focusNext()) : (r.current = i);
+                    let l = 0 !== s || o;
+                    l && t.setSegment(e.type, s), Number(a + '0') > e.maxValue || i.length >= String(e.maxValue).length ? ((r.current = ''), l && u.focusNext()) : (r.current = i);
                 }
             }
         },
-        O = () => {
-            (r.current = ''), (0, k.Gt)(n.current, { containingElement: (0, k.rP)(n.current) }), window.getSelection().collapse(n.current);
-        },
-        R = (0, F.useRef)('');
+        O = (0, F.useRef)('');
     (0, k.zX)(n, 'beforeinput', (r) => {
         switch ((r.preventDefault(), r.inputType)) {
             case 'deleteContentBackward':
@@ -529,7 +524,7 @@ function ea(e, t, n) {
                 h.isValidPartialNumber(e.text) && !t.isReadOnly && p();
                 break;
             case 'insertCompositionText':
-                (R.current = n.current.textContent), (n.current.textContent = n.current.textContent);
+                (O.current = n.current.textContent), (n.current.textContent = n.current.textContent);
                 break;
             default:
                 null != r.data && N(r.data);
@@ -537,7 +532,7 @@ function ea(e, t, n) {
     }),
         (0, k.zX)(n, 'input', (e) => {
             let { inputType: t, data: r } = e;
-            if ('insertCompositionText' === t) (n.current.textContent = R.current), (I(g, r) || I(S, r)) && N(r);
+            if ('insertCompositionText' === t) (n.current.textContent = O.current), (I(T, r) || I(S, r)) && N(r);
         }),
         (0, k.bt)(() => {
             let e = n.current;
@@ -545,7 +540,7 @@ function ea(e, t, n) {
                 document.activeElement === e && !u.focusPrevious() && u.focusNext();
             };
         }, [n, u]);
-    let C =
+    let R =
         (0, k.gn)() || 'timeZoneName' === e.type
             ? {
                   role: 'textbox',
@@ -556,33 +551,42 @@ function ea(e, t, n) {
               }
             : {};
     e !== (0, F.useMemo)(() => t.segments.find((e) => e.isEditable), [t.segments]) && !t.isInvalid && (l = void 0);
-    let y = (0, k.Me)(),
-        L = !t.isDisabled && !t.isReadOnly && e.isEditable,
-        b = 'literal' === e.type ? '' : a.of(e.type),
+    let v = (0, k.Me)(),
+        C = !t.isDisabled && !t.isReadOnly && e.isEditable,
+        L = 'literal' === e.type ? '' : a.of(e.type),
         D = (0, k.bE)({
-            'aria-label': `${b}${o ? `, ${o}` : ''}${s ? ', ' : ''}`,
-            'aria-labelledby': s
+            'aria-label': `${L}${s ? `, ${s}` : ''}${o ? ', ' : ''}`,
+            'aria-labelledby': o
         });
     return 'literal' === e.type
         ? { segmentProps: { 'aria-hidden': !0 } }
         : {
               segmentProps: (0, k.dG)(f, D, {
-                  id: y,
-                  ...C,
+                  id: v,
+                  ...R,
                   'aria-invalid': t.isInvalid ? 'true' : void 0,
                   'aria-describedby': l,
                   'aria-readonly': t.isReadOnly || !e.isEditable ? 'true' : void 0,
                   'data-placeholder': e.isPlaceholder || void 0,
-                  contentEditable: L,
-                  suppressContentEditableWarning: L,
-                  spellCheck: L ? 'false' : void 0,
-                  autoCapitalize: L ? 'off' : void 0,
-                  autoCorrect: L ? 'off' : void 0,
-                  [parseInt(F.version, 10) >= 17 ? 'enterKeyHint' : 'enterkeyhint']: L ? 'next' : void 0,
-                  inputMode: t.isDisabled || 'dayPeriod' === e.type || 'era' === e.type || !L ? void 0 : 'numeric',
+                  contentEditable: C,
+                  suppressContentEditableWarning: C,
+                  spellCheck: C ? 'false' : void 0,
+                  autoCapitalize: C ? 'off' : void 0,
+                  autoCorrect: C ? 'off' : void 0,
+                  [parseInt(F.version, 10) >= 17 ? 'enterKeyHint' : 'enterkeyhint']: C ? 'next' : void 0,
+                  inputMode: t.isDisabled || 'dayPeriod' === e.type || 'era' === e.type || !C ? void 0 : 'numeric',
                   tabIndex: t.isDisabled ? void 0 : 0,
-                  onKeyDown: m,
-                  onFocus: O,
+                  onKeyDown: (e) => {
+                      if (('a' === e.key && ((0, k.V5)() ? e.metaKey : e.ctrlKey) && e.preventDefault(), !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey))
+                          switch (e.key) {
+                              case 'Backspace':
+                              case 'Delete':
+                                  e.preventDefault(), e.stopPropagation(), p();
+                          }
+                  },
+                  onFocus: () => {
+                      (r.current = ''), (0, k.Gt)(n.current, { containingElement: (0, k.rP)(n.current) }), window.getSelection().collapse(n.current);
+                  },
                   style: { caretColor: 'transparent' },
                   onPointerDown(e) {
                       e.stopPropagation();
@@ -593,30 +597,23 @@ function ea(e, t, n) {
               })
           };
 }
-function eo(e) {
-    e.sort();
-    let t = e[0],
-        n = e[e.length - 1];
-    for (let e = 0; e < t.length; e++) if (t[e] !== n[e]) return e;
-    return 0;
-}
-function es(e, t, n) {
+function ea(e, t, n) {
     var r, i;
-    let a = (0, H.qb)(z(q), '@react-aria/datepicker'),
-        { isInvalid: o, validationErrors: s, validationDetails: l } = t.displayValidation,
+    let a = (0, Z.qb)(z(q), '@react-aria/datepicker'),
+        { isInvalid: s, validationErrors: o, validationDetails: l } = t.displayValidation,
         {
             labelProps: u,
             fieldProps: c,
             descriptionProps: d,
             errorMessageProps: _
-        } = (0, Z.U)({
+        } = (0, V.U)({
             ...e,
             labelElementType: 'span',
-            isInvalid: o,
-            errorMessage: e.errorMessage || s
+            isInvalid: s,
+            errorMessage: e.errorMessage || o
         }),
         E = c['aria-labelledby'] || c.id,
-        { locale: f } = (0, H.bU)(),
+        { locale: f } = (0, Z.bU)(),
         h = t.formatValue(f, { month: 'long' }),
         p = h
             ? a.format('selectedRangeDescription', {
@@ -624,8 +621,8 @@ function es(e, t, n) {
                   endDate: h.end
               })
             : '',
-        m = (0, k.PK)(p),
-        I = {
+        I = (0, k.PK)(p),
+        m = {
             'aria-label': a.format('startDate'),
             'aria-labelledby': E
         },
@@ -633,15 +630,15 @@ function es(e, t, n) {
             'aria-label': a.format('endDate'),
             'aria-labelledby': E
         },
-        g = (0, k.Me)(),
         S = (0, k.Me)(),
+        g = (0, k.Me)(),
         A = Q(t, n),
-        v = [m['aria-describedby'], c['aria-describedby']].filter(Boolean).join(' ') || void 0,
-        N = (0, F.useMemo)(() => (0, G.E7)(n, { accept: (e) => e.id !== g }), [n, g]),
-        O = {
-            [J]: N,
+        N = [I['aria-describedby'], c['aria-describedby']].filter(Boolean).join(' ') || void 0,
+        O = (0, F.useMemo)(() => (0, G.E7)(n, { accept: (e) => e.id !== S }), [n, S]),
+        R = {
+            [J]: O,
             [$]: 'presentation',
-            'aria-describedby': v,
+            'aria-describedby': N,
             placeholderValue: e.placeholderValue,
             hideTimeZone: e.hideTimeZone,
             hourCycle: e.hourCycle,
@@ -652,21 +649,21 @@ function es(e, t, n) {
             isRequired: e.isRequired,
             validationBehavior: e.validationBehavior
         },
-        R = (0, k.zL)(e),
-        { focusWithinProps: C } = (0, V.L_)({
+        v = (0, k.zL)(e),
+        { focusWithinProps: C } = (0, H.L_)({
             ...e,
             isDisabled: t.isOpen,
             onBlurWithin: e.onBlur,
             onFocusWithin: e.onFocus,
             onFocusWithinChange: e.onFocusChange
         }),
-        y = (0, F.useRef)(B.PS),
-        L = (0, F.useRef)(B.PS);
+        L = (0, F.useRef)(B.PS),
+        D = (0, F.useRef)(B.PS);
     return {
-        groupProps: (0, k.dG)(R, A, c, m, C, {
+        groupProps: (0, k.dG)(v, A, c, I, C, {
             role: 'group',
             'aria-disabled': e.isDisabled || null,
-            'aria-describedby': v,
+            'aria-describedby': N,
             onKeyDown(n) {
                 !t.isOpen && e.onKeyDown && e.onKeyDown(n);
             },
@@ -677,27 +674,27 @@ function es(e, t, n) {
         labelProps: {
             ...u,
             onClick: () => {
-                N.focusFirst();
+                O.focusFirst();
             }
         },
         buttonProps: {
-            ...m,
-            id: g,
+            ...I,
+            id: S,
             'aria-haspopup': 'dialog',
             'aria-label': a.format('calendar'),
-            'aria-labelledby': `${g} ${E}`,
-            'aria-describedby': v,
+            'aria-labelledby': `${S} ${E}`,
+            'aria-describedby': N,
             'aria-expanded': t.isOpen,
             isDisabled: e.isDisabled || e.isReadOnly,
             onPress: () => t.setOpen(!0)
         },
         dialogProps: {
-            id: S,
-            'aria-labelledby': `${g} ${E}`
+            id: g,
+            'aria-labelledby': `${S} ${E}`
         },
         startFieldProps: {
-            ...I,
-            ...O,
+            ...m,
+            ...R,
             value: null === (r = t.value) || void 0 === r ? void 0 : r.start,
             onChange: (e) => t.setDateTime('start', e),
             autoFocus: e.autoFocus,
@@ -706,7 +703,7 @@ function es(e, t, n) {
                 realtimeValidation: t.realtimeValidation,
                 displayValidation: t.displayValidation,
                 updateValidation(e) {
-                    (y.current = e), t.updateValidation((0, B.W0)(e, L.current));
+                    (L.current = e), t.updateValidation((0, B.W0)(e, D.current));
                 },
                 resetValidation: t.resetValidation,
                 commitValidation: t.commitValidation
@@ -714,7 +711,7 @@ function es(e, t, n) {
         },
         endFieldProps: {
             ...T,
-            ...O,
+            ...R,
             value: null === (i = t.value) || void 0 === i ? void 0 : i.end,
             onChange: (e) => t.setDateTime('end', e),
             name: e.endName,
@@ -722,7 +719,7 @@ function es(e, t, n) {
                 realtimeValidation: t.realtimeValidation,
                 displayValidation: t.displayValidation,
                 updateValidation(e) {
-                    (L.current = e), t.updateValidation((0, B.W0)(y.current, e));
+                    (D.current = e), t.updateValidation((0, B.W0)(L.current, e));
                 },
                 resetValidation: t.resetValidation,
                 commitValidation: t.commitValidation
@@ -744,8 +741,8 @@ function es(e, t, n) {
             isInvalid: t.isInvalid,
             errorMessage: 'function' == typeof e.errorMessage ? e.errorMessage(t.displayValidation) : e.errorMessage || t.displayValidation.validationErrors.join(' ')
         },
-        isInvalid: o,
-        validationErrors: s,
+        isInvalid: s,
+        validationErrors: o,
         validationDetails: l
     };
 }

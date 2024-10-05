@@ -1,11 +1,11 @@
-var r,
-    i = n(47120);
-var a = n(442837),
-    o = n(570140);
+n(47120);
+var i,
+    a = n(442837),
+    s = n(570140);
 n(57132);
-var s = n(455199),
-    l = n(70956),
-    u = n(709054),
+var l = n(455199),
+    r = n(70956),
+    o = n(709054),
     c = n(497089);
 function d(e, t, n) {
     return (
@@ -20,83 +20,78 @@ function d(e, t, n) {
         e
     );
 }
-let _ = 90 * l.Z.Millis.DAY,
-    E = {
+let u = 90 * r.Z.Millis.DAY,
+    _ = {
         tab: null,
         localItemAcks: {},
         hasNewMentions: !1,
         isDataStale: !1,
         isRefreshing: !1
     };
-function f(e) {
-    let t = {};
-    for (let [n, r] of Object.entries(e)) Date.now() - r < _ && (t[n] = r);
-    return t;
-}
-class h extends (r = a.ZP.PersistedStore) {
+class E extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(s.Z), null != e)) {
+        if ((this.waitFor(l.Z), null != e)) {
             var t;
-            ((E = e).localItemAcks = f(null !== (t = E.localItemAcks) && void 0 !== t ? t : {})), (E.isDataStale = !0);
+            ((_ = e).localItemAcks = (function (e) {
+                let t = {};
+                for (let [n, i] of Object.entries(e)) Date.now() - i < u && (t[n] = i);
+                return t;
+            })(null !== (t = _.localItemAcks) && void 0 !== t ? t : {})),
+                (_.isDataStale = !0);
         }
     }
     getState() {
-        return E;
+        return _;
     }
     getTab() {
         var e;
-        return null !== (e = E.tab) && void 0 !== e ? e : c.b1.ForYou;
+        return null !== (e = _.tab) && void 0 !== e ? e : c.b1.ForYou;
     }
     isLocalItemAcked(e) {
-        return null != e.local_id && (null != E.localItemAcks[e.local_id] || u.default.age(e.id) > _);
+        return null != e.local_id && (null != _.localItemAcks[e.local_id] || o.default.age(e.id) > u);
     }
     hasNewMentions() {
-        return E.hasNewMentions;
+        return _.hasNewMentions;
     }
     isDataStale() {
-        return E.isDataStale;
+        return _.isDataStale;
     }
     isRefreshing() {
-        return E.isRefreshing;
+        return _.isRefreshing;
     }
     shouldReload() {
-        return E.hasNewMentions || E.isDataStale || E.isRefreshing;
+        return _.hasNewMentions || _.isDataStale || _.isRefreshing;
     }
 }
-function p(e) {
-    let { message: t } = e;
+d(E, 'displayName', 'NotificationCenterStore'), d(E, 'persistKey', 'NotificationCenterStore');
+function I() {
+    (_.hasNewMentions = !1), (_.isDataStale = !1), (_.isRefreshing = !1);
 }
-function m() {
-    (E.hasNewMentions = !1), (E.isDataStale = !1), (E.isRefreshing = !1);
-}
-function I(e) {
-    E = {
-        ...E,
-        tab: e.tab
-    };
-}
-function T(e) {
-    let { localIds: t } = e;
-    t.forEach((e) => {
-        E = {
-            ...E,
-            localItemAcks: {
-                ...E.localItemAcks,
-                [e]: Date.now()
-            }
+t.Z = new E(s.Z, {
+    MESSAGE_CREATE: function (e) {
+        let { message: t } = e;
+    },
+    NOTIFICATION_CENTER_SET_TAB: function (e) {
+        _ = {
+            ..._,
+            tab: e.tab
         };
-    });
-}
-function g() {
-    E.isRefreshing = !0;
-}
-d(h, 'displayName', 'NotificationCenterStore'),
-    d(h, 'persistKey', 'NotificationCenterStore'),
-    (t.Z = new h(o.Z, {
-        MESSAGE_CREATE: p,
-        NOTIFICATION_CENTER_SET_TAB: I,
-        NOTIFICATION_CENTER_ITEMS_LOCAL_ACK: T,
-        NOTIFICATION_CENTER_REFRESH: g,
-        LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: m,
-        LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: m
-    }));
+    },
+    NOTIFICATION_CENTER_ITEMS_LOCAL_ACK: function (e) {
+        let { localIds: t } = e;
+        t.forEach((e) => {
+            _ = {
+                ..._,
+                localItemAcks: {
+                    ..._.localItemAcks,
+                    [e]: Date.now()
+                }
+            };
+        });
+    },
+    NOTIFICATION_CENTER_REFRESH: function () {
+        _.isRefreshing = !0;
+    },
+    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: I,
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: I
+});

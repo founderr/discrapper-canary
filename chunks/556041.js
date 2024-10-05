@@ -1,54 +1,53 @@
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(600164),
-    o = n(245315),
-    s = n(689938),
-    l = n(905702);
-let u = () =>
-    (0, r.jsxs)(a.Z, {
-        align: a.Z.Align.CENTER,
-        justify: a.Z.Justify.CENTER,
-        direction: a.Z.Direction.VERTICAL,
-        className: l.popout,
+var a = n(481060),
+    s = n(600164),
+    l = n(245315),
+    r = n(689938),
+    o = n(905702);
+t.Z = () =>
+    (0, i.jsxs)(s.Z, {
+        align: s.Z.Align.CENTER,
+        justify: s.Z.Justify.CENTER,
+        direction: s.Z.Direction.VERTICAL,
+        className: o.popout,
         children: [
-            (0, r.jsx)('img', {
+            (0, i.jsx)('img', {
                 alt: '',
-                src: (0, o.QA)(),
-                className: l.avatar
+                src: (0, l.QA)(),
+                className: o.avatar
             }),
-            (0, r.jsxs)(a.Z, {
-                align: a.Z.Align.CENTER,
-                justify: a.Z.Justify.CENTER,
-                className: l.nameWrapper,
+            (0, i.jsxs)(s.Z, {
+                align: s.Z.Align.CENTER,
+                justify: s.Z.Justify.CENTER,
+                className: o.nameWrapper,
                 children: [
-                    (0, r.jsx)(i.Tooltip, {
-                        text: s.Z.Messages.STAFF_BADGE_TOOLTIP,
+                    (0, i.jsx)(a.Tooltip, {
+                        text: r.Z.Messages.STAFF_BADGE_TOOLTIP,
                         children: (e) =>
-                            (0, r.jsx)('div', {
+                            (0, i.jsx)('div', {
                                 ...e,
-                                className: l.staffBadge
+                                className: o.staffBadge
                             })
                     }),
-                    (0, r.jsx)(i.Heading, {
-                        className: l.header,
+                    (0, i.jsx)(a.Heading, {
+                        className: o.header,
                         variant: 'heading-md/semibold',
-                        children: s.Z.Messages.ANNOUNCEMENT_GUILD_POPOUT_NAME
+                        children: r.Z.Messages.ANNOUNCEMENT_GUILD_POPOUT_NAME
                     })
                 ]
             }),
-            (0, r.jsx)(i.Text, {
-                className: l.description,
+            (0, i.jsx)(a.Text, {
+                className: o.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: s.Z.Messages.ANNOUNCEMENT_GUILD_DESCRIPTION
+                children: r.Z.Messages.ANNOUNCEMENT_GUILD_DESCRIPTION
             }),
-            (0, r.jsx)(i.Text, {
-                className: l.description,
+            (0, i.jsx)(a.Text, {
+                className: o.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: s.Z.Messages.ANNOUNCEMENT_GUILD_HERE_TO_HELP
+                children: r.Z.Messages.ANNOUNCEMENT_GUILD_HERE_TO_HELP
             })
         ]
     });
-t.Z = u;

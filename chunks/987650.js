@@ -1,41 +1,47 @@
 n.d(t, {
     Vk: function () {
-        return a;
-    },
-    YK: function () {
         return d;
     },
+    YK: function () {
+        return I;
+    },
     ap: function () {
-        return _;
+        return m;
     },
     bv: function () {
-        return s;
+        return E;
     },
     gl: function () {
-        return l;
+        return f;
     },
     iP: function () {
-        return c;
+        return p;
     },
     n0: function () {
-        return o;
+        return _;
     },
     nc: function () {
-        return r;
+        return u;
     },
     wF: function () {
-        return E;
+        return T;
     }
 });
 var r,
     i,
     a,
-    o,
     s,
+    o,
     l,
-    u = n(358085);
-let c = u.isPlatformEmbedded && ((0, u.isWindows)() || !1);
-function d(e) {
+    u,
+    c,
+    d,
+    _,
+    E,
+    f,
+    h = n(358085);
+let p = h.isPlatformEmbedded && ((0, h.isWindows)() || !1);
+function I(e) {
     switch (e) {
         case 'News Nudge':
         case 'Welcome Nudge':
@@ -56,32 +62,16 @@ function d(e) {
             return 5;
     }
 }
-!(function (e) {
-    (e[(e.WELCOME = 0)] = 'WELCOME'), (e[(e.NEWS = 1)] = 'NEWS'), (e[(e.GO_LIVE_VOICE = 2)] = 'GO_LIVE_VOICE'), (e[(e.GO_LIVE_NON_VOICE = 3)] = 'GO_LIVE_NON_VOICE'), (e[(e.KEYBIND_INDICATORS = 4)] = 'KEYBIND_INDICATORS');
-})(r || (r = {})),
-    !(function (e) {
-        (e.PRIMARY = 'PRIMARY'), (e.BRAND = 'BRAND'), (e.DANGER = 'DANGER');
-    })(i || (i = {})),
-    !(function (e) {
-        (e[(e.Nudge = 0)] = 'Nudge'), (e[(e.TextChat = 1)] = 'TextChat'), (e[(e.VoiceCall = 2)] = 'VoiceCall'), (e[(e.Activity = 3)] = 'Activity'), (e[(e.Clips = 4)] = 'Clips'), (e[(e.Other = 5)] = 'Other');
-    })(a || (a = {})),
-    !(function (e) {
-        (e.NewsNudge = 'News Nudge'), (e.WelcomeNudge = 'Welcome Nudge'), (e.TextChat = 'Text Chat'), (e.ActivityUserJoin = 'Activity User Join'), (e.ActivityInvite = 'Activity Invite'), (e.IncomingCall = 'Incoming Call'), (e.GoLiveNudge = 'Go Live Nudge'), (e.GoLiveNonVoiceNudge = 'Go Live Non Voice Nudge'), (e.OverlayCrashed = 'Overlay Crashed'), (e.ClipsReminderNotification = 'Clips Reminder Notification'), (e.ClipsNotification = 'Clips Notification'), (e.KeybindIndicatorsNotification = 'Keybind Indicators Notification');
-    })(o || (o = {})),
-    !(function (e) {
-        (e[(e.Viewed = 0)] = 'Viewed'), (e[(e.Clicked = 1)] = 'Clicked');
-    })(s || (s = {}));
-let _ = Object.freeze({
+((r = u || (u = {}))[(r.WELCOME = 0)] = 'WELCOME'), (r[(r.NEWS = 1)] = 'NEWS'), (r[(r.GO_LIVE_VOICE = 2)] = 'GO_LIVE_VOICE'), (r[(r.GO_LIVE_NON_VOICE = 3)] = 'GO_LIVE_NON_VOICE'), (r[(r.KEYBIND_INDICATORS = 4)] = 'KEYBIND_INDICATORS'), ((i = c || (c = {})).PRIMARY = 'PRIMARY'), (i.BRAND = 'BRAND'), (i.DANGER = 'DANGER'), ((a = d || (d = {}))[(a.Nudge = 0)] = 'Nudge'), (a[(a.TextChat = 1)] = 'TextChat'), (a[(a.VoiceCall = 2)] = 'VoiceCall'), (a[(a.Activity = 3)] = 'Activity'), (a[(a.Clips = 4)] = 'Clips'), (a[(a.Other = 5)] = 'Other'), ((s = _ || (_ = {})).NewsNudge = 'News Nudge'), (s.WelcomeNudge = 'Welcome Nudge'), (s.TextChat = 'Text Chat'), (s.ActivityUserJoin = 'Activity User Join'), (s.ActivityInvite = 'Activity Invite'), (s.IncomingCall = 'Incoming Call'), (s.GoLiveNudge = 'Go Live Nudge'), (s.GoLiveNonVoiceNudge = 'Go Live Non Voice Nudge'), (s.OverlayCrashed = 'Overlay Crashed'), (s.ClipsReminderNotification = 'Clips Reminder Notification'), (s.ClipsNotification = 'Clips Notification'), (s.KeybindIndicatorsNotification = 'Keybind Indicators Notification'), ((o = E || (E = {}))[(o.Viewed = 0)] = 'Viewed'), (o[(o.Clicked = 1)] = 'Clicked');
+let m = Object.freeze({
     LOW: 'background-opacity-low',
     MEDIUM: 'background-opacity-medium',
     HIGH: 'background-opacity-high',
     FULL: 'background-opacity-full',
     DISABLED: null
 });
-!(function (e) {
-    (e[(e.Disabled = 0)] = 'Disabled'), (e[(e.Hook = 1)] = 'Hook'), (e[(e.OutOfProcess = 2)] = 'OutOfProcess');
-})(l || (l = {}));
-let E = Object.freeze({
+((l = f || (f = {}))[(l.Disabled = 0)] = 'Disabled'), (l[(l.Hook = 1)] = 'Hook'), (l[(l.OutOfProcess = 2)] = 'OutOfProcess');
+let T = Object.freeze({
     BOTTOM: 0,
     LOWER: 0.25,
     UPPER: 0.75,

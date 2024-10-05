@@ -5,26 +5,25 @@ function r(e, t) {
     for (var n = t, r = n + 1, i = e.length; r < i; n += 1, r += 1) e[n] = e[r];
     e.pop();
 }
-function i(e, t) {
+t.Z = function (e, t) {
     void 0 === t && (t = '');
     var i,
         a = (e && e.split('/')) || [],
-        o = (t && t.split('/')) || [],
-        s = e && n(e),
+        s = (t && t.split('/')) || [],
+        o = e && n(e),
         l = t && n(t),
-        u = s || l;
-    if ((e && n(e) ? (o = a) : a.length && (o.pop(), (o = o.concat(a))), !o.length)) return '/';
-    if (o.length) {
-        var c = o[o.length - 1];
+        u = o || l;
+    if ((e && n(e) ? (s = a) : a.length && (s.pop(), (s = s.concat(a))), !s.length)) return '/';
+    if (s.length) {
+        var c = s[s.length - 1];
         i = '.' === c || '..' === c || '' === c;
     } else i = !1;
-    for (var d = 0, _ = o.length; _ >= 0; _--) {
-        var E = o[_];
-        '.' === E ? r(o, _) : '..' === E ? (r(o, _), d++) : d && (r(o, _), d--);
+    for (var d = 0, _ = s.length; _ >= 0; _--) {
+        var E = s[_];
+        '.' === E ? r(s, _) : '..' === E ? (r(s, _), d++) : d && (r(s, _), d--);
     }
-    if (!u) for (; d--; d) o.unshift('..');
-    u && '' !== o[0] && (!o[0] || !n(o[0])) && o.unshift('');
-    var f = o.join('/');
+    if (!u) for (; d--; d) s.unshift('..');
+    u && '' !== s[0] && (!s[0] || !n(s[0])) && s.unshift('');
+    var f = s.join('/');
     return i && '/' !== f.substr(-1) && (f += '/'), f;
-}
-t.Z = i;
+};

@@ -1,28 +1,30 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
-        n = {},
-        r = {
-            begin: /\$\{/,
-            end: /\}/,
-            contains: [
-                'self',
-                {
-                    begin: /:-/,
-                    contains: [n]
-                }
-            ]
-        };
+        n = {};
     Object.assign(n, {
         className: 'variable',
-        variants: [{ begin: t.concat(/\$[\w\d#@][\w\d_]*/, '(?![\\w\\d])(?![$])') }, r]
+        variants: [
+            { begin: t.concat(/\$[\w\d#@][\w\d_]*/, '(?![\\w\\d])(?![$])') },
+            {
+                begin: /\$\{/,
+                end: /\}/,
+                contains: [
+                    'self',
+                    {
+                        begin: /:-/,
+                        contains: [n]
+                    }
+                ]
+            }
+        ]
     });
-    let i = {
+    let r = {
             className: 'subst',
             begin: /\$\(/,
             end: /\)/,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        a = {
+        i = {
             begin: /<<-?\s*(?=\w+)/,
             starts: {
                 contains: [
@@ -34,23 +36,14 @@ function t(e) {
                 ]
             }
         },
-        o = {
+        a = {
             className: 'string',
             begin: /"/,
             end: /"/,
-            contains: [e.BACKSLASH_ESCAPE, n, i]
+            contains: [e.BACKSLASH_ESCAPE, n, r]
         };
-    i.contains.push(o);
+    r.contains.push(a);
     let s = {
-            className: '',
-            begin: /\\"/
-        },
-        l = {
-            className: 'string',
-            begin: /'/,
-            end: /'/
-        },
-        u = {
             begin: /\$?\(\(/,
             end: /\)\)/,
             contains: [
@@ -62,19 +55,17 @@ function t(e) {
                 n
             ]
         },
-        c = ['fish', 'bash', 'zsh', 'sh', 'csh', 'ksh', 'tcsh', 'dash', 'scsh'],
-        d = e.SHEBANG({
-            binary: `(${c.join('|')})`,
+        o = e.SHEBANG({
+            binary: '(fish|bash|zsh|sh|csh|ksh|tcsh|dash|scsh)',
             relevance: 10
         }),
-        _ = {
+        l = {
             className: 'function',
             begin: /\w[\w\d_]*\s*\(\s*\)\s*\{/,
             returnBegin: !0,
             contains: [e.inherit(e.TITLE_MODE, { begin: /\w[\w\d_]*/ })],
             relevance: 0
-        },
-        E = { match: /(\/[a-z._-]+)+/ };
+        };
     return {
         name: 'Bash',
         aliases: ['sh'],
@@ -84,7 +75,25 @@ function t(e) {
             literal: ['true', 'false'],
             built_in: ['break', 'cd', 'continue', 'eval', 'exec', 'exit', 'export', 'getopts', 'hash', 'pwd', 'readonly', 'return', 'shift', 'test', 'times', 'trap', 'umask', 'unset', 'alias', 'bind', 'builtin', 'caller', 'command', 'declare', 'echo', 'enable', 'help', 'let', 'local', 'logout', 'mapfile', 'printf', 'read', 'readarray', 'source', 'type', 'typeset', 'ulimit', 'unalias', 'set', 'shopt', 'autoload', 'bg', 'bindkey', 'bye', 'cap', 'chdir', 'clone', 'comparguments', 'compcall', 'compctl', 'compdescribe', 'compfiles', 'compgroups', 'compquote', 'comptags', 'comptry', 'compvalues', 'dirs', 'disable', 'disown', 'echotc', 'echoti', 'emulate', 'fc', 'fg', 'float', 'functions', 'getcap', 'getln', 'history', 'integer', 'jobs', 'kill', 'limit', 'log', 'noglob', 'popd', 'print', 'pushd', 'pushln', 'rehash', 'sched', 'setcap', 'setopt', 'stat', 'suspend', 'ttyctl', 'unfunction', 'unhash', 'unlimit', 'unsetopt', 'vared', 'wait', 'whence', 'where', 'which', 'zcompile', 'zformat', 'zftp', 'zle', 'zmodload', 'zparseopts', 'zprof', 'zpty', 'zregexparse', 'zsocket', 'zstyle', 'ztcp', 'chcon', 'chgrp', 'chown', 'chmod', 'cp', 'dd', 'df', 'dir', 'dircolors', 'ln', 'ls', 'mkdir', 'mkfifo', 'mknod', 'mktemp', 'mv', 'realpath', 'rm', 'rmdir', 'shred', 'sync', 'touch', 'truncate', 'vdir', 'b2sum', 'base32', 'base64', 'cat', 'cksum', 'comm', 'csplit', 'cut', 'expand', 'fmt', 'fold', 'head', 'join', 'md5sum', 'nl', 'numfmt', 'od', 'paste', 'ptx', 'pr', 'sha1sum', 'sha224sum', 'sha256sum', 'sha384sum', 'sha512sum', 'shuf', 'sort', 'split', 'sum', 'tac', 'tail', 'tr', 'tsort', 'unexpand', 'uniq', 'wc', 'arch', 'basename', 'chroot', 'date', 'dirname', 'du', 'echo', 'env', 'expr', 'factor', 'groups', 'hostid', 'id', 'link', 'logname', 'nice', 'nohup', 'nproc', 'pathchk', 'pinky', 'printenv', 'printf', 'pwd', 'readlink', 'runcon', 'seq', 'sleep', 'stat', 'stdbuf', 'stty', 'tee', 'test', 'timeout', 'tty', 'uname', 'unlink', 'uptime', 'users', 'who', 'whoami', 'yes']
         },
-        contains: [d, e.SHEBANG(), _, u, e.HASH_COMMENT_MODE, a, E, o, s, l, n]
+        contains: [
+            o,
+            e.SHEBANG(),
+            l,
+            s,
+            e.HASH_COMMENT_MODE,
+            i,
+            { match: /(\/[a-z._-]+)+/ },
+            a,
+            {
+                className: '',
+                begin: /\\"/
+            },
+            {
+                className: 'string',
+                begin: /'/,
+                end: /'/
+            },
+            n
+        ]
     };
-}
-e.exports = t;
+};

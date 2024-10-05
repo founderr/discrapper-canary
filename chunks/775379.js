@@ -1,34 +1,32 @@
-n.d(t, {
+t.d(n, {
     S: function () {
-        return o;
+        return i;
     }
-});
-var r = n(47120);
-var i = n(470079);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class o extends i.PureComponent {
+}),
+    t(47120);
+var l = t(470079);
+class i extends l.PureComponent {
     static getDerivedStateFromError(e) {
         return { error: e };
     }
-    componentDidCatch(e, t) {
-        console.error('ErrorBoundary caught an error', e, t);
+    componentDidCatch(e, n) {
+        console.error('ErrorBoundary caught an error', e, n);
     }
     render() {
         return null != this.state.error ? this.props.fallback : this.props.children;
     }
     constructor(...e) {
-        super(...e), a(this, 'state', { error: null });
+        var n, t, l;
+        super(...e),
+            (n = this),
+            (l = { error: null }),
+            (t = 'state') in n
+                ? Object.defineProperty(n, t, {
+                      value: l,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (n[t] = l);
     }
 }

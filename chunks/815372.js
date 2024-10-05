@@ -5,12 +5,13 @@ n.d(t, {
     Ky: function () {
         return r;
     }
-});
+}),
+    n(411104);
 var r,
-    i = n(411104);
-var a = n(81825),
-    o = n(981631);
-function s(e, t, n) {
+    i,
+    a = n(81825),
+    s = n(981631);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,25 +24,23 @@ function s(e, t, n) {
         e
     );
 }
-!(function (e) {
-    (e.SHOP = 'SHOP'), (e.NITRO_HOME = 'NITRO_HOME'), (e.QUEST_HOME = 'QUEST_HOME');
-})(r || (r = {}));
+((i = r || (r = {})).SHOP = 'SHOP'), (i.NITRO_HOME = 'NITRO_HOME'), (i.QUEST_HOME = 'QUEST_HOME');
 class l extends a.Z {
     static fromType(e) {
         switch (e) {
             case 'SHOP':
                 return new l({
-                    path: o.Z5c.COLLECTIBLES_SHOP,
+                    path: s.Z5c.COLLECTIBLES_SHOP,
                     type: 'SHOP'
                 });
             case 'NITRO_HOME':
                 return new l({
-                    path: o.Z5c.NITRO_HOME,
+                    path: s.Z5c.NITRO_HOME,
                     type: 'NITRO_HOME'
                 });
             case 'QUEST_HOME':
                 return new l({
-                    path: o.Z5c.QUEST_HOME,
+                    path: s.Z5c.QUEST_HOME,
                     type: 'QUEST_HOME'
                 });
             default:
@@ -49,6 +48,6 @@ class l extends a.Z {
         }
     }
     constructor(e) {
-        super(), s(this, 'id', void 0), s(this, 'path', void 0), s(this, 'type', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type);
+        super(), o(this, 'id', void 0), o(this, 'path', void 0), o(this, 'type', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type);
     }
 }

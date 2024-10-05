@@ -1,6 +1,6 @@
 n.d(t, {
     O7: function () {
-        return l;
+        return c;
     },
     TI: function () {
         return a;
@@ -8,23 +8,18 @@ n.d(t, {
     fQ: function () {
         return i;
     }
-});
+}),
+    n(47120);
 var r,
     i,
     a,
-    o = n(47120);
-var s = n(524437);
-!(function (e) {
-    (e[(e.VIEW = 0)] = 'VIEW'), (e[(e.DISMISS = 1)] = 'DISMISS'), (e[(e.CHANGE_SETTING = 2)] = 'CHANGE_SETTING');
-})(r || (r = {})),
-    !(function (e) {
-        (e[(e.DISABLED = 0)] = 'DISABLED'), (e[(e.NON_FRIENDS = 1)] = 'NON_FRIENDS'), (e[(e.FRIENDS_AND_NON_FRIENDS = 2)] = 'FRIENDS_AND_NON_FRIENDS');
-    })(i || (i = {})),
-    !(function (e) {
-        (e[(e.DISABLED = 0)] = 'DISABLED'), (e[(e.NON_FRIENDS = 1)] = 'NON_FRIENDS'), (e[(e.FRIENDS_AND_NON_FRIENDS = 2)] = 'FRIENDS_AND_NON_FRIENDS');
-    })(a || (a = {}));
-let l = new Map([
-    [0, s.Xr.DISABLED],
-    [1, s.Xr.NON_FRIENDS],
-    [2, s.Xr.FRIENDS_AND_NON_FRIENDS]
+    s,
+    o,
+    l,
+    u = n(524437);
+((s = r || (r = {}))[(s.VIEW = 0)] = 'VIEW'), (s[(s.DISMISS = 1)] = 'DISMISS'), (s[(s.CHANGE_SETTING = 2)] = 'CHANGE_SETTING'), ((o = i || (i = {}))[(o.DISABLED = 0)] = 'DISABLED'), (o[(o.NON_FRIENDS = 1)] = 'NON_FRIENDS'), (o[(o.FRIENDS_AND_NON_FRIENDS = 2)] = 'FRIENDS_AND_NON_FRIENDS'), ((l = a || (a = {}))[(l.DISABLED = 0)] = 'DISABLED'), (l[(l.NON_FRIENDS = 1)] = 'NON_FRIENDS'), (l[(l.FRIENDS_AND_NON_FRIENDS = 2)] = 'FRIENDS_AND_NON_FRIENDS');
+let c = new Map([
+    [0, u.Xr.DISABLED],
+    [1, u.Xr.NON_FRIENDS],
+    [2, u.Xr.FRIENDS_AND_NON_FRIENDS]
 ]);

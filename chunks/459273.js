@@ -1,88 +1,87 @@
 n.d(t, {
     I3: function () {
-        return E;
+        return u;
     },
     d9: function () {
-        return h;
+        return d;
     },
     oo: function () {
-        return _;
+        return l;
     },
     yp: function () {
-        return f;
+        return c;
     }
-});
-var r = n(47120);
-var i = n(411104);
-var a = n(735250),
-    o = n(470079),
-    s = n(836560);
-var l = n(585483);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class c {
+}),
+    n(47120),
+    n(411104);
+var r = n(735250),
+    i = n(470079),
+    a = n(836560),
+    s = n(585483);
+class o {
     subscribe(e, t) {
-        l.S.subscribe(e, t), this.emitter.on(e, t);
+        s.S.subscribe(e, t), this.emitter.on(e, t);
     }
     unsubscribe(e, t) {
-        l.S.unsubscribe(e, t), this.emitter.off(e, t);
+        s.S.unsubscribe(e, t), this.emitter.off(e, t);
     }
     bumpDispatchPriority() {
-        for (let e of this.emitter.eventNames()) for (let t of this.emitter.listeners(e)) l.S.resubscribe(e, t);
+        for (let e of this.emitter.eventNames()) for (let t of this.emitter.listeners(e)) s.S.resubscribe(e, t);
     }
     constructor() {
-        u(this, 'emitter', new s.EventEmitter());
+        var e, t, n;
+        (e = this),
+            (t = 'emitter'),
+            (n = new a.EventEmitter()),
+            t in e
+                ? Object.defineProperty(e, t, {
+                      value: n,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (e[t] = n);
     }
 }
-class d {
-    subscribe(e, t) {
-        l.S.subscribe(e, t);
-    }
-    unsubscribe(e, t) {
-        l.S.unsubscribe(e, t);
-    }
-    bumpDispatchPriority() {}
-}
-let _ = o.createContext(new d()),
-    E = o.forwardRef(function (e, t) {
+let l = i.createContext(
+        new (class e {
+            subscribe(e, t) {
+                s.S.subscribe(e, t);
+            }
+            unsubscribe(e, t) {
+                s.S.unsubscribe(e, t);
+            }
+            bumpDispatchPriority() {}
+        })()
+    ),
+    u = i.forwardRef(function (e, t) {
         let { children: n } = e,
-            r = o.useRef(null);
-        function i() {
-            return null === r.current && (r.current = new c()), r.current;
+            a = i.useRef(null);
+        function s() {
+            return null === a.current && (a.current = new o()), a.current;
         }
         return (
-            o.useImperativeHandle(t, i),
-            (0, a.jsx)(_.Provider, {
-                value: i(),
+            i.useImperativeHandle(t, s),
+            (0, r.jsx)(l.Provider, {
+                value: s(),
                 children: n
             })
         );
     });
-function f(e) {
+function c(e) {
     let { event: t, handler: n } = e,
-        r = o.useContext(_),
-        i = o.useRef(n);
-    o.useEffect(() => {
-        i.current = n;
+        r = i.useContext(l),
+        a = i.useRef(n);
+    i.useEffect(() => {
+        a.current = n;
     }, [n]);
-    let a = null == n;
+    let s = null == n;
     return (
-        o.useEffect(() => {
-            if (a) return;
+        i.useEffect(() => {
+            if (s) return;
             let e = function () {
                 for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                null === (e = i.current) || void 0 === e || e.call(i, ...n);
+                null === (e = a.current) || void 0 === e || e.call(a, ...n);
             };
             return (
                 r.subscribe(t, e),
@@ -90,10 +89,10 @@ function f(e) {
                     r.unsubscribe(t, e);
                 }
             );
-        }, [r, t, a]),
+        }, [r, t, s]),
         null
     );
 }
-function h(e) {
-    return f(e), null;
+function d(e) {
+    return c(e), null;
 }

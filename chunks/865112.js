@@ -1,9 +1,9 @@
 n.d(t, {
     RB: function () {
-        return N;
+        return x;
     },
     VH: function () {
-        return S;
+        return A;
     },
     Vi: function () {
         return O;
@@ -12,50 +12,48 @@ n.d(t, {
         return R;
     },
     q7: function () {
-        return v;
+        return M;
     }
 });
-var r,
-    i,
-    a = n(692547),
+var i,
+    a,
+    s,
+    l,
+    r = n(692547),
     o = n(497089),
-    s = n(650473),
-    l = n(389765),
+    c = n(650473),
+    d = n(389765),
     u = n(137492),
-    c = n(387661),
-    d = n(659953),
-    _ = n(319707),
-    E = n(584914),
-    f = n(334702),
-    h = n(333722),
-    p = n(549931),
-    m = n(178561),
-    I = n(39863),
-    T = n(130312);
-!(function (e) {
-    (e.CHECKED = 'CHECKED'), (e.FRIENDS = 'FRIENDS'), (e.SHARE_SCREEN = 'SHARE_SCREEN'), (e.NEW_MESSAGE = 'NEW_MESSAGE');
-})(r || (r = {}));
+    _ = n(387661),
+    E = n(659953),
+    I = n(319707),
+    m = n(584914),
+    T = n(334702),
+    N = n(333722),
+    h = n(549931),
+    C = n(178561),
+    p = n(39863),
+    f = n(130312);
+((i = s || (s = {})).CHECKED = 'CHECKED'), (i.FRIENDS = 'FRIENDS'), (i.SHARE_SCREEN = 'SHARE_SCREEN'), (i.NEW_MESSAGE = 'NEW_MESSAGE');
 let g = {
-    CHECKED: c,
-    FRIENDS: _,
-    SHARE_SCREEN: I,
-    NEW_MESSAGE: p
+    CHECKED: _,
+    FRIENDS: I,
+    SHARE_SCREEN: p,
+    NEW_MESSAGE: h
 };
-!(function (e) {
-    (e.MISSED_MESSAGES = 'MISSED_MESSAGES'), (e.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER'), (e.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT'), (e.TOP_MESSAGES = 'TOP_MESSAGES'), (e.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER'), (e.UPDATE_PROFILE = 'UPDATE_PROFILE'), (e.FIND_FRIENDS = 'FIND_FRIENDS'), (e.ADD_FRIEND = 'ADD_FRIEND'), (e.FIRST_MESSAGE = 'FIRST_MESSAGE');
-})(i || (i = {}));
-let S = {
-        MISSED_MESSAGES: h,
-        FRIEND_REQUEST_REMINDER: E,
-        SCHEDULED_GUILD_EVENT: d,
-        TOP_MESSAGES: f,
+((a = l || (l = {})).MISSED_MESSAGES = 'MISSED_MESSAGES'), (a.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER'), (a.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT'), (a.TOP_MESSAGES = 'TOP_MESSAGES'), (a.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER'), (a.UPDATE_PROFILE = 'UPDATE_PROFILE'), (a.FIND_FRIENDS = 'FIND_FRIENDS'), (a.ADD_FRIEND = 'ADD_FRIEND'), (a.FIRST_MESSAGE = 'FIRST_MESSAGE');
+let A = {
+        MISSED_MESSAGES: N,
+        FRIEND_REQUEST_REMINDER: m,
+        SCHEDULED_GUILD_EVENT: E,
+        TOP_MESSAGES: T,
         NOTIFICATION_CENTER: u,
-        UPDATE_PROFILE: T,
-        FIND_FRIENDS: l,
-        ADD_FRIEND: l,
-        FIRST_MESSAGE: m
+        UPDATE_PROFILE: f,
+        FIND_FRIENDS: d,
+        ADD_FRIEND: d,
+        FIRST_MESSAGE: C
     },
-    A = (e) => {
+    S = (e) => {
         switch (e.item_enum) {
             case o.AM.ADD_FRIEND:
                 return 'ADD_FRIEND';
@@ -69,10 +67,10 @@ let S = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    v = (e) => {
+    M = (e) => {
         switch (e.type) {
             case 'lifecycle_item':
-                return A(e);
+                return S(e);
             case 'missed_messages':
                 return 'MISSED_MESSAGES';
             case 'friend_request_reminder':
@@ -85,7 +83,7 @@ let S = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    N = (e) => {
+    x = (e) => {
         if ('icHighlight' === e) return 'TOP_MESSAGES';
         return 'NOTIFICATION_CENTER';
     },
@@ -94,29 +92,29 @@ let S = {
             case o.DY.GO_LIVE_PUSH:
                 return {
                     icon: g.SHARE_SCREEN,
-                    color: a.Z.colors.BACKGROUND_ACCENT
+                    color: r.Z.colors.BACKGROUND_ACCENT
                 };
             case o.DY.FRIEND_REQUEST_ACCEPTED:
                 return {
                     icon: g.CHECKED,
-                    color: a.Z.colors.STATUS_POSITIVE_BACKGROUND
+                    color: r.Z.colors.STATUS_POSITIVE_BACKGROUND
                 };
             case o.DY.FRIEND_REQUEST_PENDING:
             case o.DY.FRIEND_SUGGESTION_CREATED:
                 return {
                     icon: g.FRIENDS,
-                    color: a.Z.colors.BACKGROUND_ACCENT
+                    color: r.Z.colors.BACKGROUND_ACCENT
                 };
             case o.DY.DM_FRIEND_NUDGE:
                 return {
                     icon: g.NEW_MESSAGE,
-                    color: a.Z.colors.BACKGROUND_ACCENT
+                    color: r.Z.colors.BACKGROUND_ACCENT
                 };
             case o.O7.INCOMING_FRIEND_REQUESTS:
             case o.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
                 return {
                     icon: g.FRIENDS,
-                    color: a.Z.colors.BACKGROUND_ACCENT
+                    color: r.Z.colors.BACKGROUND_ACCENT
                 };
             default:
                 return null;
@@ -125,13 +123,13 @@ let S = {
     R = (e) => {
         switch (e.item_enum) {
             case o.AM.UPDATE_PROFILE:
-                return s.Y9;
+                return c.Y9;
             case o.AM.ADD_FRIEND:
             case o.AM.FIND_FRIENDS:
-                return s.AZ;
+                return c.AZ;
             case o.AM.FIRST_MESSAGE:
-                return s.bj;
+                return c.bj;
             default:
-                return a.Z.unsafe_rawColors.BRAND_500.css;
+                return r.Z.unsafe_rawColors.BRAND_500.css;
         }
     };

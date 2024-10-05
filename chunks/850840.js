@@ -1,50 +1,42 @@
-let r;
-var i,
-    a = n(653041);
-var o = n(442837),
-    s = n(570140);
-function l(e, t, n) {
+let o;
+t(653041);
+var r,
+    a = t(442837),
+    i = t(570140);
+function c(e, n, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = t),
         e
     );
 }
-let u = {
+let l = {
     hasAcceptedStoreTerms: !1,
     hasAcceptedEulaIds: []
 };
-function c() {
-    r.hasAcceptedStoreTerms = !0;
-}
-function d(e) {
-    let { eulaId: t } = e;
-    if (r.hasAcceptedEulaIds.includes(t)) return !1;
-    r.hasAcceptedEulaIds.push(t);
-}
-class _ extends (i = o.ZP.PersistedStore) {
+class s extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        r = null != e ? e : u;
+        o = null != e ? e : l;
     }
     getState() {
-        return r;
+        return o;
     }
     get hasAcceptedStoreTerms() {
-        return r.hasAcceptedStoreTerms;
+        return o.hasAcceptedStoreTerms;
     }
     hasAcceptedEULA(e) {
-        return r.hasAcceptedEulaIds.includes(e);
+        return o.hasAcceptedEulaIds.includes(e);
     }
 }
-l(_, 'displayName', 'ApplicationStoreUserSettingsStore'),
-    l(_, 'persistKey', 'ApplicationStoreUserSettingsStore'),
-    l(_, 'migrations', [
+c(s, 'displayName', 'ApplicationStoreUserSettingsStore'),
+    c(s, 'persistKey', 'ApplicationStoreUserSettingsStore'),
+    c(s, 'migrations', [
         (e) =>
             null == e.hasAcceptedEulaIds
                 ? {
@@ -53,7 +45,13 @@ l(_, 'displayName', 'ApplicationStoreUserSettingsStore'),
                   }
                 : e
     ]),
-    (t.Z = new _(s.Z, {
-        APPLICATION_STORE_ACCEPT_STORE_TERMS: c,
-        APPLICATION_STORE_ACCEPT_EULA: d
+    (n.Z = new s(i.Z, {
+        APPLICATION_STORE_ACCEPT_STORE_TERMS: function () {
+            o.hasAcceptedStoreTerms = !0;
+        },
+        APPLICATION_STORE_ACCEPT_EULA: function (e) {
+            let { eulaId: n } = e;
+            if (o.hasAcceptedEulaIds.includes(n)) return !1;
+            o.hasAcceptedEulaIds.push(n);
+        }
     }));

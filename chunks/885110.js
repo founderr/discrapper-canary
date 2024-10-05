@@ -1,132 +1,111 @@
+n(47120);
 var r,
-    i = n(47120);
-var a = n(348327),
-    o = n.n(a),
-    s = n(392711),
-    l = n.n(s),
-    u = n(442837),
-    c = n(570140),
-    d = n(503438),
-    _ = n(768419),
-    E = n(695346),
-    f = n(581883),
-    h = n(780570),
-    p = n(77498),
-    m = n(517100),
-    I = n(283595),
-    T = n(293273),
-    g = n(158776),
-    S = n(797258),
-    A = n(981631);
-function v(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let N = !1,
-    O = A.Skl.ONLINE,
-    R = A.Skl.UNKNOWN,
-    C = 0,
-    y = [],
-    L = !1,
+    i,
+    a,
+    s,
+    o = n(348327),
+    l = n.n(o),
+    u = n(392711),
+    c = n.n(u),
+    d = n(442837),
+    _ = n(570140),
+    E = n(503438),
+    f = n(768419),
+    h = n(695346),
+    p = n(581883),
+    I = n(780570),
+    m = n(77498),
+    T = n(517100),
+    S = n(283595),
+    g = n(293273),
+    A = n(158776),
+    N = n(797258),
+    O = n(981631);
+let R = !1,
+    v = O.Skl.ONLINE,
+    C = O.Skl.UNKNOWN,
+    L = 0,
+    D = [],
+    y = !1,
     b = !0,
-    D = Object.freeze([]),
-    M = [];
-function P(e) {
-    return (0, h.OT)(e, I.Z);
-}
+    M = Object.freeze([]),
+    P = [];
 function U(e) {
-    let t = p.Z.getGameByName(e);
-    return null != t ? P(t.id) : E.G6.getSetting();
+    return (0, I.OT)(e, S.Z);
 }
 function w(e) {
     switch (e.type) {
-        case A.IIU.LISTENING:
-            if ((0, d.Z)(e)) return _.Z.shouldShowActivity();
-            if (null != e.application_id) return P(e.application_id);
+        case O.IIU.LISTENING:
+            if ((0, E.Z)(e)) return f.Z.shouldShowActivity();
+            if (null != e.application_id) return U(e.application_id);
             return !1;
-        case A.IIU.PLAYING:
-            return null != e.application_id ? P(e.application_id) : U(e.name);
-        case A.IIU.STREAMING:
-        case A.IIU.WATCHING:
+        case O.IIU.PLAYING:
+            return null != e.application_id
+                ? U(e.application_id)
+                : (function (e) {
+                      let t = m.Z.getGameByName(e);
+                      return null != t ? U(t.id) : h.G6.getSetting();
+                  })(e.name);
+        case O.IIU.STREAMING:
+        case O.IIU.WATCHING:
         default:
-            return null == e.application_id || P(e.application_id);
+            return null == e.application_id || U(e.application_id);
     }
 }
 function x() {
-    (b = !0), (R = O), G();
-}
-function G() {
     var e;
-    if (((C = null !== (e = m.Z.getIdleSince()) && void 0 !== e ? e : 0), (L = m.Z.isAFK()), b)) O = R;
-    else if (N) O = A.Skl.INVISIBLE;
+    if (((L = null !== (e = T.Z.getIdleSince()) && void 0 !== e ? e : 0), (y = T.Z.isAFK()), b)) v = C;
+    else if (R) v = O.Skl.INVISIBLE;
     else {
-        let e = E.co.getSetting();
-        O = e !== A.Skl.UNKNOWN ? e : A.Skl.ONLINE;
+        let e = h.co.getSetting();
+        v = e !== O.Skl.UNKNOWN ? e : O.Skl.ONLINE;
     }
-    O === A.Skl.ONLINE && C > 0 && (O = A.Skl.IDLE);
+    v === O.Skl.ONLINE && L > 0 && (v = O.Skl.IDLE);
     let t = !1,
-        n = b || O === A.Skl.INVISIBLE ? [] : T.Z.getActivities().filter(w);
-    !o()(y, n) && ((y = n), (t = !0));
-    let r = S.Z.getRemoteActivities();
-    if ((D !== r && ((D = r), (t = !0)), t)) {
-        let e = y.find((e) => e.type === A.IIU.CUSTOM_STATUS);
-        M =
-            y.filter((e) => e.type !== A.IIU.CUSTOM_STATUS).length > 0
-                ? y
+        n = b || v === O.Skl.INVISIBLE ? [] : g.Z.getActivities().filter(w);
+    !l()(D, n) && ((D = n), (t = !0));
+    let r = N.Z.getRemoteActivities();
+    if ((M !== r && ((M = r), (t = !0)), t)) {
+        let e = D.find((e) => e.type === O.IIU.CUSTOM_STATUS);
+        P =
+            D.filter((e) => e.type !== O.IIU.CUSTOM_STATUS).length > 0
+                ? D
                 : null != e
                   ? [
                         e,
-                        ...l()(D)
-                            .filter((e) => e.type !== A.IIU.CUSTOM_STATUS)
+                        ...c()(M)
+                            .filter((e) => e.type !== O.IIU.CUSTOM_STATUS)
                             .uniqBy((e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name))
                             .value()
                     ]
-                  : l().uniqBy(D, (e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name));
+                  : c().uniqBy(M, (e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name));
     }
 }
-function k(e) {
-    return (N = e.invisible), G();
+function G() {
+    (b = !1), (C = O.Skl.UNKNOWN), x(), A.Z.setCurrentUserOnConnectionOpen(v, P);
 }
-function B() {
-    return (N = !1), G();
-}
-function F() {
-    (b = !1), (R = A.Skl.UNKNOWN), G(), g.Z.setCurrentUserOnConnectionOpen(O, M);
-}
-function Z() {
-    F();
-}
-class V extends (r = u.ZP.Store) {
+class k extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, f.Z, T.Z, S.Z, I.Z, p.Z), this.syncWith([T.Z], G);
+        this.waitFor(T.Z, p.Z, g.Z, N.Z, S.Z, m.Z), this.syncWith([g.Z], x);
     }
     getLocalPresence() {
         return {
-            status: O,
-            since: C,
-            activities: y,
-            afk: L
+            status: v,
+            since: L,
+            activities: D,
+            afk: y
         };
     }
     getStatus() {
-        return O;
+        return v;
     }
     getActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? M : y;
+        return e ? P : D;
     }
     getPrimaryActivity() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? M[0] : y[0];
+        return e ? P[0] : D[0];
     }
     getApplicationActivity(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -137,27 +116,43 @@ class V extends (r = u.ZP.Store) {
         return this.getActivities(t).find(e);
     }
 }
-v(V, 'displayName', 'SelfPresenceStore'),
-    (t.Z = new V(c.Z, {
-        START_SESSION: G,
-        CONNECTION_OPEN: Z,
-        CONNECTION_OPEN_SUPPLEMENTAL: F,
-        OVERLAY_INITIALIZE: F,
-        CONNECTION_CLOSED: G,
-        IDLE: G,
-        AFK: G,
-        RUNNING_GAMES_CHANGE: G,
-        STREAMING_UPDATE: G,
-        USER_SETTINGS_PROTO_UPDATE: G,
-        LOCAL_ACTIVITY_UPDATE: G,
-        SPOTIFY_PLAYER_STATE: G,
-        SPOTIFY_PLAYER_PLAY: G,
-        USER_CONNECTIONS_UPDATE: G,
-        SESSIONS_REPLACE: G,
-        RPC_APP_DISCONNECTED: G,
-        LIBRARY_FETCH_SUCCESS: G,
-        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: G,
-        LOGOUT: x,
-        FORCE_INVISIBLE: k,
-        WINDOW_FOCUS: B
+(s = 'SelfPresenceStore'),
+    (a = 'displayName') in (i = k)
+        ? Object.defineProperty(i, a, {
+              value: s,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (i[a] = s),
+    (t.Z = new k(_.Z, {
+        START_SESSION: x,
+        CONNECTION_OPEN: function () {
+            G();
+        },
+        CONNECTION_OPEN_SUPPLEMENTAL: G,
+        OVERLAY_INITIALIZE: G,
+        CONNECTION_CLOSED: x,
+        IDLE: x,
+        AFK: x,
+        RUNNING_GAMES_CHANGE: x,
+        STREAMING_UPDATE: x,
+        USER_SETTINGS_PROTO_UPDATE: x,
+        LOCAL_ACTIVITY_UPDATE: x,
+        SPOTIFY_PLAYER_STATE: x,
+        SPOTIFY_PLAYER_PLAY: x,
+        USER_CONNECTIONS_UPDATE: x,
+        SESSIONS_REPLACE: x,
+        RPC_APP_DISCONNECTED: x,
+        LIBRARY_FETCH_SUCCESS: x,
+        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: x,
+        LOGOUT: function () {
+            (b = !0), (C = v), x();
+        },
+        FORCE_INVISIBLE: function (e) {
+            return (R = e.invisible), x();
+        },
+        WINDOW_FOCUS: function () {
+            return (R = !1), x();
+        }
     }));

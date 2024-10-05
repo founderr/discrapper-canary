@@ -1,28 +1,24 @@
 n.d(t, {
     p: function () {
-        return _;
+        return c;
     },
     t: function () {
-        return E;
+        return d;
     }
 });
 var r = n(468343),
     i = n(559972),
     a = n(789741),
-    o = 0,
-    s = function () {
-        return !!o;
-    },
-    l = 12,
-    u = {
+    s = 0,
+    o = {
         attributes: !0,
         characterData: !0,
         childList: !0,
         subtree: !0
     },
-    c = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
-    d = !1,
-    _ = new ((function () {
+    l = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
+    u = !1,
+    c = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -33,25 +29,25 @@ var r = n(468343),
         return (
             (e.prototype.run = function (e) {
                 var t = this;
-                if (!d)
-                    (d = !0),
+                if (!u)
+                    (u = !0),
                         (0, a.p)(function () {
                             var n = !1;
                             try {
                                 n = (0, r.N)();
                             } finally {
-                                if (((d = !1), !s())) return;
+                                if (((u = !1), !s)) return;
                                 n ? t.run(60) : e ? t.run(e - 1) : t.start();
                             }
                         });
             }),
             (e.prototype.schedule = function () {
-                this.stop(), this.run(l);
+                this.stop(), this.run(12);
             }),
             (e.prototype.observe = function () {
                 var e = this,
                     t = function () {
-                        return e.observer && e.observer.observe(document.body, u);
+                        return e.observer && e.observer.observe(document.body, o);
                     };
                 document.body ? t() : i.C.addEventListener('DOMContentLoaded', t);
             }),
@@ -61,7 +57,7 @@ var r = n(468343),
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    c.forEach(function (t) {
+                    l.forEach(function (t) {
                         return i.C.addEventListener(t, e.listener, !0);
                     }));
             }),
@@ -69,7 +65,7 @@ var r = n(468343),
                 var e = this;
                 !this.stopped &&
                     (this.observer && this.observer.disconnect(),
-                    c.forEach(function (t) {
+                    l.forEach(function (t) {
                         return i.C.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
@@ -77,6 +73,6 @@ var r = n(468343),
             e
         );
     })())(),
-    E = function (e) {
-        !o && e > 0 && _.start(), (o += e) || _.stop();
+    d = function (e) {
+        !s && e > 0 && c.start(), (s += e) || c.stop();
     };

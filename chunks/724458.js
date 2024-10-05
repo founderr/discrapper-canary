@@ -1,12 +1,13 @@
 var r = n(147018),
     i = n(510030).left,
     a = n(191506),
-    o = n(106295);
+    s = n(106295),
+    o = n(391673);
 r(
     {
         target: 'Array',
         proto: !0,
-        forced: (!n(391673) && o > 79 && o < 83) || !a('reduce')
+        forced: (!o && s > 79 && s < 83) || !a('reduce')
     },
     {
         reduce: function (e) {

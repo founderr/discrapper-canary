@@ -1,53 +1,59 @@
-var t = 4,
-    n = 0.001,
-    r = 1e-7,
-    i = 10,
-    a = 11,
-    o = 0.1,
-    s = 'function' == typeof Float32Array;
-function l(e, t) {
+var t = 0.1,
+    n = 'function' == typeof Float32Array;
+function r(e, t) {
     return 1 - 3 * t + 3 * e;
 }
-function u(e, t) {
+function i(e, t) {
     return 3 * t - 6 * e;
 }
-function c(e) {
+function a(e) {
     return 3 * e;
 }
-function d(e, t, n) {
-    return ((l(t, n) * e + u(t, n)) * e + c(t)) * e;
+function s(e, t, n) {
+    return (((1 - 3 * n + 3 * t) * e + (3 * n - 6 * t)) * e + 3 * t) * e;
 }
-function _(e, t, n) {
-    return 3 * l(t, n) * e * e + 2 * u(t, n) * e + c(t);
+function o(e, t, n) {
+    return 3 * (1 - 3 * n + 3 * t) * e * e + 2 * (3 * n - 6 * t) * e + 3 * t;
 }
-function E(e, t, n, a, o) {
-    var s,
-        l,
-        u = 0;
-    do (s = d((l = t + (n - t) / 2), a, o) - e) > 0 ? (n = l) : (t = l);
-    while (Math.abs(s) > r && ++u < i);
-    return l;
-}
-function f(e, n, r, i) {
-    for (var a = 0; a < t; ++a) {
-        var o = _(n, r, i);
-        if (0 === o) break;
-        var s = d(n, r, i) - e;
-        n -= s / o;
-    }
-    return n;
-}
-e.exports = function (e, t, r, i) {
-    if (!(0 <= e && e <= 1 && 0 <= r && r <= 1)) throw Error('bezier x values must be in [0, 1] range');
-    var l = s ? new Float32Array(a) : Array(a);
-    if (e !== t || r !== i) for (var u = 0; u < a; ++u) l[u] = d(u * o, e, r);
-    function c(t) {
-        for (var i = 0, s = 1, u = a - 1; s !== u && l[s] <= t; ++s) i += o;
-        var c = i + ((t - l[--s]) / (l[s + 1] - l[s])) * o,
-            d = _(c, e, r);
-        return d >= n ? f(t, c, e, r) : 0 === d ? c : E(t, i, i + o, e, r);
-    }
+e.exports = function (e, r, i, a) {
+    if (!(0 <= e && e <= 1 && 0 <= i && i <= 1)) throw Error('bezier x values must be in [0, 1] range');
+    var l = n ? new Float32Array(11) : Array(11);
+    if (e !== r || i !== a) for (var u = 0; u < 11; ++u) l[u] = s(u * t, e, i);
     return function (n) {
-        return e === t && r === i ? n : 0 === n ? 0 : 1 === n ? 1 : d(c(n), t, i);
+        return e === r && i === a
+            ? n
+            : 0 === n
+              ? 0
+              : 1 === n
+                ? 1
+                : s(
+                      (function (n) {
+                          for (var r = 0, a = 1, u = 10; a !== u && l[a] <= n; ++a) r += t;
+                          var c = r + ((n - l[--a]) / (l[a + 1] - l[a])) * t,
+                              d = o(c, e, i);
+                          return d >= 0.001
+                              ? (function (e, t, n, r) {
+                                    for (var i = 0; i < 4; ++i) {
+                                        var a = o(t, n, r);
+                                        if (0 === a) break;
+                                        var l = s(t, n, r) - e;
+                                        t -= l / a;
+                                    }
+                                    return t;
+                                })(n, c, e, i)
+                              : 0 === d
+                                ? c
+                                : (function (e, t, n, r, i) {
+                                      var a,
+                                          o,
+                                          l = 0;
+                                      do (a = s((o = t + (n - t) / 2), r, i) - e) > 0 ? (n = o) : (t = o);
+                                      while (Math.abs(a) > 1e-7 && ++l < 10);
+                                      return o;
+                                  })(n, r, r + t, e, i);
+                      })(n),
+                      r,
+                      a
+                  );
     };
 };

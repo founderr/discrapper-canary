@@ -1,30 +1,28 @@
 n.d(t, {
     Cf: function () {
-        return _;
+        return d;
     },
     L2: function () {
-        return c;
+        return u;
     },
     Um: function () {
-        return u;
+        return l;
     }
 });
 var r = n(442837),
     i = n(902704),
     a = n(158776),
-    o = n(981631);
-function s(e) {
-    return e.type === o.IIU.PLAYING;
+    s = n(981631);
+function o(e) {
+    return e.type === s.IIU.PLAYING;
 }
 function l(e, t) {
-    return t.findActivity(e, s);
+    var n;
+    return null != e ? ((n = e.ownerId), t.findActivity(n, o)) : null;
 }
 function u(e, t) {
-    return null != e ? l(e.ownerId, t) : null;
-}
-function c(e, t) {
     if (null == e) return null;
-    let n = u(e, t);
+    let n = l(e, t);
     return null == n
         ? null
         : {
@@ -32,9 +30,9 @@ function c(e, t) {
               name: n.name
           };
 }
-function d(e, t) {
+function c(e, t) {
     return e === t || (null != e && null != t && (0, i.Z)(e, t));
 }
-function _(e) {
-    return (0, r.e7)([a.Z], () => c(e, a.Z), [e], d);
+function d(e) {
+    return (0, r.e7)([a.Z], () => u(e, a.Z), [e], c);
 }

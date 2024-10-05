@@ -1,32 +1,24 @@
+var r, i, a, s, o, l, u, c;
 n.d(t, {
     Iq: function () {
         return a;
     },
     RV: function () {
-        return o;
+        return s;
     },
     wx: function () {
         return i;
     },
     xf: function () {
-        return l;
+        return d;
     }
-});
-var r,
-    i,
-    a,
-    o,
-    s = n(47120);
-!(function (e) {
-    (e.SENDING = 'sending'), (e.SENT = 'sent'), (e.ERROR = 'error');
-})(r || (r = {})),
-    !(function (e) {
-        (e[(e.GUILD = 0)] = 'GUILD'), (e[(e.GROUP_DM = 1)] = 'GROUP_DM'), (e[(e.FRIEND = 2)] = 'FRIEND');
-    })(i || (i = {}));
-let l = new Set([0, 1]);
-!(function (e) {
-    (e[(e.STREAM = 1)] = 'STREAM'), (e[(e.EMBEDDED_APPLICATION = 2)] = 'EMBEDDED_APPLICATION'), (e[(e.ROLE_SUBSCRIPTIONS_PURCHASE = 3)] = 'ROLE_SUBSCRIPTIONS_PURCHASE');
-})(a || (a = {})),
-    !(function (e) {
-        (e.MAIN = 'main'), (e.SETTINGS = 'settings'), (e.GUEST = 'guest');
-    })(o || (o = {}));
+}),
+    n(47120),
+    ((o = r || (r = {})).SENDING = 'sending'),
+    (o.SENT = 'sent'),
+    (o.ERROR = 'error'),
+    ((l = i || (i = {}))[(l.GUILD = 0)] = 'GUILD'),
+    (l[(l.GROUP_DM = 1)] = 'GROUP_DM'),
+    (l[(l.FRIEND = 2)] = 'FRIEND');
+let d = new Set([0, 1]);
+((u = a || (a = {}))[(u.STREAM = 1)] = 'STREAM'), (u[(u.EMBEDDED_APPLICATION = 2)] = 'EMBEDDED_APPLICATION'), (u[(u.ROLE_SUBSCRIPTIONS_PURCHASE = 3)] = 'ROLE_SUBSCRIPTIONS_PURCHASE'), ((c = s || (s = {})).MAIN = 'main'), (c.SETTINGS = 'settings'), (c.GUEST = 'guest');

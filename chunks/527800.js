@@ -1,21 +1,23 @@
 e.exports = function (e, t, r, i) {
     var a = this;
-    function o(t) {
-        return function () {
-            (a.nextExpectedAction = t), ++a.sequenceLevels[e], a.resetSequenceTimer();
-        };
-    }
+    a.sequenceLevels[e] = 0;
     function s(t) {
-        var o;
+        var s;
         a.fireCallback(r, t, e),
-            'keyup' !== i && ((o = n(619820)), (a.ignoreNextKeyup = o(t))),
+            'keyup' !== i && ((s = n(619820)), (a.ignoreNextKeyup = s(t))),
             setTimeout(function () {
                 a.resetSequences();
             }, 10);
     }
-    a.sequenceLevels[e] = 0;
-    for (var l = 0; l < t.length; ++l) {
-        var u = l + 1 === t.length ? s : o(i || a.getKeyInfo(t[l + 1]).action);
-        a.bindSingle(t[l], u, i, e, l);
+    for (var o = 0; o < t.length; ++o) {
+        var l =
+            o + 1 === t.length
+                ? s
+                : (function (t) {
+                      return function () {
+                          (a.nextExpectedAction = t), ++a.sequenceLevels[e], a.resetSequenceTimer();
+                      };
+                  })(i || a.getKeyInfo(t[o + 1]).action);
+        a.bindSingle(t[o], l, i, e, o);
     }
 };

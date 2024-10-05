@@ -1,16 +1,13 @@
-function t(e) {
+e.exports = function (e) {
     let t = '\\d(_|\\d)*',
         n = '[eE][-+]?' + t,
-        r = t + '(\\.' + t + ')?(' + n + ')?',
-        i = '\\w+',
-        a = '\\b(' + (t + '#' + i + '(\\.' + i + ')?#(' + n + ')?') + '|' + r + ')',
-        o = '[A-Za-z](_?[A-Za-z0-9.])*',
-        s = '[]\\{\\}%#\'"',
-        l = e.COMMENT('--', '$'),
-        u = {
+        r = '[A-Za-z](_?[A-Za-z0-9.])*',
+        i = '[]\\{\\}%#\'"',
+        a = e.COMMENT('--', '$'),
+        s = {
             begin: '\\s+:\\s+',
             end: '\\s*(:=|;|\\)|=>|$)',
-            illegal: s,
+            illegal: i,
             contains: [
                 {
                     beginKeywords: 'loop for declare others',
@@ -22,7 +19,7 @@ function t(e) {
                 },
                 {
                     className: 'type',
-                    begin: o,
+                    begin: r,
                     endsParent: !0,
                     relevance: 0
                 }
@@ -36,7 +33,7 @@ function t(e) {
             literal: ['True', 'False']
         },
         contains: [
-            l,
+            a,
             {
                 className: 'string',
                 begin: /"/,
@@ -54,12 +51,12 @@ function t(e) {
             },
             {
                 className: 'number',
-                begin: a,
+                begin: '\\b(' + (t + '#\\w+(\\.\\w+)?#(' + n) + ')?|' + (t + '(\\.' + t + ')?(' + n) + ')?)',
                 relevance: 0
             },
             {
                 className: 'symbol',
-                begin: "'" + o
+                begin: "'" + r
             },
             {
                 className: 'title',
@@ -68,7 +65,7 @@ function t(e) {
                 keywords: 'package body',
                 excludeBegin: !0,
                 excludeEnd: !0,
-                illegal: s
+                illegal: i
             },
             {
                 begin: '(\\b(with|overriding)\\s+)?\\b(function|procedure)\\s+',
@@ -76,16 +73,16 @@ function t(e) {
                 keywords: 'overriding function procedure with is renames return',
                 returnBegin: !0,
                 contains: [
-                    l,
+                    a,
                     {
                         className: 'title',
                         begin: '(\\bwith\\s+)?\\b(function|procedure)\\s+',
                         end: '(\\(|\\s+|$)',
                         excludeBegin: !0,
                         excludeEnd: !0,
-                        illegal: s
+                        illegal: i
                     },
-                    u,
+                    s,
                     {
                         className: 'type',
                         begin: '\\breturn\\s+',
@@ -94,7 +91,7 @@ function t(e) {
                         excludeBegin: !0,
                         excludeEnd: !0,
                         endsParent: !0,
-                        illegal: s
+                        illegal: i
                     }
                 ]
             },
@@ -104,10 +101,9 @@ function t(e) {
                 end: '\\s+',
                 keywords: 'type',
                 excludeBegin: !0,
-                illegal: s
+                illegal: i
             },
-            u
+            s
         ]
     };
-}
-e.exports = t;
+};

@@ -1,15 +1,15 @@
 n.d(t, {
     K: function () {
-        return c;
+        return u;
     }
-});
-var r = n(653041);
-var i = n(392711),
-    a = n.n(i),
-    o = n(379649),
+}),
+    n(653041);
+var r = n(392711),
+    i = n.n(r),
+    a = n(379649),
     s = n(126168),
-    l = n(981631);
-function u(e, t, n) {
+    o = n(981631);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function u(e, t, n) {
         e
     );
 }
-class c {
+class u {
     reset(e) {
         (this.current = null), (this.history = []), null != e && this.update(e);
     }
@@ -31,40 +31,44 @@ class c {
             ((this.current = e),
             this.history.push({
                 state: e,
-                startTime: (0, o.zO)()
+                startTime: (0, a.zO)()
             }));
     }
     getVoiceConnectionSuccessStats() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, o.zO)(),
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, a.zO)(),
             t = this.getStateDurations(e),
-            n = (e) => a().sumBy(t, (t) => (t.state === e ? t.durationMs : 0));
+            n = (e) => i().sumBy(t, (t) => (t.state === e ? t.durationMs : 0));
         return {
-            state_awaiting_endpoint_ms: n(l.hes.AWAITING_ENDPOINT),
-            state_authenticating_ms: n(l.hes.AUTHENTICATING),
-            state_connecting_ms: n(l.hes.CONNECTING),
-            state_disconnected_ms: n(l.hes.DISCONNECTED),
-            state_ice_checking_ms: n(l.hes.ICE_CHECKING),
-            state_no_route_ms: n(l.hes.NO_ROUTE),
-            state_rtc_connecting_ms: n(l.hes.RTC_CONNECTING),
-            state_rtc_disconnected_ms: n(l.hes.RTC_DISCONNECTED)
+            state_awaiting_endpoint_ms: n(o.hes.AWAITING_ENDPOINT),
+            state_authenticating_ms: n(o.hes.AUTHENTICATING),
+            state_connecting_ms: n(o.hes.CONNECTING),
+            state_disconnected_ms: n(o.hes.DISCONNECTED),
+            state_ice_checking_ms: n(o.hes.ICE_CHECKING),
+            state_no_route_ms: n(o.hes.NO_ROUTE),
+            state_rtc_connecting_ms: n(o.hes.RTC_CONNECTING),
+            state_rtc_disconnected_ms: n(o.hes.RTC_DISCONNECTED)
         };
     }
     getStateDurations(e) {
         if (0 === this.history.length) return [];
         let t = (0, s.Z)(this.history, (e, t) => ({
-                state: e.state,
-                durationMs: t.startTime - e.startTime
-            })),
-            n = () => {
-                let t = a().last(this.history);
-                return {
-                    state: t.state,
-                    durationMs: e - t.startTime
-                };
-            };
-        return t.push(n()), t;
+            state: e.state,
+            durationMs: t.startTime - e.startTime
+        }));
+        return (
+            t.push(
+                (() => {
+                    let t = i().last(this.history);
+                    return {
+                        state: t.state,
+                        durationMs: e - t.startTime
+                    };
+                })()
+            ),
+            t
+        );
     }
     constructor(e) {
-        u(this, 'current', null), u(this, 'history', []), null != e && this.update(e);
+        l(this, 'current', null), l(this, 'history', []), null != e && this.update(e);
     }
 }

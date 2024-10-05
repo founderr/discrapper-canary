@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = ['exports', 'register', 'file', 'shl', 'array', 'record', 'property', 'for', 'mod', 'while', 'set', 'ally', 'label', 'uses', 'raise', 'not', 'stored', 'class', 'safecall', 'var', 'interface', 'or', 'private', 'static', 'exit', 'index', 'inherited', 'to', 'else', 'stdcall', 'override', 'shr', 'asm', 'far', 'resourcestring', 'finalization', 'packed', 'virtual', 'out', 'and', 'protected', 'library', 'do', 'xorwrite', 'goto', 'near', 'function', 'end', 'div', 'overload', 'object', 'unit', 'begin', 'string', 'on', 'inline', 'repeat', 'until', 'destructor', 'write', 'message', 'program', 'with', 'read', 'initialization', 'except', 'default', 'nil', 'if', 'case', 'cdecl', 'in', 'downto', 'threadvar', 'of', 'try', 'pascal', 'const', 'external', 'constructor', 'type', 'public', 'then', 'implementation', 'finally', 'published', 'procedure', 'absolute', 'reintroduce', 'operator', 'as', 'is', 'abstract', 'alias', 'assembler', 'bitpacked', 'break', 'continue', 'cppdecl', 'cvar', 'enumerator', 'experimental', 'platform', 'deprecated', 'unimplemented', 'dynamic', 'export', 'far16', 'forward', 'generic', 'helper', 'implements', 'interrupt', 'iochecks', 'local', 'name', 'nodefault', 'noreturn', 'nostackframe', 'oldfpccall', 'otherwise', 'saveregisters', 'softfloat', 'specialize', 'strict', 'unaligned', 'varargs'],
         n = [e.C_LINE_COMMENT_MODE, e.COMMENT(/\{/, /\}/, { relevance: 0 }), e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 })],
         r = {
@@ -21,11 +21,6 @@ function t(e) {
             contains: [{ begin: /''/ }]
         },
         a = {
-            className: 'number',
-            relevance: 0,
-            variants: [{ begin: '\\$[0-9A-Fa-f]+' }, { begin: '&[0-7]+' }, { begin: '%[01]+' }]
-        },
-        o = {
             className: 'string',
             begin: /(#\d+)+/
         },
@@ -34,7 +29,7 @@ function t(e) {
             returnBegin: !0,
             contains: [e.TITLE_MODE]
         },
-        l = {
+        o = {
             className: 'function',
             beginKeywords: 'function constructor destructor procedure',
             end: /[:;]/,
@@ -46,7 +41,7 @@ function t(e) {
                     begin: /\(/,
                     end: /\)/,
                     keywords: t,
-                    contains: [i, o, r].concat(n)
+                    contains: [i, a, r].concat(n)
                 },
                 r
             ].concat(n)
@@ -57,7 +52,18 @@ function t(e) {
         case_insensitive: !0,
         keywords: t,
         illegal: /"|\$[G-Zg-z]|\/\*|<\/|\|/,
-        contains: [i, o, e.NUMBER_MODE, a, s, l, r].concat(n)
+        contains: [
+            i,
+            a,
+            e.NUMBER_MODE,
+            {
+                className: 'number',
+                relevance: 0,
+                variants: [{ begin: '\\$[0-9A-Fa-f]+' }, { begin: '&[0-7]+' }, { begin: '%[01]+' }]
+            },
+            s,
+            o,
+            r
+        ].concat(n)
     };
-}
-e.exports = t;
+};

@@ -1,68 +1,64 @@
 n.d(t, {
     Gg: function () {
-        return x;
+        return C;
     },
     Kb: function () {
-        return D;
+        return O;
     },
     Ww: function () {
-        return k;
+        return D;
     },
     ZI: function () {
-        return y;
+        return A;
     },
     _W: function () {
-        return L;
+        return N;
     },
     uF: function () {
-        return M;
+        return R;
     }
-});
-var r = n(653041);
-var i = n(998459);
-var a = n(47120);
-var o = n(411104);
-var s = n(789020);
-var l = n(392711),
-    u = n.n(l),
-    c = n(913527),
-    d = n.n(c),
-    _ = n(991637),
-    E = n.n(_),
-    f = n(873546),
-    h = n(544891),
-    p = n(355467),
-    m = n(134432),
-    I = n(351402),
-    T = n(853872),
-    g = n(78839),
-    S = n(526167),
-    A = n(630388),
-    v = n(823379);
+}),
+    n(653041),
+    n(998459),
+    n(47120),
+    n(411104),
+    n(789020);
+var r = n(392711),
+    i = n.n(r),
+    a = n(913527),
+    s = n.n(a),
+    o = n(991637),
+    l = n.n(o),
+    u = n(873546),
+    c = n(544891),
+    d = n(355467),
+    _ = n(134432),
+    E = n(351402),
+    f = n(853872),
+    h = n(78839),
+    p = n(526167),
+    I = n(630388),
+    m = n(823379);
 n(358085);
-var N = n(709054),
-    O = n(981631);
-n(689938), E().shim();
-let R = !f.tq && !f.Em && -1 !== (0, S.vu)(),
-    C = 3;
-function y(e, t) {
-    let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: o, guildId: s } = t,
-        l = {
-            state: {
-                analyticsSource: n,
-                analyticsProperties: r
-            },
-            search: null != i ? '?store_listing_id='.concat(i) : ''
-        };
+var T = n(709054),
+    S = n(981631);
+n(689938), l().shim();
+let g = !u.tq && !u.Em && -1 !== (0, p.vu)();
+function A(e, t) {
+    let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: s, guildId: o } = t;
     return {
-        pathname: null != o && null != s ? O.Z5c.CHANNEL(s, o, e) : O.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
-        ...l
+        pathname: null != s && null != o ? S.Z5c.CHANNEL(o, s, e) : S.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
+        state: {
+            analyticsSource: n,
+            analyticsProperties: r
+        },
+        search: null != i ? '?store_listing_id='.concat(i) : ''
     };
 }
-function L(e, t, n, r) {
+function N(e, t, n, r) {
     var i;
     let a;
-    let o = window.GLOBAL_ENV.CDN_HOST;
+    let s = window.GLOBAL_ENV.CDN_HOST;
     if (null == r)
         switch (t.mimeType || t.mime_type) {
             case 'video/quicktime':
@@ -75,45 +71,47 @@ function L(e, t, n, r) {
             default:
                 r = 'webp';
         }
-    'webp' === r && !R && (r = 'png');
-    let s = 'string' == typeof t ? t : t.id,
+    'webp' === r && !g && (r = 'png');
+    let o = 'string' == typeof t ? t : t.id,
         l = ((i = 'https:'), 'https:');
     return (
         (a =
-            null != o
-                ? ''.concat(l, '//').concat(o, '/app-assets/').concat(e, '/store/').concat(s, '.').concat(r)
+            null != s
+                ? ''.concat(l, '//').concat(s, '/app-assets/').concat(e, '/store/').concat(o, '.').concat(r)
                 : ''
                       .concat(l)
                       .concat(window.GLOBAL_ENV.API_ENDPOINT)
-                      .concat(O.ANM.STORE_ASSET(e, s, r))),
-        null != n && (a += '?size='.concat((0, m.oO)(n * (0, m.x_)()))),
+                      .concat(S.ANM.STORE_ASSET(e, o, r))),
+        null != n && (a += '?size='.concat((0, _.oO)(n * (0, _.x_)()))),
         a
     );
 }
-function b() {
-    return new Promise(async (e) => {
-        if (g.ZP.hasFetchedSubscriptions()) e();
-        else if (I.Z.isSubscriptionFetching) {
-            let t = () => {
-                I.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
-            };
-            t();
-        } else await (0, p.jg)(), e();
-    });
-}
-async function D(e) {
+async function O(e) {
     var t, n, r, i;
     let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (a) {
         let e = [];
-        !T.Z.hasFetchedPaymentSources && e.push(null !== (n = I.Z.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, p.tZ)()), !I.Z.ipCountryCodeLoaded && e.push((0, p.GE)()), e.push(b()), await Promise.allSettled(e);
+        !f.Z.hasFetchedPaymentSources && e.push(null !== (n = E.Z.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, d.tZ)()),
+            !E.Z.ipCountryCodeLoaded && e.push((0, d.GE)()),
+            e.push(
+                new Promise(async (e) => {
+                    if (h.ZP.hasFetchedSubscriptions()) e();
+                    else if (E.Z.isSubscriptionFetching) {
+                        let t = () => {
+                            E.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
+                        };
+                        t();
+                    } else await (0, d.jg)(), e();
+                })
+            ),
+            await Promise.allSettled(e);
     }
-    let o = T.Z.getDefaultBillingCountryCode(),
-        s = null !== (r = null === (t = T.Z.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null,
-        l = g.ZP.getPremiumTypeSubscription();
-    null != l && null != l.paymentSourceId && (s = l.paymentSourceId), null === o && (o = null !== (i = I.Z.ipCountryCode) && void 0 !== i ? i : null);
+    let s = f.Z.getDefaultBillingCountryCode(),
+        o = null !== (r = null === (t = f.Z.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null,
+        l = h.ZP.getPremiumTypeSubscription();
+    null != l && null != l.paymentSourceId && (o = l.paymentSourceId), null === s && (s = null !== (i = E.Z.ipCountryCode) && void 0 !== i ? i : null);
     let u = {};
-    if ((null != o && (u.country_code = o), null != s && (u.payment_source_id = s), null != o || null != s)) {
+    if ((null != s && (u.country_code = s), null != o && (u.payment_source_id = o), null != s || null != o)) {
         if (
             ('string' == typeof e &&
                 (e = {
@@ -128,104 +126,102 @@ async function D(e) {
             ...e.query
         };
     }
-    return h.tn.get(e);
+    return c.tn.get(e);
 }
-function M(e, t, n) {
+function R(e, t, n) {
     let r = t.getApplication(e);
     return null == r || null == r.primarySkuId ? null : n.get(r.primarySkuId);
 }
-function P(e, t, n) {
-    var r;
-    let i = null !== (r = n.getNowPlaying(e)) && void 0 !== r ? r : {},
-        a = N.default
-            .keys(i)
-            .map((e) => {
-                let n = t.getUser(e);
-                return null == n
-                    ? null
-                    : {
-                          user: n,
-                          startTime: i[n.id].startedPlaying
-                      };
-            })
-            .filter(v.lm)
-            .sort((e, t) => t.startTime - e.startTime);
-    return 0 === a.length
-        ? null
-        : {
-              type: O.AzA.NOW_PLAYING,
-              userInfo: a
-          };
-}
-function U(e, t, n) {
-    let r = n.getStatisticsForApplication(e);
-    if (null == r) return null;
-    let i = r
-        .map((e) => {
-            let n = t.getUser(e.user_id);
-            return null == n
+let v = [];
+function C(e, t, n, r, a) {
+    let s = t.get(e);
+    if (null == s) return v;
+    let o = s.applicationId,
+        l = [],
+        u = [],
+        c = (function (e, t, n) {
+            var r;
+            let i = null !== (r = n.getNowPlaying(e)) && void 0 !== r ? r : {},
+                a = T.default
+                    .keys(i)
+                    .map((e) => {
+                        let n = t.getUser(e);
+                        return null == n
+                            ? null
+                            : {
+                                  user: n,
+                                  startTime: i[n.id].startedPlaying
+                              };
+                    })
+                    .filter(m.lm)
+                    .sort((e, t) => t.startTime - e.startTime);
+            return 0 === a.length
                 ? null
                 : {
-                      user: n,
-                      endTime: Date.parse(e.last_played_at)
+                      type: S.AzA.NOW_PLAYING,
+                      userInfo: a
                   };
-        })
-        .filter(v.lm)
-        .sort((e, t) => t.endTime - e.endTime);
-    return 0 === i.length
-        ? null
-        : {
-              type: O.AzA.EVER_PLAYED,
-              userInfo: i
-          };
-}
-let w = [];
-function x(e, t, n, r, i) {
-    let a = t.get(e);
-    if (null == a) return w;
-    let o = a.applicationId,
-        s = [],
-        l = [],
-        c = P(o, n, r);
+        })(o, n, r);
     null != c &&
-        (s.push(c),
-        (l = c.userInfo.map((e) => {
+        (l.push(c),
+        (u = c.userInfo.map((e) => {
             let { user: t } = e;
             return t.id;
         })));
-    let d = i.getStatisticsForApplication(o);
+    let d = a.getStatisticsForApplication(o);
     if (null != d) {
         let e = d.map((e) => e.user_id);
-        if (u().difference(e, l).length > 0) {
-            let e = U(o, n, i);
-            null != e && s.push(e);
+        if (i().difference(e, u).length > 0) {
+            let e = (function (e, t, n) {
+                let r = n.getStatisticsForApplication(e);
+                if (null == r) return null;
+                let i = r
+                    .map((e) => {
+                        let n = t.getUser(e.user_id);
+                        return null == n
+                            ? null
+                            : {
+                                  user: n,
+                                  endTime: Date.parse(e.last_played_at)
+                              };
+                    })
+                    .filter(m.lm)
+                    .sort((e, t) => t.endTime - e.endTime);
+                return 0 === i.length
+                    ? null
+                    : {
+                          type: S.AzA.EVER_PLAYED,
+                          userInfo: i
+                      };
+            })(o, n, a);
+            null != e && l.push(e);
         }
     }
-    return s;
+    return l;
 }
-let G = [];
-function k(e, t, n) {
+let L = [];
+function D(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
-    if (null == r || null == i) return G;
+    if (null == r || null == i) return L;
     let a = [];
-    (0, A.yE)(r.flags, O.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: O.AzA.HAS_FREE_PREMIUM_CONTENT });
+    (0, I.yE)(r.flags, S.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: S.AzA.HAS_FREE_PREMIUM_CONTENT });
     let o = r.releaseDate;
     return (
         null != o &&
-            d()().diff(o, 'months') < C &&
-            (r.accessType === O.kGb.EARLY_ACCESS
+            3 > s()().diff(o, 'months') &&
+            (r.accessType === S.kGb.EARLY_ACCESS
                 ? a.push({
-                      type: O.AzA.EARLY_ACCESS,
+                      type: S.AzA.EARLY_ACCESS,
                       releaseDate: o
                   })
                 : a.push({
-                      type: O.AzA.RECENT_RELEASE_DATE,
+                      type: S.AzA.RECENT_RELEASE_DATE,
                       releaseDate: o
                   })),
         null != i.flavorText &&
             a.push({
-                type: O.AzA.FLAVOR_TEXT,
+                type: S.AzA.FLAVOR_TEXT,
                 flavorText: i.flavorText
             }),
         a

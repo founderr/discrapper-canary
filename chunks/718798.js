@@ -1,30 +1,25 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(665443),
-    o = n.n(a),
-    s = n(39383),
-    l = n.n(s),
+    s = n.n(a),
+    o = n(39383),
+    l = n.n(o),
     u = n(992774),
     c = n(672784),
     d = n(369711),
     _ = n(649754);
 function E(e) {
-    var t, n, r, i;
-    let a = null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : null === (n = r.app) || void 0 === n ? void 0 : null === (t = n.getReleaseChannel) || void 0 === t ? void 0 : t.call(n);
-    return 'canary' === a || 'development' === a ? (0, d.m)(e) : (0, c.y)(e);
-}
-function f(e) {
-    let { streamId: t, paused: n, onReady: a, onResize: s, className: c, ...d } = e,
-        f = i.useRef(null),
-        { current: h } = i.useRef(l()('media-engine-video-'));
+    let { streamId: t, paused: n, onReady: a, onResize: o, className: E, ...f } = e,
+        h = i.useRef(null),
+        { current: p } = i.useRef(l()('media-engine-video-'));
     return (
         i.useEffect(() => {
-            let e = f.current;
+            let e = h.current;
             if (!n && null != e) {
                 let n = !1,
                     r = (t, r) => {
@@ -32,8 +27,8 @@ function f(e) {
                             (e.width !== t || e.height !== r) &&
                                 ((e.width = t),
                                 (e.height = r),
-                                null == s ||
-                                    s({
+                                null == o ||
+                                    o({
                                         width: t,
                                         height: r
                                     }));
@@ -41,31 +36,35 @@ function f(e) {
                     i = (0, u.zS)();
                 if (null != i.addVideoOutputSink)
                     return (
-                        i.addVideoOutputSink(h, t, r),
+                        i.addVideoOutputSink(p, t, r),
                         () => {
-                            i.removeVideoOutputSink(h, t);
+                            i.removeVideoOutputSink(p, t);
                         }
                     );
                 {
-                    let n = E(e);
+                    let n = (function (e) {
+                        var t, n, r, i;
+                        let a = null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : null === (n = r.app) || void 0 === n ? void 0 : null === (t = n.getReleaseChannel) || void 0 === t ? void 0 : t.call(n);
+                        return 'canary' === a || 'development' === a ? (0, d.m)(e) : (0, c.y)(e);
+                    })(e);
                     if (null == n) return;
                     return (
-                        _.Z.addSink(t, f, (e) => {
+                        _.Z.addSink(t, h, (e) => {
                             r(e.width, e.height), n.render(e);
                         }),
                         () => {
-                            _.Z.removeSink(t, f);
+                            _.Z.removeSink(t, h);
                         }
                     );
                 }
             }
-        }, [t, n, s, a, h]),
+        }, [t, n, o, a, p]),
         (0, r.jsx)('canvas', {
-            id: h,
-            className: o()('media-engine-video', c),
-            ref: f,
-            ...d
+            id: p,
+            className: s()('media-engine-video', E),
+            ref: h,
+            ...f
         })
     );
 }
-f.defaultProps = { paused: !1 };
+E.defaultProps = { paused: !1 };

@@ -1,29 +1,28 @@
-var r = n(47120);
-var i = n(147913),
-    a = n(336197),
-    o = n(341298),
+n(47120);
+var r = n(147913),
+    i = n(336197),
+    a = n(341298),
     s = n(558921),
-    l = n(981631);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class c extends i.Z {
+    o = n(981631);
+class l extends r.Z {
     async handleChannelCreate(e) {
         let { channel: t } = e;
-        (0, o.tr)(t) && (await (0, o.mM)(s.y), (0, a.Z)(l.Z5c.CHANNEL(null, t.id)));
+        (0, a.tr)(t) && (await (0, a.mM)(s.y), (0, i.Z)(o.Z5c.CHANNEL(null, t.id)));
     }
     constructor(...e) {
-        super(...e), u(this, 'actions', { CHANNEL_CREATE: this.handleChannelCreate });
+        var t, n, r;
+        super(...e),
+            (t = this),
+            (n = 'actions'),
+            (r = { CHANNEL_CREATE: this.handleChannelCreate }),
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: r,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (t[n] = r);
     }
 }
-t.Z = new c();
+t.Z = new l();

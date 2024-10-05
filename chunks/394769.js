@@ -2,11 +2,11 @@ var r = n(735250);
 n(470079);
 var i = n(212433),
     a = n(481060),
-    o = n(565138),
-    s = n(678558),
+    s = n(565138),
+    o = n(678558),
     l = n(981631),
     u = n(841365);
-function c(e) {
+t.Z = function (e) {
     let { closeLayer: t, guild: n, isVisible: c } = e,
         d = (0, a.useSpring)({
             transform: c ? 'translateY(-100%)' : 'translateY(0%)',
@@ -25,10 +25,10 @@ function c(e) {
                 (0, r.jsxs)('div', {
                     className: u.guildInfo,
                     children: [
-                        (0, r.jsx)(o.Z, {
+                        (0, r.jsx)(s.Z, {
                             className: u.guildIcon,
                             guild: n,
-                            size: o.Z.Sizes.LARGER
+                            size: s.Z.Sizes.LARGER
                         }),
                         (0, r.jsx)(a.Heading, {
                             className: u.guildName,
@@ -37,7 +37,7 @@ function c(e) {
                         })
                     ]
                 }),
-                (0, r.jsx)(s.Z, {
+                (0, r.jsx)(o.Z, {
                     className: u.ctaButton,
                     guild: n,
                     analyticsLocation: {
@@ -53,5 +53,4 @@ function c(e) {
             ]
         })
     });
-}
-t.Z = c;
+};

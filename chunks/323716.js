@@ -1,73 +1,60 @@
-var r = n(610138);
-var i = n(216116);
-var a = n(78328);
-var o = n(815648);
-var s = n(47120);
-var l = n(724458);
-var u = n(653041);
-var c = n(315314);
-var d = n(203651);
-var _ = n(544891),
-    E = n(569611),
-    f = n(547010),
-    h = n(580189),
-    p = n(397550),
-    m = n(931619);
+n(610138), n(216116), n(78328), n(815648), n(47120), n(724458), n(653041), n(315314), n(203651);
+var r = n(544891),
+    i = n(569611),
+    a = n(547010),
+    s = n(580189),
+    o = n(397550),
+    l = n(931619);
 n(358085);
-var I = n(960048),
-    T = n(591759),
-    g = n(303850),
-    S = n(981631);
-let A = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
-    v = new g.R();
-function N(e) {
-    let t = new URLSearchParams();
-    t.append('query', '@http.x_client_trace_id:"'.concat(e, '"')), t.append('showAllSpans', 'true');
-    let n = T.Z.toURLSafe('traces?'.concat(t.toString()), 'https://datadog.discord.tools/apm/');
-    return null == n ? null : n.toString();
-}
-function O() {
-    if (null == Intl.DateTimeFormat) return null;
-    let e = Intl.DateTimeFormat();
-    return null == e.resolvedOptions ? null : e.resolvedOptions().timeZone;
-}
-let R = /\/api(\/v\d+)?\/science/;
-function C(e) {
-    let t = 10;
-    return e.reduce((e, n) => (10 === t ? e.push(n) : e.push(''.concat(n, ';q=0.').concat(t)), (t = Math.max(t - 1, 1)), e), []).join(',');
-}
-(0, _.lg)({
+var u = n(960048),
+    c = n(591759),
+    d = n(303850),
+    _ = n(981631);
+let E = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
+    f = new d.R(),
+    h = /\/api(\/v\d+)?\/science/;
+(0, r.lg)({
     prepareRequest(e) {
         let { default: t } = n(314897),
-            { default: r } = n(857192),
-            { default: i } = n(706454),
-            { default: a } = n(594174),
-            { default: o } = n(626135),
-            { isPlatformEmbedded: s } = n(358085);
+            { default: a } = n(857192),
+            { default: s } = n(706454),
+            { default: o } = n(594174),
+            { default: l } = n(626135),
+            { isPlatformEmbedded: d } = n(358085);
         if ('/' === e.url[0]) {
-            var l, u;
-            (e.url = (0, _.K0)() + e.url), !('Authorization' in e.header) && !('authorization' in e.header) && e.set('Authorization', t.getToken());
-            let n = o.getSuperPropertiesBase64();
+            var _, p;
+            (e.url = (0, r.K0)() + e.url), !('Authorization' in e.header) && !('authorization' in e.header) && e.set('Authorization', t.getToken());
+            let n = l.getSuperPropertiesBase64();
             null != n && e.set('X-Super-Properties', n);
-            let c = t.getFingerprint();
-            if ((null != c && '' !== c && e.set('X-Fingerprint', c), s)) {
-                let t = [];
-                null != navigator && (t = ((l = [...navigator.languages]), l));
-                let n = C(t);
-                e.set('Accept-Language', n);
+            let i = t.getFingerprint();
+            if ((null != i && '' !== i && e.set('X-Fingerprint', i), d)) {
+                let t,
+                    n = [];
+                null != navigator && (n = ((_ = [...navigator.languages]), _));
+                let r = ((t = 10), n.reduce((e, n) => (10 === t ? e.push(n) : e.push(''.concat(n, ';q=0.').concat(t)), (t = Math.max(t - 1, 1)), e), []).join(','));
+                e.set('Accept-Language', r);
             }
-            e.set('X-Discord-Locale', i.locale);
-            let d = O();
-            null != d && e.set('X-Discord-Timezone', d);
-            let E = r.getDebugOptionsHeaderValue();
-            if ((null != E && '' !== E && e.set('X-Debug-Options', E), r.isTracingRequests)) {
-                let t = a.getCurrentUser(),
-                    n = v.generate(null !== (u = null == t ? void 0 : t.id) && void 0 !== u ? u : '0');
+            e.set('X-Discord-Locale', s.locale);
+            let u = (function () {
+                if (null == Intl.DateTimeFormat) return null;
+                let e = Intl.DateTimeFormat();
+                return null == e.resolvedOptions ? null : e.resolvedOptions().timeZone;
+            })();
+            null != u && e.set('X-Discord-Timezone', u);
+            let E = a.getDebugOptionsHeaderValue();
+            if ((null != E && '' !== E && e.set('X-Debug-Options', E), a.isTracingRequests)) {
+                let t = o.getCurrentUser(),
+                    n = f.generate(null !== (p = null == t ? void 0 : t.id) && void 0 !== p ? p : '0');
                 e.set('x-client-trace-id', n);
                 try {
                     let t = new URL(e.url).pathname;
-                    if (!R.test(t)) {
-                        let r = N(n);
+                    if (!h.test(t)) {
+                        let r = (function (e) {
+                            let t = new URLSearchParams();
+                            t.append('query', '@http.x_client_trace_id:"'.concat(e, '"')), t.append('showAllSpans', 'true');
+                            let n = c.Z.toURLSafe('traces?'.concat(t.toString()), 'https://datadog.discord.tools/apm/');
+                            return null == n ? null : n.toString();
+                        })(n);
                         null !== r && console.debug('%c[tracing]%c %s %s\n%s', 'font-weight: bold', '', e.method, t, r);
                     }
                 } catch (e) {
@@ -75,22 +62,21 @@ function C(e) {
                 }
             }
         }
-        E.Hj('Network', 'Sending '.concat(e.method, ' to ').concat(e.url)),
+        i.Hj('Network', 'Sending '.concat(e.method, ' to ').concat(e.url)),
             e.on('response', (t) => {
-                let n = null != t && t.status >= 400 ? t.text : null,
-                    r = null == n ? '' : 'and body: '.concat(n);
-                E.Hj(
+                let n = null != t && t.status >= 400 ? t.text : null;
+                i.Hj(
                     'Network',
                     'Completed '
                         .concat(e.method, ' to ')
                         .concat(e.url, ' with status: ')
                         .concat(null == t ? void 0 : t.status, ' ')
-                        .concat(r)
+                        .concat(null == n ? '' : 'and body: '.concat(n))
                 );
             }),
             e.on('error', (t, n) => {
                 if (
-                    (E.Hj(
+                    (i.Hj(
                         'Network',
                         'Failed '
                             .concat(e.method, ' to ')
@@ -101,11 +87,11 @@ function C(e) {
                     null != t && 'parse' in t && t.parse)
                 ) {
                     let n = '[FILTERED]';
-                    if (A.includes(e.url)) {
-                        var r, i;
-                        n = null === (i = e.xhr) || void 0 === i ? void 0 : null === (r = i.responseText) || void 0 === r ? void 0 : r.slice(0, 1000);
+                    if (E.includes(e.url)) {
+                        var r, a;
+                        n = null === (a = e.xhr) || void 0 === a ? void 0 : null === (r = a.responseText) || void 0 === r ? void 0 : r.slice(0, 1000);
                     }
-                    I.Z.addBreadcrumb({
+                    u.Z.addBreadcrumb({
                         category: 'superagent',
                         message: 'Failed to parse HTTP response.',
                         data: {
@@ -119,7 +105,7 @@ function C(e) {
             });
     },
     interceptResponse(e, t, r) {
-        var i, a, o, s, l;
+        var i, l, u, c, d;
         return 400 === e.statusCode && (null === (i = e.body) || void 0 === i ? void 0 : i.captcha_key)
             ? (Promise.all([n.e('36514').then(n.bind(n, 475271)), n.e('31177').then(n.bind(n, 353250))])
                   .then((t) => {
@@ -133,7 +119,7 @@ function C(e) {
                   })
                   .catch(r),
               !0)
-            : 401 === e.statusCode && (null === (a = e.body) || void 0 === a ? void 0 : a.code) === S.evJ.MFA_REQUIRED && (null === (o = e.body) || void 0 === o ? void 0 : o.mfa)
+            : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === _.evJ.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa)
               ? (Promise.all([n.e('52030'), n.e('78030')])
                     .then(n.bind(n, 24031))
                     .then((n) => {
@@ -142,7 +128,7 @@ function C(e) {
                     })
                     .catch(r),
                 !0)
-              : (0, p.b)(e.statusCode, null === (s = e.body) || void 0 === s ? void 0 : s.code)
+              : (0, o.b)(e.statusCode, null === (c = e.body) || void 0 === c ? void 0 : c.code)
                 ? (Promise.resolve()
                       .then(n.bind(n, 895886))
                       .then((e) => {
@@ -150,7 +136,7 @@ function C(e) {
                           t();
                       }),
                   !1)
-                : (0, f.b)(e.statusCode, null === (l = e.body) || void 0 === l ? void 0 : l.code)
+                : (0, a.b)(e.statusCode, null === (d = e.body) || void 0 === d ? void 0 : d.code)
                   ? (n
                         .e('76731')
                         .then(n.bind(n, 626892))
@@ -160,7 +146,7 @@ function C(e) {
                             r(null === (n = e.body) || void 0 === n ? void 0 : n.guild_id);
                         }),
                     !1)
-                  : ((0, h.X)(e) &&
+                  : ((0, s.X)(e) &&
                         n
                             .e('89715')
                             .then(n.bind(n, 707708))
@@ -171,6 +157,6 @@ function C(e) {
                     !1);
     }
 }),
-    (0, _.Jt)(async (e) => {
-        if ((E.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), !m.Z.isOnline())) await m.Z.awaitOnline(), E.Hj('Network', 'Network detected online, retrying '.concat(e));
+    (0, r.Jt)(async (e) => {
+        if ((i.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), !l.Z.isOnline())) await l.Z.awaitOnline(), i.Hj('Network', 'Network detected online, retrying '.concat(e));
     });

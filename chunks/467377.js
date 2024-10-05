@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = {
             className: 'number',
@@ -24,7 +24,7 @@ function t(e) {
             className: 'literal',
             begin: /\bon|off|true|false|yes|no\b/
         },
-        o = {
+        s = {
             className: 'string',
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -48,16 +48,7 @@ function t(e) {
                 }
             ]
         },
-        s = {
-            begin: /\[/,
-            end: /\]/,
-            contains: [r, a, i, o, n, 'self'],
-            relevance: 0
-        },
-        l = /[A-Za-z0-9_-]+/,
-        u = /"(\\"|[^"])*"/,
-        c = /'[^']*'/,
-        d = t.either(l, u, c);
+        o = t.either(/[A-Za-z0-9_-]+/, /"(\\"|[^"])*"/, /'[^']*'/);
     return {
         name: 'TOML, also INI',
         aliases: ['toml'],
@@ -71,14 +62,25 @@ function t(e) {
                 end: /\]+/
             },
             {
-                begin: t.concat(d, '(\\s*\\.\\s*', d, ')*', t.lookahead(/\s*=\s*[^#\s]/)),
+                begin: t.concat(o, '(\\s*\\.\\s*', o, ')*', t.lookahead(/\s*=\s*[^#\s]/)),
                 className: 'attr',
                 starts: {
                     end: /$/,
-                    contains: [r, s, a, i, o, n]
+                    contains: [
+                        r,
+                        {
+                            begin: /\[/,
+                            end: /\]/,
+                            contains: [r, a, i, s, n, 'self'],
+                            relevance: 0
+                        },
+                        a,
+                        i,
+                        s,
+                        n
+                    ]
                 }
             }
         ]
     };
-}
-e.exports = t;
+};

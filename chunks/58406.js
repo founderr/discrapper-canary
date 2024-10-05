@@ -1,59 +1,46 @@
 n.d(t, {
     g: function () {
-        return d;
+        return u;
     }
-});
-var r = n(411104);
-var i = n(626135),
-    a = n(823967),
-    o = n(281058),
+}),
+    n(411104);
+var r = n(626135),
+    i = n(823967),
+    a = n(281058),
     s = n(761274),
-    l = n(981631),
-    u = n(689938);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class d {
+    o = n(981631),
+    l = n(689938);
+class u {
     async requestAuthorization(e, t, n) {
         if ('function' != typeof t) throw Error('requestAuthorization: Was provided with not a function for '.concat(e, '.'));
-        i.default.track(l.rMx.PERMISSIONS_REQUESTED, { type: e });
-        let r = (await t()) === s.NZ.AUTHORIZED,
-            o = r ? s.PQ.ACCEPTED : s.PQ.DENIED;
-        return a.Z.setPermission(e, o), !r && n.showAuthorizationError && this.showAlert(e), r;
+        r.default.track(o.rMx.PERMISSIONS_REQUESTED, { type: e });
+        let a = (await t()) === s.NZ.AUTHORIZED,
+            l = a ? s.PQ.ACCEPTED : s.PQ.DENIED;
+        return i.Z.setPermission(e, l), !a && n.showAuthorizationError && this.showAlert(e), a;
     }
     requestPermission(e, t) {
-        let n = d.defaultNativePermissionsRequestOptions(t);
+        let n = u.defaultNativePermissionsRequestOptions(t);
         return this.requestPermissionCore(e, n);
     }
     hasPermission(e, t) {
-        let n = d.defaultNativePermissionsRequestOptions(t);
+        let n = u.defaultNativePermissionsRequestOptions(t);
         return this.hasPermissionCore(e, n);
     }
     showAlert(e) {
         let t = {
-            [s.Eu.CAMERA]: ''.concat(u.Z.Messages.NO_CAMERA_ACCESS, '. ').concat(u.Z.Messages.ENABLE_PRIVACY_ACCESS),
-            [s.Eu.AUDIO]: ''.concat(u.Z.Messages.NO_MICRPHONE_ACCESS, '. ').concat(u.Z.Messages.ENABLE_PRIVACY_ACCESS),
-            [s.Eu.PHOTOS]: ''.concat(u.Z.Messages.NO_PHOTOS_ACCESS, '. ').concat(u.Z.Messages.ENABLE_PRIVACY_ACCESS),
-            [s.Eu.INPUT_MONITORING]: ''.concat(u.Z.Messages.NO_INPUT_MONITORING_ACCESS, '. ').concat(u.Z.Messages.ENABLE_PRIVACY_ACCESS),
-            [s.Eu.CONTACTS]: ''.concat(u.Z.Messages.NO_CONTACTS_ACCESS, '. ').concat(u.Z.Messages.ENABLE_PRIVACY_ACCESS)
+            [s.Eu.CAMERA]: ''.concat(l.Z.Messages.NO_CAMERA_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
+            [s.Eu.AUDIO]: ''.concat(l.Z.Messages.NO_MICRPHONE_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
+            [s.Eu.PHOTOS]: ''.concat(l.Z.Messages.NO_PHOTOS_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
+            [s.Eu.INPUT_MONITORING]: ''.concat(l.Z.Messages.NO_INPUT_MONITORING_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
+            [s.Eu.CONTACTS]: ''.concat(l.Z.Messages.NO_CONTACTS_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS)
         }[e];
         if (null != t)
             this.openAlertModal({
-                title: u.Z.Messages.SYSTEM_PERMISSION_GRANT,
+                title: l.Z.Messages.SYSTEM_PERMISSION_GRANT,
                 body: t,
                 onConfirm: () => this.openSettings(e),
-                cancelText: u.Z.Messages.CANCEL,
-                confirmText: u.Z.Messages.DEVICE_SETTINGS
+                cancelText: l.Z.Messages.CANCEL,
+                confirmText: l.Z.Messages.DEVICE_SETTINGS
             });
     }
     static defaultNativePermissionsRequestOptions(e) {
@@ -66,6 +53,17 @@ class d {
               };
     }
     constructor() {
-        c(this, 'storage', new o.Z());
+        var e, t, n;
+        (e = this),
+            (t = 'storage'),
+            (n = new a.Z()),
+            t in e
+                ? Object.defineProperty(e, t, {
+                      value: n,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (e[t] = n);
     }
 }

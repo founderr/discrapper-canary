@@ -1,16 +1,15 @@
+n.d(t, {
+    r: function () {
+        return a;
+    }
+});
 function r(e, t) {
-    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-}
-function i(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function a(e, t, n) {
-    return t && i(e.prototype, t), n && i(e, n), e;
-}
-function o(e, t, n) {
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,17 +22,21 @@ function o(e, t, n) {
         e
     );
 }
-n.d(t, {
-    r: function () {
-        return s;
-    }
-});
-var s = (function () {
-    function e(t, n) {
-        r(this, e), o(this, 'ownerDocument', null), o(this, 'globalContext', void 0), o(this, 'optionsArgs', void 0), (this.globalContext = t), (this.optionsArgs = n);
+var a = (function () {
+    var e, t, n;
+    function a(e, t) {
+        !(function (e, t) {
+            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+        })(this, a),
+            i(this, 'ownerDocument', null),
+            i(this, 'globalContext', void 0),
+            i(this, 'optionsArgs', void 0),
+            (this.globalContext = e),
+            (this.optionsArgs = t);
     }
     return (
-        a(e, [
+        (e = a),
+        (t = [
             {
                 key: 'window',
                 get: function () {
@@ -55,6 +58,7 @@ var s = (function () {
                 }
             }
         ]),
-        e
+        r(e.prototype, t),
+        a
     );
 })();

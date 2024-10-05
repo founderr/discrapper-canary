@@ -33,7 +33,7 @@ let t = (e) => ({
     r = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'],
     i = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'],
     a = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'],
-    o = [
+    s = [
         'align-content',
         'align-items',
         'align-self',
@@ -393,13 +393,10 @@ let t = (e) => ({
         'writing-mode',
         'z-index'
     ].reverse();
-function s(e) {
-    let s = t(e),
-        l = a,
-        u = i,
-        c = '@[a-z-]+',
-        d = 'and or not only',
-        _ = {
+e.exports = function (e) {
+    let o = t(e),
+        l = '@[a-z-]+',
+        u = {
             className: 'variable',
             begin: '(\\$[a-zA-Z-][a-zA-Z0-9_-]*)\\b',
             relevance: 0
@@ -411,7 +408,7 @@ function s(e) {
         contains: [
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            s.CSS_NUMBER_MODE,
+            o.CSS_NUMBER_MODE,
             {
                 className: 'selector-id',
                 begin: '#[A-Za-z0-9_-]+',
@@ -422,7 +419,7 @@ function s(e) {
                 begin: '\\.[A-Za-z0-9_-]+',
                 relevance: 0
             },
-            s.ATTRIBUTE_SELECTOR_MODE,
+            o.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: 'selector-tag',
                 begin: '\\b(' + n.join('|') + ')\\b',
@@ -430,34 +427,34 @@ function s(e) {
             },
             {
                 className: 'selector-pseudo',
-                begin: ':(' + u.join('|') + ')'
+                begin: ':(' + i.join('|') + ')'
             },
             {
                 className: 'selector-pseudo',
-                begin: ':(:)?(' + l.join('|') + ')'
+                begin: ':(:)?(' + a.join('|') + ')'
             },
-            _,
+            u,
             {
                 begin: /\(/,
                 end: /\)/,
-                contains: [s.CSS_NUMBER_MODE]
+                contains: [o.CSS_NUMBER_MODE]
             },
-            s.CSS_VARIABLE,
+            o.CSS_VARIABLE,
             {
                 className: 'attribute',
-                begin: '\\b(' + o.join('|') + ')\\b'
+                begin: '\\b(' + s.join('|') + ')\\b'
             },
             { begin: '\\b(whitespace|wait|w-resize|visible|vertical-text|vertical-ideographic|uppercase|upper-roman|upper-alpha|underline|transparent|top|thin|thick|text|text-top|text-bottom|tb-rl|table-header-group|table-footer-group|sw-resize|super|strict|static|square|solid|small-caps|separate|se-resize|scroll|s-resize|rtl|row-resize|ridge|right|repeat|repeat-y|repeat-x|relative|progress|pointer|overline|outside|outset|oblique|nowrap|not-allowed|normal|none|nw-resize|no-repeat|no-drop|newspaper|ne-resize|n-resize|move|middle|medium|ltr|lr-tb|lowercase|lower-roman|lower-alpha|loose|list-item|line|line-through|line-edge|lighter|left|keep-all|justify|italic|inter-word|inter-ideograph|inside|inset|inline|inline-block|inherit|inactive|ideograph-space|ideograph-parenthesis|ideograph-numeric|ideograph-alpha|horizontal|hidden|help|hand|groove|fixed|ellipsis|e-resize|double|dotted|distribute|distribute-space|distribute-letter|distribute-all-lines|disc|disabled|default|decimal|dashed|crosshair|collapse|col-resize|circle|char|center|capitalize|break-word|break-all|bottom|both|bolder|bold|block|bidi-override|below|baseline|auto|always|all-scroll|absolute|table|table-cell)\\b' },
             {
                 begin: /:/,
                 end: /[;}{]/,
                 relevance: 0,
-                contains: [s.BLOCK_COMMENT, _, s.HEXCOLOR, s.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, s.IMPORTANT, s.FUNCTION_DISPATCH]
+                contains: [o.BLOCK_COMMENT, u, o.HEXCOLOR, o.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, o.IMPORTANT, o.FUNCTION_DISPATCH]
             },
             {
                 begin: '@(page|font-face)',
                 keywords: {
-                    $pattern: c,
+                    $pattern: l,
                     keyword: '@page @font-face'
                 }
             },
@@ -467,27 +464,26 @@ function s(e) {
                 returnBegin: !0,
                 keywords: {
                     $pattern: /[a-z-]+/,
-                    keyword: d,
+                    keyword: 'and or not only',
                     attribute: r.join(' ')
                 },
                 contains: [
                     {
-                        begin: c,
+                        begin: l,
                         className: 'keyword'
                     },
                     {
                         begin: /[a-z-]+(?=:)/,
                         className: 'attribute'
                     },
-                    _,
+                    u,
                     e.QUOTE_STRING_MODE,
                     e.APOS_STRING_MODE,
-                    s.HEXCOLOR,
-                    s.CSS_NUMBER_MODE
+                    o.HEXCOLOR,
+                    o.CSS_NUMBER_MODE
                 ]
             },
-            s.FUNCTION_DISPATCH
+            o.FUNCTION_DISPATCH
         ]
     };
-}
-e.exports = s;
+};

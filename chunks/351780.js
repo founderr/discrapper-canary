@@ -1,8 +1,8 @@
 var r,
-    i = n(392711);
-var a = n(442837),
-    o = n(570140),
-    s = n(524484);
+    i = n(392711),
+    a = n(442837),
+    s = n(570140),
+    o = n(524484);
 function l(e, t, n) {
     return (
         t in e
@@ -25,34 +25,24 @@ let u = !1,
         comboSoundsEnabled: !0,
         screenshakeEnabled: !0,
         screenshakeEnabledLocations: {
-            [s.oZ.CHAT_INPUT]: !0,
-            [s.oZ.VOICE_USER]: !1,
-            [s.oZ.MENTION]: !1
+            [o.oZ.CHAT_INPUT]: !0,
+            [o.oZ.VOICE_USER]: !1,
+            [o.oZ.MENTION]: !1
         },
         shakeIntensity: 1,
         confettiEnabled: !0,
         confettiEnabledLocations: {
-            [s.Hn.CHAT_INPUT]: !0,
-            [s.Hn.REACTION]: !0,
-            [s.Hn.MEMBER_USER]: !0,
-            [s.Hn.CALL_TILE]: !0
+            [o.Hn.CHAT_INPUT]: !0,
+            [o.Hn.REACTION]: !0,
+            [o.Hn.MEMBER_USER]: !0,
+            [o.Hn.CALL_TILE]: !0
         },
         confettiSize: 16,
         confettiCount: 5,
         warningSeen: !1
     },
     d = (0, i.cloneDeep)(c);
-function _(e) {
-    let { settings: t } = e;
-    d = {
-        ...d,
-        ...t
-    };
-}
-function E() {
-    u = !0;
-}
-class f extends (r = a.ZP.DeviceSettingsStore) {
+class _ extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         d = {
             ...d,
@@ -90,9 +80,17 @@ class f extends (r = a.ZP.DeviceSettingsStore) {
         return d.comboSoundsEnabled;
     }
 }
-l(f, 'displayName', 'PoggermodeSettingsStore'),
-    l(f, 'persistKey', 'PoggermodeSettingsStore'),
-    (t.Z = new f(o.Z, {
-        POGGERMODE_SETTINGS_UPDATE: _,
-        POGGERMODE_TEMPORARILY_DISABLED: E
+l(_, 'displayName', 'PoggermodeSettingsStore'),
+    l(_, 'persistKey', 'PoggermodeSettingsStore'),
+    (t.Z = new _(s.Z, {
+        POGGERMODE_SETTINGS_UPDATE: function (e) {
+            let { settings: t } = e;
+            d = {
+                ...d,
+                ...t
+            };
+        },
+        POGGERMODE_TEMPORARILY_DISABLED: function () {
+            u = !0;
+        }
     }));

@@ -1,10 +1,9 @@
+var r, i;
 n.d(t, {
     z: function () {
         return r;
     }
-});
-var r,
-    i = n(47120);
-!(function (e) {
-    (e.MATCH_ALL = 'match_all'), (e.MATCH_SOME = 'match_some');
-})(r || (r = {}));
+}),
+    n(47120),
+    ((i = r || (r = {})).MATCH_ALL = 'match_all'),
+    (i.MATCH_SOME = 'match_some');

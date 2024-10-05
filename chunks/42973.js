@@ -1,28 +1,25 @@
-function t(e) {
-    let t = ['struct', 'enum', 'interface', 'union', 'group', 'import', 'using', 'const', 'annotation', 'extends', 'in', 'of', 'on', 'as', 'with', 'from', 'fixed'],
-        n = ['Void', 'Bool', 'Int8', 'Int16', 'Int32', 'Int64', 'UInt8', 'UInt16', 'UInt32', 'UInt64', 'Float32', 'Float64', 'Text', 'Data', 'AnyPointer', 'AnyStruct', 'Capability', 'List'],
-        r = ['true', 'false'],
-        i = {
-            variants: [
-                {
-                    match: [/(struct|enum|interface)/, /\s+/, e.IDENT_RE]
-                },
-                {
-                    match: [/extends/, /\s*\(/, e.IDENT_RE, /\s*\)/]
-                }
-            ],
-            scope: {
-                1: 'keyword',
-                3: 'title.class'
+e.exports = function (e) {
+    let t = {
+        variants: [
+            {
+                match: [/(struct|enum|interface)/, /\s+/, e.IDENT_RE]
+            },
+            {
+                match: [/extends/, /\s*\(/, e.IDENT_RE, /\s*\)/]
             }
-        };
+        ],
+        scope: {
+            1: 'keyword',
+            3: 'title.class'
+        }
+    };
     return {
         name: 'Cap\u2019n Proto',
         aliases: ['capnp'],
         keywords: {
-            keyword: t,
-            type: n,
-            literal: r
+            keyword: ['struct', 'enum', 'interface', 'union', 'group', 'import', 'using', 'const', 'annotation', 'extends', 'in', 'of', 'on', 'as', 'with', 'from', 'fixed'],
+            type: ['Void', 'Bool', 'Int8', 'Int16', 'Int32', 'Int64', 'UInt8', 'UInt16', 'UInt32', 'UInt64', 'Float32', 'Float64', 'Text', 'Data', 'AnyPointer', 'AnyStruct', 'Capability', 'List'],
+            literal: ['true', 'false']
         },
         contains: [
             e.QUOTE_STRING_MODE,
@@ -37,8 +34,7 @@ function t(e) {
                 className: 'symbol',
                 begin: /@\d+\b/
             },
-            i
+            t
         ]
     };
-}
-e.exports = t;
+};

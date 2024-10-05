@@ -1,8 +1,8 @@
 var r = n(470079),
     i = n(844303),
     a = n(846822),
-    o = n(827622),
-    s =
+    s = n(827622),
+    o =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -10,68 +10,63 @@ var r = n(470079),
                 for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
-        },
-    l = 13,
-    u = function (e) {
-        var t = e.color,
-            n = e.style,
-            a = e.onClick,
-            u = void 0 === a ? function () {} : a,
-            c = e.onHover,
-            d = e.title,
-            _ = void 0 === d ? t : d,
-            E = e.children,
-            f = e.focus,
-            h = e.focusStyle,
-            p = void 0 === h ? {} : h,
-            m = 'transparent' === t,
-            I = (0, i.default)({
-                default: {
-                    swatch: s(
-                        {
-                            background: t,
-                            height: '100%',
-                            width: '100%',
-                            cursor: 'pointer',
-                            position: 'relative',
-                            outline: 'none'
-                        },
-                        n,
-                        f ? p : {}
-                    )
-                }
-            }),
-            T = function (e) {
-                return u(t, e);
-            },
-            g = function (e) {
-                return e.keyCode === l && u(t, e);
-            },
-            S = function (e) {
-                return c(t, e);
-            },
-            A = {};
-        return (
-            c && (A.onMouseOver = S),
-            r.createElement(
-                'div',
-                s(
+        };
+t.Z = (0, a.I)(function (e) {
+    var t = e.color,
+        n = e.style,
+        a = e.onClick,
+        l = void 0 === a ? function () {} : a,
+        u = e.onHover,
+        c = e.title,
+        d = void 0 === c ? t : c,
+        _ = e.children,
+        E = e.focus,
+        f = e.focusStyle,
+        h = 'transparent' === t,
+        p = (0, i.default)({
+            default: {
+                swatch: o(
                     {
-                        style: I.swatch,
-                        onClick: T,
-                        title: _,
-                        tabIndex: 0,
-                        onKeyDown: g
+                        background: t,
+                        height: '100%',
+                        width: '100%',
+                        cursor: 'pointer',
+                        position: 'relative',
+                        outline: 'none'
                     },
-                    A
-                ),
-                E,
-                m &&
-                    r.createElement(o.Z, {
-                        borderRadius: I.swatch.borderRadius,
-                        boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
-                    })
-            )
-        );
-    };
-t.Z = (0, a.I)(u);
+                    n,
+                    E ? (void 0 === f ? {} : f) : {}
+                )
+            }
+        }),
+        I = {};
+    return (
+        u &&
+            (I.onMouseOver = function (e) {
+                return u(t, e);
+            }),
+        r.createElement(
+            'div',
+            o(
+                {
+                    style: p.swatch,
+                    onClick: function (e) {
+                        return l(t, e);
+                    },
+                    title: d,
+                    tabIndex: 0,
+                    onKeyDown: function (e) {
+                        return 13 === e.keyCode && l(t, e);
+                    }
+                },
+                I
+            ),
+            _,
+            h &&
+                r.createElement(s.Z, {
+                    borderRadius: p.swatch.borderRadius,
+                    boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
+                })
+        )
+    );
+});

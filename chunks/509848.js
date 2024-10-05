@@ -3,7 +3,7 @@ n.d(t, {
         return u;
     },
     ZP: function () {
-        return _;
+        return d;
     },
     dj: function () {
         return l;
@@ -12,8 +12,8 @@ n.d(t, {
 var r = n(392711),
     i = n.n(r),
     a = n(31775),
-    o = n.n(a);
-function s(e, t, n) {
+    s = n.n(a);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,8 +37,7 @@ function c(e) {
         t
     );
 }
-let d = 5;
-class _ {
+class d {
     reset() {
         this._subscriptions = {};
     }
@@ -47,7 +46,7 @@ class _ {
     }
     _get(e) {
         var t;
-        return null !== (t = this._subscriptions[e]) && void 0 !== t ? t : new (o())({ max: d });
+        return null !== (t = this._subscriptions[e]) && void 0 !== t ? t : new (s())({ max: 5 });
     }
     clear(e) {
         delete this._subscriptions[e];
@@ -57,6 +56,6 @@ class _ {
         return !i().isEqual(r.get(t), n) && (r.set(t, n), (this._subscriptions[e] = r), this._onChange(e, c(r)), !0);
     }
     constructor(e) {
-        s(this, '_subscriptions', {}), s(this, '_onChange', void 0), (this._onChange = e);
+        o(this, '_subscriptions', {}), o(this, '_onChange', void 0), (this._onChange = e);
     }
 }

@@ -1,22 +1,20 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return l;
     },
     j: function () {
         return r;
     }
-});
+}),
+    n(789020),
+    n(47120);
 var r,
-    i = n(789020);
-var a = n(47120);
-var o = n(836560);
-var s = n(936349),
-    l = n(709054);
-let u = 15360;
-!(function (e) {
-    (e[(e.DISPATCH = 0)] = 'DISPATCH'), (e[(e.HEARTBEAT = 1)] = 'HEARTBEAT'), (e[(e.IDENTIFY = 2)] = 'IDENTIFY'), (e[(e.PRESENCE_UPDATE = 3)] = 'PRESENCE_UPDATE'), (e[(e.VOICE_STATE_UPDATE = 4)] = 'VOICE_STATE_UPDATE'), (e[(e.VOICE_SERVER_PING = 5)] = 'VOICE_SERVER_PING'), (e[(e.RESUME = 6)] = 'RESUME'), (e[(e.RECONNECT = 7)] = 'RECONNECT'), (e[(e.REQUEST_GUILD_MEMBERS = 8)] = 'REQUEST_GUILD_MEMBERS'), (e[(e.INVALID_SESSION = 9)] = 'INVALID_SESSION'), (e[(e.HELLO = 10)] = 'HELLO'), (e[(e.HEARTBEAT_ACK = 11)] = 'HEARTBEAT_ACK'), (e[(e.CALL_CONNECT = 13)] = 'CALL_CONNECT'), (e[(e.GUILD_SUBSCRIPTIONS = 14)] = 'GUILD_SUBSCRIPTIONS'), (e[(e.STREAM_CREATE = 18)] = 'STREAM_CREATE'), (e[(e.STREAM_DELETE = 19)] = 'STREAM_DELETE'), (e[(e.STREAM_WATCH = 20)] = 'STREAM_WATCH'), (e[(e.STREAM_PING = 21)] = 'STREAM_PING'), (e[(e.STREAM_SET_PAUSED = 22)] = 'STREAM_SET_PAUSED'), (e[(e.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = 'REQUEST_GUILD_APPLICATION_COMMANDS'), (e[(e.REQUEST_FORUM_UNREADS = 28)] = 'REQUEST_FORUM_UNREADS'), (e[(e.REMOTE_COMMAND = 29)] = 'REMOTE_COMMAND'), (e[(e.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = 'GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH'), (e[(e.REQUEST_SOUNDBOARD_SOUNDS = 31)] = 'REQUEST_SOUNDBOARD_SOUNDS'), (e[(e.REQUEST_LAST_MESSAGES = 34)] = 'REQUEST_LAST_MESSAGES'), (e[(e.SEARCH_RECENT_MEMBERS = 35)] = 'SEARCH_RECENT_MEMBERS'), (e[(e.REQUEST_CHANNEL_STATUSES = 36)] = 'REQUEST_CHANNEL_STATUSES'), (e[(e.GUILD_SUBSCRIPTIONS_BULK = 37)] = 'GUILD_SUBSCRIPTIONS_BULK');
-})(r || (r = {}));
-class c extends o.EventEmitter {
+    i,
+    a = n(836560),
+    s = n(936349),
+    o = n(709054);
+((i = r || (r = {}))[(i.DISPATCH = 0)] = 'DISPATCH'), (i[(i.HEARTBEAT = 1)] = 'HEARTBEAT'), (i[(i.IDENTIFY = 2)] = 'IDENTIFY'), (i[(i.PRESENCE_UPDATE = 3)] = 'PRESENCE_UPDATE'), (i[(i.VOICE_STATE_UPDATE = 4)] = 'VOICE_STATE_UPDATE'), (i[(i.VOICE_SERVER_PING = 5)] = 'VOICE_SERVER_PING'), (i[(i.RESUME = 6)] = 'RESUME'), (i[(i.RECONNECT = 7)] = 'RECONNECT'), (i[(i.REQUEST_GUILD_MEMBERS = 8)] = 'REQUEST_GUILD_MEMBERS'), (i[(i.INVALID_SESSION = 9)] = 'INVALID_SESSION'), (i[(i.HELLO = 10)] = 'HELLO'), (i[(i.HEARTBEAT_ACK = 11)] = 'HEARTBEAT_ACK'), (i[(i.CALL_CONNECT = 13)] = 'CALL_CONNECT'), (i[(i.GUILD_SUBSCRIPTIONS = 14)] = 'GUILD_SUBSCRIPTIONS'), (i[(i.STREAM_CREATE = 18)] = 'STREAM_CREATE'), (i[(i.STREAM_DELETE = 19)] = 'STREAM_DELETE'), (i[(i.STREAM_WATCH = 20)] = 'STREAM_WATCH'), (i[(i.STREAM_PING = 21)] = 'STREAM_PING'), (i[(i.STREAM_SET_PAUSED = 22)] = 'STREAM_SET_PAUSED'), (i[(i.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = 'REQUEST_GUILD_APPLICATION_COMMANDS'), (i[(i.REQUEST_FORUM_UNREADS = 28)] = 'REQUEST_FORUM_UNREADS'), (i[(i.REMOTE_COMMAND = 29)] = 'REMOTE_COMMAND'), (i[(i.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = 'GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH'), (i[(i.REQUEST_SOUNDBOARD_SOUNDS = 31)] = 'REQUEST_SOUNDBOARD_SOUNDS'), (i[(i.REQUEST_LAST_MESSAGES = 34)] = 'REQUEST_LAST_MESSAGES'), (i[(i.SEARCH_RECENT_MEMBERS = 35)] = 'SEARCH_RECENT_MEMBERS'), (i[(i.REQUEST_CHANNEL_STATUSES = 36)] = 'REQUEST_CHANNEL_STATUSES'), (i[(i.GUILD_SUBSCRIPTIONS_BULK = 37)] = 'GUILD_SUBSCRIPTIONS_BULK');
+class l extends a.EventEmitter {
     presenceUpdate(e, t, n, r) {
         this.send(3, {
             status: e,
@@ -71,10 +69,10 @@ class c extends o.EventEmitter {
     updateGuildSubscriptions(e) {
         let t = {},
             n = 0;
-        l.default.keys(e).forEach((r) => {
+        o.default.keys(e).forEach((r) => {
             let i = e[r],
                 a = JSON.stringify([r, i]).length;
-            n + a > u && (this.send(37, { subscriptions: t }), (t = {}), (n = 0)), (t[r] = i), (n += a);
+            n + a > 15360 && (this.send(37, { subscriptions: t }), (t = {}), (n = 0)), (t[r] = i), (n += a);
         }),
             n > 0 && this.send(37, { subscriptions: t });
     }

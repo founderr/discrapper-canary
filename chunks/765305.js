@@ -1,15 +1,15 @@
 n.d(t, {
     $I: function () {
-        return I;
+        return O;
     },
     Fc: function () {
-        return v;
+        return D;
     },
     Ku: function () {
-        return m;
+        return N;
     },
     VF: function () {
-        return N;
+        return y;
     },
     WX: function () {
         return i;
@@ -18,92 +18,82 @@ n.d(t, {
         return l;
     },
     _U: function () {
-        return g;
+        return v;
     },
     fL: function () {
-        return s;
+        return o;
     },
     gG: function () {
-        return h;
+        return g;
     },
     gv: function () {
         return u;
     },
     j8: function () {
-        return o;
+        return s;
     },
     nz: function () {
-        return T;
+        return R;
     },
     p: function () {
-        return E;
+        return T;
     },
     p1: function () {
         return r;
     },
     pg: function () {
-        return S;
+        return C;
     },
     rC: function () {
-        return A;
+        return L;
     },
     sy: function () {
         return a;
     },
     wm: function () {
-        return f;
+        return S;
     },
     zV: function () {
-        return O;
+        return b;
     },
     zw: function () {
-        return p;
+        return A;
     }
-});
+}),
+    n(47120);
 var r,
     i,
     a,
-    o,
     s,
+    o,
     l,
     u,
-    c = n(47120);
-var d = n(70956),
-    _ = n(981631);
-let E = 100,
-    f = 1000,
-    h = 100,
-    p = 'Guild Events Modal',
-    m = '-1';
-!(function (e) {
-    (e[(e.SCHEDULED = 1)] = 'SCHEDULED'), (e[(e.ACTIVE = 2)] = 'ACTIVE'), (e[(e.COMPLETED = 3)] = 'COMPLETED'), (e[(e.CANCELED = 4)] = 'CANCELED');
-})(r || (r = {}));
-let I = new Set([3, 4]);
-!(function (e) {
-    (e[(e.NONE = 0)] = 'NONE'), (e[(e.STAGE_INSTANCE = 1)] = 'STAGE_INSTANCE'), (e[(e.VOICE = 2)] = 'VOICE'), (e[(e.EXTERNAL = 3)] = 'EXTERNAL'), (e[(e.PRIME_TIME = 4)] = 'PRIME_TIME');
-})(i || (i = {})),
-    !(function (e) {
-        e[(e.EVENT_START = 1)] = 'EVENT_START';
-    })(a || (a = {})),
-    !(function (e) {
-        (e[(e.PUBLIC = 1)] = 'PUBLIC'), (e[(e.GUILD_ONLY = 2)] = 'GUILD_ONLY');
-    })(o || (o = {}));
-let T = {
-        1: _.d4z.GUILD_STAGE_VOICE,
-        2: _.d4z.GUILD_VOICE
+    c,
+    d,
+    _,
+    E,
+    f,
+    h,
+    p,
+    I = n(70956),
+    m = n(981631);
+let T = 100,
+    S = 1000,
+    g = 100,
+    A = 'Guild Events Modal',
+    N = '-1';
+((c = r || (r = {}))[(c.SCHEDULED = 1)] = 'SCHEDULED'), (c[(c.ACTIVE = 2)] = 'ACTIVE'), (c[(c.COMPLETED = 3)] = 'COMPLETED'), (c[(c.CANCELED = 4)] = 'CANCELED');
+let O = new Set([3, 4]);
+((d = i || (i = {}))[(d.NONE = 0)] = 'NONE'), (d[(d.STAGE_INSTANCE = 1)] = 'STAGE_INSTANCE'), (d[(d.VOICE = 2)] = 'VOICE'), (d[(d.EXTERNAL = 3)] = 'EXTERNAL'), (d[(d.PRIME_TIME = 4)] = 'PRIME_TIME'), ((_ = a || (a = {}))[(_.EVENT_START = 1)] = 'EVENT_START'), ((E = s || (s = {}))[(E.PUBLIC = 1)] = 'PUBLIC'), (E[(E.GUILD_ONLY = 2)] = 'GUILD_ONLY');
+let R = {
+        1: m.d4z.GUILD_STAGE_VOICE,
+        2: m.d4z.GUILD_VOICE
     },
-    g = new Set([3]),
-    S = new Set([1, 2]);
-!(function (e) {
-    (e[(e.EVENT_INFO = 0)] = 'EVENT_INFO'), (e[(e.RSVP_LIST = 1)] = 'RSVP_LIST');
-})(s || (s = {}));
-let A = 100,
-    v = 2 * d.Z.Millis.DAY,
-    N = 12 * d.Z.Millis.HOUR,
-    O = 4;
-!(function (e) {
-    (e.NEW_EVENT = 'Upcoming Event Notice'), (e.EVENT_STARTING_SOON = 'Event Starting Soon Notice');
-})(l || (l = {})),
-    !(function (e) {
-        (e[(e.UNINTERESTED = 0)] = 'UNINTERESTED'), (e[(e.INTERESTED = 1)] = 'INTERESTED');
-    })(u || (u = {}));
+    v = new Set([3]),
+    C = new Set([1, 2]);
+((f = o || (o = {}))[(f.EVENT_INFO = 0)] = 'EVENT_INFO'), (f[(f.RSVP_LIST = 1)] = 'RSVP_LIST');
+let L = 100,
+    D = 2 * I.Z.Millis.DAY,
+    y = 12 * I.Z.Millis.HOUR,
+    b = 4;
+((h = l || (l = {})).NEW_EVENT = 'Upcoming Event Notice'), (h.EVENT_STARTING_SOON = 'Event Starting Soon Notice'), ((p = u || (u = {}))[(p.UNINTERESTED = 0)] = 'UNINTERESTED'), (p[(p.INTERESTED = 1)] = 'INTERESTED');

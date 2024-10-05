@@ -1,4 +1,4 @@
-var r, i;
+var r, i, a;
 n.d(t, {
     TD: function () {
         return i;
@@ -9,11 +9,11 @@ n.d(t, {
 }),
     !(function (e) {
         (e.symbol = Symbol.for('protobuf-ts/unknown')),
-            (e.onRead = (n, r, i, a, o) => {
+            (e.onRead = (n, r, i, a, s) => {
                 (t(r) ? r[e.symbol] : (r[e.symbol] = [])).push({
                     no: i,
                     wireType: a,
-                    data: o
+                    data: s
                 });
             }),
             (e.onWrite = (t, n, r) => {
@@ -28,7 +28,10 @@ n.d(t, {
             }),
             (e.last = (t, n) => e.list(t, n).slice(-1)[0]);
         let t = (t) => t && Array.isArray(t[e.symbol]);
-    })(r || (r = {}));
-!(function (e) {
-    (e[(e.Varint = 0)] = 'Varint'), (e[(e.Bit64 = 1)] = 'Bit64'), (e[(e.LengthDelimited = 2)] = 'LengthDelimited'), (e[(e.StartGroup = 3)] = 'StartGroup'), (e[(e.EndGroup = 4)] = 'EndGroup'), (e[(e.Bit32 = 5)] = 'Bit32');
-})(i || (i = {}));
+    })(r || (r = {})),
+    ((a = i || (i = {}))[(a.Varint = 0)] = 'Varint'),
+    (a[(a.Bit64 = 1)] = 'Bit64'),
+    (a[(a.LengthDelimited = 2)] = 'LengthDelimited'),
+    (a[(a.StartGroup = 3)] = 'StartGroup'),
+    (a[(a.EndGroup = 4)] = 'EndGroup'),
+    (a[(a.Bit32 = 5)] = 'Bit32');

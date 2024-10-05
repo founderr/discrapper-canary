@@ -1,7 +1,6 @@
 (e.exports = function (e) {
-    var t = this,
-        n = t.constructor;
-    return (t.callbacks = {}), (t.directMap = {}), (t.sequenceLevels = {}), t.resetTimer, (t.ignoreNextKeyup = !1), (t.ignoreNextKeypress = !1), (t.nextExpectedAction = !1), (t.element = e), t.addEvents(), n.instances.push(t), t;
+    var t = this.constructor;
+    return (this.callbacks = {}), (this.directMap = {}), (this.sequenceLevels = {}), this.resetTimer, (this.ignoreNextKeyup = !1), (this.ignoreNextKeypress = !1), (this.nextExpectedAction = !1), (this.element = e), this.addEvents(), t.instances.push(this), this;
 }),
     (e.exports.prototype.bind = n(698577)),
     (e.exports.prototype.bindMultiple = n(41463)),

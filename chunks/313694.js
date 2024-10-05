@@ -11,56 +11,53 @@ function r(e, t, n) {
         e
     );
 }
-function i(e, t, n) {
-    a(e, t), t.set(e, n);
+n.d(t, {
+    J: function () {
+        return o;
+    }
+});
+function i(e, t) {
+    var n = a(e, t, 'get');
+    return (function (e, t) {
+        return t.get ? t.get.call(e) : t.value;
+    })(e, n);
 }
-function a(e, t) {
-    if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
-}
-function o(e, t) {
-    var n = u(e, t, 'get');
-    return s(e, n);
-}
-function s(e, t) {
-    return t.get ? t.get.call(e) : t.value;
-}
-function l(e, t, n) {
-    var r = u(e, t, 'set');
-    return c(e, r, n), n;
-}
-function u(e, t, n) {
+function a(e, t, n) {
     if (!t.has(e)) throw TypeError('attempted to ' + n + ' private field on non-instance');
     return t.get(e);
 }
-function c(e, t, n) {
-    if (t.set) t.set.call(e, n);
-    else {
-        if (!t.writable) throw TypeError('attempted to set read only private field');
-        t.value = n;
-    }
-}
-n.d(t, {
-    J: function () {
-        return _;
-    }
-});
-var d = new WeakMap();
-class _ {
+var s = new WeakMap();
+class o {
     constructor() {
-        i(this, d, {
-            writable: !0,
-            value: void 0
-        }),
+        var e, t, n, o, l, u;
+        (e = this),
+            (n = {
+                writable: !0,
+                value: void 0
+            }),
+            (function (e, t) {
+                if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
+            })(e, (t = s)),
+            t.set(e, n),
             r(this, 'register', (e) => {
-                o(this, d).push(e);
+                i(this, s).push(e);
             }),
             r(this, 'unregister', (e) => {
                 let t;
-                for (; -1 !== (t = o(this, d).indexOf(e)); ) o(this, d).splice(t, 1);
+                for (; -1 !== (t = i(this, s).indexOf(e)); ) i(this, s).splice(t, 1);
             }),
             r(this, 'backendChanged', (e) => {
-                for (let t of o(this, d)) t.backendChanged(e);
+                for (let t of i(this, s)) t.backendChanged(e);
             }),
-            l(this, d, []);
+            (o = this),
+            (l = []),
+            (u = a(o, s, 'set')),
+            (function (e, t, n) {
+                if (t.set) t.set.call(e, n);
+                else {
+                    if (!t.writable) throw TypeError('attempted to set read only private field');
+                    t.value = n;
+                }
+            })(o, u, l);
     }
 }

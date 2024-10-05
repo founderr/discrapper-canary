@@ -1,166 +1,165 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return d;
     }
-});
-var r = n(47120);
-var i = n(735250);
+}),
+    n(47120);
+var r = n(735250);
 n(470079);
-var a = n(120356),
-    o = n.n(a),
+var i = n(120356),
+    a = n.n(i),
     s = n(845537),
-    l = n(653309),
-    u = n(631853),
-    c = n(896061),
-    d = n(554034);
-function _(e, t, n) {
-    var r, a;
-    let { attributes: l, children: c, element: _, decorations: h } = e,
-        p = f(null !== (r = null == h ? void 0 : h[0]) && void 0 !== r ? r : {});
-    switch (_.type) {
+    o = n(653309),
+    l = n(631853),
+    u = n(896061),
+    c = n(554034);
+function d(e, t, n) {
+    var i, u;
+    let { attributes: d, children: E, element: f, decorations: h } = e,
+        p = (function (e) {
+            return Object.entries(e)
+                .filter((e) => {
+                    let [t] = e;
+                    return 'anchor' !== t && 'focus' !== t;
+                })
+                .map((e) => {
+                    let [t, n] = e;
+                    return !0 === n && t in o.U ? o.U[t] : null;
+                })
+                .filter((e) => null != e)
+                .join(' ');
+        })(null !== (i = null == h ? void 0 : h[0]) && void 0 !== i ? i : {});
+    switch (f.type) {
         case 'line':
-            if (null === (a = _.codeBlockState) || void 0 === a ? void 0 : a.isInCodeBlock)
-                return (0, i.jsx)('div', {
-                    className: u.codeLine,
-                    spellCheck: null == _.codeBlockState || null == _.codeBlockState.lang,
-                    ...l,
-                    children: c
+            if (null === (u = f.codeBlockState) || void 0 === u ? void 0 : u.isInCodeBlock)
+                return (0, r.jsx)('div', {
+                    className: l.codeLine,
+                    spellCheck: null == f.codeBlockState || null == f.codeBlockState.lang,
+                    ...d,
+                    children: E
                 });
-            return (0, i.jsx)('div', {
-                ...l,
-                children: c
+            return (0, r.jsx)('div', {
+                ...d,
+                children: E
             });
         case 'blockQuote': {
-            let e = o()(d.blockquoteContainer, d.slateBlockquoteContainer);
-            return (0, i.jsxs)('div', {
-                ...l,
+            let e = a()(c.blockquoteContainer, c.slateBlockquoteContainer);
+            return (0, r.jsxs)('div', {
+                ...d,
                 className: e,
                 children: [
-                    (0, i.jsx)('span', {
+                    (0, r.jsx)('span', {
                         contentEditable: !1,
-                        className: d.blockquoteDivider
+                        className: c.blockquoteDivider
                     }),
-                    (0, i.jsx)('blockquote', { children: c })
+                    (0, r.jsx)('blockquote', { children: E })
                 ]
             });
         }
         case 'emoji':
-            return (0, i.jsxs)(E, {
-                attributes: l,
+            return (0, r.jsxs)(_, {
+                attributes: d,
                 className: p,
-                children: [(0, i.jsx)(s.dy, { emoji: _.emoji }), c]
+                children: [(0, r.jsx)(s.dy, { emoji: f.emoji }), E]
             });
         case 'customEmoji':
-            return (0, i.jsxs)(E, {
-                attributes: l,
+            return (0, r.jsxs)(_, {
+                attributes: d,
                 className: p,
-                children: [(0, i.jsx)(s.wP, { emoji: _.emoji }), c]
+                children: [(0, r.jsx)(s.wP, { emoji: f.emoji }), E]
             });
         case 'textMention':
-            return (0, i.jsxs)(E, {
-                attributes: l,
+            return (0, r.jsxs)(_, {
+                attributes: d,
                 className: p,
                 children: [
-                    (0, i.jsx)(s.Ox, {
-                        text: _.name,
+                    (0, r.jsx)(s.Ox, {
+                        text: f.name,
                         channelId: n,
                         guildId: t
                     }),
-                    c
+                    E
                 ]
             });
         case 'userMention':
-            return (0, i.jsxs)(E, {
-                attributes: l,
+            return (0, r.jsxs)(_, {
+                attributes: d,
                 className: p,
                 children: [
-                    (0, i.jsx)(s.cB, {
-                        id: _.userId,
+                    (0, r.jsx)(s.cB, {
+                        id: f.userId,
                         channelId: n,
                         guildId: t
                     }),
-                    c
+                    E
                 ]
             });
         case 'roleMention':
-            return (0, i.jsxs)(E, {
-                attributes: l,
+            return (0, r.jsxs)(_, {
+                attributes: d,
                 className: p,
                 children: [
-                    (0, i.jsx)(s.Vq, {
-                        id: _.roleId,
+                    (0, r.jsx)(s.Vq, {
+                        id: f.roleId,
                         guildId: t
                     }),
-                    c
+                    E
                 ]
             });
         case 'channelMention':
-            return (0, i.jsxs)(E, {
-                attributes: l,
+            return (0, r.jsxs)(_, {
+                attributes: d,
                 className: p,
-                children: [(0, i.jsx)(s.Io, { id: _.channelId }), c]
+                children: [(0, r.jsx)(s.Io, { id: f.channelId }), E]
             });
         case 'staticRouteLink':
-            return (0, i.jsxs)(E, {
-                attributes: l,
+            return (0, r.jsxs)(_, {
+                attributes: d,
                 className: p,
                 children: [
-                    (0, i.jsx)(s.NY, {
-                        id: _.id,
-                        itemId: _.itemId,
+                    (0, r.jsx)(s.NY, {
+                        id: f.id,
+                        itemId: f.itemId,
                         guildId: t
                     }),
-                    c
+                    E
                 ]
             });
         case 'soundboard':
-            return (0, i.jsxs)(E, {
-                attributes: l,
+            return (0, r.jsxs)(_, {
+                attributes: d,
                 className: p,
-                children: [(0, i.jsx)(s.mb, { id: _.soundId }), c]
+                children: [(0, r.jsx)(s.mb, { id: f.soundId }), E]
             });
         case 'commandMention':
-            return (0, i.jsxs)(E, {
-                attributes: l,
+            return (0, r.jsxs)(_, {
+                attributes: d,
                 className: p,
                 children: [
-                    (0, i.jsx)(s.Wf, {
-                        text: _.commandName,
-                        id: _.commandId
+                    (0, r.jsx)(s.Wf, {
+                        text: f.commandName,
+                        id: f.commandId
                     }),
-                    c
+                    E
                 ]
             });
         case 'timestamp':
-            return (0, i.jsxs)(E, {
-                attributes: l,
+            return (0, r.jsxs)(_, {
+                attributes: d,
                 className: p,
-                children: [(0, i.jsx)(s.EK, { timestamp: _.parsed }), c]
+                children: [(0, r.jsx)(s.EK, { timestamp: f.parsed }), E]
             });
         default:
             return null;
     }
 }
-let E = (e) => {
-    let { className: t, attributes: n, children: r } = e,
-        a = o()(c.inlineElement, c.inlineVoid, t);
-    return (0, i.jsx)('span', {
+let _ = (e) => {
+    let { className: t, attributes: n, children: i } = e,
+        s = a()(u.inlineElement, u.inlineVoid, t);
+    return (0, r.jsx)('span', {
         ...n,
-        className: a,
+        className: s,
         contentEditable: !1,
-        children: r
+        children: i
     });
 };
-function f(e) {
-    return Object.entries(e)
-        .filter((e) => {
-            let [t] = e;
-            return 'anchor' !== t && 'focus' !== t;
-        })
-        .map((e) => {
-            let [t, n] = e;
-            return !0 === n && t in l.U ? l.U[t] : null;
-        })
-        .filter((e) => null != e)
-        .join(' ');
-}

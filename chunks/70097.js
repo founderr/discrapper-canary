@@ -1,55 +1,35 @@
 var r = n(735250),
     i = n(470079),
     a = n(374470),
-    o = n(442837),
-    s = n(607070),
+    s = n(442837),
+    o = n(607070),
     l = n(217702);
-function u(e) {
-    e.removeAttribute('src'),
-        Array.from(e.children).forEach((e) => {
-            (0, a.k)(e, HTMLSourceElement) && (e.removeAttribute('src'), e.removeAttribute('type')), (0, a.k)(e, HTMLImageElement) && e.removeAttribute('src');
-        });
-    try {
-        e.load();
-    } catch (e) {}
-}
-let c = (e) => {
-    let { externalRef: t, autoPlay: n, playOnHover: a, responsive: c, mediaLayoutType: d, ..._ } = e,
-        E = !(0, o.e7)([s.Z], () => s.Z.useReducedMotion) && !a && n,
+let u = (e) => {
+    let { externalRef: t, autoPlay: n, playOnHover: u, responsive: c, mediaLayoutType: d, ..._ } = e,
+        E = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
         f = i.useRef(null);
     function h() {
         var e;
-        a && (null == f || null === (e = f.current) || void 0 === e || e.play());
+        u && (null == f || null === (e = f.current) || void 0 === e || e.play());
     }
     function p() {
         var e;
-        a && (null == f || null === (e = f.current) || void 0 === e || e.pause());
-    }
-    function m() {
-        return d === l.hV.MOSAIC
-            ? {
-                  width: '100%',
-                  height: '100%',
-                  maxHeight: 'inherit',
-                  objectFit: 'contain'
-              }
-            : c
-              ? I()
-              : {};
-    }
-    function I() {
-        return {
-            maxWidth: _.width,
-            maxHeight: _.height,
-            width: '100%',
-            height: '100%'
-        };
+        u && (null == f || null === (e = f.current) || void 0 === e || e.pause());
     }
     return (
         i.useLayoutEffect(
             () => () => {
                 let { current: e } = f;
-                null != e && u(e);
+                null != e &&
+                    (function (e) {
+                        e.removeAttribute('src'),
+                            Array.from(e.children).forEach((e) => {
+                                (0, a.k)(e, HTMLSourceElement) && (e.removeAttribute('src'), e.removeAttribute('type')), (0, a.k)(e, HTMLImageElement) && e.removeAttribute('src');
+                            });
+                        try {
+                            e.load();
+                        } catch (e) {}
+                    })(e);
             },
             []
         ),
@@ -64,18 +44,35 @@ let c = (e) => {
         ),
         (0, r.jsx)('video', {
             ref: f,
-            autoPlay: E,
+            autoPlay: !E && !u && n,
             onMouseEnter: h,
             onMouseLeave: p,
             onFocus: h,
             onBlur: p,
-            style: m(),
+            style:
+                d === l.hV.MOSAIC
+                    ? {
+                          width: '100%',
+                          height: '100%',
+                          maxHeight: 'inherit',
+                          objectFit: 'contain'
+                      }
+                    : c
+                      ? (function () {
+                            return {
+                                maxWidth: _.width,
+                                maxHeight: _.height,
+                                width: '100%',
+                                height: '100%'
+                            };
+                        })()
+                      : {},
             ..._
         })
     );
 };
 t.Z = i.forwardRef((e, t) =>
-    (0, r.jsx)(c, {
+    (0, r.jsx)(u, {
         ...e,
         externalRef: t
     })

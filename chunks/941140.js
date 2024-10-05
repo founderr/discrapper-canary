@@ -1,33 +1,33 @@
-var r = n(653041);
-var i = n(735250);
+n(653041);
+var r = n(735250);
 n(470079);
-var a = n(998698),
-    o = n(588468),
+var i = n(998698),
+    a = n(588468),
     s = n(877565),
-    l = n(590921),
-    u = n(689938);
-let c = { results: { commandOptions: [] } },
-    d = {
-        stores: [a.Z],
-        focusMode: l.QZ.AUTO_WHEN_FILTERED,
-        matches: (e, t, n, r, i) => !(r || null == a.Z.getActiveCommand(e.id) || null != a.Z.getActiveOption(e.id)),
-        queryResults(e, t, n, r, i) {
-            let o = a.Z.getActiveCommand(e.id);
-            if ((null == o ? void 0 : o.options) == null) return c;
-            let s = a.Z.getOptionStates(e.id),
-                l = o.options.filter((e) => {
+    o = n(590921),
+    l = n(689938);
+let u = { results: { commandOptions: [] } },
+    c = {
+        stores: [i.Z],
+        focusMode: o.QZ.AUTO_WHEN_FILTERED,
+        matches: (e, t, n, r, a) => !(r || null == i.Z.getActiveCommand(e.id) || null != i.Z.getActiveOption(e.id)),
+        queryResults(e, t, n, r, a) {
+            let s = i.Z.getActiveCommand(e.id);
+            if ((null == s ? void 0 : s.options) == null) return u;
+            let o = i.Z.getOptionStates(e.id),
+                l = s.options.filter((e) => {
                     var t;
-                    return e.displayName.startsWith(n) && !(null === (t = s[e.name]) || void 0 === t ? void 0 : t.hasValue);
+                    return e.displayName.startsWith(n) && !(null === (t = o[e.name]) || void 0 === t ? void 0 : t.hasValue);
                 });
-            return 0 === l.length ? c : { results: { commandOptions: l } };
+            return 0 === l.length ? u : { results: { commandOptions: l } };
         },
         renderResults(e) {
             let {
                     results: { commandOptions: t },
                     selectedIndex: n,
-                    query: r,
-                    onHover: a,
-                    onClick: l
+                    query: i,
+                    onHover: o,
+                    onClick: u
                 } = e,
                 c = [],
                 d = [];
@@ -37,14 +37,14 @@ let c = { results: { commandOptions: [] } },
             let _ =
                     c.length > 0
                         ? (0, s.HI)({
-                              query: r,
+                              query: i,
                               selectedIndex: n,
                               autocompletes: c,
-                              onHover: a,
-                              onClick: l,
-                              titleWithQuery: u.Z.Messages.REQUIRED_OPTIONS_MATCHING,
-                              titleWithoutQuery: u.Z.Messages.REQUIRED_OPTIONS,
-                              Component: o.ZP.Generic,
+                              onHover: o,
+                              onClick: u,
+                              titleWithQuery: l.Z.Messages.REQUIRED_OPTIONS_MATCHING,
+                              titleWithoutQuery: l.Z.Messages.REQUIRED_OPTIONS,
+                              Component: a.ZP.Generic,
                               getProps: (e, t) => ({
                                   key: t.toString(),
                                   text: e.displayName,
@@ -57,14 +57,14 @@ let c = { results: { commandOptions: [] } },
                 E =
                     d.length > 0
                         ? (0, s.HI)({
-                              query: r,
+                              query: i,
                               selectedIndex: n,
                               autocompletes: d,
-                              onHover: a,
-                              onClick: l,
-                              titleWithQuery: u.Z.Messages.OPTIONS_MATCHING,
-                              titleWithoutQuery: c.length > 0 ? u.Z.Messages.OTHER_OPTIONS : u.Z.Messages.OPTIONS,
-                              Component: o.ZP.Generic,
+                              onHover: o,
+                              onClick: u,
+                              titleWithQuery: l.Z.Messages.OPTIONS_MATCHING,
+                              titleWithoutQuery: c.length > 0 ? l.Z.Messages.OTHER_OPTIONS : l.Z.Messages.OPTIONS,
+                              Component: a.ZP.Generic,
                               getProps: (e, t) => ({
                                   key: t.toString(),
                                   text: e.displayName,
@@ -75,7 +75,7 @@ let c = { results: { commandOptions: [] } },
                               indexOffset: c.length
                           })
                         : null;
-            return (0, i.jsxs)(i.Fragment, {
+            return (0, r.jsxs)(r.Fragment, {
                 children: [_, E]
             });
         },
@@ -86,10 +86,14 @@ let c = { results: { commandOptions: [] } },
                     options: r
                 } = e,
                 i = t[n];
-            return r.insertText(_(i)), { type: l.z2.COMMAND_OPTION };
+            return (
+                r.insertText(
+                    (function (e) {
+                        return ''.concat(e.displayName, ':');
+                    })(i)
+                ),
+                { type: o.z2.COMMAND_OPTION }
+            );
         }
     };
-function _(e) {
-    return ''.concat(e.displayName, ':');
-}
-t.Z = d;
+t.Z = c;

@@ -1,9 +1,8 @@
 n.d(t, {
     b: function () {
-        return i;
+        return r;
     }
 });
-let r = 'https://cdn.discordapp.com/assets';
-function i(e) {
-    return ''.concat(r, '/').concat(e);
+function r(e) {
+    return ''.concat('https://cdn.discordapp.com/assets', '/').concat(e);
 }

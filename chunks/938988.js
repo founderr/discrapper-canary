@@ -1,73 +1,69 @@
-var r = n(67867),
-    i = n(96403),
-    a = n(511364),
-    o = n(982665),
+var e = n(67867),
+    o = n(96403),
+    i = n(511364),
+    u = n(982665),
     s = n(141603),
-    l = n(349446).f,
-    u = n(937443),
-    c = n(777628),
-    d = n(497308),
-    _ = n(348343),
-    E = n(718380),
-    f = !1,
-    h = _('meta'),
-    p = 0,
-    m = function (e) {
-        l(e, h, {
+    c = n(349446).f,
+    f = n(937443),
+    a = n(777628),
+    p = n(497308),
+    v = n(348343),
+    l = n(718380),
+    y = !1,
+    h = v('meta'),
+    x = 0,
+    d = function (t) {
+        c(t, h, {
             value: {
-                objectID: 'O' + p++,
+                objectID: 'O' + x++,
                 weakData: {}
             }
         });
     },
-    I = function (e, t) {
-        if (!o(e)) return 'symbol' == typeof e ? e : ('string' == typeof e ? 'S' : 'P') + e;
-        if (!s(e, h)) {
-            if (!d(e)) return 'F';
-            if (!t) return 'E';
-            m(e);
+    g = (t.exports = {
+        enable: function () {
+            (g.enable = function () {}), (y = !0);
+            var t = f.f,
+                r = o([].splice),
+                n = {};
+            (n[h] = 1),
+                t(n).length &&
+                    ((f.f = function (n) {
+                        for (var e = t(n), o = 0, i = e.length; o < i; o++)
+                            if (e[o] === h) {
+                                r(e, o, 1);
+                                break;
+                            }
+                        return e;
+                    }),
+                    e(
+                        {
+                            target: 'Object',
+                            stat: !0,
+                            forced: !0
+                        },
+                        { getOwnPropertyNames: a.f }
+                    ));
+        },
+        fastKey: function (t, r) {
+            if (!u(t)) return 'symbol' == typeof t ? t : ('string' == typeof t ? 'S' : 'P') + t;
+            if (!s(t, h)) {
+                if (!p(t)) return 'F';
+                if (!r) return 'E';
+                d(t);
+            }
+            return t[h].objectID;
+        },
+        getWeakData: function (t, r) {
+            if (!s(t, h)) {
+                if (!p(t)) return !0;
+                if (!r) return !1;
+                d(t);
+            }
+            return t[h].weakData;
+        },
+        onFreeze: function (t) {
+            return l && y && p(t) && !s(t, h) && d(t), t;
         }
-        return e[h].objectID;
-    },
-    T = function (e, t) {
-        if (!s(e, h)) {
-            if (!d(e)) return !0;
-            if (!t) return !1;
-            m(e);
-        }
-        return e[h].weakData;
-    },
-    g = function (e) {
-        return E && f && d(e) && !s(e, h) && m(e), e;
-    },
-    S = function () {
-        (A.enable = function () {}), (f = !0);
-        var e = u.f,
-            t = i([].splice),
-            n = {};
-        (n[h] = 1),
-            e(n).length &&
-                ((u.f = function (n) {
-                    for (var r = e(n), i = 0, a = r.length; i < a; i++)
-                        if (r[i] === h) {
-                            t(r, i, 1);
-                            break;
-                        }
-                    return r;
-                }),
-                r(
-                    {
-                        target: 'Object',
-                        stat: !0,
-                        forced: !0
-                    },
-                    { getOwnPropertyNames: c.f }
-                ));
-    },
-    A = (e.exports = {
-        enable: S,
-        fastKey: I,
-        getWeakData: T,
-        onFreeze: g
     });
-a[h] = !0;
+i[h] = !0;

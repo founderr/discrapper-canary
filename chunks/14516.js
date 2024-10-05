@@ -1,32 +1,31 @@
-var r = n(47120);
-var i = n(147913),
-    a = n(19780),
-    o = n(358221);
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class l extends i.Z {
+n(47120);
+var r = n(147913),
+    i = n(19780),
+    a = n(358221);
+class s extends r.Z {
     handleFocusParticipant() {
-        let e = a.Z.getChannelId();
+        let e = i.Z.getChannelId();
         if (null != e) {
             var t, n;
-            let r = o.Z.getSelectedParticipantId(e),
-                i = o.Z.getVideoParticipants(e);
-            null === (n = a.Z.getRTCConnection()) || void 0 === n || n.setSelectedParticipant(null === (t = i.find((e) => e.id === r && !e.localVideoDisabled)) || void 0 === t ? void 0 : t.id);
+            let r = a.Z.getSelectedParticipantId(e),
+                s = a.Z.getVideoParticipants(e);
+            null === (n = i.Z.getRTCConnection()) || void 0 === n || n.setSelectedParticipant(null === (t = s.find((e) => e.id === r && !e.localVideoDisabled)) || void 0 === t ? void 0 : t.id);
         }
     }
     constructor(...e) {
-        super(...e), s(this, 'stores', new Map().set(o.Z, this.handleFocusParticipant));
+        var t, n, r;
+        super(...e),
+            (t = this),
+            (n = 'stores'),
+            (r = new Map().set(a.Z, this.handleFocusParticipant)),
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: r,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (t[n] = r);
     }
 }
-t.Z = new l();
+t.Z = new s();

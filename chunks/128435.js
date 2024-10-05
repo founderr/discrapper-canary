@@ -1,58 +1,58 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return f;
     }
-});
-var r = n(627341);
+}),
+    n(627341);
 var i = n(735250),
     a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(278074),
-    u = n(263568),
+    s = n(120356),
+    l = n.n(s),
+    r = n(278074),
+    o = n(263568),
     c = n(481060),
     d = n(203143),
-    _ = n(365206),
-    E = n(294608),
-    f = n(65145),
-    h = n(920557),
-    p = n(113749);
-function m(e) {
+    u = n(365206),
+    _ = n(294608),
+    E = n(65145),
+    I = n(920557),
+    m = n(113749);
+function T(e) {
     let { media: t } = e;
     return (0, i.jsx)(c.Heading, {
         variant: 'text-md/medium',
-        className: p.question,
+        className: m.question,
         scaleFontToUserSetting: !0,
         children: t.text
     });
 }
-function I(e) {
-    let { children: t, onClick: n, variant: r = 'text-sm/medium', color: a = 'interactive-active', className: o, buttonRef: l } = e;
+function N(e) {
+    let { children: t, onClick: n, variant: a = 'text-sm/medium', color: s = 'interactive-active', className: r, buttonRef: o } = e;
     return (0, i.jsx)(c.Button, {
         onClick: n,
-        className: s()(p.__invalid_textButton, o),
+        className: l()(m.__invalid_textButton, r),
         look: c.Button.Looks.BLANK,
         size: c.Button.Sizes.NONE,
-        buttonRef: l,
+        buttonRef: o,
         children: (0, i.jsx)(c.Text, {
-            variant: r,
-            color: a,
+            variant: a,
+            color: s,
             scaleFontToUserSetting: !0,
             children: t
         })
     });
 }
-function T(e) {
-    let { buttonLabel: t, secondaryLabel: n, handleClick: r, isInteractive: a, className: o } = e;
+function h(e) {
+    let { buttonLabel: t, secondaryLabel: n, handleClick: a, isInteractive: s, className: r } = e;
     return (0, i.jsxs)('div', {
-        className: s()(p.detailsText, o),
+        className: l()(m.detailsText, r),
         children: [
-            a
-                ? (0, i.jsx)(I, {
-                      onClick: r,
+            s
+                ? (0, i.jsx)(N, {
+                      onClick: a,
                       variant: 'text-sm/normal',
                       color: 'none',
-                      className: s()(p.detailsTextButton, p.interactive),
+                      className: l()(m.detailsTextButton, m.interactive),
                       children: t
                   })
                 : (0, i.jsx)(c.Text, {
@@ -71,34 +71,18 @@ function T(e) {
         ]
     });
 }
-function g(e, t) {
-    let n = {
-        answers: t.answers,
-        answersInteraction: t.answersInteraction,
-        answerTapAccessibilityLabel: t.answerTapAccessibilityLabel,
-        isExpired: t.isExpired,
-        canTapAnswers: t.canTapAnswers,
-        hasSelectedAnyAnswer: t.hasSelectedAnswer,
-        myAvatarUrl: t.myAvatarUrl,
-        canShowVoteCounts: t.canShowVoteCounts
-    };
-    return (0, l.EQ)(t.layoutType)
-        .with(u.C.DEFAULT, () => (0, i.jsx)(h.K, { ...n }))
-        .with(u.C.IMAGE_ONLY_ANSWERS, () => (0, i.jsx)(_.Z, { ...n }))
-        .otherwise(() => null);
-}
-function S(e) {
-    let { action: t, channelId: n, messageId: r, isInteractive: o, className: l } = e,
-        { actionButtonRef: u, manageFocusOnAction: _ } = (0, f.dv)(),
-        E = a.useCallback(async () => {
+function C(e) {
+    let { action: t, channelId: n, messageId: s, isInteractive: r, className: o } = e,
+        { actionButtonRef: u, manageFocusOnAction: _ } = (0, E.dv)(),
+        I = a.useCallback(async () => {
             if ((null == t ? void 0 : t.type) != null)
                 await d.Z.handlePollActionTapped({
                     channelId: n,
-                    messageId: r,
+                    messageId: s,
                     type: t.type
                 }),
                     _(t.type);
-        }, [null == t ? void 0 : t.type, n, r, _]);
+        }, [null == t ? void 0 : t.type, n, s, _]);
     return null == t
         ? null
         : 'button' === t.presentation || 'secondaryButton' === t.presentation
@@ -106,11 +90,11 @@ function S(e) {
                 c.Button,
                 {
                     buttonRef: u,
-                    onClick: E,
+                    onClick: I,
                     disabled: !t.enabled,
                     color: 'secondaryButton' === t.presentation ? c.Button.Colors.CUSTOM : c.Button.Colors.BRAND,
                     size: c.Button.Sizes.SMALL,
-                    className: s()(l, p.buttonPresentation, 'secondaryButton' === t.presentation && p.secondaryButtonPresentation),
+                    className: l()(o, m.buttonPresentation, 'secondaryButton' === t.presentation && m.secondaryButtonPresentation),
                     children: (0, i.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'none',
@@ -121,62 +105,77 @@ function S(e) {
                 t.presentation
             )
           : 'textButton' === t.presentation
-            ? (0, i.jsx)(I, {
+            ? (0, i.jsx)(N, {
                   buttonRef: u,
-                  onClick: E,
-                  className: l,
+                  onClick: I,
+                  className: o,
                   children: t.label
               })
-            : (0, i.jsx)(T, {
+            : (0, i.jsx)(h, {
                   buttonLabel: t.label,
                   secondaryLabel: t.secondaryLabel,
-                  handleClick: E,
-                  isInteractive: o,
-                  className: l
+                  handleClick: I,
+                  isInteractive: r,
+                  className: o
               });
 }
-function A(e) {
-    let { message: t, poll: n, className: r } = e,
-        a = (0, E.$B)(n.containerStyle),
-        o = g(t, n);
-    return null == o
+function p(e) {
+    let { message: t, poll: n, className: a } = e,
+        s = (0, _.$B)(n.containerStyle),
+        d = (function (e, t) {
+            let n = {
+                answers: t.answers,
+                answersInteraction: t.answersInteraction,
+                answerTapAccessibilityLabel: t.answerTapAccessibilityLabel,
+                isExpired: t.isExpired,
+                canTapAnswers: t.canTapAnswers,
+                hasSelectedAnyAnswer: t.hasSelectedAnswer,
+                myAvatarUrl: t.myAvatarUrl,
+                canShowVoteCounts: t.canShowVoteCounts
+            };
+            return (0, r.EQ)(t.layoutType)
+                .with(o.C.DEFAULT, () => (0, i.jsx)(I.K, { ...n }))
+                .with(o.C.IMAGE_ONLY_ANSWERS, () => (0, i.jsx)(u.Z, { ...n }))
+                .otherwise(() => null);
+        })(0, n);
+    return null == d
         ? null
         : (0, i.jsx)('div', {
-              className: s()(p.container, a, r),
+              className: l()(m.container, s, a),
               children: (0, i.jsxs)(c.HeadingLevel, {
                   children: [
                       (0, i.jsxs)('div', {
-                          className: p.header,
+                          className: m.header,
                           children: [
-                              (0, i.jsx)(m, { media: n.question }),
+                              (0, i.jsx)(T, { media: n.question }),
                               null != n.promptLabel &&
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
-                                      className: p.prompt,
+                                      className: m.prompt,
                                       scaleFontToUserSetting: !0,
                                       children: n.promptLabel
                                   })
                           ]
                       }),
-                      o,
+                      d,
                       (0, i.jsxs)('div', {
-                          className: p.bottomBar,
+                          className: m.bottomBar,
                           children: [
-                              (0, i.jsx)(S, {
+                              (0, i.jsx)(C, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.secondaryAction,
-                                  className: p.secondaryAction,
+                                  className: m.secondaryAction,
                                   isInteractive: n.isInteractive
                               }),
-                              (0, i.jsx)(S, {
+                              (0, i.jsx)(C, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.tertiaryAction,
-                                  className: p.tertiaryAction
+                                  className: m.tertiaryAction
                               }),
-                              (0, i.jsx)(S, {
+                              (0, i.jsx)(C, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.primaryAction
@@ -187,16 +186,16 @@ function A(e) {
               })
           });
 }
-function v(e) {
-    let { message: t, poll: n, className: r } = e;
-    return (0, i.jsx)(E.XL, {
+function f(e) {
+    let { message: t, poll: n, className: a } = e;
+    return (0, i.jsx)(_.XL, {
         message: t,
         poll: n,
-        children: (0, i.jsx)(f.Pk, {
-            children: (0, i.jsx)(A, {
+        children: (0, i.jsx)(E.Pk, {
+            children: (0, i.jsx)(p, {
                 message: t,
                 poll: n,
-                className: r
+                className: a
             })
         })
     });

@@ -1,36 +1,39 @@
 n.d(t, {
     TZ: function () {
-        return c;
+        return d;
     },
     y6: function () {
-        return u;
+        return c;
     }
 });
-var r = n(904245),
-    i = n(594174),
-    a = n(626135),
-    o = n(709054),
-    s = n(8532),
-    l = n(981631);
-let u = (e) => {
+var i = n(904245),
+    a = n(594174),
+    s = n(626135),
+    l = n(709054),
+    r = n(8532),
+    o = n(981631);
+let c = (e) => {
         var t;
-        let n = null === (t = i.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
-            r = ((null != n ? o.default.extractTimestamp(n) : 0) + o.default.extractTimestamp(e)) % s.m.length;
-        return s.m[r];
+        let n = null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
+            i = ((null != n ? l.default.extractTimestamp(n) : 0) + l.default.extractTimestamp(e)) % r.m.length;
+        return r.m[i];
     },
-    c = (e, t, n) => {
-        var o;
-        let s = {
-            channel: e,
-            message: t,
-            shouldMention: !0,
-            showMentionToggle: !0
-        };
-        r.Z.sendGreetMessage(e.id, n, r.Z.getSendMessageOptionsForReply(s)),
-            a.default.track(l.rMx.WELCOME_CTA_CLICKED, {
+    d = (e, t, n) => {
+        var l;
+        i.Z.sendGreetMessage(
+            e.id,
+            n,
+            i.Z.getSendMessageOptionsForReply({
+                channel: e,
+                message: t,
+                shouldMention: !0,
+                showMentionToggle: !0
+            })
+        ),
+            s.default.track(o.rMx.WELCOME_CTA_CLICKED, {
                 is_reply: !0,
                 sticker_id: n,
                 target_user: t.author.id,
-                sender: null === (o = i.default.getCurrentUser()) || void 0 === o ? void 0 : o.id
+                sender: null === (l = a.default.getCurrentUser()) || void 0 === l ? void 0 : l.id
             });
     };

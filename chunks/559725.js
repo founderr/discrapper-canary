@@ -1,100 +1,98 @@
-n.d(t, {
+a.d(n, {
     cp: function () {
-        return T;
+        return c;
     },
     eI: function () {
-        return h;
+        return d;
     }
-});
-var r = n(411104);
-var i = n(175145),
-    a = n(544891),
-    o = n(570140),
-    s = n(355467),
-    l = n(987032),
-    u = n(559407),
-    c = n(122289),
-    d = n(439041),
-    _ = n(981631),
-    E = n(689938);
-async function f() {
-    return await a.tn.get({
-        url: _.ANM.BILLING_ADYEN_PAYMENT_METHODS,
+}),
+    a(411104);
+var t = a(175145),
+    r = a(544891),
+    o = a(570140),
+    s = a(355467),
+    l = a(987032),
+    i = a(559407),
+    _ = a(122289),
+    C = a(439041),
+    A = a(981631),
+    u = a(689938);
+async function E() {
+    return await r.tn.get({
+        url: A.ANM.BILLING_ADYEN_PAYMENT_METHODS,
         oldFormErrors: !0
     });
 }
-async function h() {
+async function d() {
     try {
         let { enabledPaymentTypes: e } = l.ZP.getCurrentConfig({ location: '40c266_2' }, { autoTrackExposure: !1 });
-        if (!e.includes(_.HeQ.CASH_APP)) return;
-        let t = await f(),
-            n = await (0, i.Z)({
-                environment: _.Ai1.ADYEN.KEY.startsWith('live_') ? 'live' : 'test',
-                clientKey: _.Ai1.ADYEN.KEY,
+        if (!e.includes(A.HeQ.CASH_APP)) return;
+        let n = await E(),
+            a = await (0, t.Z)({
+                environment: A.Ai1.ADYEN.KEY.startsWith('live_') ? 'live' : 'test',
+                clientKey: A.Ai1.ADYEN.KEY,
                 analytics: { enabled: !1 },
-                paymentMethodsResponse: t.body
+                paymentMethodsResponse: n.body
             });
         o.Z.dispatch({
             type: 'ADYEN_CREATE_CLIENT_SUCCESS',
-            client: n
+            client: a
         }),
-            p(n);
-    } catch (e) {
-        (0, c.q2)(e), o.Z.dispatch({ type: 'ADYEN_CREATE_CLIENT_FAIL' });
-    }
-}
-function p(e) {
-    if (null != d.Z.cashAppPayComponent) {
-        I(), m();
-        return;
-    }
-    let t = e
-        .create('cashapp', {
-            showPayButton: !1,
-            enableStoreDetails: !1,
-            storePaymentMethod: !0,
-            setStatusAutomatically: !1,
-            onSubmit: (e) => {
-                let { data: t, isValid: n } = e;
-                if (n)
-                    o.Z.dispatch({
-                        type: 'ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS',
-                        data: t
-                    });
-                else throw (0, s.SQ)('Cash App Pay setup attempt is not valid.');
-            },
-            onError: (e) => {
-                let t;
-                let n = !0;
-                if ('CANCEL' !== e.name) {
-                    switch (e.message) {
-                        case 'Payment declined by CashAppPay':
-                            n = !1;
-                            break;
-                        case 'Something went wrong during customerRequest creation':
-                            (n = !1), (t = E.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_LOADING_ERROR_TRY_AGAIN);
-                    }
-                    (0, s.SQ)(e.message, n, t);
+            (function (e) {
+                if (null != C.Z.cashAppPayComponent) {
+                    (function () {
+                        var e;
+                        null === (e = C.Z.cashAppPayComponent) || void 0 === e || e.unmount();
+                    })(),
+                        (function () {
+                            var e;
+                            if (null == C.Z.cashAppPayComponent) throw Error('Adyen CashAppPay component must be created before mounting.');
+                            null === (e = C.Z.cashAppPayComponent) || void 0 === e || e.mount('#'.concat(i.F));
+                        })();
+                    return;
                 }
-            }
-        })
-        .mount('#'.concat(u.F));
-    o.Z.dispatch({
-        type: 'ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS',
-        component: t
-    });
+                let n = e
+                    .create('cashapp', {
+                        showPayButton: !1,
+                        enableStoreDetails: !1,
+                        storePaymentMethod: !0,
+                        setStatusAutomatically: !1,
+                        onSubmit: (e) => {
+                            let { data: n, isValid: a } = e;
+                            if (a)
+                                o.Z.dispatch({
+                                    type: 'ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS',
+                                    data: n
+                                });
+                            else throw (0, s.SQ)('Cash App Pay setup attempt is not valid.');
+                        },
+                        onError: (e) => {
+                            let n;
+                            let a = !0;
+                            if ('CANCEL' !== e.name) {
+                                switch (e.message) {
+                                    case 'Payment declined by CashAppPay':
+                                        a = !1;
+                                        break;
+                                    case 'Something went wrong during customerRequest creation':
+                                        (a = !1), (n = u.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_LOADING_ERROR_TRY_AGAIN);
+                                }
+                                (0, s.SQ)(e.message, a, n);
+                            }
+                        }
+                    })
+                    .mount('#'.concat(i.F));
+                o.Z.dispatch({
+                    type: 'ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS',
+                    component: n
+                });
+            })(a);
+    } catch (e) {
+        (0, _.q2)(e), o.Z.dispatch({ type: 'ADYEN_CREATE_CLIENT_FAIL' });
+    }
 }
-function m() {
-    var e;
-    if (null == d.Z.cashAppPayComponent) throw Error('Adyen CashAppPay component must be created before mounting.');
-    null === (e = d.Z.cashAppPayComponent) || void 0 === e || e.mount('#'.concat(u.F));
-}
-function I() {
-    var e;
-    null === (e = d.Z.cashAppPayComponent) || void 0 === e || e.unmount();
-}
-function T() {
-    let e = d.Z.cashAppPayComponent;
+function c() {
+    let e = C.Z.cashAppPayComponent;
     if (null == e) throw Error('Adyen CashAppPay component must be created before submitting.');
     e.submit();
 }

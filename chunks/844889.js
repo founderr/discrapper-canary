@@ -1,44 +1,48 @@
 n.d(t, {
     Gg: function () {
-        return _;
+        return d;
     },
     Hg: function () {
-        return h;
+        return E;
     },
     fr: function () {
-        return d;
+        return c;
     }
 });
 var r = n(772848),
     i = n(433517);
-let a = 30,
-    o = 'LATEST_SESSION_TIMESTAMP',
+let a = 'LATEST_SESSION_TIMESTAMP',
     s = 'LATEST_SESSION_UUID',
-    l = 'LATEST_SESSION_INITIALIZED_TIMESTAMP',
-    u = Promise.resolve(),
-    c = !1;
-function d(e) {
-    c = e;
+    o = 'LATEST_SESSION_INITIALIZED_TIMESTAMP',
+    l = Promise.resolve(),
+    u = !1;
+function c(e) {
+    u = e;
 }
-function _() {
-    return (u = u.then(async () => {
-        let e = await E();
-        if (null == e || f(e)) {
-            if (!c) return null;
+function d() {
+    return (l = l.then(async () => {
+        let e = await _();
+        if (
+            null == e ||
+            (function (e) {
+                return 1800000 + e.lastUsed - Date.now() <= 0;
+            })(e)
+        ) {
+            if (!u) return null;
             let t = {
                 uuid: (0, r.Z)(),
                 initialized: Date.now(),
                 lastUsed: Date.now()
             };
-            i.K.set(s, t.uuid), i.K.set(l, t.initialized.toString()), i.K.set(o, Date.now().toString()), (e = t);
-        } else c && i.K.set(o, Date.now().toString());
+            i.K.set(s, t.uuid), i.K.set(o, t.initialized.toString()), i.K.set(a, Date.now().toString()), (e = t);
+        } else u && i.K.set(a, Date.now().toString());
         return e;
     }));
 }
-async function E() {
+async function _() {
     let e = await i.K.getAfterRefresh(s),
-        t = await i.K.getAfterRefresh(l).then(h),
-        n = await i.K.getAfterRefresh(o).then(h);
+        t = await i.K.getAfterRefresh(o).then(E),
+        n = await i.K.getAfterRefresh(a).then(E);
     return null != e && null != t
         ? {
               uuid: e,
@@ -47,9 +51,6 @@ async function E() {
           }
         : null;
 }
-function f(e) {
-    return 60000 * a + e.lastUsed - Date.now() <= 0;
-}
-function h(e) {
+function E(e) {
     return null != e ? Number(e) : 0;
 }

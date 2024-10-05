@@ -1,44 +1,43 @@
-var r;
+var i, a;
 n.d(t, {
     Gy: function () {
-        return l;
-    },
-    Jh: function () {
-        return i;
-    },
-    K7: function () {
-        return u;
-    },
-    NN: function () {
-        return s;
-    },
-    bS: function () {
-        return r;
-    },
-    e9: function () {
-        return a;
-    },
-    lv: function () {
         return c;
     },
-    t4: function () {
+    Jh: function () {
+        return s;
+    },
+    K7: function () {
+        return d;
+    },
+    NN: function () {
         return o;
     },
+    bS: function () {
+        return i;
+    },
+    e9: function () {
+        return l;
+    },
+    lv: function () {
+        return u;
+    },
+    t4: function () {
+        return r;
+    },
     u$: function () {
-        return d;
+        return _;
     }
 }),
-    !(function (e) {
-        (e[(e.POPULAR = 0)] = 'POPULAR'), (e[(e.ALPHABETICAL = 1)] = 'ALPHABETICAL');
-    })(r || (r = {}));
-let i = 'app-launcher-element',
-    a = 'app-launcher-modal',
-    o = 'app-launcher-entrypoint',
-    s = 'app-launcher-app-details-more-menu',
-    l = 500,
-    u = 670,
-    c = 'min(100vh, '.concat(u, 'px)'),
-    d = {
-        '--custom-app-launcher-width': ''.concat(l, 'px'),
-        '--custom-app-launcher-height': c
+    ((a = i || (i = {}))[(a.POPULAR = 0)] = 'POPULAR'),
+    (a[(a.ALPHABETICAL = 1)] = 'ALPHABETICAL');
+let s = 'app-launcher-element',
+    l = 'app-launcher-modal',
+    r = 'app-launcher-entrypoint',
+    o = 'app-launcher-app-details-more-menu',
+    c = 500,
+    d = 670,
+    u = 'min(100vh, '.concat(d, 'px)'),
+    _ = {
+        '--custom-app-launcher-width': ''.concat(c, 'px'),
+        '--custom-app-launcher-height': u
     };

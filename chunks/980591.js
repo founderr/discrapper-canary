@@ -1,5 +1,5 @@
 var r = n(470079);
-let i = (e, t) => {
+t.Z = (e, t) => {
     let n = (0, r.useRef)(e);
     (0, r.useEffect)(() => {
         n.current = e;
@@ -10,4 +10,3 @@ let i = (e, t) => {
             return () => clearTimeout(e);
         }, [t, n]);
 };
-t.Z = i;

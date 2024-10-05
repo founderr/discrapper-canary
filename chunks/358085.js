@@ -1,93 +1,94 @@
-var r;
+var r, i;
 n.r(t),
     n.d(t, {
         PlatformTypes: function () {
             return r;
         },
         getNativePlatform: function () {
-            return I;
-        },
-        getOS: function () {
             return T;
         },
+        getOS: function () {
+            return S;
+        },
         getPlatform: function () {
-            return p;
+            return I;
         },
         getPlatformName: function () {
             return m;
         },
         isAndroid: function () {
-            return f;
-        },
-        isAndroidChrome: function () {
-            return _;
-        },
-        isAndroidWeb: function () {
-            return E;
-        },
-        isDesktop: function () {
-            return c;
-        },
-        isIOS: function () {
             return h;
         },
-        isLinux: function () {
-            return u;
+        isAndroidChrome: function () {
+            return E;
         },
-        isMac: function () {
-            return l;
+        isAndroidWeb: function () {
+            return f;
         },
-        isPlatformEmbedded: function () {
-            return a;
-        },
-        isWeb: function () {
+        isDesktop: function () {
             return d;
         },
-        isWindows: function () {
+        isIOS: function () {
+            return p;
+        },
+        isLinux: function () {
+            return c;
+        },
+        isMac: function () {
+            return u;
+        },
+        isPlatformEmbedded: function () {
             return s;
+        },
+        isWeb: function () {
+            return _;
+        },
+        isWindows: function () {
+            return l;
         }
     }),
-    !(function (e) {
-        (e.WINDOWS = 'WINDOWS'), (e.OSX = 'OSX'), (e.LINUX = 'LINUX'), (e.WEB = 'WEB');
-    })(r || (r = {}));
-let i = window.DiscordNative,
-    a = null != i,
-    o = null != i ? i.process.platform : '';
-function s() {
+    ((i = r || (r = {})).WINDOWS = 'WINDOWS'),
+    (i.OSX = 'OSX'),
+    (i.LINUX = 'LINUX'),
+    (i.WEB = 'WEB');
+let a = window.DiscordNative,
+    s = null != a,
+    o = null != a ? a.process.platform : '';
+function l() {
     return /^win/.test(o);
 }
-function l() {
+function u() {
     return 'darwin' === o;
 }
-function u() {
+function c() {
     return 'linux' === o;
 }
-function c() {
-    return s() || l() || u();
-}
 function d() {
-    return 'WEB' === p();
+    return l() || u() || c();
 }
 function _() {
-    return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile');
+    return 'WEB' === I();
 }
 function E() {
+    return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile');
+}
+function f() {
     var e;
     return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/android/i)) != null;
 }
-function f() {
+function h() {
     return 'android' === o;
 }
-function h() {
+function p() {
     return 'ios' === o;
 }
-function p() {
-    return s() ? 'WINDOWS' : l() ? 'OSX' : u() ? 'LINUX' : 'WEB';
+function I() {
+    return l() ? 'WINDOWS' : u() ? 'OSX' : c() ? 'LINUX' : 'WEB';
 }
 function m() {
     return o;
 }
-function I() {
+function T() {
     switch (o) {
         case 'ios':
         case 'android':
@@ -96,7 +97,7 @@ function I() {
             return 'web';
     }
 }
-function T() {
+function S() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? 'windows mobile' : 'windows';
     if (/(iPhone|iPad|iPod)/.test(e)) return 'ios';

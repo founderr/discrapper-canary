@@ -1,49 +1,48 @@
-var r = n(47120);
-var i = n(470079),
-    a = n(442837),
-    o = n(812457),
+n(47120);
+var r = n(470079),
+    i = n(442837),
+    a = n(812457),
     s = n(369111),
-    l = n(271383),
-    u = n(594174),
-    c = n(768581),
-    d = n(676742),
-    _ = n(660097);
-let E = (e) => {
+    o = n(271383),
+    l = n(594174),
+    u = n(768581),
+    c = n(676742),
+    d = n(660097);
+t.Z = (e) => {
     var t;
-    let { user: n, guildId: r, size: E, onlyAnimateOnHover: f = !1, showPending: h = !1, showTryItOut: p = !1, avatarDecorationOverride: m } = e,
-        [I, T] = i.useState(!1),
-        { canAnimate: g } = (0, o.j)(I, f),
-        S = (0, a.e7)([l.ZP], () => (null != r && null != n ? l.ZP.getMember(r, n.id) : null)),
-        [A, v] = (0, a.Wu)([u.default], () => {
+    let { user: n, guildId: _, size: E, onlyAnimateOnHover: f = !1, showPending: h = !1, showTryItOut: p = !1, avatarDecorationOverride: I } = e,
+        [m, T] = r.useState(!1),
+        { canAnimate: S } = (0, a.j)(m, f),
+        g = (0, i.e7)([o.ZP], () => (null != _ && null != n ? o.ZP.getMember(_, n.id) : null)),
+        [A, N] = (0, i.Wu)([l.default], () => {
             var e;
-            return [null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.id, u.default.getUser(null == n ? void 0 : n.id)];
+            return [null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id, l.default.getUser(null == n ? void 0 : n.id)];
         }),
-        N = null == S ? (null == v ? void 0 : v.avatarDecoration) : null === S.avatarDecoration ? null : null !== (t = S.avatarDecoration) && void 0 !== t ? t : null == v ? void 0 : v.avatarDecoration,
-        { pendingAvatarDecoration: O } = (0, s.Z)({
+        O = null == g ? (null == N ? void 0 : N.avatarDecoration) : null === g.avatarDecoration ? null : null !== (t = g.avatarDecoration) && void 0 !== t ? t : null == N ? void 0 : N.avatarDecoration,
+        { pendingAvatarDecoration: R } = (0, s.Z)({
             isTryItOut: p,
-            guildId: r
+            guildId: _
         }),
-        R = h && void 0 !== O && void 0 !== A && A === (null == n ? void 0 : n.id),
-        C = null != r && null === O,
-        y = (0, d.Z)(R ? (C ? (null == v ? void 0 : v.avatarDecoration) : null != O ? O : N) : null != N ? N : null == v ? void 0 : v.avatarDecoration),
-        L = i.useMemo(
+        v = h && void 0 !== R && void 0 !== A && A === (null == n ? void 0 : n.id),
+        C = null != _ && null === R,
+        L = (0, c.Z)(v ? (C ? (null == N ? void 0 : N.avatarDecoration) : null != R ? R : O) : null != O ? O : null == N ? void 0 : N.avatarDecoration),
+        D = r.useMemo(
             () =>
-                (0, c.NZ)({
-                    avatarDecoration: void 0 !== m ? m : y,
-                    canAnimate: g,
+                (0, u.NZ)({
+                    avatarDecoration: void 0 !== I ? I : L,
+                    canAnimate: S,
                     size: E
                 }),
-            [y, g, E, m]
+            [L, S, E, I]
         ),
-        b = i.useCallback(() => T(!0), []);
+        y = r.useCallback(() => T(!0), []);
     return {
-        avatarPlaceholderSrc: _,
-        avatarDecorationSrc: L,
-        isAvatarDecorationAnimating: g,
+        avatarPlaceholderSrc: d,
+        avatarDecorationSrc: D,
+        isAvatarDecorationAnimating: S,
         eventHandlers: {
-            onMouseEnter: b,
-            onMouseLeave: i.useCallback(() => T(!1), [])
+            onMouseEnter: y,
+            onMouseLeave: r.useCallback(() => T(!1), [])
         }
     };
 };
-t.Z = E;

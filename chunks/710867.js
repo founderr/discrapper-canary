@@ -2,15 +2,15 @@ var r = n(735250);
 n(470079);
 var i = n(366040),
     a = n(293335),
-    o = n(831748);
-let s = (e) => {
+    s = n(831748);
+t.Z = (e) => {
     let { profileEffectConfig: t, onReady: n } = e,
-        { pendingRef: s, setPending: l } = (0, a.Z)(t.effects, n);
+        { pendingRef: o, setPending: l } = (0, a.Z)(t.effects, n);
     return (0, i.nY)('Profile Effect - Web')
         ? (0, r.jsx)('div', {
-              className: o.profileEffects,
+              className: s.profileEffects,
               children: (0, r.jsx)('div', {
-                  className: o.inner,
+                  className: s.inner,
                   children: t.effects.map((e) =>
                       (0, r.jsx)(
                           'video',
@@ -24,7 +24,7 @@ let s = (e) => {
                                   position: 'absolute'
                               },
                               onLoadedData: () => {
-                                  l(s.current - 1), (s.current = s.current - 1);
+                                  l(o.current - 1), (o.current = o.current - 1);
                               }
                           },
                           e.src
@@ -33,9 +33,9 @@ let s = (e) => {
               })
           })
         : (0, r.jsx)('div', {
-              className: o.profileEffects,
+              className: s.profileEffects,
               children: (0, r.jsx)('div', {
-                  className: o.inner,
+                  className: s.inner,
                   children: t.effects.map((e) =>
                       (0, r.jsx)(
                           'img',
@@ -48,7 +48,7 @@ let s = (e) => {
                                   position: 'absolute'
                               },
                               onLoad: () => {
-                                  l(s.current - 1), (s.current = s.current - 1);
+                                  l(o.current - 1), (o.current = o.current - 1);
                               }
                           },
                           e.src
@@ -57,4 +57,3 @@ let s = (e) => {
               })
           });
 };
-t.Z = s;

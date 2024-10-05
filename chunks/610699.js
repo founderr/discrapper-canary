@@ -1,62 +1,62 @@
 n.d(t, {
     Z: function () {
-        return V;
+        return k;
     }
-});
-var r = n(653041);
-var i = n(47120);
-var a = n(390547);
-var o = n(735250),
-    s = n(470079),
-    l = n(120356),
-    u = n.n(l),
-    c = n(512722),
-    d = n.n(c),
-    _ = n(442837),
-    E = n(477690),
-    f = n(481060),
-    h = n(447543),
-    p = n(317381),
-    m = n(778569),
-    I = n(182906),
+}),
+    n(653041),
+    n(47120),
+    n(390547);
+var i = n(735250),
+    a = n(470079),
+    s = n(120356),
+    l = n.n(s),
+    r = n(512722),
+    o = n.n(r),
+    c = n(442837),
+    d = n(477690),
+    u = n(481060),
+    _ = n(447543),
+    E = n(317381),
+    I = n(778569),
+    m = n(182906),
     T = n(884338),
-    g = n(100527),
-    S = n(906732),
-    A = n(835473),
-    v = n(471445),
-    N = n(111028),
-    O = n(955415),
-    R = n(601964),
-    C = n(592125),
-    y = n(430824),
-    L = n(496675),
-    b = n(594174),
-    D = n(624138),
-    M = n(358595),
-    P = n(981631),
-    U = n(245335),
-    w = n(689938),
-    x = n(610935);
-let G = (0, D.Mg)(E.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-    k = (0, D.Mg)(E.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-    B = (0, D.Mg)(E.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
-function F(e) {
-    let { members: t, membersOnline: n, isLarge: r, isStacked: i } = e,
-        a = [];
+    N = n(100527),
+    h = n(906732),
+    C = n(835473),
+    p = n(471445),
+    f = n(111028),
+    g = n(955415),
+    A = n(601964),
+    S = n(592125),
+    M = n(430824),
+    x = n(496675),
+    O = n(594174),
+    R = n(624138),
+    v = n(358595),
+    L = n(981631),
+    Z = n(245335),
+    P = n(689938),
+    D = n(610935);
+let b = (0, R.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+    j = (0, R.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+    U = (0, R.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+function y(e) {
+    let { members: t, membersOnline: n, isLarge: a, isStacked: s } = e,
+        r = [];
     return (
         null != n &&
             n > 0 &&
-            a.push(
-                (0, o.jsxs)(
+            r.push(
+                (0, i.jsxs)(
                     'div',
                     {
-                        className: x.statusWrapper,
+                        className: D.statusWrapper,
                         children: [
-                            (0, o.jsx)('i', { className: x.statusOnline }),
-                            (0, o.jsx)(f.Text, {
+                            (0, i.jsx)('i', { className: D.statusOnline }),
+                            (0, i.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
-                                className: x.count,
-                                children: w.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: n })
+                                className: D.count,
+                                children: P.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: n })
                             })
                         ]
                     },
@@ -64,53 +64,53 @@ function F(e) {
                 )
             ),
         null != t &&
-            a.push(
-                (0, o.jsxs)(
+            r.push(
+                (0, i.jsxs)(
                     'div',
                     {
-                        className: x.statusWrapper,
+                        className: D.statusWrapper,
                         children: [
-                            (0, o.jsx)('i', { className: x.statusOffline }),
-                            (0, o.jsx)(f.Text, {
+                            (0, i.jsx)('i', { className: D.statusOffline }),
+                            (0, i.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
-                                className: x.count,
-                                children: w.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: t })
+                                className: D.count,
+                                children: P.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: t })
                             })
                         ]
                     },
                     'memberCount'
                 )
             ),
-        (0, o.jsx)('div', {
-            className: u()(x.statusCounts, {
-                [x.large]: r,
-                [x.stacked]: i
+        (0, i.jsx)('div', {
+            className: l()(D.statusCounts, {
+                [D.large]: a,
+                [D.stacked]: s
             }),
-            children: a
+            children: r
         })
     );
 }
-function Z(e) {
-    let { channel: t, guild: n, isStacked: r, hasEnded: i } = e;
+function B(e) {
+    let { channel: t, guild: n, isStacked: a, hasEnded: s } = e;
     if (null != t && null != n) {
-        let e = (0, v.KS)(t, n);
-        return (0, o.jsxs)('div', {
-            className: u()(x.channel, {
-                [x.stacked]: r,
-                [x.ended]: i
+        let e = (0, p.KS)(t, n);
+        return (0, i.jsxs)('div', {
+            className: l()(D.channel, {
+                [D.stacked]: a,
+                [D.ended]: s
             }),
             children: [
                 null != e
-                    ? (0, o.jsx)(e, {
-                          className: x.channelIcon,
+                    ? (0, i.jsx)(e, {
+                          className: D.channelIcon,
                           size: 'xs',
                           color: 'currentColor'
                       })
                     : null,
-                (0, o.jsx)(N.Z, {
-                    children: (0, o.jsx)(f.Text, {
+                (0, i.jsx)(f.Z, {
+                    children: (0, i.jsx)(u.Text, {
                         variant: 'text-xs/normal',
-                        children: w.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
+                        children: P.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
                             channelName: t.name,
                             serverName: n.name
                         })
@@ -120,195 +120,196 @@ function Z(e) {
         });
     }
     return null != n
-        ? (0, o.jsx)('div', {
-              className: u()(x.channel, {
-                  [x.stacked]: r,
-                  [x.ended]: i
+        ? (0, i.jsx)('div', {
+              className: l()(D.channel, {
+                  [D.stacked]: a,
+                  [D.ended]: s
               }),
-              children: (0, o.jsx)(N.Z, {
-                  children: (0, o.jsx)(f.Text, {
+              children: (0, i.jsx)(f.Z, {
+                  children: (0, i.jsx)(u.Text, {
                       variant: 'text-xs/normal',
-                      children: w.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: n.name })
+                      children: P.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: n.name })
                   })
               })
           })
         : null;
 }
-function V(e) {
+function k(e) {
     var t, n;
-    let r,
-        i,
-        { invite: a, getAcceptInviteContext: l } = e,
-        { approximate_member_count: c, approximate_presence_count: E, target_type: v, target_application: N } = a;
-    d()(v === U.Iq.EMBEDDED_APPLICATION && null != N, 'invalid application invite');
-    let D = s.useRef(null),
-        [V, H] = s.useState(!1),
-        [Y, j] = s.useState(!1);
-    s.useEffect(() => {
-        function e() {
-            var e;
-            let t = null === (e = D.current) || void 0 === e ? void 0 : e.offsetWidth;
-            null != t && (H(t < B + k), j(t <= 2 * G));
-        }
-        let t = new ResizeObserver(() => e()),
-            n = D.current;
+    let s,
+        r,
+        { invite: d, getAcceptInviteContext: p } = e,
+        { approximate_member_count: f, approximate_presence_count: R, target_type: k, target_application: G } = d;
+    o()(k === Z.Iq.EMBEDDED_APPLICATION && null != G, 'invalid application invite');
+    let F = a.useRef(null),
+        [w, V] = a.useState(!1),
+        [H, Y] = a.useState(!1);
+    a.useEffect(() => {
+        let e = new ResizeObserver(() =>
+                (function () {
+                    var e;
+                    let t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetWidth;
+                    null != t && (V(t < U + j), Y(t <= 2 * b));
+                })()
+            ),
+            t = F.current;
         return (
-            null != n && t.observe(n),
+            null != t && e.observe(t),
             () => {
-                t.disconnect();
+                e.disconnect();
             }
         );
-    }, [D, H, j]);
-    let W = (0, _.e7)([y.Z], () => (null != a.guild ? y.Z.getGuild(a.guild.id) : null), [a]),
-        K = (0, A.Z)([N.id])[0],
-        z = (0, _.e7)([p.ZP], () => {
+    }, [F, V, Y]);
+    let W = (0, c.e7)([M.Z], () => (null != d.guild ? M.Z.getGuild(d.guild.id) : null), [d]),
+        K = (0, C.Z)([G.id])[0],
+        z = (0, c.e7)([E.ZP], () => {
             var e;
-            return (null == a ? void 0 : a.channel) != null && (null === (e = p.ZP.getSelfEmbeddedActivityForChannel(a.channel.id)) || void 0 === e ? void 0 : e.applicationId) === N.id;
+            return (null == d ? void 0 : d.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
         }),
-        q = (0, _.e7)([p.ZP], () => {
+        X = (0, c.e7)([E.ZP], () => {
             var e;
-            return ((null === (e = a.channel) || void 0 === e ? void 0 : e.id) != null ? p.ZP.getEmbeddedActivitiesForChannel(a.channel.id) : []).some((e) => {
+            return ((null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? E.ZP.getEmbeddedActivitiesForChannel(d.channel.id) : []).some((e) => {
                 let { applicationId: t } = e;
-                return N.id === t;
+                return G.id === t;
             });
         }),
-        Q = C.Z.getChannel(null === (t = a.channel) || void 0 === t ? void 0 : t.id),
-        X = (0, _.e7)([L.Z], () => null != Q && L.Z.can(P.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
-        { analyticsLocations: $ } = (0, S.ZP)(g.Z.INVITE_EMBED),
-        J = (0, m.Z)({
-            applicationId: N.id,
-            size: G,
+        Q = S.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+        J = (0, c.e7)([x.Z], () => null != Q && x.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
+        { analyticsLocations: q } = (0, h.ZP)(N.Z.INVITE_EMBED),
+        $ = (0, I.Z)({
+            applicationId: G.id,
+            size: b,
             names: ['embedded_cover']
         }),
-        ee = (0, _.Wu)(
-            [p.ZP],
+        ee = (0, c.Wu)(
+            [E.ZP],
             () =>
                 null != Q
-                    ? p.ZP.getEmbeddedActivitiesForChannel(Q.id)
-                          .filter((e) => e.applicationId === N.id)
+                    ? E.ZP.getEmbeddedActivitiesForChannel(Q.id)
+                          .filter((e) => e.applicationId === G.id)
                           .flatMap((e) => Array.from(e.userIds))
                     : [],
-            [Q, N.id]
+            [Q, G.id]
         ),
-        et = (0, _.Wu)([b.default], () => ee.map((e) => b.default.getUser(e)), [ee]),
-        en = a.state === P.r2o.ACCEPTING,
-        er = null != W;
+        et = (0, c.Wu)([O.default], () => ee.map((e) => O.default.getUser(e)), [ee]),
+        en = d.state === L.r2o.ACCEPTING,
+        ei = null != W;
     if (null == W) {
-        if (null == a.guild) return (0, o.jsx)(M.Z, {});
-        W = new R.ZP(a.guild);
+        if (null == d.guild) return (0, i.jsx)(v.Z, {});
+        W = new A.ZP(d.guild);
     }
-    let ei = (er && !X) || (er && z),
-        ea = () => {
-            h.Z.acceptInviteAndTransitionToInviteChannel({
-                inviteKey: a.code,
-                context: l('Invite Button Embed'),
-                analyticsLocations: $
+    let ea = (ei && !J) || (ei && z),
+        es = () => {
+            _.Z.acceptInviteAndTransitionToInviteChannel({
+                inviteKey: d.code,
+                context: p('Invite Button Embed'),
+                analyticsLocations: q
             });
         };
-    return (er && z && (r = w.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (r = w.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), (i = z ? w.Z.Messages.INVITE_EMBED_JOINED : q || !er ? w.Z.Messages.JOIN : w.Z.Messages.START), null == a.code || '' === a.code)
+    return (ei && z && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !J && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), (r = z ? P.Z.Messages.INVITE_EMBED_JOINED : X || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START), null == d.code || '' === d.code)
         ? null
-        : (0, o.jsxs)('div', {
-              className: x.container,
-              ref: D,
+        : (0, i.jsxs)('div', {
+              className: D.container,
+              ref: F,
               children: [
-                  (0, o.jsx)('div', {
-                      className: u()(x.imgContainer, {
-                          [x.large]: V,
-                          [x.stacked]: Y
+                  (0, i.jsx)('div', {
+                      className: l()(D.imgContainer, {
+                          [D.large]: w,
+                          [D.stacked]: H
                       }),
-                      children: (0, o.jsx)(I.Z, {
-                          imageBackground: J,
+                      children: (0, i.jsx)(m.Z, {
+                          imageBackground: $,
                           applicationName: null !== (n = null == K ? void 0 : K.name) && void 0 !== n ? n : '',
-                          imageClassName: u()(x.img, {
-                              [x.large]: V,
-                              [x.stacked]: Y
+                          imageClassName: l()(D.img, {
+                              [D.large]: w,
+                              [D.stacked]: H
                           }),
-                          imageNotFoundClassName: u()(x.brokenImg, {
-                              [x.large]: V,
-                              [x.stacked]: Y
+                          imageNotFoundClassName: l()(D.brokenImg, {
+                              [D.large]: w,
+                              [D.stacked]: H
                           })
                       })
                   }),
-                  (0, o.jsxs)(O.Z, {
-                      className: u()(x.content, {
-                          [x.large]: V,
-                          [x.stacked]: Y
+                  (0, i.jsxs)(g.Z, {
+                      className: l()(D.content, {
+                          [D.large]: w,
+                          [D.stacked]: H
                       }),
                       children: [
-                          (0, o.jsxs)('div', {
-                              className: x.info,
+                          (0, i.jsxs)('div', {
+                              className: D.info,
                               children: [
-                                  (0, o.jsx)(f.FormTitle, { children: er ? w.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : w.Z.Messages.INVITE_BUTTON_TITLE_INVITED }),
-                                  (0, o.jsx)(f.Heading, {
-                                      className: x.heading,
+                                  (0, i.jsx)(u.FormTitle, { children: ei ? P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : P.Z.Messages.INVITE_BUTTON_TITLE_INVITED }),
+                                  (0, i.jsx)(u.Heading, {
+                                      className: D.heading,
                                       variant: 'heading-xl/semibold',
                                       children: null == K ? void 0 : K.name
                                   }),
-                                  (0, o.jsx)(Z, {
+                                  (0, i.jsx)(B, {
                                       channel: Q,
                                       guild: W,
-                                      isStacked: Y,
-                                      hasEnded: !q
+                                      isStacked: H,
+                                      hasEnded: !X
                                   })
                               ]
                           }),
-                          (0, o.jsxs)('div', {
-                              className: u()(x.currentState, {
-                                  [x.large]: V,
-                                  [x.split]: !q && Y
+                          (0, i.jsxs)('div', {
+                              className: l()(D.currentState, {
+                                  [D.large]: w,
+                                  [D.split]: !X && H
                               }),
                               children: [
-                                  !q && er
-                                      ? (0, o.jsxs)('div', {
-                                            className: u()(x.endedNote, { [x.large]: V }),
+                                  !X && ei
+                                      ? (0, i.jsxs)('div', {
+                                            className: l()(D.endedNote, { [D.large]: w }),
                                             children: [
-                                                (0, o.jsx)(f.Text, {
+                                                (0, i.jsx)(u.Text, {
                                                     variant: 'text-xs/medium',
-                                                    children: w.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED
+                                                    children: P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED
                                                 }),
-                                                (0, o.jsx)(f.Text, {
+                                                (0, i.jsx)(u.Text, {
                                                     variant: 'text-xs/medium',
-                                                    children: w.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_START
+                                                    children: P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_START
                                                 })
                                             ]
                                         })
                                       : null,
-                                  er
+                                  ei
                                       ? null
-                                      : (0, o.jsx)(F, {
-                                            members: c,
-                                            membersOnline: E,
-                                            isLarge: V,
-                                            isStacked: Y
+                                      : (0, i.jsx)(y, {
+                                            members: f,
+                                            membersOnline: R,
+                                            isLarge: w,
+                                            isStacked: H
                                         }),
-                                  (0, o.jsxs)('div', {
-                                      className: x.cta,
+                                  (0, i.jsxs)('div', {
+                                      className: D.cta,
                                       children: [
-                                          null != W && q
-                                              ? (0, o.jsx)('div', {
-                                                    className: x.avatars,
-                                                    children: (0, o.jsx)(T.Z, {
+                                          null != W && X
+                                              ? (0, i.jsx)('div', {
+                                                    className: D.avatars,
+                                                    children: (0, i.jsx)(T.Z, {
                                                         guildId: W.id,
                                                         users: et,
                                                         max: 4
                                                     })
                                                 })
                                               : null,
-                                          (0, o.jsx)(f.Tooltip, {
-                                              text: r,
+                                          (0, i.jsx)(u.Tooltip, {
+                                              text: s,
                                               children: (e) => {
                                                   let { onClick: t, ...n } = e;
-                                                  return (0, o.jsx)(f.Button, {
-                                                      className: x.actionButton,
+                                                  return (0, i.jsx)(u.Button, {
+                                                      className: D.actionButton,
                                                       onClick: () => {
-                                                          ea(), null == t || t();
+                                                          es(), null == t || t();
                                                       },
-                                                      wrapperClassName: x.tooltipButtonWrapper,
+                                                      wrapperClassName: D.tooltipButtonWrapper,
                                                       ...n,
                                                       submitting: en,
-                                                      disabled: ei,
-                                                      color: f.ButtonColors.GREEN,
-                                                      children: i
+                                                      disabled: ea,
+                                                      color: u.ButtonColors.GREEN,
+                                                      children: r
                                                   });
                                               }
                                           })

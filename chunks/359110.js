@@ -9,14 +9,14 @@ n.d(t, {
 var r = n(512722),
     i = n.n(r),
     a = n(493683),
-    o = n(727429),
-    s = n(592125),
+    s = n(727429),
+    o = n(592125),
     l = n(703656),
     u = n(981631);
 function c(e, t) {
-    let n = s.Z.getChannel(e);
+    let n = o.Z.getChannel(e);
     if (null == n) return;
-    let r = (0, o.e)(n);
+    let r = (0, s.e)(n);
     a.Z.preload(n.guild_id, n.id),
         (0, l.uL)(u.Z5c.CHANNEL(r, n.id), {
             openChannel: !0,
@@ -25,17 +25,9 @@ function c(e, t) {
 }
 function d(e, t) {
     i()(null != e.parent_id, 'Thread must have a parent ID.');
-    let n = (0, o.e)(e);
+    let n = (0, s.e)(e);
     (0, l.uL)(u.Z5c.CHANNEL(n, e.id), {
         openChannel: !0,
         ...t
-    });
-}
-function _(e, t, n) {
-    invariant(null != e.parent_id, 'Thread must have a parent ID.');
-    let r = getGuildIdForGenericRedirect(e);
-    transitionTo(Routes.CHANNEL(r, e.id, t), {
-        openChannel: !0,
-        ...n
     });
 }

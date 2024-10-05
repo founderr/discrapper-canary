@@ -21,13 +21,6 @@ var r = n(165566),
         arguments: !0,
         arity: !0
     },
-    o = {
-        $$typeof: !0,
-        render: !0,
-        defaultProps: !0,
-        displayName: !0,
-        propTypes: !0
-    },
     s = {
         $$typeof: !0,
         compare: !0,
@@ -36,35 +29,41 @@ var r = n(165566),
         propTypes: !0,
         type: !0
     },
-    l = {};
-function u(e) {
-    return r.isMemo(e) ? s : l[e.$$typeof] || i;
+    o = {};
+function l(e) {
+    return r.isMemo(e) ? s : o[e.$$typeof] || i;
 }
-(l[r.ForwardRef] = o), (l[r.Memo] = s);
-var c = Object.defineProperty,
-    d = Object.getOwnPropertyNames,
-    _ = Object.getOwnPropertySymbols,
-    E = Object.getOwnPropertyDescriptor,
-    f = Object.getPrototypeOf,
-    h = Object.prototype;
-function p(e, t, n) {
-    if ('string' != typeof t) {
-        if (h) {
-            var r = f(t);
-            r && r !== h && p(e, r, n);
+(o[r.ForwardRef] = {
+    $$typeof: !0,
+    render: !0,
+    defaultProps: !0,
+    displayName: !0,
+    propTypes: !0
+}),
+    (o[r.Memo] = s);
+var u = Object.defineProperty,
+    c = Object.getOwnPropertyNames,
+    d = Object.getOwnPropertySymbols,
+    _ = Object.getOwnPropertyDescriptor,
+    E = Object.getPrototypeOf,
+    f = Object.prototype;
+e.exports = function e(t, n, r) {
+    if ('string' != typeof n) {
+        if (f) {
+            var i = E(n);
+            i && i !== f && e(t, i, r);
         }
-        var i = d(t);
-        _ && (i = i.concat(_(t)));
-        for (var o = u(e), s = u(t), l = 0; l < i.length; ++l) {
-            var m = i[l];
-            if (!a[m] && !(n && n[m]) && !(s && s[m]) && !(o && o[m])) {
-                var I = E(t, m);
+        var s = c(n);
+        d && (s = s.concat(d(n)));
+        for (var o = l(t), h = l(n), p = 0; p < s.length; ++p) {
+            var I = s[p];
+            if (!a[I] && !(r && r[I]) && !(h && h[I]) && !(o && o[I])) {
+                var m = _(n, I);
                 try {
-                    c(e, m, I);
+                    u(t, I, m);
                 } catch (e) {}
             }
         }
     }
-    return e;
-}
-e.exports = p;
+    return t;
+};

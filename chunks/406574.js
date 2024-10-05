@@ -1,28 +1,23 @@
-var t = 'Function.prototype.bind called on incompatible ',
-    n = Array.prototype.slice,
-    r = Object.prototype.toString,
-    i = '[object Function]';
+var t = Array.prototype.slice,
+    n = Object.prototype.toString;
 e.exports = function (e) {
-    var a,
-        o = this;
-    if ('function' != typeof o || r.call(o) !== i) throw TypeError(t + o);
-    for (
-        var s = n.call(arguments, 1),
-            l = function () {
-                if (!(this instanceof a)) return o.apply(e, s.concat(n.call(arguments)));
-                var t = o.apply(this, s.concat(n.call(arguments)));
-                return Object(t) === t ? t : this;
-            },
-            u = Math.max(0, o.length - s.length),
-            c = [],
-            d = 0;
-        d < u;
-        d++
-    )
-        c.push('$' + d);
-    if (((a = Function('binder', 'return function (' + c.join(',') + '){ return binder.apply(this,arguments); }')(l)), o.prototype)) {
-        var _ = function () {};
-        (_.prototype = o.prototype), (a.prototype = new _()), (_.prototype = null);
+    var r,
+        i = this;
+    if ('function' != typeof i || '[object Function]' !== n.call(i)) throw TypeError('Function.prototype.bind called on incompatible ' + i);
+    for (var a = t.call(arguments, 1), s = Math.max(0, i.length - a.length), o = [], l = 0; l < s; l++) o.push('$' + l);
+    if (
+        ((r = Function(
+            'binder',
+            'return function (' + o.join(',') + '){ return binder.apply(this,arguments); }'
+        )(function () {
+            if (!(this instanceof r)) return i.apply(e, a.concat(t.call(arguments)));
+            var n = i.apply(this, a.concat(t.call(arguments)));
+            return Object(n) === n ? n : this;
+        })),
+        i.prototype)
+    ) {
+        var u = function () {};
+        (u.prototype = i.prototype), (r.prototype = new u()), (u.prototype = null);
     }
-    return a;
+    return r;
 };

@@ -1,35 +1,29 @@
 n.d(t, {
     R: function () {
-        return d;
+        return o;
     },
     n: function () {
-        return c;
+        return s;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079);
-let o = 'data-focus-blocked',
-    s = 0;
-function l() {
-    return s++;
-}
-function u(e) {
-    return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, { acceptNode: (e) => (e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP) });
-}
-function c(e, t) {
-    let [n] = a.useState(() => l()),
-        r = ''.concat(o, '-').concat(n);
-    a.useLayoutEffect(() => {
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079);
+let a = 0;
+function s(e, t) {
+    let [n] = i.useState(() => a++),
+        r = ''.concat('data-focus-blocked', '-').concat(n);
+    i.useLayoutEffect(() => {
         if (t) {
             let t = e.current;
             if (null != t) {
-                let e = u(t),
-                    n = e.currentNode;
-                for (; null !== n; ) {
-                    let t = n,
-                        i = t.tabIndex;
-                    (t.tabIndex = -1), t.setAttribute(r, String(i)), (n = e.nextNode());
+                var n;
+                let e = ((n = t), document.createTreeWalker(n, NodeFilter.SHOW_ELEMENT, { acceptNode: (e) => (e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP) })),
+                    i = e.currentNode;
+                for (; null !== i; ) {
+                    let t = i,
+                        n = t.tabIndex;
+                    (t.tabIndex = -1), t.setAttribute(r, String(n)), (i = e.nextNode());
                 }
                 return () => {
                     t.querySelectorAll('['.concat(r, ']')).forEach((e) => {
@@ -44,12 +38,12 @@ function c(e, t) {
         }
     }, [t]);
 }
-function d(e) {
-    let { children: t, className: n, enabled: r = !0 } = e,
-        o = a.useRef(null);
+function o(e) {
+    let { children: t, className: n, enabled: a = !0 } = e,
+        o = i.useRef(null);
     return (
-        c(o, r),
-        (0, i.jsx)('div', {
+        s(o, a),
+        (0, r.jsx)('div', {
             ref: o,
             className: n,
             children: t

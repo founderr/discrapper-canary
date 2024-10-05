@@ -1,6 +1,5 @@
 var r = n(74748);
-function i(e) {
+t.Z = function (e) {
     var t = new e.constructor(e.byteLength);
     return new r.Z(t).set(new r.Z(e)), t;
-}
-t.Z = i;
+};

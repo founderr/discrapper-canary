@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             variants: [e.COMMENT('--', '$'), e.COMMENT(/\{-/, /-\}/, { contains: ['self'] })]
         },
@@ -32,19 +32,17 @@ function t(e) {
                 t
             ]
         },
-        o = {
+        s = {
             begin: /\{/,
             end: /\}/,
             contains: a.contains
         },
-        s = '([0-9]_*)+',
+        o = '([0-9]_*)+',
         l = '([0-9a-fA-F]_*)+',
-        u = '([01]_*)+',
-        c = '([0-7]_*)+',
-        d = {
+        u = {
             className: 'number',
             relevance: 0,
-            variants: [{ match: `\\b(${s})(\\.(${s}))?([eE][+-]?(${s}))?\\b` }, { match: `\\b0[xX]_*(${l})(\\.(${l}))?([pP][+-]?(${s}))?\\b` }, { match: `\\b0[oO](${c})\\b` }, { match: `\\b0[bB](${u})\\b` }]
+            variants: [{ match: `\\b(${o})(\\.(${o}))?([eE][+-]?(${o}))?\\b` }, { match: `\\b0[xX]_*(${l})(\\.(${l}))?([pP][+-]?(${o}))?\\b` }, { match: '\\b0[oO](([0-7]_*)+)\\b' }, { match: '\\b0[bB](([01]_*)+)\\b' }]
         };
     return {
         name: 'Haskell',
@@ -77,7 +75,7 @@ function t(e) {
                 begin: '\\b(data|(new)?type)\\b',
                 end: '$',
                 keywords: 'data family type newtype deriving',
-                contains: [n, i, a, o, t]
+                contains: [n, i, a, s, t]
             },
             {
                 beginKeywords: 'default',
@@ -103,12 +101,11 @@ function t(e) {
             n,
             r,
             e.QUOTE_STRING_MODE,
-            d,
+            u,
             i,
             e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
             t,
             { begin: '->|<-' }
         ]
     };
-}
-e.exports = t;
+};

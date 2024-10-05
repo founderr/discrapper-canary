@@ -1,36 +1,35 @@
 n.d(t, {
     K: function () {
-        return s;
+        return o;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(803997),
     a = n.n(i),
-    o = n(534493);
-function s(e) {
-    let { gap: t = 8, direction: n = 'vertical', align: i = 'stretch', justify: s = 'start', padding: u = 0, style: c, className: d, children: _, ...E } = e;
+    s = n(534493);
+function o(e) {
+    let { gap: t = 8, direction: n = 'vertical', align: i = 'stretch', justify: o = 'start', padding: l = 0, style: u, className: c, children: d, ..._ } = e;
     return (0, r.jsx)('div', {
         'data-align': i,
-        'data-justify': s,
+        'data-justify': o,
         'data-direction': n,
-        className: a()(o.stack, d),
+        className: a()(s.stack, c),
         style: {
-            ...c,
-            ...l(u),
+            ...u,
+            ...(function (e) {
+                return 'number' == typeof e
+                    ? { padding: e }
+                    : {
+                          paddingLeft: e.left,
+                          paddingRight: e.right,
+                          paddingTop: e.top,
+                          paddingBottom: e.bottom
+                      };
+            })(l),
             gap: t
         },
-        ...E,
-        children: _
+        ..._,
+        children: d
     });
-}
-function l(e) {
-    return 'number' == typeof e
-        ? { padding: e }
-        : {
-              paddingLeft: e.left,
-              paddingRight: e.right,
-              paddingTop: e.top,
-              paddingBottom: e.bottom
-          };
 }

@@ -1,14 +1,15 @@
 n.d(t, {
     n: function () {
-        return c;
+        return o;
     }
-});
+}),
+    n(47120),
+    n(724458),
+    n(653041);
 var r,
-    i = n(47120);
-var a = n(724458);
-var o = n(653041);
-var s = n(372817);
-function l(e, t, n) {
+    i,
+    a = n(372817);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,28 +22,8 @@ function l(e, t, n) {
         e
     );
 }
-function u(e) {
-    if (null == e)
-        return {
-            x: 0,
-            y: 0
-        };
-    let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
-    if (null == t)
-        return {
-            x: 0,
-            y: 0
-        };
-    let { top: n, left: r } = t.getBoundingClientRect();
-    return {
-        x: r,
-        y: n
-    };
-}
-!(function (e) {
-    (e.UP = 'ArrowUp'), (e.DOWN = 'ArrowDown'), (e.DROP = 'Shift'), (e.CANCEL = 'Escape');
-})(r || (r = {}));
-class c {
+((i = r || (r = {})).UP = 'ArrowUp'), (i.DOWN = 'ArrowDown'), (i.DROP = 'Shift'), (i.CANCEL = 'Escape');
+class o {
     disconnect() {
         window.removeEventListener('keydown', this.handleDraggedElementKeyDown, { capture: !0 });
     }
@@ -56,7 +37,31 @@ class c {
                 })) || void 0 === t
                 ? void 0
                 : t[0];
-        null != n && (this.actions.hover([n], { clientOffset: u(e) }), (this.currentHoveredNode = e), this.previewer.render(this.monitor), this.announcer.announceHover(e, n), null == e || e.focus());
+        null != n &&
+            (this.actions.hover([n], {
+                clientOffset: (function (e) {
+                    if (null == e)
+                        return {
+                            x: 0,
+                            y: 0
+                        };
+                    let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
+                    if (null == t)
+                        return {
+                            x: 0,
+                            y: 0
+                        };
+                    let { top: n, left: r } = t.getBoundingClientRect();
+                    return {
+                        x: r,
+                        y: n
+                    };
+                })(e)
+            }),
+            (this.currentHoveredNode = e),
+            this.previewer.render(this.monitor),
+            this.announcer.announceHover(e, n),
+            null == e || e.focus());
     }
     getNextDropTarget() {
         var e;
@@ -88,15 +93,15 @@ class c {
               }, []);
     }
     constructor(e, t, n, r, i) {
-        l(this, 'targetNodes', void 0),
-            l(this, 'manager', void 0),
-            l(this, 'previewer', void 0),
-            l(this, 'announcer', void 0),
-            l(this, 'currentHoveredNode', void 0),
-            l(this, 'focusManager', void 0),
-            l(this, 'actions', void 0),
-            l(this, 'monitor', void 0),
-            l(this, 'handleDraggedElementKeyDown', void 0),
+        s(this, 'targetNodes', void 0),
+            s(this, 'manager', void 0),
+            s(this, 'previewer', void 0),
+            s(this, 'announcer', void 0),
+            s(this, 'currentHoveredNode', void 0),
+            s(this, 'focusManager', void 0),
+            s(this, 'actions', void 0),
+            s(this, 'monitor', void 0),
+            s(this, 'handleDraggedElementKeyDown', void 0),
             (this.targetNodes = t),
             (this.manager = n),
             (this.previewer = r),
@@ -111,7 +116,7 @@ class c {
                 }
             }),
             (this.currentHoveredNode = e),
-            (this.focusManager = (0, s.E)({
+            (this.focusManager = (0, a.E)({
                 getFocusableElements: () => this.getViableTargets(t),
                 getActiveElement: () => e.ownerDocument.activeElement
             })),

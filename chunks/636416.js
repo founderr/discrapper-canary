@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             keyword: 'bool break call callexe checkinterrupt clear clearg closeall cls comlog compile continue create debug declare delete disable dlibrary dllcall do dos ed edit else elseif enable end endfor endif endp endo errorlog errorlogat expr external fn for format goto gosub graph if keyword let lib library line load loadarray loadexe loadf loadk loadm loadp loads loadx local locate loopnextindex lprint lpwidth lshow matrix msym ndpclex new open output outwidth plot plotsym pop prcsn print printdos proc push retp return rndcon rndmod rndmult rndseed run save saveall screen scroll setarray show sparse stop string struct system trace trap threadfor threadendfor threadbegin threadjoin threadstat threadend until use while winprint ne ge le gt lt and xor or not eq eqv',
             built_in:
@@ -67,13 +67,13 @@ function t(e) {
                 ]
             }
         ],
-        o = {
+        s = {
             className: 'title',
             begin: e.UNDERSCORE_IDENT_RE,
             relevance: 0
         },
-        s = function (t, r, i) {
-            let s = e.inherit(
+        o = function (t, r, i) {
+            let o = e.inherit(
                 {
                     className: 'function',
                     beginKeywords: t,
@@ -83,7 +83,7 @@ function t(e) {
                 },
                 i || {}
             );
-            return s.contains.push(o), s.contains.push(e.C_NUMBER_MODE), s.contains.push(e.C_BLOCK_COMMENT_MODE), s.contains.push(n), s;
+            return o.contains.push(s), o.contains.push(e.C_NUMBER_MODE), o.contains.push(e.C_BLOCK_COMMENT_MODE), o.contains.push(n), o;
         },
         l = {
             className: 'built_in',
@@ -140,8 +140,8 @@ function t(e) {
                     className: 'keyword',
                     begin: /\bexternal (matrix|string|array|sparse matrix|struct|proc|keyword|fn)/
                 },
-                s('proc keyword', ';'),
-                s('fn', '='),
+                o('proc keyword', ';'),
+                o('fn', '='),
                 {
                     beginKeywords: 'for threadfor',
                     end: /;/,
@@ -157,5 +157,4 @@ function t(e) {
             ]
         }
     );
-}
-e.exports = t;
+};

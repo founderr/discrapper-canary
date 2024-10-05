@@ -1,4 +1,3 @@
-function n() {
+t.Z = function () {
     return [];
-}
-t.Z = n;
+};

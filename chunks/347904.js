@@ -1,19 +1,17 @@
 n.d(t, {
     s4: function () {
-        return s;
+        return a;
     },
     vJ: function () {
         return l;
     }
-});
-var r,
-    i = n(757143);
-var a = n(392711);
-var o = n(302221);
-!(function (e) {
-    e.OUT_OF_BURSTS = 'out of burst reactions modal';
-})(r || (r = {}));
-let s = (e, t) => {
+}),
+    n(757143);
+var i,
+    s = n(392711),
+    o = n(302221);
+(i || (i = {})).OUT_OF_BURSTS = 'out of burst reactions modal';
+let a = (e, t) => {
         let n = (0, o.WY)([t.r, t.g, t.b], 2);
         return (e = (e = e.replace(
             /(\[1,0,0,)/g,
@@ -29,7 +27,7 @@ let s = (e, t) => {
                 .concat(n[1][2] / 255, ',')
         ));
     },
-    l = (0, a.memoize)((e) => {
+    l = (0, s.memoize)((e) => {
         let t = 0;
         for (let n = 0; n < e.length; n++) t = (t << 5) - t + e.charCodeAt(n);
         return Math.abs(t);

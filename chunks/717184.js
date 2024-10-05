@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'Haxe',
         aliases: ['hx'],
@@ -132,5 +132,4 @@ function t(e) {
         ],
         illegal: /<\//
     };
-}
-e.exports = t;
+};

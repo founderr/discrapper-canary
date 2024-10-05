@@ -1,84 +1,81 @@
 n.d(t, {
     Iq: function () {
-        return E;
+        return c;
     },
     UR: function () {
-        return h;
-    },
-    Ww: function () {
-        return f;
-    },
-    c$: function () {
-        return p;
-    },
-    g: function () {
         return _;
     },
+    Ww: function () {
+        return d;
+    },
+    c$: function () {
+        return E;
+    },
+    g: function () {
+        return u;
+    },
     i2: function () {
-        return T;
+        return p;
     },
     tR: function () {
-        return I;
+        return h;
     },
     tV: function () {
-        return m;
+        return f;
     }
 });
 var r = n(860911),
     i = n(544891),
     a = n(893776),
-    o = n(592125),
-    s = n(944486),
+    s = n(592125),
+    o = n(944486),
     l = n(981631);
-let u = '10000',
-    c = '10000';
-function d() {
-    var e, t, n;
-    let r = s.Z.getChannelId(),
-        i = o.Z.getBasicChannel(r);
-    return {
-        guild_id: null !== (e = null == i ? void 0 : i.guild_id) && void 0 !== e ? e : u,
-        channel_id: null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : c,
-        channel_type: null !== (n = null == i ? void 0 : i.type) && void 0 !== n ? n : l.d4z.UNKNOWN
-    };
-}
-function _(e) {
+function u(e) {
     return i.tn.post({
         url: l.ANM.OAUTH2_WHITELIST_ACCEPT,
         query: { token: e },
         oldFormErrors: !0
     });
 }
-async function E(e) {
-    let { authorize: t, clientId: n, scopes: r, responseType: a, redirectUri: o, codeChallenge: s, codeChallengeMethod: u, state: c, permissions: _, guildId: E, channelId: f, integrationType: h, nonce: p } = e;
+async function c(e) {
+    let { authorize: t, clientId: n, scopes: r, responseType: a, redirectUri: u, codeChallenge: c, codeChallengeMethod: d, state: _, permissions: E, guildId: f, channelId: h, integrationType: p, nonce: I } = e;
     return (
         await i.tn.post({
             url: l.ANM.OAUTH2_AUTHORIZE,
             query: {
                 client_id: n,
                 response_type: a,
-                redirect_uri: o,
-                code_challenge: s,
-                code_challenge_method: u,
+                redirect_uri: u,
+                code_challenge: c,
+                code_challenge_method: d,
                 scope: r.join(' '),
-                state: c,
-                nonce: p
+                state: _,
+                nonce: I
             },
             body: {
-                guild_id: E,
-                webhook_channel_id: null != E && null != f ? f : void 0,
-                channel_id: null == E && null != f ? f : void 0,
-                permissions: _,
+                guild_id: f,
+                webhook_channel_id: null != f && null != h ? h : void 0,
+                channel_id: null == f && null != h ? h : void 0,
+                permissions: E,
                 authorize: t,
-                integration_type: h,
-                location_context: d()
+                integration_type: p,
+                location_context: (function () {
+                    var e, t, n;
+                    let r = o.Z.getChannelId(),
+                        i = s.Z.getBasicChannel(r);
+                    return {
+                        guild_id: null !== (e = null == i ? void 0 : i.guild_id) && void 0 !== e ? e : '10000',
+                        channel_id: null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : '10000',
+                        channel_type: null !== (n = null == i ? void 0 : i.type) && void 0 !== n ? n : l.d4z.UNKNOWN
+                    };
+                })()
             },
             oldFormErrors: !0
         })
     ).body;
 }
-async function f(e) {
-    let { clientId: t, scopes: n, responseType: r, redirectUri: a, codeChallenge: o, codeChallengeMethod: s, state: u, integrationType: c, nonce: d, signal: _ } = e;
+async function d(e) {
+    let { clientId: t, scopes: n, responseType: r, redirectUri: a, codeChallenge: s, codeChallengeMethod: o, state: u, integrationType: c, nonce: d, signal: _ } = e;
     return (
         await i.tn.get({
             url: l.ANM.OAUTH2_AUTHORIZE,
@@ -86,8 +83,8 @@ async function f(e) {
                 client_id: t,
                 response_type: r,
                 redirect_uri: a,
-                code_challenge: o,
-                code_challenge_method: s,
+                code_challenge: s,
+                code_challenge_method: o,
                 scope: n.join(' '),
                 state: u,
                 integration_type: c,
@@ -99,7 +96,7 @@ async function f(e) {
         })
     ).body;
 }
-async function h(e) {
+async function _(e) {
     let { body: t } = await i.tn.get({
         url: l.ANM.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
         query: { guild_id: e },
@@ -107,16 +104,16 @@ async function h(e) {
     });
     return t;
 }
-function p(e) {
+function E(e) {
     a.Z.logout((0, r.Ui)(e.pathname + e.search, !1));
 }
-async function m(e) {
+async function f(e) {
     return await i.tn.post({
         url: l.ANM.OAUTH2_DEVICE_VERIFY,
         body: { user_code: e }
     });
 }
-async function I(e, t) {
+async function h(e, t) {
     return await i.tn.post({
         url: l.ANM.OAUTH2_DEVICE_FINISH,
         body: {
@@ -125,7 +122,7 @@ async function I(e, t) {
         }
     });
 }
-async function T(e, t, n) {
+async function p(e, t, n) {
     return await i.tn.post({
         url: l.ANM.OAUTH2_DEVICE_FINISH,
         body: {

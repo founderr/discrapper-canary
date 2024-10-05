@@ -1,145 +1,144 @@
-var r = n(224106),
-    i = n(942282),
-    a = n(151020),
-    o = n(476508),
+var e = n(224106),
+    o = n(942282),
+    i = n(151020),
+    u = n(476508),
     s = n(13780),
-    l = n(250765),
-    u = n(730427),
-    c = n(790142),
-    d = n(215645),
-    _ = n(187592),
-    E = n(447631),
-    f = n(938988).fastKey,
+    c = n(250765),
+    f = n(730427),
+    a = n(790142),
+    p = n(215645),
+    v = n(187592),
+    l = n(447631),
+    y = n(938988).fastKey,
     h = n(29461),
-    p = h.set,
-    m = h.getterFor;
-e.exports = {
-    getConstructor: function (e, t, n, c) {
-        var d = e(function (e, i) {
-                s(e, _),
-                    p(e, {
-                        type: t,
-                        index: r(null),
+    x = h.set,
+    d = h.getterFor;
+t.exports = {
+    getConstructor: function (t, r, n, a) {
+        var p = t(function (t, o) {
+                s(t, v),
+                    x(t, {
+                        type: r,
+                        index: e(null),
                         first: void 0,
                         last: void 0,
                         size: 0
                     }),
-                    !E && (e.size = 0),
-                    !l(i) &&
-                        u(i, e[c], {
-                            that: e,
+                    !l && (t.size = 0),
+                    !c(o) &&
+                        f(o, t[a], {
+                            that: t,
                             AS_ENTRIES: n
                         });
             }),
-            _ = d.prototype,
-            h = m(t),
-            I = function (e, t, n) {
-                var r,
-                    i,
-                    a = h(e),
-                    o = T(e, t);
+            v = p.prototype,
+            h = d(r),
+            g = function (t, r, n) {
+                var e,
+                    o,
+                    i = h(t),
+                    u = b(t, r);
                 return (
-                    o
-                        ? (o.value = n)
-                        : ((a.last = o =
+                    u
+                        ? (u.value = n)
+                        : ((i.last = u =
                               {
-                                  index: (i = f(t, !0)),
-                                  key: t,
+                                  index: (o = y(r, !0)),
+                                  key: r,
                                   value: n,
-                                  previous: (r = a.last),
+                                  previous: (e = i.last),
                                   next: void 0,
                                   removed: !1
                               }),
-                          !a.first && (a.first = o),
-                          r && (r.next = o),
-                          E ? a.size++ : e.size++,
-                          'F' !== i && (a.index[i] = o)),
-                    e
+                          !i.first && (i.first = u),
+                          e && (e.next = u),
+                          l ? i.size++ : t.size++,
+                          'F' !== o && (i.index[o] = u)),
+                    t
                 );
             },
-            T = function (e, t) {
+            b = function (t, r) {
                 var n,
-                    r = h(e),
-                    i = f(t);
-                if ('F' !== i) return r.index[i];
-                for (n = r.first; n; n = n.next) if (n.key === t) return n;
+                    e = h(t),
+                    o = y(r);
+                if ('F' !== o) return e.index[o];
+                for (n = e.first; n; n = n.next) if (n.key === r) return n;
             };
         return (
-            a(_, {
+            i(v, {
                 clear: function () {
-                    for (var e = this, t = h(e), n = t.index, r = t.first; r; ) (r.removed = !0), r.previous && (r.previous = r.previous.next = void 0), delete n[r.index], (r = r.next);
-                    (t.first = t.last = void 0), E ? (t.size = 0) : (e.size = 0);
+                    for (var t = h(this), r = t.index, n = t.first; n; ) (n.removed = !0), n.previous && (n.previous = n.previous.next = void 0), delete r[n.index], (n = n.next);
+                    (t.first = t.last = void 0), l ? (t.size = 0) : (this.size = 0);
                 },
-                delete: function (e) {
-                    var t = this,
-                        n = h(t),
-                        r = T(t, e);
-                    if (r) {
-                        var i = r.next,
-                            a = r.previous;
-                        delete n.index[r.index], (r.removed = !0), a && (a.next = i), i && (i.previous = a), n.first === r && (n.first = i), n.last === r && (n.last = a), E ? n.size-- : t.size--;
+                delete: function (t) {
+                    var r = h(this),
+                        n = b(this, t);
+                    if (n) {
+                        var e = n.next,
+                            o = n.previous;
+                        delete r.index[n.index], (n.removed = !0), o && (o.next = e), e && (e.previous = o), r.first === n && (r.first = e), r.last === n && (r.last = o), l ? r.size-- : this.size--;
                     }
-                    return !!r;
+                    return !!n;
                 },
-                forEach: function (e) {
-                    for (var t, n = h(this), r = o(e, arguments.length > 1 ? arguments[1] : void 0); (t = t ? t.next : n.first); ) for (r(t.value, t.key, this); t && t.removed; ) t = t.previous;
+                forEach: function (t) {
+                    for (var r, n = h(this), e = u(t, arguments.length > 1 ? arguments[1] : void 0); (r = r ? r.next : n.first); ) for (e(r.value, r.key, this); r && r.removed; ) r = r.previous;
                 },
-                has: function (e) {
-                    return !!T(this, e);
+                has: function (t) {
+                    return !!b(this, t);
                 }
             }),
-            a(
-                _,
+            i(
+                v,
                 n
                     ? {
-                          get: function (e) {
-                              var t = T(this, e);
-                              return t && t.value;
+                          get: function (t) {
+                              var r = b(this, t);
+                              return r && r.value;
                           },
-                          set: function (e, t) {
-                              return I(this, 0 === e ? 0 : e, t);
+                          set: function (t, r) {
+                              return g(this, 0 === t ? 0 : t, r);
                           }
                       }
                     : {
-                          add: function (e) {
-                              return I(this, (e = 0 === e ? 0 : e), e);
+                          add: function (t) {
+                              return g(this, (t = 0 === t ? 0 : t), t);
                           }
                       }
             ),
-            E &&
-                i(_, 'size', {
+            l &&
+                o(v, 'size', {
                     configurable: !0,
                     get: function () {
                         return h(this).size;
                     }
                 }),
-            d
+            p
         );
     },
-    setStrong: function (e, t, n) {
-        var r = t + ' Iterator',
-            i = m(t),
-            a = m(r);
-        c(
-            e,
+    setStrong: function (t, r, n) {
+        var e = r + ' Iterator',
+            o = d(r),
+            i = d(e);
+        a(
             t,
-            function (e, t) {
-                p(this, {
-                    type: r,
-                    target: e,
-                    state: i(e),
-                    kind: t,
+            r,
+            function (t, r) {
+                x(this, {
+                    type: e,
+                    target: t,
+                    state: o(t),
+                    kind: r,
                     last: void 0
                 });
             },
             function () {
-                for (var e = a(this), t = e.kind, n = e.last; n && n.removed; ) n = n.previous;
-                return e.target && (e.last = n = n ? n.next : e.state.first) ? ('keys' === t ? d(n.key, !1) : 'values' === t ? d(n.value, !1) : d([n.key, n.value], !1)) : ((e.target = void 0), d(void 0, !0));
+                for (var t = i(this), r = t.kind, n = t.last; n && n.removed; ) n = n.previous;
+                return t.target && (t.last = n = n ? n.next : t.state.first) ? ('keys' === r ? p(n.key, !1) : 'values' === r ? p(n.value, !1) : p([n.key, n.value], !1)) : ((t.target = void 0), p(void 0, !0));
             },
             n ? 'entries' : 'values',
             !n,
             !0
         ),
-            _(t);
+            v(r);
     }
 };

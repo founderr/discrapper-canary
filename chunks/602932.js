@@ -1,31 +1,26 @@
-var r = n(161581),
-    i = n(197187),
-    a = n(354848),
+var r,
+    i = n(161581),
+    a = n(197187),
+    s = n(354848),
     o = n(177448),
-    s = n(626544),
-    l = n(50754),
-    u = n(202934),
-    c = r.Function,
-    d =
-        /MSIE .\./.test(s) ||
-        (o &&
-            (function () {
-                var e = r.Bun.version.split('.');
-                return e.length < 3 || ('0' === e[0] && (e[1] < 3 || ('3' === e[1] && '0' === e[2])));
-            })());
+    l = n(626544),
+    u = n(50754),
+    c = n(202934),
+    d = i.Function;
+var _ = /MSIE .\./.test(l) || (o && ((r = i.Bun.version.split('.')).length < 3 || ('0' === r[0] && (r[1] < 3 || ('3' === r[1] && '0' === r[2])))));
 e.exports = function (e, t) {
     var n = t ? 2 : 1;
-    return d
-        ? function (r, o) {
-              var s = u(arguments.length, 1) > n,
-                  d = a(r) ? r : c(r),
-                  _ = s ? l(arguments, n) : [],
-                  E = s
+    return _
+        ? function (r, i) {
+              var o = c(arguments.length, 1) > n,
+                  l = s(r) ? r : d(r),
+                  _ = o ? u(arguments, n) : [],
+                  E = o
                       ? function () {
-                            i(d, this, _);
+                            a(l, this, _);
                         }
-                      : d;
-              return t ? e(E, o) : e(E);
+                      : l;
+              return t ? e(E, i) : e(E);
           }
         : e;
 };

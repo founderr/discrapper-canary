@@ -1,8 +1,8 @@
 var r = n(470079),
     i = n(476400),
     a = n.n(i),
-    o = n(844303),
-    s = n(329022),
+    s = n(844303),
+    o = n(329022),
     l = n(829307),
     u = n(705513),
     c = n(464854),
@@ -15,11 +15,9 @@ var r = n(470079),
             u = e.hex,
             c = e.circleSize,
             _ = e.styles,
-            E = void 0 === _ ? {} : _,
-            f = e.circleSpacing,
-            h = e.className,
-            p = void 0 === h ? '' : h,
-            m = (0, o.default)(
+            E = e.circleSpacing,
+            f = e.className,
+            h = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -27,15 +25,15 @@ var r = n(470079),
                                 width: t,
                                 display: 'flex',
                                 flexWrap: 'wrap',
-                                marginRight: -f,
-                                marginBottom: -f
+                                marginRight: -E,
+                                marginBottom: -E
                             }
                         }
                     },
-                    E
+                    void 0 === _ ? {} : _
                 )
             ),
-            I = function (e, t) {
+            p = function (e, t) {
                 return n(
                     {
                         hex: e,
@@ -47,18 +45,18 @@ var r = n(470079),
         return r.createElement(
             'div',
             {
-                style: m.card,
-                className: 'circle-picker ' + p
+                style: h.card,
+                className: 'circle-picker ' + (void 0 === f ? '' : f)
             },
-            (0, s.Z)(a, function (e) {
+            (0, o.Z)(a, function (e) {
                 return r.createElement(d.Z, {
                     key: e,
                     color: e,
-                    onClick: I,
+                    onClick: p,
                     onSwatchHover: i,
                     active: u === e.toLowerCase(),
                     circleSize: c,
-                    circleSpacing: f
+                    circleSpacing: E
                 });
             })
         );

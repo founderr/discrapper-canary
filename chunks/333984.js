@@ -1,7 +1,7 @@
-var r = n(47120);
-var i = n(592125),
-    a = n(412788);
-function o(e, t, n) {
+n(47120);
+var r = n(592125),
+    i = n(412788);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,51 +15,54 @@ function o(e, t, n) {
     );
 }
 let s = new Set(),
-    l = new Set(),
-    u = !1;
-function c(e) {
+    o = new Set(),
+    l = !1;
+function u(e) {
     return e.isSpam;
 }
-function d(e) {
+function c(e) {
     let t = !1;
-    return c(e) && !s.has(e.id) && (s.add(e.id), (t = !0)), !c(e) && s.has(e.id) && (s.delete(e.id), (t = !0)), !c(e) && l.has(e.id) && (l.delete(e.id), (t = !0)), t;
+    if (e.isSpam && !s.has(e.id)) s.add(e.id), (t = !0);
+    if (!e.isSpam && s.has(e.id)) s.delete(e.id), (t = !0);
+    if (!e.isSpam && o.has(e.id)) o.delete(e.id), (t = !0);
+    return t;
 }
-function _() {
+function d() {
     s.clear(),
-        l.clear(),
-        Object.values(i.Z.getMutablePrivateChannels()).forEach((e) => {
-            d(e);
+        o.clear(),
+        Object.values(r.Z.getMutablePrivateChannels()).forEach((e) => {
+            c(e);
         }),
-        (u = !0);
+        (l = !0);
+}
+function _(e) {
+    let { channelId: t } = e;
+    o.add(t);
 }
 function E(e) {
-    let { channelId: t } = e;
-    l.add(t);
+    let { channel: t } = e;
+    return c(t);
 }
 function f(e) {
-    let { channel: t } = e;
-    return d(t);
+    let { channels: t } = e;
+    for (let e of t) c(e);
 }
 function h(e) {
-    let { channels: t } = e;
-    for (let e of t) d(e);
-}
-function p(e) {
     let { channel: t } = e,
         n = !1;
     return s.has(t.id) && (s.delete(t.id), (n = !0)), n;
 }
-class m extends a.Z {
+class p extends i.Z {
     initialize() {
-        this.waitFor(i.Z);
+        this.waitFor(r.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(p.LATEST_SNAPSHOT_VERSION);
         null != e && (s = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: m.LATEST_SNAPSHOT_VERSION,
+            version: p.LATEST_SNAPSHOT_VERSION,
             data: Array.from(s)
         };
     }
@@ -73,21 +76,21 @@ class m extends a.Z {
         return s.has(e);
     }
     isAcceptedOptimistic(e) {
-        return l.has(e);
+        return o.has(e);
     }
     isReady() {
-        return u;
+        return l;
     }
     constructor() {
         super({
-            CONNECTION_OPEN: _,
-            CONNECTION_OPEN_SUPPLEMENTAL: _,
+            CONNECTION_OPEN: d,
+            CONNECTION_OPEN_SUPPLEMENTAL: d,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_CREATE: f,
-            CHANNEL_UPDATES: h,
-            CHANNEL_DELETE: p,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: E
+            CHANNEL_CREATE: E,
+            CHANNEL_UPDATES: f,
+            CHANNEL_DELETE: h,
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: _
         });
     }
 }
-o(m, 'displayName', 'SpamMessageRequestStore'), o(m, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new m());
+a(p, 'displayName', 'SpamMessageRequestStore'), a(p, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new p());

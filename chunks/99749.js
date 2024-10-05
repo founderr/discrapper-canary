@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = {
             keyword: 'abort acronym acronyms alias all and assign binary card diag display else eq file files for free ge gt if integer le loop lt maximizing minimizing model models ne negative no not option options or ord positive prod put putpage puttl repeat sameas semicont semiint smax smin solve sos1 sos2 sum system table then until using while xor yes',
@@ -6,17 +6,10 @@ function t(e) {
             built_in: 'abs arccos arcsin arctan arctan2 Beta betaReg binomial ceil centropy cos cosh cvPower div div0 eDist entropy errorf execSeed exp fact floor frac gamma gammaReg log logBeta logGamma log10 log2 mapVal max min mod ncpCM ncpF ncpVUpow ncpVUsin normal pi poly power randBinomial randLinear randTriangle round rPower sigmoid sign signPower sin sinh slexp sllog10 slrec sqexp sqlog10 sqr sqrec sqrt tan tanh trunc uniform uniformInt vcPower bool_and bool_eqv bool_imp bool_not bool_or bool_xor ifThen rel_eq rel_ge rel_gt rel_le rel_lt rel_ne gday gdow ghour gleap gmillisec gminute gmonth gsecond gyear jdate jnow jstart jtime errorLevel execError gamsRelease gamsVersion handleCollect handleDelete handleStatus handleSubmit heapFree heapLimit heapSize jobHandle jobKill jobStatus jobTerminate licenseLevel licenseStatus maxExecError sleep timeClose timeComp timeElapsed timeExec timeStart'
         },
         r = {
-            className: 'params',
-            begin: /\(/,
-            end: /\)/,
-            excludeBegin: !0,
-            excludeEnd: !0
-        },
-        i = {
             className: 'symbol',
             variants: [{ begin: /=[lgenxc]=/ }, { begin: /\$/ }]
         },
-        a = {
+        i = {
             className: 'comment',
             variants: [
                 {
@@ -31,21 +24,21 @@ function t(e) {
             illegal: '\\n',
             contains: [e.BACKSLASH_ESCAPE]
         },
-        o = {
+        a = {
             begin: '/',
             end: '/',
             keywords: n,
-            contains: [a, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, e.C_NUMBER_MODE]
+            contains: [i, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, e.C_NUMBER_MODE]
         },
         s = /[a-z0-9&#*=?@\\><:,()$[\]_.{}!+%^-]+/,
-        l = {
+        o = {
             begin: /[a-z][a-z0-9_]*(\([a-z0-9_, ]*\))?[ \t]+/,
             excludeBegin: !0,
             end: '$',
             endsWithParent: !0,
             contains: [
+                i,
                 a,
-                o,
                 {
                     className: 'comment',
                     begin: t.concat(s, t.anyNumberOfTimes(t.concat(/[ ]+/, s))),
@@ -80,7 +73,7 @@ function t(e) {
             {
                 beginKeywords: 'set sets parameter parameters variable variables scalar scalars equation equations',
                 end: ';',
-                contains: [e.COMMENT('^\\*', '$'), e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, o, l]
+                contains: [e.COMMENT('^\\*', '$'), e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, a, o]
             },
             {
                 beginKeywords: 'table',
@@ -90,7 +83,7 @@ function t(e) {
                     {
                         beginKeywords: 'table',
                         end: '$',
-                        contains: [l]
+                        contains: [o]
                     },
                     e.COMMENT('^\\*', '$'),
                     e.C_LINE_COMMENT_MODE,
@@ -109,13 +102,18 @@ function t(e) {
                         className: 'title',
                         begin: /^[a-z0-9_]+/
                     },
-                    r,
-                    i
+                    {
+                        className: 'params',
+                        begin: /\(/,
+                        end: /\)/,
+                        excludeBegin: !0,
+                        excludeEnd: !0
+                    },
+                    r
                 ]
             },
             e.C_NUMBER_MODE,
-            i
+            r
         ]
     };
-}
-e.exports = t;
+};

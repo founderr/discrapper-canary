@@ -1,29 +1,29 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return C;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(392711),
-    u = n.n(l),
-    c = n(442837),
-    d = n(377108),
-    _ = n(692547),
-    E = n(481060),
-    f = n(68405),
-    h = n(527429),
-    p = n(656733),
-    m = n(251625),
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(392711),
+    l = n.n(o),
+    u = n(442837),
+    c = n(377108),
+    d = n(692547),
+    _ = n(481060),
+    E = n(68405),
+    f = n(527429),
+    h = n(656733),
+    p = n(251625),
     I = n(985375),
-    T = n(132748),
-    g = n(353903),
+    m = n(132748),
+    T = n(353903),
     S = n(215016),
-    A = n(981631),
-    v = n(689938),
+    g = n(981631),
+    A = n(689938),
     N = n(516534);
 function O(e, t, n) {
     return (
@@ -38,40 +38,29 @@ function O(e, t, n) {
         e
     );
 }
-let R = (e, t) => (0, i.jsx)(g.G0, { columns: e }, t);
-function C(e) {
-    var t;
-    let n = u().sample(u().values(e));
-    return {
-        type: A.wI2.FAVORITES,
-        name: v.Z.Messages.CATEGORY_FAVORITE,
-        icon: E.StarIcon,
-        src: null != n ? n.src : 'https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif',
-        format: null !== (t = null == n ? void 0 : n.format) && void 0 !== t ? t : d.EO.IMAGE
-    };
-}
-class y extends a.PureComponent {
+let R = (e, t) => (0, r.jsx)(T.G0, { columns: e }, t);
+class v extends i.PureComponent {
     componentDidMount() {
-        0 === this.props.trendingCategories.length && (0, f.Tg)();
+        0 === this.props.trendingCategories.length && (0, E.Tg)();
     }
     getData() {
         return this.memoizedData(this.state.favoritesTile, this.props.trendingCategories, this.props.hideFavoritesTile);
     }
     renderCategoryExtras(e) {
-        let { name: t, icon: n, type: r } = e;
-        return (0, i.jsxs)(a.Fragment, {
+        let { name: t, icon: n, type: a } = e;
+        return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)('div', { className: r === A.wI2.FAVORITES ? N.categoryFadeBlurple : N.categoryFade }),
-                (0, i.jsxs)('div', {
+                (0, r.jsx)('div', { className: a === g.wI2.FAVORITES ? N.categoryFadeBlurple : N.categoryFade }),
+                (0, r.jsxs)('div', {
                     className: N.categoryText,
                     children: [
                         null != n
-                            ? (0, i.jsx)(n, {
+                            ? (0, r.jsx)(n, {
                                   className: N.categoryIcon,
                                   color: 'currentColor'
                               })
                             : null,
-                        (0, i.jsx)('span', {
+                        (0, r.jsx)('span', {
                             className: N.categoryName,
                             children: t
                         })
@@ -81,12 +70,12 @@ class y extends a.PureComponent {
         });
     }
     render() {
-        return (0, i.jsx)(h.Z, {
+        return (0, r.jsx)(f.Z, {
             getItemGrid: this.getItemGrid,
             getCoordsMap: this.getCoordsMap,
             onFocus: this.handleFocus,
             onSelect: this.handleSelect,
-            children: (0, i.jsx)(T.Z, {
+            children: (0, r.jsx)(m.Z, {
                 desiredItemWidth: 200,
                 maxColumns: 6,
                 children: this.renderContent
@@ -95,9 +84,19 @@ class y extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            O(this, '_masonryRef', a.createRef()),
+            O(this, '_masonryRef', i.createRef()),
             O(this, 'state', {
-                favoritesTile: C(this.props.favorites),
+                favoritesTile: (function (e) {
+                    var t;
+                    let n = l().sample(l().values(e));
+                    return {
+                        type: g.wI2.FAVORITES,
+                        name: A.Z.Messages.CATEGORY_FAVORITE,
+                        icon: _.StarIcon,
+                        src: null != n ? n.src : 'https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif',
+                        format: null !== (t = null == n ? void 0 : n.format) && void 0 !== t ? t : c.EO.IMAGE
+                    };
+                })(this.props.favorites),
                 selectedIndex: {
                     column: 0,
                     row: 0
@@ -128,47 +127,47 @@ class y extends a.PureComponent {
             O(
                 this,
                 'memoizedData',
-                (0, m.oH)(function (e, t) {
+                (0, p.oH)(function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     return n ? [...t] : [e, ...t];
                 })
             ),
-            O(this, 'renderItem', (e, t, n, r) => {
+            O(this, 'renderItem', (e, t, n, i) => {
                 if (e > 0) return null;
                 let a = this.getData()[t];
                 if (null == a) return;
-                let { onSelectItem: o, imagePool: s, videoPool: l } = this.props,
+                let { onSelectItem: s, imagePool: o, videoPool: l } = this.props,
                     { focusedId: u } = this.state;
-                return (0, i.jsx)(
+                return (0, r.jsx)(
                     S.iR,
                     {
                         format: a.format,
-                        color: _.Z.unsafe_rawColors.PRIMARY_800.css,
+                        color: d.Z.unsafe_rawColors.PRIMARY_800.css,
                         src: a.src,
                         item: a,
                         index: t,
                         coords: n,
-                        onClick: () => o(a.type, a.name),
+                        onClick: () => s(a.type, a.name),
                         renderExtras: this.renderCategoryExtras,
                         focused: a.name === u,
-                        imagePool: s,
+                        imagePool: o,
                         videoPool: l
                     },
-                    r
+                    i
                 );
             }),
             O(this, 'renderContent', (e, t, n) => {
-                let { className: r, trendingCategories: a } = this.props;
+                let { className: i, trendingCategories: a } = this.props;
                 return 0 === a.length
-                    ? (0, i.jsx)(g.u$, {
+                    ? (0, r.jsx)(T.u$, {
                           columns: e,
                           width: t,
                           renderColumn: R
                       })
-                    : (0, i.jsx)(E.MasonryList, {
+                    : (0, r.jsx)(_.MasonryList, {
                           ref: this._masonryRef,
                           fade: !0,
-                          className: s()(N.container, r),
+                          className: s()(N.container, i),
                           itemGutter: 12,
                           getItemKey: this.getItemKey,
                           columns: e,
@@ -188,13 +187,13 @@ class y extends a.PureComponent {
             });
     }
 }
-function L(e) {
-    let t = (0, c.e7)([p.Z], () => p.Z.getTrendingCategories()),
+function C(e) {
+    let t = (0, u.e7)([h.Z], () => h.Z.getTrendingCategories()),
         n = (0, I.gG)(),
-        r = (0, S.PY)();
-    return (0, i.jsx)(y, {
+        i = (0, S.PY)();
+    return (0, r.jsx)(v, {
         ...e,
-        ...r,
+        ...i,
         trendingCategories: t,
         favorites: n
     });

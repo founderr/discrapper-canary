@@ -1,16 +1,14 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = e.COMMENT('//', '$', { contains: [{ begin: /\\\n/ }] }),
         r = 'decltype\\(auto\\)',
         i = '[a-zA-Z_]\\w*::',
-        a = '<[^<>]+>',
-        o = '(?!struct)(' + r + '|' + t.optional(i) + '[a-zA-Z_]\\w*' + t.optional(a) + ')',
+        a = '(?!struct)(' + r + '|' + t.optional(i) + '[a-zA-Z_]\\w*' + t.optional('<[^<>]+>') + ')',
         s = {
             className: 'type',
             begin: '\\b[a-z\\d_]*_t\\b'
         },
-        l = '\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4,8}|[0-7]{3}|\\S)',
-        u = {
+        o = {
             className: 'string',
             variants: [
                 {
@@ -20,7 +18,7 @@ function t(e) {
                     contains: [e.BACKSLASH_ESCAPE]
                 },
                 {
-                    begin: "(u8?|U|L)?'(" + l + '|.)',
+                    begin: "(u8?|U|L)?'(\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4,8}|[0-7]{3}|\\S)|.)",
                     end: "'",
                     illegal: '.'
                 },
@@ -30,12 +28,12 @@ function t(e) {
                 })
             ]
         },
-        c = {
+        l = {
             className: 'number',
             variants: [{ begin: "\\b(0b[01']+)" }, { begin: "(-?)\\b([\\d']+(\\.[\\d']*)?|\\.[\\d']+)((ll|LL|l|L)(u|U)?|(u|U)(ll|LL|l|L)?|f|F|b|B)" }, { begin: "(-?)(\\b0[xX][a-fA-F0-9']+|(\\b[\\d']+(\\.[\\d']*)?|\\.[\\d']+)([eE][-+]?[\\d']+)?)" }],
             relevance: 0
         },
-        d = {
+        u = {
             className: 'meta',
             begin: /#\s*[a-z]+\b/,
             end: /$/,
@@ -45,7 +43,7 @@ function t(e) {
                     begin: /\\\n/,
                     relevance: 0
                 },
-                e.inherit(u, { className: 'string' }),
+                e.inherit(o, { className: 'string' }),
                 {
                     className: 'string',
                     begin: /<.*?>/
@@ -54,20 +52,20 @@ function t(e) {
                 e.C_BLOCK_COMMENT_MODE
             ]
         },
-        _ = {
+        c = {
             className: 'title',
             begin: t.optional(i) + e.IDENT_RE,
             relevance: 0
         },
-        E = t.optional(i) + e.IDENT_RE + '\\s*\\(',
-        f = {
+        d = t.optional(i) + e.IDENT_RE + '\\s*\\(',
+        _ = {
             type: ['bool', 'char', 'char16_t', 'char32_t', 'char8_t', 'double', 'float', 'int', 'long', 'short', 'void', 'wchar_t', 'unsigned', 'signed', 'const', 'static'],
             keyword: ['alignas', 'alignof', 'and', 'and_eq', 'asm', 'atomic_cancel', 'atomic_commit', 'atomic_noexcept', 'auto', 'bitand', 'bitor', 'break', 'case', 'catch', 'class', 'co_await', 'co_return', 'co_yield', 'compl', 'concept', 'const_cast|10', 'consteval', 'constexpr', 'constinit', 'continue', 'decltype', 'default', 'delete', 'do', 'dynamic_cast|10', 'else', 'enum', 'explicit', 'export', 'extern', 'false', 'final', 'for', 'friend', 'goto', 'if', 'import', 'inline', 'module', 'mutable', 'namespace', 'new', 'noexcept', 'not', 'not_eq', 'nullptr', 'operator', 'or', 'or_eq', 'override', 'private', 'protected', 'public', 'reflexpr', 'register', 'reinterpret_cast|10', 'requires', 'return', 'sizeof', 'static_assert', 'static_cast|10', 'struct', 'switch', 'synchronized', 'template', 'this', 'thread_local', 'throw', 'transaction_safe', 'transaction_safe_dynamic', 'true', 'try', 'typedef', 'typeid', 'typename', 'union', 'using', 'virtual', 'volatile', 'while', 'xor', 'xor_eq'],
             literal: ['NULL', 'false', 'nullopt', 'nullptr', 'true'],
             built_in: ['_Pragma'],
             _type_hints: ['any', 'auto_ptr', 'barrier', 'binary_semaphore', 'bitset', 'complex', 'condition_variable', 'condition_variable_any', 'counting_semaphore', 'deque', 'false_type', 'future', 'imaginary', 'initializer_list', 'istringstream', 'jthread', 'latch', 'lock_guard', 'multimap', 'multiset', 'mutex', 'optional', 'ostringstream', 'packaged_task', 'pair', 'promise', 'priority_queue', 'queue', 'recursive_mutex', 'recursive_timed_mutex', 'scoped_lock', 'set', 'shared_future', 'shared_lock', 'shared_mutex', 'shared_timed_mutex', 'shared_ptr', 'stack', 'string_view', 'stringstream', 'timed_mutex', 'thread', 'true_type', 'tuple', 'unique_lock', 'unique_ptr', 'unordered_map', 'unordered_multimap', 'unordered_multiset', 'unordered_set', 'variant', 'vector', 'weak_ptr', 'wstring', 'wstring_view']
         },
-        h = {
+        E = {
             className: 'function.dispatch',
             relevance: 0,
             keywords: {
@@ -75,8 +73,8 @@ function t(e) {
             },
             begin: t.concat(/\b/, /(?!decltype)/, /(?!if)/, /(?!for)/, /(?!switch)/, /(?!while)/, e.IDENT_RE, t.lookahead(/(<[^<>]+>|)\s*\(/))
         },
-        p = [h, d, s, n, e.C_BLOCK_COMMENT_MODE, c, u],
-        m = {
+        f = [E, u, s, n, e.C_BLOCK_COMMENT_MODE, l, o],
+        h = {
             variants: [
                 {
                     begin: /=/,
@@ -91,36 +89,36 @@ function t(e) {
                     end: /;/
                 }
             ],
-            keywords: f,
-            contains: p.concat([
+            keywords: _,
+            contains: f.concat([
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: f,
-                    contains: p.concat(['self']),
+                    keywords: _,
+                    contains: f.concat(['self']),
                     relevance: 0
                 }
             ]),
             relevance: 0
         },
-        I = {
+        p = {
             className: 'function',
-            begin: '(' + o + '[\\*&\\s]+)+' + E,
+            begin: '(' + a + '[\\*&\\s]+)+' + d,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: f,
+            keywords: _,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
                 {
                     begin: r,
-                    keywords: f,
+                    keywords: _,
                     relevance: 0
                 },
                 {
-                    begin: E,
+                    begin: d,
                     returnBegin: !0,
-                    contains: [_],
+                    contains: [c],
                     relevance: 0
                 },
                 {
@@ -130,7 +128,7 @@ function t(e) {
                 {
                     begin: /:/,
                     endsWithParent: !0,
-                    contains: [u, c]
+                    contains: [o, l]
                 },
                 {
                     relevance: 0,
@@ -140,46 +138,46 @@ function t(e) {
                     className: 'params',
                     begin: /\(/,
                     end: /\)/,
-                    keywords: f,
+                    keywords: _,
                     relevance: 0,
                     contains: [
                         n,
                         e.C_BLOCK_COMMENT_MODE,
-                        u,
-                        c,
+                        o,
+                        l,
                         s,
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: f,
+                            keywords: _,
                             relevance: 0,
-                            contains: ['self', n, e.C_BLOCK_COMMENT_MODE, u, c, s]
+                            contains: ['self', n, e.C_BLOCK_COMMENT_MODE, o, l, s]
                         }
                     ]
                 },
                 s,
                 n,
                 e.C_BLOCK_COMMENT_MODE,
-                d
+                u
             ]
         };
     return {
         name: 'C++',
         aliases: ['cc', 'c++', 'h++', 'hpp', 'hh', 'hxx', 'cxx'],
-        keywords: f,
+        keywords: _,
         illegal: '</',
         classNameAliases: { 'function.dispatch': 'built_in' },
-        contains: [].concat(m, I, h, p, [
-            d,
+        contains: [].concat(h, p, E, f, [
+            u,
             {
                 begin: '\\b(deque|list|queue|priority_queue|pair|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array|tuple|optional|variant|function)\\s*<(?!<)',
                 end: '>',
-                keywords: f,
+                keywords: _,
                 contains: ['self', s]
             },
             {
                 begin: e.IDENT_RE + '::',
-                keywords: f
+                keywords: _
             },
             {
                 match: [/\b(?:enum(?:\s+(?:class|struct))?|class|struct|union)/, /\s+/, /\w+/],
@@ -190,5 +188,4 @@ function t(e) {
             }
         ])
     };
-}
-e.exports = t;
+};

@@ -6,13 +6,13 @@ n.d(t, {
 var r = n(442837),
     i = n(570140),
     a = n(271383),
-    o = n(9156),
-    s = n(594174);
+    s = n(9156),
+    o = n(594174);
 function l(e, t) {
     var n;
-    let r = null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id,
-        l = o.ZP.isSuppressEveryoneEnabled(t),
-        u = o.ZP.isSuppressRolesEnabled(t),
+    let r = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.id,
+        l = s.ZP.isSuppressEveryoneEnabled(t),
+        u = s.ZP.isSuppressRolesEnabled(t),
         c = null != e.mentions && e.mentions.some((e) => e.id === r),
         d = null == t || null == r ? null : a.ZP.getMember(t, r),
         _ = null != e.mention_roles && null != d && null != d.roles && e.mention_roles.some((e) => d.roles.includes(e));
@@ -32,19 +32,7 @@ let u = null,
     f = {},
     h = {},
     p = {};
-function m() {
-    let e = (e) => null != e && Date.now() - e < 60000;
-    for (let t in (!e(u) && (u = null), !e(c) && (c = null), !e(d) && (d = null), !e(_) && (_ = null), E)) !e(E[t]) && delete E[t];
-    for (let t in f) !e(f[t]) && delete f[t];
-    for (let t in p) !e(p[t]) && delete p[t];
-    for (let t in h) !e(h[t]) && delete h[t];
-}
-function I(e) {
-    let { guildId: t, mentioned: n, roleMentioned: r, everyoneMentioned: i } = e,
-        a = Date.now();
-    (u = a), null != t && (E[t] = a), n && ((c = a), null != t && (f[t] = a)), r && ((d = a), null != t && (p[t] = a)), i && ((_ = a), null != t && (h[t] = a));
-}
-class T extends r.ZP.Store {
+class I extends r.ZP.Store {
     getGlobalStats() {
         let e = (e) => (null == e ? null : Math.floor((Date.now() - e) / 1000));
         return {
@@ -68,7 +56,17 @@ class T extends r.ZP.Store {
         };
     }
 }
-t.Z = new T(i.Z, {
-    CONNECTION_OPEN: m,
-    MESSAGE_NOTIFICATION_SHOWN: I
+t.Z = new I(i.Z, {
+    CONNECTION_OPEN: function () {
+        let e = (e) => null != e && Date.now() - e < 60000;
+        for (let t in (!e(u) && (u = null), !e(c) && (c = null), !e(d) && (d = null), !e(_) && (_ = null), E)) !e(E[t]) && delete E[t];
+        for (let t in f) !e(f[t]) && delete f[t];
+        for (let t in p) !e(p[t]) && delete p[t];
+        for (let t in h) !e(h[t]) && delete h[t];
+    },
+    MESSAGE_NOTIFICATION_SHOWN: function (e) {
+        let { guildId: t, mentioned: n, roleMentioned: r, everyoneMentioned: i } = e,
+            a = Date.now();
+        (u = a), null != t && (E[t] = a), n && ((c = a), null != t && (f[t] = a)), r && ((d = a), null != t && (p[t] = a)), i && ((_ = a), null != t && (h[t] = a));
+    }
 });

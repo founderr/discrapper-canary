@@ -1,25 +1,25 @@
 var r = n(735250),
     i = n(470079),
     a = n(442837),
-    o = n(481060),
-    s = n(846027),
+    s = n(481060),
+    o = n(846027),
     l = n(468026),
     u = n(131951),
     c = n(689938);
-let d = () => {
+t.Z = () => {
     let e = (0, a.e7)([u.Z], () => u.Z.isInteractionRequired(), []),
         t = i.useRef(null);
     function n() {
-        null !== t.current && ((0, o.closeModal)(t.current), (t.current = null));
+        null !== t.current && ((0, s.closeModal)(t.current), (t.current = null));
     }
     function d() {
-        s.Z.interact();
+        o.Z.interact();
     }
     return (
         i.useEffect(
             () => (
                 e
-                    ? (t.current = (0, o.openModal)((e) =>
+                    ? (t.current = (0, s.openModal)((e) =>
                           (0, r.jsx)(l.default, {
                               title: c.Z.Messages.INTERACTION_REQUIRED_TITLE,
                               body: c.Z.Messages.INTERACTION_REQUIRED_BODY,
@@ -38,4 +38,3 @@ let d = () => {
         null
     );
 };
-t.Z = d;

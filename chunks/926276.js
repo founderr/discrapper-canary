@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex.either(...['(?:NeedsTeXFormat|RequirePackage|GetIdInfo)', 'Provides(?:Expl)?(?:Package|Class|File)', '(?:DeclareOption|ProcessOptions)', '(?:documentclass|usepackage|input|include)', 'makeat(?:letter|other)', 'ExplSyntax(?:On|Off)', '(?:new|renew|provide)?command', '(?:re)newenvironment', '(?:New|Renew|Provide|Declare)(?:Expandable)?DocumentCommand', '(?:New|Renew|Provide|Declare)DocumentEnvironment', '(?:(?:e|g|x)?def|let)', '(?:begin|end)', '(?:part|chapter|(?:sub){0,2}section|(?:sub)?paragraph)', 'caption', '(?:label|(?:eq|page|name)?ref|(?:paren|foot|super)?cite)', '(?:alpha|beta|[Gg]amma|[Dd]elta|(?:var)?epsilon|zeta|eta|[Tt]heta|vartheta)', '(?:iota|(?:var)?kappa|[Ll]ambda|mu|nu|[Xx]i|[Pp]i|varpi|(?:var)rho)', '(?:[Ss]igma|varsigma|tau|[Uu]psilon|[Pp]hi|varphi|chi|[Pp]si|[Oo]mega)', '(?:frac|sum|prod|lim|infty|times|sqrt|leq|geq|left|right|middle|[bB]igg?)', '(?:[lr]angle|q?quad|[lcvdi]?dots|d?dot|hat|tilde|bar)'].map((e) => e + '(?![a-zA-Z@:_])')),
         n = new RegExp(['(?:__)?[a-zA-Z]{2,}_[a-zA-Z](?:_?[a-zA-Z])+:[a-zA-Z]*', '[lgc]__?[a-zA-Z](?:_?[a-zA-Z])*_[a-zA-Z]{2,}', '[qs]__?[a-zA-Z](?:_?[a-zA-Z])+', 'use(?:_i)?:[a-zA-Z]*', '(?:else|fi|or):', '(?:if|cs|exp):w', '(?:hbox|vbox):n', '::[a-zA-Z]_unbraced', '::[a-zA-Z:]'].map((e) => e + '(?![a-zA-Z:_])').join('|')),
         r = [{ begin: /\^{6}[0-9a-f]{6}/ }, { begin: /\^{5}[0-9a-f]{5}/ }, { begin: /\^{4}[0-9a-f]{4}/ }, { begin: /\^{3}[0-9a-f]{3}/ }, { begin: /\^{2}[0-9a-f]{2}/ }, { begin: /\^{2}[\u0000-\u007f]/ }],
@@ -52,16 +52,16 @@ function t(e) {
             relevance: 0,
             contains: ['self', ...i]
         },
-        o = e.inherit(a, {
+        s = e.inherit(a, {
             relevance: 0,
             endsParent: !0,
             contains: [a, ...i]
         }),
-        s = {
+        o = {
             begin: /\s+/,
             relevance: 0
         },
-        l = [o],
+        l = [s],
         u = [
             {
                 begin: /\[/,
@@ -73,7 +73,7 @@ function t(e) {
         ],
         c = function (e, t) {
             return {
-                contains: [s],
+                contains: [o],
                 starts: {
                     relevance: 0,
                     contains: e,
@@ -89,7 +89,7 @@ function t(e) {
                     keyword: '\\' + e
                 },
                 relevance: 0,
-                contains: [s],
+                contains: [o],
                 starts: t
             };
         },
@@ -165,5 +165,4 @@ function t(e) {
             ...i
         ]
     };
-}
-e.exports = t;
+};

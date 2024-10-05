@@ -1,16 +1,17 @@
 n.d(t, {
     G: function () {
-        return r;
+        return i;
     },
     Z: function () {
-        return l;
+        return u;
     }
 });
 var r,
-    i = n(47770),
-    a = n(68721),
+    i,
+    a = n(47770),
+    s = n(68721),
     o = n(591218);
-function s(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,10 +24,8 @@ function s(e, t, n) {
         e
     );
 }
-!(function (e) {
-    (e.Stream = 'stream'), (e.Video = 'video'), (e.Mute = 'mute'), (e.VoiceActivity = 'voiceactivity'), (e.DesktopSourceEnd = 'desktopsourceend'), (e.Speaking = 'speaking'), (e.AudioPermission = 'audio-permission'), (e.VideoPermission = 'video-permission'), (e.AddVideoTrack = 'add-video-track');
-})(r || (r = {}));
-class l extends i.Z {
+((r = i || (i = {})).Stream = 'stream'), (r.Video = 'video'), (r.Mute = 'mute'), (r.VoiceActivity = 'voiceactivity'), (r.DesktopSourceEnd = 'desktopsourceend'), (r.Speaking = 'speaking'), (r.AudioPermission = 'audio-permission'), (r.VideoPermission = 'video-permission'), (r.AddVideoTrack = 'add-video-track');
+class u extends a.Z {
     destroy() {
         this.removeAllListeners(), this.destroyStreams();
     }
@@ -91,31 +90,31 @@ class l extends i.Z {
     }
     constructor(e) {
         super(),
-            s(this, 'audio', void 0),
-            s(this, 'video', new o.Z()),
-            s(this, 'desktop', null),
-            s(this, 'stream', void 0),
-            s(this, 'mergeStreams', () => {
+            l(this, 'audio', void 0),
+            l(this, 'video', new o.Z()),
+            l(this, 'desktop', null),
+            l(this, 'stream', void 0),
+            l(this, 'mergeStreams', () => {
                 var e, t, n;
                 let r = new MediaStream();
                 return null != this.desktop ? (null === (e = this.desktop.stream) || void 0 === e || e.getTracks().forEach((e) => r.addTrack(e)), this.desktop.refreshSpeaking()) : (null === (t = this.audio.stream) || void 0 === t || t.getAudioTracks().forEach((e) => r.addTrack(e)), null === (n = this.video.stream) || void 0 === n || n.getVideoTracks().forEach((e) => r.addTrack(e))), (this.stream = r), this.emit('stream', r), this.emit('video', this.getVideoStreamId()), r;
             }),
-            s(this, 'handleVoiceActivity', (e) => {
+            l(this, 'handleVoiceActivity', (e) => {
                 this.emit('voiceactivity', e);
             }),
-            s(this, 'handleDesktopSourceEnd', () => {
+            l(this, 'handleDesktopSourceEnd', () => {
                 this.emit('desktopsourceend');
             }),
-            s(this, 'handleSpeaking', (e) => {
+            l(this, 'handleSpeaking', (e) => {
                 this.emit('speaking', e);
             }),
-            s(this, 'handleAudioPermission', (e) => {
+            l(this, 'handleAudioPermission', (e) => {
                 this.emit('audio-permission', e);
             }),
-            s(this, 'handleVideoPermission', (e) => {
+            l(this, 'handleVideoPermission', (e) => {
                 this.emit('video-permission', e);
             }),
-            (this.audio = new a.Z(e)),
+            (this.audio = new s.Z(e)),
             this.audio.addListener('voiceactivity', this.handleVoiceActivity),
             this.audio.addListener('speaking', this.handleSpeaking),
             this.audio.addListener('stream', this.mergeStreams),

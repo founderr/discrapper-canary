@@ -3,22 +3,22 @@ n.d(t, {
         return I;
     },
     Bh: function () {
-        return p;
+        return h;
     },
     Gx: function () {
-        return g;
+        return T;
     },
     TA: function () {
         return E;
     },
     V$: function () {
-        return h;
+        return f;
     },
     g5: function () {
-        return m;
+        return p;
     },
     i7: function () {
-        return T;
+        return m;
     },
     rD: function () {
         return c;
@@ -30,8 +30,8 @@ n.d(t, {
 var r = n(367907),
     i = n(592125),
     a = n(19780),
-    o = n(626135),
-    s = n(768581),
+    s = n(626135),
+    o = n(768581),
     l = n(678916),
     u = n(981631);
 function c(e) {
@@ -41,50 +41,52 @@ function d(e) {
     return 'number' == typeof e && e in l.dp;
 }
 function _(e) {
-    return d(e) ? l.X7.includes(e) : !!c(e) && ((0, s.xR)(e.asset) || (0, s.ay)(e.asset));
+    return d(e) ? l.X7.includes(e) : !!c(e) && ((0, o.xR)(e.asset) || (0, o.ay)(e.asset));
 }
 function E(e) {
     return null != e ? 'Video Background' : 'None';
 }
 function f(e) {
-    switch (e) {
-        case l.dp.OPTION_1:
-            return 'Cybercity';
-        case l.dp.OPTION_2:
-            return 'Discord the Movie';
-        case l.dp.OPTION_3:
-            return 'Wumpus Vacation';
-        case l.dp.OPTION_4:
-            return 'Vaporwave';
-        case l.dp.OPTION_7:
-            return 'Capernite Day';
-        case l.dp.OPTION_8:
-            return 'Capernite Night';
-        case l.dp.OPTION_9:
-            return 'Hacker Den';
-        case l.dp.OPTION_10:
-            return 'Wumpice';
-    }
-}
-function h(e) {
     if (null == e) return 'None';
     if (c(e)) return 'Custom';
     if ('blur' === e) return 'Blur';
-    else return 'Preset - '.concat(f(e));
+    else
+        return 'Preset - '.concat(
+            (function (e) {
+                switch (e) {
+                    case l.dp.OPTION_1:
+                        return 'Cybercity';
+                    case l.dp.OPTION_2:
+                        return 'Discord the Movie';
+                    case l.dp.OPTION_3:
+                        return 'Wumpus Vacation';
+                    case l.dp.OPTION_4:
+                        return 'Vaporwave';
+                    case l.dp.OPTION_7:
+                        return 'Capernite Day';
+                    case l.dp.OPTION_8:
+                        return 'Capernite Night';
+                    case l.dp.OPTION_9:
+                        return 'Hacker Den';
+                    case l.dp.OPTION_10:
+                        return 'Wumpice';
+                }
+            })(e)
+        );
 }
-function p(e, t, n) {
-    let s = a.Z.getGuildId(),
+function h(e, t, n) {
+    let o = a.Z.getGuildId(),
         l = a.Z.getChannelId(),
         c = i.Z.getChannel(l),
-        d = (0, r.kO)(s, l, !0);
-    o.default.track(u.rMx.VIDEO_EFFECT_UPDATED, {
+        d = (0, r.kO)(o, l, !0);
+    s.default.track(u.rMx.VIDEO_EFFECT_UPDATED, {
         location: t,
         effect_type: E(e),
-        effect_detail: h(e),
+        effect_detail: f(e),
         effect_state: n,
         channel_id: l,
         channel_type: null == c ? void 0 : c.type,
-        guild_id: s,
+        guild_id: o,
         voice_state_count: d.voice_state_count,
         video_stream_count: d.video_stream_count,
         media_session_id: a.Z.getMediaSessionId(),
@@ -92,17 +94,17 @@ function p(e, t, n) {
         is_animated: _(e)
     });
 }
-function m(e, t, n) {
-    o.default.track(u.rMx.VIDEO_BACKGROUND_ADDED, {
+function p(e, t, n) {
+    s.default.track(u.rMx.VIDEO_BACKGROUND_ADDED, {
         is_animated: _(e),
         is_video: t,
         is_from_tenor: n
     });
 }
 function I(e) {
-    o.default.track(u.rMx.VIDEO_BACKGROUND_DELETED, { is_animated: _(e) });
+    s.default.track(u.rMx.VIDEO_BACKGROUND_DELETED, { is_animated: _(e) });
 }
-function T(e) {
+function m(e) {
     if (null == e) return { oneofKind: void 0 };
     if (c(e))
         return {
@@ -123,7 +125,7 @@ function T(e) {
             presetOption: e
         };
 }
-function g(e, t) {
+function T(e, t) {
     if (null == e || void 0 === e.oneofKind) return null;
     switch (e.oneofKind) {
         case 'customAsset':

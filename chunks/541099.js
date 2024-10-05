@@ -1,88 +1,83 @@
+n(47120);
 var r,
-    i = n(47120);
-var a = n(442837),
-    o = n(570140),
-    s = n(827498);
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let u = {
+    i,
+    a,
+    s,
+    o = n(442837),
+    l = n(570140),
+    u = n(827498);
+let c = {
     show: !1,
-    entrypoint: s._b.NONE,
-    lastShownEntrypoint: s._b.NONE,
+    entrypoint: u._b.NONE,
+    lastShownEntrypoint: u._b.NONE,
     activeViewType: null,
-    closeReason: s.ti.DISMISSED,
+    closeReason: u.ti.DISMISSED,
     initialState: void 0
 };
-function c(e) {
-    let { entrypoint: t, activeViewType: n, initialState: r } = e;
-    return (u.show = !0), (u.entrypoint = t), (u.lastShownEntrypoint = t), (u.closeReason = s.ti.DISMISSED), (u.activeViewType = n), (u.initialState = r), !0;
-}
 function d(e) {
-    let { closeReason: t = s.ti.DISMISSED } = e;
-    return (u.show = !1), (u.entrypoint = s._b.NONE), (u.closeReason = t), (u.initialState = void 0), !0;
+    let { closeReason: t = u.ti.DISMISSED } = e;
+    return (c.show = !1), (c.entrypoint = u._b.NONE), (c.closeReason = t), (c.initialState = void 0), !0;
 }
 let _ = new Set();
-class E extends (r = a.ZP.Store) {
+class E extends (r = o.ZP.Store) {
     initialize() {}
     shouldShowPopup() {
-        return u.show && u.entrypoint === s._b.TEXT;
+        return c.show && c.entrypoint === u._b.TEXT;
     }
     shouldShowModal() {
-        return u.show && u.entrypoint === s._b.VOICE;
+        return c.show && c.entrypoint === u._b.VOICE;
     }
     entrypoint() {
-        return u.entrypoint;
+        return c.entrypoint;
     }
     lastShownEntrypoint() {
-        return u.lastShownEntrypoint;
+        return c.lastShownEntrypoint;
     }
     activeViewType() {
-        return u.activeViewType;
+        return c.activeViewType;
     }
     closeReason() {
-        return u.closeReason;
+        return c.closeReason;
     }
     initialState() {
-        return u.initialState;
+        return c.initialState;
     }
     appDMChannelsWithFailedLoads() {
         return _;
     }
 }
 function f() {
-    d({ closeReason: s.ti.DISMISSED });
+    d({ closeReason: u.ti.DISMISSED });
 }
 function h() {
-    d({ closeReason: s.ti.COMMAND });
+    d({ closeReason: u.ti.COMMAND });
 }
-function p(e) {
-    let { channelId: t } = e;
-    _.add(t);
-}
-function m(e) {
-    let { channelId: t } = e;
-    _.delete(t);
-}
-l(E, 'displayName', 'AppLauncherStore'),
-    (t.Z = new E(o.Z, {
-        APP_LAUNCHER_SHOW: c,
-        APP_LAUNCHER_DISMISS: d,
-        CONNECTION_OPEN: f,
-        LOGOUT: f,
-        CHANNEL_SELECT: f,
-        APPLICATION_COMMAND_SET_ACTIVE_COMMAND: h,
-        APP_LAUNCHER_SET_ACTIVE_COMMAND: h,
-        APP_LAUNCHER_ADD_FAILED_APP_DM_LOAD: p,
-        APP_LAUNCHER_REMOVE_FAILED_APP_DM_LOAD: m
-    }));
+(s = 'AppLauncherStore'),
+    (a = 'displayName') in (i = E)
+        ? Object.defineProperty(i, a, {
+              value: s,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (i[a] = s);
+t.Z = new E(l.Z, {
+    APP_LAUNCHER_SHOW: function (e) {
+        let { entrypoint: t, activeViewType: n, initialState: r } = e;
+        return (c.show = !0), (c.entrypoint = t), (c.lastShownEntrypoint = t), (c.closeReason = u.ti.DISMISSED), (c.activeViewType = n), (c.initialState = r), !0;
+    },
+    APP_LAUNCHER_DISMISS: d,
+    CONNECTION_OPEN: f,
+    LOGOUT: f,
+    CHANNEL_SELECT: f,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: h,
+    APP_LAUNCHER_SET_ACTIVE_COMMAND: h,
+    APP_LAUNCHER_ADD_FAILED_APP_DM_LOAD: function (e) {
+        let { channelId: t } = e;
+        _.add(t);
+    },
+    APP_LAUNCHER_REMOVE_FAILED_APP_DM_LOAD: function (e) {
+        let { channelId: t } = e;
+        _.delete(t);
+    }
+});

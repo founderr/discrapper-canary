@@ -1,13 +1,13 @@
+n(47120);
 var r,
-    i = n(47120);
-var a = n(442837),
-    o = n(570140),
+    i = n(442837),
+    a = n(570140),
     s = n(823379),
-    l = n(592125),
-    u = n(486472),
-    c = n(984933),
-    d = n(981631);
-function _(e, t, n) {
+    o = n(592125),
+    l = n(486472),
+    u = n(984933),
+    c = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,81 +20,74 @@ function _(e, t, n) {
         e
     );
 }
-let E = {},
-    f = 0;
-function h() {
-    f += 1;
+let _ = {},
+    E = 0;
+function f() {
+    E += 1;
 }
-function p(e) {
-    if (null == E[e]) return !1;
-    delete E[e];
+function h(e) {
+    if (null == _[e]) return !1;
+    delete _[e];
 }
-function m(e) {
-    let { id: t } = e;
-    if (E[t]) return !1;
-    E[t] = !0;
-}
-function I(e) {
-    let { id: t } = e;
-    return p(t);
-}
-function T(e) {
-    for (let t of (!e.userGuildSettings.partial && (E = {}), e.userGuildSettings.entries)) if (null != t.channel_overrides) for (let e of t.channel_overrides) e.collapsed ? (E[e.channel_id] = !0) : delete E[e.channel_id];
-}
-function g(e) {
-    let { userGuildSettings: t } = e,
-        n = new Set(t.map((e) => e.guild_id).filter(s.lm));
-    for (let e in E) {
-        let t = l.Z.getChannel(e);
-        null != t && null != t.guild_id && n.has(t.guild_id) && delete E[t.id];
-    }
-    for (let e of t) for (let t of e.channel_overrides) t.collapsed && (E[t.channel_id] = !0);
-}
-function S(e) {
-    let {
-        channel: { id: t }
-    } = e;
-    return p(t);
-}
-function A(e) {
-    let { guildId: t } = e;
-    c.ZP.getChannels(t)[d.d4z.GUILD_CATEGORY].forEach((e) => {
-        let { channel: t } = e;
-        'null' !== t.id && (E[t.id] = !0);
-    });
-}
-function v(e) {
-    let { guildId: t } = e;
-    c.ZP.getChannels(t)[d.d4z.GUILD_CATEGORY].forEach((e) => {
-        let { channel: t } = e;
-        delete E[t.id];
-    });
-}
-class N extends (r = a.ZP.PersistedStore) {
+class p extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(l.Z, u.Z), this.removeChangeListener(h), this.addChangeListener(h), (E = null != e ? e : {});
+        this.waitFor(o.Z, l.Z), this.removeChangeListener(f), this.addChangeListener(f), (_ = null != e ? e : {});
     }
     getState() {
-        return E;
+        return _;
     }
     isCollapsed(e) {
-        return null != e && 'null' !== e && !!E[e] && E[e];
+        return null != e && 'null' !== e && !!_[e] && _[e];
     }
     getCollapsedCategories() {
-        return E;
+        return _;
     }
     get version() {
-        return f;
+        return E;
     }
 }
-_(N, 'displayName', 'CategoryCollapseStore'),
-    _(N, 'persistKey', 'collapsedCategories'),
-    (t.Z = new N(o.Z, {
-        CONNECTION_OPEN: T,
-        USER_GUILD_SETTINGS_FULL_UPDATE: g,
-        CATEGORY_COLLAPSE: m,
-        CATEGORY_EXPAND: I,
-        CATEGORY_COLLAPSE_ALL: A,
-        CATEGORY_EXPAND_ALL: v,
-        CHANNEL_DELETE: S
+d(p, 'displayName', 'CategoryCollapseStore'),
+    d(p, 'persistKey', 'collapsedCategories'),
+    (t.Z = new p(a.Z, {
+        CONNECTION_OPEN: function (e) {
+            for (let t of (!e.userGuildSettings.partial && (_ = {}), e.userGuildSettings.entries)) if (null != t.channel_overrides) for (let e of t.channel_overrides) e.collapsed ? (_[e.channel_id] = !0) : delete _[e.channel_id];
+        },
+        USER_GUILD_SETTINGS_FULL_UPDATE: function (e) {
+            let { userGuildSettings: t } = e,
+                n = new Set(t.map((e) => e.guild_id).filter(s.lm));
+            for (let e in _) {
+                let t = o.Z.getChannel(e);
+                null != t && null != t.guild_id && n.has(t.guild_id) && delete _[t.id];
+            }
+            for (let e of t) for (let t of e.channel_overrides) t.collapsed && (_[t.channel_id] = !0);
+        },
+        CATEGORY_COLLAPSE: function (e) {
+            let { id: t } = e;
+            if (_[t]) return !1;
+            _[t] = !0;
+        },
+        CATEGORY_EXPAND: function (e) {
+            let { id: t } = e;
+            return h(t);
+        },
+        CATEGORY_COLLAPSE_ALL: function (e) {
+            let { guildId: t } = e;
+            u.ZP.getChannels(t)[c.d4z.GUILD_CATEGORY].forEach((e) => {
+                let { channel: t } = e;
+                'null' !== t.id && (_[t.id] = !0);
+            });
+        },
+        CATEGORY_EXPAND_ALL: function (e) {
+            let { guildId: t } = e;
+            u.ZP.getChannels(t)[c.d4z.GUILD_CATEGORY].forEach((e) => {
+                let { channel: t } = e;
+                delete _[t.id];
+            });
+        },
+        CHANNEL_DELETE: function (e) {
+            let {
+                channel: { id: t }
+            } = e;
+            return h(t);
+        }
     }));

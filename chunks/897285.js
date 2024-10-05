@@ -1,68 +1,54 @@
-var r = n(47120);
-var i = n(147913),
-    a = n(57132),
-    o = n(914010),
+n(47120);
+var r = n(147913),
+    i = n(57132),
+    a = n(914010),
     s = n(924301),
-    l = n(482241);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = {},
-    d = new Set(),
-    _ = 1800000,
-    E = async (e) => {
-        if (!(0 === s.ZP.getGuildScheduledEventsForGuild(e).length || d.has(e)))
+    o = n(482241);
+let l = {},
+    u = new Set(),
+    c = async (e) => {
+        if (!(0 === s.ZP.getGuildScheduledEventsForGuild(e).length || u.has(e)))
             try {
-                await l.Z.getGuildEventsForCurrentUser(e), d.add(e);
+                await o.Z.getGuildEventsForCurrentUser(e), u.add(e);
             } catch (e) {}
     };
-class f extends i.Z {
+class d extends r.Z {
     async getGuildEventUserCounts(e, t, n) {
-        let r = n.filter((n) => null == c[''.concat(e, '-').concat(t, '-').concat(n)] || Date.now() - c[''.concat(e, '-').concat(t, '-').concat(n)] > _);
-        if (!(Date.now() - c[''.concat(e, '-').concat(t)] < _) || 0 !== r.length) {
-            (c[''.concat(e, '-').concat(t)] = Date.now()), r.forEach((n) => (c[''.concat(e, '-').concat(t, '-').concat(n)] = Date.now()));
+        let r = n.filter((n) => null == l[''.concat(e, '-').concat(t, '-').concat(n)] || Date.now() - l[''.concat(e, '-').concat(t, '-').concat(n)] > 1800000);
+        if (!(Date.now() - l[''.concat(e, '-').concat(t)] < 1800000) || 0 !== r.length) {
+            (l[''.concat(e, '-').concat(t)] = Date.now()), r.forEach((n) => (l[''.concat(e, '-').concat(t, '-').concat(n)] = Date.now()));
             try {
-                await l.Z.fetchGuildEventUserCounts(e, t, r);
+                await o.Z.fetchGuildEventUserCounts(e, t, r);
             } catch (e) {}
         }
     }
     getGuildEventUsers(e, t, n) {
-        return l.Z.fetchUsersForGuildEvent(e, t, n);
+        return o.Z.fetchUsersForGuildEvent(e, t, n);
     }
     getGuildEventsForCurrentUser(e) {
-        return E(e);
+        return c(e);
     }
     async handleConnectionOpen() {
-        d.clear(), (c = {});
-        let e = (0, a.cn)(),
-            t = o.Z.getLastSelectedGuildId();
+        u.clear(), (l = {});
+        let e = (0, i.cn)(),
+            t = a.Z.getLastSelectedGuildId();
         if (e && null != t) for (let e of s.ZP.getGuildScheduledEventsForGuild(t)) await this.getGuildEventUserCounts(t, e.id, []), await new Promise((e) => setTimeout(e, 200 * Math.random() + 50));
     }
     handleGuildUnavailable(e) {
         let { guildId: t } = e;
-        d.delete(t), delete c[t];
+        u.delete(t), delete l[t];
     }
     handleGuildDelete(e) {
         let { guild: t } = e,
             n = t.id;
-        d.delete(n), delete c[n];
+        u.delete(n), delete l[n];
     }
     handleInviteResolveSuccess(e) {
         var t;
         let { invite: n } = e,
             r = n.guild_scheduled_event,
             i = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-        if (null != r && null != i) E(i);
+        if (null != r && null != i) c(i);
     }
     async handleChannelSelect(e) {
         let { guildId: t } = e;
@@ -75,14 +61,25 @@ class f extends i.Z {
                 }
     }
     constructor(...e) {
+        var t, n, r;
         super(...e),
-            u(this, 'actions', {
+            (t = this),
+            (n = 'actions'),
+            (r = {
                 POST_CONNECTION_OPEN: () => this.handleConnectionOpen(),
                 GUILD_DELETE: (e) => this.handleGuildDelete(e),
                 GUILD_UNAVAILABLE: (e) => this.handleGuildUnavailable(e),
                 INVITE_RESOLVE_SUCCESS: (e) => this.handleInviteResolveSuccess(e),
                 CHANNEL_SELECT: (e) => this.handleChannelSelect(e)
-            });
+            }),
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: r,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (t[n] = r);
     }
 }
-t.Z = new f();
+t.Z = new d();

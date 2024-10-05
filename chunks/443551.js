@@ -15,7 +15,16 @@ function i(e) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
             ? r(Object(n), !0).forEach(function (t) {
-                  a(e, t, n[t]);
+                  (function (e, t, n) {
+                      (t = s(t)) in e
+                          ? Object.defineProperty(e, t, {
+                                value: n,
+                                enumerable: !0,
+                                configurable: !0,
+                                writable: !0
+                            })
+                          : (e[t] = n);
+                  })(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -25,57 +34,41 @@ function i(e) {
     }
     return e;
 }
-function a(e, t, n) {
-    return (
-        (t = u(t)) in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function o(e, t) {
-    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-}
-function s(e, t) {
+function a(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, u(r.key), r);
+        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, s(r.key), r);
     }
 }
-function l(e, t, n) {
-    return t && s(e.prototype, t), n && s(e, n), Object.defineProperty(e, 'prototype', { writable: !1 }), e;
-}
-function u(e) {
-    var t = c(e, 'string');
+function s(e) {
+    var t = (function (e, t) {
+        if ('object' != typeof e || null === e) return e;
+        var n = e[Symbol.toPrimitive];
+        if (void 0 !== n) {
+            var r = n.call(e, t || 'default');
+            if ('object' != typeof r) return r;
+            throw TypeError('@@toPrimitive must return a primitive value.');
+        }
+        return ('string' === t ? String : Number)(e);
+    })(e, 'string');
     return 'symbol' == typeof t ? t : String(t);
 }
-function c(e, t) {
-    if ('object' != typeof e || null === e) return e;
-    var n = e[Symbol.toPrimitive];
-    if (void 0 !== n) {
-        var r = n.call(e, t || 'default');
-        if ('object' != typeof r) return r;
-        throw TypeError('@@toPrimitive must return a primitive value.');
-    }
-    return ('string' === t ? String : Number)(e);
-}
-var d = n(413135).Buffer,
-    _ = n(252602).inspect,
-    E = (_ && _.custom) || 'inspect';
-function f(e, t, n) {
-    d.prototype.copy.call(e, t, n);
-}
+var o = n(413135).Buffer,
+    l = n(252602).inspect,
+    u = (l && l.custom) || 'inspect';
 e.exports = (function () {
-    function e() {
-        o(this, e), (this.head = null), (this.tail = null), (this.length = 0);
+    var e, t, n;
+    function r() {
+        !(function (e, t) {
+            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+        })(this, r),
+            (this.head = null),
+            (this.tail = null),
+            (this.length = 0);
     }
     return (
-        l(e, [
+        (e = r),
+        (t = [
             {
                 key: 'push',
                 value: function (e) {
@@ -122,9 +115,11 @@ e.exports = (function () {
             {
                 key: 'concat',
                 value: function (e) {
-                    if (0 === this.length) return d.alloc(0);
-                    for (var t = d.allocUnsafe(e >>> 0), n = this.head, r = 0; n; ) f(n.data, t, r), (r += n.data.length), (n = n.next);
-                    return t;
+                    if (0 === this.length) return o.alloc(0);
+                    for (var t, n, r, i = o.allocUnsafe(e >>> 0), a = this.head, s = 0; a; ) {
+                        (t = a.data), (n = i), (r = s), o.prototype.copy.call(t, n, r), (s += a.data.length), (a = a.next);
+                    }
+                    return i;
                 }
             },
             {
@@ -161,7 +156,7 @@ e.exports = (function () {
             {
                 key: '_getBuffer',
                 value: function (e) {
-                    var t = d.allocUnsafe(e),
+                    var t = o.allocUnsafe(e),
                         n = this.head,
                         r = 1;
                     for (n.data.copy(t), e -= n.data.length; (n = n.next); ) {
@@ -177,9 +172,9 @@ e.exports = (function () {
                 }
             },
             {
-                key: E,
+                key: u,
                 value: function (e, t) {
-                    return _(
+                    return l(
                         this,
                         i(
                             i({}, t),
@@ -193,6 +188,8 @@ e.exports = (function () {
                 }
             }
         ]),
-        e
+        a(e.prototype, t),
+        Object.defineProperty(e, 'prototype', { writable: !1 }),
+        r
     );
 })();

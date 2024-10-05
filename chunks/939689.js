@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             keyword: 'if then not for in while do return else elseif break continue switch and or unless when class extends super local import export from using',
             literal: 'true false nil',
@@ -42,8 +42,8 @@ function t(e) {
         ];
     r.contains = i;
     let a = e.inherit(e.TITLE_MODE, { begin: n }),
-        o = '(\\(.*\\)\\s*)?\\B[-=]>',
-        s = {
+        s = '(\\(.*\\)\\s*)?\\B[-=]>',
+        o = {
             className: 'params',
             begin: '\\([^\\(]',
             returnBegin: !0,
@@ -65,10 +65,10 @@ function t(e) {
             e.COMMENT('--', '$'),
             {
                 className: 'function',
-                begin: '^\\s*' + n + '\\s*=\\s*' + o,
+                begin: '^\\s*' + n + '\\s*=\\s*' + s,
                 end: '[-=]>',
                 returnBegin: !0,
-                contains: [a, s]
+                contains: [a, o]
             },
             {
                 begin: /[\(,:=]\s*/,
@@ -76,10 +76,10 @@ function t(e) {
                 contains: [
                     {
                         className: 'function',
-                        begin: o,
+                        begin: s,
                         end: '[-=]>',
                         returnBegin: !0,
-                        contains: [s]
+                        contains: [o]
                     }
                 ]
             },
@@ -108,5 +108,4 @@ function t(e) {
             }
         ])
     };
-}
-e.exports = t;
+};

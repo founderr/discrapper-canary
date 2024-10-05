@@ -1,24 +1,7 @@
-function t(e) {
+e.exports = function (e) {
     let t = 'true false yes no null',
         n = "[\\w#;/?:@&=+$,.~*'()[\\]]+",
         r = {
-            className: 'attr',
-            variants: [{ begin: '\\w[\\w :\\/.-]*:(?=[ \t]|$)' }, { begin: '"\\w[\\w :\\/.-]*":(?=[ \t]|$)' }, { begin: "'\\w[\\w :\\/.-]*':(?=[ \t]|$)" }]
-        },
-        i = {
-            className: 'template-variable',
-            variants: [
-                {
-                    begin: /\{\{/,
-                    end: /\}\}/
-                },
-                {
-                    begin: /%\{/,
-                    end: /\}/
-                }
-            ]
-        },
-        a = {
             className: 'string',
             relevance: 0,
             variants: [
@@ -32,9 +15,24 @@ function t(e) {
                 },
                 { begin: /\S+/ }
             ],
-            contains: [e.BACKSLASH_ESCAPE, i]
+            contains: [
+                e.BACKSLASH_ESCAPE,
+                {
+                    className: 'template-variable',
+                    variants: [
+                        {
+                            begin: /\{\{/,
+                            end: /\}\}/
+                        },
+                        {
+                            begin: /%\{/,
+                            end: /\}/
+                        }
+                    ]
+                }
+            ]
         },
-        o = e.inherit(a, {
+        i = e.inherit(r, {
             variants: [
                 {
                     begin: /'/,
@@ -47,33 +45,18 @@ function t(e) {
                 { begin: /[^\s,{}[\]]+/ }
             ]
         }),
-        s = {
-            className: 'number',
-            begin: '\\b[0-9]{4}(-[0-9][0-9]){0,2}([Tt \\t][0-9][0-9]?(:[0-9][0-9]){2})?(\\.[0-9]*)?([ \\t])*(Z|[-+][0-9][0-9]?(:[0-9][0-9])?)?\\b'
-        },
-        l = {
+        a = {
             end: ',',
             endsWithParent: !0,
             excludeEnd: !0,
             keywords: t,
             relevance: 0
         },
-        u = {
-            begin: /\{/,
-            end: /\}/,
-            contains: [l],
-            illegal: '\\n',
-            relevance: 0
-        },
-        c = {
-            begin: '\\[',
-            end: '\\]',
-            contains: [l],
-            illegal: '\\n',
-            relevance: 0
-        },
-        d = [
-            r,
+        s = [
+            {
+                className: 'attr',
+                variants: [{ begin: '\\w[\\w :\\/.-]*:(?=[ \t]|$)' }, { begin: '"\\w[\\w :\\/.-]*":(?=[ \t]|$)' }, { begin: "'\\w[\\w :\\/.-]*':(?=[ \t]|$)" }]
+            },
             {
                 className: 'meta',
                 begin: '^---\\s*$',
@@ -125,27 +108,41 @@ function t(e) {
                 beginKeywords: t,
                 keywords: { literal: t }
             },
-            s,
+            {
+                className: 'number',
+                begin: '\\b[0-9]{4}(-[0-9][0-9]){0,2}([Tt \\t][0-9][0-9]?(:[0-9][0-9]){2})?(\\.[0-9]*)?([ \\t])*(Z|[-+][0-9][0-9]?(:[0-9][0-9])?)?\\b'
+            },
             {
                 className: 'number',
                 begin: e.C_NUMBER_RE + '\\b',
                 relevance: 0
             },
-            u,
-            c,
-            a
+            {
+                begin: /\{/,
+                end: /\}/,
+                contains: [a],
+                illegal: '\\n',
+                relevance: 0
+            },
+            {
+                begin: '\\[',
+                end: '\\]',
+                contains: [a],
+                illegal: '\\n',
+                relevance: 0
+            },
+            r
         ],
-        _ = [...d];
+        o = [...s];
     return (
-        _.pop(),
-        _.push(o),
-        (l.contains = _),
+        o.pop(),
+        o.push(i),
+        (a.contains = o),
         {
             name: 'YAML',
             case_insensitive: !0,
             aliases: ['yml'],
-            contains: d
+            contains: s
         }
     );
-}
-e.exports = t;
+};

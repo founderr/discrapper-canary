@@ -4,6 +4,4 @@ n.d(t, {
         return r;
     }
 }),
-    !(function (e) {
-        e.MODAL = 'MODAL';
-    })(r || (r = {}));
+    ((r || (r = {})).MODAL = 'MODAL');

@@ -1,80 +1,78 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return l;
     },
     u: function () {
-        return u;
+        return o;
     }
 });
 var r = n(564334),
     i = n(302221),
     a = n(563114);
-let o = '#ffffff',
-    s = '#36393e',
-    l = (e) => {
+let s = (e) => {
         var t, n;
-        let { colors: a, saturationFactor: l = 1 } = e;
+        let { colors: a, saturationFactor: s = 1 } = e;
         if (null == a || a.length < 1) return null;
-        let u = (0, i.YD)(a),
-            c = r.Z.parseString(o);
+        let o = (0, i.YD)(a),
+            l = r.Z.parseString('#ffffff');
+        if (null == l) return null;
+        let u = r.Z.parseString('#36393e');
+        if (null == u) return null;
+        let c = r.Z.parseString(o);
         if (null == c) return null;
-        let d = r.Z.parseString(s);
-        if (null == d) return null;
-        let _ = r.Z.parseString(u);
-        if (null == _) return null;
-        let E = (0, i.AZ)(_.red, _.blue, _.green),
-            f =
+        let d = (0, i.AZ)(c.red, c.blue, c.green),
+            _ =
                 null !==
                     (t = (0, i.k8)({
-                        colors: [(0, i.j)(_, 0.6, !0), c],
+                        colors: [(0, i.j)(c, 0.6, !0), l],
                         ratio: 3,
-                        saturationFactor: l
+                        saturationFactor: s
                     })) && void 0 !== t
                     ? t
-                    : _,
-            h =
+                    : c,
+            E =
                 null !==
                     (n = (0, i.k8)({
-                        colors: [(0, i.j)(_, 0.6, !1), d],
+                        colors: [(0, i.j)(c, 0.6, !1), u],
                         ratio: 5,
-                        saturationFactor: l
+                        saturationFactor: s
                     })) && void 0 !== n
                     ? n
-                    : _,
-            p = (0, i.k8)({
-                colors: [_, c],
+                    : c,
+            f = (0, i.k8)({
+                colors: [c, l],
                 ratio: 7,
-                saturationFactor: l
+                saturationFactor: s
             }),
-            m = (0, i.k8)({
-                colors: [_, d],
+            h = (0, i.k8)({
+                colors: [c, u],
                 ratio: 7,
-                saturationFactor: l
+                saturationFactor: s
             });
         return {
             LIGHT: {
-                accentColor: null == p ? void 0 : p.toHexString(),
+                accentColor: null == f ? void 0 : f.toHexString(),
                 backgroundColor: (0, i.xj)({
-                    colorRGB: f,
-                    saturationFactor: l
+                    colorRGB: _,
+                    saturationFactor: s
                 }),
-                highlightColor: null == _ ? void 0 : _.toHexString(),
-                opacity: (null == E ? void 0 : E.saturation) < 0.1 ? 0.35 : 0.1
+                highlightColor: null == c ? void 0 : c.toHexString(),
+                opacity: (null == d ? void 0 : d.saturation) < 0.1 ? 0.35 : 0.1
             },
             DARK: {
-                accentColor: null == m ? void 0 : m.toHexString(),
+                accentColor: null == h ? void 0 : h.toHexString(),
                 backgroundColor: (0, i.xj)({
-                    colorRGB: h,
-                    saturationFactor: l
+                    colorRGB: E,
+                    saturationFactor: s
                 }),
-                highlightColor: null == _ ? void 0 : _.toHexString(),
-                opacity: (null == E ? void 0 : E.saturation) < 0.1 ? 0.5 : 0.2
+                highlightColor: null == c ? void 0 : c.toHexString(),
+                opacity: (null == d ? void 0 : d.saturation) < 0.1 ? 0.5 : 0.2
             }
         };
     },
-    u = (e) => {
+    o = (e) => {
         let { colors: t, saturationFactor: n = 1, shouldProcessMobileColors: r = !1 } = e,
-            i = l({
+            i = s({
                 colors: t,
                 saturationFactor: n
             });
@@ -83,10 +81,10 @@ let o = '#ffffff',
             shouldProcessMobileColors: r
         });
     },
-    c = (e, t, n) => {
+    l = (e, t, n) => {
         var r;
         if (null == e || e.length < 1) return null;
-        let i = u({
+        let i = o({
                 colors: e,
                 saturationFactor: t
             }),

@@ -1,12 +1,10 @@
 var r = n(96403),
-    i = Error,
+    o = Error,
     a = r(''.replace),
-    o = (function (e) {
-        return String(new i(e).stack);
-    })('zxcasd'),
+    i = String(new o('zxcasd').stack),
     s = /\n\s*at [^:]*:[^\n]*/,
-    l = s.test(o);
+    c = s.test(i);
 e.exports = function (e, t) {
-    if (l && 'string' == typeof e && !i.prepareStackTrace) for (; t--; ) e = a(e, s, '');
+    if (c && 'string' == typeof e && !o.prepareStackTrace) for (; t--; ) e = a(e, s, '');
     return e;
 };

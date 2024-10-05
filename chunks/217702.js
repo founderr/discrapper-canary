@@ -1,25 +1,23 @@
-var r;
+var r, i;
 n.d(t, {
     Jj: function () {
-        return a;
+        return s;
     },
     OF: function () {
         return o;
     },
     WW: function () {
-        return s;
+        return l;
     },
     hV: function () {
         return r;
     },
     mT: function () {
-        return i;
+        return a;
     }
 });
-let i = 550,
-    a = 350,
+let a = 550,
+    s = 350,
     o = 40;
-!(function (e) {
-    (e.STATIC = 'STATIC'), (e.RESPONSIVE = 'RESPONSIVE'), (e.MOSAIC = 'MOSAIC');
-})(r || (r = {}));
-let s = 20;
+((i = r || (r = {})).STATIC = 'STATIC'), (i.RESPONSIVE = 'RESPONSIVE'), (i.MOSAIC = 'MOSAIC');
+let l = 20;

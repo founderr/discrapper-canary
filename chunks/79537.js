@@ -1,29 +1,18 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = ['div', 'mod', 'in', 'and', 'or', 'not', 'xor', 'asserterror', 'begin', 'case', 'do', 'downto', 'else', 'end', 'exit', 'for', 'local', 'if', 'of', 'repeat', 'then', 'to', 'until', 'while', 'with', 'var'],
-        r = 'false true',
-        i = [e.C_LINE_COMMENT_MODE, e.COMMENT(/\{/, /\}/, { relevance: 0 }), e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 })],
-        a = {
+        r = [e.C_LINE_COMMENT_MODE, e.COMMENT(/\{/, /\}/, { relevance: 0 }), e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 })],
+        i = {
             className: 'string',
             begin: /'/,
             end: /'/,
             contains: [{ begin: /''/ }]
         },
-        o = {
+        a = {
             className: 'string',
             begin: /(#\d+)+/
         },
         s = {
-            className: 'number',
-            begin: '\\b\\d+(\\.\\d+)?(DT|D|T)',
-            relevance: 0
-        },
-        l = {
-            className: 'string',
-            begin: '"',
-            end: '"'
-        },
-        u = {
             match: [/procedure/, /\s+/, /[a-zA-Z_][\w@]*/, /\s*/],
             scope: {
                 1: 'keyword',
@@ -35,14 +24,13 @@ function t(e) {
                     begin: /\(/,
                     end: /\)/,
                     keywords: n,
-                    contains: [a, o, e.NUMBER_MODE]
+                    contains: [i, a, e.NUMBER_MODE]
                 },
-                ...i
+                ...r
             ]
         },
-        c = ['Table', 'Form', 'Report', 'Dataport', 'Codeunit', 'XMLport', 'MenuSuite', 'Page', 'Query'],
-        d = {
-            match: [/OBJECT/, /\s+/, t.either(...c), /\s+/, /\d+/, /\s+(?=[^\s])/, /.*/, /$/],
+        o = {
+            match: [/OBJECT/, /\s+/, t.either('Table', 'Form', 'Report', 'Dataport', 'Codeunit', 'XMLport', 'MenuSuite', 'Page', 'Query'), /\s+/, /\d+/, /\s+(?=[^\s])/, /.*/, /$/],
             relevance: 3,
             scope: {
                 1: 'keyword',
@@ -56,7 +44,7 @@ function t(e) {
         case_insensitive: !0,
         keywords: {
             keyword: n,
-            literal: r
+            literal: 'false true'
         },
         illegal: /\/\*/,
         contains: [
@@ -65,14 +53,21 @@ function t(e) {
                 scope: 'attribute',
                 relevance: 0
             },
+            i,
             a,
-            o,
-            s,
-            l,
+            {
+                className: 'number',
+                begin: '\\b\\d+(\\.\\d+)?(DT|D|T)',
+                relevance: 0
+            },
+            {
+                className: 'string',
+                begin: '"',
+                end: '"'
+            },
             e.NUMBER_MODE,
-            d,
-            u
+            o,
+            s
         ]
     };
-}
-e.exports = t;
+};

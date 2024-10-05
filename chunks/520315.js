@@ -2,48 +2,47 @@ n.d(t, {
     Z: function () {
         return s;
     }
-});
-var r = n(47120);
-var i = n(470079),
-    a = n(442837),
-    o = n(607070);
+}),
+    n(47120);
+var r = n(470079),
+    i = n(442837),
+    a = n(607070);
 function s(e) {
-    let { key: t, isExpanded: n, durationMs: r = 100, minHeightOverride: s, maxHeightOverride: l, maxAnimationHeight: u } = e,
-        c = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
-        [d, _] = i.useState(null),
-        E = i.useCallback(() => {}, []),
-        f = c ? E : _,
-        h = i.useRef(),
-        p = i.useRef(),
-        m = i.useRef(t),
-        I = i.useRef(r);
-    I.current = r;
-    let T = i.useRef(s);
-    T.current = s;
-    let g = i.useRef(l);
-    g.current = l;
-    let S = i.useRef(u);
+    let { key: t, isExpanded: n, durationMs: s = 100, minHeightOverride: o, maxHeightOverride: l, maxAnimationHeight: u } = e,
+        c = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+        [d, _] = r.useState(null),
+        E = r.useCallback(() => {}, []),
+        f = r.useRef(),
+        h = r.useRef(),
+        p = r.useRef(t),
+        I = r.useRef(s);
+    I.current = s;
+    let m = r.useRef(o);
+    m.current = o;
+    let T = r.useRef(l);
+    T.current = l;
+    let S = r.useRef(u);
     S.current = u;
-    let [A, v] = i.useState(!1),
-        N = i.useCallback(() => v(!1), []);
+    let [g, A] = r.useState(!1),
+        N = r.useCallback(() => A(!1), []);
     return (
-        i.useLayoutEffect(() => {
-            void 0 !== t && ((h.current = void 0), (p.current = void 0), v(!1));
+        r.useLayoutEffect(() => {
+            void 0 !== t && ((f.current = void 0), (h.current = void 0), A(!1));
         }, [t]),
-        i.useLayoutEffect(() => {
+        r.useLayoutEffect(() => {
             var e, r, i;
             if (null == d) return;
             let { height: a } = d.getBoundingClientRect();
-            !n && (null == h.current || a < h.current) && (h.current = a), n && (null == p.current || a > p.current) && (p.current = a);
-            let o = null !== (e = T.current) && void 0 !== e ? e : h.current,
-                s = null !== (r = g.current) && void 0 !== r ? r : p.current,
-                l = m.current !== t;
-            if (((m.current = t), null == o || null == s || l)) return;
-            let u = Math.min(null !== (i = S.current) && void 0 !== i ? i : s, s),
-                c = n ? o : u,
-                _ = n ? u : o;
+            !n && (null == f.current || a < f.current) && (f.current = a), n && (null == h.current || a > h.current) && (h.current = a);
+            let s = null !== (e = m.current) && void 0 !== e ? e : f.current,
+                o = null !== (r = T.current) && void 0 !== r ? r : h.current,
+                l = p.current !== t;
+            if (((p.current = t), null == s || null == o || l)) return;
+            let u = Math.min(null !== (i = S.current) && void 0 !== i ? i : o, o),
+                c = n ? s : u,
+                _ = n ? u : s;
             if (!(c !== _)) return;
-            v(!0), (d.style.height = ''.concat(c, 'px')), (d.style.transition = '');
+            A(!0), (d.style.height = ''.concat(c, 'px')), (d.style.transition = '');
             let E = null;
             return (
                 (E = requestAnimationFrame(() => {
@@ -52,12 +51,12 @@ function s(e) {
                 () => (null != E ? cancelAnimationFrame(E) : void 0)
             );
         }, [t, d, n]),
-        i.useLayoutEffect(() => {
-            if (null != d && !A) (d.style.height = ''), (d.style.transition = '');
-        }, [t, d, A]),
+        r.useLayoutEffect(() => {
+            if (null != d && !g) (d.style.height = ''), (d.style.transition = '');
+        }, [t, d, g]),
         {
-            ref: f,
-            isTransitioning: A,
+            ref: c ? E : _,
+            isTransitioning: g,
             onTransitionEnd: N
         }
     );

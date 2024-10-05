@@ -1,104 +1,93 @@
+n(47120);
 var r,
-    i = n(47120);
-var a = n(442837),
-    o = n(570140),
-    s = n(180335);
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
+    i,
+    a,
+    s,
+    o = n(442837),
+    l = n(570140),
+    u = n(180335);
+let c = new Map(),
+    d = new Set(),
+    _ = null,
+    E = !1,
+    f = !1;
+function h() {
+    (c = new Map()), (d = new Set()), (_ = null), (E = !1);
 }
-let u = new Map(),
-    c = new Set(),
-    d = null,
-    _ = !1,
-    E = !1;
-function f(e) {
-    let { userId: t } = e;
-    c.add(t);
-}
-function h(e) {
-    let { outbox: t, userId: n } = e;
-    u.set(n, {
-        ...t,
-        lastFetched: Date.now()
-    }),
-        c.delete(n);
-}
-function p(e) {
-    let { userId: t } = e;
-    c.delete(t);
-}
-function m() {
-    (d = null), (_ = !0);
-}
-function I(e) {
-    let { entry: t, userId: n } = e;
-    d = null;
-    let r = u.get(n);
-    if (null == r) return !1;
-    let i = r.entries.filter((e) => e.id !== t.id);
-    u.set(n, {
-        ...r,
-        entries: i
-    }),
-        (_ = !1);
-}
-function T(e) {
-    let { error: t } = e;
-    (d = t), (_ = !1);
-}
-function g() {
-    (d = null), (_ = !1);
-}
-function S() {
-    (u = new Map()), (c = new Set()), (d = null), (_ = !1);
-}
-function A() {
-    S(), (E = !0);
-}
-function v() {
-    S();
-}
-class N extends (r = a.ZP.Store) {
+class p extends (r = o.ZP.Store) {
     getMatchingOutboxEntry(e) {
         let { activity: t, userId: n } = e,
-            r = u.get(n);
-        if (null != r && null != t) return (0, s.vu)(r.entries, t);
+            r = c.get(n);
+        if (null != r && null != t) return (0, u.vu)(r.entries, t);
     }
     getUserOutbox(e) {
-        return u.get(e);
+        return c.get(e);
     }
     isFetchingUserOutbox(e) {
-        return c.has(e);
+        return d.has(e);
     }
     get deleteOutboxEntryError() {
-        return d;
-    }
-    get isDeletingEntryHistory() {
         return _;
     }
-    get hasInitialized() {
+    get isDeletingEntryHistory() {
         return E;
     }
+    get hasInitialized() {
+        return f;
+    }
 }
-l(N, 'displayName', 'ContentInventoryOutboxStore'),
-    (t.Z = new N(o.Z, {
-        CONNECTION_OPEN: A,
-        LOGOUT: v,
-        CONTENT_INVENTORY_FETCH_OUTBOX_START: f,
-        CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: h,
-        CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: p,
-        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: m,
-        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: I,
-        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: T,
-        CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: g
+(s = 'ContentInventoryOutboxStore'),
+    (a = 'displayName') in (i = p)
+        ? Object.defineProperty(i, a, {
+              value: s,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (i[a] = s),
+    (t.Z = new p(l.Z, {
+        CONNECTION_OPEN: function () {
+            h(), (f = !0);
+        },
+        LOGOUT: function () {
+            h();
+        },
+        CONTENT_INVENTORY_FETCH_OUTBOX_START: function (e) {
+            let { userId: t } = e;
+            d.add(t);
+        },
+        CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: function (e) {
+            let { outbox: t, userId: n } = e;
+            c.set(n, {
+                ...t,
+                lastFetched: Date.now()
+            }),
+                d.delete(n);
+        },
+        CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: function (e) {
+            let { userId: t } = e;
+            d.delete(t);
+        },
+        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: function () {
+            (_ = null), (E = !0);
+        },
+        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: function (e) {
+            let { entry: t, userId: n } = e;
+            _ = null;
+            let r = c.get(n);
+            if (null == r) return !1;
+            let i = r.entries.filter((e) => e.id !== t.id);
+            c.set(n, {
+                ...r,
+                entries: i
+            }),
+                (E = !1);
+        },
+        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: function (e) {
+            let { error: t } = e;
+            (_ = t), (E = !1);
+        },
+        CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: function () {
+            (_ = null), (E = !1);
+        }
     }));

@@ -1,39 +1,38 @@
 var r = n(762378),
     i = n(481062),
     a = n(34775),
-    o = n(79568),
-    s = n(221286),
+    s = n(79568),
+    o = n(221286),
     l = n(903425),
     u = n(785775),
     c = '[object Map]',
-    d = '[object Object]',
-    _ = '[object Promise]',
-    E = '[object Set]',
-    f = '[object WeakMap]',
-    h = '[object DataView]',
-    p = u(r),
-    m = u(i),
+    d = '[object Promise]',
+    _ = '[object Set]',
+    E = '[object WeakMap]',
+    f = '[object DataView]',
+    h = u(r),
+    p = u(i),
     I = u(a),
+    m = u(s),
     T = u(o),
-    g = u(s),
     S = l;
-((r && S(new r(new ArrayBuffer(1))) != h) || (i && S(new i()) != c) || (a && S(a.resolve()) != _) || (o && S(new o()) != E) || (s && S(new s()) != f)) &&
+((r && S(new r(new ArrayBuffer(1))) != f) || (i && S(new i()) != c) || (a && S(a.resolve()) != d) || (s && S(new s()) != _) || (o && S(new o()) != E)) &&
     (S = function (e) {
         var t = l(e),
-            n = t == d ? e.constructor : void 0,
+            n = '[object Object]' == t ? e.constructor : void 0,
             r = n ? u(n) : '';
         if (r)
             switch (r) {
+                case h:
+                    return f;
                 case p:
-                    return h;
-                case m:
                     return c;
                 case I:
+                    return d;
+                case m:
                     return _;
                 case T:
                     return E;
-                case g:
-                    return f;
             }
         return t;
     }),

@@ -5,35 +5,35 @@ n.d(t, {
     y: function () {
         return N;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(873546),
-    u = n(481060),
-    c = n(425493),
-    d = n(95398),
-    _ = n(169525),
-    E = n(585483),
-    f = n(956664),
-    h = n(589530),
-    p = n(124347),
-    m = n(80966),
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(873546),
+    l = n(481060),
+    u = n(425493),
+    c = n(95398),
+    d = n(169525),
+    _ = n(585483),
+    E = n(956664),
+    f = n(589530),
+    h = n(124347),
+    p = n(80966),
     I = n(981631),
-    T = n(689938),
-    g = n(565986);
+    m = n(689938),
+    T = n(565986);
 function S(e) {
     let { onClose: t } = e,
-        n = a.useRef(null);
-    return (0, i.jsx)('div', {
-        className: g.mobileCloseWrapper,
+        n = i.useRef(null);
+    return (0, r.jsx)('div', {
+        className: T.mobileCloseWrapper,
         ref: n,
-        children: (0, i.jsx)(u.FocusRingScope, {
+        children: (0, r.jsx)(l.FocusRingScope, {
             containerRef: n,
-            children: (0, i.jsx)('div', {
-                children: (0, i.jsx)(c.Z, {
+            children: (0, r.jsx)('div', {
+                children: (0, r.jsx)(u.Z, {
                     closeAction: t,
                     keybind: 'ESC'
                 })
@@ -41,33 +41,32 @@ function S(e) {
         })
     });
 }
-let A = (e) => {
-    let { children: t, hasMediaControls: n, isObscured: r, src: o } = e,
-        [l, u] = a.useState(!1),
-        c = a.useRef(o),
-        E = (e) => {
-            e.stopPropagation(), e.nativeEvent.stopPropagation(), u((e) => !e);
-        };
-    return (a.useEffect(() => {
-        o !== c.current && u(!r);
-    }, [o, r]),
-    r)
-        ? (0, i.jsx)(d.a.Provider, {
+let g = (e) => {
+    let { children: t, hasMediaControls: n, isObscured: a, src: o } = e,
+        [l, u] = i.useState(!1),
+        _ = i.useRef(o);
+    return (i.useEffect(() => {
+        o !== _.current && u(!a);
+    }, [o, a]),
+    a)
+        ? (0, r.jsx)(c.a.Provider, {
               value: l,
-              children: (0, i.jsx)(
-                  d.Z,
+              children: (0, r.jsx)(
+                  c.Z,
                   {
-                      type: d.Z.Types.ATTACHMENT,
-                      reason: _.wk.EXPLICIT_CONTENT,
-                      className: g.obscureContainer,
+                      type: c.Z.Types.ATTACHMENT,
+                      reason: d.wk.EXPLICIT_CONTENT,
+                      className: T.obscureContainer,
                       obscured: !0,
                       isSingleMosaicItem: !0,
-                      obscurityControlClassName: s()({ [g.controlsOffset]: n && l }),
-                      onToggleObscurity: E,
+                      obscurityControlClassName: s()({ [T.controlsOffset]: n && l }),
+                      onToggleObscurity: (e) => {
+                          e.stopPropagation(), e.nativeEvent.stopPropagation(), u((e) => !e);
+                      },
                       children: (e) =>
-                          (0, i.jsx)(i.Fragment, {
-                              children: (0, i.jsx)('div', {
-                                  className: s()(g.obscureWrapper, { [g.obscure]: e }),
+                          (0, r.jsx)(r.Fragment, {
+                              children: (0, r.jsx)('div', {
+                                  className: s()(T.obscureWrapper, { [T.obscure]: e }),
                                   children: t(e)
                               })
                           })
@@ -75,115 +74,115 @@ let A = (e) => {
                   o
               )
           })
-        : (0, i.jsx)(i.Fragment, { children: t(!1) });
+        : (0, r.jsx)(r.Fragment, { children: t(!1) });
 };
-function v(e) {
-    let { src: t, renderLinkComponent: n, renderForwardComponent: r } = e,
+function A(e) {
+    let { src: t, renderLinkComponent: n, renderForwardComponent: i } = e,
         a = n({
             href: t,
             target: '_blank',
             rel: 'noreferrer noopener',
-            className: g.downloadLink,
-            children: T.Z.Messages.OPEN_IN_BROWSER
+            className: T.downloadLink,
+            children: m.Z.Messages.OPEN_IN_BROWSER
         }),
-        o = r({ className: g.forward });
-    return null == a && null == o
+        s = i({ className: T.forward });
+    return null == a && null == s
         ? null
-        : (0, i.jsxs)('div', {
-              className: g.optionsContainer,
-              children: [a, o]
+        : (0, r.jsxs)('div', {
+              className: T.optionsContainer,
+              children: [a, s]
           });
 }
 function N(e) {
-    let { src: t, original: n, placeholder: r, width: o, height: s, animated: u, children: c, responsive: d, renderLinkComponent: _, renderForwardComponent: h, maxWidth: m, maxHeight: T, shouldAnimate: N, srcIsAnimated: O, onClose: R, shouldHideMediaOptions: C = !1, obscure: y = !1, ...L } = e,
-        { width: b, height: D } = (0, f.zp)(o, s),
-        M = l.tq && null != R;
-    a.useEffect(() => {
-        if (null != R)
+    let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: O, srcIsAnimated: R, onClose: v, shouldHideMediaOptions: C = !1, obscure: L = !1, ...D } = e,
+        { width: y, height: b } = (0, E.zp)(s, l),
+        M = o.tq && null != v;
+    i.useEffect(() => {
+        if (null != v)
             return (
-                E.S.subscribe(I.CkL.MEDIA_MODAL_CLOSE, R),
+                _.S.subscribe(I.CkL.MEDIA_MODAL_CLOSE, v),
                 () => {
-                    E.S.unsubscribe(I.CkL.MEDIA_MODAL_CLOSE, R);
+                    _.S.unsubscribe(I.CkL.MEDIA_MODAL_CLOSE, v);
                 }
             );
-    }, [R]);
+    }, [v]);
     let P = C
         ? (e) => {
               e.stopPropagation(), e.preventDefault();
           }
-        : L.onContextMenu;
-    return (0, i.jsxs)('div', {
-        className: g.wrapper,
+        : D.onContextMenu;
+    return (0, r.jsxs)('div', {
+        className: T.wrapper,
         children: [
-            M ? (0, i.jsx)(S, { onClose: R }) : null,
-            (0, i.jsx)(A, {
-                isObscured: y,
+            M ? (0, r.jsx)(S, { onClose: v }) : null,
+            (0, r.jsx)(g, {
+                isObscured: L,
                 src: t,
                 children: (e) =>
-                    (0, i.jsx)(
-                        p.ZP,
+                    (0, r.jsx)(
+                        h.ZP,
                         {
                             src: t,
-                            placeholder: r,
+                            placeholder: a,
                             shouldLink: !1,
-                            width: o,
-                            height: s,
-                            maxWidth: b,
-                            maxHeight: D,
+                            width: s,
+                            height: l,
+                            maxWidth: y,
+                            maxHeight: b,
                             children: c,
                             animated: !e && u,
                             autoPlay: !e,
                             responsive: d,
-                            srcIsAnimated: O,
+                            srcIsAnimated: R,
                             onContextMenu: P,
-                            ...L
+                            ...D
                         },
                         t
                     )
             }),
             null == n || C
                 ? null
-                : (0, i.jsx)(v, {
+                : (0, r.jsx)(A, {
                       src: n,
-                      renderLinkComponent: _,
-                      renderForwardComponent: h
+                      renderLinkComponent: f,
+                      renderForwardComponent: p
                   })
         ]
     });
 }
 function O(e) {
-    let { src: t, width: n, height: r, onClose: a, renderLinkComponent: o, renderForwardComponent: u, shouldHideMediaOptions: c = !1, obscure: d = !1, ..._ } = e,
-        { width: E, height: p } = (0, f.zp)(n, r),
-        I = l.tq && null != a,
-        T = c
+    let { src: t, width: n, height: i, onClose: a, renderLinkComponent: l, renderForwardComponent: u, shouldHideMediaOptions: c = !1, obscure: d = !1, ..._ } = e,
+        { width: h, height: I } = (0, E.zp)(n, i),
+        m = o.tq && null != a,
+        N = c
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
             : _.onContextMenu;
-    return (0, i.jsxs)('div', {
-        className: s()(g.wrapper, g.videoWrapper),
+    return (0, r.jsxs)('div', {
+        className: s()(T.wrapper, T.videoWrapper),
         children: [
-            I ? (0, i.jsx)(S, { onClose: a }) : null,
-            (0, i.jsx)(A, {
+            m ? (0, r.jsx)(S, { onClose: a }) : null,
+            (0, r.jsx)(g, {
                 hasMediaControls: !0,
                 isObscured: d,
                 src: t,
                 children: (e) =>
-                    (0, i.jsx)(
-                        m.Z,
+                    (0, r.jsx)(
+                        p.Z,
                         {
                             src: t,
                             width: n,
-                            height: r,
-                            maxWidth: E,
-                            maxHeight: p,
-                            renderLinkComponent: o,
-                            volume: h.FC,
-                            autoMute: h.rs,
-                            onVolumeChange: h.jA,
-                            onMute: h.Zj,
+                            height: i,
+                            maxWidth: h,
+                            maxHeight: I,
+                            renderLinkComponent: l,
+                            volume: f.FC,
+                            autoMute: f.rs,
+                            onVolumeChange: f.jA,
+                            onMute: f.Zj,
                             autoPlay: !e,
-                            onContextMenu: T,
+                            onContextMenu: N,
                             ..._
                         },
                         t
@@ -191,9 +190,9 @@ function O(e) {
             }),
             c
                 ? null
-                : (0, i.jsx)(v, {
+                : (0, r.jsx)(A, {
                       src: t,
-                      renderLinkComponent: o,
+                      renderLinkComponent: l,
                       renderForwardComponent: u
                   })
         ]

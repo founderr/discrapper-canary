@@ -5,15 +5,84 @@ var n = (function () {
             size: '72x72',
             className: 'emoji',
             convert: {
-                fromCodePoint: I,
-                toCodePoint: A
+                fromCodePoint: function (e) {
+                    var t = 'string' == typeof e ? parseInt(e, 16) : e;
+                    return t < 65536 ? o(t) : o(55296 + ((t -= 65536) >> 10), 56320 + (1023 & t));
+                },
+                toCodePoint: f
             },
             onerror: function () {
                 this.parentNode && this.parentNode.replaceChild(l(this.alt, !1), this);
             },
-            parse: T,
-            replace: g,
-            test: S
+            parse: function (t, r) {
+                var i;
+                return (
+                    (!r || 'function' == typeof r) && (r = { callback: r }),
+                    ('string' == typeof t
+                        ? function (e, t) {
+                              return E(e, function (e) {
+                                  var n,
+                                      r,
+                                      i = e,
+                                      s = c(e),
+                                      o = t.callback(s, t);
+                                  if (s && o) {
+                                      for (r in ((i = '<img '.concat('class="', t.className, '" ', 'draggable="false" ', 'alt="', e, '"', ' src="', o, '"')), (n = t.attributes(e, s)))) if (n.hasOwnProperty(r) && 0 !== r.indexOf('on') && -1 === i.indexOf(' ' + r + '=')) i = i.concat(' ', r, '="', n[r].replace(a, d), '"');
+                                      i = i.concat('/>');
+                                  }
+                                  return i;
+                              });
+                          }
+                        : function (e, t) {
+                              for (
+                                  var r,
+                                      i,
+                                      a,
+                                      o,
+                                      u,
+                                      d,
+                                      _,
+                                      E,
+                                      f,
+                                      h,
+                                      p,
+                                      I,
+                                      m,
+                                      T = (function e(t, n) {
+                                          for (var r, i, a = t.childNodes, o = a.length; o--; ) 3 === (i = (r = a[o]).nodeType) ? n.push(r) : 1 === i && !('ownerSVGElement' in r) && !s.test(r.nodeName.toLowerCase()) && e(r, n);
+                                          return n;
+                                      })(e, []),
+                                      S = T.length;
+                                  S--;
+
+                              ) {
+                                  for (a = !1, o = document.createDocumentFragment(), d = (u = T[S]).nodeValue, E = 0; (_ = n.exec(d)); ) {
+                                      if (((f = _.index) !== E && o.appendChild(l(d.slice(E, f), !0)), (I = c((p = _[0]))), (E = f + p.length), (m = t.callback(I, t)), I && m)) {
+                                          for (i in (((h = new Image()).onerror = t.onerror), h.setAttribute('draggable', 'false'), (r = t.attributes(p, I)))) r.hasOwnProperty(i) && 0 !== i.indexOf('on') && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
+                                          (h.className = t.className), (h.alt = p), (h.src = m), (a = !0), o.appendChild(h);
+                                      }
+                                      !h && o.appendChild(l(p, !1)), (h = null);
+                                  }
+                                  a && (E < d.length && o.appendChild(l(d.slice(E), !0)), u.parentNode.replaceChild(o, u));
+                              }
+                              return e;
+                          })(t, {
+                        callback: r.callback || u,
+                        attributes: 'function' == typeof r.attributes ? r.attributes : _,
+                        base: 'string' == typeof r.base ? r.base : e.base,
+                        ext: r.ext || e.ext,
+                        size: r.folder || ('number' == typeof (i = r.size || e.size) ? i + 'x' + i : i),
+                        className: r.className || e.className,
+                        onerror: r.onerror || e.onerror
+                    })
+                );
+            },
+            replace: E,
+            test: function (e) {
+                n.lastIndex = 0;
+                var t = n.test(e);
+                return (n.lastIndex = 0), t;
+            }
         },
         t = {
             '&': '&amp;',
@@ -27,88 +96,28 @@ var n = (function () {
         r = /\uFE0F/g,
         i = String.fromCharCode(8205),
         a = /[&<>'"]/g,
-        o = /^(?:iframe|noframes|noscript|script|select|style|textarea)$/,
-        s = String.fromCharCode;
+        s = /^(?:iframe|noframes|noscript|script|select|style|textarea)$/,
+        o = String.fromCharCode;
     return e;
     function l(e, t) {
         return document.createTextNode(t ? e.replace(r, '') : e);
     }
-    function u(e) {
-        return e.replace(a, h);
-    }
-    function c(e, t) {
+    function u(e, t) {
         return ''.concat(t.base, t.size, '/', e, t.ext);
     }
-    function d(e, t) {
-        for (var n, r, i = e.childNodes, a = i.length; a--; ) 3 === (r = (n = i[a]).nodeType) ? t.push(n) : 1 === r && !('ownerSVGElement' in n) && !o.test(n.nodeName.toLowerCase()) && d(n, t);
-        return t;
+    function c(e) {
+        return f(0 > e.indexOf(i) ? e.replace(r, '') : e);
     }
-    function _(e) {
-        return A(0 > e.indexOf(i) ? e.replace(r, '') : e);
-    }
-    function E(e, t) {
-        for (var r, i, a, o, s, u, c, E, f, h, p, m, I, T = d(e, []), g = T.length; g--; ) {
-            for (a = !1, o = document.createDocumentFragment(), u = (s = T[g]).nodeValue, E = 0; (c = n.exec(u)); ) {
-                if (((f = c.index) !== E && o.appendChild(l(u.slice(E, f), !0)), (m = _((p = c[0]))), (E = f + p.length), (I = t.callback(m, t)), m && I)) {
-                    for (i in (((h = new Image()).onerror = t.onerror), h.setAttribute('draggable', 'false'), (r = t.attributes(p, m)))) r.hasOwnProperty(i) && 0 !== i.indexOf('on') && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
-                    (h.className = t.className), (h.alt = p), (h.src = I), (a = !0), o.appendChild(h);
-                }
-                !h && o.appendChild(l(p, !1)), (h = null);
-            }
-            a && (E < u.length && o.appendChild(l(u.slice(E), !0)), s.parentNode.replaceChild(o, s));
-        }
-        return e;
-    }
-    function f(e, t) {
-        return g(e, function (e) {
-            var n,
-                r,
-                i = e,
-                a = _(e),
-                o = t.callback(a, t);
-            if (a && o) {
-                for (r in ((i = '<img '.concat('class="', t.className, '" ', 'draggable="false" ', 'alt="', e, '"', ' src="', o, '"')), (n = t.attributes(e, a)))) n.hasOwnProperty(r) && 0 !== r.indexOf('on') && -1 === i.indexOf(' ' + r + '=') && (i = i.concat(' ', r, '="', u(n[r]), '"'));
-                i = i.concat('/>');
-            }
-            return i;
-        });
-    }
-    function h(e) {
+    function d(e) {
         return t[e];
     }
-    function p() {
+    function _() {
         return null;
     }
-    function m(e) {
-        return 'number' == typeof e ? e + 'x' + e : e;
-    }
-    function I(e) {
-        var t = 'string' == typeof e ? parseInt(e, 16) : e;
-        return t < 65536 ? s(t) : s(55296 + ((t -= 65536) >> 10), 56320 + (1023 & t));
-    }
-    function T(t, n) {
-        return (
-            (!n || 'function' == typeof n) && (n = { callback: n }),
-            ('string' == typeof t ? f : E)(t, {
-                callback: n.callback || c,
-                attributes: 'function' == typeof n.attributes ? n.attributes : p,
-                base: 'string' == typeof n.base ? n.base : e.base,
-                ext: n.ext || e.ext,
-                size: n.folder || m(n.size || e.size),
-                className: n.className || e.className,
-                onerror: n.onerror || e.onerror
-            })
-        );
-    }
-    function g(e, t) {
+    function E(e, t) {
         return String(e).replace(n, t);
     }
-    function S(e) {
-        n.lastIndex = 0;
-        var t = n.test(e);
-        return (n.lastIndex = 0), t;
-    }
-    function A(e, t) {
+    function f(e, t) {
         for (var n = [], r = 0, i = 0, a = 0; a < e.length; ) (r = e.charCodeAt(a++)), i ? (n.push((65536 + ((i - 55296) << 10) + (r - 56320)).toString(16)), (i = 0)) : 55296 <= r && r <= 56319 ? (i = r) : n.push(r.toString(16));
         return n.join(t || '-');
     }

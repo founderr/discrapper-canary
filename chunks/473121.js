@@ -1,19 +1,19 @@
 var r = n(735250),
     i = n(470079),
     a = n(481060),
-    o = n(454585),
-    s = n(273744),
+    s = n(454585),
+    o = n(273744),
     l = n(689938),
     u = n(476915);
-let c = (e) => {
+t.Z = (e) => {
     let {
             node: { header: t, subheader: n, button: c }
         } = e,
         d = (null == c ? void 0 : c.type) === 'submit',
         _ = i.useRef(
-            o.Z.reactParserFor({
-                ...o.Z.defaultRules,
-                link: s.s
+            s.Z.reactParserFor({
+                ...s.Z.defaultRules,
+                link: o.s
             })
         );
     return (0, r.jsxs)('div', {
@@ -41,4 +41,3 @@ let c = (e) => {
         ]
     });
 };
-t.Z = c;

@@ -1,49 +1,48 @@
 let r;
 n.d(t, {
     F: function () {
-        return p;
+        return E;
     },
     Z: function () {
-        return m;
+        return f;
     }
-});
-var i = n(757143);
-var a = n(653041);
-var o = n(392711),
-    s = n.n(o),
-    l = n(579806),
-    u = n(710845),
-    c = n(358085),
-    d = n(998502);
-let _ = [],
-    E = 'dosbox.exe';
-function f(e) {
-    return (e = e.toLowerCase()), (0, c.isWindows)() && (e = (e = e.replace(/^[a-z]:/, '')).replace(/\\/g, '/')), e;
+}),
+    n(757143),
+    n(653041);
+var i = n(392711),
+    a = n.n(i),
+    s = n(579806),
+    o = n(710845),
+    l = n(358085),
+    u = n(998502);
+let c = [];
+function d(e) {
+    return (e = e.toLowerCase()), (0, l.isWindows)() && (e = (e = e.replace(/^[a-z]:/, '')).replace(/\\/g, '/')), e;
 }
-function h(e) {
-    null != e && '' !== e && (!(e = f(e)).endsWith('/') && (e += '/'), _.push(e));
+function _(e) {
+    null != e && '' !== e && (!(e = d(e)).endsWith('/') && (e += '/'), c.push(e));
 }
-function p(e) {
-    e = f(e);
+function E(e) {
+    e = d(e);
     let t = !1;
-    return (_.forEach((n) => {
+    return (c.forEach((n) => {
         !t && e.startsWith(n) && ((e = e.substr(n.length)), (t = !0));
     }),
     t)
-        ? (e = e.includes(E) ? e.split('/').slice(-3).join('/') : e.split('/').slice(-2).join('/'))
+        ? (e = e.includes('dosbox.exe') ? e.split('/').slice(-3).join('/') : e.split('/').slice(-2).join('/'))
         : null;
 }
-async function m() {
+async function f() {
     if (null != r) return r;
     try {
-        await d.ZP.ensureModule('discord_game_utils'), (r = await d.ZP.requireModule('discord_game_utils'));
+        await u.ZP.ensureModule('discord_game_utils'), (r = await u.ZP.requireModule('discord_game_utils'));
     } catch (e) {
-        new u.Z('GamesActionCreators').error('could not load discord_game_utils', e);
+        new o.Z('GamesActionCreators').error('could not load discord_game_utils', e);
     }
-    if ((0, c.isWindows)()) {
-        let e = l.Z.process.env;
-        h(e.LOCALAPPDATA), h(e['PROGRAMFILES(X86)']), h(e.PROGRAMFILES), h(e.PROGRAMW6432), h(e.PROGRAMDATA), h('/games/'), h('/steamlibrary/steamapps/common/');
+    if ((0, l.isWindows)()) {
+        let e = s.Z.process.env;
+        _(e.LOCALAPPDATA), _(e['PROGRAMFILES(X86)']), _(e.PROGRAMFILES), _(e.PROGRAMW6432), _(e.PROGRAMDATA), _('/games/'), _('/steamlibrary/steamapps/common/');
     }
-    let e = l.Z.remoteApp.getPath;
-    return h(await e('home')), h(await e('appData')), h(await e('desktop')), h(await e('documents')), h(await e('downloads')), (_ = s().uniq(_)).sort((e, t) => t.length - e.length), r;
+    let e = s.Z.remoteApp.getPath;
+    return _(await e('home')), _(await e('appData')), _(await e('desktop')), _(await e('documents')), _(await e('downloads')), (c = a().uniq(c)).sort((e, t) => t.length - e.length), r;
 }

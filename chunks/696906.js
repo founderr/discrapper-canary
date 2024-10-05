@@ -1,106 +1,104 @@
-var r = n(390547);
-var i = n(789020);
-var a = n(735250),
-    o = n(470079),
-    s = n(512722),
-    l = n.n(s),
-    u = n(442837),
-    c = n(570140),
-    d = n(821849),
-    _ = n(906732),
-    E = n(887706),
-    f = n(728345),
-    h = n(724870),
-    p = n(594174),
-    m = n(509545),
-    I = n(55563),
-    T = n(551428),
-    g = n(270144),
-    S = n(171246),
-    A = n(689011),
-    v = n(714441),
-    N = n(981631),
-    O = n(689938);
-let R = (e) => {
-    var t, n, r;
-    let i,
-        { guildId: s, analyticsLocation: R, showBenefitsFirst: C, skuId: y, onComplete: L, forcesTransitionToGuild: b } = e,
-        D = (0, u.e7)([I.Z], () => (null != y ? I.Z.get(y) : void 0), [y]),
-        M = (0, u.e7)([T.Z], () => (null != y ? T.Z.getForSKU(y) : void 0), [y]),
-        P = null === (t = (0, u.Wu)([m.Z], () => (null != y ? m.Z.getForSKU(y) : []), [y])[0]) || void 0 === t ? void 0 : t.id,
-        U = (0, u.e7)([I.Z], () => (null != y ? I.Z.getParentSKU(y) : void 0), [y]),
-        w = null == U ? void 0 : U.bundledSkuIds,
-        x = (0, u.Wu)(
-            [m.Z],
+t(390547), t(789020);
+var l = t(735250),
+    i = t(470079),
+    r = t(512722),
+    a = t.n(r),
+    o = t(442837),
+    s = t(570140),
+    u = t(821849),
+    c = t(906732),
+    d = t(887706),
+    f = t(728345),
+    p = t(724870),
+    m = t(594174),
+    v = t(509545),
+    I = t(55563),
+    S = t(551428),
+    h = t(270144),
+    x = t(171246),
+    N = t(689011),
+    g = t(714441),
+    T = t(981631),
+    Z = t(689938);
+e.Z = (n) => {
+    var e, t, r;
+    let E,
+        { guildId: C, analyticsLocation: _, showBenefitsFirst: A, skuId: O, onComplete: R, forcesTransitionToGuild: b } = n,
+        j = (0, o.e7)([I.Z], () => (null != O ? I.Z.get(O) : void 0), [O]),
+        P = (0, o.e7)([S.Z], () => (null != O ? S.Z.getForSKU(O) : void 0), [O]),
+        L = null === (e = (0, o.Wu)([v.Z], () => (null != O ? v.Z.getForSKU(O) : []), [O])[0]) || void 0 === e ? void 0 : e.id,
+        k = (0, o.e7)([I.Z], () => (null != O ? I.Z.getParentSKU(O) : void 0), [O]),
+        M = null == k ? void 0 : k.bundledSkuIds,
+        D = (0, o.Wu)(
+            [v.Z],
             () => {
-                var e;
-                return null !== (e = null == w ? void 0 : w.flatMap(m.Z.getForSKU)) && void 0 !== e ? e : [];
+                var n;
+                return null !== (n = null == M ? void 0 : M.flatMap(v.Z.getForSKU)) && void 0 !== n ? n : [];
             },
-            [w]
+            [M]
         ),
-        G = o.useMemo(() => x.map((e) => e.id), [x]),
-        k = null == D ? void 0 : D.applicationId,
-        B = (0, g.CR)(k, y),
-        F = B.some((e) => e.id === s) ? s : null === (n = B[0]) || void 0 === n ? void 0 : n.id,
-        Z = (null == M ? void 0 : M.published) === !0 && (null == D ? void 0 : D.isAvailable()) === !0,
-        { data: V } = (0, f.IX)(k),
-        { analyticsLocations: H } = (0, _.ZP)(),
-        { activeSubscription: Y, activeEntitlement: j } = (0, g.C9)(U, F),
-        W = (0, E.Z)(),
-        K = null != D && (0, S.KW)(D.flags),
-        z = (null == j ? void 0 : j.skuId) === y,
-        q = null != j && j.userId === (null === (r = p.default.getCurrentUser()) || void 0 === r ? void 0 : r.id),
-        Q = null == j || x.length > 1,
-        X = B.length > 0,
-        $ = K && q && z,
-        J = null != D && null != V && Q && (X || K) && !$;
+        y = i.useMemo(() => D.map((n) => n.id), [D]),
+        U = null == j ? void 0 : j.applicationId,
+        B = (0, h.CR)(U, O),
+        F = B.some((n) => n.id === C) ? C : null === (t = B[0]) || void 0 === t ? void 0 : t.id,
+        w = (null == P ? void 0 : P.published) === !0 && (null == j ? void 0 : j.isAvailable()) === !0,
+        { data: K } = (0, f.IX)(U),
+        { analyticsLocations: G } = (0, c.ZP)(),
+        { activeSubscription: Y, activeEntitlement: H } = (0, h.C9)(k, F),
+        z = (0, d.Z)(),
+        W = null != j && (0, x.KW)(j.flags),
+        V = (null == H ? void 0 : H.skuId) === O,
+        q = null != H && H.userId === (null === (r = m.default.getCurrentUser()) || void 0 === r ? void 0 : r.id),
+        X = null == H || D.length > 1,
+        J = B.length > 0,
+        Q = W && q && V,
+        $ = null != j && null != K && X && (J || W) && !Q;
     return (
-        X ? $ && (i = O.Z.Messages.APPLICATION_SUBSCRIPTION_CURRENT_TIER) : (i = O.Z.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE),
-        o.useEffect(() => {
-            Z &&
-                null != y &&
-                W &&
-                !(m.Z.isFetchingForSKU(y) || m.Z.isLoadedForSKU(y)) &&
-                c.Z.wait(() => {
-                    (0, d.GZ)(y);
+        J ? Q && (E = Z.Z.Messages.APPLICATION_SUBSCRIPTION_CURRENT_TIER) : (E = Z.Z.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE),
+        i.useEffect(() => {
+            w &&
+                null != O &&
+                z &&
+                !(v.Z.isFetchingForSKU(O) || v.Z.isLoadedForSKU(O)) &&
+                s.Z.wait(() => {
+                    (0, u.GZ)(O);
                 });
-        }, [Z, y, W]),
+        }, [w, O, z]),
         {
-            openModal: o.useCallback(() => {
-                l()(null != V, 'No application'), l()(null != y, 'No SKU ID'), l()(Z, 'Cannot purchase this unpublished plan');
-                let e = () => {
-                    (0, h.h)({
+            openModal: i.useCallback(() => {
+                a()(null != K, 'No application'), a()(null != O, 'No SKU ID'), a()(w, 'Cannot purchase this unpublished plan');
+                let n = () => {
+                    (0, p.h)({
                         activeSubscription: null != Y ? Y : null,
-                        analyticsSubscriptionType: N.NYc.APPLICATION,
-                        analyticsLocations: H,
-                        analyticsLocation: R,
-                        renderHeader: (e, t, n) =>
-                            (0, a.jsx)(A.t, {
-                                step: n,
-                                onClose: () => t(!1)
+                        analyticsSubscriptionType: T.NYc.APPLICATION,
+                        analyticsLocations: G,
+                        analyticsLocation: _,
+                        renderHeader: (n, e, t) =>
+                            (0, l.jsx)(N.t, {
+                                step: t,
+                                onClose: () => e(!1)
                             }),
-                        initialPlanId: P,
-                        skuId: y,
+                        initialPlanId: L,
+                        skuId: O,
                         guildId: F,
                         eligibleApplicationSubscriptionGuilds: B,
-                        planGroup: G,
-                        applicationId: V.id,
-                        showBenefitsFirst: C,
-                        onComplete: L,
+                        planGroup: y,
+                        applicationId: K.id,
+                        showBenefitsFirst: A,
+                        onComplete: R,
                         forcesTransitionToGuild: b
                     });
                 };
-                !X && K
-                    ? (0, v.i)({
-                          applicationName: V.name,
-                          onConfirm: e,
+                !J && W
+                    ? (0, g.i)({
+                          applicationName: K.name,
+                          onConfirm: n,
                           onCancel: () => {}
                       })
-                    : e();
-            }, [y, P, G, Z, V, F, X, K, H, R, Y, C, B, L, b]),
-            canOpenModal: J,
-            cannotOpenReason: i
+                    : n();
+            }, [O, L, y, w, K, F, J, W, G, _, Y, A, B, R, b]),
+            canOpenModal: $,
+            cannotOpenReason: E
         }
     );
 };
-t.Z = R;

@@ -1,15 +1,15 @@
 var r = n(678916),
     i = n(190378),
     a = n(689938),
-    o = n(388785),
-    s = n(601080),
+    s = n(388785),
+    o = n(601080),
     l = n(68037),
     u = n(355198),
     c = n(221226),
     d = n(979954),
     _ = n(197231),
     E = n(48539);
-let f = () => ({
+t.Z = () => ({
     [r.dp.OPTION_1]: {
         id: r.dp.OPTION_1,
         source: l.Z,
@@ -32,14 +32,14 @@ let f = () => ({
     },
     [r.dp.OPTION_7]: {
         id: r.dp.OPTION_7,
-        source: o.Z,
+        source: s.Z,
         name: a.Z.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_7,
         isVideo: !0,
         hotspotLocation: i.v.ANIMATED_VIDEO_BG_CAPERNITE_DAY_NEW
     },
     [r.dp.OPTION_8]: {
         id: r.dp.OPTION_8,
-        source: s.Z,
+        source: o.Z,
         name: a.Z.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_8,
         isVideo: !0,
         hotspotLocation: i.v.ANIMATED_VIDEO_BG_CAPERNITE_NIGHT_NEW
@@ -59,4 +59,3 @@ let f = () => ({
         hotspotLocation: i.v.ANIMATED_VIDEO_BG_WUMPICE_NEW
     }
 });
-t.Z = f;

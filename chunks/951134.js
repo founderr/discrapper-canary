@@ -1,10 +1,9 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = 'HTTP/(2|1\\.[01])',
-        r = /[A-Za-z][A-Za-z0-9-]*/,
-        i = {
+        r = {
             className: 'attribute',
-            begin: t.concat('^', r, '(?=\\:\\s)'),
+            begin: t.concat('^', /[A-Za-z][A-Za-z0-9-]*/, '(?=\\:\\s)'),
             starts: {
                 contains: [
                     {
@@ -19,8 +18,8 @@ function t(e) {
                 ]
             }
         },
-        a = [
-            i,
+        i = [
+            r,
             {
                 begin: '\\n\\n',
                 starts: {
@@ -50,7 +49,7 @@ function t(e) {
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: a
+                    contains: i
                 }
             },
             {
@@ -76,11 +75,10 @@ function t(e) {
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: a
+                    contains: i
                 }
             },
-            e.inherit(i, { relevance: 0 })
+            e.inherit(r, { relevance: 0 })
         ]
     };
-}
-e.exports = t;
+};

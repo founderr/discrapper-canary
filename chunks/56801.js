@@ -1,101 +1,98 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return f;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(481060),
+    s = n.n(a),
+    o = n(481060),
     l = n(806966),
     u = n(254494),
     c = n(895924),
     d = n(826298),
     _ = n(360557);
-let E = [16, 12, 8, 12],
-    f = 32,
-    h = 4,
-    p = 8;
-function m(e) {
-    let { className: t, channel: n, sections: a, activeCategoryIndex: m, filteredSectionId: I, onSectionClick: T, applicationCommandListRef: g } = e,
-        S = i.useRef(null),
-        A = i.useCallback(
+let E = [16, 12, 8, 12];
+function f(e) {
+    let { className: t, channel: n, sections: a, activeCategoryIndex: f, filteredSectionId: h, onSectionClick: p, applicationCommandListRef: I } = e,
+        m = i.useRef(null),
+        T = i.useCallback(
             (e, t) => {
                 var n;
-                let r = 2 * h;
-                return (null === (n = a[t + 1]) || void 0 === n ? void 0 : n.type) === c.Qi.BUILT_IN && (r += p), f + r;
+                let r = 8;
+                return (null === (n = a[t + 1]) || void 0 === n ? void 0 : n.type) === c.Qi.BUILT_IN && (r += 8), 32 + r;
             },
             [a]
         ),
-        v = i.useCallback(
+        S = i.useCallback(
             (e, t) => {
                 var n;
-                if (!t) return 0 === e ? 0 : 2 * h;
-                return (null === (n = a[e + 1]) || void 0 === n ? void 0 : n.type) === c.Qi.BUILT_IN ? 0 : 2 * h;
+                if (!t) return 0 === e ? 0 : 8;
+                return (null === (n = a[e + 1]) || void 0 === n ? void 0 : n.type) === c.Qi.BUILT_IN ? 0 : 8;
             },
             [a]
         ),
-        N = i.useCallback(
+        g = i.useCallback(
             (e, t) => {
                 let i = a[t];
                 if (null == i) return;
-                let o = (0, d.ky)(i),
-                    l = i.type === c.Qi.BUILT_IN ? h : 0,
-                    u = f - 2 * l,
-                    E = (0, r.jsx)(o, {
+                let s = (0, d.ky)(i),
+                    l = i.type === c.Qi.BUILT_IN ? 4 : 0,
+                    u = 32 - 2 * l,
+                    E = (0, r.jsx)(s, {
                         channel: n,
                         section: i,
-                        isSelected: null != I ? i.id === I : m === t,
+                        isSelected: null != h ? i.id === h : f === t,
                         padding: l,
                         width: u,
                         height: u,
                         selectable: !0
                     }),
-                    p = i.type !== c.Qi.BUILT_IN && t < a.length - 1 && a[t + 1].type === c.Qi.BUILT_IN;
+                    I = i.type !== c.Qi.BUILT_IN && t < a.length - 1 && a[t + 1].type === c.Qi.BUILT_IN;
                 return (0, r.jsxs)(
                     'div',
                     {
                         className: _.section,
                         children: [
-                            (0, r.jsx)(s.Tooltip, {
+                            (0, r.jsx)(o.Tooltip, {
                                 text: i.name,
                                 position: 'right',
                                 children: (e) => {
                                     let { onClick: t, ...n } = e;
-                                    return (0, r.jsx)(s.Clickable, {
+                                    return (0, r.jsx)(o.Clickable, {
                                         'aria-label': i.name,
                                         onClick: () => {
-                                            T(i), null == t || t();
+                                            p(i), null == t || t();
                                         },
                                         ...n,
                                         children: E
                                     });
                                 }
                             }),
-                            p ? (0, r.jsx)('hr', { className: _.builtInSeparator }) : null
+                            I ? (0, r.jsx)('hr', { className: _.builtInSeparator }) : null
                         ]
                     },
                     i.id
                 );
             },
-            [m, n, T, a, I]
+            [f, n, p, a, h]
         );
     return 0 === a.length
         ? null
         : (0, r.jsx)('div', {
-              className: o()(t, _.wrapper),
+              className: s()(t, _.wrapper),
               children: (0, r.jsx)(u.Z, {
-                  categoryListRef: S,
-                  expressionsListRef: g,
+                  categoryListRef: m,
+                  expressionsListRef: I,
                   store: l.Xn,
                   categories: a,
                   className: _.list,
-                  renderCategoryListItem: N,
+                  renderCategoryListItem: g,
                   rowCount: a.length,
-                  categoryHeight: A,
+                  categoryHeight: T,
                   listPadding: E,
-                  getScrollOffsetForIndex: v
+                  getScrollOffsetForIndex: S
               })
           });
 }

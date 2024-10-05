@@ -1,27 +1,28 @@
 n.d(t, {
     IF: function () {
-        return f;
-    },
-    LU: function () {
         return c;
     },
+    LU: function () {
+        return l;
+    },
     Rt: function () {
-        return p;
+        return _;
     },
     hW: function () {
-        return d;
+        return u;
     },
     t3: function () {
-        return h;
+        return d;
     }
-});
+}),
+    n(724458),
+    n(653041),
+    n(47120);
 var r,
-    i = n(724458);
-var a = n(653041);
-var o = n(47120);
-var s = n(271383),
-    l = n(588215);
-function u(e, t, n) {
+    i,
+    a = n(271383),
+    s = n(588215);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,28 +35,24 @@ function u(e, t, n) {
         e
     );
 }
-let c = [12, 25, 50, 100],
-    d = 7,
-    _ = 5,
-    E = 250;
-function f() {
+let l = [12, 25, 50, 100],
+    u = 7;
+function c() {
     return {
-        pageSize: c[0],
+        pageSize: l[0],
         currentPage: 1,
         continuationToken: null,
-        sort: l.d$.ORDER_BY_UNSPECIFIED,
+        sort: s.d$.ORDER_BY_UNSPECIFIED,
         elasticSearchCursor: null
     };
 }
-function h(e) {
-    return Math.max(e.pageSize * _, E);
+function d(e) {
+    return Math.max(5 * e.pageSize, 250);
 }
-!(function (e) {
-    (e[(e.FORWARD = 1)] = 'FORWARD'), (e[(e.BACKWARD = -1)] = 'BACKWARD');
-})(r || (r = {}));
-class p {
+((i = r || (r = {}))[(i.FORWARD = 1)] = 'FORWARD'), (i[(i.BACKWARD = -1)] = 'BACKWARD');
+class _ {
     reset() {
-        (this._paginationState = f()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
+        (this._paginationState = c()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
     }
     isMemberOnCurrentPage(e) {
         var t;
@@ -119,9 +116,9 @@ class p {
             n = e;
         n < this._sortedMemberIds.length && (n = this._sortedMemberIds.length - 1), n < 0 && (n = 0);
         let r = this._sortedMemberIds[e],
-            i = s.ZP.getMember(this.guildId, r);
+            i = a.ZP.getMember(this.guildId, r);
         for (; null == i && !((e += t) < 0) && !(e >= this._sortedMemberIds.length); ) {
-            (r = this._sortedMemberIds[e]), (null == (i = s.ZP.getMember(this.guildId, r)) ? void 0 : i.joinedAt) == null && (i = null);
+            (r = this._sortedMemberIds[e]), (null == (i = a.ZP.getMember(this.guildId, r)) ? void 0 : i.joinedAt) == null && (i = null);
         }
         return i;
     }
@@ -135,17 +132,17 @@ class p {
         return this._version;
     }
     constructor(e, t) {
-        u(this, 'guildId', void 0),
-            u(this, '_sortedMemberIds', void 0),
-            u(this, '_paginationState', void 0),
-            u(this, '_version', void 0),
-            u(this, '_cachedPaginationChunks', void 0),
-            u(this, '_reduceMemberIdsToPaginationChunks', (e, t, n) => {
+        o(this, 'guildId', void 0),
+            o(this, '_sortedMemberIds', void 0),
+            o(this, '_paginationState', void 0),
+            o(this, '_version', void 0),
+            o(this, '_cachedPaginationChunks', void 0),
+            o(this, '_reduceMemberIdsToPaginationChunks', (e, t, n) => {
                 let r = Math.floor(n / this._paginationState.pageSize) + 1;
                 return null == e[r] && (e[r] = []), e[r].push(t), e;
             }),
             (this.guildId = e),
-            (this._paginationState = f()),
+            (this._paginationState = c()),
             (this._version = 0);
         let [n, r] = this._initPaginationFromRawMembers(t);
         (this._sortedMemberIds = n), (this._cachedPaginationChunks = r), (this._version += 1);

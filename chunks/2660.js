@@ -1,35 +1,34 @@
-var r = n(735250);
+var s = n(735250);
 n(470079);
-var i = n(442837),
-    a = n(481060),
+var a = n(442837),
+    i = n(481060),
     o = n(204418),
-    s = n(594174),
+    r = n(594174),
     l = n(113434),
     u = n(46140),
-    c = n(182294),
-    d = n(52539);
-let _ = () => (0, r.jsx)('div', { className: d.questsCollectibleReward }),
+    d = n(182294),
+    c = n(52539);
+let m = () => (0, s.jsx)('div', { className: c.questsCollectibleReward }),
     E = (e) => {
         let { questConfig: t, fallback: n, isFocused: u } = e,
-            _ = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-            { avatarDecoration: E, isFetching: f } = (0, l.DU)(t);
-        return f
-            ? (0, r.jsx)('div', {
-                  className: d.questsCollectibleReward,
-                  children: (0, r.jsx)(a.Spinner, {})
+            m = (0, a.e7)([r.default], () => r.default.getCurrentUser()),
+            { avatarDecoration: E, isFetching: x } = (0, l.DU)(t);
+        return x
+            ? (0, s.jsx)('div', {
+                  className: c.questsCollectibleReward,
+                  children: (0, s.jsx)(i.Spinner, {})
               })
-            : null == _ || null == E
+            : null == m || null == E
               ? n
-              : (0, r.jsx)('div', {
-                    className: d.questsCollectibleReward,
-                    children: (0, r.jsx)(o.Z, {
-                        avatarSize: c.EF.SIZE_56,
-                        user: _,
+              : (0, s.jsx)('div', {
+                    className: c.questsCollectibleReward,
+                    children: (0, s.jsx)(o.Z, {
+                        avatarSize: d.EF.SIZE_56,
+                        user: m,
                         guildId: null,
                         avatarDecorationOverride: E,
                         animateOnHover: !u
                     })
                 });
-    },
-    f = (e) => (e.questConfig.features.includes(u.S7.FRACTIONS_QUEST) ? (0, r.jsx)(_, {}) : (0, r.jsx)(E, { ...e }));
-t.Z = f;
+    };
+t.Z = (e) => (e.questConfig.features.includes(u.S7.FRACTIONS_QUEST) ? (0, s.jsx)(m, {}) : (0, s.jsx)(E, { ...e }));

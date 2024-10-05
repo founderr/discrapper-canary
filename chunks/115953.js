@@ -1,26 +1,25 @@
 function n(e) {
     return e.valueOf ? e.valueOf() : Object.prototype.valueOf.call(e);
 }
-function r(e, t) {
-    if (e === t) return !0;
-    if (null == e || null == t) return !1;
-    if (Array.isArray(e))
+t.Z = function e(t, r) {
+    if (t === r) return !0;
+    if (null == t || null == r) return !1;
+    if (Array.isArray(t))
         return (
-            Array.isArray(t) &&
-            e.length === t.length &&
-            e.every(function (e, n) {
-                return r(e, t[n]);
+            Array.isArray(r) &&
+            t.length === r.length &&
+            t.every(function (t, n) {
+                return e(t, r[n]);
             })
         );
-    if ('object' == typeof e || 'object' == typeof t) {
-        var i = n(e),
-            a = n(t);
-        return i !== e || a !== t
-            ? r(i, a)
-            : Object.keys(Object.assign({}, e, t)).every(function (n) {
-                  return r(e[n], t[n]);
+    if ('object' == typeof t || 'object' == typeof r) {
+        var i = n(t),
+            a = n(r);
+        return i !== t || a !== r
+            ? e(i, a)
+            : Object.keys(Object.assign({}, t, r)).every(function (n) {
+                  return e(t[n], r[n]);
               });
     }
     return !1;
-}
-t.Z = r;
+};

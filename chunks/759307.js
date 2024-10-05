@@ -1,4 +1,3 @@
-function n(e) {
+t.Z = function (e) {
     return this.__data__.get(e);
-}
-t.Z = n;
+};

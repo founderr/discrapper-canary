@@ -1,47 +1,46 @@
 n.d(t, {
     W3: function () {
-        return c;
+        return u;
     },
     pJ: function () {
         return r;
     }
-});
+}),
+    n(47120),
+    n(653041);
 var r,
-    i = n(47120);
-var a = n(653041);
-var o = n(735250),
+    i,
+    a = n(735250),
     s = n(470079);
-!(function (e) {
-    (e[(e.MOUNTED = 0)] = 'MOUNTED'), (e[(e.ENTERED = 1)] = 'ENTERED'), (e[(e.YEETED = 2)] = 'YEETED');
-})(r || (r = {}));
-let l = {};
-function u(e) {
+((i = r || (r = {}))[(i.MOUNTED = 0)] = 'MOUNTED'), (i[(i.ENTERED = 1)] = 'ENTERED'), (i[(i.YEETED = 2)] = 'YEETED');
+let o = {};
+function l(e) {
     return e;
 }
-function c(e) {
-    let { items: t, renderItem: n, getItemKey: r, wrapChildren: i = u, lazyCleanUpDelay: a } = e,
+function u(e) {
+    let { items: t, renderItem: n, getItemKey: r, wrapChildren: i = l, lazyCleanUpDelay: u } = e,
         c = s.useRef(-1);
     s.useLayoutEffect(() => () => clearTimeout(c.current));
-    let [, d] = s.useState(l),
+    let [, d] = s.useState(o),
         _ = s.useRef(null),
         E = s.useMemo(() => {
             var e;
             let i = new Set(null === (e = _.current) || void 0 === e ? void 0 : e.keys()),
-                o = new Map(_.current);
+                a = new Map(_.current);
             for (let e of t) {
                 let t = r(e),
-                    s = o.get(t);
+                    s = a.get(t);
                 if (null == s) {
                     let r = null != _.current ? 1 : 0,
                         i = () => {
                             var e, n;
                             let r = null === (e = _.current) || void 0 === e ? void 0 : e.get(t);
-                            null == r || (2 === r.state ? (null === (n = _.current) || void 0 === n || n.delete(t), null != a ? (clearTimeout(c.current), (c.current = setTimeout(() => d({}), a))) : d({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)));
+                            null == r || (2 === r.state ? (null === (n = _.current) || void 0 === n || n.delete(t), null != u ? (clearTimeout(c.current), (c.current = setTimeout(() => d({}), u))) : d({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)));
                         },
-                        o = n(t, e, r, i);
+                        a = n(t, e, r, i);
                     s = {
                         item: e,
-                        children: o,
+                        children: a,
                         state: r,
                         cleanUp: i,
                         renderItem: n
@@ -58,29 +57,29 @@ function c(e) {
                         renderItem: n
                     };
                 }
-                o.set(t, s), i.delete(t);
+                a.set(t, s), i.delete(t);
             }
             for (let e of i) {
-                let t = o.get(e);
+                let t = a.get(e);
                 if (null != t) {
                     if (2 !== t.state || t.renderItem !== n) {
                         let { item: r, cleanUp: i } = t,
-                            a = n(e, t.item, 2, t.cleanUp);
+                            s = n(e, t.item, 2, t.cleanUp);
                         null !=
                         (t = {
                             item: r,
-                            children: a,
+                            children: s,
                             state: 2,
                             cleanUp: i,
                             renderItem: n
                         }).children
-                            ? o.set(e, t)
-                            : o.delete(e);
-                    } else o.set(e, t);
+                            ? a.set(e, t)
+                            : a.delete(e);
+                    } else a.set(e, t);
                 }
             }
-            return o;
-        }, [t, r, n, a]);
+            return a;
+        }, [t, r, n, u]);
     s.useInsertionEffect(
         () => (
             (_.current = E),
@@ -93,8 +92,5 @@ function c(e) {
     );
     let f = [];
     for (let [, e] of E) f.push(e.children);
-    return (0, o.jsx)(o.Fragment, { children: f.length > 0 ? i(f, t) : null });
-}
-function d() {
-    return 'key';
+    return (0, a.jsx)(a.Fragment, { children: f.length > 0 ? i(f, t) : null });
 }

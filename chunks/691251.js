@@ -1,4 +1,4 @@
-var r, i;
+var r, i, a, s;
 n.d(t, {
     S: function () {
         return i;
@@ -7,9 +7,8 @@ n.d(t, {
         return r;
     }
 }),
-    !(function (e) {
-        (e[(e.GRID_NAVIGATOR_EVENT = 0)] = 'GRID_NAVIGATOR_EVENT'), (e[(e.MOUSE_EVENT = 1)] = 'MOUSE_EVENT');
-    })(r || (r = {})),
-    !(function (e) {
-        (e.EMOJI = 'emoji'), (e.STICKER = 'sticker'), (e.PACK_ICON = 'pack-icon');
-    })(i || (i = {}));
+    ((a = r || (r = {}))[(a.GRID_NAVIGATOR_EVENT = 0)] = 'GRID_NAVIGATOR_EVENT'),
+    (a[(a.MOUSE_EVENT = 1)] = 'MOUSE_EVENT'),
+    ((s = i || (i = {})).EMOJI = 'emoji'),
+    (s.STICKER = 'sticker'),
+    (s.PACK_ICON = 'pack-icon');

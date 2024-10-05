@@ -1,6 +1,6 @@
 n.d(t, {
     Y: function () {
-        return m;
+        return I;
     },
     u: function () {
         return p;
@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(175730),
     i = n(878369),
     a = n(670732),
-    o = n(839826),
-    s = n(721056),
+    s = n(839826),
+    o = n(721056),
     l = n(388388),
     u = new WeakMap(),
     c = /auto|scroll/,
@@ -22,7 +22,7 @@ var r = n(175730),
     f = function (e, t, n) {
         return void 0 === e && (e = 0), void 0 === t && (t = 0), void 0 === n && (n = !1), new i.D((n ? t : e) || 0, (n ? e : t) || 0);
     },
-    h = (0, s.v)({
+    h = (0, o.v)({
         devicePixelContentBoxSize: f(),
         borderBoxSize: f(),
         contentBoxSize: f(),
@@ -30,52 +30,50 @@ var r = n(175730),
     }),
     p = function (e, t) {
         if ((void 0 === t && (t = !1), u.has(e) && !t)) return u.get(e);
-        if ((0, o.xj)(e)) return u.set(e, h), h;
+        if ((0, s.xj)(e)) return u.set(e, h), h;
         var n = getComputedStyle(e),
-            r = (0, o.zd)(e) && e.ownerSVGElement && e.getBBox(),
+            r = (0, s.zd)(e) && e.ownerSVGElement && e.getBBox(),
             i = !_ && 'border-box' === n.boxSizing,
             l = d.test(n.writingMode || ''),
             p = !r && c.test(n.overflowY || ''),
-            m = !r && c.test(n.overflowX || ''),
-            I = r ? 0 : E(n.paddingTop),
+            I = !r && c.test(n.overflowX || ''),
+            m = r ? 0 : E(n.paddingTop),
             T = r ? 0 : E(n.paddingRight),
-            g = r ? 0 : E(n.paddingBottom),
-            S = r ? 0 : E(n.paddingLeft),
+            S = r ? 0 : E(n.paddingBottom),
+            g = r ? 0 : E(n.paddingLeft),
             A = r ? 0 : E(n.borderTopWidth),
-            v = r ? 0 : E(n.borderRightWidth),
-            N = r ? 0 : E(n.borderBottomWidth),
-            O = r ? 0 : E(n.borderLeftWidth),
-            R = S + T,
-            C = I + g,
-            y = O + v,
-            L = A + N,
-            b = m ? e.offsetHeight - L - e.clientHeight : 0,
-            D = p ? e.offsetWidth - y - e.clientWidth : 0,
-            M = i ? R + y : 0,
-            P = i ? C + L : 0,
-            U = r ? r.width : E(n.width) - M - D,
-            w = r ? r.height : E(n.height) - P - b,
-            x = U + R + D + y,
-            G = w + C + b + L,
-            k = (0, s.v)({
-                devicePixelContentBoxSize: f(Math.round(U * devicePixelRatio), Math.round(w * devicePixelRatio), l),
-                borderBoxSize: f(x, G, l),
-                contentBoxSize: f(U, w, l),
-                contentRect: new a.N(S, I, U, w)
+            N = r ? 0 : E(n.borderRightWidth),
+            O = r ? 0 : E(n.borderBottomWidth),
+            R = r ? 0 : E(n.borderLeftWidth),
+            v = g + T,
+            C = m + S,
+            L = R + N,
+            D = A + O,
+            y = I ? e.offsetHeight - D - e.clientHeight : 0,
+            b = p ? e.offsetWidth - L - e.clientWidth : 0,
+            M = r ? r.width : E(n.width) - (i ? v + L : 0) - b,
+            P = r ? r.height : E(n.height) - (i ? C + D : 0) - y,
+            U = M + v + b + L,
+            w = P + C + y + D,
+            x = (0, o.v)({
+                devicePixelContentBoxSize: f(Math.round(M * devicePixelRatio), Math.round(P * devicePixelRatio), l),
+                borderBoxSize: f(U, w, l),
+                contentBoxSize: f(M, P, l),
+                contentRect: new a.N(g, m, M, P)
             });
-        return u.set(e, k), k;
+        return u.set(e, x), x;
     },
-    m = function (e, t, n) {
+    I = function (e, t, n) {
         var i = p(e, n),
             a = i.borderBoxSize,
-            o = i.contentBoxSize,
-            s = i.devicePixelContentBoxSize;
+            s = i.contentBoxSize,
+            o = i.devicePixelContentBoxSize;
         switch (t) {
             case r.z.DEVICE_PIXEL_CONTENT_BOX:
-                return s;
+                return o;
             case r.z.BORDER_BOX:
                 return a;
             default:
-                return o;
+                return s;
         }
     };

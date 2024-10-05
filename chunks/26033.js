@@ -6,19 +6,19 @@ n.d(t, {
         return c;
     },
     Mq: function () {
-        return p;
+        return f;
     },
     Q0: function () {
-        return o;
+        return s;
     },
     aA: function () {
-        return h;
+        return E;
     },
     dU: function () {
         return u;
     },
     dX: function () {
-        return s;
+        return o;
     },
     kq: function () {
         return d;
@@ -35,11 +35,11 @@ var r = n(876215),
 function a(e) {
     return (null == e ? void 0 : e.content_type) === r.s.PLAYED_GAME;
 }
-function o(e) {
+function s(e) {
     return (null == e ? void 0 : e.content_type) === r.s.TOP_GAME;
 }
-function s(e) {
-    return a(e) || o(e);
+function o(e) {
+    return a(e) || s(e);
 }
 function l(e) {
     return (null == e ? void 0 : e.extra) != null && 'application_id' in (null == e ? void 0 : e.extra);
@@ -57,14 +57,9 @@ function _(e) {
     return (null == e ? void 0 : e.content_type) === r.s.WATCHED_MEDIA;
 }
 function E(e) {
-    return !!s(e) && e.extra.platform === i.z.XBOX;
+    var t, n;
+    return (!!o((t = e)) && t.extra.platform === i.z.XBOX) || (!!o((n = e)) && n.extra.platform === i.z.PLAYSTATION);
 }
 function f(e) {
-    return !!s(e) && e.extra.platform === i.z.PLAYSTATION;
-}
-function h(e) {
-    return E(e) || f(e);
-}
-function p(e) {
     return (null == e ? void 0 : e.content_type) === r.s.LAUNCHED_ACTIVITY;
 }

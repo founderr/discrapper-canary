@@ -1,26 +1,24 @@
 n.d(t, {
     C: function () {
-        return a;
+        return function e(t) {
+            return null == t
+                ? t
+                : Object.keys(t).reduce((n, i) => {
+                      let o = (0, r.camelCase)(i);
+                      return 'object' != typeof t[i] || Array.isArray(t[i]) ? (n[o] = t[i]) : (n[o] = e(t[i])), n;
+                  }, {});
+        };
     },
     X: function () {
-        return o;
+        return function e(t) {
+            return null == t
+                ? t
+                : Object.keys(t).reduce((n, i) => {
+                      let o = (0, r.snakeCase)(i);
+                      return 'object' != typeof t[i] || Array.isArray(t[i]) ? (n[o] = t[i]) : (n[o] = e(t[i])), (n[o] = t[i]), n;
+                  }, {});
+        };
     }
-});
-var r = n(724458);
-var i = n(392711);
-function a(e) {
-    return null == e
-        ? e
-        : Object.keys(e).reduce((t, n) => {
-              let r = (0, i.camelCase)(n);
-              return 'object' != typeof e[n] || Array.isArray(e[n]) ? (t[r] = e[n]) : (t[r] = a(e[n])), t;
-          }, {});
-}
-function o(e) {
-    return null == e
-        ? e
-        : Object.keys(e).reduce((t, n) => {
-              let r = (0, i.snakeCase)(n);
-              return 'object' != typeof e[n] || Array.isArray(e[n]) ? (t[r] = e[n]) : (t[r] = o(e[n])), (t[r] = e[n]), t;
-          }, {});
-}
+}),
+    n(724458);
+var r = n(392711);

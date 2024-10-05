@@ -1,36 +1,35 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(481060),
+    s = n.n(a),
+    o = n(481060),
     l = n(274718);
-let u = 500;
-function c(e) {
-    let { children: t, 'aria-label': n, className: a, position: c, ...d } = e,
-        _ = i.useRef(null),
-        E = null != n ? n : 'string' == typeof t && t;
-    return (0, r.jsx)(s.Tooltip, {
-        ...d,
-        position: null != c ? c : 'top',
-        delay: u,
+function u(e) {
+    let { children: t, 'aria-label': n, className: a, position: u, ...c } = e,
+        d = i.useRef(null),
+        _ = null != n ? n : 'string' == typeof t && t;
+    return (0, r.jsx)(o.Tooltip, {
+        ...c,
+        position: null != u ? u : 'top',
+        delay: 500,
         text: t,
-        'aria-label': E,
+        'aria-label': _,
         children: (n) => {
-            let { onMouseEnter: i, onMouseLeave: s } = n;
+            let { onMouseEnter: i, onMouseLeave: o } = n;
             return (0, r.jsx)('div', {
-                className: o()(a, l.overflow),
-                ref: _,
+                className: s()(a, l.overflow),
+                ref: d,
                 'aria-hidden': e['aria-hidden'],
                 onMouseEnter: () => {
-                    let { current: e } = _;
+                    let { current: e } = d;
                     null != e && e.offsetWidth < e.scrollWidth && (null == i || i());
                 },
-                onMouseLeave: s,
+                onMouseLeave: o,
                 children: t
             });
         }

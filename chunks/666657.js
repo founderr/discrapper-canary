@@ -1,4 +1,4 @@
-var r, i, a;
+var r, i, a, s, o, l;
 n.d(t, {
     Hl: function () {
         return i;
@@ -10,12 +10,13 @@ n.d(t, {
         return a;
     }
 }),
-    !(function (e) {
-        (e.MESSAGE = 'message'), (e.NAGBAR = 'nagbar'), (e.GUILD_SETTINGS = 'guild_settings'), (e.CONTEXT_MENU = 'context_menu'), (e.GUILD_PROFILE = 'guild_profile'), (e.MEMBER_SAFETY_PAGE = 'member_safety_page');
-    })(r || (r = {})),
-    !(function (e) {
-        (e.JOIN_RAID = 'join_raid'), (e.DM_RAID = 'dm_raid');
-    })(i || (i = {})),
-    !(function (e) {
-        (e.INVITES_DISABLED = 'invites_disabled'), (e.DMS_DISABLED = 'dms_disabled');
-    })(a || (a = {}));
+    ((s = r || (r = {})).MESSAGE = 'message'),
+    (s.NAGBAR = 'nagbar'),
+    (s.GUILD_SETTINGS = 'guild_settings'),
+    (s.CONTEXT_MENU = 'context_menu'),
+    (s.GUILD_PROFILE = 'guild_profile'),
+    (s.MEMBER_SAFETY_PAGE = 'member_safety_page'),
+    ((o = i || (i = {})).JOIN_RAID = 'join_raid'),
+    (o.DM_RAID = 'dm_raid'),
+    ((l = a || (a = {})).INVITES_DISABLED = 'invites_disabled'),
+    (l.DMS_DISABLED = 'dms_disabled');

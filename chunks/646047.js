@@ -1,4 +1,4 @@
-class n {
+let n = new (class e {
     setActive(e) {
         return Promise.resolve();
     }
@@ -16,6 +16,5 @@ class n {
     isSupported() {
         return !1;
     }
-}
-let r = new n();
-t.Z = r;
+})();
+t.Z = n;

@@ -33,7 +33,7 @@ let t = (e) => ({
     r = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'],
     i = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'],
     a = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'],
-    o = [
+    s = [
         'align-content',
         'align-items',
         'align-self',
@@ -393,44 +393,36 @@ let t = (e) => ({
         'writing-mode',
         'z-index'
     ].reverse(),
-    s = i.concat(a);
-function l(e) {
+    o = i.concat(a);
+e.exports = function (e) {
     let l = t(e),
-        u = s,
-        c = '[\\w-]+',
-        d = '(' + c + '|@\\{' + c + '\\})',
+        u = '[\\w-]+',
+        c = '(' + u + '|@\\{' + u + '\\})',
+        d = [],
         _ = [],
-        E = [],
-        f = function (e) {
+        E = function (e) {
             return {
                 className: 'string',
                 begin: '~?' + e + '.*?' + e
             };
         },
-        h = function (e, t, n) {
+        f = function (e, t, n) {
             return {
                 className: e,
                 begin: t,
                 relevance: n
             };
         },
-        p = {
+        h = {
             $pattern: /[a-z-]+/,
             keyword: 'and or not only',
             attribute: r.join(' ')
-        },
-        m = {
-            begin: '\\(',
-            end: '\\)',
-            contains: E,
-            keywords: p,
-            relevance: 0
         };
-    E.push(
+    _.push(
         e.C_LINE_COMMENT_MODE,
         e.C_BLOCK_COMMENT_MODE,
-        f("'"),
-        f('"'),
+        E("'"),
+        E('"'),
         l.CSS_NUMBER_MODE,
         {
             begin: '(url|data-uri)\\(',
@@ -441,13 +433,19 @@ function l(e) {
             }
         },
         l.HEXCOLOR,
-        m,
-        h('variable', '@@?' + c, 10),
-        h('variable', '@\\{' + c + '\\}'),
-        h('built_in', '~?`[^`]*?`'),
+        {
+            begin: '\\(',
+            end: '\\)',
+            contains: _,
+            keywords: h,
+            relevance: 0
+        },
+        f('variable', '@@?' + u, 10),
+        f('variable', '@\\{' + u + '\\}'),
+        f('built_in', '~?`[^`]*?`'),
         {
             className: 'attribute',
-            begin: c + '\\s*:',
+            begin: u + '\\s*:',
             end: ':',
             returnBegin: !0,
             excludeEnd: !0
@@ -456,18 +454,18 @@ function l(e) {
         { beginKeywords: 'and not' },
         l.FUNCTION_DISPATCH
     );
-    let I = E.concat({
+    let p = _.concat({
             begin: /\{/,
             end: /\}/,
-            contains: _
+            contains: d
         }),
-        T = {
+        I = {
             beginKeywords: 'when',
             endsWithParent: !0,
-            contains: [{ beginKeywords: 'and not' }].concat(E)
+            contains: [{ beginKeywords: 'and not' }].concat(_)
         },
-        g = {
-            begin: d + '\\s*:',
+        m = {
+            begin: c + '\\s*:',
             returnBegin: !0,
             end: /[;}]/,
             relevance: 0,
@@ -476,51 +474,25 @@ function l(e) {
                 l.CSS_VARIABLE,
                 {
                     className: 'attribute',
-                    begin: '\\b(' + o.join('|') + ')\\b',
+                    begin: '\\b(' + s.join('|') + ')\\b',
                     end: /(?=:)/,
                     starts: {
                         endsWithParent: !0,
                         illegal: '[<=$]',
                         relevance: 0,
-                        contains: E
+                        contains: _
                     }
                 }
             ]
         },
-        S = {
-            className: 'keyword',
-            begin: '@(import|media|charset|font-face|(-[a-z]+-)?keyframes|supports|document|namespace|page|viewport|host)\\b',
-            starts: {
-                end: '[;{}]',
-                keywords: p,
-                returnEnd: !0,
-                contains: E,
-                relevance: 0
-            }
-        },
-        A = {
-            className: 'variable',
-            variants: [
-                {
-                    begin: '@' + c + '\\s*:',
-                    relevance: 15
-                },
-                { begin: '@' + c }
-            ],
-            starts: {
-                end: '[;}]',
-                returnEnd: !0,
-                contains: I
-            }
-        },
-        v = {
+        T = {
             variants: [
                 {
                     begin: '[\\.#:&\\[>]',
                     end: '[;{}]'
                 },
                 {
-                    begin: d,
+                    begin: c,
                     end: /\{/
                 }
             ],
@@ -531,18 +503,18 @@ function l(e) {
             contains: [
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
-                T,
-                h('keyword', 'all\\b'),
-                h('variable', '@\\{' + c + '\\}'),
+                I,
+                f('keyword', 'all\\b'),
+                f('variable', '@\\{' + u + '\\}'),
                 {
                     begin: '\\b(' + n.join('|') + ')\\b',
                     className: 'selector-tag'
                 },
                 l.CSS_NUMBER_MODE,
-                h('selector-tag', d, 0),
-                h('selector-id', '#' + d),
-                h('selector-class', '\\.' + d, 0),
-                h('selector-tag', '&', 0),
+                f('selector-tag', c, 0),
+                f('selector-id', '#' + c),
+                f('selector-class', '\\.' + c, 0),
+                f('selector-tag', '&', 0),
                 l.ATTRIBUTE_SELECTOR_MODE,
                 {
                     className: 'selector-pseudo',
@@ -556,25 +528,58 @@ function l(e) {
                     begin: /\(/,
                     end: /\)/,
                     relevance: 0,
-                    contains: I
+                    contains: p
                 },
                 { begin: '!important' },
                 l.FUNCTION_DISPATCH
             ]
         },
-        N = {
-            begin: c + ':(:)?' + `(${u.join('|')})`,
+        S = {
+            begin: u + ':(:)?' + `(${o.join('|')})`,
             returnBegin: !0,
-            contains: [v]
+            contains: [T]
         };
     return (
-        _.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, S, A, N, g, v, T, l.FUNCTION_DISPATCH),
+        d.push(
+            e.C_LINE_COMMENT_MODE,
+            e.C_BLOCK_COMMENT_MODE,
+            {
+                className: 'keyword',
+                begin: '@(import|media|charset|font-face|(-[a-z]+-)?keyframes|supports|document|namespace|page|viewport|host)\\b',
+                starts: {
+                    end: '[;{}]',
+                    keywords: h,
+                    returnEnd: !0,
+                    contains: _,
+                    relevance: 0
+                }
+            },
+            {
+                className: 'variable',
+                variants: [
+                    {
+                        begin: '@' + u + '\\s*:',
+                        relevance: 15
+                    },
+                    { begin: '@' + u }
+                ],
+                starts: {
+                    end: '[;}]',
+                    returnEnd: !0,
+                    contains: p
+                }
+            },
+            S,
+            m,
+            T,
+            I,
+            l.FUNCTION_DISPATCH
+        ),
         {
             name: 'Less',
             case_insensitive: !0,
             illegal: '[=>\'/<($"]',
-            contains: _
+            contains: d
         }
     );
-}
-e.exports = l;
+};

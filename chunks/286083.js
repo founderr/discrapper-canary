@@ -1,59 +1,57 @@
 n.d(t, {
     $: function () {
-        return c;
+        return l;
     },
     a: function () {
-        return f;
+        return d;
     }
-});
-var r = n(653041);
-var i = n(47120);
-var a = n(652874),
-    o = n(868888),
-    s = n(731965),
-    l = n(433517),
-    u = n(229893);
-let c = 10,
-    d = 3;
-function _(e, t) {
+}),
+    n(653041),
+    n(47120);
+var r = n(652874),
+    i = n(868888),
+    a = n(731965),
+    s = n(433517),
+    o = n(229893);
+let l = 10;
+function u(e, t) {
     if (0 === t || e.length <= t) return [e];
     let n = [];
     for (let r = 0; r < e.length; r += t) n.push(e.slice(r, r + t));
     return n;
 }
-function E(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c * d,
+function c(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 3 * l,
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2,
-        i = t * n,
-        a = Math.min((t + r) * n, e.length);
-    return e.slice(i, a).filter((e) => u.Z.shouldFetchGuild(e));
+        i = Math.min((t + r) * n, e.length);
+    return e.slice(t * n, i).filter((e) => o.Z.shouldFetchGuild(e));
 }
-let f = (0, a.Z)(
-    (0, o.tJ)(
+let d = (0, r.Z)(
+    (0, i.tJ)(
         (e) => ({
             currentPage: 1,
-            pageSize: c * d,
-            currentColumnCount: d,
+            pageSize: 3 * l,
+            currentColumnCount: 3,
             totalItems: 0,
             chunkedPages: [],
             fetchableGuildIds: [],
             _rawItems: [],
             _removedItems: [],
             updatePage: (t) => {
-                (0, s.j)(() => {
+                (0, a.j)(() => {
                     e((e) => {
                         let { _rawItems: n, pageSize: r } = e;
                         return {
                             currentPage: t,
-                            fetchableGuildIds: E(n, t - 1, r)
+                            fetchableGuildIds: c(n, t - 1, r)
                         };
                     });
                 });
             },
             updatePaginationSettings: function (t) {
-                let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c,
+                let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l,
                     { pageMemoryEnabled: r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                (0, s.j)(() => {
+                (0, a.j)(() => {
                     let i = t * n;
                     e((e) => {
                         let { currentPage: n, _rawItems: a } = e;
@@ -61,29 +59,29 @@ let f = (0, a.Z)(
                             currentColumnCount: t,
                             pageSize: i,
                             currentPage: r ? n : 1,
-                            chunkedPages: _(a, i),
-                            fetchableGuildIds: E(a, n - 1, i)
+                            chunkedPages: u(a, i),
+                            fetchableGuildIds: c(a, n - 1, i)
                         };
                     });
                 });
             },
             updatePaginationResults: (t) => {
-                (0, s.j)(() => {
+                (0, a.j)(() => {
                     e((e) => {
                         let { _removedItems: n, pageSize: r, currentPage: i } = e,
                             a = t.filter((e) => !n.includes(e));
                         return {
                             _rawItems: a,
-                            chunkedPages: _(a, r),
+                            chunkedPages: u(a, r),
                             totalItems: a.length,
-                            fetchableGuildIds: E(a, i - 1, r)
+                            fetchableGuildIds: c(a, i - 1, r)
                         };
                     });
                 });
             },
             resetPagination: function () {
                 let { pageMemoryEnabled: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                (0, s.j)(() => {
+                (0, a.j)(() => {
                     e((e) => {
                         let { currentPage: n } = e;
                         return {
@@ -96,17 +94,17 @@ let f = (0, a.Z)(
                 });
             },
             removeGuilds: (t) => {
-                (0, s.j)(() => {
+                (0, a.j)(() => {
                     e((e) => {
                         let { _rawItems: n, _removedItems: r, pageSize: i, currentPage: a } = e,
-                            o = n.filter((e) => !t.includes(e)),
-                            s = t.filter((e) => !r.includes(e));
+                            s = n.filter((e) => !t.includes(e)),
+                            o = t.filter((e) => !r.includes(e));
                         return {
-                            _rawItems: o,
-                            _removedItems: [...r, ...s],
-                            chunkedPages: _(o, i),
-                            totalItems: o.length,
-                            fetchableGuildIds: E(o, a - 1, i)
+                            _rawItems: s,
+                            _removedItems: [...r, ...o],
+                            chunkedPages: u(s, i),
+                            totalItems: s.length,
+                            fetchableGuildIds: c(s, a - 1, i)
                         };
                     });
                 });
@@ -117,10 +115,10 @@ let f = (0, a.Z)(
             getStorage: () => ({
                 getItem: (e) => {
                     var t;
-                    return null !== (t = l.K.get(e)) && void 0 !== t ? t : null;
+                    return null !== (t = s.K.get(e)) && void 0 !== t ? t : null;
                 },
-                setItem: (e, t) => l.K.set(e, t),
-                removeItem: (e) => l.K.remove(e)
+                setItem: (e, t) => s.K.set(e, t),
+                removeItem: (e) => s.K.remove(e)
             }),
             partialize: (e) => ({ currentPage: e.currentPage })
         }

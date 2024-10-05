@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     Lu: function () {
-        return s;
+        return l;
     },
     Vd: function () {
         return f;
@@ -15,13 +15,13 @@ n.d(t, {
         return E;
     },
     ak: function () {
-        return l;
+        return u;
     },
     al: function () {
-        return I;
+        return m;
     },
     bi: function () {
-        return r;
+        return i;
     },
     hz: function () {
         return d;
@@ -36,31 +36,29 @@ n.d(t, {
         return c;
     },
     um: function () {
-        return m;
+        return I;
     }
 });
 var r,
-    i = n(911969),
-    a = n(689938);
+    i,
+    a = n(911969),
+    s = n(689938);
 let o = 'True',
-    s = 'False',
-    l = [
+    l = 'False',
+    u = [
         {
             name: o,
             displayName: o,
             value: 'true'
         },
         {
-            name: s,
-            displayName: s,
+            name: l,
+            displayName: l,
             value: 'false'
         }
     ];
-!(function (e) {
-    (e.BUILT_IN = '-1'), (e.FRECENCY = '-2');
-})(r || (r = {}));
-let u = 10,
-    c = u,
+((r = i || (i = {})).BUILT_IN = '-1'), (r.FRECENCY = '-2');
+let c = 10,
     d = 5,
     _ = '\0',
     E = 100,
@@ -68,25 +66,25 @@ let u = 10,
     h = 10,
     p = 500;
 Object.freeze([]), Object.freeze([]);
-let m = 200;
-function I(e) {
-    if (null != e.choices) return a.Z.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
+let I = 200;
+function m(e) {
+    if (null != e.choices) return s.Z.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
     switch (e.type) {
-        case i.jw.BOOLEAN:
-            return a.Z.Messages.COMMAND_VALIDATION_BOOLEAN_ERROR;
-        case i.jw.CHANNEL:
-            return a.Z.Messages.COMMAND_VALIDATION_CHANNEL_ERROR;
-        case i.jw.INTEGER:
-            return a.Z.Messages.COMMAND_VALIDATION_INTEGER_ERROR;
-        case i.jw.NUMBER:
-            return a.Z.Messages.COMMAND_VALIDATION_NUMBER_ERROR;
-        case i.jw.ROLE:
-            return a.Z.Messages.COMMAND_VALIDATION_ROLE_ERROR;
-        case i.jw.USER:
-            return a.Z.Messages.COMMAND_VALIDATION_USER_ERROR;
-        case i.jw.MENTIONABLE:
-            return a.Z.Messages.COMMAND_VALIDATION_MENTIONABLE_ERROR;
+        case a.jw.BOOLEAN:
+            return s.Z.Messages.COMMAND_VALIDATION_BOOLEAN_ERROR;
+        case a.jw.CHANNEL:
+            return s.Z.Messages.COMMAND_VALIDATION_CHANNEL_ERROR;
+        case a.jw.INTEGER:
+            return s.Z.Messages.COMMAND_VALIDATION_INTEGER_ERROR;
+        case a.jw.NUMBER:
+            return s.Z.Messages.COMMAND_VALIDATION_NUMBER_ERROR;
+        case a.jw.ROLE:
+            return s.Z.Messages.COMMAND_VALIDATION_ROLE_ERROR;
+        case a.jw.USER:
+            return s.Z.Messages.COMMAND_VALIDATION_USER_ERROR;
+        case a.jw.MENTIONABLE:
+            return s.Z.Messages.COMMAND_VALIDATION_MENTIONABLE_ERROR;
         default:
-            return a.Z.Messages.COMMAND_VALIDATION_GENERAL_ERROR;
+            return s.Z.Messages.COMMAND_VALIDATION_GENERAL_ERROR;
     }
 }

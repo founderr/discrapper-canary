@@ -1,88 +1,91 @@
 n.d(t, {
     FN: function () {
-        return i;
+        return o;
     },
     M$: function () {
-        return E;
-    },
-    NE: function () {
-        return c;
-    },
-    NO: function () {
-        return d;
-    },
-    Oq: function () {
-        return O;
-    },
-    RF: function () {
-        return T;
-    },
-    Un: function () {
-        return a;
-    },
-    X: function () {
-        return m;
-    },
-    YW: function () {
-        return _;
-    },
-    ae: function () {
-        return g;
-    },
-    b3: function () {
-        return h;
-    },
-    cf: function () {
-        return N;
-    },
-    dr: function () {
-        return A;
-    },
-    fY: function () {
-        return I;
-    },
-    iU: function () {
-        return u;
-    },
-    l7: function () {
-        return r;
-    },
-    md: function () {
         return p;
     },
-    qm: function () {
+    NE: function () {
+        return E;
+    },
+    NO: function () {
         return f;
     },
-    yZ: function () {
+    Oq: function () {
+        return L;
+    },
+    RF: function () {
+        return A;
+    },
+    Un: function () {
+        return l;
+    },
+    X: function () {
         return S;
+    },
+    YW: function () {
+        return h;
+    },
+    ae: function () {
+        return N;
+    },
+    b3: function () {
+        return m;
+    },
+    cf: function () {
+        return C;
+    },
+    dr: function () {
+        return R;
+    },
+    fY: function () {
+        return g;
+    },
+    iU: function () {
+        return _;
+    },
+    l7: function () {
+        return s;
+    },
+    md: function () {
+        return T;
+    },
+    qm: function () {
+        return I;
+    },
+    yZ: function () {
+        return O;
     }
 });
 var r,
     i,
     a,
-    o = n(348327),
-    s = n.n(o),
-    l = n(689938);
-let u = 100,
-    c = 50,
-    d = 100,
-    _ = 15,
-    E = 12,
-    f = 50,
-    h = 4,
-    p = 7,
-    m = 5,
-    I = 13;
-function T(e) {
+    s,
+    o,
+    l,
+    u = n(348327),
+    c = n.n(u),
+    d = n(689938);
+let _ = 100,
+    E = 50,
+    f = 100,
+    h = 15,
+    p = 12,
+    I = 50,
+    m = 4,
+    T = 7,
+    S = 5,
+    g = 13;
+function A(e) {
     if (e.options.length > 0) return !1;
-    let { id: t, ...n } = g(),
+    let { id: t, ...n } = N(),
         { id: r, ...i } = e;
-    return s()(n, i);
+    return c()(n, i);
 }
-function g() {
+function N() {
     return {
         id: String(Date.now()),
-        title: l.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE,
+        title: d.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE,
         options: [],
         singleSelect: !1,
         required: !1,
@@ -90,7 +93,7 @@ function g() {
         type: 0
     };
 }
-function S(e) {
+function O(e) {
     return {
         id: String(Date.now()),
         title: '',
@@ -101,7 +104,7 @@ function S(e) {
         type: 0
     };
 }
-function A(e) {
+function R(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -148,7 +151,7 @@ function v(e) {
         type: e.type
     };
 }
-function N(e) {
+function C(e) {
     var t, n, r;
     return {
         prompts: e.prompts.map(v),
@@ -161,15 +164,7 @@ function N(e) {
         belowRequirements: e.below_requirements
     };
 }
-function O(e) {
+function L(e) {
     return null == e || (null == e.id && null == e.name);
 }
-!(function (e) {
-    (e[(e.CUSTOMIZE = 0)] = 'CUSTOMIZE'), (e[(e.BROWSE = 1)] = 'BROWSE');
-})(r || (r = {})),
-    !(function (e) {
-        (e[(e.MULTIPLE_CHOICE = 0)] = 'MULTIPLE_CHOICE'), (e[(e.DROPDOWN = 1)] = 'DROPDOWN');
-    })(i || (i = {})),
-    !(function (e) {
-        (e[(e.ONBOARDING_DEFAULT = 0)] = 'ONBOARDING_DEFAULT'), (e[(e.ONBOARDING_ADVANCED = 1)] = 'ONBOARDING_ADVANCED');
-    })(a || (a = {}));
+((r = s || (s = {}))[(r.CUSTOMIZE = 0)] = 'CUSTOMIZE'), (r[(r.BROWSE = 1)] = 'BROWSE'), ((i = o || (o = {}))[(i.MULTIPLE_CHOICE = 0)] = 'MULTIPLE_CHOICE'), (i[(i.DROPDOWN = 1)] = 'DROPDOWN'), ((a = l || (l = {}))[(a.ONBOARDING_DEFAULT = 0)] = 'ONBOARDING_DEFAULT'), (a[(a.ONBOARDING_ADVANCED = 1)] = 'ONBOARDING_ADVANCED');

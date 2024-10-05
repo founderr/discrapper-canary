@@ -15,38 +15,37 @@ function a(e, t, n) {
         }
     );
 }
-function o(e) {
+function s(e) {
     return [r.we, r.F2, r.I, r.t$].some(function (t) {
         return e[t] >= 0;
     });
-}
-function s(e) {
-    var t = e.state,
-        n = e.name,
-        r = t.rects.reference,
-        s = t.rects.popper,
-        l = t.modifiersData.preventOverflow,
-        u = (0, i.Z)(t, { elementContext: 'reference' }),
-        c = (0, i.Z)(t, { altBoundary: !0 }),
-        d = a(u, r),
-        _ = a(c, s, l),
-        E = o(d),
-        f = o(_);
-    (t.modifiersData[n] = {
-        referenceClippingOffsets: d,
-        popperEscapeOffsets: _,
-        isReferenceHidden: E,
-        hasPopperEscaped: f
-    }),
-        (t.attributes.popper = Object.assign({}, t.attributes.popper, {
-            'data-popper-reference-hidden': E,
-            'data-popper-escaped': f
-        }));
 }
 t.Z = {
     name: 'hide',
     enabled: !0,
     phase: 'main',
     requiresIfExists: ['preventOverflow'],
-    fn: s
+    fn: function (e) {
+        var t = e.state,
+            n = e.name,
+            r = t.rects.reference,
+            o = t.rects.popper,
+            l = t.modifiersData.preventOverflow,
+            u = (0, i.Z)(t, { elementContext: 'reference' }),
+            c = (0, i.Z)(t, { altBoundary: !0 }),
+            d = a(u, r),
+            _ = a(c, o, l),
+            E = s(d),
+            f = s(_);
+        (t.modifiersData[n] = {
+            referenceClippingOffsets: d,
+            popperEscapeOffsets: _,
+            isReferenceHidden: E,
+            hasPopperEscaped: f
+        }),
+            (t.attributes.popper = Object.assign({}, t.attributes.popper, {
+                'data-popper-reference-hidden': E,
+                'data-popper-escaped': f
+            }));
+    }
 };

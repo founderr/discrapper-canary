@@ -1,20 +1,19 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.Raised = void 0);
-var r = s(n(470079)),
-    i = s(n(476400)),
-    a = s(n(844303)),
-    o = s(n(429867));
-function s(e) {
+var r = o(n(470079)),
+    i = o(n(476400)),
+    a = o(n(844303)),
+    s = o(n(429867));
+function o(e) {
     return e && e.__esModule ? e : { default: e };
 }
 var l = (t.Raised = function (e) {
     var t = e.zDepth,
         n = e.radius,
         i = e.background,
-        s = e.children,
+        o = e.children,
         l = e.styles,
-        u = void 0 === l ? {} : l,
-        c = (0, a.default)(
-            (0, o.default)(
+        u = (0, a.default)(
+            (0, s.default)(
                 {
                     default: {
                         wrap: {
@@ -38,11 +37,11 @@ var l = (t.Raised = function (e) {
                     square: { bg: { borderRadius: '0' } },
                     circle: { bg: { borderRadius: '50%' } }
                 },
-                u
+                void 0 === l ? {} : l
             ),
             { 'zDepth-1': 1 === t }
         );
-    return r.default.createElement('div', { style: c.wrap }, r.default.createElement('div', { style: c.bg }), r.default.createElement('div', { style: c.content }, s));
+    return r.default.createElement('div', { style: u.wrap }, r.default.createElement('div', { style: u.bg }), r.default.createElement('div', { style: u.content }, o));
 });
 (l.propTypes = {
     background: i.default.string,

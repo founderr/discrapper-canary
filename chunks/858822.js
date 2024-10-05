@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return m;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(913527),
-    a = n.n(i),
-    o = n(442837),
-    s = n(481060),
-    l = n(87051),
-    u = n(776568),
-    c = n(777861),
+var s = n(913527),
+    a = n.n(s),
+    l = n(442837),
+    r = n(481060),
+    o = n(87051),
+    c = n(776568),
+    u = n(777861),
     d = n(9156),
-    _ = n(621600),
-    E = n(689938);
-function f(e, t) {
+    h = n(621600),
+    p = n(689938);
+function m(e, t) {
     let n = null == e ? void 0 : e.id,
-        { muted: i, muteConfig: f } = (0, o.cj)(
+        { muted: s, muteConfig: m } = (0, l.cj)(
             [d.ZP],
             () => ({
                 muted: null != n ? d.ZP.isMuted(n) : void 0,
@@ -25,46 +25,47 @@ function f(e, t) {
             }),
             [n]
         ),
-        h = (0, c.U)(f);
-    if (null == n) return null;
-    function p(e) {
-        if (null == n) return;
-        let r = e > 0 ? a()().add(e, 'second').toISOString() : null;
-        l.Z.updateGuildNotificationSettings(
-            n,
-            {
-                muted: !0,
-                mute_config: {
-                    selected_time_window: e,
-                    end_time: r
-                }
-            },
-            _.ZB.Muted,
-            t
-        );
-    }
-    return i
-        ? (0, r.jsx)(s.MenuItem, {
-              id: 'unmute-guild',
-              label: E.Z.Messages.UNMUTE_SERVER,
-              subtext: h,
-              action: () => l.Z.updateGuildNotificationSettings(n, { muted: !1 }, _.ZB.Unmuted)
-          })
-        : (0, r.jsx)(s.MenuItem, {
-              id: 'mute-guild',
-              label: E.Z.Messages.MUTE_SERVER,
-              action: () => l.Z.updateGuildNotificationSettings(n, { muted: !0 }, _.ZB.Muted),
-              children: (0, u.k)().map((e) => {
-                  let { value: t, label: n } = e;
-                  return (0, r.jsx)(
-                      s.MenuItem,
-                      {
-                          id: ''.concat(t),
-                          label: n,
-                          action: () => p(t)
-                      },
-                      t
-                  );
-              })
-          });
+        _ = (0, u.U)(m);
+    return null == n
+        ? null
+        : s
+          ? (0, i.jsx)(r.MenuItem, {
+                id: 'unmute-guild',
+                label: p.Z.Messages.UNMUTE_SERVER,
+                subtext: _,
+                action: () => o.Z.updateGuildNotificationSettings(n, { muted: !1 }, h.ZB.Unmuted)
+            })
+          : (0, i.jsx)(r.MenuItem, {
+                id: 'mute-guild',
+                label: p.Z.Messages.MUTE_SERVER,
+                action: () => o.Z.updateGuildNotificationSettings(n, { muted: !0 }, h.ZB.Muted),
+                children: (0, c.k)().map((e) => {
+                    let { value: s, label: l } = e;
+                    return (0, i.jsx)(
+                        r.MenuItem,
+                        {
+                            id: ''.concat(s),
+                            label: l,
+                            action: () =>
+                                (function (e) {
+                                    if (null == n) return;
+                                    let i = e > 0 ? a()().add(e, 'second').toISOString() : null;
+                                    o.Z.updateGuildNotificationSettings(
+                                        n,
+                                        {
+                                            muted: !0,
+                                            mute_config: {
+                                                selected_time_window: e,
+                                                end_time: i
+                                            }
+                                        },
+                                        h.ZB.Muted,
+                                        t
+                                    );
+                                })(s)
+                        },
+                        s
+                    );
+                })
+            });
 }

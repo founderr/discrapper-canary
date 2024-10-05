@@ -6,35 +6,23 @@ var t = '[0-9](_*[0-9])*',
         variants: [{ begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` }, { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` }, { begin: `(${n})[fFdD]?\\b` }, { begin: `\\b(${t})[fFdD]\\b` }, { begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b` }, { begin: '\\b(0|[1-9](_*[0-9])*)[lL]?\\b' }, { begin: `\\b0[xX](${r})[lL]?\\b` }, { begin: '\\b0(_*[0-7])*[lL]?\\b' }, { begin: '\\b0[bB][01](_*[01])*[lL]?\\b' }],
         relevance: 0
     };
-function a(e) {
+e.exports = function (e) {
     let t = {
             keyword: 'abstract as val var vararg get set class object open private protected public noinline crossinline dynamic final enum if else do while for when throw try catch finally import package is in fun override companion reified inline lateinit init interface annotation data sealed internal infix operator out by constructor super tailrec where const inner suspend typealias external expect actual',
             built_in: 'Byte Short Char Int Long Boolean Float Double Void Unit Nothing',
             literal: 'true false null'
         },
         n = {
-            className: 'keyword',
-            begin: /\b(break|continue|return|this)\b/,
-            starts: {
-                contains: [
-                    {
-                        className: 'symbol',
-                        begin: /@\w+/
-                    }
-                ]
-            }
-        },
-        r = {
             className: 'symbol',
             begin: e.UNDERSCORE_IDENT_RE + '@'
         },
-        a = {
+        r = {
             className: 'subst',
             begin: /\$\{/,
             end: /\}/,
             contains: [e.C_NUMBER_MODE]
         },
-        o = {
+        a = {
             className: 'variable',
             begin: '\\$' + e.UNDERSCORE_IDENT_RE
         },
@@ -44,7 +32,7 @@ function a(e) {
                 {
                     begin: '"""',
                     end: '"""(?=[^"])',
-                    contains: [o, a]
+                    contains: [a, r]
                 },
                 {
                     begin: "'",
@@ -56,16 +44,16 @@ function a(e) {
                     begin: '"',
                     end: '"',
                     illegal: /\n/,
-                    contains: [e.BACKSLASH_ESCAPE, o, a]
+                    contains: [e.BACKSLASH_ESCAPE, a, r]
                 }
             ]
         };
-    a.contains.push(s);
-    let l = {
+    r.contains.push(s);
+    let o = {
             className: 'meta',
             begin: '@(?:file|property|field|get|set|receiver|param|setparam|delegate)\\s*:(?:\\s*' + e.UNDERSCORE_IDENT_RE + ')?'
         },
-        u = {
+        l = {
             className: 'meta',
             begin: '@' + e.UNDERSCORE_IDENT_RE,
             contains: [
@@ -76,9 +64,8 @@ function a(e) {
                 }
             ]
         },
-        c = i,
-        d = e.COMMENT('/\\*', '\\*/', { contains: [e.C_BLOCK_COMMENT_MODE] }),
-        _ = {
+        u = e.COMMENT('/\\*', '\\*/', { contains: [e.C_BLOCK_COMMENT_MODE] }),
+        c = {
             variants: [
                 {
                     className: 'type',
@@ -90,11 +77,10 @@ function a(e) {
                     contains: []
                 }
             ]
-        },
-        E = _;
+        };
     return (
-        (E.variants[1].contains = [_]),
-        (_.variants[1].contains = [E]),
+        (c.variants[1].contains = [c]),
+        (c.variants[1].contains = [c]),
         {
             name: 'Kotlin',
             aliases: ['kt', 'kts'],
@@ -110,11 +96,22 @@ function a(e) {
                     ]
                 }),
                 e.C_LINE_COMMENT_MODE,
-                d,
-                n,
-                r,
-                l,
                 u,
+                {
+                    className: 'keyword',
+                    begin: /\b(break|continue|return|this)\b/,
+                    starts: {
+                        contains: [
+                            {
+                                className: 'symbol',
+                                begin: /@\w+/
+                            }
+                        ]
+                    }
+                },
+                n,
+                o,
+                l,
                 {
                     className: 'function',
                     beginKeywords: 'fun',
@@ -149,18 +146,18 @@ function a(e) {
                                     begin: /:/,
                                     end: /[=,\/]/,
                                     endsWithParent: !0,
-                                    contains: [_, e.C_LINE_COMMENT_MODE, d],
+                                    contains: [c, e.C_LINE_COMMENT_MODE, u],
                                     relevance: 0
                                 },
                                 e.C_LINE_COMMENT_MODE,
-                                d,
-                                l,
                                 u,
+                                o,
+                                l,
                                 s,
                                 e.C_NUMBER_MODE
                             ]
                         },
-                        d
+                        u
                     ]
                 },
                 {
@@ -188,8 +185,8 @@ function a(e) {
                             excludeBegin: !0,
                             returnEnd: !0
                         },
-                        l,
-                        u
+                        o,
+                        l
                     ]
                 },
                 s,
@@ -199,9 +196,8 @@ function a(e) {
                     end: '$',
                     illegal: '\n'
                 },
-                c
+                i
             ]
         }
     );
-}
-e.exports = a;
+};

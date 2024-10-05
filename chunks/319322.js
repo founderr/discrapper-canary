@@ -1,10 +1,9 @@
-var r = n(47120);
-var i = n(309749);
-var a = n(328865),
-    o = n(2831);
-var s = n(264344),
-    l = n.n(s);
-function u(e, t, n) {
+n(47120), n(309749);
+var r = n(328865);
+n(2831);
+var i = n(264344),
+    a = n.n(i);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,8 +16,8 @@ function u(e, t, n) {
         e
     );
 }
-(window.platform = l()),
-    null == window.ResizeObserver && (window.ResizeObserver = a.d),
+(window.platform = a()),
+    null == window.ResizeObserver && (window.ResizeObserver = r.d),
     'object' != typeof globalThis && (window.globalThis = window),
     (Map.prototype.toJSON = function () {
         return Array.from(this);
@@ -43,7 +42,7 @@ function u(e, t, n) {
             };
         }
         constructor(e = 0, t = 0, n = 0, r = 1) {
-            u(this, 'x', void 0), u(this, 'y', void 0), u(this, 'z', void 0), u(this, 'w', void 0), (this.x = e), (this.y = t), (this.z = n), (this.w = r);
+            s(this, 'x', void 0), s(this, 'y', void 0), s(this, 'z', void 0), s(this, 'w', void 0), (this.x = e), (this.y = t), (this.z = n), (this.w = r);
         }
     }
     null == window.DOMPoint && (window.DOMPoint = e);
@@ -78,7 +77,7 @@ function u(e, t, n) {
             };
         }
         constructor(e = 0, t = 0, n = 0, r = 0) {
-            u(this, 'x', void 0), u(this, 'y', void 0), u(this, 'width', void 0), u(this, 'height', void 0), (this.x = e), (this.y = t), (this.width = n), (this.height = r);
+            s(this, 'x', void 0), s(this, 'y', void 0), s(this, 'width', void 0), s(this, 'height', void 0), (this.x = e), (this.y = t), (this.width = n), (this.height = r);
         }
     }
     null == window.DOMRect && (window.DOMRect = e);
