@@ -121,13 +121,7 @@ function H(e) {
         };
         null != a && (e.context_guild_id = a.guildId);
         let _ = c ? p.rMx.EXPERIMENT_USER_TRIGGERED_FALLBACK : p.rMx.EXPERIMENT_USER_TRIGGERED;
-        if (
-            (E.default.track(_, e, {
-                flush: !0,
-                fingerprint: s
-            }),
-            u)
-        ) {
+        if (u) {
             let t = {
                 ...e,
                 assignment_fingerprint: n.fingerprint,
@@ -139,7 +133,11 @@ function H(e) {
                 flush: !0,
                 fingerprint: s
             });
-        }
+        } else
+            E.default.track(_, e, {
+                flush: !0,
+                fingerprint: s
+            });
     } else if (n.type === h.xY.GUILD) {
         let e = c ? p.rMx.EXPERIMENT_GUILD_TRIGGERED_FALLBACK : p.rMx.EXPERIMENT_GUILD_TRIGGERED,
             a = {
@@ -156,13 +154,7 @@ function H(e) {
                 assignment_session_id: n.sessionId,
                 assignment_loaded_from_cache: n.loadedFromCache
             };
-        if (
-            (E.default.track(e, a, {
-                flush: !0,
-                fingerprint: s
-            }),
-            u)
-        ) {
+        if (u) {
             let e = {
                 ...a,
                 assignment_fingerprint: n.fingerprint,
@@ -174,13 +166,18 @@ function H(e) {
                 flush: !0,
                 fingerprint: s
             });
-        }
+        } else
+            E.default.track(e, a, {
+                flush: !0,
+                fingerprint: s
+            });
     }
-    (O[k(t, n, r, c)] = {
-        time: Date.now(),
-        hash: B(n)
-    }),
-        ee(O);
+    !u &&
+        ((O[k(t, n, r, c)] = {
+            time: Date.now(),
+            hash: B(n)
+        }),
+        ee(O));
 }
 function Z(e) {
     let [t, n] = e;
