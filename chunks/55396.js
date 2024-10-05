@@ -1,35 +1,36 @@
-s.r(a),
-    s.d(a, {
+n.r(a),
+    n.d(a, {
         default: function () {
             return T;
         }
     }),
-    s(47120),
-    s(653041);
-var n,
+    n(47120),
+    n(653041);
+var s,
     t,
-    l = s(735250),
-    i = s(470079),
-    d = s(658722),
-    o = s.n(d),
-    r = s(392711),
-    c = s(442837),
-    E = s(481060),
-    u = s(224706),
-    m = s(812206),
-    h = s(835473),
-    _ = s(206295),
-    g = s(669764),
-    x = s(925329),
-    M = s(77498),
-    A = s(49012),
-    I = s(810568),
-    p = s(701488),
-    C = s(689938),
-    F = s(666046);
+    l = n(735250),
+    i = n(470079),
+    d = n(658722),
+    o = n.n(d),
+    r = n(392711),
+    c = n(442837),
+    E = n(481060),
+    u = n(224706),
+    m = n(812206),
+    h = n(835473),
+    _ = n(206295),
+    g = n(669764),
+    x = n(925329),
+    M = n(77498),
+    A = n(49012),
+    I = n(810568),
+    p = n(701488),
+    C = n(689938),
+    F = n(666046);
+((t = s || (s = {}))[(t.FEEDBACK_TYPE = 0)] = 'FEEDBACK_TYPE'), (t[(t.WRONG_GAME = 1)] = 'WRONG_GAME'), (t[(t.OUTDATED_INFO = 2)] = 'OUTDATED_INFO'), (t[(t.OTHER = 3)] = 'OTHER'), (t[(t.CONFIRMATION = 4)] = 'CONFIRMATION');
 function O(e) {
     let { onChoice: a } = e,
-        s = [
+        n = [
             {
                 name: C.Z.Messages.GAME_PROFILE_FEEDBACK_CHOICE_WRONG_GAME,
                 value: 1
@@ -59,10 +60,10 @@ function O(e) {
                 }),
                 (0, l.jsx)(E.RadioGroup, {
                     className: F.radioGroup,
-                    options: s,
+                    options: n,
                     onChange: (e) => {
-                        let { value: s } = e;
-                        return a(s);
+                        let { value: n } = e;
+                        return a(n);
                     }
                 })
             ]
@@ -70,7 +71,8 @@ function O(e) {
     });
 }
 function j(e) {
-    let { applicationId: a, onSubmitted: s, viewId: n } = e;
+    let { applicationId: a, onSubmitted: n, viewId: s } = e,
+        t = (0, h.q)(a);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(E.ModalContent, {
@@ -93,16 +95,17 @@ function j(e) {
                 children: (0, l.jsx)(E.Button, {
                     fullWidth: !0,
                     onClick: () => {
+                        var e;
                         (0, A.q)({
-                            href: 'https://igdb.com',
+                            href: (null == (e = t) ? void 0 : e.name) != null ? ''.concat('https://www.igdb.com/search?utf8=\u2713&q=').concat(encodeURIComponent(e.name)) : 'https://www.igdb.com',
                             trusted: !0
                         }),
                             (0, I.MH)({
                                 applicationId: a,
                                 submitted: !0,
-                                viewId: n
+                                viewId: s
                             }),
-                            s();
+                            n();
                     },
                     children: C.Z.Messages.GAME_PROFILE_FEEDBACK_VISIT_IGDB
                 })
@@ -110,15 +113,14 @@ function j(e) {
         ]
     });
 }
-((t = n || (n = {}))[(t.FEEDBACK_TYPE = 0)] = 'FEEDBACK_TYPE'), (t[(t.WRONG_GAME = 1)] = 'WRONG_GAME'), (t[(t.OUTDATED_INFO = 2)] = 'OUTDATED_INFO'), (t[(t.OTHER = 3)] = 'OTHER'), (t[(t.CONFIRMATION = 4)] = 'CONFIRMATION');
-let R = (e) => {
-    let { name: a, applicationRecord: s } = e;
+let v = (e) => {
+    let { name: a, applicationRecord: n } = e;
     return (0, l.jsxs)('div', {
         className: F.gameSuggestion,
         children: [
-            null != s
+            null != n
                 ? (0, l.jsx)(x.Z, {
-                      game: s,
+                      game: n,
                       className: F.smolGameIcon
                   })
                 : (0, l.jsx)(E.Spacer, {
@@ -129,53 +131,53 @@ let R = (e) => {
         ]
     });
 };
-function v(e) {
-    var a, s, n;
+function R(e) {
+    var a, n, s;
     let { applicationId: t, onSubmitted: d, viewId: x } = e,
         [A, O] = i.useState(''),
         j = (0, c.e7)([m.Z], () => m.Z.getApplication(t)),
-        [v, N] = i.useState(null != t ? t : ''),
+        [R, N] = i.useState(null != t ? t : ''),
         G = (0, c.e7)([g.Z], () => g.Z.getGame(t)),
-        T = null !== (s = null !== (a = null == G ? void 0 : G.name) && void 0 !== a ? a : null == j ? void 0 : j.name) && void 0 !== s ? s : '',
+        T = null !== (n = null !== (a = null == G ? void 0 : G.name) && void 0 !== a ? a : null == j ? void 0 : j.name) && void 0 !== n ? n : '',
         D = null == j ? void 0 : j.getIconURL(p.Si.LARGE),
         { primaryColor: b, secondaryColor: B } = (0, _.Z)(D);
     i.useEffect(() => {
         u.Z.getDetectableGames();
     }, []);
-    let Z = (0, c.Wu)(
+    let f = (0, c.Wu)(
             [M.Z],
             () => {
                 let e = ((null == A ? void 0 : A.length) > 0 ? A : T).toLowerCase(),
                     a = M.Z.getDetectableGame(t),
-                    s = null != v ? M.Z.getDetectableGame(v) : void 0;
+                    n = null != R ? M.Z.getDetectableGame(R) : void 0;
                 return (0, r.chain)(M.Z.games)
                     .filter((a) => o()(e, a.name.toLowerCase()))
                     .take(3)
-                    .concat(null != a ? [a] : [], null != s ? [s] : [])
+                    .concat(null != a ? [a] : [], null != n ? [n] : [])
                     .compact()
                     .uniqBy('id')
                     .value();
             },
-            [t, v, T, A]
+            [t, R, T, A]
         ),
-        f = (0, h.Z)(Z.map((e) => e.id)),
-        P = (0, r.chain)(f).compact().keyBy('id').value(),
-        H = A.length > 0 && !Z.map((e) => e.name).includes(A),
-        L = v === t || (null === v && 0 === A.length),
-        S = Z.map((e) => {
-            let { name: a, id: s } = e;
+        Z = (0, h.Z)(f.map((e) => e.id)),
+        P = (0, r.chain)(Z).compact().keyBy('id').value(),
+        H = A.length > 0 && !f.map((e) => e.name).includes(A),
+        L = R === t || (null === R && 0 === A.length),
+        S = f.map((e) => {
+            let { name: a, id: n } = e;
             return {
-                name: (0, l.jsx)(R, {
+                name: (0, l.jsx)(v, {
                     name: a,
-                    applicationRecord: P[s]
+                    applicationRecord: P[n]
                 }),
-                value: s
+                value: n
             };
         });
     return (
         H &&
             S.push({
-                name: (0, l.jsx)(R, { name: A }),
+                name: (0, l.jsx)(v, { name: A }),
                 value: ''
             }),
         (0, l.jsxs)(l.Fragment, {
@@ -206,7 +208,7 @@ function v(e) {
                                 (0, l.jsx)(E.Heading, {
                                     variant: 'heading-lg/semibold',
                                     className: F.gameTitle,
-                                    children: null !== (n = null == G ? void 0 : G.name) && void 0 !== n ? n : null == j ? void 0 : j.name
+                                    children: null !== (s = null == G ? void 0 : G.name) && void 0 !== s ? s : null == j ? void 0 : j.name
                                 })
                             ]
                         }),
@@ -217,17 +219,17 @@ function v(e) {
                                     className: F.searchBar,
                                     query: A,
                                     onChange: (e) => {
-                                        if (0 === e.length) null === v && N(t);
+                                        if (0 === e.length) null === R && N(t);
                                         else {
                                             var a;
-                                            let s = Z.find((a) => a.name === e);
-                                            N(null !== (a = null == s ? void 0 : s.id) && void 0 !== a ? a : '');
+                                            let n = f.find((a) => a.name === e);
+                                            N(null !== (a = null == n ? void 0 : n.id) && void 0 !== a ? a : '');
                                         }
                                         O(e);
                                     },
                                     size: E.SearchBar.Sizes.MEDIUM,
                                     onClear: () => {
-                                        null === v && N(t), O('');
+                                        null === R && N(t), O('');
                                     },
                                     placeholder: C.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_INCORRECT
                                 }),
@@ -235,7 +237,7 @@ function v(e) {
                                     size: E.RadioGroup.Sizes.NONE,
                                     radioPosition: 'right',
                                     withTransparentBackground: !0,
-                                    value: v,
+                                    value: R,
                                     options: S,
                                     onChange: (e) => {
                                         let { value: a } = e;
@@ -251,10 +253,10 @@ function v(e) {
                     children: (0, l.jsx)(E.Button, {
                         fullWidth: !0,
                         onClick: () => {
-                            let e = null != v && v.length > 0;
+                            let e = null != R && R.length > 0;
                             (0, I.MH)({
                                 applicationId: t,
-                                suggestedGameApplicationId: e ? v : void 0,
+                                suggestedGameApplicationId: e ? R : void 0,
                                 suggestedGameName: e ? void 0 : A,
                                 submitted: !0,
                                 viewId: x
@@ -270,7 +272,7 @@ function v(e) {
     );
 }
 function N(e) {
-    let { applicationId: a, onSubmitted: s, viewId: n } = e,
+    let { applicationId: a, onSubmitted: n, viewId: s } = e,
         [t, d] = i.useState('');
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -307,9 +309,9 @@ function N(e) {
                             applicationId: a,
                             submitted: !0,
                             feedback: t,
-                            viewId: n
+                            viewId: s
                         }),
-                            s();
+                            n();
                     },
                     disabled: 0 === t.length,
                     children: C.Z.Messages.SUBMIT
@@ -349,31 +351,31 @@ function G(e) {
     });
 }
 function T(e) {
-    let { applicationId: a, viewId: s, transitionState: n, onClose: t } = e,
+    let { applicationId: a, viewId: n, transitionState: s, onClose: t } = e,
         [d, o] = i.useState(0);
     return (0, l.jsx)(E.ModalRoot, {
         size: E.ModalSize.SMALL,
-        transitionState: n,
+        transitionState: s,
         children: (() => {
             switch (d) {
                 case 0:
                     return (0, l.jsx)(O, { onChoice: (e) => o(e) });
                 case 1:
-                    return (0, l.jsx)(v, {
+                    return (0, l.jsx)(R, {
                         applicationId: a,
-                        viewId: s,
+                        viewId: n,
                         onSubmitted: () => o(4)
                     });
                 case 2:
                     return (0, l.jsx)(j, {
                         applicationId: a,
-                        viewId: s,
+                        viewId: n,
                         onSubmitted: () => t()
                     });
                 case 3:
                     return (0, l.jsx)(N, {
                         applicationId: a,
-                        viewId: s,
+                        viewId: n,
                         onSubmitted: () => o(4)
                     });
                 case 4:
