@@ -1,25 +1,25 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(739566),
-    a = n(834129),
-    o = n(689938),
-    s = n(922133);
-function l(e) {
-    let { message: t, usernameHook: l, compact: u, isForumPost: c } = e,
-        d = (0, i.ZP)(t),
-        _ = l(d);
-    return (0, r.jsx)(a.Z, {
-        compact: u,
-        className: s.channelNameChange,
+var a = n(739566),
+    s = n(834129),
+    l = n(689938),
+    r = n(922133);
+function o(e) {
+    let { message: t, usernameHook: o, compact: c, isForumPost: d } = e,
+        u = (0, a.ZP)(t),
+        _ = o(u);
+    return (0, i.jsx)(s.Z, {
+        compact: c,
+        className: r.channelNameChange,
         icon: n(819373),
         timestamp: t.timestamp,
-        children: (c ? o.Z.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE2 : o.Z.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE2).format({
-            username: d.nick,
+        children: (d ? l.Z.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE2 : l.Z.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE2).format({
+            username: u.nick,
             usernameHook: _,
             channelName: t.content
         })

@@ -9,8 +9,8 @@ var i,
     u = n(38618),
     d = n(268967),
     h = n(188785);
-let m = {},
-    p = {},
+let p = {},
+    m = {},
     _ = !0,
     f = {},
     E = !1;
@@ -20,8 +20,8 @@ function g() {
 function C() {
     if (((f = {}), !_))
         for (let [e, t] of Object.entries(d.Z)) {
-            let n = !1 !== m[e];
-            if (((f[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== m[n] && (f[e] = !1);
+            let n = !1 !== p[e];
+            if (((f[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== p[n] && (f[e] = !1);
         }
 }
 class I extends (i = o.ZP.Store) {
@@ -36,7 +36,7 @@ class I extends (i = o.ZP.Store) {
         return !_;
     }
     getIndicators() {
-        return p;
+        return m;
     }
     getData() {
         return d.Z;
@@ -58,28 +58,28 @@ class I extends (i = o.ZP.Store) {
     (t.Z = new I(c.Z, {
         CONNECTION_OPEN: function (e) {
             let { tutorial: t } = e;
-            (E = !0), (_ = !0), (m = {}), null != t && ((_ = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (m[e] = !1))), C();
+            (E = !0), (_ = !0), (p = {}), null != t && ((_ = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (p[e] = !1))), C();
         },
         CONNECTION_CLOSED: function () {
             E = !1;
         },
         TUTORIAL_INDICATOR_DISMISS: function (e) {
-            (m = {
-                ...m,
+            (p = {
+                ...p,
                 [e.tutorialId]: !1
             }),
-                (p = { ...p }),
-                delete p[e.tutorialId],
+                (m = { ...m }),
+                delete m[e.tutorialId],
                 C();
         },
         TUTORIAL_INDICATOR_SHOW: function (e) {
-            p = {
-                ...p,
+            m = {
+                ...m,
                 [e.tutorialId]: e.renderData
             };
         },
         TUTORIAL_INDICATOR_HIDE: function (e) {
-            (p = { ...p }), delete p[e.tutorialId];
+            (m = { ...m }), delete m[e.tutorialId];
         },
         TUTORIAL_INDICATOR_SUPPRESS_ALL: function () {
             _ = !0;

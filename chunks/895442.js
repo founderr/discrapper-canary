@@ -1,31 +1,31 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return o;
     }
 });
-var l = t(592125),
-    s = t(430824),
-    a = t(594174),
-    r = t(981631);
-function i(e) {
+var l = n(592125),
+    a = n(430824),
+    s = n(594174),
+    i = n(981631);
+function r(e) {
     if (!e.isPrivate()) {
-        let n = s.Z.getGuild(e.guild_id);
-        return null != n && n.hasFeature(r.oNc.INTERNAL_EMPLOYEE_ONLY);
+        let t = a.Z.getGuild(e.guild_id);
+        return null != t && t.hasFeature(i.oNc.INTERNAL_EMPLOYEE_ONLY);
     }
     return e.recipients.every((e) => {
-        let n = a.default.getUser(e);
-        return null != n && n.isStaff();
+        let t = s.default.getUser(e);
+        return null != t && t.isStaff();
     });
 }
-function o(e, n) {
-    var t;
-    if (!(null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff())) return !1;
-    let s = l.Z.getChannel(e.channel_id);
+function o(e, t) {
+    var n;
+    if (!(null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff())) return !1;
+    let a = l.Z.getChannel(e.channel_id);
     return (
-        !!(null != s && i(s)) &&
-        n.some((e) => {
-            let n = l.Z.getChannel(e);
-            return !(null == n || n.isPrivate()) && !i(n);
+        !!(null != a && r(a)) &&
+        t.some((e) => {
+            let t = l.Z.getChannel(e);
+            return !(null == t || t.isPrivate()) && !r(t);
         })
     );
 }

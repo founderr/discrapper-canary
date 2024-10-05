@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(481060),
+    s = n.n(a),
+    o = n(481060),
     l = n(249458),
     u = n(689938),
     c = n(917776);
@@ -17,10 +17,10 @@ function d(e) {
         _ = (0, r.jsx)('div', {
             className: c.iconWrapper,
             ref: d,
-            children: (0, r.jsx)(s.PlayIcon, {
+            children: (0, r.jsx)(o.PlayIcon, {
                 size: 'xs',
                 color: 'currentColor',
-                className: o()(c.icon)
+                className: s()(c.icon)
             })
         });
     return (0, r.jsx)(l.G.Consumer, {
@@ -30,8 +30,8 @@ function d(e) {
                       className: c.cover,
                       children: _
                   })
-                : (0, r.jsx)(s.Clickable, {
-                      className: o()(n, c.cover, { [c.active]: !e.disableInteractions }),
+                : (0, r.jsx)(o.Clickable, {
+                      className: s()(n, c.cover, { [c.active]: !e.disableInteractions }),
                       onClick: t,
                       tabIndex: 0,
                       'aria-label': u.Z.Messages.PLAY,

@@ -1,4 +1,4 @@
-var r, i;
+var r, i, a, s;
 n.d(t, {
     X: function () {
         return r;
@@ -7,9 +7,9 @@ n.d(t, {
         return i;
     }
 }),
-    !(function (e) {
-        (e.BANNER = 'BANNER'), (e.MODAL = 'MODAL'), (e.ACTION_SHEET = 'ACTION_SHEET');
-    })(r || (r = {})),
-    !(function (e) {
-        (e.CLICK_TO_STAY = 'click_to_stay'), (e.CLICK_TO_LEAVE = 'click_to_leave'), (e.DISMISS = 'dismiss');
-    })(i || (i = {}));
+    ((a = r || (r = {})).BANNER = 'BANNER'),
+    (a.MODAL = 'MODAL'),
+    (a.ACTION_SHEET = 'ACTION_SHEET'),
+    ((s = i || (i = {})).CLICK_TO_STAY = 'click_to_stay'),
+    (s.CLICK_TO_LEAVE = 'click_to_leave'),
+    (s.DISMISS = 'dismiss');

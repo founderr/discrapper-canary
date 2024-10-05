@@ -7,14 +7,14 @@ var n = i(735250);
 i(470079);
 var a = i(481060),
     r = i(782568),
-    s = i(626135),
-    o = i(132871),
+    o = i(626135),
+    s = i(132871),
     l = i(981631),
     c = i(689938),
     d = i(432173),
     u = i(820305);
 function h() {
-    let e = (0, o.useApplicationDirectoryHistory)((e) => e.guildId);
+    let e = (0, s.useApplicationDirectoryHistory)((e) => e.guildId);
     return (0, n.jsxs)('div', {
         className: d.container,
         role: 'contentinfo',
@@ -41,9 +41,9 @@ function h() {
             (0, n.jsx)(a.Button, {
                 size: a.Button.Sizes.SMALL,
                 onClick: function () {
-                    s.default.track(l.rMx.APP_DIRECTORY_CTA_CLICKED, {
+                    o.default.track(l.rMx.APP_DIRECTORY_CTA_CLICKED, {
                         cta: 'new_to_apps',
-                        current_page: o.ApplicationDirectoryViews.HOME,
+                        current_page: s.ApplicationDirectoryViews.HOME,
                         guild_id: e
                     }),
                         (0, r.Z)('https://discord.com/blog/how-to-use-discord-apps');

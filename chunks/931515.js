@@ -31,8 +31,8 @@ var i = n(470079),
     p = n(859921),
     g = n(823379),
     T = n(229893),
-    f = n(229765),
-    S = n(286083),
+    S = n(229765),
+    f = n(286083),
     C = n(207796),
     N = n(976757),
     A = n(308083),
@@ -58,7 +58,7 @@ function L() {
                 t = (0, d.e7)([T.Z], () => T.Z.hasLoadedStaticClanDiscovery());
             return (
                 i.useEffect(() => {
-                    e && !t && (0, f.XB)();
+                    e && !t && (0, S.XB)();
                 }, [t, e]),
                 t
             );
@@ -69,10 +69,10 @@ function L() {
             !(n.length > 0) && !r && (c === A.nJ ? (e(C.hz.VALORANT), t([c])) : c === A.xn ? (e(C.hz.GENSHIN), t([c])) : null == c && (e(C.hz.NONE), t([])));
         }, [e, t, c, n, r]),
         i.useEffect(() => {
-            if (r) (0, f.Cg)(a);
+            if (r) (0, S.Cg)(a);
             else {
                 if (!_) return;
-                (0, f.jc)(a);
+                (0, S.jc)(a);
             }
         }, [a, _, r]),
         i.useEffect(() => {
@@ -88,7 +88,7 @@ function R(e) {
         l = (0, _.Z)(r),
         o = i.useRef(new AbortController()),
         c = i.useCallback(async (e) => {
-            n(!0), null != a.current && (o.current.abort(), (o.current = new AbortController())), (a.current = (0, f.$s)(e, o.current.signal)), await a.current, null !== a.current && (n(!1), (a.current = null));
+            n(!0), null != a.current && (o.current.abort(), (o.current = new AbortController())), (a.current = (0, S.$s)(e, o.current.signal)), await a.current, null !== a.current && (n(!1), (a.current = null));
         }, []);
     return (
         i.useEffect(() => {
@@ -142,7 +142,7 @@ function O() {
 }
 function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { updatePaginationSettings: n, currentColumnCount: a, pageSize: s, chunkedPages: r, currentPage: l, fetchableGuildIds: c } = (0, S.a)(),
+        { updatePaginationSettings: n, currentColumnCount: a, pageSize: s, chunkedPages: r, currentPage: l, fetchableGuildIds: c } = (0, f.a)(),
         u = l - 1,
         _ = (0, C.GN)((e) => e.loadingGameApplication, o.Z),
         E = (0, d.e7)([T.Z], () => T.Z.getSavedGuildIds()),
@@ -157,17 +157,17 @@ function x(e) {
             [m]
         );
     i.useEffect(() => {
-        n(e, S.$, { pageMemoryEnabled: !0 });
+        n(e, f.$, { pageMemoryEnabled: !0 });
     }, [e, n, I]),
         R(c),
         i.useEffect(() => {
-            (0, f.IS)();
+            (0, S.IS)();
         }, []),
         R(h),
         !(function () {
             let e = (0, d.e7)([T.Z], () => !T.Z.hasLoadedSavedGuilds());
             i.useEffect(() => {
-                e && (0, f.bO)();
+                e && (0, S.bO)();
             }, [e]);
         })();
     let A = i.useMemo(() => {

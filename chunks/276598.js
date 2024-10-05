@@ -15,8 +15,8 @@ var i = n(735250),
     u = n(390322),
     d = n(871499),
     h = n(819640),
-    m = n(797258),
-    p = n(446226),
+    p = n(797258),
+    m = n(446226),
     _ = n(937393),
     f = n(43982),
     E = n(721351),
@@ -39,10 +39,10 @@ function v(e) {
 }
 function N(e) {
     let { channel: t, showLeftDivider: n = !1, ...g } = e,
-        N = (0, p.Z)(),
-        A = (0, a.e7)([m.Z], () => {
+        N = (0, m.Z)(),
+        A = (0, a.e7)([p.Z], () => {
             var e, t;
-            return null === (e = m.Z.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
+            return null === (e = p.Z.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
         Z = (0, a.e7)([h.Z], () => h.Z.hasLayers()),
         [M, b] = (0, a.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),

@@ -13,8 +13,8 @@ var i = n(735250),
     u = n(624453),
     d = n(306680),
     h = n(494404),
-    m = n(257559),
-    p = n(689938);
+    p = n(257559),
+    m = n(689938);
 let _ = [];
 function f(e) {
     let { channel: t, onJump: f } = e,
@@ -35,7 +35,7 @@ function f(e) {
             C && o.Z.ackPins(t.id);
         }, [C, t.id]),
         (0, i.jsx)(r.Dialog, {
-            'aria-label': p.Z.Messages.PINNED_MESSAGES,
+            'aria-label': m.Z.Messages.PINNED_MESSAGES,
             children: (0, i.jsx)(h.ZP, {
                 onFetch: function () {
                     o.Z.ackPins(t.id), o.Z.fetchPins(t.id);
@@ -45,20 +45,20 @@ function f(e) {
                 loading: g,
                 analyticsName: 'Channel Pins',
                 onCloseMessage: function (e, n) {
-                    null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : m.Z.confirmUnpin(t, e));
+                    null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : p.Z.confirmUnpin(t, e));
                 },
                 onJump: f,
                 getProTip: function () {
-                    return t.isPrivate() ? p.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : p.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL;
+                    return t.isPrivate() ? m.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : m.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL;
                 },
                 renderHeader: () =>
                     (0, i.jsx)(h.h4, {
                         icon: r.PinIcon,
-                        title: p.Z.Messages.PINNED_MESSAGES
+                        title: m.Z.Messages.PINNED_MESSAGES
                     }),
                 renderEmptyState: function (e) {
-                    let s = p.Z.Messages.NO_PINS_IN_CHANNEL;
-                    t.isPrivate() && (s = p.Z.Messages.NO_PINS_IN_DM);
+                    let s = m.Z.Messages.NO_PINS_IN_CHANNEL;
+                    t.isPrivate() && (s = m.Z.Messages.NO_PINS_IN_DM);
                     let a = (0, l.ap)(e) ? n(306059) : n(281485);
                     return (0, i.jsx)(
                         h.nH,

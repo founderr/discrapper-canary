@@ -1,105 +1,105 @@
-n.d(a, {
+t.d(n, {
     Z: function () {
-        return v;
+        return f;
     }
 }),
-    n(47120);
-var t = n(735250),
-    i = n(470079),
-    r = n(120356),
-    o = n.n(r),
-    l = n(643872),
-    s = n(442837),
-    c = n(481060),
-    d = n(570140),
-    u = n(652898),
-    m = n(93093),
-    p = n(768581),
-    g = n(810568),
-    _ = n(981631),
-    f = n(689938),
-    x = n(51527),
-    h = n(479537);
-function v(e) {
-    let { detectedGame: a, trackClick: n, onInviteResolved: r } = e,
-        [v, I] = i.useState(),
-        E = (0, s.e7)([m.Z], () => {
-            var e, a;
-            return (null == v ? void 0 : null === (e = v.guild) || void 0 === e ? void 0 : e.id) != null && m.Z.isMember(null == v ? void 0 : null === (a = v.guild) || void 0 === a ? void 0 : a.id);
+    t(47120);
+var a = t(735250),
+    r = t(470079),
+    s = t(120356),
+    i = t.n(s),
+    o = t(643872),
+    l = t(442837),
+    c = t(481060),
+    d = t(570140),
+    u = t(652898),
+    _ = t(93093),
+    E = t(768581),
+    m = t(810568),
+    I = t(981631),
+    A = t(689938),
+    p = t(51527),
+    g = t(479537);
+function f(e) {
+    let { detectedGame: n, trackClick: t, onInviteResolved: s } = e,
+        [f, T] = r.useState(),
+        O = (0, l.e7)([_.Z], () => {
+            var e, n;
+            return (null == f ? void 0 : null === (e = f.guild) || void 0 === e ? void 0 : e.id) != null && _.Z.isMember(null == f ? void 0 : null === (n = f.guild) || void 0 === n ? void 0 : n.id);
         }),
-        A = i.useMemo(() => {
+        N = r.useMemo(() => {
             var e;
-            return null === (e = a.websites) || void 0 === e
+            return null === (e = n.websites) || void 0 === e
                 ? void 0
                 : e.find((e) => {
-                      let { category: a } = e;
-                      return a === l.p.DISCORD;
+                      let { category: n } = e;
+                      return n === o.p.DISCORD;
                   });
-        }, [a.websites]);
+        }, [n.websites]);
     if (
-        (i.useEffect(() => {
+        (r.useEffect(() => {
             let e = async (e) => {
-                let a = e.split('/').pop();
-                if (null != a) {
-                    let e = await (0, u.Z)(a);
-                    !0 !== e.banned && (I(e.invite), null != e.invite && (null == r || r(e.invite)));
+                let n = e.split('/').pop();
+                if (null != n) {
+                    let e = await (0, u.Z)(n);
+                    !0 !== e.banned && (T(e.invite), null != e.invite && (null == s || s(e.invite)));
                 }
             };
-            null != A && e(A.url);
-        }, [A, r]),
-        null == v || null == v.guild || (!v.guild.features.includes('VERIFIED') && !v.guild.features.includes('PARTNER')))
+            null != N && e(N.url);
+        }, [N, s]),
+        null == f || null == f.guild || (!f.guild.features.includes('VERIFIED') && !f.guild.features.includes('PARTNER')))
     )
         return null;
-    let C = p.ZP.getGuildIconURL({
-        id: v.guild.id,
-        icon: v.guild.icon,
+    let R = E.ZP.getGuildIconURL({
+        id: f.guild.id,
+        icon: f.guild.icon,
         size: 32
     });
-    return (0, t.jsxs)('div', {
-        className: x.column,
+    return (0, a.jsxs)('div', {
+        className: p.column,
         children: [
-            (0, t.jsx)(c.Heading, {
-                className: x.sectionHeader,
+            (0, a.jsx)(c.Heading, {
+                className: p.sectionHeader,
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                children: f.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
+                children: A.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
             }),
-            (0, t.jsxs)('div', {
-                className: o()(x.row, x.gapMd),
+            (0, a.jsxs)('div', {
+                className: i()(p.row, p.gapMd),
                 children: [
-                    (0, t.jsx)('img', {
-                        className: h.guildIcon,
-                        src: C,
-                        alt: f.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({ guildName: v.guild.name })
+                    (0, a.jsx)('img', {
+                        className: g.guildIcon,
+                        src: R,
+                        alt: A.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({ guildName: f.guild.name })
                     }),
-                    (0, t.jsxs)('div', {
-                        className: h.inviteInfo,
+                    (0, a.jsxs)('div', {
+                        className: g.inviteInfo,
                         children: [
-                            (0, t.jsx)(c.Text, {
+                            (0, a.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
-                                children: v.guild.name
+                                children: f.guild.name
                             }),
-                            null != v.approximate_member_count &&
-                                (0, t.jsx)(c.Text, {
+                            null != f.approximate_member_count &&
+                                (0, a.jsx)(c.Text, {
                                     variant: 'text-xxs/normal',
-                                    children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: v.approximate_member_count })
+                                    children: A.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: f.approximate_member_count })
                                 })
                         ]
                     })
                 ]
             }),
-            (0, t.jsx)(c.Button, {
+            (0, a.jsx)(c.Button, {
                 color: c.ButtonColors.PRIMARY,
                 onClick: () => {
-                    n(g.as.JoinOfficialServer),
+                    t(m.as.JoinOfficialServer),
                         d.Z.dispatch({
                             type: 'INVITE_MODAL_OPEN',
-                            invite: v,
-                            code: v.code,
-                            context: _.IlC.APP
+                            invite: f,
+                            code: f.code,
+                            context: I.IlC.APP
                         });
                 },
-                children: E ? f.Z.Messages.JOINED_GUILD : f.Z.Messages.JOIN_GUILD
+                children: O ? A.Z.Messages.JOINED_GUILD : A.Z.Messages.JOIN_GUILD
             })
         ]
     });

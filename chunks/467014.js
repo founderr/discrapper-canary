@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = n(735250),
@@ -13,28 +13,28 @@ var i = n(735250),
     u = n(776767),
     d = n(50493),
     h = n(689938),
-    m = n(194898);
-function p(e) {
+    p = n(194898);
+function m(e) {
     let { userId: t, guildId: n } = e,
-        p = (0, a.e7)([r.ZP], () => r.ZP.getGuildSidebarState(n), [n]),
+        m = (0, a.e7)([r.ZP], () => r.ZP.getGuildSidebarState(n), [n]),
         { messagesCount: _, linksCount: f, mediaCount: E } = (0, c.P2)(t, n),
         g = new Intl.NumberFormat(h.Z.getLocale()).format(_),
         C = new Intl.NumberFormat(h.Z.getLocale()).format(f),
         I = new Intl.NumberFormat(h.Z.getLocale()).format(E),
         T = s.useCallback(
             async (e) => {
-                if (null == p) return;
+                if (null == m) return;
                 let i = (0, c.Ow)(t, e);
-                await (0, o.r)(n, t, p.baseChannelId, {
+                await (0, o.r)(n, t, m.baseChannelId, {
                     modViewPanel: d.k.MESSAGE_HISTORY,
                     additionalSearchQuery: i
                 });
             },
-            [n, p, t]
+            [n, m, t]
         );
     return (0, i.jsx)(l.FormItem, {
         title: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
-        titleClassName: m.infoTitle,
+        titleClassName: p.infoTitle,
         children: (0, i.jsxs)(u.WM, {
             children: [
                 (0, i.jsx)(u._2, {
@@ -53,7 +53,7 @@ function p(e) {
                         _ === c.II
                             ? (0, i.jsx)(l.Spinner, {
                                   type: l.SpinnerTypes.SPINNING_CIRCLE,
-                                  className: m.loadingSpinner
+                                  className: p.loadingSpinner
                               })
                             : (0, i.jsx)(l.Text, {
                                   variant: 'text-sm/semibold',
@@ -77,7 +77,7 @@ function p(e) {
                         f === c.II
                             ? (0, i.jsx)(l.Spinner, {
                                   type: l.SpinnerTypes.SPINNING_CIRCLE,
-                                  className: m.loadingSpinner
+                                  className: p.loadingSpinner
                               })
                             : (0, i.jsx)(l.Text, {
                                   variant: 'text-sm/semibold',
@@ -101,7 +101,7 @@ function p(e) {
                         E === c.II
                             ? (0, i.jsx)(l.Spinner, {
                                   type: l.SpinnerTypes.SPINNING_CIRCLE,
-                                  className: m.loadingSpinner
+                                  className: p.loadingSpinner
                               })
                             : (0, i.jsx)(l.Text, {
                                   variant: 'text-sm/semibold',

@@ -12,20 +12,20 @@ var s = n(735250),
     E = n(594174),
     p = n(509545),
     g = n(55563),
-    m = n(296848),
-    f = n(981631),
+    f = n(296848),
+    m = n(981631),
     I = n(474936),
     N = n(689938),
     T = n(295242),
-    x = n(739017),
-    A = n(113207);
+    A = n(739017),
+    x = n(113207);
 t.Z = o.ZP.connectStores([g.Z, c.Z, p.Z, E.default], (e) => {
     let { giftCode: t } = e,
         n = g.Z.get(t.skuId),
         { subscriptionPlanId: s } = t;
     return {
         sku: n,
-        subscriptionPlan: null != s ? (0, m.oE)(s) : null,
+        subscriptionPlan: null != s ? (0, f.oE)(s) : null,
         application: c.Z.getApplication(n.applicationId),
         gifter: E.default.getUser(t.userId)
     };
@@ -50,7 +50,7 @@ t.Z = o.ZP.connectStores([g.Z, c.Z, p.Z, E.default], (e) => {
                     : (0, s.jsx)(u.qE, {
                           src: null != i ? i.getAvatarURL(void 0, 100) : null,
                           size: l.AvatarSizes.DEPRECATED_SIZE_100,
-                          className: A.marginBottom20
+                          className: x.marginBottom20
                       }),
                 null != t
                     ? (0, s.jsxs)(r.Fragment, {
@@ -60,9 +60,9 @@ t.Z = o.ZP.connectStores([g.Z, c.Z, p.Z, E.default], (e) => {
                           children: [
                               (0, s.jsx)(u.DK, { children: p }),
                               (0, s.jsxs)(u.Dx, {
-                                  className: a()(A.marginTop8, x.flexCenter),
+                                  className: a()(x.marginTop8, A.flexCenter),
                                   children: [
-                                      o.productLine !== f.POd.COLLECTIBLES &&
+                                      o.productLine !== m.POd.COLLECTIBLES &&
                                           (0, s.jsx)(d.Z, {
                                               size: d.Z.Sizes.MEDIUM,
                                               className: T.applicationIcon,

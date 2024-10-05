@@ -1,48 +1,48 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     },
     v: function () {
         return _;
     }
 });
-var r = n(735250),
-    i = n(470079),
-    a = n(512722),
-    o = n.n(a),
-    s = n(399606),
-    l = n(904245),
-    u = n(375954),
-    c = n(918088);
-let d = i.createContext(void 0);
+var i = n(735250),
+    a = n(470079),
+    s = n(512722),
+    l = n.n(s),
+    r = n(399606),
+    o = n(904245),
+    c = n(375954),
+    d = n(918088);
+let u = a.createContext(void 0);
 function _(e) {
     var t;
-    let n = null !== (t = i.useContext(d)) && void 0 !== t ? t : e;
-    return o()(null != n, 'Using PollReferenceMessageContext without a provider (or a fallback)'), n;
+    let n = null !== (t = a.useContext(u)) && void 0 !== t ? t : e;
+    return l()(null != n, 'Using PollReferenceMessageContext without a provider (or a fallback)'), n;
 }
 function E(e) {
     let { message: t, children: n } = e,
-        a = (0, s.e7)([u.Z], () => u.Z.getMessage(t.channel_id, t.id), [t.channel_id, t.id]),
-        o = null != a;
+        s = (0, r.e7)([c.Z], () => c.Z.getMessage(t.channel_id, t.id), [t.channel_id, t.id]),
+        l = null != s;
     return (
-        i.useEffect(() => {
-            !o &&
-                l.Z.focusMessage({
+        a.useEffect(() => {
+            !l &&
+                o.Z.focusMessage({
                     channelId: t.channel_id,
                     messageId: t.id
                 });
-        }, [o, t.channel_id, t.id]),
-        (0, r.jsx)(d.Provider, {
-            value: null != a ? a : t,
+        }, [l, t.channel_id, t.id]),
+        (0, i.jsx)(u.Provider, {
+            value: null != s ? s : t,
             children: n
         })
     );
 }
-function f(e) {
+function I(e) {
     let { message: t, children: n } = e;
-    return (0, c.r8)(t)
-        ? (0, r.jsx)(r.Fragment, { children: n })
-        : (0, r.jsx)(E, {
+    return (0, d.r8)(t)
+        ? (0, i.jsx)(i.Fragment, { children: n })
+        : (0, i.jsx)(E, {
               message: t,
               children: n
           });

@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(212433),
-    o = n(442837),
-    s = n(710593),
+    s = n(442837),
+    o = n(710593),
     l = n(481060),
     u = n(607070),
     c = n(79320),
@@ -28,7 +28,7 @@ function E() {
                 name: d.Z.Messages.DND_OPERATION_LABEL_CANCEL
             }
         ],
-        t = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        t = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         n = (0, c.zP)();
     return (0, l.useTransition)(
         n,
@@ -58,7 +58,7 @@ function E() {
                       className: _.container,
                       style: t,
                       children: e.map((t, n) => {
-                          let { keybinds: a, name: o } = t;
+                          let { keybinds: a, name: s } = t;
                           return (0, r.jsxs)(
                               i.Fragment,
                               {
@@ -66,11 +66,11 @@ function E() {
                                       (0, r.jsx)(l.Text, {
                                           variant: 'text-md/semibold',
                                           className: _.bindName,
-                                          children: o
+                                          children: s
                                       }),
                                       a.map((e) =>
                                           (0, r.jsx)(
-                                              s.M,
+                                              o.M,
                                               {
                                                   shortcut: e,
                                                   className: _.shortcut
@@ -81,7 +81,7 @@ function E() {
                                       n < e.length - 1 ? (0, r.jsx)('span', { className: _.separator }) : null
                                   ]
                               },
-                              o
+                              s
                           );
                       })
                   })

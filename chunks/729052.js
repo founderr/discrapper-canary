@@ -1,6 +1,6 @@
 n.d(t, {
     p2: function () {
-        return s;
+        return o;
     },
     vS: function () {
         return l;
@@ -26,7 +26,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    o = (0, r.B)({
+    s = (0, r.B)({
         kind: 'guild',
         id: '2023-11_voice_activity_notification_guild',
         label: 'General Voice Channel Notifications for Guild',
@@ -39,9 +39,9 @@ let a = (0, r.B)({
             }
         ]
     });
-function s(e) {
+function o(e) {
     var t;
-    let { voiceChannelActivityNotifsEnabled: n } = o.useExperiment(
+    let { voiceChannelActivityNotifsEnabled: n } = s.useExperiment(
             {
                 location: 'useVoiceActivityNotificationSettingsExperiment',
                 guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.lds
@@ -62,7 +62,7 @@ function s(e) {
 }
 function l(e) {
     var t;
-    let { voiceChannelActivityNotifsEnabled: n } = o.getCurrentConfig({
+    let { voiceChannelActivityNotifsEnabled: n } = s.getCurrentConfig({
         guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.lds,
         location: 'hasVoiceChannelActivityNotifsEnabled'
     });

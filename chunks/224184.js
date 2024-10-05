@@ -8,8 +8,8 @@ var i = n(735250),
     u = n(654904),
     d = n(314897),
     h = n(271383),
-    m = n(496675),
-    p = n(19780),
+    p = n(496675),
+    m = n(19780),
     _ = n(594174),
     f = n(626135),
     E = n(906605),
@@ -29,8 +29,8 @@ t.Z = (e) => {
         }),
         b = (0, r.e7)([d.default], () => d.default.getId()),
         R = (0, r.e7)([_.default], () => _.default.getUser(a)),
-        L = (0, r.e7)([p.Z], () => p.Z.getChannelId() === A.id),
-        j = (0, r.e7)([m.Z], () => m.Z.can(S.Plq.CONNECT, A)),
+        L = (0, r.e7)([m.Z], () => m.Z.getChannelId() === A.id),
+        j = (0, r.e7)([p.Z], () => p.Z.can(S.Plq.CONNECT, A)),
         P = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, A),
         O = (0, r.e7)([h.ZP], () => (null != A.guild_id && null != R ? h.ZP.getMember(A.guild_id, a) : null)),
         y = s.useMemo(() => (null != R ? (0, u.SG)(void 0, O, R, { size: 40 }) : void 0), [O, R]);
@@ -144,7 +144,7 @@ t.Z = (e) => {
                                               f.default.track(S.rMx.SWIPE_HANG_STATUS, {
                                                   guild_id: A.guild_id,
                                                   channel_id: A.id,
-                                                  media_session_id: p.Z.getMediaSessionId()
+                                                  media_session_id: m.Z.getMediaSessionId()
                                               });
                                       },
                                       children: v.Z.Messages.CUSTOM_HANGS_STATUS_COPY_CTA

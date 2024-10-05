@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return o;
     }
-});
-var r = n(653041);
-var i = n(47120);
-var a = n(392711),
-    o = n.n(a);
-function s(e, t, n) {
+}),
+    n(653041),
+    n(47120);
+var r = n(392711),
+    i = n.n(r);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,18 +20,18 @@ function s(e, t, n) {
         e
     );
 }
-let l = [];
-class u {
+let s = [];
+class o {
     static create() {
-        let e = new u();
-        return l.push(e), e.record;
+        let e = new o();
+        return s.push(e), e.record;
     }
     getTotalBytes() {
-        return o().sum(Object.values(this.bytes));
+        return i().sum(Object.values(this.bytes));
     }
     constructor() {
-        s(this, 'bytes', {}),
-            s(this, 'record', (e) => {
+        a(this, 'bytes', {}),
+            a(this, 'record', (e) => {
                 if (null != e) {
                     for (let t in e.rtp.inbound)
                         for (let n of e.rtp.inbound[t]) {

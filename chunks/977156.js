@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     },
     Zy: function () {
-        return o;
+        return s;
     },
     cB: function () {
         return a;
@@ -32,11 +32,11 @@ let i = (0, r.B)({
         let { location: t } = e;
         return i.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
     },
-    o = (e) => {
+    s = (e) => {
         let { location: t } = e;
         return i.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
     },
-    s = (0, r.B)({
+    o = (0, r.B)({
         id: '2024-04_quest_preview_tool',
         kind: 'user',
         label: 'Quest Preview Tool',
@@ -51,5 +51,5 @@ let i = (0, r.B)({
     });
 function l(e) {
     let { location: t } = e;
-    return s.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return o.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
 }

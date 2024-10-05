@@ -1,6 +1,6 @@
 n.d(t, {
     f: function () {
-        return m;
+        return p;
     }
 }),
     n(47120),
@@ -26,17 +26,17 @@ function h(e, t) {
         i = (0, o.e5)(n);
     return (i.applicationId = e.applicationId), (i.timestamp = e.timestamp), i;
 }
-function m(e, t) {
+function p(e, t) {
     let n = (function (e, t) {
         var n, o;
         if (d.get(t.id) === e.id) return h(e, t.id);
         if (null == e.applicationId || !t.isDM() || e.author.id === l.default.getId() || (0, r.yE)(null !== (n = t.recipientFlags) && void 0 !== n ? n : 0, i.V.DISMISSED_IN_GAME_MESSAGE_NUX) || d.has(t.id)) return null;
         let c = s.Z.getApplication(e.applicationId);
         if (null == c || !(0, r.yE)(c.flags, u.udG.SOCIAL_LAYER_INTEGRATION)) return null;
-        let m = h(e, t.id);
+        let p = h(e, t.id);
         d.set(t.id, e.id);
-        let p = (0, r.mB)(null !== (o = t.recipientFlags) && void 0 !== o ? o : 0, i.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
-        return a.Z.updatePrivateChannelRecipientFlags(t.id, p), m;
+        let m = (0, r.mB)(null !== (o = t.recipientFlags) && void 0 !== o ? o : 0, i.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
+        return a.Z.updatePrivateChannelRecipientFlags(t.id, m), p;
     })(e, t);
     return null != n ? n : null;
 }

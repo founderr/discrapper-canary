@@ -1,13 +1,13 @@
 var r = n(67867),
-    i = n(414629),
+    o = n(414629),
     a = n(197859),
-    o = n(821819),
+    i = n(821819),
     s = n(294377),
-    l = n(735471),
-    u = n(992416),
-    c = n(607672),
+    c = n(735471),
+    l = n(992416),
+    u = n(607672),
     d = n(691244),
-    _ = a && a.prototype;
+    p = a && a.prototype;
 if (
     (r(
         {
@@ -16,8 +16,8 @@ if (
             real: !0,
             forced:
                 !!a &&
-                o(function () {
-                    _.finally.call(
+                i(function () {
+                    p.finally.call(
                         {
                             then: function () {}
                         },
@@ -27,19 +27,19 @@ if (
         },
         {
             finally: function (e) {
-                var t = u(this, s('Promise')),
-                    n = l(e);
+                var t = l(this, s('Promise')),
+                    n = c(e);
                 return this.then(
                     n
                         ? function (n) {
-                              return c(t, e()).then(function () {
+                              return u(t, e()).then(function () {
                                   return n;
                               });
                           }
                         : e,
                     n
                         ? function (n) {
-                              return c(t, e()).then(function () {
+                              return u(t, e()).then(function () {
                                   throw n;
                               });
                           }
@@ -48,8 +48,8 @@ if (
             }
         }
     ),
-    !i && l(a))
+    !o && c(a))
 ) {
-    var E = s('Promise').prototype.finally;
-    _.finally !== E && d(_, 'finally', E, { unsafe: !0 });
+    var h = s('Promise').prototype.finally;
+    p.finally !== h && d(p, 'finally', h, { unsafe: !0 });
 }

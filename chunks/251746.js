@@ -1,37 +1,37 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return p;
+        return h;
     }
 });
-var i = n(735250),
-    s = n(470079),
-    a = n(392711),
-    l = n.n(a),
-    r = n(442837),
-    o = n(481060),
-    c = n(66999),
-    u = n(665906),
-    d = n(979651),
-    h = n(557135),
-    m = n(689938);
-function p(e) {
-    let t = (0, u.Y)(e),
-        n = (0, r.e7)([d.Z], () => d.Z.isInChannel(e.id)),
-        a = (0, r.e7)([d.Z], () => !l().isEmpty(d.Z.getVoiceStatesForChannel(e.id))),
-        { needSubscriptionToAccess: p } = (0, c.Z)(e.id),
-        _ = s.useCallback(() => {
-            h.Z.handleVoiceConnect({
+var i = t(735250),
+    a = t(470079),
+    r = t(392711),
+    d = t.n(r),
+    s = t(442837),
+    o = t(481060),
+    u = t(66999),
+    l = t(665906),
+    c = t(979651),
+    Z = t(557135),
+    f = t(689938);
+function h(e) {
+    let n = (0, l.Y)(e),
+        t = (0, s.e7)([c.Z], () => c.Z.isInChannel(e.id)),
+        r = (0, s.e7)([c.Z], () => !d().isEmpty(c.Z.getVoiceStatesForChannel(e.id))),
+        { needSubscriptionToAccess: h } = (0, u.Z)(e.id),
+        v = a.useCallback(() => {
+            Z.Z.handleVoiceConnect({
                 channel: e,
-                connected: n,
-                needSubscriptionToAccess: p,
+                connected: t,
+                needSubscriptionToAccess: h,
                 locked: !1
             });
-        }, [e, n, p]);
-    return n || !t
+        }, [e, t, h]);
+    return t || !n
         ? null
         : (0, i.jsx)(o.MenuItem, {
               id: 'join-thread-voice',
-              label: a ? m.Z.Messages.JOIN_CALL : m.Z.Messages.START_CALL,
-              action: _
+              label: r ? f.Z.Messages.JOIN_CALL : f.Z.Messages.START_CALL,
+              action: v
           });
 }

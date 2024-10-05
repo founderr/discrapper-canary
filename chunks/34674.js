@@ -1,87 +1,87 @@
-n.d(t, {
+t.d(n, {
     $_: function () {
-        return v;
+        return O;
     },
     KQ: function () {
-        return S;
+        return _;
     },
     MU: function () {
-        return m;
+        return T;
     },
     m0: function () {
-        return g;
+        return d;
     },
     rf: function () {
-        return N;
+        return A;
     },
     tu: function () {
-        return A;
+        return I;
     }
-});
-var r = n(610138);
-var i = n(216116);
-var a = n(78328);
-var o = n(815648);
-var s = n(47120);
-var l = n(315314);
-var u = n(860911),
-    c = n(477690),
-    d = n(481060),
-    _ = n(134432),
-    E = n(703656),
-    f = n(768581),
-    h = n(981631),
-    p = n(689938);
-let m = 0,
-    { API_ENDPOINT: I, CDN_HOST: T } = window.GLOBAL_ENV;
-function g(e) {
-    return e.id === m;
+}),
+    t(610138),
+    t(216116),
+    t(78328),
+    t(815648),
+    t(47120),
+    t(315314);
+var c = t(860911),
+    a = t(477690),
+    o = t(481060),
+    l = t(134432),
+    r = t(703656),
+    i = t(768581),
+    s = t(981631),
+    u = t(689938);
+let T = 0,
+    { API_ENDPOINT: E, CDN_HOST: N } = window.GLOBAL_ENV;
+function d(e) {
+    return e.id === T;
 }
-function S() {
+function _() {
     return {
-        id: m,
-        name: p.Z.Messages.APP_DIRECTORY_ALL_CATEGORY
+        id: T,
+        name: u.Z.Messages.APP_DIRECTORY_ALL_CATEGORY
     };
 }
-function A(e) {
+function I(e) {
     switch (e.id) {
         case 0:
-            return d.GlobeEarthIcon;
+            return o.GlobeEarthIcon;
         case 4:
-            return d.TvIcon;
+            return o.TvIcon;
         case 5:
-            return d.AnalyticsIcon;
+            return o.AnalyticsIcon;
         case 6:
-            return d.GameControllerIcon;
+            return o.GameControllerIcon;
         case 8:
             break;
         case 9:
-            return d.FriendsIcon;
+            return o.FriendsIcon;
         case 10:
-            return d.WrenchIcon;
+            return o.WrenchIcon;
     }
-    return d.AsteriskIcon;
+    return o.AsteriskIcon;
 }
-function v(e) {
-    let { itemId: t, hash: n } = e,
-        r = new URLSearchParams({ size: (0, _.oO)(parseFloat(c.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, _.x_)()).toString() }).toString(),
-        i = f.$k ? 'webp' : 'png';
-    return null != T
-        ? ''.concat(location.protocol, '//').concat(T, '/app-assets/application-directory/collection-items/').concat(t, '/').concat(n, '.').concat(i, '?').concat(r)
+function O(e) {
+    let { itemId: n, hash: t } = e,
+        c = new URLSearchParams({ size: (0, l.oO)(parseFloat(a.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, l.x_)()).toString() }).toString(),
+        o = i.$k ? 'webp' : 'png';
+    return null != N
+        ? ''.concat(location.protocol, '//').concat(N, '/app-assets/application-directory/collection-items/').concat(n, '/').concat(t, '.').concat(o, '?').concat(c)
         : ''
               .concat(location.protocol)
-              .concat(I)
-              .concat(h.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(t, n, i), '?')
-              .concat(r);
+              .concat(E)
+              .concat(s.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(n, t, o), '?')
+              .concat(c);
 }
-function N() {
+function A() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        t = new URL(location.href);
-    for (let n in e) {
-        let r = e[n];
-        t.searchParams.set(n, r);
+        n = new URL(location.href);
+    for (let t in e) {
+        let c = e[t];
+        n.searchParams.set(t, c);
     }
-    let n = t.pathname + t.search,
-        r = (0, u.Ui)(n, !1);
-    (0, E.uL)(r);
+    let t = n.pathname + n.search,
+        a = (0, c.Ui)(t, !1);
+    (0, r.uL)(a);
 }

@@ -9,12 +9,12 @@ function a(e, t) {
     (0, i.openModalLazy)(async () => {
         let { default: i } = await n.e('12858').then(n.bind(n, 404339));
         return (n) => {
-            let { transitionState: a, onClose: o } = n;
+            let { transitionState: a, onClose: s } = n;
             return (0, r.jsx)(i, {
                 channelId: e,
                 blockedUserId: t,
                 transitionState: a,
-                onClose: o
+                onClose: s
             });
         };
     });

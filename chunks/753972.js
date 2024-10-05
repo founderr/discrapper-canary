@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(768581),
+    s = n.n(a),
+    o = n(768581),
     l = n(689938),
     u = n(90043);
 function c(e) {
@@ -15,7 +15,7 @@ function c(e) {
         f = i.useMemo(
             () =>
                 null != t
-                    ? s.ZP.getApplicationIconURL({
+                    ? o.ZP.getApplicationIconURL({
                           id: t.id,
                           icon: t.icon,
                           bot: t.bot,
@@ -26,9 +26,9 @@ function c(e) {
                     : n,
             [t, n, c, d, _]
         );
-    if (null == f) return E ? (0, r.jsx)('div', { className: o()(u.icon, u.placeholder, a) }) : null;
+    if (null == f) return E ? (0, r.jsx)('div', { className: s()(u.icon, u.placeholder, a) }) : null;
     return (0, r.jsx)('img', {
-        className: o()(u.icon, a),
+        className: s()(u.icon, a),
         alt: l.Z.Messages.IMAGE,
         src: f,
         'aria-hidden': !0,

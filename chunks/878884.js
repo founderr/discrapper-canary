@@ -9,8 +9,8 @@ var i,
     u = n(642047),
     d = n(189786),
     h = n(5192),
-    m = n(592125),
-    p = n(19780),
+    p = n(592125),
+    m = n(19780),
     _ = n(594174),
     f = n(979651),
     E = n(938475),
@@ -50,9 +50,9 @@ function v(e) {
 }
 function N() {
     var e;
-    let t = p.Z.getChannelId();
+    let t = m.Z.getChannelId();
     if (null == t) return !1;
-    let n = null === (e = m.Z.getChannel(t)) || void 0 === e ? void 0 : e.getGuildId(),
+    let n = null === (e = p.Z.getChannel(t)) || void 0 === e ? void 0 : e.getGuildId(),
         i = !1;
     return (
         x.forEach((e) => {
@@ -71,7 +71,7 @@ function A() {
 }
 class Z extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, _.default, m.Z, p.Z), this.syncWith([_.default], N);
+        this.waitFor(f.Z, _.default, p.Z, m.Z), this.syncWith([_.default], N);
     }
     get desyncedVoiceStatesCount() {
         return I.size();
@@ -107,7 +107,7 @@ class Z extends (i = r.ZP.Store) {
         },
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e,
-                n = p.Z.getChannelId();
+                n = m.Z.getChannelId();
             return (
                 null != n &&
                 t.reduce((e, t) => {

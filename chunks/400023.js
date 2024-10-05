@@ -9,8 +9,8 @@ var i = n(735250),
     u = n(904245),
     d = n(902840),
     h = n(607070),
-    m = n(835473),
-    p = n(95398),
+    p = n(835473),
+    m = n(95398),
     _ = n(580747),
     f = n(135938),
     E = n(160404),
@@ -37,7 +37,7 @@ var i = n(735250),
 let k = s.memo(
     function (e) {
         var t, n;
-        let { className: a, messageGroupSpacing: d, scrollerClassName: m, channel: p, messages: _, unreadCount: f, showNewMessagesBar: g, messageDisplayCompact: C, channelStream: I, uploads: T, hasUnreads: x, editingMessageId: S, fontSize: N, keyboardModeEnabled: A, filterAfterTimestamp: Z, showingQuarantineBanner: b, hideSummaries: R = !1 } = e,
+        let { className: a, messageGroupSpacing: d, scrollerClassName: p, channel: m, messages: _, unreadCount: f, showNewMessagesBar: g, messageDisplayCompact: C, channelStream: I, uploads: T, hasUnreads: x, editingMessageId: S, fontSize: N, keyboardModeEnabled: A, filterAfterTimestamp: Z, showingQuarantineBanner: b, hideSummaries: R = !1 } = e,
             [k, w] = s.useState(!1),
             B = s.useMemo(
                 () =>
@@ -62,7 +62,7 @@ let k = s.memo(
             ),
             H = (0, P.ZP)({
                 messages: _,
-                channel: p,
+                channel: m,
                 compact: C,
                 hasUnreads: x,
                 focusId: S,
@@ -77,7 +77,7 @@ let k = s.memo(
                 keyboardModeEnabled: A,
                 hasMoreAfter: _.hasMoreAfter
             });
-        let V = ((n = p), (0, o.e7)([E.Z], () => (v.Z.can(y.Plq.READ_MESSAGE_HISTORY, n) ? null : E.Z.getViewingRolesTimestamp(n.getGuildId())))),
+        let V = ((n = m), (0, o.e7)([E.Z], () => (v.Z.can(y.Plq.READ_MESSAGE_HISTORY, n) ? null : E.Z.getViewingRolesTimestamp(n.getGuildId())))),
             {
                 channelStreamMarkup: F,
                 newMessagesBar: W,
@@ -85,7 +85,7 @@ let k = s.memo(
                 forumPostActionBar: Y,
                 safetyWarningBanner: K
             } = (0, O.Z)({
-                channel: p,
+                channel: m,
                 messages: _,
                 unreadCount: f,
                 showNewMessagesBar: g,
@@ -103,7 +103,7 @@ let k = s.memo(
                     if (_.hasPresent()) {
                         var e;
                         null === (e = H.ref.current) || void 0 === e || e.scrollToBottom({ animate: !h.Z.useReducedMotion });
-                    } else u.Z.jumpToPresent(p.id, y.AQB);
+                    } else u.Z.jumpToPresent(m.id, y.AQB);
                 }
             });
         !(function (e) {
@@ -149,7 +149,7 @@ let k = s.memo(
                         (0, i.jsxs)(c.PinToBottomScrollerAuto, {
                             ref: Q,
                             customTheme: !0,
-                            className: l()(m, U.scroller),
+                            className: l()(p, U.scroller),
                             contentClassName: U.scrollerContent,
                             onResize: H.handleResize,
                             onScroll: H.handleScroll,
@@ -162,7 +162,7 @@ let k = s.memo(
                                 Y,
                                 (0, i.jsxs)('ol', {
                                     className: U.scrollerInner,
-                                    'aria-label': D.Z.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({ channelName: p.name }),
+                                    'aria-label': D.Z.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({ channelName: m.name }),
                                     ...J,
                                     children: [
                                         (0, i.jsx)('span', {
@@ -176,7 +176,7 @@ let k = s.memo(
                                             className: l()({
                                                 [U.scrollerSpacer]: !b,
                                                 [U.empty]: 0 === _.length && !_.loadingMore,
-                                                [U.emptyForum]: 1 === _.length && !_.loadingMore && p.isForumPost() && (null === (t = _.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(p))
+                                                [U.emptyForum]: 1 === _.length && !_.loadingMore && m.isForumPost() && (null === (t = _.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(m))
                                             })
                                         })
                                     ]
@@ -271,7 +271,7 @@ t.Z = s.memo(function (e) {
                     },
                     [c, e.id, u]
                 ),
-                p = (0, o.e7)([g.Z], () => (c ? g.Z.selectedSummary(e.id) : null), [c, e.id]),
+                m = (0, o.e7)([g.Z], () => (c ? g.Z.selectedSummary(e.id) : null), [c, e.id]),
                 E = (function (e) {
                     let t = s.useMemo(() => {
                         let t = new Set();
@@ -282,7 +282,7 @@ t.Z = s.memo(function (e) {
                             Array.from(t)
                         );
                     }, [e]);
-                    return (0, m.Z)(t);
+                    return (0, p.Z)(t);
                 })(i),
                 C = s.useMemo(
                     () =>
@@ -292,9 +292,9 @@ t.Z = s.memo(function (e) {
                             oldestUnreadMessageId: a,
                             treatSpam: l && !r,
                             summaries: h,
-                            selectedSummary: p
+                            selectedSummary: m
                         }),
-                    [i, e, a, l, h, p, E]
+                    [i, e, a, l, h, m, E]
                 );
             return {
                 messages: i,
@@ -306,7 +306,7 @@ t.Z = s.memo(function (e) {
                 })
             };
         })(t);
-    return (0, i.jsx)(p.a.Provider, {
+    return (0, i.jsx)(m.a.Provider, {
         value: (0, b.Z)(O, u),
         children: (0, i.jsx)(k, {
             ...c,

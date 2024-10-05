@@ -2,24 +2,24 @@ n.d(t, {
     Z: function () {
         return s;
     }
-});
-var r = n(47120);
-var i = n(470079),
-    a = n(40851),
-    o = n(590921);
+}),
+    n(47120);
+var r = n(470079),
+    i = n(40851),
+    a = n(590921);
 function s(e) {
-    let { editorHeight: t, type: n, state: r, isInPopoutExperiment: s = !1 } = e,
-        [l, u] = i.useState(void 0),
-        c = null == r ? void 0 : r.query,
-        d = null == r ? void 0 : r.isVisible,
-        { renderWindow: _ } = i.useContext(a.ZP),
-        E = i.useCallback(() => {
-            var e, t, i, a;
-            if (null != r && (null == c || !d)) {
+    let { editorHeight: t, type: n, state: s, isInPopoutExperiment: o = !1 } = e,
+        [l, u] = r.useState(void 0),
+        c = null == s ? void 0 : s.query,
+        d = null == s ? void 0 : s.isVisible,
+        { renderWindow: _ } = r.useContext(i.ZP),
+        E = r.useCallback(() => {
+            var e, t, r, i;
+            if (null != s && (null == c || !d)) {
                 u(void 0);
                 return;
             }
-            if ((null == c ? void 0 : c.type) === o.eq.GIFS || (null != n && !s && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer))) {
+            if ((null == c ? void 0 : c.type) === a.eq.GIFS || (null != n && !o && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer))) {
                 u(null);
                 return;
             }
@@ -34,7 +34,7 @@ function s(e) {
                     return;
                 }
                 if ((null === (t = f.nodeValue) || void 0 === t ? void 0 : t.length) === 0) {
-                    h = null !== (a = null == (f = f.previousSibling) ? void 0 : null === (i = f.nodeValue) || void 0 === i ? void 0 : i.length) && void 0 !== a ? a : 0;
+                    h = null !== (i = null == (f = f.previousSibling) ? void 0 : null === (r = f.nodeValue) || void 0 === r ? void 0 : r.length) && void 0 !== i ? i : 0;
                     continue;
                 }
                 null != c && (h >= c.queryText.length ? (h -= c.queryText.length) : (h = 0));
@@ -43,12 +43,12 @@ function s(e) {
             if (null == f) return;
             let p = _.document.createRange();
             p.setStart(f, h), p.setEnd(f, h);
-            let m = p.getBoundingClientRect();
-            if ((null == m ? void 0 : m.height) !== 0) u(null != m ? m : null);
-        }, [s, _.document, r, d, c, n]);
+            let I = p.getBoundingClientRect();
+            if ((null == I ? void 0 : I.height) !== 0) u(null != I ? I : null);
+        }, [o, _.document, s, d, c, n]);
     return (
-        i.useEffect(() => (_.document.addEventListener('selectionchange', E), () => _.document.removeEventListener('selectionchange', E)), [_.document, E]),
-        i.useEffect(() => {
+        r.useEffect(() => (_.document.addEventListener('selectionchange', E), () => _.document.removeEventListener('selectionchange', E)), [_.document, E]),
+        r.useEffect(() => {
             E();
         }, [E, t]),
         l

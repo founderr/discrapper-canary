@@ -9,8 +9,8 @@ var i = n(735250),
     u = n(40851),
     d = n(358221),
     h = n(659580),
-    m = n(793865),
-    p = n(575175),
+    p = n(793865),
+    m = n(575175),
     _ = n(258609),
     f = n(74299),
     E = n(924301),
@@ -118,10 +118,10 @@ function es(e) {
         c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]),
         d = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
         h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
-        { suppress: m } = (0, v.Z)(t),
-        p = L.default.getId(),
+        { suppress: p } = (0, v.Z)(t),
+        m = L.default.getId(),
         [_] = (0, X.Z)(t),
-        f = H.ZP.isModerator(p, t.id),
+        f = H.ZP.isModerator(m, t.id),
         g = (0, w.B)(t.id),
         C = a(d);
     return h
@@ -170,7 +170,7 @@ function es(e) {
                       });
                   }
               })
-            : (m && !g) || _
+            : (p && !g) || _
               ? (0, i.jsx)(o.Button, {
                     size: o.Button.Sizes.MEDIUM,
                     color: o.Button.Colors.RED,
@@ -320,7 +320,7 @@ let er = s.memo(function (e) {
             (0, i.jsx)(o.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsx)(Z.Z, { children: (0, i.jsx)(m.Z, { onClose: t }) });
+                    return (0, i.jsx)(Z.Z, { children: (0, i.jsx)(p.Z, { onClose: t }) });
                 },
                 position: 'top',
                 align: 'center',
@@ -386,7 +386,7 @@ let er = s.memo(function (e) {
                                       serverMute: a,
                                       suppress: n,
                                       popoutOpen: r,
-                                      onClick: () => (0, p.Z)(a, n, 'Stage Channel Controls'),
+                                      onClick: () => (0, m.Z)(a, n, 'Stage Channel Controls'),
                                       awaitingRemote: u
                                   });
                               }

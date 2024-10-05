@@ -21,28 +21,28 @@ var l,
 let S = E.IlC.APP,
     x = !1,
     v = !1,
-    Z = [];
-function T() {
+    T = [];
+function Z() {
     x = !0;
 }
-class b extends (l = o.ZP.Store) {
+class A extends (l = o.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, m.Z, C.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? E.IlC.OVERLAY : E.IlC.APP;
-        return !!(x && Z.length > 0 && S === e);
+        return !!(x && T.length > 0 && S === e);
     }
     getProps() {
         return {
-            invite: Z.length > 0 ? Z[0][0] : null,
+            invite: T.length > 0 ? T[0][0] : null,
             error: null != i && '' !== i ? i : null,
             submitting: v
         };
     }
 }
 (s = 'InviteModalStore'),
-    (a = 'displayName') in (r = b)
+    (a = 'displayName') in (r = A)
         ? Object.defineProperty(r, a, {
               value: s,
               enumerable: !0,
@@ -50,9 +50,9 @@ class b extends (l = o.ZP.Store) {
               writable: !0
           })
         : (r[a] = s),
-    (t.Z = new b(c.Z, {
-        OVERLAY_INITIALIZE: T,
-        CONNECTION_OPEN: T,
+    (t.Z = new A(c.Z, {
+        OVERLAY_INITIALIZE: Z,
+        CONNECTION_OPEN: Z,
         CONNECTION_CLOSED: function () {
             x = !1;
         },
@@ -81,7 +81,7 @@ class b extends (l = o.ZP.Store) {
                 }
             }
             if (
-                Z.some((e) => {
+                T.some((e) => {
                     let [n] = e;
                     return n.code === t.code;
                 })
@@ -103,11 +103,11 @@ class b extends (l = o.ZP.Store) {
                     };
                 return null != u && (h.channel = { ...u }), null != d && (h.guild = new p.ZP(d)), null != e.inviter && (h.inviter = { ...e.inviter }), h;
             })(t);
-            Z.push([n, e.resolve]);
+            T.push([n, e.resolve]);
         },
         INVITE_MODAL_CLOSE: function () {
-            if (((i = null), (v = !1), Z.length > 0)) {
-                let [, e] = Z.shift();
+            if (((i = null), (v = !1), T.length > 0)) {
+                let [, e] = T.shift();
                 null != e && e();
             }
         },

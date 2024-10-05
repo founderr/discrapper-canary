@@ -1,30 +1,30 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-    a = n(955415),
-    o = n(314897),
-    s = n(782605),
-    l = n(689938);
-function u(e) {
+var a = n(442837),
+    s = n(955415),
+    l = n(314897),
+    r = n(782605),
+    o = n(689938);
+function c(e) {
     var t, n;
-    let { author: u, inviteError: c } = e,
-        d = (0, i.e7)([o.default], () => o.default.getId()) === u.id ? l.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID : l.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID,
-        _ = (0, s.l)(null == c ? void 0 : c.code);
-    return (0, r.jsxs)(a.Z, {
+    let { author: c, inviteError: d } = e,
+        u = (0, a.e7)([l.default], () => l.default.getId()) === c.id ? o.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID : o.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID,
+        _ = (0, r.l)(null == d ? void 0 : d.code);
+    return (0, i.jsxs)(s.Z, {
         children: [
-            (0, r.jsx)(a.Z.Header, { text: d }),
-            (0, r.jsxs)(a.Z.Body, {
+            (0, i.jsx)(s.Z.Header, { text: u }),
+            (0, i.jsxs)(s.Z.Body, {
                 children: [
-                    (0, r.jsx)(a.Z.Icon, { expired: !0 }),
-                    (0, r.jsx)(a.Z.Info, {
+                    (0, i.jsx)(s.Z.Icon, { expired: !0 }),
+                    (0, i.jsx)(s.Z.Info, {
                         expired: !0,
-                        title: null !== (t = null == _ ? void 0 : _.title) && void 0 !== t ? t : l.Z.Messages.INVITE_BUTTON_INVALID,
-                        children: null !== (n = null == _ ? void 0 : _.description) && void 0 !== n ? n : null == c ? void 0 : c.message
+                        title: null !== (t = null == _ ? void 0 : _.title) && void 0 !== t ? t : o.Z.Messages.INVITE_BUTTON_INVALID,
+                        children: null !== (n = null == _ ? void 0 : _.description) && void 0 !== n ? n : null == d ? void 0 : d.message
                     })
                 ]
             })

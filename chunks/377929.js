@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(109764),
     d = n(323597),
     h = n(438536),
-    m = n(251746),
-    p = n(193987),
+    p = n(251746),
+    m = n(193987),
     _ = n(933793),
     f = n(13736),
     E = n(732393),
@@ -62,7 +62,7 @@ function N(e) {
 function A(e) {
     let { channel: t, closePopout: n, onSelect: s } = e,
         a = (0, c.Z)(t),
-        I = (0, p.Z)(t),
+        I = (0, m.Z)(t),
         N = (0, E.Z)(t.id),
         A = (0, f.Z)(t),
         Z = (0, C.Z)({
@@ -73,7 +73,7 @@ function A(e) {
         b = (0, d.Z)(t),
         R = (0, h.Z)(t, 'Toolbar Overflow'),
         L = (0, _.Z)(t),
-        j = (0, m.Z)(t),
+        j = (0, p.Z)(t),
         P = (0, g.Z)(t),
         O = T.vF.useSetting(),
         y = (0, r.e7)([x.Z], () => !l().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));

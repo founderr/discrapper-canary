@@ -1,11 +1,11 @@
 var r = n(470079),
     i = n(844303),
     a = n(464854),
-    o = function (e) {
+    s = function (e) {
         var t = e.color,
             n = e.onClick,
-            o = e.onSwatchHover,
-            s = e.hover,
+            s = e.onSwatchHover,
+            o = e.hover,
             l = e.active,
             u = e.circleSize,
             c = e.circleSpacing,
@@ -31,7 +31,7 @@ var r = n(470079),
                     active: { Swatch: { boxShadow: 'inset 0 0 0 3px ' + t } }
                 },
                 {
-                    hover: s,
+                    hover: o,
                     active: l
                 }
             );
@@ -42,13 +42,13 @@ var r = n(470079),
                 style: d.Swatch,
                 color: t,
                 onClick: n,
-                onHover: o,
+                onHover: s,
                 focusStyle: { boxShadow: d.Swatch.boxShadow + ', 0 0 5px ' + t }
             })
         );
     };
-(o.defaultProps = {
+(s.defaultProps = {
     circleSize: 28,
     circleSpacing: 14
 }),
-    (t.Z = (0, i.handleHover)(o));
+    (t.Z = (0, i.handleHover)(s));

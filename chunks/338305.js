@@ -7,15 +7,15 @@ var r = n(735250);
 n(470079);
 var i = n(922770),
     a = n(466377),
-    o = n(689938),
-    s = n(46493);
+    s = n(689938),
+    o = n(46493);
 function l(e) {
     return (0, r.jsx)(a.Y0, {
         ...e,
-        'aria-label': o.Z.Messages.LOADING,
+        'aria-label': s.Z.Messages.LOADING,
         size: a.Cg.SMALL,
         children: (0, r.jsx)('div', {
-            className: s.spinnerContainer,
+            className: o.spinnerContainer,
             children: (0, r.jsx)(i.$, {})
         })
     });

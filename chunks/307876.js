@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(232567),
     i = n(147913),
     a = n(592125),
-    o = n(944486),
-    s = n(594174),
+    s = n(944486),
+    o = n(594174),
     l = n(894257),
     u = n(981631);
 function c(e, t, n) {
@@ -26,16 +26,16 @@ function c(e, t, n) {
 let d = !1;
 function _(e) {
     if (__OVERLAY__) return;
-    let t = s.default.getCurrentUser();
+    let t = o.default.getCurrentUser();
     if (null == t) return;
-    let n = o.Z.getChannelId(),
+    let n = s.Z.getChannelId(),
         r = a.Z.getDMFromUserId(l.I);
     if (!t.hasUrgentMessages() || r === n) return E({ channelId: n });
     !d && ((d = !0), e());
 }
 function E(e) {
     let { channelId: t } = e,
-        n = s.default.getCurrentUser(),
+        n = o.default.getCurrentUser(),
         i = t === a.Z.getDMFromUserId(l.I);
     null != n && n.hasUrgentMessages() && i && ((d = !1), r.mB(u.xW$.HAS_UNREAD_URGENT_MESSAGES, !1));
 }

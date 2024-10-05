@@ -1,10 +1,10 @@
 t.d(n, {
     p: function () {
-        return o;
+        return l;
     }
 });
 var i = t(358085);
-let o = {
+let l = {
     binds: ['mod+alt+i'],
     comboKeysBindGlobal: !0,
     action(e) {

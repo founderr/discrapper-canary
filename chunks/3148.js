@@ -1,83 +1,83 @@
 n.d(t, {
     ZP: function () {
-        return E;
+        return d;
     },
     cs: function () {
-        return f;
+        return _;
     },
     pe: function () {
-        return _;
+        return c;
     }
-});
-var r = n(789020);
-var i = n(653041);
-var a = n(512722),
-    o = n.n(a),
-    s = n(869765),
-    l = n(598077),
-    u = n(594174),
-    c = n(48854),
-    d = n(981631);
-function _(e) {
-    let { id: t, username: n, avatar: r, discriminator: i, bot: a, globalName: o } = e;
+}),
+    n(789020),
+    n(653041);
+var r = n(512722),
+    i = n.n(r),
+    a = n(869765),
+    s = n(598077),
+    o = n(594174),
+    l = n(48854),
+    u = n(981631);
+function c(e) {
+    let { id: t, username: n, avatar: r, discriminator: i, bot: a, globalName: s } = e;
     return {
         id: t,
         username: n,
         avatar: r,
         discriminator: i,
         bot: a,
-        global_name: o
+        global_name: s
     };
 }
-function E(e) {
-    let { channelId: t, content: n, tts: r = !1, type: i = d.uaV.DEFAULT, messageReference: a, allowedMentions: E, author: f, flags: h, nonce: p, poll: m, changelogId: I, giftingPrompt: T, state: g } = e,
-        S = [];
-    if (i === d.uaV.REPLY && (o()(null != a, 'Replies must have a message reference'), null == E || E.replied_user)) {
-        let e = s.Z.getMessageByReference(a);
-        (null == e ? void 0 : e.state) === s.Y.LOADED && S.push(_(e.message.author));
+function d(e) {
+    let { channelId: t, content: n, tts: r = !1, type: d = u.uaV.DEFAULT, messageReference: _, allowedMentions: E, author: f, flags: h, nonce: p, poll: I, changelogId: m, giftingPrompt: T, state: S } = e,
+        g = [];
+    if (d === u.uaV.REPLY && (i()(null != _, 'Replies must have a message reference'), null == E || E.replied_user)) {
+        let e = a.Z.getMessageByReference(_);
+        (null == e ? void 0 : e.state) === a.Y.LOADED && g.push(c(e.message.author));
     }
     return (
-        null == f && (f = u.default.getCurrentUser()),
-        f instanceof l.Z && (f = _(f)),
-        o()(null != f, 'createMessage: author cannot be undefined'),
+        null == f && (f = o.default.getCurrentUser()),
+        f instanceof s.Z && (f = c(f)),
+        i()(null != f, 'createMessage: author cannot be undefined'),
         {
-            id: null != p ? p : (0, c.r)(),
-            type: i,
+            id: null != p ? p : (0, l.r)(),
+            type: d,
             content: n,
             channel_id: t,
             author: f,
             attachments: [],
             embeds: [],
             pinned: !1,
-            mentions: S,
+            mentions: g,
             mention_channels: [],
             mention_roles: [],
             mention_everyone: !1,
             timestamp: new Date().toISOString(),
-            state: g || d.yb.SENDING,
+            state: S || u.yb.SENDING,
             tts: r,
-            message_reference: a,
+            message_reference: _,
             message_snapshots: [],
             flags: h,
             nonce: p,
-            poll: m,
-            changelog_id: I,
+            poll: I,
+            changelog_id: m,
             gifting_prompt: T
         }
     );
 }
-function f(e) {
+function _(e) {
     let { messageId: t, channelId: n, content: r, embeds: i, loggingName: a } = e;
     return {
-        id: null != t ? t : (0, c.r)(),
-        type: d.uaV.DEFAULT,
-        flags: d.iLy.EPHEMERAL,
+        id: null != t ? t : (0, l.r)(),
+        type: u.uaV.DEFAULT,
+        flags: u.iLy.EPHEMERAL,
         content: r,
         channel_id: n,
         author: {
-            id: d.LAt,
+            id: u.LAt,
             username: 'Clyde',
-            discriminator: d.fo$,
+            discriminator: u.fo$,
             avatar: 'clyde',
             bot: !0
         },
@@ -89,7 +89,7 @@ function f(e) {
         mention_roles: [],
         mention_everyone: !1,
         timestamp: new Date().toISOString(),
-        state: d.yb.SENT,
+        state: u.yb.SENT,
         tts: !1,
         loggingName: a
     };

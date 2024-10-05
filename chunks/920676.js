@@ -1,16 +1,16 @@
 n.d(t, {
     x: function () {
-        return s;
+        return o;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(507274),
     a = n(922770),
-    o = n(276512);
-function s() {
+    s = n(276512);
+function o() {
     return (0, r.jsx)(i.V, {
-        className: o.loadingPopout,
+        className: s.loadingPopout,
         children: (0, r.jsx)(a.$, { type: a.R.SPINNING_CIRCLE })
     });
 }

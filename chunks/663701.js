@@ -21,8 +21,8 @@ var i = n(735250),
     p = n(607070),
     g = n(213609),
     T = n(463119),
-    f = n(377171),
-    S = n(243778),
+    S = n(377171),
+    f = n(243778),
     C = n(922409),
     N = n(899740),
     A = n(28476),
@@ -185,14 +185,14 @@ let X = (e) => {
                     className: Q.familyCenterPendingBadge,
                     children: (0, i.jsx)(h.NumberBadge, { count: a })
                 })
-              : (0, i.jsx)(S.ZP, {
+              : (0, i.jsx)(f.ZP, {
                     contentTypes: [_.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
                         return t === _.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(h.TextBadge, {
                                   text: q.Z.Messages.NEW,
-                                  color: f.Z.BG_BRAND
+                                  color: S.Z.BG_BRAND
                               })
                             : null;
                     }

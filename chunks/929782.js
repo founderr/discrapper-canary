@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         enable: function () {
-            return S;
+            return g;
         },
         isNotSupported: function () {
             return T;
@@ -14,8 +14,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(570140),
-    o = n(710845),
-    s = n(592125),
+    s = n(710845),
+    o = n(592125),
     l = n(131951),
     u = n(944486),
     c = n(556296),
@@ -25,10 +25,10 @@ var i = n(481060),
     f = n(981631),
     h = n(761274),
     p = n(689938);
-let m = new o.Z('AudioActionCreators');
-function I() {
+let I = new s.Z('AudioActionCreators');
+function m() {
     (0, i.openModalLazy)(async () => {
-        let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
+        let { default: e } = await n.e('82935').then(n.bind(n, 431583));
         return (t) =>
             (0, r.jsx)(e, {
                 source: 'Unsupported Browser',
@@ -44,7 +44,7 @@ function T() {
                 header: p.Z.Messages.UNSUPPORTED_BROWSER,
                 confirmText: p.Z.Messages.DOWNLOAD_APP,
                 cancelText: p.Z.Messages.CANCEL,
-                onConfirm: I,
+                onConfirm: m,
                 confirmButtonColor: i.Button.Colors.BRAND,
                 ...e,
                 children: (0, r.jsx)(i.Text, {
@@ -56,13 +56,13 @@ function T() {
         !0)
     );
 }
-function g(e) {
+function S(e) {
     _.default.track(f.rMx.PERMISSIONS_ACKED, {
         type: 'audio',
         action: e
     });
 }
-function S() {
+function g() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return T()
         ? Promise.resolve(!1)
@@ -76,21 +76,21 @@ function S() {
                           enabled: !0,
                           unmute: e
                       }),
-                          g(h.PQ.ACCEPTED);
+                          S(h.PQ.ACCEPTED);
                   },
                   (e) => {
                       switch (e) {
                           case f.ETv.NO_DEVICES_FOUND:
-                              g(h.PQ.NO_DEVICES);
+                              S(h.PQ.NO_DEVICES);
                               break;
                           case f.ETv.PERMISSION_DENIED:
-                              g(h.PQ.DENIED);
+                              S(h.PQ.DENIED);
                               break;
                           case f.ETv.PERMISSION_DISMISSED:
-                              g(h.PQ.DISMISSED);
+                              S(h.PQ.DISMISSED);
                               break;
                           default:
-                              g(h.PQ.ERROR), m.warn('unknown getUserMedia error: '.concat(e));
+                              S(h.PQ.ERROR), I.warn('unknown getUserMedia error: '.concat(e));
                       }
                   }
               )
@@ -100,7 +100,7 @@ function A(e) {
     let { usedKeybind: t = !1, location: n } = e,
         r = c.Z.getKeybindForAction(f.kg4.TOGGLE_MUTE, !1, !0),
         i = u.Z.getVoiceChannelId(),
-        a = null != i ? s.Z.getChannel(i) : null;
+        a = null != i ? o.Z.getChannel(i) : null;
     _.default.track(f.rMx.INPUT_MUTE_TOGGLED, {
         enabled: !l.Z.isSelfMute(),
         custom_keybind_assigned: null != r && r.id !== c.E.id,

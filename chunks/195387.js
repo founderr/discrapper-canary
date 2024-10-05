@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
     a = n(481060),
-    o = n(906732),
-    s = n(189432),
+    s = n(906732),
+    o = n(189432),
     l = n(189357),
     u = n(434404),
     c = n(314897),
@@ -18,25 +18,25 @@ var i = n(442837),
     f = n(50493),
     h = n(689938);
 function p(e) {
-    let { user: t, guildId: n, channelId: p, onClose: m, shouldShowTooltip: I } = e,
-        { newestAnalyticsLocation: T } = (0, o.ZP)(),
-        g = (0, i.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)),
-        S = (0, l.ms)(null != n ? n : null, !0),
+    let { user: t, guildId: n, channelId: p, onClose: I, shouldShowTooltip: m } = e,
+        { newestAnalyticsLocation: T } = (0, s.ZP)(),
+        S = (0, i.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)),
+        g = (0, l.ms)(null != n ? n : null, !0),
         A = (0, i.e7)([d.Z], () => (null != p ? p : d.Z.getChannelId(n, !0)), [p, n]);
-    return null == n || !S || g
+    return null == n || !g || S
         ? null
         : (0, r.jsx)(_.oY, {
               action: 'PRESS_MOD_VIEW',
               icon: a.ModerationIcon,
-              shouldShowTooltip: I,
+              shouldShowTooltip: m,
               tooltipText: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
               onClick: () => {
                   u.Z.close(),
-                      (0, s.r)(n, t.id, null != A ? A : E.oC.MEMBER_SAFETY, {
+                      (0, o.r)(n, t.id, null != A ? A : E.oC.MEMBER_SAFETY, {
                           modViewPanel: f.k.INFO,
                           sourceLocation: T
                       }),
-                      null == m || m();
+                      null == I || I();
               }
           });
 }

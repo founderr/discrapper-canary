@@ -1,6 +1,6 @@
 n.d(t, {
     Dx: function () {
-        return p;
+        return m;
     },
     aP: function () {
         return _;
@@ -18,9 +18,9 @@ var i,
     u = n(136015),
     d = n(565799),
     h = n(431328),
-    m = n(501655);
-function p(e) {
-    let t = (0, h.Rk)(e, m.pV.AUDIENCE),
+    p = n(501655);
+function m(e) {
+    let t = (0, h.Rk)(e, p.pV.AUDIENCE),
         [n, i] = a.useState(!1);
     return (
         a.useEffect(() => {
@@ -40,8 +40,8 @@ function _(e, t, n) {
                     o = -1,
                     c = [];
                 if (n)
-                    for (let t of d.Z.getMutableParticipants(e, m.pV.SPEAKER))
-                        if (t.type === m.Ui.STREAM) t.id !== s && c.push(t), o++;
+                    for (let t of d.Z.getMutableParticipants(e, p.pV.SPEAKER))
+                        if (t.type === p.Ui.STREAM) t.id !== s && c.push(t), o++;
                         else break;
                 let u = (e, t, n) => {
                         let i = n ? e.filter((e, t) => e.id !== s && t > o) : e,
@@ -51,17 +51,17 @@ function _(e, t, n) {
                     h = null != s ? d.Z.getParticipant(e, s) : null;
                 return (
                     (null == h ? void 0 : h.speaker) ? u([h], 1, !1) : u([], 1, !1),
-                    [m.pV.SPEAKER, m.pV.AUDIENCE].forEach((e) => {
-                        u(d.Z.getMutableParticipants(i[0], e), t[e], e === m.pV.SPEAKER);
+                    [p.pV.SPEAKER, p.pV.AUDIENCE].forEach((e) => {
+                        u(d.Z.getMutableParticipants(i[0], e), t[e], e === p.pV.SPEAKER);
                     }),
                     u(c, 1, !1),
                     [a, r]
                 );
             }, [i, t, s, n, e]);
         })(e, t, i),
-        [h, p] = s,
-        [_, f] = (0, o.T)(s, n, [t[m.pV.AUDIENCE]]),
+        [h, m] = s,
+        [_, f] = (0, o.T)(s, n, [t[p.pV.AUDIENCE]]),
         E = [h[i ? 3 : 0], h[1], _[2]];
-    return [E, [p[i ? 3 : 0], p[1], f[2]]];
+    return [E, [m[i ? 3 : 0], m[1], f[2]]];
 }
 ((s = i || (i = {}))[(s.SELECTED = 0)] = 'SELECTED'), (s[(s.SPEAKER = 1)] = 'SPEAKER'), (s[(s.AUDIENCE = 2)] = 'AUDIENCE'), (s[(s.MEDIA = 3)] = 'MEDIA');

@@ -1,5 +1,5 @@
-var r;
-function i(e, t, n) {
+var r, i;
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,15 +14,15 @@ function i(e, t, n) {
 }
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 }),
-    !(function (e) {
-        (e[(e.PRIMARY_APP_COMMAND_NOT_FOUND = 0)] = 'PRIMARY_APP_COMMAND_NOT_FOUND'), (e[(e.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED = 1)] = 'LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED'), (e[(e.INVALID_CHANNEL = 2)] = 'INVALID_CHANNEL');
-    })(r || (r = {}));
-class a {
+    ((i = r || (r = {}))[(i.PRIMARY_APP_COMMAND_NOT_FOUND = 0)] = 'PRIMARY_APP_COMMAND_NOT_FOUND'),
+    (i[(i.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED = 1)] = 'LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED'),
+    (i[(i.INVALID_CHANNEL = 2)] = 'INVALID_CHANNEL');
+class s {
     constructor(e) {
-        i(this, 'reason', void 0), (this.reason = e);
+        a(this, 'reason', void 0), (this.reason = e);
     }
 }
-i(a, 'Reasons', r);
+a(s, 'Reasons', r);

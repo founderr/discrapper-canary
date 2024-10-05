@@ -13,8 +13,8 @@ var i = n(735250),
     u = n(472596),
     d = n(285173),
     h = n(430824),
-    m = n(496675),
-    p = n(776767),
+    p = n(496675),
+    m = n(776767),
     _ = n(981631),
     f = n(689938),
     E = n(194898);
@@ -40,14 +40,14 @@ function g(e) {
         C = (0, r.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
         I = (0, u.zq)(C),
         T = (0, u.vN)(t),
-        x = (0, r.e7)([m.Z], () => m.Z.can(_.Plq.MANAGE_ROLES, n), [n]);
+        x = (0, r.e7)([p.Z], () => p.Z.can(_.Plq.MANAGE_ROLES, n), [n]);
     return null == n
         ? null
         : (0, i.jsx)(o.FormItem, {
               title: f.Z.Messages.ROLES,
               titleClassName: E.infoTitle,
-              children: (0, i.jsx)(p.WM, {
-                  children: (0, i.jsx)(p._2, {
+              children: (0, i.jsx)(m.WM, {
+                  children: (0, i.jsx)(m._2, {
                       description:
                           t.roles.length > 0 || x
                               ? (0, i.jsxs)('div', {

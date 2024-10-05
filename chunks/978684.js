@@ -1,17 +1,17 @@
 n.d(t, {
     J: function () {
-        return _;
+        return d;
     }
-});
-var r = n(47120);
-var i = n(298444),
-    a = n(570140),
-    o = n(447543),
+}),
+    n(47120);
+var r = n(298444),
+    i = n(570140),
+    a = n(447543),
     s = n(147913),
-    l = n(314897),
-    u = n(358085),
-    c = n(981631);
-function d(e, t, n) {
+    o = n(314897),
+    l = n(358085),
+    u = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,27 +24,27 @@ function d(e, t, n) {
         e
     );
 }
-let _ = 'guestInviteToAccept';
-class E extends s.Z {
+let d = 'guestInviteToAccept';
+class _ extends s.Z {
     constructor(...e) {
         super(...e),
-            d(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
-            d(this, 'handleConnectionOpen', async () => {
-                if ((0, u.isWeb)()) {
-                    let e = i.x.get(_);
-                    if (null != e && 'string' == typeof e && l.default.isAuthenticated()) {
-                        let { invite: t } = await o.Z.resolveInvite(e, 'Desktop Modal');
+            c(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
+            c(this, 'handleConnectionOpen', async () => {
+                if ((0, l.isWeb)()) {
+                    let e = r.x.get(d);
+                    if (null != e && 'string' == typeof e && o.default.isAuthenticated()) {
+                        let { invite: t } = await a.Z.resolveInvite(e, 'Desktop Modal');
                         null != t &&
-                            (a.Z.dispatch({
+                            (i.Z.dispatch({
                                 type: 'INVITE_MODAL_OPEN',
                                 invite: t,
                                 code: e,
-                                context: c.IlC.APP
+                                context: u.IlC.APP
                             }),
-                            i.x.remove(_));
+                            r.x.remove(d));
                     }
                 }
             });
     }
 }
-t.Z = new E();
+t.Z = new _();

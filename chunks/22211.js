@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(442837),
     i = n(661869),
     a = n(387343),
-    o = n(543882),
-    s = n(199902),
+    s = n(543882),
+    o = n(199902),
     l = n(592125),
     u = n(496675),
     c = n(158776),
@@ -28,14 +28,14 @@ function f(e) {
         ),
         n = (0, r.e7)([c.Z], () => c.Z.getPrimaryActivity(e.author_id, null == t ? void 0 : t.guild_id), [t, e]),
         { streamPreviewUrl: f, stream: h } = (0, r.cj)(
-            [s.Z, u.Z, o.Z],
+            [o.Z, u.Z, s.Z],
             () => {
                 let n;
                 if (null == t) return {};
-                let r = s.Z.getAnyStreamForUser(e.author_id);
+                let r = o.Z.getAnyStreamForUser(e.author_id);
                 return null == r
                     ? {}
-                    : (u.Z.canBasicChannel(E.S7.CONNECT, t) && (null == r ? void 0 : r.channelId) === t.id && (n = o.Z.getPreviewURL(r.guildId, r.channelId, r.ownerId)),
+                    : (u.Z.canBasicChannel(E.S7.CONNECT, t) && (null == r ? void 0 : r.channelId) === t.id && (n = s.Z.getPreviewURL(r.guildId, r.channelId, r.ownerId)),
                       {
                           stream: r,
                           streamPreviewUrl: n

@@ -50,8 +50,8 @@ var o = r(80182),
                         I = void 0;
                     T && ((M = T.component), (A = T.props), (I = T.editable));
                     var B = y || S.get(O),
-                        L = a.encode(O, 0, 0),
-                        R = {
+                        R = a.encode(O, 0, 0),
+                        L = {
                             contentState: v,
                             block: D,
                             blockProps: A,
@@ -61,7 +61,7 @@ var o = r(80182),
                             decorator: b,
                             direction: B,
                             forceSelection: _,
-                            offsetKey: L,
+                            offsetKey: R,
                             preventScroll: g,
                             selection: m,
                             tree: h.getBlockTree(O)
@@ -97,7 +97,7 @@ var o = r(80182),
                             className: j,
                             'data-block': !0,
                             'data-editor': d,
-                            'data-offset-key': L,
+                            'data-offset-key': R,
                             key: O
                         };
                     void 0 !== I &&
@@ -129,34 +129,34 @@ var o = r(80182),
                             contentEditable: I,
                             suppressContentEditableWarning: !0
                         }));
-                    var J = u.createElement(z, G, u.createElement(V, i({}, R, { key: O })));
+                    var J = u.createElement(z, G, u.createElement(V, i({}, L, { key: O })));
                     k.push({
                         block: J,
                         wrapperTemplate: F,
                         key: O,
-                        offsetKey: L
+                        offsetKey: R
                     }),
                         (x = F ? D.getDepth() : null),
                         (C = F);
                 }
-                for (var X = [], Y = 0; Y < k.length; ) {
-                    var Z = k[Y];
-                    if (Z.wrapperTemplate) {
-                        var $ = [];
-                        do $.push(k[Y].block), Y++;
-                        while (Y < k.length && k[Y].wrapperTemplate === Z.wrapperTemplate);
+                for (var $ = [], X = 0; X < k.length; ) {
+                    var Y = k[X];
+                    if (Y.wrapperTemplate) {
+                        var Z = [];
+                        do Z.push(k[X].block), X++;
+                        while (X < k.length && k[X].wrapperTemplate === Y.wrapperTemplate);
                         var Q = u.cloneElement(
-                            Z.wrapperTemplate,
+                            Y.wrapperTemplate,
                             {
-                                key: Z.key + '-wrap',
-                                'data-offset-key': Z.offsetKey
+                                key: Y.key + '-wrap',
+                                'data-offset-key': Y.offsetKey
                             },
-                            $
+                            Z
                         );
-                        X.push(Q);
-                    } else X.push(Z.block), Y++;
+                        $.push(Q);
+                    } else $.push(Y.block), X++;
                 }
-                return u.createElement('div', { 'data-contents': 'true' }, X);
+                return u.createElement('div', { 'data-contents': 'true' }, $);
             }),
             e
         );

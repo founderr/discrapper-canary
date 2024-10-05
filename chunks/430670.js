@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(594174),
     d = n(971393),
     h = n(646915),
-    m = n(184301),
-    p = n(432958),
+    p = n(184301),
+    m = n(432958),
     _ = n(792379),
     f = n(177222);
 function E(e) {
@@ -28,7 +28,7 @@ function E(e) {
     let C = (0, r.e7)([u.default], () => u.default.getCurrentUser());
     l()(null != C, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
         s.useEffect(() => {
-            (0, m.Z)(g, {
+            (0, p.Z)(g, {
                 withMutualFriends: !g.bot,
                 withMutualGuilds: !0,
                 channelId: t.id
@@ -43,7 +43,7 @@ function E(e) {
     a)
         ? null
         : T && S
-          ? (0, i.jsx)(p.Z, {
+          ? (0, i.jsx)(m.Z, {
                 user: g,
                 currentUser: C,
                 channel: t,

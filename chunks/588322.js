@@ -13,8 +13,8 @@ var i = n(735250),
     u = n(541716),
     d = n(665149),
     h = n(910611),
-    m = n(703656),
-    p = n(664342),
+    p = n(703656),
+    m = n(664342),
     _ = n(592125),
     f = n(703558),
     E = n(430824),
@@ -35,7 +35,7 @@ function T(e) {
         null == T || null == S)
     )
         return null;
-    let A = (0, i.jsx)(p.Z, { channel: T });
+    let A = (0, i.jsx)(m.Z, { channel: T });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(r.Z, {
@@ -53,7 +53,7 @@ function T(e) {
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, l.jW)(e, async () => {
-                            let { default: e } = await n.e('78650').then(n.bind(n, 422200));
+                            let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,
@@ -62,7 +62,7 @@ function T(e) {
                         });
                     },
                     handleClick: function () {
-                        null != T && (0, m.XU)(T.guild_id, T.id);
+                        null != T && (0, p.XU)(T.guild_id, T.id);
                     }
                 })
             }),

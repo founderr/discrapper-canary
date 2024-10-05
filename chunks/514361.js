@@ -1,23 +1,23 @@
 let r, i;
+n(47120);
 var a,
-    o = n(47120);
-var s = n(442837),
-    l = n(704215),
-    u = n(570140),
-    c = n(605236),
-    d = n(238514),
-    _ = n(781391),
-    E = n(210887),
-    f = n(740492),
-    h = n(695346),
-    p = n(581883),
-    m = n(131704),
+    s = n(442837),
+    o = n(704215),
+    l = n(570140),
+    u = n(605236),
+    c = n(238514),
+    d = n(781391),
+    _ = n(210887),
+    E = n(740492),
+    f = n(695346),
+    h = n(581883),
+    p = n(131704),
     I = n(592125),
-    T = n(594174),
-    g = n(74538),
+    m = n(594174),
+    T = n(74538),
     S = n(51144),
-    A = n(47760),
-    v = n(469115),
+    g = n(47760),
+    A = n(469115),
     N = n(874893);
 function O(e, t, n) {
     return (
@@ -33,94 +33,59 @@ function O(e, t, n) {
     );
 }
 let R = !1,
-    C = !0,
-    y = !1,
-    L = (e) => {
-        let { presetId: t } = e;
-        if (null == t) {
-            r = void 0;
-            return;
-        }
-        r = v.qt[t];
-    },
-    b = (e) => {
-        let { mobileThemesIndex: t } = e;
-        if (null == t) {
-            i = void 0;
-            return;
-        }
-        i = t;
-    },
-    D = (e) => {
-        x();
-    },
-    M = (e) => {
-        G();
-    },
-    P = (e) => {
-        r = void 0;
-    },
-    U = (e) => {
-        let { channelId: t, guildId: n } = e,
-            r = T.default.getCurrentUser();
-        if (null == t || null == n || (0, c.un)(l.z.CLIENT_THEMES_COACHMARK) || !(0, S.Fc)(r)) return;
-        let i = I.Z.getChannel(t);
-        null != i && (0, m.zi)(i.type) && ((y = !0), x());
-    };
-function w() {
-    G();
-}
-function x() {
+    v = !0,
+    C = !1;
+function L() {
     R = !0;
 }
-function G() {
-    C && (r = void 0), (y = !1), (R = !1);
+function D() {
+    v && (r = void 0), (C = !1), (R = !1);
 }
-let k = () => {
-        C = !g.ZP.canUseClientThemes(T.default.getCurrentUser());
+let y = () => {
+        v = !T.ZP.canUseClientThemes(m.default.getCurrentUser());
     },
-    B = () => {
-        let e = h.L1.getSetting().backgroundGradientPresetId;
-        if (d.Z.shouldSync('appearance')) {
+    b = () => {
+        let e = f.L1.getSetting().backgroundGradientPresetId;
+        if (c.Z.shouldSync('appearance')) {
             if (null == e) {
                 null != r && (r = void 0);
                 return;
             }
-            r = v.qt[e];
+            r = A.qt[e];
         }
     },
-    F = () => {
-        if (!d.Z.shouldSync('appearance')) return;
-        let e = h.L1.getSetting().backgroundGradientPresetId;
-        if ((f.ZP.useSystemTheme === N.K.ON && null != e && (0, _.hi)(N.K.OFF), null == e)) {
+    M = () => {
+        if (!c.Z.shouldSync('appearance')) return;
+        let e = f.L1.getSetting().backgroundGradientPresetId;
+        if ((E.ZP.useSystemTheme === N.K.ON && null != e && (0, d.hi)(N.K.OFF), null == e)) {
             null != r && (r = void 0);
             return;
         }
-        let t = v.qt[e],
+        let t = A.qt[e],
             n = (null == r ? void 0 : r.id) === (null == t ? void 0 : t.id);
         if (null != t && !n) r = t;
     };
-class Z extends (a = s.ZP.PersistedStore) {
+class P extends (a = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? v.qt[e.gradientPresetId] : void 0), this.waitFor(T.default, E.Z, I.Z, d.Z, p.Z), this.syncWith([T.default], k), this.syncWith([d.Z], B), this.syncWith([p.Z], F);
+        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? A.qt[e.gradientPresetId] : void 0), this.waitFor(m.default, _.Z, I.Z, c.Z, h.Z), this.syncWith([m.default], y), this.syncWith([c.Z], b), this.syncWith([h.Z], M);
     }
     getState() {
-        return C ? {} : { gradientPresetId: null == r ? void 0 : r.id };
+        return v ? {} : { gradientPresetId: null == r ? void 0 : r.id };
     }
     get gradientPreset() {
         return r;
     }
     getLinearGradient() {
-        return null == this.gradientPreset ? null : (0, A.VK)(this.gradientPreset);
+        return null == this.gradientPreset ? null : (0, g.VK)(this.gradientPreset);
     }
     get isEditorOpen() {
         return R;
     }
     get isPreview() {
-        return C;
+        return v;
     }
     get isCoachmark() {
-        return y;
+        return C;
     }
     get mobilePendingThemeIndex() {
         return i;
@@ -135,14 +100,49 @@ class Z extends (a = s.ZP.PersistedStore) {
             ]);
     }
 }
-O(Z, 'displayName', 'ClientThemesBackgroundStore'),
-    O(Z, 'persistKey', 'ClientThemesBackgroundStore'),
-    (t.Z = new Z(u.Z, {
-        UPDATE_BACKGROUND_GRADIENT_PRESET: L,
-        UPDATE_MOBILE_PENDING_THEME_INDEX: b,
-        CLIENT_THEMES_EDITOR_OPEN: D,
-        CLIENT_THEMES_EDITOR_CLOSE: M,
-        RESET_PREVIEW_CLIENT_THEME: P,
-        CHANNEL_SELECT: U,
-        LOGOUT: w
+O(P, 'displayName', 'ClientThemesBackgroundStore'),
+    O(P, 'persistKey', 'ClientThemesBackgroundStore'),
+    (t.Z = new P(l.Z, {
+        UPDATE_BACKGROUND_GRADIENT_PRESET: (e) => {
+            let { presetId: t } = e;
+            if (null == t) {
+                r = void 0;
+                return;
+            }
+            r = A.qt[t];
+        },
+        UPDATE_MOBILE_PENDING_THEME_INDEX: (e) => {
+            let { mobileThemesIndex: t } = e;
+            if (null == t) {
+                i = void 0;
+                return;
+            }
+            i = t;
+        },
+        CLIENT_THEMES_EDITOR_OPEN: (e) => {
+            (function () {
+                R = !0;
+            })();
+        },
+        CLIENT_THEMES_EDITOR_CLOSE: (e) => {
+            D();
+        },
+        RESET_PREVIEW_CLIENT_THEME: (e) => {
+            r = void 0;
+        },
+        CHANNEL_SELECT: (e) => {
+            let { channelId: t, guildId: n } = e,
+                r = m.default.getCurrentUser();
+            if (null == t || null == n || (0, u.un)(o.z.CLIENT_THEMES_COACHMARK) || !(0, S.Fc)(r)) return;
+            let i = I.Z.getChannel(t);
+            null != i &&
+                (0, p.zi)(i.type) &&
+                ((C = !0),
+                (function () {
+                    R = !0;
+                })());
+        },
+        LOGOUT: function () {
+            D();
+        }
     }));

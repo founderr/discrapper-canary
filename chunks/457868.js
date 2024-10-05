@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(924826),
     d = n(873546),
     h = n(442837),
-    m = n(481060),
-    p = n(239091),
+    p = n(481060),
+    m = n(239091),
     _ = n(144144),
     f = n(607070),
     E = n(100527),
@@ -73,7 +73,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
             V = s.useCallback(
                 (e) => {
                     null != E &&
-                        (0, p.jW)(e, async () => {
+                        (0, m.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
                             return (n) =>
                                 (0, i.jsx)(e, {
@@ -111,7 +111,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
             );
         if (null == E) return null;
         let Y = null == u ? void 0 : u.premiumSince;
-        return (0, i.jsx)(m.Popout, {
+        return (0, i.jsx)(p.Popout, {
             preload: () =>
                 (0, N.Z)(E, {
                     guildId: t.guild_id,
@@ -193,12 +193,12 @@ let W = w.ZP.getEnableHardwareAcceleration(),
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)('div', { className: V.divider }),
-                      (0, i.jsxs)(m.Text, {
+                      (0, i.jsxs)(p.Text, {
                           variant: 'text-xs/bold',
                           color: 'header-secondary',
                           className: V.private,
                           children: [
-                              (0, i.jsx)(m.LockIcon, {
+                              (0, i.jsx)(p.LockIcon, {
                                   size: 'xxs',
                                   color: 'currentColor'
                               }),
@@ -206,7 +206,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                               G.Z.Messages.THREAD_BROWSER_PRIVATE
                           ]
                       }),
-                      (0, i.jsx)(m.Text, {
+                      (0, i.jsx)(p.Text, {
                           variant: 'text-sm/normal',
                           color: 'header-secondary',
                           className: V.instructions,
@@ -221,7 +221,7 @@ function X(e) {
         a = 'members-'.concat(t.id),
         { analyticsLocations: r } = (0, g.ZP)(E.Z.MEMBER_LIST),
         d = (0, S.D)(t.id, n),
-        p = d.filter((e) => e.userIds.length > 0).reverse()[0],
+        m = d.filter((e) => e.userIds.length > 0).reverse()[0],
         { navigator: _, listRef: C } = (function (e, t) {
             let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
                 i = s.useRef(null),
@@ -297,12 +297,12 @@ function X(e) {
         value: r,
         children: (0, i.jsx)(c.bG, {
             navigator: _,
-            children: (0, i.jsx)(m.FocusJumpSection, {
+            children: (0, i.jsx)(p.FocusJumpSection, {
                 children: (e) =>
                     (0, i.jsx)('div', {
                         className: l()(F.membersWrap, F.hiddenMembers),
                         children: (0, i.jsx)(
-                            m.List,
+                            p.List,
                             {
                                 ref: C,
                                 className: F.members,
@@ -337,8 +337,8 @@ function X(e) {
                                         a[s]
                                     );
                                 },
-                                footerHeight: (e) => (d[e] === p && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0),
-                                renderFooter: (e) => (d[e.section] === p ? (0, i.jsx)(q, { channel: t }, 'footer') : null),
+                                footerHeight: (e) => (d[e] === m && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0),
+                                renderFooter: (e) => (d[e.section] === m ? (0, i.jsx)(q, { channel: t }, 'footer') : null),
                                 innerAriaLabel: G.Z.Messages.MEMBERS,
                                 innerTag: 'ul',
                                 sections: d.map((e) => e.userIds.length),
@@ -358,7 +358,7 @@ function J(e) {
     return (0, i.jsxs)('div', {
         className: l()(F.membersWrap, F.hiddenMembers, F.members, V.emptyState),
         children: [
-            (0, i.jsx)(m.Text, {
+            (0, i.jsx)(p.Text, {
                 className: V.emptyStateHeader,
                 variant: 'text-xs/bold',
                 color: 'interactive-normal',
@@ -369,7 +369,7 @@ function J(e) {
                 children: [
                     (0, i.jsx)('div', {
                         className: V.emptyStateIcon,
-                        children: (0, i.jsx)(m.GroupIcon, {
+                        children: (0, i.jsx)(p.GroupIcon, {
                             size: 'lg',
                             color: 'currentColor'
                         })
@@ -377,11 +377,11 @@ function J(e) {
                     (0, i.jsx)(O.Z, { className: V.emptyStateStars })
                 ]
             }),
-            (0, i.jsx)(m.Heading, {
+            (0, i.jsx)(p.Heading, {
                 variant: 'heading-md/semibold',
                 children: t.isForumPost() ? G.Z.Messages.FORUM_POST_MEMBER_LIST_EMPTY_STATE_HEADER : G.Z.Messages.THREAD_MEMBER_LIST_EMPTY_STATE_HEADER
             }),
-            (0, i.jsx)(m.Text, {
+            (0, i.jsx)(p.Text, {
                 className: V.emptyStateSubtext,
                 variant: 'text-sm/normal',
                 color: 'header-secondary',

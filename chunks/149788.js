@@ -30,7 +30,7 @@ function T(e) {
             categoryId: m.U
         });
     }, [t]);
-    let f = a.useMemo(
+    let S = a.useMemo(
         () =>
             T.map((e) => ({
                 ...e,
@@ -63,7 +63,7 @@ function T(e) {
                                   (0, i.jsxs)('div', {
                                       className: p.content,
                                       children: [
-                                          f.map((e) =>
+                                          S.map((e) =>
                                               (0, i.jsx)(
                                                   h.VD,
                                                   {

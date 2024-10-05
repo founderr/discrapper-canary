@@ -1,12 +1,12 @@
 var r = n(147018),
     i = n(161581),
     a = n(4340),
-    o = n(325008),
-    s = TypeError,
+    s = n(325008),
+    o = TypeError,
     l = Object.defineProperty,
     u = i.self !== i;
 try {
-    if (o) {
+    if (s) {
         var c = Object.getOwnPropertyDescriptor(i, 'self');
         (u || !c || !c.get || !c.enumerable) &&
             a(i, 'self', {
@@ -14,7 +14,7 @@ try {
                     return i;
                 },
                 set: function (e) {
-                    if (this !== i) throw s('Illegal invocation');
+                    if (this !== i) throw o('Illegal invocation');
                     l(i, 'self', {
                         value: e,
                         writable: !0,

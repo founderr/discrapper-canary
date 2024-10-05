@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(749210),
     d = n(686546),
     h = n(951394),
-    m = n(565138),
-    p = n(372769),
+    p = n(565138),
+    m = n(372769),
     _ = n(134432),
     f = n(769654),
     E = n(601964),
@@ -180,11 +180,11 @@ t.Z = (e) => {
                                 height: 48,
                                 children: (0, i.jsx)('div', {
                                     className: v.iconMask,
-                                    children: (0, i.jsx)(m.Z, {
+                                    children: (0, i.jsx)(p.Z, {
                                         className: v.icon,
                                         iconSrc: A,
                                         guild: new E.ZP(a),
-                                        size: m.Z.Sizes.MEDIUM,
+                                        size: p.Z.Sizes.MEDIUM,
                                         active: !0
                                     })
                                 })
@@ -198,7 +198,7 @@ t.Z = (e) => {
                         (0, i.jsxs)('div', {
                             className: v.title,
                             children: [
-                                (0, i.jsx)(p.Z, {
+                                (0, i.jsx)(m.Z, {
                                     className: v.guildBadge,
                                     guild: a,
                                     tooltipColor: o.Tooltip.Colors.PRIMARY

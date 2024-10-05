@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(955415),
-    a = n(689938);
-function o() {
-    return (0, r.jsxs)(i.Z, {
-        children: [(0, r.jsx)(i.Z.Header, { text: a.Z.Messages.INVITE_BUTTON_RESOLVING }), (0, r.jsx)(i.Z.Body, { resolving: !0 })]
+var a = n(955415),
+    s = n(689938);
+function l() {
+    return (0, i.jsxs)(a.Z, {
+        children: [(0, i.jsx)(a.Z.Header, { text: s.Z.Messages.INVITE_BUTTON_RESOLVING }), (0, i.jsx)(a.Z.Body, { resolving: !0 })]
     });
 }

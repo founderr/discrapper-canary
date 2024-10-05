@@ -143,7 +143,7 @@ function eI(e) {
             type: (null == e ? void 0 : e.isSwitchingAccount) ? 'user-data-only' : 'all'
         }),
         L.Z.clearAll();
-    S.ZH(), v.Z.clearUser(), h.K.remove(U), (w = null), (Z = (null == e ? void 0 : e.isSwitchingAccount) ? D.u34.LOGGING_IN : D.u34.NONE), (Y = D.$ib.NONE), (K = ''), ($ = ''), (q = null), (z = !1), (J = !1), (ee = !1), (et = {}), (en = {}), (eo = !1), (el = !1);
+    S.ZH(), v.Z.clearUser(), h.K.remove(U), (w = null), (G = null), (Z = (null == e ? void 0 : e.isSwitchingAccount) ? D.u34.LOGGING_IN : D.u34.NONE), (Y = D.$ib.NONE), (K = ''), ($ = ''), (q = null), (z = !1), (J = !1), (ee = !1), (et = {}), (en = {}), (eo = !1), (el = !1);
 }
 class em extends (a = E.ZP.Store) {
     initialize() {

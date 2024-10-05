@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     t: function () {
-        return o;
+        return s;
     }
 });
 var r = n(780570),
@@ -11,10 +11,10 @@ var r = n(780570),
 function a() {
     return (0, i.isWindows)() || (0, i.isMac)();
 }
-function o(e) {
-    let { LibraryApplicationStore: t, LaunchableGameStore: n, DispatchApplicationStore: i, ConnectedAppsStore: a, applicationId: o, branchId: s } = e;
-    if (a.isConnected(o)) return !0;
-    if ((null == s && (s = o), i.isLaunchable(o, s))) return !0;
-    let l = t.getLibraryApplication(o, s);
-    return !(null != l && (0, r.Je)(l)) && n.isLaunchable(o);
+function s(e) {
+    let { LibraryApplicationStore: t, LaunchableGameStore: n, DispatchApplicationStore: i, ConnectedAppsStore: a, applicationId: s, branchId: o } = e;
+    if (a.isConnected(s)) return !0;
+    if ((null == o && (o = s), i.isLaunchable(s, o))) return !0;
+    let l = t.getLibraryApplication(s, o);
+    return !(null != l && (0, r.Je)(l)) && n.isLaunchable(s);
 }

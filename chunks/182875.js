@@ -1,8 +1,8 @@
 var r = n(470079),
     i = Symbol.for('react.element'),
     a = Symbol.for('react.fragment'),
-    o = Object.prototype.hasOwnProperty,
-    s = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
+    s = Object.prototype.hasOwnProperty,
+    o = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
     l = {
         key: !0,
         ref: !0,
@@ -14,7 +14,7 @@ function u(e, t, n) {
         a = {},
         u = null,
         c = null;
-    for (r in (void 0 !== n && (u = '' + n), void 0 !== t.key && (u = '' + t.key), void 0 !== t.ref && (c = t.ref), t)) o.call(t, r) && !l.hasOwnProperty(r) && (a[r] = t[r]);
+    for (r in (void 0 !== n && (u = '' + n), void 0 !== t.key && (u = '' + t.key), void 0 !== t.ref && (c = t.ref), t)) s.call(t, r) && !l.hasOwnProperty(r) && (a[r] = t[r]);
     if (e && e.defaultProps) for (r in (t = e.defaultProps)) void 0 === a[r] && (a[r] = t[r]);
     return {
         $$typeof: i,
@@ -22,7 +22,7 @@ function u(e, t, n) {
         key: u,
         ref: c,
         props: a,
-        _owner: s.current
+        _owner: o.current
     };
 }
 (t.Fragment = a), (t.jsx = u), (t.jsxs = u);

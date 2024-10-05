@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
     a = n(481060),
-    o = n(287734),
-    s = n(872810),
+    s = n(287734),
+    o = n(872810),
     l = n(382182),
     u = n(199902),
     c = n(475413),
@@ -17,7 +17,7 @@ var i = n(442837),
     E = n(676411);
 function f(e) {
     let { stream: t, canWatch: n, unavailableReason: f, onAction: h, onClose: p } = e,
-        m = (0, i.e7)([u.Z], () => {
+        I = (0, i.e7)([u.Z], () => {
             let e = u.Z.getActiveStreamForApplicationStream(t);
             return (
                 (null == e ? void 0 : e.state) !== d.jm8.ENDED &&
@@ -41,17 +41,17 @@ function f(e) {
                         wrapperClassName: E.primaryButton,
                         fullWidth: !0,
                         onClick: () => {
-                            null == h || h({ action: 'PRESS_WATCH_STREAM_BUTTON' }), o.default.selectVoiceChannel(t.channelId), (0, s.iV)(t), null == p || p();
+                            null == h || h({ action: 'PRESS_WATCH_STREAM_BUTTON' }), s.default.selectVoiceChannel(t.channelId), (0, o.iV)(t), null == p || p();
                         }
                     })
             }),
-            m &&
+            I &&
                 (0, r.jsx)(c.ef, {
                     tooltipText: _.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                     icon: a.EyePlusIcon,
                     disabled: !n,
                     onClick: () => {
-                        null == h || h({ action: 'PRESS_WATCH_MULTIPLE_STREAMS_BUTTON' }), o.default.selectVoiceChannel(t.channelId), (0, s.iV)(t, { forceMultiple: !0 }), null == p || p();
+                        null == h || h({ action: 'PRESS_WATCH_MULTIPLE_STREAMS_BUTTON' }), s.default.selectVoiceChannel(t.channelId), (0, o.iV)(t, { forceMultiple: !0 }), null == p || p();
                     }
                 })
         ]

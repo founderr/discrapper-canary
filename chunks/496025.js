@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -18,17 +18,17 @@ var r = n(735250),
     x = n(699516),
     f = n(594174),
     p = n(55589),
-    b = n(630388),
-    g = n(98357),
+    g = n(630388),
+    b = n(98357),
     v = n(432877),
-    j = n(246992),
-    C = n(128374),
-    _ = n(219299);
-function S() {
+    _ = n(246992),
+    j = n(128374),
+    C = n(219299);
+function T() {
     var e;
     let t = (0, s.Wu)([p.Z], () => p.Z.getSortedChannels()[1]),
         [n, l] = a.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: i, options: g } = (0, s.cj)([m.Z, f.default, x.Z], () => ({
+        { selectedChannel: i, options: b } = (0, s.cj)([m.Z, f.default, x.Z], () => ({
             selectedChannel: m.Z.getChannel(n),
             options: t.map((e) => {
                 let t = m.Z.getChannel(e.channelId);
@@ -41,10 +41,10 @@ function S() {
         v = a.useCallback(() => {
             var e;
             if (null == i || !i.isPrivate()) return;
-            let t = (0, b.x9)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            let t = (0, g.x9)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
             h.Z.updatePrivateChannelRecipientFlags(i.id, t);
         }, [i]),
-        _ = null != i && !!i.isPrivate() && (0, b.yE)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+        C = null != i && !!i.isPrivate() && (0, g.yE)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.Text, {
@@ -52,11 +52,11 @@ function S() {
                 children: 'In-Game NUX Message for DMs'
             }),
             (0, r.jsxs)('div', {
-                className: C.inGameNuxContainer,
+                className: j.inGameNuxContainer,
                 children: [
                     (0, r.jsx)(c.SearchableSelect, {
-                        wrapperClassName: C.search,
-                        options: g,
+                        wrapperClassName: j.search,
+                        options: b,
                         placeholder: 'Select DM',
                         value: n,
                         onChange: l,
@@ -71,36 +71,36 @@ function S() {
                                       size: c.AvatarSizes.SIZE_16
                                   });
                         },
-                        popoutLayerContext: j.O$
+                        popoutLayerContext: _.O$
                     }),
                     (0, r.jsx)(c.Button, {
                         size: c.Button.Sizes.SMALL,
                         onClick: v,
                         disabled: null == n,
-                        children: _ ? 'Clear NUX Flag' : 'Set NUX Flag'
+                        children: C ? 'Clear NUX Flag' : 'Set NUX Flag'
                     })
                 ]
             })
         ]
     });
 }
-function T() {
+function S() {
     let e = v.ZP.allByCategory(v.zU.MESSAGING).map((e) => {
         let [t, n, { label: a }] = e;
         return (0, r.jsx)(
             c.FormSwitch,
             {
                 value: n,
-                onChange: (e) => (0, g.Z)(t, e),
+                onChange: (e) => (0, b.Z)(t, e),
                 hideBorder: !0,
-                className: C.switch,
+                className: j.switch,
                 children: a
             },
             t
         );
     });
     return (0, r.jsxs)('div', {
-        className: i()(_.panel, C.panel),
-        children: [e, (0, r.jsx)('div', { className: C.divider }), (0, r.jsx)(S, {})]
+        className: i()(C.panel, j.panel),
+        children: [e, (0, r.jsx)('div', { className: j.divider }), (0, r.jsx)(T, {})]
     });
 }

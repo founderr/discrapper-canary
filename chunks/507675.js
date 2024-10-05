@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(600164),
     a = n(112560),
-    o = n(848918);
-function s(e) {
-    let { mainText: t, supportingText: n, children: s, size: l } = e;
+    s = n(848918);
+function o(e) {
+    let { mainText: t, supportingText: n, children: o, size: l } = e;
     return (0, r.jsxs)(i.Z, {
-        className: o.root,
+        className: s.root,
         justify: i.Z.Justify.CENTER,
         align: i.Z.Align.CENTER,
         direction: i.Z.Direction.VERTICAL,
@@ -21,7 +21,7 @@ function s(e) {
                 description: n,
                 size: l
             }),
-            s
+            o
         ]
     });
 }

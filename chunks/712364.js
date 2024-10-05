@@ -1,13 +1,13 @@
+n(47120);
 var r,
-    i = n(47120);
-var a = n(735250),
-    o = n(470079),
+    i = n(735250),
+    a = n(470079),
     s = n(120356),
-    l = n.n(s),
-    u = n(481060),
-    c = n(689938),
-    d = n(89328);
-function _(e, t, n) {
+    o = n.n(s),
+    l = n(481060),
+    u = n(689938),
+    c = n(89328);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,110 +20,110 @@ function _(e, t, n) {
         e
     );
 }
-class E extends (r = o.PureComponent) {
+class _ extends (r = a.PureComponent) {
     render() {
         var e;
-        let { title: t, actionText: n, children: r, error: i, isLoading: s, maxLength: _, transitionState: E, helpMessage: f, retryPrompt: h, retrySuccessMessage: p } = this.props,
-            { code: m, errorMessage: I, retrySuccess: T } = this.state,
-            g =
-                o.Children.count(r) > 0
-                    ? (0, a.jsx)(u.Card, {
-                          type: u.Card.Types.WARNING,
-                          className: d.card,
-                          children: (0, a.jsx)(u.Text, {
+        let { title: t, actionText: n, children: r, error: s, isLoading: d, maxLength: _, transitionState: E, helpMessage: f, retryPrompt: h, retrySuccessMessage: p } = this.props,
+            { code: I, errorMessage: m, retrySuccess: T } = this.state,
+            S =
+                a.Children.count(r) > 0
+                    ? (0, i.jsx)(l.Card, {
+                          type: l.Card.Types.WARNING,
+                          className: c.card,
+                          children: (0, i.jsx)(l.Text, {
                               variant: 'text-md/normal',
                               children: r
                           })
                       })
                     : null,
-            S =
+            g =
                 null != h
-                    ? (0, a.jsxs)(u.Text, {
-                          className: l()(d.__invalid_submitText, d.spacing),
+                    ? (0, i.jsxs)(l.Text, {
+                          className: o()(c.__invalid_submitText, c.spacing),
                           variant: 'text-sm/normal',
                           children: [
-                              (0, a.jsx)('br', {}),
-                              (0, a.jsx)(u.Clickable, {
-                                  className: l()(d.spacing, d.__invalid_link),
+                              (0, i.jsx)('br', {}),
+                              (0, i.jsx)(l.Clickable, {
+                                  className: o()(c.spacing, c.__invalid_link),
                                   onClick: this.handleRetry,
-                                  children: (0, a.jsx)(u.Anchor, { children: h })
+                                  children: (0, i.jsx)(l.Anchor, { children: h })
                               })
                           ]
                       })
                     : null,
             A = T
-                ? (0, a.jsx)(u.Card, {
-                      type: u.Card.Types.SUCCESS,
-                      className: d.card,
-                      children: (0, a.jsx)(u.Text, {
+                ? (0, i.jsx)(l.Card, {
+                      type: l.Card.Types.SUCCESS,
+                      className: c.card,
+                      children: (0, i.jsx)(l.Text, {
                           variant: 'text-md/normal',
                           children: p
                       })
                   })
                 : null;
-        return (0, a.jsx)(u.ModalRoot, {
+        return (0, i.jsx)(l.ModalRoot, {
             transitionState: E,
-            children: (0, a.jsxs)('form', {
+            children: (0, i.jsxs)('form', {
                 onSubmit: this.handleSubmit,
                 children: [
-                    (0, a.jsx)(u.ModalHeader, {
+                    (0, i.jsx)(l.ModalHeader, {
                         separator: !1,
-                        children: (0, a.jsx)(u.Heading, {
+                        children: (0, i.jsx)(l.Heading, {
                             variant: 'heading-lg/semibold',
                             children: t
                         })
                     }),
-                    (0, a.jsxs)(u.ModalContent, {
+                    (0, i.jsxs)(l.ModalContent, {
                         children: [
                             null != f
-                                ? (0, a.jsx)(u.Text, {
+                                ? (0, i.jsx)(l.Text, {
                                       color: 'text-normal',
                                       variant: 'text-md/normal',
-                                      className: d.spacing,
+                                      className: c.spacing,
                                       children: f
                                   })
                                 : null,
-                            g,
+                            S,
                             A,
-                            (0, a.jsxs)(u.FormItem, {
+                            (0, i.jsxs)(l.FormItem, {
                                 title: this.getLabelText(),
-                                className: d.spacing,
+                                className: c.spacing,
                                 children: [
-                                    (0, a.jsx)(u.TextInput, {
+                                    (0, i.jsx)(l.TextInput, {
                                         inputRef: this.setRef,
                                         onChange: this.handleCodeChange,
                                         placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
                                         maxLength: null != _ ? _ : 10,
-                                        value: m,
+                                        value: I,
                                         autoComplete: 'one-time-code',
                                         autoFocus: !0
                                     }),
                                     this.errorPresent()
-                                        ? (0, a.jsx)(u.Text, {
+                                        ? (0, i.jsx)(l.Text, {
                                               color: 'text-danger',
                                               variant: 'text-xs/normal',
-                                              className: d.error,
-                                              children: null != i ? i : I
+                                              className: c.error,
+                                              children: null != s ? s : m
                                           })
                                         : null,
-                                    S
+                                    g
                                 ]
                             })
                         ]
                     }),
-                    (0, a.jsxs)(u.ModalFooter, {
+                    (0, i.jsxs)(l.ModalFooter, {
                         children: [
-                            (0, a.jsx)(u.Button, {
+                            (0, i.jsx)(l.Button, {
                                 type: 'submit',
-                                disabled: s || 0 === m.length,
-                                children: null != n ? n : c.Z.Messages.CONFIRM
+                                disabled: d || 0 === I.length,
+                                children: null != n ? n : u.Z.Messages.CONFIRM
                             }),
-                            (0, a.jsx)(u.Button, {
+                            (0, i.jsx)(l.Button, {
                                 onClick: this.handleCancel,
-                                disabled: s,
-                                look: u.Button.Looks.LINK,
-                                color: u.Button.Colors.PRIMARY,
-                                children: c.Z.Messages.CANCEL
+                                disabled: d,
+                                look: l.Button.Looks.LINK,
+                                color: l.Button.Colors.PRIMARY,
+                                children: u.Z.Messages.CANCEL
                             })
                         ]
                     })
@@ -133,50 +133,50 @@ class E extends (r = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, '_input', void 0),
-            _(this, 'state', {
+            d(this, '_input', void 0),
+            d(this, 'state', {
                 code: '',
                 errorMessage: '',
                 retrySuccess: !1
             }),
-            _(this, 'setRef', (e) => {
+            d(this, 'setRef', (e) => {
                 this._input = e;
             }),
-            _(this, 'getLabelText', () => {
+            d(this, 'getLabelText', () => {
                 var e;
-                return null !== (e = this.props.label) && void 0 !== e ? e : this.props.disallowBackupCodes ? c.Z.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL : c.Z.Messages.TWO_FA_ENTER_TOKEN_LABEL;
+                return null !== (e = this.props.label) && void 0 !== e ? e : this.props.disallowBackupCodes ? u.Z.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL : u.Z.Messages.TWO_FA_ENTER_TOKEN_LABEL;
             }),
-            _(this, 'getSupportedCodeTypes', () => (this.props.disallowBackupCodes ? c.Z.Messages.TWO_FA_AUTH_CODE_NO_BACKUP : c.Z.Messages.TWO_FA_AUTH_CODE)),
-            _(this, 'getPlaceholder', () => {
+            d(this, 'getSupportedCodeTypes', () => (this.props.disallowBackupCodes ? u.Z.Messages.TWO_FA_AUTH_CODE_NO_BACKUP : u.Z.Messages.TWO_FA_AUTH_CODE)),
+            d(this, 'getPlaceholder', () => {
                 var e;
                 return this.props.forceNoPlaceholder ? null : null !== (e = this.props.placeholder) && void 0 !== e ? e : this.getSupportedCodeTypes();
             }),
-            _(this, 'errorPresent', () => (null != this.props.error && '' !== this.props.error) || (null != this.state.errorMessage && '' !== this.state.errorMessage)),
-            _(this, 'handleRetry', () => {
+            d(this, 'errorPresent', () => (null != this.props.error && '' !== this.props.error) || (null != this.state.errorMessage && '' !== this.state.errorMessage)),
+            d(this, 'handleRetry', () => {
                 let { onRetry: e } = this.props;
                 null == e || e().then(() => this.setState({ retrySuccess: !0 }));
             }),
-            _(this, 'handleSubmit', (e) => {
+            d(this, 'handleSubmit', (e) => {
                 e.preventDefault();
                 let { handleSubmit: t, onError: n } = this.props;
                 t(this.state.code).catch((e) => {
                     if (null != e.body) null == n || n(e.body), e.body.message && this.setState({ errorMessage: e.body.message });
                 });
             }),
-            _(this, 'handleCancel', () => {
+            d(this, 'handleCancel', () => {
                 let { onClose: e, handleEarlyClose: t } = this.props;
                 e(), null == t || t();
             }),
-            _(this, 'handleCodeChange', (e) => {
+            d(this, 'handleCodeChange', (e) => {
                 this.setState({ code: e });
             });
     }
 }
-_(E, 'defaultProps', {
+d(_, 'defaultProps', {
     btnClass: '',
     isLoading: !1,
     disallowBackupCodes: !1,
     error: null,
     forceNoPlaceholder: !1
 }),
-    (t.Z = E);
+    (t.Z = _);

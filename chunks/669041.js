@@ -1,118 +1,118 @@
 n.r(t),
     n.d(t, {
         QuestsRewardModalUnverified: function () {
-            return f;
+            return E;
         },
         openRewardModalUnverified: function () {
-            return h;
+            return f;
         }
-    });
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(442837),
+    }),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(442837),
     s = n(481060),
-    l = n(893776),
-    u = n(594174),
-    c = n(918701),
-    d = n(689938),
-    _ = n(300992),
-    E = n(800010);
-function f(e) {
+    o = n(893776),
+    l = n(594174),
+    u = n(918701),
+    c = n(689938),
+    d = n(300992),
+    _ = n(800010);
+function E(e) {
     let { transitionState: t, onClose: n } = e,
-        r = (0, o.e7)([u.default], () => {
+        E = (0, a.e7)([l.default], () => {
             var e;
-            return null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
+            return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
         }),
-        [f, h] = a.useState({ status: 'unknown' });
-    a.useEffect(() => {
+        [f, h] = i.useState({ status: 'unknown' });
+    i.useEffect(() => {
         h({ status: 'loading' }),
-            l.Z.verifyResend().then(
+            o.Z.verifyResend().then(
                 () => h({ status: 'success' }),
                 (e) => {
-                    h({ status: 'error' }), (0, c.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } });
+                    h({ status: 'error' }), (0, u.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } });
                 }
             );
     }, []);
     let p = () =>
-        (0, i.jsx)(s.ModalFooter, {
-            className: _.modalFooter,
-            children: (0, i.jsx)(s.Button, {
+        (0, r.jsx)(s.ModalFooter, {
+            className: d.modalFooter,
+            children: (0, r.jsx)(s.Button, {
                 color: s.Button.Colors.BRAND,
                 size: s.Button.Sizes.MEDIUM,
                 onClick: n,
-                children: d.Z.Messages.CLOSE
+                children: c.Z.Messages.CLOSE
             })
         });
-    return (0, i.jsxs)(s.ModalRoot, {
+    return (0, r.jsxs)(s.ModalRoot, {
         transitionState: t,
         disableTrack: !0,
         children: [
-            (0, i.jsx)('img', {
+            (0, r.jsx)('img', {
                 alt: '',
-                className: _.headerImage,
-                src: E
+                className: d.headerImage,
+                src: _
             }),
-            (0, i.jsxs)(s.ModalHeader, {
+            (0, r.jsxs)(s.ModalHeader, {
                 separator: !1,
-                className: _.header,
+                className: d.header,
                 children: [
-                    (0, i.jsx)(s.Heading, {
-                        className: _.title,
+                    (0, r.jsx)(s.Heading, {
+                        className: d.title,
                         variant: 'heading-xl/bold',
-                        children: d.Z.Messages.QUESTS_REWARD_VERIFICATION_TITLE
+                        children: c.Z.Messages.QUESTS_REWARD_VERIFICATION_TITLE
                     }),
-                    (0, i.jsx)(s.ModalCloseButton, {
+                    (0, r.jsx)(s.ModalCloseButton, {
                         onClick: n,
-                        className: _.modalCloseButton
+                        className: d.modalCloseButton
                     })
                 ]
             }),
             'loading' === f.status &&
-                (0, i.jsx)(s.ModalContent, {
-                    className: _.content,
-                    children: (0, i.jsx)(s.Spinner, {})
+                (0, r.jsx)(s.ModalContent, {
+                    className: d.content,
+                    children: (0, r.jsx)(s.Spinner, {})
                 }),
             'error' === f.status &&
-                (0, i.jsxs)(i.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(s.ModalContent, {
-                            className: _.content,
-                            children: (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(s.ModalContent, {
+                            className: d.content,
+                            children: (0, r.jsx)(s.Text, {
                                 variant: 'text-md/normal',
-                                children: d.Z.Messages.QUESTS_REWARD_VERIFICATION_ERROR
+                                children: c.Z.Messages.QUESTS_REWARD_VERIFICATION_ERROR
                             })
                         }),
                         p()
                     ]
                 }),
             'success' === f.status &&
-                (0, i.jsxs)(i.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(s.ModalContent, {
-                            className: _.content,
-                            children: (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(s.ModalContent, {
+                            className: d.content,
+                            children: (0, r.jsx)(s.Text, {
                                 variant: 'text-md/normal',
-                                children: d.Z.Messages.QUESTS_REWARD_VERIFICATION_BODY.format({
-                                    emailAddress: r,
-                                    emailAddressLink: 'mailto:'.concat(r)
+                                children: c.Z.Messages.QUESTS_REWARD_VERIFICATION_BODY.format({
+                                    emailAddress: E,
+                                    emailAddressLink: 'mailto:'.concat(E)
                                 })
                             })
                         }),
-                        (0, i.jsx)(s.ModalContent, {
-                            className: _.content,
-                            children: (0, i.jsxs)('div', {
-                                className: _.tooltip,
+                        (0, r.jsx)(s.ModalContent, {
+                            className: d.content,
+                            children: (0, r.jsxs)('div', {
+                                className: d.tooltip,
                                 children: [
-                                    (0, i.jsx)(s.CircleInformationIcon, {
+                                    (0, r.jsx)(s.CircleInformationIcon, {
                                         size: 'xs',
                                         color: 'currentColor',
-                                        className: _.infoFilledIcon
+                                        className: d.infoFilledIcon
                                     }),
-                                    (0, i.jsx)(s.Text, {
-                                        className: _.tooltipText,
+                                    (0, r.jsx)(s.Text, {
+                                        className: d.tooltipText,
                                         variant: 'text-sm/normal',
-                                        children: d.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CHECK_SPAM
+                                        children: c.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CHECK_SPAM
                                     })
                                 ]
                             })
@@ -123,9 +123,9 @@ function f(e) {
         ]
     });
 }
-function h() {
+function f() {
     (0, s.openModalLazy)(async () => {
         let { QuestsRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 669041));
-        return (t) => (0, i.jsx)(e, { ...t });
+        return (t) => (0, r.jsx)(e, { ...t });
     });
 }

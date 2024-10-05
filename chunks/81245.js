@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(442837),
     i = n(987170),
     a = n(594174),
-    o = n(111361),
-    s = n(474936);
+    s = n(111361),
+    o = n(474936);
 let l = (0, i.Z)({
     id: '2024-08_premium_user_profile_upsell_desktop',
     label: 'User Profile Upsell',
@@ -25,7 +25,7 @@ let l = (0, i.Z)({
     ]
 });
 function u(e) {
-    let t = o.ZP.isPremium(a.default.getCurrentUser(), s.p9.TIER_2);
+    let t = s.ZP.isPremium(a.default.getCurrentUser(), o.p9.TIER_2);
     return l.getCurrentConfig(
         { location: e },
         {
@@ -36,7 +36,7 @@ function u(e) {
 }
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, r.e7)([a.default], () => o.ZP.isPremium(a.default.getCurrentUser(), s.p9.TIER_2));
+        n = (0, r.e7)([a.default], () => s.ZP.isPremium(a.default.getCurrentUser(), o.p9.TIER_2));
     return l.useExperiment(
         { location: e },
         {

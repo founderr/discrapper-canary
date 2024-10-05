@@ -2,21 +2,21 @@ n.d(t, {
     v: function () {
         return s;
     }
-});
-var r = n(47120);
-var i = n(729594);
-let a = new Set(n(821445)),
-    o = {
+}),
+    n(47120);
+var r = n(729594);
+let i = new Set(n(821445)),
+    a = {
         'github.com': RegExp('/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*'),
         'bitbucket.org': RegExp('/downloads\\S*/[^/]*'),
         'gitlab.com': RegExp('/downloads\\S*/[^/]*')
     };
 function s(e) {
     var t;
-    let { pathname: n, hostname: r } = i.parse(e);
-    if (null == r) return null;
-    let s = o[r];
-    if ((null != s && null != n && !s.test(n)) || null == n) return null;
+    let { pathname: n, hostname: s } = r.parse(e);
+    if (null == s) return null;
+    let o = a[s];
+    if ((null != o && null != n && !o.test(n)) || null == n) return null;
     let l = n;
     try {
         l = decodeURIComponent(n);
@@ -40,5 +40,5 @@ function s(e) {
     let _ = c.split('.');
     if (_.length < 2) return null;
     let E = null === (t = _.pop()) || void 0 === t ? void 0 : t.toLowerCase();
-    return null != E && a.has(E) ? E : null;
+    return null != E && i.has(E) ? E : null;
 }

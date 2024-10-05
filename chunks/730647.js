@@ -1,45 +1,45 @@
 n.d(t, {
     f: function () {
-        return d;
+        return c;
     },
     l: function () {
-        return _;
+        return d;
     }
-});
-var r = n(411104);
-var i = n(735250),
-    a = n(470079),
+}),
+    n(411104);
+var r = n(735250),
+    i = n(470079),
     o = n(399606),
-    s = n(38618),
+    u = n(38618),
     l = n(423117),
-    u = n(289393);
-let c = a.createContext(void 0);
-function d(e) {
-    let t = a.useContext(c);
+    s = n(289393);
+let a = i.createContext(void 0);
+function c(e) {
+    let t = i.useContext(a);
     if (null == t) throw Error(''.concat(null != e ? e : 'useGroupListingsFetchContext', ' must be used within a GroupListingsFetchContextProvider'));
     let { listingsLoaded: n, fetchGroupListingsForGuild: r } = t;
     return r(), n;
 }
-function _(e) {
-    let { guildId: t, children: n, refetchOnMount: r, includeSoftDeleted: d, countryCode: _, dontFetchWhileTrue: E } = e,
-        f = (0, o.e7)([s.Z], () => s.Z.isConnected()),
-        h = (0, o.e7)([u.Z], () => (null != t ? u.Z.getSubscriptionGroupListingsForGuildFetchState(t) : u.M.FETCHED)),
-        p = a.useRef(r),
-        m = a.useCallback(() => {
+function d(e) {
+    let { guildId: t, children: n, refetchOnMount: c, includeSoftDeleted: d, countryCode: _, dontFetchWhileTrue: E } = e,
+        f = (0, o.e7)([u.Z], () => u.Z.isConnected()),
+        I = (0, o.e7)([s.Z], () => (null != t ? s.Z.getSubscriptionGroupListingsForGuildFetchState(t) : s.M.FETCHED)),
+        S = i.useRef(c),
+        T = i.useCallback(() => {
             if (null == t || !f || !0 === E) return;
-            let e = u.Z.getSubscriptionGroupListingsForGuildFetchState(t);
-            (p.current || e === u.M.NOT_FETCHED) &&
-                ((p.current = !1),
+            let e = s.Z.getSubscriptionGroupListingsForGuildFetchState(t);
+            (S.current || e === s.M.NOT_FETCHED) &&
+                ((S.current = !1),
                 l.FP(t, {
                     includeSoftDeleted: d,
                     countryCode: _
                 }));
         }, [f, t, d, _, E]),
-        I = a.useMemo(() => h === u.M.FETCHED && !0 !== p.current, [h, p]);
-    return (0, i.jsx)(c.Provider, {
+        C = i.useMemo(() => I === s.M.FETCHED && !0 !== S.current, [I, S]);
+    return (0, r.jsx)(a.Provider, {
         value: {
-            listingsLoaded: I,
-            fetchGroupListingsForGuild: m
+            listingsLoaded: C,
+            fetchGroupListingsForGuild: T
         },
         children: n
     });

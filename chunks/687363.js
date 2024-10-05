@@ -20,40 +20,40 @@ function a(e) {
     (a.prototype.test = function (e, t, n) {
         var i = e.bitLength(),
             a = r.mont(e),
-            o = new r(1).toRed(a);
+            s = new r(1).toRed(a);
         !t && (t = Math.max(1, (i / 48) | 0));
-        for (var s = e.subn(1), l = 0; !s.testn(l); l++);
-        for (var u = e.shrn(l), c = s.toRed(a), d = !0; t > 0; t--) {
-            var _ = this._randrange(new r(2), s);
-            n && n(_);
-            var E = _.toRed(a).redPow(u);
-            if (0 !== E.cmp(o) && 0 !== E.cmp(c)) {
-                for (var f = 1; f < l; f++) {
-                    if (0 === (E = E.redSqr()).cmp(o)) return !1;
-                    if (0 === E.cmp(c)) break;
+        for (var o = e.subn(1), l = 0; !o.testn(l); l++);
+        for (var u = e.shrn(l), c = o.toRed(a); t > 0; t--) {
+            var d = this._randrange(new r(2), o);
+            n && n(d);
+            var _ = d.toRed(a).redPow(u);
+            if (0 !== _.cmp(s) && 0 !== _.cmp(c)) {
+                for (var E = 1; E < l; E++) {
+                    if (0 === (_ = _.redSqr()).cmp(s)) return !1;
+                    if (0 === _.cmp(c)) break;
                 }
-                if (f === l) return !1;
+                if (E === l) return !1;
             }
         }
-        return d;
+        return !0;
     }),
     (a.prototype.getDivisor = function (e, t) {
         var n = e.bitLength(),
             i = r.mont(e),
             a = new r(1).toRed(i);
         !t && (t = Math.max(1, (n / 48) | 0));
-        for (var o = e.subn(1), s = 0; !o.testn(s); s++);
-        for (var l = e.shrn(s), u = o.toRed(i); t > 0; t--) {
-            var c = this._randrange(new r(2), o),
+        for (var s = e.subn(1), o = 0; !s.testn(o); o++);
+        for (var l = e.shrn(o), u = s.toRed(i); t > 0; t--) {
+            var c = this._randrange(new r(2), s),
                 d = e.gcd(c);
             if (0 !== d.cmpn(1)) return d;
             var _ = c.toRed(i).redPow(l);
             if (0 !== _.cmp(a) && 0 !== _.cmp(u)) {
-                for (var E = 1; E < s; E++) {
+                for (var E = 1; E < o; E++) {
                     if (0 === (_ = _.redSqr()).cmp(a)) return _.fromRed().subn(1).gcd(e);
                     if (0 === _.cmp(u)) break;
                 }
-                if (E === s) return (_ = _.redSqr()).fromRed().subn(1).gcd(e);
+                if (E === o) return (_ = _.redSqr()).fromRed().subn(1).gcd(e);
             }
         }
         return !1;

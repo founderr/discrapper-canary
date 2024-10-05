@@ -1,6 +1,6 @@
 n.r(t);
-var r = n(540379);
-var i = {};
+var r = n(540379),
+    i = {};
 for (var a in r)
     'default' !== a &&
         (i[a] = function (e) {

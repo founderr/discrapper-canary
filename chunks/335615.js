@@ -15,8 +15,8 @@ var i = n(735250),
     u = n(924826),
     d = n(873546),
     h = n(442837),
-    m = n(902704),
-    p = n(481060),
+    p = n(902704),
+    m = n(481060),
     _ = n(239091),
     f = n(941028),
     E = n(144144),
@@ -78,12 +78,12 @@ let K = V.ZP.getEnableHardwareAcceleration(),
     };
 class J extends s.Component {
     shouldComponentUpdate(e) {
-        return !(0, m.Z)(this.props, e, ['channelId']);
+        return !(0, p.Z)(this.props, e, ['channelId']);
     }
     render() {
-        let { colorString: e, colorRoleName: t, isOwner: n, nick: s, user: a, currentUser: l, activities: r, applicationStream: o, status: c, channel: u, guildId: h, isTyping: m, isMobileOnline: _, premiumSince: f, ...E } = this.props,
+        let { colorString: e, colorRoleName: t, isOwner: n, nick: s, user: a, currentUser: l, activities: r, applicationStream: o, status: c, channel: u, guildId: h, isTyping: p, isMobileOnline: _, premiumSince: f, ...E } = this.props,
             C = null != f ? new Date(f) : null;
-        return (0, i.jsx)(p.Popout, {
+        return (0, i.jsx)(m.Popout, {
             preload: () =>
                 (0, O.Z)(a, {
                     channelId: u.id,
@@ -93,8 +93,8 @@ class J extends s.Component {
             position: d.tq ? 'window_center' : 'left',
             spacing: 16,
             onShiftClick: this.handleShiftClick,
-            children: (d, p) => {
-                let { isShown: f } = p;
+            children: (d, m) => {
+                let { isShown: f } = m;
                 return (0, i.jsx)(g.Z, {
                     className: z.member,
                     onContextMenu: this.renderUserContextMenu,
@@ -109,7 +109,7 @@ class J extends s.Component {
                     premiumSince: C,
                     colorString: e,
                     colorRoleName: t,
-                    isTyping: m,
+                    isTyping: p,
                     channel: u,
                     guildId: h,
                     isMobile: _,
@@ -206,7 +206,7 @@ let Q = s.memo((e) => {
             : (0, i.jsxs)(M.Z, {
                   className: z.membersGroup,
                   children: [
-                      (0, i.jsx)(p.HiddenVisually, {
+                      (0, i.jsx)(m.HiddenVisually, {
                           children: W.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                               title: n,
                               count: s
@@ -275,16 +275,16 @@ class et extends s.Component {
     }
     render() {
         let { groups: e, listId: t, channel: n } = this.props;
-        return (0, i.jsx)(p.FocusJumpSection, {
+        return (0, i.jsx)(m.FocusJumpSection, {
             children: (s) =>
                 (0, i.jsx)(R.FG, {
                     children: (a) =>
                         (0, i.jsx)('aside', {
                             className: l()(z.membersWrap, z.hiddenMembers),
                             'aria-labelledby': a,
-                            children: (0, i.jsx)(p.HeadingLevel, {
-                                component: (0, i.jsx)(p.HiddenVisually, {
-                                    children: (0, i.jsx)(p.H, {
+                            children: (0, i.jsx)(m.HeadingLevel, {
+                                component: (0, i.jsx)(m.HiddenVisually, {
+                                    children: (0, i.jsx)(m.H, {
                                         id: a,
                                         children: W.Z.Messages.MEMBERS_LIST_LANDMARK_LABEL.format({ channel: n.name })
                                     })
@@ -293,7 +293,7 @@ class et extends s.Component {
                                     children: (n) => {
                                         let { ref: a, role: r, ...o } = n;
                                         return (0, i.jsx)(
-                                            p.List,
+                                            m.List,
                                             {
                                                 innerRole: r,
                                                 innerAriaLabel: W.Z.Messages.MEMBERS,
@@ -373,7 +373,7 @@ class et extends s.Component {
                     l = this.getRowProps(e);
                 if (null != l) {
                     if (l.type === D.so.MEMBER && 'user' in l) {
-                        let { colorString: e, colorRoleId: t, user: n, status: r, isOwner: o, isMobileOnline: c, nick: u, activities: d, applicationStream: h, premiumSince: m } = l;
+                        let { colorString: e, colorRoleId: t, user: n, status: r, isOwner: o, isMobileOnline: c, nick: u, activities: d, applicationStream: h, premiumSince: p } = l;
                         return (0, i.jsx)(
                             Q,
                             {
@@ -387,7 +387,7 @@ class et extends s.Component {
                                 applicationStream: h,
                                 channel: a,
                                 guildId: a.guild_id,
-                                premiumSince: m,
+                                premiumSince: p,
                                 isMobileOnline: c,
                                 index: s
                             },
@@ -496,8 +496,8 @@ function en(e) {
         o = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)),
         {
             rows: d,
-            groups: m,
-            version: p,
+            groups: p,
+            version: m,
             updateMaxRowSeen: _
         } = (0, Z.H)({
             memberStoreProps: o,
@@ -561,8 +561,8 @@ function en(e) {
                 children: (0, i.jsx)(et, {
                     ...e,
                     ...o,
-                    version: p,
-                    groups: m,
+                    version: m,
+                    groups: p,
                     rows: d,
                     listRef: f,
                     updateMaxContentFeedRowSeen: _

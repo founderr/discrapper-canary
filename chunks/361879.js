@@ -1,11 +1,11 @@
 var r = n(814033),
     i = n(685053),
     a = i.assert;
-function o(e, t) {
-    if (e instanceof o) return e;
+function s(e, t) {
+    if (e instanceof s) return e;
     !this._importDER(e, t) && (a(e.r && e.s, 'Signature without r or s'), (this.r = new r(e.r, 16)), (this.s = new r(e.s, 16)), void 0 === e.recoveryParam ? (this.recoveryParam = null) : (this.recoveryParam = e.recoveryParam));
 }
-function s() {
+function o() {
     this.place = 0;
 }
 function l(e, t) {
@@ -13,8 +13,8 @@ function l(e, t) {
     if (!(128 & n)) return n;
     var r = 15 & n;
     if (0 === r || r > 4) return !1;
-    for (var i = 0, a = 0, o = t.place; a < r; a++, o++) (i <<= 8), (i |= e[o]), (i >>>= 0);
-    return !(i <= 127) && ((t.place = o), i);
+    for (var i = 0, a = 0, s = t.place; a < r; a++, s++) (i <<= 8), (i |= e[s]), (i >>>= 0);
+    return !(i <= 127) && ((t.place = s), i);
 }
 function u(e) {
     for (var t = 0, n = e.length - 1; !e[t] && !(128 & e[t + 1]) && t < n; ) t++;
@@ -29,17 +29,17 @@ function c(e, t) {
     for (e.push(128 | n); --n; ) e.push((t >>> (n << 3)) & 255);
     e.push(t);
 }
-(e.exports = o),
-    (o.prototype._importDER = function (e, t) {
+(e.exports = s),
+    (s.prototype._importDER = function (e, t) {
         e = i.toArray(e, t);
-        var n = new s();
+        var n = new o();
         if (48 !== e[n.place++]) return !1;
         var a = l(e, n);
         if (!1 === a || a + n.place !== e.length || 2 !== e[n.place++]) return !1;
-        var o = l(e, n);
-        if (!1 === o) return !1;
-        var u = e.slice(n.place, o + n.place);
-        if (((n.place += o), 2 !== e[n.place++])) return !1;
+        var s = l(e, n);
+        if (!1 === s) return !1;
+        var u = e.slice(n.place, s + n.place);
+        if (((n.place += s), 2 !== e[n.place++])) return !1;
         var c = l(e, n);
         if (!1 === c || e.length !== c + n.place) return !1;
         var d = e.slice(n.place, c + n.place);
@@ -53,13 +53,13 @@ function c(e, t) {
         }
         return (this.r = new r(u)), (this.s = new r(d)), (this.recoveryParam = null), !0;
     }),
-    (o.prototype.toDER = function (e) {
+    (s.prototype.toDER = function (e) {
         var t = this.r.toArray(),
             n = this.s.toArray();
         for (128 & t[0] && (t = [0].concat(t)), 128 & n[0] && (n = [0].concat(n)), t = u(t), n = u(n); !n[0] && !(128 & n[1]); ) n = n.slice(1);
         var r = [2];
         c(r, t.length), (r = r.concat(t)).push(2), c(r, n.length);
         var a = r.concat(n),
-            o = [48];
-        return c(o, a.length), (o = o.concat(a)), i.encode(o, e);
+            s = [48];
+        return c(s, a.length), (s = s.concat(a)), i.encode(s, e);
     });

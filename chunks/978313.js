@@ -1,74 +1,74 @@
-n.d(a, {
+t.d(n, {
     Z: function () {
-        return x;
+        return p;
     }
 }),
-    n(47120);
-var t = n(735250),
-    i = n(470079),
-    r = n(120356),
-    o = n.n(r),
-    l = n(657707),
-    s = n(793030),
-    c = n(692547),
-    d = n(481060),
-    u = n(962250),
-    m = n(810568),
-    p = n(221370),
-    g = n(689938),
-    _ = n(51527),
-    f = n(110367);
-function x(e) {
-    let { detectedGame: a, trackAction: n } = e,
-        [r, x] = i.useState((null == a ? void 0 : a.summaryLocalized) != null),
-        [h, v] = i.useState(!0),
-        [I, E] = i.useState(!1),
-        A = i.useRef(null),
-        { width: C, height: b } = (0, u.b)();
-    return (i.useEffect(() => {
-        let e = A.current;
-        null != e && E(e.scrollHeight - e.clientHeight > 1);
-    }, [A, C, b]),
-    null == a.summary)
+    t(47120);
+var a = t(735250),
+    r = t(470079),
+    s = t(120356),
+    i = t.n(s),
+    o = t(657707),
+    l = t(793030),
+    c = t(692547),
+    d = t(481060),
+    u = t(962250),
+    _ = t(810568),
+    E = t(221370),
+    m = t(689938),
+    I = t(51527),
+    A = t(110367);
+function p(e) {
+    let { detectedGame: n, trackAction: t } = e,
+        [s, p] = r.useState((null == n ? void 0 : n.summaryLocalized) != null),
+        [g, f] = r.useState(!0),
+        [T, O] = r.useState(!1),
+        N = r.useRef(null),
+        { width: R, height: h } = (0, u.b)();
+    return (r.useEffect(() => {
+        let e = N.current;
+        null != e && O(e.scrollHeight - e.clientHeight > 1);
+    }, [N, R, h]),
+    null == n.summary)
         ? null
-        : (0, t.jsxs)('div', {
-              className: o()(_.column, _.gapSm),
+        : (0, a.jsxs)('div', {
+              className: i()(I.column, I.gapSm),
               children: [
-                  null != a.summaryLocalized &&
-                      (0, t.jsxs)('div', {
-                          className: o()(_.row, _.gapSm),
+                  null != n.summaryLocalized &&
+                      (0, a.jsxs)('div', {
+                          className: i()(I.row, I.gapSm),
                           children: [
-                              (0, t.jsx)(l.SxY, {
+                              (0, a.jsx)(o.SxY, {
                                   color: c.Z.colors.HEADER_SECONDARY,
                                   size: 'xs'
                               }),
-                              (0, t.jsx)(s.xv, {
+                              (0, a.jsx)(l.xv, {
                                   variant: 'text-xs/medium',
                                   color: 'header-secondary',
-                                  children: r ? g.Z.Messages.MACHINE_TRANSLATED_TRANSLATED.format({ onShowOriginal: () => x(!1) }) : g.Z.Messages.MACHINE_TRANSLATED_ORIGINAL.format({ onShowTranslated: () => x(!0) })
+                                  children: s ? m.Z.Messages.MACHINE_TRANSLATED_TRANSLATED.format({ onShowOriginal: () => p(!1) }) : m.Z.Messages.MACHINE_TRANSLATED_ORIGINAL.format({ onShowTranslated: () => p(!0) })
                               })
                           ]
                       }),
-                  (0, t.jsx)(s.xv, {
-                      ref: A,
-                      lineClamp: h ? 8 : void 0,
+                  (0, a.jsx)(l.xv, {
+                      ref: N,
+                      lineClamp: g ? 8 : void 0,
                       variant: 'text-sm/normal',
-                      children: r ? a.summaryLocalized : a.summary
+                      children: s ? n.summaryLocalized : n.summary
                   }),
-                  (I || !h) &&
-                      (0, t.jsx)(d.Clickable, {
-                          className: _.clickable,
+                  (T || !g) &&
+                      (0, a.jsx)(d.Clickable, {
+                          className: I.clickable,
                           onClick: () => {
-                              n(h ? m.as.ShowMore : m.as.ShowLess), v(!h);
+                              t(g ? _.as.ShowMore : _.as.ShowLess), f(!g);
                           },
-                          children: (0, t.jsx)(s.xv, {
+                          children: (0, a.jsx)(l.xv, {
                               variant: 'text-sm/semibold',
-                              children: h ? g.Z.Messages.EXPANDABLE_TEXT_SHOW_MORE : g.Z.Messages.EXPANDABLE_TEXT_SHOW_LESS
+                              children: g ? m.Z.Messages.EXPANDABLE_TEXT_SHOW_MORE : m.Z.Messages.EXPANDABLE_TEXT_SHOW_LESS
                           })
                       }),
-                  (0, t.jsx)(p.Z, {
-                      className: f.platforms,
-                      detectedGame: a
+                  (0, a.jsx)(E.Z, {
+                      className: A.platforms,
+                      detectedGame: n
                   })
               ]
           });

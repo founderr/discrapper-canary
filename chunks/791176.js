@@ -9,18 +9,18 @@ var i = n(735250),
     u = n(422559),
     d = n(430824),
     h = n(233608),
-    m = n(776767),
-    p = n(351127),
+    p = n(776767),
+    m = n(351127),
     _ = n(50493),
     f = n(981631),
     E = n(689938),
     g = n(284609);
 function C(e) {
     var t, n;
-    let { permission: s, roleIds: a, guild: h, specMap: m } = e,
+    let { permission: s, roleIds: a, guild: h, specMap: p } = e,
         _ = f.Plq[s],
-        C = null !== (n = null === (t = m[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(_),
-        I = p._o.has(_),
+        C = null !== (n = null === (t = p[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(_),
+        I = m._o.has(_),
         T = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
     return (0, i.jsx)(o.Tooltip, {
         'aria-label': E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
@@ -75,8 +75,8 @@ function C(e) {
 t.Z = s.memo(function (e) {
     let { member: t, onNavigate: n } = e,
         a = (0, r.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]),
-        c = (0, p.B2)(t.userId, t.guildId, p.Qn),
-        u = (0, p.B2)(t.userId, t.guildId, p.pd),
+        c = (0, m.B2)(t.userId, t.guildId, m.Qn),
+        u = (0, m.B2)(t.userId, t.guildId, m.pd),
         I = Object.keys(c).length,
         T = Object.keys(u).length,
         x = s.useMemo(() => (null != a ? h.Z.getGuildPermissionSpecMap(a) : null), [a]),
@@ -98,7 +98,7 @@ t.Z = s.memo(function (e) {
                     S.forEach((t) => {
                         t.permissions.forEach((t) => {
                             let n = t.flag,
-                                s = p.pd.find((e) => f.Plq[e] === n);
+                                s = m.pd.find((e) => f.Plq[e] === n);
                             if (null == s) return;
                             let l = c[s];
                             if (null != l)
@@ -148,8 +148,8 @@ t.Z = s.memo(function (e) {
                       })
                   ]
               }),
-              children: (0, i.jsx)(m.WM, {
-                  children: (0, i.jsx)(m._2, {
+              children: (0, i.jsx)(p.WM, {
+                  children: (0, i.jsx)(p._2, {
                       description: (0, i.jsx)('div', {
                           className: g.permissionsContainer,
                           children: v

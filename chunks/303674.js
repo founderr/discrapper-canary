@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
     a = n(481060),
-    o = n(311819),
-    s = n(572004),
+    s = n(311819),
+    o = n(572004),
     l = n(591759),
     u = n(135431),
     c = n(621853),
@@ -23,7 +23,7 @@ function E(e) {
     if (null == E || !(0, u.Eb)(E)) return null;
     let { customInstallUrl: f } = E,
         h = null == f || l.Z.isDiscordUrl(f) ? a.PlusSmallIcon : a.LinkExternalSmallIcon;
-    return s.wS
+    return o.wS
         ? (0, r.jsx)(a.Popout, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -36,7 +36,7 @@ function E(e) {
                           children: (0, r.jsx)(a.MenuItem, {
                               id: 'copy',
                               label: _.Z.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
-                              action: () => (0, s.JG)((0, o.J)(E))
+                              action: () => (0, o.JG)((0, s.J)(E))
                           })
                       })
                   });

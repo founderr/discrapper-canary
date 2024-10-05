@@ -1,7 +1,7 @@
 var r = n(67867),
-    i = n(96403),
+    o = n(96403),
     a = n(952256),
-    o = i([].reverse),
+    i = o([].reverse),
     s = [1, 2];
 r(
     {
@@ -11,7 +11,7 @@ r(
     },
     {
         reverse: function () {
-            return a(this) && (this.length = this.length), o(this);
+            return a(this) && (this.length = this.length), i(this);
         }
     }
 );

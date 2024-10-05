@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(331595),
     a = n(249849);
-let o = ['#57595f', '#847d8b', '#d1cdd5'],
-    s = [0, 0.12, 0.6],
+let s = ['#57595f', '#847d8b', '#d1cdd5'],
+    o = [0, 0.12, 0.6],
     l = [
         {
             base: 10,
@@ -26,9 +26,9 @@ let o = ['#57595f', '#847d8b', '#d1cdd5'],
     u = (e) => {
         let { width: t = 24, height: n = 24, primaryTintColor: u, ...c } = e,
             { primaryColorsTransformed: d } = (0, a.s)({
-                primaryBaseColors: o,
+                primaryBaseColors: s,
                 primaryTintColor: u,
-                primaryTintLuminances: s,
+                primaryTintLuminances: o,
                 primaryLuminanceWeights: l
             });
         return (0, r.jsxs)('svg', {

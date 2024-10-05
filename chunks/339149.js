@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return b;
+        return A;
     }
 }),
     n(47120),
@@ -95,7 +95,7 @@ let v = {
             })
     }
 };
-class Z extends r.PureComponent {
+class T extends r.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
         if (e.type === E.vxO.UPDATING || e.type === E.vxO.REPAIRING || e.type === E.vxO.INSTALLING) {
@@ -132,7 +132,7 @@ class Z extends r.PureComponent {
             });
     }
 }
-class T extends (i = r.PureComponent) {
+class Z extends (i = r.PureComponent) {
     componentWillAppear(e) {
         this.state.animationScale.setValue(1), e();
     }
@@ -152,7 +152,7 @@ class T extends (i = r.PureComponent) {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
         return null == e || null == t
             ? N.Z.Messages.LIBRARY
-            : (0, l.jsx)(Z, {
+            : (0, l.jsx)(T, {
                   application: e,
                   state: t,
                   isPaused: n
@@ -193,8 +193,8 @@ class T extends (i = r.PureComponent) {
             });
     }
 }
-x(T, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
-function b(e, t) {
+x(Z, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
+function A(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,
             r = t.getState(i, l);
@@ -203,7 +203,7 @@ function b(e, t) {
 }
 t.Z = c.ZP.connectStores([g.Z, m.Z, p.Z], () => {
     let e = g.Z.activeItems,
-        t = b(e, m.Z),
+        t = A(e, m.Z),
         { total: n, progress: i } = C.lK(t);
     return {
         percent: C.xI(i, n),
@@ -216,7 +216,7 @@ t.Z = c.ZP.connectStores([g.Z, m.Z, p.Z], () => {
     return t
         ? (0, l.jsx)(d.W, {
               component: r.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(T, { ...n }) : null
+              children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(Z, { ...n }) : null
           })
-        : (0, l.jsx)(T, { ...n });
+        : (0, l.jsx)(Z, { ...n });
 });

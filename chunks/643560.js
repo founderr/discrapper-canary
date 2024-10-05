@@ -14,12 +14,12 @@ var i = n(735250),
     u = n(683818),
     d = n(689938);
 function h(e) {
-    let { entry: t, onSelect: h, closePopout: m, hideEditButton: p = !1 } = e,
+    let { entry: t, onSelect: h, closePopout: p, hideEditButton: m = !1 } = e,
         { isEntryAdmin: _, canEdit: f, canRemove: E } = (0, u.Z)(t),
         g = (0, r.Z)({
             id: t.guildId,
             label: d.Z.Messages.COPY_ID_GUILD,
-            onSuccess: m
+            onSuccess: p
         });
     s.useEffect(() => {
         !f && !E && null == g && (0, l.Zy)();
@@ -28,7 +28,7 @@ function h(e) {
         c.kx(t.channelId, t.guildId);
     };
     function I() {
-        (0, l.Zy)(), null == m || m();
+        (0, l.Zy)(), null == p || p();
     }
     return (0, i.jsxs)(a.Menu, {
         navId: 'guild-entry-context',
@@ -38,7 +38,7 @@ function h(e) {
         children: [
             (0, i.jsxs)(a.MenuGroup, {
                 children: [
-                    f && !p
+                    f && !m
                         ? (0, i.jsx)(a.MenuItem, {
                               id: 'update-entry',
                               label: d.Z.Messages.HUB_ENTRY_UPDATE,

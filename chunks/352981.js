@@ -1,6 +1,6 @@
 n.d(t, {
     p: function () {
-        return o;
+        return s;
     },
     y: function () {
         return a;
@@ -15,7 +15,7 @@ function a(e, t) {
     });
     return n;
 }
-function o(e, t) {
+function s(e, t) {
     let { enabled: n } = r.c.getCurrentConfig({
         guildId: null != e ? e : i.lds,
         location: t

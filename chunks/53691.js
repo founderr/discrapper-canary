@@ -7,15 +7,15 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    o = n(212433),
-    s = n(481060),
+    s = n(212433),
+    o = n(481060),
     l = n(436774),
     u = n(197115),
     c = n(474936),
     d = n(422455);
 function _(e) {
-    let { showUpsell: t, text: n, textVariant: i, button: _, buttonAnalyticsObject: E, className: f, onSubscribeModalClose: h, showShadow: p = !0, position: m = 'floating' } = e,
-        I = (0, s.useSpring)({
+    let { showUpsell: t, text: n, textVariant: i, button: _, buttonAnalyticsObject: E, className: f, onSubscribeModalClose: h, showShadow: p = !0, position: I = 'floating' } = e,
+        m = (0, o.useSpring)({
             transform: t ? 'translateY(0%)' : 'translateY(120%)',
             opacity: t ? 1 : 0,
             config: {
@@ -23,23 +23,23 @@ function _(e) {
                 friction: 14
             }
         });
-    return (0, r.jsxs)(o.animated.div, {
-        style: { ...I },
+    return (0, r.jsxs)(s.animated.div, {
+        style: { ...m },
         className: a()(
             d.upsellContainer,
             {
                 [d.upsellContainerShadow]: p,
-                [d.upsellContainerFloating]: 'floating' === m,
-                [d.upsellContainerInline]: 'inline' === m
+                [d.upsellContainerFloating]: 'floating' === I,
+                [d.upsellContainerInline]: 'inline' === I
             },
             f
         ),
         children: [
-            (0, r.jsx)(s.NitroWheelIcon, {
+            (0, r.jsx)(o.NitroWheelIcon, {
                 size: 'md',
                 color: l.JX.PREMIUM_TIER_2
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: null != i ? i : 'text-sm/medium',
                 color: 'header-primary',
                 className: d.upsellText,

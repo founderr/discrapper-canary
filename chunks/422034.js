@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(442837),
+    s = n.n(a),
+    o = n(442837),
     l = n(481060),
     u = n(518950),
     c = n(357355),
@@ -19,7 +19,7 @@ var r = n(735250),
     E = n(314188);
 function f(e) {
     let { smallerText: t, className: n, textColor: a } = e,
-        u = (0, s.e7)([c.Z], () => c.Z.affinities.slice(0, 3).reverse()),
+        u = (0, o.e7)([c.Z], () => c.Z.affinities.slice(0, 3).reverse()),
         f = u.map((e, t) =>
             (0, r.jsx)(
                 h,
@@ -32,7 +32,7 @@ function f(e) {
             )
         ),
         p = (e) => (null != e.globalName ? e.globalName : e.username),
-        m = i.useMemo(
+        I = i.useMemo(
             () =>
                 3 === u.length
                     ? _.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({ username: p(u[2]) })
@@ -46,46 +46,46 @@ function f(e) {
                         : '',
             [u]
         );
-    if (0 === u.length) return null;
-    function I() {
-        return t
-            ? (0, r.jsx)(l.Text, {
-                  variant: 'text-lg/medium',
-                  color: a,
-                  children: m
-              })
-            : (0, r.jsx)(l.Heading, {
-                  variant: 'heading-xl/medium',
-                  color: a,
-                  children: m
-              });
-    }
-    return (0, r.jsxs)('div', {
-        className: o()(E.container, n),
-        children: [
-            (0, r.jsx)('div', {
-                className: E.iconContainer,
-                children: f
-            }),
-            (0, r.jsx)('div', {
-                className: E.textContainer,
-                children: (0, r.jsx)(I, {})
-            })
-        ]
-    });
+    return 0 === u.length
+        ? null
+        : (0, r.jsxs)('div', {
+              className: s()(E.container, n),
+              children: [
+                  (0, r.jsx)('div', {
+                      className: E.iconContainer,
+                      children: f
+                  }),
+                  (0, r.jsx)('div', {
+                      className: E.textContainer,
+                      children: (0, r.jsx)(function () {
+                          return t
+                              ? (0, r.jsx)(l.Text, {
+                                    variant: 'text-lg/medium',
+                                    color: a,
+                                    children: I
+                                })
+                              : (0, r.jsx)(l.Heading, {
+                                    variant: 'heading-xl/medium',
+                                    color: a,
+                                    children: I
+                                });
+                      }, {})
+                  })
+              ]
+          });
 }
 function h(e) {
     let { affinity: t, applyMask: n, size: i } = e,
-        { avatarSrc: a, eventHandlers: s } = (0, u.Z)({
+        { avatarSrc: a, eventHandlers: o } = (0, u.Z)({
             user: t,
             size: i,
             animateOnHover: !0
         });
     return (0, r.jsx)(l.Avatar, {
-        className: o()(E.icon, { [E.mask]: n }),
+        className: s()(E.icon, { [E.mask]: n }),
         src: a,
         'aria-label': t.username,
         size: i,
-        ...s
+        ...o
     });
 }

@@ -29,22 +29,22 @@ function p(e) {
     let { invite: t, onAcceptInvite: n, disableUser: p = !1 } = e;
     if (null == t) return null;
     let g = null != t.guild ? new o.ZP(t.guild) : null,
-        m = null != t.channel ? (0, a.jD)(t.channel) : null,
-        f = null != t.target_application ? new i.Z(t.target_application) : null,
+        f = null != t.channel ? (0, a.jD)(t.channel) : null,
+        m = null != t.target_application ? new i.Z(t.target_application) : null,
         I = p || null == t.inviter ? null : new l.Z(t.inviter),
         N = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != g && g.hasFeature(d.oNc.COMMUNITY))) && null != I && (0, c.WT)(t),
         T = E(t),
-        x = {
+        A = {
             invite: t,
             user: I,
             guild: g,
-            channel: m,
-            application: f
+            channel: f,
+            application: m
         };
     return (0, c.JI)(t)
         ? (0, s.jsx)(u.Z, {
               invite: t,
-              channel: m,
+              channel: f,
               isSubmitting: T,
               onAcceptInvite: n
           })
@@ -52,21 +52,21 @@ function p(e) {
               className: h.container,
               children: [
                   (0, s.jsx)(c.GB, {
-                      application: f,
+                      application: m,
                       guild: g,
                       user: N || (0, c.X7)(t) ? I : null
                   }),
                   (0, c.X7)(t)
                       ? null
                       : (0, s.jsx)(c.jq, {
-                            ...x,
+                            ...A,
                             showBigUserIcon: N
                         }),
                   (0, s.jsx)(c.UM, {
-                      ...x,
+                      ...A,
                       showBigUserIcon: N
                   }),
-                  (0, s.jsx)(c.V6, { ...x }),
+                  (0, s.jsx)(c.V6, { ...A }),
                   (0, s.jsx)(r.Button, {
                       onClick: n,
                       submitting: T,

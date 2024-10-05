@@ -1,27 +1,27 @@
 var r,
-    i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = !1;
-function l(e) {
-    let { isRegistered: t } = e;
-    s = t;
-}
-class u extends (r = i.ZP.Store) {
+    i,
+    a,
+    s,
+    o = n(442837),
+    l = n(570140);
+let u = !1;
+class c extends (s = o.ZP.Store) {
     isProtocolRegistered() {
-        return s;
+        return u;
     }
 }
-o(u, 'displayName', 'SpotifyProtocolStore'), (t.Z = new u(a.Z, { SPOTIFY_SET_PROTOCOL_REGISTERED: l }));
+(a = 'SpotifyProtocolStore'),
+    (i = 'displayName') in (r = c)
+        ? Object.defineProperty(r, i, {
+              value: a,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (r[i] = a),
+    (t.Z = new c(l.Z, {
+        SPOTIFY_SET_PROTOCOL_REGISTERED: function (e) {
+            let { isRegistered: t } = e;
+            u = t;
+        }
+    }));

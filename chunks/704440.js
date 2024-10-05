@@ -1,105 +1,105 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return y;
     }
-});
-var r = n(773603);
-var i = n(47120);
-var a = n(735250),
-    o = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    u = n(913527),
-    c = n.n(u),
-    d = n(235874),
-    _ = n(481060),
-    E = n(37234),
-    f = n(100527),
-    h = n(906732),
-    p = n(626135),
-    m = n(55935),
-    I = n(63063),
-    T = n(281494),
-    g = n(790368),
-    S = n(474936),
-    A = n(981631),
-    v = n(689938),
-    N = n(776222),
-    O = n(751599),
-    R = n(397293),
-    C = n(352175),
-    y = n(90351);
-let L = async (e, t, n) => {
+}),
+    n(773603),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(913527),
+    l = n.n(o),
+    u = n(235874),
+    c = n(481060),
+    d = n(37234),
+    _ = n(100527),
+    E = n(906732),
+    f = n(626135),
+    h = n(55935),
+    p = n(63063),
+    I = n(281494),
+    m = n(790368),
+    T = n(474936),
+    S = n(981631),
+    g = n(689938),
+    A = n(776222),
+    N = n(751599),
+    O = n(397293),
+    R = n(352175),
+    v = n(90351);
+let C = async (e, t, n) => {
         n(!0),
-            await (0, T.Eo)(e)
+            await (0, I.Eo)(e)
                 .then(() => {
-                    t(), (0, E.Ou)();
+                    t(), (0, d.Ou)();
                 })
                 .finally(() => {
                     n(!1);
                 });
     },
-    b = (e) => {
-        let { onClose: t, referralsRemaining: n, recipient: r, analyticsLocations: i, shouldShowBirthdayUX: s } = e,
-            [u, c] = o.useState(!1),
-            d = n - 1;
-        return (0, a.jsxs)('div', {
-            className: N.confirmationContainer,
+    L = (e) => {
+        let { onClose: t, referralsRemaining: n, recipient: a, analyticsLocations: o, shouldShowBirthdayUX: l } = e,
+            [u, d] = i.useState(!1),
+            _ = n - 1;
+        return (0, r.jsxs)('div', {
+            className: A.confirmationContainer,
             children: [
-                (0, a.jsxs)('div', {
-                    className: l()({
-                        [N.confirmationBody]: !s,
-                        [N.confirmationBirthdayBody]: s
+                (0, r.jsxs)('div', {
+                    className: s()({
+                        [A.confirmationBody]: !l,
+                        [A.confirmationBirthdayBody]: l
                     }),
                     children: [
-                        (0, a.jsx)(_.ModalCloseButton, {
+                        (0, r.jsx)(c.ModalCloseButton, {
                             onClick: t,
-                            className: N.closeButton
+                            className: A.closeButton
                         }),
-                        (0, a.jsx)('img', {
+                        (0, r.jsx)('img', {
                             alt: '',
-                            src: s ? R : C,
-                            className: N.confirmationImage
+                            src: l ? O : R,
+                            className: A.confirmationImage
                         }),
-                        (0, a.jsx)(_.Heading, {
+                        (0, r.jsx)(c.Heading, {
                             variant: 'heading-xl/bold',
                             color: 'interactive-active',
-                            className: N.confirmationHeading,
-                            children: v.Z.Messages.SAHRE_NITRO_MODAL_CONFIRMATION_HEADER
+                            className: A.confirmationHeading,
+                            children: g.Z.Messages.SAHRE_NITRO_MODAL_CONFIRMATION_HEADER
                         }),
-                        (0, a.jsx)(_.Text, {
-                            className: N.confirmationBodyCopy,
+                        (0, r.jsx)(c.Text, {
+                            className: A.confirmationBodyCopy,
                             variant: 'text-md/medium',
                             color: 'header-primary',
-                            children: d > 0 ? v.Z.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL.format({ count: d }) : v.Z.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL_LAST_REFERRAL
+                            children: _ > 0 ? g.Z.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL.format({ count: _ }) : g.Z.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL_LAST_REFERRAL
                         }),
-                        (0, a.jsx)('hr', { className: N.confirmationBodySeparator })
+                        (0, r.jsx)('hr', { className: A.confirmationBodySeparator })
                     ]
                 }),
-                (0, a.jsxs)('div', {
-                    className: N.confirmationButtonContainer,
+                (0, r.jsxs)('div', {
+                    className: A.confirmationButtonContainer,
                     children: [
-                        (0, a.jsx)(_.Button, {
-                            className: N.confirmationShareButton,
+                        (0, r.jsx)(c.Button, {
+                            className: A.confirmationShareButton,
                             submitting: u,
                             onClick: () => {
-                                L(r, t, c),
-                                    p.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                        location_stack: i,
-                                        step: S.fz.FLOW_COMPLETED,
-                                        other_user_id: Number(r)
+                                C(a, t, d),
+                                    f.default.track(S.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                        location_stack: o,
+                                        step: T.fz.FLOW_COMPLETED,
+                                        other_user_id: Number(a)
                                     });
                             },
-                            children: v.Z.Messages.SHAER_NITRO_CONFIRMATION_BUTTON_TEXT
+                            children: g.Z.Messages.SHAER_NITRO_CONFIRMATION_BUTTON_TEXT
                         }),
-                        (0, a.jsx)('div', {
-                            className: N.confirmationCancelButtonContainer,
-                            children: (0, a.jsx)(_.Clickable, {
+                        (0, r.jsx)('div', {
+                            className: A.confirmationCancelButtonContainer,
+                            children: (0, r.jsx)(c.Clickable, {
                                 onClick: t,
-                                children: (0, a.jsx)(_.Text, {
+                                children: (0, r.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
-                                    className: N.confirmationCancelCopy,
-                                    children: v.Z.Messages.CANCEL
+                                    className: A.confirmationCancelCopy,
+                                    children: g.Z.Messages.CANCEL
                                 })
                             })
                         })
@@ -109,115 +109,115 @@ let L = async (e, t, n) => {
         });
     };
 function D(e) {
-    let { referralsRemaining: t, channel: n, onClose: r, isResending: i } = e,
-        [s, u] = o.useState(!1),
-        [d, E] = o.useState(!1),
-        T = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null,
-        { analyticsLocations: C } = (0, h.ZP)(f.Z.REFERRAL_TRIALS_POPOUT),
-        { enabled: D } = g.Z.useExperiment({ location: '200c24_1' }, { autoTrackExposure: !0 }),
+    let { referralsRemaining: t, channel: n, onClose: a, isResending: o } = e,
+        [u, d] = i.useState(!1),
+        [I, R] = i.useState(!1),
+        D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null,
+        { analyticsLocations: y } = (0, E.ZP)(_.Z.REFERRAL_TRIALS_POPOUT),
+        { enabled: b } = m.Z.useExperiment({ location: '200c24_1' }, { autoTrackExposure: !0 }),
         M = new Date('2023-06-15T08:00:00-08:00');
-    return null == T
+    return null == D
         ? null
-        : s
-          ? (0, a.jsx)(b, {
-                onClose: r,
+        : u
+          ? (0, r.jsx)(L, {
+                onClose: a,
                 referralsRemaining: t,
-                recipient: T,
-                analyticsLocations: C,
-                shouldShowBirthdayUX: D
+                recipient: D,
+                analyticsLocations: y,
+                shouldShowBirthdayUX: b
             })
-          : (0, a.jsxs)('div', {
-                className: N.generalContainer,
+          : (0, r.jsxs)('div', {
+                className: A.generalContainer,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: N.generalBodyContainer,
+                    (0, r.jsxs)('div', {
+                        className: A.generalBodyContainer,
                         children: [
-                            (0, a.jsx)('img', {
+                            (0, r.jsx)('img', {
                                 alt: '',
-                                src: D ? R : y,
-                                className: N.generalBodyImage
+                                src: b ? O : v,
+                                className: A.generalBodyImage
                             }),
-                            (0, a.jsxs)('div', {
-                                className: N.innerContent,
+                            (0, r.jsxs)('div', {
+                                className: A.innerContent,
                                 children: [
-                                    (0, a.jsx)(_.ModalCloseButton, {
-                                        onClick: r,
-                                        className: N.closeButton
+                                    (0, r.jsx)(c.ModalCloseButton, {
+                                        onClick: a,
+                                        className: A.closeButton
                                     }),
-                                    (0, a.jsx)(_.Heading, {
-                                        className: N.generalHeading,
+                                    (0, r.jsx)(c.Heading, {
+                                        className: A.generalHeading,
                                         variant: 'heading-xl/bold',
-                                        children: i ? v.Z.Messages.SHARE_NITRO_RESEND_TRIAL_HEADER : v.Z.Messages.SHARE_NITRO_MODAL_HEADER
+                                        children: o ? g.Z.Messages.SHARE_NITRO_RESEND_TRIAL_HEADER : g.Z.Messages.SHARE_NITRO_MODAL_HEADER
                                     }),
-                                    (0, a.jsxs)(_.Text, {
-                                        className: N.generalBodyCopy,
+                                    (0, r.jsxs)(c.Text, {
+                                        className: A.generalBodyCopy,
                                         variant: 'text-md/normal',
                                         children: [
-                                            (0, a.jsx)(_.Anchor, {
-                                                className: l()(N.learnMore, { [N.learnMoreResendUnderlinedText]: i }),
-                                                href: I.Z.getArticleURL(A.BhN.SHARE_NITRO_FAQ),
-                                                children: i ? v.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY : v.Z.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({ count: t })
+                                            (0, r.jsx)(c.Anchor, {
+                                                className: s()(A.learnMore, { [A.learnMoreResendUnderlinedText]: o }),
+                                                href: p.Z.getArticleURL(S.BhN.SHARE_NITRO_FAQ),
+                                                children: o ? g.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY : g.Z.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({ count: t })
                                             }),
-                                            i
-                                                ? (0, a.jsx)('div', {
-                                                      className: N.shareNitroResendCopySuffix,
-                                                      children: v.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY_2
+                                            o
+                                                ? (0, r.jsx)('div', {
+                                                      className: A.shareNitroResendCopySuffix,
+                                                      children: g.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY_2
                                                   })
-                                                : (0, a.jsx)('div', { children: v.Z.Messages.SHARE_NITRO_MODAL_BODY_SHARE_THEM_BY.format({ date: (0, m.vc)(c()(M), 'LL') }) })
+                                                : (0, r.jsx)('div', { children: g.Z.Messages.SHARE_NITRO_MODAL_BODY_SHARE_THEM_BY.format({ date: (0, h.vc)(l()(M), 'LL') }) })
                                         ]
                                     })
                                 ]
                             }),
-                            D &&
-                                (0, a.jsx)('img', {
+                            b &&
+                                (0, r.jsx)('img', {
                                     alt: '',
-                                    src: O,
-                                    className: N.birthdayBackgroundImage
+                                    src: N,
+                                    className: A.birthdayBackgroundImage
                                 })
                         ]
                     }),
-                    (0, a.jsx)('div', {
-                        className: N.generalButtonContainer,
-                        children: (0, a.jsx)(_.Button, {
-                            className: N.generalShareButton,
-                            submitting: d,
+                    (0, r.jsx)('div', {
+                        className: A.generalButtonContainer,
+                        children: (0, r.jsx)(c.Button, {
+                            className: A.generalShareButton,
+                            submitting: I,
                             onClick: () => {
-                                i
-                                    ? L(T, r, E)
-                                    : (u(!0),
-                                      p.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                          location_stack: C,
-                                          step: S.fz.FLOW_STARTED,
-                                          other_user_id: Number(T)
+                                o
+                                    ? C(D, a, R)
+                                    : (d(!0),
+                                      f.default.track(S.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                          location_stack: y,
+                                          step: T.fz.FLOW_STARTED,
+                                          other_user_id: Number(D)
                                       }));
                             },
-                            children: i ? v.Z.Messages.SHARE_NITRO_RESEND_BUTTON_TEXT : v.Z.Messages.SHARE_NITRO_BUTTON_TEXT
+                            children: o ? g.Z.Messages.SHARE_NITRO_RESEND_BUTTON_TEXT : g.Z.Messages.SHARE_NITRO_BUTTON_TEXT
                         })
                     })
                 ]
             });
 }
-function M(e) {
-    let { shouldShowPopout: t, referralsRemaining: n, channel: r, onClose: i, isResending: o } = e;
+function y(e) {
+    let { shouldShowPopout: t, referralsRemaining: n, channel: i, onClose: a, isResending: s } = e;
     return t
-        ? (0, a.jsx)('div', {
+        ? (0, r.jsx)('div', {
               onMouseDown: (e) => e.stopPropagation(),
-              children: (0, a.jsx)(d.y, {
+              children: (0, r.jsx)(u.y, {
                   shouldShow: !0,
                   position: 'top',
                   align: 'center',
                   renderPopout: (e) =>
-                      (0, a.jsx)(D, {
+                      (0, r.jsx)(D, {
                           ...e,
                           referralsRemaining: n,
-                          channel: r,
-                          onClose: i,
-                          isResending: o
+                          channel: i,
+                          onClose: a,
+                          isResending: s
                       }),
                   onRequestClose: () => void 0,
                   closeOnScroll: !1,
                   ignoreModalClicks: !0,
-                  children: () => (0, a.jsx)('div', { className: N.__invalid_popoutTarget })
+                  children: () => (0, r.jsx)('div', { className: A.__invalid_popoutTarget })
               })
           })
         : null;

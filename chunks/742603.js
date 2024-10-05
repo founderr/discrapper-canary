@@ -15,8 +15,8 @@ var s = n(120356),
     u = n(657305),
     d = n(835473),
     h = n(12498),
-    m = n(933557),
-    p = n(471445),
+    p = n(933557),
+    m = n(471445),
     _ = n(925329),
     f = n(554747),
     E = n(854698),
@@ -147,8 +147,8 @@ function G(e) {
             }),
             [t.id]
         ),
-        E = (0, m.ZP)(t),
-        g = (0, p.KS)(t),
+        E = (0, p.ZP)(t),
+        g = (0, m.KS)(t),
         [N] = (0, d.Z)((null == f ? void 0 : f.type) === P.fO.ACTIVITY ? [f.id] : []),
         A = D.Z.Messages.VOICE_CHANNEL;
     t.isDM() ? (A = D.Z.Messages.DM) : t.isGroupDM() && (A = D.Z.Messages.GROUP_DM);

@@ -1,10 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var r = n(411104);
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +11,13 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+n.d(t, {
+    Z: function () {
+        return i;
+    }
+}),
+    n(411104);
+class i {
     get fails() {
         return this._fails;
     }
@@ -53,7 +53,7 @@ class a {
         (this._callback = null), null != this._timeoutId && (clearTimeout(this._timeoutId), (this._timeoutId = null));
     }
     constructor(e = 500, t = null, n = !0) {
-        if ((i(this, 'min', void 0), i(this, 'max', void 0), i(this, 'jitter', void 0), i(this, '_current', void 0), i(this, '_timeoutId', void 0), i(this, '_callback', void 0), i(this, '_fails', 0), e <= 0)) throw Error('Backoff min value must be greater than zero or backoff will never back-off.');
+        if ((r(this, 'min', void 0), r(this, 'max', void 0), r(this, 'jitter', void 0), r(this, '_current', void 0), r(this, '_timeoutId', void 0), r(this, '_callback', void 0), r(this, '_fails', 0), e <= 0)) throw Error('Backoff min value must be greater than zero or backoff will never back-off.');
         (this.min = e), (this.max = null != t ? t : 10 * e), (this.jitter = n), (this._current = e);
     }
 }

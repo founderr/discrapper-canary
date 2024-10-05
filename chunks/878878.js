@@ -1,3 +1,3 @@
 n(515315), n(183903);
-var r = n(862602);
-e.exports = r.f('toPrimitive');
+var e = n(862602);
+t.exports = e.f('toPrimitive');

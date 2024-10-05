@@ -1,21 +1,21 @@
 n.d(t, {
     S: function () {
-        return u.S;
+        return l.S;
     },
     Z: function () {
-        return f;
+        return E;
     }
-});
-var r = n(47120);
-var i = n(117806),
-    a = n.n(i),
-    o = n(510780),
-    s = n.n(o),
-    l = n(47770),
-    u = n(445686),
-    c = n(701597),
-    d = n(65154);
-function _(e, t, n) {
+}),
+    n(47120);
+var r = n(117806),
+    i = n.n(r),
+    a = n(510780),
+    s = n.n(a),
+    o = n(47770),
+    l = n(445686),
+    u = n(701597),
+    c = n(65154);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,10 +28,10 @@ function _(e, t, n) {
         e
     );
 }
-let E = 0;
-class f extends l.Z {
+let _ = 0;
+class E extends o.Z {
     destroy() {
-        (this.destroyed = !0), this.framerateReducer.destroy(), this.setConnectionState(d.$j.DISCONNECTED), this.emit(u.S.Destroy, this), this.removeAllListeners();
+        (this.destroyed = !0), this.framerateReducer.destroy(), this.setConnectionState(c.$j.DISCONNECTED), this.emit(l.S.Destroy, this), this.removeAllListeners();
     }
     getLocalMute(e) {
         return this.localMutes[e] || !1;
@@ -41,14 +41,14 @@ class f extends l.Z {
         return null !== (t = this.disabledLocalVideos[e]) && void 0 !== t && t;
     }
     setLocalVideoDisabled(e, t) {
-        (this.disabledLocalVideos[e] = t), this.emit(u.S.LocalVideoDisabled, e, t);
+        (this.disabledLocalVideos[e] = t), this.emit(l.S.LocalVideoDisabled, e, t);
     }
     getHasActiveVideoOutputSink(e) {
         var t;
         return null !== (t = this.activeOutputSinks[e]) && void 0 !== t && t;
     }
     setHasActiveVideoOutputSink(e, t) {
-        (this.isActiveOutputSinksEnabled = !0), (this.activeOutputSinks[e] = t), this.emit(u.S.ActiveSinksChange, e, t);
+        (this.isActiveOutputSinksEnabled = !0), (this.activeOutputSinks[e] = t), this.emit(l.S.ActiveSinksChange, e, t);
     }
     getActiveOutputSinkTrackingEnabled() {
         return this.isActiveOutputSinksEnabled;
@@ -63,27 +63,27 @@ class f extends l.Z {
     setQualityDecoupling(e) {}
     presentDesktopSourcePicker(e) {}
     getStreamParameters() {
-        return a()(this.videoStreamParameters);
+        return i()(this.videoStreamParameters);
     }
     setExperimentFlag(e, t) {
         t ? this.experimentFlags.add(e) : this.experimentFlags.delete(e);
     }
     setConnectionState(e) {
-        this.logger.info('Connection state change: '.concat(this.connectionState, ' => ').concat(e)), (this.connectionState = e), this.emit(u.S.ConnectionStateChange, this.connectionState);
+        this.logger.info('Connection state change: '.concat(this.connectionState, ' => ').concat(e)), (this.connectionState = e), this.emit(l.S.ConnectionStateChange, this.connectionState);
     }
     updateVideoQuality(e) {
         var t, n;
         let r = s()(this.videoStreamParameters, (e) => e.quality),
-            i = this.videoStreamParameters.length > 1 && (null == r ? void 0 : r.active) && 60 === this.getLocalWant(null == r ? void 0 : r.ssrc);
-        this.videoQualityManager.setLqSimulcastStreamActive(null != i && i);
+            a = this.videoStreamParameters.length > 1 && (null == r ? void 0 : r.active) && 60 === this.getLocalWant(null == r ? void 0 : r.ssrc);
+        this.videoQualityManager.setLqSimulcastStreamActive(null != a && a);
         let { quality: o, constraints: l } = this.applyQualityConstraints({}, this.videoStreamParameters[0].ssrc),
-            u = a()(this.videoStreamParameters);
+            u = i()(this.videoStreamParameters);
         null != o && ((u[0].maxBitrate = o.bitrateMax), (u[0].minBitrate = o.bitrateMin), (u[0].targetBitrate = null !== (t = o.bitrateTarget) && void 0 !== t ? t : 0), null != o.encode && ((u[0].maxPixelCount = o.encode.pixelCount), (u[0].maxFrameRate = o.encode.framerate))), (this.videoStreamParameters = u);
         for (let e = 1; e < this.videoStreamParameters.length; e++) {
             let { quality: t, constraints: r } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
             null != t && ((this.videoStreamParameters[e].maxBitrate = t.bitrateMax), (this.videoStreamParameters[e].minBitrate = t.bitrateMin), (this.videoStreamParameters[e].targetBitrate = null !== (n = t.bitrateTarget) && void 0 !== n ? n : 0), null != t.encode && ((this.videoStreamParameters[e].maxPixelCount = t.encode.pixelCount), (this.videoStreamParameters[e].maxFrameRate = t.encode.framerate))), 100 === this.videoStreamParameters[e].quality && ((l = r), (o = t));
         }
-        (l.streamParameters = a()(this.videoStreamParameters)),
+        (l.streamParameters = i()(this.videoStreamParameters)),
             (l.remoteSinkWantsPixelCount = Math.max(
                 ...this.videoStreamParameters.map((e) => {
                     var t;
@@ -94,8 +94,8 @@ class f extends l.Z {
         this.logger.info('updateVideoQuality: '.concat(JSON.stringify(c, void 0, 4))), this.updateVideoQualityCore(c, o);
     }
     applyVideoQualityMode(e) {
-        if (this.context !== d.Yn.DEFAULT) return;
-        let t = c.DM[e];
+        if (this.context !== c.Yn.DEFAULT) return;
+        let t = u.DM[e];
         this.videoQualityManager.setQualityOverwrite(t), this.updateVideoQuality();
     }
     overwriteQualityForTesting(e) {
@@ -115,7 +115,7 @@ class f extends l.Z {
     initializeStreamParameters(e) {
         let t = this.videoQualityManager.getQuality();
         this.videoStreamParameters = e
-            .filter((e) => (e.type === d.Tr.VIDEO || e.type === d.Tr.SCREEN) && 'string' == typeof e.rid)
+            .filter((e) => (e.type === c.Tr.VIDEO || e.type === c.Tr.SCREEN) && 'string' == typeof e.rid)
             .map((e) => {
                 var n, r, i, a;
                 return {
@@ -128,7 +128,7 @@ class f extends l.Z {
                     maxBitrate: (null !== (a = e.quality) && void 0 !== a ? a : 100) < 100 ? t.bitrateMax / 4 : t.bitrateMax,
                     maxFrameRate: null === (n = t.capture) || void 0 === n ? void 0 : n.framerate,
                     maxResolution: {
-                        type: d.uA.FIXED,
+                        type: c.uA.FIXED,
                         width: null === (r = t.capture) || void 0 === r ? void 0 : r.width,
                         height: null === (i = t.capture) || void 0 === i ? void 0 : i.height
                     },
@@ -148,10 +148,10 @@ class f extends l.Z {
     }
     async emitStats() {
         let e = await this.getStats();
-        return null != e && this.emit(u.S.Stats, e), e;
+        return null != e && this.emit(l.S.Stats, e), e;
     }
     constructor(e, t) {
-        super(), _(this, 'mediaEngineConnectionId', 'WebRTC-'.concat(E++)), _(this, 'context', void 0), _(this, 'userId', void 0), _(this, 'streamUserId', void 0), _(this, 'destroyed', !1), _(this, 'audioSSRC', 0), _(this, 'selfDeaf', !1), _(this, 'localMutes', {}), _(this, 'disabledLocalVideos', {}), _(this, 'localVolumes', {}), _(this, 'isActiveOutputSinksEnabled', !1), _(this, 'activeOutputSinks', {}), _(this, 'videoSupported', !1), _(this, 'useElectronVideo', !1), _(this, 'voiceBitrate', d.dX), _(this, 'remoteSinkWantsMaxFramerate', d.Gs), _(this, 'videoQualityManager', void 0), _(this, 'wantsPriority', new Set()), _(this, 'localSpeakingFlags', {}), _(this, 'videoReady', !1), _(this, 'videoStreamParameters', []), _(this, 'remoteVideoSinkWants', { any: 100 }), _(this, 'localVideoSinkWants', { any: 100 }), _(this, 'connectionState', d.$j.CONNECTING), _(this, 'stats', void 0), _(this, 'onDesktopEncodingOptionsSet', (e, t, n) => {}), _(this, 'experimentFlags', new Set()), _(this, 'framerateReducer', void 0), (this.context = e), (this.userId = t), (this.videoQualityManager = new c.iY(e, this));
+        super(), d(this, 'mediaEngineConnectionId', 'WebRTC-'.concat(_++)), d(this, 'context', void 0), d(this, 'userId', void 0), d(this, 'streamUserId', void 0), d(this, 'destroyed', !1), d(this, 'audioSSRC', 0), d(this, 'selfDeaf', !1), d(this, 'localMutes', {}), d(this, 'disabledLocalVideos', {}), d(this, 'localVolumes', {}), d(this, 'isActiveOutputSinksEnabled', !1), d(this, 'activeOutputSinks', {}), d(this, 'videoSupported', !1), d(this, 'useElectronVideo', !1), d(this, 'voiceBitrate', c.dX), d(this, 'remoteSinkWantsMaxFramerate', c.Gs), d(this, 'videoQualityManager', void 0), d(this, 'wantsPriority', new Set()), d(this, 'localSpeakingFlags', {}), d(this, 'videoReady', !1), d(this, 'videoStreamParameters', []), d(this, 'remoteVideoSinkWants', { any: 100 }), d(this, 'localVideoSinkWants', { any: 100 }), d(this, 'connectionState', c.$j.CONNECTING), d(this, 'stats', void 0), d(this, 'onDesktopEncodingOptionsSet', (e, t, n) => {}), d(this, 'experimentFlags', new Set()), d(this, 'framerateReducer', void 0), (this.context = e), (this.userId = t), (this.videoQualityManager = new u.iY(e, this));
         let r = n(988746).Z;
         this.framerateReducer = new r(this, this.videoQualityManager);
     }

@@ -1,10 +1,10 @@
 n.d(t, {
     J: function () {
-        return r;
+        return i;
     },
     N: function () {
-        return i;
+        return a;
     }
 });
-let r = 320,
-    i = 500;
+let i = 320,
+    a = 500;

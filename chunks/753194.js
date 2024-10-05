@@ -1,40 +1,40 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return d;
     }
-});
-var r = n(47120);
-var i = n(735250);
+}),
+    n(47120);
+var r = n(735250);
 n(470079);
-var a = n(866442),
-    o = n(442837),
+var i = n(866442),
+    a = n(442837),
     s = n(692547),
-    l = n(481060),
-    u = n(607070),
-    c = n(297700),
-    d = n(689938);
-function _(e) {
+    o = n(481060),
+    l = n(607070),
+    u = n(297700),
+    c = n(689938);
+function d(e) {
     let t,
-        { color: n, size: r, forcedIconColor: _, className: E, iconClassName: f, tooltipText: h } = e,
-        [p, m] = (0, o.Wu)([u.Z], () => [u.Z.desaturateUserColors, u.Z.saturation]),
-        I = (0, l.useToken)(s.Z.unsafe_rawColors.PRIMARY_300).hex(),
-        T = (0, a._i)(null != n ? n : I),
-        g = (0, a.ho)(T, !1, p ? m : null);
+        { color: n, size: d, forcedIconColor: _, className: E, iconClassName: f, tooltipText: h } = e,
+        [p, I] = (0, a.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
+        m = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_300).hex(),
+        T = (0, i._i)(null != n ? n : m),
+        S = (0, i.ho)(T, !1, p ? I : null);
     return (
-        (t = null != _ ? _ : 0.3 > (0, a.Bd)(T) ? s.Z.unsafe_rawColors.PRIMARY_630.css : s.Z.unsafe_rawColors.WHITE_500.css),
-        (0, i.jsx)(l.Tooltip, {
-            text: null != h ? h : d.Z.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
+        (t = null != _ ? _ : 0.3 > (0, i.Bd)(T) ? s.Z.unsafe_rawColors.PRIMARY_630.css : s.Z.unsafe_rawColors.WHITE_500.css),
+        (0, r.jsx)(o.Tooltip, {
+            text: null != h ? h : c.Z.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
             children: (e) =>
-                (0, i.jsx)(c.Z, {
+                (0, r.jsx)(u.Z, {
                     ...e,
                     className: E,
-                    color: g,
-                    size: r,
-                    children: (0, i.jsx)(l.CheckmarkSmallIcon, {
+                    color: S,
+                    size: d,
+                    children: (0, r.jsx)(o.CheckmarkSmallIcon, {
                         size: 'custom',
                         color: t,
-                        height: r,
-                        width: r,
+                        height: d,
+                        width: d,
                         className: f
                     })
                 })

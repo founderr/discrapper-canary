@@ -14,8 +14,8 @@ var s = n(120356),
     u = n(738672),
     d = n(981631),
     h = n(689938),
-    m = n(500725);
-function p(e) {
+    p = n(500725);
+function m(e) {
     let { hidden: t, onDismiss: n } = e;
     return (
         (0, o.Z)(
@@ -27,15 +27,15 @@ function p(e) {
             [t]
         ),
         (0, i.jsxs)('div', {
-            className: a()(m.popoutContainer, { [m.hidden]: t }),
+            className: a()(p.popoutContainer, { [p.hidden]: t }),
             children: [
                 (0, i.jsx)('img', {
-                    className: m.image,
+                    className: p.image,
                     src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                     alt: 'HD Streaming Nitro Perk'
                 }),
                 (0, i.jsx)(r.Button, {
-                    className: m.closeButton,
+                    className: p.closeButton,
                     'aria-label': h.Z.Messages.CLOSE,
                     look: r.Button.Looks.BLANK,
                     size: r.Button.Sizes.NONE,
@@ -44,26 +44,26 @@ function p(e) {
                     },
                     children: (0, i.jsx)(r.XSmallIcon, {
                         size: 'xs',
-                        className: m.closeIcon,
+                        className: p.closeIcon,
                         color: 'white'
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: m.infoContainerParent,
+                    className: p.infoContainerParent,
                     children: (0, i.jsxs)('div', {
-                        className: m.infoContainer,
+                        className: p.infoContainer,
                         children: [
                             (0, i.jsx)(r.Text, {
-                                className: m.infoText,
+                                className: p.infoText,
                                 variant: 'text-sm/medium',
                                 children: h.Z.Messages.PREMIUM_REVERSE_TRIAL_HD_STREAMING_POPOUT_BODY.format()
                             }),
                             (0, i.jsxs)('div', {
-                                className: m.poweredByNitroContainer,
+                                className: p.poweredByNitroContainer,
                                 children: [
                                     (0, i.jsx)(r.NitroWheelIcon, { size: 'xs' }),
                                     (0, i.jsx)(r.Text, {
-                                        className: m.infoText,
+                                        className: p.infoText,
                                         variant: 'text-sm/medium',
                                         children: h.Z.Messages.POWERED_BY_NITRO
                                     })
@@ -80,6 +80,6 @@ function _(e) {
     let { ...t } = e;
     return (0, i.jsx)(u.h, {
         ...t,
-        renderComponent: (e) => (0, i.jsx)(p, { ...e })
+        renderComponent: (e) => (0, i.jsx)(m, { ...e })
     });
 }

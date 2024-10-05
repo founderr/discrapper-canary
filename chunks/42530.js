@@ -1,12 +1,12 @@
 n.d(t, {
     On: function () {
-        return s;
+        return o;
     },
     YD: function () {
         return r;
     },
     i$: function () {
-        return o;
+        return s;
     },
     nO: function () {
         return a;
@@ -21,5 +21,5 @@ let r = [0],
         path: [0, 0],
         offset: 0
     },
-    o = /(\t|\s)/,
-    s = ['applicationCommandOption'];
+    s = /(\t|\s)/,
+    o = ['applicationCommandOption'];

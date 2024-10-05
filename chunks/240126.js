@@ -1,51 +1,51 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(499033),
-    o = n(689938),
-    s = n(443269);
-function l(e) {
-    let { Icon: t, header: n, tip: l, disableStars: u } = e;
-    return (0, r.jsxs)('div', {
-        className: s.container,
+var a = n(481060),
+    s = n(499033),
+    l = n(689938),
+    r = n(443269);
+function o(e) {
+    let { Icon: t, header: n, tip: o, disableStars: c } = e;
+    return (0, i.jsxs)('div', {
+        className: r.container,
         children: [
-            (0, r.jsxs)('div', {
-                className: s.iconContainer,
+            (0, i.jsxs)('div', {
+                className: r.iconContainer,
                 children: [
-                    (0, r.jsx)(t, {
+                    (0, i.jsx)(t, {
                         color: 'currentColor',
                         size: 'custom',
-                        className: s.icon,
+                        className: r.icon,
                         width: 36,
                         height: 36
                     }),
-                    u ? null : (0, r.jsx)(a.Z, { className: s.stars })
+                    c ? null : (0, i.jsx)(s.Z, { className: r.stars })
                 ]
             }),
-            (0, r.jsx)(i.Heading, {
-                className: s.header,
+            (0, i.jsx)(a.Heading, {
+                className: r.header,
                 variant: 'heading-xl/semibold',
                 children: n
             }),
-            (0, r.jsxs)(i.Text, {
+            (0, i.jsxs)(a.Text, {
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
                 children: [
-                    u
+                    c
                         ? null
-                        : (0, r.jsxs)(i.Text, {
+                        : (0, i.jsxs)(a.Text, {
                               tag: 'span',
-                              className: s.protip,
+                              className: r.protip,
                               variant: 'text-xs/bold',
                               color: 'text-positive',
-                              children: [o.Z.Messages.FORM_LABEL_ROLES_PRO_TIP, ':', ' ']
+                              children: [l.Z.Messages.FORM_LABEL_ROLES_PRO_TIP, ':', ' ']
                           }),
-                    l
+                    o
                 ]
             })
         ]

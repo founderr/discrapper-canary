@@ -1,4 +1,4 @@
-var r = n(483322);
-e.exports = function (e) {
-    return r(e.length);
+var e = n(483322);
+t.exports = function (t) {
+    return e(t.length);
 };

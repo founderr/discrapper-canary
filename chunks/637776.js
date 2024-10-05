@@ -19,14 +19,14 @@ var s = n(735250),
     p = n(71188);
 function g(e) {
     let { location: t } = e,
-        [g, m] = r.useState(!1),
-        { verifySuccess: f, verifyErrors: I, redirectGuildId: N } = (0, i.e7)([d.Z], () => d.Z.getState());
+        [g, f] = r.useState(!1),
+        { verifySuccess: m, verifyErrors: I, redirectGuildId: N } = (0, i.e7)([d.Z], () => d.Z.getState());
     r.useEffect(() => {
         let e = (0, o.Z)(t);
         a.Z.verify(e), (0, u.e)('verify_hub_email');
     }, [t]);
     let T = () => {
-        (0, _.Z)(N), m(!0);
+        (0, _.Z)(N), f(!0);
     };
     return g
         ? (0, s.jsxs)(l.ZP, {
@@ -46,7 +46,7 @@ function g(e) {
                   })
               ]
           })
-        : f
+        : m
           ? (0, s.jsxs)(l.ZP, {
                 children: [
                     (0, s.jsx)(l.Ee, {

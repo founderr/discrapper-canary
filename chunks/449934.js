@@ -6,7 +6,7 @@ n.d(t, {
         return i;
     },
     gK: function () {
-        return o;
+        return s;
     }
 });
 var r = n(213919);
@@ -16,4 +16,4 @@ function i() {
 function a() {
     return null != i();
 }
-let o = (e) => (null != e && /^\/developers/.test(e) ? n(376665) : null);
+let s = (e) => (null != e && /^\/developers/.test(e) ? n(376665) : null);

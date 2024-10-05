@@ -10,56 +10,56 @@ n.r(t),
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(693789),
+    s = n.n(a),
+    o = n(693789),
     l = n(481060),
     u = n(709692),
     c = n(642649);
 function d(e) {
     let t,
         n,
-        { header: a, children: d, confirmText: _, cancelText: E, className: f, onConfirm: h, onCancel: p, onClose: m, onCloseCallback: I, bodyClassName: T, transitionState: g, loading: S = !1, confirmButtonColor: A = s.zx.Colors.RED, focusCancel: v = !1 } = e,
-        N = i.useRef(null);
+        { header: a, children: d, confirmText: _, cancelText: E, className: f, onConfirm: h, onCancel: p, onClose: I, onCloseCallback: m, bodyClassName: T, transitionState: S, loading: g = !1, confirmButtonColor: A = o.zx.Colors.RED, focusCancel: N = !1 } = e,
+        O = i.useRef(null);
     return (
         i.useEffect(() => {
-            !v &&
+            !N &&
                 setTimeout(() => {
                     var e;
-                    return null === (e = N.current) || void 0 === e ? void 0 : e.focus();
+                    return null === (e = O.current) || void 0 === e ? void 0 : e.focus();
                 }, 0);
-        }, [v]),
-        i.useLayoutEffect(() => () => (null == I ? void 0 : I())),
+        }, [N]),
+        i.useLayoutEffect(() => () => (null == m ? void 0 : m())),
         null != E &&
-            (t = (0, r.jsx)(s.zx, {
+            (t = (0, r.jsx)(o.zx, {
                 type: 'button',
-                look: s.zx.Looks.LINK,
-                color: s.zx.Colors.PRIMARY,
-                disabled: S,
+                look: o.zx.Looks.LINK,
+                color: o.zx.Colors.PRIMARY,
+                disabled: g,
                 onClick: () => {
-                    null == p || p(), m();
+                    null == p || p(), I();
                 },
-                autoFocus: v,
+                autoFocus: N,
                 children: E
             })),
         null != _ &&
-            (n = (0, r.jsx)(s.zx, {
-                buttonRef: N,
+            (n = (0, r.jsx)(o.zx, {
+                buttonRef: O,
                 type: 'submit',
                 color: A,
-                submitting: S,
+                submitting: g,
                 onClick: async () => {
                     try {
-                        await (null == h ? void 0 : h()), m();
+                        await (null == h ? void 0 : h()), I();
                     } catch (e) {
                         throw e;
                     }
                 },
-                autoFocus: !v,
+                autoFocus: !N,
                 children: _
             })),
         (0, r.jsxs)(u.Y0, {
             className: f,
-            transitionState: g,
+            transitionState: S,
             children: [
                 null != a
                     ? (0, r.jsx)(u.xB, {
@@ -71,7 +71,7 @@ function d(e) {
                       })
                     : null,
                 (0, r.jsx)(u.hz, {
-                    className: o()(c.content, T),
+                    className: s()(c.content, T),
                     children: d
                 }),
                 (0, r.jsxs)(u.mz, {

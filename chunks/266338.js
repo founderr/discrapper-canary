@@ -1,35 +1,35 @@
 n.d(t, {
     UC: function () {
-        return u;
+        return l;
     },
     YP: function () {
-        return l;
+        return o;
     },
     c: function () {
         return s;
     }
-});
-var r = n(47120);
-let i = new WeakMap(),
-    a = new WeakMap();
-function o(e, t) {
+}),
+    n(47120);
+let r = new WeakMap(),
+    i = new WeakMap();
+function a(e, t) {
     e.forEach((e) => {
         var n;
-        let r = null === (n = a.get(t)) || void 0 === n ? void 0 : n.get(e.target);
+        let r = null === (n = i.get(t)) || void 0 === n ? void 0 : n.get(e.target);
         null != r && r.call(null, e);
     });
 }
 function s(e) {
-    let t = i.get(e);
-    return null == t && ((t = new IntersectionObserver(o, e)), i.set(e, t), a.set(t, new WeakMap())), t;
+    let t = r.get(e);
+    return null == t && ((t = new IntersectionObserver(a, e)), r.set(e, t), i.set(t, new WeakMap())), t;
 }
-function l(e, t, n) {
+function o(e, t, n) {
     var r;
-    let i = null !== (r = a.get(e)) && void 0 !== r ? r : new WeakMap();
-    !i.has(t) && e.observe(t), i.set(t, n), a.set(e, i);
+    let a = null !== (r = i.get(e)) && void 0 !== r ? r : new WeakMap();
+    !a.has(t) && e.observe(t), a.set(t, n), i.set(e, a);
 }
-function u(e, t) {
+function l(e, t) {
     var n;
-    let r = null !== (n = a.get(e)) && void 0 !== n ? n : new WeakMap();
-    r.has(t) && (r.delete(t), e.unobserve(t), a.set(e, r));
+    let r = null !== (n = i.get(e)) && void 0 !== n ? n : new WeakMap();
+    r.has(t) && (r.delete(t), e.unobserve(t), i.set(e, r));
 }

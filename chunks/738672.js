@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(618158);
 function d(e) {
     let { buttonRef: t, dismissed: n, onDismiss: d, renderComponent: h } = e,
-        m = s.useContext(c.h9),
-        [p, _] = s.useState(''),
+        p = s.useContext(c.h9),
+        [m, _] = s.useState(''),
         [f, E] = s.useState(!1),
         g = (0, a.e7)([o.ZP], () => o.ZP.callHeaderHeight),
         C = s.createRef(),
@@ -34,7 +34,7 @@ function d(e) {
                   align: 'center',
                   spacing: 0,
                   nudgeAlignIntoViewport: !1,
-                  positionKey: p,
+                  positionKey: m,
                   children: () =>
                       (0, i.jsx)('div', {
                           ref: C,
@@ -43,7 +43,7 @@ function d(e) {
                           onBlur: x,
                           onMouseLeave: x,
                           children: h({
-                              hidden: f || m || n,
+                              hidden: f || p || n,
                               onDismiss: d
                           })
                       })

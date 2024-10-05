@@ -1,72 +1,72 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var r = n(735250),
-    i = n(470079),
-    a = n(70097),
-    o = n(947849),
-    s = n(981631),
-    l = n(689938);
-function u(e) {
-    let { poster: t, src: n, width: o, height: l, naturalWidth: u, naturalHeight: c, play: d = !0, className: _, alt: E, responsive: f } = e,
-        h = i.useRef(null);
-    return (i.useEffect(() => {
-        let { current: e } = h;
-        if (null != e) d ? e.play() : e.pause();
-    }, [d]),
-    (u <= s.N_j && c <= s.XKF) || (u <= s.XKF && c <= s.N_j))
-        ? (0, r.jsx)(a.Z, {
-              ref: h,
-              className: _,
+var l = n(735250),
+    r = n(470079),
+    i = n(70097),
+    a = n(947849),
+    o = n(981631),
+    s = n(689938);
+function d(e) {
+    let { poster: t, src: n, width: a, height: s, naturalWidth: d, naturalHeight: u, play: m = !0, className: h, alt: c, responsive: p } = e,
+        b = r.useRef(null);
+    return (r.useEffect(() => {
+        let { current: e } = b;
+        if (null != e) m ? e.play() : e.pause();
+    }, [m]),
+    (d <= o.N_j && u <= o.XKF) || (d <= o.XKF && u <= o.N_j))
+        ? (0, l.jsx)(i.Z, {
+              ref: b,
+              className: h,
               poster: t,
               src: n,
-              width: o,
-              height: l,
-              responsive: f,
+              width: a,
+              height: s,
+              responsive: p,
               muted: !0,
               loop: !0,
-              autoPlay: d,
+              autoPlay: m,
               preload: 'none',
-              'aria-label': E
+              'aria-label': c
           })
-        : (0, r.jsx)('img', {
+        : (0, l.jsx)('img', {
               alt: '',
               src: t,
-              width: o,
-              height: l
+              width: a,
+              height: s
           });
 }
-function c(e) {
-    let { src: t, poster: n, naturalWidth: i, naturalHeight: a, responsive: s, autoPlay: c, className: d, playable: _ = !0, renderImageComponent: E, renderForwardComponent: f, alt: h = l.Z.Messages.GIF, ...p } = e;
-    return (0, r.jsx)(o.h.Consumer, {
+function u(e) {
+    let { src: t, poster: n, naturalWidth: r, naturalHeight: i, responsive: o, autoPlay: u, className: m, playable: h = !0, renderImageComponent: c, renderForwardComponent: p, alt: b = s.Z.Messages.GIF, ...g } = e;
+    return (0, l.jsx)(a.h.Consumer, {
         children: (e) =>
-            E({
-                ...p,
-                alt: h,
+            c({
+                ...g,
+                alt: b,
                 src: n,
-                containerClassName: d,
-                autoPlay: c,
-                animated: _,
-                responsive: s,
+                containerClassName: m,
+                autoPlay: u,
+                animated: h,
+                responsive: o,
                 renderAccessory: e,
-                renderForwardComponent: f,
-                tabIndex: _ ? 0 : -1,
+                renderForwardComponent: p,
+                tabIndex: h ? 0 : -1,
                 dataSafeSrc: t,
                 children(e) {
-                    let { src: n, size: o, animating: l, alt: c } = e;
-                    return (0, r.jsx)(u, {
-                        alt: c,
-                        className: d,
+                    let { src: n, size: a, animating: s, alt: u } = e;
+                    return (0, l.jsx)(d, {
+                        alt: u,
+                        className: m,
                         poster: n,
                         src: t,
-                        width: o.width,
-                        height: o.height,
-                        naturalWidth: i,
-                        naturalHeight: a,
-                        responsive: s,
-                        play: _ && l
+                        width: a.width,
+                        height: a.height,
+                        naturalWidth: r,
+                        naturalHeight: i,
+                        responsive: o,
+                        play: h && s
                     });
                 }
             })

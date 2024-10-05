@@ -13,15 +13,15 @@ var i = n(735250),
     u = n(40851),
     d = n(184301),
     h = n(347475),
-    m = n(237583),
-    p = n(768581),
+    p = n(237583),
+    m = n(768581),
     _ = n(847134);
 function f(e) {
-    let { channel: t, speaker: a, className: m } = e,
+    let { channel: t, speaker: a, className: p } = e,
         f = (0, u.bp)(),
         { reducedMotion: E } = s.useContext(r.AccessibilityPreferencesContext),
         g = (0, c.Z)({ userId: a.id }),
-        C = null != a.member ? (0, p.CA)(a.member) : null,
+        C = null != a.member ? (0, m.CA)(a.member) : null,
         I = (e) => {
             (0, o.jW)(
                 e,
@@ -71,7 +71,7 @@ function f(e) {
                         children: (0, i.jsx)(r.Avatar, {
                             src: null != C ? C : a.user.getAvatarURL(t.guild_id, 24),
                             size: r.AvatarSizes.SIZE_24,
-                            className: l()(_.avatar, m),
+                            className: l()(_.avatar, p),
                             'aria-label': a.userNick,
                             isSpeaking: g && !E.enabled
                         })
@@ -81,7 +81,7 @@ function f(e) {
 }
 function E(e) {
     let { speakers: t, channel: n } = e;
-    return (0, i.jsx)(m.Z, {
+    return (0, i.jsx)(p.Z, {
         className: _.summary,
         guildId: n.guild_id,
         users: t,

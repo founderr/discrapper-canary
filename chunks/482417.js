@@ -1,41 +1,41 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return u;
+        return s;
     }
-});
-var r = n(47120);
-var i = n(423875),
-    a = n(740605),
-    o = n(206583),
-    s = n(616922),
-    l = n(689938);
-function u(e) {
-    let t,
-        { entry: n, baseEntryData: r } = e,
-        u = n.extra.entries[0].media,
-        c = u.artists[0],
-        { title: d, provider: _, image_url: E } = u,
-        f = c.name,
-        h = {
-            onClick: () => (0, a.o)(s.Hw.TRACK, u.external_id),
-            ariaDescription: l.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: d })
-        },
+}),
+    t(47120);
+var l = t(423875),
+    i = t(740605),
+    a = t(206583),
+    r = t(616922),
+    o = t(689938);
+function s(e) {
+    let n,
+        { entry: t, baseEntryData: s } = e,
+        c = t.extra.entries[0].media,
+        u = c.artists[0],
+        { title: d, provider: m, image_url: _ } = c,
+        f = u.name,
         p = {
-            onClick: () => (0, a.o)(s.Hw.ARTIST, c.external_id),
-            ariaDescription: l.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: f })
+            onClick: () => (0, i.o)(r.Hw.TRACK, c.external_id),
+            ariaDescription: o.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: d })
+        },
+        C = {
+            onClick: () => (0, i.o)(r.Hw.ARTIST, u.external_id),
+            ariaDescription: o.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: f })
         };
     return (
-        _ === i.p.SPOTIFY && (t = { type: o.kG.SPOTIFY }),
+        m === l.p.SPOTIFY && (n = { type: a.kG.SPOTIFY }),
         {
-            ...r,
+            ...s,
             title: d,
             subtitle: f,
-            thumbnailUrl: E,
-            titleClickable: h,
-            subtitleClickable: p,
-            thumbnailClickable: h,
-            userDescription: l.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
-            providerIconProps: t
+            thumbnailUrl: _,
+            titleClickable: p,
+            subtitleClickable: C,
+            thumbnailClickable: p,
+            userDescription: o.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
+            providerIconProps: n
         }
     );
 }

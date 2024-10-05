@@ -4,7 +4,7 @@ n.r(t),
             return r;
         },
         HTML: function () {
-            return o;
+            return s;
         },
         TEXT: function () {
             return a;
@@ -16,4 +16,4 @@ n.r(t),
 var r = '__NATIVE_FILE__',
     i = '__NATIVE_URL__',
     a = '__NATIVE_TEXT__',
-    o = '__NATIVE_HTML__';
+    s = '__NATIVE_HTML__';

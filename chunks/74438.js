@@ -1,14 +1,14 @@
 i.r(t),
     i.d(t, {
         default: function () {
-            return g;
+            return f;
         }
     });
 var n = i(735250),
     a = i(470079),
     r = i(399606),
-    s = i(626135),
-    o = i(894653),
+    o = i(626135),
+    s = i(894653),
     l = i(738130),
     c = i(132871),
     d = i(961106),
@@ -17,13 +17,13 @@ var n = i(735250),
     _ = i(165209),
     p = i(981631),
     m = i(498889);
-function g() {
+function f() {
     let e = (0, c.useApplicationDirectoryHistory)((e) => e.guildId),
-        t = (0, r.e7)([o.Z], () => o.Z.getCategories()),
+        t = (0, r.e7)([s.Z], () => s.Z.getCategories()),
         i = (0, c.getPreviousView)();
     return (
         a.useEffect(() => {
-            s.default.track(p.rMx.APP_DIRECTORY_PAGE_VIEWED, {
+            o.default.track(p.rMx.APP_DIRECTORY_PAGE_VIEWED, {
                 current_page: c.ApplicationDirectoryViews.HOME,
                 previous_page: null == i ? void 0 : i.type,
                 guild_id: e,

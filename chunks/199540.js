@@ -48,7 +48,7 @@ function S(e) {
         [_, g] = l.useState(!1),
         [S, x] = l.useState(c),
         v = c ? 0 : -E,
-        Z = (0, d.useSpring)(
+        T = (0, d.useSpring)(
             {
                 transform: 'translate3d(0, '.concat(v, 'px, 0)'),
                 config: { duration: I },
@@ -61,11 +61,11 @@ function S(e) {
             },
             'animate-always'
         ),
-        T = _ ? Z : void 0;
+        Z = _ ? T : void 0;
     return (
         (_ || S) &&
             (t = (0, i.jsx)(s.animated.div, {
-                style: T,
+                style: Z,
                 className: C.expandedFolderIconWrapper,
                 children: (0, i.jsx)(d.FolderIcon, {
                     size: 'md',
@@ -75,7 +75,7 @@ function S(e) {
             })),
         (_ || !S) &&
             (n = (0, i.jsx)(s.animated.div, {
-                style: T,
+                style: Z,
                 className: C.closedFolderIconWrapper,
                 children: f.slice(0, 4).map((e) =>
                     (0, i.jsx)(
@@ -113,26 +113,26 @@ function x(e) {
             onKeyDown: E,
             treeItemProps: { onFocus: N, ...x }
         } = e,
-        [v, Z] = l.useState(!1),
-        T = l.useCallback(() => {
-            s || Z(!0), null == I || I(!0);
+        [v, T] = l.useState(!1),
+        Z = l.useCallback(() => {
+            s || T(!0), null == I || I(!0);
         }, [s, I]),
-        b = l.useCallback(() => {
-            s || Z(!1), null == I || I(!1);
+        A = l.useCallback(() => {
+            s || T(!1), null == I || I(!1);
         }, [s, I]),
-        A = r || null == o ? null : (0, _.Or)(o),
-        M = !r && c > 0 ? (0, _.Ne)(c) : null;
+        b = r || null == o ? null : (0, _.Or)(o),
+        R = !r && c > 0 ? (0, _.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
         selected: !n,
-        upperBadge: A,
-        lowerBadge: M,
+        upperBadge: b,
+        lowerBadge: R,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
             className: a()(C.folder, { [C.hover]: v }),
             onClick: f,
             onContextMenu: m,
-            onMouseEnter: T,
-            onMouseLeave: b,
+            onMouseEnter: Z,
+            onMouseLeave: A,
             onKeyDown: E,
             onFocus: N,
             'aria-label': g.Z.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({

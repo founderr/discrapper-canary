@@ -1,16 +1,16 @@
 n.d(t, {
     F: function () {
-        return a;
+        return s;
     }
 });
-var r = n(474936),
-    i = n(981631);
-function a(e) {
-    if (e === r.hX.FRIEND_ANNIVERSARY)
+var i = n(474936),
+    a = n(981631);
+function s(e) {
+    if (e === i.hX.FRIEND_ANNIVERSARY)
         return {
-            chat: i.Sbl.FRIEND_ANNIVERSARIES_CHAT,
-            actionButton: i.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
-            actionButtonCoachmark: i.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK
+            chat: a.Sbl.FRIEND_ANNIVERSARIES_CHAT,
+            actionButton: a.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+            actionButtonCoachmark: a.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK
         };
     return {};
 }

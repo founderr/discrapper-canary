@@ -16,8 +16,8 @@ var i = n(735250),
     p = n(669764),
     g = n(322665),
     T = n(17845),
-    f = n(374939),
-    S = n(283293),
+    S = n(374939),
+    f = n(283293),
     C = n(84615),
     N = n(207796),
     A = n(895068),
@@ -87,7 +87,7 @@ function R(e) {
                     : null,
             [t, p, s]
         ),
-        f = a.useMemo(
+        S = a.useMemo(
             () =>
                 n && l.length > 0
                     ? (0, i.jsxs)(i.Fragment, {
@@ -120,7 +120,7 @@ function R(e) {
         );
     return (0, i.jsxs)('div', {
         className: r()(L.contentCtaContainer, { [L.contentCtaContainerSpacing]: !s }),
-        children: [f, T]
+        children: [S, T]
     });
 }
 t.Z = a.memo(function (e) {
@@ -206,12 +206,12 @@ t.Z = a.memo(function (e) {
                       button: y,
                       children: (0, i.jsx)(g.Z, {})
                   })),
-        (0, i.jsxs)(S.Z, {
+        (0, i.jsxs)(f.Z, {
             ref: O,
             onScroll: I,
             children: [
                 s,
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(S.Z, {
                     children: (0, i.jsx)(A.ZP, {
                         width: u,
                         onUpdatePage: D,

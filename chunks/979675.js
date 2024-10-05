@@ -6,12 +6,12 @@ n.d(t, {
 let r = (e, t) =>
     function (n, r, i) {
         return new Promise((a) => {
-            var o;
+            var s;
             e.dispatch({
                 type: t,
                 event: n,
                 properties: r,
-                flush: null !== (o = null == i ? void 0 : i.flush) && void 0 !== o && o,
+                flush: null !== (s = null == i ? void 0 : i.flush) && void 0 !== s && s,
                 fingerprint: null == i ? void 0 : i.fingerprint,
                 resolve: a
             });

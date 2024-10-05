@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return _;
     }
 });
 var r = n(735250);
@@ -18,21 +18,21 @@ var a = n(120356),
     x = n(914010),
     f = n(233608),
     p = n(71080),
-    b = n(644715),
-    g = n(219299);
+    g = n(644715),
+    b = n(219299);
 function v(e) {
     let { title: t, can: n } = e,
         a = n ? s.CheckmarkLargeIcon : s.XSmallIcon,
         i = (0, r.jsx)('div', {
-            className: l()(b.iconOuter, n ? b.iconCheck : b.iconCross),
-            children: (0, r.jsx)(a, { className: b.icon })
+            className: l()(g.iconOuter, n ? g.iconCheck : g.iconCross),
+            children: (0, r.jsx)(a, { className: g.icon })
         });
     return (0, r.jsxs)('div', {
-        className: b.scope,
+        className: g.scope,
         children: [
             i,
             (0, r.jsx)('div', {
-                className: b.scopeInner,
+                className: g.scopeInner,
                 children: (0, r.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     children: t
@@ -41,17 +41,29 @@ function v(e) {
         ]
     });
 }
-function j() {
+function _() {
     let e = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
         t = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
         n = (0, o.e7)([d.Z], () => d.Z.getChannel(e)),
         a = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
-        j = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
-        C = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
-        _ = (0, c.ZP)(n, !0),
-        S = null != n ? (0, p.IG)(n, !1, !0) : null,
-        T = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
-        N = Object.values(null != S ? S : {}).map((e) => {
+        _ = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
+        j = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
+        C = (0, c.ZP)(n, !0),
+        T = null != n ? (0, p.IG)(n, !1, !0) : null,
+        S = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
+        N = Object.values(null != T ? T : {}).map((e) => {
+            let { title: t, flag: n } = e,
+                a = i.e$(_, n);
+            return (0, r.jsx)(
+                v,
+                {
+                    title: t,
+                    can: a
+                },
+                t
+            );
+        }),
+        y = Object.values(null != S ? S : {}).map((e) => {
             let { title: t, flag: n } = e,
                 a = i.e$(j, n);
             return (0, r.jsx)(
@@ -62,36 +74,24 @@ function j() {
                 },
                 t
             );
-        }),
-        y = Object.values(null != T ? T : {}).map((e) => {
-            let { title: t, flag: n } = e,
-                a = i.e$(C, n);
-            return (0, r.jsx)(
-                v,
-                {
-                    title: t,
-                    can: a
-                },
-                t
-            );
         });
     return (0, r.jsx)('div', {
-        className: l()(g.panel, b.panel),
+        className: l()(b.panel, g.panel),
         children: (0, r.jsxs)('div', {
-            className: b.panelInner,
+            className: g.panelInner,
             children: [
                 (0, r.jsxs)('section', {
-                    className: b.section,
+                    className: g.section,
                     children: [
                         (0, r.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
-                            children: null != _ ? 'Permissions in '.concat(_) : 'No channel selected'
+                            children: null != C ? 'Permissions in '.concat(C) : 'No channel selected'
                         }),
                         N
                     ]
                 }),
                 (0, r.jsxs)('section', {
-                    className: b.section,
+                    className: g.section,
                     children: [
                         (0, r.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',

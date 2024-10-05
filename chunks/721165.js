@@ -1,60 +1,60 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return T;
+        return E;
     }
 }),
-    t(789020);
-var r = t(735250),
-    i = t(470079),
-    a = t(442837),
-    s = t(131388),
-    o = t(171246),
-    l = t(689011),
-    c = t(931905),
-    u = t(430824),
-    d = t(598),
-    I = t(409813),
-    _ = t(586585),
-    m = t(614277),
-    f = t(750143),
-    p = t(689938);
-function T(e) {
-    let { handleStepChange: n, handleClose: t } = e,
-        { subscriptionMetadataRequest: T, selectedSku: h, selectedStoreListing: N, application: E } = (0, d.usePaymentContext)(),
-        C = (0, s.Z)(f.i),
-        S = (0, a.e7)([u.Z], () => u.Z.getGuild(null == T ? void 0 : T.guild_id)),
-        P = i.useCallback(() => n(I.h8.REVIEW), [n]);
-    if (null == h) return null;
-    let g = (0, o.KW)(h.flags);
+    n(789020);
+var r = n(735250),
+    a = n(470079),
+    i = n(442837),
+    l = n(131388),
+    s = n(171246),
+    o = n(689011),
+    u = n(931905),
+    c = n(430824),
+    d = n(598),
+    I = n(409813),
+    _ = n(586585),
+    h = n(614277),
+    f = n(750143),
+    S = n(689938);
+function E(e) {
+    let { handleStepChange: t, handleClose: n } = e,
+        { subscriptionMetadataRequest: E, selectedSku: m, selectedStoreListing: p, application: T } = (0, d.usePaymentContext)(),
+        C = (0, l.Z)(f.i),
+        N = (0, i.e7)([c.Z], () => c.Z.getGuild(null == E ? void 0 : E.guild_id)),
+        A = a.useCallback(() => t(I.h8.REVIEW), [t]);
+    if (null == m) return null;
+    let O = (0, s.KW)(m.flags);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(m.C3, {
+            (0, r.jsx)(h.C3, {
                 children: C
-                    ? (0, r.jsx)(c.h, {
-                          confirmCta: p.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CONTINUE_BUTTON,
-                          onConfirm: P,
-                          onCancel: t,
-                          title: p.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_TITLE_V2.format({ tier: h.name }),
-                          subtitle: g ? p.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE : p.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE.format({ guildName: null == S ? void 0 : S.name }),
+                    ? (0, r.jsx)(u.h, {
+                          confirmCta: S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CONTINUE_BUTTON,
+                          onConfirm: A,
+                          onCancel: n,
+                          title: S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_TITLE_V2.format({ tier: m.name }),
+                          subtitle: O ? S.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE : S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE.format({ guildName: null == N ? void 0 : N.name }),
                           showOpenDiscord: !1
                       })
-                    : (0, r.jsx)(l.Oc, {
-                          icon: null == N ? void 0 : N.thumbnail,
-                          storeListingBenefits: null == N ? void 0 : N.benefits,
-                          application: null != E ? E : void 0,
-                          title: p.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_TITLE_V2.format({ tier: h.name }),
-                          subtitle: g ? p.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER : p.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER,
-                          description: g ? p.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({ applicationName: null == E ? void 0 : E.name }) : p.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS
+                    : (0, r.jsx)(o.Oc, {
+                          icon: null == p ? void 0 : p.thumbnail,
+                          storeListingBenefits: null == p ? void 0 : p.benefits,
+                          application: null != T ? T : void 0,
+                          title: S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_TITLE_V2.format({ tier: m.name }),
+                          subtitle: O ? S.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER : S.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER,
+                          description: O ? S.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({ applicationName: null == T ? void 0 : T.name }) : S.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS
                       })
             }),
             !C &&
-                (0, r.jsx)(m.O3, {
+                (0, r.jsx)(h.O3, {
                     children: (0, r.jsx)(_.Z, {
-                        onBack: t,
-                        backText: p.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CANCEL_BUTTON,
-                        onPrimary: P,
+                        onBack: n,
+                        backText: S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CANCEL_BUTTON,
+                        onPrimary: A,
                         primaryCTA: _.g.CONTINUE,
-                        primaryText: p.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CONTINUE_BUTTON
+                        primaryText: S.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CONTINUE_BUTTON
                     })
                 })
         ]

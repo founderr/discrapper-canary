@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250);
@@ -12,6 +12,6 @@ let i = 'cash-app-pay-container';
 function a() {
     return (0, r.jsx)(r.Fragment, { children: (0, r.jsx)('div', { id: i }) });
 }
-function o() {
+function s() {
     return (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(a, {}) });
 }

@@ -2,12 +2,12 @@ var r = n(444675),
     i = n(607974),
     a = n(64750);
 if (n(322499)() || n(882171)()) {
-    var o = Symbol.iterator;
+    var s = Symbol.iterator;
     e.exports = function (e) {
-        return null != e && void 0 !== e[o] ? e[o]() : i(e) ? Array.prototype[o].call(e) : void 0;
+        return null != e && void 0 !== e[s] ? e[s]() : i(e) ? Array.prototype[s].call(e) : void 0;
     };
 } else {
-    var s = n(189612),
+    var o = n(189612),
         l = n(163494),
         u = n(690244),
         c = u('%Map%', !0),
@@ -23,7 +23,7 @@ if (n(322499)() || n(882171)()) {
             var r = f(e, t + 1);
             return r < 56320 || r > 57343 ? t + 1 : t + 2;
         },
-        m = function (e) {
+        I = function (e) {
             var t = 0;
             return {
                 next: function () {
@@ -39,8 +39,8 @@ if (n(322499)() || n(882171)()) {
                 }
             };
         },
-        I = function (e, t) {
-            if (s(e) || i(e)) return m(e);
+        m = function (e, t) {
+            if (o(e) || i(e)) return I(e);
             if (l(e)) {
                 var n = 0;
                 return {
@@ -61,48 +61,48 @@ if (n(322499)() || n(882171)()) {
         };
     if (c || d) {
         var T = n(403006),
-            g = n(72859),
-            S = _('Map.prototype.forEach', !0),
+            S = n(72859),
+            g = _('Map.prototype.forEach', !0),
             A = _('Set.prototype.forEach', !0);
         if (void 0 === r || !r.versions || !r.versions.node) {
-            var v = _('Map.prototype.iterator', !0),
-                N = _('Set.prototype.iterator', !0);
+            var N = _('Map.prototype.iterator', !0),
+                O = _('Set.prototype.iterator', !0);
         }
-        var O = _('Map.prototype.@@iterator', !0) || _('Map.prototype._es6-shim iterator_', !0),
-            R = _('Set.prototype.@@iterator', !0) || _('Set.prototype._es6-shim iterator_', !0),
+        var R = _('Map.prototype.@@iterator', !0) || _('Map.prototype._es6-shim iterator_', !0),
+            v = _('Set.prototype.@@iterator', !0) || _('Set.prototype._es6-shim iterator_', !0),
             C = function (e) {
                 if (T(e)) {
-                    if (v) return a(v(e));
-                    if (O) return O(e);
-                    if (S) {
+                    if (N) return a(N(e));
+                    if (R) return R(e);
+                    if (g) {
                         var t = [];
                         return (
-                            S(e, function (e, n) {
+                            g(e, function (e, n) {
                                 E(t, [n, e]);
                             }),
-                            m(t)
+                            I(t)
                         );
                     }
                 }
-                if (g(e)) {
-                    if (N) return a(N(e));
-                    if (R) return R(e);
+                if (S(e)) {
+                    if (O) return a(O(e));
+                    if (v) return v(e);
                     if (A) {
                         var n = [];
                         return (
                             A(e, function (e) {
                                 E(n, e);
                             }),
-                            m(n)
+                            I(n)
                         );
                     }
                 }
             };
         e.exports = function (e) {
-            return C(e) || I(e);
+            return C(e) || m(e);
         };
     } else
         e.exports = function (e) {
-            if (null != e) return I(e, !0);
+            if (null != e) return m(e, !0);
         };
 }

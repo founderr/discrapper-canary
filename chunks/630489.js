@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     body: 'body_fc08d1',
     headerIconContainer: 'headerIconContainer_fc08d1',
     iconBackground: 'iconBackground_fc08d1',

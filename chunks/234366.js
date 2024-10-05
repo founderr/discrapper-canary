@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     dK: function () {
-        return o;
+        return s;
     },
     mq: function () {
         return a;
@@ -12,11 +12,11 @@ n.d(t, {
 var r = n(470079),
     i = r.createContext(),
     a = r.createContext();
-function o(e) {
+function s(e) {
     var t = e.children,
         n = r.useState(null),
-        o = n[0],
-        s = n[1],
+        s = n[0],
+        o = n[1],
         l = r.useRef(!1);
     r.useEffect(function () {
         return function () {
@@ -24,7 +24,7 @@ function o(e) {
         };
     }, []);
     var u = r.useCallback(function (e) {
-        !l.current && s(e);
+        !l.current && o(e);
     }, []);
-    return r.createElement(i.Provider, { value: o }, r.createElement(a.Provider, { value: u }, t));
+    return r.createElement(i.Provider, { value: s }, r.createElement(a.Provider, { value: u }, t));
 }

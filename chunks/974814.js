@@ -1,11 +1,11 @@
 var r = n(67867),
-    i = n(414629),
+    o = n(414629),
     a = n(732116).CONSTRUCTOR,
-    o = n(197859),
+    i = n(197859),
     s = n(294377),
-    l = n(735471),
-    u = n(691244),
-    c = o && o.prototype;
+    c = n(735471),
+    l = n(691244),
+    u = i && i.prototype;
 if (
     (r(
         {
@@ -20,8 +20,8 @@ if (
             }
         }
     ),
-    !i && l(o))
+    !o && c(i))
 ) {
     var d = s('Promise').prototype.catch;
-    c.catch !== d && u(c, 'catch', d, { unsafe: !0 });
+    u.catch !== d && l(u, 'catch', d, { unsafe: !0 });
 }

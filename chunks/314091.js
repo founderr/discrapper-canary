@@ -1,9 +1,9 @@
 n.d(t, {
     b6: function () {
-        return m;
+        return p;
     },
     j3: function () {
-        return p;
+        return m;
     },
     xC: function () {
         return _;
@@ -40,11 +40,11 @@ let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
             seconds: i
         };
     },
-    m = (e) => {
+    p = (e) => {
         let t = d(e);
         return t.hours > 0 ? ''.concat(t.hours, ' hours') : t.minutes > 0 ? ''.concat(t.minutes, ' minutes') : ''.concat(t.seconds, ' seconds');
     },
-    p = (e, t) => {
+    m = (e, t) => {
         var n;
         let s = r.Z.getUserProfile(e.id),
             [a, o] = null !== (n = null == s ? void 0 : s.themeColors) && void 0 !== n ? n : [],

@@ -1,58 +1,58 @@
 n.d(t, {
     n: function () {
-        return p;
+        return m;
     }
-});
-var r = n(411104);
+}),
+    n(411104);
 var i = n(735250);
 n(470079);
 var a = n(120356),
-    o = n.n(a),
-    s = n(481060),
-    l = n(910111),
-    u = n(732559),
+    s = n.n(a),
+    l = n(481060),
+    r = n(910111),
+    o = n(732559),
     c = n(723851),
     d = n(981631),
-    _ = n(689938),
-    E = n(500792);
-let f = {
+    u = n(689938),
+    _ = n(500792);
+let E = {
     [d.TaA.WINDOWS]: {
         icon: c.Z,
-        getLabel: () => _.Z.Messages.WINDOWS
+        getLabel: () => u.Z.Messages.WINDOWS
     },
     [d.TaA.MACOS]: {
-        icon: u.Z,
-        getLabel: () => _.Z.Messages.MACOS
+        icon: o.Z,
+        getLabel: () => u.Z.Messages.MACOS
     },
     [d.TaA.LINUX]: {
-        icon: l.Z,
-        getLabel: () => _.Z.Messages.LINUX
+        icon: r.Z,
+        getLabel: () => u.Z.Messages.LINUX
     }
 };
-function h(e) {
+function I(e) {
     let { operatingSystem: t, className: n } = e,
-        r = f[t];
-    if (null == r) throw Error('Unexpected operating system: '.concat(t));
-    let a = r.icon;
-    return (0, i.jsx)(s.Tooltip, {
-        text: r.getLabel(),
+        a = E[t];
+    if (null == a) throw Error('Unexpected operating system: '.concat(t));
+    let s = a.icon;
+    return (0, i.jsx)(l.Tooltip, {
+        text: a.getLabel(),
         children: (e) =>
-            (0, i.jsx)(a, {
+            (0, i.jsx)(s, {
                 ...e,
                 className: n
             })
     });
 }
-let p = (e) => {
-    let { systems: t, className: n, iconClassName: r } = e;
+let m = (e) => {
+    let { systems: t, className: n, iconClassName: a } = e;
     return (0, i.jsx)('div', {
-        className: o()(E.OSSection, n),
+        className: s()(_.OSSection, n),
         children: t.map((e) =>
             (0, i.jsx)(
-                h,
+                I,
                 {
                     operatingSystem: e,
-                    className: o()(E.purchaseUnitOperatingSystem, r)
+                    className: s()(_.purchaseUnitOperatingSystem, a)
                 },
                 e
             )

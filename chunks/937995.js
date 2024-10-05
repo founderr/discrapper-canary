@@ -1,33 +1,33 @@
 n.d(t, {
     ZP: function () {
-        return u;
+        return l;
     },
     h9: function () {
-        return l;
+        return o;
     },
     nM: function () {
         return s;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(846519);
-let s = a.createContext({
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(846519);
+let s = i.createContext({
         onPreventIdle: () => null,
         onAllowIdle: () => null,
         onForceIdle: () => null,
         onActive: () => null
     }),
-    l = a.createContext(!1);
-function u(e) {
+    o = i.createContext(!1);
+function l(e) {
     let { children: t, timeout: n } = e,
-        [r, u] = a.useState(!1),
-        c = a.useRef(new Set()),
-        d = a.useRef(null);
-    a.useEffect(
+        [l, u] = i.useState(!1),
+        c = i.useRef(new Set()),
+        d = i.useRef(null);
+    i.useEffect(
         () => (
-            (d.current = new o.sW(n, () => u(!0))),
+            (d.current = new a.sW(n, () => u(!0))),
             d.current.delay(),
             () => {
                 var e;
@@ -36,14 +36,14 @@ function u(e) {
         ),
         [n]
     );
-    let _ = a.useCallback(
+    let _ = i.useCallback(
             (e) => {
                 var t;
                 u(!1), c.current.add(e), null === (t = d.current) || void 0 === t || t.cancel();
             },
             [c, d, u]
         ),
-        E = a.useCallback(
+        E = i.useCallback(
             (e) => {
                 if ((c.current.delete(e), 0 === c.current.size)) {
                     var t;
@@ -52,17 +52,17 @@ function u(e) {
             },
             [c, d]
         ),
-        f = a.useCallback(() => {
+        f = i.useCallback(() => {
             if ((u(!1), 0 === c.current.size)) {
                 var e;
                 null === (e = d.current) || void 0 === e || e.delay();
             }
         }, [c, d, u]),
-        h = a.useCallback(() => {
+        h = i.useCallback(() => {
             var e;
             if (!(c.current.size > 0)) null === (e = d.current) || void 0 === e || e.cancel(), u(!0);
         }, [d, u]),
-        p = a.useMemo(
+        p = i.useMemo(
             () => ({
                 onAllowIdle: E,
                 onPreventIdle: _,
@@ -71,12 +71,12 @@ function u(e) {
             }),
             [E, _, f, h]
         );
-    return (0, i.jsx)(l.Provider, {
-        value: r,
-        children: (0, i.jsx)(s.Provider, {
+    return (0, r.jsx)(o.Provider, {
+        value: l,
+        children: (0, r.jsx)(s.Provider, {
             value: p,
             children: t({
-                idle: r,
+                idle: l,
                 ...p
             })
         })

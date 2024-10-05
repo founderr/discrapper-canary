@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(406074),
     d = n(660196),
     h = n(36246),
-    m = n(305342),
-    p = n(981631),
+    p = n(305342),
+    m = n(981631),
     _ = n(689938),
     f = n(698170);
 function E(e) {
@@ -36,7 +36,7 @@ function E(e) {
         }, [g]);
     return ((0, d.Z)({
         guildId: t,
-        location: p.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
+        location: m.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
         relevantSubscriptionListingIds: E.map((e) => e.id)
     }),
     null == I)
@@ -65,12 +65,12 @@ function E(e) {
                       guildId: t,
                       children: E.filter((e) => null != S[e.id]).map((e) =>
                           (0, i.jsx)(
-                              m.Z,
+                              p.Z,
                               {
                                   guildId: t,
                                   listingId: e.id,
                                   groupListingId: S[e.id],
-                                  analyticsLocation: p.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
+                                  analyticsLocation: m.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
                               },
                               e.id
                           )

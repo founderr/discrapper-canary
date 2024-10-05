@@ -1,20 +1,20 @@
-var r, i, a, o, s, l, u;
-function c(e, t) {
-    let { sound_id: n, emoji_id: r, emoji_name: i, user_id: a, available: o, ...s } = e;
+var r, i, a, s, o, l, u, c, d, _, E, f, h, p;
+function I(e, t) {
+    let { sound_id: n, emoji_id: r, emoji_name: i, user_id: a, available: s, ...o } = e;
     return {
-        ...s,
+        ...o,
         soundId: n,
         guildId: t,
         emojiId: r,
         emojiName: i,
         userId: a,
-        available: null == o || o
+        available: null == s || s
     };
 }
-function d(e) {
-    let { soundId: t, guildId: n, emojiId: r, emojiName: i, userId: a, ...o } = e;
+function m(e) {
+    let { soundId: t, guildId: n, emojiId: r, emojiName: i, userId: a, ...s } = e;
     return {
-        ...o,
+        ...s,
         sound_id: t,
         guild_id: n,
         emoji_id: r,
@@ -24,7 +24,7 @@ function d(e) {
 }
 n.d(t, {
     H$: function () {
-        return o;
+        return s;
     },
     MW: function () {
         return a;
@@ -33,42 +33,42 @@ n.d(t, {
         return r;
     },
     QL: function () {
-        return d;
+        return m;
     },
     YQ: function () {
         return u;
     },
     bg: function () {
-        return s;
+        return o;
     },
     jy: function () {
         return i;
     },
     o3: function () {
-        return c;
+        return I;
     },
     vB: function () {
         return l;
     }
 }),
-    !(function (e) {
-        (e[(e.PLAY = 0)] = 'PLAY'), (e[(e.ADD = 1)] = 'ADD');
-    })(r || (r = {})),
-    !(function (e) {
-        (e.ENTRY = 'entry_sound'), (e.EXIT = 'exit_sound'), (e.DEFAULT = 'default');
-    })(i || (i = {})),
-    !(function (e) {
-        (e.ADDED = 'added'), (e.UPDATED = 'updated'), (e.REMOVED = 'removed');
-    })(a || (a = {})),
-    !(function (e) {
-        (e.DEFAULT = 'default'), (e.CUSTOM = 'custom');
-    })(o || (o = {})),
-    !(function (e) {
-        (e[(e.FAVORITES = 0)] = 'FAVORITES'), (e[(e.RECENTLY_HEARD = 1)] = 'RECENTLY_HEARD'), (e[(e.FREQUENTLY_USED = 2)] = 'FREQUENTLY_USED'), (e[(e.GUILD = 3)] = 'GUILD'), (e[(e.DEFAULTS = 4)] = 'DEFAULTS'), (e[(e.SEARCH = 5)] = 'SEARCH');
-    })(s || (s = {})),
-    !(function (e) {
-        (e[(e.SOUND = 0)] = 'SOUND'), (e[(e.ADD_SOUND = 1)] = 'ADD_SOUND');
-    })(l || (l = {})),
-    !(function (e) {
-        (e[(e.GIFT_CODE = 0)] = 'GIFT_CODE'), (e[(e.SOUNDBOARD = 1)] = 'SOUNDBOARD'), (e[(e.JOINED_VOICE_CHANNEL = 2)] = 'JOINED_VOICE_CHANNEL');
-    })(u || (u = {}));
+    ((c = r || (r = {}))[(c.PLAY = 0)] = 'PLAY'),
+    (c[(c.ADD = 1)] = 'ADD'),
+    ((d = i || (i = {})).ENTRY = 'entry_sound'),
+    (d.EXIT = 'exit_sound'),
+    (d.DEFAULT = 'default'),
+    ((_ = a || (a = {})).ADDED = 'added'),
+    (_.UPDATED = 'updated'),
+    (_.REMOVED = 'removed'),
+    ((E = s || (s = {})).DEFAULT = 'default'),
+    (E.CUSTOM = 'custom'),
+    ((f = o || (o = {}))[(f.FAVORITES = 0)] = 'FAVORITES'),
+    (f[(f.RECENTLY_HEARD = 1)] = 'RECENTLY_HEARD'),
+    (f[(f.FREQUENTLY_USED = 2)] = 'FREQUENTLY_USED'),
+    (f[(f.GUILD = 3)] = 'GUILD'),
+    (f[(f.DEFAULTS = 4)] = 'DEFAULTS'),
+    (f[(f.SEARCH = 5)] = 'SEARCH'),
+    ((h = l || (l = {}))[(h.SOUND = 0)] = 'SOUND'),
+    (h[(h.ADD_SOUND = 1)] = 'ADD_SOUND'),
+    ((p = u || (u = {}))[(p.GIFT_CODE = 0)] = 'GIFT_CODE'),
+    (p[(p.SOUNDBOARD = 1)] = 'SOUNDBOARD'),
+    (p[(p.JOINED_VOICE_CHANNEL = 2)] = 'JOINED_VOICE_CHANNEL');

@@ -1,23 +1,23 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var i = n(735250);
-n(470079);
-var s = n(481060),
-    a = n(346479),
-    l = n(665906),
-    r = n(981631),
-    o = n(689938);
-function c(e) {
-    var t, n;
-    if (!(0, l.Xb)(e) || e.type !== r.d4z.PRIVATE_THREAD) return null;
-    let c = null === (n = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.invitable) || void 0 === n || n;
-    return (0, i.jsx)(s.MenuCheckboxItem, {
+var i = t(735250);
+t(470079);
+var a = t(481060),
+    r = t(346479),
+    d = t(665906),
+    s = t(981631),
+    o = t(689938);
+function u(e) {
+    var n, t;
+    if (!(0, d.Xb)(e) || e.type !== s.d4z.PRIVATE_THREAD) return null;
+    let u = null === (t = null === (n = e.threadMetadata) || void 0 === n ? void 0 : n.invitable) || void 0 === t || t;
+    return (0, i.jsx)(a.MenuCheckboxItem, {
         id: 'toggle-thread-invitable',
         label: o.Z.Messages.THREAD_INVITABLE_TOGGLE_LABEL,
-        checked: c,
-        action: () => a.Z.setInvitable(e, !c)
+        checked: u,
+        action: () => r.Z.setInvitable(e, !u)
     });
 }

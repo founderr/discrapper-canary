@@ -1,13 +1,13 @@
 n.d(t, {
     N: function () {
-        return l;
+        return s;
     }
-});
-var r = n(627494);
-var i = n(757143);
-var a = n(503461),
-    o = n(190313);
-function s(e, t, n) {
+}),
+    n(627494),
+    n(757143);
+var r = n(503461),
+    i = n(190313);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,12 +20,12 @@ function s(e, t, n) {
         e
     );
 }
-class l {
+class s {
     get prefix() {
         return this.table.prefix;
     }
     withoutLogging() {
-        return new l(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new s(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t) {
         return this.table.get([e, t]);
@@ -52,11 +52,11 @@ class l {
         return this.table.getParentId([null, e]);
     }
     put(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.Sn.Replace;
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.Sn.Replace;
         return this.transaction((r) => r.put(e, t, n), ''.concat(this.prefix, ' put'));
     }
     putAll(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.Sn.Replace;
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.Sn.Replace;
         return this.transaction((r) => r.putAll(e, t, n), ''.concat(this.prefix, ' putAll'));
     }
     replaceAll(e, t) {
@@ -69,10 +69,10 @@ class l {
         return this.transaction((n) => n.deleteGeneration(e, t), ''.concat(this.prefix, ' deleteGeneration'));
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new u(t)), t);
+        return this.table.transaction((t) => e(new o(t)), t);
     }
     upgradeTransaction(e) {
-        return new u(this.table.upgradeTransaction(e));
+        return new o(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e, t) {
         return this.table.getManySyncUnsafe([e], t);
@@ -88,25 +88,25 @@ class l {
         };
     }
     constructor(e, t, n, r = !0) {
-        s(this, 'originalPrefix', void 0), s(this, 'table', void 0), (this.originalPrefix = e), (this.table = new o.i([e], t, n, r));
+        a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
     }
 }
-class u {
+class o {
     static fromDatabaseTransaction(e, t, n) {
-        return new u(new o.E(e, t, n));
+        return new o(new i.E(e, t, n));
     }
     put(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.Sn.Replace;
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.Sn.Replace;
         return this.putWithGeneration(e, t, null, n);
     }
     putWithGeneration(e, t, n) {
-        let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.Sn.Replace;
-        return this.transaction.put(l.cell(e, t, n), r);
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace;
+        return this.transaction.put(s.cell(e, t, n), i);
     }
     putAll(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.Sn.Replace;
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.Sn.Replace;
         return this.transaction.putAll(
-            t.map((t) => l.cell(e, t, null)),
+            t.map((t) => s.cell(e, t, null)),
             n
         );
     }
@@ -127,6 +127,6 @@ class u {
         return this.transaction.deleteGeneration([], e, t);
     }
     constructor(e) {
-        s(this, 'transaction', void 0), (this.transaction = e);
+        a(this, 'transaction', void 0), (this.transaction = e);
     }
 }

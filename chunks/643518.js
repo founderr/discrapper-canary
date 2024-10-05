@@ -1,27 +1,27 @@
-s.d(n, {
+t.d(n, {
     Z: function () {
-        return I;
+        return _;
     }
 }),
-    s(653041);
-var t = s(697927),
-    i = s(200634),
-    o = s(369566),
-    l = s(326094),
-    r = s(708108),
-    c = s(146078),
-    a = s(228168),
-    d = s(981631),
-    u = s(689938);
-function I(e) {
-    var n, s;
-    let { user: I, currentUser: _ } = e,
-        { live: E, recent: f, stream: m } = (0, o.Z)(I.id),
-        x = null === (n = (0, t.Z)(I.id, I.id !== (null == _ ? void 0 : _.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
-        Z = null === (s = (0, i.Z)(I.id, I.id !== (null == _ ? void 0 : _.id)).mutualGuilds) || void 0 === s ? void 0 : s.length,
+    t(653041);
+var s = t(697927),
+    i = t(200634),
+    o = t(369566),
+    l = t(326094),
+    r = t(708108),
+    c = t(146078),
+    a = t(228168),
+    d = t(981631),
+    u = t(689938);
+function _(e) {
+    var n, t;
+    let { user: _, currentUser: I } = e,
+        { live: E, recent: f, stream: m } = (0, o.Z)(_.id),
+        x = null === (n = (0, s.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
+        Z = null === (t = (0, i.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
         p = (0, l.Z)({
-            user: I,
-            currentUser: _,
+            user: _,
+            currentUser: I,
             location: d.Sbl.PROFILE_MODAL_TABS
         }),
         h = [
@@ -36,7 +36,7 @@ function I(e) {
                 section: a.oh.ACTIVITY,
                 text: u.Z.Messages.USER_PROFILE_ACTIVITY
             }),
-        I.id !== (null == _ ? void 0 : _.id) &&
+        _.id !== (null == I ? void 0 : I.id) &&
             p &&
             (h.push({
                 section: a.oh.MUTUAL_FRIENDS,

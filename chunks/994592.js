@@ -1,42 +1,42 @@
 n.d(t, {
     j0: function () {
-        return h;
-    },
-    mY: function () {
         return f;
     },
-    on: function () {
+    mY: function () {
         return E;
+    },
+    on: function () {
+        return _;
     }
-});
-var r = n(47120);
-var i = n(442837),
-    a = n(652515),
-    o = n(200876),
+}),
+    n(47120);
+var r = n(442837),
+    i = n(652515),
+    a = n(200876),
     s = n(674180),
-    l = n(160404),
-    u = n(430824),
-    c = n(772021),
-    d = n(981631);
-function _(e) {
-    let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [u.Z, l.Z],
+    o = n(160404),
+    l = n(430824),
+    u = n(772021),
+    c = n(981631);
+function d(e) {
+    let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Z, o.Z],
         r = t.getGuild(e);
     if (null == r) return !1;
-    let i = (0, o.l)(r),
-        a = r.hasFeature(d.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
-    return !!((i && a) || n.isViewingServerShop(e)) || !1;
+    let i = (0, a.l)(r),
+        s = r.hasFeature(c.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+    return !!((i && s) || n.isViewingServerShop(e)) || !1;
 }
-function E(e, t) {
-    return !!_(e) || (0, c.U)(e, t);
+function _(e, t) {
+    return !!d(e) || (0, u.U)(e, t);
+}
+function E(e) {
+    let t = (0, u.Z)(e),
+        n = (0, r.e7)([l.Z, o.Z], () => d(e, [l.Z, o.Z]), [e]),
+        { shouldHideGuildPurchaseEntryPoints: i } = (0, s.uP)(e);
+    return !i && (n || t);
 }
 function f(e) {
-    let t = (0, c.Z)(e),
-        n = (0, i.e7)([u.Z, l.Z], () => _(e, [u.Z, l.Z]), [e]),
-        { shouldHideGuildPurchaseEntryPoints: r } = (0, s.uP)(e);
-    return !r && (n || t);
-}
-function h(e) {
-    let t = f(e),
-        n = (0, a.RF)(e, 'useShowRoleSubscriptionsInChannelList');
+    let t = E(e),
+        n = (0, i.RF)(e, 'useShowRoleSubscriptionsInChannelList');
     return t && !n;
 }

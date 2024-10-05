@@ -1,5 +1,5 @@
 var r = n(67867),
-    i = n(570596),
+    o = n(570596),
     a = n(653457);
 r(
     {
@@ -10,7 +10,7 @@ r(
     {
         reject: function (e) {
             var t = a.f(this);
-            return i(t.reject, void 0, e), t.promise;
+            return o(t.reject, void 0, e), t.promise;
         }
     }
 );

@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return r;
     }
-});
-var r = n(47120);
-var i = n(470079);
-function a() {
-    let [e, t] = i.useState(null),
-        n = i.useRef(null);
+}),
+    n(47120);
+var E = n(470079);
+function r() {
+    let [e, t] = E.useState(null),
+        n = E.useRef(null);
     return (
-        i.useEffect(() => {
+        E.useEffect(() => {
             null != e && null != n.current && n.current.scrollIntoView({ behavior: 'smooth' });
         }, [e]),
         {

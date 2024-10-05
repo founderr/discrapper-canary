@@ -1,26 +1,26 @@
-s.r(n),
-    s.d(n, {
+t.r(n),
+    t.d(n, {
         default: function () {
             return x;
         }
     }),
-    s(47120);
-var t = s(735250),
-    i = s(470079),
-    o = s(512722),
-    l = s.n(o),
-    r = s(442837),
-    c = s(100527),
-    a = s(699516),
-    d = s(594174),
-    u = s(971393),
-    I = s(787018),
-    _ = s(752342),
-    E = s(886794),
-    f = s(910364);
+    t(47120);
+var s = t(735250),
+    i = t(470079),
+    o = t(512722),
+    l = t.n(o),
+    r = t(442837),
+    c = t(100527),
+    a = t(699516),
+    d = t(594174),
+    u = t(971393),
+    _ = t(787018),
+    I = t(752342),
+    E = t(886794),
+    f = t(910364);
 let m = [c.Z.BITE_SIZE_PROFILE_POPOUT, c.Z.PROFILE_PANEL];
 function x(e) {
-    let { user: n, ...s } = e,
+    let { user: n, ...t } = e,
         o = (0, r.e7)([d.default], () => d.default.getCurrentUser());
     l()(null != o, 'UserProfileModalWrapper: currentUser cannot be undefined');
     let c = (0, r.e7)([a.Z], () => a.Z.isBlocked(n.id)),
@@ -31,29 +31,29 @@ function x(e) {
     }, [c]);
     let h = !m.some((e) => {
         var n;
-        return (null !== (n = s.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
+        return (null !== (n = t.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
     });
     return x && p && h
-        ? (0, t.jsx)(I.Z, {
+        ? (0, s.jsx)(_.Z, {
               user: n,
               currentUser: o,
               onViewBlockedProfileClick: () => Z(!1),
-              ...s
+              ...t
           })
         : n.isNonUserBot()
-          ? (0, t.jsx)(E.Z, {
-                ...s,
+          ? (0, s.jsx)(E.Z, {
+                ...t,
                 user: n,
                 currentUser: o
             })
           : n.bot
-            ? (0, t.jsx)(_.Z, {
-                  ...s,
+            ? (0, s.jsx)(I.Z, {
+                  ...t,
                   user: n,
                   currentUser: o
               })
-            : (0, t.jsx)(f.Z, {
-                  ...s,
+            : (0, s.jsx)(f.Z, {
+                  ...t,
                   user: n,
                   currentUser: o
               });

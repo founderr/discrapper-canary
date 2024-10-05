@@ -9,8 +9,8 @@ var i = n(735250),
     u = n(692547),
     d = n(477690),
     h = n(481060),
-    m = n(2052),
-    p = n(906732),
+    p = n(2052),
+    m = n(906732),
     _ = n(194082),
     f = n(484459),
     E = n(594174),
@@ -46,7 +46,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             a,
             { participant: r, isUpsellEnabled: o, shape: d, size: f, didTrackUpsellViewed: A, setDidTrackUpsellViewed: Z, className: M, premiumIndicator: b } = e,
             R = (0, I.Wc)(r),
-            { analyticsLocations: L } = (0, p.ZP)(),
+            { analyticsLocations: L } = (0, m.ZP)(),
             j = null != (0, T.Z)(r);
         try {
             t = (0, I.nG)(R);
@@ -59,7 +59,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             a = !1;
         }
         let P = t || a,
-            { location: O } = (0, m.O)(),
+            { location: O } = (0, p.O)(),
             y = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
             D = o && !C.ZP.isPremium(y, S.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
             U = s.useCallback(() => {
@@ -123,10 +123,10 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     };
 t.Z = (e) => {
     let { participant: t, showQuality: n, isUpsellEnabled: a = !0, size: o, className: c, premiumIndicator: u } = e,
-        [d, m] = s.useState(!1),
-        p = (0, I.Wc)(t),
+        [d, p] = s.useState(!1),
+        m = (0, I.Wc)(t),
         { reducedMotion: E } = s.useContext(h.AccessibilityPreferencesContext),
-        g = n && null != p;
+        g = n && null != m;
     s.useEffect(() => {
         (0, f.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
     }, [t]);
@@ -166,7 +166,7 @@ t.Z = (e) => {
                                   shape: h.BadgeShapes.ROUND_LEFT,
                                   isUpsellEnabled: a,
                                   didTrackUpsellViewed: d,
-                                  setDidTrackUpsellViewed: m,
+                                  setDidTrackUpsellViewed: p,
                                   premiumIndicator: u
                               })
                           })

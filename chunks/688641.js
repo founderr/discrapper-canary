@@ -11,10 +11,10 @@ var s = n(120356),
     r = n(689938),
     o = n(702414);
 function c(e) {
-    let { className: t, iconContainerClassName: n, icon: s, color: c, title: u, description: d, userCount: h, onClick: m, highlight: p } = e;
+    let { className: t, iconContainerClassName: n, icon: s, color: c, title: u, description: d, userCount: h, onClick: p, highlight: m } = e;
     return (0, i.jsxs)(l.Clickable, {
-        className: a()(o.container, t, null != p && { [o.pulse]: p }),
-        onClick: m,
+        className: a()(o.container, t, null != m && { [o.pulse]: m }),
+        onClick: p,
         children: [
             (0, i.jsx)('div', {
                 style: { backgroundColor: c },

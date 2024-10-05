@@ -1,5 +1,5 @@
 var r = n(67867),
-    i = n(625014).trim;
+    o = n(625014).trim;
 r(
     {
         target: 'String',
@@ -8,7 +8,7 @@ r(
     },
     {
         trim: function () {
-            return i(this);
+            return o(this);
         }
     }
 );

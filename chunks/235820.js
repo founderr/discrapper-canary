@@ -1,43 +1,43 @@
-var r = n(544891),
-    i = n(570140),
-    a = n(981631);
+var i = n(544891),
+    a = n(570140),
+    s = n(981631);
 t.Z = {
     setGuildFilter(e) {
-        let { guildFilter: t, roleFilter: n, everyoneFilter: r } = e;
-        i.Z.dispatch({
+        let { guildFilter: t, roleFilter: n, everyoneFilter: i } = e;
+        a.Z.dispatch({
             type: 'SET_RECENT_MENTIONS_FILTER',
             guildFilter: t,
             roleFilter: n,
-            everyoneFilter: r
+            everyoneFilter: i
         });
     },
     clearMentions() {
-        i.Z.dispatch({ type: 'CLEAR_MENTIONS' });
+        a.Z.dispatch({ type: 'CLEAR_MENTIONS' });
     },
     truncateMentions(e) {
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'TRUNCATE_MENTIONS',
             size: e
         });
     },
     fetchRecentMentions(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.DJj,
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.DJj,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            o = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
-            s = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4];
-        i.Z.dispatch({
+            l = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
+            r = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4];
+        a.Z.dispatch({
             type: 'LOAD_RECENT_MENTIONS',
             guildId: n
         }),
-            r.tn
+            i.tn
                 .get({
-                    url: a.ANM.MENTIONS,
+                    url: s.ANM.MENTIONS,
                     query: {
                         before: e,
                         limit: t,
                         guild_id: n,
-                        roles: o,
-                        everyone: s
+                        roles: l,
+                        everyone: r
                     },
                     retries: 2,
                     oldFormErrors: !0
@@ -45,30 +45,30 @@ t.Z = {
                 .then(
                     (t) => {
                         let { body: n } = t;
-                        i.Z.dispatch({
+                        a.Z.dispatch({
                             type: 'LOAD_RECENT_MENTIONS_SUCCESS',
                             messages: n,
                             isAfter: null != e,
-                            hasMoreAfter: n.length >= a.DJj
+                            hasMoreAfter: n.length >= s.DJj
                         });
                     },
                     () => {
-                        i.Z.dispatch({ type: 'LOAD_RECENT_MENTIONS_FAILURE' });
+                        a.Z.dispatch({ type: 'LOAD_RECENT_MENTIONS_FAILURE' });
                     }
                 );
     },
     deleteRecentMention(e) {
-        r.tn.del({
-            url: a.ANM.MENTIONS_MESSAGE_ID(e),
+        i.tn.del({
+            url: s.ANM.MENTIONS_MESSAGE_ID(e),
             retries: 2,
             oldFormErrors: !0
         }),
-            i.Z.dispatch({
+            a.Z.dispatch({
                 type: 'RECENT_MENTION_DELETE',
                 id: e
             });
     },
     setRecentMentionsStale() {
-        i.Z.dispatch({ type: 'SET_RECENT_MENTIONS_STALE' });
+        a.Z.dispatch({ type: 'SET_RECENT_MENTIONS_STALE' });
     }
 };

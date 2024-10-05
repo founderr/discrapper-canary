@@ -1,57 +1,57 @@
-n.r(t),
-    n.d(t, {
+t.r(e),
+    t.d(e, {
         ItemDetailsModal: function () {
-            return m;
+            return S;
         }
     });
-var r = n(735250);
-n(470079);
-var i = n(752843),
-    a = n(442837),
-    o = n(481060),
-    s = n(55563),
-    l = n(551428),
-    u = n(73346),
-    c = n(591759),
-    d = n(110742),
-    _ = n(886253),
-    E = n(680005),
-    f = n(938337),
-    h = n(981631),
-    p = n(689938);
-function m(e) {
-    var t, n, m, I;
-    let { onClose: T, transitionState: g, skuId: S, appId: A, onHeaderTitleClick: v } = e,
-        N = (0, a.e7)([l.Z], () => l.Z.getForSKU(S), [S]),
-        O = (0, a.e7)([s.Z], () => s.Z.get(S), [S]),
-        R = (0, d.M)(S);
-    if (null == O) return null;
-    let C = null !== (n = O.name) && void 0 !== n ? n : '',
-        y = null !== (m = null == N ? void 0 : null === (t = N.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== m ? m : void 0,
-        L = (null == N ? void 0 : N.headerBackground) != null && null !== (I = c.Z.toURLSafe((0, u._W)(A, N.headerBackground, 256))) && void 0 !== I ? I : void 0,
-        b = O.type === h.epS.DURABLE && R,
-        D = O.type === h.epS.DURABLE ? (b ? p.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : p.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
-        { price: M } = O;
-    return null == M
+var l = t(735250);
+t(470079);
+var i = t(752843),
+    r = t(442837),
+    a = t(481060),
+    o = t(55563),
+    s = t(551428),
+    u = t(73346),
+    c = t(591759),
+    d = t(110742),
+    f = t(886253),
+    p = t(680005),
+    m = t(938337),
+    v = t(981631),
+    I = t(689938);
+function S(n) {
+    var e, t, S, h;
+    let { onClose: x, transitionState: N, skuId: g, appId: T, onHeaderTitleClick: Z } = n,
+        E = (0, r.e7)([s.Z], () => s.Z.getForSKU(g), [g]),
+        C = (0, r.e7)([o.Z], () => o.Z.get(g), [g]),
+        _ = (0, d.M)(g);
+    if (null == C) return null;
+    let A = null !== (t = C.name) && void 0 !== t ? t : '',
+        O = null !== (S = null == E ? void 0 : null === (e = E.description) || void 0 === e ? void 0 : e.trim()) && void 0 !== S ? S : void 0,
+        R = (null == E ? void 0 : E.headerBackground) != null && null !== (h = c.Z.toURLSafe((0, u._W)(T, E.headerBackground, 256))) && void 0 !== h ? h : void 0,
+        b = C.type === v.epS.DURABLE && _,
+        j = C.type === v.epS.DURABLE ? (b ? I.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : I.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
+        { price: P } = C;
+    return null == P
         ? null
-        : (0, r.jsx)(_.A, {
-              appId: A,
-              skuId: O.id,
-              transitionState: g,
-              onHeaderTitleClick: null != v ? v : T,
-              onClose: T,
-              footer: (0, r.jsx)(E.Y, {
-                  appId: A,
-                  sku: O
+        : (0, l.jsx)(f.A, {
+              appId: T,
+              skuId: C.id,
+              transitionState: N,
+              onHeaderTitleClick: null != Z ? Z : x,
+              onClose: x,
+              footer: (0, l.jsx)(p.Y, {
+                  appId: T,
+                  sku: C
               }),
-              children: (0, r.jsx)(f.i, {
-                  appId: A,
-                  skuId: O.id,
-                  title: C,
-                  description: y,
-                  imgSrc: L,
-                  tag: null != D ? (0, r.jsx)(i.V, { text: D }) : void 0,
-                  FallbackIcon: o.TicketIcon
+              children: (0, l.jsx)(m.i, {
+                  appId: T,
+                  skuId: C.id,
+                  title: A,
+                  description: O,
+                  imgSrc: R,
+                  tag: null != j ? (0, l.jsx)(i.V, { text: j }) : void 0,
+                  FallbackIcon: a.TicketIcon
               })
           });
 }

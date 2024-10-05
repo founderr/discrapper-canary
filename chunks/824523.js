@@ -4,10 +4,10 @@ n.d(t, {
     }
 });
 var r = n(571846),
-    i = n(17851);
+    o = n(17851);
 function a(e) {
     return (a =
-        'function' == typeof r && 'symbol' == typeof i
+        'function' == typeof r && 'symbol' == typeof o
             ? function (e) {
                   return typeof e;
               }

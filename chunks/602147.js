@@ -43,7 +43,7 @@ let S = l.forwardRef(function (e, t) {
             null == h || h(), (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }), N(p), S(m.L.DISMISS);
         }, [h, p, S]),
         v = null != C && _,
-        Z = l.useMemo(
+        T = l.useMemo(
             () => ({
                 lowerBadgeSize: {
                     width: 12,
@@ -61,7 +61,7 @@ let S = l.forwardRef(function (e, t) {
         selected: n,
         tooltip: I.Z.Messages.DISCOVER,
         icon: s.CompassIcon,
-        ...Z
+        ...T
     });
 });
 t.Z = S;

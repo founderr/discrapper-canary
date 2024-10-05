@@ -13,8 +13,8 @@ var s,
     E = n(314897),
     p = n(626135),
     g = n(981631),
-    m = n(689938),
-    f = n(237810),
+    f = n(689938),
+    m = n(237810),
     I = n(113207);
 function N(e, t, n) {
     return (
@@ -39,19 +39,19 @@ class T extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(375673),
-                    className: o()(f.image, I.marginBottom20)
+                    className: o()(m.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: I.marginBottom8,
-                    children: m.Z.Messages.VERFICATION_EXPIRED
+                    children: f.Z.Messages.VERFICATION_EXPIRED
                 }),
                 (0, r.jsx)(d.DK, {
                     className: I.marginBottom40,
-                    children: m.Z.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
+                    children: f.Z.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
                 }),
                 (0, r.jsx)(d.zx, {
                     onClick: this.handleLogin,
-                    children: m.Z.Messages._LOGIN
+                    children: f.Z.Messages._LOGIN
                 })
             ]
         });
@@ -61,15 +61,15 @@ class T extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(73962),
-                    className: o()(f.image, I.marginBottom20)
+                    className: o()(m.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: I.marginBottom40,
-                    children: m.Z.Messages.VERIFICATION_VERIFIED
+                    children: f.Z.Messages.VERIFICATION_VERIFIED
                 }),
                 (0, r.jsx)(d.zx, {
                     onClick: this.handleOpenApp,
-                    children: m.Z.Messages.VERIFICATION_OPEN_DISCORD
+                    children: f.Z.Messages.VERIFICATION_OPEN_DISCORD
                 })
             ]
         });
@@ -79,15 +79,15 @@ class T extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(892235),
-                    className: o()(f.image, I.marginBottom20)
+                    className: o()(m.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: I.marginBottom8,
-                    children: m.Z.Messages.VERIFICATION_VERIFYING
+                    children: f.Z.Messages.VERIFICATION_VERIFYING
                 }),
                 (0, r.jsx)(d.DK, {
                     className: I.marginBottom40,
-                    children: m.Z.Messages.ACTION_MAY_TAKE_A_MOMENT
+                    children: f.Z.Messages.ACTION_MAY_TAKE_A_MOMENT
                 }),
                 (0, r.jsx)(d.zx, {
                     submitting: !0,

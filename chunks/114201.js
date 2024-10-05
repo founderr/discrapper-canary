@@ -7,15 +7,15 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
     a = n(481060),
-    o = n(239091),
-    s = n(553795),
+    s = n(239091),
+    o = n(553795),
     l = n(425128),
     u = n(981631),
     c = n(689938),
     d = n(288984);
 function _(e) {
-    let t = (0, i.e7)([s.Z], () => s.Z.getAccount(null, u.ABu.LEAGUE_OF_LEGENDS)),
-        n = (0, i.e7)([s.Z], () => s.Z.getAccount(null, u.ABu.LEAGUE_OF_LEGENDS)),
+    let t = (0, i.e7)([o.Z], () => o.Z.getAccount(null, u.ABu.LEAGUE_OF_LEGENDS)),
+        n = (0, i.e7)([o.Z], () => o.Z.getAccount(null, u.ABu.LEAGUE_OF_LEGENDS)),
         _ =
             null != n && null != t
                 ? () => {
@@ -34,7 +34,7 @@ function _(e) {
             return (0, r.jsx)(a.Menu, {
                 navId: 'leaderboard-popout-context-menu',
                 onClose: () => {
-                    (0, o.Zy)(), t();
+                    (0, s.Zy)(), t();
                 },
                 'aria-label': c.Z.Messages.LEADERBOARD_ACTIONS_MENU_LABEL,
                 onSelect: void 0,

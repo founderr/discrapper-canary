@@ -9,26 +9,26 @@ n.d(t, {
 var r = n(735250);
 n(470079);
 var i = n(481060),
-    a = n(44315),
-    o = n(377171),
-    s = n(981631),
-    l = n(689938),
-    u = n(405013);
+    o = n(44315),
+    u = n(377171),
+    l = n(981631),
+    s = n(689938),
+    a = n(405013);
 function c(e) {
-    let { label: t, backgroundColor: n = o.Z.BUTTON_SECONDARY_BACKGROUND, icon: a, iconColor: s } = e;
+    let { label: t, backgroundColor: n = u.Z.BUTTON_SECONDARY_BACKGROUND, icon: o, iconColor: l } = e;
     return (0, r.jsxs)('div', {
-        className: u.badge,
+        className: a.badge,
         style: { backgroundColor: n },
         children: [
             (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'always-white',
-                className: u.__invalid_badgeText,
+                className: a.__invalid_badgeText,
                 children: t
             }),
-            (0, r.jsx)(a, {
-                className: u.badgeIcon,
-                color: null != s ? s : 'currentColor',
+            (0, r.jsx)(o, {
+                className: a.badgeIcon,
+                color: null != l ? l : 'currentColor',
                 'aria-hidden': !0
             })
         ]
@@ -36,15 +36,15 @@ function c(e) {
 }
 function d() {
     return (0, r.jsx)(c, {
-        label: l.Z.Messages.GUILD_PRODUCT_STATUS_BADGE_PUBLISHED,
+        label: s.Z.Messages.GUILD_PRODUCT_STATUS_BADGE_PUBLISHED,
         backgroundColor: '#207B8D',
         icon: i.SparklesIcon
     });
 }
 function _() {
     return (0, r.jsx)(c, {
-        label: l.Z.Messages.GUILD_PRODUCT_STATUS_BADGE_DRAFT,
+        label: s.Z.Messages.GUILD_PRODUCT_STATUS_BADGE_DRAFT,
         icon: i.PencilIcon,
-        iconColor: (0, a.Lq)(s.Ilk.PRIMARY_330)
+        iconColor: (0, o.Lq)(l.Ilk.PRIMARY_330)
     });
 }

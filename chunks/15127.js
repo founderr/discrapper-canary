@@ -1,18 +1,18 @@
 n.d(t, {
     Gc: function () {
-        return s;
+        return o;
     },
     ol: function () {
         return l;
     },
     q3: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(981631);
-let o = i.createContext({
+let s = i.createContext({
     titleId: void 0,
     errorId: void 0,
     error: void 0,
@@ -21,12 +21,12 @@ let o = i.createContext({
     hasValue: void 0,
     setHasValue: a.dG4
 });
-function s() {
-    return i.useContext(o);
+function o() {
+    return i.useContext(s);
 }
 function l(e) {
     let { children: t, ...n } = e;
-    return (0, r.jsx)(o.Provider, {
+    return (0, r.jsx)(s.Provider, {
         value: n,
         children: t
     });

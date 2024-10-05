@@ -74,14 +74,14 @@ function E(e) {
         E = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         { mode: N, mentionCount: S, targetChannelId: x } = 'bottom' === t ? h : f,
         v = N === _.x.HIDDEN,
-        Z = (0, u.useSpring)(
+        T = (0, u.useSpring)(
             {
                 to: { transform: v ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: C
             },
             E ? 'respect-motion-settings' : 'animate-never'
         ),
-        T = l.useCallback(
+        Z = l.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), null != x && d(x);
             },
@@ -94,7 +94,7 @@ function E(e) {
         }),
         children: (0, i.jsx)(s.animated.div, {
             className: g.containerPadding,
-            style: Z,
+            style: T,
             'aria-hidden': v,
             children:
                 N === _.x.HIDDEN
@@ -102,7 +102,7 @@ function E(e) {
                     : N === _.x.UNREAD
                       ? (0, i.jsxs)(u.Clickable, {
                             className: g.bar,
-                            onClick: T,
+                            onClick: Z,
                             children: [
                                 'bottom' === t
                                     ? (0, i.jsx)(u.ChevronSmallDownIcon, {
@@ -130,7 +130,7 @@ function E(e) {
                       : N === _.x.MENTIONS
                         ? (0, i.jsx)(u.Clickable, {
                               className: a()(g.bar, g.mentionsBar),
-                              onClick: T,
+                              onClick: Z,
                               children: (0, i.jsx)(u.Text, {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',

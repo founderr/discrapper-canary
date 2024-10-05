@@ -1,25 +1,25 @@
-e.r(u),
-    e.d(u, {
+u.r(e),
+    u.d(e, {
         openGuildProductLink: function () {
             return o;
         }
     });
-var d = e(735250);
-e(470079);
-var i = e(481060),
-    n = e(336197),
-    a = e(430824),
-    c = e(240864),
-    l = e(981631);
-function o(t, u) {
+var n = u(735250);
+u(470079);
+var i = u(481060),
+    l = u(336197),
+    d = u(430824),
+    r = u(240864),
+    c = u(981631);
+function o(t, e) {
     var o;
-    let r = a.Z.getGuild(t);
-    c.Z.getGuildProductFetchState(u) === c.M.FETCHED && (null === (o = c.Z.getGuildProduct(u)) || void 0 === o ? void 0 : o.published) !== !0 && null != r
+    let a = d.Z.getGuild(t);
+    r.Z.getGuildProductFetchState(e) === r.M.FETCHED && (null === (o = r.Z.getGuildProduct(e)) || void 0 === o ? void 0 : o.published) !== !0 && null != a
         ? (0, i.openModalLazy)(async () => {
-              let { default: t } = await e.e('29396').then(e.bind(e, 513239));
-              return (u) => (0, d.jsx)(t, { ...u });
+              let { default: t } = await u.e('29396').then(u.bind(u, 513239));
+              return (e) => (0, n.jsx)(t, { ...e });
           })
-        : (null == r ? void 0 : r.hasFeature(l.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0
-          ? (0, n.Z)(l.Z5c.GUILD_PRODUCT(t, u))
-          : (0, n.Z)(l.Z5c.CHANNEL(t));
+        : (null == a ? void 0 : a.hasFeature(c.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0
+          ? (0, l.Z)(c.Z5c.GUILD_PRODUCT(t, e))
+          : (0, l.Z)(c.Z5c.CHANNEL(t));
 }

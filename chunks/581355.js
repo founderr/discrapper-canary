@@ -1,12 +1,12 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return N;
+            return x;
         }
     });
-var s = t(735250),
-    a = t(470079),
-    l = t(442837),
+var a = t(735250),
+    l = t(470079),
+    s = t(442837),
     i = t(481060),
     r = t(313201),
     o = t(430824),
@@ -15,21 +15,21 @@ var s = t(735250),
     u = t(540186),
     _ = t(609776),
     E = t(289584),
-    x = t(180899),
-    m = t(157925),
-    h = t(689938),
+    h = t(180899),
+    T = t(157925),
+    m = t(689938),
     I = t(639879);
-function T(e) {
-    let { guild: n, channel: t, stageInstance: a, headerId: l, onClose: r, loading: o, error: c, onSave: u, defaultOptions: E, isSlideReady: x } = e;
-    return (0, s.jsxs)(s.Fragment, {
+function N(e) {
+    let { guild: n, channel: t, stageInstance: l, headerId: s, onClose: r, loading: o, error: c, onSave: u, defaultOptions: E, isSlideReady: h } = e;
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, s.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: I.content,
                 children: [
-                    (0, s.jsx)(d.Z, {
-                        children: (0, s.jsx)('div', {
+                    (0, a.jsx)(d.Z, {
+                        children: (0, a.jsx)('div', {
                             className: I.stageIconBackground,
-                            children: (0, s.jsx)(i.StageIcon, {
+                            children: (0, a.jsx)(i.StageIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 32,
@@ -38,22 +38,22 @@ function T(e) {
                             })
                         })
                     }),
-                    (0, s.jsx)(i.Heading, {
-                        id: l,
+                    (0, a.jsx)(i.Heading, {
+                        id: s,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
                         className: I.headerTitle,
-                        children: null == a ? h.Z.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TITLE : h.Z.Messages.EDIT_STAGE_CHANNEL_TITLE
+                        children: null == l ? m.Z.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TITLE : m.Z.Messages.EDIT_STAGE_CHANNEL_TITLE
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, a.jsx)(i.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         className: I.headerSubtitle,
-                        children: null == a ? h.Z.Messages.START_STAGE_CHANNEL_EVENT_MODAL_SUBTITLE : h.Z.Messages.EDIT_STAGE_SUBTITLE
+                        children: null == l ? m.Z.Messages.START_STAGE_CHANNEL_EVENT_MODAL_SUBTITLE : m.Z.Messages.EDIT_STAGE_SUBTITLE
                     })
                 ]
             }),
-            (0, s.jsx)(_.Z, {
+            (0, a.jsx)(_.Z, {
                 guild: n,
                 channel: t,
                 onSave: u,
@@ -61,77 +61,77 @@ function T(e) {
                 loading: o,
                 onClose: r,
                 defaultOptions: E,
-                isSlideReady: x
+                isSlideReady: h
             })
         ]
     });
 }
-function N(e) {
+function x(e) {
     let { channel: n, onClose: t, transitionState: d, ..._ } = e,
-        h = (0, r.Dt)(),
-        N = (0, l.e7)([o.Z], () => o.Z.getGuild(n.guild_id)),
-        C = a.useMemo(() => c.Z.getStageInstanceByChannel(n.id), [n.id]),
-        { loading: g, error: v, onSave: S } = (0, E.Z)(n, t),
+        m = (0, r.Dt)(),
+        x = (0, s.e7)([o.Z], () => o.Z.getGuild(n.guild_id)),
+        f = l.useMemo(() => c.Z.getStageInstanceByChannel(n.id), [n.id]),
+        { loading: g, error: S, onSave: C } = (0, E.Z)(n, t),
         {
-            modalStep: f,
-            setModalStep: j,
-            readySlide: A,
-            handleSlideReady: p,
-            savedOptions: L,
-            handleSettingsSave: Z,
-            handleDelayedSave: R
-        } = (0, x.Z)({
-            stageInstance: C,
-            defaultStep: m.lv.STAGE_CHANNEL_SETTINGS,
-            error: v,
-            onSave: S
+            modalStep: v,
+            setModalStep: A,
+            readySlide: p,
+            handleSlideReady: j,
+            savedOptions: R,
+            handleSettingsSave: M,
+            handleDelayedSave: L
+        } = (0, h.Z)({
+            stageInstance: f,
+            defaultStep: T.lv.STAGE_CHANNEL_SETTINGS,
+            error: S,
+            onSave: C
         });
-    return (a.useEffect(() => {
-        null == N && t();
-    }, [N, t]),
-    null == N)
+    return (l.useEffect(() => {
+        null == x && t();
+    }, [x, t]),
+    null == x)
         ? null
-        : (0, s.jsx)(i.ModalRoot, {
+        : (0, a.jsx)(i.ModalRoot, {
               transitionState: d,
-              'aria-labelledby': h,
+              'aria-labelledby': m,
               ..._,
               size: i.ModalSize.SMALL,
-              children: (0, s.jsxs)(i.Slides, {
-                  activeSlide: f,
+              children: (0, a.jsxs)(i.Slides, {
+                  activeSlide: v,
                   width: 440,
-                  onSlideReady: p,
+                  onSlideReady: j,
                   children: [
-                      (0, s.jsx)(i.Slide, {
-                          id: m.lv.STAGE_CHANNEL_SETTINGS,
-                          children: (0, s.jsx)('div', {
+                      (0, a.jsx)(i.Slide, {
+                          id: T.lv.STAGE_CHANNEL_SETTINGS,
+                          children: (0, a.jsx)('div', {
                               className: I.slideContainer,
-                              children: (0, s.jsx)(T, {
-                                  guild: N,
+                              children: (0, a.jsx)(N, {
+                                  guild: x,
                                   channel: n,
-                                  stageInstance: C,
-                                  headerId: h,
+                                  stageInstance: f,
+                                  headerId: m,
                                   onClose: t,
                                   loading: g,
-                                  error: v,
-                                  onSave: Z,
-                                  defaultOptions: L,
-                                  isSlideReady: A === m.lv.STAGE_CHANNEL_SETTINGS
+                                  error: S,
+                                  onSave: M,
+                                  defaultOptions: R,
+                                  isSlideReady: p === T.lv.STAGE_CHANNEL_SETTINGS
                               })
                           })
                       }),
-                      (0, s.jsx)(i.Slide, {
-                          id: m.lv.PUBLIC_STAGE_PREVIEW,
-                          children: (0, s.jsx)('div', {
+                      (0, a.jsx)(i.Slide, {
+                          id: T.lv.PUBLIC_STAGE_PREVIEW,
+                          children: (0, a.jsx)('div', {
                               className: I.slideContainer,
-                              children: (0, s.jsx)(u.Z, {
-                                  headerId: h,
-                                  guild: N,
+                              children: (0, a.jsx)(u.Z, {
+                                  headerId: m,
+                                  guild: x,
                                   channel: n,
-                                  stageData: L,
+                                  stageData: R,
                                   loading: g,
-                                  onNext: R,
+                                  onNext: L,
                                   onCancel: t,
-                                  onBack: () => j(m.lv.STAGE_CHANNEL_SETTINGS)
+                                  onBack: () => A(T.lv.STAGE_CHANNEL_SETTINGS)
                               })
                           })
                       })

@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(470079),
     i = n(392711),
     a = n.n(i),
-    o = n(442837),
-    s = n(902704),
+    s = n(442837),
+    o = n(902704),
     l = n(823379),
     u = n(728345),
     c = n(812206);
@@ -18,9 +18,9 @@ function d(e) {
     let t = r.useRef([]);
     return (
         r.useEffect(() => {
-            !(0, s.E)(e, t.current) && (u.ZP.fetchApplications(a()(e).filter(l.lm).uniq().value(), !1), (t.current = e));
+            !(0, o.E)(e, t.current) && (u.ZP.fetchApplications(a()(e).filter(l.lm).uniq().value(), !1), (t.current = e));
         }, [e]),
-        (0, o.Wu)([c.Z], () => e.map((e) => (null != e ? c.Z.getApplication(e) : void 0)))
+        (0, s.Wu)([c.Z], () => e.map((e) => (null != e ? c.Z.getApplication(e) : void 0)))
     );
 }
 function _(e) {

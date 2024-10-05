@@ -15,8 +15,8 @@ n.d(t, {
 var r = n(570140),
     i = n(314897),
     a = n(351780),
-    o = n(843693),
-    s = n(112606);
+    s = n(843693),
+    o = n(112606);
 function l(e) {
     r.Z.dispatch({
         type: 'POGGERMODE_SETTINGS_UPDATE',
@@ -26,7 +26,7 @@ function l(e) {
         ...a.Z.getState(),
         ...e
     };
-    (0, s.Z)(t);
+    (0, o.Z)(t);
 }
 function u(e) {
     r.Z.dispatch({
@@ -46,18 +46,18 @@ function c(e) {
 function d(e, t) {
     var n;
     let a = i.default.getId(),
-        s = o.ZP.getUserCombo(a, e);
-    null != s &&
+        o = s.ZP.getUserCombo(a, e);
+    null != o &&
         r.Z.dispatch({
             type: 'POGGERMODE_UPDATE_MESSAGE_COMBO',
             comboMessage: {
-                combo: s,
+                combo: o,
                 channelId: e,
                 messageId: t,
                 displayed: !1
             }
         });
-    let l = null != s && (null == s ? void 0 : s.value) > 0 ? (null !== (n = null == s ? void 0 : s.multiplier) && void 0 !== n ? n : 0) + 1 : 1;
+    let l = null != o && (null == o ? void 0 : o.value) > 0 ? (null !== (n = null == o ? void 0 : o.multiplier) && void 0 !== n ? n : 0) + 1 : 1;
     r.Z.dispatch({
         type: 'POGGERMODE_UPDATE_COMBO',
         channelId: e,

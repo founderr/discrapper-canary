@@ -1,34 +1,34 @@
-n.d(t, {
+i.d(n, {
     a: function () {
-        return E;
+        return _;
     },
     h: function () {
-        return _;
+        return u;
     }
-});
-var r = n(789020);
-var i = n(470079),
-    a = n(442837),
-    o = n(430198),
-    s = n(592125),
-    l = n(630388),
-    u = n(981631);
-let c = u.iLy.CROSSPOSTED | u.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | u.iLy.GUILD_FEED_HIDDEN | u.iLy.HAS_SNAPSHOT | u.iLy.HAS_THREAD | u.iLy.IS_CROSSPOST | u.iLy.IS_VOICE_MESSAGE | u.iLy.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | u.iLy.SUPPRESS_EMBEDS | u.iLy.SUPPRESS_NOTIFICATIONS | u.iLy.URGENT;
+}),
+    i(789020);
+var t = i(470079),
+    o = i(442837),
+    a = i(430198),
+    c = i(592125),
+    r = i(630388),
+    l = i(981631);
+let s = l.iLy.CROSSPOSTED | l.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | l.iLy.GUILD_FEED_HIDDEN | l.iLy.HAS_SNAPSHOT | l.iLy.HAS_THREAD | l.iLy.IS_CROSSPOST | l.iLy.IS_VOICE_MESSAGE | l.iLy.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | l.iLy.SUPPRESS_EMBEDS | l.iLy.SUPPRESS_NOTIFICATIONS | l.iLy.URGENT;
 function d(e) {
-    return (!!(e.state !== u.yb.SEND_FAILED && u.V$x.FORWARDABLE.has(e.type)) && null == e.poll && null == e.activity && null == e.call && null == e.activityInstance && 0 === (0, l.Ge)(e.flags, c)) || !1;
+    return (!!(e.state !== l.yb.SEND_FAILED && l.V$x.FORWARDABLE.has(e.type)) && null == e.poll && null == e.activity && null == e.call && null == e.activityInstance && 0 === (0, r.Ge)(e.flags, s)) || !1;
+}
+function u(e) {
+    var n;
+    if (!d(e)) return !1;
+    let i = null === (n = c.Z.getChannel(e.channel_id)) || void 0 === n ? void 0 : n.guild_id;
+    return !(null != i && a.Z.isChannelOrThreadParentGated(i, e.channel_id)) && !0;
 }
 function _(e) {
-    var t;
-    if (!d(e)) return !1;
-    let n = null === (t = s.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id;
-    return !(null != n && o.Z.isChannelOrThreadParentGated(n, e.channel_id)) && !0;
-}
-function E(e) {
-    let t = (0, a.e7)([o.Z, s.Z], () => {
-        var t;
+    let n = (0, o.e7)([a.Z, c.Z], () => {
+        var n;
         if (null == e) return !1;
-        let n = null === (t = s.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id;
-        return null != n && o.Z.isChannelOrThreadParentGated(n, e.channel_id);
+        let i = null === (n = c.Z.getChannel(e.channel_id)) || void 0 === n ? void 0 : n.guild_id;
+        return null != i && a.Z.isChannelOrThreadParentGated(i, e.channel_id);
     });
-    return i.useMemo(() => null != e && d(e), [e]) && !t;
+    return t.useMemo(() => null != e && d(e), [e]) && !n;
 }

@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(570140);
-async function o(e) {
+async function s(e) {
     let t = await (0, i.openModalLazy)(
         async () => {
-            let { default: t } = await n.e('57650').then(n.bind(n, 677012));
+            let { default: t } = await Promise.all([n.e('8739'), n.e('57650')]).then(n.bind(n, 677012));
             return (n) =>
                 (0, r.jsx)(t, {
                     ...n,

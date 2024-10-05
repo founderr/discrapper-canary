@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(317381),
     d = n(683921),
     h = n(588580),
-    m = n(374065),
-    p = n(451576),
+    p = n(374065),
+    m = n(451576),
     _ = n(526846),
     f = n(119315),
     E = n(403404),
@@ -31,9 +31,9 @@ var i = n(735250),
 function Z(e) {
     let { channel: t, idle: n } = e,
         Z = (0, a.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
-        M = (0, m.KF)(t.id),
-        b = (0, m.g5)(M),
-        R = M !== m.jy.CAN_LAUNCH || Z,
+        M = (0, p.KF)(t.id),
+        b = (0, p.g5)(M),
+        R = M !== p.jy.CAN_LAUNCH || Z,
         { isHovered: L, setIsHovered: j, onMouseEnter: P, onMouseLeave: O } = (0, T.Z)(200, 300),
         y = (0, h.a)(),
         D = (0, d.Z)({ channelId: t.id }),
@@ -60,7 +60,7 @@ function Z(e) {
             });
         }, [w.location, H, t, B]),
         F = [];
-    !R && F.push(l.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, p.Z)(t.id) && !R && F.push(l.z.ACTIVITY_GDM_ROCKET_SPARKLE);
+    !R && F.push(l.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.Z)(t.id) && !R && F.push(l.z.ACTIVITY_GDM_ROCKET_SPARKLE);
     let { enabled: W } = C.nS.useExperiment({ location: 'CenterControlTrayActivityButton' });
     W && !R && F.push(l.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
     let z = s.useRef(!1);

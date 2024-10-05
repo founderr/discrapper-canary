@@ -13,8 +13,8 @@ var i = n(735250),
     u = n(714338),
     d = n(237617),
     h = n(433355),
-    m = n(189432),
-    p = n(727381),
+    p = n(189432),
+    m = n(727381),
     _ = n(313692),
     f = n(596443),
     E = n(50493),
@@ -39,7 +39,7 @@ function I(e) {
         { reducedMotion: R } = s.useContext(r.S),
         L = s.useCallback(
             (e) => {
-                null != N && (0, m.r)(T, I, N.baseChannelId, { modViewPanel: e });
+                null != N && (0, p.r)(T, I, N.baseChannelId, { modViewPanel: e });
             },
             [N, T, I]
         ),
@@ -97,7 +97,7 @@ function I(e) {
                     children: (function (e) {
                         switch (e) {
                             case E.k.INFO:
-                                return (0, i.jsx)(p.Z, {
+                                return (0, i.jsx)(m.Z, {
                                     userId: I,
                                     guildId: T,
                                     onNavigate: L,

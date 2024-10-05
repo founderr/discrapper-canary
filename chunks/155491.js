@@ -3,29 +3,29 @@ n.d(t, {
         return s;
     },
     Z2: function () {
-        return l;
+        return o;
     },
     x8: function () {
-        return u;
+        return l;
     }
-});
-var r = n(47120);
-var i = n(470079),
-    a = n(223143);
-let o = '1157412779335090267',
+}),
+    n(47120);
+var r = n(470079),
+    i = n(223143);
+let a = '1157412779335090267',
     s = 'a_f979ba5f9c2ba83db3149cc02f489f7c';
-function l() {
-    let { purchases: e } = (0, a.c)();
-    return e.get(o);
+function o() {
+    let { purchases: e } = (0, i.c)();
+    return e.get(a);
 }
-function u() {
-    let [e, t] = i.useState(),
-        { purchases: n, hasPreviouslyFetched: r } = (0, a.c)(),
-        s = i.useRef(!1);
+function l() {
+    let [e, t] = r.useState(),
+        { purchases: n, hasPreviouslyFetched: s } = (0, i.c)(),
+        o = r.useRef(!1);
     return (
-        i.useEffect(() => {
-            r && !s.current && (t(null != n.get(o)), (s.current = !0));
-        }, [n, r]),
+        r.useEffect(() => {
+            s && !o.current && (t(null != n.get(a)), (o.current = !0));
+        }, [n, s]),
         e
     );
 }

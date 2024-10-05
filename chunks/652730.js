@@ -11,7 +11,7 @@ function h() {
     let e = c.Z.mostRecentLurkedGuildId();
     null != e ? ((u = e), (d = null)) : (null != u ? (d = u) : (d = null), (u = null));
 }
-class m extends (l = r.ZP.Store) {
+class p extends (l = r.ZP.Store) {
     initialize() {
         this.syncWith([c.Z], h);
     }
@@ -20,7 +20,7 @@ class m extends (l = r.ZP.Store) {
     }
 }
 (a = 'LurkerModePopoutStore'),
-    (s = 'displayName') in (i = m)
+    (s = 'displayName') in (i = p)
         ? Object.defineProperty(i, s, {
               value: a,
               enumerable: !0,
@@ -28,4 +28,4 @@ class m extends (l = r.ZP.Store) {
               writable: !0
           })
         : (i[s] = a),
-    (t.Z = new m(o.Z));
+    (t.Z = new p(o.Z));

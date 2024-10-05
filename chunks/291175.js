@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     },
     gn: function () {
-        return s;
+        return o;
     },
     sZ: function () {
         return u;
@@ -12,8 +12,8 @@ n.d(t, {
 var r = n(913527),
     i = n.n(r),
     a = n(474936),
-    o = n(689938);
-let s = (e) => (Object.values(a.VU).includes(e) ? e : null),
+    s = n(689938);
+let o = (e) => (Object.values(a.VU).includes(e) ? e : null),
     l = (e, t) => {
         if (null == t) return null;
         let n = a.eG[e],
@@ -24,22 +24,22 @@ let s = (e) => (Object.values(a.VU).includes(e) ? e : null),
         let n = l(e, t);
         switch (e) {
             case a.VU.PREMIUM_TENURE_1_MONTH:
-                return o.Z.Messages.TIERED_TNURE_BADGE_BRONZE_TOOLTIP.format({ date: n });
+                return s.Z.Messages.TIERED_TNURE_BADGE_BRONZE_TOOLTIP.format({ date: n });
             case a.VU.PREMIUM_TENURE_3_MONTH:
-                return o.Z.Messages.TIERED_TNURE_BADGE_SILVER_TOOLTIP.format({ date: n });
+                return s.Z.Messages.TIERED_TNURE_BADGE_SILVER_TOOLTIP.format({ date: n });
             case a.VU.PREMIUM_TENURE_6_MONTH:
-                return o.Z.Messages.TIERED_TNURE_BADGE_GOLD_TOOLTIP.format({ date: n });
+                return s.Z.Messages.TIERED_TNURE_BADGE_GOLD_TOOLTIP.format({ date: n });
             case a.VU.PREMIUM_TENURE_12_MONTH:
-                return o.Z.Messages.TIERED_TNURE_BADGE_PLATINUM_TOOLTIP.format({ date: n });
+                return s.Z.Messages.TIERED_TNURE_BADGE_PLATINUM_TOOLTIP.format({ date: n });
             case a.VU.PREMIUM_TENURE_24_MONTH:
-                return o.Z.Messages.TIERED_TNURE_BADGE_DIAMOND_TOOLTIP.format({ date: n });
+                return s.Z.Messages.TIERED_TNURE_BADGE_DIAMOND_TOOLTIP.format({ date: n });
             case a.VU.PREMIUM_TENURE_36_MONTH:
-                return o.Z.Messages.TIERED_TNURE_BADGE_EMERALD_TOOLTIP.format({ date: n });
+                return s.Z.Messages.TIERED_TNURE_BADGE_EMERALD_TOOLTIP.format({ date: n });
             case a.VU.PREMIUM_TENURE_60_MONTH:
-                return o.Z.Messages.TIERED_TNURE_BADGE_RUBY_TOOLTIP.format({ date: n });
+                return s.Z.Messages.TIERED_TNURE_BADGE_RUBY_TOOLTIP.format({ date: n });
             case a.VU.PREMIUM_TENURE_72_MONTH:
-                return o.Z.Messages.TIERED_TNURE_BADGE_FIRE_TOOLTIP.format({ date: n });
+                return s.Z.Messages.TIERED_TNURE_BADGE_FIRE_TOOLTIP.format({ date: n });
             default:
-                return o.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({ date: t });
+                return s.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({ date: t });
         }
     };

@@ -1,11 +1,11 @@
 var r = n(877024),
     i = n(335613),
     a = n(315893),
-    o = n(957578).Buffer,
-    s = n(180756),
+    s = n(957578).Buffer,
+    o = n(180756),
     l = n(138031),
     u = n(871230),
-    c = o.alloc(128),
+    c = s.alloc(128),
     d = {
         md5: 16,
         sha1: 20,
@@ -17,39 +17,39 @@ var r = n(877024),
         ripemd160: 20
     };
 function _(e, t, n) {
-    var r = E(e),
-        i = 'sha512' === e || 'sha384' === e ? 128 : 64;
-    t.length > i ? (t = r(t)) : t.length < i && (t = o.concat([t, c], i));
-    for (var a = o.allocUnsafe(i + d[e]), s = o.allocUnsafe(i + d[e]), l = 0; l < i; l++) (a[l] = 54 ^ t[l]), (s[l] = 92 ^ t[l]);
-    var u = o.allocUnsafe(i + n + 4);
-    a.copy(u, 0, 0, i), (this.ipad1 = u), (this.ipad2 = a), (this.opad = s), (this.alg = e), (this.blocksize = i), (this.hash = r), (this.size = d[e]);
+    var o = (function (e) {
+            return 'rmd160' === e || 'ripemd160' === e
+                ? function (e) {
+                      return new i().update(e).digest();
+                  }
+                : 'md5' === e
+                  ? r
+                  : function (t) {
+                        return a(e).update(t).digest();
+                    };
+        })(e),
+        l = 'sha512' === e || 'sha384' === e ? 128 : 64;
+    t.length > l ? (t = o(t)) : t.length < l && (t = s.concat([t, c], l));
+    for (var u = s.allocUnsafe(l + d[e]), _ = s.allocUnsafe(l + d[e]), E = 0; E < l; E++) (u[E] = 54 ^ t[E]), (_[E] = 92 ^ t[E]);
+    var f = s.allocUnsafe(l + n + 4);
+    u.copy(f, 0, 0, l), (this.ipad1 = f), (this.ipad2 = u), (this.opad = _), (this.alg = e), (this.blocksize = l), (this.hash = o), (this.size = d[e]);
 }
-function E(e) {
-    function t(t) {
-        return a(e).update(t).digest();
-    }
-    function n(e) {
-        return new i().update(e).digest();
-    }
-    return 'rmd160' === e || 'ripemd160' === e ? n : 'md5' === e ? r : t;
-}
-function f(e, t, n, r, i) {
-    s(n, r), (e = u(e, l, 'Password')), (t = u(t, l, 'Salt'));
+_.prototype.run = function (e, t) {
+    return e.copy(t, this.blocksize), this.hash(t).copy(this.opad, this.blocksize), this.hash(this.opad);
+};
+e.exports = function (e, t, n, r, i) {
+    o(n, r), (e = u(e, l, 'Password')), (t = u(t, l, 'Salt'));
     var a = new _((i = i || 'sha1'), e, t.length),
-        c = o.allocUnsafe(r),
-        E = o.allocUnsafe(t.length + 4);
+        c = s.allocUnsafe(r),
+        E = s.allocUnsafe(t.length + 4);
     t.copy(E, 0, 0, t.length);
-    for (var f = 0, h = d[i], p = Math.ceil(r / h), m = 1; m <= p; m++) {
-        E.writeUInt32BE(m, t.length);
-        for (var I = a.run(E, a.ipad1), T = I, g = 1; g < n; g++) {
+    for (var f = 0, h = d[i], p = Math.ceil(r / h), I = 1; I <= p; I++) {
+        E.writeUInt32BE(I, t.length);
+        for (var m = a.run(E, a.ipad1), T = m, S = 1; S < n; S++) {
             T = a.run(T, a.ipad2);
-            for (var S = 0; S < h; S++) I[S] ^= T[S];
+            for (var g = 0; g < h; g++) m[g] ^= T[g];
         }
-        I.copy(c, f), (f += h);
+        m.copy(c, f), (f += h);
     }
     return c;
-}
-(_.prototype.run = function (e, t) {
-    return e.copy(t, this.blocksize), this.hash(t).copy(this.opad, this.blocksize), this.hash(this.opad);
-}),
-    (e.exports = f);
+};

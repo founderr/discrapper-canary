@@ -1,48 +1,48 @@
-var r = n(67867),
-    i = n(821819),
-    a = n(952256),
-    o = n(982665),
+var e = n(67867),
+    o = n(821819),
+    i = n(952256),
+    u = n(982665),
     s = n(611345),
-    l = n(474883),
-    u = n(741674),
-    c = n(256110),
-    d = n(15507),
-    _ = n(469624),
-    E = n(360518),
-    f = n(882708),
-    h = E('isConcatSpreadable'),
-    p =
-        f >= 51 ||
-        !i(function () {
-            var e = [];
-            return (e[h] = !1), e.concat()[0] !== e;
+    c = n(474883),
+    f = n(741674),
+    a = n(256110),
+    p = n(15507),
+    v = n(469624),
+    l = n(360518),
+    y = n(882708),
+    h = l('isConcatSpreadable'),
+    x =
+        y >= 51 ||
+        !o(function () {
+            var t = [];
+            return (t[h] = !1), t.concat()[0] !== t;
         }),
-    m = function (e) {
-        if (!o(e)) return !1;
-        var t = e[h];
-        return void 0 !== t ? !!t : a(e);
+    d = function (t) {
+        if (!u(t)) return !1;
+        var r = t[h];
+        return void 0 !== r ? !!r : i(t);
     };
-r(
+e(
     {
         target: 'Array',
         proto: !0,
         arity: 1,
-        forced: !p || !_('concat')
+        forced: !x || !v('concat')
     },
     {
-        concat: function (e) {
-            var t,
+        concat: function (t) {
+            var r,
                 n,
-                r,
+                e,
+                o,
                 i,
-                a,
-                o = s(this),
-                _ = d(o, 0),
-                E = 0;
-            for (t = -1, r = arguments.length; t < r; t++)
-                if (((a = -1 === t ? o : arguments[t]), m(a))) for (u(E + (i = l(a))), n = 0; n < i; n++, E++) n in a && c(_, E, a[n]);
-                else u(E + 1), c(_, E++, a);
-            return (_.length = E), _;
+                u = s(this),
+                v = p(u, 0),
+                l = 0;
+            for (r = -1, e = arguments.length; r < e; r++)
+                if (((i = -1 === r ? u : arguments[r]), d(i))) for (f(l + (o = c(i))), n = 0; n < o; n++, l++) n in i && a(v, l, i[n]);
+                else f(l + 1), a(v, l++, i);
+            return (v.length = l), v;
         }
     }
 );

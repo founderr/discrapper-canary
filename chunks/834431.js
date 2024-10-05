@@ -1,9 +1,9 @@
 n.d(t, {
     n: function () {
-        return i;
+        return r;
     }
 });
-var r = n(506071);
-function i() {
-    return (0, r.n)();
+var a = n(506071);
+function r() {
+    return (0, a.n)();
 }

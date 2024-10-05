@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(429551),
-    o = n(939854);
-function s(e) {
+    s = n(939854);
+function o(e) {
     let { start: t, end: n } = e,
         {
-            elapsed: s,
+            elapsed: o,
             duration: l,
             percentage: u
         } = (0, a.Z)({
@@ -19,25 +19,25 @@ function s(e) {
             end: n
         });
     return (0, r.jsxs)('div', {
-        className: o.container,
+        className: s.container,
         children: [
             (0, r.jsx)(i.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-normal',
-                className: o.text,
-                children: (0, a.m)(s)
+                className: s.text,
+                children: (0, a.m)(o)
             }),
             (0, r.jsx)('div', {
-                className: o.bar,
+                className: s.bar,
                 children: (0, r.jsx)('div', {
-                    className: o.progress,
+                    className: s.progress,
                     style: { width: ''.concat(100 * u, '%') }
                 })
             }),
             (0, r.jsx)(i.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-normal',
-                className: o.text,
+                className: s.text,
                 children: (0, a.m)(l)
             })
         ]

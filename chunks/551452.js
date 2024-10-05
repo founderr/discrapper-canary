@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(239091),
-    o = n(287734),
-    s = n(364640),
+    s = n(287734),
+    o = n(364640),
     l = n(754688),
     u = n(336197),
     c = n(124072),
@@ -18,11 +18,11 @@ var i = n(481060),
     f = n(430824),
     h = n(900849),
     p = n(746878),
-    m = n(981631);
-async function I(e, t, n) {
+    I = n(981631);
+async function m(e, t, n) {
     if (null == t) return;
     if (
-        (s.Z.trackDiscordLinkClicked({
+        (o.Z.trackDiscordLinkClicked({
             guildId: e,
             channelId: t,
             messageId: n
@@ -38,23 +38,23 @@ async function I(e, t, n) {
     }
     let r = E.Z.getChannel(t);
     if (null != r && null == n && (0, _.bw)(r.type) && (0, l.YO)(r)) {
-        o.default.selectVoiceChannel(r.id);
+        s.default.selectVoiceChannel(r.id);
         return;
     }
-    (0, u.Z)(m.Z5c.CHANNEL(e, t, n));
+    (0, u.Z)(I.Z5c.CHANNEL(e, t, n));
 }
 function T(e) {
     return {
-        react(t, o, s) {
+        react(t, s, o) {
             let l = E.Z.getChannel(t.channelId),
-                u = s.noStyleAndInteraction
+                u = o.noStyleAndInteraction
                     ? void 0
                     : (n) => {
-                          e.shouldStopPropagation && (null == n || n.stopPropagation()), I(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, i.closeAllModals)();
+                          e.shouldStopPropagation && (null == n || n.stopPropagation()), m(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, i.closeAllModals)();
                       },
                 _ =
-                    s.noStyleAndInteraction || null == t.channelId || (null == l && null == t.originalLink)
-                        ? m.dG4
+                    o.noStyleAndInteraction || null == t.channelId || (null == l && null == t.originalLink)
+                        ? I.dG4
                         : (e) => {
                               (0, a.jW)(e, async () => {
                                   let { default: e } = await n.e('9573').then(n.bind(n, 546649));
@@ -77,9 +77,9 @@ function T(e) {
                     onClick: u,
                     onContextMenu: _,
                     className: 'channelMention',
-                    children: [null != t.inContent ? o(t.inContent, s) : null, null != t.inContent ? (0, r.jsx)(d.Z, {}) : null, (0, p.S)(t, o, s)]
+                    children: [null != t.inContent ? s(t.inContent, o) : null, null != t.inContent ? (0, r.jsx)(d.Z, {}) : null, (0, p.S)(t, s, o)]
                 },
-                s.key
+                o.key
             );
         }
     };

@@ -7,13 +7,13 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(652853),
+    s = n(481060),
+    o = n(652853),
     l = n(228168),
     u = n(676411);
 function c(e) {
     let { text: t, icon: n, contextMenu: i } = e,
-        { profileType: c } = (0, s.z)();
+        { profileType: c } = (0, o.z)();
     return (null == t || '' === t) && null == i
         ? null
         : null == t || '' === t
@@ -24,7 +24,7 @@ function c(e) {
           : (0, r.jsxs)('header', {
                 className: u.header,
                 children: [
-                    (0, r.jsxs)(o.Heading, {
+                    (0, r.jsxs)(s.Heading, {
                         className: u.headerText,
                         variant: c === l.y0.PANEL ? 'text-xs/semibold' : 'text-xs/medium',
                         color: 'header-primary',

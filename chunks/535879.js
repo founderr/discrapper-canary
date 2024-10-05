@@ -14,14 +14,14 @@ function c(e) {
     let { value: t, labelText: n, onChange: c, onShowUpsell: u } = e,
         d = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
         h = l.ZP.canUseFancyVoiceChannelReactions(d),
-        m = '';
+        p = '';
     return (
-        (m = h ? (t ? o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_ENABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_DISABLED) : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_UPSELL),
+        (p = h ? (t ? o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_ENABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_DISABLED) : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_UPSELL),
         (0, i.jsx)(r.Z, {
             checked: t,
             onChange: c,
             labelText: n,
-            tooltipText: m,
+            tooltipText: p,
             iconAltText: o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TADA_ALT,
             canToggle: h,
             onClick: h ? () => {} : u

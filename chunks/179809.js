@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 }),
     n(47120);
@@ -26,29 +26,29 @@ var i = n(735250),
     S = n(689938),
     x = n(115376),
     v = n(767573);
-let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    T = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
-    b = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
-function A(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: M = !1, defaultFolderName: R, useCircleMask: L = !1, draggable: P = !1, sorting: y = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
+let T = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    Z = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+    A = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
+function b(e) {
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: b = 0, unread: R = !1, defaultFolderName: M, useCircleMask: L = !1, draggable: P = !1, sorting: O = !1, onDragStart: y, onDragEnd: D, onExpandCollapse: j, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
         { id: k, name: B, children: V } = t,
         [H, F] = l.useState(!1),
         [W, z] = l.useState(!1),
         Y = H || W;
     l.useEffect(() => {
-        y && F(!1);
-    }, [y]);
+        O && F(!1);
+    }, [O]);
     let [{ dragging: K }, q] = (0, s.c)({
             type: _.eD.FOLDER,
             item: () => (
-                null == O || O(),
+                null == y || y(),
                 {
                     type: _.eD.FOLDER,
                     nodeId: t.id
                 }
             ),
             end() {
-                null == j || j(), (0, h.V1)(p.ZP.getCompatibleGuildFolders());
+                null == D || D(), (0, h.V1)(p.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -57,19 +57,19 @@ function A(e) {
         }, []),
         X = l.useCallback(
             (e) => {
-                (('ArrowRight' === e.key && !u) || ('ArrowLeft' === e.key && u)) && D();
+                (('ArrowRight' === e.key && !u) || ('ArrowLeft' === e.key && u)) && j();
             },
-            [D, u]
+            [j, u]
         ),
-        J = null != B && '' !== B ? B : null != R && '' !== R ? R : S.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
+        J = null != B && '' !== B ? B : null != M && '' !== M ? M : S.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
         $ = (0, c.Ie)(''.concat(k)),
         ee = 'folder-items-'.concat(k),
-        et = V.length * (T + b),
+        et = V.length * (Z + A),
         en = (0, d.useTransition)(!K && u, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
-            config: { duration: Z }
+            config: { duration: T }
         }),
         ei = l.useCallback((e) => (null == n ? void 0 : n(k, e)), [n, k]),
         el = (0, i.jsxs)(E.H, {
@@ -78,12 +78,12 @@ function A(e) {
                     disabled: K || u,
                     hovered: H,
                     selected: r,
-                    unread: M,
+                    unread: R,
                     className: v.pill
                 }),
                 (0, i.jsx)(N.Z, {
                     text: J,
-                    disabled: y,
+                    disabled: O,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
@@ -96,12 +96,12 @@ function A(e) {
                                   folderNode: t,
                                   expanded: u,
                                   forceCircular: L,
-                                  sorting: y,
+                                  sorting: O,
                                   mediaState: f,
-                                  mentionCount: A,
+                                  mentionCount: b,
                                   tooltipName: J,
                                   folderGroupId: ee,
-                                  onClick: D,
+                                  onClick: j,
                                   onContextMenu: w,
                                   onHoverChange: F,
                                   onKeyDown: X,

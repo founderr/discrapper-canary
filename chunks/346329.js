@@ -1,54 +1,54 @@
-n.r(t),
-    n.d(t, {
+n.r(e),
+    n.d(e, {
         installApplication: function () {
-            return _;
+            return p;
         },
         performDefaultLibraryApplicationAction: function () {
-            return h;
-        },
-        playApplication: function () {
-            return i.a;
-        },
-        repairApplication: function () {
             return f;
         },
+        playApplication: function () {
+            return s.a;
+        },
+        repairApplication: function () {
+            return C;
+        },
         updateApplication: function () {
-            return E;
+            return h;
         }
     });
-var r = n(51025),
-    i = n(696748),
+var i = n(51025),
+    s = n(696748),
     a = n(812206),
     o = n(173747),
-    s = n(7956),
-    l = n(417363),
-    u = n(941128),
-    c = n(702523),
-    d = n(981631);
-function _(e, t, n) {
-    let r = a.Z.getApplication(e);
-    if (null == r) return;
-    let i = o.Z.getTargetBuildId(r.id, t),
-        s = o.Z.getTargetManifests(r.id, t);
-    null != i && null != s && null != c.L && (0, c.L)(r, t, i, s, n);
+    l = n(7956),
+    r = n(417363),
+    c = n(941128),
+    d = n(702523),
+    u = n(981631);
+function p(t, e, n) {
+    let i = a.Z.getApplication(t);
+    if (null == i) return;
+    let s = o.Z.getTargetBuildId(i.id, e),
+        l = o.Z.getTargetManifests(i.id, e);
+    null != s && null != l && null != d.L && (0, d.L)(i, e, s, l, n);
 }
-function E(e, t) {
-    let n = a.Z.getApplication(e);
-    if (null != n) return r.li(n, t, o.Z.getTargetBuildId(n.id, t), o.Z.getTargetManifests(n.id, t));
+function h(t, e) {
+    let n = a.Z.getApplication(t);
+    if (null != n) return i.li(n, e, o.Z.getTargetBuildId(n.id, e), o.Z.getTargetManifests(n.id, e));
 }
-function f(e, t, n) {
-    let i = a.Z.getApplication(e);
-    if (null != i) return r.cG(i, t, n);
+function C(t, e, n) {
+    let s = a.Z.getApplication(t);
+    if (null != s) return i.cG(s, e, n);
 }
-function h(e, t) {
-    let n = (0, s.i)(e, l.Z, u.Z),
-        { analyticsParams: r } = t;
+function f(t, e) {
+    let n = (0, l.i)(t, r.Z, c.Z),
+        { analyticsParams: i } = e;
     switch (n) {
-        case d.apO.PLAY:
-            return (0, i.a)(e.id, e, { analyticsParams: r });
-        case d.apO.INSTALL:
-            return _(e.id, e.branchId, r.source);
-        case d.apO.UPDATE:
-            return E(e.id, e.branchId);
+        case u.apO.PLAY:
+            return (0, s.a)(t.id, t, { analyticsParams: i });
+        case u.apO.INSTALL:
+            return p(t.id, t.branchId, i.source);
+        case u.apO.UPDATE:
+            return h(t.id, t.branchId);
     }
 }

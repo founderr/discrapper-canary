@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(325767),
+    s = n(481060),
+    o = n(325767),
     l = n(532846);
 let u = {
         UP: l.directionUp,
@@ -13,15 +13,15 @@ let u = {
     },
     c = (e) => {
         let { direction: t = u.DOWN, width: n = 24, height: i = 24, color: c = 'currentColor', transition: d = l.transition, className: _, foreground: E, expanded: f, ...h } = e,
-            { enabled: p } = (0, o.useRedesignIconContext)(),
-            m = t;
-        if ((!0 === f ? (m = u.DOWN) : !1 === f && (m = u.RIGHT), p)) {
+            { enabled: p } = (0, s.useRedesignIconContext)(),
+            I = t;
+        if ((!0 === f ? (I = u.DOWN) : !1 === f && (I = u.RIGHT), p)) {
             let e = {
-                [u.UP]: o.ChevronSmallUpIcon,
-                [u.DOWN]: o.ChevronSmallDownIcon,
-                [u.LEFT]: o.ChevronSmallLeftIcon,
-                [u.RIGHT]: o.ChevronSmallRightIcon
-            }[m];
+                [u.UP]: s.ChevronSmallUpIcon,
+                [u.DOWN]: s.ChevronSmallDownIcon,
+                [u.LEFT]: s.ChevronSmallLeftIcon,
+                [u.RIGHT]: s.ChevronSmallRightIcon
+            }[I];
             return (0, r.jsx)(e, {
                 ...h,
                 className: _,
@@ -33,11 +33,11 @@ let u = {
             });
         }
         return (0, r.jsx)('svg', {
-            className: a()(_, d, m),
+            className: a()(_, d, I),
             width: n,
             height: i,
             viewBox: '0 0 24 24',
-            ...(0, s.Z)(h),
+            ...(0, o.Z)(h),
             children: (0, r.jsx)('path', {
                 className: E,
                 fill: 'none',

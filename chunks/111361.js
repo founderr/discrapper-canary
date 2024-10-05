@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     M5: function () {
-        return o;
+        return s;
     },
     yd: function () {
         return i;
@@ -16,11 +16,11 @@ function i(e, t) {
 function a(e, t) {
     return null != e && null != e.premiumType && i(e.premiumType, t);
 }
-function o(e, t) {
+function s(e, t) {
     return null != e && e.premiumType === t;
 }
 t.ZP = {
     isPremiumAtLeast: i,
     isPremium: a,
-    isPremiumExactly: o
+    isPremiumExactly: s
 };

@@ -4,7 +4,7 @@ n.d(t, {
     }
 });
 var r = n(208694),
-    i = n(15568);
+    o = n(15568);
 function a(e) {
-    if (r(e)) return (0, i.Z)(e);
+    if (r(e)) return (0, o.Z)(e);
 }

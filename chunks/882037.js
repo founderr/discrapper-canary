@@ -1,12 +1,12 @@
 n.d(t, {
     K4: function () {
-        return o;
+        return s;
     },
     MD: function () {
         return l;
     },
     ZJ: function () {
-        return s;
+        return o;
     }
 });
 var r = n(652874),
@@ -16,10 +16,10 @@ let a = (0, r.Z)(() => ({
         checked: !1,
         preChecked: !1
     })),
-    o = (e) => {
+    s = (e) => {
         (0, i.j)(() => a.setState(e));
     },
-    s = (e) => {
+    o = (e) => {
         (0, i.j)(() => a.setState({ checked: e }));
     },
     l = a;

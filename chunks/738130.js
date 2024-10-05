@@ -1,49 +1,49 @@
 t.d(n, {
     Z: function () {
-        return k;
+        return j;
     }
 });
 var i = t(735250),
-    l = t(470079),
-    r = t(120356),
-    s = t.n(r),
-    o = t(392711),
-    a = t(772848),
-    c = t(873546),
-    C = t(481060),
-    d = t(425493),
-    u = t(612226),
+    r = t(470079),
+    o = t(120356),
+    l = t.n(o),
+    c = t(392711),
+    s = t(772848),
+    a = t(873546),
+    u = t(481060),
+    C = t(425493),
+    d = t(612226),
     p = t(714338),
-    h = t(782568),
-    f = t(252618),
-    m = t(434404),
-    v = t(677726),
-    g = t(703656),
-    E = t(671533),
-    x = t(626135),
-    A = t(63063),
-    Z = t(674588),
-    M = t(463571),
-    _ = t(887706),
-    L = t(132871),
-    j = t(147890),
-    N = t(981631),
-    I = t(420212),
-    R = t(689938),
-    y = t(433027);
-let T = A.Z.getArticleURL(N.BhN.APP_DIRECTORY_HEADER_LEARN_MORE);
-function D(e) {
+    f = t(782568),
+    h = t(252618),
+    A = t(434404),
+    E = t(677726),
+    I = t(703656),
+    _ = t(671533),
+    L = t(626135),
+    g = t(63063),
+    m = t(674588),
+    T = t(463571),
+    R = t(887706),
+    v = t(132871),
+    O = t(147890),
+    P = t(981631),
+    N = t(420212),
+    Z = t(689938),
+    x = t(433027);
+let D = g.Z.getArticleURL(P.BhN.APP_DIRECTORY_HEADER_LEARN_MORE);
+function M(e) {
     let { onClose: n } = e,
-        t = l.useRef(null);
+        t = r.useRef(null);
     return (0, i.jsx)('div', {
         ref: t,
-        className: y.closeWrapper,
-        children: (0, i.jsx)(C.FocusRingScope, {
+        className: x.closeWrapper,
+        children: (0, i.jsx)(u.FocusRingScope, {
             containerRef: t,
             children: (0, i.jsx)('div', {
-                className: y.closeContent,
-                children: (0, i.jsx)(d.Z, {
-                    className: y.closeIcon,
+                className: x.closeContent,
+                children: (0, i.jsx)(C.Z, {
+                    className: x.closeIcon,
                     closeAction: n,
                     keybind: 'ESC'
                 })
@@ -51,126 +51,126 @@ function D(e) {
         })
     });
 }
-function P(e) {
-    let { onTitleClick: n, showsLearnMoreCta: t, guildId: r, children: o } = e,
-        a = (0, i.jsxs)(l.Fragment, {
+function y(e) {
+    let { onTitleClick: n, showsLearnMoreCta: t, guildId: o, children: c } = e,
+        s = (0, i.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(v.Z, { title: R.Z.Messages.APP_DIRECTORY }),
+                (0, i.jsx)(E.Z, { title: Z.Z.Messages.APP_DIRECTORY }),
                 t &&
-                    (0, i.jsx)(C.Anchor, {
+                    (0, i.jsx)(u.Anchor, {
                         onClick: function () {
-                            x.default.track(N.rMx.APP_DIRECTORY_CTA_CLICKED, {
+                            L.default.track(P.rMx.APP_DIRECTORY_CTA_CLICKED, {
                                 cta: 'directory-help-center',
-                                current_page: L.ApplicationDirectoryViews.HOME,
-                                guild_id: r
+                                current_page: v.ApplicationDirectoryViews.HOME,
+                                guild_id: o
                             }),
-                                (0, h.Z)(T);
+                                (0, f.Z)(D);
                         },
-                        children: R.Z.Messages.LEARN_MORE
+                        children: Z.Z.Messages.LEARN_MORE
                     })
             ]
         });
     return (0, i.jsxs)('div', {
-        className: y.header,
+        className: x.header,
         children: [
             null != n
-                ? (0, i.jsx)(M.Z, {
-                      href: N.Z5c.APPLICATION_DIRECTORY,
-                      children: (0, i.jsx)(C.Clickable, {
+                ? (0, i.jsx)(T.Z, {
+                      href: P.Z5c.APPLICATION_DIRECTORY,
+                      children: (0, i.jsx)(u.Clickable, {
                           onClick: n,
-                          className: s()(y.titleContainer, y.clickable),
-                          children: a
+                          className: l()(x.titleContainer, x.clickable),
+                          children: s
                       })
                   })
                 : (0, i.jsx)('div', {
-                      className: y.titleContainer,
-                      children: a
+                      className: x.titleContainer,
+                      children: s
                   }),
-            o
+            c
         ]
     });
 }
-function O(e) {
+function S(e) {
     let n,
-        { view: t, onClick: l } = e;
+        { view: t, onClick: r } = e;
     if (null == t) return null;
     switch (t.type) {
-        case L.ApplicationDirectoryViews.HOME:
-            n = R.Z.Messages.HOME;
+        case v.ApplicationDirectoryViews.HOME:
+            n = Z.Z.Messages.HOME;
             break;
-        case L.ApplicationDirectoryViews.SEARCH:
-            n = R.Z.Messages.SEARCH;
+        case v.ApplicationDirectoryViews.SEARCH:
+            n = Z.Z.Messages.SEARCH;
             break;
-        case L.ApplicationDirectoryViews.APPLICATION:
-            var r;
-            n = null !== (r = null == t ? void 0 : t.applicationName) && void 0 !== r ? r : R.Z.Messages.BACK;
+        case v.ApplicationDirectoryViews.APPLICATION:
+            var o;
+            n = null !== (o = null == t ? void 0 : t.applicationName) && void 0 !== o ? o : Z.Z.Messages.BACK;
             break;
         default:
-            n = R.Z.Messages.BACK;
+            n = Z.Z.Messages.BACK;
     }
-    return (0, i.jsxs)(C.Clickable, {
-        className: y.back,
-        onClick: l,
+    return (0, i.jsxs)(u.Clickable, {
+        className: x.back,
+        onClick: r,
         children: [
-            (0, i.jsx)(E.Z, {
-                direction: E.Z.Directions.LEFT,
-                className: y.backIcon
+            (0, i.jsx)(_.Z, {
+                direction: _.Z.Directions.LEFT,
+                className: x.backIcon
             }),
-            (0, i.jsx)(C.Heading, {
-                className: y.backHeader,
+            (0, i.jsx)(u.Heading, {
+                className: x.backHeader,
                 variant: 'heading-sm/semibold',
                 children: n
             })
         ]
     });
 }
-let S = (0, o.debounce)((e) => {
-    let { scrollTop: n, scrollOffset: t, scrollHeight: i, location: l, guildId: r, sessionId: s } = e;
+let w = (0, c.debounce)((e) => {
+    let { scrollTop: n, scrollOffset: t, scrollHeight: i, location: r, guildId: o, sessionId: l } = e;
     n > 0 &&
-        x.default.track(N.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
+        L.default.track(P.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
             scroll_visible_percentile: (n + t) / i,
-            guild_id: r,
-            location: l,
-            directory_session_id: s
+            guild_id: o,
+            location: r,
+            directory_session_id: l
         });
 }, 200);
-function k(e) {
+function j(e) {
     let { children: n } = e,
-        t = l.useRef(null),
-        r = (0, _.Z)(),
-        o = (0, L.useApplicationDirectoryHistory)((e) => e.guildId),
-        d = (0, L.useApplicationDirectoryHistory)((e) => e.entrypoint),
-        h = (0, L.useApplicationDirectoryHistory)((e) => e.trackedOpenedFromExternalEntrypoint),
-        v = (0, L.getCurrentView)(),
-        E = (0, L.getPreviousView)(),
-        A = l.useRef(),
-        M = (null == v ? void 0 : v.type) !== L.ApplicationDirectoryViews.HOME,
-        T = (null == v ? void 0 : v.type) === L.ApplicationDirectoryViews.APPLICATION ? (null == v ? void 0 : v.applicationId) : void 0;
-    (0, f.Tt)({ location: R.Z.Messages.APP_DIRECTORY });
-    let k = (null == v ? void 0 : v.type) !== L.ApplicationDirectoryViews.HOME && null != E;
-    l.useEffect(() => {
-        !h && null == d && (x.default.track(N.rMx.APP_DIRECTORY_OPENED, { source: L.ApplicationDirectoryEntrypointNames.EXTERNAL }), (0, L.setTrackedOpenedFromExternalEntrypoint)(!0));
-    }, [d, h]),
-        l.useEffect(() => {
-            if (r) return p.Z.setLayout(u.ZP), p.Z.enable(), () => p.Z.disable();
-        }, [r]),
-        l.useEffect(() => {
-            Z.CP();
+        t = r.useRef(null),
+        o = (0, R.Z)(),
+        c = (0, v.useApplicationDirectoryHistory)((e) => e.guildId),
+        C = (0, v.useApplicationDirectoryHistory)((e) => e.entrypoint),
+        f = (0, v.useApplicationDirectoryHistory)((e) => e.trackedOpenedFromExternalEntrypoint),
+        E = (0, v.getCurrentView)(),
+        _ = (0, v.getPreviousView)(),
+        g = r.useRef(),
+        T = (null == E ? void 0 : E.type) !== v.ApplicationDirectoryViews.HOME,
+        D = (null == E ? void 0 : E.type) === v.ApplicationDirectoryViews.APPLICATION ? (null == E ? void 0 : E.applicationId) : void 0;
+    (0, h.Tt)({ location: Z.Z.Messages.APP_DIRECTORY });
+    let j = (null == E ? void 0 : E.type) !== v.ApplicationDirectoryViews.HOME && null != _;
+    r.useEffect(() => {
+        !f && null == C && (L.default.track(P.rMx.APP_DIRECTORY_OPENED, { source: v.ApplicationDirectoryEntrypointNames.EXTERNAL }), (0, v.setTrackedOpenedFromExternalEntrypoint)(!0));
+    }, [C, f]),
+        r.useEffect(() => {
+            if (o) return p.Z.setLayout(d.ZP), p.Z.enable(), () => p.Z.disable();
+        }, [o]),
+        r.useEffect(() => {
+            m.CP();
         }, []),
-        l.useEffect(() => {
-            r && Z.g5();
-        }, [r]),
-        l.useEffect(() => {
-            A.current = (0, a.Z)();
-        }, [null == v ? void 0 : v.type, T]);
-    let H = l.useCallback(() => {
+        r.useEffect(() => {
+            o && m.g5();
+        }, [o]),
+        r.useEffect(() => {
+            g.current = (0, s.Z)();
+        }, [null == E ? void 0 : E.type, D]);
+    let H = r.useCallback(() => {
         var e, n;
-        (0, g.uL)(null !== (e = null == d ? void 0 : d.pathname) && void 0 !== e ? e : ''), null != d && d.name === L.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS && null != o && m.Z.open(o, null !== (n = d.guildSettingsSection) && void 0 !== n ? n : void 0);
-    }, [d, o]);
+        (0, I.uL)(null !== (e = null == C ? void 0 : C.pathname) && void 0 !== e ? e : ''), null != C && C.name === v.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS && null != c && A.Z.open(c, null !== (n = C.guildSettingsSection) && void 0 !== n ? n : void 0);
+    }, [C, c]);
     return (
-        l.useEffect(() => {
+        r.useEffect(() => {
             let e = (e) => {
-                e.key === I.vn.ESCAPE && (e.stopPropagation(), H());
+                e.key === N.vn.ESCAPE && (e.stopPropagation(), H());
             };
             return (
                 document.addEventListener('keydown', e),
@@ -180,37 +180,37 @@ function k(e) {
             );
         }, [H]),
         (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsx)(C.AdvancedScroller, {
-                className: s()(y.directoryContainer, {
-                    [y.directoryContainerMobile]: c.tq,
-                    [y.directoryContainerTablet]: c.Em
+            children: (0, i.jsx)(u.AdvancedScroller, {
+                className: l()(x.directoryContainer, {
+                    [x.directoryContainerMobile]: a.tq,
+                    [x.directoryContainerTablet]: a.Em
                 }),
                 ref: t,
                 onScroll: () => {
                     var e, n, i;
-                    return S({
+                    return w({
                         scrollTop: null === (e = t.current) || void 0 === e ? void 0 : e.getScrollerState().scrollTop,
                         scrollOffset: null === (n = t.current) || void 0 === n ? void 0 : n.getScrollerState().offsetHeight,
                         scrollHeight: null === (i = t.current) || void 0 === i ? void 0 : i.getScrollerState().scrollHeight,
-                        location: null == v ? void 0 : v.type,
-                        guildId: o,
-                        sessionId: A.current
+                        location: null == E ? void 0 : E.type,
+                        guildId: c,
+                        sessionId: g.current
                     });
                 },
                 children: (0, i.jsxs)('div', {
-                    className: y.content,
+                    className: x.content,
                     children: [
-                        (0, i.jsx)(P, {
-                            onTitleClick: M ? j.goHome : void 0,
-                            showsLearnMoreCta: (null == v ? void 0 : v.type) === L.ApplicationDirectoryViews.HOME,
-                            guildId: o,
-                            children: r ? (0, i.jsx)(D, { onClose: H }) : null
+                        (0, i.jsx)(y, {
+                            onTitleClick: T ? O.goHome : void 0,
+                            showsLearnMoreCta: (null == E ? void 0 : E.type) === v.ApplicationDirectoryViews.HOME,
+                            guildId: c,
+                            children: o ? (0, i.jsx)(M, { onClose: H }) : null
                         }),
-                        k &&
-                            (0, i.jsx)(O, {
-                                view: E,
+                        j &&
+                            (0, i.jsx)(S, {
+                                view: _,
                                 onClick: () => {
-                                    (0, g.op)();
+                                    (0, I.op)();
                                 }
                             }),
                         n

@@ -1,15 +1,15 @@
 n.d(t, {
     m: function () {
-        return s;
+        return r;
     }
 });
-var r = n(806966),
-    i = n(585483),
-    a = n(981631),
-    o = n(957825);
-function s(e) {
+var i = n(806966),
+    a = n(585483),
+    s = n(981631),
+    l = n(957825);
+function r(e) {
     let { stickerPack: t, stickerPickerCategories: n } = e;
-    i.S.dispatchToLastSubscribed(a.CkL.OPEN_EXPRESSION_PICKER, { activeView: o.X1.STICKER });
-    let s = n.findIndex((e) => e.id === t.id);
-    -1 !== s && r.ZN.setActiveCategoryIndex(s);
+    a.S.dispatchToLastSubscribed(s.CkL.OPEN_EXPRESSION_PICKER, { activeView: l.X1.STICKER });
+    let r = n.findIndex((e) => e.id === t.id);
+    -1 !== r && i.ZN.setActiveCategoryIndex(r);
 }

@@ -1,25 +1,12 @@
-var r = n(653041);
-var i = n(735250),
-    a = n(470079),
-    o = n(834427),
+n(653041);
+var r = n(735250),
+    i = n(470079),
+    a = n(834427),
     s = n(579806),
-    l = n(403182),
-    u = n(358085),
-    c = n(861990);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function _(e) {
+    o = n(403182),
+    l = n(358085),
+    u = n(861990);
+function c(e) {
     let t = ['openFile'];
     e.multiple && t.push('multiSelections');
     let n = e.filters;
@@ -29,10 +16,10 @@ function _(e) {
                 properties: t,
                 filters: n
             },
-            c.zz
+            u.zz
         )
         .then((t) => {
-            let n = t.map((e) => l.qF(e));
+            let n = t.map((e) => o.qF(e));
             null != n &&
                 e.onChange({
                     stopPropagation: () => null,
@@ -51,7 +38,7 @@ function _(e) {
             });
         });
 }
-class E extends a.Component {
+class d extends i.Component {
     activateUploadDialogue() {
         if (null != this._ref) return this._ref.activateUploadDialogue();
     }
@@ -59,15 +46,28 @@ class E extends a.Component {
         this._ref = e;
     }
     render() {
-        return (0, i.jsx)(o.S, {
+        return (0, r.jsx)(a.S, {
             ref: this.setRef,
-            handleNativeClick: _,
-            embedded: (0, u.isDesktop)(),
+            handleNativeClick: c,
+            embedded: (0, l.isDesktop)(),
             ...this.props
         });
     }
     constructor(e) {
-        super(e), d(this, '_ref', a.createRef()), (this.setRef = this.setRef.bind(this));
+        var t, n, r;
+        super(e),
+            (t = this),
+            (n = '_ref'),
+            (r = i.createRef()),
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: r,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (t[n] = r),
+            (this.setRef = this.setRef.bind(this));
     }
 }
-t.Z = E;
+t.Z = d;

@@ -8,11 +8,11 @@
                 if ('string' === a || 'number' === a) e.push(i);
                 else if (Array.isArray(i)) {
                     if (i.length) {
-                        var o = n.apply(null, i);
-                        o && e.push(o);
+                        var s = n.apply(null, i);
+                        s && e.push(s);
                     }
                 } else if ('object' === a) {
-                    if (i.toString === Object.prototype.toString) for (var s in i) t.call(i, s) && i[s] && e.push(s);
+                    if (i.toString === Object.prototype.toString) for (var o in i) t.call(i, o) && i[o] && e.push(o);
                     else e.push(i.toString());
                 }
             }

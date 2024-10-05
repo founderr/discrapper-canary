@@ -26,50 +26,59 @@ function a(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-function o(e) {
-    var t = u();
+function s(e) {
+    var t = (function () {
+        if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
+        if ('function' == typeof Proxy) return !0;
+        try {
+            return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+        } catch (e) {
+            return !1;
+        }
+    })();
     return function () {
         var n,
-            r = c(e);
-        return (n = t ? Reflect.construct(r, arguments, c(this).constructor) : r.apply(this, arguments)), s(this, n);
+            i = l(e);
+        return (
+            (n = t ? Reflect.construct(i, arguments, l(this).constructor) : i.apply(this, arguments)),
+            (function (e, t) {
+                return t && ('object' === r(t) || 'function' == typeof t) ? t : o(e);
+            })(this, n)
+        );
     };
 }
-function s(e, t) {
-    return t && ('object' === r(t) || 'function' == typeof t) ? t : l(e);
-}
-function l(e) {
+n.d(t, {
+    GT: function () {
+        return h;
+    },
+    gr: function () {
+        return f;
+    }
+});
+function o(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function u() {
-    if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
-    if ('function' == typeof Proxy) return !0;
-    try {
-        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
-    } catch (e) {
-        return !1;
-    }
-}
-function c(e) {
-    return (c = Object.setPrototypeOf
+function l(e) {
+    return (l = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function d(e, t) {
+function u(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function _(e, t) {
+function c(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function E(e, t, n) {
-    return t && _(e.prototype, t), n && _(e, n), e;
+function d(e, t, n) {
+    return t && c(e.prototype, t), n && c(e, n), e;
 }
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -82,21 +91,12 @@ function f(e, t, n) {
         e
     );
 }
-n.d(t, {
-    GT: function () {
-        return I;
-    },
-    gr: function () {
-        return m;
-    }
-});
-var h = 10,
-    p = (function () {
+var E = (function () {
         function e() {
-            d(this, e), f(this, 'subPriority', 0);
+            u(this, e), _(this, 'subPriority', 0);
         }
         return (
-            E(e, [
+            d(e, [
                 {
                     key: 'validate',
                     value: function (e, t) {
@@ -107,15 +107,15 @@ var h = 10,
             e
         );
     })(),
-    m = (function (e) {
+    f = (function (e) {
         i(n, e);
-        var t = o(n);
-        function n(e, r, i, a, o) {
-            var s;
-            return d(this, n), ((s = t.call(this)).value = e), (s.validateValue = r), (s.setValue = i), (s.priority = a), o && (s.subPriority = o), s;
+        var t = s(n);
+        function n(e, r, i, a, s) {
+            var o;
+            return u(this, n), ((o = t.call(this)).value = e), (o.validateValue = r), (o.setValue = i), (o.priority = a), s && (o.subPriority = s), o;
         }
         return (
-            E(n, [
+            d(n, [
                 {
                     key: 'validate',
                     value: function (e, t) {
@@ -131,18 +131,18 @@ var h = 10,
             ]),
             n
         );
-    })(p),
-    I = (function (e) {
+    })(E),
+    h = (function (e) {
         i(n, e);
-        var t = o(n);
+        var t = s(n);
         function n() {
             var e;
-            d(this, n);
+            u(this, n);
             for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
-            return f(l((e = t.call.apply(t, [this].concat(i)))), 'priority', h), f(l(e), 'subPriority', -1), e;
+            return _(o((e = t.call.apply(t, [this].concat(i)))), 'priority', 10), _(o(e), 'subPriority', -1), e;
         }
         return (
-            E(n, [
+            d(n, [
                 {
                     key: 'set',
                     value: function (e, t) {
@@ -154,4 +154,4 @@ var h = 10,
             ]),
             n
         );
-    })(p);
+    })(E);

@@ -1,76 +1,76 @@
 n.d(t, {
     f: function () {
-        return S;
+        return p;
     }
-});
-var r = n(47120);
+}),
+    n(47120);
 var i = n(735250),
     a = n(470079),
-    o = n(442837),
-    s = n(481060),
-    l = n(541716),
-    u = n(419922),
+    s = n(442837),
+    l = n(481060),
+    r = n(541716),
+    o = n(419922),
     c = n(665906),
     d = n(271383),
-    _ = n(430824),
-    E = n(496675),
-    f = n(594174),
-    h = n(838440),
-    p = n(779139),
-    m = n(981631),
-    I = n(689938),
-    T = n(280586);
-let g = (e) => {
+    u = n(430824),
+    _ = n(496675),
+    E = n(594174),
+    I = n(838440),
+    m = n(779139),
+    T = n(981631),
+    N = n(689938),
+    h = n(280586);
+let C = (e) => {
         let { channel: t, message: n } = e,
-            [r, o] = a.useState(!1),
-            c = (0, p.y6)(n.id),
-            d = a.useCallback(() => {
-                (0, h.v)({
-                    type: l.I.FORM,
+            [s, c] = a.useState(!1),
+            d = (0, m.y6)(n.id),
+            u = a.useCallback(() => {
+                (0, I.v)({
+                    type: r.I.FORM,
                     content: '',
                     channel: t
                 }).then((e) => {
-                    let { valid: r } = e;
-                    if (!!r) (0, p.TZ)(t, n, c.id);
+                    let { valid: i } = e;
+                    if (!!i) (0, m.TZ)(t, n, d.id);
                 });
-            }, [t, n, c]);
+            }, [t, n, d]);
         return (0, i.jsx)('div', {
-            className: T.welcomeCTA,
-            children: (0, i.jsxs)(s.Button, {
-                className: T.welcomeCTAButtonOuter,
-                innerClassName: T.welcomeCTAButton,
-                color: s.ButtonColors.PRIMARY,
-                onMouseEnter: () => o(!0),
-                onMouseLeave: () => o(!1),
-                onClick: d,
+            className: h.welcomeCTA,
+            children: (0, i.jsxs)(l.Button, {
+                className: h.welcomeCTAButtonOuter,
+                innerClassName: h.welcomeCTAButton,
+                color: l.ButtonColors.PRIMARY,
+                onMouseEnter: () => c(!0),
+                onMouseLeave: () => c(!1),
+                onClick: u,
                 children: [
-                    (0, i.jsx)(u.ZP, {
-                        className: T.welcomeCTASticker,
-                        isInteracting: r,
-                        sticker: c,
+                    (0, i.jsx)(o.ZP, {
+                        className: h.welcomeCTASticker,
+                        isInteracting: s,
+                        sticker: d,
                         size: 28
                     }),
-                    I.Z.Messages.WELCOME_CTA_LABEL
+                    N.Z.Messages.WELCOME_CTA_LABEL
                 ]
             })
         });
     },
-    S = (e) => {
+    p = (e) => {
         let { message: t, channel: n } = e,
-            r = n.getGuildId(),
-            a = (0, o.e7)([f.default, E.Z, _.Z, d.ZP], () => {
+            a = n.getGuildId(),
+            l = (0, s.e7)([E.default, _.Z, u.Z, d.ZP], () => {
                 var e;
-                let i = f.default.getCurrentUser(),
-                    a = (0, c.xl)(n),
-                    o = E.Z.can(m.Plq.SEND_MESSAGES, n),
-                    s = null != r && null != i && (null === (e = d.ZP.getMember(r, i.id)) || void 0 === e ? void 0 : e.isPending),
-                    l = t.author.bot,
-                    u = _.Z.getGuild(r),
-                    h = null != u && (u.systemChannelFlags & m.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-                return o && !a && !s && !l && h;
+                let i = E.default.getCurrentUser(),
+                    s = (0, c.xl)(n),
+                    l = _.Z.can(T.Plq.SEND_MESSAGES, n),
+                    r = null != a && null != i && (null === (e = d.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending),
+                    o = t.author.bot,
+                    I = u.Z.getGuild(a),
+                    m = null != I && (I.systemChannelFlags & T.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                return l && !s && !r && !o && m;
             });
-        return null != r && a
-            ? (0, i.jsx)(g, {
+        return null != a && l
+            ? (0, i.jsx)(C, {
                   message: t,
                   channel: n
               })

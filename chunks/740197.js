@@ -1,98 +1,98 @@
 n.d(t, {
     HS: function () {
-        return E;
+        return d;
     },
     Hg: function () {
-        return _;
+        return c;
     },
     PW: function () {
-        return h;
+        return E;
     },
     S5: function () {
-        return o;
+        return i;
     },
     ZA: function () {
-        return s;
+        return a;
     },
     l0: function () {
-        return f;
+        return _;
     }
-});
-var r = n(177593);
-var i = n(653041);
-var a = n(65154);
-let o = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
-    s = o && 'setSinkId' in HTMLAudioElement.prototype;
-function l(e) {
+}),
+    n(177593),
+    n(653041);
+var r = n(65154);
+let i = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
+    a = i && 'setSinkId' in HTMLAudioElement.prototype;
+function s(e) {
     return {
-        id: a.w5,
+        id: r.w5,
         type: e,
         index: 0,
         name: 'Default'
     };
 }
-function u() {
-    return [l(a.h7.AUDIO_INPUT), l(a.h7.AUDIO_OUTPUT), l(a.h7.VIDEO_INPUT)];
+function o() {
+    return [s(r.h7.AUDIO_INPUT), s(r.h7.AUDIO_OUTPUT), s(r.h7.VIDEO_INPUT)];
 }
-function c(e, t) {
+function l(e, t) {
     return e.filter((e) => e.type === t);
 }
-function d() {
-    return o
+function u() {
+    return i
         ? navigator.mediaDevices
               .enumerateDevices()
               .then((e) => {
                   let t = 0,
                       n = 0,
-                      r = 0;
+                      i = 0;
                   return e
                       .filter((e) => {
                           switch (e.kind) {
-                              case a.h7.AUDIO_INPUT:
-                              case a.h7.AUDIO_OUTPUT:
-                              case a.h7.VIDEO_INPUT:
+                              case r.h7.AUDIO_INPUT:
+                              case r.h7.AUDIO_OUTPUT:
+                              case r.h7.VIDEO_INPUT:
                                   return !0;
                               default:
                                   return !1;
                           }
                       })
                       .map((e) => {
-                          let i;
+                          let a;
                           switch (e.kind) {
-                              case a.h7.AUDIO_INPUT:
-                                  i = t++;
+                              case r.h7.AUDIO_INPUT:
+                                  a = t++;
                                   break;
-                              case a.h7.AUDIO_OUTPUT:
-                                  i = n++;
+                              case r.h7.AUDIO_OUTPUT:
+                                  a = n++;
                                   break;
-                              case a.h7.VIDEO_INPUT:
+                              case r.h7.VIDEO_INPUT:
                               default:
-                                  i = r++;
+                                  a = i++;
                           }
                           return {
                               id: e.deviceId,
                               type: e.kind,
-                              index: i,
-                              name: null != e.label && '' !== e.label ? e.label : 0 === i ? 'Default' : 'Device '.concat(i)
+                              index: a,
+                              name: null != e.label && '' !== e.label ? e.label : 0 === a ? 'Default' : 'Device '.concat(a)
                           };
                       });
               })
-              .then((e) => (!s && (e = e.filter((e) => e.type !== a.h7.AUDIO_OUTPUT)).push(l(a.h7.AUDIO_OUTPUT)), e))
-              .catch(u)
+              .then((e) => (!a && (e = e.filter((e) => e.type !== r.h7.AUDIO_OUTPUT)).push(s(r.h7.AUDIO_OUTPUT)), e))
+              .catch(o)
         : new Promise((e) => {
-              setImmediate(() => e(u()));
+              setImmediate(() => e(o()));
           });
 }
+async function c() {
+    return l(await u(), r.h7.AUDIO_INPUT);
+}
+async function d() {
+    return l(await u(), r.h7.AUDIO_OUTPUT);
+}
 async function _() {
-    return c(await d(), a.h7.AUDIO_INPUT);
+    return l(await u(), r.h7.VIDEO_INPUT);
 }
 async function E() {
-    return c(await d(), a.h7.AUDIO_OUTPUT);
-}
-async function f() {
-    return c(await d(), a.h7.VIDEO_INPUT);
-}
-async function h() {
-    let e = await d();
-    return [c(e, a.h7.AUDIO_INPUT), c(e, a.h7.AUDIO_OUTPUT), c(e, a.h7.VIDEO_INPUT)];
+    let e = await u();
+    return [l(e, r.h7.AUDIO_INPUT), l(e, r.h7.AUDIO_OUTPUT), l(e, r.h7.VIDEO_INPUT)];
 }

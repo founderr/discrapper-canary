@@ -10,8 +10,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(26033),
-    o = n(810568),
-    s = n(168524),
+    s = n(810568),
+    o = n(168524),
     l = n(981631),
     u = n(689938);
 function c(e) {
@@ -38,9 +38,9 @@ function d(e) {
             entry: a,
             user: t
         }),
-        f = (0, s.Z)({
+        f = (0, o.Z)({
             location: 'UserProfileActivityContextMenu',
-            source: o.m1.UserProfileCardContextMenu,
+            source: s.m1.UserProfileCardContextMenu,
             trackEntryPointImpression: d,
             applicationId: _,
             sourceUserId: E

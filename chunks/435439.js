@@ -1,37 +1,37 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return E;
+        return _;
     }
 });
-var r = n(735250),
-    i = n(481060),
-    a = n(374129),
-    o = n(639351),
-    s = n(908841),
-    l = n(410441),
-    u = n(206583),
-    c = n(689938);
+var l = t(735250),
+    i = t(481060),
+    a = t(374129),
+    r = t(639351),
+    o = t(908841),
+    s = t(410441),
+    c = t(206583),
+    u = t(689938);
 let d = {
-        [u.kG.SPOTIFY]: s.Z,
-        [u.kG.CRUNCHYROLL]: i.CrunchyrollNeutralIcon,
-        [u.kG.XBOX]: o.Z,
-        [u.kG.PLAYSTATION]: a.Z
+        [c.kG.SPOTIFY]: o.Z,
+        [c.kG.CRUNCHYROLL]: i.CrunchyrollNeutralIcon,
+        [c.kG.XBOX]: r.Z,
+        [c.kG.PLAYSTATION]: a.Z
     },
-    _ = {
-        [u.kG.SPOTIFY]: () => c.Z.Messages.SPOTIFY,
-        [u.kG.CRUNCHYROLL]: () => c.Z.Messages.CRUNCHYROLL,
-        [u.kG.XBOX]: () => c.Z.Messages.XBOX,
-        [u.kG.PLAYSTATION]: () => c.Z.Messages.PLAYSTATION
+    m = {
+        [c.kG.SPOTIFY]: () => u.Z.Messages.SPOTIFY,
+        [c.kG.CRUNCHYROLL]: () => u.Z.Messages.CRUNCHYROLL,
+        [c.kG.XBOX]: () => u.Z.Messages.XBOX,
+        [c.kG.PLAYSTATION]: () => u.Z.Messages.PLAYSTATION
     };
-function E(e) {
-    var t;
-    let { type: n, 'aria-label': i, ...a } = e,
-        o = d[n];
-    if (null == o) return null;
-    let s = null != i ? i : null === (t = _[n]) || void 0 === t ? void 0 : t.call(_);
-    return (0, r.jsx)(l.Z, {
-        Icon: o,
+function _(e) {
+    var n;
+    let { type: t, 'aria-label': i, ...a } = e,
+        r = d[t];
+    if (null == r) return null;
+    let o = null != i ? i : null === (n = m[t]) || void 0 === n ? void 0 : n.call(m);
+    return (0, l.jsx)(s.Z, {
+        Icon: r,
         ...a,
-        'aria-label': s
+        'aria-label': o
     });
 }

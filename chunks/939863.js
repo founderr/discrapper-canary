@@ -1,31 +1,31 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
-var n = t(735250);
-t(470079);
-var c = t(120356),
-    o = t.n(c),
-    a = t(689938),
-    r = t(843117),
-    l = t(296507),
-    i = t(866402);
-function d(e) {
-    let { className: s, children: t } = e;
-    return (0, n.jsxs)('div', {
-        className: o()(r.container, s),
+var i = n(735250);
+n(470079);
+var s = n(120356),
+    a = n.n(s),
+    l = n(689938),
+    r = n(843117),
+    o = n(296507),
+    c = n(866402);
+function u(e) {
+    let { className: t, children: n } = e;
+    return (0, i.jsxs)('div', {
+        className: a()(r.container, t),
         children: [
-            (0, n.jsx)('img', {
-                alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-                src: i,
-                className: o()(r.sparkleIcon, r.sparkleBottom)
+            (0, i.jsx)('img', {
+                alt: l.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+                src: c,
+                className: a()(r.sparkleIcon, r.sparkleBottom)
             }),
-            t,
-            (0, n.jsx)('img', {
-                alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-                src: l,
-                className: o()(r.sparkleIcon, r.sparkleTop)
+            n,
+            (0, i.jsx)('img', {
+                alt: l.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+                src: o,
+                className: a()(r.sparkleIcon, r.sparkleTop)
             })
         ]
     });

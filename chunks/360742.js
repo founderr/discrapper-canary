@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(81825),
@@ -18,9 +18,9 @@ function a(e, t, n) {
         e
     );
 }
-class o extends r.Z {
+class s extends r.Z {
     static createFromServer(e) {
-        return new o({
+        return new s({
             ...e,
             user: new i.Z(e.user)
         });

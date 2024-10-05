@@ -1,32 +1,32 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var r = n(499254),
-    i = n(827498),
-    a = n(835473),
-    o = n(541716),
-    s = n(561308),
-    l = n(701488),
-    u = n(689938);
-function c(e) {
-    let { entry: t } = e,
-        n = (0, a.q)(t.extra.application_id),
-        c = null == n ? void 0 : n.getIconURL(l.Si.LARGE),
-        d = t.extra.activity_name,
-        _ = (0, s.kr)(t) && !(0, s.n2)(t) ? u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
-        E = {
+var l = t(499254),
+    i = t(827498),
+    a = t(835473),
+    r = t(541716),
+    o = t(561308),
+    s = t(701488),
+    c = t(689938);
+function u(e) {
+    let { entry: n } = e,
+        t = (0, a.q)(n.extra.application_id),
+        u = null == t ? void 0 : t.getIconURL(s.Si.LARGE),
+        d = n.extra.activity_name,
+        m = (0, o.kr)(n) && !(0, o.n2)(n) ? c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+        _ = {
             onClick: () => {
-                r.__(i._b.TEXT, o.I.NORMAL, { applicationId: t.extra.application_id });
+                l.__(i._b.TEXT, r.I.NORMAL, { applicationId: n.extra.application_id });
             },
-            ariaDescription: u.Z.Messages.CONTENT_INVENTORY_OPEN_ACTIVITY_A11Y_DESCRIPTION.format({ title: d })
+            ariaDescription: c.Z.Messages.CONTENT_INVENTORY_OPEN_ACTIVITY_A11Y_DESCRIPTION.format({ title: d })
         };
     return {
-        thumbnailUrl: c,
+        thumbnailUrl: u,
         title: d,
-        titleClickable: E,
-        thumbnailClickable: E,
-        userDescription: _
+        titleClickable: _,
+        thumbnailClickable: _,
+        userDescription: m
     };
 }

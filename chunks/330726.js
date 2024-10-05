@@ -2,23 +2,23 @@ n.d(t, {
     Z: function () {
         return s;
     }
-});
-var r = n(47120);
-var i = n(470079),
-    a = n(77866),
-    o = n(846519);
+}),
+    n(47120);
+var r = n(470079),
+    i = n(77866),
+    a = n(846519);
 function s(e, t) {
-    let [n, r] = (0, i.useState)(e),
-        s = (0, a.Z)(() => new o.V7());
+    let [n, s] = (0, r.useState)(e),
+        o = (0, i.Z)(() => new a.V7());
     return (
-        (0, i.useEffect)(() => () => s.stop(), [s]),
+        (0, r.useEffect)(() => () => o.stop(), [o]),
         [
             n,
-            (0, i.useCallback)(
+            (0, r.useCallback)(
                 (n) => {
-                    r(n), n !== e && s.start(t, () => r(e));
+                    s(n), n !== e && o.start(t, () => s(e));
                 },
-                [t, e, s]
+                [t, e, o]
             )
         ]
     );

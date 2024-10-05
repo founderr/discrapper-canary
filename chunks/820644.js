@@ -1,23 +1,23 @@
 n.d(t, {
     o: function () {
-        return u;
+        return c;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
-    s = n(506021),
-    l = n(482617);
-function u(e) {
+var a = n(120356),
+    s = n.n(a),
+    l = n(481060),
+    r = n(506021),
+    o = n(482617);
+function c(e) {
     let { text: t } = e;
-    return (0, r.jsxs)('div', {
-        className: a()(l.toast, s.toast),
+    return (0, i.jsxs)('div', {
+        className: s()(o.toast, r.toast),
         children: [
-            (0, r.jsx)(o.ShieldIcon, { color: o.tokens.colors.TEXT_BRAND }),
-            (0, r.jsx)(o.Text, {
-                className: l.__invalid_content,
+            (0, i.jsx)(l.ShieldIcon, { color: l.tokens.colors.TEXT_BRAND }),
+            (0, i.jsx)(l.Text, {
+                className: o.__invalid_content,
                 color: 'header-primary',
                 variant: 'text-md/normal',
                 children: t

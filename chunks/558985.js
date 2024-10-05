@@ -1,15 +1,15 @@
 n.d(t, {
     $: function () {
-        return E;
+        return d;
     }
-});
+}),
+    n(47120),
+    n(411104);
 var r,
-    i = n(47120);
-var a = n(411104);
-var o = n(470079),
-    s = n(772848),
-    l = n(324404);
-function u(e, t, n) {
+    i = n(470079),
+    a = n(772848),
+    s = n(324404);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,10 +22,10 @@ function u(e, t, n) {
         e
     );
 }
-let c = (0, s.Z)(),
-    d = new Map(),
-    _ = new Map();
-class E extends (r = o.Component) {
+let l = (0, a.Z)(),
+    u = new Map(),
+    c = new Map();
+class d extends (r = i.Component) {
     componentDidMount() {
         if (this.props.active) {
             let e = this.getVisibilityObserver();
@@ -46,22 +46,22 @@ class E extends (r = o.Component) {
     }
     getVisibilityObserver() {
         let e = this.getVisibilityObserverId(),
-            t = _.get(e);
+            t = c.get(e);
         if (!t) throw Error('Visibility sensor with id '.concat(e, ' not found.'));
         return t;
     }
     render() {
-        return o.Children.only(this.props.children);
+        return i.Children.only(this.props.children);
     }
     constructor(e) {
-        super(e), u(this, 'elementId', void 0), u(this, 'isVisible', !1);
+        super(e), o(this, 'elementId', void 0), o(this, 'isVisible', !1);
         let { root: t, rootMargin: n, threshold: r } = e;
-        t ? (d.has(t) ? (this.elementId = d.get(t) || '') : d.set(t, (0, s.Z)())) : (this.elementId = c);
+        t ? (u.has(t) ? (this.elementId = u.get(t) || '') : u.set(t, (0, a.Z)())) : (this.elementId = l);
         let i = this.getVisibilityObserverId();
-        !_.has(i) &&
-            _.set(
+        !c.has(i) &&
+            c.set(
                 i,
-                new l.Z({
+                new s.Z({
                     root: t,
                     rootMargin: n,
                     threshold: r
@@ -69,9 +69,9 @@ class E extends (r = o.Component) {
             );
     }
 }
-u(E, 'defaultProps', {
+o(d, 'defaultProps', {
     active: !0,
-    children: o.createElement('span'),
+    children: i.createElement('span'),
     root: null,
     rootMargin: '0px 0px 0px 0px',
     threshold: [0, Number.MIN_VALUE]

@@ -20,8 +20,8 @@ var i = n(735250),
     p = n(16474),
     g = n(474936),
     T = n(981631),
-    f = n(689938),
-    S = n(551370),
+    S = n(689938),
+    f = n(551370),
     C = n(886733);
 let N = {
     width: 14,
@@ -56,11 +56,11 @@ function A(e) {
                 });
         },
         P = () => {
-            if (n === g.hX.FRIEND_ANNIVERSARY) return f.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: m.Z.getFriendAnniversaryYears(t.id) });
+            if (n === g.hX.FRIEND_ANNIVERSARY) return S.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: m.Z.getFriendAnniversaryYears(t.id) });
             return (0, E.Ou)(n);
         },
         D = () => {
-            if (n === g.hX.FRIEND_ANNIVERSARY) return f.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY;
+            if (n === g.hX.FRIEND_ANNIVERSARY) return S.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY;
             return (0, E.Ou)(n);
         },
         y = () =>
@@ -68,15 +68,15 @@ function A(e) {
                 ? (0, i.jsx)(c.Clickable, {
                       'aria-label': D(),
                       onClick: M,
-                      className: r()(C.actionButton, S.popoutButton, {
+                      className: r()(C.actionButton, f.popoutButton, {
                           [C.highlight]: A,
                           [C.actionButtonMobile]: o.tq
                       }),
                       onMouseEnter: b,
                       onMouseLeave: O,
                       children: (0, i.jsx)(l.animated.div, {
-                          className: S.spriteContainer,
-                          children: (0, i.jsx)('div', { className: S.sprite })
+                          className: f.spriteContainer,
+                          children: (0, i.jsx)('div', { className: f.sprite })
                       })
                   })
                 : (0, i.jsx)(c.Button, {
@@ -84,7 +84,7 @@ function A(e) {
                       onMouseEnter: b,
                       onMouseLeave: O,
                       children: (0, i.jsxs)('div', {
-                          className: S.pillContentContainer,
+                          className: f.pillContentContainer,
                           children: [
                               (0, i.jsx)(c.GiftIcon, {
                                   size: 'custom',
@@ -95,7 +95,7 @@ function A(e) {
                               (0, i.jsx)(c.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'always-white',
-                                  className: S.pillButtonText,
+                                  className: f.pillButtonText,
                                   children: D()
                               })
                           ]

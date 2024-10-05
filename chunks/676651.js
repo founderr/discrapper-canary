@@ -1,13 +1,13 @@
 n.d(t, {
     h: function () {
-        return o;
+        return u;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(481060),
-    a = n(302463);
-function o(e, t) {
+    o = n(302463);
+function u(e, t) {
     (0, i.openModalLazy)(
         async () => {
             let { default: i } = await n.e('73628').then(n.bind(n, 458961));
@@ -18,6 +18,6 @@ function o(e, t) {
                     ...n
                 });
         },
-        { modalKey: a.Yz }
+        { modalKey: o.Yz }
     );
 }

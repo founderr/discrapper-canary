@@ -1,19 +1,19 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return l;
     }
 });
-var r = n(735250),
-    i = n(120356),
-    a = n.n(i),
-    o = n(481060),
-    s = n(615934);
+var a = t(735250),
+    r = t(120356),
+    s = t.n(r),
+    i = t(481060),
+    o = t(615934);
 function l(e) {
-    let { className: t, onClick: n, ...i } = e,
-        l = (0, r.jsx)(o.Clickable, {
-            ...i,
-            className: a()(null != n && s.clickable, t),
-            onClick: n
+    let { className: n, onClick: t, ...r } = e,
+        l = (0, a.jsx)(i.Clickable, {
+            ...r,
+            className: s()(null != t && o.clickable, n),
+            onClick: t
         });
-    return null == n ? (0, r.jsx)(o.BlockInteractions, { children: l }) : l;
+    return null == t ? (0, a.jsx)(i.BlockInteractions, { children: l }) : l;
 }

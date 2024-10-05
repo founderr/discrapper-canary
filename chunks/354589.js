@@ -43,8 +43,8 @@ n.default = (0, o.Z)(
                     guildId: null
                 }),
                 k = (0, g.Z)(t, null, o),
-                B = (0, R.Z)(t, s.id),
-                W = (0, G.Z)(t.id, o),
+                W = (0, R.Z)(t, s.id),
+                B = (0, G.Z)(t.id, o),
                 w = (0, f.Z)({
                     user: t,
                     context: o
@@ -100,7 +100,7 @@ n.default = (0, o.Z)(
                             children: [
                                 (0, i.jsx)(r.MenuGroup, { children: es }),
                                 (0, i.jsxs)(r.MenuGroup, {
-                                    children: [j && F, u && k, W, w, !ec && B, j && V, j && K, ei]
+                                    children: [j && F, u && k, B, w, !ec && W, j && V, j && K, ei]
                                 }),
                                 D && (0, i.jsx)(r.MenuGroup, { children: z }),
                                 eI &&

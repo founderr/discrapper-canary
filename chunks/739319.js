@@ -1,65 +1,65 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(481060),
-    u = n(454585),
-    c = n(572004),
-    d = n(689938),
-    _ = n(207839);
-function E(e) {
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(454585),
+    u = n(572004),
+    c = n(689938),
+    d = n(207839);
+function _(e) {
     let {
             element: {
-                data: { title: t, body: n, sms: r, is_localized: o }
+                data: { title: t, body: n, sms: a, is_localized: _ }
             }
         } = e,
-        [E, f] = a.useState(!1),
-        h = a.useRef(u.Z.reactParserFor(u.Z.defaultRules));
-    if (!o) return null;
-    let p = () => {
-        (0, c.JG)(r) && f(!0);
-    };
-    return (0, i.jsxs)('div', {
-        className: _.container,
-        children: [
-            (0, i.jsx)(l.Heading, {
-                variant: 'heading-sm/semibold',
-                color: 'header-secondary',
-                className: _.header,
-                children: t
-            }),
-            (0, i.jsx)(l.Text, {
-                variant: 'text-sm/normal',
-                className: _.bodyText,
-                children: h.current(n)
-            }),
-            (0, i.jsx)('div', {
-                className: _.__invalid_smsInfoContainer,
-                children: (0, i.jsxs)('div', {
-                    className: s()(_.smsNumberContainer, { [_.copied]: E }),
-                    children: [
-                        (0, i.jsx)(l.Text, {
-                            variant: 'text-md/normal',
-                            selectable: !0,
-                            className: _.smsNumberText,
-                            children: r
-                        }),
-                        (0, i.jsx)(l.Button, {
-                            size: l.Button.Sizes.SMALL,
-                            className: _.__invalid_trailingButton,
-                            onClick: p,
-                            color: l.Button.Colors.PRIMARY,
-                            children: E ? d.Z.Messages.COPIED : d.Z.Messages.COPY
-                        })
-                    ]
-                })
-            })
-        ]
-    });
+        [E, f] = i.useState(!1),
+        h = i.useRef(l.Z.reactParserFor(l.Z.defaultRules));
+    return _
+        ? (0, r.jsxs)('div', {
+              className: d.container,
+              children: [
+                  (0, r.jsx)(o.Heading, {
+                      variant: 'heading-sm/semibold',
+                      color: 'header-secondary',
+                      className: d.header,
+                      children: t
+                  }),
+                  (0, r.jsx)(o.Text, {
+                      variant: 'text-sm/normal',
+                      className: d.bodyText,
+                      children: h.current(n)
+                  }),
+                  (0, r.jsx)('div', {
+                      className: d.__invalid_smsInfoContainer,
+                      children: (0, r.jsxs)('div', {
+                          className: s()(d.smsNumberContainer, { [d.copied]: E }),
+                          children: [
+                              (0, r.jsx)(o.Text, {
+                                  variant: 'text-md/normal',
+                                  selectable: !0,
+                                  className: d.smsNumberText,
+                                  children: a
+                              }),
+                              (0, r.jsx)(o.Button, {
+                                  size: o.Button.Sizes.SMALL,
+                                  className: d.__invalid_trailingButton,
+                                  onClick: () => {
+                                      (0, u.JG)(a) && f(!0);
+                                  },
+                                  color: o.Button.Colors.PRIMARY,
+                                  children: E ? c.Z.Messages.COPIED : c.Z.Messages.COPY
+                              })
+                          ]
+                      })
+                  })
+              ]
+          })
+        : null;
 }

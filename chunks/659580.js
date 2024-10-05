@@ -15,8 +15,8 @@ var s = n(990547),
     u = n(453925),
     d = n(632304),
     h = n(947150),
-    m = n(488021),
-    p = n(822556),
+    p = n(488021),
+    m = n(822556),
     _ = n(981631),
     f = n(689938),
     E = n(678199);
@@ -28,9 +28,9 @@ function g(e) {
         name: s.ImpressionNames.AUDIO_DEVICE_MENU,
         properties: { location_stack: S }
     });
-    let v = (0, p.Z)(),
+    let v = (0, m.Z)(),
         N = (0, h.Z)(S),
-        A = (0, m.Z)(S),
+        A = (0, p.Z)(S),
         Z = (0, c.Z)(S),
         M = (0, u.Z)(S),
         b = (0, d.Z)(S);

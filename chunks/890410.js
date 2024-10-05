@@ -1,38 +1,38 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-    a = n.n(i),
-    o = n(739566),
-    s = n(492593),
-    l = n(930282),
-    u = n(464891),
-    c = n(831557);
-function d(e) {
-    let { message: t, channel: n, content: i, className: d, compact: _, popoutProps: E, hideTimestamp: f = !1, withFooter: h = !1, ...p } = e,
-        m = (0, o.ZP)(t);
-    return (0, r.jsx)('div', {
-        className: a()({ [c.withFooter]: h }, c.embedCard, { [c.compact]: _ }, d),
-        children: (0, r.jsx)(s.Z, {
-            ...p,
-            className: a()(c.messageContainer, { [c.compact]: _ }),
-            childrenMessageContent: (0, r.jsx)(l.ZP, {
-                className: a()(c.__invalid_messageContent, { [c.compact]: _ }),
+var a = n(120356),
+    s = n.n(a),
+    l = n(739566),
+    r = n(492593),
+    o = n(930282),
+    c = n(464891),
+    d = n(831557);
+function u(e) {
+    let { message: t, channel: n, content: a, className: u, compact: _, popoutProps: E, hideTimestamp: I = !1, withFooter: m = !1, ...T } = e,
+        N = (0, l.ZP)(t);
+    return (0, i.jsx)('div', {
+        className: s()({ [d.withFooter]: m }, d.embedCard, { [d.compact]: _ }, u),
+        children: (0, i.jsx)(r.Z, {
+            ...T,
+            className: s()(d.messageContainer, { [d.compact]: _ }),
+            childrenMessageContent: (0, i.jsx)(o.ZP, {
+                className: s()(d.__invalid_messageContent, { [d.compact]: _ }),
                 message: t,
-                content: i
+                content: a
             }),
-            childrenHeader: (0, r.jsx)(u.ZP, {
+            childrenHeader: (0, i.jsx)(c.ZP, {
                 message: t,
                 channel: n,
-                author: m,
+                author: N,
                 guildId: null == n ? void 0 : n.guild_id,
                 compact: _,
-                hideTimestamp: f,
-                className: a()(c.header, { [c.compact]: _ }),
+                hideTimestamp: I,
+                className: s()(d.header, { [d.compact]: _ }),
                 ...(null != E ? E : {})
             }),
             compact: _

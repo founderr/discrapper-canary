@@ -1,6 +1,6 @@
 n.d(t, {
     Mb: function () {
-        return s;
+        return o;
     },
     Z0: function () {
         return a;
@@ -9,7 +9,7 @@ n.d(t, {
         return u;
     },
     fy: function () {
-        return o;
+        return s;
     },
     r5: function () {
         return l;
@@ -18,8 +18,8 @@ n.d(t, {
 var r = n(313201),
     i = n(689938);
 let a = (0, r.hQ)(),
-    o = (0, r.hQ)(),
     s = (0, r.hQ)(),
+    o = (0, r.hQ)(),
     l = (0, r.hQ)();
 function u() {
     [
@@ -28,11 +28,11 @@ function u() {
             text: ','
         },
         {
-            id: o,
+            id: s,
             text: ','
         },
         {
-            id: s,
+            id: o,
             text: i.Z.Messages.REACTIONS
         },
         {

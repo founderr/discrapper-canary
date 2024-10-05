@@ -7,13 +7,13 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    o = n(766646),
-    s = n(481060),
+    s = n(766646),
+    o = n(481060),
     l = n(689938),
     u = n(753328);
 function c(e) {
     let { children: t, className: n, disabled: i, required: c = !1, ...d } = e;
-    return (0, r.jsxs)(s.Text, {
+    return (0, r.jsxs)(o.Text, {
         tag: 'label',
         variant: 'heading-deprecated-12/normal',
         className: a()(u.label, n, {
@@ -31,7 +31,7 @@ function c(e) {
                             'aria-hidden': !0,
                             children: '*'
                         }),
-                        (0, r.jsx)(o.n, { children: l.Z.Messages.REQUIRED })
+                        (0, r.jsx)(s.n, { children: l.Z.Messages.REQUIRED })
                     ]
                 })
         ]

@@ -249,7 +249,7 @@ function O(e) {
                               name: L.Z.Messages.STAGE_CHANNEL
                           }),
                               (0, o.openModalLazy)(async () => {
-                                  let { default: e } = await Promise.all([l.e('7590'), l.e('45094'), l.e('47431')]).then(l.bind(l, 218613));
+                                  let { default: e } = await Promise.all([l.e('90508'), l.e('7590'), l.e('45094'), l.e('54548')]).then(l.bind(l, 218613));
                                   return (l) =>
                                       (0, s.jsx)(e, {
                                           ...l,

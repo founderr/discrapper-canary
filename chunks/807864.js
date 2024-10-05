@@ -1,17 +1,11 @@
-n.d(t, {
-    H: function () {
-        return i;
-    }
-});
-var r = n(653041);
-function i(e) {
+function r(e) {
     let t = Promise.resolve(null),
         n = [],
         r = !1,
-        { onContention: i, onContentionResolved: a, onTimeout: o, timeoutMs: s } = e,
+        { onContention: i, onContentionResolved: a, onTimeout: s, timeoutMs: o } = e,
         l = function (e, l) {
             n.length > 0 ? (i(l, n), (r = !0)) : r && (a(), (r = !1)), n.push(l);
-            let u = null == s || null == o ? null : setTimeout(() => o(l, n), s);
+            let u = null == o || null == s ? null : setTimeout(() => s(l, n), o);
             return new Promise((r, i) => {
                 (t = t
                     .then(e)
@@ -22,3 +16,9 @@ function i(e) {
         };
     return (l.isMutexHeld = () => n.length > 0), (l.getLockHolders = () => n), l;
 }
+n.d(t, {
+    H: function () {
+        return r;
+    }
+}),
+    n(653041);

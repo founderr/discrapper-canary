@@ -13,8 +13,8 @@ var i = n(735250),
     u = n(692547),
     d = n(481060),
     h = n(239091),
-    m = n(40851),
-    p = n(184301),
+    p = n(40851),
+    m = n(184301),
     _ = n(347475),
     f = n(271383),
     E = n(709586),
@@ -53,13 +53,13 @@ let T = s.memo(function (e) {
         let { participant: n, guildId: s, channel: a, isPremium: r } = e,
             { user: o, blocked: c, rtsState: u } = n,
             h = u === C.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            m = u === C.xO.REQUESTED_TO_SPEAK || h;
+            p = u === C.xO.REQUESTED_TO_SPEAK || h;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
                     className: I.avatarContainer,
                     children: [
-                        m &&
+                        p &&
                             (0, i.jsx)(d.HandRequestSpeakIcon, {
                                 size: 'md',
                                 color: 'currentColor',
@@ -88,7 +88,7 @@ t.Z = s.memo(function (e) {
     let { participant: t, channel: a } = e,
         { user: r, blocked: u } = t,
         E = a.getGuildId(),
-        g = (0, m.bp)(),
+        g = (0, p.bp)(),
         C = (0, c.e7)(
             [f.ZP],
             () => {
@@ -132,7 +132,7 @@ t.Z = s.memo(function (e) {
         );
     return (0, i.jsx)(d.Popout, {
         preload: () =>
-            (0, p.Z)(r, {
+            (0, m.Z)(r, {
                 guildId: a.guild_id,
                 channelId: a.id
             }),

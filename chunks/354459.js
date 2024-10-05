@@ -1,70 +1,70 @@
-var r, i, a, o;
-function s(e) {
+var r, i, a, s, o, l, u, c;
+function d(e) {
     return !((null == e ? void 0 : e.type) !== 0 && (null == e ? void 0 : e.type) !== 1);
 }
-function l(e) {
+function _(e) {
     return (null == e ? void 0 : e.type) === 2;
 }
-function u(e) {
+function E(e) {
     return (null == e ? void 0 : e.type) === 3;
 }
 n.d(t, {
     $i: function () {
-        return d;
+        return h;
     },
     I: function () {
-        return u;
+        return E;
     },
     Io: function () {
-        return l;
-    },
-    Rv: function () {
         return _;
     },
+    Rv: function () {
+        return p;
+    },
     _5: function () {
-        return s;
+        return d;
     },
     cL: function () {
-        return o;
+        return s;
     },
     dF: function () {
         return i;
     },
     e5: function () {
-        return E;
+        return I;
     },
     fO: function () {
         return r;
     },
     l8: function () {
-        return c;
+        return f;
     },
     wR: function () {
         return a;
     }
 }),
-    !(function (e) {
-        (e[(e.STREAM = 0)] = 'STREAM'), (e[(e.HIDDEN_STREAM = 1)] = 'HIDDEN_STREAM'), (e[(e.USER = 2)] = 'USER'), (e[(e.ACTIVITY = 3)] = 'ACTIVITY');
-    })(r || (r = {})),
-    !(function (e) {
-        (e.NONE = 'NONE'), (e.AUTO = 'AUTO');
-    })(i || (i = {})),
-    !(function (e) {
-        (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE'), (e[(e.XBOX = 2)] = 'XBOX'), (e[(e.PLAYSTATION = 3)] = 'PLAYSTATION');
-    })(a || (a = {})),
-    !(function (e) {
-        (e[(e.VIDEO = 0)] = 'VIDEO'), (e[(e.CAMERA_PREVIEW = 1)] = 'CAMERA_PREVIEW');
-    })(o || (o = {}));
-let c = {
+    ((o = r || (r = {}))[(o.STREAM = 0)] = 'STREAM'),
+    (o[(o.HIDDEN_STREAM = 1)] = 'HIDDEN_STREAM'),
+    (o[(o.USER = 2)] = 'USER'),
+    (o[(o.ACTIVITY = 3)] = 'ACTIVITY'),
+    ((l = i || (i = {})).NONE = 'NONE'),
+    (l.AUTO = 'AUTO'),
+    ((u = a || (a = {}))[(u.DESKTOP = 0)] = 'DESKTOP'),
+    (u[(u.MOBILE = 1)] = 'MOBILE'),
+    (u[(u.XBOX = 2)] = 'XBOX'),
+    (u[(u.PLAYSTATION = 3)] = 'PLAYSTATION'),
+    ((c = s || (s = {}))[(c.VIDEO = 0)] = 'VIDEO'),
+    (c[(c.CAMERA_PREVIEW = 1)] = 'CAMERA_PREVIEW');
+let f = {
         0: 320,
         1: 160
     },
-    d = {
+    h = {
         0: 960,
         1: 480
     },
-    _ = {
+    p = {
         0: 200,
         1: 160
     },
-    E = 8;
+    I = 8;

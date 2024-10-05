@@ -16,14 +16,14 @@ var i,
     h = n(399785);
 ((s = i || (i = {}))[(s.MutualFriendsList = 0)] = 'MutualFriendsList'), (s[(s.MutualGuildList = 1)] = 'MutualGuildList');
 t.Z = (e) => {
-    let { header: t, children: n, itemType: i = 1, isLoadingHeader: s, isLoadingContents: r, loadingContentsCount: m = 0, className: p, onExpand: _, onHover: f, onFocus: E } = e,
+    let { header: t, children: n, itemType: i = 1, isLoadingHeader: s, isLoadingContents: r, loadingContentsCount: p = 0, className: m, onExpand: _, onHover: f, onFocus: E } = e,
         [g, C] = l.useState(!0),
         I = (0, a.jsx)('div', {
             className: h.iconWrapper,
             children: (0, a.jsx)(d.Z, { direction: g ? d.Z.Directions.RIGHT : d.Z.Directions.DOWN })
         });
     return (0, a.jsxs)('div', {
-        className: p,
+        className: m,
         children: [
             (0, a.jsx)(c.Button, {
                 className: h.collapseBtn,
@@ -60,7 +60,7 @@ t.Z = (e) => {
             (0, a.jsx)('ul', {
                 className: o()(h.connectionList, { [h.isCollapsed]: g }),
                 children: r
-                    ? Array.from({ length: m }).map((e, t) =>
+                    ? Array.from({ length: p }).map((e, t) =>
                           (0, a.jsxs)(
                               'div',
                               {

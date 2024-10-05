@@ -1,36 +1,36 @@
-var r = n(47120);
+n(47120);
 var i = n(735250),
     a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(212433),
-    u = n(442837),
+    s = n(120356),
+    l = n.n(s),
+    r = n(212433),
+    o = n(442837),
     c = n(481060),
     d = n(570140),
-    _ = n(45114),
-    E = n(367907),
-    f = n(717680),
-    h = n(703656),
-    p = n(592125),
-    m = n(259580),
-    I = n(617379),
-    T = n(324081),
-    g = n(305248),
-    S = n(520116),
-    A = n(981631),
-    v = n(689938),
-    N = n(619933);
-function O(e) {
+    u = n(45114),
+    _ = n(367907),
+    E = n(717680),
+    I = n(703656),
+    m = n(592125),
+    T = n(259580),
+    N = n(617379),
+    h = n(324081),
+    C = n(305248),
+    p = n(520116),
+    f = n(981631),
+    g = n(689938),
+    A = n(619933);
+let S = a.memo(function (e) {
     let { channel: t, deleteChannel: n } = e,
-        r = a.useRef(null),
-        [[o, s], u] = a.useState([0, 0]),
-        d = t.deleted && o > 0;
-    if (t.deleted && 0 === o && null != r.current) {
-        let e = r.current.offsetHeight,
-            t = r.current.offsetTop,
-            n = r.current.parentElement.scrollTop,
+        s = a.useRef(null),
+        [[l, o], d] = a.useState([0, 0]),
+        u = t.deleted && l > 0;
+    if (t.deleted && 0 === l && null != s.current) {
+        let e = s.current.offsetHeight,
+            t = s.current.offsetTop,
+            n = s.current.parentElement.scrollTop,
             i = n > t ? e - (n - t) : e;
-        u([e, e - i]);
+        d([e, e - i]);
     }
     let { opacity: _, size: E } = (0, c.useSpring)(
             {
@@ -39,102 +39,94 @@ function O(e) {
                     friction: 18,
                     tension: 200
                 },
-                opacity: d ? 0 : 1,
-                size: d ? 0 : 1,
+                opacity: u ? 0 : 1,
+                size: u ? 0 : 1,
                 onRest: () => {
                     n(t.channelId);
                 }
             },
             'animate-always'
         ),
-        f = {
+        I = {
             opacity: _,
-            height: E.to((e) => (d ? C(o, s, e) : 'auto'))
+            height: E.to((e) =>
+                u
+                    ? (function (e, t, n) {
+                          return t + (e - t) * n;
+                      })(l, o, e)
+                    : 'auto'
+            )
         };
-    return (0, i.jsx)(l.animated.div, {
-        ref: r,
-        style: f,
-        children: (0, i.jsx)(L, { ...e })
+    return (0, i.jsx)(r.animated.div, {
+        ref: s,
+        style: I,
+        children: (0, i.jsx)(M, { ...e })
     });
-}
-let R = a.memo(O);
-function C(e, t, n) {
-    return t + (e - t) * n;
-}
-function y(e) {
-    let { channel: t, onJump: n, deleteChannel: r, toggle: o } = e,
-        s = (0, u.e7)([p.Z], () => p.Z.getChannel(t.channelId));
+});
+t.Z = S;
+let M = a.memo(function (e) {
+    let { channel: t, onJump: n, deleteChannel: s, toggle: l } = e,
+        r = (0, o.e7)([m.Z], () => m.Z.getChannel(t.channelId));
     if (
         (a.useEffect(() => {
-            null != s &&
+            null != r &&
                 t.isFullyLoaded &&
                 !t.hasError &&
                 !t.collapsed &&
                 'messages' === t.type &&
                 0 === t.messages.length &&
                 d.Z.wait(() => {
-                    (0, _.In)(t.channelId, !0), r(t.channelId);
+                    (0, u.In)(t.channelId, !0), s(t.channelId);
                 });
         }),
-        null == s || !t.hasLoadedAnything)
+        null == r || !t.hasLoadedAnything)
     )
         return null;
-    let l = (e, r) => {
-        (0, E.yw)(A.rMx.INBOX_CHANNEL_CLICKED, {
+    let E = (e, i) => {
+        (0, _.yw)(f.rMx.INBOX_CHANNEL_CLICKED, {
             channel_id: t.channelId,
             guild_id: t.guildId
         });
-        let i = null != r ? r : t.oldestUnreadMessageId;
-        (0, h.uL)(A.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : i)), n(e);
+        let a = null != i ? i : t.oldestUnreadMessageId;
+        (0, I.uL)(f.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : a)), n(e);
     };
     return (0, i.jsx)('div', {
-        className: N.channel,
+        className: A.channel,
         children: (0, i.jsx)(c.HeadingLevel, {
-            component: (0, i.jsxs)(T.Z, {
-                channel: s,
-                gotoChannel: l,
+            component: (0, i.jsxs)(h.Z, {
+                channel: r,
+                gotoChannel: E,
                 mentionCount: t.mentionCount,
-                toggleCollapsed: o,
+                toggleCollapsed: l,
                 channelState: t,
-                children: [(0, i.jsx)(I.Z, { channel: s }), (0, i.jsx)(b, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(D, { ...e })]
+                children: [(0, i.jsx)(N.Z, { channel: r }), (0, i.jsx)(x, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(O, { ...e })]
             }),
             children: t.collapsed
                 ? null
                 : 'messages' === t.type
-                  ? (0, i.jsx)(S.Z, {
+                  ? (0, i.jsx)(p.Z, {
                         channel: t,
-                        channelRecord: s,
-                        gotoChannel: l
+                        channelRecord: r,
+                        gotoChannel: E
                     })
                   : 'forum' === t.type
-                    ? (0, i.jsx)(g.Z, {
+                    ? (0, i.jsx)(C.Z, {
                           channel: t,
-                          channelRecord: s,
-                          deleteChannel: r
+                          channelRecord: r,
+                          deleteChannel: s
                       })
                     : null
         })
     });
-}
-t.Z = R;
-let L = a.memo(y);
-function b(e) {
-    let { channel: t, markChannelRead: n, markGuildRead: r, getNumUnreadChannels: a } = e,
-        o = (0, f.Z)() && null != t.guildId;
-    function s() {
-        o && null != t.guildId ? r(t.guildId) : n(t),
-            (0, E.yw)(A.rMx.INBOX_CHANNEL_ACKED, {
-                channel_id: t.channelId,
-                guild_id: t.guildId,
-                marked_all_channels_as_read: !1,
-                num_unread_channels_remaining: a() - 1
-            });
-    }
+});
+function x(e) {
+    let { channel: t, markChannelRead: n, markGuildRead: a, getNumUnreadChannels: s } = e,
+        l = (0, E.Z)() && null != t.guildId;
     return (0, i.jsx)(c.CircleIconButton, {
-        className: N.markReadButton,
-        tooltip: o ? v.Z.Messages.MARK_GUILD_AS_READ : v.Z.Messages.MARK_AS_READ,
+        className: A.markReadButton,
+        tooltip: l ? g.Z.Messages.MARK_GUILD_AS_READ : g.Z.Messages.MARK_AS_READ,
         color: c.CircleIconButtonColors.TERTIARY,
-        icon: o
+        icon: l
             ? (0, i.jsx)(c.DoubleCheckmarkIcon, {
                   size: 'xs',
                   color: 'currentColor'
@@ -143,28 +135,36 @@ function b(e) {
                   size: 'xs',
                   color: 'currentColor'
               }),
-        onClick: s
+        onClick: function () {
+            l && null != t.guildId ? a(t.guildId) : n(t),
+                (0, _.yw)(f.rMx.INBOX_CHANNEL_ACKED, {
+                    channel_id: t.channelId,
+                    guild_id: t.guildId,
+                    marked_all_channels_as_read: !1,
+                    num_unread_channels_remaining: s() - 1
+                });
+        }
     });
 }
-function D(e) {
-    let { channel: t, toggle: n, getNumUnreadChannels: r } = e;
-    function a() {
+function O(e) {
+    let { channel: t, toggle: n, getNumUnreadChannels: a } = e;
+    function s() {
         n(t),
-            (0, E.yw)(A.rMx.INBOX_CHANNEL_COLLAPSED, {
+            (0, _.yw)(f.rMx.INBOX_CHANNEL_COLLAPSED, {
                 channel_id: t.channelId,
                 guild_id: t.guildId,
-                num_unread_channels_remaining: r(),
+                num_unread_channels_remaining: a(),
                 is_now_collapsed: !t.collapsed
             });
     }
     return (0, i.jsx)(c.Tooltip, {
-        text: v.Z.Messages.COLLAPSE,
+        text: g.Z.Messages.COLLAPSE,
         children: (e) =>
             (0, i.jsx)(c.Clickable, {
                 ...e,
-                className: s()(N.collapseButton, { [N.collapsed]: t.collapsed }),
-                onClick: a,
-                children: (0, i.jsx)(m.Z, {
+                className: l()(A.collapseButton, { [A.collapsed]: t.collapsed }),
+                onClick: s,
+                children: (0, i.jsx)(T.Z, {
                     width: 16,
                     height: 16
                 })

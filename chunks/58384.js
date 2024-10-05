@@ -1,6 +1,6 @@
-n.d(t, {
+n.d(i, {
     Q: function () {
-        return a;
+        return r;
     }
 }),
     n(315314),
@@ -11,11 +11,11 @@ n.d(t, {
     n(47120),
     n(411104);
 var o = n(981631);
-let i = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/;
-function a(e) {
-    let t = new URL(''.concat(window.location.protocol).concat(e)),
+let t = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/;
+function r(e) {
+    let i = new URL(''.concat(window.location.protocol).concat(e)),
         { ASSET_ENDPOINT: n } = window.GLOBAL_ENV;
-    if (null == t.pathname.match(i)) throw Error('Unexpected Tenor GIF path.');
-    let a = ''.concat(o.ANM.TENOR_ASSET_PATH).concat(t.pathname);
-    return ''.concat(location.protocol).concat(n).concat(a);
+    if (null == i.pathname.match(t)) throw Error('Unexpected Tenor GIF path.');
+    let r = ''.concat(o.ANM.TENOR_ASSET_PATH).concat(i.pathname);
+    return ''.concat(location.protocol).concat(n).concat(r);
 }

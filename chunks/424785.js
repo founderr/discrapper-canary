@@ -28,18 +28,18 @@ var l = n(120356),
     S = n(427679),
     x = n(71275),
     v = n(201469),
-    Z = n(680089),
-    T = n(592125),
-    b = n(430824),
-    A = n(607744),
-    M = n(496675),
-    R = n(306680),
+    T = n(680089),
+    Z = n(592125),
+    A = n(430824),
+    b = n(607744),
+    R = n(496675),
+    M = n(306680),
     L = n(9156),
     P = n(979651),
-    y = n(934415),
-    O = n(98597),
-    j = n(648501),
-    D = n(473403),
+    O = n(934415),
+    y = n(98597),
+    D = n(648501),
+    j = n(473403),
     w = n(207055),
     U = n(981631),
     G = n(647086),
@@ -59,7 +59,7 @@ function H(e, t, n) {
         e
     );
 }
-class F extends O.ZP {
+class F extends y.ZP {
     getVoiceStatesCount() {
         var e;
         let { voiceStates: t } = this.props;
@@ -67,7 +67,7 @@ class F extends O.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, y.rY)(e, P.Z, b.Z);
+        return (0, O.rY)(e, P.Z, A.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -108,7 +108,7 @@ class F extends O.ZP {
                                 text: this.getTooltipText(),
                                 children: (a) => {
                                     let { onClick: s, onContextMenu: o, ...c } = a;
-                                    return (0, i.jsxs)(D.Z, {
+                                    return (0, i.jsxs)(j.Z, {
                                         className: B.iconVisibility,
                                         iconClassName: r()({ [V.iconLive]: null != f }),
                                         channel: e,
@@ -163,7 +163,7 @@ class F extends O.ZP {
             }),
             H(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    l = b.Z.getGuild(t.getGuildId());
+                    l = A.Z.getGuild(t.getGuildId());
                 if (null != l)
                     (0, c.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331')]).then(n.bind(n, 213202));
@@ -226,40 +226,40 @@ class F extends O.ZP {
 let W = (0, u.B)((0, d.Q)(F));
 function z(e) {
     let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: r, collapsed: s, voiceStates: o } = e,
-        c = (0, a.cj)([R.ZP], () => ({
-            unread: R.ZP.hasUnread(n.id),
-            mentionCount: R.ZP.getMentionCount(n.id)
+        c = (0, a.cj)([M.ZP], () => ({
+            unread: M.ZP.hasUnread(n.id),
+            mentionCount: M.ZP.getMentionCount(n.id)
         })),
         u = (0, a.e7)([L.ZP], () => L.ZP.resolveUnreadSetting(n)),
-        d = (0, a.cj)([T.Z, A.Z, M.Z], () => {
-            let e = T.Z.getChannel(n.parent_id),
-                i = A.Z.getCheck(n.guild_id);
+        d = (0, a.cj)([Z.Z, b.Z, R.Z], () => {
+            let e = Z.Z.getChannel(n.parent_id),
+                i = b.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: null != t && M.Z.can(U.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === G._ || (null != e ? M.Z.can(U.Plq.MANAGE_CHANNELS, e) : M.Z.can(U.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: M.Z.can(U.Plq.MOVE_MEMBERS, n),
-                locked: !M.Z.can(U.Plq.CONNECT, n),
-                bypassLimit: M.Z.can(U.Plq.MOVE_MEMBERS, n),
+                canManageChannel: null != t && R.Z.can(U.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== l && (t.id === G._ || (null != e ? R.Z.can(U.Plq.MANAGE_CHANNELS, e) : R.Z.can(U.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: R.Z.can(U.Plq.MOVE_MEMBERS, n),
+                locked: !R.Z.can(U.Plq.CONNECT, n),
+                bypassLimit: R.Z.can(U.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
         }),
-        h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)),
+        h = (0, a.e7)([T.Z], () => T.Z.isCollapsed(n.parent_id)),
         p = (0, v.ZP)(n.id),
         f = (0, a.e7)([S.Z], () => S.Z.getStageInstanceByChannel(n.id), [n.id]),
         _ = (0, E.Rk)(n.id, N.pV.AUDIENCE),
         { isSubscriptionGated: g, needSubscriptionToAccess: C } = (0, m.Z)(n.id),
         I = (0, a.e7)([L.ZP], () => L.ZP.isFavorite(t.id, n.id)),
-        b = (0, x.xJ)(n.id),
-        P = (0, j.Z)({
+        A = (0, x.xJ)(n.id),
+        P = (0, D.Z)({
             channel: n,
             isChannelSelected: !1,
             isChannelCollapsed: s,
             voiceStates: o,
             isSubscriptionGated: g,
             needSubscriptionToAccess: C,
-            enableConnectedUserLimit: b || (n.userLimit > 0 && n.userLimit < U.xGv)
+            enableConnectedUserLimit: A || (n.userLimit > 0 && n.userLimit < U.xGv)
         }),
-        y = e.connected && null == P;
+        O = e.connected && null == P;
     return (0, i.jsx)(W, {
         categoryCollapsed: h,
         connectAction: p,
@@ -271,7 +271,7 @@ function z(e) {
         ...d,
         ...e,
         isFavoriteSuggestion: r && !I,
-        forceShowButtons: y,
+        forceShowButtons: O,
         channelInfo: P,
         resolvedUnreadSetting: u
     });

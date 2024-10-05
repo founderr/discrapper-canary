@@ -1,19 +1,19 @@
-n.d(t, {
+s.d(t, {
     G: function () {
         return l;
     }
 }),
-    n(47120),
-    n(773603);
-var s = n(470079),
-    i = n(399606),
-    a = n(570140),
-    r = n(986197),
-    o = n(135200);
+    s(47120),
+    s(773603);
+var n = s(470079),
+    i = s(399606),
+    a = s(570140),
+    r = s(986197),
+    o = s(135200);
 let l = (e) => {
-    let [t, n] = (0, i.Wu)([o.Z], () => [o.Z.usernameSuggestion(), o.Z.usernameSuggestionLoading()]);
+    let [t, s] = (0, i.Wu)([o.Z], () => [o.Z.usernameSuggestion(), o.Z.usernameSuggestionLoading()]);
     return (
-        s.useEffect(
+        n.useEffect(
             () => (
                 o.Z.wasSuggestionsFetched()
                     ? a.Z.dispatch({
@@ -34,7 +34,7 @@ let l = (e) => {
         ),
         {
             usernameSuggestion: t,
-            usernameSuggestionLoading: n
+            usernameSuggestionLoading: s
         }
     );
 };

@@ -1,18 +1,18 @@
 n.d(t, {
     Kw: function () {
-        return o;
+        return s;
     },
     Po: function () {
         return l;
     },
     hv: function () {
-        return s;
+        return o;
     }
 });
 var r = n(570140),
     i = n(626135),
     a = n(981631);
-function o(e) {
+function s(e) {
     i.default.track(a.rMx.HOTSPOT_HIDDEN, { hotspot_location: e }),
         r.Z.wait(() => {
             r.Z.dispatch({
@@ -21,7 +21,7 @@ function o(e) {
             });
         });
 }
-function s(e, t) {
+function o(e, t) {
     r.Z.dispatch({
         type: 'HOTSPOT_OVERRIDE_SET',
         location: e,

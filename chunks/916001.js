@@ -1,45 +1,45 @@
-n.d(t, {
+t.d(A, {
     Z: function () {
         return l;
     }
 });
-var r = n(735250);
-n(470079);
-var i = n(866442),
-    a = n(481060),
-    o = n(689938),
-    s = n(401114);
+var a = t(735250);
+t(470079);
+var n = t(866442),
+    r = t(481060),
+    s = t(689938),
+    o = t(401114);
 function l(e) {
-    let { locked: t, role: n, textVariant: l = 'text-xs/medium' } = e,
-        u = (0, a.useToken)(a.tokens.colors.INTERACTIVE_NORMAL).hex();
-    return (0, r.jsx)('div', {
-        className: s.roleTagContainer,
-        children: (0, r.jsxs)('div', {
-            className: s.roleTag,
+    let { locked: A, role: t, textVariant: l = 'text-xs/medium' } = e,
+        i = (0, r.useToken)(r.tokens.colors.INTERACTIVE_NORMAL).hex();
+    return (0, a.jsx)('div', {
+        className: o.roleTagContainer,
+        children: (0, a.jsxs)('div', {
+            className: o.roleTag,
             children: [
-                (0, r.jsx)('div', {
-                    className: s.roleColor,
-                    style: { backgroundColor: (0, i.Rf)(n.color) }
+                (0, a.jsx)('div', {
+                    className: o.roleColor,
+                    style: { backgroundColor: (0, n.Rf)(t.color) }
                 }),
-                (0, r.jsx)(a.Spacer, {
+                (0, a.jsx)(r.Spacer, {
                     size: 8,
                     horizontal: !0
                 }),
-                (0, r.jsxs)(a.Text, {
+                (0, a.jsxs)(r.Text, {
                     variant: l,
                     color: 'text-normal',
-                    children: [(0, r.jsx)(a.HiddenVisually, { children: o.Z.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER }), n.name]
+                    children: [(0, a.jsx)(r.HiddenVisually, { children: s.Z.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER }), t.name]
                 }),
-                !0 === t &&
-                    (0, r.jsxs)(r.Fragment, {
+                !0 === A &&
+                    (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, r.jsx)(a.Spacer, {
+                            (0, a.jsx)(r.Spacer, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, r.jsx)(a.LockIcon, {
+                            (0, a.jsx)(r.LockIcon, {
                                 size: 'md',
-                                color: u
+                                color: i
                             })
                         ]
                     })

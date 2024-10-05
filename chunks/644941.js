@@ -1,191 +1,191 @@
-n.r(a), n(47120);
-var t = n(735250),
-    i = n(470079),
-    r = n(120356),
-    o = n.n(r),
-    l = n(913527),
-    s = n.n(l),
-    c = n(705512),
-    d = n(442837),
-    u = n(433517),
-    m = n(481060),
-    p = n(560361),
-    g = n(835473),
-    _ = n(168551),
-    f = n(485267),
-    x = n(26033),
-    h = n(561308),
-    v = n(669764),
-    I = n(706454),
-    E = n(768581),
-    A = n(814225),
-    C = n(709054),
-    b = n(810568),
-    j = n(998058),
-    M = n(839392),
-    P = n(96856),
-    T = n(567409),
-    N = n(774073),
-    S = n(124030),
-    L = n(715318),
-    w = n(38516),
-    G = n(891949),
-    O = n(252547),
-    y = n(484527),
-    k = n(131033),
-    R = n(296768),
-    Z = n(978313),
-    H = n(206583),
-    F = n(689938),
-    D = n(51527);
-let B = 'GameProfileModal',
-    W = () =>
-        (0, t.jsxs)('div', {
-            className: D.gameBadge,
+t.r(n), t(47120);
+var a = t(735250),
+    r = t(470079),
+    s = t(120356),
+    i = t.n(s),
+    o = t(913527),
+    l = t.n(o),
+    c = t(705512),
+    d = t(442837),
+    u = t(433517),
+    _ = t(481060),
+    E = t(560361),
+    m = t(835473),
+    I = t(168551),
+    A = t(485267),
+    p = t(26033),
+    g = t(561308),
+    f = t(669764),
+    T = t(706454),
+    O = t(768581),
+    N = t(814225),
+    R = t(709054),
+    h = t(810568),
+    P = t(998058),
+    C = t(839392),
+    L = t(96856),
+    M = t(567409),
+    S = t(774073),
+    v = t(124030),
+    x = t(715318),
+    G = t(38516),
+    Z = t(891949),
+    b = t(252547),
+    j = t(484527),
+    D = t(131033),
+    y = t(296768),
+    w = t(978313),
+    U = t(206583),
+    k = t(689938),
+    F = t(51527);
+let H = 'GameProfileModal',
+    K = () =>
+        (0, a.jsxs)('div', {
+            className: F.gameBadge,
             children: [
-                (0, t.jsx)(m.FireIcon, { size: 'xxs' }),
-                (0, t.jsx)(m.Text, {
+                (0, a.jsx)(_.FireIcon, { size: 'xxs' }),
+                (0, a.jsx)(_.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-muted',
-                    children: F.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+                    children: k.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
                 })
             ]
         });
-function U(e) {
-    var a, r;
-    let { detectedGame: l, application: d, entries: p, viewId: g, trackAction: _ } = e,
-        [f, x] = i.useState(() => {
+function B(e) {
+    var n, s;
+    let { detectedGame: o, application: d, entries: E, viewId: m, trackAction: I } = e,
+        [A, p] = r.useState(() => {
             var e;
-            return null === (e = u.K.get(B)) || void 0 === e ? void 0 : e[d.id];
+            return null === (e = u.K.get(H)) || void 0 === e ? void 0 : e[d.id];
         }),
-        v = (0, P.p)('GameProfileModal'),
-        I = i.useMemo(() => (null == l ? void 0 : l.genres.map(A.P3).join(', ')), [l]),
-        j = i.useMemo(() => {
-            if (null == l) return '';
-            let { artwork: e, screenshots: a } = l;
+        f = (0, L.p)('GameProfileModal'),
+        T = r.useMemo(() => (null == o ? void 0 : o.genres.map(N.P3).join(', ')), [o]),
+        P = r.useMemo(() => {
+            if (null == o) return '';
+            let { artwork: e, screenshots: n } = o;
             if (e.length > 0) {
-                let a = Math.floor(Math.random() * (e.length - 1));
-                return e[a];
+                let n = Math.floor(Math.random() * (e.length - 1));
+                return e[n];
             }
-            if (a.length > 0) {
-                let e = Math.floor(Math.random() * (a.length - 1));
-                return a[e];
+            if (n.length > 0) {
+                let e = Math.floor(Math.random() * (n.length - 1));
+                return n[e];
             }
             return '';
-        }, [l]),
-        M = null == d ? void 0 : d.getIconURL(160, E.$k ? 'webp' : 'png'),
-        T = C.default.extractTimestamp(d.id),
-        N = null !== (a = l.coverImageUrl) && void 0 !== a ? a : M,
-        w = s()().diff(s()(T), 'days') <= H.G,
-        G = p.some((e) => (0, h.ig)(e) === c.o.GLOBAL),
-        O = null !== (r = l.name) && void 0 !== r ? r : null == d ? void 0 : d.name,
-        y = i.useCallback(
+        }, [o]),
+        C = null == d ? void 0 : d.getIconURL(160, O.$k ? 'webp' : 'png'),
+        M = R.default.extractTimestamp(d.id),
+        S = null !== (n = o.coverImageUrl) && void 0 !== n ? n : C,
+        G = l()().diff(l()(M), 'days') <= U.G,
+        Z = E.some((e) => (0, g.ig)(e) === c.o.GLOBAL),
+        b = null !== (s = o.name) && void 0 !== s ? s : null == d ? void 0 : d.name,
+        j = r.useCallback(
             () => () => {
                 var e;
-                let a = null !== (e = u.K.get(B)) && void 0 !== e ? e : {};
-                (a[d.id] = !a[d.id]),
-                    u.K.set(B, a),
-                    _(a[d.id] ? b.as.FollowGame : b.as.UnfollowGame),
-                    a[d.id] &&
-                        (0, S.L)() &&
-                        (0, m.openModalLazy)(async () => {
-                            let { default: e } = await n.e('86564').then(n.bind(n, 641758));
-                            return (a) =>
-                                (0, t.jsx)(e, {
-                                    ...a,
+                let n = null !== (e = u.K.get(H)) && void 0 !== e ? e : {};
+                (n[d.id] = !n[d.id]),
+                    u.K.set(H, n),
+                    I(n[d.id] ? h.as.FollowGame : h.as.UnfollowGame),
+                    n[d.id] &&
+                        (0, v.L)() &&
+                        (0, _.openModalLazy)(async () => {
+                            let { default: e } = await t.e('86564').then(t.bind(t, 641758));
+                            return (n) =>
+                                (0, a.jsx)(e, {
+                                    ...n,
                                     applicationId: d.id,
-                                    background: j,
-                                    viewId: g
+                                    background: P,
+                                    viewId: m
                                 });
                         }),
-                    x(a[d.id]);
+                    p(n[d.id]);
             },
-            [d.id, j, _, g]
+            [d.id, P, I, m]
         );
-    return (0, t.jsxs)(t.Fragment, {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, t.jsx)('div', {
-                className: o()(D.gameArtHero),
-                style: { backgroundImage: 'url("'.concat(j, '")') }
+            (0, a.jsx)('div', {
+                className: i()(F.gameArtHero),
+                style: { backgroundImage: 'url("'.concat(P, '")') }
             }),
-            (0, t.jsxs)('div', {
-                className: o()(D.content, D.column, D.gapLg, D.headerInfo),
+            (0, a.jsxs)('div', {
+                className: i()(F.content, F.column, F.gapLg, F.headerInfo),
                 children: [
-                    (0, t.jsxs)('div', {
-                        className: D.coverArtRow,
+                    (0, a.jsxs)('div', {
+                        className: F.coverArtRow,
                         children: [
-                            (0, t.jsx)('div', {
-                                className: D.logoWrapper,
+                            (0, a.jsx)('div', {
+                                className: F.logoWrapper,
                                 children:
-                                    null != N &&
-                                    (0, t.jsx)('img', {
-                                        className: D.logo,
-                                        src: N,
-                                        alt: F.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: O })
+                                    null != S &&
+                                    (0, a.jsx)('img', {
+                                        className: F.logo,
+                                        src: S,
+                                        alt: k.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: b })
                                     })
                             }),
-                            (0, t.jsx)(L.Z, {
+                            (0, a.jsx)(x.Z, {
                                 applicationId: d.id,
-                                viewId: g,
-                                className: D.overflowMenu
+                                viewId: m,
+                                className: F.overflowMenu
                             })
                         ]
                     }),
-                    (0, t.jsxs)('div', {
-                        className: o()(D.row, D.gapSm, D.gameDetails),
+                    (0, a.jsxs)('div', {
+                        className: i()(F.row, F.gapSm, F.gameDetails),
                         children: [
-                            (0, t.jsxs)('div', {
+                            (0, a.jsxs)('div', {
                                 children: [
-                                    (0, t.jsx)(m.Heading, {
+                                    (0, a.jsx)(_.Heading, {
                                         variant: 'heading-xl/bold',
-                                        children: O
+                                        children: b
                                     }),
-                                    (0, t.jsxs)('div', {
-                                        className: o()(D.row, D.gapSm),
+                                    (0, a.jsxs)('div', {
+                                        className: i()(F.row, F.gapSm),
                                         children: [
-                                            null != M &&
-                                                (0, t.jsx)('img', {
-                                                    src: M,
+                                            null != C &&
+                                                (0, a.jsx)('img', {
+                                                    src: C,
                                                     height: 16,
-                                                    alt: F.Z.Messages.GAME_PROFILE_GAME_ICON_ALT.format({ game: O })
+                                                    alt: k.Z.Messages.GAME_PROFILE_GAME_ICON_ALT.format({ game: b })
                                                 }),
-                                            (0, t.jsx)(m.Text, {
+                                            (0, a.jsx)(_.Text, {
                                                 variant: 'text-sm/semibold',
                                                 color: 'text-muted',
-                                                children: I
+                                                children: T
                                             }),
-                                            w &&
-                                                (0, t.jsx)(m.Text, {
-                                                    variant: 'eyebrow',
-                                                    className: D.newBadge,
-                                                    children: F.Z.Messages.NEW
-                                                }),
                                             G &&
-                                                (0, t.jsxs)(t.Fragment, {
+                                                (0, a.jsx)(_.Text, {
+                                                    variant: 'eyebrow',
+                                                    className: F.newBadge,
+                                                    children: k.Z.Messages.NEW
+                                                }),
+                                            Z &&
+                                                (0, a.jsxs)(a.Fragment, {
                                                     children: [
-                                                        (0, t.jsx)(m.Text, {
+                                                        (0, a.jsx)(_.Text, {
                                                             variant: 'text-sm/medium',
                                                             children: ' \xB7 '
                                                         }),
-                                                        (0, t.jsx)(W, {})
+                                                        (0, a.jsx)(K, {})
                                                     ]
                                                 })
                                         ]
                                     })
                                 ]
                             }),
-                            (0, t.jsx)('div', {
+                            (0, a.jsx)('div', {
                                 children:
-                                    v &&
-                                    (0, t.jsx)(m.Tooltip, {
-                                        text: f ? F.Z.Messages.GAME_PROFILE_UNFOLLOW_TOOLTIP : F.Z.Messages.GAME_PROFILE_FOLLOW_TOOLTIP,
+                                    f &&
+                                    (0, a.jsx)(_.Tooltip, {
+                                        text: A ? k.Z.Messages.GAME_PROFILE_UNFOLLOW_TOOLTIP : k.Z.Messages.GAME_PROFILE_FOLLOW_TOOLTIP,
                                         children: (e) =>
-                                            (0, t.jsxs)(m.Button, {
+                                            (0, a.jsxs)(_.Button, {
                                                 ...e,
-                                                innerClassName: D.followButton,
-                                                color: f ? m.Button.Colors.PRIMARY : m.Button.Colors.BRAND,
-                                                onClick: y,
-                                                children: [f ? (0, t.jsx)(m.BellSlashIcon, { color: 'white' }) : (0, t.jsx)(m.BellIcon, { color: 'white' }), f ? F.Z.Messages.GAME_PROFILE_UNFOLLOW_GAME : F.Z.Messages.FOLLOW]
+                                                innerClassName: F.followButton,
+                                                color: A ? _.Button.Colors.PRIMARY : _.Button.Colors.BRAND,
+                                                onClick: j,
+                                                children: [A ? (0, a.jsx)(_.BellSlashIcon, { color: 'white' }) : (0, a.jsx)(_.BellIcon, { color: 'white' }), A ? k.Z.Messages.GAME_PROFILE_UNFOLLOW_GAME : k.Z.Messages.FOLLOW]
                                             })
                                     })
                             })
@@ -196,174 +196,174 @@ function U(e) {
         ]
     });
 }
-function z(e) {
-    var a;
-    let { detectedGame: n, application: i, entries: r, officialGuildInvite: o, similarGames: l, similarGamesError: s, onClose: c, viewId: d, trackAction: u } = e;
-    return (0, t.jsxs)('div', {
-        className: D.sections,
+function Q(e) {
+    var n;
+    let { detectedGame: t, application: r, entries: s, officialGuildInvite: i, similarGames: o, similarGamesError: l, onClose: c, viewId: d, trackAction: u } = e;
+    return (0, a.jsxs)('div', {
+        className: F.sections,
         children: [
-            (0, t.jsx)(O.Z, {
-                entries: r,
+            (0, a.jsx)(b.Z, {
+                entries: s,
                 viewId: d,
-                officialGuildId: null == o ? void 0 : null === (a = o.guild) || void 0 === a ? void 0 : a.id,
+                officialGuildId: null == i ? void 0 : null === (n = i.guild) || void 0 === n ? void 0 : n.id,
                 onClose: c
             }),
-            (0, t.jsx)(G.Z, {
-                detectedGame: n,
+            (0, a.jsx)(Z.Z, {
+                detectedGame: t,
                 trackAction: u
             }),
-            (0, t.jsx)(R.Z, {
-                applicationId: i.id,
+            (0, a.jsx)(y.Z, {
+                applicationId: r.id,
                 onClose: c,
                 trackAction: u,
-                similarGames: l,
-                similarGamesError: s
+                similarGames: o,
+                similarGamesError: l
             })
         ]
     });
 }
-function Y(e) {
-    let { detectedGame: a, setOfficialGuildInvite: n, trackAction: i } = e;
-    return (0, t.jsxs)('div', {
-        className: o()(D.sidebar, D.column, D.gapLg),
+function W(e) {
+    let { detectedGame: n, setOfficialGuildInvite: t, trackAction: r } = e;
+    return (0, a.jsxs)('div', {
+        className: i()(F.sidebar, F.column, F.gapLg),
         children: [
-            (0, t.jsx)(m.Heading, {
+            (0, a.jsx)(_.Heading, {
                 variant: 'heading-md/bold',
-                children: F.Z.Messages.ABOUT
+                children: k.Z.Messages.ABOUT
             }),
-            (0, t.jsxs)('div', {
-                className: D.sections,
+            (0, a.jsxs)('div', {
+                className: F.sections,
                 children: [
-                    (0, t.jsx)(Z.Z, {
-                        detectedGame: a,
-                        trackAction: i
+                    (0, a.jsx)(w.Z, {
+                        detectedGame: n,
+                        trackAction: r
                     }),
-                    (0, t.jsx)(y.Z, {
-                        detectedGame: a,
-                        trackClick: i,
-                        onInviteResolved: n
+                    (0, a.jsx)(j.Z, {
+                        detectedGame: n,
+                        trackClick: r,
+                        onInviteResolved: t
                     }),
-                    (0, t.jsx)(w.Z, {
-                        detectedGame: a,
-                        trackClick: i
+                    (0, a.jsx)(G.Z, {
+                        detectedGame: n,
+                        trackClick: r
                     }),
-                    (0, t.jsx)(k.Z, { detectedGame: a })
+                    (0, a.jsx)(D.Z, { detectedGame: n })
                 ]
             })
         ]
     });
 }
-let K = (e) => e.filter(N.z6).slice(0, 5);
-a.default = (e) => {
-    let { applicationId: a, source: n, sourceUserId: r, transitionState: l, onClose: s } = e,
-        { clientThemesClassName: c } = (0, _.ZP)(),
-        u = (0, d.e7)([I.default], () => I.default.locale),
-        E = i.useMemo(() => (0, b.fP)(), []),
-        A = (0, d.Wu)([M.Z], () => {
+let Y = (e) => e.filter(S.z6).slice(0, 5);
+n.default = (e) => {
+    let { applicationId: n, source: t, sourceUserId: s, transitionState: o, onClose: l } = e,
+        { clientThemesClassName: c } = (0, I.ZP)(),
+        u = (0, d.e7)([T.default], () => T.default.locale),
+        O = r.useMemo(() => (0, h.fP)(), []),
+        N = (0, d.Wu)([C.Z], () => {
             var e;
-            return (null !== (e = M.Z.getSimilarGames(a)) && void 0 !== e ? e : []).slice(0, 25);
+            return (null !== (e = C.Z.getSimilarGames(n)) && void 0 !== e ? e : []).slice(0, 25);
         }),
-        [C, P] = i.useState(null),
-        { entries: N } = (0, T.Z)(),
-        S = i.useMemo(() => {
+        [R, L] = r.useState(null),
+        { entries: S } = (0, M.Z)(),
+        v = r.useMemo(() => {
             var e;
-            return null !== (e = null == N ? void 0 : N.filter((e) => (0, x.dX)(e) && e.extra.application_id === a)) && void 0 !== e ? e : [];
-        }, [N, a]),
-        [L, w] = i.useState(null),
-        G = (0, g.q)(a),
-        O = (0, d.e7)([v.Z], () => v.Z.getGame(a)),
-        y = (e, n) => {
-            var t;
-            (0, b.UE)({
+            return null !== (e = null == S ? void 0 : S.filter((e) => (0, p.dX)(e) && e.extra.application_id === n)) && void 0 !== e ? e : [];
+        }, [S, n]),
+        [x, G] = r.useState(null),
+        Z = (0, m.q)(n),
+        b = (0, d.e7)([f.Z], () => f.Z.getGame(n)),
+        j = (e, t) => {
+            var a;
+            (0, h.UE)({
                 gameName: null != name ? name : '',
-                applicationId: a,
+                applicationId: n,
                 action: e,
-                similarGameId: n,
-                viewId: E,
-                officialGuildId: null == L ? void 0 : null === (t = L.guild) || void 0 === t ? void 0 : t.id
+                similarGameId: t,
+                viewId: O,
+                officialGuildId: null == x ? void 0 : null === (a = x.guild) || void 0 === a ? void 0 : a.id
             });
         };
-    return (i.useEffect(() => {
-        var e, t;
-        (0, b.IS)({
-            source: n,
-            viewId: E,
-            applicationId: a,
-            gameName: null !== (t = null !== (e = null == O ? void 0 : O.name) && void 0 !== e ? e : null == G ? void 0 : G.name) && void 0 !== t ? t : '',
-            authorId: r
+    return (r.useEffect(() => {
+        var e, a;
+        (0, h.IS)({
+            source: t,
+            viewId: O,
+            applicationId: n,
+            gameName: null !== (a = null !== (e = null == b ? void 0 : b.name) && void 0 !== e ? e : null == Z ? void 0 : Z.name) && void 0 !== a ? a : '',
+            authorId: s
         });
     }, []),
-    i.useEffect(() => {
-        (0, f.Jn)();
+    r.useEffect(() => {
+        (0, A.Jn)();
     }, []),
-    i.useEffect(() => {
+    r.useEffect(() => {
         (async () => {
-            if (0 === A.length) {
-                P(null);
+            if (0 === N.length) {
+                L(null);
                 try {
-                    await (0, j.i)(a);
+                    await (0, P.i)(n);
                 } catch (e) {
-                    P(e);
+                    L(e);
                 }
             }
         })();
-    }, [a, A]),
-    (0, p.Z)(() => {
-        var e, n, t;
-        let i = Date.now(),
-            r = S.map((e) => {
-                let a = (0, h.kr)(e) ? (0, h.T_)(e, i) : (0, h.GL)(e, u);
+    }, [n, N]),
+    (0, E.Z)(() => {
+        var e, t, a;
+        let r = Date.now(),
+            s = v.map((e) => {
+                let n = (0, g.kr)(e) ? (0, g.T_)(e, r) : (0, g.GL)(e, u);
                 return JSON.stringify({
                     item_id: e.id,
                     trait: e.traits,
-                    time_played: a
+                    time_played: n
                 });
             });
-        (0, b.wz)({
-            viewId: E,
-            applicationId: a,
-            gameName: null !== (t = null !== (n = null == O ? void 0 : O.name) && void 0 !== n ? n : null == G ? void 0 : G.name) && void 0 !== t ? t : '',
-            playedFriendIds: S.map((e) => e.author_id),
-            playedFriendsData: r,
-            similarGames: K(A),
-            officialGuildId: null == L ? void 0 : null === (e = L.guild) || void 0 === e ? void 0 : e.id
+        (0, h.wz)({
+            viewId: O,
+            applicationId: n,
+            gameName: null !== (a = null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : null == Z ? void 0 : Z.name) && void 0 !== a ? a : '',
+            playedFriendIds: v.map((e) => e.author_id),
+            playedFriendsData: s,
+            similarGames: Y(N),
+            officialGuildId: null == x ? void 0 : null === (e = x.guild) || void 0 === e ? void 0 : e.id
         });
     }),
-    null == O || null == G)
+    null == b || null == Z)
         ? null
-        : (0, t.jsx)(m.ModalRoot, {
-              transitionState: l,
-              size: m.ModalSize.DYNAMIC,
-              className: o()(c, D.gameProfileModal),
-              children: (0, t.jsxs)(m.ScrollerNone, {
-                  className: D.scrollable,
+        : (0, a.jsx)(_.ModalRoot, {
+              transitionState: o,
+              size: _.ModalSize.DYNAMIC,
+              className: i()(c, F.gameProfileModal),
+              children: (0, a.jsxs)(_.ScrollerNone, {
+                  className: F.scrollable,
                   children: [
-                      (0, t.jsx)(U, {
-                          detectedGame: O,
-                          application: G,
-                          entries: S,
-                          viewId: E,
-                          trackAction: y
+                      (0, a.jsx)(B, {
+                          detectedGame: b,
+                          application: Z,
+                          entries: v,
+                          viewId: O,
+                          trackAction: j
                       }),
-                      (0, t.jsx)(m.HeadingLevel, {
-                          children: (0, t.jsxs)('div', {
-                              className: o()(D.content, D.mainContent),
+                      (0, a.jsx)(_.HeadingLevel, {
+                          children: (0, a.jsxs)('div', {
+                              className: i()(F.content, F.mainContent),
                               children: [
-                                  (0, t.jsx)(z, {
-                                      detectedGame: O,
-                                      application: G,
-                                      entries: S,
-                                      officialGuildInvite: L,
-                                      similarGames: A,
-                                      similarGamesError: C,
-                                      onClose: s,
-                                      viewId: E,
-                                      trackAction: y
+                                  (0, a.jsx)(Q, {
+                                      detectedGame: b,
+                                      application: Z,
+                                      entries: v,
+                                      officialGuildInvite: x,
+                                      similarGames: N,
+                                      similarGamesError: R,
+                                      onClose: l,
+                                      viewId: O,
+                                      trackAction: j
                                   }),
-                                  (0, t.jsx)(Y, {
-                                      detectedGame: O,
-                                      setOfficialGuildInvite: w,
-                                      trackAction: y
+                                  (0, a.jsx)(W, {
+                                      detectedGame: b,
+                                      setOfficialGuildInvite: G,
+                                      trackAction: j
                                   })
                               ]
                           })

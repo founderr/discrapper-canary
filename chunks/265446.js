@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
-});
-var r = n(47120);
-var i = n(53529),
-    a = n(436660),
-    o = n(887490);
+}),
+    n(47120);
+var r = n(53529),
+    i = n(436660),
+    a = n(887490);
 let s = ['applicationCommand'];
-function l(e) {
+function o(e) {
     let { insertBreak: t, insertText: n } = e;
     return (
         (e.insertBreak = () => {
-            u(e) && t();
+            l(e) && t();
         }),
         (e.insertSoftBreak = () => {
             e.insertBreak();
@@ -22,20 +22,20 @@ function l(e) {
                 n(t);
                 return;
             }
-            let r = t.split(/\r\n|\r|\n/);
-            if (!u(e)) {
-                n(r.join(' '));
+            let a = t.split(/\r\n|\r|\n/);
+            if (!l(e)) {
+                n(a.join(' '));
                 return;
             }
-            i.T.withSingleEntry(e, () => {
+            r.T.withSingleEntry(e, () => {
                 let t = !1;
-                for (let i of r) t && a.Q.splitNodes(e, { always: !0 }), n(i), (t = !0);
+                for (let r of a) t && i.Q.splitNodes(e, { always: !0 }), n(r), (t = !0);
             });
         }),
         e
     );
 }
-function u(e) {
-    let t = o.bN.getCurrentBlock(e);
+function l(e) {
+    let t = a.bN.getCurrentBlock(e);
     return null != t && !s.includes(t[0].type);
 }

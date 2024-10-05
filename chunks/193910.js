@@ -15,8 +15,8 @@ var i = n(735250),
     u = n(566620),
     d = n(403404),
     h = n(906732),
-    m = n(605236),
-    p = n(706140),
+    p = n(605236),
+    m = n(706140),
     _ = n(243778),
     f = n(488131),
     E = n(375954),
@@ -52,11 +52,11 @@ function L() {
     let e = (0, l.e7)([E.Z], () => E.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
-    let [n] = (0, p.cv)(t);
+    let [n] = (0, m.cv)(t);
     return (
         s.useEffect(
             () => () => {
-                n === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, m.EW)(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: N.L.TAKE_ACTION });
+                n === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: N.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -75,7 +75,7 @@ function L() {
     );
 }
 function j(e) {
-    let { channel: t, options: l, onFileUpload: c, onClose: p, onSelect: _, draftType: E, editorTextContent: j, setValue: P, openClips: O } = e,
+    let { channel: t, options: l, onFileUpload: c, onClose: m, onSelect: _, draftType: E, editorTextContent: j, setValue: P, openClips: O } = e,
         { analyticsLocations: y } = (0, h.ZP)();
     s.useEffect(() => {
         g.default.track(v.rMx.OPEN_POPOUT, {
@@ -94,7 +94,7 @@ function j(e) {
         O();
     }
     function w() {
-        (0, m.EW)(r.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.L.TAKE_ACTION }),
+        (0, p.EW)(r.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.L.TAKE_ACTION }),
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
@@ -138,7 +138,7 @@ function j(e) {
     return (0, i.jsx)(o.Menu, {
         onSelect: _,
         navId: 'channel-attach',
-        onClose: p,
+        onClose: m,
         'aria-label': Z.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
         className: M.menu,
         children: l.map(function (e) {

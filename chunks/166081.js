@@ -3,16 +3,16 @@ n.d(t, {
         return s;
     }
 });
-var r = n(470079),
-    i = n(695346),
-    a = n(73346),
+var a = n(470079),
+    r = n(695346),
+    i = n(73346),
     o = n(834431);
 function s(e, t) {
     let { shouldAnimate: n = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        s = i.QK.useSetting(),
+        s = r.QK.useSetting(),
         l = (0, o.n)(),
-        u = n && l && s;
-    return r.useMemo(() => {
-        if ((null == e ? void 0 : e.image_asset) != null) return (0, a._W)(e.application_id, e.image_asset, t, u ? void 0 : 'webp');
-    }, [t, e, u]);
+        c = n && l && s;
+    return a.useMemo(() => {
+        if ((null == e ? void 0 : e.image_asset) != null) return (0, i._W)(e.application_id, e.image_asset, t, c ? void 0 : 'webp');
+    }, [t, e, c]);
 }

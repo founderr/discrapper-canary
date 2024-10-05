@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(e, {
     V: function () {
         return d;
     },
@@ -6,40 +6,40 @@ n.d(t, {
         return c;
     }
 });
-var r = n(735250);
-n(470079);
-var i = n(628028),
-    a = n(220427),
-    o = n(777207),
-    s = n(692547),
-    l = n(330711),
-    u = n(350727);
-function c(e) {
-    let { type: t } = e;
-    return (0, r.jsx)(d, {
+var l = t(735250);
+t(470079);
+var i = t(628028),
+    r = t(220427),
+    a = t(777207),
+    o = t(692547),
+    s = t(330711),
+    u = t(350727);
+function c(n) {
+    let { type: e } = n;
+    return (0, l.jsx)(d, {
         icon:
-            'user' === t
-                ? (0, r.jsx)(a.t, {
+            'user' === e
+                ? (0, l.jsx)(r.t, {
                       size: 'xxs',
-                      color: s.Z.colors.INTERACTIVE_NORMAL
+                      color: o.Z.colors.INTERACTIVE_NORMAL
                   })
-                : (0, r.jsx)(i.Q, {
+                : (0, l.jsx)(i.Q, {
                       size: 'xxs',
-                      color: s.Z.colors.INTERACTIVE_NORMAL
+                      color: o.Z.colors.INTERACTIVE_NORMAL
                   }),
-        text: 'user' === t ? l.Z.Messages.Storefront.USER_SUBSCRIPTION : l.Z.Messages.Storefront.SERVER_SUBSCRIPTION
+        text: 'user' === e ? s.Z.Messages.Storefront.USER_SUBSCRIPTION : s.Z.Messages.Storefront.SERVER_SUBSCRIPTION
     });
 }
-function d(e) {
-    let { icon: t, text: n } = e;
-    return (0, r.jsxs)('div', {
+function d(n) {
+    let { icon: e, text: t } = n;
+    return (0, l.jsxs)('div', {
         className: u.container,
         children: [
-            t,
-            (0, r.jsx)(o.x, {
+            e,
+            (0, l.jsx)(a.x, {
                 color: 'header-primary',
                 variant: 'text-sm/medium',
-                children: n
+                children: t
             })
         ]
     });

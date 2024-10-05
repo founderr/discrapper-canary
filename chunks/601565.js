@@ -1,43 +1,43 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return r;
+        return i;
     }
 }),
-    t(47120);
-var l = t(470079),
-    s = t(77866),
-    a = t(212819);
-function r(e) {
-    let { searchOptions: n } = e,
-        [t, r] = l.useState({
+    n(47120);
+var l = n(470079),
+    a = n(77866),
+    s = n(212819);
+function i(e) {
+    let { searchOptions: t } = e,
+        [n, i] = l.useState({
             results: [],
             query: ''
         }),
-        i = (0, s.Z)(() => {
-            let e = new a.ZP((e, n) => {
-                r({
+        r = (0, a.Z)(() => {
+            let e = new s.ZP((e, t) => {
+                i({
                     results: e,
-                    query: n
+                    query: t
                 });
             });
             return e.setLimit(20), e.search(''), e;
         });
     return (
-        l.useEffect(() => () => i.destroy(), [i]),
+        l.useEffect(() => () => r.destroy(), [r]),
         l.useEffect(() => {
-            null != n && n !== i.options && i.setOptions(n);
-        }, [i, n]),
+            null != t && t !== r.options && r.setOptions(t);
+        }, [r, t]),
         {
             search: l.useCallback(
                 (e) => {
-                    var n, t;
-                    let { query: l, resultTypes: s } = e;
-                    if (null == i.resultTypes || ((n = s), (t = i.resultTypes), !(n.length === t.size && n.every((e) => t.has(e))))) i.setResultTypes(s), i.setLimit(1 === s.length ? 50 : 20);
-                    i.search('' === l.trim() ? '' : l);
+                    var t, n;
+                    let { query: l, resultTypes: a } = e;
+                    if (null == r.resultTypes || ((t = a), (n = r.resultTypes), !(t.length === n.size && t.every((e) => n.has(e))))) r.setResultTypes(a), r.setLimit(1 === a.length ? 50 : 20);
+                    r.search('' === l.trim() ? '' : l);
                 },
-                [i]
+                [r]
             ),
-            ...t
+            ...n
         }
     );
 }

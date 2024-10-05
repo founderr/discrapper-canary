@@ -1,69 +1,69 @@
-n.d(a, {
+t.d(n, {
     Z: function () {
         return c;
     }
 });
-var t = n(735250);
-n(470079);
-var i = n(481060),
-    r = n(239091),
-    o = n(299206),
-    l = n(326103),
-    s = n(689938);
+var a = t(735250);
+t(470079);
+var r = t(481060),
+    s = t(239091),
+    i = t(299206),
+    o = t(326103),
+    l = t(689938);
 function c(e) {
-    let { applicationId: a, className: c, viewId: d } = e,
-        u = (0, l.v)('GameProfileOverflowMenu'),
-        m = (0, o.Z)({
-            id: a,
-            label: s.Z.Messages.COPY_ID_APPLICATION
+    let { applicationId: n, className: c, viewId: d } = e,
+        u = (0, o.v)('GameProfileOverflowMenu'),
+        _ = (0, i.Z)({
+            id: n,
+            label: l.Z.Messages.COPY_ID_APPLICATION
         }),
-        p = u
-            ? (0, t.jsx)(i.MenuItem, {
+        E = u
+            ? (0, a.jsx)(r.MenuItem, {
                   id: 'game-profile-something-wrong',
-                  label: s.Z.Messages.GAME_PROFILE_SOMETHING_WENT_WRONG,
+                  label: l.Z.Messages.GAME_PROFILE_SOMETHING_WENT_WRONG,
                   action: () =>
-                      (0, i.openModalLazy)(async () => {
-                          let { GameProfileFeedbackModal: e } = await n.e('1011').then(n.bind(n, 943350));
-                          return (n) =>
-                              (0, t.jsx)(e, {
-                                  applicationId: a,
+                      (0, r.openModalLazy)(async () => {
+                          let e = (await t.e('46923').then(t.bind(t, 55396))).default;
+                          return (t) =>
+                              (0, a.jsx)(e, {
+                                  applicationId: n,
                                   viewId: d,
-                                  ...n
+                                  ...t
                               });
                       })
               })
             : null;
-    return null == m && null == p
+    return null == _ && null == E
         ? null
-        : (0, t.jsx)(i.Popout, {
+        : (0, a.jsx)(r.Popout, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
-                  let { closePopout: a } = e;
-                  return (0, t.jsx)(i.Menu, {
+                  let { closePopout: n } = e;
+                  return (0, a.jsx)(r.Menu, {
                       navId: 'game-profile-context',
                       onClose: () => {
-                          (0, r.Zy)(), a();
+                          (0, s.Zy)(), n();
                       },
-                      'aria-label': s.Z.Messages.GAME_PROFILE_VIEW_MORE,
+                      'aria-label': l.Z.Messages.GAME_PROFILE_VIEW_MORE,
                       onSelect: () => {},
-                      children: (0, t.jsxs)(t.Fragment, {
-                          children: [(0, t.jsx)(i.MenuGroup, { children: m }), (0, t.jsx)(i.MenuGroup, { children: p })]
+                      children: (0, a.jsxs)(a.Fragment, {
+                          children: [(0, a.jsx)(r.MenuGroup, { children: _ }), (0, a.jsx)(r.MenuGroup, { children: E })]
                       })
                   });
               },
               children: (e) =>
-                  (0, t.jsx)(i.Tooltip, {
-                      text: s.Z.Messages.MORE,
-                      children: (a) =>
-                          (0, t.jsx)(i.Clickable, {
+                  (0, a.jsx)(r.Tooltip, {
+                      text: l.Z.Messages.MORE,
+                      children: (n) =>
+                          (0, a.jsx)(r.Clickable, {
                               className: c,
-                              ...a,
+                              ...n,
                               ...e,
-                              children: (0, t.jsx)(i.MoreHorizontalIcon, {
+                              children: (0, a.jsx)(r.MoreHorizontalIcon, {
                                   size: 'xs',
-                                  color: i.tokens.colors.WHITE
+                                  color: r.tokens.colors.WHITE
                               })
                           })
                   })

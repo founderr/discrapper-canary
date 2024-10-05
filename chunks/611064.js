@@ -13,8 +13,8 @@ var i = n(735250),
     u = n(71585),
     d = n(703180),
     h = n(809017),
-    m = n(981631),
-    p = n(689938),
+    p = n(981631),
+    m = n(689938),
     _ = n(802444),
     f = n(204394);
 function E(e) {
@@ -34,14 +34,14 @@ t.Z = s.memo(function (e) {
         className: f.membersGroup,
         children: [
             (0, i.jsx)(l.HiddenVisually, {
-                children: p.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+                children: m.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                     title: h,
                     count: C
                 })
             }),
             (0, i.jsxs)(l.Clickable, {
                 onClick: (e) => {
-                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return I ? (0, c.lY)() : C > 3 ? E() : (0, m.dG4)();
+                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return I ? (0, c.lY)() : C > 3 ? E() : (0, p.dG4)();
                 },
                 onContextMenu: T,
                 tag: 'span',

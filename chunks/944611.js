@@ -1,10 +1,4 @@
-n.d(t, {
-    w: function () {
-        return a;
-    }
-});
-var r = n(653041);
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +11,13 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+n.d(t, {
+    w: function () {
+        return i;
+    }
+}),
+    n(653041);
+class i {
     getElement() {
         return 0 === this._elements.length ? this._createElement() : this._elements.pop();
     }
@@ -28,6 +28,6 @@ class a {
         this._elements.length = 0;
     }
     constructor(e, t) {
-        i(this, '_elements', void 0), i(this, '_createElement', void 0), i(this, '_cleanElement', void 0), (this._elements = []), (this._createElement = e), (this._cleanElement = t);
+        r(this, '_elements', void 0), r(this, '_createElement', void 0), r(this, '_cleanElement', void 0), (this._elements = []), (this._createElement = e), (this._cleanElement = t);
     }
 }

@@ -1,83 +1,83 @@
-var r = n(47120);
-var i = n(544891),
-    a = n(780384),
-    o = n(570140),
+n(47120);
+var r = n(544891),
+    i = n(780384),
+    a = n(570140),
     s = n(802098),
-    l = n(702321),
-    u = n(408987),
-    c = n(57132),
-    d = n(895886),
-    _ = n(703656),
-    E = n(359110),
-    f = n(131704),
-    h = n(592125),
-    p = n(306680),
-    m = n(626135),
+    o = n(702321),
+    l = n(408987),
+    u = n(57132),
+    c = n(895886),
+    d = n(703656),
+    _ = n(359110),
+    E = n(131704),
+    f = n(592125),
+    h = n(306680),
+    p = n(626135),
     I = n(73346),
-    T = n(26151),
-    g = n(287734),
+    m = n(26151),
+    T = n(287734),
     S = n(981631),
-    A = n(689938);
+    g = n(689938);
 t.Z = {
     async openPrivateChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = arguments.length > 3 ? arguments[3] : void 0,
+            i = arguments.length > 3 ? arguments[3] : void 0,
             a = arguments.length > 4 ? arguments[4] : void 0,
-            o = this._getRecipients(e),
-            s = (e) => {
-                t && T.Z.call(e.id, n, !0, e.isDM() ? e.getRecipientId() : null);
+            s = this._getRecipients(e),
+            o = (e) => {
+                t && m.Z.call(e.id, n, !0, e.isDM() ? e.getRecipientId() : null);
             };
-        if (1 === o.length) {
-            let [e] = o,
+        if (1 === s.length) {
+            let [e] = s,
                 t = this._openCachedDMChannel(e, a);
-            if (null != t) return s(t), Promise.resolve(t.id);
+            if (null != t) return o(t), Promise.resolve(t.id);
         }
         try {
-            let e = await i.tn.post({
+            let e = await r.tn.post({
                 url: S.ANM.USER_CHANNELS,
-                body: { recipients: o },
-                context: { location: r },
+                body: { recipients: s },
+                context: { location: i },
                 oldFormErrors: !0
             });
             null == a || a();
             let t = this._openPrivateChannel(e.body);
-            return s(t), e.body.id;
+            return o(t), e.body.id;
         } catch (e) {
             var l;
-            throw ((null == e ? void 0 : null === (l = e.body) || void 0 === l ? void 0 : l.code) === S.evJ.QUARANTINED && (0, d.default)(), e);
+            throw ((null == e ? void 0 : null === (l = e.body) || void 0 === l ? void 0 : l.code) === S.evJ.QUARANTINED && (0, c.default)(), e);
         }
     },
     _openCachedDMChannel(e, t) {
-        let n = h.Z.getDMFromUserId(e),
-            r = null != n ? h.Z.getChannel(n) : null;
-        return null == r ? null : (null == t || t(), null != (0, c.PP)() ? (0, E.Kh)(r.id, { navigationReplace: !0 }) : g.default.selectPrivateChannel(r.id), r);
+        let n = f.Z.getDMFromUserId(e),
+            r = null != n ? f.Z.getChannel(n) : null;
+        return null == r ? null : (null == t || t(), null != (0, u.PP)() ? (0, _.Kh)(r.id, { navigationReplace: !0 }) : T.default.selectPrivateChannel(r.id), r);
     },
     async ensurePrivateChannel(e) {
         let t = this._getRecipients(e),
-            n = await i.tn.post({
+            n = await r.tn.post({
                 url: S.ANM.USER_CHANNELS,
                 body: { recipients: t },
                 oldFormErrors: !0
             }),
-            r = (0, f.q_)(n.body);
+            i = (0, E.q_)(n.body);
         return (
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: 'CHANNEL_CREATE',
-                channel: r
+                channel: i
             }),
-            r.id
+            i.id
         );
     },
     async getOrEnsurePrivateChannel(e) {
-        let t = h.Z.getDMFromUserId(e);
+        let t = f.Z.getDMFromUserId(e);
         return null != t ? t : await this.ensurePrivateChannel(e);
     },
     async getDMChannel(e) {
-        let t = await i.tn.get(S.ANM.DM_CHANNEL(e)),
-            n = (0, f.q_)(t.body);
+        let t = await r.tn.get(S.ANM.DM_CHANNEL(e)),
+            n = (0, E.q_)(t.body);
         return (
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: 'CHANNEL_CREATE',
                 channel: n
             }),
@@ -86,13 +86,13 @@ t.Z = {
     },
     _getRecipients: (e) => (null != e ? (Array.isArray(e) ? e : [e]) : []),
     _openPrivateChannel(e) {
-        let t = (0, f.q_)(e);
+        let t = (0, E.q_)(e);
         return (
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: 'CHANNEL_CREATE',
                 channel: t
             }),
-            null != (0, c.PP)() ? (0, E.Kh)(t.id, { navigationReplace: !0 }) : g.default.selectPrivateChannel(t.id),
+            null != (0, u.PP)() ? (0, _.Kh)(t.id, { navigationReplace: !0 }) : T.default.selectPrivateChannel(t.id),
             t
         );
     },
@@ -100,12 +100,12 @@ t.Z = {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return (
-            (0, l.Z)(e) &&
-                m.default.track(S.rMx.CHANGE_LOG_DM_REMOVED, {
+            (0, o.Z)(e) &&
+                p.default.track(S.rMx.CHANGE_LOG_DM_REMOVED, {
                     last_changelog_id: s.Z.latestChangelogId(),
-                    unread_count: p.ZP.getUnreadCount(e)
+                    unread_count: h.ZP.getUnreadCount(e)
                 }),
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: 'CHANNEL_DELETE',
                 channel: {
                     id: e,
@@ -114,69 +114,69 @@ t.Z = {
                 },
                 silent: n
             }),
-            t && !__OVERLAY__ && (0, _.uL)(S.Z5c.FRIENDS),
-            i.tn
+            t && !__OVERLAY__ && (0, d.uL)(S.Z5c.FRIENDS),
+            r.tn
                 .del({
                     url: S.ANM.CHANNEL(e),
                     query: { silent: n },
                     oldFormErrors: !0
                 })
                 .then(() => {
-                    a.uv.announce(A.Z.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED);
+                    i.uv.announce(g.Z.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED);
                 })
                 .catch(() => {
-                    a.uv.announce(A.Z.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED_FAILED);
+                    i.uv.announce(g.Z.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED_FAILED);
                 })
         );
     },
     updatePermissionOverwrite: (e, t) =>
-        i.tn.put({
+        r.tn.put({
             url: S.ANM.CHANNEL_PERMISSIONS_OVERWRITE(e, t.id),
             body: t,
             oldFormErrors: !0
         }),
     clearPermissionOverwrite: (e, t) =>
-        i.tn.del({
+        r.tn.del({
             url: S.ANM.CHANNEL_PERMISSIONS_OVERWRITE(e, t),
             oldFormErrors: !0
         }),
-    addRecipient(e, t, n, r) {
-        return i.tn
+    addRecipient(e, t, n, a) {
+        return r.tn
             .put({
                 url: S.ANM.CHANNEL_RECIPIENT(e, t),
                 context: { location: n },
                 oldFormErrors: !0
             })
-            .then((t) => ((a.uv.announce(A.Z.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == r || r(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e))
-            .catch(() => (a.uv.announce(A.Z.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM_FAILED), e));
+            .then((t) => ((i.uv.announce(g.Z.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e))
+            .catch(() => (i.uv.announce(g.Z.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM_FAILED), e));
     },
     addRecipients(e, t, n, r) {
         return this.addRecipient(e, t[0], n, r).then((e) => Promise.all(t.slice(1).map((t) => this.addRecipient(e, t, n))).then(() => e));
     },
     removeRecipient: (e, t) =>
-        i.tn.del({
+        r.tn.del({
             url: S.ANM.CHANNEL_RECIPIENT(e, t),
             oldFormErrors: !0
         }),
     setDMOwner: (e, t) =>
-        i.tn.patch({
+        r.tn.patch({
             url: S.ANM.CHANNEL(e),
             body: { owner: t },
             oldFormErrors: !0
         }),
     async setName(e, t) {
-        let n = h.Z.getChannel(e),
-            r = await i.tn.patch({
+        let n = f.Z.getChannel(e),
+            i = await r.tn.patch({
                 url: S.ANM.CHANNEL(e),
                 body: { name: t },
                 oldFormErrors: !0
             }),
             a = null == n ? void 0 : n.getGuildId();
-        return null != a && !(null == n ? void 0 : n.isThread()) && u.Z.checkGuildTemplateDirty(a), r;
+        return null != a && !(null == n ? void 0 : n.isThread()) && l.Z.checkGuildTemplateDirty(a), i;
     },
     setIcon(e, t) {
-        let n = h.Z.getChannel(e);
-        i.tn
+        let n = f.Z.getChannel(e);
+        r.tn
             .patch({
                 url: S.ANM.CHANNEL(e),
                 body: { icon: t },
@@ -184,16 +184,16 @@ t.Z = {
             })
             .then(() => {
                 let e = null == n ? void 0 : n.getGuildId();
-                null != e && !(null == n ? void 0 : n.isThread()) && u.Z.checkGuildTemplateDirty(e);
+                null != e && !(null == n ? void 0 : n.isThread()) && l.Z.checkGuildTemplateDirty(e);
             });
     },
     convertToGuild: (e) =>
-        i.tn.post({
+        r.tn.post({
             url: S.ANM.CHANNEL_CONVERT(e),
             oldFormErrors: !0
         }),
     preload(e, t) {
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'CHANNEL_PRELOAD',
             guildId: e === S.ME ? null : e,
             channelId: t,
@@ -203,26 +203,26 @@ t.Z = {
     fetchChannelStoreListing(e, t) {
         let n = null != t ? S.ANM.CHANNEL_STORE_LISTING_SKU(e, t) : S.ANM.CHANNEL_STORE_LISTING(e);
         return (0, I.Kb)(n).then((t) => {
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: 'STORE_LISTING_FETCH_SUCCESS',
                 channelId: e,
                 storeListing: t.body
             });
         });
     },
-    async createTextChannel(e, t, n, r) {
+    async createTextChannel(e, t, n, i) {
         let a = {
             type: S.d4z.GUILD_TEXT,
             name: t,
             permission_overwrites: []
         };
-        null != n && (a.parent_id = n), null != r && (a.topic = r);
-        let o = await i.tn.post({
+        null != n && (a.parent_id = n), null != i && (a.topic = i);
+        let s = await r.tn.post({
             url: S.ANM.GUILD_CHANNELS(e),
             body: a,
             oldFormErrors: !0
         });
-        return u.Z.checkGuildTemplateDirty(e), o;
+        return l.Z.checkGuildTemplateDirty(e), s;
     },
-    fetchChannel: async (e) => (await i.tn.get(S.ANM.CHANNEL(e))).body
+    fetchChannel: async (e) => (await r.tn.get(S.ANM.CHANNEL(e))).body
 };

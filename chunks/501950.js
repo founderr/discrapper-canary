@@ -1,67 +1,67 @@
 n.d(t, {
     C1: function () {
-        return u;
+        return o;
     },
     HS: function () {
-        return d;
+        return u;
     },
     Hg: function () {
-        return c;
+        return l;
     },
     l0: function () {
-        return _;
+        return c;
     }
-});
-var r = n(757143);
-var i = n(733860);
-var a = n(264344),
-    o = n.n(a),
-    s = n(992774),
-    l = n(149396);
-function u(e, t) {
+}),
+    n(757143),
+    n(733860);
+var r = n(264344),
+    i = n.n(r),
+    a = n(992774),
+    s = n(149396);
+function o(e, t) {
     var n;
     let r = !1,
-        i = t.map((t, n) => {
-            let { guid: i, guid: a, name: o, name: s, index: u } = t;
+        a = t.map((t, n) => {
+            let { guid: i, guid: a, name: o, name: l, index: u } = t;
             return (
-                /^default/.test(o) ? ((r = !0), (i = l.w5), (o = o.replace('default', 'Default'))) : (i = null != i && '' !== i ? i : o),
+                /^default/.test(o) ? ((r = !0), (i = s.w5), (o = o.replace('default', 'Default'))) : (i = null != i && '' !== i ? i : o),
                 null != u && (n = u),
                 {
                     id: i,
                     type: e,
                     index: n,
                     name: o,
-                    originalName: s,
+                    originalName: l,
                     originalId: a
                 }
             );
         });
     return (
-        e !== l.h7.VIDEO_INPUT &&
+        e !== s.h7.VIDEO_INPUT &&
             !r &&
-            (null === o() || void 0 === o() ? void 0 : null === (n = o().os) || void 0 === n ? void 0 : n.family) != null &&
-            /^win/i.test(o().os.family) &&
-            i.unshift({
-                id: l.w5,
+            (null === i() || void 0 === i() ? void 0 : null === (n = i().os) || void 0 === n ? void 0 : n.family) != null &&
+            /^win/i.test(i().os.family) &&
+            a.unshift({
+                id: s.w5,
                 type: e,
                 index: -1,
                 name: 'Default'
             }),
-        i
+        a
     );
+}
+function l() {
+    return new Promise((e) => {
+        (0, a.zS)().getInputDevices((t) => e(o(s.h7.AUDIO_INPUT, t)));
+    });
+}
+function u() {
+    return new Promise((e) => {
+        (0, a.zS)().getOutputDevices((t) => e(o(s.h7.AUDIO_OUTPUT, t)));
+    });
 }
 function c() {
     return new Promise((e) => {
-        (0, s.zS)().getInputDevices((t) => e(u(l.h7.AUDIO_INPUT, t)));
-    });
-}
-function d() {
-    return new Promise((e) => {
-        (0, s.zS)().getOutputDevices((t) => e(u(l.h7.AUDIO_OUTPUT, t)));
-    });
-}
-function _() {
-    return new Promise((e) => {
-        (0, s.zS)().getVideoInputDevices((t) => e(u(l.h7.VIDEO_INPUT, t)));
+        (0, a.zS)().getVideoInputDevices((t) => e(o(s.h7.VIDEO_INPUT, t)));
     });
 }

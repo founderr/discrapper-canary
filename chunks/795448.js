@@ -1,6 +1,6 @@
 n.d(t, {
     Gk: function () {
-        return o;
+        return s;
     },
     PV: function () {
         return a;
@@ -19,6 +19,6 @@ function a(e) {
         recipientUserId: e
     });
 }
-function o() {
+function s() {
     r.Z.dispatch({ type: 'FRIENDS_TAB_BADGE_DISMISS' });
 }

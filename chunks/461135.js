@@ -1,31 +1,31 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(739566),
-    o = n(834129),
-    s = n(689938),
-    l = n(437814);
-function u(e) {
-    let { message: t, compact: n, usernameHook: u } = e,
-        c = (0, a.ZP)(t),
-        d = u(c),
-        _ = s.Z.Messages.SYSTEM_MESSAGE_STAGE_TOPIC_HOOK.format({
-            username: c.nick,
-            usernameHook: d,
+var a = n(481060),
+    s = n(739566),
+    l = n(834129),
+    r = n(689938),
+    o = n(437814);
+function c(e) {
+    let { message: t, compact: n, usernameHook: c } = e,
+        d = (0, s.ZP)(t),
+        u = c(d),
+        _ = r.Z.Messages.SYSTEM_MESSAGE_STAGE_TOPIC_HOOK.format({
+            username: d.nick,
+            usernameHook: u,
             topic: t.content
         });
-    return (0, r.jsx)(o.Z, {
-        className: l.stageSystemMessage,
-        iconNode: (0, r.jsx)(i.StageIcon, {
+    return (0, i.jsx)(l.Z, {
+        className: o.stageSystemMessage,
+        iconNode: (0, i.jsx)(a.StageIcon, {
             size: 'md',
             color: 'currentColor'
         }),
-        iconContainerClassName: l.iconContainer,
+        iconContainerClassName: o.iconContainer,
         timestamp: t.timestamp,
         compact: n,
         children: _

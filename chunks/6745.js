@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(507274),
+    s = n.n(a),
+    o = n(507274),
     l = n(838331),
     u = n(965793);
 function c(e) {
@@ -18,8 +18,8 @@ function c(e) {
             },
             [c, d, f]
         );
-    return (0, r.jsx)(s.V, {
-        className: o()(u.container, E, { [u.scroller]: _ }),
+    return (0, r.jsx)(o.V, {
+        className: s()(u.container, E, { [u.scroller]: _ }),
         children: (0, r.jsx)(l.hQ, {
             ...h,
             showScrollbar: _,

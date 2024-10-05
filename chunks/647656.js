@@ -86,12 +86,12 @@ t.Z = {
             let p = i.transport === E.He.POST_MESSAGE,
                 g = (0, u.S5)(_, p);
             g > 0 && (_.flags = g), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
-            let { assets: T, party: f, secrets: S, timestamps: C, buttons: N, type: A } = _;
-            if ((null == A && (_.type = h.IIU.PLAYING), null != S)) {
+            let { assets: T, party: S, secrets: f, timestamps: C, buttons: N, type: A } = _;
+            if ((null == A && (_.type = h.IIU.PLAYING), null != f)) {
                 let e = a()
-                    .values(S)
+                    .values(f)
                     .filter((e) => !!e);
-                if (null != f && a().intersection(e, [f.id]).length > 0 && !m.includes(i.application.id)) throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
+                if (null != S && a().intersection(e, [S.id]).length > 0 && !m.includes(i.application.id)) throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
                 if (a().uniq(e).length < e.length) throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets must be unique');
                 if (null != N) throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
             }

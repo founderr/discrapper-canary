@@ -1,10 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
-var r = n(653041);
-function i(e, t) {
+function r(e, t) {
     if (e.length < 2) return [];
     let n = [],
         r = e[0];
@@ -14,3 +8,9 @@ function i(e, t) {
     }
     return n;
 }
+n.d(t, {
+    Z: function () {
+        return r;
+    }
+}),
+    n(653041);

@@ -16,8 +16,8 @@ var i = n(735250),
     u = n(904245),
     d = n(603263),
     h = n(963374),
-    m = n(607070),
-    p = n(933557),
+    p = n(607070),
+    m = n(933557),
     _ = n(471445),
     f = n(95398),
     E = n(905405),
@@ -41,7 +41,7 @@ var i = n(735250),
     y = n(652553);
 function D(e) {
     var t;
-    let { search: n, searchId: a, renderEmbeds: l, scrollTo: p, searchResults: _, blockCount: f, onChangePage: E } = e,
+    let { search: n, searchId: a, renderEmbeds: l, scrollTo: m, searchResults: _, blockCount: f, onChangePage: E } = e,
         { offset: g, totalResults: C, isSearching: T, showBlockedResults: x } = n,
         S = s.useCallback(
             (e) => {
@@ -93,17 +93,17 @@ function D(e) {
         R = A.reduce((e, t) => e + 1 + t.results.length, 0),
         j = s.useCallback(
             (e, t) => {
-                if (!m.Z.keyboardModeEnabled) return;
+                if (!p.Z.keyboardModeEnabled) return;
                 let n = b.current,
                     i = null != t ? n[t] : void 0;
                 if (null == i || null == i.hitRef.current) return;
                 let s = i.hitRef.current.getClientRects()[0];
-                p(s.top - 0.5 * s.height, !1, () => {
+                m(s.top - 0.5 * s.height, !1, () => {
                     var t;
                     null === (t = document.getElementById(e)) || void 0 === t || t.focus();
                 });
             },
-            [p]
+            [m]
         ),
         D = s.useCallback((e) => {
             let t = b.current[e];
@@ -130,7 +130,7 @@ function D(e) {
                     startIndex: s,
                     resultRefs: b,
                     totalResults: C,
-                    scrollTo: p,
+                    scrollTo: m,
                     searchId: a,
                     renderEmbeds: l,
                     offset: g,
@@ -217,7 +217,7 @@ function U(e) {
 }
 function k(e) {
     var t, n, a;
-    let { channel: l, results: r, highlighter: c, startIndex: u, resultRefs: d, totalResults: h, scrollTo: m, searchId: I, renderEmbeds: S, offset: M, jumpToMessage: L, listNavigator: O, favoriteSearch: D } = e,
+    let { channel: l, results: r, highlighter: c, startIndex: u, resultRefs: d, totalResults: h, scrollTo: p, searchId: I, renderEmbeds: S, offset: M, jumpToMessage: L, listNavigator: O, favoriteSearch: D } = e,
         k = x.cC.useSetting(),
         w = (0, E.p)(),
         B = s.useCallback((e) => {
@@ -225,7 +225,7 @@ function k(e) {
             let t = v.Z.getChannel(e);
             if (null != t && !!A.Z.can(P.Plq.VIEW_CHANNEL, t)) (0, T.Kh)(t.id);
         }, []),
-        H = null != l ? (0, p.F6)(l, R.default, Z.Z, !1) : '???',
+        H = null != l ? (0, m.F6)(l, R.default, Z.Z, !1) : '???',
         G = D && null != l.guild_id ? (null === (t = N.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name) : null,
         V = (null == l ? void 0 : l.parent_id) != null ? v.Z.getChannel(l.parent_id) : null,
         F = null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : null,
@@ -290,7 +290,7 @@ function k(e) {
                         {
                             ref: (e) => (d.current[n] = e),
                             totalResults: h,
-                            scrollTo: m,
+                            scrollTo: p,
                             searchId: I,
                             renderEmbeds: S,
                             searchOffset: M,

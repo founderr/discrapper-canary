@@ -1,41 +1,41 @@
-n.r(s),
-    n.d(s, {
+t.r(n),
+    t.d(n, {
         default: function () {
             return _;
         }
     });
-var c = n(735250);
-n(470079);
-var t = n(481060),
-    o = n(313201),
-    a = n(471253),
-    r = n(930180),
-    i = n(582019),
-    l = n(939863),
-    d = n(689938),
-    u = n(851836);
+var s = t(735250);
+t(470079);
+var i = t(481060),
+    r = t(313201),
+    c = t(471253),
+    a = t(930180),
+    o = t(582019),
+    l = t(939863),
+    d = t(689938),
+    u = t(851836);
 function _(e) {
-    let { channel: s, transitionState: n, onClose: _, ...I } = e,
-        m = (0, o.Dt)(),
-        x = (0, r._d)(s.id),
-        h = async () => {
-            await (0, a.yi)(s), _();
+    let { channel: n, transitionState: t, onClose: _, ...E } = e,
+        I = (0, r.Dt)(),
+        T = (0, a._d)(n.id),
+        N = async () => {
+            await (0, c.yi)(n), _();
         },
-        E = async () => {
-            await (0, a.RK)(s, !1), _();
+        h = async () => {
+            await (0, c.RK)(n, !1), _();
         };
-    return (0, c.jsx)(t.ModalRoot, {
-        transitionState: n,
-        'aria-labelledby': m,
-        ...I,
-        size: t.ModalSize.SMALL,
-        children: (0, c.jsxs)(t.ModalContent, {
+    return (0, s.jsx)(i.ModalRoot, {
+        transitionState: t,
+        'aria-labelledby': I,
+        ...E,
+        size: i.ModalSize.SMALL,
+        children: (0, s.jsxs)(i.ModalContent, {
             className: u.content,
             children: [
-                (0, c.jsx)(l.Z, {
-                    children: (0, c.jsx)('div', {
+                (0, s.jsx)(l.Z, {
+                    children: (0, s.jsx)('div', {
                         className: u.stageIconBackground,
-                        children: (0, c.jsx)(t.StageIcon, {
+                        children: (0, s.jsx)(i.StageIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 40,
@@ -44,32 +44,32 @@ function _(e) {
                         })
                     })
                 }),
-                (0, c.jsx)(t.Heading, {
-                    id: m,
+                (0, s.jsx)(i.Heading, {
+                    id: I,
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
                     className: u.headerTitle,
                     children: d.Z.Messages.STAGE_MODERATOR_JOIN_MODAL_TITLE
                 }),
-                (0, c.jsx)(t.Text, {
+                (0, s.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     className: u.headerSubtitle,
                     children: d.Z.Messages.STAGE_MODERATOR_JOIN_MODAL_SUBTITLE
                 }),
-                x > 0 && (0, c.jsx)(i.mv, { channelId: s.id }),
-                (0, c.jsxs)('div', {
+                T > 0 && (0, s.jsx)(o.mv, { channelId: n.id }),
+                (0, s.jsxs)('div', {
                     className: u.buttonsContainer,
                     children: [
-                        (0, c.jsxs)(t.Button, {
-                            color: t.Button.Colors.PRIMARY,
+                        (0, s.jsxs)(i.Button, {
+                            color: i.Button.Colors.PRIMARY,
                             className: u.button,
                             innerClassName: u.innerButton,
-                            onClick: E,
+                            onClick: h,
                             children: [
-                                (0, c.jsx)('div', {
+                                (0, s.jsx)('div', {
                                     className: u.icon,
-                                    children: (0, c.jsx)(t.MicrophoneIcon, {
+                                    children: (0, s.jsx)(i.MicrophoneIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 20,
@@ -79,15 +79,15 @@ function _(e) {
                                 d.Z.Messages.STAGE_MODERATOR_JOIN_MODAL_JOIN_SPEAKER
                             ]
                         }),
-                        (0, c.jsxs)(t.Button, {
-                            color: t.Button.Colors.PRIMARY,
+                        (0, s.jsxs)(i.Button, {
+                            color: i.Button.Colors.PRIMARY,
                             className: u.button,
                             innerClassName: u.innerButton,
-                            onClick: h,
+                            onClick: N,
                             children: [
-                                (0, c.jsx)('div', {
+                                (0, s.jsx)('div', {
                                     className: u.icon,
-                                    children: (0, c.jsx)(t.GroupIcon, {
+                                    children: (0, s.jsx)(i.GroupIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 20,

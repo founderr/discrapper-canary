@@ -1,48 +1,48 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
-});
-var r = n(47120);
-var i = n(735250);
+}),
+    n(47120);
+var r = n(735250);
 n(470079);
-var a = n(442837),
-    o = n(481060),
+var i = n(442837),
+    a = n(481060),
     s = n(230711),
-    l = n(26033),
-    u = n(740605),
-    c = n(180335),
-    d = n(768419),
-    _ = n(594174),
-    E = n(981631),
-    f = n(616922),
-    h = n(689938);
-function p(e) {
+    o = n(26033),
+    l = n(740605),
+    u = n(180335),
+    c = n(768419),
+    d = n(594174),
+    _ = n(981631),
+    E = n(616922),
+    f = n(689938);
+function h(e) {
     var t;
-    let { user: n, entry: r, display: p, onAction: m, onClose: I } = e,
-        T = (0, a.e7)([_.default], () => {
+    let { user: n, entry: h, display: p, onAction: I, onClose: m } = e,
+        T = (0, i.e7)([d.default], () => {
             var e;
-            return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === n.id;
+            return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === n.id;
         }),
-        g = (0, a.e7)([d.Z], () => d.Z.hasConnectedAccount());
-    if ('live' === p || !(0, c.AZ)(r)) return null;
-    if (!g)
-        return (0, i.jsx)(o.MenuItem, {
+        S = (0, i.e7)([c.Z], () => c.Z.hasConnectedAccount());
+    if ('live' === p || !(0, u.AZ)(h)) return null;
+    if (!S)
+        return (0, r.jsx)(a.MenuItem, {
             id: 'connect-spotify',
-            label: h.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: f.ai }),
+            label: f.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: E.ai }),
             action: () => {
-                null == m || m({ action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM' }), s.Z.open(E.oAB.CONNECTIONS), null == I || I();
+                null == I || I({ action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM' }), s.Z.open(_.oAB.CONNECTIONS), null == m || m();
             }
         });
     if (T) return null;
-    let S = (0, l.dU)(r) ? (null === (t = r.extra.entries[0]) || void 0 === t ? void 0 : t.media) : r.extra.media;
-    return null == S
+    let g = (0, o.dU)(h) ? (null === (t = h.extra.entries[0]) || void 0 === t ? void 0 : t.media) : h.extra.media;
+    return null == g
         ? null
-        : (0, i.jsx)(o.MenuItem, {
+        : (0, r.jsx)(a.MenuItem, {
               id: 'play-on-spotify',
-              label: h.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
+              label: f.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
               action: () => {
-                  null == m || m({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, u.o)(f.Hw.TRACK, S.external_id);
+                  null == I || I({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(E.Hw.TRACK, g.external_id);
               }
           });
 }

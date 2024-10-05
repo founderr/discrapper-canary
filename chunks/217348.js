@@ -6,7 +6,7 @@ n.d(t, {
         return u;
     },
     Xy: function () {
-        return s;
+        return o;
     },
     ZT: function () {
         return i;
@@ -15,7 +15,7 @@ n.d(t, {
         return a;
     },
     is: function () {
-        return o;
+        return s;
     },
     qo: function () {
         return c;
@@ -33,7 +33,7 @@ var r = n(239189),
             configurable: !0
         });
     },
-    o = {
+    s = {
         arr: Array.isArray,
         obj: function (e) {
             return !!e && 'Object' === e.constructor.name;
@@ -51,26 +51,26 @@ var r = n(239189),
             return void 0 === e;
         }
     };
-function s(e, t) {
-    if (o.arr(e)) {
-        if (!o.arr(t) || e.length !== t.length) return !1;
+function o(e, t) {
+    if (s.arr(e)) {
+        if (!s.arr(t) || e.length !== t.length) return !1;
         for (var n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
         return !0;
     }
     return e === t;
 }
 var l = function (e) {
-        return o.str(e) && ('#' == e[0] || /\d/.test(e) || !!(r.colorNames && r.colorNames[e]));
+        return s.str(e) && ('#' == e[0] || /\d/.test(e) || !!(r.colorNames && r.colorNames[e]));
     },
     u = function (e, t, n) {
-        o.fun(e.forEach)
+        s.fun(e.forEach)
             ? e.forEach(t, n)
             : Object.keys(e).forEach(function (r) {
                   return t.call(n, e[r], r);
               });
     },
     c = function (e) {
-        return o.und(e) ? [] : o.arr(e) ? e : [e];
+        return s.und(e) ? [] : s.arr(e) ? e : [e];
     };
 function d(e, t) {
     if (e.size) {

@@ -1,42 +1,42 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(835473),
-    o = n(739566),
-    s = n(942951),
-    l = n(834129),
-    u = n(689938),
-    c = n(828972);
-function d(e) {
-    let { message: t, channel: n, compact: d } = e,
-        _ = (0, o.ZP)(t),
-        E = (0, s.l)({
+var a = n(481060),
+    s = n(835473),
+    l = n(739566),
+    r = n(942951),
+    o = n(834129),
+    c = n(689938),
+    d = n(828972);
+function u(e) {
+    let { message: t, channel: n, compact: u } = e,
+        _ = (0, l.ZP)(t),
+        E = (0, r.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
             messageId: t.id
         })(_),
-        f = (0, a.q)(t.applicationId);
-    if (null == f) return null;
-    let h = u.Z.Messages.SYSTEM_MESSAGE_CHANNEL_LINKED_TO_LOBBY.format({
+        I = (0, s.q)(t.applicationId);
+    if (null == I) return null;
+    let m = c.Z.Messages.SYSTEM_MESSAGE_CHANNEL_LINKED_TO_LOBBY.format({
         username: t.author.username,
         usernameHook: E,
-        applicationName: f.name,
+        applicationName: I.name,
         helpdeskArticle: '#'
     });
-    return (0, r.jsx)(l.Z, {
-        iconNode: (0, r.jsx)(i.RefreshIcon, {
+    return (0, i.jsx)(o.Z, {
+        iconNode: (0, i.jsx)(a.RefreshIcon, {
             size: 'sm',
-            color: i.tokens.colors.STATUS_POSITIVE
+            color: a.tokens.colors.STATUS_POSITIVE
         }),
         timestamp: t.timestamp,
-        compact: d,
-        contentClassName: c.systemMessage,
-        children: h
+        compact: u,
+        contentClassName: d.systemMessage,
+        children: m
     });
 }

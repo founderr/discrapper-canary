@@ -1,9 +1,9 @@
 n.d(t, {
     Q: function () {
-        return i;
+        return a;
     }
 });
-let r = new (n(107965).Z)();
-function i() {
-    r.quitAndInstall();
+let i = new (n(107965).Z)();
+function a() {
+    i.quitAndInstall();
 }

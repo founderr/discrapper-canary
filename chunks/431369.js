@@ -17,16 +17,16 @@ function s(e, n) {
     let o = a.Z.getForSkuAndInterval((0, i.Wz)(c.Si.GUILD), t.interval, t.intervalCount);
     r()(null != o, 'missing premium guild plan');
     let s = null != e.renewalMutations ? e.renewalMutations.additionalPlans : e.additionalPlans,
-        d = (e.status === l.O0b.CANCELED ? 0 : (0, i.uV)(s)) + n,
-        u = s.filter((e) => e.planId !== o.id);
-    if (d < 0) throw Error('Invalid adjustment');
-    return 0 === d
-        ? u
+        u = (e.status === l.O0b.CANCELED ? 0 : (0, i.uV)(s)) + n,
+        d = s.filter((e) => e.planId !== o.id);
+    if (u < 0) throw Error('Invalid adjustment');
+    return 0 === u
+        ? d
         : [
-              ...u,
+              ...d,
               {
                   planId: o.id,
-                  quantity: d
+                  quantity: u
               }
           ];
 }

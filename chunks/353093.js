@@ -6,19 +6,19 @@ n.d(t, {
         return f;
     },
     Z4: function () {
-        return I;
+        return m;
     },
     Zp: function () {
-        return m;
+        return I;
     },
     f6: function () {
         return T;
     },
     ky: function () {
-        return S;
+        return g;
     },
     p0: function () {
-        return v;
+        return N;
     },
     pY: function () {
         return A;
@@ -30,8 +30,8 @@ n.d(t, {
 var r = n(108131),
     i = n.n(r),
     a = n(442837),
-    o = n(607070),
-    s = n(715903),
+    s = n(607070),
+    o = n(715903),
     l = n(271383),
     u = n(594174);
 n(963202);
@@ -61,11 +61,11 @@ function h(e) {
 function p(e) {
     return null != e && e.hasFeature(_.oNc.CLAN);
 }
-function m(e, t) {
+function I(e, t) {
     var n, r;
     return null != t && t.identityGuildId === (null == e ? void 0 : e.id) && (((null == e ? void 0 : null === (n = e.clan) || void 0 === n ? void 0 : n.tag) != null && (null == e ? void 0 : null === (r = e.clan) || void 0 === r ? void 0 : r.tag) !== t.tag) || null == t.identityEnabled);
 }
-function I(e, t) {
+function m(e, t) {
     return (null != e && null != t && null != t.identityGuildId && t.identityGuildId === e && !!t.identityEnabled) || !1;
 }
 let T = (e, t) => {
@@ -93,36 +93,35 @@ let T = (e, t) => {
             });
         }
     },
-    g = {
+    S = {
         [d.NC.SIZE_12]: 16,
         [d.NC.SIZE_16]: 16,
         [d.NC.SIZE_24]: 24,
         [d.NC.SIZE_32]: 32,
         [d.NC.SIZE_36]: 40
     };
-function S(e, t) {
+function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.NC.SIZE_12;
     if (null == t) return;
     let { CDN_HOST: r } = window.GLOBAL_ENV;
     if (null == r) return;
-    let i = g[n];
+    let i = S[n];
     return ''.concat(location.protocol, '//').concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
 }
-d.NC.SIZE_12, d.NC.SIZE_16, d.NC.SIZE_24, d.NC.SIZE_32, d.NC.SIZE_36;
 function A(e, t) {
     if (null == t) return;
     let { CDN_HOST: n } = window.GLOBAL_ENV;
     if (null != n) return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, '/').concat(t, '.png?size=512');
 }
-function v(e, t) {
-    let n = (0, a.e7)([o.Z], () => o.Z.hideTags),
+function N(e, t) {
+    let n = (0, a.e7)([s.Z], () => s.Z.hideTags),
         r = (0, a.e7)([u.default], () => u.default.getUser(e), [e]),
         i = (0, a.e7)(
             [l.ZP],
             () => {
                 if (null == t || null == e) return null;
                 let n = l.ZP.getMember(t, e);
-                return (0, s.EY)(n);
+                return (0, o.EY)(n);
             },
             [t, e]
         ),
@@ -130,3 +129,4 @@ function v(e, t) {
         E = (0, c.Z)('clan_tag_chiplet');
     return !n && !!E && null != _ && null != d && !i && !0;
 }
+d.NC.SIZE_12, d.NC.SIZE_16, d.NC.SIZE_24, d.NC.SIZE_32, d.NC.SIZE_36;

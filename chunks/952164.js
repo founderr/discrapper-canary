@@ -1,50 +1,50 @@
 n.d(t, {
     KK: function () {
-        return u;
+        return l;
     },
     Z5: function () {
-        return d;
-    },
-    aG: function () {
         return c;
     },
+    aG: function () {
+        return u;
+    },
     d$: function () {
-        return _;
+        return d;
     }
-});
-var r = n(411104);
-var i = n(358085),
-    a = n(18323),
-    o = n(647162),
+}),
+    n(411104);
+var r = n(358085),
+    i = n(18323),
+    a = n(647162),
     s = n(616922);
-function l(e, t, n) {
-    let r;
-    !(0, i.isDesktop)() && (r = window.open('', '_blank')),
-        (0, o.iy)(e, t)
+function o(e, t, n) {
+    let o;
+    !(0, r.isDesktop)() && (o = window.open('', '_blank')),
+        (0, a.iy)(e, t)
             .then((e) => n(e))
             .then((e) => {
                 let { resourceType: t, resourceId: n } = e,
-                    i = a.Z.isProtocolRegistered() ? s.C7.PLAYER_OPEN(t, n) : s.C7.WEB_OPEN(t, n);
-                null != r ? (r.location.href = i) : window.open(i);
+                    r = i.Z.isProtocolRegistered() ? s.C7.PLAYER_OPEN(t, n) : s.C7.WEB_OPEN(t, n);
+                null != o ? (o.location.href = r) : window.open(r);
             })
             .catch(() => {
-                null != r && r.close();
+                null != o && o.close();
             });
 }
-function u() {
+function l() {
     window.open(s.C7.PREMIUM_SITE);
 }
-function c(e) {
+function u(e) {
     var t;
     let { sync_id: n, metadata: r } = e;
     if (null == n) return;
-    let i = (0, s.c8)(null !== (t = null == r ? void 0 : r.type) && void 0 !== t ? t : s.Hw.TRACK);
-    if (null == i) return;
-    let o = a.Z.isProtocolRegistered() ? s.C7.PLAYER_OPEN(i, n) : s.C7.WEB_OPEN(i, n);
+    let a = (0, s.c8)(null !== (t = null == r ? void 0 : r.type) && void 0 !== t ? t : s.Hw.TRACK);
+    if (null == a) return;
+    let o = i.Z.isProtocolRegistered() ? s.C7.PLAYER_OPEN(a, n) : s.C7.WEB_OPEN(a, n);
     window.open(o);
 }
-function d(e, t) {
-    l(e, t, (t) => {
+function c(e, t) {
+    o(e, t, (t) => {
         var n;
         let { album_id: r } = t;
         return {
@@ -53,8 +53,8 @@ function d(e, t) {
         };
     });
 }
-function _(e, t, n) {
-    l(e, t, (e) => {
+function d(e, t, n) {
+    o(e, t, (e) => {
         let { artist_ids: t } = e;
         if (null == t) throw Error('no artist ids in metadata');
         let r = t[n];

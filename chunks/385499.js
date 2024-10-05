@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    o = n(981729),
-    s = n(481060),
+    s = n(981729),
+    o = n(481060),
     l = n(674563),
     u = n(689938),
     c = n(936485);
@@ -11,11 +11,11 @@ let d = (e) => {
     let t,
         { invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: _, hideIcon: E = !1, useRemSizes: f = !1, children: h = [] } = e,
         p = null,
-        m = u.Z.Messages.VERIFIED_BOT_TOOLTIP;
+        I = u.Z.Messages.VERIFIED_BOT_TOOLTIP;
     switch (i) {
         case l.Hb.SYSTEM_DM:
         case l.Hb.OFFICIAL:
-            (_ = !0), (m = u.Z.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP_OFFICIAL), (p = u.Z.Messages.SYSTEM_DM_TAG_OFFICIAL);
+            (_ = !0), (I = u.Z.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP_OFFICIAL), (p = u.Z.Messages.SYSTEM_DM_TAG_OFFICIAL);
             break;
         case l.Hb.SERVER:
             p = u.Z.Messages.BOT_TAG_SERVER;
@@ -27,7 +27,7 @@ let d = (e) => {
             p = u.Z.Messages.STAFF_BADGE_TOOLTIP;
             break;
         case l.Hb.AI:
-            (_ = !0), (m = u.Z.Messages.AI_GENERATED_TOOLTIP), (p = u.Z.Messages.AI_TAG);
+            (_ = !0), (I = u.Z.Messages.AI_GENERATED_TOOLTIP), (p = u.Z.Messages.AI_TAG);
             break;
         case l.Hb.REMIX:
             (_ = !1), (p = u.Z.Messages.REMIXING_TAG);
@@ -36,31 +36,31 @@ let d = (e) => {
         default:
             p = u.Z.Messages.APP_TAG;
     }
-    let I = i === l.Hb.ORIGINAL_POSTER,
+    let m = i === l.Hb.ORIGINAL_POSTER,
         T = i === l.Hb.REMIX,
-        g = null;
+        S = null;
     _ &&
-        (g = (0, r.jsx)(o.u, {
-            text: m,
+        (S = (0, r.jsx)(s.u, {
+            text: I,
             align: 'center',
             position: 'top',
             children: (e) =>
-                (0, r.jsx)(s.CheckmarkSmallBoldIcon, {
+                (0, r.jsx)(o.CheckmarkSmallBoldIcon, {
                     ...e,
                     className: c.botTagVerified,
-                    color: s.tokens.colors.WHITE
+                    color: o.tokens.colors.WHITE
                 })
         })),
         (t = i === l.Hb.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular);
-    let S = (e) =>
+    let g = (e) =>
         (0, r.jsxs)('span', {
             ...e,
             className: a()(d, t, f ? c.rem : c.px, {
-                [c.botTagOP]: I,
+                [c.botTagOP]: m,
                 [c.botTagRemix]: T
             }),
             children: [
-                E ? null : g,
+                E ? null : S,
                 h,
                 (0, r.jsx)('span', {
                     className: c.botText,
@@ -70,19 +70,19 @@ let d = (e) => {
         });
     switch (i) {
         case l.Hb.REMIX:
-            return (0, r.jsx)(o.u, {
+            return (0, r.jsx)(s.u, {
                 text: u.Z.Messages.REMIXING_DOWNLOAD_APP,
                 position: 'top',
-                children: (e) => S(e)
+                children: (e) => g(e)
             });
         case l.Hb.ORIGINAL_POSTER:
-            return (0, r.jsx)(o.u, {
+            return (0, r.jsx)(s.u, {
                 text: u.Z.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
                 position: 'top',
-                children: (e) => S(e)
+                children: (e) => g(e)
             });
         default:
-            return S();
+            return g();
     }
 };
 (d.Types = l.Hb), (t.Z = d);

@@ -1,39 +1,39 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return m;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-    a = n(481060),
-    o = n(758059),
-    s = n(377171),
-    l = n(497089),
-    u = n(703656),
-    c = n(699516),
-    d = n(626135),
+var a = n(442837),
+    s = n(481060),
+    l = n(758059),
+    r = n(377171),
+    o = n(497089),
+    c = n(703656),
+    d = n(699516),
+    u = n(626135),
     _ = n(981631),
     E = n(689938),
-    f = n(488496);
-function h(e) {
+    I = n(488496);
+function m(e) {
     let { closePopout: t } = e,
-        n = (0, i.e7)([c.Z], () => c.Z.getPendingCount());
-    return (0, r.jsx)(a.TooltipContainer, {
+        n = (0, a.e7)([d.Z], () => d.Z.getPendingCount());
+    return (0, i.jsx)(s.TooltipContainer, {
         text: E.Z.Messages.VIEW_FRIEND_REQUESTS,
-        children: (0, r.jsxs)(a.Clickable, {
-            className: f.friendRequestsButton,
+        children: (0, i.jsxs)(s.Clickable, {
+            className: I.friendRequestsButton,
             onClick: () => {
-                d.default.track(_.rMx.NOTIFICATION_CENTER_ACTION, { action_type: l.ud.FRIEND_REQUESTS_BUTTON_CLICK }), (0, u.uL)(_.Z5c.FRIENDS), o.Z.setSection(_.pJs.PENDING), t();
+                u.default.track(_.rMx.NOTIFICATION_CENTER_ACTION, { action_type: o.ud.FRIEND_REQUESTS_BUTTON_CLICK }), (0, c.uL)(_.Z5c.FRIENDS), l.Z.setSection(_.pJs.PENDING), t();
             },
             children: [
-                (0, r.jsx)(a.FriendsIcon, {
+                (0, i.jsx)(s.FriendsIcon, {
                     size: 'xs',
                     color: 'currentColor'
                 }),
-                (0, r.jsx)(a.NumberBadge, {
+                (0, i.jsx)(s.NumberBadge, {
                     count: n,
-                    color: s.Z.BACKGROUND_ACCENT
+                    color: r.Z.BACKGROUND_ACCENT
                 })
             ]
         })

@@ -1,26 +1,26 @@
 t.d(n, {
     Z: function () {
-        return c;
+        return a;
     }
 });
 var i = t(735250);
 t(470079);
-var l = t(120356),
-    r = t.n(l),
-    s = t(481060),
-    o = t(471731),
-    a = t(985312);
-function c(e) {
-    let { title: n, className: t, ref: l } = e;
+var r = t(120356),
+    o = t.n(r),
+    l = t(481060),
+    c = t(471731),
+    s = t(985312);
+function a(e) {
+    let { title: n, className: t, ref: r } = e;
     return (0, i.jsxs)('div', {
-        className: r()(a.header, t),
-        ref: l,
+        className: o()(s.header, t),
+        ref: r,
         children: [
-            (0, i.jsx)(o.Z, { className: a.logo }),
-            (0, i.jsx)(s.HeadingLevel, {
+            (0, i.jsx)(c.Z, { className: s.logo }),
+            (0, i.jsx)(l.HeadingLevel, {
                 forceLevel: 1,
-                children: (0, i.jsx)(s.Heading, {
-                    className: a.title,
+                children: (0, i.jsx)(l.Heading, {
+                    className: s.title,
                     variant: 'heading-md/semibold',
                     color: 'header-secondary',
                     children: n

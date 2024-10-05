@@ -14,8 +14,8 @@ var s = n(399606),
     u = n(944486),
     d = n(189432),
     h = n(776767),
-    m = n(981631),
-    p = n(689938),
+    p = n(981631),
+    m = n(689938),
     _ = n(194898);
 function f(e) {
     let { member: t } = e,
@@ -27,7 +27,7 @@ function f(e) {
     return null == n
         ? null
         : (0, i.jsx)(a.FormItem, {
-              title: p.Z.Messages.ACCOUNT,
+              title: m.Z.Messages.ACCOUNT,
               titleClassName: _.infoTitle,
               children: (0, i.jsxs)(h.WM, {
                   children: [
@@ -40,7 +40,7 @@ function f(e) {
                           name: (0, i.jsx)(a.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: p.Z.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
+                              children: m.Z.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
                           }),
                           description: f
                               ? (0, i.jsx)(a.CheckmarkLargeBoldIcon, {
@@ -66,7 +66,7 @@ function f(e) {
                               name: (0, i.jsx)(a.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'text-normal',
-                                  children: p.Z.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
+                                  children: m.Z.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
                               }),
                               description:
                                   E === r.qc.AGREED
@@ -93,7 +93,7 @@ function f(e) {
                           name: (0, i.jsx)(a.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: p.Z.Messages.GUILD_MEMBER_MOD_VIEW_DISCORD_JOIN_DATE
+                              children: m.Z.Messages.GUILD_MEMBER_MOD_VIEW_DISCORD_JOIN_DATE
                           }),
                           description: (0, i.jsx)(a.Text, {
                               variant: 'text-sm/medium',
@@ -111,7 +111,7 @@ function f(e) {
                           name: (0, i.jsx)(a.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: p.Z.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_JOIN_DATE
+                              children: m.Z.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_JOIN_DATE
                           }),
                           description: (0, i.jsx)(a.Text, {
                               variant: 'text-sm/medium',
@@ -128,7 +128,7 @@ function f(e) {
                           name: (0, i.jsx)(a.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: p.Z.Messages.GUILD_MEMBER_MOD_VIEW_INVITE_LINK_LABEL
+                              children: m.Z.Messages.GUILD_MEMBER_MOD_VIEW_INVITE_LINK_LABEL
                           }),
                           description: (0, i.jsx)(a.Text, {
                               variant: 'text-sm/medium',
@@ -139,7 +139,7 @@ function f(e) {
                                   showInviterAsFooter: !0,
                                   onClickInviter: (e) => {
                                       let n = u.Z.getChannelId();
-                                      (0, d.r)(t.guildId, e.id, null != n ? n : m.lds);
+                                      (0, d.r)(t.guildId, e.id, null != n ? n : p.lds);
                                   }
                               })
                           })

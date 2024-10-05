@@ -1,22 +1,22 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
-});
-var r = n(47120);
-var i = n(470079),
-    a = n(442837),
-    o = n(434650),
+}),
+    n(47120);
+var r = n(470079),
+    i = n(442837),
+    a = n(434650),
     s = n(353647);
-function l(e) {
+function o(e) {
     let { userId: t, onAction: n } = e,
-        [r, l] = (0, i.useState)(!1),
-        u = (0, a.e7)([s.Z], () => s.Z.isFetchingUserOutbox(t)),
-        c = (0, i.useCallback)(
+        [o, l] = (0, r.useState)(!1),
+        u = (0, i.e7)([s.Z], () => s.Z.isFetchingUserOutbox(t)),
+        c = (0, r.useCallback)(
             (e) => {
                 e && (n({ action: 'VIEW' }), l(!0));
             },
             [n]
         );
-    return (0, o.O)(c, void 0, !u && !r);
+    return (0, a.O)(c, void 0, !u && !o);
 }

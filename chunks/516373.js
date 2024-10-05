@@ -1,17 +1,17 @@
 n.d(t, {
     D: function () {
-        return s;
+        return o;
     }
 });
 var r = n(470079),
     i = n(442837),
     a = n(675478),
-    o = n(581883);
-function s() {
+    s = n(581883);
+function o() {
     return (
         r.useEffect(() => {
             a.DZ.loadIfNecessary();
         }, []),
-        (0, i.e7)([o.Z], () => o.Z.frecencyWithoutFetchingLatest)
+        (0, i.e7)([s.Z], () => s.Z.frecencyWithoutFetchingLatest)
     );
 }

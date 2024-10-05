@@ -21,8 +21,8 @@ var i = n(735250),
     p = n(290297),
     g = n(279240),
     T = n(765717),
-    f = n(358221),
-    S = n(823748),
+    S = n(358221),
+    f = n(823748),
     C = n(626421),
     N = n(118379),
     A = n(652515),
@@ -99,13 +99,13 @@ let eh = 'resizable-sidebar-width',
         name: 'MemberSafetyPage',
         renderLoader: em
     }),
-    ef = (0, c.Un)({
+    eS = (0, c.Un)({
         createPromise: () => Promise.all([n.e('96427'), n.e('44156'), n.e('58227'), n.e('38359'), n.e('31072')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
         renderLoader: em
     }),
-    eS = (0, c.Un)({
+    ef = (0, c.Un)({
         createPromise: () => Promise.all([n.e('96427'), n.e('44156'), n.e('19878'), n.e('38359'), n.e('74277')]).then(n.bind(n, 599263)),
         webpackId: 599263,
         name: 'GuildOnboardingPage',
@@ -154,14 +154,14 @@ let eh = 'resizable-sidebar-width',
                 case eu.oC.GUILD_HOME:
                     return (0, i.jsx)(eg, { guildId: a });
                 case eu.oC.CHANNEL_BROWSER:
-                    return (0, i.jsx)(ef, {
+                    return (0, i.jsx)(eS, {
                         guildId: a,
                         selectedSection: e_.l7.BROWSE
                     });
                 case eu.oC.GUILD_ONBOARDING:
-                    return (0, i.jsx)(eS, { guildId: a });
+                    return (0, i.jsx)(ef, { guildId: a });
                 case eu.oC.CUSTOMIZE_COMMUNITY:
-                    return (0, i.jsx)(ef, {
+                    return (0, i.jsx)(eS, {
                         guildId: a,
                         selectedSection: e_.l7.CUSTOMIZE
                     });
@@ -186,7 +186,7 @@ let eh = 'resizable-sidebar-width',
                 n.id
             );
         }
-        return (0, i.jsx)(S.Z, {});
+        return (0, i.jsx)(f.Z, {});
     },
     eN = a.memo(function () {
         let { guildId: e, channelId: t } = (0, Y.Z)(),
@@ -280,16 +280,16 @@ function eU(e) {
     (0, m.t)(!0);
     let c = 'app view user trigger debugging';
     h.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), h.R6.trackExposure({ location: c });
-    let p = (0, u.e7)([f.Z], () => f.Z.isFullscreenInContext()),
+    let p = (0, u.e7)([S.Z], () => S.Z.isFullscreenInContext()),
         g = (0, Z.Q)('ChannelSidebar'),
-        T = (0, ei.A)((e) => !e.isOpen);
+        T = (0, ei.useAppSidebarState)((e) => !e.isOpen);
     a.useLayoutEffect(() => {
         if (g) {
             var e;
             let t = parseInt(null !== (e = _.K.get(eh)) && void 0 !== e ? e : '');
             Number.isNaN(t) && (t = 268), ej((t = Math.min(Math.max(t, 240), 420)));
             let n = (e) => {
-                e.metaKey && 'b' === e.key && ei.A.setState((e) => ({ isOpen: !e.isOpen }));
+                e.metaKey && 'b' === e.key && ei.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };
             return (
                 document.addEventListener('keydown', n),
@@ -307,26 +307,26 @@ function eU(e) {
                 Number.isNaN(t) && (t = 268), ej(t);
             }
         }, [T]);
-    let S = a.useRef(null),
+    let f = a.useRef(null),
         C = a.useCallback((e, t) => {
             var n;
             ej(e);
             let i = t < 80;
-            ei.A.setState({ isOpen: !i }), t < 240 ? document.body.classList.add(eE.collapsing) : document.body.classList.remove(eE.collapsing);
+            ei.useAppSidebarState.setState({ isOpen: !i }), t < 240 ? document.body.classList.add(eE.collapsing) : document.body.classList.remove(eE.collapsing);
             let a = t - e;
-            null === (n = S.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(a / 76), 0.25))), i && ej(76);
+            null === (n = f.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(a / 76), 0.25))), i && ej(76);
         }, []),
         N = a.useCallback(() => {
             document.body.classList.add(eE.dragging);
         }, []),
         A = a.useCallback((e) => {
             var t;
-            document.body.classList.remove(eE.dragging), document.body.classList.remove(eE.collapsing), null === (t = S.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), _.K.set(eh, e);
+            document.body.classList.remove(eE.dragging), document.body.classList.remove(eE.collapsing), null === (t = f.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), _.K.set(eh, e);
         }, []),
         v = (0, I.Z)({
             minDimension: 240,
             maxDimension: 420,
-            resizableDomNodeRef: S,
+            resizableDomNodeRef: f,
             onElementResize: C,
             onElementResizeStart: N,
             onElementResizeEnd: A,
@@ -334,7 +334,7 @@ function eU(e) {
             throttleDuration: 0
         }),
         L = a.useCallback(() => {
-            ei.A.setState((e) => ({ isOpen: !e.isOpen }));
+            ei.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
         }, []);
     if (
         (a.useLayoutEffect(() => {
@@ -349,7 +349,7 @@ function eU(e) {
         theme: n,
         children: (e) =>
             (0, i.jsxs)('div', {
-                ref: g ? S : void 0,
+                ref: g ? f : void 0,
                 'data-collapsed': T,
                 className: r()(eE.sidebar, e, {
                     [eE.hasNotice]: t,
@@ -427,14 +427,14 @@ function eG() {
         m = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eu.oC.GUILD_ONBOARDING,
         I = s || r || c || _ || m,
         g = a.useCallback(() => k.Z.openSidebar(), []),
-        f = (0, Z.Q)('AppView');
+        S = (0, Z.Q)('AppView');
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: eE.container,
             children: [
                 E &&
                     !_ &&
-                    !f &&
+                    !S &&
                     (0, i.jsx)(y.Z, {
                         className: eE.guilds,
                         themeOverride: n

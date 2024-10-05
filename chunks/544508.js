@@ -1,28 +1,28 @@
-n(47120), n(757143);
-var s = n(735250),
-    i = n(470079),
-    a = n(120356),
-    r = n.n(a),
-    o = n(212433),
-    l = n(399606),
-    u = n(481060),
-    d = n(607070),
-    c = n(745510),
-    E = n(899007),
-    _ = n(867176),
-    m = n(51144),
-    g = n(346585),
-    f = n(81259),
-    I = n(119848),
-    S = n(801461),
-    T = n(228168),
-    h = n(689938),
-    N = n(923112),
-    O = n(733469);
+s(47120), s(757143);
+var n = s(735250),
+    i = s(470079),
+    a = s(120356),
+    r = s.n(a),
+    o = s(212433),
+    l = s(399606),
+    u = s(481060),
+    c = s(607070),
+    d = s(745510),
+    E = s(899007),
+    _ = s(867176),
+    g = s(51144),
+    m = s(346585),
+    S = s(81259),
+    I = s(119848),
+    T = s(801461),
+    N = s(228168),
+    O = s(689938),
+    h = s(923112),
+    f = s(733469);
 let M = i.forwardRef(function (e, t) {
-    let { style: n, value: i, placeholder: a, maxLength: o, onFocus: l, onChange: d } = e;
-    return (0, s.jsx)(u.TextArea, {
-        className: r()(N.userCardInput, n),
+    let { style: s, value: i, placeholder: a, maxLength: o, onFocus: l, onChange: c } = e;
+    return (0, n.jsx)(u.TextArea, {
+        className: r()(h.userCardInput, s),
         autosize: !0,
         error: null,
         showCharacterCount: !1,
@@ -32,7 +32,7 @@ let M = i.forwardRef(function (e, t) {
         placeholder: a,
         rows: 1,
         maxLength: o,
-        onChange: d,
+        onChange: c,
         onFocus: l,
         onKeyDown: (e) => {
             'Enter' === e.key && e.preventDefault();
@@ -41,11 +41,11 @@ let M = i.forwardRef(function (e, t) {
     });
 });
 t.Z = i.forwardRef(function (e, t) {
-    let { user: n, error: a, formValues: C, displayProfile: L, onChangeFormValue: x, onFocusDisplayName: R, onFocusUsername: p, editState: A, footerNotice: P, usernameSuggestionLoading: v, oneClickFlow: y } = e,
-        { username: Z, globalName: b } = C,
-        U = i.useRef(null),
+    let { user: s, error: a, formValues: L, displayProfile: x, onChangeFormValue: C, onFocusDisplayName: R, onFocusUsername: A, editState: v, footerNotice: P, usernameSuggestionLoading: p, oneClickFlow: y } = e,
+        { username: Z, globalName: U } = L,
         G = i.useRef(null),
-        j = i.useMemo(() => n.merge({ discriminator: '0000' }), [n]),
+        b = i.useRef(null),
+        j = i.useMemo(() => s.merge({ discriminator: '0000' }), [s]),
         [D, W] = (0, u.useSpring)(() => ({
             opacity: 0,
             y: 5
@@ -59,27 +59,27 @@ t.Z = i.forwardRef(function (e, t) {
                 opacity: 0
             }
         });
-    }, [W, A]),
+    }, [W, v]),
         i.useImperativeHandle(
             t,
             () => ({
                 focusDisplayName: () => {
-                    var e, t, n;
-                    null === (t = G.current) || void 0 === t || t.setSelection(0, null === (e = G.current) || void 0 === e ? void 0 : e.value.length), null === (n = G.current) || void 0 === n || n.focus();
+                    var e, t, s;
+                    null === (t = b.current) || void 0 === t || t.setSelection(0, null === (e = b.current) || void 0 === e ? void 0 : e.value.length), null === (s = b.current) || void 0 === s || s.focus();
                 },
                 focusUsername: () => {
-                    var e, t, n;
-                    null === (t = U.current) || void 0 === t || t.setSelection(0, null === (e = U.current) || void 0 === e ? void 0 : e.value.length), null === (n = U.current) || void 0 === n || n.focus();
+                    var e, t, s;
+                    null === (t = G.current) || void 0 === t || t.setSelection(0, null === (e = G.current) || void 0 === e ? void 0 : e.value.length), null === (s = G.current) || void 0 === s || s.focus();
                 }
             }),
             []
         );
-    let k = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        { createMultipleConfettiAt: F } = i.useContext(c.h),
-        B = null == L ? void 0 : L.getLegacyUsername();
+    let k = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        { createMultipleConfettiAt: F } = i.useContext(d.h),
+        w = null == x ? void 0 : x.getLegacyUsername();
     return (
         i.useEffect(() => {
-            if (!k && A === S.Wq.PREVIEW && !!n.username.includes(S.nA))
+            if (!k && v === T.Wq.PREVIEW && !!s.username.includes(T.nA))
                 F(
                     window.innerWidth / 2 + 150,
                     0,
@@ -116,115 +116,115 @@ t.Z = i.forwardRef(function (e, t) {
                         },
                         15
                     );
-        }, [F, A, n, k]),
-        (0, s.jsxs)('div', {
-            className: r()(N.userCardContainer, { [N.shinyCard]: A === S.Wq.PREVIEW }),
+        }, [F, v, s, k]),
+        (0, n.jsxs)('div', {
+            className: r()(h.userCardContainer, { [h.shinyCard]: v === T.Wq.PREVIEW }),
             children: [
-                (0, s.jsxs)('div', {
-                    className: N.profileCard,
+                (0, n.jsxs)('div', {
+                    className: h.profileCard,
                     children: [
-                        (0, s.jsx)(_.Z, {
+                        (0, n.jsx)(_.Z, {
                             user: j,
-                            displayProfile: L,
-                            profileType: T.y0.PANEL
+                            displayProfile: x,
+                            profileType: N.y0.PANEL
                         }),
-                        (0, s.jsx)(E.Z, {
+                        (0, n.jsx)(E.Z, {
                             user: j,
-                            displayProfile: L,
-                            profileType: T.y0.PANEL
+                            displayProfile: x,
+                            profileType: N.y0.PANEL
                         }),
-                        A === S.Wq.PREVIEW &&
-                            null != B &&
-                            (0, s.jsx)('div', {
-                                className: N.legacyUsernameBadgeContainer,
-                                children: (0, s.jsx)(u.Tooltip, {
+                        v === T.Wq.PREVIEW &&
+                            null != w &&
+                            (0, n.jsx)('div', {
+                                className: h.legacyUsernameBadgeContainer,
+                                children: (0, n.jsx)(u.Tooltip, {
                                     position: 'top',
-                                    text: h.Z.Messages.ORIGINALLY_KNOWN_AS.format({ legacyUsername: B }),
+                                    text: O.Z.Messages.ORIGINALLY_KNOWN_AS.format({ legacyUsername: w }),
                                     spacing: 12,
                                     children: (e) =>
-                                        (0, s.jsx)(u.Anchor, {
+                                        (0, n.jsx)(u.Anchor, {
                                             ...e,
                                             onClick: e.onClick,
-                                            children: (0, s.jsx)('img', {
-                                                className: N.legacyUsernameBadge,
+                                            children: (0, n.jsx)('img', {
+                                                className: h.legacyUsernameBadge,
                                                 alt: '',
-                                                src: O
+                                                src: f
                                             })
                                         })
                                 })
                             })
                     ]
                 }),
-                A !== S.Wq.PREVIEW &&
-                    (0, s.jsxs)(o.animated.div, {
+                v !== T.Wq.PREVIEW &&
+                    (0, n.jsxs)(o.animated.div, {
                         style: {
                             opacity: D.opacity,
                             y: D.y
                         },
-                        className: N.inputContainer,
+                        className: h.inputContainer,
                         children: [
-                            A === S.Wq.EDIT_DISPLAY_NAME &&
-                                (0, s.jsxs)(s.Fragment, {
+                            v === T.Wq.EDIT_DISPLAY_NAME &&
+                                (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        (0, s.jsx)(u.Text, {
-                                            className: N.textPadding,
+                                        (0, n.jsx)(u.Text, {
+                                            className: h.textPadding,
                                             color: 'text-muted',
                                             variant: 'text-sm/semibold',
-                                            children: h.Z.Messages.DISPLAY_NAME
+                                            children: O.Z.Messages.DISPLAY_NAME
                                         }),
-                                        (0, s.jsx)(M, {
-                                            style: r()(N.displayNameHeight, N['heading-xl/bold']),
-                                            value: null != b ? b : '',
-                                            placeholder: m.ZP.getName(n),
-                                            maxLength: S.hy,
-                                            onChange: (e) => x({ globalName: e }),
+                                        (0, n.jsx)(M, {
+                                            style: r()(h.displayNameHeight, h['heading-xl/bold']),
+                                            value: null != U ? U : '',
+                                            placeholder: g.ZP.getName(s),
+                                            maxLength: T.hy,
+                                            onChange: (e) => C({ globalName: e }),
                                             onFocus: R,
+                                            ref: b
+                                        })
+                                    ]
+                                }),
+                            (v === T.Wq.EDIT_USERNAME || v === T.Wq.SUGGESTION) &&
+                                (0, n.jsxs)(n.Fragment, {
+                                    children: [
+                                        (0, n.jsx)(u.Text, {
+                                            className: h.textPadding,
+                                            color: 'text-muted',
+                                            variant: 'text-sm/semibold',
+                                            children: O.Z.Messages.USERNAME
+                                        }),
+                                        (0, n.jsx)(M, {
+                                            style: r()(h.userCardHeight, h.lowercaseUsername, h['heading-lg/medium']),
+                                            value: null != Z ? Z : '',
+                                            placeholder: s.username,
+                                            maxLength: T.hy,
+                                            onChange: (e) => C({ username: e.replace('@', '') }),
+                                            onFocus: A,
                                             ref: G
                                         })
                                     ]
                                 }),
-                            (A === S.Wq.EDIT_USERNAME || A === S.Wq.SUGGESTION) &&
-                                (0, s.jsxs)(s.Fragment, {
-                                    children: [
-                                        (0, s.jsx)(u.Text, {
-                                            className: N.textPadding,
-                                            color: 'text-muted',
-                                            variant: 'text-sm/semibold',
-                                            children: h.Z.Messages.USERNAME
-                                        }),
-                                        (0, s.jsx)(M, {
-                                            style: r()(N.userCardHeight, N.lowercaseUsername, N['heading-lg/medium']),
-                                            value: null != Z ? Z : '',
-                                            placeholder: n.username,
-                                            maxLength: S.hy,
-                                            onChange: (e) => x({ username: e.replace('@', '') }),
-                                            onFocus: p,
-                                            ref: U
-                                        })
-                                    ]
-                                }),
-                            (0, s.jsx)('div', {
-                                className: N.messageContainer,
+                            (0, n.jsx)('div', {
+                                className: h.messageContainer,
                                 children: (() => {
                                     if (null != a)
-                                        return (0, s.jsx)(f.Z, {
+                                        return (0, n.jsx)(S.Z, {
                                             type: 'error',
                                             children: a
                                         });
                                     if (null != P) {
-                                        if (A !== S.Wq.SUGGESTION)
-                                            return (0, s.jsx)(u.Text, {
+                                        if (v !== T.Wq.SUGGESTION)
+                                            return (0, n.jsx)(u.Text, {
                                                 variant: 'text-sm/normal',
                                                 children: P
                                             });
-                                        if (!v)
-                                            return (0, s.jsx)(f.Z, {
+                                        if (!p)
+                                            return (0, n.jsx)(S.Z, {
                                                 type: 'success',
                                                 children: P
                                             });
                                     }
-                                    return null == P && null == a && (A === S.Wq.EDIT_USERNAME || A === S.Wq.SUGGESTION)
-                                        ? (0, s.jsx)(I.Z, {
+                                    return null == P && null == a && (v === T.Wq.EDIT_USERNAME || v === T.Wq.SUGGESTION)
+                                        ? (0, n.jsx)(I.Z, {
                                               username: Z,
                                               oneClickFlow: y
                                           })
@@ -233,25 +233,25 @@ t.Z = i.forwardRef(function (e, t) {
                             })
                         ]
                     }),
-                A === S.Wq.PREVIEW &&
-                    (0, s.jsxs)('div', {
-                        className: N.userCard,
+                v === T.Wq.PREVIEW &&
+                    (0, n.jsxs)('div', {
+                        className: h.userCard,
                         children: [
-                            (0, s.jsx)(u.Heading, {
+                            (0, n.jsx)(u.Heading, {
                                 color: 'header-primary',
                                 variant: 'heading-xl/bold',
-                                children: m.ZP.getName(n)
+                                children: g.ZP.getName(s)
                             }),
-                            (0, s.jsx)(u.Heading, {
+                            (0, n.jsx)(u.Heading, {
                                 color: 'text-normal',
                                 variant: 'heading-lg/medium',
-                                children: n.username
+                                children: s.username
                             }),
-                            (0, s.jsx)(u.Text, {
-                                className: N.memberText,
+                            (0, n.jsx)(u.Text, {
+                                className: h.memberText,
                                 color: 'text-muted',
                                 variant: 'text-sm/medium',
-                                children: h.Z.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({ date: (0, g.K9)(n.id) })
+                                children: O.Z.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({ date: (0, m.K9)(s.id) })
                             })
                         ]
                     })

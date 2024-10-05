@@ -1,35 +1,35 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
-});
-var r = n(47120);
-var i = n(653041);
-var a = n(470079),
-    o = n(442837),
-    s = n(235587);
-function l(e) {
-    let { guildId: t, leaderboardId: n, intervalStart: r } = e,
-        i = (0, o.e7)(
-            [s.Z],
+}),
+    n(47120),
+    n(653041);
+var r = n(470079),
+    i = n(442837),
+    a = n(235587);
+function s(e) {
+    let { guildId: t, leaderboardId: n, intervalStart: s } = e,
+        o = (0, i.e7)(
+            [a.Z],
             () => {
-                var e, i;
-                return null !== (i = null === (e = s.Z.getPrevLeaderboardRanks(t, n, r)) || void 0 === e ? void 0 : e.ranks) && void 0 !== i ? i : [];
+                var e, r;
+                return null !== (r = null === (e = a.Z.getPrevLeaderboardRanks(t, n, s)) || void 0 === e ? void 0 : e.ranks) && void 0 !== r ? r : [];
             },
-            [t, r, n]
+            [t, s, n]
         ),
-        l = (0, o.e7)(
-            [s.Z],
+        l = (0, i.e7)(
+            [a.Z],
             () => {
-                var e, i;
-                return null !== (i = null === (e = s.Z.getCurrentLeaderboardRanks(t, n, r)) || void 0 === e ? void 0 : e.ranks) && void 0 !== i ? i : [];
+                var e, r;
+                return null !== (r = null === (e = a.Z.getCurrentLeaderboardRanks(t, n, s)) || void 0 === e ? void 0 : e.ranks) && void 0 !== r ? r : [];
             },
-            [t, r, n]
+            [t, s, n]
         );
     return {
-        rankChanges: a.useMemo(() => {
+        rankChanges: r.useMemo(() => {
             let e = new Map();
-            i.forEach((t, n) => {
+            o.forEach((t, n) => {
                 e.set(t, n + 1);
             });
             let t = [];
@@ -46,6 +46,6 @@ function l(e) {
                 }),
                 t
             );
-        }, [i, l])
+        }, [o, l])
     };
 }

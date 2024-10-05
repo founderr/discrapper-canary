@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return a;
     }
-});
-var r = n(411104);
-var i = n(47120);
-n(17089);
-var a = n(570140);
-function o(e, t, n) {
+}),
+    n(411104),
+    n(47120),
+    n(17089);
+var r = n(570140);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,14 +20,14 @@ function o(e, t, n) {
         e
     );
 }
-class s {
+class a {
     initialize() {
         this.initializedCount++,
             !(this.initializedCount > 1) &&
                 (this._initialize(),
                 Object.entries(this.actions).forEach((e) => {
                     let [t, n] = e;
-                    a.Z.subscribe(t, 'function' == typeof n ? n : n.callback);
+                    r.Z.subscribe(t, 'function' == typeof n ? n : n.callback);
                 }),
                 this.stores.forEach((e, t) => {
                     t.addChangeListener(e), e();
@@ -40,12 +40,12 @@ class s {
                 (this._terminate(),
                 Object.entries(this.actions).forEach((e) => {
                     let [t, n] = e;
-                    a.Z.unsubscribe(t, 'function' == typeof n ? n : n.callback);
+                    r.Z.unsubscribe(t, 'function' == typeof n ? n : n.callback);
                 })));
     }
     _initialize() {}
     _terminate() {}
     constructor() {
-        o(this, 'initializedCount', 0), o(this, 'actions', {}), o(this, 'stores', new Map());
+        i(this, 'initializedCount', 0), i(this, 'actions', {}), i(this, 'stores', new Map());
     }
 }

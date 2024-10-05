@@ -56,7 +56,7 @@ class g extends (i = r.PureComponent) {
                     style: this.getStyle(),
                     children: (0, l.jsx)('img', {
                         alt: '',
-                        src: n(378453),
+                        src: n(403756),
                         className: f.arrowIcon
                     })
                 }),

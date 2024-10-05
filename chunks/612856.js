@@ -1,41 +1,41 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return d;
+        return c;
     }
 });
-var i = n(735250);
-n(470079);
-var s = n(442837),
-    a = n(481060),
-    l = n(569471),
-    r = n(346479),
-    o = n(723170),
-    c = n(124368),
-    u = n(689938);
-function d(e) {
-    let t = (0, o.B)(e);
-    return (0, s.e7)([l.Z], () => l.Z.hasJoined(e.id))
-        ? (0, i.jsx)(a.MenuItem, {
+var i = t(735250);
+t(470079);
+var a = t(442837),
+    r = t(481060),
+    d = t(569471),
+    s = t(346479),
+    o = t(723170),
+    u = t(124368),
+    l = t(689938);
+function c(e) {
+    let n = (0, o.B)(e);
+    return (0, a.e7)([d.Z], () => d.Z.hasJoined(e.id))
+        ? (0, i.jsx)(r.MenuItem, {
               id: 'thread-notifications',
-              label: u.Z.Messages.NOTIFICATION_SETTINGS,
-              children: (0, c.zb)().map((n) => {
-                  let { setting: s, label: l } = n;
+              label: l.Z.Messages.NOTIFICATION_SETTINGS,
+              children: (0, u.zb)().map((t) => {
+                  let { setting: a, label: d } = t;
                   return (0, i.jsx)(
-                      a.MenuRadioItem,
+                      r.MenuRadioItem,
                       {
                           group: 'thread-notifications',
-                          id: ''.concat(s),
-                          label: l,
-                          action: () => r.Z.setNotificationSettings(e, { flags: s }),
-                          checked: s === t
+                          id: ''.concat(a),
+                          label: d,
+                          action: () => s.Z.setNotificationSettings(e, { flags: a }),
+                          checked: a === n
                       },
-                      s
+                      a
                   );
               })
           })
-        : (0, i.jsx)(a.MenuItem, {
+        : (0, i.jsx)(r.MenuItem, {
               id: 'notifications-disabled',
-              label: u.Z.Messages.NOTIFICATION_SETTINGS,
+              label: l.Z.Messages.NOTIFICATION_SETTINGS,
               disabled: !0
           });
 }

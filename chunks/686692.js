@@ -1,6 +1,6 @@
 n.d(t, {
     Om: function () {
-        return o;
+        return s;
     },
     Qf: function () {
         return a;
@@ -22,7 +22,7 @@ let i = (0, n(818083).B)({
     }),
     a = function (e) {
         let { autoTrackExposure: t = !1, disable: n = !1, location: a = r.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { enabled: o } = i.getCurrentConfig(
+            { enabled: s } = i.getCurrentConfig(
                 {
                     guildId: e,
                     location: a
@@ -32,11 +32,11 @@ let i = (0, n(818083).B)({
                     disable: n
                 }
             );
-        return o;
+        return s;
     },
-    o = function (e) {
+    s = function (e) {
         let { autoTrackExposure: t = !1, disable: n = !1, location: a = r.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { enabled: o } = i.useExperiment(
+            { enabled: s } = i.useExperiment(
                 {
                     guildId: null != e ? e : void 0,
                     location: a
@@ -46,5 +46,5 @@ let i = (0, n(818083).B)({
                     disable: n
                 }
             );
-        return o;
+        return s;
     };

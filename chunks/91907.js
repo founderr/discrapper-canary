@@ -1,31 +1,31 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return l;
     }
 });
-var r = n(735250),
-    i = n(470079),
-    a = n(793030),
-    o = n(256139),
-    s = n(866040);
+var a = t(735250),
+    r = t(470079),
+    s = t(793030),
+    i = t(256139),
+    o = t(866040);
 function l(e) {
-    let { user: t, text: n, channel: l, textClassName: u, onPopoutClosed: c } = e,
-        d = (0, i.useMemo)(() => [t], [t]);
-    return (0, r.jsx)(s.Z, {
-        participants: d,
+    let { user: n, text: t, channel: l, textClassName: c, onPopoutClosed: d } = e,
+        u = (0, r.useMemo)(() => [n], [n]);
+    return (0, a.jsx)(o.Z, {
+        participants: u,
         channel: l,
-        onPopoutClosed: c,
+        onPopoutClosed: d,
         children: (e) =>
-            (0, r.jsx)(o.Z, {
+            (0, a.jsx)(i.Z, {
                 ...e,
                 tag: 'span',
-                children: (0, r.jsx)(a.xv, {
-                    className: u,
+                children: (0, a.jsx)(s.xv, {
+                    className: c,
                     variant: 'text-sm/semibold',
                     color: 'text-primary',
                     lineClamp: 1,
                     scaleFontToUserSetting: !0,
-                    children: n
+                    children: t
                 })
             })
     });

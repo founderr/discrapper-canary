@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(442837),
-    o = n(481060),
-    s = n(954138),
+    s = n(481060),
+    o = n(954138),
     l = n(979264),
     u = n(189156),
     c = n(699516),
@@ -17,40 +17,40 @@ var r = n(735250),
     f = n(483424),
     h = n(681837),
     p = n(91433),
-    m = n(502762),
-    I = n(530),
+    I = n(502762),
+    m = n(530),
     T = n(827313),
-    g = n(420654),
-    S = n(116854),
+    S = n(420654),
+    g = n(116854),
     A = n(166584),
-    v = n(915014),
-    N = n(228168),
-    O = n(981631),
-    R = n(451563);
+    N = n(915014),
+    O = n(228168),
+    R = n(981631),
+    v = n(451563);
 function C(e) {
-    let { user: t, currentUser: n, displayProfile: C, guild: y, isHovering: L, onOpenProfile: b, channelId: D, onClose: M } = e,
-        P = _.ZP.getName(null == y ? void 0 : y.id, D, t),
+    let { user: t, currentUser: n, displayProfile: C, guild: L, isHovering: D, onOpenProfile: y, channelId: b, onClose: M } = e,
+        P = _.ZP.getName(null == L ? void 0 : L.id, b, t),
         U = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(t.id)),
         w = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        x = (0, s.Z)('username'),
+        x = (0, o.Z)('username'),
         G = i.useMemo(
             () => ({
-                source: O.jXE.BITE_SIZE_PROFILE_POPOUT,
+                source: R.jXE.BITE_SIZE_PROFILE_POPOUT,
                 tagUserId: t.id
             }),
             [t.id]
         );
-    return (0, r.jsxs)(o.Scroller, {
+    return (0, r.jsxs)(s.Scroller, {
         fade: !0,
-        className: R.body,
+        className: v.body,
         children: [
-            (0, r.jsx)(I.Z, {
+            (0, r.jsx)(m.Z, {
                 user: t,
-                profileType: N.y0.BITE_SIZE,
-                onOpenProfile: b,
+                profileType: O.y0.BITE_SIZE,
+                onOpenProfile: y,
                 usernameIcon:
-                    t.hasAvatarForGuild(null == y ? void 0 : y.id) &&
-                    (0, r.jsx)(S.Z, {
+                    t.hasAvatarForGuild(null == L ? void 0 : L.id) &&
+                    (0, r.jsx)(g.Z, {
                         user: t,
                         nickname: P
                     }),
@@ -58,7 +58,7 @@ function C(e) {
                 pronouns: null == C ? void 0 : C.pronouns,
                 tags: (0, r.jsx)(E.Z, {
                     displayProfile: C,
-                    profileType: N.y0.BITE_SIZE,
+                    profileType: O.y0.BITE_SIZE,
                     onClose: M
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
@@ -67,24 +67,24 @@ function C(e) {
                         !w &&
                             (0, r.jsx)(T.Z, {
                                 userId: t.id,
-                                isHovering: L,
-                                onOpenProfile: b
+                                isHovering: D,
+                                onOpenProfile: y
                             })
                     ]
                 })
             }),
-            U === O.OGo.PENDING_INCOMING &&
-                (0, r.jsx)(m.Z.Overlay, {
+            U === R.OGo.PENDING_INCOMING &&
+                (0, r.jsx)(I.Z.Overlay, {
                     children: (0, r.jsx)(p.Z, {
                         user: t,
-                        guildId: null == y ? void 0 : y.id,
-                        channelId: D
+                        guildId: null == L ? void 0 : L.id,
+                        channelId: b
                     })
                 }),
             t.id !== n.id &&
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(N.Z, {
                     user: t,
-                    onOpenProfile: (e) => (null == b ? void 0 : b({ section: e }))
+                    onOpenProfile: (e) => (null == y ? void 0 : y({ section: e }))
                 }),
             x &&
                 (0, r.jsx)(l.ZP, {
@@ -94,7 +94,7 @@ function C(e) {
                 }),
             t.isProvisional
                 ? (0, r.jsx)(u.Z, { look: 'profile' })
-                : (0, r.jsx)(g.Z, {
+                : (0, r.jsx)(S.Z, {
                       user: t,
                       bio: null == C ? void 0 : C.bio,
                       hidePersonalInformation: w,
@@ -104,13 +104,13 @@ function C(e) {
                 user: t,
                 currentUser: n,
                 onClose: M,
-                className: R.activity
+                className: v.activity
             }),
-            null != y &&
+            null != L &&
                 (0, r.jsx)(A.Z, {
                     user: t,
                     currentUser: n,
-                    guild: y
+                    guild: L
                 })
         ]
     });

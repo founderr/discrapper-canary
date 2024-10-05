@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return P;
     }
 }),
     n(47120);
@@ -18,24 +18,24 @@ var s,
     E = n(108427),
     p = n(314897),
     g = n(701190),
-    m = n(626135),
-    f = n(768581),
+    f = n(626135),
+    m = n(768581),
     I = n(823379),
     N = n(264229),
     T = n(230224),
-    x = n(617730),
-    A = n(258356),
+    A = n(617730),
+    x = n(258356),
     C = n(981631),
-    Z = n(689938),
-    R = n(712833);
-function v() {
+    v = n(689938),
+    Z = n(712833);
+function S() {
     return (0, i.jsx)('div', {
-        className: R.centerFlex,
+        className: Z.centerFlex,
         children: (0, i.jsx)(c.Spinner, {})
     });
 }
 ((r = s || (s = {}))[(r.LOADING = 0)] = 'LOADING'), (r[(r.DETAILS = 1)] = 'DETAILS'), (r[(r.ERROR = 2)] = 'ERROR');
-let S = (e) => {
+let R = (e) => {
     let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
@@ -61,20 +61,20 @@ function O(e) {
     let { invite: t, onAcceptInvite: n } = e;
     if ((null == t ? void 0 : t.state) === C.r2o.BANNED)
         return (0, i.jsx)(d.u, {
-            text: Z.Z.Messages.AUTH_BANNED_INVITE_BODY,
-            buttonCta: Z.Z.Messages.INVITE_INVALID_CTA,
+            text: v.Z.Messages.AUTH_BANNED_INVITE_BODY,
+            buttonCta: v.Z.Messages.INVITE_INVALID_CTA,
             onClick: n
         });
     return (0, i.jsx)(d.u, {
-        text: Z.Z.Messages.INVITE_INVALID_ERROR,
-        buttonCta: Z.Z.Messages.INVITE_INVALID_CTA,
+        text: v.Z.Messages.INVITE_INVALID_ERROR,
+        buttonCta: v.Z.Messages.INVITE_INVALID_CTA,
         onClick: n
     });
 }
 function b(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: s, innerStyle: r, ...l } = e,
         { invite: u } = l,
-        [d, h] = a.useState(S(u)),
+        [d, h] = a.useState(R(u)),
         { ref: E, height: p } = (0, _.Z)(),
         g = (0, c.useSpring)({
             height: null != p && 0 !== p ? ''.concat(p, 'px') : ''.concat(s, 'px'),
@@ -82,15 +82,15 @@ function b(e) {
         });
     return (
         a.useEffect(() => {
-            let e = S(u);
+            let e = R(u);
             e !== d && h(e);
         }, [u, d]),
         (0, i.jsxs)(o.animated.div, {
-            className: R.inviteCard,
+            className: Z.inviteCard,
             style: g,
             children: [
                 (0, i.jsx)(o.animated.div, {
-                    className: R.inviteChildContainer,
+                    className: Z.inviteChildContainer,
                     style: g,
                     children: (0, i.jsx)('section', {
                         ref: E,
@@ -103,17 +103,17 @@ function b(e) {
         })
     );
 }
-function P(e) {
+function D(e) {
     let { invite: t } = e;
     if (null == t || !(0, T.JI)(t)) return null;
     let n = (e) => {
         if (null == t) return null;
-        if (1 === e) return (0, i.jsx)(A.X, { invite: t });
+        if (1 === e) return (0, i.jsx)(x.X, { invite: t });
         return null;
     };
     return (0, i.jsx)(b, {
         startAnimHeightPx: 0,
-        innerStyle: () => R.guildInfoInner,
+        innerStyle: () => Z.guildInfoInner,
         ...e,
         children: (e) => n(e)
     });
@@ -121,10 +121,10 @@ function P(e) {
 function M(e) {
     let { invite: t } = e,
         n = (n) => {
-            if (null == t) return (0, i.jsx)(v, {});
+            if (null == t) return (0, i.jsx)(S, {});
             switch (n) {
                 case 1:
-                    return (0, i.jsx)(x.Z, {
+                    return (0, i.jsx)(A.Z, {
                         ...e,
                         invite: t
                     });
@@ -134,13 +134,13 @@ function M(e) {
                         invite: t
                     });
                 default:
-                    return (0, i.jsx)(v, {});
+                    return (0, i.jsx)(S, {});
             }
         },
         s = {
-            1: R.inviteCardInner,
-            2: R.inviteCardInnerError,
-            0: R.inviteCardInnerLoading
+            1: Z.inviteCardInner,
+            2: Z.inviteCardInnerError,
+            0: Z.inviteCardInnerLoading
         };
     return (0, i.jsx)(b, {
         startAnimHeightPx: 200,
@@ -149,12 +149,12 @@ function M(e) {
         children: (e) => n(e)
     });
 }
-function D(e) {
+function L(e) {
     let { invite: t, onAcceptInvite: n } = e,
         { guild: s } = null != t ? t : {},
         r = {};
     if ((null == s ? void 0 : s.splash) != null) {
-        let e = f.ZP.getGuildSplashURL({
+        let e = m.ZP.getGuildSplashURL({
             id: s.id,
             splash: s.splash
         });
@@ -162,19 +162,19 @@ function D(e) {
     }
     return (0, i.jsxs)(h.ZP, {
         theme: C.BRd.DARK,
-        className: R.splashBackground,
+        className: Z.splashBackground,
         style: r,
-        contentClassName: R.centerAuthBoxContent,
+        contentClassName: Z.centerAuthBoxContent,
         children: [
             (0, i.jsx)(M, {
                 ...e,
                 onAcceptInvite: n
             }),
-            (0, i.jsx)(P, { ...e })
+            (0, i.jsx)(D, { ...e })
         ]
     });
 }
-function L(e) {
+function P(e) {
     let { inviteKey: t, transitionTo: n } = e,
         s = (0, l.e7)([g.Z], () => g.Z.getInvite(t));
     return (
@@ -184,7 +184,7 @@ function L(e) {
         a.useEffect(() => {
             null != s &&
                 s.state === C.r2o.RESOLVED &&
-                m.default.track(
+                f.default.track(
                     C.rMx.INVITE_VIEWED,
                     {
                         invite_code: t,
@@ -193,13 +193,13 @@ function L(e) {
                     { flush: !0 }
                 );
         }, [s, t]),
-        (0, i.jsx)(D, {
+        (0, i.jsx)(L, {
             invite: s,
             onAcceptInvite: (e) => {
                 !(function (e, t, n) {
                     var s, r, i;
                     null == e || e.preventDefault(),
-                        m.default.track(C.rMx.INVITE_APP_OPENED, {
+                        f.default.track(C.rMx.INVITE_APP_OPENED, {
                             invite_code: (0, N.jX)(t),
                             guild_id: null == n ? void 0 : null === (s = n.guild) || void 0 === s ? void 0 : s.id,
                             channel_id: null == n ? void 0 : null === (r = n.channel) || void 0 === r ? void 0 : r.id,

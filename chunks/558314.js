@@ -1,26 +1,26 @@
-var r,
-    i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = { matureAgree: !1 };
-function l() {
-    s.matureAgree = !0;
-}
-class u extends (r = i.ZP.Store) {
+var i,
+    a,
+    s,
+    l,
+    r = n(442837),
+    o = n(570140);
+let c = { matureAgree: !1 };
+class d extends (l = r.ZP.Store) {
     get didMatureAgree() {
-        return s.matureAgree;
+        return c.matureAgree;
     }
 }
-o(u, 'displayName', 'ApplicationStoreSettingsStore'), (t.Z = new u(a.Z, { APPLICATION_STORE_MATURE_AGREE: l }));
+(s = 'ApplicationStoreSettingsStore'),
+    (a = 'displayName') in (i = d)
+        ? Object.defineProperty(i, a, {
+              value: s,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (i[a] = s),
+    (t.Z = new d(o.Z, {
+        APPLICATION_STORE_MATURE_AGREE: function () {
+            c.matureAgree = !0;
+        }
+    }));

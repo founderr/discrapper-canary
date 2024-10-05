@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     fR: function () {
-        return o;
+        return s;
     },
     sg: function () {
         return a;
@@ -36,7 +36,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    o = (0, r.B)({
+    s = (0, r.B)({
         kind: 'user',
         id: '2024-08_nitro_tenure_rewards_backfill',
         label: 'Nitro Tenure Reward Backfill',

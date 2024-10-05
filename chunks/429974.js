@@ -1,14 +1,14 @@
 n.d(t, {
     z: function () {
-        return m;
+        return I;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(570140),
-    o = n(317770),
-    s = n(603113),
+    s = n(317770),
+    o = n(603113),
     l = n(812206),
     u = n(158776),
     c = n(699516),
@@ -18,69 +18,69 @@ var i = n(481060),
     f = n(981631),
     h = n(616922);
 let p = null;
-function m(e, t) {
+function I(e, t) {
     return 'USER_PROFILE_MODAL_KEY:'.concat(e, ':').concat(null == t || t === f.ME ? '' : t);
 }
-async function I(e) {
-    var t, a, o, I;
-    let { userId: T, section: g, subsection: S, guildId: A = f.ME, channelId: v, friendToken: N, analyticsLocation: O, showGuildProfile: R = !0, ...C } = e,
-        y = d.default.getUser(T);
-    if (null == y) return;
-    let L = E.Z.getUserProfile(T),
-        b = u.Z.getPrimaryActivity(T),
-        D = u.Z.getStatus(T),
+async function m(e) {
+    var t, a, s, m;
+    let { userId: T, section: S, subsection: g, guildId: A = f.ME, channelId: N, friendToken: O, analyticsLocation: R, showGuildProfile: v = !0, ...C } = e,
+        L = d.default.getUser(T);
+    if (null == L) return;
+    let D = E.Z.getUserProfile(T),
+        y = u.Z.getPrimaryActivity(T),
+        b = u.Z.getStatus(T),
         M = u.Z.isMobileOnline(T),
-        { party: P, assets: U, application_id: w } = null != b ? b : {},
+        { party: P, assets: U, application_id: w } = null != y ? y : {},
         x = null != w ? l.Z.getApplication(w) : null,
         G = M ? f.j28.ONLINE_MOBILE : f.j28.ONLINE_DESKTOP,
-        k = D === f.Skl.ONLINE ? G : D;
+        k = b === f.Skl.ONLINE ? G : b;
     (p = await (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('82412'), n.e('86473')]).then(n.bind(n, 533835));
+            let { default: e } = await Promise.all([n.e('82412'), n.e('93997')]).then(n.bind(n, 533835));
             return (t) =>
                 (0, r.jsx)(e, {
-                    user: y,
+                    user: L,
                     guildId: A,
-                    friendToken: N,
-                    initialSection: g,
-                    initialSubsection: S,
-                    channelId: v,
-                    showGuildProfile: R,
+                    friendToken: O,
+                    initialSection: S,
+                    initialSubsection: g,
+                    channelId: N,
+                    showGuildProfile: v,
                     ...t,
                     ...C
                 });
         },
-        { modalKey: m(T, R ? A : void 0) }
+        { modalKey: I(T, v ? A : void 0) }
     )),
         _.default.track(f.rMx.OPEN_MODAL, {
             type: 'Profile Modal',
             guild_id: A !== f.ME ? A : null,
-            channel_id: v,
+            channel_id: N,
             other_user_id: T,
-            application_id: null !== (a = null == b ? void 0 : b.application_id) && void 0 !== a ? a : null,
-            application_name: null == b ? void 0 : b.name,
-            sku_id: null !== (o = null == x ? void 0 : x.primarySkuId) && void 0 !== o ? o : null,
+            application_id: null !== (a = null == y ? void 0 : y.application_id) && void 0 !== a ? a : null,
+            application_name: null == y ? void 0 : y.name,
+            sku_id: null !== (s = null == x ? void 0 : x.primarySkuId) && void 0 !== s ? s : null,
             is_friend: c.Z.isFriend(T),
-            has_images: !!(null !== (I = null == U ? void 0 : U.large_image) && void 0 !== I ? I : null == U ? void 0 : U.small_image),
+            has_images: !!(null !== (m = null == U ? void 0 : U.large_image) && void 0 !== m ? m : null == U ? void 0 : U.small_image),
             party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
             party_id: null == P ? void 0 : P.id,
             party_platform: (0, h.Ps)(null == P ? void 0 : P.id) ? f.ABu.SPOTIFY : null,
-            game_platform: (0, s.Z)(b),
+            game_platform: (0, o.Z)(y),
             profile_user_status: k,
-            profile_has_nitro_customization: (null == L ? void 0 : L.banner) != null,
-            profile_has_profile_effect: (null == L ? void 0 : L.profileEffectId) != null,
-            ...(null == O ? null : (0, _.expandLocation)(O))
+            profile_has_nitro_customization: (null == D ? void 0 : D.banner) != null,
+            profile_has_profile_effect: (null == D ? void 0 : D.profileEffectId) != null,
+            ...(null == R ? null : (0, _.expandLocation)(R))
         });
 }
 function T() {
     null != p && (0, i.closeModal)(p), (p = null);
 }
-class g extends o.Z {
+class S extends s.Z {
     _initialize() {
-        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', I), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', T);
+        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', m), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', T);
     }
     _terminate() {
-        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', I), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', T);
+        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', m), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', T);
     }
 }
-t.Z = new g();
+t.Z = new S();

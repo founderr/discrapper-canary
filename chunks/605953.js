@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = n(735250);
@@ -14,7 +14,7 @@ var s = n(442837),
     u = n(981631),
     d = n(814249),
     h = n(689938);
-function m(e) {
+function p(e) {
     let { channel: t } = e,
         n = (0, s.e7)([r.Z], () => r.Z.shouldShowTopicsBar());
     return (0, i.jsx)(c.ZP.Icon, {

@@ -7,27 +7,27 @@ var r = n(735250),
     i = n(470079);
 let a = i.forwardRef(function (e, t) {
     let { className: n, children: a } = e,
-        o = i.useRef(null),
-        s = i.useRef(null);
+        s = i.useRef(null),
+        o = i.useRef(null);
     return (
         i.useImperativeHandle(
             t,
             () => ({
                 focus: () => {
                     var e;
-                    let t = o.current;
-                    null != t && (null == s.current && (s.current = t.querySelector('[tabindex="0"]')), null === (e = s.current) || void 0 === e || e.focus());
+                    let t = s.current;
+                    null != t && (null == o.current && (o.current = t.querySelector('[tabindex="0"]')), null === (e = o.current) || void 0 === e || e.focus());
                 },
                 blur: () => {
                     var e;
-                    return null === (e = s.current) || void 0 === e ? void 0 : e.blur();
+                    return null === (e = o.current) || void 0 === e ? void 0 : e.blur();
                 },
                 activate: () => !1
             }),
             []
         ),
         i.useLayoutEffect(() => {
-            let e = o.current;
+            let e = s.current;
             if (null != e)
                 return (
                     e.addEventListener('focusin', t),
@@ -36,11 +36,11 @@ let a = i.forwardRef(function (e, t) {
                     }
                 );
             function t(e) {
-                s.current = e.target;
+                o.current = e.target;
             }
         }, []),
         (0, r.jsx)('div', {
-            ref: o,
+            ref: s,
             className: n,
             style: { position: 'relative' },
             children: a

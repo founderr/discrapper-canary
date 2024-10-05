@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(979554),
-    o = n(481060),
-    s = n(436774),
+    s = n(481060),
+    o = n(436774),
     l = n(81245),
     u = n(981631),
     c = n(689938),
@@ -16,7 +16,7 @@ function _(e) {
     let { product: t, onSecondaryClick: _ } = e,
         E = i.useCallback(() => {
             if (null != t)
-                (0, o.openModalLazy)(async () => {
+                (0, s.openModalLazy)(async () => {
                     let { default: e } = await n.e('43360').then(n.bind(n, 73415));
                     return (n) =>
                         (0, r.jsx)(e, {
@@ -43,12 +43,12 @@ function _(e) {
         ? (0, r.jsxs)('div', {
               className: d.nitroUpsellContainer,
               children: [
-                  (0, r.jsx)(o.NitroWheelIcon, {
+                  (0, r.jsx)(s.NitroWheelIcon, {
                       className: d.nitroWheel,
                       size: 'md',
-                      color: s.JX.PREMIUM_TIER_2
+                      color: o.JX.PREMIUM_TIER_2
                   }),
-                  (0, r.jsx)(o.Text, {
+                  (0, r.jsx)(s.Text, {
                       className: d.nitroText,
                       variant: 'text-md/medium',
                       children: f

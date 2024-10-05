@@ -15,8 +15,8 @@ var i,
     u = n(512722),
     d = n.n(u),
     h = n(780384),
-    m = n(481060),
-    p = n(438139),
+    p = n(481060),
+    m = n(438139),
     _ = n(410030),
     f = n(726542),
     E = n(600164),
@@ -66,7 +66,7 @@ let W = {
         ActivityFeed: [900, 500]
     },
     { getAssetImage: z } = n(81063),
-    Y = (0, p.Z)(
+    Y = (0, m.Z)(
         class extends r.PureComponent {
             render() {
                 return (0, l.jsx)('div', {
@@ -141,7 +141,7 @@ class q extends (s = r.PureComponent) {
             (0, l.jsxs)('div', {
                 className: V.headerContainer,
                 children: [
-                    (0, l.jsx)(m.Heading, {
+                    (0, l.jsx)(p.Heading, {
                         className: c()((0, j.l)(V, 'headerText', e ? 'EmptyBody' : 'Normal')),
                         variant: s ? 'text-xs/semibold' : 'eyebrow',
                         children: (0, l.jsx)(C.Z, { children: t })
@@ -177,7 +177,7 @@ class q extends (s = r.PureComponent) {
         if (null == u || (null == u.large_image && null == u.small_image)) return null;
         (0, k.Z)(e) && (s = W[o]);
         let h = (0, D.Z)(e),
-            p =
+            m =
                 null != u.large_image
                     ? (0, l.jsx)('img', {
                           alt: null !== (t = u.large_text) && void 0 !== t ? t : '',
@@ -189,14 +189,14 @@ class q extends (s = r.PureComponent) {
                       })
                     : null;
         if (h)
-            p = (0, l.jsx)(m.Anchor, {
+            m = (0, l.jsx)(p.Anchor, {
                 onClick: this.handleOpenSpotifyAlbum,
-                children: p
+                children: m
             });
         else if ((0, b.dS)(e)) {
             let t = (0, b.rq)(e);
             if (null == t) return null;
-            p = (0, l.jsx)(g.ZP, {
+            m = (0, l.jsx)(g.ZP, {
                 mask: g.ZP.Masks.SQUIRCLE,
                 width: B.Si.SMALL,
                 height: B.Si.SMALL,
@@ -218,13 +218,13 @@ class q extends (s = r.PureComponent) {
         return (this.isStreamerOnTypeActivityFeed() &&
             null != e.url &&
             '' !== e.url &&
-            (p = (0, l.jsxs)('div', {
+            (m = (0, l.jsxs)('div', {
                 className: V.twitchImageContainer,
                 children: [
                     (0, l.jsxs)('div', {
                         className: V.twitchImageOverlay,
                         children: [
-                            (0, l.jsx)(m.H, {
+                            (0, l.jsx)(p.H, {
                                 className: V.streamName,
                                 children: e.name
                             }),
@@ -234,16 +234,16 @@ class q extends (s = r.PureComponent) {
                             })
                         ]
                     }),
-                    (0, l.jsx)(m.Anchor, {
+                    (0, l.jsx)(p.Anchor, {
                         className: V.twitchBackgroundImage,
                         href: e.url,
-                        children: p
+                        children: m
                     })
                 ]
             })),
         !(0, b.dS)(e) &&
             null != u.small_image &&
-            (a = (0, l.jsx)(m.Tooltip, {
+            (a = (0, l.jsx)(p.Tooltip, {
                 text: '' !== u.small_text ? u.small_text : null,
                 position: 'top',
                 children: (e) => {
@@ -251,12 +251,12 @@ class q extends (s = r.PureComponent) {
                     return (0, l.jsx)('img', {
                         alt: null !== (t = u.small_text) && void 0 !== t ? t : '',
                         src: z(d, u.small_image, [B.Si.SMALL, B.Si.SMALL]),
-                        className: this.getTypeClass('assetsSmallImage', null == p ? 'WithoutLargeImage' : void 0),
+                        className: this.getTypeClass('assetsSmallImage', null == m ? 'WithoutLargeImage' : void 0),
                         ...e
                     });
                 }
             })),
-        null == p)
+        null == m)
             ? (0, l.jsx)('div', {
                   className: V.assets,
                   children: a
@@ -264,13 +264,13 @@ class q extends (s = r.PureComponent) {
             : (0, l.jsxs)('div', {
                   className: V.assets,
                   children: [
-                      (0, l.jsx)(m.Tooltip, {
+                      (0, l.jsx)(p.Tooltip, {
                           text: null != u.large_text ? u.large_text : null,
                           position: 'top',
                           children: (e) => {
                               let { onMouseEnter: t, onMouseLeave: n } = e;
-                              return null != p
-                                  ? r.cloneElement(p, {
+                              return null != m
+                                  ? r.cloneElement(m, {
                                         onMouseEnter: t,
                                         onMouseLeave: n
                                     })
@@ -311,7 +311,7 @@ class q extends (s = r.PureComponent) {
                 ((o = s),
                 (u = s),
                 (0, D.Z)(e) && null != e.sync_id && null != s
-                    ? (u = (0, l.jsx)(m.Anchor, {
+                    ? (u = (0, l.jsx)(p.Anchor, {
                           className: V.bodyLink,
                           onClick: this.handleOpenSpotifyTrack,
                           children: s
@@ -319,7 +319,7 @@ class q extends (s = r.PureComponent) {
                     : (0, b.dS)(e) && (u = e.name)),
         null == u)
             ? null
-            : (0, l.jsx)(m.Text, {
+            : (0, l.jsx)(p.Text, {
                   title: o,
                   variant: 'text-sm/semibold',
                   className: c()((0, j.l)(V, 'name', t.bot ? 'wrap' : 'normal')),
@@ -365,7 +365,7 @@ class q extends (s = r.PureComponent) {
         return null == a || '' === a
             ? null
             : ((0, k.Z)(e) && (a = G.Z.Messages.STREAMER_PLAYING.format({ game: a })), null != t)
-              ? (0, l.jsx)(m.Clickable, {
+              ? (0, l.jsx)(p.Clickable, {
                     onClick: t,
                     title: null != r ? r : void 0,
                     className: V.clickableDetails,
@@ -393,18 +393,18 @@ class q extends (s = r.PureComponent) {
                               size: S.Z.Sizes.SMOL,
                               className: V.guildIcon
                           }),
-                          (0, l.jsx)(m.ChevronSmallRightIcon, {
+                          (0, l.jsx)(p.ChevronSmallRightIcon, {
                               size: 'xxs',
                               color: 'currentColor'
                           }),
                           (0, l.jsxs)('div', {
                               className: V.voiceChannelInfo,
                               children: [
-                                  (0, l.jsx)(m.VoiceNormalIcon, {
+                                  (0, l.jsx)(p.VoiceNormalIcon, {
                                       size: 'xxs',
                                       color: 'currentColor'
                                   }),
-                                  (0, l.jsx)(m.Text, {
+                                  (0, l.jsx)(p.Text, {
                                       variant: 'text-xs/normal',
                                       children: null == i ? void 0 : i.name
                                   })
@@ -459,7 +459,7 @@ class q extends (s = r.PureComponent) {
                     albumHook: (t, n) =>
                         null != e.sync_id && null != u
                             ? (0, l.jsx)(
-                                  m.Anchor,
+                                  p.Anchor,
                                   {
                                       className: V.bodyLink,
                                       onClick: this.handleOpenSpotifyAlbum,
@@ -509,8 +509,8 @@ class q extends (s = r.PureComponent) {
         if (null == u || u.type === H.IIU.CUSTOM_STATUS) return null;
         let d = 'ActivityFeed' === t,
             h = 'StreamPreview' === t,
-            p = !1;
-        (0, U.Z)(u) ? ((e = this.renderXboxImage()), (p = !0)) : null == (e = this.renderImage(u)) && (p = null != (e = this.renderGameImage(u)));
+            m = !1;
+        (0, U.Z)(u) ? ((e = this.renderXboxImage()), (m = !0)) : null == (e = this.renderImage(u)) && (m = null != (e = this.renderGameImage(u)));
         let _ = this.renderName(u),
             f = this.renderDetails(u),
             g = this.renderState(u, s),
@@ -524,7 +524,7 @@ class q extends (s = r.PureComponent) {
             children: [
                 this.renderHeader(S),
                 (0, l.jsx)('div', {
-                    className: c()(p ? V.bodyAlignCenter : V.bodyNormal, a && !h && V.wrap),
+                    className: c()(m ? V.bodyAlignCenter : V.bodyNormal, a && !h && V.wrap),
                     children: (0, l.jsxs)('div', {
                         className: V.activityDetails,
                         children: [
@@ -532,9 +532,9 @@ class q extends (s = r.PureComponent) {
                             this.isStreamerOnTypeActivityFeed()
                                 ? null
                                 : (0, l.jsxs)(E.Z.Child, {
-                                      className: c()((0, j.l)(V, 'content', p ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
+                                      className: c()((0, j.l)(V, 'content', m ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
                                       children: [
-                                          (0, l.jsxs)(m.Clickable, {
+                                          (0, l.jsxs)(p.Clickable, {
                                               className: c()(null != o && V.openGameProfile),
                                               onClick:
                                                   null != o

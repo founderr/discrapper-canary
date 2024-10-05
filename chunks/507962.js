@@ -1,37 +1,37 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return r;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(739566),
-    a = n(834129),
-    o = n(689938);
-function s(e) {
+var a = n(739566),
+    s = n(834129),
+    l = n(689938);
+function r(e) {
     let t,
-        { message: s, usernameHook: l, otherUser: u, otherUsernameHook: c, compact: d, channel: _ } = e,
-        E = (0, i.ZP)(s),
-        f = E.nick,
-        h = l(E),
-        p = (0, i.Sw)(u, _);
-    if (null != p && null != c) {
-        let e = c(p);
-        t = o.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
-            username: f,
-            usernameHook: h,
-            otherUsername: p.nick,
+        { message: r, usernameHook: o, otherUser: c, otherUsernameHook: d, compact: u, channel: _ } = e,
+        E = (0, a.ZP)(r),
+        I = E.nick,
+        m = o(E),
+        T = (0, a.Sw)(c, _);
+    if (null != T && null != d) {
+        let e = d(T);
+        t = l.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
+            username: I,
+            usernameHook: m,
+            otherUsername: T.nick,
             otherUsernameHook: e
         });
     } else
-        t = o.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({
-            username: f,
-            usernameHook: h
+        t = l.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({
+            username: I,
+            usernameHook: m
         });
-    return (0, r.jsx)(a.Z, {
+    return (0, i.jsx)(s.Z, {
         icon: n(474019),
-        timestamp: s.timestamp,
-        compact: d,
+        timestamp: r.timestamp,
+        compact: u,
         children: t
     });
 }

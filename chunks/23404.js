@@ -16,8 +16,8 @@ var i = n(735250),
     p = n(585500),
     g = n(475595),
     T = n(566078),
-    f = n(602667),
-    S = n(611855),
+    S = n(602667),
+    f = n(611855),
     C = n(670638),
     N = n(667105),
     A = n(860151),
@@ -111,7 +111,7 @@ t.Z = function (e) {
         });
     return B || U || k || !(0, I.dl)(o)
         ? null
-        : (0, i.jsx)(f.A, {
+        : (0, i.jsx)(S.A, {
               questOrQuests: o,
               questContent: m.jn.ACTIVITY_PANEL,
               children: (e) => {
@@ -131,7 +131,7 @@ t.Z = function (e) {
                           (0, i.jsxs)('div', {
                               className: O.utils,
                               children: [
-                                  G ? (0, i.jsx)(x, { quest: o }) : (0, i.jsx)(S.Z, { textOpacity: 0.5 }),
+                                  G ? (0, i.jsx)(x, { quest: o }) : (0, i.jsx)(f.Z, { textOpacity: 0.5 }),
                                   (0, i.jsx)(C.r, {
                                       quest: o,
                                       questContent: m.jn.ACTIVITY_PANEL,

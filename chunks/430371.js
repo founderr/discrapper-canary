@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(988980),
     d = n(157813),
     h = n(314897),
-    m = n(131951),
-    p = n(585483),
+    p = n(131951),
+    m = n(585483),
     _ = n(807705),
     f = n(27457),
     E = n(111248),
@@ -32,7 +32,7 @@ function A(e) {
     let n,
         { onSelectParticipant: a, onContextMenuParticipant: A, onFullscreenParticipant: Z, participants: M, filteredParticipants: b, popoutWindow: R, inCall: L, channel: j, selectedParticipant: P, showParticipants: O = !0, className: y, paused: D, width: U, height: k, layout: w, idle: B } = e,
         H = null != R,
-        G = m.Z.getVideoComponent(),
+        G = p.Z.getVideoComponent(),
         V = h.default.getId(),
         [F, W] = s.useState(null),
         [z, Y] = s.useState(!0),
@@ -72,14 +72,14 @@ function A(e) {
                     clamp: !0
                 },
                 onStart: () => q(!0),
-                onChange: () => p.S.dispatch(I.CkL.REMEASURE_TARGET),
+                onChange: () => m.S.dispatch(I.CkL.REMEASURE_TARGET),
                 onRest: () => {
-                    q(!1), p.S.dispatch(I.CkL.REMEASURE_TARGET);
+                    q(!1), m.S.dispatch(I.CkL.REMEASURE_TARGET);
                 }
             },
             'animate-always'
         ),
-        em = (0, o.useSpring)(
+        ep = (0, o.useSpring)(
             {
                 value: ee ? 1 : 0,
                 config: {
@@ -89,7 +89,7 @@ function A(e) {
             },
             'animate-always'
         ),
-        ep = (0, o.useSpring)(
+        em = (0, o.useSpring)(
             {
                 value: ec,
                 config: {
@@ -97,7 +97,7 @@ function A(e) {
                     clamp: !0
                 }
             },
-            (et === ee && em.value.idle && !es) || ea ? 'animate-never' : 'animate-always'
+            (et === ee && ep.value.idle && !es) || ea ? 'animate-never' : 'animate-always'
         ),
         e_ = (0, o.useSpring)(
             {
@@ -138,10 +138,10 @@ function A(e) {
                 children: [
                     (0, i.jsxs)(r.animated.div, {
                         className: S.videoFrame,
-                        style: { top: em.value.to((e) => (-e * N) / 2) },
+                        style: { top: ep.value.to((e) => (-e * N) / 2) },
                         children: [
                             (0, i.jsx)(r.animated.div, {
-                                style: { width: ep.value },
+                                style: { width: em.value },
                                 className: S.videoWrapper,
                                 children: (0, i.jsx)('div', {
                                     className: l()(x.videoSizer),

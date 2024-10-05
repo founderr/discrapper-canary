@@ -29,18 +29,18 @@ var i = n(735250),
     S = n(933557),
     x = n(979264),
     v = n(163889),
-    Z = n(111028),
-    T = n(853856),
-    b = n(93687),
-    A = n(785232),
-    M = n(878857),
-    R = n(518950),
+    T = n(111028),
+    Z = n(853856),
+    A = n(93687),
+    b = n(785232),
+    R = n(878857),
+    M = n(518950),
     L = n(199902),
     P = n(158776),
-    y = n(306680),
-    O = n(111583),
-    j = n(9156),
-    D = n(594174),
+    O = n(306680),
+    y = n(111583),
+    D = n(9156),
+    j = n(594174),
     w = n(709054),
     U = n(998502),
     G = n(788307),
@@ -122,7 +122,7 @@ class Y extends l.Component {
     }
 }
 function K(e) {
-    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: b, applicationStream: L, isTyping: P, status: O, isMobile: D, 'aria-posinset': w, 'aria-setsize': U } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: A, applicationStream: L, isTyping: P, status: y, isMobile: j, 'aria-posinset': w, 'aria-setsize': U } = e,
         [Y, K] = l.useState(!1),
         q = l.useRef(null),
         Q = l.useRef(null),
@@ -130,15 +130,15 @@ function K(e) {
             avatarSrc: X,
             avatarDecorationSrc: J,
             eventHandlers: $
-        } = (0, R.Z)({
+        } = (0, M.Z)({
             user: d,
             size: p.AvatarSizes.SIZE_32,
             animateOnHover: !(s || Y)
         }),
-        ee = (0, h.e7)([j.ZP], () => j.ZP.isChannelMuted(t.getGuildId(), t.id)),
-        et = (0, h.e7)([y.ZP], () => y.ZP.getMentionCount(t.id) > 0),
+        ee = (0, h.e7)([D.ZP], () => D.ZP.isChannelMuted(t.getGuildId(), t.id)),
+        et = (0, h.e7)([O.ZP], () => O.ZP.getMentionCount(t.id) > 0),
         en = (0, S.ZP)(t),
-        ei = (0, h.e7)([T.Z], () => T.Z.isFavorite(t.id)),
+        ei = (0, h.e7)([Z.Z], () => Z.Z.isFavorite(t.id)),
         el = () => {
             K(!0);
         },
@@ -219,10 +219,10 @@ function K(e) {
                         className: V.subtext,
                         children: B.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
                     })
-                  : null != b && b.length > 0
+                  : null != A && A.length > 0
                     ? (0, i.jsx)(G.Z, {
                           ...e,
-                          activities: b,
+                          activities: A,
                           applicationStream: L,
                           animate: Y,
                           hideTooltip: !0,
@@ -234,32 +234,32 @@ function K(e) {
             let e = p.AvatarSizes.SIZE_32;
             if (t.isMultiUserDM())
                 return t.recipients.length >= 2 && r && null == t.icon
-                    ? (0, i.jsx)(A.Z, {
+                    ? (0, i.jsx)(b.Z, {
                           'aria-hidden': !0,
                           recipients: t.recipients,
                           size: e,
                           isTyping: P,
-                          status: O
+                          status: y
                       })
                     : (0, i.jsx)(H, {
                           ...$,
                           src: (0, N.x)(t),
                           'aria-hidden': !0,
                           size: e,
-                          status: P ? k.Skl.ONLINE : O,
+                          status: P ? k.Skl.ONLINE : y,
                           isTyping: P
                       });
             o()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let n = null;
             return (
-                !d.isSystemUser() && (n = (0, m.Z)(b) ? k.Skl.STREAMING : O),
+                !d.isSystemUser() && (n = (0, m.Z)(A) ? k.Skl.STREAMING : y),
                 (0, i.jsx)(H, {
                     ...$,
                     size: p.AvatarSizes.SIZE_32,
                     src: X,
                     avatarDecoration: J,
                     status: n,
-                    isMobile: D,
+                    isMobile: j,
                     isTyping: P,
                     'aria-label': d.username,
                     statusTooltip: !0
@@ -268,7 +268,7 @@ function K(e) {
         },
         ef = t.isMultiUserDM(),
         e_ = t.isSystemDM(),
-        em = (0, M.Q)(),
+        em = (0, R.Q)(),
         eg =
             ef || e_ || t.type !== k.d4z.DM || (null == d ? void 0 : d.clan) == null
                 ? en
@@ -328,7 +328,7 @@ function K(e) {
                                 highlighted: et,
                                 muted: null != ee && ee,
                                 subText: eh(),
-                                name: (0, i.jsx)(Z.Z, {
+                                name: (0, i.jsx)(T.Z, {
                                     tooltipClassName: V.overflowTooltip,
                                     children: eg
                                 }),
@@ -355,8 +355,8 @@ function K(e) {
 }
 t.ZP = (e) => {
     let { channel: t, selected: n, ...l } = e,
-        r = (0, h.e7)([D.default], () => D.default.getUser(t.getRecipientId())),
-        { isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: s, isFacepileEnabled: o } = b.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
+        r = (0, h.e7)([j.default], () => j.default.getUser(t.getRecipientId())),
+        { isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: s, isFacepileEnabled: o } = A.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
         c = null == r ? void 0 : r.id,
         u = (0, h.cj)(
             [P.Z, L.Z],
@@ -378,17 +378,17 @@ t.ZP = (e) => {
             [t, c, a]
         ),
         d = (0, h.e7)(
-            [D.default, O.Z],
+            [j.default, y.Z],
             () => {
                 if (t.isMultiUserDM())
                     return (
                         !!s &&
-                        w.default.keys(O.Z.getTypingUsers(t.id)).some((e) => {
+                        w.default.keys(y.Z.getTypingUsers(t.id)).some((e) => {
                             var t;
-                            return e !== (null === (t = D.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
+                            return e !== (null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
                         })
                     );
-                if (null != r) return O.Z.isTyping(t.id, t.getRecipientId());
+                if (null != r) return y.Z.isTyping(t.id, t.getRecipientId());
                 return !1;
             },
             [t, r, s]

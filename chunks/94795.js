@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     O7: function () {
-        return o;
+        return s;
     },
     nJ: function () {
         return i;
@@ -16,6 +16,6 @@ function i() {
 function a() {
     r.Z.dispatch({ type: 'APP_ICON_EDITOR_CLOSE' });
 }
-function o() {
+function s() {
     r.Z.dispatch({ type: 'APP_ICON_EDITOR_RESET' });
 }

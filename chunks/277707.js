@@ -1,22 +1,22 @@
 n.d(t, {
     e: function () {
-        return i;
+        return a;
     }
 });
-var r = n(689938);
-function i(e) {
-    let { isVoiceChannel: t, isHubGuild: n, isOwnInvite: i, isGuest: a, isStage: o, isStream: s } = e;
+var i = n(689938);
+function a(e) {
+    let { isVoiceChannel: t, isHubGuild: n, isOwnInvite: a, isGuest: s, isStage: l, isStream: r } = e;
     if (t) {
-        if (i) {
-            if (s) return r.Z.Messages.INVITE_BUTTON_TITLE_INVITER_STREAM;
-            if (o) return r.Z.Messages.INVITE_BUTTON_TITLE_INVITER_STAGE_CHANNEL;
-            else if (a) return r.Z.Messages.GUEST_INVITE_EMBED_TITLE_SENDER;
-            else return r.Z.Messages.INVITE_BUTTON_TITLE_INVITER_VOICE_CHANNEL;
+        if (a) {
+            if (r) return i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_STREAM;
+            if (l) return i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_STAGE_CHANNEL;
+            else if (s) return i.Z.Messages.GUEST_INVITE_EMBED_TITLE_SENDER;
+            else return i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_VOICE_CHANNEL;
         }
-        if (s) return r.Z.Messages.INVITE_BUTTON_TITLE_INVITED_STREAM;
-        if (o) return r.Z.Messages.INVITE_BUTTON_TITLE_INVITED_STAGE_CHANNEL;
-        else if (a) return r.Z.Messages.GUEST_INVITE_EMBED_TITLE_RECEIVER;
-        else return r.Z.Messages.INVITE_BUTTON_TITLE_INVITED_VOICE_CHANNEL;
+        if (r) return i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_STREAM;
+        if (l) return i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_STAGE_CHANNEL;
+        else if (s) return i.Z.Messages.GUEST_INVITE_EMBED_TITLE_RECEIVER;
+        else return i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_VOICE_CHANNEL;
     }
-    return n ? (i ? r.Z.Messages.INVITE_BUTTON_TITLE_INVITER_HUB : r.Z.Messages.INVITE_BUTTON_TITLE_INVITED_HUB) : i ? r.Z.Messages.INVITE_BUTTON_TITLE_INVITER : r.Z.Messages.INVITE_BUTTON_TITLE_INVITED;
+    return n ? (a ? i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_HUB : i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_HUB) : a ? i.Z.Messages.INVITE_BUTTON_TITLE_INVITER : i.Z.Messages.INVITE_BUTTON_TITLE_INVITED;
 }

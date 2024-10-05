@@ -8,8 +8,8 @@ var i = n(735250),
     u = n(481060),
     d = n(367907),
     h = n(499254),
-    m = n(424602),
-    p = n(541099),
+    p = n(424602),
+    m = n(541099),
     _ = n(827498),
     f = n(569211),
     E = n(663924),
@@ -26,7 +26,7 @@ var i = n(735250),
     M = n(795361);
 let b = s.forwardRef(function (e, t) {
     let { type: n, animateRef: a } = e,
-        m = (0, r.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
+        p = (0, r.e7)([m.Z], () => m.Z.shouldShowPopup() && m.Z.activeViewType() === n),
         { Component: f, events: E, play: g } = (0, c.w)();
     s.useImperativeHandle(
         a,
@@ -38,8 +38,8 @@ let b = s.forwardRef(function (e, t) {
         [E]
     );
     let C = s.useCallback(() => {
-        (0, d.yw)(S.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.yT(_.ti.DISMISSED) : ((0, I.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h.__(_._b.TEXT, n)), g();
-    }, [m, n, g]);
+        (0, d.yw)(S.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.yT(_.ti.DISMISSED) : ((0, I.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h.__(_._b.TEXT, n)), g();
+    }, [p, n, g]);
     return (0, i.jsx)('div', {
         className: l()(Z.buttonContainer, v.t4),
         ref: t,
@@ -47,7 +47,7 @@ let b = s.forwardRef(function (e, t) {
             look: u.Button.Looks.BLANK,
             size: u.Button.Sizes.NONE,
             tabIndex: 0,
-            className: l()(Z.button, { [Z.buttonActive]: m }),
+            className: l()(Z.button, { [Z.buttonActive]: p }),
             onClick: C,
             'aria-label': A.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
             focusProps: {
@@ -124,12 +124,12 @@ t.Z = s.memo(function (e) {
             var e;
             return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? g.Z.getActiveCommand(t.id) : null };
         }),
-        u = m.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
+        u = p.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
         d = (0, r.e7)(
-            [p.Z],
+            [m.Z],
             () => {
-                let e = p.Z.activeViewType();
-                return null != e && e === n && p.Z.shouldShowPopup();
+                let e = m.Z.activeViewType();
+                return null != e && e === n && m.Z.shouldShowPopup();
             },
             [n]
         );

@@ -3,15 +3,15 @@ n.d(t, {
         return s;
     },
     j: function () {
-        return o;
+        return a;
     }
-});
-var r = n(47120);
-var i = n(433517);
-let a = 'recentBuildOverrides';
-function o() {
+}),
+    n(47120);
+var r = n(433517);
+let i = 'recentBuildOverrides';
+function a() {
     var e;
-    return (null !== (e = i.K.get(a)) && void 0 !== e ? e : []).filter((e) => null == e.exp || e.exp > Date.now());
+    return (null !== (e = r.K.get(i)) && void 0 !== e ? e : []).filter((e) => null == e.exp || e.exp > Date.now());
 }
 function s(e, t) {
     if (null == t || null == e || null == e.targetBuildOverride.discord_web) return;
@@ -20,6 +20,6 @@ function s(e, t) {
             payload: t,
             exp: Date.parse(e.expiresAt)
         },
-        r = [n, ...o().filter((e) => n.id !== e.id)].slice(0, 5);
-    i.K.set(a, r);
+        s = [n, ...a().filter((e) => n.id !== e.id)].slice(0, 5);
+    r.K.set(i, s);
 }

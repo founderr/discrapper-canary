@@ -14,8 +14,8 @@ var s = n(120356),
     u = n(924301),
     d = n(786915),
     h = n(430824),
-    m = n(496675),
-    p = n(981631),
+    p = n(496675),
+    m = n(981631),
     _ = n(689938),
     f = n(632189);
 function E(e) {
@@ -25,7 +25,7 @@ function E(e) {
         N = null == g ? void 0 : g.id,
         A = (0, o.e7)([h.Z], () => (null != v ? h.Z.getGuild(v) : null), [v]),
         Z = (0, o.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(N), [N]);
-    if (((t = A), (s = g), !(null != t && null != s && m.Z.can(p.Plq.CREATE_INSTANT_INVITE, s)))) return null;
+    if (((t = A), (s = g), !(null != t && null != s && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, s)))) return null;
     let M = _.Z.Messages.INSTANT_INVITE;
     return (
         null != l ? (M = _.Z.Messages.INVITE_STREAM_HEADER) : null != E && (M = _.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY),
@@ -51,13 +51,13 @@ function E(e) {
                                                     streamUserId: a,
                                                     applicationId: l,
                                                     analyticsLocation: u,
-                                                    source: s.isGuildStageVoice() ? p.t4x.STAGE_CHANNEL : p.t4x.STREAM_INVITE,
+                                                    source: s.isGuildStageVoice() ? m.t4x.STAGE_CHANNEL : m.t4x.STREAM_INVITE,
                                                     guildScheduledEvent: d
                                                 });
                                         },
                                         {
                                             modalKey: 'stream-invite-modal',
-                                            contextKey: r === p.IlC.POPOUT ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT
+                                            contextKey: r === m.IlC.POPOUT ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT
                                         }
                                     );
                             })({

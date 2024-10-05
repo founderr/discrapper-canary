@@ -3,29 +3,29 @@ n.d(t, {
         return r;
     }
 });
-var s,
+var o,
     r,
-    i = n(990547),
-    a = n(544891),
-    o = n(570140),
+    a = n(990547),
+    i = n(544891),
+    s = n(570140),
     l = n(314897),
     c = n(573261),
     u = n(815660),
     d = n(981631);
-((s = r || (r = {})).USER_ACTION_REQUIRED = 'user_action_required'),
-    (s.USER_SETTINGS_UPDATE = 'user_settings_update'),
-    (s.GUILD_PHONE_REQUIRED = 'guild_phone_required'),
-    (s.MFA_PHONE_UPDATE = 'mfa_phone_update'),
-    (s.CONTACT_SYNC = 'contact_sync'),
+((o = r || (r = {})).USER_ACTION_REQUIRED = 'user_action_required'),
+    (o.USER_SETTINGS_UPDATE = 'user_settings_update'),
+    (o.GUILD_PHONE_REQUIRED = 'guild_phone_required'),
+    (o.MFA_PHONE_UPDATE = 'mfa_phone_update'),
+    (o.CONTACT_SYNC = 'contact_sync'),
     (t.Z = {
         setCountryCode(e) {
-            o.Z.dispatch({
+            s.Z.dispatch({
                 type: 'PHONE_SET_COUNTRY_CODE',
                 countryCode: e
             });
         },
         removePhone: (e, t) =>
-            a.tn.del({
+            i.tn.del({
                 url: d.ANM.PHONE,
                 body: {
                     password: e,
@@ -38,7 +38,7 @@ var s,
                 n = l.default.getFingerprint();
             return (
                 null != n && '' !== n && (t['X-Fingerprint'] = n),
-                a.tn.post({
+                i.tn.post({
                     url: d.ANM.RESEND_PHONE,
                     headers: t,
                     body: { phone: e }
@@ -46,7 +46,7 @@ var s,
             );
         },
         beginAddPhone: (e, t) =>
-            a.tn.post({
+            i.tn.post({
                 url: d.ANM.PHONE,
                 body: {
                     phone: e,
@@ -54,7 +54,7 @@ var s,
                 }
             }),
         addPhone: (e, t, n) =>
-            a.tn.post({
+            i.tn.post({
                 url: d.ANM.PHONE,
                 body: {
                     phone_token: e,
@@ -64,12 +64,12 @@ var s,
                 oldFormErrors: !0
             }),
         addPhoneWithoutPassword: (e) =>
-            a.tn.post({
+            i.tn.post({
                 url: d.ANM.PHONE_VERIFY_NO_PASSWORD,
                 body: { code: e }
             }),
         beginReverifyPhone: (e, t) =>
-            a.tn.post({
+            i.tn.post({
                 url: d.ANM.PHONE_REVERIFY,
                 body: {
                     phone: e,
@@ -77,7 +77,7 @@ var s,
                 }
             }),
         reverifyPhone: (e, t, n) =>
-            a.tn.post({
+            i.tn.post({
                 url: d.ANM.PHONE_REVERIFY,
                 body: {
                     phone_token: e,
@@ -87,18 +87,18 @@ var s,
                 oldFormErrors: !0
             }),
         validatePhoneForSupport: (e) =>
-            a.tn.post({
+            i.tn.post({
                 url: d.ANM.VERIFY_PHONE_FOR_TICKET,
                 body: { token: e },
                 oldFormErrors: !0
             }),
         async verifyPhone(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
                 r = {},
-                a = l.default.getFingerprint();
-            null != a && '' !== a && (r['X-Fingerprint'] = a), s && (r.authorization = '');
-            let _ = await c.Z.post({
+                i = l.default.getFingerprint();
+            null != i && '' !== i && (r['X-Fingerprint'] = i), o && (r.authorization = '');
+            let m = await c.Z.post({
                 url: d.ANM.VERIFY_PHONE,
                 headers: r,
                 body: {
@@ -106,15 +106,15 @@ var s,
                     code: t
                 },
                 oldFormErrors: !0,
-                trackedActionData: { event: i.NetworkActionNames.USER_VERIFY_PHONE }
+                trackedActionData: { event: a.NetworkActionNames.USER_VERIFY_PHONE }
             });
             return (
                 n &&
-                    o.Z.dispatch({
+                    s.Z.dispatch({
                         type: 'MODAL_POP',
                         key: u.M
                     }),
-                _.body
+                m.body
             );
         }
     });

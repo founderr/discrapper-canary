@@ -1,30 +1,30 @@
 n.d(t, {
     b: function () {
-        return d;
+        return u;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(846027),
-    o = n(468026),
-    s = n(689938);
-let l = null;
-function u() {
-    null !== l && (0, i.closeModal)(l), (l = null);
-}
+var a = n(481060),
+    s = n(846027),
+    l = n(468026),
+    r = n(689938);
+let o = null;
 function c() {
-    a.Z.setSilenceWarning(!1), u();
+    null !== o && (0, a.closeModal)(o), (o = null);
 }
 function d() {
-    l = (0, i.openModal)((e) =>
-        (0, r.jsx)(o.default, {
-            title: s.Z.Messages.CONFIRM_DISABLE_SILENCE_TITLE,
-            body: s.Z.Messages.CONFIRM_DISABLE_SILENCE_BODY,
-            secondaryConfirmText: s.Z.Messages.CONFIRM_DISABLE_SILENCE_DONT_SHOW,
-            onConfirmSecondary: c,
-            onConfirm: u,
-            confirmText: s.Z.Messages.OKAY,
+    s.Z.setSilenceWarning(!1), c();
+}
+function u() {
+    o = (0, a.openModal)((e) =>
+        (0, i.jsx)(l.default, {
+            title: r.Z.Messages.CONFIRM_DISABLE_SILENCE_TITLE,
+            body: r.Z.Messages.CONFIRM_DISABLE_SILENCE_BODY,
+            secondaryConfirmText: r.Z.Messages.CONFIRM_DISABLE_SILENCE_DONT_SHOW,
+            onConfirmSecondary: d,
+            onConfirm: c,
+            confirmText: r.Z.Messages.OKAY,
             ...e
         })
     );

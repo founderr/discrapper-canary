@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(1561),
+    s = n.n(a),
+    o = n(1561),
     l = n(761224),
     u = n(743236),
     c = n(186523),
@@ -15,20 +15,20 @@ var r = n(735250),
     _ = n(939350),
     E = n(667947);
 function f(e) {
-    let { color: t = 'default', label: n, checked: a, subtext: f, disabled: h, isFocused: p, menuItemProps: m, action: I } = e,
+    let { color: t = 'default', label: n, checked: a, subtext: f, disabled: h, isFocused: p, menuItemProps: I, action: m } = e,
         T = i.useRef(null);
     return (
         i.useEffect(() => {
             p && (0, u.F)(T);
         }, [p]),
-        (0, r.jsxs)(s.P, {
+        (0, r.jsxs)(o.P, {
             innerRef: T,
-            className: o()(E.item, E.labelContainer, _._[t], {
+            className: s()(E.item, E.labelContainer, _._[t], {
                 [E.disabled]: h,
                 [E.focused]: p
             }),
-            onClick: h ? void 0 : I,
-            ...m,
+            onClick: h ? void 0 : m,
+            ...I,
             'aria-checked': a,
             'aria-disabled': h,
             children: [

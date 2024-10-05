@@ -1,46 +1,46 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(857395),
-    o = n(739566),
-    s = n(834129),
-    l = n(689938);
-function u(e) {
+var a = n(481060),
+    s = n(857395),
+    l = n(739566),
+    r = n(834129),
+    o = n(689938);
+function c(e) {
     let { children: t, messageReference: n } = e;
-    if (null == n) return (0, r.jsx)(i.Anchor, { children: t });
-    let { guild_id: o, channel_id: s, message_id: l } = n;
-    return null == o
-        ? (0, r.jsx)(i.Anchor, { children: t })
-        : (0, r.jsx)(a.Z, {
-              guildId: o,
-              channelId: s,
-              messageId: l,
+    if (null == n) return (0, i.jsx)(a.Anchor, { children: t });
+    let { guild_id: l, channel_id: r, message_id: o } = n;
+    return null == l
+        ? (0, i.jsx)(a.Anchor, { children: t })
+        : (0, i.jsx)(s.Z, {
+              guildId: l,
+              channelId: r,
+              messageId: o,
               children: (e) => {
-                  let { 'aria-controls': n, 'aria-expanded': a, ...o } = e;
-                  return (0, r.jsx)(i.Anchor, {
-                      ...o,
+                  let { 'aria-controls': n, 'aria-expanded': s, ...l } = e;
+                  return (0, i.jsx)(a.Anchor, {
+                      ...l,
                       children: t
                   });
               }
           });
 }
-function c(e) {
-    let { usernameHook: t, message: i, compact: a } = e,
-        { content: c, timestamp: d, messageReference: _ } = i,
-        E = (0, o.ZP)(i),
-        f = t(E),
-        h = l.Z.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
+function d(e) {
+    let { usernameHook: t, message: a, compact: s } = e,
+        { content: d, timestamp: u, messageReference: _ } = a,
+        E = (0, l.ZP)(a),
+        I = t(E),
+        m = o.Z.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
             username: E.nick,
-            usernameHook: f,
-            webhookName: c,
+            usernameHook: I,
+            webhookName: d,
             webhookNameHook: (e, t) =>
-                (0, r.jsx)(
-                    u,
+                (0, i.jsx)(
+                    c,
                     {
                         messageReference: _,
                         children: e
@@ -48,10 +48,10 @@ function c(e) {
                     t
                 )
         });
-    return (0, r.jsx)(s.Z, {
+    return (0, i.jsx)(r.Z, {
         icon: n(570111),
-        timestamp: d,
-        compact: a,
-        children: h
+        timestamp: u,
+        compact: s,
+        children: m
     });
 }

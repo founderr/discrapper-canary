@@ -1,38 +1,38 @@
-t(411104);
-var l = t(991637),
-    s = t.n(l),
-    a = t(388123),
-    r = t(904245),
-    i = t(957730),
-    o = t(592125),
-    u = t(496675),
-    c = t(784384);
+n(411104);
+var l = n(991637),
+    a = n.n(l),
+    s = n(388123),
+    i = n(904245),
+    r = n(957730),
+    o = n(592125),
+    c = n(496675),
+    u = n(784384);
 let d = {
-    async sendForward(e, n, t) {
-        let l = o.Z.getChannel(n),
-            s = o.Z.getChannel(e.channel_id);
-        if (null == s) throw Error('Unable to find original channel for message');
+    async sendForward(e, t, n) {
+        let l = o.Z.getChannel(t),
+            a = o.Z.getChannel(e.channel_id);
+        if (null == a) throw Error('Unable to find original channel for message');
         if (null == l) throw Error('Unable to find destination channel for message');
-        let d = i.ZP.parse(l, ''),
+        let d = r.ZP.parse(l, ''),
             h = {
-                guild_id: s.guild_id,
+                guild_id: a.guild_id,
                 channel_id: e.channel_id,
                 message_id: e.id,
-                type: a.U.FORWARD,
+                type: s.U.FORWARD,
                 forward_only:
-                    (null == t ? void 0 : t.onlyAttachmentIds) != null || (null == t ? void 0 : t.onlyEmbedIndices) != null
+                    (null == n ? void 0 : n.onlyAttachmentIds) != null || (null == n ? void 0 : n.onlyEmbedIndices) != null
                         ? {
-                              attachment_ids: t.onlyAttachmentIds,
-                              embed_indices: t.onlyEmbedIndices
+                              attachment_ids: n.onlyAttachmentIds,
+                              embed_indices: n.onlyEmbedIndices
                           }
                         : void 0
             };
-        await r.Z.sendMessage(l.id, d, !1, {
+        await i.Z.sendMessage(l.id, d, !1, {
             messageReference: h,
             eagerDispatch: !1
         }),
-            (null == t ? void 0 : t.withMessage) != null && !(0, c.pU)(l, u.Z) && (await r.Z.sendMessage(l.id, i.ZP.parse(l, t.withMessage), !1));
+            (null == n ? void 0 : n.withMessage) != null && !(0, u.pU)(l, c.Z) && (await i.Z.sendMessage(l.id, r.ZP.parse(l, n.withMessage), !1));
     },
-    sendForwards: (e, n, t) => s()(n.map((n) => d.sendForward(e, n, t)))
+    sendForwards: (e, t, n) => a()(t.map((t) => d.sendForward(e, t, n)))
 };
-n.Z = d;
+t.Z = d;

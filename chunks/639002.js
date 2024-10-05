@@ -1,25 +1,25 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return u;
     }
 });
-var a = t(735250);
-t(470079);
-var i = t(481060),
-    l = t(782568),
-    s = t(626135),
-    r = t(132871),
-    c = t(981631),
-    o = t(689938),
-    d = t(862661);
+var a = n(735250);
+n(470079);
+var i = n(481060),
+    l = n(782568),
+    r = n(626135),
+    s = n(132871),
+    c = n(981631),
+    o = n(689938),
+    d = n(862661);
 function u(e) {
-    let { guildId: n } = e;
+    let { guildId: t } = e;
     return (0, a.jsxs)('div', {
         className: d.container,
         children: [
             (0, a.jsx)('img', {
                 className: d.image,
-                src: t(731914),
+                src: n(731914),
                 alt: ''
             }),
             (0, a.jsxs)('div', {
@@ -38,10 +38,10 @@ function u(e) {
             (0, a.jsx)(i.Button, {
                 size: i.Button.Sizes.SMALL,
                 onClick: function () {
-                    s.default.track(c.rMx.APP_DIRECTORY_CTA_CLICKED, {
+                    r.default.track(c.rMx.APP_DIRECTORY_CTA_CLICKED, {
                         cta: 'submit_music_app',
-                        current_page: r.ApplicationDirectoryViews.SEARCH,
-                        guild_id: n
+                        current_page: s.ApplicationDirectoryViews.SEARCH,
+                        guild_id: t
                     }),
                         (0, l.Z)('https://dis.gd/music-search-page-inclusion');
                 },

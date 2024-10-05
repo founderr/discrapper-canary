@@ -1,11 +1,11 @@
 var r = n(814033),
     i = n(685053),
     a = i.assert,
-    o = i.cachedProperty,
-    s = i.parseBytes;
+    s = i.cachedProperty,
+    o = i.parseBytes;
 function l(e, t) {
     (this.eddsa = e),
-        'object' != typeof t && (t = s(t)),
+        'object' != typeof t && (t = o(t)),
         Array.isArray(t) &&
             (t = {
                 R: t.slice(0, e.encodingLength),
@@ -17,16 +17,16 @@ function l(e, t) {
         (this._Rencoded = Array.isArray(t.R) ? t.R : t.Rencoded),
         (this._Sencoded = Array.isArray(t.S) ? t.S : t.Sencoded);
 }
-o(l, 'S', function () {
+s(l, 'S', function () {
     return this.eddsa.decodeInt(this.Sencoded());
 }),
-    o(l, 'R', function () {
+    s(l, 'R', function () {
         return this.eddsa.decodePoint(this.Rencoded());
     }),
-    o(l, 'Rencoded', function () {
+    s(l, 'Rencoded', function () {
         return this.eddsa.encodePoint(this.R());
     }),
-    o(l, 'Sencoded', function () {
+    s(l, 'Sencoded', function () {
         return this.eddsa.encodeInt(this.S());
     }),
     (l.prototype.toBytes = function () {

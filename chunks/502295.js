@@ -18,14 +18,14 @@ function a() {
         t = (0, r.useCallback)(() => {
             let { current: t } = e;
             if (null != t) {
-                let { scrollTop: e, scrollLeft: n, scrollHeight: r, scrollWidth: i, offsetHeight: a, offsetWidth: o } = t;
+                let { scrollTop: e, scrollLeft: n, scrollHeight: r, scrollWidth: i, offsetHeight: a, offsetWidth: s } = t;
                 return {
                     scrollTop: e,
                     scrollLeft: n,
                     scrollHeight: r,
                     scrollWidth: i,
                     offsetHeight: a,
-                    offsetWidth: o,
+                    offsetWidth: s,
                     dirty: 0
                 };
             }

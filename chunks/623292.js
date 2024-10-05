@@ -1,6 +1,6 @@
 n.d(t, {
     A6: function () {
-        return o;
+        return s;
     },
     fE: function () {
         return i;
@@ -11,14 +11,14 @@ n.d(t, {
 });
 var r = n(570140);
 function i(e) {
-    let { message: t, channel: n, shouldMention: i, showMentionToggle: a, source: o } = e;
+    let { message: t, channel: n, shouldMention: i, showMentionToggle: a, source: s } = e;
     r.Z.dispatch({
         type: 'CREATE_PENDING_REPLY',
         message: t,
         channel: n,
         shouldMention: i,
         showMentionToggle: a,
-        source: o
+        source: s
     });
 }
 function a(e, t) {
@@ -28,7 +28,7 @@ function a(e, t) {
         shouldMention: t
     });
 }
-function o(e) {
+function s(e) {
     r.Z.dispatch({
         type: 'DELETE_PENDING_REPLY',
         channelId: e

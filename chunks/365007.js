@@ -24,20 +24,20 @@ n.d(t, {
 var r = n(525769),
     i = n(544891),
     a = n(570140),
-    o = n(573261),
-    s = n(981631);
+    s = n(573261),
+    o = n(981631);
 async function l() {
-    return (await i.tn.post(s.ANM.WEBAUTHN_CONDITIONAL_UI_CHALLENGE)).body;
+    return (await i.tn.post(o.ANM.WEBAUTHN_CONDITIONAL_UI_CHALLENGE)).body;
 }
 async function u() {
-    let { challenge: e, ticket: t } = (await i.tn.post(s.ANM.WEBAUTHN_PASSWORDLESS_CHALLENGE)).body;
+    let { challenge: e, ticket: t } = (await i.tn.post(o.ANM.WEBAUTHN_PASSWORDLESS_CHALLENGE)).body;
     return {
         challenge: e,
         ticket: t
     };
 }
 function c() {
-    i.tn.get(s.ANM.MFA_WEBAUTHN_CREDENTIALS).then((e) => {
+    i.tn.get(o.ANM.MFA_WEBAUTHN_CREDENTIALS).then((e) => {
         a.Z.dispatch({
             type: 'MFA_WEBAUTHN_CREDENTIALS_LOADED',
             credentials: e.body
@@ -45,7 +45,7 @@ function c() {
     });
 }
 function d(e) {
-    i.tn.del(s.ANM.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
+    i.tn.del(o.ANM.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
         a.Z.dispatch({
             type: 'AUTHENTICATOR_DELETE',
             credential: e
@@ -54,7 +54,7 @@ function d(e) {
 }
 async function _(e, t) {
     let n = await i.tn.patch({
-        url: s.ANM.MFA_WEBAUTHN_CREDENTIAL(e),
+        url: o.ANM.MFA_WEBAUTHN_CREDENTIAL(e),
         body: { name: t }
     });
     a.Z.dispatch({
@@ -66,7 +66,7 @@ async function E() {
     let {
         body: { ticket: e, challenge: t }
     } = await i.tn.post({
-        url: s.ANM.MFA_WEBAUTHN_CREDENTIALS,
+        url: o.ANM.MFA_WEBAUTHN_CREDENTIALS,
         body: {}
     });
     return {
@@ -75,8 +75,8 @@ async function E() {
     };
 }
 async function f(e, t, n) {
-    let i = await o.Z.post({
-        url: s.ANM.MFA_WEBAUTHN_CREDENTIALS,
+    let i = await s.Z.post({
+        url: o.ANM.MFA_WEBAUTHN_CREDENTIALS,
         body: {
             name: e,
             ticket: t,

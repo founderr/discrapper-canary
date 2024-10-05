@@ -1,67 +1,67 @@
-n.d(t, {
+s.d(t, {
     Z: function () {
-        return f;
+        return S;
     }
 }),
-    n(47120);
-var s = n(735250),
-    i = n(470079),
-    a = n(212433),
-    r = n(481060),
-    o = n(230711),
-    l = n(687158),
-    u = n(63063),
-    d = n(51144),
-    c = n(544508),
-    E = n(801461),
-    _ = n(981631),
-    m = n(689938),
-    g = n(923112);
-function f(e) {
-    let { userRef: t, usernameSuggestionLoading: n = !1, oneClickFlow: f = !1, ...I } = e,
-        { user: S, editState: T, onClose: h } = I,
-        N = (0, l.ZP)(S.id),
-        O = (function (e, t, n) {
+    s(47120);
+var n = s(735250),
+    i = s(470079),
+    a = s(212433),
+    r = s(481060),
+    o = s(230711),
+    l = s(687158),
+    u = s(63063),
+    c = s(51144),
+    d = s(544508),
+    E = s(801461),
+    _ = s(981631),
+    g = s(689938),
+    m = s(923112);
+function S(e) {
+    let { userRef: t, usernameSuggestionLoading: s = !1, oneClickFlow: S = !1, ...I } = e,
+        { user: T, editState: N, onClose: O } = I,
+        h = (0, l.ZP)(T.id),
+        f = (function (e, t, s) {
             switch (e) {
                 case E.Wq.EDIT_USERNAME:
                     return {
-                        header: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
-                        subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
+                        header: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
+                        subtitle: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
                     };
                 case E.Wq.EDIT_DISPLAY_NAME:
                     return {
-                        header: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_1_TITLE,
-                        subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_1_SUBTITLE
+                        header: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_1_TITLE,
+                        subtitle: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_1_SUBTITLE
                     };
                 case E.Wq.PREVIEW:
                     return {
-                        header: m.Z.Messages.POMELO_EXISTING_FLOW_COMPLETION_TITLE.format({ displayName: t }),
-                        subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_2.format({
+                        header: g.Z.Messages.POMELO_EXISTING_FLOW_COMPLETION_TITLE.format({ displayName: t }),
+                        subtitle: g.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_2.format({
                             onClick: () => {
-                                n(), o.Z.open(_.oAB.ACCOUNT);
+                                s(), o.Z.open(_.oAB.ACCOUNT);
                             }
                         })
                     };
                 case E.Wq.SUGGESTION:
                     return {
-                        header: m.Z.Messages.POMELO_ACTION_LABEL_OCF,
-                        subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_OCF.format(),
-                        link: m.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({ helpdeskArticle: u.Z.getArticleURL(_.BhN.POMELO_FAQ) })
+                        header: g.Z.Messages.POMELO_ACTION_LABEL_OCF,
+                        subtitle: g.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_OCF.format(),
+                        link: g.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({ helpdeskArticle: u.Z.getArticleURL(_.BhN.POMELO_FAQ) })
                     };
                 default:
                     return {
-                        header: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
-                        subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
+                        header: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
+                        subtitle: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
                     };
             }
-        })(T, d.ZP.getName(S), h),
-        [M, C] = (0, r.useSpring)(() => ({
+        })(N, c.ZP.getName(T), O),
+        [M, L] = (0, r.useSpring)(() => ({
             opacity: 0,
             y: 10
         }));
     return (
         i.useEffect(() => {
-            C({
+            L({
                 y: 0,
                 opacity: 1,
                 from: {
@@ -69,47 +69,47 @@ function f(e) {
                     opacity: 0
                 }
             });
-        }, [C, T]),
-        (0, s.jsxs)('div', {
-            className: g.displayNameContainer,
+        }, [L, N]),
+        (0, n.jsxs)('div', {
+            className: m.displayNameContainer,
             children: [
-                (0, s.jsxs)(a.animated.div, {
+                (0, n.jsxs)(a.animated.div, {
                     style: {
                         opacity: M.opacity,
                         y: M.y
                     },
                     children: [
-                        (0, s.jsx)(r.Heading, {
-                            className: g.title,
+                        (0, n.jsx)(r.Heading, {
+                            className: m.title,
                             color: 'header-primary',
                             variant: 'heading-xl/extrabold',
-                            children: O.header
+                            children: f.header
                         }),
-                        (0, s.jsxs)('div', {
-                            className: g.subtitle,
+                        (0, n.jsxs)('div', {
+                            className: m.subtitle,
                             children: [
-                                (0, s.jsx)(r.Heading, {
+                                (0, n.jsx)(r.Heading, {
                                     color: 'header-secondary',
                                     variant: 'heading-sm/medium',
-                                    children: O.subtitle
+                                    children: f.subtitle
                                 }),
-                                null != O.link &&
-                                    (0, s.jsx)(r.Text, {
-                                        className: g.link,
+                                null != f.link &&
+                                    (0, n.jsx)(r.Text, {
+                                        className: m.link,
                                         color: 'header-secondary',
                                         variant: 'text-sm/medium',
-                                        children: O.link
+                                        children: f.link
                                     })
                             ]
                         })
                     ]
                 }),
-                (0, s.jsx)(c.Z, {
+                (0, n.jsx)(d.Z, {
                     ...I,
-                    displayProfile: N,
+                    displayProfile: h,
                     ref: t,
-                    usernameSuggestionLoading: n,
-                    oneClickFlow: f
+                    usernameSuggestionLoading: s,
+                    oneClickFlow: S
                 })
             ]
         })

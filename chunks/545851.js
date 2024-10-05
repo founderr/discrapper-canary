@@ -1,9 +1,9 @@
-n.d(t, {
+s.d(t, {
     E: function () {
         return i;
     }
 });
-let s = (0, n(818083).B)({
+let n = (0, s(818083).B)({
         kind: 'user',
         label: 'Pomelo Attempt',
         id: '2023-04_pomelo_attempt',
@@ -16,4 +16,4 @@ let s = (0, n(818083).B)({
             }
         ]
     }),
-    i = () => s.getCurrentConfig({ location: 'c22166_1' }, { autoTrackExposure: !1 }).enabled;
+    i = () => n.getCurrentConfig({ location: 'c22166_1' }, { autoTrackExposure: !1 }).enabled;

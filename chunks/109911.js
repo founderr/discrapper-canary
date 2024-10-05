@@ -1,6 +1,6 @@
 n.d(t, {
     Ji: function () {
-        return o;
+        return s;
     }
 }),
     n(873546);
@@ -31,7 +31,7 @@ let i = (0, r.B)({
             }
         ]
     });
-function o(e) {
+function s(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = i.getCurrentConfig(
             { location: e },

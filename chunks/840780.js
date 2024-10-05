@@ -21,18 +21,18 @@ var i = n(735250),
     S = n(933557),
     x = n(194082),
     v = n(311352),
-    Z = n(436774),
-    T = n(594190),
-    b = n(925329),
-    A = n(810568),
-    M = n(168524),
-    R = n(382182),
+    T = n(436774),
+    Z = n(594190),
+    A = n(925329),
+    b = n(810568),
+    R = n(168524),
+    M = n(382182),
     L = n(74299),
     P = n(914923),
-    y = n(165393),
-    O = n(989941),
-    j = n(803647),
-    D = n(690221),
+    O = n(165393),
+    y = n(989941),
+    D = n(803647),
+    j = n(690221),
     w = n(231664),
     U = n(759198),
     G = n(131704),
@@ -157,7 +157,7 @@ class ec extends l.PureComponent {
                 (0, i.jsxs)('div', {
                     className: ea.gameIconWrapper,
                     children: [
-                        (0, i.jsx)(b.Z, {
+                        (0, i.jsx)(A.Z, {
                             className: ea.gameIcon,
                             game: t,
                             pid: null == n ? void 0 : n.pid
@@ -193,7 +193,7 @@ class ec extends l.PureComponent {
             className: ea.gameWrapper,
             children: [
                 e
-                    ? (0, i.jsx)(y.Z, { title: r })
+                    ? (0, i.jsx)(O.Z, { title: r })
                     : (0, i.jsx)(x.ZP, {
                           look: x.ZP.Looks.GRAY,
                           size: x.ZP.Sizes.SMALL,
@@ -209,7 +209,7 @@ class ec extends l.PureComponent {
                                 children: [
                                     (0, i.jsx)(u.NitroWheelIcon, {
                                         size: 'xxs',
-                                        color: Z.JX.PREMIUM_TIER_2
+                                        color: T.JX.PREMIUM_TIER_2
                                     }),
                                     (0, i.jsx)(U.Z, {
                                         className: ea.perksDemoText,
@@ -230,7 +230,7 @@ class ec extends l.PureComponent {
         let s = { start: n.connectedSince },
             o = r;
         null != a ? ((e = ei.Z5c.CHANNEL(a.id, l.id)), (o = ''.concat(o, ' / ').concat(a.name))) : (e = ei.Z5c.CHANNEL(ei.ME, l.id));
-        let c = (0, i.jsx)(D.Z, {
+        let c = (0, i.jsx)(j.Z, {
             href: e,
             onClick: this.handleApplicationLinkClick,
             children: (0, i.jsx)(et.Z, {
@@ -241,15 +241,15 @@ class ec extends l.PureComponent {
         return (0, i.jsxs)('div', {
             className: ea.gameWrapper,
             children: [
-                (0, i.jsx)(b.Z, {
+                (0, i.jsx)(A.Z, {
                     className: ea.gameIcon,
                     game: t,
-                    size: b.Z.Sizes.SMALL
+                    size: A.Z.Sizes.SMALL
                 }),
                 (0, i.jsxs)('div', {
                     className: ea.info,
                     children: [
-                        (0, i.jsx)(D.Z, {
+                        (0, i.jsx)(j.Z, {
                             href: e,
                             onClick: this.handleApplicationLinkClick,
                             children: (0, i.jsx)(en.Z, {
@@ -297,7 +297,7 @@ class ec extends l.PureComponent {
             }),
             es(this, 'handleClickStopStreamingButton', () => {
                 let { stream: e } = this.props;
-                (0, j.Z)(e);
+                (0, D.Z)(e);
             }),
             es(this, 'handleClickInviteButton', () => {
                 let { activity: e, analyticsContext: t } = this.props;
@@ -329,10 +329,10 @@ class ec extends l.PureComponent {
 }
 function eu(e) {
     let { name: t, applicationId: n } = e,
-        l = (0, M.Z)({
+        l = (0, R.Z)({
             location: 'ActivityPanelGameCard',
             applicationId: n,
-            source: A.m1.RtcPanel,
+            source: b.m1.RtcPanel,
             trackEntryPointImpression: !0
         });
     return (0, i.jsx)(u.Clickable, {
@@ -348,7 +348,7 @@ t.Z = (0, _.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
         r = (0, c.e7)([B.default], () => B.default.getId()),
-        a = (0, c.e7)([T.ZP, X.Z], () => (0, O.Z)(T.ZP, X.Z)),
+        a = (0, c.e7)([Z.ZP, X.Z], () => (0, y.Z)(Z.ZP, X.Z)),
         s = (0, c.e7)([q.Z, V.Z], () => V.Z.getChannel(q.Z.getVoiceChannelId())),
         o = (0, c.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
         u = (0, c.e7)([V.Z], () => V.Z.getChannel(o)),
@@ -356,7 +356,7 @@ t.Z = (0, _.Z)(function (e) {
         [h, p] = (0, c.Wu)([k.Z], () => [k.Z.getCurrentUserActiveStream(), k.Z.getStreamerActiveStreamMetadata()]),
         f = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         _ = (0, c.e7)([C.ZP], () => (null != u ? C.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        g = (0, c.e7)([F.Z, z.Z, H.ZP], () => (null != s ? R.JL(s, F.Z, z.Z, !1) : null != n && R.h_(H.ZP.getChannels(n), F.Z, z.Z).length > 0)),
+        g = (0, c.e7)([F.Z, z.Z, H.ZP], () => (null != s ? M.JL(s, F.Z, z.Z, !1) : null != n && M.h_(H.ZP.getChannels(n), F.Z, z.Z).length > 0)),
         [I] = (0, N.Z)([
             null !==
                 (t = (function () {
@@ -370,8 +370,8 @@ t.Z = (0, _.Z)(function (e) {
         E = (0, c.e7)([W.Z], () => (0, L.Z)(W.Z) && (0, $.isWindows)()),
         x = (0, c.e7)([Y.Z], () => (null != r ? Y.Z.findActivity(r, (e) => e.type === ei.IIU.PLAYING) : null)),
         v = null != h && h.ownerId === r && h.state !== ei.jm8.ENDED,
-        Z = (0, c.e7)([Q.default, K.Z], () => (null != u ? (0, S.F6)(u, Q.default, K.Z) : void 0)),
-        b = (0, w.Z)();
+        T = (0, c.e7)([Q.default, K.Z], () => (null != u ? (0, S.F6)(u, Q.default, K.Z) : void 0)),
+        A = (0, w.Z)();
     return (0, i.jsx)(ec, {
         ...l,
         guildId: n,
@@ -387,8 +387,8 @@ t.Z = (0, _.Z)(function (e) {
         canStream: g,
         stream: h,
         streamMetadata: p,
-        channelName: Z,
+        channelName: T,
         guildForConnectedChannel: d,
-        streamQualityIndicator: b
+        streamQualityIndicator: A
     });
 });

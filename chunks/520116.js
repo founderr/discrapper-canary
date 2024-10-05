@@ -1,40 +1,40 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return R;
     }
-});
-var r = n(653041);
+}),
+    n(653041);
 var i = n(735250),
     a = n(470079),
-    o = n(913527),
-    s = n.n(o),
-    l = n(91192),
-    u = n(442837),
+    s = n(913527),
+    l = n.n(s),
+    r = n(91192),
+    o = n(442837),
     c = n(481060),
     d = n(135938),
-    _ = n(900164),
-    E = n(554838),
-    f = n(493892),
-    h = n(661824),
-    p = n(37772),
-    m = n(695346),
-    I = n(314897),
-    T = n(496675),
-    g = n(594174),
-    S = n(55935),
-    A = n(655354),
-    v = n(809780),
-    N = n(981631),
-    O = n(689938),
-    R = n(896845);
-let C = {
+    u = n(900164),
+    _ = n(554838),
+    E = n(493892),
+    I = n(661824),
+    m = n(37772),
+    T = n(695346),
+    N = n(314897),
+    h = n(496675),
+    C = n(594174),
+    p = n(55935),
+    f = n(655354),
+    g = n(809780),
+    A = n(981631),
+    S = n(689938),
+    M = n(896845);
+let x = {
     left: 4,
     right: -12
 };
-function y(e) {
+function O(e) {
     var t;
-    let { channel: n, message: r, compact: o, isGroupStart: s, treatSpam: u, gotoChannel: d } = e,
-        _ = (0, l.JA)(null !== (t = r.id) && void 0 !== t ? t : ''),
+    let { channel: n, message: s, compact: l, isGroupStart: o, treatSpam: d, gotoChannel: u } = e,
+        _ = (0, r.JA)(null !== (t = s.id) && void 0 !== t ? t : ''),
         E = a.useCallback(
             (e) => {
                 if ('ArrowLeft' === e.key) {
@@ -45,105 +45,105 @@ function y(e) {
             [n.id]
         );
     return (0, i.jsx)(c.FocusRing, {
-        offset: C,
+        offset: x,
         children: (0, i.jsxs)(
             'div',
             {
-                className: R.messageContainer,
+                className: M.messageContainer,
                 onKeyDown: E,
                 ..._,
                 children: [
-                    (0, i.jsx)(A.Z, {
-                        className: R.jumpButton,
-                        onJump: (e) => d(e, r.id)
+                    (0, i.jsx)(f.Z, {
+                        className: M.jumpButton,
+                        onJump: (e) => u(e, s.id)
                     }),
-                    (0, i.jsx)(p.Z, {
-                        id: r.id,
-                        message: r,
+                    (0, i.jsx)(m.Z, {
+                        id: s.id,
+                        message: s,
                         channel: n,
-                        className: R.message,
-                        compact: o,
+                        className: M.message,
+                        compact: l,
                         animateAvatar: !1,
-                        isGroupStart: s,
+                        isGroupStart: o,
                         onKeyDown: E,
-                        treatSpam: u
+                        treatSpam: d
                     })
                 ]
             },
-            r.id
+            s.id
         )
     });
 }
-function L(e) {
+function R(e) {
     var t, n;
-    let { channel: r, channelRecord: a, gotoChannel: o } = e,
-        { enabled: l } = d.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
-        p = m.jU.useSetting(),
-        A = (0, u.e7)([T.Z], () => T.Z.can(N.Plq.CREATE_INSTANT_INVITE, a)),
-        C = (0, f.P1)(a),
-        L = !1,
-        b = 0 === r.messages.length || s()(r.messages[0].timestamp).isSame(s()(), 'day'),
-        D = null !== (n = null === (t = g.default.getUser(I.default.getId())) || void 0 === t ? void 0 : t.hasFlag(N.xW$.SPAMMER)) && void 0 !== n && n,
-        M = [];
-    if (!r.collapsed) {
+    let { channel: a, channelRecord: s, gotoChannel: r } = e,
+        { enabled: m } = d.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
+        f = T.jU.useSetting(),
+        x = (0, o.e7)([h.Z], () => h.Z.can(A.Plq.CREATE_INSTANT_INVITE, s)),
+        R = (0, E.P1)(s),
+        v = !1,
+        L = 0 === a.messages.length || l()(a.messages[0].timestamp).isSame(l()(), 'day'),
+        Z = null !== (n = null === (t = C.default.getUser(N.default.getId())) || void 0 === t ? void 0 : t.hasFlag(A.xW$.SPAMMER)) && void 0 !== n && n,
+        P = [];
+    if (!a.collapsed) {
         let e = null,
             t = null,
-            n = r.messages.slice(0, v.hC);
+            n = a.messages.slice(0, g.hC);
         n.forEach((n) => {
-            if (!(0, _.Z)(n, A)) {
-                if (!b && (null == e || !e.isSame(n.timestamp, 'day'))) {
-                    let t = (0, S.vc)(n.timestamp, 'LL');
-                    M.push(
+            if (!(0, u.Z)(n, x)) {
+                if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
+                    let t = (0, p.vc)(n.timestamp, 'LL');
+                    P.push(
                         (0, i.jsx)(
-                            h.Z,
+                            I.Z,
                             {
-                                className: R.divider,
+                                className: M.divider,
                                 children: t
                             },
                             t
                         )
                     ),
-                        (e = s()(n.timestamp));
+                        (e = l()(n.timestamp));
                 }
-                let r = null == t || (0, E.Z)(a, t, n);
+                let a = null == t || (0, _.Z)(s, t, n);
                 (t = n),
-                    (L = L || (0, f.DQ)(n)),
-                    M.push(
+                    (v = v || (0, E.DQ)(n)),
+                    P.push(
                         (0, i.jsx)(
-                            y,
+                            O,
                             {
-                                channel: a,
+                                channel: s,
                                 message: n,
-                                compact: p,
-                                isGroupStart: r,
-                                treatSpam: !D && l && (0, f.DQ)(n) && C,
-                                gotoChannel: o
+                                compact: f,
+                                isGroupStart: a,
+                                treatSpam: !Z && m && (0, E.DQ)(n) && R,
+                                gotoChannel: r
                             },
                             n.id
                         )
                     );
             }
         }),
-            r.messages.length >= v.hC &&
-                M.push(
+            a.messages.length >= g.hC &&
+                P.push(
                     (0, i.jsxs)(
                         c.Button,
                         {
                             color: c.Button.Colors.LINK,
                             look: c.Button.Looks.LINK,
-                            onClick: (e) => o(e, n[n.length - 1].id),
-                            children: [O.Z.Messages.UNREADS_VIEW_CHANNEL, ' \u203A']
+                            onClick: (e) => r(e, n[n.length - 1].id),
+                            children: [S.Z.Messages.UNREADS_VIEW_CHANNEL, ' \u203A']
                         },
                         'view-all'
                     )
                 ),
-            0 === M.length && (M = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
+            0 === P.length && (P = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
     }
     return (
-        L && C && d.Z.trackExposure({ location: '20e3b0_2' }),
+        v && R && d.Z.trackExposure({ location: '20e3b0_2' }),
         (0, i.jsx)('div', {
-            className: R.messages,
-            children: M
+            className: M.messages,
+            children: P
         })
     );
 }

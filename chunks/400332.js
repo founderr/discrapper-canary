@@ -1,12 +1,12 @@
 t.d(n, {
     U: function () {
-        return l;
+        return o;
     }
 });
 var i = t(585483),
-    o = t(981631);
-let l = {
+    l = t(981631);
+let o = {
     binds: ['mod+s'],
     comboKeysBindGlobal: !0,
-    action: () => (i.S.dispatchToLastSubscribed(o.CkL.TOGGLE_STICKER_PICKER), !1)
+    action: () => (i.S.dispatchToLastSubscribed(l.CkL.TOGGLE_STICKER_PICKER), !1)
 };

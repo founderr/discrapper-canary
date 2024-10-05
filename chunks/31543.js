@@ -1,8 +1,8 @@
 var r = n(735250),
     i = n(470079),
     a = n(143927),
-    o = n(260866),
-    s = n(461745),
+    s = n(260866),
+    o = n(461745),
     l = n(806966),
     u = n(28546),
     c = n(453070),
@@ -12,16 +12,16 @@ var r = n(735250),
 let f = i.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: f, channel: h } = e,
         p = (0, c.fQ)(h),
-        m = i.useRef(null),
-        { searchQuery: I, isSearchSuggestion: T } = (0, u.Iu)(
+        I = i.useRef(null),
+        { searchQuery: m, isSearchSuggestion: T } = (0, u.Iu)(
             (e) => ({
                 searchQuery: e.searchQuery,
                 isSearchSuggestion: e.isSearchSuggestion
             }),
             a.Z
         ),
-        g = l.ZN.useStore((e) => e.searchPlaceholder),
-        S = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.Z),
+        S = l.ZN.useStore((e) => e.searchPlaceholder),
+        g = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.Z),
         A = i.useCallback(
             (e) => {
                 var t;
@@ -29,32 +29,32 @@ let f = i.forwardRef(function (e, t) {
             },
             [f]
         ),
-        v = i.useCallback(() => {
+        N = i.useCallback(() => {
             (0, u.ql)('');
         }, []);
     return (
         i.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
-                return null === (e = m.current) || void 0 === e ? void 0 : e.focus();
+                return null === (e = I.current) || void 0 === e ? void 0 : e.focus();
             }
         })),
         i.useLayoutEffect(() => {
             if (T) {
                 var e;
-                null === (e = m.current) || void 0 === e || e.focus();
+                null === (e = I.current) || void 0 === e || e.focus();
             }
         }, [T]),
         (0, r.jsx)('div', {
             className: E.wrapper,
-            children: (0, r.jsx)(s.ZP, {
+            children: (0, r.jsx)(o.ZP, {
                 autoFocus: p,
                 disabled: !p,
-                query: I,
-                ref: m,
-                size: s.ZP.Sizes.MEDIUM,
-                placeholder: null != g ? g : p ? _.Z.Messages.SEARCH_FOR_STICKER : _.Z.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
-                onClear: v,
+                query: m,
+                ref: I,
+                size: o.ZP.Sizes.MEDIUM,
+                placeholder: null != S ? S : p ? _.Z.Messages.SEARCH_FOR_STICKER : _.Z.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
+                onClear: N,
                 onKeyDown: n,
                 onQueryChange: A,
                 className: E.__invalid_searchBar,
@@ -64,7 +64,7 @@ let f = i.forwardRef(function (e, t) {
                     'aria-haspopup': 'grid',
                     'aria-controls': d.Vr,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, o.NE)(d.Vr, S.columnIndex, S.rowIndex)
+                    'aria-activedescendant': (0, s.NE)(d.Vr, g.columnIndex, g.rowIndex)
                 }
             })
         })

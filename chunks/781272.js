@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(302454),
     a = n.n(i),
-    o = n(481060);
-function s(e) {
+    s = n(481060);
+function o(e) {
     return (
         (e.paragraph = {
             ...e.paragraph,
@@ -27,7 +27,7 @@ function s(e) {
                 return (
                     null == i.onClick && (i.href = a().sanitizeUrl(e.target)),
                     (0, r.jsx)(
-                        o.Anchor,
+                        s.Anchor,
                         {
                             title: e.title,
                             ...i,

@@ -1,6 +1,6 @@
 n.d(t, {
     B: function () {
-        return o;
+        return s;
     }
 });
 var r = n(503461),
@@ -18,12 +18,12 @@ function a(e, t, n) {
         e
     );
 }
-class o {
+class s {
     get prefix() {
         return this.table.prefix;
     }
     withoutLogging() {
-        return new o(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new s(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t) {
         return this.table.get([e, t]);
@@ -78,10 +78,10 @@ class o {
         return this.table.deleteGeneration([], e, t);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new s(t)), t);
+        return this.table.transaction((t) => e(new o(t)), t);
     }
     upgradeTransaction(e) {
-        return new s(this.table.upgradeTransaction(e));
+        return new o(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e, t) {
         return this.table.getManySyncUnsafe([e], t);
@@ -93,9 +93,9 @@ class o {
         a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
     }
 }
-class s {
+class o {
     static fromDatabaseTransaction(e, t, n) {
-        return new s(new i.E(e, t, n));
+        return new o(new i.E(e, t, n));
     }
     put(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace;

@@ -7,16 +7,16 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    o = n(1561),
-    s = n(169772);
+    s = n(1561),
+    o = n(169772);
 function l(e) {
     let { as: t, muted: n = !1, selected: i = !1, className: l, ...u } = e,
-        c = null != t ? t : o.P;
+        c = null != t ? t : s.P;
     return (0, r.jsx)(c, {
         ...u,
-        className: a()(s.interactive, l, {
-            [s.muted]: n,
-            [s.selected]: i
+        className: a()(o.interactive, l, {
+            [o.muted]: n,
+            [o.selected]: i
         })
     });
 }

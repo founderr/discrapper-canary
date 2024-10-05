@@ -1,37 +1,37 @@
 n.d(t, {
     h: function () {
-        return l;
+        return o;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(671533),
-    o = n(981631),
-    s = n(279096);
-function l(e) {
-    let { buttonText: t, onGoBack: n, onDismiss: l, showCloseButton: u } = e;
-    return (0, r.jsxs)(i.Notice, {
-        className: s.backNotice,
+var a = n(481060),
+    s = n(671533),
+    l = n(981631),
+    r = n(279096);
+function o(e) {
+    let { buttonText: t, onGoBack: n, onDismiss: o, showCloseButton: c } = e;
+    return (0, i.jsxs)(a.Notice, {
+        className: r.backNotice,
         children: [
-            u &&
-                (0, r.jsx)(i.NoticeCloseButton, {
-                    onClick: l,
-                    noticeType: o.kVF.BACK_TO_PREVIOUS_SCREEN
+            c &&
+                (0, i.jsx)(a.NoticeCloseButton, {
+                    onClick: o,
+                    noticeType: l.kVF.BACK_TO_PREVIOUS_SCREEN
                 }),
-            (0, r.jsxs)(i.Button, {
-                className: s.backButton,
-                innerClassName: s.backButtonInner,
-                look: i.Button.Looks.OUTLINED,
-                color: i.Button.Colors.WHITE,
-                size: i.Button.Sizes.NONE,
+            (0, i.jsxs)(a.Button, {
+                className: r.backButton,
+                innerClassName: r.backButtonInner,
+                look: a.Button.Looks.OUTLINED,
+                color: a.Button.Colors.WHITE,
+                size: a.Button.Sizes.NONE,
                 onClick: n,
                 children: [
-                    (0, r.jsx)(a.Z, {
+                    (0, i.jsx)(s.Z, {
                         width: 16,
                         height: 16,
-                        direction: a.Z.Directions.LEFT,
-                        className: s.__invalid_backArrow
+                        direction: s.Z.Directions.LEFT,
+                        className: r.__invalid_backArrow
                     }),
                     t
                 ]

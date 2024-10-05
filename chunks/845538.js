@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(873546),
-    o = n(481060),
-    s = n(626135),
+    s = n(481060),
+    o = n(626135),
     l = n(981631),
     u = n(921944),
     c = n(689938),
@@ -21,28 +21,28 @@ function _(e) {
 function E(e) {
     let { onComplete: t, onDMCheckItOutClick: u, isDM: E } = e;
     i.useEffect(() => {
-        s.default.track(l.rMx.PREMIUM_GIFT_UPSELL_VIEWED, { type: 'holiday_gifting_tip' });
+        o.default.track(l.rMx.PREMIUM_GIFT_UPSELL_VIEWED, { type: 'holiday_gifting_tip' });
     }, []);
     let f = i.useMemo(() => [() => n.e('36278').then(n.t.bind(n, 268147, 19)), () => n.e('66902').then(n.t.bind(n, 7171, 19)), () => n.e('99694').then(n.t.bind(n, 55562, 19))], []),
         h = E || !(a.tq || a.Em),
         p = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : c.Z.Messages.SEASONAL_GIFTING_POPUP_HEADER,
-        m = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
+        I = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
     return (0, r.jsxs)('div', {
         className: d.container,
         children: [
-            (0, r.jsx)(o.ChainedLottieAnimation, {
+            (0, r.jsx)(s.ChainedLottieAnimation, {
                 className: d.image,
                 animationData: f
             }),
             (0, r.jsxs)('div', {
                 className: d.body,
                 children: [
-                    (0, r.jsx)(o.Heading, {
+                    (0, r.jsx)(s.Heading, {
                         className: d.text,
                         variant: 'heading-sm/semibold',
                         children: p
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(s.Text, {
                         className: d.text,
                         variant: 'text-sm/normal',
                         children: _(E)
@@ -52,18 +52,18 @@ function E(e) {
             (0, r.jsxs)('div', {
                 className: d.dmButtonContainer,
                 children: [
-                    (0, r.jsx)(o.Button, {
+                    (0, r.jsx)(s.Button, {
                         className: d.dmButton,
-                        look: o.Button.Looks.FILLED,
-                        color: o.Button.Colors.BRAND,
+                        look: s.Button.Looks.FILLED,
+                        color: s.Button.Colors.BRAND,
                         onClick: () => t(),
                         children: c.Z.Messages.GOT_IT
                     }),
-                    (0, r.jsx)(o.Button, {
+                    (0, r.jsx)(s.Button, {
                         className: d.dmButton,
-                        color: o.Button.Colors.BRAND_INVERTED,
+                        color: s.Button.Colors.BRAND_INVERTED,
                         onClick: () => u(),
-                        children: m
+                        children: I
                     })
                 ]
             }),
@@ -73,7 +73,7 @@ function E(e) {
 }
 function f(e) {
     let { onComplete: t, onDMCheckItOutClick: n, markAsDismissed: i, isDM: a } = e;
-    return (0, r.jsx)(o.Popout, {
+    return (0, r.jsx)(s.Popout, {
         spacing: 0,
         shouldShow: !0,
         position: 'top',

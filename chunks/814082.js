@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(981631);
-function i(e, t) {
+var i = n(981631);
+function a(e, t) {
     var n;
-    return !r.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type) && (null === (n = e.author) || void 0 === n ? void 0 : n.id) === t;
+    return !i.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type) && (null === (n = e.author) || void 0 === n ? void 0 : n.id) === t;
 }

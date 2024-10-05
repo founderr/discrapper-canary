@@ -1,8 +1,8 @@
-var r = n(974802),
-    i = n(141603),
-    a = n(862602),
-    o = n(349446).f;
-e.exports = function (e) {
-    var t = r.Symbol || (r.Symbol = {});
-    !i(t, e) && o(t, e, { value: a.f(e) });
+var e = n(974802),
+    o = n(141603),
+    i = n(862602),
+    u = n(349446).f;
+t.exports = function (t) {
+    var r = e.Symbol || (e.Symbol = {});
+    !o(r, t) && u(r, t, { value: i.f(t) });
 };

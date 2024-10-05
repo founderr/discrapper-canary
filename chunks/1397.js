@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(528963),
     d = n(749210),
     h = n(607070),
-    m = n(391650),
-    p = n(645896),
+    p = n(391650),
+    m = n(645896),
     _ = n(353093),
     f = n(717057),
     E = n(693546),
@@ -69,10 +69,10 @@ class V extends s.PureComponent {
         }
     }
     render() {
-        let { isFollowable: e, isLurking: t, notClaimed: a, notPhoneVerified: l, notEmailVerified: r, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: h, theme: m, children: p, canSendMessages: _, channelFollowingUsersSeen: f, showLurkerModeUpsellPopout: E, showMemberVerificationModal: g, useReducedMotion: C, isStaff: T, guildJoinRequest: x } = this.props,
+        let { isFollowable: e, isLurking: t, notClaimed: a, notPhoneVerified: l, notEmailVerified: r, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: h, theme: p, children: m, canSendMessages: _, channelFollowingUsersSeen: f, showLurkerModeUpsellPopout: E, showMemberVerificationModal: g, useReducedMotion: C, isStaff: T, guildJoinRequest: x } = this.props,
             { shouldShowLurkerModeUpsellPopout: S, shouldShowLurkerModeSuccessPopout: v } = this.state,
             N = {
-                theme: m,
+                theme: p,
                 useReducedMotion: C
             };
         if (e && !_) {
@@ -124,10 +124,10 @@ class V extends s.PureComponent {
                                               ...e,
                                               className: H.clickableChannelTextArea,
                                               onClick: this.handleTextAreaClick,
-                                              children: p
+                                              children: m
                                           })
                                   })
-                                : p
+                                : m
                         ]
                     })
                 })
@@ -186,7 +186,7 @@ class V extends s.PureComponent {
                 null != e && (0, C.hk)(e.id);
             }),
             G(this, 'handleClaimAccount', () => {
-                m.j();
+                p.j();
             }),
             G(this, 'handleVerifyPhone', () => {
                 (0, o.openModalLazy)(
@@ -296,7 +296,7 @@ function F(e) {
         c = (0, r.e7)([j.Z], () => j.Z.getGuild(o)),
         u = (0, r.e7)([P.Z], () => P.Z.getCheck(o)),
         d = a.type === k.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(k.oNc.NEWS),
-        m = (0, r.e7)([R.Z], () => (d ? R.Z.getFollowerStatsForChannel(a.id) : null)),
+        p = (0, r.e7)([R.Z], () => (d ? R.Z.getFollowerStatsForChannel(a.id) : null)),
         f = (0, r.e7)([v.Z], () => v.Z.isLurking(o)),
         E = (0, r.e7)([y.default], () => y.default.getCurrentUser()),
         C = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t,
@@ -309,8 +309,8 @@ function F(e) {
         Z = (0, r.e7)([S.Z], () => S.Z.shouldShowPopout(o)),
         M = (0, r.e7)([O.Z], () => O.Z.can(k.Plq.SEND_MESSAGES, a)),
         U = (0, r.e7)([T.Z], () => T.Z.getRequest(o)),
-        [w, B] = (0, p.L_)(o),
-        H = (0, p.Cc)(o),
+        [w, B] = (0, m.L_)(o),
+        H = (0, m.Cc)(o),
         G = (null == U ? void 0 : U.applicationStatus) === I.wB.APPROVED;
     s.useEffect(() => {
         if (!(!(0, _.EJ)(c) || !G || (0, g.d3)(U)) && null == H) B();
@@ -324,7 +324,7 @@ function F(e) {
         showLurkerModeUpsellPopout: f && null != c && D.Uu(k.Plq.SEND_MESSAGES, a),
         theme: b.Z.theme,
         canSendMessages: M,
-        channelFollowingUsersSeen: null != m ? m.usersSeenEver : null,
+        channelFollowingUsersSeen: null != p ? p.usersSeenEver : null,
         hasVerificationGate: N,
         showMemberVerificationModal: A,
         guildJoinRequestStatus: null !== (n = null == U ? void 0 : U.applicationStatus) && void 0 !== n ? n : I.wB.STARTED,

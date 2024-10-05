@@ -1,64 +1,64 @@
 n.d(t, {
     C: function () {
-        return f;
+        return E;
     },
     u: function () {
-        return p;
+        return h;
     }
-});
-var r = n(47120);
-var i = n(149765),
-    a = n(668781),
-    o = n(434404),
+}),
+    n(47120);
+var r = n(149765),
+    i = n(668781),
+    a = n(434404),
     s = n(430824),
-    l = n(745752),
-    u = n(45966),
-    c = n(637853),
-    d = n(290511),
-    _ = n(981631),
-    E = n(689938);
-async function f(e, t) {
+    o = n(745752),
+    l = n(45966),
+    u = n(637853),
+    c = n(290511),
+    d = n(981631),
+    _ = n(689938);
+async function E(e, t) {
     return (
         null == e ||
-        (await h(e, t, {
+        (await f(e, t, {
             removingView: !0,
             removingChat: !0
         }))
     );
 }
-async function h(e, t, n) {
+async function f(e, t, n) {
     var r;
     let i = s.Z.getGuild(e);
     if (null == i) return !0;
-    let a = null != i && (null === (r = i.features) || void 0 === r ? void 0 : r.has(_.oNc.GUILD_ONBOARDING));
+    let a = null != i && (null === (r = i.features) || void 0 === r ? void 0 : r.has(d.oNc.GUILD_ONBOARDING));
     if (!a) return !0;
-    a && u.Z.shouldFetchPrompts(e) && (await (0, l.eM)(e));
-    let o = u.Z.getDefaultChannelIds(e),
-        [E, f] = (0, c.d9)(e, o);
-    if (!o.includes(t)) return !0;
-    let h = n.removingView && f.length - 1 < d.md,
-        p = (n.removingChat || n.removingView) && E.length - 1 < d.X;
+    a && l.Z.shouldFetchPrompts(e) && (await (0, o.eM)(e));
+    let _ = l.Z.getDefaultChannelIds(e),
+        [E, f] = (0, u.d9)(e, _);
+    if (!_.includes(t)) return !0;
+    let h = n.removingView && f.length - 1 < c.md,
+        p = (n.removingChat || n.removingView) && E.length - 1 < c.X;
     return !h && !p;
 }
-async function p(e, t, n) {
-    let r = e.getGuildId();
-    if (null == r) return !0;
-    null != n && (t = i.hX(t, i.U_(n)));
-    let s = e.permissionOverwrites[r],
-        l = null != s ? i.hX(s.deny, i.U_(s.allow)) : i.vB(0),
+async function h(e, t, n) {
+    let s = e.getGuildId();
+    if (null == s) return !0;
+    null != n && (t = r.hX(t, r.U_(n)));
+    let o = e.permissionOverwrites[s],
+        l = null != o ? r.hX(o.deny, r.U_(o.allow)) : r.vB(0),
         u = {
-            removingView: i.e$(t, _.Plq.VIEW_CHANNEL) && !i.e$(l, _.Plq.VIEW_CHANNEL),
+            removingView: r.e$(t, d.Plq.VIEW_CHANNEL) && !r.e$(l, d.Plq.VIEW_CHANNEL),
             removingChat: !1
         };
     return (
-        e.isForumLikeChannel() ? (u.removingChat = i.e$(t, _.Plq.SEND_MESSAGES_IN_THREADS) && !i.e$(l, _.Plq.SEND_MESSAGES_IN_THREADS)) : (u.removingChat = i.e$(t, _.Plq.SEND_MESSAGES) && !i.e$(l, _.Plq.SEND_MESSAGES)),
+        e.isForumLikeChannel() ? (u.removingChat = r.e$(t, d.Plq.SEND_MESSAGES_IN_THREADS) && !r.e$(l, d.Plq.SEND_MESSAGES_IN_THREADS)) : (u.removingChat = r.e$(t, d.Plq.SEND_MESSAGES) && !r.e$(l, d.Plq.SEND_MESSAGES)),
         (!u.removingChat && !u.removingView) ||
-            !!(await h(r, e.id, u)) ||
-            (a.Z.show({
-                title: E.Z.Messages.CANNOT_CHANGE_CHANNEL_PERMS,
-                body: E.Z.Messages.ONBOARDING_CHANNEL_THRESHOLD_WARNING.format({
+            !!(await f(s, e.id, u)) ||
+            (i.Z.show({
+                title: _.Z.Messages.CANNOT_CHANGE_CHANNEL_PERMS,
+                body: _.Z.Messages.ONBOARDING_CHANNEL_THRESHOLD_WARNING.format({
                     onClick: () => {
-                        a.Z.close(), o.Z.open(r, _.pNK.ONBOARDING);
+                        i.Z.close(), a.Z.open(s, d.pNK.ONBOARDING);
                     }
                 })
             }),

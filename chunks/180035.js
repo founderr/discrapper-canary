@@ -1,19 +1,19 @@
 n.d(t, {
     d: function () {
-        return s;
+        return o;
     }
 });
 var r = n(399606),
     i = n(410030),
     a = n(607070),
-    o = n(540059);
-function s(e, t) {
+    s = n(540059);
+function o(e, t) {
     let n = (0, i.ZP)(),
-        s = (0, r.e7)([a.Z], () => a.Z.saturation),
-        l = (0, o.Q)('useToken') ? ['visual-refresh'] : void 0;
+        o = (0, r.e7)([a.Z], () => a.Z.saturation),
+        l = (0, s.Q)('useToken');
     return e.resolve({
         theme: null != t ? t : n,
-        saturation: s,
-        enabledExperiments: l
+        saturation: o,
+        enabledExperiments: l ? ['visual-refresh'] : void 0
     });
 }

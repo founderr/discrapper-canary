@@ -13,8 +13,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    o = n(1561),
-    s = n(981729),
+    s = n(1561),
+    o = n(981729),
     l = n(400693);
 let u = {
         TERTIARY: l.tertiary,
@@ -28,18 +28,18 @@ let u = {
     };
 function d(e) {
     let { className: t, tooltip: n, color: i, size: u = c.SIZE_32, icon: d, onClick: _, disabled: E, focusProps: f } = e;
-    return (0, r.jsx)(s.u, {
+    return (0, r.jsx)(o.u, {
         text: n,
         shouldShow: !E,
         children: (e) => {
-            let { onClick: s, ...c } = e;
-            return (0, r.jsx)(o.P, {
+            let { onClick: o, ...c } = e;
+            return (0, r.jsx)(s.P, {
                 ...c,
                 'aria-label': n,
                 'aria-disabled': E,
                 className: a()(t, l.button, i, u, { [l.disabled]: E }),
                 onClick: (e) => {
-                    null == s || s(), _(e);
+                    null == o || o(), _(e);
                 },
                 focusProps: f,
                 children: d

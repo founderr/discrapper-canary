@@ -1,32 +1,32 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(692547),
-    a = n(481060),
-    o = n(739566),
-    s = n(834129),
-    l = n(689938),
-    u = n(437814);
-function c(e) {
-    let { message: t, compact: n, usernameHook: c } = e,
-        d = (0, o.ZP)(t),
-        _ = c(d),
-        E = l.Z.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
-            username: d.nick,
+var a = n(692547),
+    s = n(481060),
+    l = n(739566),
+    r = n(834129),
+    o = n(689938),
+    c = n(437814);
+function d(e) {
+    let { message: t, compact: n, usernameHook: d } = e,
+        u = (0, l.ZP)(t),
+        _ = d(u),
+        E = o.Z.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
+            username: u.nick,
             usernameHook: _,
             topic: t.content
         });
-    return (0, r.jsx)(s.Z, {
-        className: u.stageSystemMessage,
-        iconNode: (0, r.jsx)(a.StageIcon, {
+    return (0, i.jsx)(r.Z, {
+        className: c.stageSystemMessage,
+        iconNode: (0, i.jsx)(s.StageIcon, {
             size: 'md',
-            color: i.Z.unsafe_rawColors.GREEN_360.css
+            color: a.Z.unsafe_rawColors.GREEN_360.css
         }),
-        iconContainerClassName: u.iconContainer,
+        iconContainerClassName: c.iconContainer,
         timestamp: t.timestamp,
         compact: n,
         children: E

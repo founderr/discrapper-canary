@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(81063),
-    i = n(701488);
-function a(e, t) {
-    return null == e || null == e.assets || null == e.assets.large_image ? null : (0, r.getAssetImage)(t, e.assets.large_image, [i.cc, i.cc]);
+var i = n(81063),
+    a = n(701488);
+function s(e, t) {
+    return null == e || null == e.assets || null == e.assets.large_image ? null : (0, i.getAssetImage)(t, e.assets.large_image, [a.cc, a.cc]);
 }

@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(442837),
     d = n(410030),
     h = n(607070),
-    m = n(645041),
-    p = n(430824),
+    p = n(645041),
+    m = n(430824),
     _ = n(914010),
     f = n(594174),
     E = n(626135),
@@ -32,8 +32,8 @@ var i = n(735250),
     M = n(882070);
 function b(e) {
     var t;
-    let { guild: n, showToast: a, onConfirm: o, onDismiss: m } = e,
-        [p, _] = s.useState(!1),
+    let { guild: n, showToast: a, onConfirm: o, onDismiss: p } = e,
+        [m, _] = s.useState(!1),
         E = s.useRef(null),
         C = (0, g.Cc)(n.id),
         x = (0, d.ZP)(),
@@ -65,9 +65,9 @@ function b(e) {
     }, []);
     let j = s.useCallback(
             (e) => {
-                e.stopPropagation(), e.preventDefault(), m();
+                e.stopPropagation(), e.preventDefault(), p();
             },
-            [m]
+            [p]
         ),
         P = s.useCallback(
             (e) => {
@@ -124,7 +124,7 @@ function b(e) {
                     'aria-label': k,
                     onClick: P,
                     children: (0, i.jsxs)('div', {
-                        className: l()(M.toastContainerInner, p ? M.hovered : null),
+                        className: l()(M.toastContainerInner, m ? M.hovered : null),
                         children: [
                             (0, i.jsxs)('div', {
                                 className: M.guildIconContainer,
@@ -184,7 +184,7 @@ function R(e) {
     let {} = e,
         t = (0, u.e7)([_.Z], () => _.Z.getGuildId()),
         n = (0, x.h)(t, 'clan_tag_upsell_toast'),
-        a = (0, u.e7)([p.Z], () => p.Z.getGuild(t), [t]),
+        a = (0, u.e7)([m.Z], () => m.Z.getGuild(t), [t]),
         [l, r] = s.useState(!1),
         c = s.useRef(null);
     s.useEffect(
@@ -207,7 +207,7 @@ function R(e) {
             if ((r(!1), null != t)) (0, C.SJ)(t);
         }, [, t]),
         h = s.useCallback(() => {
-            if ((r(!1), null != t)) (0, m.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.lds, !0, A.L.DISMISS);
+            if ((r(!1), null != t)) (0, p.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.lds, !0, A.L.DISMISS);
         }, [t]);
     return n && null != t && null != a
         ? (0, i.jsx)(b, {

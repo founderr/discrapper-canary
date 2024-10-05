@@ -16,31 +16,31 @@ t.default = i.forwardRef(function (e, t) {
         y = (0, o.e7)([d.Z], () => d.Z.getAction()),
         [N, x] = i.useState(null),
         [R, E] = i.useState(null),
-        [P, v] = i.useState(null),
-        [b, j] = i.useState(!1),
+        [P, b] = i.useState(null),
+        [j, v] = i.useState(!1),
         S = i.useCallback(
             async (e) => {
-                j(!0);
+                v(!0);
                 try {
-                    c.Z.isPhoneReverification(g, y) ? await r.Z.beginReverifyPhone(e, f) : await r.Z.beginAddPhone(e, f), v(null), x(e);
+                    c.Z.isPhoneReverification(g, y) ? await r.Z.beginReverifyPhone(e, f) : await r.Z.beginAddPhone(e, f), b(null), x(e);
                 } catch (e) {
-                    v(new a.Z(e));
+                    b(new a.Z(e));
                 }
-                j(!1);
+                v(!1);
             },
             [g, f, y]
         ),
         Z = i.useCallback(
             async (e) => {
                 if (null != N && null != g) {
-                    j(!0);
+                    v(!0);
                     try {
                         let { token: t } = await r.Z.verifyPhone(N, e);
-                        v(null), E(t);
+                        b(null), E(t);
                     } catch (e) {
-                        v(new a.Z(e));
+                        b(new a.Z(e));
                     }
-                    j(!1);
+                    v(!1);
                 }
             },
             [g, N]
@@ -62,7 +62,7 @@ t.default = i.forwardRef(function (e, t) {
               onClose: m,
               transitionState: C,
               error: null == P ? void 0 : P.getAnyErrorMessage(),
-              working: b,
+              working: j,
               validPhone: null != N,
               onAddPhone: S,
               onVerifyPhone: Z

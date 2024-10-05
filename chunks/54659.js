@@ -1,12 +1,12 @@
-var r = n(821819);
-e.exports = function (e, t) {
-    var n = [][e];
+var e = n(821819);
+t.exports = function (t, r) {
+    var n = [][t];
     return (
         !!n &&
-        r(function () {
+        e(function () {
             n.call(
                 null,
-                t ||
+                r ||
                     function () {
                         return 1;
                     },

@@ -20,8 +20,8 @@ var i,
     u = n(120356),
     d = n.n(u),
     h = n(780384),
-    m = n(481060),
-    p = n(626135),
+    p = n(481060),
+    m = n(626135),
     _ = n(600164),
     f = n(981631),
     E = n(689938),
@@ -43,10 +43,10 @@ function C(e, t, n) {
 class I extends c.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
-        p.default.track(f.rMx.SHOW_TUTORIAL, { tutorial: e });
+        m.default.track(f.rMx.SHOW_TUTORIAL, { tutorial: e });
     }
     componentWillUnmount() {
-        p.default.track(f.rMx.CLOSE_TUTORIAL, {
+        m.default.track(f.rMx.CLOSE_TUTORIAL, {
             tutorial: this.props.uniqueId,
             acknowledged: this.state.confirmed
         });
@@ -55,7 +55,7 @@ class I extends c.PureComponent {
         let { renderMedia: e, textAlign: t, isLongText: n, title: i, body: s, className: a, forceTheme: l, onClickSkipAll: r } = this.props,
             c = 'left' === t || n,
             u = 'center' === t || !c;
-        return (0, o.jsxs)(m.Dialog, {
+        return (0, o.jsxs)(p.Dialog, {
             className: d()(g.popoutRoot, a),
             children: [
                 null != e &&
@@ -64,7 +64,7 @@ class I extends c.PureComponent {
                         justify: c ? _.Z.Justify.START : _.Z.Justify.CENTER,
                         children: e()
                     }),
-                (0, o.jsx)(m.H, {
+                (0, o.jsx)(p.H, {
                     className: d()({
                         [g.titleCenter]: u,
                         [g.titleLeft]: c
@@ -82,16 +82,16 @@ class I extends c.PureComponent {
                     className: g.buttonContainer,
                     justify: c ? _.Z.Justify.BETWEEN : _.Z.Justify.CENTER,
                     children: [
-                        (0, o.jsx)(m.Button, {
-                            size: m.ButtonSizes.SMALL,
+                        (0, o.jsx)(p.Button, {
+                            size: p.ButtonSizes.SMALL,
                             onClick: this.handleDismiss,
                             children: E.Z.Messages.TUTORIAL_CLOSE
                         }),
-                        (0, o.jsx)(m.Button, {
-                            size: m.ButtonSizes.SMALL,
-                            look: m.Button.Looks.BLANK,
+                        (0, o.jsx)(p.Button, {
+                            size: p.ButtonSizes.SMALL,
+                            look: p.Button.Looks.BLANK,
                             onClick: r,
-                            color: (0, h.ap)(l) ? m.Button.Colors.PRIMARY : m.Button.Colors.WHITE,
+                            color: (0, h.ap)(l) ? p.Button.Colors.PRIMARY : p.Button.Colors.WHITE,
                             className: c ? g.buttonSkipLeftAlign : g.buttonSkipCenterAlign,
                             children: E.Z.Messages.SKIP_ALL_TIPS
                         })
@@ -113,7 +113,7 @@ class T extends (a = c.PureComponent) {
     render() {
         let { renderMedia: e, textAlign: t, onComplete: n, onSkipAll: i, isLongText: s, title: a, body: l, children: r, spacing: c, forceTheme: u, ...d } = this.props,
             h = 'top' === d.position || 'bottom' === d.position ? 'center' : 'top';
-        return (0, o.jsx)(m.Popout, {
+        return (0, o.jsx)(p.Popout, {
             ...d,
             align: h,
             spacing: null != c ? c : 0,
@@ -129,13 +129,13 @@ class T extends (a = c.PureComponent) {
             }),
             C(this, 'onClickSkipAll', (e) => {
                 let { onSkipAll: t, uniqueId: n } = this.props;
-                e(), t(), p.default.track(f.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
+                e(), t(), m.default.track(f.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
             }),
             C(this, 'renderPopoutContent', (e) => {
                 let { closePopout: t, position: n } = e,
                     { forceTheme: i, isLongText: s, arrowAlignment: a, renderMedia: l } = this.props,
                     r = null != l;
-                return (0, o.jsx)(m.ThemeProvider, {
+                return (0, o.jsx)(p.ThemeProvider, {
                     theme: i,
                     children: (e) =>
                         (0, o.jsx)(I, {

@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     t: function () {
-        return o;
+        return s;
     }
 });
 var r = n(570140),
@@ -16,7 +16,7 @@ function a(e) {
             style: e
         });
 }
-function o() {
+function s() {
     var e, t;
     null === (t = i.Z.getMediaEngine()) || void 0 === t || null === (e = t.releaseNativeDesktopVideoSourcePickerStream) || void 0 === e || e.call(t), r.Z.dispatch({ type: 'NATIVE_SCREEN_SHARE_PICKER_RELEASE' });
 }

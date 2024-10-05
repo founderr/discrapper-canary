@@ -21,8 +21,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(227879),
-    o = n(993365),
-    s = n(481060),
+    s = n(993365),
+    o = n(481060),
     l = n(59760);
 function u(e) {
     return (0, r.jsx)(a.bL, {
@@ -35,7 +35,7 @@ function c(e) {
     return (0, r.jsx)(a.sg, {
         ...n,
         className: l.column,
-        children: (0, r.jsx)(o.x, {
+        children: (0, r.jsx)(s.x, {
             variant: 'eyebrow',
             className: l.columnText,
             children: t
@@ -61,7 +61,7 @@ function E(e) {
     });
 }
 function f(e) {
-    let { title: t, header: n, footer: o, ...u } = e,
+    let { title: t, header: n, footer: s, ...u } = e,
         c = i.useId();
     return (0, r.jsxs)('div', {
         className: l.container,
@@ -69,7 +69,7 @@ function f(e) {
             (0, r.jsxs)('div', {
                 className: l.toolbar,
                 children: [
-                    (0, r.jsx)(s.Heading, {
+                    (0, r.jsx)(o.Heading, {
                         className: l.__invalid_title,
                         variant: 'heading-md/semibold',
                         id: c,
@@ -83,10 +83,10 @@ function f(e) {
                 'aria-labelledby': c,
                 className: l.table
             }),
-            null != o &&
+            null != s &&
                 (0, r.jsx)('div', {
                     className: l.footer,
-                    children: o
+                    children: s
                 })
         ]
     });

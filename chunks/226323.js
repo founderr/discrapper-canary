@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(524484),
     g = n(689938),
     T = n(497867);
-let f = { offset: 2 },
-    S = {
+let S = { offset: 2 },
+    f = {
         serverDeaf: {
             icon: o.HeadphonesDenyIcon,
             colorize: !0,
@@ -68,11 +68,11 @@ function C(e) {
         } = null !==
             (a = (function (e) {
                 let { serverDeaf: t, deaf: n, serverMute: i, mute: a, localMute: s } = e;
-                if (t) return S.serverDeaf;
-                if (n) return S.deaf;
-                if (i) return S.serverMute;
-                else if (s) return S.localMute;
-                else if (a) return S.mute;
+                if (t) return f.serverDeaf;
+                if (n) return f.deaf;
+                if (i) return f.serverMute;
+                else if (s) return f.localMute;
+                else if (a) return f.mute;
             })({
                 serverDeaf: Z,
                 deaf: A,
@@ -103,7 +103,7 @@ function C(e) {
                       });
               })
             : (0, c.jW)(e, async () => {
-                  let { default: e } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
+                  let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('5901')]).then(n.bind(n, 881351));
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
@@ -135,7 +135,7 @@ function C(e) {
                         ...e,
                         className: T.avatarContainer,
                         onContextMenu: j,
-                        focusProps: f,
+                        focusProps: S,
                         children: (0, i.jsx)(u.Z, {
                             shakeLocation: p.oZ.VOICE_USER,
                             isShaking: R,
@@ -170,7 +170,7 @@ function N(e) {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            focusProps: f
+            focusProps: S
         }),
         E = (0, l.e7)([h.default], () => h.default.getId(), []),
         [m, I] = (function (e, t) {

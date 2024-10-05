@@ -16,8 +16,8 @@ var r = n(756647),
     p = n(553795),
     g = n(594174),
     T = n(626135),
-    f = n(585483),
-    S = n(591759),
+    S = n(585483),
+    f = n(591759),
     C = n(998502),
     N = n(996106),
     A = n(186901),
@@ -78,7 +78,7 @@ function Z(e, t) {
                 return (
                     C.ZP.focus(),
                     (0, l.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e('10778'), n.e('93474')]).then(n.bind(n, 766775));
+                        let { default: e } = await Promise.all([n.e('10778'), n.e('64391')]).then(n.bind(n, 766775));
                         return (t) =>
                             (0, s.jsx)(e, {
                                 ...t,
@@ -134,7 +134,7 @@ function Z(e, t) {
                         null != n && ((0, m.dL)(v.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, 'settings'));
                         break;
                     case A.jE.CHANGELOG:
-                        null != n && ((0, m.dL)(S.Z.formatPathWithQuery(v.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
+                        null != n && ((0, m.dL)(f.Z.formatPathWithQuery(v.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
                         break;
                     case A.jE.LIBRARY:
                         (0, m.dL)(v.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, 'library');
@@ -207,7 +207,7 @@ function Z(e, t) {
                     );
                 } catch (e) {
                     if ((null == e ? void 0 : e.status) === 400) throw new N.Z({ errorCode: v.lTL.BAD_REQUEST_FOR_PROVIDER }, 'Bad request for provider');
-                    throw (f.S.dispatch(v.CkL.CONNECTIONS_CALLBACK_ERROR), e);
+                    throw (S.S.dispatch(v.CkL.CONNECTIONS_CALLBACK_ERROR), e);
                 }
             }
         },

@@ -1,22 +1,22 @@
-var s = t(735250),
-    a = t(470079),
-    o = t(120356),
-    r = t.n(o),
-    i = t(661824),
-    _ = t(916315);
-let l = a.forwardRef(function (e, n) {
-    let { className: t, isBeforeGroup: a = !1, ...o } = e,
-        { children: l } = o;
-    return (0, s.jsx)(i.Z, {
-        ...o,
-        ref: n,
+var i = n(735250),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
+    r = n(661824),
+    o = n(916315);
+let c = s.forwardRef(function (e, t) {
+    let { className: n, isBeforeGroup: s = !1, ...a } = e,
+        { children: c } = a;
+    return (0, i.jsx)(r.Z, {
+        ...a,
+        ref: t,
         role: 'separator',
-        'aria-label': 'string' == typeof l ? l : void 0,
-        className: r()(t, {
-            [_.divider]: !0,
-            [_.hasContent]: null != l,
-            [_.beforeGroup]: a
+        'aria-label': 'string' == typeof c ? c : void 0,
+        className: l()(n, {
+            [o.divider]: !0,
+            [o.hasContent]: null != c,
+            [o.beforeGroup]: s
         })
     });
 });
-n.Z = a.memo(l);
+t.Z = s.memo(c);

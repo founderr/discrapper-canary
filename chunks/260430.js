@@ -1,47 +1,47 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
-});
-var r = n(536091);
-var i = n(735250);
+}),
+    n(536091);
+var r = n(735250);
 n(470079);
-var a = n(120356),
-    o = n.n(a),
+var i = n(120356),
+    a = n.n(i),
     s = n(77866),
-    l = n(373793),
-    u = n(243814),
-    c = n(993365),
-    d = n(481060),
-    _ = n(713938),
-    E = n(689938),
-    f = n(341772);
-function h(e) {
-    let { text: t, error: n, isFake: r } = e;
-    return (0, i.jsxs)('div', {
-        className: f.scope,
+    o = n(373793),
+    l = n(243814),
+    u = n(993365),
+    c = n(481060),
+    d = n(713938),
+    _ = n(689938),
+    E = n(341772);
+function f(e) {
+    let { text: t, error: n, isFake: i } = e;
+    return (0, r.jsxs)('div', {
+        className: E.scope,
         children: [
-            r
-                ? (0, i.jsx)(d.CircleXIcon, {
+            i
+                ? (0, r.jsx)(c.CircleXIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: o()(f.icon, f.fakeScopeIcon)
+                      className: a()(E.icon, E.fakeScopeIcon)
                   })
-                : (0, i.jsx)(d.CircleCheckIcon, {
+                : (0, r.jsx)(c.CircleCheckIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: o()(f.icon, f.scopeIcon)
+                      className: a()(E.icon, E.scopeIcon)
                   }),
-            (0, i.jsxs)('div', {
-                className: f.scopeInner,
+            (0, r.jsxs)('div', {
+                className: E.scopeInner,
                 children: [
-                    (0, i.jsx)(c.x, {
+                    (0, r.jsx)(u.x, {
                         variant: 'text-md/normal',
-                        color: r ? 'text-muted' : void 0,
+                        color: i ? 'text-muted' : void 0,
                         children: t
                     }),
                     null != n
-                        ? (0, i.jsx)(c.x, {
+                        ? (0, r.jsx)(u.x, {
                               variant: 'text-xs/normal',
                               color: 'text-danger',
                               children: n
@@ -52,40 +52,40 @@ function h(e) {
         ]
     });
 }
-function p(e) {
+function h(e) {
     var t;
-    let { application: n, accountScopes: r, requestedScopes: a, integrationType: o, errors: c, isTrustedName: p = !1 } = e,
-        m = (0, s.Z)(() => _.ZW[Math.floor(Math.random() * _.ZW.length)]);
-    if (0 === r.length) return null;
-    let I = m(),
-        T = p ? E.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.Z.Messages.OAUTH2_SCOPES_LABEL,
-        g = o === l.Y.USER_INSTALL && a.includes(u.x.APPLICATIONS_COMMANDS);
-    return (0, i.jsxs)('div', {
-        className: f.scopes,
+    let { application: n, accountScopes: i, requestedScopes: a, integrationType: u, errors: h, isTrustedName: p = !1 } = e,
+        I = (0, s.Z)(() => d.ZW[Math.floor(Math.random() * d.ZW.length)]);
+    if (0 === i.length) return null;
+    let m = I(),
+        T = p ? _.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : _.Z.Messages.OAUTH2_SCOPES_LABEL,
+        S = u === o.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
+    return (0, r.jsxs)('div', {
+        className: E.scopes,
         children: [
-            (0, i.jsx)(d.Heading, {
+            (0, r.jsx)(c.Heading, {
                 variant: 'heading-sm/normal',
-                className: f.sectionLabel,
+                className: E.sectionLabel,
                 children: T.format({ application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : '' })
             }),
-            r
+            i
                 .map((e) =>
-                    (0, _.CI)(e, r).map((t, n) => {
-                        var r;
-                        return (0, i.jsx)(
-                            h,
+                    (0, d.CI)(e, i).map((t, n) => {
+                        var i;
+                        return (0, r.jsx)(
+                            f,
                             {
                                 text: t,
-                                error: 0 === n ? (null == c ? void 0 : null === (r = c[e]) || void 0 === r ? void 0 : r[0]) : void 0
+                                error: 0 === n ? (null == h ? void 0 : null === (i = h[e]) || void 0 === i ? void 0 : i[0]) : void 0
                             },
                             ''.concat(e, '-').concat(n)
                         );
                     })
                 )
                 .flat(),
-            g && (0, i.jsx)(h, { text: E.Z.Messages.SCOPE_DM_YOU }),
-            (0, i.jsx)(h, {
-                text: I,
+            S && (0, r.jsx)(f, { text: _.Z.Messages.SCOPE_DM_YOU }),
+            (0, r.jsx)(f, {
+                text: m,
                 isFake: !0
             })
         ]

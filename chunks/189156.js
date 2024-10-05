@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(502762),
-    o = n(63063),
-    s = n(689938),
+    s = n(63063),
+    o = n(689938),
     l = n(511582);
 let u = {
     profile: {
@@ -47,12 +47,12 @@ function c(e) {
                         (0, r.jsx)(i.Heading, {
                             variant: c,
                             color: 'text-normal',
-                            children: s.Z.Messages.PROVISIONAL_ACCOUNT
+                            children: o.Z.Messages.PROVISIONAL_ACCOUNT
                         }),
                         (0, r.jsx)(i.Text, {
                             variant: d,
                             color: 'text-normal',
-                            children: s.Z.Messages.PROVISIONAL_ACCOUNT_EXPLAINER_BODY.format({ helpdeskArticle: o.Z.getArticleURL('') })
+                            children: o.Z.Messages.PROVISIONAL_ACCOUNT_EXPLAINER_BODY.format({ helpdeskArticle: s.Z.getArticleURL('') })
                         })
                     ]
                 })

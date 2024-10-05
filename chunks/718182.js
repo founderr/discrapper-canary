@@ -12,8 +12,8 @@ var s,
     E = n(388905),
     p = n(108427),
     g = n(314897),
-    m = n(981631),
-    f = n(689938),
+    f = n(981631),
+    m = n(689938),
     I = n(113207);
 d.ZP.initialize();
 class N extends (a = l.PureComponent) {
@@ -25,8 +25,8 @@ class N extends (a = l.PureComponent) {
         if ('Android' === u().os.family || 'iOS' === u().os.family) return null;
         let { transitionTo: e } = this.props;
         return (0, o.jsx)(E.zx, {
-            onClick: () => e(m.Z5c.LOGIN),
-            children: f.Z.Messages._LOGIN
+            onClick: () => e(f.Z5c.LOGIN),
+            children: m.Z.Messages._LOGIN
         });
     }
     renderFailed() {
@@ -39,11 +39,11 @@ class N extends (a = l.PureComponent) {
                 }),
                 (0, o.jsx)(E.Dx, {
                     className: I.marginBottom8,
-                    children: f.Z.Messages.AUTHORIZATION_EXPIRED
+                    children: m.Z.Messages.AUTHORIZATION_EXPIRED
                 }),
                 (0, o.jsx)(E.DK, {
                     className: I.marginBottom40,
-                    children: f.Z.Messages._AUTH_EXPIRED_SUGGESTION
+                    children: m.Z.Messages._AUTH_EXPIRED_SUGGESTION
                 }),
                 this.renderLoginButton()
             ]
@@ -59,11 +59,11 @@ class N extends (a = l.PureComponent) {
                 }),
                 (0, o.jsx)(E.Dx, {
                     className: I.marginBottom8,
-                    children: f.Z.Messages.IP_AUTHORIZATION_SUCCEEDED
+                    children: m.Z.Messages.IP_AUTHORIZATION_SUCCEEDED
                 }),
                 (0, o.jsx)(E.DK, {
                     className: I.marginBottom40,
-                    children: f.Z.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
+                    children: m.Z.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
                 }),
                 this.renderLoginButton()
             ]
@@ -71,7 +71,7 @@ class N extends (a = l.PureComponent) {
     }
     renderDefault() {
         return (0, o.jsxs)(E.ZP, {
-            children: [(0, o.jsx)(E.Hh, {}), (0, o.jsx)(E.Dx, { children: f.Z.Messages.AUTHORIZING })]
+            children: [(0, o.jsx)(E.Hh, {}), (0, o.jsx)(E.Dx, { children: m.Z.Messages.AUTHORIZING })]
         });
     }
     render() {

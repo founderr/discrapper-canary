@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return Z;
     }
 }),
     n(47120);
@@ -138,7 +138,7 @@ function v(e) {
               children: n
           });
 }
-function Z(e) {
+function T(e) {
     let { activity: t } = e;
     if (null == t || !(0, c.Z)(t)) return null;
     let { timestamps: n } = t;
@@ -152,16 +152,16 @@ function Z(e) {
         singleLine: !0
     });
 }
-function T(e) {
+function Z(e) {
     let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: _ } = e,
         m = [];
     null != n ? (m = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (m = u.map((e) => e.user.id));
-    let T = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(g.lm)),
-        b = null != n || (0, c.Z)(t),
-        A = l.useMemo(() => {
+    let Z = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(g.lm)),
+        A = null != n || (0, c.Z)(t),
+        b = l.useMemo(() => {
             let e = new Map();
             return (
-                b &&
+                A &&
                     null != u &&
                     u.forEach((t) => {
                         let n = t.member;
@@ -169,8 +169,8 @@ function T(e) {
                     }),
                 e
             );
-        }, [u, b]);
-    return b
+        }, [u, A]);
+    return A
         ? (0, i.jsxs)('div', {
               className: I.flexColumn,
               children: [
@@ -201,13 +201,13 @@ function T(e) {
                                       (0, i.jsx)(d.Z, {
                                           className: I.usersSummary,
                                           guildId: a.guild_id,
-                                          users: T,
+                                          users: Z,
                                           size: E,
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
                                               if (null == e) return null;
-                                              let n = A.get(e.id),
+                                              let n = b.get(e.id),
                                                   l = null !== (t = null == n ? void 0 : n.nick) && void 0 !== t ? t : C.ZP.getName(e);
                                               return (0, i.jsx)(
                                                   o.TooltipContainer,
@@ -232,7 +232,7 @@ function T(e) {
                           })
                       ]
                   }),
-                  (0, i.jsx)(Z, { activity: t })
+                  (0, i.jsx)(T, { activity: t })
               ]
           })
         : null;

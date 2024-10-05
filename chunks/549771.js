@@ -1,29 +1,29 @@
 n.d(t, {
     h: function () {
-        return _;
+        return d;
     }
-});
-var r = n(733860);
-var i = n(470079),
-    a = n(399606),
-    o = n(496675),
+}),
+    n(733860);
+var r = n(470079),
+    i = n(399606),
+    a = n(496675),
     s = n(771845),
-    l = n(594174),
-    u = n(74538),
-    c = n(981631),
-    d = n(231338);
-function _(e, t) {
+    o = n(594174),
+    l = n(74538),
+    u = n(981631),
+    c = n(231338);
+function d(e, t) {
     var n;
-    let r = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
-        _ = null !== (n = null == e ? void 0 : e.guild_id) && void 0 !== n ? n : c.lds,
-        E = (0, a.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()),
-        f = (0, a.e7)([o.Z], () => null == e || null == e.guild_id || o.Z.can(d.Pl.USE_EXTERNAL_SOUNDS, e));
-    return i.useMemo(() => {
-        if ((u.ZP.canUseSoundboardEverywhere(r) || !t) && f) {
+    let d = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        _ = null !== (n = null == e ? void 0 : e.guild_id) && void 0 !== n ? n : u.lds,
+        E = (0, i.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()),
+        f = (0, i.e7)([a.Z], () => null == e || null == e.guild_id || a.Z.can(c.Pl.USE_EXTERNAL_SOUNDS, e));
+    return r.useMemo(() => {
+        if ((l.ZP.canUseSoundboardEverywhere(d) || !t) && f) {
             let e = '' !== _,
                 t = e ? E.filter((e) => e !== _) : E;
             return e && t.unshift(_), t;
         }
         return [_];
-    }, [r, t, _, E, f]);
+    }, [d, t, _, E, f]);
 }

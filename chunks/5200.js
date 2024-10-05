@@ -14,8 +14,8 @@ var i,
     u = n(481060),
     d = n(542094),
     h = n(182906),
-    m = n(556505),
-    p = n(513202),
+    p = n(556505),
+    m = n(513202),
     _ = n(981631),
     f = n(689938),
     E = n(967960);
@@ -38,7 +38,7 @@ function I(e) {
             guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
             locationObject: {},
             onActivityItemSelected: s,
-            embeddedActivitiesManager: p.Z,
+            embeddedActivitiesManager: m.Z,
             assetNames: g,
             commandOrigin: T
         }),
@@ -55,7 +55,7 @@ function I(e) {
                     className: E.overlayBadge,
                     children: (0, a.jsx)('div', {
                         className: E.badgeContainer,
-                        children: (0, a.jsx)(m.Z, {
+                        children: (0, a.jsx)(p.Z, {
                             name: i.application.name,
                             labelType: N
                         })

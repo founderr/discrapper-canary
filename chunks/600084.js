@@ -13,8 +13,8 @@ var i = n(735250),
     u = n(736052),
     d = n(189156),
     h = n(878857),
-    m = n(621853),
-    p = n(484459),
+    p = n(621853),
+    m = n(484459),
     _ = n(131704),
     f = n(984933),
     E = n(496675),
@@ -56,11 +56,11 @@ function y(e) {
             canManageRoles: E.Z.can(R.Plq.MANAGE_ROLES, n),
             canReadMessageHistory: E.Z.can(R.Plq.READ_MESSAGE_HISTORY, n)
         })),
-        M = (0, a.e7)([m.Z], () => (_ === R.d4z.DM ? m.Z.getMutualGuilds(n.getRecipientId()) : null), [n, _]),
+        M = (0, a.e7)([p.Z], () => (_ === R.d4z.DM ? p.Z.getMutualGuilds(n.getRecipientId()) : null), [n, _]),
         { systemDMRedesignEnabled: b } = h.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t });
     if (
         (s.useEffect(() => {
-            _ === R.d4z.DM && null == M && null != f && r.Z.wait(() => (0, p.Z)(n.getRecipientId(), f.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+            _ === R.d4z.DM && null == M && null != f && r.Z.wait(() => (0, m.Z)(n.getRecipientId(), f.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
         }, [M, _, n, f]),
         n.isSystemDM())
     )

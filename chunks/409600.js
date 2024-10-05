@@ -1,30 +1,30 @@
-r.r(n),
-    r.d(n, {
+n.r(t),
+    n.d(t, {
         STANDARD_ONE_TIME_PAYMENT_STEPS: function () {
             return f;
         },
         default: function () {
-            return p;
+            return h;
         }
     }),
-    r(47120);
-var t = r(735250);
-r(470079);
-var a = r(100527),
-    o = r(906732),
-    i = r(987209),
-    s = r(598),
-    l = r(791785),
-    c = r(961830),
-    d = r(231338);
+    n(47120);
+var r = n(735250);
+n(470079);
+var a = n(100527),
+    i = n(906732),
+    o = n(987209),
+    l = n(598),
+    s = n(791785),
+    c = n(961830),
+    d = n(231338);
 function u(e) {
-    let { onClose: n, onComplete: r, transitionState: a, applicationId: i, analyticsLocationObject: c, skuId: d } = e,
-        {} = (0, s.usePaymentContext)(),
-        { analyticsLocations: u } = (0, o.ZP)();
-    return (0, t.jsx)(l.PaymentModal, {
-        onClose: n,
-        onComplete: r,
-        applicationId: i,
+    let { onClose: t, onComplete: n, transitionState: a, applicationId: o, analyticsLocationObject: c, skuId: d } = e,
+        {} = (0, l.usePaymentContext)(),
+        { analyticsLocations: u } = (0, i.ZP)();
+    return (0, r.jsx)(s.PaymentModal, {
+        onClose: t,
+        onComplete: n,
+        applicationId: o,
         skuId: d,
         initialPlanId: null,
         analyticsObject: c,
@@ -33,19 +33,19 @@ function u(e) {
     });
 }
 let f = [c.WA, c.s2, ...c.yp, c.wo, c.F7];
-function p(e) {
-    let { loadId: n, applicationId: r, skuId: l, analyticsLocations: c } = e,
-        { analyticsLocations: p } = (0, o.ZP)(c, a.Z.PREMIUM_PAYMENT_MODAL);
-    return (0, t.jsx)(o.Gt, {
-        value: p,
-        children: (0, t.jsx)(s.PaymentContextProvider, {
-            loadId: n,
+function h(e) {
+    let { loadId: t, applicationId: n, skuId: s, analyticsLocations: c } = e,
+        { analyticsLocations: h } = (0, i.ZP)(c, a.Z.PREMIUM_PAYMENT_MODAL);
+    return (0, r.jsx)(i.Gt, {
+        value: h,
+        children: (0, r.jsx)(l.PaymentContextProvider, {
+            loadId: t,
             stepConfigs: f,
-            applicationId: r,
-            skuIDs: [l],
+            applicationId: n,
+            skuIDs: [s],
             activeSubscription: null,
             purchaseType: d.GZ.ONE_TIME,
-            children: (0, t.jsx)(i.KB, { children: (0, t.jsx)(u, { ...e }) })
+            children: (0, r.jsx)(o.KB, { children: (0, r.jsx)(u, { ...e }) })
         })
     });
 }

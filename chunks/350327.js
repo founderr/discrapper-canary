@@ -1,15 +1,15 @@
 n.d(t, {
     CM: function () {
-        return g;
+        return S;
     },
     Cf: function () {
-        return I;
+        return m;
     },
     ID: function () {
         return T;
     },
     Xz: function () {
-        return v;
+        return N;
     },
     Z: function () {
         return f;
@@ -18,10 +18,10 @@ n.d(t, {
         return A;
     },
     f4: function () {
-        return N;
+        return O;
     },
     g_: function () {
-        return m;
+        return I;
     },
     ho: function () {
         return p;
@@ -30,20 +30,20 @@ n.d(t, {
         return h;
     },
     rf: function () {
-        return O;
-    },
-    x3: function () {
         return R;
     },
+    x3: function () {
+        return v;
+    },
     z5: function () {
-        return S;
+        return g;
     }
 });
 var r = n(544891),
     i = n(570140),
     a = n(881052),
-    o = n(957730),
-    s = n(695346),
+    s = n(957730),
+    o = n(695346),
     l = n(594174),
     u = n(626135),
     c = n(956664),
@@ -59,8 +59,8 @@ async function f(e, t) {
     var n, u, c;
     let _ = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
     if (null == _) return;
-    let E = s.dN.getSetting();
-    null != e.bio && E && (e.bio = o.ZP.parse(void 0, e.bio).content);
+    let E = o.dN.getSetting();
+    null != e.bio && E && (e.bio = s.ZP.parse(void 0, e.bio).content);
     try {
         i.Z.dispatch({
             type: 'USER_PROFILE_UPDATE_START',
@@ -109,16 +109,16 @@ function p(e) {
         ? fetch(e)
               .then((e) => e.blob())
               .then((e) => (0, c.fD)(e))
-              .then((e) => m(e))
-        : null != e && m(e);
+              .then((e) => I(e))
+        : null != e && I(e);
 }
-function m(e) {
+function I(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER',
         banner: e
     });
 }
-function I(e) {
+function m(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BIO',
         bio: e
@@ -130,13 +130,13 @@ function T(e) {
         pronouns: e
     });
 }
-function g(e) {
+function S(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR',
         color: e
     });
 }
-function S(e) {
+function g(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS',
         themeColors: e
@@ -149,28 +149,28 @@ function A(e) {
     }),
         E(_.QP.ANIMATED_AVATAR);
 }
-function v(e) {
+function N(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e
     }),
         E(_.QP.AVATAR_DECORATION);
 }
-function N(e) {
+function O(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER',
         banner: e
     }),
         E(_.QP.PROFILE_BANNER);
 }
-function O(e) {
+function R(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS',
         themeColors: e
     }),
         E(_.QP.PROFILE_THEME_COLOR);
 }
-function R(e) {
+function v(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET',
         preset: e

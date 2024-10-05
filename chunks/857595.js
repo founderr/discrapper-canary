@@ -3,16 +3,16 @@ n.d(t, {
         return A;
     },
     Nc: function () {
-        return I;
+        return m;
     },
     Nv: function () {
-        return y;
+        return L;
     },
     Qj: function () {
         return E;
     },
     TX: function () {
-        return v;
+        return N;
     },
     Uv: function () {
         return C;
@@ -21,19 +21,19 @@ n.d(t, {
         return d;
     },
     Zt: function () {
-        return g;
+        return S;
     },
     cq: function () {
         return _;
     },
     eN: function () {
-        return R;
+        return v;
     },
     f1: function () {
         return h;
     },
     gs: function () {
-        return N;
+        return O;
     },
     lq: function () {
         return p;
@@ -45,23 +45,23 @@ n.d(t, {
         return c;
     },
     qz: function () {
-        return S;
+        return g;
     },
     r_: function () {
-        return m;
+        return I;
     },
     rf: function () {
         return f;
     },
     u1: function () {
-        return O;
+        return R;
     }
 });
 var r = n(570140),
     i = n(153867),
     a = n(626135),
-    o = n(607070),
-    s = n(981631),
+    s = n(607070),
+    o = n(981631),
     l = n(969943),
     u = n(611480);
 function c(e) {
@@ -84,10 +84,10 @@ function _(e) {
     });
 }
 function E() {
-    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_ENABLE' }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !0 });
+    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_ENABLE' }), a.default.track(o.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !0 });
 }
 function f() {
-    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_DISABLE' }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !1 });
+    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_DISABLE' }), a.default.track(o.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !1 });
 }
 function h() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_DESATURATE_ROLES_TOGGLE' });
@@ -95,10 +95,10 @@ function h() {
 function p() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_DARK_SIDEBAR_TOGGLE' });
 }
-function m() {
+function I() {
     r.Z.dispatch({ type: 'KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN' });
 }
-function I(e) {
+function m(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED',
         systemPrefersReducedMotion: e
@@ -110,13 +110,13 @@ function T(e) {
         saturation: e
     });
 }
-function g(e) {
-    let t = o.Z.useReducedMotion;
+function S(e) {
+    let t = s.Z.useReducedMotion;
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION',
         prefersReducedMotion: e
     });
-    let n = o.Z.useReducedMotion;
+    let n = s.Z.useReducedMotion;
     !t && n
         ? i.ZP.applySettingsOverride({
               gifAutoPlay: {
@@ -134,7 +134,7 @@ function g(e) {
           })
         : t && !n && i.ZP.clearSettingsOverride('gifAutoPlay', 'animateEmoji', 'animateStickers');
 }
-function S(e) {
+function g(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_SYNC_FORCED_COLORS',
         syncForcedColors: e
@@ -147,32 +147,32 @@ function A(e, t) {
         systemForcedColors: t
     });
 }
-function v(e) {
+function N(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED',
         systemPrefersContrast: e
     });
 }
-function N(e) {
+function O(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS',
         alwaysShowLinkDecorations: e
     });
 }
-function O(e) {
+function R(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_ROLE_STYLE',
         roleStyle: e
     }),
-        a.default.track(s.rMx.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
+        a.default.track(o.rMx.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
 }
-function R() {
+function v() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE' });
 }
 function C() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE' });
 }
-function y(e) {
+function L(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_HIDE_TAGS',
         hideTags: e

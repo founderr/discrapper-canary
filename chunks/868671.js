@@ -18,8 +18,8 @@ var i = n(470079),
     u = n(626135),
     d = n(162461),
     h = n(71585),
-    m = n(34586),
-    p = n(69259),
+    p = n(34586),
+    m = n(69259),
     _ = n(590026),
     f = n(178762),
     E = n(206583),
@@ -39,7 +39,7 @@ function x(e) {
         L = (0, s.e7)([c.Z], () => c.Z.isFocused()),
         j = (0, s.e7)([r.Z], () => r.Z.getChannel(x)),
         P = (0, s.e7)([o.Z], () => o.Z.getGuild(S), [S]),
-        O = (0, m.E)(P),
+        O = (0, p.E)(P),
         y = null != O && O && (null == j ? void 0 : j.isForumChannel()) === !1,
         [D, U, k, w] = i.useMemo(() => {
             let e;
@@ -109,7 +109,7 @@ function x(e) {
                     let n = null !== (t = null === (e = H.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t ? t : [],
                         i = n.slice(0, B.current);
                     if (!R && !!L && !!y)
-                        (0, p.e)(C.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
+                        (0, m.e)(C.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: A,
                             first_shown_at: G.current,
                             item_ids: i,

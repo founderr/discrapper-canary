@@ -1,43 +1,43 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(510659),
-    u = n(899007),
-    c = n(287954),
-    d = n(825801),
-    _ = n(64621),
-    E = n(228168),
-    f = n(8621);
-function h(e) {
-    let { user: t, sourceType: n, className: r, children: o } = e,
-        s = a.useRef(null),
-        [l, u] = a.useState(!1),
-        c = () => {
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(510659),
+    l = n(899007),
+    u = n(287954),
+    c = n(825801),
+    d = n(64621),
+    _ = n(228168),
+    E = n(8621);
+function f(e) {
+    let { user: t, sourceType: n, className: a, children: s } = e,
+        o = i.useRef(null),
+        [l, u] = i.useState(!1),
+        d = () => {
             u(!0);
         },
         _ = () => {
             u(!1);
         };
-    return (0, i.jsxs)('div', {
-        className: r,
-        onMouseOver: c,
+    return (0, r.jsxs)('div', {
+        className: a,
+        onMouseOver: d,
         onMouseLeave: _,
-        onFocus: c,
+        onFocus: d,
         onBlur: (e) => {
             var t;
-            !(null === (t = s.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) && _();
+            !(null === (t = o.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) && _();
         },
-        ref: s,
+        ref: o,
         children: [
-            o,
-            (0, i.jsx)(d.ZP, {
+            s,
+            (0, r.jsx)(c.ZP, {
                 user: t,
                 sourceType: n,
                 isVisible: l,
@@ -46,37 +46,37 @@ function h(e) {
         ]
     });
 }
-function p(e) {
-    let { user: t, profileType: n, animateOnHover: r, onOpenProfile: a, ...o } = e,
-        d = E.n_.AVATAR,
-        { interactionSource: p } = (0, l.Xo)(),
-        m = s()(f.avatar, {
-            [f.hoisted]: p === E.n_.AVATAR || p === E.n_.STATUS,
-            [f.biteSize]: n === E.y0.BITE_SIZE,
-            [f.fullSize]: n === E.y0.FULL_SIZE,
-            [f.panel]: n === E.y0.PANEL
+function h(e) {
+    let { user: t, profileType: n, animateOnHover: i, onOpenProfile: a, ...c } = e,
+        h = _.n_.AVATAR,
+        { interactionSource: p } = (0, o.Xo)(),
+        I = s()(E.avatar, {
+            [E.hoisted]: p === _.n_.AVATAR || p === _.n_.STATUS,
+            [E.biteSize]: n === _.y0.BITE_SIZE,
+            [E.fullSize]: n === _.y0.FULL_SIZE,
+            [E.panel]: n === _.y0.PANEL
         });
-    return (0, i.jsx)(_.Z, {
-        sourceType: E.n_.AVATAR,
+    return (0, r.jsx)(d.Z, {
+        sourceType: _.n_.AVATAR,
         user: t,
-        children: (0, i.jsx)(c.Z, {
+        children: (0, r.jsx)(u.Z, {
             user: t,
-            className: m,
+            className: I,
             profileType: n,
-            sourceType: d,
-            ...o,
+            sourceType: h,
+            ...c,
             children: () =>
-                (0, i.jsx)(h, {
-                    className: m,
+                (0, r.jsx)(f, {
+                    className: I,
                     user: t,
-                    sourceType: d,
-                    children: (0, i.jsx)(u.Z, {
+                    sourceType: h,
+                    children: (0, r.jsx)(l.Z, {
                         user: t,
-                        animateOnHover: r,
+                        animateOnHover: i,
                         onOpenProfile: a,
                         profileType: n,
-                        className: f.withReactReply,
-                        ...o
+                        className: E.withReactReply,
+                        ...c
                     })
                 })
         })

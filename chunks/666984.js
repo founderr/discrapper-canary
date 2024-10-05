@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(620662),
-    o = n(503438),
-    s = n(829820),
+    s = n(503438),
+    o = n(829820),
     l = n(395361),
     u = n(475413),
     c = n(981631),
@@ -17,9 +17,9 @@ var i = n(481060),
 function E(e) {
     var t;
     let { user: n, activity: E, onAction: f } = e,
-        h = (0, s.Ih)(E, n),
-        p = (0, s.Fe)(E, n);
-    return (0, o.Z)(E) && ((0, a.Z)(E, c.xjy.PLAY) || (0, a.Z)(E, c.xjy.SYNC))
+        h = (0, o.Ih)(E, n),
+        p = (0, o.Fe)(E, n);
+    return (0, s.Z)(E) && ((0, a.Z)(E, c.xjy.PLAY) || (0, a.Z)(E, c.xjy.SYNC))
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(u.ef, {

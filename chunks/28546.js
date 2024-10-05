@@ -1,6 +1,6 @@
 n.d(t, {
     Iu: function () {
-        return m;
+        return I;
     },
     PG: function () {
         return d;
@@ -24,8 +24,8 @@ n.d(t, {
 var r = n(97613),
     i = n.n(r),
     a = n(652874),
-    o = n(868888),
-    s = n(731965),
+    s = n(868888),
+    o = n(731965),
     l = n(957825);
 let u = Object.freeze({
         activeView: null,
@@ -39,13 +39,13 @@ let u = Object.freeze({
         })()
     }),
     c = (0, a.Z)(
-        (0, o.tJ)((e, t) => u, {
+        (0, s.tJ)((e, t) => u, {
             name: 'expression-picker-last-active-view',
             partialize: (e) => ({ lastActiveView: e.lastActiveView })
         })
     ),
     d = (e, t) => {
-        (0, s.j)(() =>
+        (0, o.j)(() =>
             c.setState({
                 activeView: e,
                 activeViewType: t,
@@ -56,7 +56,7 @@ let u = Object.freeze({
     _ = (e) => {
         let t = c.getState();
         if ((void 0 === e || e === t.activeViewType) && null !== t.activeView)
-            (0, s.j)(() =>
+            (0, o.j)(() =>
                 c.setState({
                     activeView: null,
                     activeViewType: null,
@@ -75,7 +75,7 @@ let u = Object.freeze({
         c.getState().activeView === e ? _() : d(e, t);
     },
     h = (e) => {
-        (0, s.j)(() =>
+        (0, o.j)(() =>
             c.setState({
                 activeView: e,
                 lastActiveView: c.getState().activeView
@@ -84,11 +84,11 @@ let u = Object.freeze({
     },
     p = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (0, s.j)(() =>
+        (0, o.j)(() =>
             c.setState({
                 searchQuery: e,
                 isSearchSuggestion: t
             })
         );
     },
-    m = c;
+    I = c;

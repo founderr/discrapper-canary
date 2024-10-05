@@ -19,13 +19,13 @@ function i(e, t, n) {
 }
 class a {
     static fromServer(e) {
-        let { prices: t, type: n, premium_type: i, name: o, sku_id: s, summary: l } = e;
+        let { prices: t, type: n, premium_type: i, name: s, sku_id: o, summary: l } = e;
         return new a({
             prices: (0, r.l)(t),
             type: n,
             premiumType: i,
-            name: o,
-            skuId: s,
+            name: s,
+            skuId: o,
             summary: l
         });
     }

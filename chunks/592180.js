@@ -1,16 +1,16 @@
 n.d(t, {
     a: function () {
-        return i;
+        return a;
     },
     g: function () {
-        return a;
+        return s;
     }
 });
-var r = n(911969);
-function i(e) {
+var i = n(911969);
+function a(e) {
     return null != e.interactionMetadata;
 }
-function a(e) {
+function s(e) {
     var t, n;
-    return (null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.type) === r.B8.APPLICATION_COMMAND && (null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.command_type) === r.yU.PRIMARY_ENTRY_POINT;
+    return (null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.type) === i.B8.APPLICATION_COMMAND && (null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.command_type) === i.yU.PRIMARY_ENTRY_POINT;
 }

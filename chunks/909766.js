@@ -1,12 +1,12 @@
 n.d(t, {
     b: function () {
-        return s;
+        return a;
     }
-});
-var r = n(653041);
-var i = n(47120);
-var a = n(508385);
-function o(e, t, n) {
+}),
+    n(653041),
+    n(47120);
+var r = n(508385);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,10 +19,10 @@ function o(e, t, n) {
         e
     );
 }
-class s {
+class a {
     addSample(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        (this.total += e * t), (this.totalWeight += t), this.samples++, a.TDigest.prototype.push.call(this.digest, e, t), this.digest.check_continuous();
+        (this.total += e * t), (this.totalWeight += t), this.samples++, r.TDigest.prototype.push.call(this.digest, e, t), this.digest.check_continuous();
     }
     getReport() {
         var e, t, n, r;
@@ -39,6 +39,6 @@ class s {
         };
     }
     constructor() {
-        o(this, 'digest', new a.Digest()), o(this, 'total', 0), o(this, 'samples', 0), o(this, 'totalWeight', 0);
+        i(this, 'digest', new r.Digest()), i(this, 'total', 0), i(this, 'samples', 0), i(this, 'totalWeight', 0);
     }
 }

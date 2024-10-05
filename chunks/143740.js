@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060);
-function a(e, t) {
-    (0, i.openModalLazy)(async () => {
-        let { default: i } = await n.e('6310').then(n.bind(n, 706923));
+var a = n(481060);
+function s(e, t) {
+    (0, a.openModalLazy)(async () => {
+        let { default: a } = await n.e('6310').then(n.bind(n, 706923));
         return (n) =>
-            (0, r.jsx)(i, {
+            (0, i.jsx)(a, {
                 channelId: e,
                 messageId: t,
                 ...n

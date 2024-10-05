@@ -12,8 +12,8 @@ n.d(t, {
 var r = n(442837),
     i = n(594174),
     a = n(78839),
-    o = n(295226),
-    s = n(786397),
+    s = n(295226),
+    o = n(786397),
     l = n(474936);
 let u = () => {
     let e = (0, r.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription());
@@ -25,7 +25,7 @@ function c() {
     return (null == e ? void 0 : e.trialId) != null ? (null == t ? void 0 : t.premiumType) : null;
 }
 function d() {
-    return l.CR.map((e) => o.Z.getUserTrialOffer(e))
-        .filter((e) => null != e && !(0, s.B)(e))
+    return l.CR.map((e) => s.Z.getUserTrialOffer(e))
+        .filter((e) => null != e && !(0, o.B)(e))
         .shift();
 }

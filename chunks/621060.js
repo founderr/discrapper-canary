@@ -30,7 +30,7 @@ function m(e) {
         m = a.useRef(0),
         x = a.useRef(new Map()),
         [f, p] = a.useState([]),
-        b = a.useCallback(() => {
+        g = a.useCallback(() => {
             var e, r, a, l;
             if (null == i.current) return;
             let o = [],
@@ -42,17 +42,17 @@ function m(e) {
                 p(o);
             }
         }, [t, n]),
-        g = a.useRef(null);
+        b = a.useRef(null);
     a.useEffect(
         () => (
-            (g.current = new ResizeObserver(() => b())),
-            null != i.current && g.current.observe(i.current),
+            (b.current = new ResizeObserver(() => g())),
+            null != i.current && b.current.observe(i.current),
             () => {
                 var e;
-                null === (e = g.current) || void 0 === e || e.disconnect();
+                null === (e = b.current) || void 0 === e || e.disconnect();
             }
         ),
-        [b]
+        [g]
     );
     let v = a.useCallback(
         (e) => {

@@ -50,15 +50,15 @@ t.Z = {
         });
     },
     update(e, t, n, i) {
-        let { description: a, filename: o, spoiler: s, thumbnail: l } = i;
+        let { description: a, filename: s, spoiler: o, thumbnail: l } = i;
         r.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_UPDATE_FILE',
             channelId: e,
             id: t,
-            filename: o,
+            filename: s,
             description: a,
             thumbnail: l,
-            spoiler: s,
+            spoiler: o,
             draftType: n
         });
     },

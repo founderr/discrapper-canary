@@ -11,12 +11,12 @@ var i = n(735250),
     h = n(689938),
     p = n(138592);
 t.Z = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: f, headerClassName: _, contentClassName: m, tryItText: g, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: S = !1, isPremiumFeature: x = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: b = 'top', align: A = 'center', art: M, isPremiumEarlyAccess: R = !1, maxWidth: L = 280, hideDismissButton: P = !1, pointerClassName: y, dismissIconClassName: O, dismissIcon: j, onDismissIconClick: D } = e,
+    let { body: n, header: r, artClassName: f, headerClassName: _, contentClassName: m, tryItText: g, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: S = !1, isPremiumFeature: x = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: T = !1, dismissibleContent: Z, position: A = 'top', align: b = 'center', art: R, isPremiumEarlyAccess: M = !1, maxWidth: L = 280, hideDismissButton: P = !1, pointerClassName: O, dismissIconClassName: y, dismissIcon: D, onDismissIconClick: j } = e,
         w = v ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
         [U, G] = l.useState(!1),
         { ref: k, width: B } = (0, o.Z)();
     function V(e) {
-        (0, c.EW)(T, { dismissAction: e });
+        (0, c.EW)(Z, { dismissAction: e });
     }
     return (
         l.useEffect(() => {
@@ -25,26 +25,26 @@ t.Z = l.forwardRef(function (e, t) {
             !U && n > L && G(!0);
         }, [U, B, k, L]),
         l.useEffect(() => {
-            (0, c.kk)(T);
-        }, [T]),
+            (0, c.kk)(Z);
+        }, [Z]),
         (0, i.jsx)('div', {
             className: N,
             ref: t,
             children: (0, i.jsxs)('div', {
                 className: a()(p.content, m, {
                     [p.contentNoArt]: null == f || S,
-                    [p.contentPremium]: x || R
+                    [p.contentPremium]: x || M
                 }),
                 children: [
-                    null != j &&
+                    null != D &&
                         (0, i.jsx)(s.Clickable, {
-                            onClick: D,
-                            className: O,
-                            children: j
+                            onClick: j,
+                            className: y,
+                            children: D
                         }),
                     (0, i.jsxs)('div', {
                         className: a()(f, S ? p.artInline : p.artAbsolute),
-                        children: [Z && (0, i.jsx)(u.Z, { className: p.gifTag }), M]
+                        children: [T && (0, i.jsx)(u.Z, { className: p.gifTag }), R]
                     }),
                     (0, i.jsxs)('div', {
                         className: p.body,
@@ -54,14 +54,14 @@ t.Z = l.forwardRef(function (e, t) {
                                 variant: 'heading-md/bold',
                                 color: 'always-white',
                                 children: [
-                                    x && !R
+                                    x && !M
                                         ? (0, i.jsx)(s.NitroWheelIcon, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: p.premiumIcon
                                           })
                                         : null,
-                                    R
+                                    M
                                         ? (0, i.jsxs)(s.Text, {
                                               color: 'always-white',
                                               variant: 'eyebrow',
@@ -106,7 +106,7 @@ t.Z = l.forwardRef(function (e, t) {
                                               onClick: (e) => {
                                                   null == E || E(e), I(e), V(d.L.PRIMARY);
                                               },
-                                              color: x || R ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
+                                              color: x || M ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
                                               children: null != g ? g : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
                                           }),
                                           !P &&
@@ -116,8 +116,8 @@ t.Z = l.forwardRef(function (e, t) {
                                                   onClick: (e) => {
                                                       null == E || E(e), V(d.L.DISMISS);
                                                   },
-                                                  color: x || R ? s.Button.Colors.WHITE : s.Button.Colors.BRAND,
-                                                  look: x || R ? s.Button.Looks.LINK : s.Button.Looks.FILLED,
+                                                  color: x || M ? s.Button.Colors.WHITE : s.Button.Colors.BRAND,
+                                                  look: x || M ? s.Button.Looks.LINK : s.Button.Looks.FILLED,
                                                   children: null != C ? C : h.Z.Messages.EDUCATION_NEW_FEATURE_DISMISS
                                               })
                                       ]
@@ -133,10 +133,10 @@ t.Z = l.forwardRef(function (e, t) {
                                   })
                     }),
                     (0, i.jsx)('div', {
-                        className: a()(p.pointer, y, {
-                            [p.bottomPointer]: 'top' === b,
-                            [p.centerLeftPointer]: 'right' === b && 'center' === A,
-                            [p.topLeftPointer]: 'right' === b && 'top' === A
+                        className: a()(p.pointer, O, {
+                            [p.bottomPointer]: 'top' === A,
+                            [p.centerLeftPointer]: 'right' === A && 'center' === b,
+                            [p.topLeftPointer]: 'right' === A && 'top' === b
                         })
                     })
                 ]

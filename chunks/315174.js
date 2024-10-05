@@ -100,12 +100,12 @@ function E() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: N, onMouseDown: S, disableBannerAnimation: x, 'aria-expanded': v, 'aria-controls': Z, guild: T, guildBanner: b, animationOverlayHeight: A, children: M, headerClassName: R, communityInfoVisible: L, hasSubheader: P } = e,
-        y = T.hasFeature(f.oNc.ANIMATED_BANNER),
-        O = (0, u.Z)(T),
-        j = !O && T.hasCommunityInfoSubheader(),
-        D = !O && L,
-        w = (0, h.xR)(b) && y && !x,
+    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: N, onMouseDown: S, disableBannerAnimation: x, 'aria-expanded': v, 'aria-controls': T, guild: Z, guildBanner: A, animationOverlayHeight: b, children: R, headerClassName: M, communityInfoVisible: L, hasSubheader: P } = e,
+        O = Z.hasFeature(f.oNc.ANIMATED_BANNER),
+        y = (0, u.Z)(Z),
+        D = !y && Z.hasCommunityInfoSubheader(),
+        j = !y && L,
+        w = (0, h.xR)(A) && O && !x,
         [U, G] = l.useState(!1),
         k = l.useRef(),
         B = l.useRef(null),
@@ -145,33 +145,33 @@ t.ZP = l.memo(function (e) {
                             [g.hasBanner]: F(),
                             [g.bannerVisible]: t,
                             [e]: t,
-                            [g.communityInfoVisible]: D || (P && j)
+                            [g.communityInfoVisible]: j || (P && D)
                         }),
                         onMouseDown: S,
                         onContextMenu: N,
                         onClick: s,
                         children: [
                             (0, i.jsxs)('header', {
-                                className: a()(g.header, R, { [g.themedHeaderMobile]: o.tq }),
+                                className: a()(g.header, M, { [g.themedHeaderMobile]: o.tq }),
                                 children: [
                                     (0, i.jsxs)('div', {
                                         className: a()(g.headerContent, g.primaryInfo),
                                         children: [
                                             (0, i.jsx)(p.Z, {
-                                                guild: T,
+                                                guild: Z,
                                                 isBannerVisible: t
                                             }),
-                                            T.id === _._ && (0, i.jsx)(E, {}),
+                                            Z.id === _._ && (0, i.jsx)(E, {}),
                                             (0, i.jsx)(c.Heading, {
                                                 variant: 'text-md/semibold',
                                                 lineClamp: 1,
                                                 className: g.name,
-                                                children: T.toString()
+                                                children: Z.toString()
                                             }),
                                             null != s &&
                                                 (0, i.jsx)(c.Clickable, {
                                                     className: g.headerButton,
-                                                    'aria-controls': Z,
+                                                    'aria-controls': T,
                                                     'aria-expanded': v,
                                                     focusProps: {
                                                         ringTarget: B,
@@ -179,28 +179,28 @@ t.ZP = l.memo(function (e) {
                                                     },
                                                     onClick: s,
                                                     onContextMenu: N,
-                                                    'aria-label': m.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({ guildName: null !== (l = null == T ? void 0 : T.toString()) && void 0 !== l ? l : '' })
+                                                    'aria-label': m.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({ guildName: null !== (l = null == Z ? void 0 : Z.toString()) && void 0 !== l ? l : '' })
                                                 }),
                                             (0, i.jsx)('div', {
                                                 className: g.headerChildren,
-                                                children: M
+                                                children: R
                                             })
                                         ]
                                     }),
-                                    j &&
+                                    D &&
                                         (0, i.jsx)(I, {
-                                            guild: T,
+                                            guild: Z,
                                             controller: n,
-                                            hasBanner: null != b,
+                                            hasBanner: null != A,
                                             hasSubheader: null != P && P
                                         })
                                 ]
                             }),
-                            null != b
+                            null != A
                                 ? (0, i.jsx)(C, {
-                                      guild: T,
+                                      guild: Z,
                                       controller: n,
-                                      guildBanner: b,
+                                      guildBanner: A,
                                       animate: U
                                   })
                                 : null
@@ -213,7 +213,7 @@ t.ZP = l.memo(function (e) {
                                   G(!0), clearTimeout(V.current);
                               },
                               onMouseLeave: () => G(!1),
-                              style: { height: A }
+                              style: { height: b }
                           })
                         : null
                 ]

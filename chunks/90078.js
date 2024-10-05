@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(470079),
     i = n(234366),
     a = n(705942),
-    o = n(566833),
-    s = function () {},
+    s = n(566833),
+    o = function () {},
     l = function () {
         return Promise.resolve(null);
     },
@@ -22,21 +22,21 @@ function c(e) {
         f = e.referenceElement,
         h = e.onFirstUpdate,
         p = e.innerRef,
-        m = e.children,
-        I = r.useContext(i.C8),
+        I = e.children,
+        m = r.useContext(i.C8),
         T = r.useState(null),
-        g = T[0],
-        S = T[1],
+        S = T[0],
+        g = T[1],
         A = r.useState(null),
-        v = A[0],
-        N = A[1];
+        N = A[0],
+        O = A[1];
     r.useEffect(
         function () {
-            (0, a.k$)(p, g);
+            (0, a.k$)(p, S);
         },
-        [p, g]
+        [p, S]
     );
-    var O = r.useMemo(
+    var R = r.useMemo(
             function () {
                 return {
                     placement: n,
@@ -45,36 +45,36 @@ function c(e) {
                     modifiers: [].concat(E, [
                         {
                             name: 'arrow',
-                            enabled: null != v,
-                            options: { element: v }
+                            enabled: null != N,
+                            options: { element: N }
                         }
                     ])
                 };
             },
-            [n, d, h, E, v]
+            [n, d, h, E, N]
         ),
-        R = (0, o.D)(f || I, g, O),
-        C = R.state,
-        y = R.styles,
-        L = R.forceUpdate,
-        b = R.update,
-        D = r.useMemo(
+        v = (0, s.D)(f || m, S, R),
+        C = v.state,
+        L = v.styles,
+        D = v.forceUpdate,
+        y = v.update,
+        b = r.useMemo(
             function () {
                 return {
-                    ref: S,
-                    style: y.popper,
+                    ref: g,
+                    style: L.popper,
                     placement: C ? C.placement : n,
                     hasPopperEscaped: C && C.modifiersData.hide ? C.modifiersData.hide.hasPopperEscaped : null,
                     isReferenceHidden: C && C.modifiersData.hide ? C.modifiersData.hide.isReferenceHidden : null,
                     arrowProps: {
-                        style: y.arrow,
-                        ref: N
+                        style: L.arrow,
+                        ref: O
                     },
-                    forceUpdate: L || s,
-                    update: b || l
+                    forceUpdate: D || o,
+                    update: y || l
                 };
             },
-            [S, N, n, C, y, b, L]
+            [g, O, n, C, L, y, D]
         );
-    return (0, a.$p)(m)(D);
+    return (0, a.$p)(I)(b);
 }

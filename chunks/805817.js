@@ -1,8 +1,8 @@
 var r = n(686942),
     i = n(707908),
     a = n(747337),
-    o = n(117089),
-    s = n(109766),
+    s = n(117089),
+    o = n(109766),
     l = n(68808),
     u = n(695170),
     c = (function () {
@@ -17,9 +17,9 @@ var r = n(686942),
                         l = i.yearlen,
                         u = i.mrange,
                         c = i.wdaymask;
-                    this.monthinfo = (0, o.D)(e, t, l, u, c, n);
+                    this.monthinfo = (0, s.D)(e, t, l, u, c, n);
                 }
-                (0, r.EN)(n.byeaster) && (this.eastermask = (0, s.d)(e, n.byeaster));
+                (0, r.EN)(n.byeaster) && (this.eastermask = (0, o.d)(e, n.byeaster));
             }),
             Object.defineProperty(e.prototype, 'lastyear', {
                 get: function () {
@@ -109,12 +109,12 @@ var r = n(686942),
                 return [(0, r.w6)(this.yearlen), 0, this.yearlen];
             }),
             (e.prototype.mdayset = function (e, t) {
-                for (var n = this.mrange[t - 1], i = this.mrange[t], a = (0, r.rx)(null, this.yearlen), o = n; o < i; o++) a[o] = o;
+                for (var n = this.mrange[t - 1], i = this.mrange[t], a = (0, r.rx)(null, this.yearlen), s = n; s < i; s++) a[s] = s;
                 return [a, n, i];
             }),
             (e.prototype.wdayset = function (e, t, n) {
-                for (var i = (0, r.rx)(null, this.yearlen + 7), a = (0, u.fv)((0, u.t2)(e, t, n)) - this.yearordinal, o = a, s = 0; s < 7 && ((i[a] = a), ++a, this.wdaymask[a] !== this.options.wkst); s++);
-                return [i, o, a];
+                for (var i = (0, r.rx)(null, this.yearlen + 7), a = (0, u.fv)((0, u.t2)(e, t, n)) - this.yearordinal, s = a, o = 0; o < 7 && ((i[a] = a), ++a, this.wdaymask[a] !== this.options.wkst); o++);
+                return [i, s, a];
             }),
             (e.prototype.ddayset = function (e, t, n) {
                 var i = (0, r.rx)(null, this.yearlen),

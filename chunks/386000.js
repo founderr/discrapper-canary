@@ -9,15 +9,15 @@ var i = n(735250),
     l = n(628581),
     r = n(871499);
 function o(e) {
-    let { selfMute: t, serverMute: n, suppress: o, centerButton: c = !1, awaitingRemote: u, onMouseEnter: d, onMouseLeave: h, ...m } = e,
-        p = t || n || o,
+    let { selfMute: t, serverMute: n, suppress: o, centerButton: c = !1, awaitingRemote: u, onMouseEnter: d, onMouseLeave: h, ...p } = e,
+        m = t || n || o,
         _ = c ? r.d : r.Z,
         f = (0, l.Z)(t, n, o, u),
-        { Component: E, play: g, events: C } = (0, a.O)(p ? 'unmute' : 'mute');
+        { Component: E, play: g, events: C } = (0, a.O)(m ? 'unmute' : 'mute');
     return (
-        s.useEffect(() => () => g(), [g, p]),
+        s.useEffect(() => () => g(), [g, m]),
         (0, i.jsx)(_, {
-            isActive: !p,
+            isActive: !m,
             iconComponent: E,
             label: f,
             onMouseEnter: (e) => {
@@ -26,7 +26,7 @@ function o(e) {
             onMouseLeave: (e) => {
                 null == h || h(e), C.onMouseLeave();
             },
-            ...m
+            ...p
         })
     );
 }

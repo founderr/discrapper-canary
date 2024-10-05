@@ -2,7 +2,7 @@ var r = n(641236)('iterator'),
     i = !1;
 try {
     var a = 0,
-        o = {
+        s = {
             next: function () {
                 return { done: !!a++ };
             },
@@ -10,10 +10,10 @@ try {
                 i = !0;
             }
         };
-    (o[r] = function () {
+    (s[r] = function () {
         return this;
     }),
-        Array.from(o, function () {
+        Array.from(s, function () {
             throw 2;
         });
 } catch (e) {}

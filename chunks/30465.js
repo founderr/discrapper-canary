@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     },
     p8: function () {
-        return s;
+        return o;
     },
     sJ: function () {
         return u;
@@ -12,20 +12,20 @@ n.d(t, {
 var r = n(470079),
     i = n(652874),
     a = n(731965);
-let o = Object.freeze({
+let s = Object.freeze({
         id: null,
         activeDescendant: null
     }),
-    s = (0, i.Z)(() => o);
+    o = (0, i.Z)(() => s);
 function l(e, t, n) {
     (0, r.useEffect)(() => {
         (0, a.j)(() => {
             t
-                ? s.setState({
+                ? o.setState({
                       id: e,
                       activeDescendant: n
                   })
-                : s.setState({
+                : o.setState({
                       id: null,
                       activeDescendant: null
                   });
@@ -33,5 +33,5 @@ function l(e, t, n) {
     }, [e, t, n]);
 }
 function u() {
-    (0, a.j)(() => s.setState(() => o));
+    (0, a.j)(() => o.setState(() => s));
 }

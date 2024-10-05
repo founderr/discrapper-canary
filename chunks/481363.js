@@ -16,10 +16,10 @@ function c(e) {
             setPopout: t,
             messagePopouts: { emojiPicker: n, emojiBurstPicker: c, moreUtilities: u },
             isFocused: d,
-            buttonProps: { message: h, channel: m, groupId: p, compact: _ = !1 }
+            buttonProps: { message: h, channel: p, groupId: m, compact: _ = !1 }
         } = e,
         f = h.state === r.yb.SENDING,
-        E = h.id === p,
+        E = h.id === m,
         g = (0, s.yE)(h.flags, r.iLy.EPHEMERAL),
         C = h.state === r.yb.SEND_FAILED;
     return f || (g && !C)
@@ -28,7 +28,7 @@ function c(e) {
               className: o.buttons,
               innerClassName: o.buttonsInner,
               isHeader: !_ && E && !(0, a.Z)(h),
-              channel: m,
+              channel: p,
               message: h,
               setPopout: t,
               showEmojiPicker: n,

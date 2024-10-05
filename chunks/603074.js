@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return g;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(990547),
+    s = n.n(a),
+    o = n(990547),
     l = n(442837),
     u = n(481060),
     c = n(100527),
@@ -17,20 +17,20 @@ var r = n(735250),
     f = n(675478),
     h = n(19780),
     p = n(208049),
-    m = n(522811),
-    I = n(763296),
+    I = n(522811),
+    m = n(763296),
     T = n(526617),
-    g = n(126857);
-function S(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: S, onSelect: A, analyticsSource: v, suppressPlaySound: N, shouldShowUpsell: O = !0, gridNotice: R, inExpressionPicker: C, soundButtonOverlay: y, listPadding: L, renderHeader: b, defaultSoundsOnly: D } = e,
-        M = (0, l.e7)([I.Z], () => I.Z.isFetchingSounds() || I.Z.isFetchingDefaultSounds()),
+    S = n(126857);
+function g(e) {
+    let { guildId: t, channel: n, containerWidth: a, onClose: g, onSelect: A, analyticsSource: N, suppressPlaySound: O, shouldShowUpsell: R = !0, gridNotice: v, inExpressionPicker: C, soundButtonOverlay: L, listPadding: D, renderHeader: y, defaultSoundsOnly: b } = e,
+        M = (0, l.e7)([m.Z], () => m.Z.isFetchingSounds() || m.Z.isFetchingDefaultSounds()),
         P = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
         { analyticsLocations: U } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
     (0, _.Z)({
-        type: s.ImpressionTypes.POPOUT,
-        name: s.ImpressionNames.SOUNDBOARD_POPOUT,
+        type: o.ImpressionTypes.POPOUT,
+        name: o.ImpressionNames.SOUNDBOARD_POPOUT,
         properties: {
-            source: v,
+            source: N,
             guild_id: t,
             media_session_id: P
         }
@@ -38,30 +38,30 @@ function S(e) {
         i.useEffect(() => {
             p.w(), f.DZ.loadIfNecessary(), (0, E.ql)('');
         }, []);
-    let { refreshEnabled: w } = (0, m.Z)({ location: 'SoundboardSoundPicker' });
+    let { refreshEnabled: w } = (0, I.Z)({ location: 'SoundboardSoundPicker' });
     return (0, r.jsx)(d.Gt, {
         value: U,
         children: (0, r.jsx)(u.Dialog, {
-            className: o()(g.picker, {
-                [g.fetching]: M,
-                [g.inExpressionPicker]: C,
-                [g.refresh]: w
+            className: s()(S.picker, {
+                [S.fetching]: M,
+                [S.inExpressionPicker]: C,
+                [S.refresh]: w
             }),
             children: M
                 ? (0, r.jsx)(u.Spinner, {})
                 : (0, r.jsx)(T.Z, {
                       guildId: t,
                       channel: n,
-                      onClose: S,
+                      onClose: g,
                       onSelect: A,
                       containerWidth: a,
-                      suppressPlaySound: N,
-                      shouldShowUpsell: O,
-                      gridNotice: R,
-                      soundButtonOverlay: y,
-                      listPadding: L,
-                      renderHeader: b,
-                      defaultSoundsOnly: D,
+                      suppressPlaySound: O,
+                      shouldShowUpsell: R,
+                      gridNotice: v,
+                      soundButtonOverlay: L,
+                      listPadding: D,
+                      renderHeader: y,
+                      defaultSoundsOnly: b,
                       inExpressionPicker: C,
                       refreshEnabled: w
                   })

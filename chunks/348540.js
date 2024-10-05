@@ -14,8 +14,8 @@ var s = n(442837),
     u = n(172351),
     d = n(648052),
     h = n(280885),
-    m = n(483424),
-    p = n(681837),
+    p = n(483424),
+    m = n(681837),
     _ = n(91433),
     f = n(900927),
     E = n(678738),
@@ -49,7 +49,7 @@ function N(e) {
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(p.Z, { userId: t.id }),
+                        (0, i.jsx)(m.Z, { userId: t.id }),
                         !R &&
                             (0, i.jsx)(I.Z, {
                                 userId: t.id,
@@ -67,7 +67,7 @@ function N(e) {
                     })
                 }),
             t.isProvisional && (0, i.jsx)(a.Z, { look: 'profile' }),
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(p.Z, {
                 user: t,
                 currentUser: n,
                 className: v.activity

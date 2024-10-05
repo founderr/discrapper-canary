@@ -9,8 +9,8 @@ var i = n(735250),
     u = n(53281),
     d = n(110924),
     h = n(40851),
-    m = n(595519),
-    p = n(620662),
+    p = n(595519),
+    m = n(620662),
     _ = n(424602),
     f = n(924557),
     E = n(435064),
@@ -59,9 +59,9 @@ t.Z = s.memo(function (e) {
         [ec, eu] = s.useState(null),
         ed = (0, f.Go)() && ($ || eo),
         eh = W.isPrivate(),
-        em = (0, r.e7)([M.Z], () => eh || (M.Z.can(k.Plq.ATTACH_FILES, W) && M.Z.can(k.Plq.SEND_MESSAGES, W))),
-        ep = (0, r.e7)([S.default], () => S.default.locale),
-        e_ = ['en-US', 'en-GB'].includes(ep) ? H.Z.Messages.CHAT_ATTACH_PLUS_BUTTON_A11Y_LABEL : H.Z.Messages.MORE_OPTIONS,
+        ep = (0, r.e7)([M.Z], () => eh || (M.Z.can(k.Plq.ATTACH_FILES, W) && M.Z.can(k.Plq.SEND_MESSAGES, W))),
+        em = (0, r.e7)([S.default], () => S.default.locale),
+        e_ = ['en-US', 'en-GB'].includes(em) ? H.Z.Messages.CHAT_ATTACH_PLUS_BUTTON_A11Y_LABEL : H.Z.Messages.MORE_OPTIONS,
         ef = (0, d.Z)(ee);
     (null == ef ? void 0 : ef.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && ea && en && !el && !ei && !er && eu('recentClips');
     let eE = (e, t, n) => {
@@ -105,10 +105,10 @@ t.Z = s.memo(function (e) {
         ex = !v.dN.useSetting() && !(0, P.isAndroidWeb)() && null != window.ResizeObserver,
         eS = (0, T.UI)(null != W ? W : void 0),
         ev = (0, c.useRedesignIconContext)().enabled,
-        eN = (0, m.qB)(W.id, 'ChannelAttachButton'),
+        eN = (0, p.qB)(W.id, 'ChannelAttachButton'),
         eA = null !== (a = null == et ? void 0 : et.length) && void 0 !== a ? a : 0,
         eZ = (0, U.Z)({
-            canAttachFiles: em,
+            canAttachFiles: ep,
             canStartThreads: eI || eT,
             useSlate: ex,
             hasClips: ed,
@@ -121,8 +121,8 @@ t.Z = s.memo(function (e) {
             appContext: X
         });
     if (0 === eZ.length) return null;
-    let eM = Q.some((e) => (0, p.Z)(e, k.xjy.SYNC)),
-        eb = Q.some((e) => (0, p.Z)(e, k.xjy.JOIN) && !(0, p.Z)(e, k.xjy.EMBEDDED)) || eM;
+    let eM = Q.some((e) => (0, m.Z)(e, k.xjy.SYNC)),
+        eb = Q.some((e) => (0, m.Z)(e, k.xjy.JOIN) && !(0, m.Z)(e, k.xjy.EMBEDDED)) || eM;
     V = ev
         ? (0, i.jsx)(c.CirclePlusIcon, {
               className: G.__invalid_attachButtonIcon,
@@ -196,7 +196,7 @@ t.Z = s.memo(function (e) {
                 className: l()(G.attachButton, F),
                 innerClassName: G.attachButtonInner,
                 'aria-label': e_,
-                onDoubleClick: em
+                onDoubleClick: ep
                     ? () => {
                           var e;
                           return null === (e = J.current) || void 0 === e ? void 0 : e.activateUploadDialogue();

@@ -8,8 +8,8 @@ var i = n(735250),
     u = n(481060),
     d = n(904245),
     h = n(232961),
-    m = n(223606),
-    p = n(63063),
+    p = n(223606),
+    m = n(63063),
     _ = n(530472),
     f = n(453687),
     E = n(930282),
@@ -54,7 +54,7 @@ let v = s.memo(function (e) {
                         color: 'interactive-normal',
                         tag: 'span',
                         className: T.learnMore,
-                        children: I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({ helpUrl: p.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                        children: I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({ helpUrl: m.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                     })
                 })
             })
@@ -63,17 +63,17 @@ let v = s.memo(function (e) {
 });
 t.Z = s.memo(function (e) {
     var t, n;
-    let { className: a, compact: r, message: u, children: p, content: _, onUpdate: C } = e,
+    let { className: a, compact: r, message: u, children: m, content: _, onUpdate: C } = e,
         N = null === (t = u.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
         A = s.useRef(!1),
-        Z = (0, c.e7)([m.Z], () => m.Z.getMessage(u.id), [u.id]),
+        Z = (0, c.e7)([p.Z], () => p.Z.getMessage(u.id), [u.id]),
         M = s.useCallback(() => {
             (null == Z ? void 0 : Z.isBlockedEdit) ? (0, h.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
         }, [u, Z]);
     return (
         s.useLayoutEffect(() => {
             A.current ? null != C && C() : (A.current = !0);
-        }, [C, u.content, _, N, p]),
+        }, [C, u.content, _, N, m]),
         (0, i.jsxs)('div', {
             id: (0, f.ut)(u),
             className: l()(a, S.markup, {
@@ -83,7 +83,7 @@ t.Z = s.memo(function (e) {
                 [T.blockedSend]: !(null == Z ? void 0 : Z.isBlockedEdit)
             }),
             children: [
-                null != p ? p : (0, E.L5)(u, _),
+                null != m ? m : (0, E.L5)(u, _),
                 (null == Z ? void 0 : Z.isBlockedEdit) &&
                     null != u.timestamp &&
                     (0, i.jsxs)(i.Fragment, {

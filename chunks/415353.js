@@ -1,5 +1,5 @@
 var r = n(67867),
-    i = n(228042),
+    o = n(228042),
     a = n(292137);
 r(
     {
@@ -11,7 +11,7 @@ r(
     {
         keyOf: function (e) {
             var t = a(
-                i(this),
+                o(this),
                 function (t, n) {
                     if (t === e) return { key: n };
                 },

@@ -1,18 +1,18 @@
 n.d(t, {
     C: function () {
-        return a;
+        return i;
     }
-});
-var r = n(653041);
-var i = n(581364);
-function a(e) {
+}),
+    n(653041);
+var r = n(581364);
+function i(e) {
     let t = e.split(',').map((e) => e.trim()),
         n = [],
-        r = [];
+        i = [];
     return (
         t.forEach((e) => {
-            (0, i.BH)(e) ? n.push(e) : r.push(e);
+            (0, r.BH)(e) ? n.push(e) : i.push(e);
         }),
-        [r, n]
+        [i, n]
     );
 }

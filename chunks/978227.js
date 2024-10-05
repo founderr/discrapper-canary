@@ -1,18 +1,18 @@
-n.d(t, {
+l.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(470079),
-    i = n(442837),
-    a = n(749210),
-    o = n(594174);
-function s(e) {
-    let t = (0, i.e7)([o.default], () => o.default.getUser(null == e ? void 0 : e.creator_id), [e]);
+var s = l(470079),
+    t = l(442837),
+    a = l(749210),
+    i = l(594174);
+function o(e) {
+    let n = (0, t.e7)([i.default], () => i.default.getUser(null == e ? void 0 : e.creator_id), [e]);
     return (
-        r.useEffect(() => {
-            null == t && (null == e ? void 0 : e.creator_id) != null && a.Z.requestMembersById(e.guild_id, e.creator_id);
-        }, [e, t]),
-        t
+        s.useEffect(() => {
+            null == n && (null == e ? void 0 : e.creator_id) != null && a.Z.requestMembersById(e.guild_id, e.creator_id);
+        }, [e, n]),
+        n
     );
 }

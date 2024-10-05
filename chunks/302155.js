@@ -5,8 +5,8 @@ n.d(t, {
     }
 });
 var a = n(213919),
-    o = n(570140),
-    s = n(147913),
+    s = n(570140),
+    o = n(147913),
     l = n(594174),
     u = n(626135),
     c = n(726745),
@@ -25,14 +25,14 @@ function _(e, t, n) {
     );
 }
 let E = !1;
-class f extends s.Z {
+class f extends o.Z {
     _initialize() {
-        o.Z.subscribe('CONNECTION_OPEN', () => this.handleConnectionOpen()), this.handleConnectionOpen();
+        s.Z.subscribe('CONNECTION_OPEN', () => this.handleConnectionOpen()), this.handleConnectionOpen();
     }
     _terminate() {
-        o.Z.unsubscribe('CONNECTION_OPEN', () => this.handleConnectionOpen());
+        s.Z.unsubscribe('CONNECTION_OPEN', () => this.handleConnectionOpen());
     }
-    constructor({ onSwitchStart: e, onSwitchSuccess: t, onSwitchError: n, onTokenSet: o }) {
+    constructor({ onSwitchStart: e, onSwitchSuccess: t, onSwitchError: n, onTokenSet: s }) {
         super(),
             _(this, 'onSwitchStart', void 0),
             _(this, 'onSwitchSuccess', void 0),
@@ -40,9 +40,9 @@ class f extends s.Z {
             _(this, 'onTokenSet', void 0),
             _(this, 'actions', { LOGOUT: (e) => this.handleLogout(e) }),
             _(this, 'handleConnectionOpen', () => {
-                var e, t, n, o, s, _;
-                let f = l.default.getCurrentUser();
-                if (null == f) return;
+                var e, t, n;
+                let s = l.default.getCurrentUser();
+                if (null == s) return;
                 if (null != i) {
                     if (i !== r) {
                         let e = c.Z.getUsers().map((e) => {
@@ -53,24 +53,24 @@ class f extends s.Z {
                             from_user_id: i,
                             linked_user_ids: e
                         }),
-                            null === (n = (o = this).onSwitchSuccess) || void 0 === n || n.call(o, f, E);
-                    } else u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (s = (_ = this).onSwitchError) || void 0 === s || s.call(_, f);
+                            null === (t = this.onSwitchSuccess) || void 0 === t || t.call(this, s, E);
+                    } else u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (n = this.onSwitchError) || void 0 === n || n.call(this, s);
                     i = null;
                 }
-                r = f.id;
-                let h = a.getToken();
-                null != h && '' !== h && a.setToken(h, f.id), null === (e = (t = this).onTokenSet) || void 0 === e || e.call(t, f);
+                r = s.id;
+                let o = a.getToken();
+                null != o && '' !== o && a.setToken(o, s.id), null === (e = this.onTokenSet) || void 0 === e || e.call(this, s);
             }),
             _(this, 'handleLogout', (e) => {
                 if (e.isSwitchingAccount) {
-                    var t, n;
-                    (i = r), null === (t = (n = this).onSwitchStart) || void 0 === t || t.call(n), (E = !!e.goHomeAfterSwitching);
+                    var t;
+                    (i = r), null === (t = this.onSwitchStart) || void 0 === t || t.call(this), (E = !!e.goHomeAfterSwitching);
                 } else (E = !1), a.removeToken(r);
                 r = null;
             }),
             (this.onSwitchStart = e),
             (this.onSwitchSuccess = t),
             (this.onSwitchError = n),
-            (this.onTokenSet = o);
+            (this.onTokenSet = s);
     }
 }

@@ -9,23 +9,23 @@ t(470079);
 var i = t(442837),
     u = t(481060),
     s = t(357156),
-    a = t(924301),
-    r = t(495279),
-    E = t(894017),
-    d = t(689938);
+    r = t(924301),
+    a = t(495279),
+    d = t(894017),
+    E = t(689938);
 function o(e) {
     let { guildEventId: n, recurrenceId: t, guild: o, channel: c } = e,
         _ = null != t,
-        { canManageGuildEvent: Z } = (0, s.XJ)(null != c ? c : o),
-        [T, N] = (0, i.Wu)([a.ZP], () => [a.ZP.isActive(n), a.ZP.getGuildScheduledEvent(n)]),
-        I = (0, E.Z)(t, null == N ? void 0 : N.id),
-        g = null != N && Z(N);
-    return _ && (null == I ? void 0 : I.is_canceled) && g && (!T || _)
+        { canManageGuildEvent: T } = (0, s.XJ)(null != c ? c : o),
+        [N, I] = (0, i.Wu)([r.ZP], () => [r.ZP.isActive(n), r.ZP.getGuildScheduledEvent(n)]),
+        Z = (0, d.Z)(t, null == I ? void 0 : I.id),
+        f = null != I && T(I);
+    return _ && (null == Z ? void 0 : Z.is_canceled) && f && (!N || _)
         ? (0, l.jsx)(u.MenuItem, {
-              id: d.Z.Messages.RESTORE_EVENT,
-              label: d.Z.Messages.RESTORE_EVENT,
+              id: E.Z.Messages.RESTORE_EVENT,
+              label: E.Z.Messages.RESTORE_EVENT,
               action: () => {
-                  null != t && null != I && (0, r.Z)(I, o.id, n, t);
+                  null != t && null != Z && (0, a.Z)(Z, o.id, n, t);
               }
           })
         : null;

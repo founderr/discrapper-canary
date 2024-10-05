@@ -1,12 +1,12 @@
 t.d(n, {
     u: function () {
-        return l;
+        return o;
     }
 });
 var i = t(585483),
-    o = t(981631);
-let l = {
+    l = t(981631);
+let o = {
     binds: ['mod+p'],
     comboKeysBindGlobal: !0,
-    action: () => (i.S.dispatch(o.CkL.TOGGLE_CHANNEL_PINS), !1)
+    action: () => (i.S.dispatch(l.CkL.TOGGLE_CHANNEL_PINS), !1)
 };

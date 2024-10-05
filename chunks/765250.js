@@ -6,13 +6,13 @@ n.d(t, {
         return u;
     },
     Os: function () {
-        return s;
+        return o;
     },
     jx: function () {
         return _;
     },
     nv: function () {
-        return o;
+        return s;
     },
     sz: function () {
         return c;
@@ -35,7 +35,7 @@ function a(e, t) {
         defaultResolution: n
     });
 }
-function o(e, t, n) {
+function s(e, t, n) {
     r.Z.dispatch({
         type: 'LAYOUT_UPDATE_WIDGET',
         widgetId: e,
@@ -43,7 +43,7 @@ function o(e, t, n) {
         size: n
     });
 }
-function s(e) {
+function o(e) {
     r.Z.dispatch({
         type: 'LAYOUT_SET_TOP_WIDGET',
         widgetId: e

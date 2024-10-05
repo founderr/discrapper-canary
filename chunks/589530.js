@@ -6,10 +6,10 @@ n.d(t, {
         return l;
     },
     jA: function () {
-        return o;
+        return s;
     },
     rs: function () {
-        return s;
+        return o;
     }
 });
 var r = n(433517);
@@ -19,13 +19,13 @@ function a() {
     let { volume: t } = null !== (e = r.K.get(i)) && void 0 !== e ? e : {};
     return 'number' != typeof t && (t = 1), (t = Math.min(1, Math.max(0, t)));
 }
-function o(e) {
+function s(e) {
     r.K.set(i, {
         volume: e,
-        muted: s()
+        muted: o()
     });
 }
-function s() {
+function o() {
     var e;
     let { muted: t } = null !== (e = r.K.get(i)) && void 0 !== e ? e : {};
     return 'boolean' != typeof t && (t = !1), t;

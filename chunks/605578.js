@@ -1,31 +1,31 @@
 n.d(t, {
     k: function () {
-        return s;
+        return o;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(1561),
-    o = n(30215);
-function s(e) {
-    let { tag: t = 'div', children: n, className: s, focusProps: l, onClick: u, onDoubleClick: c, onContextMenu: d, onKeyDown: _, onFocus: E, onBlur: f, onMouseOver: h, onMouseDown: p, onMouseLeave: m, buttonProps: I, 'aria-label': T } = e,
-        g = i.useRef(null);
+    s = n(30215);
+function o(e) {
+    let { tag: t = 'div', children: n, className: o, focusProps: l, onClick: u, onDoubleClick: c, onContextMenu: d, onKeyDown: _, onFocus: E, onBlur: f, onMouseOver: h, onMouseDown: p, onMouseLeave: I, buttonProps: m, 'aria-label': T } = e,
+        S = i.useRef(null);
     return (0, r.jsxs)(t, {
-        ref: g,
-        className: s,
+        ref: S,
+        className: o,
         onClick: u,
         onMouseOver: h,
-        onMouseLeave: m,
+        onMouseLeave: I,
         onDoubleClick: c,
         onContextMenu: d,
         children: [
             (0, r.jsx)(a.P, {
-                ...I,
+                ...m,
                 focusProps: {
-                    ringTarget: g,
+                    ringTarget: S,
                     ...l
                 },
-                className: o.focusTarget,
+                className: s.focusTarget,
                 'aria-label': T,
                 onClick: (e) => {
                     e.stopPropagation(), null == u || u(e);

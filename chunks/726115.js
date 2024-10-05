@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     Ew: function () {
-        return S;
+        return f;
     },
     Mf: function () {
         return p;
@@ -24,7 +24,7 @@ n.d(t, {
         return g;
     },
     lg: function () {
-        return f;
+        return S;
     },
     oT: function () {
         return Z;
@@ -126,7 +126,7 @@ function T(e) {
             return null;
     }
 }
-function f(e) {
+function S(e) {
     if (null == e) return h.Hk;
     switch (e) {
         case _.vf.FEATURED:
@@ -147,7 +147,7 @@ function f(e) {
             (0, r.vE)(e);
     }
 }
-function S(e) {
+function f(e) {
     return null == e || Date.now() - e > _.AF;
 }
 function C(e) {

@@ -1,6 +1,6 @@
 n.d(t, {
     P2: function () {
-        return o;
+        return s;
     },
     jl: function () {
         return a;
@@ -16,6 +16,6 @@ let r = {
 function a(e) {
     return e ? Object.assign(Object.assign({}, i), e) : i;
 }
-function o(e) {
+function s(e) {
     return e ? Object.assign(Object.assign({}, r), e) : r;
 }

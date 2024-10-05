@@ -1,19 +1,19 @@
 var r = n(544891),
     i = n(570140),
     a = n(367907),
-    o = n(957730),
-    s = n(592125),
+    s = n(957730),
+    o = n(592125),
     l = n(493683),
     u = n(904245),
     c = n(981631);
 t.Z = {
     updateActivity(e) {
-        let { applicationId: t, distributor: n, shareActivity: a, token: o = null, duration: s = 0, closed: l = !1, exePath: u = null, voiceChannelId: d = null, sessionId: _ = null, mediaSessionId: E = null } = e;
+        let { applicationId: t, distributor: n, shareActivity: a, token: s = null, duration: o = 0, closed: l = !1, exePath: u = null, voiceChannelId: d = null, sessionId: _ = null, mediaSessionId: E = null } = e;
         i.Z.wait(() =>
             i.Z.dispatch({
                 type: 'ACTIVITY_UPDATE_START',
                 applicationId: t,
-                duration: s,
+                duration: o,
                 distributor: n
             })
         ),
@@ -22,8 +22,8 @@ t.Z = {
                     url: c.ANM.ACTIVITIES,
                     body: {
                         application_id: t,
-                        token: o,
-                        duration: s,
+                        token: s,
+                        duration: o,
                         share_activity: a,
                         distributor: n,
                         closed: l,
@@ -43,7 +43,7 @@ t.Z = {
                         type: 'ACTIVITY_UPDATE_SUCCESS',
                         applicationId: t,
                         token: r,
-                        duration: s,
+                        duration: o,
                         distributor: n
                     });
                 })
@@ -56,9 +56,9 @@ t.Z = {
     },
     sendActivityInvite(e) {
         let { channelId: t, type: n, activity: r, content: i, location: l } = e,
-            d = s.Z.getChannel(t);
+            d = o.Z.getChannel(t);
         if (null == d) return Promise.resolve(null);
-        let _ = o.ZP.parse(d, null != i ? i : '');
+        let _ = s.ZP.parse(d, null != i ? i : '');
         return u.Z.sendMessage(d.id, _, !1, {
             activityAction: {
                 type: n,
@@ -92,15 +92,15 @@ t.Z = {
         );
     },
     async getJoinSecret(e, t, n, i, a) {
-        let o = {};
+        let s = {};
         return (
-            null != i && (o.channel_id = i),
-            null != a && (o.message_id = a),
+            null != i && (s.channel_id = i),
+            null != a && (s.message_id = a),
             (
                 await r.tn.get({
                     url: c.ANM.USER_ACTIVITY_JOIN(e, t, n),
                     retries: 3,
-                    query: o
+                    query: s
                 })
             ).body.secret
         );

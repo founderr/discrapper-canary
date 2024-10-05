@@ -1,61 +1,61 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return d;
     }
-});
-var r = n(653041);
-var i = n(735250);
+}),
+    n(653041);
+var r = n(735250);
 n(470079);
-var a = n(243814),
-    o = n(993365),
+var i = n(243814),
+    a = n(993365),
     s = n(481060),
-    l = n(63063),
-    u = n(981631),
-    c = n(689938),
-    d = n(702245);
-function _(e) {
+    o = n(63063),
+    l = n(981631),
+    u = n(689938),
+    c = n(702245);
+function d(e) {
     let t,
         { accountScopes: n } = e,
-        r = [];
-    return (n.includes(a.x.SDK_SOCIAL_LAYER) &&
-        ((t = c.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_HEADING.format({ learnMoreURL: l.Z.getArticleURL(u.BhN.SOCIAL_LAYER_CONNECTIONS) })),
-        r.push(
+        a = [];
+    return (n.includes(i.x.SDK_SOCIAL_LAYER) &&
+        ((t = u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_HEADING.format({ learnMoreURL: o.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
+        a.push(
             {
                 icon: s.FriendsIcon,
-                text: c.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_FRIENDS.format({ maxFriends: u.L4X })
+                text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_FRIENDS.format({ maxFriends: l.L4X })
             },
             {
                 icon: s.ChatSmileIcon,
-                text: c.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_MESSAGING
+                text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_MESSAGING
             },
             {
                 icon: s.GameControllerIcon,
-                text: c.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_ACTIVITY
+                text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_ACTIVITY
             },
             {
                 icon: s.SettingsIcon,
-                text: c.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_PROMOTIONS
+                text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_PROMOTIONS
             }
         )),
-    0 === r.length)
+    0 === a.length)
         ? null
-        : (0, i.jsxs)('div', {
-              className: d.applicationEducation,
+        : (0, r.jsxs)('div', {
+              className: c.applicationEducation,
               children: [
                   null != t && t.length > 0
-                      ? (0, i.jsx)(s.Heading, {
+                      ? (0, r.jsx)(s.Heading, {
                             variant: 'heading-sm/normal',
-                            className: d.sectionLabel,
+                            className: c.sectionLabel,
                             children: t
                         })
                       : null,
-                  r.map((e, t) => {
-                      let { icon: n, text: r } = e;
-                      return (0, i.jsx)(
-                          E,
+                  a.map((e, t) => {
+                      let { icon: n, text: i } = e;
+                      return (0, r.jsx)(
+                          _,
                           {
                               icon: n,
-                              text: r
+                              text: i
                           },
                           t
                       );
@@ -63,18 +63,18 @@ function _(e) {
               ]
           });
 }
-function E(e) {
+function _(e) {
     let { icon: t, text: n } = e;
-    return (0, i.jsxs)('div', {
-        className: d.entry,
+    return (0, r.jsxs)('div', {
+        className: c.entry,
         children: [
-            (0, i.jsx)(t, {
-                className: d.entryIcon,
+            (0, r.jsx)(t, {
+                className: c.entryIcon,
                 color: 'currentColor'
             }),
-            (0, i.jsx)(o.x, {
+            (0, r.jsx)(a.x, {
                 variant: 'text-md/normal',
-                className: d.entryText,
+                className: c.entryText,
                 children: n
             })
         ]

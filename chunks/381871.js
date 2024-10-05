@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(230711),
     d = n(607070),
     h = n(367907),
-    m = n(243778),
-    p = n(543241),
+    p = n(243778),
+    m = n(543241),
     _ = n(633302),
     f = n(970731),
     E = n(594174),
@@ -51,7 +51,7 @@ function w(e) {
         B = I.ZP.canUseFancyVoiceChannelReactions(w),
         H = (0, l.e7)([x.Z], () => x.Z.getState().animationType),
         G = s.useRef(!1),
-        V = (0, p.wC)(n.guild_id),
+        V = (0, m.wC)(n.guild_id),
         F = (0, a.uniqBy)([...V, ...k], 'name')
             .filter(
                 (e) =>
@@ -105,7 +105,7 @@ function w(e) {
     }, [X, J]);
     let Q = L ? [r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
         $ = H === M.q.PREMIUM;
-    return (0, i.jsx)(m.ZP, {
+    return (0, i.jsx)(p.ZP, {
         contentTypes: Q,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: s } = e,

@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(597442),
-    o = n(84735),
-    s = n(481060),
+    s = n(84735),
+    o = n(481060),
     l = n(793903);
 let u = i.createContext(void 0),
     c = i.forwardRef(function (e, t) {
@@ -35,9 +35,9 @@ let u = i.createContext(void 0),
                     role: 'dialog',
                     tabIndex: -1,
                     'aria-modal': !0,
-                    children: (0, r.jsx)(s.HeadingLevel, {
+                    children: (0, r.jsx)(o.HeadingLevel, {
                         forceLevel: 1,
-                        children: (0, r.jsx)(o.J, {
+                        children: (0, r.jsx)(s.J, {
                             containerRef: h,
                             children: n
                         })

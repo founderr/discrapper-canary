@@ -1,13 +1,13 @@
 var r = Array.prototype.slice,
     i = n(560640),
     a = Object.keys,
-    o = a
+    s = a
         ? function (e) {
               return a(e);
           }
         : n(973351),
-    s = Object.keys;
-(o.shim = function () {
+    o = Object.keys;
+(s.shim = function () {
     return (
         Object.keys
             ? !(function () {
@@ -15,10 +15,10 @@ var r = Array.prototype.slice,
                   return e && e.length === arguments.length;
               })(1, 2) &&
               (Object.keys = function (e) {
-                  return i(e) ? s(r.call(e)) : s(e);
+                  return i(e) ? o(r.call(e)) : o(e);
               })
-            : (Object.keys = o),
-        Object.keys || o
+            : (Object.keys = s),
+        Object.keys || s
     );
 }),
-    (e.exports = o);
+    (e.exports = s);

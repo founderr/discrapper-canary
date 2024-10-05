@@ -6,7 +6,7 @@ n.d(t, {
         return u;
     },
     cD: function () {
-        return s;
+        return o;
     },
     hP: function () {
         return i;
@@ -15,7 +15,7 @@ n.d(t, {
         return a;
     },
     qA: function () {
-        return o;
+        return s;
     }
 });
 var r = n(570140);
@@ -25,10 +25,10 @@ function i() {
 function a() {
     r.Z.dispatch({ type: 'PREMIUM_PERKS_DEMO_POPOUT_DISMISSED' });
 }
-function o() {
+function s() {
     r.Z.dispatch({ type: 'PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_DISMISSED' });
 }
-function s(e) {
+function o(e) {
     r.Z.dispatch({
         type: 'PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_SHOULD_SHOW',
         shouldShow: e

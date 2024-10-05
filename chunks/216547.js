@@ -2,9 +2,9 @@ i(47120);
 var n,
     a,
     r = i(735250),
-    s = i(470079),
-    o = i(120356),
-    l = i.n(o),
+    o = i(470079),
+    s = i(120356),
+    l = i.n(s),
     c = i(699581),
     d = i(374470),
     u = i(481060),
@@ -25,7 +25,7 @@ function m(e, t, i) {
     );
 }
 ((a = n || (n = {}))[(a.LEFT = 0)] = 'LEFT'), (a[(a.RIGHT = 1)] = 'RIGHT');
-let g = (e) => {
+let f = (e) => {
     let { onClick: t, className: i, direction: n } = e;
     return (0, r.jsx)(u.Clickable, {
         'aria-hidden': !0,
@@ -37,7 +37,7 @@ let g = (e) => {
         })
     });
 };
-class C extends s.Component {
+class g extends o.Component {
     static getDerivedStateFromProps(e, t) {
         return t.prevWidth !== e.width
             ? {
@@ -86,12 +86,12 @@ class C extends s.Component {
     }
     render() {
         let { tileIndex: e, lastArrowDirection: t } = this.state,
-            { header: i, headerId: n, subHeader: a, headerContainerClassName: s, scrollContainerClassName: o } = this.props,
+            { header: i, headerId: n, subHeader: a, headerContainerClassName: o, scrollContainerClassName: s } = this.props,
             c = this.getMaxOffset();
         return (0, r.jsxs)('div', {
             children: [
                 (0, r.jsxs)('div', {
-                    className: l()(p.headerContainer, s),
+                    className: l()(p.headerContainer, o),
                     children: [
                         (0, r.jsxs)('div', {
                             children: [
@@ -113,12 +113,12 @@ class C extends s.Component {
                             ? (0, r.jsxs)('div', {
                                   className: p.arrowsContainer,
                                   children: [
-                                      (0, r.jsx)(g, {
+                                      (0, r.jsx)(f, {
                                           direction: _.Z.Directions.LEFT,
                                           onClick: this.prev,
                                           className: l()(p.arrowLeft, { [p.arrowDisabled]: 0 === e && 0 === t })
                                       }),
-                                      (0, r.jsx)(g, {
+                                      (0, r.jsx)(f, {
                                           direction: _.Z.Directions.RIGHT,
                                           onClick: this.next,
                                           className: l()(p.arrowRight, { [p.arrowDisabled]: e === this.getMaxIndex() && 1 === t })
@@ -129,7 +129,7 @@ class C extends s.Component {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: l()(p.scrollerContainer, o),
+                    className: l()(p.scrollerContainer, s),
                     children: (0, r.jsx)(u.AdvancedScrollerNone, {
                         ref: this.advancedScrollerRef,
                         orientation: 'horizontal',
@@ -154,8 +154,8 @@ class C extends s.Component {
                 lastArrowDirection: 0,
                 scrollerWidth: 0
             }),
-            m(this, 'advancedScrollerRef', s.createRef()),
-            m(this, 'tileScrollerRef', s.createRef()),
+            m(this, 'advancedScrollerRef', o.createRef()),
+            m(this, 'tileScrollerRef', o.createRef()),
             m(this, 'setScrollerWidth', () => {
                 let e = (0, c.findDOMNode)(this.tileScrollerRef.current);
                 (0, d.k)(e, HTMLElement) && e.offsetWidth !== this.state.scrollerWidth && this.setState({ scrollerWidth: e.offsetWidth });
@@ -174,4 +174,4 @@ class C extends s.Component {
             });
     }
 }
-t.Z = (0, h.Z)(C);
+t.Z = (0, h.Z)(g);

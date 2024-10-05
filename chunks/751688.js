@@ -1,16 +1,16 @@
+n(47120);
 var r,
-    i = n(47120);
-var a = n(735250),
-    o = n(470079),
+    i = n(735250),
+    a = n(470079),
     s = n(120356),
-    l = n.n(s),
-    u = n(481060),
-    c = n(129861),
-    d = n(600164),
-    _ = n(184301),
-    E = n(347475),
-    f = n(415457);
-function h(e, t, n) {
+    o = n.n(s),
+    l = n(481060),
+    u = n(129861),
+    c = n(600164),
+    d = n(184301),
+    _ = n(347475),
+    E = n(415457);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,22 +23,22 @@ function h(e, t, n) {
         e
     );
 }
-class p extends (r = o.Component) {
+class h extends (r = a.Component) {
     render() {
         let { popoutOpen: e } = this.state,
-            { user: t, disablePopout: n, ignoreModalClicks: r, guildId: i, channelId: o } = this.props;
-        return (0, a.jsx)(u.Popout, {
+            { user: t, disablePopout: n, ignoreModalClicks: r, guildId: a, channelId: s } = this.props;
+        return (0, i.jsx)(l.Popout, {
             preload: () =>
-                (0, _.Z)(t.id, t.getAvatarURL(i, 80), {
-                    guildId: i,
-                    channelId: o
+                (0, d.Z)(t.id, t.getAvatarURL(a, 80), {
+                    guildId: a,
+                    channelId: s
                 }),
             renderPopout: (e) =>
-                (0, a.jsx)(E.Z, {
+                (0, i.jsx)(_.Z, {
                     ...e,
                     userId: t.id,
-                    guildId: i,
-                    channelId: o
+                    guildId: a,
+                    channelId: s
                 }),
             position: 'left',
             onRequestClose: this.handleUserPopoutClose,
@@ -49,39 +49,39 @@ class p extends (r = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            h(this, 'state', { popoutOpen: !1 }),
-            h(this, 'handleClickUser', () => {
+            f(this, 'state', { popoutOpen: !1 }),
+            f(this, 'handleClickUser', () => {
                 let { onPopoutOpen: e } = this.props;
                 this.setState({ popoutOpen: !this.state.popoutOpen }), null == e || e();
             }),
-            h(this, 'handleUserPopoutClose', () => {
+            f(this, 'handleUserPopoutClose', () => {
                 let { onPopoutClose: e } = this.props;
                 this.setState({ popoutOpen: !1 }), null == e || e();
             }),
-            h(this, 'renderUserPopout', (e) => {
-                let { className: t, disablePopout: n, onContextMenu: r, user: i, status: o, textClassName: s, nick: _, guildId: E } = this.props;
-                return (0, a.jsxs)(d.Z, {
-                    align: d.Z.Align.CENTER,
-                    className: l()(f.memberListItem, t, { [f.popoutDisabled]: n }),
+            f(this, 'renderUserPopout', (e) => {
+                let { className: t, disablePopout: n, onContextMenu: r, user: a, status: s, textClassName: d, nick: _, guildId: f } = this.props;
+                return (0, i.jsxs)(c.Z, {
+                    align: c.Z.Align.CENTER,
+                    className: o()(E.memberListItem, t, { [E.popoutDisabled]: n }),
                     onContextMenu: r,
                     onMouseDown: e.onMouseDown,
                     onKeyDown: e.onKeyDown,
                     onClick: this.handleClickUser,
                     children: [
-                        (0, a.jsx)(u.Avatar, {
-                            src: i.getAvatarURL(E, 24),
-                            className: f.avatar,
-                            'aria-label': i.username,
-                            size: u.AvatarSizes.SIZE_24,
-                            status: o
+                        (0, i.jsx)(l.Avatar, {
+                            src: a.getAvatarURL(f, 24),
+                            className: E.avatar,
+                            'aria-label': a.username,
+                            size: l.AvatarSizes.SIZE_24,
+                            status: s
                         }),
-                        (0, a.jsx)(u.Text, {
-                            className: l()(f.memberListItemTag, s),
+                        (0, i.jsx)(l.Text, {
+                            className: o()(E.memberListItemTag, d),
                             variant: 'text-sm/normal',
-                            children: (0, a.jsx)(c.Z, {
-                                user: i,
+                            children: (0, i.jsx)(u.Z, {
+                                user: a,
                                 nick: _,
-                                usernameClass: f.username,
+                                usernameClass: E.username,
                                 hideDiscriminator: !0
                             })
                         })
@@ -90,4 +90,4 @@ class p extends (r = o.Component) {
             });
     }
 }
-h(p, 'defaultProps', { disablePopout: !1 }), (t.Z = p);
+f(h, 'defaultProps', { disablePopout: !1 }), (t.Z = h);

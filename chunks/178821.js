@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return _;
     }
 }),
     n(47120);
@@ -37,8 +37,8 @@ function p(e) {
             timeSinceLastDrop: u,
             onResetFrameData: m,
             droppedFramesRef: p,
-            renderedFrameCount: b,
-            bufferFramecountRef: g,
+            renderedFrameCount: g,
+            bufferFramecountRef: b,
             frameCheckerEffect: v
         } = (function (e, t) {
             let n = a.useRef(Array(f).fill(0)),
@@ -80,7 +80,7 @@ function p(e) {
                 onResetFrameData: u
             };
         })(n, l),
-        [j, C, _] = (function (e) {
+        [_, j, C] = (function (e) {
             let t = a.useRef(Array(f).fill(0)),
                 n = a.useRef(performance.now()),
                 r = a.useRef(0),
@@ -111,7 +111,7 @@ function p(e) {
                 }
             ];
         })(t),
-        [S, T] = (function (e, t) {
+        [T, S] = (function (e, t) {
             let n = a.useRef(null),
                 r = a.useRef(null),
                 l = a.useRef(null),
@@ -132,21 +132,21 @@ function p(e) {
                 }, [i, o]),
                 i
             ];
-        })(j, v),
+        })(_, v),
         N = performance.now() - i.current < 5000,
-        y = C(c, g.current);
+        y = j(c, b.current);
     a.useEffect(
         () => (
-            S(),
+            T(),
             () => {
-                T();
+                S();
             }
         ),
         []
     );
-    let k = a.useCallback(() => {
-        m(), _(), S();
-    }, [m, _, S]);
+    let I = a.useCallback(() => {
+        m(), C(), T();
+    }, [m, C, T]);
     return (0, r.jsxs)('div', {
         className: d.panelGroup,
         children: [
@@ -181,7 +181,7 @@ function p(e) {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         className: d.secondaryInfoText,
-                        children: ['(Dropped: ', ((p.current / b.current) * 100).toFixed(4), '%)']
+                        children: ['(Dropped: ', ((p.current / g.current) * 100).toFixed(4), '%)']
                     }),
                     N &&
                         (0, r.jsx)(s.Tooltip, {
@@ -211,7 +211,7 @@ function p(e) {
                         tag: 'span',
                         variant: 'text-md/semibold',
                         color: 'text-secondary',
-                        children: b.current.toFixed(0)
+                        children: g.current.toFixed(0)
                     })
                 ]
             }),
@@ -271,14 +271,14 @@ function p(e) {
                 className: d.bottomPanelButton,
                 children: (0, r.jsx)(s.Button, {
                     size: s.Button.Sizes.SMALL,
-                    onClick: k,
+                    onClick: I,
                     children: 'Reset Frame Data'
                 })
             })
         ]
     });
 }
-function b(e) {
+function g(e) {
     let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: l } = e,
         [i, o] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
         c = a.useRef(null);
@@ -336,7 +336,7 @@ function b(e) {
         ]
     });
 }
-function g(e) {
+function b(e) {
     let { socket: t } = e,
         n = t.dispatcher.getDispatchTimings(),
         [l, o] = a.useState(!1);
@@ -508,7 +508,7 @@ function v(e) {
         ]
     });
 }
-function j() {
+function _() {
     let e = (0, o.e7)([c.Z], () => c.Z.getSocket()),
         [t, n] = a.useState(!1);
     return (
@@ -532,12 +532,12 @@ function j() {
                         socket: e,
                         isAverageFrameTime: t
                     }),
-                    (0, r.jsx)(b, {
+                    (0, r.jsx)(g, {
                         socket: e,
                         isAverageFrameTime: t,
                         onToggleAverageFrameTime: n
                     }),
-                    (0, r.jsx)(g, { socket: e }),
+                    (0, r.jsx)(b, { socket: e }),
                     (0, r.jsx)(v, { socket: e })
                 ]
             })

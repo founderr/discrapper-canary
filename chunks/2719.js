@@ -135,7 +135,7 @@ function V(e) {
                         onClick: () =>
                             (0, _.openModalLazy)(async () => {
                                 if (E) {
-                                    let { default: e } = await t.e('85342').then(t.bind(t, 193049));
+                                    let { default: e } = await Promise.all([t.e('85342'), t.e('5106')]).then(t.bind(t, 193049));
                                     return (s) =>
                                         (0, n.jsx)(e, {
                                             source: U.Kq.USER_SETTINGS_EDIT,

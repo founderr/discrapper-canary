@@ -1,17 +1,17 @@
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(481060),
+    s = n.n(a),
+    o = n(481060),
     l = n(465729);
 let u = i.memo(function (e) {
     let { text: t, variant: n = 'text-xs/medium', color: a = 'text-normal', icon: u, className: c, selected: d, onMouseEnter: _, onMouseLeave: E, onClick: f } = e,
         h = i.useMemo(() => {
             if (null != f) return () => f(t);
         }, [f, t]);
-    return (0, r.jsxs)(s.Clickable, {
+    return (0, r.jsxs)(o.Clickable, {
         tabIndex: null == f ? -1 : 0,
-        className: o()(
+        className: s()(
             l.trait,
             {
                 [l.selectable]: null != h && !d,
@@ -29,7 +29,7 @@ let u = i.memo(function (e) {
                     size: 'xs',
                     color: 'currentColor'
                 }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: n,
                 color: a,
                 lineClamp: 1,

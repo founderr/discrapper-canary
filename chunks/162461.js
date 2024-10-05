@@ -6,13 +6,13 @@ n.d(t, {
         return E;
     },
     sA: function () {
-        return o;
+        return s;
     },
     wh: function () {
         return d;
     },
     wm: function () {
-        return s;
+        return o;
     }
 });
 var r = n(818083),
@@ -48,12 +48,12 @@ let a = (0, r.B)({
         }
     ]
 });
-function o(e) {
+function s(e) {
     let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
         n = (0, i.Ji)(e, !1);
     return t || n;
 }
-function s(e) {
+function o(e) {
     let { impressionCappingEnabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return !0 === t;
 }

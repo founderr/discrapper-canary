@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(110924),
     d = n(410030),
     h = n(58540),
-    m = n(100527),
-    p = n(906732),
+    p = n(100527),
+    m = n(906732),
     _ = n(527379),
     f = n(687158),
     E = n(184301),
@@ -34,7 +34,7 @@ function N(e) {
         [L, j] = s.useState(null == b || null == R),
         P = (0, u.Z)(R),
         O = s.useRef(null),
-        { analyticsLocations: y } = (0, p.ZP)(m.Z.GUILD_MEMBER_MOD_VIEW),
+        { analyticsLocations: y } = (0, m.ZP)(p.Z.GUILD_MEMBER_MOD_VIEW),
         D = (0, f.ZP)(t, n),
         U = (0, d.ZP)();
     return (s.useEffect(() => {
@@ -79,7 +79,7 @@ function N(e) {
                       type: L ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
                   })
               })
-            : (0, i.jsx)(p.Gt, {
+            : (0, i.jsx)(m.Gt, {
                   value: y,
                   children: (0, i.jsx)('div', {
                       className: l()(v.sidebarContainer, N),

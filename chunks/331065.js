@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(81825),
@@ -18,11 +18,11 @@ function a(e, t, n) {
         e
     );
 }
-class o extends r.Z {
+class s extends r.Z {
     static createFromServer(e) {
-        return new o({
-            subscriptions: e.subscriptions.map((e) => i.Z.createFromServer(o.convertStoreListing(e))),
-            otps: e.otps.map((e) => i.Z.createFromServer(o.convertStoreListing(e)))
+        return new s({
+            subscriptions: e.subscriptions.map((e) => i.Z.createFromServer(s.convertStoreListing(e))),
+            otps: e.otps.map((e) => i.Z.createFromServer(s.convertStoreListing(e)))
         });
     }
     static convertStoreListing(e) {

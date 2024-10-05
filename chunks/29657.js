@@ -1,19 +1,19 @@
-var r = n(570596),
-    i = n(294377),
-    a = n(360518),
-    o = n(691244);
-e.exports = function () {
-    var e = i('Symbol'),
-        t = e && e.prototype,
-        n = t && t.valueOf,
-        s = a('toPrimitive');
-    t &&
-        !t[s] &&
-        o(
-            t,
+var e = n(570596),
+    o = n(294377),
+    i = n(360518),
+    u = n(691244);
+t.exports = function () {
+    var t = o('Symbol'),
+        r = t && t.prototype,
+        n = r && r.valueOf,
+        s = i('toPrimitive');
+    r &&
+        !r[s] &&
+        u(
+            r,
             s,
-            function (e) {
-                return r(n, this);
+            function (t) {
+                return e(n, this);
             },
             { arity: 1 }
         );

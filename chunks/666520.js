@@ -1,35 +1,35 @@
-s.d(n, {
+t.d(n, {
     Z: function () {
         return x;
     }
 }),
-    s(47120);
-var t,
-    i = s(735250),
-    o = s(470079),
-    l = s(699581),
-    r = s(442837),
-    c = s(481060),
-    a = s(34854),
-    d = s(531301),
-    u = s(246946),
-    I = s(981631),
-    _ = s(689938),
-    E = s(605258);
-function f(e, n, s) {
+    t(47120);
+var s,
+    i = t(735250),
+    o = t(470079),
+    l = t(699581),
+    r = t(442837),
+    c = t(481060),
+    a = t(34854),
+    d = t(531301),
+    u = t(246946),
+    _ = t(981631),
+    I = t(689938),
+    E = t(605258);
+function f(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
-                  value: s,
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = s),
+            : (e[n] = t),
         e
     );
 }
-class m extends (t = o.PureComponent) {
+class m extends (s = o.PureComponent) {
     componentDidMount() {
         if (this.props.autoFocus && !this.props.hideNote) {
             let e = l.findDOMNode(this.noteRef.current);
@@ -37,8 +37,8 @@ class m extends (t = o.PureComponent) {
         }
     }
     render() {
-        let { className: e, loading: n, note: s, hideNote: t } = this.props;
-        return t
+        let { className: e, loading: n, note: t, hideNote: s } = this.props;
+        return s
             ? null
             : (0, i.jsx)('div', {
                   className: e,
@@ -46,12 +46,12 @@ class m extends (t = o.PureComponent) {
                       ref: this.noteRef,
                       className: E.textarea,
                       disabled: n,
-                      placeholder: n ? _.Z.Messages.LOADING_NOTE : _.Z.Messages.NOTE_PLACEHOLDER,
-                      'aria-label': _.Z.Messages.NOTE,
+                      placeholder: n ? I.Z.Messages.LOADING_NOTE : I.Z.Messages.NOTE_PLACEHOLDER,
+                      'aria-label': I.Z.Messages.NOTE,
                       onBlur: this.handleBlur,
                       onKeyPress: this.handleKeyPress,
-                      defaultValue: null != s ? s : void 0,
-                      maxLength: I.vuo
+                      defaultValue: null != t ? t : void 0,
+                      maxLength: _.vuo
                   })
               });
     }
@@ -60,8 +60,8 @@ class m extends (t = o.PureComponent) {
             f(this, 'noteRef', o.createRef()),
             f(this, 'handleBlur', (e) => {
                 let n = e.currentTarget.value,
-                    { note: s, userId: t, onUpdate: i } = this.props;
-                if ((null != s ? s : '') !== n) null == i || i(), a.Z.updateNote(t, n);
+                    { note: t, userId: s, onUpdate: i } = this.props;
+                if ((null != t ? t : '') !== n) null == i || i(), a.Z.updateNote(s, n);
             }),
             f(this, 'handleKeyPress', (e) => {
                 if (13 === e.which) {
@@ -69,16 +69,16 @@ class m extends (t = o.PureComponent) {
                         var n;
                         (null !== (n = e.currentTarget.value.match(/\n/g)) && void 0 !== n ? n : []).length >= 5 && e.preventDefault();
                     } else e.preventDefault(), e.currentTarget.blur();
-                } else e.which === I.yXg.SPACE && e.stopPropagation();
+                } else e.which === _.yXg.SPACE && e.stopPropagation();
             });
     }
 }
 function x(e) {
     let n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        s = (0, d.Z)(e.userId);
+        t = (0, d.Z)(e.userId);
     return (0, i.jsx)(m, {
         ...e,
-        ...s,
+        ...t,
         hideNote: n
     });
 }

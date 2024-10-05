@@ -2,53 +2,53 @@ n.d(t, {
     Z: function () {
         return O;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(442837),
-    u = n(481060),
-    c = n(570140),
-    d = n(100527),
-    _ = n(313201),
-    E = n(98278),
-    f = n(311476),
-    h = n(587446),
-    p = n(996073),
-    m = n(327943),
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(442837),
+    l = n(481060),
+    u = n(570140),
+    c = n(100527),
+    d = n(313201),
+    _ = n(98278),
+    E = n(311476),
+    f = n(587446),
+    h = n(996073),
+    p = n(327943),
     I = n(997945),
-    T = n(401460),
-    g = n(441319),
+    m = n(401460),
+    T = n(441319),
     S = n(981631),
-    A = n(526761),
-    v = n(689938),
+    g = n(526761),
+    A = n(689938),
     N = n(243132);
 function O(e) {
-    let { className: t, disabled: r, isEditor: o, renderCTAButtons: O } = e,
-        [R, C] = (0, l.Wu)([m.Z], () => [m.Z.getCurrentDesktopIcon(), m.Z.isUpsellPreview]),
-        { enabled: y } = f.Z.getCurrentConfig(
+    let { className: t, disabled: a, isEditor: O, renderCTAButtons: R } = e,
+        [v, C] = (0, o.Wu)([p.Z], () => [p.Z.getCurrentDesktopIcon(), p.Z.isUpsellPreview]),
+        { enabled: L } = E.Z.getCurrentConfig(
             { location: 'UserSettingsAppearanceInAppIcon' },
             {
                 autoTrackExposure: C,
                 disable: !C
             }
         ),
-        L = a.useRef(null);
-    (0, p.Z)(L, A.h1.CUSTOM_APP_ICONS);
-    let b = (0, _.Dt)(),
-        D = (0, u.useRadioGroup)({
+        D = i.useRef(null);
+    (0, h.Z)(D, g.h1.CUSTOM_APP_ICONS);
+    let y = (0, d.Dt)(),
+        b = (0, l.useRadioGroup)({
             orientation: 'horizontal',
-            labelledBy: b
+            labelledBy: y
         }),
         M = (e) => {
-            if (y && !o && e !== I.aH.DEFAULT) {
-                (0, u.openModalLazy)(async () => {
+            if (L && !O && e !== I.aH.DEFAULT) {
+                (0, l.openModalLazy)(async () => {
                     let { default: e } = await n.e('69052').then(n.bind(n, 184250));
                     return (t) =>
-                        (0, i.jsx)(e, {
-                            analyticsSource: d.Z.APP_ICON_SELECTOR,
+                        (0, r.jsx)(e, {
+                            analyticsSource: c.Z.APP_ICON_SELECTOR,
                             analyticsLocation: {
                                 section: S.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
                                 object: S.qAy.BUTTON_ICON
@@ -58,81 +58,81 @@ function O(e) {
                 });
                 return;
             }
-            c.Z.dispatch({
+            u.Z.dispatch({
                 type: 'APP_ICON_UPDATED',
                 id: e
             });
         };
-    return (0, i.jsx)('div', {
-        ref: L,
-        children: (0, i.jsx)('div', {
-            ...D,
+    return (0, r.jsx)('div', {
+        ref: D,
+        children: (0, r.jsx)('div', {
+            ...b,
             className: N.__invalid_container,
-            children: (0, i.jsxs)('div', {
+            children: (0, r.jsxs)('div', {
                 className: t,
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: N.header,
                         children: [
-                            (0, i.jsxs)('div', {
+                            (0, r.jsxs)('div', {
                                 className: N.headings,
                                 children: [
-                                    !o &&
-                                        (0, i.jsxs)('div', {
+                                    !O &&
+                                        (0, r.jsxs)('div', {
                                             className: N.title,
                                             children: [
-                                                (0, i.jsx)(u.Heading, {
+                                                (0, r.jsx)(l.Heading, {
                                                     variant: 'text-md/medium',
-                                                    children: v.Z.Messages.APP_ICON_SETTINGS_TITLE
+                                                    children: A.Z.Messages.APP_ICON_SETTINGS_TITLE
                                                 }),
-                                                !y && (0, i.jsx)(h.Z, { className: N.premiumIcon })
+                                                !L && (0, r.jsx)(f.Z, { className: N.premiumIcon })
                                             ]
                                         }),
-                                    y
-                                        ? o
+                                    L
+                                        ? O
                                             ? null
-                                            : (0, i.jsxs)('div', {
+                                            : (0, r.jsxs)('div', {
                                                   className: N.description,
                                                   children: [
-                                                      (0, i.jsx)(u.NitroWheelIcon, {
+                                                      (0, r.jsx)(l.NitroWheelIcon, {
                                                           size: 'md',
                                                           color: 'currentColor',
                                                           className: N.nitroWheel
                                                       }),
-                                                      (0, i.jsx)(u.Heading, {
+                                                      (0, r.jsx)(l.Heading, {
                                                           variant: 'text-sm/normal',
-                                                          children: v.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
+                                                          children: A.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
                                                               onClick: () => {
-                                                                  (0, E.$)();
+                                                                  (0, _.$)();
                                                               }
                                                           })
                                                       })
                                                   ]
                                               })
-                                        : (0, i.jsx)(u.Heading, {
+                                        : (0, r.jsx)(l.Heading, {
                                               variant: 'text-sm/normal',
-                                              children: v.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
+                                              children: A.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
                                           })
                                 ]
                             }),
-                            null == O ? void 0 : O()
+                            null == R ? void 0 : R()
                         ]
                     }),
-                    (0, i.jsx)('div', {
-                        className: s()(N.presets, { [N.presetsJustified]: y && o }),
-                        children: g.UZ.filter((e) => {
+                    (0, r.jsx)('div', {
+                        className: s()(N.presets, { [N.presetsJustified]: L && O }),
+                        children: T.UZ.filter((e) => {
                             let { isHidden: t } = e;
                             return !t;
                         }).map((e, t) =>
-                            (0, i.jsx)(
-                                T.Z,
+                            (0, r.jsx)(
+                                m.Z,
                                 {
                                     icon: e,
-                                    isSelected: R === e.id,
+                                    isSelected: v === e.id,
                                     onSelect: (e) => M(e),
-                                    disabled: r,
-                                    tabIndex: 0 !== t || r ? void 0 : 0,
-                                    locked: y && !o && e.id !== I.aH.DEFAULT
+                                    disabled: a,
+                                    tabIndex: 0 !== t || a ? void 0 : 0,
+                                    locked: L && !O && e.id !== I.aH.DEFAULT
                                 },
                                 e.id
                             )

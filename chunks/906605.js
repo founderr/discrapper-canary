@@ -1,82 +1,82 @@
 n.d(t, {
     Sc: function () {
-        return f;
+        return E;
     },
     UP: function () {
-        return h;
+        return f;
     },
     Zx: function () {
-        return _;
+        return d;
     },
     _s: function () {
-        return E;
+        return _;
     }
-});
-var r = n(47120);
-var i = n(570140),
-    a = n(339085),
-    o = n(592125),
+}),
+    n(47120);
+var r = n(570140),
+    i = n(339085),
+    a = n(592125),
     s = n(19780),
-    l = n(944486),
-    u = n(626135),
-    c = n(106301),
-    d = n(981631);
-function _(e, t) {
+    o = n(944486),
+    l = n(626135),
+    u = n(106301),
+    c = n(981631);
+function d(e, t) {
     var n;
     if (null == e) {
-        f(t);
+        E(t);
         return;
     }
-    i.Z.dispatch({
+    r.Z.dispatch({
         type: 'UPDATE_HANG_STATUS',
         status: e,
         saveAsDefault: t
     }),
-        u.default.track(d.rMx.SET_HANG_STATUS, {
+        l.default.track(c.rMx.SET_HANG_STATUS, {
             status_type: e,
-            channel_id: l.Z.getVoiceChannelId(),
-            guild_id: null === (n = o.Z.getChannel(l.Z.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
+            channel_id: o.Z.getVoiceChannelId(),
+            guild_id: null === (n = a.Z.getChannel(o.Z.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
             media_session_id: s.Z.getMediaSessionId()
         });
 }
-function E(e, t, n) {
-    var r;
+function _(e, t, n) {
+    var i;
     if ('' === e || null == t) {
-        f(n);
+        E(n);
         return;
     }
-    i.Z.dispatch({
+    r.Z.dispatch({
         type: 'UPDATE_HANG_STATUS_CUSTOM',
         emoji: t,
         status: e,
         saveAsDefault: n
     }),
-        u.default.track(d.rMx.SET_HANG_STATUS, {
+        l.default.track(c.rMx.SET_HANG_STATUS, {
             status_type: e,
-            channel_id: l.Z.getVoiceChannelId(),
-            guild_id: null === (r = o.Z.getChannel(l.Z.getVoiceChannelId())) || void 0 === r ? void 0 : r.guild_id,
+            channel_id: o.Z.getVoiceChannelId(),
+            guild_id: null === (i = a.Z.getChannel(o.Z.getVoiceChannelId())) || void 0 === i ? void 0 : i.guild_id,
             media_session_id: s.Z.getMediaSessionId()
         });
 }
-function f(e) {
+function E(e) {
     var t;
-    i.Z.dispatch({
+    r.Z.dispatch({
         type: 'CLEAR_HANG_STATUS',
         saveAsDefault: e
     }),
-        u.default.track(d.rMx.CLEAR_HANG_STATUS, {
-            channel_id: l.Z.getVoiceChannelId(),
-            guild_id: null === (t = o.Z.getChannel(l.Z.getVoiceChannelId())) || void 0 === t ? void 0 : t.guild_id,
+        l.default.track(c.rMx.CLEAR_HANG_STATUS, {
+            channel_id: o.Z.getVoiceChannelId(),
+            guild_id: null === (t = a.Z.getChannel(o.Z.getVoiceChannelId())) || void 0 === t ? void 0 : t.guild_id,
             media_session_id: s.Z.getMediaSessionId()
         });
 }
-function h() {
-    let e = [c.Z.getCustomHangStatus(), ...c.Z.getRecentCustomStatuses()].filter((e) => {
+function f() {
+    let e = [u.Z.getCustomHangStatus(), ...u.Z.getRecentCustomStatuses()].filter((e) => {
         var t;
-        return null != e && null != e.emoji && (null === (t = e.emoji) || void 0 === t ? void 0 : t.id) != null && null == a.ZP.getCustomEmojiById(e.emoji.id);
+        return null != e && null != e.emoji && (null === (t = e.emoji) || void 0 === t ? void 0 : t.id) != null && null == i.ZP.getCustomEmojiById(e.emoji.id);
     });
     e.length > 0 &&
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'DELETE_INVALID_HANG_STATUSES',
             statuses: e
         });

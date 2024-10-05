@@ -1,30 +1,30 @@
 n.d(t, {
     HI: function () {
-        return s;
+        return o;
     },
     gm: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(588468);
-function o(e) {
-    let { titleWithQuery: t, titleWithoutQuery: n, query: i, getQuery: o, headerClassName: s, headerTrailingContent: l } = e,
-        u = i.length > 0 ? t.format({ prefix: o(i) }) : n;
+function s(e) {
+    let { titleWithQuery: t, titleWithoutQuery: n, query: i, getQuery: s, headerClassName: o, headerTrailingContent: l } = e,
+        u = i.length > 0 ? t.format({ prefix: s(i) }) : n;
     return (0, r.jsx)(
         a.ZP.Title,
         {
-            className: s,
+            className: o,
             title: u,
             children: l
         },
         'autocomplete-title-'.concat(u)
     );
 }
-function s(e) {
-    let { query: t, selectedIndex: n, autocompletes: a, onHover: s, onClick: l, titleWithQuery: u, titleWithoutQuery: c, Component: d, getProps: _, getQuery: E, key: f, indexOffset: h = 0, headerClassName: p, headerTrailingContent: m, footer: I } = e;
-    if (null == I && (null == a || 0 === a.length)) return null;
+function o(e) {
+    let { query: t, selectedIndex: n, autocompletes: a, onHover: o, onClick: l, titleWithQuery: u, titleWithoutQuery: c, Component: d, getProps: _, getQuery: E, key: f, indexOffset: h = 0, headerClassName: p, headerTrailingContent: I, footer: m } = e;
+    if (null == m && (null == a || 0 === a.length)) return null;
     let T =
         null == a
             ? void 0
@@ -33,7 +33,7 @@ function s(e) {
                       a = _(e, r);
                   return (0, i.createElement)(d, {
                       onClick: l,
-                      onHover: s,
+                      onHover: o,
                       selected: n === r,
                       index: r,
                       ...a,
@@ -45,17 +45,17 @@ function s(e) {
         {
             children: [
                 null != u && null != c
-                    ? o({
+                    ? s({
                           titleWithQuery: u,
                           titleWithoutQuery: c,
                           query: t,
                           getQuery: E,
                           headerClassName: p,
-                          headerTrailingContent: m
+                          headerTrailingContent: I
                       })
                     : null,
                 T,
-                I
+                m
             ]
         },
         f

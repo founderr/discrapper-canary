@@ -1,12 +1,12 @@
 n.d(t, {
     k: function () {
-        return o;
+        return s;
     }
 });
 var r = n(544891),
     i = n(570140),
     a = n(981631);
-function o(e) {
+function s(e) {
     return (
         i.Z.dispatch({
             type: 'APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING',

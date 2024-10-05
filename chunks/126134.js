@@ -1,12 +1,12 @@
-var r, i;
+var r, i, a, s;
 n.d(t, {
     L: function () {
         return i;
     }
 }),
-    !(function (e) {
-        (e[(e.WHO = 0)] = 'WHO'), (e[(e.WHAT = 1)] = 'WHAT');
-    })(r || (r = {})),
-    !(function (e) {
-        (e.HANGOUT = 'hangout'), (e.EMBEDDED_ACTIVITY = 'embedded-activity'), (e.EVENT = 'event'), (e.GAMING = 'gaming');
-    })(i || (i = {}));
+    ((a = r || (r = {}))[(a.WHO = 0)] = 'WHO'),
+    (a[(a.WHAT = 1)] = 'WHAT'),
+    ((s = i || (i = {})).HANGOUT = 'hangout'),
+    (s.EMBEDDED_ACTIVITY = 'embedded-activity'),
+    (s.EVENT = 'event'),
+    (s.GAMING = 'gaming');

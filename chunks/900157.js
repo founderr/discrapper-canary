@@ -13,8 +13,8 @@ var i = n(735250),
     u = n(561472),
     d = n(367907),
     h = n(731429),
-    m = n(188471),
-    p = n(933557),
+    p = n(188471),
+    m = n(933557),
     _ = n(287746),
     f = n(541716),
     E = n(665149),
@@ -33,7 +33,7 @@ function b(e) {
     let { channelId: t, baseChannelId: a, channelViewSource: b = 'Split View' } = e,
         R = (0, r.e7)([I.Z], () => I.Z.getChannel(t)),
         L = (0, r.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())),
-        j = (0, p.ZP)(R);
+        j = (0, m.ZP)(R);
     (function (e) {
         let t = (0, r.e7)([S.Z], () => null != e && !l().isEmpty(S.Z.getVoiceStatesForChannel(e.id)));
         s.useEffect(() => {
@@ -57,7 +57,7 @@ function b(e) {
                 ...(0, d.$H)(R.id),
                 channel_view: b
             }),
-                (0, m.a)(A.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
+                (0, p.a)(A.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
         }, [R, b]),
         null == R || null == L)
     )
@@ -82,7 +82,7 @@ function b(e) {
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, c.jW)(e, async () => {
-                            let { default: e } = await n.e('78650').then(n.bind(n, 422200));
+                            let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,

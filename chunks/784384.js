@@ -1,70 +1,70 @@
-t.d(n, {
+n.d(t, {
     HY: function () {
-        return g;
+        return E;
     },
     pU: function () {
-        return _;
+        return g;
     },
     y: function () {
-        return E;
+        return m;
     }
 }),
-    t(47120),
-    t(390547);
-var l = t(442837),
-    s = t(933557),
-    a = t(926491),
-    r = t(378233),
-    i = t(131704),
-    o = t(592125),
-    u = t(496675),
-    c = t(699516),
-    d = t(594174),
-    h = t(823379),
-    f = t(981631),
-    m = t(689938);
-function g(e, n, t) {
-    let l = t instanceof i.Sf;
-    if (n.isNSFW() && !(l && t.isNSFW())) return { label: m.Z.Messages.MESSAGE_FORWARDING_NSFW_NOT_ALLOWED };
-    if (l && (0, i.Km)(t.type)) {
-        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !u.Z.can(f.Plq.ATTACH_FILES, t)) return { label: m.Z.Messages.MESSAGE_CHANNEL_ATTACHMENTS_DISABLED };
-        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !u.Z.can(f.Plq.EMBED_LINKS, t)) return { label: m.Z.Messages.MESSAGE_CHANNEL_EMBEDS_DISABLED };
-        let n = [
-            ...(0, r.cv)(e),
+    n(47120),
+    n(390547);
+var l = n(442837),
+    a = n(933557),
+    s = n(926491),
+    i = n(378233),
+    r = n(131704),
+    o = n(592125),
+    c = n(496675),
+    u = n(699516),
+    d = n(594174),
+    h = n(823379),
+    _ = n(981631),
+    f = n(689938);
+function E(e, t, n) {
+    let l = n instanceof r.Sf;
+    if (t.isNSFW() && !(l && n.isNSFW())) return { label: f.Z.Messages.MESSAGE_FORWARDING_NSFW_NOT_ALLOWED };
+    if (l && (0, r.Km)(n.type)) {
+        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !c.Z.can(_.Plq.ATTACH_FILES, n)) return { label: f.Z.Messages.MESSAGE_CHANNEL_ATTACHMENTS_DISABLED };
+        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !c.Z.can(_.Plq.EMBED_LINKS, n)) return { label: f.Z.Messages.MESSAGE_CHANNEL_EMBEDS_DISABLED };
+        let t = [
+            ...(0, i.cv)(e),
             ...e.messageSnapshots.flatMap((e) => {
-                let { message: n } = e;
-                return (0, r.cv)(n);
+                let { message: t } = e;
+                return (0, i.cv)(t);
             })
         ];
         if (
-            n.length > 0 &&
-            !u.Z.can(f.Plq.USE_EXTERNAL_STICKERS, t) &&
-            n.some((e) =>
-                (function (e, n) {
-                    let t = a.Z.getStickerById(e.id);
-                    return !!(null != t && (0, r.J8)(t)) && (t.guild_id !== n.guild_id || void 0);
-                })(e, t)
+            t.length > 0 &&
+            !c.Z.can(_.Plq.USE_EXTERNAL_STICKERS, n) &&
+            t.some((e) =>
+                (function (e, t) {
+                    let n = s.Z.getStickerById(e.id);
+                    return !!(null != n && (0, i.J8)(n)) && (n.guild_id !== t.guild_id || void 0);
+                })(e, n)
             )
         )
-            return { label: m.Z.Messages.MESSAGE_CHANNEL_EXTERNAL_STICKERS_DISABLED };
-        if ((e.hasFlag(f.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(f.iLy.IS_VOICE_MESSAGE))) && !u.Z.can(f.Plq.SEND_VOICE_MESSAGES, t)) return { label: m.Z.Messages.MESSAGE_CHANNEL_VOICE_MESSAGES_DISABLED };
+            return { label: f.Z.Messages.MESSAGE_CHANNEL_EXTERNAL_STICKERS_DISABLED };
+        if ((e.hasFlag(_.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(_.iLy.IS_VOICE_MESSAGE))) && !c.Z.can(_.Plq.SEND_VOICE_MESSAGES, n)) return { label: f.Z.Messages.MESSAGE_CHANNEL_VOICE_MESSAGES_DISABLED };
     }
 }
-function _(e, n) {
-    return null != e.rateLimitPerUser && !!(e.rateLimitPerUser > 0) && !(n.can(f.Plq.MANAGE_CHANNELS, e) || n.can(f.Plq.MANAGE_MESSAGES, e));
+function g(e, t) {
+    return null != e.rateLimitPerUser && !!(e.rateLimitPerUser > 0) && !(t.can(_.Plq.MANAGE_CHANNELS, e) || t.can(_.Plq.MANAGE_MESSAGES, e));
 }
-function E(e) {
-    let n = (0, l.Wu)(
-        [o.Z, u.Z],
+function m(e) {
+    let t = (0, l.Wu)(
+        [o.Z, c.Z],
         () =>
             e
                 .map((e) => {
-                    let { type: n, id: t } = e;
-                    return 'channel' === n ? o.Z.getChannel(t) : null;
+                    let { type: t, id: n } = e;
+                    return 'channel' === t ? o.Z.getChannel(n) : null;
                 })
                 .filter(h.lm)
-                .filter((e) => _(e, u.Z)),
+                .filter((e) => g(e, c.Z)),
         [e]
     );
-    return (0, l.Wu)([d.default, c.Z], () => n.map((e) => (0, s.F6)(e, d.default, c.Z, !0)), [n]);
+    return (0, l.Wu)([d.default, u.Z], () => t.map((e) => (0, a.F6)(e, d.default, u.Z, !0)), [t]);
 }

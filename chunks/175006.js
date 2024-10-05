@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(594174),
-    i = n(111361),
-    a = n(474936);
-function o() {
-    let e = r.default.getCurrentUser();
-    return (0, i.I5)(e, a.p9.TIER_2);
+var i = n(594174),
+    a = n(111361),
+    s = n(474936);
+function l() {
+    let e = i.default.getCurrentUser();
+    return (0, a.I5)(e, s.p9.TIER_2);
 }

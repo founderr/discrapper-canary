@@ -21,7 +21,7 @@ n.d(t, {
         return h;
     },
     d7: function () {
-        return s;
+        return o;
     },
     k5: function () {
         return E;
@@ -30,7 +30,7 @@ n.d(t, {
         return l;
     },
     t$: function () {
-        return o;
+        return s;
     },
     ut: function () {
         return c;
@@ -39,7 +39,7 @@ n.d(t, {
         return r;
     },
     xs: function () {
-        return m;
+        return I;
     },
     zV: function () {
         return d;
@@ -48,9 +48,9 @@ n.d(t, {
 var r = 'top',
     i = 'bottom',
     a = 'right',
-    o = 'left',
-    s = 'auto',
-    l = [r, i, a, o],
+    s = 'left',
+    o = 'auto',
+    l = [r, i, a, s],
     u = 'start',
     c = 'end',
     d = 'clippingParents',
@@ -60,7 +60,7 @@ var r = 'top',
     h = l.reduce(function (e, t) {
         return e.concat([t + '-' + u, t + '-' + c]);
     }, []),
-    p = [].concat(l, [s]).reduce(function (e, t) {
+    p = [].concat(l, [o]).reduce(function (e, t) {
         return e.concat([t, t + '-' + u, t + '-' + c]);
     }, []),
-    m = ['beforeRead', 'read', 'afterRead', 'beforeMain', 'main', 'afterMain', 'beforeWrite', 'write', 'afterWrite'];
+    I = ['beforeRead', 'read', 'afterRead', 'beforeMain', 'main', 'afterMain', 'beforeWrite', 'write', 'afterWrite'];

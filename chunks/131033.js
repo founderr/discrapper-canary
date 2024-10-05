@@ -1,28 +1,28 @@
-n.d(a, {
+t.d(n, {
     Z: function () {
-        return l;
+        return o;
     }
 });
-var t = n(735250);
-n(470079);
-var i = n(793030),
-    r = n(689938),
-    o = n(51527);
-function l(e) {
-    let { detectedGame: a } = e;
-    return 0 === a.publishers.length
+var a = t(735250);
+t(470079);
+var r = t(793030),
+    s = t(689938),
+    i = t(51527);
+function o(e) {
+    let { detectedGame: n } = e;
+    return 0 === n.publishers.length
         ? null
-        : (0, t.jsxs)('div', {
+        : (0, a.jsxs)('div', {
               children: [
-                  (0, t.jsx)(i.X6, {
-                      className: o.sectionHeader,
+                  (0, a.jsx)(r.X6, {
+                      className: i.sectionHeader,
                       variant: 'text-xs/semibold',
                       color: 'header-secondary',
-                      children: r.Z.Messages.GAME_PROFILE_PUBLISHER
+                      children: s.Z.Messages.GAME_PROFILE_PUBLISHER
                   }),
-                  (0, t.jsx)(i.xv, {
+                  (0, a.jsx)(r.xv, {
                       variant: 'text-sm/normal',
-                      children: a.publishers.join(', ')
+                      children: n.publishers.join(', ')
                   })
               ]
           });

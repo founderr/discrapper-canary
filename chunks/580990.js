@@ -1,20 +1,20 @@
-var r = n(67867),
-    i = n(141603),
-    a = n(538769),
-    o = n(858698),
+var e = n(67867),
+    o = n(141603),
+    i = n(538769),
+    u = n(858698),
     s = n(293303),
-    l = n(56684),
-    u = s('symbol-to-string-registry');
-r(
+    c = n(56684),
+    f = s('symbol-to-string-registry');
+e(
     {
         target: 'Symbol',
         stat: !0,
-        forced: !l
+        forced: !c
     },
     {
-        keyFor: function (e) {
-            if (!a(e)) throw TypeError(o(e) + ' is not a symbol');
-            if (i(u, e)) return u[e];
+        keyFor: function (t) {
+            if (!i(t)) throw TypeError(u(t) + ' is not a symbol');
+            if (o(f, t)) return f[t];
         }
     }
 );

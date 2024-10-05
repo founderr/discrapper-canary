@@ -1,8 +1,8 @@
 n.d(t, {
     r: function () {
-        return a;
+        return s;
     }
 });
-var r = n(399606),
-    i = n(774863);
-let a = (e) => null != (0, r.e7)([i.Z], () => i.Z.getFpMessageInfo(e));
+var i = n(399606),
+    a = n(774863);
+let s = (e) => null != (0, i.e7)([a.Z], () => a.Z.getFpMessageInfo(e));

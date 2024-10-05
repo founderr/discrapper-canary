@@ -35,9 +35,9 @@ function _() {
         _ = t.get('loading'),
         { type: v } = (0, o.UO)(),
         m = (0, C.vJ)(v),
-        [A, R] = c.useState(!1),
-        T = (0, s.Z)(),
-        b = null == O ? (null != a ? a : '') : O;
+        [R, A] = c.useState(!1),
+        b = (0, s.Z)(),
+        T = null == O ? (null != a ? a : '') : O;
     return (c.useEffect(() => {
         let e;
         if (null != _) return;
@@ -46,9 +46,9 @@ function _() {
         }
         let r = (0, C.vJ)(v);
         null != r &&
-            i.Z.sessionHandoff(r, S, b, e)
+            i.Z.sessionHandoff(r, S, T, e)
                 .then(() => {
-                    R(!0);
+                    A(!0);
                 })
                 .catch(async () => {
                     let r = (e) => {
@@ -66,7 +66,7 @@ function _() {
                             }
                         },
                         c = {
-                            code: b,
+                            code: T,
                             openid_params: e,
                             state: S
                         };
@@ -95,10 +95,10 @@ function _() {
                     }
                     d.default.disconnect();
                 });
-    }, [b, n, _, v, t, S]),
+    }, [T, n, _, v, t, S]),
     c.useEffect(() => {
         let e;
-        if (!A) return;
+        if (!R) return;
         let t = 0;
         async function r() {
             if (null == m) return;
@@ -106,7 +106,7 @@ function _() {
             if (c === l.g.HANDOFF_SUCCESS) return null != p.Z.toURLSafe(o) ? n.replace(o) : n.replace(N.Z5c.CONNECTIONS_SUCCESS(m));
             if (c === l.g.HANDOFF_ERROR || t >= 10) return n.replace(N.Z5c.CONNECTIONS_ERROR(m));
             e = setTimeout(() => {
-                T() && ((t += 1), r());
+                b() && ((t += 1), r());
             }, 1000);
         }
         return (
@@ -115,7 +115,7 @@ function _() {
                 null != e && clearTimeout(e);
             }
         );
-    }, [T, n, m, A, S]),
+    }, [b, n, m, R, S]),
     null != m && f.Z.isSupported(m))
         ? (0, r.jsx)(g, { platformType: m })
         : null;

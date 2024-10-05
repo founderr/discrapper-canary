@@ -29,7 +29,7 @@ function E(e) {
         S = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         x = (0, f.Z)(),
         v = (0, s.Z)(N),
-        Z = l.useMemo(() => {
+        T = l.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: C.Z.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
@@ -42,19 +42,19 @@ function E(e) {
     l.useEffect(() => {
         n && !S && o.Z.fetchRequestToJoinGuilds();
     }, [n, S]);
-    let T = null != N && x.includes(N);
+    let Z = null != N && x.includes(N);
     return (l.useEffect(() => {
-        !n && T && v !== N && E(!0);
-    }, [n, T, v, N]),
+        !n && Z && v !== N && E(!0);
+    }, [n, Z, v, N]),
     0 === x.length)
         ? null
         : (0, i.jsx)(m.TH, {
               onActivate: t,
               children: (0, i.jsx)(_.Z, {
-                  folderNode: Z,
+                  folderNode: T,
                   expanded: n,
-                  useCircleMask: !n && !T,
-                  selected: T,
+                  useCircleMask: !n && !Z,
+                  selected: Z,
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {

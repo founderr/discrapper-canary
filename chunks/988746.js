@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(259443),
     i = n(46973),
     a = n(65154);
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function o(e, t, n) {
         e
     );
 }
-let s = new r.Y('ConnectionEventFramerateReducer');
+let o = new r.Y('ConnectionEventFramerateReducer');
 class l {
     initialize() {
         this.userSpeakingChange(!0);
@@ -31,7 +31,7 @@ class l {
                 return;
             }
             this.framerateReductionTimeout = setTimeout(() => {
-                if (!this.connection.destroyed) s.info('BaseConnection.userSpeakingChange: Reduced framerate after '.concat(a.u$, ' ms.')), (this.framerateReductionTimeout = void 0), (this.sinkWants.isMuted = !0), this.updateRemoteWantsFramerate();
+                if (!this.connection.destroyed) o.info('BaseConnection.userSpeakingChange: Reduced framerate after '.concat(a.u$, ' ms.')), (this.framerateReductionTimeout = void 0), (this.sinkWants.isMuted = !0), this.updateRemoteWantsFramerate();
             }, a.u$);
         }
     }
@@ -45,11 +45,11 @@ class l {
         this.destroyFramerateScaleFactorTimers();
     }
     constructor(e, t) {
-        o(this, 'connection', void 0),
-            o(this, 'sinkWants', void 0),
-            o(this, 'framerateReductionTimeout', void 0),
-            o(this, 'handleSpeaking', void 0),
-            o(this, 'handleSelfMute', void 0),
+        s(this, 'connection', void 0),
+            s(this, 'sinkWants', void 0),
+            s(this, 'framerateReductionTimeout', void 0),
+            s(this, 'handleSpeaking', void 0),
+            s(this, 'handleSelfMute', void 0),
             (this.connection = e),
             (this.sinkWants = t),
             (this.handleSpeaking = (e, t) => {

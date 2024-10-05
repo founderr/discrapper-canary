@@ -1,102 +1,102 @@
-n.d(t, {
+t.d(e, {
     A: function () {
-        return h;
+        return v;
     }
 });
-var r = n(735250);
-n(470079);
-var i = n(442837),
-    a = n(481060),
-    o = n(264043),
-    s = n(812206),
-    l = n(572004),
-    u = n(601911),
-    c = n(504211),
-    d = n(981631),
-    _ = n(689938),
-    E = n(213891),
-    f = n(566809);
-function h(e) {
-    let { appId: t, skuId: n, transitionState: h, onClose: p, onHeaderTitleClick: m, children: I, footer: T } = e,
-        g = (0, i.e7)(
-            [s.Z, o.Z],
+var l = t(735250);
+t(470079);
+var i = t(442837),
+    r = t(481060),
+    a = t(264043),
+    o = t(812206),
+    s = t(572004),
+    u = t(601911),
+    c = t(504211),
+    d = t(981631),
+    f = t(689938),
+    p = t(213891),
+    m = t(566809);
+function v(n) {
+    let { appId: e, skuId: t, transitionState: v, onClose: I, onHeaderTitleClick: S, children: h, footer: x } = n,
+        N = (0, i.e7)(
+            [o.Z, a.Z],
             () => {
-                var e;
-                return null !== (e = s.Z.getApplication(t)) && void 0 !== e ? e : o.Z.getApplicationRecord(t);
+                var n;
+                return null !== (n = o.Z.getApplication(e)) && void 0 !== n ? n : a.Z.getApplicationRecord(e);
             },
-            [t]
+            [e]
         );
-    if (null == g) return null;
-    let S = (0, u.y)(g, 25),
-        { termsOfServiceUrl: A, privacyPolicyUrl: v } = g;
-    return (0, r.jsxs)(a.ModalRoot, {
-        transitionState: h,
-        size: a.ModalSize.DYNAMIC,
-        className: f.modal,
+    if (null == N) return null;
+    let g = (0, u.y)(N, 25),
+        { termsOfServiceUrl: T, privacyPolicyUrl: Z } = N;
+    return (0, l.jsxs)(r.ModalRoot, {
+        transitionState: v,
+        size: r.ModalSize.DYNAMIC,
+        className: m.modal,
         children: [
-            (0, r.jsxs)(a.ModalHeader, {
-                className: E.modalHeader,
+            (0, l.jsxs)(r.ModalHeader, {
+                className: p.modalHeader,
                 children: [
-                    (0, r.jsxs)(a.Clickable, {
-                        className: E.modalTitle,
-                        onClick: m,
+                    (0, l.jsxs)(r.Clickable, {
+                        className: p.modalTitle,
+                        onClick: S,
                         children: [
-                            null != S &&
-                                (0, r.jsx)('img', {
-                                    src: S.href,
+                            null != g &&
+                                (0, l.jsx)('img', {
+                                    src: g.href,
                                     alt: '',
-                                    className: f.appIcon
+                                    className: m.appIcon
                                 }),
-                            (0, r.jsx)(a.Heading, {
+                            (0, l.jsx)(r.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: g.name
+                                children: N.name
                             })
                         ]
                     }),
-                    (0, r.jsx)(a.ModalCloseButton, {
-                        onClick: p,
-                        className: E.modalCloseBtn
+                    (0, l.jsx)(r.ModalCloseButton, {
+                        onClick: I,
+                        className: p.modalCloseBtn
                     })
                 ]
             }),
-            I,
-            (0, r.jsxs)(a.ModalFooter, {
-                className: f.footer,
+            h,
+            (0, l.jsxs)(r.ModalFooter, {
+                className: m.footer,
                 children: [
-                    null != A && null != v
-                        ? (0, r.jsx)(a.Text, {
+                    null != T && null != Z
+                        ? (0, l.jsx)(r.Text, {
                               color: 'header-primary',
                               variant: 'text-sm/normal',
-                              children: _.Z.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
-                                  tosUrl: A,
-                                  ppUrl: v
+                              children: f.Z.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
+                                  tosUrl: T,
+                                  ppUrl: Z
                               })
                           })
-                        : (0, r.jsx)(a.Text, {
+                        : (0, l.jsx)(r.Text, {
                               color: 'header-primary',
                               variant: 'text-xs/normal',
-                              children: _.Z.Messages.STOREFRONT_NO_TOS_PP
+                              children: f.Z.Messages.STOREFRONT_NO_TOS_PP
                           }),
-                    (0, r.jsxs)('div', {
-                        className: f.footerButtons,
+                    (0, l.jsxs)('div', {
+                        className: m.footerButtons,
                         children: [
-                            l.wS &&
-                                (0, r.jsx)(a.Button, {
-                                    look: a.ButtonLooks.FILLED,
-                                    size: a.ButtonSizes.ICON,
-                                    color: a.ButtonColors.CUSTOM,
-                                    'aria-label': _.Z.Messages.COPY_LINK,
-                                    className: f.linkButton,
+                            s.wS &&
+                                (0, l.jsx)(r.Button, {
+                                    look: r.ButtonLooks.FILLED,
+                                    size: r.ButtonSizes.ICON,
+                                    color: r.ButtonColors.CUSTOM,
+                                    'aria-label': f.Z.Messages.COPY_LINK,
+                                    className: m.linkButton,
                                     onClick: () => {
-                                        let e = ''.concat(location.protocol, '//').concat(location.host).concat(d.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(t, n));
-                                        (0, l.JG)(e), (0, a.showToast)((0, a.createToast)(_.Z.Messages.COPIED_LINK, a.ToastType.SUCCESS)), (0, c.X)(t, c.B.DETAILS_MODAL, n);
+                                        let n = ''.concat(location.protocol, '//').concat(location.host).concat(d.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(e, t));
+                                        (0, s.JG)(n), (0, r.showToast)((0, r.createToast)(f.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), (0, c.X)(e, c.B.DETAILS_MODAL, t);
                                     },
-                                    children: (0, r.jsx)(a.LinkIcon, {
+                                    children: (0, l.jsx)(r.LinkIcon, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     })
                                 }),
-                            T
+                            x
                         ]
                     })
                 ]

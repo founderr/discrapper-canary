@@ -1,52 +1,52 @@
-n.d(a, {
+t.d(n, {
     Z: function () {
         return d;
     }
 }),
-    n(47120);
-var t = n(735250),
-    i = n(470079),
-    r = n(481060),
-    o = n(810568),
-    l = n(689938),
-    s = n(51527),
-    c = n(133512);
+    t(47120);
+var a = t(735250),
+    r = t(470079),
+    s = t(481060),
+    i = t(810568),
+    o = t(689938),
+    l = t(51527),
+    c = t(133512);
 function d(e) {
-    let { detectedGame: a, trackAction: d } = e,
-        u = i.useRef(null),
-        m = i.useMemo(() => {
-            let e = a.artwork.map((e) => ({ src: e }));
-            return [...a.screenshots.map((e) => ({ src: e })), ...e];
-        }, [a.artwork, a.screenshots]),
-        p = m.length > 2;
-    function g(e) {
+    let { detectedGame: n, trackAction: d } = e,
+        u = r.useRef(null),
+        _ = r.useMemo(() => {
+            let e = n.artwork.map((e) => ({ src: e }));
+            return [...n.screenshots.map((e) => ({ src: e })), ...e];
+        }, [n.artwork, n.screenshots]),
+        E = _.length > 2;
+    function m(e) {
         if (null == u.current) return;
-        let a = u.current.getScrollerState().scrollLeft;
+        let n = u.current.getScrollerState().scrollLeft;
         u.current.scrollTo({
-            to: a + 280 * e,
+            to: n + 280 * e,
             animate: !0
         });
     }
-    return 0 === m.length
+    return 0 === _.length
         ? null
-        : (0, t.jsxs)('div', {
+        : (0, a.jsxs)('div', {
               children: [
-                  (0, t.jsx)(r.Heading, {
-                      className: s.sectionHeader,
+                  (0, a.jsx)(s.Heading, {
+                      className: l.sectionHeader,
                       variant: 'text-md/semibold',
                       color: 'header-primary',
-                      children: l.Z.Messages.GAME_PROFILE_SCREENSHOTS
+                      children: o.Z.Messages.GAME_PROFILE_SCREENSHOTS
                   }),
-                  (0, t.jsxs)('div', {
-                      className: p ? c.gameProfileMediaSmall : c.gameProfileMediaLarge,
+                  (0, a.jsxs)('div', {
+                      className: E ? c.gameProfileMediaSmall : c.gameProfileMediaLarge,
                       children: [
-                          (0, t.jsx)(r.AdvancedScrollerNone, {
+                          (0, a.jsx)(s.AdvancedScrollerNone, {
                               ref: u,
                               className: c.imageScroller,
                               orientation: 'horizontal',
-                              children: m.map((e, a) =>
-                                  (0, t.jsx)(
-                                      r.Clickable,
+                              children: _.map((e, n) =>
+                                  (0, a.jsx)(
+                                      s.Clickable,
                                       {
                                           className: c.imageClickable,
                                           focusProps: {
@@ -54,48 +54,48 @@ function d(e) {
                                               ringClassName: c.gameArtworkFocusRing
                                           },
                                           onClick: () => {
-                                              d(o.as.ClickImage),
-                                                  (0, r.openModalLazy)(async () => {
-                                                      let { default: e } = await n.e('99857').then(n.bind(n, 895023));
-                                                      return (n) => {
-                                                          let { ...i } = n;
-                                                          return (0, t.jsx)(e, {
+                                              d(i.as.ClickImage),
+                                                  (0, s.openModalLazy)(async () => {
+                                                      let { default: e } = await t.e('99857').then(t.bind(t, 895023));
+                                                      return (t) => {
+                                                          let { ...r } = t;
+                                                          return (0, a.jsx)(e, {
                                                               className: c.mediaModal,
-                                                              ...i,
-                                                              items: m,
-                                                              startingIndex: a
+                                                              ...r,
+                                                              items: _,
+                                                              startingIndex: n
                                                           });
                                                       };
                                                   });
                                           },
-                                          children: (0, t.jsx)('img', {
+                                          children: (0, a.jsx)('img', {
                                               src: e.src,
                                               className: c.gameArtwork,
-                                              alt: l.Z.Messages.GAME_PROFILE_GAME_ARTWORK_ALT.format({ game: name })
+                                              alt: o.Z.Messages.GAME_PROFILE_GAME_ARTWORK_ALT.format({ game: name })
                                           })
                                       },
                                       e.src
                                   )
                               )
                           }),
-                          p &&
-                              (0, t.jsxs)('div', {
+                          E &&
+                              (0, a.jsxs)('div', {
                                   className: c.mediaOverlay,
                                   children: [
-                                      (0, t.jsx)('div', { className: c.gradientLeft }),
-                                      (0, t.jsx)(r.Clickable, {
+                                      (0, a.jsx)('div', { className: c.gradientLeft }),
+                                      (0, a.jsx)(s.Clickable, {
                                           className: c.arrowClickable,
-                                          onClick: () => g(-1),
-                                          children: (0, t.jsx)(r.ArrowSmallLeftIcon, {
+                                          onClick: () => m(-1),
+                                          children: (0, a.jsx)(s.ArrowSmallLeftIcon, {
                                               className: c.arrow,
                                               color: 'currentColor'
                                           })
                                       }),
-                                      (0, t.jsx)('div', { className: c.gradientRight }),
-                                      (0, t.jsx)(r.Clickable, {
+                                      (0, a.jsx)('div', { className: c.gradientRight }),
+                                      (0, a.jsx)(s.Clickable, {
                                           className: c.arrowClickable,
-                                          onClick: () => g(1),
-                                          children: (0, t.jsx)(r.ArrowSmallRightIcon, {
+                                          onClick: () => m(1),
+                                          children: (0, a.jsx)(s.ArrowSmallRightIcon, {
                                               className: c.arrow,
                                               color: 'currentColor'
                                           })

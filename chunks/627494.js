@@ -1,8 +1,8 @@
 var r = n(147018),
     i = n(926515),
     a = n(581031),
-    o = n(676125),
-    s = n(354848),
+    s = n(676125),
+    o = n(354848),
     l = n(35179),
     u = n(155763),
     c = n(714050),
@@ -12,13 +12,13 @@ var r = n(147018),
     f = n(641236),
     h = n(992051),
     p = f('replace'),
-    m = TypeError,
-    I = a(''.indexOf),
+    I = TypeError,
+    m = a(''.indexOf),
     T = a(''.replace),
-    g = a(''.slice),
-    S = Math.max,
+    S = a(''.slice),
+    g = Math.max,
     A = function (e, t, n) {
-        return n > e.length ? -1 : '' === t ? n : I(e, t, n);
+        return n > e.length ? -1 : '' === t ? n : m(e, t, n);
     };
 r(
     {
@@ -31,21 +31,21 @@ r(
                 r,
                 a,
                 f,
-                v,
                 N,
                 O,
                 R,
-                C = o(this),
-                y = 0,
+                v,
+                C = s(this),
                 L = 0,
-                b = '';
+                D = 0,
+                y = '';
             if (!l(e)) {
-                if ((n = u(e)) && !~I(c(o(_(e))), 'g')) throw m('`.replaceAll` does not allow non-global regexes');
+                if ((n = u(e)) && !~m(c(s(_(e))), 'g')) throw I('`.replaceAll` does not allow non-global regexes');
                 if ((r = d(e, p))) return i(r, e, C, t);
                 if (h && n) return T(c(C), e, t);
             }
-            for (a = c(C), f = c(e), !(v = s(t)) && (t = c(t)), O = S(1, (N = f.length)), y = A(a, f, 0); -1 !== y; ) (R = v ? c(t(f, y, a)) : E(f, a, y, [], void 0, t)), (b += g(a, L, y) + R), (L = y + N), (y = A(a, f, y + O));
-            return L < a.length && (b += g(a, L)), b;
+            for (a = c(C), f = c(e), !(N = o(t)) && (t = c(t)), R = g(1, (O = f.length)), L = A(a, f, 0); -1 !== L; ) (v = N ? c(t(f, L, a)) : E(f, a, L, [], void 0, t)), (y += S(a, D, L) + v), (D = L + O), (L = A(a, f, L + R));
+            return D < a.length && (y += S(a, D)), y;
         }
     }
 );

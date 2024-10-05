@@ -1,51 +1,51 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(735250),
-    i = n(470079),
-    a = n(481060),
-    o = n(283836),
-    s = n(728345),
-    l = n(689938),
-    u = n(364060);
-function c(e) {
+var i = n(735250),
+    a = n(470079),
+    s = n(481060),
+    l = n(283836),
+    r = n(728345),
+    o = n(689938),
+    c = n(364060);
+function d(e) {
     let { applicationId: t, guildId: n } = e,
-        { data: i } = (0, s.IX)(t);
-    return null == i
+        { data: a } = (0, r.IX)(t);
+    return null == a
         ? null
-        : (0, r.jsx)(d, {
-              app: i,
+        : (0, i.jsx)(u, {
+              app: a,
               guildId: n
           });
 }
-function d(e) {
-    let { app: t, guildId: s } = e;
-    (0, o.q)(t.id);
-    let c = i.useCallback(() => {
-        (0, a.openModalLazy)(async () => {
+function u(e) {
+    let { app: t, guildId: r } = e;
+    (0, l.q)(t.id);
+    let d = a.useCallback(() => {
+        (0, s.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e('77803'), n.e('47988')]).then(n.bind(n, 7225));
             return (n) =>
-                (0, r.jsx)(e, {
+                (0, i.jsx)(e, {
                     appId: t.id,
-                    guildId: s,
+                    guildId: r,
                     ...n
                 });
         });
-    }, [t, s]);
-    return (0, r.jsx)(a.Button, {
-        color: a.Button.Colors.BRAND,
-        size: a.Button.Sizes.SMALL,
-        onClick: c,
-        children: (0, r.jsxs)('div', {
-            className: u.button,
+    }, [t, r]);
+    return (0, i.jsx)(s.Button, {
+        color: s.Button.Colors.BRAND,
+        size: s.Button.Sizes.SMALL,
+        onClick: d,
+        children: (0, i.jsxs)('div', {
+            className: c.button,
             children: [
-                (0, r.jsx)(a.ShopSparkleIcon, {
+                (0, i.jsx)(s.ShopSparkleIcon, {
                     size: 'xs',
                     color: 'white'
                 }),
-                l.Z.Messages.STOREFRONT_TITLE.format({ appName: t.name })
+                o.Z.Messages.STOREFRONT_TITLE.format({ appName: t.name })
             ]
         })
     });

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = n(735250);
@@ -14,10 +14,10 @@ var s = n(512722),
     u = n(496675),
     d = n(871499),
     h = n(981631),
-    m = n(689938);
-function p(e) {
+    p = n(689938);
+function m(e) {
     var t, s;
-    let { applicationId: p, stream: _, channel: f, exitFullScreen: E, appContext: g, analyticsLocation: C, guildScheduledEvent: I, ...T } = e,
+    let { applicationId: m, stream: _, channel: f, exitFullScreen: E, appContext: g, analyticsLocation: C, guildScheduledEvent: I, ...T } = e,
         x = (0, o.bp)(),
         S = null == f ? void 0 : f.getGuildId(),
         v = (0, l.e7)([c.Z], () => (null != S ? c.Z.getGuild(S) : null), [S]);
@@ -53,15 +53,15 @@ function p(e) {
                           guild: v,
                           channel: f,
                           streamUserId: null == _ ? void 0 : _.ownerId,
-                          applicationId: p,
+                          applicationId: m,
                           appContext: null != g ? g : x,
                           exitFullScreen: E,
                           analyticsLocation: C,
                           guildScheduledEvent: I
                       });
               },
-              iconComponent: null != p ? r.ActivitiesPlusIcon : r.GroupPlusIcon,
-              label: null != p ? m.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY : m.Z.Messages.ACTIVITY_INVITE_MODAL_INVITE,
+              iconComponent: null != m ? r.ActivitiesPlusIcon : r.GroupPlusIcon,
+              label: null != m ? p.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY : p.Z.Messages.ACTIVITY_INVITE_MODAL_INVITE,
               ...T
           })
         : null;

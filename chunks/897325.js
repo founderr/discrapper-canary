@@ -1,32 +1,32 @@
 n.d(t, {
     E: function () {
-        return l;
+        return r;
     },
     _: function () {
-        return s;
+        return l;
     }
-});
-var r = n(627341);
+}),
+    n(627341);
 var i = n(278074),
     a = n(263568),
-    o = n(228131);
-function s(e, t) {
+    s = n(228131);
+function l(e, t) {
     let n = (0, i.EQ)(t)
-        .with(a.C.IMAGE_ONLY_ANSWERS, () => o.normalStylesImageOnlyAnswers)
-        .otherwise(() => o.normalStylesDefault);
+        .with(a.C.IMAGE_ONLY_ANSWERS, () => s.normalStylesImageOnlyAnswers)
+        .otherwise(() => s.normalStylesDefault);
     return {
         styles: {
             loserSelected: n,
             normal: n,
             notVoted: n,
             selected: n,
-            voted: o.votedStyles,
-            victorSelected: o.victorStyles,
-            victorNotSelected: o.victorStyles,
+            voted: s.votedStyles,
+            victorSelected: s.victorStyles,
+            victorNotSelected: s.victorStyles,
             normalVote: n
         }
     };
 }
-function l(e, t) {
+function r(e, t) {
     return e.getAvatarURL(t, 20, !1);
 }

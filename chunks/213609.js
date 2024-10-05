@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return m;
     },
     h: function () {
-        return m;
+        return I;
     }
 });
 var r = n(470079),
     i = n(348327),
     a = n.n(i),
-    o = n(97613),
-    s = n.n(o),
+    s = n(97613),
+    o = n.n(s),
     l = n(990547),
     u = n(570140),
     c = n(592125),
@@ -24,10 +24,10 @@ let p = (0, l.trackMaker)({
     dispatcher: u.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function m(e) {
+function I(e) {
     var t, n;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { name: i, type: a, properties: o } = e;
+        { name: i, type: a, properties: s } = e;
     if (
         e.type === l.ImpressionTypes.MODAL &&
         null == e.name &&
@@ -38,22 +38,22 @@ function m(e) {
     )
         return;
     (0, h.Ps)(e);
-    let s = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : _.Z.getGuildId(),
-        u = null !== (n = null == o ? void 0 : o.channel_id) && void 0 !== n ? n : d.Z.getChannelId(s),
-        m = (0, E.expandEventProperties)({
+    let o = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : _.Z.getGuildId(),
+        u = null !== (n = null == s ? void 0 : s.channel_id) && void 0 !== n ? n : d.Z.getChannelId(o),
+        I = (0, E.expandEventProperties)({
             impression_type: a,
             location: (0, h.k$)(),
-            ...(0, f.hH)(s),
+            ...(0, f.hH)(o),
             ...(0, f.v_)(c.Z.getChannel(u)),
-            ...o
+            ...s
         });
     if (r) {
         (0, h.dT)(null, null);
         return;
     }
-    null != i && null != a && ((0, E.debugLogEvent)(i, m), p(i, m)), (0, h.dT)(i, m);
+    null != i && null != a && ((0, E.debugLogEvent)(i, I), p(i, I)), (0, h.dT)(i, I);
 }
-function I(e) {
+function m(e) {
     let t =
             arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
@@ -63,19 +63,19 @@ function I(e) {
                   },
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = r.useRef(),
-        o = r.useRef();
+        s = r.useRef();
     r.useEffect(
         () => {
             let r = !a()(i.current, e);
             r && (i.current = e);
-            let l = !a()(o.current, n);
-            if ((l && (o.current = n), !r && !l)) return;
+            let l = !a()(s.current, n);
+            if ((l && (s.current = n), !r && !l)) return;
             let u = {
                 ...e,
-                sequenceId: s()('impression_')
+                sequenceId: o()('impression_')
             };
             return (
-                m(u, t.disableTrack),
+                I(u, t.disableTrack),
                 () => {
                     null != u && (0, h.dw)(u);
                 }

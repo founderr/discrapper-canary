@@ -1,21 +1,21 @@
 var r = n(67867),
-    i = n(718380),
+    o = n(718380),
     a = n(821819),
-    o = n(982665),
+    i = n(982665),
     s = n(938988).onFreeze,
-    l = Object.freeze;
+    c = Object.freeze;
 r(
     {
         target: 'Object',
         stat: !0,
         forced: a(function () {
-            l(1);
+            c(1);
         }),
-        sham: !i
+        sham: !o
     },
     {
         freeze: function (e) {
-            return l && o(e) ? l(s(e)) : e;
+            return c && i(e) ? c(s(e)) : e;
         }
     }
 );

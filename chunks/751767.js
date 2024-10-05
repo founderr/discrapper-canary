@@ -1,15 +1,15 @@
 n.d(t, {
     A: function () {
-        return s;
+        return o;
     },
     S: function () {
-        return o;
+        return s;
     }
 });
 var r = n(663993),
     i = n(618541),
     a = n(981631);
-function o() {
+function s() {
     return (0, r.wE)({
         createPromise: () => n.e('661').then(n.t.bind(n, 491668, 23)),
         webpackId: 491668
@@ -18,10 +18,10 @@ function o() {
         return t;
     });
 }
-function s() {
+function o() {
     let e = i.Z.getClient();
     return null == e
-        ? o().then((e) =>
+        ? s().then((e) =>
               e.client
                   .create({ authorization: a.Ai1.BRAINTREE.KEY })
                   .then((e) => l(e))
@@ -30,7 +30,7 @@ function s() {
         : l(e);
 }
 function l(e) {
-    return o().then((t) =>
+    return s().then((t) =>
         t.dataCollector
             .create({ client: e })
             .then((e) => e.deviceData)

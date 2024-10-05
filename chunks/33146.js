@@ -1,38 +1,38 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return c;
     }
 }),
-    t(411104);
-var a = t(735250);
-t(470079);
-var i = t(481060),
-    l = t(34674),
-    s = t(927356),
-    r = t(689938);
+    n(411104);
+var a = n(735250);
+n(470079);
+var i = n(481060),
+    l = n(34674),
+    r = n(927356),
+    s = n(689938);
 function c(e) {
-    let n,
-        t,
+    let t,
+        n,
         { category: c, className: o, onViewAll: d } = e;
     return (
         null == c || (0, l.m0)(c)
-            ? ((n = r.Z.Messages.APP_DIRECTORY_EMPTY_SEARCH_HEADING), (t = r.Z.Messages.APP_DIRECTORY_EMPTY_SEARCH_SUBHEADING))
-            : ((n = r.Z.Messages.APP_DIRECTORY_EMPTY_CATEGORY_SEARCH_HEADING.format({ categoryName: c.name })),
-              (t = r.Z.Messages.APP_DIRECTORY_EMPTY_CATEGORY_SEARCH_SUBHEADING.format({
-                  viewAllHook: (e, n) =>
+            ? ((t = s.Z.Messages.APP_DIRECTORY_EMPTY_SEARCH_HEADING), (n = s.Z.Messages.APP_DIRECTORY_EMPTY_SEARCH_SUBHEADING))
+            : ((t = s.Z.Messages.APP_DIRECTORY_EMPTY_CATEGORY_SEARCH_HEADING.format({ categoryName: c.name })),
+              (n = s.Z.Messages.APP_DIRECTORY_EMPTY_CATEGORY_SEARCH_SUBHEADING.format({
+                  viewAllHook: (e, t) =>
                       (0, a.jsx)(
                           i.Anchor,
                           {
                               onClick: d,
                               children: e
                           },
-                          n
+                          t
                       )
               }))),
-        (0, a.jsx)(s.Z, {
+        (0, a.jsx)(r.Z, {
             className: o,
-            heading: n,
-            body: t
+            heading: t,
+            body: n
         })
     );
 }

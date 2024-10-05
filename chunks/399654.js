@@ -1,57 +1,57 @@
-n.d(t, {
+t.d(n, {
     a: function () {
-        return c;
+        return u;
     }
 });
-var r = n(544891),
-    i = n(570140),
-    a = n(706454),
-    o = n(70956),
-    s = n(844439),
-    l = n(981631);
-let u = 10 * o.Z.Millis.MINUTE;
-async function c(e) {
-    let { channelId: t, location: n, withCommands: o } = e,
-        c = Date.now(),
-        d = s.ZP.getFetchState({
-            location: n,
-            channelId: t,
+var i = t(544891),
+    a = t(570140),
+    l = t(706454),
+    o = t(70956),
+    c = t(844439),
+    d = t(981631);
+let r = 10 * o.Z.Millis.MINUTE;
+async function u(e) {
+    let { channelId: n, location: t, withCommands: o } = e,
+        u = Date.now(),
+        s = c.ZP.getFetchState({
+            location: t,
+            channelId: n,
             withCommands: o
         }),
-        _ = s.ZP.getLastFetchTimeMs({
-            location: n,
-            channelId: t,
+        m = c.ZP.getLastFetchTimeMs({
+            location: t,
+            channelId: n,
             withCommands: o
         });
-    if (d !== s.M.FETCHING && (null == _ || !(_ + u > c))) {
-        i.Z.dispatch({
+    if (s !== c.M.FETCHING && (null == m || !(m + r > u))) {
+        a.Z.dispatch({
             type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS',
-            location: n,
-            channelId: t,
+            location: t,
+            channelId: n,
             withCommands: o
         });
         try {
-            let e = await r.tn.get({
-                url: l.ANM.APP_RECOMMENDATIONS,
+            let e = await i.tn.get({
+                url: d.ANM.APP_RECOMMENDATIONS,
                 query: {
-                    locale: a.default.locale,
-                    channel_id: t,
-                    location: n,
+                    locale: l.default.locale,
+                    channel_id: n,
+                    location: t,
                     with_commands: o
                 }
             });
-            i.Z.dispatch({
+            a.Z.dispatch({
                 type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS',
-                location: n,
-                channelId: t,
+                location: t,
+                channelId: n,
                 recommendations: e.body,
                 withCommands: o
             });
         } catch (e) {
-            i.Z.dispatch({
+            a.Z.dispatch({
                 type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE',
-                location: n,
-                channelId: t,
+                location: t,
+                channelId: n,
                 withCommands: o
             });
         }

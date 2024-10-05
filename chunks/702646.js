@@ -25,8 +25,8 @@ function T(e) {
     a.useEffect(() => {
         T && (E(!1), I(!1));
     }, [T]);
-    let f = d && (h || _),
-        S = a.useMemo(
+    let S = d && (h || _),
+        f = a.useMemo(
             () =>
                 null != l
                     ? (0, i.jsxs)(c.Clickable, {
@@ -68,7 +68,7 @@ function T(e) {
                                     color: 'none',
                                     children: n
                                 }),
-                                null != S &&
+                                null != f &&
                                     (0, i.jsx)(c.ChevronSmallDownIcon, {
                                         className: g.chevron,
                                         color: 'currentColor'
@@ -77,16 +77,16 @@ function T(e) {
                         })
                     ]
                 }),
-            [t, n, d, o, S]
+            [t, n, d, o, f]
         );
-    return null == S
+    return null == f
         ? C({})
         : (0, i.jsx)(c.Tooltip, {
-              text: S,
+              text: f,
               position: 'bottom',
               'aria-label': s,
-              shouldShow: f,
-              forceOpen: f,
+              shouldShow: S,
+              forceOpen: S,
               allowOverflow: !0,
               disableTooltipPointerEvents: !1,
               tooltipClassName: r()(g.filterTooltip, { [g.filterTooltipAutoWidth]: u }),
@@ -94,7 +94,7 @@ function T(e) {
               children: C
           });
 }
-function f() {
+function S() {
     var e;
     let t = (0, m.GN)((e) => e.selectedGames, l.Z),
         n = a.useCallback(() => {
@@ -130,7 +130,7 @@ function f() {
         autoWidth: !0
     });
 }
-function S() {
+function f() {
     let e = a.useMemo(I.f4, []),
         t = (0, m.GN)((e) => e.selectedPlaystyle, l.Z),
         n = null != t ? e[t] : null,
@@ -378,7 +378,7 @@ t.Z = function (e) {
                         : null,
                     (0, i.jsxs)('div', {
                         className: g.preferences,
-                        children: [(0, i.jsx)(f, {}), (0, i.jsx)(S, {}), (0, i.jsx)(C, {})]
+                        children: [(0, i.jsx)(S, {}), (0, i.jsx)(f, {}), (0, i.jsx)(C, {})]
                     }),
                     (0, i.jsx)('div', { className: g.actions })
                 ]

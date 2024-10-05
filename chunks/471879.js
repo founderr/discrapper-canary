@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(401157);
-function o(e) {
+function s(e) {
     let { user: t, guildId: n } = e;
     return (0, r.jsx)('div', {
         className: a.avatarHalo,

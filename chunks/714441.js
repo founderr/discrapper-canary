@@ -1,22 +1,22 @@
-n.d(t, {
+t.d(e, {
     i: function () {
-        return a;
+        return r;
     }
 });
-var r = n(735250);
-n(470079);
-var i = n(481060);
-function a(e) {
-    let { applicationName: t, onConfirm: a, onCancel: o } = e;
+var l = t(735250);
+t(470079);
+var i = t(481060);
+function r(n) {
+    let { applicationName: e, onConfirm: r, onCancel: a } = n;
     return (0, i.openModalLazy)(
         async () => {
-            let { ConfirmNoSharedServerSubscribeWarningModal: e } = await n.e('99809').then(n.bind(n, 525549));
-            return (n) =>
-                (0, r.jsx)(e, {
-                    ...n,
-                    applicationName: t,
-                    onConfirm: a,
-                    onCancel: o
+            let { ConfirmNoSharedServerSubscribeWarningModal: n } = await t.e('99809').then(t.bind(t, 525549));
+            return (t) =>
+                (0, l.jsx)(n, {
+                    ...t,
+                    applicationName: e,
+                    onConfirm: r,
+                    onCancel: a
                 });
         },
         { modalKey: 'application-user-subscribe-no-shared-server-warning' }

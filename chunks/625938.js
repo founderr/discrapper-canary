@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(704215),
     d = n(481060),
     h = n(788307),
-    m = n(605236),
-    p = n(594174),
+    p = n(605236),
+    m = n(594174),
     _ = n(768581),
     f = n(906605),
     E = n(106301),
@@ -42,12 +42,12 @@ let N = (e) => {
     A = (e) => {
         let { currentStatus: t, channel: a } = e,
             r = s.useRef(E.Z.getRecentCustomStatuses()),
-            A = s.useRef((0, m.un)(u.z.HANG_STATUS_NEW_BADGE)).current,
+            A = s.useRef((0, p.un)(u.z.HANG_STATUS_NEW_BADGE)).current,
             Z = (0, g.V)(),
             [M, b] = s.useState(null != t ? t : null),
-            R = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
+            R = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
             L = () => {
-                !A && (0, m.EW)(u.z.HANG_STATUS_NEW_BADGE);
+                !A && (0, p.EW)(u.z.HANG_STATUS_NEW_BADGE);
             },
             j = (e, t) => {
                 e.stopPropagation(), (0, f.Zx)(t, !0), L();

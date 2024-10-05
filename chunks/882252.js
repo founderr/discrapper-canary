@@ -1,59 +1,59 @@
 n.d(t, {
     FS: function () {
-        return d;
+        return c;
     },
     Uw: function () {
-        return f;
+        return E;
     },
     nC: function () {
-        return _;
+        return d;
     },
     nU: function () {
-        return h;
+        return f;
     },
     yv: function () {
-        return p;
+        return h;
     }
-});
-var r = n(47120);
-var i = n(683860),
-    a = n(592125),
-    o = n(430824),
+}),
+    n(47120);
+var r = n(683860),
+    i = n(592125),
+    a = n(430824),
     s = n(306680),
-    l = n(710352),
-    u = n(176505),
-    c = n(689938);
-function d(e, t) {
+    o = n(710352),
+    l = n(176505),
+    u = n(689938);
+function c(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.ZP];
     return {
         isNew: !e.isArchivedThread() && n.isNewForumThread(e.id, e.parent_id, t),
         hasUnreads: !e.isArchivedThread() && n.isForumPostUnread(e.id)
     };
 }
-function _(e) {
-    let [t, n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, o.Z, s.ZP],
-        i = t.getChannel(e);
-    if (null == i) return null;
-    let l = n.getGuild(i.guild_id);
-    return null == l ? null : d(i, l, [r]);
+function d(e) {
+    let [t, n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.Z, a.Z, s.ZP],
+        o = t.getChannel(e);
+    if (null == o) return null;
+    let l = n.getGuild(o.guild_id);
+    return null == l ? null : c(o, l, [r]);
 }
-let E = () => ({
-    minutes: c.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MINUTES,
-    hours: c.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_HOURS,
-    days: c.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_DAYS,
-    month: c.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MORE_THAN_MONTH
+let _ = () => ({
+    minutes: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MINUTES,
+    hours: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_HOURS,
+    days: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_DAYS,
+    month: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MORE_THAN_MONTH
 });
-function f(e, t) {
-    if (t === l.R6.POSTED_DURATION_AGO && e === i.z.CREATION_DATE) return E;
+function E(e, t) {
+    if (t === o.R6.POSTED_DURATION_AGO && e === r.z.CREATION_DATE) return _;
 }
-function h(e, t) {
+function f(e, t) {
     let [n] = t,
         r = n.hasTrackedUnread(e),
         i = n.hasOpenedThread(e),
         a = null != n.getTrackedAckMessageId(e);
     return r && i && a;
 }
-function p(e) {
+function h(e) {
     var t;
-    return (null === (t = a.Z.getChannel(e)) || void 0 === t ? void 0 : t.hasFlag(u.zZ.PINNED)) === !0;
+    return (null === (t = i.Z.getChannel(e)) || void 0 === t ? void 0 : t.hasFlag(l.zZ.PINNED)) === !0;
 }

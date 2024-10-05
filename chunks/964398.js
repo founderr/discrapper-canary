@@ -110,39 +110,39 @@ let _ = (e, t) => {
 t.Z = l.memo(function (e) {
     let { wheelWidth: t, wheelHeight: n, itemWidth: m, itemHeight: g, showDeadZoneIndicator: C, activeItem: I, onItemSelect: E, onItemAction: N, interactive: S = !0, children: x } = e,
         v = l.useRef(null),
-        Z = l.useRef([]),
-        T = l.useRef(!1),
-        b = l.useRef(null),
-        [A, M] = l.useState(0),
-        [R, L] = l.useState({
+        T = l.useRef([]),
+        Z = l.useRef(!1),
+        A = l.useRef(null),
+        [b, R] = l.useState(0),
+        [M, L] = l.useState({
             x: 0,
             y: 0
         }),
-        P = Math.abs(R.x) + Math.abs(R.y) > 0,
-        y = l.useMemo(() => a().chunk(x, p), [x]),
-        O = l.useCallback(
+        P = Math.abs(M.x) + Math.abs(M.y) > 0,
+        O = l.useMemo(() => a().chunk(x, p), [x]),
+        y = l.useCallback(
             (e, t) => {
-                null == Z.current[A] ? (Z.current[A] = []) : (Z.current[A][t] = e);
+                null == T.current[b] ? (T.current[b] = []) : (T.current[b][t] = e);
             },
-            [A]
+            [b]
         ),
-        j = l.useCallback(
+        D = l.useCallback(
             (e, t) => {
-                (b.current = t), E(p * e + t);
+                (A.current = t), E(p * e + t);
             },
             [E]
         ),
-        D = l.useCallback(() => {
-            (b.current = null), E(null);
+        j = l.useCallback(() => {
+            (A.current = null), E(null);
         }, [E]),
         w = l.useCallback(
             (e) => {
-                D(), (T.current = e);
+                j(), (Z.current = e);
             },
-            [D]
+            [j]
         ),
         U = l.useCallback((e, t, n) => {
-            if (T.current) {
+            if (Z.current) {
                 L({
                     x: 0,
                     y: 0
@@ -164,9 +164,9 @@ t.Z = l.memo(function (e) {
         }, []),
         G = l.useCallback(
             (e) => {
-                if (null != b.current) e.preventDefault(), e.stopPropagation(), null == N || N(p * A + b.current);
+                if (null != A.current) e.preventDefault(), e.stopPropagation(), null == N || N(p * b + A.current);
             },
-            [N, A]
+            [N, b]
         ),
         k = l.useMemo(
             () =>
@@ -182,35 +182,35 @@ t.Z = l.memo(function (e) {
                             x: e.clientX,
                             y: e.clientY
                         };
-                    if ((U(a, r, Math.max(t, n)), T.current)) {
-                        null != I && D();
+                    if ((U(a, r, Math.max(t, n)), Z.current)) {
+                        null != I && j();
                         return;
                     }
                     let s = (0, o.ld)(r, a, Math.max(t, n));
-                    for (let e = 0; e < Z.current[A].length; e++) {
-                        let t = Z.current[A][e];
+                    for (let e = 0; e < T.current[b].length; e++) {
+                        let t = T.current[b][e];
                         if (null == t) continue;
                         let n = t.getBoundingClientRect();
                         if ((0, o.Vr)(r, s, n)) {
-                            j(A, e);
+                            D(b, e);
                             return;
                         }
                     }
-                    D();
+                    j();
                 }, 16),
-            [I, U, D, j, A, n, t]
+            [I, U, j, D, b, n, t]
         ),
         B = l.useCallback(
             (e) => {
                 if (!S) return;
-                let t = A + (e.deltaY > 0 ? 1 : -1);
-                t >= 0 && t < y.length && (null != b.current && (y[t].length > b.current ? j(t, b.current) : D()), M(t));
+                let t = b + (e.deltaY > 0 ? 1 : -1);
+                t >= 0 && t < O.length && (null != A.current && (O[t].length > A.current ? D(t, A.current) : j()), R(t));
             },
-            [S, A, y, j, D]
+            [S, b, O, D, j]
         ),
         V = l.useMemo(
             () =>
-                y[A].map((e, l) => {
+                O[b].map((e, l) => {
                     let r = h[l];
                     if (null == r) throw Error('Too many items supplied '.concat(x.length, ' expected max of ').concat(h.length));
                     let a = f(r.x, t, m),
@@ -218,7 +218,7 @@ t.Z = l.memo(function (e) {
                     return (0, i.jsx)(
                         'div',
                         {
-                            ref: (e) => O(e, l),
+                            ref: (e) => y(e, l),
                             className: u.chatWheelItem,
                             style: {
                                 left: a,
@@ -231,7 +231,7 @@ t.Z = l.memo(function (e) {
                         l
                     );
                 }),
-            [y, A, t, m, n, g, x.length, O]
+            [O, b, t, m, n, g, x.length, y]
         );
     return (0, i.jsx)(s.Clickable, {
         className: u.chatWheelMouseInput,
@@ -305,8 +305,8 @@ t.Z = l.memo(function (e) {
                                 P &&
                                     (0, i.jsx)('circle', {
                                         className: u.chatWheelCenter,
-                                        cx: 144 + R.x,
-                                        cy: 144 + R.y,
+                                        cx: 144 + M.x,
+                                        cy: 144 + M.y,
                                         r: 28.8
                                     })
                             ]
@@ -327,7 +327,7 @@ t.Z = l.memo(function (e) {
                     className: u.innerContent,
                     children: [
                         C && (0, i.jsx)(d, { className: u.chatWheelDeadZoneIcon }),
-                        S && y.length > 1
+                        S && O.length > 1
                             ? (0, i.jsx)('div', {
                                   className: u.paginationHint,
                                   children: c.Z.Messages.CHAT_WHEEL_PAGINATION_HINT

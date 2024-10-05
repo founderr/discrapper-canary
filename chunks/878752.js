@@ -14,8 +14,8 @@ var s = n(512722),
     u = n(822183),
     d = n(641015),
     h = n(131951),
-    m = n(594174),
-    p = n(700785),
+    p = n(594174),
+    m = n(700785),
     _ = n(213652),
     f = n(320427),
     E = n(145010),
@@ -26,8 +26,8 @@ var s = n(512722),
     x = n(307410);
 function S(e) {
     let { channel: t, hasActiveStream: n, themeable: s = !1 } = e,
-        S = (0, l.e7)([m.default], () => {
-            let e = m.default.getCurrentUser();
+        S = (0, l.e7)([p.default], () => {
+            let e = p.default.getCurrentUser();
             return a()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
         v = (0, o.Z)(),
@@ -39,7 +39,7 @@ function S(e) {
         Z = (0, r.Z)(h.Z);
     if (null == t || null != v) return null;
     let M = (0, d.Z)(t),
-        b = p.BT({
+        b = m.BT({
             permission: T.Plq.ADD_REACTIONS,
             user: S,
             context: t

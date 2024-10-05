@@ -1,12 +1,12 @@
 n.d(t, {
     B0: function () {
-        return o;
+        return s;
     },
     OG: function () {
         return u;
     },
     kz: function () {
-        return s;
+        return o;
     },
     yr: function () {
         return l;
@@ -15,7 +15,7 @@ n.d(t, {
 var r = n(544891),
     i = n(570140),
     a = n(981631);
-function o(e, t, n, r) {
+function s(e, t, n, r) {
     i.Z.dispatch({
         type: 'QUEUE_INTERACTION_COMPONENT_STATE',
         messageId: e,
@@ -24,16 +24,16 @@ function o(e, t, n, r) {
         componentId: r
     });
 }
-function s(e, t) {
-    let { data: n, messageId: r, onCreate: a, onSuccess: o, onFailure: s } = t;
+function o(e, t) {
+    let { data: n, messageId: r, onCreate: a, onSuccess: s, onFailure: o } = t;
     i.Z.dispatch({
         type: 'INTERACTION_QUEUE',
         data: n,
         nonce: e,
         messageId: r,
         onCreate: a,
-        onSuccess: o,
-        onFailure: s
+        onSuccess: s,
+        onFailure: o
     });
 }
 function l(e, t, n, r) {

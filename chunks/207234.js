@@ -3,24 +3,24 @@ t.d(n, {
         return a;
     },
     a: function () {
-        return r;
+        return E;
     }
 });
 var i = t(392711),
-    o = t.n(i),
-    l = t(585483),
-    E = t(981631);
-let r = {
+    l = t.n(i),
+    o = t(585483),
+    r = t(981631);
+let E = {
         binds: ['mod+i'],
         comboKeysBindGlobal: !0,
-        action: () => (l.S.dispatch(E.CkL.TOGGLE_INBOX), !1)
+        action: () => (o.S.dispatch(r.CkL.TOGGLE_INBOX), !1)
     },
     a = {
         binds: ['mod+shift+e'],
         comboKeysBindGlobal: !0,
-        action: o().debounce(
+        action: l().debounce(
             () => {
-                if (l.S.hasSubscribers(E.CkL.MARK_TOP_INBOX_CHANNEL_READ)) return l.S.dispatch(E.CkL.MARK_TOP_INBOX_CHANNEL_READ), !1;
+                if (o.S.hasSubscribers(r.CkL.MARK_TOP_INBOX_CHANNEL_READ)) return o.S.dispatch(r.CkL.MARK_TOP_INBOX_CHANNEL_READ), !1;
             },
             100,
             { leading: !0 }

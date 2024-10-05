@@ -1,7 +1,7 @@
-var r = n(809235),
-    i = Function.prototype.call;
-e.exports = r
-    ? i.bind(i)
+var e = n(809235),
+    o = Function.prototype.call;
+t.exports = e
+    ? o.bind(o)
     : function () {
-          return i.apply(i, arguments);
+          return o.apply(o, arguments);
       };

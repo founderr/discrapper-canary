@@ -1,9 +1,9 @@
 n.d(t, {
     C: function () {
-        return r;
+        return i;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2023-05_safety_user_sentiment',
     label: 'Safety User Sentiment Feedback Eligible',

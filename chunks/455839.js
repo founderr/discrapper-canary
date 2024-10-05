@@ -29,8 +29,8 @@ function h(e) {
         }),
         g = (0, a.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]),
         T = (0, a.e7)([d.Z], () => d.Z.can(_.Plq.ADMINISTRATOR, g)),
-        { canSeeInAppReportingButtons: f } = u.N.useExperiment({ location: '0e35b9_1' }, { autoTrackExposure: !1 }),
-        S = () => {
+        { canSeeInAppReportingButtons: S } = u.N.useExperiment({ location: '0e35b9_1' }, { autoTrackExposure: !1 }),
+        f = () => {
             (0, r.Zy)(), null == m || m();
         };
     return (0, i.jsxs)(s.Menu, {
@@ -41,12 +41,12 @@ function h(e) {
         children: [
             (0, i.jsx)(s.MenuGroup, {
                 children:
-                    !T && f
+                    !T && S
                         ? (0, i.jsx)(s.MenuItem, {
                               id: 'report-guild-discovery-listing',
                               label: E.Z.Messages.REPORT_SERVER_NO_NAME,
                               action: () => {
-                                  (0, o.lt)(t), S();
+                                  (0, o.lt)(t), f();
                               },
                               icon: s.FlagIcon,
                               color: 'danger'

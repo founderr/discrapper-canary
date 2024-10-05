@@ -1,79 +1,79 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     },
     j: function () {
-        return h;
+        return f;
     }
-});
-var r = n(789020);
-var i = n(735250);
+}),
+    n(789020);
+var r = n(735250);
 n(470079);
-var a = n(913527),
-    o = n.n(a),
+var i = n(913527),
+    a = n.n(i),
     s = n(481060),
-    l = n(835473),
-    u = n(925329),
-    c = n(630388),
-    d = n(981631),
-    _ = n(689938),
-    E = n(341383);
-function f(e) {
+    o = n(835473),
+    l = n(925329),
+    u = n(630388),
+    c = n(981631),
+    d = n(689938),
+    _ = n(341383);
+function E(e) {
     let { application: t, timestamp: n } = e;
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(u.Z, {
-                size: u.Z.Sizes.LARGE,
+            (0, r.jsx)(l.Z, {
+                size: l.Z.Sizes.LARGE,
                 game: t
             }),
-            (0, i.jsxs)('div', {
-                className: E.textContainer,
+            (0, r.jsxs)('div', {
+                className: _.textContainer,
                 children: [
-                    (0, i.jsx)(s.Text, {
-                        className: E.timestamp,
+                    (0, r.jsx)(s.Text, {
+                        className: _.timestamp,
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: o()(n).format('LLLL')
+                        children: a()(n).format('LLLL')
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         color: 'interactive-active',
-                        children: _.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP_CONTENT.format({ applicationName: t.name })
+                        children: d.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP_CONTENT.format({ applicationName: t.name })
                     })
                 ]
             })
         ]
     });
 }
-function h(e) {
-    let { application: t, timestamp: n, children: r } = e;
-    return (0, i.jsx)(s.Tooltip, {
+function f(e) {
+    let { application: t, timestamp: n, children: i } = e;
+    return (0, r.jsx)(s.Tooltip, {
         hideOnClick: !0,
         position: 'top',
-        'aria-label': _.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP,
-        tooltipClassName: E.gameMessageTooltip,
-        tooltipContentClassName: E.gameMessageTooltipContent,
-        text: (0, i.jsx)(f, {
+        'aria-label': d.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP,
+        tooltipClassName: _.gameMessageTooltip,
+        tooltipContentClassName: _.gameMessageTooltipContent,
+        text: (0, r.jsx)(E, {
             application: t,
             timestamp: n
         }),
         children: (e) =>
-            (0, i.jsx)(s.Clickable, {
+            (0, r.jsx)(s.Clickable, {
                 tag: 'span',
                 ...e,
-                children: r
+                children: i
             })
     });
 }
-function p(e) {
+function h(e) {
     let { message: t } = e,
-        n = (0, l.q)(t.applicationId);
-    return null != n && (0, c.yE)(n.flags, d.udG.SOCIAL_LAYER_INTEGRATION)
-        ? (0, i.jsx)(h, {
+        n = (0, o.q)(t.applicationId);
+    return null != n && (0, u.yE)(n.flags, c.udG.SOCIAL_LAYER_INTEGRATION)
+        ? (0, r.jsx)(f, {
               application: n,
               timestamp: t.timestamp,
-              children: (0, i.jsx)(s.GameControllerIcon, {
-                  className: E.gameIcon,
+              children: (0, r.jsx)(s.GameControllerIcon, {
+                  className: _.gameIcon,
                   size: 'custom',
                   width: 14,
                   height: 14

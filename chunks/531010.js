@@ -1,14 +1,14 @@
 n.d(t, {
     e: function () {
-        return r;
+        return i;
     }
 });
 var r,
-    i = n(818083);
-!(function (e) {
-    (e.ALLOWED = 'allowed'), (e.DEFAULT = 'default');
-})(r || (r = {})),
-    (t.Z = (0, i.B)({
+    i,
+    a = n(818083);
+((r = i || (i = {})).ALLOWED = 'allowed'),
+    (r.DEFAULT = 'default'),
+    (t.Z = (0, a.B)({
         kind: 'guild',
         id: '2023-09_user_apps_guild',
         label: 'Allow user app commands',

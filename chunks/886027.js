@@ -1,22 +1,22 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return l;
     }
-});
-var r = n(47120);
-var i = n(53529),
-    a = n(436660),
-    o = n(887490),
+}),
+    n(47120);
+var r = n(53529),
+    i = n(436660),
+    a = n(887490),
     s = n(515270);
-let l = new Set(['line', 'blockQuote']);
-function u(e) {
-    let { deleteBackward: t, deleteFragment: n, insertBreak: r, onChange: s } = e;
+let o = new Set(['line', 'blockQuote']);
+function l(e) {
+    let { deleteBackward: t, deleteFragment: n, insertBreak: l, onChange: u } = e;
     (e.deleteBackward = (n) => {
-        let r = o.bN.getCurrentBlock(e);
+        let r = a.bN.getCurrentBlock(e);
         if ((null == r ? void 0 : r[0].type) === 'blockQuote') {
-            let t = o.M8.toPoint(e.selection);
-            if (null != t && o.C0.isFirstChild(r[1], t.path) && 0 === t.offset) {
-                a.Q.setNodes(e, { type: 'line' }, { at: r[1] });
+            let t = a.M8.toPoint(e.selection);
+            if (null != t && a.C0.isFirstChild(r[1], t.path) && 0 === t.offset) {
+                i.Q.setNodes(e, { type: 'line' }, { at: r[1] });
                 return;
             }
         }
@@ -24,88 +24,88 @@ function u(e) {
     }),
         (e.deleteFragment = (t) => {
             if (null != e.selection) {
-                let [r, s] = o.M8.edges(e.selection),
-                    l = [r.path[0]],
-                    u = o.bN.node(e, l),
-                    c = [s.path[0]],
-                    d = o.C0.equals(l, c) ? null : o.bN.node(e, c);
-                i.T.withSingleEntry(e, () => {
-                    (null == u ? void 0 : u[0].type) === 'blockQuote' && o.Jz.isAtStart(r, u) && a.Q.setNodes(e, { type: 'line' }, { at: l }), (null == d ? void 0 : d[0].type) === 'blockQuote' && o.Jz.isAtEnd(s, d) && a.Q.setNodes(e, { type: 'line' }, { at: c }), n(t);
+                let [s, o] = a.M8.edges(e.selection),
+                    l = [s.path[0]],
+                    u = a.bN.node(e, l),
+                    c = [o.path[0]],
+                    d = a.C0.equals(l, c) ? null : a.bN.node(e, c);
+                r.T.withSingleEntry(e, () => {
+                    (null == u ? void 0 : u[0].type) === 'blockQuote' && a.Jz.isAtStart(s, u) && i.Q.setNodes(e, { type: 'line' }, { at: l }), (null == d ? void 0 : d[0].type) === 'blockQuote' && a.Jz.isAtEnd(o, d) && i.Q.setNodes(e, { type: 'line' }, { at: c }), n(t);
                 });
                 return;
             }
             n(t);
         }),
         (e.insertBreak = () => {
-            let t = o.bN.getCurrentBlock(e);
+            let t = a.bN.getCurrentBlock(e);
             if ((null == t ? void 0 : t[0].type) === 'blockQuote') {
-                let n = o.M8.toPoint(e.selection);
+                let n = a.M8.toPoint(e.selection);
                 if (null == n) return;
-                !d(e, t, n) &&
-                    a.Q.splitNodes(e, {
+                !(function (e, t, n) {
+                    if (!a.bN.isEmpty(e, t[0])) return !1;
+                    let r = a.bN.previous(e, { at: t[1] });
+                    return !!(null != r && a.aj.isType(r[0], 'blockQuote') && a.bN.isEmpty(e, r[0]) && a.Jz.isAtStart(n, t)) && (i.Q.setNodes(e, { type: 'line' }, { at: t[1] }), i.Q.removeNodes(e, { at: r[1] }), !0);
+                })(e, t, n) &&
+                    i.Q.splitNodes(e, {
                         at: n,
                         always: !0
                     });
                 return;
             }
-            r();
+            l();
         });
-    let l = null,
-        u = !0;
+    let c = null,
+        d = !0;
     return (
         (e.onChange = () => {
-            let t = o.bN.richValue(e);
-            (t !== l || e.previewMarkdown !== u) &&
-                (i.T.withMergedEntry(e, () => {
-                    o.bN.withoutNormalizing(e, () => c(e));
+            let t = a.bN.richValue(e);
+            (t !== c || e.previewMarkdown !== d) &&
+                (r.T.withMergedEntry(e, () => {
+                    a.bN.withoutNormalizing(e, () =>
+                        (function (e) {
+                            let t = !1;
+                            for (let l of a.bN.blocks(e)) {
+                                let [u, c] = l;
+                                if (!o.has(u.type)) continue;
+                                let d = {
+                                    path: a.C0.child(c, 0),
+                                    offset: 0
+                                };
+                                if ((0, s.iF)(e, d)) {
+                                    'blockQuote' === u.type && (i.Q.setNodes(e, { type: 'line' }, { at: c }), i.Q.insertText(e, '> ', { at: d }));
+                                    continue;
+                                }
+                                if ('blockQuote' === u.type || a.bN.areStylesDisabled(e)) continue;
+                                let _ = u.children[0];
+                                if (!a.LC.isText(_)) continue;
+                                let E = _.text.match(/^\s*>>> /),
+                                    f = _.text.match(/^\s*> /);
+                                if ((null != f || null != E || t) && (i.Q.setNodes(e, { type: 'blockQuote' }, { at: c }), !t)) {
+                                    var n, r;
+                                    let s = null !== (r = null !== (n = null == f ? void 0 : f[0].length) && void 0 !== n ? n : null == E ? void 0 : E[0].length) && void 0 !== r ? r : 0,
+                                        o = a.C0.child(c, 0);
+                                    i.Q.delete(e, {
+                                        at: {
+                                            anchor: {
+                                                path: o,
+                                                offset: 0
+                                            },
+                                            focus: {
+                                                path: o,
+                                                offset: s
+                                            }
+                                        }
+                                    }),
+                                        (t = null != E);
+                                }
+                            }
+                        })(e)
+                    );
                 }),
-                (l = t),
-                (u = e.previewMarkdown)),
-                s();
+                (c = t),
+                (d = e.previewMarkdown)),
+                u();
         }),
         e
     );
-}
-function c(e) {
-    let t = !1;
-    for (let i of o.bN.blocks(e)) {
-        let [u, c] = i;
-        if (!l.has(u.type)) continue;
-        let d = {
-            path: o.C0.child(c, 0),
-            offset: 0
-        };
-        if ((0, s.iF)(e, d)) {
-            'blockQuote' === u.type && (a.Q.setNodes(e, { type: 'line' }, { at: c }), a.Q.insertText(e, '> ', { at: d }));
-            continue;
-        }
-        if ('blockQuote' === u.type || o.bN.areStylesDisabled(e)) continue;
-        let _ = u.children[0];
-        if (!o.LC.isText(_)) continue;
-        let E = _.text.match(/^\s*>>> /),
-            f = _.text.match(/^\s*> /);
-        if ((null != f || null != E || t) && (a.Q.setNodes(e, { type: 'blockQuote' }, { at: c }), !t)) {
-            var n, r;
-            let i = null !== (r = null !== (n = null == f ? void 0 : f[0].length) && void 0 !== n ? n : null == E ? void 0 : E[0].length) && void 0 !== r ? r : 0,
-                s = o.C0.child(c, 0);
-            a.Q.delete(e, {
-                at: {
-                    anchor: {
-                        path: s,
-                        offset: 0
-                    },
-                    focus: {
-                        path: s,
-                        offset: i
-                    }
-                }
-            }),
-                (t = null != E);
-        }
-    }
-}
-function d(e, t, n) {
-    if (!o.bN.isEmpty(e, t[0])) return !1;
-    let r = o.bN.previous(e, { at: t[1] });
-    return !!(null != r && o.aj.isType(r[0], 'blockQuote') && o.bN.isEmpty(e, r[0]) && o.Jz.isAtStart(n, t)) && (a.Q.setNodes(e, { type: 'line' }, { at: t[1] }), a.Q.removeNodes(e, { at: r[1] }), !0);
 }

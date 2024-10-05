@@ -1,11 +1,5 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
-var r = n(789020);
-function i(e) {
-    let { id: t, username: n, discriminator: r, globalName: i, avatar: a, avatarDecoration: o, bot: s, flags: l, premiumType: u } = e;
+function r(e) {
+    let { id: t, username: n, discriminator: r, globalName: i, avatar: a, avatarDecoration: s, bot: o, flags: l, premiumType: u } = e;
     return {
         id: t,
         username: n,
@@ -13,14 +7,20 @@ function i(e) {
         global_name: i,
         avatar: a,
         avatar_decoration_data:
-            null != o
+            null != s
                 ? {
-                      asset: o.asset,
-                      sku_id: o.skuId
+                      asset: s.asset,
+                      sku_id: s.skuId
                   }
                 : null,
-        bot: s,
+        bot: o,
         flags: l,
         premium_type: null != u ? u : 0
     };
 }
+n.d(t, {
+    Z: function () {
+        return r;
+    }
+}),
+    n(789020);

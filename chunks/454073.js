@@ -1,5 +1,5 @@
 var r = n(67867),
-    i = n(804104).filter;
+    o = n(804104).filter;
 r(
     {
         target: 'Array',
@@ -8,7 +8,7 @@ r(
     },
     {
         filter: function (e) {
-            return i(this, e, arguments.length > 1 ? arguments[1] : void 0);
+            return o(this, e, arguments.length > 1 ? arguments[1] : void 0);
         }
     }
 );

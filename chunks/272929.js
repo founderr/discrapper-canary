@@ -31,7 +31,7 @@ let c = (0, s.animated)((e) => {
     });
 });
 function u(e) {
-    let { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: u, onKeyDown: d, onMouseEnter: h, onMouseLeave: m, isActive: p = !1, isCenterButton: _ = !1, ...f } = e,
+    let { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: u, onKeyDown: d, onMouseEnter: h, onMouseLeave: p, isActive: m = !1, isCenterButton: _ = !1, ...f } = e,
         E = n > 0,
         g = (0, a.useSpring)(
             {
@@ -57,8 +57,8 @@ function u(e) {
                 onClick: u,
                 onKeyDown: d,
                 onMouseEnter: h,
-                onMouseLeave: m,
-                isActive: p,
+                onMouseLeave: p,
+                isActive: m,
                 grow: !1
             })
         ]

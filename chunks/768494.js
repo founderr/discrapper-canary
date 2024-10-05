@@ -3,23 +3,20 @@ n.d(t, {
         return r;
     },
     VY: function () {
-        return u;
+        return l;
     },
     ym: function () {
-        return l;
+        return o;
     }
-});
+}),
+    n(789020);
 var r,
-    i = n(789020);
-var a = n(630388),
-    o = n(981631);
-function s(e) {
-    return {
-        version: e.version,
-        contentScanFlags: e.content_scan_flags
-    };
-}
-function l(e) {
+    i,
+    a = n(630388),
+    s = n(981631);
+(i = r || (r = {}))[(i.EXPLICIT = 1)] = 'EXPLICIT';
+function o(e) {
+    var t;
     return {
         url: e.url,
         proxyUrl: e.proxy_url,
@@ -28,15 +25,21 @@ function l(e) {
         placeholder: e.placeholder,
         placeholderVersion: e.placeholder_version,
         contentType: e.content_type,
-        contentScanMetadata: null != e.content_scan_metadata ? s(e.content_scan_metadata) : void 0,
+        contentScanMetadata:
+            null != e.content_scan_metadata
+                ? {
+                      version: (t = e.content_scan_metadata).version,
+                      contentScanFlags: t.content_scan_flags
+                  }
+                : void 0,
         srcIsAnimated: !1
     };
 }
-function u(e) {
-    var t, n, r, i, s;
+function l(e) {
+    var t, n, r, i, o;
     let l = 0;
     return (
-        (0, a.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, o.J0y.CONTAINS_EXPLICIT_MEDIA) && (l += 1),
+        (0, a.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, s.J0y.CONTAINS_EXPLICIT_MEDIA) && (l += 1),
         {
             url: e.url,
             proxyUrl: e.proxy_url,
@@ -52,10 +55,7 @@ function u(e) {
                           version: e.content_scan_version,
                           contentScanFlags: l
                       },
-            srcIsAnimated: (0, a.yE)(null !== (s = e.flags) && void 0 !== s ? s : 0, o.J0y.IS_ANIMATED)
+            srcIsAnimated: (0, a.yE)(null !== (o = e.flags) && void 0 !== o ? o : 0, s.J0y.IS_ANIMATED)
         }
     );
 }
-!(function (e) {
-    e[(e.EXPLICIT = 1)] = 'EXPLICIT';
-})(r || (r = {}));

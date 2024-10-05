@@ -1,6 +1,6 @@
 n.d(t, {
     W: function () {
-        return o;
+        return s;
     },
     l: function () {
         return a;
@@ -22,7 +22,7 @@ let a = (e) => {
         }
         return null;
     },
-    o = (e, t, n) => {
+    s = (e, t, n) => {
         switch (e) {
             case 'linked-roles':
                 var i;

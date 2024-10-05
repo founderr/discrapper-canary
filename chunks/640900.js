@@ -9,37 +9,37 @@ n.d(t, {
 var r = n(470079),
     i = n(182823),
     a = n(882932),
-    o = n(251433),
-    s = n(706682),
+    s = n(251433),
+    o = n(706682),
     l = n(705782),
     u = n(201284);
 function c(e, t) {
     let { inputElementType: n = 'input', isDisabled: c = !1, isRequired: d = !1, isReadOnly: _ = !1, type: E = 'text', validationBehavior: f = 'aria' } = e,
         [h, p] = (0, a.zk)(e.value, e.defaultValue || '', e.onChange),
-        { focusableProps: m } = (0, s.kc)(e, t),
-        I = (0, u.Q3)({
+        { focusableProps: I } = (0, o.kc)(e, t),
+        m = (0, u.Q3)({
             ...e,
             value: h
         }),
-        { isInvalid: T, validationErrors: g, validationDetails: S } = I.displayValidation,
+        { isInvalid: T, validationErrors: S, validationDetails: g } = m.displayValidation,
         {
             labelProps: A,
-            fieldProps: v,
-            descriptionProps: N,
-            errorMessageProps: O
-        } = (0, o.U)({
+            fieldProps: N,
+            descriptionProps: O,
+            errorMessageProps: R
+        } = (0, s.U)({
             ...e,
             isInvalid: T,
-            errorMessage: e.errorMessage || g
+            errorMessage: e.errorMessage || S
         }),
-        R = (0, i.zL)(e, { labelable: !0 }),
+        v = (0, i.zL)(e, { labelable: !0 }),
         C = {
             type: E,
             pattern: e.pattern
         };
     return (
         (0, i.y$)(t, h, p),
-        (0, l.Q)(e, I, t),
+        (0, l.Q)(e, m, t),
         (0, r.useEffect)(() => {
             if (t.current instanceof (0, i.kR)(t.current).HTMLTextAreaElement) {
                 let e = t.current;
@@ -52,7 +52,7 @@ function c(e, t) {
         }, [t]),
         {
             labelProps: A,
-            inputProps: (0, i.dG)(R, 'input' === n && C, {
+            inputProps: (0, i.dG)(v, 'input' === n && C, {
                 disabled: c,
                 readOnly: _,
                 required: d && 'native' === f,
@@ -80,14 +80,14 @@ function c(e, t) {
                 onSelect: e.onSelect,
                 onBeforeInput: e.onBeforeInput,
                 onInput: e.onInput,
-                ...m,
-                ...v
+                ...I,
+                ...N
             }),
-            descriptionProps: N,
-            errorMessageProps: O,
+            descriptionProps: O,
+            errorMessageProps: R,
             isInvalid: T,
-            validationErrors: g,
-            validationDetails: S
+            validationErrors: S,
+            validationDetails: g
         }
     );
 }
@@ -132,17 +132,17 @@ function _(e, t, n) {
             }
         );
     }, [n, a]);
-    let o = d()
+    let s = d()
             ? null
             : (e) => {
                   let n = e.target.value.slice(0, e.target.selectionStart) + e.data + e.target.value.slice(e.target.selectionEnd);
                   !t.validate(n) && e.preventDefault();
               },
-        { labelProps: s, inputProps: l, descriptionProps: u, errorMessageProps: _, ...E } = c(e, n),
+        { labelProps: o, inputProps: l, descriptionProps: u, errorMessageProps: _, ...E } = c(e, n),
         f = (0, r.useRef)(null);
     return {
         inputProps: (0, i.dG)(l, {
-            onBeforeInput: o,
+            onBeforeInput: s,
             onCompositionStart() {
                 let { value: e, selectionStart: t, selectionEnd: r } = n.current;
                 f.current = {
@@ -158,7 +158,7 @@ function _(e, t, n) {
                 }
             }
         }),
-        labelProps: s,
+        labelProps: o,
         descriptionProps: u,
         errorMessageProps: _,
         ...E

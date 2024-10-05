@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return p;
+            return m;
         },
         openEffectsUpsellModal: function () {
             return _;
@@ -18,10 +18,10 @@ var s = n(481060),
     u = n(981631),
     d = n(689938),
     h = n(517301),
-    m = n(626065);
-function p(e) {
+    p = n(626065);
+function m(e) {
     let { onClose: t, analytics: n, ...s } = e,
-        p = d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
+        m = d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
             onPressMore: function () {
                 (0, l.Z)(),
                     t(),
@@ -34,8 +34,8 @@ function p(e) {
         });
     return (0, i.jsx)(o.Z, {
         title: d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_HEADER_2,
-        glowUp: p,
-        body: p,
+        glowUp: m,
+        body: m,
         artContainerClassName: h.artContainer,
         enableArtBoxShadow: !1,
         type: n.type,
@@ -51,7 +51,7 @@ function p(e) {
         onSubscribeClick: l.Z,
         artElement: (0, i.jsx)(a.Z, {
             className: h.video,
-            src: m,
+            src: p,
             loop: !0,
             autoPlay: !0
         }),

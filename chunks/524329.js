@@ -1,15 +1,15 @@
 E.d(_, {
     Es: function () {
-        return A;
+        return o;
     },
     RM: function () {
-        return T;
+        return a;
     },
     VP: function () {
         return l;
     },
     Xb: function () {
-        return a;
+        return T;
     },
     sm: function () {
         return I;
@@ -29,7 +29,7 @@ let r = function (e) {
             isLurking: _
         });
     },
-    T = async (e) => {
+    a = async (e) => {
         n.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_START' });
         try {
             let _ = await s.tn.get({
@@ -48,7 +48,7 @@ let r = function (e) {
             n.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_FAIL' });
         }
     },
-    a = () => {
+    T = () => {
         n.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_RESET' });
     },
     I = () => {
@@ -60,7 +60,7 @@ let r = function (e) {
             settings: e
         });
     },
-    A = async (e, _) => {
+    o = async (e, _) => {
         n.Z.dispatch({ type: 'WELCOME_SCREEN_SUBMIT' });
         try {
             let E = await s.tn.patch({

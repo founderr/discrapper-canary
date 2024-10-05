@@ -1,9 +1,9 @@
-var r;
+var i, a;
 n.d(t, {
     $: function () {
-        return r;
+        return i;
     }
 }),
-    !(function (e) {
-        (e.JOIN_RAID = 'JOIN_RAID'), (e.DM_RAID = 'DM_RAID'), (e.MENTION_RAID = 'MENTION_RAID');
-    })(r || (r = {}));
+    ((a = i || (i = {})).JOIN_RAID = 'JOIN_RAID'),
+    (a.DM_RAID = 'DM_RAID'),
+    (a.MENTION_RAID = 'MENTION_RAID');

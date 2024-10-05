@@ -17,8 +17,8 @@ var i = n(735250),
     u = n(481060),
     d = n(570140),
     h = n(475179),
-    m = n(904245),
-    p = n(372900),
+    p = n(904245),
+    m = n(372900),
     _ = n(905405),
     f = n(937889),
     E = n(739566),
@@ -39,14 +39,14 @@ function R(e) {
     let { message: n } = e,
         a = (0, c.e7)([x.Z], () => x.Z.isBlockedForMessage(n)),
         r = (0, E.Uj)(n),
-        o = s.useContext(p.Z),
+        o = s.useContext(m.Z),
         [d, T] = s.useState(!1),
         v = (0, _.p)(),
         N = s.useCallback(
             (e) => {
                 if ('A' !== e.target.nodeName)
                     h.Z.updateChatOpen(n.channel_id, !0),
-                        m.Z.jumpToMessage({
+                        p.Z.jumpToMessage({
                             channelId: n.channel_id,
                             messageId: n.id,
                             flash: !0
@@ -119,20 +119,20 @@ function R(e) {
 function L(e) {
     let { channelId: t, className: n } = e,
         [a, h] = s.useState(!1),
-        { toastsHidden: m, toastMessages: p } = (function (e) {
+        { toastsHidden: p, toastMessages: m } = (function (e) {
             var t;
             let { channelId: n, isFrozen: i, count: a, lingerMs: l } = e,
                 [r, o] = s.useState([]),
                 [u, h] = s.useState(!1),
-                m = s.useRef(null),
-                p = s.useRef(),
+                p = s.useRef(null),
+                m = s.useRef(),
                 _ = s.useCallback(() => {
                     o([]), h(!0);
                 }, []);
             s.useEffect(() => {
                 function e(e) {
                     let { channelId: t, message: i } = e;
-                    if (t === n && i.type !== A.uaV.STAGE_START && i.type !== A.uaV.STAGE_END && i.type !== A.uaV.STAGE_TOPIC && i.type !== A.uaV.STAGE_SPEAKER && i.type !== A.uaV.STAGE_RAISE_HAND) clearTimeout(p.current), (p.current = setTimeout(_, l)), o((e) => [...e, i.id]);
+                    if (t === n && i.type !== A.uaV.STAGE_START && i.type !== A.uaV.STAGE_END && i.type !== A.uaV.STAGE_TOPIC && i.type !== A.uaV.STAGE_SPEAKER && i.type !== A.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(_, l)), o((e) => [...e, i.id]);
                 }
                 return (
                     d.Z.subscribe('MESSAGE_CREATE', e),
@@ -143,7 +143,7 @@ function L(e) {
             }, [n, _, a, l]),
                 s.useEffect(
                     () => () => {
-                        clearTimeout(p.current);
+                        clearTimeout(m.current);
                     },
                     []
                 ),
@@ -154,8 +154,8 @@ function L(e) {
                             return [...e.slice(t)];
                         });
                 }, [r]),
-                i && null == m.current ? (m.current = r) : !i && null != m.current && (m.current = null);
-            let f = null !== (t = m.current) && void 0 !== t ? t : r;
+                i && null == p.current ? (p.current = r) : !i && null != p.current && (p.current = null);
+            let f = null !== (t = p.current) && void 0 !== t ? t : r;
             return {
                 toastsHidden: u,
                 toastMessages: (0, c.Wu)([T.Z], () => f.map((e) => T.Z.getMessage(n, e)), [n, f]).filter(N.lm)
@@ -174,14 +174,14 @@ function L(e) {
     s.useLayoutEffect(() => {
         let e = {},
             t = 0;
-        for (let i of p) {
+        for (let i of m) {
             var n;
             let s = null !== (n = _.current[i.id]) && void 0 !== n ? n : 0;
             (e[i.id] = t), (t += s + 8);
         }
         !(0, r.isEqual)(e, f) && E(e);
-    }, [p]);
-    let C = p.map((e) => ({
+    }, [m]);
+    let C = m.map((e) => ({
             message: e,
             height: _.current[e.id],
             y: f[e.id]
@@ -204,7 +204,7 @@ function L(e) {
                 let { height: t, y: n } = e;
                 return {
                     opacity: 0,
-                    translateY: m ? n : -(null != t ? t : 0) - 8,
+                    translateY: p ? n : -(null != t ? t : 0) - 8,
                     pointerEvents: 'none'
                 };
             }

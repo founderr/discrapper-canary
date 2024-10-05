@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return o;
     }
 });
 var r = n(764303);
-function i(e) {
+function o(e) {
     var t;
     return -1 !== r((t = Function.toString.call(e))).call(t, '[native code]');
 }

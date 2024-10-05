@@ -1,16 +1,16 @@
 n.d(t, {
     v: function () {
-        return l;
+        return o;
     }
-});
-var r = n(47120);
-var i = n(887003),
-    a = n(497505);
-function o(e) {
+}),
+    n(47120);
+var r = n(887003),
+    i = n(497505);
+function a(e) {
     let t = {};
     for (let n of Object.keys(e)) {
         let r = parseInt(n);
-        a.xw.has(r) && (t[r] = e[n]);
+        i.xw.has(r) && (t[r] = e[n]);
     }
     return t;
 }
@@ -21,33 +21,33 @@ let s = (e) => {
             assetVideo: e.asset_video
         };
         switch (e.type) {
-            case i.w.REWARD_CODE:
+            case r.w.REWARD_CODE:
                 return {
-                    type: i.w.REWARD_CODE,
+                    type: r.w.REWARD_CODE,
                     messages: {
-                        redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
                     approximateCount: e.approximate_count,
                     ...t
                 };
-            case i.w.COLLECTIBLE:
+            case r.w.COLLECTIBLE:
                 return {
-                    type: i.w.COLLECTIBLE,
+                    type: r.w.COLLECTIBLE,
                     messages: {
-                        redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
                     expiresAt: e.expires_at,
                     ...t
                 };
-            case i.w.IN_GAME:
+            case r.w.IN_GAME:
                 return {
-                    type: i.w.IN_GAME,
+                    type: r.w.IN_GAME,
                     messages: {
-                        redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
@@ -55,7 +55,7 @@ let s = (e) => {
                 };
         }
     },
-    l = (e) => ({
+    o = (e) => ({
         assignmentMethod: e.assignment_method,
         rewards: e.rewards.map(s),
         rewardsExpireAt: e.rewards_expire_at,

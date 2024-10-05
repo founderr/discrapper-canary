@@ -7,19 +7,19 @@ t.d(A, {
     }
 }),
     t(411104);
-var n = t(735250),
-    a = t(470079),
-    s = t(828762);
-let r = a.createContext(void 0);
+var a = t(735250),
+    n = t(470079),
+    r = t(828762);
+let s = n.createContext(void 0);
 function o() {
-    let e = a.useContext(r);
+    let e = n.useContext(s);
     if (null == e) throw Error('No GuildProductAttachmentManagerContextProvider found');
     return e;
 }
 function l(e) {
-    let { children: A, guildId: t, ...a } = e,
-        o = (0, s.Z)(t, a);
-    return (0, n.jsx)(r.Provider, {
+    let { children: A, guildId: t, ...n } = e,
+        o = (0, r.Z)(t, n);
+    return (0, a.jsx)(s.Provider, {
         value: o,
         children: A
     });

@@ -1,5 +1,5 @@
 var r = n(67867),
-    i = n(181301).entries;
+    o = n(181301).entries;
 r(
     {
         target: 'Object',
@@ -7,7 +7,7 @@ r(
     },
     {
         entries: function (e) {
-            return i(e);
+            return o(e);
         }
     }
 );

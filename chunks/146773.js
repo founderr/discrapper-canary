@@ -1,6 +1,6 @@
 n.d(t, {
     B: function () {
-        return Z;
+        return T;
     }
 });
 var i = n(735250);
@@ -33,7 +33,7 @@ function v(e, t) {
         r = null !== (i = null !== (n = l[m.sH].find((e) => e.channel.id === t)) && void 0 !== n ? n : l[m.Zb].find((e) => e.channel.id === t)) && void 0 !== i ? i : l[S.d4z.GUILD_CATEGORY].find((e) => e.channel.id === t);
     return null == r ? void 0 : r.channel;
 }
-function Z(e) {
+function T(e) {
     return (0, l.G)(
         x,
         {

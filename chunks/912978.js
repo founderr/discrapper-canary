@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return l;
     }
-});
-var r = n(653041);
-var i = n(411104);
-var a = n(47120);
-var o = n(836560);
-var s = n(264344),
-    l = n.n(s),
-    u = n(649318);
-function c(e, t, n) {
+}),
+    n(653041),
+    n(411104),
+    n(47120);
+var r = n(836560),
+    i = n(264344),
+    a = n.n(i),
+    s = n(649318);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function c(e, t, n) {
         e
     );
 }
-class d extends o.EventEmitter {
+class l extends r.EventEmitter {
     addStream(e, t, n) {
         let r = !1;
         !this.streams.some((e) => e.ssrc === t) &&
@@ -64,7 +64,7 @@ class d extends o.EventEmitter {
         return this._sdp;
     }
     set sdp(e) {
-        if (!(0, u.$6)(e)) throw Error('Incorrect SDP received from rtc-worker: '.concat(e));
+        if (!(0, s.$6)(e)) throw Error('Incorrect SDP received from rtc-worker: '.concat(e));
         (this._sdp = e), this.createAnswer(), (this.connected = !0), this._negotiationNeeded && this.negotiationNeeded();
     }
     negotiationNeeded() {
@@ -85,11 +85,11 @@ class d extends o.EventEmitter {
             let { cname: n, ssrc: r, type: i } = e,
                 a = this.activeAudioSSRCs[n],
                 o = this.activeVideoSSRCs[n],
-                s = ''.concat(i, '_inbound_').concat(t);
-            return [r, n, i, a === r || o === r ? this.direction : u.Ns.INACTIVE, s];
+                l = ''.concat(i, '_inbound_').concat(t);
+            return [r, n, i, a === r || o === r ? this.direction : s.Ns.INACTIVE, l];
         });
-        if ('Firefox' !== l().name) return this.connected ? t : [];
-        let n = this.outboundStreams.map((e, t) => [0, 'outbound', e.type, (0, u.Mg)(e.direction), ''.concat(e.type, '_outbound_').concat(t)]);
+        if ('Firefox' !== a().name) return this.connected ? t : [];
+        let n = this.outboundStreams.map((e, t) => [0, 'outbound', e.type, (0, s.Mg)(e.direction), ''.concat(e.type, '_outbound_').concat(t)]);
         if ('answer' !== e) return n.concat(t);
         {
             let e = n.length - t.length;
@@ -99,7 +99,7 @@ class d extends o.EventEmitter {
                 .slice(0, n.length)
                 .map((e, t) => {
                     let [n, r, i, a, o] = e;
-                    return [n, r, i, (0, u.Mg)(this.outboundStreams[t].direction), this.outboundStreams[t].mid];
+                    return [n, r, i, (0, s.Mg)(this.outboundStreams[t].direction), this.outboundStreams[t].mid];
                 });
         }
     }
@@ -120,7 +120,7 @@ class d extends o.EventEmitter {
                     .concat(null == a ? 'null' : a, ', sdp: ')
                     .concat(o)
             );
-        let s = (0, u.MP)({
+        let l = (0, s.MP)({
             type: e,
             baseSDP: o,
             direction: this.direction,
@@ -134,9 +134,9 @@ class d extends o.EventEmitter {
             ssrcs: this.getSSRCs(e),
             extensions: this.extensions
         });
-        return this.emit(e, s), Promise.resolve(s);
+        return this.emit(e, l), Promise.resolve(l);
     }
     constructor(...e) {
-        super(...e), c(this, 'audioCodec', null), c(this, 'audioPayloadType', null), c(this, 'videoCodec', null), c(this, 'videoPayloadType', null), c(this, 'rtxPayloadType', null), c(this, 'direction', null), c(this, 'outboundStreams', []), c(this, 'extensions', []), c(this, 'streams', []), c(this, 'activeAudioSSRCs', {}), c(this, 'activeVideoSSRCs', {}), c(this, '_sdp', null), c(this, 'connected', !1), c(this, 'negotiating', !1), c(this, '_negotiationNeeded', !1);
+        super(...e), o(this, 'audioCodec', null), o(this, 'audioPayloadType', null), o(this, 'videoCodec', null), o(this, 'videoPayloadType', null), o(this, 'rtxPayloadType', null), o(this, 'direction', null), o(this, 'outboundStreams', []), o(this, 'extensions', []), o(this, 'streams', []), o(this, 'activeAudioSSRCs', {}), o(this, 'activeVideoSSRCs', {}), o(this, '_sdp', null), o(this, 'connected', !1), o(this, 'negotiating', !1), o(this, '_negotiationNeeded', !1);
     }
 }

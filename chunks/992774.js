@@ -1,37 +1,37 @@
 let r, i;
-n.d(t, {
-    Zh: function () {
-        return l;
-    },
-    eJ: function () {
-        return u;
-    },
-    f3: function () {
-        return s;
-    },
-    p8: function () {
-        return c;
-    },
-    zS: function () {
-        return d;
-    }
-});
-var a = n(411104);
-function o() {
+function a() {
     if (null == r) throw Error('Native dependencies have not been injected.');
 }
 function s(e) {
     r = e;
 }
-function l() {
-    return o(), r.supported();
+function o() {
+    return a(), r.supported();
+}
+function l(e) {
+    return a(), r.supportsFeature(e);
 }
 function u(e) {
-    return o(), r.supportsFeature(e);
+    a(), r.setProcessPriority(e);
 }
-function c(e) {
-    o(), r.setProcessPriority(e);
+function c() {
+    return a(), null != i ? i : (i = r.getVoiceEngine());
 }
-function d() {
-    return o(), null != i ? i : (i = r.getVoiceEngine());
-}
+n.d(t, {
+    Zh: function () {
+        return o;
+    },
+    eJ: function () {
+        return l;
+    },
+    f3: function () {
+        return s;
+    },
+    p8: function () {
+        return u;
+    },
+    zS: function () {
+        return c;
+    }
+}),
+    n(411104);

@@ -16,8 +16,8 @@ var i = n(735250),
     u = n(680287),
     d = n(470623),
     h = n(957730),
-    m = n(48854),
-    p = n(703558),
+    p = n(48854),
+    m = n(703558),
     _ = n(403182),
     f = n(928477),
     E = n(981631),
@@ -28,7 +28,7 @@ function C(e) {
             c.Z.uploadFiles({
                 channelId: e.id,
                 uploads: t,
-                draftType: p.d.FirstThreadMessage,
+                draftType: m.d.FirstThreadMessage,
                 options: { stickerIds: i },
                 parsedMessage: h.ZP.parse(e, n)
             });
@@ -62,7 +62,7 @@ function I(e) {
                 let h = new u.Z(e);
                 h.on('error', (e, s, a) => {
                     if (s === E.evJ.EXPLICIT_CONTENT) {
-                        let e = (0, m.r)();
+                        let e = (0, p.r)();
                         null != a &&
                             null != a.attachments &&
                             a.attachments.length > 0 &&

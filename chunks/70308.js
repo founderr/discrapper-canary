@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(212433),
-    o = n(481060),
-    s = n(345332),
+    s = n(481060),
+    o = n(345332),
     l = n(417153),
     u = n(561466),
     c = n(140234);
@@ -83,7 +83,7 @@ function E() {
             var e, t;
             return _[null !== (t = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : E.current];
         }, [d]),
-        p = (0, o.useTransition)(d, {
+        p = (0, s.useTransition)(d, {
             keys: (e) => {
                 var t;
                 return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : '';
@@ -106,7 +106,7 @@ function E() {
                           a.animated.div,
                           {
                               style: e,
-                              children: (0, r.jsx)(s.F, { ...t })
+                              children: (0, r.jsx)(o.F, { ...t })
                           },
                           t.id
                       )

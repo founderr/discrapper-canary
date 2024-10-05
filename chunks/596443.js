@@ -15,8 +15,8 @@ var i = n(735250),
     u = n(481060),
     d = n(605436),
     h = n(79712),
-    m = n(285173),
-    p = n(434404),
+    p = n(285173),
+    m = n(434404),
     _ = n(422559),
     f = n(271383),
     E = n(430824),
@@ -42,7 +42,7 @@ function Z(e) {
         O = (0, c.e7)([g.Z], () => g.Z.can(S.Plq.MANAGE_ROLES, C), [C]),
         y = s.useCallback(
             async (e) => {
-                if (!!O) await p.Z.open(C.id, S.pNK.ROLES), await p.Z.selectRole(e);
+                if (!!O) await m.Z.open(C.id, S.pNK.ROLES), await m.Z.selectRole(e);
             },
             [O, C.id]
         );
@@ -165,7 +165,7 @@ function Z(e) {
                               {
                                   className: l()(A.roleTooltipItem, { [A.editable]: O && !(0, d.pM)(C.id, e) }),
                                   onClick: () => y(e),
-                                  children: (0, i.jsx)(m.Z, {
+                                  children: (0, i.jsx)(p.Z, {
                                       role: Z[e],
                                       guildId: C.id,
                                       className: A.roleChiplet
@@ -184,12 +184,12 @@ function M(e, t) {
 function b(e) {
     let { userId: t, guildId: n, location: a, className: r, onNavigate: d } = e,
         h = (0, c.e7)([C.default], () => C.default.getUser(t), [t]),
-        m = (0, c.e7)([E.Z], () => E.Z.getGuild(n), [n]),
-        p = (0, c.e7)([f.ZP], () => f.ZP.getMember(n, t), [n, t]),
+        p = (0, c.e7)([E.Z], () => E.Z.getGuild(n), [n]),
+        m = (0, c.e7)([f.ZP], () => f.ZP.getMember(n, t), [n, t]),
         g = (0, x.B2)(t, n, x.pd),
         b = Object.keys(g).length,
-        R = s.useMemo(() => (null != m ? I.Z.getGuildPermissionSpecMap(m) : null), [m]),
-        L = s.useMemo(() => (null != m ? I.Z.generateGuildPermissionSpec(m) : null), [m]),
+        R = s.useMemo(() => (null != p ? I.Z.getGuildPermissionSpecMap(p) : null), [p]),
+        L = s.useMemo(() => (null != p ? I.Z.generateGuildPermissionSpec(p) : null), [p]),
         [j, P] = s.useState(''),
         [O, y] = s.useState(''),
         D = s.useCallback(o()(y, 300), []),
@@ -203,7 +203,7 @@ function b(e) {
             P(''), y('');
         }, []),
         w = s.useMemo(() => {
-            if (null == m || null == R || null == p) return null;
+            if (null == p || null == R || null == m) return null;
             if (0 === b)
                 return (0, i.jsx)(u.Text, {
                     variant: 'text-sm/normal',
@@ -226,12 +226,12 @@ function b(e) {
                                         i = n.title,
                                         s = x._o.has(a),
                                         r = x.Qn.includes(l),
-                                        m = s ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : r ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
-                                        p = M(O, e),
+                                        p = s ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : r ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
+                                        m = M(O, e),
                                         f = M(O, t),
                                         E = M(O, i),
-                                        g = null != m && M(O, m);
-                                    if (!p && !f && !E && !g) return;
+                                        g = null != p && M(O, p);
+                                    if (!m && !f && !E && !g) return;
                                 }
                                 e.push(
                                     (0, i.jsx)(
@@ -239,7 +239,7 @@ function b(e) {
                                         {
                                             permission: l,
                                             roleIds: r,
-                                            guild: m,
+                                            guild: p,
                                             specMap: R,
                                             categoryTitle: n.title,
                                             userId: t
@@ -252,8 +252,8 @@ function b(e) {
                     }),
                 e
             );
-        }, [m, R, p, b, L, g, O, t]);
-    return null == h || null == p
+        }, [p, R, m, b, L, g, O, t]);
+    return null == h || null == m
         ? null
         : (0, i.jsxs)('div', {
               className: l()(N.container, r),

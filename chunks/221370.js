@@ -1,52 +1,52 @@
-n.d(a, {
+t.d(n, {
     Z: function () {
-        return p;
+        return E;
     }
 }),
-    n(47120),
-    n(653041);
-var t = n(735250),
-    i = n(470079),
-    o = n(120356),
-    r = n.n(o),
-    l = n(758713),
-    s = n(657707),
-    c = n(51527);
-let d = [l.z.DESKTOP, l.z.XBOX, l.z.PLAYSTATION, l.z.NINTENDO];
+    t(47120),
+    t(653041);
+var a = t(735250),
+    r = t(470079),
+    s = t(120356),
+    i = t.n(s),
+    o = t(758713),
+    l = t(657707),
+    c = t(51527);
+let d = [o.z.DESKTOP, o.z.XBOX, o.z.PLAYSTATION, o.z.NINTENDO];
 function u(e) {
-    let { platform: a } = e;
-    switch (a) {
-        case l.z.DESKTOP:
-            return (0, t.jsx)(s.pzj, { size: 'xs' });
-        case l.z.XBOX:
-            return (0, t.jsx)(s.Mko, { size: 'xs' });
-        case l.z.PLAYSTATION:
-            return (0, t.jsx)(s.Tsp, { size: 'xs' });
-        case l.z.NINTENDO:
-            return (0, t.jsx)(s.aPH, { size: 'xs' });
+    let { platform: n } = e;
+    switch (n) {
+        case o.z.DESKTOP:
+            return (0, a.jsx)(l.pzj, { size: 'xs' });
+        case o.z.XBOX:
+            return (0, a.jsx)(l.Mko, { size: 'xs' });
+        case o.z.PLAYSTATION:
+            return (0, a.jsx)(l.Tsp, { size: 'xs' });
+        case o.z.NINTENDO:
+            return (0, a.jsx)(l.aPH, { size: 'xs' });
         default:
             return null;
     }
 }
-function m(e) {
-    let { platforms: a } = e;
-    return (0, t.jsx)('div', {
-        className: r()(c.row, c.gapSm),
+function _(e) {
+    let { platforms: n } = e;
+    return (0, a.jsx)('div', {
+        className: i()(c.row, c.gapSm),
         style: { alignItems: 'center' },
-        children: a.map((e) => (0, t.jsx)(u, { platform: e }, e))
+        children: n.map((e) => (0, a.jsx)(u, { platform: e }, e))
     });
 }
-function p(e) {
-    let { detectedGame: a, className: n } = e,
-        o = i.useMemo(() => {
-            let e = new Set(a.platforms),
-                n = [...e];
-            return !e.has(l.z.DESKTOP) && (e.has(l.z.MACOS) || e.has(l.z.LINUX)) && n.push(l.z.DESKTOP), n.filter((e) => d.includes(e));
-        }, [a.platforms]);
-    return 0 === o.length
+function E(e) {
+    let { detectedGame: n, className: t } = e,
+        s = r.useMemo(() => {
+            let e = new Set(n.platforms),
+                t = [...e];
+            return !e.has(o.z.DESKTOP) && (e.has(o.z.MACOS) || e.has(o.z.LINUX)) && t.push(o.z.DESKTOP), t.filter((e) => d.includes(e));
+        }, [n.platforms]);
+    return 0 === s.length
         ? null
-        : (0, t.jsx)('div', {
-              className: r()(c.column, c.gapLg, n),
-              children: o.length > 0 && (0, t.jsx)(m, { platforms: o })
+        : (0, a.jsx)('div', {
+              className: i()(c.column, c.gapLg, t),
+              children: s.length > 0 && (0, a.jsx)(_, { platforms: s })
           });
 }

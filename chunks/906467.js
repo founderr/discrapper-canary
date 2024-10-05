@@ -1,13 +1,13 @@
+n(47120);
 var r,
-    i = n(47120);
-var a = n(442837),
-    o = n(570140),
+    i = n(442837),
+    a = n(570140),
     s = n(168232),
-    l = n(430824),
-    u = n(594174),
-    c = n(987338),
-    d = n(48541);
-function _(e, t, n) {
+    o = n(430824),
+    l = n(594174),
+    u = n(987338),
+    c = n(48541);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,41 +20,41 @@ function _(e, t, n) {
         e
     );
 }
-let E = 'production' === d.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === d.C.STAGING;
-function f() {
-    E = (0, s.QI)(u.default.getCurrentUser());
+let _ = 'production' === c.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === c.C.STAGING;
+function E() {
+    _ = (0, s.QI)(l.default.getCurrentUser());
 }
-class h extends (r = a.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(u.default, l.Z),
+        this.waitFor(l.default, o.Z),
             Object.defineProperties(this, {
                 isDeveloper: {
                     configurable: !1,
-                    get: () => E,
+                    get: () => _,
                     set: () => {}
                 }
             }),
-            f(),
+            E(),
             setTimeout(() => Object.freeze(this));
     }
     getExperimentDescriptor() {
-        return E
+        return _
             ? {
                   type: 'developer',
                   name: 'discord_dev_testing',
                   revision: 1,
                   override: !0,
-                  bucket: c.NZ.TREATMENT_1
+                  bucket: u.NZ.TREATMENT_1
               }
             : null;
     }
     constructor(...e) {
-        super(...e), _(this, 'isDeveloper', !1);
+        super(...e), d(this, 'isDeveloper', !1);
     }
 }
-_(h, 'displayName', 'DeveloperExperimentStore'),
-    (t.Z = new h(o.Z, {
-        CONNECTION_OPEN: f,
-        OVERLAY_INITIALIZE: f,
-        CURRENT_USER_UPDATE: f
+d(f, 'displayName', 'DeveloperExperimentStore'),
+    (t.Z = new f(a.Z, {
+        CONNECTION_OPEN: E,
+        OVERLAY_INITIALIZE: E,
+        CURRENT_USER_UPDATE: E
     }));

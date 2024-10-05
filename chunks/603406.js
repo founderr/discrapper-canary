@@ -7,8 +7,8 @@ i.d(t, {
 var n = i(735250),
     a = i(470079),
     r = i(481060),
-    s = i(626135),
-    o = i(34674),
+    o = i(626135),
+    s = i(34674),
     l = i(190733),
     c = i(132871),
     d = i(147890),
@@ -20,8 +20,8 @@ function m() {
     let e = (0, c.useApplicationDirectoryHistory)((e) => e.guildId),
         [t, i] = a.useState(''),
         m = a.useCallback(() => {
-            let i = (0, o.KQ)();
-            s.default.track(u.rMx.APP_DIRECTORY_SEARCH_STARTED, {
+            let i = (0, s.KQ)();
+            o.default.track(u.rMx.APP_DIRECTORY_SEARCH_STARTED, {
                 search_term: t,
                 category: i.name,
                 current_page: c.ApplicationDirectoryViews.HOME,

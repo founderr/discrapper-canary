@@ -27,11 +27,11 @@ function p(e) {
     });
 }
 function g(e) {
-    let { email: t, phoneToken: n, username: s, globalName: p, consent: g, password: m, guildTemplateCode: f, birthday: I, invite: N = null, giftCodeSKUId: T = null, multiStep: x = !1, promoEmailConsent: A = null, usedUsernameSuggestion: C = null } = e;
+    let { email: t, phoneToken: n, username: s, globalName: p, consent: g, password: f, guildTemplateCode: m, birthday: I, invite: N = null, giftCodeSKUId: T = null, multiStep: A = !1, promoEmailConsent: x = null, usedUsernameSuggestion: C = null } = e;
     return (
         a.Z.dispatch({
             type: 'REGISTER',
-            birthday: x ? I : null
+            birthday: A ? I : null
         }),
         null != I &&
             ((0, _.Z)(I, h.jXE.REGISTER),
@@ -51,22 +51,22 @@ function g(e) {
                 email: t,
                 username: s,
                 global_name: p,
-                password: m,
+                password: f,
                 invite: N,
                 consent: g,
                 phone_token: n,
                 date_of_birth: null == I ? void 0 : I.format('YYYY-MM-DD'),
                 gift_code_sku_id: T,
-                guild_template_code: f,
-                promotional_email_opt_in: null == A ? void 0 : A.checked
+                guild_template_code: m,
+                promotional_email_opt_in: null == x ? void 0 : x.checked
             },
             trackedActionData: {
                 event: i.NetworkActionNames.USER_REGISTER,
                 properties: {
                     invite_code: N,
                     used_username_suggestion: C,
-                    promotional_email_opt_in: null == A ? void 0 : A.checked,
-                    promotional_email_pre_checked: null == A ? void 0 : A.preChecked,
+                    promotional_email_opt_in: null == x ? void 0 : x.checked,
+                    promotional_email_pre_checked: null == x ? void 0 : x.preChecked,
                     was_unique_username: !0
                 }
             }

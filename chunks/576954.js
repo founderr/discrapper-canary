@@ -13,8 +13,8 @@ var i = n(735250),
     u = n(359119),
     d = n(473092),
     h = n(177342),
-    m = n(134612),
-    p = n(981631),
+    p = n(134612),
+    m = n(981631),
     _ = n(689938);
 function f(e) {
     let { channelId: t, warningId: f, senderId: E } = e,
@@ -25,8 +25,8 @@ function f(e) {
             (e) => () => {
                 r.Z.addRelationship({
                     userId: E,
-                    context: { location: m.zr },
-                    type: p.OGo.BLOCKED
+                    context: { location: p.zr },
+                    type: m.OGo.BLOCKED
                 }),
                     g(),
                     (0, l.showToast)((0, l.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, l.ToastType.SUCCESS)),
@@ -41,7 +41,7 @@ function f(e) {
             [g, t, f, E]
         );
     s.useEffect(() => {
-        (0, d.MC)(p.rMx.SAFETY_WARNING_VIEWED, {
+        (0, d.MC)(m.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
             warningId: f,
             senderId: E,

@@ -1,19 +1,19 @@
 n.d(t, {
     A: function () {
-        return s;
+        return o;
     }
 });
 var r = n(470079),
     i = n(261376),
     a = n(68985),
-    o = n(921944);
-function s(e, t) {
+    s = n(921944);
+function o(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        s = !n && null != e && !i.O.has(e);
+        o = !n && null != e && !i.O.has(e);
     r.useEffect(
         () => () => {
-            s && a.Z.lastDCDismissed !== e && t(o.L.AUTO_DISMISS, !0);
+            o && a.Z.lastDCDismissed !== e && t(s.L.AUTO_DISMISS, !0);
         },
-        [s, t, e]
+        [o, t, e]
     );
 }

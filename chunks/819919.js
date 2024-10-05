@@ -1,11 +1,11 @@
 var r = n(67867),
-    i = n(548828),
+    o = n(548828),
     a = n(228042),
-    o = n(146321),
+    i = n(146321),
     s = TypeError,
-    l = o.get,
-    u = o.has,
-    c = o.set;
+    c = i.get,
+    l = i.has,
+    u = i.set;
 r(
     {
         target: 'Map',
@@ -17,11 +17,11 @@ r(
         update: function (e, t) {
             var n = a(this),
                 r = arguments.length;
-            i(t);
-            var o = u(n, e);
-            if (!o && r < 3) throw new s('Updating absent value');
-            var d = o ? l(n, e) : i(r > 2 ? arguments[2] : void 0)(e, n);
-            return c(n, e, t(d, e, n)), n;
+            o(t);
+            var i = l(n, e);
+            if (!i && r < 3) throw new s('Updating absent value');
+            var d = i ? c(n, e) : o(r > 2 ? arguments[2] : void 0)(e, n);
+            return u(n, e, t(d, e, n)), n;
         }
     }
 );

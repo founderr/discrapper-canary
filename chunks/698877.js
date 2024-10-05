@@ -10,14 +10,14 @@ var i = n(735250),
     r = n(689938);
 function o(e) {
     let t,
-        { hasPermission: n, streamActive: o, isSelfStream: c, centerButton: u, onMouseEnter: d, onMouseLeave: h, premiumGlow: m, buttonRef: p, ..._ } = e,
+        { hasPermission: n, streamActive: o, isSelfStream: c, centerButton: u, onMouseEnter: d, onMouseLeave: h, premiumGlow: p, buttonRef: m, ..._ } = e,
         f = u ? l.d : l.Z;
     t = o ? (c ? r.Z.Messages.STOP_STREAMING : r.Z.Messages.STOP_WATCHING) : n ? r.Z.Messages.SHARE_YOUR_SCREEN : r.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE;
     let { Component: E, events: g, play: C } = (0, a.P)(o ? 'disable' : 'enable');
     return (
         s.useEffect(() => () => C(), [o, C]),
         (0, i.jsx)(f, {
-            buttonRef: p,
+            buttonRef: m,
             label: t,
             disabled: !n,
             iconComponent: E,
@@ -28,7 +28,7 @@ function o(e) {
             onMouseLeave: (e) => {
                 null == h || h(e), g.onMouseLeave();
             },
-            premiumGlow: m,
+            premiumGlow: p,
             ..._
         })
     );

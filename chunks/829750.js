@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     },
     t: function () {
         return l;
@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(442837),
     i = n(430824),
     a = n(938475),
-    o = n(981631);
-function s(e) {
+    s = n(981631);
+function o(e) {
     return (0, r.cj)(
         [a.ZP, i.Z],
         () => {
@@ -21,7 +21,7 @@ function s(e) {
                       reachedLimit: !1,
                       limit: -1
                   }
-                : e.type === o.d4z.GUILD_STAGE_VOICE
+                : e.type === s.d4z.GUILD_STAGE_VOICE
                   ? {
                         reachedLimit: t > n.maxStageVideoChannelUsers,
                         limit: n.maxStageVideoChannelUsers
@@ -42,7 +42,7 @@ function l(e) {
               reachedLimit: !1,
               limit: -1
           }
-        : e.type === o.d4z.GUILD_STAGE_VOICE
+        : e.type === s.d4z.GUILD_STAGE_VOICE
           ? {
                 reachedLimit: t > n.maxStageVideoChannelUsers,
                 limit: n.maxStageVideoChannelUsers

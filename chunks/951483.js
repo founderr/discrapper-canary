@@ -6,7 +6,7 @@ n.d(t, {
         return v;
     },
     Zg: function () {
-        return Z;
+        return T;
     }
 }),
     n(411104);
@@ -68,7 +68,7 @@ let x = {
         [E.EkH.QUICKSWITCHER_SHOW]: c.$
     },
     v = { [E.EkH.QUICKSWITCHER_SHOW]: c.$ };
-function Z() {
+function T() {
     return [
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,

@@ -1,4 +1,4 @@
-let r = (0, n(818083).B)({
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-07_persistent_reaction_button',
     label: 'Persistent Reaction Button (Desktop)',
@@ -11,4 +11,4 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-t.Z = r;
+t.Z = i;

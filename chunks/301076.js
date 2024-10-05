@@ -14,7 +14,7 @@ function o(e) {
         n,
         o,
         c,
-        { isActivityActive: u, onMouseEnter: d, onMouseLeave: h, onClick: m, ...p } = e,
+        { isActivityActive: u, onMouseEnter: d, onMouseLeave: h, onClick: p, ...m } = e,
         { enabled: _ } = l.nS.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
         { Component: f, events: E, play: g } = (0, s.s)(),
         { Component: C, events: I, play: T } = (0, a.w)();
@@ -31,9 +31,9 @@ function o(e) {
                 null == h || h(e), o.onMouseLeave();
             },
             onClick: (e) => {
-                null == m || m(e), c();
+                null == p || p(e), c();
             },
-            ...p
+            ...m
         })
     );
 }

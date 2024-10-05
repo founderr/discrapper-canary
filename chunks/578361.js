@@ -1,24 +1,24 @@
-n.d(a, {
+t.d(n, {
     n: function () {
-        return t;
+        return a;
     }
 });
 var i,
-    t,
-    r = n(735250),
-    l = n(470079),
-    s = n(120356),
-    o = n.n(s),
-    c = n(748780),
-    d = n(215569),
-    u = n(189682);
-((i = t || (t = {}))[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT');
+    a,
+    r = t(735250),
+    o = t(470079),
+    l = t(120356),
+    s = t.n(l),
+    c = t(748780),
+    d = t(215569),
+    u = t(189682);
+((i = a || (a = {}))[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT');
 let _ = {
     friction: 7,
     tension: 40,
     clamp: !0
 };
-class p extends l.PureComponent {
+class p extends o.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
             c.Z.spring(this._animated, {
@@ -63,35 +63,35 @@ class p extends l.PureComponent {
         });
     }
     constructor(e) {
-        var a, n, i;
+        var n, t, i;
         super(e),
-            (a = this),
+            (n = this),
             (i = void 0),
-            (n = '_animated') in a
-                ? Object.defineProperty(a, n, {
+            (t = '_animated') in n
+                ? Object.defineProperty(n, t, {
                       value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (a[n] = i),
+                : (n[t] = i),
             (this._animated = new c.Z.Value(-1 * e.direction));
     }
 }
-a.Z = (e) => {
-    let { children: a, step: n, direction: i, className: t, springSettings: l = _, fadeInOut: s = !1 } = e;
+n.Z = (e) => {
+    let { children: n, step: t, direction: i, className: a, springSettings: o = _, fadeInOut: l = !1 } = e;
     return (0, r.jsx)(d.W, {
         component: 'div',
-        className: o()(u.animator, t),
+        className: s()(u.animator, a),
         children: (0, r.jsx)(
             p,
             {
                 direction: i,
-                springSettings: l,
-                fadeInOut: s,
-                children: a
+                springSettings: o,
+                fadeInOut: l,
+                children: n
             },
-            n
+            t
         )
     });
 };

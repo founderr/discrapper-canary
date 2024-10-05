@@ -1,20 +1,20 @@
-t.d(n, {
+n.d(t, {
     _: function () {
-        return u;
+        return c;
     }
 });
-var l = t(470079),
-    s = t(442837),
-    a = t(594174),
-    r = t(823379),
-    i = t(51144),
-    o = t(689938);
-function u(e) {
-    let n = (0, s.Wu)([a.default], () =>
+var l = n(470079),
+    a = n(442837),
+    s = n(594174),
+    i = n(823379),
+    r = n(51144),
+    o = n(689938);
+function c(e) {
+    let t = (0, a.Wu)([s.default], () =>
         e.recipients
-            .map((e) => a.default.getUser(e))
-            .filter(r.lm)
-            .map((e) => i.ZP.getName(e))
+            .map((e) => s.default.getUser(e))
+            .filter(i.lm)
+            .map((e) => r.ZP.getName(e))
     );
     return l.useMemo(
         () =>
@@ -34,14 +34,14 @@ function u(e) {
                               second: e[1],
                               third: e[2]
                           });
-                      let n = e.length - 3;
+                      let t = e.length - 3;
                       return o.Z.Messages.USER_SUMMARY_THREE_AND_OTHERS.format({
                           first: e[0],
                           second: e[1],
                           third: e[2],
-                          count: n
+                          count: t
                       });
-                  })(n),
-        [e, n]
+                  })(t),
+        [e, t]
     );
 }

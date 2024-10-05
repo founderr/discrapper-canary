@@ -1,30 +1,30 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(470079),
-    i = n(410030),
-    a = n(695346),
-    o = n(798628),
-    s = n(275344),
-    l = n(918088),
-    u = n(562293);
-function c(e, t) {
+var i = n(470079),
+    a = n(410030),
+    s = n(695346),
+    l = n(798628),
+    r = n(275344),
+    o = n(918088),
+    c = n(562293);
+function d(e, t) {
     var n;
-    let c = (0, s.v)(e),
-        d = (0, o.cE)(c.getChannelId())[c.id],
-        _ = (0, u.Z)(null === (n = c.poll) || void 0 === n ? void 0 : n.expiry),
-        E = a.Yk.useSetting(),
-        f = (0, i.ZP)(),
-        h = null != t ? t : f;
-    return r.useMemo(
+    let d = (0, r.v)(e),
+        u = (0, l.cE)(d.getChannelId())[d.id],
+        _ = (0, c.Z)(null === (n = d.poll) || void 0 === n ? void 0 : n.expiry),
+        E = s.Yk.useSetting(),
+        I = (0, a.ZP)(),
+        m = null != t ? t : I;
+    return i.useMemo(
         () =>
-            (0, l.ZP)(c, d, {
+            (0, o.ZP)(d, u, {
                 animateEmoji: E,
-                theme: h,
+                theme: m,
                 formattedExpirationLabel: _
             }),
-        [E, c, d, _, h]
+        [E, d, u, _, m]
     );
 }

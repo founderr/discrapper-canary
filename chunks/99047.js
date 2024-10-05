@@ -10,17 +10,17 @@ function a(e) {
         a = (0, r.useCallback)(() => {
             n(!0);
         }, [n]),
-        o = (0, r.useCallback)(() => {
+        s = (0, r.useCallback)(() => {
             n(!1);
         }, [n]),
-        s = (0, r.useCallback)(() => {
+        o = (0, r.useCallback)(() => {
             n(!t);
         }, [n, t]);
     return {
         isOpen: t,
         setOpen: n,
         open: a,
-        close: o,
-        toggle: s
+        close: s,
+        toggle: o
     };
 }

@@ -1,51 +1,51 @@
 let r;
-var i = n(757143);
-var a = n(302454),
-    o = n.n(a),
+n(757143);
+var i = n(302454),
+    a = n.n(i),
     s = n(800927),
-    l = n(945884),
-    u = n(594199);
-let c = o().defaultRules.lheading,
-    d = o().defaultRules.heading,
-    _ = o().defaultRules.link,
-    E = o().defaultRules.image,
-    f = o().defaultRules.list,
-    h = o().defaultRules.blockQuote,
-    p = o().defaultRules.paragraph,
-    m = /\{(.+?)}/,
+    o = n(945884),
+    l = n(594199);
+let u = a().defaultRules.lheading,
+    c = a().defaultRules.heading,
+    d = a().defaultRules.link,
+    _ = a().defaultRules.image,
+    E = a().defaultRules.list,
+    f = a().defaultRules.blockQuote,
+    h = a().defaultRules.paragraph,
+    p = /\{(.+?)}/,
     I = /^\$(\w+?)\$/;
 r = n(235375);
-let T = (e) => {
+let m = (e) => {
         let { transformUpperCase: t = !1 } = e;
         return (e, n, r) => {
-            let i = m.exec(e[1]),
-                a = e[1].replace(m, '');
+            let i = p.exec(e[1]),
+                s = e[1].replace(p, '');
             return (
-                t && (a = a.toUpperCase()),
+                t && (s = s.toUpperCase()),
                 {
                     className: null != i ? i[1] : null,
                     level: '=' === e[2] ? 1 : 2,
-                    content: o().parseInline(n, a, r)
+                    content: a().parseInline(n, s, r)
                 }
             );
         };
     },
-    g = (e) => ({
+    T = (e) => ({
         ...r.baseRules,
         image: {
-            ...E,
+            ..._,
             ...('function' == typeof r.customRules.image ? r.customRules.image(e) : r.customRules.image)
         },
         link: {
-            ..._,
+            ...d,
             ...('function' == typeof r.customRules.link ? r.customRules.link(e) : r.customRules.link)
         },
         list: {
-            ...f,
+            ...E,
             ...('function' == typeof r.customRules.list ? r.customRules.list(e) : r.customRules.list)
         },
         interpolation: {
-            order: u.ZP.order,
+            order: l.ZP.order,
             match: (e) => I.exec(e),
             parse(e, t, n) {
                 let r = n.interpolations[e[1]];
@@ -62,42 +62,42 @@ let T = (e) => {
             react: (e) => e.renderer()
         },
         lheading: {
-            ...c,
-            parse: T({ transformUpperCase: !0 }),
+            ...u,
+            parse: m({ transformUpperCase: !0 }),
             ...('function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading)
         },
         heading: {
-            ...d,
+            ...c,
             ...('function' == typeof r.customRules.heading ? r.customRules.heading(e) : r.customRules.heading)
         },
         blockQuote: {
-            ...h,
+            ...f,
             ...('function' == typeof r.customRules.blockQuote ? r.customRules.blockQuote(e) : r.customRules.blockQuote)
         },
         paragraph: {
-            ...p,
+            ...h,
             ...('function' == typeof r.customRules.paragraph ? r.customRules.paragraph(e) : r.customRules.paragraph)
         }
     }),
     S = (e) => ({
         lheading: {
-            ...c,
-            parse: T({ transformUpperCase: !1 }),
+            ...u,
+            parse: m({ transformUpperCase: !1 }),
             ...('function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading)
         }
     }),
-    A = (e) => ({
-        ...g(e),
-        newline: { ...o().defaultRules.newline },
-        text: u.ZP,
+    g = (e) => ({
+        ...T(e),
+        newline: { ...a().defaultRules.newline },
+        text: l.ZP,
         list: s.Z,
-        subtext: l.Z
+        subtext: o.Z
     });
 t.Z = {
-    getDefaultRules: (e) => ({ ...g(e) }),
+    getDefaultRules: (e) => ({ ...T(e) }),
     getSpecialRules: (e) => ({
-        ...g(e),
+        ...T(e),
         ...S(e)
     }),
-    getMessageRules: (e) => ({ ...A(e) })
+    getMessageRules: (e) => ({ ...g(e) })
 };

@@ -1,12 +1,12 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
-var r = t(735250);
-t(470079);
-var i = t(481060),
-    a = t(244203);
-function s() {
-    return (0, r.jsx)(i.Spinner, { className: a.spinner });
+var r = n(735250);
+n(470079);
+var a = n(481060),
+    i = n(244203);
+function l() {
+    return (0, r.jsx)(a.Spinner, { className: i.spinner });
 }

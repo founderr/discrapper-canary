@@ -9,13 +9,13 @@ n.d(t, {
         return c;
     },
     ZI: function () {
-        return o;
+        return s;
     },
     m1: function () {
         return u;
     },
     uc: function () {
-        return s;
+        return o;
     }
 });
 var r = n(987170),
@@ -34,7 +34,7 @@ let a = (0, r.Z)({
             }
         ]
     }),
-    o = (0, r.Z)({
+    s = (0, r.Z)({
         kind: 'user',
         id: '2024-06_ctp_app_open_filters',
         label: 'CTP app open - A/A test - Filters',
@@ -48,7 +48,7 @@ let a = (0, r.Z)({
             }
         ]
     }),
-    s = (0, r.Z)({
+    o = (0, r.Z)({
         kind: 'user',
         id: '2024-06_ctp_app_open_multiple_buckets',
         label: 'CTP app open - A/A test - Multiple buckets',

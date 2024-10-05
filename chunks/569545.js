@@ -1,25 +1,25 @@
 n.d(t, {
     DB: function () {
-        return o;
+        return i;
     },
     V9: function () {
-        return l;
+        return s;
     },
     my: function () {
-        return s;
+        return a;
     }
-});
-var r = n(47120);
-var i = n(411104);
-var a = n(70722);
-function o(e) {
-    return null != e && (e.startsWith(a.lo.GUILD) || e.startsWith(a.lo.CALL));
+}),
+    n(47120),
+    n(411104);
+var r = n(70722);
+function i(e) {
+    return null != e && (e.startsWith(r.lo.GUILD) || e.startsWith(r.lo.CALL));
 }
-function s(e) {
+function a(e) {
     let t = e.split(':'),
         n = t[0];
     switch (n) {
-        case a.lo.GUILD: {
+        case r.lo.GUILD: {
             let [e, n, r, i] = t;
             return {
                 streamType: e,
@@ -28,7 +28,7 @@ function s(e) {
                 ownerId: i
             };
         }
-        case a.lo.CALL: {
+        case r.lo.CALL: {
             let [e, n, r] = t;
             return {
                 streamType: e,
@@ -40,13 +40,13 @@ function s(e) {
             throw Error('Unknown stream type '.concat(n));
     }
 }
-function l(e) {
-    let { streamType: t, guildId: n, channelId: r, ownerId: i } = e;
+function s(e) {
+    let { streamType: t, guildId: n, channelId: i, ownerId: a } = e;
     switch (t) {
-        case a.lo.GUILD:
-            return [t, n, r, i].join(':');
-        case a.lo.CALL:
-            return [t, r, i].join(':');
+        case r.lo.GUILD:
+            return [t, n, i, a].join(':');
+        case r.lo.CALL:
+            return [t, i, a].join(':');
         default:
             throw Error('Unknown stream type '.concat(t));
     }

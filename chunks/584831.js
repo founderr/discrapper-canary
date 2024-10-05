@@ -1,58 +1,58 @@
 var r,
-    i,
-    a,
     o,
+    a,
+    i,
     s,
-    l = n(668530),
-    u = n(476508),
-    c = n(65007).f,
+    c = n(668530),
+    l = n(476508),
+    u = n(65007).f,
     d = n(62691).set,
-    _ = n(6938),
-    E = n(378636),
+    p = n(6938),
+    h = n(378636),
     f = n(192006),
-    h = n(325435),
-    p = n(42433),
-    m = l.MutationObserver || l.WebKitMutationObserver,
-    I = l.document,
-    T = l.process,
-    g = l.Promise,
-    S = c(l, 'queueMicrotask'),
-    A = S && S.value;
-if (!A) {
-    var v = new _(),
-        N = function () {
+    m = n(325435),
+    y = n(42433),
+    v = c.MutationObserver || c.WebKitMutationObserver,
+    g = c.document,
+    b = c.process,
+    _ = c.Promise,
+    k = u(c, 'queueMicrotask'),
+    C = k && k.value;
+if (!C) {
+    var Z = new p(),
+        w = function () {
             var e, t;
-            for (p && (e = T.domain) && e.exit(); (t = v.get()); )
+            for (y && (e = b.domain) && e.exit(); (t = Z.get()); )
                 try {
                     t();
                 } catch (e) {
-                    throw (v.head && r(), e);
+                    throw (Z.head && r(), e);
                 }
             e && e.enter();
         };
-    E || p || h || !m || !I
-        ? !f && g && g.resolve
-            ? (((o = g.resolve(void 0)).constructor = g),
-              (s = u(o.then, o)),
+    h || y || m || !v || !g
+        ? !f && _ && _.resolve
+            ? (((i = _.resolve(void 0)).constructor = _),
+              (s = l(i.then, i)),
               (r = function () {
-                  s(N);
+                  s(w);
               }))
-            : p
+            : y
               ? (r = function () {
-                    T.nextTick(N);
+                    b.nextTick(w);
                 })
-              : ((d = u(d, l)),
+              : ((d = l(d, c)),
                 (r = function () {
-                    d(N);
+                    d(w);
                 }))
-        : ((i = !0),
-          (a = I.createTextNode('')),
-          new m(N).observe(a, { characterData: !0 }),
+        : ((o = !0),
+          (a = g.createTextNode('')),
+          new v(w).observe(a, { characterData: !0 }),
           (r = function () {
-              a.data = i = !i;
+              a.data = o = !o;
           })),
-        (A = function (e) {
-            !v.head && r(), v.add(e);
+        (C = function (e) {
+            !Z.head && r(), Z.add(e);
         });
 }
-e.exports = A;
+e.exports = C;

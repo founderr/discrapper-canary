@@ -1,37 +1,37 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return m;
     }
 });
-var r = n(735250),
-    i = n(470079),
-    a = n(392711);
-var o = n(399606),
-    s = n(351780),
-    l = n(576125),
-    u = n(465858),
-    c = n(112843),
-    d = n(524484);
-function _(e) {
+var i = n(735250),
+    s = n(470079),
+    o = n(392711),
+    a = n(399606),
+    l = n(351780),
+    r = n(576125),
+    c = n(465858),
+    d = n(112843),
+    u = n(524484);
+function h(e) {
     let { reactionRef: t, count: n } = e,
-        r = i.useRef(n),
-        l = (0, o.e7)([s.Z], () => s.Z.getState()),
-        d = (0, c.Z)(),
-        _ = (0, u.Z)(t);
+        i = s.useRef(n),
+        r = (0, a.e7)([l.Z], () => l.Z.getState()),
+        u = (0, d.Z)(),
+        h = (0, c.Z)(t);
     return (
-        i.useEffect(() => {
-            if (n > r.current && null != _) {
-                let e = (0, a.clamp)(n, l.confettiCount / 2, 2 * l.confettiCount);
-                d.fire(_.x, _.y, { count: e });
+        s.useEffect(() => {
+            if (n > i.current && null != h) {
+                let e = (0, o.clamp)(n, r.confettiCount / 2, 2 * r.confettiCount);
+                u.fire(h.x, h.y, { count: e });
             }
-            r.current = n;
-        }, [n, _, d, l.confettiCount]),
+            i.current = n;
+        }, [n, h, u, r.confettiCount]),
         null
     );
 }
-function E(e) {
-    return (0, r.jsx)(l.Z, {
-        confettiLocation: d.Hn.REACTION,
-        children: (0, r.jsx)(_, { ...e })
+function m(e) {
+    return (0, i.jsx)(r.Z, {
+        confettiLocation: u.Hn.REACTION,
+        children: (0, i.jsx)(h, { ...e })
     });
 }

@@ -1,13 +1,13 @@
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    o = n.n(a),
-    s = n(259390),
+    s = n.n(a),
+    o = n(259390),
     l = n(739017);
 let u = {
         VERTICAL: l.vertical,
-        HORIZONTAL: s.horizontal,
-        HORIZONTAL_REVERSE: s.horizontalReverse
+        HORIZONTAL: o.horizontal,
+        HORIZONTAL_REVERSE: o.horizontalReverse
     },
     c = {
         START: l.justifyStart,
@@ -31,7 +31,7 @@ let u = {
     E = (e) => {
         let { children: t, className: n, shrink: a, grow: l, basis: u, style: c, wrap: d = !1, ..._ } = e,
             E = {
-                className: (n = null != n ? n : s.flexChild),
+                className: (n = null != n ? n : o.flexChild),
                 style: {
                     flexGrow: l,
                     flexShrink: a,
@@ -47,7 +47,7 @@ let u = {
                     ...E.style,
                     ...e.props.style
                 }),
-                (E.className = o()(e.props.className, n)),
+                (E.className = s()(e.props.className, n)),
                 i.cloneElement(e, E)
             );
         }
@@ -63,16 +63,16 @@ E.defaultProps = {
     wrap: !1
 };
 let f = (e) => {
-    let { children: t, className: n, direction: i = u.HORIZONTAL, justify: a = c.START, align: l = d.STRETCH, wrap: E = _.NO_WRAP, shrink: f, grow: h, basis: p, style: m, ...I } = e;
+    let { children: t, className: n, direction: i = u.HORIZONTAL, justify: a = c.START, align: l = d.STRETCH, wrap: E = _.NO_WRAP, shrink: f, grow: h, basis: p, style: I, ...m } = e;
     return (0, r.jsx)('div', {
         style: {
             flexShrink: f,
             flexGrow: h,
             flexBasis: p,
-            ...m
+            ...I
         },
-        className: o()(s.flex, i, a, l, E, n),
-        ...I,
+        className: s()(o.flex, i, a, l, E, n),
+        ...m,
         children: t
     });
 };

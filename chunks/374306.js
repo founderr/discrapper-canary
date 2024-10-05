@@ -14,8 +14,8 @@ var s = n(442837),
     u = n(456269),
     d = n(432771),
     h = n(920303),
-    m = n(665149),
-    p = n(689938);
+    p = n(665149),
+    m = n(689938);
 function _(e) {
     var t, n;
     let { channel: _ } = e,
@@ -26,8 +26,8 @@ function _(e) {
         T = (0, s.e7)([o.Z, h.Z], () => !!(o.Z.getThreadIds(_.id, C, I).length > 0) || !!(h.Z.getThreads(_.id, C, I).length > 0) || !1, [_.id, C, I]),
         x = _.isMediaChannel();
     if (!f || g || (x && T)) return null;
-    let S = ((t = E), (n = x), t ? (n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW) : n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
-    return (0, i.jsx)(m.JO, {
+    let S = ((t = E), (n = x), t ? (n ? m.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : m.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW) : n ? m.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : m.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
+    return (0, i.jsx)(p.JO, {
         tooltip: S,
         icon: a.CircleInformationIcon,
         onClick: () => r.Z.hideAdminOnboarding(_.id, !E),

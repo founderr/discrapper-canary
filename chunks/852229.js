@@ -1,10 +1,4 @@
-n.d(t, {
-    J: function () {
-        return i;
-    }
-});
-var r = n(411104);
-function i(e) {
+function r(e) {
     let t = document.body;
     if (null == t) throw Error('[Utils] ClipboardUtils.copy(): assert failed: document.body != null');
     let n = document.createRange(),
@@ -14,3 +8,9 @@ function i(e) {
     let a = document.execCommand('copy');
     return t.removeChild(i), a;
 }
+n.d(t, {
+    J: function () {
+        return r;
+    }
+}),
+    n(411104);

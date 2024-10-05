@@ -1,8 +1,8 @@
 var r = n(566885),
     i = n(581031),
     a = n(470592),
-    o = n(339718),
-    s = n(49693),
+    s = n(339718),
+    o = n(49693),
     l = n(29016),
     u = i([].push),
     c = function (e) {
@@ -13,30 +13,30 @@ var r = n(566885),
             d = 6 === e,
             _ = 7 === e,
             E = 5 === e || d;
-        return function (f, h, p, m) {
-            for (var I, T, g = o(f), S = a(g), A = r(h, p), v = s(S), N = 0, O = m || l, R = t ? O(f, v) : n || _ ? O(f, 0) : void 0; v > N; N++)
-                if ((E || N in S) && ((T = A((I = S[N]), N, g)), e)) {
-                    if (t) R[N] = T;
+        return function (f, h, p, I) {
+            for (var m, T, S = s(f), g = a(S), A = r(h, p), N = o(g), O = 0, R = I || l, v = t ? R(f, N) : n || _ ? R(f, 0) : void 0; N > O; O++)
+                if ((E || O in g) && ((T = A((m = g[O]), O, S)), e)) {
+                    if (t) v[O] = T;
                     else if (T)
                         switch (e) {
                             case 3:
                                 return !0;
                             case 5:
-                                return I;
+                                return m;
                             case 6:
-                                return N;
+                                return O;
                             case 2:
-                                u(R, I);
+                                u(v, m);
                         }
                     else
                         switch (e) {
                             case 4:
                                 return !1;
                             case 7:
-                                u(R, I);
+                                u(v, m);
                         }
                 }
-            return d ? -1 : i || c ? c : R;
+            return d ? -1 : i || c ? c : v;
         };
     };
 e.exports = {

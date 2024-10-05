@@ -1,28 +1,28 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(829820);
-function o(e) {
-    let { activity: t, user: n, source: o, ...s } = e,
-        { label: l, tooltip: u, loading: c, disabled: d, onClick: _ } = (0, a.Lz)(t, n, o);
-    return (0, r.jsx)(i.Tooltip, {
-        text: u,
+var a = n(481060),
+    s = n(829820);
+function l(e) {
+    let { activity: t, user: n, source: l, ...r } = e,
+        { label: o, tooltip: c, loading: d, disabled: u, onClick: _ } = (0, s.Lz)(t, n, l);
+    return (0, i.jsx)(a.Tooltip, {
+        text: c,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
-            return (0, r.jsx)(i.Button, {
-                ...s,
-                color: d ? i.Button.Colors.PRIMARY : i.Button.Colors.GREEN,
+            return (0, i.jsx)(a.Button, {
+                ...r,
+                color: u ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
                 onClick: _,
                 onMouseEnter: t,
                 onMouseLeave: n,
-                disabled: !c && d,
-                submitting: c,
-                children: l
+                disabled: !d && u,
+                submitting: d,
+                children: o
             });
         }
     });

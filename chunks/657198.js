@@ -1,123 +1,123 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return m;
     }
-});
-var r = n(47120);
-var i = n(735250),
-    a = n(470079),
-    o = n(120356),
-    s = n.n(o),
-    l = n(519953),
-    u = n(442837),
-    c = n(911969),
-    d = n(998698),
-    _ = n(703558),
-    E = n(117530),
-    f = n(91313),
-    h = n(436660),
-    p = n(887490),
-    m = n(689938),
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(519953),
+    l = n(442837),
+    u = n(911969),
+    c = n(998698),
+    d = n(703558),
+    _ = n(117530),
+    E = n(91313),
+    f = n(436660),
+    h = n(887490),
+    p = n(689938),
     I = n(896061);
-function T(e, t, n) {
-    let { attributes: r, children: a, element: o } = t;
-    switch (o.type) {
+function m(e, t, n) {
+    let { attributes: i, children: a, element: s } = t;
+    switch (s.type) {
         case 'applicationCommand':
-            let s = d.Z.getActiveCommand(n),
+            let o = c.Z.getActiveCommand(n),
                 l = 0,
                 u = 0;
-            if (null != s && s.id === o.command.id) {
-                var c;
-                let t = f.cu(e);
-                for (let e of null !== (c = s.options) && void 0 !== c ? c : []) t.includes(e.name) ? u++ : l++;
+            if (null != o && o.id === s.command.id) {
+                var d;
+                let t = E.cu(e);
+                for (let e of null !== (d = o.options) && void 0 !== d ? d : []) t.includes(e.name) ? u++ : l++;
             }
             let _ = {};
             if (l > 0) {
                 let e;
-                (e = u > 0 ? m.Z.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({ count: l }) : m.Z.Messages.COMMANDS_OPTION_COUNT.format({ count: l })), (_['data-trailing-placeholder'] = e);
+                (e = u > 0 ? p.Z.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({ count: l }) : p.Z.Messages.COMMANDS_OPTION_COUNT.format({ count: l })), (_['data-trailing-placeholder'] = e);
             }
-            return (0, i.jsx)('div', {
+            return (0, r.jsx)('div', {
                 className: I.applicationCommand,
-                ...r,
+                ...i,
                 ..._,
                 children: a
             });
         case 'applicationCommandOption':
-            return (0, i.jsx)(g, {
-                attributes: r,
+            return (0, r.jsx)(T, {
+                attributes: i,
                 channelId: n,
-                element: o,
+                element: s,
                 children: a
             });
         default:
             return null;
     }
 }
-let g = (e) => {
+let T = (e) => {
     let t,
-        { channelId: n, element: r, attributes: o, children: f } = e,
-        T = (0, l.vt)(),
-        g = (0, l.UE)(),
-        S = (0, l._7)(),
-        { optionType: A, errored: v } = (0, u.cj)(
-            [d.Z],
+        { channelId: n, element: a, attributes: E, children: m } = e,
+        T = (0, o.vt)(),
+        S = (0, o.UE)(),
+        g = (0, o._7)(),
+        { optionType: A, errored: N } = (0, l.cj)(
+            [c.Z],
             () => {
-                var e, t, i;
+                var e, t, r;
                 return {
-                    optionType: null === (e = d.Z.getOption(n, r.optionName)) || void 0 === e ? void 0 : e.type,
-                    errored: (null === (i = d.Z.getOptionState(n, r.optionName)) || void 0 === i ? void 0 : null === (t = i.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
+                    optionType: null === (e = c.Z.getOption(n, a.optionName)) || void 0 === e ? void 0 : e.type,
+                    errored: (null === (r = c.Z.getOptionState(n, a.optionName)) || void 0 === r ? void 0 : null === (t = r.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
                 };
             },
-            [n, r.optionName]
+            [n, a.optionName]
         ),
-        N = (0, u.e7)([E.Z], () => E.Z.getUpload(n, r.optionName, _.d.SlashCommand), [n, r.optionName]),
-        O = r.children[r.children.length - 1],
-        R = null != O && p.LC.isText(O) && O.text.endsWith('\n'),
+        O = (0, l.e7)([_.Z], () => _.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
+        R = a.children[a.children.length - 1],
+        v = null != R && h.LC.isText(R) && R.text.endsWith('\n'),
         C = s()(I.inlineElement, I.optionPill, {
-            [I.selectedPill]: g && T,
-            [I.erroredPill]: (!g || !T) && v
+            [I.selectedPill]: S && T,
+            [I.erroredPill]: (!S || !T) && N
         }),
-        y = a.useCallback(() => {
-            !p.bN.isVoid(S, r) && h.Q.selectCommandOption(S, r.optionName, !0);
-        }, [S, r]);
+        L = i.useCallback(() => {
+            !h.bN.isVoid(g, a) && f.Q.selectCommandOption(g, a.optionName, !0);
+        }, [g, a]);
     return (
         (t =
-            A === c.jw.ATTACHMENT
-                ? (null == N ? void 0 : N.filename) != null
-                    ? (0, i.jsxs)('span', {
+            A === u.jw.ATTACHMENT
+                ? (null == O ? void 0 : O.filename) != null
+                    ? (0, r.jsxs)('span', {
                           className: s()(I.optionPillValue, I.attachmentFilename),
                           contentEditable: !1,
-                          children: [N.filename, f]
+                          children: [O.filename, m]
                       })
-                    : (0, i.jsxs)('span', {
+                    : (0, r.jsxs)('span', {
                           className: s()(I.optionPillValue, I.readonlyPillValue),
                           contentEditable: !1,
-                          children: [m.Z.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, f]
+                          children: [p.Z.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, m]
                       })
-                : (0, i.jsxs)('span', {
+                : (0, r.jsxs)('span', {
                       className: I.optionPillValue,
                       children: [
-                          f,
-                          R
-                              ? (0, i.jsx)('span', {
+                          m,
+                          v
+                              ? (0, r.jsx)('span', {
                                     className: I.newLine,
                                     contentEditable: !1
                                 })
                               : null
                       ]
                   })),
-        (0, i.jsxs)('span', {
-            ...o,
+        (0, r.jsxs)('span', {
+            ...E,
             className: C,
             children: [
-                (0, i.jsxs)('span', {
+                (0, r.jsxs)('span', {
                     className: I.optionPillKey,
                     contentEditable: !1,
-                    onClick: y,
-                    children: [r.optionDisplayName, '\u200B']
+                    onClick: L,
+                    children: [a.optionDisplayName, '\u200B']
                 }),
                 t,
-                (0, i.jsx)('span', {
+                (0, r.jsx)('span', {
                     contentEditable: !1,
                     children: '\u200B'
                 })

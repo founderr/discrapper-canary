@@ -1,9 +1,9 @@
-var r,
-    i,
-    a = n(668530),
-    o = n(204384),
-    s = a.process,
-    l = a.Deno,
-    u = (s && s.versions) || (l && l.version),
-    c = u && u.v8;
-c && (i = (r = c.split('.'))[0] > 0 && r[0] < 4 ? 1 : +(r[0] + r[1])), !i && o && (!(r = o.match(/Edge\/(\d+)/)) || r[1] >= 74) && (r = o.match(/Chrome\/(\d+)/)) && (i = +r[1]), (e.exports = i);
+var e,
+    o,
+    i = n(668530),
+    u = n(204384),
+    s = i.process,
+    c = i.Deno,
+    f = (s && s.versions) || (c && c.version),
+    a = f && f.v8;
+a && (o = (e = a.split('.'))[0] > 0 && e[0] < 4 ? 1 : +(e[0] + e[1])), !o && u && (!(e = u.match(/Edge\/(\d+)/)) || e[1] >= 74) && (e = u.match(/Chrome\/(\d+)/)) && (o = +e[1]), (t.exports = o);

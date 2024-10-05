@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(100527),
-    o = n(906732),
-    s = n(299206),
+    s = n(906732),
+    o = n(299206),
     l = n(389052),
     u = n(710631),
     c = n(622724),
@@ -18,8 +18,8 @@ var i = n(481060),
 function f(e) {
     let { user: t, guildId: n, viewProfileItem: f } = e,
         { trackUserProfileAction: h } = (0, d.KZ)(),
-        { analyticsLocations: p, newestAnalyticsLocation: m } = (0, o.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
-        I = (0, u.Z)({
+        { analyticsLocations: p, newestAnalyticsLocation: I } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
+        m = (0, u.Z)({
             user: t,
             guildId: n,
             onAction: () =>
@@ -30,7 +30,7 @@ function f(e) {
         }),
         T = (0, l.Z)({
             user: t,
-            location: m,
+            location: I,
             color: 'danger',
             onBlock: () =>
                 h({
@@ -43,10 +43,10 @@ function f(e) {
                     analyticsLocations: p
                 })
         }),
-        g = (0, c.Z)({
+        S = (0, c.Z)({
             user: t,
             guildId: n,
-            location: m,
+            location: I,
             color: 'danger',
             onAction: () =>
                 h({
@@ -54,10 +54,10 @@ function f(e) {
                     analyticsLocations: p
                 })
         }),
-        S = (0, c.T)({
+        g = (0, c.T)({
             user: t,
             guildId: n,
-            location: m,
+            location: I,
             color: 'danger',
             onAction: () =>
                 h({
@@ -66,10 +66,10 @@ function f(e) {
                 })
         }),
         A = [
-            [f, I],
-            [T, g, S],
+            [f, m],
+            [T, S, g],
             [
-                (0, s.Z)({
+                (0, o.Z)({
                     id: t.id,
                     label: E.Z.Messages.COPY_ID_USER,
                     onSuccess: () =>
@@ -82,7 +82,7 @@ function f(e) {
         ];
     return A.every((e) => e.every((e) => null == e))
         ? null
-        : (0, r.jsx)(o.Gt, {
+        : (0, r.jsx)(s.Gt, {
               value: p,
               children: (0, r.jsx)(i.Popout, {
                   renderPopout: (e) => {

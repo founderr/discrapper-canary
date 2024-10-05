@@ -1,8 +1,8 @@
 var r = n(325008),
     i = n(581031),
     a = n(926515),
-    o = n(936940),
-    s = n(835884),
+    s = n(936940),
+    o = n(835884),
     l = n(279129),
     u = n(610067),
     c = n(339718),
@@ -12,7 +12,7 @@ var r = n(325008),
     f = i([].concat);
 e.exports =
     !_ ||
-    o(function () {
+    s(function () {
         if (
             r &&
             1 !==
@@ -42,12 +42,12 @@ e.exports =
             i.split('').forEach(function (e) {
                 t[e] = e;
             }),
-            7 !== _({}, e)[n] || s(_({}, t)).join('') !== i
+            7 !== _({}, e)[n] || o(_({}, t)).join('') !== i
         );
     })
         ? function (e, t) {
-              for (var n = c(e), i = arguments.length, o = 1, _ = l.f, E = u.f; i > o; ) {
-                  for (var h, p = d(arguments[o++]), m = _ ? f(s(p), _(p)) : s(p), I = m.length, T = 0; I > T; ) (h = m[T++]), (!r || a(E, p, h)) && (n[h] = p[h]);
+              for (var n = c(e), i = arguments.length, s = 1, _ = l.f, E = u.f; i > s; ) {
+                  for (var h, p = d(arguments[s++]), I = _ ? f(o(p), _(p)) : o(p), m = I.length, T = 0; m > T; ) (h = I[T++]), (!r || a(E, p, h)) && (n[h] = p[h]);
               }
               return n;
           }

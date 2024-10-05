@@ -6,10 +6,10 @@ n.d(t, {
 var r = n(924826),
     i = n(442837),
     a = n(607070);
-function o() {
+function s() {
     return Promise.resolve();
 }
-function s(e) {
+function o(e) {
     let t = document.querySelector(e);
     null != t && t.focus();
 }
@@ -19,8 +19,8 @@ function l(e, t) {
         id: e,
         isEnabled: n,
         orientation: t,
-        setFocus: s,
-        scrollToStart: o,
-        scrollToEnd: o
+        setFocus: o,
+        scrollToStart: s,
+        scrollToEnd: s
     });
 }

@@ -13,8 +13,8 @@ var i = n(735250),
     u = n(2052),
     d = n(127255),
     h = n(5200),
-    m = n(403404),
-    p = n(100527),
+    p = n(403404),
+    m = n(100527),
     _ = n(906732),
     f = n(895924),
     E = n(605236),
@@ -54,10 +54,10 @@ function N(e) {
 }
 function A(e) {
     let { channel: t, inPopout: n, handleClose: s } = e,
-        { analyticsLocations: a } = (0, _.ZP)(p.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
+        { analyticsLocations: a } = (0, _.ZP)(m.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
         r = (0, u.O)(),
         d = () => {
-            (0, m.Z)({
+            (0, p.Z)({
                 channel: t,
                 guildId: t.guild_id,
                 locationObject: r.location,
@@ -120,7 +120,7 @@ function Z(e) {
         });
     }, []);
     let o = (0, u.O)(),
-        { analyticsLocations: d } = (0, _.ZP)(p.Z.VC_TILE_ACTIVITY_INVITE);
+        { analyticsLocations: d } = (0, _.ZP)(m.Z.VC_TILE_ACTIVITY_INVITE);
     return (0, i.jsx)(_.Gt, {
         value: d,
         children: (0, i.jsxs)(I.Z, {
@@ -175,7 +175,7 @@ function Z(e) {
                             className: S.button,
                             innerClassName: S.buttonContents,
                             onClick: function () {
-                                (0, m.Z)({
+                                (0, p.Z)({
                                     channel: t,
                                     guildId: t.guild_id,
                                     locationObject: o.location,
@@ -206,8 +206,8 @@ function M(e) {
             n_participants: u
         });
     }, []);
-    let m = (0, d.Z)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: N } = (0, _.ZP)(p.Z.VC_TILE_ACTIVITY_SUGGESTION);
+    let p = (0, d.Z)({ guildId: n.id }).slice(0, 3),
+        { analyticsLocations: N } = (0, _.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION);
     return (0, i.jsx)(_.Gt, {
         value: N,
         children: (0, i.jsxs)(I.Z, {
@@ -229,7 +229,7 @@ function M(e) {
                     : null,
                 (0, i.jsx)('div', {
                     className: l()(S.activitiesContainer, { [S.activitiesContainerSmol]: o <= 300 }),
-                    children: m.map((e) =>
+                    children: p.map((e) =>
                         (0, i.jsx)(
                             h.Y,
                             {

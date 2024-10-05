@@ -1,53 +1,53 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(735250),
-    i = n(470079),
-    a = n(481060),
-    o = n(194359),
-    s = n(689938),
-    l = n(56599);
-function u(e) {
+var i = n(735250),
+    a = n(470079),
+    s = n(481060),
+    l = n(194359),
+    r = n(689938),
+    o = n(56599);
+function c(e) {
     let { userId: t } = e,
-        n = i.useCallback(
+        n = a.useCallback(
             (e) => {
-                e.stopPropagation(), o.Z.cancelFriendRequest(t);
+                e.stopPropagation(), l.Z.cancelFriendRequest(t);
             },
             [t]
         ),
-        u = i.useCallback(
+        c = a.useCallback(
             (e) => {
-                e.stopPropagation(), o.Z.addRelationship({ userId: t });
+                e.stopPropagation(), l.Z.addRelationship({ userId: t });
             },
             [t]
         );
-    return (0, r.jsxs)('div', {
-        className: l.friendRequestContainer,
+    return (0, i.jsxs)('div', {
+        className: o.friendRequestContainer,
         children: [
-            (0, r.jsx)(a.Button, {
-                className: l.acceptButton,
-                look: a.Button.Looks.FILLED,
-                color: a.Button.Colors.GREEN,
-                size: a.Button.Sizes.NONE,
-                onClick: u,
-                children: (0, r.jsx)(a.Text, {
+            (0, i.jsx)(s.Button, {
+                className: o.acceptButton,
+                look: s.Button.Looks.FILLED,
+                color: s.Button.Colors.GREEN,
+                size: s.Button.Sizes.NONE,
+                onClick: c,
+                children: (0, i.jsx)(s.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: s.Z.Messages.FRIEND_REQUEST_ACCEPT
+                    children: r.Z.Messages.FRIEND_REQUEST_ACCEPT
                 })
             }),
-            (0, r.jsx)(a.Button, {
-                className: l.ignoreButton,
-                look: a.Button.Looks.FILLED,
-                color: a.Button.Colors.PRIMARY,
-                size: a.Button.Sizes.NONE,
+            (0, i.jsx)(s.Button, {
+                className: o.ignoreButton,
+                look: s.Button.Looks.FILLED,
+                color: s.Button.Colors.PRIMARY,
+                size: s.Button.Sizes.NONE,
                 onClick: n,
-                children: (0, r.jsx)(a.Text, {
+                children: (0, i.jsx)(s.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: s.Z.Messages.FRIEND_REQUEST_IGNORE
+                    children: r.Z.Messages.FRIEND_REQUEST_IGNORE
                 })
             })
         ]

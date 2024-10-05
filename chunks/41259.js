@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(974674),
     a = n(1561),
-    o = n(993365),
-    s = n(385499),
+    s = n(993365),
+    o = n(385499),
     l = n(768581),
     u = n(630388),
     c = n(489863),
@@ -17,12 +17,12 @@ var i = n(974674),
     E = n(689938),
     f = n(178677);
 function h(e) {
-    let { id: t, user: n, application: h, bot: p, accountScopes: m, showLogout: I, location: T } = e,
-        g = l.ZP.getApplicationIconURL({
+    let { id: t, user: n, application: h, bot: p, accountScopes: I, showLogout: m, location: T } = e,
+        S = l.ZP.getApplicationIconURL({
             id: h.id,
             icon: h.icon
         }),
-        S = l.ZP.getUserAvatarURL(n);
+        g = l.ZP.getUserAvatarURL(n);
     return (0, r.jsxs)('header', {
         id: t,
         className: f.header,
@@ -31,7 +31,7 @@ function h(e) {
                 className: f.headerIcons,
                 children: [
                     (0, r.jsx)(i.qE, {
-                        src: g,
+                        src: S,
                         size: _.EF.SIZE_56,
                         'aria-label': h.name
                     }),
@@ -40,56 +40,56 @@ function h(e) {
                         children: [(0, r.jsx)('div', { className: f.ellipse }), (0, r.jsx)('div', { className: f.ellipse }), (0, r.jsx)('div', { className: f.ellipse })]
                     }),
                     (0, r.jsx)(i.qE, {
-                        src: S,
+                        src: g,
                         size: _.EF.SIZE_56,
                         'aria-label': n.username
                     })
                 ]
             }),
-            (0, r.jsxs)(o.x, {
+            (0, r.jsxs)(s.x, {
                 variant: 'text-lg/bold',
                 color: 'header-primary',
                 children: [
                     h.name,
                     null != p
-                        ? (0, r.jsx)(s.Z, {
+                        ? (0, r.jsx)(o.Z, {
                               className: f.botTag,
                               verified: null != p.public_flags && (0, u.yE)(p.public_flags, d.xW$.VERIFIED_BOT)
                           })
                         : null
                 ]
             }),
-            m.length > 0
-                ? (0, r.jsx)(o.x, {
+            I.length > 0
+                ? (0, r.jsx)(s.x, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
                       className: f.label,
                       children: E.Z.Messages.OAUTH2_REQUESTS_ACCOUNT_ACCESS
                   })
-                : (0, r.jsx)(o.x, {
+                : (0, r.jsx)(s.x, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
                       className: f.label,
                       children: E.Z.Messages.OAUTH2_CONNECT_TO_DISCORD
                   }),
-            I
+            m
                 ? (0, r.jsx)('div', {
                       className: f.currentUser,
-                      children: (0, r.jsxs)(o.x, {
+                      children: (0, r.jsxs)(s.x, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
                           children: [
                               E.Z.Messages.OAUTH2_SIGNED_IN_AS.format({
                                   userHook: () =>
                                       (0, r.jsxs)(
-                                          o.x,
+                                          s.x,
                                           {
                                               className: f.currentUserTag,
                                               variant: 'text-sm/normal',
                                               children: [
                                                   n.username,
                                                   !n.isPomelo() &&
-                                                      (0, r.jsx)(o.x, {
+                                                      (0, r.jsx)(s.x, {
                                                           className: f.currentUserDiscriminator,
                                                           variant: 'text-sm/normal',
                                                           children: '#'.concat(n.discriminator)

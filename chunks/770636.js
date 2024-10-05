@@ -1,7 +1,7 @@
 var r = n(67867),
-    i = n(476508),
+    o = n(476508),
     a = n(228042),
-    o = n(292137);
+    i = n(292137);
 r(
     {
         target: 'Map',
@@ -12,8 +12,8 @@ r(
     {
         find: function (e) {
             var t = a(this),
-                n = i(e, arguments.length > 1 ? arguments[1] : void 0),
-                r = o(
+                n = o(e, arguments.length > 1 ? arguments[1] : void 0),
+                r = i(
                     t,
                     function (e, r) {
                         if (n(e, r, t)) return { value: e };

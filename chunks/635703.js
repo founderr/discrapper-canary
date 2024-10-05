@@ -4,16 +4,16 @@ n.r(t),
             return d;
         },
         updateCreateGuildModal: function () {
-            return m;
+            return I;
         }
     });
 var o = n(735250);
 n(470079);
 var l = n(481060),
     a = n(390885),
-    i = n(626135),
+    s = n(626135),
     r = n(299402),
-    s = n(675999),
+    i = n(675999),
     c = n(981631),
     u = n(630724);
 function _(e, t, n, l) {
@@ -24,29 +24,29 @@ function _(e, t, n, l) {
         onSlideChange: (e) =>
             (function (e, t) {
                 switch (e) {
-                    case s._m.GUILD_TEMPLATES:
+                    case i._m.GUILD_TEMPLATES:
                         a.Z.flowStepOrStart(u.MK.CREATE_GUILD, u.X2.GUILD_TEMPLATES),
-                            i.default.track(c.rMx.OPEN_MODAL, {
+                            s.default.track(c.rMx.OPEN_MODAL, {
                                 type: 'Create Guild Templates',
                                 location: t
                             });
                         break;
-                    case s._m.CUSTOMIZE_GUILD:
+                    case i._m.CUSTOMIZE_GUILD:
                         a.Z.flowStep(u.MK.CREATE_GUILD, u.X2.GUILD_CREATE),
-                            i.default.track(c.rMx.OPEN_MODAL, {
+                            s.default.track(c.rMx.OPEN_MODAL, {
                                 type: 'Create Guild Step 2',
                                 location: t
                             });
                         break;
-                    case s._m.CREATION_INTENT:
-                        i.default.track(c.rMx.OPEN_MODAL, {
+                    case i._m.CREATION_INTENT:
+                        s.default.track(c.rMx.OPEN_MODAL, {
                             type: 'Server Intent Discovery',
                             location: t
                         });
                         break;
-                    case s._m.JOIN_GUILD:
+                    case i._m.JOIN_GUILD:
                         a.Z.flowStep(u.MK.CREATE_GUILD, u.X2.JOIN_GUILD),
-                            i.default.track(c.rMx.OPEN_MODAL, {
+                            s.default.track(c.rMx.OPEN_MODAL, {
                                 type: 'Join Guild',
                                 location: t
                             });
@@ -59,9 +59,9 @@ function _(e, t, n, l) {
 }
 let d = (e) => {
         let { initialSlide: t, location: n, onSuccess: o } = e;
-        (0, l.openModal)((e) => _(e, t, n, o), { modalKey: s.PU });
+        (0, l.openModal)((e) => _(e, t, n, o), { modalKey: i.PU });
     },
-    m = (e) => {
+    I = (e) => {
         let { slide: t, location: n } = e;
-        (0, l.updateModal)(s.PU, (e) => _(e, t, n));
+        (0, l.updateModal)(i.PU, (e) => _(e, t, n));
     };

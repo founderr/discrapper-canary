@@ -1,79 +1,79 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return E;
+        return I;
     }
 }),
-    n(47120);
-var i = n(735250);
-n(470079);
-var s = n(442837),
-    a = n(481060),
-    l = n(239091),
-    r = n(596454),
-    o = n(339085),
-    c = n(883429),
-    u = n(456269),
-    d = n(665906),
-    h = n(592125),
-    m = n(710352),
-    p = n(689938),
-    _ = n(37461);
-function f(e) {
-    let { tag: t } = e,
-        { name: n, emojiId: a, emojiName: l } = t,
-        c = (0, s.e7)([o.ZP], () => (null != a ? o.ZP.getUsableCustomEmojiById(a) : null));
+    t(47120);
+var i = t(735250);
+t(470079);
+var a = t(442837),
+    r = t(481060),
+    d = t(239091),
+    s = t(596454),
+    o = t(339085),
+    u = t(883429),
+    l = t(456269),
+    c = t(665906),
+    Z = t(592125),
+    f = t(710352),
+    h = t(689938),
+    v = t(37461);
+function _(e) {
+    let { tag: n } = e,
+        { name: t, emojiId: r, emojiName: d } = n,
+        u = (0, a.e7)([o.ZP], () => (null != r ? o.ZP.getUsableCustomEmojiById(r) : null));
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(r.Z, {
-                className: _.emoji,
-                emojiId: a,
-                emojiName: l,
-                animated: !!(null == c ? void 0 : c.animated)
+            (0, i.jsx)(s.Z, {
+                className: v.emoji,
+                emojiId: r,
+                emojiName: d,
+                animated: !!(null == u ? void 0 : u.animated)
             }),
-            n
+            t
         ]
     });
 }
-function E(e) {
-    let t = (0, s.e7)([h.Z], () => h.Z.getChannel(e), [e]),
-        n = (0, d.C7)(t),
-        r = (0, s.e7)([h.Z], () => h.Z.getChannel(null == t ? void 0 : t.parent_id), [t]),
-        o = (0, u.Vm)(r),
-        _ = (0, u.eV)(t),
-        E = _.length >= m.Cn,
-        g = (0, d.$R)(t);
-    if (null == t) return (0, l.Zy)(), null;
-    if (!n || __OVERLAY__ || !t.isForumPost() || (null == o ? void 0 : o.length) === 0 || !g) return null;
-    let C = (e) => {
-            let n = new Set(_);
-            if (n.has(e)) n.delete(e);
+function I(e) {
+    let n = (0, a.e7)([Z.Z], () => Z.Z.getChannel(e), [e]),
+        t = (0, c.C7)(n),
+        s = (0, a.e7)([Z.Z], () => Z.Z.getChannel(null == n ? void 0 : n.parent_id), [n]),
+        o = (0, l.Vm)(s),
+        v = (0, l.eV)(n),
+        I = v.length >= f.Cn,
+        M = (0, c.$R)(n);
+    if (null == n) return (0, d.Zy)(), null;
+    if (!t || __OVERLAY__ || !n.isForumPost() || (null == o ? void 0 : o.length) === 0 || !M) return null;
+    let T = (e) => {
+            let t = new Set(v);
+            if (t.has(e)) t.delete(e);
             else {
-                if (E) return;
-                n.add(e);
+                if (I) return;
+                t.add(e);
             }
-            let i = Array.from(n).map((e) => e.id);
-            c.Z.updateForumPostTags(t.id, i);
+            let i = Array.from(t).map((e) => e.id);
+            u.Z.updateForumPostTags(n.id, i);
         },
-        I =
+        m =
             null == o
                 ? void 0
                 : o.map((e) => {
-                      let t = _.includes(e);
+                      let n = v.includes(e);
                       return (0, i.jsx)(
-                          a.MenuCheckboxItem,
+                          r.MenuCheckboxItem,
                           {
                               id: e.id,
-                              label: (0, i.jsx)(f, { tag: e }),
-                              disabled: E && !t,
-                              action: () => C(e),
-                              checked: t
+                              label: (0, i.jsx)(_, { tag: e }),
+                              disabled: I && !n,
+                              action: () => T(e),
+                              checked: n
                           },
                           e.id
                       );
                   });
-    return (0, i.jsx)(a.MenuItem, {
+    return (0, i.jsx)(r.MenuItem, {
         id: 'edit-tags',
-        label: p.Z.Messages.FORUM_TAG_POST_EDIT,
-        children: I
+        label: h.Z.Messages.FORUM_TAG_POST_EDIT,
+        children: m
     });
 }

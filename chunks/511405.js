@@ -1,34 +1,34 @@
 n.d(t, {
     G: function () {
-        return I;
+        return o;
     },
     H: function () {
-        return T;
+        return l;
     }
-});
-var r = n(309749);
-var i = n(518263);
-var a = n(970173);
-var o = n(520712);
-var s = n(268111);
-var l = n(941497);
-var u = n(32026);
-var c = n(480839);
-var d = n(744285);
-var _ = n(492257);
-var E = n(873817);
-var f = n(392711),
-    h = n.n(f),
-    p = n(149765),
-    m = n(915486);
-function I(e) {
-    return h().cloneDeepWith(e, (e) =>
-        (0, p.Bw)(e)
+}),
+    n(309749),
+    n(518263),
+    n(970173),
+    n(520712),
+    n(268111),
+    n(941497),
+    n(32026),
+    n(480839),
+    n(744285),
+    n(492257),
+    n(873817);
+var r = n(392711),
+    i = n.n(r),
+    a = n(149765),
+    s = n(915486);
+function o(e) {
+    return i().cloneDeepWith(e, (e) =>
+        (0, a.Bw)(e)
             ? {
                   __tag__: 'bigflag',
                   data: e.toJSON()
               }
-            : (0, m.lq)(e)
+            : (0, s.lq)(e)
               ? {
                     __tag__: 'uint8array',
                     data: Array.from(e)
@@ -36,6 +36,6 @@ function I(e) {
               : void 0
     );
 }
-function T(e) {
-    return h().cloneDeepWith(e, (e) => (null != e && 'object' == typeof e && '__tag__' in e && 'bigflag' === e.__tag__ ? p.vB(e.data) : (0, m.Bx)(e) ? new Uint8Array(e.data) : void 0));
+function l(e) {
+    return i().cloneDeepWith(e, (e) => (null != e && 'object' == typeof e && '__tag__' in e && 'bigflag' === e.__tag__ ? a.vB(e.data) : (0, s.Bx)(e) ? new Uint8Array(e.data) : void 0));
 }

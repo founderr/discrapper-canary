@@ -43,8 +43,8 @@ var c,
     D = t(228643),
     P = t(275759),
     U = t(231757),
-    B = t(753194),
-    w = t(225104),
+    w = t(753194),
+    B = t(225104),
     H = t(458034),
     F = t(856651),
     V = t(981631),
@@ -173,7 +173,7 @@ function Q(e) {
                     j = null == f ? void 0 : f.application,
                     L = (null == j ? void 0 : j.bot) != null ? new y.Z(j.bot) : null;
                 P.SJ.includes(null !== (n = null == j ? void 0 : j.id) && void 0 !== n ? n : '')
-                    ? (u = (0, a.jsx)(B.Z, {
+                    ? (u = (0, a.jsx)(w.Z, {
                           className: z.botTag,
                           color: S,
                           size: 16
@@ -393,13 +393,13 @@ function J(e) {
         [f, y] = l.useState(!0),
         [R, P] = l.useState(!1),
         U = (0, N.e7)([k.Z], () => k.Z.getAccounts()),
-        B = (0, N.e7)([j.default], () => j.default.getId()),
+        w = (0, N.e7)([j.default], () => j.default.getId()),
         [F, K] = l.useState(null),
         [W, J] = l.useState(null),
         [$, ee] = l.useState(null),
         en = (0, x.ZP)(),
         et = (0, N.e7)([g.default], () => g.default.locale),
-        ec = (0, N.e7)([G.ZP], () => G.ZP.getMember(c, B)),
+        ec = (0, N.e7)([G.ZP], () => G.ZP.getMember(c, w)),
         eo = Object.values((0, N.e7)([L.Z], () => L.Z.getMutableGuildChannelsForGuild(c))).filter((e) => b.Z.can(V.Plq.VIEW_CHANNEL, e) && b.Z.can(V.Plq.SEND_MESSAGES, e) && (0, M.Z)(e).includes(o));
     function ea() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -595,7 +595,7 @@ function J(e) {
                                                                                     }),
                                                                                     (0, a.jsx)(v.E3, {
                                                                                         connectedAccount: e,
-                                                                                        userId: B,
+                                                                                        userId: w,
                                                                                         theme: en,
                                                                                         locale: et,
                                                                                         className: z.accountConnectedPreviewConnectedUserAccount,
@@ -665,7 +665,7 @@ function J(e) {
                                         (0, a.jsxs)('div', {
                                             className: z.roleGranted,
                                             children: [
-                                                (0, a.jsx)(w.Z, {
+                                                (0, a.jsx)(B.Z, {
                                                     guildId: c,
                                                     className: z.verifiedIcon,
                                                     role: o,

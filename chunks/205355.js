@@ -1,23 +1,23 @@
-var r = n(47120);
+n(47120);
 var i = n(544891),
     a = n(570140),
-    o = n(981631);
-let s = ''.concat(o.dGm, '/api/v2/scheduled-maintenances'),
-    l = ''.concat(o.dGm, '/api/v2/incidents/unresolved.json');
+    s = n(981631);
+let l = ''.concat(s.dGm, '/api/v2/scheduled-maintenances'),
+    r = ''.concat(s.dGm, '/api/v2/incidents/unresolved.json');
 t.Z = {
     checkIncidents() {
-        Promise.all([i.tn.get(''.concat(s, '/active.json')), i.tn.get(l)]).then((e) => {
+        Promise.all([i.tn.get(''.concat(l, '/active.json')), i.tn.get(r)]).then((e) => {
             let [t, n] = e,
-                [r] = t.body.scheduled_maintenances,
-                [i] = n.body.incidents;
+                [i] = t.body.scheduled_maintenances,
+                [s] = n.body.incidents;
             a.Z.dispatch({
                 type: 'STATUS_PAGE_INCIDENT',
-                incident: i || r
+                incident: s || i
             });
         });
     },
     checkScheduledMaintenances() {
-        i.tn.get(''.concat(s, '/upcoming.json')).then((e) => {
+        i.tn.get(''.concat(l, '/upcoming.json')).then((e) => {
             let [t] = e.body.scheduled_maintenances;
             a.Z.dispatch({
                 type: 'STATUS_PAGE_SCHEDULED_MAINTENANCE',

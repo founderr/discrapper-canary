@@ -6,38 +6,38 @@ n.d(t, {
 var r = n(373793),
     i = n(367907),
     a = n(812206),
-    o = n(69580),
-    s = n(541099),
+    s = n(69580),
+    o = n(541099),
     l = n(981631),
     u = n(689079);
 function c(e) {
     var t, n, c, d, _;
-    let { applicationId: E, userIndexState: f, guildIndexState: h, onSuccess: p, sectionName: m, location: I, entrypoint: T } = e;
+    let { applicationId: E, userIndexState: f, guildIndexState: h, onSuccess: p, sectionName: I, location: m, entrypoint: T } = e;
     if (E === u.bi.BUILT_IN || (null === (t = f.result) || void 0 === t ? void 0 : t.sections[E]) != null || (null === (n = h.result) || void 0 === n ? void 0 : n.sections[E]) != null) return null == p || p(), Promise.resolve(!0);
-    let g = null != T ? T : s.Z.lastShownEntrypoint();
+    let S = null != T ? T : o.Z.lastShownEntrypoint();
     (0, i.yw)(l.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
-        location: I,
+        location: m,
         application_id: E,
-        section_name: m,
-        source: g
+        section_name: I,
+        source: S
     });
-    let S = a.Z.getApplication(E),
+    let g = a.Z.getApplication(E),
         A = r.Y.USER_INSTALL,
-        v = null == S ? void 0 : null === (_ = S.integrationTypesConfig) || void 0 === _ ? void 0 : null === (d = _[A]) || void 0 === d ? void 0 : null === (c = d.oauth2InstallParams) || void 0 === c ? void 0 : c.scopes;
+        N = null == g ? void 0 : null === (_ = g.integrationTypesConfig) || void 0 === _ ? void 0 : null === (d = _[A]) || void 0 === d ? void 0 : null === (c = d.oauth2InstallParams) || void 0 === c ? void 0 : c.scopes;
     return new Promise((e) => {
-        (0, o.openOAuth2Modal)(
+        (0, s.openOAuth2Modal)(
             {
                 clientId: E,
                 integrationType: A,
-                scopes: v,
+                scopes: N,
                 callback: (t) => {
                     let { location: n } = t;
                     null != n &&
                         ((0, i.yw)(l.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
-                            location: I,
+                            location: m,
                             application_id: E,
-                            section_name: m,
-                            source: g
+                            section_name: I,
+                            source: S
                         }),
                         e(!0),
                         null == p || p());

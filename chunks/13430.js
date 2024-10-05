@@ -19,7 +19,7 @@ let h = l()().localeData().months(),
         label: h[e]
     })),
     g = /[a-zA-Z0-9]/;
-function m(e) {
+function f(e) {
     let { options: t, selectOption: n, children: i } = e,
         [a, o] = r.useState('');
     r.useEffect(() => {
@@ -43,7 +43,7 @@ function m(e) {
         children: i
     });
 }
-function f() {
+function m() {
     let e = l()().localeData().longDateFormat('L'),
         t = e.indexOf('D'),
         n = e.indexOf('M'),
@@ -70,11 +70,11 @@ let I = r.forwardRef(function (e, t) {
     let { value: n, wrapperClassName: i, onChange: o, onPopulated: h, error: g, autoFocus: I, required: N } = e,
         {
             day: T,
-            setDay: x,
-            month: A,
+            setDay: A,
+            month: x,
             setMonth: C,
-            year: Z,
-            setYear: R
+            year: v,
+            setYear: Z
         } = (function (e) {
             let t = null,
                 n = null,
@@ -92,12 +92,12 @@ let I = r.forwardRef(function (e, t) {
                 setYear: u
             };
         })(n),
-        v = r.useMemo(() => (null != T && null != A && null != Z ? l()(''.concat(T, '/').concat(A, '/').concat(Z), 'DD/MM/YYYY') : null), [T, A, Z]);
+        S = r.useMemo(() => (null != T && null != x && null != v ? l()(''.concat(T, '/').concat(x, '/').concat(v), 'DD/MM/YYYY') : null), [T, x, v]);
     r.useEffect(() => {
-        o((null == v ? void 0 : v.isValid()) ? v : null);
-    }, [v, o]);
-    let S = g;
-    null != v && !v.isValid() && (S = d.Z.Messages.AGE_GATE_INVALID_BIRTHDAY);
+        o((null == S ? void 0 : S.isValid()) ? S : null);
+    }, [S, o]);
+    let R = g;
+    null != S && !S.isValid() && (R = d.Z.Messages.AGE_GATE_INVALID_BIRTHDAY);
     let O = (function () {
             let e = new Date().getFullYear(),
                 t = r.useRef(
@@ -116,11 +116,11 @@ let I = r.forwardRef(function (e, t) {
                 t.current
             );
         })(),
-        [b, P] = r.useState(I ? 0 : -1),
+        [b, D] = r.useState(I ? 0 : -1),
         M = r.useRef(null),
-        D = r.useRef(null),
         L = r.useRef(null),
-        j = r.useMemo(f, []),
+        P = r.useRef(null),
+        j = r.useMemo(m, []),
         y = r.useCallback(() => {
             var e, t, n, s;
             switch (null === (e = j[b]) || void 0 === e ? void 0 : e.type) {
@@ -128,12 +128,12 @@ let I = r.forwardRef(function (e, t) {
                     null === (t = M.current) || void 0 === t || t.focus();
                     break;
                 case 'month':
-                    null === (n = D.current) || void 0 === n || n.focus();
+                    null === (n = L.current) || void 0 === n || n.focus();
                     break;
                 case 'year':
-                    null === (s = L.current) || void 0 === s || s.focus();
+                    null === (s = P.current) || void 0 === s || s.focus();
             }
-        }, [b, M, D, L, j]);
+        }, [b, M, L, P, j]);
     r.useEffect(() => {
         setTimeout(y, 500);
     }, []),
@@ -151,9 +151,9 @@ let I = r.forwardRef(function (e, t) {
             case 'day':
                 G.push({
                     key: 'day',
-                    input: (0, s.jsx)(m, {
+                    input: (0, s.jsx)(f, {
                         options: E,
-                        selectOption: x,
+                        selectOption: A,
                         children: (0, s.jsx)(u.Z, {
                             ref: M,
                             className: _.__invalid_inputDay,
@@ -167,7 +167,7 @@ let I = r.forwardRef(function (e, t) {
                             value: T,
                             onChange: (t) => {
                                 let { value: n } = t;
-                                x(n), P(e + 1);
+                                A(n), D(e + 1);
                             },
                             maxMenuHeight: 215
                         })
@@ -177,11 +177,11 @@ let I = r.forwardRef(function (e, t) {
             case 'month':
                 G.push({
                     key: 'month',
-                    input: (0, s.jsx)(m, {
+                    input: (0, s.jsx)(f, {
                         options: p,
                         selectOption: C,
                         children: (0, s.jsx)(u.Z, {
-                            ref: D,
+                            ref: L,
                             className: _.__invalid_inputMonth,
                             'aria-label': d.Z.Messages.AGE_GATE_DOB_MONTH,
                             menuPlacement: u.Z.MenuPlacements.TOP,
@@ -190,10 +190,10 @@ let I = r.forwardRef(function (e, t) {
                                 children: d.Z.Messages.AGE_GATE_DOB_MONTH
                             }),
                             options: p,
-                            value: A,
+                            value: x,
                             onChange: (t) => {
                                 let { value: n } = t;
-                                C(n), P(e + 1);
+                                C(n), D(e + 1);
                             },
                             maxMenuHeight: 215
                         })
@@ -203,11 +203,11 @@ let I = r.forwardRef(function (e, t) {
             case 'year':
                 G.push({
                     key: 'year',
-                    input: (0, s.jsx)(m, {
+                    input: (0, s.jsx)(f, {
                         options: O,
-                        selectOption: R,
+                        selectOption: Z,
                         children: (0, s.jsx)(u.Z, {
-                            ref: L,
+                            ref: P,
                             className: _.__invalid_inputYear,
                             'aria-label': d.Z.Messages.AGE_GATE_DOB_YEAR,
                             menuPlacement: u.Z.MenuPlacements.TOP,
@@ -216,10 +216,10 @@ let I = r.forwardRef(function (e, t) {
                                 children: d.Z.Messages.AGE_GATE_DOB_YEAR
                             }),
                             options: O,
-                            value: Z,
+                            value: v,
                             onChange: (t) => {
                                 let { value: n } = t;
-                                R(n), P(e + 1);
+                                Z(n), D(e + 1);
                             },
                             maxMenuHeight: 215
                         })
@@ -233,7 +233,7 @@ let I = r.forwardRef(function (e, t) {
             (0, s.jsx)(c.FormTitle, {
                 tag: 'legend',
                 required: N,
-                error: S,
+                error: R,
                 children: d.Z.Messages.AGE_GATE_DATE_OF_BIRTH
             }),
             (0, s.jsx)('div', {

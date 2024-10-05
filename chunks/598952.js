@@ -1,47 +1,47 @@
-a.d(t, {
+n.d(t, {
     Z: function () {
-        return r;
+        return o;
     }
 });
-var n = a(735250);
-a(470079);
-var o = a(481060),
-    l = a(660151);
-function r(e) {
+var a = n(735250);
+n(470079);
+var r = n(481060),
+    i = n(660151);
+function o(e) {
     var t;
-    let { attachment: a } = e,
-        r = Math.round(((null !== (t = a.size) && void 0 !== t ? t : 0) / 1024 / 1024) * 100) / 100;
-    return (0, n.jsxs)('div', {
-        className: l.container,
+    let { attachment: n } = e,
+        o = Math.round(((null !== (t = n.size) && void 0 !== t ? t : 0) / 1024 / 1024) * 100) / 100;
+    return (0, a.jsxs)('div', {
+        className: i.container,
         children: [
-            (0, n.jsx)(o.ImageFileIcon, {
+            (0, a.jsx)(r.ImageFileIcon, {
                 size: 'xs',
                 color: 'currentColor',
-                className: l.fileIcon
+                className: i.fileIcon
             }),
-            (0, n.jsx)(o.Spacer, {
+            (0, a.jsx)(r.Spacer, {
                 size: 8,
                 horizontal: !0
             }),
-            (0, n.jsx)(o.Text, {
+            (0, a.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-normal',
-                className: l.fileName,
-                children: a.filename
+                className: i.fileName,
+                children: n.filename
             }),
-            (0, n.jsx)(o.Spacer, {
+            (0, a.jsx)(r.Spacer, {
                 size: 8,
                 horizontal: !0
             }),
-            (0, n.jsx)('div', { className: l.dot }),
-            (0, n.jsx)(o.Spacer, {
+            (0, a.jsx)('div', { className: i.dot }),
+            (0, a.jsx)(r.Spacer, {
                 size: 8,
                 horizontal: !0
             }),
-            (0, n.jsxs)(o.Text, {
+            (0, a.jsxs)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: [r, 'MB']
+                children: [o, 'MB']
             })
         ]
     });

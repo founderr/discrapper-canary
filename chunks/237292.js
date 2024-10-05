@@ -1,9 +1,9 @@
 n.d(t, {
     mG: function () {
-        return o;
+        return s;
     },
     y0: function () {
-        return s;
+        return o;
     }
 });
 var r = n(818083);
@@ -33,15 +33,15 @@ let i = (0, r.B)({
             }
         ]
     });
-function o(e) {
-    let { location: t, autoTrackExposure: n = !1 } = e,
-        { enabled: r } = i.getCurrentConfig({ location: t }, { autoTrackExposure: n }),
-        { enabled: o } = a.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return r || o;
-}
 function s(e) {
     let { location: t, autoTrackExposure: n = !1 } = e,
+        { enabled: r } = i.getCurrentConfig({ location: t }, { autoTrackExposure: n }),
+        { enabled: s } = a.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+    return r || s;
+}
+function o(e) {
+    let { location: t, autoTrackExposure: n = !1 } = e,
         { enabled: r } = i.useExperiment({ location: t }, { autoTrackExposure: n }),
-        { enabled: o } = a.useExperiment({ location: t }, { autoTrackExposure: n });
-    return r || o;
+        { enabled: s } = a.useExperiment({ location: t }, { autoTrackExposure: n });
+    return r || s;
 }

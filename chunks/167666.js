@@ -1,8 +1,8 @@
 var r,
     i = n(735250),
     a = n(470079),
-    o = n(120356),
-    s = n.n(o),
+    s = n(120356),
+    o = n.n(s),
     l = n(481060),
     u = n(618560);
 function c(e, t, n) {
@@ -51,10 +51,10 @@ class _ extends (r = a.PureComponent) {
         );
     }
     render() {
-        let { className: e, children: t, tag: n, size: r, fullscreenOnMobile: a, ...o } = this.props;
+        let { className: e, children: t, tag: n, size: r, fullscreenOnMobile: a, ...s } = this.props;
         return (0, i.jsx)(n, {
-            className: s()(u.modal, e, r, { [u.fullscreenOnMobile]: a }),
-            ...o,
+            className: o()(u.modal, e, r, { [u.fullscreenOnMobile]: a }),
+            ...s,
             children: this.renderChildren()
         });
     }

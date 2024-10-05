@@ -1,12 +1,12 @@
 n.d(t, {
     K: function () {
-        return o;
+        return s;
     }
 });
 var r = n(339085),
     i = n(176354),
     a = n(185923);
-function o(e, t) {
+function s(e, t) {
     if (null == e.id) return !0;
     let n = r.ZP.getCustomEmojiById(e.id);
     return (

@@ -1,19 +1,19 @@
 n.d(t, {
     P: function () {
-        return d;
+        return c;
     },
     Z: function () {
-        return _;
+        return d;
     }
-});
-var r = n(47120);
-var i = n(836560);
-var a = n(555573),
-    o = n(376918),
+}),
+    n(47120);
+var r = n(836560),
+    i = n(555573),
+    a = n(376918),
     s = n(695346),
-    l = n(590921),
-    u = n(152089);
-function c(e, t, n) {
+    o = n(590921),
+    l = n(152089);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function c(e, t, n) {
         e
     );
 }
-function d() {
+function c() {
     return {
         query: null,
         selectedIndex: null,
@@ -34,7 +34,7 @@ function d() {
         didInitialQuery: !1
     };
 }
-class _ extends i.EventEmitter {
+class d extends r.EventEmitter {
     updateProps(e) {
         let t = this.props.focused !== e.focused,
             n = this.props.channel.id !== e.channel.id || this.props.activeCommandOption !== e.activeCommandOption,
@@ -59,16 +59,16 @@ class _ extends i.EventEmitter {
         if (null == this.state.selectedIndex) {
             var t;
             let n = null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo.focusMode;
-            return !e && (n === l.QZ.MANUAL || n === l.QZ.AUTO_WHEN_FILTERED) && (this.setSelectedIndex(0), !0);
+            return !e && (n === o.QZ.MANUAL || n === o.QZ.AUTO_WHEN_FILTERED) && (this.setSelectedIndex(0), !0);
         }
         return this.selectResult(this.state.selectedIndex, e, !0);
     }
     onMoveSelection(e) {
         var t, n;
         if (!this.state.isVisible) return !1;
-        if ((e < 0 ? this.props.navigator.focusPreviousItem() : e > 0 && this.props.navigator.focusNextItem(), null != this.state.selectedIndex && (null === (t = this.state.query) || void 0 === t ? void 0 : t.type) === l.eq.COMMANDS)) {
+        if ((e < 0 ? this.props.navigator.focusPreviousItem() : e > 0 && this.props.navigator.focusNextItem(), null != this.state.selectedIndex && (null === (t = this.state.query) || void 0 === t ? void 0 : t.type) === o.eq.COMMANDS)) {
             let e = null === (n = this.state.query.results.commands) || void 0 === n ? void 0 : n[this.state.selectedIndex];
-            null != e && a.Sg(this.props.channel.id, e.id);
+            null != e && i.Sg(this.props.channel.id, e.id);
         }
         return !0;
     }
@@ -102,8 +102,8 @@ class _ extends i.EventEmitter {
         let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == this.props.editorRef.current) return;
-        let i = (0, u.FW)(this.props),
-            a = (0, u.fZ)({
+        let i = (0, l.FW)(this.props),
+            u = (0, l.fZ)({
                 channel: this.props.channel,
                 guild: this.props.guild,
                 options: i,
@@ -112,45 +112,45 @@ class _ extends i.EventEmitter {
                 textValue: this.props.textValue,
                 optionText: this.props.optionText
             }),
-            c = i.commands !== l.L8.DISABLED ? (0, u.py)(this.props.activeCommandOption, this.props.currentWord) : null;
-        if (null == a && null != c) a = c;
-        else if (null == a || (null != c && a.type !== c.type)) {
+            c = i.commands !== o.L8.DISABLED ? (0, l.py)(this.props.activeCommandOption, this.props.currentWord) : null;
+        if (null == u && null != c) u = c;
+        else if (null == u || (null != c && u.type !== c.type)) {
             this.clearQuery();
             return;
         }
-        let { type: d, typeInfo: _, query: E } = a,
+        let { type: d, typeInfo: _, query: E } = u,
             f = r || (n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== E || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== _)),
             h = s.fq.getSetting();
         i.allowStickers = i.allowStickers ? h : i.allowStickers;
-        let { results: p, metadata: m } = _.queryResults(this.props.channel, this.props.guild, E, i, f),
-            I = 0;
-        for (let e of Object.values(p)) Array.isArray(e) && (I += e.length);
+        let { results: p, metadata: I } = _.queryResults(this.props.channel, this.props.guild, E, i, f),
+            m = 0;
+        for (let e of Object.values(p)) Array.isArray(e) && (m += e.length);
         let T = !0 === p.isLoading,
-            g = this.shouldShow(I, T, _),
-            S = this.state.selectedIndex;
-        !g || T ? (S = null) : null != S && S >= I && (S = I - 1),
-            g && !this.state.isVisible && (0, o.a7)(d, this.props.channel, m),
+            S = this.shouldShow(m, T, _),
+            g = this.state.selectedIndex;
+        !S || T ? (g = null) : null != g && g >= m && (g = m - 1),
+            S && !this.state.isVisible && (0, a.a7)(d, this.props.channel, I),
             this.setState({
                 query: {
                     type: d,
                     typeInfo: _,
                     queryText: E,
                     results: p,
-                    resultCount: I,
+                    resultCount: m,
                     options: i,
                     isLoading: T
                 },
-                isVisible: g,
-                selectedIndex: S
+                isVisible: S,
+                selectedIndex: g
             });
     }
     shouldShow(e, t, n) {
         return this.props.focused && null == this.props.expressionPickerView && (e > 0 || t || n.showEmpty);
     }
     selectResult(e, t, n) {
-        var r, i, a;
+        var r, i, s;
         if (!this.state.isVisible) return !1;
-        let { type: s, typeInfo: u, results: c, resultCount: d, options: _ } = this.state.query;
+        let { type: l, typeInfo: u, results: c, resultCount: d, options: _ } = this.state.query;
         if (e >= d) return !1;
         let E =
             null === (i = u.onSelect) || void 0 === i
@@ -158,14 +158,14 @@ class _ extends i.EventEmitter {
                 : i.call(u, {
                       results: c,
                       index: e,
-                      type: t ? l.QB.SEND : l.QB.INSERT,
+                      type: t ? o.QB.SEND : o.QB.INSERT,
                       options: _,
                       channel: this.props.channel,
                       guild: this.props.guild,
                       tabOrEnter: n,
                       queryText: null === (r = this.state.query) || void 0 === r ? void 0 : r.queryText
                   });
-        return null != E && (0, o.Qt)(s, null !== (a = E.type) && void 0 !== a ? a : null, this.props.channel, E.metadata), !0;
+        return null != E && (0, a.Qt)(l, null !== (s = E.type) && void 0 !== s ? s : null, this.props.channel, E.metadata), !0;
     }
     setState(e) {
         for (let t in e)
@@ -179,6 +179,6 @@ class _ extends i.EventEmitter {
             }
     }
     constructor(e) {
-        super(), c(this, 'props', void 0), c(this, 'state', void 0), (this.props = e), (this.state = d());
+        super(), u(this, 'props', void 0), u(this, 'state', void 0), (this.props = e), (this.state = c());
     }
 }

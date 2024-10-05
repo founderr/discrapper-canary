@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         contextMenuCallbackNative: function () {
-            return o;
+            return s;
         },
         contextMenuCallbackWeb: function () {
-            return s;
+            return o;
         },
         getSelectionText: function () {
             return a;
@@ -21,11 +21,11 @@ function a() {
     } else null != document.selection && 'Control' !== document.selection.type && (e = document.selection.createRange().text);
     return null != e ? e : '';
 }
-function o(e) {
+function s(e) {
     let t = a(),
-        o = e.target;
-    if ((null == o ? void 0 : o.tagName) === 'TEXTAREA' || (null == o ? void 0 : o.tagName) === 'INPUT') {
-        if ((null == o ? void 0 : o.type) !== 'checkbox')
+        s = e.target;
+    if ((null == s ? void 0 : s.tagName) === 'TEXTAREA' || (null == s ? void 0 : s.tagName) === 'INPUT') {
+        if ((null == s ? void 0 : s.type) !== 'checkbox')
             return (0, i.jW)(
                 e,
                 async () => {
@@ -38,22 +38,22 @@ function o(e) {
                 },
                 { enableSpellCheck: !0 }
             );
-    } else if ('none' === window.getComputedStyle(o).getPropertyValue('-webkit-user-select')) {
+    } else if ('none' === window.getComputedStyle(s).getPropertyValue('-webkit-user-select')) {
         e.preventDefault();
         return;
     } else {
         let a,
-            o,
             s,
+            o,
             l = e.target;
-        for (; null != l; ) 'src' in l && null != l.src && (o = l.src), 'href' in l && null != l.href && ((a = l.href), (s = l.textContent)), (l = null == l ? void 0 : l.parentNode);
-        if (null != o)
+        for (; null != l; ) 'src' in l && null != l.src && (s = l.src), 'href' in l && null != l.href && ((a = l.href), (o = l.textContent)), (l = null == l ? void 0 : l.parentNode);
+        if (null != s)
             return (0, i.jW)(e, async () => {
                 let { default: e } = await n.e('12241').then(n.bind(n, 115512));
                 return (t) =>
                     (0, r.jsx)(e, {
                         ...t,
-                        src: null != o ? o : ''
+                        src: null != s ? s : ''
                     });
             });
         if (null != a)
@@ -63,7 +63,7 @@ function o(e) {
                     (0, r.jsx)(e, {
                         ...t,
                         href: a,
-                        textContent: s
+                        textContent: o
                     });
             });
         else if (null != t && '' !== t)
@@ -78,7 +78,7 @@ function o(e) {
     }
     return e.preventDefault(), null;
 }
-function s(e) {
+function o(e) {
     let t = !1,
         n = e.target;
     if ((null == n ? void 0 : n.tagName) === 'INPUT' || (null == n ? void 0 : n.tagName) === 'TEXTAREA') t = !0;

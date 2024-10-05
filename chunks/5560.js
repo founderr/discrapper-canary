@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(374470),
     d = n(442837),
     h = n(481060),
-    m = n(260300),
-    p = n(997638),
+    p = n(260300),
+    m = n(997638),
     _ = n(819640),
     f = n(451478),
     E = n(21825),
@@ -75,7 +75,7 @@ class x extends s.PureComponent {
         (a.offsetX += null !== (e = this.props.offset.x) && void 0 !== e ? e : 0), (a.offsetY += null !== (t = this.props.offset.y) && void 0 !== t ? t : 0), this.setState(a);
     }
     handleSkipTips() {
-        m.Z.suppressAll();
+        p.Z.suppressAll();
     }
     getTutorialPopoutText() {
         let { tutorialId: e } = this.props;
@@ -85,7 +85,7 @@ class x extends s.PureComponent {
         let { tutorialId: e, autoInvert: t, focused: n, origin: s } = this.props,
             a = (0, E.S)(e);
         if (null == a) return null;
-        let { media: r, textAlign: o, isLongText: c, highPriority: u, spacing: d, arrowAlignment: m = p.cy.TOP, popoutPosition: _ } = a,
+        let { media: r, textAlign: o, isLongText: c, highPriority: u, spacing: d, arrowAlignment: p = m.cy.TOP, popoutPosition: _ } = a,
             { offsetX: f, offsetY: g } = this.state,
             C = {
                 left: null != f ? s.x + f : void 0,
@@ -121,7 +121,7 @@ class x extends s.PureComponent {
                 };
             },
             S = this.getTutorialPopoutText();
-        return (0, i.jsx)(p.ZP, {
+        return (0, i.jsx)(m.ZP, {
             position: _,
             renderMedia: r,
             textAlign: o,
@@ -129,7 +129,7 @@ class x extends s.PureComponent {
             isLongText: c,
             uniqueId: e,
             autoInvert: t,
-            arrowAlignment: m,
+            arrowAlignment: p,
             onSkipAll: this.handleSkipTips,
             onComplete: this.handleDismiss,
             ...S,
@@ -154,7 +154,7 @@ class x extends s.PureComponent {
                 offsetY: null
             }),
             T(this, 'handleDismiss', () => {
-                m.Z.dismiss(this.props.tutorialId);
+                p.Z.dismiss(this.props.tutorialId);
             });
     }
 }

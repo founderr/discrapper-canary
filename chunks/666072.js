@@ -1,9 +1,9 @@
 n.d(t, {
     j: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, n(818083).B)({
         kind: 'user',
         id: '2024-07_cash_app_pay_awareness_campaign',
         label: 'cash_app_pay_awareness',
@@ -26,7 +26,7 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = () => {
-        let { enabled: e } = r.getCurrentConfig({ location: 'cash_app_pay_awareness_nagbar' });
+    a = () => {
+        let { enabled: e } = i.getCurrentConfig({ location: 'cash_app_pay_awareness_nagbar' });
         return e;
     };

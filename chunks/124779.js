@@ -1,72 +1,72 @@
-t.r(s),
-    t.d(s, {
+t.r(e),
+    t.d(e, {
         default: function () {
-            return u;
+            return d;
         }
     });
-var n = t(735250);
+var i = t(735250);
 t(470079);
-var c = t(481060),
-    o = t(287734),
+var s = t(481060),
+    l = t(287734),
     a = t(313201),
     r = t(471253),
-    l = t(939863),
-    i = t(689938),
-    d = t(101957);
-function u(e) {
-    let { channel: s, transitionState: t, onClose: u } = e,
-        I = (0, a.Dt)();
-    function _() {
-        o.default.disconnect(), u();
+    c = t(939863),
+    o = t(689938),
+    u = t(101957);
+function d(n) {
+    let { channel: e, transitionState: t, onClose: d } = n,
+        _ = (0, a.Dt)();
+    function E() {
+        l.default.disconnect(), d();
     }
-    return (0, n.jsxs)(c.ModalRoot, {
+    return (0, i.jsxs)(s.ModalRoot, {
         transitionState: t,
-        'aria-labelledby': I,
+        'aria-labelledby': _,
         children: [
-            (0, n.jsxs)(c.ModalContent, {
-                className: d.content,
+            (0, i.jsxs)(s.ModalContent, {
+                className: u.content,
                 children: [
-                    (0, n.jsx)(l.Z, {
-                        children: (0, n.jsx)('div', {
-                            className: d.iconBackground,
-                            children: (0, n.jsx)(c.StageXIcon, {
+                    (0, i.jsx)(c.Z, {
+                        children: (0, i.jsx)('div', {
+                            className: u.iconBackground,
+                            children: (0, i.jsx)(s.StageXIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 40,
                                 height: 40,
-                                className: d.headerIcon
+                                className: u.headerIcon
                             })
                         })
                     }),
-                    (0, n.jsx)(c.Heading, {
-                        id: I,
+                    (0, i.jsx)(s.Heading, {
+                        id: _,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        className: d.title,
-                        children: i.Z.Messages.EXPLICIT_END_STAGE_TITLE
+                        className: u.title,
+                        children: o.Z.Messages.EXPLICIT_END_STAGE_TITLE
                     }),
-                    (0, n.jsx)(c.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: d.subtitle,
-                        children: i.Z.Messages.EXPLICIT_END_STAGE_SUBTITLE
+                        className: u.subtitle,
+                        children: o.Z.Messages.EXPLICIT_END_STAGE_SUBTITLE
                     })
                 ]
             }),
-            (0, n.jsxs)(c.ModalFooter, {
+            (0, i.jsxs)(s.ModalFooter, {
                 children: [
-                    (0, n.jsx)(c.Button, {
-                        color: c.Button.Colors.RED,
+                    (0, i.jsx)(s.Button, {
+                        color: s.Button.Colors.RED,
                         onClick: function () {
-                            (0, r.NZ)(s), _();
+                            (0, r.NZ)(e), E();
                         },
-                        children: i.Z.Messages.EXPLICIT_END_STAGE_CONFIRM
+                        children: o.Z.Messages.EXPLICIT_END_STAGE_CONFIRM
                     }),
-                    (0, n.jsx)(c.Button, {
-                        color: c.Button.Colors.PRIMARY,
-                        className: d.cancelButton,
-                        onClick: _,
-                        children: i.Z.Messages.EXPLICIT_END_STAGE_CANCEL
+                    (0, i.jsx)(s.Button, {
+                        color: s.Button.Colors.PRIMARY,
+                        className: u.cancelButton,
+                        onClick: E,
+                        children: o.Z.Messages.EXPLICIT_END_STAGE_CANCEL
                     })
                 ]
             })

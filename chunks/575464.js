@@ -14,15 +14,15 @@ var s = n(120356),
     u = n(700582),
     d = n(600164),
     h = n(158776),
-    m = n(51144),
-    p = n(611782);
+    p = n(51144),
+    m = n(611782);
 function _(e) {
     let { user: t, row: n, hideDiscriminator: s, comparator: _, selected: f, checked: E, onClick: g, onMouseEnter: C, 'aria-setsize': I, 'aria-posinset': T } = e,
         x = (0, r.e7)([h.Z], () => h.Z.getStatus(t.id)),
         S = (0, l.JA)(String(t.id));
     return (0, i.jsx)(o.Clickable, {
         id: 'user-row-'.concat(n),
-        className: p.friendWrapper,
+        className: m.friendWrapper,
         onClick: () => {
             null != g && g(t.id);
         },
@@ -36,30 +36,30 @@ function _(e) {
         'aria-posinset': T,
         children: (0, i.jsxs)(d.Z, {
             align: d.Z.Align.CENTER,
-            className: a()(p.friend, { [p.friendSelected]: f }),
+            className: a()(m.friend, { [m.friendSelected]: f }),
             children: [
                 (0, i.jsx)(u.Z, {
                     user: t,
                     status: x,
-                    className: p.avatar
+                    className: m.avatar
                 }),
                 (0, i.jsxs)(d.Z, {
-                    className: p.match,
+                    className: m.match,
                     align: d.Z.Align.BASELINE,
                     children: [
                         (0, i.jsx)(o.Text, {
                             tag: 'strong',
-                            className: p.nickname,
+                            className: m.nickname,
                             'aria-hidden': !0,
                             variant: 'text-md/medium',
-                            children: null != _ && _ === t.tag ? m.ZP.getName(t) : null != _ && '' !== _ ? _ : m.ZP.getName(t)
+                            children: null != _ && _ === t.tag ? p.ZP.getName(t) : null != _ && '' !== _ ? _ : p.ZP.getName(t)
                         }),
                         (0, i.jsx)(c.Z, {
                             user: t,
                             hideDiscriminator: s,
-                            className: p.discordTag,
-                            usernameClass: p.__invalid_weightMedium,
-                            discriminatorClass: p.__invalid_weightMedium,
+                            className: m.discordTag,
+                            usernameClass: m.__invalid_weightMedium,
+                            discriminatorClass: m.__invalid_weightMedium,
                             forceUsername: !0
                         })
                     ]
@@ -68,7 +68,7 @@ function _(e) {
                     displayOnly: !0,
                     size: 22,
                     value: E,
-                    className: p.checkbox
+                    className: m.checkbox
                 })
             ]
         })

@@ -1,16 +1,16 @@
 n.d(t, {
     v: function () {
-        return d;
+        return l;
     }
-});
-var r = n(411104);
-var i = n(653041);
-var a = n(47120);
-var o = n(956067),
-    s = n(930145),
-    l = n(350167),
-    u = n(503461);
-function c(e, t, n) {
+}),
+    n(411104),
+    n(653041),
+    n(47120);
+var r = n(956067),
+    i = n(930145),
+    a = n(350167),
+    s = n(503461);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,24 +23,24 @@ function c(e, t, n) {
         e
     );
 }
-class d {
+class l {
     static async open(e, t) {
-        return new d(await s.A.open(e, t));
+        return new l(await i.A.open(e, t));
     }
     static openSyncUnsafe(e, t) {
-        return new d(s.A.openSyncUnsafe(e, t));
+        return new l(i.A.openSyncUnsafe(e, t));
     }
     static delete(e) {
-        return s.A.delete(e);
+        return i.A.delete(e);
     }
     close() {
         var e;
-        (this.lastState = u.hi.Closed), null === (e = this.raw) || void 0 === e || e.close(), (this.raw = null), l.r.removeCompletionCallback(this.databaseStateCallback);
+        (this.lastState = s.hi.Closed), null === (e = this.raw) || void 0 === e || e.close(), (this.raw = null), a.r.removeCompletionCallback(this.databaseStateCallback);
     }
     disable(e) {
         return null == this.raw
             ? Promise.resolve()
-            : ((this.lastState = u.hi.Disabled),
+            : ((this.lastState = s.hi.Disabled),
               this.execute({
                   type: 'db.disable',
                   handle: 0,
@@ -50,19 +50,19 @@ class d {
     execute(e, t) {
         if (null == this.raw) throw Error('database is no longer open (database: '.concat(this));
         let n = 'key' in e ? e.key[0] : e.table,
-            r = () =>
-                l.r.executeAsync(null != t ? t : e.type, (t) => {
+            i = () =>
+                a.r.executeAsync(null != t ? t : e.type, (t) => {
                     this.raw.execute(t, {
                         ...e,
                         handle: 0
                     });
                 });
-        return null === t ? r() : o.Z.timeAsync('\uD83D\uDCBE', ''.concat(null != t ? t : e.type, ' ').concat(null != n ? n : ''), r);
+        return null === t ? i() : r.Z.timeAsync('\uD83D\uDCBE', ''.concat(null != t ? t : e.type, ' ').concat(null != n ? n : ''), i);
     }
     executeSync(e) {
         if (null == this.raw) throw Error('database is no longer open (database: '.concat(this));
         let t = 'key' in e ? e.key[0] : e.table;
-        return o.Z.time('\uD83D\uDCBE', 'SYNC: '.concat(e.type, ' ').concat(null != t ? t : ''), () =>
+        return r.Z.time('\uD83D\uDCBE', 'SYNC: '.concat(e.type, ' ').concat(null != t ? t : ''), () =>
             this.raw.execute(
                 null,
                 {
@@ -94,16 +94,16 @@ class d {
         });
     }
     instantaneousState() {
-        return null == this.raw ? u.hi.Closed : (this.lastState = this.executeSync({ type: 'db.state' }));
+        return null == this.raw ? s.hi.Closed : (this.lastState = this.executeSync({ type: 'db.state' }));
     }
     async instantaneousStateAsync() {
-        return null == this.raw ? u.hi.Closed : (this.lastState = await this.execute({ type: 'db.state' }));
+        return null == this.raw ? s.hi.Closed : (this.lastState = await this.execute({ type: 'db.state' }));
     }
     state() {
         return this.lastState;
     }
     transaction(e, t) {
-        let n = new _(this);
+        let n = new u(this);
         return Promise.resolve(e(n)).then(() =>
             n.operations.length > 0
                 ? this.execute(
@@ -117,21 +117,21 @@ class d {
         );
     }
     constructor(e) {
-        c(this, 'name', void 0),
-            c(this, 'handle', void 0),
-            c(this, 'raw', void 0),
-            c(this, 'lastState', void 0),
-            c(this, 'databaseStateCallback', void 0),
+        o(this, 'name', void 0),
+            o(this, 'handle', void 0),
+            o(this, 'raw', void 0),
+            o(this, 'lastState', void 0),
+            o(this, 'databaseStateCallback', void 0),
             (this.raw = e),
             (this.name = e.name),
-            (this.lastState = u.hi.Open),
+            (this.lastState = s.hi.Open),
             (this.handle = e.handle),
-            (this.databaseStateCallback = l.r.addDatabaseStateCallback((e, t) => {
+            (this.databaseStateCallback = a.r.addDatabaseStateCallback((e, t) => {
                 this.handle === e && (this.lastState = t);
             }));
     }
 }
-class _ {
+class u {
     add(e) {
         this.operations.push(e);
     }
@@ -143,6 +143,6 @@ class _ {
         return '[DatabaseTransaction '.concat(this.database.handle, ': ').concat(this.operations.length, ' ops]');
     }
     constructor(e) {
-        c(this, 'database', void 0), c(this, 'operations', void 0), (this.database = e), (this.operations = []);
+        o(this, 'database', void 0), o(this, 'operations', void 0), (this.database = e), (this.operations = []);
     }
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 }),
     n(47120),
@@ -29,7 +29,7 @@ var l = n(120356),
     S = n(689938),
     x = n(516126),
     v = n(64056);
-function Z(e, t) {
+function T(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
@@ -47,7 +47,7 @@ function Z(e, t) {
               ]
           });
 }
-function T() {
+function Z() {
     var e, t;
     let n = (0, o.Wu)([E.Z, _.Z], () =>
             I.default
@@ -79,12 +79,12 @@ function T() {
                     })
             )
         ),
-        T = (0, o.e7)([h.Z], () => {
+        Z = (0, o.e7)([h.Z], () => {
             let e = 0;
             for (let t of a) e += h.Z.getParticipantCount(t, p.pV.AUDIENCE);
             return e;
         }),
-        b = (0, o.Wu)(
+        A = (0, o.Wu)(
             [f.Z],
             () =>
                 f.Z.getAllApplicationStreams()
@@ -92,7 +92,7 @@ function T() {
                     .map((e) => e.ownerId),
             [l]
         ),
-        A = (0, o.Wu)(
+        b = (0, o.Wu)(
             [u.ZP],
             () => {
                 let e = u.ZP.getEmbeddedActivitiesByChannel(),
@@ -105,15 +105,15 @@ function T() {
             },
             [l]
         ),
-        M = (0, o.Wu)([m.default], () => A.map((e) => m.default.getUser(e)), [A]),
         R = (0, o.Wu)([m.default], () => b.map((e) => m.default.getUser(e)), [b]),
-        L = Z(
+        M = (0, o.Wu)([m.default], () => A.map((e) => m.default.getUser(e)), [A]),
+        L = T(
             c.VoiceNormalIcon,
-            S.filter((e) => !b.includes(e.id) && !A.includes(e.id))
+            S.filter((e) => !A.includes(e.id) && !b.includes(e.id))
         );
     let P =
             ((e = v),
-            (t = T),
+            (t = Z),
             0 === e.length
                 ? null
                 : (0, i.jsxs)('div', {
@@ -146,16 +146,16 @@ function T() {
                           })
                       ]
                   })),
-        y = Z(
+        O = T(
             c.ScreenArrowIcon,
-            R.filter((e) => null != e && !A.includes(e.id))
+            M.filter((e) => null != e && !b.includes(e.id))
         ),
-        O = Z(c.ActivitiesIcon, M);
+        y = T(c.ActivitiesIcon, R);
     return (0, i.jsxs)(i.Fragment, {
-        children: [P, L, y, O]
+        children: [P, L, O, y]
     });
 }
-function b() {
+function A() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -165,17 +165,17 @@ function b() {
                     children: S.Z.Messages.FAVORITES_GUILD_NAME
                 })
             }),
-            (0, i.jsx)(T, {})
+            (0, i.jsx)(Z, {})
         ]
     });
 }
-function A(e) {
+function b(e) {
     let { 'aria-label': t = !1, onShow: n, children: l } = e;
     return (0, i.jsx)(c.Tooltip, {
         hideOnClick: !0,
         spacing: 20,
         position: 'right',
-        text: (0, i.jsx)(b, {}),
+        text: (0, i.jsx)(A, {}),
         'aria-label': t,
         tooltipClassName: v.listItemTooltip,
         onTooltipShow: n,

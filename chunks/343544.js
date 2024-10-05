@@ -1,59 +1,59 @@
-t.d(n, {
+t.d(a, {
     Z: function () {
-        return l;
+        return _;
     }
 });
 var s = t(735250),
-    a = t(470079),
+    n = t(470079),
     o = t(481060),
-    r = t(511010),
-    i = t(126743),
-    _ = t(444812);
-function l(e) {
-    let { headerText: n, secondaryHeaderText: t, descriptionText: l, infoRows: d, onDismissAndStay: c, onDismissAndLeave: u, leaveButtonText: E, stayButtonText: N, transitionState: M } = e;
+    d = t(511010),
+    r = t(126743),
+    i = t(444812);
+function _(e) {
+    let { headerText: a, secondaryHeaderText: t, descriptionText: _, infoRows: l, onDismissAndStay: c, onDismissAndLeave: u, leaveButtonText: E, stayButtonText: m, transitionState: M } = e;
     return (0, s.jsxs)(o.ModalRoot, {
         transitionState: M,
         children: [
             (0, s.jsx)('img', {
                 alt: '',
-                className: i.headerImage,
-                src: _
+                className: r.headerImage,
+                src: i
             }),
             (0, s.jsxs)(o.ModalHeader, {
                 separator: !1,
-                className: i.header,
+                className: r.header,
                 children: [
                     (0, s.jsxs)(o.Heading, {
                         variant: 'heading-lg/bold',
-                        className: i.title,
+                        className: r.title,
                         children: [
-                            n,
+                            a,
                             null != t &&
                                 (0, s.jsxs)(s.Fragment, {
                                     children: [(0, s.jsx)('br', {}), t]
                                 })
                         ]
                     }),
-                    null != l &&
+                    null != _ &&
                         (0, s.jsx)(o.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: l
+                            children: _
                         })
                 ]
             }),
             (0, s.jsxs)(o.ModalContent, {
-                className: i.content,
+                className: r.content,
                 children: [
                     (0, s.jsx)('div', {
-                        className: i.infoGroup,
-                        children: d.map((e, n) =>
+                        className: r.infoGroup,
+                        children: l.map((e, a) =>
                             (0, s.jsxs)(
-                                a.Fragment,
+                                n.Fragment,
                                 {
                                     children: [
                                         (0, s.jsxs)('div', {
-                                            className: i.infoRow,
+                                            className: r.infoRow,
                                             children: [
                                                 e.icon,
                                                 (0, s.jsx)(o.Text, {
@@ -62,15 +62,15 @@ function l(e) {
                                                 })
                                             ]
                                         }),
-                                        n < d.length - 1 && (0, s.jsx)(r.Z, {})
+                                        a < l.length - 1 && (0, s.jsx)(d.Z, {})
                                     ]
                                 },
-                                n
+                                a
                             )
                         )
                     }),
                     (0, s.jsxs)('div', {
-                        className: i.buttonGroup,
+                        className: r.buttonGroup,
                         children: [
                             (0, s.jsx)(o.Button, {
                                 type: 'submit',
@@ -82,7 +82,7 @@ function l(e) {
                             (0, s.jsx)(o.Button, {
                                 color: o.Button.Colors.PRIMARY,
                                 onClick: c,
-                                children: N
+                                children: m
                             })
                         ]
                     })

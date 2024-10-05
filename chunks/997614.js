@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(242291),
     d = n(792165),
     h = n(603074),
-    m = n(294629),
-    p = n(390322),
+    p = n(294629),
+    m = n(390322),
     _ = n(871499),
     f = n(131951),
     E = n(459273),
@@ -25,7 +25,7 @@ var i = n(735250),
 function T(e) {
     let { channel: t, themeable: T } = e,
         x = t.getGuildId(),
-        { mute: S, suppress: v } = (0, m.Z)(t),
+        { mute: S, suppress: v } = (0, p.Z)(t),
         N = (0, a.e7)([f.Z], () => f.Z.isDeaf()),
         A = S || v || N,
         Z = (0, u.sR)({ isSoundboardButtonDisabled: A }),
@@ -57,7 +57,7 @@ function T(e) {
                 let { closePopout: n } = e;
                 return A
                     ? null
-                    : (0, i.jsx)(p.Z, {
+                    : (0, i.jsx)(m.Z, {
                           children: (0, i.jsx)(h.Z, {
                               guildId: x,
                               channel: t,

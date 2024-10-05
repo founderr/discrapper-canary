@@ -1,8 +1,8 @@
 var r = n(570140),
     i = n(340332),
     a = n(672339),
-    o = n(463395),
-    s = n(592125),
+    s = n(463395),
+    o = n(592125),
     l = n(131951),
     u = n(944486),
     c = n(626135),
@@ -17,32 +17,32 @@ function p(e, t, n, r) {
     let { location: i, analyticsLocations: a } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     if (t === n) return;
     let l = u.Z.getVoiceChannelId(),
-        d = null != l ? s.Z.getChannel(l) : null,
+        d = null != l ? o.Z.getChannel(l) : null,
         _ = e[t],
         f = e[n];
     c.default.track(E.rMx.MEDIA_DEVICE_CHANGED, {
-        device_from_name: o.Z.getCertifiedDeviceName(t, null != _ ? _.name : ''),
-        device_to_name: o.Z.getCertifiedDeviceName(n, null != f ? f.name : ''),
+        device_from_name: s.Z.getCertifiedDeviceName(t, null != _ ? _.name : ''),
+        device_to_name: s.Z.getCertifiedDeviceName(n, null != f ? f.name : ''),
         device_type: r,
-        device_is_certified: o.Z.isCertified(n),
+        device_is_certified: s.Z.isCertified(n),
         location: i,
         location_stack: a,
         voice_channel_type: null == d ? void 0 : d.type
     });
 }
-let m = {
+let I = {
         isNotSupported: () => !1,
         enable: (e) => Promise.resolve(!0),
         trackToggleSelfMute(e) {}
     },
-    { enable: I, isNotSupported: T, trackToggleSelfMute: g } = (m = n(929782));
+    { enable: m, isNotSupported: T, trackToggleSelfMute: S } = (I = n(929782));
 t.Z = {
-    enable: I,
+    enable: m,
     toggleSelfMute() {
         let { context: e = f.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, playSoundEffect: i = !0, location: a } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         return T()
             ? Promise.resolve()
-            : (g({
+            : (S({
                     usedKeybind: n,
                     location: a
                 }),
@@ -148,7 +148,7 @@ t.Z = {
             a)
         ) {
             let t = u.Z.getVoiceChannelId(),
-                n = null != t ? s.Z.getChannel(t) : null;
+                n = null != t ? o.Z.getChannel(t) : null;
             c.default.track(E.rMx.VOICE_ACTIVATION_MODE_CHANGED, {
                 mode: e,
                 location_stack: i,
@@ -164,7 +164,7 @@ t.Z = {
             volume: e
         });
         let n = u.Z.getVoiceChannelId(),
-            i = null != n ? s.Z.getChannel(n) : null;
+            i = null != n ? o.Z.getChannel(n) : null;
         c.default.track(E.rMx.MEDIA_INPUT_VOLUME_CHANGED, {
             volume: e,
             location_stack: t,
@@ -179,7 +179,7 @@ t.Z = {
             volume: e
         });
         let n = u.Z.getVoiceChannelId(),
-            i = null != n ? s.Z.getChannel(n) : null;
+            i = null != n ? o.Z.getChannel(n) : null;
         c.default.track(E.rMx.MEDIA_OUTPUT_VOLUME_CHANGED, {
             volume: e,
             location_stack: t,

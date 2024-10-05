@@ -247,8 +247,8 @@ var m = function (t, e) {
                               });
                 if (n.getParentKey()) return I;
                 var B = S(n, a).Element,
-                    L = k(n, d, T, f, M, this.wrapperRef);
-                return c.createElement(B, L, I);
+                    R = k(n, d, T, f, M, this.wrapperRef);
+                return c.createElement(B, R, I);
             }),
             e
         );
