@@ -124,16 +124,18 @@ function G() {
                           }),
                           children: (0, i.jsx)(j.Z, {})
                       }),
-                  Q &&
-                      (0, i.jsx)(u.$, {
-                          onChange: (e) => W(e),
-                          threshold: 0.25,
-                          active: Y,
-                          children: (0, i.jsx)('div', {
-                              ref: X,
-                              children: (0, i.jsx)(f.Z, { user: e })
+                  (0, i.jsx)(u.$, {
+                      onChange: (e) => W(e),
+                      threshold: 0.25,
+                      active: Y,
+                      children: (0, i.jsx)('div', {
+                          ref: X,
+                          children: (0, i.jsx)(f.Z, {
+                              user: e,
+                              isVisible: Q
                           })
-                      }),
+                      })
+                  }),
                   Y &&
                       !a &&
                       (0, i.jsx)(p.p, {
