@@ -5,7 +5,6 @@ e.exports = {
     innerGlow: 'innerGlow_d76538',
     outerGlow: 'outerGlow_d76538',
     innerContentCoachmark: 'innerContentCoachmark_d76538',
-    contentTextCTAPopout: 'contentTextCTAPopout_d76538',
     subContent: 'subContent_d76538',
     avatars: 'avatars_d76538',
     recipientUserAvatar: 'recipientUserAvatar_d76538',

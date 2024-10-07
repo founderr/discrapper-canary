@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     Z: function () {
-        return L;
+        return v;
     }
 });
 var i,
@@ -25,20 +25,18 @@ var i,
     C = n(594174),
     p = n(51144),
     f = n(479446),
-    A = n(522558),
     g = n(441623),
-    S = n(317271),
-    M = n(474936),
-    O = n(981631),
-    x = n(182294),
-    R = n(689938),
-    v = n(186363);
-function L(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: r, popoutPosition: L, analyticsPage: Z, analyticsSection: P, glow: D, showSecondaryCta: b } = e,
-        j = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
-        { analyticsLocations: U } = (0, m.ZP)(),
-        { enableEmojiCTA: y } = A.w.useExperiment({ location: 'GiftIntentCard' }, { autoTrackExposure: !1 }),
-        B = (0, d.e7)([g.Z], () => g.Z.getFriendAnniversaryYears(i.id));
+    A = n(317271),
+    S = n(474936),
+    M = n(981631),
+    O = n(182294),
+    x = n(689938),
+    R = n(186363);
+function v(e) {
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: r, popoutPosition: v, analyticsPage: L, analyticsSection: Z, glow: P, showSecondaryCta: D } = e,
+        b = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
+        { analyticsLocations: j } = (0, m.ZP)(),
+        U = (0, d.e7)([g.Z], () => g.Z.getFriendAnniversaryYears(i.id));
     l.useEffect(() => {
         (0, T.h)({
             name: c.ImpressionNames.GIFT_INTENT_CARD,
@@ -50,67 +48,66 @@ function L(e) {
             }
         });
     }, [t, n]);
-    let k = () => {
-            if (t === M.hX.FRIEND_ANNIVERSARY) return R.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: B });
+    let y = () => {
+            if (t === S.hX.FRIEND_ANNIVERSARY) return x.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: U });
             return (0, f.Ou)(t);
         },
-        G = 'coachmark' === n,
-        F = G ? v.innerContentCoachmark : v.innerContent,
-        w = G ? v.recipientUserAvatarCoachmark : v.recipientUserAvatar,
-        V = G ? v.currentUserAvatarCoachmark : v.currentUserAvatar,
-        H = G ? v.subHeaderTextCoachmark : v.subHeaderText,
-        Y = G ? _.Button.Colors.BRAND : _.Button.Colors.WHITE,
-        W = G ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
-        K = G ? v.buttonTextPrimaryCoachmark : v.buttonTextPrimary;
+        B = 'coachmark' === n,
+        k = B ? R.innerContentCoachmark : R.innerContent,
+        G = B ? R.recipientUserAvatarCoachmark : R.recipientUserAvatar,
+        F = B ? R.currentUserAvatarCoachmark : R.currentUserAvatar,
+        w = B ? R.subHeaderTextCoachmark : R.subHeaderText,
+        V = B ? _.Button.Colors.BRAND : _.Button.Colors.WHITE,
+        H = B ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
+        Y = B ? R.buttonTextPrimaryCoachmark : R.buttonTextPrimary;
     return (0, s.jsx)('div', {
-        className: o()(v.content, {
-            [v.contentTextCTAPopout]: null != L && !y,
-            [v.outerGlow]: D,
-            [v.contentCoachmark]: G
+        className: o()(R.content, {
+            [R.outerGlow]: P,
+            [R.contentCoachmark]: B
         }),
         onMouseEnter: a,
         onMouseLeave: r,
         children: (0, s.jsxs)('div', {
-            className: o()(F, { [v.innerGlow]: D }),
+            className: o()(k, { [R.innerGlow]: P }),
             children: [
                 (0, s.jsxs)('div', {
-                    className: v.subContent,
+                    className: R.subContent,
                     children: [
                         (0, s.jsxs)('div', {
-                            className: v.avatars,
+                            className: R.avatars,
                             children: [
                                 (0, s.jsx)(I.Z, {
-                                    className: w,
+                                    className: G,
                                     user: i,
                                     'aria-label': i.username,
-                                    size: x.EF.SIZE_56
+                                    size: O.EF.SIZE_56
                                 }),
-                                null != j &&
+                                null != b &&
                                     (0, s.jsx)(I.Z, {
-                                        className: V,
-                                        user: j,
+                                        className: F,
+                                        user: b,
                                         'aria-label': i.username,
-                                        size: x.EF.SIZE_24
+                                        size: O.EF.SIZE_24
                                     })
                             ]
                         }),
                         (0, s.jsxs)('div', {
-                            className: v.textContainer,
+                            className: R.textContainer,
                             children: [
                                 (0, s.jsx)(_.Text, {
                                     variant: 'text-md/medium',
-                                    color: G ? 'header-primary' : 'always-white',
+                                    color: B ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
                                     children: (() => {
-                                        if (t === M.hX.FRIEND_ANNIVERSARY) return R.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: p.ZP.getName(i) });
+                                        if (t === S.hX.FRIEND_ANNIVERSARY) return x.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: p.ZP.getName(i) });
                                         return (0, f.Ou)(t);
                                     })()
                                 }),
                                 (0, s.jsx)(_.Text, {
-                                    className: H,
+                                    className: w,
                                     variant: 'text-sm/normal',
                                     children: (() => {
-                                        if (t === M.hX.FRIEND_ANNIVERSARY) return R.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER.format({ numberOfYears: B });
+                                        if (t === S.hX.FRIEND_ANNIVERSARY) return x.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER.format({ numberOfYears: U });
                                         return (0, f.Ou)(t);
                                     })()
                                 })
@@ -119,74 +116,74 @@ function L(e) {
                     ]
                 }),
                 (0, s.jsxs)('div', {
-                    className: v.buttonContainer,
+                    className: R.buttonContainer,
                     children: [
-                        b &&
+                        D &&
                             (0, s.jsx)(_.Button, {
-                                className: o()(v.button, v.buttonSecondary),
+                                className: o()(R.button, R.buttonSecondary),
                                 onClick: (e) => {
-                                    e.stopPropagation(), (0, h.uL)(O.Z5c.FRIENDS), E.Z.setSection(O.pJs.ALL);
+                                    e.stopPropagation(), (0, h.uL)(M.Z5c.FRIENDS), E.Z.setSection(M.pJs.ALL);
                                 },
                                 size: _.Button.Sizes.MEDIUM,
                                 color: _.Button.Colors.CUSTOM,
                                 look: _.Button.Looks.OUTLINED,
                                 children: (0, s.jsx)('div', {
-                                    className: v.buttonContentContainer,
+                                    className: R.buttonContentContainer,
                                     children: (0, s.jsx)(_.Text, {
                                         variant: 'text-sm/medium',
-                                        className: o()(v.buttonText, v.buttonTextSecondary),
+                                        className: o()(R.buttonText, R.buttonTextSecondary),
                                         children: (() => {
-                                            if (t === M.hX.FRIEND_ANNIVERSARY) return R.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_VIEW_ALL_SECONDARY_CTA;
+                                            if (t === S.hX.FRIEND_ANNIVERSARY) return x.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_VIEW_ALL_SECONDARY_CTA;
                                         })()
                                     })
                                 })
                             }),
                         (0, s.jsx)(_.Button, {
-                            className: v.button,
+                            className: R.button,
                             onClick: (e) => {
                                 e.stopPropagation();
-                                let a = (0, S.F)(t);
+                                let a = (0, A.F)(t);
                                 (0, N.Z)({
                                     isGift: !0,
                                     initialPlanId: null,
                                     giftRecipient: i,
                                     analyticsLocation: 'system_message' === n ? a.chat : a.actionButtonCoachmark,
-                                    analyticsLocations: U,
+                                    analyticsLocations: j,
                                     analyticsObject: {
-                                        page: Z,
-                                        section: P,
-                                        object: O.qAy.BUTTON_CTA,
-                                        objectType: O.Qqv.GIFT
+                                        page: L,
+                                        section: Z,
+                                        object: M.qAy.BUTTON_CTA,
+                                        objectType: M.Qqv.GIFT
                                     },
-                                    giftMessage: k()
+                                    giftMessage: y()
                                 });
                             },
                             size: _.Button.Sizes.MEDIUM,
-                            color: Y,
+                            color: V,
                             children: (0, s.jsxs)('div', {
-                                className: v.buttonContentContainer,
+                                className: R.buttonContentContainer,
                                 children: [
                                     (0, s.jsx)(_.GiftIcon, {
-                                        color: W,
+                                        color: H,
                                         size: 'custom',
                                         width: '14',
                                         height: '14'
                                     }),
                                     (0, s.jsx)(_.Text, {
                                         variant: 'text-sm/medium',
-                                        className: o()(v.buttonText, K),
-                                        children: R.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_PRIMARY_CTA
+                                        className: o()(R.buttonText, Y),
+                                        children: x.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_PRIMARY_CTA
                                     })
                                 ]
                             })
                         })
                     ]
                 }),
-                null != L &&
+                null != v &&
                     (0, s.jsx)('div', {
-                        className: o()(v.connector, {
-                            [v.leftPopoutConnector]: 'left' === L,
-                            [v.rightPopoutConnector]: 'right' === L
+                        className: o()(R.connector, {
+                            [R.leftPopoutConnector]: 'left' === v,
+                            [R.rightPopoutConnector]: 'right' === v
                         })
                     })
             ]
