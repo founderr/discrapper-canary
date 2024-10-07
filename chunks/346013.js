@@ -23,8 +23,8 @@ var i = n(735250),
     C = n(336197),
     p = n(406432),
     f = n(348238),
-    A = n(38267),
-    g = n(184301),
+    g = n(38267),
+    A = n(184301),
     S = n(347475),
     M = n(695346),
     O = n(271383),
@@ -43,7 +43,7 @@ function B(e) {
     var t, n, s;
     let { embedUrl: r, message: B, channel: k } = e,
         G = (0, P.J)(r, B),
-        { setPopout: F } = (0, A.Z)(B.id, b.d$),
+        { setPopout: F } = (0, g.Z)(B.id, b.d$),
         w = (0, f.qo)(B, k, F, !0),
         V = M.QK.useSetting(),
         H = (0, L.n)(),
@@ -85,7 +85,7 @@ function B(e) {
         er = a.useCallback(
             () => (
                 o()((null == G ? void 0 : G.authorId) != null, 'Author Id cannot be null when loading user profile'),
-                (0, g.Z)(G.authorId, G.avatarUrl, {
+                (0, A.Z)(G.authorId, G.avatarUrl, {
                     guildId: G.guildId,
                     channelId: k.id
                 })

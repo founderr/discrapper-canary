@@ -23,8 +23,8 @@ var i = n(735250),
     C = n(63063),
     p = n(74538),
     f = n(276444),
-    A = n(790368),
-    g = n(786397),
+    g = n(790368),
+    A = n(786397),
     S = n(474936),
     M = n(981631),
     O = n(689938),
@@ -55,7 +55,7 @@ class R extends a.Component {
                 },
                 color: u.Button.Colors.BRAND
             },
-            o = s.id !== a.user_id || (0, p.I5)(s) || !s.verified || (0, g.B)(a),
+            o = s.id !== a.user_id || (0, p.I5)(s) || !s.verified || (0, A.B)(a),
             c = this.renderExpirationDate(e, t, n);
         return (
             (r.disabled = o),
@@ -111,7 +111,7 @@ class R extends a.Component {
     }
     render() {
         let { trialOffer: e, currentUser: t, recipientHasNitro: n, shouldShowBirthdayUX: a } = this.props,
-            s = (0, g.B)(e),
+            s = (0, A.B)(e),
             r = t.id === e.referrer_id;
         return (0, i.jsxs)('div', {
             className: l()(x.tile, x.container),
@@ -180,7 +180,7 @@ function v(e) {
             return r ? (null === (e = N.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
         }),
         { analyticsLocations: u } = (0, I.ZP)(E.Z.SHARE_NITRO_EMBED),
-        { enabled: m } = A.Z.useExperiment({ location: 'f4ff1d_1' }, { autoTrackExposure: !0 });
+        { enabled: m } = g.Z.useExperiment({ location: 'f4ff1d_1' }, { autoTrackExposure: !0 });
     return s
         ? (0, i.jsx)(_.OR, { isHorizontal: !c.tq })
         : n && null != a && void 0 !== l

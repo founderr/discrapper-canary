@@ -18,8 +18,8 @@ var i = n(735250),
     C = n(930114),
     p = n(981632),
     f = n(108989),
-    A = n(703656),
-    g = n(314897),
+    g = n(703656),
+    A = n(314897),
     S = n(82142),
     M = n(283595),
     O = n(594174),
@@ -278,7 +278,7 @@ class V extends a.Component {
         super(...e),
             G(this, 'handleViewLibrary', (e) => {
                 let { libraryApplication: t } = this.props;
-                e.preventDefault(), null != t && t.isHidden() ? (0, A.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, A.uL)(U.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
+                e.preventDefault(), null != t && t.isHidden() ? (0, g.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, g.uL)(U.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
             }),
             G(this, 'handleVerificationClick', (e) => {
                 e.stopPropagation(), e.preventDefault(), u.Z.open(U.oAB.ACCOUNT);
@@ -348,7 +348,7 @@ class V extends a.Component {
     }
 }
 let H = (0, I.Z)((0, E.Z)(V));
-t.Z = c.ZP.connectStores([S.Z, R.Z, O.default, M.Z, x.Z, g.default, m.Z], (e) => {
+t.Z = c.ZP.connectStores([S.Z, R.Z, O.default, M.Z, x.Z, A.default, m.Z], (e) => {
     let { code: t, author: n, currentUser: i } = e,
         a = S.Z.get(t),
         s = null != a ? R.Z.get(a.skuId) : null,
@@ -360,7 +360,7 @@ t.Z = c.ZP.connectStores([S.Z, R.Z, O.default, M.Z, x.Z, g.default, m.Z], (e) =>
         gifter: l,
         currentUser: i,
         subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, D.oE)(a.subscriptionPlanId) : null,
-        isSelfGift: null != a ? g.default.getId() === a.userId : g.default.getId() === n.id,
+        isSelfGift: null != a ? A.default.getId() === a.userId : A.default.getId() === n.id,
         resolved: S.Z.getIsResolved(t),
         libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? Z.z2(a.entitlementBranches, s, M.Z) : null,
         useReducedMotion: r

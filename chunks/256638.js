@@ -25,8 +25,8 @@ var i = n(735250),
     C = n(558381),
     p = n(223245),
     f = n(491428),
-    A = n(401430),
-    g = n(230711),
+    g = n(401430),
+    A = n(230711),
     S = n(726542),
     M = n(100527),
     O = n(906732),
@@ -102,7 +102,7 @@ let eN = () =>
                 em.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS,
                 (0, i.jsx)(c.NoticeButton, {
                     onClick: () => {
-                        (0, I.jN)(eu.S9g.USER_SETTINGS), g.Z.setSection(eu.oAB.VOICE);
+                        (0, I.jN)(eu.S9g.USER_SETTINGS), A.Z.setSection(eu.oAB.VOICE);
                     },
                     children: em.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS_LINK_TEXT
                 })
@@ -120,15 +120,15 @@ let ep =
                   ed = (0, o.e7)([es.Z], () => es.Z.getNotice()),
                   ep = (0, o.e7)([q.Z], () => q.Z.getGuild(M)),
                   { analyticsLocations: ef } = (0, O.ZP)(),
-                  eA = null == ed ? void 0 : ed.type,
-                  eg = (0, B.J)(M);
+                  eg = null == ed ? void 0 : ed.type,
+                  eA = (0, B.J)(M);
               a.useEffect(() => {
-                  null != eA &&
+                  null != eg &&
                       !(function (e, t) {
                           let n = { notice_type: e };
                           null != t && (n.guild_id = t), el.default.track(eu.rMx.APP_NOTICE_VIEWED, n);
-                      })(eA, M);
-              }, [eA, M]),
+                      })(eg, M);
+              }, [eg, M]),
                   a.useEffect(() => {
                       if (null != ed && ed.type === eu.kVF.SURVEY && null != ed.metadata) {
                           let { metadata: e } = ed,
@@ -143,7 +143,7 @@ let ep =
               let eS = (function (e) {
                   let { enabled: t } = (0, Y.ZP)(!0, e !== eu.kVF.PREMIUM_TIER_2_TRIAL_ENDING);
                   return t || null == e ? null : es.m[e];
-              })(eA);
+              })(eg);
               if (null == ed) return null;
               if (null != eS)
                   return (0, i.jsx)(Z.A, {
@@ -291,7 +291,7 @@ let ep =
                               }),
                               em.Z.Messages.NOTICE_SPOTIFY_AUTO_PAUSED,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
-                                  onClick: () => g.Z.open(eu.oAB.VOICE),
+                                  onClick: () => A.Z.open(eu.oAB.VOICE),
                                   noticeType: eu.kVF.SPOTIFY_AUTO_PAUSED,
                                   children: em.Z.Messages.VOICE_SETTINGS
                               }),
@@ -310,7 +310,7 @@ let ep =
                               em.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eu.kVF.UNCLAIMED_ACCOUNT,
-                                  onClick: () => (eg && null != M ? (0, y.hk)(M) : R.j()),
+                                  onClick: () => (eA && null != M ? (0, y.hk)(M) : R.j()),
                                   children: em.Z.Messages.CLAIM_ACCOUNT
                               })
                           ]
@@ -405,7 +405,7 @@ let ep =
                               em.Z.Messages.NOTICE_H264_DISABLED_SETTINGS,
                               (0, i.jsx)(c.NoticeButton, {
                                   onClick: () => {
-                                      (0, I.jN)(eu.S9g.USER_SETTINGS), g.Z.setSection(eu.oAB.VOICE);
+                                      (0, I.jN)(eu.S9g.USER_SETTINGS), A.Z.setSection(eu.oAB.VOICE);
                                   },
                                   children: em.Z.Messages.NOTICE_H264_DISABLED_SETTINGS_LINK_TEXT
                               })
@@ -637,7 +637,7 @@ let ep =
                                   children: [
                                       (0, i.jsx)('div', { children: em.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({ applicationName: ed.metadata.applicationName }) }),
                                       (0, i.jsx)(c.NoticeCloseButton, {
-                                          onClick: A.mc,
+                                          onClick: g.mc,
                                           noticeType: eu.kVF.APPLICATION_TEST_MODE
                                       })
                                   ]
@@ -668,7 +668,7 @@ let ep =
                                       children: em.Z.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
                                   }),
                                   (0, i.jsx)(c.NoticeCloseButton, {
-                                      onClick: A.mc,
+                                      onClick: g.mc,
                                       noticeType: eu.kVF.APPLICATION_TEST_MODE
                                   })
                               ]
@@ -722,7 +722,7 @@ let ep =
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  noticeType: eA,
+                                  noticeType: eg,
                                   onClick: () => {
                                       eC(eV);
                                   }
@@ -731,7 +731,7 @@ let ep =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eu.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                                   onClick: () => {
-                                      eC(eV), g.Z.open(eu.oAB.SUBSCRIPTIONS);
+                                      eC(eV), A.Z.open(eu.oAB.SUBSCRIPTIONS);
                                   },
                                   children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
                               })
@@ -753,7 +753,7 @@ let ep =
                                   noticeType: eu.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      eC(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(eu.oAB.SUBSCRIPTIONS);
+                                      eC(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.Z.open(eu.oAB.SUBSCRIPTIONS);
                                   },
                                   children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
                               })
@@ -775,7 +775,7 @@ let ep =
                                   noticeType: eu.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      eC(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(eu.oAB.SUBSCRIPTIONS);
+                                      eC(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.Z.open(eu.oAB.SUBSCRIPTIONS);
                                   },
                                   children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
                               })
@@ -797,7 +797,7 @@ let ep =
                                   noticeType: eu.kVF.PREMIUM_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      eC(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(eu.oAB.SUBSCRIPTIONS);
+                                      eC(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.Z.open(eu.oAB.SUBSCRIPTIONS);
                                   },
                                   children: eM === e_.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eM === e_.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
                               })

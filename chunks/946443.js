@@ -26,14 +26,14 @@ var i = n(735250),
     C = n(240126),
     p = n(791914),
     f = n(147522),
-    A = n(809780),
-    g = n(981631),
+    g = n(809780),
+    A = n(981631),
     S = n(689938),
     M = n(129640);
 function O(e) {
     let { setTab: t, onJump: n, showTutorial: s, setSeenTutorial: r, closePopout: O, badgeState: R } = e,
         v = a.useRef(null),
-        [L, Z] = (0, A.ZP)(v),
+        [L, Z] = (0, g.ZP)(v),
         { loadState: P, channels: D } = L,
         { maybeLoadMore: b, markAllRead: j } = Z;
     (function (e, t, n) {
@@ -58,15 +58,15 @@ function O(e) {
                     null != n && t.markChannelRead(n);
                 };
                 return (
-                    N.S.subscribe(g.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
+                    N.S.subscribe(A.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
                     () => {
-                        N.S.unsubscribe(g.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
+                        N.S.unsubscribe(A.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
                     }
                 );
             }, [t, e.channels]);
         })(L, Z),
         a.useEffect(() => {
-            T.default.track(g.rMx.OPEN_POPOUT, { type: 'Inbox' });
+            T.default.track(A.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
         a.useEffect(
             () => (
@@ -123,9 +123,9 @@ function O(e) {
                                 (v.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
                             ...a,
-                            onScroll: P === A.jd.Done ? void 0 : b,
+                            onScroll: P === g.jd.Done ? void 0 : b,
                             className: M.scroller,
-                            children: [s ? (0, i.jsx)(x, { setSeenTutorial: r }) : null, (0, f.Z)(D, Z, n), P === A.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: M.spinner })]
+                            children: [s ? (0, i.jsx)(x, { setSeenTutorial: r }) : null, (0, f.Z)(D, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: M.spinner })]
                         });
                     }
                 })

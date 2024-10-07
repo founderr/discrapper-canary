@@ -22,9 +22,9 @@ t.Z = () => {
     let a = (0, r.e7)([d.Z], () => d.Z.getGuildId(), []),
         p = (0, r.e7)([c.Z], () => c.Z.getGuild(a), [a]),
         f = (0, r.e7)([I.Z], () => (null != a ? I.Z.getRequest(a) : null), [a]),
-        A = (0, l.TH)(),
-        g = (null === (e = (0, l.LX)(A.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-    if (null == p || !p.hasVerificationGate() || g) return null;
+        g = (0, l.TH)(),
+        A = (null === (e = (0, l.LX)(g.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+    if (null == p || !p.hasVerificationGate() || A) return null;
     let S = null !== (t = null == f ? void 0 : f.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
         M = null,
         O = null,

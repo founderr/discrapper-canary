@@ -22,8 +22,8 @@ var i = n(735250),
     C = n(178480),
     p = n(418316),
     f = n(526146),
-    A = n(400565),
-    g = n(148789),
+    g = n(400565),
+    A = n(148789),
     S = n(11825),
     M = n(981631),
     O = n(689938),
@@ -136,7 +136,7 @@ let D = a.memo(function (e) {
                 }
             }, [l, E, _]),
             R = null;
-        l.type === h.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user && (R = (0, i.jsx)(g.Z, { userId: l.other_user.id }));
+        l.type === h.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user && (R = (0, i.jsx)(A.Z, { userId: l.other_user.id }));
         let v = null != l.local_id,
             D = (0, p.Z)(l);
         return (0, i.jsxs)('div', {
@@ -149,7 +149,7 @@ let D = a.memo(function (e) {
                     onClick: O,
                     children: [
                         E ? null : (0, i.jsx)('div', { className: x.unread }),
-                        (0, i.jsx)(A.U, { item: l }),
+                        (0, i.jsx)(g.U, { item: l }),
                         (0, i.jsxs)('div', {
                             className: x.body,
                             children: [

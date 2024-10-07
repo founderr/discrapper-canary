@@ -23,8 +23,8 @@ var i,
     C = n(64078),
     p = n(29270),
     f = n(709586),
-    A = n(267642),
-    g = n(739566),
+    g = n(267642),
+    A = n(739566),
     S = n(834129),
     M = n(981631),
     O = n(689938),
@@ -153,7 +153,7 @@ function k(e) {
         { createMultipleConfettiAt: T, confettiCanvas: h } = o.useContext(N.h),
         [C, p] = o.useState(null),
         f = (0, u.uR)(h, C),
-        A = (function (e, t) {
+        g = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
                 case 'enter':
@@ -169,8 +169,8 @@ function k(e) {
                     return 'enter';
             }
         })(c, I),
-        g = v.includes(I),
-        S = g && 'exit' === c,
+        A = v.includes(I),
+        S = A && 'exit' === c,
         M = o.useCallback((e) => {
             E(e);
         }, []),
@@ -214,7 +214,7 @@ function k(e) {
             }
         }, [T, I, c, s]),
         o.useEffect(() => {
-            if (g && 'leaf_fall' === c) {
+            if (A && 'leaf_fall' === c) {
                 let e = P[I].leafRotationDirection;
                 f.createConfetti(
                     {
@@ -266,7 +266,7 @@ function k(e) {
                     { sprite: 'TOP_LEFT' === I ? j : U }
                 );
             }
-        }, [g, f, I, c]),
+        }, [A, f, I, c]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Ji, {
@@ -287,7 +287,7 @@ function k(e) {
                     children: (0, r.jsx)(m.SequencedLottieAnimation, {
                         animationRef: Z,
                         className: d()(x.easterEggAnimation, { [x.easterEggAnimationHideLeaf]: S }),
-                        nextScene: A,
+                        nextScene: g,
                         sceneSegments: R,
                         onScenePlay: M,
                         onSceneComplete: O,
@@ -318,7 +318,7 @@ function G(e) {
         [E, I] = o.useState(!1),
         R = o.useRef(null),
         { reducedMotion: v } = o.useContext(m.AccessibilityPreferencesContext),
-        L = (0, g.ZH)(n),
+        L = (0, A.ZH)(n),
         Z = L.nick,
         P = s(L);
     t =
@@ -339,13 +339,13 @@ function G(e) {
                     usernameHook: P,
                     numSubscriptions: d,
                     guildName: a.name,
-                    newTierName: (0, A.nW)(c)
+                    newTierName: (0, g.nW)(c)
                 })
               : O.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
                     username: Z,
                     usernameHook: P,
                     guildName: a.name,
-                    newTierName: (0, A.nW)(c)
+                    newTierName: (0, g.nW)(c)
                 });
     let b = o.useCallback(() => {
             if (!v.enabled)

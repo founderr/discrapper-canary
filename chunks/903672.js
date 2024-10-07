@@ -22,8 +22,8 @@ var i = n(735250),
     C = n(999671),
     p = n(324081),
     f = n(240126),
-    A = n(791914),
-    g = n(981631),
+    g = n(791914),
+    A = n(981631),
     S = n(689938),
     M = n(42967);
 let O = {
@@ -37,7 +37,7 @@ function x(e, t, n) {
         a = t ? N.Z.roleFilter : null,
         s = t ? N.Z.everyoneFilter : null,
         l = null;
-    null != e && null != i && (l = i === g.NgX.ALL_SERVERS ? null : e.getGuildId()), o.Z.fetchRecentMentions(n, g.DJj, l, a, s);
+    null != e && null != i && (l = i === A.NgX.ALL_SERVERS ? null : e.getGuildId()), o.Z.fetchRecentMentions(n, A.DJj, l, a, s);
 }
 function R(e) {
     let { setTab: t, onJump: n, badgeState: r, closePopout: _ } = e,
@@ -72,13 +72,13 @@ function R(e) {
     }, []),
         a.useEffect(
             () => () => {
-                o.Z.truncateMentions(g.DJj);
+                o.Z.truncateMentions(A.DJj);
             },
             []
         );
     let b = a.useCallback(
         () =>
-            (0, i.jsx)(A.Z, {
+            (0, i.jsx)(g.Z, {
                 tab: l.X.MENTIONS,
                 setTab: t,
                 badgeState: r,

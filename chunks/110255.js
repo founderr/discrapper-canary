@@ -20,12 +20,12 @@ function E(e) {
         C = (0, o.EQ)(t),
         p = (0, a.e7)([_.Z], () => _.Z.getGuild(t.guild_id)),
         f = (0, c.Z)(p),
-        A = (0, d.Mn)('ChannelNotificationSettingsPopoutMenu') && u.$N.has(t.type);
+        g = (0, d.Mn)('ChannelNotificationSettingsPopoutMenu') && u.$N.has(t.type);
     return (0, i.jsxs)(s.Menu, {
         navId: I,
         onClose: n,
         'aria-label': m,
         onSelect: E,
-        children: [(0, i.jsx)(s.MenuGroup, { children: (0, l.ZP)(t, T) }), N ? (0, i.jsx)(s.MenuGroup, { children: f }) : null, A ? C : (0, i.jsx)(s.MenuGroup, { children: h })]
+        children: [(0, i.jsx)(s.MenuGroup, { children: (0, l.ZP)(t, T) }), N ? (0, i.jsx)(s.MenuGroup, { children: f }) : null, g ? C : (0, i.jsx)(s.MenuGroup, { children: h })]
     });
 }

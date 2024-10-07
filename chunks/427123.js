@@ -18,12 +18,12 @@ var i,
     C = n(55563),
     p = n(981631);
 let f = 'DetectedOffPlatformPremiumPerksStore',
-    A = {},
     g = {},
+    A = {},
     S = [];
 function M() {
     let e = !1;
-    for (let { skuId: t, applicationId: n } of o().values(g)) {
+    for (let { skuId: t, applicationId: n } of o().values(A)) {
         if (S.includes(t)) continue;
         let i = m.Z.getApplication(n);
         if (null == i) {
@@ -36,8 +36,8 @@ function M() {
             continue;
         }
         h.Z.applicationIdsFetching.has(i.id) || h.Z.isEntitledToSku(N.default.getCurrentUser(), t, i.id, i.id) || !a.available
-            ? null != A[t] && (delete A[t], (e = !0))
-            : ((A[t] = {
+            ? null != g[t] && (delete g[t], (e = !0))
+            : ((g[t] = {
                   skuId: t,
                   applicationId: n
               }),
@@ -51,7 +51,7 @@ class O extends (i = c.ZP.Store) {
         this.waitFor(T.ZP, C.Z, h.Z), (S = null !== (e = d.K.get(f)) && void 0 !== e ? e : S);
     }
     getDetectedOffPlatformPremiumPerks() {
-        return o().values(A);
+        return o().values(g);
     }
 }
 (l = 'DetectedOffPlatformPremiumPerksStore'),
@@ -65,7 +65,7 @@ class O extends (i = c.ZP.Store) {
         : (a[s] = l),
     (t.Z = new O(u.Z, {
         LOGOUT: function () {
-            (A = {}), (g = {});
+            (g = {}), (A = {});
         },
         SKU_FETCH_SUCCESS: M,
         ENTITLEMENT_FETCH_APPLICATION_SUCCESS: M,
@@ -73,7 +73,7 @@ class O extends (i = c.ZP.Store) {
         APPLICATION_FETCH_SUCCESS: M,
         DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
             let { skuId: t } = e;
-            if ((delete A[t], S.includes(t))) return !1;
+            if ((delete g[t], S.includes(t))) return !1;
             S.push(t), d.K.set(f, S);
         },
         RUNNING_GAMES_CHANGE: function () {
@@ -82,9 +82,9 @@ class O extends (i = c.ZP.Store) {
                 if (null != t && n !== p.GQo.DISCORD)
                     for (let { skuId: n, applicationId: i } of p.Lg6) {
                         if (!(i !== t || S.includes(n)))
-                            null == g[n] &&
+                            null == A[n] &&
                                 (!h.Z.applicationIdsFetched.has(i) && !h.Z.applicationIdsFetching.has(i) && null == h.Z.getForSku(n) && _.yD(i),
-                                (g[n] = {
+                                (A[n] = {
                                     skuId: n,
                                     applicationId: i
                                 }),

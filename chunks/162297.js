@@ -23,8 +23,8 @@ var i = n(735250),
     C = n(812206),
     p = n(981631),
     f = n(689938),
-    A = n(166272),
-    g = n(413097),
+    g = n(166272),
+    A = n(413097),
     S = n(970952);
 function M(e) {
     let { applicationId: t } = e,
@@ -54,7 +54,7 @@ function O(e) {
         } = a.useMemo(
             () =>
                 (0, E.sl)(t, {
-                    fakeAppIconURL: g,
+                    fakeAppIconURL: A,
                     size: 56
                 }),
             [t]
@@ -75,24 +75,24 @@ function O(e) {
         }, [T, t]),
         (0, i.jsxs)('div', {
             ref: M,
-            className: A.embedContainer,
+            className: g.embedContainer,
             children: [
                 (0, i.jsx)(x, {
                     application: t,
                     iconUrl: c
                 }),
                 (0, i.jsx)('img', {
-                    className: A.icon,
+                    className: g.icon,
                     alt: t.name,
                     src: null != c ? c : S,
                     'aria-hidden': !0,
                     draggable: !1
                 }),
                 (0, i.jsxs)('div', {
-                    className: A.body,
+                    className: g.body,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: A.details,
+                            className: g.details,
                             children: [
                                 (0, i.jsx)(r.Heading, {
                                     variant: 'heading-lg/bold',
@@ -109,7 +109,7 @@ function O(e) {
                         }),
                         (0, i.jsx)(r.Button, {
                             color: r.Button.Colors.PRIMARY,
-                            className: A.button,
+                            className: g.button,
                             type: 'button',
                             size: r.Button.Sizes.MEDIUM,
                             onClick: () => {
@@ -146,8 +146,8 @@ function x(e) {
         r = (0, i.jsx)(d.Z, {
             imageBackground: a,
             applicationName: t.name,
-            imageClassName: A.bannerImage,
-            imageNotFoundClassName: A.bannerImage
+            imageClassName: g.bannerImage,
+            imageNotFoundClassName: g.bannerImage
         });
     else if ((null == l ? void 0 : l.banner) != null) {
         let e = (0, T.aN)({
@@ -159,11 +159,11 @@ function x(e) {
         r = (0, i.jsx)('img', {
             alt: t.name,
             src: e,
-            className: A.bannerImage
+            className: g.bannerImage
         });
     } else o = { backgroundColor: s };
     return (0, i.jsx)('div', {
-        className: A.banner,
+        className: g.banner,
         style: o,
         children: r
     });

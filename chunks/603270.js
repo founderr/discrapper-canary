@@ -27,8 +27,8 @@ var i = n(735250),
     C = n(572004),
     p = n(601911),
     f = n(504211),
-    A = n(381961),
-    g = n(970321),
+    g = n(381961),
+    A = n(970321),
     S = n(680005),
     M = n(981631),
     O = n(272242),
@@ -36,8 +36,8 @@ var i = n(735250),
     R = n(738571);
 let v = P(function (e) {
         let { appId: t, message: o } = e,
-            u = (0, g.R)(t),
-            [_, I, T, N, C, A, S] = (0, s.Wu)(
+            u = (0, A.R)(t),
+            [_, I, T, N, C, g, S] = (0, s.Wu)(
                 [c.Z, m.Z, E.Z],
                 () => {
                     var e;
@@ -76,7 +76,7 @@ let v = P(function (e) {
                         transitionState: n.transitionState,
                         onClose: n.onClose,
                         appId: t,
-                        guildId: A
+                        guildId: g
                     });
             });
         };
@@ -112,7 +112,7 @@ let v = P(function (e) {
     L = P(function (e) {
         var t, r;
         let { skuId: d, message: m } = e,
-            [C, A, v, L, P, D, b, j] = (0, s.Wu)(
+            [C, g, v, L, P, D, b, j] = (0, s.Wu)(
                 [T.Z, N.Z, I.Z, E.Z, c.Z],
                 () => {
                     var e, t, n, i;
@@ -126,13 +126,13 @@ let v = P(function (e) {
                 },
                 [m.channel_id, d]
             ),
-            U = (0, g.R)(null !== (r = null == A ? void 0 : A.id) && void 0 !== r ? r : '');
+            U = (0, A.R)(null !== (r = null == g ? void 0 : g.id) && void 0 !== r ? r : '');
         a.useEffect(() => {
             null == C && !L && !P && (0, o.km)(d);
         }, [P, L, C, d]),
             a.useEffect(() => {
-                if ((null == A ? void 0 : A.id) != null) (0, o.oJ)(null == A ? void 0 : A.id);
-            }, [null == A ? void 0 : A.id]);
+                if ((null == g ? void 0 : g.id) != null) (0, o.oJ)(null == g ? void 0 : g.id);
+            }, [null == g ? void 0 : g.id]);
         let y = (0, s.e7)([T.Z], () => (null != d ? T.Z.getParentSKU(d) : void 0), [d]),
             {
                 openModal: B,
@@ -143,7 +143,7 @@ let v = P(function (e) {
                 guildId: b,
                 showBenefitsFirst: !1
             });
-        if (!U || null == A || null == C) return null;
+        if (!U || null == g || null == C) return null;
         let F = C.type === M.epS.SUBSCRIPTION,
             w = !!F && (0, u.KW)(C.flags),
             V = () => {
@@ -153,7 +153,7 @@ let v = P(function (e) {
                         (0, i.jsx)(e, {
                             transitionState: t.transitionState,
                             onClose: t.onClose,
-                            appId: A.id,
+                            appId: g.id,
                             guildId: b
                         });
                 });
@@ -169,7 +169,7 @@ let v = P(function (e) {
                         return null != e && null != y
                             ? (0, i.jsx)(e, {
                                   transitionState: n.transitionState,
-                                  appId: A.id,
+                                  appId: g.id,
                                   skuId: C.id,
                                   guildId: b,
                                   subscriptionType: w ? 'user' : 'guild',
@@ -179,7 +179,7 @@ let v = P(function (e) {
                             : null != t
                               ? (0, i.jsx)(t, {
                                     transitionState: n.transitionState,
-                                    appId: A.id,
+                                    appId: g.id,
                                     skuId: d,
                                     onClose: n.onClose,
                                     onHeaderTitleClick: a
@@ -220,24 +220,24 @@ let v = P(function (e) {
         '' === Y && (Y = void 0);
         let W = () => {
             h.default.track(M.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-                application_id: A.id,
+                application_id: g.id,
                 sku_id: C.id,
                 area: 'purchase_button'
             });
         };
         return (0, i.jsx)(Z, {
-            appName: A.name,
+            appName: g.name,
             title: C.name,
             description: Y,
-            link: ''.concat(location.protocol, '//').concat(location.host).concat(M.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(A.id, O.ApplicationDirectoryProfileSections.STORE)),
+            link: ''.concat(location.protocol, '//').concat(location.host).concat(M.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(g.id, O.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
-                (0, f.X)(A.id, f.B.SKU_EMBED, d);
+                (0, f.X)(g.id, f.B.SKU_EMBED, d);
             },
             iconSrc: j,
             onIconClick: () => {
                 V(),
                     h.default.track(M.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-                        application_id: A.id,
+                        application_id: g.id,
                         sku_id: C.id,
                         area: 'app_icon'
                     });
@@ -250,7 +250,7 @@ let v = P(function (e) {
                         onClick: () => {
                             H(),
                                 h.default.track(M.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-                                    application_id: A.id,
+                                    application_id: g.id,
                                     sku_id: C.id,
                                     area: 'view_details'
                                 });
@@ -262,7 +262,7 @@ let v = P(function (e) {
                         ? null != D
                             ? (0, i.jsx)(S.p, {
                                   onClick: B,
-                                  appId: A.id,
+                                  appId: g.id,
                                   subscriptionType: w ? 'user' : 'guild',
                                   skuId: C.id,
                                   icon: (0, i.jsx)(l.ShopIcon, {
@@ -279,7 +279,7 @@ let v = P(function (e) {
                                   children: x.Z.Messages.STOREFRONT_SUBSCRIBE
                               })
                         : (0, i.jsx)(S.Y, {
-                              appId: A.id,
+                              appId: g.id,
                               sku: C,
                               icon: (0, i.jsx)(l.ShopIcon, {
                                   size: 'xs',
@@ -368,7 +368,7 @@ function Z(e) {
 }
 function P(e) {
     return (t) => {
-        let { enabled: n } = A.u.useExperiment({ location: 'AppStorefrontMessageEmbed' });
+        let { enabled: n } = g.u.useExperiment({ location: 'AppStorefrontMessageEmbed' });
         return n ? (0, i.jsx)(e, { ...t }) : null;
     };
 }

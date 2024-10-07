@@ -69,8 +69,8 @@ var i = n(735250),
     C = n(358085),
     p = n(51144),
     f = n(91047),
-    A = n(50284),
-    g = n(981631),
+    g = n(50284),
+    A = n(981631),
     S = n(689938);
 function M(e, t, n) {
     return a.useCallback(() => {
@@ -88,7 +88,7 @@ function O(e, t, n) {
             }
             let s = '@'.concat(p.ZP.getUserTag(a, { decoration: 'never' })),
                 l = '<@'.concat(e, '>');
-            T.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
+            T.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
                 plainText: s,
                 rawText: l
             }),
@@ -133,7 +133,7 @@ function b(e, t) {
 function j(e, t, s, r) {
     let { id: o } = t,
         { id: d, flags: u } = e,
-        m = (0, h.yE)(u, g.iLy.EPHEMERAL),
+        m = (0, h.yE)(u, A.iLy.EPHEMERAL),
         T = (0, c.bp)();
     return a.useCallback(
         (e, t) => {
@@ -213,7 +213,7 @@ function k(e, t) {
         { id: i } = t;
     return a.useCallback(
         (e) => {
-            e.altKey && (e.preventDefault(), (0, A.Z)(i, n));
+            e.altKey && (e.preventDefault(), (0, g.Z)(i, n));
         },
         [i, n]
     );
@@ -225,10 +225,10 @@ function G(e, t, n) {
         [r, o] = a.useState(n);
     l.current = r || l.current;
     let c = a.useCallback(() => {
-            i && (0, u.T6)(), !r && (T.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, s, !0), o(!0));
+            i && (0, u.T6)(), !r && (T.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, s, !0), o(!0));
         }, [r, s, i]),
         _ = a.useCallback(() => {
-            T.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, s, !1), o(!1);
+            T.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, s, !1), o(!1);
         }, [s]);
     return {
         hasHovered: l.current,

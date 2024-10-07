@@ -18,17 +18,17 @@ var i = n(735250),
     C = n(981631),
     p = n(665692),
     f = n(689938),
-    A = n(120584);
-let g = {
+    g = n(120584);
+let A = {
         tag: 'span',
         variant: 'text-md/normal',
         color: 'header-secondary'
     },
-    S = { className: l()('mention', A.mention) };
+    S = { className: l()('mention', g.mention) };
 function M(e) {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(o.Text, {
-            ...g,
+            ...A,
             color: 'header-primary',
             children: e
         })
@@ -49,7 +49,7 @@ t.Z = a.memo(function (e) {
     )
         R = (0, i.jsx)(o.Spinner, {
             type: o.Spinner.Type.SPINNING_CIRCLE,
-            className: A.spinner
+            className: g.spinner
         });
     else {
         let e = [],
@@ -58,7 +58,7 @@ t.Z = a.memo(function (e) {
             e = e.concat(
                 (function e(t) {
                     var n, s, l, r, d, u, _;
-                    let A,
+                    let g,
                         { option: O, channel: x, guild: R, messageId: v, parentOptionKey: L, commandOptionSpec: Z, sourceAnalyticsLocations: P } = t,
                         D = null != L ? L + ' ' + O.name : O.name;
                     if (O.type === c.jw.SUB_COMMAND || O.type === c.jw.SUB_COMMAND_GROUP) {
@@ -69,7 +69,7 @@ t.Z = a.memo(function (e) {
                                         children: [
                                             ' ',
                                             (0, i.jsx)(o.Text, {
-                                                ...g,
+                                                ...A,
                                                 children: null !== (s = null == Z ? void 0 : Z.name_localized) && void 0 !== s ? s : O.name
                                             })
                                         ]
@@ -100,7 +100,7 @@ t.Z = a.memo(function (e) {
                                     t = N.default.getUser(e);
                                 if (null != t) {
                                     let e = (0, h.ij)(t, x);
-                                    A = (0, i.jsxs)(E.Z, {
+                                    g = (0, i.jsxs)(E.Z, {
                                         ...S,
                                         onClick: () =>
                                             (0, I.openUserProfileModal)({
@@ -120,7 +120,7 @@ t.Z = a.memo(function (e) {
                                 let e = O.value.toString(),
                                     t = m.Z.getChannel(e);
                                 null != t &&
-                                    (A = (0, i.jsxs)(E.Z, {
+                                    (g = (0, i.jsxs)(E.Z, {
                                         ...S,
                                         children: [p.zy, t.name]
                                     }));
@@ -130,7 +130,7 @@ t.Z = a.memo(function (e) {
                                 let e = O.value.toString(),
                                     t = null != R ? T.Z.getRole(R.id, e) : void 0;
                                 null != t &&
-                                    (A = (0, i.jsxs)(E.Z, {
+                                    (g = (0, i.jsxs)(E.Z, {
                                         ...S,
                                         children: [p.ME, t.name]
                                     }));
@@ -140,14 +140,14 @@ t.Z = a.memo(function (e) {
                                 let e = O.value.toString(),
                                     t = null != R ? T.Z.getRole(R.id, e) : void 0;
                                 if (null != t)
-                                    A = (0, i.jsxs)(E.Z, {
+                                    g = (0, i.jsxs)(E.Z, {
                                         children: [p.ME, t.name]
                                     });
                                 else {
                                     let t = N.default.getUser(e);
                                     if (null != t) {
                                         let e = (0, h.ij)(t, x);
-                                        A = (0, i.jsxs)(E.Z, {
+                                        g = (0, i.jsxs)(E.Z, {
                                             ...S,
                                             onClick: () =>
                                                 (0, I.openUserProfileModal)({
@@ -162,7 +162,7 @@ t.Z = a.memo(function (e) {
                                 break;
                             }
                             case c.jw.ATTACHMENT:
-                                A = M(f.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
+                                g = M(f.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
                                 break;
                             default: {
                                 let e = null == Z ? void 0 : null === (d = Z.choices) || void 0 === d ? void 0 : d.find((e) => e.value === O.value);
@@ -170,17 +170,17 @@ t.Z = a.memo(function (e) {
                             }
                         }
                     return (
-                        null == A && (A = M(null == b ? void 0 : b.toString())),
+                        null == g && (g = M(null == b ? void 0 : b.toString())),
                         [
                             (0, i.jsxs)(
                                 a.Fragment,
                                 {
                                     children: [
                                         (0, i.jsxs)(o.Text, {
-                                            ...g,
+                                            ...A,
                                             children: [' ', null !== (_ = null == Z ? void 0 : Z.name_localized) && void 0 !== _ ? _ : O.name, ': ']
                                         }),
-                                        A
+                                        g
                                     ]
                                 },
                                 D
@@ -200,7 +200,7 @@ t.Z = a.memo(function (e) {
         R = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(o.Text, {
-                    ...g,
+                    ...A,
                     children: ['/', null !== (x = null === (s = Z.application_command) || void 0 === s ? void 0 : s.name_localized) && void 0 !== x ? x : Z.name]
                 }),
                 e
@@ -208,7 +208,7 @@ t.Z = a.memo(function (e) {
         });
     }
     return (0, i.jsxs)('div', {
-        className: A.container,
+        className: g.container,
         onCopy: (e) => {
             var t, n, i;
             let a = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
@@ -216,11 +216,11 @@ t.Z = a.memo(function (e) {
         },
         children: [
             (0, i.jsx)('div', {
-                className: A.tooltip,
+                className: g.tooltip,
                 ref: b,
                 children: R
             }),
-            (0, i.jsx)('div', { className: A.tooltipPointer })
+            (0, i.jsx)('div', { className: g.tooltipPointer })
         ]
     });
 });

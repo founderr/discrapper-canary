@@ -23,10 +23,10 @@ function N(e) {
         n,
         a,
         { invite: N, currentUserId: h, guild: C, onTransitionToInviteChannel: p, onAcceptInstantInvite: f } = e,
-        A = null == C ? void 0 : C.id,
-        g = (0, l.e7)([u.Z], () => u.Z.getGuildId()),
-        S = (0, l.e7)([d.Z], () => (null != N && null != N.target_user ? d.Z.getActiveStreamForUser(N.target_user.id, A) : null), [N, A]),
-        M = (0, l.e7)([d.Z], () => (null != N && null != N.target_user ? d.Z.getStreamForUser(N.target_user.id, A) : null), [N, A]),
+        g = null == C ? void 0 : C.id,
+        A = (0, l.e7)([u.Z], () => u.Z.getGuildId()),
+        S = (0, l.e7)([d.Z], () => (null != N && null != N.target_user ? d.Z.getActiveStreamForUser(N.target_user.id, g) : null), [N, g]),
+        M = (0, l.e7)([d.Z], () => (null != N && null != N.target_user ? d.Z.getStreamForUser(N.target_user.id, g) : null), [N, g]),
         O = null != N && N.target_type === I.Iq.STREAM && null != N.target_user && null != S,
         x = null != N && null != M && null != N.channel && null != N.guild && M.channelId === N.channel.id && M.guildId === N.guild.id;
     s()(null != N, 'Invite cannot be null');
@@ -42,7 +42,7 @@ function N(e) {
     let D = null != N.channel ? (0, o.jD)(N.channel) : null,
         b = O ? p : f;
     P && !x ? (a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: v.username })) : ((t = m.Z.Messages.WATCH), (n = r.Z.Button.Colors.GREEN), O && ((t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = r.Z.Button.Colors.PRIMARY)), (a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: v.username })));
-    let j = g === C.id && null != D ? (0, i.jsx)(r.Z.Channel, { channel: D }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: C.name });
+    let j = A === C.id && null != D ? (0, i.jsx)(r.Z.Channel, { channel: D }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: C.name });
     return (0, i.jsxs)(r.Z, {
         children: [
             (0, i.jsx)(r.Z.Header, { text: m.Z.Messages.INVITE_BUTTON_TITLE_STREAMING }),

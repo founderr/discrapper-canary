@@ -14,7 +14,7 @@ var a = n(430824),
     d = n(981631),
     u = n(689938);
 function _(e) {
-    var t, n, _, E, I, m, T, N, h, C, p, f, A, g, S;
+    var t, n, _, E, I, m, T, N, h, C, p, f, g, A, S;
     let M = null !== (_ = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== _ ? _ : d.lds,
         O = o.ZP.getName(l.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
     switch (e.type) {
@@ -39,11 +39,11 @@ function _(e) {
             let P = e.guild_scheduled_event_id,
                 D = null != P ? i.ZP.getGuildScheduledEvent(P) : null,
                 b = null == D ? void 0 : D.name,
-                j = null === (A = a.Z.getGuild(null == D ? void 0 : D.guild_id)) || void 0 === A ? void 0 : A.name,
+                j = null === (g = a.Z.getGuild(null == D ? void 0 : D.guild_id)) || void 0 === g ? void 0 : g.name,
                 U = (0, i.Z2)(null != D ? D : void 0);
             return (0, r.Ew)(j) || (0, r.Ew)(b) || !U
-                ? null !== (g = e.body) && void 0 !== g
-                    ? g
+                ? null !== (A = e.body) && void 0 !== A
+                    ? A
                     : ''
                 : u.Z.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
                       event_name: b,

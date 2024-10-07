@@ -23,8 +23,8 @@ var a = n(120356),
     C = n(158776),
     p = n(594174),
     f = n(689938),
-    A = n(699420);
-let g = {
+    g = n(699420);
+let A = {
     top: 8,
     bottom: 8,
     left: -4,
@@ -34,9 +34,9 @@ function S(e) {
     let { channel: t, children: n, gotoChannel: a, mentionCount: s, channelState: r, toggleCollapsed: c } = e,
         d = (0, l.JA)('recents-header-'.concat(t.id, '-').concat((0, I.Dt)()));
     return (0, i.jsx)(o.FocusRing, {
-        offset: g,
+        offset: A,
         children: (0, i.jsxs)('div', {
-            className: A.channelHeader,
+            className: g.channelHeader,
             ...d,
             tabIndex: 0,
             'data-recents-channel': t.id,
@@ -78,7 +78,7 @@ function O(e) {
         onClick: n,
         tabIndex: -1,
         children: (0, i.jsx)('img', {
-            className: A.dmIcon,
+            className: g.dmIcon,
             src: s,
             alt: '',
             'aria-hidden': !0
@@ -92,7 +92,7 @@ function x(e) {
         ? null
         : (0, i.jsx)(m.Z, {
               'aria-hidden': !0,
-              className: A.guildIcon,
+              className: g.guildIcon,
               guild: a,
               size: m.Z.Sizes.MEDIUM,
               active: !0,
@@ -112,37 +112,37 @@ function R(e) {
             : t.isPrivate()
               ? (0, i.jsx)(v, { channel: t })
               : (0, i.jsx)(o.Clickable, {
-                    className: s()(A.subtext, A.guildName),
+                    className: s()(g.subtext, g.guildName),
                     onClick: n,
                     children: m
                 });
     return (0, i.jsxs)('div', {
-        className: A.channelNameSection,
+        className: g.channelNameSection,
         children: [
             (0, i.jsx)(o.Heading, {
                 variant: 'heading-md/semibold',
-                className: A.channelNameHeader,
+                className: g.channelNameHeader,
                 children: (0, i.jsxs)(o.Clickable, {
-                    className: A.channelName,
+                    className: g.channelName,
                     onClick: n,
                     children: [
                         t.isThread() || t.isGroupDM() || null == d
                             ? null
                             : (0, i.jsx)(d, {
-                                  className: t.isForumLikeChannel() ? A.forumIcon : void 0,
+                                  className: t.isForumLikeChannel() ? g.forumIcon : void 0,
                                   width: 18,
                                   height: 18,
                                   size: 'custom',
                                   color: 'currentColor'
                               }),
                         (0, i.jsx)('span', {
-                            className: A.channelNameSpan,
+                            className: g.channelNameSpan,
                             children: I
                         }),
                         null != a && a > 0
                             ? (0, i.jsx)(E.Z, {
                                   value: a,
-                                  className: A.badge
+                                  className: g.badge
                               })
                             : null
                     ]
@@ -151,7 +151,7 @@ function R(e) {
             (0, i.jsx)(o.Text, {
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
-                className: A.subtextContainer,
+                className: g.subtextContainer,
                 children: T
             })
         ]
@@ -174,8 +174,8 @@ function v(e) {
     return null == a
         ? null
         : (0, i.jsx)(c.Z, {
-              className: A.activityStatus,
-              emojiClassName: A.activityEmoji,
+              className: g.activityStatus,
+              emojiClassName: g.activityEmoji,
               activities: a,
               applicationStream: s,
               hideTooltip: !0,

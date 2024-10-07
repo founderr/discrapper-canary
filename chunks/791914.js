@@ -21,8 +21,8 @@ var a = n(399606),
 function N(e) {
     let { tab: t, setTab: n, children: N, badgeState: h, closePopout: C } = e,
         { showReminders: p } = E.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
-        { enabled: f, inInbox: A } = u.Z.useExperiment({ location: 'RecentsPopout' }),
-        { enabled: g } = d.Z.useExperiment({ location: 'RecentsHeader' }),
+        { enabled: f, inInbox: g } = u.Z.useExperiment({ location: 'RecentsPopout' }),
+        { enabled: A } = d.Z.useExperiment({ location: 'RecentsHeader' }),
         S = (0, a.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
         M = (0, a.e7)([_.Z], () => _.Z.getOverdueMessageReminderCount());
     return (0, i.jsxs)(r.h4, {
@@ -82,7 +82,7 @@ function N(e) {
                             className: T.tab,
                             children: m.Z.Messages.MENTIONS
                         }),
-                        g
+                        A
                             ? (0, i.jsxs)(l.TabBar.Item, {
                                   'aria-label': 'game_invites',
                                   id: s.X.GAME_INVITES,
@@ -98,7 +98,7 @@ function N(e) {
                                   ]
                               })
                             : null,
-                        f && A
+                        f && g
                             ? (0, i.jsx)(l.TabBar.Item, {
                                   'aria-label': m.Z.Messages.FOR_LATER,
                                   id: s.X.BOOKMARKS,

@@ -22,8 +22,8 @@ var i = n(735250),
     C = n(778333),
     p = n(949981),
     f = n(680668),
-    A = n(143708),
-    g = n(358595),
+    g = n(143708),
+    A = n(358595),
     S = n(563917),
     M = n(135845),
     O = n(981631);
@@ -86,11 +86,11 @@ function x(e) {
         });
     switch (L.state) {
         case O.r2o.RESOLVING:
-            y = (0, i.jsx)(g.Z, {});
+            y = (0, i.jsx)(A.Z, {});
             break;
         case O.r2o.EXPIRED:
         case O.r2o.BANNED:
-            y = (0, i.jsx)(A.Z, {
+            y = (0, i.jsx)(g.Z, {
                 banned: L.state === O.r2o.BANNED,
                 author: n
             });

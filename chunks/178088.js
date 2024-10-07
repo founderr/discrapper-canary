@@ -23,8 +23,8 @@ var i = n(735250),
     C = n(153209),
     p = n(956961),
     f = n(903672),
-    A = n(946443),
-    g = n(264233),
+    g = n(946443),
+    A = n(264233),
     S = n(981631),
     M = n(689938);
 function O(e) {
@@ -116,7 +116,7 @@ function O(e) {
                                     closePopout: y
                                 })
                               : V && D === r.X.GAME_INVITES
-                                ? (0, i.jsx)(g.Z, {
+                                ? (0, i.jsx)(A.Z, {
                                       setTab: b,
                                       badgeState: x,
                                       closePopout: y
@@ -134,12 +134,12 @@ function O(e) {
                                           closePopout: y
                                       })
                                     : (0, i.jsx)(s.SV, {
-                                          fallback: (0, i.jsx)(A.h, {
+                                          fallback: (0, i.jsx)(g.h, {
                                               setTab: b,
                                               closePopout: y,
                                               badgeState: x
                                           }),
-                                          children: (0, i.jsx)(A.Z, {
+                                          children: (0, i.jsx)(g.Z, {
                                               setTab: b,
                                               onJump: H,
                                               showTutorial: j,

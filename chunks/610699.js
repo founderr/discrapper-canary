@@ -25,8 +25,8 @@ var i = n(735250),
     C = n(835473),
     p = n(471445),
     f = n(111028),
-    A = n(955415),
-    g = n(601964),
+    g = n(955415),
+    A = n(601964),
     S = n(592125),
     M = n(430824),
     O = n(496675),
@@ -196,7 +196,7 @@ function k(e) {
         ei = null != W;
     if (null == W) {
         if (null == d.guild) return (0, i.jsx)(v.Z, {});
-        W = new g.ZP(d.guild);
+        W = new A.ZP(d.guild);
     }
     let ea = (ei && !J) || (ei && z),
         es = () => {
@@ -230,7 +230,7 @@ function k(e) {
                           })
                       })
                   }),
-                  (0, i.jsxs)(A.Z, {
+                  (0, i.jsxs)(g.Z, {
                       className: l()(D.content, {
                           [D.large]: w,
                           [D.stacked]: H

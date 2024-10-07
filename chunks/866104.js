@@ -26,8 +26,8 @@ var i = n(735250),
     C = n(506071),
     p = n(696014),
     f = n(847033),
-    A = n(544978),
-    g = n(893182),
+    g = n(544978),
+    A = n(893182),
     S = n(689938),
     M = n(687006);
 function O(e) {
@@ -109,7 +109,7 @@ function R(e) {
         [Z, P] = a.useState(1),
         D = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: b, isPhantomPreview: j } = (0, f.m)(),
-        U = b === A.y.GUILD_PRODUCTS_PREVIEW ? S.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : S.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
+        U = b === g.y.GUILD_PRODUCTS_PREVIEW ? S.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : S.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
         y = L
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -123,7 +123,7 @@ function R(e) {
                       }),
                       R &&
                           (0, i.jsxs)(i.Fragment, {
-                              children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(O, { onClick: () => (0, g.Z)({ guildId: I }) })]
+                              children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(O, { onClick: () => (0, A.Z)({ guildId: I }) })]
                           })
                   ]
               })

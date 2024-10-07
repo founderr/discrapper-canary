@@ -46,7 +46,7 @@ function p(e) {
                 }),
             [d, t, s]
         ),
-        A = a.useCallback(async () => {
+        g = a.useCallback(async () => {
             let { valid: e } = await (0, T.v)({
                 type: o.I.FORM,
                 content: '',
@@ -89,7 +89,7 @@ function p(e) {
         color: l.ButtonColors.PRIMARY,
         onMouseEnter: () => N(!0),
         onMouseLeave: () => N(!1),
-        onClick: A,
+        onClick: g,
         children: [
             (0, i.jsx)(c.ZP, {
                 className: h.CTAMessageSticker,

@@ -1,6 +1,6 @@
 n.d(t, {
     H: function () {
-        return g;
+        return A;
     }
 });
 var i = n(735250);
@@ -23,9 +23,9 @@ var a = n(120356),
     C = n(5192),
     p = n(981631),
     f = n(689938),
-    A = n(64182);
-function g(e) {
-    var t, n, a, g, S, M, O, x, R, v;
+    g = n(64182);
+function A(e) {
+    var t, n, a, A, S, M, O, x, R, v;
     let { message: L, channel: Z } = e,
         P =
             null === (a = L.embeds[0]) || void 0 === a
@@ -45,12 +45,12 @@ function g(e) {
                 : null === (S = M.fields) || void 0 === S
                   ? void 0
                   : null ===
-                          (g = S.find((e) => {
+                          (A = S.find((e) => {
                               let { rawName: t } = e;
                               return 'channel_id' === t;
-                          })) || void 0 === g
+                          })) || void 0 === A
                     ? void 0
-                    : g.rawValue,
+                    : A.rawValue,
         b = (0, l.e7)([T.Z], () => T.Z.getGuild(P)),
         j = (0, l.e7)([m.Z], () => m.Z.getChannel(D)),
         U = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
@@ -83,7 +83,7 @@ function g(e) {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {
-                className: A.card,
+                className: g.card,
                 children: [
                     (0, i.jsx)(r.Text, {
                         variant: 'text-md/semibold',
@@ -97,7 +97,7 @@ function g(e) {
                     }),
                     w.length > 0
                         ? (0, i.jsx)('div', {
-                              className: A.participants,
+                              className: g.participants,
                               children: (0, i.jsx)(E.Z, {
                                   guildId: P,
                                   partySize: {
@@ -110,7 +110,7 @@ function g(e) {
                               })
                           })
                         : (0, i.jsx)('div', {
-                              className: s()(A.participants, A.disabled),
+                              className: s()(g.participants, g.disabled),
                               children: (0, i.jsx)(E.Z, {
                                   guildId: P,
                                   partySize: {
@@ -125,15 +125,15 @@ function g(e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: A.actions,
+                className: g.actions,
                 children: [
                     (0, i.jsxs)(r.Button, {
                         color: r.Button.Colors.BRAND,
                         onClick: () => {
                             null != D && null != P && ((0, I.uL)(p.Z5c.CHANNEL(P, D)), c.default.selectVoiceChannel(D));
                         },
-                        className: A.button,
-                        innerClassName: A.buttonInner,
+                        className: g.button,
+                        innerClassName: g.buttonInner,
                         disabled: V || !z,
                         children: [
                             (0, i.jsx)(r.VoiceNormalIcon, {
@@ -148,7 +148,7 @@ function g(e) {
                         onClick: () => {
                             o.Z.sendMessage(Z.id, d.ZP.parse(Z, '\uD83D\uDC4B'));
                         },
-                        className: A.button,
+                        className: g.button,
                         children: Q
                     })
                 ]

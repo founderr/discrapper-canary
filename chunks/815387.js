@@ -18,8 +18,8 @@ var i = n(735250),
     C = n(182180),
     p = n(924301),
     f = n(225890),
-    A = n(434404),
-    g = n(507435),
+    g = n(434404),
+    A = n(507435),
     S = n(504733),
     M = n(563959),
     O = n(703656),
@@ -72,8 +72,8 @@ var i = n(735250),
     eC = n(587737),
     ep = n(482239),
     ef = n(328749),
-    eA = n(4305),
-    eg = n(910548),
+    eg = n(4305),
+    eA = n(910548),
     eS = n(981631),
     eM = n(70722),
     eO = n(689938),
@@ -101,7 +101,7 @@ function eR(e) {
             messageId: t.id,
             stopPropagation: !0
         });
-    return (0, i.jsx)(eg.ZP, {
+    return (0, i.jsx)(eA.ZP, {
         message: t,
         compact: l,
         guild: d,
@@ -298,7 +298,7 @@ let eL = Object.freeze({
             });
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(eA.Z, {
+                (0, i.jsx)(eg.Z, {
                     message: t,
                     guildId: a.guild_id,
                     compact: n,
@@ -377,7 +377,7 @@ let eL = Object.freeze({
             message: t,
             compact: n,
             onClick: () => {
-                null != r && A.Z.open(r, eS.pNK.DISCOVERY);
+                null != r && g.Z.open(r, eS.pNK.DISCOVERY);
             }
         });
     },
@@ -636,7 +636,7 @@ let eL = Object.freeze({
         });
     },
     [eS.uaV.VOICE_HANGOUT_INVITE]: void 0,
-    [eS.uaV.POLL_RESULT]: g.Z,
+    [eS.uaV.POLL_RESULT]: A.Z,
     [eS.uaV.CHANGELOG]: void 0,
     [eS.uaV.NITRO_NOTIFICATION]: function (e) {
         let { message: t, channel: n } = e;

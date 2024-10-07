@@ -18,8 +18,8 @@ var i,
     C = n(768419),
     p = n(456432),
     f = n(347475),
-    A = n(789407),
-    g = n(598077),
+    g = n(789407),
+    A = n(598077),
     S = n(757266),
     M = n(831506),
     O = n(271383),
@@ -55,7 +55,7 @@ class G extends (i = s.PureComponent) {
             let t = (0, _.Z)(e, n.id);
             if (null != t) return t;
         }
-        return null == n || n instanceof A.ZP
+        return null == n || n instanceof g.ZP
             ? null
             : P.ZP.getApplicationIconURL({
                   id: n.id,
@@ -225,7 +225,7 @@ B(G, 'defaultProps', { isPreview: !1 }),
                     i = v.default.getUser(e),
                     a = null == i;
                 return (
-                    null == i && (i = new g.Z({ discriminator: '0005' })),
+                    null == i && (i = new A.Z({ discriminator: '0005' })),
                     {
                         user: i,
                         unknownUser: a,

@@ -33,11 +33,11 @@ var i = n(278074),
     C = n(839963),
     p = n(897325),
     f = n(57101),
-    A = n(562293),
-    g = n(981631),
+    g = n(562293),
+    A = n(981631),
     S = n(689938);
 let M = {
-    channelId: g.lds,
+    channelId: A.lds,
     selectedAnswerIds: new Set(),
     submitting: !1,
     editing: !1,
@@ -103,8 +103,8 @@ function v(e, t) {
     let { formattedExpirationLabel: l } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: r } = e;
     if (null == r) return;
-    let E = e.state === g.yb.SENT,
-        I = E ? (null != l ? l : (0, A.H)(r.expiry)) : '',
+    let E = e.state === A.yb.SENT,
+        I = E ? (null != l ? l : (0, g.H)(r.expiry)) : '',
         m = null == I && E,
         { selectedAnswerIds: T, submitting: h, editing: C, showResults: p } = null !== (a = null != t ? t : (0, N.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : M,
         f = e.reactions,
@@ -148,11 +148,11 @@ function L(e, t) {
     let { animateEmoji: c = !1, theme: u = 'dark', formattedExpirationLabel: _ } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: N } = e;
     if (null == N) return;
-    let A = E.default.getCurrentUser();
-    if (null == A) return;
-    let g = s.Z.useReducedMotion,
+    let g = E.default.getCurrentUser();
+    if (null == g) return;
+    let A = s.Z.useReducedMotion,
         M = null === (o = d.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
-        R = (0, p.E)(A, M),
+        R = (0, p.E)(g, M),
         L = N.answers,
         Z = N.layout_type,
         P = v(e, t, { formattedExpirationLabel: _ });
@@ -219,7 +219,7 @@ function L(e, t) {
                 isVictor: F && T,
                 didSelfVote: N,
                 style: h,
-                shouldAnimateTransition: Y && !g,
+                shouldAnimateTransition: Y && !A,
                 votesPercentage: Math.round(100 * _),
                 votes: (0, i.EQ)(Z)
                     .with(a.C.IMAGE_ONLY_ANSWERS, () => '('.concat(u.toLocaleString(), ')'))

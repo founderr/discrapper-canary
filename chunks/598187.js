@@ -22,8 +22,8 @@ var i = n(735250),
     C = n(825829),
     p = n(226192),
     f = n(36459),
-    A = n(434404),
-    g = n(518950),
+    g = n(434404),
+    A = n(518950),
     S = n(347475),
     M = n(592125),
     O = n(271383),
@@ -123,7 +123,7 @@ function G(e) {
             avatarSrc: d,
             avatarDecorationSrc: u,
             eventHandlers: _
-        } = (0, g.Z)({
+        } = (0, A.Z)({
             user: l,
             guildId: r,
             size: 12
@@ -216,8 +216,8 @@ function F(e) {
     let { message: n, compact: s } = e,
         { joinAttempts: l, raidDatetime: r, dmsSent: d, raidType: m, resolvedReason: T } = (0, C.FL)(n),
         f = (0, _.e7)([M.Z], () => M.Z.getChannel(n.channel_id), [n.channel_id]),
-        A = null !== (t = null == f ? void 0 : f.guild_id) && void 0 !== t ? t : null,
-        { shouldShowIncidentActions: g } = (0, N.mI)(A),
+        g = null !== (t = null == f ? void 0 : f.guild_id) && void 0 !== t ? t : null,
+        { shouldShowIncidentActions: A } = (0, N.mI)(g),
         S = (0, v.sR)(n.author.id, n.channel_id),
         O = a.useCallback(() => {
             let e = null == f ? void 0 : f.guild_id;
@@ -276,7 +276,7 @@ function F(e) {
                       children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({ dateTime: r.toLocaleString(b.Z.getLocale(), h.pQ) })
                   })
                 : null,
-        footerButtons: g
+        footerButtons: A
             ? (0, i.jsxs)('div', {
                   className: j.dotSeparatedRow,
                   children: [
@@ -387,7 +387,7 @@ function w(e) {
                 (0, i.jsx)(U, {}),
                 (0, i.jsx)(I.Button, {
                     onClick: function () {
-                        null != l && A.Z.open(l, P.pNK.GUILD_AUTOMOD, void 0, P.KsC.AUTOMOD_MENTION_SPAM);
+                        null != l && g.Z.open(l, P.pNK.GUILD_AUTOMOD, void 0, P.KsC.AUTOMOD_MENTION_SPAM);
                     },
                     color: I.Button.Colors.LINK,
                     look: I.Button.Looks.LINK,

@@ -24,8 +24,8 @@ var i,
     C = n(558314),
     p = n(55563),
     f = n(551428),
-    A = n(73346),
-    g = n(981631),
+    g = n(73346),
+    A = n(981631),
     S = n(689938),
     M = n(232822);
 function O(e, t, n) {
@@ -49,8 +49,8 @@ class x extends (i = s.Component) {
         } = this.props;
         return {
             ...e,
-            section: null != t ? t : g.jXE.APPLICATION_EMBED,
-            object: g.qAy.CARD
+            section: null != t ? t : A.jXE.APPLICATION_EMBED,
+            object: A.qAy.CARD
         };
     }
     componentDidMount() {
@@ -70,13 +70,13 @@ class x extends (i = s.Component) {
         let { sku: e, storeListing: t, width: n, fetchFailed: i, renderFallback: s } = this.props,
             r = n > I.aL;
         if (null == e || null == t) return i ? s() : (0, a.jsx)(I.OR, { isHorizontal: r });
-        return e.productLine === g.POd.COLLECTIBLES
+        return e.productLine === A.POd.COLLECTIBLES
             ? (0, a.jsx)(d.Z, {
-                  section: g.jXE.APPLICATION_EMBED,
+                  section: A.jXE.APPLICATION_EMBED,
                   children: this.renderApplicationTile(e, t)
               })
             : (0, a.jsx)(d.Z, {
-                  section: g.jXE.APPLICATION_EMBED,
+                  section: A.jXE.APPLICATION_EMBED,
                   children: (0, a.jsx)(l.rU, {
                       onClick: this.handleLinkClick,
                       to: this.getStoreListingLocation(),
@@ -104,7 +104,7 @@ class x extends (i = s.Component) {
             O(this, 'getStoreListingLocation', () => {
                 let { sku: e } = this.props;
                 if (null == e) throw Error('Should not be link to ApplicationStoreListing without SKU');
-                return (0, A.ZI)(e.id, {
+                return (0, g.ZI)(e.id, {
                     slug: e.slug,
                     analyticsSource: this.analyticsLocation
                 });
@@ -143,7 +143,7 @@ class x extends (i = s.Component) {
                     });
                 if (null == n) return null;
                 let r = null != n && n.primarySkuId === i,
-                    c = null != s && s.hasFlag(g.eHb.HIDDEN);
+                    c = null != s && s.hasFlag(A.eHb.HIDDEN);
                 return (0, a.jsxs)('div', {
                     className: M.tileActions,
                     children: [
@@ -154,7 +154,7 @@ class x extends (i = s.Component) {
                                   customDisabledColor: o.Button.Colors.PRIMARY,
                                   size: o.Button.Sizes.SMALL,
                                   className: M.actionButton,
-                                  source: g.Sbl.MESSAGE_EMBED,
+                                  source: A.Sbl.MESSAGE_EMBED,
                                   onClick: this.handleActionButtonClick
                               }),
                         (t && !c) || e.premium
@@ -169,7 +169,7 @@ class x extends (i = s.Component) {
             });
     }
 }
-O(x, 'defaultProps', { renderFallback: g.dG4 });
+O(x, 'defaultProps', { renderFallback: A.dG4 });
 let R = [p.Z, C.Z, h.Z, f.Z];
 function v(e) {
     let { skuId: t } = e,

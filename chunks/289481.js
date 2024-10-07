@@ -18,8 +18,8 @@ var i = n(735250),
     C = n(305248),
     p = n(520116),
     f = n(981631),
-    A = n(689938),
-    g = n(619933);
+    g = n(689938),
+    A = n(619933);
 let S = a.memo(function (e) {
     let { channel: t, deleteChannel: n } = e,
         s = a.useRef(null),
@@ -91,7 +91,7 @@ let M = a.memo(function (e) {
         (0, I.uL)(f.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : a)), n(e);
     };
     return (0, i.jsx)('div', {
-        className: g.channel,
+        className: A.channel,
         children: (0, i.jsx)(c.HeadingLevel, {
             component: (0, i.jsxs)(h.Z, {
                 channel: r,
@@ -123,8 +123,8 @@ function O(e) {
     let { channel: t, markChannelRead: n, markGuildRead: a, getNumUnreadChannels: s } = e,
         l = (0, E.Z)() && null != t.guildId;
     return (0, i.jsx)(c.CircleIconButton, {
-        className: g.markReadButton,
-        tooltip: l ? A.Z.Messages.MARK_GUILD_AS_READ : A.Z.Messages.MARK_AS_READ,
+        className: A.markReadButton,
+        tooltip: l ? g.Z.Messages.MARK_GUILD_AS_READ : g.Z.Messages.MARK_AS_READ,
         color: c.CircleIconButtonColors.TERTIARY,
         icon: l
             ? (0, i.jsx)(c.DoubleCheckmarkIcon, {
@@ -158,11 +158,11 @@ function x(e) {
             });
     }
     return (0, i.jsx)(c.Tooltip, {
-        text: A.Z.Messages.COLLAPSE,
+        text: g.Z.Messages.COLLAPSE,
         children: (e) =>
             (0, i.jsx)(c.Clickable, {
                 ...e,
-                className: l()(g.collapseButton, { [g.collapsed]: t.collapsed }),
+                className: l()(A.collapseButton, { [A.collapsed]: t.collapsed }),
                 onClick: s,
                 children: (0, i.jsx)(T.Z, {
                     width: 16,

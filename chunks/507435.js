@@ -22,7 +22,7 @@ var i,
     C = n(489887),
     p = n(689938),
     f = n(167919);
-function A() {
+function g() {
     return (0, s.jsx)('svg', {
         width: '24',
         height: '24',
@@ -37,10 +37,10 @@ function A() {
         })
     });
 }
-function g(e) {
+function A(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, s.jsx)(A, {});
+    if (n) t = (0, s.jsx)(g, {});
     else if (null != i) {
         let e = '' !== i.name ? i.name : i.displayName;
         t = (0, s.jsx)(_.Z, {
@@ -149,7 +149,7 @@ function M(e) {
     return (0, s.jsxs)('div', {
         className: o()(f.container, { [f.containerWithImage]: r }, t),
         children: [
-            (0, s.jsx)(g, {
+            (0, s.jsx)(A, {
                 hasNoVotes: 'NO_VOTES' === a.type,
                 victorEmoji: n.victorEmoji
             }),
@@ -177,22 +177,22 @@ function O(e) {
         _ = l.useMemo(() => (0, N.Z)(o), [o]),
         E = (0, c.aF)(null !== (t = null == _ ? void 0 : _.questionText) && void 0 !== t ? t : '', C.Dv),
         h = (0, I.ZP)(n),
-        A = (0, m.l)({
+        g = (0, m.l)({
             user: n.author,
             channelId: i.id,
             guildId: i.guild_id,
             messageId: n.id
         }),
-        g = n.messageReference,
+        A = n.messageReference,
         S = l.useCallback(() => {
-            null != g &&
+            null != A &&
                 u.Z.jumpToMessage({
-                    channelId: g.channel_id,
-                    messageId: g.message_id,
+                    channelId: A.channel_id,
+                    messageId: A.message_id,
                     flash: !0,
                     returnMessageId: n.id
                 });
-        }, [n.id, g]);
+        }, [n.id, A]);
     return null == _
         ? null
         : (0, s.jsxs)(s.Fragment, {
@@ -203,7 +203,7 @@ function O(e) {
                       compact: a,
                       children: p.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
                           username: h.nick,
-                          usernameHook: A(h),
+                          usernameHook: g(h),
                           title: E,
                           titleOnClick: S
                       })

@@ -30,8 +30,8 @@ var i = n(735250),
     C = n(592125),
     p = n(375954),
     f = n(496675),
-    A = n(933429),
-    g = n(451478),
+    g = n(933429),
+    A = n(451478),
     S = n(626135),
     M = n(585483),
     O = n(981631),
@@ -150,8 +150,8 @@ function j(e) {
     let { analyticsName: t, items: n, hasMore: s, loading: r, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: N, getProTip: C, scrollerClassName: p, className: f, listName: v } = e,
         Z = a.useRef(null),
         P = (0, I.Z)(v, Z),
-        D = (0, d.e7)([A.Z], () => A.Z.hasNotice()),
-        b = (0, d.e7)([g.Z], () => g.Z.windowSize());
+        D = (0, d.e7)([g.Z], () => g.Z.hasNotice()),
+        b = (0, d.e7)([A.Z], () => A.Z.windowSize());
     a.useEffect(() => {
         S.default.track(O.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
@@ -279,7 +279,7 @@ function j(e) {
     });
 }
 function U(e) {
-    let { analyticsName: t, onFetch: n, channel: s, messages: l, hasMore: r, loading: o, loadMore: c, onJump: u, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: h, renderMessage: f, getProTip: A, scrollerClassName: g, className: S, onCloseMessage: M, listName: v } = e,
+    let { analyticsName: t, onFetch: n, channel: s, messages: l, hasMore: r, loading: o, loadMore: c, onJump: u, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: h, renderMessage: f, getProTip: g, scrollerClassName: A, className: S, onCloseMessage: M, listName: v } = e,
         L = (0, d.e7)([p.Z], () => {
             let e = null != s ? p.Z.getMessages(s.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
@@ -312,7 +312,7 @@ function U(e) {
     );
     return (0, i.jsx)(j, {
         className: S,
-        scrollerClassName: g,
+        scrollerClassName: A,
         items: P,
         loading: o,
         analyticsName: t,
@@ -320,7 +320,7 @@ function U(e) {
         renderHeader: m,
         hasMore: r,
         loadMore: c,
-        getProTip: A,
+        getProTip: g,
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];

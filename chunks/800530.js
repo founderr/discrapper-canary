@@ -9,13 +9,13 @@ n.d(t, {
         return M;
     },
     I5: function () {
-        return A;
+        return g;
     },
     JQ: function () {
         return x;
     },
     RY: function () {
-        return g;
+        return A;
     },
     SU: function () {
         return d;
@@ -79,16 +79,16 @@ class p {}
 C(p, 'TOS_LINK', 'https://discord.com/terms'), C(p, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), C(p, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(p, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), C(p, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(p, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
 class f {}
 C(f, 'CLASSIFICATION_ID', 'classification_id'), C(f, 'INCIDENT_TIMESTAMP', 'incident_time'), ((a = u || (u = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (a.LEARN_MORE_LINK = 'learn_more_link');
-class A {}
-C(A, 'ICON_TYPE', 'icon_type'),
-    C(A, 'HEADER', 'header'),
-    C(A, 'BODY', 'body'),
-    C(A, 'CTAS', 'ctas'),
-    C(A, 'TIMESTAMP', 'timestamp'),
-    C(A, 'THEME', 'theme'),
-    C(A, 'CLIENT_VERSION_MESSAGE', 'client_version_message'),
-    C(A, 'LEARN_MORE_LINK', 'learn_more_link'),
-    C(A, 'CLASSIFICATION_ID', 'classification_id'),
+class g {}
+C(g, 'ICON_TYPE', 'icon_type'),
+    C(g, 'HEADER', 'header'),
+    C(g, 'BODY', 'body'),
+    C(g, 'CTAS', 'ctas'),
+    C(g, 'TIMESTAMP', 'timestamp'),
+    C(g, 'THEME', 'theme'),
+    C(g, 'CLIENT_VERSION_MESSAGE', 'client_version_message'),
+    C(g, 'LEARN_MORE_LINK', 'learn_more_link'),
+    C(g, 'CLASSIFICATION_ID', 'classification_id'),
     ((s = _ || (_ = {}))[(s.ViewViolationDetail = 0)] = 'ViewViolationDetail'),
     (s[(s.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'),
     (s[(s.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'),
@@ -112,7 +112,7 @@ C(A, 'ICON_TYPE', 'icon_type'),
     (r[(r.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'),
     (r[(r.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'),
     (r[(r.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE');
-let g = [0, 1, 2, 3],
+let A = [0, 1, 2, 3],
     S = 372,
     M = 279,
     O = { impression_group: N.ImpressionGroups.APPEAL_INGESTION };

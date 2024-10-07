@@ -22,8 +22,8 @@ let _ = (e) => {
                 initialized: C,
                 loading: p,
                 items: f,
-                hasMore: A,
-                cursor: g,
+                hasMore: g,
+                cursor: A,
                 errored: S
             } = (0, a.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
@@ -62,14 +62,14 @@ let _ = (e) => {
             async (e) => {
                 !T.current &&
                     C &&
-                    A &&
-                    null != g &&
+                    g &&
+                    null != A &&
                     (e || !S) &&
                     ((T.current = !0),
                     h(!0),
                     await (0, o.jk)(
                         {
-                            after: g,
+                            after: A,
                             with_mentions: E,
                             roles_filter: M,
                             everyone_filter: O,
@@ -81,13 +81,13 @@ let _ = (e) => {
                     ),
                     h(!1));
             },
-            [C, A, g, S, E, M, O]
+            [C, g, A, S, E, M, O]
         );
         return {
             initialized: C,
             loading: p,
             items: f,
-            hasMore: A,
+            hasMore: g,
             loadMore: R,
             loadingMore: N,
             setReadNotifItemToAcked: (e) => {

@@ -33,8 +33,8 @@ var i,
     C = n(220444),
     p = n(601070),
     f = n(344185),
-    A = n(569471),
-    g = n(723170),
+    g = n(569471),
+    A = n(723170),
     S = n(675478),
     M = n(581883),
     O = n(131704),
@@ -270,7 +270,7 @@ class V extends o.EventEmitter {
                 e.length !== this.state.channels.length && this.setState({ channels: e });
             }),
             (this.handleJoinedThreadsStoreChange = () => {
-                let e = this.state.channels.filter((e) => !A.Z.isMuted(e.channelId));
+                let e = this.state.channels.filter((e) => !g.Z.isMuted(e.channelId));
                 e.length !== this.state.channels.length && this.setState({ channels: e });
             }),
             (this.handleActiveThreadsStoreChange = () => {
@@ -395,7 +395,7 @@ function W(e, t, n, i) {
                 if (Date.now() - e > K) return 5;
             }
             if (i.isThread()) {
-                let e = (0, g.J)(i);
+                let e = (0, A.J)(i);
                 return e === G.iN.ALL_MESSAGES ? 3 : e === G.iN.NO_MESSAGES ? 6 : 4;
             }
             {
@@ -448,7 +448,7 @@ function X(e) {
         r.useLayoutEffect(t.maybeLoadMore, [null == l ? void 0 : l.channels, null == l ? void 0 : l.loadState]),
         r.useEffect(() => (Z.Z.addChangeListener(t.reloadMessages), () => Z.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]),
         r.useEffect(() => (j.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => j.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]),
-        r.useEffect(() => (A.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => A.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
+        r.useEffect(() => (g.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => g.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
         r.useEffect(() => (f.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => f.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),
         [l, t]
     );

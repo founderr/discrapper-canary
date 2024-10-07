@@ -23,8 +23,8 @@ var a = n(442837),
     C = n(703656),
     p = n(706454),
     f = n(933429),
-    A = n(395361),
-    g = n(626135),
+    g = n(395361),
+    A = n(626135),
     S = n(243778),
     M = n(921944),
     O = n(981631),
@@ -79,7 +79,7 @@ let Z = (e) => {
                                 onClick: () => a(M.L.UNKNOWN),
                                 noticeType: Z
                             }),
-                            (0, i.jsx)(A.Z, { className: L.platformIcon }),
+                            (0, i.jsx)(g.Z, { className: L.platformIcon }),
                             v.Z.Messages.NOTICE_CONNECT_SPOTIFY,
                             (0, i.jsx)(l.PrimaryCTANoticeButton, {
                                 onClick: () =>
@@ -142,7 +142,7 @@ let Z = (e) => {
                                 className: L.premiumAction,
                                 noticeType: Z,
                                 onClick: () => {
-                                    g.default.track(O.rMx.PREMIUM_PROMOTION_OPENED, {
+                                    A.default.track(O.rMx.PREMIUM_PROMOTION_OPENED, {
                                         location_section: O.jXE.NOTIFICATION_BAR,
                                         location_object: O.qAy.BUTTON_CTA
                                     }),

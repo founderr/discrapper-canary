@@ -34,14 +34,14 @@ class f extends a.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: h, isForumToolbar: C, channel: p, className: f, forceAddReactions: A, reactionClassName: g, useChatFontScaling: S, forceHideReactionCreates: M, remainingReactions: O, combinedReactions: x, visibleReactionsCount: R } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: h, isForumToolbar: C, channel: p, className: f, forceAddReactions: g, reactionClassName: A, useChatFontScaling: S, forceHideReactionCreates: M, remainingReactions: O, combinedReactions: x, visibleReactionsCount: R } = this.props,
             { disableTransitionAppear: v } = this.state,
             L = S ? N : T,
             Z = R > 0;
-        if (!Z && !A) return null;
+        if (!Z && !g) return null;
         let { enabled: P } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             D = P && Z,
-            b = (A && !Z) || D;
+            b = (g && !Z) || D;
         return (0, i.jsxs)(r.W, {
             component: 'div',
             className: l()(L.reactions, f),
@@ -61,14 +61,14 @@ class f extends a.PureComponent {
                     isPendingMember: h,
                     isForumToolbar: C,
                     useChatFontScaling: S,
-                    className: g
+                    className: A
                 }),
                 O > 0 &&
                     (0, i.jsx)(o.Clickable, {
                         onClick: (t) => {
                             t.stopPropagation(), (0, I.op)(p, e);
                         },
-                        className: l()(L.reaction, g, L.remainingReactions),
+                        className: l()(L.reaction, A, L.remainingReactions),
                         'aria-label': m.Z.Messages.ADD_REACTION,
                         children: (0, i.jsxs)(o.Text, {
                             className: L.reactionInner,
@@ -87,7 +87,7 @@ class f extends a.PureComponent {
                         isHovered: this.state.isHovered,
                         className: l()({
                             [L.forceShow]: b,
-                            [L.forceShowLook]: A || D
+                            [L.forceShowLook]: g || D
                         })
                     })
             ]

@@ -29,13 +29,13 @@ function f(e) {
         { channelId: c, messageId: d } = (0, h.pE)(),
         [T, N] = a.useState(''),
         [C, f] = a.useState(!1),
-        A = '' !== T && C,
-        g = a.useCallback(() => {
+        g = '' !== T && C,
+        A = a.useCallback(() => {
             N((0, m.e1)(d, c, l));
         }, [d, c, l]),
         S = a.useCallback(() => {
-            g(), f(!0);
-        }, [g]),
+            A(), f(!0);
+        }, [A]),
         M = a.useCallback(() => {
             f(!1);
         }, []),
@@ -49,12 +49,12 @@ function f(e) {
     a.useEffect(() => {
         if (!!C)
             return (
-                E.Z.addReactChangeListener(g),
+                E.Z.addReactChangeListener(A),
                 () => {
-                    E.Z.removeReactChangeListener(g);
+                    E.Z.removeReactChangeListener(A);
                 }
             );
-    }, [C, g]);
+    }, [C, A]);
     let x = (0, i.jsx)(u.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
@@ -75,7 +75,7 @@ function f(e) {
                                   scaleFontToUserSetting: !0,
                                   children: T
                               }),
-                              forceOpen: A,
+                              forceOpen: g,
                               'aria-label': !1,
                               children: (e) =>
                                   (0, i.jsx)(u.Button, {
@@ -86,13 +86,13 @@ function f(e) {
                                       onBlur: M,
                                       onClick: O,
                                       className: p.voteCountButton,
-                                      'aria-describedby': A ? o : void 0,
+                                      'aria-describedby': g ? o : void 0,
                                       look: u.Button.Looks.BLANK,
                                       size: u.Button.Sizes.NONE,
                                       children: x
                                   })
                           }),
-                          A &&
+                          g &&
                               (0, i.jsx)(r.T, {
                                   id: o,
                                   children: T
@@ -109,7 +109,7 @@ function f(e) {
         ]
     });
 }
-function A(e) {
+function g(e) {
     let { percentage: t, shouldAnimate: n } = e,
         a = (0, u.useSpring)(
             {
@@ -128,7 +128,7 @@ function A(e) {
         'aria-hidden': !0
     });
 }
-function g(e) {
+function A(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: a, isVictor: s, isExpired: l, className: r } = e;
     return (0, c.EQ)({
         answersInteraction: t,
@@ -177,7 +177,7 @@ function S(e) {
             }),
             children: [
                 s
-                    ? (0, i.jsx)(A, {
+                    ? (0, i.jsx)(g, {
                           percentage: t.votesPercentage,
                           shouldAnimate: E
                       })
@@ -202,7 +202,7 @@ function S(e) {
                         canShowVoterDetails: o,
                         answerId: t.answerId
                     }),
-                (0, i.jsx)(g, {
+                (0, i.jsx)(A, {
                     answersInteraction: a,
                     isSelected: c,
                     didSelfVote: d,

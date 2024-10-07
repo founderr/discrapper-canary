@@ -23,8 +23,8 @@ function h(e) {
         C = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         p = a.useRef(null),
         f = (0, s.e7)([u.ZP], () => (null == C ? void 0 : C.id) != null && u.ZP.getMentionCount(C.id, m.W.NOTIFICATION_CENTER) > 0),
-        { enabled: A } = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
-        g = (0, s.e7)([r.Z], () => A && r.Z.getUnseenInviteCount() > 0);
+        { enabled: g } = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
+        A = (0, s.e7)([r.Z], () => g && r.Z.getUnseenInviteCount() > 0);
     return (0, i.jsx)(E.k, {
         onOpen: t,
         onClose: n,
@@ -36,7 +36,7 @@ function h(e) {
                 ref: p,
                 className: N.recentsIcon,
                 children: [
-                    A &&
+                    g &&
                         (0, i.jsx)(I.Z, {
                             inboxIconRef: p,
                             recentsPopoutShown: t
@@ -51,7 +51,7 @@ function h(e) {
                             'aria-label': T.Z.Messages.INBOX,
                             tooltip: t ? null : T.Z.Messages.INBOX,
                             selected: t,
-                            showBadge: f || g || a
+                            showBadge: f || A || a
                         })
                     })
                 ]

@@ -23,8 +23,8 @@ var i = n(735250),
     C = n(158776),
     p = n(594174),
     f = n(823379),
-    A = n(226378),
-    g = n(701488),
+    g = n(226378),
+    A = n(701488),
     S = n(689938),
     M = n(211655);
 function O(e) {
@@ -57,7 +57,7 @@ function O(e) {
         }),
         B = a.useMemo(() => {
             let e = new T.Z(n);
-            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = g.wT), e;
+            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;
         }, [n]),
         k = (0, u.s5)({
             userId: P,
@@ -65,7 +65,7 @@ function O(e) {
             application: B
         }),
         G = null == D,
-        F = (0, A.NL)({
+        F = (0, g.NL)({
             embeddedActivity: D,
             joinability: k,
             currentEmbeddedActivity: b,

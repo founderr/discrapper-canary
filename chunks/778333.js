@@ -27,10 +27,10 @@ function N(e) {
             var e;
             return null != n.inviter && _.Z.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id);
         }),
-        A = a.useCallback(() => {
+        g = a.useCallback(() => {
             null != n.inviter && null != u.Z.getDMFromUserId(n.inviter.id) && l.Z.openPrivateChannel([n.inviter.id]);
         }, [n.inviter]),
-        g = a.useCallback(() => {
+        A = a.useCallback(() => {
             let e = N('Invite Button Embed');
             r.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
@@ -38,7 +38,7 @@ function N(e) {
             });
         }, [n.code, N]);
     if (null == n.inviter) return null;
-    let S = f ? A : g,
+    let S = f ? g : A,
         M = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND,
         O = o.Z.Button.Colors.GREEN;
     f ? ((M = m.Z.Messages.INVITE_BUTTON_ALREADY_FRIENDS), (O = o.Z.Button.Colors.PRIMARY)) : C && ((M = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND), (O = o.Z.Button.Colors.PRIMARY));

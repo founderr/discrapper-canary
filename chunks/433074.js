@@ -23,8 +23,8 @@ var i = n(735250),
     C = n(132871),
     p = n(147890),
     f = n(981631),
-    A = n(689938),
-    g = n(708262);
+    g = n(689938),
+    A = n(708262);
 function S(e) {
     var t, n, S;
     let { code: M, message: O } = e,
@@ -83,16 +83,16 @@ function S(e) {
         return (0, i.jsxs)(d.Z, {
             containerRef: U,
             children: [
-                (0, i.jsx)(d.Z.Header, { text: A.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER }),
+                (0, i.jsx)(d.Z.Header, { text: g.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER }),
                 (0, i.jsx)(d.Z.Body, {
                     children: (0, i.jsxs)('div', {
-                        className: g.invalidBody,
+                        className: A.invalidBody,
                         children: [
                             (0, i.jsx)(d.Z.Icon, { expired: !0 }),
                             (0, i.jsx)(d.Z.Info, {
                                 expired: !0,
-                                title: A.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE,
-                                children: A.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_BODY
+                                title: g.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE,
+                                children: g.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_BODY
                             })
                         ]
                     })
@@ -102,7 +102,7 @@ function S(e) {
     if (null == x || v === h.M.FETCHING)
         return (0, i.jsxs)(d.Z, {
             containerRef: U,
-            children: [(0, i.jsx)(d.Z.Header, { text: A.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER }), (0, i.jsx)(d.Z.Body, { resolving: !0 })]
+            children: [(0, i.jsx)(d.Z.Header, { text: g.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER }), (0, i.jsx)(d.Z.Body, { resolving: !0 })]
         });
     let B = new Intl.NumberFormat(L, {
             notation: 'compact',
@@ -118,15 +118,15 @@ function S(e) {
     return (0, i.jsxs)(d.Z, {
         containerRef: U,
         children: [
-            (0, i.jsx)(d.Z.Header, { text: A.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_HEADER }),
+            (0, i.jsx)(d.Z.Header, { text: g.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_HEADER }),
             (0, i.jsxs)(d.Z.Body, {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: g.applicationInfoContainer,
+                        className: A.applicationInfoContainer,
                         children: [
                             (0, i.jsx)(d.Z.Icon, {
                                 application: _.Z.createFromServer(x),
-                                className: g.applicationIcon,
+                                className: A.applicationIcon,
                                 onClick: () => y('application_icon')
                             }),
                             (0, i.jsx)(d.Z.Info, {
@@ -138,7 +138,7 @@ function S(e) {
                                     k > 0 &&
                                     F &&
                                     (0, i.jsxs)(o.Clickable, {
-                                        className: g.guildCountContainer,
+                                        className: A.guildCountContainer,
                                         onClick: () => y('application_guild_count'),
                                         children: [
                                             (0, i.jsx)(o.CompassIcon, {
@@ -146,9 +146,9 @@ function S(e) {
                                                 color: 'currentColor',
                                                 width: 16,
                                                 height: 16,
-                                                className: g.guildCountIcon
+                                                className: A.guildCountIcon
                                             }),
-                                            A.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT.format({ guildCount: B.format(k) })
+                                            g.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT.format({ guildCount: B.format(k) })
                                         ]
                                     })
                             })
@@ -168,7 +168,7 @@ function S(e) {
                                     });
                             },
                             color: d.Z.Button.Colors.GREEN,
-                            children: A.Z.Messages.APPLICATION_ADD_BUTTON
+                            children: g.Z.Messages.APPLICATION_ADD_BUTTON
                         })
                 ]
             })

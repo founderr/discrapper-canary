@@ -22,8 +22,8 @@ var i,
     C = n(906732),
     p = n(783097),
     f = n(581364),
-    A = n(592180),
-    g = n(347475),
+    g = n(592180),
+    A = n(347475),
     S = n(598077),
     M = n(768581),
     O = n(585483),
@@ -61,7 +61,7 @@ function U(e, t, n, i, a) {
             className: b.replyBadge,
             children: (0, s.jsx)(j, { className: b.commandIcon })
         });
-    let A =
+    let g =
             null !==
                 (c = M.ZP.getGuildMemberAvatarURL({
                     avatar: null !== (l = i.guildMemberAvatar) && void 0 !== l ? l : void 0,
@@ -70,7 +70,7 @@ function U(e, t, n, i, a) {
                 })) && void 0 !== c
                 ? c
                 : void 0,
-        g = () =>
+        A = () =>
             (function (e) {
                 let { user: t, guildId: n, guildAvatar: i, onClick: a, onContextMenu: l, onMouseDown: r } = e;
                 return (0, s.jsx)('img', {
@@ -87,7 +87,7 @@ function U(e, t, n, i, a) {
             })({
                 user: t,
                 guildId: _.guild_id,
-                guildAvatar: A,
+                guildAvatar: g,
                 onClick: 1 === n ? C : N,
                 onContextMenu: 1 === n ? p : h
             }),
@@ -98,9 +98,9 @@ function U(e, t, n, i, a) {
               shouldShow: S,
               position: 'right',
               onRequestClose: f,
-              children: g
+              children: A
           })
-        : g();
+        : A();
 }
 function y(e, t, n, i, a) {
     let { message: l, channel: r, showUsernamePopout: o, showTargetUsernamePopout: c, onClickUsername: d, onUserContextMenu: u, onClickTargetUsername: _, onTargetUserContextMenu: E, onPopoutRequestClose: I } = e;
@@ -132,7 +132,7 @@ function k(e) {
         c = l.useMemo(
             () => (e, t, n) => (
                 d()(null != a && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
-                (0, s.jsx)(g.Z, {
+                (0, s.jsx)(A.Z, {
                     ...e,
                     channelId: a.id,
                     messageId: i.id,
@@ -175,7 +175,7 @@ function k(e) {
             'user'
         );
     };
-    if ((null == i ? void 0 : i.activityInstance) === null || (0, A.g)(i))
+    if ((null == i ? void 0 : i.activityInstance) === null || (0, g.g)(i))
         (n = D.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
             userHook: H,
             commandHook: () => {
@@ -211,7 +211,7 @@ function k(e) {
                                         ]
                                     })
                                 });
-                            if (!(0, A.g)(i))
+                            if (!(0, g.g)(i))
                                 return (0, s.jsx)('div', {
                                     className: b.commandName,
                                     children: r

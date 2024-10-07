@@ -42,9 +42,9 @@ function T(e) {
         modalClassName: u.modal,
         modalContentClassName: u.modalContent,
         type: c.cd.TRY_IT_OUT_MODAL_UPSELL,
-        title: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_TITLE,
+        title: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_TITLE_V2,
         body: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_DESCRIPTION,
-        glowUp: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_TITLE,
+        glowUp: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_TITLE_V2,
         onSecondaryClick: () => {
             (0, o.$)(t);
         },

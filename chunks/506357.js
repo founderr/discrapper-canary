@@ -23,10 +23,10 @@ var i = n(735250),
     p = n(900547);
 function f(e) {
     var t, f;
-    let { onDismiss: A } = e,
-        g = (0, s.e7)([_.Z], () => _.Z.getGuildId()),
-        S = (0, s.e7)([u.Z], () => (null != g ? u.Z.getChannelId(g) : null), [g]),
-        M = null != g ? g : null,
+    let { onDismiss: g } = e,
+        A = (0, s.e7)([_.Z], () => _.Z.getGuildId()),
+        S = (0, s.e7)([u.Z], () => (null != A ? u.Z.getChannelId(A) : null), [A]),
+        M = null != A ? A : null,
         O = (0, s.e7)([d.Z], () => (null != M ? d.Z.getGuild(M) : null), [M]),
         { shouldShowIncidentActions: x, incidentData: R, isUnderLockdown: v } = (0, I.mI)(M),
         L = (0, o.n2)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : N.lds),
@@ -66,7 +66,7 @@ function f(e) {
             color: l.NoticeColors.NEUTRAL,
             children: [
                 (0, i.jsx)(l.NoticeCloseButton, {
-                    onClick: A,
+                    onClick: g,
                     noticeType: N.kVF.GUILD_RAID_NOTIFICATION
                 }),
                 D,
@@ -94,7 +94,7 @@ function f(e) {
         color: l.NoticeColors.WARNING,
         children: [
             (0, i.jsx)(l.NoticeCloseButton, {
-                onClick: A,
+                onClick: g,
                 noticeType: N.kVF.GUILD_RAID_NOTIFICATION
             }),
             D,

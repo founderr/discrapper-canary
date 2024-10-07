@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return g;
     }
 }),
     n(47120);
@@ -35,9 +35,9 @@ function f(e) {
         onClick: t
     });
 }
-function A(e) {
+function g(e) {
     let { setTab: t, badgeState: n, closePopout: r } = e,
-        { initialized: h, items: p, loading: A, loadMore: g } = (0, u.y6)(),
+        { initialized: h, items: p, loading: g, loadMore: A } = (0, u.y6)(),
         S = (0, s.e7)([o.Z], () => o.Z.localItems),
         M = a.useMemo(() => [...[...p, ...S].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [p, S]),
         O = p.length > 0 ? p[0] : null,
@@ -69,8 +69,8 @@ function A(e) {
             (0, i.jsx)(_.Z, {
                 initialized: h,
                 items: M,
-                loading: A,
-                loadMore: g
+                loading: g,
+                loadMore: A
             })
         ]
     });

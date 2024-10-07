@@ -18,8 +18,8 @@ var i,
     C = n(592125),
     p = n(375954),
     f = n(306680),
-    A = n(699516),
-    g = n(914010),
+    g = n(699516),
+    A = n(914010),
     S = n(9156),
     M = n(594174),
     O = n(981631);
@@ -47,9 +47,9 @@ function B(e) {
     if ((0, m.Z)(e) && !O.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
     null == t && (t = e.channel_id);
     let n = C.Z.getChannel(t);
-    if (null == n || n.type === O.d4z.DM || (P.guildFilter === O.NgX.THIS_SERVER && n.getGuildId() !== g.Z.getGuildId())) return null;
+    if (null == n || n.type === O.d4z.DM || (P.guildFilter === O.NgX.THIS_SERVER && n.getGuildId() !== A.Z.getGuildId())) return null;
     let i = h.default.getId();
-    if (A.Z.isBlockedForMessage(e) || (0, T.Z)(e, i)) return null;
+    if (g.Z.isBlockedForMessage(e) || (0, T.Z)(e, i)) return null;
     e = y(e);
     let a = !P.everyoneFilter,
         s = !P.roleFilter;
@@ -101,7 +101,7 @@ function w() {
     (R = []), (v = {}), (D = !1), (U = !1);
 }
 function V() {
-    R = R.filter((e) => !A.Z.isBlockedForMessage(e));
+    R = R.filter((e) => !g.Z.isBlockedForMessage(e));
 }
 function H(e) {
     let { channel: t } = e;

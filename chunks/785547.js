@@ -24,8 +24,8 @@ var i,
     C = n(941128),
     p = n(780570),
     f = n(358085),
-    A = n(814225),
-    g = n(346329),
+    g = n(814225),
+    A = n(346329),
     S = n(701560),
     M = n(981631),
     O = n(689938),
@@ -168,7 +168,7 @@ class Z extends (a = r.Component) {
             return this.renderDisabledButton(
                 n,
                 (function (e) {
-                    let t = A.en(e.sku);
+                    let t = g.en(e.sku);
                     return null != t ? O.Z.Messages.GAME_ACTION_BUTTON_PREORDER_WAIT_TOOLTIP.format({ date: t }) : null;
                 })(t)
             );
@@ -190,11 +190,11 @@ class Z extends (a = r.Component) {
             }),
             R(this, 'handleInstall', () => {
                 let { libraryApplication: e, source: t } = this.props;
-                g.installApplication(e.id, e.branchId, t);
+                A.installApplication(e.id, e.branchId, t);
             }),
             R(this, 'handleUpdate', () => {
                 let { libraryApplication: e } = this.props;
-                g.updateApplication(e.id, e.branchId);
+                A.updateApplication(e.id, e.branchId);
             }),
             R(this, 'onClickHandlers', {
                 add_to_library: this.handleAddToLibrary,

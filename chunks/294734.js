@@ -22,8 +22,8 @@ var i = n(735250),
     C = n(496675),
     p = n(699516),
     f = n(594174),
-    A = n(100604),
-    g = n(694784),
+    g = n(100604),
+    A = n(694784),
     S = n(39154),
     M = n(245216),
     O = n(689938),
@@ -48,10 +48,10 @@ function R() {
 }
 function v(e) {
     let { message: t, snapshot: n, index: u } = e,
-        _ = a.useMemo(() => new A.r(t, n, u), [t, n, u]),
+        _ = a.useMemo(() => new g.r(t, n, u), [t, n, u]),
         E = (0, l.e7)([T.Z, f.default, p.Z, C.Z, h.Z, d.Z], () => _.getForwardInfo(T.Z, f.default, p.Z, C.Z, h.Z, d.Z).footerInfo, [_], r.Z),
         I = a.useCallback(() => {
-            (0, g.Z)(t);
+            (0, A.Z)(t);
         }, [t]);
     return null == E
         ? null
@@ -97,9 +97,9 @@ function L(e) {
             allowDevLinks: h,
             previewLinkTarget: !0
         }),
-        A = (0, l.e7)([T.Z], () => T.Z.getChannel(n.channel_id)),
-        g = m.jU.useSetting();
-    return null == A
+        g = (0, l.e7)([T.Z], () => T.Z.getChannel(n.channel_id)),
+        A = m.jU.useSetting();
+    return null == g
         ? null
         : (0, i.jsxs)(
               'div',
@@ -118,8 +118,8 @@ function L(e) {
                               (0, I.Z)({
                                   channelMessageProps: {
                                       message: o,
-                                      channel: A,
-                                      compact: g
+                                      channel: g,
+                                      compact: A
                                   },
                                   hasSpoilerEmbeds: f,
                                   isInteracting: !1,

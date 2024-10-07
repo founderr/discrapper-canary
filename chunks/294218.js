@@ -17,8 +17,8 @@ var i = n(735250),
     C = n(453687),
     p = n(25015),
     f = n(689674),
-    A = n(438075),
-    g = n(963550),
+    g = n(438075),
+    A = n(963550),
     S = n(845080),
     M = n(295790),
     O = n(145807),
@@ -71,8 +71,8 @@ t.Z = a.memo(function (e) {
             author: X,
             roleIcon: J
         }),
-        childrenAccessories: e.hideAccessories ? void 0 : (0, A.Q)(e, Y),
-        childrenMessageContent: (0, g.Z)(e, H),
+        childrenAccessories: e.hideAccessories ? void 0 : (0, g.Q)(e, Y),
+        childrenMessageContent: (0, A.Z)(e, H),
         childrenSystemMessage: (0, M.Z)({
             ...e,
             disableInteraction: F

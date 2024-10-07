@@ -25,14 +25,14 @@ function u(e) {
             hover: C,
             innerClassName: p
         },
-        A = (0, a.e7)([l.Z], () => l.Z.getActiveLibraryApplication(t.id)),
-        g = null != A ? A.sku.id : null,
-        S = null != g ? g : t.primarySkuId,
+        g = (0, a.e7)([l.Z], () => l.Z.getActiveLibraryApplication(t.id)),
+        A = null != g ? g.sku.id : null,
+        S = null != A ? A : t.primarySkuId,
         M = (0, a.e7)([r.Z], () => null != S && !r.Z.didFetchingSkuFail(S));
-    return null != A && (0, o.Je)(A)
+    return null != g && (0, o.Je)(g)
         ? (0, i.jsx)(d.Z, {
               ...f,
-              libraryApplication: A,
+              libraryApplication: g,
               source: h
           })
         : M

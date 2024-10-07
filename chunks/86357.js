@@ -51,14 +51,14 @@ let C = (e) => {
             children: t.getDisplaySalePercentage()
         });
     },
-    A = (e) => {
+    g = (e) => {
         let { sku: t, className: n } = e;
         return (0, u.jsx)('div', {
             className: I()(h.originalAmount, n),
             children: (0, T.Z)(t, !1)
         });
     },
-    g = (e) => {
+    A = (e) => {
         let { sku: t, className: n } = e;
         return (0, u.jsx)('div', {
             className: n,
@@ -69,7 +69,7 @@ let C = (e) => {
         let { sku: t, className: n } = e;
         return (0, u.jsxs)('div', {
             className: I()(h.row, n),
-            children: [(0, u.jsx)(f, { sku: t }), (0, u.jsx)(A, { sku: t }), (0, u.jsx)(g, { sku: t })]
+            children: [(0, u.jsx)(f, { sku: t }), (0, u.jsx)(g, { sku: t }), (0, u.jsx)(A, { sku: t })]
         });
     },
     M = (e) => {
@@ -108,7 +108,7 @@ class O extends (s = _.PureComponent) {
                     className: I()(t, n)
                 });
             default:
-                return (0, u.jsx)(g, {
+                return (0, u.jsx)(A, {
                     className: I()(t, n),
                     sku: i
                 });
@@ -130,7 +130,7 @@ class O extends (s = _.PureComponent) {
                     className: I()(h.directoryHeroPrice, t)
                 });
             default:
-                return (0, u.jsx)(g, {
+                return (0, u.jsx)(A, {
                     className: I()(h.directoryHeroPrice, t),
                     sku: n
                 });
@@ -148,14 +148,14 @@ class O extends (s = _.PureComponent) {
                     children: [
                         (0, u.jsxs)('div', {
                             className: h.row,
-                            children: [(0, u.jsx)(g, { sku: i }), (0, u.jsx)(f, { sku: i })]
+                            children: [(0, u.jsx)(A, { sku: i }), (0, u.jsx)(f, { sku: i })]
                         }),
-                        (0, u.jsx)(A, { sku: i })
+                        (0, u.jsx)(g, { sku: i })
                     ]
                 });
                 break;
             default:
-                t = (0, u.jsx)(g, { sku: i });
+                t = (0, u.jsx)(A, { sku: i });
         }
         return (0, u.jsx)('div', {
             className: I()(h.listingPrice, n),

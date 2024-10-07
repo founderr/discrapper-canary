@@ -25,8 +25,8 @@ var a = n(613828),
     C = n(823379),
     p = n(624138),
     f = n(317381),
-    A = n(638880),
-    g = n(122613),
+    g = n(638880),
+    A = n(122613),
     S = n(147865),
     M = n(778569),
     O = n(884338),
@@ -62,7 +62,7 @@ function D(e) {
         J = async () => {
             if (G) {
                 if (null != Y && K.length > 0)
-                    await (0, A.Z)({
+                    await (0, g.Z)({
                         applicationId: Y.applicationId,
                         activityChannelId: y,
                         locationObject: U.location,
@@ -71,7 +71,7 @@ function D(e) {
                 else {
                     let e = B.isPrivate() && !m.Z.isCallActive(y),
                         t = async () =>
-                            await (0, g.Z)({
+                            await (0, A.Z)({
                                 targetApplicationId: D,
                                 channelId: y,
                                 analyticsLocations: j,

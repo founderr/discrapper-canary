@@ -23,8 +23,8 @@ var i = n(735250),
     C = n(594174),
     p = n(55935),
     f = n(655354),
-    A = n(809780),
-    g = n(981631),
+    g = n(809780),
+    A = n(981631),
     S = n(689938),
     M = n(896845);
 let O = {
@@ -79,16 +79,16 @@ function R(e) {
     let { channel: a, channelRecord: s, gotoChannel: r } = e,
         { enabled: m } = d.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         f = T.jU.useSetting(),
-        O = (0, o.e7)([h.Z], () => h.Z.can(g.Plq.CREATE_INSTANT_INVITE, s)),
+        O = (0, o.e7)([h.Z], () => h.Z.can(A.Plq.CREATE_INSTANT_INVITE, s)),
         R = (0, E.P1)(s),
         v = !1,
         L = 0 === a.messages.length || l()(a.messages[0].timestamp).isSame(l()(), 'day'),
-        Z = null !== (n = null === (t = C.default.getUser(N.default.getId())) || void 0 === t ? void 0 : t.hasFlag(g.xW$.SPAMMER)) && void 0 !== n && n,
+        Z = null !== (n = null === (t = C.default.getUser(N.default.getId())) || void 0 === t ? void 0 : t.hasFlag(A.xW$.SPAMMER)) && void 0 !== n && n,
         P = [];
     if (!a.collapsed) {
         let e = null,
             t = null,
-            n = a.messages.slice(0, A.hC);
+            n = a.messages.slice(0, g.hC);
         n.forEach((n) => {
             if (!(0, u.Z)(n, O)) {
                 if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
@@ -124,7 +124,7 @@ function R(e) {
                     );
             }
         }),
-            a.messages.length >= A.hC &&
+            a.messages.length >= g.hC &&
                 P.push(
                     (0, i.jsxs)(
                         c.Button,

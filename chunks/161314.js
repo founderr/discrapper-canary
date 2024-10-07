@@ -23,8 +23,8 @@ var i = n(735250),
     C = n(76535),
     p = n(866104),
     f = n(886176),
-    A = n(981631),
-    g = n(689938),
+    g = n(981631),
+    A = n(689938),
     S = n(140171);
 function M(e) {
     var t;
@@ -34,7 +34,7 @@ function M(e) {
         { listingsLoaded: x } = (0, I.eD)(n),
         R = (0, I.ue)(n, { publishedOnly: !0 }),
         v = a.useCallback(async () => {
-            h.default.track(A.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, u.hH)(n) }), await (0, m.Z)(A.Z5c.SERVER_SHOP(n));
+            h.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, u.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, _.Z)(
         {
@@ -68,7 +68,7 @@ function M(e) {
                                 variant: 'heading-sm/semibold',
                                 color: 'interactive-normal',
                                 className: S.serverShopLabelText,
-                                children: g.Z.Messages.GUILD_SHOP_CHANNEL_LABEL
+                                children: A.Z.Messages.GUILD_SHOP_CHANNEL_LABEL
                             })
                         ]
                     }),
@@ -76,7 +76,7 @@ function M(e) {
                     (0, i.jsx)(d.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'text-normal',
-                        children: g.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: s.name })
+                        children: A.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: s.name })
                     }),
                     (0, i.jsx)(d.Spacer, { size: 4 }),
                     (0, i.jsx)(d.Text, {
@@ -99,7 +99,7 @@ function M(e) {
                                         children: (0, i.jsx)(d.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: g.Z.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({ listingCount: R.length })
+                                            children: A.Z.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({ listingCount: R.length })
                                         })
                                     }),
                                     null != L &&
@@ -107,7 +107,7 @@ function M(e) {
                                             children: (0, i.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'text-muted',
-                                                children: g.Z.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({ createdYear: L.getFullYear() })
+                                                children: A.Z.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({ createdYear: L.getFullYear() })
                                             })
                                         })
                                 ]
@@ -125,7 +125,7 @@ function M(e) {
                                         (0, i.jsx)(d.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: g.Z.Messages.GUILD_SHOP_EMBED_CTA
+                                            children: A.Z.Messages.GUILD_SHOP_EMBED_CTA
                                         })
                                     ]
                                 })

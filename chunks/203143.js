@@ -26,8 +26,8 @@ var i = n(512722),
     C = n(314897),
     p = n(592125),
     f = n(703558),
-    A = n(607744),
-    g = n(375954),
+    g = n(607744),
+    A = n(375954),
     S = n(117530),
     M = n(553803),
     O = n(316758),
@@ -75,7 +75,7 @@ function b(e) {
         });
         return;
     }
-    let s = g.Z.getMessage(t, n);
+    let s = A.Z.getMessage(t, n);
     if (null == s || null == s.poll || 0 === s.poll.answers.length) return;
     let l = null != i ? i : String(s.poll.answers[0].answer_id);
     M.A({
@@ -98,7 +98,7 @@ function j(e) {
 }
 function U(e) {
     let { channelId: t, messageId: n } = e,
-        i = g.Z.getMessage(t, n);
+        i = A.Z.getMessage(t, n);
     return null == i ? [] : i.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
 }
 async function y(e) {
@@ -151,7 +151,7 @@ async function B(e) {
         });
         return;
     }
-    if (!A.Z.canChatInGuild(i.guild_id)) {
+    if (!g.Z.canChatInGuild(i.guild_id)) {
         d.Z.show({
             title: Z.Z.Messages.POLL_GUILD_MEMBER_UNVERIFIED_TITLE,
             body: Z.Z.Messages.POLL_GUILD_MEMBER_UNVERIFIED_SUBTITLE
@@ -268,7 +268,7 @@ async function G(e) {
                 (0, R.eu)(t, n, (e) => {
                     var i, a;
                     let s = null == e || !e.showResults,
-                        l = g.Z.getMessage(t, n),
+                        l = A.Z.getMessage(t, n),
                         r =
                             null != l
                                 ? l.reactions.reduce((e, t) => {
@@ -378,7 +378,7 @@ t.Z = {
                 message: o
             } = (function (e) {
                 let { channelId: t, messageId: n } = e,
-                    i = g.Z.getMessage(t, n);
+                    i = A.Z.getMessage(t, n);
                 if (null != i)
                     return {
                         message: i,

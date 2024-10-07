@@ -25,8 +25,8 @@ function h(e) {
         {
             guildScheduledEvent: p,
             guild: f,
-            channel: A,
-            isMember: g
+            channel: g,
+            isMember: A
         } = (0, s.cj)(
             [I.ZP, u.Z, c.Z, d.ZP, _.default],
             () => {
@@ -49,16 +49,16 @@ function h(e) {
         }, [h, n, null == p ? void 0 : p.id, C]),
         (0, i.jsx)(T.ZP, {
             guild: f,
-            channel: A,
+            channel: g,
             guildScheduledEvent: p,
-            isMember: g,
+            isMember: A,
             onAcceptInstantInvite: N.dG,
             onTransitionToInviteChannel: function () {
                 if ((0, r.n)(n)) {
                     (0, l.hk)(n);
                     return;
                 }
-                (null == A ? void 0 : A.isGuildStageVoice()) ? (0, o.Cq)(A) : (null == A ? void 0 : A.isGuildVoice()) && m.Z.joinVoiceEvent(A.guild_id, A.id);
+                (null == g ? void 0 : g.isGuildStageVoice()) ? (0, o.Cq)(g) : (null == g ? void 0 : g.isGuildVoice()) && m.Z.joinVoiceEvent(g.guild_id, g.id);
             },
             recurrenceId: C
         })
