@@ -50,7 +50,7 @@ function R(e, t) {
 }
 function v() {
     if (null != O) {
-        L(O);
+        y(O);
         return;
     }
     if ((C(), !_.Z.hasConsented(I.pjP.PERSONALIZATION))) return;
@@ -80,6 +80,9 @@ function C() {
     (g.length = 0), A.clear(), (N = {});
 }
 function L(e) {
+    null == S.messageGiftIntentLastShownMap[e] && (S.messageGiftIntentLastShownMap[e] = Date.now());
+}
+function y(e) {
     C();
     let { enabled: t } = h.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore generateFriendAnniversaries' }, { autoTrackExposure: !1 });
     if (!t) return;
@@ -96,7 +99,7 @@ function L(e) {
         }),
         (A = new Set(g.slice(0, 5)));
 }
-class y extends (r = l.ZP.PersistedStore) {
+class D extends (r = l.ZP.PersistedStore) {
     initialize(e) {
         (S = T()),
             null != e && ((S.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (S.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (S.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap })),
@@ -137,9 +140,9 @@ class y extends (r = l.ZP.PersistedStore) {
         return O;
     }
 }
-m(y, 'displayName', 'PremiumGiftingIntentStore'),
-    m(y, 'persistKey', 'PremiumGiftingIntentStore'),
-    m(y, 'migrations', [
+m(D, 'displayName', 'PremiumGiftingIntentStore'),
+    m(D, 'persistKey', 'PremiumGiftingIntentStore'),
+    m(D, 'migrations', [
         (e) => {
             var t, n;
             return null == e
@@ -151,7 +154,7 @@ m(y, 'displayName', 'PremiumGiftingIntentStore'),
                   };
         }
     ]),
-    (t.Z = new y(u.Z, {
+    (t.Z = new D(u.Z, {
         CONNECTION_OPEN: function () {
             C();
         },
@@ -160,13 +163,17 @@ m(y, 'displayName', 'PremiumGiftingIntentStore'),
         },
         MESSAGE_GIFT_INTENT_SHOWN: function (e) {
             let { recipientUserId: t } = e;
-            S.messageGiftIntentLastShownMap[t] = Date.now();
+            L(t);
         },
         FRIENDS_LIST_GIFT_INTENTS_SHOWN: function () {
             S.lastShownFriendsListGiftIntents = Array.from(A);
         },
         FRIENDS_TAB_BADGE_DISMISS: function () {
             S.friendsTabBadgeLastDismissedTime = Date.now();
+        },
+        GIFT_INTENT_FLOW_PURCHASED_GIFT: function (e) {
+            let { recipientUserId: t } = e;
+            L(t);
         },
         DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: function () {
             S.lastShownFriendsListGiftIntents = [];
@@ -183,6 +190,6 @@ m(y, 'displayName', 'PremiumGiftingIntentStore'),
                 (O = null), v();
                 return;
             }
-            L(t);
+            y(t);
         }
     }));
