@@ -17,7 +17,7 @@ function c(n) {
         S = (0, i.Z)();
     (0, r.openModalLazy)(
         async () => {
-            let { default: n } = await Promise.all([t.e('96427'), t.e('77298'), t.e('23357'), t.e('52249'), t.e('54803'), t.e('15685'), t.e('72652'), t.e('32776'), t.e('79915'), t.e('30671'), t.e('49288')]).then(t.bind(t, 409600));
+            let { default: n } = await Promise.all([t.e('96427'), t.e('77298'), t.e('23357'), t.e('52249'), t.e('54803'), t.e('15685'), t.e('72652'), t.e('32776'), t.e('79915'), t.e('30671'), t.e('52730')]).then(t.bind(t, 409600));
             return (t) => {
                 let { onClose: i, ...r } = t;
                 return (0, l.jsx)(n, {

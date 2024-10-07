@@ -1,26 +1,26 @@
-i.d(n, {
+n.d(t, {
     Z: function () {
-        return l;
+        return c;
     }
 });
-var t = i(735250);
-i(470079);
-var o = i(180781),
-    a = i(321867),
-    r = i(486324);
-function l(e) {
-    let { type: n, analyticsPage: i, analyticsSection: l, isGIF: s, banner: c } = e;
-    return [r.pC.BANNER, r.pC.AVATAR].includes(n) && s
-        ? (0, t.jsx)(a.Z, {
-              analyticsSection: l,
-              type: n
+var a = n(735250);
+n(470079);
+var o = n(180781),
+    i = n(321867),
+    r = n(486324);
+function c(e) {
+    let { type: t, analyticsPage: n, analyticsSection: c, isGIF: s, banner: l } = e;
+    return [r.pC.BANNER, r.pC.AVATAR].includes(t) && s
+        ? (0, a.jsx)(i.Z, {
+              analyticsSection: c,
+              type: t
           })
-        : n === r.pC.GUILD_BANNER
-          ? (0, t.jsx)(o.Z, {
-                analyticsSection: l,
-                analyticsPage: i,
+        : t === r.pC.GUILD_BANNER
+          ? (0, a.jsx)(o.Z, {
+                analyticsSection: c,
+                analyticsPage: n,
                 isGIF: s,
-                banner: c
+                banner: l
             })
           : null;
 }

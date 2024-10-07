@@ -32,7 +32,7 @@ t.Z = (e) => {
         [E, T] = a.useState(String(Date.now())),
         [N] = (0, _.XW)(t, s),
         { analyticsLocations: f } = (0, c.ZP)(r.Z.STICKER_MESSAGE),
-        g = (0, i.jsxs)('span', {
+        A = (0, i.jsxs)('span', {
             className: h.stickerName,
             children: [
                 (0, i.jsx)(l.StickerSmallIcon, {
@@ -64,7 +64,7 @@ t.Z = (e) => {
                 return (0, i.jsx)(l.Tooltip, {
                     ...d.b_,
                     shouldShow: o,
-                    text: (0, d.Y)(g),
+                    text: (0, d.Y)(A),
                     'aria-label': !1,
                     onTooltipShow: () => {
                         p(N);

@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return g;
+        return A;
     },
     s: function () {
         return f;
@@ -64,7 +64,7 @@ function f(e) {
         }),
         e();
 }
-function g(e) {
+function A(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: s, analyticsContext: l, attachmentPreview: r, embedPreview: c, onConfirmPress: u, transitionState: _, onClose: E } = e,
         m = (0, d.Dt)(),
         p = a.useCallback(() => {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return O;
     }
 }),
     n(47120);
@@ -23,17 +23,17 @@ var i = n(735250),
     C = n(158776),
     p = n(594174),
     f = n(823379),
-    g = n(226378),
-    A = n(701488),
+    A = n(226378),
+    g = n(701488),
     S = n(689938),
     M = n(211655);
-function x(e) {
+function O(e) {
     var t;
-    let { application: n, channelId: x, guildId: O } = e,
+    let { application: n, channelId: O, guildId: x } = e,
         { analyticsLocations: R } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
         v = (0, r.O)(),
-        L = (0, s.e7)([h.Z], () => h.Z.getChannel(x)),
-        Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : x,
+        L = (0, s.e7)([h.Z], () => h.Z.getChannel(O)),
+        Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : O,
         P = (0, s.e7)([N.default], () => N.default.getId()),
         {
             embeddedActivity: D,
@@ -57,15 +57,15 @@ function x(e) {
         }),
         B = a.useMemo(() => {
             let e = new T.Z(n);
-            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;
+            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = g.wT), e;
         }, [n]),
         k = (0, u.s5)({
             userId: P,
-            channelId: x,
+            channelId: O,
             application: B
         }),
         G = null == D,
-        F = (0, g.NL)({
+        F = (0, A.NL)({
             embeddedActivity: D,
             joinability: k,
             currentEmbeddedActivity: b,
@@ -77,7 +77,7 @@ function x(e) {
             G
                 ? await (0, d.Z)({
                       targetApplicationId: n.id,
-                      channelId: x,
+                      channelId: O,
                       locationObject: v.location,
                       analyticsLocations: R,
                       componentId: w,
@@ -85,7 +85,7 @@ function x(e) {
                   })
                 : await (0, c.Z)({
                       applicationId: D.applicationId,
-                      activityChannelId: x,
+                      activityChannelId: O,
                       locationObject: v.location,
                       analyticsLocations: R,
                       componentId: w
@@ -140,7 +140,7 @@ function x(e) {
                         }),
                         !G &&
                             (0, i.jsx)(_.Z, {
-                                guildId: O,
+                                guildId: x,
                                 users: U,
                                 max: 4,
                                 size: _.u.SIZE_32

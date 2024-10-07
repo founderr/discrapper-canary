@@ -34,14 +34,14 @@ class f extends a.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: h, isForumToolbar: C, channel: p, className: f, forceAddReactions: g, reactionClassName: A, useChatFontScaling: S, forceHideReactionCreates: M, remainingReactions: x, combinedReactions: O, visibleReactionsCount: R } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: h, isForumToolbar: C, channel: p, className: f, forceAddReactions: A, reactionClassName: g, useChatFontScaling: S, forceHideReactionCreates: M, remainingReactions: O, combinedReactions: x, visibleReactionsCount: R } = this.props,
             { disableTransitionAppear: v } = this.state,
             L = S ? N : T,
             Z = R > 0;
-        if (!Z && !g) return null;
+        if (!Z && !A) return null;
         let { enabled: P } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             D = P && Z,
-            b = (g && !Z) || D;
+            b = (A && !Z) || D;
         return (0, i.jsxs)(r.W, {
             component: 'div',
             className: l()(L.reactions, f),
@@ -53,7 +53,7 @@ class f extends a.PureComponent {
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
                 (0, i.jsx)(E.l, {
-                    reactions: O,
+                    reactions: x,
                     message: e,
                     readOnly: n,
                     isLurking: a,
@@ -61,19 +61,19 @@ class f extends a.PureComponent {
                     isPendingMember: h,
                     isForumToolbar: C,
                     useChatFontScaling: S,
-                    className: A
+                    className: g
                 }),
-                x > 0 &&
+                O > 0 &&
                     (0, i.jsx)(o.Clickable, {
                         onClick: (t) => {
                             t.stopPropagation(), (0, I.op)(p, e);
                         },
-                        className: l()(L.reaction, A, L.remainingReactions),
+                        className: l()(L.reaction, g, L.remainingReactions),
                         'aria-label': m.Z.Messages.ADD_REACTION,
                         children: (0, i.jsxs)(o.Text, {
                             className: L.reactionInner,
                             variant: 'text-sm/normal',
-                            children: ['+', x]
+                            children: ['+', O]
                         })
                     }),
                 !t &&
@@ -87,7 +87,7 @@ class f extends a.PureComponent {
                         isHovered: this.state.isHovered,
                         className: l()({
                             [L.forceShow]: b,
-                            [L.forceShowLook]: g || D
+                            [L.forceShowLook]: A || D
                         })
                     })
             ]

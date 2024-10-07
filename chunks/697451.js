@@ -22,12 +22,12 @@ var i,
     C = n(906732),
     p = n(783097),
     f = n(581364),
-    g = n(592180),
-    A = n(347475),
+    A = n(592180),
+    g = n(347475),
     S = n(598077),
     M = n(768581),
-    x = n(585483),
-    O = n(55935),
+    O = n(585483),
+    x = n(55935),
     R = n(739566),
     v = n(421399),
     L = n(310423),
@@ -61,7 +61,7 @@ function U(e, t, n, i, a) {
             className: b.replyBadge,
             children: (0, s.jsx)(j, { className: b.commandIcon })
         });
-    let g =
+    let A =
             null !==
                 (c = M.ZP.getGuildMemberAvatarURL({
                     avatar: null !== (l = i.guildMemberAvatar) && void 0 !== l ? l : void 0,
@@ -70,7 +70,7 @@ function U(e, t, n, i, a) {
                 })) && void 0 !== c
                 ? c
                 : void 0,
-        A = () =>
+        g = () =>
             (function (e) {
                 let { user: t, guildId: n, guildAvatar: i, onClick: a, onContextMenu: l, onMouseDown: r } = e;
                 return (0, s.jsx)('img', {
@@ -87,7 +87,7 @@ function U(e, t, n, i, a) {
             })({
                 user: t,
                 guildId: _.guild_id,
-                guildAvatar: g,
+                guildAvatar: A,
                 onClick: 1 === n ? C : N,
                 onContextMenu: 1 === n ? p : h
             }),
@@ -98,9 +98,9 @@ function U(e, t, n, i, a) {
               shouldShow: S,
               position: 'right',
               onRequestClose: f,
-              children: A
+              children: g
           })
-        : A();
+        : g();
 }
 function y(e, t, n, i, a) {
     let { message: l, channel: r, showUsernamePopout: o, showTargetUsernamePopout: c, onClickUsername: d, onUserContextMenu: u, onClickTargetUsername: _, onTargetUserContextMenu: E, onPopoutRequestClose: I } = e;
@@ -132,7 +132,7 @@ function k(e) {
         c = l.useMemo(
             () => (e, t, n) => (
                 d()(null != a && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
-                (0, s.jsx)(A.Z, {
+                (0, s.jsx)(g.Z, {
                     ...e,
                     channelId: a.id,
                     messageId: i.id,
@@ -160,7 +160,7 @@ function k(e) {
         j = (null == M ? void 0 : M.type) === I.B8.APPLICATION_COMMAND && null != i.messageReference && null != e.renderTargetMessage,
         k = (0, R.Sw)(null === (t = i.interaction) || void 0 === t ? void 0 : t.user, a),
         G = (0, R.Sw)(v, a),
-        F = l.useMemo(() => (e.compact ? (0, Z.Z)((0, O.vc)(_()(), 'LT')) : null), [e.compact]),
+        F = l.useMemo(() => (e.compact ? (0, Z.Z)((0, x.vc)(_()(), 'LT')) : null), [e.compact]),
         w = (0, m.NX)(a.id),
         V = i.interaction;
     if (null == V || null == k) return null;
@@ -175,7 +175,7 @@ function k(e) {
             'user'
         );
     };
-    if ((null == i ? void 0 : i.activityInstance) === null || (0, g.g)(i))
+    if ((null == i ? void 0 : i.activityInstance) === null || (0, A.g)(i))
         (n = D.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
             userHook: H,
             commandHook: () => {
@@ -211,7 +211,7 @@ function k(e) {
                                         ]
                                     })
                                 });
-                            if (!(0, g.g)(i))
+                            if (!(0, A.g)(i))
                                 return (0, s.jsx)('div', {
                                     className: b.commandName,
                                     children: r
@@ -222,7 +222,7 @@ function k(e) {
                                     ...n,
                                     tag: 'span',
                                     onClick: () => {
-                                        x.S.dispatchToLastSubscribed(P.CkL.OPEN_APP_LAUNCHER, { applicationId: i.applicationId });
+                                        O.S.dispatchToLastSubscribed(P.CkL.OPEN_APP_LAUNCHER, { applicationId: i.applicationId });
                                     },
                                     children: (0, s.jsxs)('div', {
                                         className: o()(b.appLauncherOnboardingCommandName, b.clickable),

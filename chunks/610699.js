@@ -25,12 +25,12 @@ var i = n(735250),
     C = n(835473),
     p = n(471445),
     f = n(111028),
-    g = n(955415),
-    A = n(601964),
+    A = n(955415),
+    g = n(601964),
     S = n(592125),
     M = n(430824),
-    x = n(496675),
-    O = n(594174),
+    O = n(496675),
+    x = n(594174),
     R = n(624138),
     v = n(358595),
     L = n(981631),
@@ -174,7 +174,7 @@ function k(e) {
             });
         }),
         Q = S.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-        J = (0, c.e7)([x.Z], () => null != Q && x.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
+        J = (0, c.e7)([O.Z], () => null != Q && O.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
         { analyticsLocations: q } = (0, h.ZP)(N.Z.INVITE_EMBED),
         $ = (0, I.Z)({
             applicationId: G.id,
@@ -191,12 +191,12 @@ function k(e) {
                     : [],
             [Q, G.id]
         ),
-        et = (0, c.Wu)([O.default], () => ee.map((e) => O.default.getUser(e)), [ee]),
+        et = (0, c.Wu)([x.default], () => ee.map((e) => x.default.getUser(e)), [ee]),
         en = d.state === L.r2o.ACCEPTING,
         ei = null != W;
     if (null == W) {
         if (null == d.guild) return (0, i.jsx)(v.Z, {});
-        W = new A.ZP(d.guild);
+        W = new g.ZP(d.guild);
     }
     let ea = (ei && !J) || (ei && z),
         es = () => {
@@ -230,7 +230,7 @@ function k(e) {
                           })
                       })
                   }),
-                  (0, i.jsxs)(g.Z, {
+                  (0, i.jsxs)(A.Z, {
                       className: l()(D.content, {
                           [D.large]: w,
                           [D.stacked]: H

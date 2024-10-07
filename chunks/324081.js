@@ -23,8 +23,8 @@ var a = n(120356),
     C = n(158776),
     p = n(594174),
     f = n(689938),
-    g = n(699420);
-let A = {
+    A = n(699420);
+let g = {
     top: 8,
     bottom: 8,
     left: -4,
@@ -34,9 +34,9 @@ function S(e) {
     let { channel: t, children: n, gotoChannel: a, mentionCount: s, channelState: r, toggleCollapsed: c } = e,
         d = (0, l.JA)('recents-header-'.concat(t.id, '-').concat((0, I.Dt)()));
     return (0, i.jsx)(o.FocusRing, {
-        offset: A,
+        offset: g,
         children: (0, i.jsxs)('div', {
-            className: g.channelHeader,
+            className: A.channelHeader,
             ...d,
             tabIndex: 0,
             'data-recents-channel': t.id,
@@ -61,16 +61,16 @@ function S(e) {
 function M(e) {
     let { channel: t, gotoChannel: n } = e;
     return t.isPrivate()
-        ? (0, i.jsx)(x, {
+        ? (0, i.jsx)(O, {
               channel: t,
               gotoChannel: n
           })
-        : (0, i.jsx)(O, {
+        : (0, i.jsx)(x, {
               channel: t,
               gotoChannel: n
           });
 }
-function x(e) {
+function O(e) {
     let { channel: t, gotoChannel: n } = e,
         a = (0, r.e7)([p.default], () => (t.isDM() ? p.default.getUser(t.getRecipientId()) : null)),
         s = null == a ? (0, d.x)(t) : a.getAvatarURL(void 0, 40);
@@ -78,21 +78,21 @@ function x(e) {
         onClick: n,
         tabIndex: -1,
         children: (0, i.jsx)('img', {
-            className: g.dmIcon,
+            className: A.dmIcon,
             src: s,
             alt: '',
             'aria-hidden': !0
         })
     });
 }
-function O(e) {
+function x(e) {
     let { channel: t, gotoChannel: n } = e,
         a = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
     return null == a
         ? null
         : (0, i.jsx)(m.Z, {
               'aria-hidden': !0,
-              className: g.guildIcon,
+              className: A.guildIcon,
               guild: a,
               size: m.Z.Sizes.MEDIUM,
               active: !0,
@@ -112,37 +112,37 @@ function R(e) {
             : t.isPrivate()
               ? (0, i.jsx)(v, { channel: t })
               : (0, i.jsx)(o.Clickable, {
-                    className: s()(g.subtext, g.guildName),
+                    className: s()(A.subtext, A.guildName),
                     onClick: n,
                     children: m
                 });
     return (0, i.jsxs)('div', {
-        className: g.channelNameSection,
+        className: A.channelNameSection,
         children: [
             (0, i.jsx)(o.Heading, {
                 variant: 'heading-md/semibold',
-                className: g.channelNameHeader,
+                className: A.channelNameHeader,
                 children: (0, i.jsxs)(o.Clickable, {
-                    className: g.channelName,
+                    className: A.channelName,
                     onClick: n,
                     children: [
                         t.isThread() || t.isGroupDM() || null == d
                             ? null
                             : (0, i.jsx)(d, {
-                                  className: t.isForumLikeChannel() ? g.forumIcon : void 0,
+                                  className: t.isForumLikeChannel() ? A.forumIcon : void 0,
                                   width: 18,
                                   height: 18,
                                   size: 'custom',
                                   color: 'currentColor'
                               }),
                         (0, i.jsx)('span', {
-                            className: g.channelNameSpan,
+                            className: A.channelNameSpan,
                             children: I
                         }),
                         null != a && a > 0
                             ? (0, i.jsx)(E.Z, {
                                   value: a,
-                                  className: g.badge
+                                  className: A.badge
                               })
                             : null
                     ]
@@ -151,7 +151,7 @@ function R(e) {
             (0, i.jsx)(o.Text, {
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
-                className: g.subtextContainer,
+                className: A.subtextContainer,
                 children: T
             })
         ]
@@ -174,8 +174,8 @@ function v(e) {
     return null == a
         ? null
         : (0, i.jsx)(c.Z, {
-              className: g.activityStatus,
-              emojiClassName: g.activityEmoji,
+              className: A.activityStatus,
+              emojiClassName: A.activityEmoji,
               activities: a,
               applicationStream: s,
               hideTooltip: !0,

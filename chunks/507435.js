@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return O;
     }
 });
 var i,
@@ -22,7 +22,7 @@ var i,
     C = n(489887),
     p = n(689938),
     f = n(167919);
-function g() {
+function A() {
     return (0, s.jsx)('svg', {
         width: '24',
         height: '24',
@@ -37,10 +37,10 @@ function g() {
         })
     });
 }
-function A(e) {
+function g(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, s.jsx)(g, {});
+    if (n) t = (0, s.jsx)(A, {});
     else if (null != i) {
         let e = '' !== i.name ? i.name : i.displayName;
         t = (0, s.jsx)(_.Z, {
@@ -149,7 +149,7 @@ function M(e) {
     return (0, s.jsxs)('div', {
         className: o()(f.container, { [f.containerWithImage]: r }, t),
         children: [
-            (0, s.jsx)(A, {
+            (0, s.jsx)(g, {
                 hasNoVotes: 'NO_VOTES' === a.type,
                 victorEmoji: n.victorEmoji
             }),
@@ -170,29 +170,29 @@ function M(e) {
         ]
     });
 }
-function x(e) {
+function O(e) {
     var t;
     let { message: n, channel: i, compact: a, disableInteraction: r = !1 } = e,
         o = n.embeds[0],
         _ = l.useMemo(() => (0, N.Z)(o), [o]),
         E = (0, c.aF)(null !== (t = null == _ ? void 0 : _.questionText) && void 0 !== t ? t : '', C.Dv),
         h = (0, I.ZP)(n),
-        g = (0, m.l)({
+        A = (0, m.l)({
             user: n.author,
             channelId: i.id,
             guildId: i.guild_id,
             messageId: n.id
         }),
-        A = n.messageReference,
+        g = n.messageReference,
         S = l.useCallback(() => {
-            null != A &&
+            null != g &&
                 u.Z.jumpToMessage({
-                    channelId: A.channel_id,
-                    messageId: A.message_id,
+                    channelId: g.channel_id,
+                    messageId: g.message_id,
                     flash: !0,
                     returnMessageId: n.id
                 });
-        }, [n.id, A]);
+        }, [n.id, g]);
     return null == _
         ? null
         : (0, s.jsxs)(s.Fragment, {
@@ -203,7 +203,7 @@ function x(e) {
                       compact: a,
                       children: p.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
                           username: h.nick,
-                          usernameHook: g(h),
+                          usernameHook: A(h),
                           title: E,
                           titleOnClick: S
                       })

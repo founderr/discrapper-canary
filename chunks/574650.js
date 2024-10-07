@@ -22,19 +22,19 @@ t.Z = () => {
     let a = (0, r.e7)([d.Z], () => d.Z.getGuildId(), []),
         p = (0, r.e7)([c.Z], () => c.Z.getGuild(a), [a]),
         f = (0, r.e7)([I.Z], () => (null != a ? I.Z.getRequest(a) : null), [a]),
-        g = (0, l.TH)(),
-        A = (null === (e = (0, l.LX)(g.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-    if (null == p || !p.hasVerificationGate() || A) return null;
+        A = (0, l.TH)(),
+        g = (null === (e = (0, l.LX)(A.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+    if (null == p || !p.hasVerificationGate() || g) return null;
     let S = null !== (t = null == f ? void 0 : f.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
         M = null,
-        x = null,
         O = null,
+        x = null,
         R = [h.notice, C.notice];
     switch (S) {
         case E.wB.SUBMITTED:
             (M = N.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE),
-                (x = N.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION),
-                (O = () => {
+                (O = N.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION),
+                (x = () => {
                     (0, o.openModal)((e) =>
                         (0, i.jsx)(o.ConfirmModal, {
                             header: N.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
@@ -53,8 +53,8 @@ t.Z = () => {
             break;
         case E.wB.REJECTED:
             (M = N.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE),
-                (x = N.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE),
-                (O = () => {
+                (O = N.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE),
+                (x = () => {
                     (0, o.openModalLazy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
                         return (t) =>
@@ -68,8 +68,8 @@ t.Z = () => {
             break;
         default:
             (M = N.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT),
-                (x = N.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
-                (O = () => {
+                (O = N.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
+                (x = () => {
                     (0, _.hk)(p.id);
                 });
     }
@@ -86,8 +86,8 @@ t.Z = () => {
                 look: o.Button.Looks.OUTLINED,
                 color: o.Button.Colors.WHITE,
                 size: o.Button.Sizes.NONE,
-                onClick: O,
-                children: x
+                onClick: x,
+                children: O
             })
         ]
     });

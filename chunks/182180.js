@@ -94,7 +94,7 @@ function f(e) {
             message: N,
             author: C
         }),
-        g = (null === (t = N.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (s = N.roleSubscriptionData) || void 0 === s ? void 0 : s.total_months_subscribed) <= 1;
+        A = (null === (t = N.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (s = N.roleSubscriptionData) || void 0 === s ? void 0 : s.total_months_subscribed) <= 1;
     return null == f
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -105,7 +105,7 @@ function f(e) {
                       compact: h,
                       children: f
                   }),
-                  g &&
+                  A &&
                       (0, i.jsx)(p, {
                           guildId: I.guild_id,
                           user: N.author,

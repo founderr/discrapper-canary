@@ -32,12 +32,12 @@ function h(e, t) {
         p = (0, a.e7)([s.Z], () => null != h && (null == h ? void 0 : h.channelId) != null && s.Z.isChannelGated(h.guildId, h.channelId), [h]),
         f = t.hasFlag(N.iLy.IS_CROSSPOST),
         {
-            rawMediaPostEmbedData: g,
-            guild: A,
+            rawMediaPostEmbedData: A,
+            guild: g,
             parentChannel: S,
             user: M,
-            selectedGuildId: x,
-            canAccess: O
+            selectedGuildId: O,
+            canAccess: x
         } = (0, a.cj)(
             [m.Z, d.Z, o.Z, _.default, u.Z],
             () => {
@@ -61,12 +61,12 @@ function h(e, t) {
         ),
         R = i.useMemo(() => {
             let e = (0, T.ku)({
-                mediaPostEmbedData: g,
-                guild: A,
+                mediaPostEmbedData: A,
+                guild: g,
                 parentChannel: S,
                 user: M,
-                selectedGuildId: x,
-                canAccess: O
+                selectedGuildId: O,
+                canAccess: x
             });
             return null == e
                 ? null
@@ -74,7 +74,7 @@ function h(e, t) {
                       ...e,
                       user: M
                   };
-        }, [g, A, S, M, x, O]);
+        }, [A, g, S, M, O, x]);
     return (
         i.useEffect(() => {
             if ((null == h ? void 0 : h.threadId) != null) {

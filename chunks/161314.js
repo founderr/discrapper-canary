@@ -23,18 +23,18 @@ var i = n(735250),
     C = n(76535),
     p = n(866104),
     f = n(886176),
-    g = n(981631),
-    A = n(689938),
+    A = n(981631),
+    g = n(689938),
     S = n(140171);
 function M(e) {
     var t;
     let { guildId: n } = e,
         s = (0, c.e7)([N.Z], () => N.Z.getGuild(n)),
-        { loading: M, subscriptionsSettings: x } = (0, C.H)(n),
-        { listingsLoaded: O } = (0, I.eD)(n),
+        { loading: M, subscriptionsSettings: O } = (0, C.H)(n),
+        { listingsLoaded: x } = (0, I.eD)(n),
         R = (0, I.ue)(n, { publishedOnly: !0 }),
         v = a.useCallback(async () => {
-            h.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, u.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
+            h.default.track(A.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, u.hH)(n) }), await (0, m.Z)(A.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, _.Z)(
         {
@@ -44,17 +44,17 @@ function M(e) {
         { disableTrack: null == s }
     );
     let L = R.length > 0 ? new Date(Math.min(...R.map((e) => Date.parse(e.published_at)))) : void 0;
-    return M || !O
+    return M || !x
         ? (0, i.jsx)('div', {
               className: l()(S.guildShopEmbed, S.spinnerContainer),
               children: (0, i.jsx)(d.Spinner, {})
           })
-        : null == s || null == x
+        : null == s || null == O
           ? null
           : (0, i.jsxs)('div', {
                 className: S.guildShopEmbed,
                 children: [
-                    (0, i.jsx)(p.Z, { coverImageAsset: null !== (t = x.cover_image_asset) && void 0 !== t ? t : null }),
+                    (0, i.jsx)(p.Z, { coverImageAsset: null !== (t = O.cover_image_asset) && void 0 !== t ? t : null }),
                     (0, i.jsx)(d.Spacer, { size: 16 }),
                     (0, i.jsxs)('div', {
                         className: S.serverShopLabel,
@@ -68,7 +68,7 @@ function M(e) {
                                 variant: 'heading-sm/semibold',
                                 color: 'interactive-normal',
                                 className: S.serverShopLabelText,
-                                children: A.Z.Messages.GUILD_SHOP_CHANNEL_LABEL
+                                children: g.Z.Messages.GUILD_SHOP_CHANNEL_LABEL
                             })
                         ]
                     }),
@@ -76,14 +76,14 @@ function M(e) {
                     (0, i.jsx)(d.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'text-normal',
-                        children: A.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: s.name })
+                        children: g.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: s.name })
                     }),
                     (0, i.jsx)(d.Spacer, { size: 4 }),
                     (0, i.jsx)(d.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         lineClamp: 2,
-                        children: x.description
+                        children: O.description
                     }),
                     (0, i.jsx)(d.Spacer, { size: 16 }),
                     (0, i.jsx)(T.Z, {}),
@@ -99,7 +99,7 @@ function M(e) {
                                         children: (0, i.jsx)(d.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: A.Z.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({ listingCount: R.length })
+                                            children: g.Z.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({ listingCount: R.length })
                                         })
                                     }),
                                     null != L &&
@@ -107,7 +107,7 @@ function M(e) {
                                             children: (0, i.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'text-muted',
-                                                children: A.Z.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({ createdYear: L.getFullYear() })
+                                                children: g.Z.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({ createdYear: L.getFullYear() })
                                             })
                                         })
                                 ]
@@ -125,7 +125,7 @@ function M(e) {
                                         (0, i.jsx)(d.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: A.Z.Messages.GUILD_SHOP_EMBED_CTA
+                                            children: g.Z.Messages.GUILD_SHOP_EMBED_CTA
                                         })
                                     ]
                                 })

@@ -10,13 +10,13 @@ var r = n(355467),
     l = n(106976),
     i = n(703656),
     s = n(914010),
-    d = n(598),
-    o = n(791785),
+    o = n(598),
+    d = n(791785),
     u = n(981631);
 function c(e) {
     let { onClose: t, onComplete: n, forcesTransitionToGuild: c, ...f } = e,
-        { subscriptionMetadataRequest: h } = (0, d.usePaymentContext)();
-    return (0, a.jsx)(o.PaymentModal, {
+        { subscriptionMetadataRequest: h } = (0, o.usePaymentContext)();
+    return (0, a.jsx)(d.PaymentModal, {
         ...f,
         onComplete: n,
         onClose: (e) => {

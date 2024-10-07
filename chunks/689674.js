@@ -43,14 +43,14 @@ function u(e) {
             },
             [h, _.id, _.guild_id, C, p]
         ),
-        g = o.Z.useExperiment(
+        A = o.Z.useExperiment(
             { location: '836a4b_1' },
             {
                 disable: !N || !E,
                 autoTrackExposure: !0
             }
         ).enabled,
-        A = (0, l.O)(f, 0, g);
+        g = (0, l.O)(f, 0, A);
     return (
         i.useEffect(
             () => () => {
@@ -58,6 +58,6 @@ function u(e) {
             },
             [h]
         ),
-        A
+        g
     );
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return A;
     }
 }),
     n(47120);
@@ -35,21 +35,21 @@ function f(e) {
         onClick: t
     });
 }
-function g(e) {
+function A(e) {
     let { setTab: t, badgeState: n, closePopout: r } = e,
-        { initialized: h, items: p, loading: g, loadMore: A } = (0, u.y6)(),
+        { initialized: h, items: p, loading: A, loadMore: g } = (0, u.y6)(),
         S = (0, s.e7)([o.Z], () => o.Z.localItems),
         M = a.useMemo(() => [...[...p, ...S].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [p, S]),
-        x = p.length > 0 ? p[0] : null,
-        O = E.d$.useSetting(),
+        O = p.length > 0 ? p[0] : null,
+        x = E.d$.useSetting(),
         R = a.useMemo(() => {
-            if (null != x && 0 >= m.default.compare(x.id, O)) return !1;
+            if (null != O && 0 >= m.default.compare(O.id, x)) return !1;
             for (let e of M) {
-                if (0 >= m.default.compare(e.id, O)) break;
-                if (!(0, d.r)(e, O)) return !0;
+                if (0 >= m.default.compare(e.id, x)) break;
+                if (!(0, d.r)(e, x)) return !0;
             }
             return !1;
-        }, [x, O, M]);
+        }, [O, x, M]);
     return (0, i.jsxs)('div', {
         className: C.container,
         children: [
@@ -61,7 +61,7 @@ function g(e) {
                 children: R
                     ? (0, i.jsx)(f, {
                           onClick: () => {
-                              null != x && (E.d$.updateSetting(x.id), I.default.track(N.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+                              null != O && (E.d$.updateSetting(O.id), I.default.track(N.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
                           }
                       })
                     : null
@@ -69,8 +69,8 @@ function g(e) {
             (0, i.jsx)(_.Z, {
                 initialized: h,
                 items: M,
-                loading: g,
-                loadMore: A
+                loading: A,
+                loadMore: g
             })
         ]
     });

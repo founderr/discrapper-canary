@@ -1,6 +1,6 @@
 n.d(t, {
     k: function () {
-        return x;
+        return O;
     }
 }),
     n(47120);
@@ -23,12 +23,12 @@ var i = n(735250),
     C = n(153209),
     p = n(956961),
     f = n(903672),
-    g = n(946443),
-    A = n(264233),
+    A = n(946443),
+    g = n(264233),
     S = n(981631),
     M = n(689938);
-function x(e) {
-    let { onOpen: t, onClose: n, children: x, badgeState: O, popoutPosition: R, popoutAlign: v } = e,
+function O(e) {
+    let { onOpen: t, onClose: n, children: O, badgeState: x, popoutPosition: R, popoutAlign: v } = e,
         { analyticsLocations: L } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
         [Z, P] = a.useState(!1),
         [D, b] = (function () {
@@ -105,20 +105,20 @@ function x(e) {
                         D === r.X.FOR_YOU
                             ? (0, i.jsx)(C.Z, {
                                   setTab: b,
-                                  badgeState: O,
+                                  badgeState: x,
                                   closePopout: y
                               })
                             : D === r.X.MENTIONS
                               ? (0, i.jsx)(f.Z, {
                                     setTab: b,
                                     onJump: H,
-                                    badgeState: O,
+                                    badgeState: x,
                                     closePopout: y
                                 })
                               : V && D === r.X.GAME_INVITES
-                                ? (0, i.jsx)(A.Z, {
+                                ? (0, i.jsx)(g.Z, {
                                       setTab: b,
-                                      badgeState: O,
+                                      badgeState: x,
                                       closePopout: y
                                   })
                                 : k && D === r.X.TODOS
@@ -130,22 +130,22 @@ function x(e) {
                                   : G && F && D === r.X.BOOKMARKS
                                     ? (0, i.jsx)(h.Z, {
                                           setTab: b,
-                                          badgeState: O,
+                                          badgeState: x,
                                           closePopout: y
                                       })
                                     : (0, i.jsx)(s.SV, {
-                                          fallback: (0, i.jsx)(g.h, {
+                                          fallback: (0, i.jsx)(A.h, {
                                               setTab: b,
                                               closePopout: y,
-                                              badgeState: O
+                                              badgeState: x
                                           }),
-                                          children: (0, i.jsx)(g.Z, {
+                                          children: (0, i.jsx)(A.Z, {
                                               setTab: b,
                                               onJump: H,
                                               showTutorial: j,
                                               setSeenTutorial: U,
                                               closePopout: y,
-                                              badgeState: O
+                                              badgeState: x
                                           })
                                       })
                 });
@@ -153,7 +153,7 @@ function x(e) {
             ignoreModalClicks: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return x(B, n, e, w);
+                return O(B, n, e, w);
             }
         })
     });

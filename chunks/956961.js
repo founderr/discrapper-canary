@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return x;
     }
 }),
     n(47120);
@@ -23,17 +23,17 @@ var i = n(735250),
     C = n(655354),
     p = n(324081),
     f = n(791914),
-    g = n(981631),
-    A = n(689938),
+    A = n(981631),
+    g = n(689938),
     S = n(816396),
     M = n(42967);
-let x = {
+let O = {
     offset: {
         left: 4,
         right: -12
     }
 };
-function O(e) {
+function x(e) {
     let { setTab: t, closePopout: n } = e,
         s = (0, c.e7)([T.Z], () => T.Z.getMessageReminders()),
         [l, r] = a.useState(!1),
@@ -52,14 +52,14 @@ function O(e) {
                 children: [
                     (0, i.jsx)(u.Heading, {
                         variant: 'heading-lg/bold',
-                        children: l ? A.Z.Messages.MESSAGE_REMINDERS_HEADER_ALL : A.Z.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
+                        children: l ? g.Z.Messages.MESSAGE_REMINDERS_HEADER_ALL : g.Z.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
                     }),
                     (0, i.jsx)(u.Anchor, {
                         onClick: () => r(!l),
                         children: (0, i.jsx)(u.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: l ? A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({ count: o.length }) : A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({ count: s.length })
+                            children: l ? g.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({ count: o.length }) : g.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({ count: s.length })
                         })
                     })
                 ]
@@ -75,19 +75,19 @@ function R(e) {
         r = a.message,
         d = (0, c.e7)([h.Z], () => h.Z.getChannel(s.channelId)),
         T = () => {
-            (0, I.uL)(g.Z5c.CHANNEL(null == d ? void 0 : d.getGuildId(), s.channelId, s.messageId));
+            (0, I.uL)(A.Z5c.CHANNEL(null == d ? void 0 : d.getGuildId(), s.channelId, s.messageId));
         },
         f = null;
     return (null != s.dueAt &&
         (s.dueAt > new Date()
             ? ((t = 'text-muted'),
-              (f = A.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
+              (f = g.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
                   duration: o()
                       .duration(s.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
-              (f = A.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
+              (f = g.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
                   duration: o()
                       .duration(Date.now() - s.dueAt.getTime(), 'millisecond')
                       .humanize()
@@ -126,7 +126,7 @@ function R(e) {
                                     })
                                   : null,
                               (0, i.jsx)(u.TooltipContainer, {
-                                  text: A.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
+                                  text: g.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
                                   children: (0, i.jsx)(u.Clickable, {
                                       onClick: (e) =>
                                           (0, _.jW)(e, async () => {
@@ -147,7 +147,7 @@ function R(e) {
                                   })
                               }),
                               (0, i.jsx)(u.TooltipContainer, {
-                                  text: A.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
+                                  text: g.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
                                   children: (0, i.jsx)(u.Clickable, {
                                       onClick: () => (0, m.x)(s),
                                       className: S.delete,
@@ -177,7 +177,7 @@ function R(e) {
                                   className: M.message,
                                   compact: N.jU.getSetting(),
                                   animateAvatar: !1,
-                                  focusProps: x,
+                                  focusProps: O,
                                   trackAnnouncementViews: !0
                               },
                               r.id

@@ -20,15 +20,15 @@ var i = n(735250),
 let T = a.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: T, count: N, me: h, me_burst: C, burst_count: p, burst_colors: f, readOnly: g, isLurking: A, isGuest: S, isPendingMember: M, type: x } = e,
-            O = x === _.O.BURST,
-            R = (0, E.y4)(h, C, x),
-            v = (0, u.v)(O && null != f ? f : []),
+            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: T, count: N, me: h, me_burst: C, burst_count: p, burst_colors: f, readOnly: A, isLurking: g, isGuest: S, isPendingMember: M, type: O } = e,
+            x = O === _.O.BURST,
+            R = (0, E.y4)(h, C, O),
+            v = (0, u.v)(x && null != f ? f : []),
             L = a ? m : I,
-            Z = O ? p : N,
+            Z = x ? p : N,
             P = (0, d.y)(Z, E.aO),
             D = {};
-        if (O && null != v) {
+        if (x && null != v) {
             var b;
             let { accentColor: e, backgroundColor: i, opacity: a } = v,
                 s = null !== (b = (0, r.wK)(null != i ? i : '', a)) && void 0 !== b ? b : '';
@@ -42,7 +42,7 @@ let T = a.memo(function (e) {
         return (0, i.jsxs)('div', {
             className: l()(L.reaction, L.reactionInner, T, {
                 [L.reactionMe]: R,
-                [L.reactionReadOnly]: g && !A && !M && !S
+                [L.reactionReadOnly]: A && !g && !M && !S
             }),
             style: D,
             children: [
@@ -51,7 +51,7 @@ let T = a.memo(function (e) {
                     emojiId: c.id,
                     emojiName: c.name,
                     size: 'reaction',
-                    animated: O && c.animated
+                    animated: x && c.animated
                 }),
                 (0, i.jsx)('div', {
                     className: L.reactionCount,

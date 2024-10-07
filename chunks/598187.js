@@ -22,12 +22,12 @@ var i = n(735250),
     C = n(825829),
     p = n(226192),
     f = n(36459),
-    g = n(434404),
-    A = n(518950),
+    A = n(434404),
+    g = n(518950),
     S = n(347475),
     M = n(592125),
-    x = n(271383),
-    O = n(594174),
+    O = n(271383),
+    x = n(594174),
     R = n(464891),
     v = n(348238),
     L = n(83561),
@@ -116,14 +116,14 @@ function k(e) {
 function G(e) {
     var t;
     let { message: n, compact: s } = e,
-        l = O.default.getUser((0, C.Sw)(n)),
+        l = x.default.getUser((0, C.Sw)(n)),
         r = null === (t = M.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id,
-        c = null != r && null != l ? x.ZP.getMember(r, l.id) : null,
+        c = null != r && null != l ? O.ZP.getMember(r, l.id) : null,
         {
             avatarSrc: d,
             avatarDecorationSrc: u,
             eventHandlers: _
-        } = (0, A.Z)({
+        } = (0, g.Z)({
             user: l,
             guildId: r,
             size: 12
@@ -216,15 +216,15 @@ function F(e) {
     let { message: n, compact: s } = e,
         { joinAttempts: l, raidDatetime: r, dmsSent: d, raidType: m, resolvedReason: T } = (0, C.FL)(n),
         f = (0, _.e7)([M.Z], () => M.Z.getChannel(n.channel_id), [n.channel_id]),
-        g = null !== (t = null == f ? void 0 : f.guild_id) && void 0 !== t ? t : null,
-        { shouldShowIncidentActions: A } = (0, N.mI)(g),
+        A = null !== (t = null == f ? void 0 : f.guild_id) && void 0 !== t ? t : null,
+        { shouldShowIncidentActions: g } = (0, N.mI)(A),
         S = (0, v.sR)(n.author.id, n.channel_id),
-        x = a.useCallback(() => {
+        O = a.useCallback(() => {
             let e = null == f ? void 0 : f.guild_id;
             null != e && (0, p.kW)(n.id, e);
         }, [n.id, f]),
-        O = m === u.$.DM_RAID,
-        R = O ? I.CircleWarningIcon : I.ChatWarningIcon;
+        x = m === u.$.DM_RAID,
+        R = x ? I.CircleWarningIcon : I.ChatWarningIcon;
     return (0, i.jsx)(V, {
         compact: s,
         header: (0, i.jsxs)(a.Fragment, {
@@ -236,7 +236,7 @@ function F(e) {
                 (0, i.jsx)(I.Text, {
                     variant: 'text-md/semibold',
                     color: 'text-danger',
-                    children: O ? b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
+                    children: x ? b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
                 })
             ]
         }),
@@ -276,7 +276,7 @@ function F(e) {
                       children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({ dateTime: r.toLocaleString(b.Z.getLocale(), h.pQ) })
                   })
                 : null,
-        footerButtons: A
+        footerButtons: g
             ? (0, i.jsxs)('div', {
                   className: j.dotSeparatedRow,
                   children: [
@@ -306,7 +306,7 @@ function F(e) {
                       }),
                       (0, i.jsx)(U, {}),
                       (0, i.jsx)(I.Button, {
-                          onClick: x,
+                          onClick: O,
                           color: I.Button.Colors.LINK,
                           look: I.Button.Looks.LINK,
                           size: I.Button.Sizes.SMALL,
@@ -387,7 +387,7 @@ function w(e) {
                 (0, i.jsx)(U, {}),
                 (0, i.jsx)(I.Button, {
                     onClick: function () {
-                        null != l && g.Z.open(l, P.pNK.GUILD_AUTOMOD, void 0, P.KsC.AUTOMOD_MENTION_SPAM);
+                        null != l && A.Z.open(l, P.pNK.GUILD_AUTOMOD, void 0, P.KsC.AUTOMOD_MENTION_SPAM);
                     },
                     color: I.Button.Colors.LINK,
                     look: I.Button.Looks.LINK,

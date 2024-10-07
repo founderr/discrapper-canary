@@ -22,22 +22,22 @@ var i = n(735250),
     C = n(999671),
     p = n(324081),
     f = n(240126),
-    g = n(791914),
-    A = n(981631),
+    A = n(791914),
+    g = n(981631),
     S = n(689938),
     M = n(42967);
-let x = {
+let O = {
     offset: {
         left: 4,
         right: -12
     }
 };
-function O(e, t, n) {
+function x(e, t, n) {
     let i = t ? N.Z.guildFilter : null,
         a = t ? N.Z.roleFilter : null,
         s = t ? N.Z.everyoneFilter : null,
         l = null;
-    null != e && null != i && (l = i === A.NgX.ALL_SERVERS ? null : e.getGuildId()), o.Z.fetchRecentMentions(n, A.DJj, l, a, s);
+    null != e && null != i && (l = i === g.NgX.ALL_SERVERS ? null : e.getGuildId()), o.Z.fetchRecentMentions(n, g.DJj, l, a, s);
 }
 function R(e) {
     let { setTab: t, onJump: n, badgeState: r, closePopout: _ } = e,
@@ -47,7 +47,7 @@ function R(e) {
             hasMore: h,
             loading: p,
             guildFilter: f,
-            roleFilter: x,
+            roleFilter: O,
             everyoneFilter: R
         } = (0, s.cj)([N.Z], () => ({
             messages: N.Z.getMentions(),
@@ -58,27 +58,27 @@ function R(e) {
             everyoneFilter: N.Z.everyoneFilter
         })),
         v = (0, d.Z)(f),
-        Z = (0, d.Z)(x),
+        Z = (0, d.Z)(O),
         D = (0, d.Z)(R);
     a.useEffect(() => {
         if (!N.Z.hasLoadedEver) {
-            O(E, !0);
+            x(E, !0);
             return;
         }
-        ((null != v && f !== v) || (null != Z && x !== Z) || (null != D && R !== D)) && O(E, !0);
-    }, [v, f, Z, x, D, R, E, !0]);
+        ((null != v && f !== v) || (null != Z && O !== Z) || (null != D && R !== D)) && x(E, !0);
+    }, [v, f, Z, O, D, R, E, !0]);
     a.useEffect(() => {
-        (null == m ? void 0 : m.some(u.k5)) && (o.Z.clearMentions(), O(E, !0));
+        (null == m ? void 0 : m.some(u.k5)) && (o.Z.clearMentions(), x(E, !0));
     }, []),
         a.useEffect(
             () => () => {
-                o.Z.truncateMentions(A.DJj);
+                o.Z.truncateMentions(g.DJj);
             },
             []
         );
     let b = a.useCallback(
         () =>
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(A.Z, {
                 tab: l.X.MENTIONS,
                 setTab: t,
                 badgeState: r,
@@ -102,7 +102,7 @@ function R(e) {
             hasMore: h,
             analyticsName: 'Recent Mentions',
             loadMore: function () {
-                O(E, !0, null != m && m.length > 0 ? m[m.length - 1].id : null);
+                x(E, !0, null != m && m.length > 0 ? m[m.length - 1].id : null);
             },
             canCloseAllMessages: !0,
             renderHeader: b,
@@ -181,7 +181,7 @@ function Z(e) {
                             hideAccessories: c,
                             compact: E.jU.getSetting(),
                             animateAvatar: !1,
-                            focusProps: x,
+                            focusProps: O,
                             trackAnnouncementViews: !0
                         },
                         t.id

@@ -1,65 +1,65 @@
-i.d(n, {
+n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 });
-var t = i(735250);
-i(470079);
-var o = i(442837),
-    a = i(481060),
-    r = i(906732),
-    l = i(48217),
-    s = i(26323),
-    c = i(430824),
-    d = i(914010),
-    u = i(709586),
-    _ = i(981631),
-    g = i(30513),
-    b = i(689938),
-    h = i(364042);
-function f(e) {
-    let { analyticsSection: n, analyticsPage: i, isGIF: f, banner: E } = e,
-        T = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
-        I = (0, o.e7)([c.Z], () => c.Z.getGuild(T)),
-        { analyticsLocations: N } = (0, r.ZP)();
-    return null == I || I.hasFeature(_.oNc.ANIMATED_BANNER) || (!f && I.hasFeature(_.oNc.BANNER))
+var a = n(735250);
+n(470079);
+var o = n(442837),
+    i = n(481060),
+    r = n(906732),
+    c = n(48217),
+    s = n(26323),
+    l = n(430824),
+    u = n(914010),
+    d = n(709586),
+    _ = n(981631),
+    b = n(30513),
+    f = n(689938),
+    g = n(364042);
+function E(e) {
+    let { analyticsSection: t, analyticsPage: n, isGIF: E, banner: m } = e,
+        R = (0, o.e7)([u.Z], () => u.Z.getGuildId()),
+        p = (0, o.e7)([l.Z], () => l.Z.getGuild(R)),
+        { analyticsLocations: I } = (0, r.ZP)();
+    return null == p || p.hasFeature(_.oNc.ANIMATED_BANNER) || (!E && p.hasFeature(_.oNc.BANNER))
         ? null
-        : (0, t.jsxs)('div', {
-              className: h.container,
+        : (0, a.jsxs)('div', {
+              className: g.container,
               children: [
-                  (0, t.jsx)(u.Z, { className: h.guildBoostingIcon }),
-                  (0, t.jsx)(a.Text, {
+                  (0, a.jsx)(d.Z, { className: g.guildBoostingIcon }),
+                  (0, a.jsx)(i.Text, {
                       color: 'header-primary',
                       variant: 'text-sm/semibold',
-                      children: b.Z.Messages.PREMIUM_GUILD_PREVIEW
+                      children: f.Z.Messages.PREMIUM_GUILD_PREVIEW
                   }),
-                  (0, t.jsx)(a.Button, {
-                      look: a.Button.Looks.LINK,
-                      color: a.Button.Colors.LINK,
-                      className: h.subscribeButton,
+                  (0, a.jsx)(i.Button, {
+                      look: i.Button.Looks.LINK,
+                      color: i.Button.Colors.LINK,
+                      className: g.subscribeButton,
                       onClick: () => {
-                          if (null == I) return;
+                          if (null == p) return;
                           let e = {
-                              section: n,
-                              page: i,
+                              section: t,
+                              page: n,
                               object: _.qAy.UPSELL_HEADER
                           };
-                          null != E
-                              ? (0, l.c)({
-                                    analyticsLocations: N,
+                          null != m
+                              ? (0, c.c)({
+                                    analyticsLocations: I,
                                     analyticsLocation: e,
-                                    guild: I,
-                                    isGIF: f,
-                                    banner: E
+                                    guild: p,
+                                    isGIF: E,
+                                    banner: m
                                 })
                               : (0, s.Z)({
-                                    analyticsLocations: N,
+                                    analyticsLocations: I,
                                     analyticsSourceLocation: e,
-                                    guild: I,
-                                    perks: f ? (0, g.zC)() : (0, g.XO)()
+                                    guild: p,
+                                    perks: E ? (0, b.zC)() : (0, b.XO)()
                                 });
                       },
-                      children: b.Z.Messages.PREMIUM_GUILD_BOOST_SERVER
+                      children: f.Z.Messages.PREMIUM_GUILD_BOOST_SERVER
                   })
               ]
           });

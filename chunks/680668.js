@@ -24,27 +24,27 @@ function N(e) {
     let h,
         C,
         p,
-        { onTransitionToInviteChannel: f, onAcceptInstantInvite: g, guild: A, invite: S, author: M, currentUserId: x } = e,
-        O = x === M.id,
+        { onTransitionToInviteChannel: f, onAcceptInstantInvite: A, guild: g, invite: S, author: M, currentUserId: O } = e,
+        x = O === M.id,
         { channel: R, approximate_member_count: v, approximate_presence_count: L } = S,
         Z = S.state === I.r2o.ACCEPTING,
         P = null != R ? (0, o.jD)(R) : null,
-        D = null != A,
+        D = null != g,
         b = null != P,
         j = null != P && P.isGuildVocal(),
         U = null != P && P.isGuildStageVoice(),
         y = (0, c.yE)(null !== (t = S.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
-        B = null !== (N = null == A ? void 0 : A.hasFeature(I.oNc.HUB)) && void 0 !== N && N;
-    if (null == A) {
+        B = null !== (N = null == g ? void 0 : g.hasFeature(I.oNc.HUB)) && void 0 !== N && N;
+    if (null == g) {
         if (null == S.guild) return (0, i.jsx)(E.Z, {});
-        A = u.Qs(S.guild);
+        g = u.Qs(S.guild);
         let e = (0, d.rF)(S.guild.premium_subscription_count, S.guild.id);
-        A.premiumTier = e;
+        g.premiumTier = e;
     }
-    let k = D ? f : g,
+    let k = D ? f : A,
         G = (0, _.e)({
             isVoiceChannel: j,
-            isOwnInvite: O,
+            isOwnInvite: x,
             isGuest: y,
             isHubGuild: B,
             isStage: U,
@@ -54,11 +54,11 @@ function N(e) {
         (C = (0, i.jsxs)('span', {
             className: T.infoTitle,
             children: [
-                (0, i.jsx)(r.Z.GuildName, { guild: A }),
+                (0, i.jsx)(r.Z.GuildName, { guild: g }),
                 (0, i.jsx)('span', {
                     className: T.infoBadge,
                     children: (0, i.jsx)(l.Z, {
-                        guild: A,
+                        guild: g,
                         isBannerVisible: !1,
                         disableBoostClick: !0
                     })
@@ -80,11 +80,11 @@ function N(e) {
               (h = (0, i.jsxs)('span', {
                   className: T.infoTitle,
                   children: [
-                      m.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({ guildName: A.name }),
+                      m.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({ guildName: g.name }),
                       (0, i.jsx)('span', {
                           className: T.infoBadge,
                           children: (0, i.jsx)(l.Z, {
-                              guild: A,
+                              guild: g,
                               isBannerVisible: !1
                           })
                       })
@@ -98,11 +98,11 @@ function N(e) {
               : b &&
                 (h = (0, i.jsx)(r.Z.Channel, {
                     channel: P,
-                    guild: A
+                    guild: g
                 })),
         (0, i.jsxs)(r.Z, {
             children: [
-                (0, i.jsx)(r.Z.GuildSplash, { guild: A }),
+                (0, i.jsx)(r.Z.GuildSplash, { guild: g }),
                 (0, i.jsx)(r.Z.Header, {
                     text: G,
                     extra: p
@@ -112,7 +112,7 @@ function N(e) {
                         (0, i.jsxs)('div', {
                             className: T.headerLine,
                             children: [
-                                (0, i.jsx)(r.Z.Icon, { guild: A }),
+                                (0, i.jsx)(r.Z.Icon, { guild: g }),
                                 (0, i.jsx)(r.Z.Info, {
                                     title: C,
                                     onClick: D ? k : null,
@@ -128,7 +128,7 @@ function N(e) {
                         })
                     ]
                 }),
-                A.hasFeature(I.oNc.HUB) &&
+                g.hasFeature(I.oNc.HUB) &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)('div', { className: T.separator }),

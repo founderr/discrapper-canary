@@ -23,12 +23,12 @@ var i = n(735250),
     C = n(336197),
     p = n(406432),
     f = n(348238),
-    g = n(38267),
-    A = n(184301),
+    A = n(38267),
+    g = n(184301),
     S = n(347475),
     M = n(695346),
-    x = n(271383),
-    O = n(594174),
+    O = n(271383),
+    x = n(594174),
     R = n(768581),
     v = n(900849),
     L = n(506071),
@@ -43,7 +43,7 @@ function B(e) {
     var t, n, s;
     let { embedUrl: r, message: B, channel: k } = e,
         G = (0, P.J)(r, B),
-        { setPopout: F } = (0, g.Z)(B.id, b.d$),
+        { setPopout: F } = (0, A.Z)(B.id, b.d$),
         w = (0, f.qo)(B, k, F, !0),
         V = M.QK.useSetting(),
         H = (0, L.n)(),
@@ -51,14 +51,14 @@ function B(e) {
         [K, z] = a.useState((null == G ? void 0 : G.coverImage) == null),
         X = (0, u.e7)([E.Z], () => E.Z.useReducedMotion),
         Q = (0, u.e7)(
-            [x.ZP, O.default],
+            [O.ZP, x.default],
             () => {
                 var e;
-                return x.ZP.isMember(null == G ? void 0 : G.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+                return O.ZP.isMember(null == G ? void 0 : G.guildId, null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
             },
             [G]
         ),
-        J = (0, u.e7)([x.ZP], () => ((null == G ? void 0 : G.authorId) != null ? x.ZP.getMember(G.guildId, G.authorId) : null)),
+        J = (0, u.e7)([O.ZP], () => ((null == G ? void 0 : G.authorId) != null ? O.ZP.getMember(G.guildId, G.authorId) : null)),
         q = (0, T.Z)((null == J ? void 0 : J.avatarDecoration) != null ? (null == J ? void 0 : J.avatarDecoration) : null == G ? void 0 : null === (t = G.user) || void 0 === t ? void 0 : t.avatarDecoration),
         [$, ee] = a.useMemo(() => {
             var e;
@@ -85,7 +85,7 @@ function B(e) {
         er = a.useCallback(
             () => (
                 o()((null == G ? void 0 : G.authorId) != null, 'Author Id cannot be null when loading user profile'),
-                (0, A.Z)(G.authorId, G.avatarUrl, {
+                (0, g.Z)(G.authorId, G.avatarUrl, {
                     guildId: G.guildId,
                     channelId: k.id
                 })

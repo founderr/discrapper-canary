@@ -22,52 +22,52 @@ var i = n(735250),
     C = n(496675),
     p = n(699516),
     f = n(594174),
-    g = n(100604),
-    A = n(694784),
+    A = n(100604),
+    g = n(694784),
     S = n(39154),
     M = n(245216),
-    x = n(689938),
-    O = n(85961);
+    O = n(689938),
+    x = n(85961);
 function R() {
     return (0, i.jsxs)('div', {
-        className: O.headerContainer,
+        className: x.headerContainer,
         children: [
             (0, i.jsx)(M.Z, {
                 size: 'xs',
-                className: O.headerIcon,
+                className: x.headerIcon,
                 color: o.Z.colors.TEXT_LOW_CONTRAST
             }),
             (0, i.jsx)(s.xv, {
-                className: O.headerText,
+                className: x.headerText,
                 variant: 'text-sm/semibold',
                 color: 'text-low-contrast',
-                children: x.Z.Messages.MESSAGE_FORWARDED
+                children: O.Z.Messages.MESSAGE_FORWARDED
             })
         ]
     });
 }
 function v(e) {
     let { message: t, snapshot: n, index: u } = e,
-        _ = a.useMemo(() => new g.r(t, n, u), [t, n, u]),
+        _ = a.useMemo(() => new A.r(t, n, u), [t, n, u]),
         E = (0, l.e7)([T.Z, f.default, p.Z, C.Z, h.Z, d.Z], () => _.getForwardInfo(T.Z, f.default, p.Z, C.Z, h.Z, d.Z).footerInfo, [_], r.Z),
         I = a.useCallback(() => {
-            (0, A.Z)(t);
+            (0, g.Z)(t);
         }, [t]);
     return null == E
         ? null
         : (0, i.jsxs)(c.Clickable, {
-              className: O.footerContainer,
+              className: x.footerContainer,
               onClick: I,
               children: [
                   null != E.originIconUrl
                       ? (0, i.jsx)('img', {
-                            className: O.originIcon,
+                            className: x.originIcon,
                             src: E.originIconUrl,
                             alt: ''
                         })
                       : null,
                   (0, i.jsx)(s.xv, {
-                      className: O.footerText,
+                      className: x.footerText,
                       variant: 'text-sm/medium',
                       color: 'none',
                       children: ''.concat(E.originLabel, '  \u2022  ').concat(E.timestampLabel)
@@ -97,18 +97,18 @@ function L(e) {
             allowDevLinks: h,
             previewLinkTarget: !0
         }),
-        g = (0, l.e7)([T.Z], () => T.Z.getChannel(n.channel_id)),
-        A = m.jU.useSetting();
-    return null == g
+        A = (0, l.e7)([T.Z], () => T.Z.getChannel(n.channel_id)),
+        g = m.jU.useSetting();
+    return null == A
         ? null
         : (0, i.jsxs)(
               'div',
               {
-                  className: O.container,
+                  className: x.container,
                   children: [
-                      (0, i.jsx)('div', { className: O.quote }),
+                      (0, i.jsx)('div', { className: x.quote }),
                       (0, i.jsxs)('div', {
-                          className: O.content,
+                          className: x.content,
                           children: [
                               (0, i.jsx)(R, {}),
                               (0, i.jsx)(_.ZP, {
@@ -118,8 +118,8 @@ function L(e) {
                               (0, I.Z)({
                                   channelMessageProps: {
                                       message: o,
-                                      channel: g,
-                                      compact: A
+                                      channel: A,
+                                      compact: g
                                   },
                                   hasSpoilerEmbeds: f,
                                   isInteracting: !1,

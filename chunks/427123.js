@@ -18,12 +18,12 @@ var i,
     C = n(55563),
     p = n(981631);
 let f = 'DetectedOffPlatformPremiumPerksStore',
-    g = {},
     A = {},
+    g = {},
     S = [];
 function M() {
     let e = !1;
-    for (let { skuId: t, applicationId: n } of o().values(A)) {
+    for (let { skuId: t, applicationId: n } of o().values(g)) {
         if (S.includes(t)) continue;
         let i = m.Z.getApplication(n);
         if (null == i) {
@@ -36,8 +36,8 @@ function M() {
             continue;
         }
         h.Z.applicationIdsFetching.has(i.id) || h.Z.isEntitledToSku(N.default.getCurrentUser(), t, i.id, i.id) || !a.available
-            ? null != g[t] && (delete g[t], (e = !0))
-            : ((g[t] = {
+            ? null != A[t] && (delete A[t], (e = !0))
+            : ((A[t] = {
                   skuId: t,
                   applicationId: n
               }),
@@ -45,17 +45,17 @@ function M() {
     }
     return e;
 }
-class x extends (i = c.ZP.Store) {
+class O extends (i = c.ZP.Store) {
     initialize() {
         var e;
         this.waitFor(T.ZP, C.Z, h.Z), (S = null !== (e = d.K.get(f)) && void 0 !== e ? e : S);
     }
     getDetectedOffPlatformPremiumPerks() {
-        return o().values(g);
+        return o().values(A);
     }
 }
 (l = 'DetectedOffPlatformPremiumPerksStore'),
-    (s = 'displayName') in (a = x)
+    (s = 'displayName') in (a = O)
         ? Object.defineProperty(a, s, {
               value: l,
               enumerable: !0,
@@ -63,9 +63,9 @@ class x extends (i = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = l),
-    (t.Z = new x(u.Z, {
+    (t.Z = new O(u.Z, {
         LOGOUT: function () {
-            (g = {}), (A = {});
+            (A = {}), (g = {});
         },
         SKU_FETCH_SUCCESS: M,
         ENTITLEMENT_FETCH_APPLICATION_SUCCESS: M,
@@ -73,7 +73,7 @@ class x extends (i = c.ZP.Store) {
         APPLICATION_FETCH_SUCCESS: M,
         DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
             let { skuId: t } = e;
-            if ((delete g[t], S.includes(t))) return !1;
+            if ((delete A[t], S.includes(t))) return !1;
             S.push(t), d.K.set(f, S);
         },
         RUNNING_GAMES_CHANGE: function () {
@@ -82,9 +82,9 @@ class x extends (i = c.ZP.Store) {
                 if (null != t && n !== p.GQo.DISCORD)
                     for (let { skuId: n, applicationId: i } of p.Lg6) {
                         if (!(i !== t || S.includes(n)))
-                            null == A[n] &&
+                            null == g[n] &&
                                 (!h.Z.applicationIdsFetched.has(i) && !h.Z.applicationIdsFetching.has(i) && null == h.Z.getForSku(n) && _.yD(i),
-                                (A[n] = {
+                                (g[n] = {
                                     skuId: n,
                                     applicationId: i
                                 }),

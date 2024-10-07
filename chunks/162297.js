@@ -23,8 +23,8 @@ var i = n(735250),
     C = n(812206),
     p = n(981631),
     f = n(689938),
-    g = n(166272),
-    A = n(413097),
+    A = n(166272),
+    g = n(413097),
     S = n(970952);
 function M(e) {
     let { applicationId: t } = e,
@@ -38,10 +38,10 @@ function M(e) {
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
         }))
-        ? (0, i.jsx)(x, { application: n })
+        ? (0, i.jsx)(O, { application: n })
         : null;
 }
-function x(e) {
+function O(e) {
     let { application: t } = e,
         n = (0, l.e7)([m.Z], () => {
             var e;
@@ -54,7 +54,7 @@ function x(e) {
         } = a.useMemo(
             () =>
                 (0, E.sl)(t, {
-                    fakeAppIconURL: A,
+                    fakeAppIconURL: g,
                     size: 56
                 }),
             [t]
@@ -75,24 +75,24 @@ function x(e) {
         }, [T, t]),
         (0, i.jsxs)('div', {
             ref: M,
-            className: g.embedContainer,
+            className: A.embedContainer,
             children: [
-                (0, i.jsx)(O, {
+                (0, i.jsx)(x, {
                     application: t,
                     iconUrl: c
                 }),
                 (0, i.jsx)('img', {
-                    className: g.icon,
+                    className: A.icon,
                     alt: t.name,
                     src: null != c ? c : S,
                     'aria-hidden': !0,
                     draggable: !1
                 }),
                 (0, i.jsxs)('div', {
-                    className: g.body,
+                    className: A.body,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: g.details,
+                            className: A.details,
                             children: [
                                 (0, i.jsx)(r.Heading, {
                                     variant: 'heading-lg/bold',
@@ -109,7 +109,7 @@ function x(e) {
                         }),
                         (0, i.jsx)(r.Button, {
                             color: r.Button.Colors.PRIMARY,
-                            className: g.button,
+                            className: A.button,
                             type: 'button',
                             size: r.Button.Sizes.MEDIUM,
                             onClick: () => {
@@ -131,7 +131,7 @@ function x(e) {
         })
     );
 }
-function O(e) {
+function x(e) {
     let { application: t, iconUrl: n } = e,
         a = (0, c.Z)({
             applicationId: t.id,
@@ -146,8 +146,8 @@ function O(e) {
         r = (0, i.jsx)(d.Z, {
             imageBackground: a,
             applicationName: t.name,
-            imageClassName: g.bannerImage,
-            imageNotFoundClassName: g.bannerImage
+            imageClassName: A.bannerImage,
+            imageNotFoundClassName: A.bannerImage
         });
     else if ((null == l ? void 0 : l.banner) != null) {
         let e = (0, T.aN)({
@@ -159,11 +159,11 @@ function O(e) {
         r = (0, i.jsx)('img', {
             alt: t.name,
             src: e,
-            className: g.bannerImage
+            className: A.bannerImage
         });
     } else o = { backgroundColor: s };
     return (0, i.jsx)('div', {
-        className: g.banner,
+        className: A.banner,
         style: o,
         children: r
     });

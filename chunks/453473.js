@@ -26,12 +26,12 @@ var i = n(735250),
     C = n(294218),
     p = n(373662),
     f = n(695346),
-    g = n(496675),
-    A = n(626135),
+    A = n(496675),
+    g = n(626135),
     S = n(585483),
     M = n(70956),
-    x = n(324701),
-    O = n(575016),
+    O = n(324701),
+    x = n(575016),
     R = n(768943),
     v = n(686478),
     L = n(664559),
@@ -156,13 +156,13 @@ function F(e) {
 }
 function w(e) {
     let { savedMessage: t, closePopout: n, throttledNow: s } = e,
-        r = (0, O.gr)(t),
+        r = (0, x.gr)(t),
         o = a.useCallback(
             async (e) => {
                 var i;
-                await (0, O.fC)(t, r),
+                await (0, x.fC)(t, r),
                     !e.shiftKey && n(),
-                    A.default.track(b.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    g.default.track(b.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null === (i = t.message) || void 0 === i ? void 0 : i.author.id,
@@ -172,7 +172,7 @@ function w(e) {
             },
             [n, t, r]
         ),
-        c = (0, E.e7)([g.Z], () => !!((null == r ? void 0 : r.type) === b.d4z.UNKNOWN || (null == r ? void 0 : r.isPrivate())) || g.Z.can(b.Plq.VIEW_CHANNEL, r));
+        c = (0, E.e7)([A.Z], () => !!((null == r ? void 0 : r.type) === b.d4z.UNKNOWN || (null == r ? void 0 : r.isPrivate())) || A.Z.can(b.Plq.VIEW_CHANNEL, r));
     return null != r && null != t.message && c
         ? (0, i.jsxs)('div', {
               className: U.messageContainer,
@@ -234,7 +234,7 @@ function w(e) {
                               label: j.Z.Messages.FOR_LATER_REMOVE,
                               icon: I.TrashIcon,
                               dangerous: !0,
-                              onClick: () => (0, x.x)(t.saveData)
+                              onClick: () => (0, O.x)(t.saveData)
                           },
                           'delete'
                       )
@@ -264,7 +264,7 @@ function H(e) {
                           label: j.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
                           icon: I.CheckmarkLargeIcon,
                           onClick: () =>
-                              (0, x.z)({
+                              (0, O.z)({
                                   channelId: t.saveData.channelId,
                                   messageId: t.saveData.messageId,
                                   dueAt: void 0
@@ -305,7 +305,7 @@ function H(e) {
                       {
                           label: j.Z.Messages.FOR_LATER_REMOVE,
                           icon: I.BookmarkIcon,
-                          onClick: () => (0, x.x)(t.saveData)
+                          onClick: () => (0, O.x)(t.saveData)
                       },
                       'remove-reminder'
                   )
@@ -345,7 +345,7 @@ function H(e) {
                       {
                           label: j.Z.Messages.FOR_LATER_REMOVE,
                           icon: I.BookmarkIcon,
-                          onClick: () => (0, x.x)(t.saveData)
+                          onClick: () => (0, O.x)(t.saveData)
                       },
                       'remove-bookmark'
                   )

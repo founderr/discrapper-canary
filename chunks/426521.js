@@ -22,12 +22,12 @@ var i = n(735250),
     C = n(178480),
     p = n(418316),
     f = n(526146),
-    g = n(400565),
-    A = n(148789),
+    A = n(400565),
+    g = n(148789),
     S = n(11825),
     M = n(981631),
-    x = n(689938),
-    O = n(56599),
+    O = n(689938),
+    x = n(56599),
     R = n(756688),
     v = n(886765);
 function L(e) {
@@ -38,14 +38,14 @@ function L(e) {
     let d = null !== (a = E.default.getUser(null === (n = r.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== a ? a : new _.Z(r.other_user),
         u = c.Z.parse(o);
     return (0, i.jsxs)('div', {
-        className: O.messagePreviewContainer,
+        className: x.messagePreviewContainer,
         children: [
             (0, i.jsx)(l.Z, {
                 user: d,
                 size: s.AvatarSizes.SIZE_24
             }),
             (0, i.jsx)(s.Text, {
-                className: O.messagePreviewText,
+                className: x.messagePreviewText,
                 variant: 'text-sm/normal',
                 lineClamp: 2,
                 children: u
@@ -60,7 +60,7 @@ function Z(e) {
     if (null == t) return null;
     let n = c.Z.parse(t);
     return (0, i.jsx)('div', {
-        className: O.calloutContainer,
+        className: x.calloutContainer,
         children: (0, i.jsx)(s.Text, {
             variant: 'text-sm/normal',
             lineClamp: 2,
@@ -71,19 +71,19 @@ function Z(e) {
 function P(e) {
     let { item: t } = e,
         n = v,
-        a = x.Z.Messages.NOTIFICATION_CENTER_TODO;
+        a = O.Z.Messages.NOTIFICATION_CENTER_TODO;
     return (
-        t.completed && ((n = R), (a = x.Z.Messages.NOTIFICATION_CENTER_DONE)),
+        t.completed && ((n = R), (a = O.Z.Messages.NOTIFICATION_CENTER_DONE)),
         (0, i.jsxs)('div', {
-            className: O.lifecycleContainer,
+            className: x.lifecycleContainer,
             children: [
                 (0, i.jsx)('img', {
-                    className: O.checkbox,
+                    className: x.checkbox,
                     alt: '',
                     src: n
                 }),
                 (0, i.jsx)(s.Text, {
-                    className: O.lifecycleText,
+                    className: x.lifecycleText,
                     variant: 'text-xs/bold',
                     color: 'header-secondary',
                     children: a
@@ -97,7 +97,7 @@ let D = a.memo(function (e) {
         let { item: l, ackedBeforeId: u } = e,
             { analyticsLocations: _ } = (0, r.ZP)(),
             E = (0, f.I)(l, u),
-            x = a.useCallback(async () => {
+            O = a.useCallback(async () => {
                 if ((!E && (0, N.wt)(l), null != l.item_enum && l.item_enum === h.AM.FIND_FRIENDS)) {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await n.e('6074').then(n.bind(n, 443189));
@@ -136,22 +136,22 @@ let D = a.memo(function (e) {
                 }
             }, [l, E, _]),
             R = null;
-        l.type === h.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user && (R = (0, i.jsx)(A.Z, { userId: l.other_user.id }));
+        l.type === h.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user && (R = (0, i.jsx)(g.Z, { userId: l.other_user.id }));
         let v = null != l.local_id,
             D = (0, p.Z)(l);
         return (0, i.jsxs)('div', {
-            className: O.row,
+            className: x.row,
             children: [
                 (0, i.jsxs)(s.ClickableContainer, {
-                    className: O.rowContent,
+                    className: x.rowContent,
                     focusProps: { offset: 4 },
                     'aria-label': D,
-                    onClick: x,
+                    onClick: O,
                     children: [
-                        E ? null : (0, i.jsx)('div', { className: O.unread }),
-                        (0, i.jsx)(g.U, { item: l }),
+                        E ? null : (0, i.jsx)('div', { className: x.unread }),
+                        (0, i.jsx)(A.U, { item: l }),
                         (0, i.jsxs)('div', {
-                            className: O.body,
+                            className: x.body,
                             children: [
                                 'lifecycle_item' === l.type && null != l.item_enum && (0, i.jsx)(P, { item: l }),
                                 (0, i.jsx)(s.Text, {

@@ -22,8 +22,8 @@ let _ = (e) => {
                 initialized: C,
                 loading: p,
                 items: f,
-                hasMore: g,
-                cursor: A,
+                hasMore: A,
+                cursor: g,
                 errored: S
             } = (0, a.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
@@ -33,7 +33,7 @@ let _ = (e) => {
                 cursor: c.Z.cursor,
                 errored: c.Z.errored
             })),
-            { roleFilter: M, everyoneFilter: x } = (0, a.cj)([r.Z], () => ({
+            { roleFilter: M, everyoneFilter: O } = (0, a.cj)([r.Z], () => ({
                 everyoneFilter: r.Z.everyoneFilter,
                 roleFilter: r.Z.roleFilter
             }));
@@ -41,12 +41,12 @@ let _ = (e) => {
             i.useEffect(() => {
                 C && t && (0, s.FT)(u.W.NOTIFICATION_CENTER);
             }, [t, C]);
-        let O = (0, l.Z)();
+        let x = (0, l.Z)();
         i.useEffect(
             () => () => {
-                _ ? !O() && (S || f.length > 100) && (0, o.jF)() : n && f.length > 100 && (0, o.jF)();
+                _ ? !x() && (S || f.length > 100) && (0, o.jF)() : n && f.length > 100 && (0, o.jF)();
             },
-            [n, f, _, O, S]
+            [n, f, _, x, S]
         ),
             i.useEffect(() => {
                 let e = m && t;
@@ -55,24 +55,24 @@ let _ = (e) => {
                         limit: null != I ? I : E ? 8 : 20,
                         with_mentions: E,
                         roles_filter: M,
-                        everyone_filter: x
+                        everyone_filter: O
                     });
-            }, [C, m, t, E, M, x, I]);
+            }, [C, m, t, E, M, O, I]);
         let R = i.useCallback(
             async (e) => {
                 !T.current &&
                     C &&
-                    g &&
-                    null != A &&
+                    A &&
+                    null != g &&
                     (e || !S) &&
                     ((T.current = !0),
                     h(!0),
                     await (0, o.jk)(
                         {
-                            after: A,
+                            after: g,
                             with_mentions: E,
                             roles_filter: M,
-                            everyone_filter: x,
+                            everyone_filter: O,
                             limit: E ? 8 : 20
                         },
                         () => {
@@ -81,13 +81,13 @@ let _ = (e) => {
                     ),
                     h(!1));
             },
-            [C, g, A, S, E, M, x]
+            [C, A, g, S, E, M, O]
         );
         return {
             initialized: C,
             loading: p,
             items: f,
-            hasMore: g,
+            hasMore: A,
             loadMore: R,
             loadingMore: N,
             setReadNotifItemToAcked: (e) => {

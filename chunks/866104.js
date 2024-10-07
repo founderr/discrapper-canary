@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     },
     Z: function () {
-        return O;
+        return x;
     }
 }),
     n(47120);
@@ -26,11 +26,11 @@ var i = n(735250),
     C = n(506071),
     p = n(696014),
     f = n(847033),
-    g = n(544978),
-    A = n(893182),
+    A = n(544978),
+    g = n(893182),
     S = n(689938),
     M = n(687006);
-function x(e) {
+function O(e) {
     let { onClick: t } = e;
     return (0, i.jsxs)(o.Clickable, {
         onClick: t,
@@ -52,7 +52,7 @@ function x(e) {
         ]
     });
 }
-function O(e) {
+function x(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         a = I.QK.useSetting(),
         s = (0, C.n)() && a,
@@ -109,7 +109,7 @@ function R(e) {
         [Z, P] = a.useState(1),
         D = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: b, isPhantomPreview: j } = (0, f.m)(),
-        U = b === g.y.GUILD_PRODUCTS_PREVIEW ? S.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : S.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
+        U = b === A.y.GUILD_PRODUCTS_PREVIEW ? S.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : S.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
         y = L
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -123,7 +123,7 @@ function R(e) {
                       }),
                       R &&
                           (0, i.jsxs)(i.Fragment, {
-                              children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(x, { onClick: () => (0, A.Z)({ guildId: I }) })]
+                              children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(O, { onClick: () => (0, g.Z)({ guildId: I }) })]
                           })
                   ]
               })
@@ -190,7 +190,7 @@ function R(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(O, {
+            (0, i.jsx)(x, {
                 coverImageAsset: null == E ? void 0 : E.cover_image_asset,
                 isPreview: j
             })

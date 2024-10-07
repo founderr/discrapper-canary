@@ -1,6 +1,6 @@
 n.d(t, {
     H: function () {
-        return A;
+        return g;
     }
 });
 var i = n(735250);
@@ -23,9 +23,9 @@ var a = n(120356),
     C = n(5192),
     p = n(981631),
     f = n(689938),
-    g = n(64182);
-function A(e) {
-    var t, n, a, A, S, M, x, O, R, v;
+    A = n(64182);
+function g(e) {
+    var t, n, a, g, S, M, O, x, R, v;
     let { message: L, channel: Z } = e,
         P =
             null === (a = L.embeds[0]) || void 0 === a
@@ -45,17 +45,17 @@ function A(e) {
                 : null === (S = M.fields) || void 0 === S
                   ? void 0
                   : null ===
-                          (A = S.find((e) => {
+                          (g = S.find((e) => {
                               let { rawName: t } = e;
                               return 'channel_id' === t;
-                          })) || void 0 === A
+                          })) || void 0 === g
                     ? void 0
-                    : A.rawValue,
+                    : g.rawValue,
         b = (0, l.e7)([T.Z], () => T.Z.getGuild(P)),
         j = (0, l.e7)([m.Z], () => m.Z.getChannel(D)),
         U = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
         y = (0, l.e7)([], () => L.author.id === (null == U ? void 0 : U.id)),
-        B = null === (x = Z.recipients) || void 0 === x ? void 0 : x.find((e) => e !== L.author.id),
+        B = null === (O = Z.recipients) || void 0 === O ? void 0 : O.find((e) => e !== L.author.id),
         k = (0, l.e7)([N.default], () => (null != B ? N.default.getUser(B) : null)),
         G = (0, u.ZP)(L),
         F = (0, C._T)(Z.getGuildId(), Z.id, k),
@@ -67,12 +67,12 @@ function A(e) {
                 : null === (R = v.fields) || void 0 === R
                   ? void 0
                   : null ===
-                          (O = R.find((e) => {
+                          (x = R.find((e) => {
                               let { rawName: t } = e;
                               return 'voice_user_ids' === t;
-                          })) || void 0 === O
+                          })) || void 0 === x
                     ? void 0
-                    : O.rawValue,
+                    : x.rawValue,
         Y = null != H ? H.split(',') : [],
         W = (0, l.Wu)([N.default], () => Y.map((e) => N.default.getUser(e)).filter(Boolean)),
         K = y && null != k ? f.Z.Messages.WAVED_AT_USER.format({ username: F }) : f.Z.Messages.WAVED_AT_YOU.format({ username: G.nick }),
@@ -83,7 +83,7 @@ function A(e) {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {
-                className: g.card,
+                className: A.card,
                 children: [
                     (0, i.jsx)(r.Text, {
                         variant: 'text-md/semibold',
@@ -97,7 +97,7 @@ function A(e) {
                     }),
                     w.length > 0
                         ? (0, i.jsx)('div', {
-                              className: g.participants,
+                              className: A.participants,
                               children: (0, i.jsx)(E.Z, {
                                   guildId: P,
                                   partySize: {
@@ -110,7 +110,7 @@ function A(e) {
                               })
                           })
                         : (0, i.jsx)('div', {
-                              className: s()(g.participants, g.disabled),
+                              className: s()(A.participants, A.disabled),
                               children: (0, i.jsx)(E.Z, {
                                   guildId: P,
                                   partySize: {
@@ -125,15 +125,15 @@ function A(e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: g.actions,
+                className: A.actions,
                 children: [
                     (0, i.jsxs)(r.Button, {
                         color: r.Button.Colors.BRAND,
                         onClick: () => {
                             null != D && null != P && ((0, I.uL)(p.Z5c.CHANNEL(P, D)), c.default.selectVoiceChannel(D));
                         },
-                        className: g.button,
-                        innerClassName: g.buttonInner,
+                        className: A.button,
+                        innerClassName: A.buttonInner,
                         disabled: V || !z,
                         children: [
                             (0, i.jsx)(r.VoiceNormalIcon, {
@@ -148,7 +148,7 @@ function A(e) {
                         onClick: () => {
                             o.Z.sendMessage(Z.id, d.ZP.parse(Z, '\uD83D\uDC4B'));
                         },
-                        className: g.button,
+                        className: A.button,
                         children: Q
                     })
                 ]

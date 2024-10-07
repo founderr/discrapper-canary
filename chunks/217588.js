@@ -18,12 +18,12 @@ var i = n(735250),
     C = n(430824),
     p = n(594174),
     f = n(626135),
-    g = n(74538),
-    A = n(453070),
+    A = n(74538),
+    g = n(453070),
     S = n(926491),
     M = n(378233),
-    x = n(419922),
-    O = n(688179),
+    O = n(419922),
+    x = n(688179),
     R = n(981631),
     v = n(474936),
     L = n(689938),
@@ -45,7 +45,7 @@ function U(e) {
     let { sticker: t, description: n } = e;
     return (0, i.jsxs)(u.Z, {
         children: [
-            (0, i.jsx)(x.ZP, {
+            (0, i.jsx)(O.ZP, {
                 sticker: t,
                 size: 48,
                 isInteracting: !0
@@ -77,8 +77,8 @@ let y = (e) => {
                 sticker: n,
                 stickerPack: c
             });
-        (0, A.Pq)(n.pack_id);
-        let I = (0, A.Sd)(s);
+        (0, g.Pq)(n.pack_id);
+        let I = (0, g.Sd)(s);
         return (a.useEffect(() => {
             l();
         }, [u]),
@@ -107,7 +107,7 @@ let y = (e) => {
                           className: Z.stickersList,
                           children: E.map((e) =>
                               (0, i.jsx)(
-                                  x.ZP,
+                                  O.ZP,
                                   {
                                       isInteracting: !0,
                                       size: 80,
@@ -127,7 +127,7 @@ let y = (e) => {
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           _ &&
-                                              (0, O.m)({
+                                              (0, x.m)({
                                                   stickerPack: c,
                                                   stickerPickerCategories: I
                                               }),
@@ -144,10 +144,10 @@ let y = (e) => {
     B = (e) => {
         let t,
             { sticker: n, channel: s, closePopout: _, refreshPositionKey: N } = e,
-            [A, S] = a.useState(null),
-            [M, O] = a.useState(!1),
+            [g, S] = a.useState(null),
+            [M, x] = a.useState(!1),
             D = p.default.getCurrentUser(),
-            b = g.ZP.canUseCustomStickersEverywhere(D),
+            b = A.ZP.canUseCustomStickersEverywhere(D),
             y = (0, r.e7)([C.Z], () => C.Z.getGuild(n.guild_id)),
             B = null != y,
             [k, G] = a.useState(!1),
@@ -165,11 +165,11 @@ let y = (e) => {
             });
         a.useEffect(() => {
             (async () => {
-                (null == y || y.hasFeature(R.oNc.DISCOVERABLE)) && S(await (0, I.Z)(n.id)), O(!0);
+                (null == y || y.hasFeature(R.oNc.DISCOVERABLE)) && S(await (0, I.Z)(n.id)), x(!0);
             })();
         }, [n.id, B]);
         let Y = n.guild_id === s.getGuildId(),
-            W = null != A,
+            W = null != g,
             K = !1,
             z = 'Custom Sticker Popout';
         b
@@ -187,7 +187,7 @@ let y = (e) => {
         let X = !K && !B && W && b;
         return (a.useEffect(() => {
             N();
-        }, [M, A]),
+        }, [M, g]),
         a.useEffect(() => {
             f.default.track(R.rMx.OPEN_POPOUT, {
                 type: z,
@@ -200,9 +200,9 @@ let y = (e) => {
                   children: [
                       (() => {
                           let e = async () => {
-                              if (null == A || B) return;
+                              if (null == g || B) return;
                               _();
-                              let e = A.id;
+                              let e = g.id;
                               try {
                                   await c.Z.joinGuild(e), c.Z.transitionToGuildSync(e);
                               } catch {}
@@ -222,7 +222,7 @@ let y = (e) => {
                                           fullWidth: !0,
                                           buttonText: L.Z.Messages.EMOJI_POPOUT_PREMIUM_CTA,
                                           onSubscribeModalClose: (t) => (t ? e() : _()),
-                                          postSuccessGuild: B || null == A ? void 0 : A,
+                                          postSuccessGuild: B || null == g ? void 0 : g,
                                           premiumModalAnalyticsLocation: V
                                       }),
                                   X &&
@@ -236,15 +236,15 @@ let y = (e) => {
                               ]
                           });
                       })(),
-                      (null != y || null != A) &&
+                      (null != y || null != g) &&
                           (() => {
                               var e;
                               if (!W && !B) return;
-                              let t = (null !== (e = null == A ? void 0 : A.stickers) && void 0 !== e ? e : [])
+                              let t = (null !== (e = null == g ? void 0 : g.stickers) && void 0 !== e ? e : [])
                                       .slice(0, 13)
                                       .filter((e) => e.id !== n.id)
                                       .slice(0, 12),
-                                  a = null != A ? E.JO.createFromDiscoverableGuild(A) : E.JO.createFromGuildRecord(y);
+                                  a = null != g ? E.JO.createFromDiscoverableGuild(g) : E.JO.createFromGuildRecord(y);
                               return (0, i.jsxs)('div', {
                                   className: P.guildSection,
                                   children: [
@@ -306,7 +306,7 @@ let y = (e) => {
                                                                                       null == a || a(), w(null);
                                                                                   },
                                                                                   ...s,
-                                                                                  children: (0, i.jsx)(x.ZP, {
+                                                                                  children: (0, i.jsx)(O.ZP, {
                                                                                       size: 32,
                                                                                       enlargeOnInteraction: !0,
                                                                                       enlargeWithName: !1,
@@ -348,7 +348,7 @@ function k(e) {
 }
 t.Z = (e) => {
     let { renderableSticker: t, channel: n, closePopout: a, refreshPositionKey: s } = e,
-        [l, r] = (0, A.XW)(t, !0);
+        [l, r] = (0, g.XW)(t, !0);
     if (null != l && (0, M.jl)(l))
         return (0, i.jsx)(y, {
             sticker: l,

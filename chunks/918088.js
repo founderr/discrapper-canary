@@ -6,7 +6,7 @@ n.d(t, {
         return L;
     },
     ef: function () {
-        return x;
+        return O;
     },
     r8: function () {
         return R;
@@ -33,20 +33,20 @@ var i = n(278074),
     C = n(839963),
     p = n(897325),
     f = n(57101),
-    g = n(562293),
-    A = n(981631),
+    A = n(562293),
+    g = n(981631),
     S = n(689938);
 let M = {
-    channelId: A.lds,
+    channelId: g.lds,
     selectedAnswerIds: new Set(),
     submitting: !1,
     editing: !1,
     showResults: !1
 };
-function x(e, t) {
+function O(e, t) {
     for (let n of e) if (('number' == typeof n.emoji.id ? ''.concat(n.emoji.id) : n.emoji.id) === t) return n;
 }
-let O = (e) =>
+let x = (e) =>
     (0, i.EQ)(e)
         .with(
             {
@@ -103,8 +103,8 @@ function v(e, t) {
     let { formattedExpirationLabel: l } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: r } = e;
     if (null == r) return;
-    let E = e.state === A.yb.SENT,
-        I = E ? (null != l ? l : (0, g.H)(r.expiry)) : '',
+    let E = e.state === g.yb.SENT,
+        I = E ? (null != l ? l : (0, A.H)(r.expiry)) : '',
         m = null == I && E,
         { selectedAnswerIds: T, submitting: h, editing: C, showResults: p } = null !== (a = null != t ? t : (0, N.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : M,
         f = e.reactions,
@@ -113,11 +113,11 @@ function v(e, t) {
         let t = _.Z.getMessage(e.channel_id, e.id);
         (S = !e.isSearchHit && null != t), (f = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : f);
     }
-    let x = T.size > 0,
-        O = f.some((e) => !0 === e.me_vote),
-        v = !C && O,
+    let O = T.size > 0,
+        x = f.some((e) => !0 === e.me_vote),
+        v = !C && x,
         L = v || m || p,
-        Z = E && S && (!O || C || L),
+        Z = E && S && (!x || C || L),
         P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
         D = null != P ? u.ZP.getSelfMember(P) : null,
         b = (0, o.EY)(D),
@@ -127,11 +127,11 @@ function v(e, t) {
         canTapAnswers: Z,
         canRemoveVote: v && E && !m,
         canShowVoteCounts: L,
-        canSubmitVote: !h && x && !v && E && !b && !j,
+        canSubmitVote: !h && O && !v && E && !b && !j,
         expirationLabel: I,
-        hasSelectedAnswer: x,
+        hasSelectedAnswer: O,
         hasVoted: v,
-        hasVoteRecorded: O,
+        hasVoteRecorded: x,
         isEditingVote: C,
         isExpired: m,
         isInteractive: S,
@@ -148,11 +148,11 @@ function L(e, t) {
     let { animateEmoji: c = !1, theme: u = 'dark', formattedExpirationLabel: _ } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: N } = e;
     if (null == N) return;
-    let g = E.default.getCurrentUser();
-    if (null == g) return;
-    let A = s.Z.useReducedMotion,
+    let A = E.default.getCurrentUser();
+    if (null == A) return;
+    let g = s.Z.useReducedMotion,
         M = null === (o = d.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
-        R = (0, p.E)(g, M),
+        R = (0, p.E)(A, M),
         L = N.answers,
         Z = N.layout_type,
         P = v(e, t, { formattedExpirationLabel: _ });
@@ -163,20 +163,20 @@ function L(e, t) {
         Q = Math.max(
             ...L.map((e) => {
                 var t, n;
-                let i = x(V, ''.concat(e.answer_id));
+                let i = O(V, ''.concat(e.answer_id));
                 return null !== (n = null == i ? void 0 : null === (t = i.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0;
             })
         ),
         J = L.map((e) => {
             var t, n, s;
             let o = ''.concat(e.answer_id),
-                d = x(V, o),
+                d = O(V, o),
                 u = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
                 _ = 0 === z ? 0 : u / z,
                 E = H.has(o),
                 T = u >= Q && 0 !== u,
                 N = k && null !== (s = null == d ? void 0 : d.me_vote) && void 0 !== s && s,
-                h = O({
+                h = x({
                     didSelfVote: N,
                     hasVoted: k,
                     isExpired: F,
@@ -219,7 +219,7 @@ function L(e, t) {
                 isVictor: F && T,
                 didSelfVote: N,
                 style: h,
-                shouldAnimateTransition: Y && !A,
+                shouldAnimateTransition: Y && !g,
                 votesPercentage: Math.round(100 * _),
                 votes: (0, i.EQ)(Z)
                     .with(a.C.IMAGE_ONLY_ANSWERS, () => '('.concat(u.toLocaleString(), ')'))

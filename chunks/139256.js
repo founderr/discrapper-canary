@@ -38,12 +38,12 @@ var i,
     C = n(203143),
     p = n(79390),
     f = n(839963),
-    g = n(294608),
-    A = n(65145),
+    A = n(294608),
+    g = n(65145),
     S = n(981631),
     M = n(689938),
-    x = n(142822);
-function O(e) {
+    O = n(142822);
+function x(e) {
     let { className: t, children: n } = e;
     return (0, s.jsx)('ul', {
         'aria-label': M.Z.Messages.POLL_OPTIONS_ARIA,
@@ -72,10 +72,10 @@ function v(e) {
 }
 function L(e) {
     let { className: t, onClick: n, isSelected: i, isFirstAnswer: a, children: l } = e,
-        { pollAnswerRef: r } = (0, A.dv)();
+        { pollAnswerRef: r } = (0, g.dv)();
     return (0, s.jsx)(d.Clickable, {
         role: 'checkbox',
-        className: o()(t, x.enabled),
+        className: o()(t, O.enabled),
         onClick: n,
         'aria-checked': i,
         ref: a ? r : void 0,
@@ -86,10 +86,10 @@ function Z(e) {
     let t,
         { className: n, children: i, onClick: a, isSelected: l, hasSelectedAnyAnswer: r, isFirstAnswer: c } = e;
     t = r ? (l ? 0 : -1) : c ? 0 : -1;
-    let { pollAnswerRef: u } = (0, A.dv)();
+    let { pollAnswerRef: u } = (0, g.dv)();
     return (0, s.jsx)(d.Clickable, {
         role: 'radio',
-        className: o()(n, x.enabled),
+        className: o()(n, O.enabled),
         onClick: a,
         'aria-checked': l,
         tabIndex: t,
@@ -117,12 +117,12 @@ function P(e) {
                     answersInteraction: f.Y7.LIST
                 },
                 () => ({
-                    ContainerComponent: O,
+                    ContainerComponent: x,
                     answerElementType: 3
                 })
             )
             .otherwise(() => ({
-                ContainerComponent: O,
+                ContainerComponent: x,
                 answerElementType: 0
             }));
     return (0, s.jsx)(_, {
@@ -131,7 +131,7 @@ function P(e) {
             (0, s.jsx)(
                 D,
                 {
-                    className: o()(x.__invalid_answer, d),
+                    className: o()(O.__invalid_answer, d),
                     answer: e,
                     isFirstAnswer: 0 === t,
                     elementType: E,
@@ -146,8 +146,8 @@ function P(e) {
 }
 function D(e) {
     let { className: t, answer: n, children: i, hasSelectedAnyAnswer: a, isFirstAnswer: r, elementType: c } = e,
-        { channelId: d, messageId: u } = (0, g.pE)(),
-        _ = (0, g.$B)(n.style),
+        { channelId: d, messageId: u } = (0, A.pE)(),
+        _ = (0, A.$B)(n.style),
         E = !0 === n.isSelected,
         I = l.useCallback(() => {
             C.Z.handlePollAnswerTapped({
@@ -189,7 +189,7 @@ function b(e) {
         l = m.QK.useSetting();
     return (0, s.jsx)(I.ZP, {
         className: i,
-        imageClassName: x.attachmentImage,
+        imageClassName: O.attachmentImage,
         src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
         alt: null !== (t = n.description) && void 0 !== t ? t : (0, p.fw)(n.filename),
         responsive: !0,
@@ -219,7 +219,7 @@ function U(e, t) {
 }
 function y(e) {
     let { media: t, containerClassName: n, attachmentClassName: i, emojiClassName: a, fallback: l } = e,
-        { message: r } = (0, g.GF)();
+        { message: r } = (0, A.GF)();
     if (null != t.attachmentIds && t.attachmentIds.length > 0) {
         let e = r.attachments.find((e) => {
             var n;
@@ -291,13 +291,13 @@ function k(e) {
         a = {
             width: n,
             height: n,
-            background: x.radioBackground,
+            background: O.radioBackground,
             'aria-hidden': !0
         };
     return t
         ? (0, s.jsx)(N.Z, {
               ...a,
-              foreground: x.radioForeground,
+              foreground: O.radioForeground,
               className: i
           })
         : (0, s.jsx)(T.Z, {
@@ -309,7 +309,7 @@ function G(e) {
     let { isSelected: t, size: n, className: i } = e,
         a = 0.85 * n;
     return (0, s.jsx)('div', {
-        className: o()(x.checkbox, { [x.checkboxSelected]: t }, i),
+        className: o()(O.checkbox, { [O.checkboxSelected]: t }, i),
         style: {
             width: n,
             height: n

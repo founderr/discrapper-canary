@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return x;
     }
 });
 var i = n(735250),
@@ -22,13 +22,13 @@ var i = n(735250),
     C = n(778333),
     p = n(949981),
     f = n(680668),
-    g = n(143708),
-    A = n(358595),
+    A = n(143708),
+    g = n(358595),
     S = n(563917),
     M = n(135845),
-    x = n(981631);
-function O(e) {
-    let { code: t, author: n, getAcceptInviteContext: O } = e,
+    O = n(981631);
+function x(e) {
+    let { code: t, author: n, getAcceptInviteContext: x } = e,
         { invite: R, inviteError: v } = (0, s.cj)(
             [T.Z],
             () => ({
@@ -44,7 +44,7 @@ function O(e) {
             null != R
                 ? R
                 : {
-                      state: x.r2o.RESOLVING,
+                      state: O.r2o.RESOLVING,
                       code: ''
                   },
         { analyticsLocations: Z } = (0, o.ZP)(),
@@ -64,16 +64,16 @@ function O(e) {
         U = () => {
             (0, _.yU)()
                 ? (0, E.Z)({
-                      analyticsSource: { page: x.ZY5.INVITE_EMBED },
+                      analyticsSource: { page: O.ZY5.INVITE_EMBED },
                       analyticsLocation: {
-                          page: x.ZY5.INVITE_EMBED,
-                          section: x.jXE.GUILD_CAP_UPSELL_MODAL
+                          page: O.ZY5.INVITE_EMBED,
+                          section: O.jXE.GUILD_CAP_UPSELL_MODAL
                       },
                       analyticsLocations: Z
                   })
                 : l.Z.acceptInviteAndTransitionToInviteChannel({
                       inviteKey: t,
-                      context: O('Invite Button Embed')
+                      context: x('Invite Button Embed')
                   });
         },
         y = (0, i.jsx)(f.Z, {
@@ -85,17 +85,17 @@ function O(e) {
             author: n
         });
     switch (L.state) {
-        case x.r2o.RESOLVING:
-            y = (0, i.jsx)(A.Z, {});
+        case O.r2o.RESOLVING:
+            y = (0, i.jsx)(g.Z, {});
             break;
-        case x.r2o.EXPIRED:
-        case x.r2o.BANNED:
-            y = (0, i.jsx)(g.Z, {
-                banned: L.state === x.r2o.BANNED,
+        case O.r2o.EXPIRED:
+        case O.r2o.BANNED:
+            y = (0, i.jsx)(A.Z, {
+                banned: L.state === O.r2o.BANNED,
                 author: n
             });
             break;
-        case x.r2o.ERROR:
+        case O.r2o.ERROR:
             y = (0, i.jsx)(h.Z, {
                 author: n,
                 inviteError: v
@@ -116,7 +116,7 @@ function O(e) {
                     y = (0, i.jsx)(C.Z, {
                         invite: L,
                         author: n,
-                        getAcceptInviteContext: O
+                        getAcceptInviteContext: x
                     });
                     break;
                 default:
@@ -154,12 +154,12 @@ function O(e) {
                     (0, u.P1)(L) &&
                         (y = (0, i.jsx)(N.Z, {
                             invite: L,
-                            getAcceptInviteContext: O
+                            getAcceptInviteContext: x
                         }));
             }
     }
     return (0, i.jsx)(r.Z, {
-        section: x.jXE.INVITE_LINK,
+        section: O.jXE.INVITE_LINK,
         children: y
     });
 }

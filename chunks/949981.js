@@ -26,7 +26,7 @@ function T(e) {
         p = n.state === E.r2o.ACCEPTING,
         f = (0, l.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
     s()(null == f || f.isPrivate(), 'must be a private channel');
-    let g = null != f;
+    let A = null != f;
     if (null == f) {
         if (null == n.channel) return (0, i.jsx)(_.Z, {});
         (f = (0, o.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
@@ -36,27 +36,27 @@ function T(e) {
             return null != n && e.push(n), e;
         }, []);
         let e = d.default.getCurrentUser();
-        g && null != e && t.push(e);
+        A && null != e && t.push(e);
     }
-    let A = f.name;
-    (null == A || '' === A) &&
-        (A =
+    let g = f.name;
+    (null == g || '' === g) &&
+        (g =
             t.length > 0
                 ? t
                       .filter(u.lm)
                       .map((e) => e.username)
                       .join(', ')
                 : I.Z.Messages.UNNAMED);
-    let S = g ? N : h,
+    let S = A ? N : h,
         M = I.Z.Messages.JOIN_GUILD,
-        x = r.Z.Button.Colors.GREEN;
-    g && ((M = I.Z.Messages.JOINED_GUILD), (x = r.Z.Button.Colors.PRIMARY));
-    let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+        O = r.Z.Button.Colors.GREEN;
+    A && ((M = I.Z.Messages.JOINED_GUILD), (O = r.Z.Button.Colors.PRIMARY));
+    let x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
     return (
-        C && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM),
+        C && (x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM),
         (0, i.jsxs)(r.Z, {
             children: [
-                (0, i.jsx)(r.Z.Header, { text: O }),
+                (0, i.jsx)(r.Z.Header, { text: x }),
                 (0, i.jsxs)(r.Z.Body, {
                     children: [
                         (0, i.jsxs)('div', {
@@ -64,11 +64,11 @@ function T(e) {
                             children: [
                                 (0, i.jsx)(r.Z.Icon, {
                                     channel: f,
-                                    onClick: g ? S : void 0
+                                    onClick: A ? S : void 0
                                 }),
                                 (0, i.jsx)(r.Z.Info, {
-                                    title: A,
-                                    onClick: g ? S : void 0,
+                                    title: g,
+                                    onClick: A ? S : void 0,
                                     children: (0, i.jsx)(r.Z.Data, { members: t.length })
                                 })
                             ]
@@ -76,8 +76,8 @@ function T(e) {
                         (0, i.jsx)(r.Z.Button, {
                             onClick: S,
                             submitting: p,
-                            isDisabled: g,
-                            color: x,
+                            isDisabled: A,
+                            color: O,
                             children: M
                         })
                     ]

@@ -24,7 +24,7 @@ n.d(t, {
         return R;
     },
     XO: function () {
-        return O;
+        return x;
     },
     Xn: function () {
         return V;
@@ -69,15 +69,15 @@ var i = n(735250),
     C = n(358085),
     p = n(51144),
     f = n(91047),
-    g = n(50284),
-    A = n(981631),
+    A = n(50284),
+    g = n(981631),
     S = n(689938);
 function M(e, t, n) {
     return a.useCallback(() => {
         n({ [e]: !t });
     }, [e, n, t]);
 }
-function x(e, t, n) {
+function O(e, t, n) {
     return a.useCallback(
         (i) => {
             let a = m.default.getUser(e);
@@ -88,7 +88,7 @@ function x(e, t, n) {
             }
             let s = '@'.concat(p.ZP.getUserTag(a, { decoration: 'never' })),
                 l = '<@'.concat(e, '>');
-            T.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
+            T.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
                 plainText: s,
                 rawText: l
             }),
@@ -97,21 +97,21 @@ function x(e, t, n) {
         [e, t, n]
     );
 }
-function O(e, t, n, i) {
+function x(e, t, n, i) {
     let a = M('usernameProfile', n, i);
-    return x(e.author.id, t.id, a);
+    return O(e.author.id, t.id, a);
 }
 function R(e, t, n, i) {
     let a = M('referencedUsernameProfile', n, i);
-    return x(null == e ? void 0 : e.author.id, t.id, a);
+    return O(null == e ? void 0 : e.author.id, t.id, a);
 }
 function v(e, t, n, i) {
     let a = M('interactionUsernameProfile', n, i);
-    return x(null == e ? void 0 : e.user.id, t.id, a);
+    return O(null == e ? void 0 : e.user.id, t.id, a);
 }
 function L(e, t, n, i) {
     let a = M('referencedUsernameProfile', n, i);
-    return x(e, t.id, a);
+    return O(e, t.id, a);
 }
 function Z(e) {
     return a.useCallback(
@@ -133,7 +133,7 @@ function b(e, t) {
 function j(e, t, s, r) {
     let { id: o } = t,
         { id: d, flags: u } = e,
-        m = (0, h.yE)(u, A.iLy.EPHEMERAL),
+        m = (0, h.yE)(u, g.iLy.EPHEMERAL),
         T = (0, c.bp)();
     return a.useCallback(
         (e, t) => {
@@ -213,7 +213,7 @@ function k(e, t) {
         { id: i } = t;
     return a.useCallback(
         (e) => {
-            e.altKey && (e.preventDefault(), (0, g.Z)(i, n));
+            e.altKey && (e.preventDefault(), (0, A.Z)(i, n));
         },
         [i, n]
     );
@@ -225,10 +225,10 @@ function G(e, t, n) {
         [r, o] = a.useState(n);
     l.current = r || l.current;
     let c = a.useCallback(() => {
-            i && (0, u.T6)(), !r && (T.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, s, !0), o(!0));
+            i && (0, u.T6)(), !r && (T.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, s, !0), o(!0));
         }, [r, s, i]),
         _ = a.useCallback(() => {
-            T.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, s, !1), o(!1);
+            T.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, s, !1), o(!1);
         }, [s]);
     return {
         hasHovered: l.current,

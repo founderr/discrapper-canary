@@ -22,12 +22,12 @@ var i = n(735250),
     C = n(36459),
     p = n(336197),
     f = n(359110),
-    g = n(347475),
-    A = n(496675),
+    A = n(347475),
+    g = n(496675),
     S = n(594174),
     M = n(5192),
-    x = n(51144),
-    O = n(937889),
+    O = n(51144),
+    x = n(937889),
     R = n(739566),
     v = n(779125),
     L = n(890410),
@@ -74,7 +74,7 @@ function H(e, t) {
     return a.useMemo(() => {
         if (null != t)
             return (n) =>
-                (0, i.jsx)(g.Z, {
+                (0, i.jsx)(A.Z, {
                     ...n,
                     userId: t.id,
                     user: t,
@@ -132,7 +132,7 @@ function z(e) {
         if (null == a) return K(e, {});
         let s = (function (e, t, n) {
             var i;
-            let a = null !== (i = M.ZP.getNickname(n, null, t)) && void 0 !== i ? i : x.ZP.getUserTag(t),
+            let a = null !== (i = M.ZP.getNickname(n, null, t)) && void 0 !== i ? i : O.ZP.getUserTag(t),
                 s = o()(e.ts),
                 l = ''.concat(a, ' ').concat(s.fromNow());
             try {
@@ -245,15 +245,15 @@ function J(e) {
     var t;
     let { id: n, compact: s, message: r, channel: o } = e,
         {
-            avatarSrc: g,
+            avatarSrc: A,
             eventHandlers: { onMouseEnter: S, onMouseLeave: M }
         } = (0, j.m)(!0),
-        { onFocus: x, ...R } = (0, c.JA)(null != n ? n : ''),
-        { isFocused: v, handleFocus: P, handleBlur: b } = (0, D.bb)(x),
+        { onFocus: O, ...R } = (0, c.JA)(null != n ? n : ''),
+        { isFocused: v, handleFocus: P, handleBlur: b } = (0, D.bb)(O),
         y = (0, u.e7)([I.Z], () => I.Z.keyboardModeEnabled),
-        H = (0, u.e7)([A.Z], () => A.Z.can(B.Plq.MANAGE_MESSAGES, o), [o]),
+        H = (0, u.e7)([g.Z], () => g.Z.can(B.Plq.MANAGE_MESSAGES, o), [o]),
         { ruleName: K, embedChannel: z, decisionId: J, keywordMatchedContent: q, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: ea, quarantineType: es, interactionUserId: el } = (0, N.ZP)(r),
-        er = a.useMemo(() => (0, O.k$)(ee, q, o.id), [ee, q, o]),
+        er = a.useMemo(() => (0, x.k$)(ee, q, o.id), [ee, q, o]),
         { selected: eo, ...ec } = V(r, o),
         ed = a.useCallback(() => {
             (0, h._s)(r.id, ee, J, o);
@@ -289,7 +289,7 @@ function J(e) {
         onMouseLeave: M,
         children: (0, i.jsx)(U.Z, {
             className: l()(w.mainContainer, { [w.compact]: s }),
-            iconNode: s ? null : (0, i.jsx)(j.S, { src: g }),
+            iconNode: s ? null : (0, i.jsx)(j.S, { src: A }),
             iconContainerClassName: w.iconContainer,
             compact: s,
             children: (0, i.jsxs)('div', {

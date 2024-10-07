@@ -22,7 +22,7 @@ function N(e) {
     let { setTab: t, badgeState: s, closePopout: N } = e,
         C = (0, r.Wu)([d.Z], () => d.Z.getInvites()),
         p = (0, r.e7)([d.Z], () => d.Z.getInviteStatuses()),
-        [f, g] = a.useMemo(
+        [f, A] = a.useMemo(
             () =>
                 l().partition(C, (e) => {
                     var t;
@@ -102,12 +102,12 @@ function N(e) {
                                           })
                                       ]
                                   }),
-                              g.length > 0 &&
+                              A.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(h, { title: m.Z.Messages.GAME_INVITES_EXPIRED_HEADER }),
                                           (0, i.jsx)(i.Fragment, {
-                                              children: g.map((e) =>
+                                              children: A.map((e) =>
                                                   (0, i.jsx)(
                                                       I.Z,
                                                       {

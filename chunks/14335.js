@@ -31,24 +31,24 @@ function f() {
             }
         ),
         { location: f } = (0, c.O)(),
-        { analyticsLocations: g } = (0, d.ZP)(),
-        A = a.useCallback(() => {
+        { analyticsLocations: A } = (0, d.ZP)(),
+        g = a.useCallback(() => {
             (0, u.Z)({
                 subscriptionTier: I.ZP.getSkuIdForPremiumType(N.p9.TIER_2),
-                analyticsLocations: g,
+                analyticsLocations: A,
                 analyticsObject: {
                     ...f,
                     object: h.qAy.BUTTON_CTA,
                     objectType: h.Qqv.TIER_2
                 }
             });
-        }, [g, f]),
+        }, [A, f]),
         S = a.useCallback(() => {
             o.Z.open(h.oAB.INVENTORY), T.ZP.dismissOutboundPromotionNotice();
         }, []),
         M = a.useCallback(() => {
-            E.default.track(h.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? A() : S();
-        }, [n, A, S]);
+            E.default.track(h.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? g() : S();
+        }, [n, g, S]);
     return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.PREMIUM_TIER_2,
         children: [

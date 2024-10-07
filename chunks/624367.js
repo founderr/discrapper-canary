@@ -25,12 +25,12 @@ var a = n(613828),
     C = n(823379),
     p = n(624138),
     f = n(317381),
-    g = n(638880),
-    A = n(122613),
+    A = n(638880),
+    g = n(122613),
     S = n(147865),
     M = n(778569),
-    x = n(884338),
-    O = n(403404),
+    O = n(884338),
+    x = n(403404),
     R = n(701488),
     v = n(981631),
     L = n(689938),
@@ -62,7 +62,7 @@ function D(e) {
         J = async () => {
             if (G) {
                 if (null != Y && K.length > 0)
-                    await (0, g.Z)({
+                    await (0, A.Z)({
                         applicationId: Y.applicationId,
                         activityChannelId: y,
                         locationObject: U.location,
@@ -71,7 +71,7 @@ function D(e) {
                 else {
                     let e = B.isPrivate() && !m.Z.isCallActive(y),
                         t = async () =>
-                            await (0, A.Z)({
+                            await (0, g.Z)({
                                 targetApplicationId: D,
                                 channelId: y,
                                 analyticsLocations: j,
@@ -88,7 +88,7 @@ function D(e) {
                         : t();
                 }
             } else
-                (0, O.Z)({
+                (0, x.Z)({
                     guildId: k,
                     locationObject: U.location,
                     openInPopout: X,
@@ -138,7 +138,7 @@ function D(e) {
                                       K.length > 0
                                           ? (0, i.jsx)('div', {
                                                 className: Z.avatars,
-                                                children: (0, i.jsx)(x.Z, {
+                                                children: (0, i.jsx)(O.Z, {
                                                     guildId: k,
                                                     users: K,
                                                     max: 4

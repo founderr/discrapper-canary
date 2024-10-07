@@ -24,10 +24,10 @@ var i = n(735250),
 function C(e) {
     let { message: t, channel: s, compact: C } = e,
         p = (0, r.Wu)([u.Z], () => Array.from(u.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [f, g] = a.useState(null);
+        [f, A] = a.useState(null);
     return (a.useEffect(() => {
         let e = setInterval(() => {
-            p.length > 0 && g(p[Math.floor(Math.random() * p.length)]);
+            p.length > 0 && A(p[Math.floor(Math.random() * p.length)]);
         }, 500);
         return () => clearInterval(e);
     }, [p]),

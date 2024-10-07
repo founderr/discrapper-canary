@@ -254,7 +254,7 @@ function P(e) {
         onClick: function () {
             (0, c.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([s.e('70687'), s.e('32880')]).then(s.bind(s, 28130));
+                    let { default: e } = await Promise.all([s.e('70687'), s.e('51425')]).then(s.bind(s, 28130));
                     return (s) =>
                         (0, a.jsx)(e, {
                             maxFileSizeBytes: C.SJ,

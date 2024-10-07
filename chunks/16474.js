@@ -25,20 +25,20 @@ var i,
     C = n(594174),
     p = n(51144),
     f = n(479446),
-    g = n(522558),
-    A = n(441623),
+    A = n(522558),
+    g = n(441623),
     S = n(317271),
     M = n(474936),
-    x = n(981631),
-    O = n(182294),
+    O = n(981631),
+    x = n(182294),
     R = n(689938),
     v = n(186363);
 function L(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: r, popoutPosition: L, analyticsPage: Z, analyticsSection: P, glow: D, showSecondaryCta: b } = e,
         j = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
         { analyticsLocations: U } = (0, m.ZP)(),
-        { enableEmojiCTA: y } = g.w.useExperiment({ location: 'GiftIntentCard' }, { autoTrackExposure: !1 }),
-        B = (0, d.e7)([A.Z], () => A.Z.getFriendAnniversaryYears(i.id));
+        { enableEmojiCTA: y } = A.w.useExperiment({ location: 'GiftIntentCard' }, { autoTrackExposure: !1 }),
+        B = (0, d.e7)([g.Z], () => g.Z.getFriendAnniversaryYears(i.id));
     l.useEffect(() => {
         (0, T.h)({
             name: c.ImpressionNames.GIFT_INTENT_CARD,
@@ -46,7 +46,7 @@ function L(e) {
             properties: {
                 gift_intent_type: t,
                 type: n,
-                num_friend_anniversaries: A.Z.getFriendAnniversaries().length
+                num_friend_anniversaries: g.Z.getFriendAnniversaries().length
             }
         });
     }, [t, n]);
@@ -83,14 +83,14 @@ function L(e) {
                                     className: w,
                                     user: i,
                                     'aria-label': i.username,
-                                    size: O.EF.SIZE_56
+                                    size: x.EF.SIZE_56
                                 }),
                                 null != j &&
                                     (0, s.jsx)(I.Z, {
                                         className: V,
                                         user: j,
                                         'aria-label': i.username,
-                                        size: O.EF.SIZE_24
+                                        size: x.EF.SIZE_24
                                     })
                             ]
                         }),
@@ -125,7 +125,7 @@ function L(e) {
                             (0, s.jsx)(_.Button, {
                                 className: o()(v.button, v.buttonSecondary),
                                 onClick: (e) => {
-                                    e.stopPropagation(), (0, h.uL)(x.Z5c.FRIENDS), E.Z.setSection(x.pJs.ALL);
+                                    e.stopPropagation(), (0, h.uL)(O.Z5c.FRIENDS), E.Z.setSection(O.pJs.ALL);
                                 },
                                 size: _.Button.Sizes.MEDIUM,
                                 color: _.Button.Colors.CUSTOM,
@@ -155,8 +155,8 @@ function L(e) {
                                     analyticsObject: {
                                         page: Z,
                                         section: P,
-                                        object: x.qAy.BUTTON_CTA,
-                                        objectType: x.Qqv.GIFT
+                                        object: O.qAy.BUTTON_CTA,
+                                        objectType: O.Qqv.GIFT
                                     },
                                     giftMessage: k()
                                 });

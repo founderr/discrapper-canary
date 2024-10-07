@@ -18,8 +18,8 @@ var i = n(735250),
     C = n(305248),
     p = n(520116),
     f = n(981631),
-    g = n(689938),
-    A = n(619933);
+    A = n(689938),
+    g = n(619933);
 let S = a.memo(function (e) {
     let { channel: t, deleteChannel: n } = e,
         s = a.useRef(null),
@@ -91,7 +91,7 @@ let M = a.memo(function (e) {
         (0, I.uL)(f.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : a)), n(e);
     };
     return (0, i.jsx)('div', {
-        className: A.channel,
+        className: g.channel,
         children: (0, i.jsx)(c.HeadingLevel, {
             component: (0, i.jsxs)(h.Z, {
                 channel: r,
@@ -99,7 +99,7 @@ let M = a.memo(function (e) {
                 mentionCount: t.mentionCount,
                 toggleCollapsed: l,
                 channelState: t,
-                children: [(0, i.jsx)(N.Z, { channel: r }), (0, i.jsx)(x, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(O, { ...e })]
+                children: [(0, i.jsx)(N.Z, { channel: r }), (0, i.jsx)(O, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(x, { ...e })]
             }),
             children: t.collapsed
                 ? null
@@ -119,12 +119,12 @@ let M = a.memo(function (e) {
         })
     });
 });
-function x(e) {
+function O(e) {
     let { channel: t, markChannelRead: n, markGuildRead: a, getNumUnreadChannels: s } = e,
         l = (0, E.Z)() && null != t.guildId;
     return (0, i.jsx)(c.CircleIconButton, {
-        className: A.markReadButton,
-        tooltip: l ? g.Z.Messages.MARK_GUILD_AS_READ : g.Z.Messages.MARK_AS_READ,
+        className: g.markReadButton,
+        tooltip: l ? A.Z.Messages.MARK_GUILD_AS_READ : A.Z.Messages.MARK_AS_READ,
         color: c.CircleIconButtonColors.TERTIARY,
         icon: l
             ? (0, i.jsx)(c.DoubleCheckmarkIcon, {
@@ -146,7 +146,7 @@ function x(e) {
         }
     });
 }
-function O(e) {
+function x(e) {
     let { channel: t, toggle: n, getNumUnreadChannels: a } = e;
     function s() {
         n(t),
@@ -158,11 +158,11 @@ function O(e) {
             });
     }
     return (0, i.jsx)(c.Tooltip, {
-        text: g.Z.Messages.COLLAPSE,
+        text: A.Z.Messages.COLLAPSE,
         children: (e) =>
             (0, i.jsx)(c.Clickable, {
                 ...e,
-                className: l()(A.collapseButton, { [A.collapsed]: t.collapsed }),
+                className: l()(g.collapseButton, { [g.collapsed]: t.collapsed }),
                 onClick: s,
                 children: (0, i.jsx)(T.Z, {
                     width: 16,

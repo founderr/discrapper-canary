@@ -29,17 +29,17 @@ function f(e) {
         { channelId: c, messageId: d } = (0, h.pE)(),
         [T, N] = a.useState(''),
         [C, f] = a.useState(!1),
-        g = '' !== T && C,
-        A = a.useCallback(() => {
+        A = '' !== T && C,
+        g = a.useCallback(() => {
             N((0, m.e1)(d, c, l));
         }, [d, c, l]),
         S = a.useCallback(() => {
-            A(), f(!0);
-        }, [A]),
+            g(), f(!0);
+        }, [g]),
         M = a.useCallback(() => {
             f(!1);
         }, []),
-        x = a.useCallback(() => {
+        O = a.useCallback(() => {
             (0, I.n)({
                 channelId: c,
                 messageId: d,
@@ -49,13 +49,13 @@ function f(e) {
     a.useEffect(() => {
         if (!!C)
             return (
-                E.Z.addReactChangeListener(A),
+                E.Z.addReactChangeListener(g),
                 () => {
-                    E.Z.removeReactChangeListener(A);
+                    E.Z.removeReactChangeListener(g);
                 }
             );
-    }, [C, A]);
-    let O = (0, i.jsx)(u.Text, {
+    }, [C, g]);
+    let x = (0, i.jsx)(u.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
         className: p.voteCount,
@@ -75,7 +75,7 @@ function f(e) {
                                   scaleFontToUserSetting: !0,
                                   children: T
                               }),
-                              forceOpen: g,
+                              forceOpen: A,
                               'aria-label': !1,
                               children: (e) =>
                                   (0, i.jsx)(u.Button, {
@@ -84,22 +84,22 @@ function f(e) {
                                       onMouseLeave: M,
                                       onFocus: S,
                                       onBlur: M,
-                                      onClick: x,
+                                      onClick: O,
                                       className: p.voteCountButton,
-                                      'aria-describedby': g ? o : void 0,
+                                      'aria-describedby': A ? o : void 0,
                                       look: u.Button.Looks.BLANK,
                                       size: u.Button.Sizes.NONE,
-                                      children: O
+                                      children: x
                                   })
                           }),
-                          g &&
+                          A &&
                               (0, i.jsx)(r.T, {
                                   id: o,
                                   children: T
                               })
                       ]
                   })
-                : (0, i.jsx)(i.Fragment, { children: O }),
+                : (0, i.jsx)(i.Fragment, { children: x }),
             (0, i.jsxs)(u.Text, {
                 variant: 'text-md/bold',
                 color: 'none',
@@ -109,7 +109,7 @@ function f(e) {
         ]
     });
 }
-function g(e) {
+function A(e) {
     let { percentage: t, shouldAnimate: n } = e,
         a = (0, u.useSpring)(
             {
@@ -128,7 +128,7 @@ function g(e) {
         'aria-hidden': !0
     });
 }
-function A(e) {
+function g(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: a, isVictor: s, isExpired: l, className: r } = e;
     return (0, c.EQ)({
         answersInteraction: t,
@@ -177,7 +177,7 @@ function S(e) {
             }),
             children: [
                 s
-                    ? (0, i.jsx)(g, {
+                    ? (0, i.jsx)(A, {
                           percentage: t.votesPercentage,
                           shouldAnimate: E
                       })
@@ -202,7 +202,7 @@ function S(e) {
                         canShowVoterDetails: o,
                         answerId: t.answerId
                     }),
-                (0, i.jsx)(A, {
+                (0, i.jsx)(g, {
                     answersInteraction: a,
                     isSelected: c,
                     didSelfVote: d,

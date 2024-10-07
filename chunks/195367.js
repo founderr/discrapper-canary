@@ -90,7 +90,7 @@ function S(e) {
                 return;
             }
             (0, r.openModalLazy)(async () => {
-                let { default: a } = await Promise.all([l.e('70687'), l.e('48017'), l.e('93865')]).then(l.bind(l, 850085));
+                let { default: a } = await Promise.all([l.e('70687'), l.e('48017'), l.e('47140')]).then(l.bind(l, 850085));
                 return (l) =>
                     (0, s.jsx)(a, {
                         imgURI: e,

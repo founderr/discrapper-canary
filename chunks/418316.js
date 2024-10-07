@@ -14,18 +14,18 @@ var a = n(430824),
     d = n(981631),
     u = n(689938);
 function _(e) {
-    var t, n, _, E, I, m, T, N, h, C, p, f, g, A, S;
+    var t, n, _, E, I, m, T, N, h, C, p, f, A, g, S;
     let M = null !== (_ = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== _ ? _ : d.lds,
-        x = o.ZP.getName(l.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
+        O = o.ZP.getName(l.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
     switch (e.type) {
         case c.O7.INCOMING_FRIEND_REQUESTS:
-            return u.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST.format({ username: '**'.concat(x, '**') });
+            return u.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST.format({ username: '**'.concat(O, '**') });
         case c.O7.FRIEND_REQUESTS_GROUPED:
-            let O = o.ZP.getName(l.default.getUser(null === (I = e.other_users) || void 0 === I ? void 0 : null === (E = I[0]) || void 0 === E ? void 0 : E.id)),
+            let x = o.ZP.getName(l.default.getUser(null === (I = e.other_users) || void 0 === I ? void 0 : null === (E = I[0]) || void 0 === E ? void 0 : E.id)),
                 R = o.ZP.getName(l.default.getUser(null === (T = e.other_users) || void 0 === T ? void 0 : null === (m = T[1]) || void 0 === m ? void 0 : m.id)),
                 v = Math.max((null !== (h = null === (N = e.other_users) || void 0 === N ? void 0 : N.length) && void 0 !== h ? h : 0) - 2, 0);
             return u.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUESTS.format({
-                user: O,
+                user: x,
                 user2: R,
                 count: v
             });
@@ -39,18 +39,18 @@ function _(e) {
             let P = e.guild_scheduled_event_id,
                 D = null != P ? i.ZP.getGuildScheduledEvent(P) : null,
                 b = null == D ? void 0 : D.name,
-                j = null === (g = a.Z.getGuild(null == D ? void 0 : D.guild_id)) || void 0 === g ? void 0 : g.name,
+                j = null === (A = a.Z.getGuild(null == D ? void 0 : D.guild_id)) || void 0 === A ? void 0 : A.name,
                 U = (0, i.Z2)(null != D ? D : void 0);
             return (0, r.Ew)(j) || (0, r.Ew)(b) || !U
-                ? null !== (A = e.body) && void 0 !== A
-                    ? A
+                ? null !== (g = e.body) && void 0 !== g
+                    ? g
                     : ''
                 : u.Z.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
                       event_name: b,
                       guild_name: j
                   });
         case c.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
-            return u.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST_ACCEPTED.format({ username: '**'.concat(x, '**') });
+            return u.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST_ACCEPTED.format({ username: '**'.concat(O, '**') });
     }
     return null !== (S = e.body) && void 0 !== S ? S : '';
 }

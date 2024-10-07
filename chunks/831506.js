@@ -57,14 +57,14 @@ function f(e, t) {
         n
     );
 }
-function g() {
+function A() {
     let e = u.default.getId(),
         t = E.Z.getActivities();
     return C(I.ME, e, t);
 }
-class A extends (i = c.ZP.Store) {
+class g extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([E.Z], g), this.waitFor(E.Z, _.Z);
+        this.syncWith([E.Z], A), this.waitFor(E.Z, _.Z);
     }
     getParty(e) {
         return null != e && null != T[e] ? T[e] : null;
@@ -77,7 +77,7 @@ class A extends (i = c.ZP.Store) {
     }
 }
 (l = 'GamePartyStore'),
-    (s = 'displayName') in (a = A)
+    (s = 'displayName') in (a = g)
         ? Object.defineProperty(a, s, {
               value: l,
               enumerable: !0,
@@ -85,7 +85,7 @@ class A extends (i = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = l),
-    (t.Z = new A(d.Z, {
+    (t.Z = new g(d.Z, {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t, presences: n } = e,
                 i = !1;

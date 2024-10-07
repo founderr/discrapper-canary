@@ -26,12 +26,12 @@ var i = n(512722),
     C = n(314897),
     p = n(592125),
     f = n(703558),
-    g = n(607744),
-    A = n(375954),
+    A = n(607744),
+    g = n(375954),
     S = n(117530),
     M = n(553803),
-    x = n(316758),
-    O = n(467531),
+    O = n(316758),
+    x = n(467531),
     R = n(798628),
     v = n(918088),
     L = n(981631),
@@ -75,7 +75,7 @@ function b(e) {
         });
         return;
     }
-    let s = A.Z.getMessage(t, n);
+    let s = g.Z.getMessage(t, n);
     if (null == s || null == s.poll || 0 === s.poll.answers.length) return;
     let l = null != i ? i : String(s.poll.answers[0].answer_id);
     M.A({
@@ -98,7 +98,7 @@ function j(e) {
 }
 function U(e) {
     let { channelId: t, messageId: n } = e,
-        i = A.Z.getMessage(t, n);
+        i = g.Z.getMessage(t, n);
     return null == i ? [] : i.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
 }
 async function y(e) {
@@ -151,7 +151,7 @@ async function B(e) {
         });
         return;
     }
-    if (!g.Z.canChatInGuild(i.guild_id)) {
+    if (!A.Z.canChatInGuild(i.guild_id)) {
         d.Z.show({
             title: Z.Z.Messages.POLL_GUILD_MEMBER_UNVERIFIED_TITLE,
             body: Z.Z.Messages.POLL_GUILD_MEMBER_UNVERIFIED_SUBTITLE
@@ -183,7 +183,7 @@ async function B(e) {
                 messageId: n,
                 answerIds: e
             }),
-            await O.B({
+            await x.B({
                 channelId: t,
                 messageId: n,
                 answerIds: e
@@ -268,7 +268,7 @@ async function G(e) {
                 (0, R.eu)(t, n, (e) => {
                     var i, a;
                     let s = null == e || !e.showResults,
-                        l = A.Z.getMessage(t, n),
+                        l = g.Z.getMessage(t, n),
                         r =
                             null != l
                                 ? l.reactions.reduce((e, t) => {
@@ -338,7 +338,7 @@ async function F(e) {
         if (null != c && c.length > 0) {
             var I;
             let e = null !== (I = C.default.getToken()) && void 0 !== I ? I : '';
-            await x.sk({
+            await O.sk({
                 channel: t,
                 items: c,
                 token: e,
@@ -363,7 +363,7 @@ async function w(e) {
         title: Z.Z.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
         body: Z.Z.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
     })) &&
-        (await O.W({
+        (await x.W({
             channelId: t,
             messageId: n
         }));
@@ -378,7 +378,7 @@ t.Z = {
                 message: o
             } = (function (e) {
                 let { channelId: t, messageId: n } = e,
-                    i = A.Z.getMessage(t, n);
+                    i = g.Z.getMessage(t, n);
                 if (null != i)
                     return {
                         message: i,

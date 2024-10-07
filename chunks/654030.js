@@ -18,12 +18,12 @@ var i,
     C = n(768419),
     p = n(456432),
     f = n(347475),
-    g = n(789407),
-    A = n(598077),
+    A = n(789407),
+    g = n(598077),
     S = n(757266),
     M = n(831506),
-    x = n(271383),
-    O = n(283595),
+    O = n(271383),
+    x = n(283595),
     R = n(293273),
     v = n(594174),
     L = n(181106),
@@ -55,7 +55,7 @@ class G extends (i = s.PureComponent) {
             let t = (0, _.Z)(e, n.id);
             if (null != t) return t;
         }
-        return null == n || n instanceof g.ZP
+        return null == n || n instanceof A.ZP
             ? null
             : P.ZP.getApplicationIconURL({
                   id: n.id,
@@ -212,7 +212,7 @@ class G extends (i = s.PureComponent) {
     }
 }
 B(G, 'defaultProps', { isPreview: !1 }),
-    (t.Z = l.ZP.connectStores([C.Z, M.Z, R.Z, O.Z, N.Z, Z.Z, S.Z, L.Z, v.default, x.ZP], (e) => {
+    (t.Z = l.ZP.connectStores([C.Z, M.Z, R.Z, x.Z, N.Z, Z.Z, S.Z, L.Z, v.default, O.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: i, partyId: a, userId: s, guildId: l } = e,
             { id: r } = null != i ? i : {},
             o = null != t && null != t.party && t.party.id === a ? M.Z.getParty(t.party.id) : null,
@@ -220,12 +220,12 @@ B(G, 'defaultProps', { isPreview: !1 }),
             d = !1;
         null != r && (d = L.Z.getState(r, U.mFx.JOIN) === U.OcF.LOADING);
         let u = Array.from(null != o ? o : []).map((e) => {
-                let t = null != l ? x.ZP.getMember(l, e) : null,
+                let t = null != l ? O.ZP.getMember(l, e) : null,
                     n = null != t ? t.nick : null,
                     i = v.default.getUser(e),
                     a = null == i;
                 return (
-                    null == i && (i = new A.Z({ discriminator: '0005' })),
+                    null == i && (i = new g.Z({ discriminator: '0005' })),
                     {
                         user: i,
                         unknownUser: a,
@@ -246,7 +246,7 @@ B(G, 'defaultProps', { isPreview: !1 }),
             isLaunchable:
                 null != r &&
                 (0, b.t)({
-                    LibraryApplicationStore: O.Z,
+                    LibraryApplicationStore: x.Z,
                     LaunchableGameStore: N.Z,
                     DispatchApplicationStore: Z.Z,
                     ConnectedAppsStore: S.Z,

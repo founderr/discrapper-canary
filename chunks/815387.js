@@ -18,12 +18,12 @@ var i = n(735250),
     C = n(182180),
     p = n(924301),
     f = n(225890),
-    g = n(434404),
-    A = n(507435),
+    A = n(434404),
+    g = n(507435),
     S = n(504733),
     M = n(563959),
-    x = n(703656),
-    O = n(471253),
+    O = n(703656),
+    x = n(471253),
     R = n(565799),
     v = n(590415),
     L = n(911560),
@@ -72,12 +72,12 @@ var i = n(735250),
     eC = n(587737),
     ep = n(482239),
     ef = n(328749),
-    eg = n(4305),
-    eA = n(910548),
+    eA = n(4305),
+    eg = n(910548),
     eS = n(981631),
     eM = n(70722),
-    ex = n(689938),
-    eO = n(437814);
+    eO = n(689938),
+    ex = n(437814);
 function eR(e) {
     let { message: t, channel: n, compact: l } = e,
         { author: r } = t,
@@ -101,7 +101,7 @@ function eR(e) {
             messageId: t.id,
             stopPropagation: !0
         });
-    return (0, i.jsx)(eA.ZP, {
+    return (0, i.jsx)(eg.ZP, {
         message: t,
         compact: l,
         guild: d,
@@ -269,7 +269,7 @@ let eL = Object.freeze({
             o = a.useCallback(() => {
                 if (k.Z.getChannelId() !== r) {
                     let e = j.Z.getChannel(r);
-                    null != e && (0, x.XU)(e.guild_id, e.id);
+                    null != e && (0, O.XU)(e.guild_id, e.id);
                 }
                 setTimeout(() => w.S.dispatch(eS.CkL.TOGGLE_CHANNEL_PINS), 0);
             }, [r]),
@@ -298,7 +298,7 @@ let eL = Object.freeze({
             });
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(eg.Z, {
+                (0, i.jsx)(eA.Z, {
                     message: t,
                     guildId: a.guild_id,
                     compact: n,
@@ -377,7 +377,7 @@ let eL = Object.freeze({
             message: t,
             compact: n,
             onClick: () => {
-                null != r && g.Z.open(r, eS.pNK.DISCOVERY);
+                null != r && A.Z.open(r, eS.pNK.DISCOVERY);
             }
         });
     },
@@ -579,12 +579,12 @@ let eL = Object.freeze({
                 }),
                 I
                     ? (0, i.jsxs)(l.Button, {
-                          wrapperClassName: eO.inviteToSpeakButtonWrapper,
-                          innerClassName: eO.inviteToSpeakButtonInner,
+                          wrapperClassName: ex.inviteToSpeakButtonWrapper,
+                          innerClassName: ex.inviteToSpeakButtonInner,
                           look: l.Button.Looks.FILLED,
                           color: l.Button.Colors.PRIMARY,
                           onClick: () => {
-                              (0, O.DT)(r, a.author.id, !1), o.Z.deleteMessage(r.id, a.id, !0);
+                              (0, x.DT)(r, a.author.id, !1), o.Z.deleteMessage(r.id, a.id, !0);
                           },
                           children: [
                               (0, i.jsx)(l.MicrophoneArrowRightIcon, {
@@ -593,7 +593,7 @@ let eL = Object.freeze({
                                   height: 20,
                                   width: 20
                               }),
-                              ex.Z.Messages.REQUEST_TO_SPEAK_ACCEPT
+                              eO.Z.Messages.REQUEST_TO_SPEAK_ACCEPT
                           ]
                       })
                     : null
@@ -636,7 +636,7 @@ let eL = Object.freeze({
         });
     },
     [eS.uaV.VOICE_HANGOUT_INVITE]: void 0,
-    [eS.uaV.POLL_RESULT]: A.Z,
+    [eS.uaV.POLL_RESULT]: g.Z,
     [eS.uaV.CHANGELOG]: void 0,
     [eS.uaV.NITRO_NOTIFICATION]: function (e) {
         let { message: t, channel: n } = e;

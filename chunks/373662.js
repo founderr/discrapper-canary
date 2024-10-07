@@ -19,8 +19,8 @@ var i = n(735250),
     d = n(689938),
     u = n(189265);
 function _(e) {
-    let { label: t, ariaLabel: n, tooltipText: a, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: N, disabled: h, dangerous: C, separator: p, sparkle: f, showNewBadge: g, buttonClassName: A, children: S, ...M } = e,
-        { canShowReactionsOnMessageHover: x } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
+    let { label: t, ariaLabel: n, tooltipText: a, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: N, disabled: h, dangerous: C, separator: p, sparkle: f, showNewBadge: A, buttonClassName: g, children: S, ...M } = e,
+        { canShowReactionsOnMessageHover: O } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (0, i.jsx)(l.Tooltip, {
         text: null != a ? a : t,
         color: null != _ ? _ : l.TooltipColors.PRIMARY,
@@ -34,7 +34,7 @@ function _(e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsxs)(o.zx, {
-                        className: s()(A, { [u.hoverBarButton]: x }),
+                        className: s()(g, { [u.hoverBarButton]: O }),
                         onMouseEnter: a,
                         onMouseLeave: c,
                         onClick: (e) => {
@@ -59,7 +59,7 @@ function _(e) {
                                   })
                                 : null,
                             f && (0, i.jsx)(l.LottieSparkle, {}),
-                            g &&
+                            A &&
                                 (0, i.jsx)(l.TextBadge, {
                                     text: d.Z.Messages.NEW,
                                     color: r.Z.BG_BRAND,

@@ -22,9 +22,9 @@ var a = n(442837),
     h = n(981631);
 function C(e) {
     let { channel: t, onClick: n, beforeTransition: C, className: p, openChatWithoutConnecting: f } = e,
-        g = (0, a.e7)([m.default, I.Z], () => (null == t ? '' : (0, o.F6)(t, m.default, I.Z)), [t]);
+        A = (0, a.e7)([m.default, I.Z], () => (null == t ? '' : (0, o.F6)(t, m.default, I.Z)), [t]);
     return (0, i.jsx)(s.Tooltip, {
-        text: g,
+        text: A,
         position: 'top',
         children: (e) => {
             let { onMouseEnter: a, onMouseLeave: o } = e;
@@ -60,7 +60,7 @@ function C(e) {
                 onMouseEnter: a,
                 onMouseLeave: o,
                 iconType: (0, T.wl)(t),
-                children: g
+                children: A
             });
         }
     });

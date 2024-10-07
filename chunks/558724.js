@@ -43,8 +43,8 @@ let N = {
     p = null,
     f = 86400000;
 ((s = i || (i = {})).IS_OWNER = 'is_owner'), (s.IS_ADMIN = 'is_admin'), (s.IS_COMMUNITY = 'is_community'), (s.GUILD_SIZE = 'guild_size'), (s.IS_HUB = 'is_hub'), (s.IS_VIEWING = 'is_viewing'), (s.GUILD_PERMISSIONS = 'guild_permissions'), (s.GUILD_SIZE_ALL = 'guild_size_all');
-let g = new Set(Object.values(i));
-function A(e) {
+let A = new Set(Object.values(i));
+function g(e) {
     return (
         (function (e) {
             return !0;
@@ -52,7 +52,7 @@ function A(e) {
         (function (e) {
             let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: i = [] } = e;
             if (0 === t.length) return !0;
-            for (let e of t) if (!g.has(e)) return !1;
+            for (let e of t) if (!A.has(e)) return !1;
             let a = t.includes('guild_size_all'),
                 s = !0;
             for (let r of Object.values(u.Z.getGuilds())) {
@@ -95,15 +95,15 @@ function A(e) {
 function S(e) {
     let { survey: t } = e;
     if (((h.lastFetched = Date.now()), null == h.hiddenSurveys && (h.hiddenSurveys = {}), null != t && null == h.hiddenSurveys[t.key])) {
-        if (!A(t)) return;
+        if (!g(t)) return;
         p = t;
     }
 }
 function M() {
-    if (null != p && (A(p) || ((p = null), 0))) return !1;
+    if (null != p && (g(p) || ((p = null), 0))) return !1;
     !(function () {
         let e = Object.values((C = null != C ? C : {}))[0];
-        if (null != e && A(e)) {
+        if (null != e && g(e)) {
             S({
                 type: 'SURVEY_FETCHED',
                 survey: e
@@ -114,7 +114,7 @@ function M() {
         p = null;
     })();
 }
-class x extends (a = r.ZP.PersistedStore) {
+class O extends (a = r.ZP.PersistedStore) {
     initialize(e) {
         (h = null != e ? e : N), this.syncWith([E.Z], M);
     }
@@ -131,9 +131,9 @@ class x extends (a = r.ZP.PersistedStore) {
         return h.lastSeen;
     }
 }
-T(x, 'displayName', 'SurveyStore'),
-    T(x, 'persistKey', 'SurveyStore'),
-    T(x, 'migrations', [
+T(O, 'displayName', 'SurveyStore'),
+    T(O, 'persistKey', 'SurveyStore'),
+    T(O, 'migrations', [
         (e) => {
             let t = { ...e };
             return delete t.validSurveys, delete t.currentSurvey, delete t.iosIsPushNotificationClicked, delete t.iosIsInviteShown, delete t.iosFirstRunDate, t;
@@ -153,7 +153,7 @@ T(x, 'displayName', 'SurveyStore'),
             };
         }
     ]),
-    (t.Z = new x(o.Z, {
+    (t.Z = new O(o.Z, {
         CONNECTION_OPEN: function () {
             var e;
             if (!(null != h.lastFetched && Date.now() - (null !== (e = h.lastFetched) && void 0 !== e ? e : 0) < f) || null != h.surveyOverride) (0, c.wk)(h.surveyOverride, !0);
