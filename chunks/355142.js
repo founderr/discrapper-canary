@@ -1,19 +1,26 @@
-var s, r, i, a;
+var s, r, i, a, o, l;
 n.d(t, {
-    E: function () {
+    EW: function () {
         return r;
     }
 }),
-    ((i = s || (s = {})).VIEWED = 'viewed'),
-    (i.SUBMITTED = 'submitted'),
-    (i.RESEND_CODE = 'resend_code'),
-    (i.INPUT_ERROR = 'input_error'),
-    (i.RESPONSE_ERROR = 'response_error'),
-    (i.SUCCESS = 'success'),
-    ((a = r || (r = {})).IDENTITY = 'identity'),
-    (a.DISPLAY_NAME = 'display_name'),
-    (a.ACCOUNT_INFORMATION = 'account_information'),
-    (a.FULL = 'full'),
-    (a.AGE_GATE = 'age_gate'),
-    (a.INVITE = 'invite'),
-    (a.SMS_VERIFY = 'sms_verify');
+    ((a = s || (s = {})).VIEWED = 'viewed'),
+    (a.SUBMITTED = 'submitted'),
+    (a.RESEND_CODE = 'resend_code'),
+    (a.INPUT_ERROR = 'input_error'),
+    (a.RESPONSE_ERROR = 'response_error'),
+    (a.SUCCESS = 'success'),
+    ((o = r || (r = {})).IDENTITY = 'identity'),
+    (o.DISPLAY_NAME = 'display_name'),
+    (o.ACCOUNT_INFORMATION = 'account_information'),
+    (o.FULL = 'full'),
+    (o.AGE_GATE = 'age_gate'),
+    (o.INVITE = 'invite'),
+    (o.SMS_VERIFY = 'sms_verify'),
+    ((l = i || (i = {})).ACCOUNT_IDENTITY = 'Account Identity'),
+    (l.ACCOUNT_DISPLAY_NAME = 'Account Display Name'),
+    (l.ACCOUNT_INFORMATION = 'Account Information'),
+    (l.AGE_GATE = 'Age Gate'),
+    (l.AGE_GATE_UNDERAGE = 'Age Gate Underage'),
+    (l.PHONE_VERIFICATION = 'Phone Verification'),
+    (l.REGISTER = 'Register');
