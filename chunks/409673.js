@@ -66,12 +66,12 @@ function L(e) {
     });
 }
 t.ZP = i.forwardRef(function (e, t) {
-    var n, a, D, y, b, M, P, U, w, x;
+    var n, a, y, D, b, M, P, U, w, x;
     let { sound: G, channel: k, className: B, focused: F, forceSecondaryActions: V = !1, interactive: H = !0, enableSecondaryActions: Z = !1, suppressPlaySound: Y, onMouseEnter: j, onSelectItem: W, analyticsLocations: K, buttonOverlay: z = S.Pb.PLAY, showLockForDisabledSound: q = !0, inNitroLockedSection: Q = !1, refreshEnabled: X = !1, ...$ } = e,
         { soundId: J, name: ee, emojiId: et, emojiName: en } = G,
         er = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
         ei = (0, N.z)(G, null == k ? void 0 : k.guild_id),
-        { playSoundboardSound: ea, previewSound: es, isPlayingSound: eo, isPreviewingSound: el } = (0, A.Z)(G, null !== (y = null == k ? void 0 : k.id) && void 0 !== y ? y : null),
+        { playSoundboardSound: ea, previewSound: es, isPlayingSound: eo, isPreviewingSound: el } = (0, A.Z)(G, null !== (D = null == k ? void 0 : k.id) && void 0 !== D ? D : null),
         { createMultipleConfettiAt: eu } = i.useContext(f.h),
         ec = i.useRef(null);
     let ed =
@@ -102,13 +102,13 @@ t.ZP = i.forwardRef(function (e, t) {
         eA = i.useRef(null),
         eN = (null !== (b = null === (n = eA.current) || void 0 === n ? void 0 : n.scrollHeight) && void 0 !== b ? b : 0) > (null !== (M = null === (a = eA.current) || void 0 === a ? void 0 : a.offsetHeight) && void 0 !== M ? M : 0),
         eO = null !== (P = h.Wq.useStore().bottomPosition) && void 0 !== P ? P : 0,
-        eR = null !== (U = null === (D = ec.current) || void 0 === D ? void 0 : D.getBoundingClientRect().bottom) && void 0 !== U ? U : 0,
+        eR = null !== (U = null === (y = ec.current) || void 0 === y ? void 0 : y.getBoundingClientRect().bottom) && void 0 !== U ? U : 0,
         ev = eS && q,
         { enableInlineUpsell: eC } = p.Qs.useExperiment({ location: 'Soundboard Sound Button' }, { autoTrackExposure: ev });
     function eL(e) {
         e.stopPropagation(), e.currentTarget.blur(), ep ? (0, m.hs)(J) : (0, m.TB)(J);
     }
-    function eD() {
+    function ey() {
         return (0, r.jsx)(C, {
             disabled: !H && !V,
             onClick: eL,
@@ -130,7 +130,7 @@ t.ZP = i.forwardRef(function (e, t) {
                   })
         });
     }
-    function ey() {
+    function eD() {
         if ((eh && !e_ && ((eE.current = Math.min(eE.current + 0.01, 0.1)), Math.random() < eE.current && eu(ed.x, ed.y, void 0, void 0, { sprite: O.vv })), null != W)) {
             W();
             return;
@@ -167,7 +167,7 @@ t.ZP = i.forwardRef(function (e, t) {
                               className: v.buttonOverlay,
                               children: (0, r.jsxs)('div', {
                                   className: X ? v.buttonOverlayActionsRefresh : v.buttonOverlayActions,
-                                  children: [eg && eb, eg && eD()]
+                                  children: [eg && eb, eg && ey()]
                               })
                           })
                       ]
@@ -178,7 +178,7 @@ t.ZP = i.forwardRef(function (e, t) {
                           !X && (0, r.jsx)('div', { className: s()({ [v.buttonOverlayBackground]: !Y }) }),
                           (0, r.jsxs)('div', {
                               className: X ? v.buttonOverlayActionsRefresh : v.buttonOverlayActions,
-                              children: [eg && eb, eM(), eg && eD()]
+                              children: [eg && eb, eM(), eg && ey()]
                           })
                       ]
                   });
@@ -226,7 +226,7 @@ t.ZP = i.forwardRef(function (e, t) {
                                 [v.focused]: H && F
                             }),
                             ...e,
-                            onClick: ey,
+                            onClick: eD,
                             onContextMenu: Z && !eS ? ei : void 0,
                             onMouseOver: () => {
                                 var t;
@@ -297,7 +297,7 @@ t.ZP = i.forwardRef(function (e, t) {
                                                                           })
                                                                       ]
                                                                   }),
-                                                            eg && eD()
+                                                            eg && ey()
                                                         ]
                                                     })
                                                 ]

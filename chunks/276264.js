@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(51144),
     C = n(788307),
     L = n(981631),
-    D = n(674563),
-    y = n(524484),
+    y = n(674563),
+    D = n(524484),
     b = n(689938),
     M = n(226686);
 let P = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
@@ -95,7 +95,7 @@ t.Z = function (e) {
                 hasQuest: null != eN && (0, T.dl)(eN)
             });
         },
-        eD = () =>
+        ey = () =>
             null != R && R && null == U
                 ? (0, r.jsx)(u.Tooltip, {
                       text: null != P ? P : b.Z.Messages.GUILD_OWNER,
@@ -108,7 +108,7 @@ t.Z = function (e) {
                           })
                   })
                 : null,
-        ey = () =>
+        eD = () =>
             null == Y
                 ? null
                 : (0, r.jsx)(u.Tooltip, {
@@ -124,7 +124,7 @@ t.Z = function (e) {
                           })
                   }),
         eb = () => {
-            let e = (null == G ? void 0 : G.isClyde()) ? D.Hb.AI : D.Hb.BOT;
+            let e = (null == G ? void 0 : G.isClyde()) ? y.Hb.AI : y.Hb.BOT;
             return null != G && G.bot
                 ? (0, r.jsx)(d.Z, {
                       className: M.botTag,
@@ -135,7 +135,7 @@ t.Z = function (e) {
         },
         eM = () =>
             (0, r.jsxs)(r.Fragment, {
-                children: [eb(), eD(), ey()]
+                children: [eb(), ey(), eD()]
             }),
         eP = (e, t) => {
             let n = H ? u.AnimatedAvatar : u.Avatar,
@@ -159,7 +159,7 @@ t.Z = function (e) {
                         (0, r.jsx)(I.Z, {
                             confettiSpawnRef: eE,
                             shouldFire: w && null != k && e.id !== k.id,
-                            confettiLocation: y.Hn.MEMBER_USER
+                            confettiLocation: D.Hn.MEMBER_USER
                         })
                     ]
                 })

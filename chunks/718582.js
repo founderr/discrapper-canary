@@ -73,8 +73,8 @@ var r,
     v = n(501655),
     C = n(344185),
     L = n(814443),
-    D = n(199902),
-    y = n(592125),
+    y = n(199902),
+    D = n(592125),
     b = n(480294),
     M = n(984933),
     P = n(271383),
@@ -182,7 +182,7 @@ function ei(e) {
             [t]
         ),
         E = (0, l.e7)(
-            [S.ZP, y.Z],
+            [S.ZP, D.Z],
             () =>
                 S.ZP.getGuildScheduledEventsForGuild(t)
                     .filter((e) => (0, S.xt)(e))
@@ -191,7 +191,7 @@ function ei(e) {
                         return {
                             category: j.L.EVENT,
                             event: e,
-                            isStage: !!(null === (t = y.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.isGuildStageVoice())
+                            isStage: !!(null === (t = D.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.isGuildStageVoice())
                         };
                     }),
             [t],
@@ -223,11 +223,11 @@ function ei(e) {
                   });
         }, [I, f, c, p, e.afkChannelId]),
         T = (0, l.e7)(
-            [d.ZP, k.Z, D.Z, w.Z, y.Z],
+            [d.ZP, k.Z, y.Z, w.Z, D.Z],
             () =>
                 m.map((e) => {
                     var t;
-                    let n = D.Z.getAllApplicationStreamsForChannel(e).map((e) => e.ownerId),
+                    let n = y.Z.getAllApplicationStreamsForChannel(e).map((e) => e.ownerId),
                         r = I[e].filter(V.lm),
                         i = d.ZP.getEmbeddedActivitiesForChannel(e),
                         a = j.L.HANGOUT,
@@ -266,7 +266,7 @@ function ei(e) {
                         streamUserIds: n,
                         channelHasVideo: l,
                         videoUserIds: c,
-                        isStage: !!(null === (t = y.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildStageVoice())
+                        isStage: !!(null === (t = D.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildStageVoice())
                     };
                 }),
             [I, m],
@@ -503,7 +503,7 @@ function ec(e, t, n, r) {
     var i, a;
     let s = {},
         o = null !== (a = (0, Y.i)(e)) && void 0 !== a ? a : '';
-    (s.source = r), (s.card_type = e.category), (s.card_position = n), (s.channel_id = o), (s.channel_type = null === (i = y.Z.getChannel(o)) || void 0 === i ? void 0 : i.type);
+    (s.source = r), (s.card_type = e.category), (s.card_position = n), (s.channel_id = o), (s.channel_type = null === (i = D.Z.getChannel(o)) || void 0 === i ? void 0 : i.type);
     let l = en(o, t);
     (s.card_affinity_users_count = Math.min(l.length, 6)),
         (s.card_total_users_count = l.length),
@@ -525,14 +525,14 @@ function ed(e, t, n) {
         case j.L.GAMING:
             return () => {
                 let { channelId: r } = e,
-                    i = y.Z.getChannel(r),
+                    i = D.Z.getChannel(r),
                     a = U.Z.can(W.Plq.CONNECT, i);
                 ec(e, t, n, 'card'), a ? (0, A.XU)(t, r) : ((0, A.XU)(t), c.Z.channelListScrollTo(t, r));
             };
         case j.L.EMBEDDED_ACTIVITY:
             return () => {
                 let { channelId: r } = e.embeddedActivities[0],
-                    i = y.Z.getChannel(r),
+                    i = D.Z.getChannel(r),
                     a = U.Z.can(W.Plq.CONNECT, i);
                 ec(e, t, n, 'card'), a ? (0, A.XU)(t, r) : ((0, A.XU)(t), c.Z.channelListScrollTo(t, r));
             };
@@ -564,20 +564,20 @@ function ef(e, t) {
         case j.L.GAMING:
             return () => {
                 let { channelId: n } = e,
-                    r = y.Z.getChannel(n);
+                    r = D.Z.getChannel(n);
                 if (null != r && !!U.Z.can(W.Plq.CONNECT, r)) r.isGuildStageVoice() ? e_(t, n) : r.isGuildVoice() && eE(t, r);
             };
         case j.L.EMBEDDED_ACTIVITY:
             return () => {
                 let { channelId: n } = e.embeddedActivities[0],
-                    r = y.Z.getChannel(n);
+                    r = D.Z.getChannel(n);
                 if (null != r && r.type === W.d4z.GUILD_VOICE && !!U.Z.can(W.Plq.CONNECT, r)) eE(t, r);
             };
         case j.L.EVENT:
             return () => {
                 let { event: t } = e,
                     { channel_id: n, guild_id: r, entity_type: i } = t,
-                    a = y.Z.getChannel(n);
+                    a = D.Z.getChannel(n);
                 if (null == n || null == a || !U.Z.can(W.Plq.CONNECT, a)) {
                     (0, T.bO)({ eventId: t.id });
                     return;
@@ -592,7 +592,7 @@ function eh(e) {
     let t, n;
     let r = (0, g.cS)(e),
         i = null == r ? void 0 : r.replace(/[<#>]/g, ''),
-        a = null != i ? y.Z.getChannel(i) : y.Z.getChannel(e.channel_id),
+        a = null != i ? D.Z.getChannel(i) : D.Z.getChannel(e.channel_id),
         s = U.Z.can(W.Plq.VIEW_CHANNEL, a);
     if (null != a && s) (t = (0, I.Th)(a.type)), (n = a.name);
     else {

@@ -83,12 +83,12 @@ let C = (e) => {
             m = i.useRef(null),
             [A, N] = i.useState(!0),
             [O, L] = i.useState(!1),
-            D = i.useRef(!1);
-        D.current = t && c;
-        let y = null == o ? (0, T.Q6)(s) : o;
-        return (l()(null != y, 'Unable to determine sticker asset URL. Sticker ID: '.concat(s.id)),
+            y = i.useRef(!1);
+        y.current = t && c;
+        let D = null == o ? (0, T.Q6)(s) : o;
+        return (l()(null != D, 'Unable to determine sticker asset URL. Sticker ID: '.concat(s.id)),
         i.useEffect(() => {
-            if (null == I.current || null == y) return;
+            if (null == I.current || null == D) return;
             let e = Math.min(2, (0, f.x_)());
             (I.current.width = a * e), (I.current.height = a * e);
             let t = !1;
@@ -99,7 +99,7 @@ let C = (e) => {
                         ((m.current = new e({
                             canvas: I.current,
                             animationId: s.id,
-                            assetUrl: y,
+                            assetUrl: D,
                             assetData: u,
                             onInitialDraw: () => {
                                 !t && N(!1);
@@ -108,20 +108,20 @@ let C = (e) => {
                                 !t && (N(!1), L(!0), null == p || p());
                             }
                         })),
-                        D.current && m.current.setState(!0));
+                        y.current && m.current.setState(!0));
                 })(),
                 () => {
                     var e;
                     null === (e = m.current) || void 0 === e || e.drop(), (m.current = null), (t = !0);
                 }
             );
-        }, [y, a, s.id, u, p]),
+        }, [D, a, s.id, u, p]),
         i.useEffect(() => {
             var e;
             let n;
             !t && (n = 0), null === (e = m.current) || void 0 === e || e.setState(t && c, n);
         }, [s, t, c]),
-        null == y)
+        null == D)
             ? null
             : (0, r.jsx)('div', {
                   role: 'img',
@@ -144,7 +144,7 @@ let C = (e) => {
                   })
               });
     },
-    D = (e) => {
+    y = (e) => {
         let { shouldAnimate: t, sticker: n, isFocused: a, size: o, className: l, maskAsset: u, positionRef: c, withLoadingIndicator: _, fileUri: E } = e,
             [f, h] = i.useState(!1),
             [p, I] = i.useState(!0),
@@ -158,10 +158,10 @@ let C = (e) => {
                           isPreview: !t || !f || !a,
                           size: o
                       }),
-            D = i.useCallback(() => {
+            y = i.useCallback(() => {
                 I(!1);
             }, []),
-            y = i.useCallback(() => {
+            D = i.useCallback(() => {
                 S(!0);
             }, []);
         return (i.useEffect(() => {
@@ -195,8 +195,8 @@ let C = (e) => {
                                   alt: v(n),
                                   src: L,
                                   draggable: !1,
-                                  onError: y,
-                                  onLoad: D,
+                                  onError: D,
+                                  onLoad: y,
                                   onContextMenu: A,
                                   ref: O
                               }),
@@ -206,7 +206,7 @@ let C = (e) => {
                   })
               });
     },
-    y = (e) => {
+    D = (e) => {
         let { disableAnimation: t, enlargeScaleFactor: n, enlargeWithName: a, isInteracting: s, positionRef: o, size: l, sticker: d } = e,
             f = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
             p = i.useRef(null),
@@ -285,7 +285,7 @@ let C = (e) => {
             S = (0, I.t$)(t) && !n,
             g = i.useRef(null);
         if (null == c) return null;
-        let A = c.format_type === m.u3.LOTTIE ? L : D;
+        let A = c.format_type === m.u3.LOTTIE ? L : y;
         return (0, r.jsxs)(
             i.Fragment,
             {
@@ -304,7 +304,7 @@ let C = (e) => {
                         onError: h
                     }),
                     a &&
-                        (0, r.jsx)(y, {
+                        (0, r.jsx)(D, {
                             disableAnimation: n,
                             enlargeScaleFactor: o,
                             enlargeWithName: s,

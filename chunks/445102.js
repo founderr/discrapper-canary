@@ -1,27 +1,27 @@
-n.d(t, {
+o.d(t, {
     Z: function () {
-        return i;
+        return l;
     }
 });
-var o = n(131951),
-    a = n(626135),
-    s = n(981631);
-function i(e, t, n, i, l) {
-    let r = o.Z.getSettings(),
-        u = o.Z.getInputDeviceId(),
-        c = o.Z.getInputDevices()[u],
-        d = o.Z.getOutputDeviceId(),
-        _ = o.Z.getOutputDevices()[d],
-        m = o.Z.getVideoDeviceId(),
-        b = o.Z.getVideoDevices()[m],
-        E = o.Z.getNoiseCancellation(),
-        h = o.Z.getMediaEngine().getAudioSubsystem(),
-        f = o.Z.getMediaEngine().getAudioLayer();
+var n = o(131951),
+    a = o(626135),
+    s = o(981631);
+function l(e, t, o, l, i) {
+    let r = n.Z.getSettings(),
+        u = n.Z.getInputDeviceId(),
+        c = n.Z.getInputDevices()[u],
+        d = n.Z.getOutputDeviceId(),
+        _ = n.Z.getOutputDevices()[d],
+        b = n.Z.getVideoDeviceId(),
+        m = n.Z.getVideoDevices()[b],
+        E = n.Z.getNoiseCancellation(),
+        h = n.Z.getMediaEngine().getAudioSubsystem(),
+        O = n.Z.getMediaEngine().getAudioLayer();
     a.default.track(s.rMx.CALL_REPORT_PROBLEM, {
         rating: null != e ? e : 'no response',
         reason_code: t,
-        reason_description: n,
-        feedback: i,
+        reason_description: o,
+        feedback: l,
         audio_input_mode: r.mode,
         automatic_audio_input_sensitivity_enabled: r.modeOptions.autoThreshold,
         audio_input_sensitivity: r.modeOptions.threshold,
@@ -32,10 +32,10 @@ function i(e, t, n, i, l) {
         noise_cancellation_enabled: E,
         input_device_name: null == c ? void 0 : c.name,
         output_device_name: null == _ ? void 0 : _.name,
-        video_device_name: null == b ? void 0 : b.name,
+        video_device_name: null == m ? void 0 : m.name,
         audio_subsystem: h,
-        audio_layer: f,
+        audio_layer: O,
         automatic_audio_subsystem: r.automaticAudioSubsystem,
-        ...l
+        ...i
     });
 }

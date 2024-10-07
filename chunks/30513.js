@@ -12,10 +12,10 @@ n.d(t, {
         return R;
     },
     hC: function () {
-        return y;
+        return D;
     },
     o9: function () {
-        return D;
+        return y;
     },
     zC: function () {
         return C;
@@ -145,10 +145,10 @@ function C() {
 function L() {
     return [I(), E(), p(l.Eu4.TIER_3), A()];
 }
-function D() {
+function y() {
     return [c(), h(), d(), A()];
 }
-function y() {
+function D() {
     return [h(), A()];
 }
 function b() {

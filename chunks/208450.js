@@ -23,9 +23,9 @@ var r = n(735250),
     N = n(585483),
     x = n(72006),
     v = n(405656),
-    O = n(181389),
+    L = n(181389),
     b = n(854709),
-    L = n(778177),
+    O = n(778177),
     A = n(981631),
     P = n(689938),
     Z = n(948488);
@@ -54,7 +54,7 @@ class U extends i.PureComponent {
         let { editorState: t, searchId: n } = this.props;
         if (t !== e.editorState) {
             let e = v.kG(x.Sq(t)),
-                r = O.g9(e, t);
+                r = L.g9(e, t);
             h.u$(n, e, r), null != this._editorRef && x.iE(this._editorRef.editor);
         }
     }
@@ -172,7 +172,7 @@ class U extends i.PureComponent {
                 null === (n = this._editorRef) || void 0 === n || null === (t = n.editor) || void 0 === t || t.setAttribute('aria-activedescendant', null != e ? ''.concat(M, '-').concat(e) : void 0), this.setState({ selectedIndex: e });
             }),
             y(this, 'renderPopout', () =>
-                (0, r.jsx)(L.ZP, {
+                (0, r.jsx)(O.ZP, {
                     ref: this._searchPopoutRef,
                     navId: M,
                     onSelectedIndexChanged: this.handleSelectedIndexChanged
@@ -328,7 +328,7 @@ t.Z = u.ZP.connectStores([m.Z, R.Z], () => {
     let t = R.Z.getCurrentSearchId(),
         n = R.Z.getSearchType(),
         r = null != t && R.Z.isSearching(t),
-        i = null != t && null !== (e = R.Z.getEditorState(t)) && void 0 !== e ? e : x.nR(O.Jl(E.ZP)),
+        i = null != t && null !== (e = R.Z.getEditorState(t)) && void 0 !== e ? e : x.nR(L.Jl(E.ZP)),
         l = m.Z.keyboardModeEnabled;
     return {
         searchId: t,

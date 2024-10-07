@@ -90,9 +90,9 @@ let L = {
     [d.s.LAUNCHED_ACTIVITY]: [U, w, P, Y, Z, k]
 };
 ((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (r[(r.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 4)] = 'USER_PROFILE'), (r[(r.EMBED = 5)] = 'EMBED'), (r[(r.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT');
-let D = s.createContext({});
-function y() {
-    return s.useContext(D);
+let y = s.createContext({});
+function D() {
+    return s.useContext(y);
 }
 function b(e) {
     let { children: t, ...n } = e;
@@ -104,7 +104,7 @@ function b(e) {
 }
 function M(e) {
     let { Icon: t, text: n, iconColor: r, tooltipText: i, showTooltip: s } = e,
-        { defaultTextColor: o, defaultIconColor: l, location: u } = y();
+        { defaultTextColor: o, defaultIconColor: l, location: u } = D();
     return (0, a.jsx)(h.Tooltip, {
         text: i,
         shouldShow: s,
@@ -130,7 +130,7 @@ function M(e) {
 function P(e) {
     let { entry: t } = e,
         { channel: n } = (0, g.Z)(t),
-        { location: r } = y();
+        { location: r } = D();
     return null == n || (0, I.Hi)(r, [1, 2, 3, 4])
         ? null
         : (0, a.jsx)(M, {
@@ -140,7 +140,7 @@ function P(e) {
 }
 function U(e) {
     let { entry: t, hovered: n } = e,
-        { defaultTextColor: r, defaultIconColor: i, location: s } = y(),
+        { defaultTextColor: r, defaultIconColor: i, location: s } = D(),
         o = (0, A.kr)(t) && (0, I.Hi)(s, [0, 4]),
         l = o ? h.tokens.colors.TEXT_POSITIVE : i,
         { streamPreviewUrl: u } = (0, g.Z)(t),
@@ -163,7 +163,7 @@ function U(e) {
 }
 function w(e) {
     let { entry: t } = e,
-        { defaultTextColor: n, defaultIconColor: r } = y(),
+        { defaultTextColor: n, defaultIconColor: r } = D(),
         { state: i, party: s, inExperiment: o } = (0, N.n)(t);
     if (!o) return null;
     let l = (0, A.bT)(i, s);
@@ -187,7 +187,7 @@ function w(e) {
 function x(e) {
     var t;
     let { entry: n, hovered: r } = e,
-        { defaultTextColor: i, defaultIconColor: s, location: o } = y(),
+        { defaultTextColor: i, defaultIconColor: s, location: o } = D(),
         l = (0, f.e7)([T.Z], () => T.Z.getMatchingActivity(n));
     if ((null == l ? void 0 : l.timestamps) == null) return null;
     let u = (0, I.Hi)(o, [0, 4]),
@@ -211,7 +211,7 @@ function x(e) {
 }
 function G(e) {
     let { entry: t } = e,
-        { location: n } = y(),
+        { location: n } = D(),
         r = (0, I.Hi)(n, [0, 3]) ? h.tokens.colors.STATUS_POSITIVE : void 0;
     return (0, A.Ol)(t)
         ? (0, a.jsx)(M, {
@@ -223,7 +223,7 @@ function G(e) {
 }
 function k(e) {
     let { entry: t } = e,
-        { location: n } = y();
+        { location: n } = D();
     if (!(0, A.V5)(t)) return null;
     let r = (0, A.kr)(t),
         { text: i, tooltipText: s } = (0, A.zo)(t);
@@ -238,7 +238,7 @@ function k(e) {
 }
 function B(e) {
     let { entry: t } = e,
-        { location: n } = y(),
+        { location: n } = D(),
         r = 0 !== n,
         i = (0, A.dw)(t);
     if (null == i) return null;
@@ -252,7 +252,7 @@ function B(e) {
 }
 function F(e) {
     let { entry: t } = e,
-        { location: n } = y(),
+        { location: n } = D(),
         r = (0, A.vU)(t);
     return (0, A.q_)(t)
         ? (0, a.jsx)(M, {
@@ -265,7 +265,7 @@ function F(e) {
 }
 function V(e) {
     let { entry: t } = e,
-        { location: n } = y(),
+        { location: n } = D(),
         r = 0 !== n,
         i = (0, A.yA)(t);
     if (null == i) return null;
@@ -280,7 +280,7 @@ function V(e) {
 function H(e) {
     var t;
     let { entry: n } = e,
-        { location: r } = y(),
+        { location: r } = D(),
         i = null === (t = (0, A.PJ)(n, _.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
     if (null == i) return null;
     let s = (0, I.Hi)(r, [1, 2, 5]) ? v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: i }) : v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({ count: i });
@@ -291,7 +291,7 @@ function H(e) {
 }
 function Z(e) {
     let { entry: t } = e,
-        { location: n } = y();
+        { location: n } = D();
     if (3 === n) return null;
     let r = (0, A.ig)(t);
     return null == r || r === E.o.TRENDING_TYPE_UNSPECIFIED
@@ -303,7 +303,7 @@ function Z(e) {
 }
 function Y(e) {
     let { entry: t } = e,
-        { location: n } = y();
+        { location: n } = D();
     if (3 === n) return null;
     let r = m.default.extractTimestamp(t.extra.application_id);
     return c()().diff(c()(r), 'days') > R.G
@@ -315,7 +315,7 @@ function Y(e) {
 }
 function j(e) {
     let { entry: t, hovered: n } = e,
-        { defaultTextColor: r, defaultIconColor: i, location: s } = y(),
+        { defaultTextColor: r, defaultIconColor: i, location: s } = D(),
         o = (0, A.kr)(t) && 4 === s,
         l = o ? h.tokens.colors.TEXT_POSITIVE : i;
     return (0, a.jsxs)('div', {
@@ -358,7 +358,7 @@ function K(e) {
               : 3 === n
                 ? { defaultTextColor: 'text-muted' }
                 : { defaultTextColor: 'text-secondary' }),
-        (0, a.jsx)(D.Provider, {
+        (0, a.jsx)(y.Provider, {
             value: {
                 location: n,
                 ...t

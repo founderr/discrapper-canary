@@ -1,6 +1,6 @@
 n.d(t, {
     b2: function () {
-        return D;
+        return y;
     }
 }),
     n(47120),
@@ -31,27 +31,27 @@ var r = n(952639),
     v = n(799525),
     C = n(981631),
     L = n(526761);
-let D = 3000,
-    y = {};
+let y = 3000,
+    D = {};
 function b(e) {
     return ''.concat(e.channel_id, ':').concat(e.id);
 }
 function M() {
-    Object.values(y).forEach((e) => {
+    Object.values(D).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
     }),
-        (y = {});
+        (D = {});
 }
 function P(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
     let n = b(e);
-    if (null != y[n]) {
-        let { timeout: r } = y[n];
+    if (null != D[n]) {
+        let { timeout: r } = D[n];
         return (
             clearTimeout(r),
             (function (e, t) {
-                let { setAt: n } = y[b(e)];
+                let { setAt: n } = D[b(e)];
                 if (t === N.Pq.UPDATE) {
                     var r, i;
                     let t = null !== (r = e.attachments) && void 0 !== r ? r : [],
@@ -85,7 +85,7 @@ function P(e, t) {
                 }
                 (0, N.OP)(n, t);
             })(e, t),
-            delete y[n],
+            delete D[n],
             !0
         );
     }
@@ -108,9 +108,9 @@ function w(e, t) {
         i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter(S.N7) : e;
     i.forEach((e) => {
         let t = b(e);
-        null == y[t] &&
+        null == D[t] &&
             (d.Z.increment({ name: o.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE }),
-            (y[t] = {
+            (D[t] = {
                 setAt: Date.now(),
                 timeout: setTimeout(() => {
                     !(function (e) {
@@ -130,14 +130,14 @@ function w(e, t) {
                                 });
                         }
                     })(e);
-                }, D)
+                }, y)
             }));
     });
     let a = n || new Set(i.map((e) => e.channel_id)).size > 1;
     r
         ? setTimeout(() => {
               U(
-                  i.filter((e) => null != y[b(e)]),
+                  i.filter((e) => null != D[b(e)]),
                   a
               );
           }, 800 * Math.random())

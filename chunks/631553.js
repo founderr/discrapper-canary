@@ -26,9 +26,9 @@ var s = n(735250),
     v = n(185666),
     C = n(100527),
     x = n(906732),
-    N = n(600164);
+    T = n(600164);
 n(70097);
-var T = n(594190),
+var N = n(594190),
     O = n(74299),
     A = n(989941),
     y = n(377400),
@@ -214,9 +214,9 @@ class eh extends a.Component {
         window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', el, !1), y.Z.terminate(), v.Z.terminate(), b.Z.terminate();
     }
     renderInvalidSizeMessage() {
-        return (0, s.jsx)(N.Z, {
-            justify: N.Z.Justify.CENTER,
-            align: N.Z.Align.CENTER,
+        return (0, s.jsx)(T.Z, {
+            justify: T.Z.Justify.CENTER,
+            align: T.Z.Align.CENTER,
             className: ea.invalidContainer,
             children: (0, s.jsx)('div', {
                 className: ea.inactiveContainer,
@@ -321,7 +321,7 @@ function ep() {
         l = (0, f.e7)([w.Z], () => w.Z.getVoiceChannelId()),
         c = (0, f.e7)([L.Z], () => L.Z.getChannel(l)),
         d = (0, f.e7)([P.Z], () => (null != c ? P.Z.getGuild(c.guild_id) : null)),
-        u = (0, f.e7)([T.ZP, k.Z], () => (0, A.Z)(T.ZP, k.Z)),
+        u = (0, f.e7)([N.ZP, k.Z], () => (0, A.Z)(N.ZP, k.Z)),
         h = (0, f.e7)([D.Z], () => (0, O.Z)(D.Z)),
         p = (0, f.e7)([M.Z], () => null != M.Z.getCurrentUserActiveStream()),
         { analyticsLocations: g } = (0, x.ZP)(C.Z.OVERLAY),

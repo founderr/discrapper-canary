@@ -84,8 +84,8 @@ t.default = (function () {
                         value: 'selectordinal',
                         description: '"selectordinal"'
                     },
-                    D = 'select',
-                    y = {
+                    y = 'select',
+                    D = {
                         type: 'literal',
                         value: 'select',
                         description: '"select"'
@@ -299,7 +299,7 @@ t.default = (function () {
                                                                 })()) === c &&
                                                                 (e = (function () {
                                                                     var e, n, r, i, a;
-                                                                    if (((e = $), t.substr($, 6) === D ? ((n = D), ($ += 6)) : ((n = c), 0 === er && ei(y)), n !== c)) {
+                                                                    if (((e = $), t.substr($, 6) === y ? ((n = y), ($ += 6)) : ((n = c), 0 === er && ei(D)), n !== c)) {
                                                                         if (ed() !== c) {
                                                                             if ((44 === t.charCodeAt($) ? ((r = ','), $++) : ((r = c), 0 === er && ei(I)), r !== c)) {
                                                                                 if (ed() !== c) {

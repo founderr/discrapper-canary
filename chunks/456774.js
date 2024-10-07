@@ -31,8 +31,8 @@ var r = n(735250),
     v = n(718582),
     C = n(126134),
     L = n(981631),
-    D = n(689938),
-    y = n(206248);
+    y = n(689938),
+    D = n(206248);
 function b(e) {
     let { guild: t } = e,
         n = -1,
@@ -101,7 +101,7 @@ function b(e) {
     0 === a.length)
         ? null
         : (0, r.jsx)('div', {
-              className: y.cards,
+              className: D.cards,
               children: s
           });
 }
@@ -123,26 +123,26 @@ function M(e) {
     return (0, r.jsx)(l.Z.Provider, {
         value: n.id,
         children: (0, r.jsxs)('div', {
-            className: y.container,
+            className: D.container,
             ref: A,
             children: [
                 (0, r.jsx)('div', {
-                    className: y.tooltipPointer,
+                    className: D.tooltipPointer,
                     style: { top: Math.min(P, null != M ? M - 22 : P) }
                 }),
                 (0, r.jsxs)('div', {
-                    className: y.header,
+                    className: D.header,
                     children: [
                         N
                             ? (0, r.jsx)(d.Z, {
                                   guild: n,
-                                  className: y.rowIconV2,
+                                  className: D.rowIconV2,
                                   tooltipColor: s.Tooltip.Colors.PRIMARY
                               })
                             : (0, r.jsx)(c.Z, {
                                   guild: n,
                                   size: 20,
-                                  className: y.rowIcon
+                                  className: D.rowIcon
                               }),
                         (0, r.jsx)(s.Text, {
                             variant: 'text-md/semibold',
@@ -154,19 +154,19 @@ function M(e) {
                 (0, r.jsx)(b, { guild: n }),
                 O
                     ? (0, r.jsxs)('div', {
-                          className: y.footer,
+                          className: D.footer,
                           children: [
                               (0, r.jsx)(s.CircleInformationIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: 12,
                                   height: 12,
-                                  className: y.infoIcon
+                                  className: D.infoIcon
                               }),
                               (0, r.jsx)(s.Text, {
                                   color: 'text-muted',
                                   variant: 'text-xs/medium',
-                                  children: D.Z.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
+                                  children: y.Z.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
                                       onClick: () => {
                                           o(), I.Z.open(n.id, L.pNK.INSTANT_INVITES);
                                       }
@@ -177,19 +177,19 @@ function M(e) {
                     : null,
                 R
                     ? (0, r.jsxs)('div', {
-                          className: y.footer,
+                          className: D.footer,
                           children: [
                               (0, r.jsx)(s.CircleInformationIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: 12,
                                   height: 12,
-                                  className: y.infoIcon
+                                  className: D.infoIcon
                               }),
                               (0, r.jsx)(s.Text, {
                                   color: 'text-muted',
                                   variant: 'text-xs/medium',
-                                  children: D.Z.Messages.GUILD_POPOUT_VIEWING_AS_ROLES.format({
+                                  children: y.Z.Messages.GUILD_POPOUT_VIEWING_AS_ROLES.format({
                                       onClick: () => {
                                           o(), C();
                                       }

@@ -44,7 +44,7 @@ function O(e) {
     let { user: t, guildId: n, sourceType: u, sourceDetails: g, setPopoutRef: O, onClose: R } = e,
         { trackUserProfileAction: v } = (0, d.KZ)(),
         { sendReact: C } = (0, _.Q)(u),
-        { setInteractionTypeSent: L, setInteractionToastShown: D, resetInteraction: y } = (0, f.Xo)(),
+        { setInteractionTypeSent: L, setInteractionToastShown: y, resetInteraction: D } = (0, f.Xo)(),
         { theme: b } = (0, p.z)(),
         M = (0, a.e7)([l.Z], () => l.Z.theme),
         P = (0, s.wj)(M) ? !(0, s.wj)(b) : (0, s.wj)(b),
@@ -54,7 +54,7 @@ function O(e) {
     }, [U, O]),
         i.useEffect(() => {
             let e = (e) => {
-                e.key === T.vn.ESCAPE && (e.stopPropagation(), y());
+                e.key === T.vn.ESCAPE && (e.stopPropagation(), D());
             };
             return (
                 document.addEventListener('keydown', e),
@@ -62,7 +62,7 @@ function O(e) {
                     document.removeEventListener('keydown', e);
                 }
             );
-        }, [R, y]);
+        }, [R, D]);
     let w = async (e) => {
         if (null == e) return;
         v({ action: C });
@@ -72,7 +72,7 @@ function O(e) {
             sourceType: u,
             sourceDetails: g
         });
-        L(null), D(!0);
+        L(null), y(!0);
         try {
             await (0, E.Z)({
                 userId: t.id,
@@ -84,7 +84,7 @@ function O(e) {
         } catch (e) {}
         L(I.P.REACT),
             setTimeout(() => {
-                D(!1);
+                y(!1);
             }, h._1);
     };
     return (0, r.jsx)(o.Z, {
@@ -92,7 +92,7 @@ function O(e) {
         guildId: null != n ? n : void 0,
         closePopout: S.dG,
         onSelectEmoji: async (e, t) => {
-            await w(e), t && (y(), null == R || R());
+            await w(e), t && (D(), null == R || R());
         },
         pickerIntention: m.Hz.PROFILE
     });

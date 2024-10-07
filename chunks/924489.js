@@ -31,7 +31,7 @@ let I = {
     };
 function g(e) {
     var t, n, a;
-    let { application: l, mutualGuilds: c, mutualGuildShownMax: E = 4, className: g, textVariant: T = 'text-sm/normal', compact: S, guildIconSize: f = i.LARGE } = e,
+    let { application: l, mutualGuilds: c, mutualGuildShownMax: E = 4, className: g, textVariant: T = 'text-sm/normal', compact: f, guildIconSize: S = i.LARGE } = e,
         C = new Intl.ListFormat('en-US'),
         N = null !== (n = null === (t = l.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
         A = null !== (a = null == c ? void 0 : c.length) && void 0 !== a ? a : 0,
@@ -65,7 +65,7 @@ function g(e) {
                 mutualGuildCount: t,
                 nonMutualGuildCount: s.format(n)
             });
-        })(N, A, v, S);
+        })(N, A, v, f);
     return 0 === Z.length && null == O
         ? null
         : (0, s.jsxs)('div', {
@@ -82,7 +82,7 @@ function g(e) {
                                                 i = _.ZP.getGuildIconURL({
                                                     id: e.id,
                                                     icon: e.icon,
-                                                    size: f,
+                                                    size: S,
                                                     canAnimate: !1
                                                 }),
                                                 a = (0, s.jsx)(d.Tooltip, {
@@ -91,7 +91,7 @@ function g(e) {
                                                     children: (e) =>
                                                         (0, s.jsx)('img', {
                                                             ...e,
-                                                            className: o()(m.icon, p[f]),
+                                                            className: o()(m.icon, p[S]),
                                                             src: i,
                                                             alt: ''
                                                         })
@@ -102,8 +102,8 @@ function g(e) {
                                                       u.ZP,
                                                       {
                                                           className: m.iconMask,
-                                                          height: f,
-                                                          width: f,
+                                                          height: S,
+                                                          width: S,
                                                           mask: u.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
                                                           children: a
                                                       },
@@ -117,7 +117,7 @@ function g(e) {
                                                   children: (e) =>
                                                       (0, s.jsxs)('div', {
                                                           ...e,
-                                                          className: o()(m.moreGuilds, I[f]),
+                                                          className: o()(m.moreGuilds, I[S]),
                                                           children: ['+', R]
                                                       })
                                               })
@@ -127,8 +127,8 @@ function g(e) {
                               : (0, s.jsx)(d.CompassIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    width: f,
-                                    height: f,
+                                    width: S,
+                                    height: S,
                                     className: m.defaultIcon
                                 })
                   }),

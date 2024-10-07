@@ -27,19 +27,19 @@ var r,
 _(function () {
     r = o.location;
 });
-var D = function (e) {
+var y = function (e) {
         if (d(C, e)) {
             var t = C[e];
             delete C[e], t();
         }
     },
-    y = function (e) {
+    D = function (e) {
         return function () {
-            D(e);
+            y(e);
         };
     },
     b = function (e) {
-        D(e.data);
+        y(e.data);
     },
     M = function (e) {
         o.postMessage(R(e), r.protocol + '//' + r.host);
@@ -62,11 +62,11 @@ var D = function (e) {
     }),
     m
         ? (i = function (e) {
-              g.nextTick(y(e));
+              g.nextTick(D(e));
           })
         : A && A.now
           ? (i = function (e) {
-                A.now(y(e));
+                A.now(D(e));
             })
           : O && !I
             ? ((s = (a = new O()).port2), (a.port1.onmessage = b), (i = u(s.postMessage, s)))
@@ -76,11 +76,11 @@ var D = function (e) {
                     L in h('script')
                         ? function (e) {
                               E.appendChild(h('script'))[L] = function () {
-                                  E.removeChild(this), D(e);
+                                  E.removeChild(this), y(e);
                               };
                           }
                         : function (e) {
-                              setTimeout(y(e), 0);
+                              setTimeout(D(e), 0);
                           })),
     (e.exports = {
         set: T,

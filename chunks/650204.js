@@ -26,8 +26,8 @@ var d = n(202226),
     v = n(534713),
     C = n(358085),
     L = n(703656),
-    D = n(284737),
-    y = n(473159),
+    y = n(284737),
+    D = n(473159),
     b = n(846519),
     M = n(579806),
     P = n(896361),
@@ -70,17 +70,17 @@ if (null != M.Z) {
     let d = null === (l = (u = M.Z.remoteApp).getReleaseChannel) || void 0 === l ? void 0 : l.call(u);
     ('canary' === d || 'development' === d) && O.ZP.pauseFrameEvictor(), O.ZP.initializeExitHook();
 }
-if (((0, y.O)(window), __OVERLAY__)) Y(f.Z.Overlay);
+if (((0, D.O)(window), __OVERLAY__)) Y(f.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) Y(f.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), C.isPlatformEmbedded)) {
         (window.onbeforeunload = () => O.ZP.beforeUnload()), O.ZP.on('HELP_OPEN', () => window.open(A.Z.getCommunityURL()));
         let e = new b.sW(F, () => O.ZP.purgeMemory());
         O.ZP.on('MAIN_WINDOW_BLUR', () => {
-            e.delay(), O.ZP.setFocused(!1), (0, D.T_)(window, !1);
+            e.delay(), O.ZP.setFocused(!1), (0, y.T_)(window, !1);
         }),
             O.ZP.on('MAIN_WINDOW_FOCUS', () => {
-                e.cancel(), O.ZP.setFocused(!0), (0, D.T_)(window, !0);
+                e.cancel(), O.ZP.setFocused(!0), (0, y.T_)(window, !0);
             }),
             O.ZP.on('MAIN_WINDOW_PATH', function (e, t, n) {
                 var r;
@@ -88,7 +88,7 @@ else {
                 if (null === (r = Z[t]) || void 0 === r ? !void 0 : !r.call(Z, i)) (0, L.uL)(t);
             }),
             O.ZP.on('MAIN_WINDOW_HIDDEN', () => {
-                (0, D.al)(window);
+                (0, y.al)(window);
             });
     }
     m.Z.initialize(), h.Z.initialize(), p.Z.init(), S.Z.init(), G.Z.init(), I.Z.initialize(), N.Z.initialize(), R.Z.initialize(), T.j(), Y(f.Z.App);

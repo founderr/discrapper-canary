@@ -1,19 +1,19 @@
-var r, i;
-n.d(t, {
+var e, i;
+n.d(r, {
     J: function () {
-        return a;
+        return u;
     },
     z: function () {
-        return r;
+        return e;
     }
 }),
-    ((i = r || (r = {}))[(i.NONE = 0)] = 'NONE'),
+    ((i = e || (e = {}))[(i.NONE = 0)] = 'NONE'),
     (i[(i.SOCIAL = 1)] = 'SOCIAL'),
     (i[(i.CASUAL = 2)] = 'CASUAL'),
     (i[(i.COMPETITIVE = 3)] = 'COMPETITIVE'),
     (i[(i.CREATIVE = 4)] = 'CREATIVE'),
     (i[(i.VERY_HARDCORE = 5)] = 'VERY_HARDCORE');
-let a = {
+let u = {
     0: 'NONE',
     4: 'NONE',
     1: 'CASUAL',

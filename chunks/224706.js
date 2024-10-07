@@ -25,9 +25,9 @@ var r = n(664751),
     v = n(981631),
     C = n(701488),
     L = n(689938);
-function D(e) {
+function y(e) {
     let { applicationId: t, secret: n, channelId: r, intent: i = C.Ws.PLAY, embedded: a = !1, source: s, partyId: o, locationObject: u, analyticsLocations: c } = e;
-    y({
+    D({
         applicationId: t,
         channelId: r,
         embedded: a,
@@ -54,7 +54,7 @@ function D(e) {
             })
         );
 }
-async function y(e) {
+async function D(e) {
     let { applicationId: t, branchId: n, channelId: i, embedded: o = !1, source: d, partyId: _, locationObject: h = {}, analyticsLocations: m = [] } = e;
     if (o)
         return null == i
@@ -339,7 +339,7 @@ t.Z = {
             game: e
         });
     },
-    launch: y,
+    launch: D,
     async join(e) {
         let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: s = C.Ws.PLAY, embedded: o = !1, source: u, partyId: c, locationObject: d, analyticsLocations: _ } = e;
         if (__OVERLAY__)
@@ -361,7 +361,7 @@ t.Z = {
         try {
             let e = await N.Z.getJoinSecret(t, n, r, i, a);
             return (
-                D({
+                y({
                     applicationId: r,
                     secret: e,
                     channelId: i,
@@ -384,5 +384,5 @@ t.Z = {
             );
         }
     },
-    joinWithSecret: D
+    joinWithSecret: y
 };

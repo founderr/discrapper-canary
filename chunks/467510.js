@@ -1,87 +1,87 @@
-r.d(t, {
+n.d(e, {
     Rt: function () {
-        return o;
+        return s;
     },
     iY: function () {
-        return E;
+        return c;
     },
     l4: function () {
-        return i;
+        return o;
     },
     qT: function () {
-        return _;
+        return u;
     }
 });
-var n = r(573736);
-let a = r(899517).n;
-function o(e, t = {}) {
-    if (!e) return '<unknown>';
+var r = n(573736);
+let i = n(899517).n;
+function s(t, e = {}) {
+    if (!t) return '<unknown>';
     try {
-        let r,
-            o = e,
-            i = [],
-            _ = 0,
-            E = 0,
-            s = 3,
-            c = Array.isArray(t) ? t : t.keyAttrs,
-            I = (!Array.isArray(t) && t.maxStringLength) || 80;
+        let n,
+            s = t,
+            o = [],
+            u = 0,
+            c = 0,
+            a = 3,
+            l = Array.isArray(e) ? e : e.keyAttrs,
+            f = (!Array.isArray(e) && e.maxStringLength) || 80;
         for (
             ;
-            o &&
-            _++ < 5 &&
-            ((r = (function (e, t) {
-                let r = [];
-                if (!e || !e.tagName) return '';
-                if (a.HTMLElement && e instanceof HTMLElement && e.dataset) {
-                    if (e.dataset.sentryComponent) return e.dataset.sentryComponent;
-                    if (e.dataset.sentryElement) return e.dataset.sentryElement;
+            s &&
+            u++ < 5 &&
+            ((n = (function (t, e) {
+                let n = [];
+                if (!t || !t.tagName) return '';
+                if (i.HTMLElement && t instanceof HTMLElement && t.dataset) {
+                    if (t.dataset.sentryComponent) return t.dataset.sentryComponent;
+                    if (t.dataset.sentryElement) return t.dataset.sentryElement;
                 }
-                r.push(e.tagName.toLowerCase());
-                let o = t && t.length ? t.filter((t) => e.getAttribute(t)).map((t) => [t, e.getAttribute(t)]) : null;
-                if (o && o.length)
-                    o.forEach((e) => {
-                        r.push(`[${e[0]}="${e[1]}"]`);
+                n.push(t.tagName.toLowerCase());
+                let s = e && e.length ? e.filter((e) => t.getAttribute(e)).map((e) => [e, t.getAttribute(e)]) : null;
+                if (s && s.length)
+                    s.forEach((t) => {
+                        n.push(`[${t[0]}="${t[1]}"]`);
                     });
                 else {
-                    e.id && r.push(`#${e.id}`);
-                    let t = e.className;
-                    if (t && (0, n.HD)(t)) for (let e of t.split(/\s+/)) r.push(`.${e}`);
+                    t.id && n.push(`#${t.id}`);
+                    let e = t.className;
+                    if (e && (0, r.HD)(e)) for (let t of e.split(/\s+/)) n.push(`.${t}`);
                 }
-                for (let t of ['aria-label', 'type', 'name', 'title', 'alt']) {
-                    let n = e.getAttribute(t);
-                    n && r.push(`[${t}="${n}"]`);
+                for (let e of ['aria-label', 'type', 'name', 'title', 'alt']) {
+                    let r = t.getAttribute(e);
+                    r && n.push(`[${e}="${r}"]`);
                 }
-                return r.join('');
-            })(o, c)),
-            'html' !== r && (!(_ > 1) || !(E + i.length * s + r.length >= I)));
+                return n.join('');
+            })(s, l)),
+            'html' !== n && (!(u > 1) || !(c + o.length * a + n.length >= f)));
 
         ) {
-            i.push(r), (E += r.length), (o = o.parentNode);
+            o.push(n), (c += n.length), (s = s.parentNode);
         }
-        return i.reverse().join(' > ');
-    } catch (e) {
+        return o.reverse().join(' > ');
+    } catch (t) {
         return '<unknown>';
     }
 }
-function i() {
+function o() {
     try {
-        return a.document.location.href;
-    } catch (e) {
+        return i.document.location.href;
+    } catch (t) {
         return '';
     }
 }
-function _(e) {
-    return a.document && a.document.querySelector ? a.document.querySelector(e) : null;
+function u(t) {
+    return i.document && i.document.querySelector ? i.document.querySelector(t) : null;
 }
-function E(e) {
-    if (!a.HTMLElement) return null;
-    let t = e;
-    for (let e = 0; e < 5 && t; e++) {
-        if (t instanceof HTMLElement) {
-            if (t.dataset.sentryComponent) return t.dataset.sentryComponent;
-            if (t.dataset.sentryElement) return t.dataset.sentryElement;
+function c(t) {
+    if (!i.HTMLElement) return null;
+    let e = t;
+    for (let t = 0; t < 5 && e; t++) {
+        if (e instanceof HTMLElement) {
+            if (e.dataset.sentryComponent) return e.dataset.sentryComponent;
+            if (e.dataset.sentryElement) return e.dataset.sentryElement;
         }
-        t = t.parentNode;
+        e = e.parentNode;
     }
     return null;
 }

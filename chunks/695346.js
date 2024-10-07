@@ -120,7 +120,7 @@ n.d(t, {
         return _;
     },
     eo: function () {
-        return D;
+        return y;
     },
     ev: function () {
         return Y;
@@ -156,7 +156,7 @@ n.d(t, {
         return W;
     },
     l4: function () {
-        return eD;
+        return ey;
     },
     mX: function () {
         return k;
@@ -174,7 +174,7 @@ n.d(t, {
         return eo;
     },
     uL: function () {
-        return y;
+        return D;
     },
     up: function () {
         return f;
@@ -341,17 +341,17 @@ let m = (0, o.Zc)(
         (e) => (null == e ? void 0 : e.value),
         (e) => a.D5.create({ value: e })
     ),
-    D = (0, o.Zc)(
+    y = (0, o.Zc)(
         'notifications',
         'notifyFriendsOnGoLive',
         (e) => (null == e ? void 0 : e.value),
         (e) => a.D5.create({ value: e })
     ),
-    y = '0',
+    D = '0',
     b = (0, o.Zc)(
         'notifications',
         'notificationCenterAckedBeforeId',
-        (e) => (null != e ? e : y),
+        (e) => (null != e ? e : D),
         (e) => e
     ),
     M = (0, o.Zc)(
@@ -888,7 +888,7 @@ let eh = (0, o.KM)(
     },
     (e) => a.D5.create({ value: e })
 );
-let eD = (0, o.Zc)(
+let ey = (0, o.Zc)(
     'userContent',
     'lastReceivedChangelogId',
     (e) => (null != e ? e : '0'),

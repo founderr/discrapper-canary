@@ -73,7 +73,7 @@ function N(e, t) {
         })(n, a));
     let { query: o, mode: c, tokens: u, cursorScope: d } = i,
         { autocompletes: h } = i;
-    (h = O(e, c)),
+    (h = L(e, c)),
         (g[e] = T({
             searchId: e,
             query: o,
@@ -135,7 +135,7 @@ function v(e) {
         results: r
     };
 }
-function O(e, t) {
+function L(e, t) {
     let n = [];
     return (
         t.type === S.Sap.FILTER
@@ -198,7 +198,7 @@ function O(e, t) {
 function b() {
     (0, f.WU)();
 }
-function L(e) {
+function O(e) {
     let t = g[e];
     if (null == t) return;
     let { query: n, mode: r, tokens: i, cursorScope: l, autocompletes: s } = t;
@@ -221,7 +221,7 @@ function A() {
         mode: n,
         tokens: r,
         cursorScope: i,
-        autocompletes: O(e, n)
+        autocompletes: L(e, n)
     });
 }
 class P extends (r = a.ZP.Store) {
@@ -253,10 +253,10 @@ let Z = new P(o.Z, {
             c = R[r],
             u = !0;
         if (s === o.query && (null == o.mode || o.mode.filter === a.filter)) (n = o.autocompletes), (u = !1);
-        else if (a.type === S.Sap.EMPTY || (a.type === S.Sap.FILTER && a.filter !== S.dCx.FILTER_FROM && a.filter !== S.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = O(r, a));
+        else if (a.type === S.Sap.EMPTY || (a.type === S.Sap.FILTER && a.filter !== S.dCx.FILTER_FROM && a.filter !== S.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = L(r, a));
         else if (null != c) {
             let { token: e } = a;
-            null != e && e.getFullMatch().trim().length > 0 ? (_.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = o.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = O(r, a)));
+            null != e && e.getFullMatch().trim().length > 0 ? (_.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = o.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = L(r, a)));
         }
         return (
             (g[r] = T({
@@ -282,10 +282,10 @@ let Z = new P(o.Z, {
     SEARCH_SCREEN_OPEN: A,
     SEARCH_CLEAR_HISTORY: function (e) {
         let { searchId: t } = e;
-        null != t ? L(t) : Object.keys(g).forEach(L);
+        null != t ? O(t) : Object.keys(g).forEach(O);
     },
     LOGOUT: function () {
-        Object.keys(g).forEach(L);
+        Object.keys(g).forEach(O);
     }
 });
 t.Z = Z;

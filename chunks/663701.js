@@ -21,8 +21,8 @@ var i = n(735250),
     p = n(607070),
     g = n(213609),
     T = n(463119),
-    S = n(377171),
-    f = n(243778),
+    f = n(377171),
+    S = n(243778),
     C = n(922409),
     N = n(899740),
     A = n(28476),
@@ -185,14 +185,14 @@ let X = (e) => {
                     className: Q.familyCenterPendingBadge,
                     children: (0, i.jsx)(h.NumberBadge, { count: a })
                 })
-              : (0, i.jsx)(f.ZP, {
+              : (0, i.jsx)(S.ZP, {
                     contentTypes: [_.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
                         return t === _.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(h.TextBadge, {
                                   text: q.Z.Messages.NEW,
-                                  color: S.Z.BG_BRAND
+                                  color: f.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -212,8 +212,8 @@ function ea(e) {
     return z.ZY5.DM_CHANNEL;
 }
 let es = (e) => {
-    let { showLibrary: t, hasLibraryApplication: n, homeLink: a, storeLink: s, premiumTabSelected: o } = e,
-        [c, u] = (0, P.Z)((e) => {
+    let { showLibrary: t, hasLibraryApplication: n, homeLink: a, premiumTabSelected: s } = e,
+        [o, c] = (0, P.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, l.Z);
@@ -237,16 +237,16 @@ let es = (e) => {
             }),
             (0, i.jsxs)(F.Z, {
                 ...e,
-                version: u,
-                selectedChannelId: c,
+                version: c,
+                selectedChannelId: o,
                 showDMHeader: !0,
                 children: [
-                    (0, i.jsx)(X, { selected: null != u ? u === z.Z5c.FRIENDS : a === z.Z5c.FRIENDS }, 'friends'),
+                    (0, i.jsx)(X, { selected: null != c ? c === z.Z5c.FRIENDS : a === z.Z5c.FRIENDS }, 'friends'),
                     n && t
                         ? (0, i.jsx)(
                               J,
                               {
-                                  selected: null == u ? null != a && a.startsWith(z.Z5c.APPLICATION_LIBRARY) : u.startsWith(z.Z5c.APPLICATION_LIBRARY),
+                                  selected: null == c ? null != a && a.startsWith(z.Z5c.APPLICATION_LIBRARY) : c.startsWith(z.Z5c.APPLICATION_LIBRARY),
                                   hideGameUpdateProgressIndicator: a === z.Z5c.APPLICATION_LIBRARY
                               },
                               'library'
@@ -255,8 +255,8 @@ let es = (e) => {
                     (0, i.jsx)(
                         x.g,
                         {
-                            selected: null == u ? o : u.startsWith(z.Z5c.APPLICATION_STORE),
-                            route: null == s || location.pathname.startsWith(z.Z5c.ACTIVITIES) || location.pathname.startsWith(z.Z5c.APPLICATION_STORE) ? z.Z5c.APPLICATION_STORE : s,
+                            selected: null == c ? s : c.startsWith(z.Z5c.APPLICATION_STORE),
+                            route: z.Z5c.APPLICATION_STORE,
                             locationState: {
                                 analyticsSource: {
                                     page: ea(a),
@@ -267,11 +267,11 @@ let es = (e) => {
                         },
                         'premium'
                     ),
-                    (0, i.jsx)(ee, { selected: null == u ? null != a && a.startsWith(z.Z5c.MESSAGE_REQUESTS) : u === z.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
+                    (0, i.jsx)(ee, { selected: null == c ? null != a && a.startsWith(z.Z5c.MESSAGE_REQUESTS) : c === z.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
                     (0, i.jsx)(
                         T.i,
                         {
-                            selected: u === z.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(z.Z5c.COLLECTIBLES_SHOP)),
+                            selected: c === z.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(z.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {
                                 analyticsSource: {
                                     page: ea(a),
@@ -282,7 +282,7 @@ let es = (e) => {
                         },
                         'discord-shop'
                     ),
-                    (0, i.jsx)(et, { selected: (null != a && a.startsWith(z.Z5c.FAMILY_CENTER)) || (null != u && u.startsWith(z.Z5c.FAMILY_CENTER)) }, 'family-center')
+                    (0, i.jsx)(et, { selected: (null != a && a.startsWith(z.Z5c.FAMILY_CENTER)) || (null != c && c.startsWith(z.Z5c.FAMILY_CENTER)) }, 'family-center')
                 ]
             })
         ]

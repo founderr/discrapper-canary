@@ -23,9 +23,9 @@ var r = n(735250),
     N = n(699516),
     x = n(250758),
     v = n(944486),
-    O = n(914010),
+    L = n(914010),
     b = n(246946),
-    L = n(594174),
+    O = n(594174),
     A = n(585483),
     P = n(63063),
     Z = n(405656),
@@ -56,7 +56,7 @@ let F = h()('2015-05-15').local(),
         var i, l, s;
         let { user: a, text: o } = n;
         if (null == a) return (0, r.jsx)('strong', { children: o });
-        let c = L.default.getUser(a.id),
+        let c = O.default.getUser(a.id),
             u = R.Z.getChannel(e),
             d = (null == u ? void 0 : u.isPrivate()) ? N.Z.getNickname(a.id) : null,
             h = null !== (l = null !== (i = T.ZP.getNick(e, a.id)) && void 0 !== i ? i : d) && void 0 !== l ? l : y.ZP.getName(a),
@@ -98,11 +98,11 @@ let F = h()('2015-05-15').local(),
             className: D.resultChannel,
             children: [
                 null != a ? (0, r.jsx)(a, { className: D.searchResultChannelIcon }) : null,
-                (0, r.jsx)('strong', { children: (0, S.F6)(i, L.default, N.Z) }),
+                (0, r.jsx)('strong', { children: (0, S.F6)(i, O.default, N.Z) }),
                 null != s
                     ? (0, r.jsx)('span', {
                           className: D.searchResultChannelCategory,
-                          children: (0, S.F6)(s, L.default, N.Z)
+                          children: (0, S.F6)(s, O.default, N.Z)
                       })
                     : null
             ]
@@ -486,8 +486,8 @@ class V extends i.PureComponent {
     }
 }
 t.ZP = i.forwardRef((e, t) => {
-    let [n, i, l] = (0, f.Wu)([O.Z, v.Z, x.Z], () => {
-        let e = O.Z.getGuildId(),
+    let [n, i, l] = (0, f.Wu)([L.Z, v.Z, x.Z], () => {
+        let e = L.Z.getGuildId(),
             t = v.Z.getChannelId(),
             n = null != e ? e : t;
         o()(null != n, 'SearchPopout.getStateFromStores - invalid searchId');

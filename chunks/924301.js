@@ -83,7 +83,7 @@ function C(e) {
                 let r = v(e.guild_scheduled_event_exception_id),
                     i = null !== (n = null === (t = N[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
                     a = (null != e.guild_scheduled_event_exception_id && e.response === h.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === h.gv.INTERESTED) ? 1 : -1;
-                D(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
+                y(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
             })(e),
         n && (T += 1);
 }
@@ -100,15 +100,15 @@ function L(e) {
             let r = v(e.guild_scheduled_event_exception_id),
                 i = null !== (n = null === (t = N[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
                 a = (null != e.guild_scheduled_event_exception_id && e.response === h.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === h.gv.INTERESTED) ? -1 : 1;
-            D(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
+            y(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
         })(e),
         a && (T += 1));
 }
-function D(e, t, n) {
+function y(e, t, n) {
     let r = v(t);
     null == N[e] && (N[e] = {}), (N[e][r] = n);
 }
-function y(e, t) {
+function D(e, t) {
     m.values(p.GUILD_EVENT(e)).forEach((e) => R(e.id, t));
 }
 function b(e) {
@@ -214,11 +214,11 @@ class G extends (r = u.ZP.Store) {
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            return y(t.id, !1), t.guild_scheduled_events.forEach((e) => O(e)), !0;
+            return D(t.id, !1), t.guild_scheduled_events.forEach((e) => O(e)), !0;
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            return y(t.id, !0), !0;
+            return D(t.id, !0), !0;
         },
         FETCH_GUILD_EVENT: function (e) {
             let { guildScheduledEvent: t } = e;
@@ -280,9 +280,9 @@ class G extends (r = u.ZP.Store) {
         },
         GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS: function (e) {
             let { eventId: t, counts: n } = e;
-            D(t, null, n.eventCount),
+            y(t, null, n.eventCount),
                 f.default.forEachKey(n.recurrenceCounts, (e) => {
-                    D(t, e, n.eventCount - n.recurrenceCounts[e]);
+                    y(t, e, n.eventCount - n.recurrenceCounts[e]);
                 });
         },
         INVITE_RESOLVE_SUCCESS: function (e) {

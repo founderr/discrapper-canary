@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return x;
+            return A;
         }
     });
 var a = t(735250),
@@ -11,7 +11,7 @@ var a = t(735250),
     s = t(208156),
     l = t(385499),
     c = t(264165),
-    d = t(962250),
+    d = t(885006),
     u = t(624138),
     h = t(293979),
     _ = t(674563),
@@ -20,14 +20,14 @@ var a = t(735250),
 let I = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
     v = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
     N = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
-    b = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
-function x(e) {
+    x = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
+function A(e) {
     var n;
     let { title: t, onClose: o } = e,
-        { applicationIconURL: u, applicationName: x, queryParams: A, iframeUrl: f } = (0, h.b8)(e),
-        { width: p, height: w } = (0, d.b)(),
+        { applicationIconURL: u, applicationName: A, queryParams: b, iframeUrl: f } = (0, h.b8)(e),
+        { width: p, height: w } = (0, d.Z)(),
         T = i.useMemo(() => {
-            let e = Math.min(((w - b - 2 * N) * 16) / 9, v);
+            let e = Math.min(((w - x - 2 * N) * 16) / 9, v);
             return Math.max(I, Math.min(p - 2 * N, e));
         }, [p, w]);
     return (0, a.jsx)(r.ModalRoot, {
@@ -44,7 +44,7 @@ function x(e) {
                         (0, a.jsx)(r.Avatar, {
                             src: u,
                             size: r.AvatarSizes.SIZE_32,
-                            'aria-label': x,
+                            'aria-label': A,
                             className: M.applicationIcon
                         }),
                         (0, a.jsxs)('div', {
@@ -54,7 +54,7 @@ function x(e) {
                                     children: [
                                         (0, a.jsx)(r.Heading, {
                                             variant: 'heading-sm/bold',
-                                            children: x
+                                            children: A
                                         }),
                                         (0, a.jsx)(r.Text, {
                                             variant: 'text-xs/medium',
@@ -91,7 +91,7 @@ function x(e) {
                         url: f,
                         shouldRefocus: !0,
                         className: M.iframe,
-                        queryParams: A
+                        queryParams: b
                     })
                 })
             ]

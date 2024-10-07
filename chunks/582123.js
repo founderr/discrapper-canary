@@ -34,9 +34,9 @@ function N(e) {
                 var e;
                 return (null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
             }) && v === I.y0.BITE_SIZE,
-        [D, y] = i.useState(!1);
-    (0, l.Z)(() => y(!0), L ? 200 : null);
-    let b = D ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
+        [y, D] = i.useState(!1);
+    (0, l.Z)(() => D(!0), L ? 200 : null);
+    let b = y ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
         [M, P] = (0, d.US)(b),
         U = () => {
             (0, p.openUserProfileModal)({

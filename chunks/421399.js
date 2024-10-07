@@ -39,7 +39,7 @@ function R(e) {
 function v(e) {
     var t;
     let n,
-        { author: r, message: i, channel: o, userOverride: h, compact: v = !1, withMentionPrefix: C = !1, showPopout: L = !1, className: D, onClick: y, onContextMenu: b, onPopoutRequestClose: M, renderPopout: P, renderRemixTag: U = !1, decorations: w } = e,
+        { author: r, message: i, channel: o, userOverride: h, compact: v = !1, withMentionPrefix: C = !1, showPopout: L = !1, className: y, onClick: D, onContextMenu: b, onPopoutRequestClose: M, renderPopout: P, renderRemixTag: U = !1, decorations: w } = e,
         x = s.useContext(I.Z),
         G = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : x,
         { analyticsLocations: k } = (0, f.ZP)(E.Z.USERNAME),
@@ -58,7 +58,7 @@ function v(e) {
         W = {
             className: O.username,
             style: 'username' === Z && null != F ? { color: F } : void 0,
-            onClick: y,
+            onClick: D,
             onContextMenu: b,
             children: (0, a.jsx)(a.Fragment, { children: (C ? '@' : '') + B })
         },
@@ -110,7 +110,7 @@ function v(e) {
                                   tag: 'span',
                                   ...n,
                                   ...W,
-                                  className: l()(W.className, O.clickable, D)
+                                  className: l()(W.className, O.clickable, y)
                               }),
                               K
                           ]
@@ -121,7 +121,7 @@ function v(e) {
                   children: [
                       (0, a.jsx)(d.Clickable, {
                           ...W,
-                          className: l()(W.className, D)
+                          className: l()(W.className, y)
                       }),
                       K
                   ]

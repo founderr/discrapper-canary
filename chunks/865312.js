@@ -1,11 +1,11 @@
-var n = r(97131).f,
-    a = r(740362),
-    o = r(641236)('toStringTag');
-e.exports = function (e, t, r) {
-    e && !r && (e = e.prototype),
-        e &&
-            !a(e, o) &&
-            n(e, o, {
+var e = o(97131).f,
+    n = o(740362),
+    c = o(641236)('toStringTag');
+r.exports = function (r, t, o) {
+    r && !o && (r = r.prototype),
+        r &&
+            !n(r, c) &&
+            e(r, c, {
                 configurable: !0,
                 value: t
             });

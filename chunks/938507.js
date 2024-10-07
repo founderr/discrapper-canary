@@ -1,8 +1,8 @@
-var t = String;
-e.exports = function (e) {
+var n = String;
+t.exports = function (t) {
     try {
-        return t(e);
-    } catch (e) {
+        return n(t);
+    } catch (t) {
         return 'Object';
     }
 };

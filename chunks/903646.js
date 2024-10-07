@@ -274,11 +274,11 @@ function L(e, t) {
         second: +i.second
     };
 }
-function D(e, t, n = 'compatible') {
+function y(e, t, n = 'compatible') {
     return new Date(
         (function (e, t, n = 'compatible') {
             var r, i, a, s;
-            let o = y(e);
+            let o = D(e);
             if ('UTC' === t) return O(o);
             if (t === T() && 'compatible' === n) {
                 o = b(o, new _());
@@ -321,7 +321,7 @@ function D(e, t, n = 'compatible') {
         })(e, t, n)
     );
 }
-function y(e, t) {
+function D(e, t) {
     let n = 0,
         r = 0,
         i = 0,
@@ -469,7 +469,7 @@ class j {
         return F(this, e, t, n);
     }
     toDate(e) {
-        return D(this, e);
+        return y(this, e);
     }
     toString() {
         return H(this);
@@ -554,7 +554,7 @@ class K {
         }
     }
     toDate(e, t) {
-        return D(this, e, t);
+        return y(this, e, t);
     }
     toString() {
         var e, t;
@@ -564,7 +564,7 @@ class K {
         let t = p(this, e);
         if (0 === t) {
             var n, r;
-            return (n = this), (r = y(e)), I(n) - I(r);
+            return (n = this), (r = D(e)), I(n) - I(r);
         }
         return t;
     }
@@ -977,13 +977,13 @@ class eL {
         this.identifier = 'hebrew';
     }
 }
-function eD(e, t, n, r) {
+function ey(e, t, n, r) {
     return e + 365 * t + Math.floor(t / 4) + 30 * (n - 1) + r - 1;
 }
-function ey(e, t) {
+function eD(e, t) {
     let n = Math.floor((4 * (t - e)) / 1461),
-        r = 1 + Math.floor((t - eD(e, n, 1, 1)) / 30),
-        i = t + 1 - eD(e, n, r, 1);
+        r = 1 + Math.floor((t - ey(e, n, 1, 1)) / 30),
+        i = t + 1 - ey(e, n, r, 1);
     return [n, r, i];
 }
 function eb(e) {
@@ -994,13 +994,13 @@ function eM(e, t) {
 }
 class eP {
     fromJulianDay(e) {
-        let [t, n, r] = ey(1723856, e),
+        let [t, n, r] = eD(1723856, e),
             i = 'AM';
         return t <= 0 && ((i = 'AA'), (t += 5500)), new j(this, i, t, n, r);
     }
     toJulianDay(e) {
         let t = e.year;
-        return 'AA' === e.era && (t -= 5500), eD(1723856, t, e.month, e.day);
+        return 'AA' === e.era && (t -= 5500), ey(1723856, t, e.month, e.day);
     }
     getDaysInMonth(e) {
         return eM(e.year, e.month);
@@ -1023,7 +1023,7 @@ class eP {
 }
 class eU extends eP {
     fromJulianDay(e) {
-        let [t, n, r] = ey(1723856, e);
+        let [t, n, r] = eD(1723856, e);
         return new j(this, 'AA', (t += 5500), n, r);
     }
     getEras() {
@@ -1038,13 +1038,13 @@ class eU extends eP {
 }
 class ew extends eP {
     fromJulianDay(e) {
-        let [t, n, r] = ey(1824665, e),
+        let [t, n, r] = eD(1824665, e),
             i = 'CE';
         return t <= 0 && ((i = 'BCE'), (t = 1 - t)), new j(this, i, t, n, r);
     }
     toJulianDay(e) {
         let t = e.year;
-        return 'BCE' === e.era && (t = 1 - t), eD(1824665, t, e.month, e.day);
+        return 'BCE' === e.era && (t = 1 - t), ey(1824665, t, e.month, e.day);
     }
     getDaysInMonth(e) {
         let t = e.year;

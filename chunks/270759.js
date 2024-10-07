@@ -16,8 +16,8 @@ var i = n(735250),
     p = n(984370),
     g = n(518311),
     T = n(199104),
-    S = n(108427),
-    f = n(210887),
+    f = n(108427),
+    S = n(210887),
     C = n(974042),
     N = n(666286),
     A = n(596957),
@@ -45,12 +45,12 @@ t.Z = function (e) {
             });
     }, [s, n]),
         a.useEffect(() => {
-            _.Y(v.Z5c.FRIENDS), (0, S.e)('friends');
+            _.Y(v.Z5c.FRIENDS), (0, f.e)('friends');
         }, []),
         a.useEffect(() => {
             null != t && E.Z.setInitialSection(t);
         }, [t]);
-    let g = (0, c.e7)([f.Z], () => f.Z.theme),
+    let g = (0, c.e7)([S.Z], () => S.Z.theme),
         { section: x, pendingCount: b } = (0, c.cj)([C.ZP], () => C.ZP.getState()),
         M = (0, c.cj)([I.Z], () => I.Z.getSuggestionCount()),
         P = (e) => {

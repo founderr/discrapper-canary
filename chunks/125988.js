@@ -26,7 +26,7 @@ t.Z = (e) => {
         v = h && void 0 !== R && void 0 !== A && A === (null == n ? void 0 : n.id),
         C = null != _ && null === R,
         L = (0, c.Z)(v ? (C ? (null == N ? void 0 : N.avatarDecoration) : null != R ? R : O) : null != O ? O : null == N ? void 0 : N.avatarDecoration),
-        D = r.useMemo(
+        y = r.useMemo(
             () =>
                 (0, u.NZ)({
                     avatarDecoration: void 0 !== I ? I : L,
@@ -35,13 +35,13 @@ t.Z = (e) => {
                 }),
             [L, S, E, I]
         ),
-        y = r.useCallback(() => T(!0), []);
+        D = r.useCallback(() => T(!0), []);
     return {
         avatarPlaceholderSrc: d,
-        avatarDecorationSrc: D,
+        avatarDecorationSrc: y,
         isAvatarDecorationAnimating: S,
         eventHandlers: {
-            onMouseEnter: y,
+            onMouseEnter: D,
             onMouseLeave: r.useCallback(() => T(!1), [])
         }
     };

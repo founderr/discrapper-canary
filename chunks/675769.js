@@ -1,20 +1,20 @@
-var r = n(661233),
-    i = n(158698),
-    a = 0 / 0,
-    s = /^\s+|\s+$/g,
-    o = /^[-+]0x[0-9a-f]+$/i,
-    l = /^0b[01]+$/i,
-    u = /^0o[0-7]+$/i,
-    c = parseInt;
-e.exports = function (e) {
-    if ('number' == typeof e) return e;
-    if (i(e)) return a;
-    if (r(e)) {
-        var t = 'function' == typeof e.valueOf ? e.valueOf() : e;
-        e = r(t) ? t + '' : t;
+var e = n(661233),
+    o = n(158698),
+    i = 0 / 0,
+    u = /^\s+|\s+$/g,
+    c = /^[-+]0x[0-9a-f]+$/i,
+    a = /^0b[01]+$/i,
+    f = /^0o[0-7]+$/i,
+    s = parseInt;
+t.exports = function (t) {
+    if ('number' == typeof t) return t;
+    if (o(t)) return i;
+    if (e(t)) {
+        var r = 'function' == typeof t.valueOf ? t.valueOf() : t;
+        t = e(r) ? r + '' : r;
     }
-    if ('string' != typeof e) return 0 === e ? e : +e;
-    e = e.replace(s, '');
-    var n = l.test(e);
-    return n || u.test(e) ? c(e.slice(2), n ? 2 : 8) : o.test(e) ? a : +e;
+    if ('string' != typeof t) return 0 === t ? t : +t;
+    t = t.replace(u, '');
+    var n = a.test(t);
+    return n || f.test(t) ? s(t.slice(2), n ? 2 : 8) : c.test(t) ? i : +t;
 };

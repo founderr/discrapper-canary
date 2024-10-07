@@ -26,8 +26,8 @@ var i,
     v = n(925329),
     C = n(569545),
     x = n(914923),
-    N = n(165393),
-    T = n(989941),
+    T = n(165393),
+    N = n(989941),
     O = n(552282),
     A = n(345243),
     y = n(565799),
@@ -82,8 +82,8 @@ function ei(e) {
             userId: i.id,
             context: f
         }),
-        N = (0, l.e7)([U.Z], () => U.Z.isPrioritySpeaker(i.id, f)),
-        T = (0, l.e7)([P.Z], () => null != P.Z.getStreamForUser(i.id, _)),
+        T = (0, l.e7)([U.Z], () => U.Z.isPrioritySpeaker(i.id, f)),
+        N = (0, l.e7)([P.Z], () => null != P.Z.getStreamForUser(i.id, _)),
         O = a.useMemo(() => null != v && v.ownerId !== i.id && C.includes(i.id), [v, i.id, C]);
     if (d === q.OYC.ONLY_WHILE_SPEAKING && n && !x) return null;
     let A = i.id === I,
@@ -104,12 +104,12 @@ function ei(e) {
                 nick: o,
                 speaking: !1,
                 flipped: t,
-                isStreaming: T,
+                isStreaming: N,
                 iconClassName: r()(et.voiceIcon, { [et.locked]: n }),
                 isWatching: O,
                 isOverlay: !0,
                 size: u,
-                priority: N,
+                priority: T,
                 mute: y || V || S,
                 localMute: S,
                 serverMute: y || M,
@@ -243,7 +243,7 @@ class es extends (i = a.PureComponent) {
                                       className: et.gameIcon,
                                       game: o
                                   })
-                                : (0, s.jsx)(N.Z, { title: h }),
+                                : (0, s.jsx)(T.Z, { title: h }),
                             (0, s.jsxs)(Z.Z, {
                                 direction: Z.Z.Direction.VERTICAL,
                                 justify: Z.Z.Justify.BETWEEN,
@@ -407,12 +407,12 @@ function ea(e) {
         r = (0, l.e7)([P.Z], () => P.Z.getStreamerActiveStreamMetadata()),
         c = (0, l.e7)([S.ZP, z.Z, j.Z], () => {
             var e;
-            let t = (0, T.Z)(S.ZP, z.Z);
+            let t = (0, N.Z)(S.ZP, z.Z);
             return null != t ? (null === (e = j.Z.getGameByGameData(t)) || void 0 === e ? void 0 : e.id) : null;
         }),
         d = (0, m.q)(c),
         u = (0, l.cj)([S.ZP, z.Z, P.Z, G.Z], () => {
-            let e = (0, T.Z)(S.ZP, z.Z),
+            let e = (0, N.Z)(S.ZP, z.Z),
                 t = P.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: G.Z.getDisplayUserMode(),

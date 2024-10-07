@@ -1,11 +1,11 @@
-r.d(t, {
+n.d(e, {
     G: function () {
-        return o;
+        return s;
     }
 });
-var n = r(356442),
-    a = r(117654);
-function o(e) {
-    let t = (0, n.q)(e);
-    return t.acs ? t.acs : (0, a.O)();
+var r = n(356442),
+    i = n(117654);
+function s(t) {
+    let e = (0, r.q)(t);
+    return e.acs ? e.acs : (0, i.O)();
 }

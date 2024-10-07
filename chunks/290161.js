@@ -4,11 +4,11 @@ var i = n(735250),
     a = n(442837),
     o = n(481060),
     r = n(490173),
-    l = n(40851),
-    c = n(503737),
-    d = n(823453),
-    u = n(436774),
-    h = n(962745),
+    l = n(735246),
+    c = n(40851),
+    d = n(503737),
+    u = n(823453),
+    h = n(436774),
     p = n(686546),
     f = n(314910),
     _ = n(367207),
@@ -22,23 +22,23 @@ t.default = function () {
         s.useEffect(
             () => (
                 _.Z.initialize(),
-                c.Z.initialize(),
+                d.Z.initialize(),
                 g.Z.init(),
                 () => {
-                    _.Z.terminate(), c.Z.terminate();
+                    _.Z.terminate(), d.Z.terminate();
                 }
             ),
             []
         ),
         (0, i.jsxs)(s.Fragment, {
             children: [
-                (0, i.jsx)(d.Z, {}),
-                (0, i.jsx)(h.Z, {
+                (0, i.jsx)(u.Z, {}),
+                (0, i.jsx)(l.T, {
                     children: (0, i.jsxs)(m.Z, {
                         children: [
                             (0, i.jsx)(p.Co, {}),
-                            (0, i.jsx)(u.ZP, {}),
-                            (0, i.jsx)(l.Wu, {
+                            (0, i.jsx)(h.ZP, {}),
+                            (0, i.jsx)(c.Wu, {
                                 appContext: Z.IlC.OVERLAY,
                                 renderWindow: window,
                                 children: (0, i.jsxs)(f.yP, {

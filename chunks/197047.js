@@ -1,4 +1,4 @@
-var n = r(161581),
-    a = r(354848),
-    o = n.WeakMap;
-e.exports = a(o) && /native code/.test(String(o));
+var e = r(161581),
+    o = r(354848),
+    i = e.WeakMap;
+t.exports = o(i) && /native code/.test(String(i));

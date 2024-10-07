@@ -31,8 +31,8 @@ function v(e) {
     var t;
     let { statusActivity: a, profileType: h, editEnabled: p, hasEntered: m = !0, animate: v = !0, onCloseProfile: C } = e,
         { analyticsLocations: L } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
-        { trackUserProfileAction: D } = (0, I.KZ)(),
-        y = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
+        { trackUserProfileAction: y } = (0, I.KZ)(),
+        D = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
         [b] = i.useState(() => new u.V7()),
         [M, P] = i.useState(!0),
         U = i.useRef(null),
@@ -80,10 +80,10 @@ function v(e) {
                     let e = Math.min(null !== (t = w.current) && void 0 !== t ? t : W, W);
                     ea({
                         maxHeight: ''.concat(e, 'px'),
-                        delay: y ? 0 : 300,
+                        delay: D ? 0 : 300,
                         config: {
                             clamp: !0,
-                            duration: y ? 0 : 150
+                            duration: D ? 0 : 150
                         }
                     });
                 } else {
@@ -93,7 +93,7 @@ function v(e) {
                         delay: 0
                     });
                 }
-                if (y) {
+                if (D) {
                     P(!e);
                     return;
                 }
@@ -145,7 +145,7 @@ function v(e) {
                 children: [eo(), el()]
             }),
         e_ = () => {
-            D({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
+            y({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
                 null == C || C(),
                 (0, c.openModalLazy)(async () => {
                     let { default: e } = await n.e('51714').then(n.bind(n, 211065));
@@ -234,7 +234,7 @@ function v(e) {
                                       !(null === (t = er.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) && (en(!1), es(!1));
                                   },
                                   onMouseOver: () => {
-                                      D({ action: 'HOVER_CUSTOM_STATUS' }), en(!0), es(!0);
+                                      y({ action: 'HOVER_CUSTOM_STATUS' }), en(!0), es(!0);
                                   },
                                   onMouseLeave: () => {
                                       en(!1), es(!1);

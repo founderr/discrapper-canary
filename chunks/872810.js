@@ -18,13 +18,13 @@ n.d(t, {
         return b;
     },
     iV: function () {
-        return y;
+        return D;
     },
     n9: function () {
         return P;
     },
     pR: function () {
-        return D;
+        return y;
     },
     rn: function () {
         return L;
@@ -100,14 +100,14 @@ function L(e, t) {
     }),
         !a && (null == t || !t.noFocus) && A.Z.selectParticipant(e.channelId, i);
 }
-function D(e, t) {
+function y(e, t) {
     o.Z.dispatch({
         type: 'STREAM_UPDATE_SELF_HIDDEN',
         channelId: e,
         selfStreamHidden: t
     });
 }
-function y(e, t) {
+function D(e, t) {
     let { guildId: n, channelId: r } = e;
     if (null != n && C(n, r)) return;
     L(e, t);

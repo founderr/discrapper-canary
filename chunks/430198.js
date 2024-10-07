@@ -86,11 +86,11 @@ function C(e, t) {
 function L() {
     (N = {}), O.clear();
 }
-function D(e) {
+function y(e) {
     let { guild: t } = e;
     delete N[t.id];
 }
-function y(e) {
+function D(e) {
     let { guildId: t } = e;
     delete N[t];
 }
@@ -145,14 +145,14 @@ class M extends (r = l.ZP.Store) {
         CONNECTION_OPEN: L,
         OVERLAY_INITIALIZE: L,
         CACHE_LOADED_LAZY: L,
-        GUILD_CREATE: D,
-        GUILD_UPDATE: D,
-        GUILD_DELETE: D,
-        GUILD_ROLE_CREATE: y,
-        GUILD_ROLE_UPDATE: y,
-        GUILD_ROLE_DELETE: y,
-        IMPERSONATE_UPDATE: y,
-        IMPERSONATE_STOP: y,
+        GUILD_CREATE: y,
+        GUILD_UPDATE: y,
+        GUILD_DELETE: y,
+        GUILD_ROLE_CREATE: D,
+        GUILD_ROLE_UPDATE: D,
+        GUILD_ROLE_DELETE: D,
+        IMPERSONATE_UPDATE: D,
+        IMPERSONATE_STOP: D,
         CHANNEL_CREATE: b,
         CHANNEL_DELETE: b,
         CHANNEL_UPDATES: function (e) {

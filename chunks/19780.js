@@ -143,10 +143,10 @@ function L() {
     if (null == r) return !1;
     (O = r.getDuration()), r.destroy(), (r = null), (N = null);
 }
-function D() {
+function y() {
     g = null;
 }
-function y(e) {
+function D(e) {
     let { channel: t } = e;
     if (null == r || r.channelId !== t.id) return !1;
     L();
@@ -292,8 +292,8 @@ let P = new M(
                   if (null == r || (null != e.guildId && e.guildId !== r.guildId) || (null != e.channelId && e.channelId !== r.channelId)) return !1;
                   r.connect(e.endpoint, e.token);
               },
-              CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: D,
-              REMOTE_SESSION_CONNECT: D,
+              CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: y,
+              REMOTE_SESSION_CONNECT: y,
               CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: function () {
                   A = null;
               },
@@ -302,8 +302,8 @@ let P = new M(
                   if (null == r || r.guildId !== t.id) return !1;
                   L();
               },
-              CHANNEL_DELETE: y,
-              THREAD_DELETE: y,
+              CHANNEL_DELETE: D,
+              THREAD_DELETE: D,
               CALL_DELETE: function (e) {
                   let { channelId: t } = e;
                   if (null == r || r.channelId !== t) return !1;

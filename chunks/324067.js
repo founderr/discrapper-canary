@@ -80,7 +80,7 @@ function C(e, t) {
 function L() {
     A(h.I_8);
 }
-class D extends (r = o.ZP.Store) {
+class y extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(E.ZP, f.Z, d.default, _.Z, c.Z), this.syncWith([c.Z], L);
     }
@@ -94,7 +94,7 @@ class D extends (r = o.ZP.Store) {
     }
 }
 (s = 'GuildCategoryStore'),
-    (a = 'displayName') in (i = D)
+    (a = 'displayName') in (i = y)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -102,7 +102,7 @@ class D extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new D(l.Z, {
+    (t.Z = new y(l.Z, {
         CHANNEL_SELECT: function (e) {
             let { guildId: t } = e;
             if (((p = null != t ? t : null), null == t || null != I[t])) return !1;

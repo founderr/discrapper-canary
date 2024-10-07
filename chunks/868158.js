@@ -42,15 +42,15 @@ let S = new E.Z('ReadyPayloadUtils'),
 function O(e, t) {
     var n;
     let { guilds: r, merged_members: i, merged_presences: a, ...s } = e,
-        o = D(N, null == a ? void 0 : a.friends),
+        o = y(N, null == a ? void 0 : a.friends),
         l =
             null !==
                 (n =
                     null == r
                         ? void 0
                         : r.map((e, t) => {
-                              let n = D(N, null == a ? void 0 : a.guilds[t]),
-                                  r = D(N, null == i ? void 0 : i[t]);
+                              let n = y(N, null == a ? void 0 : a.guilds[t]),
+                                  r = y(N, null == i ? void 0 : i[t]);
                               return {
                                   ...e,
                                   unavailable: void 0 === e.voice_states,
@@ -112,13 +112,13 @@ function v(e, t, n) {
                 };
         }
     })(n);
-    let p = D((N = s().keyBy(a, (e) => e.id)), l);
+    let p = y((N = s().keyBy(a, (e) => e.id)), l);
     null == u ||
         u.forEach((e) => {
             let t = e.recipient_ids;
             null != t && (e.recipients = t.map((e) => (i()(null != N[e], 'Missing user in compressed ready payload'), N[e]))), delete e.recipient_ids;
         });
-    let S = null !== (r = null == _ ? void 0 : _.map((e, t) => (!0 === e.unavailable ? e : ((e.members = D(N, null == c ? void 0 : c[t])), b(e))))) && void 0 !== r ? r : [],
+    let S = null !== (r = null == _ ? void 0 : _.map((e, t) => (!0 === e.unavailable ? e : ((e.members = y(N, null == c ? void 0 : c[t])), b(e))))) && void 0 !== r ? r : [],
         A = C(t, _, (e) => b(e));
     return (
         null != A && S.push(A),
@@ -158,7 +158,7 @@ function L(e, t) {
         s
     );
 }
-function D(e, t) {
+function y(e, t) {
     let n = [];
     return (
         null == t ||
@@ -170,13 +170,13 @@ function D(e, t) {
         n
     );
 }
-function y(e) {
+function D(e) {
     let t = g[e];
     return delete g[e], t;
 }
 function b(e) {
     var t, n, r, i, a, s, o, l, u, c, d, _;
-    let E = y(e.id);
+    let E = D(e.id);
     if ('partial' !== e.data_mode)
         return {
             id: e.id,
@@ -236,7 +236,7 @@ function b(e) {
 }
 function M(e, t) {
     var n, r, i, a, s, o, l, u, c, d, _, E;
-    if ((null == t && (t = y(e.id)), 'partial' !== e.data_mode))
+    if ((null == t && (t = D(e.id)), 'partial' !== e.data_mode))
         return {
             id: e.id,
             emojis: e.emojis,

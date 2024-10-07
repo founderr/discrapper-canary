@@ -3,13 +3,13 @@ n.d(t, {
         return O;
     },
     DY: function () {
-        return y;
+        return D;
     },
     FG: function () {
         return r;
     },
     u: function () {
-        return D;
+        return y;
     }
 }),
     n(411104),
@@ -141,7 +141,7 @@ let A = Object.freeze({}),
                 : null
         );
     };
-class D extends (i = o.Component) {
+class y extends (i = o.Component) {
     static getDerivedStateFromProps(e, t) {
         return t.shouldShowTooltip && null == e.text ? { shouldShowTooltip: !1 } : null;
     }
@@ -256,8 +256,8 @@ class D extends (i = o.Component) {
             });
     }
 }
-g(D, 'Colors', r),
-    g(D, 'defaultProps', {
+g(y, 'Colors', r),
+    g(y, 'defaultProps', {
         hideOnClick: !0,
         position: 'top',
         color: 'primary',
@@ -267,9 +267,9 @@ g(D, 'Colors', r),
         allowOverflow: !1,
         overflowOnly: !1
     });
-let y = (e) => {
+let D = (e) => {
     let { children: t, className: n, element: r = 'div', ...i } = e;
-    return (0, s.jsx)(D, {
+    return (0, s.jsx)(y, {
         ...i,
         children: (e) =>
             o.createElement(

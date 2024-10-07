@@ -1,6 +1,6 @@
-var r = n(147018),
-    i = n(213265);
-r(
+var e = r(147018),
+    i = r(213265);
+e(
     {
         target: 'RegExp',
         proto: !0,

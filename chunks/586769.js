@@ -1,4 +1,4 @@
-var r = n(325237);
-e.exports = function () {
-    return r.Date.now();
+var e = n(325237);
+t.exports = function () {
+    return e.Date.now();
 };

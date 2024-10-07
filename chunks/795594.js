@@ -363,7 +363,7 @@ s.Z = () => {
                                     children: [
                                         N(),
                                         g
-                                            .sort((e, s) => e.application.name.localeCompare(s.application.name))
+                                            .sort((e, s) => Number(s.id) - Number(e.id))
                                             .map((e) =>
                                                 (0, n.jsx)(
                                                     V,

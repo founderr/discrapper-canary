@@ -1,5 +1,5 @@
-var r = n(938507),
+var e = r(938507),
     i = TypeError;
-e.exports = function (e, t) {
-    if (!delete e[t]) throw i('Cannot delete property ' + r(t) + ' of ' + r(e));
+n.exports = function (n, t) {
+    if (!delete n[t]) throw i('Cannot delete property ' + e(t) + ' of ' + e(n));
 };

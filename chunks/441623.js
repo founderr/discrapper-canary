@@ -96,7 +96,7 @@ function L(e) {
         }),
         (A = new Set(g.slice(0, 5)));
 }
-class D extends (r = l.ZP.PersistedStore) {
+class y extends (r = l.ZP.PersistedStore) {
     initialize(e) {
         (S = T()),
             null != e && ((S.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (S.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (S.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap })),
@@ -137,9 +137,9 @@ class D extends (r = l.ZP.PersistedStore) {
         return O;
     }
 }
-m(D, 'displayName', 'PremiumGiftingIntentStore'),
-    m(D, 'persistKey', 'PremiumGiftingIntentStore'),
-    m(D, 'migrations', [
+m(y, 'displayName', 'PremiumGiftingIntentStore'),
+    m(y, 'persistKey', 'PremiumGiftingIntentStore'),
+    m(y, 'migrations', [
         (e) => {
             var t, n;
             return null == e
@@ -151,7 +151,7 @@ m(D, 'displayName', 'PremiumGiftingIntentStore'),
                   };
         }
     ]),
-    (t.Z = new D(u.Z, {
+    (t.Z = new y(u.Z, {
         CONNECTION_OPEN: function () {
             C();
         },

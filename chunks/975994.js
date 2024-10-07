@@ -29,8 +29,8 @@ var r = n(235003),
     v = n(701809),
     C = n(340132),
     L = n(355180),
-    D = n(778341),
-    y = n(368480),
+    y = n(778341),
+    D = n(368480),
     b = n(453440),
     M = n(910188),
     P = n(733710),
@@ -140,26 +140,26 @@ function q(e, t) {
             'aria-labelledby': e['aria-labelledby'] || A.id
         }),
         L = (0, V.useRef)(0),
-        D = null != t.selectionManager.focusedKey && t.isOpen ? t.collection.getItem(t.selectionManager.focusedKey) : void 0,
-        y = null !== (n = null == D ? void 0 : D.parentKey) && void 0 !== n ? n : null,
+        y = null != t.selectionManager.focusedKey && t.isOpen ? t.collection.getItem(t.selectionManager.focusedKey) : void 0,
+        D = null !== (n = null == y ? void 0 : y.parentKey) && void 0 !== n ? n : null,
         b = null !== (r = t.selectionManager.focusedKey) && void 0 !== r ? r : null,
-        M = (0, V.useRef)(y),
+        M = (0, V.useRef)(D),
         P = (0, V.useRef)(b);
     (0, V.useEffect)(() => {
-        if ((0, F.ad)() && null != D && b !== P.current) {
+        if ((0, F.ad)() && null != y && b !== P.current) {
             let e = t.selectionManager.isSelected(b),
-                n = null != y ? t.collection.getItem(y) : null,
+                n = null != D ? t.collection.getItem(D) : null,
                 r = (null == n ? void 0 : n['aria-label']) || ('string' == typeof (null == n ? void 0 : n.rendered) ? n.rendered : '') || '',
                 i = E.format('focusAnnouncement', {
-                    isGroupChange: n && y !== M.current,
+                    isGroupChange: n && D !== M.current,
                     groupTitle: r,
                     groupCount: n ? [...(0, H._P)(n, t.collection)].length : 0,
-                    optionText: D['aria-label'] || D.textValue || '',
+                    optionText: y['aria-label'] || y.textValue || '',
                     isSelected: e
                 });
             (0, G.xQ)(i);
         }
-        (M.current = y), (P.current = b);
+        (M.current = D), (P.current = b);
     });
     let U = (0, H.is)(t.collection),
         w = (0, V.useRef)(U),
@@ -204,7 +204,7 @@ function q(e, t) {
                 'aria-expanded': f['aria-expanded'],
                 'aria-controls': t.isOpen ? h.id : void 0,
                 'aria-autocomplete': 'list',
-                'aria-activedescendant': D ? (0, B.x3)(t, D.key) : void 0,
+                'aria-activedescendant': y ? (0, B.x3)(t, y.key) : void 0,
                 onTouchEnd: (e) => {
                     if (_ || d) return;
                     if (e.timeStamp - L.current < 500) {
@@ -262,8 +262,8 @@ z = {
     'pt-PT': v.Z,
     'ro-RO': C.Z,
     'ru-RU': L.Z,
-    'sk-SK': D.Z,
-    'sl-SI': y.Z,
+    'sk-SK': y.Z,
+    'sl-SI': D.Z,
     'sr-SP': b.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,

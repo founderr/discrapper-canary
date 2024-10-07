@@ -94,8 +94,8 @@ function A(e) {
           });
 }
 function N(e) {
-    let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: O, srcIsAnimated: R, onClose: v, shouldHideMediaOptions: C = !1, obscure: L = !1, ...D } = e,
-        { width: y, height: b } = (0, E.zp)(s, l),
+    let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: O, srcIsAnimated: R, onClose: v, shouldHideMediaOptions: C = !1, obscure: L = !1, ...y } = e,
+        { width: D, height: b } = (0, E.zp)(s, l),
         M = o.tq && null != v;
     i.useEffect(() => {
         if (null != v)
@@ -110,7 +110,7 @@ function N(e) {
         ? (e) => {
               e.stopPropagation(), e.preventDefault();
           }
-        : D.onContextMenu;
+        : y.onContextMenu;
     return (0, r.jsxs)('div', {
         className: T.wrapper,
         children: [
@@ -127,7 +127,7 @@ function N(e) {
                             shouldLink: !1,
                             width: s,
                             height: l,
-                            maxWidth: y,
+                            maxWidth: D,
                             maxHeight: b,
                             children: c,
                             animated: !e && u,
@@ -135,7 +135,7 @@ function N(e) {
                             responsive: d,
                             srcIsAnimated: R,
                             onContextMenu: P,
-                            ...D
+                            ...y
                         },
                         t
                     )

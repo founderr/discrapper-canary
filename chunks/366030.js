@@ -31,8 +31,8 @@ var r = n(735250),
     v = n(977392),
     C = n(134433),
     L = n(753194),
-    D = n(458034),
-    y = n(856651),
+    y = n(458034),
+    D = n(856651),
     b = n(981631),
     M = n(228168),
     P = n(689938),
@@ -42,13 +42,13 @@ function w(e) {
         { connectionType: n, connectionMetadataField: i, operator: a, value: s, description: o } = e;
     if (null != o)
         switch (a) {
-            case y.iO.LESS_THAN:
+            case D.iO.LESS_THAN:
                 t = P.Z.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                     description: o,
                     count: Math.max(0, Number(s) - 1)
                 });
                 break;
-            case y.iO.GREATER_THAN:
+            case D.iO.GREATER_THAN:
                 t = P.Z.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                     description: o,
                     count: Math.max(0, Number(s) + 1)
@@ -250,7 +250,7 @@ function k(e) {
                           channelId: o.id,
                           guildId: a.id,
                           onGetRolesClicked: () => {
-                              (0, D.Am)(a.id);
+                              (0, y.Am)(a.id);
                           },
                           onOpenProfile: () => {
                               (0, S.openUserProfileModal)({

@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var a = n(626135),
-    r = n(981631);
-function o(e) {
-    let { problem: t, feedback: n, reportType: o, reportId: l = null, rating: s = null, dontShowAgain: i } = e;
-    a.default.track(r.rMx.IAR_FEEDBACK_SUBMITTED, {
+    o = n(981631);
+function s(e) {
+    let { problem: t, feedback: n, reportType: s, reportId: l = null, rating: r = null, dontShowAgain: i } = e;
+    a.default.track(o.rMx.IAR_FEEDBACK_SUBMITTED, {
         reason: t,
-        report_type: o,
+        report_type: s,
         report_id: l,
-        rating: s,
+        rating: r,
         feedback: n,
         dont_show_again: i
     });

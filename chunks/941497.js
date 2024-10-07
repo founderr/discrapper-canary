@@ -1,6 +1,6 @@
-var r = n(192291),
-    i = n(82246).findLastIndex,
-    a = r.aTypedArray;
-(0, r.exportTypedArrayMethod)('findLastIndex', function (e) {
-    return i(a(this), e, arguments.length > 1 ? arguments[1] : void 0);
+var e = n(192291),
+    o = n(82246).findLastIndex,
+    i = e.aTypedArray;
+(0, e.exportTypedArrayMethod)('findLastIndex', function (t) {
+    return o(i(this), t, arguments.length > 1 ? arguments[1] : void 0);
 });

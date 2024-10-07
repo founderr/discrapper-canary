@@ -86,8 +86,8 @@ function A() {
                 color: r.Z.colors.ICON_MUTED
             }
         },
-        { title: f, description: C, color: U, Icon: m } = g[e.state],
-        h = Object.keys(g).length;
+        { title: f, description: C, color: m, Icon: p } = g[e.state],
+        U = Object.keys(g).length;
     return (0, i.jsxs)(o.Card, {
         className: S.container,
         outline: !1,
@@ -111,7 +111,7 @@ function A() {
                                 children: f.format({
                                     hook: (e) =>
                                         (0, i.jsx)(o.Text, {
-                                            style: { color: U.css },
+                                            style: { color: m.css },
                                             variant: 'heading-lg/bold',
                                             tag: 'span',
                                             children: e
@@ -140,7 +140,7 @@ function A() {
                                         ref: (e) => (I.current[parseInt(a)] = e),
                                         children: [
                                             l
-                                                ? (0, i.jsx)(m, {
+                                                ? (0, i.jsx)(p, {
                                                       className: S.marker,
                                                       color: s.color
                                                   })
@@ -148,7 +148,7 @@ function A() {
                                                       className: S.marker,
                                                       style: {
                                                           marginLeft: 0 === n ? -6 : 0,
-                                                          marginRight: n === h - 1 ? -6 : 0
+                                                          marginRight: n === U - 1 ? -6 : 0
                                                       },
                                                       children: (0, i.jsx)('div', { className: S.empty })
                                                   }),

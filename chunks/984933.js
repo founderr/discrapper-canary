@@ -35,8 +35,8 @@ var r,
     v = n(689938);
 let C = 'SELECTABLE',
     L = 'VOCAL',
-    D = null,
-    y = {},
+    y = null,
+    D = {},
     b = {},
     M = {},
     P = null,
@@ -67,13 +67,13 @@ function F(e, t) {
     return n - r;
 }
 function V() {
-    (y = {}), (U = {}), (b = {}), (M = {}), null != D && H(D);
+    (D = {}), (U = {}), (b = {}), (M = {}), null != y && H(y);
 }
 function H(e) {
     var t;
     let n = B(e);
     return (
-        (y[e] = n),
+        (D[e] = n),
         (U[e] = []),
         !(function (e) {
             let { id: t } = e,
@@ -132,7 +132,7 @@ function H(e) {
             (function (e, t) {
                 let n = g.Z.getGuild(t);
                 if (null != n && W(e, n)) return !0;
-                let r = y[t];
+                let r = D[t];
                 null == r && (r = H(t));
                 let { [C]: i, [L]: a } = r;
                 for (let { channel: t } of i) if (W(e, t)) return !0;
@@ -150,18 +150,18 @@ function Z(e) {
         guild: { id: t }
     } = e;
     if (null == t) return !1;
-    (y[t] = void 0), D === t && H(t);
+    (D[t] = void 0), y === t && H(t);
 }
 function Y(e) {
     let {
         channel: { guild_id: t }
     } = e;
     if (null == t) return !1;
-    (y[t] = void 0), t === D && H(t);
+    (D[t] = void 0), t === y && H(t);
 }
 function j(e) {
     let { guildId: t } = e;
-    (y[t] = void 0), t === D && H(t);
+    (D[t] = void 0), t === y && H(t);
 }
 function W(e, t) {
     return u.Db(
@@ -178,7 +178,7 @@ function K(e, t) {
     P = t;
     let r = null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : null;
     if (null == r) return !1;
-    (y[r] = void 0), r === D && H(r);
+    (D[r] = void 0), r === y && H(r);
 }
 function z() {
     H(R.I_8);
@@ -188,12 +188,12 @@ class q extends (r = c.ZP.Store) {
         this.waitFor(g.Z, S.ZP, T.Z, A.Z, m.default, _.Z, f.Z), this.syncWith([f.Z], z);
     }
     getAllGuilds() {
-        return y;
+        return D;
     }
     getChannels(e) {
         var t;
         let n;
-        return null != e ? (null == (n = y[(t = e)]) && (n = H(t)), n) : x;
+        return null != e ? (null == (n = D[(t = e)]) && (n = H(t)), n) : x;
     }
     getFirstChannelOfType(e, t, n) {
         let r = this.getChannels(e)[n].find(t);
@@ -272,7 +272,7 @@ class q extends (r = c.ZP.Store) {
         BACKGROUND_SYNC: V,
         CHANNEL_SELECT: function (e) {
             let { guildId: t } = e;
-            if (((D = null != t ? t : null), null == t || null != y[t])) return !1;
+            if (((y = null != t ? t : null), null == t || null != D[t])) return !1;
             H(t);
         },
         CONNECTION_OPEN: V,
@@ -284,12 +284,12 @@ class q extends (r = c.ZP.Store) {
             let {
                 guild: { id: t }
             } = e;
-            return delete y[t], delete b[t], delete M[t], delete U[t], !0;
+            return delete D[t], delete b[t], delete M[t], delete U[t], !0;
         },
         GUILD_MEMBER_UPDATE: function (e) {
             let { guildId: t, user: n } = e;
             if (m.default.getId() !== n.id) return !1;
-            (y[t] = void 0), t === D && H(t);
+            (D[t] = void 0), t === y && H(t);
         },
         CHANNEL_CREATE: Y,
         CHANNEL_DELETE: Y,
@@ -298,7 +298,7 @@ class q extends (r = c.ZP.Store) {
                 n = !1;
             for (let e of t) {
                 let { guild_id: t } = e;
-                if (null != t) (y[t] = void 0), (n = !0), D === t && H(t);
+                if (null != t) (D[t] = void 0), (n = !0), y === t && H(t);
             }
             return n;
         },

@@ -64,10 +64,10 @@ function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return C(c()().startOf(e).add(t, e), e);
 }
-function D(e, t, n) {
+function y(e, t, n) {
     return C(c()(e, t).local(), n);
 }
-function y() {
+function D() {
     return {
         [N.Z.Messages.SEARCH_SHORTCUT_TODAY]: () => L('day'),
         [N.Z.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => L('day', -1),
@@ -93,8 +93,8 @@ function w(e) {
 function x(e, t) {
     let n, r;
     let i = e.getFullMatch().trim().toLowerCase(),
-        a = y()[i];
-    return null != a ? ([n, r] = a()) : O().has(i) ? ([n, r] = D(i, 'MMMM', 'month')) : R().has(i) ? ([n, r] = D(i, 'dddd', 'day')) : v().has(i) ? ([n, r] = D(i, 'YYYY', 'year')) : ([n, r] = D(i, A.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
+        a = D()[i];
+    return null != a ? ([n, r] = a()) : O().has(i) ? ([n, r] = y(i, 'MMMM', 'month')) : R().has(i) ? ([n, r] = y(i, 'dddd', 'day')) : v().has(i) ? ([n, r] = y(i, 'YYYY', 'year')) : ([n, r] = y(i, A.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
 }
 function G(e) {
     let t = e.getMatch(1),
@@ -129,7 +129,7 @@ function k(e) {
     return null != t && '' !== t && (e.setData('has', t), !0);
 }
 function B() {
-    return [...Array.from(O()), ...Array.from(R()), ...Array.from(v()), ...Object.keys(y())];
+    return [...Array.from(O()), ...Array.from(R()), ...Array.from(v()), ...Object.keys(D())];
 }
 function F() {
     return l().sample(B());

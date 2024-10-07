@@ -25,8 +25,8 @@ var r,
     v = n(413523),
     C = n(354459),
     L = n(981631);
-let D = new f.Z('ChannelRTCStore'),
-    y = Object.freeze([]),
+let y = new f.Z('ChannelRTCStore'),
+    D = Object.freeze([]),
     b = [],
     M = {},
     P = {},
@@ -183,26 +183,26 @@ class ea extends (r = d.ZP.Store) {
     }
     getParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray()) && void 0 !== t ? t : y;
+        return null !== (t = H(e).toArray()) && void 0 !== t ? t : D;
     }
     getSpeakingParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(v.sI.SPEAKING)) && void 0 !== t ? t : y;
+        return null !== (t = H(e).toArray(v.sI.SPEAKING)) && void 0 !== t ? t : D;
     }
     getFilteredParticipants(e) {
         return k[e] ? H(e).toArray(v.sI.FILTERED) : H(e).toArray();
     }
     getVideoParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(v.sI.VIDEO)) && void 0 !== t ? t : y;
+        return null !== (t = H(e).toArray(v.sI.VIDEO)) && void 0 !== t ? t : D;
     }
     getStreamParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(v.sI.STREAM)) && void 0 !== t ? t : y;
+        return null !== (t = H(e).toArray(v.sI.STREAM)) && void 0 !== t ? t : D;
     }
     getActivityParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(v.sI.ACTIVITY)) && void 0 !== t ? t : y;
+        return null !== (t = H(e).toArray(v.sI.ACTIVITY)) && void 0 !== t ? t : D;
     }
     getParticipant(e, t) {
         return H(e).getParticipant(t);
@@ -330,7 +330,7 @@ class ea extends (r = d.ZP.Store) {
                     let { ownerId: e } = (0, p.my)(n);
                     e === m.default.getId() && Y(e, [t]);
                 } catch (e) {
-                    D.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
+                    y.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
                 }
                 !q(r) && (G[t] = !1);
             }

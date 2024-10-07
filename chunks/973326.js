@@ -1,6 +1,6 @@
-var r = n(936940),
-    i = n(161581).RegExp;
-e.exports = r(function () {
-    var e = i('.', 's');
-    return !(e.dotAll && e.exec('\n') && 's' === e.flags);
+var e = r(936940),
+    i = r(161581).RegExp;
+n.exports = e(function () {
+    var n = i('.', 's');
+    return !(n.dotAll && n.exec('\n') && 's' === n.flags);
 });

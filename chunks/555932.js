@@ -32,8 +32,8 @@ function p(e) {
         C = t.premiumTier === _.Eu4.TIER_3,
         {
             progressBarFillWidthFactor: L,
-            isProgressBarAnimationComplete: D,
-            setShouldFireConfetti: y,
+            isProgressBarAnimationComplete: y,
+            setShouldFireConfetti: D,
             shouldFireConfetti: b,
             tierMarkerAnimationPosition: M
         } = (function (e) {
@@ -134,9 +134,9 @@ function p(e) {
                         {
                             confettiTriggerRef: S,
                             guild: t,
-                            isProgressBarAnimationComplete: D,
+                            isProgressBarAnimationComplete: y,
                             setConfettiCount: T,
-                            setShouldFireConfetti: y,
+                            setShouldFireConfetti: D,
                             tier: e,
                             tierMarkerAnimationPosition: M,
                             children: (0, u.nW)(e)

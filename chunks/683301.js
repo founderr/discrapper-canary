@@ -40,8 +40,8 @@ let g = {
     v = null,
     C = S.Hk,
     L = null,
-    D = [],
-    y = (0, p.P)(),
+    y = [],
+    D = (0, p.P)(),
     b = !1;
 function M(e) {
     return {
@@ -95,10 +95,10 @@ class P extends (a = f.ZP.Store) {
         return null === (t = A[T.Lcj.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts;
     }
     getSeenGuildIds() {
-        return D;
+        return y;
     }
     getLoadId() {
-        return y;
+        return D;
     }
     getIsReady() {
         return b;
@@ -131,7 +131,7 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_FETCH_SUCCESS: function (e) {
             let { guilds: t, section: n, total: r, offset: i, limit: a } = e;
-            (O = !1), (v = Date.now()), (y = (0, p.P)());
+            (O = !1), (v = Date.now()), (D = (0, p.P)());
             let s = E().map(t, M);
             A = {
                 ...A,
@@ -305,10 +305,10 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_GUILD_SEEN: function (e) {
             let { guildId: t } = e;
-            !D.includes(t) && D.push(t);
+            !y.includes(t) && y.push(t);
         },
         GUILD_DISCOVERY_CLEAR_SEEN_GUILDS: function () {
-            D = [];
+            y = [];
         },
         GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
             let { forClanDiscovery: t } = e;

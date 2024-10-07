@@ -341,11 +341,11 @@ var r;
         var L = function (e) {
                 return v(t.useContext(R), e);
             },
-            D = function (e) {
+            y = function (e) {
                 return (0, e.children)(L('mounts <ElementsConsumer>'));
             };
-        D.propTypes = { children: f.func.isRequired };
-        var y = ['on', 'session'],
+        y.propTypes = { children: f.func.isRequired };
+        var D = ['on', 'session'],
             b = t.createContext(null);
         b.displayName = 'CustomCheckoutSdkContext';
         var M = function (e, t) {
@@ -377,7 +377,7 @@ var r;
                         }
                     }
                     return i;
-                })(e, y);
+                })(e, D);
                 return t ? r(r({}, n), t) : r(r({}, n), e.session());
             },
             w = function (e) {
@@ -526,31 +526,31 @@ var r;
                                   v = x('mounts <'.concat(i, '>')),
                                   C = 'elements' in v ? v.elements : null,
                                   L = 'customCheckoutSdk' in v ? v.customCheckoutSdk : null,
-                                  D = s(t.useState(null), 2),
-                                  y = D[0],
-                                  b = D[1],
+                                  y = s(t.useState(null), 2),
+                                  D = y[0],
+                                  b = y[1],
                                   M = t.useRef(null),
                                   P = t.useRef(null);
-                              h(y, 'blur', c),
-                                  h(y, 'focus', d),
-                                  h(y, 'escape', f),
-                                  h(y, 'click', I),
-                                  h(y, 'loaderror', m),
-                                  h(y, 'loaderstart', T),
-                                  h(y, 'networkschange', g),
-                                  h(y, 'confirm', A),
-                                  h(y, 'cancel', N),
-                                  h(y, 'shippingaddresschange', O),
-                                  h(y, 'shippingratechange', R),
-                                  h(y, 'change', E),
+                              h(D, 'blur', c),
+                                  h(D, 'focus', d),
+                                  h(D, 'escape', f),
+                                  h(D, 'click', I),
+                                  h(D, 'loaderror', m),
+                                  h(D, 'loaderstart', T),
+                                  h(D, 'networkschange', g),
+                                  h(D, 'confirm', A),
+                                  h(D, 'cancel', N),
+                                  h(D, 'shippingaddresschange', O),
+                                  h(D, 'shippingratechange', R),
+                                  h(D, 'change', E),
                                   _ &&
                                       (r =
                                           'expressCheckout' === e
                                               ? _
                                               : function () {
-                                                    _(y);
+                                                    _(D);
                                                 }),
-                                  h(y, 'ready', r),
+                                  h(D, 'ready', r),
                                   t.useLayoutEffect(
                                       function () {
                                           if (null === M.current && null !== P.current && (C || L)) {
@@ -687,7 +687,7 @@ var r;
             (e.CardNumberElement = Y),
             (e.CustomCheckoutProvider = w),
             (e.Elements = C),
-            (e.ElementsConsumer = D),
+            (e.ElementsConsumer = y),
             (e.EmbeddedCheckout = V),
             (e.EmbeddedCheckoutProvider = function (e) {
                 var n = e.stripe,

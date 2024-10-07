@@ -347,8 +347,8 @@ function C(e, t) {
                 }),
             '' === this.operator)
         )
-            return '' === this.value || ((n = new v(e.value, t)), y(this.value, n, t));
-        if ('' === e.operator) return '' === e.value || ((n = new v(this.value, t)), y(e.semver, n, t));
+            return '' === this.value || ((n = new v(e.value, t)), D(this.value, n, t));
+        if ('' === e.operator) return '' === e.value || ((n = new v(this.value, t)), D(e.semver, n, t));
         var n,
             r = ('>=' === this.operator || '>' === this.operator) && ('>=' === e.operator || '>' === e.operator),
             i = ('<=' === this.operator || '<' === this.operator) && ('<=' === e.operator || '<' === e.operator),
@@ -377,7 +377,7 @@ function C(e, t) {
         var t = this.options.loose;
         e = e.trim();
         var n = t ? s[l.HYPHENRANGELOOSE] : s[l.HYPHENRANGE];
-        (e = e.replace(n, D)), r('hyphen replace', e), (e = e.replace(s[l.COMPARATORTRIM], '$1$2$3')), r('comparator trim', e, s[l.COMPARATORTRIM]), (e = (e = (e = e.replace(s[l.TILDETRIM], '$1~')).replace(s[l.CARETTRIM], '$1^')).split(/\s+/).join(' '));
+        (e = e.replace(n, y)), r('hyphen replace', e), (e = e.replace(s[l.COMPARATORTRIM], '$1$2$3')), r('comparator trim', e, s[l.COMPARATORTRIM]), (e = (e = (e = e.replace(s[l.TILDETRIM], '$1~')).replace(s[l.CARETTRIM], '$1^')).split(/\s+/).join(' '));
         var i = t ? s[l.COMPARATORLOOSE] : s[l.COMPARATOR],
             a = e
                 .split(' ')
@@ -492,7 +492,7 @@ function C(e, t) {
 function L(e) {
     return !e || 'x' === e.toLowerCase() || '*' === e;
 }
-function D(e, t, n, r, i, a, s, o, l, u, c, d, _) {
+function y(e, t, n, r, i, a, s, o, l, u, c, d, _) {
     return (t = L(n) ? '' : L(r) ? '>=' + n + '.0.0' : L(i) ? '>=' + n + '.' + r + '.0' : '>=' + t), (t + ' ' + (o = L(l) ? '' : L(u) ? '<' + (+l + 1) + '.0.0' : L(c) ? '<' + l + '.' + (+u + 1) + '.0' : d ? '<=' + l + '.' + u + '.' + c + '-' + d : '<=' + o)).trim();
 }
 v.prototype.test = function (e) {
@@ -524,7 +524,7 @@ v.prototype.test = function (e) {
             return !0;
     return !1;
 };
-function y(e, t, n) {
+function D(e, t, n) {
     try {
         t = new v(t, n);
     } catch (e) {
@@ -532,7 +532,7 @@ function y(e, t, n) {
     }
     return t.test(e);
 }
-(t.satisfies = y),
+(t.satisfies = D),
     (t.maxSatisfying = function (e, t, n) {
         var r = null,
             i = null;
@@ -612,7 +612,7 @@ function b(e, t, n, r) {
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');
     }
-    if (y(e, t, r)) return !1;
+    if (D(e, t, r)) return !1;
     for (var i, a, s, o, l, u = 0; u < t.set.length; ++u) {
         var c = t.set[u],
             d = null,

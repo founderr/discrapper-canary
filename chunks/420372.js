@@ -121,8 +121,8 @@ t.Z = function (e) {
         }, []),
         h = a.useCallback(() => d(!1), []),
         T = (0, _.ye)(t),
-        S = (0, o.useToken)(o.tokens.colors.BACKGROUND_PRIMARY).hex(),
-        f = (0, E.ZP)(n, S),
+        f = (0, o.useToken)(o.tokens.colors.BACKGROUND_PRIMARY).hex(),
+        S = (0, E.ZP)(n, f),
         C = t.bot,
         { botBannerUrl: N, botBannerUrlAnimated: A } = a.useMemo(
             () =>
@@ -148,7 +148,7 @@ t.Z = function (e) {
         );
     return (0, i.jsx)('div', {
         className: I.banner,
-        style: { backgroundColor: f },
+        style: { backgroundColor: S },
         onMouseEnter: u,
         onFocus: u,
         onMouseLeave: h,

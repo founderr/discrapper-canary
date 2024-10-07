@@ -24,12 +24,12 @@ var r = n(687249),
     v = '[object Object]',
     C = {};
 (C[O] = C['[object Array]'] = C['[object ArrayBuffer]'] = C['[object DataView]'] = C['[object Boolean]'] = C['[object Date]'] = C['[object Float32Array]'] = C['[object Float64Array]'] = C['[object Int8Array]'] = C['[object Int16Array]'] = C['[object Int32Array]'] = C['[object Map]'] = C['[object Number]'] = C[v] = C['[object RegExp]'] = C['[object Set]'] = C['[object String]'] = C['[object Symbol]'] = C['[object Uint8Array]'] = C['[object Uint8ClampedArray]'] = C['[object Uint16Array]'] = C['[object Uint32Array]'] = !0), (C['[object Error]'] = C[R] = C['[object WeakMap]'] = !1);
-e.exports = function e(t, n, L, D, y, b) {
+e.exports = function e(t, n, L, y, D, b) {
     var M,
         P = 1 & n,
         U = 2 & n,
         w = 4 & n;
-    if ((L && (M = y ? L(t, D, y, b) : L(t)), void 0 !== M)) return M;
+    if ((L && (M = D ? L(t, y, D, b) : L(t)), void 0 !== M)) return M;
     if (!g(t)) return t;
     var x = m(t);
     if (x) {
@@ -38,10 +38,10 @@ e.exports = function e(t, n, L, D, y, b) {
         var G = f(t),
             k = G == R || '[object GeneratorFunction]' == G;
         if (T(t)) return l(t, P);
-        if (G == v || G == O || (k && !y)) {
+        if (G == v || G == O || (k && !D)) {
             if (((M = U || k ? {} : I(t)), !P)) return U ? d(t, o(M, t)) : c(t, s(M, t));
         } else {
-            if (!C[G]) return y ? t : {};
+            if (!C[G]) return D ? t : {};
             M = p(t, G, P);
         }
     }

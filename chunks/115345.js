@@ -48,13 +48,13 @@ var r = n(470079),
     v = n(630114),
     C = n(506712),
     L = n(468788),
-    D = n(789662),
-    y = n(981631),
+    y = n(789662),
+    D = n(981631),
     b = n(490897),
     M = n(526761),
     P = n(689938);
 function U(e, t) {
-    let [n, i] = r.useState(D.nf),
+    let [n, i] = r.useState(y.nf),
         [o, l] = r.useState({});
     (0, E.D)();
     let u = (0, s.Wu)([I.Z], () => Object.values(I.Z.getGuilds())),
@@ -63,7 +63,7 @@ function U(e, t) {
             for (let i of u)
                 r[i.id] = (function (e, t, n, r, i) {
                     var a;
-                    let [s, o, l] = f.Z.hasConsented(y.pjP.PERSONALIZATION) ? (0, C.q)(e, t, n, r, !0) : (0, C.A)(e, n),
+                    let [s, o, l] = f.Z.hasConsented(D.pjP.PERSONALIZATION) ? (0, C.q)(e, t, n, r, !0) : (0, C.A)(e, n),
                         u = null !== (a = n.filter((t) => t.guild_id === e.id)[0]) && void 0 !== a ? a : {},
                         c = (0, v.Z)(e, null != i ? i : s, u, r, t);
                     return {
@@ -72,7 +72,7 @@ function U(e, t) {
                         debugReason: l,
                         actions: c,
                         overrideMode: i,
-                        messagePain: u.messages === D.XR.High,
+                        messagePain: u.messages === y.XR.High,
                         visitsALot: o,
                         muted: T.ZP.isMuted(e.id) && !T.ZP.isTemporarilyMuted(e.id)
                     };
@@ -107,8 +107,8 @@ function U(e, t) {
                             return -1 === t ? i.length : t;
                         }),
                         o = [
-                            ['Use Grey Dot', new Set([D.AR.UseGreyDot])],
-                            ['Keep As Is', new Set([D.AR.KeepAsIs])]
+                            ['Use Grey Dot', new Set([y.AR.UseGreyDot])],
+                            ['Keep As Is', new Set([y.AR.KeepAsIs])]
                         ].map((e) => {
                             let [t, n] = e,
                                 r = s
@@ -135,8 +135,8 @@ function U(e, t) {
 }
 function w(e, t) {
     return Object.values(I.Z.getGuilds()).some((n) => {
-        let [r] = f.Z.hasConsented(y.pjP.PERSONALIZATION) ? (0, C.q)(n, D.nf, e, t, !1) : (0, C.A)(n, e);
-        return r === D.AR.UseGreyDot;
+        let [r] = f.Z.hasConsented(D.pjP.PERSONALIZATION) ? (0, C.q)(n, y.nf, e, t, !1) : (0, C.A)(n, e);
+        return r === y.AR.UseGreyDot;
     });
 }
 function x() {
@@ -148,7 +148,7 @@ function x() {
         (e = (0, g.mB)(e, M.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, g.mB)(e, M.vc.UNREADS_ONLY_MENTIONS, !1)), (t[i.id] = { flags: e });
     }
     B(t),
-        S.default.track(y.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
+        S.default.track(D.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
             auto_migrated: !0,
             num_unread_guids_after: e.filter((e) => p.default.hasUnread(e.id)).length
         });
@@ -186,7 +186,7 @@ async function k(e, t) {
         let t = Object.values(e)
                 .filter((e) => {
                     var t;
-                    return (null !== (t = e.overrideMode) && void 0 !== t ? t : e.mode) === D.AR.UseGreyDot;
+                    return (null !== (t = e.overrideMode) && void 0 !== t ? t : e.mode) === y.AR.UseGreyDot;
                 })
                 .map((e) => {
                     var t;
@@ -200,11 +200,11 @@ async function k(e, t) {
                 unmuted_server_ids: t.filter((e) => T.ZP.isMuted(e.plan.guildId)).map((e) => e.plan.guildId)
             };
         return () => {
-            S.default.track(y.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
+            S.default.track(D.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
                 ...n,
                 auto_migrated: !0,
                 pre_selected_server_ids: Object.values(e)
-                    .filter((e) => e.mode === D.AR.UseGreyDot)
+                    .filter((e) => e.mode === y.AR.UseGreyDot)
                     .map((e) => e.guildId),
                 final_selected_server_ids: t.map((e) => e.plan.guildId),
                 num_unread_guids_after: O.default.keys(e).filter((e) => p.default.hasUnread(e)).length,
@@ -283,7 +283,7 @@ async function V() {
         : (0, R.$U)('Backup from '.concat(new Date().toLocaleDateString()));
 }
 async function H() {
-    o.K.set('turnedOffNewNotifications', !0), S.default.track(y.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(I.Z.getGuilds()).filter((e) => T.ZP.resolveGuildUnreadSetting(e) === b.i.ONLY_MENTIONS).length });
+    o.K.set('turnedOffNewNotifications', !0), S.default.track(D.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(I.Z.getGuilds()).filter((e) => T.ZP.resolveGuildUnreadSetting(e) === b.i.ONLY_MENTIONS).length });
     let e = await (0, R.Tn)(),
         t = a().sortBy(e, (e) => new Date(e.recorded_at).getTime());
     if (t.length > 0) {

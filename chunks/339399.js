@@ -1,49 +1,49 @@
-var r = n(796774),
-    i = n(680625),
-    a = Array,
-    s = Math.abs,
-    o = Math.pow,
-    l = Math.floor,
-    u = Math.log,
-    c = Math.LN2,
-    d = function (e) {
-        var t = i(e),
-            n = s(e - t);
-        return n > 0.5 || (0.5 === n && t % 2 != 0) ? t + r(e) : t;
+var e = n(796774),
+    o = n(680625),
+    i = Array,
+    u = Math.abs,
+    f = Math.pow,
+    a = Math.floor,
+    c = Math.log,
+    s = Math.LN2,
+    y = function (t) {
+        var r = o(t),
+            n = u(t - r);
+        return n > 0.5 || (0.5 === n && r % 2 != 0) ? r + e(t) : r;
     };
-e.exports = {
-    pack: function (e, t, n) {
-        var r,
-            i,
-            _,
-            E = a(n),
-            f = 8 * n - t - 1,
-            h = (1 << f) - 1,
-            p = h >> 1,
-            I = 23 === t ? o(2, -24) - o(2, -77) : 0,
-            m = e < 0 || (0 === e && 1 / e < 0) ? 1 : 0,
-            T = 0;
-        for ((e = s(e)) != e || e === 1 / 0 ? ((i = e != e ? 1 : 0), (r = h)) : ((_ = o(2, -(r = l(u(e) / c)))), e * _ < 1 && (r--, (_ *= 2)), r + p >= 1 ? (e += I / _) : (e += I * o(2, 1 - p)), e * _ >= 2 && (r++, (_ /= 2)), r + p >= h ? ((i = 0), (r = h)) : r + p >= 1 ? ((i = d((e * _ - 1) * o(2, t))), (r += p)) : ((i = d(e * o(2, p - 1) * o(2, t))), (r = 0))); t >= 8; ) (E[T++] = 255 & i), (i /= 256), (t -= 8);
-        for (r = (r << t) | i, f += t; f > 0; ) (E[T++] = 255 & r), (r /= 256), (f -= 8);
-        return (E[--T] |= 128 * m), E;
+t.exports = {
+    pack: function (t, r, n) {
+        var e,
+            o,
+            p,
+            h = i(n),
+            v = 8 * n - r - 1,
+            d = (1 << v) - 1,
+            g = d >> 1,
+            l = 23 === r ? f(2, -24) - f(2, -77) : 0,
+            A = t < 0 || (0 === t && 1 / t < 0) ? 1 : 0,
+            w = 0;
+        for ((t = u(t)) != t || t === 1 / 0 ? ((o = t != t ? 1 : 0), (e = d)) : ((p = f(2, -(e = a(c(t) / s)))), t * p < 1 && (e--, (p *= 2)), e + g >= 1 ? (t += l / p) : (t += l * f(2, 1 - g)), t * p >= 2 && (e++, (p /= 2)), e + g >= d ? ((o = 0), (e = d)) : e + g >= 1 ? ((o = y((t * p - 1) * f(2, r))), (e += g)) : ((o = y(t * f(2, g - 1) * f(2, r))), (e = 0))); r >= 8; ) (h[w++] = 255 & o), (o /= 256), (r -= 8);
+        for (e = (e << r) | o, v += r; v > 0; ) (h[w++] = 255 & e), (e /= 256), (v -= 8);
+        return (h[--w] |= 128 * A), h;
     },
-    unpack: function (e, t) {
+    unpack: function (t, r) {
         var n,
-            r = e.length,
-            i = 8 * r - t - 1,
-            a = (1 << i) - 1,
-            s = a >> 1,
-            l = i - 7,
-            u = r - 1,
-            c = e[u--],
-            d = 127 & c;
-        for (c >>= 7; l > 0; ) (d = 256 * d + e[u--]), (l -= 8);
-        for (n = d & ((1 << -l) - 1), d >>= -l, l += t; l > 0; ) (n = 256 * n + e[u--]), (l -= 8);
-        if (0 === d) d = 1 - s;
+            e = t.length,
+            o = 8 * e - r - 1,
+            i = (1 << o) - 1,
+            u = i >> 1,
+            a = o - 7,
+            c = e - 1,
+            s = t[c--],
+            y = 127 & s;
+        for (s >>= 7; a > 0; ) (y = 256 * y + t[c--]), (a -= 8);
+        for (n = y & ((1 << -a) - 1), y >>= -a, a += r; a > 0; ) (n = 256 * n + t[c--]), (a -= 8);
+        if (0 === y) y = 1 - u;
         else {
-            if (d === a) return n ? NaN : c ? -1 / 0 : 1 / 0;
-            (n += o(2, t)), (d -= s);
+            if (y === i) return n ? NaN : s ? -1 / 0 : 1 / 0;
+            (n += f(2, r)), (y -= u);
         }
-        return (c ? -1 : 1) * n * o(2, d - t);
+        return (s ? -1 : 1) * n * f(2, y - r);
     }
 };

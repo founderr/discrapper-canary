@@ -52,7 +52,7 @@ function L(e) {
                   })
           });
 }
-let D = (e) => {
+let y = (e) => {
     let { className: t, text: n } = e,
         a = i.useRef(null),
         o = i.useRef(null),
@@ -88,13 +88,13 @@ let D = (e) => {
     );
 };
 t.Z = (e) => {
-    let { activities: t, applicationStream: n, className: i, textClassName: a, emojiClassName: s, animate: u = !0, hideTooltip: f = !1, hideEmoji: m = !1, user: y, hasQuest: b } = e,
+    let { activities: t, applicationStream: n, className: i, textClassName: a, emojiClassName: s, animate: u = !0, hideTooltip: f = !1, hideEmoji: m = !1, user: D, hasQuest: b } = e,
         M = null != t ? t.find((e) => e.type === R.IIU.CUSTOM_STATUS) : null,
-        P = (0, o.e7)([T.default], () => T.default.getId() === (null == y ? void 0 : y.id)),
+        P = (0, o.e7)([T.default], () => T.default.getId() === (null == D ? void 0 : D.id)),
         U = (0, o.e7)([p.Z], () => (P ? p.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === R.IIU.HANG_STATUS) : null)),
         w = (0, o.e7)([N.Z, S.Z], () => {
             var e;
-            return null != U && null != y ? S.Z.getChannel(null === (e = N.Z.getVoiceStateForUser(y.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return null != U && null != D ? S.Z.getChannel(null === (e = N.Z.getVoiceStateForUser(D.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
         { enableHangStatus: x } = h.n.useExperiment(
             {
@@ -121,7 +121,7 @@ t.Z = (e) => {
               className: s
           }));
     let F = (0, _.aK)('activity-status-web'),
-        V = (0, o.e7)([A.Z], () => (null != y ? A.Z.getStatus(y.id) : null)),
+        V = (0, o.e7)([A.Z], () => (null != D ? A.Z.getStatus(D.id) : null)),
         H = null !== V && [R.Skl.OFFLINE, R.Skl.INVISIBLE].includes(V),
         Z = (0, d.Z)(t, n, void 0, B, F),
         Y = null == Z ? void 0 : Z.activityText,
@@ -132,7 +132,7 @@ t.Z = (e) => {
               className: i,
               children: [
                   k,
-                  (0, r.jsx)(D, {
+                  (0, r.jsx)(y, {
                       text: Y,
                       className: a
                   }),

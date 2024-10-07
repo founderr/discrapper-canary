@@ -13,8 +13,8 @@ var i = n(735250),
 t.Z = function (e) {
     var t, n, m, I, p;
     let { application: g, showCategory: T = !1 } = e,
-        S = (0, o.Z)({ application: g }),
-        f = null === (t = g.categories) || void 0 === t ? void 0 : t[0],
+        f = (0, o.Z)({ application: g }),
+        S = null === (t = g.categories) || void 0 === t ? void 0 : t[0],
         C = (0, r.lf)(g),
         N = (0, r.vJ)(g),
         A = a.useMemo(
@@ -26,11 +26,11 @@ t.Z = function (e) {
                 }),
             [g]
         ),
-        v = (null !== (I = null === (n = g.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || S.length > 0,
+        v = (null !== (I = null === (n = g.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || f.length > 0,
         Z = (0, i.jsx)(l.Z, {
             application: g,
             textVariant: 'text-xs/normal',
-            mutualGuilds: S,
+            mutualGuilds: f,
             mutualGuildShownMax: 3,
             guildIconSize: l.x.SMALL,
             compact: !0
@@ -102,7 +102,7 @@ t.Z = function (e) {
                                   className: h.appCategory,
                                   variant: 'text-xs/normal',
                                   color: 'text-muted',
-                                  children: null != f ? f.name : ' '
+                                  children: null != S ? S.name : ' '
                               })
                             : null,
                         (0, i.jsx)(s.Text, {

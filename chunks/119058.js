@@ -32,8 +32,8 @@ function T(e, t, n) {
         v,
         C,
         L,
-        D,
         y,
+        D,
         b,
         M,
         P,
@@ -45,7 +45,7 @@ function T(e, t, n) {
         B = null !== (T = null !== (S = null == n ? void 0 : n.locale) && void 0 !== S ? S : k.locale) && void 0 !== T ? T : E.Z,
         F = (0, c.Z)(null !== (g = null !== (A = null !== (N = null !== (O = null == n ? void 0 : n.firstWeekContainsDate) && void 0 !== O ? O : null == n ? void 0 : null === (R = n.locale) || void 0 === R ? void 0 : null === (v = R.options) || void 0 === v ? void 0 : v.firstWeekContainsDate) && void 0 !== N ? N : k.firstWeekContainsDate) && void 0 !== A ? A : null === (C = k.locale) || void 0 === C ? void 0 : null === (L = C.options) || void 0 === L ? void 0 : L.firstWeekContainsDate) && void 0 !== g ? g : 1);
     if (!(F >= 1 && F <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
-    var V = (0, c.Z)(null !== (D = null !== (y = null !== (b = null !== (M = null == n ? void 0 : n.weekStartsOn) && void 0 !== M ? M : null == n ? void 0 : null === (P = n.locale) || void 0 === P ? void 0 : null === (U = P.options) || void 0 === U ? void 0 : U.weekStartsOn) && void 0 !== b ? b : k.weekStartsOn) && void 0 !== y ? y : null === (w = k.locale) || void 0 === w ? void 0 : null === (x = w.options) || void 0 === x ? void 0 : x.weekStartsOn) && void 0 !== D ? D : 0);
+    var V = (0, c.Z)(null !== (y = null !== (D = null !== (b = null !== (M = null == n ? void 0 : n.weekStartsOn) && void 0 !== M ? M : null == n ? void 0 : null === (P = n.locale) || void 0 === P ? void 0 : null === (U = P.options) || void 0 === U ? void 0 : U.weekStartsOn) && void 0 !== b ? b : k.weekStartsOn) && void 0 !== D ? D : null === (w = k.locale) || void 0 === w ? void 0 : null === (x = w.options) || void 0 === x ? void 0 : x.weekStartsOn) && void 0 !== y ? y : 0);
     if (!(V >= 0 && V <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
     if (!B.localize) throw RangeError('locale must contain localize property');
     if (!B.formatLong) throw RangeError('locale must contain formatLong property');

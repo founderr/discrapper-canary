@@ -69,11 +69,11 @@ function L(e, t, n, i) {
                   i
               );
 }
-function D(e, t) {
+function y(e, t) {
     var n, r;
     return e > 0 ? '' : null !== (r = null === (n = R[t]) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : '';
 }
-function y(e) {
+function D(e) {
     return e === c.EO.VIDEO;
 }
 class b extends i.PureComponent {
@@ -132,7 +132,7 @@ class b extends i.PureComponent {
                 backgroundColor: o ? void 0 : s,
                 ...i
             },
-            children: [y(n) ? null : this.renderGIF(), null != t ? t(e) : null]
+            children: [D(n) ? null : this.renderGIF(), null != t ? t(e) : null]
         });
     }
     constructor(e) {
@@ -153,7 +153,7 @@ class b extends i.PureComponent {
             color: null == n ? l().sample(N) : n,
             loaded: !1
         }),
-            !y(t) && ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src));
+            !D(t) && ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src));
     }
 }
 class M extends i.PureComponent {
@@ -362,7 +362,7 @@ class M extends i.PureComponent {
                               sections: [R.length],
                               columns: e,
                               itemGutter: 12,
-                              getItemKey: D,
+                              getItemKey: y,
                               getItemHeight: C,
                               renderItem: L,
                               chunkSize: 128

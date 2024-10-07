@@ -1,5 +1,5 @@
-var r = n(974971);
-e.exports = function (e) {
-    var t = r(e);
-    return 'BigInt64Array' === t || 'BigUint64Array' === t;
+var e = n(974971);
+t.exports = function (t) {
+    var r = e(t);
+    return 'BigInt64Array' === r || 'BigUint64Array' === r;
 };

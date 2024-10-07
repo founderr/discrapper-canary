@@ -170,8 +170,8 @@ function v(e) {
 }
 let C = String.fromCodePoint(917631),
     L = String.fromCodePoint(127988),
-    D = /^[\u{E0061}-\u{E007A}]$/u;
-function y(e, t) {
+    y = /^[\u{E0061}-\u{E007A}]$/u;
+function D(e, t) {
     var n;
     if (!0 !== t && !g.test(e))
         return [
@@ -187,7 +187,7 @@ function y(e, t) {
         let t = a[e];
         if (null != r && '' !== r) {
             if (t === C) (t = r + t), (r = '');
-            else if (D.test(t)) {
+            else if (y.test(t)) {
                 r += t;
                 continue;
             } else i.push(v(r)), (r = '');
@@ -236,14 +236,14 @@ t.ZP = {
     },
     maybeTranslateSurrogatesToInlineEmoji: function (e) {
         if (!g.test(e)) return null;
-        let t = y(e, !0)
+        let t = D(e, !0)
             .map((e) => ('text' === e.type ? e.text : e.emojiName))
             .join('');
         return t === e ? null : t;
     },
-    findInlineEmojisFromSurrogates: y,
+    findInlineEmojisFromSurrogates: D,
     translateSurrogatesToInlineEmoji: function (e) {
-        return y(e)
+        return D(e)
             .map((e) => ('text' === e.type ? e.text : e.emojiName))
             .join('');
     },

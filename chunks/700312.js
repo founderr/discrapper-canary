@@ -1,21 +1,21 @@
-var r = n(581031),
-    i = n(959318),
-    a = n(714050),
-    s = n(676125),
-    o = r(''.charAt),
-    l = r(''.charCodeAt),
-    u = r(''.slice),
-    c = function (e) {
-        return function (t, n) {
-            var r,
-                c,
-                d = a(s(t)),
-                _ = i(n),
-                E = d.length;
-            return _ < 0 || _ >= E ? (e ? '' : void 0) : (r = l(d, _)) < 55296 || r > 56319 || _ + 1 === E || (c = l(d, _ + 1)) < 56320 || c > 57343 ? (e ? o(d, _) : r) : e ? u(d, _, _ + 2) : ((r - 55296) << 10) + (c - 56320) + 65536;
+var e = r(581031),
+    i = r(959318),
+    u = r(714050),
+    o = r(676125),
+    a = e(''.charAt),
+    c = e(''.charCodeAt),
+    s = e(''.slice),
+    f = function (n) {
+        return function (t, r) {
+            var e,
+                f,
+                l = u(o(t)),
+                h = i(r),
+                v = l.length;
+            return h < 0 || h >= v ? (n ? '' : void 0) : (e = c(l, h)) < 55296 || e > 56319 || h + 1 === v || (f = c(l, h + 1)) < 56320 || f > 57343 ? (n ? a(l, h) : e) : n ? s(l, h, h + 2) : ((e - 55296) << 10) + (f - 56320) + 65536;
         };
     };
-e.exports = {
-    codeAt: c(!1),
-    charAt: c(!0)
+n.exports = {
+    codeAt: f(!1),
+    charAt: f(!0)
 };

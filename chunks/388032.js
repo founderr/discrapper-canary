@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         getAvailableLocales: function () {
-            return r.u;
+            return l.u;
         },
         international: function () {
             return u;
@@ -17,47 +17,47 @@ n.r(t),
         }
     }),
     n(47120);
-var o = n(735250),
-    a = n(470079),
-    s = n(65084),
-    i = n(302454),
-    l = n.n(i),
-    r = n(424395);
+var r = n(735250),
+    i = n(470079),
+    a = n(65084),
+    s = n(302454),
+    o = n.n(s),
+    l = n(424395);
 let u = {},
-    c = new s.IntlManager('en-US').withFormatters({
-        format: (0, s.makeReactFormatter)({
+    c = new a.IntlManager('en-US').withFormatters({
+        format: (0, a.makeReactFormatter)({
             $_: () => '',
-            $i: (e, t) => (0, o.jsx)('em', { children: e }, t),
-            $b: (e, t) => (0, o.jsx)('strong', { children: e }, t),
-            $del: (e, t) => (0, o.jsx)('del', { children: e }, t),
-            $p: (e, t) => (0, o.jsx)('p', { children: e }, t),
-            $code: (e, t) => (0, o.jsx)('code', { children: e }, t),
+            $i: (e, t) => (0, r.jsx)('em', { children: e }, t),
+            $b: (e, t) => (0, r.jsx)('strong', { children: e }, t),
+            $del: (e, t) => (0, r.jsx)('del', { children: e }, t),
+            $p: (e, t) => (0, r.jsx)('p', { children: e }, t),
+            $code: (e, t) => (0, r.jsx)('code', { children: e }, t),
             $link: (e, t) => {
-                let [o, ...s] = e,
-                    { Anchor: i } = n(756715),
-                    r = {};
-                switch (typeof o) {
+                let [r, ...a] = e,
+                    { Anchor: s } = n(756715),
+                    l = {};
+                switch (typeof r) {
                     case 'string':
-                        r.href = l().sanitizeUrl(o);
+                        l.href = o().sanitizeUrl(r);
                         break;
                     case 'object':
                         var u;
-                        (r.onClick = null !== (u = o.onClick) && void 0 !== u ? u : o), (r.onContextMenu = o.onContextMenu);
+                        (l.onClick = null !== (u = r.onClick) && void 0 !== u ? u : r), (l.onContextMenu = r.onContextMenu);
                         break;
                     default:
-                        r.onClick = o;
+                        l.onClick = r;
                 }
-                return (0, a.createElement)(
-                    i,
+                return (0, i.createElement)(
+                    s,
                     {
-                        ...r,
+                        ...l,
                         key: t
                     },
-                    s
+                    a
                 );
             }
         }),
-        formatToPlainString: s.stringFormatter,
-        formatToMarkdownString: s.markdownFormatter,
-        formatToParts: s.astFormatter
+        formatToPlainString: a.stringFormatter,
+        formatToMarkdownString: a.markdownFormatter,
+        formatToParts: a.astFormatter
     });

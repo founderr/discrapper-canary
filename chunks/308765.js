@@ -209,7 +209,7 @@ let i = {
         neverLoadBeforeConnectionOpen: !0
     },
     SearchManager: {
-        actions: ['USER_SETTINGS_PROTO_UPDATE', 'I18N_LOAD_SUCCESS', 'POST_CONNECTION_OPEN'],
+        actions: ['USER_SETTINGS_PROTO_UPDATE', 'POST_CONNECTION_OPEN'],
         inlineRequire: () => n(941467).Z,
         neverLoadBeforeConnectionOpen: !0
     },

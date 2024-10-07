@@ -49,8 +49,8 @@ let N = Object.freeze({
     v = null,
     C = new Set(),
     L = !1,
-    D = null,
-    y = !1,
+    y = null,
+    D = !1,
     b = !1,
     M = new Set(),
     P = !1;
@@ -80,7 +80,7 @@ function F(e) {
                 break;
             case S.BmY.DISPATCH:
                 null != e.payloads &&
-                    ((y = !0),
+                    ((D = !0),
                     e.payloads.forEach((e) =>
                         (function (e) {
                             var t, n, r, i, a, o;
@@ -140,7 +140,7 @@ function F(e) {
                             }
                         })(e)
                     ),
-                    (y = !1));
+                    (D = !1));
         }
 }
 class V extends (r = i.ZP.PersistedStore) {
@@ -263,7 +263,7 @@ A(V, 'displayName', 'OverlayStore'),
         },
         OVERLAY_START_SESSION: function () {
             s.Z.addInterceptor((e) => {
-                if (y || !G.has(e.type)) return !1;
+                if (D || !G.has(e.type)) return !1;
                 if ('CHANNEL_SELECT' === e.type) {
                     let { guildId: t, channelId: n } = e;
                     return (

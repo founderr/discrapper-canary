@@ -72,8 +72,8 @@ r.inherits(T, I),
         a(this.k.length === n.length);
         for (var C = 0; C < n.length; C += 2) {
             var L = R,
-                D = v,
-                y = (function (e, t) {
+                y = v,
+                D = (function (e, t) {
                     var n = s(e, t, 14) ^ s(e, t, 18) ^ s(t, e, 9);
                     return n < 0 && (n += 4294967296), n;
                 })(T, S),
@@ -93,30 +93,30 @@ r.inherits(T, I),
                 w = this.k[C + 1],
                 x = n[C],
                 G = n[C + 1],
-                k = h(L, D, y, b, M, P, U, w, x, G),
-                B = p(L, D, y, b, M, P, U, w, x, G);
+                k = h(L, y, D, b, M, P, U, w, x, G),
+                B = p(L, y, D, b, M, P, U, w, x, G);
             (L = (function (e, t) {
                 var n = s(e, t, 28) ^ s(t, e, 2) ^ s(t, e, 7);
                 return n < 0 && (n += 4294967296), n;
             })(r, i)),
-                (D = (function (e, t) {
+                (y = (function (e, t) {
                     var n = o(e, t, 28) ^ o(t, e, 2) ^ o(t, e, 7);
                     return n < 0 && (n += 4294967296), n;
                 })(r, i)),
-                (y = (function (e, t, n, r, i) {
+                (D = (function (e, t, n, r, i) {
                     var a = (e & n) ^ (e & i) ^ (n & i);
                     return a < 0 && (a += 4294967296), a;
                 })(r, i, l, u, E, f));
             var F = d(
                     L,
-                    D,
                     y,
+                    D,
                     (b = (function (e, t, n, r, i, a) {
                         var s = (t & r) ^ (t & a) ^ (r & a);
                         return s < 0 && (s += 4294967296), s;
                     })(r, i, l, u, E, f))
                 ),
-                V = _(L, D, y, b);
+                V = _(L, y, D, b);
             (R = N), (v = O), (N = g), (O = A), (g = T), (A = S), (T = d(I, m, k, B)), (S = _(m, m, k, B)), (I = E), (m = f), (E = l), (f = u), (l = r), (u = i), (r = d(k, B, F, V)), (i = _(k, B, F, V));
         }
         c(this.h, 0, r, i), c(this.h, 2, l, u), c(this.h, 4, E, f), c(this.h, 6, I, m), c(this.h, 8, T, S), c(this.h, 10, g, A), c(this.h, 12, N, O), c(this.h, 14, R, v);

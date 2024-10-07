@@ -21,8 +21,8 @@ var i,
     v = n(998033),
     C = n(181364),
     x = n(435064),
-    N = n(668761),
-    T = n(358446),
+    T = n(668761),
+    N = n(358446),
     O = n(695346),
     A = n(314897),
     y = n(592125),
@@ -145,7 +145,7 @@ class en extends (a = f.ZP.Store) {
                                   case G.nc.GO_LIVE_NON_VOICE:
                                       return (0, Z.Z)(e);
                                   case G.nc.KEYBIND_INDICATORS:
-                                      return (0, T.Z)(e);
+                                      return (0, N.Z)(e);
                                   case G.nc.NEWS:
                                   default:
                                       return (0, C.Z)(e);
@@ -237,16 +237,16 @@ class en extends (a = f.ZP.Store) {
                       });
                   },
                   CLIPS_SAVE_CLIP_START: function () {
-                      ee((0, N.f)(W.Z.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE));
+                      ee((0, T.f)(W.Z.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE));
                   },
                   CLIPS_SAVE_CLIP: function () {
-                      ee((0, N.f)(W.Z.Messages.CLIPS_NOTIFICATION_TITLE.format({ duration: (0, U.A)(x.Z.getSettings().clipsLength / 1000, !0) })));
+                      ee((0, T.f)(W.Z.Messages.CLIPS_NOTIFICATION_TITLE.format({ duration: (0, U.A)(x.Z.getSettings().clipsLength / 1000, !0) })));
                   },
                   CLIPS_SAVE_CLIP_ERROR: function () {
-                      ee((0, N.f)(W.Z.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE));
+                      ee((0, T.f)(W.Z.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE));
                   },
                   STREAM_START: function (e) {
-                      let t = (0, N.y)();
+                      let t = (0, T.y)();
                       null != t && ee(t);
                   }
               }

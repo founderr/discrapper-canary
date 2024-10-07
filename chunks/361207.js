@@ -1,65 +1,65 @@
 n.d(t, {
     DW: function () {
-        return d;
+        return u;
     },
     Gn: function () {
-        return E;
+        return p;
     },
     t3: function () {
-        return _;
+        return f;
     },
     w4: function () {
-        return u;
+        return c;
     }
 });
-var r = n(525654),
-    i = n.n(r),
-    a = n(271579),
-    s = n(314897),
-    o = n(981631);
-let l = 'linux';
-function u(e) {
+var s = n(525654),
+    a = n.n(s),
+    r = n(271579),
+    o = n(314897),
+    l = n(981631);
+let i = 'linux';
+function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0;
     return ''
-        .concat(o.fzT.DESKTOP)
+        .concat(l.fzT.DESKTOP)
         .concat(t ? '/ptb' : '', '?platform=')
         .concat(e)
         .concat(null != n ? '&format='.concat(n) : '');
 }
-function c() {
+function d() {
     var e;
-    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = i().os) || void 0 === e ? void 0 : e.family;
-    return null == t ? 'win' : -1 !== t.indexOf('Ubuntu') || -1 !== t.indexOf('Debian') || -1 !== t.indexOf('Fedora') || -1 !== t.indexOf('Red Hat') || -1 !== t.indexOf('SuSE') || -1 !== t.indexOf('Linux') ? l : -1 !== t.indexOf('OS X') ? 'osx' : 'win';
+    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = a().os) || void 0 === e ? void 0 : e.family;
+    return null == t ? 'win' : -1 !== t.indexOf('Ubuntu') || -1 !== t.indexOf('Debian') || -1 !== t.indexOf('Fedora') || -1 !== t.indexOf('Red Hat') || -1 !== t.indexOf('SuSE') || -1 !== t.indexOf('Linux') ? i : -1 !== t.indexOf('OS X') ? 'osx' : 'win';
 }
-function d(e) {
+function u(e) {
     return {
         win: 'Windows',
         osx: 'Mac',
-        [l]: 'Linux'
-    }[c(e)];
+        [i]: 'Linux'
+    }[d(e)];
 }
-function _() {
-    let e = c();
-    return u(e, !1, e === l ? 'tar.gz' : null);
+function f() {
+    let e = d();
+    return c(e, !1, e === i ? 'tar.gz' : null);
 }
-function E(e, t, n) {
-    let r = null != n ? n.toString() : null;
+function p(e, t, n) {
+    let s = null != n ? n.toString() : null;
     switch (t) {
         case 'iOS':
-            return (0, a.ZP)(null != r ? r : 'https://itunes.apple.com/us/app/discord-chat-for-games/id985746746', {
+            return (0, r.ZP)(null != s ? s : 'https://itunes.apple.com/us/app/discord-chat-for-games/id985746746', {
                 utmSource: e,
-                fingerprint: s.default.getFingerprint(),
-                attemptId: (0, a.WS)()
+                fingerprint: o.default.getFingerprint(),
+                attemptId: (0, r.WS)()
             });
         case 'Android':
-            return (0, a.ZP)(null != r ? r : 'https://play.google.com/store/apps/details', {
+            return (0, r.ZP)(null != s ? s : 'https://play.google.com/store/apps/details', {
                 utmSource: e,
                 id: 'com.discord',
-                fingerprint: s.default.getFingerprint(),
-                attemptId: (0, a.WS)()
+                fingerprint: o.default.getFingerprint(),
+                attemptId: (0, r.WS)()
             });
         default:
-            return null != r ? r : 'https://www.discord.com';
+            return null != s ? s : 'https://www.discord.com';
     }
 }

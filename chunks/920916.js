@@ -35,8 +35,8 @@ var r = n(735250),
     v = n(475595),
     C = n(566078),
     L = n(114732),
-    D = n(46140),
-    y = n(675654),
+    y = n(46140),
+    D = n(675654),
     b = n(689938),
     M = n(837053);
 function P() {
@@ -52,7 +52,7 @@ function U(e) {
         g = i.useRef(new o.qA()),
         R = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         C = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
-        D = i.useMemo(() => (0, v.fh)(l, v.Bd.HERO), [l]),
+        y = i.useMemo(() => (0, v.fh)(l, v.Bd.HERO), [l]),
         b = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         [P, U] = i.useState(!0 === I || b ? 'claimed' : 'loading');
     i.useEffect(() => {
@@ -88,7 +88,7 @@ function U(e) {
                                 secondaryColor: l.config.colors.secondary,
                                 decoration: f,
                                 decorationName: E.messages.name,
-                                backgroundUrl: D.url,
+                                backgroundUrl: y.url,
                                 isSaving: 'applying' === P,
                                 onClose: a,
                                 onConfirm: () => {
@@ -103,8 +103,8 @@ function U(e) {
                 (0, r.jsx)(p.Z, {
                     confettiTarget: m.current,
                     confettiCanvas: T,
-                    sprites: y.CA,
-                    colors: y.Br
+                    sprites: D.CA,
+                    colors: D.Br
                 })
         ]
     });
@@ -198,7 +198,7 @@ function x(e) {
                             onClick: _,
                             children: b.Z.Messages.COLLECTIBLES_USE_NOW
                         }),
-                        (0, R.zK)(t, D.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(w, { quest: t })
+                        (0, R.zK)(t, y.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(w, { quest: t })
                     ]
                 })
             })
@@ -220,7 +220,7 @@ function G(e) {
             return [r, () => (null == r ? Promise.reject() : ((0, d.cV)(r), P()))];
         })(null !== (n = null == _ ? void 0 : _.skuId) && void 0 !== n ? n : null);
     if (null == _) return null;
-    let I = (0, R.zK)(a, D.S7.IN_HOUSE_CONSOLE_QUEST);
+    let I = (0, R.zK)(a, y.S7.IN_HOUSE_CONSOLE_QUEST);
     return (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || I
         ? (0, r.jsx)(U, {
               onClose: o,

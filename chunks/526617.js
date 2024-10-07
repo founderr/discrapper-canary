@@ -33,8 +33,8 @@ var r = n(735250),
     v = n(259580),
     C = n(626135),
     L = n(74538),
-    D = n(135869),
-    y = n(763296),
+    y = n(135869),
+    D = n(763296),
     b = n(697426),
     M = n(242291),
     P = n(22382),
@@ -193,7 +193,7 @@ function $(e) {
 }
 function J(e) {
     let { guildId: t, channel: a, containerWidth: s, onClose: c, onSelect: h, suppressPlaySound: S = !1, shouldShowUpsell: v = !0, gridNotice: G, soundButtonOverlay: k, listPadding: J, renderHeader: ee, defaultSoundsOnly: et = !1, inExpressionPicker: en, refreshEnabled: er } = e,
-        { currentPreviewRef: ei } = i.useContext(D.Z),
+        { currentPreviewRef: ei } = i.useContext(y.Z),
         { analyticsLocations: ea } = (0, E.ZP)(),
         { analyticsLocations: es } = (0, E.ZP)(_.Z.PREMIUM_UPSELL),
         { location: eo } = (0, d.O)(),
@@ -222,9 +222,9 @@ function J(e) {
         eO = eN.some((e) => !!(0, L._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
         eR = !e_ && v && eO,
         { enableInlineUpsell: ev, enableRoadblock: eC, enableRoadblockWithSocialProof: eL } = g.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eR }),
-        eD = eR && ev,
-        ey = N.T4.useSetting(),
-        eb = i.useMemo(() => new Set(ey), [ey]),
+        ey = eR && ev,
+        eD = N.T4.useSetting(),
+        eb = i.useMemo(() => new Set(eD), [eD]),
         eM = null == a,
         eP = L.ZP.canUseCustomCallSounds(ed),
         eU = i.useCallback(
@@ -288,14 +288,14 @@ function J(e) {
                             analyticsLocations: ea
                         },
                         buttonOverlay: k,
-                        isNitroLocked: u && eD,
+                        isNitroLocked: u && ey,
                         shouldShowUpsell: v,
                         refreshEnabled: er
                     },
                     'row-'.concat(n['aria-rowindex'])
                 );
             },
-            [eN, v, e_, t, S, ex, a, eM, eP, ef, ev, ea, k, eD, er]
+            [eN, v, e_, t, S, ex, a, eM, eP, ef, ev, ea, k, ey, er]
         ),
         ek = i.useCallback(
             (e, t) => {
@@ -312,9 +312,9 @@ function J(e) {
         eF = i.useCallback(
             (e) => {
                 let t = e === eN.length - 1;
-                return eD && t ? 60 : 0;
+                return ey && t ? 60 : 0;
             },
-            [eN, eD]
+            [eN, ey]
         ),
         eV = i.useCallback(
             (e, n) => {
@@ -328,20 +328,20 @@ function J(e) {
                         toggleCollapsed: () => eU(i),
                         collapsed: eb.has(i),
                         index: n,
-                        isSectionNitroLocked: a && eD,
-                        showNitroDivider: s && eD
+                        isSectionNitroLocked: a && ey,
+                        showNitroDivider: s && ey
                     },
                     'header-'.concat(i)
                 );
             },
-            [eb, eU, t, ek, v, e_, eD]
+            [eb, eU, t, ek, v, e_, ey]
         ),
         eH = i.useCallback(
             (e, t) => {
                 let n = t === eN.length - 1;
-                return eD && n ? (0, r.jsx)('div', { className: W.sectionFooter }) : null;
+                return ey && n ? (0, r.jsx)('div', { className: W.sectionFooter }) : null;
             },
-            [eN, eD]
+            [eN, ey]
         ),
         eZ = i.useCallback((e) => eS((0, w.ZP)(e, em, ed, a, ea)), [a, ed, em, ea]),
         eY = i.useCallback((e) => {
@@ -370,15 +370,15 @@ function J(e) {
                 (0, r.jsx)(B.Z, {
                     soundboardListRef: e,
                     categories: em,
-                    shouldUpsellLockedCategories: eD,
+                    shouldUpsellLockedCategories: ey,
                     listPadding: J,
                     guildId: t,
                     inExpressionPicker: en
                 }),
-            [em, eD, J, t, en]
+            [em, ey, J, t, en]
         ),
         eK = () => {
-            let e = y.Z.getSoundById('3');
+            let e = D.Z.getSoundById('3');
             null != e && ec(e);
         },
         ez = i.useCallback(() => {
@@ -390,7 +390,7 @@ function J(e) {
         }, []),
         eq = i.useCallback(
             () =>
-                eD
+                ey
                     ? (0, r.jsx)(T.p, {
                           showUpsell: eg,
                           text: ez(),
@@ -398,7 +398,7 @@ function J(e) {
                           buttonAnalyticsObject: { section: Z.jXE.SOUND_PICKER_FLOATING_UPSELL }
                       })
                     : null,
-            [ez, eg, eD]
+            [ez, eg, ey]
         ),
         eQ = i.useCallback(
             (e) => {
@@ -415,7 +415,7 @@ function J(e) {
         ),
         eX = i.useCallback(() => {
             var e;
-            let t = y.Z.getSoundById('3'),
+            let t = D.Z.getSoundById('3'),
                 n = new Audio((0, P.Z)('3'));
             null != ei.current && ei.current.pause(), (ei.current = n), (n.currentTime = 0), (n.volume = (0, U.Z)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 1)), n.play();
         }, [ei]);

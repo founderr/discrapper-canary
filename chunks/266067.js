@@ -6,7 +6,7 @@ n.d(t, {
         return C;
     },
     EN: function () {
-        return y;
+        return D;
     },
     F0: function () {
         return m;
@@ -27,7 +27,7 @@ n.d(t, {
         return N;
     },
     rs: function () {
-        return D;
+        return y;
     },
     s6: function () {
         return I;
@@ -243,7 +243,7 @@ function L(e) {
     return '/' === e.charAt(0) ? e : '/' + e;
 }
 s.Component;
-var D = (function (e) {
+var y = (function (e) {
     function t() {
         return e.apply(this, arguments) || this;
     }
@@ -276,7 +276,7 @@ var D = (function (e) {
         t
     );
 })(s.Component);
-function y(e) {
+function D(e) {
     var t = 'withRouter(' + (e.displayName || e.name) + ')',
         n = function (t) {
             var n = t.wrappedComponentRef,

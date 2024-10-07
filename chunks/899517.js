@@ -1,16 +1,16 @@
-r.d(t, {
+n.d(e, {
     Y: function () {
-        return o;
+        return s;
     },
     n: function () {
-        return a;
+        return i;
     }
 });
-var n = r(452896);
-let a = globalThis;
-function o(e, t, r) {
-    let o = r || a,
-        i = (o.__SENTRY__ = o.__SENTRY__ || {}),
-        _ = (i[n.J] = i[n.J] || {});
-    return _[e] || (_[e] = t());
+var r = n(452896);
+let i = globalThis;
+function s(t, e, n) {
+    let s = n || i,
+        o = (s.__SENTRY__ = s.__SENTRY__ || {}),
+        u = (o[r.J] = o[r.J] || {});
+    return u[t] || (u[t] = e());
 }

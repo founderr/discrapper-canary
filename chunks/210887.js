@@ -64,12 +64,12 @@ function C() {
     return e;
 }
 function L() {
-    return y();
-}
-function D() {
-    return y();
+    return D();
 }
 function y() {
+    return D();
+}
+function D() {
     let e = C();
     return e !== O && ((O = e), !0);
 }
@@ -121,12 +121,12 @@ N(b, 'displayName', 'ThemeStore'),
                 (function () {
                     !__OVERLAY__ && p.isPlatformEmbedded && h.Z.setApplicationBackgroundColor((0, u.wj)(C()) ? l.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: d.Z.saturation }).hsl() : l.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: d.Z.saturation }).hsl());
                 })(),
-                y())
+                D())
             );
         },
         OVERLAY_INITIALIZE: L,
-        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: D,
-        UNSYNCED_USER_SETTINGS_UPDATE: D,
+        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: y,
+        UNSYNCED_USER_SETTINGS_UPDATE: y,
         USER_SETTINGS_PROTO_UPDATE: L,
         UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
             var t, n;
@@ -143,10 +143,10 @@ N(b, 'displayName', 'ThemeStore'),
         RESET_PREVIEW_CLIENT_THEME: L,
         SYSTEM_THEME_CHANGE: function (e) {
             let { systemTheme: t } = e;
-            return (R = t), y();
+            return (R = t), D();
         },
         ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function (e) {
-            return (r = e.systemPrefersColorScheme), y();
+            return (r = e.systemPrefersColorScheme), D();
         },
         ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: function () {
             return (0, u.ap)(C());

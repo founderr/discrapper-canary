@@ -205,7 +205,7 @@ function L(e, t) {
     var n = e[H];
     return (n ? _(n) : e)[t];
 }
-function D(e, t) {
+function y(e, t) {
     if (t in e)
         for (var n = Object.getPrototypeOf(e); n; ) {
             var r = Object.getOwnPropertyDescriptor(n, t);
@@ -213,8 +213,8 @@ function D(e, t) {
             n = Object.getPrototypeOf(n);
         }
 }
-function y(e) {
-    e.P || ((e.P = !0), e.l && y(e.l));
+function D(e) {
+    e.P || ((e.P = !0), e.l && D(e.l));
 }
 function b(e) {
     e.o || (e.o = E(e.t));
@@ -307,7 +307,7 @@ var U,
                 i,
                 s = _(e);
             if (!l(s, t)) {
-                return (n = e), (i = D(s, t)) ? ('value' in i ? i.value : null === (r = i.get) || void 0 === r ? void 0 : r.call(n.k)) : void 0;
+                return (n = e), (i = y(s, t)) ? ('value' in i ? i.value : null === (r = i.get) || void 0 === r ? void 0 : r.call(n.k)) : void 0;
             }
             var o = s[t];
             return e.I || !a(o) ? o : o === L(e.t, t) ? (b(e), (e.o[t] = M(e.A.h, o, e))) : o;
@@ -319,7 +319,7 @@ var U,
             return Reflect.ownKeys(_(e));
         },
         set: function (e, t, n) {
-            var r = D(_(e), t);
+            var r = y(_(e), t);
             if (null == r ? void 0 : r.set) return r.set.call(e.k, n), !0;
             if (!e.P) {
                 var i,
@@ -328,12 +328,12 @@ var U,
                     o = null == s ? void 0 : s[H];
                 if (o && o.t === n) return (e.o[t] = n), (e.R[t] = !1), !0;
                 if (((i = n) === (a = s) ? 0 !== i || 1 / i == 1 / a : i != i && a != a) && (void 0 !== n || l(e.t, t))) return !0;
-                b(e), y(e);
+                b(e), D(e);
             }
             return (e.o[t] === n && (void 0 !== n || t in e.o)) || (Number.isNaN(n) && Number.isNaN(e.o[t])) || ((e.o[t] = n), (e.R[t] = !0)), !0;
         },
         deleteProperty: function (e, t) {
-            return void 0 !== L(e.t, t) || t in e.t ? ((e.R[t] = !1), b(e), y(e)) : delete e.R[t], e.o && delete e.o[t], !0;
+            return void 0 !== L(e.t, t) || t in e.t ? ((e.R[t] = !1), b(e), D(e)) : delete e.R[t], e.o && delete e.o[t], !0;
         },
         getOwnPropertyDescriptor: function (e, t) {
             var n = _(e),

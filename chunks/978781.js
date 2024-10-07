@@ -34,8 +34,8 @@ var r,
     v = n(727939),
     C = n(981631),
     L = n(921944),
-    D = n(474936),
-    y = n(689938),
+    y = n(474936),
+    D = n(689938),
     b = n(556120);
 function M() {
     let e = (0, g.q)();
@@ -65,9 +65,9 @@ function U(e) {
             isPreview: r,
             isCoachmark: i
         })
-            .with({ isCoachmark: !0 }, () => y.Z.Messages.CLOSE)
-            .with({ isPreview: !0 }, () => y.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW)
-            .otherwise(() => y.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS),
+            .with({ isCoachmark: !0 }, () => D.Z.Messages.CLOSE)
+            .with({ isPreview: !0 }, () => D.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW)
+            .otherwise(() => D.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS),
         h = s.useCallback(() => {
             if (1 === t) {
                 (0, d.openModalLazy)(async () => {
@@ -109,7 +109,7 @@ function U(e) {
                         (0, a.jsx)(d.Text, {
                             className: b.footerText,
                             variant: 'text-sm/medium',
-                            children: y.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({ onClick: h })
+                            children: D.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({ onClick: h })
                         })
                     ]
                 }),
@@ -129,10 +129,10 @@ function U(e) {
                     r &&
                         (0, a.jsx)(R.Z, {
                             className: b.footerButton,
-                            subscriptionTier: D.Si.TIER_2,
+                            subscriptionTier: y.Si.TIER_2,
                             showGradient: !0,
                             fullWidth: !0,
-                            buttonText: y.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+                            buttonText: D.Z.Messages.PREMIUM_UPSELL_GET_NITRO
                         })
                 ]
             })
@@ -145,11 +145,11 @@ function w(e) {
         o = s.useMemo(
             () => [
                 {
-                    name: y.Z.Messages.THEME,
+                    name: D.Z.Messages.THEME,
                     value: 0
                 },
                 {
-                    name: y.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
+                    name: D.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
                     value: 1
                 }
             ],
@@ -180,7 +180,7 @@ function w(e) {
                             children: [
                                 (0, a.jsx)(d.Heading, {
                                     variant: 'heading-lg/extrabold',
-                                    children: y.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_APP_ICONS_PREVIEW_TITLE
+                                    children: D.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_APP_ICONS_PREVIEW_TITLE
                                 }),
                                 (0, a.jsx)(d.ModalCloseButton, {
                                     className: b.closeContainer,

@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(285063),
     C = n(943362),
     L = n(551452),
-    D = n(69626),
-    y = n(142990),
+    y = n(69626),
+    D = n(142990),
     b = n(532901),
     M = n(981631),
     P = n(176505),
@@ -281,7 +281,7 @@ function k(e) {
     return {
         ...G,
         link: (0, b.Z)(e),
-        devLink: (0, y.Z)(e),
+        devLink: (0, D.Z)(e),
         emoji: (function (e) {
             let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
             return {
@@ -328,7 +328,7 @@ function k(e) {
             };
         })(e),
         channelMention: (0, L.Z)(e),
-        commandMention: (0, D.ZP)(e),
+        commandMention: (0, y.ZP)(e),
         attachmentLink: (0, C.Z)(e)
     };
 }

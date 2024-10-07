@@ -146,10 +146,10 @@ function S(e) {
         return Math.random().toString(36).substr(2, O);
     }
     var L = f();
-    function D(e) {
+    function y(e) {
         (0, r.Z)(V, e), (V.length = n.length), L.notifyListeners(V.location, V.action);
     }
-    function y(e) {
+    function D(e) {
         if (!(void 0 === e.state && -1 === navigator.userAgent.indexOf('CriOS'))) P(v(e.state));
     }
     function b() {
@@ -158,10 +158,10 @@ function S(e) {
     var M = !1;
     function P(e) {
         M
-            ? ((M = !1), D())
+            ? ((M = !1), y())
             : L.confirmTransitionTo(e, 'POP', A, function (t) {
                   t
-                      ? D({
+                      ? y({
                             action: 'POP',
                             location: e
                         })
@@ -186,7 +186,7 @@ function S(e) {
     }
     var k = 0;
     function B(e) {
-        1 === (k += e) && 1 === e ? (window.addEventListener(I, y), a && window.addEventListener(m, b)) : 0 === k && (window.removeEventListener(I, y), a && window.removeEventListener(m, b));
+        1 === (k += e) && 1 === e ? (window.addEventListener(I, D), a && window.addEventListener(m, b)) : 0 === k && (window.removeEventListener(I, D), a && window.removeEventListener(m, b));
     }
     var F = !1,
         V = {
@@ -220,7 +220,7 @@ function S(e) {
                                     u = w.slice(0, l + 1);
                                 u.push(a.key),
                                     (w = u),
-                                    D({
+                                    y({
                                         action: r,
                                         location: a
                                     });
@@ -253,7 +253,7 @@ function S(e) {
                             else {
                                 var l = w.indexOf(V.location.key);
                                 -1 !== l && (w[l] = a.key),
-                                    D({
+                                    y({
                                         action: r,
                                         location: a
                                     });
@@ -343,8 +343,8 @@ function v(e) {
         (0, r.Z)(B, e), (B.length = t.length), v.notifyListeners(B.location, B.action);
     }
     var L = !1,
-        D = null;
-    function y() {
+        y = null;
+    function D() {
         var e = O(),
             t = m(e);
         if (e !== t) R(t);
@@ -353,8 +353,8 @@ function v(e) {
                 r,
                 i = S(),
                 s = B.location;
-            if ((!L && ((n = s), (r = i), n.pathname === r.pathname && n.search === r.search && n.hash === r.hash)) || D === d(i)) return;
-            (D = null),
+            if ((!L && ((n = s), (r = i), n.pathname === r.pathname && n.search === r.search && n.hash === r.hash)) || y === d(i)) return;
+            (y = null),
                 (function (e) {
                     L
                         ? ((L = !1), C())
@@ -387,7 +387,7 @@ function v(e) {
     }
     var x = 0;
     function G(e) {
-        1 === (x += e) && 1 === e ? window.addEventListener(g, y) : 0 === x && window.removeEventListener(g, y);
+        1 === (x += e) && 1 === e ? window.addEventListener(g, D) : 0 === x && window.removeEventListener(g, D);
     }
     var k = !1,
         B = {
@@ -407,7 +407,7 @@ function v(e) {
                         var t = d(r),
                             i = m(E + t);
                         if (O() !== i) {
-                            (D = t), (a = i), (window.location.hash = a);
+                            (y = t), (a = i), (window.location.hash = a);
                             var a,
                                 s = U.lastIndexOf(d(B.location)),
                                 o = U.slice(0, s + 1);
@@ -428,7 +428,7 @@ function v(e) {
                     if (e) {
                         var t = d(r),
                             i = m(E + t);
-                        O() !== i && ((D = t), R(i));
+                        O() !== i && ((y = t), R(i));
                         var a = U.indexOf(d(B.location));
                         -1 !== a && (U[a] = t),
                             C({

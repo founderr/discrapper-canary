@@ -47,7 +47,7 @@ class T extends h.Z {
                 let { analyticsData: t } = e;
                 this.possiblyShowFeedbackModal(p.nw.VOICE, () => {
                     (0, i.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e('51514'), n.e('96888')]).then(n.bind(n, 988645));
+                        let { default: e } = await n.e('96888').then(n.bind(n, 988645));
                         return (n) =>
                             (0, r.jsx)(e, {
                                 ...n,
@@ -129,7 +129,7 @@ class T extends h.Z {
                 let { reportId: t, reportType: a } = e;
                 this.possiblyShowFeedbackModal(p.nw.IN_APP_REPORTS, () => {
                     (0, i.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e('51514'), n.e('72135')]).then(n.bind(n, 442173));
+                        let { default: e } = await n.e('72135').then(n.bind(n, 442173));
                         return (n) =>
                             (0, r.jsx)(e, {
                                 ...n,

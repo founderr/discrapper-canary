@@ -25,8 +25,8 @@ var i,
     v = n(483360),
     C = n(823379),
     L = n(981631),
-    D = n(689938);
-function y(e, t, n) {
+    y = n(689938);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -135,7 +135,7 @@ function j(e, t) {
                               let t = Z(V[e]);
                               if (null != t) ((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) || g.Z.can(L.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
                           }
-                          a.length > 0 && i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_LAST_CHANNEL), ...a);
+                          a.length > 0 && i.push((0, c.o6)(y.Z.Messages.QUICKSWITCHER_LAST_CHANNEL), ...a);
                           let o = (function (e) {
                               let t = [];
                               return (
@@ -148,13 +148,13 @@ function j(e, t) {
                                   t
                               );
                           })((e) => e === r || V.includes(e));
-                          o.length > 0 && i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_DRAFTS), ...o);
+                          o.length > 0 && i.push((0, c.o6)(y.Z.Messages.QUICKSWITCHER_DRAFTS), ...o);
                           let l = A.ZP.getMentionChannelIds()
                               .filter((e) => e !== r && !V.includes(e))
                               .map((e) => Z(e))
                               .filter(C.lm)
                               .reverse();
-                          if ((l.length > 0 && (i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_MENTIONS)), (i = i.concat(l))), null != n)) {
+                          if ((l.length > 0 && (i.push((0, c.o6)(y.Z.Messages.QUICKSWITCHER_MENTIONS)), (i = i.concat(l))), null != n)) {
                               let e = m.ZP.getSelectableChannelIds(n)
                                   .filter((e) => {
                                       let t = p.Z.getChannel(e);
@@ -168,7 +168,7 @@ function j(e, t) {
                                       null != t && e.push(t);
                                   }
                               }),
-                                  e.length > 0 && (i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_UNREAD_CHANNELS)), (i = i.concat(e)));
+                                  e.length > 0 && (i.push((0, c.o6)(y.Z.Messages.QUICKSWITCHER_UNREAD_CHANNELS)), (i = i.concat(e)));
                           }
                           return s()(i)
                               .uniqBy((e) => e.record.id)
@@ -183,20 +183,20 @@ function j(e, t) {
                 switch (x) {
                     case c.h8.USER: {
                         let t = S.Z.getGuild(O.Z.getGuildId());
-                        e.unshift((0, c.o6)(null != t ? D.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({ name: t.name }) : D.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS)), (G = e);
+                        e.unshift((0, c.o6)(null != t ? y.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({ name: t.name }) : y.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS)), (G = e);
                         break;
                     }
                     case c.h8.TEXT_CHANNEL:
-                        e.unshift((0, c.o6)(D.Z.Messages.QUICKSWITCHER_QUERYMODE_TEXT_CHANNELS)), (G = e);
+                        e.unshift((0, c.o6)(y.Z.Messages.QUICKSWITCHER_QUERYMODE_TEXT_CHANNELS)), (G = e);
                         break;
                     case c.h8.VOICE_CHANNEL:
-                        e.unshift((0, c.o6)(D.Z.Messages.QUICKSWITCHER_QUERYMODE_VOICE_CHANNELS)), (G = e);
+                        e.unshift((0, c.o6)(y.Z.Messages.QUICKSWITCHER_QUERYMODE_VOICE_CHANNELS)), (G = e);
                         break;
                     case c.h8.GUILD:
-                        e.unshift((0, c.o6)(D.Z.Messages.QUICKSWITCHER_QUERYMODE_GUILDS)), (G = e);
+                        e.unshift((0, c.o6)(y.Z.Messages.QUICKSWITCHER_QUERYMODE_GUILDS)), (G = e);
                         break;
                     case c.h8.APPLICATION:
-                        e.unshift((0, c.o6)(D.Z.Messages.QUICKSWITCHER_QUERYMODE_APPLICATIONS)), (G = e);
+                        e.unshift((0, c.o6)(y.Z.Messages.QUICKSWITCHER_QUERYMODE_APPLICATIONS)), (G = e);
                         break;
                     default:
                         G = e;
@@ -251,7 +251,7 @@ class K extends (i = o.ZP.PersistedStore) {
         };
     }
 }
-y(K, 'displayName', 'QuickSwitcherStore'), y(K, 'persistKey', 'QuickSwitcherStore');
+D(K, 'displayName', 'QuickSwitcherStore'), D(K, 'persistKey', 'QuickSwitcherStore');
 let z = new K(u.Z, {
     CONNECTION_OPEN: H,
     CONNECTION_OPEN_SUPPLEMENTAL: H,

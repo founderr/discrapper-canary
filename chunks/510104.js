@@ -32,21 +32,21 @@ function _(e, t) {
         v = g === l.k5 ? l.YP : l.k5,
         C = e.rects.popper,
         L = e.elements[void 0 !== A && A ? v : g],
-        D = (0, r.Z)((0, u.kK)(L) ? L : L.contextElement || (0, i.Z)(e.elements.popper), I, T, h),
-        y = (0, a.Z)(e.elements.reference),
+        y = (0, r.Z)((0, u.kK)(L) ? L : L.contextElement || (0, i.Z)(e.elements.popper), I, T, h),
+        D = (0, a.Z)(e.elements.reference),
         b = (0, s.Z)({
-            reference: y,
+            reference: D,
             element: C,
             strategy: 'absolute',
             placement: E
         }),
         M = (0, o.Z)(Object.assign({}, C, b)),
-        P = g === l.k5 ? M : y,
+        P = g === l.k5 ? M : D,
         U = {
-            top: D.top - P.top + R.top,
-            bottom: P.bottom - D.bottom + R.bottom,
-            left: D.left - P.left + R.left,
-            right: P.right - D.right + R.right
+            top: y.top - P.top + R.top,
+            bottom: P.bottom - y.bottom + R.bottom,
+            left: y.left - P.left + R.left,
+            right: P.right - y.right + R.right
         },
         w = e.modifiersData.offset;
     if (g === l.k5 && w) {

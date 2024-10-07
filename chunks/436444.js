@@ -40,7 +40,7 @@ t.Z = function (e) {
                 friction: 12
             }
         }),
-        D = (0, r.jsxs)(r.Fragment, {
+        y = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(s.animated.div, {
                     className: h.progressBarMarkerIndicator,
@@ -53,7 +53,7 @@ t.Z = function (e) {
                     })
             ]
         }),
-        y = R ? 'div' : o.Clickable,
+        D = R ? 'div' : o.Clickable,
         b = R
             ? {}
             : {
@@ -92,7 +92,7 @@ t.Z = function (e) {
               }),
         shouldShow: S !== E.Eu4.NONE,
         children: (e) =>
-            (0, r.jsxs)(y, {
+            (0, r.jsxs)(D, {
                 className: a()(h.progressBarMarker, {
                     [h.progressBarMarkerUnlocked]: R,
                     [h.progressBarMarkerLocked]: !R,
@@ -109,9 +109,9 @@ t.Z = function (e) {
                               confettiTriggerRef: n,
                               setConfettiCount: m,
                               setShouldFireConfetti: T,
-                              children: D
+                              children: y
                           })
-                        : D,
+                        : y,
                     (0, r.jsxs)(o.Text, {
                         className: h.progressBarMarkerLabel,
                         variant: 'text-md/normal',

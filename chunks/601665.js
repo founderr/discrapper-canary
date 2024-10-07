@@ -29,15 +29,15 @@ var r = n(735250),
     R = n(689938),
     v = n(451563);
 function C(e) {
-    let { user: t, currentUser: n, guildId: C, channelId: L, messageId: D, roleId: y, closePopout: b, setPopoutRef: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
+    let { user: t, currentUser: n, guildId: C, channelId: L, messageId: y, roleId: D, closePopout: b, setPopoutRef: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
         { analyticsLocations: w } = (0, u.ZP)([...U, l.Z.BITE_SIZE_PROFILE_POPOUT]),
         x = (0, _.ZB)({
             layout: 'BITE_SIZE_POPOUT',
             userId: t.id,
             guildId: C,
             channelId: L,
-            messageId: D,
-            roleId: y
+            messageId: y,
+            roleId: D
         }),
         G = (0, f.ZP)(t.id, C),
         k = (0, a.e7)([d.Z], () => (null != C ? d.Z.getGuild(C) : null)),

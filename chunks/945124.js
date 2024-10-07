@@ -1,10 +1,10 @@
-n.d(t, {
+n.d(r, {
     y: function () {
         return i;
     }
 });
-var r = n(137920);
-function i(e, t) {
+var e = n(137920);
+function i(t, r) {
     let n = 0;
-    return null != t.games && (n += 2 * t.games.filter((t) => e.games.includes(t)).length), null != t.playstyle && (t.playstyle === e.playstyle ? (n += 2) : r.J[e.playstyle] === r.J[t.playstyle] && (n += 1)), null != t.traits && (n += 2 * Array.from(t.traits).filter((t) => e.traits.includes(t)).length), n;
+    return null != r.games && (n += 2 * r.games.filter((r) => t.games.includes(r)).length), null != r.playstyle && (r.playstyle === t.playstyle ? (n += 2) : e.J[t.playstyle] === e.J[r.playstyle] && (n += 1)), null != r.traits && (n += 2 * Array.from(r.traits).filter((r) => t.traits.includes(r)).length), n;
 }

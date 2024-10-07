@@ -1,61 +1,61 @@
-r.d(t, {
+n.d(e, {
     CT: function () {
-        return _;
+        return u;
     },
     Hv: function () {
-        return i;
+        return o;
     },
     RJ: function () {
-        return E;
+        return c;
     }
 });
-var n = r(101284),
-    a = r(394798),
-    o = r(370336);
-function i(e) {
-    let t = (0, n.ph)(),
-        r = {
-            sid: (0, a.DM)(),
+var r = n(101284),
+    i = n(394798),
+    s = n(370336);
+function o(t) {
+    let e = (0, r.ph)(),
+        n = {
+            sid: (0, i.DM)(),
             init: !0,
-            timestamp: t,
-            started: t,
+            timestamp: e,
+            started: e,
             duration: 0,
             status: 'ok',
             errors: 0,
             ignoreDuration: !1,
             toJSON: () =>
-                (function (e) {
-                    return (0, o.Jr)({
-                        sid: `${e.sid}`,
-                        init: e.init,
-                        started: new Date(1000 * e.started).toISOString(),
-                        timestamp: new Date(1000 * e.timestamp).toISOString(),
-                        status: e.status,
-                        errors: e.errors,
-                        did: 'number' == typeof e.did || 'string' == typeof e.did ? `${e.did}` : void 0,
-                        duration: e.duration,
-                        abnormal_mechanism: e.abnormal_mechanism,
+                (function (t) {
+                    return (0, s.Jr)({
+                        sid: `${t.sid}`,
+                        init: t.init,
+                        started: new Date(1000 * t.started).toISOString(),
+                        timestamp: new Date(1000 * t.timestamp).toISOString(),
+                        status: t.status,
+                        errors: t.errors,
+                        did: 'number' == typeof t.did || 'string' == typeof t.did ? `${t.did}` : void 0,
+                        duration: t.duration,
+                        abnormal_mechanism: t.abnormal_mechanism,
                         attrs: {
-                            release: e.release,
-                            environment: e.environment,
-                            ip_address: e.ipAddress,
-                            user_agent: e.userAgent
+                            release: t.release,
+                            environment: t.environment,
+                            ip_address: t.ipAddress,
+                            user_agent: t.userAgent
                         }
                     });
-                })(r)
+                })(n)
         };
-    return e && _(r, e), r;
+    return t && u(n, t), n;
 }
-function _(e, t = {}) {
-    if ((t.user && (!e.ipAddress && t.user.ip_address && (e.ipAddress = t.user.ip_address), !e.did && !t.did && (e.did = t.user.id || t.user.email || t.user.username)), (e.timestamp = t.timestamp || (0, n.ph)()), t.abnormal_mechanism && (e.abnormal_mechanism = t.abnormal_mechanism), t.ignoreDuration && (e.ignoreDuration = t.ignoreDuration), t.sid && (e.sid = 32 === t.sid.length ? t.sid : (0, a.DM)()), void 0 !== t.init && (e.init = t.init), !e.did && t.did && (e.did = `${t.did}`), 'number' == typeof t.started && (e.started = t.started), e.ignoreDuration)) e.duration = void 0;
-    else if ('number' == typeof t.duration) e.duration = t.duration;
+function u(t, e = {}) {
+    if ((e.user && (!t.ipAddress && e.user.ip_address && (t.ipAddress = e.user.ip_address), !t.did && !e.did && (t.did = e.user.id || e.user.email || e.user.username)), (t.timestamp = e.timestamp || (0, r.ph)()), e.abnormal_mechanism && (t.abnormal_mechanism = e.abnormal_mechanism), e.ignoreDuration && (t.ignoreDuration = e.ignoreDuration), e.sid && (t.sid = 32 === e.sid.length ? e.sid : (0, i.DM)()), void 0 !== e.init && (t.init = e.init), !t.did && e.did && (t.did = `${e.did}`), 'number' == typeof e.started && (t.started = e.started), t.ignoreDuration)) t.duration = void 0;
+    else if ('number' == typeof e.duration) t.duration = e.duration;
     else {
-        let t = e.timestamp - e.started;
-        e.duration = t >= 0 ? t : 0;
+        let e = t.timestamp - t.started;
+        t.duration = e >= 0 ? e : 0;
     }
-    t.release && (e.release = t.release), t.environment && (e.environment = t.environment), !e.ipAddress && t.ipAddress && (e.ipAddress = t.ipAddress), !e.userAgent && t.userAgent && (e.userAgent = t.userAgent), 'number' == typeof t.errors && (e.errors = t.errors), t.status && (e.status = t.status);
+    e.release && (t.release = e.release), e.environment && (t.environment = e.environment), !t.ipAddress && e.ipAddress && (t.ipAddress = e.ipAddress), !t.userAgent && e.userAgent && (t.userAgent = e.userAgent), 'number' == typeof e.errors && (t.errors = e.errors), e.status && (t.status = e.status);
 }
-function E(e, t) {
-    let r = {};
-    t ? (r = { status: t }) : 'ok' === e.status && (r = { status: 'exited' }), _(e, r);
+function c(t, e) {
+    let n = {};
+    e ? (n = { status: e }) : 'ok' === t.status && (n = { status: 'exited' }), u(t, n);
 }

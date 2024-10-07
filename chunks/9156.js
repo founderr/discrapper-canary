@@ -46,8 +46,8 @@ let N = {},
     v = !1,
     C = { flags: 0 },
     L = new l.ZP(),
-    D = new l.ZP(),
-    y = {
+    y = new l.ZP(),
+    D = {
         suppress_everyone: !1,
         suppress_roles: !1,
         mute_scheduled_events: !1,
@@ -63,11 +63,11 @@ let N = {},
     },
     b = {
         [m.bL.ALL_MESSAGES]: {
-            ...y,
+            ...D,
             message_notifications: m.bL.ALL_MESSAGES
         },
         [m.bL.ONLY_MENTIONS]: {
-            ...y,
+            ...D,
             message_notifications: m.bL.ONLY_MENTIONS
         }
     },
@@ -90,7 +90,7 @@ function k(e, t) {
         };
     L.clearTimer(e),
         a().forEach(i, (e) => {
-            D.clearTimer(e.channel_id);
+            y.clearTimer(e.channel_id);
         }),
         B(e, o),
         (N[e] = o),
@@ -125,7 +125,7 @@ function B(e, t) {
         (t.muted = !1),
         a().forEach(t.channel_overrides, (t) => {
             !0 === t.muted &&
-                D.setTimer(t.channel_id, t.mute_config, () => {
+                y.setTimer(t.channel_id, t.mute_config, () => {
                     V(e, t.channel_id, { muted: !1 }),
                         o.Z.dispatch({
                             type: 'CHANNEL_MUTE_EXPIRED',
@@ -468,7 +468,7 @@ let J = new $(o.Z, {
         return !(null == t || u.Z.isFullServerPreview(t)) && (H(t, n), !0);
     },
     CONNECTION_OPEN: function (e) {
-        z(e.notificationSettings), L.reset(), D.reset(), !e.userGuildSettings.partial && ((N = {}), (M = {}), (P = {}));
+        z(e.notificationSettings), L.reset(), y.reset(), !e.userGuildSettings.partial && ((N = {}), (M = {}), (P = {}));
         let t = new Set();
         for (let n in (e.userGuildSettings.entries.forEach((e) => {
             !('channel_overrides' in e) && (e.channel_overrides = {}), k(e.guild_id, e), null != e.guild_id && t.add(e.guild_id);

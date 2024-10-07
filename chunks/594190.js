@@ -43,8 +43,8 @@ var i,
     v = n(70956),
     C = n(877481),
     L = n(823379),
-    D = n(358085),
-    y = n(998502),
+    y = n(358085),
+    D = n(998502),
     b = n(145597),
     M = n(370862),
     P = n(981631),
@@ -312,9 +312,9 @@ function eh() {
     );
 }
 function ep() {
-    if (!__OVERLAY__ && D.isPlatformEmbedded) {
+    if (!__OVERLAY__ && y.isPlatformEmbedded) {
         let e = [...V, ...u().values(z.gameOverrides)];
-        y.ZP.setGameCandidateOverrides(e);
+        D.ZP.setGameCandidateOverrides(e);
     }
 }
 function eI(e) {
@@ -356,7 +356,7 @@ function em() {
     return z.gamesSeen.filter((e) => void 0 === z.gameOverrides[eu(e)]).concat(e);
 }
 !__OVERLAY__ &&
-    (0, D.isDesktop)() &&
+    (0, y.isDesktop)() &&
     (q = function () {
         let e = [],
             t = new Set();
@@ -380,7 +380,7 @@ function em() {
                             ? void 0
                             : r.filter((e) => {
                                   let { os: t } = e;
-                                  return t === (0, D.getPlatformName)();
+                                  return t === (0, y.getPlatformName)();
                               })
                         : [],
                 a = {};
@@ -398,7 +398,7 @@ function em() {
                 );
         }),
             (e = e.filter((e) => null != e.executables && e.executables.length > 0)),
-            y.ZP.setObservedGamesCallback(e, (e) => {
+            D.ZP.setObservedGamesCallback(e, (e) => {
                 let n = [],
                     i = {};
                 e = e.filter(
@@ -413,7 +413,7 @@ function em() {
                         e.isLauncher && null != e.id && (i[e.id] = e),
                         (e.windowHandle = (function (e, t) {
                             if (void 0 === t) {
-                                let t = y.ZP.getDiscordUtils();
+                                let t = D.ZP.getDiscordUtils();
                                 if (null != t && null != t.getWindowHandleFromPid) {
                                     let n = t.getWindowHandleFromPid(e);
                                     return null != n && '0' !== n ? n : null;
@@ -674,8 +674,8 @@ class eT extends (i = _.ZP.Store) {
         GAMES_DATABASE_UPDATE: q,
         GAME_LAUNCH_SUCCESS: function (e) {
             var t;
-            if (__OVERLAY__ || !D.isPlatformEmbedded) return;
-            let n = y.ZP.getDiscordUtils().notifyGameLaunched;
+            if (__OVERLAY__ || !y.isPlatformEmbedded) return;
+            let n = D.ZP.getDiscordUtils().notifyGameLaunched;
             if (null == n) return;
             let r = A.Z.getDetectableGame(e.applicationId);
             if (null != r) n(r.id, r.name, null !== (t = e.pids) && void 0 !== t ? t : []);

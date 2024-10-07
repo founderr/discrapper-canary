@@ -26,8 +26,8 @@ let T = (e) => {
             [O, R] = i.useState([]);
         (0, p.Z)(T);
         let [v, C] = i.useState(0),
-            [L, D] = i.useState(0),
-            { accessibilityLabel: y } = T,
+            [L, y] = i.useState(0),
+            { accessibilityLabel: D } = T,
             [b, M] = i.useState(-g),
             {
                 stop: P,
@@ -47,8 +47,8 @@ let T = (e) => {
                     r > e && (e = r), n.loop && n.start < t && (t = n.start);
                 }),
                     C(t),
-                    D(e);
-            }, [D, O]);
+                    y(e);
+            }, [y, O]);
         let [x, G] = i.useState(!1);
         return (
             i.useEffect(() => {
@@ -72,7 +72,7 @@ let T = (e) => {
                                         left: null !== (l = null === (s = e.position) || void 0 === s ? void 0 : s.x) && void 0 !== l ? l : 0
                                     },
                                     src: n,
-                                    alt: y
+                                    alt: D
                                 },
                                 e.src + i
                             );
@@ -84,7 +84,7 @@ let T = (e) => {
                                 animationType: T.animationType,
                                 ticking: w.current,
                                 time: b,
-                                accessibilityLabel: y,
+                                accessibilityLabel: D,
                                 hasPlayedThrough: x,
                                 setHasPlayedThrough: G,
                                 urlQueryString: I,

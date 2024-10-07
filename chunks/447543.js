@@ -31,8 +31,8 @@ var r = n(525654),
     v = n(652898),
     C = n(895886),
     L = n(143816),
-    D = n(703656),
-    y = n(922482),
+    y = n(703656),
+    D = n(922482),
     b = n(131704),
     M = n(314897),
     P = n(592125),
@@ -98,7 +98,7 @@ function er(e) {
                       let { default: n } = e,
                           s = () => {
                               if (A) {
-                                  (0, y.Cq)(r instanceof b.Sf ? r : (0, b.kt)(r)), (0, D.uL)(N);
+                                  (0, D.Cq)(r instanceof b.Sf ? r : (0, b.kt)(r)), (0, y.uL)(N);
                                   return;
                               }
                               n.selectVoiceChannel(I),
@@ -110,12 +110,12 @@ function er(e) {
                                           guildId: t,
                                           channelId: I
                                       }),
-                                  u === $.Iq.EMBEDDED_APPLICATION && null != c && ((0, D.uL)(q.Z5c.CHANNEL(null != t ? t : q.ME, I)), (0, h.Z)(I, c, a, null == i ? void 0 : i.intent, p.bB.CHAT));
+                                  u === $.Iq.EMBEDDED_APPLICATION && null != c && ((0, y.uL)(q.Z5c.CHANNEL(null != t ? t : q.ME, I)), (0, h.Z)(I, c, a, null == i ? void 0 : i.intent, p.bB.CHAT));
                           };
                       !d && (0, S.n)(t, [x.Z, G.Z, V.default, w.ZP]) ? (0, T.hk)(t, s) : s();
                   });
           })
-        : (0, f.l5)(E) && u === $.Iq.EMBEDDED_APPLICATION && null != c && ((0, D.uL)(q.Z5c.CHANNEL(null != t ? t : q.ME, I)), (0, h.Z)(I, c, a, null == i ? void 0 : i.intent, p.bB.CHAT)),
+        : (0, f.l5)(E) && u === $.Iq.EMBEDDED_APPLICATION && null != c && ((0, y.uL)(q.Z5c.CHANNEL(null != t ? t : q.ME, I)), (0, h.Z)(I, c, a, null == i ? void 0 : i.intent, p.bB.CHAT)),
         (function (e, t) {
             let { type: n } = e,
                 { transitionTo: r, welcomeModalChannelId: i, guildScheduledEvent: a } = null != t ? t : {},
@@ -124,7 +124,7 @@ function er(e) {
                     source: L.Z.INVITE_ACCEPT,
                     navigationReplace: !0
                 };
-            return null != i && (o.welcomeModalChannelId = i), s && (o.state = J.Df), null != a && (o.guildScheduledEventId = a.id), (e) => (null != r ? r(e, o) : (0, D.uL)(e, o));
+            return null != i && (o.welcomeModalChannelId = i), s && (o.state = J.Df), null != a && (o.guildScheduledEventId = a.id), (e) => (null != r ? r(e, o) : (0, y.uL)(e, o));
         })(
             r,
             i

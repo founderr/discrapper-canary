@@ -38,9 +38,9 @@ t.Z = i.memo(function (e) {
                     a = (0, c.e7)([m.Z], () => m.Z.isFocused(), []),
                     { reducedMotion: o } = i.useContext(_.AccessibilityPreferencesContext),
                     { accessibilitySettings: d, appWrapperClassName: E } = (0, g.I)(),
-                    { fontScale: S, fontScaleClass: O, saturation: v, desaturateUserColors: C, useForcedColors: L, systemForcedColors: D } = d,
-                    y = (0, l.TH)(),
-                    b = i.useMemo(() => R.has(y.pathname), [y.pathname]);
+                    { fontScale: S, fontScaleClass: O, saturation: v, desaturateUserColors: C, useForcedColors: L, systemForcedColors: y } = d,
+                    D = (0, l.TH)(),
+                    b = i.useMemo(() => R.has(D.pathname), [D.pathname]);
                 (0, A.Z)(window, b);
                 let M = (0, N.Z)(window, __OVERLAY__ || a),
                     P = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
@@ -60,7 +60,7 @@ t.Z = i.memo(function (e) {
                             'is-mobile': u.tq,
                             'app-focused': a,
                             'desaturate-user-colors': C,
-                            'disable-forced-colors': !L && 'active' === D,
+                            'disable-forced-colors': !L && 'active' === y,
                             'enable-forced-colors': L,
                             'show-redesigned-icons': U,
                             'visual-refresh': w

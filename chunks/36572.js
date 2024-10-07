@@ -26,8 +26,8 @@ e.exports = function (e, t, n, m, T, S, g) {
     if (v) {
         var C = u(N),
             L = !C && d(N),
-            D = !C && !L && h(N);
-        (R = N), C || L || D ? (u(A) ? (R = A) : c(A) ? (R = s(A)) : L ? ((v = !1), (R = i(N, !0))) : D ? ((v = !1), (R = a(N, !0))) : (R = [])) : f(N) || l(N) ? ((R = A), l(A) ? (R = I(A)) : (!E(A) || _(A)) && (R = o(N))) : (v = !1);
+            y = !C && !L && h(N);
+        (R = N), C || L || y ? (u(A) ? (R = A) : c(A) ? (R = s(A)) : L ? ((v = !1), (R = i(N, !0))) : y ? ((v = !1), (R = a(N, !0))) : (R = [])) : f(N) || l(N) ? ((R = A), l(A) ? (R = I(A)) : (!E(A) || _(A)) && (R = o(N))) : (v = !1);
     }
     v && (g.set(N, R), T(R, N, m, S, g), g.delete(N)), r(e, n, R);
 };

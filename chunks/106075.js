@@ -20,8 +20,8 @@ var i = n(735250),
     p = n(922122),
     g = n(680180),
     T = n(164991),
-    S = n(444324),
-    f = n(726115),
+    f = n(444324),
+    S = n(726115),
     C = n(750910),
     N = n(28494),
     A = n(29086),
@@ -34,7 +34,7 @@ function x() {
     let e = a.useRef((0, u.P)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: s } = (0, h.M)(),
         { tabs: x, selectedTab: b, setSelectedTab: M } = (0, A.Y)(),
-        P = (0, f.lg)(b),
+        P = (0, S.lg)(b),
         D = !L.MU.has(b),
         y = (0, d.iN)('global_discovery_servers_layout'),
         { searchQuery: j, onSearchTextChange: U, onClearSearch: G, onSearchSubmit: w, isSearchVisible: k } = (0, N.H)({ loadId: e.current }),
@@ -67,7 +67,7 @@ function x() {
             [x, k]
         ),
         Q = W === E.v0.SAVED_GUILDS,
-        X = a.useRef(new S.Z(P)),
+        X = a.useRef(new f.Z(P)),
         { onGuildCardSeen: J, onGuildCardClick: $ } = (0, C.H)({
             guildDiscoveryCardSeenManager: X.current,
             loadId: e.current

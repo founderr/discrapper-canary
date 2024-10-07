@@ -1,16 +1,16 @@
-e.exports = function (e, t, r, n, a, o, i, _) {
-    if (!e) {
-        var E;
-        if (void 0 === t) E = Error('Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.');
+r.exports = function (r, t, n, e, o, i, u, c) {
+    if (!r) {
+        var a;
+        if (void 0 === t) a = Error('Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.');
         else {
-            var s = [r, n, a, o, i, _],
-                c = 0;
-            (E = Error(
+            var f = [n, e, o, i, u, c],
+                s = 0;
+            (a = Error(
                 t.replace(/%s/g, function () {
-                    return s[c++];
+                    return f[s++];
                 })
             )).name = 'Invariant Violation';
         }
-        throw ((E.framesToPop = 1), E);
+        throw ((a.framesToPop = 1), a);
     }
 };

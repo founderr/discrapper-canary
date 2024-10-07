@@ -1,6 +1,6 @@
-var r = n(332916);
-e.exports =
+var e = n(332916);
+t.exports =
     Array.isArray ||
-    function (e) {
-        return 'Array' === r(e);
+    function (t) {
+        return 'Array' === e(t);
     };

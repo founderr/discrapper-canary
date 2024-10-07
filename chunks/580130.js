@@ -29,10 +29,10 @@ function C(e) {
 function L(e) {
     m[e.id] = d.Z.createFromServer(e);
 }
-function D(e) {
+function y(e) {
     return C(e.entitlement);
 }
-class y extends (r = u.yh) {
+class D extends (r = u.yh) {
     initialize() {
         this.syncWith([_.Z], () => !0);
     }
@@ -111,7 +111,7 @@ class y extends (r = u.yh) {
     }
 }
 (s = 'EntitlementStore'),
-    (a = 'displayName') in (i = y)
+    (a = 'displayName') in (i = D)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -119,7 +119,7 @@ class y extends (r = u.yh) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new y(c.Z, {
+    (t.Z = new D(c.Z, {
         ENTITLEMENT_FETCH_APPLICATION_START: function (e) {
             let { applicationId: t } = e;
             N.add(t);
@@ -141,8 +141,8 @@ class y extends (r = u.yh) {
             let { libraryApplications: t } = e;
             for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) C(t);
         },
-        ENTITLEMENT_CREATE: D,
-        ENTITLEMENT_UPDATE: D,
+        ENTITLEMENT_CREATE: y,
+        ENTITLEMENT_UPDATE: y,
         ENTITLEMENT_DELETE: function (e) {
             return (function (e) {
                 delete I[e.id];

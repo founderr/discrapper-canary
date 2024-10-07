@@ -37,7 +37,7 @@ function O(e) {
             null != t ? (R.current[e] = t) : delete R.current[e];
         },
         [C, L] = i.useState(d),
-        [D, y] = i.useState(268),
+        [y, D] = i.useState(268),
         [b, M] = i.useState(!1),
         P = i.useRef(null),
         U = i.useRef(null),
@@ -65,7 +65,7 @@ function O(e) {
                     (e += s + 4), n.push(i);
                 }
             }
-            L(n.length === C.length ? C : n), y(r), w.current++;
+            L(n.length === C.length ? C : n), D(r), w.current++;
         }, [d, C, b]);
     let x = i.useMemo(() => 'roles-'.concat((0, a.Z)()), []),
         G = (0, s.ZP)({
@@ -84,7 +84,7 @@ function O(e) {
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: b || i !== C.length - 1 ? 268 : D },
+                    style: { maxWidth: b || i !== C.length - 1 ? 268 : y },
                     disableBorderColor: !0,
                     ref: (t) => v(e.id, t),
                     onRemove: () => O(e),

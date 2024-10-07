@@ -1,6 +1,6 @@
-var n = r(972277),
-    a = r(457507),
-    o = n('keys');
-e.exports = function (e) {
-    return o[e] || (o[e] = a(e));
+var e = r(972277),
+    o = r(457507),
+    i = e('keys');
+t.exports = function (t) {
+    return i[t] || (i[t] = o(t));
 };

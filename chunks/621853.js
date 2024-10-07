@@ -47,7 +47,7 @@ function L(e) {
         t.start(Math.min(2147483647, n), () => L(e));
     }
 }
-function D(e, t) {
+function y(e, t) {
     let n = g.get(e);
     if (null == n) return;
     let r = n.get(t);
@@ -66,10 +66,10 @@ function D(e, t) {
         if (null == i) return;
         let n = i.get(t);
         if (null == n) return;
-        n.start(Math.min(2147483647, a), () => D(e, t));
+        n.start(Math.min(2147483647, a), () => y(e, t));
     }
 }
-function y() {
+function D() {
     m.clear(), T.clear(), S.clear(), g.clear(), O.clear(), R.clear(), v.clear(), (C = !1);
 }
 function b(e) {
@@ -97,7 +97,7 @@ function U(e) {
     T.delete(e.userId), O.set(e.userId, P(e.mutualFriends)), R.set(e.userId, e.mutualFriends.length);
 }
 function w(e) {
-    var t, n, r, i, o, l, u, d, _, h, I, T, C, y, b, M, U, w, x, G, k, B, F, V, H, Z, Y;
+    var t, n, r, i, o, l, u, d, _, h, I, T, C, D, b, M, U, w, x, G, k, B, F, V, H, Z, Y;
     let j = null !== (b = null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id) && void 0 !== b ? b : '0';
     if ((null === (n = m.get(e.user.id)) || void 0 === n || n.delete(j), null != e.mutual_guilds)) {
         let t = {};
@@ -182,7 +182,7 @@ function w(e) {
                       })
                     : e.badges
         }),
-        (null === (y = e.user_profile) || void 0 === y ? void 0 : null === (C = y.profile_effect) || void 0 === C ? void 0 : C.expires_at) != null)
+        (null === (D = e.user_profile) || void 0 === D ? void 0 : null === (C = D.profile_effect) || void 0 === C ? void 0 : C.expires_at) != null)
     ) {
         let t = new a.V7();
         A.set(e.user.id, t), L(e.user.id);
@@ -215,7 +215,7 @@ function w(e) {
                 let n = new Map();
                 n.set(e.guild_member_profile.guild_id, t), N.set(e.user.id, n);
             }
-            D(e.user.id, e.guild_member_profile.guild_id);
+            y(e.user.id, e.guild_member_profile.guild_id);
         }
     }
 }
@@ -287,7 +287,7 @@ function B(e) {
                           let r = new Map();
                           r.set(n, e), N.set(t, r);
                       }
-                      D(t, n);
+                      y(t, n);
                   }
               })(e)
             : !(function (e) {
@@ -414,7 +414,7 @@ class K extends _.Z {
             RELATIONSHIP_ADD: Y,
             RELATIONSHIP_REMOVE: Y,
             RELATIONSHIP_UPDATE: Y,
-            LOGOUT: y
+            LOGOUT: D
         }),
             I(this, 'loadCache', () => {
                 let e = this.readSnapshot(K.LATEST_SNAPSHOT_VERSION);

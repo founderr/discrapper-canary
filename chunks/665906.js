@@ -1,6 +1,6 @@
 n.d(t, {
     $R: function () {
-        return y;
+        return D;
     },
     C7: function () {
         return R;
@@ -36,7 +36,7 @@ n.d(t, {
         return T;
     },
     kn: function () {
-        return D;
+        return y;
     },
     tM: function () {
         return I;
@@ -147,14 +147,14 @@ function L(e) {
         n = U(e);
     return C(e, t, n);
 }
-function D(e) {
+function y(e) {
     let t = v(e, E.Z),
         n = (function (e) {
             return P(e, E.Z);
         })(e);
     return C(e, t, n);
 }
-function y(e) {
+function D(e) {
     var t;
     let n = (0, s.e7)([E.Z], () => null != e && E.Z.can(p.Plq.SEND_MESSAGES_IN_THREADS, e));
     return null != e && (!e.isThread() || e.isActiveThread() || (e.isArchivedThread() && (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0 && n));
@@ -176,7 +176,7 @@ function U(e) {
 function w(e) {
     let t = (0, l.Z)(),
         n = (0, s.e7)([E.Z], () => E.Z.can(p.Plq.CONNECT, e)),
-        r = y(e),
+        r = D(e),
         i = I.useExperiment(
             {
                 guildId: e.guild_id,

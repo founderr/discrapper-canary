@@ -30,12 +30,12 @@ var r = n(735250),
     v = n(748585),
     C = n(689938),
     L = n(711230);
-let D = { keys: ['label'] };
-function y(e) {
+let y = { keys: ['label'] };
+function D(e) {
     return e.label;
 }
 let b = i.forwardRef(function (e, t) {
-    let { options: n, value: a, onChange: l, clearable: d = !1, multi: _ = !1, closeOnSelect: p = !0, onOpen: I, onClose: T, placeholder: S = C.Z.Messages.SELECT, wrapperClassName: O, className: b, isDisabled: P = !1, maxVisibleItems: x = 7, look: G = v.q.FILLED, autoFocus: F = !1, popoutPosition: V = 'bottom', filter: H = !0, debounceTime: Z, renderOptionLabel: Y = y, onSearchChange: j, renderOptionPrefix: W = () => null, renderOptionSuffix: K = () => null, 'aria-describedby': z, 'aria-invalid': q, 'aria-labelledby': Q, 'aria-required': X, inputClassNames: $, centerCaret: J = !1, onBlur: ee, matchSorterOptions: et, clearQueryOnSelect: en = !1, hidePills: er, renderCustomPill: ei, customPillContainerClassName: ea, ...es } = e,
+    let { options: n, value: a, onChange: l, clearable: d = !1, multi: _ = !1, closeOnSelect: p = !0, onOpen: I, onClose: T, placeholder: S = C.Z.Messages.SELECT, wrapperClassName: O, className: b, isDisabled: P = !1, maxVisibleItems: x = 7, look: G = v.q.FILLED, autoFocus: F = !1, popoutPosition: V = 'bottom', filter: H = !0, debounceTime: Z, renderOptionLabel: Y = D, onSearchChange: j, renderOptionPrefix: W = () => null, renderOptionSuffix: K = () => null, 'aria-describedby': z, 'aria-invalid': q, 'aria-labelledby': Q, 'aria-required': X, inputClassNames: $, centerCaret: J = !1, onBlur: ee, matchSorterOptions: et, clearQueryOnSelect: en = !1, hidePills: er, renderCustomPill: ei, customPillContainerClassName: ea, ...es } = e,
         { ref: eo, width: el } = (0, A.Z)(),
         { titleId: eu, errorId: ec, error: ed } = (0, h.Gc)(),
         { ref: e_, width: eE } = (0, A.Z)(),
@@ -133,9 +133,9 @@ let b = i.forwardRef(function (e, t) {
             var e, t;
             return (e = eR), null == (t = a) ? [] : (Array.isArray(t) ? t : [t]).map((t) => ('object' == typeof t && (null == t || 'value' in t) ? t : e.find((e) => e.value === t))).filter(Boolean);
         }, [eR, a]),
-        eD = i.useMemo(() => eL.map((e) => e.value), [eL]),
-        ey = eL[eL.length - 1],
-        eb = (0, R.Z)(ey),
+        ey = i.useMemo(() => eL.map((e) => e.value), [eL]),
+        eD = eL[eL.length - 1],
+        eb = (0, R.Z)(eD),
         eM = i.useId(),
         eP = i.useId(),
         eU = i.useId(),
@@ -182,7 +182,7 @@ let b = i.forwardRef(function (e, t) {
         ),
         eV = (0, u.ZP)({
             id: eP,
-            defaultFocused: null != ey ? String(ey.value) : void 0,
+            defaultFocused: null != eD ? String(eD.value) : void 0,
             scrollToStart: eB,
             scrollToEnd: eF,
             isEnabled: eI,
@@ -227,8 +227,8 @@ let b = i.forwardRef(function (e, t) {
             }
         }, [eI, ev]),
         i.useLayoutEffect(() => {
-            !eI && (_ ? eS('') : null != ey && eS(ey.label));
-        }, [_, ey, eI]),
+            !eI && (_ ? eS('') : null != eD && eS(eD.label));
+        }, [_, eD, eI]),
         i.useLayoutEffect(() => {
             _ && eS('');
         }, [_, eL.length]);
@@ -275,7 +275,7 @@ let b = i.forwardRef(function (e, t) {
             [ew, eI]
         ),
         eK = eR;
-    eg && null != eT && !1 !== H && (eK = 'function' == typeof H ? H(eR, eT) : (0, o.Lu)(eR, eT, null != et ? et : D)),
+    eg && null != eT && !1 !== H && (eK = 'function' == typeof H ? H(eR, eT) : (0, o.Lu)(eR, eT, null != et ? et : y)),
         i.useEffect(() => {
             let e = eN.current;
             null == e || e.scrollToTop();
@@ -304,7 +304,7 @@ let b = i.forwardRef(function (e, t) {
                         listId: eM,
                         maxVisibleItems: x,
                         width: eE,
-                        selectedValues: eD,
+                        selectedValues: ey,
                         closePopout: t,
                         onSelect: eY,
                         closeOnSelect: p,
@@ -329,7 +329,7 @@ let b = i.forwardRef(function (e, t) {
                         style: { '--icons-width': ''.concat(el, 'px') },
                         onBlur: (e) => {
                             var t, n, r;
-                            if (!((null === (t = eO.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (r = eN.current) || void 0 === r ? void 0 : null === (n = r.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget)))) !_ && null != ey && eS(ey.label), eA(!1), ew(!1), null == ee || ee(e);
+                            if (!((null === (t = eO.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (r = eN.current) || void 0 === r ? void 0 : null === (n = r.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget)))) !_ && null != eD && eS(eD.label), eA(!1), ew(!1), null == ee || ee(e);
                         },
                         children: [
                             (0, r.jsx)(f.t, {
@@ -456,7 +456,7 @@ let b = i.forwardRef(function (e, t) {
 function M(e) {
     let { onSelect: t, closePopout: n, selectedValues: a, options: o, width: l, maxVisibleItems: u, activeDescendant: d, listRef: _, listId: E, renderOptionLabel: f, updatePosition: h, loading: p = !1, multi: m, popoutPosition: g, closeOnSelect: A, renderOptionPrefix: N = () => null, renderOptionSuffix: R = () => null } = e,
         v = i.useRef(null),
-        D = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 t(e), A && n();
             },
@@ -523,7 +523,7 @@ function M(e) {
                                     isFocused: d === String(i.value),
                                     value: i.value,
                                     label: s,
-                                    onSelect: D,
+                                    onSelect: y,
                                     prefix: N(i, {
                                         inPill: !1,
                                         inDropdown: !0

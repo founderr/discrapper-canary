@@ -31,7 +31,7 @@ let g = (e) => {
 };
 function A(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: T, pendingBanner: A, children: N, className: O, avatarSize: R, avatarOffsetX: v, avatarOffsetY: C, bannerWidth: L, bannerHeight: D, themePadding: y, animateOnHover: b = !1 } = e,
+    let { user: n, displayProfile: a, guildId: T, pendingBanner: A, children: N, className: O, avatarSize: R, avatarOffsetX: v, avatarOffsetY: C, bannerWidth: L, bannerHeight: y, themePadding: D, animateOnHover: b = !1 } = e,
         M = (0, E.Dt)(),
         [P, U] = i.useState(!1),
         w = (0, l.e7)([p.Z], () => p.Z.isFocused()),
@@ -47,13 +47,13 @@ function A(e) {
         V = (0, o._i)((0, d.ZP)(F, B, !1)),
         H = (0, _.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : V).hex,
         Z = g(R),
-        Y = D - C - y;
+        Y = y - C - D;
     return (0, r.jsxs)('svg', {
         className: S.mask,
-        viewBox: '0 0 '.concat(L, ' ').concat(D),
+        viewBox: '0 0 '.concat(L, ' ').concat(y),
         style: {
             minWidth: L,
-            minHeight: D
+            minHeight: y
         },
         children: [
             (0, r.jsxs)('mask', {
@@ -68,7 +68,7 @@ function A(e) {
                     }),
                     (0, r.jsx)('circle', {
                         fill: 'black',
-                        cx: Z + v - y,
+                        cx: Z + v - D,
                         cy: Y,
                         r: Z
                     })
@@ -88,8 +88,8 @@ function A(e) {
                         onMouseMove: () => U(!0),
                         onMouseLeave: () => U(!1),
                         style: {
-                            height: D,
-                            minHeight: D,
+                            height: y,
+                            minHeight: y,
                             backgroundImage: null != G ? 'url('.concat(G, ')') : void 0,
                             backgroundColor: 'COMPLETE' !== k ? u.Z.unsafe_rawColors.PRIMARY_800.css : H
                         },

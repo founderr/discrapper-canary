@@ -1,30 +1,30 @@
-var r = n(566885),
-    i = n(926515),
-    a = n(772425),
-    s = n(339718),
-    o = n(49693),
-    l = n(981971),
-    u = n(11697),
-    c = n(908355),
-    d = n(536524),
-    _ = n(192291).aTypedArrayConstructor,
-    E = n(165915);
-e.exports = function (e) {
-    var t,
+var e = n(566885),
+    o = n(926515),
+    i = n(772425),
+    u = n(339718),
+    f = n(49693),
+    a = n(981971),
+    c = n(11697),
+    s = n(908355),
+    y = n(536524),
+    p = n(192291).aTypedArrayConstructor,
+    h = n(165915);
+t.exports = function (t) {
+    var r,
         n,
-        f,
-        h,
-        p,
-        I,
-        m,
-        T,
-        S = a(this),
-        g = s(e),
-        A = arguments.length,
-        N = A > 1 ? arguments[1] : void 0,
-        O = void 0 !== N,
-        R = u(g);
-    if (R && !c(R)) for (T = (m = l(g, R)).next, g = []; !(I = i(T, m)).done; ) g.push(I.value);
-    for (O && A > 2 && (N = r(N, arguments[2])), n = o(g), h = d((f = new (_(S))(n))), t = 0; n > t; t++) (p = O ? N(g[t], t) : g[t]), (f[t] = h ? E(p) : +p);
-    return f;
+        v,
+        d,
+        g,
+        l,
+        A,
+        w,
+        x = i(this),
+        b = u(t),
+        T = arguments.length,
+        E = T > 1 ? arguments[1] : void 0,
+        I = void 0 !== E,
+        R = c(b);
+    if (R && !s(R)) for (w = (A = a(b, R)).next, b = []; !(l = o(w, A)).done; ) b.push(l.value);
+    for (I && T > 2 && (E = e(E, arguments[2])), n = f(b), d = y((v = new (p(x))(n))), r = 0; n > r; r++) (g = I ? E(b[r], r) : b[r]), (v[r] = d ? h(g) : +g);
+    return v;
 };

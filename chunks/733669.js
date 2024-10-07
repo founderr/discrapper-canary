@@ -1,8 +1,8 @@
-var n = r(325008),
-    a = r(936940);
-e.exports =
-    n &&
-    a(function () {
+var e = r(325008),
+    o = r(936940);
+t.exports =
+    e &&
+    o(function () {
         return (
             42 !==
             Object.defineProperty(function () {}, 'prototype', {

@@ -38,8 +38,8 @@ var r = n(488745),
     v = n(279465),
     C = n(134945),
     L = n(36737),
-    D = n(884147),
-    y = n(696421),
+    y = n(884147),
+    D = n(696421),
     b = n(623126),
     M = n(800889),
     P = n(135858),
@@ -141,8 +141,8 @@ Z = {
     'pt-PT': v.Z,
     'ro-RO': C.Z,
     'ru-RU': L.Z,
-    'sk-SK': D.Z,
-    'sl-SI': y.Z,
+    'sk-SK': y.Z,
+    'sl-SI': D.Z,
     'sr-SP': b.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,
@@ -196,9 +196,9 @@ function K(e, t, n) {
         v = j.get(t),
         C = e.onClose || v.onClose,
         L = N ? () => {} : e.onAction || v.onAction,
-        D = (0, G.tv)(),
-        y = (e) => {
-            L && L(s), e.target instanceof HTMLAnchorElement && D.open(e.target, e);
+        y = (0, G.tv)(),
+        D = (e) => {
+            L && L(s), e.target instanceof HTMLAnchorElement && y.open(e.target, e);
         },
         b = 'menuitem';
     !N && ('single' === t.selectionManager.selectionMode ? (b = 'menuitemradio') : 'multiple' === t.selectionManager.selectionMode && (b = 'menuitemcheckbox'));
@@ -228,11 +228,11 @@ function K(e, t, n) {
         }),
         { pressProps: Z, isPressed: Y } = (0, B.r7)({
             onPressStart: (e) => {
-                'keyboard' === e.pointerType && y(e), null == c || c(e);
+                'keyboard' === e.pointerType && D(e), null == c || c(e);
             },
             onPress: _,
             onPressUp: (e) => {
-                'keyboard' !== e.pointerType && (y(e), !N && C && (null != o ? o : 'multiple' !== t.selectionManager.selectionMode || t.selectionManager.isLink(s)) && C()), null == d || d(e);
+                'keyboard' !== e.pointerType && (D(e), !N && C && (null != o ? o : 'multiple' !== t.selectionManager.selectionMode || t.selectionManager.isLink(s)) && C()), null == d || d(e);
             },
             onPressChange: E,
             onPressEnd: f,

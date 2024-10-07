@@ -1,7 +1,7 @@
 var r = n(466293),
     i = n(443735),
-    a = n(402428),
-    s = r ? r.isConcatSpreadable : void 0;
+    u = n(402428),
+    l = r ? r.isConcatSpreadable : void 0;
 e.exports = function (e) {
-    return a(e) || i(e) || !!(s && e && e[s]);
+    return u(e) || i(e) || !!(l && e && e[l]);
 };

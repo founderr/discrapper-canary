@@ -1,7 +1,7 @@
-var r = n(622281),
-    i = Math.floor;
-e.exports =
+var e = n(622281),
+    o = Math.floor;
+t.exports =
     Number.isInteger ||
-    function (e) {
-        return !r(e) && isFinite(e) && i(e) === e;
+    function (t) {
+        return !e(t) && isFinite(t) && o(t) === t;
     };

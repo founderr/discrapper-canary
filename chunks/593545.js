@@ -176,8 +176,8 @@ function A(e) {
         C = 0 === A,
         L = '';
     C && u && R > v ? (L = '\n...') : !C && (L = '...'), '' !== L && (C ? (L += ' ' + f.Z.Messages.PREVIEW_LINES_LEFT.format({ lines: R - v })) : (L += ' ' + f.Z.Messages.PREVIEW_BYTES_LEFT.format({ formattedBytes: (0, E.IC)(A) })));
-    let D = (null == O ? void 0 : O.slice(0, v).join('\n')) + L,
-        y = (0, c.yx)(D),
+    let y = (null == O ? void 0 : O.slice(0, v).join('\n')) + L,
+        D = (0, c.yx)(y),
         b = u || v < R;
     return (0, r.jsxs)('div', {
         className: s()(N, h.container),
@@ -188,7 +188,7 @@ function A(e) {
                     null == o
                         ? (0, r.jsx)(l.Spinner, { className: h.spinner })
                         : (0, r.jsx)(I, {
-                              text: y,
+                              text: D,
                               language: _
                           })
             }),

@@ -26,8 +26,8 @@ var i = n(735250),
     v = n(199649),
     C = n(1397),
     x = n(541716),
-    N = n(752305),
-    T = n(974251),
+    T = n(752305),
+    N = n(974251),
     O = n(893718),
     A = n(249458),
     y = n(552062),
@@ -140,7 +140,7 @@ class ei extends s.Component {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t.props,
                     { textValue: n } = t.state,
                     i = D.Z.getDraft(e.channel.id, D.d.ChannelMessage);
-                n !== i && '' === i && t.setState((0, N.eK)(i));
+                n !== i && '' === i && t.setState((0, T.eK)(i));
             }),
             et(this, 'handleTextareaKeyDown', (e) => {
                 if (e.which === q.yXg.ARROW_UP && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey && 0 === this.state.textValue.length) {
@@ -188,7 +188,7 @@ class ei extends s.Component {
                                         shouldRefocus: !1
                                     };
                           let r = p.Z.getSendMessageOptionsForReply(i);
-                          return (p.Z.sendMessage(n.id, b.ZP.parse(n, t), !0, r), this.setState((0, N.H2)()), (0, R.A6)(n.id), s)
+                          return (p.Z.sendMessage(n.id, b.ZP.parse(n, t), !0, r), this.setState((0, T.H2)()), (0, R.A6)(n.id), s)
                               ? (f.Z.deactivateAllRegions(),
                                 {
                                     shouldClear: !1,
@@ -207,19 +207,19 @@ class ei extends s.Component {
                 this.setState({ focused: !1 });
             }),
             et(this, 'renderAttachButton', (e, t) =>
-                (0, i.jsx)(T.Z, {
+                (0, i.jsx)(N.Z, {
                     className: t,
                     channel: this.props.channel,
                     draftType: D.d.ChannelMessage,
                     editorTextContent: this.state.textValue,
-                    setValue: (e) => this.handleTextareaChange(null, e, (0, N.JM)(e)),
+                    setValue: (e) => this.handleTextareaChange(null, e, (0, T.JM)(e)),
                     canOnlyUseTextCommands: e
                 })
             ),
             D.Z.addChangeListener(this.draftDidChange);
         let n = D.Z.getDraft(e.channel.id, D.d.ChannelMessage);
         (this.state = {
-            ...(0, N.eK)(n),
+            ...(0, T.eK)(n),
             focused: !1,
             contentWarningProps: null
         }),

@@ -56,23 +56,23 @@ function A(e) {
             titleSecondary: null == R ? void 0 : R.name,
             isFavorite: O
         });
-    let D = () => {
+    let y = () => {
             A(),
                 (0, s.openModalLazy)(async () => {
                     let { default: e } = await n.e('58120').then(n.bind(n, 355453));
                     return (t) => (0, r.jsx)(e, { ...t });
                 });
         },
-        y = (0, u.un)(a.z.SOUNDBOARD_KEYBIND_TIP),
+        D = (0, u.un)(a.z.SOUNDBOARD_KEYBIND_TIP),
         b =
-            null != L && (0, p.isWindows)() && !y
+            null != L && (0, p.isWindows)() && !D
                 ? S.Z.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
                       keybind: (0, I.BB)(L.shortcut, !0),
                       openSettingsHook: (e, t) =>
                           (0, r.jsx)(
                               s.Anchor,
                               {
-                                  onClick: D,
+                                  onClick: y,
                                   children: e
                               },
                               t

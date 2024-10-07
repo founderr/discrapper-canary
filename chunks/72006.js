@@ -18,7 +18,7 @@ n.d(t, {
         return D;
     },
     Zn: function () {
-        return O;
+        return L;
     },
     c2: function () {
         return Z;
@@ -33,7 +33,7 @@ n.d(t, {
         return y;
     },
     lv: function () {
-        return L;
+        return O;
     },
     nR: function () {
         return A;
@@ -122,7 +122,7 @@ function v(e, t) {
             return t;
     }
 }
-function O(e, t) {
+function L(e, t) {
     switch (e) {
         case 'transpose-characters':
             return T()(t);
@@ -137,7 +137,7 @@ function O(e, t) {
 function b(e) {
     return e.getCurrentContent().getFirstBlock().getText();
 }
-function L(e, t) {
+function O(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = t.getCurrentContent(),
         i = r.getFirstBlock(),

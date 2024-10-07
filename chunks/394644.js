@@ -56,7 +56,7 @@ function j(e) {
         t = [
             {
                 header: v.Z.Messages.USER_SETTINGS,
-                settings: [b.s6.ACCOUNT, b.s6.GAMES, b.s6.PROFILE_CUSTOMIZATION, b.s6.PRIVACY_AND_SAFETY, b.s6.PRIVACY_AND_SAFETY_V2, b.s6.PRIVACY_FAMILY_CENTER, b.s6.AUTHORIZED_APPS, b.s6.SESSIONS, b.s6.CONNECTIONS, b.s6.CLIPS, b.s6.FRIEND_REQUESTS]
+                settings: [b.s6.ACCOUNT, b.s6.GAMES, b.s6.PROFILE_CUSTOMIZATION, b.s6.PRIVACY_AND_SAFETY, b.s6.CONTENT_SOCIAL, b.s6.DATA_PRIVACY, b.s6.PRIVACY_FAMILY_CENTER, b.s6.AUTHORIZED_APPS, b.s6.SESSIONS, b.s6.CONNECTIONS, b.s6.CLIPS, b.s6.FRIEND_REQUESTS]
             },
             {
                 header: v.Z.Messages.BILLING_SETTINGS,

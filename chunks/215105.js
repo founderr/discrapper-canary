@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return y;
     }
 }),
     n(47120);
@@ -59,8 +59,8 @@ let v = (0, _.kt)({
                 (0, E.vE)(e);
         }
     };
-function D(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, setPopoutRef: O, modalKey: D, onClose: y } = e,
+function y(e) {
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, setPopoutRef: O, modalKey: y, onClose: D } = e,
         { trackUserProfileAction: b } = (0, p.KZ)(),
         { sendReply: M } = (0, I.Q)(_),
         { resetInteraction: P, setInteractionToastShown: U, setInteractionTypeSent: w } = (0, T.Xo)(),
@@ -116,7 +116,7 @@ function D(e) {
         children: (0, r.jsx)('div', {
             className: s()(R.container, j, W, { [R.customProfileTheme]: null != x }),
             children: (0, r.jsx)(d.Z, {
-                parentModalKey: D,
+                parentModalKey: y,
                 emojiPickerCloseOnModalOuterClick: !0,
                 innerClassName: R.inner,
                 editorClassName: R.editor,
@@ -144,7 +144,7 @@ function D(e) {
                         return (
                             await Y(n),
                             P(),
-                            null == y || y(),
+                            null == D || D(),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1

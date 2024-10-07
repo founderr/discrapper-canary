@@ -35,8 +35,8 @@ let R = new f.Z('GuildMemberStore'),
     v = {},
     C = {},
     L = {},
-    D = !1,
-    y = 0,
+    y = !1,
+    D = 0,
     b = 0,
     M = {},
     P = {},
@@ -56,7 +56,7 @@ function x(e, t) {
     } else for (let t in L) V(t) === e && (G(t), k(t));
 }
 function G(e) {
-    (y += 1), (M[e] = y);
+    (D += 1), (M[e] = D);
 }
 function k(e) {
     F(e) === g.default.getId() && (0, p.l)(V(e)), delete L[e];
@@ -424,7 +424,7 @@ class ee extends (i = _.ZP.Store) {
         return L;
     }
     getCommunicationDisabledVersion() {
-        return y;
+        return D;
     }
     getPendingRoleUpdates(e) {
         var t;
@@ -451,7 +451,7 @@ class ee extends (i = _.ZP.Store) {
         : (s[o] = l),
     (t.ZP = new ee(E.Z, {
         CONNECTION_OPEN: function (e) {
-            D ? (D = !1) : (v = {}),
+            y ? (y = !1) : (v = {}),
                 (L = {}),
                 (function (e) {
                     e.guilds.forEach((e) => {
@@ -480,7 +480,7 @@ class ee extends (i = _.ZP.Store) {
         },
         CACHE_LOADED: function (e) {
             let { guildMembers: t } = e;
-            (D = !0), (v = { ...t });
+            (y = !0), (v = { ...t });
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
@@ -628,9 +628,9 @@ class ee extends (i = _.ZP.Store) {
         LOCAL_MESSAGES_LOADED: function (e) {
             var t, n;
             if (null == e.guildId || null == N.Z.getGuild(e.guildId)) return !1;
-            (D = !0), (v[e.guildId] = null !== (t = v[e.guildId]) && void 0 !== t ? t : {});
+            (y = !0), (v[e.guildId] = null !== (t = v[e.guildId]) && void 0 !== t ? t : {});
             let r = !1;
-            for (let t of ((D = !0), (v[e.guildId] = null !== (n = v[e.guildId]) && void 0 !== n ? n : {}), e.members)) null == v[e.guildId][t.userId] && ((r = !0), (v[e.guildId][t.userId] = t));
+            for (let t of ((y = !0), (v[e.guildId] = null !== (n = v[e.guildId]) && void 0 !== n ? n : {}), e.members)) null == v[e.guildId][t.userId] && ((r = !0), (v[e.guildId][t.userId] = t));
             return r;
         },
         MESSAGE_CREATE: X,

@@ -28,7 +28,7 @@ var r = n(735250),
     R = n(981631),
     v = n(451563);
 function C(e) {
-    let { user: t, currentUser: n, displayProfile: C, guild: L, isHovering: D, onOpenProfile: y, channelId: b, onClose: M } = e,
+    let { user: t, currentUser: n, displayProfile: C, guild: L, isHovering: y, onOpenProfile: D, channelId: b, onClose: M } = e,
         P = _.ZP.getName(null == L ? void 0 : L.id, b, t),
         U = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(t.id)),
         w = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation),
@@ -47,7 +47,7 @@ function C(e) {
             (0, r.jsx)(m.Z, {
                 user: t,
                 profileType: O.y0.BITE_SIZE,
-                onOpenProfile: y,
+                onOpenProfile: D,
                 usernameIcon:
                     t.hasAvatarForGuild(null == L ? void 0 : L.id) &&
                     (0, r.jsx)(g.Z, {
@@ -67,8 +67,8 @@ function C(e) {
                         !w &&
                             (0, r.jsx)(T.Z, {
                                 userId: t.id,
-                                isHovering: D,
-                                onOpenProfile: y
+                                isHovering: y,
+                                onOpenProfile: D
                             })
                     ]
                 })
@@ -84,7 +84,7 @@ function C(e) {
             t.id !== n.id &&
                 (0, r.jsx)(N.Z, {
                     user: t,
-                    onOpenProfile: (e) => (null == y ? void 0 : y({ section: e }))
+                    onOpenProfile: (e) => (null == D ? void 0 : D({ section: e }))
                 }),
             x &&
                 (0, r.jsx)(l.ZP, {

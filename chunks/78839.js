@@ -1,6 +1,6 @@
 n.d(t, {
     sE: function () {
-        return D;
+        return y;
     }
 }),
     n(653041),
@@ -43,17 +43,17 @@ function C() {
 function L(e) {
     return e.status !== f.O0b.UNPAID;
 }
-function D(e) {
+function y(e) {
     let t = _.default.getId();
     return e.userId === t;
 }
-function y(e, t) {
+function D(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = n ? I : p;
     if (null == r) return null;
     for (let n in r) {
         let i = r[n];
-        if (!D(i)) {
+        if (!y(i)) {
             if (!A) {
                 let e = _.default.getId();
                 R.log('user id mismatch between logged in user and SubscriptionStore user'),
@@ -84,14 +84,14 @@ class b extends (r = o.ZP.Store) {
     }
     getPremiumSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return y(f.NYc.PREMIUM, (e) => !(0, c.Q0)(e.planId), e);
+        return D(f.NYc.PREMIUM, (e) => !(0, c.Q0)(e.planId), e);
     }
     getPremiumTypeSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return y(f.NYc.PREMIUM, void 0, e);
+        return D(f.NYc.PREMIUM, void 0, e);
     }
     inReverseTrial() {
-        let e = y(f.NYc.PREMIUM, void 0, !0);
+        let e = D(f.NYc.PREMIUM, void 0, !0);
         return !!(null != e && null != e.trialId && h.h8.includes(e.trialId)) && null == e.paymentSourceId;
     }
     getSubscriptions() {

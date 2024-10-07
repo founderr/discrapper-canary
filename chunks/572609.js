@@ -1,6 +1,6 @@
-var r = n(24033);
-e.exports = function () {
-    var e = r(this),
+var e = r(24033);
+n.exports = function () {
+    var n = e(this),
         t = '';
-    return e.hasIndices && (t += 'd'), e.global && (t += 'g'), e.ignoreCase && (t += 'i'), e.multiline && (t += 'm'), e.dotAll && (t += 's'), e.unicode && (t += 'u'), e.unicodeSets && (t += 'v'), e.sticky && (t += 'y'), t;
+    return n.hasIndices && (t += 'd'), n.global && (t += 'g'), n.ignoreCase && (t += 'i'), n.multiline && (t += 'm'), n.dotAll && (t += 's'), n.unicode && (t += 'u'), n.unicodeSets && (t += 'v'), n.sticky && (t += 'y'), t;
 };

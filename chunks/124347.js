@@ -125,7 +125,7 @@ class C extends (i = o.Component) {
         null != i && this._cancellers.add(i);
     }
     render() {
-        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: I, minHeight: m, maxWidth: T, maxHeight: S, onClick: A, renderAccessory: N, tabIndex: O, limitResponsiveWidth: R, useFullWidth: v, placeholder: L, placeholderVersion: D, dataSafeSrc: y, srcIsAnimated: b } = this.props,
+        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: I, minHeight: m, maxWidth: T, maxHeight: S, onClick: A, renderAccessory: N, tabIndex: O, limitResponsiveWidth: R, useFullWidth: v, placeholder: L, placeholderVersion: y, dataSafeSrc: D, srcIsAnimated: b } = this.props,
             { readyState: M, hasMouseOver: P, hasFocus: U } = this.state,
             w = null != n,
             x = this.getRatio(),
@@ -148,8 +148,8 @@ class C extends (i = o.Component) {
                 height: k,
                 src: '',
                 placeholder: L,
-                placeholderVersion: D,
-                dataSafeSrc: y,
+                placeholderVersion: y,
+                dataSafeSrc: D,
                 srcIsAnimated: b,
                 children:
                     null != _

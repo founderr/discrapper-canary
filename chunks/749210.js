@@ -41,13 +41,13 @@ let C = (e) => {
             guild: { id: e }
         });
     },
-    D = () => {
+    y = () => {
         O.Z.show({
             title: v.Z.Messages.SERVER_IS_CURRENTLY_FULL,
             body: v.Z.Messages.PLEASE_TRY_AGAIN_LATER
         });
     };
-async function y(e) {
+async function D(e) {
     var t, r, i, o, l;
     let u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { source: d, loadId: f, lurkLocation: h } = u,
@@ -115,7 +115,7 @@ async function y(e) {
             let e = T.default.getCurrentUser();
             A.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? C(R.tHP) : C(R.DZw);
         }
-        throw ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === R.evJ.GUILD_AT_CAPACITY && D(), S && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === R.evJ.UNKNOWN_GUILD && L(e), t);
+        throw ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === R.evJ.GUILD_AT_CAPACITY && y(), S && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === R.evJ.UNKNOWN_GUILD && L(e), t);
     }
 }
 function b(e) {
@@ -127,7 +127,7 @@ function b(e) {
     );
 }
 t.Z = {
-    joinGuild: y,
+    joinGuild: D,
     waitForGuild: b,
     async transitionToGuildSync(e, t, n) {
         var r, i;

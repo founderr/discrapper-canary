@@ -107,8 +107,8 @@ var r,
     v = n(918701),
     C = n(977156),
     L = n(665430),
-    D = n(569743),
-    y = n(585500),
+    y = n(569743),
+    D = n(585500),
     b = n(566078),
     M = n(46140),
     P = n(981631),
@@ -124,7 +124,7 @@ function w() {
         s = (0, C.cB)({ location: M.dr.USE_QUESTS });
     return (
         u.useEffect(() => {
-            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) && s && !t && !i && (n(!0), (0, N.xw)(), (0, D.Z)({ location: M.dr.USE_QUESTS }) && (0, N.w)(R.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
+            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) && s && !t && !i && (n(!0), (0, N.xw)(), (0, y.Z)({ location: M.dr.USE_QUESTS }) && (0, N.w)(R.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
         }, [e.fetchPolicy, s, t, i, a]),
         {
             quests: r,
@@ -494,7 +494,7 @@ function ea(e) {
     var t, n;
     let r = j(e),
         i = (0, v.b7)(e),
-        a = (0, y.D)({
+        a = (0, D.D)({
             quest: e,
             taskDetails: r,
             location: M.dr.QUEST_HOME_DESKTOP,

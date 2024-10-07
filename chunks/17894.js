@@ -1,31 +1,31 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return p;
     }
 });
 var r = n(525654),
-    a = n.n(r),
-    i = n(39612),
-    l = n(271579),
-    s = n(756647),
+    i = n.n(r),
+    l = n(39612),
+    s = n(271579),
+    a = n(756647),
     o = n(232567),
-    u = n(703656),
-    c = n(314897),
+    c = n(703656),
+    u = n(314897),
     d = n(896797),
-    I = n(626135),
+    h = n(626135),
     _ = n(954824),
-    h = n(981631);
-async function f(e) {
+    f = n(981631);
+async function E(e) {
     var t, n;
-    let r = null === (t = a().os) || void 0 === t ? void 0 : t.family;
+    let r = null === (t = i().os) || void 0 === t ? void 0 : t.family;
     if ('Android' === r || 'iOS' === r) {
-        let t = null !== (n = c.default.getFingerprint()) && void 0 !== n ? n : c.default.getId(),
-            r = (0, l.WS)();
-        if (null == t && c.default.isAuthenticated())
+        let t = null !== (n = u.default.getFingerprint()) && void 0 !== n ? n : u.default.getId(),
+            r = (0, s.WS)();
+        if (null == t && u.default.isAuthenticated())
             try {
-                await (0, o.k)(), (t = c.default.getId());
+                await (0, o.k)(), (t = u.default.getId());
             } catch {}
-        return (0, l.ZP)((0, i.Gk)(), {
+        return (0, s.ZP)((0, l.Gk)(), {
             utmSource: e,
             fingerprint: t,
             attemptId: r
@@ -33,16 +33,16 @@ async function f(e) {
     }
     return 'discord://';
 }
-async function S(e) {
-    let t = await f(e),
-        n = (0, l.zS)(t);
+async function p(e) {
+    let t = await E(e),
+        n = (0, s.zS)(t);
     null != n &&
-        I.default.track(h.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, s.K)(n.fingerprint),
+        h.default.track(f.rMx.DEEP_LINK_CLICKED, {
+            fingerprint: (0, a.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),
         _.Z.launch(t, (e) => {
-            !e && (0, u.dL)(d.Z.fallbackRoute);
+            !e && (0, c.dL)(d.Z.fallbackRoute);
         });
 }

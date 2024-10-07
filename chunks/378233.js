@@ -1,6 +1,6 @@
 n.d(t, {
     B0: function () {
-        return D;
+        return y;
     },
     Hc: function () {
         return P;
@@ -18,7 +18,7 @@ n.d(t, {
         return M;
     },
     X_: function () {
-        return y;
+        return D;
     },
     Zt: function () {
         return N;
@@ -138,8 +138,8 @@ let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: 
             n
         );
     },
-    D = (e) => e.match('development' !== p ? g : A),
-    y = (e) =>
+    y = (e) => e.match('development' !== p ? g : A),
+    D = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;
             return t === d.u3.APNG || t === d.u3.LOTTIE || t === d.u3.GIF;

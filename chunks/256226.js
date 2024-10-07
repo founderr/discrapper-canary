@@ -18,8 +18,8 @@ var r = n(735250),
 t.Z = i.forwardRef(function (e, t) {
     var a, S, g;
     let A;
-    let { canRemove: N, className: O, role: R, onRemove: v, guildId: C, disableBorderColor: L, onMouseDown: D } = e,
-        { tabIndex: y, ...b } = (0, o.JA)(R.id),
+    let { canRemove: N, className: O, role: R, onRemove: v, guildId: C, disableBorderColor: L, onMouseDown: y } = e,
+        { tabIndex: D, ...b } = (0, o.JA)(R.id),
         M = (0, I.p9)({
             roleId: R.id,
             size: 16,
@@ -78,9 +78,9 @@ t.Z = i.forwardRef(function (e, t) {
             className: s()(T.role, O),
             style: V,
             onContextMenu: w,
-            onMouseDown: D,
+            onMouseDown: y,
             'aria-label': R.name,
-            tabIndex: y,
+            tabIndex: D,
             ...b,
             children: [
                 N
@@ -89,7 +89,7 @@ t.Z = i.forwardRef(function (e, t) {
                           children: (0, r.jsxs)(d.Clickable, {
                               className: s()(T.roleRemoveButtonCanRemove, T.roleRemoveButton),
                               onClick: v,
-                              tabIndex: y,
+                              tabIndex: D,
                               focusProps: { focusClassName: T.roleRemoveIconFocused },
                               'aria-hidden': !1,
                               'aria-label': m.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({ roleName: R.name }),

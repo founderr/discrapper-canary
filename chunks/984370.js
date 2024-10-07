@@ -34,7 +34,7 @@ async function x() {
     }
 }
 function v(e) {
-    let { children: t, className: n, channelId: i, guildId: l, innerClassname: a, transparent: o = !1, toolbar: p, mobileToolbar: m, 'aria-label': R, 'aria-labelledby': T, scrollable: v, role: O, hideSearch: b, showDivider: L } = e,
+    let { children: t, className: n, channelId: i, guildId: l, innerClassname: a, transparent: o = !1, toolbar: p, mobileToolbar: m, 'aria-label': R, 'aria-labelledby': T, scrollable: v, role: L, hideSearch: b, showDivider: O } = e,
         { hasBugReporterAccess: A } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: P, inInbox: Z } = _.Z.useExperiment({ location: 'HeaderBar' }),
         y = (0, d.Q)('HeaderBar');
@@ -47,19 +47,19 @@ function v(e) {
             return s.tq
                 ? m
                 : (0, r.jsxs)(r.Fragment, {
-                      children: [p, e ? (0, r.jsx)(E.Z, { className: N.search }, null != l ? l : i) : null, L && (0, r.jsx)(I.ZP.Divider, {}), !y && (0, r.jsx)(g.Z, {}), (0, r.jsx)(u.Z, { canShowReminder: !0 }), !y && (0, r.jsx)(h.Z, {}), P && !Z ? (0, r.jsx)(f.Z, {}) : null, !y && (A ? (0, r.jsx)(S.Z, {}) : (0, r.jsx)(C.Z, {}))]
+                      children: [p, e ? (0, r.jsx)(E.Z, { className: N.search }, null != l ? l : i) : null, O && (0, r.jsx)(I.ZP.Divider, {}), !y && (0, r.jsx)(g.Z, {}), (0, r.jsx)(u.Z, { canShowReminder: !0 }), !y && (0, r.jsx)(h.Z, {}), P && !Z ? (0, r.jsx)(f.Z, {}) : null, !y && (A ? (0, r.jsx)(S.Z, {}) : (0, r.jsx)(C.Z, {}))]
                   });
         })(),
         transparent: o,
         onDoubleClick: x,
         'aria-label': R,
         'aria-labelledby': T,
-        role: O,
+        role: L,
         scrollable: v,
         children: t
     });
 }
-function O(e) {
+function L(e) {
     let { children: t, className: n, 'aria-label': i, 'aria-labelledby': l, role: s } = e;
     return (0, r.jsx)(I.ZP, {
         className: n,
@@ -81,7 +81,7 @@ function b(e) {
                   ...n,
                   className: s
               })
-            : (0, r.jsx)(O, {
+            : (0, r.jsx)(L, {
                   ...n,
                   className: s
               })

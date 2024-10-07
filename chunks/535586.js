@@ -1,6 +1,6 @@
-e.exports = function (e, t) {
+t.exports = function (t, e) {
     return {
-        value: e,
-        done: t
+        value: t,
+        done: e
     };
 };

@@ -1,13 +1,13 @@
 n.d(t, {
     u: function () {
-        return a;
+        return i;
     },
     v: function () {
-        return o;
+        return r;
     }
 });
-let o = '1' === n(444675).env.USE_NEW_INTL_SYSTEM;
-function a() {
+let r = n(139458).B || !1;
+function i() {
     return n(515297)
         .filter((e) => {
             let { enabled: t } = e;
@@ -23,7 +23,7 @@ function a() {
         })
         .sort((e, t) => {
             let { name: n } = e,
-                { name: o } = t;
-            return (n = n.toLowerCase()), n < (o = o.toLowerCase()) ? -1 : n > o ? 1 : 0;
+                { name: r } = t;
+            return (n = n.toLowerCase()), n < (r = r.toLowerCase()) ? -1 : n > r ? 1 : 0;
         });
 }

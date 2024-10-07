@@ -486,7 +486,7 @@ function L(e, t) {
         ]
     });
 }
-function D(e, t, n, r) {
+function y(e, t, n, r) {
     return (0, a.jsxs)('mask', {
         id: e,
         maskContentUnits: 'objectBoundingBox',
@@ -508,7 +508,7 @@ function D(e, t, n, r) {
         ]
     });
 }
-function y(e) {
+function D(e) {
     let { mask: t, width: n = 24, height: r = 24, rightOverhang: i = 0, bottomOverhang: s = 0, children: o, className: u, style: c, 'aria-label': d, ...E } = e;
     return (0, a.jsx)('svg', {
         width: n + i,
@@ -529,10 +529,10 @@ function y(e) {
         })
     });
 }
-(y.Masks = i), (t.ZP = y);
+(D.Masks = i), (t.ZP = D);
 let b = s.memo(
     function () {
-        var e, t, n, r, i, s, o, l, c, d, _, E, I, m, y, b, M, P, U, w, x;
+        var e, t, n, r, i, s, o, l, c, d, _, E, I, m, D, b, M, P, U, w, x;
         return (0, a.jsxs)('svg', {
             viewBox: '0 0 1 1',
             style: {
@@ -954,9 +954,9 @@ let b = s.memo(
                         })
                     ]
                 })),
-                ((y = 'svg-mask-autocomplete-emoji-upsell-emoji'),
+                ((D = 'svg-mask-autocomplete-emoji-upsell-emoji'),
                 (0, a.jsxs)('mask', {
-                    id: y,
+                    id: D,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -1064,8 +1064,8 @@ let b = s.memo(
                         fill: 'white'
                     })
                 })),
-                D('svg-mask-content-image-60', 60, 24, 2),
-                D('svg-mask-content-image-72', 72, 32, 4)
+                y('svg-mask-content-image-60', 60, 24, 2),
+                y('svg-mask-content-image-72', 72, 32, 4)
             ]
         });
     },

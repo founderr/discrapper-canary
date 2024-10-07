@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     },
     Z: function () {
-        return D;
+        return y;
     }
 }),
     n(653041);
@@ -55,7 +55,7 @@ class L {
         C(this, 'streamRegion', void 0), C(this, 'streamApplication', void 0), C(this, 'streamSourceType', void 0), C(this, 'actionContext', void 0), C(this, 'maxViewers', void 0), (this.streamRegion = e), (this.streamApplication = t), (this.streamSourceType = n), (this.actionContext = r), (this.maxViewers = i);
     }
 }
-class D extends o.Z {
+class y extends o.Z {
     get isOwner() {
         let { ownerId: e } = this._streamContext;
         return f.default.getId() === e;
@@ -145,9 +145,9 @@ class D extends o.Z {
                                     gpu_memory: i
                                 };
                             }
-                            let D = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != I ? I : 0) + (null != p ? p : 0),
-                                y = (null == A ? void 0 : null === (N = A.desktopSource) || void 0 === N ? void 0 : N.sourcePid) != null ? E.ZP.getGameForPID(A.desktopSource.sourcePid) : null,
-                                { gameName: b, gameId: M, exe: P, distributor: U } = (0, _.G8)(y);
+                            let y = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != I ? I : 0) + (null != p ? p : 0),
+                                D = (null == A ? void 0 : null === (N = A.desktopSource) || void 0 === N ? void 0 : N.sourcePid) != null ? E.ZP.getGameForPID(A.desktopSource.sourcePid) : null,
+                                { gameName: b, gameId: M, exe: P, distributor: U } = (0, _.G8)(D);
                             g.default.track(R.rMx.SCREENSHARE_FINISHED, {
                                 screenshare_frames: e,
                                 videohook_frames: t,
@@ -161,7 +161,7 @@ class D extends o.Z {
                                 quartz_frames: u,
                                 screencapturekit_frames: I,
                                 go_live_camera_frames: p,
-                                total_frames: D,
+                                total_frames: y,
                                 desktop_capturer_type: c,
                                 media_session_id: m,
                                 rtc_connection_id: T,

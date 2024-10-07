@@ -37,8 +37,8 @@ var r = n(512722),
     v = n(14639),
     C = n(639655),
     L = n(610308),
-    D = n(91247),
-    y = n(508569),
+    y = n(91247),
+    D = n(508569),
     b = n(183139),
     M = n(645436),
     P = n(833508),
@@ -226,7 +226,7 @@ class Y extends b.Z {
     _handleHello(e) {
         let t = (this.heartbeatInterval = e.heartbeat_interval),
             n = Date.now() - this.connectionStartTime;
-        x.verbose('[HELLO] via '.concat((0, D.TO)(e), ', ') + 'heartbeat interval: '.concat(t, ', ') + 'took '.concat(n, ' ms')), this._startHeartbeater();
+        x.verbose('[HELLO] via '.concat((0, y.TO)(e), ', ') + 'heartbeat interval: '.concat(t, ', ') + 'took '.concat(n, ' ms')), this._startHeartbeater();
     }
     _handleReconnect() {
         x.verbose('[RECONNECT] gateway requested I reconnect.'), this._cleanup((e) => e.close(4000)), (this.connectionState = R.Z.WILL_RECONNECT), this._connect();
@@ -239,9 +239,9 @@ class Y extends b.Z {
         if ('READY' === t) {
             let t = e.session_id;
             this.sessionId = t;
-            let n = (0, D.TO)(e);
+            let n = (0, y.TO)(e);
             o.Z.setServerTrace(n), x.info('[READY] took '.concat(r, 'ms, as ').concat(t)), x.verbose(''.concat(n)), (this.connectionState = R.Z.SESSION_ESTABLISHED), this.gatewayBackoff.succeed(), (this.iosGoingAwayEventCount = 0), this.setResumeUrl(e.resume_gateway_url);
-        } else 'READY_SUPPLEMENTAL' === t ? (x.info('[READY_SUPPLEMENTAL] took '.concat(r, 'ms')), (this.connectionState = R.Z.SESSION_ESTABLISHED), this.gatewayBackoff.succeed(), (this.iosGoingAwayEventCount = 0)) : 'RESUMED' === t && (x.verbose((0, D.TO)(e)), (this.connectionState = R.Z.SESSION_ESTABLISHED), this.gatewayBackoff.succeed(), (this.iosGoingAwayEventCount = 0));
+        } else 'READY_SUPPLEMENTAL' === t ? (x.info('[READY_SUPPLEMENTAL] took '.concat(r, 'ms')), (this.connectionState = R.Z.SESSION_ESTABLISHED), this.gatewayBackoff.succeed(), (this.iosGoingAwayEventCount = 0)) : 'RESUMED' === t && (x.verbose((0, y.TO)(e)), (this.connectionState = R.Z.SESSION_ESTABLISHED), this.gatewayBackoff.succeed(), (this.iosGoingAwayEventCount = 0));
         this.dispatcher.receiveDispatch(e, t, n);
     }
     handleResumeDispatched() {
@@ -356,7 +356,7 @@ class Y extends b.Z {
     _doResume() {
         var e;
         (this.connectionState = R.Z.RESUMING),
-            (this.dispatcher.resumeAnalytics = (0, D.zH)(Date.now() - this.connectionStartTime)),
+            (this.dispatcher.resumeAnalytics = (0, y.zH)(Date.now() - this.connectionStartTime)),
             x.info('[RESUME] resuming session '.concat(null !== (e = this.sessionId) && void 0 !== e ? e : '', ', seq: ').concat(this.seq)),
             this.send(
                 b.j.RESUME,
@@ -573,7 +573,7 @@ class Y extends b.Z {
                     } catch (e) {}
                 else x.warn('Attempted to send while not being in a connected state opcode: '.concat(e));
             }),
-            (this.dispatcher = new y.Z(this)),
+            (this.dispatcher = new D.Z(this)),
             (this.gatewayBackoff = new s.Z(1000, 60000)),
             (this.connectionState_ = R.Z.CLOSED),
             (this.webSocket = null),

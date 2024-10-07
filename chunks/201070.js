@@ -69,7 +69,7 @@ function L(e) {
     let t = C(e);
     return null == t && v(e, (t = O(1))), t;
 }
-async function D(e) {
+async function y(e) {
     if ((await (0, E._v)(200), null != C(e)))
         v(e, {
             requestState: 3,
@@ -77,7 +77,7 @@ async function D(e) {
             lastUpdated: Date.now()
         });
 }
-function y(e) {
+function D(e) {
     var t;
     (t = N(e)),
         (0, _.j)(() => {
@@ -267,7 +267,7 @@ async function M(e) {
         })(c);
         return;
     }
-    await D(c);
+    await y(c);
 }
 function P(e) {
     return R((t) => {
@@ -284,11 +284,11 @@ function U(e) {
 class w extends f.Z {
     handleInitialize(e) {
         let { guildId: t } = e;
-        return y(t), M(t);
+        return D(t), M(t);
     }
     handleGuildDelete(e) {
         let { guild: t } = e;
-        return y(t.id);
+        return D(t.id);
     }
     handleSearchStateUpdate(e) {
         let { guildId: t } = e;
@@ -300,7 +300,7 @@ class w extends f.Z {
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        return D(N(t));
+        return y(N(t));
     }
     handleGuildMemberSearchStillIndexing(e) {
         let { guildId: t } = e;

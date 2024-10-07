@@ -138,8 +138,8 @@ function S(e, t, n, r, i, u) {
         v = o.Z.getChannel(t),
         C = null !== (h = R('channel_flags')) && void 0 !== h ? h : 0,
         L = (null !== (I = O.channel_flags) && void 0 !== I ? I : 0) ^ C,
-        D = 0 === (0, c.M1)(L, f.ic.FAVORITED, f.ic.OPT_IN_ENABLED),
-        y = null !== (S = null === (E = l.Z.getLastMessage(t)) || void 0 === E ? void 0 : E.type) && void 0 !== S ? S : null;
+        y = 0 === (0, c.M1)(L, f.ic.FAVORITED, f.ic.OPT_IN_ENABLED),
+        D = null !== (S = null === (E = l.Z.getLastMessage(t)) || void 0 === E ? void 0 : E.type) && void 0 !== S ? S : null;
     a.ZP.trackWithMetadata(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
         ...O,
         ...s.Z.getStats(e),
@@ -154,8 +154,8 @@ function S(e, t, n, r, i, u) {
         channel_muted_until_old: R('channel_muted_until'),
         channel_is_overridden_old: R('channel_is_overridden'),
         channel_message_notification_settings_old: R('channel_message_notification_settings'),
-        is_opt_in_only_change: D,
-        last_message_type: y
+        is_opt_in_only_change: y,
+        last_message_type: D
     });
 }
 function g(e) {

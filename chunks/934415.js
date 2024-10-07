@@ -15,7 +15,7 @@ n.d(t, {
         return b;
     },
     g7: function () {
-        return y;
+        return D;
     },
     jZ: function () {
         return v;
@@ -30,7 +30,7 @@ n.d(t, {
         return C;
     },
     rY: function () {
-        return D;
+        return y;
     },
     rt: function () {
         return L;
@@ -123,7 +123,7 @@ function L(e) {
         }
     ];
 }
-function D(e, t, n) {
+function y(e, t, n) {
     var r, i;
     let a = e.getGuildId(),
         o = n.getGuild(a),
@@ -137,7 +137,7 @@ function D(e, t, n) {
     let p = e.userLimit > 0 && c >= e.userLimit;
     return h || (p && !E);
 }
-function y(e, t) {
+function D(e, t) {
     return t.isGuildStageVoice() ? I.epw : null == e ? I.eWB : Math.max(e.hasFeature(I.oNc.VIP_REGIONS) ? m.HO[I.Eu4.TIER_3].limits.bitrate : I.eWB, m.HO[e.premiumTier].limits.bitrate);
 }
 function b(e) {

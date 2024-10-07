@@ -1,4 +1,4 @@
-var r = n(700312).charAt;
-e.exports = function (e, t, n) {
-    return t + (n ? r(e, t).length : 1);
+var e = r(700312).charAt;
+n.exports = function (n, t, r) {
+    return t + (r ? e(n, t).length : 1);
 };

@@ -26,8 +26,8 @@ let R = {},
     C = !1,
     L = window.document.createElement('canvas');
 (L.width = 512), (L.height = 288);
-let D = L.getContext('2d');
-function y() {
+let y = L.getContext('2d');
+function D() {
     v.stop(), null != r && (c.Z.removeSink(r, R), (r = null));
 }
 let b = o().debounce((e, t, n, r) => {
@@ -114,7 +114,7 @@ async function M(e, t) {
                 return (
                     null == s || s.putImageData(o, 0, 0),
                     new Promise((t) => {
-                        null == D || D.drawImage(a, 0, 0, e.width, e.height, 0, 0, r, i), t();
+                        null == y || y.drawImage(a, 0, 0, e.width, e.height, 0, 0, r, i), t();
                     })
                 );
             })(n);
@@ -151,12 +151,12 @@ async function M(e, t) {
 }
 t.Z = {
     init() {
-        E.Z.subscribe('CONNECTION_OPEN', y),
-            E.Z.subscribe('LOGOUT', y),
-            E.Z.subscribe('STREAM_DELETE', y),
+        E.Z.subscribe('CONNECTION_OPEN', D),
+            E.Z.subscribe('LOGOUT', D),
+            E.Z.subscribe('STREAM_DELETE', D),
             E.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
                 let { guildId: t, channelId: n, userId: i, streamId: a, context: s } = e;
-                !(null == a || s !== O.Yn.STREAM || i !== m.default.getId() || __OVERLAY__) && (y(), (r = a), b(a, t, n, i));
+                !(null == a || s !== O.Yn.STREAM || i !== m.default.getId() || __OVERLAY__) && (D(), (r = a), b(a, t, n, i));
             }),
             E.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;

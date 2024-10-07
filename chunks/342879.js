@@ -95,10 +95,10 @@ async function L(e) {
             T.delete(e);
         }
 }
-function D() {
+function y() {
     C();
 }
-function y(e) {
+function D(e) {
     let { feedId: t } = e;
     v(t), L(t, { force: !0 });
 }
@@ -122,12 +122,12 @@ class U extends a.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                POST_CONNECTION_OPEN: D,
+                POST_CONNECTION_OPEN: y,
                 CONNECTION_CLOSED: O,
-                WINDOW_FOCUS: D,
-                IDLE: D,
-                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: D,
-                CONTENT_INVENTORY_MANUAL_REFRESH: y,
+                WINDOW_FOCUS: y,
+                IDLE: y,
+                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: y,
+                CONTENT_INVENTORY_MANUAL_REFRESH: D,
                 CONTENT_INVENTORY_INBOX_STALE: b,
                 SPOTIFY_NEW_TRACK: M,
                 GAME_PROFILE_OPEN: P

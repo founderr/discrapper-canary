@@ -26,8 +26,8 @@ var i = n(735250),
     v = n(878884),
     C = n(19780),
     x = n(944486),
-    N = n(9156),
-    T = n(938475),
+    T = n(9156),
+    N = n(938475),
     O = n(518084),
     A = n(669083),
     y = n(711553),
@@ -176,11 +176,11 @@ function j(e) {
         s = (0, o.e7)([I.Z], () => I.Z.getGuild(n)),
         a = (0, o.e7)([E.ZP], () => E.ZP.getChannels(n)),
         r = (0, o.e7)([m.Z], () => m.Z.getCategories(n)),
-        { mutedChannels: d, collapseMuted: u } = (0, o.cj)([N.ZP], () => ({
-            mutedChannels: N.ZP.getMutedChannels(n),
-            collapseMuted: N.ZP.isGuildCollapsed(n)
+        { mutedChannels: d, collapseMuted: u } = (0, o.cj)([T.ZP], () => ({
+            mutedChannels: T.ZP.getMutedChannels(n),
+            collapseMuted: T.ZP.isGuildCollapsed(n)
         })),
-        h = (0, o.e7)([T.ZP], () => T.ZP.getVoiceStates(n)),
+        h = (0, o.e7)([N.ZP], () => N.ZP.getVoiceStates(n)),
         O = (0, o.e7)([_.Z], () => _.Z.getCollapsed()),
         { scrollTo: A } = (0, o.e7)([g.Z], () => g.Z.getGuildDimensions(n)),
         y = (0, p.Z)((e) => {

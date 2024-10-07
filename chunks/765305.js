@@ -3,13 +3,13 @@ n.d(t, {
         return O;
     },
     Fc: function () {
-        return D;
+        return y;
     },
     Ku: function () {
         return N;
     },
     VF: function () {
-        return y;
+        return D;
     },
     WX: function () {
         return i;
@@ -93,7 +93,7 @@ let R = {
     C = new Set([1, 2]);
 ((f = o || (o = {}))[(f.EVENT_INFO = 0)] = 'EVENT_INFO'), (f[(f.RSVP_LIST = 1)] = 'RSVP_LIST');
 let L = 100,
-    D = 2 * I.Z.Millis.DAY,
-    y = 12 * I.Z.Millis.HOUR,
+    y = 2 * I.Z.Millis.DAY,
+    D = 12 * I.Z.Millis.HOUR,
     b = 4;
 ((h = l || (l = {})).NEW_EVENT = 'Upcoming Event Notice'), (h.EVENT_STARTING_SOON = 'Event Starting Soon Notice'), ((p = u || (u = {}))[(p.UNINTERESTED = 0)] = 'UNINTERESTED'), (p[(p.INTERESTED = 1)] = 'INTERESTED');

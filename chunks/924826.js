@@ -37,13 +37,13 @@ function c(e) {
             },
             [h]
         ),
-        D = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 R.current && (null != p ? p : C)(e);
             },
             [p]
         ),
-        y = r.useCallback(
+        D = r.useCallback(
             (e) => {
                 if (((A.current = e), null == e)) {
                     (0, a.h)(t, null, I);
@@ -95,7 +95,7 @@ function c(e) {
                     P(!1),
                         requestAnimationFrame(() => {
                             let e = A.current;
-                            null !== e && null == v((0, l.P1)(e)) && D((0, l.P1)(t, l.kn));
+                            null !== e && null == v((0, l.P1)(e)) && y((0, l.P1)(t, l.kn));
                         });
             }
             async function i() {
@@ -111,12 +111,12 @@ function c(e) {
                     }
                 }
                 let r = await (0, s.KG)(e, u(t, O));
-                null !== r && y(r);
+                null !== r && D(r);
             }
             function a() {
                 N.current = !0;
             }
-        }, [c, t, I, L, p, D, y]);
+        }, [c, t, I, L, p, y, D]);
     let w = r.useMemo(
             () => ({
                 wrap: T,
@@ -135,13 +135,13 @@ function c(e) {
         x = r.useCallback(async () => {
             let e = await b.getNextFocusableElement(w),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
-            null != t ? y(t) : null == e && null != f && f();
-        }, [b, w, f, y]),
+            null != t ? D(t) : null == e && null != f && f();
+        }, [b, w, f, D]),
         G = r.useCallback(async () => {
             let e = await b.getPreviousFocusableElement(w),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
-            null != t ? y(t) : null == e && null != E && E();
-        }, [b, w, E, y]),
+            null != t ? D(t) : null == e && null != E && E();
+        }, [b, w, E, D]),
         k = r.useCallback(
             (e) => {
                 if (!R.current || (!m && !U.current)) return;
@@ -160,7 +160,7 @@ function c(e) {
                             d().then(() => {
                                 var e;
                                 let n = null === (e = u(t, O)[0]) || void 0 === e ? void 0 : e.getAttribute(l.ie);
-                                null != n && y(n);
+                                null != n && D(n);
                             });
                         return;
                     case o.R8.END:
@@ -170,7 +170,7 @@ function c(e) {
                                 var e;
                                 let n = u(t, O),
                                     r = null === (e = n[n.length - 1]) || void 0 === e ? void 0 : e.getAttribute(l.ie);
-                                null != r && y(r);
+                                null != r && D(r);
                             });
                         return;
                     case o.R8.SPACE:
@@ -187,7 +187,7 @@ function c(e) {
                     }
                 }
             },
-            [x, G, t, S, _, d, y, m]
+            [x, G, t, S, _, d, D, m]
         ),
         B = r.useCallback(
             (e) => {
@@ -209,12 +209,12 @@ function c(e) {
             async focusLastVisibleItem() {
                 var e;
                 let n = await (0, s.jo)(null !== (e = O.current) && void 0 !== e ? e : document.body, u(t, O));
-                null !== n && y(n);
+                null !== n && D(n);
             },
             async focusFirstVisibleItem() {
                 var e;
                 let n = await (0, s.KG)(null !== (e = O.current) && void 0 !== e ? e : document.body, u(t, O));
-                null !== n && y(n);
+                null !== n && D(n);
             },
             focusPreviousItem: G,
             focusNextItem: x,
@@ -223,6 +223,6 @@ function c(e) {
                 return e ? (0, l.x3)(e) : null;
             }
         }),
-        [t, k, S, M, I, B, G, x, y]
+        [t, k, S, M, I, B, G, x, D]
     );
 }

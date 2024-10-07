@@ -36,7 +36,7 @@ n.d(t, {
         return L;
     },
     kb: function () {
-        return D;
+        return y;
     },
     n: function () {
         return p;
@@ -198,7 +198,7 @@ function C(e) {
 function L(e) {
     return e.type === c.d4z.GUILD_TEXT && !u.Uu(c.Plq.SEND_MESSAGES, e) && u.Uu(c.Plq.VIEW_CHANNEL, e);
 }
-function D(e) {
+function y(e) {
     switch (e.type) {
         case c.d4z.GUILD_TEXT:
         case c.d4z.GUILD_ANNOUNCEMENT:

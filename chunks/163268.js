@@ -92,12 +92,12 @@ let L = {
         [C.TI.NON_FRIENDS.valueOf()]: _.Q4.SHOW,
         [C.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: _.Q4.BLOCK
     },
-    D = {
+    y = {
         [C.TI.DISABLED.valueOf()]: _.Q4.SHOW,
         [C.TI.NON_FRIENDS.valueOf()]: _.Q4.BLOCK,
         [C.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: _.Q4.BLOCK
     },
-    y = {
+    D = {
         [C.TI.DISABLED.valueOf()]: _.Q4.BLUR,
         [C.TI.NON_FRIENDS.valueOf()]: _.Q4.BLUR,
         [C.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: _.Q4.BLOCK
@@ -125,13 +125,13 @@ let L = {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         if (!t) return _.Q4.SHOW;
         let r = I.UP.getSetting();
-        return n ? L[r] : D[r];
+        return n ? L[r] : y[r];
     },
     U = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         if (!t) return _.Q4.BLUR;
         let r = I.UP.getSetting();
-        return n ? y[r] : b[r];
+        return n ? D[r] : b[r];
     },
     w = () => {
         let e = I.Sh.getSetting();

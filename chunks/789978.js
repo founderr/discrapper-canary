@@ -348,10 +348,10 @@ let C = !1,
             (N = !1), null != O && cancelAnimationFrame(O);
         }
     };
-var D = { exports: {} },
-    y = {};
-D.exports = (function () {
-    if (a) return y;
+var y = { exports: {} },
+    D = {};
+y.exports = (function () {
+    if (a) return D;
     a = 1;
     var e = Symbol.for('react.element'),
         t = Symbol.for('react.fragment'),
@@ -379,10 +379,10 @@ D.exports = (function () {
             _owner: r.current
         };
     }
-    return (y.Fragment = t), (y.jsx = s), (y.jsxs = s), y;
+    return (D.Fragment = t), (D.jsx = s), (D.jsxs = s), D;
 })();
-let b = D.exports.jsx,
-    M = D.exports.jsxs;
+let b = y.exports.jsx,
+    M = y.exports.jsxs;
 function P(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
         i = o.useRef(new T());

@@ -23,38 +23,38 @@ var i = n(735250),
     g = n(613734),
     f = n(800530),
     C = n(981631),
-    U = n(689938),
-    m = n(388690);
-let h = (e) => {
+    m = n(689938),
+    p = n(388690);
+let U = (e) => {
         let { status: t, onClick: n, opened: a, count: s } = e;
         return (0, i.jsxs)(o.Clickable, {
-            className: m.header,
+            className: p.header,
             onClick: n,
             children: [
                 (0, i.jsx)('div', {
-                    className: m.headerIconWrapper,
+                    className: p.headerIconWrapper,
                     children: (0, i.jsx)(o.WarningIcon, {
                         size: 'md',
                         color: 'active' === t ? o.tokens.colors.INTERACTIVE_ACTIVE : o.tokens.colors.INTERACTIVE_MUTED
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: m.title,
+                    className: p.title,
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-md/semibold',
                             color: 'text-normal',
-                            children: 'active' === t ? U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE_V2.format({ count: s.toString() }) : U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED_V2.format({ count: s.toString() })
+                            children: 'active' === t ? m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE_V2.format({ count: s.toString() }) : m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED_V2.format({ count: s.toString() })
                         }),
                         (0, i.jsx)(o.Heading, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
-                            children: 'active' === t ? U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE_V2 : U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED_V2
+                            children: 'active' === t ? m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE_V2 : m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED_V2
                         })
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    className: m.caret,
+                    className: p.caret,
                     children: (0, i.jsx)(c.Z, {
                         width: 18,
                         height: 18,
@@ -64,58 +64,58 @@ let h = (e) => {
             ]
         });
     },
-    p = () =>
+    h = () =>
         (0, i.jsxs)('div', {
-            className: m.emptyState,
+            className: p.emptyState,
             children: [
                 (0, i.jsxs)('div', {
-                    className: m.iconContainer,
+                    className: p.iconContainer,
                     children: [
                         (0, i.jsx)('div', {
-                            className: m.iconBackground,
+                            className: p.iconBackground,
                             children: (0, i.jsx)(o.TrophyIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: m.icon
+                                className: p.icon
                             })
                         }),
-                        (0, i.jsx)(_.Z, { className: m.stars })
+                        (0, i.jsx)(_.Z, { className: p.stars })
                     ]
                 }),
                 (0, i.jsx)(o.Heading, {
                     variant: 'heading-md/bold',
-                    className: m.emptyStateText,
-                    children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
+                    className: p.emptyStateText,
+                    children: m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
                 }),
                 (0, i.jsx)(o.Text, {
                     variant: 'text-xs/normal',
-                    className: m.emptyStateSubtext,
-                    children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
+                    className: p.emptyStateSubtext,
+                    children: m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
                 })
             ]
         }),
     O = () =>
         (0, i.jsx)('div', {
-            className: m.emptyState,
+            className: p.emptyState,
             children: (0, i.jsx)(o.Text, {
                 variant: 'text-xs/normal',
-                className: m.emptyStateSubtext,
-                children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
+                className: p.emptyStateSubtext,
+                children: m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
             })
         }),
     x = (e) => {
         let { timestamp: t } = e;
         return (0, i.jsx)(o.Text, {
             variant: 'text-xs/normal',
-            className: m.timestamp,
+            className: p.timestamp,
             children: (0, A.XX)(t)
         });
     },
     v = () =>
         (0, i.jsx)(o.Text, {
             variant: 'text-xs/bold',
-            className: m.newBadge,
-            children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
+            className: p.newBadge,
+            children: m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
         }),
     D = (e) => {
         let { classification: t } = e,
@@ -134,13 +134,13 @@ let h = (e) => {
                             children: e
                         })
                 };
-                if (!(u && (0, A.FB)(t))) return U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format(s);
+                if (!(u && (0, A.FB)(t))) return m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format(s);
                 return (null == t ? void 0 : null === (e = t.guild_metadata) || void 0 === e ? void 0 : e.member_type) === T.wO.OWNER
-                    ? U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
+                    ? m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
                           ...s,
                           guildName: null == t ? void 0 : null === (n = t.guild_metadata) || void 0 === n ? void 0 : n.name
                       })
-                    : U.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD_PRESENCE.format({
+                    : m.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD_PRESENCE.format({
                           guildName: null == t ? void 0 : null === (a = t.guild_metadata) || void 0 === a ? void 0 : a.name,
                           classification_type: s.description,
                           classificationHook: s.descriptionHook
@@ -160,9 +160,9 @@ let h = (e) => {
                             });
                     });
                 },
-                className: l()(m.itemDetail, { [m.itemDetailNew]: _ }),
+                className: l()(p.itemDetail, { [p.itemDetailNew]: _ }),
                 children: (0, i.jsxs)('div', {
-                    className: m.descriptionContainer,
+                    className: p.descriptionContainer,
                     children: [
                         _ ? (0, i.jsx)(v, {}) : (0, i.jsx)(x, { timestamp: c }),
                         (0, i.jsx)(o.Heading, {
@@ -195,9 +195,9 @@ let h = (e) => {
         }, [s, d.state, T, E]);
         let A = n.length - T.length > 3 ? 3 : n.length - T.length;
         return (0, i.jsxs)('div', {
-            className: m.dropdown,
+            className: p.dropdown,
             children: [
-                (0, i.jsx)(h, {
+                (0, i.jsx)(U, {
                     status: t,
                     onClick: () => l((e) => !e),
                     opened: s,
@@ -205,7 +205,7 @@ let h = (e) => {
                 }),
                 s &&
                     (0, i.jsxs)('div', {
-                        className: m.items,
+                        className: p.items,
                         children: [
                             (0, i.jsx)(o.TabBar.Separator, {
                                 style: {
@@ -224,13 +224,13 @@ let h = (e) => {
                                             }
                                         }),
                                         (0, i.jsx)('button', {
-                                            className: m.paginationButton,
+                                            className: p.paginationButton,
                                             onClick: () => _((e) => e + A),
-                                            children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({ nextPageSize: A })
+                                            children: m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({ nextPageSize: A })
                                         })
                                     ]
                                 }),
-                            0 === T.length && 'active' === t && (0, i.jsx)(p, {}),
+                            0 === T.length && 'active' === t && (0, i.jsx)(h, {}),
                             0 === T.length && 'expired' === t && (0, i.jsx)(O, {})
                         ]
                     })

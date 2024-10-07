@@ -33,10 +33,10 @@ t.Z = {
                 v = (0, s.Z)(h),
                 C = v ? ('y' === m ? v.clientHeight || 0 : v.clientWidth || 0) : 0,
                 L = S[A],
-                D = C - g[T] - S[N],
-                y = C / 2 - g[T] / 2 + (O / 2 - R / 2),
-                b = (0, l.u)(L, y, D);
-            _.modifiersData[E] = (((a = {})[m] = b), (a.centerOffset = b - y), a);
+                y = C - g[T] - S[N],
+                D = C / 2 - g[T] / 2 + (O / 2 - R / 2),
+                b = (0, l.u)(L, D, y);
+            _.modifiersData[E] = (((a = {})[m] = b), (a.centerOffset = b - D), a);
         }
     },
     effect: function (e) {

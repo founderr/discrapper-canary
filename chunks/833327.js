@@ -59,7 +59,7 @@ function O(e, t, i) {
                 if ((((n = u).writing = !1), (n.writecb = null), (n.length -= n.writelen), (n.writelen = 0), t)) {
                     (r = e), (i = u), (s = c), (o = t), (l = d), --i.pendingcb, s ? (a.nextTick(l, o), a.nextTick(b, r, i), (r._writableState.errorEmitted = !0), A(r, o)) : (l(o), (r._writableState.errorEmitted = !0), A(r, o), b(r, i));
                 } else {
-                    var _ = D(u) || e.destroyed;
+                    var _ = y(u) || e.destroyed;
                     !_ && !u.corked && !u.bufferProcessing && u.bufferedRequest && L(e, u), c ? a.nextTick(C, e, u, _, d) : C(e, u, _, d);
                 }
             })(t, e);
@@ -218,10 +218,10 @@ function L(e, t) {
     }
     (t.bufferedRequest = n), (t.bufferProcessing = !1);
 }
-function D(e) {
+function y(e) {
     return e.ending && 0 === e.length && null === e.bufferedRequest && !e.finished && !e.writing;
 }
-function y(e, t) {
+function D(e, t) {
     e._final(function (n) {
         t.pendingcb--, n && A(e, n), (t.prefinished = !0), e.emit('prefinish'), b(e, t);
     });
@@ -252,9 +252,9 @@ function y(e, t) {
 function b(e, t) {
     var n,
         r,
-        i = D(t);
+        i = y(t);
     if (i) {
-        if (((n = e), (r = t).prefinished || r.finalCalled || ('function' != typeof n._final || r.destroyed ? ((r.prefinished = !0), n.emit('prefinish')) : (r.pendingcb++, (r.finalCalled = !0), a.nextTick(y, n, r))), 0 === t.pendingcb && ((t.finished = !0), e.emit('finish'), t.autoDestroy))) {
+        if (((n = e), (r = t).prefinished || r.finalCalled || ('function' != typeof n._final || r.destroyed ? ((r.prefinished = !0), n.emit('prefinish')) : (r.pendingcb++, (r.finalCalled = !0), a.nextTick(D, n, r))), 0 === t.pendingcb && ((t.finished = !0), e.emit('finish'), t.autoDestroy))) {
             var s = e._readableState;
             (!s || (s.autoDestroy && s.endEmitted)) && e.destroy();
         }

@@ -32,10 +32,10 @@ function S(e) {
         }),
         C = S === f.n_.AVATAR && O,
         L = S === f.n_.STATUS && !O && R,
-        D = !v && N === f.y0.BITE_SIZE && (C || L),
-        [y, b] = i.useState(!1);
-    (0, l.Z)(() => b(!0), D ? 200 : null);
-    let M = y ? [s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK] : [],
+        y = !v && N === f.y0.BITE_SIZE && (C || L),
+        [D, b] = i.useState(!1);
+    (0, l.Z)(() => b(!0), y ? 200 : null);
+    let M = D ? [s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK] : [],
         [P, U] = (0, u.US)(M);
     let {
         asset: w,

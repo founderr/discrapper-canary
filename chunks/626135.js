@@ -28,7 +28,7 @@ n.r(t),
             return v;
         },
         trackNetworkAction: function () {
-            return y;
+            return D;
         }
     }),
     n(653041),
@@ -286,12 +286,12 @@ function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     c.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? l.Hj('Analytics', e, t) : l.Hj('Analytics', e);
 }
-let D = (0, a.trackMaker)({
+let y = (0, a.trackMaker)({
     analyticEventConfigs: A,
     dispatcher: s.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function y(e, t) {
+function D(e, t) {
     let n = C({
         location: (0, o.k$)(),
         ...t
@@ -301,7 +301,7 @@ function y(e, t) {
         ...t
     }),
         L(e, n),
-        D(e, n);
+        y(e, n);
 }
 function b() {
     return (0, i.Z)();

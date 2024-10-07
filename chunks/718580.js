@@ -53,15 +53,15 @@ function m(e) {
         v = (0, d.Z)(A.activeSlide);
     let C = null !== (t = A.directionOverride) && void 0 !== t ? t : ((m = null != v ? N[v] : null), (T = N[R]), null == m ? null : m.index > T.index ? 'backwards' : m.index < T.index ? 'forwards' : null),
         { reducedMotion: L } = i.useContext(l.S),
-        D = i.useContext(_.Z),
-        y = N[R].impressionName,
+        y = i.useContext(_.Z),
+        D = N[R].impressionName,
         b = {
             ...N[R].impressionProperties,
             location_stack: O
         };
-    D({
+    y({
         type: s.ImpressionTypes.MODAL,
-        name: y,
+        name: D,
         properties: b,
         _stackContext: { isSlide: !0 }
     });

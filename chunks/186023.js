@@ -16,7 +16,7 @@ t.Z = (e) => {
         [N, O] = i.useState(S),
         [R, v] = i.useState(void 0),
         [C, L] = i.useState(void 0),
-        [D, y] = i.useState([]),
+        [y, D] = i.useState([]),
         [b, M] = i.useState(void 0),
         [P, U] = i.useState(void 0),
         w = (e) => {
@@ -29,7 +29,7 @@ t.Z = (e) => {
                     ...e,
                     destination: ['', a.button.target]
                 });
-            if ((y([...D, e]), null != a.key && (null == h || h(a.key)), v(void 0), L(void 0), t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM)) {
+            if ((D([...y, e]), null != a.key && (null == h || h(a.key)), v(void 0), L(void 0), t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM)) {
                 let e = t.record.id;
                 s.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
                     message_id: e,
@@ -43,14 +43,14 @@ t.Z = (e) => {
         },
         x = async (e) => {
             var r;
-            let i = I ? await (0, u.ZD)(n, t, [...D, e]) : await (0, u.fw)(n, t, [...D, e], p),
+            let i = I ? await (0, u.ZD)(n, t, [...y, e]) : await (0, u.fw)(n, t, [...y, e], p),
                 a = null == i ? void 0 : null === (r = i.body) || void 0 === r ? void 0 : r.report_id;
             null != a && M(a), U(T[e.nodeRef].report_type), null == f || f(a);
         },
         G = () => {
             var e, n;
-            if (D.length < 1) return;
-            let r = [...D],
+            if (y.length < 1) return;
+            let r = [...y],
                 i = r.pop(),
                 a = null !== (n = null == i ? void 0 : i.nodeRef) && void 0 !== n ? n : S;
             if (t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
@@ -63,7 +63,7 @@ t.Z = (e) => {
                     next_node: T[a].id
                 });
             }
-            v(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state), L(null == i ? void 0 : i.textInput), O(a), y(r), null == h || h('..');
+            v(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state), L(null == i ? void 0 : i.textInput), O(a), D(r), null == h || h('..');
         },
         k = i.useMemo(() => {
             let e = [],
@@ -103,7 +103,7 @@ t.Z = (e) => {
                                 node: e,
                                 reportType: t,
                                 reportSubType: P,
-                                history: D,
+                                history: y,
                                 onModalClose: E.onClose,
                                 onSelectChild: w,
                                 onNavigateBack: G,

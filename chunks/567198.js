@@ -337,18 +337,18 @@
                 v,
                 C,
                 L = r.constructor,
-                D = r.s == i.s ? 1 : -1,
-                y = r.d,
+                y = r.s == i.s ? 1 : -1,
+                D = r.d,
                 b = i.d;
             if (!r.s) return new L(r);
             if (!i.s) throw Error(a + 'Division by zero');
-            for (c = 0, u = r.e - i.e, v = b.length, O = y.length, h = (f = new L(D)).d = []; b[c] == (y[c] || 0); ) ++c;
-            if ((b[c] > (y[c] || 0) && --u, (S = null == s ? (s = L.precision) : o ? s + (m(r) - m(i)) + 1 : s) < 0)) return new L(0);
-            if (((S = (S / 7 + 2) | 0), (c = 0), 1 == v)) for (d = 0, b = b[0], S++; (c < O || d) && S--; c++) (g = 10000000 * d + (y[c] || 0)), (h[c] = (g / b) | 0), (d = g % b | 0);
+            for (c = 0, u = r.e - i.e, v = b.length, O = D.length, h = (f = new L(y)).d = []; b[c] == (D[c] || 0); ) ++c;
+            if ((b[c] > (D[c] || 0) && --u, (S = null == s ? (s = L.precision) : o ? s + (m(r) - m(i)) + 1 : s) < 0)) return new L(0);
+            if (((S = (S / 7 + 2) | 0), (c = 0), 1 == v)) for (d = 0, b = b[0], S++; (c < O || d) && S--; c++) (g = 10000000 * d + (D[c] || 0)), (h[c] = (g / b) | 0), (d = g % b | 0);
             else {
-                for ((d = (10000000 / (b[0] + 1)) | 0) > 1 && ((b = e(b, d)), (y = e(y, d)), (v = b.length), (O = y.length)), A = v, I = (p = y.slice(0, v)).length; I < v; ) p[I++] = 0;
+                for ((d = (10000000 / (b[0] + 1)) | 0) > 1 && ((b = e(b, d)), (D = e(D, d)), (v = b.length), (O = D.length)), A = v, I = (p = D.slice(0, v)).length; I < v; ) p[I++] = 0;
                 (C = b.slice()).unshift(0), (R = b[0]), b[1] >= 10000000 / 2 && ++R;
-                do (d = 0), (l = t(b, p, v, I)) < 0 ? ((T = p[0]), v != I && (T = 10000000 * T + (p[1] || 0)), (d = (T / R) | 0) > 1 ? (d >= 10000000 && (d = 10000000 - 1), (E = (_ = e(b, d)).length), (I = p.length), 1 == (l = t(_, p, E, I)) && (d--, n(_, v < E ? C : b, E))) : (0 == d && (l = d = 1), (_ = b.slice())), (E = _.length) < I && _.unshift(0), n(p, _, I), -1 == l && ((I = p.length), (l = t(b, p, v, I)) < 1 && (d++, n(p, v < I ? C : b, I))), (I = p.length)) : 0 === l && (d++, (p = [0])), (h[c++] = d), l && p[0] ? (p[I++] = y[A] || 0) : ((p = [y[A]]), (I = 1));
+                do (d = 0), (l = t(b, p, v, I)) < 0 ? ((T = p[0]), v != I && (T = 10000000 * T + (p[1] || 0)), (d = (T / R) | 0) > 1 ? (d >= 10000000 && (d = 10000000 - 1), (E = (_ = e(b, d)).length), (I = p.length), 1 == (l = t(_, p, E, I)) && (d--, n(_, v < E ? C : b, E))) : (0 == d && (l = d = 1), (_ = b.slice())), (E = _.length) < I && _.unshift(0), n(p, _, I), -1 == l && ((I = p.length), (l = t(b, p, v, I)) < 1 && (d++, n(p, v < I ? C : b, I))), (I = p.length)) : 0 === l && (d++, (p = [0])), (h[c++] = d), l && p[0] ? (p[I++] = D[A] || 0) : ((p = [D[A]]), (I = 1));
                 while ((A++ < O || void 0 !== p[0]) && S--);
             }
             return !h[0] && h.shift(), (f.e = u), N(f, o ? s + m(f) + 1 : s);

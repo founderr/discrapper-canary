@@ -61,22 +61,22 @@ function c(e) {
                         })
                 );
             r.useEffect(() => () => L.clean(), [L]);
-            let D = r.useCallback(
+            let y = r.useCallback(
                     (e) => {
                         if (!S.current || !m) return !1;
                         e.focus();
                     },
                     [m]
                 ),
-                y = r.useCallback(
+                D = r.useCallback(
                     (e, n) => {
                         let r = l(t, e, n);
                         (null != E ? E(e, n, r) : Promise.resolve()).then(() => {
                             let e = u(r);
-                            null != e ? (D(e), R(!1)) : requestAnimationFrame(() => R(!0));
+                            null != e ? (y(e), R(!1)) : requestAnimationFrame(() => R(!0));
                         });
                     },
-                    [t, E, D]
+                    [t, E, y]
                 ),
                 b = r.useCallback(
                     function () {
@@ -95,9 +95,9 @@ function c(e) {
                             return;
                         }
                         let a = u(l(t, n, r));
-                        null != a && (C(!0), D(a));
+                        null != a && (C(!0), y(a));
                     },
-                    [h, c, d, f, t, D]
+                    [h, c, d, f, t, y]
                 ),
                 [M, P] = r.useState(!1);
             r.useEffect(() => {
@@ -105,21 +105,21 @@ function c(e) {
                 P(!1);
                 let e = u(l(t, c, d));
                 if (null != e) {
-                    D(e);
+                    y(e);
                     return;
                 }
                 N(!1);
                 let n = u(l(t));
-                null != n && D(n);
-            }, [t, M, A, D, c, d]);
+                null != n && y(n);
+            }, [t, M, A, y, c, d]);
             let U = r.useCallback((e) => {
                 S.current && null == e && P(!0);
             }, []);
             r.useEffect(() => {
-                A && O && null != g && (D(g), R(!1));
+                A && O && null != g && (y(g), R(!1));
             }, [O, g]),
                 r.useEffect(() => {
-                    A && (!v && y(c, d), C(!1));
+                    A && (!v && D(c, d), C(!1));
                 }, [c, d]);
             let w = r.useCallback(
                     (e) => {
@@ -167,7 +167,7 @@ function c(e) {
                     },
                     [b, h, m, g, _, c, d]
                 ),
-                x = r.useCallback((e) => (e.currentTarget !== e.target ? (!A && (N(!0), C(!0)), !1) : A ? (b(!1), !1) : void (p && null != g ? y(c, d) : b(!0))), [A, p, g, b, y, c, d]),
+                x = r.useCallback((e) => (e.currentTarget !== e.target ? (!A && (N(!0), C(!0)), !1) : A ? (b(!1), !1) : void (p && null != g ? D(c, d) : b(!0))), [A, p, g, b, D, c, d]),
                 G = r.useCallback((e) => {
                     if (e.target !== e.currentTarget) {
                         if (e.currentTarget.contains(e.relatedTarget)) return !1;

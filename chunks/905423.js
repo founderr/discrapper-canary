@@ -1,18 +1,18 @@
-var r = n(266067),
-    i = n(652874),
-    a = n(731965),
-    s = n(893607),
-    o = n(981631);
-function l(e) {
-    let t = (0, r.LX)(null != e ? e : '', { path: o.Z5c.CHANNEL(s.Hw.guildId(), s.Hw.channelId({ optional: !0 }), ':messageId?') });
+var i = n(266067),
+    r = n(652874),
+    u = n(731965),
+    l = n(893607),
+    a = n(981631);
+function o(e) {
+    let t = (0, i.LX)(null != e ? e : '', { path: a.Z5c.CHANNEL(l.Hw.guildId(), l.Hw.channelId({ optional: !0 }), ':messageId?') });
     if (null != t) {
         let { guildId: e, channelId: n } = t.params;
         return {
-            guildId: e === o.ME ? null : e,
+            guildId: e === a.ME ? null : e,
             channelId: null != n ? n : null
         };
     }
-    let n = (0, r.LX)(null != e ? e : '', { path: o.Z5c.GUILD_BOOSTING_MARKETING(s.Hw.guildId()) });
+    let n = (0, i.LX)(null != e ? e : '', { path: a.Z5c.GUILD_BOOSTING_MARKETING(l.Hw.guildId()) });
     return null != n
         ? {
               guildId: n.params.guildId,
@@ -23,28 +23,28 @@ function l(e) {
               channelId: null
           };
 }
-t.Z = (0, i.Z)((e) => ({
+t.Z = (0, r.Z)((e) => ({
     path: null,
     basePath: '/',
     guildId: null,
     channelId: null,
     updatePath(t) {
-        let { guildId: n, channelId: r } = l(t);
-        (0, a.j)(() =>
+        let { guildId: n, channelId: i } = o(t);
+        (0, u.j)(() =>
             e({
                 path: t,
                 guildId: n,
-                channelId: r
+                channelId: i
             })
         );
     },
     resetPath(t) {
-        let { guildId: n, channelId: r } = l(t);
-        (0, a.j)(() =>
+        let { guildId: n, channelId: i } = o(t);
+        (0, u.j)(() =>
             e({
                 path: null,
                 guildId: n,
-                channelId: r,
+                channelId: i,
                 basePath: t
             })
         );

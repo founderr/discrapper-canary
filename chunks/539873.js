@@ -35,12 +35,12 @@ function O(e) {
                 disable: !C
             }
         ),
-        D = i.useRef(null);
-    (0, h.Z)(D, g.h1.CUSTOM_APP_ICONS);
-    let y = (0, d.Dt)(),
+        y = i.useRef(null);
+    (0, h.Z)(y, g.h1.CUSTOM_APP_ICONS);
+    let D = (0, d.Dt)(),
         b = (0, l.useRadioGroup)({
             orientation: 'horizontal',
-            labelledBy: y
+            labelledBy: D
         }),
         M = (e) => {
             if (L && !O && e !== I.aH.DEFAULT) {
@@ -64,7 +64,7 @@ function O(e) {
             });
         };
     return (0, r.jsx)('div', {
-        ref: D,
+        ref: y,
         children: (0, r.jsx)('div', {
             ...b,
             className: N.__invalid_container,

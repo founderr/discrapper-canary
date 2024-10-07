@@ -54,7 +54,7 @@ n.d(t, {
         return z;
     },
     Qe: function () {
-        return D;
+        return y;
     },
     Rs: function () {
         return K;
@@ -190,7 +190,7 @@ var f = n(572004),
     v = n(981631),
     C = n(701488),
     L = n(689938);
-function D(e) {
+function y(e) {
     try {
         return (0, a.EQ)(e.config)
             .with({ config_version: 2 }, () => !0)
@@ -200,13 +200,13 @@ function D(e) {
         return console.error("Unknown config version '".concat(null == e ? void 0 : null === (t = e.config) || void 0 === t ? void 0 : t.config_version, "'"), n), !1;
     }
 }
-let y = (e) => e.application_id === C.Ev || e.platform === v.M7m.XBOX,
+let D = (e) => e.application_id === C.Ev || e.platform === v.M7m.XBOX,
     b = (e) => e.platform === v.M7m.PS4 || e.platform === v.M7m.PS5;
 function M(e, t) {
     if (null == e) return !1;
     let n = e.name.toLowerCase(),
         r = N.r.build(t.config).application.name.toLowerCase();
-    return y(e) || b(e) ? n === r : null != e.application_id && U(e.application_id, t);
+    return D(e) || b(e) ? n === r : null != e.application_id && U(e.application_id, t);
 }
 function P(e, t) {
     for (let [n, r] of e) if (M(t, r) && !G(r)) return r;
@@ -623,7 +623,7 @@ let eT = (e, t) => {
                         percentComplete: 0,
                         taskType: s.X.STREAM_ON_DESKTOP
                     };
-                if (ey(e))
+                if (eD(e))
                     return ev({
                         quest: e,
                         includeTaskTypes: null != t ? t : eU(e) ? s.T.CONSOLE : s.T.ALL
@@ -671,12 +671,12 @@ function eL(e) {
         })
         .exhaustive();
 }
-let eD = (e) => (t) => e.some((e) => null != t.config.taskConfig.tasks[e]),
-    ey = eD([s.X.PLAY_ON_XBOX, s.X.PLAY_ON_PLAYSTATION]),
-    eb = eD([s.X.PLAY_ON_DESKTOP_V2]),
+let ey = (e) => (t) => e.some((e) => null != t.config.taskConfig.tasks[e]),
+    eD = ey([s.X.PLAY_ON_XBOX, s.X.PLAY_ON_PLAYSTATION]),
+    eb = ey([s.X.PLAY_ON_DESKTOP_V2]),
     eM = (e) =>
         (0, a.EQ)(e)
-            .with({ config: { configVersion: 2 } }, ey)
+            .with({ config: { configVersion: 2 } }, eD)
             .exhaustive(),
     eP = (e, t) => {
         var n, r;
@@ -788,7 +788,7 @@ function eZ(e) {
                     )
                     .otherwise(() => !1);
             })({ quest: e }),
-        n = ey(e),
+        n = eD(e),
         r = [];
     return t && r.push(R.cd.DESKTOP), n && r.push(R.cd.CONSOLE), r;
 }

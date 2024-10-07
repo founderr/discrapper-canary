@@ -31,16 +31,16 @@ var r = n(729594),
     v = n(914010),
     C = n(771845),
     L = n(626135),
-    D = n(591759);
+    y = n(591759);
 n(782568);
-var y = n(981631),
+var D = n(981631),
     b = n(46140);
 async function M(e, t) {
     await s.Z.dispatch({
         type: 'INVITE_MODAL_OPEN',
         invite: e,
         code: t,
-        context: y.IlC.APP
+        context: D.IlC.APP
     });
 }
 async function P(e) {
@@ -51,7 +51,7 @@ async function P(e) {
         n = t;
     }
     if (null == n) return;
-    if (n.state === y.r2o.EXPIRED || n.state === y.r2o.BANNED || n.state === y.r2o.ERROR) {
+    if (n.state === D.r2o.EXPIRED || n.state === D.r2o.BANNED || n.state === D.r2o.ERROR) {
         await M(n, e.code);
         return;
     }
@@ -74,7 +74,7 @@ function w(e) {
             let { code: r } = o,
                 a = null !== (t = v.Z.getGuildId()) && void 0 !== t ? t : void 0;
             return (
-                L.default.track(y.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                L.default.track(D.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                     application_id: r,
                     device_platform: i.tq ? 'mobile_web' : 'desktop_web',
                     guild_id: a,
@@ -122,9 +122,9 @@ function w(e) {
                 }),
             !0
         );
-    if (null != o && o.type === E.g.DISCOVERY_GAME && (0, _.rx)('discovery_coded_link')) return (e) => (null == e || e.preventDefault(), (0, T.Z)(y.Z5c.GLOBAL_DISCOVERY_SERVERS, { search: '?game='.concat(o.code) }), !0);
+    if (null != o && o.type === E.g.DISCOVERY_GAME && (0, _.rx)('discovery_coded_link')) return (e) => (null == e || e.preventDefault(), (0, T.Z)(D.Z5c.GLOBAL_DISCOVERY_SERVERS, { search: '?game='.concat(o.code) }), !0);
     let { path: O, hostname: C = '', host: M, query: w, hash: x } = r.parse(e),
-        G = D.Z.isDiscordHostname(C) || D.Z.isDiscordLocalhost(M, C);
+        G = y.Z.isDiscordHostname(C) || y.Z.isDiscordLocalhost(M, C);
     if (G && (null == O ? void 0 : O.startsWith('/application-directory'))) {
         let e;
         let t = O.split('/'),
@@ -142,7 +142,7 @@ function w(e) {
                 'search' === r && (_ = u.SEARCH),
                 null != s &&
                     ((_ = u.APPLICATION),
-                    L.default.track(y.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                    L.default.track(D.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                         application_id: s,
                         device_platform: i.tq ? 'mobile_web' : 'desktop_web',
                         guild_id: c,
@@ -166,7 +166,7 @@ function w(e) {
             );
         };
     }
-    if (null != O && G && D.Z.isAppRoute(O)) {
+    if (null != O && G && y.Z.isAppRoute(O)) {
         let e = {
             navigationReplace: !1,
             openChannel: !0
@@ -176,14 +176,14 @@ function w(e) {
     if (null != O && G) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
             i = t(e);
-        if (null != i) return (e) => (null == e || e.preventDefault(), null != o && o.type === E.g.APP_OAUTH2_LINK && u.ZP.trackWithMetadata(y.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }), r(i), !0);
+        if (null != i) return (e) => (null == e || e.preventDefault(), null != o && o.type === E.g.APP_OAUTH2_LINK && u.ZP.trackWithMetadata(D.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }), r(i), !0);
     }
     let k = (0, m.Ao)(O);
     if (null != O && G && null != k)
         return (e) => {
             null == e || e.preventDefault();
             let t = v.Z.getGuildId();
-            null != k.guildId && '' !== k.guildId && k.guildId !== t && (0, T.Z)(y.Z5c.CHANNEL(k.guildId));
+            null != k.guildId && '' !== k.guildId && k.guildId !== t && (0, T.Z)(D.Z5c.CHANNEL(k.guildId));
             let n = p.ZP.getGuildScheduledEvent(k.guildEventId);
             return null != n && (0, h.bO)({ eventId: n.id }), !0;
         };

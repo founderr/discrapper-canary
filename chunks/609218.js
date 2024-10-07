@@ -29,8 +29,8 @@ var r,
     N = n(689938),
     O = n(739626);
 function R(e) {
-    let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: R, upsellViewedTrackingData: v, onClose: C, onDisplay: L, onLearnMore: D } = e,
-        y = (0, u.e7)([I.Z], () => I.Z.affinities),
+    let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: R, upsellViewedTrackingData: v, onClose: C, onDisplay: L, onLearnMore: y } = e,
+        D = (0, u.e7)([I.Z], () => I.Z.affinities),
         b = (0, u.e7)([I.Z], () => I.Z.hasFetched);
     s.useEffect(() => {
         !b && o && d.MH();
@@ -38,7 +38,7 @@ function R(e) {
         s.useEffect(() => {
             h.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, v), null == L || L();
         }, [L, v]);
-    let M = y.length > 1 && o,
+    let M = D.length > 1 && o,
         P = (0, m.N)(),
         U = s.useCallback(() => {
             var e;
@@ -74,7 +74,7 @@ function R(e) {
                                 variant: 'heading-xl/bold',
                                 children: r
                             }),
-                            M && (0, a.jsx)(S.Z, { affinities: y }),
+                            M && (0, a.jsx)(S.Z, { affinities: D }),
                             (0, a.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 className: O.body,
@@ -95,7 +95,7 @@ function R(e) {
                                         location_section: R,
                                         location_object: A.qAy.NAVIGATION_LINK
                                     }),
-                                        null == D || D(),
+                                        null == y || y(),
                                         (0, E.Z)(),
                                         C(),
                                         (0, _.xf)(),

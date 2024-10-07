@@ -92,12 +92,12 @@ t.Z = a.ZP.connectStores([E.Z, o.ZP, S.Z, f.Z, I.Z, T.Z, m.Z, d.Z, h.ZP], (e) =>
                       height: e.innerHeight
                   };
     }
-    let D = s ? A.IlC.POPOUT : A.IlC.APP;
+    let y = s ? A.IlC.POPOUT : A.IlC.APP;
     a = s && p ? null : s || !c || p ? (null != _ && v ? (null !== (n = m.Z.pipActivityWindow) && void 0 !== n ? n : m.Z.pipVideoWindow) : null !== (r = m.Z.pipVideoWindow) && void 0 !== r ? r : m.Z.pipActivityWindow) : null;
-    let y = Array.from(m.Z.pipWindows.values()),
+    let D = Array.from(m.Z.pipWindows.values()),
         b = m.Z.pipWidth(O.cL.VIDEO),
-        M = y.find((e) => e.component === A.NYg.VIDEO),
-        P = [M, y.find((e) => e.component === A.NYg.EMBED_IFRAME)].filter(g.lm),
+        M = D.find((e) => e.component === A.NYg.VIDEO),
+        P = [M, D.find((e) => e.component === A.NYg.EMBED_IFRAME)].filter(g.lm),
         U = h.ZP.callChatSidebarWidth,
         w = T.Z.getVoiceChannelId(),
         x = T.Z.getChannelId() === w,
@@ -113,7 +113,7 @@ t.Z = a.ZP.connectStores([E.Z, o.ZP, S.Z, f.Z, I.Z, T.Z, m.Z, d.Z, h.ZP], (e) =>
         maxY: L.height,
         theme: f.Z.theme,
         dockedRect: m.Z.getDockedRect(null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : ''),
-        appContext: D,
+        appContext: y,
         roundCorners: !B
     };
 })(L);

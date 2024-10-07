@@ -38,8 +38,8 @@ var r = n(735250),
     v = n(496675),
     C = n(594174),
     L = n(768581),
-    D = n(585483),
-    y = n(630388),
+    y = n(585483),
+    D = n(630388),
     b = n(74538),
     M = n(276554),
     P = n(421399),
@@ -196,7 +196,7 @@ function K(e) {
             var t, n;
             let { props: a, guildId: s, handleRenderPopout: _, showCommunicationDisabledStyles: E = !1, className: f } = e,
                 { message: h, author: p, compact: I = !1, subscribeToGroupId: m, animate: T = !0, onContextMenu: S, onClickAvatar: A, onPopoutRequestClose: R, showAvatarPopout: v } = a,
-                [C, y] = i.useState(!1),
+                [C, D] = i.useState(!1),
                 { analyticsLocations: b } = (0, d.ZP)(c.Z.AVATAR),
                 M = (0, l.e7)([O.ZP], () => {
                     var e;
@@ -233,7 +233,7 @@ function K(e) {
                         : G;
                 }, [V, null === (t = h.application) || void 0 === t ? void 0 : t.icon, null === (n = h.application) || void 0 === n ? void 0 : n.id, U.avatar, x, G]);
             return (i.useEffect(() => {
-                if (null != m) return D.S.subscribeKeyed(k.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), y), () => void D.S.unsubscribeKeyed(k.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), y);
+                if (null != m) return y.S.subscribeKeyed(k.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), D), () => void y.S.unsubscribeKeyed(k.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), D);
             }, [w, m]),
             I && !M)
                 ? void 0
@@ -403,7 +403,7 @@ function K(e) {
                 )
             );
     let el = [];
-    (0, y.yE)(t.flags, k.iLy.SUPPRESS_NOTIFICATIONS) && el.push((0, r.jsx)(T.Z, {}, 'suppress-notifications'));
+    (0, D.yE)(t.flags, k.iLy.SUPPRESS_NOTIFICATIONS) && el.push((0, r.jsx)(T.Z, {}, 'suppress-notifications'));
     let eu = {};
     (eu[P.a.SYSTEM_TAG] = en), (eu[P.a.BADGES] = er);
     let ec = Z(e, z, eu),

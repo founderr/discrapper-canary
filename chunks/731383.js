@@ -42,9 +42,9 @@ var r = n(728804),
     f = {},
     h = function e(t, n, a, s, o, u, d, _, h, p, I, m, T, S, g, A) {
         for (var N, O, R = t, v = A, C = 0, L = !1; void 0 !== (v = v.get(f)) && !L; ) {
-            var D = v.get(t);
-            if (((C += 1), void 0 !== D)) {
-                if (D === C) throw RangeError('Cyclic object value');
+            var y = v.get(t);
+            if (((C += 1), void 0 !== y)) {
+                if (y === C) throw RangeError('Cyclic object value');
                 L = !0;
             }
             void 0 === v.get(f) && (C = 0);
@@ -65,8 +65,8 @@ var r = n(728804),
             R = '';
         }
         if ('string' == typeof (N = R) || 'number' == typeof N || 'boolean' == typeof N || 'symbol' == typeof N || 'bigint' == typeof N || i.isBuffer(R)) return d ? [T(S ? n : d(n, E.encoder, g, 'key', m)) + '=' + T(d(R, E.encoder, g, 'value', m))] : [T(n) + '=' + T(String(R))];
-        var y = [];
-        if (void 0 === R) return y;
+        var D = [];
+        if (void 0 === R) return D;
         if ('comma' === a && l(R)) S && d && (R = i.maybeMap(R, d)), (O = [{ value: R.length > 0 ? R.join(',') || null : void 0 }]);
         else if (l(_)) O = _;
         else {
@@ -80,10 +80,10 @@ var r = n(728804),
                 var x = l(R) ? ('function' == typeof a ? a(M, U) : M) : M + (p ? '.' + U : '[' + U + ']');
                 A.set(t, C);
                 var G = r();
-                G.set(f, A), c(y, e(w, x, a, s, o, u, 'comma' === a && S && l(R) ? null : d, _, h, p, I, m, T, S, g, G));
+                G.set(f, A), c(D, e(w, x, a, s, o, u, 'comma' === a && S && l(R) ? null : d, _, h, p, I, m, T, S, g, G));
             }
         }
-        return y;
+        return D;
     },
     p = function (e) {
         if (!e) return E;

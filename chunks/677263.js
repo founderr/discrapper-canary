@@ -26,8 +26,8 @@ function s(e) {
     'percent' === A.style && isNaN(s) && (O = 0.01);
     let [R, v] = (0, a.useState)(h),
         [C, L] = (0, a.useState)(_),
-        [D, y] = (0, a.useState)(l);
-    (!Object.is(h, R) || _ !== C || l !== D) && (m(N(h)), v(h), L(_), y(l));
+        [y, D] = (0, a.useState)(l);
+    (!Object.is(h, R) || _ !== C || l !== y) && (m(N(h)), v(h), L(_), D(l));
     let b = (0, a.useMemo)(() => T.parse(I), [T, I]),
         M = (e, i) => {
             if (isNaN(b)) {

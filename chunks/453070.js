@@ -1,6 +1,6 @@
 n.d(t, {
     Go: function () {
-        return D;
+        return y;
     },
     LZ: function () {
         return b;
@@ -9,7 +9,7 @@ n.d(t, {
         return A;
     },
     RJ: function () {
-        return y;
+        return D;
     },
     Sd: function () {
         return U;
@@ -202,12 +202,12 @@ let A = (e) => {
         }, [t, n, s, e]);
     },
     L = [];
-function D() {
+function y() {
     var e, t;
     return null !== (t = null === (e = (0, o.D)().favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== t ? t : L;
 }
-function y() {
-    let e = D();
+function D() {
+    let e = y();
     return (0, i.Wu)([I.Z], () => e.map((e) => I.Z.getStickerById(e)).filter((e) => null != e && (!(0, T.J8)(e) || (0, T.V9)(e))), [e]);
 }
 function b() {
@@ -220,7 +220,7 @@ function b() {
     return (0, i.Wu)([I.Z], () => e.map((e) => I.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
 let M = (e) => {
-        let t = y(),
+        let t = D(),
             { packs: n, frequentlyUsedStickers: a } = (0, i.cj)(
                 [I.Z, p.Z],
                 () => ({

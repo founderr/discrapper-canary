@@ -33,8 +33,8 @@ var r,
     v = n(868616),
     C = n(848886),
     L = n(583215),
-    D = n(576574),
-    y = n(307320);
+    y = n(576574),
+    D = n(307320);
 n(527702);
 var b = n(103645),
     M = n(615830),
@@ -486,7 +486,7 @@ class eo extends E.Z {
         d.setUseElectronVideo(l.supports(er.AN.ELECTRON_VIDEO)), w.Z.supports(er.AN.IMAGE_QUALITY_MEASUREMENT) && d.setVideoQualityMeasurement('imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec');
         let _ = ['unk'];
         if ((w.Z.supports(er.AN.AMD_EXPERIMENTAL_RATE_CONTROL) && _.push('amdRelaxRc'), this.context === er.Yn.STREAM)) {
-            let { nvMediumVbvSizeMs: e } = D.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
+            let { nvMediumVbvSizeMs: e } = y.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
             if (e > 0) {
                 _.push('nvRelaxRc=' + e);
                 let { nvEnableNewPresets: t } = L.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
@@ -666,7 +666,7 @@ class eo extends E.Z {
     getOrCreateVideoQuality() {
         if (null != this._connection && null == this._videoQuality) {
             (this._videoQuality = new $.S(this._connection)), this._videoQuality.start();
-            let { featureEnabled: e, windowLength: t, allowedPoorFpsRatio: n, fpsThreshold: r, backoffTimeSec: i } = y.Z.getConfig(!0);
+            let { featureEnabled: e, windowLength: t, allowedPoorFpsRatio: n, fpsThreshold: r, backoffTimeSec: i } = D.Z.getConfig(!0);
             if (e) {
                 (this._videoHealthManager = new X.y(t, n, r, i)), null != this._localMediaSinkWantsManager && (this._localMediaSinkWantsManager.videoHealthManager = this._videoHealthManager);
                 this._videoQuality.on($.d.FpsUpdate, (e, t, n) => {

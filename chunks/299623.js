@@ -1,5 +1,5 @@
-var n = r(470592),
-    a = r(676125);
-e.exports = function (e) {
-    return n(a(e));
+var e = r(470592),
+    o = r(676125);
+t.exports = function (t) {
+    return e(o(t));
 };

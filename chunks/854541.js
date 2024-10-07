@@ -120,7 +120,7 @@ let v = i.memo(function (e) {
         v = null != R ? R : 0,
         C = (0, u.Rf)(v),
         L = (0, u.O)(v),
-        [D, y] = i.useState({
+        [y, D] = i.useState({
             current: v,
             pending: {
                 hex: C,
@@ -129,10 +129,10 @@ let v = i.memo(function (e) {
             input: C
         });
     i.useEffect(() => {
-        if (null == R || R === D.current) return;
+        if (null == R || R === y.current) return;
         let e = (0, u.Rf)(R),
             t = (0, u.O)(R);
-        y({
+        D({
             current: R,
             pending: {
                 hex: e,
@@ -140,12 +140,12 @@ let v = i.memo(function (e) {
             },
             input: e
         });
-    }, [R, D]),
+    }, [R, y]),
         i.useEffect(() => o, [o]);
     let b = (e) => {
             let t = '#' === e[0] ? e : '#'.concat(e);
             if (!(0, u.FX)(t)) {
-                y((e) => ({
+                D((e) => ({
                     ...e,
                     input: t
                 }));
@@ -153,7 +153,7 @@ let v = i.memo(function (e) {
             }
             let n = (0, u._i)(t),
                 r = (0, u.O)(n);
-            y({
+            D({
                 current: n,
                 pending: {
                     hex: t,
@@ -172,7 +172,7 @@ let v = i.memo(function (e) {
         },
         P = i.useCallback(
             (e) => {
-                y((t) => ({
+                D((t) => ({
                     ...t,
                     pending: e,
                     input: e.hex
@@ -192,7 +192,7 @@ let v = i.memo(function (e) {
                         let { hex: t } = e;
                         return U(t);
                     },
-                    color: D.pending.hsl
+                    color: y.pending.hsl
                 }),
                 _,
                 (0, r.jsxs)('div', {
@@ -209,7 +209,7 @@ let v = i.memo(function (e) {
                             }),
                         (0, r.jsx)(E.o, {
                             className: g.customColorPickerInput,
-                            value: D.input,
+                            value: y.input,
                             onChange: b,
                             maxLength: 7
                         })

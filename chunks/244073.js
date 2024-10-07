@@ -26,8 +26,8 @@ var i = n(735250),
     v = n(594174),
     C = n(979651),
     x = n(362446),
-    N = n(518084),
-    T = n(981631),
+    T = n(518084),
+    N = n(981631),
     O = n(689938),
     A = n(945768),
     y = n(663031);
@@ -52,9 +52,9 @@ class M extends s.PureComponent {
         let { guild: t } = this.props,
             n = (0, p.F6)(e, v.default, S.Z),
             s = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
-            a = null != t ? t.id : T.ME;
+            a = null != t ? t.id : N.ME;
         return (0, i.jsx)(r.rU, {
-            to: T.Z5c.CHANNEL(a),
+            to: N.Z5c.CHANNEL(a),
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(a, e.id);
             },
@@ -68,9 +68,9 @@ class M extends s.PureComponent {
         let { className: e, contentClassName: t, pinned: n, lobbyId: s, channel: a, quality: r, lastPing: l, hasVideo: d, connectionState: u, deaf: h, mute: p } = this.props;
         return null == a
             ? null
-            : (0, i.jsx)(N.ZP.Bar, {
+            : (0, i.jsx)(T.ZP.Bar, {
                   className: o()(e, A.controls, { [A.unpinned]: !n }),
-                  children: (0, i.jsxs)(N.ZP.Content, {
+                  children: (0, i.jsxs)(T.ZP.Content, {
                       className: o()(t, A.content),
                       dynamicSize: !0,
                       children: [

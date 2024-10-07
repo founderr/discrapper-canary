@@ -15,15 +15,15 @@ var r = n(735250),
     _ = n(939350),
     E = n(667947);
 function f(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: f, iconLeftSize: h = 'md', hint: p, subtext: I, subtextLineClamp: m, hasSubmenu: T, disabled: S, isFocused: g, menuItemProps: A, action: N, onClose: O, onFocus: R, className: v, focusedClassName: C, subMenuIconClassName: L, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: y, iconProps: b, sparkle: M } = e,
+    let { color: t = 'default', label: n, icon: a, iconLeft: f, iconLeftSize: h = 'md', hint: p, subtext: I, subtextLineClamp: m, hasSubmenu: T, disabled: S, isFocused: g, menuItemProps: A, action: N, onClose: O, onFocus: R, className: v, focusedClassName: C, subMenuIconClassName: L, dontCloseOnActionIfHoldingShiftKey: y, dontCloseOnAction: D, iconProps: b, sparkle: M } = e,
         P = i.useContext(u.r),
         U = i.useRef(null),
         w = i.useCallback(
             (e) => {
                 if (null == N) return !1;
-                !(e.shiftKey && D) && !y && O(), e.persist(), null == P || P(), requestAnimationFrame(() => N(e));
+                !(e.shiftKey && y) && !D && O(), e.persist(), null == P || P(), requestAnimationFrame(() => N(e));
             },
-            [N, O, P, D, y]
+            [N, O, P, y, D]
         );
     return (
         i.useEffect(() => {

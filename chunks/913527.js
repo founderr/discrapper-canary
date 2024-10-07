@@ -115,10 +115,10 @@ var r, i;
             for (r = 0; r < i; r++) ((n && e[r] !== t[r]) || (!n && C(e[r]) !== C(t[r]))) && s++;
             return s + a;
         }
-        function D(e) {
+        function y(e) {
             !1 === t.suppressDeprecationWarnings && 'undefined' != typeof console && console.warn && console.warn('Deprecation warning: ' + e);
         }
-        function y(e, n) {
+        function D(e, n) {
             var r = !0;
             return c(function () {
                 if ((null != t.deprecationHandler && t.deprecationHandler(null, e), r)) {
@@ -129,14 +129,14 @@ var r, i;
                         } else i = arguments[s];
                         a.push(i);
                     }
-                    D(e + '\nArguments: ' + Array.prototype.slice.call(a).join('') + '\n' + Error().stack), (r = !1);
+                    y(e + '\nArguments: ' + Array.prototype.slice.call(a).join('') + '\n' + Error().stack), (r = !1);
                 }
                 return n.apply(this, arguments);
             }, n);
         }
         var b = {};
         function M(e, n) {
-            null != t.deprecationHandler && t.deprecationHandler(e, n), !b[e] && (D(n), (b[e] = !0));
+            null != t.deprecationHandler && t.deprecationHandler(e, n), !b[e] && (y(n), (b[e] = !0));
         }
         function P(e) {
             return e instanceof Function || '[object Function]' === Object.prototype.toString.call(e);
@@ -397,10 +397,10 @@ var r, i;
             }
             return (n = Math.min(e.date(), eO(e.year(), t))), e._d['set' + (e._isUTC ? 'UTC' : '') + 'Month'](t, n), e;
         }
-        function eD(e) {
+        function ey(e) {
             return null != e ? (eL(this, e), t.updateOffset(this, !0), this) : eA(this, 'Month');
         }
-        function ey() {
+        function eD() {
             function e(e, t) {
                 return t.length - e.length;
             }
@@ -966,7 +966,7 @@ var r, i;
                 e0(e),
                 e$(e);
         }
-        (t.createFromInputFallback = y('value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.', function (e) {
+        (t.createFromInputFallback = D('value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.', function (e) {
             e._d = new Date(e._i + (e._useUTC ? ' UTC' : ''));
         })),
             (t.ISO_8601 = function () {}),
@@ -1063,11 +1063,11 @@ var r, i;
         function ti(e, t, n, r) {
             return tr(e, t, n, r, !1);
         }
-        var ta = y('moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/', function () {
+        var ta = D('moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/', function () {
                 var e = ti.apply(null, arguments);
                 return this.isValid() && e.isValid() ? (e < this ? this : e) : f();
             }),
-            ts = y('moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/', function () {
+            ts = D('moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/', function () {
                 var e = ti.apply(null, arguments);
                 return this.isValid() && e.isValid() ? (e > this ? this : e) : f();
             });
@@ -1243,10 +1243,10 @@ var r, i;
             var t;
             return void 0 === e ? this._locale._abbr : (null != (t = eX(e)) && (this._locale = t), this);
         }
-        var tD = y('moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.', function (e) {
+        var ty = D('moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.', function (e) {
             return void 0 === e ? this.localeData() : this.locale(e);
         });
-        function ty() {
+        function tD() {
             return this._locale;
         }
         function tb(e, t) {
@@ -1478,9 +1478,9 @@ var r, i;
             (tB.isValid = function () {
                 return E(this);
             }),
-            (tB.lang = tD),
+            (tB.lang = ty),
             (tB.locale = tL),
-            (tB.localeData = ty),
+            (tB.localeData = tD),
             (tB.max = ts),
             (tB.min = ta),
             (tB.parsingFlags = function () {
@@ -1603,7 +1603,7 @@ var r, i;
                 function (e) {
                     return null == e ? Math.ceil((this.month() + 1) / 3) : this.month((e - 1) * 3 + (this.month() % 3));
                 }),
-            (tB.month = eD),
+            (tB.month = ey),
             (tB.daysInMonth = function () {
                 return eO(this.year(), this.month());
             }),
@@ -1699,13 +1699,13 @@ var r, i;
             (tB.zoneName = function () {
                 return this._isUTC ? 'Coordinated Universal Time' : '';
             }),
-            (tB.dates = y('dates accessor is deprecated. Use date instead.', tU)),
-            (tB.months = y('months accessor is deprecated. Use month instead', eD)),
-            (tB.years = y('years accessor is deprecated. Use year instead', eS)),
-            (tB.zone = y('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', function (e, t) {
+            (tB.dates = D('dates accessor is deprecated. Use date instead.', tU)),
+            (tB.months = D('months accessor is deprecated. Use month instead', ey)),
+            (tB.years = D('years accessor is deprecated. Use year instead', eS)),
+            (tB.zone = D('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', function (e, t) {
                 return null != e ? ('string' != typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset();
             })),
-            (tB.isDSTShifted = y('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', function () {
+            (tB.isDSTShifted = D('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', function () {
                 if (!a(this._isDSTShifted)) return this._isDSTShifted;
                 var e = {};
                 if ((A(e, this), (e = tn(e))._a)) {
@@ -1791,10 +1791,10 @@ var r, i;
                 }
             }),
             (tV.monthsRegex = function (e) {
-                return this._monthsParseExact ? ((!u(this, '_monthsRegex') && ey.call(this), e) ? this._monthsStrictRegex : this._monthsRegex) : (!u(this, '_monthsRegex') && (this._monthsRegex = ed), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex);
+                return this._monthsParseExact ? ((!u(this, '_monthsRegex') && eD.call(this), e) ? this._monthsStrictRegex : this._monthsRegex) : (!u(this, '_monthsRegex') && (this._monthsRegex = ed), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex);
             }),
             (tV.monthsShortRegex = function (e) {
-                return this._monthsParseExact ? ((!u(this, '_monthsRegex') && ey.call(this), e) ? this._monthsShortStrictRegex : this._monthsShortRegex) : (!u(this, '_monthsShortRegex') && (this._monthsShortRegex = ed), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex);
+                return this._monthsParseExact ? ((!u(this, '_monthsRegex') && eD.call(this), e) ? this._monthsShortStrictRegex : this._monthsShortRegex) : (!u(this, '_monthsShortRegex') && (this._monthsShortRegex = ed), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex);
             }),
             (tV.week = function (e) {
                 return ew(e, this._week.dow, this._week.doy).week;
@@ -1847,8 +1847,8 @@ var r, i;
                 return e + n;
             }
         }),
-            (t.lang = y('moment.lang is deprecated. Use moment.locale instead.', eq)),
-            (t.langData = y('moment.langData is deprecated. Use moment.localeData instead.', eX));
+            (t.lang = D('moment.lang is deprecated. Use moment.locale instead.', eq)),
+            (t.langData = D('moment.langData is deprecated. Use moment.localeData instead.', eX));
         var tj = Math.abs;
         function tW(e, t, n, r) {
             var i = tS(t, n);
@@ -2022,9 +2022,9 @@ var r, i;
             (nu.toString = nl),
             (nu.toJSON = nl),
             (nu.locale = tL),
-            (nu.localeData = ty),
-            (nu.toIsoString = y('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', nl)),
-            (nu.lang = tD),
+            (nu.localeData = tD),
+            (nu.toIsoString = D('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', nl)),
+            (nu.lang = ty),
             K('X', 0, 0, 'unix'),
             K('x', 0, 0, 'valueOf'),
             eE('x', el),

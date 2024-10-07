@@ -1,49 +1,49 @@
-var r = n(147018),
-    i = n(161581),
-    a = n(545576),
-    s = n(879),
-    o = n(97131).f,
-    l = n(740362),
-    u = n(603528),
-    c = n(95948),
-    d = n(892725),
-    _ = n(33995),
-    E = n(905145),
-    f = n(325008),
-    h = n(992051),
-    p = 'DOMException',
-    I = a('Error'),
-    m = a(p),
-    T = function () {
-        u(this, S);
-        var e = arguments.length,
-            t = d(e < 1 ? void 0 : arguments[0]),
-            n = d(e < 2 ? void 0 : arguments[1], 'Error'),
-            r = new m(t, n),
-            i = I(t);
-        return (i.name = p), o(r, 'stack', s(1, E(i.stack, 1))), c(r, this, T), r;
+var e = o(147018),
+    n = o(161581),
+    c = o(545576),
+    i = o(879),
+    u = o(97131).f,
+    a = o(740362),
+    f = o(603528),
+    E = o(95948),
+    s = o(892725),
+    p = o(33995),
+    R = o(905145),
+    l = o(325008),
+    _ = o(992051),
+    d = 'DOMException',
+    O = c('Error'),
+    m = c(d),
+    I = function () {
+        f(this, A);
+        var r = arguments.length,
+            t = s(r < 1 ? void 0 : arguments[0]),
+            o = s(r < 2 ? void 0 : arguments[1], 'Error'),
+            e = new m(t, o),
+            n = O(t);
+        return (n.name = d), u(e, 'stack', i(1, R(n.stack, 1))), E(e, this, I), e;
     },
-    S = (T.prototype = m.prototype),
-    g = 'stack' in I(p),
-    A = 'stack' in new m(1, 2),
-    N = m && f && Object.getOwnPropertyDescriptor(i, p),
-    O = !!N && !(N.writable && N.configurable),
-    R = g && !O && !A;
-r(
+    A = (I.prototype = m.prototype),
+    v = 'stack' in O(d),
+    T = 'stack' in new m(1, 2),
+    y = m && l && Object.getOwnPropertyDescriptor(n, d),
+    N = !!y && !(y.writable && y.configurable),
+    h = v && !N && !T;
+e(
     {
         global: !0,
         constructor: !0,
-        forced: h || R
+        forced: _ || h
     },
-    { DOMException: R ? T : m }
+    { DOMException: h ? I : m }
 );
-var v = a(p),
-    C = v.prototype;
-if (C.constructor !== v) {
-    for (var L in (!h && o(C, 'constructor', s(1, v)), _))
-        if (l(_, L)) {
-            var D = _[L],
-                y = D.s;
-            !l(v, y) && o(v, y, s(6, D.c));
+var D = c(d),
+    S = D.prototype;
+if (S.constructor !== D) {
+    for (var b in (!_ && u(S, 'constructor', i(1, D)), p))
+        if (a(p, b)) {
+            var C = p[b],
+                g = C.s;
+            !a(D, g) && u(D, g, i(6, C.c));
         }
 }

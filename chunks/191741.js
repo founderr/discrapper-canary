@@ -24,8 +24,8 @@ var i = n(735250),
     p = n(592125),
     g = n(430824),
     T = n(944486),
-    S = n(998502),
-    f = n(981631),
+    f = n(998502),
+    S = n(981631),
     C = n(741764),
     N = n(350133);
 let A = (0, s.Z)(() => ({ isOpen: !0 }));
@@ -37,7 +37,7 @@ function v() {
         { hasBugReporterAccess: v } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     return (
         a.useLayoutEffect(() => {
-            S.ZP.setMinimumSize(C.J, C.N);
+            f.ZP.setMinimumSize(C.J, C.N);
         }, []),
         (0, i.jsxs)('div', {
             className: N.bar,
@@ -57,7 +57,7 @@ function v() {
                                     }),
                                     (0, i.jsx)(l.Clickable, {
                                         onClick: () => {
-                                            o.Z.open(f.oAB.ACCOUNT);
+                                            o.Z.open(S.oAB.ACCOUNT);
                                         },
                                         children: (0, i.jsx)(l.SettingsIcon, { size: 'xs' })
                                     })

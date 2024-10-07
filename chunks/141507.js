@@ -29,12 +29,12 @@ var r = n(735250),
     v = n(149203),
     C = n(689938),
     L = n(5772);
-function D(e) {
+function y(e) {
     return 'animated' in e;
 }
-let y = (e) => {
+let D = (e) => {
         let { inspectedEmoji: t, guild: n } = e,
-            r = D(t);
+            r = y(t);
         return null != n && r ? C.Z.Messages.EMOJI_FROM_GUILD.format({ guildName: n.name }) : null;
     },
     b = i.memo(function (e) {
@@ -73,7 +73,7 @@ let y = (e) => {
             Z = (0, a.e7)([m.Z], () => m.Z.isFocused()),
             Y = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             j = p.Yk.useSetting(),
-            W = (0, A.C1)(w, D(t) ? t : null),
+            W = (0, A.C1)(w, y(t) ? t : null),
             K = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: z } = (0, N.Z)(w, x),
             q = t.id,
@@ -83,7 +83,7 @@ let y = (e) => {
                 let e = Date.now();
                 return () => {
                     Date.now() - e >= 250 &&
-                        D(t) &&
+                        y(t) &&
                         Q !== v.t0.NONE &&
                         (Q === v.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, _.Zg)(t.guildId, z[0].id),
                         null != B.source &&
@@ -99,7 +99,7 @@ let y = (e) => {
         )
             return null;
         let X = h.Z.theme;
-        if (D(t)) {
+        if (y(t)) {
             var $;
             let e =
                 null != t.id
@@ -157,7 +157,7 @@ let y = (e) => {
         let ee =
             k && 'CREATE_EMOJI' === t.type
                 ? C.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE
-                : y({
+                : D({
                       inspectedEmoji: t,
                       channel: G,
                       guildId: w,

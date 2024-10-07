@@ -1,4 +1,4 @@
-var n = r(714050);
-e.exports = function (e, t) {
-    return void 0 === e ? (arguments.length < 2 ? '' : t) : n(e);
+var e = n(714050);
+t.exports = function (t, r) {
+    return void 0 === t ? (arguments.length < 2 ? '' : r) : e(t);
 };

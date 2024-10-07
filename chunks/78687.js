@@ -170,17 +170,17 @@ e.exports = function (e) {
                     R = document.createElement('div'),
                     v = document.createElement('div'),
                     L = document.createElement('div');
-                function D() {
+                function y() {
                     var e = i(l);
                     e && e.onExpand ? e.onExpand() : I('Aborting expand scroll handler: element has been uninstalled');
                 }
-                function y() {
+                function D() {
                     var e = i(l);
                     e && e.onShrink ? e.onShrink() : I('Aborting shrink scroll handler: element has been uninstalled');
                 }
-                (A.dir = 'ltr'), (A.style.cssText = h), (A.className = o), (N.className = o), (N.style.cssText = p), (O.style.cssText = m), (R.style.cssText = S), (v.style.cssText = T), (L.style.cssText = g), O.appendChild(R), v.appendChild(L), N.appendChild(O), N.appendChild(v), A.appendChild(N), _.appendChild(A), c(O, 'scroll', D), c(v, 'scroll', y), (i(l).onExpandScroll = D), (i(l).onShrinkScroll = y);
+                (A.dir = 'ltr'), (A.style.cssText = h), (A.className = o), (N.className = o), (N.style.cssText = p), (O.style.cssText = m), (R.style.cssText = S), (v.style.cssText = T), (L.style.cssText = g), O.appendChild(R), v.appendChild(L), N.appendChild(O), N.appendChild(v), A.appendChild(N), _.appendChild(A), c(O, 'scroll', y), c(v, 'scroll', D), (i(l).onExpandScroll = y), (i(l).onShrinkScroll = D);
             }
-            function D() {
+            function y() {
                 function s(t, n, r) {
                     var i = _(t).childNodes[0],
                         a = n + 10 + A(),
@@ -279,7 +279,7 @@ e.exports = function (e) {
                 var f = i(l).style;
                 s(l, f.width, f.height);
             }
-            function y() {
+            function D() {
                 if ((I('finalizeDomMutation invoked.'), !i(l))) {
                     I('Aborting because element has been uninstalled');
                     return;
@@ -302,8 +302,8 @@ e.exports = function (e) {
                     I('Element start size', i(l).startSize),
                     n.add(0, S),
                     n.add(1, L),
-                    n.add(2, D),
-                    n.add(3, y),
+                    n.add(2, y),
+                    n.add(3, D),
                     n.add(4, b);
             }
             if ((I('Making detectable...'), ((p = (h = f = l).getRootNode && h.getRootNode().contains(h)), (h === h.ownerDocument.body || h.ownerDocument.body.contains(h) || p) && null !== window.getComputedStyle(f)) ? 1 : 0)) M();

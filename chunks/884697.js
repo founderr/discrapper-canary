@@ -9,7 +9,7 @@ n.d(t, {
         return d;
     },
     IC: function () {
-        return y;
+        return D;
     },
     OT: function () {
         return b;
@@ -36,7 +36,7 @@ n.d(t, {
         return O;
     },
     mO: function () {
-        return D;
+        return y;
     },
     qS: function () {
         return _;
@@ -155,8 +155,8 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
             shopPreviews: r
         };
     },
-    D = (e) => e.applicationId === c.XAJ,
-    y = (e) => 3.8 * e,
+    y = (e) => e.applicationId === c.XAJ,
+    D = (e) => 3.8 * e,
     b = (e) => {
         let t = new Date(),
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());

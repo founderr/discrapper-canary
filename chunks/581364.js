@@ -18,7 +18,7 @@ n.d(t, {
         return v;
     },
     X0: function () {
-        return y;
+        return D;
     },
     XA: function () {
         return b;
@@ -39,7 +39,7 @@ n.d(t, {
         return U;
     },
     tI: function () {
-        return D;
+        return y;
     },
     vC: function () {
         return M;
@@ -311,10 +311,10 @@ function L(e) {
             return E.d.SlashCommand;
     }
 }
-function D(e) {
+function y(e) {
     return null == e ? void 0 : e.id === p.bi.BUILT_IN ? f.ub.BUILT_IN : e.id === p.bi.FRECENCY ? f.ub.FRECENCY : f.ub.APP;
 }
-function y(e, t) {
+function D(e, t) {
     var n, r;
     return {
         type: f.Qi.APPLICATION,

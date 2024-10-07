@@ -1,6 +1,6 @@
-e.exports =
+t.exports =
     Math.sign ||
-    function (e) {
-        var t = +e;
-        return 0 === t || t != t ? t : t < 0 ? -1 : 1;
+    function (t) {
+        var r = +t;
+        return 0 === r || r != r ? r : r < 0 ? -1 : 1;
     };

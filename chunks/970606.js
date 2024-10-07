@@ -30,7 +30,7 @@ n.d(t, {
         return A;
     },
     Pq: function () {
-        return D;
+        return y;
     },
     Q2: function () {
         return b;
@@ -51,7 +51,7 @@ n.d(t, {
         return F;
     },
     aC: function () {
-        return y;
+        return D;
     },
     bH: function () {
         return P;
@@ -236,10 +236,10 @@ function L(e) {
         position: s
     });
 }
-function D(e) {
+function y(e) {
     l.default.track(c.rMx.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id: e });
 }
-function y(e) {
+function D(e) {
     var t;
     let { guildId: n, messageId: r, channelId: i, joinRequestStatus: a, joinRequestUserId: u } = e,
         d = s.default.getId(),

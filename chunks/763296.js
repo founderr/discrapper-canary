@@ -26,8 +26,8 @@ let A = new Map(),
     v = 0,
     C = new Set(),
     L = new Map(),
-    D = !1;
-function y(e) {
+    y = !1;
+function D(e) {
     let { sound: t } = e,
         n = A.get(t.guildId),
         r = null == n ? void 0 : n.findIndex((e) => e.soundId === t.soundId);
@@ -100,7 +100,7 @@ class P extends (i = d.ZP.Store) {
         return O.has(e);
     }
     hasHadOtherUserPlaySoundInSession() {
-        return D;
+        return y;
     }
     hasFetchedAllSounds() {
         return 2 === v && 2 === R;
@@ -117,13 +117,13 @@ class P extends (i = d.ZP.Store) {
         : (s[o] = l),
     (t.Z = new P(_.Z, {
         LOGOUT: function () {
-            A.clear(), N.clear(), L.clear(), (D = !1), (v = 0), (R = 0);
+            A.clear(), N.clear(), L.clear(), (y = !1), (v = 0), (R = 0);
         },
         GUILD_SOUNDBOARD_FETCH: function () {
             v = 1;
         },
-        GUILD_SOUNDBOARD_SOUND_CREATE: y,
-        GUILD_SOUNDBOARD_SOUND_UPDATE: y,
+        GUILD_SOUNDBOARD_SOUND_CREATE: D,
+        GUILD_SOUNDBOARD_SOUND_UPDATE: D,
         GUILD_SOUNDBOARD_SOUND_DELETE: function (e) {
             let { soundId: t, guildId: n } = e,
                 r = A.get(n),
@@ -135,7 +135,7 @@ class P extends (i = d.ZP.Store) {
             let { soundId: i, userId: a } = e,
                 s = (null !== (n = N.get(i)) && void 0 !== n ? n : 0) + 1,
                 o = (null !== (r = L.get(a)) && void 0 !== r ? r : 0) + 1;
-            N.set(i, s), L.set(a, o), a !== (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (D = !0);
+            N.set(i, s), L.set(a, o), a !== (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (y = !0);
         },
         GUILD_SOUNDBOARD_SOUND_PLAY_END: function (e) {
             var t, n;

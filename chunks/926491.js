@@ -27,8 +27,8 @@ let S = 2,
     L = (e, t) => {
         C = new Map(C.set(e, t));
     },
-    D = I.Z.Millis.HOUR,
-    y = async () => {
+    y = I.Z.Millis.HOUR,
+    D = async () => {
         if (0 !== S) return;
         let e = c.Z.database();
         if (null == e) return;
@@ -136,16 +136,16 @@ class x extends (r = l.ZP.Store) {
         return S;
     }
     get stickerMetadata() {
-        return y(), null == N && ((N = new Map()), U()), N;
+        return D(), null == N && ((N = new Map()), U()), N;
     }
     get hasLoadedStickerPacks() {
-        return null != R && R + D > Date.now();
+        return null != R && R + y > Date.now();
     }
     get isFetchingStickerPacks() {
         return v;
     }
     getStickerById(e) {
-        return !A.has(e) && y(), A.get(e);
+        return !A.has(e) && D(), A.get(e);
     }
     getStickerPack(e) {
         return g.get(e);
@@ -160,13 +160,13 @@ class x extends (r = l.ZP.Store) {
         return C;
     }
     getAllStickersIterator() {
-        return y(), A.values();
+        return D(), A.values();
     }
     getAllGuildStickers() {
-        return y(), C;
+        return D(), C;
     }
     getStickersByGuildId(e) {
-        return y(), C.get(e);
+        return D(), C.get(e);
     }
 }
 (s = 'StickersStore'),

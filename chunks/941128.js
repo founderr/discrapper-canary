@@ -26,8 +26,8 @@ var r,
 let v = [R.ff.AUTHENTICATION_FAILED, R.ff.NOT_ENTITLED],
     C = 'DispatchManagerStore',
     L = [],
-    D = [],
-    y = !1,
+    y = [],
+    D = !1,
     b = null,
     M = null,
     P = !1,
@@ -37,7 +37,7 @@ let v = [R.ff.AUTHENTICATION_FAILED, R.ff.NOT_ENTITLED],
 function G() {
     let e = {
         queue: L,
-        paused: y,
+        paused: D,
         userActions: Array.from(U)
     };
     f.K.set(C, e);
@@ -66,15 +66,15 @@ function F(e, t, n, r) {
             comboId: i,
             action: r
         },
-        s = D.indexOf(i);
-    -1 !== s && D.splice(s, 1);
+        s = y.indexOf(i);
+    -1 !== s && y.splice(s, 1);
     let o = B(e, t);
-    0 !== o && (n ? -1 === o && (L.push(a), k()) : (o > 0 && L.splice(o, 1), L.unshift(a), k())), !n && y && g.Z.resume(), G();
+    0 !== o && (n ? -1 === o && (L.push(a), k()) : (o > 0 && L.splice(o, 1), L.unshift(a), k())), !n && D && g.Z.resume(), G();
 }
 function V(e, t) {
     let n = (0, S.Tu)(e, t),
-        r = D.indexOf(n);
-    -1 !== r && D.splice(r, 1);
+        r = y.indexOf(n);
+    -1 !== r && y.splice(r, 1);
     let i = B(e, t);
     -1 !== i && (L.splice(i, 1), G()), k();
 }
@@ -85,8 +85,8 @@ function H(e) {
 function Z(e) {
     let { applicationId: t, branchId: n } = e,
         r = (0, S.Tu)(t, n),
-        i = D.indexOf(r);
-    -1 !== i && D.splice(i, 1);
+        i = y.indexOf(r);
+    -1 !== i && y.splice(i, 1);
 }
 function Y() {
     let e = m.default.getToken(),
@@ -96,7 +96,7 @@ function Y() {
 function j() {
     for (let e of I.ZP.getRunningDiscordApplicationIds()) p.al(e, e);
     let e = I.ZP.getVisibleGame();
-    return !y && null != e && e.pid !== x && p.wO(), (x = null == e ? null : e.pid), !1;
+    return !D && null != e && e.pid !== x && p.wO(), (x = null == e ? null : e.pid), !1;
 }
 class W extends (a = E.ZP.Store) {
     initialize() {
@@ -118,7 +118,7 @@ class W extends (a = E.ZP.Store) {
                       }
                     : e
             );
-        null != t.paused && (y = t.paused), null != t.userActions && (U = new Map(Array.from(t.userActions))), this.waitFor(N.Z, I.ZP), this.syncWith([I.ZP], j), this.waitFor(N.Z);
+        null != t.paused && (D = t.paused), null != t.userActions && (U = new Map(Array.from(t.userActions))), this.waitFor(N.Z, I.ZP), this.syncWith([I.ZP], j), this.waitFor(N.Z);
     }
     get activeItems() {
         return L.map((e) => {
@@ -127,10 +127,10 @@ class W extends (a = E.ZP.Store) {
         });
     }
     get finishedItems() {
-        return D.map(S.CP);
+        return y.map(S.CP);
     }
     get paused() {
-        return y;
+        return D;
     }
     getQueuePosition(e, t) {
         return B(e, t);
@@ -169,14 +169,14 @@ class W extends (a = E.ZP.Store) {
             let { applicationId: t, branchId: n } = e,
                 r = B(t, n);
             if (r < 1) return !1;
-            L.splice(0, 0, L.splice(r, 1)[0]), k(), y && g.Z.resume(), G();
+            L.splice(0, 0, L.splice(r, 1)[0]), k(), D && g.Z.resume(), G();
         },
         DISPATCH_APPLICATION_REMOVE_FINISHED: Z,
         DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
             let { state: t } = e;
-            !P && ((P = !0), k(), !y && g.Z.resume());
-            let n = y;
-            (y = t.paused), (b = t.currentTask), (M = t.nextTask);
+            !P && ((P = !0), k(), !D && g.Z.resume());
+            let n = D;
+            (D = t.paused), (b = t.currentTask), (M = t.nextTask);
             let r = !1;
             (L = L.filter((e) => {
                 let { comboId: t } = e,
@@ -185,7 +185,7 @@ class W extends (a = E.ZP.Store) {
                     s = T.Z.getTargetBuildId(n, i),
                     o = T.Z.getTargetManifests(n, i);
                 if (null != a && a.type === O.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && _().isEqual(a.manifestIds, a.targetManifestIds) && _().isEqual(a.manifestIds, o)) {
-                    if ((D.push(t), U.has(t))) {
+                    if ((y.push(t), U.has(t))) {
                         switch (U.get(t)) {
                             case 'Install':
                                 p.XT(n, a);
@@ -200,7 +200,7 @@ class W extends (a = E.ZP.Store) {
                 return !0;
             })),
                 k(),
-                (r || n !== y) && G();
+                (r || n !== D) && G();
         },
         DISPATCH_APPLICATION_ERROR: function (e) {
             let { error: t } = e,

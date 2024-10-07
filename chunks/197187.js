@@ -1,11 +1,11 @@
-var n = r(962557),
-    a = Function.prototype,
-    o = a.apply,
-    i = a.call;
-e.exports =
+var e = r(962557),
+    i = Function.prototype,
+    o = i.apply,
+    a = i.call;
+t.exports =
     ('object' == typeof Reflect && Reflect.apply) ||
-    (n
-        ? i.bind(o)
+    (e
+        ? a.bind(o)
         : function () {
-              return i.apply(o, arguments);
+              return a.apply(o, arguments);
           });

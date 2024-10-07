@@ -91,16 +91,16 @@ function _(e) {
             n.setFocused(!0), n.setFocusedKey(e), null == e && !S && (0, a.ex)(E.current);
         }
     }, []);
-    let D = (0, i.useRef)(n.focusedKey);
+    let y = (0, i.useRef)(n.focusedKey);
     (0, i.useEffect)(() => {
         let e = (0, o.Jz)();
         if (n.isFocused && null != n.focusedKey && (null == N ? void 0 : N.current)) {
             let t = N.current.querySelector(`[data-key="${CSS.escape(n.focusedKey.toString())}"]`);
             t && ('keyboard' === e || L.current) && (!A && (0, s.zT)(N.current, t), (0, s.Gt)(t, { containingElement: E.current }));
         }
-        n.isFocused && null == n.focusedKey && null != D.current && (0, a.ex)(E.current), (D.current = n.focusedKey), (L.current = !1);
+        n.isFocused && null == n.focusedKey && null != y.current && (0, a.ex)(E.current), (y.current = n.focusedKey), (L.current = !1);
     }, [A, N, n.focusedKey, n.isFocused, E]);
-    let y = {
+    let D = {
             onKeyDown: (e) => {
                 var t, i, o, l, d, f, T, S;
                 if ((e.altKey && 'Tab' === e.key && e.preventDefault(), !E.current.contains(e.target))) return;
@@ -218,11 +218,11 @@ function _(e) {
             selectionManager: n
         });
     return (
-        !T && (y = (0, s.dG)(b, y)),
+        !T && (D = (0, s.dG)(b, D)),
         !S && (t = null == n.focusedKey ? 0 : -1),
         {
             collectionProps: {
-                ...y,
+                ...D,
                 tabIndex: t
             }
         }
@@ -268,8 +268,8 @@ function E(e) {
         v = R && ('replace' === t.selectionBehavior ? !O : !O || t.isEmpty),
         C = R && O && 'replace' === t.selectionBehavior,
         L = v || C,
-        D = (0, i.useRef)(null),
-        y = L && O,
+        y = (0, i.useRef)(null),
+        D = L && O,
         b = (0, i.useRef)(!1),
         M = (0, i.useRef)(!1),
         P = (e) => {
@@ -278,7 +278,7 @@ function E(e) {
         U = {};
     l
         ? ((U.onPressStart = (e) => {
-              (D.current = e.pointerType), (b.current = y), 'keyboard' === e.pointerType && (!L || h()) && S(e);
+              (y.current = e.pointerType), (b.current = D), 'keyboard' === e.pointerType && (!L || h()) && S(e);
           }),
           I
               ? ((U.onPressUp = v
@@ -291,7 +291,7 @@ function E(e) {
                     v || (C && 'mouse' !== e.pointerType) ? ('keyboard' !== e.pointerType || !!f()) && P(e) : 'keyboard' !== e.pointerType && O && S(e);
                 }))
         : ((U.onPressStart = (e) => {
-              (D.current = e.pointerType), (b.current = y), (M.current = v), O && (('mouse' === e.pointerType && !v) || ('keyboard' === e.pointerType && (!R || h()))) && S(e);
+              (y.current = e.pointerType), (b.current = D), (M.current = v), O && (('mouse' === e.pointerType && !v) || ('keyboard' === e.pointerType && (!R || h()))) && S(e);
           }),
           (U.onPress = (e) => {
               ('touch' === e.pointerType || 'pen' === e.pointerType || 'virtual' === e.pointerType || ('keyboard' === e.pointerType && L && f()) || ('mouse' === e.pointerType && M.current)) && (L ? P(e) : O && S(e));
@@ -301,11 +301,11 @@ function E(e) {
     let { pressProps: w, isPressed: x } = (0, o.r7)(U),
         G = C
             ? (e) => {
-                  'mouse' === D.current && (e.stopPropagation(), e.preventDefault(), P(e));
+                  'mouse' === y.current && (e.stopPropagation(), e.preventDefault(), P(e));
               }
             : void 0,
         { longPressProps: k } = (0, o.TA)({
-            isDisabled: !y,
+            isDisabled: !D,
             onLongPress(e) {
                 'touch' === e.pointerType && (S(e), t.setSelectionBehavior('toggle'));
             }
@@ -316,10 +316,10 @@ function E(e) {
               }
             : void 0;
     return {
-        itemProps: (0, s.dG)(g, O || v ? w : {}, y ? k : {}, {
+        itemProps: (0, s.dG)(g, O || v ? w : {}, D ? k : {}, {
             onDoubleClick: G,
             onDragStartCapture: (e) => {
-                'touch' === D.current && b.current && e.preventDefault();
+                'touch' === y.current && b.current && e.preventDefault();
             },
             onClick: B
         }),

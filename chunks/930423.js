@@ -29,8 +29,8 @@ var r = n(939421),
     v = n(635311),
     C = n(705665),
     L = n(517898),
-    D = n(694147),
-    y = n(443992),
+    y = n(694147),
+    D = n(443992),
     b = n(978038),
     M = n(261248),
     P = n(41410),
@@ -49,12 +49,12 @@ function j(e, t, n) {
     var r;
     let i,
         { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: _, autoFocus: E, label: f, formatOptions: h, onBlur: p = () => {}, onFocus: I, onFocusChange: m, onKeyDown: T, onKeyUp: S, description: g, errorMessage: A, ...N } = e,
-        { increment: O, incrementToMax: R, decrement: v, decrementToMin: C, numberValue: L, inputValue: D, commit: y, commitValidation: b } = t;
+        { increment: O, incrementToMax: R, decrement: v, decrementToMin: C, numberValue: L, inputValue: y, commit: D, commitValidation: b } = t;
     let M = (0, H.qb)((r = Y) && r.__esModule ? r.default : r, '@react-aria/numberfield'),
         P = (0, G.Me)(a),
         { focusProps: U } = (0, F.KK)({
             onBlur() {
-                y();
+                D();
             }
         }),
         w = (0, H.Ux)(h),
@@ -107,9 +107,9 @@ function j(e, t, n) {
     let ei = (0, G.zL)(e),
         ea = (0, k.useCallback)(
             (e) => {
-                'Enter' === e.key ? (y(), b()) : e.continuePropagation();
+                'Enter' === e.key ? (D(), b()) : e.continuePropagation();
             },
-            [y, b]
+            [D, b]
         ),
         { isInvalid: es, validationErrors: eo, validationDetails: el } = t.displayValidation,
         {
@@ -129,7 +129,7 @@ function j(e, t, n) {
                 isRequired: c,
                 validate: void 0,
                 [B.tL]: t,
-                value: D,
+                value: y,
                 defaultValue: void 0,
                 autoComplete: 'off',
                 'aria-label': e['aria-label'] || null,
@@ -237,8 +237,8 @@ Y = {
     'pt-PT': v.Z,
     'ro-RO': C.Z,
     'ru-RU': L.Z,
-    'sk-SK': D.Z,
-    'sl-SI': y.Z,
+    'sk-SK': y.Z,
+    'sl-SI': D.Z,
     'sr-SP': b.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,

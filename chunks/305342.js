@@ -28,9 +28,9 @@ var r = n(735250),
     N = n(838940),
     x = n(882101),
     v = n(11705),
-    O = n(81273),
+    L = n(81273),
     b = n(293810),
-    L = n(981631),
+    O = n(981631),
     A = n(689938),
     P = n(367993);
 let Z = (e) => {
@@ -220,11 +220,11 @@ t.Z = (e) => {
     var t;
     let { listingId: n, guildId: l, groupListingId: u, analyticsLocation: _ } = e,
         C = (0, E.jO)(n),
-        { openModal: S, canOpenModal: g, cannotOpenReason: T, isCheckingTrialEligibility: N } = (0, O.Z)(C, l, u, _),
+        { openModal: S, canOpenModal: g, cannotOpenReason: T, isCheckingTrialEligibility: N } = (0, L.Z)(C, l, u, _),
         Z = (0, a.e7)([h.Z], () => h.Z.isSyncing),
         { activeSubscription: y, activeSubscriptionListing: U } = (0, m.Z)(u),
         D = (null == U ? void 0 : U.id) === n,
-        B = (null == y ? void 0 : y.status) === L.O0b.CANCELED,
+        B = (null == y ? void 0 : y.status) === O.O0b.CANCELED,
         [F, k] = i.useState(!1),
         [H, w] = i.useState(!1),
         G = i.useCallback((e) => {
@@ -234,9 +234,9 @@ t.Z = (e) => {
         [z] = p._T(n),
         [W] = p.PK(n),
         [V] = p.TT(n),
-        [K] = p.F2(n),
-        Y = (0, I.Z)(l, n),
-        Q = null != V && null == y && Y,
+        [Y] = p.F2(n),
+        K = (0, I.Z)(l, n),
+        Q = null != V && null == y && K,
         q = (0, c.Z)(b.iP),
         [X, J] = i.useState(!1),
         $ = X || !q,
@@ -261,7 +261,7 @@ t.Z = (e) => {
                               }),
                               (0, r.jsx)(o.Tooltip, {
                                   clickableOnMobile: !0,
-                                  text: A.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({ activeTrialUserLimit: null != K ? K : 0 }),
+                                  text: A.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({ activeTrialUserLimit: null != Y ? Y : 0 }),
                                   children: (e) =>
                                       (0, r.jsx)(o.CircleInformationIcon, {
                                           size: 'xs',

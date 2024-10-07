@@ -24,10 +24,10 @@ let E = _.QZA.CLOSED,
     v = [],
     C = null,
     L = null;
-function D(e) {
+function y(e) {
     var t, n, r, i, a, s;
     let o = d.default.getCurrentUser();
-    if (null == o) return y();
+    if (null == o) return D();
     (h = null !== (t = e.section) && void 0 !== t ? t : h),
         (C = null !== (n = e.section) && void 0 !== n ? n : h),
         null != e.subsection && null != h && (p[h] = e.subsection),
@@ -54,7 +54,7 @@ function D(e) {
         (v = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
         (L = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
-function y() {
+function D() {
     (E = _.QZA.CLOSED), (g = !1), (T = null), (C = null), (S = null), (f = null), (h = null), (p = {}), (I = {}), (O = null), (R = null), (v = []), (L = null);
 }
 function b() {
@@ -116,11 +116,11 @@ class M extends (s = u.ZP.Store) {
         : (r[i] = a),
     (t.Z = new M(c.Z, {
         USER_SETTINGS_MODAL_OPEN: function (e) {
-            (g = !0), D(e);
+            (g = !0), y(e);
         },
-        USER_SETTINGS_MODAL_INIT: D,
-        USER_SETTINGS_MODAL_CLOSE: y,
-        LOGOUT: y,
+        USER_SETTINGS_MODAL_INIT: y,
+        USER_SETTINGS_MODAL_CLOSE: D,
+        LOGOUT: D,
         USER_SETTINGS_MODAL_SUBMIT: function () {
             E = _.QZA.SUBMITTING;
         },
@@ -175,7 +175,7 @@ class M extends (s = u.ZP.Store) {
                 (N = e.tab),
                 null == h &&
                     N === _.cII.USER_SETTINGS &&
-                    D({
+                    y({
                         type: 'USER_SETTINGS_MODAL_INIT',
                         section: null,
                         subsection: null,

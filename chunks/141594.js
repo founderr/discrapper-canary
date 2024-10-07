@@ -14,23 +14,23 @@ var i = n(470079),
 t.Z = () => {
     var e, t, n, m, I, p, g;
     let T = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
-        S = (0, _.J)('useCollectiblesShopTabNewBadge'),
-        f = (0, r.e7)([u.Z], () => u.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
-        C = (null == f ? void 0 : f.dismissibleContent) === l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
-        N = i.useMemo(() => ((0, d.Fc)(T) && S && null != f && !C ? [f.dismissibleContent] : []), [T, S, f, C]),
+        f = (0, _.J)('useCollectiblesShopTabNewBadge'),
+        S = (0, r.e7)([u.Z], () => u.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
+        C = (null == S ? void 0 : S.dismissibleContent) === l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
+        N = i.useMemo(() => ((0, d.Fc)(T) && f && null != S && !C ? [S.dismissibleContent] : []), [T, f, S, C]),
         [A, v] = (0, o.US)(N, void 0, !0),
-        [Z, L] = (0, o.XR)(C && (null == f ? void 0 : f.type) === s.Z.COACHTIP ? l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == f ? void 0 : f.version) && void 0 !== e ? e : 0, void 0, !0),
+        [Z, L] = (0, o.XR)(C && (null == S ? void 0 : S.type) === s.Z.COACHTIP ? l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == S ? void 0 : S.version) && void 0 !== e ? e : 0, void 0, !0),
         R = null;
-    if ((null != A || null != Z) && S && null != f && f.type === s.Z.COACHTIP) {
+    if ((null != A || null != Z) && f && null != S && S.type === s.Z.COACHTIP) {
         R = {
             type: E.k2.COACHTIP,
-            title: () => f.title,
-            body: () => f.body,
-            imageSrc: f.avatar,
-            assetIds: f.decorations,
-            entrypointBackgroundStyle: null === (t = f.refTargetBackground) || void 0 === t ? void 0 : t.style
+            title: () => S.title,
+            body: () => S.body,
+            imageSrc: S.avatar,
+            assetIds: S.decorations,
+            entrypointBackgroundStyle: null === (t = S.refTargetBackground) || void 0 === t ? void 0 : t.style
         };
-        let e = null === (n = f.refTargetBackground) || void 0 === n ? void 0 : n.asset;
+        let e = null === (n = S.refTargetBackground) || void 0 === n ? void 0 : n.asset;
         null != e &&
             (R.entryPointBackgroundAssets = {
                 srcDark: null === (m = e.resting) || void 0 === m ? void 0 : m.dark,

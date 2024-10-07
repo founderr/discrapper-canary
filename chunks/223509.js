@@ -58,8 +58,8 @@ function I(e, t, n, r) {
             v,
             C,
             L,
-            D,
             y,
+            D,
             b,
             M,
             P,
@@ -331,11 +331,11 @@ function I(e, t, n, r) {
                         h--, (T += d[E++] << S), (S += 8);
                     }
                     if (C && (240 & C) == 0) {
-                        for (D = v, y = C, b = L; (v = (x = n.lencode[b + ((T & ((1 << (D + y)) - 1)) >> D)]) >>> 24), (C = (x >>> 16) & 255), (L = 65535 & x), !(D + v <= S); ) {
+                        for (y = v, D = C, b = L; (v = (x = n.lencode[b + ((T & ((1 << (y + D)) - 1)) >> y)]) >>> 24), (C = (x >>> 16) & 255), (L = 65535 & x), !(y + v <= S); ) {
                             if (0 === h) break r;
                             h--, (T += d[E++] << S), (S += 8);
                         }
-                        (T >>>= D), (S -= D), (n.back += D);
+                        (T >>>= y), (S -= y), (n.back += y);
                     }
                     if (((T >>>= v), (S -= v), (n.back += v), (n.length = L), 0 === C)) {
                         n.mode = 26;
@@ -365,11 +365,11 @@ function I(e, t, n, r) {
                         h--, (T += d[E++] << S), (S += 8);
                     }
                     if ((240 & C) == 0) {
-                        for (D = v, y = C, b = L; (v = (x = n.distcode[b + ((T & ((1 << (D + y)) - 1)) >> D)]) >>> 24), (C = (x >>> 16) & 255), (L = 65535 & x), !(D + v <= S); ) {
+                        for (y = v, D = C, b = L; (v = (x = n.distcode[b + ((T & ((1 << (y + D)) - 1)) >> y)]) >>> 24), (C = (x >>> 16) & 255), (L = 65535 & x), !(y + v <= S); ) {
                             if (0 === h) break r;
                             h--, (T += d[E++] << S), (S += 8);
                         }
-                        (T >>>= D), (S -= D), (n.back += D);
+                        (T >>>= y), (S -= y), (n.back += y);
                     }
                     if (((T >>>= v), (S -= v), (n.back += v), 64 & C)) {
                         (e.msg = 'invalid distance code'), (n.mode = 30);

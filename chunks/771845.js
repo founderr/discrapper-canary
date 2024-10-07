@@ -131,7 +131,7 @@ function L(e) {
             null != t && g.moveNextTo(t, s, !0);
         });
 }
-function D(e) {
+function y(e) {
     let { targetId: t } = e,
         n = g.getNode(t);
     if (null == n || n.type !== l.eD.FOLDER) return !1;
@@ -143,7 +143,7 @@ function D(e) {
             null != t && g.moveNextTo(t, n, !0);
         });
 }
-function y(e) {
+function D(e) {
     let { guildId: t, joinedAt: n, user: r } = e,
         i = T.default.getCurrentUser(),
         a = p.Z.getGuild(t);
@@ -226,12 +226,12 @@ class B extends I.Z {
             CACHE_LOADED: () => this.loadCache(),
             GUILD_CREATE: O,
             GUILD_DELETE: O,
-            GUILD_MEMBER_ADD: y,
+            GUILD_MEMBER_ADD: D,
             USER_SETTINGS_PROTO_UPDATE: R,
             GUILD_MOVE_BY_ID: v,
             GUILD_FOLDER_CREATE_LOCAL: C,
             GUILD_FOLDER_EDIT_LOCAL: L,
-            GUILD_FOLDER_DELETE_LOCAL: D,
+            GUILD_FOLDER_DELETE_LOCAL: y,
             TOGGLE_GUILD_FOLDER_EXPAND: b,
             SET_GUILD_FOLDER_EXPANDED: M,
             GUILD_FOLDER_COLLAPSE: P

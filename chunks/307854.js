@@ -1,28 +1,28 @@
-r.d(t, {
+n.d(e, {
     s: function () {
-        return I;
+        return f;
     }
 });
-var n = r(731889),
-    a = r(573736),
-    o = r(101284),
-    i = r(394798),
-    _ = r(622916),
-    E = r(112797),
-    s = r(99342);
-class c {
+var r = n(731889),
+    i = n(573736),
+    s = n(101284),
+    o = n(394798),
+    u = n(622916),
+    c = n(112797),
+    a = n(99342);
+class l {
     constructor() {
-        (this._notifyingListeners = !1), (this._scopeListeners = []), (this._eventProcessors = []), (this._breadcrumbs = []), (this._attachments = []), (this._user = {}), (this._tags = {}), (this._extra = {}), (this._contexts = {}), (this._sdkProcessingMetadata = {}), (this._propagationContext = (0, n.Q)());
+        (this._notifyingListeners = !1), (this._scopeListeners = []), (this._eventProcessors = []), (this._breadcrumbs = []), (this._attachments = []), (this._user = {}), (this._tags = {}), (this._extra = {}), (this._contexts = {}), (this._sdkProcessingMetadata = {}), (this._propagationContext = (0, r.Q)());
     }
     clone() {
-        let e = new c();
-        return (e._breadcrumbs = [...this._breadcrumbs]), (e._tags = { ...this._tags }), (e._extra = { ...this._extra }), (e._contexts = { ...this._contexts }), (e._user = this._user), (e._level = this._level), (e._session = this._session), (e._transactionName = this._transactionName), (e._fingerprint = this._fingerprint), (e._eventProcessors = [...this._eventProcessors]), (e._requestSession = this._requestSession), (e._attachments = [...this._attachments]), (e._sdkProcessingMetadata = { ...this._sdkProcessingMetadata }), (e._propagationContext = { ...this._propagationContext }), (e._client = this._client), (e._lastEventId = this._lastEventId), (0, s.D)(e, (0, s.Y)(this)), e;
+        let t = new l();
+        return (t._breadcrumbs = [...this._breadcrumbs]), (t._tags = { ...this._tags }), (t._extra = { ...this._extra }), (t._contexts = { ...this._contexts }), (t._user = this._user), (t._level = this._level), (t._session = this._session), (t._transactionName = this._transactionName), (t._fingerprint = this._fingerprint), (t._eventProcessors = [...this._eventProcessors]), (t._requestSession = this._requestSession), (t._attachments = [...this._attachments]), (t._sdkProcessingMetadata = { ...this._sdkProcessingMetadata }), (t._propagationContext = { ...this._propagationContext }), (t._client = this._client), (t._lastEventId = this._lastEventId), (0, a.D)(t, (0, a.Y)(this)), t;
     }
-    setClient(e) {
-        this._client = e;
+    setClient(t) {
+        this._client = t;
     }
-    setLastEventId(e) {
-        this._lastEventId = e;
+    setLastEventId(t) {
+        this._lastEventId = t;
     }
     getClient() {
         return this._client;
@@ -30,21 +30,21 @@ class c {
     lastEventId() {
         return this._lastEventId;
     }
-    addScopeListener(e) {
-        this._scopeListeners.push(e);
+    addScopeListener(t) {
+        this._scopeListeners.push(t);
     }
-    addEventProcessor(e) {
-        return this._eventProcessors.push(e), this;
+    addEventProcessor(t) {
+        return this._eventProcessors.push(t), this;
     }
-    setUser(e) {
+    setUser(t) {
         return (
-            (this._user = e || {
+            (this._user = t || {
                 email: void 0,
                 id: void 0,
                 ip_address: void 0,
                 username: void 0
             }),
-            this._session && (0, E.CT)(this._session, { user: e }),
+            this._session && (0, c.CT)(this._session, { user: t }),
             this._notifyScopeListeners(),
             this
         );
@@ -55,105 +55,105 @@ class c {
     getRequestSession() {
         return this._requestSession;
     }
-    setRequestSession(e) {
-        return (this._requestSession = e), this;
+    setRequestSession(t) {
+        return (this._requestSession = t), this;
     }
-    setTags(e) {
+    setTags(t) {
         return (
             (this._tags = {
                 ...this._tags,
-                ...e
+                ...t
             }),
             this._notifyScopeListeners(),
             this
         );
     }
-    setTag(e, t) {
+    setTag(t, e) {
         return (
             (this._tags = {
                 ...this._tags,
-                [e]: t
+                [t]: e
             }),
             this._notifyScopeListeners(),
             this
         );
     }
-    setExtras(e) {
+    setExtras(t) {
         return (
             (this._extra = {
                 ...this._extra,
-                ...e
+                ...t
             }),
             this._notifyScopeListeners(),
             this
         );
     }
-    setExtra(e, t) {
+    setExtra(t, e) {
         return (
             (this._extra = {
                 ...this._extra,
-                [e]: t
+                [t]: e
             }),
             this._notifyScopeListeners(),
             this
         );
     }
-    setFingerprint(e) {
-        return (this._fingerprint = e), this._notifyScopeListeners(), this;
+    setFingerprint(t) {
+        return (this._fingerprint = t), this._notifyScopeListeners(), this;
     }
-    setLevel(e) {
-        return (this._level = e), this._notifyScopeListeners(), this;
+    setLevel(t) {
+        return (this._level = t), this._notifyScopeListeners(), this;
     }
-    setTransactionName(e) {
-        return (this._transactionName = e), this._notifyScopeListeners(), this;
+    setTransactionName(t) {
+        return (this._transactionName = t), this._notifyScopeListeners(), this;
     }
-    setContext(e, t) {
-        return null === t ? delete this._contexts[e] : (this._contexts[e] = t), this._notifyScopeListeners(), this;
+    setContext(t, e) {
+        return null === e ? delete this._contexts[t] : (this._contexts[t] = e), this._notifyScopeListeners(), this;
     }
-    setSession(e) {
-        return e ? (this._session = e) : delete this._session, this._notifyScopeListeners(), this;
+    setSession(t) {
+        return t ? (this._session = t) : delete this._session, this._notifyScopeListeners(), this;
     }
     getSession() {
         return this._session;
     }
-    update(e) {
-        if (!e) return this;
-        let t = 'function' == typeof e ? e(this) : e,
-            [r, n] = t instanceof I ? [t.getScopeData(), t.getRequestSession()] : (0, a.PO)(t) ? [e, e.requestSession] : [],
-            { tags: o, extra: i, user: _, contexts: E, level: s, fingerprint: c = [], propagationContext: u } = r || {};
+    update(t) {
+        if (!t) return this;
+        let e = 'function' == typeof t ? t(this) : t,
+            [n, r] = e instanceof f ? [e.getScopeData(), e.getRequestSession()] : (0, i.PO)(e) ? [t, t.requestSession] : [],
+            { tags: s, extra: o, user: u, contexts: c, level: a, fingerprint: l = [], propagationContext: h } = n || {};
         return (
             (this._tags = {
                 ...this._tags,
-                ...o
+                ...s
             }),
             (this._extra = {
                 ...this._extra,
-                ...i
+                ...o
             }),
             (this._contexts = {
                 ...this._contexts,
-                ...E
+                ...c
             }),
-            _ && Object.keys(_).length && (this._user = _),
-            s && (this._level = s),
-            c.length && (this._fingerprint = c),
-            u && (this._propagationContext = u),
-            n && (this._requestSession = n),
+            u && Object.keys(u).length && (this._user = u),
+            a && (this._level = a),
+            l.length && (this._fingerprint = l),
+            h && (this._propagationContext = h),
+            r && (this._requestSession = r),
             this
         );
     }
     clear() {
-        return (this._breadcrumbs = []), (this._tags = {}), (this._extra = {}), (this._user = {}), (this._contexts = {}), (this._level = void 0), (this._transactionName = void 0), (this._fingerprint = void 0), (this._requestSession = void 0), (this._session = void 0), (0, s.D)(this, void 0), (this._attachments = []), (this._propagationContext = (0, n.Q)()), this._notifyScopeListeners(), this;
+        return (this._breadcrumbs = []), (this._tags = {}), (this._extra = {}), (this._user = {}), (this._contexts = {}), (this._level = void 0), (this._transactionName = void 0), (this._fingerprint = void 0), (this._requestSession = void 0), (this._session = void 0), (0, a.D)(this, void 0), (this._attachments = []), (this._propagationContext = (0, r.Q)()), this._notifyScopeListeners(), this;
     }
-    addBreadcrumb(e, t) {
-        let r = 'number' == typeof t ? t : 100;
-        if (r <= 0) return this;
-        let n = {
-                timestamp: (0, o.yW)(),
-                ...e
+    addBreadcrumb(t, e) {
+        let n = 'number' == typeof e ? e : 100;
+        if (n <= 0) return this;
+        let r = {
+                timestamp: (0, s.yW)(),
+                ...t
             },
-            a = this._breadcrumbs;
-        return a.push(n), (this._breadcrumbs = a.length > r ? a.slice(-r) : a), this._notifyScopeListeners(), this;
+            i = this._breadcrumbs;
+        return i.push(r), (this._breadcrumbs = i.length > n ? i.slice(-n) : i), this._notifyScopeListeners(), this;
     }
     getLastBreadcrumb() {
         return this._breadcrumbs[this._breadcrumbs.length - 1];
@@ -161,8 +161,8 @@ class c {
     clearBreadcrumbs() {
         return (this._breadcrumbs = []), this._notifyScopeListeners(), this;
     }
-    addAttachment(e) {
-        return this._attachments.push(e), this;
+    addAttachment(t) {
+        return this._attachments.push(t), this;
     }
     clearAttachments() {
         return (this._attachments = []), this;
@@ -181,54 +181,35 @@ class c {
             propagationContext: this._propagationContext,
             sdkProcessingMetadata: this._sdkProcessingMetadata,
             transactionName: this._transactionName,
-            span: (0, s.Y)(this)
+            span: (0, a.Y)(this)
         };
     }
-    setSDKProcessingMetadata(e) {
+    setSDKProcessingMetadata(t) {
         return (
             (this._sdkProcessingMetadata = {
                 ...this._sdkProcessingMetadata,
-                ...e
+                ...t
             }),
             this
         );
     }
-    setPropagationContext(e) {
-        return (this._propagationContext = e), this;
+    setPropagationContext(t) {
+        return (this._propagationContext = t), this;
     }
     getPropagationContext() {
         return this._propagationContext;
     }
-    captureException(e, t) {
-        let r = t && t.event_id ? t.event_id : (0, i.DM)();
-        if (!this._client) return _.kg.warn('No client configured on scope - will not capture exception!'), r;
-        let n = Error('Sentry syntheticException');
+    captureException(t, e) {
+        let n = e && e.event_id ? e.event_id : (0, o.DM)();
+        if (!this._client) return u.kg.warn('No client configured on scope - will not capture exception!'), n;
+        let r = Error('Sentry syntheticException');
         return (
             this._client.captureException(
-                e,
-                {
-                    originalException: e,
-                    syntheticException: n,
-                    ...t,
-                    event_id: r
-                },
-                this
-            ),
-            r
-        );
-    }
-    captureMessage(e, t, r) {
-        let n = r && r.event_id ? r.event_id : (0, i.DM)();
-        if (!this._client) return _.kg.warn('No client configured on scope - will not capture message!'), n;
-        let a = Error(e);
-        return (
-            this._client.captureMessage(
-                e,
                 t,
                 {
-                    originalException: e,
-                    syntheticException: a,
-                    ...r,
+                    originalException: t,
+                    syntheticException: r,
+                    ...e,
                     event_id: n
                 },
                 this
@@ -236,27 +217,46 @@ class c {
             n
         );
     }
-    captureEvent(e, t) {
-        let r = t && t.event_id ? t.event_id : (0, i.DM)();
+    captureMessage(t, e, n) {
+        let r = n && n.event_id ? n.event_id : (0, o.DM)();
+        if (!this._client) return u.kg.warn('No client configured on scope - will not capture message!'), r;
+        let i = Error(t);
+        return (
+            this._client.captureMessage(
+                t,
+                e,
+                {
+                    originalException: t,
+                    syntheticException: i,
+                    ...n,
+                    event_id: r
+                },
+                this
+            ),
+            r
+        );
+    }
+    captureEvent(t, e) {
+        let n = e && e.event_id ? e.event_id : (0, o.DM)();
         return this._client
             ? (this._client.captureEvent(
-                  e,
+                  t,
                   {
-                      ...t,
-                      event_id: r
+                      ...e,
+                      event_id: n
                   },
                   this
               ),
-              r)
-            : (_.kg.warn('No client configured on scope - will not capture event!'), r);
+              n)
+            : (u.kg.warn('No client configured on scope - will not capture event!'), n);
     }
     _notifyScopeListeners() {
         !this._notifyingListeners &&
             ((this._notifyingListeners = !0),
-            this._scopeListeners.forEach((e) => {
-                e(this);
+            this._scopeListeners.forEach((t) => {
+                t(this);
             }),
             (this._notifyingListeners = !1));
     }
 }
-let I = c;
+let f = l;

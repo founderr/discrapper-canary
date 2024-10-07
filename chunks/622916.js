@@ -1,62 +1,62 @@
-r.d(t, {
+n.d(e, {
     Cf: function () {
-        return _;
+        return u;
     },
     LD: function () {
-        return i;
-    },
-    RU: function () {
         return o;
     },
+    RU: function () {
+        return s;
+    },
     kg: function () {
-        return E;
+        return c;
     }
 });
-var n = r(309544),
-    a = r(899517);
-let o = ['debug', 'info', 'warn', 'error', 'log', 'assert', 'trace'],
-    i = {};
-function _(e) {
-    if (!('console' in a.n)) return e();
-    let t = a.n.console,
-        r = {},
-        n = Object.keys(i);
-    n.forEach((e) => {
-        let n = i[e];
-        (r[e] = t[e]), (t[e] = n);
+var r = n(309544),
+    i = n(899517);
+let s = ['debug', 'info', 'warn', 'error', 'log', 'assert', 'trace'],
+    o = {};
+function u(t) {
+    if (!('console' in i.n)) return t();
+    let e = i.n.console,
+        n = {},
+        r = Object.keys(o);
+    r.forEach((t) => {
+        let r = o[t];
+        (n[t] = e[t]), (e[t] = r);
     });
     try {
-        return e();
+        return t();
     } finally {
-        n.forEach((e) => {
-            t[e] = r[e];
+        r.forEach((t) => {
+            e[t] = n[t];
         });
     }
 }
-let E = (function () {
-    let e = !1,
-        t = {
+let c = (function () {
+    let t = !1,
+        e = {
             enable: () => {
-                e = !0;
+                t = !0;
             },
             disable: () => {
-                e = !1;
+                t = !1;
             },
-            isEnabled: () => e
+            isEnabled: () => t
         };
     return (
-        n.X
-            ? o.forEach((r) => {
-                  t[r] = (...t) => {
-                      e &&
-                          _(() => {
-                              a.n.console[r](`Sentry Logger [${r}]:`, ...t);
+        r.X
+            ? s.forEach((n) => {
+                  e[n] = (...e) => {
+                      t &&
+                          u(() => {
+                              i.n.console[n](`Sentry Logger [${n}]:`, ...e);
                           });
                   };
               })
-            : o.forEach((e) => {
-                  t[e] = () => void 0;
+            : s.forEach((t) => {
+                  e[t] = () => void 0;
               }),
-        t
+        e
     );
 })();

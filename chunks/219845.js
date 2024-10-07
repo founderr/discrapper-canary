@@ -59,16 +59,16 @@ var r = n(644387),
             v = N + g,
             C = S + A,
             L = h ? e.offsetHeight - C - e.clientHeight : 0,
-            D = f ? e.offsetWidth - v - e.clientWidth : 0,
-            y = n ? n.width : d(t.width) - (r ? O + v : 0) - D,
+            y = f ? e.offsetWidth - v - e.clientWidth : 0,
+            D = n ? n.width : d(t.width) - (r ? O + v : 0) - y,
             b = n ? n.height : d(t.height) - (r ? R + C : 0) - L,
-            M = y + O + D + v,
+            M = D + O + y + v,
             P = b + R + L + C,
             U = Object.freeze({
-                devicePixelContentBoxSize: _(Math.round(y * devicePixelRatio), Math.round(b * devicePixelRatio), s),
+                devicePixelContentBoxSize: _(Math.round(D * devicePixelRatio), Math.round(b * devicePixelRatio), s),
                 borderBoxSize: _(M, P, s),
-                contentBoxSize: _(y, b, s),
-                contentRect: new i.N(T, p, y, b)
+                contentBoxSize: _(D, b, s),
+                contentRect: new i.N(T, p, D, b)
             });
         return o.set(e, U), U;
     },

@@ -21,7 +21,7 @@ n.d(t, {
         return X;
     },
     Pf: function () {
-        return y;
+        return D;
     },
     QB: function () {
         return F;
@@ -36,7 +36,7 @@ n.d(t, {
         return z;
     },
     ad: function () {
-        return D;
+        return y;
     },
     b0: function () {
         return U;
@@ -284,10 +284,10 @@ function C() {
 function L() {
     return v() || C();
 }
-function D() {
+function y() {
     return R() || L();
 }
-function y() {
+function D() {
     return (
         N(/AppleWebKit/i) &&
         !(function () {
@@ -322,7 +322,7 @@ function w(e, t, n = !0) {
     let { metaKey: a, ctrlKey: s, altKey: o, shiftKey: l } = t;
     N(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (R() ? (a = !0) : (s = !0));
     let u =
-        y() && R() && !C()
+        D() && R() && !C()
             ? new KeyboardEvent('keydown', {
                   keyIdentifier: 'Enter',
                   metaKey: a,

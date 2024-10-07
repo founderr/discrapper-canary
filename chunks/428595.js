@@ -25,8 +25,8 @@ var r = n(392711),
     v = n(981631),
     C = n(689079),
     L = n(377668),
-    D = n(689938);
-let y = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
+    y = n(689938);
+let D = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     b = /^$|\n *$/,
     M = /^ *>>> ?/,
     P = /^ *> ?/gm;
@@ -68,9 +68,9 @@ let w = (e) => {
             match(e, t) {
                 let { prevCapture: n, inQuote: r, nested: i } = t;
                 if (r || i) return null;
-                if (null == n) return y.exec(e);
+                if (null == n) return D.exec(e);
                 let a = n[0];
-                return b.test(a) ? y.exec(e) : null;
+                return b.test(a) ? D.exec(e) : null;
             },
             parse(e, t, n) {
                 let r = e[0],
@@ -179,7 +179,7 @@ let w = (e) => {
                 return null == s
                     ? {
                           type: 'text',
-                          content: '@'.concat(D.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER)
+                          content: '@'.concat(y.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER)
                       }
                     : {
                           type: 'mention',
@@ -227,7 +227,7 @@ let w = (e) => {
                 null == a && '@Clyde' === e[0] && (0, o.gJ)(x(n), s) && (i = L.fL);
                 let u = e[1],
                     d = null != u && v.Xyh.test(u.trim()),
-                    h = d && n.unknownUserMentionPlaceholder ? '@'.concat(D.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
+                    h = d && n.unknownUserMentionPlaceholder ? '@'.concat(y.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
                 return {
                     userId: i,
                     channelId: n.channelId,

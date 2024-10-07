@@ -1,12 +1,12 @@
-r.d(t, {
+n.d(e, {
     Q: function () {
-        return a;
+        return i;
     }
 });
-var n = r(394798);
-function a() {
+var r = n(394798);
+function i() {
     return {
-        traceId: (0, n.DM)(),
-        spanId: (0, n.DM)().substring(16)
+        traceId: (0, r.DM)(),
+        spanId: (0, r.DM)().substring(16)
     };
 }

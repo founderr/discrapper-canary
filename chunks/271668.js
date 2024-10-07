@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(826298),
     C = n(689079),
     L = n(981631),
-    D = n(689938),
-    y = n(590515),
+    y = n(689938),
+    D = n(590515),
     b = n(239840);
 let M = [8, 8, 0, 8],
     P = l().debounce(() => {
@@ -164,7 +164,7 @@ t.Z = i.forwardRef(function (e, t) {
                 return (0, r.jsx)(
                     m.Z,
                     {
-                        className: y.categoryHeader,
+                        className: D.categoryHeader,
                         icon: a,
                         children: t.name
                     },
@@ -183,14 +183,14 @@ t.Z = i.forwardRef(function (e, t) {
                     {
                         role: 'group',
                         'aria-label': i.name,
-                        className: s()(y.categorySection, { [y.categorySectionLast]: n }),
+                        className: s()(D.categorySection, { [D.categorySectionLast]: n }),
                         children: [
                             t,
                             0 === a.length &&
                                 (0, r.jsx)(u.Z, {
-                                    message: D.Z.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({ applicationName: i.name }),
+                                    message: y.Z.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({ applicationName: i.name }),
                                     noResultsImageURL: b,
-                                    className: y.noSearchResults
+                                    className: D.noSearchResults
                                 })
                         ]
                     },
@@ -213,7 +213,7 @@ t.Z = i.forwardRef(function (e, t) {
                         index: e,
                         command: s,
                         channel: n,
-                        className: y.itemWrapper,
+                        className: D.itemWrapper,
                         selected: w === e,
                         showImage: a.section.id !== s.applicationId,
                         section: l,
@@ -238,12 +238,12 @@ t.Z = i.forwardRef(function (e, t) {
         ),
         (0, r.jsxs)(_.ZP, {
             id: ei,
-            className: y.outerWrapper,
-            innerClassName: y.wrapper,
+            className: D.outerWrapper,
+            innerClassName: D.wrapper,
             onMouseDown: U,
             children: [
                 (0, r.jsx)(O.Z, {
-                    className: y.rail,
+                    className: D.rail,
                     channel: n,
                     sections: V,
                     filteredSectionId: W,
@@ -253,7 +253,7 @@ t.Z = i.forwardRef(function (e, t) {
                 }),
                 (0, r.jsx)(f.Z, {
                     role: 'listbox',
-                    className: y.list,
+                    className: D.list,
                     listPadding: M,
                     onScroll: Q,
                     renderRow: er,

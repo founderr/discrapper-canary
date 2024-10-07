@@ -42,8 +42,8 @@ null != A &&
     (v = null === (r = (i = A.remoteApp).getModuleVersions) || void 0 === r ? void 0 : r.call(i)),
     (R = null === (a = (s = A.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
 let L = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
-    D = !1;
-async function y(e) {
+    y = !1;
+async function D(e) {
     let t = await fetch(
         new Request(e, {
             method: 'GET',
@@ -55,7 +55,7 @@ async function y(e) {
     return _()(null != n, 'Data is null'), n;
 }
 function b(e) {
-    return y(e);
+    return D(e);
 }
 function M(e) {
     var t, n, r, i, a, s, o, l;
@@ -171,10 +171,10 @@ function M(e) {
         },
         getVoiceEngine() {
             if (__OVERLAY__) throw Error('cannot require discord_voice in overlay');
-            return (D = !0), this.requireModule('discord_voice');
+            return (y = !0), this.requireModule('discord_voice');
         },
         getDiscordUtils() {
-            if (!D)
+            if (!y)
                 try {
                     this.getVoiceEngine();
                 } catch (e) {}
@@ -244,7 +244,7 @@ function M(e) {
         },
         async copyImage(e) {
             _()(m.isPlatformEmbedded, 'Copy image method called outside native app'), _()('function' == typeof A.clipboard.copyImage, 'Copy image not supported');
-            let t = await y(e);
+            let t = await D(e);
             A.clipboard.copyImage(g.from(t), e);
         },
         async saveImage(e) {
@@ -253,7 +253,7 @@ function M(e) {
             let n = T.Z.toURLSafe(e);
             if (null == n) return;
             let r = null !== (t = n.pathname.split('/').pop()) && void 0 !== t ? t : 'unknown',
-                i = await y(e),
+                i = await D(e),
                 a = g.from(i);
             A.fileManager.saveWithDialog(a, r);
         },
@@ -263,7 +263,7 @@ function M(e) {
             let r = T.Z.toURLSafe(e);
             if (null == r) return;
             let i = null !== (n = null != t ? t : r.pathname.split('/').pop()) && void 0 !== n ? n : 'unknown',
-                a = await y(e),
+                a = await D(e),
                 s = g.from(a);
             A.fileManager.saveWithDialog(s, i);
         },
