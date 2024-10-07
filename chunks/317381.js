@@ -236,8 +236,7 @@ class Z extends (i = a.ZP.PersistedStore) {
         return !(null == i ? void 0 : i.isFetching) && a;
     }
     getOrientationLockStateForApp(e) {
-        var t;
-        return null !== (t = D.get(e)) && void 0 !== t ? t : null;
+        return D.get(e);
     }
     getPipOrientationLockStateForApp(e) {
         var t;
