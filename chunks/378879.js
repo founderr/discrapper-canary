@@ -94,7 +94,8 @@ function m(e) {
                             disabledInputs: !0,
                             pendingAvatar: a === E.pC.AVATAR ? s : void 0,
                             pendingBanner: a === E.pC.BANNER ? s : void 0,
-                            pendingThemeColors: [f, T]
+                            pendingThemeColors: [f, T],
+                            hideExampleButton: !0
                         })
                     })
                   : void 0,

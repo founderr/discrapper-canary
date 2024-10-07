@@ -129,13 +129,15 @@ function y(e) {
                                         buttonText: g.ZP.isPremium(t) ? C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : H ? C.Z.Messages.PREMIUM_UPSELL_GET_NITRO : C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
                                     })
                     }),
-                    (0, r.jsx)(o.Button, {
-                        look: o.Button.Looks.LINK,
-                        color: o.Button.Colors.PRIMARY,
-                        onClick: u,
-                        children: C.Z.Messages.CANCEL
-                    }),
-                    (0, d.G1)(U) &&
+                    !H &&
+                        (0, r.jsx)(o.Button, {
+                            look: o.Button.Looks.LINK,
+                            color: o.Button.Colors.PRIMARY,
+                            onClick: u,
+                            children: C.Z.Messages.CANCEL
+                        }),
+                    H &&
+                        (0, d.G1)(U) &&
                         (0, r.jsx)(p.Z, {
                             product: U,
                             onSecondaryClick: u

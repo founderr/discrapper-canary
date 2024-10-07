@@ -46,12 +46,13 @@ function N(e) {
             (0, r.jsxs)('div', {
                 className: T.buttonsRight,
                 children: [
-                    (0, r.jsx)(o.Button, {
-                        look: o.Button.Looks.LINK,
-                        color: o.Button.Colors.PRIMARY,
-                        onClick: c,
-                        children: A.Z.Messages.CANCEL
-                    }),
+                    !x &&
+                        (0, r.jsx)(o.Button, {
+                            look: o.Button.Looks.LINK,
+                            color: o.Button.Colors.PRIMARY,
+                            onClick: c,
+                            children: A.Z.Messages.CANCEL
+                        }),
                     (null != i && (!(0, u.qS)(i) || m)) || null === h
                         ? (0, r.jsx)(o.Button, {
                               onClick: l,
@@ -70,7 +71,8 @@ function N(e) {
                             })
                 ]
             }),
-            (0, u.G1)(n) &&
+            x &&
+                (0, u.G1)(n) &&
                 (0, r.jsx)(p.Z, {
                     product: n,
                     onSecondaryClick: c
