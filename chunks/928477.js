@@ -117,16 +117,20 @@ function P(e) {
                         }
                     });
                 });
-            v !== R &&
-                (u.Z.clearDraft(t.id, I.d.ThreadSettings),
-                u.Z.clearDraft(t.id, I.d.FirstThreadMessage),
-                null == l || l(v),
-                (T || e.length > 0 || (null != a && a.length > 0) || (null != h && h.length > 0)) &&
-                    (function (e, t, n, r, i) {
-                        if (null != i && null != r && r.length > 0) i(e, r, t, n);
-                        else if (null != n && n.length > 0) c.Z.sendStickers(e.id, n, t);
-                        else c.Z.sendMessage(e.id, f.ZP.parse(e, t));
-                    })(v, e, a, h, E)),
+            await c.Z.fetchMessages({
+                channelId: v.id,
+                limit: C.AQB
+            }),
+                v !== R &&
+                    (u.Z.clearDraft(t.id, I.d.ThreadSettings),
+                    u.Z.clearDraft(t.id, I.d.FirstThreadMessage),
+                    null == l || l(v),
+                    (T || e.length > 0 || (null != a && a.length > 0) || (null != h && h.length > 0)) &&
+                        (function (e, t, n, r, i) {
+                            if (null != i && null != r && r.length > 0) i(e, r, t, n);
+                            else if (null != n && n.length > 0) c.Z.sendStickers(e.id, n, t);
+                            else c.Z.sendMessage(e.id, f.ZP.parse(e, t));
+                        })(v, e, a, h, E)),
                 d.Z.clearAll(t.id, I.d.FirstThreadMessage);
         },
         [t, n, r, l, i, o, _, E]

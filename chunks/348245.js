@@ -226,13 +226,6 @@ function F(e) {
         });
 }
 function V(e) {
-    let { channelId: t } = e;
-    u.Z.fetchMessages({
-        channelId: t,
-        limit: R.AQB
-    });
-}
-function H(e) {
     let { response: t } = e;
     if (null == t || null == t.body) return null;
     if (t.body.code === R.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) {
@@ -244,14 +237,14 @@ function H(e) {
             });
     }
 }
-let Z = {};
-function Y(e) {
+let H = {};
+function Z(e) {
     var t;
     let { channelId: n, jump: r, isStale: i, isPreview: a = !1 } = e;
     if (a) return;
-    let s = null !== (t = Z[n]) && void 0 !== t ? t : 0;
+    let s = null !== (t = H[n]) && void 0 !== t ? t : 0;
     if (Date.now() - s < 10 * N.Z.Millis.SECOND) return;
-    Z[n] = Date.now();
+    H[n] = Date.now();
     let o = g.Z.getChannelId(),
         l = I.ZP.getCurrentSidebarChannelId(o),
         c = n === o || n === l;
@@ -264,7 +257,7 @@ function Y(e) {
             jump: r
         });
 }
-function j(e) {
+function Y(e) {
     let { channelId: t, messageRecord: n, reason: r } = e;
     null != n &&
         o.Z.dispatch({
@@ -275,14 +268,14 @@ function j(e) {
             shouldNotify: !1
         });
 }
-function W(e) {
+function j(e) {
     let { state: t } = e;
     if ('active' !== t) return !1;
     let n = g.Z.getChannelId();
     if (null == n) return !1;
     u.Z.fetchNewLocalMessages(n, R.AQB);
 }
-class K extends d.Z {
+class W extends d.Z {
     _initialize() {
         o.Z.subscribe('CONNECTION_OPEN', P);
     }
@@ -295,7 +288,7 @@ class K extends d.Z {
             L(this, 'loadSelectedChannelIfNecessary', U),
             L(this, 'stores', new Map().set(I.ZP, k)),
             L(this, 'actions', {
-                APP_STATE_UPDATE: W,
+                APP_STATE_UPDATE: j,
                 OVERLAY_INITIALIZE: P,
                 CHANNEL_SELECT: w,
                 VOICE_CHANNEL_SELECT: x,
@@ -303,14 +296,13 @@ class K extends d.Z {
                 THREAD_LIST_SYNC: () => U(),
                 CHANNEL_CREATE: F,
                 CHANNEL_PRELOAD: B,
-                THREAD_CREATE_LOCAL: V,
                 GUILD_CREATE: () => U(),
-                MESSAGE_END_EDIT: H,
-                LOAD_MESSAGES_SUCCESS: Y,
-                UPLOAD_FAIL: j,
+                MESSAGE_END_EDIT: V,
+                LOAD_MESSAGES_SUCCESS: Z,
+                UPLOAD_FAIL: Y,
                 CHANNEL_DELETE: () => U(),
                 THREAD_DELETE: () => U()
             });
     }
 }
-t.Z = new K();
+t.Z = new W();
