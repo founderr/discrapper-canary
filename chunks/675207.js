@@ -121,13 +121,14 @@ function _() {
         : null;
 }
 function g(e) {
-    let { platformType: n } = e;
+    let { platformType: n } = e,
+        t = f.Z.get(n);
     return (0, r.jsxs)(C.UV, {
         platformType: n,
         children: [
             (0, r.jsx)('div', {
                 className: S.message,
-                children: O.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: platform.name })
+                children: O.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: t.name })
             }),
             (0, r.jsx)(a.Button, {
                 className: S.btn,
