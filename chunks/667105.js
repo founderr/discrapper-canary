@@ -1,18 +1,24 @@
 n.d(t, {
+    DH: function () {
+        return y;
+    },
     Ks: function () {
-        return R;
+        return L;
     },
     g2: function () {
-        return N;
+        return v;
     },
     hf: function () {
-        return g;
-    },
-    k3: function () {
         return O;
     },
+    k3: function () {
+        return C;
+    },
+    qN: function () {
+        return D;
+    },
     tP: function () {
-        return A;
+        return R;
     }
 }),
     n(47120);
@@ -27,14 +33,17 @@ var r = n(735250),
     d = n(617136),
     _ = n(272008),
     E = n(113434),
-    f = n(918701),
-    h = n(920916),
-    p = n(669041),
-    I = n(341907),
-    m = n(46140),
-    T = n(981631),
-    S = n(689938);
-function g(e) {
+    f = n(569984),
+    h = n(497505),
+    p = n(918701),
+    I = n(977156),
+    m = n(920916),
+    T = n(669041),
+    S = n(341907),
+    g = n(46140),
+    A = n(981631),
+    N = n(689938);
+function O(e) {
     let { quest: t, location: n, questContentPosition: r, questContentRowIndex: a } = e,
         o = (0, s.e7)([c.default], () => {
             var e;
@@ -50,28 +59,28 @@ function g(e) {
                 questContentRowIndex: a
             }),
             o
-                ? (0, f.zK)(t, m.S7.FRACTIONS_QUEST)
-                    ? (0, I.openQuestsNitroRewardModal)(t, n)
-                    : (0, f.Xv)(t.config)
-                      ? (0, h.openCollectibleRewardModal)(t, n)
-                      : (0, f.vQ)(t.config)
-                        ? (0, I.openQuestInGameRewardModal)(t, n)
-                        : (0, I.openQuestsRewardCodeModal)({
+                ? (0, p.zK)(t, g.S7.FRACTIONS_QUEST)
+                    ? (0, S.openQuestsNitroRewardModal)(t, n)
+                    : (0, p.Xv)(t.config)
+                      ? (0, m.openCollectibleRewardModal)(t, n)
+                      : (0, p.vQ)(t.config)
+                        ? (0, S.openQuestInGameRewardModal)(t, n)
+                        : (0, S.openQuestsRewardCodeModal)({
                               questId: t.id,
                               location: n,
                               questContentPosition: r
                           })
-                : (0, p.openRewardModalUnverified)());
+                : (0, T.openRewardModalUnverified)());
     }, [t, n, r, o, a]);
 }
-function A(e) {
+function R(e) {
     var t;
     let n = (0, s.Wu)([u.ZP], () => u.ZP.getGamesSeen(!1)).find((t) => (null == t ? void 0 : t.id) === e);
     if (null == n) return !1;
     let r = Date.now() - 25920000000;
     return r <= (null !== (t = n.lastLaunched) && void 0 !== t ? t : 0);
 }
-let N = (e) => {
+let v = (e) => {
         let { useReducedMotion: t, className: n } = e,
             [s, l] = (0, o.useSpring)(() => ({})),
             u = i.useRef(!1),
@@ -103,7 +112,7 @@ let N = (e) => {
             }
         };
     },
-    O = (e, t) => {
+    C = (e, t) => {
         let { message: n, xboxURL: i } = (0, E.KX)();
         return (0, r.jsx)('span', {
             onClick: (n) => {
@@ -120,21 +129,21 @@ let N = (e) => {
             children: n
         });
     };
-function R(e) {
+function L(e) {
     let { quest: t, progressState: n, isCollectibleQuest: r, location: a, questContentPosition: s, questContentRowIndex: o, isInHouseQuest: u, inGiftInventory: c } = e,
-        h = g({
+        f = O({
             quest: t,
             location: a,
             questContentPosition: s,
             questContentRowIndex: o
         }),
-        p = (0, E._s)({ quest: t });
+        h = (0, E._s)({ quest: t });
     return i.useMemo(() => {
         switch (n) {
             case E.OH.UNACCEPTED:
                 return {
-                    text: S.Z.Messages.QUESTS_ACCEPT,
-                    tooltipText: S.Z.Messages.QUESTS_ACCEPT_TOOLTIP,
+                    text: N.Z.Messages.QUESTS_ACCEPT,
+                    tooltipText: N.Z.Messages.QUESTS_ACCEPT_TOOLTIP,
                     onClick: () =>
                         (0, _.AH)(t.id, {
                             questContent: a,
@@ -145,12 +154,12 @@ function R(e) {
                 };
             case E.OH.ACCEPTED:
             case E.OH.IN_PROGRESS:
-                if (p && c)
+                if (h && c)
                     return {
-                        text: S.Z.Messages.QUESTS_CONNECT_CONSOLE,
+                        text: N.Z.Messages.QUESTS_CONNECT_CONSOLE,
                         tooltipText: null,
                         onClick: () =>
-                            (0, f.gI)(
+                            (0, p.gI)(
                                 { quest: t },
                                 {
                                     content: a,
@@ -161,48 +170,65 @@ function R(e) {
                             )
                     };
                 return {
-                    text: S.Z.Messages.QUESTS_CLAIM_REWARD,
-                    tooltipText: S.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP,
+                    text: N.Z.Messages.QUESTS_CLAIM_REWARD,
+                    tooltipText: N.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP,
                     onClick: null
                 };
             case E.OH.COMPLETED:
                 return {
-                    text: S.Z.Messages.QUESTS_CLAIM_REWARD,
-                    tooltipText: u ? S.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
-                    onClick: h
+                    text: N.Z.Messages.QUESTS_CLAIM_REWARD,
+                    tooltipText: u ? N.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
+                    onClick: f
                 };
             case E.OH.CLAIMED:
                 let e = {
                     tooltipText: null,
-                    onClick: h
+                    onClick: f
                 };
-                if ((0, f.zK)(t, m.S7.FRACTIONS_QUEST))
+                if ((0, p.zK)(t, g.S7.FRACTIONS_QUEST))
                     return {
-                        text: S.Z.Messages.QUESTS_LEARN_MORE_V2,
-                        tooltipText: S.Z.Messages.QUESTS_LEARN_MORE_V2,
+                        text: N.Z.Messages.QUESTS_LEARN_MORE_V2,
+                        tooltipText: N.Z.Messages.QUESTS_LEARN_MORE_V2,
                         onClick: () => {
-                            l.Z.open(T.oAB.PREMIUM, null, {});
+                            l.Z.open(A.oAB.PREMIUM, null, {});
                         }
                     };
                 if (u)
                     return {
                         ...e,
-                        text: S.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+                        text: N.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
                     };
                 if (r)
                     return {
                         ...e,
-                        text: S.Z.Messages.COLLECTIBLES_USE_NOW
+                        text: N.Z.Messages.COLLECTIBLES_USE_NOW
                     };
-                else if ((0, f.vQ)(t.config))
+                else if ((0, p.vQ)(t.config))
                     return {
                         ...e,
-                        text: S.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+                        text: N.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
                     };
                 return {
                     ...e,
-                    text: S.Z.Messages.QUESTS_SEE_CODE
+                    text: N.Z.Messages.QUESTS_SEE_CODE
                 };
         }
-    }, [t, r, u, a, h, n, s, o, p, c]);
+    }, [t, r, u, a, f, n, s, o, h, c]);
+}
+function y() {
+    return (0, s.e7)([f.Z], () => {
+        var e, t;
+        return null !== (t = null !== (e = f.Z.questDeliveryOverride) && void 0 !== e ? e : (0, p.PM)(f.Z.quests, f.Z.questToDeliverForPlacement, h.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== t ? t : (0, p._)(f.Z.quests, h.jn.QUEST_BAR);
+    });
+}
+function D(e) {
+    var t;
+    let { location: n } = e,
+        r = y(),
+        i = (0, I.Zy)({ location: n }),
+        a = (0, E.tP)(r);
+    if (null == r) return !1;
+    let s = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
+        o = null != r.userStatus && (0, p.zE)(r.userStatus, h.jn.QUEST_BAR);
+    return i && !o && !s && !a;
 }
