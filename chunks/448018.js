@@ -3,8 +3,8 @@ n.d(t, {
         return p;
     }
 });
-var s = n(497505),
-    o = n(988303),
+var o = n(497505),
+    s = n(988303),
     r = n(941348),
     a = n(658590),
     l = n(647365),
@@ -39,7 +39,7 @@ let c = {
     p = (e, t, n) => {
         var r;
         let l = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null,
-            i = (!l && t === o.P.V2) || (l && n === o.P.V2) || (0, a.a)(e),
+            i = (!l && t === s.P.V2) || (l && n === s.P.V2) || (0, a.a)(e),
             d = i ? u : c;
         return {
             component: d.component,
@@ -50,6 +50,6 @@ let c = {
             canCollapseOnBlur: d.canCollapseOnBlur(e),
             shouldExpandOnQuestComplete: d.shouldExpandOnQuestComplete(e),
             paddingVertical: d.getVerticalPadding(),
-            trackingCtx: { content: i ? s.jn.QUEST_BAR_V2 : s.jn.QUEST_BAR }
+            trackingCtx: { content: i ? o.jn.QUEST_BAR_V2 : o.jn.QUEST_BAR }
         };
     };

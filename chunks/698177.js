@@ -20,23 +20,23 @@ t.Z = () => {
         [I, N] = r.useState(!1),
         [T, A] = r.useState(!1),
         [x, C] = r.useState(null),
-        [v, Z] = r.useState(null),
-        S = (0, o.e7)([d.Z], () => d.Z.getCountryCode()),
-        R = S.code.split(' ')[0],
+        [v, S] = r.useState(null),
+        Z = (0, o.e7)([d.Z], () => d.Z.getCountryCode()),
+        R = Z.code.split(' ')[0],
         O = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                Z(e.body.message);
+                S(e.body.message);
             }
         },
         b = async () => {
             N(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(R + e, i);
-                C(null), Z(null), A(!0), c.Z.validatePhoneForSupport(t);
+                C(null), S(null), A(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (C(null), Z(e.body.message)) : (C(e.body.phone), Z(e.body.code));
+                e.body.message ? (C(null), S(e.body.message)) : (C(e.body.phone), S(e.body.code));
             } finally {
                 N(!1);
             }
@@ -71,7 +71,7 @@ t.Z = () => {
                       children: [
                           (0, s.jsx)(_.Z, {
                               label: p.Z.Messages.FORM_LABEL_PHONE_NUMBER,
-                              alpha2: S.alpha2,
+                              alpha2: Z.alpha2,
                               countryCode: R,
                               value: e,
                               autoComplete: 'off',

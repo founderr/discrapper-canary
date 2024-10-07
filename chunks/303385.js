@@ -1,6 +1,6 @@
-var s = n(735250);
+var o = n(735250);
 n(470079);
-var o = n(212433),
+var s = n(212433),
     r = n(481060),
     a = n(497505),
     l = n(302245),
@@ -15,12 +15,12 @@ t.Z = (e) => {
     let g = null;
     return (C === l.PW.REWARD_AVAILABLE ? (g = d.Z.Messages.REWARD_AVAILABLE) : C === l.PW.EARN_A_REWARD ? (g = d.Z.Messages.EARN_A_REWARD) : C === l.PW.EARN_A_REWARD_EXCLAMATION && (g = d.Z.Messages.EARN_A_REWARD_EXCLAIMATION), null == g)
         ? null
-        : (0, s.jsxs)(s.Fragment, {
+        : (0, o.jsxs)(o.Fragment, {
               children: [
-                  (0, s.jsx)(o.animated.div, {
+                  (0, o.jsx)(s.animated.div, {
                       className: u.rewardTileSpacer,
                       style: {
-                          transform: (0, o.to)(
+                          transform: (0, s.to)(
                               [
                                   n.to({
                                       range: [0, 1],
@@ -31,10 +31,10 @@ t.Z = (e) => {
                           )
                       }
                   }),
-                  (0, s.jsx)(o.animated.div, {
+                  (0, o.jsx)(s.animated.div, {
                       className: u.rewardTileContainer,
                       style: {
-                          transform: (0, o.to)(
+                          transform: (0, s.to)(
                               [
                                   n.to({
                                       range: [0, 1],
@@ -52,7 +52,7 @@ t.Z = (e) => {
                               (e, t, n) => 'translate('.concat(e, 'px, ').concat(t, 'px) scale(').concat(n, ')')
                           )
                       },
-                      children: (0, s.jsx)(i.Z, {
+                      children: (0, o.jsx)(i.Z, {
                           learnMoreStyle: 'text',
                           quest: t,
                           questContent: a.jn.QUEST_BAR_V2,
@@ -60,17 +60,17 @@ t.Z = (e) => {
                           autoplay: p && !x
                       })
                   }),
-                  (0, s.jsxs)('div', {
+                  (0, o.jsxs)('div', {
                       className: u.rewardHighlightLogoCTA,
                       children: [
-                          (0, s.jsx)(o.animated.div, {
+                          (0, o.jsx)(s.animated.div, {
                               className: u.partnerBranding,
                               style: {
                                   opacity: n.to({
                                       range: [0, 1],
                                       output: [1, p ? 1 : 0.8]
                                   }),
-                                  transform: (0, o.to)(
+                                  transform: (0, s.to)(
                                       [
                                           n.to({
                                               range: [0, 1],
@@ -86,7 +86,7 @@ t.Z = (e) => {
                               },
                               children: m
                           }),
-                          (0, s.jsx)(o.animated.div, {
+                          (0, o.jsx)(s.animated.div, {
                               className: u.rewardHighlightCTA,
                               style: {
                                   opacity: n.to({
@@ -94,7 +94,7 @@ t.Z = (e) => {
                                       output: [0.7, 0]
                                   })
                               },
-                              children: (0, s.jsx)(r.Text, {
+                              children: (0, o.jsx)(r.Text, {
                                   color: 'always-white',
                                   variant: 'text-xs/medium',
                                   children: g

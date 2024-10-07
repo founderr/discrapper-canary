@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(571269),
     n(298267);
-var s,
-    o,
+var o,
+    s,
     r = n(735250),
     a = n(470079),
     l = n(120356),
@@ -25,15 +25,15 @@ var s,
     h = n(475595),
     S = n(623249),
     T = n(78826),
-    v = n(670638),
-    N = n(642145),
+    N = n(670638),
+    v = n(642145),
     j = n(981631),
     A = n(689938),
     R = n(411702);
 function b(e) {
     var t;
-    let { quest: n, errorHints: s, warningHints: o, isDarkTheme: l } = e,
-        { ref: i, height: d = 0 } = (0, m.Z)([s]),
+    let { quest: n, errorHints: o, warningHints: s, isDarkTheme: l } = e,
+        { ref: i, height: d = 0 } = (0, m.Z)([o]),
         u = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         x = (0, g.z)(n),
         { type: C, hints: f } = a.useMemo(
@@ -43,31 +43,31 @@ function b(e) {
                           type: 2,
                           hints: []
                       }
-                    : s.length > 0
+                    : o.length > 0
                       ? {
                             type: 0,
-                            hints: s.map((e) => e.message)
+                            hints: o.map((e) => e.message)
                         }
-                      : o.length > 0
+                      : s.length > 0
                         ? {
                               type: 1,
-                              hints: o
+                              hints: s
                           }
                         : {
                               type: 2,
                               hints: []
                           },
-            [s, u, x, o]
+            [o, u, x, s]
         ),
         E = 2 !== C,
         h = (0, p.useSpring)({
             opacity: E ? 1 : 0,
             height: E ? d : 0,
-            config: N.Y
+            config: v.Y
         }),
         T = 0 === C ? p.CircleWarningIcon : p.CircleInformationIcon,
-        v = (0, _.Lq)(j.Ilk.RED_345),
-        A = 0 === C ? v : l ? p.tokens.colors.TEXT_NORMAL : p.tokens.colors.WHITE;
+        N = (0, _.Lq)(j.Ilk.RED_345),
+        A = 0 === C ? N : l ? p.tokens.colors.TEXT_NORMAL : p.tokens.colors.WHITE;
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsx)(c.animated.div, {
             style: h,
@@ -94,7 +94,7 @@ function b(e) {
                             onClick: () =>
                                 (0, S.openConsoleConnectionErrorsModal)({
                                     questId: n.id,
-                                    errorHints: s
+                                    errorHints: o
                                 }),
                             size: p.ButtonSizes.MIN,
                             look: p.ButtonLooks.LINK,
@@ -109,16 +109,16 @@ function b(e) {
 }
 function B(e) {
     var t;
-    let { quest: n, isHovering: s, errorHints: o, warningHints: l, onCtxMenuClose: c, onCtxMenuOpen: m, onCtxMenuSelect: _ } = e,
+    let { quest: n, isHovering: o, errorHints: s, warningHints: l, onCtxMenuClose: c, onCtxMenuOpen: m, onCtxMenuSelect: _ } = e,
         S = a.useMemo(() => (0, h.fh)(n, h.Bd.HERO), [n]),
-        N = a.useMemo(() => (0, h.fh)(n, h.Bd.LOGO_TYPE, 'dark'), [n]),
+        v = a.useMemo(() => (0, h.fh)(n, h.Bd.LOGO_TYPE, 'dark'), [n]),
         B = (0, x.ZP)(),
         I = ((0, u.wj)(B) ? j.BRd.DARK : j.BRd.LIGHT) === j.BRd.DARK,
         M = a.useContext(d.S).reducedMotion.enabled,
         O = (0, E.Mi)(n, f.jn.GIFT_INVENTORY_FOR_YOU),
         y = (0, g.tP)(n),
         L = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        w = a.useRef(s),
+        w = a.useRef(o),
         k = a.useRef(null),
         U = (0, g.B6)(n.config.expiresAt, {
             month: 'numeric',
@@ -128,14 +128,14 @@ function B(e) {
         a.useEffect(() => {
             if (S.isAnimated && null != k.current)
                 return (
-                    w.current !== s && (s && !M ? k.current.play() : (k.current.pause(), (k.current.currentTime = 0))),
-                    (w.current = s),
+                    w.current !== o && (o && !M ? k.current.play() : (k.current.pause(), (k.current.currentTime = 0))),
+                    (w.current = o),
                     () => {
                         var e;
                         null === (e = k.current) || void 0 === e || e.pause();
                     }
                 );
-        }, [s, S, M]),
+        }, [o, S, M]),
         (0, r.jsxs)('div', {
             className: R.container,
             children: [
@@ -150,7 +150,7 @@ function B(e) {
                                       null != e.current && (k.current = e.current),
                                       (0, r.jsx)(C.Z, {
                                           ref: e,
-                                          autoPlay: !M && s,
+                                          autoPlay: !M && o,
                                           loop: !0,
                                           muted: !0,
                                           playsInline: !0,
@@ -202,7 +202,7 @@ function B(e) {
                                                     children: A.Z.Messages.RECOMMENDED
                                                 })
                                             }),
-                                        (0, r.jsx)(v.r, {
+                                        (0, r.jsx)(N.r, {
                                             onOpen: m,
                                             onClose: c,
                                             onSelect: _,
@@ -232,7 +232,7 @@ function B(e) {
                                             ref: e,
                                             className: R.partnerBranding,
                                             alt: n.config.messages.gameTitle,
-                                            src: N.url
+                                            src: v.url
                                         })
                                 }),
                                 (0, r.jsxs)('div', {
@@ -256,7 +256,7 @@ function B(e) {
                         }),
                         (0, r.jsx)(b, {
                             quest: n,
-                            errorHints: o,
+                            errorHints: s,
                             warningHints: l,
                             isDarkTheme: I
                         })
@@ -266,4 +266,4 @@ function B(e) {
         })
     );
 }
-((o = s || (s = {}))[(o.ERROR = 0)] = 'ERROR'), (o[(o.WARNING = 1)] = 'WARNING'), (o[(o.NONE = 2)] = 'NONE');
+((s = o || (o = {}))[(s.ERROR = 0)] = 'ERROR'), (s[(s.WARNING = 1)] = 'WARNING'), (s[(s.NONE = 2)] = 'NONE');

@@ -26,8 +26,8 @@ var s,
     x = n(124860),
     C = n(86779),
     v = n(726745),
-    Z = n(913583),
-    S = n(144114),
+    S = n(913583),
+    Z = n(144114),
     R = n(541692),
     O = n(952802),
     b = n(108427),
@@ -38,8 +38,8 @@ var s,
     j = n(626135),
     y = n(585483),
     G = n(358085),
-    B = n(481153),
-    U = n(588705),
+    U = n(481153),
+    B = n(588705),
     F = n(494526),
     k = n(163671),
     w = n(981631),
@@ -255,7 +255,7 @@ class q extends (s = i.PureComponent) {
         return (0, r.jsxs)(m.ZP, {
             className: e,
             children: [
-                (0, r.jsx)(U.R, {}),
+                (0, r.jsx)(B.R, {}),
                 (0, r.jsxs)(m.gO, {
                     className: K.marginTop20,
                     children: [
@@ -323,7 +323,7 @@ class q extends (s = i.PureComponent) {
             (n =
                 null == s || h
                     ? null != i
-                        ? (0, r.jsx)(B.Z, { giftCode: i })
+                        ? (0, r.jsx)(U.Z, { giftCode: i })
                         : (0, r.jsxs)('div', {
                               className: z.header,
                               children: [
@@ -338,7 +338,7 @@ class q extends (s = i.PureComponent) {
                                   !1 === (0, G.isAndroidWeb)() ? (0, r.jsx)(m.DK, { children: V.Z.Messages.AUTH_LOGIN_BODY }, 'subtitle') : null
                               ]
                           })
-                    : (0, r.jsx)(U.Z, { invite: s })),
+                    : (0, r.jsx)(B.Z, { invite: s })),
             (0, r.jsxs)(
                 N.Z,
                 {
@@ -534,7 +534,7 @@ class q extends (s = i.PureComponent) {
         });
     }
     renderChooseAccount() {
-        return (0, r.jsx)(Z.Z, {
+        return (0, r.jsx)(S.Z, {
             onDismiss: () => {
                 this.setState((e) => ({
                     ...e,
@@ -627,7 +627,7 @@ class q extends (s = i.PureComponent) {
                 let { password: t, undelete: n } = this.state,
                     s = this.getFullLogin();
                 try {
-                    let { token: r } = await S.Z.verifyPhone(s, e, !1);
+                    let { token: r } = await Z.Z.verifyPhone(s, e, !1);
                     await E.Z.authorizeIPAddress(r),
                         E.Z.login({
                             login: s,
@@ -645,7 +645,7 @@ class q extends (s = i.PureComponent) {
                 let { transitionTo: t } = this.props;
                 this.setState({ phoneVerifyError: null });
                 try {
-                    let { token: n } = await S.Z.verifyPhone(this.getFullLogin(), e, !1);
+                    let { token: n } = await Z.Z.verifyPhone(this.getFullLogin(), e, !1);
                     t(w.Z5c.RESET, {
                         search: (0, c.stringify)({
                             token: n,
@@ -691,7 +691,7 @@ class q extends (s = i.PureComponent) {
                 } catch {}
             }),
             W(this, 'handleResendCode', () => {
-                S.Z.resendCode(this.getFullLogin());
+                Z.Z.resendCode(this.getFullLogin());
             }),
             W(this, 'handleReset', (e) => {
                 null != e && e.preventDefault(),

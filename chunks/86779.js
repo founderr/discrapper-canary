@@ -23,8 +23,8 @@ let A = 'mweb_handoff_nonce',
     C = 1 * f.Z.Millis.MINUTE;
 ((r = s || (s = {})).NONCE_MISSING = 'nonce_missing'), (r.NONCE_EXPIRED = 'nonce_expired'), (r.NULL_HANDOFF_TOKEN = 'deep_link_failed'), (r.HANDOFF_EXCHANGE = 'handoff_exchange');
 let v = new Set(['nonce_missing', 'nonce_expired', 'handoff_exchange']),
-    Z = new Set(['deep_link_failed']),
-    S = () => {
+    S = new Set(['deep_link_failed']),
+    Z = () => {
         d.K.remove(A), d.K.remove(x);
     };
 t.Z = () => {
@@ -62,7 +62,7 @@ t.Z = () => {
         a.useEffect(() => {
             if (null != b) {
                 let e = d.K.get(x);
-                (null == e || Date.now() >= e) && (O('nonce_expired'), S());
+                (null == e || Date.now() >= e) && (O('nonce_expired'), Z());
             }
         }, [b, O]),
         a.useEffect(() => {
@@ -93,7 +93,7 @@ t.Z = () => {
                         O('handoff_exchange');
                     })
                     .finally(() => {
-                        S();
+                        Z();
                     });
         }, [n, b, f, r, O]),
         null == r)
@@ -104,10 +104,10 @@ t.Z = () => {
             return (0, i.jsxs)(i.Fragment, {
                 children: [N.Z.Messages.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, i.jsx)('br', {}), N.Z.Messages.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
             });
-        if (Z.has(f)) return N.Z.Messages.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
+        if (S.has(f)) return N.Z.Messages.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
         if (v.has(f)) return N.Z.Messages.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN;
     })();
-    return null != f && Z.has(f)
+    return null != f && S.has(f)
         ? (0, i.jsx)('div', {
               className: T.errorContainer,
               children: (0, i.jsx)(_.Text, {

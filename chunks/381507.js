@@ -7,21 +7,21 @@ var r = n(780384),
     o = n(51144),
     C = n(105759),
     d = n(898969),
-    c = n(703614),
-    u = n(182294),
+    u = n(703614),
+    c = n(182294),
     _ = n(689938),
     p = n(279521);
 s.Z = () => {
     let e = (0, C.Z)(),
         { avatarSrc: s, eventHandlers: n } = (0, a.Z)({
             user: e,
-            size: u.EF.SIZE_32,
+            size: c.EF.SIZE_32,
             animateOnHover: !0
         }),
         x = (0, l.Fg)(),
         h = (0, r.ap)(x),
         L = o.ZP.getName(e),
-        f = h ? d.Z : c.Z;
+        f = h ? d.Z : u.Z;
     return null == e
         ? null
         : (0, t.jsxs)('div', {
@@ -32,7 +32,7 @@ s.Z = () => {
                       children: (0, t.jsx)(i.Avatar, {
                           src: s,
                           'aria-label': e.username,
-                          size: u.EF.SIZE_32,
+                          size: c.EF.SIZE_32,
                           ...n
                       })
                   }),

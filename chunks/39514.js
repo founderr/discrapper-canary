@@ -22,8 +22,8 @@ var s,
     x = n(669079),
     C = n(63063),
     v = n(51144),
-    Z = n(481153),
-    S = n(781428),
+    S = n(481153),
+    Z = n(781428),
     R = n(423527),
     O = n(981631),
     b = n(689938),
@@ -159,7 +159,7 @@ class L extends a.PureComponent {
         let n = this.getErrorMessage(e);
         return (0, i.jsxs)(p.ZP, {
             children: [
-                (0, i.jsx)(Z.Z, { giftCode: e }),
+                (0, i.jsx)(S.Z, { giftCode: e }),
                 (0, i.jsx)(p.zx, {
                     disabled: null != n,
                     className: D.marginTop40,
@@ -194,7 +194,7 @@ class L extends a.PureComponent {
                 return c || null == e ? this.renderSpinner(b.Z.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e);
             }
             return 'login' === this.getMode()
-                ? (0, i.jsx)(S.Z, {
+                ? (0, i.jsx)(Z.Z, {
                       giftCodeSKU: t,
                       giftCode: s,
                       transitionTo: o,

@@ -1,6 +1,6 @@
-var s = n(735250);
+var o = n(735250);
 n(470079);
-var o = n(481060),
+var s = n(481060),
     r = n(497505),
     a = n(644646),
     l = n(613087),
@@ -13,21 +13,21 @@ t.Z = (e) => {
         { percentComplete: C } = x,
         g = (0, c.eQ)(n),
         f = (0, c.vf)(n, m, _);
-    return (0, s.jsxs)('div', {
+    return (0, o.jsxs)('div', {
         className: u.questProgressWrapper,
         children: [
-            (0, s.jsx)(l.l7, {
+            (0, o.jsx)(l.l7, {
                 inState: t,
                 id: 'progress-bar',
                 ref: p,
                 children: (e) =>
-                    (0, s.jsx)(i.Z, {
+                    (0, o.jsx)(i.Z, {
                         ref: e,
                         quest: n,
                         percentComplete: C,
                         size: 42,
                         strokeWidth: 3,
-                        children: (0, s.jsx)(a.Z, {
+                        children: (0, o.jsx)(a.Z, {
                             className: u.questProgressRewardTile,
                             quest: n,
                             questContent: r.jn.QUEST_BAR_V2,
@@ -36,14 +36,14 @@ t.Z = (e) => {
                         })
                     })
             }),
-            (0, s.jsxs)('div', {
+            (0, o.jsxs)('div', {
                 className: u.questProgressCopy,
                 children: [
-                    (0, s.jsx)(l.l7, {
+                    (0, o.jsx)(l.l7, {
                         inState: t,
                         id: 'progress-title',
                         children: (e) =>
-                            (0, s.jsx)(o.Text, {
+                            (0, o.jsx)(s.Text, {
                                 ref: e,
                                 className: u.questProgressHint,
                                 color: 'header-primary',
@@ -51,12 +51,12 @@ t.Z = (e) => {
                                 children: g
                             })
                     }),
-                    (0, s.jsx)(l.l7, {
+                    (0, o.jsx)(l.l7, {
                         inState: t,
                         id: 'progress-subtitle',
                         isTextTransition: !0,
                         children: (e) =>
-                            (0, s.jsx)(o.Text, {
+                            (0, o.jsx)(s.Text, {
                                 ref: e,
                                 className: u.questProgressHint,
                                 color: 'text-muted',

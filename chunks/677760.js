@@ -27,10 +27,10 @@ var s,
     x = n(258356),
     C = n(981631),
     v = n(689938),
-    Z = n(712833);
-function S() {
+    S = n(712833);
+function Z() {
     return (0, i.jsx)('div', {
-        className: Z.centerFlex,
+        className: S.centerFlex,
         children: (0, i.jsx)(c.Spinner, {})
     });
 }
@@ -86,11 +86,11 @@ function b(e) {
             e !== d && h(e);
         }, [u, d]),
         (0, i.jsxs)(o.animated.div, {
-            className: Z.inviteCard,
+            className: S.inviteCard,
             style: g,
             children: [
                 (0, i.jsx)(o.animated.div, {
-                    className: Z.inviteChildContainer,
+                    className: S.inviteChildContainer,
                     style: g,
                     children: (0, i.jsx)('section', {
                         ref: E,
@@ -113,7 +113,7 @@ function D(e) {
     };
     return (0, i.jsx)(b, {
         startAnimHeightPx: 0,
-        innerStyle: () => Z.guildInfoInner,
+        innerStyle: () => S.guildInfoInner,
         ...e,
         children: (e) => n(e)
     });
@@ -121,7 +121,7 @@ function D(e) {
 function M(e) {
     let { invite: t } = e,
         n = (n) => {
-            if (null == t) return (0, i.jsx)(S, {});
+            if (null == t) return (0, i.jsx)(Z, {});
             switch (n) {
                 case 1:
                     return (0, i.jsx)(A.Z, {
@@ -134,13 +134,13 @@ function M(e) {
                         invite: t
                     });
                 default:
-                    return (0, i.jsx)(S, {});
+                    return (0, i.jsx)(Z, {});
             }
         },
         s = {
-            1: Z.inviteCardInner,
-            2: Z.inviteCardInnerError,
-            0: Z.inviteCardInnerLoading
+            1: S.inviteCardInner,
+            2: S.inviteCardInnerError,
+            0: S.inviteCardInnerLoading
         };
     return (0, i.jsx)(b, {
         startAnimHeightPx: 200,
@@ -162,9 +162,9 @@ function L(e) {
     }
     return (0, i.jsxs)(h.ZP, {
         theme: C.BRd.DARK,
-        className: Z.splashBackground,
+        className: S.splashBackground,
         style: r,
-        contentClassName: Z.centerAuthBoxContent,
+        contentClassName: S.centerAuthBoxContent,
         children: [
             (0, i.jsx)(M, {
                 ...e,

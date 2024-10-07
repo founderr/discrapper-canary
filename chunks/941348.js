@@ -1,5 +1,5 @@
-var s = n(735250),
-    o = n(470079),
+var o = n(735250),
+    s = n(470079),
     r = n(113434),
     a = n(308069),
     l = n(613087),
@@ -10,16 +10,16 @@ var s = n(735250),
 t.Z = function (e) {
     var t;
     let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: x, onCtxMenuOpened: _, onCtxMenuClosed: C, onCtxMenuSelection: g, quest: f, useReducedMotion: E, collapsedHeight: h } = e,
-        S = o.useRef(null),
-        T = o.useRef(null),
-        v = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        N = (0, r.Rf)(f);
-    return (0, s.jsxs)(l.p, {
+        S = s.useRef(null),
+        T = s.useRef(null),
+        N = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        v = (0, r.Rf)(f);
+    return (0, o.jsxs)(l.p, {
         expandedContentRef: n,
         collapsedContentRef: S,
         expansionSpring: p,
         children: [
-            (0, s.jsx)(i.Z, {
+            (0, o.jsx)(i.Z, {
                 ref: S,
                 className: u.content,
                 expansionSpring: p,
@@ -27,9 +27,9 @@ t.Z = function (e) {
                 isExpansionAnimationComplete: x,
                 quest: f,
                 useReducedMotion: E,
-                taskDetails: N
+                taskDetails: v
             }),
-            (0, s.jsx)(c.Z, {
+            (0, o.jsx)(c.Z, {
                 expansionSpring: p,
                 className: u.content,
                 collapsedHeight: h,
@@ -42,15 +42,15 @@ t.Z = function (e) {
                 quest: f,
                 useReducedMotion: E,
                 ref: n,
-                taskDetails: N,
-                children: (0, s.jsxs)(s.Fragment, {
+                taskDetails: v,
+                children: (0, o.jsxs)(o.Fragment, {
                     children: [
-                        (0, s.jsx)(d.Z, {
+                        (0, o.jsx)(d.Z, {
                             expansionSpring: p,
                             isExpanded: m
                         }),
-                        !v &&
-                            (0, s.jsx)(a.Z, {
+                        !N &&
+                            (0, o.jsx)(a.Z, {
                                 quest: f,
                                 expansionSpring: p,
                                 useReducedMotion: E,
@@ -63,7 +63,7 @@ t.Z = function (e) {
                     ]
                 })
             }),
-            (0, s.jsx)('div', {
+            (0, o.jsx)('div', {
                 ref: T,
                 className: u.overlay
             })

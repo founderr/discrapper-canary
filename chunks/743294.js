@@ -3,12 +3,12 @@ n.d(t, {
         return r;
     },
     aY: function () {
-        return s;
+        return o;
     },
     v6: function () {
-        return o;
+        return s;
     }
 });
-let s = '#00000000',
-    o = '#CDD8FF1A',
+let o = '#00000000',
+    s = '#CDD8FF1A',
     r = 12;

@@ -1,7 +1,7 @@
-var s = n(735250);
+var o = n(735250);
 n(470079);
-var o = n(120356),
-    r = n.n(o),
+var s = n(120356),
+    r = n.n(s),
     a = n(212433),
     l = n(481060),
     i = n(113434),
@@ -15,47 +15,47 @@ var o = n(120356),
     C = n(968387);
 t.Z = function (e) {
     var t;
-    let { className: n, expansionSpring: o, isExpanded: g, isExpansionAnimationComplete: f, quest: E, useReducedMotion: h } = e,
+    let { className: n, expansionSpring: s, isExpanded: g, isExpansionAnimationComplete: f, quest: E, useReducedMotion: h } = e,
         S = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { percentComplete: T } = (0, i.Rf)(E),
-        v = (0, i.Jf)(E),
-        N = null != v ? v.completedRatio > 0 : T > 0;
-    return (0, s.jsxs)(a.animated.div, {
+        N = (0, i.Jf)(E),
+        v = null != N ? N.completedRatio > 0 : T > 0;
+    return (0, o.jsxs)(a.animated.div, {
         'aria-hidden': g && f,
         className: r()(n, C.contentCollapsed, {
             [C.contentCollapsedExpanded]: g,
             [C.contentCollapsedAccepted]: S
         }),
         style: {
-            opacity: o.to({
+            opacity: s.to({
                 range: [0, 1],
                 output: [1, 0]
             })
         },
         children: [
-            (0, s.jsx)(m.Z, {
+            (0, o.jsx)(m.Z, {
                 quest: E,
                 useReducedMotion: h
             }),
-            (0, s.jsx)('div', {
+            (0, o.jsx)('div', {
                 className: C.contentCollapsedWrapper,
                 children: S
-                    ? (0, s.jsxs)('div', {
+                    ? (0, o.jsxs)('div', {
                           className: C.questProgressWrapper,
                           children: [
-                              (0, s.jsx)(p.Z, {
+                              (0, o.jsx)(p.Z, {
                                   className: C.questProgressRewardTile,
                                   quest: E,
                                   questContent: c.jn.QUEST_BAR,
                                   autoplay: !1,
                                   location: x.dr.QUESTS_BAR
                               }),
-                              N
-                                  ? (0, s.jsx)(u.Z, {
+                              v
+                                  ? (0, o.jsx)(u.Z, {
                                         className: C.questProgressBar,
                                         quest: E
                                     })
-                                  : (0, s.jsx)(l.Text, {
+                                  : (0, o.jsx)(l.Text, {
                                         className: C.questProgressHint,
                                         color: 'always-white',
                                         variant: 'text-sm/semibold',
@@ -63,14 +63,14 @@ t.Z = function (e) {
                                     })
                           ]
                       })
-                    : (0, s.jsxs)('div', {
+                    : (0, o.jsxs)('div', {
                           className: C.brandingWrapper,
                           children: [
-                              (0, s.jsx)(d.Z, {
+                              (0, o.jsx)(d.Z, {
                                   className: C.partnerBranding,
                                   quest: E
                               }),
-                              (0, s.jsx)(l.Heading, {
+                              (0, o.jsx)(l.Heading, {
                                   color: 'always-white',
                                   variant: 'heading-sm/medium',
                                   className: C.questName,

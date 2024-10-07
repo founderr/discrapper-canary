@@ -3,9 +3,9 @@ n.d(t, {
         return f;
     }
 });
-var s = n(735250);
+var o = n(735250);
 n(470079);
-var o = n(481060),
+var s = n(481060),
     r = n(782568),
     a = n(617136),
     l = n(497505),
@@ -18,15 +18,15 @@ var o = n(481060),
 let x = (e) => {
         let { quest: t } = e;
         return (0, i.KM)(t)
-            ? (0, s.jsx)(o.Button, {
+            ? (0, o.jsx)(s.Button, {
                   className: m.cta,
-                  size: o.Button.Sizes.SMALL,
+                  size: s.Button.Sizes.SMALL,
                   onClick: () => (0, r.Z)('https://support.discord.com/hc/en-us/articles/4422142836759-Activities-on-Discord'),
                   children: p.Z.Messages.QUESTS_LEARN_MORE_V2
               })
-            : (0, s.jsx)(o.Button, {
+            : (0, o.jsx)(s.Button, {
                   className: m.cta,
-                  size: o.Button.Sizes.SMALL,
+                  size: s.Button.Sizes.SMALL,
                   onClick: () =>
                       (0, i.FE)(t, {
                           content: l.jn.QUEST_BAR_V2,
@@ -37,7 +37,7 @@ let x = (e) => {
     },
     _ = (e) => {
         let { quest: t } = e;
-        return (0, s.jsx)(o.Button, {
+        return (0, o.jsx)(s.Button, {
             fullWidth: !0,
             className: m.cta,
             onClick: () =>
@@ -48,7 +48,7 @@ let x = (e) => {
                         ctaContent: a.jZ.CONNECT_CONSOLE
                     }
                 ),
-            size: o.Button.Sizes.SMALL,
+            size: s.Button.Sizes.SMALL,
             children: p.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
         });
     },
@@ -58,9 +58,9 @@ let x = (e) => {
                 quest: t,
                 location: l.jn.QUEST_BAR_V2
             });
-        return (0, s.jsx)(o.ShinyButton, {
+        return (0, o.jsx)(s.ShinyButton, {
             fullWidth: !0,
-            size: o.Button.Sizes.SMALL,
+            size: s.Button.Sizes.SMALL,
             onClick: a,
             pauseAnimation: n || !r,
             className: m.cta,
@@ -70,25 +70,25 @@ let x = (e) => {
     },
     g = (e) => {
         var t;
-        let { quest: n, useReducedMotion: o, isExpanded: r, awaitingConsoleConnections: a, hasMadeProgress: i, isProgressing: d, activeScreen: p } = e,
+        let { quest: n, useReducedMotion: s, isExpanded: r, awaitingConsoleConnections: a, hasMadeProgress: i, isProgressing: d, activeScreen: p } = e,
             m = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
             g = (0, c.P)({ location: u.dr.QUESTS_BAR });
         if (m)
-            return (0, s.jsx)(C, {
+            return (0, o.jsx)(C, {
                 quest: n,
-                useReducedMotion: o,
+                useReducedMotion: s,
                 isExpanded: r
             });
-        if (p === l.LI.CONSOLE && a && !g) return (0, s.jsx)(_, { quest: n });
-        if (p !== l.LI.SELECT && !i && !d) return (0, s.jsx)(x, { quest: n });
+        if (p === l.LI.CONSOLE && a && !g) return (0, o.jsx)(_, { quest: n });
+        if (p !== l.LI.SELECT && !i && !d) return (0, o.jsx)(x, { quest: n });
         return null;
     };
 function f(e) {
-    return (0, s.jsxs)('div', {
+    return (0, o.jsxs)('div', {
         className: m.ctaButtons,
         children: [
             e.showBackButton &&
-                (0, s.jsx)(o.Button, {
+                (0, o.jsx)(s.Button, {
                     className: m.backButton,
                     innerClassName: m.backButtonInner,
                     look: 'blank',
@@ -96,9 +96,9 @@ function f(e) {
                     fullWidth: !1,
                     size: 'none',
                     onClick: e.onBack,
-                    children: (0, s.jsx)(o.ChevronSmallLeftIcon, { className: m.backIcon })
+                    children: (0, o.jsx)(s.ChevronSmallLeftIcon, { className: m.backIcon })
                 }),
-            (0, s.jsx)(g, { ...e })
+            (0, o.jsx)(g, { ...e })
         ]
     });
 }

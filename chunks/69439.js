@@ -4,8 +4,8 @@ n.d(t, {
     }
 }),
     n(47120);
-var s = n(735250),
-    o = n(470079),
+var o = n(735250),
+    s = n(470079),
     r = n(120356),
     a = n.n(r),
     l = n(442837),
@@ -38,51 +38,51 @@ let h = [
 function S(e) {
     let t,
         n,
-        { value: o } = e;
-    switch (o) {
+        { value: s } = e;
+    switch (s) {
         case g.cd.DESKTOP:
-            (n = (0, s.jsx)(i.ScreenIcon, {})), (t = f.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP);
+            (n = (0, o.jsx)(i.ScreenIcon, {})), (t = f.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP);
             break;
         case g.cd.CONSOLE:
-            (n = (0, s.jsx)(i.GameControllerIcon, {})), (t = f.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE);
+            (n = (0, o.jsx)(i.GameControllerIcon, {})), (t = f.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE);
             break;
         default:
             return null;
     }
-    return (0, s.jsxs)('div', {
+    return (0, o.jsxs)('div', {
         className: E.platformSelectorPrimaryLabel,
         children: [n, t]
     });
 }
 function T(e) {
     var t, n, r, T;
-    let { quest: v, location: N, onReceiveErrorHints: j, contentPosition: A, rowIndex: R } = e,
+    let { quest: N, location: v, onReceiveErrorHints: j, contentPosition: A, rowIndex: R } = e,
         b = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         B = (0, _.g2)({ useReducedMotion: b }),
-        I = (0, u._s)({ quest: v }),
-        M = (0, u.z)(v),
-        O = (0, u.B6)(v.config.expiresAt, {
+        I = (0, u._s)({ quest: N }),
+        M = (0, u.z)(N),
+        O = (0, u.B6)(N.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         }),
         { isClaiming: y, isEnrolling: L } = (0, l.cj)([p.Z], () => ({
-            isClaiming: p.Z.isClaimingReward(v.id) || p.Z.isFetchingRewardCode(v.id),
-            isEnrolling: p.Z.isEnrolling(v.id)
+            isClaiming: p.Z.isClaimingReward(N.id) || p.Z.isFetchingRewardCode(N.id),
+            isEnrolling: p.Z.isEnrolling(N.id)
         })),
-        w = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        k = (null === (n = v.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        U = k && (null === (r = v.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null,
-        Z = (0, x.iQ)(v),
-        q = !(0, x.zi)(v),
-        P = (0, u._Q)(v),
-        Q = (0, x.zK)(v, g.S7.IN_HOUSE_CONSOLE_QUEST),
-        D = (0, x.Xv)(v.config),
-        W = (0, u.Rf)(v),
-        [H, V, z] = (0, u.me)(v, W),
+        w = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        k = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        U = k && (null === (r = N.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null,
+        Z = (0, x.iQ)(N),
+        q = !(0, x.zi)(N),
+        P = (0, u._Q)(N),
+        Q = (0, x.zK)(N, g.S7.IN_HOUSE_CONSOLE_QUEST),
+        D = (0, x.Xv)(N.config),
+        W = (0, u.Rf)(N),
+        [H, V, z] = (0, u.me)(N, W),
         G = q && P === u.OH.ACCEPTED,
         F = G && H === m.LI.SELECT,
         K = G && !F && V.length > 1,
-        Y = o.useCallback(
+        Y = s.useCallback(
             (e) => {
                 z(e), e === g.cd.DESKTOP && j([]);
             },
@@ -90,21 +90,21 @@ function T(e) {
         ),
         { text: X, onClick: J } = (0, _.Ks)({
             progressState: P,
-            quest: v,
+            quest: N,
             isInHouseQuest: Q,
-            location: N,
+            location: v,
             isCollectibleQuest: D,
             questContentPosition: A,
             questContentRowIndex: R,
             inGiftInventory: !0
         }),
         { startingConsoleQuest: $, startConsoleQuest: ee } = (0, u.GI)({
-            questId: v.id,
+            questId: N.id,
             beforeRequest: () => {
                 B.startAnimation(),
                     (0, d._3)({
-                        questId: v.id,
-                        questContent: N,
+                        questId: N.id,
+                        questContent: v,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
                         questContentPosition: A,
                         questContentRowIndex: R
@@ -114,10 +114,10 @@ function T(e) {
                 B.stopAnimation(), j(e);
             }
         }),
-        et = (null === (T = v.userStatus) || void 0 === T ? void 0 : T.claimedAt) != null,
+        et = (null === (T = N.userStatus) || void 0 === T ? void 0 : T.claimedAt) != null,
         en = null;
     return (Z && U
-        ? (en = (0, s.jsx)(i.Button, {
+        ? (en = (0, o.jsx)(i.Button, {
               color: i.ButtonColors.BRAND,
               submitting: y,
               onClick: null != J ? J : void 0,
@@ -125,7 +125,7 @@ function T(e) {
               children: X
           }))
         : k
-          ? (en = (0, s.jsx)(i.Button, {
+          ? (en = (0, o.jsx)(i.Button, {
                 color: i.ButtonColors.BRAND,
                 className: E.button,
                 onClick: null != J ? J : void 0,
@@ -133,7 +133,7 @@ function T(e) {
             }))
           : q
             ? q && U
-                ? (en = (0, s.jsx)(i.Button, {
+                ? (en = (0, o.jsx)(i.Button, {
                       color: i.ButtonColors.BRAND,
                       submitting: y,
                       onClick: null != J ? J : void 0,
@@ -142,7 +142,7 @@ function T(e) {
                   }))
                 : q && w && !et
                   ? (en = F
-                        ? (0, s.jsx)(i.Select, {
+                        ? (0, o.jsx)(i.Select, {
                               className: E.platformSelectorPrimary,
                               isSelected: () => !1,
                               options: h,
@@ -158,25 +158,25 @@ function T(e) {
                                   }
                               }
                           })
-                        : (0, x.$J)(v) && !M && H !== m.LI.DESKTOP
+                        : (0, x.$J)(N) && !M && H !== m.LI.DESKTOP
                           ? I
-                              ? (0, s.jsx)(i.Button, {
+                              ? (0, o.jsx)(i.Button, {
                                     color: i.ButtonColors.PRIMARY,
                                     className: E.button,
                                     onClick: null != J ? J : void 0,
                                     children: X
                                 })
-                              : (0, s.jsx)(i.Button, {
+                              : (0, o.jsx)(i.Button, {
                                     color: i.ButtonColors.PRIMARY,
                                     onClick: ee,
                                     disabled: $,
                                     className: E.button,
-                                    children: (0, s.jsxs)('div', {
+                                    children: (0, o.jsxs)('div', {
                                         className: E.ctaInner,
                                         children: [B.render(), f.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
                                     })
                                 })
-                          : (0, s.jsx)(i.Button, {
+                          : (0, o.jsx)(i.Button, {
                                 color: i.ButtonColors.PRIMARY,
                                 disabled: !0,
                                 className: E.button,
@@ -184,14 +184,14 @@ function T(e) {
                             }))
                   : q &&
                     !w &&
-                    (en = (0, s.jsx)(i.Button, {
+                    (en = (0, o.jsx)(i.Button, {
                         submitting: L,
                         color: i.ButtonColors.BRAND,
                         onClick: null != J ? J : void 0,
                         className: E.button,
                         children: X
                     }))
-            : (en = (0, s.jsx)(i.Button, {
+            : (en = (0, o.jsx)(i.Button, {
                   color: i.ButtonColors.PRIMARY,
                   disabled: !0,
                   className: E.button,
@@ -199,34 +199,34 @@ function T(e) {
               })),
     null == en)
         ? null
-        : (0, s.jsxs)('div', {
+        : (0, o.jsxs)('div', {
               className: E.container,
               children: [
                   en,
                   K &&
-                      (0, s.jsx)(C.U, {
+                      (0, o.jsx)(C.U, {
                           onSelect: Y,
-                          quest: v,
+                          quest: N,
                           questContent: m.jn.ACTIVITY_PANEL,
                           children: (e) =>
-                              (0, s.jsx)(i.Button, {
+                              (0, o.jsx)(i.Button, {
                                   className: a()(E.button, E.platformSelectorSecondary),
                                   color: i.ButtonColors.PRIMARY,
                                   ...e,
-                                  children: (0, s.jsxs)('div', {
+                                  children: (0, o.jsxs)('div', {
                                       className: E.platformSelectorSecondaryContent,
                                       children: [
                                           (function (e) {
                                               switch (e) {
                                                   case m.LI.DESKTOP:
-                                                      return (0, s.jsx)(i.ScreenIcon, { color: 'currentColor' });
+                                                      return (0, o.jsx)(i.ScreenIcon, { color: 'currentColor' });
                                                   case m.LI.CONSOLE:
-                                                      return (0, s.jsx)(i.GameControllerIcon, { color: 'currentColor' });
+                                                      return (0, o.jsx)(i.GameControllerIcon, { color: 'currentColor' });
                                                   default:
                                                       return null;
                                               }
                                           })(H),
-                                          (0, s.jsx)(i.ChevronSmallDownIcon, {
+                                          (0, o.jsx)(i.ChevronSmallDownIcon, {
                                               className: E.platformSelectorSecondaryChevron,
                                               color: 'currentColor'
                                           })

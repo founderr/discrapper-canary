@@ -74,7 +74,7 @@ let I = r.forwardRef(function (e, t) {
             month: x,
             setMonth: C,
             year: v,
-            setYear: Z
+            setYear: S
         } = (function (e) {
             let t = null,
                 n = null,
@@ -92,12 +92,12 @@ let I = r.forwardRef(function (e, t) {
                 setYear: u
             };
         })(n),
-        S = r.useMemo(() => (null != T && null != x && null != v ? l()(''.concat(T, '/').concat(x, '/').concat(v), 'DD/MM/YYYY') : null), [T, x, v]);
+        Z = r.useMemo(() => (null != T && null != x && null != v ? l()(''.concat(T, '/').concat(x, '/').concat(v), 'DD/MM/YYYY') : null), [T, x, v]);
     r.useEffect(() => {
-        o((null == S ? void 0 : S.isValid()) ? S : null);
-    }, [S, o]);
+        o((null == Z ? void 0 : Z.isValid()) ? Z : null);
+    }, [Z, o]);
     let R = g;
-    null != S && !S.isValid() && (R = d.Z.Messages.AGE_GATE_INVALID_BIRTHDAY);
+    null != Z && !Z.isValid() && (R = d.Z.Messages.AGE_GATE_INVALID_BIRTHDAY);
     let O = (function () {
             let e = new Date().getFullYear(),
                 t = r.useRef(
@@ -205,7 +205,7 @@ let I = r.forwardRef(function (e, t) {
                     key: 'year',
                     input: (0, s.jsx)(f, {
                         options: O,
-                        selectOption: Z,
+                        selectOption: S,
                         children: (0, s.jsx)(u.Z, {
                             ref: P,
                             className: _.__invalid_inputYear,
@@ -219,7 +219,7 @@ let I = r.forwardRef(function (e, t) {
                             value: v,
                             onChange: (t) => {
                                 let { value: n } = t;
-                                Z(n), D(e + 1);
+                                S(n), D(e + 1);
                             },
                             maxMenuHeight: 215
                         })

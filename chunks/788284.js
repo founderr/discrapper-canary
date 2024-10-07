@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120),
     n(724458);
-var s = n(735250),
-    o = n(470079),
+var o = n(735250),
+    s = n(470079),
     r = n(120356),
     a = n.n(r),
     l = n(392711),
@@ -22,29 +22,29 @@ let x = [0, 0.5, 1],
         'layers[2].shapes[1].g.k.k': [0, 0.714, 0.271, 0.757, 0.5, 0.714, 0.271, 0.757, 1, 0.714, 0.271, 0.757]
     };
 async function C(e, t) {
-    let s = (await n.e('30166').then(n.t.bind(n, 235630, 19))).default;
+    let o = (await n.e('30166').then(n.t.bind(n, 235630, 19))).default;
     return (
         (function (e, t, n) {
-            for (let s in t) {
-                let t = i().get(e, s);
+            for (let o in t) {
+                let t = i().get(e, o);
                 if (null == t) continue;
-                let o = t.map((e, t) => {
-                    var s;
-                    return null !== (s = n[t]) && void 0 !== s ? s : e;
+                let s = t.map((e, t) => {
+                    var o;
+                    return null !== (o = n[t]) && void 0 !== o ? o : e;
                 });
-                i().set(e, s, o);
+                i().set(e, o, s);
             }
-        })(s, _, t),
-        s
+        })(o, _, t),
+        o
     );
 }
 function g(e) {
     var t;
     let { animationClassName: n, className: r, quest: l, useReducedMotion: i } = e,
         _ = (0, c.e7)([u.Z], () => u.Z.isFocused()),
-        g = o.useRef(null),
-        [f, E] = o.useState(!1),
-        h = o.useMemo(() => {
+        g = s.useRef(null),
+        [f, E] = s.useState(!1),
+        h = s.useMemo(() => {
             if (null == l) return null;
             let e = (0, p.oo)(l.config.colors.primary),
                 t = {
@@ -57,25 +57,25 @@ function g(e) {
         }, [l]),
         S = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         T = !i && _;
-    o.useEffect(() => {
-        var e, t, n, s;
-        _ ? T && (null === (s = g.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = g.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
+    s.useEffect(() => {
+        var e, t, n, o;
+        _ ? T && (null === (o = g.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = g.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
     }, [T, _]);
-    let v = o.useCallback(() => {
+    let N = s.useCallback(() => {
         E(!0);
     }, []);
     return null == h || S
-        ? (0, s.jsx)('div', {
+        ? (0, o.jsx)('div', {
               className: m.backgroundFallback,
               style: { backgroundImage: 'linear-gradient(90deg, '.concat(l.config.colors.primary, ', ').concat(l.config.colors.secondary, ')') }
           })
-        : (0, s.jsx)('div', {
+        : (0, o.jsx)('div', {
               className: a()(m.lottieAnimationBackgroundWrapper, r),
-              children: (0, s.jsx)(
+              children: (0, o.jsx)(
                   d.LottieAnimation,
                   {
                       ref: g,
-                      onComplete: v,
+                      onComplete: N,
                       importData: () => h,
                       shouldAnimate: !f && T,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),

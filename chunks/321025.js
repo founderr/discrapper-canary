@@ -3,18 +3,18 @@ n.d(t, {
         return l;
     }
 });
-var s = n(735250),
-    o = n(470079),
+var o = n(735250),
+    s = n(470079),
     r = n(212433),
     a = n(613087);
 function l(e) {
     let { expansionSpring: t, isExpanded: n } = e,
-        { animatedComponentProps: l, recalculateAnimationPositions: i, mountPoints: c } = o.useContext(a.B$);
+        { animatedComponentProps: l, recalculateAnimationPositions: i, mountPoints: c } = s.useContext(a.B$);
     return (
-        o.useEffect(() => {
+        s.useEffect(() => {
             i();
         }, [i, n]),
-        (0, s.jsx)('div', {
+        (0, o.jsx)('div', {
             style: {
                 overflow: 'hidden',
                 pointerEvents: 'none',
@@ -26,9 +26,9 @@ function l(e) {
                 zIndex: 5
             },
             children: l.map((e) => {
-                let { id: n, collapsedLeft: o, expandedLeft: a, collapsedTop: l, expandedTop: i, width: d } = e,
+                let { id: n, collapsedLeft: s, expandedLeft: a, collapsedTop: l, expandedTop: i, width: d } = e,
                     u = c.get(n);
-                return (0, s.jsx)(
+                return (0, o.jsx)(
                     r.animated.div,
                     {
                         ref: u,
@@ -42,7 +42,7 @@ function l(e) {
                                 [
                                     t.to({
                                         range: [0, 1],
-                                        output: [o, a]
+                                        output: [s, a]
                                     }),
                                     t.to({
                                         range: [0, 1],

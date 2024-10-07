@@ -27,8 +27,8 @@ var s = n(735250),
     x = n(781428),
     C = n(163671),
     v = n(423527),
-    Z = n(981631),
-    S = n(58346),
+    S = n(981631),
+    Z = n(58346),
     R = n(701476),
     O = n(630724),
     b = n(436620),
@@ -38,7 +38,7 @@ var s = n(735250),
 c.ZP.initialize();
 class P extends r.PureComponent {
     componentDidMount() {
-        (0, m.e)('guildTemplate'), !b.KO && A.Z.launch('discord://' + Z.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+        (0, m.e)('guildTemplate'), !b.KO && A.Z.launch('discord://' + S.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && E.Z.resolveGuildTemplate(this.props.code);
@@ -87,7 +87,7 @@ class P extends r.PureComponent {
     }
     renderAuthenticatedOrDownload() {
         let { guildTemplate: e } = this.props;
-        return (l()(null != e, 'guild template must not be null'), e.state === S.Rj.RESOLVING)
+        return (l()(null != e, 'guild template must not be null'), e.state === Z.Rj.RESOLVING)
             ? (0, s.jsx)(u.ZP, {
                   className: M.authBox,
                   children: (0, s.jsx)(g.Z, { guildTemplate: e })
@@ -102,12 +102,12 @@ class P extends r.PureComponent {
     render() {
         let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: r, location: i } = this.props;
         if (null == e) return this.renderSpinner(D.Z.Messages.LOADING);
-        if (t === Z.kEZ.OPEN) return this.renderAppOpened();
-        if (t === Z.kEZ.OPENING) return this.renderSpinner(D.Z.Messages.APP_OPENING);
+        if (t === S.kEZ.OPEN) return this.renderAppOpened();
+        if (t === S.kEZ.OPENING) return this.renderSpinner(D.Z.Messages.APP_OPENING);
         switch (e.state) {
-            case S.Rj.RESOLVING:
+            case Z.Rj.RESOLVING:
                 return this.renderSpinner(D.Z.Messages.APP_OPENING);
-            case S.Rj.RESOLVED:
+            case Z.Rj.RESOLVED:
                 if (n || !b.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
                     return (0, s.jsx)(x.Z, {
@@ -124,7 +124,7 @@ class P extends r.PureComponent {
                             (0, f.c)(R.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), I.Z.flowStart(O.MK.ORGANIC_GUILD_TEMPLATES, O.EW.NUF_STARTED);
                         }
                     });
-            case S.Rj.EXPIRED:
+            case Z.Rj.EXPIRED:
                 return this.renderInvalidGuildTemplate();
             default:
                 return null;

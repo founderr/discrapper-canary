@@ -1,7 +1,7 @@
 n(571269), n(298267);
-var s = n(735250);
+var o = n(735250);
 n(470079);
-var o = n(481060),
+var s = n(481060),
     r = n(113434),
     a = n(665430),
     l = n(26650),
@@ -10,27 +10,27 @@ var o = n(481060),
     d = n(587311);
 function u(e) {
     let { header: t, children: n } = e;
-    return (0, s.jsxs)('div', {
+    return (0, o.jsxs)('div', {
         className: d.card,
         children: [
-            (0, s.jsxs)('div', {
+            (0, o.jsxs)('div', {
                 className: d.header,
                 children: [
-                    (0, s.jsx)(o.CircleWarningIcon, {
+                    (0, o.jsx)(s.CircleWarningIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         className: d.icon,
                         width: 16,
                         height: 16
                     }),
-                    (0, s.jsx)(o.Heading, {
+                    (0, o.jsx)(s.Heading, {
                         color: 'text-normal',
                         variant: 'heading-sm/medium',
                         children: t
                     })
                 ]
             }),
-            (0, s.jsx)(o.Text, {
+            (0, o.jsx)(s.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/normal',
                 className: d.warningBody,
@@ -42,20 +42,20 @@ function u(e) {
 t.Z = function (e) {
     let { quest: t } = e,
         n = (0, a.pF)({ location: i.dr.QUESTS_BAR }),
-        o = (0, r.qb)(t);
-    if (0 === o.length) return null;
-    let d = o.at(0);
+        s = (0, r.qb)(t);
+    if (0 === s.length) return null;
+    let d = s.at(0);
     return n
         ? d === c.Z.Messages.QUESTS_PROGRESS_WEB_TIP
-            ? (0, s.jsx)(u, {
+            ? (0, o.jsx)(u, {
                   header: c.Z.Messages.QUEST_BAR_WEB_WARNING_HEADER,
                   children: c.Z.Messages.QUEST_BAR_WEB_WARNING_BODY
               })
             : d === c.Z.Messages.QUESTS_PROGRESS_MAC_STREAMING_TIP
-              ? (0, s.jsx)(u, {
+              ? (0, o.jsx)(u, {
                     header: c.Z.Messages.QUEST_BAR_MAC_WARNING_HEADER_WINDOWS,
                     children: c.Z.Messages.QUESTS_PROGRESS_MAC_STREAMING_TIP
                 })
               : null
-        : (0, s.jsx)(l.Z, { children: d });
+        : (0, o.jsx)(l.Z, { children: d });
 };

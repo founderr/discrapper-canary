@@ -23,8 +23,8 @@ t.Z = (e) => {
         N = (0, h.oK)('RSL - Landing Page'),
         [T, A] = r.useState(!1),
         [x, C] = r.useState(f.Z.Messages.AUTHORIZING),
-        [v, Z] = r.useState(!0),
-        S = (e) => {
+        [v, S] = r.useState(!0),
+        Z = (e) => {
             switch (e) {
                 case g.evJ.INVALID_FORM_BODY:
                 case g.evJ.DSA_RSL_REPORT_NOT_FOUND:
@@ -46,12 +46,12 @@ t.Z = (e) => {
     return (
         r.useEffect(() => {
             n
-                ? (Z(!0),
+                ? (S(!0),
                   l
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => Z(!1))
-                      .catch(() => Z(!1)))
-                : Z(!1);
+                      .then(() => S(!1))
+                      .catch(() => S(!1)))
+                : S(!1);
         }, [n]),
         r.useEffect(() => {
             !I && !N && o.Z.getExperiments();
@@ -61,9 +61,9 @@ t.Z = (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, _.hs)(e) : void 0;
-                    null != n ? C(f.Z.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : S(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+                    null != n ? C(f.Z.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : Z(null === (t = n.body) || void 0 === t ? void 0 : t.code);
                 } catch (e) {
-                    S(null === (n = e.body) || void 0 === n ? void 0 : n.code);
+                    Z(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
                     A(!1);
                 }

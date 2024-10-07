@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     },
     JI: function () {
-        return Z;
+        return S;
     },
     UM: function () {
         return D;
@@ -62,11 +62,11 @@ let I = 100,
         return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > I;
     },
     v = (e) => e.state === p.r2o.ACCEPTED,
-    Z = (e) => {
+    S = (e) => {
         let { guild_scheduled_event: t } = e;
         return null != t || !1;
     },
-    S = (e) => !Z(e) && (!!x(e) || (null != e.inviter && !v(e) && !C(e))),
+    Z = (e) => !S(e) && (!!x(e) || (null != e.inviter && !v(e) && !C(e))),
     R = (e) => {
         let { guild: t, user: n, application: r } = e;
         if (null != r)
@@ -94,7 +94,7 @@ function O(e) {
     var t;
     let { invite: n, textClassName: r, className: i } = e,
         o = N(n);
-    return null == o || S(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === g.fQ
+    return null == o || Z(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === g.fQ
         ? null
         : (0, s.jsx)(l.EJ, {
               className: a()(m.activityCount, i),
@@ -106,12 +106,12 @@ function O(e) {
 }
 function b(e) {
     let { invite: t, showBigUserIcon: n } = e,
-        i = r.useMemo(() => (n ? null : T(t) && null != t.target_user ? _.ZP.getUserAvatarURL(t.target_user) : S(t) && null != t.inviter ? _.ZP.getUserAvatarURL(t.inviter) : null), [t, n]),
+        i = r.useMemo(() => (n ? null : T(t) && null != t.target_user ? _.ZP.getUserAvatarURL(t.target_user) : Z(t) && null != t.inviter ? _.ZP.getUserAvatarURL(t.inviter) : null), [t, n]),
         a = f.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN;
     if (A(t)) {
         var c, u;
         a = (null === (c = t.channel) || void 0 === c ? void 0 : c.name) != null && (null === (u = t.inviter) || void 0 === u ? void 0 : u.username) != null ? f.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM_BY_USER.format({ username: t.inviter.username }) : f.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM;
-    } else T(t) && null != t.target_user ? (a = f.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({ username: t.target_user.username })) : v(t) ? (a = f.Z.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF) : S(t) && null != t.inviter && (a = f.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({ username: h.ZP.getFormattedName(t.inviter) }));
+    } else T(t) && null != t.target_user ? (a = f.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({ username: t.target_user.username })) : v(t) ? (a = f.Z.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF) : Z(t) && null != t.inviter && (a = f.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({ username: h.ZP.getFormattedName(t.inviter) }));
     return (0, s.jsxs)('div', {
         className: m.inviteJoinContainer,
         children: [

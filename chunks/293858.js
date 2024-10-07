@@ -11,8 +11,8 @@ var t = n(735250),
     o = n(155491),
     C = n(317269),
     d = n(669079),
-    c = n(296848),
-    u = n(987209),
+    u = n(296848),
+    c = n(987209),
     _ = n(598),
     p = n(592627),
     x = n(614277),
@@ -22,7 +22,7 @@ function L(e) {
     let i,
         { handleClose: L, planGroup: f, onSubscriptionConfirmation: I, renderPurchaseConfirmation: E, postSuccessGuild: M, followupSKUInfo: N, continueSession: j } = e,
         { activeSubscription: g, paymentSources: T, paymentSourceId: m, selectedPlan: S, selectedSkuId: A, step: O, updatedSubscription: R, startingPremiumSubscriptionPlanIdRef: P } = (0, _.usePaymentContext)(),
-        { isGift: Z, giftRecipient: v, giftCode: y, hasSentMessage: b, isSendingMessage: U, sendGiftMessage: H } = (0, u.wD)(),
+        { isGift: Z, giftRecipient: v, giftCode: y, hasSentMessage: U, isSendingMessage: b, sendGiftMessage: H } = (0, c.wD)(),
         B = (0, o.Z2)();
     l()(null != S, 'Expected plan to selected'), l()(null != A, 'Expected selectedSkuId'), l()(null != O, 'Step should be set');
     let k = r.useCallback(() => {
@@ -30,8 +30,8 @@ function L(e) {
     }, [L, I]);
     return (
         r.useEffect(() => {
-            if (!(!Z || null == v || null == y || b || U || (0, d.pO)(v))) a.F.getCurrentConfig({ location: '36b986_1' }).enabled && H({ onSubscriptionConfirmation: I });
-        }, [H, Z, v, y, b, U, I]),
+            if (!(!Z || null == v || null == y || U || b || (0, d.pO)(v))) a.F.getCurrentConfig({ location: '36b986_1' }).enabled && H({ onSubscriptionConfirmation: I });
+        }, [H, Z, v, y, U, b, I]),
         (i =
             null != E
                 ? E(S, k, R)
@@ -55,7 +55,7 @@ function L(e) {
                             startingPremiumSubscriptionPlanId: P.current,
                             planId: S.id,
                             onClose: k,
-                            isDowngrade: null != g && (0, c.GY)(g, S.id, f),
+                            isDowngrade: null != g && (0, u.GY)(g, S.id, f),
                             paymentSourceType: null === (n = T[null != m ? m : '']) || void 0 === n ? void 0 : n.type
                         })),
         (0, t.jsxs)(t.Fragment, {

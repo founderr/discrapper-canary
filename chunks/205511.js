@@ -1,5 +1,5 @@
-var s = n(735250),
-    o = n(470079),
+var o = n(735250),
+    s = n(470079),
     r = n(120356),
     a = n.n(r),
     l = n(959078),
@@ -18,35 +18,35 @@ var s = n(735250),
     h = n(46140),
     S = n(689938),
     T = n(161548);
-function v(e) {
-    let { children: t, isComplete: n, hasNextStep: o } = e;
-    return (0, s.jsxs)('li', {
-        className: a()(T.stepWrapper, { [T.stepWrapperComplete]: n }, { [T.stepWrapperWithNextStep]: o }),
+function N(e) {
+    let { children: t, isComplete: n, hasNextStep: s } = e;
+    return (0, o.jsxs)('li', {
+        className: a()(T.stepWrapper, { [T.stepWrapperComplete]: n }, { [T.stepWrapperWithNextStep]: s }),
         children: [
-            (0, s.jsxs)('div', {
+            (0, o.jsxs)('div', {
                 className: T.stepIndicator,
                 children: [
-                    (0, s.jsx)('div', {
+                    (0, o.jsx)('div', {
                         className: T.stepIconWrapper,
                         children:
                             n &&
-                            (0, s.jsx)(c.CheckmarkLargeBoldIcon, {
+                            (0, o.jsx)(c.CheckmarkLargeBoldIcon, {
                                 className: T.stepIcon,
                                 color: c.tokens.colors.WHITE
                             })
                     }),
-                    o && (0, s.jsx)('div', { className: T.stepConnector })
+                    s && (0, o.jsx)('div', { className: T.stepConnector })
                 ]
             }),
-            (0, s.jsx)('div', {
+            (0, o.jsx)('div', {
                 className: T.stepContent,
                 children: t
             })
         ]
     });
 }
-function N(e) {
-    return (0, s.jsx)(c.Text, {
+function v(e) {
+    return (0, o.jsx)(c.Text, {
         className: T.microphoneUnitBodyText,
         color: 'text-muted',
         variant: 'text-xxs/normal',
@@ -60,7 +60,7 @@ function j(e) {
         d = (0, f.g2)({ useReducedMotion: n }),
         {
             errorHints: E,
-            startingConsoleQuest: v,
+            startingConsoleQuest: N,
             startConsoleQuest: j
         } = (0, x.GI)({
             questId: t.id,
@@ -74,20 +74,20 @@ function j(e) {
             },
             afterRequest: d.stopAnimation
         }),
-        { header: A, renderBody: R } = o.useMemo(() => {
+        { header: A, renderBody: R } = s.useMemo(() => {
             let e = E.length > 0,
                 n = () =>
-                    (0, s.jsx)(s.Fragment, {
+                    (0, o.jsx)(o.Fragment, {
                         children: E.map((e, n) => {
                             if (e.type === l.K.EXPIRED_CREDENTIAL && r) {
-                                let o = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
+                                let s = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
                                     r = (0, C.C9)(e),
                                     a = (0, C._j)(e);
-                                return (0, s.jsx)(
-                                    N,
+                                return (0, o.jsx)(
+                                    v,
                                     {
                                         children: r.format({
-                                            account_name: null == o ? void 0 : o.name,
+                                            account_name: null == s ? void 0 : s.name,
                                             onClick: () => {
                                                 (0, C.fY)(
                                                     {
@@ -105,7 +105,7 @@ function j(e) {
                                     n
                                 );
                             }
-                            return (0, s.jsx)(N, { children: e.message }, n);
+                            return (0, o.jsx)(v, { children: e.message }, n);
                         })
                     });
             if ((0, C.zK)(t, h.S7.IN_HOUSE_CONSOLE_QUEST))
@@ -114,61 +114,61 @@ function j(e) {
                     renderBody: e
                         ? n
                         : () =>
-                              (0, s.jsx)(c.Text, {
+                              (0, o.jsx)(c.Text, {
                                   className: T.microphoneUnitBodyText,
                                   color: 'text-muted',
                                   variant: 'text-xxs/normal',
                                   children: S.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY_ANY_GAME
                               })
                 };
-            let o = g.r.build(t.config).application.name;
+            let s = g.r.build(t.config).application.name;
             return {
-                header: e ? S.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: o }) : S.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: o }),
+                header: e ? S.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: s }) : S.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: s }),
                 renderBody: e
                     ? n
                     : () =>
-                          (0, s.jsx)(c.Text, {
+                          (0, o.jsx)(c.Text, {
                               className: T.microphoneUnitBodyText,
                               color: 'text-muted',
                               variant: 'text-xxs/normal',
-                              children: S.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: o })
+                              children: S.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: s })
                           })
             };
         }, [t, E, r]);
-    return (0, s.jsxs)('div', {
+    return (0, o.jsxs)('div', {
         className: T.microphoneUnit,
         children: [
-            (0, s.jsxs)('div', {
+            (0, o.jsxs)('div', {
                 className: T.microphoneUnitHeader,
                 children: [
-                    (0, s.jsx)(c.CircleWarningIcon, {
+                    (0, o.jsx)(c.CircleWarningIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         className: 0 === E.length ? T.warningCircle : T.errorCircle,
                         width: 16,
                         height: 16
                     }),
-                    (0, s.jsx)(c.Text, {
+                    (0, o.jsx)(c.Text, {
                         variant: 'text-xs/medium',
                         children: A
                     }),
-                    (0, s.jsx)(c.Clickable, {
-                        className: a()(T.microphoneUnitRefreshIconWrapper, { [T.disabled]: v }),
+                    (0, o.jsx)(c.Clickable, {
+                        className: a()(T.microphoneUnitRefreshIconWrapper, { [T.disabled]: N }),
                         onClick: () => j(),
                         children: d.render()
                     })
                 ]
             }),
-            (0, s.jsxs)('div', {
-                className: a()({ [T.opacity_50]: v }),
-                children: [R(), 0 === E.length ? null : (0, s.jsx)(N, { children: i })]
+            (0, o.jsxs)('div', {
+                className: a()({ [T.opacity_50]: N }),
+                children: [R(), 0 === E.length ? null : (0, o.jsx)(v, { children: i })]
             })
         ]
     });
 }
 function A(e) {
     let { text: t } = e;
-    return (0, s.jsx)(c.Text, {
+    return (0, o.jsx)(c.Text, {
         color: 'text-muted',
         variant: 'text-xs/medium',
         children: t
@@ -183,10 +183,10 @@ t.Z = function (e) {
             hasConnectedAccounts: u,
             isProgressingQuestForLaunchedGame: p,
             isQuestComplete: m
-        } = o.useMemo(() => {
+        } = s.useMemo(() => {
             var e;
-            let o = a.xboxAndPlaystationAccounts.length > 0,
-                r = o && (0, C.Bz)(t),
+            let s = a.xboxAndPlaystationAccounts.length > 0,
+                r = s && (0, C.Bz)(t),
                 l = (0, C.zK)(t, h.S7.IN_HOUSE_CONSOLE_QUEST),
                 i = g.r.build(t.config).application.name,
                 c = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
@@ -194,44 +194,44 @@ t.Z = function (e) {
                 steps: [
                     {
                         renderContent: () =>
-                            (0, s.jsx)(E.Q, {
+                            (0, o.jsx)(E.Q, {
                                 ...a,
                                 quest: t
                             }),
-                        isComplete: o || r || c
+                        isComplete: s || r || c
                     },
                     {
-                        renderContent: () => (0, s.jsx)(A, { text: l ? S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({ gameTitle: i }) }),
+                        renderContent: () => (0, o.jsx)(A, { text: l ? S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({ gameTitle: i }) }),
                         isComplete: r || c
                     },
                     {
-                        renderContent: () => (0, s.jsx)(A, { text: S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({ numMinutes: n.targetMinutes }) }),
+                        renderContent: () => (0, o.jsx)(A, { text: S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({ numMinutes: n.targetMinutes }) }),
                         isComplete: c
                     }
                 ],
-                hasConnectedAccounts: o,
+                hasConnectedAccounts: s,
                 isProgressingQuestForLaunchedGame: r,
                 isQuestComplete: c
             };
         }, [a, t, n]);
-    return (0, s.jsxs)('div', {
+    return (0, o.jsxs)('div', {
         className: T.wrapper,
         children: [
-            (0, s.jsx)('div', {
+            (0, o.jsx)('div', {
                 className: T.headingWrapper,
-                children: (0, s.jsx)(c.Heading, {
+                children: (0, o.jsx)(c.Heading, {
                     className: T.heading,
                     variant: 'text-xs/medium',
                     children: S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING
                 })
             }),
-            (0, s.jsxs)('div', {
+            (0, o.jsxs)('div', {
                 className: T.stepsWrapper,
                 children: [
-                    (0, s.jsx)('ul', {
+                    (0, o.jsx)('ul', {
                         children: l.map((e, t) =>
-                            (0, s.jsx)(
-                                v,
+                            (0, o.jsx)(
+                                N,
                                 {
                                     isComplete: e.isComplete,
                                     hasNextStep: t < l.length - 1,
@@ -244,7 +244,7 @@ t.Z = function (e) {
                     u &&
                         !p &&
                         !m &&
-                        (0, s.jsx)(j, {
+                        (0, o.jsx)(j, {
                             useReducedMotion: r,
                             quest: t
                         })

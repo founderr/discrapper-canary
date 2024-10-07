@@ -22,8 +22,8 @@ var s = n(735250),
     x = n(677760),
     C = n(893607),
     v = n(314897),
-    Z = n(82142),
-    S = n(701190),
+    S = n(82142),
+    Z = n(701190),
     R = n(626135),
     O = n(81063),
     b = n(449934),
@@ -34,8 +34,8 @@ var s = n(735250),
     j = n(721751),
     y = n(718182),
     G = n(223543),
-    B = n(73906),
-    U = n(299852),
+    U = n(73906),
+    B = n(299852),
     F = n(39514),
     k = n(236446),
     w = n(9325),
@@ -65,10 +65,10 @@ let et = (0, P.Z)(V.Z),
     eu = (0, P.Z)(X.Z),
     ed = (0, P.Z)(f.Z),
     e_ = (0, P.Z)(q.Z),
-    eh = (0, P.Z)(U.Z),
+    eh = (0, P.Z)(B.Z),
     eE = (0, P.Z)(g.Z),
     ep = (0, P.Z)(T.Z),
-    eg = (0, P.Z)(B.Z),
+    eg = (0, P.Z)(U.Z),
     ef = (0, P.Z)(K.Z),
     em = (0, P.Z)(J.Z),
     eI = (0, P.Z)(Y.Z);
@@ -349,7 +349,7 @@ class eN extends r.PureComponent {
                 : (t[n] = s);
     }
 }
-t.default = l.ZP.connectStores([v.default, S.Z, Z.Z, m.Z, I.Z], (e) => {
+t.default = l.ZP.connectStores([v.default, Z.Z, S.Z, m.Z, I.Z], (e) => {
     var t, n, s;
     let { match: r, location: i } = e,
         a = null == r ? void 0 : null === (t = r.params) || void 0 === t ? void 0 : t.inviteCode,
@@ -362,8 +362,8 @@ t.default = l.ZP.connectStores([v.default, S.Z, Z.Z, m.Z, I.Z], (e) => {
         isAuthenticated: v.default.isAuthenticated(),
         giftCode: c,
         guildTemplateCode: u,
-        gift: null != c ? Z.Z.get(c) : null,
-        invite: null != l ? S.Z.getInvite(l) : null,
+        gift: null != c ? S.Z.get(c) : null,
+        invite: null != l ? Z.Z.getInvite(l) : null,
         guildTemplate: null != u ? I.Z.getGuildTemplate(u) : null,
         hasLoadedExperiments: m.Z.hasLoadedExperiments
     };
