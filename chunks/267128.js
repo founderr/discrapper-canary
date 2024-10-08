@@ -308,33 +308,35 @@ function U(e) {
             }
         })(e, O, x),
         F = i.useMemo(() => (e.compact ? (0, v.Z)((0, g.vc)(l()(), 'LT')) : null), [e.compact]);
-    return (
-        null != n &&
-            null != a &&
-            (t = y.Z.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
-                author: null == a ? void 0 : a.nick,
-                repliedAuthor: null == n ? void 0 : n.nick
-            })),
-        (0, r.jsxs)('div', {
-            id: (0, N.Gq)(o),
-            className: s()(D.repliedMessage, F, { [D.messageSpine]: !T || (!h && p) }),
-            'aria-label': t,
-            children: [
-                T &&
-                    h &&
-                    p &&
-                    (0, r.jsx)(u.Clickable, {
-                        tag: 'div',
-                        'aria-label': y.Z.Messages.JUMP_TO_REPLY,
-                        className: s()(D.repliedMessageClickableSpine, { [D.repliedMessageContentHovered]: O }),
-                        onClick: e.onClickReply,
-                        onMouseEnter: x,
-                        onMouseLeave: x
-                    }),
-                G,
-                k,
-                B
-            ]
-        })
-    );
+    null != n &&
+        null != a &&
+        (t = y.Z.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
+            author: null == a ? void 0 : a.nick,
+            repliedAuthor: null == n ? void 0 : n.nick
+        }));
+    let V = o.type === L.uaV.CONTEXT_MENU_COMMAND;
+    return (0, r.jsxs)('div', {
+        id: (0, N.Gq)(o),
+        className: s()(D.repliedMessage, F, {
+            [D.messageSpine]: !T || (!h && p),
+            [D.contextCommandMessage]: V
+        }),
+        'aria-label': t,
+        children: [
+            T &&
+                h &&
+                p &&
+                (0, r.jsx)(u.Clickable, {
+                    tag: 'div',
+                    'aria-label': y.Z.Messages.JUMP_TO_REPLY,
+                    className: s()(D.repliedMessageClickableSpine, { [D.repliedMessageContentHovered]: O }),
+                    onClick: e.onClickReply,
+                    onMouseEnter: x,
+                    onMouseLeave: x
+                }),
+            G,
+            k,
+            B
+        ]
+    });
 }
