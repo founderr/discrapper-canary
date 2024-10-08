@@ -1,38 +1,39 @@
-L.r(_),
-    L.d(_, {
+a.r(e),
+    a.d(e, {
         default: function () {
-            return t;
+            return _;
         }
     });
-var e = L(735250);
-L(470079);
-var s = L(979554),
-    A = L(98278),
-    a = L(790527),
-    O = L(474936),
-    R = L(689938),
-    n = L(227782),
-    c = L(358044);
-function t(E) {
-    let { collectableType: _, onClose: L, analyticsSource: t, analyticsLocation: P, onSecondaryClick: I, ...M } = E;
-    return _ === s.Z.AVATAR_DECORATION || _ === s.Z.PROFILE_EFFECT
-        ? (0, e.jsx)(a.Z, {
-              artURL: _ === s.Z.AVATAR_DECORATION ? n.Z : c.Z,
-              type: O.cd.CUSTOM_PROFILE_UPSELL,
-              title: _ === s.Z.AVATAR_DECORATION ? R.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_MODAL_UPSELL_TITLE : R.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_MODAL_UPSELL_TITLE,
-              body: _ === s.Z.AVATAR_DECORATION ? R.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_MODAL_UPSELL_DESCRIPTION : R.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_MODAL_UPSELL_DESCRIPTION,
-              glowUp: _ === s.Z.AVATAR_DECORATION ? R.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_MODAL_UPSELL_DESCRIPTION : R.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_MODAL_UPSELL_DESCRIPTION,
+var n = a(735250);
+a(470079);
+var d = a(979554),
+    t = a(98278),
+    s = a(792254),
+    A = a(790527),
+    f = a(474936),
+    o = a(689938);
+function _(c) {
+    let { collectableType: e, onClose: a, analyticsSource: _, analyticsLocation: E, onSecondaryClick: L, ...p } = c,
+        b = e === d.Z.AVATAR_DECORATION || e === d.Z.PROFILE_EFFECT,
+        R = (0, s.Z)(e === d.Z.AVATAR_DECORATION ? f.cd.AVATAR_DECORATION_MODAL_UPSELL : f.cd.PROFILE_EFFECT_MODAL_UPSELL);
+    return b
+        ? (0, n.jsx)(A.Z, {
+              artURL: R,
+              type: e === d.Z.AVATAR_DECORATION ? f.cd.AVATAR_DECORATION_MODAL_UPSELL : f.cd.PROFILE_EFFECT_MODAL_UPSELL,
+              title: e === d.Z.AVATAR_DECORATION ? o.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_MODAL_UPSELL_TITLE : o.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_MODAL_UPSELL_TITLE,
+              body: e === d.Z.AVATAR_DECORATION ? o.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_MODAL_UPSELL_DESCRIPTION : o.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_MODAL_UPSELL_DESCRIPTION,
+              glowUp: e === d.Z.AVATAR_DECORATION ? o.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_MODAL_UPSELL_DESCRIPTION : o.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_MODAL_UPSELL_DESCRIPTION,
               onSecondaryClick: () => {
-                  I(), (0, A.$)(L);
+                  L(), (0, t.$)(a);
               },
-              secondaryCTA: R.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
-              onClose: L,
+              secondaryCTA: o.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
+              onClose: a,
               enableArtBoxShadow: !1,
-              analyticsSource: t,
-              analyticsLocation: P,
+              analyticsSource: _,
+              analyticsLocation: E,
               hideBackButton: !0,
               showEnhancedUpsell: !0,
-              ...M
+              ...p
           })
         : null;
 }
