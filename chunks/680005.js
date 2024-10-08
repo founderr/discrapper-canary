@@ -36,7 +36,7 @@ function S(n) {
                   children: [s, v.Z.Messages.STOREFRONT_SUBSCRIBE_FOR.format({ rate: (0, f.xg)(o) })]
               })
           })
-        : (0, l.jsx)(N, {
+        : (0, l.jsx)(g, {
               className: t,
               children: c
           });
@@ -52,12 +52,12 @@ function h(n) {
             });
         },
         h = (0, p.M)(s.id),
-        g = s.type === m.epS.DURABLE && h,
-        { price: T } = s;
-    return null == T
+        N = s.type === m.epS.DURABLE && h,
+        { price: Z } = s;
+    return null == Z
         ? null
-        : g
-          ? (0, l.jsx)(N, {
+        : N
+          ? (0, l.jsx)(g, {
                 className: t,
                 children: v.Z.Messages.COLLECTIBLES_ALREADY_OWNED
             })
@@ -70,7 +70,7 @@ function h(n) {
                 className: t,
                 children: (0, l.jsxs)('div', {
                     className: I.btnContent,
-                    children: [c, v.Z.Messages.STOREFRONT_PURCHASE_FOR.format({ price: (0, f.T4)(T.amount, T.currency) })]
+                    children: [c, v.Z.Messages.STOREFRONT_PURCHASE_FOR.format({ price: (0, f.T4)(Z.amount, Z.currency) })]
                 })
             });
 }
@@ -97,7 +97,7 @@ function x(n) {
         }
     });
 }
-function N(n) {
+function g(n) {
     let { className: e, children: t } = n;
     return (0, l.jsx)(r.Button, {
         disabled: !0,

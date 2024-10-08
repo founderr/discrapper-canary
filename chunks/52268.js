@@ -28,23 +28,23 @@ let x = () => 80,
             children: t
         });
     },
-    Z = (e) => {
+    A = (e) => {
         var t;
         let { user: n, profileEffect: i, innerRef: l, section: o, isSelected: u, ...I } = e,
             x = (0, _.V)(i.id),
-            Z = (0, c.e7)([f.Z], () => {
+            A = (0, c.e7)([f.Z], () => {
                 let e = f.Z.getProduct(i.skuId);
                 return (0, m.G1)(e);
             }),
-            A = (0, m.Yq)(i.skuId),
-            T = s.useRef(null),
+            T = (0, m.Yq)(i.skuId),
+            Z = s.useRef(null),
             { accessibilityLabel: N, thumbnailPreviewSrc: S, title: j } = null !== (t = null == x ? void 0 : x.config) && void 0 !== t ? t : {},
             R = p.ZP.canUseCollectibles(n),
             M = o === h.$0.PREMIUM_PURCHASE && !R,
             L = (0, E.Mu)('ProfileEffectPresetItem');
         return (0, r.jsxs)(P, {
             className: !M || u || L ? void 0 : v.decorationGridItemChurned,
-            innerRef: null != l ? l : T,
+            innerRef: null != l ? l : Z,
             isSelected: u,
             ...I,
             children: [
@@ -60,7 +60,7 @@ let x = () => 80,
                 }),
                 o === h.$0.PURCHASE || (o === h.$0.PREMIUM_PURCHASE && R)
                     ? null
-                    : A
+                    : T
                       ? (0, r.jsx)(d.PremiumBadge, {
                             className: v.newBadge,
                             text: (0, r.jsxs)('div', {
@@ -75,7 +75,7 @@ let x = () => 80,
                             })
                         })
                       : (0, r.jsx)(d.IconBadge, {
-                            icon: Z
+                            icon: A
                                 ? () =>
                                       (0, r.jsx)(d.NitroWheelIcon, {
                                           size: 'custom',
@@ -168,7 +168,7 @@ t.Z = (e) => {
                     .otherwise((e) => {
                         let n = s === e.id;
                         return (0, r.jsx)(
-                            Z,
+                            A,
                             {
                                 user: t,
                                 style: { ...u },

@@ -20,15 +20,15 @@ var l = t(735250),
     I = t(938337);
 function S(n) {
     var e;
-    let { appId: t, subscriptionType: S, onClose: h, skuId: x, guildId: N, transitionState: g, onHeaderTitleClick: T } = n,
-        { data: Z } = (0, u.H)(x),
-        { data: E } = (0, s.Z)(x),
+    let { appId: t, subscriptionType: S, onClose: h, skuId: x, guildId: g, transitionState: N, onHeaderTitleClick: Z } = n,
+        { data: E } = (0, u.H)(x),
+        { data: T } = (0, s.Z)(x),
         C = i.useMemo(() => {
             var n;
-            return (null == E ? void 0 : E.thumbnail) != null && null !== (n = p.Z.toURLSafe((0, f._W)(t, E.thumbnail, 256))) && void 0 !== n ? n : void 0;
-        }, [t, null == E ? void 0 : E.thumbnail]),
+            return (null == T ? void 0 : T.thumbnail) != null && null !== (n = p.Z.toURLSafe((0, f._W)(t, T.thumbnail, 256))) && void 0 !== n ? n : void 0;
+        }, [t, null == T ? void 0 : T.thumbnail]),
         _ = i.useMemo(() => {
-            let n = null == E ? void 0 : E.benefits;
+            let n = null == T ? void 0 : T.benefits;
             if (null != n && 0 !== n.length)
                 return n.map((n) => ({
                     id: n.id,
@@ -36,32 +36,32 @@ function S(n) {
                     description: n.description,
                     icon: (0, c.n)(t, n.icon)
                 }));
-        }, [t, null == E ? void 0 : E.benefits]),
+        }, [t, null == T ? void 0 : T.benefits]),
         {
             openModal: A,
-            canOpenModal: O,
-            cannotOpenReason: R
+            canOpenModal: b,
+            cannotOpenReason: O
         } = (0, d.Z)({
             skuId: x,
-            guildId: N,
+            guildId: g,
             showBenefitsFirst: !1
         });
-    return null == E || null == Z || 0 === Z.length
+    return null == T || null == E || 0 === E.length
         ? null
         : (0, l.jsx)(m.A, {
               appId: t,
               skuId: x,
-              transitionState: g,
-              onHeaderTitleClick: null != T ? T : h,
+              transitionState: N,
+              onHeaderTitleClick: null != Z ? Z : h,
               onClose: h,
               footer: (0, l.jsx)(v.p, {
                   onClick: A,
                   appId: t,
                   subscriptionType: S,
                   skuId: x,
-                  subscriptionPlan: Z[0],
-                  canPurchase: O,
-                  cannotPurchaseReason: R
+                  subscriptionPlan: E[0],
+                  canPurchase: b,
+                  cannotPurchaseReason: O
               }),
               children: (0, l.jsx)(I.i, {
                   appId: t,
@@ -80,9 +80,9 @@ function S(n) {
                                 )
                             )
                           : void 0,
-                  description: null !== (e = E.description) && void 0 !== e ? e : void 0,
+                  description: null !== (e = T.description) && void 0 !== e ? e : void 0,
                   imgSrc: C,
-                  title: Z[0].name,
+                  title: E[0].name,
                   tag: (0, l.jsx)(a.Z, { type: S }),
                   FallbackIcon: o.BadgeIcon
               })

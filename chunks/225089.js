@@ -14,7 +14,7 @@ var s = a(481060),
     u = a(689938),
     d = a(892532);
 function A(e) {
-    let { user: n, displayProfile: a, guildId: A, canUsePremiumCustomization: E, pendingBanner: _, isTryItOutFlow: I, disabledInputs: P, onUpsellClick: p } = e,
+    let { user: n, displayProfile: a, guildId: A, canUsePremiumCustomization: E, pendingBanner: _, isTryItOutFlow: I, disabledInputs: p, onUpsellClick: P } = e,
         v = E || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || !1,
         m = v ? s.PencilIcon : s.NitroWheelIcon,
         N = (0, r.Mu)('ProfileCustomizationPreviewBanner', v);
@@ -26,11 +26,11 @@ function A(e) {
         pendingBanner: _,
         canUsePremiumProfileCustomization: E,
         children:
-            !P &&
+            !p &&
             (0, i.jsxs)(s.Clickable, {
                 onClick: () => {
                     if (!v && !N) {
-                        null == p || p();
+                        null == P || P();
                         return;
                     }
                     (0, l.$r)(t.pC.BANNER, A, I);

@@ -18,7 +18,7 @@ var i = t(442837),
     m = t(566809);
 function v(n) {
     let { appId: e, skuId: t, transitionState: v, onClose: I, onHeaderTitleClick: S, children: h, footer: x } = n,
-        N = (0, i.e7)(
+        g = (0, i.e7)(
             [o.Z, a.Z],
             () => {
                 var n;
@@ -26,9 +26,9 @@ function v(n) {
             },
             [e]
         );
-    if (null == N) return null;
-    let g = (0, u.y)(N, 25),
-        { termsOfServiceUrl: T, privacyPolicyUrl: Z } = N;
+    if (null == g) return null;
+    let N = (0, u.y)(g, 25),
+        { termsOfServiceUrl: Z, privacyPolicyUrl: E } = g;
     return (0, l.jsxs)(r.ModalRoot, {
         transitionState: v,
         size: r.ModalSize.DYNAMIC,
@@ -41,15 +41,15 @@ function v(n) {
                         className: p.modalTitle,
                         onClick: S,
                         children: [
-                            null != g &&
+                            null != N &&
                                 (0, l.jsx)('img', {
-                                    src: g.href,
+                                    src: N.href,
                                     alt: '',
                                     className: m.appIcon
                                 }),
                             (0, l.jsx)(r.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: N.name
+                                children: g.name
                             })
                         ]
                     }),
@@ -63,13 +63,13 @@ function v(n) {
             (0, l.jsxs)(r.ModalFooter, {
                 className: m.footer,
                 children: [
-                    null != T && null != Z
+                    null != Z && null != E
                         ? (0, l.jsx)(r.Text, {
                               color: 'header-primary',
                               variant: 'text-sm/normal',
                               children: f.Z.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
-                                  tosUrl: T,
-                                  ppUrl: Z
+                                  tosUrl: Z,
+                                  ppUrl: E
                               })
                           })
                         : (0, l.jsx)(r.Text, {

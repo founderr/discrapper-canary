@@ -21,8 +21,8 @@ var s = a(481060),
     E = a(486324),
     _ = a(689938),
     I = a(821774),
-    P = a(842786),
-    p = a(89671);
+    p = a(842786),
+    P = a(89671);
 function v(e, n) {
     let r = t.default.getCurrentUser();
     return (
@@ -49,7 +49,7 @@ function v(e, n) {
 function m(e) {
     let { user: n, uploadType: a, imageSrc: s, onClose: t, analyticsSource: A, analyticsLocation: v, onSecondaryClick: m, ...N } = e,
         C = (0, o.ZP)(n.id),
-        { primaryColor: f, secondaryColor: T } = (0, l.Z)({
+        { primaryColor: T, secondaryColor: f } = (0, l.Z)({
             user: n,
             displayProfile: C,
             pendingAvatar: a === E.pC.AVATAR ? s : void 0,
@@ -59,14 +59,14 @@ function m(e) {
         R = null != s;
     return L
         ? (0, i.jsx)(u.Z, {
-              artURL: R || a === E.pC.AVATAR ? void 0 : p.Z,
+              artURL: R || a === E.pC.AVATAR ? void 0 : P.Z,
               artElement:
                   R || a !== E.pC.AVATAR
                       ? void 0
                       : (0, i.jsx)('img', {
                             className: I.avatarImage,
                             alt: '',
-                            src: P
+                            src: p
                         }),
               modalClassName: R ? I.modal : void 0,
               modalContentClassName: R ? I.modalContent : void 0,
@@ -94,7 +94,7 @@ function m(e) {
                             disabledInputs: !0,
                             pendingAvatar: a === E.pC.AVATAR ? s : void 0,
                             pendingBanner: a === E.pC.BANNER ? s : void 0,
-                            pendingThemeColors: [f, T],
+                            pendingThemeColors: [T, f],
                             hideExampleButton: !0
                         })
                     })

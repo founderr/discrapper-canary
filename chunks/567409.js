@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return I;
+        return m;
     }
 }),
     t(47120);
@@ -15,7 +15,7 @@ var a = t(470079),
     u = t(206583);
 let _ = new Set([i.s.PLAYED_GAME]),
     E = (e) => _.has(e.content_type);
-function I() {
+function m() {
     let e = (0, c.Z)(u.YN.GAME_PROFILE_FEED),
         n = (0, c.Z)(u.YN.GLOBAL_FEED),
         t = a.useMemo(

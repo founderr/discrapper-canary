@@ -9,8 +9,8 @@ var a = t(735250),
     u = t(297781),
     _ = t(592125),
     E = t(944486),
-    I = t(594174),
-    m = t(5192),
+    m = t(594174),
+    I = t(5192),
     A = t(810568),
     p = t(689938),
     g = t(501345),
@@ -18,11 +18,11 @@ var a = t(735250),
 n.Z = (e) => {
     let { entry: n, viewId: t, officialGuildId: s, onClose: T } = e,
         O = (0, o.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        N = (0, o.e7)([I.default], () => I.default.getUser(n.author_id)),
-        { nick: R, avatar: P } = r.useMemo(() => {
+        N = (0, o.e7)([m.default], () => m.default.getUser(n.author_id)),
+        { nick: R, avatar: h } = r.useMemo(() => {
             let e = null == N ? void 0 : N.getAvatarURL(null == O ? void 0 : O.guild_id, 48, !1);
             return {
-                nick: m.ZP.getName(null == O ? void 0 : O.guild_id, null == O ? void 0 : O.id, N),
+                nick: I.ZP.getName(null == O ? void 0 : O.guild_id, null == O ? void 0 : O.id, N),
                 avatar: e
             };
         }, [N, O]);
@@ -78,7 +78,7 @@ n.Z = (e) => {
                               children: [
                                   (0, a.jsx)('img', {
                                       className: g.avatar,
-                                      src: P,
+                                      src: h,
                                       alt: p.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: R })
                                   }),
                                   (0, a.jsx)('div', {

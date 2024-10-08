@@ -17,13 +17,13 @@ var s = a(120356),
     E = a(150039),
     _ = a(450734),
     I = a(225089),
-    P = a(853726),
-    p = a(165747),
+    p = a(853726),
+    P = a(165747),
     v = a(981631),
     m = a(228168),
     N = a(706995);
 function C(e) {
-    let { user: n, guild: a, canUsePremiumCustomization: s, onUpsellClick: C, pendingBanner: f, pendingBio: T, pendingPronouns: L, pendingAvatar: R, pendingAvatarDecoration: M, pendingNickname: Z, pendingGlobalName: S, pendingThemeColors: g, pendingProfileEffectId: h, avatarClassName: U, containerClassName: x, isTryItOutFlow: j = !1, disabledInputs: y = !1, hideCustomStatus: O = !1, hideBioSection: B = !1, hideMessageInput: b = !0, hideExampleButton: w = !1 } = e,
+    let { user: n, guild: a, canUsePremiumCustomization: s, onUpsellClick: C, pendingBanner: T, pendingBio: f, pendingPronouns: L, pendingAvatar: R, pendingAvatarDecoration: M, pendingNickname: S, pendingGlobalName: Z, pendingThemeColors: g, pendingProfileEffectId: h, avatarClassName: U, containerClassName: x, isTryItOutFlow: j = !1, disabledInputs: y = !1, hideCustomStatus: O = !1, hideBioSection: B = !1, hideMessageInput: b = !0, hideExampleButton: w = !1 } = e,
         D = (0, t.ZP)(n.id, null == a ? void 0 : a.id),
         { avatarSrc: k, avatarDecorationSrc: V } = (0, u.Z)({
             user: n,
@@ -60,7 +60,7 @@ function C(e) {
                         displayProfile: D,
                         guildId: null == a ? void 0 : a.id,
                         canUsePremiumCustomization: s,
-                        pendingBanner: f,
+                        pendingBanner: T,
                         isTryItOutFlow: j,
                         disabledInputs: y,
                         onUpsellClick: () => (null == C ? void 0 : C({ object: v.qAy.EDIT_PROFILE_BANNER }))
@@ -86,19 +86,19 @@ function C(e) {
                         })
                 ]
             }),
-            (0, i.jsx)(P.Z, {
+            (0, i.jsx)(p.Z, {
                 user: n,
                 displayProfile: D,
                 guild: a,
                 pendingAvatar: R,
-                pendingNickname: Z,
-                pendingGlobalName: S,
-                pendingBio: T,
+                pendingNickname: S,
+                pendingGlobalName: Z,
+                pendingBio: f,
                 pendingPronouns: L,
                 isTryItOutFlow: j,
                 hideBioSection: B
             }),
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(P.Z, {
                 user: n,
                 hideMessageInput: b,
                 hideExampleButton: w

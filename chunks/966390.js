@@ -10,8 +10,8 @@ var a = t(481060),
     u = t(141795),
     _ = t(476326),
     E = t(680287),
-    I = t(163268),
-    m = t(539573),
+    m = t(163268),
+    I = t(539573),
     A = t(786761),
     p = t(3148),
     g = t(48854),
@@ -20,8 +20,8 @@ var a = t(481060),
     O = t(623292),
     N = t(807092),
     R = t(467798),
-    P = t(703558),
-    h = t(117530),
+    h = t(703558),
+    P = t(117530),
     C = t(630388),
     L = t(226351),
     M = t(981631),
@@ -91,7 +91,7 @@ async function v(e) {
                 }),
                 n === M.evJ.EXPLICIT_CONTENT)
             ) {
-                i.Z.sendExplicitMediaClydeError(_, null == t ? void 0 : t.attachments, I.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                i.Z.sendExplicitMediaClydeError(_, null == t ? void 0 : t.attachments, m.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                 return;
             }
             if (n === M.evJ.AUTOMOD_MESSAGE_BLOCKED) {
@@ -111,7 +111,7 @@ async function v(e) {
                               };
                 (0, l.openUploadError)({
                     title: S.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-                    help: (0, m.uF)(a, e)
+                    help: (0, I.uF)(a, e)
                 });
                 return;
             }
@@ -133,8 +133,8 @@ async function v(e) {
                         help: null !== (E = null == t ? void 0 : t.message) && void 0 !== E ? E : S.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
                     });
                 }
-                '' !== y.content && '' === P.Z.getDraft(_, x) && s.Z.saveDraft(_, y.content, x),
-                    0 === h.Z.getUploadCount(_, x) &&
+                '' !== y.content && '' === h.Z.getDraft(_, x) && s.Z.saveDraft(_, y.content, x),
+                    0 === P.Z.getUploadCount(_, x) &&
                         o.Z.setUploads({
                             channelId: _,
                             uploads: v,
@@ -179,18 +179,18 @@ n.Z = {
     },
     upload: function e(n) {
         let { channelId: t, file: o, draftType: c, message: d, hasSpoiler: u, filename: _ } = n,
-            m = {
+            I = {
                 content: '',
                 tts: !1,
                 hasSpoiler: u,
                 filename: _
             };
         if (null != d) {
-            (m.content = d.content), (m.tts = d.tts), (m.channel_id = d.channel_id);
+            (I.content = d.content), (I.tts = d.tts), (I.channel_id = d.channel_id);
             let e = N.Z.getPendingReply(t);
             if (null != e) {
                 let n = i.Z.getSendMessageOptionsForReply(e);
-                (m.type = M.uaV.REPLY), (m.message_reference = n.messageReference), (m.allowed_mentions = n.allowedMentions), (0, O.A6)(t);
+                (I.type = M.uaV.REPLY), (I.message_reference = n.messageReference), (I.allowed_mentions = n.allowedMentions), (0, O.A6)(t);
             }
         }
         let A = new E.Z(M.ANM.MESSAGES(t));
@@ -222,7 +222,7 @@ n.Z = {
                     }),
                     u === M.evJ.EXPLICIT_CONTENT)
                 ) {
-                    i.Z.sendExplicitMediaClydeError(t, null == _ ? void 0 : _.attachments, I.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                    i.Z.sendExplicitMediaClydeError(t, null == _ ? void 0 : _.attachments, m.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                     return;
                 }
                 (0, l.openUploadError)({
@@ -239,7 +239,7 @@ n.Z = {
                         }
                     })
                 }),
-                    '' !== m.content && '' === P.Z.getDraft(t, c) && s.Z.saveDraft(t, m.content, c);
+                    '' !== I.content && '' === h.Z.getDraft(t, c) && s.Z.saveDraft(t, I.content, c);
             }),
             A.on('complete', (e) => {
                 r.Z.dispatch({
@@ -248,7 +248,7 @@ n.Z = {
                     file: e
                 });
             }),
-            A.upload(o, m);
+            A.upload(o, I);
     },
     uploadFiles: v,
     cancel(e) {
@@ -258,12 +258,12 @@ n.Z = {
         }),
             null != e.draftContent &&
                 null != e.channelId &&
-                '' === P.Z.getDraft(e.channelId, P.d.ChannelMessage) &&
+                '' === h.Z.getDraft(e.channelId, h.d.ChannelMessage) &&
                 r.Z.dispatch({
                     type: 'DRAFT_SAVE',
                     channelId: e.channelId,
                     draft: e.draftContent,
-                    draftType: P.d.ChannelMessage
+                    draftType: h.d.ChannelMessage
                 });
     }
 };

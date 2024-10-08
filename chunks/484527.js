@@ -15,8 +15,8 @@ var a = t(735250),
     u = t(652898),
     _ = t(93093),
     E = t(768581),
-    I = t(810568),
-    m = t(981631),
+    m = t(810568),
+    I = t(981631),
     A = t(689938),
     p = t(51527),
     g = t(479537);
@@ -91,12 +91,12 @@ function f(e) {
             (0, a.jsx)(c.Button, {
                 color: c.ButtonColors.PRIMARY,
                 onClick: () => {
-                    t(I.as.JoinOfficialServer),
+                    t(m.as.JoinOfficialServer),
                         d.Z.dispatch({
                             type: 'INVITE_MODAL_OPEN',
                             invite: f,
                             code: f.code,
-                            context: m.IlC.APP
+                            context: I.IlC.APP
                         });
                 },
                 children: O ? A.Z.Messages.JOINED_GUILD : A.Z.Messages.JOIN_GUILD

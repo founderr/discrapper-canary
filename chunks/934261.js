@@ -20,8 +20,8 @@ var s = n(442837),
     C = n(55935),
     x = n(74538),
     P = n(689938),
-    Z = n(173936);
-let A = (e) => {
+    A = n(173936);
+let T = (e) => {
         var t;
         let { effectIsOwned: n, pendingProfileEffectRecord: l, product: c, purchase: d } = e,
             u = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
@@ -31,39 +31,39 @@ let A = (e) => {
             h = (0, a.qS)(d),
             I = (0, a.G1)(c),
             g = !p && h,
-            A = (null == d ? void 0 : d.expiresAt) != null ? (0, C.TD)(Date.now(), d.expiresAt) : null,
+            T = (null == d ? void 0 : d.expiresAt) != null ? (0, C.TD)(Date.now(), d.expiresAt) : null,
             N = (0, f.Mu)('ProfileEffectDescription', !I || p),
-            S = T(g, I, p, N);
+            S = Z(g, I, p, N);
         return null != l
             ? (0, r.jsx)('div', {
-                  className: n ? Z.effectDescriptionNoGradient : Z.effectDescriptionBorderWithGradient,
+                  className: n ? A.effectDescriptionNoGradient : A.effectDescriptionBorderWithGradient,
                   children: (0, r.jsxs)('div', {
-                      className: Z.effectDescriptionContainer,
+                      className: A.effectDescriptionContainer,
                       children: [
                           (0, r.jsx)(i.Text, {
                               color: 'header-primary',
                               variant: 'text-sm/semibold',
-                              className: Z.effectName,
+                              className: A.effectName,
                               children: null !== (t = null == d ? void 0 : d.name) && void 0 !== t ? t : null == m ? void 0 : m.name
                           }),
                           (0, r.jsx)(i.Text, {
                               color: 'text-normal',
                               variant: 'text-sm/normal',
-                              className: Z.effectDescription,
+                              className: A.effectDescription,
                               children: null != d ? d.summary : S
                           }),
-                          null != A &&
+                          null != T &&
                               (0, r.jsx)(i.Text, {
                                   variant: 'text-xxs/normal',
                                   color: 'text-muted',
-                                  className: Z.effectPurchasedAt,
-                                  children: P.Z.Messages.COLLECTIBLES_DAYS_LEFT.format({ days: A.days.toString() })
+                                  className: A.effectPurchasedAt,
+                                  children: P.Z.Messages.COLLECTIBLES_DAYS_LEFT.format({ days: T.days.toString() })
                               }),
                           null != d &&
                               (0, r.jsxs)(i.Text, {
                                   variant: 'text-xxs/normal',
                                   color: 'text-muted',
-                                  className: Z.effectPurchasedAt,
+                                  className: A.effectPurchasedAt,
                                   children: [
                                       P.Z.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
                                           date: d.purchasedAt.toLocaleDateString(E, {
@@ -92,7 +92,7 @@ let A = (e) => {
                               (0, r.jsx)(i.Text, {
                                   variant: 'text-xxs/normal',
                                   color: 'text-muted',
-                                  className: Z.effectPurchasedAt,
+                                  className: A.effectPurchasedAt,
                                   children: P.Z.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC
                               })
                       ]
@@ -100,7 +100,7 @@ let A = (e) => {
               })
             : null;
     },
-    T = (e, t, n, r) => {
+    Z = (e, t, n, r) => {
         if (e) return P.Z.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED;
         if (t && n) return P.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM;
         if (t && !n) return r ? P.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_INLINE_UPSELL_DESCRIPTION : P.Z.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER;
@@ -113,7 +113,7 @@ t.Z = (e) => {
             pendingGlobalName: v,
             pendingNickname: C,
             pendingPronouns: P,
-            pendingBio: T,
+            pendingBio: Z,
             pendingBanner: N,
             pendingAvatar: S,
             pendingAvatarDecoration: j,
@@ -128,14 +128,14 @@ t.Z = (e) => {
         L = x.ZP.isPremium(n),
         O = x.ZP.canUsePremiumProfileCustomization(n),
         y = (0, p.ZP)(n.id),
-        b = !!(null == y ? void 0 : y.getPreviewBio(T).value),
+        b = !!(null == y ? void 0 : y.getPreviewBio(Z).value),
         B = {
             user: n,
             guild: _,
             pendingGlobalName: v,
             pendingNickname: C,
             pendingPronouns: P,
-            pendingBio: h.dN.useSetting() && null != T ? u.ZP.parse(void 0, T).content : T,
+            pendingBio: h.dN.useSetting() && null != Z ? u.ZP.parse(void 0, Z).content : Z,
             pendingBanner: N,
             useLargeBanner: !0,
             pendingAvatar: S,
@@ -150,7 +150,7 @@ t.Z = (e) => {
             onBannerChange: E.g_
         };
     return (0, r.jsxs)('div', {
-        className: Z.previewContainer,
+        className: A.previewContainer,
         children: [
             (0, r.jsx)(m.Z, {
                 ...B,
@@ -158,7 +158,7 @@ t.Z = (e) => {
                 hideCustomStatus: !0
             }),
             !1,
-            (0, r.jsx)(A, {
+            (0, r.jsx)(T, {
                 effectIsOwned: o,
                 pendingProfileEffectRecord: i,
                 product: a,
