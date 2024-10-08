@@ -63,7 +63,6 @@ function S(e) {
             (0, i.jsx)('div', {
                 className: T.list,
                 children: (0, i.jsx)(h.Z, {
-                    inGlobalDiscovery: !0,
                     width: o,
                     variant: (0, m.s)(a, m.Bj.GLOBAL_DISCOVERY),
                     onScroll: t,
