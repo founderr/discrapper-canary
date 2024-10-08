@@ -45,8 +45,10 @@ let p = s.memo(function (e) {
                     channel: m,
                     compact: _,
                     setPopout: T,
-                    referencedUsernameProfile: C,
-                    referencedAvatarProfile: I,
+                    messagePopouts: {
+                        referencedAvatarProfile: I,
+                        referencedUsernameProfile: C
+                    },
                     replyReference: p.messageReference,
                     replyMessage: S,
                     isReplySpineClickable: !1,

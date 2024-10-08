@@ -176,8 +176,7 @@ function X(e) {
                     (0, G.Z)({
                         ...e,
                         setPopout: X,
-                        referencedUsernameProfile: K.referencedAvatarProfile,
-                        referencedAvatarProfile: K.referencedAvatarProfile,
+                        messagePopouts: K,
                         replyReference: N,
                         replyMessage: $,
                         isReplySpineClickable: !0
@@ -317,8 +316,7 @@ t.ZP = s.memo(function (e) {
                             : (0, G.Z)({
                                   ...e,
                                   setPopout: ec,
-                                  referencedUsernameProfile: er.referencedAvatarProfile,
-                                  referencedAvatarProfile: er.referencedAvatarProfile,
+                                  messagePopouts: er,
                                   replyReference: et,
                                   replyMessage: el,
                                   isReplySpineClickable: !0

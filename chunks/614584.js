@@ -131,20 +131,21 @@ let S = s.memo(function (e) {
     });
 });
 function v(e) {
-    let { message: t, channel: n, compact: s, setPopout: a, referencedUsernameProfile: l, referencedAvatarProfile: r, replyReference: o, replyMessage: c, isReplySpineClickable: u, showReplySpine: d = !0 } = e,
-        h =
-            null != o &&
+    let { message: t, channel: n, compact: s, setPopout: a, messagePopouts: l, replyReference: r, replyMessage: o, isReplySpineClickable: c, showReplySpine: u = !0 } = e,
+        { referencedUsernameProfile: d, referencedAvatarProfile: h } = l,
+        p =
+            null != r &&
             (0, i.jsx)(S, {
                 baseMessage: t,
-                replyReference: o,
-                referencedMessage: c,
+                replyReference: r,
+                referencedMessage: o,
                 channel: n,
                 compact: s,
                 setPopout: a,
-                referencedUsernameProfile: l,
-                referencedAvatarProfile: r,
-                isReplySpineClickable: u,
-                showReplySpine: d
+                referencedUsernameProfile: d,
+                referencedAvatarProfile: h,
+                isReplySpineClickable: c,
+                showReplySpine: u
             });
-    return (0, i.jsx)(i.Fragment, { children: h });
+    return (0, i.jsx)(i.Fragment, { children: p });
 }
