@@ -18,6 +18,9 @@ class _ extends (r = o.ZP.Store) {
     getGame(e) {
         return u.get(e);
     }
+    getGames(e) {
+        return e.map((e) => u.get(e));
+    }
     getLocalizedName(e) {
         var t;
         return null === (t = u.get(e)) || void 0 === t ? void 0 : t.name;
