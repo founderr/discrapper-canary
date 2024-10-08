@@ -73,7 +73,7 @@ function N(e, t) {
         })(n, a));
     let { query: o, mode: c, tokens: u, cursorScope: d } = i,
         { autocompletes: h } = i;
-    (h = L(e, c)),
+    (h = b(e, c)),
         (g[e] = T({
             searchId: e,
             query: o,
@@ -135,7 +135,7 @@ function v(e) {
         results: r
     };
 }
-function L(e, t) {
+function b(e, t) {
     let n = [];
     return (
         t.type === S.Sap.FILTER
@@ -195,7 +195,7 @@ function L(e, t) {
         n
     );
 }
-function b() {
+function L() {
     (0, f.WU)();
 }
 function O(e) {
@@ -221,7 +221,7 @@ function A() {
         mode: n,
         tokens: r,
         cursorScope: i,
-        autocompletes: L(e, n)
+        autocompletes: b(e, n)
     });
 }
 class P extends (r = a.ZP.Store) {
@@ -253,10 +253,10 @@ let Z = new P(o.Z, {
             c = R[r],
             u = !0;
         if (s === o.query && (null == o.mode || o.mode.filter === a.filter)) (n = o.autocompletes), (u = !1);
-        else if (a.type === S.Sap.EMPTY || (a.type === S.Sap.FILTER && a.filter !== S.dCx.FILTER_FROM && a.filter !== S.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = L(r, a));
+        else if (a.type === S.Sap.EMPTY || (a.type === S.Sap.FILTER && a.filter !== S.dCx.FILTER_FROM && a.filter !== S.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = b(r, a));
         else if (null != c) {
             let { token: e } = a;
-            null != e && e.getFullMatch().trim().length > 0 ? (_.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = o.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = L(r, a)));
+            null != e && e.getFullMatch().trim().length > 0 ? (_.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = o.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = b(r, a)));
         }
         return (
             (g[r] = T({
@@ -275,10 +275,9 @@ let Z = new P(o.Z, {
             n = R[t];
         null != n && (n.context.destroy(), (n.results = []), delete R[t]), delete g[t];
     },
-    CHANNEL_CREATE: b,
-    CHANNEL_DELETE: b,
+    CHANNEL_CREATE: L,
+    CHANNEL_DELETE: L,
     STREAMER_MODE_UPDATE: A,
-    SEARCH_MODAL_OPEN: A,
     SEARCH_SCREEN_OPEN: A,
     SEARCH_CLEAR_HISTORY: function (e) {
         let { searchId: t } = e;
