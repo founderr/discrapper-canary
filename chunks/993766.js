@@ -10,12 +10,9 @@ function a(e) {
     i.useEffect(() => {
         !t && n && null == a && (0, s.Tv)(l);
     }, [t, n, a, l]),
-        i.useEffect(
-            () => () => {
-                (0, s.Hm)(l);
-            },
-            [l]
-        ),
+        i.useEffect(() => {
+            (0, s.Hm)(l);
+        }, [l]),
         i.useEffect(() => {
             !r && o && 0 === c.length && (0, s.Tv)(l);
         }, [r, o, c, l]);
