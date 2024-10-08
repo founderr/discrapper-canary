@@ -21,14 +21,14 @@ var a = t(735250),
 function p(e) {
     let { detectedGame: n, trackAction: t } = e,
         [s, p] = r.useState((null == n ? void 0 : n.summaryLocalized) != null),
-        [g, T] = r.useState(!0),
-        [f, O] = r.useState(!1),
+        [g, f] = r.useState(!0),
+        [T, O] = r.useState(!1),
         N = r.useRef(null),
-        { width: R, height: h } = (0, u.Z)();
+        { width: R, height: P } = (0, u.Z)();
     return (r.useEffect(() => {
         let e = N.current;
         null != e && O(e.scrollHeight - e.clientHeight > 1);
-    }, [N, R, h]),
+    }, [N, R, P]),
     null == n.summary)
         ? null
         : (0, a.jsxs)('div', {
@@ -55,11 +55,11 @@ function p(e) {
                       variant: 'text-sm/normal',
                       children: s ? n.summaryLocalized : n.summary
                   }),
-                  (f || !g) &&
+                  (T || !g) &&
                       (0, a.jsx)(d.Clickable, {
                           className: m.clickable,
                           onClick: () => {
-                              t(g ? _.as.ShowMore : _.as.ShowLess), T(!g);
+                              t(g ? _.as.ShowMore : _.as.ShowLess), f(!g);
                           },
                           children: (0, a.jsx)(l.xv, {
                               variant: 'text-sm/semibold',

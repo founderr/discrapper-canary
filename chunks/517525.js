@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(557457),
     T = n(475674),
     x = n(981631),
-    S = n(474936),
-    v = n(689938),
+    v = n(474936),
+    S = n(689938),
     N = n(659102);
 let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     Z = {
@@ -61,7 +61,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         let P = t || a,
             { location: O } = (0, p.O)(),
             y = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
-            D = o && !C.ZP.isPremium(y, S.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
+            D = o && !C.ZP.isPremium(y, v.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
             U = s.useCallback(() => {
                 D &&
                     P &&
@@ -79,7 +79,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 !A &&
                     P &&
                     (g.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: S.cd.STREAM_QUALITY_INDICATOR,
+                        type: v.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: a,
                         location_stack: L
@@ -90,7 +90,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         )
             return null;
         let k = (0, i.jsx)(h.Tooltip, {
-            text: j ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+            text: j ? S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
             position: 'bottom',
             color: h.Tooltip.Colors.GREY,
             children: (e) =>

@@ -25,24 +25,24 @@ var i = n(735250),
     I = n(233608),
     T = n(370595),
     x = n(351127),
-    S = n(981631),
-    v = n(689938),
+    v = n(981631),
+    S = n(689938),
     N = n(194898),
     A = n(650464);
 function Z(e) {
     var t, n, a, r;
     let { permission: o, roleIds: f, guild: C, specMap: I, categoryTitle: T, userId: N } = e,
         Z = (0, c.e7)([E.Z], () => E.Z.getRoles(C.id)),
-        M = S.Plq[o],
+        M = v.Plq[o],
         b = null !== (a = null === (t = I[M.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== a ? a : (0, _.wt)(M),
         R = null !== (r = null === (n = I[M.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : '',
         L = x._o.has(M),
         j = x.Qn.includes(o),
         P = f.length,
-        O = (0, c.e7)([g.Z], () => g.Z.can(S.Plq.MANAGE_ROLES, C), [C]),
+        O = (0, c.e7)([g.Z], () => g.Z.can(v.Plq.MANAGE_ROLES, C), [C]),
         y = s.useCallback(
             async (e) => {
-                if (!!O) await m.Z.open(C.id, S.pNK.ROLES), await m.Z.selectRole(e);
+                if (!!O) await m.Z.open(C.id, v.pNK.ROLES), await m.Z.selectRole(e);
             },
             [O, C.id]
         );
@@ -79,7 +79,7 @@ function Z(e) {
                                                         color: u.tokens.colors.INTERACTIVE_MUTED.css
                                                     }),
                                                     (0, i.jsx)(u.Tooltip, {
-                                                        text: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP,
+                                                        text: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP,
                                                         children: (e) =>
                                                             (0, i.jsxs)(u.Clickable, {
                                                                 className: A.elevatedPermissionContainer,
@@ -94,7 +94,7 @@ function Z(e) {
                                                                     (0, i.jsx)(u.Text, {
                                                                         variant: 'text-xs/normal',
                                                                         color: 'text-brand',
-                                                                        children: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION
+                                                                        children: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION
                                                                     })
                                                                 ]
                                                             })
@@ -116,7 +116,7 @@ function Z(e) {
                                                         children: (0, i.jsx)(u.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-muted',
-                                                            children: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION
+                                                            children: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION
                                                         })
                                                     })
                                                 ]
@@ -128,7 +128,7 @@ function Z(e) {
                     (0, i.jsx)(u.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({ roleCount: P })
+                        children: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({ roleCount: P })
                     })
                 ]
             }),
@@ -154,7 +154,7 @@ function Z(e) {
                                       children: (0, i.jsx)(u.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'text-normal',
-                                          children: v.Z.Messages.GUILD_OWNER
+                                          children: S.Z.Messages.GUILD_OWNER
                                       })
                                   })
                               },
@@ -207,7 +207,7 @@ function b(e) {
             if (0 === b)
                 return (0, i.jsx)(u.Text, {
                     variant: 'text-sm/normal',
-                    children: v.Z.Messages.ROLE_PERMISSIONS_EMPTY_TEXT
+                    children: S.Z.Messages.ROLE_PERMISSIONS_EMPTY_TEXT
                 });
             let e = [];
             return (
@@ -215,7 +215,7 @@ function b(e) {
                     L.forEach((n) => {
                         n.permissions.forEach((s) => {
                             let a = s.flag,
-                                l = x.pd.find((e) => S.Plq[e] === a);
+                                l = x.pd.find((e) => v.Plq[e] === a);
                             if (null == l) return;
                             let r = g[l];
                             if (null != r) {
@@ -226,7 +226,7 @@ function b(e) {
                                         i = n.title,
                                         s = x._o.has(a),
                                         r = x.Qn.includes(l),
-                                        p = s ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : r ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
+                                        p = s ? S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : r ? S.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
                                         m = M(O, e),
                                         f = M(O, t),
                                         E = M(O, i),
@@ -266,14 +266,14 @@ function b(e) {
                   (0, i.jsx)(u.Scroller, {
                       className: A.permissionsGroupContainer,
                       children: (0, i.jsx)(u.FormItem, {
-                          title: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE,
+                          title: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE,
                           children: (0, i.jsxs)('div', {
                               className: A.permissionsItemContainer,
                               children: [
                                   (0, i.jsx)(u.SearchBar, {
                                       className: A.searchBar,
                                       query: j,
-                                      placeholder: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
+                                      placeholder: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
                                       onChange: U,
                                       onClear: k,
                                       autoComplete: 'off',

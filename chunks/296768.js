@@ -20,8 +20,8 @@ var a = t(735250),
     A = t(774073),
     p = t(644941),
     g = t(689938),
-    T = t(51527),
-    f = t(796805);
+    f = t(51527),
+    T = t(796805);
 let O = (e) => {
     let { game: n, onClose: t, trackClick: r } = e,
         s = (0, c.e7)([_.Z], () => _.Z.getApplication(n.applicationId));
@@ -31,7 +31,7 @@ let O = (e) => {
             var i;
             return (0, a.jsx)(d.Clickable, {
                 ...e,
-                className: f.similarGameImageClickable,
+                className: T.similarGameImageClickable,
                 onClick: async () => {
                     r(I.as.ClickSimilarGame, n.applicationId),
                         (0, d.openModalLazy)(() =>
@@ -48,7 +48,7 @@ let O = (e) => {
                 },
                 children: (0, a.jsx)('img', {
                     src: n.coverImageUrl,
-                    className: f.similarGameImage,
+                    className: T.similarGameImage,
                     alt: g.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: null !== (i = null == s ? void 0 : s.name) && void 0 !== i ? i : null == n ? void 0 : n.name })
                 })
             });
@@ -76,12 +76,12 @@ function N(e) {
     I && null == _)
         ? (0, a.jsxs)('div', {
               children: [
-                  (0, a.jsx)('div', { className: i()(f.loadingHeading, T.sectionHeader) }),
+                  (0, a.jsx)('div', { className: i()(T.loadingHeading, f.sectionHeader) }),
                   (0, a.jsx)('div', {
-                      className: i()(T.row, T.gapLg),
+                      className: i()(f.row, f.gapLg),
                       children: l()
                           .range(0, 5)
-                          .map((e) => (0, a.jsx)('div', { className: f.loadingArtwork }, e))
+                          .map((e) => (0, a.jsx)('div', { className: T.loadingArtwork }, e))
                   })
               ]
           })
@@ -89,13 +89,13 @@ function N(e) {
           ? (0, a.jsxs)('div', {
                 children: [
                     (0, a.jsx)(d.Heading, {
-                        className: T.sectionHeader,
+                        className: f.sectionHeader,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: g.Z.Messages.GAME_PROFILE_ALSO_PLAYING
                     }),
                     (0, a.jsx)('div', {
-                        className: i()(T.row, T.gapLg),
+                        className: i()(f.row, f.gapLg),
                         style: {},
                         children: p.map((e) =>
                             (0, a.jsx)(

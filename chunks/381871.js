@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(74538),
     T = n(401062),
     x = n(696900),
-    S = n(456631),
-    v = n(963838),
+    v = n(456631),
+    S = n(963838),
     N = n(535879),
     A = n(310892),
     Z = n(12168),
@@ -62,9 +62,9 @@ function w(e) {
                     })
             )
             .slice(0, R.e5),
-        W = (null !== (t = S.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name));
+        W = (null !== (t = v.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name));
     W.length > 0 && F.splice(F.length - 1, 1, W[0]);
-    let z = (0, v.Iu)(H),
+    let z = (0, S.Iu)(H),
         Y = (e) => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',

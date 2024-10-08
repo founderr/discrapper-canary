@@ -26,7 +26,7 @@ function x() {
         return C.set(t, i), !!s || e;
     }, !1);
 }
-function S() {
+function v() {
     var e;
     let t = null !== (e = h.Z.getUserIds()) && void 0 !== e ? e : new Set(),
         n = d.default.getId(),
@@ -39,7 +39,7 @@ function S() {
     let s = i !== I;
     return (I = i), s;
 }
-function v(e) {
+function S(e) {
     let { userId: t } = e;
     if (d.default.getId() === t) return !1;
     let n = (function (e) {
@@ -53,7 +53,7 @@ function v(e) {
             return g.set(e, a), l;
         })(t),
         i = x(),
-        s = S();
+        s = v();
     return n || i || s;
 }
 function N() {
@@ -95,7 +95,7 @@ class A extends (i = r.ZP.Store) {
             switch (i) {
                 case o.Yn.STREAM:
                     if (null == t) return !1;
-                    return C.delete(t), S();
+                    return C.delete(t), v();
                 case o.Yn.DEFAULT:
                     N();
             }
@@ -103,14 +103,14 @@ class A extends (i = r.ZP.Store) {
         RTC_CONNECTION_ROSTER_MAP_UPDATE: function (e) {
             let { userIds: t } = e,
                 n = d.default.getId(),
-                i = t.reduce((e, t) => (n === t ? e : !!v({ userId: t }) || e), !1),
+                i = t.reduce((e, t) => (n === t ? e : !!S({ userId: t }) || e), !1),
                 s = x(),
-                a = S();
+                a = v();
             return i || s || a;
         },
-        SECURE_FRAMES_TRANSIENT_KEY_CREATE: v,
-        SECURE_FRAMES_TRANSIENT_KEY_DELETE: v,
-        SECURE_FRAMES_VERIFIED_KEY_CREATE: v,
-        SECURE_FRAMES_VERIFIED_KEY_DELETE: v,
-        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: v
+        SECURE_FRAMES_TRANSIENT_KEY_CREATE: S,
+        SECURE_FRAMES_TRANSIENT_KEY_DELETE: S,
+        SECURE_FRAMES_VERIFIED_KEY_CREATE: S,
+        SECURE_FRAMES_VERIFIED_KEY_DELETE: S,
+        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: S
     }));

@@ -31,20 +31,20 @@ function x(e) {
     let {
             memberStoreProps: { groups: t, rows: n, version: T },
             channelId: x,
-            guildId: S
+            guildId: v
         } = e,
-        [v, N] = i.useState(!1),
+        [S, N] = i.useState(!1),
         { requestId: A, entries: Z, impressionCappedEntryIds: M, hasLeaderboardEntry: b } = (0, _.Z)(x),
         R = (0, s.e7)([h.Z], () => h.Z.hidden),
         L = (0, s.e7)([c.Z], () => c.Z.isFocused()),
         j = (0, s.e7)([r.Z], () => r.Z.getChannel(x)),
-        P = (0, s.e7)([o.Z], () => o.Z.getGuild(S), [S]),
+        P = (0, s.e7)([o.Z], () => o.Z.getGuild(v), [v]),
         O = (0, p.E)(P),
         y = null != O && O && (null == j ? void 0 : j.isForumChannel()) === !1,
         [D, U, k, w] = i.useMemo(() => {
             let e;
             if (null == Z || 0 === Z.length || null == A || !y) return [t, n, T];
-            let i = v ? Z.length : b ? 4 : 3,
+            let i = S ? Z.length : b ? 4 : 3,
                 s = Z.slice(0, i);
             e = R
                 ? [{ type: l.so.HIDDEN_CONTENT_INVENTORY }]
@@ -66,19 +66,19 @@ function x(e) {
                         return (
                             u.default.track(C.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
                                 channel_id: x,
-                                guild_id: S,
+                                guild_id: v,
                                 expanded: t
                             }),
                             t
                         );
                     });
                 },
-                expanded: v,
+                expanded: S,
                 expandedCount: Z.length,
                 feedHeight: e.map(f.iZ).reduce((e, t) => e + t, 0)
             };
             return [[a, ...t], [...n, a, ...e], Math.random(), e];
-        }, [x, Z, v, t, S, A, n, T, R, y, b]),
+        }, [x, Z, S, t, v, A, n, T, R, y, b]),
         B = i.useRef(0),
         H = i.useRef(Z),
         G = i.useRef(),
@@ -115,7 +115,7 @@ function x(e) {
                             item_ids: i,
                             surface_type: E.Kd.GUILD_MEMBER_LIST,
                             channel_id: x,
-                            guild_id: S,
+                            guild_id: v,
                             all_item_ids: n,
                             impression_capped_item_ids: [...V.current.impressionCappedEntryIds]
                         }),
@@ -126,7 +126,7 @@ function x(e) {
                                 });
                 }
             ),
-            [A, x, S, R, L, y]
+            [A, x, v, R, L, y]
         ),
         {
             groups: D,

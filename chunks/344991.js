@@ -1,6 +1,6 @@
 t.d(n, {
     ZP: function () {
-        return I;
+        return E;
     },
     tE: function () {
         return l;
@@ -32,9 +32,9 @@ function h(e) {
         children: n
     });
 }
-function I(e) {
+function E(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
-        { type: I, placeholder: E, maxValues: x, disabled: v } = n,
+        { type: E, placeholder: I, maxValues: x, disabled: v } = n,
         [T, N] = r.useState(!1),
         [b, g] = r.useState(!1),
         [S, O] = r.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
@@ -55,7 +55,7 @@ function I(e) {
             isDisabled: U,
             error: B
         } = (0, m.Ee)(n, {
-            type: I,
+            type: E,
             selectedOptions: Array.from(S.values())
         }),
         w = k === _.gH.LOADING;
@@ -67,10 +67,10 @@ function I(e) {
     }, [P]);
     let G = r.useCallback(() => {
         A({
-            type: I,
+            type: E,
             selectedOptions: Array.from(S.values())
         }) && M(new Set(S.keys()));
-    }, [A, I, S]);
+    }, [A, E, S]);
     r.useEffect(() => {
         if (!(T || b || (S.size === j.size && Array.from(S.keys()).every((e) => j.has(e))))) G();
     }, [T, b, j, S, G]);
@@ -82,7 +82,7 @@ function I(e) {
                 new Promise((n) => {
                     n(t(e));
                 }),
-            placeholder: D ? (null != E ? E : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
+            placeholder: D ? (null != I ? I : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
             onClose: () => N(!1),
             onOpen: () => N(!0),
             onBlur: () => g(!1),

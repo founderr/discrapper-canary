@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(981631),
     T = n(921944),
     x = n(689938),
-    S = n(798682);
-function v(e) {
+    v = n(798682);
+function S(e) {
     let { onClose: t, channel: n } = e,
         s = (0, g.Z)(n);
     return (0, i.jsx)(r.Menu, {
@@ -62,7 +62,7 @@ function N(e) {
                     o = s === l.z.DONUT_DESKTOP_NUX;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        n ? (0, i.jsx)('div', { className: S.leftDivider }) : null,
+                        n ? (0, i.jsx)('div', { className: v.leftDivider }) : null,
                         (0, i.jsx)(r.Popout, {
                             position: y,
                             spacing: o ? 16 : void 0,
@@ -81,7 +81,7 @@ function N(e) {
                                               },
                                               gameConsoleAccounts: j
                                           })
-                                        : (0, i.jsx)(v, {
+                                        : (0, i.jsx)(S, {
                                               onClose: () => {
                                                   n();
                                               },

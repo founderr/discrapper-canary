@@ -20,16 +20,16 @@ function d(e) {
         p = t.extra.media_title,
         C = t.extra.media_subtitle,
         h = (0, o.kr)(t) && !(0, o.n2)(t) ? u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
-        I = { type: s.kG.CRUNCHYROLL },
-        E = l.useMemo(() => {
+        E = { type: s.kG.CRUNCHYROLL },
+        I = l.useMemo(() => {
             if (null == t.extra.url) return;
             let e = r.Z.safeParseWithQuery(t.extra.url);
             if (null != e && null != e.protocol && null != e.hostname) return e;
         }, [t.extra.url]);
     return (
-        null != E &&
+        null != I &&
             (n = {
-                href: r.Z.format(E),
+                href: r.Z.format(I),
                 ariaDescription: u.Z.Messages.CONTENT_INVENTORY_OPEN_CRUNCHYROLL_ITEM_A11Y_DESCRIPTION.format({ title: p })
             }),
         {
@@ -40,7 +40,7 @@ function d(e) {
             thumbnailClickable: n,
             subtitle: C,
             userDescription: h,
-            providerIconProps: I
+            providerIconProps: E
         }
     );
 }

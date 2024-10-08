@@ -26,8 +26,8 @@ var i = n(735250),
     I = n(507675),
     T = n(199902),
     x = n(314897),
-    S = n(592125),
-    v = n(131951),
+    v = n(592125),
+    S = n(131951),
     N = n(451478),
     A = n(685203),
     Z = n(112560),
@@ -66,11 +66,11 @@ function H(e) {
 }
 function G(e) {
     let { participant: t, selected: n, onVideoResize: a, paused: h, fit: p, inPopout: E, width: P, focused: O } = e,
-        H = v.Z.getVideoComponent(),
+        H = S.Z.getVideoComponent(),
         G = (0, r.e7)([x.default], () => x.default.getId()),
         V = (0, m.Z)(),
         { stream: F, user: W, streamId: z } = t,
-        Y = (0, r.e7)([S.Z], () => S.Z.getChannel(F.channelId)),
+        Y = (0, r.e7)([v.Z], () => v.Z.getChannel(F.channelId)),
         K = (0, r.e7)([T.Z], () => T.Z.getActiveStreamForUser(W.id, F.guildId), [W.id, F.guildId]),
         q = (0, r.e7)([T.Z], () => T.Z.getAllActiveStreams().length > 0),
         X = (0, r.e7)([N.Z], () => N.Z.isFocused()),
@@ -88,7 +88,7 @@ function G(e) {
                     .concat(null != K, ' | selected: ')
                     .concat(n, ' | Video: ')
                     .concat(null != H, ' | MediaEngine: ')
-                    .concat(v.Z.supports(U.AN.VIDEO))
+                    .concat(S.Z.supports(U.AN.VIDEO))
             );
         }, [H, K, n]),
         V)
@@ -117,7 +117,7 @@ function G(e) {
             participant: t,
             width: P
         });
-    else if (null != K && !n && null != H && v.Z.supports(U.AN.VIDEO))
+    else if (null != K && !n && null != H && S.Z.supports(U.AN.VIDEO))
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 null != Y

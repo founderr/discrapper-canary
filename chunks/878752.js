@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return v;
     }
 });
 var i = n(735250);
@@ -24,24 +24,24 @@ var s = n(512722),
     I = n(159909),
     T = n(981631),
     x = n(307410);
-function S(e) {
+function v(e) {
     let { channel: t, hasActiveStream: n, themeable: s = !1 } = e,
-        S = (0, l.e7)([p.default], () => {
+        v = (0, l.e7)([p.default], () => {
             let e = p.default.getCurrentUser();
             return a()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
-        v = (0, o.Z)(),
+        S = (0, o.Z)(),
         { isSharedCanvasEnabled: N } = u.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
         { enableViewerClipping: A } = c.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
         Z = (0, r.Z)(h.Z);
-    if (null == t || null != v) return null;
+    if (null == t || null != S) return null;
     let M = (0, d.Z)(t),
         b = m.BT({
             permission: T.Plq.ADD_REACTIONS,
-            user: S,
+            user: v,
             context: t
         });
     return (0, i.jsxs)('div', {

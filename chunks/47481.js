@@ -24,7 +24,7 @@ function d(e) {
         T = null;
     return (
         p.forEach((e) => {
-            var s, x, S, v, N, A, Z, M;
+            var s, x, v, S, N, A, Z, M;
             if (null != f && f.length > 0) {
                 let t = l.default.extractTimestamp(e.id);
                 for (let e = 0; (s = e < (null == f ? void 0 : f.length)), s; e++) {
@@ -66,14 +66,14 @@ function d(e) {
                 let t, n;
                 [L, R] =
                     ((x = g),
-                    (S = e),
-                    (v = P),
+                    (v = e),
+                    (S = P),
                     (n = N = R),
-                    null == N || N.type !== v
+                    null == N || N.type !== S
                         ? ((t = {
-                              type: v,
+                              type: S,
                               content: [],
-                              key: S.id
+                              key: v.id
                           }),
                           x.push(t))
                         : (n = (t = N).content[t.content.length - 1]),

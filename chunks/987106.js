@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return I;
     }
 });
 var l = t(735250);
@@ -19,7 +19,7 @@ var i = t(120356),
     p = t(280501),
     C = t(689938),
     h = t(948489);
-function I(e) {
+function E(e) {
     let { url: n, onSelect: t } = e;
     return m.wS && null != n
         ? (0, l.jsx)(o.Menu, {
@@ -37,9 +37,9 @@ function I(e) {
           })
         : null;
 }
-function E(e) {
+function I(e) {
     let n;
-    let { label: t, style: i, disabled: m, emoji: C, url: E, skuId: x } = e,
+    let { label: t, style: i, disabled: m, emoji: C, url: I, skuId: x } = e,
         { executeStateUpdate: v, visualState: T, isDisabled: N } = (0, f.Ee)(e),
         b = (0, d.s)(x),
         g = null != x && i === u.ZJ.PREMIUM,
@@ -47,13 +47,13 @@ function E(e) {
         O = g ? (null == b ? void 0 : b.label) : t,
         j = null != C,
         M = null != O && O.length > 0,
-        Z = i === u.ZJ.LINK && null != E && E.length > 0,
+        Z = i === u.ZJ.LINK && null != I && I.length > 0,
         y = T === p.gH.LOADING || (g && null == b);
     return (
         (n = Z
             ? () => {
                   (0, _.q)({
-                      href: null != E ? E : '',
+                      href: null != I ? I : '',
                       shouldConfirm: !0
                   });
               }
@@ -82,9 +82,9 @@ function E(e) {
             onContextMenu: (e) => {
                 Z &&
                     (0, s.vq)(e, (e) =>
-                        (0, l.jsx)(I, {
+                        (0, l.jsx)(E, {
                             ...e,
-                            url: E
+                            url: I
                         })
                     );
             },

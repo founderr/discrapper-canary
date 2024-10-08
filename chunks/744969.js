@@ -19,8 +19,8 @@ var l = t(735250),
     p = t(147496),
     C = t(519896),
     h = t(981631),
-    I = t(689938);
-let E = (0, a.Kb)([d.Z, u.Z, m.Z], {
+    E = t(689938);
+let I = (0, a.Kb)([d.Z, u.Z, m.Z], {
     queryId: (e) => (null != e ? ['premium-button', e] : null),
     get: (e) => {
         var n;
@@ -62,7 +62,7 @@ let E = (0, a.Kb)([d.Z, u.Z, m.Z], {
     useStateHook: a.cj
 });
 function x(e) {
-    let { data: n } = E(e),
+    let { data: n } = I(e),
         t = null == n ? void 0 : n.parentSku,
         a = null == n ? void 0 : n.sku,
         r = null == n ? void 0 : n.storeListing,
@@ -97,19 +97,19 @@ function x(e) {
         if (null == e || (null != a && !a.available))
             return {
                 disabled: !0,
-                label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                label: E.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
             };
         if (a.type === h.epS.SUBSCRIPTION) {
             if (null == s || 0 === s.length)
                 return {
                     disabled: !0,
-                    label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                    label: E.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
                 };
             let e = s[0],
                 n = (0, _.aS)(e.id);
             return {
                 disabled: !1,
-                label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
+                label: E.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
                     skuName: a.name,
                     price: (0, f.T4)(n.amount, n.currency)
                 }),
@@ -119,11 +119,11 @@ function x(e) {
         return null == a.price
             ? {
                   disabled: !0,
-                  label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                  label: E.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
               }
             : {
                   disabled: !1,
-                  label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
+                  label: E.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
                       skuName: a.name,
                       price: (0, f.T4)(a.price.amount, a.price.currency)
                   }),

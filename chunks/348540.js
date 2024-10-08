@@ -24,8 +24,8 @@ var s = n(442837),
     I = n(827313),
     T = n(228168),
     x = n(981631),
-    S = n(689938),
-    v = n(299336);
+    v = n(689938),
+    S = n(299336);
 function N(e) {
     let { user: t, currentUser: n, displayProfile: N, channel: A, isHovering: Z, onOpenProfile: M } = e,
         b = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)),
@@ -35,7 +35,7 @@ function N(e) {
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
     return (0, i.jsxs)('div', {
-        className: v.body,
+        className: S.body,
         children: [
             (0, i.jsx)(C.Z, {
                 user: t,
@@ -70,16 +70,16 @@ function N(e) {
             (0, i.jsx)(p.Z, {
                 user: t,
                 currentUser: n,
-                className: v.activity
+                className: S.activity
             }),
             (0, i.jsxs)(g.Z.Overlay, {
-                className: v.overlay,
+                className: S.overlay,
                 children: [
                     !R &&
                         (null == N ? void 0 : N.bio) != null &&
                         (null == N ? void 0 : N.bio) !== '' &&
                         (0, i.jsx)(E.Z, {
-                            heading: S.Z.Messages.USER_POPOUT_ABOUT_ME,
+                            heading: v.Z.Messages.USER_POPOUT_ABOUT_ME,
                             headingColor: 'header-primary',
                             children: (0, i.jsx)(h.Z, {
                                 userBio: N.bio,
@@ -95,7 +95,7 @@ function N(e) {
                             channel: A
                         }),
                     (0, i.jsx)(E.Z, {
-                        heading: t.bot ? S.Z.Messages.BOT_PROFILE_CREATED_ON : S.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                        heading: t.bot ? v.Z.Messages.BOT_PROFILE_CREATED_ON : v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                         headingColor: 'header-primary',
                         children: (0, i.jsx)(f.Z, { userId: t.id })
                     })

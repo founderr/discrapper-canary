@@ -20,10 +20,10 @@ var s = n(120356),
     f = n(632189);
 function E(e) {
     var t, s;
-    let { stream: l, applicationId: E, channel: g, exitFullScreen: C, appContext: I, analyticsLocation: T, className: x, ...S } = e,
-        v = null == g ? void 0 : g.getGuildId(),
+    let { stream: l, applicationId: E, channel: g, exitFullScreen: C, appContext: I, analyticsLocation: T, className: x, ...v } = e,
+        S = null == g ? void 0 : g.getGuildId(),
         N = null == g ? void 0 : g.id,
-        A = (0, o.e7)([h.Z], () => (null != v ? h.Z.getGuild(v) : null), [v]),
+        A = (0, o.e7)([h.Z], () => (null != S ? h.Z.getGuild(S) : null), [S]),
         Z = (0, o.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(N), [N]);
     if (((t = A), (s = g), !(null != t && null != s && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, s)))) return null;
     let M = _.Z.Messages.INSTANT_INVITE;
@@ -72,7 +72,7 @@ function E(e) {
                             });
                     },
                     className: a()(x, f.textButton),
-                    ...S,
+                    ...v,
                     children: M
                 }),
                 (0, i.jsx)(d.Z, {

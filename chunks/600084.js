@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(7782),
     T = n(967128),
     x = n(320781),
-    S = n(269203),
-    v = n(753898),
+    v = n(269203),
+    S = n(753898),
     N = n(734386),
     A = n(184279),
     Z = n(438306),
@@ -66,12 +66,12 @@ function y(e) {
     )
         return b
             ? (0, i.jsx)(A.Z, { channel: n })
-            : (0, i.jsx)(v.Z, {
+            : (0, i.jsx)(S.Z, {
                   channel: n,
                   children: j.Z.Messages.SYSTEM_DM_EMPTY_MESSAGE
               });
     if (_ === R.d4z.DM)
-        return (0, i.jsxs)(v.Z, {
+        return (0, i.jsxs)(S.Z, {
             channel: n,
             user: f,
             children: [
@@ -97,8 +97,8 @@ function y(e) {
                   children: [(0, i.jsx)(T.Ot, { children: j.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({ channelName: u }) }), (0, i.jsx)(T.jz, { children: j.Z.Messages.BEGINNING_GROUP_DM_MANAGED })]
               })
             : n.hasFlag(L.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)
-              ? (0, i.jsx)(S.Z, { channel: n })
-              : (0, i.jsx)(v.Z, {
+              ? (0, i.jsx)(v.Z, { channel: n })
+              : (0, i.jsx)(S.Z, {
                     channel: n,
                     children: j.Z.Messages.BEGINNING_GROUP_DM.format({ name: u })
                 });

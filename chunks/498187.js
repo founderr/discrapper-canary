@@ -31,7 +31,7 @@ function p(e) {
     }
     t = i.content_type === l.s.PLAYED_GAME ? ((0, s.kr)(i) && !(0, s.n2)(i) ? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2) : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2;
     let h = f[r],
-        I = {
+        E = {
             onClick: (0, o.Z)({
                 location: h,
                 applicationId: i.extra.application_id,
@@ -45,8 +45,8 @@ function p(e) {
         ...c,
         thumbnailUrl: p,
         title: C,
-        titleClickable: I,
-        thumbnailClickable: I,
+        titleClickable: E,
+        thumbnailClickable: E,
         userDescription: t,
         providerIconProps: n
     };

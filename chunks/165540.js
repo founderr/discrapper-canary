@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(605236),
     T = n(819640),
     x = n(291407),
-    S = n(981631),
-    v = n(314734),
+    v = n(981631),
+    S = n(314734),
     N = n(921944),
     A = n(689938),
     Z = n(786899),
@@ -38,10 +38,10 @@ let b = s.forwardRef(function (e, t) {
         [E]
     );
     let C = s.useCallback(() => {
-        (0, d.yw)(S.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.yT(_.ti.DISMISSED) : ((0, I.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h.__(_._b.TEXT, n)), g();
+        (0, d.yw)(v.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.yT(_.ti.DISMISSED) : ((0, I.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h.__(_._b.TEXT, n)), g();
     }, [p, n, g]);
     return (0, i.jsx)('div', {
-        className: l()(Z.buttonContainer, v.t4),
+        className: l()(Z.buttonContainer, S.t4),
         ref: t,
         children: (0, i.jsx)(u.Button, {
             look: u.Button.Looks.BLANK,

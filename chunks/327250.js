@@ -24,8 +24,8 @@ var s = n(120356),
     I = n(885110),
     T = n(594174),
     x = n(572004),
-    S = n(5192),
-    v = n(51144),
+    v = n(5192),
+    S = n(51144),
     N = n(981631),
     A = n(308083),
     Z = n(689938),
@@ -58,7 +58,7 @@ function b(e) {
                                     (0, i.jsx)(r.Text, {
                                         variant: 'text-lg/medium',
                                         children: (0, i.jsx)(r.NameWithRole, {
-                                            name: S.ZP.getName(n, null, t),
+                                            name: v.ZP.getName(n, null, t),
                                             color: r.tokens.colors.HEADER_PRIMARY.css
                                         })
                                     }),
@@ -76,7 +76,7 @@ function b(e) {
                             (0, i.jsx)(r.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-normal',
-                                children: v.ZP.getUserTag(t)
+                                children: S.ZP.getUserTag(t)
                             })
                         ]
                     })
@@ -126,12 +126,12 @@ function L(e) {
             }),
             [t, u]
         ),
-        S = (0, d.b)(s),
-        { analyticsLocations: v, newestAnalyticsLocation: A } = (0, c.ZP)(),
+        v = (0, d.b)(s),
+        { analyticsLocations: S, newestAnalyticsLocation: A } = (0, c.ZP)(),
         b = (0, m.sE)(a, {
             targetUserId: t.id,
             location: A,
-            locations: v
+            locations: S
         }),
         L = (0, l.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id));
     return (0, i.jsxs)('div', {
@@ -219,7 +219,7 @@ function L(e) {
                 disabled: !I,
                 'aria-label': Z.Z.Messages.TIMEOUT_USER,
                 onClick: () => {
-                    S ? (0, h.q)(s.guildId, s.userId, v) : (0, h.z)(s.guildId, s.userId, v);
+                    v ? (0, h.q)(s.guildId, s.userId, S) : (0, h.z)(s.guildId, s.userId, S);
                 },
                 children: [
                     (0, i.jsx)(r.ClockWarningIcon, {
@@ -231,7 +231,7 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: S ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
+                        children: v ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
                     })
                 ]
             }),

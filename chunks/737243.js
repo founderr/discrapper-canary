@@ -17,8 +17,8 @@ let p = s.memo(function (e) {
     var t, n;
     let { message: p, channel: m, compact: _ = !1, interactionUsernameProfile: f, interactionAvatarProfile: E, interactionData: g, referencedUsernameProfile: C, referencedAvatarProfile: I, setPopout: T } = e,
         x = (0, a.e7)([c.Z], () => c.Z.isBlockedForMessage(p), [p]),
-        S = (0, a.e7)([o.Z], () => o.Z.getMessageByReference(null == p ? void 0 : p.messageReference)),
-        v = (0, d.wq)(null === (t = p.interaction) || void 0 === t ? void 0 : t.user.id, m.id),
+        v = (0, a.e7)([o.Z], () => o.Z.getMessageByReference(null == p ? void 0 : p.messageReference)),
+        S = (0, d.wq)(null === (t = p.interaction) || void 0 === t ? void 0 : t.user.id, m.id),
         N = (0, d.Nk)(p.interaction, m, f, T),
         A = (0, d.NU)(E, T),
         Z = (0, r.t0)(p),
@@ -50,11 +50,11 @@ let p = s.memo(function (e) {
                         referencedUsernameProfile: C
                     },
                     replyReference: p.messageReference,
-                    replyMessage: S,
+                    replyMessage: v,
                     isReplySpineClickable: !1,
                     showReplySpine: !1
                 }),
-            [m, _, p, I, S, C, T]
+            [m, _, p, I, v, C, T]
         );
     return (0, i.jsx)(u.Z, {
         message: p,
@@ -69,7 +69,7 @@ let p = s.memo(function (e) {
         onClickAvatar: A,
         onClickUsername: N,
         onClickCommand: j,
-        onUserContextMenu: v,
+        onUserContextMenu: S,
         onClickTargetAvatar: L,
         onClickTargetUsername: R,
         onTargetUserContextMenu: b,

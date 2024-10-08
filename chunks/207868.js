@@ -22,7 +22,7 @@ t.Z = s.memo(function (e) {
         I = (0, r.e7)([p.Z], () => p.Z.can(E.Plq.CONNECT, t)),
         { needSubscriptionToAccess: T } = (0, d.Z)(t.id),
         x = (0, h.$R)(t),
-        S = s.useCallback(() => {
+        v = s.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
                 connected: a,
@@ -32,12 +32,12 @@ t.Z = s.memo(function (e) {
         }, [t, a, T]);
     return (s.useEffect(
         () => (
-            _.S.subscribe(E.CkL.CALL_START, S),
+            _.S.subscribe(E.CkL.CALL_START, v),
             () => {
-                _.S.unsubscribe(E.CkL.CALL_START, S);
+                _.S.unsubscribe(E.CkL.CALL_START, v);
             }
         ),
-        [S]
+        [v]
     ),
     h.tM.useExperiment(
         {
@@ -53,7 +53,7 @@ t.Z = s.memo(function (e) {
         t.isVocalThread())
         ? (0, i.jsx)(f.ZP.Icon, {
               icon: o.PhoneCallIcon,
-              onClick: S,
+              onClick: v,
               tooltip: C ? g.Z.Messages.JOIN_VOICE_CALL : g.Z.Messages.START_VOICE_CALL
           })
         : null;

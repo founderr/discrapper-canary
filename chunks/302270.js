@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(618158),
     T = n(390322),
     x = n(616286),
-    S = n(961048),
-    v = n(430824),
+    v = n(961048),
+    S = n(430824),
     N = n(496675),
     A = n(626135),
     Z = n(431328),
@@ -45,7 +45,7 @@ function w(e) {
         f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
         E = (0, b.B)(n.id),
         g = (0, Z.Rk)(n.id, M.pV.REQUESTED_TO_SPEAK_ONLY),
-        { preventIdle: v, allowIdle: N } = (0, I.Y)('popup');
+        { preventIdle: S, allowIdle: N } = (0, I.Y)('popup');
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(_.Z, { channelId: n.id }, 'clips-enabled-indicator'),
@@ -66,7 +66,7 @@ function w(e) {
                     autoInvert: !1,
                     children: (e, t) => {
                         let { isShown: n } = t;
-                        return (0, s.createElement)(S.Z, {
+                        return (0, s.createElement)(v.Z, {
                             ...e,
                             key: 'more-options',
                             isActive: n,
@@ -81,7 +81,7 @@ function w(e) {
             (0, i.jsx)(
                 C.Z,
                 {
-                    onOpen: v,
+                    onOpen: S,
                     onClose: N,
                     className: k.button
                 },
@@ -119,9 +119,9 @@ function B(e) {
         _ = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(a.id)),
         C = (0, Z.Io)(a.id),
         I = (0, Z.Rk)(a.id, M.pV.AUDIENCE),
-        T = (0, r.e7)([v.Z], () => v.Z.getGuild(a.guild_id), [a.guild_id]),
+        T = (0, r.e7)([S.Z], () => S.Z.getGuild(a.guild_id), [a.guild_id]),
         x = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
-        S = (null == T ? void 0 : T.isCommunity()) ? x < y.TU7 : (null == T ? void 0 : T.premiumTier) !== y.Eu4.TIER_3 && x <= y.eez,
+        v = (null == T ? void 0 : T.isCommunity()) ? x < y.TU7 : (null == T ? void 0 : T.premiumTier) !== y.Eu4.TIER_3 && x <= y.eez,
         b = (0, O.Z)(a),
         j = (0, r.e7)([N.Z], () => N.Z.can(R.yP, a)),
         P = () => {
@@ -212,18 +212,18 @@ function B(e) {
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: S ? U.Z.Messages.STAGE_FULL_MODERATOR_TITLE : U.Z.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
+                                      children: v ? U.Z.Messages.STAGE_FULL_MODERATOR_TITLE : U.Z.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
                                   }),
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'text-normal',
-                                      children: S ? U.Z.Messages.STAGE_FULL_MODERATOR_BODY : U.Z.Messages.STAGE_FULL_MAX_BODY
+                                      children: v ? U.Z.Messages.STAGE_FULL_MODERATOR_BODY : U.Z.Messages.STAGE_FULL_MAX_BODY
                                   })
                               ]
                           }),
                           (0, i.jsx)('div', {
                               className: k.buttons,
-                              children: S
+                              children: v
                                   ? (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(c.Button, {

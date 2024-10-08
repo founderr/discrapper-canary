@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(867176),
     T = n(280885),
     x = n(900927),
-    S = n(678738),
-    v = n(502762),
+    v = n(678738),
+    S = n(502762),
     N = n(530),
     A = n(679332),
     Z = n(544989),
@@ -57,7 +57,7 @@ function P(e) {
         value: D,
         children: (0, i.jsx)(_.Mt, {
             value: U,
-            children: (0, i.jsxs)(v.Z, {
+            children: (0, i.jsxs)(S.Z, {
                 ref: k,
                 user: t,
                 displayProfile: O,
@@ -104,10 +104,10 @@ function P(e) {
                                             profileType: b.y0.PANEL
                                         })
                                     }),
-                                    (0, i.jsxs)(v.Z.Overlay, {
+                                    (0, i.jsxs)(S.Z.Overlay, {
                                         className: j.overlay,
                                         children: [
-                                            (0, i.jsx)(S.Z, {
+                                            (0, i.jsx)(v.Z, {
                                                 heading: R.Z.Messages.USER_POPOUT_ABOUT_ME,
                                                 headingColor: 'header-primary',
                                                 children: (0, i.jsx)(T.Z, {
@@ -117,7 +117,7 @@ function P(e) {
                                                     isHovering: w
                                                 })
                                             }),
-                                            (0, i.jsx)(S.Z, {
+                                            (0, i.jsx)(v.Z, {
                                                 heading: R.Z.Messages.BOT_PROFILE_CREATED_ON,
                                                 headingColor: 'header-primary',
                                                 children: (0, i.jsx)(x.Z, { userId: t.id })

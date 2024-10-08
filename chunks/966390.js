@@ -15,13 +15,13 @@ var a = t(481060),
     A = t(786761),
     p = t(3148),
     g = t(48854),
-    T = t(785359),
-    f = t(79390),
+    f = t(785359),
+    T = t(79390),
     O = t(623292),
     N = t(807092),
     R = t(467798),
-    h = t(703558),
-    P = t(117530),
+    P = t(703558),
+    h = t(117530),
     C = t(630388),
     L = t(226351),
     M = t(981631),
@@ -44,7 +44,7 @@ async function v(e) {
     let [w, U] = (0, R.Z)(y.content);
     w && ((y.content = U), (y.flags = (0, C.pj)(null !== (n = y.flags) && void 0 !== n ? n : 0, M.iLy.SUPPRESS_NOTIFICATIONS)));
     let k = null !== (t = Z.nonce) && void 0 !== t ? t : (0, g.r)(),
-        K = (0, p.ZP)({
+        H = (0, p.ZP)({
             channelId: _,
             content: y.content,
             tts: null !== (a = null == G ? void 0 : G.tts) && void 0 !== a && a,
@@ -52,13 +52,13 @@ async function v(e) {
             messageReference: y.message_reference,
             flags: y.flags,
             nonce: k,
-            poll: (0, f.x9)(Z.poll)
+            poll: (0, T.x9)(Z.poll)
         });
     return (
         ((y.nonce = k),
         j.on('start', (e) => {
             (u = (0, A.e5)({
-                ...K,
+                ...H,
                 id: e.id
             })),
                 r.Z.dispatch({
@@ -84,7 +84,7 @@ async function v(e) {
                     file: e,
                     messageRecord: u
                 }),
-                (0, T.x)({
+                (0, f.x)({
                     fileItems: e.items,
                     failureCode: n,
                     errorMessage: null == a ? void 0 : a.msg
@@ -133,8 +133,8 @@ async function v(e) {
                         help: null !== (E = null == t ? void 0 : t.message) && void 0 !== E ? E : S.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
                     });
                 }
-                '' !== y.content && '' === h.Z.getDraft(_, x) && s.Z.saveDraft(_, y.content, x),
-                    0 === P.Z.getUploadCount(_, x) &&
+                '' !== y.content && '' === P.Z.getDraft(_, x) && s.Z.saveDraft(_, y.content, x),
+                    0 === h.Z.getUploadCount(_, x) &&
                         o.Z.setUploads({
                             channelId: _,
                             uploads: v,
@@ -216,7 +216,7 @@ n.Z = {
                         channelId: t,
                         file: n
                     }),
-                    (0, T.x)({
+                    (0, f.x)({
                         fileItems: n.items,
                         failureCode: u
                     }),
@@ -239,7 +239,7 @@ n.Z = {
                         }
                     })
                 }),
-                    '' !== m.content && '' === h.Z.getDraft(t, c) && s.Z.saveDraft(t, m.content, c);
+                    '' !== m.content && '' === P.Z.getDraft(t, c) && s.Z.saveDraft(t, m.content, c);
             }),
             A.on('complete', (e) => {
                 r.Z.dispatch({
@@ -258,12 +258,12 @@ n.Z = {
         }),
             null != e.draftContent &&
                 null != e.channelId &&
-                '' === h.Z.getDraft(e.channelId, h.d.ChannelMessage) &&
+                '' === P.Z.getDraft(e.channelId, P.d.ChannelMessage) &&
                 r.Z.dispatch({
                     type: 'DRAFT_SAVE',
                     channelId: e.channelId,
                     draft: e.draftContent,
-                    draftType: h.d.ChannelMessage
+                    draftType: P.d.ChannelMessage
                 });
     }
 };

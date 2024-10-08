@@ -25,8 +25,8 @@ var i,
     I = n(925329),
     T = n(810568),
     x = n(168524),
-    S = n(565138),
-    v = n(833858),
+    v = n(565138),
+    S = n(833858),
     N = n(223135),
     A = n(707409),
     Z = n(769654),
@@ -301,7 +301,7 @@ class q extends (s = r.PureComponent) {
             o = e.name,
             u = o;
         return (a === H.IIU.HANG_STATUS
-            ? (u = (0, v.O8)(e))
+            ? (u = (0, S.O8)(e))
             : r && null != n
               ? (u = (0, l.jsx)('span', {
                     className: V.activityName,
@@ -388,9 +388,9 @@ class q extends (s = r.PureComponent) {
                 : (0, l.jsxs)('div', {
                       className: c()((0, k.Z)(e) || (0, D.Z)(e) ? V.detailsWrap : V.details, V.guildDetails),
                       children: [
-                          (0, l.jsx)(S.Z, {
+                          (0, l.jsx)(v.Z, {
                               guild: t,
-                              size: S.Z.Sizes.SMOL,
+                              size: v.Z.Sizes.SMOL,
                               className: V.guildIcon
                           }),
                           (0, l.jsx)(p.ChevronSmallRightIcon, {
@@ -518,11 +518,11 @@ class q extends (s = r.PureComponent) {
             I = this.renderChannelDetails(u),
             T = null != n ? n() : null,
             x = this.renderTimeBar(u),
-            S = ![e, _, f, g, C, x, T].some((e) => null != e);
+            v = ![e, _, f, g, C, x, T].some((e) => null != e);
         return (0, l.jsxs)('div', {
             className: c()(this.getTypeClass('activity'), i),
             children: [
-                this.renderHeader(S),
+                this.renderHeader(v),
                 (0, l.jsx)('div', {
                     className: c()(m ? V.bodyAlignCenter : V.bodyNormal, a && !h && V.wrap),
                     children: (0, l.jsxs)('div', {

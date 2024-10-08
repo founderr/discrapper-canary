@@ -1,9 +1,9 @@
 n.d(t, {
     D: function () {
-        return S;
+        return v;
     },
     Z: function () {
-        return v;
+        return S;
     }
 });
 var i = n(735250);
@@ -27,7 +27,7 @@ var s = n(120356),
     I = n(519294),
     T = n(581958);
 let x = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_16);
-function S(e) {
+function v(e) {
     let { user: t, guild: s, nick: c, theme: u, onSelect: p } = e,
         _ = t.hasAvatarForGuild(s.id);
     return (0, i.jsxs)(r.Clickable, {
@@ -83,7 +83,7 @@ function S(e) {
         ]
     });
 }
-function v(e) {
+function S(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: s } = (0, _.KZ)(),
         { mutualGuilds: a } = (0, f.Z)(t.id),
@@ -114,7 +114,7 @@ function v(e) {
                   : a.map((e) => {
                         let { guild: n, nick: a } = e;
                         return (0, i.jsx)(
-                            S,
+                            v,
                             {
                                 user: t,
                                 guild: n,

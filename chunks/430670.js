@@ -36,13 +36,13 @@ function E(e) {
         }, [g, t.id]);
     let I = (0, r.e7)([c.Z], () => c.Z.isBlocked(g.id)),
         [T, x] = s.useState(I),
-        S = (0, d.sS)({ location: 'UserProfilePanelWrapper' });
+        v = (0, d.sS)({ location: 'UserProfilePanelWrapper' });
     return (s.useEffect(() => {
         x(I);
     }, [I]),
     a)
         ? null
-        : T && S
+        : T && v
           ? (0, i.jsx)(m.Z, {
                 user: g,
                 currentUser: C,

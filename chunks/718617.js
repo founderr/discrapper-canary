@@ -30,7 +30,7 @@ function C(e, t) {
 }
 function I(e) {
     var t, n;
-    let { userId: I, guildId: T, onClose: x, analyticsLocation: S, className: v } = e,
+    let { userId: I, guildId: T, onClose: x, analyticsLocation: v, className: S } = e,
         N = (0, l.e7)([h.ZP], () => h.ZP.getGuildSidebarState(T), [T]),
         A = null !== (t = null == N ? void 0 : N.details.modViewPanel) && void 0 !== t ? t : E.k.INFO,
         Z = (0, c.Z)(I);
@@ -101,21 +101,21 @@ function I(e) {
                                     userId: I,
                                     guildId: T,
                                     onNavigate: L,
-                                    className: v
+                                    className: S
                                 });
                             case E.k.MESSAGE_HISTORY:
                                 return (0, i.jsx)(_.Z, {
                                     userId: I,
                                     guildId: T,
                                     onNavigate: () => L(E.k.INFO),
-                                    className: v
+                                    className: S
                                 });
                             case E.k.PERMISSIONS:
                                 return (0, i.jsx)(f.Z, {
                                     userId: I,
                                     guildId: T,
                                     onNavigate: () => L(E.k.INFO),
-                                    className: v
+                                    className: S
                                 });
                             default:
                                 return null;

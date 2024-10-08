@@ -17,7 +17,7 @@ var l = t(735250),
     f = t(756988);
 function p(e) {
     let { entry: n, channel: t, className: i } = e,
-        { displayParticipants: p, participant1: C, participant2: h, numOtherParticipants: I, orderedParticipants: E } = (0, c.Z)(n),
+        { displayParticipants: p, participant1: C, participant2: h, numOtherParticipants: E, orderedParticipants: I } = (0, c.Z)(n),
         x = [C, h];
     return (0, l.jsxs)('div', {
         className: a()(f.container, i),
@@ -26,7 +26,7 @@ function p(e) {
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(m.Z, {
-                              participants: E,
+                              participants: I,
                               channel: t,
                               children: (e) =>
                                   (0, l.jsx)(r.Clickable, {
@@ -57,7 +57,7 @@ function p(e) {
                 children: _.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
                     user0: s.ZP.getName(t.guild_id, t.id, x[0]),
                     user1: s.ZP.getName(t.guild_id, t.id, x[1]),
-                    countOthers: I,
+                    countOthers: E,
                     name0Hook: (e, n) =>
                         (0, l.jsx)(
                             d.Z,
@@ -82,7 +82,7 @@ function p(e) {
                         (0, l.jsx)(
                             m.Z,
                             {
-                                participants: E,
+                                participants: I,
                                 channel: t,
                                 children: (n) =>
                                     (0, l.jsx)(u.Z, {

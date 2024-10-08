@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(867176),
     T = n(169979),
     x = n(119096),
-    S = n(502762),
-    v = n(952124),
+    v = n(502762),
+    S = n(952124),
     N = n(544989),
     A = n(481932),
     Z = n(272510),
@@ -71,7 +71,7 @@ function y(e) {
             value: B,
             children: (0, i.jsx)(g.NJ, {
                 value: F,
-                children: (0, i.jsxs)(S.Z, {
+                children: (0, i.jsxs)(v.Z, {
                     ref: G,
                     user: t,
                     displayProfile: U,
@@ -93,7 +93,7 @@ function y(e) {
                                             user: t,
                                             profileType: L.y0.PANEL
                                         }),
-                                        t.bot ? (0, i.jsx)(v.Z, { user: t }) : (0, i.jsx)(Z.Z, { user: t })
+                                        t.bot ? (0, i.jsx)(S.Z, { user: t }) : (0, i.jsx)(Z.Z, { user: t })
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {

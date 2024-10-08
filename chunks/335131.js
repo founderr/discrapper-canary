@@ -87,7 +87,7 @@ let p = (e) => {
             throw (
                 (s.Z.dispatch({
                     type: 'COLLECTIBLES_CATEGORIES_FETCH_FAILURE',
-                    error: e
+                    error: new l.Hx(e)
                 }),
                 new l.Hx(e))
             );
@@ -106,7 +106,7 @@ let p = (e) => {
                 throw (
                     (s.Z.dispatch({
                         type: 'COLLECTIBLES_PURCHASES_FETCH_FAILURE',
-                        error: e
+                        error: new l.Hx(e)
                     }),
                     new l.Hx(e))
                 );
@@ -135,7 +135,7 @@ let p = (e) => {
                 (s.Z.dispatch({
                     type: 'COLLECTIBLES_PRODUCT_FETCH_FAILURE',
                     skuId: e,
-                    error: t
+                    error: new l.Hx(t)
                 }),
                 new l.Hx(t))
             );
