@@ -1,39 +1,50 @@
 s.r(t),
     s.d(t, {
         default: function () {
-            return E;
+            return x;
         }
     });
 var a = s(735250),
     o = s(470079),
     n = s(481060),
-    i = s(600164),
-    l = s(63063),
-    r = s(113434),
-    d = s(497505),
-    c = s(918701),
+    r = s(600164),
+    i = s(63063),
+    l = s(113434),
+    c = s(497505),
+    d = s(918701),
     m = s(46140),
     _ = s(981631),
     u = s(689938),
     S = s(367928),
-    T = s(708901);
-function E(e) {
+    E = s(708901);
+let T = (e, t) => {
+    switch (e) {
+        case c.jn.QUEST_BAR:
+        case c.jn.QUEST_BAR_V2:
+            return !0;
+        case c.jn.QUEST_HOME_DESKTOP:
+            return t;
+        default:
+            return !1;
+    }
+};
+function x(e) {
     var t;
-    let { transitionState: s, onClose: E, questContent: x, quest: b } = e,
-        g = (0, c.zK)(b, m.S7.IN_HOUSE_CONSOLE_QUEST),
-        f = (0, c.Mi)(b, d.jn.GIFT_INVENTORY_FOR_YOU),
-        h = (0, r.tP)(b),
-        C = (null === (t = b.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        I = x === d.jn.QUEST_BAR || x === d.jn.QUEST_BAR_V2 || (f && !h && !C),
-        U = o.useMemo(
+    let { transitionState: s, onClose: x, questContent: j, quest: g } = e,
+        f = (0, d.zK)(g, m.S7.IN_HOUSE_CONSOLE_QUEST),
+        h = (0, d.Mi)(g, c.jn.GIFT_INVENTORY_FOR_YOU),
+        C = (0, l.tP)(g),
+        U = (null === (t = g.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
+        I = T(j, h && !C && !U),
+        O = o.useMemo(
             () =>
-                (0, c.Fs)({
+                (0, d.Fs)({
                     isTargetedDisclosure: I,
-                    gamePublisher: b.config.messages.gamePublisher,
-                    gameTitle: b.config.messages.gameTitle,
-                    isInHouseQuest: g
+                    gamePublisher: g.config.messages.gamePublisher,
+                    gameTitle: g.config.messages.gameTitle,
+                    isInHouseQuest: f
                 }),
-            [b, g, I]
+            [g, f, I]
         );
     return (0, a.jsxs)(n.ModalRoot, {
         transitionState: s,
@@ -41,7 +52,7 @@ function E(e) {
         className: S.modalRoot,
         children: [
             (0, a.jsxs)(n.ModalHeader, {
-                direction: i.Z.Direction.VERTICAL,
+                direction: r.Z.Direction.VERTICAL,
                 separator: !1,
                 className: S.modalHeader,
                 children: [
@@ -53,12 +64,12 @@ function E(e) {
                                 children: (0, a.jsx)('img', {
                                     className: S.icon,
                                     alt: '',
-                                    src: T
+                                    src: E
                                 })
                             }),
                             (0, a.jsx)(n.ModalCloseButton, {
                                 className: S.closeBtn,
-                                onClick: E
+                                onClick: x
                             })
                         ]
                     }),
@@ -75,69 +86,69 @@ function E(e) {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         className: S.upperBodyText,
-                        children: U
+                        children: O
                     }),
-                    (0, a.jsx)(j, {
-                        quest: b,
-                        questContent: x
+                    (0, a.jsx)(b, {
+                        quest: g,
+                        questContent: j
                     }),
                     (0, a.jsx)(n.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: u.Z.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({ privacySettingsUrl: l.Z.getArticleURL(_.BhN.QUESTS_PRIVACY_CONTROLS) })
+                        children: u.Z.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({ privacySettingsUrl: i.Z.getArticleURL(_.BhN.QUESTS_PRIVACY_CONTROLS) })
                     })
                 ]
             }),
             (0, a.jsx)(n.ModalFooter, {
                 className: S.footer,
                 children: (0, a.jsx)(n.Button, {
-                    onClick: E,
+                    onClick: x,
                     children: u.Z.Messages.CLOSE
                 })
             })
         ]
     });
 }
-function x(e) {
+function j(e) {
     let { location: t, age: s, activity: o } = e;
     return (0, a.jsxs)('ul', {
         className: S.targetList,
         children: [
             t &&
-                (0, a.jsx)(b, {
+                (0, a.jsx)(g, {
                     icon: n.GlobeEarthIcon,
                     children: u.Z.Messages.QUESTS_DISCLOSURE_LOCATION
                 }),
             s &&
-                (0, a.jsx)(b, {
+                (0, a.jsx)(g, {
                     icon: n.UserIcon,
                     children: u.Z.Messages.QUESTS_DISCLOSURE_AGE
                 }),
             o &&
-                (0, a.jsx)(b, {
+                (0, a.jsx)(g, {
                     icon: n.GameControllerIcon,
                     children: u.Z.Messages.QUESTS_DISCLOSURE_ACTIVITY
                 })
         ]
     });
 }
-function j(e) {
+function b(e) {
     var t;
     let { questContent: s, quest: o } = e,
-        n = (0, c.Mi)(o, d.jn.GIFT_INVENTORY_FOR_YOU),
-        i = (0, r.tP)(o),
-        l = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null;
-    return s !== d.jn.QUEST_BAR && s !== d.jn.QUEST_BAR_V2 && (s !== d.jn.QUEST_HOME_DESKTOP || !n || i || l)
-        ? s === d.jn.ACTIVITY_PANEL || s === d.jn.QUESTS_EMBED || s === d.jn.QUEST_LIVE_STREAM
-            ? (0, a.jsx)(x, { activity: !0 })
+        n = (0, d.Mi)(o, c.jn.GIFT_INVENTORY_FOR_YOU),
+        r = (0, l.tP)(o),
+        i = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null;
+    return s !== c.jn.QUEST_BAR && s !== c.jn.QUEST_BAR_V2 && (s !== c.jn.QUEST_HOME_DESKTOP || !n || r || i)
+        ? s === c.jn.ACTIVITY_PANEL || s === c.jn.QUESTS_EMBED || s === c.jn.QUEST_LIVE_STREAM
+            ? (0, a.jsx)(j, { activity: !0 })
             : null
-        : (0, a.jsx)(x, {
+        : (0, a.jsx)(j, {
               location: !0,
               age: !0,
               activity: !0
           });
 }
-function b(e) {
+function g(e) {
     let { icon: t, children: s } = e;
     return (0, a.jsxs)(n.Text, {
         variant: 'text-sm/medium',

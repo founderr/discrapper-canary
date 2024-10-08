@@ -36,41 +36,41 @@ function x(e, t) {
     return null != e && null != t && (0, p.p9)(t, g.Z, T.Z, S.Z, h.Z)[0];
 }
 t.Z = function (e) {
-    var t, h, p;
-    let { quest: T, memberListItemRef: S, applicationStream: g, position: G, closePopout: k, updatePosition: B } = e,
-        F = (0, o.e7)([m.Z], () => {
+    var t, n, h;
+    let { quest: p, memberListItemRef: T, applicationStream: S, position: g, closePopout: G, updatePosition: k } = e,
+        B = (0, o.e7)([m.Z], () => {
             var e;
-            return null !== (e = m.Z.getChannel(null == g ? void 0 : g.channelId)) && void 0 !== e ? e : null;
+            return null !== (e = m.Z.getChannel(null == S ? void 0 : S.channelId)) && void 0 !== e ? e : null;
         }),
-        V = (0, L.hf)({
-            quest: T,
+        F = (0, L.hf)({
+            quest: p,
             location: O.jn.MEMBERS_LIST
         }),
-        H = (0, N.tP)(T),
-        Z = (null == T ? void 0 : null === (t = T.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        Y = (null == T ? void 0 : null === (h = T.userStatus) || void 0 === h ? void 0 : h.enrolledAt) != null,
-        j = (null == T ? void 0 : null === (p = T.userStatus) || void 0 === p ? void 0 : p.completedAt) != null,
-        W = (0, o.e7)([I.Z], () => I.Z.getState().theme),
-        K = (0, l.wj)(W) ? M.BR.DARK : M.BR.LIGHT,
-        z = (0, o.e7)([f.Z], () => f.Z.useReducedMotion),
-        { ref: q, height: Q } = (0, _.Z)(),
-        [X, $] = i.useState(z),
-        J = (0, E.Aq)(),
-        ee = (0, s.eg)();
+        V = (0, N.tP)(p),
+        H = (null == p ? void 0 : null === (t = p.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
+        Z = (null == p ? void 0 : null === (n = p.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+        Y = (null == p ? void 0 : null === (h = p.userStatus) || void 0 === h ? void 0 : h.completedAt) != null,
+        j = (0, o.e7)([I.Z], () => I.Z.getState().theme),
+        W = (0, l.wj)(j) ? M.BR.DARK : M.BR.LIGHT,
+        K = (0, o.e7)([f.Z], () => f.Z.useReducedMotion),
+        { ref: z, height: q } = (0, _.Z)(),
+        [Q, X] = i.useState(K),
+        $ = (0, E.Aq)(),
+        J = (0, s.eg)();
     i.useEffect(() => {
-        let e = ee.current;
+        let e = J.current;
         return (
-            null == e || e.addEventListener('scroll', k),
+            null == e || e.addEventListener('scroll', G),
             () => {
-                null == e || e.removeEventListener('scroll', k);
+                null == e || e.removeEventListener('scroll', G);
             }
         );
-    }, [k, ee]),
+    }, [G, J]),
         i.useEffect(() => {
-            let e = ee.current,
-                t = S.current;
+            let e = J.current,
+                t = T.current;
             if (null == e || null == t) return;
-            let n = new MutationObserver(() => B());
+            let n = new MutationObserver(() => k());
             return (
                 n.observe(e, {
                     childList: !0,
@@ -80,17 +80,17 @@ t.Z = function (e) {
                     n.disconnect();
                 }
             );
-        }, [S, ee, B]);
-    let et = (0, u.useSpring)({
+        }, [T, J, k]);
+    let ee = (0, u.useSpring)({
             from: { height: 0 },
-            height: null != Q ? Q : 0,
+            height: null != q ? q : 0,
             config: {
                 tension: 450,
                 friction: 45
             },
-            onRest: () => $(!0)
+            onRest: () => X(!0)
         }),
-        en = (0, u.useTransition)(X, {
+        et = (0, u.useTransition)(Q, {
             from: {
                 opacity: 0,
                 scale: 0
@@ -100,84 +100,79 @@ t.Z = function (e) {
                 scale: 1
             }
         }),
-        er = () => {
-            J.dispatch(b.CkL.POPOUT_CLOSE);
+        en = () => {
+            $.dispatch(b.CkL.POPOUT_CLOSE);
         },
-        ei = 'top' === G ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
-    if (null == T || H || (Z && !x(g, F))) return null;
-    let ea = () => {
+        er = 'top' === g ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
+    if (null == p || V || (H && !x(S, B))) return null;
+    let ei = () => {
             (0, A._3)({
-                questId: T.id,
+                questId: p.id,
                 questContent: O.jn.MEMBERS_LIST,
                 questContentCTA: A.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, u.openModalLazy)(async () => {
-                    let { default: e } = await n.e('4266').then(n.bind(n, 316210));
-                    return (t) =>
-                        (0, r.jsx)(e, {
-                            ...t,
-                            questContent: O.jn.MEMBERS_LIST,
-                            quest: T
-                        });
+                (0, y.openDisclosureModal)(p, {
+                    content: O.jn.MEMBERS_LIST,
+                    ctaContent: A.jZ.OPEN_DISCLOSURE
                 });
         },
-        es = () => {
+        ea = () => {
             (0, A._3)({
-                questId: T.id,
+                questId: p.id,
                 questContent: O.jn.MEMBERS_LIST,
                 questContentCTA: A.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, y.navigateToQuestHome)(D.dr.MEMBERS_LIST, O.jn.MEMBERS_LIST, T.id);
+                (0, y.navigateToQuestHome)(D.dr.MEMBERS_LIST, O.jn.MEMBERS_LIST, p.id);
         },
-        eo = (e) => {
-            e.stopPropagation(), ea();
+        es = (e) => {
+            e.stopPropagation(), ei();
         },
-        el = () => {
-            if (x(g, F) && null != F)
+        eo = () => {
+            if (x(S, B) && null != B)
                 return (
                     (0, A._3)({
-                        questId: T.id,
+                        questId: p.id,
                         questContent: O.jn.MEMBERS_LIST,
                         questContentCTA: A.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
-                    c.default.selectVoiceChannel(F.id),
-                    (0, d.iV)(g)
+                    c.default.selectVoiceChannel(B.id),
+                    (0, d.iV)(S)
                 );
-            es();
+            ea();
         },
-        eu =
-            j && !Z
+        el =
+            Y && !H
                 ? {
                       headerText: P.Z.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
                       ctaText: P.Z.Messages.QUESTS_CLAIM_REWARD,
-                      handleClickCta: V,
+                      handleClickCta: F,
                       tileAssetType: 'reward'
                   }
-                : Y && !Z
+                : Z && !H
                   ? {
                         headerText: P.Z.Messages.QUESTS_MEMBERS_LIST_FINISH,
                         ctaText: P.Z.Messages.QUESTS_CHECK_PROGRESS,
-                        handleClickCta: es,
+                        handleClickCta: ea,
                         tileAssetType: 'reward'
                     }
-                  : x(g, F)
+                  : x(S, B)
                     ? {
                           headerText: P.Z.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
                           ctaText: P.Z.Messages.QUESTS_JOIN_ME,
-                          handleClickCta: el,
+                          handleClickCta: eo,
                           tileAssetType: 'game'
                       }
                     : {
                           headerText: P.Z.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
                           ctaText: P.Z.Messages.QUESTS_UNLOCK_REWARDS,
-                          handleClickCta: es,
+                          handleClickCta: ea,
                           tileAssetType: 'game'
                       };
     return (0, r.jsx)(v.A, {
-        questOrQuests: T,
+        questOrQuests: p,
         questContent: O.jn.MEMBERS_LIST,
         trackGuildAndChannelMetadata: !0,
         children: (e) => {
@@ -186,20 +181,20 @@ t.Z = function (e) {
                 ref: (t) => {
                     e.current = t;
                 },
-                'aria-expanded': X,
+                'aria-expanded': Q,
                 className: U.wrapper,
                 style: {
-                    width: null !== (n = null === (t = S.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
-                    height: et.height,
-                    overflow: X ? 'visible' : 'hidden',
-                    borderRadius: ei
+                    width: null !== (n = null === (t = T.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
+                    height: ee.height,
+                    overflow: Q ? 'visible' : 'hidden',
+                    borderRadius: er
                 },
                 children: (0, r.jsxs)('div', {
                     ref: (e) => {
-                        q.current = e;
+                        z.current = e;
                     },
                     className: U.container,
-                    style: { borderRadius: ei },
+                    style: { borderRadius: er },
                     children: [
                         (0, r.jsxs)('div', {
                             className: U.top,
@@ -209,19 +204,19 @@ t.Z = function (e) {
                                     children: [
                                         (0, r.jsx)(u.Heading, {
                                             variant: 'heading-sm/semibold',
-                                            children: eu.headerText
+                                            children: el.headerText
                                         }),
                                         (0, r.jsxs)(u.Clickable, {
                                             className: U.help,
                                             onClick: (e) => {
-                                                er(), eo(e);
+                                                en(), es(e);
                                             },
                                             children: [
                                                 (0, r.jsx)(u.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
                                                     className: U.helpText,
-                                                    children: P.Z.Messages.QUESTS_MEMBERS_LIST_PROMOTED_BY.format({ gamePublisher: T.config.messages.gamePublisher })
+                                                    children: P.Z.Messages.QUESTS_MEMBERS_LIST_PROMOTED_BY.format({ gamePublisher: p.config.messages.gamePublisher })
                                                 }),
                                                 (0, r.jsx)(u.CircleQuestionIcon, {
                                                     size: 'custom',
@@ -239,7 +234,7 @@ t.Z = function (e) {
                                     children: (0, r.jsxs)('div', {
                                         className: U.imgWrapper,
                                         children: [
-                                            en(
+                                            et(
                                                 (e, t) =>
                                                     t &&
                                                     (0, r.jsx)(a.animated.div, {
@@ -247,23 +242,23 @@ t.Z = function (e) {
                                                         className: U.imgUnderlay
                                                     })
                                             ),
-                                            'game' === eu.tileAssetType &&
+                                            'game' === el.tileAssetType &&
                                                 (0, r.jsx)('img', {
                                                     alt: P.Z.Messages.QUESTS_MEMBERS_LIST_GAME_TILE_ALT.format({
-                                                        gameTitle: T.config.messages.gameTitle,
-                                                        gamePublisher: T.config.messages.gamePublisher
+                                                        gameTitle: p.config.messages.gameTitle,
+                                                        gamePublisher: p.config.messages.gamePublisher
                                                     }),
                                                     className: U.assetTile,
-                                                    src: (0, R.fh)(T, R.Bd.GAME_TILE, K).url
+                                                    src: (0, R.fh)(p, R.Bd.GAME_TILE, W).url
                                                 }),
-                                            'reward' === eu.tileAssetType &&
+                                            'reward' === el.tileAssetType &&
                                                 (0, r.jsx)(C.Z, {
                                                     className: U.assetTile,
-                                                    quest: T,
+                                                    quest: p,
                                                     questContent: O.jn.MEMBERS_LIST,
                                                     learnMoreStyle: 'icon',
                                                     location: D.dr.MEMBERS_LIST,
-                                                    onClick: er
+                                                    onClick: en
                                                 })
                                         ]
                                     })
@@ -272,11 +267,11 @@ t.Z = function (e) {
                         }),
                         (0, r.jsx)(u.Button, {
                             onClick: () => {
-                                er(), eu.handleClickCta();
+                                en(), el.handleClickCta();
                             },
                             color: u.Button.Colors.CUSTOM,
                             className: U.ctaButton,
-                            children: eu.ctaText
+                            children: el.ctaText
                         })
                     ]
                 })
