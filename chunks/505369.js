@@ -5,32 +5,42 @@ var i = n(544891),
     l = n(207205),
     o = n(981631);
 t.Z = {
-    async fetchDehydrated(e) {
+    async fetchDehydrated() {
+        let { isReloading: e, forceRefresh: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (!(0, l.rK)('fetchDehydrated')) return;
-        let t = r.Z.negativeContentOnly();
+        let n = r.Z.negativeContentOnly();
         try {
-            let n = Date.now(),
-                s = await i.tn.get({ url: t ? o.ANM.GRAVITY_ITEMS_NEGATIVE : o.ANM.GRAVITY_ITEMS_DEHYDRATED });
+            let s = Date.now(),
+                r = await i.tn.get({
+                    url: n ? o.ANM.GRAVITY_ITEMS_NEGATIVE : o.ANM.GRAVITY_ITEMS_DEHYDRATED,
+                    query: { refresh: t }
+                });
             await a.Z.dispatch({
                 type: 'LOAD_GRAVITY_DEHYDRATED',
-                items: s.body.items,
-                loadId: s.body.load_id,
-                startTime: n,
+                items: r.body.items,
+                loadId: r.body.load_id,
+                startTime: s,
                 isReloading: e
             });
         } catch (e) {
             s.Z.captureException(e);
         }
     },
-    async gravityJoinGuild(e) {
+    async gravityJoinGuild(e, t) {
         if (!!(0, l.rK)('gravityJoinGuild') && 0 !== e.length)
             try {
-                await i.tn.post({
-                    url: o.ANM.GRAVITY_JOIN_GUILD,
-                    body: { guild_ids: e }
-                });
+                return (
+                    await i.tn.post({
+                        url: o.ANM.GRAVITY_JOIN_GUILD,
+                        body: {
+                            guild_ids: e,
+                            location: t
+                        }
+                    }),
+                    !0
+                );
             } catch (e) {
-                s.Z.captureException(e);
+                return s.Z.captureException(e), !1;
             }
     },
     setGravitySelectedChannel(e) {
@@ -122,5 +132,6 @@ t.Z = {
             filters: e
         }),
     giveFeedback: () => a.Z.dispatch({ type: 'GRAVITY_FEEDBACK_GIVEN' }),
-    clearReadStates: () => a.Z.dispatch({ type: 'CLEAR_GRAVITY_READ_STATES' })
+    clearReadStates: () => a.Z.dispatch({ type: 'CLEAR_GRAVITY_READ_STATES' }),
+    addedRecommendedGuild: () => a.Z.dispatch({ type: 'GRAVITY_JOINED_RECOMMENDED_GUILD' })
 };
