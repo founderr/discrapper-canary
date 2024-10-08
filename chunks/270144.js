@@ -3,7 +3,10 @@ t.d(e, {
         return _;
     },
     CR: function () {
-        return b;
+        return R;
+    },
+    Ev: function () {
+        return j;
     },
     h6: function () {
         return A;
@@ -12,10 +15,10 @@ t.d(e, {
         return l;
     },
     qz: function () {
-        return R;
+        return O;
     },
     sp: function () {
-        return O;
+        return b;
     }
 }),
     t(653041),
@@ -37,30 +40,30 @@ var l,
     S = t(106976),
     h = t(307643),
     x = t(488915),
-    N = t(171246),
-    g = t(981631);
-let T = 12633 == t.j ? 2592000000 : null;
+    g = t(171246),
+    N = t(981631);
+let Z = 12633 == t.j ? 2592000000 : null;
 ((i = l || (l = {}))[(i.NOT_LOADED = 0)] = 'NOT_LOADED'), (i[(i.LOADING = 1)] = 'LOADING'), (i[(i.LOADED = 2)] = 'LOADED'), (i[(i.ERROR = 3)] = 'ERROR');
-let Z = (n) => {
+let E = (n) => {
         let { guildId: e, canFetch: t = !0, forceRefetch: l = !1 } = n,
             i = (0, s.e7)([x.Z], () => (null != e ? x.Z.getEntitlementsForGuildFetchState(e) : null), [e]);
         return (
             r.useEffect(() => {
-                if (null == e || e === g.ME) return;
+                if (null == e || e === N.ME) return;
                 let n = x.Z.getEntitlementsForGuildFetchState(e);
                 t && (n === x.M.NOT_FETCHED || l) && (0, S.i1)(e);
             }, [e, t, l]),
             { entitlementsLoaded: i === x.M.FETCHED }
         );
     },
-    E = [],
+    T = [],
     C = [];
 function _(n, e) {
-    o()(null == n || n.type === g.epS.SUBSCRIPTION_GROUP, 'SKU must be a subscription group');
+    o()(null == n || n.type === N.epS.SUBSCRIPTION_GROUP, 'SKU must be a subscription group');
     let t = null == n ? void 0 : n.bundledSkuIds,
         l = null == n ? void 0 : n.applicationId,
         i = (0, s.e7)([p.ZP], () => p.ZP.getSubscriptions(), []),
-        a = (0, s.Wu)([x.Z], () => (null != l && null != e ? x.Z.getApplicationEntitlementsForGuild(l, e) : E), [l, e]),
+        a = (0, s.Wu)([x.Z], () => (null != l && null != e ? x.Z.getApplicationEntitlementsForGuild(l, e) : T), [l, e]),
         u = (0, s.Wu)(
             [m.Z],
             () => {
@@ -77,12 +80,12 @@ function _(n, e) {
             if (null == i) return {};
             for (let r of Object.values(i)) {
                 if (null == l) {
-                    let n = (0, N.z0)(f.Z, null != t ? t : [], r);
+                    let n = (0, g.z0)(f.Z, null != t ? t : [], r);
                     null != n && (l = { upcomingSubscriptionPlan: n });
                 }
                 if (null == n)
                     for (let t of c) {
-                        let l = (0, N.PB)(f.Z, v.Z, r, t, e);
+                        let l = (0, g.PB)(f.Z, v.Z, r, t, e);
                         if (null != l) {
                             n = {
                                 activeSubscription: r,
@@ -104,10 +107,10 @@ function _(n, e) {
 }
 function A(n) {
     var e;
-    let t = null !== (e = null == n ? void 0 : n.id) && void 0 !== e ? e : g.lds,
-        { entitlementsLoaded: l } = Z({
+    let t = null !== (e = null == n ? void 0 : n.id) && void 0 !== e ? e : N.lds,
+        { entitlementsLoaded: l } = E({
             guildId: t,
-            canFetch: (0, s.e7)([d.Z], () => d.Z.can(g.Plq.ADMINISTRATOR, n))
+            canFetch: (0, s.e7)([d.Z], () => d.Z.can(N.Plq.ADMINISTRATOR, n))
         }),
         i = (0, s.e7)([I.Z], () => I.Z.getLastGuildDismissedTime(t)),
         a = (0, s.Wu)([x.Z], () => {
@@ -125,11 +128,11 @@ function A(n) {
                 }),
             [a, o]
         );
-    return l ? u.filter((n) => null != n.endsAt && n.endsAt.getTime() > Math.max(null != i ? i : 0, Date.now() - T)) : [];
+    return l ? u.filter((n) => null != n.endsAt && n.endsAt.getTime() > Math.max(null != i ? i : 0, Date.now() - Z)) : [];
 }
-let O = (n) => {
+let b = (n) => {
         let [e, t] = r.useState(!1),
-            l = r.useMemo(() => n.map(N.bZ), [n]);
+            l = r.useMemo(() => n.map(g.bZ), [n]);
         return (
             r.useEffect(() => {
                 t(!0),
@@ -142,7 +145,7 @@ let O = (n) => {
             { loading: e }
         );
     },
-    R = () => {
+    O = () => {
         let [n, e] = r.useState(0);
         return (
             r.useEffect(() => {
@@ -151,12 +154,12 @@ let O = (n) => {
                         (0, u.p0)({
                             withSku: !0,
                             withApplication: !0,
-                            entitlementType: g.qc2.APPLICATION_SUBSCRIPTION
+                            entitlementType: N.qc2.APPLICATION_SUBSCRIPTION
                         }),
                         (0, u.p0)({
                             withSku: !0,
                             withApplication: !0,
-                            entitlementType: g.qc2.PURCHASE
+                            entitlementType: N.qc2.PURCHASE
                         })
                     ])
                         .catch(() => {
@@ -169,12 +172,34 @@ let O = (n) => {
             { loadState: n }
         );
     };
-function b(n, e) {
+function R(n, e) {
     let [t, l] = r.useState([]);
     return (
         r.useEffect(() => {
             null != n && (0, h.tn)(n, e).then(l);
         }, [n, e]),
         (0, s.Wu)([c.Z], () => t.map((n) => c.Z.getGuild(n)).filter((n) => null != n), [t])
+    );
+}
+function j(n, e) {
+    return (0, s.e7)(
+        [p.ZP, v.Z, f.Z],
+        () => {
+            let t = new Set();
+            for (let e of n) {
+                let n = v.Z.get(e);
+                null != n && n.isAvailable() && !1 === n.deleted && t.add(e);
+            }
+            let l = p.ZP.getActiveApplicationSubscriptions();
+            return null == l
+                ? void 0
+                : l.find((n) => {
+                      var l;
+                      if (null != e && (null === (l = n.metadata) || void 0 === l ? void 0 : l.application_subscription_guild_id) !== e) return !1;
+                      for (let e of n.items.map((n) => f.Z.get(n.planId))) if (null != e && t.has(e.skuId)) return !0;
+                      return !1;
+                  });
+        },
+        [n, e]
     );
 }
