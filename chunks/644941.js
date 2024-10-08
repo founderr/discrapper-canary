@@ -18,8 +18,8 @@ var a = t(735250),
     f = t(669764),
     T = t(706454),
     O = t(768581),
-    N = t(814225),
-    R = t(709054),
+    R = t(814225),
+    N = t(709054),
     h = t(810568),
     P = t(998058),
     C = t(839392),
@@ -60,7 +60,7 @@ function Q(e) {
             return null === (e = u.K.get(F)) || void 0 === e ? void 0 : e[o.id];
         }),
         p = (0, L.p)('GameProfileModal'),
-        f = r.useMemo(() => (null == s ? void 0 : s.genres.map(N.P3).join(', ')), [s]),
+        f = r.useMemo(() => (null == s ? void 0 : s.genres.map(R.P3).join(', ')), [s]),
         T = r.useMemo(() => {
             if (null == s) return '';
             let { artwork: e, screenshots: n } = s;
@@ -75,7 +75,7 @@ function Q(e) {
             return '';
         }, [s]),
         P = null == o ? void 0 : o.getIconURL(160, O.$k ? 'webp' : 'png'),
-        C = R.default.extractTimestamp(o.id),
+        C = N.default.extractTimestamp(o.id),
         M = l()().diff(l()(C), 'days') <= k.G,
         S = d.some((e) => (0, g.ig)(e) === c.o.GLOBAL),
         Z = null !== (n = s.name) && void 0 !== n ? n : null == o ? void 0 : o.name,
@@ -258,11 +258,11 @@ n.default = (e) => {
         { clientThemesClassName: c } = (0, I.ZP)(),
         u = (0, d.e7)([T.default], () => T.default.locale),
         O = r.useMemo(() => (0, h.fP)(), []),
-        N = (0, d.Wu)([C.Z], () => {
+        R = (0, d.Wu)([C.Z], () => {
             var e;
             return (null !== (e = C.Z.getSimilarGames(n)) && void 0 !== e ? e : []).slice(0, 25);
         }),
-        [R, L] = r.useState(null),
+        [N, L] = r.useState(null),
         { entries: S } = (0, M.Z)(),
         v = r.useMemo(() => {
             var e;
@@ -297,7 +297,7 @@ n.default = (e) => {
     }, []),
     r.useEffect(() => {
         (async () => {
-            if (0 === N.length) {
+            if (0 === R.length) {
                 L(null);
                 try {
                     await (0, P.i)(n);
@@ -306,7 +306,7 @@ n.default = (e) => {
                 }
             }
         })();
-    }, [n, N]),
+    }, [n, R]),
     (0, E.Z)(() => {
         var e, t, a;
         let r = Date.now(),
@@ -324,7 +324,7 @@ n.default = (e) => {
             gameName: null !== (a = null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : null == Z ? void 0 : Z.name) && void 0 !== a ? a : '',
             playedFriendIds: v.map((e) => e.author_id),
             playedFriendsData: s,
-            similarGames: z(N),
+            similarGames: z(R),
             officialGuildId: null == x ? void 0 : null === (e = x.guild) || void 0 === e ? void 0 : e.id
         });
     }),
@@ -334,8 +334,9 @@ n.default = (e) => {
               transitionState: o,
               size: _.ModalSize.DYNAMIC,
               className: i()(c, K.gameProfileModal),
-              children: (0, a.jsxs)(_.ScrollerNone, {
+              children: (0, a.jsxs)(_.Scroller, {
                   className: K.scrollable,
+                  orientation: 'auto',
                   children: [
                       (0, a.jsx)(Q, {
                           detectedGame: b,
@@ -353,8 +354,8 @@ n.default = (e) => {
                                       application: Z,
                                       entries: v,
                                       officialGuildInvite: x,
-                                      similarGames: N,
-                                      similarGamesError: R,
+                                      similarGames: R,
+                                      similarGamesError: N,
                                       onClose: l,
                                       viewId: O,
                                       trackAction: j
