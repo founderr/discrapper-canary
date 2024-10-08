@@ -40,11 +40,6 @@ function p(e) {
         if (p)
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(T, {
-                        isHovered: n,
-                        url: o,
-                        isVideo: !0
-                    }),
                     m
                         ? (0, i.jsx)(g, {
                               isHovered: n,
@@ -55,7 +50,12 @@ function p(e) {
                               src: o,
                               className: I.bannerImage,
                               muted: !0
-                          })
+                          }),
+                    (0, i.jsx)(T, {
+                        isHovered: n,
+                        url: o,
+                        isVideo: !0
+                    })
                 ]
             });
         if (m)
@@ -68,46 +68,54 @@ function p(e) {
     return null;
 }
 function g(e) {
-    let { isHovered: t, url: n, animatedUrl: a } = e;
+    let { isHovered: t, url: n, animatedUrl: s } = e,
+        [l, o] = a.useState(!1);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            null != a
+            null != s
                 ? (0, i.jsx)(T, {
                       isHovered: t,
-                      url: a,
+                      url: s,
                       isVideo: !1
                   })
                 : null,
             (0, i.jsx)('img', {
                 src: n,
                 alt: '',
-                className: I.bannerImage
+                className: r()(I.bannerImage, { [I.loaded]: l }),
+                onLoad: () => o(!0)
             })
         ]
     });
 }
 function T(e) {
     let { isHovered: t, url: n, isVideo: s } = e,
-        [l, o] = a.useState(t);
+        [l, o] = a.useState(!1),
+        [c, d] = a.useState(t);
     return (a.useEffect(() => {
-        t && o(!0);
+        t && d(!0);
     }, [t]),
-    l)
+    c)
         ? (0, i.jsx)('div', {
-              className: r()(I.activityAnimatedContainer, { [I.videoFadeOut]: !t }),
-              onAnimationEnd: () => (t ? null : o(!1)),
+              className: r()(I.activityAnimatedContainer, {
+                  [I.videoFadeOut]: !t,
+                  [I.videoFadeIn]: t && l
+              }),
+              onAnimationEnd: () => (t ? null : d(!1)),
               children: s
                   ? (0, i.jsx)(h.Z, {
                         src: n,
-                        className: I.activityVideo,
                         loop: !0,
                         autoPlay: !0,
-                        muted: !0
+                        muted: !0,
+                        className: I.activityVideo,
+                        onLoadedData: () => o(!0)
                     })
                   : (0, i.jsx)('img', {
                         src: n,
                         alt: '',
-                        className: I.activityVideo
+                        className: I.activityVideo,
+                        onLoad: () => o(!0)
                     })
           })
         : null;
@@ -122,33 +130,33 @@ t.Z = function (e) {
         h = a.useCallback(() => d(!1), []),
         T = (0, _.ye)(t),
         f = (0, o.useToken)(o.tokens.colors.BACKGROUND_PRIMARY).hex(),
-        S = (0, E.ZP)(n, f),
-        C = t.bot,
-        { botBannerUrl: N, botBannerUrlAnimated: A } = a.useMemo(
+        [S, C, N] = (0, E.Cf)(n, f),
+        A = t.bot,
+        { botBannerUrl: v, botBannerUrlAnimated: Z } = a.useMemo(
             () =>
-                (null == C ? void 0 : C.id) == null || (null == C ? void 0 : C.banner) == null
+                (null == A ? void 0 : A.id) == null || (null == A ? void 0 : A.banner) == null
                     ? {}
                     : {
                           botBannerUrl: (0, m.aN)({
-                              id: C.id,
-                              banner: C.banner,
+                              id: A.id,
+                              banner: A.banner,
                               canAnimate: !1,
                               size: 600
                           }),
                           botBannerUrlAnimated: s
                               ? void 0
                               : (0, m.aN)({
-                                    id: C.id,
-                                    banner: C.banner,
+                                    id: A.id,
+                                    banner: A.banner,
                                     canAnimate: !0,
                                     size: 600
                                 })
                       },
-            [null == C ? void 0 : C.id, null == C ? void 0 : C.banner, s]
+            [null == A ? void 0 : A.id, null == A ? void 0 : A.banner, s]
         );
     return (0, i.jsx)('div', {
         className: I.banner,
-        style: { backgroundColor: S },
+        style: { backgroundImage: 'linear-gradient(45deg, '.concat(S, ', ').concat(null != N ? N : C, ')') },
         onMouseEnter: u,
         onFocus: u,
         onMouseLeave: h,
@@ -157,14 +165,14 @@ t.Z = function (e) {
             ? (0, i.jsx)(p, {
                   application: t,
                   isHovered: r,
-                  botBannerUrl: null == N ? void 0 : N,
-                  botBannerUrlAnimated: null == A ? void 0 : A
+                  botBannerUrl: null == v ? void 0 : v,
+                  botBannerUrlAnimated: null == Z ? void 0 : Z
               })
-            : null != N
+            : null != v
               ? (0, i.jsx)(g, {
                     isHovered: r,
-                    url: N,
-                    animatedUrl: A
+                    url: v,
+                    animatedUrl: Z
                 })
               : null
     });
