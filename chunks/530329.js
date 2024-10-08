@@ -1,40 +1,40 @@
 a.d(n, {
     Z: function () {
-        return E;
+        return f;
     }
 });
-var i = a(735250),
+var t = a(735250),
     s = a(470079),
-    r = a(120356),
-    o = a.n(r),
-    l = a(53691),
-    t = a(378879),
-    c = a(981631),
-    u = a(486324),
-    d = a(689938),
+    c = a(120356),
+    o = a.n(c),
+    i = a(53691),
+    r = a(378879),
+    d = a(981631),
+    l = a(486324),
+    u = a(689938),
     A = a(734471);
-function E(e) {
-    let { uploadType: n, className: a, ...r } = e,
-        E = s.useCallback(() => {
-            (0, t.openProfileUpsellModal)(n, void 0);
+function f(e) {
+    let { uploadType: n, className: a, ...c } = e,
+        f = s.useCallback(() => {
+            (0, r.openProfileUpsellModal)(n, void 0);
         }, [n]),
-        _ = s.useMemo(() => {
+        p = s.useMemo(() => {
             switch (n) {
-                case u.pC.AVATAR:
-                    return d.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_INLINE_UPSELL.format({ onClick: E });
-                case u.pC.BANNER:
-                    return d.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_INLINE_UPSELL.format({ onClick: E });
+                case l.pC.AVATAR:
+                    return u.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_INLINE_UPSELL.format({ onClick: f });
+                case l.pC.BANNER:
+                    return u.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_INLINE_UPSELL.format({ onClick: f });
                 default:
                     return '';
             }
-        }, [n, E]);
-    return n === u.pC.AVATAR || n === u.pC.BANNER
-        ? (0, i.jsx)(l.p, {
-              text: _,
-              button: d.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA,
-              buttonAnalyticsObject: { section: c.jXE.USER_PROFILE },
+        }, [n, f]);
+    return n === l.pC.AVATAR || n === l.pC.BANNER
+        ? (0, t.jsx)(i.p, {
+              text: p,
+              button: u.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA,
+              buttonAnalyticsObject: { section: d.jXE.USER_PROFILE },
               className: o()(A.container, a),
-              ...r
+              ...c
           })
         : null;
 }

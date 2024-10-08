@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(47120);
@@ -28,13 +28,13 @@ var i = n(735250),
     v = n(767573);
 let T = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     Z = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
-    A = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
-function b(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: b = 0, unread: R = !1, defaultFolderName: M, useCircleMask: L = !1, draggable: P = !1, sorting: O = !1, onDragStart: y, onDragEnd: D, onExpandCollapse: j, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
-        { id: k, name: B, children: V } = t,
-        [H, F] = l.useState(!1),
+    b = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
+function A(e) {
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: R = !1, defaultFolderName: M, useCircleMask: L = !1, draggable: P = !1, sorting: O = !1, onDragStart: y, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
+        { id: k, name: B, children: H } = t,
+        [V, F] = l.useState(!1),
         [W, z] = l.useState(!1),
-        Y = H || W;
+        Y = V || W;
     l.useEffect(() => {
         O && F(!1);
     }, [O]);
@@ -48,7 +48,7 @@ function b(e) {
                 }
             ),
             end() {
-                null == D || D(), (0, h.V1)(p.ZP.getCompatibleGuildFolders());
+                null == j || j(), (0, h.V1)(p.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -57,14 +57,14 @@ function b(e) {
         }, []),
         X = l.useCallback(
             (e) => {
-                (('ArrowRight' === e.key && !u) || ('ArrowLeft' === e.key && u)) && j();
+                (('ArrowRight' === e.key && !u) || ('ArrowLeft' === e.key && u)) && D();
             },
-            [j, u]
+            [D, u]
         ),
         J = null != B && '' !== B ? B : null != M && '' !== M ? M : S.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
         $ = (0, c.Ie)(''.concat(k)),
         ee = 'folder-items-'.concat(k),
-        et = V.length * (Z + A),
+        et = H.length * (Z + b),
         en = (0, d.useTransition)(!K && u, {
             from: { height: 0 },
             enter: { height: 1 },
@@ -76,7 +76,7 @@ function b(e) {
             children: [
                 (0, i.jsx)(m.Z, {
                     disabled: K || u,
-                    hovered: H,
+                    hovered: V,
                     selected: r,
                     unread: R,
                     className: v.pill
@@ -98,10 +98,10 @@ function b(e) {
                                   forceCircular: L,
                                   sorting: O,
                                   mediaState: f,
-                                  mentionCount: b,
+                                  mentionCount: A,
                                   tooltipName: J,
                                   folderGroupId: ee,
-                                  onClick: j,
+                                  onClick: D,
                                   onContextMenu: w,
                                   onHoverChange: F,
                                   onKeyDown: X,
@@ -142,7 +142,7 @@ function b(e) {
                             style: { height: e.height.to((e) => e * et) },
                             className: x.__invalid_expandedGuilds,
                             role: 'group',
-                            children: V.map(U)
+                            children: H.map(U)
                         },
                         l
                     )

@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return A;
+        return b;
     }
 }),
     n(47120),
@@ -194,7 +194,7 @@ class Z extends (i = r.PureComponent) {
     }
 }
 x(Z, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
-function A(e, t) {
+function b(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,
             r = t.getState(i, l);
@@ -203,7 +203,7 @@ function A(e, t) {
 }
 t.Z = c.ZP.connectStores([g.Z, m.Z, p.Z], () => {
     let e = g.Z.activeItems,
-        t = A(e, m.Z),
+        t = b(e, m.Z),
         { total: n, progress: i } = C.lK(t);
     return {
         percent: C.xI(i, n),

@@ -195,19 +195,19 @@ function N(e) {
     }
 }
 function O(e) {
-    let { location: t, treatment: n, gameApplicationId: r } = e;
+    let { location: t, treatment: n, gameApplicationIds: r } = e;
     l.default.track(c.rMx.CLAN_USER_INVITE_VIEWED, {
         location: t,
         treatment: n,
-        game_application_id: r
+        game_application_ids: r
     });
 }
 function R(e) {
-    let { location: t, treatment: n, gameApplicationId: r } = e;
+    let { location: t, treatment: n, gameApplicationIds: r } = e;
     l.default.track(c.rMx.CLAN_USER_INVITE_CLICKED, {
         location: t,
         treatment: n,
-        game_application_id: r
+        game_application_ids: r
     });
 }
 function v(e) {

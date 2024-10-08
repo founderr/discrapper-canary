@@ -148,7 +148,7 @@ function e$() {
 }
 let e0 = 15 * eC.Z.Millis.MINUTE,
     e1 = new Set(['discord-developers', 'discord-testers', 'discord-townhall', 'discordgameslab']),
-    e7 = (e, t, n) => () => {
+    e3 = (e, t, n) => () => {
         let i = null != t ? t : n;
         if (null == i) return null;
         let { url: s, proxyURL: l, width: r, height: o } = i;
@@ -161,7 +161,7 @@ let e0 = 15 * eC.Z.Millis.MINUTE,
             className: eQ.gifFavoriteButton
         });
     },
-    e3 = (e) => () => {
+    e7 = (e) => () => {
         let { url: t, proxyUrl: n, width: i, height: s } = e;
         return null != i && null != s && Q.uo.test(n)
             ? (0, a.jsx)(eb.Z, {
@@ -419,7 +419,7 @@ class e2 extends (i = s.Component) {
                                 duration: a
                             });
                         },
-                        gifFavoriteButton: e3(n),
+                        gifFavoriteButton: e7(n),
                         isSearchResult: this.props.isSearchResult
                     },
                     s = (0, eN.q)({
@@ -479,7 +479,7 @@ class e2 extends (i = s.Component) {
         let { gifAutoPlay: t, shouldRedactExplicitContent: n, shouldHideMediaOptions: i, onMediaItemContextMenu: s } = this.props;
         return (0, a.jsx)(eB.F, {
             gifAutoPlay: t,
-            getGifFavButton: e3,
+            getGifFavButton: e7,
             getOnMediaItemContextMenu:
                 null == s
                     ? void 0
@@ -732,7 +732,7 @@ class e2 extends (i = s.Component) {
                 let I = (0, a.jsx)(
                     U.h.Provider,
                     {
-                        value: e7(e.url, e.image, e.video),
+                        value: e3(e.url, e.image, e.video),
                         children: (0, a.jsx)(A.ZP, {
                             className: eQ.embedWrapper,
                             embed: e,

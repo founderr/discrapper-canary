@@ -18,11 +18,11 @@ t.Z = function (e) {
             guild_id: t.id
         });
     }, [t.id, _]);
-    let A = null;
+    let b = null;
     'function' == typeof x
-        ? (A = x())
+        ? (b = x())
         : null != x &&
-          (A = (0, i.jsx)(o.Button, {
+          (b = (0, i.jsx)(o.Button, {
               className: p.button,
               size: o.Button.Sizes.SMALL,
               onClick: () => {
@@ -38,11 +38,11 @@ t.Z = function (e) {
               color: v,
               children: x
           }));
-    let b = null;
+    let A = null;
     'function' == typeof n
-        ? (b = n())
+        ? (A = n())
         : null != n &&
-          (b = (0, i.jsx)(o.Text, {
+          (A = (0, i.jsx)(o.Text, {
               variant: 'text-md/medium',
               color: 'header-primary',
               className: a()(p.title, { [p.noImageTitle]: null == s }, { [p.center]: T }),
@@ -93,7 +93,7 @@ t.Z = function (e) {
                 }),
             (0, i.jsxs)('div', {
                 className: p.message,
-                children: [b, R, A]
+                children: [A, R, b]
             })
         ]
     });

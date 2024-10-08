@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return g;
     },
     y: function () {
         return p;
@@ -42,7 +42,7 @@ function p(e, t, n) {
     }
 }
 ((i = s || (s = {}))[(i.ABOVE = 0)] = 'ABOVE'), (i[(i.VISIBLE = 1)] = 'VISIBLE'), (i[(i.BELOW = 2)] = 'BELOW');
-class f extends (o = l.PureComponent) {
+class g extends (o = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { prevValue: n, currValue: i, nextValue: s } = t;
         return null == n && i !== e.value
@@ -159,4 +159,4 @@ class f extends (o = l.PureComponent) {
             (this.currAnimate = new d.Z.Value(1));
     }
 }
-h(f, 'Positions', s);
+h(g, 'Positions', s);

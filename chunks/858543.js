@@ -1,9 +1,9 @@
 n.d(t, {
     DM: function () {
-        return f;
+        return g;
     },
     ZP: function () {
-        return g;
+        return f;
     }
 });
 var i = n(735250);
@@ -19,7 +19,7 @@ var s = n(120356),
     h = n(689938),
     m = n(646230),
     p = n(198864);
-function f(e) {
+function g(e) {
     let { channel: t, isNew: n } = e,
         i = (0, c.eV)(t),
         s = i.slice(void 0, 3),
@@ -36,15 +36,15 @@ function f(e) {
         forumPostContainsTags: i.length > 0
     };
 }
-function g(e) {
+function f(e) {
     let { channel: t, isNew: n, tagsClassName: s, className: c } = e,
         {
             shownTags: u,
-            remainingTags: g,
+            remainingTags: f,
             moreTagsCount: _,
             isPinned: T,
             shouldRenderTagsRow: v
-        } = f({
+        } = g({
             channel: t,
             isNew: n
         }),
@@ -88,7 +88,7 @@ function g(e) {
                   ),
                   _ > 0
                       ? (0, i.jsx)(d.f, {
-                            tags: g,
+                            tags: f,
                             count: _,
                             size: d.Z.Sizes.SMALL
                         })

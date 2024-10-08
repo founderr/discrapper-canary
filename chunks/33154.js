@@ -16,10 +16,10 @@ var i,
     h = n(41776),
     m = n(981631),
     p = n(689938),
-    f = n(583694);
+    g = n(583694);
 ((s = i || (i = {}))[(s.CHAT = 0)] = 'CHAT'), (s[(s.REACTIONS = 1)] = 'REACTIONS');
 t.Z = (e) => {
-    let { type: t, guild: i, closePopout: s, ctaRef: g } = e,
+    let { type: t, guild: i, closePopout: s, ctaRef: f } = e,
         _ = (0, d.Dt)(),
         [T, v] = a.useState(!1),
         E = (0, l.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
@@ -39,7 +39,7 @@ t.Z = (e) => {
             return (0, u.vE)(t);
     }
     if (null == b) return null;
-    let C = async () => {
+    let R = async () => {
         v(!0);
         try {
             await c.Z.joinGuild(i.id, { source: m.vtS.CHAT_INPUT_BLOCKER }), s();
@@ -48,16 +48,16 @@ t.Z = (e) => {
         }
     };
     return (0, o.jsxs)(r.Dialog, {
-        className: f.container,
+        className: g.container,
         'aria-labelledby': _,
         children: [
             (0, o.jsx)('img', {
                 alt: '',
-                className: f.image,
+                className: g.image,
                 src: n(64395)
             }),
             (0, o.jsxs)('div', {
-                className: f.content,
+                className: g.content,
                 children: [
                     (0, o.jsx)(r.Heading, {
                         variant: 'heading-md/semibold',
@@ -70,18 +70,18 @@ t.Z = (e) => {
                         children: I
                     }),
                     (0, o.jsxs)('div', {
-                        className: f.buttonContainer,
+                        className: g.buttonContainer,
                         children: [
                             (0, o.jsx)(r.Button, {
-                                buttonRef: g,
-                                onClick: C,
+                                buttonRef: f,
+                                onClick: R,
                                 submitting: T,
                                 children: p.Z.Messages.LURKER_MODE_POPOUT_JOIN
                             }),
                             (0, o.jsx)(r.Button, {
                                 onClick: s,
                                 look: r.Button.Looks.BLANK,
-                                className: f.cancel,
+                                className: g.cancel,
                                 children: p.Z.Messages.LURKER_MODE_POPOUT_CANCEL
                             })
                         ]

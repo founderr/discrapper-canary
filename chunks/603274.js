@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(47120),
@@ -84,7 +84,7 @@ function Z() {
             for (let t of a) e += h.Z.getParticipantCount(t, p.pV.AUDIENCE);
             return e;
         }),
-        A = (0, o.Wu)(
+        b = (0, o.Wu)(
             [f.Z],
             () =>
                 f.Z.getAllApplicationStreams()
@@ -92,7 +92,7 @@ function Z() {
                     .map((e) => e.ownerId),
             [l]
         ),
-        b = (0, o.Wu)(
+        A = (0, o.Wu)(
             [u.ZP],
             () => {
                 let e = u.ZP.getEmbeddedActivitiesByChannel(),
@@ -105,11 +105,11 @@ function Z() {
             },
             [l]
         ),
-        R = (0, o.Wu)([m.default], () => b.map((e) => m.default.getUser(e)), [b]),
-        M = (0, o.Wu)([m.default], () => A.map((e) => m.default.getUser(e)), [A]),
+        R = (0, o.Wu)([m.default], () => A.map((e) => m.default.getUser(e)), [A]),
+        M = (0, o.Wu)([m.default], () => b.map((e) => m.default.getUser(e)), [b]),
         L = T(
             c.VoiceNormalIcon,
-            S.filter((e) => !A.includes(e.id) && !b.includes(e.id))
+            S.filter((e) => !b.includes(e.id) && !A.includes(e.id))
         );
     let P =
             ((e = v),
@@ -148,14 +148,14 @@ function Z() {
                   })),
         O = T(
             c.ScreenArrowIcon,
-            M.filter((e) => null != e && !b.includes(e.id))
+            M.filter((e) => null != e && !A.includes(e.id))
         ),
         y = T(c.ActivitiesIcon, R);
     return (0, i.jsxs)(i.Fragment, {
         children: [P, L, O, y]
     });
 }
-function A() {
+function b() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -169,13 +169,13 @@ function A() {
         ]
     });
 }
-function b(e) {
+function A(e) {
     let { 'aria-label': t = !1, onShow: n, children: l } = e;
     return (0, i.jsx)(c.Tooltip, {
         hideOnClick: !0,
         spacing: 20,
         position: 'right',
-        text: (0, i.jsx)(A, {}),
+        text: (0, i.jsx)(b, {}),
         'aria-label': t,
         tooltipClassName: v.listItemTooltip,
         onTooltipShow: n,

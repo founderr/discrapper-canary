@@ -157,11 +157,11 @@ function Z(e) {
         m = [];
     null != n ? (m = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (m = u.map((e) => e.user.id));
     let Z = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(g.lm)),
-        A = null != n || (0, c.Z)(t),
-        b = l.useMemo(() => {
+        b = null != n || (0, c.Z)(t),
+        A = l.useMemo(() => {
             let e = new Map();
             return (
-                A &&
+                b &&
                     null != u &&
                     u.forEach((t) => {
                         let n = t.member;
@@ -169,8 +169,8 @@ function Z(e) {
                     }),
                 e
             );
-        }, [u, A]);
-    return A
+        }, [u, b]);
+    return b
         ? (0, i.jsxs)('div', {
               className: I.flexColumn,
               children: [
@@ -207,7 +207,7 @@ function Z(e) {
                                           renderUser: (e) => {
                                               var t;
                                               if (null == e) return null;
-                                              let n = b.get(e.id),
+                                              let n = A.get(e.id),
                                                   l = null !== (t = null == n ? void 0 : n.nick) && void 0 !== t ? t : C.ZP.getName(e);
                                               return (0, i.jsx)(
                                                   o.TooltipContainer,

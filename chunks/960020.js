@@ -20,7 +20,7 @@ let u = {},
         let n = null != t.id ? t.id : t.name;
         return ''.concat(e, ':').concat(n);
     },
-    f = (e, t) => {
+    g = (e, t) => {
         var n;
         let i;
         switch (e) {
@@ -48,7 +48,7 @@ let u = {},
         }
         return Object.keys(s).length;
     };
-class g extends (s = c.ZP.Store) {
+class f extends (s = c.ZP.Store) {
     getReactionPickerAnimation(e, t, n) {
         return u[
             ''
@@ -64,7 +64,7 @@ class g extends (s = c.ZP.Store) {
     }
 }
 (r = 'BurstReactionEffectsStore'),
-    (l = 'displayName') in (a = g)
+    (l = 'displayName') in (a = f)
         ? Object.defineProperty(a, l, {
               value: r,
               enumerable: !0,
@@ -72,7 +72,7 @@ class g extends (s = c.ZP.Store) {
               writable: !0
           })
         : (a[l] = r),
-    (t.Z = new g(d.Z, {
+    (t.Z = new f(d.Z, {
         BURST_REACTION_EFFECT_CLEAR: (e) => {
             var t;
             let { channelId: n, messageId: i, emoji: s } = e,
@@ -83,7 +83,7 @@ class g extends (s = c.ZP.Store) {
             var t, n, i;
             let { channelId: s, messageId: o, emoji: a, key: l } = e,
                 r = p(o, a);
-            if (f(l, s) >= 5) return;
+            if (g(l, s) >= 5) return;
             let c = null !== (t = h[s]) && void 0 !== t ? t : {},
                 d = (null !== (n = m[s]) && void 0 !== n ? n : {})[r],
                 u = c[r];

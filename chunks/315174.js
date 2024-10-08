@@ -100,29 +100,29 @@ function E() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: N, onMouseDown: S, disableBannerAnimation: x, 'aria-expanded': v, 'aria-controls': T, guild: Z, guildBanner: A, animationOverlayHeight: b, children: R, headerClassName: M, communityInfoVisible: L, hasSubheader: P } = e,
+    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: N, onMouseDown: S, disableBannerAnimation: x, 'aria-expanded': v, 'aria-controls': T, guild: Z, guildBanner: b, animationOverlayHeight: A, children: R, headerClassName: M, communityInfoVisible: L, hasSubheader: P } = e,
         O = Z.hasFeature(f.oNc.ANIMATED_BANNER),
         y = (0, u.Z)(Z),
-        D = !y && Z.hasCommunityInfoSubheader(),
-        j = !y && L,
-        w = (0, h.xR)(A) && O && !x,
+        j = !y && Z.hasCommunityInfoSubheader(),
+        D = !y && L,
+        w = (0, h.xR)(b) && O && !x,
         [U, G] = l.useState(!1),
         k = l.useRef(),
         B = l.useRef(null),
-        V = l.useRef(),
-        H = d.QK.getSetting();
+        H = l.useRef(),
+        V = d.QK.getSetting();
     l.useEffect(() => {
-        if (w && t && !k.current && H)
+        if (w && t && !k.current && V)
             return (
                 G(!0),
-                (V.current = setTimeout(() => {
+                (H.current = setTimeout(() => {
                     G(!1);
                 }, 5000)),
                 () => {
-                    clearTimeout(V.current);
+                    clearTimeout(H.current);
                 }
             );
-    }, [w, t, H]),
+    }, [w, t, V]),
         l.useEffect(() => {
             k.current = t;
         }, [t]);
@@ -145,7 +145,7 @@ t.ZP = l.memo(function (e) {
                             [g.hasBanner]: F(),
                             [g.bannerVisible]: t,
                             [e]: t,
-                            [g.communityInfoVisible]: j || (P && D)
+                            [g.communityInfoVisible]: D || (P && j)
                         }),
                         onMouseDown: S,
                         onContextMenu: N,
@@ -187,20 +187,20 @@ t.ZP = l.memo(function (e) {
                                             })
                                         ]
                                     }),
-                                    D &&
+                                    j &&
                                         (0, i.jsx)(I, {
                                             guild: Z,
                                             controller: n,
-                                            hasBanner: null != A,
+                                            hasBanner: null != b,
                                             hasSubheader: null != P && P
                                         })
                                 ]
                             }),
-                            null != A
+                            null != b
                                 ? (0, i.jsx)(C, {
                                       guild: Z,
                                       controller: n,
-                                      guildBanner: A,
+                                      guildBanner: b,
                                       animate: U
                                   })
                                 : null
@@ -210,10 +210,10 @@ t.ZP = l.memo(function (e) {
                         ? (0, i.jsx)('div', {
                               className: g.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  G(!0), clearTimeout(V.current);
+                                  G(!0), clearTimeout(H.current);
                               },
                               onMouseLeave: () => G(!1),
-                              style: { height: b }
+                              style: { height: A }
                           })
                         : null
                 ]

@@ -25,8 +25,8 @@ var i = n(735250),
     E = n(710111),
     N = n(601539);
 function S(e) {
-    let { guildId: t, channel: n, width: S, height: x, keepOpen: v, interactive: T = !0, analyticsSource: Z, onClose: A } = e,
-        b = (function (e) {
+    let { guildId: t, channel: n, width: S, height: x, keepOpen: v, interactive: T = !0, analyticsSource: Z, onClose: b } = e,
+        A = (function (e) {
             let [t, n] = (0, a.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites()]);
             return l.useMemo(() => {
                 let i = [],
@@ -46,24 +46,24 @@ function S(e) {
         [L, P] = l.useState(void 0),
         O = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
         { analyticsLocations: y } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL),
-        D = l.useCallback(
+        j = l.useCallback(
             (e) => {
-                (0, _.GN)(e, n.id, y), A();
+                (0, _.GN)(e, n.id, y), b();
             },
-            [y, n.id, A]
+            [y, n.id, b]
         );
     l.useEffect(() => {
         p.w(), u.DZ.loadIfNecessary();
     }, []),
         l.useEffect(() => {
-            0 === b.length && 0 === R.length && A();
-        }, [b.length, R, A]),
+            0 === A.length && 0 === R.length && b();
+        }, [A.length, R, b]),
         l.useEffect(
             () => () => {
                 let e = M.current;
-                !v && null != e && D(e);
+                !v && null != e && j(e);
             },
-            [v, D]
+            [v, j]
         ),
         (0, c.Z)(
             {
@@ -77,31 +77,31 @@ function S(e) {
             },
             { disableTrack: !T }
         );
-    let j = l.useCallback((e) => {
+    let D = l.useCallback((e) => {
             (M.current = e), P(null == e ? void 0 : e.soundId);
         }, []),
         w = l.useCallback(
             (e) => {
                 if (null == e) {
-                    j(null);
+                    D(null);
                     return;
                 }
-                let t = b[e];
-                if (null != t) j(t);
+                let t = A[e];
+                if (null != t) D(t);
             },
-            [j, b]
+            [D, A]
         ),
         U = l.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = b[e];
-                if (null != t) D(t);
+                let t = A[e];
+                if (null != t) j(t);
             },
-            [b, D]
+            [A, j]
         ),
         G = l.useMemo(
             () =>
-                b.map((e) =>
+                A.map((e) =>
                     (0, i.jsx)(
                         I.ZP,
                         {
@@ -114,9 +114,9 @@ function S(e) {
                         e.soundId
                     )
                 ),
-            [L, n, T, b]
+            [L, n, T, A]
         );
-    return 0 === b.length
+    return 0 === A.length
         ? null
         : (0, i.jsx)(o.Gt, {
               value: y,

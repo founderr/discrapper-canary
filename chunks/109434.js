@@ -36,7 +36,7 @@ let m = new Set(),
         tagFilter: m,
         scrollPosition: 0
     };
-class f {
+class g {
     constructor(e, t) {
         h(this, 'set', void 0),
             h(this, 'get', void 0),
@@ -95,9 +95,9 @@ class f {
             });
     }
 }
-let g = (0, o.Z)((e, t) => new f(e, t)),
+let f = (0, o.Z)((e, t) => new g(e, t)),
     _ = (e) => {
-        let t = g();
+        let t = f();
         return null == (0, c.e7)([d.Z], () => d.Z.getChannel(e)) ? p : t.getChannelState(e);
     },
-    T = () => g;
+    T = () => f;

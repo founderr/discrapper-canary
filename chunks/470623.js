@@ -1,6 +1,6 @@
 n.d(t, {
     AF: function () {
-        return g;
+        return f;
     },
     NU: function () {
         return _;
@@ -9,7 +9,7 @@ n.d(t, {
         return p;
     },
     xH: function () {
-        return f;
+        return g;
     }
 }),
     n(47120);
@@ -183,14 +183,14 @@ class m {
             });
         let p = r.Z.getChannel(e);
         if (null == p) return;
-        let f = null !== (i = c.Z.getThreadSettings(p.id)) && void 0 !== i ? i : {},
-            g = null == p.template ? '' : p.template.trim(),
+        let g = null !== (i = c.Z.getThreadSettings(p.id)) && void 0 !== i ? i : {},
+            f = null == p.template ? '' : p.template.trim(),
             _ = c.Z.getDraft(p.id, c.d.FirstThreadMessage),
-            T = (0, l.eK)(null != _ && '' !== _.trim() ? _ : g);
-        (this.name = null !== (s = f.name) && void 0 !== s ? s : ''), (m = new Set(f.appliedTags)), (this.appliedTags = void 0 !== m ? m : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = T);
+            T = (0, l.eK)(null != _ && '' !== _.trim() ? _ : f);
+        (this.name = null !== (s = g.name) && void 0 !== s ? s : ''), (m = new Set(g.appliedTags)), (this.appliedTags = void 0 !== m ? m : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = T);
     }
 }
-let { Provider: p, useStore: f, useStoreApi: g } = (0, s.Z)();
+let { Provider: p, useStore: g, useStoreApi: f } = (0, s.Z)();
 function _(e) {
     return (0, i.Z)((t, n) => new m(e.id, t, n));
 }

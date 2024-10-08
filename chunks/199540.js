@@ -117,14 +117,14 @@ function x(e) {
         Z = l.useCallback(() => {
             s || T(!0), null == I || I(!0);
         }, [s, I]),
-        A = l.useCallback(() => {
+        b = l.useCallback(() => {
             s || T(!1), null == I || I(!1);
         }, [s, I]),
-        b = r || null == o ? null : (0, _.Or)(o),
+        A = r || null == o ? null : (0, _.Or)(o),
         R = !r && c > 0 ? (0, _.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
         selected: !n,
-        upperBadge: b,
+        upperBadge: A,
         lowerBadge: R,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
@@ -132,7 +132,7 @@ function x(e) {
             onClick: f,
             onContextMenu: m,
             onMouseEnter: Z,
-            onMouseLeave: A,
+            onMouseLeave: b,
             onKeyDown: E,
             onFocus: N,
             'aria-label': g.Z.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({

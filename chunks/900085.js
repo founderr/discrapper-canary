@@ -29,8 +29,8 @@ var i,
     v = n(585483),
     T = n(63063),
     Z = n(51596),
-    A = n(823385),
-    b = n(415795),
+    b = n(823385),
+    A = n(415795),
     R = n(670512),
     M = n(981631),
     L = n(689938),
@@ -49,7 +49,7 @@ function O(e, t, n) {
     );
 }
 let y = 10,
-    D = () =>
+    j = () =>
         (0, l.jsxs)('div', {
             className: P.emptyState,
             children: [
@@ -66,10 +66,10 @@ let y = 10,
                 })
             ]
         });
-class j extends (i = r.Component) {
+class D extends (i = r.Component) {
     render() {
         let e = E.Z.getGuild(this.props.channel.guild_id);
-        return (0, l.jsx)(b.$W, {
+        return (0, l.jsx)(A.$W, {
             ...this.props,
             children: (0, l.jsx)('div', {
                 className: P.miscContainer,
@@ -78,7 +78,7 @@ class j extends (i = r.Component) {
         });
     }
 }
-O(j, 'defaultProps', { unread: !1 });
+O(D, 'defaultProps', { unread: !1 });
 let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
         let { channel: t } = e;
         return {
@@ -86,26 +86,26 @@ let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
             mentions: N.ZP.getMentionCount(t.id),
             category: C.Z.getChannel(t.parent_id)
         };
-    })(j),
+    })(D),
     U = c.ZP.connectStores([x.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: x.ZP.getVoiceStates(t.guild_id)[t.id] };
-    })(j),
+    })(D),
     G = c.ZP.connectStores([I.default], (e) => {
         let { guild: t } = e;
         return { unread: I.default.hasUnread(t.id) };
-    })(b.ic),
+    })(A.ic),
     k = c.ZP.connectStores([N.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: N.ZP.getMentionCount(t.id) };
-    })(b.PZ),
+    })(A.PZ),
     B = c.ZP.connectStores([C.Z, N.ZP], (e) => {
         let { user: t } = e,
             n = C.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? N.ZP.getMentionCount(n) : 0 };
-    })(b.n5);
-function V(e, t, n) {
+    })(A.n5);
+function H(e, t, n) {
     return (0, l.jsx)(
         u.Tooltip,
         {
@@ -120,7 +120,7 @@ function V(e, t, n) {
         e
     );
 }
-class H extends r.PureComponent {
+class V extends r.PureComponent {
     componentDidMount() {
         p.Z.disable(), p.Z.enableTemp(h.u);
     }
@@ -179,7 +179,7 @@ class H extends r.PureComponent {
         let { query: e } = this.state,
             { results: t } = this.props;
         return 0 === t.length && e.length > 0
-            ? (0, l.jsx)(D, {})
+            ? (0, l.jsx)(j, {})
             : 0 === t.length
               ? null
               : (0, l.jsx)(u.ListAuto, {
@@ -207,10 +207,10 @@ class H extends r.PureComponent {
             className: s()(P.protip, { [P.hasContent]: this.state.query.length > 0 }),
             type: m.Z.Types.INLINE,
             children: L.Z.Messages.QUICKSWITCHER_PROTIP.format({
-                userSymbolHook: (e, t) => V(t, f.xQ.USER, L.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-                textChannelSymbolHook: (e, t) => V(t, f.xQ.TEXT_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-                voiceChannelSymbolHook: (e, t) => V(t, f.xQ.VOICE_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-                guildSymbolHook: (e, t) => V(t, f.xQ.GUILD, L.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+                userSymbolHook: (e, t) => H(t, f.xQ.USER, L.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+                textChannelSymbolHook: (e, t) => H(t, f.xQ.TEXT_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+                voiceChannelSymbolHook: (e, t) => H(t, f.xQ.VOICE_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+                guildSymbolHook: (e, t) => H(t, f.xQ.GUILD, L.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
                 helpdeskArticle: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
@@ -406,7 +406,7 @@ class H extends r.PureComponent {
                     { showScores: r } = _.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
                 switch (n.type) {
                     case f.h8.HEADER:
-                        return (0, l.jsx)(b.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));
+                        return (0, l.jsx)(A.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));
                     case f.h8.TEXT_CHANNEL:
                         return (0, l.jsx)(
                             w,
@@ -485,7 +485,7 @@ class H extends r.PureComponent {
                         );
                     case f.h8.APPLICATION:
                         return (0, l.jsx)(
-                            b.Mx,
+                            A.Mx,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,
@@ -498,7 +498,7 @@ class H extends r.PureComponent {
                         );
                     case f.h8.LINK:
                         return (0, l.jsx)(
-                            b.rU,
+                            A.rU,
                             {
                                 focused: i >= 0 && t === i,
                                 onClick: () => this.selectResult(n),
@@ -513,7 +513,7 @@ class H extends r.PureComponent {
                         );
                     case f.h8.IN_APP_NAVIGATION:
                         return (0, l.jsx)(
-                            b.s8,
+                            A.s8,
                             {
                                 focused: i >= 0 && t === i,
                                 onClick: () => this.selectResult(n),
@@ -533,8 +533,8 @@ class H extends r.PureComponent {
     }
 }
 function F(e) {
-    let t = (0, c.cj)([A.Z], () => A.Z.getProps());
-    return (0, l.jsx)(H, {
+    let t = (0, c.cj)([b.Z], () => b.Z.getProps());
+    return (0, l.jsx)(V, {
         ...t,
         ...e
     });

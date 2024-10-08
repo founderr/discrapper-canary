@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return j;
     }
 }),
     n(47120);
@@ -29,8 +29,8 @@ var l = n(120356),
     v = n(109446),
     T = n(98597),
     Z = n(648501),
-    A = n(473403),
-    b = n(304471),
+    b = n(473403),
+    A = n(304471),
     R = n(981631),
     M = n(647086),
     L = n(872356);
@@ -67,7 +67,7 @@ class O extends T.ZP {
         let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: o, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: _, canReorderChannel: m, isSubscriptionGated: g, isFavoriteSuggestion: C, subtitle: I, forceTopLevelThread: E, embeddedApps: N, resolvedUnreadSetting: S, withGuildIcon: x, enableActivities: v } = this.props,
             T = v && null != N && N.length > 0,
             Z = (0, f.D)(I),
-            b = (0, i.jsx)('li', {
+            A = (0, i.jsx)('li', {
                 className: r()(this.getClassName(), {
                     [L.disabled]: this.isDisabled(),
                     [L.selected]: n
@@ -82,7 +82,7 @@ class O extends T.ZP {
                     onRequestClose: this.handleClosePopout,
                     shouldShow: (c && this.state.shouldShowThreadsPopout) || (T && this.state.shouldShowActivities),
                     children: () =>
-                        (0, i.jsxs)(A.Z, {
+                        (0, i.jsxs)(b.Z, {
                             className: L.iconVisibility,
                             channel: e,
                             guild: t,
@@ -110,7 +110,7 @@ class O extends T.ZP {
                         })
                 })
             });
-        return m ? d(h(b)) : b;
+        return m ? d(h(A)) : A;
     }
     constructor(...e) {
         super(...e),
@@ -152,7 +152,7 @@ class O extends T.ZP {
                 let { channel: t, sorting: n, embeddedApps: l } = this.props,
                     { shouldShowActivities: r } = this.state;
                 return null != l && l.length > 0 && r && !n
-                    ? (0, i.jsx)(b.Z, {
+                    ? (0, i.jsx)(A.Z, {
                           onAction: this.handleActivitiesPopoutClose,
                           channel: t
                       })
@@ -205,7 +205,7 @@ class O extends T.ZP {
     }
 }
 let y = (0, u.B)(O);
-function D(e) {
+function j(e) {
     let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: r, muted: s, selected: o } = e,
         { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, g.JQ)(t),
         p = (0, a.cj)([N.ZP], () => ({
@@ -222,8 +222,8 @@ function D(e) {
             };
         }),
         v = (0, a.e7)([m.Z], () => m.Z.shouldIndicateNewChannel(n.id, t.id)),
-        { needSubscriptionToAccess: T, isSubscriptionGated: A } = (0, _.Z)(t.id),
-        b = (0, a.e7)([S.ZP], () => S.ZP.isFavorite(n.id, t.id)),
+        { needSubscriptionToAccess: T, isSubscriptionGated: b } = (0, _.Z)(t.id),
+        A = (0, a.e7)([S.ZP], () => S.ZP.isFavorite(n.id, t.id)),
         L = (0, a.e7)(
             [x.default],
             () => {
@@ -237,27 +237,27 @@ function D(e) {
             channel: t,
             isChannelCollapsed: !1,
             isChannelSelected: o,
-            isSubscriptionGated: A,
+            isSubscriptionGated: b,
             needSubscriptionToAccess: T,
             isNewChannel: v,
             muted: s,
             enableActivities: P,
             resolvedUnreadSetting: f
         }),
-        D = (0, h.ZP)(t);
+        j = (0, h.ZP)(t);
     return (0, i.jsx)(y, {
         ...p,
         ...I,
         ...e,
         hasActiveThreads: c,
         hasMoreActiveThreads: u,
-        isSubscriptionGated: A,
+        isSubscriptionGated: b,
         needSubscriptionToAccess: T,
         isNewChannel: v && e.canBeNewChannel,
-        isFavoriteSuggestion: r && !b,
+        isFavoriteSuggestion: r && !A,
         canShowThreadPreviewForUser: L,
         channelInfo: O,
-        embeddedApps: D,
+        embeddedApps: j,
         resolvedUnreadSetting: f,
         hasChannelInfo: null != O,
         enableActivities: P

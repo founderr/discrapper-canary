@@ -30,23 +30,23 @@ var l = n(120356),
     v = n(201469),
     T = n(680089),
     Z = n(592125),
-    A = n(430824),
-    b = n(607744),
+    b = n(430824),
+    A = n(607744),
     R = n(496675),
     M = n(306680),
     L = n(9156),
     P = n(979651),
     O = n(934415),
     y = n(98597),
-    D = n(648501),
-    j = n(473403),
+    j = n(648501),
+    D = n(473403),
     w = n(207055),
     U = n(981631),
     G = n(647086),
     k = n(689938),
     B = n(872356),
-    V = n(411740);
-function H(e, t, n) {
+    H = n(411740);
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -67,7 +67,7 @@ class F extends y.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, O.rY)(e, P.Z, A.Z);
+        return (0, O.rY)(e, P.Z, b.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -108,9 +108,9 @@ class F extends y.ZP {
                                 text: this.getTooltipText(),
                                 children: (a) => {
                                     let { onClick: s, onContextMenu: o, ...c } = a;
-                                    return (0, i.jsxs)(j.Z, {
+                                    return (0, i.jsxs)(D.Z, {
                                         className: B.iconVisibility,
-                                        iconClassName: r()({ [V.iconLive]: null != f }),
+                                        iconClassName: r()({ [H.iconLive]: null != f }),
                                         channel: e,
                                         selected: !E && t,
                                         connected: n,
@@ -148,22 +148,22 @@ class F extends y.ZP {
     }
     constructor(...e) {
         super(...e),
-            H(this, 'state', { shouldShowGuildVerificationPopout: !1 }),
-            H(this, 'closeGuildVerificationPopout', () => {
+            V(this, 'state', { shouldShowGuildVerificationPopout: !1 }),
+            V(this, 'closeGuildVerificationPopout', () => {
                 this.setState({ shouldShowGuildVerificationPopout: !1 });
             }),
-            H(this, 'handleClick', () => {
+            V(this, 'handleClick', () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: i } = this.props,
                     l = e.getGuildId();
                 null != l && (0, _.n)(l) && (0, f.hk)(l), i && this.setState({ shouldShowGuildVerificationPopout: !0 }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, I.Cq)(e), !__OVERLAY__ && (0, C.Kh)(e.id);
             }),
-            H(this, 'handleClickChat', () => {
+            V(this, 'handleClickChat', () => {
                 let { channel: e, locked: t } = this.props;
                 !__OVERLAY__ && !t && (0, C.Kh)(e.id);
             }),
-            H(this, 'handleContextMenu', (e) => {
+            V(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    l = A.Z.getGuild(t.getGuildId());
+                    l = b.Z.getGuild(t.getGuildId());
                 if (null != l)
                     (0, c.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331')]).then(n.bind(n, 213202));
@@ -175,7 +175,7 @@ class F extends y.ZP {
                             });
                     });
             }),
-            H(this, 'renderPopout', () => {
+            V(this, 'renderPopout', () => {
                 let { channel: e } = this.props,
                     { shouldShowGuildVerificationPopout: t } = this.state;
                 if (t)
@@ -186,7 +186,7 @@ class F extends y.ZP {
                     });
                 throw Error('VoiceChannel.renderPopout: There must always be something to render');
             }),
-            H(this, 'renderOpenChatButton', () => {
+            V(this, 'renderOpenChatButton', () => {
                 let { channel: e, locked: t, forceShowButtons: n } = this.props;
                 if (!t)
                     return (0, i.jsx)(s.Tooltip, {
@@ -212,11 +212,11 @@ class F extends y.ZP {
                         }
                     });
             }),
-            H(this, 'getTooltipText', () => {
+            V(this, 'getTooltipText', () => {
                 let { connected: e } = this.props;
                 return this.isFull() && !e ? k.Z.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null;
             }),
-            H(this, 'renderSubtitle', () => {
+            V(this, 'renderSubtitle', () => {
                 var e;
                 let t = null === (e = this.props.stageInstance) || void 0 === e ? void 0 : e.topic;
                 return null == t ? null : (0, i.jsx)(p.Z, { children: t });
@@ -231,9 +231,9 @@ function z(e) {
             mentionCount: M.ZP.getMentionCount(n.id)
         })),
         u = (0, a.e7)([L.ZP], () => L.ZP.resolveUnreadSetting(n)),
-        d = (0, a.cj)([Z.Z, b.Z, R.Z], () => {
+        d = (0, a.cj)([Z.Z, A.Z, R.Z], () => {
             let e = Z.Z.getChannel(n.parent_id),
-                i = b.Z.getCheck(n.guild_id);
+                i = A.Z.getCheck(n.guild_id);
             return {
                 canManageChannel: null != t && R.Z.can(U.Plq.MANAGE_CHANNELS, n),
                 canReorderChannel: !0 !== l && (t.id === G._ || (null != e ? R.Z.can(U.Plq.MANAGE_CHANNELS, e) : R.Z.can(U.Plq.MANAGE_CHANNELS, t))),
@@ -249,15 +249,15 @@ function z(e) {
         _ = (0, E.Rk)(n.id, N.pV.AUDIENCE),
         { isSubscriptionGated: g, needSubscriptionToAccess: C } = (0, m.Z)(n.id),
         I = (0, a.e7)([L.ZP], () => L.ZP.isFavorite(t.id, n.id)),
-        A = (0, x.xJ)(n.id),
-        P = (0, D.Z)({
+        b = (0, x.xJ)(n.id),
+        P = (0, j.Z)({
             channel: n,
             isChannelSelected: !1,
             isChannelCollapsed: s,
             voiceStates: o,
             isSubscriptionGated: g,
             needSubscriptionToAccess: C,
-            enableConnectedUserLimit: A || (n.userLimit > 0 && n.userLimit < U.xGv)
+            enableConnectedUserLimit: b || (n.userLimit > 0 && n.userLimit < U.xGv)
         }),
         O = e.connected && null == P;
     return (0, i.jsx)(W, {

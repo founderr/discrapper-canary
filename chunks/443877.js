@@ -19,8 +19,8 @@ function m(e) {
         n = (0, i.e7)([c.Z], () => null == t || c.Z.canChatInGuild(t), [t]),
         m = (0, i.e7)([a.Z], () => null != t && a.Z.isLurking(t), [t]),
         p = (0, i.e7)([r.ZP], () => null != t && r.ZP.isCurrentUserGuest(t), [t]),
-        f = (0, i.e7)([d.Z], () => n && d.Z.can(h.Plq.ADD_REACTIONS, e), [n, e]),
-        g = (0, s.ux)(t),
+        g = (0, i.e7)([d.Z], () => n && d.Z.can(h.Plq.ADD_REACTIONS, e), [n, e]),
+        f = (0, s.ux)(t),
         [, _] = (0, o.AB)(t),
         T = (0, l.$R)(e);
     return null == e
@@ -37,12 +37,12 @@ function m(e) {
                   channel: e,
                   canChat: n,
                   renderReactions: !0,
-                  canAddNewReactions: f,
+                  canAddNewReactions: g,
                   isLurking: m,
                   isGuest: p,
                   communicationDisabled: _,
                   isActiveChannelOrUnarchivableThread: T,
-                  isAutomodQuarantined: g
+                  isAutomodQuarantined: f
               }),
               isLurking: m,
               isGuest: p,

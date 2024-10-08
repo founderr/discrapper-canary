@@ -32,23 +32,23 @@ var i,
     v = n(398758),
     T = n(220444),
     Z = n(31022),
-    A = n(10401),
-    b = n(131704),
+    b = n(10401),
+    A = n(131704),
     R = n(592125),
     M = n(796974),
     L = n(984933),
     P = n(914010),
     O = n(540126),
     y = n(734307),
-    D = n(854444),
-    j = n(761091),
+    j = n(854444),
+    D = n(761091),
     w = n(301342),
     U = n(906817),
     G = n(429122),
     k = n(285573),
     B = n(995993),
-    V = n(910595),
-    H = n(466935),
+    H = n(910595),
+    V = n(466935),
     F = n(120818),
     W = n(61642),
     z = n(848442),
@@ -144,7 +144,7 @@ class eo extends (i = r.PureComponent) {
                 let r = e.getChannelFromSectionRow(i, l);
                 if (null == r) return !1;
                 let { channel: a, category: s } = r;
-                return !!(0, b.vc)(a.record.type) && (!s.isCollapsed || !s.isMuted) && !a.isMuted && !!t.isItemVisible(i, l, !0) && (0, T.d)(a.record);
+                return !!(0, A.vc)(a.record.type) && (!s.isCollapsed || !s.isMuted) && !a.isMuted && !!t.isItemVisible(i, l, !0) && (0, T.d)(a.record);
             })
         );
     }
@@ -484,7 +484,7 @@ class eo extends (i = r.PureComponent) {
                             );
                         case et.z.GUILD_HOME:
                             return (0, l.jsx)(
-                                V.Z,
+                                H.Z,
                                 {
                                     guild: i,
                                     selected: s === el.oC.GUILD_HOME
@@ -521,7 +521,7 @@ class eo extends (i = r.PureComponent) {
                             );
                         case et.z.GUILD_MEMBER_APPLICATIONS:
                             return (0, l.jsx)(
-                                H.Z,
+                                V.Z,
                                 {
                                     guild: i,
                                     selected: s === el.oC.MEMBER_APPLICATIONS
@@ -608,7 +608,7 @@ class eo extends (i = r.PureComponent) {
                             T
                         );
                     case ei.d4z.GUILD_STAGE_VOICE:
-                        var Z, A;
+                        var Z, b;
                         return (0, l.jsx)(
                             K.Z,
                             {
@@ -619,7 +619,7 @@ class eo extends (i = r.PureComponent) {
                                 connected: c === I.id,
                                 collapsed: I.isCollapsed || C.isCollapsed,
                                 voiceStates: null !== (Z = d[I.id]) && void 0 !== Z ? Z : [],
-                                speakerVoiceStates: null !== (A = p[I.id]) && void 0 !== A ? A : [],
+                                speakerVoiceStates: null !== (b = p[I.id]) && void 0 !== b ? b : [],
                                 disableManageChannels: h,
                                 isFavoriteCategory: x
                             },
@@ -707,7 +707,7 @@ class eo extends (i = r.PureComponent) {
                 }
             }),
             es(this, 'testShouldSkipTutorial', () => {
-                if (!A.Z.shouldShow('voice-conversations')) return;
+                if (!b.Z.shouldShow('voice-conversations')) return;
                 let { guildChannels: e } = this.props,
                     t = e.getFirstVoiceChannel();
                 if (null == t) {
@@ -775,7 +775,7 @@ let ec = (e) => {
     r.useEffect(() => {
         null != n && T(n);
     }, [n, T]);
-    let A = (0, Z.Z)(t);
+    let b = (0, Z.Z)(t);
     return (0, l.jsx)(g.Gt, {
         value: s,
         children: (0, l.jsx)(f.Z, {
@@ -788,7 +788,7 @@ let ec = (e) => {
                     ref: I,
                     selectedChannel: d,
                     selectedVoiceChannel: h,
-                    stageChannelSpeakerVoiceStates: A,
+                    stageChannelSpeakerVoiceStates: b,
                     selectedGuildId: p,
                     optInEnabled: C
                 })
@@ -797,7 +797,7 @@ let ec = (e) => {
     });
 };
 function eu(e) {
-    let t = (0, D.o)(),
+    let t = (0, j.o)(),
         { isFavoritesPerk: n } = (0, I.z)('favorites-channel-list');
     return (0, l.jsx)(ec, {
         ...e,
@@ -807,7 +807,7 @@ function eu(e) {
     });
 }
 function ed(e) {
-    let t = (0, j.Z)(e.guild),
+    let t = (0, D.Z)(e.guild),
         n = (0, u.cj)([y.Z], () => y.Z.getGuild(e.guildId, { guildActionRows: t }));
     return (0, l.jsx)(ec, {
         ...e,

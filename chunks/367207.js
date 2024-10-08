@@ -24,23 +24,23 @@ var l = n(392711),
     v = n(970645),
     T = n(30684),
     Z = n(514701),
-    A = n(6242),
-    b = n(467721),
+    b = n(6242),
+    A = n(467721),
     R = n(757692),
     M = n(114064),
     L = n(933843),
     P = n(281494),
     O = n(276444),
     y = n(684259),
-    D = n(937579),
-    j = n(1163),
+    j = n(937579),
+    D = n(1163),
     w = n(841174),
     U = n(522558),
     G = n(879463),
     k = n(822070),
     B = n(520540),
-    V = n(11352),
-    H = n(474936),
+    H = n(11352),
+    V = n(474936),
     F = n(981631),
     W = n(354459),
     z = n(37113),
@@ -111,7 +111,7 @@ class q extends c.Z {
         });
     }
     maybeShowHDStreamingPerksDemoPostUpsellModal(e) {
-        let { enabled: t } = j.Z.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
+        let { enabled: t } = D.Z.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
         if (!t || e.state !== F.hes.DISCONNECTED || e.willReconnect) return;
         let n = _.Z.getChannel(e.channelId);
         if (null == n) return;
@@ -136,7 +136,7 @@ class q extends c.Z {
                 let e = g.default.getCurrentUser();
                 if (null != e && e.verified) {
                     let t = !(0, E.I5)(e) && C.Z.shouldFetchOffer();
-                    await (0, D.T)('PremiumManager', t);
+                    await (0, j.T)('PremiumManager', t);
                 }
                 s.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
@@ -153,7 +153,7 @@ class q extends c.Z {
                 e && (0, p.W)();
             }),
             K(this, '_trackCustomNotificationSoundsExposure', () => {
-                V.Y.trackExposure({ location: 'PremiumManager' });
+                H.Y.trackExposure({ location: 'PremiumManager' });
             }),
             K(this, '_trackSkyLoadExposure', () => {
                 y.Z.trackExposure({ location: 'PremiumManager' });
@@ -185,9 +185,9 @@ class q extends c.Z {
                     var i, l;
                     let r = d.Z.getSelectedParticipant(e),
                         a = (0, R.o)(r, n),
-                        { sendNitroMessage: s } = (0, A.TD)(a),
+                        { sendNitroMessage: s } = (0, b.TD)(a),
                         c = null !== (l = null === (i = m.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : F.Eu4.NONE;
-                    if (b.Z.cooldownIsActive() || !s || c >= F.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== W.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
+                    if (A.Z.cooldownIsActive() || !s || c >= F.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== W.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
                     Z.I();
                     let u = Y.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
                         nickname: r.userNick,
@@ -196,7 +196,7 @@ class q extends c.Z {
                     });
                     o.Z.sendNitroSystemMessage(e, u),
                         I.default.track(F.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
-                            type: H.cd.HD_STREAMING_VIEWER_UPSELL,
+                            type: V.cd.HD_STREAMING_VIEWER_UPSELL,
                             location_section: null != t ? F.jXE.TEXT_IN_VOICE : F.jXE.CHANNEL_TEXT_AREA,
                             location_object: F.qAy.MESSAGE,
                             guild_id: t

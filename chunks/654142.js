@@ -32,11 +32,11 @@ t.Z = l.memo(function (e) {
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
         T = (0, f.Z)(t),
-        { mentionCount: Z, unread: A } = (0, r.cj)([u.default], () => ({
+        { mentionCount: Z, unread: b } = (0, r.cj)([u.default], () => ({
             mentionCount: N.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
             unread: N.some((e) => u.default.hasUnread(e))
         })),
-        b = l.useCallback(() => {
+        A = l.useCallback(() => {
             s.Z.toggleGuildFolderExpand(g);
         }, [g]),
         R = l.useCallback(
@@ -49,11 +49,11 @@ t.Z = l.memo(function (e) {
                             folderId: g,
                             folderName: C,
                             folderColor: I,
-                            unread: A || Z > 0
+                            unread: b || Z > 0
                         });
                 });
             },
-            [g, C, I, A, Z]
+            [g, C, I, b, Z]
         );
     return (0, i.jsx)(p.Z, {
         ...m,
@@ -61,10 +61,10 @@ t.Z = l.memo(function (e) {
         expanded: x,
         selected: null != S && N.includes(S),
         mentionCount: Z,
-        unread: A,
+        unread: b,
         mediaState: T,
         defaultFolderName: v,
-        onExpandCollapse: b,
+        onExpandCollapse: A,
         onContextMenu: R
     });
 });

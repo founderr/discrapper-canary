@@ -3,20 +3,20 @@ n.d(t, {
         return c;
     }
 });
-var a = n(735250);
+var o = n(735250);
 n(470079);
-var o = n(180781),
-    i = n(321867),
+var i = n(180781),
+    a = n(321867),
     r = n(486324);
 function c(e) {
     let { type: t, analyticsPage: n, analyticsSection: c, isGIF: s, banner: l } = e;
     return [r.pC.BANNER, r.pC.AVATAR].includes(t) && s
-        ? (0, a.jsx)(i.Z, {
+        ? (0, o.jsx)(a.Z, {
               analyticsSection: c,
               type: t
           })
         : t === r.pC.GUILD_BANNER
-          ? (0, a.jsx)(o.Z, {
+          ? (0, o.jsx)(i.Z, {
                 analyticsSection: c,
                 analyticsPage: n,
                 isGIF: s,

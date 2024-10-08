@@ -30,29 +30,29 @@ var i = n(735250),
     v = n(593214),
     T = n(919755),
     Z = n(110977),
-    A = n(603274),
-    b = n(981631),
+    b = n(603274),
+    A = n(981631),
     R = n(689938),
     M = n(599576);
 let L = {
     analyticsSource: {
-        page: b.ZY5.GUILD_CHANNEL,
-        section: b.jXE.CHANNEL_LIST,
-        object: b.qAy.CHANNEL
+        page: A.ZY5.GUILD_CHANNEL,
+        section: A.jXE.CHANNEL_LIST,
+        object: A.qAy.CHANNEL
     }
 };
 function P() {
     let e = (0, s.Ie)('favorites'),
         { favoriteAdded: t, clearFavoriteAdded: r } = (0, v.up)(),
         [P, O] = l.useState(!1),
-        { favoriteServerMuted: y, favoriteChannels: D } = (0, o.cj)([x.Z], () => ({
+        { favoriteServerMuted: y, favoriteChannels: j } = (0, o.cj)([x.Z], () => ({
             favoriteChannels: x.Z.getFavoriteChannels(),
             favoriteServerMuted: x.Z.favoriteServerMuted
         })),
-        j = (0, o.e7)([E.Z], () => E.Z.getChannelId(b.I_8)),
-        w = (0, o.e7)([I.Z], () => I.Z.getChannel(j)),
-        U = (0, g.Z)((e) => e.guildId) === b.I_8,
-        { badge: G, unread: k } = (0, T.Z)(D),
+        D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
+        w = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
+        U = (0, g.Z)((e) => e.guildId) === A.I_8,
+        { badge: G, unread: k } = (0, T.Z)(j),
         B = (function (e) {
             let t = (0, o.e7)([E.Z], () => E.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -86,9 +86,9 @@ function P() {
                     activity: f
                 })
             );
-        })(D),
-        V = G > 0 ? (0, m.N)(G) : null,
-        H = l.useCallback(() => {
+        })(j),
+        H = G > 0 ? (0, m.N)(G) : null,
+        V = l.useCallback(() => {
             r();
         }, [r]);
     return (0, i.jsxs)(f.H, {
@@ -99,13 +99,13 @@ function P() {
                 unread: k && !y,
                 className: M.pill
             }),
-            (0, i.jsx)(A.Z, {
-                onShow: H,
+            (0, i.jsx)(b.Z, {
+                onShow: V,
                 children: (0, i.jsx)(Z.S, {
                     children: (0, i.jsx)(c.BlobMask, {
                         selected: U || P,
                         upperBadge: B,
-                        lowerBadge: V,
+                        lowerBadge: H,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
                             ariaLabel: R.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
@@ -113,7 +113,7 @@ function P() {
                                 mentions: G
                             }),
                             to: {
-                                pathname: b.Z5c.CHANNEL(b.I_8, j),
+                                pathname: A.Z5c.CHANNEL(A.I_8, D),
                                 state: L
                             },
                             selected: U || P,

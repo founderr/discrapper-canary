@@ -31,7 +31,7 @@ function g(e) {
         v = [],
         T = e.hasFeature(m.oNc.HUB),
         Z = e.hasFeature(m.oNc.COMMUNITY),
-        A = (0, f.lN)(!(0, p.r1)(e.id)),
-        b = e.hasFeature(m.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
-    return T && v.push(_.z.GUILD_HUB_HEADER_OPTIONS), !S && I && N && null != E && E.length > 0 ? v.push(_.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && v.push(_.z.GUILD_PREMIUM_PROGRESS_BAR), !T && I && v.push(_.z.GUILD_HOME), t && v.push(_.z.GUILD_SCHEDULED_EVENTS), !T && Z && A && v.push(_.z.CHANNELS_AND_ROLES), g && v.push(_.z.GUILD_ROLE_SUBSCRIPTIONS), C && v.push(_.z.GUILD_SHOP), n && v.push(_.z.GUILD_MEMBER_APPLICATIONS), x && (Z || b) && v.push(_.z.GUILD_MOD_DASH_MEMBER_SAFETY), v;
+        b = (0, f.lN)(!(0, p.r1)(e.id)),
+        A = e.hasFeature(m.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
+    return T && v.push(_.z.GUILD_HUB_HEADER_OPTIONS), !S && I && N && null != E && E.length > 0 ? v.push(_.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && v.push(_.z.GUILD_PREMIUM_PROGRESS_BAR), !T && I && v.push(_.z.GUILD_HOME), t && v.push(_.z.GUILD_SCHEDULED_EVENTS), !T && Z && b && v.push(_.z.CHANNELS_AND_ROLES), g && v.push(_.z.GUILD_ROLE_SUBSCRIPTIONS), C && v.push(_.z.GUILD_SHOP), n && v.push(_.z.GUILD_MEMBER_APPLICATIONS), x && (Z || A) && v.push(_.z.GUILD_MOD_DASH_MEMBER_SAFETY), v;
 }

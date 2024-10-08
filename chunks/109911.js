@@ -20,13 +20,13 @@ let i = (0, r.B)({
     }),
     a = (0, r.B)({
         kind: 'user',
-        id: '2024-10_icymi_random',
-        label: 'random sort on ICYMI',
+        id: '2024-10_icymi_sorting_fe',
+        label: 'FE experiment for sorting on ICYMI',
         defaultConfig: { enabled: !1 },
         treatments: [
             {
                 id: 1,
-                label: 'randomly sorts icymi content',
+                label: 'Enables ICYMI - sorting will be controlled by backend exp',
                 config: { enabled: !0 }
             }
         ]

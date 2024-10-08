@@ -28,9 +28,9 @@ function v(e) {
     let { guild: t, selected: v } = e,
         T = (0, h.Z)(t),
         Z = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        A = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
-        b = (0, r.e7)([_.ZP], () => _.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)),
-        R = A.length > g.Cb,
+        b = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
+        A = (0, r.e7)([_.ZP], () => _.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)),
+        R = b.length > g.Cb,
         M = (0, r.e7)([d.Z, _.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
                 n = _.ZP.lastMessageId(t.id, N.W.GUILD_ONBOARDING_QUESTION);
@@ -56,7 +56,7 @@ function v(e) {
         ),
         O = null;
     return (
-        (!Z || b || R) &&
+        (!Z || A || R) &&
             !v &&
             !M &&
             (O = (0, i.jsx)(o.TextBadge, {

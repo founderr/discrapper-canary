@@ -14,7 +14,7 @@ var i = n(735250),
     u = n(91047);
 function h(e) {
     var t, n;
-    let { user: h, channelId: m, guildId: p, messageId: f, stopPropagation: g = !1, ariaLabel: _ } = e,
+    let { user: h, channelId: m, guildId: p, messageId: g, stopPropagation: f = !1, ariaLabel: _ } = e,
         { analyticsLocations: T } = (0, l.ZP)(a.Z.USERNAME);
     let v =
         ((t = h),
@@ -38,7 +38,7 @@ function h(e) {
                         'aria-label': _
                     }),
                 a = (e) => (t) => {
-                    g && t.stopPropagation(), e(t);
+                    f && t.stopPropagation(), e(t);
                 };
             return (0, i.jsx)(
                 l.Gt,
@@ -59,7 +59,7 @@ function h(e) {
                                           userId: h.id,
                                           guildId: p,
                                           channelId: m,
-                                          messageId: f,
+                                          messageId: g,
                                           roleId: null == e ? void 0 : e.colorRoleId
                                       }),
                                   children: (e) => {
@@ -75,6 +75,6 @@ function h(e) {
                 n
             );
         },
-        [T, h, m, p, f, v, g, _]
+        [T, h, m, p, g, v, f, _]
     );
 }

@@ -28,47 +28,47 @@ var l = n(120356),
     v = n(176505),
     T = n(629481),
     Z = n(689938),
-    A = n(316512);
-function b(e) {
+    b = n(316512);
+function A(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
         _ = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
         v = (null == _ ? void 0 : _.hasFeature(x.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
-        b = 'false' === o.K.get(T.tM, 'false'),
+        A = 'false' === o.K.get(T.tM, 'false'),
         R = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(S.m, {
         id: 'shop-'.concat(t),
-        className: r()(A.previewChannelRow, {
-            [A.selected]: n,
-            [A.phantomPreview]: b
+        className: r()(b.previewChannelRow, {
+            [b.selected]: n,
+            [b.phantomPreview]: A
         }),
-        innerClassName: A.previewChannelRowContent,
+        innerClassName: b.previewChannelRowContent,
         renderIcon: (e) =>
             (0, i.jsx)(m.Z, {
                 width: 20,
                 height: 20,
-                className: r()([e, A.shopIcon])
+                className: r()([e, b.shopIcon])
             }),
         text: Z.Z.Messages.GUILD_SHOP_CHANNEL_LABEL,
         selected: n,
         onClick: l,
         trailing: (0, i.jsxs)('div', {
-            className: A.gifSection,
+            className: b.gifSection,
             children: [
                 R
                     ? (0, i.jsx)(c.TextBadge, {
                           color: c.tokens.unsafe_rawColors.BRAND_260.css,
                           text: Z.Z.Messages.NEW,
-                          className: A.newBadge
+                          className: b.newBadge
                       })
                     : (0, i.jsx)('img', {
                           src: (0, p.b)('server_products/storefront/money.gif'),
-                          className: A.money,
+                          className: b.money,
                           alt: ''
                       }),
                 n &&
                     (0, i.jsx)(c.Clickable, {
-                        className: A.closeButton,
+                        className: b.closeButton,
                         onClick: (e) => {
                             if (
                                 (e.stopPropagation(),
@@ -100,7 +100,7 @@ function R(e) {
             o.K.set(T.tM, 'true'), (0, C.uL)(x.Z5c.CHANNEL(t.id, v.oC.GUILD_SHOP));
         };
     return r
-        ? (0, i.jsx)(b, {
+        ? (0, i.jsx)(A, {
               guildId: t.id,
               selected: l,
               handleClick: a

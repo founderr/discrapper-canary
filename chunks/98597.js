@@ -1,6 +1,6 @@
 n.d(t, {
     CN: function () {
-        return b;
+        return A;
     },
     ZP: function () {
         return y;
@@ -39,12 +39,12 @@ var i,
     v = n(281029),
     T = n(981631),
     Z = n(689938),
-    A = n(872356);
-function b(e, t, n) {
+    b = n(872356);
+function A(e, t, n) {
     return null != t && !!t && !(0, v.ig)(n, e.type);
 }
 function R(e, t) {
-    return null == t ? A.containerDefault : e > t ? A.containerDragAfter : A.containerDragBefore;
+    return null == t ? b.containerDefault : e > t ? b.containerDragAfter : b.containerDragBefore;
 }
 function M(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
@@ -57,7 +57,7 @@ function M(e) {
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: o, onBlur: c } = e;
             return (0, s.jsx)(h.Clickable, {
-                className: u()(A.iconItem, l ? A.alwaysShown : void 0, r ? A.iconWithChannelInfo : A.iconNoChannelInfo),
+                className: u()(b.iconItem, l ? b.alwaysShown : void 0, r ? b.iconWithChannelInfo : b.iconNoChannelInfo),
                 onClick: a,
                 tabIndex: i,
                 'aria-label': Z.Z.Messages.EDIT_CHANNEL,
@@ -68,7 +68,7 @@ function M(e) {
                 children: (0, s.jsx)(h.SettingsIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: A.actionIcon
+                    className: b.actionIcon
                 })
             });
         }
@@ -99,28 +99,28 @@ function L(e) {
             });
         }
     }
-    let b = (0, s.jsx)(h.GroupPlusIcon, {
+    let A = (0, s.jsx)(h.GroupPlusIcon, {
         size: 'xs',
-        className: A.actionIcon,
+        className: b.actionIcon,
         'aria-hidden': !0
     });
     return (
         i &&
-            (b = (0, s.jsx)(C.Z, {
+            (A = (0, s.jsx)(C.Z, {
                 tutorialId: 'instant-invite',
                 position: 'left',
-                children: (0, s.jsx)('div', { children: b })
+                children: (0, s.jsx)('div', { children: A })
             })),
         (0, s.jsx)(h.Tooltip, {
             text: x,
             children: (e) =>
                 (0, s.jsx)(h.Clickable, {
-                    className: u()(A.iconItem, a ? A.alwaysShown : void 0, o ? A.iconWithChannelInfo : A.iconNoChannelInfo),
+                    className: u()(b.iconItem, a ? b.alwaysShown : void 0, o ? b.iconWithChannelInfo : b.iconNoChannelInfo),
                     ...e,
                     onClick: v,
                     tabIndex: r,
                     'aria-label': x,
-                    children: b
+                    children: A
                 })
         })
     );
@@ -134,14 +134,14 @@ function P(e) {
         text: Z.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
         children: (e) =>
             (0, s.jsx)(h.Clickable, {
-                className: A.iconItem,
+                className: b.iconItem,
                 ...e,
                 onClick: n,
                 'aria-label': Z.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
                 children: (0, s.jsx)(h.XSmallIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: A.actionIcon
+                    className: b.actionIcon
                 })
             })
     });
@@ -155,14 +155,14 @@ function O(e) {
         text: Z.Z.Messages.ADD_FAVORITE,
         children: (e) =>
             (0, s.jsx)(h.Clickable, {
-                className: A.iconItem,
+                className: b.iconItem,
                 ...e,
                 onClick: n,
                 'aria-label': Z.Z.Messages.ADD_FAVORITE,
                 children: (0, s.jsx)(h.CheckmarkLargeIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: A.actionIcon
+                    className: b.actionIcon
                 })
             })
     });
@@ -186,7 +186,7 @@ class y extends (a = o.PureComponent) {
     }
     isDisabled() {
         let { channel: e, sorting: t, sortingType: n } = this.props;
-        return b(e, t, n);
+        return A(e, t, n);
     }
 }
 (r = { isDefaultChannel: !1 }),

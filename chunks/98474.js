@@ -16,14 +16,14 @@ var i = n(735250),
     h = n(912893),
     m = n(768581),
     p = n(176354),
-    f = n(675654),
-    g = n(867494);
+    g = n(675654),
+    f = n(867494);
 let _ = [];
 function T(e) {
     let { messageId: t, emoji: n, startPosition: T, targetPosition: v } = e,
         [E, b] = s.useState(0),
-        [I, C] = s.useState(0),
-        [S, R] = s.useState(null),
+        [I, R] = s.useState(0),
+        [S, C] = s.useState(null),
         { confettiCanvas: x } = s.useContext(d.h),
         N = (0, o.uR)(x, S),
         O = s.useMemo(
@@ -53,7 +53,7 @@ function T(e) {
             },
             onChange: (e) => {
                 let { y: t } = e;
-                C(t);
+                R(t);
             }
         }),
         M = (0, r.useSpring)({
@@ -84,7 +84,7 @@ function T(e) {
             E > 0 &&
                 I > 0 &&
                 N.createConfetti({
-                    ...f.We,
+                    ...g.We,
                     position: {
                         type: 'static',
                         value: {
@@ -97,23 +97,23 @@ function T(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Ji, {
-                    ref: R,
+                    ref: C,
                     sprites: O,
                     colors: _,
-                    spriteWidth: f.Ko,
-                    spriteHeight: f.Ko
+                    spriteWidth: g.Ko,
+                    spriteHeight: g.Ko
                 }),
                 (0, i.jsx)(u.ZP, {
                     children: (0, i.jsx)(a.animated.div, {
                         style: { ...j },
-                        className: g.emojiContainer,
+                        className: f.emojiContainer,
                         children: (0, i.jsx)(a.animated.div, {
                             style: {
                                 ...M,
                                 opacity: M.opacity
                             },
                             children: (0, i.jsx)(c.Z, {
-                                className: g.emoji,
+                                className: f.emoji,
                                 emojiId: n.id,
                                 emojiName: n.name,
                                 animated: n.animated,

@@ -23,8 +23,8 @@ var i,
     v = n(662146),
     T = n(674552),
     Z = n(981631),
-    A = n(673193);
-function b(e, t, n) {
+    b = n(673193);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -126,7 +126,7 @@ class L extends (i = r.PureComponent) {
                         hovered: !m && f,
                         selected: !m && n,
                         unread: !m && h,
-                        className: A.pill
+                        className: b.pill
                     }),
                     (0, l.jsx)(v.Z, {
                         text: null != t ? t : '',
@@ -173,7 +173,7 @@ class L extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'state', {
+            A(this, 'state', {
                 hovered: !1,
                 animating: !0,
                 controller: new a.Controller({
@@ -183,7 +183,7 @@ class L extends (i = r.PureComponent) {
                     config: M
                 })
             }),
-            b(this, 'handleContextMenu', (e) => {
+            A(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     i = t.type === Z.d4z.DM ? E.default.getUser(t.getRecipientId()) : null;
                 null != i
@@ -208,7 +208,7 @@ class L extends (i = r.PureComponent) {
             });
     }
 }
-b(L, 'defaultProps', {
+A(L, 'defaultProps', {
     badge: 0,
     audio: !1,
     video: !1,

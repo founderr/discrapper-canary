@@ -20,17 +20,17 @@ var i = n(735250),
     h = n(481060),
     m = n(596454),
     p = n(129861),
-    f = n(700582),
-    g = n(607070),
+    g = n(700582),
+    f = n(607070),
     _ = n(600164),
     T = n(633302),
     v = n(712057),
     E = n(660189),
     b = n(372900),
     I = n(566006),
-    C = n(620652),
+    R = n(620652),
     S = n(815605),
-    R = n(222677),
+    C = n(222677),
     x = n(995774),
     N = n(665906),
     O = n(210887),
@@ -38,8 +38,8 @@ var i = n(735250),
     A = n(592125),
     j = n(271383),
     M = n(542578),
-    y = n(375954),
-    L = n(496675),
+    L = n(375954),
+    y = n(496675),
     P = n(699516),
     U = n(594174),
     w = n(768581),
@@ -74,13 +74,13 @@ let Y = (e) => {
         u = s.useMemo(() => {
             if (null == c || c.length < 1) return;
             let e = (0, S.Zn)(t, c[0], n, {
-                emojiSize: C.M.LARGE,
+                emojiSize: R.M.LARGE,
                 messageId: o
             });
-            return (0, i.jsx)(C.Z, {
+            return (0, i.jsx)(R.Z, {
                 className: G.__invalid_effect,
                 effect: e,
-                emojiSize: C.M.LARGE,
+                emojiSize: R.M.LARGE,
                 onComplete: () => r(!1)
             });
         }, [c, t, n, o]);
@@ -147,12 +147,12 @@ class J extends s.PureComponent {
                 n: t
             }),
             p = {},
-            f = {};
+            g = {};
         if (u) {
             let { backgroundColor: e = '', opacity: t = 1, accentColor: i = '' } = null != l ? l : {};
-            if (((f.color = i), n)) {
-                var g;
-                p.background = null !== (g = (0, c.wK)(e, t)) && void 0 !== g ? g : '';
+            if (((g.color = i), n)) {
+                var f;
+                p.background = null !== (f = (0, c.wK)(e, t)) && void 0 !== f ? f : '';
             }
         }
         return (0, i.jsx)(h.Tooltip, {
@@ -178,7 +178,7 @@ class J extends s.PureComponent {
                         d,
                         (0, i.jsx)(h.Text, {
                             variant: 'text-sm/bold',
-                            style: f,
+                            style: g,
                             children: t
                         })
                     ]
@@ -191,8 +191,8 @@ function q(e) {
     let { emoji: t, user: n, message: s, channel: o, guildId: a, reactionType: l, onRemoveReactor: r, disableManage: c = !1 } = e,
         u = (0, d.e7)([Z.default], () => Z.default.getId()),
         m = (0, d.e7)([U.default], () => U.default.getUser(n.id), [n]),
-        g = (0, N.$R)(o),
-        T = (0, d.e7)([L.Z], () => L.Z.can(V.Plq.MANAGE_MESSAGES, o) && g) || u === n.id,
+        f = (0, N.$R)(o),
+        T = (0, d.e7)([y.Z], () => y.Z.can(V.Plq.MANAGE_MESSAGES, o) && f) || u === n.id,
         v = (0, d.e7)([j.ZP, A.Z, P.Z], () => k.ZP.getName(a, o.id, n));
     return (0, i.jsxs)(_.Z, {
         className: G.reactorDefault,
@@ -204,7 +204,7 @@ function q(e) {
                 grow: 0,
                 shrink: 0,
                 className: W.marginReset,
-                children: (0, i.jsx)(f.Z, {
+                children: (0, i.jsx)(g.Z, {
                     user: null != m ? m : n,
                     size: h.AvatarSizes.SIZE_24
                 })
@@ -235,11 +235,11 @@ function q(e) {
                 T &&
                 (0, i.jsx)(h.Clickable, {
                     onClick: function () {
-                        R.WO({
+                        C.WO({
                             channelId: o.id,
                             messageId: s.id,
                             emoji: t,
-                            location: R.TW.MESSAGE,
+                            location: C.TW.MESSAGE,
                             userId: n.id,
                             options: { burst: l === I.O.BURST }
                         }),
@@ -272,7 +272,7 @@ class X extends s.PureComponent {
         let { message: e, reaction: t, reactionType: n } = this.props,
             { lastId: i } = this.state;
         this.setState({ loadingMore: !0 }),
-            R.U0({
+            C.U0({
                 channelId: e.getChannelId(),
                 messageId: e.id,
                 emoji: t.emoji,
@@ -385,12 +385,12 @@ function Q(e) {
     var t;
     let { message: n, selectedReaction: o, disableManage: a = !1, disableTabs: l = !1, onClose: r, transitionState: c, 'aria-label': m = H.Z.Messages.REACTIONS } = e,
         p = (0, d.e7)([A.Z], () => A.Z.getChannel(n.getChannelId())),
-        f = null == p ? void 0 : p.getGuildId(),
+        g = null == p ? void 0 : p.getGuildId(),
         _ = (0, d.e7)(
-            [y.Z, E.Z],
+            [L.Z, E.Z],
             () => {
                 var e, t;
-                let i = null !== (t = y.Z.getMessage(n.getChannelId(), n.id)) && void 0 !== t ? t : null === (e = E.Z.getMessage(B.default.castMessageIdAsChannelId(n.id))) || void 0 === e ? void 0 : e.firstMessage;
+                let i = null !== (t = L.Z.getMessage(n.getChannelId(), n.id)) && void 0 !== t ? t : null === (e = E.Z.getMessage(B.default.castMessageIdAsChannelId(n.id))) || void 0 === e ? void 0 : e.firstMessage;
                 return null != i ? i.reactions : [];
             },
             [n]
@@ -419,8 +419,8 @@ function Q(e) {
                     e
                 );
             }, [t])),
-        C = T[0],
-        [S, R] = (function (e, t, n) {
+        R = T[0],
+        [S, C] = (function (e, t, n) {
             let [i, o] = s.useState(null != e ? e : t);
             return (
                 s.useEffect(() => {
@@ -436,10 +436,10 @@ function Q(e) {
             );
         })(
             o,
-            null != C
+            null != R
                 ? {
-                      emoji: C.emoji,
-                      reactionType: C.burst_count > 0 ? I.O.BURST : I.O.NORMAL
+                      emoji: R.emoji,
+                      reactionType: R.burst_count > 0 ? I.O.BURST : I.O.NORMAL
                   }
                 : null,
             _
@@ -448,7 +448,7 @@ function Q(e) {
             var e;
             return null == S ? null : null !== (e = _.find((e) => (0, x.ir)(e.emoji, S.emoji))) && void 0 !== e ? e : null;
         }, [_, S]),
-        Z = (0, d.e7)([g.Z], () => g.Z.saturation),
+        Z = (0, d.e7)([f.Z], () => f.Z.saturation),
         j = (0, d.e7)([O.Z], () => (0, u.wj)(O.Z.theme));
     if (
         (s.useEffect(() => {
@@ -459,7 +459,7 @@ function Q(e) {
         return (0, i.jsx)(h.Spinner, {});
     if (null == p) throw Error('MessageReactions.render: Message does not have a channelId');
     return (0, i.jsx)(b.Z.Provider, {
-        value: null != f ? f : void 0,
+        value: null != g ? g : void 0,
         children: (0, i.jsxs)(h.ModalRoot, {
             'aria-label': m,
             transitionState: c,
@@ -478,7 +478,7 @@ function Q(e) {
                                   J,
                                   {
                                       isSelected: ee(S, e, n ? I.O.BURST : I.O.NORMAL),
-                                      setSelected: R,
+                                      setSelected: C,
                                       reactionType: n ? I.O.BURST : I.O.NORMAL,
                                       emoji: e.emoji,
                                       count: n ? e.burst_count : e.count,
@@ -494,7 +494,7 @@ function Q(e) {
                 (0, i.jsx)($, {
                     message: n,
                     reaction: N,
-                    guildId: f,
+                    guildId: g,
                     channel: p,
                     reactionType: S.reactionType,
                     disableManage: a

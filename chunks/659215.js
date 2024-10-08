@@ -4,7 +4,7 @@ n.r(t),
             return p;
         },
         openBurstReactionsUpsellModal: function () {
-            return f;
+            return g;
         }
     });
 var i = n(735250);
@@ -21,8 +21,8 @@ var s = n(481060),
     m = n(784370);
 function p(e) {
     var t, n;
-    let { onClose: s, analyticsSource: p, ...f } = e,
-        g = u.Z.Messages.SUPER_REACTIONS_UPSELL_UNLIMITED_BODY.format({
+    let { onClose: s, analyticsSource: p, ...g } = e,
+        f = u.Z.Messages.SUPER_REACTIONS_UPSELL_UNLIMITED_BODY.format({
             onClick: () => {
                 o.Z.open(d.oAB.PREMIUM), s();
             }
@@ -37,8 +37,8 @@ function p(e) {
         bodyClassName: h.bodyContainer,
         type: c.cd.BURST_REACTION_UPSELL,
         title: u.Z.Messages.SUPER_REACTIONS_UPSELL_TITLE,
-        body: g,
-        glowUp: g,
+        body: f,
+        glowUp: f,
         analyticsSource: p,
         analyticsLocation: {
             page: d.ZY5.PREMIUM_UPSELL_BURST_REACTIONS,
@@ -48,10 +48,10 @@ function p(e) {
         subscribeButtonText: v ? void 0 : u.Z.Messages.PREMIUM_SETTINGS_GET,
         subscriptionTier: null !== (n = null == _ ? void 0 : null === (t = _.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : c.Si.TIER_2,
         backButtonText: u.Z.Messages.NO_THANKS,
-        ...f
+        ...g
     });
 }
-function f(e) {
+function g(e) {
     let { analytics: t } = e;
     (0, s.openModalLazy)(async () => {
         let { default: e } = await Promise.resolve().then(n.bind(n, 659215));

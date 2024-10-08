@@ -23,15 +23,15 @@ var i = n(735250),
     v = n(593618),
     T = n(252686),
     Z = n(682662),
-    A = n(674552),
-    b = n(981631),
+    b = n(674552),
+    A = n(981631),
     R = n(689938),
     M = n(767573);
 let L = {
     analyticsSource: {
-        page: b.ZY5.GUILD_CHANNEL,
-        section: b.jXE.CHANNEL_LIST,
-        object: b.qAy.CHANNEL
+        page: A.ZY5.GUILD_CHANNEL,
+        section: A.jXE.CHANNEL_LIST,
+        object: A.qAy.CHANNEL
     }
 };
 function P(e, t) {
@@ -46,17 +46,17 @@ function P(e, t) {
 }
 t.Z = l.memo(function (e) {
     var t, n, r, p, O;
-    let { guildNode: y, setRef: D, onDragStart: j, onDragEnd: w, route: U, guild: G, animatable: k, selected: B = !1, unread: V = !1, mediaState: H, unavailable: F = !1, badge: W = 0, contextMenu: z = P, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
+    let { guildNode: y, setRef: j, onDragStart: D, onDragEnd: w, route: U, guild: G, animatable: k, selected: B = !1, unread: H = !1, mediaState: V, unavailable: F = !1, badge: W = 0, contextMenu: z = P, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
         { id: X, parentId: J } = y,
-        $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, A.Ny)() : null != H ? (0, A.Or)(H) : void 0,
+        $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, b.Ny)() : null != V ? (0, b.Or)(V) : void 0,
         ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-    null == ee && W > 0 ? (ee = null !== (r = (0, A.Ne)(W)) && void 0 !== r ? r : void 0) : null == ee && null != Q && (ee = null !== (p = (0, A.jt)({ guildJoinRequestStatus: Q })) && void 0 !== p ? p : void 0);
+    null == ee && W > 0 ? (ee = null !== (r = (0, b.Ne)(W)) && void 0 !== r ? r : void 0) : null == ee && null != Q && (ee = null !== (p = (0, b.jt)({ guildJoinRequestStatus: Q })) && void 0 !== p ? p : void 0);
     let et = null !== (O = e.lowerBadgeSize) && void 0 !== O ? O : { width: (0, d.getBadgeWidthForValue)(W) },
         [{ dragging: en }, ei] = (0, s.c)({
             type: E.eD.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
-                    null == j || j();
+                    null == D || D();
                 }),
                 {
                     type: y.type,
@@ -68,7 +68,7 @@ t.Z = l.memo(function (e) {
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
-        el = (0, o.Ie)(null != X ? X : b.lds),
+        el = (0, o.Ie)(null != X ? X : A.lds),
         [er, ea] = l.useState(!1),
         es = !K && er,
         [eo, ec] = l.useState(!1),
@@ -115,9 +115,9 @@ t.Z = l.memo(function (e) {
         ),
         eI = l.useCallback(
             (e) => {
-                null == D || D(X, e);
+                null == j || j(X, e);
             },
-            [X, D]
+            [X, j]
         );
     if (null == G) return null;
     let eE =
@@ -178,7 +178,7 @@ t.Z = l.memo(function (e) {
             (0, i.jsx)(N.Z, {
                 hovered: !en && es,
                 selected: !en && B,
-                unread: !en && V,
+                unread: !en && H,
                 className: M.pill
             }),
             (0, i.jsx)(v.Z, {

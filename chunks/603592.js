@@ -11,8 +11,8 @@ var i = n(735250),
     h = n(322459);
 let p = l.forwardRef(function (e, t) {
     let { id: n, onClick: r, onContextMenu: p, icon: f, selected: _, tooltip: m, upperBadge: g, lowerBadge: C, lowerBadgeSize: I, showPill: E = !0, className: N, 'aria-label': S, children: x, onMouseEnter: v, onMouseLeave: T, onMouseDown: Z } = e,
-        A = (0, s.Ie)(n),
-        [b, R] = l.useState(!1),
+        b = (0, s.Ie)(n),
+        [A, R] = l.useState(!1),
         M = 'string' == typeof m && null == S ? m : S;
     return (0, i.jsxs)(u.H, {
         children: [
@@ -20,7 +20,7 @@ let p = l.forwardRef(function (e, t) {
                 ? (0, i.jsx)('div', {
                       className: h.pill,
                       children: (0, i.jsx)(c.Z, {
-                          hovered: b,
+                          hovered: A,
                           selected: _
                       })
                   })
@@ -30,7 +30,7 @@ let p = l.forwardRef(function (e, t) {
                 selected: _,
                 children: (0, i.jsx)(o.BlobMask, {
                     className: h.__invalid_circleButtonMask,
-                    selected: _ || b,
+                    selected: _ || A,
                     upperBadge: g,
                     lowerBadge: C,
                     lowerBadgeSize: I,
@@ -43,12 +43,12 @@ let p = l.forwardRef(function (e, t) {
                             null == T || T(), R(!1);
                         },
                         onMouseDown: Z,
-                        className: a()(h.circleIconButton, N, { [h.selected]: _ || b }),
+                        className: a()(h.circleIconButton, N, { [h.selected]: _ || A }),
                         onClick: r,
                         'aria-label': M,
                         onContextMenu: p,
                         focusProps: { enabled: !1 },
-                        ...A,
+                        ...b,
                         children:
                             null != f &&
                             (0, i.jsx)(f, {

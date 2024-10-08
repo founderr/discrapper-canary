@@ -50,15 +50,15 @@ function T(e) {
     })(h, g);
     let N = (0, o.ZP)(h),
         T = Array.from((0, o.uF)(N).values()),
-        A = null !== (t = null == g ? void 0 : g.filter(m.lm)) && void 0 !== t ? t : [],
-        b = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
+        b = null !== (t = null == g ? void 0 : g.filter(m.lm)) && void 0 !== t ? t : [],
+        A = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
         R = (0, r.e7)(
             [f.Z],
             () => {
                 let e = {};
                 return (
-                    A.forEach((t) => {
-                        let n = f.Z.findActivity(t.user.id, b(t));
+                    b.forEach((t) => {
+                        let n = f.Z.findActivity(t.user.id, A(t));
                         if (null != n && !(0, u.Z)(n)) {
                             var i, l, r, a;
                             let s = ''.concat(null !== (l = n.application_id) && void 0 !== l ? l : '', ':').concat(null !== (r = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.user.id),
@@ -75,7 +75,7 @@ function T(e) {
                     Object.values(e)
                 );
             },
-            [A],
+            [b],
             r.pF
         );
     return R.length + T.length === 0

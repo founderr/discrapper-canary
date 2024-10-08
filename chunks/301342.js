@@ -3,13 +3,13 @@ n.d(t, {
         return Z;
     },
     Qo: function () {
-        return A;
+        return b;
     },
     kw: function () {
         return R;
     },
     rj: function () {
-        return b;
+        return A;
     }
 });
 var i = n(735250),
@@ -38,7 +38,7 @@ function v(e) {
 }
 let T = l.memo(function (e) {
     let t,
-        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: E, position: T, sortingPosition: Z, hideIcon: A, children: b } = e,
+        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: E, position: T, sortingPosition: Z, hideIcon: b, children: A } = e,
         R = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
         M = (0, o.e7)([_.Z], () => _.Z.isCollapsed(r.id)),
         L = (0, o.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_CHANNELS, r));
@@ -79,7 +79,7 @@ let T = l.memo(function (e) {
                         });
                 });
         }, [r]),
-        { role: D, tabIndex: j, ...w } = (0, s.JA)(r.id),
+        { role: j, tabIndex: D, ...w } = (0, s.JA)(r.id),
         U = l.useRef(null),
         G = l.useRef(null),
         k = (0, i.jsxs)('li', {
@@ -105,14 +105,14 @@ let T = l.memo(function (e) {
                             (0, i.jsxs)(c.Clickable, {
                                 innerRef: U,
                                 className: x.mainContent,
-                                tabIndex: j,
+                                tabIndex: D,
                                 ...w,
                                 onClick: P,
                                 'aria-label': S.Z.Messages.CATEGORY_A11Y_LABEL.format({ categoryName: r.name }),
                                 'aria-expanded': !M,
                                 focusProps: { enabled: !1 },
                                 children: [
-                                    A
+                                    b
                                         ? null
                                         : (0, i.jsx)(c.ChevronSmallDownIcon, {
                                               size: 'md',
@@ -142,7 +142,7 @@ let T = l.memo(function (e) {
                                                       onClick: y,
                                                       onMouseEnter: t,
                                                       onMouseLeave: n,
-                                                      tabIndex: j,
+                                                      tabIndex: D,
                                                       focusProps: {
                                                           offset: {
                                                               top: -3,
@@ -164,7 +164,7 @@ let T = l.memo(function (e) {
                         ]
                     })
                 }),
-                b
+                A
             ]
         });
     return null != I && null != h ? I(h(k)) : k;
@@ -203,7 +203,7 @@ let Z = l.memo(function (e) {
             })
         });
     }),
-    A = l.memo(function (e) {
+    b = l.memo(function (e) {
         let { category: t } = e,
             n = (0, o.e7)([I.Z], () => I.Z.isVoiceCategoryCollapsed(t.guild.id)),
             r = l.useCallback(() => {
@@ -241,7 +241,7 @@ let Z = l.memo(function (e) {
                   ]
               });
     }),
-    b = l.memo(function (e) {
+    A = l.memo(function (e) {
         let { category: t, channel: n } = e,
             l = (0, o.e7)([I.Z], () => I.Z.isVoiceCategoryCollapsed(t.guild.id));
         return l || null == n || n.record.type === N.d4z.GUILD_CATEGORY

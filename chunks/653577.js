@@ -32,12 +32,12 @@ function C(e) {
                 channel_id: t.id
             });
     }, [t.id, x, t.guild_id]);
-    let A = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
+    let b = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
-    let b = a()(m.statusDiv, n && T ? m.hoverable : null);
+    let A = a()(m.statusDiv, n && T ? m.hoverable : null);
     if (x)
         return (0, i.jsx)(o.Clickable, {
-            className: b,
+            className: A,
             onClick: T ? I : void 0,
             children: (0, i.jsx)(o.Text, {
                 variant: 'text-xs/medium',
@@ -47,7 +47,7 @@ function C(e) {
         });
     if (n && T && (!Z || r))
         return (0, i.jsxs)(o.Clickable, {
-            className: b,
+            className: A,
             onClick: I,
             children: [
                 (0, i.jsx)(o.Text, {
@@ -59,8 +59,8 @@ function C(e) {
                     size: 'custom',
                     color: 'currentColor',
                     className: m.pencilIcon,
-                    width: A,
-                    height: A
+                    width: b,
+                    height: b
                 })
             ]
         });

@@ -18,13 +18,13 @@ var i,
     h = n(960020),
     m = n(831244),
     p = n(815605),
-    f = n(981631),
-    g = n(153190);
-((i = s || (s = {}))[(i.NORMAL = 16)] = 'NORMAL'), (i[(i.LARGE = 32)] = 'LARGE');
+    g = n(981631),
+    f = n(153190);
+((i = s || (s = {}))[(i.NORMAL = 16)] = 'NORMAL'), (i[(i.NORMAL_NEW = 20)] = 'NORMAL_NEW'), (i[(i.LARGE = 32)] = 'LARGE');
 let _ = async (e) => {
     var t;
     let { effect: n } = e,
-        i = await (0, m.T)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : f.lds, n.emoji.name),
+        i = await (0, m.T)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : g.lds, n.emoji.name),
         s = await (0, p.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
     return (s.assets[0].p = n.url), s;
 };
@@ -69,9 +69,9 @@ function T(e) {
                 );
         }, [i, n, s]),
         (0, o.jsx)('div', {
-            className: g.effectsWrapper,
+            className: f.effectsWrapper,
             children: (0, o.jsx)('div', {
-                className: r()(g.effect, t),
+                className: r()(f.effect, t),
                 style: {
                     transform: 'translateY('.concat(m, 'px)'),
                     height: c,

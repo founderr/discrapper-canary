@@ -23,23 +23,23 @@ var i = n(735250),
     v = n(311352),
     T = n(436774),
     Z = n(594190),
-    A = n(925329),
-    b = n(810568),
+    b = n(925329),
+    A = n(810568),
     R = n(168524),
     M = n(382182),
     L = n(74299),
     P = n(914923),
     O = n(165393),
     y = n(989941),
-    D = n(803647),
-    j = n(690221),
+    j = n(803647),
+    D = n(690221),
     w = n(231664),
     U = n(759198),
     G = n(131704),
     k = n(199902),
     B = n(314897),
-    V = n(592125),
-    H = n(984933),
+    H = n(592125),
+    V = n(984933),
     F = n(430824),
     W = n(131951),
     z = n(496675),
@@ -157,7 +157,7 @@ class ec extends l.PureComponent {
                 (0, i.jsxs)('div', {
                     className: ea.gameIconWrapper,
                     children: [
-                        (0, i.jsx)(A.Z, {
+                        (0, i.jsx)(b.Z, {
                             className: ea.gameIcon,
                             game: t,
                             pid: null == n ? void 0 : n.pid
@@ -230,7 +230,7 @@ class ec extends l.PureComponent {
         let s = { start: n.connectedSince },
             o = r;
         null != a ? ((e = ei.Z5c.CHANNEL(a.id, l.id)), (o = ''.concat(o, ' / ').concat(a.name))) : (e = ei.Z5c.CHANNEL(ei.ME, l.id));
-        let c = (0, i.jsx)(j.Z, {
+        let c = (0, i.jsx)(D.Z, {
             href: e,
             onClick: this.handleApplicationLinkClick,
             children: (0, i.jsx)(et.Z, {
@@ -241,15 +241,15 @@ class ec extends l.PureComponent {
         return (0, i.jsxs)('div', {
             className: ea.gameWrapper,
             children: [
-                (0, i.jsx)(A.Z, {
+                (0, i.jsx)(b.Z, {
                     className: ea.gameIcon,
                     game: t,
-                    size: A.Z.Sizes.SMALL
+                    size: b.Z.Sizes.SMALL
                 }),
                 (0, i.jsxs)('div', {
                     className: ea.info,
                     children: [
-                        (0, i.jsx)(j.Z, {
+                        (0, i.jsx)(D.Z, {
                             href: e,
                             onClick: this.handleApplicationLinkClick,
                             children: (0, i.jsx)(en.Z, {
@@ -297,7 +297,7 @@ class ec extends l.PureComponent {
             }),
             es(this, 'handleClickStopStreamingButton', () => {
                 let { stream: e } = this.props;
-                (0, D.Z)(e);
+                (0, j.Z)(e);
             }),
             es(this, 'handleClickInviteButton', () => {
                 let { activity: e, analyticsContext: t } = this.props;
@@ -332,7 +332,7 @@ function eu(e) {
         l = (0, R.Z)({
             location: 'ActivityPanelGameCard',
             applicationId: n,
-            source: b.m1.RtcPanel,
+            source: A.m1.RtcPanel,
             trackEntryPointImpression: !0
         });
     return (0, i.jsx)(u.Clickable, {
@@ -349,14 +349,14 @@ t.Z = (0, _.Z)(function (e) {
     let { guildId: n, ...l } = e,
         r = (0, c.e7)([B.default], () => B.default.getId()),
         a = (0, c.e7)([Z.ZP, X.Z], () => (0, y.Z)(Z.ZP, X.Z)),
-        s = (0, c.e7)([q.Z, V.Z], () => V.Z.getChannel(q.Z.getVoiceChannelId())),
+        s = (0, c.e7)([q.Z, H.Z], () => H.Z.getChannel(q.Z.getVoiceChannelId())),
         o = (0, c.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
-        u = (0, c.e7)([V.Z], () => V.Z.getChannel(o)),
+        u = (0, c.e7)([H.Z], () => H.Z.getChannel(o)),
         d = (0, c.e7)([F.Z], () => F.Z.getGuild(null == u ? void 0 : u.guild_id)),
         [h, p] = (0, c.Wu)([k.Z], () => [k.Z.getCurrentUserActiveStream(), k.Z.getStreamerActiveStreamMetadata()]),
         f = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         _ = (0, c.e7)([C.ZP], () => (null != u ? C.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        g = (0, c.e7)([F.Z, z.Z, H.ZP], () => (null != s ? M.JL(s, F.Z, z.Z, !1) : null != n && M.h_(H.ZP.getChannels(n), F.Z, z.Z).length > 0)),
+        g = (0, c.e7)([F.Z, z.Z, V.ZP], () => (null != s ? M.JL(s, F.Z, z.Z, !1) : null != n && M.h_(V.ZP.getChannels(n), F.Z, z.Z).length > 0)),
         [I] = (0, N.Z)([
             null !==
                 (t = (function () {
@@ -371,7 +371,7 @@ t.Z = (0, _.Z)(function (e) {
         x = (0, c.e7)([Y.Z], () => (null != r ? Y.Z.findActivity(r, (e) => e.type === ei.IIU.PLAYING) : null)),
         v = null != h && h.ownerId === r && h.state !== ei.jm8.ENDED,
         T = (0, c.e7)([Q.default, K.Z], () => (null != u ? (0, S.F6)(u, Q.default, K.Z) : void 0)),
-        A = (0, w.Z)();
+        b = (0, w.Z)();
     return (0, i.jsx)(ec, {
         ...l,
         guildId: n,
@@ -389,6 +389,6 @@ t.Z = (0, _.Z)(function (e) {
         streamMetadata: p,
         channelName: T,
         guildForConnectedChannel: d,
-        streamQualityIndicator: A
+        streamQualityIndicator: b
     });
 });

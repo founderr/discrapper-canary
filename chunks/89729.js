@@ -18,13 +18,13 @@ function h(e, t) {
         h = arguments.length > 3 ? arguments[3] : void 0,
         m = l.Z.getReactions(e.getChannelId(), e.id, t, 3, i),
         p = a.Z.getChannel(e.getChannelId()),
-        f = null == p || p.isPrivate() ? null : p.getGuildId(),
-        g = e.getReaction(t),
+        g = null == p || p.isPrivate() ? null : p.getGuildId(),
+        f = e.getReaction(t),
         _ = i === d.O.BURST,
         T = s()(m)
             .reject((e) => r.Z.isBlocked(e.id))
             .take(3)
-            .map((e) => c.ZP.getName(f, null == p ? void 0 : p.id, e))
+            .map((e) => c.ZP.getName(g, null == p ? void 0 : p.id, e))
             .value();
     if (0 === T.length) return '';
     let v = {
@@ -56,7 +56,7 @@ function h(e, t) {
             }
         },
         E = _ ? v.burst : v.standard,
-        b = Math.max(0, (null !== (n = _ ? (null == g ? void 0 : g.burst_count) : null == g ? void 0 : g.count) && void 0 !== n ? n : 0) - T.length),
+        b = Math.max(0, (null !== (n = _ ? (null == f ? void 0 : f.burst_count) : null == f ? void 0 : f.count) && void 0 !== n ? n : 0) - T.length),
         I = (0, o.Lh)(t);
     if (1 === T.length)
         return b > 0

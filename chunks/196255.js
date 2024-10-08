@@ -10,16 +10,16 @@ var s = n(120356),
 t.Z = (e) => {
     var t, n;
     let { message: s, channel: u, renderColon: h, hasUnreads: m } = e,
-        { user: p, author: f } = (0, r.AJ)(u),
-        g = null !== (n = null !== (t = null == f ? void 0 : f.nick) && void 0 !== t ? t : null == p ? void 0 : p.username) && void 0 !== n ? n : '',
+        { user: p, author: g } = (0, r.AJ)(u),
+        f = null !== (n = null !== (t = null == g ? void 0 : g.nick) && void 0 !== t ? t : null == p ? void 0 : p.username) && void 0 !== n ? n : '',
         _ = (0, l.l)({
             user: null == s ? void 0 : s.author,
             channelId: u.id,
             guildId: u.guild_id,
             messageId: null == s ? void 0 : s.id,
             stopPropagation: !0,
-            ariaLabel: c.Z.Messages.FORUM_POST_AUTHOR_A11Y_LABEL.format({ name: g })
-        })(null != f ? f : void 0)((0, i.jsx)(i.Fragment, { children: g }), u.id);
+            ariaLabel: c.Z.Messages.FORUM_POST_AUTHOR_A11Y_LABEL.format({ name: f })
+        })(null != g ? g : void 0)((0, i.jsx)(i.Fragment, { children: f }), u.id);
     return (0, i.jsxs)(a.Text, {
         tag: 'span',
         className: o()(d.author, { [d.hasUnreads]: m }),

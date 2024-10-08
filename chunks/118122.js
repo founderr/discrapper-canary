@@ -46,8 +46,8 @@ function x(e) {
         v = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
         T = l.useMemo(() => x.some((e) => e.isOwner(v)), [x, v]),
         Z = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, C.PU)),
-        { analyticsLocations: A } = (0, o.ZP)(),
-        b = (0, a.useRedesignIconContext)().enabled,
+        { analyticsLocations: b } = (0, o.ZP)(),
+        A = (0, a.useRedesignIconContext)().enabled,
         R = (0, i.jsx)(m.Z, {
             showPill: !1,
             id: 'create-join-button',
@@ -59,14 +59,14 @@ function x(e) {
                               page: g.Sbl.CREATE_JOIN_GUILD_MODAL,
                               section: g.jXE.GUILD_CAP_UPSELL_MODAL
                           },
-                          analyticsLocations: A
+                          analyticsLocations: b
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
             selected: Z,
             onContextMenu: S,
             tooltip: I.Z.Messages.ADD_A_SERVER,
-            icon: b ? a.PlusMediumIcon : a.PlusSmallIcon
+            icon: A ? a.PlusMediumIcon : a.PlusSmallIcon
         });
     return t
         ? R

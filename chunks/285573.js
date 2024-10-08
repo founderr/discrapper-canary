@@ -20,8 +20,8 @@ let C = (0, c.B)(function (e) {
             return 0 === e.length ? null : u.Z.getChannel(e[0]);
         }),
         Z = (0, s.e7)([u.Z], () => u.Z.getChannel(null == T ? void 0 : T.parent_id)),
-        A = r === (null == T ? void 0 : T.id),
-        b = (0, s.e7)([h.Z], () => (null != Z ? h.Z.can(_.Plq.MANAGE_CHANNELS, Z) : null != t && h.Z.can(_.Plq.MANAGE_CHANNELS, t))),
+        b = r === (null == T ? void 0 : T.id),
+        A = (0, s.e7)([h.Z], () => (null != Z ? h.Z.can(_.Plq.MANAGE_CHANNELS, Z) : null != t && h.Z.can(_.Plq.MANAGE_CHANNELS, t))),
         R = l.useCallback(
             (e) => {
                 null != T &&
@@ -42,14 +42,14 @@ let C = (0, c.B)(function (e) {
         P = (0, i.jsx)('div', {
             className: a()(M, {
                 [g.disabled]: L,
-                [g.selected]: A
+                [g.selected]: b
             }),
             'data-dnd-name': T.name,
             children: (0, i.jsxs)(f.Z, {
                 className: g.iconVisibility,
                 channel: T,
                 guild: t,
-                selected: A,
+                selected: b,
                 onContextMenu: R,
                 forceInteractable: !0,
                 resolvedUnreadSetting: m.i.ONLY_MENTIONS,
@@ -66,6 +66,6 @@ let C = (0, c.B)(function (e) {
                 ]
             })
         });
-    return b && (P = x(S(P))), P;
+    return A && (P = x(S(P))), P;
 });
 t.Z = C;

@@ -26,7 +26,7 @@ t.Z = l.memo(function (e) {
             unread: d.default.hasUnread(g)
         })),
         Z = (0, o.I)(C) && 0 === v,
-        A = l.useMemo(
+        b = l.useMemo(
             () =>
                 null != n
                     ? n
@@ -51,7 +51,7 @@ t.Z = l.memo(function (e) {
         animatable: E,
         selected: S === g,
         badge: v,
-        lowerBadge: A,
+        lowerBadge: b,
         unread: T,
         mediaState: x,
         guildJoinRequestStatus: I

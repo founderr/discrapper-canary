@@ -25,7 +25,7 @@ let S = E.IlC.APP,
 function Z() {
     x = !0;
 }
-class A extends (l = o.ZP.Store) {
+class b extends (l = o.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, m.Z, C.default);
     }
@@ -42,7 +42,7 @@ class A extends (l = o.ZP.Store) {
     }
 }
 (s = 'InviteModalStore'),
-    (a = 'displayName') in (r = A)
+    (a = 'displayName') in (r = b)
         ? Object.defineProperty(r, a, {
               value: s,
               enumerable: !0,
@@ -50,7 +50,7 @@ class A extends (l = o.ZP.Store) {
               writable: !0
           })
         : (r[a] = s),
-    (t.Z = new A(c.Z, {
+    (t.Z = new b(c.Z, {
         OVERLAY_INITIALIZE: Z,
         CONNECTION_OPEN: Z,
         CONNECTION_CLOSED: function () {
