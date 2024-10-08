@@ -583,9 +583,9 @@ function ed(e, t, n) {
     });
 }
 t.Z = s.memo(function (e) {
-    let { channel: t, message: n, isHeader: s } = e,
-        a = (0, c.e7)([y.Z], () => y.Z.isEditing(t.id, n.id), [t.id, n.id]),
-        r = (function (e) {
+    let { channel: t, message: n, isHeader: s, isReply: a } = e,
+        r = (0, c.e7)([y.Z], () => y.Z.isEditing(t.id, n.id), [t.id, n.id]),
+        o = (function (e) {
             let { channel: t, message: n } = e;
             return n.state === $.yb.SEND_FAILED
                 ? (0, i.jsx)(ec, {
@@ -594,16 +594,17 @@ t.Z = s.memo(function (e) {
                   })
                 : null;
         })(e),
-        o = (function (e) {
+        u = (function (e) {
             let { message: t } = e;
             return t.state !== $.yb.SEND_FAILED ? (0, i.jsx)(eo, { ...e }) : null;
         })(e);
-    return a || (null == r && null == o)
+    return r || (null == o && null == u)
         ? null
         : (0, i.jsx)('div', {
               className: l()(e.className, {
                   [ei.container]: !0,
-                  [ei.isHeader]: s
+                  [ei.isHeader]: s,
+                  [ei.isReply]: a
               }),
               onClick: ea,
               onContextMenu: ea,
@@ -611,7 +612,7 @@ t.Z = s.memo(function (e) {
               'aria-label': en.Z.Messages.MESSAGE_UTILITIES_A11Y_LABEL,
               children: (0, i.jsxs)(K.ZP, {
                   className: e.innerClassName,
-                  children: [r, o]
+                  children: [o, u]
               })
           });
 });

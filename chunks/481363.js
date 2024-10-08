@@ -28,6 +28,7 @@ function c(e) {
               className: o.buttons,
               innerClassName: o.buttonsInner,
               isHeader: !_ && E && !(0, a.Z)(h),
+              isReply: !_ && h.type === r.uaV.REPLY && null != h.messageReference,
               channel: p,
               message: h,
               setPopout: t,
