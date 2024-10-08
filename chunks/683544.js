@@ -3,47 +3,59 @@ var i = n(735250),
     a = n(470079),
     s = n(209173),
     r = n(399606),
-    l = n(674588),
-    o = n(368862),
-    c = n(809547),
-    d = n(125909),
-    u = n(797908),
-    _ = n(292191),
-    E = n(854336);
+    l = n(481060),
+    o = n(699682),
+    c = n(674588),
+    d = n(368862),
+    u = n(809547),
+    _ = n(125909),
+    E = n(797908),
+    h = n(292191),
+    m = n(854336);
+let I = {
+    results: [],
+    totalPages: 0
+};
 t.Z = function (e) {
-    let { categoryId: t } = e,
-        [n, h] = a.useState(1);
-    a.useCallback((e) => {
-        h(e);
-    }, []);
-    let m = a.useMemo(
+    var t;
+    let { categoryId: n } = e,
+        [p, g] = a.useState(1),
+        T = a.useCallback((e) => {
+            g(e);
+        }, []);
+    a.useEffect(() => {
+        g(1);
+    }, [n]);
+    let f = a.useMemo(
             () => ({
                 query: '',
-                page: n,
-                categoryId: t
+                page: p,
+                categoryId: n
             }),
-            [n, t]
+            [p, n]
         ),
-        I = (0, r.cj)([c.Z], () => {
-            var e, t;
-            return null !== (t = null === (e = c.Z.getSearchResults(m)) || void 0 === e ? void 0 : e.results) && void 0 !== t ? t : [];
-        }),
-        p = (0, r.e7)([c.Z], () =>
-            c.Z.getFetchState({
+        S = (0, r.e7)([u.Z], () =>
+            u.Z.getFetchState({
                 query: '',
-                page: n,
-                categoryId: t
+                page: p,
+                categoryId: n
             })
         ),
-        g = a.useMemo(() => (null == I ? void 0 : I.filter((e) => !(e.type !== s.s.APPLICATION))), [I]),
-        T = a.useCallback((e) => {
+        C = (0, r.cj)([u.Z], () => {
+            var e;
+            return null !== (e = u.Z.getSearchResults(f)) && void 0 !== e ? e : I;
+        }),
+        N = null !== (t = (0, o.Z)(C)) && void 0 !== t ? t : I,
+        { results: A, totalPages: v } = a.useMemo(() => (S === d.M.FETCHING ? N : C), [S, N, C]),
+        Z = a.useMemo(() => (null == A ? void 0 : A.filter((e) => !(e.type !== s.s.APPLICATION))), [A]),
+        L = a.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: a, fetchCounts: s } = e;
             s &&
-                l.yC({
+                c.yC({
                     query: '',
                     guildId: a
                 }),
-                l.yC({
+                c.yC({
                     query: '',
                     guildId: a,
                     options: {
@@ -54,31 +66,42 @@ t.Z = function (e) {
                 });
         }, []);
     return (a.useEffect(() => {
-        T({
-            page: n,
-            activeCategoryId: t,
+        L({
+            page: p,
+            activeCategoryId: n,
             onSuccessCallback: () => {}
         });
-    }, [t, T, n]),
-    p === o.M.ERROR)
+    }, [n, L, p]),
+    S === d.M.ERROR)
         ? (0, i.jsx)('div', {
-              className: E.errorContainer,
-              children: (0, i.jsx)(_.Z, { className: E.error })
+              className: m.errorContainer,
+              children: (0, i.jsx)(h.Z, { className: m.error })
           })
-        : (0, i.jsx)(d.Z, {
-              loading: p === o.M.FETCHING,
-              children: (0, i.jsx)('div', {
-                  className: E.content,
-                  children:
-                      null == g
-                          ? void 0
-                          : g.map((e) => {
-                                if (e.type === s.s.APPLICATION) {
-                                    let t = e.data;
-                                    return (0, i.jsx)(u.Z, { application: t }, t.id);
-                                }
-                                return null;
-                            })
-              })
+        : (0, i.jsxs)(_.Z, {
+              loading: S === d.M.FETCHING,
+              children: [
+                  (0, i.jsx)('div', {
+                      className: m.content,
+                      children:
+                          null == Z
+                              ? void 0
+                              : Z.map((e) => {
+                                    if (e.type === s.s.APPLICATION) {
+                                        let t = e.data;
+                                        return (0, i.jsx)(E.Z, { application: t }, t.id);
+                                    }
+                                    return null;
+                                })
+                  }),
+                  (0, i.jsx)(l.Paginator, {
+                      className: m.paginationInput,
+                      totalCount: Math.min(7 * v, 700),
+                      pageSize: 7,
+                      disablePaginationGap: !0,
+                      hideMaxPage: !0,
+                      currentPage: p,
+                      onPageChange: T
+                  })
+              ]
           });
 };
