@@ -34,17 +34,17 @@ var i = n(735250),
     h = n(442837),
     m = n(692547),
     p = n(481060),
-    f = n(738619),
-    g = n(393238),
+    g = n(738619),
+    f = n(393238),
     _ = n(963374),
     T = n(884338),
     v = n(446489),
     E = n(95398),
     b = n(406432),
     I = n(169525),
-    C = n(566006),
+    R = n(566006),
     S = n(255269),
-    R = n(937889),
+    C = n(937889),
     x = n(443877),
     N = n(524444),
     O = n(287151),
@@ -52,8 +52,8 @@ var i = n(735250),
     A = n(695346),
     j = n(433355),
     M = n(592125),
-    y = n(496675),
-    L = n(699516),
+    L = n(496675),
+    y = n(699516),
     P = n(451478),
     U = n(55935),
     w = n(109434),
@@ -79,7 +79,7 @@ t.ZP = s.memo(function (e) {
     let { threadId: t, goToThread: n, observePostVisibilityAnalytics: o, overrideMedia: l, className: c, containerWidth: d } = e,
         {
             channel: m,
-            isOpen: f,
+            isOpen: g,
             messageCount: _,
             firstMessage: T,
             content: v,
@@ -104,31 +104,31 @@ t.ZP = s.memo(function (e) {
             threadId: t,
             overrideMedia: l
         }),
-        { ref: b, height: I } = (0, g.Z)(),
-        C = (0, H.xH)((e) => e.setCardHeight);
+        { ref: b, height: I } = (0, f.Z)(),
+        R = (0, H.xH)((e) => e.setCardHeight);
     s.useEffect(() => {
-        null != I && C(t, I);
-    }, [I, C, t]),
+        null != I && R(t, I);
+    }, [I, R, t]),
         s.useEffect(() => {
             null == o || o(b.current, t);
         }, [b, o, t]);
     let S = s.useRef(null),
-        { handleLeftClick: R, handleRightClick: x } = (0, Y.Z)({
+        { handleLeftClick: C, handleRightClick: x } = (0, Y.Z)({
             facepileRef: S,
             goToThread: n,
             channel: m
         }),
         { role: N, onFocus: O, ...Z } = (0, u.JA)(t),
-        { isFocused: A, handleFocus: y, handleBlur: L } = (0, z.Z)(O);
+        { isFocused: A, handleFocus: L, handleBlur: y } = (0, z.Z)(O);
     return (0, i.jsxs)('div', {
         ref: b,
         'data-item-id': t,
-        onClick: R,
+        onClick: C,
         onContextMenu: x,
-        className: a()($.container, c, { [$.isOpen]: f }),
+        className: a()($.container, c, { [$.isOpen]: g }),
         children: [
             (0, i.jsx)(p.Clickable, {
-                onClick: R,
+                onClick: C,
                 focusProps: { ringTarget: b },
                 onContextMenu: x,
                 'aria-label': X.Z.Messages.FORUM_POST_ARIA_LABEL.format({
@@ -136,8 +136,8 @@ t.ZP = s.memo(function (e) {
                     count: _
                 }),
                 className: $.focusTarget,
-                onFocus: y,
-                onBlur: L,
+                onFocus: L,
+                onBlur: y,
                 ...Z
             }),
             (0, i.jsxs)('div', {
@@ -235,7 +235,7 @@ function ei(e) {
         i = s.useMemo(() => (0, _.nC)(t && null != n ? n : ''), [t, n]);
     return s.useMemo(
         () =>
-            (0, R.ZP)(
+            (0, C.ZP)(
                 {
                     content: e.name,
                     embeds: []
@@ -247,9 +247,9 @@ function ei(e) {
 }
 let es = s.memo(function (e) {
     let { message: t, channel: n, content: s, hasMediaAttachment: o, hasUnreads: l } = e,
-        r = (0, h.e7)([L.Z], () => null != t && L.Z.isBlockedForMessage(t)),
+        r = (0, h.e7)([y.Z], () => null != t && y.Z.isBlockedForMessage(t)),
         c = (0, h.e7)([B.Z], () => B.Z.isLoading(n.id)),
-        d = (0, h.e7)([y.Z], () => y.Z.can(J.Plq.MANAGE_MESSAGES, n)),
+        d = (0, h.e7)([L.Z], () => L.Z.can(J.Plq.MANAGE_MESSAGES, n)),
         u = A.cC.useSetting(),
         m = null;
     if (r)
@@ -348,7 +348,7 @@ function eo(e) {
                                   dotRadius: 2
                               })
                           }),
-                          (0, i.jsx)(f.Z, {
+                          (0, i.jsx)(g.Z, {
                               channel: t,
                               className: $.typingUsers,
                               renderDots: !1
@@ -415,8 +415,9 @@ function el(e) {
               burst_count: 0,
               me: !1,
               me_burst: !1,
-              type: C.O.NORMAL,
-              emojiSize: 'reaction'
+              type: R.O.NORMAL,
+              emojiSize: 'reaction',
+              emojiSizeTooltip: 'reaction'
           });
 }
 function er(e) {
@@ -435,8 +436,9 @@ function er(e) {
                   isLurking: l,
                   isPendingMember: r,
                   useChatFontScaling: !1,
-                  type: o.burst_count >= o.count ? C.O.BURST : C.O.NORMAL,
+                  type: o.burst_count >= o.count ? R.O.BURST : R.O.NORMAL,
                   emojiSize: 'reaction',
+                  emojiSizeTooltip: 'reaction',
                   ...o
               },
               ''.concat(null !== (t = o.emoji.id) && void 0 !== t ? t : 0, ':').concat(o.emoji.name)
@@ -491,21 +493,21 @@ function eu(e) {
             channel: s
         }),
         m = (0, I.MC)(u),
-        { src: f, width: g, height: _, alt: T } = o;
+        { src: g, width: f, height: _, alt: T } = o;
     return (
-        _ > g ? (n = et) : (t = ee),
+        _ > f ? (n = et) : (t = ee),
         (0, i.jsx)(p.FocusBlock, {
             enabled: !0,
             children: (0, i.jsxs)('div', {
                 className: $.bodyMedia,
                 onClick: (e) => e.stopPropagation(),
                 children: [
-                    f.startsWith('data:')
+                    g.startsWith('data:')
                         ? (0, i.jsx)(p.Image, {
-                              src: f,
+                              src: g,
                               maxHeight: t,
                               maxWidth: n,
-                              width: g,
+                              width: f,
                               height: _,
                               alt: null != T && d ? m : T,
                               className: $.thumbnailContainer,
@@ -515,10 +517,10 @@ function eu(e) {
                               })
                           })
                         : (0, N.Yi)({
-                              src: f,
+                              src: g,
                               maxHeight: t,
                               maxWidth: n,
-                              width: g,
+                              width: f,
                               height: _,
                               alt: null != T && d ? m : T,
                               autoPlay: c,

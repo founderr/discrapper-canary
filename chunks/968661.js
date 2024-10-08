@@ -1,9 +1,12 @@
 n.r(
     (e.exports = {
         reactions: 'reactions_ec6b19',
+        largeReactions: 'largeReactions_ec6b19',
         icon: 'icon_ec6b19',
+        largeIcon: 'largeIcon_ec6b19',
         reactionBtn: 'reactionBtn_ec6b19',
         active: 'active_ec6b19',
+        largeReactionBtn: 'largeReactionBtn_ec6b19',
         visible: 'visible_ec6b19',
         forceShow: 'forceShow_ec6b19',
         forceShowLook: 'forceShowLook_ec6b19',

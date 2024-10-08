@@ -63,6 +63,7 @@ let E = 'emoji-picker-tab-panel',
     m = 'gif-picker-tab',
     T = {
         reaction: 32,
+        reactionLarge: 40,
         default: 44,
         jumbo: 96
     },

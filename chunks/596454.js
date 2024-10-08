@@ -76,7 +76,10 @@ class S extends (r = a.PureComponent) {
         let T = {
             ...I,
             key: this.key,
-            className: o()('emoji', l, { jumboable: 'jumbo' === u }),
+            className: o()('emoji', l, {
+                jumboable: 'jumbo' === u,
+                reactionLarge: 'reactionLarge' === u
+            }),
             onError: this.onError,
             ...n,
             'data-type': 'emoji',
