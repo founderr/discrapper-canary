@@ -1,9 +1,12 @@
 n.d(t, {
-    Z: function () {
+    ZP: function () {
+        return E;
+    },
+    nK: function () {
         return d;
     },
-    n: function () {
-        return c;
+    uj: function () {
+        return _;
     }
 });
 var r = n(735250);
@@ -12,9 +15,10 @@ var i = n(481060),
     a = n(26033),
     s = n(810568),
     o = n(168524),
-    l = n(981631),
-    u = n(689938);
-function c(e) {
+    l = n(858042),
+    u = n(981631),
+    c = n(689938);
+function d(e) {
     let { user: t, activity: n, entry: r } = e;
     return null != r
         ? {
@@ -23,7 +27,7 @@ function c(e) {
           }
         : null != n
           ? {
-                applicationId: n.type === l.IIU.PLAYING && null != n.application_id ? n.application_id : void 0,
+                applicationId: n.type === u.IIU.PLAYING && null != n.application_id ? n.application_id : void 0,
                 sourceUserId: t.id
             }
           : {
@@ -31,9 +35,21 @@ function c(e) {
                 sourceUserId: void 0
             };
 }
-function d(e) {
-    let { user: t, activity: n, entry: a, onAction: l, isMenuOpen: d } = e,
-        { applicationId: _, sourceUserId: E } = c({
+function _(e) {
+    let { user: t, activity: n, entry: r } = e,
+        { applicationId: i } = d({
+            activity: n,
+            entry: r,
+            user: t
+        });
+    return (0, l.M)({
+        applicationId: i,
+        showOutdatedInfoOption: !1
+    });
+}
+function E(e) {
+    let { user: t, activity: n, entry: a, onAction: l, isMenuOpen: u } = e,
+        { applicationId: _, sourceUserId: E } = d({
             activity: n,
             entry: a,
             user: t
@@ -41,7 +57,7 @@ function d(e) {
         f = (0, o.Z)({
             location: 'UserProfileActivityContextMenu',
             source: s.m1.UserProfileCardContextMenu,
-            trackEntryPointImpression: d,
+            trackEntryPointImpression: u,
             applicationId: _,
             sourceUserId: E
         });
@@ -49,7 +65,7 @@ function d(e) {
         ? null
         : (0, r.jsx)(i.MenuItem, {
               id: 'game-profile',
-              label: u.Z.Messages.VIEW_GAME_PROFILE,
+              label: c.Z.Messages.VIEW_GAME_PROFILE,
               action: () => {
                   null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), f();
               }
