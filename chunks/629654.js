@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return E;
+        return S;
     }
 });
 var n = t(735250),
@@ -11,50 +11,53 @@ var n = t(735250),
     l = t(597688),
     c = t(667105),
     d = t(350327),
-    _ = t(211712),
-    u = t(690412);
-function E(e) {
+    _ = t(626135),
+    u = t(211712),
+    E = t(981631),
+    T = t(690412);
+function S(e) {
     let { selectedIndex: s, setSelectedIndex: t } = e,
-        E = a.useMemo(() => _.J2[s], [s]),
-        T = a.useCallback(() => {
-            t((s + 1) % _.J2.length);
+        S = a.useMemo(() => u.J2[s], [s]),
+        I = a.useCallback(() => {
+            let e = (s + 1) % u.J2.length;
+            _.default.track(E.rMx.TRY_IT_OUT_PRESET_SHUFFLED, { preset: u.J2[e].presetName }), t(e);
         }, [s, t]),
-        S = (0, i.e7)([l.Z], () => l.Z.lastSuccessfulFetch);
+        N = (0, i.e7)([l.Z], () => l.Z.lastSuccessfulFetch);
     a.useEffect(() => {
         var e;
         (0, d.x3)({
-            bannerImage: E.bannerImageUrl,
-            themeColors: E.themeColors,
-            avatarDecoration: null != E.avatarDecorationSkuId ? (null === (e = l.Z.getProduct(E.avatarDecorationSkuId)) || void 0 === e ? void 0 : e.items[0]) : void 0
+            bannerImage: S.bannerImageUrl,
+            themeColors: S.themeColors,
+            avatarDecoration: null != S.avatarDecorationSkuId ? (null === (e = l.Z.getProduct(S.avatarDecorationSkuId)) || void 0 === e ? void 0 : e.items[0]) : void 0
         });
-    }, [E, S]);
-    let I = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        N = (0, c.g2)({ useReducedMotion: I });
+    }, [S, N]);
+    let A = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        C = (0, c.g2)({ useReducedMotion: A });
     return (0, n.jsxs)('div', {
-        className: u.container,
+        className: T.container,
         children: [
             (0, n.jsx)(r.Clickable, {
                 onClick: () => {
-                    T(), N.startAnimation(!1);
+                    I(), C.startAnimation(!1);
                 },
-                className: u.button,
+                className: T.button,
                 'aria-label': 'Shuffle',
-                children: N.render()
+                children: C.render()
             }),
             (0, n.jsxs)('div', {
-                className: u.select,
+                className: T.select,
                 children: [
                     (0, n.jsx)('img', {
                         alt: '',
                         'aria-hidden': !0,
-                        src: E.presetBackgroundUrl,
-                        className: u.presetImage
+                        src: S.presetBackgroundUrl,
+                        className: T.presetImage
                     }),
                     (0, n.jsx)(r.Text, {
-                        className: u.presetLabel,
+                        className: T.presetLabel,
                         variant: 'text-sm/bold',
                         color: 'always-white',
-                        children: (0, _._h)(E.presetName)
+                        children: (0, u._h)(S.presetName)
                     })
                 ]
             })
