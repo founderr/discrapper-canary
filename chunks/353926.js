@@ -130,7 +130,7 @@ function H(e) {
                 current_source: v.source
             };
             E.default.track(p.rMx.EXPERIMENT_USER_TRIGGERED_IGNORED, t, {
-                flush: !0,
+                flush: !1,
                 fingerprint: s
             });
         } else
@@ -163,7 +163,7 @@ function H(e) {
                 current_source: v.source
             };
             E.default.track(p.rMx.EXPERIMENT_GUILD_TRIGGERED_IGNORED, e, {
-                flush: !0,
+                flush: !1,
                 fingerprint: s
             });
         } else
@@ -549,7 +549,10 @@ class ei extends _.Z {
                         bucket: _,
                         override: !0,
                         hashResult: d,
-                        triggerDebuggingEnabled: c
+                        triggerDebuggingEnabled: c,
+                        assignmentSource: s.assignmentSource,
+                        sessionId: s.sessionId,
+                        loadedFromCache: s.loadedFromCache
                     };
             if (null == (_ = K(t, s.populations, d))) return null;
             if (null != s.holdoutName && null != s.holdoutBucket && s.holdoutName !== n) {
@@ -572,7 +575,10 @@ class ei extends _.Z {
                 bucket: _,
                 hashResult: d,
                 aaMode: l,
-                triggerDebuggingEnabled: c
+                triggerDebuggingEnabled: c,
+                assignmentSource: s.assignmentSource,
+                sessionId: s.sessionId,
+                loadedFromCache: s.loadedFromCache
             };
         })(n, e);
         return (y[i] = a), a;
