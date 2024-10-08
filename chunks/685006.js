@@ -1,53 +1,73 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var i = n(735250),
     s = n(470079),
     a = n(481060),
-    l = n(949075),
-    r = n(270697),
+    l = n(450936),
+    r = n(368478),
     o = n(499254),
     c = n(827498),
     u = n(541716),
-    d = n(589858);
-function h(e) {
-    let { channel: t } = e,
-        { isInitialLoading: n, application: a, primaryEntryPointCommand: r } = (0, l.Z)({ channel: t }),
-        d = null == a ? void 0 : a.id,
-        h = s.useCallback(() => {
-            o.__(c._b.TEXT, u.I.NORMAL, { applicationId: d });
-        }, [d]);
-    return n || null == a
+    d = n(61356),
+    h = n(589858);
+function p(e) {
+    let { channel: t, entryPointCommandButtonRef: n, type: a } = e,
+        { isInitialLoading: r, application: d, primaryEntryPointCommand: h } = (0, l.Z)({ channel: t }),
+        p = null == d ? void 0 : d.id,
+        _ = s.useCallback(() => {
+            o.__(c._b.TEXT, u.I.NORMAL, { applicationId: p });
+        }, [p]);
+    return r || null == d
         ? null
-        : (0, i.jsx)(p, {
+        : (0, i.jsx)(m, {
               channel: t,
-              application: a,
-              primaryEntryPointCommand: r,
-              onOpenButtonPress: h
+              application: d,
+              primaryEntryPointCommand: h,
+              onOpenButtonPress: _,
+              entryPointCommandButtonRef: n,
+              type: a
           });
 }
-function p(e) {
-    let { channel: t, application: n, primaryEntryPointCommand: s, onOpenButtonPress: l } = e,
+function m(e) {
+    let { channel: t, application: n, primaryEntryPointCommand: s, onOpenButtonPress: l, entryPointCommandButtonRef: o, type: c } = e,
         {
-            onPress: o,
-            isExecutingLaunchInteraction: c,
-            buttonText: u,
-            hasActiveMatchingEmbeddedActivity: h
+            isExecutingLaunchInteraction: u,
+            buttonText: p,
+            hasActiveMatchingEmbeddedActivity: m,
+            isEmbeddedApp: _,
+            currentEmbeddedActivity: f,
+            channelRecipientUserId: E,
+            setIsExecutingLaunchInteraction: g,
+            analyticsLocations: C
         } = (0, r.Z)({
             channel: t,
             primaryEntryPointCommand: s,
-            application: n,
-            onOpenButtonPress: l
+            application: n
         }),
-        p = h ? a.Button.Colors.RED : a.Button.Colors.BRAND;
+        I = (0, r.J)({
+            channel: t,
+            application: n,
+            isEmbeddedApp: _,
+            hasActiveMatchingEmbeddedActivity: m,
+            currentEmbeddedActivity: f,
+            onOpenButtonPress: l,
+            channelRecipientUserId: E,
+            setIsExecutingLaunchInteraction: g,
+            analyticsLocations: C
+        }),
+        T = m ? a.Button.Colors.RED : a.Button.Colors.BRAND,
+        x = (0, d.Z)({ type: c });
     return (0, i.jsx)(a.Button, {
-        className: d.entryPointAppCommandButton,
+        className: h.entryPointAppCommandButton,
         size: a.Button.Sizes.LARGE,
-        color: p,
-        submitting: c,
-        onClick: o,
-        children: u
+        color: T,
+        submitting: u,
+        onClick: I,
+        buttonRef: o,
+        disabled: x,
+        children: p
     });
 }
