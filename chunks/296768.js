@@ -15,13 +15,13 @@ var a = t(735250),
     u = t(224706),
     _ = t(812206),
     E = t(669764),
-    m = t(810568),
-    I = t(839392),
+    I = t(810568),
+    m = t(839392),
     A = t(774073),
     p = t(644941),
     g = t(689938),
-    f = t(51527),
-    T = t(796805);
+    T = t(51527),
+    f = t(796805);
 let O = (e) => {
     let { game: n, onClose: t, trackClick: r } = e,
         s = (0, c.e7)([_.Z], () => _.Z.getApplication(n.applicationId));
@@ -31,14 +31,14 @@ let O = (e) => {
             var i;
             return (0, a.jsx)(d.Clickable, {
                 ...e,
-                className: T.similarGameImageClickable,
+                className: f.similarGameImageClickable,
                 onClick: async () => {
-                    r(m.as.ClickSimilarGame, n.applicationId),
+                    r(I.as.ClickSimilarGame, n.applicationId),
                         (0, d.openModalLazy)(() =>
                             Promise.resolve((e) =>
                                 (0, a.jsx)(p.default, {
                                     applicationId: n.applicationId,
-                                    source: m.m1.SimilarGames,
+                                    source: I.m1.SimilarGames,
                                     ...e
                                 })
                             )
@@ -48,7 +48,7 @@ let O = (e) => {
                 },
                 children: (0, a.jsx)('img', {
                     src: n.coverImageUrl,
-                    className: T.similarGameImage,
+                    className: f.similarGameImage,
                     alt: g.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: null !== (i = null == s ? void 0 : s.name) && void 0 !== i ? i : null == n ? void 0 : n.name })
                 })
             });
@@ -57,8 +57,8 @@ let O = (e) => {
 };
 function N(e) {
     let { applicationId: n, onClose: t, trackAction: s, similarGames: o, similarGamesError: _ } = e,
-        m = (0, c.e7)([I.Z, E.Z], () => {
-            let e = void 0 === I.Z.getSimilarGames(n),
+        I = (0, c.e7)([m.Z, E.Z], () => {
+            let e = void 0 === m.Z.getSimilarGames(n),
                 t = o.some((e) => E.Z.isFetching(e));
             return e || t;
         }),
@@ -73,29 +73,29 @@ function N(e) {
     return (r.useEffect(() => {
         o.length > 0 && u.Z.getDetectableGamesSupplemental([n, ...o]);
     }, [n, o]),
-    m && null == _)
+    I && null == _)
         ? (0, a.jsxs)('div', {
               children: [
-                  (0, a.jsx)('div', { className: i()(T.loadingHeading, f.sectionHeader) }),
+                  (0, a.jsx)('div', { className: i()(f.loadingHeading, T.sectionHeader) }),
                   (0, a.jsx)('div', {
-                      className: i()(f.row, f.gapLg),
+                      className: i()(T.row, T.gapLg),
                       children: l()
                           .range(0, 5)
-                          .map((e) => (0, a.jsx)('div', { className: T.loadingArtwork }, e))
+                          .map((e) => (0, a.jsx)('div', { className: f.loadingArtwork }, e))
                   })
               ]
           })
-        : m || 0 !== p.length
+        : I || 0 !== p.length
           ? (0, a.jsxs)('div', {
                 children: [
                     (0, a.jsx)(d.Heading, {
-                        className: f.sectionHeader,
+                        className: T.sectionHeader,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: g.Z.Messages.GAME_PROFILE_ALSO_PLAYING
                     }),
                     (0, a.jsx)('div', {
-                        className: i()(f.row, f.gapLg),
+                        className: i()(T.row, T.gapLg),
                         style: {},
                         children: p.map((e) =>
                             (0, a.jsx)(

@@ -10,13 +10,13 @@ var a = t(735250),
     u = t(433517),
     _ = t(481060),
     E = t(560361),
-    m = t(835473),
-    I = t(168551),
+    I = t(835473),
+    m = t(168551),
     A = t(485267),
     p = t(26033),
     g = t(561308),
-    f = t(669764),
-    T = t(706454),
+    T = t(669764),
+    f = t(706454),
     O = t(768581),
     N = t(814225),
     R = t(709054),
@@ -37,11 +37,11 @@ var a = t(735250),
     w = t(978313),
     U = t(206583),
     k = t(689938),
-    F = t(51527);
+    K = t(51527);
 let H = 'GameProfileModal',
-    K = () =>
+    F = () =>
         (0, a.jsxs)('div', {
-            className: F.gameBadge,
+            className: K.gameBadge,
             children: [
                 (0, a.jsx)(_.FireIcon, { size: 'xxs' }),
                 (0, a.jsx)(_.Text, {
@@ -53,13 +53,13 @@ let H = 'GameProfileModal',
         });
 function B(e) {
     var n, s;
-    let { detectedGame: o, application: d, entries: E, viewId: m, trackAction: I } = e,
+    let { detectedGame: o, application: d, entries: E, viewId: I, trackAction: m } = e,
         [A, p] = r.useState(() => {
             var e;
             return null === (e = u.K.get(H)) || void 0 === e ? void 0 : e[d.id];
         }),
-        f = (0, L.p)('GameProfileModal'),
-        T = r.useMemo(() => (null == o ? void 0 : o.genres.map(N.P3).join(', ')), [o]),
+        T = (0, L.p)('GameProfileModal'),
+        f = r.useMemo(() => (null == o ? void 0 : o.genres.map(N.P3).join(', ')), [o]),
         P = r.useMemo(() => {
             if (null == o) return '';
             let { artwork: e, screenshots: n } = o;
@@ -85,7 +85,7 @@ function B(e) {
                 let n = null !== (e = u.K.get(H)) && void 0 !== e ? e : {};
                 (n[d.id] = !n[d.id]),
                     u.K.set(H, n),
-                    I(n[d.id] ? h.as.FollowGame : h.as.UnfollowGame),
+                    m(n[d.id] ? h.as.FollowGame : h.as.UnfollowGame),
                     n[d.id] &&
                         (0, v.L)() &&
                         (0, _.openModalLazy)(async () => {
@@ -95,44 +95,44 @@ function B(e) {
                                     ...n,
                                     applicationId: d.id,
                                     background: P,
-                                    viewId: m
+                                    viewId: I
                                 });
                         }),
                     p(n[d.id]);
             },
-            [d.id, P, I, m]
+            [d.id, P, m, I]
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)('div', {
-                className: i()(F.gameArtHero),
+                className: i()(K.gameArtHero),
                 style: { backgroundImage: 'url("'.concat(P, '")') }
             }),
             (0, a.jsxs)('div', {
-                className: i()(F.content, F.column, F.gapLg, F.headerInfo),
+                className: i()(K.content, K.column, K.gapLg, K.headerInfo),
                 children: [
                     (0, a.jsxs)('div', {
-                        className: F.coverArtRow,
+                        className: K.coverArtRow,
                         children: [
                             (0, a.jsx)('div', {
-                                className: F.logoWrapper,
+                                className: K.logoWrapper,
                                 children:
                                     null != S &&
                                     (0, a.jsx)('img', {
-                                        className: F.logo,
+                                        className: K.logo,
                                         src: S,
                                         alt: k.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: b })
                                     })
                             }),
                             (0, a.jsx)(x.Z, {
                                 applicationId: d.id,
-                                viewId: m,
-                                className: F.overflowMenu
+                                viewId: I,
+                                className: K.overflowMenu
                             })
                         ]
                     }),
                     (0, a.jsxs)('div', {
-                        className: i()(F.row, F.gapSm, F.gameDetails),
+                        className: i()(K.row, K.gapSm, K.gameDetails),
                         children: [
                             (0, a.jsxs)('div', {
                                 children: [
@@ -141,7 +141,7 @@ function B(e) {
                                         children: b
                                     }),
                                     (0, a.jsxs)('div', {
-                                        className: i()(F.row, F.gapSm),
+                                        className: i()(K.row, K.gapSm),
                                         children: [
                                             null != C &&
                                                 (0, a.jsx)('img', {
@@ -152,12 +152,12 @@ function B(e) {
                                             (0, a.jsx)(_.Text, {
                                                 variant: 'text-sm/semibold',
                                                 color: 'text-muted',
-                                                children: T
+                                                children: f
                                             }),
                                             G &&
                                                 (0, a.jsx)(_.Text, {
                                                     variant: 'eyebrow',
-                                                    className: F.newBadge,
+                                                    className: K.newBadge,
                                                     children: k.Z.Messages.NEW
                                                 }),
                                             Z &&
@@ -167,7 +167,7 @@ function B(e) {
                                                             variant: 'text-sm/medium',
                                                             children: ' \xB7 '
                                                         }),
-                                                        (0, a.jsx)(K, {})
+                                                        (0, a.jsx)(F, {})
                                                     ]
                                                 })
                                         ]
@@ -176,13 +176,13 @@ function B(e) {
                             }),
                             (0, a.jsx)('div', {
                                 children:
-                                    f &&
+                                    T &&
                                     (0, a.jsx)(_.Tooltip, {
                                         text: A ? k.Z.Messages.GAME_PROFILE_UNFOLLOW_TOOLTIP : k.Z.Messages.GAME_PROFILE_FOLLOW_TOOLTIP,
                                         children: (e) =>
                                             (0, a.jsxs)(_.Button, {
                                                 ...e,
-                                                innerClassName: F.followButton,
+                                                innerClassName: K.followButton,
                                                 color: A ? _.Button.Colors.PRIMARY : _.Button.Colors.BRAND,
                                                 onClick: j,
                                                 children: [A ? (0, a.jsx)(_.BellSlashIcon, { color: 'white' }) : (0, a.jsx)(_.BellIcon, { color: 'white' }), A ? k.Z.Messages.GAME_PROFILE_UNFOLLOW_GAME : k.Z.Messages.FOLLOW]
@@ -200,7 +200,7 @@ function Q(e) {
     var n;
     let { detectedGame: t, application: r, entries: s, officialGuildInvite: i, similarGames: o, similarGamesError: l, onClose: c, viewId: d, trackAction: u } = e;
     return (0, a.jsxs)('div', {
-        className: F.sections,
+        className: K.sections,
         children: [
             (0, a.jsx)(b.Z, {
                 entries: s,
@@ -222,17 +222,17 @@ function Q(e) {
         ]
     });
 }
-function W(e) {
+function Y(e) {
     let { detectedGame: n, setOfficialGuildInvite: t, trackAction: r } = e;
     return (0, a.jsxs)('div', {
-        className: i()(F.sidebar, F.column, F.gapLg),
+        className: i()(K.sidebar, K.column, K.gapLg),
         children: [
             (0, a.jsx)(_.Heading, {
                 variant: 'heading-md/bold',
                 children: k.Z.Messages.ABOUT
             }),
             (0, a.jsxs)('div', {
-                className: F.sections,
+                className: K.sections,
                 children: [
                     (0, a.jsx)(w.Z, {
                         detectedGame: n,
@@ -253,11 +253,11 @@ function W(e) {
         ]
     });
 }
-let Y = (e) => e.filter(S.z6).slice(0, 5);
+let W = (e) => e.filter(S.z6).slice(0, 5);
 n.default = (e) => {
     let { applicationId: n, source: t, sourceUserId: s, transitionState: o, onClose: l } = e,
-        { clientThemesClassName: c } = (0, I.ZP)(),
-        u = (0, d.e7)([T.default], () => T.default.locale),
+        { clientThemesClassName: c } = (0, m.ZP)(),
+        u = (0, d.e7)([f.default], () => f.default.locale),
         O = r.useMemo(() => (0, h.fP)(), []),
         N = (0, d.Wu)([C.Z], () => {
             var e;
@@ -270,8 +270,8 @@ n.default = (e) => {
             return null !== (e = null == S ? void 0 : S.filter((e) => (0, p.dX)(e) && e.extra.application_id === n)) && void 0 !== e ? e : [];
         }, [S, n]),
         [x, G] = r.useState(null),
-        Z = (0, m.q)(n),
-        b = (0, d.e7)([f.Z], () => f.Z.getGame(n)),
+        Z = (0, I.q)(n),
+        b = (0, d.e7)([T.Z], () => T.Z.getGame(n)),
         j = (e, t) => {
             var a;
             (0, h.UE)({
@@ -325,7 +325,7 @@ n.default = (e) => {
             gameName: null !== (a = null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : null == Z ? void 0 : Z.name) && void 0 !== a ? a : '',
             playedFriendIds: v.map((e) => e.author_id),
             playedFriendsData: s,
-            similarGames: Y(N),
+            similarGames: W(N),
             officialGuildId: null == x ? void 0 : null === (e = x.guild) || void 0 === e ? void 0 : e.id
         });
     }),
@@ -334,9 +334,9 @@ n.default = (e) => {
         : (0, a.jsx)(_.ModalRoot, {
               transitionState: o,
               size: _.ModalSize.DYNAMIC,
-              className: i()(c, F.gameProfileModal),
+              className: i()(c, K.gameProfileModal),
               children: (0, a.jsxs)(_.ScrollerNone, {
-                  className: F.scrollable,
+                  className: K.scrollable,
                   children: [
                       (0, a.jsx)(B, {
                           detectedGame: b,
@@ -347,7 +347,7 @@ n.default = (e) => {
                       }),
                       (0, a.jsx)(_.HeadingLevel, {
                           children: (0, a.jsxs)('div', {
-                              className: i()(F.content, F.mainContent),
+                              className: i()(K.content, K.mainContent),
                               children: [
                                   (0, a.jsx)(Q, {
                                       detectedGame: b,
@@ -360,7 +360,7 @@ n.default = (e) => {
                                       viewId: O,
                                       trackAction: j
                                   }),
-                                  (0, a.jsx)(W, {
+                                  (0, a.jsx)(Y, {
                                       detectedGame: b,
                                       setOfficialGuildInvite: G,
                                       trackAction: j

@@ -19,7 +19,7 @@ function d(e) {
             return [...n.screenshots.map((e) => ({ src: e })), ...e];
         }, [n.artwork, n.screenshots]),
         E = _.length > 2;
-    function m(e) {
+    function I(e) {
         if (null == u.current) return;
         let n = u.current.getScrollerState().scrollLeft;
         u.current.scrollTo({
@@ -85,7 +85,7 @@ function d(e) {
                                       (0, a.jsx)('div', { className: c.gradientLeft }),
                                       (0, a.jsx)(s.Clickable, {
                                           className: c.arrowClickable,
-                                          onClick: () => m(-1),
+                                          onClick: () => I(-1),
                                           children: (0, a.jsx)(s.ArrowSmallLeftIcon, {
                                               className: c.arrow,
                                               color: 'currentColor'
@@ -94,7 +94,7 @@ function d(e) {
                                       (0, a.jsx)('div', { className: c.gradientRight }),
                                       (0, a.jsx)(s.Clickable, {
                                           className: c.arrowClickable,
-                                          onClick: () => m(1),
+                                          onClick: () => I(1),
                                           children: (0, a.jsx)(s.ArrowSmallRightIcon, {
                                               className: c.arrow,
                                               color: 'currentColor'

@@ -10,13 +10,13 @@ var a = t(481060),
     u = t(141795),
     _ = t(476326),
     E = t(680287),
-    m = t(163268),
-    I = t(539573),
+    I = t(163268),
+    m = t(539573),
     A = t(786761),
     p = t(3148),
     g = t(48854),
-    f = t(785359),
-    T = t(79390),
+    T = t(785359),
+    f = t(79390),
     O = t(623292),
     N = t(807092),
     R = t(467798),
@@ -44,7 +44,7 @@ async function v(e) {
     let [w, U] = (0, R.Z)(y.content);
     w && ((y.content = U), (y.flags = (0, C.pj)(null !== (n = y.flags) && void 0 !== n ? n : 0, M.iLy.SUPPRESS_NOTIFICATIONS)));
     let k = null !== (t = Z.nonce) && void 0 !== t ? t : (0, g.r)(),
-        F = (0, p.ZP)({
+        K = (0, p.ZP)({
             channelId: _,
             content: y.content,
             tts: null !== (a = null == G ? void 0 : G.tts) && void 0 !== a && a,
@@ -52,13 +52,13 @@ async function v(e) {
             messageReference: y.message_reference,
             flags: y.flags,
             nonce: k,
-            poll: (0, T.x9)(Z.poll)
+            poll: (0, f.x9)(Z.poll)
         });
     return (
         ((y.nonce = k),
         j.on('start', (e) => {
             (u = (0, A.e5)({
-                ...F,
+                ...K,
                 id: e.id
             })),
                 r.Z.dispatch({
@@ -84,14 +84,14 @@ async function v(e) {
                     file: e,
                     messageRecord: u
                 }),
-                (0, f.x)({
+                (0, T.x)({
                     fileItems: e.items,
                     failureCode: n,
                     errorMessage: null == a ? void 0 : a.msg
                 }),
                 n === M.evJ.EXPLICIT_CONTENT)
             ) {
-                i.Z.sendExplicitMediaClydeError(_, null == t ? void 0 : t.attachments, m.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                i.Z.sendExplicitMediaClydeError(_, null == t ? void 0 : t.attachments, I.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                 return;
             }
             if (n === M.evJ.AUTOMOD_MESSAGE_BLOCKED) {
@@ -111,7 +111,7 @@ async function v(e) {
                               };
                 (0, l.openUploadError)({
                     title: S.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-                    help: (0, I.uF)(a, e)
+                    help: (0, m.uF)(a, e)
                 });
                 return;
             }
@@ -179,18 +179,18 @@ n.Z = {
     },
     upload: function e(n) {
         let { channelId: t, file: o, draftType: c, message: d, hasSpoiler: u, filename: _ } = n,
-            I = {
+            m = {
                 content: '',
                 tts: !1,
                 hasSpoiler: u,
                 filename: _
             };
         if (null != d) {
-            (I.content = d.content), (I.tts = d.tts), (I.channel_id = d.channel_id);
+            (m.content = d.content), (m.tts = d.tts), (m.channel_id = d.channel_id);
             let e = N.Z.getPendingReply(t);
             if (null != e) {
                 let n = i.Z.getSendMessageOptionsForReply(e);
-                (I.type = M.uaV.REPLY), (I.message_reference = n.messageReference), (I.allowed_mentions = n.allowedMentions), (0, O.A6)(t);
+                (m.type = M.uaV.REPLY), (m.message_reference = n.messageReference), (m.allowed_mentions = n.allowedMentions), (0, O.A6)(t);
             }
         }
         let A = new E.Z(M.ANM.MESSAGES(t));
@@ -216,13 +216,13 @@ n.Z = {
                         channelId: t,
                         file: n
                     }),
-                    (0, f.x)({
+                    (0, T.x)({
                         fileItems: n.items,
                         failureCode: u
                     }),
                     u === M.evJ.EXPLICIT_CONTENT)
                 ) {
-                    i.Z.sendExplicitMediaClydeError(t, null == _ ? void 0 : _.attachments, m.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                    i.Z.sendExplicitMediaClydeError(t, null == _ ? void 0 : _.attachments, I.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                     return;
                 }
                 (0, l.openUploadError)({
@@ -239,7 +239,7 @@ n.Z = {
                         }
                     })
                 }),
-                    '' !== I.content && '' === h.Z.getDraft(t, c) && s.Z.saveDraft(t, I.content, c);
+                    '' !== m.content && '' === h.Z.getDraft(t, c) && s.Z.saveDraft(t, m.content, c);
             }),
             A.on('complete', (e) => {
                 r.Z.dispatch({
@@ -248,7 +248,7 @@ n.Z = {
                     file: e
                 });
             }),
-            A.upload(o, I);
+            A.upload(o, m);
     },
     uploadFiles: v,
     cancel(e) {

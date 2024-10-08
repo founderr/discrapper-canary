@@ -53,7 +53,7 @@ function B(e) {
             location: 'UserProfileActivityCard',
             source: h.m1.UserProfile,
             trackEntryPointImpression: !0,
-            ...(0, P.n)({
+            ...(0, P.nK)({
                 user: t,
                 activity: i,
                 entry: K

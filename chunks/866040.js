@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return I;
+        return m;
     }
 }),
     t(411104);
@@ -15,7 +15,7 @@ var a = t(735250),
     u = t(210887),
     _ = t(5192),
     E = t(684201);
-function m(e) {
+function I(e) {
     let { participants: n, channel: r } = e;
     return (0, a.jsx)(i.Scroller, {
         className: E.popout,
@@ -42,11 +42,11 @@ function m(e) {
         )
     });
 }
-function I(e) {
+function m(e) {
     let { children: n, participants: t, channel: o, onPopoutClosed: l } = e,
         _ = (0, s.e7)([u.Z], () => u.Z.theme),
         E = 1 === t.length ? t[0] : null,
-        I = (0, r.useCallback)(
+        m = (0, r.useCallback)(
             (e) => {
                 if (null != E)
                     return (0, a.jsx)(d.Z, {
@@ -59,7 +59,7 @@ function I(e) {
                         channelId: null == o ? void 0 : o.id
                     });
                 if (null != t)
-                    return (0, a.jsx)(m, {
+                    return (0, a.jsx)(I, {
                         participants: t,
                         channel: o
                     });
@@ -70,7 +70,7 @@ function I(e) {
     return (0, a.jsx)(i.ThemeContextProvider, {
         theme: _,
         children: (0, a.jsx)(i.Popout, {
-            renderPopout: I,
+            renderPopout: m,
             preload: () =>
                 null != E
                     ? (0, c.Z)(E, {

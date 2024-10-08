@@ -9,20 +9,20 @@ var a = t(735250),
     u = t(297781),
     _ = t(592125),
     E = t(944486),
-    m = t(594174),
-    I = t(5192),
+    I = t(594174),
+    m = t(5192),
     A = t(810568),
     p = t(689938),
     g = t(501345),
-    f = t(51527);
+    T = t(51527);
 n.Z = (e) => {
-    let { entry: n, viewId: t, officialGuildId: s, onClose: T } = e,
+    let { entry: n, viewId: t, officialGuildId: s, onClose: f } = e,
         O = (0, o.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        N = (0, o.e7)([m.default], () => m.default.getUser(n.author_id)),
+        N = (0, o.e7)([I.default], () => I.default.getUser(n.author_id)),
         { nick: R, avatar: h } = r.useMemo(() => {
             let e = null == N ? void 0 : N.getAvatarURL(null == O ? void 0 : O.guild_id, 48, !1);
             return {
-                nick: I.ZP.getName(null == O ? void 0 : O.guild_id, null == O ? void 0 : O.id, N),
+                nick: m.ZP.getName(null == O ? void 0 : O.guild_id, null == O ? void 0 : O.id, N),
                 avatar: e
             };
         }, [N, O]);
@@ -45,7 +45,7 @@ n.Z = (e) => {
                               viewId: t,
                               officialGuildId: s
                           }),
-                              T(),
+                              f(),
                               r();
                       },
                       onUserPopoutClosed: () => r(),
@@ -84,7 +84,7 @@ n.Z = (e) => {
                                   (0, a.jsx)('div', {
                                       className: i()(g.playerInfo),
                                       children: (0, a.jsxs)('div', {
-                                          className: i()(f.column, f.gapXs),
+                                          className: i()(T.column, T.gapXs),
                                           children: [
                                               (0, a.jsx)(l.Text, {
                                                   variant: 'text-md/medium',

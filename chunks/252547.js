@@ -16,9 +16,9 @@ var a = t(735250),
     _ = t(268236);
 function E(e) {
     let { entries: n, viewId: t, officialGuildId: s, onClose: E } = e,
-        m = n.length > 7,
-        [I, A] = r.useState(!1),
-        p = r.useMemo(() => n.slice(0, m && !I ? 6 : void 0), [n, m, I]);
+        I = n.length > 7,
+        [m, A] = r.useState(!1),
+        p = r.useMemo(() => n.slice(0, I && !m ? 6 : void 0), [n, I, m]);
     return (0, a.jsxs)('div', {
         children: [
             (0, a.jsx)(o.X6, {
@@ -37,7 +37,7 @@ function E(e) {
                 : (0, a.jsxs)(a.Fragment, {
                       children: [
                           (0, a.jsx)('div', {
-                              className: i()(_.friends, { [_.fadedEntries]: m && !I }),
+                              className: i()(_.friends, { [_.fadedEntries]: I && !m }),
                               children: (0, a.jsx)('div', {
                                   className: u.column,
                                   children: p.map((e) =>
@@ -54,8 +54,8 @@ function E(e) {
                                   )
                               })
                           }),
-                          m &&
-                              !I &&
+                          I &&
+                              !m &&
                               (0, a.jsxs)(l.Clickable, {
                                   className: _.expandEntriesButton,
                                   onClick: () => A(!0),
