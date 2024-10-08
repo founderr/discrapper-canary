@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return R;
+        return N;
     }
 }),
     t(47120);
@@ -23,7 +23,7 @@ var a = t(735250),
     f = t(689938),
     T = t(51527),
     O = t(796805);
-let N = (e) => {
+let R = (e) => {
     let { game: n, onClose: t, trackClick: r } = e,
         s = (0, c.e7)([_.Z], () => _.Z.getApplication(n.applicationId));
     return (0, a.jsx)(d.Tooltip, {
@@ -55,7 +55,7 @@ let N = (e) => {
             })
     });
 };
-function R(e) {
+function N(e) {
     let { applicationId: n, onClose: t, trackAction: s, similarGames: o, similarGamesError: _ } = e,
         m = (0, c.e7)([I.Z, E.Z], () => {
             let e = void 0 === I.Z.getSimilarGames(n),
@@ -98,7 +98,7 @@ function R(e) {
                         style: {},
                         children: p.map((e) =>
                             (0, a.jsx)(
-                                N,
+                                R,
                                 {
                                     game: e,
                                     onClose: t,

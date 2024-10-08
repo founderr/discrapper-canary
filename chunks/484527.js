@@ -27,7 +27,7 @@ function f(e) {
             var e, n;
             return (null == f ? void 0 : null === (e = f.guild) || void 0 === e ? void 0 : e.id) != null && _.Z.isMember(null == f ? void 0 : null === (n = f.guild) || void 0 === n ? void 0 : n.id);
         }),
-        N = r.useMemo(() => {
+        R = r.useMemo(() => {
             var e;
             return null === (e = n.websites) || void 0 === e
                 ? void 0
@@ -45,12 +45,12 @@ function f(e) {
                     !0 !== e.banned && (T(e.invite), null != e.invite && (null == s || s(e.invite)));
                 }
             };
-            null != N && e(N.url);
-        }, [N, s]),
+            null != R && e(R.url);
+        }, [R, s]),
         null == f || null == f.guild || (!f.guild.features.includes('VERIFIED') && !f.guild.features.includes('PARTNER')))
     )
         return null;
-    let R = E.ZP.getGuildIconURL({
+    let N = E.ZP.getGuildIconURL({
         id: f.guild.id,
         icon: f.guild.icon,
         size: 32
@@ -69,7 +69,7 @@ function f(e) {
                 children: [
                     (0, a.jsx)('img', {
                         className: g.guildIcon,
-                        src: R,
+                        src: N,
                         alt: A.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({ guildName: f.guild.name })
                     }),
                     (0, a.jsxs)('div', {

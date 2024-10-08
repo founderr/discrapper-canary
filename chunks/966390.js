@@ -18,18 +18,18 @@ var a = t(481060),
     f = t(785359),
     T = t(79390),
     O = t(623292),
-    N = t(807092),
-    R = t(467798),
+    R = t(807092),
+    N = t(467798),
     h = t(703558),
     P = t(117530),
     C = t(630388),
     L = t(226351),
     M = t(981631),
     S = t(689938);
-async function v(e) {
+async function x(e) {
     var n, t, a;
     let u,
-        { channelId: _, uploads: v, draftType: x, parsedMessage: G, options: Z = {}, raiseEndpointErrors: b = !1 } = e,
+        { channelId: _, uploads: x, draftType: v, parsedMessage: G, options: Z = {}, raiseEndpointErrors: b = !1 } = e,
         j = new E.Z(M.ANM.MESSAGES(_)),
         D = new L.o(),
         y = {
@@ -40,8 +40,8 @@ async function v(e) {
             sticker_ids: null == Z ? void 0 : Z.stickerIds,
             poll: null == Z ? void 0 : Z.poll
         };
-    null != G && (y.content = null == G ? void 0 : G.content), null != N.Z.getPendingReply(_) && ((y.type = M.uaV.REPLY), (y.message_reference = Z.messageReference), (y.allowed_mentions = Z.allowedMentions), (0, O.A6)(_));
-    let [w, U] = (0, R.Z)(y.content);
+    null != G && (y.content = null == G ? void 0 : G.content), null != R.Z.getPendingReply(_) && ((y.type = M.uaV.REPLY), (y.message_reference = Z.messageReference), (y.allowed_mentions = Z.allowedMentions), (0, O.A6)(_));
+    let [w, U] = (0, N.Z)(y.content);
     w && ((y.content = U), (y.flags = (0, C.pj)(null !== (n = y.flags) && void 0 !== n ? n : 0, M.iLy.SUPPRESS_NOTIFICATIONS)));
     let k = null !== (t = Z.nonce) && void 0 !== t ? t : (0, g.r)(),
         H = (0, p.ZP)({
@@ -133,12 +133,12 @@ async function v(e) {
                         help: null !== (E = null == t ? void 0 : t.message) && void 0 !== E ? E : S.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
                     });
                 }
-                '' !== y.content && '' === h.Z.getDraft(_, x) && s.Z.saveDraft(_, y.content, x),
-                    0 === P.Z.getUploadCount(_, x) &&
+                '' !== y.content && '' === h.Z.getDraft(_, v) && s.Z.saveDraft(_, y.content, v),
+                    0 === P.Z.getUploadCount(_, v) &&
                         o.Z.setUploads({
                             channelId: _,
-                            uploads: v,
-                            draftType: x
+                            uploads: x,
+                            draftType: v
                         });
             }
         }),
@@ -151,7 +151,7 @@ async function v(e) {
                 messageRecord: n
             });
         }),
-        await j.uploadFiles(v, y),
+        await j.uploadFiles(x, y),
         D.resolve(),
         D.promise
     );
@@ -171,7 +171,7 @@ n.Z = {
                     n
                 );
             });
-        v({
+        x({
             channelId: n,
             uploads: i,
             draftType: a
@@ -187,7 +187,7 @@ n.Z = {
             };
         if (null != d) {
             (I.content = d.content), (I.tts = d.tts), (I.channel_id = d.channel_id);
-            let e = N.Z.getPendingReply(t);
+            let e = R.Z.getPendingReply(t);
             if (null != e) {
                 let n = i.Z.getSendMessageOptionsForReply(e);
                 (I.type = M.uaV.REPLY), (I.message_reference = n.messageReference), (I.allowed_mentions = n.allowedMentions), (0, O.A6)(t);
@@ -250,7 +250,7 @@ n.Z = {
             }),
             A.upload(o, I);
     },
-    uploadFiles: v,
+    uploadFiles: x,
     cancel(e) {
         r.Z.dispatch({
             type: 'UPLOAD_CANCEL_REQUEST',

@@ -18,15 +18,15 @@ var a = t(735250),
 n.Z = (e) => {
     let { entry: n, viewId: t, officialGuildId: s, onClose: T } = e,
         O = (0, o.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        N = (0, o.e7)([m.default], () => m.default.getUser(n.author_id)),
-        { nick: R, avatar: h } = r.useMemo(() => {
-            let e = null == N ? void 0 : N.getAvatarURL(null == O ? void 0 : O.guild_id, 48, !1);
+        R = (0, o.e7)([m.default], () => m.default.getUser(n.author_id)),
+        { nick: N, avatar: h } = r.useMemo(() => {
+            let e = null == R ? void 0 : R.getAvatarURL(null == O ? void 0 : O.guild_id, 48, !1);
             return {
-                nick: I.ZP.getName(null == O ? void 0 : O.guild_id, null == O ? void 0 : O.id, N),
+                nick: I.ZP.getName(null == O ? void 0 : O.guild_id, null == O ? void 0 : O.id, R),
                 avatar: e
             };
-        }, [N, O]);
-    return null == N
+        }, [R, O]);
+    return null == R
         ? null
         : (0, a.jsx)(l.Popout, {
               position: 'right',
@@ -79,7 +79,7 @@ n.Z = (e) => {
                                   (0, a.jsx)('img', {
                                       className: g.avatar,
                                       src: h,
-                                      alt: p.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: R })
+                                      alt: p.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: N })
                                   }),
                                   (0, a.jsx)('div', {
                                       className: i()(g.playerInfo),
@@ -90,7 +90,7 @@ n.Z = (e) => {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
-                                                  children: R
+                                                  children: N
                                               }),
                                               (0, a.jsx)(u.Gk, {
                                                   location: u.Gt.GAME_PROFILE,

@@ -23,12 +23,12 @@ function p(e) {
         [s, p] = r.useState((null == n ? void 0 : n.summaryLocalized) != null),
         [g, f] = r.useState(!0),
         [T, O] = r.useState(!1),
-        N = r.useRef(null),
-        { width: R, height: h } = (0, u.Z)();
+        R = r.useRef(null),
+        { width: N, height: h } = (0, u.Z)();
     return (r.useEffect(() => {
-        let e = N.current;
+        let e = R.current;
         null != e && O(e.scrollHeight - e.clientHeight > 1);
-    }, [N, R, h]),
+    }, [R, N, h]),
     null == n.summary)
         ? null
         : (0, a.jsxs)('div', {
@@ -50,7 +50,7 @@ function p(e) {
                           ]
                       }),
                   (0, a.jsx)(l.xv, {
-                      ref: N,
+                      ref: R,
                       lineClamp: g ? 8 : void 0,
                       variant: 'text-sm/normal',
                       children: s ? n.summaryLocalized : n.summary
