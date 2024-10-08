@@ -15054,6 +15054,10 @@ span.clanTag_a31c43 {
     padding-left: var(--custom-message-reply-indent)
 }
 
+.compact_f9f2ca .repliedMessage_f9f2ca .contextCommandMessage_f9f2ca {
+    --text-indent: 0
+}
+
 .cozy_f9f2ca .repliedMessage_f9f2ca {
     margin-bottom: var(--reply-spacing)
 }

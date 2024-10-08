@@ -26,7 +26,6 @@ s.Z = (e) => {
         }, [s.effects, t, l]);
     return (0, n.jsx)(r.n, {
         profileEffectConfig: c,
-        profileEffectId: 'debug',
-        debugForTool: !0
+        profileEffectId: 'debug'
     });
 };
