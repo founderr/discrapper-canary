@@ -15,14 +15,16 @@ var r = n(470079),
     u = n(728345),
     c = n(812206);
 function d(e) {
-    let t = r.useRef([]);
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        n = r.useRef([]);
     return (
         r.useEffect(() => {
-            !(0, o.E)(e, t.current) && (u.ZP.fetchApplications(a()(e).filter(l.lm).uniq().value(), !1), (t.current = e));
-        }, [e]),
+            t && !(0, o.E)(e, n.current) && (u.ZP.fetchApplications(a()(e).filter(l.lm).uniq().value(), !1), (n.current = e));
+        }, [e, t]),
         (0, s.Wu)([c.Z], () => e.map((e) => (null != e ? c.Z.getApplication(e) : void 0)))
     );
 }
 function _(e) {
-    return d(null != e ? [e] : [])[0];
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return d(null != e ? [e] : [], t)[0];
 }

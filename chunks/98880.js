@@ -421,33 +421,34 @@ function K(e) {
     });
 }
 function $(e) {
-    let { channel: n, application: t, location: i, sectionName: a, isOneClickCTA: r, ...s } = e;
+    let { channel: n, application: t, location: i, sectionName: a, isOneClickCTA: r, fetchesApplication: s = !0, ...u } = e;
     if (!(0, R.BQ)(t)) throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
-    let u = o.useId(),
-        [m, p] = (0, c.Wu)([C.ZP], () => [C.ZP.isLaunchingActivity(), C.ZP.getLaunchState(t.id, n.id)]),
-        _ = null != p && p.isLaunching && p.componentId === u,
+    let m = o.useId(),
+        [p, _] = (0, c.Wu)([C.ZP], () => [C.ZP.isLaunchingActivity(), C.ZP.getLaunchState(t.id, n.id)]),
+        h = null != _ && _.isLaunching && _.componentId === m,
         {
-            onActivityItemSelected: h,
-            activityAction: A,
-            buttonColor: E,
-            buttonText: N
+            onActivityItemSelected: A,
+            activityAction: E,
+            buttonColor: N,
+            buttonText: x
         } = (0, j.P7)({
             channel: n,
             application: t,
             location: i,
             sectionName: a,
-            launchingComponentId: u
+            launchingComponentId: m,
+            fetchesApplication: s
         });
-    if (A === f.JS.START || A === f.JS.JOIN)
+    if (E === f.JS.START || E === f.JS.JOIN)
         return r
             ? (0, l.jsx)(w, {
-                  ...s,
+                  ...u,
                   sectionName: a,
                   application: t,
-                  onClick: h,
-                  disabled: m,
-                  enableVideoBanner: !_,
-                  children: _
+                  onClick: A,
+                  disabled: p,
+                  enableVideoBanner: !h,
+                  children: h
                       ? (0, l.jsx)(d.Spinner, {
                             type: d.Spinner.Type.PULSING_ELLIPSIS,
                             className: B.spinner
@@ -455,13 +456,13 @@ function $(e) {
                       : null
               })
             : (0, l.jsx)(K, {
-                  ...s,
+                  ...u,
                   sectionName: a,
                   application: t,
                   location: i
               });
     return (0, l.jsx)(w, {
-        ...s,
+        ...u,
         sectionName: a,
         application: t,
         onClick: (e) => {
@@ -476,15 +477,15 @@ function $(e) {
                 className: B.voiceLauncherAppCardButton,
                 type: 'submit',
                 size: d.Button.Sizes.LARGE,
-                color: E,
-                disabled: m,
-                onClick: h,
+                color: N,
+                disabled: p,
+                onClick: A,
                 'aria-label': U.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
-                    buttonText: N,
+                    buttonText: x,
                     applicationName: t.name
                 }),
-                submitting: _,
-                children: N
+                submitting: h,
+                children: x
             })
         })
     });

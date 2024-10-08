@@ -46,19 +46,20 @@ let I = {
     ),
     P = r.w4(g);
 function L(e) {
-    let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: r = !0, launchingComponentId: _, submitting: C = !1 } = e,
-        h = (0, c.O)(),
-        I = (0, d.Qv)({
+    let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: r = !0, launchingComponentId: _, submitting: C = !1, fetchesApplication: h = !0 } = e,
+        I = (0, c.O)(),
+        g = (0, d.Qv)({
             channelId: n.id,
-            applicationId: t.id
+            applicationId: t.id,
+            fetchesApplication: h
         }),
-        g = (0, N.Q)(I),
-        P = (0, o.e7)([A.Z], () => A.Z.entrypoint()),
-        L = (0, d.w1)({
+        P = (0, N.Q)(g),
+        L = (0, o.e7)([A.Z], () => A.Z.entrypoint()),
+        S = (0, d.w1)({
             applicationId: t.id,
             embeddedActivitiesManager: u.Z,
             channelId: n.id,
-            locationObject: h.location,
+            locationObject: I.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e;
                 r && f.yT(E.ti.ACTIVITY),
@@ -66,24 +67,25 @@ function L(e) {
                         location: i,
                         application_id: n,
                         section_name: a,
-                        action: g,
-                        source: P
+                        action: P,
+                        source: L
                     });
             },
             launchingComponentId: _,
             commandOrigin: p.bB.APPLICATION_LAUNCHER,
             sectionName: a,
-            source: P
+            source: L,
+            fetchesApplication: h
         }),
-        S = s.ButtonColors.BRAND,
-        T = null != l ? l : v.Z.Messages.LAUNCH;
+        T = s.ButtonColors.BRAND,
+        b = null != l ? l : v.Z.Messages.LAUNCH;
     return (
-        g === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (T = v.Z.Messages.JOIN_ACTIVITY)) : g === d.JS.LEAVE && !C && ((S = s.ButtonColors.RED), (T = v.Z.Messages.LEAVE)),
+        P === d.JS.JOIN ? ((T = s.ButtonColors.GREEN), (b = v.Z.Messages.JOIN_ACTIVITY)) : P === d.JS.LEAVE && !C && ((T = s.ButtonColors.RED), (b = v.Z.Messages.LEAVE)),
         {
-            onActivityItemSelected: L,
-            activityAction: g,
-            buttonColor: S,
-            buttonText: T
+            onActivityItemSelected: S,
+            activityAction: P,
+            buttonColor: T,
+            buttonText: b
         }
     );
 }

@@ -80,33 +80,34 @@ function A(e) {
     return _.eB.includes(t) ? t.replace('_', ' ').replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
 function C(e) {
-    let { channelId: t, applicationId: n } = e,
-        i = 0,
-        l = (0, r.e7)([c.Z], () => c.Z.getChannel(t)),
-        o = (0, I.Z)(),
-        u = (0, g.Z)(),
-        d = (0, a.q)(n),
-        s = (0, v.ZP)(l).find((e) => {
+    let { channelId: t, applicationId: n, fetchesApplication: i = !0 } = e,
+        l = 0,
+        o = (0, r.e7)([c.Z], () => c.Z.getChannel(t)),
+        u = (0, I.Z)(),
+        d = (0, g.Z)({ fetchesApplication: i }),
+        s = (0, a.q)(n, i),
+        f = (0, v.ZP)(o).find((e) => {
             let { embeddedActivity: t } = e;
-            return null != d && d.id === t.applicationId;
+            return null != s && s.id === t.applicationId;
         });
-    return null == d ? i : (null != l && (null == o ? void 0 : o.channelId) === l.id && (null == u ? void 0 : u.id) === d.id ? (i = 2) : null != s && (i = 1), i);
+    return null == s ? l : (null != o && (null == u ? void 0 : u.channelId) === o.id && (null == d ? void 0 : d.id) === s.id ? (l = 2) : null != f && (l = 1), l);
 }
 function w(e) {
-    let { applicationId: t, channelId: n, locationObject: i, embeddedActivitiesManager: l, onActivityItemSelectedProp: r, launchingComponentId: o, commandOrigin: a, sectionName: c, source: d } = e,
-        v = C({
+    let { applicationId: t, channelId: n, locationObject: i, embeddedActivitiesManager: l, onActivityItemSelectedProp: r, launchingComponentId: o, commandOrigin: a, sectionName: c, source: d, fetchesApplication: v = !0 } = e,
+        Z = C({
             channelId: n,
-            applicationId: t
+            applicationId: t,
+            fetchesApplication: v
         }),
-        { analyticsLocations: Z } = (0, u.ZP)();
-    switch (v) {
+        { analyticsLocations: h } = (0, u.ZP)();
+    switch (Z) {
         case 0:
             return async () => {
                 await (0, p.Z)({
                     targetApplicationId: t,
                     locationObject: i,
                     channelId: n,
-                    analyticsLocations: Z,
+                    analyticsLocations: h,
                     componentId: o,
                     commandOrigin: a,
                     sectionName: c,
@@ -120,7 +121,7 @@ function w(e) {
                         applicationId: t,
                         activityChannelId: n,
                         locationObject: i,
-                        analyticsLocations: Z,
+                        analyticsLocations: h,
                         componentId: o,
                         sectionName: c,
                         source: d
