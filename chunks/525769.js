@@ -61,6 +61,7 @@ n.d(t, {
     (a.FRIENDS = 'impression_friends'),
     (a.GAME_CONSOLE_DEVICE_LIST = 'impression_game_console_device_list'),
     (a.GDM_SETTINGS_INVITES = 'impression_gdm_settings_invites'),
+    (a.GIFT_INTENT_ACTION_BUTTON = 'impression_gift_intent_action_button'),
     (a.GIFT_INTENT_BADGE = 'impression_gift_intent_badge'),
     (a.GIFT_INTENT_CARD = 'impression_gift_intent_card'),
     (a.GLOBAL_DISCOVERY = 'impression_global_discovery'),
