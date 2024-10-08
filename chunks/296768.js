@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return R;
     }
 }),
     t(47120);
@@ -15,30 +15,30 @@ var a = t(735250),
     u = t(224706),
     _ = t(812206),
     E = t(669764),
-    I = t(810568),
-    m = t(839392),
+    m = t(810568),
+    I = t(839392),
     A = t(774073),
-    p = t(644941),
-    g = t(689938),
-    f = t(51527),
-    T = t(796805);
-let O = (e) => {
+    p = t(426482),
+    g = t(644941),
+    f = t(689938),
+    T = t(51527),
+    O = t(796805);
+let N = (e) => {
     let { game: n, onClose: t, trackClick: r } = e,
         s = (0, c.e7)([_.Z], () => _.Z.getApplication(n.applicationId));
     return (0, a.jsx)(d.Tooltip, {
         text: n.name,
-        children: (e) => {
-            var i;
-            return (0, a.jsx)(d.Clickable, {
+        children: (e) =>
+            (0, a.jsx)(d.Clickable, {
                 ...e,
-                className: T.similarGameImageClickable,
+                className: O.similarGameImageClickable,
                 onClick: async () => {
-                    r(I.as.ClickSimilarGame, n.applicationId),
+                    r(m.as.ClickSimilarGame, n.applicationId),
                         (0, d.openModalLazy)(() =>
                             Promise.resolve((e) =>
-                                (0, a.jsx)(p.default, {
+                                (0, a.jsx)(g.default, {
                                     applicationId: n.applicationId,
-                                    source: I.m1.SimilarGames,
+                                    source: m.m1.SimilarGames,
                                     ...e
                                 })
                             )
@@ -46,19 +46,19 @@ let O = (e) => {
                         await new Promise((e) => setTimeout(e, 10)),
                         t();
                 },
-                children: (0, a.jsx)('img', {
-                    src: n.coverImageUrl,
-                    className: T.similarGameImage,
-                    alt: g.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: null !== (i = null == s ? void 0 : s.name) && void 0 !== i ? i : null == n ? void 0 : n.name })
+                children: (0, a.jsx)(p.C, {
+                    game: n,
+                    application: s,
+                    className: O.similarGameImage,
+                    size: p.Z.SMALL
                 })
-            });
-        }
+            })
     });
 };
-function N(e) {
+function R(e) {
     let { applicationId: n, onClose: t, trackAction: s, similarGames: o, similarGamesError: _ } = e,
-        I = (0, c.e7)([m.Z, E.Z], () => {
-            let e = void 0 === m.Z.getSimilarGames(n),
+        m = (0, c.e7)([I.Z, E.Z], () => {
+            let e = void 0 === I.Z.getSimilarGames(n),
                 t = o.some((e) => E.Z.isFetching(e));
             return e || t;
         }),
@@ -66,40 +66,39 @@ function N(e) {
             o
                 .map((e) => E.Z.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => null != e.coverImageUrl)
                 .filter(A.W1)
                 .slice(0, 5)
         );
     return (r.useEffect(() => {
         o.length > 0 && u.Z.getDetectableGamesSupplemental([n, ...o]);
     }, [n, o]),
-    I && null == _)
+    m && null == _)
         ? (0, a.jsxs)('div', {
               children: [
-                  (0, a.jsx)('div', { className: i()(T.loadingHeading, f.sectionHeader) }),
+                  (0, a.jsx)('div', { className: i()(O.loadingHeading, T.sectionHeader) }),
                   (0, a.jsx)('div', {
-                      className: i()(f.row, f.gapLg),
+                      className: i()(T.row, T.gapLg),
                       children: l()
                           .range(0, 5)
-                          .map((e) => (0, a.jsx)('div', { className: T.loadingArtwork }, e))
+                          .map((e) => (0, a.jsx)('div', { className: O.loadingArtwork }, e))
                   })
               ]
           })
-        : I || 0 !== p.length
+        : m || 0 !== p.length
           ? (0, a.jsxs)('div', {
                 children: [
                     (0, a.jsx)(d.Heading, {
-                        className: f.sectionHeader,
+                        className: T.sectionHeader,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: g.Z.Messages.GAME_PROFILE_ALSO_PLAYING
+                        children: f.Z.Messages.GAME_PROFILE_ALSO_PLAYING
                     }),
                     (0, a.jsx)('div', {
-                        className: i()(f.row, f.gapLg),
+                        className: O.similarGames,
                         style: {},
                         children: p.map((e) =>
                             (0, a.jsx)(
-                                O,
+                                N,
                                 {
                                     game: e,
                                     onClose: t,
