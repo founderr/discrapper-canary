@@ -1,38 +1,50 @@
 var a = r(735250);
 r(470079);
-var n = r(780384),
-    s = r(481060),
-    i = r(410030),
-    o = r(689938),
-    l = r(417552),
-    c = r(982240),
-    d = r(533854);
+var n = r(442837),
+    s = r(780384),
+    i = r(481060),
+    o = r(410030),
+    l = r(594174),
+    c = r(689938),
+    d = r(417552),
+    u = r(982240),
+    f = r(533854);
 t.Z = (e) => {
-    let { onRetry: t } = e,
-        r = (0, i.ZP)();
+    let { onRetry: t, errorMessage: r } = e,
+        p = (0, o.ZP)(),
+        m = (0, n.e7)([l.default], () => {
+            let e = l.default.getCurrentUser();
+            return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
+        });
     return (0, a.jsxs)('div', {
-        className: l.wrapper,
+        className: d.wrapper,
         children: [
             (0, a.jsx)('img', {
-                className: l.__invalid_loadIssueImg,
-                src: (0, n.wj)(r) ? c : d,
+                className: d.__invalid_loadIssueImg,
+                src: (0, s.wj)(p) ? u : f,
                 alt: ''
             }),
-            (0, a.jsx)(s.Heading, {
-                className: l.heading1,
+            (0, a.jsx)(i.Heading, {
+                className: d.heading1,
                 variant: 'heading-xl/semibold',
-                children: o.Z.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
+                children: c.Z.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
             }),
-            (0, a.jsx)(s.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: 'text-md/normal',
-                children: o.Z.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
+                children: c.Z.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
             }),
-            (0, a.jsx)(s.Button, {
-                className: l.reload,
-                size: s.Button.Sizes.MEDIUM,
-                color: s.Button.Colors.BRAND,
+            m &&
+                null != r &&
+                (0, a.jsx)(i.Text, {
+                    variant: 'text-md/normal',
+                    children: 'staff-only debug: ' + r
+                }),
+            (0, a.jsx)(i.Button, {
+                className: d.reload,
+                size: i.Button.Sizes.MEDIUM,
+                color: i.Button.Colors.BRAND,
                 onClick: t,
-                children: o.Z.Messages.ERRORS_RELOAD
+                children: c.Z.Messages.ERRORS_RELOAD
             })
         ]
     });
