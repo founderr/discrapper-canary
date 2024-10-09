@@ -1,51 +1,57 @@
 n.d(t, {
     ZP: function () {
-        return u;
+        return _;
     },
     aV: function () {
-        return d;
+        return u;
     },
     z6: function () {
-        return c;
+        return d;
     }
-});
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(212433),
-    l = n(481060),
-    o = n(25912);
-function c(e) {
+}),
+    n(47120);
+var i = n(735250),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
+    l = n(212433),
+    o = n(481060),
+    c = n(25912);
+function d(e) {
     let { scrollPosition: t } = e;
-    return (0, i.jsx)(r.animated.div, {
-        className: o.backdrop,
+    return (0, i.jsx)(l.animated.div, {
+        className: c.backdrop,
         style: {
             opacity: null == t ? void 0 : t.to([0, 100], [0, 1])
         }
     });
 }
-function d(e) {
-    let { onClick: t, icon: n, iconColor: a = l.tokens.colors.HEADER_PRIMARY } = e;
+function u(e) {
+    let { onClick: t, icon: n } = e,
+        [s, l] = a.useState(!1),
+        d = a.useCallback(() => l(!0), []),
+        u = a.useCallback(() => l(!1), []);
     return null != t
-        ? (0, i.jsx)(l.Clickable, {
-              className: s()(o.clickable, o.icon),
+        ? (0, i.jsx)(o.Clickable, {
+              className: r()(c.clickable, c.icon),
               onClick: t,
+              onMouseEnter: d,
+              onMouseLeave: u,
               children: (0, i.jsx)(n, {
-                  color: a,
+                  color: s ? o.tokens.colors.INTERACTIVE_HOVER : o.tokens.colors.INTERACTIVE_NORMAL,
                   size: 'md'
               })
           })
         : (0, i.jsx)(n, {
-              className: o.icon,
-              color: a,
+              className: c.icon,
+              color: o.tokens.colors.HEADER_PRIMARY,
               size: 'md'
           });
 }
-function u(e) {
+function _(e) {
     let { className: t, children: n } = e;
     return (0, i.jsx)('div', {
-        className: s()(o.headerBar, t),
+        className: r()(c.headerBar, t),
         children: n
     });
 }
