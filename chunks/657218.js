@@ -149,12 +149,14 @@ function z(e) {
         {
             nameError: x,
             messageError: v,
-            submit: A
+            submit: A,
+            submitting: Z
         } = (function (e) {
             let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: a, textAreaState: l, location: r } = e,
                 [o, c] = s.useState(null),
                 [u, d] = s.useState(null),
-                h = (0, w.Z)({
+                [h, p] = s.useState(!1),
+                m = (0, w.Z)({
                     parentChannel: t,
                     parentMessageId: n,
                     threadSettings: i,
@@ -169,15 +171,23 @@ function z(e) {
                 submit: s.useCallback(
                     async (e, s, a) => {
                         var r, o, u;
-                        null == e && (e = l.textValue), (e = e.trim()), (null == s || 0 === s.length) && (s = null === (r = S.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == a || 0 === a.length) && (a = L.Z.getUploads(t.id, M.d.FirstThreadMessage));
-                        let p = null !== (o = i.name) && void 0 !== o ? o : '',
-                            m = null == n && 0 === p.length,
-                            _ = '' === e && (null == s || 0 === s.length) && 0 === a.length;
-                        if ((c(m ? (0, y.V_)() : null), d(_ ? (0, y.T4)() : null), m || _))
+                        if (h)
                             return {
                                 shouldClear: !1,
-                                shouldRefocus: !0
+                                shouldRefocus: !1
                             };
+                        p(!0), null == e && (e = l.textValue), (e = e.trim()), (null == s || 0 === s.length) && (s = null === (r = S.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == a || 0 === a.length) && (a = L.Z.getUploads(t.id, M.d.FirstThreadMessage));
+                        let _ = null !== (o = i.name) && void 0 !== o ? o : '',
+                            f = null == n && 0 === _.length,
+                            E = '' === e && (null == s || 0 === s.length) && 0 === a.length;
+                        if ((c(f ? (0, y.V_)() : null), d(E ? (0, y.T4)() : null), f || E))
+                            return (
+                                p(!1),
+                                {
+                                    shouldClear: !1,
+                                    shouldRefocus: !0
+                                }
+                            );
                         if (null == n) {
                             let { valid: n } = await (0, j.v)({
                                 content: e,
@@ -187,16 +197,20 @@ function z(e) {
                                 channel: t
                             });
                             if (!n)
-                                return {
-                                    shouldClear: !1,
-                                    shouldRefocus: !0
-                                };
+                                return (
+                                    p(!1),
+                                    {
+                                        shouldClear: !1,
+                                        shouldRefocus: !0
+                                    }
+                                );
                         }
                         try {
-                            await h(e, s, a);
+                            await m(e, s, a);
                         } catch (e) {
                             return (
                                 (null === (u = e.body) || void 0 === u ? void 0 : u.code) === B.evJ.AUTOMOD_TITLE_BLOCKED && c((0, y.Gx)(e.body, t)),
+                                p(!1),
                                 {
                                     shouldClear: !1,
                                     shouldRefocus: !0
@@ -205,14 +219,16 @@ function z(e) {
                         }
                         return (
                             (0, N.qB)(t.id, F.drafts.type),
+                            p(!1),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1
                             }
                         );
                     },
-                    [h, l.textValue, i.name, n, t]
-                )
+                    [m, l.textValue, i.name, n, t, h]
+                ),
+                submitting: h
             };
         })({
             parentChannel: t,
@@ -222,7 +238,7 @@ function z(e) {
             textAreaState: g,
             location: a
         }),
-        Z = (0, D.oD)(m, I) ? o.ThreadLockIcon : o.ThreadIcon;
+        b = (0, D.oD)(m, I) ? o.ThreadLockIcon : o.ThreadIcon;
     return (0, i.jsx)('div', {
         className: G.chat,
         onMouseDown: h,
@@ -246,14 +262,15 @@ function z(e) {
                                     children: [
                                         (0, i.jsx)('div', {
                                             className: V.iconWrapper,
-                                            children: (0, i.jsx)(Z, { className: V.icon })
+                                            children: (0, i.jsx)(b, { className: V.icon })
                                         }),
                                         (0, i.jsx)(K, {
                                             parentChannel: t,
                                             parentMessageId: n,
                                             threadSettings: m,
                                             updateThreadSettings: f,
-                                            error: x
+                                            error: x,
+                                            disabled: Z
                                         }),
                                         t.type === B.d4z.GUILD_TEXT
                                             ? (0, i.jsx)(Y, {
@@ -335,30 +352,31 @@ function Y(e) {
 }
 function K(e) {
     var t;
-    let { parentChannel: n, parentMessageId: s, threadSettings: a, updateThreadSettings: l, error: r } = e,
-        c = null !== (t = a.name) && void 0 !== t ? t : '',
-        d = (0, y.Op)(r, { content: c }),
-        h = (0, D.Od)(n, s),
-        p = null != s,
-        m = (0, I.Dt)();
+    let { parentChannel: n, parentMessageId: s, threadSettings: a, updateThreadSettings: l, error: r, disabled: c } = e,
+        d = null !== (t = a.name) && void 0 !== t ? t : '',
+        h = (0, y.Op)(r, { content: d }),
+        p = (0, D.Od)(n, s),
+        m = null != s,
+        _ = (0, I.Dt)();
     return (0, i.jsx)(o.FormSection, {
         tag: 'label',
-        htmlFor: m,
-        title: H.Z.Messages.THREAD_NAME + (p ? ' (Optional)' : ''),
+        htmlFor: _,
+        title: H.Z.Messages.THREAD_NAME + (m ? ' (Optional)' : ''),
         className: G.formSection,
         children: (0, i.jsx)(o.TextInput, {
-            value: c,
-            id: m,
-            placeholder: '' !== h ? h : H.Z.Messages.FORM_THREAD_NAME_PLACEHOLDER,
+            value: d,
+            id: _,
+            placeholder: '' !== p ? p : H.Z.Messages.FORM_THREAD_NAME_PLACEHOLDER,
             maxLength: B.HN8,
             onChange: (e) => {
                 l({ name: (0, U.Z)(e, !1) }), '' !== e ? u.Z.startTyping(n.id) : u.Z.stopTyping(n.id);
             },
             onBlur: () => {
-                let e = (0, U.Z)(c, !0);
-                e !== c && l({ name: e });
+                let e = (0, U.Z)(d, !0);
+                e !== d && l({ name: e });
             },
-            error: d
+            error: h,
+            disabled: c
         })
     });
 }
