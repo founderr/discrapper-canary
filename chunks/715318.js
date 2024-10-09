@@ -1,17 +1,17 @@
-t.d(n, {
+a.d(n, {
     Z: function () {
         return c;
     }
 });
-var a = t(735250);
-t(470079);
-var r = t(481060),
-    s = t(239091),
-    i = t(299206),
-    o = t(858042),
-    l = t(689938);
+var t = a(735250);
+a(470079);
+var r = a(481060),
+    s = a(239091),
+    i = a(299206),
+    o = a(858042),
+    l = a(689938);
 function c(e) {
-    let { applicationId: n, className: t, viewId: c } = e,
+    let { applicationId: n, className: a, viewId: c } = e,
         d = (0, i.Z)({
             id: n,
             label: l.Z.Messages.COPY_ID_APPLICATION
@@ -22,33 +22,33 @@ function c(e) {
         });
     return null == d && null == u
         ? null
-        : (0, a.jsx)(r.Popout, {
+        : (0, t.jsx)(r.Popout, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: n } = e;
-                  return (0, a.jsx)(r.Menu, {
+                  return (0, t.jsx)(r.Menu, {
                       navId: 'game-profile-context',
                       onClose: () => {
                           (0, s.Zy)(), n();
                       },
                       'aria-label': l.Z.Messages.GAME_PROFILE_VIEW_MORE,
                       onSelect: () => {},
-                      children: (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsx)(r.MenuGroup, { children: d }), (0, a.jsx)(r.MenuGroup, { children: u })]
+                      children: (0, t.jsxs)(t.Fragment, {
+                          children: [(0, t.jsx)(r.MenuGroup, { children: d }), (0, t.jsx)(r.MenuGroup, { children: u })]
                       })
                   });
               },
               children: (e) =>
-                  (0, a.jsx)(r.Tooltip, {
+                  (0, t.jsx)(r.Tooltip, {
                       text: l.Z.Messages.MORE,
                       children: (n) =>
-                          (0, a.jsx)(r.Clickable, {
-                              className: t,
+                          (0, t.jsx)(r.Clickable, {
+                              className: a,
                               ...n,
                               ...e,
-                              children: (0, a.jsx)(r.MoreHorizontalIcon, {
+                              children: (0, t.jsx)(r.MoreHorizontalIcon, {
                                   size: 'xs',
                                   color: r.tokens.colors.WHITE
                               })

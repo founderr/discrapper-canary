@@ -19,7 +19,7 @@ var n = t(735250),
     S = t(293810),
     I = t(689938),
     N = t(154371);
-let A = (e) => {
+let C = (e) => {
         let [s, t] = a.useState(!1),
             [n, i] = a.useState(null);
         return {
@@ -36,20 +36,20 @@ let A = (e) => {
             submitting: s
         };
     },
-    C = (e) => {
+    A = (e) => {
         var s;
-        let { transitionState: t, groupListing: a, guildId: i, listing: l, subscription: C, onClose: m } = e,
+        let { transitionState: t, groupListing: a, guildId: i, listing: l, subscription: A, onClose: m } = e,
             g = (0, _.Dt)(),
             h = (0, E.YB)(i),
             O = (null == h ? void 0 : null === (s = h.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null ? (0, u._W)(h.cover_image_asset.application_id, h.cover_image_asset, 440) : void 0,
             { analyticsLocations: p } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: R, error: x, submitting: M } = A(p),
+            { cancelSubscription: R, error: x, submitting: M } = C(p),
             f = async () => {
-                (await R(C.id)) && m();
+                (await R(A.id)) && m();
             },
             D = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.CHANNEL),
             L = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.INTANGIBLE),
-            P = r()(C.currentPeriodEnd).format('MMMM Do, YYYY'),
+            P = r()(A.currentPeriodEnd).format('MMMM Do, YYYY'),
             b = I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
                 numChannels: D.length,
                 numAdditionalBenefits: L.length,
@@ -119,7 +119,7 @@ let A = (e) => {
     },
     m = (e) => {
         (0, o.openModal)((s) =>
-            (0, n.jsx)(C, {
+            (0, n.jsx)(A, {
                 ...s,
                 ...e
             })

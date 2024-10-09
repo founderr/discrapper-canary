@@ -13,30 +13,30 @@ var l = t(735250),
     u = t(256139),
     d = t(91907),
     m = t(866040),
-    _ = t(689938),
-    f = t(756988);
+    f = t(689938),
+    _ = t(756988);
 function p(e) {
     let { entry: n, channel: t, className: i } = e,
-        { displayParticipants: p, participant1: C, participant2: h, numOtherParticipants: E, orderedParticipants: I } = (0, c.Z)(n),
-        x = [C, h];
+        { displayParticipants: p, participant1: C, participant2: h, numOtherParticipants: I, orderedParticipants: x } = (0, c.Z)(n),
+        E = [C, h];
     return (0, l.jsxs)('div', {
-        className: a()(f.container, i),
+        className: a()(_.container, i),
         children: [
             p.length > 0
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(m.Z, {
-                              participants: I,
+                              participants: x,
                               channel: t,
                               children: (e) =>
                                   (0, l.jsx)(r.Clickable, {
-                                      className: f.clickable,
+                                      className: _.clickable,
                                       ...e,
                                       children: (0, l.jsx)(o.Z, {
                                           maxUsers: 3,
                                           users: p,
                                           size: r.AvatarSizes.SIZE_20,
-                                          avatarClassName: f.stackedAvatar,
+                                          avatarClassName: _.stackedAvatar,
                                           hideOverflowCount: !0,
                                           disableUsernameTooltip: !0
                                       })
@@ -52,18 +52,18 @@ function p(e) {
             (0, l.jsx)(r.Heading, {
                 variant: 'text-sm/semibold',
                 color: 'text-secondary',
-                className: a()(f.truncatedText, f.usersHeader),
+                className: a()(_.truncatedText, _.usersHeader),
                 scaleFontToUserSetting: !0,
-                children: _.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
-                    user0: s.ZP.getName(t.guild_id, t.id, x[0]),
-                    user1: s.ZP.getName(t.guild_id, t.id, x[1]),
-                    countOthers: E,
+                children: f.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
+                    user0: s.ZP.getName(t.guild_id, t.id, E[0]),
+                    user1: s.ZP.getName(t.guild_id, t.id, E[1]),
+                    countOthers: I,
                     name0Hook: (e, n) =>
                         (0, l.jsx)(
                             d.Z,
                             {
                                 text: e,
-                                user: x[0],
+                                user: E[0],
                                 channel: t
                             },
                             n
@@ -73,7 +73,7 @@ function p(e) {
                             d.Z,
                             {
                                 text: e,
-                                user: x[1],
+                                user: E[1],
                                 channel: t
                             },
                             n
@@ -82,7 +82,7 @@ function p(e) {
                         (0, l.jsx)(
                             m.Z,
                             {
-                                participants: I,
+                                participants: x,
                                 channel: t,
                                 children: (n) =>
                                     (0, l.jsx)(u.Z, {

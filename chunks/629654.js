@@ -31,18 +31,18 @@ function S(e) {
             avatarDecoration: null != S.avatarDecorationSkuId ? (null === (e = l.Z.getProduct(S.avatarDecorationSkuId)) || void 0 === e ? void 0 : e.items[0]) : void 0
         });
     }, [S, N]);
-    let A = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        C = (0, c.g2)({ useReducedMotion: A });
+    let C = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        A = (0, c.g2)({ useReducedMotion: C });
     return (0, n.jsxs)('div', {
         className: T.container,
         children: [
             (0, n.jsx)(r.Clickable, {
                 onClick: () => {
-                    I(), C.startAnimation(!1);
+                    I(), A.startAnimation(!1);
                 },
                 className: T.button,
                 'aria-label': 'Shuffle',
-                children: C.render()
+                children: A.render()
             }),
             (0, n.jsxs)('div', {
                 className: T.select,

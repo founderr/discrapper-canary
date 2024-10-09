@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var l = t(735250),
@@ -23,7 +23,7 @@ let d = {
         [c.kG.XBOX]: () => u.Z.Messages.XBOX,
         [c.kG.PLAYSTATION]: () => u.Z.Messages.PLAYSTATION
     };
-function _(e) {
+function f(e) {
     var n;
     let { type: t, 'aria-label': i, ...a } = e,
         r = d[t];

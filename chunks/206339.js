@@ -14,8 +14,8 @@ var n = t(735250),
     S = t(410030),
     I = t(454585),
     N = t(163684),
-    A = t(178100),
-    C = t(518638),
+    C = t(178100),
+    A = t(518638),
     m = t(725727),
     g = t(454982),
     h = t(197115),
@@ -37,9 +37,9 @@ function v(e) {
         [u, E] = a.useState(!1),
         T = () => _((e) => !e),
         N = (0, S.ZP)(),
-        m = (0, C.Pz)(t.id, N),
+        m = (0, A.Pz)(t.id, N),
         h = null != i,
-        O = (0, A.Z)(t, h);
+        O = (0, C.Z)(t, h);
     h && c
         ? (s = b.Z.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
               endDate: O,
@@ -147,8 +147,8 @@ s.Z = function () {
             (0, u.Qv)().then(() => I(!0));
         });
     }, []);
-    let { promotionsLoaded: A, activeOutboundPromotions: C, claimedEndedOutboundPromotions: g, claimedOutboundPromotionCodeMap: j, addClaimedOutboundPromotionCode: B } = (0, m.lG)(),
-        U = C.length + g.length > 0,
+    let { promotionsLoaded: C, activeOutboundPromotions: A, claimedEndedOutboundPromotions: g, claimedOutboundPromotionCodeMap: j, addClaimedOutboundPromotionCode: B } = (0, m.lG)(),
+        U = A.length + g.length > 0,
         G =
             N.g.useExperiment(
                 { location: 'EntitlementGifts' },
@@ -160,7 +160,7 @@ s.Z = function () {
     function F() {
         T.Z.open(L.oAB.PREMIUM);
     }
-    return S && A
+    return S && C
         ? (0, n.jsxs)(n.Fragment, {
               children: [
                   (function () {
@@ -227,7 +227,7 @@ s.Z = function () {
                                           t.id
                                       );
                                   }),
-                                  C.map((e) =>
+                                  A.map((e) =>
                                       (0, n.jsx)(
                                           v,
                                           {

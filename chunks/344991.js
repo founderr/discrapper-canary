@@ -1,6 +1,6 @@
 t.d(n, {
     ZP: function () {
-        return E;
+        return I;
     },
     tE: function () {
         return l;
@@ -17,8 +17,8 @@ var l,
     u = t(911969),
     d = t(868819),
     m = t(970184),
-    _ = t(280501),
-    f = t(689938),
+    f = t(280501),
+    _ = t(689938),
     p = t(128422),
     C = t(601648);
 function h(e) {
@@ -32,9 +32,9 @@ function h(e) {
         children: n
     });
 }
-function E(e) {
+function I(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
-        { type: E, placeholder: I, maxValues: x, disabled: v } = n,
+        { type: I, placeholder: x, maxValues: E, disabled: v } = n,
         [T, N] = r.useState(!1),
         [b, g] = r.useState(!1),
         [S, O] = r.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
@@ -50,15 +50,15 @@ function E(e) {
     }, [o, Z]);
     let {
             state: P,
-            executeStateUpdate: A,
-            visualState: k,
+            executeStateUpdate: k,
+            visualState: A,
             isDisabled: U,
             error: B
         } = (0, m.Ee)(n, {
-            type: E,
+            type: I,
             selectedOptions: Array.from(S.values())
         }),
-        w = k === _.gH.LOADING;
+        w = A === f.gH.LOADING;
     r.useEffect(() => {
         if ((null == P ? void 0 : P.type) === u.re.USER_SELECT || (null == P ? void 0 : P.type) === u.re.ROLE_SELECT || (null == P ? void 0 : P.type) === u.re.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === u.re.CHANNEL_SELECT) {
             let e = new Map(P.selectedOptions.map((e) => [e.value, e]));
@@ -66,11 +66,11 @@ function E(e) {
         }
     }, [P]);
     let G = r.useCallback(() => {
-        A({
-            type: E,
+        k({
+            type: I,
             selectedOptions: Array.from(S.values())
         }) && M(new Set(S.keys()));
-    }, [A, E, S]);
+    }, [k, I, S]);
     r.useEffect(() => {
         if (!(T || b || (S.size === j.size && Array.from(S.keys()).every((e) => j.has(e))))) G();
     }, [T, b, j, S, G]);
@@ -82,7 +82,7 @@ function E(e) {
                 new Promise((n) => {
                     n(t(e));
                 }),
-            placeholder: D ? (null != I ? I : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
+            placeholder: D ? (null != x ? x : _.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
             onClose: () => N(!1),
             onOpen: () => N(!0),
             onBlur: () => g(!1),
@@ -106,7 +106,7 @@ function E(e) {
             (0, a.jsxs)('div', {
                 className: p.container,
                 children: [
-                    x > 1
+                    E > 1
                         ? (0, a.jsx)(
                               c.SearchableSelect,
                               {

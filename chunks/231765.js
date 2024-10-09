@@ -19,8 +19,8 @@ var n,
     S = t(578361),
     I = t(585483),
     N = t(557177),
-    A = t(57562),
-    C = t(955204),
+    C = t(57562),
+    A = t(955204),
     m = t(64078),
     g = t(351780),
     h = t(954794),
@@ -121,7 +121,7 @@ function U(e) {
         value: s,
         note: x.Z.Messages.POGGERMODE_ENABLE_DESCRIPTION,
         onChange: (e) => {
-            !e && (0, A.T)(C.hn.DISABLE_POGGERMODE),
+            !e && (0, C.T)(A.hn.DISABLE_POGGERMODE),
                 e && (!t || a)
                     ? (0, u.openModal)((e) =>
                           (0, o.jsx)(u.ConfirmModal, {
@@ -265,7 +265,7 @@ function y(e) {
         r = (0, d.e7)([T.Z], () => T.Z.useReducedMotion),
         l = !s || !t || r,
         c = (e, s) => {
-            null != e.shakeIntensity && e.shakeIntensity > n && (0, A.T)(C.hn.MORE), i(e, s);
+            null != e.shakeIntensity && e.shakeIntensity > n && (0, C.T)(A.hn.MORE), i(e, s);
         };
     return (0, o.jsxs)(u.FormSection, {
         tag: u.FormTitleTags.H1,
@@ -488,7 +488,7 @@ function K() {
             return () => clearTimeout(s);
         }, [e]),
         l.useEffect(() => {
-            Math.random() > 0.99 && (0, A.T)(C.hn.VISITOR_100);
+            Math.random() > 0.99 && (0, C.T)(A.hn.VISITOR_100);
         }, []),
         (0, o.jsxs)(o.Fragment, {
             children: [

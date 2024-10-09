@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return C;
     }
 }),
     t(47120),
@@ -127,7 +127,7 @@ class N extends a.Component {
             });
     }
 }
-function A() {
+function C() {
     let e = a.useContext(_.AnalyticsContext),
         s = (0, i.e7)([d.Z], () => d.Z.enabled);
     return (0, n.jsx)(N, {

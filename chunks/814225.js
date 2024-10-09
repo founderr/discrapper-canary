@@ -1,4 +1,4 @@
-t.d(n, {
+a.d(n, {
     P3: function () {
         return _;
     },
@@ -9,14 +9,14 @@ t.d(n, {
         return m;
     }
 }),
-    t(757143),
-    t(47120);
-var a = t(913527),
-    r = t.n(a);
-if (12633 == t.j) var s = t(266067);
-t(358085), t(73346);
-var i = t(981631),
-    o = t(689938);
+    a(757143),
+    a(47120);
+var t = a(913527),
+    r = a.n(t);
+if (12633 == a.j) var s = a(266067);
+a(358085), a(73346);
+var i = a(981631),
+    o = a(689938);
 let l = {},
     c = {},
     d = Object.freeze({
@@ -173,8 +173,8 @@ function _(e) {
 }
 Object.keys(d).forEach((e) => {
     let n = e.toLowerCase().replace(/_/g, '-'),
-        t = d[e];
-    (l[n] = t), (c[t] = n);
+        a = d[e];
+    (l[n] = a), (c[a] = n);
 });
 let E = [
     ['YYYY-MM-DD', 'MMMM DD, Y'],
@@ -184,13 +184,13 @@ let E = [
     ['YYYY', 'Y']
 ];
 function m(e) {
-    let { preorderReleaseAt: n, preorderApproximateReleaseDate: t } = e;
+    let { preorderReleaseAt: n, preorderApproximateReleaseDate: a } = e;
     if (null != n) return n.format('MMMM DD');
-    if (null == t) return null;
+    if (null == a) return null;
     for (let e = 0; e < E.length; e++) {
-        let [n, a] = E[e],
-            s = r()(t, n, !0);
-        if (s.isValid()) return s.format(a);
+        let [n, t] = E[e],
+            s = r()(a, n, !0);
+        if (s.isValid()) return s.format(t);
     }
-    return t;
+    return a;
 }

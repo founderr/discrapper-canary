@@ -14,8 +14,8 @@ var n = t(735250),
     S = t(981632),
     I = t(314897),
     N = t(82142),
-    A = t(246946),
-    C = t(509545),
+    C = t(246946),
+    A = t(509545),
     m = t(55563),
     g = t(259580),
     h = t(572004),
@@ -259,7 +259,7 @@ class L extends a.PureComponent {
             });
     }
 }
-s.Z = o.ZP.connectStores([m.Z, A.Z, N.Z, u.Z, C.Z, I.default], (e) => {
+s.Z = o.ZP.connectStores([m.Z, C.Z, N.Z, u.Z, A.Z, I.default], (e) => {
     let { skuId: s, subscriptionPlanId: t, giftStyle: n } = e,
         a = m.Z.get(s);
     if (null == a) throw Error('SKU was unavailable while rendering gift.');
@@ -268,7 +268,7 @@ s.Z = o.ZP.connectStores([m.Z, A.Z, N.Z, u.Z, C.Z, I.default], (e) => {
         .filter((e) => e.giftStyle === n);
     return {
         sku: a,
-        hideCodes: A.Z.enabled,
+        hideCodes: C.Z.enabled,
         isFetching: N.Z.getUserGiftCodesFetchingForSKUAndPlan(s, t),
         loadedAt: N.Z.getUserGiftCodesLoadedAtForSKUAndPlan(s, t),
         application: u.Z.getApplication(a.applicationId),

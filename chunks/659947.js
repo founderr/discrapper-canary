@@ -20,8 +20,8 @@ var n = t(735250),
     S = t(727785),
     I = t(689938),
     N = t(179447);
-function A() {}
-let C = [S.h8.VOICE_CHANNEL];
+function C() {}
+let A = [S.h8.VOICE_CHANNEL];
 function m(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
@@ -92,7 +92,7 @@ function R(e) {
 function x(e) {
     let { transitionState: s, onClose: t, onSelect: o } = e,
         c = a.useId(),
-        A = a.useRef(null),
+        C = a.useRef(null),
         {
             mouseFocusEnabled: g,
             enableMouseFocus: R,
@@ -117,7 +117,7 @@ function x(e) {
             queryResults: D
         } = (0, l.Z)({
             visible: !0,
-            autocompleterResultTypes: C,
+            autocompleterResultTypes: A,
             autocompleterBeforeCreateSearchContext: m
         }),
         L = (function (e) {
@@ -151,7 +151,7 @@ function x(e) {
             );
         })(M);
     a.useEffect(() => {
-        let { current: e } = A;
+        let { current: e } = C;
         !(null == e || e.isItemVisible(0, P, !0)) &&
             e.scrollToIndex({
                 section: 0,
@@ -219,7 +219,7 @@ function x(e) {
                         innerId: c,
                         innerRole: 'listbox',
                         'aria-label': I.Z.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
-                        ref: A,
+                        ref: C,
                         sections: [Z],
                         renderRow: function (e) {
                             let { row: s } = e,
@@ -297,9 +297,9 @@ function M(e) {
               channel: t,
               id: t.id,
               category: a,
-              onClick: A,
-              onFocus: A,
-              onMouseEnter: A,
+              onClick: C,
+              onFocus: C,
+              onMouseEnter: C,
               focused: !1,
               children:
                   null != o

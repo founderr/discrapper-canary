@@ -23,8 +23,8 @@ var n = t(735250),
     S = t(709054),
     I = t(357956),
     N = t(275909),
-    A = t(300037),
-    C = t(981631),
+    C = t(300037),
+    A = t(981631),
     m = t(474936),
     g = t(689938),
     h = t(210849);
@@ -38,7 +38,7 @@ function O(e) {
         _ = a.useMemo(
             () =>
                 (function (e) {
-                    if (null == e || e === C.Eu4.NONE) return '';
+                    if (null == e || e === A.Eu4.NONE) return '';
                     let s = [
                         g.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_EMOJI_SLOTS.format({ numEmojiSlots: m.HO[e].limits.emoji }),
                         g.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_STICKER_SLOTS.format({ numStickerSlots: m.HO[e].limits.stickers }),
@@ -53,7 +53,7 @@ function O(e) {
                         g.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_ANIMATED_GUILD_ICON,
                         g.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_INVITE_BACKGROUND
                     ];
-                    e >= C.Eu4.TIER_2 && (s.push(g.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER), s.push(g.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)), e >= C.Eu4.TIER_3 && s.push(g.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
+                    e >= A.Eu4.TIER_2 && (s.push(g.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER), s.push(g.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)), e >= A.Eu4.TIER_3 && s.push(g.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
                     let t = s[Math.floor(Math.random() * s.length)];
                     return g.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_TEMPLATE.format({ perk: t });
                 })(s),
@@ -68,7 +68,7 @@ function O(e) {
             },
             'animate-always'
         );
-    return l || s === C.Eu4.NONE
+    return l || s === A.Eu4.NONE
         ? (0, n.jsx)('div', {
               className: h.boostDescriptionInnerContainer,
               children: (0, n.jsx)(o.Text, {
@@ -93,8 +93,8 @@ function p(e) {
     let { guildTier: s, guildBoostSlot: t, premiumSubscription: i, hasCancelableGuildBoostSlot: c, showAltText: _, isLastGuildBoostSlot: u } = e,
         E = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
         S = a.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
-        A = a.useMemo(() => null != S && S > new Date(), [S]),
-        C = (0, T.tl)(t);
+        C = a.useMemo(() => null != S && S > new Date(), [S]),
+        A = (0, T.tl)(t);
     return (0, n.jsxs)('div', {
         className: h.boostContainer,
         children: [
@@ -102,14 +102,14 @@ function p(e) {
                 className: h.boostInnerContainer,
                 children: [
                     (0, n.jsx)(N.Z, {
-                        isCanceled: C,
-                        hasCooldown: A,
+                        isCanceled: A,
+                        hasCooldown: C,
                         useReducedMotion: E
                     }),
                     (0, n.jsx)('div', {
                         className: h.boostDescriptionContainer,
                         children:
-                            null != S && A && !C
+                            null != S && C && !A
                                 ? (0, n.jsx)(I.Z, {
                                       className: h.boostDescriptionInnerContainer,
                                       cooldown: S.getTime()
@@ -118,7 +118,7 @@ function p(e) {
                                       guildTier: s,
                                       guildBoostSlot: t,
                                       showAltText: _,
-                                      isCanceled: C,
+                                      isCanceled: A,
                                       premiumSubscription: i
                                   })
                     }),
@@ -157,7 +157,7 @@ function R(e) {
     return (0, n.jsxs)('div', {
         className: h.appliedBoostContainer,
         children: [
-            (0, n.jsx)(A.Z, {
+            (0, n.jsx)(C.Z, {
                 guildId: s,
                 boostingVariant: !1
             }),
@@ -205,7 +205,7 @@ function x(e) {
     return (0, n.jsxs)('div', {
         className: h.appliedBoostContainer,
         children: [
-            (0, n.jsx)(A.Z, {
+            (0, n.jsx)(C.Z, {
                 guildId: s,
                 boostingVariant: !1
             }),

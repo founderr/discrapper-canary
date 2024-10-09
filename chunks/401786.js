@@ -21,8 +21,8 @@ var n,
     S = t(600164),
     I = t(374649),
     N = t(431369),
-    A = t(55610),
-    C = t(653798),
+    C = t(55610),
+    A = t(653798),
     m = t(311821),
     g = t(42818),
     h = t(314884),
@@ -65,7 +65,7 @@ function Z(e) {
                                   ? P.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_INVENTORY.format({ endDate: s.currentPeriodEnd })
                                   : P.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_GUILD.format({ endDate: s.currentPeriodEnd })
                     }),
-                    (0, i.jsx)(A.Z, { fromBoostCancelModal: !0 })
+                    (0, i.jsx)(C.Z, { fromBoostCancelModal: !0 })
                 ]
             }),
             s.isPurchasedExternally
@@ -106,7 +106,7 @@ async function v(e, s, t, n) {
 function j(e) {
     var s, t, n;
     let { premiumSubscription: a, guildBoostSlotId: o, onBack: l, onNext: _, onClose: u } = e,
-        [A, h] = r.useState(!1),
+        [C, h] = r.useState(!1),
         [p, R] = r.useMemo(() => {
             try {
                 return [(0, N.g)(a, -1), !1];
@@ -167,11 +167,11 @@ function j(e) {
                 className: b.body,
                 children: [
                     (0, i.jsx)('div', { children: P.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_PREVIEW.format({ endDate: G.subscriptionPeriodStart }) }),
-                    (0, i.jsxs)(C.PO, {
+                    (0, i.jsxs)(A.PO, {
                         className: b.invoiceTable,
                         children: [
-                            (0, i.jsx)(C.q9, { children: P.Z.Messages.PREMIUM_SUBSCRIPTION_UPDATES }),
-                            (0, i.jsx)(C.R$, {
+                            (0, i.jsx)(A.q9, { children: P.Z.Messages.PREMIUM_SUBSCRIPTION_UPDATES }),
+                            (0, i.jsx)(A.R$, {
                                 label: P.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format({ subscriptionCount: 1 }),
                                 value: (0, M.og)((0, M.T4)(V, a.currency), Y, k),
                                 className: b.invoiceCancelRow
@@ -179,7 +179,7 @@ function j(e) {
                             null != U && U.length > 0
                                 ? (0, i.jsxs)('div', {
                                       children: [
-                                          (0, i.jsx)(C.KU, {}),
+                                          (0, i.jsx)(A.KU, {}),
                                           (0, i.jsx)(g.nd, {
                                               premiumSubscription: a,
                                               renewalInvoice: G,
@@ -198,7 +198,7 @@ function j(e) {
                 children: [
                     (0, i.jsx)(d.Button, {
                         color: d.Button.Colors.RED,
-                        disabled: A,
+                        disabled: C,
                         onClick: async () => {
                             try {
                                 h(!0), await v(a, p, j, o), _();

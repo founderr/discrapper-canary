@@ -41,7 +41,7 @@ function N() {
             }),
             r.length > 0
                 ? r.map((s) => {
-                      let t = s.experiment.type === T.xY.GUILD ? C : A;
+                      let t = s.experiment.type === T.xY.GUILD ? A : C;
                       return (0, n.jsx)(
                           t,
                           {
@@ -62,12 +62,12 @@ function N() {
         ]
     });
 }
-function A(e) {
+function C(e) {
     var s;
     let { experiment: t, experimentId: i, overrideDescriptor: _ } = e,
         [u, E] = a.useState(null != _),
-        [N, A] = a.useState(!1),
-        C = a.useCallback(() => {
+        [N, C] = a.useState(!1),
+        A = a.useCallback(() => {
             E((e) => !e);
         }, []),
         m = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)),
@@ -84,7 +84,7 @@ function A(e) {
                 })
         ),
         O = (0, n.jsx)(l.Clickable, {
-            onClick: C,
+            onClick: A,
             children: (0, n.jsxs)(l.FormTitle, {
                 tag: l.FormTitleTags.H3,
                 className: S.title,
@@ -191,7 +191,7 @@ function A(e) {
                                     className: S.debugButton,
                                     size: l.Button.Sizes.SMALL,
                                     look: l.Button.Looks.BLANK,
-                                    onClick: () => A(!0),
+                                    onClick: () => C(!0),
                                     children: 'More Details \xBB'
                                 })
                       ]
@@ -204,11 +204,11 @@ function A(e) {
               children: (0, n.jsx)(l.FormSection, { children: O })
           });
 }
-function C(e) {
+function A(e) {
     let { experiment: s, experimentId: t, overrideDescriptor: i } = e,
         [u, E] = a.useState(null != i),
-        [N, A] = a.useState(!1),
-        C = a.useCallback(() => {
+        [N, C] = a.useState(!1),
+        A = a.useCallback(() => {
             E((e) => !e);
         }, []),
         m = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(t)),
@@ -244,7 +244,7 @@ function C(e) {
             ];
         }),
         p = (0, n.jsx)(l.Clickable, {
-            onClick: C,
+            onClick: A,
             children: (0, n.jsxs)(l.FormTitle, {
                 tag: l.FormTitleTags.H3,
                 className: S.title,
@@ -361,7 +361,7 @@ function C(e) {
                                     className: S.debugButton,
                                     size: l.Button.Sizes.SMALL,
                                     look: l.Button.Looks.BLANK,
-                                    onClick: () => A(!0),
+                                    onClick: () => C(!0),
                                     children: 'More Details \xBB'
                                 })
                       ]

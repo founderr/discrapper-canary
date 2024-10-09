@@ -18,8 +18,8 @@ var n = t(735250),
     S = t(779618),
     I = t(39604),
     N = t(703288),
-    A = t(491758),
-    C = t(183632),
+    C = t(491758),
+    A = t(183632),
     m = t(689938),
     g = t(590288),
     h = t(595362),
@@ -53,7 +53,7 @@ function p(e) {
                             M &&
                             (0, n.jsxs)('form', {
                                 onSubmit: (e) => e.preventDefault(),
-                                children: [(0, n.jsx)(A.Z, {}), (0, n.jsx)(C.Z, {})]
+                                children: [(0, n.jsx)(C.Z, {}), (0, n.jsx)(A.Z, {})]
                             })
                     }),
                 M && (0, n.jsx)(o.FormDivider, {}),

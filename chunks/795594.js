@@ -14,8 +14,8 @@ var n = t(735250),
     S = t(230711),
     I = t(497321),
     N = t(468026),
-    A = t(317381),
-    C = t(513202),
+    C = t(317381),
+    A = t(513202),
     m = t(979200),
     g = t(600164),
     h = t(713938),
@@ -281,7 +281,7 @@ s.Z = () => {
     let e = (0, d.e7)([p.Z], () => p.Z.hidePersonalInformation),
         s = (0, d.e7)([O.Z], () => O.Z.getApps()),
         i = (0, d.e7)([D.default], () => D.default.locale),
-        r = (0, d.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities());
+        r = (0, d.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivities());
     a.useEffect(() => {
         T.Z.fetch();
     }, []);
@@ -290,7 +290,7 @@ s.Z = () => {
             T.Z.delete(s), x.S.safeDispatch(v.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: t.id });
             let n = r.get(t.id);
             null != n &&
-                C.Z.leaveActivity({
+                A.Z.leaveActivity({
                     channelId: n.channelId,
                     applicationId: t.id,
                     showFeedback: !1

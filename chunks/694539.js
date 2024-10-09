@@ -14,8 +14,8 @@ var n = t(735250),
     S = t(477146),
     I = t(329156),
     N = t(661065),
-    A = t(346537),
-    C = t(830318);
+    C = t(346537),
+    A = t(830318);
 let m = (e) => {
     let [s, t] = e.split(','),
         n = atob(t),
@@ -73,7 +73,7 @@ s.Z = (e) => {
                               className: r()(N.col, N.preview),
                               children: [
                                   (0, n.jsx)('img', {
-                                      src: R ? A : C,
+                                      src: R ? C : A,
                                       alt: '',
                                       width: 450
                                   }),

@@ -98,8 +98,8 @@ function N(e) {
         E(!0);
     }, [E]);
     if (null == C) return null;
-    let x = f(d.gc.LIST),
-        v = f(d.gc.APPLICATION);
+    let v = f(d.gc.LIST),
+        x = f(d.gc.APPLICATION);
     return (0, i.jsxs)(l.Slides, {
         activeSlide: C.type,
         width: _.Gy,
@@ -126,14 +126,14 @@ function N(e) {
                     className: h.slideContent,
                     style: A,
                     children:
-                        null != x &&
+                        null != v &&
                         (0, i.jsx)(p.Z, {
                             channel: n,
                             entrypoint: t,
-                            title: x.title,
-                            look: x.look,
-                            items: x.items,
-                            sectionName: x.sectionName
+                            title: v.title,
+                            look: v.look,
+                            items: v.items,
+                            sectionName: v.sectionName
                         })
                 })
             }),
@@ -143,11 +143,11 @@ function N(e) {
                     className: h.slideContent,
                     style: A,
                     children:
-                        null != v &&
+                        null != x &&
                         (0, i.jsx)(u.Z, {
                             channel: n,
-                            application: v.application,
-                            sectionName: v.sectionName
+                            application: x.application,
+                            sectionName: x.sectionName
                         })
                 })
             })

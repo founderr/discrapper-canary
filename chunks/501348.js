@@ -19,8 +19,8 @@ var n = t(735250),
     S = t(607070),
     I = t(627845),
     N = t(514361),
-    A = t(600164),
-    C = t(313201),
+    C = t(600164),
+    A = t(313201),
     m = t(605236),
     g = t(786761),
     h = t(3148),
@@ -59,9 +59,9 @@ let Y = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    k = (0, C.hQ)(),
-    w = (0, C.hQ)(),
-    H = (0, C.hQ)(),
+    k = (0, A.hQ)(),
+    w = (0, A.hQ)(),
+    H = (0, A.hQ)(),
     W = '1337',
     K = (e) => {
         let s = 0;
@@ -170,8 +170,8 @@ class Q extends a.Component {
                     className: y.marginBottom8,
                     children: G.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
                 }),
-                (0, n.jsx)(A.Z, {
-                    align: A.Z.Align.CENTER,
+                (0, n.jsx)(C.Z, {
+                    align: C.Z.Align.CENTER,
                     children: (0, n.jsx)(d.Slider, {
                         className: r()(y.marginTop20, y.marginBottom4),
                         initialValue: this.props.fontSize,

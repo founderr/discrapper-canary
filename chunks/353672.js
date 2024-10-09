@@ -3,40 +3,40 @@ s.d(t, {
         return _;
     }
 });
-var T = s(735250);
+var o = s(735250);
 s(470079);
-var o = s(120356),
-    a = s.n(o),
-    n = s(481060),
+var T = s(120356),
+    n = s.n(T),
+    a = s(481060),
     l = s(32501);
 function _(e) {
-    let { tips: t, className: s, headerText: o } = e;
-    return (0, T.jsxs)('div', {
-        className: a()(l.tipsSection, s),
+    let { tips: t, className: s, headerText: T } = e;
+    return (0, o.jsxs)('div', {
+        className: n()(l.tipsSection, s),
         children: [
-            (0, T.jsx)('div', {
+            (0, o.jsx)('div', {
                 className: l.tipsHeader,
-                children: (0, T.jsx)(n.Heading, {
+                children: (0, o.jsx)(a.Heading, {
                     variant: 'heading-lg/bold',
                     className: l.headerText,
-                    children: o
+                    children: T
                 })
             }),
-            (0, T.jsx)('ul', {
+            (0, o.jsx)('ul', {
                 className: l.tipsList,
                 children: t.map((e, t) =>
-                    (0, T.jsxs)(
+                    (0, o.jsxs)(
                         'li',
                         {
                             className: l.tipRow,
                             children: [
-                                (0, T.jsx)(n.Heading, {
+                                (0, o.jsx)(a.Heading, {
                                     variant: 'heading-md/semibold',
                                     color: 'text-brand',
                                     className: l.tipNumber,
                                     children: t + 1
                                 }),
-                                (0, T.jsx)(n.Text, {
+                                (0, o.jsx)(a.Text, {
                                     variant: 'text-sm/medium',
                                     children: e
                                 })

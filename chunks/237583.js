@@ -1,39 +1,39 @@
-t(653041), t(47120);
-var a,
-    r = t(735250),
-    s = t(470079),
-    i = t(120356),
-    o = t.n(i),
-    l = t(481060),
-    c = t(598077),
-    d = t(908860),
-    u = t(579861);
-function _(e, n, t) {
+a(653041), a(47120);
+var t,
+    r = a(735250),
+    s = a(470079),
+    i = a(120356),
+    o = a.n(i),
+    l = a(481060),
+    c = a(598077),
+    d = a(908860),
+    u = a(579861);
+function _(e, n, a) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
-                  value: t,
+                  value: a,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = t),
+            : (e[n] = a),
         e
     );
 }
-class E extends (a = s.PureComponent) {
+class E extends (t = s.PureComponent) {
     renderUsers() {
-        let { users: e, max: n, renderUser: t = this.defaultRenderUser, renderMoreUsers: a } = this.props,
+        let { users: e, max: n, renderUser: a = this.defaultRenderUser, renderMoreUsers: t } = this.props,
             r = [],
             s = e.length === n ? e.length : n - 1,
             i = 0;
         for (; i < s && i < e.length; ) {
             let n = i === e.length - 1;
-            r.push(t(e[i] || null, n ? null : d.avatarMasked, 'user-'.concat(i), n)), i++;
+            r.push(a(e[i] || null, n ? null : d.avatarMasked, 'user-'.concat(i), n)), i++;
         }
         if (i < e.length) {
             let n = Math.min(e.length - i, 99);
-            r.push(a('+'.concat(n), d.moreUsers, 'more-users', n));
+            r.push(t('+'.concat(n), d.moreUsers, 'more-users', n));
         }
         return r;
     }
@@ -61,11 +61,11 @@ class E extends (a = s.PureComponent) {
     constructor(...e) {
         super(...e),
             _(this, '_ref', void 0),
-            _(this, 'defaultRenderUser', (e, n, t, a) => {
+            _(this, 'defaultRenderUser', (e, n, a, t) => {
                 let { onClick: s, size: i, guildId: _ } = this.props,
                     E = e instanceof c.Z ? e : null != e ? e.user : null;
                 return null == E
-                    ? (0, r.jsx)('div', { className: o()(d.emptyUser, n) }, t)
+                    ? (0, r.jsx)('div', { className: o()(d.emptyUser, n) }, a)
                     : (0, r.jsx)(
                           l.Avatar,
                           {
@@ -83,14 +83,14 @@ class E extends (a = s.PureComponent) {
 }
 _(E, 'defaultProps', {
     max: 10,
-    renderMoreUsers: function (e, n, t) {
+    renderMoreUsers: function (e, n, a) {
         return (0, r.jsx)(
             'div',
             {
                 className: n,
                 children: e
             },
-            t
+            a
         );
     },
     size: l.AvatarSizes.SIZE_24

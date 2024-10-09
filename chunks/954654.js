@@ -1,9 +1,9 @@
 t.d(n, {
     ZP: function () {
-        return x;
+        return E;
     },
     xX: function () {
-        return I;
+        return x;
     }
 });
 var l = t(735250);
@@ -17,13 +17,13 @@ var i = t(120356),
     u = t(574597),
     d = t(378975),
     m = t(413991),
-    _ = t(12067),
-    f = t(676149),
+    f = t(12067),
+    _ = t(676149),
     p = t(861529),
     C = t(770009),
     h = t(889515),
-    E = t(915689);
-function I(e) {
+    I = t(915689);
+function x(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
@@ -32,7 +32,7 @@ function I(e) {
                         h.Z,
                         {
                             ...e,
-                            renderComponents: I
+                            renderComponents: x
                         },
                         n
                     );
@@ -51,25 +51,25 @@ function I(e) {
                 case r.re.TEXT:
                     return (0, l.jsx)(p.Z, { ...e }, n);
                 case r.re.MEDIA_GALLERY:
-                    return (0, l.jsx)(_.Z, { ...e }, n);
-                case r.re.SEPARATOR:
                     return (0, l.jsx)(f.Z, { ...e }, n);
+                case r.re.SEPARATOR:
+                    return (0, l.jsx)(_.Z, { ...e }, n);
                 case r.re.CONTENT_INVENTORY_ENTRY:
                     return (0, l.jsx)(C.Z, { ...e }, n);
             }
         })(e, n.toString())
     );
 }
-function x(e) {
+function E(e) {
     let { message: n } = e,
         { components: t } = n;
     return 0 === t.length
         ? null
         : (0, l.jsx)('div', {
-              className: a()([E.container, { [E.containerUikit]: n.isUIKitComponents() }]),
+              className: a()([I.container, { [I.containerUikit]: n.isUIKitComponents() }]),
               children: (0, l.jsx)(o.Il, {
                   message: n,
-                  children: I(t)
+                  children: x(t)
               })
           });
 }

@@ -20,7 +20,7 @@ function h(e) {
     var n;
     let { command: t, application: h, onClick: f, query: A, searchResultsPosition: E } = e,
         N = s.Sb.useSetting(),
-        x = a.useCallback(
+        v = a.useCallback(
             (e) => {
                 if ((0, d.BQ)(h) && N) {
                     let n = h instanceof c.Z ? h : c.Z.createFromServer(h);
@@ -34,13 +34,13 @@ function h(e) {
             },
             [h, N]
         ),
-        { iconURL: v, name: I, description: g } = a.useMemo(() => (0, d.sl)(h, { fakeAppIconURL: C }), [h]),
-        P = a.useMemo(() => {
+        { iconURL: x, name: I, description: P } = a.useMemo(() => (0, d.sl)(h, { fakeAppIconURL: C }), [h]),
+        g = a.useMemo(() => {
             var e;
-            let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : g;
+            let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : P;
             return null == n ? null : (0, u.ae)(n, void 0);
-        }, [g, null == t ? void 0 : t.displayDescription]),
-        { trackSearchResultsItemImpressionRef: L } = (0, p.Z)({
+        }, [P, null == t ? void 0 : t.displayDescription]),
+        { trackSearchResultsItemImpressionRef: T } = (0, p.Z)({
             applicationId: h.id,
             commandId: null == t ? void 0 : t.id,
             query: A,
@@ -48,14 +48,14 @@ function h(e) {
         });
     return (0, i.jsx)(l.Clickable, {
         className: _.clickable,
-        innerRef: (e) => (L.current = e),
+        innerRef: (e) => (T.current = e),
         onClick: f,
-        onContextMenu: x,
+        onContextMenu: v,
         children: (0, i.jsxs)(l.FocusBlock, {
             className: _.focusBlock,
             children: [
                 (0, i.jsx)(m.Z, {
-                    src: v,
+                    src: x,
                     className: _.icon,
                     'aria-hidden': !0,
                     rendersPlaceholder: !0
@@ -73,7 +73,7 @@ function h(e) {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
-                            children: P
+                            children: g
                         })
                     ]
                 }),

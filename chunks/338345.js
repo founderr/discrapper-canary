@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return C;
     }
 });
 var n = t(735250);
@@ -19,8 +19,8 @@ var a = t(120356),
     S = t(689938),
     I = t(414068),
     N = t(113207);
-function A() {
-    let { enabled: e, autoToggle: s, hideInstantInvites: a, hidePersonalInformation: A, disableSounds: C, disableNotifications: m, enableContentProtection: g } = (0, r.cj)([_.Z], () => ({ ..._.Z.getSettings() })),
+function C() {
+    let { enabled: e, autoToggle: s, hideInstantInvites: a, hidePersonalInformation: C, disableSounds: A, disableNotifications: m, enableContentProtection: g } = (0, r.cj)([_.Z], () => ({ ..._.Z.getSettings() })),
         h = (e, s) => {
             l.Z.update({ [e]: s });
         };
@@ -78,7 +78,7 @@ function A() {
                     (0, n.jsx)(d.F, {
                         setting: E.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
                         children: (0, n.jsx)(o.FormSwitch, {
-                            value: A,
+                            value: C,
                             onChange: (e) => h('hidePersonalInformation', e),
                             note: S.Z.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
                             children: S.Z.Messages.HIDE_PERSONAL_INFORMATION_LABEL
@@ -96,7 +96,7 @@ function A() {
                     (0, n.jsx)(d.F, {
                         setting: E.s6.STREAMER_MODE_DISABLE_SOUNDS,
                         children: (0, n.jsx)(o.FormSwitch, {
-                            value: C,
+                            value: A,
                             onChange: (e) => h('disableSounds', e),
                             note: S.Z.Messages.DISABLE_SOUNDS_DESCRIPTION,
                             children: S.Z.Messages.DISABLE_SOUNDS_LABEL

@@ -18,8 +18,8 @@ var n = t(735250),
     S = t(626135),
     I = t(981631),
     N = t(474936),
-    A = t(689938),
-    C = t(444298),
+    C = t(689938),
+    A = t(444298),
     m = t(113207);
 let g = () => {
         (0, d.nJ)(), (0, o.xf)();
@@ -43,24 +43,24 @@ let g = () => {
                     });
             }, []),
             (0, n.jsxs)('div', {
-                className: C.selectionGroup,
+                className: A.selectionGroup,
                 children: [
                     (0, n.jsx)(u.Z, {
                         disabled: s && !t,
                         renderCTAButtons: () =>
                             (0, n.jsxs)('div', {
-                                className: C.tryItOutButtons,
+                                className: A.tryItOutButtons,
                                 children: [
                                     (0, n.jsx)(r.Button, {
                                         color: !t && s ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
                                         onClick: () => g(),
-                                        children: t ? A.Z.Messages.PREVIEW : A.Z.Messages.APP_ICON_PREVIEW_TITLE
+                                        children: t ? C.Z.Messages.PREVIEW : C.Z.Messages.APP_ICON_PREVIEW_TITLE
                                     }),
                                     s
                                         ? (0, n.jsx)(T.Z, {
                                               showGradient: t,
                                               subscriptionTier: N.Si.TIER_2,
-                                              buttonText: t ? A.Z.Messages.PREMIUM_UPSELL_GET_NITRO : A.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+                                              buttonText: t ? C.Z.Messages.PREMIUM_UPSELL_GET_NITRO : C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
                                           })
                                         : null
                                 ]

@@ -35,7 +35,7 @@ s.Z = a.memo(function (e) {
                 }, []),
             [s]
         ),
-        A = a.useCallback(
+        C = a.useCallback(
             (e) => {
                 var s, a;
                 if (null == e) return null;
@@ -55,12 +55,12 @@ s.Z = a.memo(function (e) {
             },
             [t]
         ),
-        C = a.useCallback(
+        A = a.useCallback(
             (e) => {
                 let s = e[0];
-                return null == s ? null : (0, n.jsx)(n.Fragment, { children: A(s) });
+                return null == s ? null : (0, n.jsx)(n.Fragment, { children: C(s) });
             },
-            [A]
+            [C]
         ),
         m = a.useCallback((e) => (0, d.nE)(e, !0, E.Sbl.USER_SETTINGS), []),
         g = a.useCallback((e) => e === o, [o]),
@@ -81,8 +81,8 @@ s.Z = a.memo(function (e) {
                 isSelected: g,
                 options: N,
                 select: m,
-                renderOptionValue: C,
-                renderOptionLabel: A,
+                renderOptionValue: A,
+                renderOptionLabel: C,
                 serialize: h,
                 clear: O,
                 clearable: null != o

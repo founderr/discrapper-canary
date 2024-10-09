@@ -30,13 +30,13 @@ var n = t(735250),
     S = t(883904),
     I = t(68985),
     N = t(211644),
-    A = t(804501),
-    C = t(957436),
+    C = t(804501),
+    A = t(957436),
     m = t(113207);
 function g(e) {
     let { contents: s, content: t, onChange: a } = e,
         i = l.z[t],
-        { isDismissed: r, handleToggleDismissState: o } = (0, A.x)(i, s);
+        { isDismissed: r, handleToggleDismissState: o } = (0, C.x)(i, s);
     return (0, n.jsx)(n.Fragment, {
         children: (0, n.jsx)(d.FormSwitch, {
             value: r,
@@ -76,7 +76,7 @@ function O() {
             dailyCapReached: I.Z.hasUserHitDCCap(),
             dailyCapOverridden: I.Z.dailyCapOverridden
         })),
-        [u, A] = a.useState(''),
+        [u, C] = a.useState(''),
         g =
             null !==
                 (e = (0, o.e7)([T.Z], () => {
@@ -152,11 +152,11 @@ function O() {
                         className: m.marginBottom20,
                         size: d.SearchBar.Sizes.LARGE,
                         query: u,
-                        onChange: A,
-                        onClear: () => A('')
+                        onChange: C,
+                        onClear: () => C('')
                     }),
                     (0, n.jsxs)(d.FormItem, {
-                        className: C.buttonsContainer,
+                        className: A.buttonsContainer,
                         children: [
                             (0, n.jsx)(d.Button, {
                                 onClick: E.sr,

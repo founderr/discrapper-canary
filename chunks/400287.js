@@ -24,8 +24,8 @@ function N() {
         t = u.R$.useSetting(),
         a = u.cC.useSetting(),
         N = u.vF.useSetting(),
-        A = u.H1.useSetting(),
-        C = u.ev.useSetting(),
+        C = u.H1.useSetting(),
+        A = u.ev.useSetting(),
         m = u.x4.useSetting(),
         g = u.RS.useSetting(),
         h = u.NA.useSetting(),
@@ -65,7 +65,7 @@ function N() {
                         setting: E.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
                         children: (0, n.jsx)(r.FormSwitch, {
                             className: i()(I.marginTop8, I.marginBottom40),
-                            value: A,
+                            value: C,
                             note: S.Z.Messages.IMAGE_DESCRIPTION_HELP,
                             onChange: u.H1.updateSetting,
                             children: S.Z.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS
@@ -111,7 +111,7 @@ function N() {
                         setting: E.s6.CHAT_EMOJI_EMOTICONS,
                         children: (0, n.jsx)(r.FormSwitch, {
                             className: I.marginBottom40,
-                            value: C,
+                            value: A,
                             note: c.Z.parse(S.Z.Messages.CONVERT_EMOTICONS_HELP),
                             onChange: u.ev.updateSetting,
                             children: S.Z.Messages.CONVERT_EMOTICONS

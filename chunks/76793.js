@@ -21,8 +21,8 @@ var n = t(735250),
     S = t(594174),
     I = t(51144),
     N = t(689938),
-    A = t(8007),
-    C = t(113207);
+    C = t(8007),
+    A = t(113207);
 function m(e) {
     let { userId: s, count: t } = e,
         c = (0, i.e7)([S.default], () => S.default.getUser(s)),
@@ -36,19 +36,19 @@ function m(e) {
             (0, o.PR)(s);
         }, [s]),
         (0, n.jsxs)('div', {
-            className: A.section,
+            className: C.section,
             children: [
                 null != c &&
                     (0, n.jsx)(l.Z, {
-                        className: A.avatar,
+                        className: C.avatar,
                         user: c,
                         size: r.AvatarSizes.SIZE_40
                     }),
                 (0, n.jsxs)('div', {
-                    className: A.text,
+                    className: C.text,
                     children: [
                         (0, n.jsx)(r.Clickable, {
-                            className: A.username,
+                            className: C.username,
                             onClick: E,
                             children: (0, n.jsx)(r.Text, {
                                 variant: 'text-md/semibold',
@@ -65,7 +65,7 @@ function m(e) {
                 }),
                 (0, n.jsx)(r.Clickable, {
                     onClick: u,
-                    className: A.sectionIconContainer,
+                    className: C.sectionIconContainer,
                     children: (0, n.jsx)(r.TrashIcon, { size: 'xs' })
                 })
             ]
@@ -82,7 +82,7 @@ function g(e) {
         className: s,
         children: [
             (0, n.jsxs)('div', {
-                className: A.text,
+                className: C.text,
                 children: [
                     (0, n.jsx)(r.Text, {
                         variant: 'text-sm/semibold',
@@ -97,7 +97,7 @@ function g(e) {
                 ]
             }),
             (0, n.jsx)(r.Clickable, {
-                className: A.icon,
+                className: C.icon,
                 onClick: c,
                 children: (0, n.jsx)(r.XSmallIcon, {
                     size: 'md',
@@ -122,12 +122,12 @@ function h(e) {
                     {
                         children: [
                             (0, n.jsx)(g, {
-                                className: A.row,
+                                className: C.row,
                                 userId: s,
                                 index: i,
                                 verification: e
                             }),
-                            i !== t.length - 1 && (0, n.jsx)('div', { className: A.divider })
+                            i !== t.length - 1 && (0, n.jsx)('div', { className: C.divider })
                         ]
                     },
                     ''.concat(i, '-').concat(e.timestamp)
@@ -143,11 +143,11 @@ function O(e) {
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsxs)(r.FormItem, {
-                      className: C.marginBottom20,
+                      className: A.marginBottom20,
                       children: [
                           (0, n.jsx)(r.FormTitle, {
                               tag: r.FormTitleTags.H5,
-                              className: C.marginBottom8,
+                              className: A.marginBottom8,
                               children: N.Z.Messages.E2EE_VERIFIED_DEVICES
                           }),
                           (0, n.jsx)(r.FormText, {
@@ -160,7 +160,7 @@ function O(e) {
                       (0, n.jsx)(
                           'div',
                           {
-                              className: A.item,
+                              className: C.item,
                               children: (0, n.jsx)(h, { userId: e })
                           },
                           e
@@ -180,14 +180,14 @@ function p() {
                 children: [
                     (0, n.jsx)(r.FormText, {
                         type: r.FormTextTypes.DESCRIPTION,
-                        className: C.marginBottom20,
+                        className: A.marginBottom20,
                         children: N.Z.Messages.E2EE_SETTINGS_SUBTITLE.format({ helpArticle: (0, _.uV)() })
                     }),
                     (0, n.jsxs)(r.FormItem, {
                         children: [
                             (0, n.jsx)(r.FormTitle, {
                                 tag: r.FormTitleTags.H5,
-                                className: C.marginBottom8,
+                                className: A.marginBottom8,
                                 children: N.Z.Messages.E2EE_VERIFICATION_CODES
                             }),
                             (0, n.jsx)(r.FormSwitch, {

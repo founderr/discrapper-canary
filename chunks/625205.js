@@ -20,8 +20,8 @@ var a = t(392711),
     S = t(962100),
     I = t(65154),
     N = t(689938),
-    A = t(416805),
-    C = t(113207);
+    C = t(416805),
+    A = t(113207);
 function m() {
     let e, s;
     let { analyticsLocations: a } = (0, d.ZP)(),
@@ -42,13 +42,13 @@ function m() {
     !g &&
         (e = (0, n.jsx)(l.FormText, {
             type: l.FormText.Types.DESCRIPTION,
-            className: C.marginTop8,
+            className: A.marginTop8,
             children: N.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, S.y)('Help Text Input Devices') })
         })),
         !h &&
             (s = (0, n.jsx)(l.FormText, {
                 type: l.FormText.Types.DESCRIPTION,
-                className: C.marginTop8,
+                className: A.marginTop8,
                 children: N.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, S.y)('Help Text Output Devices') })
             }));
     let M = i()(R).values().first(),
@@ -63,16 +63,16 @@ function m() {
             s = (0, n.jsx)('img', {
                 src: e,
                 alt: 'Certified',
-                className: A.deviceOptionCertified
+                className: C.deviceOptionCertified
             });
         }
         return (0, n.jsxs)(
             'span',
             {
-                className: A.deviceOption,
+                className: C.deviceOption,
                 children: [
                     (0, n.jsx)('span', {
-                        className: A.deviceOptionLabel,
+                        className: C.deviceOptionLabel,
                         children: u.Z.getCertifiedDeviceName(i, a)
                     }),
                     s
@@ -85,14 +85,14 @@ function m() {
         return P(e[0]);
     }
     return (0, n.jsxs)(_.Z, {
-        className: C.marginBottom20,
+        className: A.marginBottom20,
         children: [
             (0, n.jsxs)(_.Z.Child, {
                 basis: '50%',
                 children: [
                     (0, n.jsx)(l.FormTitle, {
                         tag: l.FormTitleTags.H5,
-                        className: C.marginBottom8,
+                        className: A.marginBottom8,
                         children: N.Z.Messages.FORM_LABEL_INPUT_DEVICE
                     }),
                     (0, n.jsx)(l.SingleSelect, {
@@ -121,7 +121,7 @@ function m() {
                 children: [
                     (0, n.jsx)(l.FormTitle, {
                         tag: l.FormTitleTags.H5,
-                        className: C.marginBottom8,
+                        className: A.marginBottom8,
                         children: N.Z.Messages.FORM_LABEL_OUTPUT_DEVICE
                     }),
                     (0, n.jsx)(l.SingleSelect, {

@@ -1,14 +1,14 @@
 s.r(t),
     s.d(t, {
         SafetyToolsSlides: function () {
-            return T;
+            return o;
         }
     }),
     s(47120);
-var T,
-    o,
-    a = s(735250),
-    n = s(470079),
+var o,
+    T,
+    n = s(735250),
+    a = s(470079),
     l = s(481060),
     _ = s(600164),
     i = s(367408),
@@ -16,117 +16,117 @@ var T,
     S = s(419672),
     E = s(858597),
     c = s(486213),
-    O = s(689938),
-    d = s(97694);
-((o = T || (T = {})).ACTIONS = 'ACTIONS'), (o.SAFETY_TIPS = 'SAFETY_TIPS'), (o.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS');
+    u = s(689938),
+    O = s(97694);
+((T = o || (o = {})).ACTIONS = 'ACTIONS'), (T.SAFETY_TIPS = 'SAFETY_TIPS'), (T.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS');
 t.default = (e) => {
-    let { onClose: t, channelId: s, warningId: T, warningType: o, otherUserId: u, transitionState: A } = e,
+    let { onClose: t, channelId: s, warningId: o, warningType: T, otherUserId: d, transitionState: A } = e,
         I = null != (0, i.M)(s),
-        [L, N] = n.useState('ACTIONS'),
-        C = n.useCallback(
+        [L, C] = a.useState('ACTIONS'),
+        N = a.useCallback(
             (e) => {
                 (0, r.qc)({
                     channelId: s,
-                    warningId: T,
-                    warningType: o,
-                    senderId: u,
+                    warningId: o,
+                    warningType: T,
+                    senderId: d,
                     cta: e,
                     isNudgeWarning: I
                 });
             },
-            [s, T, o, u, I]
+            [s, o, T, d, I]
         ),
-        R = n.useCallback((e) => {
+        R = a.useCallback((e) => {
             let { text: t, onClick: s } = e;
-            return (0, a.jsx)(l.Button, {
+            return (0, n.jsx)(l.Button, {
                 look: l.Button.Looks.LINK,
                 size: l.Button.Sizes.MIN,
                 onClick: s,
                 color: l.Button.Colors.CUSTOM,
-                className: d.footerLink,
+                className: O.footerLink,
                 children: t
             });
         }, []),
-        x = n.useCallback(() => {
+        x = a.useCallback(() => {
             switch (L) {
                 case 'SAFETY_TIPS':
                 case 'ABOUT_SAFETY_ALERTS':
-                    return (0, a.jsx)(R, {
-                        text: O.Z.Messages.BACK,
-                        onClick: () => N('ACTIONS')
+                    return (0, n.jsx)(R, {
+                        text: u.Z.Messages.BACK,
+                        onClick: () => C('ACTIONS')
                     });
                 default:
                     return null;
             }
         }, [L, R]),
-        M = n.useCallback(() => {
+        M = a.useCallback(() => {
             switch (L) {
                 case 'SAFETY_TIPS':
-                    return O.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE;
+                    return u.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE;
                 case 'ABOUT_SAFETY_ALERTS':
-                    return O.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE;
+                    return u.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE;
                 default:
-                    return O.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_HEADER;
+                    return u.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_HEADER;
             }
         }, [L]),
-        F = n.useCallback(
+        F = a.useCallback(
             (e) => {
-                N(e);
+                C(e);
             },
-            [N]
+            [C]
         );
-    return (0, a.jsxs)(l.ModalRoot, {
+    return (0, n.jsxs)(l.ModalRoot, {
         transitionState: A,
-        'aria-label': O.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_HEADER,
+        'aria-label': u.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_HEADER,
         size: l.ModalSize.SMALL,
         children: [
-            (0, a.jsx)(l.ModalHeader, {
+            (0, n.jsx)(l.ModalHeader, {
                 separator: !1,
-                className: d.modalHeader,
+                className: O.modalHeader,
                 justify: _.Z.Justify.CENTER,
-                children: (0, a.jsx)(l.Heading, {
+                children: (0, n.jsx)(l.Heading, {
                     variant: 'heading-xl/semibold',
                     children: M()
                 })
             }),
-            (0, a.jsx)(l.Scroller, {
-                children: (0, a.jsxs)(l.Slides, {
+            (0, n.jsx)(l.Scroller, {
+                children: (0, n.jsxs)(l.Slides, {
                     activeSlide: L,
                     width: 440,
                     children: [
-                        (0, a.jsx)(l.Slide, {
+                        (0, n.jsx)(l.Slide, {
                             id: 'ACTIONS',
-                            children: (0, a.jsx)(E.Z, {
-                                otherUserId: u,
+                            children: (0, n.jsx)(E.Z, {
+                                otherUserId: d,
                                 channelId: s,
-                                warningId: T,
-                                warningType: o,
+                                warningId: o,
+                                warningType: T,
                                 transitionToSlide: F
                             })
                         }),
-                        (0, a.jsx)(l.Slide, {
+                        (0, n.jsx)(l.Slide, {
                             id: 'ABOUT_SAFETY_ALERTS',
-                            children: (0, a.jsx)(S.Z, {
+                            children: (0, n.jsx)(S.Z, {
                                 channelId: s,
                                 onClose: () => {
-                                    t(), C(r.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
+                                    t(), N(r.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
                                 }
                             })
                         }),
-                        (0, a.jsx)(l.Slide, {
+                        (0, n.jsx)(l.Slide, {
                             id: 'SAFETY_TIPS',
-                            children: (0, a.jsx)(c.Z, {})
+                            children: (0, n.jsx)(c.Z, {})
                         })
                     ]
                 })
             }),
-            (0, a.jsxs)(l.ModalFooter, {
+            (0, n.jsxs)(l.ModalFooter, {
                 justify: _.Z.Justify.BETWEEN,
                 children: [
-                    (0, a.jsx)(R, {
-                        text: O.Z.Messages.CLOSE,
+                    (0, n.jsx)(R, {
+                        text: u.Z.Messages.CLOSE,
                         onClick: () => {
-                            t(), C(r.NM.USER_SAFETY_TOOLS_DISMISS);
+                            t(), N(r.NM.USER_SAFETY_TOOLS_DISMISS);
                         }
                     }),
                     x()

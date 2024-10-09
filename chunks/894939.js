@@ -19,8 +19,8 @@ var n = t(735250),
     S = t(893663),
     I = t(331642),
     N = t(63063),
-    A = t(581883),
-    C = t(918257),
+    C = t(581883),
+    A = t(918257),
     m = t(726985),
     g = t(981631),
     h = t(710111),
@@ -38,10 +38,10 @@ function M() {
     let { analyticsLocations: e } = (0, l.ZP)(),
         [s, t] = a.useState(h.hY),
         o = (0, S.tT)(s),
-        A = x(o),
+        C = x(o),
         M = (0, i.e7)([E.Z], () => E.Z.hasFetchedAllSounds()),
         D = (null == o ? void 0 : o.type) === S.zx.GLOBAL,
-        L = M && null != o && null == A;
+        L = M && null != o && null == C;
     a.useEffect(() => {
         L && (0, T.tt)({ location: e });
     }, [L, e]),
@@ -60,7 +60,7 @@ function M() {
         children: [
             (0, n.jsx)(_.F, {
                 setting: m.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                children: (0, n.jsx)(C.Z, {})
+                children: (0, n.jsx)(A.Z, {})
             }),
             (0, n.jsxs)(_.F, {
                 setting: m.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
@@ -101,7 +101,7 @@ function M() {
                         forcedDivider: !0,
                         children: [
                             (0, n.jsx)(I.Z, {
-                                sound: A,
+                                sound: C,
                                 isGlobal: D,
                                 onSelect: (t) => {
                                     null == t ? (0, T.aC)(s, e) : (0, T.SZ)(s, t, e);
@@ -122,9 +122,9 @@ function M() {
 }
 function f(e) {
     let { guildId: s } = e,
-        t = (0, i.e7)([A.Z], () => {
+        t = (0, i.e7)([C.Z], () => {
             var e, t, n;
-            return null === (n = A.Z.settings.guilds) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : null === (e = t[s]) || void 0 === e ? void 0 : e.joinSound;
+            return null === (n = C.Z.settings.guilds) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : null === (e = t[s]) || void 0 === e ? void 0 : e.joinSound;
         }),
         a = x(t);
     if (null == t || null == a) return null;

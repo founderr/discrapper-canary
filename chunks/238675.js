@@ -6,17 +6,17 @@ n.d(t, {
         return c;
     },
     sJ: function () {
-        return o;
+        return s;
     }
 });
 var a,
     l,
     r,
-    o,
-    s = n(544891),
+    s,
+    o = n(544891),
     i = n(981631);
 async function c(e, t) {
-    await s.tn.post({
+    await o.tn.post({
         url: i.ANM.CAPTCHA_TEST,
         body: {
             decider: e,
@@ -24,4 +24,4 @@ async function c(e, t) {
         }
     });
 }
-((a = r || (r = {})).HCAPTCHA_RQDATA = 'hCaptchaRqdata'), (a.SMITE_RQDATA = 'SmiteRqdata'), (a.RECAPTCHA = 'Recaptcha'), ((l = o || (o = {}))[(l.EASY = 1)] = 'EASY'), (l[(l.MODERATE = 2)] = 'MODERATE'), (l[(l.DIFFICULT = 3)] = 'DIFFICULT'), (l[(l.VERY_DIFFICULT = 4)] = 'VERY_DIFFICULT');
+((a = r || (r = {})).HCAPTCHA_RQDATA = 'hCaptchaRqdata'), (a.SMITE_RQDATA = 'SmiteRqdata'), (a.RECAPTCHA = 'Recaptcha'), (a.RECAPTCHA_ENTERPRISE = 'RecaptchaEnterprise'), ((l = s || (s = {}))[(l.EASY = 1)] = 'EASY'), (l[(l.MODERATE = 2)] = 'MODERATE'), (l[(l.DIFFICULT = 3)] = 'DIFFICULT'), (l[(l.VERY_DIFFICULT = 4)] = 'VERY_DIFFICULT');

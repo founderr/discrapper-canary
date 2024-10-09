@@ -21,8 +21,8 @@ function E(e) {
     let r = null != t,
         { name: E, description: T, hideDescriptionUntilUnlock: S, onAction: I } = a,
         N = S && !r,
-        A = r ? 'header-primary' : 'text-muted',
-        C = r ? 'header-secondary' : 'text-muted',
+        C = r ? 'header-primary' : 'text-muted',
+        A = r ? 'header-secondary' : 'text-muted',
         m = o()(t),
         g = null != I && r,
         h = g ? l.Clickable : 'div';
@@ -52,12 +52,12 @@ function E(e) {
                         }),
                     (0, n.jsx)(l.Text, {
                         variant: 'text-md/medium',
-                        color: A,
+                        color: C,
                         children: E()
                     }),
                     (0, n.jsx)(l.Text, {
                         variant: 'text-xs/normal',
-                        color: C,
+                        color: A,
                         children: N ? '?????' : T()
                     })
                 ]

@@ -12,7 +12,7 @@ function r(e) {
         })
         .join('&');
 }
-function a(e) {
+function i(e) {
     var t = (e && e.ownerDocument) || document,
         n = t.defaultView || t.parentWindow || window;
     return {
@@ -20,17 +20,17 @@ function a(e) {
         window: n
     };
 }
-function i(e) {
+function a(e) {
     return e || document.head;
 }
 n.d(t, {
     $h: function () {
-        return a;
+        return i;
     },
     Ku: function () {
         return r;
     },
     as: function () {
-        return i;
+        return a;
     }
 });

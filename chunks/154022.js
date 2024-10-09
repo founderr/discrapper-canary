@@ -19,8 +19,8 @@ var n = t(735250),
     S = t(627845),
     I = t(600164),
     N = t(313201),
-    A = t(786761),
-    C = t(3148),
+    C = t(786761),
+    A = t(3148),
     m = t(739566),
     g = t(753206),
     h = t(440849),
@@ -119,8 +119,8 @@ function H(e) {
 function W() {
     let e = f.jU.useSetting(),
         [s] = a.useState(() => {
-            let e = (0, A.e5)({
-                ...(0, C.ZP)({
+            let e = (0, C.e5)({
+                ...(0, A.ZP)({
                     channelId: '1337',
                     content: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_LINK_PREVIEW_MESSAGE.format({ previewLink: 'https://discord.com/accessibility' })
                 }),

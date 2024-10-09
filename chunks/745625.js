@@ -1,6 +1,6 @@
 var r = n(15393),
-    a = n(919499),
-    i = n(470079),
+    i = n(919499),
+    a = n(470079),
     c = n(520250),
     o = 'hcaptcha-api-script-id',
     s = 'hcaptchaOnLoad',
@@ -14,27 +14,27 @@ var r = n(15393),
                 return e.scope === n.window;
             });
         if (n.document.getElementById(o) && r) return r.promise;
-        var a = new Promise(function (r, a) {
+        var i = new Promise(function (r, i) {
             n.window[s] = r;
-            var i = e.apihost || 'https://js.hcaptcha.com';
+            var a = e.apihost || 'https://js.hcaptcha.com';
             delete e.apihost;
             var p = n.document.createElement('script');
             (p.id = o),
-                (p.src = i + '/1/api.js?render=explicit&onload=' + s),
+                (p.src = a + '/1/api.js?render=explicit&onload=' + s),
                 (p.async = void 0 === e.loadAsync || e.loadAsync),
                 delete e.loadAsync,
                 (p.onerror = function (e) {
-                    return a('script-error');
+                    return i('script-error');
                 });
             var d = (0, c.Ku)(e);
             (p.src += '' !== d ? '&' + d : ''), t.appendChild(p);
         });
         return (
             p.push({
-                promise: a,
+                promise: i,
                 scope: n.window
             }),
-            a
+            i
         );
     },
     l = (function (e) {
@@ -54,7 +54,7 @@ var r = n(15393),
                 (n.handleOpen = n.handleOpen.bind((0, r.Z)(n))),
                 (n.handleClose = n.handleClose.bind((0, r.Z)(n))),
                 (n.handleChallengeExpired = n.handleChallengeExpired.bind((0, r.Z)(n))),
-                (n.ref = i.createRef()),
+                (n.ref = a.createRef()),
                 (n.apiScriptRequested = !1),
                 (n.state = {
                     isApiReady: !1,
@@ -65,7 +65,7 @@ var r = n(15393),
                 n
             );
         }
-        (0, a.Z)(t, e);
+        (0, i.Z)(t, e);
         var n = t.prototype;
         return (
             (n.componentDidMount = function () {
@@ -103,28 +103,28 @@ var r = n(15393),
                         t = e.apihost,
                         n = e.assethost,
                         r = e.endpoint,
-                        a = e.host,
-                        i = e.imghost,
+                        i = e.host,
+                        a = e.imghost,
                         c = e.languageOverride,
                         o = e.reCaptchaCompat,
                         s = e.reportapi,
                         p = e.sentry,
                         l = e.custom,
-                        h = e.loadAsync,
-                        u = e.scriptLocation;
+                        u = e.loadAsync,
+                        h = e.scriptLocation;
                     d({
                         apihost: t,
                         assethost: n,
                         endpoint: r,
                         hl: c,
-                        host: a,
-                        imghost: i,
+                        host: i,
+                        imghost: a,
                         recaptchacompat: !1 === o ? 'off' : null,
                         reportapi: s,
                         sentry: p,
                         custom: l,
-                        loadAsync: h,
-                        scriptLocation: u
+                        loadAsync: u,
+                        scriptLocation: h
                     })
                         .then(this.handleOnLoad)
                         .catch(this.handleError),
@@ -189,11 +189,11 @@ var r = n(15393),
                 var t = this.props.onVerify,
                     n = this.state,
                     r = n.isRemoved,
-                    a = n.captchaId,
-                    i = this._hcaptcha;
-                if (void 0 !== i && !r) {
-                    var c = i.getResponse(a),
-                        o = i.getRespKey(a);
+                    i = n.captchaId,
+                    a = this._hcaptcha;
+                if (void 0 !== a && !r) {
+                    var c = a.getResponse(i),
+                        o = a.getRespKey(i);
                     t && t(c, o);
                 }
             }),
@@ -243,12 +243,12 @@ var r = n(15393),
             }),
             (n.render = function () {
                 var e = this.state.elementId;
-                return i.createElement('div', {
+                return a.createElement('div', {
                     ref: this.ref,
                     id: e
                 });
             }),
             t
         );
-    })(i.Component);
+    })(a.Component);
 t.Z = l;

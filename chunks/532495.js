@@ -19,8 +19,8 @@ var a = t(512722),
     S = t(433411),
     I = t(532432),
     N = t(349177),
-    A = t(872736),
-    C = t(134795),
+    C = t(872736),
+    A = t(134795),
     m = t(610966),
     g = t(513901),
     h = t(451392),
@@ -128,7 +128,7 @@ function b() {
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
                           (0, n.jsx)(
-                              C.Z,
+                              A.Z,
                               {
                                   showRemoveBannerButton: Q,
                                   errors: H.banner,
@@ -168,7 +168,7 @@ function b() {
                 'bio'
             ),
             es && et.length > 0 && (0, n.jsx)(_.Z, { availableClans: et }),
-            null != J && (0, n.jsx)(A.Z, { legacyUsername: J }, 'legacy_username')
+            null != J && (0, n.jsx)(C.Z, { legacyUsername: J }, 'legacy_username')
         ]
     });
 }

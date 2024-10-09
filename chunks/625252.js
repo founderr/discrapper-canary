@@ -18,8 +18,8 @@ var n = t(735250),
     S = t(497505),
     I = t(341907),
     N = t(46140),
-    A = t(981631),
-    C = t(689938),
+    C = t(981631),
+    A = t(689938),
     m = t(936598),
     g = t(66094);
 function h() {
@@ -28,7 +28,7 @@ function h() {
         t = a.useCallback(() => {
             (0, d.xf)(),
                 (0, I.navigateToQuestHome)(N.dr.USER_SETTINGS_GIFT_INVENTORY, S.jn.QUEST_HOME_MOVE_CALLOUT),
-                E.default.track(A.rMx.QUEST_CONTENT_CLICKED, {
+                E.default.track(C.rMx.QUEST_CONTENT_CLICKED, {
                     cta_name: T.jZ.VIEW_QUESTS,
                     ...(0, T.mH)(S.jn.QUEST_HOME_MOVE_CALLOUT)
                 });
@@ -57,14 +57,14 @@ function h() {
                                 (0, n.jsx)(c.Heading, {
                                     variant: 'heading-lg/bold',
                                     color: 'always-white',
-                                    children: C.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_TITLE
+                                    children: A.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_TITLE
                                 })
                             ]
                         }),
                         (0, n.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             color: 'text-muted',
-                            children: C.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_DESCRIPTION_V2
+                            children: A.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_DESCRIPTION_V2
                         }),
                         (0, n.jsx)(c.Button, {
                             size: 'large',
@@ -75,7 +75,7 @@ function h() {
                             children: (0, n.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: e ? 'always-white' : 'text-normal',
-                                children: C.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_BUTTON
+                                children: A.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_BUTTON
                             })
                         })
                     ]

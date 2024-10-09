@@ -34,8 +34,8 @@ var n = t(470079),
     S = t(223639),
     I = t(160913),
     N = t(725727),
-    A = t(977156),
-    C = t(921157),
+    C = t(977156),
+    A = t(921157),
     m = t(237292),
     g = t(314897),
     h = t(283595),
@@ -112,7 +112,7 @@ function B() {
         Y = null !== (t = null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t,
         k = (0, m.y0)({ location: 'settings' }),
         w = (0, l.Q)(),
-        H = (0, A.Zy)({ location: Z.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        H = (0, C.Zy)({ location: Z.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: W } = S.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
         K = (0, a.e7)([h.Z], () => h.Z.hasLibraryApplication()),
         z = (0, a.e7)([g.default], () => g.default.hasTOTPEnabled()),
@@ -120,7 +120,7 @@ function B() {
         X = (0, u.Z)(),
         q = (0, x._p)({ location: 'settings-renderer-utils-web' }),
         J = null === (n = (0, E.Z)()) || void 0 === n || n,
-        $ = (null === (s = (0, C.s)()) || void 0 === s ? void 0 : s.length) > 0;
+        $ = (null === (s = (0, A.s)()) || void 0 === s ? void 0 : s.length) > 0;
     return (0, f.i)({
         unseenGiftCount: r,
         showPrepaidPaymentPastDueWarning: P,

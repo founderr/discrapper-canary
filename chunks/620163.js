@@ -19,8 +19,8 @@ var a = t(990547),
     S = t(758182),
     I = t(163379),
     N = t(703288),
-    A = t(574755),
-    C = t(377171),
+    C = t(574755),
+    A = t(377171),
     m = t(621628),
     g = t(18438),
     h = t(778825),
@@ -73,8 +73,8 @@ var a = t(990547),
     eS = t(593648),
     eI = t(327885),
     eN = t(595242),
-    eA = t(301121),
-    eC = t(463153),
+    eC = t(301121),
+    eA = t(463153),
     em = t(36192),
     eg = t(338345),
     eh = t(400287),
@@ -98,7 +98,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
         return Object.freeze({
             [eL.s6.SEARCH_NO_RESULTS]: {
                 section: u.ID.CUSTOM,
-                element: eC.Z,
+                element: eA.Z,
                 predicate: () => ew
             },
             [eL.s6.ACCOUNT]: {
@@ -261,7 +261,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: ev.Z.Messages.PRIVACY_AND_SAFETY,
                 searchableTitles: [ev.Z.Messages.PRIVACY_AND_SAFETY],
                 ariaLabel: ev.Z.Messages.PRIVACY_AND_SAFETY,
-                element: eA.Z,
+                element: eC.Z,
                 predicate: () => !e1
             },
             [eL.s6.PRIVACY_USER_SETTINGS]: {
@@ -286,44 +286,44 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 predicate: () => e1
             },
             [eL.s6.PRIVACY_AND_SAFETY_STANDING]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.ACCOUNT,
                 searchableTitles: [ev.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_STANDING],
                 parent: eL.s6.ACCOUNT,
                 predicate: () => e1
             },
             [eL.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [ev.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_VOICE_SECURITY],
                 parent: eL.s6.DATA_PRIVACY,
                 predicate: () => (0, F.isDesktop)()
             },
             [eL.s6.PRIVACY_AND_SAFETY_PERSISTENT_VERIFICATION_CODES]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [ev.Z.Messages.E2EE_ENABLE_PERSISTENT_CODES],
                 parent: eL.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY
             },
             [eL.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_CONTENT],
                 parent: eL.s6.CONTENT_SOCIAL
             },
             [eL.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.FRIEND_REQUESTS],
                 parent: eL.s6.CONTENT_SOCIAL
             },
             [eL.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.FRIEND_REQUESTS],
                 parent: eL.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY
             },
             [eL.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_SOCIAL_PERMISSIONS],
                 parent: eL.s6.CONTENT_SOCIAL
             },
             [eL.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [ev.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_DISCORD_DATA_USAGE],
                 parent: eL.s6.DATA_PRIVACY
             },
@@ -333,7 +333,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_USER_SETTINGS
             },
             [eL.s6.PRIVACY_SENSITIVE_MEDIA_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, ev.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_FILTER, ev.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_BLUR, ev.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_SENSITIVE_CONTENT, ev.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_EXPLICIT],
                 parent: eL.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
@@ -343,7 +343,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_USER_SETTINGS
             },
             [eL.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.SETTINGS_DM_SPAM_FILTER, ev.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_MESSAGES, ev.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_INBOX],
                 parent: eL.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
@@ -363,7 +363,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS
             },
             [eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.NSFW_GUILDS_TOGGLE_HEADER],
                 parent: eL.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
@@ -379,12 +379,12 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS
             },
             [eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.NSFW_DM_COMMANDS_HEADER],
                 parent: eL.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
             [eL.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 parent: eL.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY
             },
             [eL.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS]: {
@@ -398,7 +398,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS
             },
             [eL.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE, ev.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_GLOBAL_NOTE],
                 parent: eL.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR
             },
@@ -409,7 +409,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 predicate: () => !eq
             },
             [eL.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE],
                 parent: eL.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
                 predicate: () => !eq
@@ -420,7 +420,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS
             },
             [eL.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS],
                 parent: eL.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR
             },
@@ -430,7 +430,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS
             },
             [eL.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING],
                 parent: eL.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR
             },
@@ -445,7 +445,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_DATA_PRIVACY
             },
             [eL.s6.PRIVACY_DATA_IMPROVE_DISCORD_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [ev.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE],
                 parent: eL.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY
             },
@@ -455,7 +455,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_DATA_PRIVACY
             },
             [eL.s6.PRIVACY_DATA_PERSONALIZE_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [ev.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE],
                 parent: eL.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY
             },
@@ -465,7 +465,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_DATA_PRIVACY
             },
             [eL.s6.PRIVACY_DATA_QUESTS_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [ev.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT],
                 parent: eL.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY
             },
@@ -475,7 +475,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eL.CF]
             },
             [eL.s6.PRIVACY_DATA_BASIC_SERVICE_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [eL.CF],
                 parent: eL.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY
             },
@@ -485,7 +485,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_DATA_PRIVACY
             },
             [eL.s6.PRIVACY_DATA_REQUEST_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [ev.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD],
                 parent: eL.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY
             },
@@ -502,7 +502,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 predicate: () => eH
             },
             [eL.s6.PRIVACY_KEYWORD_FILTER_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE, ev.Z.Messages.USER_KEYWORD_FILTERS_SEARCH_TERM_KEYWORD],
                 parent: eL.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
                 predicate: () => eH
@@ -519,7 +519,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 predicate: () => eK
             },
             [eL.s6.PRIVACY_SAFETY_ALERTS_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ev.Z.Messages.SAFETY_ALERTS_SETTING_TITLE],
                 parent: eL.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
                 predicate: () => eK && !e6
@@ -545,7 +545,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.PRIVACY_ENCRYPTION
             },
             [eL.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [ev.Z.Messages.E2EE_VERIFIED_DEVICES],
                 parent: eL.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
                 predicate: () => e2
@@ -559,12 +559,12 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 badgeCount: ey,
                 newIndicator: (0, n.jsx)(o.TextBadge, {
                     text: ev.Z.Messages.NEW,
-                    color: C.Z.BG_BRAND
+                    color: A.Z.BG_BRAND
                 }),
                 newIndicatorDismissibleContentTypes: [i.z.FAMILY_CENTER_NEW_BADGE]
             },
             [eL.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                section: eP.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [ev.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_REQUEST_DATA],
                 parent: eL.s6.DATA_PRIVACY
             },
@@ -605,7 +605,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: ev.Z.Messages.CLIPS,
                 ariaLabel: ev.Z.Messages.CLIPS,
                 icon: eY ? (0, n.jsx)(N.Z, {}) : void 0,
-                element: A.Z,
+                element: C.Z,
                 predicate: () => !ek
             },
             [eL.s6.FRIEND_REQUESTS]: {

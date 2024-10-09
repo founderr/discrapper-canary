@@ -1,6 +1,6 @@
 t.d(n, {
     s: function () {
-        return x;
+        return E;
     }
 }),
     t(789020);
@@ -14,13 +14,13 @@ var l = t(735250),
     u = t(509545),
     d = t(55563),
     m = t(551428),
-    _ = t(74538),
-    f = t(937615),
+    f = t(74538),
+    _ = t(937615),
     p = t(147496),
     C = t(519896),
     h = t(981631),
-    E = t(689938);
-let I = (0, a.Kb)([d.Z, u.Z, m.Z], {
+    I = t(689938);
+let x = (0, a.Kb)([d.Z, u.Z, m.Z], {
     queryId: (e) => (null != e ? ['premium-button', e] : null),
     get: (e) => {
         var n;
@@ -61,8 +61,8 @@ let I = (0, a.Kb)([d.Z, u.Z, m.Z], {
     },
     useStateHook: a.cj
 });
-function x(e) {
-    let { data: n } = I(e),
+function E(e) {
+    let { data: n } = x(e),
         t = null == n ? void 0 : n.parentSku,
         a = null == n ? void 0 : n.sku,
         r = null == n ? void 0 : n.storeListing,
@@ -97,21 +97,21 @@ function x(e) {
         if (null == e || (null != a && !a.available))
             return {
                 disabled: !0,
-                label: E.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
             };
         if (a.type === h.epS.SUBSCRIPTION) {
             if (null == s || 0 === s.length)
                 return {
                     disabled: !0,
-                    label: E.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                    label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
                 };
             let e = s[0],
-                n = (0, _.aS)(e.id);
+                n = (0, f.aS)(e.id);
             return {
                 disabled: !1,
-                label: E.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
+                label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
                     skuName: a.name,
-                    price: (0, f.T4)(n.amount, n.currency)
+                    price: (0, _.T4)(n.amount, n.currency)
                 }),
                 onClick: u
             };
@@ -119,13 +119,13 @@ function x(e) {
         return null == a.price
             ? {
                   disabled: !0,
-                  label: E.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                  label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
               }
             : {
                   disabled: !1,
-                  label: E.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
+                  label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
                       skuName: a.name,
-                      price: (0, f.T4)(a.price.amount, a.price.currency)
+                      price: (0, _.T4)(a.price.amount, a.price.currency)
                   }),
                   onClick: d
               };

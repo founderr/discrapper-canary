@@ -33,22 +33,22 @@ function T(e) {
         { loading: T } = (0, c.sp)(t),
         { loadState: I } = (0, c.qz)(),
         N = T || I !== c.jd.LOADED,
-        { enabled: A } = o.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' }),
-        [C, m] = a.useState();
+        { enabled: C } = o.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' }),
+        [A, m] = a.useState();
     return (
-        null == C &&
-            (C = (0, n.jsx)(S, {
+        null == A &&
+            (A = (0, n.jsx)(S, {
                 onBack: s,
                 title: u.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAGE_TITLE
             })),
         (0, n.jsxs)('div', {
             children: [
-                C,
+                A,
                 N
                     ? (0, n.jsx)(r.Spinner, {})
                     : (0, n.jsx)('div', {
                           className: E.subscriptionsContainer,
-                          children: A
+                          children: C
                               ? (0, n.jsx)(d.Z, {
                                     subscriptions: t,
                                     updateHeader: (e, s) => {

@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return C;
     }
 }),
     t(47120);
@@ -22,18 +22,18 @@ let S = (0, c.hQ)(),
         type: u.d4z.DM
     }),
     N = (0, c.hQ)();
-function A(e) {
-    let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: A, currentBio: C, disabled: m = !1 } = e,
-        [g, h] = a.useState(null != d ? d : C),
+function C(e) {
+    let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: C, currentBio: A, disabled: m = !1 } = e,
+        [g, h] = a.useState(null != d ? d : A),
         [O, p] = a.useState((0, o.JM)(g)),
         R = a.useRef(!1);
     return (
         a.useEffect(() => {
             if (void 0 === d) {
-                let e = (0, o.JM)(C);
-                h(C), p(e);
+                let e = (0, o.JM)(A);
+                h(A), p(e);
             }
-        }, [d, C]),
+        }, [d, A]),
         (0, n.jsxs)(_.Z, {
             title: s,
             titleId: S,
@@ -49,7 +49,7 @@ function A(e) {
                     onChange: function (e, s, t) {
                         s !== g && (h(s), p(t), c(s));
                     },
-                    placeholder: A,
+                    placeholder: C,
                     channel: I,
                     textValue: g,
                     richValue: O,

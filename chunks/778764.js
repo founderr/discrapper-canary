@@ -20,8 +20,8 @@ var n = t(735250),
     S = t(998502),
     I = t(365007),
     N = t(15980),
-    A = t(755733),
-    C = t(981631),
+    C = t(755733),
+    A = t(981631),
     m = t(689938),
     g = t(964830);
 function h(e) {
@@ -29,20 +29,20 @@ function h(e) {
         u = (0, d.Dt)(),
         [N, h] = a.useState(''),
         [O, p] = a.useState(!0),
-        [R, x] = a.useState(A.x.INIT),
+        [R, x] = a.useState(C.x.INIT),
         [M, f] = a.useState(''),
         [D, L] = a.useState(null),
         P = async () => {
             let e;
-            x(A.x.REGISTER);
-            let s = E.isPlatformEmbedded && S.ZP.supportsFeature(C.eRX.WEBAUTHN) ? S.ZP.webAuthnRegister(c) : i.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
+            x(C.x.REGISTER);
+            let s = E.isPlatformEmbedded && S.ZP.supportsFeature(A.eRX.WEBAUTHN) ? S.ZP.webAuthnRegister(c) : i.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await s;
             } catch (e) {
-                T.Z.captureException(e), L(m.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(A.x.INIT);
+                T.Z.captureException(e), L(m.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(C.x.INIT);
                 return;
             }
-            f(e), x(A.x.NAME);
+            f(e), x(C.x.NAME);
         };
     return (0, n.jsxs)(o.ModalRoot, {
         transitionState: s,
@@ -55,7 +55,7 @@ function h(e) {
                     (0, n.jsxs)(o.Heading, {
                         id: u,
                         variant: 'heading-lg/semibold',
-                        children: [R === A.x.INIT && m.Z.Messages.TWO_FA_WEBAUTHN_REGISTER, R === A.x.REGISTER && m.Z.Messages.TWO_FA_WEBAUTHN_INTERACT, R === A.x.NAME && m.Z.Messages.TWO_FA_WEBAUTHN_NAME]
+                        children: [R === C.x.INIT && m.Z.Messages.TWO_FA_WEBAUTHN_REGISTER, R === C.x.REGISTER && m.Z.Messages.TWO_FA_WEBAUTHN_INTERACT, R === C.x.NAME && m.Z.Messages.TWO_FA_WEBAUTHN_NAME]
                     }),
                     (0, n.jsx)(o.ModalCloseButton, {
                         onClick: r,
@@ -68,7 +68,7 @@ function h(e) {
                 width: 440,
                 children: [
                     (0, n.jsxs)(o.Slide, {
-                        id: A.x.INIT,
+                        id: C.x.INIT,
                         children: [
                             (0, n.jsxs)(o.ModalContent, {
                                 className: g.content,
@@ -106,7 +106,7 @@ function h(e) {
                         ]
                     }),
                     (0, n.jsxs)(o.Slide, {
-                        id: A.x.REGISTER,
+                        id: C.x.REGISTER,
                         children: [
                             (0, n.jsxs)(o.ModalContent, {
                                 className: g.content,
@@ -130,7 +130,7 @@ function h(e) {
                         ]
                     }),
                     (0, n.jsx)(o.Slide, {
-                        id: A.x.NAME,
+                        id: C.x.NAME,
                         children: (0, n.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
@@ -140,7 +140,7 @@ function h(e) {
                                         })
                                         .then(() => r())
                                         .catch(() => {
-                                            L(m.Z.Messages.ERROR_OCCURRED_TRY_AGAIN), x(A.x.INIT);
+                                            L(m.Z.Messages.ERROR_OCCURRED_TRY_AGAIN), x(C.x.INIT);
                                         });
                             },
                             children: [
@@ -185,7 +185,7 @@ function h(e) {
                                             look: o.Button.Looks.LINK,
                                             color: o.Button.Colors.PRIMARY,
                                             onClick: () => {
-                                                x(A.x.INIT);
+                                                x(C.x.INIT);
                                             },
                                             children: m.Z.Messages.BACK
                                         })

@@ -20,8 +20,8 @@ var n = t(735250),
     S = t(419363),
     I = t(818083),
     N = t(688465),
-    A = t(487419),
-    C = t(378364),
+    C = t(487419),
+    A = t(378364),
     m = t(197344),
     g = t(734934),
     h = t(223683),
@@ -102,7 +102,7 @@ function K(e) {
             (e, t) => {
                 let n = s.filter((s) => s !== e);
                 !t && n.push(e),
-                    e === C.Z.ringtone &&
+                    e === A.Z.ringtone &&
                         P.default.track(y.rMx.EVENT_RINGTONE_TOGGLED, {
                             toggled_on: t,
                             sound_name: e
@@ -172,8 +172,8 @@ function K(e) {
         ...(r
             ? [
                   {
-                      label: C.Z.getRingtoneSettingsLabel(),
-                      sound: C.Z.ringtone,
+                      label: A.Z.getRingtoneSettingsLabel(),
+                      sound: A.Z.ringtone,
                       disabled: s.includes('call_ringing')
                   }
               ]
@@ -253,7 +253,7 @@ function K(e) {
     });
 }
 function z() {
-    let e = (0, c.e7)([A.Z], () => A.Z.getGuildAlertSettings()),
+    let e = (0, c.e7)([C.Z], () => C.Z.getGuildAlertSettings()),
         [s, t] = a.useState(null),
         i = v.default.keys(e).map((s) => {
             let t = e[s];

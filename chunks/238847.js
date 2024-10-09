@@ -14,8 +14,8 @@ var n = t(735250),
     S = t(878596),
     I = t(313201),
     N = t(565138),
-    A = t(404203),
-    C = t(330181),
+    C = t(404203),
+    A = t(330181),
     m = t(374649),
     g = t(908951),
     h = t(255078),
@@ -192,7 +192,7 @@ s.Z = (e) => {
     return (0, n.jsxs)('div', {
         className: D.container,
         children: [
-            (0, n.jsx)(A.Z, {
+            (0, n.jsx)(C.Z, {
                 onClick: S,
                 className: D.headerContainer,
                 children: (e) => {
@@ -248,7 +248,7 @@ s.Z = (e) => {
                                     children: f.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_DELETED_WARNING
                                 })
                               : null,
-                          (0, n.jsx)(C.Z, {
+                          (0, n.jsx)(A.Z, {
                               groupListingId: o.id,
                               subscription: s,
                               className: D.changePlanNotice

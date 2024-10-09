@@ -18,8 +18,8 @@ var n = t(735250),
     S = t(921813),
     I = t(621853),
     N = t(246946),
-    A = t(594174),
-    C = t(63063),
+    C = t(594174),
+    A = t(63063),
     m = t(74538),
     g = t(18438),
     h = t(778825),
@@ -44,8 +44,8 @@ function f(e) {
 function D(e) {
     let { selectedGuild: s } = e,
         { analyticsLocations: t } = (0, E.ZP)(_.Z.GUILD_PROFILE),
-        i = (0, o.e7)([A.default], () => {
-            let e = A.default.getCurrentUser();
+        i = (0, o.e7)([C.default], () => {
+            let e = C.default.getCurrentUser();
             return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         D = (0, o.e7)([I.Z], () => !I.Z.isFetchingProfile(i.id, null == s ? void 0 : s.id)),
@@ -71,7 +71,7 @@ function D(e) {
                 children: [
                     (0, n.jsx)(l.Text, {
                         variant: 'text-sm/normal',
-                        children: M.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({ helpCenterLink: C.Z.getArticleURL(x.BhN.GUILD_PROFILES) })
+                        children: M.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({ helpCenterLink: A.Z.getArticleURL(x.BhN.GUILD_PROFILES) })
                     }),
                     null != s
                         ? (0, n.jsxs)(n.Fragment, {

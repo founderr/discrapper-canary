@@ -21,8 +21,8 @@ var n,
     S = t(906732),
     I = t(600164),
     N = t(431369),
-    A = t(210887),
-    C = t(78839),
+    C = t(210887),
+    A = t(78839),
     m = t(74538),
     g = t(689938),
     h = t(946839);
@@ -32,7 +32,7 @@ async function O(e, s, t, n) {
 function p(e) {
     let { premiumSubscription: s, guildBoostSlotId: t, onNext: n, onClose: a } = e,
         [o, u] = r.useState(!1),
-        E = (0, c.e7)([A.Z], () => A.Z.theme),
+        E = (0, c.e7)([C.Z], () => C.Z.theme),
         { analyticsLocations: T } = (0, S.ZP)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -110,9 +110,9 @@ function x(e) {
         { guildBoostSlotId: t, transitionState: n, onClose: a } = e,
         { analyticsLocations: o } = (0, S.ZP)(T.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
     r.useEffect(() => {
-        !C.ZP.hasFetchedSubscriptions() && (0, u.jg)();
+        !A.ZP.hasFetchedSubscriptions() && (0, u.jg)();
     }, []);
-    let l = (0, c.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
+    let l = (0, c.e7)([A.ZP], () => A.ZP.getPremiumTypeSubscription()),
         [d, E] = r.useState(1);
     if (null == l) s = (0, i.jsx)(_.ModalContent, { children: (0, i.jsx)(_.Spinner, {}) });
     else

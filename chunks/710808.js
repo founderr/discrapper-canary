@@ -19,8 +19,8 @@ var n = t(735250),
     S = t(131951),
     I = t(226961),
     N = t(12647),
-    A = t(726985),
-    C = t(981631),
+    C = t(726985),
+    A = t(981631),
     m = t(65154),
     g = t(689938),
     h = t(113207);
@@ -60,7 +60,7 @@ function R() {
         try {
             await S.Z.getMediaEngine().writeAudioDebugState(),
                 await N.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
-                await (0, u.E)(C.GU0.RTC),
+                await (0, u.E)(A.GU0.RTC),
                 !(function () {
                     let e = g.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
                         s = g.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
@@ -101,7 +101,7 @@ function R() {
         title: g.Z.Messages.FORM_LABEL_DEBUG,
         children: [
             (0, n.jsx)(E.F, {
-                setting: A.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
+                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, n.jsx)(r.FormSwitch, {
                     value: R,
                     onChange: (e) => (0, l.y)({ isStreamInfoOverlayEnabled: e }),
@@ -110,7 +110,7 @@ function R() {
                 })
             }),
             (0, n.jsx)(E.F, {
-                setting: A.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
+                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
                 children: (0, n.jsx)(r.FormSwitch, {
                     value: d,
                     onChange: (e) => o.Z.setAecDump(e),
@@ -119,7 +119,7 @@ function R() {
                 })
             }),
             (0, n.jsxs)(E.F, {
-                setting: A.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
+                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
                     (0, n.jsx)(r.FormSwitch, {
                         hideBorder: !0,
@@ -146,7 +146,7 @@ function R() {
                 ]
             }),
             (0, n.jsxs)(E.F, {
-                setting: A.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
+                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
                 children: [
                     (0, n.jsx)(r.FormSwitch, {
                         hideBorder: !0,

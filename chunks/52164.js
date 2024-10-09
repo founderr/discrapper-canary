@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return C;
     }
 }),
     t(47120);
@@ -23,15 +23,15 @@ function N(e) {
     let s,
         { subscription: t, withOverheadSeparator: a } = e,
         { analyticsLocations: N } = (0, l.ZP)(),
-        [A] = (0, u.ED)({
+        [C] = (0, u.ED)({
             subscriptionId: t.id,
             renewal: !0,
             analyticsLocations: N,
             analyticsLocation: o.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
-    if (null == A) return null;
-    let C = a ? I.finePrintWithOverheadSeparator : I.finePrint,
-        m = A.invoiceItems.find((e) => {
+    if (null == C) return null;
+    let A = a ? I.finePrintWithOverheadSeparator : I.finePrint,
+        m = C.invoiceItems.find((e) => {
             let { subscriptionPlanId: s } = e;
             return (0, d.uZ)(s);
         });
@@ -39,7 +39,7 @@ function N(e) {
     let g = m.subscriptionPlanId,
         h = c.Z.get(g);
     i()(null != h, 'Missing plan');
-    let O = (0, _.T4)(A.total, A.currency);
+    let O = (0, _.T4)(C.total, C.currency);
     return (
         h.interval === E.rV.YEAR
             ? (s = S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
@@ -66,13 +66,13 @@ function N(e) {
                         })),
         (0, n.jsx)(r.Text, {
             color: 'text-muted',
-            className: C,
+            className: A,
             variant: 'text-xs/normal',
             children: s
         })
     );
 }
-function A(e) {
+function C(e) {
     let { subscription: s, withOverheadSeparator: t } = e;
     return s.status === T.O0b.CANCELED || s.isPurchasedExternally
         ? null

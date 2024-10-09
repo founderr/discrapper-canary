@@ -13,8 +13,8 @@ var n = t(735250),
     S = t(874703),
     I = t(410154),
     N = t(302800),
-    A = t(981631),
-    C = t(474936),
+    C = t(981631),
+    A = t(474936),
     m = t(689938),
     g = t(200895),
     h = t(786792),
@@ -71,8 +71,8 @@ s.Z = () => {
                   }
                 : N.GX[O]),
         a.useEffect(() => {
-            E.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: C.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+            E.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: A.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                 location_stack: t
             });
         }, [t]),

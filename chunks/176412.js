@@ -1,12 +1,12 @@
 t.d(n, {
     Bm: function () {
-        return S;
-    },
-    P7: function () {
         return L;
     },
+    P7: function () {
+        return T;
+    },
     ae: function () {
-        return P;
+        return g;
     }
 });
 var i = t(470079),
@@ -27,13 +27,13 @@ var i = t(470079),
     A = t(541099),
     E = t(827498),
     N = t(346683),
-    x = t(981631),
-    v = t(689938);
+    v = t(981631),
+    x = t(689938);
 let I = {
         ...C.Z.RULES.commandMention,
         parse: (e, n, t) => ({ content: C.Z.RULES.commandMention.parse(e, n, t).content })
     },
-    g = l().pick(
+    P = l().pick(
         (0, h.Z)([
             C.Z.RULES,
             { commandMention: I },
@@ -44,18 +44,18 @@ let I = {
         ]),
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
-    P = r.w4(g);
-function L(e) {
+    g = r.w4(P);
+function T(e) {
     let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: r = !0, launchingComponentId: _, submitting: C = !1, fetchesApplication: h = !0 } = e,
         I = (0, c.O)(),
-        g = (0, d.Qv)({
+        P = (0, d.Qv)({
             channelId: n.id,
             applicationId: t.id,
             fetchesApplication: h
         }),
-        P = (0, N.Q)(g),
-        L = (0, o.e7)([A.Z], () => A.Z.entrypoint()),
-        S = (0, d.w1)({
+        g = (0, N.Q)(P),
+        T = (0, o.e7)([A.Z], () => A.Z.entrypoint()),
+        L = (0, d.w1)({
             applicationId: t.id,
             embeddedActivitiesManager: u.Z,
             channelId: n.id,
@@ -63,39 +63,39 @@ function L(e) {
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e;
                 r && f.yT(E.ti.ACTIVITY),
-                    (0, m.yw)(x.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                    (0, m.yw)(v.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,
                         section_name: a,
-                        action: P,
-                        source: L
+                        action: g,
+                        source: T
                     });
             },
             launchingComponentId: _,
             commandOrigin: p.bB.APPLICATION_LAUNCHER,
             sectionName: a,
-            source: L,
+            source: T,
             fetchesApplication: h
         }),
-        T = s.ButtonColors.BRAND,
-        b = null != l ? l : v.Z.Messages.LAUNCH;
+        b = s.ButtonColors.BRAND,
+        S = null != l ? l : x.Z.Messages.LAUNCH;
     return (
-        P === d.JS.JOIN ? ((T = s.ButtonColors.GREEN), (b = v.Z.Messages.JOIN_ACTIVITY)) : P === d.JS.LEAVE && !C && ((T = s.ButtonColors.RED), (b = v.Z.Messages.LEAVE)),
+        g === d.JS.JOIN ? ((b = s.ButtonColors.GREEN), (S = x.Z.Messages.JOIN_ACTIVITY)) : g === d.JS.LEAVE && !C && ((b = s.ButtonColors.RED), (S = x.Z.Messages.LEAVE)),
         {
-            onActivityItemSelected: S,
-            activityAction: P,
-            buttonColor: T,
-            buttonText: b
+            onActivityItemSelected: L,
+            activityAction: g,
+            buttonColor: b,
+            buttonText: S
         }
     );
 }
-function S(e, n) {
+function L(e, n) {
     let t = A.Z.entrypoint(),
         l = i.useMemo(
             () =>
                 (0, a.debounce)(
                     (e, n) => {
-                        (0, m.yw)(x.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, m.yw)(v.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: n
                         });

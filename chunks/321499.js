@@ -18,8 +18,8 @@ var n = t(735250),
     S = t(996073),
     I = t(526761),
     N = t(726985),
-    A = t(689938),
-    C = t(113207);
+    C = t(689938),
+    A = t(113207);
 let m = t(651714),
     g = t(297166);
 function h() {
@@ -27,11 +27,11 @@ function h() {
     return (0, n.jsx)(u.F, {
         setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
         children: (0, n.jsx)(c.FormSwitch, {
-            className: r()(C.marginTop8, C.marginBottom20),
+            className: r()(A.marginTop8, A.marginBottom20),
             value: e,
             onChange: (e) => d.Z.setExperimentalEncoders(e),
             disabled: !1,
-            children: A.Z.Messages.EXPERIMENTAL_ENCODERS
+            children: C.Z.Messages.EXPERIMENTAL_ENCODERS
         })
     });
 }
@@ -49,10 +49,10 @@ function O() {
                 (0, n.jsx)(u.F, {
                     setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_AUDIO,
                     children: (0, n.jsx)(c.FormSection, {
-                        className: C.marginBottom20,
-                        title: A.Z.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
+                        className: A.marginBottom20,
+                        title: C.Z.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
                         children: (0, n.jsx)(c.FormNotice, {
-                            className: C.marginBottom20,
+                            className: A.marginBottom20,
                             type: c.FormNoticeTypes.PRIMARY,
                             imageData: {
                                 src: (0, l.ap)(e) ? m : g,
@@ -60,24 +60,24 @@ function O() {
                                 height: 40
                             },
                             align: _.Z.Align.CENTER,
-                            body: A.Z.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
+                            body: C.Z.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
                         })
                     })
                 }),
                 (0, n.jsx)(u.F, {
                     setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
                     children: (0, n.jsxs)(c.FormSection, {
-                        className: C.marginBottom20,
-                        title: A.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
+                        className: A.marginBottom20,
+                        title: C.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
                         children: [
                             (0, n.jsx)(u.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
                                 children: (0, n.jsx)(c.FormSwitch, {
-                                    className: r()(C.marginTop8, C.marginBottom20),
+                                    className: r()(A.marginTop8, A.marginBottom20),
                                     value: s,
                                     onChange: (e) => d.Z.setOpenH264(e),
                                     disabled: !1,
-                                    children: A.Z.Messages.USER_SETTINGS_VOICE_OPEN_H264
+                                    children: C.Z.Messages.USER_SETTINGS_VOICE_OPEN_H264
                                 })
                             }),
                             (0, n.jsx)('div', {
@@ -87,11 +87,11 @@ function O() {
                             (0, n.jsx)(u.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
                                 children: (0, n.jsx)(c.FormSwitch, {
-                                    className: r()(C.marginTop8, C.marginBottom20),
+                                    className: r()(A.marginTop8, A.marginBottom20),
                                     value: t,
                                     onChange: (e) => d.Z.setHardwareEncoding(e),
-                                    note: A.Z.Messages.FORM_HELP_HARDWARE_ENCODING,
-                                    children: A.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_ENCODING
+                                    note: C.Z.Messages.FORM_HELP_HARDWARE_ENCODING,
+                                    children: C.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_ENCODING
                                 })
                             }),
                             (0, n.jsx)(h, {})

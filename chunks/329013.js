@@ -21,8 +21,8 @@ var n = t(735250),
     S = t(104494),
     I = t(639119),
     N = t(311476),
-    A = t(165583),
-    C = t(197115),
+    C = t(165583),
+    A = t(197115),
     m = t(504983),
     g = t(626135),
     h = t(981631),
@@ -65,7 +65,7 @@ let f = () => {
                                   onClick: () => f(),
                                   children: D ? R.Z.Messages.PREVIEW : R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
                               }),
-                              (0, n.jsx)(C.Z, {
+                              (0, n.jsx)(A.Z, {
                                   showGradient: D,
                                   subscriptionTier: p.Si.TIER_2,
                                   buttonText: D ? R.Z.Messages.PREMIUM_UPSELL_GET_NITRO : T ? R.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == _ ? void 0 : _.discount.amount }) : R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
@@ -113,7 +113,7 @@ let f = () => {
                                                               children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
                                                           }),
                                                           (0, n.jsx)('div', { className: x.premiumTier2Divider }),
-                                                          (0, n.jsx)(A.ZP, {
+                                                          (0, n.jsx)(C.ZP, {
                                                               type: p.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                                                               subscriptionTier: p.Si.TIER_2
                                                           })

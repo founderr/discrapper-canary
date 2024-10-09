@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return I;
+        return x;
     }
 });
 var l = t(735250);
@@ -14,8 +14,8 @@ var i = t(120356),
     u = t(206295),
     d = t(297781),
     m = t(313201),
-    _ = t(231338),
-    f = t(689938),
+    f = t(231338),
+    _ = t(689938),
     p = t(790246),
     C = t(615934);
 function h(e) {
@@ -57,7 +57,7 @@ function h(e) {
         ]
     });
 }
-function E(e) {
+function I(e) {
     let { clickable: n, ...t } = e;
     return (0, l.jsx)(h, {
         ...t,
@@ -68,17 +68,17 @@ function E(e) {
         clickableClassName: C.clickable
     });
 }
-function I(e) {
-    let { entry: n, channel: t, title: i, subtitle: C, thumbnailUrl: I, titleClickable: x, subtitleClickable: v, thumbnailClickable: T, providerIconProps: N, style: b = {} } = e,
+function x(e) {
+    let { entry: n, channel: t, title: i, subtitle: C, thumbnailUrl: x, titleClickable: E, subtitleClickable: v, thumbnailClickable: T, providerIconProps: N, style: b = {} } = e,
         g = (0, m.Dt)(),
-        { primaryColor: S, secondaryColor: O } = (0, u.Z)(I);
+        { primaryColor: S, secondaryColor: O } = (0, u.Z)(x);
     return (
-        null != I && (b.background = 'linear-gradient(45deg, '.concat(S, ', ').concat(O, ')')),
+        null != x && (b.background = 'linear-gradient(45deg, '.concat(S, ', ').concat(O, ')')),
         (0, l.jsx)(r.ThemeProvider, {
-            theme: _.BR.DARK,
+            theme: f.BR.DARK,
             children: (e) =>
                 (0, l.jsxs)('figure', {
-                    'aria-roledescription': f.Z.Messages.CONTENT_INVENTORY_ACTIVITY_CARD_ARIA_ROLE_DESCRIPTION,
+                    'aria-roledescription': _.Z.Messages.CONTENT_INVENTORY_ACTIVITY_CARD_ARIA_ROLE_DESCRIPTION,
                     'aria-labelledby': g,
                     'data-disable-adaptive-theme': !0,
                     className: a()(p.container, e),
@@ -89,7 +89,7 @@ function I(e) {
                             clickableClassName: p.clickable,
                             clickable: T,
                             children: (0, l.jsx)(s.f, {
-                                src: I,
+                                src: x,
                                 constrain: 'width',
                                 size: 64,
                                 'aria-hidden': !0
@@ -104,8 +104,8 @@ function I(e) {
                                     className: p.users
                                 }),
                                 (0, l.jsx)(r.Spacer, { size: 2 }),
-                                (0, l.jsx)(E, {
-                                    clickable: x,
+                                (0, l.jsx)(I, {
+                                    clickable: E,
                                     className: p.clickableText,
                                     children: (0, l.jsx)(r.Heading, {
                                         id: g,
@@ -120,7 +120,7 @@ function I(e) {
                                     ? (0, l.jsxs)(l.Fragment, {
                                           children: [
                                               (0, l.jsx)(r.Spacer, { size: 2 }),
-                                              (0, l.jsx)(E, {
+                                              (0, l.jsx)(I, {
                                                   clickable: v,
                                                   className: p.clickableText,
                                                   children: (0, l.jsx)(r.Text, {

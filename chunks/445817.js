@@ -19,8 +19,8 @@ var n = t(735250),
     S = t(981631),
     I = t(689938),
     N = t(205058);
-let A = 387,
-    C = 218;
+let C = 387,
+    A = 218;
 function m(e) {
     let { previewEnabled: s, onEnablePreview: t } = e,
         m = E.Z.getCameraComponent(),
@@ -50,8 +50,8 @@ function m(e) {
                               children: [
                                   (0, n.jsx)(m, {
                                       deviceId: e,
-                                      width: A,
-                                      height: C,
+                                      width: C,
+                                      height: A,
                                       disabled: !s
                                   }),
                                   (0, n.jsx)(u.S, {})

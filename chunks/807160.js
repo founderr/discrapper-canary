@@ -21,8 +21,8 @@ var n,
     S = t(481060),
     I = t(37234),
     N = t(782568),
-    A = t(812206),
-    C = t(593061),
+    C = t(812206),
+    A = t(593061),
     m = t(600164),
     g = t(925329),
     h = t(267101),
@@ -362,7 +362,7 @@ class ec extends (a = o.PureComponent) {
     }
     renderInvoiceDownload() {
         let { payment: e } = this.props;
-        return (0, r.jsx)(C.Z, { payment: e });
+        return (0, r.jsx)(A.Z, { payment: e });
     }
     renderRefundDetails() {
         let e;
@@ -574,7 +574,7 @@ class ec extends (a = o.PureComponent) {
                 className: J.date,
                 children: (0, V.vc)(_()(n.createdAt), 'MM/DD/YYYY')
             }),
-            A = n.isGift
+            C = n.isGift
                 ? (0, r.jsx)(S.Tooltip, {
                       text: q.Z.Messages.BILLING_GIFT_PURCHASE_TOOLTIP,
                       children: (e) =>
@@ -594,7 +594,7 @@ class ec extends (a = o.PureComponent) {
                       (0, r.jsxs)('div', {
                           children: [s, N]
                       }),
-                      A
+                      C
                   ]
               })
             : (0, r.jsxs)(o.Fragment, {
@@ -602,7 +602,7 @@ class ec extends (a = o.PureComponent) {
                       N,
                       (0, r.jsxs)('div', {
                           className: J.description,
-                          children: [e, (0, r.jsx)('div', { children: s }), A]
+                          children: [e, (0, r.jsx)('div', { children: s }), C]
                       })
                   ]
               });
@@ -768,26 +768,26 @@ function ed(e) {
             applicationStatistics: E,
             gameApplication: S,
             paymentSources: I
-        } = (0, T.cj)([B.Z, G.Z, A.Z], () => {
+        } = (0, T.cj)([B.Z, G.Z, C.Z], () => {
             var e, s;
             return {
                 applicationStatistics: null != d ? G.Z.getCurrentUserStatisticsForApplication(d) : null,
-                gameApplication: null !== (s = A.Z.getApplication(null != d ? d : '')) && void 0 !== s ? s : null === (e = n.sku) || void 0 === e ? void 0 : e.application,
+                gameApplication: null !== (s = C.Z.getApplication(null != d ? d : '')) && void 0 !== s ? s : null === (e = n.sku) || void 0 === e ? void 0 : e.application,
                 paymentSources: B.Z.paymentSources
             };
         }),
-        N = (0, T.e7)([A.Z], () => (null != _ ? A.Z.getApplication(_) : null));
+        N = (0, T.e7)([C.Z], () => (null != _ ? C.Z.getApplication(_) : null));
     o.useEffect(() => {
         u && null != _ && (0, P.UM)(_);
     }, [_, u]);
-    let C = (0, T.e7)([j.Z], () => j.Z.getGuild(null == S ? void 0 : S.guildId)),
+    let A = (0, T.e7)([j.Z], () => j.Z.getGuild(null == S ? void 0 : S.guildId)),
         m = c ? S : void 0,
         g = n.subscription,
         h = (0, T.e7)([U.Z], () => (null != g && g.type !== z.NYc.PREMIUM ? U.Z.get(g.items[0].planId) : null));
     return (0, r.jsx)(ec, {
         applicationStatistics: E,
         application: u ? N : m,
-        guild: C,
+        guild: A,
         stickerPack: null,
         paymentSources: I,
         locale: a,

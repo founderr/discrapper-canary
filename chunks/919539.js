@@ -19,8 +19,8 @@ var n = t(735250),
     S = t(922628),
     I = t(526761),
     N = t(726985),
-    A = t(736530),
-    C = t(981631),
+    C = t(736530),
+    A = t(981631),
     m = t(689938);
 function g() {
     let e = (0, u.is)(),
@@ -37,7 +37,7 @@ function g() {
             [e]
         );
     function R(e, s) {
-        o.default.track(C.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+        o.default.track(A.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: s
         });
@@ -46,7 +46,7 @@ function g() {
         setting: N.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2,
         scrollPosition: I.to.MESSAGE_REQUESTS_V2,
         children:
-            e === A.T
+            e === C.T
                 ? (0, n.jsx)(T.Z, {
                       title: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
                       value: !t && !h,
@@ -70,14 +70,14 @@ function g() {
                           );
                       },
                       disabled: t,
-                      note: m.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: l.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
+                      note: m.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: l.Z.getArticleURL(A.BhN.MESSAGE_REQUESTS) })
                   })
                 : (0, n.jsx)(T.Z, {
                       title: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
                       value: !O,
                       onChange: p,
                       disabled: g,
-                      note: s ? m.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: l.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) }) : m.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: l.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
+                      note: s ? m.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: l.Z.getArticleURL(A.BhN.MESSAGE_REQUESTS) }) : m.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: l.Z.getArticleURL(A.BhN.MESSAGE_REQUESTS) })
                   })
     });
 }

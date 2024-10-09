@@ -19,8 +19,8 @@ var n,
     S = t(827837),
     I = t(821849),
     N = t(724757),
-    A = t(600164),
-    C = t(239827),
+    C = t(600164),
+    A = t(239827),
     m = t(818035),
     g = t(509545),
     h = t(78839),
@@ -54,7 +54,7 @@ function P(e) {
         var e;
         null === (e = l.current) || void 0 === e || e.scrollTo({ to: 0 });
     }, [c]);
-    let A = i.useCallback(
+    let C = i.useCallback(
             (e) => {
                 _(e);
                 let t = s[s.length - 1].id;
@@ -68,10 +68,10 @@ function P(e) {
         children: (0, a.jsx)(d.SJ, {
             children: (e) => {
                 let { ref: s, ...i } = e;
-                return (0, a.jsx)(C.Z, {
+                return (0, a.jsx)(A.Z, {
                     className: o()(f.verticalFit, f.paginator),
                     currentPageIndex: c,
-                    onChangePage: A,
+                    onChangePage: C,
                     numPages: r,
                     showPageCount: !1,
                     ref: s,
@@ -143,7 +143,7 @@ class b extends (n = i.PureComponent) {
                                         ? null
                                         : (0, a.jsx)('div', {
                                               className: o()(f.paymentRow, f.bottomDivider),
-                                              children: (0, a.jsxs)(A.Z, {
+                                              children: (0, a.jsxs)(C.Z, {
                                                   className: f.paymentRowHeader,
                                                   children: [
                                                       (0, a.jsx)('div', {

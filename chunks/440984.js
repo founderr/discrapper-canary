@@ -19,12 +19,12 @@ var n = t(735250),
     S = t(474936),
     I = t(689938),
     N = t(265791),
-    A = t(982404),
-    C = t(299156);
+    C = t(982404),
+    A = t(299156);
 function m(e) {
     let { premiumSubscription: s, premiumType: t, onClose: m, confettiCanvas: g, userWasChurned: h = !1, userDiscountOffer: O } = e,
         p = (0, l.ZP)(),
-        R = (0, r.wj)(p) ? A : C,
+        R = (0, r.wj)(p) ? C : A,
         x = a.useRef(null),
         [M, f] = a.useState(!1),
         D = (0, E._)(s, S.Xh.PREMIUM_MONTH_TIER_2, O),

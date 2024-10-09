@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return A;
     }
 }),
     t(47120);
@@ -19,12 +19,12 @@ var n = t(735250),
     S = t(726985),
     I = t(736530),
     N = t(981631),
-    A = t(689938);
-function C() {
+    C = t(689938);
+function A() {
     let e = (0, _.is)(),
         s = (0, _.c_)(),
         t = d.h2.useSetting().includes(e),
-        C = d.iG.useSetting(),
+        A = d.iG.useSetting(),
         m = a.useCallback(
             (s) => {
                 let t = new Set((0, c.YK)());
@@ -40,10 +40,10 @@ function C() {
     }
     let h = (e) => {
         (0, T.V)({
-            header: A.Z.Messages.USER_DM_SETTINGS_TITLE,
-            body: A.Z.Messages.USER_DM_SETTINGS_DESCRIPTION,
-            confirmText: A.Z.Messages.NO_TEXT,
-            cancelText: A.Z.Messages.YES_TEXT,
+            header: C.Z.Messages.USER_DM_SETTINGS_TITLE,
+            body: C.Z.Messages.USER_DM_SETTINGS_DESCRIPTION,
+            confirmText: C.Z.Messages.NO_TEXT,
+            cancelText: C.Z.Messages.YES_TEXT,
             confirmButtonColor: i.Button.Colors.BRAND,
             onConfirm: () => {
                 d.iG.updateSetting(e), g(e, !1);
@@ -58,16 +58,16 @@ function C() {
         children:
             e === I.T
                 ? (0, n.jsx)(E.Z, {
-                      title: A.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
-                      note: A.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_GLOBAL_NOTE,
-                      value: !C,
+                      title: C.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
+                      note: C.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_GLOBAL_NOTE,
+                      value: !A,
                       onChange: (e) => {
                           h(!e);
                       }
                   })
                 : (0, n.jsx)(E.Z, {
-                      title: A.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
-                      note: s ? A.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : A.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
+                      title: C.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
+                      note: s ? C.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : C.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
                       value: !t,
                       onChange: m
                   })

@@ -23,8 +23,8 @@ var n = t(735250),
     S = t(798769),
     I = t(981631),
     N = t(689938),
-    A = t(689230);
-async function C(e) {
+    C = t(689230);
+async function A(e) {
     let { premiumSubscription: s, pauseDuration: t, onClose: n, setHasError: a, setIsCancelling: i, analyticsLocations: r, analyticsLocation: o } = e;
     try {
         i(!0), a(!1), await (0, d.Mg)(s, { pauseDuration: t }, r, o), n();
@@ -42,7 +42,7 @@ function m(e) {
             [r]
         ),
         u = d.status === I.O0b.PAUSED ? N.Z.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : N.Z.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE,
-        C = (function (e) {
+        A = (function (e) {
             let s = e.status === I.O0b.PAUSED ? N.Z.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE : N.Z.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
                 { durations: t, currentDaysPaused: n } = (0, T.AT)(e),
                 a = [];
@@ -51,7 +51,7 @@ function m(e) {
                 a.push({
                     name: s.format({ days: t - n }),
                     value: t,
-                    radioItemIconClassName: A.radioOption
+                    radioItemIconClassName: C.radioOption
                 });
             }
             return (
@@ -59,15 +59,15 @@ function m(e) {
                 a.push({
                     name: N.Z.Messages.PREMIUM_PAUSE_DURATION_CANCEL,
                     value: 0,
-                    radioBarClassName: A.cancelText,
-                    radioItemIconClassName: A.cancelText
+                    radioBarClassName: C.cancelText,
+                    radioItemIconClassName: C.cancelText
                 }),
                 a
             );
         })(d);
     return (
         a.useEffect(() => {
-            if (!(C.length < 1)) r(C[0].value);
+            if (!(A.length < 1)) r(A[0].value);
         }, []),
         (0, n.jsxs)(n.Fragment, {
             children: [
@@ -78,25 +78,25 @@ function m(e) {
                 (0, n.jsx)(c.ModalHeader, {
                     separator: !1,
                     children: (0, n.jsxs)('div', {
-                        className: A.__invalid_header,
+                        className: C.__invalid_header,
                         children: [
                             (0, n.jsx)(c.Heading, {
                                 variant: 'heading-xl/bold',
-                                className: A.__invalid_modalHeader,
+                                className: C.__invalid_modalHeader,
                                 children: N.Z.Messages.PREMIUM_PAUSE_SELECT_TITLE
                             }),
                             (0, n.jsx)(c.Heading, {
                                 variant: 'heading-sm/medium',
-                                className: A.subtitle,
+                                className: C.subtitle,
                                 children: u
                             })
                         ]
                     })
                 }),
                 (0, n.jsx)(c.ModalContent, {
-                    className: A.body,
+                    className: C.body,
                     children: (0, n.jsx)(c.RadioGroup, {
-                        options: C,
+                        options: A,
                         onChange: _,
                         value: i
                     })
@@ -138,7 +138,7 @@ function g(e) {
     }
     return (
         (R = (0, n.jsx)('div', {
-            className: A.body,
+            className: C.body,
             children: x
         })),
         (0, n.jsxs)(n.Fragment, {
@@ -150,20 +150,20 @@ function g(e) {
                 (0, n.jsx)(c.ModalHeader, {
                     separator: !1,
                     children: (0, n.jsx)('div', {
-                        className: A.__invalid_header,
+                        className: C.__invalid_header,
                         children: (0, n.jsx)(c.Heading, {
                             variant: 'heading-xl/bold',
-                            className: A.__invalid_modalHeader,
+                            className: C.__invalid_modalHeader,
                             children: N.Z.Messages.PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED
                         })
                     })
                 }),
                 (0, n.jsxs)(c.ModalContent, {
-                    className: A.body,
+                    className: C.body,
                     children: [
                         T
                             ? (0, n.jsx)(c.FormErrorBlock, {
-                                  className: A.errorBlock,
+                                  className: C.errorBlock,
                                   children: N.Z.Messages.BILLING_ERROR_GENERIC
                               })
                             : null,
@@ -173,13 +173,13 @@ function g(e) {
                 (0, n.jsx)(c.ModalFooter, {
                     justify: E.Z.Justify.START,
                     children: (0, n.jsxs)('div', {
-                        className: A.whatYouLoseButtonContainer,
+                        className: C.whatYouLoseButtonContainer,
                         children: [
                             (0, n.jsx)(c.Button, {
                                 color: c.Button.Colors.RED,
                                 disabled: h || null == o,
                                 onClick: async () => {
-                                    await C({
+                                    await A({
                                         premiumSubscription: s,
                                         pauseDuration: o,
                                         setIsCancelling: O,

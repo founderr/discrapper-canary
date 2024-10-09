@@ -14,8 +14,8 @@ var n = t(735250),
     S = t(279837),
     I = t(952306),
     N = t(600164),
-    A = t(690221),
-    C = t(346585),
+    C = t(690221),
+    A = t(346585),
     m = t(347649),
     g = t(332473),
     h = t(303172),
@@ -110,10 +110,10 @@ class k extends a.PureComponent {
                   className: V.accountWarningBodyText,
                   messageType: _.HelpMessageTypes.WARNING,
                   children: [
-                      this.props.forceMigrationExperiment ? y.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, C.IE)(this.props.locale) }) : y.Z.Messages.POMELO_ACTION_NEEDED.format(),
+                      this.props.forceMigrationExperiment ? y.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, A.IE)(this.props.locale) }) : y.Z.Messages.POMELO_ACTION_NEEDED.format(),
                       ' ',
                       '',
-                      (0, n.jsx)(A.Z, {
+                      (0, n.jsx)(C.Z, {
                           className: V.noticeTextButton,
                           onClick: () => (0, h.Z)(F.Kq.USER_SETTINGS),
                           children: y.Z.Messages.GET_STARTED

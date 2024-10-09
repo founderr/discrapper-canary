@@ -1,40 +1,40 @@
-t.d(n, {
+n.d(t, {
     Hm: function () {
         return o;
     },
     Tv: function () {
-        return i;
+        return s;
     },
     __: function () {
-        return r;
+        return i;
     },
     yT: function () {
-        return s;
+        return a;
     }
 });
-var a = t(570140);
-function r(e, n, t) {
-    a.Z.dispatch({
+var r = n(570140);
+function i(e, t, n) {
+    r.Z.dispatch({
         type: 'APP_LAUNCHER_SHOW',
         entrypoint: e,
-        activeViewType: n,
-        initialState: t
+        activeViewType: t,
+        initialState: n
     });
 }
-function s(e) {
-    a.Z.dispatch({
+function a(e) {
+    r.Z.dispatch({
         type: 'APP_LAUNCHER_DISMISS',
         closeReason: e
     });
 }
-function i(e) {
-    a.Z.dispatch({
+function s(e) {
+    r.Z.dispatch({
         type: 'APP_LAUNCHER_ADD_FAILED_APP_DM_LOAD',
         channelId: e
     });
 }
 function o(e) {
-    a.Z.dispatch({
+    r.Z.dispatch({
         type: 'APP_LAUNCHER_REMOVE_FAILED_APP_DM_LOAD',
         channelId: e
     });

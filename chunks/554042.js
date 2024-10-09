@@ -19,8 +19,8 @@ var n = t(735250),
     S = t(865427),
     I = t(358085),
     N = t(210887),
-    A = t(981631),
-    C = t(689938),
+    C = t(981631),
+    A = t(689938),
     m = t(937416);
 let g = [
     {
@@ -149,12 +149,12 @@ function h() {
                                 orientation: 'horizontal',
                                 options: [
                                     {
-                                        name: C.Z.Messages.THEME_DARK,
-                                        value: A.BRd.DARK
+                                        name: A.Z.Messages.THEME_DARK,
+                                        value: C.BRd.DARK
                                     },
                                     {
-                                        name: C.Z.Messages.THEME_LIGHT,
-                                        value: A.BRd.LIGHT
+                                        name: A.Z.Messages.THEME_LIGHT,
+                                        value: C.BRd.LIGHT
                                     }
                                 ],
                                 onChange: (e) => {

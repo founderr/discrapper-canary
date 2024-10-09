@@ -16,7 +16,7 @@ function u(e) {
         u = null == t ? void 0 : t.getIconURL(s.Si.LARGE),
         d = n.extra.activity_name,
         m = (0, o.kr)(n) && !(0, o.n2)(n) ? c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
-        _ = {
+        f = {
             onClick: () => {
                 l.__(i._b.TEXT, r.I.NORMAL, { applicationId: n.extra.application_id });
             },
@@ -25,8 +25,8 @@ function u(e) {
     return {
         thumbnailUrl: u,
         title: d,
-        titleClickable: _,
-        thumbnailClickable: _,
+        titleClickable: f,
+        thumbnailClickable: f,
         userDescription: m
     };
 }

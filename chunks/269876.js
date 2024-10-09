@@ -19,8 +19,8 @@ var n = t(735250),
     S = t(65154),
     I = t(689938),
     N = t(393752),
-    A = t(739017),
-    C = t(113207);
+    C = t(739017),
+    A = t(113207);
 let m = (0, E.hQ)();
 function g() {
     let [e, s] = a.useState(-100),
@@ -87,7 +87,7 @@ function g() {
                     }),
                     (0, n.jsx)(_.FormText, {
                         type: _.FormText.Types.DESCRIPTION,
-                        className: C.marginBottom8,
+                        className: A.marginBottom8,
                         children: I.Z.Messages.FORM_HELP_AUTOMATIC_VAD
                     })
                 ]
@@ -98,7 +98,7 @@ function g() {
                 (0, n.jsx)(_.FormTitle, {
                     id: m,
                     tag: _.FormTitleTags.H5,
-                    className: C.marginBottom8,
+                    className: A.marginBottom8,
                     children: I.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY
                 }),
                 (0, n.jsxs)('div', {
@@ -107,11 +107,11 @@ function g() {
                             (0, n.jsx)(E.FG, {
                                 children: (e) =>
                                     (0, n.jsxs)('div', {
-                                        className: r()(A.horizontal, C.marginBottom4),
+                                        className: r()(C.horizontal, A.marginBottom4),
                                         children: [
                                             (0, n.jsx)(_.FormTitle, {
                                                 tag: _.FormTitleTags.H3,
-                                                className: C.marginReset,
+                                                className: A.marginReset,
                                                 children: (0, n.jsx)('label', {
                                                     htmlFor: e,
                                                     children: I.Z.Messages.FORM_LABEL_AUTOMATIC_VAD
@@ -131,7 +131,7 @@ function g() {
                 !R &&
                     (0, n.jsx)(_.FormText, {
                         type: _.FormText.Types.DESCRIPTION,
-                        className: r()(N.inputDisabledWarning, C.marginBottom8),
+                        className: r()(N.inputDisabledWarning, A.marginBottom8),
                         children: I.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({ onEnableClick: () => u.Z.enable(!0) })
                     })
             ]
