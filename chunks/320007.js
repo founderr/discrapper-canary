@@ -36,8 +36,8 @@ function I(e) {
             hasAnyClipAnimations: h.Z.hasAnyClipAnimations()
         })),
         v = null != T && T.newClipIds.length > 0,
-        L = (0, f.n)((e) => e.clipsButtonRef),
-        b = (0, f.n)((e) => e.setClipsButtonRef),
+        b = (0, f.n)((e) => e.clipsButtonRef),
+        L = (0, f.n)((e) => e.setClipsButtonRef),
         O = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: A, allowIdle: P } = (0, o.Y)('animation');
     function Z() {
@@ -52,19 +52,19 @@ function I(e) {
     return (i.useEffect(() => (x ? A() : P(), () => P()), [x, A, P]), S && C && g)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != L &&
+                  null != b &&
                       t &&
                       N &&
                       v &&
                       !(0, s.hasAnyModalOpen)() &&
                       !O &&
                       (0, r.jsx)(E.Z, {
-                          clipIconRef: L,
+                          clipIconRef: b,
                           lastClipsSession: T,
                           onOpenClipsGallery: Z
                       }),
                   (0, r.jsx)('div', {
-                      ref: b,
+                      ref: L,
                       children: (0, r.jsx)(a.JO, {
                           className: I,
                           icon: s.ClipsIcon,

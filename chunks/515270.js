@@ -25,17 +25,17 @@ var r = n(920478),
     _ = n(42530);
 let E = new Set(['line']),
     f = r.Z.listLanguages(),
-    h = {};
+    h = new Map();
 for (let e of f) {
     e = e.toLowerCase();
     let t = r.Z.getLanguage(e);
     if (null == t) continue;
     let n = t.aliases;
-    if (((h[e] = e), null != n)) for (let t of n) h[t.toLowerCase()] = e;
+    if ((h.set(e, e), null != n)) for (let t of n) h.set(t.toLowerCase(), e);
 }
 let p = /^[a-z0-9_+\-.#]+$/,
     I = /^[a-z0-9_+\-.#]+$/i;
-for (let e in h) if (null == e.match(p)) throw Error('Language name does not match regex: '.concat(e));
+for (let [e, t] of h) if (null == e.match(p)) throw Error('Language name does not match regex: '.concat(e));
 function m(e) {
     let { onChange: t } = e,
         n = null;
@@ -87,7 +87,7 @@ function m(e) {
                                             f = r && 0 === s.length,
                                             p = (c ? s.slice(1) : s).length % 2 == 1,
                                             m = p && (null == u || '' === u || null != u.match(I)),
-                                            T = m && null != u && null !== (a = h[u.toLowerCase()]) && void 0 !== a ? a : null;
+                                            T = m && null != u && null !== (a = h.get(u.toLowerCase())) && void 0 !== a ? a : null;
                                         return {
                                             blockEntry: t,
                                             wasInCodeBlock: n,

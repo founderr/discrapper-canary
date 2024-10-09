@@ -22,15 +22,15 @@ var s,
     n,
     t = E(470079),
     r = E(399606),
-    a = E(906732),
-    T = E(171368),
+    T = E(906732),
+    a = E(171368),
     I = E(430824),
     l = E(594174),
     o = E(91047),
     A = E(981631);
 let i = (e, _) => {
     let { guildId: E, userId: s, colorRoleId: n } = e;
-    (0, T.openUserProfileModal)({
+    (0, a.openUserProfileModal)({
         userId: s,
         guildId: E,
         sourceAnalyticsLocations: _,
@@ -42,7 +42,7 @@ let i = (e, _) => {
     });
 };
 function N(e, _, E, s) {
-    let { analyticsLocations: n } = (0, a.ZP)();
+    let { analyticsLocations: n } = (0, T.ZP)();
     return t.useCallback(
         (t) => {
             if (null == e) return;
@@ -61,7 +61,7 @@ function N(e, _, E, s) {
     );
 }
 function D(e, _, E) {
-    let { analyticsLocations: s } = (0, a.ZP)();
+    let { analyticsLocations: s } = (0, T.ZP)();
     return t.useCallback(
         (n) => {
             if (null == e) return;

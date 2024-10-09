@@ -3,8 +3,8 @@ var s,
     n,
     t,
     r,
-    a = E(392711),
-    T = E.n(a),
+    T = E(392711),
+    a = E.n(T),
     I = E(149765),
     l = E(442837),
     o = E(570140),
@@ -40,13 +40,13 @@ function F(e) {
         e.reverse().forEach((e) => {
             var s, n, t;
             let r = [],
-                a = null,
+                T = null,
                 I = null,
                 l = null;
             if ((null != e.reason && r.push(new A.ms(L.zUn.REASON, null, e.reason)), null != e.changes))
                 for (let _ of e.changes) {
                     let e = new A.ms(_.key, _.old_value, _.new_value);
-                    r.push(e), e.key === L.zUn.NAME ? (a = e) : e.key === L.zUn.TYPE ? (l = e) : e.key === L.zUn.TITLE && (I = e);
+                    r.push(e), e.key === L.zUn.NAME ? (T = e) : e.key === L.zUn.TYPE ? (l = e) : e.key === L.zUn.TITLE && (I = e);
                 }
             if (e.action_type === L.rsA.MEMBER_PRUNE) {
                 let _ = null != e && null != e.options && null != e.options.delete_member_days ? e.options.delete_member_days : 1,
@@ -67,7 +67,7 @@ function F(e) {
                 (function (e, _, E) {
                     let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 30,
                         n = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 50;
-                    return null != e && e.action === _.action && e.targetId === _.targetId && e.userId === _.userId && T().isEqual(e.options, _.options) && _.timestampStart.diff(e.timestampStart, 'minutes') < s && E < n && _.targetType !== L.KFR.INVITE && _.action !== L.rsA.MESSAGE_DELETE && _.action !== L.rsA.MESSAGE_BULK_DELETE && _.action !== L.rsA.MESSAGE_PIN && _.action !== L.rsA.MESSAGE_UNPIN && _.action !== L.rsA.MEMBER_MOVE && _.action !== L.rsA.MEMBER_DISCONNECT && _.action !== L.rsA.BOT_ADD && _.action !== L.rsA.APPLICATION_COMMAND_PERMISSION_UPDATE && _.action !== L.rsA.MEMBER_PRUNE;
+                    return null != e && e.action === _.action && e.targetId === _.targetId && e.userId === _.userId && a().isEqual(e.options, _.options) && _.timestampStart.diff(e.timestampStart, 'minutes') < s && E < n && _.targetType !== L.KFR.INVITE && _.action !== L.rsA.MESSAGE_DELETE && _.action !== L.rsA.MESSAGE_BULK_DELETE && _.action !== L.rsA.MESSAGE_PIN && _.action !== L.rsA.MESSAGE_UNPIN && _.action !== L.rsA.MEMBER_MOVE && _.action !== L.rsA.MEMBER_DISCONNECT && _.action !== L.rsA.BOT_ADD && _.action !== L.rsA.APPLICATION_COMMAND_PERMISSION_UPDATE && _.action !== L.rsA.MEMBER_PRUNE;
                 })(N, o, E)
             ) {
                 (_[0] = N.merge({
@@ -77,8 +77,8 @@ function F(e) {
                     E++;
                 return;
             }
-            if (o.actionType === L.vB8.DELETE && (null != a || null != I)) {
-                let e = null !== (t = null == a ? void 0 : a.oldValue) && void 0 !== t ? t : null == I ? void 0 : I.oldValue;
+            if (o.actionType === L.vB8.DELETE && (null != T || null != I)) {
+                let e = null !== (t = null == T ? void 0 : T.oldValue) && void 0 !== t ? t : null == I ? void 0 : I.oldValue;
                 (o.targetType === L.KFR.CHANNEL || o.targetType === L.KFR.CHANNEL_OVERWRITE) && null !== l && (0, i.r8)(l.oldValue) && (e = '#'.concat(e)), null == b[o.targetType] ? (b[o.targetType] = { [o.targetId]: e }) : (b[o.targetType][o.targetId] = e);
             }
             (E = 0), _.unshift(o);
@@ -92,7 +92,7 @@ function B(e) {
     let E = N.ZP.getMembers(u),
         s = D.Z.getGuild(u),
         n = null != u ? D.Z.getRoles(u) : void 0;
-    U = T()(E)
+    U = a()(E)
         .filter((e) =>
             e.roles.some((_) => {
                 if (null != s) {
@@ -186,8 +186,8 @@ class x extends (s = l.ZP.Store) {
             (p = !0), _ && H++;
         },
         AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
-            let { logs: _, integrations: E, webhooks: s, guildScheduledEvents: n, automodRules: t, threads: r, applicationCommands: a } = e;
-            if (((p = !1), (O = E), (d = s), (G = n), (M = t), (R = r), (g = a), (0 === _.length || _.length < L.Rg9) && (h = !1), _.length > 0)) {
+            let { logs: _, integrations: E, webhooks: s, guildScheduledEvents: n, automodRules: t, threads: r, applicationCommands: T } = e;
+            if (((p = !1), (O = E), (d = s), (G = n), (M = t), (R = r), (g = T), (0 === _.length || _.length < L.Rg9) && (h = !1), _.length > 0)) {
                 let e = F(_);
                 c = [...c, ...e];
             }

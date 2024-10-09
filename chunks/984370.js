@@ -34,7 +34,7 @@ async function x() {
     }
 }
 function v(e) {
-    let { children: t, className: n, channelId: i, guildId: l, innerClassname: a, transparent: o = !1, toolbar: p, mobileToolbar: m, 'aria-label': R, 'aria-labelledby': T, scrollable: v, role: L, hideSearch: b, showDivider: O } = e,
+    let { children: t, className: n, channelId: i, guildId: l, innerClassname: a, transparent: o = !1, toolbar: p, mobileToolbar: m, 'aria-label': R, 'aria-labelledby': T, scrollable: v, role: b, hideSearch: L, showDivider: O } = e,
         { hasBugReporterAccess: A } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: P, inInbox: Z } = _.Z.useExperiment({ location: 'HeaderBar' }),
         y = (0, d.Q)('HeaderBar');
@@ -43,7 +43,7 @@ function v(e) {
         innerClassName: a,
         toolbar: (function () {
             if (null == p) return null;
-            let e = null != i && !b;
+            let e = null != i && !L;
             return s.tq
                 ? m
                 : (0, r.jsxs)(r.Fragment, {
@@ -54,12 +54,12 @@ function v(e) {
         onDoubleClick: x,
         'aria-label': R,
         'aria-labelledby': T,
-        role: L,
+        role: b,
         scrollable: v,
         children: t
     });
 }
-function L(e) {
+function b(e) {
     let { children: t, className: n, 'aria-label': i, 'aria-labelledby': l, role: s } = e;
     return (0, r.jsx)(I.ZP, {
         className: n,
@@ -70,7 +70,7 @@ function L(e) {
         children: t
     });
 }
-function b(e) {
+function L(e) {
     let { isAuthenticated: t = !0, ...n } = e,
         { analyticsLocations: i } = (0, o.ZP)(a.Z.HEADER_BAR),
         s = l()(n.className, { [N.forumOrHome]: (null != n.channelType && R.TPd.GUILD_THREADS_ONLY.has(n.channelType)) || n.channelId === T.oC.GUILD_HOME });
@@ -81,10 +81,10 @@ function b(e) {
                   ...n,
                   className: s
               })
-            : (0, r.jsx)(L, {
+            : (0, r.jsx)(b, {
                   ...n,
                   className: s
               })
     });
 }
-(b.Title = I.ZP.Title), (b.Icon = I.ZP.Icon), (b.Divider = I.ZP.Divider), (b.Caret = I.ZP.Caret), (t.Z = b);
+(L.Title = I.ZP.Title), (L.Icon = I.ZP.Icon), (L.Divider = I.ZP.Divider), (L.Caret = I.ZP.Caret), (t.Z = L);

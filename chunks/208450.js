@@ -23,8 +23,8 @@ var r = n(735250),
     N = n(585483),
     x = n(72006),
     v = n(405656),
-    L = n(181389),
-    b = n(854709),
+    b = n(181389),
+    L = n(854709),
     O = n(778177),
     A = n(981631),
     P = n(689938),
@@ -54,7 +54,7 @@ class U extends i.PureComponent {
         let { editorState: t, searchId: n } = this.props;
         if (t !== e.editorState) {
             let e = v.kG(x.Sq(t)),
-                r = L.g9(e, t);
+                r = b.g9(e, t);
             h.u$(n, e, r), null != this._editorRef && x.iE(this._editorRef.editor);
         }
     }
@@ -250,7 +250,7 @@ class U extends i.PureComponent {
                 let { shiftKey: t } = e;
                 e.preventDefault();
                 let { current: n } = this._searchPopoutRef;
-                return !(null != n && n.selectOption()) && ((0, b.X)() && t ? this.search({ searchEverywhere: !0 }) : this.search()), !0;
+                return !(null != n && n.selectOption()) && ((0, L.X)() && t ? this.search({ searchEverywhere: !0 }) : this.search()), !0;
             }),
             y(this, 'handleBeforeInput', (e) => {
                 let { editorState: t } = this.props,
@@ -328,7 +328,7 @@ t.Z = u.ZP.connectStores([m.Z, R.Z], () => {
     let t = R.Z.getCurrentSearchId(),
         n = R.Z.getSearchType(),
         r = null != t && R.Z.isSearching(t),
-        i = null != t && null !== (e = R.Z.getEditorState(t)) && void 0 !== e ? e : x.nR(L.Jl(E.ZP)),
+        i = null != t && null !== (e = R.Z.getEditorState(t)) && void 0 !== e ? e : x.nR(b.Jl(E.ZP)),
         l = m.Z.keyboardModeEnabled;
     return {
         searchId: t,

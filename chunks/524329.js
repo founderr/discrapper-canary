@@ -3,13 +3,13 @@ E.d(_, {
         return o;
     },
     RM: function () {
-        return a;
+        return T;
     },
     VP: function () {
         return l;
     },
     Xb: function () {
-        return T;
+        return a;
     },
     sm: function () {
         return I;
@@ -29,7 +29,7 @@ let r = function (e) {
             isLurking: _
         });
     },
-    a = async (e) => {
+    T = async (e) => {
         n.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_START' });
         try {
             let _ = await s.tn.get({
@@ -48,7 +48,7 @@ let r = function (e) {
             n.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_FAIL' });
         }
     },
-    T = () => {
+    a = () => {
         n.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_RESET' });
     },
     I = () => {

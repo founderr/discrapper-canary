@@ -23,8 +23,8 @@ var r = n(735250),
     N = n(699516),
     x = n(250758),
     v = n(944486),
-    L = n(914010),
-    b = n(246946),
+    b = n(914010),
+    L = n(246946),
     O = n(594174),
     A = n(585483),
     P = n(63063),
@@ -83,7 +83,7 @@ let F = h()('2015-05-15').local(),
                 'span',
                 {
                     className: D.displayUsername,
-                    children: y.ZP.getUserTag(a, { identifiable: b.Z.enabled && b.Z.hidePersonalInformation ? 'never' : 'always' })
+                    children: y.ZP.getUserTag(a, { identifiable: L.Z.enabled && L.Z.hidePersonalInformation ? 'never' : 'always' })
                 },
                 'display-username-'.concat(t, '-').concat(a.id)
             )
@@ -486,8 +486,8 @@ class V extends i.PureComponent {
     }
 }
 t.ZP = i.forwardRef((e, t) => {
-    let [n, i, l] = (0, f.Wu)([L.Z, v.Z, x.Z], () => {
-        let e = L.Z.getGuildId(),
+    let [n, i, l] = (0, f.Wu)([b.Z, v.Z, x.Z], () => {
+        let e = b.Z.getGuildId(),
             t = v.Z.getChannelId(),
             n = null != e ? e : t;
         o()(null != n, 'SearchPopout.getStateFromStores - invalid searchId');

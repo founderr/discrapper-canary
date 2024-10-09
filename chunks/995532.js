@@ -7,8 +7,8 @@ var s,
     n,
     t,
     r,
-    a = E(442837),
-    T = E(570140);
+    T = E(442837),
+    a = E(570140);
 let I = {},
     l = {},
     o = {},
@@ -23,7 +23,7 @@ function L(e) {
     let { welcomeScreen: _, guildId: E } = e;
     l[E] = null != _ ? _ : I;
 }
-class S extends (r = a.ZP.Store) {
+class S extends (r = T.ZP.Store) {
     get(e) {
         if (null != e) return l[e];
     }
@@ -52,7 +52,7 @@ class S extends (r = a.ZP.Store) {
               writable: !0
           })
         : (s[n] = t),
-    (_.Z = new S(T.Z, {
+    (_.Z = new S(a.Z, {
         INVITE_RESOLVE_SUCCESS: D,
         INVITE_ACCEPT_SUCCESS: D,
         WELCOME_SCREEN_SUBMIT_SUCCESS: L,
