@@ -9,7 +9,6 @@ e.exports = {
     content: 'content_e881fc',
     gameProfileModal: 'gameProfileModal_e881fc',
     gameArtHero: 'gameArtHero_e881fc',
-    scrollable: 'scrollable_e881fc',
     coverArtRow: 'coverArtRow_e881fc',
     overflowMenu: 'overflowMenu_e881fc',
     headerInfo: 'headerInfo_e881fc',
