@@ -31,6 +31,7 @@ async function u(e) {
             withCommands: o
         });
         try {
+            var E;
             let e = await i.tn.get({
                 url: d.ANM.APP_RECOMMENDATIONS,
                 query: {
@@ -44,7 +45,7 @@ async function u(e) {
                 type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS',
                 location: t,
                 channelId: n,
-                recommendations: e.body,
+                recommendations: null !== (E = e.body) && void 0 !== E ? E : [],
                 withCommands: o
             });
         } catch (e) {
