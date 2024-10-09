@@ -31,12 +31,33 @@ function p(e) {
     h(s.Z.createFromServer(e));
 }
 function I(e) {
+    let { userId: t, applicationId: n } = e,
+        r = f.botUserIdToAppUsage[t];
+    null == r
+        ? (f.botUserIdToAppUsage[t] = {
+              applicationId: n,
+              lastUsedMs: Date.now()
+          })
+        : (f.botUserIdToAppUsage[t] = {
+              applicationId: n,
+              lastUsedMs: r.lastUsedMs
+          });
+    let i = new Map();
+    for (let [e, t] of Object.entries(f.botUserIdToAppUsage)) i.set(e, t);
+    let a = Array.from(i.entries()).sort((e, t) => t[1].lastUsedMs - e[1].lastUsedMs);
+    for (let e = 0; e < a.length; e++)
+        if (e >= 10) {
+            let t = a[e][0];
+            delete f.botUserIdToAppUsage[t];
+        }
+}
+function m(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (h(s.Z.createFromServer(e.application)), (n = !0));
     return n;
 }
-class m extends (r = i.ZP.PersistedStore) {
+class T extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e && 'object' == typeof e.botUserIdToAppUsage)
             for (let t in e.botUserIdToAppUsage) {
@@ -93,9 +114,9 @@ class m extends (r = i.ZP.PersistedStore) {
         if (null != e) return null === (t = f.botUserIdToAppUsage[e]) || void 0 === t ? void 0 : t.applicationId;
     }
 }
-o(m, 'displayName', 'ApplicationStore'),
-    o(m, 'persistKey', 'ApplicationStore'),
-    (t.Z = new m(a.Z, {
+o(T, 'displayName', 'ApplicationStore'),
+    o(T, 'persistKey', 'ApplicationStore'),
+    (t.Z = new T(a.Z, {
         LOGOUT: function () {
             (u = {}), (c = {}), (d = {}), (_ = {}), (E = {});
         },
@@ -143,9 +164,9 @@ o(m, 'displayName', 'ApplicationStore'),
             let { application: t } = e;
             p(t);
         },
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: I,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: I,
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: I,
+        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: m,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: m,
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: m,
         GUILD_SETTINGS_LOADED_INTEGRATIONS: function (e) {
             let { integrations: t, guildId: n } = e,
                 r = !1,
@@ -220,27 +241,7 @@ o(m, 'displayName', 'ApplicationStore'),
             let { user: t, application: n } = e;
             t.bot &&
                 null != n &&
-                !(function (e) {
-                    let { userId: t, applicationId: n } = e,
-                        r = f.botUserIdToAppUsage[t];
-                    null == r
-                        ? (f.botUserIdToAppUsage[t] = {
-                              applicationId: n,
-                              lastUsedMs: Date.now()
-                          })
-                        : (f.botUserIdToAppUsage[t] = {
-                              applicationId: n,
-                              lastUsedMs: r.lastUsedMs
-                          });
-                    let i = new Map();
-                    for (let [e, t] of Object.entries(f.botUserIdToAppUsage)) i.set(e, t);
-                    let a = Array.from(i.entries()).sort((e, t) => t[1].lastUsedMs - e[1].lastUsedMs);
-                    for (let e = 0; e < a.length; e++)
-                        if (e >= 10) {
-                            let t = a[e][0];
-                            delete f.botUserIdToAppUsage[t];
-                        }
-                })({
+                I({
                     userId: t.id,
                     applicationId: n.id
                 });
@@ -253,5 +254,16 @@ o(m, 'displayName', 'ApplicationStore'),
                     ...n,
                     lastUsedMs: Date.now()
                 });
+        },
+        USER_AUTHORIZED_APPS_UPDATE: function (e) {
+            e.apps.forEach((e) => {
+                h(s.Z.createFromServer(e.application));
+                let t = e.application.bot;
+                null != t &&
+                    I({
+                        userId: t.id,
+                        applicationId: e.application.id
+                    });
+            });
         }
     }));
