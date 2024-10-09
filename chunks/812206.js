@@ -80,6 +80,9 @@ class T extends (r = i.ZP.PersistedStore) {
     _getAllApplications() {
         return Object.values(u);
     }
+    getApplications() {
+        return u;
+    }
     getGuildApplication(e, t) {
         if (null != e) {
             for (let n of Object.values(u)) if (n.guildId === e && n.type === t) return n;
