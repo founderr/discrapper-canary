@@ -1,30 +1,27 @@
 n.d(t, {
     $s: function () {
-        return A;
-    },
-    Cg: function () {
-        return g;
-    },
-    EV: function () {
-        return R;
-    },
-    IS: function () {
-        return N;
-    },
-    KY: function () {
         return T;
     },
+    Cg: function () {
+        return m;
+    },
+    EV: function () {
+        return g;
+    },
+    IS: function () {
+        return S;
+    },
+    KY: function () {
+        return p;
+    },
     SI: function () {
-        return C;
+        return A;
     },
     XB: function () {
-        return I;
-    },
-    bO: function () {
-        return O;
+        return f;
     },
     jc: function () {
-        return m;
+        return h;
     }
 }),
     n(315314),
@@ -34,27 +31,24 @@ n.d(t, {
     n(815648),
     n(47120);
 var r = n(470079),
-    i = n(392711),
+    i = n(108131),
     a = n.n(i),
-    s = n(108131),
-    o = n.n(s),
-    l = n(544891),
-    u = n(570140),
-    c = n(963202),
-    d = n(229893),
-    _ = n(286083),
-    E = n(207796),
-    f = n(976757),
-    h = n(981631);
-let p = new Worker(new URL('/assets/' + n.u('59546'), n.b));
-function I() {
+    s = n(544891),
+    o = n(570140),
+    l = n(963202),
+    u = n(229893),
+    c = n(286083),
+    d = n(976757),
+    _ = n(981631);
+let E = new Worker(new URL('/assets/' + n.u('59546'), n.b));
+function f() {
     return (
-        u.Z.dispatch({ type: 'FETCH_STATIC_CLAN_LIST_START' }),
-        l.tn
-            .get({ url: h.ANM.DISCOVERY_ALL_GAMES })
+        o.Z.dispatch({ type: 'FETCH_STATIC_CLAN_LIST_START' }),
+        s.tn
+            .get({ url: _.ANM.DISCOVERY_ALL_GAMES })
             .then((e) => {
-                let t = e.body.clans.map(f.Gh);
-                u.Z.dispatch({
+                let t = e.body.clans.map(d.Gh);
+                o.Z.dispatch({
                     type: 'FETCH_STATIC_CLAN_LIST_SUCCESS',
                     clans: (function (e) {
                         let t = new Set();
@@ -63,19 +57,19 @@ function I() {
                 });
             })
             .catch((e) => {
-                u.Z.dispatch({
+                o.Z.dispatch({
                     type: 'FETCH_STATIC_CLAN_LIST_FAILURE',
                     error: e
                 });
             })
     );
 }
-async function m(e) {
+async function h(e) {
     var t, n, r;
-    if ('loaded' === d.Z.getSearchResult(e).status) return;
-    let i = o().v3(JSON.stringify(e)),
-        a = d.Z.getStaticClans();
-    let s = await ((t = a),
+    if ('loaded' === u.Z.getSearchResult(e).status) return;
+    let i = a().v3(JSON.stringify(e)),
+        s = u.Z.getStaticClans();
+    let l = await ((t = s),
         (n = i),
         (r = e),
         new Promise((e) => {
@@ -83,36 +77,36 @@ async function m(e) {
                 let {
                     data: { id: r, sortedClans: a }
                 } = t;
-                n === r && e(a), null == p || p.removeEventListener('message', i);
+                n === r && e(a), null == E || E.removeEventListener('message', i);
             };
-            null == p || p.addEventListener('message', i);
-            null == p ||
-                p.postMessage({
+            null == E || E.addEventListener('message', i);
+            null == E ||
+                E.postMessage({
                     id: n,
                     unsortedClans: t,
                     criteria: r
                 });
         })),
-        l = {
+        c = {
             status: 'loaded',
             loadedAt: Date.now(),
-            items: s,
-            guildIds: s.map((e) => e.id)
+            items: l,
+            guildIds: l.map((e) => e.id)
         };
-    u.Z.dispatch({
+    o.Z.dispatch({
         type: 'FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS',
         criteriaHash: i,
-        searchResult: l,
+        searchResult: c,
         recommendationId: 'static:'.concat(i)
     });
 }
-function T(e) {
+function p(e) {
     let { location: t, query: n } = e,
-        i = (0, c.r3)(t);
+        i = (0, l.r3)(t);
     return (
         r.useEffect(() => {
             if (!!i)
-                S({
+                I({
                     games: [],
                     traits: []
                 });
@@ -120,9 +114,9 @@ function T(e) {
         null
     );
 }
-function S(e) {
-    return l.tn.post({
-        url: h.ANM.DISCOVERY_RECOMMENDATIONS,
+function I(e) {
+    return s.tn.post({
+        url: _.ANM.DISCOVERY_RECOMMENDATIONS,
         body: {
             game_application_ids: e.games,
             traits: e.traits,
@@ -130,36 +124,36 @@ function S(e) {
         }
     });
 }
-async function g(e) {
-    let t = d.Z.getSearchResult(e),
-        { resetPagination: n, updatePaginationResults: r } = _.a.getState();
+async function m(e) {
+    let t = u.Z.getSearchResult(e),
+        { resetPagination: n, updatePaginationResults: r } = c.a.getState();
     if ('loaded' === t.status) return n({ pageMemoryEnabled: !0 }), r(t.guildIds), t;
-    let i = o().v3(JSON.stringify(e));
+    let i = a().v3(JSON.stringify(e));
     try {
-        var a, s;
-        let t = await S(e),
-            o = t.body.guilds.map(f.Gh),
-            l = null !== (a = t.body.guild_ids) && void 0 !== a ? a : [],
+        var s, l;
+        let t = await I(e),
+            a = t.body.guilds.map(d.Gh),
+            u = null !== (s = t.body.guild_ids) && void 0 !== s ? s : [],
             c = {
                 status: 'loaded',
                 loadedAt: Date.now(),
-                items: o,
-                guildIds: l
+                items: a,
+                guildIds: u
             };
         return (
             n(),
-            r(l),
-            u.Z.dispatch({
+            r(u),
+            o.Z.dispatch({
                 type: 'FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS',
                 criteriaHash: i,
                 searchResult: c,
-                recommendationId: null !== (s = t.body.recommendation_id) && void 0 !== s ? s : ''
+                recommendationId: null !== (l = t.body.recommendation_id) && void 0 !== l ? l : ''
             }),
             c
         );
     } catch (e) {
         return (
-            u.Z.dispatch({ type: 'FETCH_CLAN_DISCOVERY_SEARCH_RESULT_FAILURE' }),
+            o.Z.dispatch({ type: 'FETCH_CLAN_DISCOVERY_SEARCH_RESULT_FAILURE' }),
             {
                 status: 'error',
                 error: e
@@ -167,57 +161,51 @@ async function g(e) {
         );
     }
 }
-async function A(e, t) {
+async function T(e, t) {
     let n = e.slice(0, 99);
     try {
         let e = (
-                await l.tn.post({
-                    url: h.ANM.DISCOVERY_GUILD_PROFILES,
+                await s.tn.post({
+                    url: _.ANM.DISCOVERY_GUILD_PROFILES,
                     body: { guild_ids: n },
                     signal: t
                 })
-            ).body.guilds.map(f.Gh),
+            ).body.guilds.map(d.Gh),
             r = n.filter((t) => !e.some((e) => e.id === t));
-        r.length > 0 && _.a.getState().removeGuilds(r),
-            await u.Z.dispatch({
+        r.length > 0 && c.a.getState().removeGuilds(r),
+            await o.Z.dispatch({
                 type: 'FETCH_CLAN_DISCOVERY_PROFILE_LIST_SUCCESS',
                 guilds: e,
                 failedGuildIds: r
             });
     } catch (e) {
-        await u.Z.dispatch({
+        await o.Z.dispatch({
             type: 'FETCH_CLAN_DISCOVERY_PROFILE_LIST_SUCCESS',
             guilds: [],
             failedGuildIds: []
         });
     }
 }
-async function N() {
-    let e = (await l.tn.get({ url: h.ANM.GUILD_DISCOVERY_SAVED_GUILDS })).body.guilds.map(f.Gh);
-    await u.Z.dispatch({
+async function S() {
+    let e = (await s.tn.get({ url: _.ANM.GUILD_DISCOVERY_SAVED_GUILDS })).body.guilds.map(d.Gh);
+    await o.Z.dispatch({
         type: 'FETCH_CLAN_DISCOVERY_SAVED_GUILDS_SUCCESS',
         guilds: e
     });
 }
-async function O() {
-    let e = d.Z.getSavedGuildIds(),
-        t = E.GN.getState().savedGuildIds,
-        n = a().difference(t, e);
-    n.length > 0 && (await v(n)), E.GN.setState({ savedGuildIds: [] });
-}
-async function R(e) {
-    u.Z.dispatch({
+async function g(e) {
+    o.Z.dispatch({
         type: 'DISCOVERY_SAVED_GUILD_ADD',
         guildId: e
     });
     try {
-        await l.tn.put({
-            url: h.ANM.GUILD_DISCOVERY_SAVED_GUILDS,
+        await s.tn.put({
+            url: _.ANM.GUILD_DISCOVERY_SAVED_GUILDS,
             body: { guild_id: e }
         });
     } catch (t) {
         throw (
-            (u.Z.dispatch({
+            (o.Z.dispatch({
                 type: 'DISCOVERY_SAVED_GUILD_DELETE',
                 guildId: e
             }),
@@ -225,39 +213,19 @@ async function R(e) {
         );
     }
 }
-async function v(e) {
-    u.Z.dispatch({
-        type: 'DISCOVERY_SAVED_GUILD_BULK_ADD',
-        guildIds: e
-    });
-    try {
-        await l.tn.put({
-            url: h.ANM.GUILD_DISCOVERY_SAVED_GUILDS_BULK,
-            body: { guild_ids: e }
-        });
-    } catch (t) {
-        throw (
-            (u.Z.dispatch({
-                type: 'DISCOVERY_SAVED_GUILD_BULK_DELETE',
-                guildIds: e
-            }),
-            t)
-        );
-    }
-}
-async function C(e) {
-    u.Z.dispatch({
+async function A(e) {
+    o.Z.dispatch({
         type: 'DISCOVERY_SAVED_GUILD_DELETE',
         guildId: e
     });
     try {
-        await l.tn.del({
-            url: h.ANM.GUILD_DISCOVERY_SAVED_GUILDS,
+        await s.tn.del({
+            url: _.ANM.GUILD_DISCOVERY_SAVED_GUILDS,
             body: { guild_id: e }
         });
     } catch (t) {
         throw (
-            (u.Z.dispatch({
+            (o.Z.dispatch({
                 type: 'DISCOVERY_SAVED_GUILD_ADD',
                 guildId: e
             }),

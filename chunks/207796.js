@@ -1,41 +1,40 @@
 n.d(t, {
     Ce: function () {
-        return m;
+        return b;
     },
     GN: function () {
-        return f;
+        return x;
     },
     PJ: function () {
         return p;
     },
     fH: function () {
-        return h;
+        return f;
     },
     hz: function () {
-        return i;
+        return o;
     },
     t1: function () {
-        return I;
+        return g;
     },
     v0: function () {
-        return r;
+        return i;
     }
-}),
-    n(47120);
+});
 var r,
-    i,
     a,
-    s,
-    o,
     l,
-    u = n(652874),
-    c = n(868888),
-    d = n(731965),
-    _ = n(433517),
-    E = n(963202);
-((s = r || (r = {})).ADMIN_UPSELL = 'admin_upsell'), (s.GET_STARTED = 'get_started'), (s.DISCOVERY = 'discovery'), (s.PLAYSTYLE = 'playstyle'), (s.TRAITS = 'traits'), (s.GAMES = 'games'), (s.SAVED_GUILDS = 'saved_guilds'), (s.PREFERENCES = 'preferences'), ((o = i || (i = {})).NONE = 'none'), (o.VALORANT = 'valorant'), (o.GENSHIN = 'genshin'), ((l = a || (a = {})).USER_UPSELL = 'user_upsell'), (l.USER_ONBOARDING = 'user_onboarding');
-let f = (0, u.Z)(
-    (0, c.tJ)(
+    i,
+    o,
+    s,
+    c = n(652874),
+    d = n(868888),
+    u = n(731965),
+    m = n(433517),
+    h = n(963202);
+((r = i || (i = {})).ADMIN_UPSELL = 'admin_upsell'), (r.GET_STARTED = 'get_started'), (r.DISCOVERY = 'discovery'), (r.PLAYSTYLE = 'playstyle'), (r.TRAITS = 'traits'), (r.GAMES = 'games'), (r.SAVED_GUILDS = 'saved_guilds'), (r.PREFERENCES = 'preferences'), ((a = o || (o = {})).NONE = 'none'), (a.VALORANT = 'valorant'), (a.GENSHIN = 'genshin'), ((l = s || (s = {})).USER_UPSELL = 'user_upsell'), (l.USER_ONBOARDING = 'user_onboarding');
+let x = (0, c.Z)(
+    (0, d.tJ)(
         (e) => ({
             mode: 'admin_upsell',
             previousMode: 'admin_upsell',
@@ -43,16 +42,14 @@ let f = (0, u.Z)(
             completedNux: !1,
             userUpsellScreen: 'user_upsell',
             loadingGameApplication: !1,
-            savedGuildIds: [],
             selectedGames: [],
             selectedPlaystyle: null,
             selectedTraits: [],
             dismissedPilotAdminNux: !1,
             entrypointGameId: null,
-            setSavedGuildIds: (t) => (0, d.j)(() => e({ savedGuildIds: t })),
-            setGame: (t) => (0, d.j)(() => e({ game: t })),
+            setGame: (t) => (0, u.j)(() => e({ game: t })),
             setSelectedGames: (t) => {
-                (0, d.j)(() =>
+                (0, u.j)(() =>
                     e({
                         selectedGames: t,
                         completedNux: !0
@@ -60,36 +57,35 @@ let f = (0, u.Z)(
                 );
             },
             setSelectedPlaystyle: (t) =>
-                (0, d.j)(() =>
+                (0, u.j)(() =>
                     e({
                         selectedPlaystyle: t,
                         completedNux: !0
                     })
                 ),
             setSelectedTraits: (t) =>
-                (0, d.j)(() =>
+                (0, u.j)(() =>
                     e({
                         selectedTraits: t,
                         completedNux: !0
                     })
                 ),
-            setUserUpsellScreen: (t) => (0, d.j)(() => e({ userUpsellScreen: t }))
+            setUserUpsellScreen: (t) => (0, u.j)(() => e({ userUpsellScreen: t }))
         }),
         {
             name: 'clan-discovery',
             getStorage: () => ({
                 getItem: (e) => {
                     var t;
-                    return null !== (t = _.K.get(e)) && void 0 !== t ? t : null;
+                    return null !== (t = m.K.get(e)) && void 0 !== t ? t : null;
                 },
-                setItem: (e, t) => _.K.set(e, t),
-                removeItem: (e) => _.K.remove(e)
+                setItem: (e, t) => m.K.set(e, t),
+                removeItem: (e) => m.K.remove(e)
             }),
             partialize: (e) => ({
                 mode: e.mode,
                 game: e.game,
                 completedNux: e.completedNux,
-                savedGuildIds: e.savedGuildIds,
                 selectedGames: e.selectedGames,
                 selectedPlaystyle: e.selectedPlaystyle,
                 selectedTraits: e.selectedTraits,
@@ -98,16 +94,16 @@ let f = (0, u.Z)(
         }
     )
 );
-function h(e, t) {
-    let n = f.getState().mode,
-        r = f.getState().completedNux;
+function f(e, t) {
+    let n = x.getState().mode,
+        r = x.getState().completedNux;
     if ('admin_upsell' === e) {
-        let t = (0, E.rx)('setClanDiscoveryMode'),
-            n = f.getState().dismissedPilotAdminNux;
+        let t = (0, h.rx)('setClanDiscoveryMode'),
+            n = x.getState().dismissedPilotAdminNux;
         t && n && (e = 'discovery');
     }
-    (0, d.j)(() => {
-        f.setState({
+    (0, u.j)(() => {
+        x.setState({
             mode: e,
             previousMode: n,
             completedNux: null != t ? t : r
@@ -115,15 +111,14 @@ function h(e, t) {
     });
 }
 function p() {
-    (0, d.j)(() => {
-        f.setState({
+    (0, u.j)(() => {
+        x.setState({
             completedNux: !1,
             dismissedPilotAdminNux: !1,
             mode: 'admin_upsell',
             previousMode: 'admin_upsell',
             game: 'none',
             userUpsellScreen: 'user_upsell',
-            savedGuildIds: [],
             selectedGames: [],
             selectedPlaystyle: null,
             selectedTraits: [],
@@ -131,7 +126,7 @@ function p() {
         });
     });
 }
-function I(e) {
+function g(e) {
     var t;
     let n = e.selectedGames,
         r = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
@@ -141,8 +136,8 @@ function I(e) {
         traits: e.selectedTraits
     };
 }
-function m() {
-    (0, d.j)(() => {
-        f.setState({ dismissedPilotAdminNux: !0 }), h('discovery');
+function b() {
+    (0, u.j)(() => {
+        x.setState({ dismissedPilotAdminNux: !0 }), f('discovery');
     });
 }

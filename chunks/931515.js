@@ -3,13 +3,13 @@ n.d(t, {
         return L;
     },
     ML: function () {
-        return x;
-    },
-    Qc: function () {
         return O;
     },
+    Qc: function () {
+        return R;
+    },
     c2: function () {
-        return b;
+        return x;
     }
 }),
     n(47120),
@@ -81,29 +81,7 @@ function L() {
         { loading: E }
     );
 }
-function R(e) {
-    let [t, n] = i.useState(!1),
-        a = i.useRef(),
-        r = (0, d.Wu)([T.Z], () => e.filter((e) => T.Z.shouldFetchGuild(e)), [e]),
-        l = (0, _.Z)(r),
-        o = i.useRef(new AbortController()),
-        c = i.useCallback(async (e) => {
-            n(!0), null != a.current && (o.current.abort(), (o.current = new AbortController())), (a.current = (0, f.$s)(e, o.current.signal)), await a.current, null !== a.current && (n(!1), (a.current = null));
-        }, []);
-    return (
-        i.useEffect(() => {
-            if (!(0 === r.length || s()(r, l))) c(r);
-        }, [c, r, l, e]),
-        i.useEffect(
-            () => () => {
-                a.current = null;
-            },
-            []
-        ),
-        t && r.length > 0
-    );
-}
-function O() {
+function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Z(),
@@ -140,53 +118,64 @@ function O() {
               searchResult: l
           };
 }
-function x(e) {
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { updatePaginationSettings: n, currentColumnCount: a, pageSize: s, chunkedPages: r, currentPage: l, fetchableGuildIds: c } = (0, S.a)(),
-        u = l - 1,
-        _ = (0, C.GN)((e) => e.loadingGameApplication, o.Z),
-        E = (0, d.e7)([T.Z], () => T.Z.getSavedGuildIds()),
-        h = (0, C.GN)((e) => e.savedGuildIds, o.Z),
-        m = Z(),
-        { searchResult: I, hasError: p } = (0, d.cj)(
+        { updatePaginationSettings: n, currentColumnCount: a, pageSize: r, chunkedPages: l, currentPage: c, fetchableGuildIds: u } = (0, S.a)(),
+        E = c - 1,
+        h = (0, C.GN)((e) => e.loadingGameApplication, o.Z),
+        m = (0, d.e7)([T.Z], () => T.Z.getSavedGuildIds()),
+        I = Z(),
+        { searchResult: p, hasError: A } = (0, d.cj)(
             [T.Z],
             () => ({
-                searchResult: T.Z.getSearchResult(m),
+                searchResult: T.Z.getSearchResult(I),
                 hasError: T.Z.hasError()
             }),
-            [m]
+            [I]
         );
     i.useEffect(() => {
         n(e, S.$, { pageMemoryEnabled: !0 });
-    }, [e, n, I]),
-        R(c),
+    }, [e, n, p]),
+        !(function (e) {
+            let [t, n] = i.useState(!1),
+                a = i.useRef(),
+                r = (0, d.Wu)([T.Z], () => e.filter((e) => T.Z.shouldFetchGuild(e)), [e]),
+                l = (0, _.Z)(r),
+                o = i.useRef(new AbortController()),
+                c = i.useCallback(async (e) => {
+                    n(!0), null != a.current && (o.current.abort(), (o.current = new AbortController())), (a.current = (0, f.$s)(e, o.current.signal)), await a.current, null !== a.current && (n(!1), (a.current = null));
+                }, []);
+            i.useEffect(() => {
+                if (!(0 === r.length || s()(r, l))) c(r);
+            }, [c, r, l, e]),
+                i.useEffect(
+                    () => () => {
+                        a.current = null;
+                    },
+                    []
+                ),
+                t && r.length;
+        })(u),
         i.useEffect(() => {
             (0, f.IS)();
-        }, []),
-        R(h),
-        !(function () {
-            let e = (0, d.e7)([T.Z], () => !T.Z.hasLoadedSavedGuilds());
-            i.useEffect(() => {
-                e && (0, f.bO)();
-            }, [e]);
-        })();
-    let A = i.useMemo(() => {
+        }, []);
+    let v = i.useMemo(() => {
             var e;
-            return null !== (e = t ? E : r[u]) && void 0 !== e ? e : [];
-        }, [E, r, u, t]),
-        v = (0, d.Wu)([T.Z], () => A.map((e) => T.Z.getGuildProfile(e)).filter(g.lm), [A]),
-        L = A.length === v.length || t,
-        O = v.length === s || L,
-        x = (0, N.Pw)(I);
+            return null !== (e = t ? m : l[E]) && void 0 !== e ? e : [];
+        }, [m, l, E, t]),
+        L = (0, d.Wu)([T.Z], () => v.map((e) => T.Z.getGuildProfile(e)).filter(g.lm), [v]),
+        R = v.length === L.length || t,
+        O = L.length === r || R,
+        x = (0, N.Pw)(p);
     return {
-        loaded: e === a && x && O && !_,
-        clans: v,
-        searchCriteria: m,
-        searchResult: I,
-        hasError: p
+        loaded: e === a && x && O && !h,
+        clans: L,
+        searchCriteria: I,
+        searchResult: p,
+        hasError: A
     };
 }
-function b() {
+function x() {
     let { search: e } = (0, l.TH)(),
         t = (0, m.iN)('GlobalDiscovery'),
         { game: n } = t ? r.parse(e.slice(1)) : {},
