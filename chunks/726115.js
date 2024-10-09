@@ -127,12 +127,11 @@ function T(e) {
     }
 }
 function f(e) {
-    if (null == e) return h.Hk;
     switch (e) {
         case _.vf.FEATURED:
-        case _.vf.GUILDS:
-        case _.vf.HUBS:
             return h.Hk;
+        case _.vf.GUILDS:
+            return h.mE;
         case _.vf.GAMING:
             return h.Gj.Activity;
         case _.vf.MUSIC:
@@ -143,6 +142,8 @@ function f(e) {
             return h.Gj.Science;
         case _.vf.EDUCATION:
             return h.Gj.Education;
+        case _.vf.HUBS:
+            return h.gU;
         default:
             (0, r.vE)(e);
     }

@@ -1,8 +1,3 @@
-n.d(t, {
-    X: function () {
-        return T;
-    }
-});
 var i = n(735250),
     a = n(470079),
     s = n(481060),
@@ -13,59 +8,49 @@ var i = n(735250),
     d = n(283293),
     u = n(469988),
     _ = n(526383),
-    E = n(900849),
-    h = n(294330),
-    m = n(731455),
-    I = n(689938),
-    p = n(417712),
-    g = n(157770);
-function T(e) {
-    let { loadId: t, onScroll: n } = e,
-        T = (0, _.Z)();
-    a.useEffect(() => {
-        E.Zt({
-            loadId: t,
-            gamesYouPlayGuilds: [],
-            allGuilds: [],
-            categoryId: m.U
-        });
-    }, [t]);
-    let f = a.useMemo(
-        () =>
-            T.map((e) => ({
-                ...e,
-                presenceCount: void 0,
-                memberCount: void 0,
-                premiumSubscriptionCount: void 0,
-                emojis: void 0
-            })),
-        [T]
-    );
+    E = n(294330),
+    h = n(689938),
+    m = n(417712),
+    I = n(157770);
+t.Z = function (e) {
+    let { onScroll: t } = e,
+        n = (0, _.Z)(),
+        p = a.useMemo(
+            () =>
+                n.map((e) => ({
+                    ...e,
+                    presenceCount: void 0,
+                    memberCount: void 0,
+                    premiumSubscriptionCount: void 0,
+                    emojis: void 0
+                })),
+            [n]
+        );
     return (0, i.jsxs)(d.Z, {
-        onScroll: n,
+        onScroll: t,
         children: [
             (0, i.jsx)(o.Z, {
-                title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
-                description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
+                title: h.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
+                description: h.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
                 children: (0, i.jsx)(l.Z, {})
             }),
             (0, i.jsxs)(c.Z, {
                 children: [
-                    T.length > 0
+                    n.length > 0
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(s.Heading, {
-                                      className: p.sectionTitle,
+                                      className: m.sectionTitle,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
-                                      children: I.Z.Messages.YOUR_HUB
+                                      children: h.Z.Messages.YOUR_HUB
                                   }),
                                   (0, i.jsxs)('div', {
-                                      className: p.content,
+                                      className: m.content,
                                       children: [
-                                          f.map((e) =>
+                                          p.map((e) =>
                                               (0, i.jsx)(
-                                                  h.VD,
+                                                  E.VD,
                                                   {
                                                       guild: e,
                                                       onClick: () => r.Z.transitionToGuildSync(e.id)
@@ -79,24 +64,24 @@ function T(e) {
                               ]
                           })
                         : (0, i.jsx)('div', {
-                              className: p.content,
+                              className: m.content,
                               children: (0, i.jsx)(u.Z, { hasHub: !1 })
                           }),
-                    (0, i.jsx)('div', { className: g.divider }),
+                    (0, i.jsx)('div', { className: I.divider }),
                     (0, i.jsxs)('div', {
-                        className: g.disclaimer,
+                        className: I.disclaimer,
                         children: [
                             (0, i.jsxs)(s.Text, {
-                                className: g.text,
+                                className: I.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                children: [I.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_2, ' ']
+                                children: [h.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_2, ' ']
                             }),
                             (0, i.jsx)(s.Text, {
-                                className: g.text,
+                                className: I.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                children: I.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_4
+                                children: h.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_4
                             })
                         ]
                     })
@@ -104,4 +89,4 @@ function T(e) {
             })
         ]
     });
-}
+};

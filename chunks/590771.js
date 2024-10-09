@@ -66,20 +66,20 @@ function p(e) {
     );
 }
 function g(e) {
-    let { loadId: t, selectedTab: n, onScroll: s, onGuildCardSeen: o, onGuildCardClick: c } = e;
+    let { selectedTab: t, onScroll: n, onGuildCardSeen: s, onGuildCardClick: o } = e;
     switch (
         (a.useEffect(() => {
-            let e = (0, d.lg)(n);
+            let e = (0, d.lg)(t);
             (0, r.kR)({ selectedCategoryId: e });
-        }, [n]),
-        n)
+        }, [t]),
+        t)
     ) {
         case h.vf.FEATURED:
             return (0, i.jsx)(I, {
-                tab: n,
-                onScroll: s,
-                onGuildCardClick: c,
-                onGuildCardSeen: o
+                tab: t,
+                onScroll: n,
+                onGuildCardClick: o,
+                onGuildCardSeen: s
             });
         case h.vf.GAMING:
         case h.vf.MUSIC:
@@ -89,21 +89,18 @@ function g(e) {
             return (0, i.jsx)(
                 p,
                 {
-                    tab: n,
-                    onScroll: s,
-                    onGuildCardClick: c,
-                    onGuildCardSeen: o
+                    tab: t,
+                    onScroll: n,
+                    onGuildCardClick: o,
+                    onGuildCardSeen: s
                 },
-                n
+                t
             );
         case h.vf.HUBS:
-            return (0, i.jsx)(E.X, {
-                onScroll: s,
-                loadId: t
-            });
+            return (0, i.jsx)(E.Z, { onScroll: n });
         case h.vf.GUILDS:
-            return (0, i.jsx)(_.U, { onScroll: s });
+            return (0, i.jsx)(_.Z, { onScroll: n });
         default:
-            (0, l.vE)(n);
+            (0, l.vE)(t);
     }
 }

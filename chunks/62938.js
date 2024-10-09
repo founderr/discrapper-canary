@@ -1,8 +1,3 @@
-n.d(t, {
-    U: function () {
-        return C;
-    }
-});
 var i = n(735250),
     a = n(470079),
     s = n(143927),
@@ -76,7 +71,7 @@ function S(e) {
         ]
     });
 }
-function C(e) {
+t.Z = function (e) {
     let { onScroll: t } = e,
         { enableClanCreation: n } = (0, o.C3)({
             location: 'GuildsTab',
@@ -91,4 +86,4 @@ function C(e) {
               withAdminContent: n && a
           })
         : (0, i.jsx)(f, { onScroll: t });
-}
+};
