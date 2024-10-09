@@ -11,8 +11,8 @@ var i,
     h = n(43267),
     p = n(933557),
     f = n(93687),
-    _ = n(266076),
-    m = n(199902),
+    m = n(266076),
+    _ = n(199902),
     g = n(19780),
     C = n(306680),
     I = n(944486),
@@ -23,8 +23,8 @@ var i,
     v = n(662146),
     T = n(674552),
     Z = n(981631),
-    b = n(673193);
-function A(e, t, n) {
+    A = n(673193);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -116,17 +116,17 @@ class L extends (i = r.PureComponent) {
     }
     render() {
         let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: o, stream: u, isCurrentUserInThisDMCall: d, unread: h, isGDMFacepileEnabled: p } = this.props,
-            { hovered: f, animating: m } = this.state,
+            { hovered: f, animating: _ } = this.state,
             g = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(x.H, {
                 children: [
                     (0, l.jsx)(S.Z, {
-                        hovered: !m && f,
-                        selected: !m && n,
-                        unread: !m && h,
-                        className: b.pill
+                        hovered: !_ && f,
+                        selected: !_ && n,
+                        unread: !_ && h,
+                        className: A.pill
                     }),
                     (0, l.jsx)(v.Z, {
                         text: null != t ? t : '',
@@ -154,7 +154,7 @@ class L extends (i = r.PureComponent) {
                                         icon: g ? void 0 : this.getChannelIcon(),
                                         backgroundStyle: g ? 'on-hover' : 'always',
                                         children: g
-                                            ? (0, l.jsx)(_.Z, {
+                                            ? (0, l.jsx)(m.Z, {
                                                   channel: e,
                                                   size: c.AvatarSizes.SIZE_48,
                                                   facepileSizeOverride: c.AvatarSizes.SIZE_32,
@@ -173,7 +173,7 @@ class L extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'state', {
+            b(this, 'state', {
                 hovered: !1,
                 animating: !0,
                 controller: new a.Controller({
@@ -183,7 +183,7 @@ class L extends (i = r.PureComponent) {
                     config: M
                 })
             }),
-            A(this, 'handleContextMenu', (e) => {
+            b(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     i = t.type === Z.d4z.DM ? E.default.getUser(t.getRecipientId()) : null;
                 null != i
@@ -208,7 +208,7 @@ class L extends (i = r.PureComponent) {
             });
     }
 }
-A(L, 'defaultProps', {
+b(L, 'defaultProps', {
     badge: 0,
     audio: !1,
     video: !1,
@@ -219,15 +219,15 @@ A(L, 'defaultProps', {
             i = (0, p.ZP)(e.channel),
             r = (0, o.e7)([g.Z], () => g.Z.getChannelId(), []),
             a = (0, o.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : Z.WtW.VOICE), [r]),
-            s = (0, o.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
+            s = (0, o.e7)([_.Z], () => _.Z.getAllApplicationStreamsForChannel(n).length > 0),
             c = (0, o.e7)([I.Z], () => I.Z.getChannelId(), []),
             u = (0, o.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]),
             { isFacepileEnabled: h } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
-            _ = r === n,
+            m = r === n,
             E = !1,
             N = !1;
         return (
-            _ && ((E = a === Z.WtW.VOICE), (N = a === Z.WtW.VIDEO)),
+            m && ((E = a === Z.WtW.VOICE), (N = a === Z.WtW.VIDEO)),
             (0, l.jsx)(L, {
                 ...e,
                 ref: t,
@@ -238,7 +238,7 @@ A(L, 'defaultProps', {
                 audio: E,
                 video: N,
                 stream: s,
-                isCurrentUserInThisDMCall: _,
+                isCurrentUserInThisDMCall: m,
                 isGDMFacepileEnabled: h
             })
         );

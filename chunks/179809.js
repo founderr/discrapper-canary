@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 }),
     n(47120);
@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(153867),
     p = n(771845),
     f = n(624138),
-    _ = n(727258),
-    m = n(276952),
+    m = n(727258),
+    _ = n(276952),
     g = n(199540),
     C = n(40153),
     I = n(252686),
@@ -28,22 +28,22 @@ var i = n(735250),
     v = n(767573);
 let T = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     Z = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
-    b = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
-function A(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: R = !1, defaultFolderName: M, useCircleMask: L = !1, draggable: P = !1, sorting: O = !1, onDragStart: y, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
-        { id: k, name: B, children: H } = t,
-        [V, F] = l.useState(!1),
+    A = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
+function b(e) {
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: b = 0, unread: R = !1, defaultFolderName: M, useCircleMask: L = !1, draggable: P = !1, sorting: y = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: G, folderIconContent: U } = e,
+        { id: k, name: B, children: V } = t,
+        [H, F] = l.useState(!1),
         [W, z] = l.useState(!1),
-        Y = V || W;
+        Y = H || W;
     l.useEffect(() => {
-        O && F(!1);
-    }, [O]);
+        y && F(!1);
+    }, [y]);
     let [{ dragging: K }, q] = (0, s.c)({
-            type: _.eD.FOLDER,
+            type: m.eD.FOLDER,
             item: () => (
-                null == y || y(),
+                null == O || O(),
                 {
-                    type: _.eD.FOLDER,
+                    type: m.eD.FOLDER,
                     nodeId: t.id
                 }
             ),
@@ -64,7 +64,7 @@ function A(e) {
         J = null != B && '' !== B ? B : null != M && '' !== M ? M : S.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
         $ = (0, c.Ie)(''.concat(k)),
         ee = 'folder-items-'.concat(k),
-        et = H.length * (Z + b),
+        et = V.length * (Z + A),
         en = (0, d.useTransition)(!K && u, {
             from: { height: 0 },
             enter: { height: 1 },
@@ -74,16 +74,16 @@ function A(e) {
         ei = l.useCallback((e) => (null == n ? void 0 : n(k, e)), [n, k]),
         el = (0, i.jsxs)(E.H, {
             children: [
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(_.Z, {
                     disabled: K || u,
-                    hovered: V,
+                    hovered: H,
                     selected: r,
                     unread: R,
                     className: v.pill
                 }),
                 (0, i.jsx)(N.Z, {
                     text: J,
-                    disabled: O,
+                    disabled: y,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
@@ -96,9 +96,9 @@ function A(e) {
                                   folderNode: t,
                                   expanded: u,
                                   forceCircular: L,
-                                  sorting: O,
+                                  sorting: y,
                                   mediaState: f,
-                                  mentionCount: A,
+                                  mentionCount: b,
                                   tooltipName: J,
                                   folderGroupId: ee,
                                   onClick: D,
@@ -106,7 +106,7 @@ function A(e) {
                                   onHoverChange: F,
                                   onKeyDown: X,
                                   treeItemProps: $,
-                                  folderIconContent: G
+                                  folderIconContent: U
                               })
                     })
                 }),
@@ -142,7 +142,7 @@ function A(e) {
                             style: { height: e.height.to((e) => e * et) },
                             className: x.__invalid_expandedGuilds,
                             role: 'group',
-                            children: H.map(U)
+                            children: V.map(G)
                         },
                         l
                     )

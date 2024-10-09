@@ -1,9 +1,9 @@
 n.d(t, {
     CN: function () {
-        return A;
+        return b;
     },
     ZP: function () {
-        return y;
+        return O;
     },
     eP: function () {
         return L;
@@ -27,8 +27,8 @@ var i,
     h = n(481060),
     p = n(787014),
     f = n(924301),
-    _ = n(159300),
-    m = n(152376),
+    m = n(159300),
+    _ = n(152376),
     g = n(427679),
     C = n(155409),
     I = n(131704),
@@ -39,12 +39,12 @@ var i,
     v = n(281029),
     T = n(981631),
     Z = n(689938),
-    b = n(872356);
-function A(e, t, n) {
+    A = n(872356);
+function b(e, t, n) {
     return null != t && !!t && !(0, v.ig)(n, e.type);
 }
 function R(e, t) {
-    return null == t ? b.containerDefault : e > t ? b.containerDragAfter : b.containerDragBefore;
+    return null == t ? A.containerDefault : e > t ? A.containerDragAfter : A.containerDragBefore;
 }
 function M(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
@@ -57,7 +57,7 @@ function M(e) {
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: o, onBlur: c } = e;
             return (0, s.jsx)(h.Clickable, {
-                className: u()(b.iconItem, l ? b.alwaysShown : void 0, r ? b.iconWithChannelInfo : b.iconNoChannelInfo),
+                className: u()(A.iconItem, l ? A.alwaysShown : void 0, r ? A.iconWithChannelInfo : A.iconNoChannelInfo),
                 onClick: a,
                 tabIndex: i,
                 'aria-label': Z.Z.Messages.EDIT_CHANNEL,
@@ -68,7 +68,7 @@ function M(e) {
                 children: (0, s.jsx)(h.SettingsIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: b.actionIcon
+                    className: A.actionIcon
                 })
             });
         }
@@ -78,8 +78,8 @@ function L(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: o = !1 } = e,
         c = (0, d.e7)([N.Z], () => N.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
-        m = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
-        I = (0, d.e7)([S.Z], () => (0, _.b)(S.Z, c, t, p)),
+        _ = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
+        I = (0, d.e7)([S.Z], () => (0, m.b)(S.Z, c, t, p)),
         x = (0, d.e7)([S.Z], () => (S.Z.can(T.Plq.CREATE_INSTANT_INVITE, t) ? Z.Z.Messages.CREATE_INSTANT_INVITE : Z.Z.Messages.INVITE_TO_SERVER));
     if (l || !I) return null;
     function v() {
@@ -94,33 +94,33 @@ function L(e) {
                         channel: t,
                         streamUserId: 1 === e.length ? e[0].ownerId : null,
                         source: T.t4x.GUILD_CHANNELS,
-                        guildScheduledEvent: m
+                        guildScheduledEvent: _
                     });
             });
         }
     }
-    let A = (0, s.jsx)(h.GroupPlusIcon, {
+    let b = (0, s.jsx)(h.GroupPlusIcon, {
         size: 'xs',
-        className: b.actionIcon,
+        className: A.actionIcon,
         'aria-hidden': !0
     });
     return (
         i &&
-            (A = (0, s.jsx)(C.Z, {
+            (b = (0, s.jsx)(C.Z, {
                 tutorialId: 'instant-invite',
                 position: 'left',
-                children: (0, s.jsx)('div', { children: A })
+                children: (0, s.jsx)('div', { children: b })
             })),
         (0, s.jsx)(h.Tooltip, {
             text: x,
             children: (e) =>
                 (0, s.jsx)(h.Clickable, {
-                    className: u()(b.iconItem, a ? b.alwaysShown : void 0, o ? b.iconWithChannelInfo : b.iconNoChannelInfo),
+                    className: u()(A.iconItem, a ? A.alwaysShown : void 0, o ? A.iconWithChannelInfo : A.iconNoChannelInfo),
                     ...e,
                     onClick: v,
                     tabIndex: r,
                     'aria-label': x,
-                    children: A
+                    children: b
                 })
         })
     );
@@ -128,46 +128,46 @@ function L(e) {
 function P(e) {
     let { channel: t } = e,
         n = () => {
-            (0, m._U)(t.guild_id, t.id);
+            (0, _._U)(t.guild_id, t.id);
         };
     return (0, s.jsx)(h.Tooltip, {
         text: Z.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
         children: (e) =>
             (0, s.jsx)(h.Clickable, {
-                className: b.iconItem,
+                className: A.iconItem,
                 ...e,
                 onClick: n,
                 'aria-label': Z.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
                 children: (0, s.jsx)(h.XSmallIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: b.actionIcon
+                    className: A.actionIcon
                 })
             })
     });
 }
-function O(e) {
+function y(e) {
     let { channel: t } = e,
         n = () => {
-            (0, m.dM)(t.guild_id, t.id, !0, { section: T.jXE.CHANNEL_LIST });
+            (0, _.dM)(t.guild_id, t.id, !0, { section: T.jXE.CHANNEL_LIST });
         };
     return (0, s.jsx)(h.Tooltip, {
         text: Z.Z.Messages.ADD_FAVORITE,
         children: (e) =>
             (0, s.jsx)(h.Clickable, {
-                className: b.iconItem,
+                className: A.iconItem,
                 ...e,
                 onClick: n,
                 'aria-label': Z.Z.Messages.ADD_FAVORITE,
                 children: (0, s.jsx)(h.CheckmarkLargeIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: b.actionIcon
+                    className: A.actionIcon
                 })
             })
     });
 }
-class y extends (a = o.PureComponent) {
+class O extends (a = o.PureComponent) {
     renderEditButton() {
         return (0, s.jsx)(M, { ...this.props });
     }
@@ -178,7 +178,7 @@ class y extends (a = o.PureComponent) {
         return (0, s.jsx)(P, { ...this.props });
     }
     renderAcceptSuggestionButton() {
-        return (0, s.jsx)(O, { ...this.props });
+        return (0, s.jsx)(y, { ...this.props });
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;
@@ -186,11 +186,11 @@ class y extends (a = o.PureComponent) {
     }
     isDisabled() {
         let { channel: e, sorting: t, sortingType: n } = this.props;
-        return A(e, t, n);
+        return b(e, t, n);
     }
 }
 (r = { isDefaultChannel: !1 }),
-    (l = 'defaultProps') in (i = y)
+    (l = 'defaultProps') in (i = O)
         ? Object.defineProperty(i, l, {
               value: r,
               enumerable: !0,

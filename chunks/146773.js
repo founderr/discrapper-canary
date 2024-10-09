@@ -16,8 +16,8 @@ var l = n(582966),
     h = n(398758),
     p = n(680089),
     f = n(592125),
-    _ = n(324067),
-    m = n(984933),
+    m = n(324067),
+    _ = n(984933),
     g = n(430824),
     C = n(496675),
     I = n(914010),
@@ -29,8 +29,8 @@ function v(e, t) {
     var n, i;
     if (null == e || null == t) return null;
     if (e !== S.I_8) return f.Z.getChannel(t);
-    let l = m.ZP.getChannels(e),
-        r = null !== (i = null !== (n = l[m.sH].find((e) => e.channel.id === t)) && void 0 !== n ? n : l[m.Zb].find((e) => e.channel.id === t)) && void 0 !== i ? i : l[S.d4z.GUILD_CATEGORY].find((e) => e.channel.id === t);
+    let l = _.ZP.getChannels(e),
+        r = null !== (i = null !== (n = l[_.sH].find((e) => e.channel.id === t)) && void 0 !== n ? n : l[_.Zb].find((e) => e.channel.id === t)) && void 0 !== i ? i : l[S.d4z.GUILD_CATEGORY].find((e) => e.channel.id === t);
     return null == r ? void 0 : r.channel;
 }
 function T(e) {
@@ -45,17 +45,17 @@ function T(e) {
                 if (null == a) return;
                 let u = v(l, r.id);
                 if (null == u) return;
-                let h = _.Z.getCategories(l),
+                let h = m.Z.getCategories(l),
                     p = g.Z.getGuild(l);
                 if (null == p) return;
-                let m = (0, E.Dn)(u, v(l, a.referenceId), a.parentId, h);
-                if (0 !== m.length) {
+                let _ = (0, E.Dn)(u, v(l, a.referenceId), a.parentId, h);
+                if (0 !== _.length) {
                     if (l === S.I_8) {
-                        (0, d.s3)(m);
+                        (0, d.s3)(_);
                         return;
                     }
                     if (
-                        ((m = m.filter((e) => {
+                        ((_ = _.filter((e) => {
                             let { id: t } = e,
                                 n = f.Z.getChannel(t);
                             if (null == n) return !1;
@@ -63,7 +63,7 @@ function T(e) {
                             return n.type === S.d4z.GUILD_CATEGORY || null == i ? C.Z.can(S.Plq.MANAGE_CHANNELS, p) : C.Z.can(S.Plq.MANAGE_CHANNELS, i);
                         })),
                         u.parent_id !== a.parentId &&
-                            m.find((e) => {
+                            _.find((e) => {
                                 if (e.id !== u.id) return !1;
                                 let t = f.Z.getChannel(e.parent_id);
                                 if (!(null != t && C.Z.can(S.Plq.MANAGE_ROLES, u) && C.Z.can(S.Plq.MANAGE_ROLES, t))) return !0;
@@ -81,14 +81,14 @@ function T(e) {
                                     channel: u,
                                     category: e,
                                     onConfirm: () => {
-                                        null != n && ((n.lock_permissions = !0), o.Z.batchChannelUpdate(l, m));
+                                        null != n && ((n.lock_permissions = !0), o.Z.batchChannelUpdate(l, _));
                                     },
                                     onCancel: () => {
-                                        null != n && o.Z.batchChannelUpdate(l, m);
+                                        null != n && o.Z.batchChannelUpdate(l, _);
                                     }
                                 })
                             );
-                    } else o.Z.batchChannelUpdate(l, m);
+                    } else o.Z.batchChannelUpdate(l, _);
                 }
             },
             canDrop(e, t) {
@@ -154,7 +154,7 @@ function T(e) {
                             position: r
                         } = e,
                         a = I.Z.getGuildId(),
-                        s = _.Z.getCategories(a);
+                        s = m.Z.getCategories(a);
                     return {
                         isChannelDrag: !0,
                         id: t,

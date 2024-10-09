@@ -15,8 +15,8 @@ var i = n(735250),
     h = n(155409),
     p = n(430824),
     f = n(594174),
-    _ = n(40153),
-    m = n(603592),
+    m = n(40153),
+    _ = n(603592),
     g = n(981631),
     C = n(675999),
     I = n(689938),
@@ -46,9 +46,9 @@ function x(e) {
         v = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
         T = l.useMemo(() => x.some((e) => e.isOwner(v)), [x, v]),
         Z = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, C.PU)),
-        { analyticsLocations: b } = (0, o.ZP)(),
-        A = (0, a.useRedesignIconContext)().enabled,
-        R = (0, i.jsx)(m.Z, {
+        { analyticsLocations: A } = (0, o.ZP)(),
+        b = (0, a.useRedesignIconContext)().enabled,
+        R = (0, i.jsx)(_.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -59,14 +59,14 @@ function x(e) {
                               page: g.Sbl.CREATE_JOIN_GUILD_MODAL,
                               section: g.jXE.GUILD_CAP_UPSELL_MODAL
                           },
-                          analyticsLocations: b
+                          analyticsLocations: A
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
             selected: Z,
             onContextMenu: S,
             tooltip: I.Z.Messages.ADD_A_SERVER,
-            icon: A ? a.PlusMediumIcon : a.PlusSmallIcon
+            icon: b ? a.PlusMediumIcon : a.PlusSmallIcon
         });
     return t
         ? R
@@ -79,7 +79,7 @@ function x(e) {
                   children: [
                       R,
                       null != n &&
-                          (0, i.jsx)(_.ZP, {
+                          (0, i.jsx)(m.ZP, {
                               name: I.Z.Messages.DND_END_OF_LIST,
                               targetNode: n,
                               below: !0,

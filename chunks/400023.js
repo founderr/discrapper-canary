@@ -28,8 +28,8 @@ var i = n(735250),
     b = n(255269),
     R = n(47481),
     L = n(977391),
-    j = n(73274),
-    P = n(419388),
+    P = n(73274),
+    j = n(419388),
     O = n(406534),
     y = n(981631),
     D = n(689938),
@@ -60,7 +60,7 @@ let k = s.memo(
                           }),
                 [C, N, d]
             ),
-            H = (0, P.ZP)({
+            H = (0, j.ZP)({
                 messages: _,
                 channel: m,
                 compact: C,
@@ -71,7 +71,7 @@ let k = s.memo(
                 handleScrollToBottom: s.useCallback(() => w(!0), [w]),
                 handleScrollFromBottom: s.useCallback(() => w(!1), [w])
             }),
-            G = (0, j.Z)({
+            G = (0, P.Z)({
                 scrollerRef: H.ref,
                 isEditing: null != v,
                 keyboardModeEnabled: A,
@@ -216,8 +216,8 @@ t.Z = s.memo(function (e) {
         })(t),
         {
             messageGroupSpacing: L,
-            fontSize: j,
-            messageDisplayCompact: P,
+            fontSize: P,
+            messageDisplayCompact: j,
             renderSpoilers: O,
             keyboardModeEnabled: D
         } = (function () {
@@ -313,7 +313,7 @@ t.Z = s.memo(function (e) {
             messageGroupSpacing: L,
             showNewMessagesBar: !0,
             channel: t,
-            messageDisplayCompact: !r && (l || P),
+            messageDisplayCompact: !r && (l || j),
             messages: U,
             channelStream: w,
             permissionVersion: E,
@@ -322,7 +322,7 @@ t.Z = s.memo(function (e) {
             hasUnreads: null != B,
             canChat: M,
             editingMessageId: H,
-            fontSize: j,
+            fontSize: P,
             keyboardModeEnabled: D,
             showingQuarantineBanner: n,
             hideSummaries: a

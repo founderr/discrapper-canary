@@ -31,8 +31,8 @@ function N(e) {
         M = (0, T.ms)(n),
         b = (0, r.e7)([I.default], () => I.default.getUser(t), [t]),
         R = (0, r.e7)([C.ZP], () => C.ZP.getMember(n, t), [n, t]),
-        [L, j] = s.useState(null == b || null == R),
-        P = (0, u.Z)(R),
+        [L, P] = s.useState(null == b || null == R),
+        j = (0, u.Z)(R),
         O = s.useRef(null),
         { analyticsLocations: y } = (0, m.ZP)(p.Z.GUILD_MEMBER_MOD_VIEW),
         D = (0, f.ZP)(t, n),
@@ -41,10 +41,10 @@ function N(e) {
         !M && a();
     }, [M, a]),
     s.useEffect(() => {
-        null != P && null == R && !L && a();
-    }, [L, R, a, P]),
+        null != j && null == R && !L && a();
+    }, [L, R, a, j]),
     s.useEffect(() => {
-        null != b && null != R && j(!1);
+        null != b && null != R && P(!1);
     }, [b, R]),
     s.useEffect(() => {
         let e = null == R;
@@ -66,7 +66,7 @@ function N(e) {
                     dispatchWait: !0
                 })
             ];
-            await Promise.all(e), j(!1);
+            await Promise.all(e), P(!1);
         })();
     }, [n, t]),
     M)

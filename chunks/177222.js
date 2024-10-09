@@ -32,8 +32,8 @@ var i = n(735250),
     b = n(348540),
     R = n(179142),
     L = n(228168),
-    j = n(981631),
-    P = n(689938),
+    P = n(981631),
+    j = n(689938),
     O = n(337319);
 function y(e) {
     let { user: t, currentUser: n, channel: y } = e,
@@ -43,7 +43,7 @@ function y(e) {
         w = (0, E.Z)({
             user: t,
             currentUser: n,
-            location: j.Sbl.PROFILE_PANEL
+            location: P.Sbl.PROFILE_PANEL
         }),
         B = (0, m.ZB)({
             layout: w ? 'SIMPLIFIED_DM_PANEL' : 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE',
@@ -154,7 +154,7 @@ function y(e) {
                                                 ...B
                                             });
                                     },
-                                    children: P.Z.Messages.VIEW_FULL_PROFILE
+                                    children: j.Z.Messages.VIEW_FULL_PROFILE
                                 })
                             }),
                         (null == U ? void 0 : U.profileEffectId) != null &&

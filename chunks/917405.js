@@ -16,12 +16,12 @@ let f = {
         [h.IE4.AVERAGE]: s.Tooltip.Colors.YELLOW,
         [h.IE4.FINE]: s.Tooltip.Colors.GREEN
     },
-    _ = {
+    m = {
         [h.QKv.CONNECTED]: p.rtcConnectionStatusConnected,
         [h.QKv.CONNECTING]: p.rtcConnectionStatusConnecting,
         [h.QKv.ERROR]: p.rtcConnectionStatusError
     },
-    m = {
+    _ = {
         [h.IE4.FINE]: p.rtcConnectionQualityFine,
         [h.IE4.AVERAGE]: p.rtcConnectionQualityAverage,
         [h.IE4.BAD]: p.rtcConnectionQualityBad,
@@ -47,7 +47,7 @@ class g extends l.PureComponent {
                 children: (0, i.jsx)(d.Z, {
                     text: l,
                     hasVideo: this.props.hasVideo,
-                    className: _[n]
+                    className: m[n]
                 })
             });
         });
@@ -70,7 +70,7 @@ class g extends l.PureComponent {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: a()(p.rtcConnectionStatus, m[t], o),
+                        className: a()(p.rtcConnectionStatus, _[t], o),
                         children: [
                             e,
                             (0, i.jsx)('div', {

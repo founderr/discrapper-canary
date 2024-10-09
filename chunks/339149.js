@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return b;
+        return A;
     }
 }),
     n(47120),
@@ -18,8 +18,8 @@ var i,
     h = n(481060),
     p = n(812206),
     f = n(707409),
-    _ = n(703656),
-    m = n(417363),
+    m = n(703656),
+    _ = n(417363),
     g = n(941128),
     C = n(780570),
     I = n(353042),
@@ -102,7 +102,7 @@ class T extends r.PureComponent {
             if (t) return N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
             if (e.stage === E.f07.PATCHING || e.stage === E.f07.REPAIRING)
                 return (0, l.jsx)(I.Z, {
-                    getHistoricalTotalBytes: m.Z.getHistoricalTotalBytesWritten,
+                    getHistoricalTotalBytes: _.Z.getHistoricalTotalBytesWritten,
                     updateInterval: 5000,
                     children: this.renderProgressBody
                 });
@@ -189,21 +189,21 @@ class Z extends (i = r.PureComponent) {
             x(this, 'state', { animationScale: new o.Z.Value(0) }),
             x(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
-                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, _.uL)(E.Z5c.APPLICATION_LIBRARY);
+                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.uL)(E.Z5c.APPLICATION_LIBRARY);
             });
     }
 }
 x(Z, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
-function b(e, t) {
+function A(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,
             r = t.getState(i, l);
         return null != r && e.push(r), e;
     }, []);
 }
-t.Z = c.ZP.connectStores([g.Z, m.Z, p.Z], () => {
+t.Z = c.ZP.connectStores([g.Z, _.Z, p.Z], () => {
     let e = g.Z.activeItems,
-        t = b(e, m.Z),
+        t = A(e, _.Z),
         { total: n, progress: i } = C.lK(t);
     return {
         percent: C.xI(i, n),

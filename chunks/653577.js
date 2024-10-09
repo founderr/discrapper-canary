@@ -15,8 +15,8 @@ var i = n(735250),
     h = n(454585),
     p = n(626135),
     f = n(981631),
-    _ = n(689938),
-    m = n(447871),
+    m = n(689938),
+    _ = n(447871),
     g = n(554034);
 function C(e) {
     let { channel: t, connected: n, hovered: r, subtitle: C, onClick: I, enableHangStatus: E, allowChannelTopic: N } = e,
@@ -32,35 +32,35 @@ function C(e) {
                 channel_id: t.id
             });
     }, [t.id, x, t.guild_id]);
-    let b = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
+    let A = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
-    let A = a()(m.statusDiv, n && T ? m.hoverable : null);
+    let b = a()(_.statusDiv, n && T ? _.hoverable : null);
     if (x)
         return (0, i.jsx)(o.Clickable, {
-            className: A,
+            className: b,
             onClick: T ? I : void 0,
             children: (0, i.jsx)(o.Text, {
                 variant: 'text-xs/medium',
-                className: a()(m.statusText, g.markup),
+                className: a()(_.statusText, g.markup),
                 children: (0, i.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(S, !0, { channelId: t.id }) })
             })
         });
     if (n && T && (!Z || r))
         return (0, i.jsxs)(o.Clickable, {
-            className: A,
+            className: b,
             onClick: I,
             children: [
                 (0, i.jsx)(o.Text, {
                     variant: 'text-xs/medium',
-                    className: m.statusText,
-                    children: _.Z.Messages.VOICE_CHANNEL_SET_STATUS
+                    className: _.statusText,
+                    children: m.Z.Messages.VOICE_CHANNEL_SET_STATUS
                 }),
                 (0, i.jsx)(o.PencilIcon, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: m.pencilIcon,
-                    width: b,
-                    height: b
+                    className: _.pencilIcon,
+                    width: A,
+                    height: A
                 })
             ]
         });

@@ -11,8 +11,8 @@ var i,
     h = n(442837),
     p = n(902704),
     f = n(481060),
-    _ = n(925549),
-    m = n(607070),
+    m = n(925549),
+    _ = n(607070),
     g = n(367907),
     C = n(453542),
     I = n(702321),
@@ -23,14 +23,14 @@ var i,
     v = n(518311),
     T = n(355298),
     Z = n(869404),
-    b = n(333984),
-    A = n(210887),
+    A = n(333984),
+    b = n(210887),
     R = n(592125),
     M = n(158776),
     L = n(55589),
     P = n(515753),
-    O = n(981631),
-    y = n(689938),
+    y = n(981631),
+    O = n(689938),
     j = n(156762);
 function D(e, t, n) {
     return (
@@ -194,7 +194,7 @@ let w = s.memo(function () {
         ]
     });
 });
-class U extends (l = s.Component) {
+class G extends (l = s.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -249,7 +249,7 @@ class U extends (l = s.Component) {
                         (0, a.jsx)(f.List, {
                             fade: !0,
                             innerRole: r,
-                            innerAriaLabel: y.Z.Messages.DIRECT_MESSAGES,
+                            innerAriaLabel: O.Z.Messages.DIRECT_MESSAGES,
                             innerTag: 'ul',
                             ref: (e) => {
                                 var t;
@@ -299,7 +299,7 @@ class U extends (l = s.Component) {
                         num_users_visible_with_mobile_indicator: o.filter((e) => null != e && M.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
-                    g.ZP.trackWithMetadata(O.rMx.DM_LIST_VIEWED, {
+                    g.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
                         ...u,
                         ...(0, C.X)(),
                         changelog_dm_visible: c
@@ -315,7 +315,7 @@ class U extends (l = s.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && _.Z.updateChannelListScroll(O.ME, e.scrollTop);
+                        null != e && m.Z.updateChannelListScroll(y.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -362,10 +362,10 @@ class U extends (l = s.Component) {
                               children: [
                                   (0, a.jsx)('span', {
                                       className: j.headerText,
-                                      children: y.Z.Messages.DIRECT_MESSAGES
+                                      children: O.Z.Messages.DIRECT_MESSAGES
                                   }),
                                   (0, a.jsx)(v.Z, {
-                                      tooltip: y.Z.Messages.CREATE_DM,
+                                      tooltip: O.Z.Messages.CREATE_DM,
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
                                       iconClassName: j.privateChannelRecipientsInviteButtonIcon,
@@ -384,29 +384,29 @@ class U extends (l = s.Component) {
             });
     }
 }
-D(U, 'defaultProps', { padding: 8 });
+D(G, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = s.Children.count(i),
         o = R.Z.getMutablePrivateChannels(),
         c = (0, Z.k1)(o),
         p = (0, h.Wu)(
-            [L.Z, T.Z, b.Z],
+            [L.Z, T.Z, A.Z],
             () => {
                 let e = L.Z.getPrivateChannelIds();
-                return (0, Z.tU)(e, [T.Z, b.Z]);
+                return (0, Z.tU)(e, [T.Z, A.Z]);
             },
             []
         );
     (0, x.z)(S.R);
-    let f = (0, h.cj)([m.Z, A.Z, R.Z], () => ({
-            theme: A.Z.darkSidebar ? O.BRd.DARK : n,
-            keyboardModeEnabled: m.Z.keyboardModeEnabled,
+    let f = (0, h.cj)([_.Z, b.Z, R.Z], () => ({
+            theme: b.Z.darkSidebar ? y.BRd.DARK : n,
+            keyboardModeEnabled: _.Z.keyboardModeEnabled,
             version: null != t ? ''.concat(t, ':').concat(R.Z.getPrivateChannelsVersion()) : R.Z.getPrivateChannelsVersion()
         })),
-        _ = s.useRef(null),
+        m = s.useRef(null),
         g = s.useCallback((e) => {
-            let t = _.current,
+            let t = m.current,
                 n = document.querySelector(e);
             null != t &&
                 null != n &&
@@ -423,7 +423,7 @@ t.Z = (e) => {
         C = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = _.current;
+                    let t = m.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -432,7 +432,7 @@ t.Z = (e) => {
         I = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = _.current;
+                    let t = m.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -453,10 +453,10 @@ t.Z = (e) => {
         });
     return (0, a.jsx)(u.bG, {
         navigator: v,
-        children: (0, a.jsx)(U, {
+        children: (0, a.jsx)(G, {
             channels: c,
             privateChannelIds: p,
-            listRef: _,
+            listRef: m,
             theme: n,
             version: t,
             ...e,

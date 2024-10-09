@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return P;
     }
 }),
     n(653041),
@@ -74,8 +74,8 @@ function L() {
         })
     );
 }
-function j(e) {
-    let { channel: t, options: l, onFileUpload: c, onClose: m, onSelect: _, draftType: E, editorTextContent: j, setValue: P, openClips: O } = e,
+function P(e) {
+    let { channel: t, options: l, onFileUpload: c, onClose: m, onSelect: _, draftType: E, editorTextContent: P, setValue: j, openClips: O } = e,
         { analyticsLocations: y } = (0, h.ZP)();
     s.useEffect(() => {
         g.default.track(S.rMx.OPEN_POPOUT, {
@@ -88,7 +88,7 @@ function j(e) {
         (0, f.R6)(t, void 0, 'Plus Button');
     }
     function U() {
-        g.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, x.JM)('/'));
+        g.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), j('/', (0, x.JM)('/'));
     }
     function k() {
         O();
@@ -129,10 +129,10 @@ function j(e) {
             (0, u.w1)({ guildId: t.guild_id });
     }
     function H() {
-        let e = j,
+        let e = P,
             n = 'txt',
             i = '',
-            s = j.match(R);
+            s = P.match(R);
         null != s && ((i = s[1]), (n = s[2]), (e = s[3]), (i += s[4])), (0, T.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), C.S.dispatchToLastSubscribed(S.CkL.CLEAR_TEXT), '' !== i && C.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, { plainText: i });
     }
     return (0, i.jsx)(o.Menu, {
@@ -175,7 +175,7 @@ function j(e) {
                         'upload-file'
                     );
                 case v.r.UPLOAD_TEXT_AS_FILE:
-                    if ('' === j) return null;
+                    if ('' === P) return null;
                     return (0, i.jsx)(
                         o.MenuItem,
                         {

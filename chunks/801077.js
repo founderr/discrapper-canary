@@ -11,8 +11,8 @@ var i,
     h = n(527805),
     p = n(841784),
     f = n(503438),
-    _ = n(802856),
-    m = n(420660),
+    m = n(802856),
+    _ = n(420660),
     g = n(728345),
     C = n(812206),
     I = n(750881),
@@ -23,23 +23,23 @@ var i,
     v = n(814443),
     T = n(789407),
     Z = n(974543),
-    b = n(250889),
-    A = n(199902),
+    A = n(250889),
+    b = n(199902),
     R = n(592125),
     M = n(480294),
     L = n(831506),
     P = n(731290),
-    O = n(430824),
-    y = n(496675),
+    y = n(430824),
+    O = n(496675),
     j = n(158776),
     D = n(699516),
     w = n(594174),
-    U = n(979651),
-    G = n(823379),
+    G = n(979651),
+    U = n(823379),
     k = n(981631);
 let B = !1,
-    H = !1,
-    V = [],
+    V = !1,
+    H = [],
     F = [],
     W = {},
     z = {},
@@ -57,7 +57,7 @@ function X(e) {
         null == W[e] &&
             (W = {
                 ...W,
-                [e]: new b.Z({ name: e })
+                [e]: new A.Z({ name: e })
             }),
         W[e]
     );
@@ -78,11 +78,11 @@ function $(e) {
 function ee(e) {
     if ((0, f.Z)(e)) return T.r9;
     let t = null != e.application_id ? C.Z.getApplication(e.application_id) : null;
-    return null != t ? t : (0, _.Z)(e) ? X(e.name) : (0, m.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && $(e.application_id), t);
+    return null != t ? t : (0, m.Z)(e) ? X(e.name) : (0, _.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && $(e.application_id), t);
 }
 function et(e) {
-    let t = U.Z.getVoiceStateForUser(e);
-    return (null == t ? void 0 : t.channelId) != null && y.Z.canWithPartialContext(k.Plq.VIEW_CHANNEL, { channelId: t.channelId }) ? t.channelId : null;
+    let t = G.Z.getVoiceStateForUser(e);
+    return (null == t ? void 0 : t.channelId) != null && O.Z.canWithPartialContext(k.Plq.VIEW_CHANNEL, { channelId: t.channelId }) ? t.channelId : null;
 }
 function en(e) {
     return D.Z.isFriend(e.id);
@@ -91,8 +91,8 @@ function ei(e, t, n) {
     var i, l, r, a, s, c;
     let u;
     let f = w.default.getCurrentUser(),
-        _ = null !== (i = null == f ? void 0 : f.nsfwAllowed) && void 0 !== i && i,
-        m = t.map((e) => e.id),
+        m = null !== (i = null == f ? void 0 : f.nsfwAllowed) && void 0 !== i && i,
+        _ = t.map((e) => e.id),
         g = t.filter((t) => e.has(t.id)),
         I = !1,
         N = [],
@@ -100,9 +100,9 @@ function ei(e, t, n) {
         M = !1,
         D = [];
     for (let e of t) {
-        let n = A.Z.getAnyStreamForUser(e.id),
+        let n = b.Z.getAnyStreamForUser(e.id),
             i = R.Z.getChannel(null == n ? void 0 : n.channelId);
-        if ((null == i ? void 0 : i.isNSFW()) && (!_ || !P.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
+        if ((null == i ? void 0 : i.isNSFW()) && (!m || !P.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
         let s = Q(e.id);
         if (
             (null != n &&
@@ -119,9 +119,9 @@ function ei(e, t, n) {
         M = c === T.XB;
         let u = (function (e) {
                 let t = C.Z.getApplication(e);
-                return null != t ? t : 'string' != typeof e ? (new E.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === T.XB ? T.r9 : e.startsWith(b.H) ? X(e.slice(b.H.length)) : e.startsWith(Z._) ? J(e.slice(Z._.length)) : ($(e), null);
+                return null != t ? t : 'string' != typeof e ? (new E.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === T.XB ? T.r9 : e.startsWith(A.H) ? X(e.slice(A.H.length)) : e.startsWith(Z._) ? J(e.slice(Z._.length)) : ($(e), null);
             })(c),
-            m = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
+            _ = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
         if ((0, p.Z)(s)) {
             let t = (0, d.a)();
             if (
@@ -129,17 +129,17 @@ function ei(e, t, n) {
                     activity: s,
                     userId: e.id,
                     application: u,
-                    channelId: null === (r = U.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
+                    channelId: null === (r = G.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
                     currentUser: f,
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: R.Z,
-                    VoiceStateStore: U.Z,
-                    PermissionStore: y.Z,
-                    GuildStore: O.Z
+                    VoiceStateStore: G.Z,
+                    PermissionStore: O.Z,
+                    GuildStore: y.Z
                 }) !== h.Fw.CAN_JOIN
             )
                 continue;
-        } else if (null == m) continue;
+        } else if (null == _) continue;
         if (!x.JE(s) || null == u || v.has(u.id)) continue;
         let g = null != s ? ee(s) : null;
         (null == g || g.id !== u.id) && (s = null);
@@ -161,34 +161,34 @@ function ei(e, t, n) {
                 game: u,
                 activity: s,
                 activityUser: e,
-                startedPlayingTime: m,
+                startedPlayingTime: _,
                 playingMembers: j
             });
     }
     let k = 1 === g.length,
         B = [],
-        H = new Set(),
-        V = new Set();
+        V = new Set(),
+        H = new Set();
     for (let e of t) {
         let n = et(e.id),
             i = R.Z.getChannel(n),
             l = null != i ? i.getGuildId() : null,
-            r = O.Z.getGuild(l);
-        if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (k = !0));
+            r = y.Z.getGuild(l);
+        if ((H.has(l) && V.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (k = !0));
         else {
-            let e = U.Z.getVoiceStatesForChannel(i.id),
+            let e = G.Z.getVoiceStatesForChannel(i.id),
                 a = o()(e)
                     .map((e) => {
                         let { userId: t } = e;
                         return w.default.getUser(t);
                     })
-                    .filter(G.lm)
+                    .filter(U.lm)
                     .orderBy([en], ['desc'])
                     .value();
-            a.filter((e) => !m.includes(e.id)).forEach((e) => t.push(e)),
-                k ? !V.has(l) && (u = null) : ((u = r), (k = !0)),
-                V.add(l),
-                H.add(n),
+            a.filter((e) => !_.includes(e.id)).forEach((e) => t.push(e)),
+                k ? !H.has(l) && (u = null) : ((u = r), (k = !0)),
+                H.add(l),
+                V.add(n),
                 B.push({
                     channel: i,
                     guild: r,
@@ -225,7 +225,7 @@ let er = o().throttle(() => {
         var e;
         if (!el()) return;
         Y.clear(),
-            (F = (V = (function (e) {
+            (F = (H = (function (e) {
                 let t = (e) => e.voiceChannels.length > 0;
                 return e
                     .values()
@@ -285,7 +285,7 @@ let er = o().throttle(() => {
                     g.ZP.fetchApplications(e), e.forEach((e) => K.add(e)), Y.clear();
                 }
             })(),
-            (H = !0);
+            (V = !0);
     })(),
         eo.emitChange();
 }, 1000);
@@ -294,10 +294,10 @@ function ea() {
 }
 class es extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([w.default, C.Z, j.Z, L.Z, U.Z, A.Z, D.Z, M.Z, v.Z], ea), this.waitFor(N.Z, O.Z, C.Z, w.default, v.Z);
+        this.syncWith([w.default, C.Z, j.Z, L.Z, G.Z, b.Z, D.Z, M.Z, v.Z], ea), this.waitFor(N.Z, y.Z, C.Z, w.default, v.Z);
     }
     get currentActivityParties() {
-        return V;
+        return H;
     }
     get nowPlayingCards() {
         return F;
@@ -306,7 +306,7 @@ class es extends (i = c.ZP.Store) {
         return B;
     }
     get loaded() {
-        return H;
+        return V;
     }
 }
 (a = 'NowPlayingViewStore'),
@@ -320,7 +320,7 @@ class es extends (i = c.ZP.Store) {
         : (l[r] = a);
 let eo = new es(u.Z, {
     LOGOUT: function () {
-        (B = !1), (V = []), (F = []), Y.clear();
+        (B = !1), (H = []), (F = []), Y.clear();
     },
     NOW_PLAYING_MOUNTED: function () {
         (B = !0), er();

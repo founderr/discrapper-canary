@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(961048),
     R = n(179424),
     L = n(786915),
-    j = n(975146),
-    P = n(991617),
+    P = n(975146),
+    j = n(991617),
     O = n(597998),
     y = n(606304),
     D = n(594174),
@@ -179,7 +179,7 @@ function z(e) {
                         renderPopout: () => (0, i.jsx)(Z.Z, { children: (0, i.jsx)(B.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
-                            return (0, s.createElement)(j.Z, {
+                            return (0, s.createElement)(P.Z, {
                                 ...e,
                                 isActive: n,
                                 count: V,
@@ -203,7 +203,7 @@ function z(e) {
                           'deselect-participant'
                       )
                     : (0, i.jsx)(
-                          P.Z,
+                          j.Z,
                           {
                               className: F.button,
                               channelId: S,

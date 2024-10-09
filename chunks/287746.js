@@ -28,8 +28,8 @@ var i = n(735250),
     b = n(213459),
     R = n(456007),
     L = n(10718),
-    j = n(998698),
-    P = n(895924),
+    P = n(998698),
+    j = n(895924),
     O = n(581364),
     y = n(667204),
     D = n(404295),
@@ -82,8 +82,8 @@ var i = n(735250),
     eb = n(127654),
     eR = n(979956),
     eL = n(655687),
-    ej = n(165540),
-    eP = n(583027),
+    eP = n(165540),
+    ej = n(583027),
     eO = n(25007),
     ey = n(685006),
     eD = n(685722),
@@ -152,7 +152,7 @@ class ez extends s.PureComponent {
             let e =
                 null != a
                     ? {
-                          type: P.Qi.APPLICATION,
+                          type: j.Qi.APPLICATION,
                           id: a.id,
                           icon: a.icon,
                           name: null !== (r = null == a ? void 0 : null === (l = a.bot) || void 0 === l ? void 0 : l.username) && void 0 !== r ? r : a.name,
@@ -163,7 +163,7 @@ class ez extends s.PureComponent {
                 channelId: t.id,
                 command: s,
                 section: e,
-                location: P.Vh.RECALL,
+                location: j.Vh.RECALL,
                 initialValues: (0, R.Dw)(s, null != i ? i : [])
             });
         }
@@ -318,7 +318,7 @@ class ez extends s.PureComponent {
                 let { guild: r, channel: o, pendingReply: c, chatInputType: u } = this.props,
                     d = !1;
                 if (null != s) {
-                    if (s.inputType === P.iw.BUILT_IN_INTEGRATION)
+                    if (s.inputType === j.iw.BUILT_IN_INTEGRATION)
                         return (
                             eN.S.dispatch(ew.CkL.SHAKE_APP, {
                                 duration: 200,
@@ -329,11 +329,11 @@ class ez extends s.PureComponent {
                                 shouldRefocus: !0
                             })
                         );
-                    let e = j.Z.getCommandOrigin(o.id);
-                    if (e === P.bB.APPLICATION_LAUNCHER || e === P.bB.IMAGE_RECS_MENU || e === P.bB.IMAGE_RECS_SUBMENU) {
+                    let e = P.Z.getCommandOrigin(o.id);
+                    if (e === j.bB.APPLICATION_LAUNCHER || e === j.bB.IMAGE_RECS_MENU || e === j.bB.IMAGE_RECS_SUBMENU) {
                         var p;
-                        let { location: t, sectionName: n } = null !== (p = (0, eP._U)(s)) && void 0 !== p ? p : {},
-                            i = e === P.bB.APPLICATION_LAUNCHER ? N.Z.lastShownEntrypoint() : A._b.TEXT;
+                        let { location: t, sectionName: n } = null !== (p = (0, ej._U)(s)) && void 0 !== p ? p : {},
+                            i = e === j.bB.APPLICATION_LAUNCHER ? N.Z.lastShownEntrypoint() : A._b.TEXT;
                         if (
                             !(await (0, Z.L)({
                                 applicationId: s.applicationId,
@@ -348,7 +348,7 @@ class ez extends s.PureComponent {
                                 shouldClear: !1,
                                 shouldRefocus: !0
                             });
-                        (0, eP.SC)(s);
+                        (0, ej.SC)(s);
                     }
                     let n = await (0, y.Z)({
                         command: s,
@@ -358,7 +358,7 @@ class ez extends s.PureComponent {
                             channel: o
                         }
                     });
-                    if (s.inputType !== P.iw.BUILT_IN_TEXT)
+                    if (s.inputType !== j.iw.BUILT_IN_TEXT)
                         return Promise.resolve({
                             shouldClear: !0,
                             shouldRefocus: !0
@@ -529,7 +529,7 @@ class eY extends s.PureComponent {
                             onCommandSentinelTyped: this.handleCommandSentinelTyped
                         })
                     }),
-                    (0, i.jsx)(ej.Z, {
+                    (0, i.jsx)(eP.Z, {
                         channel: n,
                         type: c,
                         animateRef: this.appIconAnimateRef,
@@ -545,7 +545,7 @@ class eY extends s.PureComponent {
                 ]
             }),
             L = x && v,
-            j = L && v ? b : R;
+            P = L && v ? b : R;
         return (0, i.jsx)(
             E.Z,
             {
@@ -618,11 +618,11 @@ class eY extends s.PureComponent {
                                                             n.isPrivate()
                                                                 ? (0, i.jsx)(eU.Z, {
                                                                       channel: n,
-                                                                      children: j
+                                                                      children: P
                                                                   })
                                                                 : (0, i.jsx)(ek.Z, {
                                                                       channel: n,
-                                                                      children: j
+                                                                      children: P
                                                                   }),
                                                             (0, i.jsx)(f.Z, {
                                                                 channel: n,
@@ -737,7 +737,7 @@ t.Z = s.memo(function (e) {
         E = (0, el.Z)(t.id),
         g = (0, X.Z)(t.id),
         C = (0, D.h9)(t.id, 'ChannelChatMemo'),
-        { isInitialLoading: T, primaryEntryPointCommand: S, isProfileFetching: A, wasProfileFetching: Z, applicationId: M, channelId: b, isFetchingApplicationIndex: R, wasFetchingApplicationIndex: L, commands: j } = (0, x.Z)({ channel: t });
+        { isInitialLoading: T, primaryEntryPointCommand: S, isProfileFetching: A, wasProfileFetching: Z, applicationId: M, channelId: b, isFetchingApplicationIndex: R, wasFetchingApplicationIndex: L, commands: P } = (0, x.Z)({ channel: t });
     (0, v.Z)({
         isProfileFetching: A,
         wasProfileFetching: Z,
@@ -745,9 +745,9 @@ t.Z = s.memo(function (e) {
         channelId: b,
         isFetchingApplicationIndex: R,
         wasFetchingApplicationIndex: L,
-        commands: j
+        commands: P
     });
-    let P = s.useRef(null),
+    let j = s.useRef(null),
         O = (0, c.e7)([N.Z], () => N.Z.appDMChannelsWithFailedLoads().has(t.id));
     return (0, i.jsx)(eY, {
         channel: t,
@@ -769,7 +769,7 @@ t.Z = s.memo(function (e) {
         showAppDMsUI: C,
         isInitialLoading: T,
         showEntryPointAppCommandButton: null != S,
-        entryPointCommandButtonRef: P,
+        entryPointCommandButtonRef: j,
         isFailedAppDMLoad: O
     });
 });

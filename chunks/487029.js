@@ -17,16 +17,16 @@ var i = n(735250),
     h = n(709054),
     p = n(208049),
     f = n(763296),
-    _ = n(242291),
-    m = n(174470),
+    m = n(242291),
+    _ = n(174470),
     g = n(549771),
     C = n(964398),
     I = n(409673),
     E = n(710111),
     N = n(601539);
 function S(e) {
-    let { guildId: t, channel: n, width: S, height: x, keepOpen: v, interactive: T = !0, analyticsSource: Z, onClose: b } = e,
-        A = (function (e) {
+    let { guildId: t, channel: n, width: S, height: x, keepOpen: v, interactive: T = !0, analyticsSource: Z, onClose: A } = e,
+        b = (function (e) {
             let [t, n] = (0, a.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites()]);
             return l.useMemo(() => {
                 let i = [],
@@ -41,23 +41,23 @@ function S(e) {
                 return l.forEach((e) => r(e, !0)), l.forEach((e) => r(e, !1)), i;
             }, [t, n, e]);
         })((0, g.h)(n, !0)),
-        R = (0, m.j)(),
+        R = (0, _.j)(),
         M = l.useRef(null),
         [L, P] = l.useState(void 0),
-        O = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
-        { analyticsLocations: y } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL),
+        y = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        { analyticsLocations: O } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL),
         j = l.useCallback(
             (e) => {
-                (0, _.GN)(e, n.id, y), b();
+                (0, m.GN)(e, n.id, O), A();
             },
-            [y, n.id, b]
+            [O, n.id, A]
         );
     l.useEffect(() => {
         p.w(), u.DZ.loadIfNecessary();
     }, []),
         l.useEffect(() => {
-            0 === A.length && 0 === R.length && b();
-        }, [A.length, R, b]),
+            0 === b.length && 0 === R.length && A();
+        }, [b.length, R, A]),
         l.useEffect(
             () => () => {
                 let e = M.current;
@@ -72,7 +72,7 @@ function S(e) {
                 properties: {
                     source: Z,
                     guild_id: t,
-                    media_session_id: O
+                    media_session_id: y
                 }
             },
             { disableTrack: !T }
@@ -86,22 +86,22 @@ function S(e) {
                     D(null);
                     return;
                 }
-                let t = A[e];
+                let t = b[e];
                 if (null != t) D(t);
             },
-            [D, A]
+            [D, b]
         ),
-        U = l.useCallback(
+        G = l.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = A[e];
+                let t = b[e];
                 if (null != t) j(t);
             },
-            [A, j]
+            [b, j]
         ),
-        G = l.useMemo(
+        U = l.useMemo(
             () =>
-                A.map((e) =>
+                b.map((e) =>
                     (0, i.jsx)(
                         I.ZP,
                         {
@@ -114,12 +114,12 @@ function S(e) {
                         e.soundId
                     )
                 ),
-            [L, n, T, A]
+            [L, n, T, b]
         );
-    return 0 === A.length
+    return 0 === b.length
         ? null
         : (0, i.jsx)(o.Gt, {
-              value: y,
+              value: O,
               children: (0, i.jsx)(C.Z, {
                   wheelWidth: S,
                   wheelHeight: x,
@@ -128,9 +128,9 @@ function S(e) {
                   showDeadZoneIndicator: !v,
                   activeItem: L,
                   onItemSelect: w,
-                  onItemAction: U,
+                  onItemAction: G,
                   interactive: T,
-                  children: G
+                  children: U
               })
           });
 }

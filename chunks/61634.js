@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return O;
     }
 }),
     n(47120);
@@ -16,8 +16,8 @@ var i = n(470079),
     h = n(470883),
     p = n(750881),
     f = n(554747),
-    _ = n(146085),
-    m = n(427679),
+    m = n(146085),
+    _ = n(427679),
     g = n(131704),
     C = n(199902),
     I = n(314897),
@@ -28,17 +28,17 @@ var i = n(470079),
     v = n(699516),
     T = n(944486),
     Z = n(9156),
-    b = n(979651),
-    A = n(709054),
+    A = n(979651),
+    b = n(709054),
     R = n(510601),
     M = n(901621),
     L = n(981631);
 let P = [];
-function O(e, t) {
+function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : x.Z;
     return null != e && e.type !== a.d.GUILD_STAGE_VOICE && t !== e.id && n.canBasicChannel(L.S7T.VIEW_CHANNEL, e);
 }
-function y(e) {
+function O(e) {
     var t;
     let n = (0, s.e7)([Z.ZP], () => Z.ZP.isMuted(e)),
         l = (0, f.k5)(e);
@@ -51,10 +51,10 @@ function y(e) {
                 return null == t || t > 1000;
             }),
             d = (0, s.cj)(
-                [b.Z],
+                [A.Z],
                 () => {
                     if (!a || t || u) return P;
-                    let n = Object.keys(b.Z.getVoiceStates(e));
+                    let n = Object.keys(A.Z.getVoiceStates(e));
                     return 0 === n.length ? P : n.slice(0, 50);
                 },
                 [e, t, u, a]
@@ -81,43 +81,43 @@ function y(e) {
     })(e, n);
     let a = (0, M.Z)(e),
         L = (0, p.aK)('use-guild-media-state'),
-        y = (0, s.Wu)([d.ZP, v.Z], () => {
+        O = (0, s.Wu)([d.ZP, v.Z], () => {
             let t = d.ZP.getEmbeddedActivitiesForGuild(e);
             return L ? t.filter((e) => !(0, h.Wu)([...e.userIds], v.Z.getBlockedIDs())) : t;
         }),
-        j = (0, u.NX)(null === (t = y[0]) || void 0 === t ? void 0 : t.channelId),
+        j = (0, u.NX)(null === (t = O[0]) || void 0 === t ? void 0 : t.channelId),
         {
             guildHasVoice: D,
             guildHasVideo: w,
-            selectedVoiceChannelHasVideo: U
+            selectedVoiceChannelHasVideo: G
         } = (0, s.cj)(
-            [T.Z, b.Z, S.Z, x.Z, E.Z],
+            [T.Z, A.Z, S.Z, x.Z, E.Z],
             () => {
                 var t;
                 let i = T.Z.getVoiceChannelId(),
                     l = null === (t = S.Z.getGuild(e)) || void 0 === t ? void 0 : t.afkChannelId,
-                    r = b.Z.getUsersWithVideo(e),
-                    a = L ? (0, h.DX)(b.Z.getVoiceStates(e)) : b.Z.getVoiceStates(e),
+                    r = A.Z.getUsersWithVideo(e),
+                    a = L ? (0, h.DX)(A.Z.getVoiceStates(e)) : A.Z.getVoiceStates(e),
                     s = (() => {
                         if (n) return !1;
-                        for (let e in a) if (O(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, x.Z)) return !0;
+                        for (let e in a) if (y(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, x.Z)) return !0;
                         return !1;
                     })();
                 return {
                     guildHasVoice: s,
                     guildHasVideo: (() => {
                         if (n) return !1;
-                        for (let e of r) if (O(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, x.Z)) return !0;
+                        for (let e of r) if (y(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, x.Z)) return !0;
                         return !1;
                     })(),
-                    selectedVoiceChannelHasVideo: null != i && b.Z.hasVideo(i)
+                    selectedVoiceChannelHasVideo: null != i && A.Z.hasVideo(i)
                 };
             },
             [L, e, n]
         ),
-        G = I.default.getId();
+        U = I.default.getId();
     return (0, s.cj)(
-        [T.Z, E.Z, d.ZP, m.Z, C.Z, x.Z],
+        [T.Z, E.Z, d.ZP, _.Z, C.Z, x.Z],
         () => {
             var t, i, r;
             let s = T.Z.getVoiceChannelId(),
@@ -139,17 +139,17 @@ function y(e) {
                     gaming: a,
                     isCurrentUserConnected: !1
                 };
-            let S = A.default.keys(m.Z.getStageInstancesByGuild(e)).some((e) => {
+            let S = b.default.keys(_.Z.getStageInstancesByGuild(e)).some((e) => {
                     let t = E.Z.getChannel(e);
-                    return null != t && x.Z.can(_.gl, t);
+                    return null != t && x.Z.can(m.gl, t);
                 }),
                 v = o && null !== (r = null === (i = E.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildStageVoice()) && void 0 !== r && r,
-                Z = !!o && null != C.Z.getActiveStreamForUser(G, e),
-                b = (L ? (0, h.aK)(C.Z.getAllApplicationStreams()) : C.Z.getAllApplicationStreams()).some((t) => t.guildId === e),
-                R = o && U,
+                Z = !!o && null != C.Z.getActiveStreamForUser(U, e),
+                A = (L ? (0, h.aK)(C.Z.getAllApplicationStreams()) : C.Z.getAllApplicationStreams()).some((t) => t.guildId === e),
+                R = o && G,
                 M = (() => {
-                    if (j) return y.length > 0;
-                    for (let e of y) {
+                    if (j) return O.length > 0;
+                    for (let e of O) {
                         let t = E.Z.getChannel(e.channelId);
                         if (null != t && (0, g.vd)(t.type)) return !0;
                     }
@@ -157,7 +157,7 @@ function y(e) {
                 })(),
                 P = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                o ? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === s), (p = v), (f = R), (I = Z), (N = P)) : ((c = D), (u = null != l), (p = S), (f = w), (I = b), (N = M)),
+                o ? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === s), (p = v), (f = R), (I = Z), (N = P)) : ((c = D), (u = null != l), (p = S), (f = w), (I = A), (N = M)),
                 {
                     audio: c,
                     video: f,
@@ -170,6 +170,6 @@ function y(e) {
                 }
             );
         },
-        [e, n, L, U, a, G, j, y, l, D, w]
+        [e, n, L, G, a, U, j, O, l, D, w]
     );
 }

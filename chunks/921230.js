@@ -23,7 +23,7 @@ function h(e) {
                 let { guildId: t } = e;
                 return t;
             }),
-        _ = (0, u.Z)(t);
+        m = (0, u.Z)(t);
     return null == h
         ? null
         : (0, i.jsx)(d.Z, {
@@ -32,6 +32,6 @@ function h(e) {
               animatable: p,
               selected: f,
               draggable: !1,
-              mediaState: _
+              mediaState: m
           });
 }

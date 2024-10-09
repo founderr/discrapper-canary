@@ -23,11 +23,11 @@ function f(e, t, n) {
         e
     );
 }
-let _ = {
+let m = {
     friction: 10,
     tension: 300
 };
-class m extends r.Component {
+class _ extends r.Component {
     shouldComponentUpdate(e, t) {
         return !(0, d.Z)(this.props, e, ['animate']) || !(0, d.Z)(this.state, t);
     }
@@ -52,7 +52,7 @@ class m extends r.Component {
         this._timeout = setTimeout(() => {
             u.Z.spring(e, {
                 toValue: 0,
-                ..._
+                ...m
             }).start();
         }, 100);
     }
@@ -64,7 +64,7 @@ class m extends r.Component {
         }
         u.Z.spring(e, {
             toValue: 1,
-            ..._
+            ...m
         }).start();
     }
     render() {
@@ -119,7 +119,7 @@ class g extends (i = r.PureComponent) {
             { reducedMotion: d } = this.context;
         return (0, l.jsx)('div', {
             className: null != a ? a : void 0,
-            children: (0, l.jsx)(m, {
+            children: (0, l.jsx)(_, {
                 hide: !0 === c || (null == e && null == t),
                 className: s()(o, null != t ? p.mention : p.unread),
                 text: null != t ? n : i,

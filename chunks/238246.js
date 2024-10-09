@@ -28,8 +28,8 @@ var i,
     b = n(392358),
     R = n(314910),
     L = n(892254),
-    j = n(706454),
-    P = n(210887),
+    P = n(706454),
+    j = n(210887),
     O = n(740492),
     y = n(451478),
     D = n(358085),
@@ -208,9 +208,9 @@ let W = a.forwardRef(function (e, t) {
     }));
     c()(null != n, 'Missing guestWindow reference');
     let a = (0, h.e7)([y.Z], () => y.Z.isFocused()),
-        { locale: l, theme: r } = (0, h.cj)([P.Z, j.default], () => ({
-            locale: j.default.locale,
-            theme: P.Z.theme
+        { locale: l, theme: r } = (0, h.cj)([j.Z, P.default], () => ({
+            locale: P.default.locale,
+            theme: j.Z.theme
         })),
         o = (0, h.e7)([f.Z], () => (f.Z.useForcedColors ? 'yes' : 'no')),
         { accessibilitySettings: u, appWrapperClassName: d } = (0, A.I)(),

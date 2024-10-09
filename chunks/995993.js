@@ -15,8 +15,8 @@ var i = n(735250),
     h = n(31445),
     p = n(22082),
     f = n(703656),
-    _ = n(306680),
-    m = n(709054),
+    m = n(306680),
+    _ = n(709054),
     g = n(540126),
     C = n(434479),
     I = n(981631),
@@ -28,14 +28,14 @@ function v(e) {
     let { guild: t, selected: v } = e,
         T = (0, h.Z)(t),
         Z = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        b = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
-        A = (0, r.e7)([_.ZP], () => _.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)),
-        R = b.length > g.Cb,
-        M = (0, r.e7)([d.Z, _.ZP], () => {
+        A = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
+        b = (0, r.e7)([m.ZP], () => m.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)),
+        R = A.length > g.Cb,
+        M = (0, r.e7)([d.Z, m.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
-                n = _.ZP.lastMessageId(t.id, N.W.GUILD_ONBOARDING_QUESTION);
+                n = m.ZP.lastMessageId(t.id, N.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
-            let i = m.default.extractTimestamp(n);
+            let i = _.default.extractTimestamp(n);
             return null != e && e > i;
         }),
         L = l.useCallback(() => {
@@ -54,12 +54,12 @@ function v(e) {
             },
             [t]
         ),
-        O = null;
+        y = null;
     return (
-        (!Z || A || R) &&
+        (!Z || b || R) &&
             !v &&
             !M &&
-            (O = (0, i.jsx)(o.TextBadge, {
+            (y = (0, i.jsx)(o.TextBadge, {
                 color: s.Z.colors.BADGE_BRAND_BG.css,
                 text: S.Z.Messages.NEW,
                 className: x.newChannel
@@ -76,7 +76,7 @@ function v(e) {
             selected: v,
             onClick: L,
             onContextMenu: P,
-            trailing: O
+            trailing: y
         })
     );
 }

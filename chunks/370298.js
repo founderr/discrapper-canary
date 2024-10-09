@@ -23,8 +23,8 @@ var i = t(735250),
     g = t(873387),
     A = t(809090),
     f = t(147391),
-    I = t(583027),
-    v = t(978983),
+    v = t(583027),
+    I = t(978983),
     h = t(592125),
     N = t(703558),
     S = t(430824),
@@ -158,7 +158,7 @@ function y(e) {
                         },
                         commandOrigin: t === p.Vh.IMAGE_RECS_SUBMENU ? p.bB.IMAGE_RECS_SUBMENU : p.bB.IMAGE_RECS_MENU
                     }),
-                    (0, I.Mo)({
+                    (0, v.Mo)({
                         command: e,
                         location: t,
                         sectionName: n.name
@@ -235,7 +235,7 @@ function y(e) {
                       c.MenuItem,
                       {
                           id: 'menu-image-recs-placeholder',
-                          render: () => (0, i.jsx)(v.Z, {}),
+                          render: () => (0, i.jsx)(I.Z, {}),
                           navigable: !1,
                           disabled: !0
                       },

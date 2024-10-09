@@ -1312,7 +1312,7 @@ t.ZP = Object.freeze({
             null != e &&
             0 !== e.size &&
             Array.from(e).some((e) => {
-                let { subscriptionPlanId: t, parentId: n, consumed: r } = e;
+                let { subscriptionPlanId: t, gifterId: n, consumed: r } = e;
                 return null != t && null != n && !r;
             })
         );

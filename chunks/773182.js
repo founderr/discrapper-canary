@@ -23,8 +23,8 @@ var i = n(735250),
     h = n(224706),
     p = n(350810),
     f = n(110924),
-    _ = n(410030),
-    m = n(100527),
+    m = n(410030),
+    _ = n(100527),
     g = n(970606),
     C = n(824991),
     I = n(564990),
@@ -35,22 +35,22 @@ var i = n(735250),
     v = n(863249),
     T = n(937111),
     Z = n(667105),
-    b = n(369566),
-    A = n(314897),
+    A = n(369566),
+    b = n(314897),
     R = n(480294),
     M = n(564334),
     L = n(302221),
     P = n(956664),
-    O = n(602147),
-    y = n(981631),
+    y = n(602147),
+    O = n(981631),
     j = n(308083),
     D = n(921944),
     w = n(49898),
-    U = n(128449),
-    G = n(46140),
+    G = n(128449),
+    U = n(46140),
     k = n(689938),
     B = n(877861);
-function H(e) {
+function V(e) {
     let { color: t } = e;
     return (0, i.jsxs)('svg', {
         className: B.doubleIcon,
@@ -108,7 +108,7 @@ function H(e) {
         ]
     });
 }
-let V = M.Z.parseString('#E93446'),
+let H = M.Z.parseString('#E93446'),
     F = l.memo(function (e) {
         let { children: t } = e,
             n = (0, s.TH)(),
@@ -117,11 +117,11 @@ let V = M.Z.parseString('#E93446'),
                 treatment: f,
                 hasFetchedGames: v
             } = (function () {
-                let e = (0, c.e7)([A.default], () => A.default.getId()),
-                    t = (0, _.ZP)(),
-                    { recent: n, outbox: i } = (0, b.Z)(e),
+                let e = (0, c.e7)([b.default], () => b.default.getId()),
+                    t = (0, m.ZP)(),
+                    { recent: n, outbox: i } = (0, A.Z)(e),
                     r = (0, c.e7)([E.Z], () => E.Z.hasInitialized),
-                    a = (0, c.e7)([R.Z], () => R.Z.hasConsented(y.pjP.PERSONALIZATION)),
+                    a = (0, c.e7)([R.Z], () => R.Z.hasConsented(O.pjP.PERSONALIZATION)),
                     s = null == i && r,
                     o = l.useMemo(() => (a ? n.reduce((e, t) => (e.length >= 5 || 'played_game_extra' !== t.extra.type || null == j.gQ.get(t.extra.application_id) ? e : e.concat(t.extra.application_id)), []) : []), [n, a]),
                     u = o.length > 0 ? o : j.Id;
@@ -155,7 +155,7 @@ let V = M.Z.parseString('#E93446'),
                         }
                         return e;
                     }, [d]),
-                    [m, g] = l.useState({});
+                    [_, g] = l.useState({});
                 return (
                     l.useEffect(() => {
                         Promise.all(
@@ -183,7 +183,7 @@ let V = M.Z.parseString('#E93446'),
                                           })
                                           .catch(() =>
                                               Promise.resolve({
-                                                  color: V,
+                                                  color: H,
                                                   gameId: n
                                               })
                                           );
@@ -203,7 +203,7 @@ let V = M.Z.parseString('#E93446'),
                                 u.map((e) => {
                                     var t, n, i;
                                     let l = f[e],
-                                        r = null !== (n = m[e]) && void 0 !== n ? n : V,
+                                        r = null !== (n = _[e]) && void 0 !== n ? n : H,
                                         a = null !== (i = null === (t = d.find((t) => (null == t ? void 0 : t.applicationId) === e)) || void 0 === t ? void 0 : t.name) && void 0 !== i ? i : '';
                                     return {
                                         id: e,
@@ -212,7 +212,7 @@ let V = M.Z.parseString('#E93446'),
                                         primaryColor: r
                                     };
                                 }),
-                            [u, d, f, m]
+                            [u, d, f, _]
                         ),
                         treatment: o.length > 0 && a ? j.O7.GAME_SPECIFIC : j.O7.GENERIC,
                         hasFetchedGames: !s && !p
@@ -220,18 +220,18 @@ let V = M.Z.parseString('#E93446'),
                 );
             })(),
             [T, F] = (0, N.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], D.R.SIDEBAR, !0),
-            W = (0, Z.Ws)({ location: G.dr.CONFLICT_CHECKS }),
+            W = (0, Z.Ws)({ location: U.dr.CONFLICT_CHECKS }),
             z = T !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
             Y = (0, p.Z)(),
-            K = n.pathname === y.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY),
+            K = n.pathname === O.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(O.Z5c.GLOBAL_DISCOVERY),
             q = W && !Y && !z && !K,
             [Q, X] = l.useState(0),
-            J = (0, _.ZP)(),
+            J = (0, m.ZP)(),
             $ = l.useMemo(() => r.map((e) => e.id), [r]);
         l.useEffect(() => {
             q &&
                 (0, g.tv)({
-                    location: m.Z.GUILDS_LIST,
+                    location: _.Z.GUILDS_LIST,
                     treatment: f,
                     gameApplicationIds: $
                 });
@@ -245,12 +245,12 @@ let V = M.Z.parseString('#E93446'),
         let ee = l.useCallback(() => {
                 W && F(D.L.TAKE_ACTION),
                     (0, g.GS)({
-                        location: m.Z.GUILDS_LIST,
+                        location: _.Z.GUILDS_LIST,
                         treatment: f,
                         gameApplicationIds: $
                     }),
-                    (0, x.jY)({ selectedTab: U.vf.GUILDS }),
-                    (0, O.o)(w.F$.SERVERS);
+                    (0, x.jY)({ selectedTab: G.vf.GUILDS }),
+                    (0, y.o)(w.F$.SERVERS);
             }, [F, f, $, W]),
             et = l.useCallback(
                 (e) => {
@@ -301,7 +301,7 @@ let V = M.Z.parseString('#E93446'),
                                                               className: B.radialGradient,
                                                               style: { background: l.toHexString() }
                                                           }),
-                                                          (0, i.jsx)(H, { color: l.toHexString() }, r[t].id)
+                                                          (0, i.jsx)(V, { color: l.toHexString() }, r[t].id)
                                                       ]
                                                   },
                                                   r[t].id

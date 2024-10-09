@@ -10,8 +10,8 @@ var i = n(735250),
     h = n(430824),
     p = n(451478),
     f = n(61634),
-    _ = n(325257),
-    m = n(941823);
+    m = n(325257),
+    _ = n(941823);
 t.Z = l.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
         g = t.id,
@@ -26,17 +26,17 @@ t.Z = l.memo(function (e) {
             unread: d.default.hasUnread(g)
         })),
         Z = (0, o.I)(C) && 0 === v,
-        b = l.useMemo(
+        A = l.useMemo(
             () =>
                 null != n
                     ? n
                     : Z
                       ? (0, i.jsx)('div', {
-                            className: m.pauseBackground,
+                            className: _.pauseBackground,
                             children: (0, i.jsx)(a.PauseIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
-                                className: m.pause,
+                                className: _.pause,
                                 width: 10,
                                 height: 10
                             })
@@ -44,14 +44,14 @@ t.Z = l.memo(function (e) {
                       : null,
             [n, Z]
         );
-    return (0, i.jsx)(_.Z, {
+    return (0, i.jsx)(m.Z, {
         ...e,
         guild: C,
         unavailable: N,
         animatable: E,
         selected: S === g,
         badge: v,
-        lowerBadge: b,
+        lowerBadge: A,
         unread: T,
         mediaState: x,
         guildJoinRequestStatus: I
