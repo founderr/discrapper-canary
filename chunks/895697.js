@@ -18,7 +18,7 @@ var i = n(442837),
     f = n(681837),
     h = n(678738),
     p = n(530),
-    I = n(303674),
+    I = n(871604),
     m = n(53558),
     T = n(827313),
     S = n(420654),
@@ -73,7 +73,8 @@ function C(e) {
                 children: [
                     (0, r.jsx)(I.Z, {
                         user: t,
-                        className: R.button
+                        className: R.button,
+                        closePopout: M
                     }),
                     (0, r.jsx)(m.Z, {
                         user: t,

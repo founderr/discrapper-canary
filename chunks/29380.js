@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return A;
     }
 }),
     t(47120);
@@ -9,72 +9,80 @@ var i = t(735250),
     l = t(481060),
     o = t(542094),
     r = t(895924),
-    s = t(499254),
-    c = t(827498),
-    d = t(160973),
-    u = t(783097),
-    m = t(890280),
-    p = t(176412),
-    _ = t(689938),
-    C = t(94958);
-function h(e) {
-    let { channel: n, application: t, sectionName: h, primaryEntryPointCommand: f, buttonSize: A = l.ButtonSizes.MEDIUM } = e,
-        E = a.useId(),
-        N = a.useCallback(() => {
-            s.yT(c.ti.ACTIVITY);
+    s = t(626135),
+    c = t(499254),
+    d = t(827498),
+    u = t(160973),
+    m = t(783097),
+    p = t(890280),
+    _ = t(176412),
+    C = t(981631),
+    h = t(689938),
+    f = t(94958);
+function A(e) {
+    let { channel: n, application: t, sectionName: A, primaryEntryPointCommand: E, buttonSize: N = l.ButtonSizes.MEDIUM } = e,
+        v = a.useId(),
+        x = a.useCallback(() => {
+            c.yT(d.ti.ACTIVITY);
         }, []),
-        { submitting: x, wasSubmitting: v } = (0, m.Z)({
+        { submitting: I, wasSubmitting: P } = (0, p.Z)({
             applicationId: t.id,
             channelId: n.id,
-            launchingComponentId: E,
-            onSubmissionComplete: N
+            launchingComponentId: v,
+            onSubmissionComplete: x
         }),
-        [I, g] = a.useState(!1),
-        P = (0, o.Qv)({
+        [g, T] = a.useState(!1),
+        L = (0, o.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
-        L = a.useMemo(() => (0, u.XZ)(f.displayName), [f.displayName]),
+        b = a.useMemo(() => (0, m.XZ)(E.displayName), [E.displayName]),
         {
             onActivityItemSelected: S,
-            buttonColor: T,
-            buttonText: b
-        } = (0, p.P7)({
+            buttonColor: R,
+            buttonText: M
+        } = (0, _.P7)({
             channel: n,
             application: t,
             location: r.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: h,
-            commandName: L,
-            autoDismissOnClick: P === o.JS.LEAVE,
-            launchingComponentId: E,
-            submitting: null != v ? v : x
+            sectionName: A,
+            commandName: b,
+            autoDismissOnClick: L === o.JS.LEAVE,
+            launchingComponentId: v,
+            submitting: null != P ? P : I
         }),
-        { disabled: R, reason: M } = (0, d.Z)({
+        { disabled: j, reason: y } = (0, u.Z)({
             channelId: n.id,
             application: t,
-            activityAction: P
+            activityAction: L
         });
     return (0, i.jsx)(l.Tooltip, {
-        shouldShow: null != M,
-        tooltipContentClassName: C.tooltipContent,
-        text: M,
+        shouldShow: null != y,
+        tooltipContentClassName: f.tooltipContent,
+        text: y,
         children: (e) => {
             let { onClick: n, ...a } = e;
             return (0, i.jsx)(l.Button, {
                 ...a,
                 type: 'submit',
-                size: A,
-                color: T,
-                disabled: R,
-                submitting: I,
+                size: N,
+                color: R,
+                disabled: j,
+                submitting: g,
                 onClick: () => {
-                    g(!0), S(), null == n || n();
+                    T(!0),
+                        S(),
+                        null == n || n(),
+                        s.default.track(C.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                            application_id: t.id,
+                            button_action: d._y.USE_APP_COMMAND
+                        });
                 },
-                'aria-label': _.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
-                    buttonText: b,
+                'aria-label': h.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
+                    buttonText: M,
                     applicationName: t.name
                 }),
-                children: b
+                children: M
             });
         }
     });

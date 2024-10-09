@@ -22,15 +22,15 @@ var i = t(735250),
     A = t(585483),
     E = t(499254),
     N = t(541099),
-    x = t(827498),
-    v = t(496158),
+    v = t(827498),
+    x = t(496158),
     I = t(676161),
-    g = t(660090),
-    P = t(783097),
-    L = t(845936),
-    S = t(176412),
-    T = t(870205),
-    b = t(981631),
+    P = t(660090),
+    g = t(783097),
+    T = t(845936),
+    L = t(176412),
+    b = t(870205),
+    S = t(981631),
     R = t(689079),
     M = t(689938),
     j = t(32950),
@@ -42,7 +42,7 @@ function H(e) {
     let { channel: l, command: o, section: s, sectionName: c } = e,
         u = a.useCallback(() => {
             let e = N.Z.entrypoint();
-            E.yT(x.ti.COMMAND),
+            E.yT(v.ti.COMMAND),
                 (0, f.Mo)({
                     command: o,
                     location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -57,10 +57,10 @@ function H(e) {
                     source: e,
                     commandOrigin: h.bB.APPLICATION_LAUNCHER
                 }),
-                A.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                A.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
         }, [l.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
-        _ = a.useMemo(() => (0, S.ae)(o.displayDescription, void 0), [o.displayDescription]),
+        _ = a.useMemo(() => (0, L.ae)(o.displayDescription, void 0), [o.displayDescription]),
         C = a.useMemo(
             () =>
                 (0, i.jsxs)('div', {
@@ -91,7 +91,7 @@ function H(e) {
             }),
             m
                 ? (0, i.jsx)(r.F, {})
-                : (0, i.jsx)(B, {
+                : (0, i.jsx)(D, {
                       channel: l,
                       command: o,
                       sectionName: c
@@ -150,18 +150,18 @@ function U() {
         children: l
     });
 }
-function B(e) {
+function D(e) {
     let { channel: n, command: t, sectionName: l } = e,
         o = (0, _.PL)(!0, !0),
         r = (0, _.LD)(n.guild_id, !0),
-        c = (0, v.D)(n),
+        c = (0, x.D)(n),
         [u, m] = a.useState(!1),
         p = a.useCallback(
             async (e) => {
                 e.stopPropagation();
                 let n = N.Z.lastShownEntrypoint();
                 try {
-                    (await (0, L.L)({
+                    (await (0, T.L)({
                         applicationId: t.applicationId,
                         userIndexState: o,
                         guildIndexState: r,
@@ -169,13 +169,14 @@ function B(e) {
                         location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                         entrypoint: n
                     })) &&
-                        (await (0, P.Y$)({
+                        (await (0, g.Y$)({
                             command: t,
                             optionValues: {},
                             context: c,
-                            sectionName: l
+                            sectionName: l,
+                            commandOrigin: h.bB.APP_LAUNCHER_APPLICATION_VIEW
                         }),
-                        E.yT(x.ti.COMMAND));
+                        E.yT(v.ti.COMMAND));
                 } finally {
                     m(!1);
                 }
@@ -204,7 +205,7 @@ function B(e) {
         ]
     });
 }
-function D(e) {
+function B(e) {
     let { channel: n, commands: t, section: a, headerName: l, sectionName: o, children: r } = e;
     return 0 === t.length
         ? null
@@ -267,7 +268,7 @@ function k(e) {
             setSortOrder: f,
             commands: A,
             canSort: E
-        } = (0, g.Z)({
+        } = (0, P.Z)({
             sectionId: l.id,
             commandsByActiveSection: d
         });
@@ -286,14 +287,14 @@ function k(e) {
         ? (0, i.jsxs)('ul', {
               className: y.contentContainer,
               children: [
-                  (0, i.jsx)(D, {
+                  (0, i.jsx)(B, {
                       channel: t,
                       section: _,
                       commands: N,
                       headerName: M.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
                       sectionName: o
                   }),
-                  (0, i.jsx)(D, {
+                  (0, i.jsx)(B, {
                       channel: t,
                       section: _,
                       commands: p.current ? Z : A,
@@ -301,7 +302,7 @@ function k(e) {
                       sectionName: o,
                       children:
                           E &&
-                          (0, i.jsx)(T.Z, {
+                          (0, i.jsx)(b.Z, {
                               sortOrder: h,
                               onSortOptionClick: f
                           })
