@@ -1,8 +1,3 @@
-n.d(t, {
-    M: function () {
-        return r;
-    }
-});
 var i,
     a,
     s,

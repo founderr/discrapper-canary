@@ -2443,7 +2443,6 @@ e.exports = Object.freeze({
     NOTIFICATIONS_MUTED_TOAST: 'Notifications Muted',
     NOTIFICATIONS_UNMUTED_TOAST: 'Notifications Unmuted',
     MUTE_APP_NOTIFICIATIONS_INFO: 'This will mute all message notifications from this App until you turn them back on.',
-    UNMUTE_APP_NOTIFICIATIONS_INFO: 'This will unmute all message notifications from this App.',
     FORM_LABEL_MOBILE_CHANNEL_MUTED: 'You have muted this channel',
     FORM_LABEL_MOBILE_CHANNEL_MUTED_UNTIL: 'You have muted this channel until $[**{endTime}**](endTimeHook)',
     FORM_LABEL_MOBILE_SERVER_MUTED: 'You have muted this server',
