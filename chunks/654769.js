@@ -8,8 +8,8 @@ var r,
     c = n(292959),
     d = n(246946),
     u = n(626135),
-    h = n(358085),
-    m = n(557177),
+    m = n(358085),
+    h = n(557177),
     x = n(998502),
     f = n(981631);
 function p(e, t, n) {
@@ -25,7 +25,7 @@ function p(e, t, n) {
         e
     );
 }
-let g = h.isPlatformEmbedded && (0, h.isWindows)(),
+let g = m.isPlatformEmbedded && (0, m.isWindows)(),
     b = g && 10 > parseFloat(s.Z.os.release),
     v = !0;
 if (g && !b) {
@@ -33,7 +33,7 @@ if (g && !b) {
     v = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
 let _ = (g && v) || ('Chrome' === o().name && 47 > parseFloat(o().version)) || ('Firefox' === o().name && 52 > parseFloat(o().version)),
-    j = l().throttle(m.GN, 1000, { leading: !0 });
+    j = l().throttle(h.GN, 1000, { leading: !0 });
 function C() {
     x.ZP.flashFrame(!1);
 }
@@ -82,10 +82,10 @@ function S() {
 function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    e.includes('message') ? j(e, t, void 0, n) : (0, m.GN)(e, t);
+    e.includes('message') ? j(e, t, void 0, n) : (0, h.GN)(e, t);
 }
 function y(e) {
-    return (d.Z.disableNotifications && null == e.overrideStreamerMode) || !S() || (h.isPlatformEmbedded && !x.ZP.shouldDisplayNotifications());
+    return (d.Z.disableNotifications && null == e.overrideStreamerMode) || !S() || (m.isPlatformEmbedded && !x.ZP.shouldDisplayNotifications());
 }
 t.Z = {
     hasPermission: S,
@@ -97,14 +97,14 @@ t.Z = {
     },
     showNotification: function (e, t, n, r, a) {
         var i, o, s, d;
-        let m;
+        let h;
         if (y(a)) {
             null != a.sound && !1 !== a.playSoundIfDisabled && N(a.sound, null !== (o = a.volume) && void 0 !== o ? o : 1, a.soundpack);
             return;
         }
         null != a.sound && N(a.sound, null !== (s = a.volume) && void 0 !== s ? s : 1, a.soundpack);
         let p = null !== (d = null == a ? void 0 : a.tag) && void 0 !== d ? d : null;
-        (0, h.isLinux)() && (n = l().escape(n));
+        (0, m.isLinux)() && (n = l().escape(n));
         let b = {
             icon: e,
             body: n,
@@ -113,23 +113,23 @@ t.Z = {
         };
         g && c.Z.taskbarFlash && x.ZP.flashFrame(!0);
         try {
-            m = new T(t, b);
+            h = new T(t, b);
         } catch (e) {
             return null;
         }
         return (null === (i = a.onShown) || void 0 === i || i.call(a),
         !a.omitViewTracking && u.default.track(f.rMx.NOTIFICATION_VIEWED, r),
-        (m.onclick = () => {
+        (h.onclick = () => {
             var e;
-            h.isPlatformEmbedded ? x.ZP.focus() : (window.focus(), m.close()), !a.omitClickTracking && u.default.track(f.rMx.NOTIFICATION_CLICKED, r), null === (e = a.onClick) || void 0 === e || e.call(a);
+            m.isPlatformEmbedded ? x.ZP.focus() : (window.focus(), h.close()), !a.omitClickTracking && u.default.track(f.rMx.NOTIFICATION_CLICKED, r), null === (e = a.onClick) || void 0 === e || e.call(a);
         }),
-        _ && setTimeout(() => m.close(), 5000),
+        _ && setTimeout(() => h.close(), 5000),
         v)
-            ? m
+            ? h
             : {
                   close() {
                       var e;
-                      null == m || null === (e = m.onclose) || void 0 === e || e.call(m);
+                      null == h || null === (e = h.onclose) || void 0 === e || e.call(h);
                   }
               };
     },

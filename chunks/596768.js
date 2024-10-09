@@ -13,8 +13,8 @@ var r = n(735250),
     c = n(913527),
     d = n.n(c),
     u = n(442837),
-    h = n(481060),
-    m = n(570140),
+    m = n(481060),
+    h = n(570140),
     x = n(665149),
     f = n(55935),
     p = n(120816),
@@ -67,7 +67,7 @@ let N = [
                             className: i()(S.headerBar, T.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(x.ZP.Icon, {
-                                    icon: h.AnalyticsIcon,
+                                    icon: m.AnalyticsIcon,
                                     tooltip: t
                                 }),
                                 (0, r.jsx)(x.ZP.Title, { children: t })
@@ -134,7 +134,7 @@ function I() {
         { TabBar: f, renderSelectedTab: b } = (0, j.Z)({ tabs: y }, []),
         I = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
         E = a.useCallback((e) => {
-            m.Z.dispatch({
+            h.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
             });
@@ -149,27 +149,27 @@ function I() {
                     (0, r.jsx)('div', {
                         title: 'Enables tracking of all triggers',
                         className: T.triggersEnable,
-                        children: (0, r.jsx)(h.Switch, {
+                        children: (0, r.jsx)(m.Switch, {
                             checked: I,
                             onChange: E,
                             className: T.__invalid_toolbarSwitch
                         })
                     }),
-                    (0, r.jsx)(h.Button, {
+                    (0, r.jsx)(m.Button, {
                         className: T.toolbarButton,
-                        look: h.Button.Looks.BLANK,
-                        size: h.Button.Sizes.ICON,
+                        look: m.Button.Looks.BLANK,
+                        size: m.Button.Sizes.ICON,
                         onClick: g.Zw,
                         children: (0, r.jsx)('span', {
                             title: C.Z.Messages.CLEAR,
-                            children: (0, r.jsx)(h.TrashIcon, {
+                            children: (0, r.jsx)(m.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
                                 'aria-label': C.Z.Messages.CLEAR
                             })
                         })
                     }),
-                    (0, r.jsx)(h.SearchBar, {
+                    (0, r.jsx)(m.SearchBar, {
                         className: T.searchBar,
                         query: e,
                         onChange: t,

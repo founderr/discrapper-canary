@@ -1,12 +1,12 @@
 n.d(t, {
     OI: function () {
-        return m;
+        return h;
     },
     QQ: function () {
         return d;
     },
     jY: function () {
-        return h;
+        return m;
     },
     jg: function () {
         return u;
@@ -27,9 +27,9 @@ function c(e) {
 }
 let d = () => c('isSearchVisible'),
     u = () => c('selectedTab'),
-    h = (e) => {
+    m = (e) => {
         (0, i.j)(() => s.setState(e));
     };
-function m() {
-    h(o);
+function h() {
+    m(o);
 }

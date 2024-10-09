@@ -32,7 +32,7 @@ function l(e) {
         message: e
     }));
 }
-((i = r || (r = {})).HCAPTCHA = 'hcaptcha'), (i.RECAPTCHA = 'recaptcha');
+((i = r || (r = {})).HCAPTCHA = 'hcaptcha'), (i.RECAPTCHA = 'recaptcha'), (i.RECAPTCHA_ENTERPRISE = 'recaptcha_enterprise');
 class u {
     hasFieldErrors() {
         return null != this.errors && Object.keys(this.errors).length > 0;

@@ -13,10 +13,10 @@ var r = n(735250),
     c = n(38618),
     d = n(980361),
     u = n(219299);
-let h = 1000 / 60,
-    m = 1000 / 45,
-    x = 3 * h,
-    f = Math.ceil(3000 / h);
+let m = 1000 / 60,
+    h = 1000 / 45,
+    x = 3 * m,
+    f = Math.ceil(3000 / m);
 function p(e) {
     let { socket: t, isAverageFrameTime: n } = e,
         [l, i] = (function (e) {
@@ -35,7 +35,7 @@ function p(e) {
             currentFPS: o,
             averageFrameTime: c,
             timeSinceLastDrop: u,
-            onResetFrameData: m,
+            onResetFrameData: h,
             droppedFramesRef: p,
             renderedFrameCount: g,
             bufferFramecountRef: b,
@@ -52,31 +52,31 @@ function p(e) {
                 u = a.useCallback(() => {
                     n.current.fill(0), (l.current = 0), (i.current = 0), (s.current = 0), (c.current = 0), (r.current = performance.now()), (o.current = 0);
                 }, []),
-                m = a.useCallback(
+                h = a.useCallback(
                     function () {
                         let a = performance.now(),
                             u = a - r.current;
                         if (((r.current = a), t.current)) return;
                         if (((i.current -= n.current[c.current]), (n.current[c.current] = u), (i.current += u), s.current < f && (s.current += 1), (c.current = (c.current + 1) % f), u > x)) {
-                            let t = 0 === s.current ? h : i.current / s.current,
-                                n = Math.min(2 * h, t),
-                                r = Math.floor(u / (e ? n : h));
+                            let t = 0 === s.current ? m : i.current / s.current,
+                                n = Math.min(2 * m, t),
+                                r = Math.floor(u / (e ? n : m));
                             r > 0 && (d.current = performance.now()), (l.current += r);
                         }
-                        let m = 0 === s.current ? h : i.current / s.current;
-                        o.current += u / m;
+                        let h = 0 === s.current ? m : i.current / s.current;
+                        o.current += u / h;
                     },
                     [e, t]
                 ),
                 p = 0 === s.current ? 0 : i.current / s.current;
             return {
-                currentFPS: 0 === p ? 0 : (h / p) * 60,
+                currentFPS: 0 === p ? 0 : (m / p) * 60,
                 averageFrameTime: p,
                 timeSinceLastDrop: (performance.now() - d.current) / 1000,
                 droppedFramesRef: l,
                 bufferFramecountRef: s,
                 renderedFrameCount: o,
-                frameCheckerEffect: m,
+                frameCheckerEffect: h,
                 onResetFrameData: u
             };
         })(n, l),
@@ -145,8 +145,8 @@ function p(e) {
         []
     );
     let I = a.useCallback(() => {
-        m(), C(), T();
-    }, [m, C, T]);
+        h(), C(), T();
+    }, [h, C, T]);
     return (0, r.jsxs)('div', {
         className: d.panelGroup,
         children: [
@@ -224,7 +224,7 @@ function p(e) {
                     (0, r.jsxs)(s.Text, {
                         tag: 'span',
                         variant: 'text-md/semibold',
-                        color: c > 1.1 * h ? 'text-warning' : 'text-secondary',
+                        color: c > 1.1 * m ? 'text-warning' : 'text-secondary',
                         children: [c.toFixed(2), 'ms']
                     })
                 ]
@@ -285,7 +285,7 @@ function g(e) {
     a.useEffect(() => {
         let e = setInterval(() => {
             o(t.dispatcher.getIsRequestIdleCallbackEnabled());
-        }, m);
+        }, h);
         return (
             (c.current = e),
             () => {
@@ -415,7 +415,7 @@ function v(e) {
         n = t.dispatcher.getSchedulerTelemetry(),
         [l, o] = a.useState(n.isTelemetryEnabled),
         [c, u] = a.useState(n.isTelemetryEnabled),
-        h = (e) => {
+        m = (e) => {
             u(e), n.toggleTelemetry(e);
         };
     return (0, r.jsxs)('div', {
@@ -423,7 +423,7 @@ function v(e) {
         children: [
             (0, r.jsx)(s.Checkbox, {
                 value: c,
-                onChange: () => h(!c),
+                onChange: () => m(!c),
                 size: 18,
                 type: s.Checkbox.Types.INVERTED,
                 shape: s.Checkbox.Shapes.BOX,
@@ -441,7 +441,7 @@ function v(e) {
                     onChange: () => {
                         o((e) => {
                             let t = !e;
-                            return t && h(!0), t;
+                            return t && m(!0), t;
                         });
                     },
                     size: 18,
@@ -517,7 +517,7 @@ function _() {
             a.useEffect(() => {
                 let t = setInterval(() => {
                     e({});
-                }, m);
+                }, h);
                 return () => {
                     clearInterval(t);
                 };

@@ -15,8 +15,8 @@ var r = n(735250),
     c = n(481060),
     d = n(347469),
     u = n(213609),
-    h = n(213713),
-    m = n(665149),
+    m = n(213713),
+    h = n(665149),
     x = n(906467),
     f = n(259580),
     p = n(31336),
@@ -40,14 +40,14 @@ var v = n(392750),
     O = n(702904),
     A = n(178821),
     L = n(248526),
-    B = n(958328),
-    P = n(514866),
+    P = n(958328),
+    B = n(514866),
     M = n(678639),
     D = n(351930),
     F = n(771751),
-    H = n(596768),
+    G = n(596768),
     U = n(621060),
-    G = n(689938),
+    H = n(689938),
     z = n(622331),
     V = n(219299);
 function W(e) {
@@ -76,7 +76,7 @@ function Y() {
                 {
                     id: 'triggers',
                     name: 'Triggers',
-                    render: () => (0, r.jsx)(H.Z, {})
+                    render: () => (0, r.jsx)(G.Z, {})
                 },
                 {
                     id: 'stores',
@@ -94,7 +94,7 @@ function Y() {
                     (e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
-                        render: () => (0, r.jsx)(P.Z, {})
+                        render: () => (0, r.jsx)(B.Z, {})
                     }),
                     e.push({
                         id: 'perks_demos',
@@ -150,7 +150,7 @@ function Y() {
                 e.push({
                     id: 'permissions',
                     name: 'Permissions',
-                    render: () => (0, r.jsx)(B.Z, {})
+                    render: () => (0, r.jsx)(P.Z, {})
                 }),
                 e.push({
                     id: 'modals',
@@ -166,7 +166,7 @@ function Y() {
                     e.push({
                         id: 'content_inventory',
                         name: 'Content Inventory',
-                        render: () => (0, r.jsx)(h.Z, {})
+                        render: () => (0, r.jsx)(m.Z, {})
                     }),
                 window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') &&
                     (e.push({
@@ -219,19 +219,19 @@ function Y() {
         }),
         (0, r.jsxs)(k.Gk, {
             children: [
-                (0, r.jsxs)(m.ZP, {
+                (0, r.jsxs)(h.ZP, {
                     className: V.headerBar,
-                    toolbar: (0, r.jsx)(m.ZP.Icon, {
+                    toolbar: (0, r.jsx)(h.ZP.Icon, {
                         icon: c.XSmallIcon,
-                        tooltip: G.Z.Messages.CLOSE,
+                        tooltip: H.Z.Messages.CLOSE,
                         onClick: p.SO
                     }),
                     children: [
-                        (0, r.jsx)(m.ZP.Icon, {
+                        (0, r.jsx)(h.ZP.Icon, {
                             icon: c.StaffBadgeIcon,
                             tooltip: 'DevTools'
                         }),
-                        (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
+                        (0, r.jsx)(h.ZP.Title, { children: 'DevTools' })
                     ]
                 }),
                 (0, r.jsx)(n, {}),
@@ -285,15 +285,15 @@ function q() {
               className: z.container,
               children: (0, r.jsx)(c.Clickable, {
                   onClick: p.SO,
-                  children: (0, r.jsxs)(m.ZP, {
+                  children: (0, r.jsxs)(h.ZP, {
                       className: i()(V.headerBar, z.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
-                          (0, r.jsx)(m.ZP.Icon, {
+                          (0, r.jsx)(h.ZP.Icon, {
                               icon: c.StaffBadgeIcon,
                               tooltip: 'DevTools'
                           }),
-                          (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
+                          (0, r.jsx)(h.ZP.Title, { children: 'DevTools' })
                       ]
                   })
               })

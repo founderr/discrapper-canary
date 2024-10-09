@@ -15,7 +15,7 @@ n.d(t, {
         return X;
     },
     HW: function () {
-        return H;
+        return G;
     },
     Ib: function () {
         return ei;
@@ -78,8 +78,8 @@ var r,
     c = n(764160),
     d = n(808131),
     u = n(757028),
-    h = n(694626),
-    m = n(855930),
+    m = n(694626),
+    h = n(855930),
     x = n(385787),
     f = n(566162),
     p = n(567027),
@@ -102,18 +102,18 @@ var r,
     O = n(856308),
     A = n(665352),
     L = n(394900),
-    B = n(661105),
-    P = n(525169),
+    P = n(661105),
+    B = n(525169),
     M = n(433517),
     D = n(190558),
     F = n(231338);
-let H = {
+let G = {
         sRGB: s.Z,
         A98RGB: c.Z,
         ACEScc: d.Z,
         ACEScg: u.Z,
-        HPLuv: h.Z,
-        HSL: m.Z,
+        HPLuv: m.Z,
+        HSL: h.Z,
         HSLuv: x.Z,
         HSV: f.Z,
         HWB: p.Z,
@@ -135,10 +135,10 @@ let H = {
         XYZ_D50: Z.Z,
         XYZ_D65: O.Z
     },
-    U = Object.fromEntries(Object.keys(H).map((e) => [e, e]));
-Object.values(H).forEach((e) => A.Z.register(e));
-let { SemanticColors: G } = D.V,
-    z = G,
+    U = Object.fromEntries(Object.keys(G).map((e) => [e, e]));
+Object.values(G).forEach((e) => A.Z.register(e));
+let { SemanticColors: H } = D.V,
+    z = H,
     V = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function W(e, t) {
     let [n, r] = o.useState(() => {
@@ -188,7 +188,7 @@ function q(e) {
     };
 }
 function X(e) {
-    return (0, L.Z)((0, B.Z)(e, s.Z), { format: 'hex' });
+    return (0, L.Z)((0, P.Z)(e, s.Z), { format: 'hex' });
 }
 function $() {
     return (function (e, t) {
@@ -217,10 +217,10 @@ function $() {
     });
 }
 ((l = r || (r = {})).TOKENS = 'Tokens'), (l.PALETTES = 'Palettes');
-let Q = [100, 130, 160, 200, 230, 260, 300, 330, 345, 360, 400, 430, 460, 500, 530, 560, 600, 630, 660, 700, 730, 760, 800, 830, 860, 900],
-    J = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
+let J = [100, 130, 160, 200, 230, 260, 300, 330, 345, 360, 400, 430, 460, 500, 530, 560, 600, 630, 660, 700, 730, 760, 800, 830, 860, 900],
+    Q = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
 function ee(e) {
-    return 'plum' === e ? J : Q;
+    return 'plum' === e ? Q : J;
 }
 function et(e, t) {
     let n = ee(t),
@@ -238,38 +238,38 @@ function et(e, t) {
 }
 function en(e) {
     let { name: t, base: n, steps: r = 26, darkness: a, lightness: l, easingStrength: i = 1 } = e,
-        o = H[e.colorSpace],
-        c = (0, B.Z)(n, o),
-        d = (0, P.CD)(c, 'white', 1 - a, {
+        o = G[e.colorSpace],
+        c = (0, P.Z)(n, o),
+        d = (0, B.CD)(c, 'white', 1 - a, {
             space: o,
             outputSpace: s.Z
         }),
-        u = (0, P.CD)(c, 'black', 1 - l, {
+        u = (0, B.CD)(c, 'black', 1 - l, {
             space: o,
             outputSpace: s.Z
         }),
-        h = Math.floor(r / 2),
-        m = r - h,
-        x = (0, P.w6)(d, c, {
-            steps: h,
-            outputSpace: o,
-            space: o,
-            progression: (e) => e ** i
-        }),
-        f = (0, P.w6)(u, c, {
+        m = Math.floor(r / 2),
+        h = r - m,
+        x = (0, B.w6)(d, c, {
             steps: m,
             outputSpace: o,
             space: o,
             progression: (e) => e ** i
         }),
+        f = (0, B.w6)(u, c, {
+            steps: h,
+            outputSpace: o,
+            space: o,
+            progression: (e) => e ** i
+        }),
         p = [];
-    for (let e = 0; e < h; e++) {
-        let t = x(e / h);
+    for (let e = 0; e < m; e++) {
+        let t = x(e / m);
         p.push(t);
     }
     p.push(c);
-    for (let e = 1; e < m; e++) {
-        let t = f(1 - e / m);
+    for (let e = 1; e < h; e++) {
+        let t = f(1 - e / h);
         p.push(t);
     }
     return Object.fromEntries(p.map((e, n) => [''.concat(t, '-').concat(n), e]));

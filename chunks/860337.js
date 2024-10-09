@@ -12,13 +12,13 @@ var r = n(735250),
     c = n(207796),
     d = n(836768),
     u = n(859921),
-    h = n(785287),
-    m = n(219299);
+    m = n(785287),
+    h = n(219299);
 function x() {
     let e = a.useRef(null);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(m.panel, h.panel),
+        className: i()(h.panel, m.panel),
         children: [
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
