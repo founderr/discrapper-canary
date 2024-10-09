@@ -3,13 +3,13 @@ n.d(t, {
         return e_;
     },
     $8: function () {
-        return e$;
+        return eJ;
     },
     $e: function () {
         return Q;
     },
     $n: function () {
-        return tn;
+        return tr;
     },
     A5: function () {
         return eh;
@@ -18,7 +18,7 @@ n.d(t, {
         return eO;
     },
     Bo: function () {
-        return ta;
+        return ts;
     },
     C2: function () {
         return eC;
@@ -27,7 +27,7 @@ n.d(t, {
         return X;
     },
     CR: function () {
-        return eU;
+        return ew;
     },
     Cj: function () {
         return h;
@@ -51,7 +51,7 @@ n.d(t, {
         return eo;
     },
     HO: function () {
-        return e0;
+        return e1;
     },
     Hk: function () {
         return ev;
@@ -60,31 +60,31 @@ n.d(t, {
         return ea;
     },
     Lw: function () {
-        return eq;
+        return eQ;
     },
     M_: function () {
-        return ti;
+        return ta;
     },
     Nl: function () {
-        return eZ;
+        return eY;
     },
     No: function () {
         return ei;
     },
     OT: function () {
-        return ex;
+        return eG;
     },
     QI: function () {
-        return e8;
+        return e9;
     },
     QP: function () {
         return c;
     },
     RQ: function () {
-        return e9;
+        return te;
     },
     RU: function () {
-        return ek;
+        return eB;
     },
     Rg: function () {
         return eS;
@@ -102,13 +102,13 @@ n.d(t, {
         return T;
     },
     TD: function () {
-        return e4;
+        return e5;
     },
     TL: function () {
         return eR;
     },
     Tp: function () {
-        return e6;
+        return e7;
     },
     UA: function () {
         return ed;
@@ -120,10 +120,10 @@ n.d(t, {
         return eE;
     },
     Uq: function () {
-        return eQ;
+        return eX;
     },
     V4: function () {
-        return te;
+        return tt;
     },
     VU: function () {
         return A;
@@ -132,7 +132,7 @@ n.d(t, {
         return a;
     },
     Y1: function () {
-        return e1;
+        return e2;
     },
     YQ: function () {
         return $;
@@ -144,10 +144,10 @@ n.d(t, {
         return z;
     },
     _k: function () {
-        return eJ;
+        return e0;
     },
     a1: function () {
-        return e5;
+        return e6;
     },
     a7: function () {
         return eL;
@@ -156,7 +156,7 @@ n.d(t, {
         return q;
     },
     bg: function () {
-        return e3;
+        return e4;
     },
     cb: function () {
         return ec;
@@ -165,22 +165,22 @@ n.d(t, {
         return l;
     },
     dB: function () {
-        return eF;
+        return eV;
     },
     dJ: function () {
         return ee;
     },
     dT: function () {
-        return eB;
+        return eF;
     },
     eG: function () {
-        return ts;
+        return to;
     },
     eZ: function () {
-        return tt;
+        return tn;
     },
     ee: function () {
-        return eW;
+        return eK;
     },
     ff: function () {
         return eT;
@@ -189,7 +189,7 @@ n.d(t, {
         return S;
     },
     gW: function () {
-        return eY;
+        return ej;
     },
     gh: function () {
         return ep;
@@ -198,25 +198,28 @@ n.d(t, {
         return d;
     },
     h8: function () {
-        return ew;
+        return ex;
     },
     hX: function () {
         return g;
     },
     hs: function () {
-        return eG;
+        return ek;
     },
     i_: function () {
         return eg;
     },
     ih: function () {
-        return eH;
+        return eZ;
     },
     in: function () {
         return u;
     },
     jy: function () {
-        return e7;
+        return e8;
+    },
+    jz: function () {
+        return eU;
     },
     m8: function () {
         return eI;
@@ -225,13 +228,13 @@ n.d(t, {
         return es;
     },
     n5: function () {
-        return ej;
+        return eW;
     },
     nG: function () {
-        return eK;
+        return ez;
     },
     nH: function () {
-        return e2;
+        return e3;
     },
     nL: function () {
         return f;
@@ -243,13 +246,13 @@ n.d(t, {
         return r;
     },
     pH: function () {
-        return eX;
+        return e$;
     },
     pj: function () {
         return el;
     },
     rB: function () {
-        return eV;
+        return eH;
     },
     rV: function () {
         return s;
@@ -258,10 +261,10 @@ n.d(t, {
         return em;
     },
     rt: function () {
-        return tr;
+        return ti;
     },
     vL: function () {
-        return ez;
+        return eq;
     },
     wh: function () {
         return eN;
@@ -544,20 +547,21 @@ let eo = Object.freeze({
     eb = '1267969164312576000',
     eM = '1268347360493174784',
     eP = '1271484512081285191',
-    eU = [eg, eA, eN, eO, eR, ev, eC, eL, ey, eD, eb, eM, eP],
-    ew = [eD, eb, eP],
-    ex = [eD, eP],
-    eG = '1150904354090532864',
-    ek = '1199128659810582528',
-    eB = '1204865493622587392',
-    eF = '1204867673024888832',
-    eV = '1215346678383509504',
-    eH = '1215366184820539392',
-    eZ = '1223319122125783040',
-    eY = '1223380890109870080',
-    ej = '1265748546523762828',
-    eW = [eZ, eY],
-    eK = Object.freeze({
+    eU = '1161363847311785984',
+    ew = [eg, eA, eN, eO, eR, ev, eC, eL, ey, eD, eb, eM, eP, eU],
+    ex = [eD, eb, eP],
+    eG = [eD, eP],
+    ek = '1150904354090532864',
+    eB = '1199128659810582528',
+    eF = '1204865493622587392',
+    eV = '1204867673024888832',
+    eH = '1215346678383509504',
+    eZ = '1215366184820539392',
+    eY = '1223319122125783040',
+    ej = '1223380890109870080',
+    eW = '1265748546523762828',
+    eK = [eY, ej],
+    ez = Object.freeze({
         [eg]: {
             id: eg,
             skus: ['521847234246082599']
@@ -596,6 +600,10 @@ let eo = Object.freeze({
         },
         [eM]: {
             id: eM,
+            skus: ['521847234246082599']
+        },
+        [eU]: {
+            id: eU,
             skus: ['521847234246082599']
         }
     });
@@ -696,33 +704,33 @@ let eo = Object.freeze({
     (D[(D.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'),
     (D[(D.GUILD_BOOST = 4)] = 'GUILD_BOOST'),
     (D[(D.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0');
-let ez = Object.freeze({
+let eq = Object.freeze({
         '978380684370378762': 8,
         '521846918637420545': 1,
         '521847234246082599': 2,
         '590663762298667008': 4
     }),
-    eq = 52428800,
-    eQ = 524288000,
-    eX = {
+    eQ = 52428800,
+    eX = 524288000,
+    e$ = {
         [j.Eu4.NONE]: 5,
         [j.Eu4.TIER_1]: 10,
         [j.Eu4.TIER_2]: 15,
         [j.Eu4.TIER_3]: 30
     },
-    e$ = {
-        [j.Eu4.NONE]: eX[j.Eu4.NONE],
-        [j.Eu4.TIER_1]: eX[j.Eu4.NONE] + eX[j.Eu4.TIER_1],
-        [j.Eu4.TIER_2]: eX[j.Eu4.NONE] + eX[j.Eu4.TIER_1] + eX[j.Eu4.TIER_2],
-        [j.Eu4.TIER_3]: eX[j.Eu4.NONE] + eX[j.Eu4.TIER_1] + eX[j.Eu4.TIER_2] + eX[j.Eu4.TIER_3]
-    },
     eJ = {
+        [j.Eu4.NONE]: e$[j.Eu4.NONE],
+        [j.Eu4.TIER_1]: e$[j.Eu4.NONE] + e$[j.Eu4.TIER_1],
+        [j.Eu4.TIER_2]: e$[j.Eu4.NONE] + e$[j.Eu4.TIER_1] + e$[j.Eu4.TIER_2],
+        [j.Eu4.TIER_3]: e$[j.Eu4.NONE] + e$[j.Eu4.TIER_1] + e$[j.Eu4.TIER_2] + e$[j.Eu4.TIER_3]
+    },
+    e0 = {
         [j.Eu4.NONE]: 8,
         [j.Eu4.TIER_1]: 24,
         [j.Eu4.TIER_2]: 36,
         [j.Eu4.TIER_3]: 48
     },
-    e0 = Object.freeze({
+    e1 = Object.freeze({
         [j.Eu4.NONE]: {
             features: [],
             limits: {
@@ -731,9 +739,9 @@ let ez = Object.freeze({
                 fileSize: j.mBz,
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eJ[j.Eu4.NONE],
+                soundboardSounds: e0[j.Eu4.NONE],
                 maxConcurrentActivities: 2,
-                stickers: e$[j.Eu4.NONE],
+                stickers: eJ[j.Eu4.NONE],
                 stageVideoUsers: j.B9o
             }
         },
@@ -745,9 +753,9 @@ let ez = Object.freeze({
                 fileSize: j.mBz,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eJ[j.Eu4.TIER_1],
+                soundboardSounds: e0[j.Eu4.TIER_1],
                 maxConcurrentActivities: 3,
-                stickers: e$[j.Eu4.TIER_1],
+                stickers: eJ[j.Eu4.TIER_1],
                 stageVideoUsers: j.B9o
             }
         },
@@ -759,9 +767,9 @@ let ez = Object.freeze({
                 fileSize: 52428800,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eJ[j.Eu4.TIER_2],
+                soundboardSounds: e0[j.Eu4.TIER_2],
                 maxConcurrentActivities: 5,
-                stickers: e$[j.Eu4.TIER_2],
+                stickers: eJ[j.Eu4.TIER_2],
                 stageVideoUsers: j.eez
             }
         },
@@ -773,16 +781,16 @@ let ez = Object.freeze({
                 fileSize: 104857600,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eJ[j.Eu4.TIER_3],
+                soundboardSounds: e0[j.Eu4.TIER_3],
                 maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-                stickers: e$[j.Eu4.TIER_3],
+                stickers: eJ[j.Eu4.TIER_3],
                 stageVideoUsers: j.RcX
             }
         }
     }),
-    e1 = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
+    e2 = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
 ((b = c || (c = {})).SOUNDBOARD_PLAY = 'soundboard play'), (b.PROFILE_THEME_COLOR = 'profile_theme_color'), (b.PROFILE_BANNER = 'profile_banner'), (b.ANIMATED_AVATAR = 'animated_avatar'), (b.AVATAR_DECORATION = 'avatar_decoration'), (b.CLIENT_THEME = 'client_theme'), (b.SHARED_CANVAS = 'shared_canvas'), (b.PROFILE_EFFECT = 'profile_effect'), (b.PRESET = 'preset'), ((M = d || (d = {})).FREE = 'free'), (M.PREMIUM_STANDARD = 'premium-standard');
-let e2 = {
+let e3 = {
     '1024422698568122368': 16,
     '511651876987469824': 16,
     '511651885459963904': 16,
@@ -790,35 +798,35 @@ let e2 = {
     '642251038925127690': 5
 };
 ((P = _ || (_ = {})).HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (P.MID_STREAMING_QUALITY = 'mid_streaming_quality');
-let e3 = Object.freeze({
+let e4 = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1
 });
 ((U = E || (E = {}))[(U.UserSettings = 0)] = 'UserSettings'), (U[(U.ApplicationStoreHome = 1)] = 'ApplicationStoreHome'), ((w = f || (f = {}))[(w.DEFAULT = 0)] = 'DEFAULT'), (w[(w.WINTER = 1)] = 'WINTER'), ((x = h || (h = {}))[(x.SNOWGLOBE = 1)] = 'SNOWGLOBE'), (x[(x.BOX = 2)] = 'BOX'), (x[(x.CUP = 3)] = 'CUP'), (x[(x.STANDARD_BOX = 4)] = 'STANDARD_BOX'), (x[(x.CAKE = 5)] = 'CAKE'), (x[(x.CHEST = 6)] = 'CHEST'), (x[(x.COFFEE = 7)] = 'COFFEE'), (x[(x.SEASONAL_STANDARD_BOX = 8)] = 'SEASONAL_STANDARD_BOX'), (x[(x.SEASONAL_CAKE = 9)] = 'SEASONAL_CAKE'), (x[(x.SEASONAL_CHEST = 10)] = 'SEASONAL_CHEST'), (x[(x.SEASONAL_COFFEE = 11)] = 'SEASONAL_COFFEE'), (x[(x.NITROWEEN_STANDARD = 12)] = 'NITROWEEN_STANDARD'), ((G = p || (p = {})).USER_NOT_VERIFIED = 'user_not_verified'), (G.NO_CODE_BODY = 'no_code_body'), (G.NO_PROMOTION = 'no_promotion'), (G.CODE_CLAIMED = 'code_claimed'), (G.EXISTING_SUBSCRIBER = 'existing_subscriber'), (G.PREVIOUS_SUBSCRIBER = 'previous_subscriber'), (G.BLOCKED_PAYMENT = 'blocked_payment');
-let e4 = Object.freeze({
+let e5 = Object.freeze({
         IS_BLOCKED_IOS: 32,
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128
     }),
-    e5 = Object.freeze({
-        3: { fileSize: eq },
+    e6 = Object.freeze({
+        3: { fileSize: eQ },
         1: { fileSize: 52428800 },
-        2: { fileSize: eQ }
+        2: { fileSize: eX }
     });
 ((k = I || (I = {})).EXPLORE_ALL_PERKS_CLICKED = 'explore_all_perks_clicked'), (k.HELPER_COLLAPSED = 'helper_collapsed'), (k.HELPER_UNCOLLAPSED = 'helper_uncollapsed'), (k.UNLOCK_EMOJI_CLICKED = 'unlock_emoji_clicked'), (k.CUSTOM_PROFILES_CLICKED = 'custom_profiles_clicked'), (k.SERVER_BOOSTS_CLICKED = 'server_boosts_clicked'), (k.HELPER_DISMISSED = 'premium_feature_helper_dismissed'), (k.HELPER_RENDERED = 'premium_feature_helper_rendered'), ((B = m || (m = {})).EMOJI_TUTORIAL_STARTED = 'emoji_tutorial_started'), (B.EMOJI_INTRO_VIEWED = 'emoji_intro_viewed'), (B.EMOJI_PROMPT_VIEWED = 'emoji_prompt_viewed'), (B.CUSTOM_PROFILE_TUTORIAL_STARTED = 'custom_profile_tutorial_started'), (B.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = 'custom_profile_avatar_intro_viewed'), (B.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = 'custom_profile_avatar_decorations_viewed'), (B.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = 'custom_profile_banner_intro_viewed'), (B.CUSTOM_PROFILE_THEME_INTRO_VIEWED = 'custom_profile_theme_intro_viewed'), (B.SERVER_PROFILE_INTRO_VIEWED = 'server_profile_intro_viewed'), (B.SERVER_BOOST_TUTORIAL_STARTED = 'server_boost_tutorial_started'), (B.BOOST_INTRO_VIEWED = 'boost_intro_viewed'), (B.BOOST_PROMPT_VIEWED = 'boost_prompt_viewed'), ((F = T || (T = {})).BOOST = 'boost'), (F.DISMISS = 'dismiss'), ((V = S || (S = {})).BADGE_TOOLTIP_VIEWED = 'share_nitro_bagde_tooltip_viewed'), (V.BADGE_CLICKED = 'share_nitro_badge_clicked'), (V.FLOW_STARTED = 'share_nitro_flow_started'), (V.FLOW_COMPLETED = 'share_nitro_flow_completed');
-let e6 = new Set(['PL', 'TR']),
-    e7 = [1, 2, 3],
-    e8 = [4, 5, 7, 6],
-    e9 = [12, 5, 7, 6],
-    te = [8, 9, 11, 10],
-    tt = te.concat(e7),
-    tn = 190;
+let e7 = new Set(['PL', 'TR']),
+    e8 = [1, 2, 3],
+    e9 = [4, 5, 7, 6],
+    te = [12, 5, 7, 6],
+    tt = [8, 9, 11, 10],
+    tn = tt.concat(e8),
+    tr = 190;
 (H = g || (g = {}))[(H.FRIEND_ANNIVERSARY = 0)] = 'FRIEND_ANNIVERSARY';
-let tr = 3,
-    ti = 30,
-    ta = 20;
+let ti = 3,
+    ta = 30,
+    ts = 20;
 ((Z = A || (A = {})).PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month'), (Z.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month'), (Z.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month'), (Z.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month'), (Z.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month'), (Z.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month'), (Z.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month'), (Z.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month');
-let ts = {
+let to = {
     premium_tenure_1_month: 1,
     premium_tenure_3_month: 3,
     premium_tenure_6_month: 6,
