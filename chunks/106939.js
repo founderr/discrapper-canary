@@ -181,8 +181,11 @@ function W() {
             }),
             C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
     }, [r, p]),
+    a.useEffect(() => {
+        A && (0, u.mN)(j.L0.FAMILY_CENTER);
+    }, [A]),
     A)
-        ? ((0, u.mN)(j.L0.FAMILY_CENTER), null)
+        ? null
         : (0, s.jsxs)('main', {
               className: i()(y.container),
               'aria-label': w.Z.Messages.FAMILY_CENTER_TITLE,
@@ -216,17 +219,16 @@ function K() {
         F = M.default.getCurrentUser(),
         W = null != t,
         K = l && null != F && !W;
-    if (
-        (a.useEffect(() => {
-            E.Y(U.Z5c.FAMILY_CENTER),
-                (0, f.e)('family-center'),
-                !x.Z.isLoading() && x.Z.canRefetch() && h.ZP.initialPageLoad(),
-                !r &&
-                    (0, N.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
-                        dismissAction: G.L.AUTO,
-                        forceTrack: !0
-                    });
-        }, []),
+    a.useEffect(() => {
+        E.Y(U.Z5c.FAMILY_CENTER),
+            (0, f.e)('family-center'),
+            !x.Z.isLoading() && x.Z.canRefetch() && h.ZP.initialPageLoad(),
+            !r &&
+                (0, N.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+                    dismissAction: G.L.AUTO,
+                    forceTrack: !0
+                });
+    }, []),
         a.useEffect(() => {
             l &&
                 W &&
@@ -243,9 +245,10 @@ function K() {
             let e = A.Ex.getSetting();
             l && t && void 0 === e && A.Ex.updateSetting(!0);
         }, [l, t]),
-        K)
-    )
-        return (0, u.mN)(j.L0.FAMILY_CENTER), null;
+        a.useEffect(() => {
+            K && (0, u.mN)(j.L0.FAMILY_CENTER);
+        }, [K]);
+    if (K) return null;
     let Y = Z !== B.dG.SETTINGS ? Z : B.dG.ACTIVITY,
         z = k[Y];
     return (0, s.jsx)(I.Gt, {
