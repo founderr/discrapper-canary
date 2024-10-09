@@ -3511,7 +3511,6 @@ let oq = Object.freeze({
     TEXT: 'Text & Images',
     VOICE: 'Voice & Video',
     PRIVACY_AND_SAFETY: 'Privacy & Safety',
-    PRIVACY_AND_SAFETY_V2: 'Privacy & Safety V2',
     CONTENT_AND_SOCIAL: 'Content & Social',
     DATA_AND_PRIVACY: 'Data & Privacy',
     ACCOUNT_STANDING: 'Account Standing',
