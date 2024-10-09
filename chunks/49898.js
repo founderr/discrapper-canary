@@ -1,8 +1,5 @@
 var r, a, l, i, o, s, c;
 n.d(t, {
-    D7: function () {
-        return u;
-    },
     F$: function () {
         return r;
     },
@@ -10,10 +7,10 @@ n.d(t, {
         return i;
     },
     Kl: function () {
-        return h;
+        return u;
     },
     U1: function () {
-        return m;
+        return h;
     },
     WB: function () {
         return a;
@@ -26,7 +23,6 @@ n.d(t, {
     (o.QUESTS = 'quests'),
     (o.APPS = 'apps');
 let d = 12633 == n.j ? ['servers', 'apps', 'quests'] : null,
-    u = 'servers',
-    h = 24,
-    m = 240;
+    u = 24,
+    h = 240;
 ((s = a || (a = {})).DEFAULT = 'default'), (s.FLOATING = 'floating'), (s.COLLAPSED = 'collapsed'), ((c = l || (l = {})).ROOT = 'root'), (c.SERVER_TAB = 'server_tab'), (c.SERVER_SEARCH = 'server_search'), ((i || (i = {})).GUILDS_BAR_ICON = 'guilds_bar_icon');
