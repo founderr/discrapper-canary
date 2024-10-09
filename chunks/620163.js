@@ -101,6 +101,11 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 element: eA.Z,
                 predicate: () => ew
             },
+            [eL.s6.ACCOUNT_SECURITY_TAB]: {
+                section: eP.oAB.ACCOUNT,
+                searchableTitles: [ev.Z.Messages.SECURITY],
+                label: ev.Z.Messages.SECURITY
+            },
             [eL.s6.ACCOUNT]: {
                 section: eP.oAB.ACCOUNT,
                 searchableTitles: [ev.Z.Messages.USER_SETTINGS_MY_ACCOUNT],
