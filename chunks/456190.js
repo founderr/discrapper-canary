@@ -16,6 +16,7 @@ function s(e, t, n) {
         case i.kG.USER_ACTIVITY_SYNC:
             if (e.isCurrentUser) return a.Z.Messages.USER_ACTIVITY_CANNOT_SYNC_SELF;
             if (e.syncingWithUser || e.syncingWithParty) return a.Z.Messages.USER_ACTIVITY_ALREADY_SYNCING;
+            if (e.notPlayable) return a.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: i.ai });
             return a.Z.Messages.USER_ACTIVITY_LISTEN_ALONG_DESCRIPTION.format({ name: null != n ? n : r.ZP.getName(e.user) });
         case i.kG.EMBED_SYNC:
             if (e.isCurrentUser) return a.Z.Messages.USER_ACTIVITY_CANNOT_SYNC_SELF;
