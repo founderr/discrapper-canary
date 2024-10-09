@@ -1,6 +1,12 @@
 n.d(t, {
+    En: function () {
+        return O;
+    },
     dY: function () {
         return S;
+    },
+    eC: function () {
+        return N;
     },
     kC: function () {
         return m;
@@ -179,4 +185,10 @@ function A(e, t, n) {
                 maxMediaWidth: 400,
                 maxMediaHeight: 300
             };
+}
+function N(e, t) {
+    return e.isPrivate() ? !e.isManaged() : t.can(u.Plq.EMBED_LINKS, e);
+}
+function O(e) {
+    return '' !== e.content || e.messageSnapshots.some((e) => '' !== e.message.content || e.message.attachments.length > 0);
 }
