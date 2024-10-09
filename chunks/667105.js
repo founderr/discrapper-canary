@@ -226,8 +226,7 @@ function y() {
 }
 function D(e) {
     var t;
-    let { location: n } = e,
-        r = y(),
+    let { location: n, quest: r } = e,
         i = (0, I.Zy)({ location: n }),
         a = (0, E.tP)(r);
     if (null == r) return !1;
@@ -237,6 +236,9 @@ function D(e) {
 }
 function b(e) {
     let { location: t } = e,
-        n = D({ location: t });
+        n = D({
+            location: t,
+            quest: y()
+        });
     return 0 !== (0, s.e7)([f.Z], () => f.Z.lastFetchedCurrentQuests) && !n;
 }
