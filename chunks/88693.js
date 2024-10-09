@@ -1,44 +1,46 @@
 n.d(t, {
     U: function () {
-        return r;
+        return o;
     }
 }),
     n(47120);
 var i = n(470079),
     a = n(49898),
     s = n(25912);
-function r(e) {
+let r = 20 + a.U1 - a.Kl,
+    l = 20 + a.U1 + a.Kl;
+function o(e) {
     let { isSearchBarVisible: t, isSearchBarEmpty: n } = e,
-        [r, l] = i.useState(a.WB.DEFAULT),
-        o = i.useCallback(
+        [o, c] = i.useState(a.WB.DEFAULT),
+        d = i.useCallback(
             (e) => {
                 if (!t) return;
-                let n = Math.round(e);
-                switch (r) {
+                let i = Math.round(e);
+                switch (o) {
                     case a.WB.DEFAULT:
-                        n < 260 - a.U1 && l(a.WB.COLLAPSED);
+                        i < 20 && c(n ? a.WB.COLLAPSED : a.WB.FLOATING);
                         break;
                     case a.WB.COLLAPSED:
-                        n > 260 - a.Kl && l(a.WB.DEFAULT);
+                        i > r && c(a.WB.DEFAULT);
                         break;
                     case a.WB.FLOATING:
-                        n > 260 && l(a.WB.DEFAULT);
+                        i > l && c(a.WB.DEFAULT);
                 }
             },
-            [t, r]
+            [n, t, o]
         ),
-        c = i.useCallback(() => {
-            l(a.WB.FLOATING);
+        u = i.useCallback(() => {
+            c(a.WB.FLOATING);
         }, []),
-        d = i.useCallback(() => {
-            r === a.WB.FLOATING && n && l(a.WB.COLLAPSED);
-        }, [n, r]),
-        u = r === a.WB.FLOATING ? s.floatingSearchTabsMask : void 0;
+        _ = i.useCallback(() => {
+            o === a.WB.FLOATING && n && c(a.WB.COLLAPSED);
+        }, [n, o]),
+        E = o === a.WB.FLOATING ? s.floatingSearchTabsMask : void 0;
     return {
-        searchBarState: r,
-        onTabsAvailableWidthChange: o,
-        tabsClassName: u,
-        onCollapsedSearchBarClick: c,
-        onSearchBarBlur: d
+        searchBarState: o,
+        onTabsAvailableWidthChange: d,
+        tabsClassName: E,
+        onCollapsedSearchBarClick: u,
+        onSearchBarBlur: _
     };
 }
