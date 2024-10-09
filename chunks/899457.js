@@ -1,24 +1,24 @@
 t.d(s, {
     a: function () {
-        return r;
+        return n;
     }
 });
-var n,
-    r,
-    a = t(735250);
+var a,
+    n,
+    r = t(735250);
 t(470079);
 var i = t(481060);
-((n = r || (r = {}))[(n.UNENROLLED = 0)] = 'UNENROLLED'), (n[(n.ENROLLED = 1)] = 'ENROLLED'), (n[(n.COMPLETED_25 = 2)] = 'COMPLETED_25'), (n[(n.COMPLETED_50 = 3)] = 'COMPLETED_50'), (n[(n.COMPLETED_75 = 4)] = 'COMPLETED_75'), (n[(n.COMPLETED_100 = 5)] = 'COMPLETED_100'), (n[(n.CLAIMED = 6)] = 'CLAIMED');
+((a = n || (n = {}))[(a.UNENROLLED = 0)] = 'UNENROLLED'), (a[(a.ENROLLED = 1)] = 'ENROLLED'), (a[(a.COMPLETED_25 = 2)] = 'COMPLETED_25'), (a[(a.COMPLETED_50 = 3)] = 'COMPLETED_50'), (a[(a.COMPLETED_75 = 4)] = 'COMPLETED_75'), (a[(a.COMPLETED_100 = 5)] = 'COMPLETED_100'), (a[(a.CLAIMED = 6)] = 'CLAIMED');
 s.Z = function (e) {
     let { onChange: s, value: t } = e;
-    return (0, a.jsxs)(i.FormItem, {
+    return (0, r.jsxs)(i.FormItem, {
         children: [
-            (0, a.jsx)(i.FormTitle, {
+            (0, r.jsx)(i.FormTitle, {
                 tag: i.FormTitleTags.H5,
                 children: 'User State'
             }),
-            (0, a.jsx)(i.FormText, {
-                children: (0, a.jsx)(i.Select, {
+            (0, r.jsx)(i.FormText, {
+                children: (0, r.jsx)(i.Select, {
                     'aria-label': 'User State',
                     options: [
                         {

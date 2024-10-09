@@ -119,15 +119,15 @@ function v(e, t) {
         L = v || m || p,
         Z = E && S && (!x || C || L),
         P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
-        D = null != P ? u.ZP.getSelfMember(P) : null,
-        b = (0, o.EY)(D),
-        j = (0, c.b)(D);
+        b = null != P ? u.ZP.getSelfMember(P) : null,
+        D = (0, o.EY)(b),
+        j = (0, c.b)(b);
     return {
         poll: r,
         canTapAnswers: Z,
         canRemoveVote: v && E && !m,
         canShowVoteCounts: L,
-        canSubmitVote: !h && O && !v && E && !b && !j,
+        canSubmitVote: !h && O && !v && E && !D && !j,
         expirationLabel: I,
         hasSelectedAnswer: O,
         hasVoted: v,
@@ -157,7 +157,7 @@ function L(e, t) {
         Z = N.layout_type,
         P = v(e, t, { formattedExpirationLabel: _ });
     if (null == P) return;
-    let { canTapAnswers: D, canRemoveVote: b, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = S.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: G, isExpired: F, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: K } = P,
+    let { canTapAnswers: b, canRemoveVote: D, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = S.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: G, isExpired: F, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: K } = P,
         z = (0, h.cZ)(V),
         X = S.Z.Messages.POLL_VOTES_COUNT.format({ count: z.toLocaleString() }),
         Q = Math.max(
@@ -231,7 +231,7 @@ function L(e, t) {
             canSubmitVote: U,
             hasVoted: k,
             isEditingVote: G,
-            canRemoveVote: b,
+            canRemoveVote: D,
             isInteractive: w,
             showResults: K
         })
@@ -323,7 +323,7 @@ function L(e, t) {
         answers: J,
         answersInteraction: (0, i.EQ)({
             tapShouldOpenVotersModal: W,
-            canTapAnswers: D,
+            canTapAnswers: b,
             canSelectMultipleAnswers: en
         })
             .with({ tapShouldOpenVotersModal: !0 }, () => C.Y7.LIST)
@@ -340,7 +340,7 @@ function L(e, t) {
         containerStyle: 'normal',
         primaryAction: q,
         isInteractive: w,
-        canTapAnswers: D,
+        canTapAnswers: b,
         canSelectMultipleAnswers: en,
         hasSelectedAnswer: B,
         canShowVoteCounts: j,

@@ -44,8 +44,8 @@ var i,
     L = n(430824),
     Z = n(375954),
     P = n(496675),
-    D = n(306680),
-    b = n(771845),
+    b = n(306680),
+    D = n(771845),
     j = n(9156),
     U = n(70956),
     y = n(823379),
@@ -322,7 +322,7 @@ function Y() {
             let t = [];
             return (
                 x.Z.getSortedPrivateChannels().forEach((n) => W(e, t, null, n.id)),
-                b.ZP.getFlattenedGuildIds().forEach((n) => {
+                D.ZP.getFlattenedGuildIds().forEach((n) => {
                     if (null == n) return;
                     let i = R.ZP.getSelectableChannelIds(n),
                         a = p.Z.getActiveJoinedUnreadThreadsForGuild(n);
@@ -357,18 +357,18 @@ function W(e, t, n, i) {
     let a = x.Z.getChannel(i);
     if (null == a || (!O.Ec.has(a.type) && j.ZP.isGuildOrCategoryOrChannelMuted(n, a.id))) return;
     if (a.isPrivate()) {
-        if (0 === D.ZP.getMentionCount(i)) return;
-    } else if (!(0, C.d)(a) && 0 === D.ZP.getMentionCount(i)) return;
+        if (0 === b.ZP.getMentionCount(i)) return;
+    } else if (!(0, C.d)(a) && 0 === b.ZP.getMentionCount(i)) return;
     if (!a.isPrivate() && !P.Z.can(k.Plq.READ_MESSAGE_HISTORY, a)) return;
-    let s = D.ZP.ackMessageId(i);
+    let s = b.ZP.ackMessageId(i);
     if (null == s) {
         let e = L.Z.getGuild(a.guild_id);
         if (null == e || null == e.joinedAt) return;
         s = B.default.fromTimestamp(e.joinedAt.getTime());
     }
-    let l = D.ZP.getOldestUnreadMessageId(i),
-        r = D.ZP.lastMessageId(i),
-        o = D.ZP.getMentionCount(i),
+    let l = b.ZP.getOldestUnreadMessageId(i),
+        r = b.ZP.lastMessageId(i),
+        o = b.ZP.getMentionCount(i),
         c = o > 0 || a.isPrivate();
     if (null == r || B.default.compare(s, r) >= 0) return;
     let d = {
@@ -388,7 +388,7 @@ function W(e, t, n, i) {
             let i = x.Z.getChannel(t);
             if (N.Z.isFavorite(t)) return 0;
             if (i.isPrivate()) return 1;
-            if (D.ZP.getMentionCount(t) > 0) return 2;
+            if (b.ZP.getMentionCount(t) > 0) return 2;
             if (null != n) {
                 let e = B.default.extractTimestamp(n);
                 if (Date.now() - e > z) return 7;

@@ -37,7 +37,7 @@ let T = (e) => {
                 b((t) => t + e);
             });
         i.useEffect(() => {
-            b(-g), O((0, E.Hd)(T.effects));
+            b(-g), O((0, E.H)(T.effects));
         }, [T]),
             i.useEffect(() => {
                 let e = 0,
@@ -120,7 +120,7 @@ t.Z = (e) => {
         n = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
         [a, s] = i.useState(!1),
         { preset: c } = (0, I.Z)(e.profileEffectId, () => s(!1)),
-        _ = (0, E.Cc)(null == c ? void 0 : c.config);
+        _ = (0, E.C)(null == c ? void 0 : c.config);
     return null != c && null != _ && (t || e.shopPreview || c.config.animationType !== d.Q.INTERMITTENT)
         ? (!t && e.shopPreview) || (!t && c.config.animationType === d.Q.PERSISTENT) || n || (!1 === e.autoPlay && !1 === e.isHovering)
             ? (0, r.jsx)(S, {

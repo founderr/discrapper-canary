@@ -36,8 +36,8 @@ function O(e) {
         Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : O,
         P = (0, s.e7)([N.default], () => N.default.getId()),
         {
-            embeddedActivity: D,
-            currentEmbeddedActivity: b,
+            embeddedActivity: b,
+            currentEmbeddedActivity: D,
             activityLaunchState: j
         } = (0, s.cj)([o.ZP], () => ({
             embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != Z ? Z : '').find((e) => e.applicationId === n.id),
@@ -46,13 +46,13 @@ function O(e) {
         })),
         U = (0, s.Wu)([p.default], () => {
             var e;
-            return Array.from(null !== (e = null == D ? void 0 : D.userIds) && void 0 !== e ? e : [])
+            return Array.from(null !== (e = null == b ? void 0 : b.userIds) && void 0 !== e ? e : [])
                 .map((e) => p.default.getUser(e))
                 .filter(f.lm);
         }),
         y = (0, s.e7)([C.Z], () => {
             var e;
-            let t = null == D ? void 0 : D.userIds.values().next().value;
+            let t = null == b ? void 0 : b.userIds.values().next().value;
             return null == t ? null : null === (e = C.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
         }),
         B = a.useMemo(() => {
@@ -64,11 +64,11 @@ function O(e) {
             channelId: O,
             application: B
         }),
-        G = null == D,
+        G = null == b,
         F = (0, g.NL)({
-            embeddedActivity: D,
+            embeddedActivity: b,
             joinability: k,
-            currentEmbeddedActivity: b,
+            currentEmbeddedActivity: D,
             channel: L
         }),
         w = a.useId(),
@@ -84,7 +84,7 @@ function O(e) {
                       commandOrigin: m.bB.ACTIVITY_INSTANCE_EMBED
                   })
                 : await (0, c.Z)({
-                      applicationId: D.applicationId,
+                      applicationId: b.applicationId,
                       activityChannelId: O,
                       locationObject: v.location,
                       analyticsLocations: R,

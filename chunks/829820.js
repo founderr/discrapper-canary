@@ -70,17 +70,17 @@ function S(e, t, n) {
 function g(e, t, n, i) {
     let a = null != i ? i : u.ZP.getName(t),
         s = T(e, t),
-        { syncingWithUser: o, syncingWithParty: l, isCurrentUser: c } = s,
-        { loading: E, startLoading: h, clearLoading: I } = m(s),
-        S = r.useCallback(() => {
-            h(), (0, f.Z)(s, p.kG.USER_ACTIVITY_SYNC, n).catch(I);
-        }, [s, n, h, I]);
+        { notPlayable: o, syncingWithUser: l, syncingWithParty: c, isCurrentUser: E } = s,
+        { loading: h, startLoading: I, clearLoading: S } = m(s),
+        g = r.useCallback(() => {
+            I(), (0, f.Z)(s, p.kG.USER_ACTIVITY_SYNC, n).catch(S);
+        }, [s, n, I, S]);
     return {
         label: (0, d.Z)(s, p.kG.USER_ACTIVITY_SYNC),
         tooltip: (0, _.Z)(s, p.kG.USER_ACTIVITY_SYNC, a),
-        disabled: !E && (c || o || l),
-        loading: E,
-        onClick: S,
+        disabled: !h && (o || E || l || c),
+        loading: h,
+        onClick: g,
         spotifyData: s
     };
 }

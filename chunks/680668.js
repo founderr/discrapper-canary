@@ -29,8 +29,8 @@ function N(e) {
         { channel: R, approximate_member_count: v, approximate_presence_count: L } = S,
         Z = S.state === I.r2o.ACCEPTING,
         P = null != R ? (0, o.jD)(R) : null,
-        D = null != A,
-        b = null != P,
+        b = null != A,
+        D = null != P,
         j = null != P && P.isGuildVocal(),
         U = null != P && P.isGuildStageVoice(),
         y = (0, c.yE)(null !== (t = S.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
@@ -41,7 +41,7 @@ function N(e) {
         let e = (0, d.rF)(S.guild.premium_subscription_count, S.guild.id);
         A.premiumTier = e;
     }
-    let k = D ? f : g,
+    let k = b ? f : g,
         G = (0, _.e)({
             isVoiceChannel: j,
             isOwnInvite: x,
@@ -95,7 +95,7 @@ function N(e) {
                     members: v,
                     membersOnline: L
                 }))
-              : b &&
+              : D &&
                 (h = (0, i.jsx)(r.Z.Channel, {
                     channel: P,
                     guild: A
@@ -115,7 +115,7 @@ function N(e) {
                                 (0, i.jsx)(r.Z.Icon, { guild: A }),
                                 (0, i.jsx)(r.Z.Info, {
                                     title: C,
-                                    onClick: D ? k : null,
+                                    onClick: b ? k : null,
                                     children: h
                                 })
                             ]
@@ -124,7 +124,7 @@ function N(e) {
                             onClick: k,
                             submitting: Z,
                             color: r.Z.Button.Colors.GREEN,
-                            children: j ? (U ? m.Z.Messages.STAGE_CHANNEL_JOIN : m.Z.Messages.INVITE_VOICE_CHANNEL_JOIN) : D ? m.Z.Messages.JOINED_GUILD : m.Z.Messages.JOIN_GUILD
+                            children: j ? (U ? m.Z.Messages.STAGE_CHANNEL_JOIN : m.Z.Messages.INVITE_VOICE_CHANNEL_JOIN) : b ? m.Z.Messages.JOINED_GUILD : m.Z.Messages.JOIN_GUILD
                         })
                     ]
                 }),

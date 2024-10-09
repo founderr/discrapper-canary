@@ -12,10 +12,10 @@ n.d(t, {
         return P;
     },
     tF: function () {
-        return y;
+        return M;
     },
     yC: function () {
-        return M;
+        return y;
     }
 }),
     n(757143),
@@ -141,13 +141,13 @@ function T() {
 function Z() {
     b(I.rMx.QUICKSWITCHER_CLOSED), x();
 }
-function M(e) {
+function y(e) {
     l.Z.dispatch({
         type: 'QUICKSWITCHER_SEARCH',
         ...v(e)
     });
 }
-function y(e) {
+function M(e) {
     l.Z.dispatch({
         type: 'QUICKSWITCHER_SELECT',
         selectedIndex: e

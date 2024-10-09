@@ -26,16 +26,16 @@ let T = a.memo(function (e) {
             L = (0, u.v)(R && null != f ? f : []),
             Z = a ? m : I,
             P = R ? p : N,
-            D = (0, d.y)(P, E.aO),
-            b = {};
+            b = (0, d.y)(P, E.aO),
+            D = {};
         if (R && null != L) {
             var j;
             let { accentColor: e, backgroundColor: i, opacity: a } = L,
                 s = null !== (j = (0, r.wK)(null != i ? i : '', a)) && void 0 !== j ? j : '';
-            v && (b.borderColor = i), (b.background = s), (t = e), (n = e);
+            v && (D.borderColor = i), (D.background = s), (t = e), (n = e);
         }
         let U = {
-            minWidth: D,
+            minWidth: b,
             color: t,
             borderColor: n
         };
@@ -44,7 +44,7 @@ let T = a.memo(function (e) {
                 [Z.reactionMe]: v,
                 [Z.reactionReadOnly]: g && !A && !M && !S
             }),
-            style: b,
+            style: D,
             children: [
                 (0, i.jsx)(o.Z, {
                     className: l()({ [Z.hideEmoji]: s }),

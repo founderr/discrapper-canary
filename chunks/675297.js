@@ -30,9 +30,9 @@ function C(e) {
         L = (0, s.U)(t, 600),
         Z = (0, I.C)(t),
         P = (0, d.SO)(R),
-        { shouldHideGuildPurchaseEntryPoints: D } = (0, r.uP)(n),
-        b = (0, I.k)(t);
-    if (null == R || D) return null;
+        { shouldHideGuildPurchaseEntryPoints: b } = (0, r.uP)(n),
+        D = (0, I.k)(t);
+    if (null == R || b) return null;
     let j = () =>
             (0, T.e)({
                 guildId: n,
@@ -69,7 +69,7 @@ function C(e) {
             imageUrl: L,
             name: t.name,
             description: t.description,
-            formattedPrice: b,
+            formattedPrice: D,
             role: v,
             ctaComponent: (0, i.jsx)(N.Z, {
                 guildId: n,

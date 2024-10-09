@@ -32,7 +32,7 @@ var l = n(735250),
     x = n(463061),
     T = n(621054);
 function Z(e) {
-    let { channelId: t, messageId: Z, initialSelectedDestinations: M, forwardOptions: y, onClose: P, onRequestSent: R, ...O } = e,
+    let { channelId: t, messageId: Z, initialSelectedDestinations: y, forwardOptions: M, onClose: P, onRequestSent: R, ...O } = e,
         { hasOneTapSendButton: D, hasMessageInput: w, hasPreview: G } = (0, A.yk)({ location: 'ForwardModal' }),
         j = a.useMemo(() => (0, u.dL)(t), [t]),
         [F, U] = a.useState(!1),
@@ -42,7 +42,7 @@ function Z(e) {
         B = (0, S.mh)(),
         z = a.useRef(0),
         Q = a.useRef(0),
-        [V, K] = a.useState(M),
+        [V, K] = a.useState(y),
         q = V.length,
         Y = q >= v.G,
         [X, J] = a.useState(''),
@@ -141,7 +141,7 @@ function Z(e) {
                 }
                 i && (0, N.mc)(), null == R || R(), s && (await o.Z.fetchMessages({ channelId: f[0] }), (0, c.Kh)(f[0]));
                 let E = await m.Z.sendForwards(d, f, {
-                        ...y,
+                        ...M,
                         withMessage: a
                     }),
                     A = f.some((e) => {
@@ -182,10 +182,10 @@ function Z(e) {
                     messageId: Z,
                     channelId: t,
                     failedDestinations: p,
-                    forwardOptions: y
+                    forwardOptions: M
                 });
             },
-            [t, y, Z, R, es]
+            [t, M, Z, R, es]
         ),
         eo = a.useCallback(
             (e) => {
@@ -282,7 +282,7 @@ function Z(e) {
                             className: x.forwardPreviewWrapperInset,
                             children: (0, l.jsx)(L.O, {
                                 message: k,
-                                forwardOptions: y
+                                forwardOptions: M
                             })
                         }),
                     (0, l.jsx)(r.SearchBar, {
@@ -302,7 +302,7 @@ function Z(e) {
                 (w
                     ? (0, l.jsx)(C.n, {
                           message: k,
-                          forwardOptions: y,
+                          forwardOptions: M,
                           sendLabel: eh,
                           canSend: q > 0,
                           selectedDestinations: V,

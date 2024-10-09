@@ -29,8 +29,8 @@ var i = n(735250),
     L = n(689938),
     Z = n(174461),
     P = n(507444);
-let D = (e, t) => (t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name })),
-    b = (e) => {
+let b = (e, t) => (t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name })),
+    D = (e) => {
         let { sticker: t, stickerPack: n } = e;
         return a.useMemo(() => (null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => (3 !== e.length && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
     };
@@ -73,7 +73,7 @@ function U(e) {
 let y = (e) => {
         let { closePopout: t, sticker: n, channel: s, refreshPositionKey: l } = e,
             [c, u, _] = (0, r.Wu)([S.Z], () => [S.Z.getStickerPack(n.pack_id), !S.Z.hasLoadedStickerPacks, S.Z.isPremiumPack(n.pack_id)], [n]),
-            E = b({
+            E = D({
                 sticker: n,
                 stickerPack: c
             });
@@ -101,7 +101,7 @@ let y = (e) => {
                       }),
                       (0, i.jsx)(o.Text, {
                           variant: 'text-sm/normal',
-                          children: D(c, _)
+                          children: b(c, _)
                       }),
                       (0, i.jsx)('ul', {
                           className: Z.stickersList,
@@ -146,8 +146,8 @@ let y = (e) => {
             { sticker: n, channel: s, closePopout: _, refreshPositionKey: N } = e,
             [A, S] = a.useState(null),
             [M, x] = a.useState(!1),
-            D = p.default.getCurrentUser(),
-            b = g.ZP.canUseCustomStickersEverywhere(D),
+            b = p.default.getCurrentUser(),
+            D = g.ZP.canUseCustomStickersEverywhere(b),
             y = (0, r.e7)([C.Z], () => C.Z.getGuild(n.guild_id)),
             B = null != y,
             [k, G] = a.useState(!1),
@@ -172,7 +172,7 @@ let y = (e) => {
             W = null != A,
             K = !1,
             z = 'Custom Sticker Popout';
-        b
+        D
             ? (t = B ? (Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION) : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION)
             : B
               ? (Y ? (t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION) : (t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION), (K = !0), (z = 'Custom Sticker Popout (Upsell)'))
@@ -184,7 +184,7 @@ let y = (e) => {
                       }
                   })),
                   (z = 'Custom Sticker Popout (Soft Upsell)'));
-        let X = !K && !B && W && b;
+        let X = !K && !B && W && D;
         return (a.useEffect(() => {
             N();
         }, [M, A]),

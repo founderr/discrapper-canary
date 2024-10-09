@@ -33,8 +33,8 @@ var i,
     L = n(310423),
     Z = n(223021),
     P = n(981631),
-    D = n(689938),
-    b = n(825193);
+    b = n(689938),
+    D = n(825193);
 function j(e) {
     let { width: t = 6, height: n = 10, color: i = 'currentColor', className: a, foreground: l } = e;
     return (0, s.jsx)('svg', {
@@ -58,8 +58,8 @@ function U(e, t, n, i, a) {
     if (u && 1 === n) return null;
     if ((u && null == d.activityInstance) || I)
         return (0, s.jsx)('div', {
-            className: b.replyBadge,
-            children: (0, s.jsx)(j, { className: b.commandIcon })
+            className: D.replyBadge,
+            children: (0, s.jsx)(j, { className: D.commandIcon })
         });
     let g =
             null !==
@@ -80,8 +80,8 @@ function U(e, t, n, i, a) {
                     onContextMenu: l,
                     onMouseDown: r,
                     className: o()({
-                        [b.executedCommandAvatar]: !0,
-                        [b.clickable]: null != a
+                        [D.executedCommandAvatar]: !0,
+                        [D.clickable]: null != a
                     })
                 });
             })({
@@ -105,7 +105,7 @@ function U(e, t, n, i, a) {
 function y(e, t, n, i, a) {
     let { message: l, channel: r, showUsernamePopout: o, showTargetUsernamePopout: c, onClickUsername: d, onUserContextMenu: u, onClickTargetUsername: _, onTargetUserContextMenu: E, onPopoutRequestClose: I } = e;
     return (0, s.jsx)(v.Z, {
-        className: 1 === n ? b.targetUsername : '',
+        className: 1 === n ? D.targetUsername : '',
         compact: !0,
         author: i,
         message: l,
@@ -122,7 +122,7 @@ let B = () =>
     (0, s.jsx)(E.ChevronSmallRightIcon, {
         size: 'xxs',
         color: 'currentColor',
-        className: b.executedCommandSeparator
+        className: D.executedCommandSeparator
     });
 function k(e) {
     var t;
@@ -176,7 +176,7 @@ function k(e) {
         );
     };
     if ((null == i ? void 0 : i.activityInstance) === null || (0, g.g)(i))
-        (n = D.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
+        (n = b.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
             userHook: H,
             commandHook: () => {
                 let t = (function (e, t) {
@@ -198,14 +198,14 @@ function k(e) {
                                     tag: 'span',
                                     onClick: a,
                                     children: (0, s.jsxs)('div', {
-                                        className: o()(b.appLauncherOnboardingCommandName, b.clickable),
+                                        className: o()(D.appLauncherOnboardingCommandName, D.clickable),
                                         children: [
                                             (0, s.jsx)(E.AppsIcon, {
                                                 size: 'custom',
                                                 color: 'currentColor',
                                                 height: 10,
                                                 width: 10,
-                                                className: b.appsIcon
+                                                className: D.appsIcon
                                             }),
                                             r
                                         ]
@@ -213,7 +213,7 @@ function k(e) {
                                 });
                             if (!(0, g.g)(i))
                                 return (0, s.jsx)('div', {
-                                    className: b.commandName,
+                                    className: D.commandName,
                                     children: r
                                 });
                             {
@@ -225,14 +225,14 @@ function k(e) {
                                         O.S.dispatchToLastSubscribed(P.CkL.OPEN_APP_LAUNCHER, { applicationId: i.applicationId });
                                     },
                                     children: (0, s.jsxs)('div', {
-                                        className: o()(b.appLauncherOnboardingCommandName, b.clickable),
+                                        className: o()(D.appLauncherOnboardingCommandName, D.clickable),
                                         children: [
                                             (0, s.jsx)(E.AppsIcon, {
                                                 size: 'custom',
                                                 color: 'currentColor',
                                                 height: 10,
                                                 width: 10,
-                                                className: b.appsIcon
+                                                className: D.appsIcon
                                             }),
                                             e
                                         ]
@@ -286,24 +286,24 @@ function k(e) {
                 (0, T.w1)({ guildId: a.guild_id });
         };
         n = w
-            ? D.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
+            ? b.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
                   userHook: H,
                   activityHook: () =>
                       (0, s.jsx)(E.Clickable, {
                           tag: 'span',
                           onClick: e,
                           children: (0, s.jsx)('div', {
-                              className: o()(b.commandName, b.clickable),
-                              children: D.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
+                              className: o()(D.commandName, D.clickable),
+                              children: b.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
                           })
                       })
               })
-            : D.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({ userHook: H });
+            : b.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({ userHook: H });
     }
     return (0, s.jsx)(C.Gt, {
         value: r,
         children: (0, s.jsx)('div', {
-            className: o()(b.repliedMessage, b.messageSpine, b.executedCommand, F),
+            className: o()(D.repliedMessage, D.messageSpine, D.executedCommand, F),
             'aria-hidden': !e.compact,
             children: n
         })

@@ -35,7 +35,7 @@ var a = n(442837),
 let Z = (e) => {
     let { dismissibleContent: t, noticeType: Z } = e,
         P = (0, a.e7)([f.Z], () => f.Z.getNotice()),
-        D = (0, a.e7)([p.default], () => p.default.locale);
+        b = (0, a.e7)([p.default], () => p.default.locale);
     return (0, i.jsx)(S.ZP, {
         contentTypes: [t],
         groupName: M.R.NOTICE_BAR,
@@ -253,7 +253,7 @@ let Z = (e) => {
                                 onClick: () => a(M.L.UNKNOWN),
                                 noticeType: Z
                             }),
-                            v.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, I.IE)(D) }),
+                            v.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, I.IE)(b) }),
                             (0, i.jsx)(l.PrimaryCTANoticeButton, {
                                 onClick: () => (0, m.Z)(x.Kq.NOTICE),
                                 noticeType: Z,

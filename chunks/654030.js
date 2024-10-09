@@ -29,8 +29,8 @@ var i,
     L = n(181106),
     Z = n(417363),
     P = n(768581),
-    D = n(358085),
-    b = n(804739),
+    b = n(358085),
+    D = n(804739),
     j = n(410575),
     U = n(981631),
     y = n(701488);
@@ -74,7 +74,7 @@ class G extends (i = s.PureComponent) {
     }
     shouldRenderCustomButton() {
         let { isLaunchable: e, application: t } = this.props;
-        return null != t && null != t.primarySkuId && !e && D.isPlatformEmbedded;
+        return null != t && null != t.primarySkuId && !e && b.isPlatformEmbedded;
     }
     render() {
         return (0, a.jsx)(j.Z, {
@@ -190,7 +190,7 @@ class G extends (i = s.PureComponent) {
                     isGameLaunchable: N,
                     isLoading: o || this.state.sending,
                     activityActionType: d,
-                    isInBrowser: !D.isPlatformEmbedded,
+                    isInBrowser: !b.isPlatformEmbedded,
                     isSyncable: T,
                     isSender: c,
                     channelId: _,
@@ -245,7 +245,7 @@ B(G, 'defaultProps', { isPreview: !1 }),
             isSyncable: _ && !I,
             isLaunchable:
                 null != r &&
-                (0, b.t)({
+                (0, D.t)({
                     LibraryApplicationStore: x.Z,
                     LaunchableGameStore: N.Z,
                     DispatchApplicationStore: Z.Z,

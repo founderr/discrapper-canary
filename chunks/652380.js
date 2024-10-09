@@ -5,9 +5,9 @@ t.d(s, {
 }),
     t(47120),
     t(627341);
-var n = t(735250),
-    r = t(470079),
-    a = t(278074),
+var a = t(735250),
+    n = t(470079),
+    r = t(278074),
     i = t(754700),
     l = t(887003),
     o = t(742635),
@@ -22,8 +22,8 @@ var n = t(735250),
     v = t(78826),
     j = t(37303),
     p = t(134483),
-    C = t(683650),
-    S = t(920916),
+    S = t(683650),
+    C = t(920916),
     T = t(341907),
     w = t(478977),
     E = t(456799),
@@ -62,13 +62,13 @@ function Z(e) {
 }
 function L() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { streamProgressSeconds: s = 0, completedAt: t = null, enrolledAt: n = null, claimedAt: r = null } = e;
+        { streamProgressSeconds: s = 0, completedAt: t = null, enrolledAt: a = null, claimedAt: n = null } = e;
     return {
         userId: '123',
         questId: '1193992107035983872',
-        enrolledAt: n,
+        enrolledAt: a,
         completedAt: t,
-        claimedAt: r,
+        claimedAt: n,
         claimedTier: null,
         lastStreamHeartbeatAt: null,
         streamProgressSeconds: s,
@@ -149,64 +149,64 @@ let A = '1193992107035983872',
     };
 function H() {
     var e, s, t, i, l;
-    let [o, d] = r.useState(M),
-        [R, Z] = r.useState(b.a.UNENROLLED),
-        [A, H] = r.useState(!1),
-        [_, V] = r.useState(!1),
-        [q, k] = r.useState(null);
+    let [o, d] = n.useState(M),
+        [R, Z] = n.useState(b.a.UNENROLLED),
+        [A, H] = n.useState(!1),
+        [_, V] = n.useState(!1),
+        [q, k] = n.useState(null);
     let Q =
         ((l = o.config),
-        (0, a.EQ)(l)
+        (0, r.EQ)(l)
             .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewards)
             .exhaustive());
     function U(e, s) {
-        var t, n;
+        var t, a;
         if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e || 'heroVideo' === e || 'questBarHeroVideo' === e)
             d({
                 ...o,
                 config:
                     ((t = o.config),
-                    (n = { [e]: s }),
-                    (0, a.EQ)(t)
+                    (a = { [e]: s }),
+                    (0, r.EQ)(t)
                         .with({ configVersion: 2 }, (e) => ({
                             ...e,
                             assets: {
                                 ...e.assets,
-                                ...n
+                                ...a
                             }
                         }))
                         .exhaustive())
             });
     }
     function K(e, s) {
-        var t, n;
+        var t, a;
         if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
             d({
                 ...o,
                 config:
                     ((t = o.config),
-                    (n = { [e]: s }),
-                    (0, a.EQ)(t)
+                    (a = { [e]: s }),
+                    (0, r.EQ)(t)
                         .with({ configVersion: 2 }, (e) => ({
                             ...e,
                             messages: {
                                 ...e.messages,
-                                ...n
+                                ...a
                             }
                         }))
                         .exhaustive())
             });
     }
     function W(e, s, t) {
-        var n, r, i;
+        var a, n, i;
         if ('name' === e || 'nameWithArticle' === e)
             d({
                 ...o,
                 config:
-                    ((n = o.config),
-                    (r = { [e]: s }),
+                    ((a = o.config),
+                    (n = { [e]: s }),
                     (i = t),
-                    (0, a.EQ)(n)
+                    (0, r.EQ)(a)
                         .with({ configVersion: 2 }, (e) => ({
                             ...e,
                             rewardsConfig: {
@@ -217,7 +217,7 @@ function H() {
                                               ...e,
                                               messages: {
                                                   ...e.messages,
-                                                  ...r
+                                                  ...n
                                               }
                                           }
                                         : e
@@ -241,50 +241,50 @@ function H() {
     }
     function Y() {
         (0, h.Xv)(o.config)
-            ? (0, S.openCollectibleRewardModal)(o, m.jn.GIFT_INVENTORY_FOR_YOU, !0)
+            ? (0, C.openCollectibleRewardModal)(o, m.jn.GIFT_INVENTORY_FOR_YOU, !0)
             : (0, T.openQuestsRewardCodeModal)({
                   questId: o.id,
                   location: m.jn.GIFT_INVENTORY_FOR_YOU,
                   preview: !0
               });
     }
-    return (0, n.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         children: [
-            (0, n.jsx)(c.Heading, {
+            (0, a.jsx)(c.Heading, {
                 variant: 'heading-lg/bold',
                 className: O.heading,
                 children: 'Quest Preview Tool'
             }),
-            (0, n.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: O.fields,
-                children: (0, n.jsx)(I.Z, {
+                children: (0, a.jsx)(I.Z, {
                     onSelect: function (e) {
                         if ((k(e), null != e)) d(e);
                     },
                     quest: q
                 })
             }),
-            (0, n.jsx)(c.Heading, {
+            (0, a.jsx)(c.Heading, {
                 variant: 'heading-md/semibold',
                 className: O.subheading,
                 children: 'Messages'
             }),
-            (0, n.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: O.fields,
                 children: [
-                    (0, n.jsx)(y.Z, {
+                    (0, a.jsx)(y.Z, {
                         title: 'Quest Name',
                         assetKey: 'questName',
                         onMessageChange: K,
                         initialValue: o.config.messages.questName
                     }),
-                    (0, n.jsx)(y.Z, {
+                    (0, a.jsx)(y.Z, {
                         title: 'Game Title',
                         assetKey: 'gameTitle',
                         onMessageChange: K,
                         initialValue: o.config.messages.gameTitle
                     }),
-                    (0, n.jsx)(y.Z, {
+                    (0, a.jsx)(y.Z, {
                         title: 'Game Publisher',
                         assetKey: 'gamePublisher',
                         onMessageChange: K,
@@ -292,50 +292,50 @@ function H() {
                     })
                 ]
             }),
-            (0, n.jsx)(c.Heading, {
+            (0, a.jsx)(c.Heading, {
                 variant: 'heading-md/semibold',
                 className: O.subheading,
                 children: 'Assets'
             }),
-            (0, n.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: O.fields,
                 children: [
-                    (0, n.jsx)(N.Z, {
+                    (0, a.jsx)(N.Z, {
                         title: 'Hero',
                         assetKey: 'hero',
                         onFileChange: U,
                         filters: B,
                         initialValue: o.config.assets.hero
                     }),
-                    (0, n.jsx)(N.Z, {
+                    (0, a.jsx)(N.Z, {
                         title: 'Hero Video (optional)',
                         assetKey: 'heroVideo',
                         onFileChange: U,
                         filters: B,
                         initialValue: null !== (t = o.config.assets.heroVideo) && void 0 !== t ? t : void 0
                     }),
-                    (0, n.jsx)(N.Z, {
+                    (0, a.jsx)(N.Z, {
                         title: 'Quest Bar Hero',
                         assetKey: 'questBarHero',
                         onFileChange: U,
                         filters: B,
                         initialValue: o.config.assets.questBarHero
                     }),
-                    (0, n.jsx)(N.Z, {
+                    (0, a.jsx)(N.Z, {
                         title: 'Quest Bar Hero Video (optional)',
                         assetKey: 'questBarHeroVideo',
                         onFileChange: U,
                         filters: B,
                         initialValue: null !== (i = o.config.assets.questBarHeroVideo) && void 0 !== i ? i : void 0
                     }),
-                    (0, n.jsx)(N.Z, {
+                    (0, a.jsx)(N.Z, {
                         title: 'Game Tile',
                         assetKey: 'gameTile',
                         onFileChange: U,
                         filters: F,
                         initialValue: o.config.assets.gameTile
                     }),
-                    (0, n.jsx)(N.Z, {
+                    (0, a.jsx)(N.Z, {
                         title: 'Logotype',
                         assetKey: 'logotype',
                         onFileChange: U,
@@ -345,44 +345,44 @@ function H() {
                 ]
             }),
             Q.map((e, s) =>
-                (0, n.jsxs)(
+                (0, a.jsxs)(
                     'div',
                     {
                         children: [
-                            (0, n.jsxs)(c.Heading, {
+                            (0, a.jsxs)(c.Heading, {
                                 variant: 'heading-md/semibold',
                                 className: O.subheading,
                                 children: ['Reward #', s + 1]
                             }),
-                            (0, n.jsxs)('div', {
+                            (0, a.jsxs)('div', {
                                 className: O.fields,
                                 children: [
-                                    (0, n.jsx)(y.Z, {
+                                    (0, a.jsx)(y.Z, {
                                         title: 'Name',
                                         assetKey: 'name',
                                         onMessageChange: (e, t) => W(e, t, s),
                                         initialValue: e.messages.name
                                     }),
-                                    (0, n.jsx)(y.Z, {
+                                    (0, a.jsx)(y.Z, {
                                         title: 'Name With Article',
                                         assetKey: 'nameWithArticle',
                                         onMessageChange: (e, t) => W(e, t, s),
                                         initialValue: e.messages.nameWithArticle
                                     }),
-                                    (0, n.jsx)(N.Z, {
+                                    (0, a.jsx)(N.Z, {
                                         title: 'Asset',
                                         assetKey: 'asset',
                                         onFileChange: (e, t) =>
                                             (function (e, s, t) {
-                                                var n, r, i;
+                                                var a, n, i;
                                                 if ('asset' === e)
                                                     d({
                                                         ...o,
                                                         config:
-                                                            ((n = o.config),
-                                                            (r = s),
+                                                            ((a = o.config),
+                                                            (n = s),
                                                             (i = t),
-                                                            (0, a.EQ)(n)
+                                                            (0, r.EQ)(a)
                                                                 .with({ configVersion: 2 }, (e) => ({
                                                                     ...e,
                                                                     rewardsConfig: {
@@ -391,7 +391,7 @@ function H() {
                                                                             s === i
                                                                                 ? {
                                                                                       ...e,
-                                                                                      asset: r
+                                                                                      asset: n
                                                                                   }
                                                                                 : e
                                                                         )
@@ -403,10 +403,10 @@ function H() {
                                         filters: B,
                                         initialValue: e.asset
                                     }),
-                                    (0, n.jsxs)(c.FormItem, {
+                                    (0, a.jsxs)(c.FormItem, {
                                         children: [
-                                            (0, n.jsx)(c.FormTitle, { children: 'Claim Modal' }),
-                                            (0, n.jsx)(c.Button, {
+                                            (0, a.jsx)(c.FormTitle, { children: 'Claim Modal' }),
+                                            (0, a.jsx)(c.Button, {
                                                 color: c.ButtonColors.BRAND,
                                                 onClick: Y,
                                                 children: 'Open Reward Modal'
@@ -420,25 +420,25 @@ function H() {
                     s
                 )
             ),
-            (0, n.jsx)(c.Heading, {
+            (0, a.jsx)(c.Heading, {
                 variant: 'heading-md/semibold',
                 className: O.subheading,
                 children: 'Colors & Quest States'
             }),
-            (0, n.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: O.fields,
                 children: [
-                    (0, n.jsxs)('div', {
+                    (0, a.jsxs)('div', {
                         className: O.fields,
                         style: { marginBottom: 0 },
                         children: [
-                            (0, n.jsx)(w.Z, {
+                            (0, a.jsx)(w.Z, {
                                 title: 'Primary',
                                 colorKey: 'primary',
                                 onChange: G,
                                 value: o.config.colors.primary
                             }),
-                            (0, n.jsx)(w.Z, {
+                            (0, a.jsx)(w.Z, {
                                 title: 'Secondary',
                                 colorKey: 'secondary',
                                 onChange: G,
@@ -446,11 +446,11 @@ function H() {
                             })
                         ]
                     }),
-                    (0, n.jsx)('div', {
+                    (0, a.jsx)('div', {
                         className: O.fields,
-                        children: (0, n.jsx)(P.Z, {})
+                        children: (0, a.jsx)(P.Z, {})
                     }),
-                    (0, n.jsx)(b.Z, {
+                    (0, a.jsx)(b.Z, {
                         onChange: function (e) {
                             switch ((Z(e), e)) {
                                 case b.a.UNENROLLED:
@@ -518,49 +518,49 @@ function H() {
                     })
                 ]
             }),
-            (0, n.jsx)(c.Heading, {
+            (0, a.jsx)(c.Heading, {
                 variant: 'heading-lg/bold',
                 className: O.heading,
                 children: 'Component Previews'
             }),
-            (0, n.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: O.componentPreviews,
                 children: [
-                    (0, n.jsxs)(E.Z, {
+                    (0, a.jsxs)(E.Z, {
                         withBorder: !0,
                         children: [
-                            (0, n.jsx)(c.FormTitle, { children: 'Quest Bar' }),
-                            (0, n.jsxs)('div', {
+                            (0, a.jsx)(c.FormTitle, { children: 'Quest Bar' }),
+                            (0, a.jsxs)('div', {
                                 className: O.questBarPreviewWrapper,
                                 children: [
                                     (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null &&
-                                        (0, n.jsx)(c.Text, {
+                                        (0, a.jsx)(c.Text, {
                                             color: 'text-secondary',
                                             variant: 'text-sm/normal',
                                             children: 'The Quest Bar is hidden when the user has claimed the reward.'
                                         }),
-                                    (0, n.jsx)('div', {
+                                    (0, a.jsx)('div', {
                                         className: O.questBarPreview,
-                                        children: (0, n.jsx)(v.p, {
+                                        children: (0, a.jsx)(v.p, {
                                             isPreview: !0,
                                             source: 'preview',
                                             questId: '0',
-                                            children: (0, n.jsx)(x.Z, { children: (0, n.jsx)(g.P, { quest: o }) })
+                                            children: (0, a.jsx)(x.Z, { children: (0, a.jsx)(g.P, { quest: o }) })
                                         })
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, n.jsxs)(E.Z, {
+                    (0, a.jsxs)(E.Z, {
                         withBorder: !0,
                         children: [
-                            (0, n.jsx)(c.FormTitle, { children: 'Quest Home Card' }),
-                            (0, n.jsx)(v.p, {
+                            (0, a.jsx)(c.FormTitle, { children: 'Quest Home Card' }),
+                            (0, a.jsx)(v.p, {
                                 isPreview: !0,
                                 source: 'preview',
                                 questId: '0',
-                                children: (0, n.jsx)(f.Z, {
+                                children: (0, a.jsx)(f.Z, {
                                     quest: o,
                                     className: O.questTile,
                                     questContent: m.jn.QUEST_HOME_DESKTOP,
@@ -570,25 +570,25 @@ function H() {
                             })
                         ]
                     }),
-                    (0, n.jsxs)(E.Z, {
+                    (0, a.jsxs)(E.Z, {
                         withBorder: !0,
                         children: [
-                            (0, n.jsx)(c.FormTitle, { children: 'Channel Call Header' }),
+                            (0, a.jsx)(c.FormTitle, { children: 'Channel Call Header' }),
                             (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null &&
-                                (0, n.jsx)(c.Text, {
+                                (0, a.jsx)(c.Text, {
                                     color: 'text-secondary',
                                     variant: 'text-sm/normal',
                                     children: 'The Quest Channel Call Header is hidden when the user has claimed the reward.'
                                 }),
-                            (0, n.jsx)('div', {
+                            (0, a.jsx)('div', {
                                 className: O.questBarPreviewWrapper,
-                                children: (0, n.jsx)(v.p, {
+                                children: (0, a.jsx)(v.p, {
                                     isPreview: !0,
                                     source: 'preview',
                                     questId: '0',
-                                    children: (0, n.jsx)('div', {
+                                    children: (0, a.jsx)('div', {
                                         className: O.questChannelCallHeaderPreview,
-                                        children: (0, n.jsx)(p.Z, {
+                                        children: (0, a.jsx)(p.Z, {
                                             channelId: '123',
                                             previewQuest: o,
                                             isParticipatingOverride: A
@@ -598,10 +598,10 @@ function H() {
                             })
                         ]
                     }),
-                    (0, n.jsx)('div', {
+                    (0, a.jsx)('div', {
                         className: O.toggleSwitch,
-                        children: (0, n.jsx)(c.FormItem, {
-                            children: (0, n.jsx)(c.FormSwitch, {
+                        children: (0, a.jsx)(c.FormItem, {
+                            children: (0, a.jsx)(c.FormSwitch, {
                                 value: A,
                                 onChange: function (e) {
                                     H(e);
@@ -611,13 +611,13 @@ function H() {
                             })
                         })
                     }),
-                    (0, n.jsxs)(E.Z, {
+                    (0, a.jsxs)(E.Z, {
                         withBorder: !0,
                         children: [
-                            (0, n.jsx)(c.FormTitle, { children: 'Quest Card Embed' }),
+                            (0, a.jsx)(c.FormTitle, { children: 'Quest Card Embed' }),
                             _
-                                ? (0, n.jsx)(C.o, {})
-                                : (0, n.jsx)(
+                                ? (0, a.jsx)(S.o, {})
+                                : (0, a.jsx)(
                                       j.Z,
                                       {
                                           quest: o,
@@ -627,10 +627,10 @@ function H() {
                                   )
                         ]
                     }),
-                    (0, n.jsx)('div', {
+                    (0, a.jsx)('div', {
                         className: O.toggleSwitch,
-                        children: (0, n.jsx)(c.FormItem, {
-                            children: (0, n.jsx)(c.FormSwitch, {
+                        children: (0, a.jsx)(c.FormItem, {
+                            children: (0, a.jsx)(c.FormSwitch, {
                                 value: _,
                                 onChange: V,
                                 hideBorder: !0,
@@ -643,37 +643,37 @@ function H() {
         ]
     });
 }
-class _ extends r.Component {
+class _ extends n.Component {
     componentDidCatch(e) {
         this.setState({ error: e });
     }
     render() {
         let { error: e, renderKey: s } = this.state;
         return null != e
-            ? (0, n.jsxs)('div', {
+            ? (0, a.jsxs)('div', {
                   className: O.errorBoundary,
                   children: [
-                      (0, n.jsx)(c.CircleWarningIcon, { className: O.errorBoundaryIcon }),
-                      (0, n.jsx)(c.Heading, {
+                      (0, a.jsx)(c.CircleWarningIcon, { className: O.errorBoundaryIcon }),
+                      (0, a.jsx)(c.Heading, {
                           variant: 'heading-lg/semibold',
                           children: 'Something broke in the Quest preview tool :('
                       }),
-                      (0, n.jsx)(c.Button, {
+                      (0, a.jsx)(c.Button, {
                           color: c.ButtonColors.PRIMARY,
                           onClick: this.handleResetState,
                           children: 'Reset'
                       }),
                       null != e.message &&
-                          (0, n.jsx)(c.Card, {
+                          (0, a.jsx)(c.Card, {
                               className: O.errorMessageWrapper,
-                              children: (0, n.jsx)('code', {
+                              children: (0, a.jsx)('code', {
                                   className: O.errorMessage,
                                   children: e.message
                               })
                           })
                   ]
               })
-            : (0, n.jsx)(H, {}, s);
+            : (0, a.jsx)(H, {}, s);
     }
     constructor(...e) {
         super(...e),

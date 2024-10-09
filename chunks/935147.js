@@ -80,7 +80,7 @@ function W(e) {
                     let e = T.Z.getProduct(es.skuId);
                     null != e && (0, I.G1)(e) ? (0, E.fK)(e.skuId).then(() => (0, c.cV)(es)) : null != S.Z.getPurchase(es.skuId) && (0, c.cV)(es);
                 }
-                P.default.track(V.rMx.TRY_IT_OUT_PRESET_SHUFFLED, { preset: m.J2[er].presetName });
+                P.default.track(V.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: m.J2[er].presetName });
             }
         };
     a.useEffect(() => {

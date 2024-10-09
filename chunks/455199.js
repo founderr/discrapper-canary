@@ -33,8 +33,8 @@ let x = 'recentMentionFilterSettings',
         everyoneFilter: !0,
         roleFilter: !0
     }),
-    D = !1,
-    b = 0,
+    b = !1,
+    D = 0,
     j = !1,
     U = !1;
 function y(e) {
@@ -95,10 +95,10 @@ function F(e) {
             let t = B(e);
             null != t && (a.push(t), (v[t.id] = !0));
         }),
-        0 === (R = a).length && (D = !1);
+        0 === (R = a).length && (b = !1);
 }
 function w() {
-    (R = []), (v = {}), (D = !1), (U = !1);
+    (R = []), (v = {}), (b = !1), (U = !1);
 }
 function V() {
     R = R.filter((e) => !g.Z.isBlockedForMessage(e));
@@ -115,13 +115,13 @@ class Y extends (i = c.ZP.Store) {
         return j;
     }
     get hasLoadedEver() {
-        return D;
-    }
-    get lastLoaded() {
         return b;
     }
+    get lastLoaded() {
+        return D;
+    }
     getMentions() {
-        return D || R.length > 0 ? R : null;
+        return b || R.length > 0 ? R : null;
     }
     hasMention(e) {
         return v[e];
@@ -168,8 +168,8 @@ class Y extends (i = c.ZP.Store) {
                 }),
                 (L = !1),
                 (Z = t),
-                (b = (0, u.zO)()),
-                (D = !0);
+                (D = (0, u.zO)()),
+                (b = !0);
         },
         LOAD_RECENT_MENTIONS_FAILURE: function () {
             L = !1;
@@ -186,7 +186,7 @@ class Y extends (i = c.ZP.Store) {
         },
         CHANNEL_SELECT: function () {
             if (P.guildFilter !== O.NgX.THIS_SERVER) return !1;
-            D = !1;
+            b = !1;
         },
         CONNECTION_OPEN: w,
         GUILD_DELETE: function (e) {

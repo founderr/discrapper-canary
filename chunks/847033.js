@@ -45,24 +45,24 @@ function O(e) {
         L = (0, _.mY)(null == M ? void 0 : M.id),
         Z = null === (t = (0, u.YB)(l)) || void 0 === t ? void 0 : t.server_shop_tab_order,
         P = [],
-        D = p.y.GUILD_SHOP_FULL_PREVIEW;
-    O || (v && L) ? (P.push(Z === f.a3.PRODUCTS_FIRST ? p.y.GUILD_PRODUCTS : p.y.GUILD_ROLE_SUBSCRIPTIONS), P.push(Z === f.a3.PRODUCTS_FIRST ? p.y.GUILD_ROLE_SUBSCRIPTIONS : p.y.GUILD_PRODUCTS), (D = P[0])) : v && !L ? (P.push(p.y.GUILD_PRODUCTS), (D = p.y.GUILD_PRODUCTS)) : !v && L && (P.push(p.y.GUILD_ROLE_SUBSCRIPTIONS), (D = p.y.GUILD_ROLE_SUBSCRIPTIONS), x && P.push(p.y.GUILD_PRODUCTS_PREVIEW)), (s = null != s ? s : D);
-    let [b, j] = a.useState(s),
-        U = (x && !(L && R)) || b === p.y.GUILD_PRODUCTS_PREVIEW;
+        b = p.y.GUILD_SHOP_FULL_PREVIEW;
+    O || (v && L) ? (P.push(Z === f.a3.PRODUCTS_FIRST ? p.y.GUILD_PRODUCTS : p.y.GUILD_ROLE_SUBSCRIPTIONS), P.push(Z === f.a3.PRODUCTS_FIRST ? p.y.GUILD_ROLE_SUBSCRIPTIONS : p.y.GUILD_PRODUCTS), (b = P[0])) : v && !L ? (P.push(p.y.GUILD_PRODUCTS), (b = p.y.GUILD_PRODUCTS)) : !v && L && (P.push(p.y.GUILD_ROLE_SUBSCRIPTIONS), (b = p.y.GUILD_ROLE_SUBSCRIPTIONS), x && P.push(p.y.GUILD_PRODUCTS_PREVIEW)), (s = null != s ? s : b);
+    let [D, j] = a.useState(s),
+        U = (x && !(L && R)) || D === p.y.GUILD_PRODUCTS_PREVIEW;
     return (
         a.useEffect(() => {
             j(s);
         }, [s]),
         (0, i.jsx)(S.Provider, {
             value: {
-                selectedTab: b,
+                selectedTab: D,
                 setSelectedTab: j,
                 categoryTabs: P,
                 isPhantomPreview: U,
                 handlePreviewDismiss: (e) => {
                     (0, d.EW)(o.z.SERVER_SHOP_PHANTOM_PREVIEW);
                     let t = { ...(0, c.hH)(l) };
-                    if (b === p.y.GUILD_PRODUCTS_PREVIEW) e.stopPropagation(), j(p.y.GUILD_ROLE_SUBSCRIPTIONS), (t.action_taken = g.mz.DISMISS_TAB_PREVIEW);
+                    if (D === p.y.GUILD_PRODUCTS_PREVIEW) e.stopPropagation(), j(p.y.GUILD_ROLE_SUBSCRIPTIONS), (t.action_taken = g.mz.DISMISS_TAB_PREVIEW);
                     else {
                         var n;
                         (0, I.dL)(A.Z5c.CHANNEL(l, null === (n = m.ZP.getDefaultChannel(l)) || void 0 === n ? void 0 : n.id)), (t.action_taken = g.mz.DISMISS_FULL_PREVIEW);

@@ -49,8 +49,8 @@ function x(e) {
                   },
         { analyticsLocations: Z } = (0, o.ZP)(),
         P = (0, s.e7)([m.Z], () => ((null == R ? void 0 : R.guild) != null ? m.Z.getGuild(R.guild.id) : null), [R]),
-        D = (0, s.e7)([I.default], () => I.default.getId()),
-        b = (0, s.e7)(
+        b = (0, s.e7)([I.default], () => I.default.getId()),
+        D = (0, s.e7)(
             [c.ZP],
             () => {
                 var e;
@@ -79,7 +79,7 @@ function x(e) {
         y = (0, i.jsx)(f.Z, {
             onTransitionToInviteChannel: j,
             onAcceptInstantInvite: U,
-            currentUserId: D,
+            currentUserId: b,
             guild: P,
             invite: L,
             author: n
@@ -107,7 +107,7 @@ function x(e) {
                     y = (0, i.jsx)(p.Z, {
                         onTransitionToInviteChannel: j,
                         onAcceptInstantInvite: U,
-                        currentUserId: D,
+                        currentUserId: b,
                         invite: L,
                         author: n
                     });
@@ -124,7 +124,7 @@ function x(e) {
                         y = (0, i.jsx)(M.Z, {
                             onTransitionToInviteChannel: j,
                             onAcceptInstantInvite: U,
-                            currentUserId: D,
+                            currentUserId: b,
                             guild: P,
                             invite: L
                         });
@@ -132,7 +132,7 @@ function x(e) {
                     }
                     if ((0, u.Tx)(L)) {
                         y = (0, i.jsx)(d.ZP, {
-                            guildScheduledEvent: b,
+                            guildScheduledEvent: D,
                             guild: L.guild,
                             channel: L.channel,
                             isMember: null != P,

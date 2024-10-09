@@ -27,12 +27,12 @@ var i = n(735250),
     v = n(916315);
 t.Z = a.memo(function (e) {
     var t, n;
-    let { message: a, compact: s = !1, className: L, onContextMenu: Z, onClick: P, hideSimpleEmbedContent: D = !0, channel: b, isGroupStart: j, animateAvatar: U, subscribeToComponentDispatch: y, renderThreadAccessory: B, trackAnnouncementViews: k = !1, ...G } = e,
+    let { message: a, compact: s = !1, className: L, onContextMenu: Z, onClick: P, hideSimpleEmbedContent: b = !0, channel: D, isGroupStart: j, animateAvatar: U, subscribeToComponentDispatch: y, renderThreadAccessory: B, trackAnnouncementViews: k = !1, ...G } = e,
         F = a.type === R.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
-        w = a.isFirstMessageInForumPost(b),
+        w = a.isFirstMessageInForumPost(D),
         V = (0, d.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()),
         { content: H, hasSpoilerEmbeds: Y } = (0, p.Z)(a, {
-            hideSimpleEmbedContent: D,
+            hideSimpleEmbedContent: b,
             allowList: w || V,
             allowHeading: w || V,
             allowLinks: !0,
@@ -44,13 +44,13 @@ t.Z = a.memo(function (e) {
         X = (0, N.ZP)(a),
         Q = (0, o.e7)([_.Z], () => a.hasFlag(R.iLy.HAS_THREAD) && _.Z.getChannel(I.default.castMessageIdAsChannelId(a.id))),
         J = (0, c.p9)({
-            guildId: b.guild_id,
+            guildId: D.guild_id,
             roleId: X.iconRoleId
         }),
-        q = (0, o.e7)([E.Z], () => E.Z.can(R.Plq.CREATE_INSTANT_INVITE, b)),
+        q = (0, o.e7)([E.Z], () => E.Z.can(R.Plq.CREATE_INSTANT_INVITE, D)),
         $ = (0, f.Z)({
             message: a,
-            channel: b,
+            channel: D,
             enabled: k
         });
     if ((0, T.Z)(a, q)) return null;
@@ -63,11 +63,11 @@ t.Z = a.memo(function (e) {
             [v.disableInteraction]: F
         }),
         disableInteraction: F,
-        childrenRepliedMessage: (0, x.Z)(a, b, W, K, s),
-        childrenExecutedCommand: (0, O.Z)(a, b, s),
+        childrenRepliedMessage: (0, x.Z)(a, D, W, K, s),
+        childrenExecutedCommand: (0, O.Z)(a, D, s),
         childrenHeader: (0, S.Z)({
             ...e,
-            guildId: b.guild_id,
+            guildId: D.guild_id,
             author: X,
             roleIcon: J
         }),

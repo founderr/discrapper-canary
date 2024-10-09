@@ -28,8 +28,8 @@ var i = n(735250),
     L = n(295790),
     Z = n(145807),
     P = n(56744),
-    D = n(834129),
-    b = n(981631),
+    b = n(834129),
+    D = n(981631),
     j = n(689938),
     U = n(590008),
     y = n(916315);
@@ -39,7 +39,7 @@ function B(e) {
         className: t,
         compact: a,
         role: 'group',
-        childrenMessageContent: (0, i.jsx)(D.Z, {
+        childrenMessageContent: (0, i.jsx)(b.Z, {
             compact: a,
             className: U.blockedSystemMessage,
             iconNode: (0, i.jsx)(o.XSmallIcon, {
@@ -57,10 +57,10 @@ function B(e) {
 t.Z = a.memo(function e(t) {
     var n;
     let a;
-    let { channel: s, message: o, compact: D = !1, className: U, onContextMenu: k, onClick: G, disableInteraction: F = !1, hasThread: w, treatSpam: V } = t,
-        H = b.OBS.has(o.type) ? o.messageReference : void 0,
+    let { channel: s, message: o, compact: b = !1, className: U, onContextMenu: k, onClick: G, disableInteraction: F = !1, hasThread: w, treatSpam: V } = t,
+        H = D.OBS.has(o.type) ? o.messageReference : void 0,
         Y = (0, r.e7)([I.Z], () => I.Z.getMessageByReference(H)),
-        W = (0, r.e7)([T.Z], () => (o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null)),
+        W = (0, r.e7)([T.Z], () => (o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null)),
         K = m.x4.useSetting(),
         z = m.RS.useSetting(),
         X = m.NA.useSetting(),
@@ -76,8 +76,8 @@ t.Z = a.memo(function e(t) {
             previewLinkTarget: !0
         }),
         en = (0, g.ZP)(o),
-        ei = (0, r.e7)([T.Z], () => o.hasFlag(b.iLy.HAS_THREAD) && T.Z.getChannel(h.default.castMessageIdAsChannelId(o.id))),
-        ea = o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W,
+        ei = (0, r.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(h.default.castMessageIdAsChannelId(o.id))),
+        ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W,
         es = !ea && void 0 === a,
         el = (0, x.Z)({
             message: o,
@@ -97,18 +97,18 @@ t.Z = a.memo(function e(t) {
         : (N.Z.isBlockedForMessage(o) ? (a = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, p.DQ)(o) && V && (a = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a)
           ? (0, i.jsx)(B, {
                 className: U,
-                compact: D,
+                compact: b,
                 count: 1,
                 collapsedReason: a
             })
           : (0, i.jsx)(S.Z, {
-                compact: D,
+                compact: b,
                 className: l()(U, {
                     [y.ephemeral]: (0, C.Pv)(o),
                     [y.disableInteraction]: F,
                     [y.groupStart]: t.isGroupStart
                 }),
-                childrenRepliedMessage: (0, P.Z)(o, s, H, Y, D),
+                childrenRepliedMessage: (0, P.Z)(o, s, H, Y, b),
                 childrenHeader: (0, v.Z)({
                     ...t,
                     author: en,
@@ -118,7 +118,7 @@ t.Z = a.memo(function e(t) {
                     channel: s,
                     message: o,
                     hasSpoilerEmbeds: et,
-                    compact: D,
+                    compact: b,
                     canSuppressEmbeds: !1,
                     canDeleteAttachments: !1,
                     disableReactionReads: !1,
@@ -138,13 +138,13 @@ t.Z = a.memo(function e(t) {
                     shouldRenderCtaButton: eo,
                     hasInlineForwardButton: !1
                 }),
-                childrenExecutedCommand: (0, Z.Z)(o, s, D),
+                childrenExecutedCommand: (0, Z.Z)(o, s, b),
                 childrenMessageContent: (0, R.Z)(t, ee),
                 childrenSystemMessage: (0, L.Z)(t),
                 onContextMenu: k,
                 onClick: G,
-                hasThread: !1 !== w && null != ei && o.hasFlag(b.iLy.HAS_THREAD),
-                hasReply: o.type === b.uaV.REPLY,
+                hasThread: !1 !== w && null != ei && o.hasFlag(D.iLy.HAS_THREAD),
+                hasReply: o.type === D.uaV.REPLY,
                 isSystemMessage: (0, f.Z)(o),
                 messageRef: el
             });

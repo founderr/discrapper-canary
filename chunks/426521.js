@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return b;
+        return D;
     }
 });
 var i = n(735250),
@@ -92,7 +92,7 @@ function P(e) {
         })
     );
 }
-let D = a.memo(function (e) {
+let b = a.memo(function (e) {
         var t;
         let { item: l, ackedBeforeId: u } = e,
             { analyticsLocations: _ } = (0, r.ZP)(),
@@ -138,14 +138,14 @@ let D = a.memo(function (e) {
             R = null;
         l.type === h.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user && (R = (0, i.jsx)(A.Z, { userId: l.other_user.id }));
         let v = null != l.local_id,
-            D = (0, p.Z)(l);
+            b = (0, p.Z)(l);
         return (0, i.jsxs)('div', {
             className: x.row,
             children: [
                 (0, i.jsxs)(s.ClickableContainer, {
                     className: x.rowContent,
                     focusProps: { offset: 4 },
-                    'aria-label': D,
+                    'aria-label': b,
                     onClick: O,
                     children: [
                         E ? null : (0, i.jsx)('div', { className: x.unread }),
@@ -157,7 +157,7 @@ let D = a.memo(function (e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-md/normal',
                                     color: E ? 'text-muted' : 'text-normal',
-                                    children: 'string' != typeof D ? D : c.Z.parse(D)
+                                    children: 'string' != typeof b ? b : c.Z.parse(b)
                                 }),
                                 (null === (t = l.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(L, { item: l }) : null,
                                 null != l.callout ? (0, i.jsx)(Z, { item: l }) : null,
@@ -175,13 +175,13 @@ let D = a.memo(function (e) {
             ]
         });
     }),
-    b = a.memo(function (e) {
+    D = a.memo(function (e) {
         let { items: t } = e,
             n = u.d$.useSetting();
         return (0, i.jsx)(i.Fragment, {
             children: t.map((e) =>
                 (0, i.jsx)(
-                    D,
+                    b,
                     {
                         item: e,
                         ackedBeforeId: n

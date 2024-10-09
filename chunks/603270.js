@@ -68,7 +68,7 @@ let v = P(function (e) {
                 [L, v]
             );
         if (!u || null == _) return null;
-        let D = () => {
+        let b = () => {
             (0, l.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('77803'), n.e('47988')]).then(n.bind(n, 7225));
                 return (n) =>
@@ -90,7 +90,7 @@ let v = P(function (e) {
             },
             iconSrc: S,
             onIconClick: () => {
-                D(),
+                b(),
                     h.default.track(M.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'app_icon'
@@ -98,7 +98,7 @@ let v = P(function (e) {
             },
             children: (0, i.jsx)(l.Button, {
                 onClick: () => {
-                    D(),
+                    b(),
                         h.default.track(M.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                             application_id: t,
                             area: 'open_store_button'
@@ -112,7 +112,7 @@ let v = P(function (e) {
     L = P(function (e) {
         var t, r;
         let { skuId: d, message: m } = e,
-            [C, g, v, L, P, D, b, j] = (0, s.Wu)(
+            [C, g, v, L, P, b, D, j] = (0, s.Wu)(
                 [T.Z, N.Z, I.Z, E.Z, c.Z],
                 () => {
                     var e, t, n, i;
@@ -140,7 +140,7 @@ let v = P(function (e) {
                 cannotOpenReason: G
             } = (0, _.Z)({
                 skuId: d,
-                guildId: b,
+                guildId: D,
                 showBenefitsFirst: !1
             });
         if (!U || null == g || null == C) return null;
@@ -154,7 +154,7 @@ let v = P(function (e) {
                             transitionState: t.transitionState,
                             onClose: t.onClose,
                             appId: g.id,
-                            guildId: b
+                            guildId: D
                         });
                 });
             },
@@ -171,7 +171,7 @@ let v = P(function (e) {
                                   transitionState: n.transitionState,
                                   appId: g.id,
                                   skuId: C.id,
-                                  guildId: b,
+                                  guildId: D,
                                   subscriptionType: w ? 'user' : 'guild',
                                   onClose: n.onClose,
                                   onHeaderTitleClick: a
@@ -259,7 +259,7 @@ let v = P(function (e) {
                         children: x.Z.Messages.STOREFRONT_DETAILS
                     }),
                     F
-                        ? null != D
+                        ? null != b
                             ? (0, i.jsx)(S.p, {
                                   onClick: B,
                                   appId: g.id,
@@ -270,7 +270,7 @@ let v = P(function (e) {
                                       color: 'currentcolor'
                                   }),
                                   onHasClicked: W,
-                                  subscriptionPlan: D,
+                                  subscriptionPlan: b,
                                   canPurchase: k,
                                   cannotPurchaseReason: G
                               })

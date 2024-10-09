@@ -129,7 +129,7 @@ function P(e) {
         className: r,
         children: t.map((e, t) =>
             (0, s.jsx)(
-                D,
+                b,
                 {
                     className: o()(O.__invalid_answer, d),
                     answer: e,
@@ -144,7 +144,7 @@ function P(e) {
         )
     });
 }
-function D(e) {
+function b(e) {
     let { className: t, answer: n, children: i, hasSelectedAnyAnswer: a, isFirstAnswer: r, elementType: c } = e,
         { channelId: d, messageId: u } = (0, g.pE)(),
         _ = (0, g.$B)(n.style),
@@ -182,7 +182,7 @@ function D(e) {
             });
     }
 }
-function b(e) {
+function D(e) {
     var t;
     let { attachment: n, className: i } = e,
         a = (0, h.n)(),
@@ -228,7 +228,7 @@ function y(e) {
         if (null != e)
             return U(
                 n,
-                (0, s.jsx)(b, {
+                (0, s.jsx)(D, {
                     className: i,
                     attachment: e
                 })

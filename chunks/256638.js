@@ -36,8 +36,8 @@ var i = n(735250),
     L = n(605236),
     Z = n(749277),
     P = n(492435),
-    D = n(353926),
-    b = n(506357),
+    b = n(353926),
+    D = n(506357),
     j = n(36459),
     U = n(236069),
     y = n(305325),
@@ -132,7 +132,7 @@ let ep =
                   a.useEffect(() => {
                       if (null != ed && ed.type === eu.kVF.SURVEY && null != ed.metadata) {
                           let { metadata: e } = ed,
-                              t = D.Z.getUserExperimentDescriptor(e.id);
+                              t = b.Z.getUserExperimentDescriptor(e.id);
                           null != t && (0, P.W9)(e.id, t),
                               (async () => {
                                   var e, t;
@@ -160,7 +160,7 @@ let ep =
                       return (0, i.jsx)(Q.Z, {});
                   case eu.kVF.GUILD_RAID_NOTIFICATION:
                       let { dismissUntil: eO } = ed.metadata;
-                      return (0, i.jsx)(b.Z, { onDismiss: () => eC(eO) });
+                      return (0, i.jsx)(D.Z, { onDismiss: () => eC(eO) });
                   case eu.kVF.WIN32_DEPRECATED_MESSAGE:
                       let { dismissUntil: ex } = ed.metadata;
                       return (0, i.jsxs)(c.Notice, {
@@ -413,9 +413,9 @@ let ep =
                       });
                   case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
                       if (null == ed.metadata) return null;
-                      let { skuId: eD, applicationId: eb } = ed.metadata,
-                          ej = ei.Z.get(eD),
-                          eU = x.Z.getApplication(eb);
+                      let { skuId: eb, applicationId: eD } = ed.metadata,
+                          ej = ei.Z.get(eb),
+                          eU = x.Z.getApplication(eD);
                       if (null == ej || null == eU) return null;
                       let ey = { page: eu.ZY5.IN_APP };
                       return (0, i.jsxs)(c.Notice, {

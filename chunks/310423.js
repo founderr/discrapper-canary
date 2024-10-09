@@ -39,7 +39,7 @@ t.Z = a.memo(function (e) {
     let R,
         { channel: v, messageId: L, interactionData: Z } = e,
         { analyticsLocations: P } = (0, d.ZP)(),
-        { onCopy: D, copyRef: b } = (0, u.Z)(v, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
+        { onCopy: b, copyRef: D } = (0, u.Z)(v, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
         j = (0, r.e7)([T.Z], () => T.Z.getGuild(v.guild_id), [v.guild_id]);
     if (
         (a.useEffect(() => {
@@ -60,7 +60,7 @@ t.Z = a.memo(function (e) {
                     var n, s, l, r, d, u, _;
                     let g,
                         { option: O, channel: x, guild: R, messageId: v, parentOptionKey: L, commandOptionSpec: Z, sourceAnalyticsLocations: P } = t,
-                        D = null != L ? L + ' ' + O.name : O.name;
+                        b = null != L ? L + ' ' + O.name : O.name;
                     if (O.type === c.jw.SUB_COMMAND || O.type === c.jw.SUB_COMMAND_GROUP) {
                         let t = [
                                 (0, i.jsxs)(
@@ -74,7 +74,7 @@ t.Z = a.memo(function (e) {
                                             })
                                         ]
                                     },
-                                    D
+                                    b
                                 )
                             ],
                             c = Object.fromEntries(null === (n = null !== (l = null == Z ? void 0 : Z.options) && void 0 !== l ? l : []) || void 0 === n ? void 0 : n.map((e) => [e.name, e]));
@@ -85,14 +85,14 @@ t.Z = a.memo(function (e) {
                                     channel: x,
                                     guild: R,
                                     messageId: v,
-                                    parentOptionKey: D,
+                                    parentOptionKey: b,
                                     commandOptionSpec: c[n.name],
                                     sourceAnalyticsLocations: P
                                 })
                             );
                         return t;
                     }
-                    let b = O.value;
+                    let D = O.value;
                     if (null != O.value)
                         switch (O.type) {
                             case c.jw.USER: {
@@ -166,11 +166,11 @@ t.Z = a.memo(function (e) {
                                 break;
                             default: {
                                 let e = null == Z ? void 0 : null === (d = Z.choices) || void 0 === d ? void 0 : d.find((e) => e.value === O.value);
-                                null != e && (b = null !== (u = e.name_localized) && void 0 !== u ? u : e.name);
+                                null != e && (D = null !== (u = e.name_localized) && void 0 !== u ? u : e.name);
                             }
                         }
                     return (
-                        null == g && (g = M(null == b ? void 0 : b.toString())),
+                        null == g && (g = M(null == D ? void 0 : D.toString())),
                         [
                             (0, i.jsxs)(
                                 a.Fragment,
@@ -183,7 +183,7 @@ t.Z = a.memo(function (e) {
                                         g
                                     ]
                                 },
-                                D
+                                b
                             )
                         ]
                     );
@@ -212,12 +212,12 @@ t.Z = a.memo(function (e) {
         onCopy: (e) => {
             var t, n, i;
             let a = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
-            a.startsWith('/') && a.endsWith('\n') && D(e, Z);
+            a.startsWith('/') && a.endsWith('\n') && b(e, Z);
         },
         children: [
             (0, i.jsx)('div', {
                 className: g.tooltip,
-                ref: b,
+                ref: D,
                 children: R
             }),
             (0, i.jsx)('div', { className: g.tooltipPointer })

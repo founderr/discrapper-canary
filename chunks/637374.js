@@ -29,8 +29,8 @@ var i = n(735250),
     L = n(626135),
     Z = n(669079),
     P = n(74538),
-    D = n(296848),
-    b = n(51144),
+    b = n(296848),
+    D = n(51144),
     j = n(626799),
     U = n(981631),
     y = n(474936),
@@ -166,7 +166,7 @@ class V extends a.Component {
     }
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: i } = this.props;
-        return this.isCustomGiftMessage() && !n ? B.Z.Messages.GIFT_RECIPIENT_NOTIFICATION.format({ recipientDisplayName: b.ZP.getName(t) }) : null == i ? null : e.isSubscription ? (n ? B.Z.Messages.GIFT_EMBED_TITLE_SUBSCRIPTION_SELF : B.Z.Messages.GIFT_EMBED_TITLE_SUBSCRIPTION) : n ? B.Z.Messages.GIFT_EMBED_TITLE_SELF : B.Z.Messages.GIFT_EMBED_TITLE;
+        return this.isCustomGiftMessage() && !n ? B.Z.Messages.GIFT_RECIPIENT_NOTIFICATION.format({ recipientDisplayName: D.ZP.getName(t) }) : null == i ? null : e.isSubscription ? (n ? B.Z.Messages.GIFT_EMBED_TITLE_SUBSCRIPTION_SELF : B.Z.Messages.GIFT_EMBED_TITLE_SUBSCRIPTION) : n ? B.Z.Messages.GIFT_EMBED_TITLE_SELF : B.Z.Messages.GIFT_EMBED_TITLE;
     }
     renderBody(e) {
         let { libraryApplication: t, isSelfGift: n, sku: i, gifter: a, subscriptionPlan: s, currentUser: l } = this.props;
@@ -193,12 +193,12 @@ class V extends a.Component {
             return null != a
                 ? e.isSubscription
                     ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_GIVEAWAY.format({
-                          username: b.ZP.getUserTag(a),
+                          username: D.ZP.getUserTag(a),
                           maxUses: e.maxUses,
                           skuName: r
                       })
                     : B.Z.Messages.GIFT_EMBED_BODY_GIVEAWAY.format({
-                          username: b.ZP.getUserTag(a),
+                          username: D.ZP.getUserTag(a),
                           totalCopies: e.maxUses,
                           skuName: r
                       })
@@ -216,7 +216,7 @@ class V extends a.Component {
                 ? B.Z.Messages.LOADING
                 : null != a
                   ? (s.interval === y.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
-                        username: b.ZP.getUserTag(a),
+                        username: D.ZP.getUserTag(a),
                         skuName: r,
                         intervalCount: s.intervalCount
                     })
@@ -224,7 +224,7 @@ class V extends a.Component {
                         skuName: r,
                         intervalCount: s.intervalCount
                     });
-        return null != a ? B.Z.Messages.GIFT_EMBED_BODY_DEFAULT.format({ username: b.ZP.getUserTag(a) }) : B.Z.Messages.GIFT_EMBED_BODY_NO_USER_DEFAULT;
+        return null != a ? B.Z.Messages.GIFT_EMBED_BODY_DEFAULT.format({ username: D.ZP.getUserTag(a) }) : B.Z.Messages.GIFT_EMBED_BODY_NO_USER_DEFAULT;
     }
     renderPromotionActions() {
         return (0, i.jsx)(d.Button, {
@@ -359,7 +359,7 @@ t.Z = c.ZP.connectStores([S.Z, R.Z, O.default, M.Z, x.Z, A.default, m.Z], (e) =>
         giftCode: a,
         gifter: l,
         currentUser: i,
-        subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, D.oE)(a.subscriptionPlanId) : null,
+        subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, b.oE)(a.subscriptionPlanId) : null,
         isSelfGift: null != a ? A.default.getId() === a.userId : A.default.getId() === n.id,
         resolved: S.Z.getIsResolved(t),
         libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? Z.z2(a.entitlementBranches, s, M.Z) : null,

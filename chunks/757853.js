@@ -34,8 +34,8 @@ var l,
     x = n(699516),
     T = n(594174),
     Z = n(626135),
-    M = n(55935),
-    y = n(823379),
+    y = n(55935),
+    M = n(823379),
     P = n(51144),
     R = n(784384),
     O = n(981631),
@@ -236,7 +236,7 @@ function k(e) {
                               (0, s.jsx)(_.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-secondary',
-                                  children: (0, M.Xf)(u()(o))
+                                  children: (0, y.Xf)(u()(o))
                               })
                           ]
                       })
@@ -309,7 +309,7 @@ function W(e) {
                         channel: d,
                         ...S
                     });
-                else (0, y.vE)(u);
+                else (0, M.vE)(u);
             },
             [c, o, l, a, t, n, E]
         ),

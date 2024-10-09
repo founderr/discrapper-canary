@@ -59,14 +59,14 @@ function R(e) {
         })),
         v = (0, d.Z)(f),
         Z = (0, d.Z)(O),
-        D = (0, d.Z)(R);
+        b = (0, d.Z)(R);
     a.useEffect(() => {
         if (!N.Z.hasLoadedEver) {
             x(E, !0);
             return;
         }
-        ((null != v && f !== v) || (null != Z && O !== Z) || (null != D && R !== D)) && x(E, !0);
-    }, [v, f, Z, O, D, R, E, !0]);
+        ((null != v && f !== v) || (null != Z && O !== Z) || (null != b && R !== b)) && x(E, !0);
+    }, [v, f, Z, O, b, R, E, !0]);
     a.useEffect(() => {
         (null == m ? void 0 : m.some(u.k5)) && (o.Z.clearMentions(), x(E, !0));
     }, []),
@@ -76,7 +76,7 @@ function R(e) {
             },
             []
         );
-    let b = a.useCallback(
+    let D = a.useCallback(
         () =>
             (0, i.jsx)(g.Z, {
                 tab: l.X.MENTIONS,
@@ -105,7 +105,7 @@ function R(e) {
                 x(E, !0, null != m && m.length > 0 ? m[m.length - 1].id : null);
             },
             canCloseAllMessages: !0,
-            renderHeader: b,
+            renderHeader: D,
             renderEmptyState: P,
             renderMessage: L,
             'aria-label': S.Z.Messages.RECENT_MENTIONS,

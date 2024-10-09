@@ -33,8 +33,8 @@ var i,
     x = n(689938),
     R = n(186363);
 function v(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: r, popoutPosition: v, analyticsPage: L, analyticsSection: Z, glow: P, showSecondaryCta: D } = e,
-        b = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: r, popoutPosition: v, analyticsPage: L, analyticsSection: Z, glow: P, showSecondaryCta: b } = e,
+        D = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
         { analyticsLocations: j } = (0, m.ZP)(),
         U = (0, d.e7)([g.Z], () => g.Z.getFriendAnniversaryYears(i.id));
     l.useEffect(() => {
@@ -82,10 +82,10 @@ function v(e) {
                                     'aria-label': i.username,
                                     size: O.EF.SIZE_56
                                 }),
-                                null != b &&
+                                null != D &&
                                     (0, s.jsx)(I.Z, {
                                         className: F,
-                                        user: b,
+                                        user: D,
                                         'aria-label': i.username,
                                         size: O.EF.SIZE_24
                                     })
@@ -118,7 +118,7 @@ function v(e) {
                 (0, s.jsxs)('div', {
                     className: R.buttonContainer,
                     children: [
-                        D &&
+                        b &&
                             (0, s.jsx)(_.Button, {
                                 className: o()(R.button, R.buttonSecondary),
                                 onClick: (e) => {

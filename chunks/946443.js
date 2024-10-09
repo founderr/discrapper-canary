@@ -34,8 +34,8 @@ function O(e) {
     let { setTab: t, onJump: n, showTutorial: s, setSeenTutorial: r, closePopout: O, badgeState: R } = e,
         v = a.useRef(null),
         [L, Z] = (0, g.ZP)(v),
-        { loadState: P, channels: D } = L,
-        { maybeLoadMore: b, markAllRead: j } = Z;
+        { loadState: P, channels: b } = L,
+        { maybeLoadMore: D, markAllRead: j } = Z;
     (function (e, t, n) {
         a.useLayoutEffect(() => {
             var i;
@@ -79,7 +79,7 @@ function O(e) {
         );
     let U = (0, d.e7)([I.Z], () => I.Z.messageGroupSpacing),
         y = (0, m.Z)('unreads', v);
-    if (0 === D.length) {
+    if (0 === b.length) {
         var B;
         return (0, i.jsxs)('div', {
             className: M.container,
@@ -123,9 +123,9 @@ function O(e) {
                                 (v.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
                             ...a,
-                            onScroll: P === g.jd.Done ? void 0 : b,
+                            onScroll: P === g.jd.Done ? void 0 : D,
                             className: M.scroller,
-                            children: [s ? (0, i.jsx)(x, { setSeenTutorial: r }) : null, (0, f.Z)(D, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: M.spinner })]
+                            children: [s ? (0, i.jsx)(x, { setSeenTutorial: r }) : null, (0, f.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: M.spinner })]
                         });
                     }
                 })

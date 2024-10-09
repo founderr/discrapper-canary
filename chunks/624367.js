@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return b;
     }
 }),
     n(47120),
@@ -36,24 +36,24 @@ var a = n(613828),
     L = n(689938),
     Z = n(896219);
 let P = (0, p.Mg)(l.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
-function D(e) {
+function b(e) {
     var t, n, l, p;
-    let { applicationId: D, message: b } = e,
+    let { applicationId: b, message: D } = e,
         { analyticsLocations: j } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK),
         U = (0, c.O)(),
-        y = b.channel_id,
+        y = D.channel_id,
         B = (0, s.e7)([T.Z], () => T.Z.getChannel(y), [y]),
         k = null == B ? void 0 : B.guild_id,
         G = null != B && (B.isGuildVoice() || B.isPrivate()),
         F = (0, s.e7)([f.ZP], () => f.ZP.getSelfEmbeddedActivityForChannel(y)),
-        w = (null == F ? void 0 : F.applicationId) === D,
-        [V] = (0, E.Z)([D, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
+        w = (null == F ? void 0 : F.applicationId) === b,
+        [V] = (0, E.Z)([b, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
         H = (0, S.ZP)(null !== (l = null == V ? void 0 : V.maxParticipants) && void 0 !== l ? l : 0),
-        [Y] = (0, s.Wu)([f.ZP], () => (G ? f.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === D) : []), [D, y, G]),
+        [Y] = (0, s.Wu)([f.ZP], () => (G ? f.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === b) : []), [b, y, G]),
         W = Array.from(null !== (p = null == Y ? void 0 : Y.userIds) && void 0 !== p ? p : []),
         K = (0, s.Wu)([N.default], () => W.map((e) => N.default.getUser(e)).filter(C.lm), [W]),
         z = (0, M.Z)({
-            applicationId: D,
+            applicationId: b,
             size: P,
             names: ['embedded_cover']
         }),
@@ -72,7 +72,7 @@ function D(e) {
                     let e = B.isPrivate() && !m.Z.isCallActive(y),
                         t = async () =>
                             await (0, A.Z)({
-                                targetApplicationId: D,
+                                targetApplicationId: b,
                                 channelId: y,
                                 analyticsLocations: j,
                                 commandOrigin: _.bB.ACTIVITY_BOOKMARK_EMBED
@@ -92,7 +92,7 @@ function D(e) {
                     guildId: k,
                     locationObject: U.location,
                     openInPopout: X,
-                    initialSelectedApplicationId: D,
+                    initialSelectedApplicationId: b,
                     initialSlide: R.ag.SELECT_CHANNEL,
                     analyticsLocations: j
                 });
@@ -128,7 +128,7 @@ function D(e) {
                                   className: Z.learnMore,
                                   variant: 'heading-sm/medium',
                                   children: (0, i.jsx)(a.rU, {
-                                      to: v.Z5c.ACTIVITY_DETAILS(D),
+                                      to: v.Z5c.ACTIVITY_DETAILS(b),
                                       children: L.Z.Messages.LEARN_MORE
                                   })
                               }),

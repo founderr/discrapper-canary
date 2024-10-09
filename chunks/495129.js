@@ -39,7 +39,7 @@ function A(e) {
                           })) || void 0 === t
                     ? void 0
                     : t.rawValue,
-        D =
+        b =
             null === (M = L.embeds[0]) || void 0 === M
                 ? void 0
                 : null === (S = M.fields) || void 0 === S
@@ -51,8 +51,8 @@ function A(e) {
                           })) || void 0 === A
                     ? void 0
                     : A.rawValue,
-        b = (0, l.e7)([T.Z], () => T.Z.getGuild(P)),
-        j = (0, l.e7)([m.Z], () => m.Z.getChannel(D)),
+        D = (0, l.e7)([T.Z], () => T.Z.getGuild(P)),
+        j = (0, l.e7)([m.Z], () => m.Z.getChannel(b)),
         U = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
         y = (0, l.e7)([], () => L.author.id === (null == U ? void 0 : U.id)),
         B = null === (O = Z.recipients) || void 0 === O ? void 0 : O.find((e) => e !== L.author.id),
@@ -76,7 +76,7 @@ function A(e) {
         Y = null != H ? H.split(',') : [],
         W = (0, l.Wu)([N.default], () => Y.map((e) => N.default.getUser(e)).filter(Boolean)),
         K = y && null != k ? f.Z.Messages.WAVED_AT_USER.format({ username: F }) : f.Z.Messages.WAVED_AT_YOU.format({ username: G.nick }),
-        z = null != b && null != j,
+        z = null != D && null != j,
         X = null;
     (X = z ? (y || V ? f.Z.Messages.YOU_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) }) : f.Z.Messages.THEY_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) })) : f.Z.Messages.CANNOT_ACCESS_HANGOUT), 0 === w.length && (X = y ? f.Z.Messages.HANGOUT_OVER_SENDER : f.Z.Messages.HANGOUT_OVER_RECEIVER);
     let Q = y ? f.Z.Messages.WAVE_AGAIN : f.Z.Messages.WAVE_BACK;
@@ -130,7 +130,7 @@ function A(e) {
                     (0, i.jsxs)(r.Button, {
                         color: r.Button.Colors.BRAND,
                         onClick: () => {
-                            null != D && null != P && ((0, I.uL)(p.Z5c.CHANNEL(P, D)), c.default.selectVoiceChannel(D));
+                            null != b && null != P && ((0, I.uL)(p.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
                         },
                         className: g.button,
                         innerClassName: g.buttonInner,

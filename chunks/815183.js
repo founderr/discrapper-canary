@@ -1,33 +1,33 @@
-var n = t(735250);
+var a = t(735250);
 t(470079);
-var r = t(481060),
-    a = t(153867),
+var n = t(481060),
+    r = t(153867),
     i = t(410030),
     l = t(583901),
     o = t(231338);
 s.Z = function () {
     let e = (0, i.ZP)();
-    return (0, n.jsxs)(r.FormItem, {
+    return (0, a.jsxs)(n.FormItem, {
         children: [
-            (0, n.jsx)(r.FormTitle, {
-                tag: r.FormTitleTags.H5,
+            (0, a.jsx)(n.FormTitle, {
+                tag: n.FormTitleTags.H5,
                 children: 'Theme'
             }),
-            (0, n.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 style: {
                     display: 'flex',
                     justifyContent: 'space-between'
                 },
                 children: [
-                    (0, n.jsx)(l.bD, {
+                    (0, a.jsx)(l.bD, {
                         theme: o.BR.LIGHT,
                         isSelected: e === o.BR.LIGHT,
-                        onSelect: () => (0, a.ZI)({ theme: o.BR.LIGHT })
+                        onSelect: () => (0, r.ZI)({ theme: o.BR.LIGHT })
                     }),
-                    (0, n.jsx)(l.bD, {
+                    (0, a.jsx)(l.bD, {
                         theme: o.BR.DARK,
                         isSelected: e === o.BR.DARK,
-                        onSelect: () => (0, a.ZI)({ theme: o.BR.DARK })
+                        onSelect: () => (0, r.ZI)({ theme: o.BR.DARK })
                     })
                 ]
             })

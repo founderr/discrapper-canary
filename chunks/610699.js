@@ -36,8 +36,8 @@ var i = n(735250),
     L = n(981631),
     Z = n(245335),
     P = n(689938),
-    D = n(610935);
-let b = (0, R.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+    b = n(610935);
+let D = (0, R.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
     j = (0, R.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
     U = (0, R.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function y(e) {
@@ -50,12 +50,12 @@ function y(e) {
                 (0, i.jsxs)(
                     'div',
                     {
-                        className: D.statusWrapper,
+                        className: b.statusWrapper,
                         children: [
-                            (0, i.jsx)('i', { className: D.statusOnline }),
+                            (0, i.jsx)('i', { className: b.statusOnline }),
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
-                                className: D.count,
+                                className: b.count,
                                 children: P.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: n })
                             })
                         ]
@@ -68,12 +68,12 @@ function y(e) {
                 (0, i.jsxs)(
                     'div',
                     {
-                        className: D.statusWrapper,
+                        className: b.statusWrapper,
                         children: [
-                            (0, i.jsx)('i', { className: D.statusOffline }),
+                            (0, i.jsx)('i', { className: b.statusOffline }),
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
-                                className: D.count,
+                                className: b.count,
                                 children: P.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: t })
                             })
                         ]
@@ -82,9 +82,9 @@ function y(e) {
                 )
             ),
         (0, i.jsx)('div', {
-            className: l()(D.statusCounts, {
-                [D.large]: a,
-                [D.stacked]: s
+            className: l()(b.statusCounts, {
+                [b.large]: a,
+                [b.stacked]: s
             }),
             children: r
         })
@@ -95,14 +95,14 @@ function B(e) {
     if (null != t && null != n) {
         let e = (0, p.KS)(t, n);
         return (0, i.jsxs)('div', {
-            className: l()(D.channel, {
-                [D.stacked]: a,
-                [D.ended]: s
+            className: l()(b.channel, {
+                [b.stacked]: a,
+                [b.ended]: s
             }),
             children: [
                 null != e
                     ? (0, i.jsx)(e, {
-                          className: D.channelIcon,
+                          className: b.channelIcon,
                           size: 'xs',
                           color: 'currentColor'
                       })
@@ -121,9 +121,9 @@ function B(e) {
     }
     return null != n
         ? (0, i.jsx)('div', {
-              className: l()(D.channel, {
-                  [D.stacked]: a,
-                  [D.ended]: s
+              className: l()(b.channel, {
+                  [b.stacked]: a,
+                  [b.ended]: s
               }),
               children: (0, i.jsx)(f.Z, {
                   children: (0, i.jsx)(u.Text, {
@@ -149,7 +149,7 @@ function k(e) {
                 (function () {
                     var e;
                     let t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetWidth;
-                    null != t && (V(t < U + j), Y(t <= 2 * b));
+                    null != t && (V(t < U + j), Y(t <= 2 * D));
                 })()
             ),
             t = F.current;
@@ -178,7 +178,7 @@ function k(e) {
         { analyticsLocations: q } = (0, h.ZP)(N.Z.INVITE_EMBED),
         $ = (0, I.Z)({
             applicationId: G.id,
-            size: b,
+            size: D,
             names: ['embedded_cover']
         }),
         ee = (0, c.Wu)(
@@ -209,39 +209,39 @@ function k(e) {
     return (ei && z && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !J && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), (r = z ? P.Z.Messages.INVITE_EMBED_JOINED : X || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START), null == d.code || '' === d.code)
         ? null
         : (0, i.jsxs)('div', {
-              className: D.container,
+              className: b.container,
               ref: F,
               children: [
                   (0, i.jsx)('div', {
-                      className: l()(D.imgContainer, {
-                          [D.large]: w,
-                          [D.stacked]: H
+                      className: l()(b.imgContainer, {
+                          [b.large]: w,
+                          [b.stacked]: H
                       }),
                       children: (0, i.jsx)(m.Z, {
                           imageBackground: $,
                           applicationName: null !== (n = null == K ? void 0 : K.name) && void 0 !== n ? n : '',
-                          imageClassName: l()(D.img, {
-                              [D.large]: w,
-                              [D.stacked]: H
+                          imageClassName: l()(b.img, {
+                              [b.large]: w,
+                              [b.stacked]: H
                           }),
-                          imageNotFoundClassName: l()(D.brokenImg, {
-                              [D.large]: w,
-                              [D.stacked]: H
+                          imageNotFoundClassName: l()(b.brokenImg, {
+                              [b.large]: w,
+                              [b.stacked]: H
                           })
                       })
                   }),
                   (0, i.jsxs)(g.Z, {
-                      className: l()(D.content, {
-                          [D.large]: w,
-                          [D.stacked]: H
+                      className: l()(b.content, {
+                          [b.large]: w,
+                          [b.stacked]: H
                       }),
                       children: [
                           (0, i.jsxs)('div', {
-                              className: D.info,
+                              className: b.info,
                               children: [
                                   (0, i.jsx)(u.FormTitle, { children: ei ? P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : P.Z.Messages.INVITE_BUTTON_TITLE_INVITED }),
                                   (0, i.jsx)(u.Heading, {
-                                      className: D.heading,
+                                      className: b.heading,
                                       variant: 'heading-xl/semibold',
                                       children: null == K ? void 0 : K.name
                                   }),
@@ -254,14 +254,14 @@ function k(e) {
                               ]
                           }),
                           (0, i.jsxs)('div', {
-                              className: l()(D.currentState, {
-                                  [D.large]: w,
-                                  [D.split]: !X && H
+                              className: l()(b.currentState, {
+                                  [b.large]: w,
+                                  [b.split]: !X && H
                               }),
                               children: [
                                   !X && ei
                                       ? (0, i.jsxs)('div', {
-                                            className: l()(D.endedNote, { [D.large]: w }),
+                                            className: l()(b.endedNote, { [b.large]: w }),
                                             children: [
                                                 (0, i.jsx)(u.Text, {
                                                     variant: 'text-xs/medium',
@@ -283,11 +283,11 @@ function k(e) {
                                             isStacked: H
                                         }),
                                   (0, i.jsxs)('div', {
-                                      className: D.cta,
+                                      className: b.cta,
                                       children: [
                                           null != W && X
                                               ? (0, i.jsx)('div', {
-                                                    className: D.avatars,
+                                                    className: b.avatars,
                                                     children: (0, i.jsx)(T.Z, {
                                                         guildId: W.id,
                                                         users: et,
@@ -300,11 +300,11 @@ function k(e) {
                                               children: (e) => {
                                                   let { onClick: t, ...n } = e;
                                                   return (0, i.jsx)(u.Button, {
-                                                      className: D.actionButton,
+                                                      className: b.actionButton,
                                                       onClick: () => {
                                                           es(), null == t || t();
                                                       },
-                                                      wrapperClassName: D.tooltipButtonWrapper,
+                                                      wrapperClassName: b.tooltipButtonWrapper,
                                                       ...n,
                                                       submitting: en,
                                                       disabled: ea,

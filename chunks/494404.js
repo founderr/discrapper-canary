@@ -91,7 +91,7 @@ let Z = (e) => {
             ]
         });
     };
-class D extends a.PureComponent {
+class b extends a.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, i.jsxs)(u.Clickable, {
@@ -142,16 +142,16 @@ class D extends a.PureComponent {
             });
     }
 }
-let b = d.ZP.connectStores([f.Z], (e) => {
+let D = d.ZP.connectStores([f.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && f.Z.can(O.Plq.MANAGE_MESSAGES, t) };
-})(D);
+})(b);
 function j(e) {
     let { analyticsName: t, items: n, hasMore: s, loading: r, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: N, getProTip: C, scrollerClassName: p, className: f, listName: v } = e,
         Z = a.useRef(null),
         P = (0, I.Z)(v, Z),
-        D = (0, d.e7)([g.Z], () => g.Z.hasNotice()),
-        b = (0, d.e7)([A.Z], () => A.Z.windowSize());
+        b = (0, d.e7)([g.Z], () => g.Z.hasNotice()),
+        D = (0, d.e7)([A.Z], () => A.Z.windowSize());
     a.useEffect(() => {
         S.default.track(O.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
@@ -240,8 +240,8 @@ function j(e) {
                       })
                   })
                 : null,
-        F = { maxHeight: b.height - 43 - 25 };
-    D && (F.maxHeight -= 40);
+        F = { maxHeight: D.height - 43 - 25 };
+    b && (F.maxHeight -= 40);
     let w = null != _ && s;
     return (0, i.jsx)('div', {
         className: l()(f, R.messagesPopoutWrap),
@@ -339,7 +339,7 @@ function U(e) {
                                       message: t,
                                       channel: n
                                   }),
-                                  (0, i.jsx)(b, {
+                                  (0, i.jsx)(D, {
                                       channel: s,
                                       message: t,
                                       jumping: L,

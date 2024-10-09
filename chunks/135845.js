@@ -39,10 +39,10 @@ function N(e) {
         if (null == N.guild) return (0, i.jsx)(_.Z, {});
         C = new c.ZP(N.guild);
     }
-    let D = null != N.channel ? (0, o.jD)(N.channel) : null,
-        b = O ? p : f;
+    let b = null != N.channel ? (0, o.jD)(N.channel) : null,
+        D = O ? p : f;
     P && !x ? (a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: v.username })) : ((t = m.Z.Messages.WATCH), (n = r.Z.Button.Colors.GREEN), O && ((t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = r.Z.Button.Colors.PRIMARY)), (a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: v.username })));
-    let j = A === C.id && null != D ? (0, i.jsx)(r.Z.Channel, { channel: D }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: C.name });
+    let j = A === C.id && null != b ? (0, i.jsx)(r.Z.Channel, { channel: b }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: C.name });
     return (0, i.jsxs)(r.Z, {
         children: [
             (0, i.jsx)(r.Z.Header, { text: m.Z.Messages.INVITE_BUTTON_TITLE_STREAMING }),
@@ -53,11 +53,11 @@ function N(e) {
                         children: [
                             (0, i.jsx)(r.Z.Icon, {
                                 guild: C,
-                                onClick: P && x ? b : void 0
+                                onClick: P && x ? D : void 0
                             }),
                             (0, i.jsx)(r.Z.Info, {
                                 title: a,
-                                onClick: P && x ? b : void 0,
+                                onClick: P && x ? D : void 0,
                                 children: j
                             })
                         ]
@@ -65,7 +65,7 @@ function N(e) {
                     x
                         ? (0, i.jsx)(r.Z.Button, {
                               disabled: P && !x,
-                              onClick: b,
+                              onClick: D,
                               submitting: Z,
                               isDisabled: O && x,
                               color: n,

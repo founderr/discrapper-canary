@@ -40,11 +40,11 @@ class g extends a.PureComponent {
             Z = M ? h : N,
             P = v > 0;
         if (!P && !A) return null;
-        let { enabled: D } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            { canShowImprovedReactionButton: b } = d.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            j = D && P,
+        let { enabled: b } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
+            { canShowImprovedReactionButton: D } = d.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
+            j = b && P,
             U = (A && !P) || j,
-            y = b && !p;
+            y = D && !p;
         return (0, i.jsxs)(r.W, {
             component: 'div',
             className: l()(Z.reactions, g, { [Z.largeReactions]: y }),
