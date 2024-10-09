@@ -1,19 +1,17 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var i = t(213459),
-    a = t(812236),
-    l = t(989573);
-function o(e) {
-    let { channel: n, applicationId: t, botUserId: o } = e,
-        r = (0, a.ms)({
+var i = t(812236),
+    a = t(989573);
+function l(e) {
+    let { channel: n, applicationId: t, botUserId: l } = e,
+        o = (0, i.ms)({
             channel: n,
             applicationId: t,
-            botUserId: o
+            botUserId: l
         }),
-        { isUserInstalled: s } = (0, i.If)(n, t),
-        c = (0, l.Z)({ channelId: n.id });
-    return r && null != o && !c && !s;
+        r = (0, a.Z)({ channelId: n.id });
+    return o && null != l && !r;
 }
