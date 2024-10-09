@@ -15,18 +15,17 @@ let f = new Set([E.ABu.CONTACTS]),
     p = [],
     I = [],
     m = {},
-    T = new Set(),
+    T = {},
     S = {},
-    g = {},
-    A = (e) => {
+    g = (e) => {
         (p = e.filter((e) => !f.has(e.type) && c.Z.isSupported(e.type))), (I = e.filter((e) => f.has(e.type))), (h = !1);
     };
-class N extends (r = o.ZP.Store) {
+class A extends (r = o.ZP.Store) {
     isJoining(e) {
         return m[e] || !1;
     }
     joinErrorMessage(e) {
-        return g[e];
+        return S[e];
     }
     isFetching() {
         return h;
@@ -44,20 +43,11 @@ class N extends (r = o.ZP.Store) {
         return I.find((t) => t.type === e);
     }
     isSuggestedAccountType(e) {
-        return S[e] || !1;
-    }
-    addPendingAuthorizedState(e) {
-        T.add(e);
-    }
-    deletePendingAuthorizedState(e) {
-        T.delete(e);
-    }
-    hasPendingAuthorizedState(e) {
-        return T.has(e);
+        return T[e] || !1;
     }
 }
 (s = 'ConnectedAccountsStore'),
-    (a = 'displayName') in (i = N)
+    (a = 'displayName') in (i = A)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -65,13 +55,13 @@ class N extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new N(l.Z, {
+    (t.Z = new A(l.Z, {
         CONNECTION_OPEN: function (e) {
-            A(e.connectedAccounts.map((e) => new d.Z(e)));
+            g(e.connectedAccounts.map((e) => new d.Z(e)));
         },
         USER_CONNECTIONS_UPDATE: function (e) {
             e.local && null != e.accounts
-                ? A(
+                ? g(
                       e.accounts.map(
                           (e) =>
                               new d.Z({
@@ -95,16 +85,14 @@ class N extends (r = o.ZP.Store) {
             null != r && (a.revoked = r), null != i && (a.accessToken = i);
         },
         USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function (e) {
-            g[e.integrationId] = void 0 !== e.error ? e.error : '';
+            S[e.integrationId] = void 0 !== e.error ? e.error : '';
         },
         USER_CONNECTIONS_CALLBACK: function (e) {
-            let { state: t, code: n, provider: r, openid_params: i } = e;
-            T.has(t) &&
-                (T.delete(t),
-                u.Z.callback(r, {
-                    code: n,
-                    state: t,
-                    openid_params: i
-                }));
+            let { code: t, state: n, openid_params: r, provider: i } = e;
+            u.Z.callback(i, {
+                code: t,
+                state: n,
+                openid_params: r
+            });
         }
     }));
