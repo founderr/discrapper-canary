@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     fh: function () {
-        return l;
+        return u;
     }
 }),
     n(571269),
@@ -16,52 +16,53 @@ n.d(t, {
     n(47120);
 var r,
     i,
-    a = n(46140);
-let s = /\.([a-zA-Z0-9]+)$/,
-    o = ['video/mp4', 'video/webm'];
-function l(e, t, n) {
-    var r, i, a, s, l;
+    a = n(873546),
+    s = n(46140);
+let o = /\.([a-zA-Z0-9]+)$/,
+    l = ['video/mp4', 'video/webm'];
+function u(e, t, n) {
     switch (t) {
         case 'hero': {
-            let t = null !== (r = e.config.assets.heroVideo) && void 0 !== r ? r : e.config.assets.hero,
-                n = u(e.id, t),
-                i = c(t),
-                a = null != i && o.includes(i);
-            return {
-                url: n,
-                mimetype: i,
-                isAnimated: a
-            };
-        }
-        case 'quest_bar_hero': {
-            let t = null !== (i = e.config.assets.questBarHeroVideo) && void 0 !== i ? i : e.config.assets.questBarHero,
-                n = u(e.id, t),
-                r = c(t),
-                a = null != r && o.includes(r);
+            let t = null == e.config.assets.heroVideo || a.tq ? e.config.assets.hero : e.config.assets.heroVideo,
+                n = c(e.id, t),
+                r = d(t),
+                i = null != r && l.includes(r);
             return {
                 url: n,
                 mimetype: r,
-                isAnimated: a
+                isAnimated: i
+            };
+        }
+        case 'quest_bar_hero': {
+            let t = null == e.config.assets.questBarHeroVideo || a.tq ? e.config.assets.questBarHero : e.config.assets.questBarHeroVideo,
+                n = c(e.id, t),
+                r = d(t),
+                i = null != r && l.includes(r);
+            return {
+                url: n,
+                mimetype: r,
+                isAnimated: i
             };
         }
         case 'reward': {
-            let t = null !== (s = null === (a = e.userStatus) || void 0 === a ? void 0 : a.claimedTier) && void 0 !== s ? s : 0,
+            var r, i;
+            let t = null !== (i = null === (r = e.userStatus) || void 0 === r ? void 0 : r.claimedTier) && void 0 !== i ? i : 0,
                 n = 'rewardsConfig' in e.config ? e.config.rewardsConfig.rewards[t] : e.config.rewards[t],
-                r = null !== (l = n.assetVideo) && void 0 !== l ? l : n.asset,
-                i = u(e.id, r),
-                d = c(r),
-                _ = null != d && o.includes(d);
+                s = null == n.assetVideo || a.tq ? n.asset : n.assetVideo,
+                o = c(e.id, s),
+                u = d(s),
+                _ = null != u && l.includes(u);
             return {
-                url: i,
-                mimetype: d,
+                url: o,
+                mimetype: u,
                 isAnimated: _
             };
         }
         case 'game_tile': {
             let t = e.config.assets.gameTile,
-                r = u(e.id, t, n),
-                i = c(t),
-                a = null != i && o.includes(i);
+                r = c(e.id, t, n),
+                i = d(t),
+                a = null != i && l.includes(i);
             return {
                 url: r,
                 mimetype: i,
@@ -70,9 +71,9 @@ function l(e, t, n) {
         }
         case 'logo_type': {
             let t = e.config.assets.logotype,
-                r = u(e.id, t, n),
-                i = c(t),
-                a = null != i && o.includes(i);
+                r = c(e.id, t, n),
+                i = d(t),
+                a = null != i && l.includes(i);
             return {
                 url: r,
                 mimetype: i,
@@ -82,24 +83,24 @@ function l(e, t, n) {
     }
 }
 ((i = r || (r = {})).HERO = 'hero'), (i.QUEST_BAR_HERO = 'quest_bar_hero'), (i.REWARD = 'reward'), (i.GAME_TILE = 'game_tile'), (i.LOGO_TYPE = 'logo_type');
-function u(e, t, n) {
+function c(e, t, n) {
     if (t.startsWith('blob:')) {
         var r, i;
         return null !== (i = (r = t).split('?', 1).at(0)) && void 0 !== i ? i : r;
     }
     return ''
-        .concat(a.tD)
+        .concat(s.tD)
         .concat(e)
         .concat(null != n ? '/'.concat(n) : '', '/')
         .concat(t);
 }
-function c(e) {
+function d(e) {
     var t, n, r;
     if (e.startsWith('blob:')) {
         let t = null !== (r = new URL(e).searchParams.get('mimetype')) && void 0 !== r ? r : void 0;
         return null != t ? decodeURIComponent(t) : null;
     }
-    switch (null === (n = s.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
+    switch (null === (n = o.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
         case 'webm':
             return 'video/webm';
         case 'mp4':
