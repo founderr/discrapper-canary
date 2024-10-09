@@ -12,12 +12,12 @@ var t = n(735250),
     h = n(788080),
     A = n(451284),
     p = n(613734),
-    x = n(846488),
-    I = n(384725),
-    E = n(97568),
-    T = n(800530),
-    g = n(981631),
-    C = n(689938),
+    I = n(846488),
+    x = n(384725),
+    T = n(97568),
+    E = n(800530),
+    C = n(981631),
+    g = n(689938),
     f = n(300106);
 let S = (e) => {
         let { classificationTypeText: i, guildMetadata: n } = e,
@@ -29,15 +29,15 @@ let S = (e) => {
                 };
                 return l && null != n
                     ? (null == n ? void 0 : n.member_type) === _.wO.OWNER
-                        ? C.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
+                        ? g.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
                               ...e,
                               guildName: null == n ? void 0 : n.name
                           })
-                        : C.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD_PRESENCE.format({
+                        : g.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD_PRESENCE.format({
                               ...e,
                               guildName: null == n ? void 0 : n.name
                           })
-                    : C.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V3.format(e);
+                    : g.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V3.format(e);
             }, [i, n, l]);
         return (0, t.jsx)('div', {
             className: f.classificationHeader,
@@ -58,7 +58,7 @@ let S = (e) => {
                       (0, t.jsx)(o.Text, {
                           variant: 'eyebrow',
                           color: 'text-muted',
-                          children: C.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER_V2
+                          children: g.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER_V2
                       }),
                       (0, t.jsxs)('ul', {
                           className: f.classificationActionsTakenList,
@@ -73,7 +73,7 @@ let S = (e) => {
                                                 tag: 'span',
                                                 variant: 'heading-md/normal',
                                                 color: 'text-normal',
-                                                children: C.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_VIOLATION_ACCOUNT_STATUS.format({ expirationDate: n.toLocaleDateString(a, { dateStyle: 'medium' }) })
+                                                children: g.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_VIOLATION_ACCOUNT_STATUS.format({ expirationDate: n.toLocaleDateString(a, { dateStyle: 'medium' }) })
                                             })
                                         },
                                         'expiration'
@@ -122,7 +122,7 @@ let S = (e) => {
                     className: f.classificationPolicyDescriptionContainer,
                     children: (0, t.jsx)(o.Text, {
                         variant: 'text-md/normal',
-                        children: C.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER_V2.format({ classificationDescription: i })
+                        children: g.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER_V2.format({ classificationDescription: i })
                     })
                 }),
                 (0, t.jsx)('div', {
@@ -139,13 +139,13 @@ let S = (e) => {
         (0, t.jsx)(o.Text, {
             variant: 'text-md/normal',
             color: 'text-muted',
-            children: C.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
+            children: g.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
         }),
     y = (e) =>
         (0, t.jsx)(o.Text, {
             variant: 'text-md/normal',
             color: 'text-muted',
-            children: C.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
+            children: g.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
                 letUsKnowHook: (i, n) =>
                     (0, t.jsx)(
                         o.Anchor,
@@ -164,7 +164,7 @@ let S = (e) => {
             children: e.hasBeenAppealed
                 ? (0, t.jsx)(j, {})
                 : (0, t.jsx)(y, {
-                      appealLink: T.sQ.APPEALS_LINK,
+                      appealLink: E.sQ.APPEALS_LINK,
                       letUsKnowClick: e.onLetUsKnowClick,
                       isAppealEligible: e.isAppealEligible
                   })
@@ -177,12 +177,12 @@ let S = (e) => {
                 (0, t.jsx)(o.Text, {
                     variant: 'eyebrow',
                     color: 'text-muted',
-                    children: C.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_WHAT_YOU_CAN_DO_HEADER
+                    children: g.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_WHAT_YOU_CAN_DO_HEADER
                 }),
                 (0, t.jsx)(o.Text, {
                     className: f.guidelinesExplanation,
                     variant: 'text-sm/normal',
-                    children: C.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_WHAT_YOU_CAN_DO_DESCRIPTION.format({
+                    children: g.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_WHAT_YOU_CAN_DO_DESCRIPTION.format({
                         tosLink: i,
                         communityGuidelinesLink: n
                     })
@@ -198,19 +198,19 @@ let S = (e) => {
 i.Z = (e) => {
     var i;
     let { classificationId: n, source: s, onError: o } = e,
-        { classification: r, classificationRequestState: d, isAppealEligible: u, isDsaEligible: C, violationType: N } = (0, p.YG)(n),
+        { classification: r, classificationRequestState: d, isAppealEligible: u, isDsaEligible: g, violationType: N } = (0, p.YG)(n),
         L = (0, A.P)(),
         j = null != r && null != r.flagged_content && r.flagged_content.length > 0,
-        y = (0, x.e)();
+        y = (0, I.e)();
     return (a.useEffect(() => {
         y &&
-            m.default.track(g.rMx.SAFETY_HUB_ACTION, {
-                action: T.n0.ViewViolationDetail,
+            m.default.track(C.rMx.SAFETY_HUB_ACTION, {
+                action: E.n0.ViewViolationDetail,
                 account_standing: L.state,
                 classification_ids: [Number(n)],
                 source: s,
                 is_violative_content_shown: j,
-                is_dsa_eligible: C,
+                is_dsa_eligible: g,
                 violation_type: N
             });
     }, [y]),
@@ -225,29 +225,29 @@ i.Z = (e) => {
                         classificationTypeText: r.description,
                         guildMetadata: null == r ? void 0 : r.guild_metadata
                     }),
-                    (0, t.jsx)(E.s, { flaggedContent: null !== (i = r.flagged_content) && void 0 !== i ? i : [] }),
+                    (0, t.jsx)(T.s, { flaggedContent: null !== (i = r.flagged_content) && void 0 !== i ? i : [] }),
                     (0, t.jsx)(v, {
                         actions: r.actions,
                         classificationExpiration: (0, h.Pu)(r)
                     }),
                     (0, t.jsx)(D, {
                         classificationTypeText: r.description,
-                        tosLink: T.sQ.TOS_LINK,
-                        communityGuidelinesLink: T.sQ.COMMUNITY_GUIDELINES,
+                        tosLink: E.sQ.TOS_LINK,
+                        communityGuidelinesLink: E.sQ.COMMUNITY_GUIDELINES,
                         policyExplainerLink: r.explainer_link,
                         appealComponent: (0, t.jsx)(O, {
                             hasBeenAppealed: null != r.appeal_status,
                             onLetUsKnowClick: () => {
-                                m.default.track(g.rMx.SAFETY_HUB_ACTION, {
-                                    action: T.n0.ClickLetUsKnow,
+                                m.default.track(C.rMx.SAFETY_HUB_ACTION, {
+                                    action: E.n0.ClickLetUsKnow,
                                     account_standing: L.state,
                                     classification_ids: [Number(n)],
                                     source: s,
                                     is_violative_content_shown: j,
-                                    is_dsa_eligible: C,
+                                    is_dsa_eligible: g,
                                     violation_type: N
                                 }),
-                                    u && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), I.Z.open(n));
+                                    u && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), x.Z.open(n));
                             },
                             isAppealEligible: u
                         })

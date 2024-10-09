@@ -218,7 +218,7 @@ let ea = function (e) {
                                           secondaryButtonCTA: $.Z.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
                                           className: ee.messageRequestCoachmark,
                                           onClick: (e) => {
-                                              e.stopPropagation(), E.Z.open(Q.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: r ? J.to.MESSAGE_REQUESTS_V2 : J.to.MESSAGE_REQUESTS });
+                                              e.stopPropagation(), r ? E.Z.open(Q.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.to.MESSAGE_REQUESTS_V2 }) : E.Z.open(Q.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: J.to.MESSAGE_REQUESTS });
                                           },
                                           markAsDismissed: o,
                                           caretPosition: x.DF.TOP_CENTER,

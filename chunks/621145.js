@@ -19,12 +19,12 @@ var t = n(735250),
     h = n(492593),
     A = n(219797),
     p = n(524444),
-    x = n(884182),
-    I = n(25015),
-    E = n(963550),
-    T = n(845080),
-    g = n(594174),
-    C = n(956664),
+    I = n(884182),
+    x = n(25015),
+    T = n(963550),
+    E = n(845080),
+    C = n(594174),
+    g = n(956664),
     f = n(709054),
     S = n(788080),
     v = n(800530),
@@ -67,7 +67,7 @@ let y = (e, i) => {
                 let a = v.Sv,
                     s = v.EY;
                 if (null != i.width && null != i.height) {
-                    let e = (0, C.Dc)({
+                    let e = (0, g.Dc)({
                         width: i.width,
                         height: i.height,
                         maxWidth: v.Sv,
@@ -111,7 +111,7 @@ let y = (e, i) => {
         }
         return (0, t.jsx)('div', {
             className: j.classificationEvidenceMessageAttachment,
-            children: (0, t.jsx)(x.Z, {
+            children: (0, t.jsx)(I.Z, {
                 items: n.map((e) => ({
                     item: {
                         uniqueId: e.id,
@@ -150,12 +150,12 @@ let y = (e, i) => {
 function D(e) {
     var i;
     let { flaggedContent: n } = e,
-        l = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+        l = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
         [r, d] = a.useState({}),
         [m, u] = a.useState(!0),
         _ = n[0],
         A = y(_, r),
-        p = (0, I.Z)(A, {
+        p = (0, x.Z)(A, {
             hideSimpleEmbedContent: !1,
             allowList: !1,
             allowHeading: !1,
@@ -217,7 +217,7 @@ function D(e) {
                   ? (0, t.jsx)(o.Spinner, {})
                   : (0, t.jsx)(h.Z, {
                         compact: !1,
-                        childrenHeader: (0, T.Z)({
+                        childrenHeader: (0, E.Z)({
                             author: {
                                 ...l,
                                 colorString: '',
@@ -233,7 +233,7 @@ function D(e) {
                             hideTimestamp: !1
                         }),
                         childrenAccessories: (0, t.jsx)(O, { message: A }),
-                        childrenMessageContent: (0, E.Z)({ message: A }, p.content),
+                        childrenMessageContent: (0, T.Z)({ message: A }, p.content),
                         hasThread: !1,
                         hasReply: !1
                     })
