@@ -13,31 +13,31 @@ var r = t(735250),
     c = t(470079),
     o = t(266067),
     l = t(604039),
-    a = t(481060),
-    i = t(457330),
-    s = t(733427),
-    u = t(169382),
+    i = t(481060),
+    a = t(457330),
+    u = t(733427),
+    s = t(169382),
     f = t(726542),
     d = t(536285),
     p = t(591759),
     C = t(656649),
     N = t(981631),
     O = t(689938),
-    S = t(289720);
-let E = null != window.opener;
+    E = t(289720);
+let S = null != window.opener;
 function _() {
     var e;
     let n = (0, o.k6)(),
-        t = (0, u.l)(),
-        a = t.get('code'),
+        t = (0, s.l)(),
+        i = t.get('code'),
         O = t.get('oauth_verifier'),
-        S = null !== (e = t.get('state')) && void 0 !== e ? e : '',
+        E = null !== (e = t.get('state')) && void 0 !== e ? e : '',
         _ = t.get('loading'),
         { type: v } = (0, o.UO)(),
         m = (0, C.vJ)(v),
         [R, A] = c.useState(!1),
-        b = (0, s.Z)(),
-        T = null == O ? (null != a ? a : '') : O;
+        b = (0, u.Z)(),
+        T = null == O ? (null != i ? i : '') : O;
     return (c.useEffect(() => {
         let e;
         if (null != _) return;
@@ -46,7 +46,7 @@ function _() {
         }
         let r = (0, C.vJ)(v);
         null != r &&
-            i.Z.sessionHandoff(r, S, T, e)
+            a.Z.sessionHandoff(r, E, T, e)
                 .then(() => {
                     A(!0);
                 })
@@ -55,11 +55,11 @@ function _() {
                             let { status: r, body: c } = e;
                             if (null != l) {
                                 if (null == c ? void 0 : c.redirect) {
-                                    n.replace(N.Z5c.CONNECTIONS_SUCCESS(l)), (window.location = c.redirect);
+                                    window.location = c.redirect;
                                     return;
                                 }
                                 if ([200, 204].includes(r)) {
-                                    n.replace(N.Z5c.CONNECTIONS_SUCCESS(l)), E && window.close();
+                                    n.replace(N.Z5c.CONNECTIONS_SUCCESS(l)), S && window.close();
                                     return;
                                 }
                                 null != c.code && t.append('error-code', c.code), n.replace(''.concat(N.Z5c.CONNECTIONS_ERROR(l), '?').concat(t.toString()));
@@ -68,18 +68,18 @@ function _() {
                         c = {
                             code: T,
                             openid_params: e,
-                            state: S
+                            state: E
                         };
                     async function o(e) {
                         if (null != l && f.Z.isSupported(l))
                             try {
-                                let n = await i.Z.callback(l, c, e);
+                                let n = await a.Z.callback(l, c, e);
                                 r(n);
                             } catch (e) {
                                 r(e);
                             }
                     }
-                    if (E) {
+                    if (S) {
                         await o(!1);
                         return;
                     }
@@ -95,15 +95,19 @@ function _() {
                     }
                     d.default.disconnect();
                 });
-    }, [T, n, _, v, t, S]),
+    }, [T, n, _, v, t, E]),
     c.useEffect(() => {
         let e;
         if (!R) return;
         let t = 0;
         async function r() {
             if (null == m) return;
-            let { handoff_status: c, success_redirect: o } = (await i.Z.getHandoffStatus(m, S)).body;
-            if (c === l.g.HANDOFF_SUCCESS) return null != p.Z.toURLSafe(o) ? n.replace(o) : n.replace(N.Z5c.CONNECTIONS_SUCCESS(m));
+            let { handoff_status: c, success_redirect: o } = (await a.Z.getHandoffStatus(m, E)).body;
+            if (c === l.g.HANDOFF_SUCCESS) {
+                if (null == p.Z.toURLSafe(o)) return n.replace(N.Z5c.CONNECTIONS_SUCCESS(m));
+                window.location = o;
+                return;
+            }
             if (c === l.g.HANDOFF_ERROR || t >= 10) return n.replace(N.Z5c.CONNECTIONS_ERROR(m));
             e = setTimeout(() => {
                 b() && ((t += 1), r());
@@ -115,7 +119,7 @@ function _() {
                 null != e && clearTimeout(e);
             }
         );
-    }, [b, n, m, R, S]),
+    }, [b, n, m, R, E]),
     null != m && f.Z.isSupported(m))
         ? (0, r.jsx)(g, { platformType: m })
         : null;
@@ -127,13 +131,13 @@ function g(e) {
         platformType: n,
         children: [
             (0, r.jsx)('div', {
-                className: S.message,
+                className: E.message,
                 children: O.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: t.name })
             }),
-            (0, r.jsx)(a.Button, {
-                className: S.btn,
+            (0, r.jsx)(i.Button, {
+                className: E.btn,
                 disabled: !0,
-                children: (0, r.jsx)(a.Spinner, { itemClassName: S.spinnerItem })
+                children: (0, r.jsx)(i.Spinner, { itemClassName: E.spinnerItem })
             })
         ]
     });
