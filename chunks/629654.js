@@ -41,10 +41,14 @@ function S(e) {
                     I(), A.startAnimation(!1);
                 },
                 className: T.button,
-                'aria-label': 'Shuffle',
+                'aria-label': 'Shuffle Preset',
                 children: A.render()
             }),
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)(r.Clickable, {
+                onClick: () => {
+                    I(), A.startAnimation(!1);
+                },
+                'aria-label': ''.concat((0, u._h)(S.presetName), ' - Click to Shuffle Preset'),
                 className: T.select,
                 children: [
                     (0, n.jsx)('img', {
