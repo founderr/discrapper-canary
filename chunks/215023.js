@@ -5,6 +5,9 @@ n.d(t, {
     IV: function () {
         return N;
     },
+    J0: function () {
+        return v;
+    },
     Ku: function () {
         return g;
     },
@@ -377,4 +380,5 @@ let m = 800,
     ],
     N = 12,
     O = 36,
-    R = 1128;
+    R = 1128,
+    v = 518;

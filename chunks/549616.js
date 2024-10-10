@@ -22,9 +22,9 @@ function a(e, t, n) {
 }
 class s extends i.Z {
     static fromServer(e) {
-        let { products: t, logo: n, pdp_bg: i, mobile_bg: a, success_modal_bg: o, mobile_banner: l, hero_banner: u, ...c } = e;
+        let { products: t, logo: n, pdp_bg: i, mobile_bg: a, success_modal_bg: o, mobile_banner: l, hero_banner: u, featured_block: c, ...d } = e;
         return new s({
-            ...super.fromServer(c),
+            ...super.fromServer(d),
             products: t.reduce((e, t) => {
                 let n = r.Z.fromServer(t);
                 return 0 === n.items.length ? e : (e.push(n), e);
@@ -34,10 +34,11 @@ class s extends i.Z {
             mobileBg: a,
             successModalBg: o,
             mobileBanner: l,
-            heroBanner: u
+            heroBanner: u,
+            featuredBlock: c
         });
     }
     constructor(e) {
-        super(e), a(this, 'products', void 0), a(this, 'logo', void 0), a(this, 'pdpBg', void 0), a(this, 'mobileBg', void 0), a(this, 'successModalBg', void 0), a(this, 'mobileBanner', void 0), a(this, 'heroBanner', void 0), (this.products = e.products), (this.logo = e.logo), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner), (this.heroBanner = e.heroBanner);
+        super(e), a(this, 'products', void 0), a(this, 'logo', void 0), a(this, 'pdpBg', void 0), a(this, 'mobileBg', void 0), a(this, 'successModalBg', void 0), a(this, 'mobileBanner', void 0), a(this, 'heroBanner', void 0), a(this, 'featuredBlock', void 0), (this.products = e.products), (this.logo = e.logo), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner), (this.heroBanner = e.heroBanner), (this.featuredBlock = e.featuredBlock);
     }
 }
