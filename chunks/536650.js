@@ -37,9 +37,9 @@ function E(e) {
         I = a.useRef(null),
         P = a.useRef(null),
         g = a.useRef(null),
-        T = a.useRef(null),
-        L = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        b = (0, c.ZP)('number' == typeof f ? '' : f, null != L ? L : ''),
+        L = a.useRef(null),
+        T = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
+        b = (0, c.ZP)('number' == typeof f ? '' : f, null != T ? T : ''),
         S = a.useMemo(() => {
             var e, n;
             let t = (0, l.compact)([d.Z.parseHexString(b), d.Z.parseHexString(x ? '#000000' : '#ffffff')]);
@@ -58,12 +58,12 @@ function E(e) {
         }, [b, x]),
         R = A(I),
         M = A(P),
-        j = a.useCallback(() => {
+        y = a.useCallback(() => {
             var e, n, t, i, a, o, r, s, c, d;
             let u = E.current,
                 m = I.current,
                 p = g.current,
-                _ = null == T ? void 0 : T.current,
+                _ = null == L ? void 0 : L.current,
                 C = parseInt(null !== (e = null == R ? void 0 : R.height) && void 0 !== e ? e : ''),
                 h = parseInt(null !== (n = null == M ? void 0 : M.height) && void 0 !== n ? n : '');
             if (null != u && null != m && null != p && !isNaN(C) && !isNaN(h)) {
@@ -89,12 +89,12 @@ function E(e) {
         }, [S, b, null == M ? void 0 : M.height, x, E, null == R ? void 0 : R.height]);
     return (
         a.useEffect(() => {
-            j();
-        }, [j, x]),
+            y();
+        }, [y, x]),
         a.useEffect(() => {
             let e = E.current,
                 n = () => {
-                    j();
+                    y();
                 };
             return (
                 null == e || e.addEventListener('scroll', n),
@@ -102,7 +102,7 @@ function E(e) {
                     null == e || e.removeEventListener('scroll', n);
                 }
             );
-        }, [E, j]),
+        }, [E, y]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -132,7 +132,7 @@ function E(e) {
                 }),
                 (0, p.BQ)(n) && v
                     ? (0, i.jsx)('div', {
-                          ref: T,
+                          ref: L,
                           className: h.moreMenuButtonContainer,
                           children: (0, i.jsx)(C.Z, {
                               application: n,

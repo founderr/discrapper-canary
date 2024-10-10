@@ -1,9 +1,9 @@
 t.d(n, {
     Q2: function () {
-        return L;
+        return T;
     },
     pe: function () {
-        return T;
+        return L;
     }
 }),
     t(47120),
@@ -41,7 +41,7 @@ function P(e, n) {
 function g(e, n) {
     return (0, m.un)(e.displayName, n.displayName);
 }
-function T(e) {
+function L(e) {
     let { channel: n, query: t, commandLimit: a, applicationLimit: o, searchesCommands: r = !0, searchesBots: s = !0, searchesActivities: C = !0 } = e;
     t.startsWith(''.concat(x.GI)) && (t = t.substring(1));
     let {
@@ -79,7 +79,7 @@ function T(e) {
             channel: n,
             includeBuiltIn: !0
         }),
-        { apps: T } = (function (e) {
+        { apps: L } = (function (e) {
             let { channel: n, onlyWithCommands: t, includeBuiltIn: a, allowFetch: l = !0, includeEmbeddedApps: o, includeNonEmbeddedApps: r } = e,
                 s = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions,
                 d = (0, m.em)(n, s, l),
@@ -117,7 +117,7 @@ function T(e) {
             includeEmbeddedApps: C,
             includeNonEmbeddedApps: s
         }),
-        L = (0, d.Z)({ guildId: n.getGuildId() }),
+        T = (0, d.Z)({ guildId: n.getGuildId() }),
         b = i.useMemo(() => {
             var e;
             if (!r) return [];
@@ -207,7 +207,7 @@ function T(e) {
         }, [r, h, a, n, t]),
         S = i.useMemo(() => {
             if (0 === b.length) return [];
-            let e = new Map(T.map((e) => [e.id, e]));
+            let e = new Map(L.map((e) => [e.id, e]));
             return l().compact(
                 b.map((n) => {
                     var t;
@@ -221,20 +221,20 @@ function T(e) {
                     };
                 })
             );
-        }, [T, b, f]),
+        }, [L, b, f]),
         R = i.useMemo(() => {
             var e;
             let i = [];
             if (C) {
                 let e = new Set(
-                    T.map((e) => {
+                    L.map((e) => {
                         let { id: n } = e;
                         return n;
                     })
                 );
-                i.push(...T),
+                i.push(...L),
                     i.push(
-                        ...L.filter((n) => {
+                        ...T.filter((n) => {
                             let {
                                 application: { id: t }
                             } = n;
@@ -244,7 +244,7 @@ function T(e) {
                             return n;
                         })
                     );
-            } else s && (i = T);
+            } else s && (i = L);
             return (0, A.N)(i, {
                 limit: o,
                 filterPredicates: [
@@ -296,19 +296,19 @@ function T(e) {
                 ],
                 sortComparers: [I, P]
             });
-        }, [s, C, o, n, t, T, L]),
+        }, [s, C, o, n, t, L, T]),
         M = S.length > 0,
-        j = R.length > 0;
+        y = R.length > 0;
     return {
         commandResults: S,
         hasCommandResults: M,
         applicationResults: R,
-        hasApplicationResults: j,
-        isEmptyState: !M && !j,
+        hasApplicationResults: y,
+        isEmptyState: !M && !y,
         loading: E && r
     };
 }
-function L(e) {
+function T(e) {
     let { channel: n, query: t, fetches: a = !0, pageLimit: l = 1 / 0, entrypoint: c } = e;
     t.startsWith(''.concat(x.GI)) && (t = t.substring(1));
     let d = c === E._b.VOICE,

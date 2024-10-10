@@ -74,10 +74,10 @@ let Y = (e) => {
 t.Z = function (e) {
     let { product: t, user: r, category: s, onMount: o, isGiftEasterEggEnabled: $, isInFeedView: X } = e,
         { analyticsLocations: q } = (0, E.ZP)([...(X ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
-        Q = n.useRef(null),
-        J = (0, g.Z)(Q),
+        J = n.useRef(null),
+        Q = (0, g.Z)(J),
         [ee, et] = n.useState(!1),
-        er = J || ee,
+        er = Q || ee,
         [ea] = t.items,
         en = (0, p.e7)([h.Z], () => h.Z.useReducedMotion),
         es = O.ZP.canUseCollectibles(r),
@@ -94,7 +94,7 @@ t.Z = function (e) {
         { hoverVariant: eh } = (0, R.E)('CollectiblesShopTallCard'),
         eb = s.skuId === u.T.STORM && '1268362891946627103' === t.skuId;
     n.useEffect(() => {
-        let { current: e } = Q;
+        let { current: e } = J;
         if (null == e) return;
         let t = () => et(!0);
         return (
@@ -106,7 +106,7 @@ t.Z = function (e) {
         );
     }, []),
         n.useEffect(() => {
-            null == o || o(Q);
+            null == o || o(J);
         }, [o]);
     let eE = (0, v.Z)({ analyticsLocations: q }),
         eI = n.useRef(null),
@@ -175,7 +175,7 @@ t.Z = function (e) {
                   ? (0, a.jsx)(K, { onClick: eN })
                   : (0, a.jsx)(w.Z, {
                         product: t,
-                        returnRef: Q,
+                        returnRef: J,
                         isGiftEasterEggEnabled: $,
                         disableCustomColor: !0,
                         tooltipDelay: 250
@@ -200,7 +200,7 @@ t.Z = function (e) {
                           (0, x.Z)({
                               skuId: t.skuId,
                               analyticsLocations: q,
-                              returnRef: Q
+                              returnRef: J
                           })
                   };
             return (0, a.jsxs)('div', {
@@ -229,7 +229,7 @@ t.Z = function (e) {
         ? null
         : (0, a.jsx)(C.FocusRing, {
               children: (0, a.jsxs)(C.Clickable, {
-                  innerRef: Q,
+                  innerRef: J,
                   className: i()(em ? z.shopCardDark : z.shopCard, {
                       [z.partiallyOwned]: eu,
                       [z.shopCardAnimation]: !en && eh !== R.D.NO_MOVEMENT,

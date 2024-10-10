@@ -245,7 +245,7 @@ function b(e) {
             ? (0, r.jsx)(c.Clickable, {
                   'aria-label': v.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL,
                   onClick: ev,
-                  className: s()(C.visibleContainer, eC, eL),
+                  className: s()(C.addCustomStatusButtonBubble, eC, eL),
                   focusProps: { ringClassName: eD },
                   children: (0, r.jsx)('div', {
                       className: eb,

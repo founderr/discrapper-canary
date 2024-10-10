@@ -31,8 +31,8 @@ function A(e) {
             launchingComponentId: v,
             onSubmissionComplete: x
         }),
-        [g, T] = a.useState(!1),
-        L = (0, o.Qv)({
+        [g, L] = a.useState(!1),
+        T = (0, o.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
@@ -47,19 +47,19 @@ function A(e) {
             location: r.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: A,
             commandName: b,
-            autoDismissOnClick: L === o.JS.LEAVE,
+            autoDismissOnClick: T === o.JS.LEAVE,
             launchingComponentId: v,
             submitting: null != P ? P : I
         }),
-        { disabled: j, reason: y } = (0, u.Z)({
+        { disabled: y, reason: j } = (0, u.Z)({
             channelId: n.id,
             application: t,
-            activityAction: L
+            activityAction: T
         });
     return (0, i.jsx)(l.Tooltip, {
-        shouldShow: null != y,
+        shouldShow: null != j,
         tooltipContentClassName: f.tooltipContent,
-        text: y,
+        text: j,
         children: (e) => {
             let { onClick: n, ...a } = e;
             return (0, i.jsx)(l.Button, {
@@ -67,10 +67,10 @@ function A(e) {
                 type: 'submit',
                 size: N,
                 color: R,
-                disabled: j,
+                disabled: y,
                 submitting: g,
                 onClick: () => {
-                    T(!0),
+                    L(!0),
                         S(),
                         null == n || n(),
                         s.default.track(C.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {

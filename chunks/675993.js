@@ -22,8 +22,8 @@ var i = t(735250),
     A = t(783097),
     E = t(695676),
     N = t(520315),
-    x = t(29380),
-    v = t(783685),
+    v = t(29380),
+    x = t(783685),
     I = t(689938),
     P = t(131242),
     g = t(554034);
@@ -36,10 +36,10 @@ function L(e) {
         _ = (0, r.e7)([c.Z], () => c.Z.inDevModeForApplication(t.id)),
         h = null != l,
         { isSlideReady: f } = (0, E.hH)(),
-        [N, x] = a.useState(!1);
+        [N, v] = a.useState(!1);
     return (
         a.useEffect(() => {
-            f && x(!0);
+            f && v(!0);
         }, [f]),
         (0, i.jsxs)('div', {
             className: P.container,
@@ -238,7 +238,7 @@ function M(e) {
               children: [
                   (0, i.jsx)('div', {
                       className: o()(P.entryPointContainerFlexChild, { [P.entryPointButtonWrapper]: h }),
-                      children: (0, i.jsx)(x.Z, {
+                      children: (0, i.jsx)(v.Z, {
                           channel: t,
                           application: a,
                           sectionName: l,
@@ -249,7 +249,7 @@ function M(e) {
                   h && null != C
                       ? (0, i.jsx)('div', {
                             className: o()(P.entryPointContainerFlexChild, P.tryItOutButtonWrapper),
-                            children: (0, i.jsx)(v.Z, {
+                            children: (0, i.jsx)(x.Z, {
                                 botUserId: C,
                                 applicationId: a.id,
                                 buttonSize: f,

@@ -48,8 +48,8 @@ var a = r(735250),
     $ = r(531864),
     X = r(302800),
     q = r(215023),
-    Q = r(981631),
-    J = r(921944),
+    J = r(981631),
+    Q = r(921944),
     ee = r(420212),
     et = r(474936),
     er = r(213731);
@@ -165,13 +165,13 @@ t.default = function (e) {
     let r = (0, j.u)('CollectiblesShop'),
         { analyticsSource: s, analyticsLocations: o } = (0, c.cj)([k.Z], () => k.Z.getAnalytics()),
         { analyticsLocations: m } = (0, _.ZP)([...o, C.Z.COLLECTIBLES_SHOP]),
-        { sessionId: I, scrollerRef: x, scrollHandler: P } = (0, g._)(Q.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
+        { sessionId: I, scrollerRef: x, scrollHandler: P } = (0, g._)(J.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
         { feedState: M, catalogState: w, transitionToCatalog: W, transitionToFeed: V } = (0, A.B)(r, x),
         [z, X] = n.useState(!1),
         [ea, en] = n.useState(q.IV),
         [ei, eo] = n.useState(),
         [el, ec] = n.useState(),
-        ed = (0, c.e7)([v.Z], () => v.Z.getLayers().includes(Q.S9g.COLLECTIBLES_SHOP)),
+        ed = (0, c.e7)([v.Z], () => v.Z.getLayers().includes(J.S9g.COLLECTIBLES_SHOP)),
         eu = (0, u.f9)(),
         { onClose: ef } = (0, D.Db)(),
         ep = (0, c.e7)([S.default], () => S.default.getCurrentUser()),
@@ -192,7 +192,7 @@ t.default = function (e) {
                 var e;
                 let t;
                 (t = r ? (w === q.f7.VISIBLE ? el : s) : s),
-                    L.default.track(Q.rMx.COLLECTIBLES_SHOP_VIEWED, {
+                    L.default.track(J.rMx.COLLECTIBLES_SHOP_VIEWED, {
                         location_stack: m,
                         source: t,
                         page_session_id: I,
@@ -201,7 +201,7 @@ t.default = function (e) {
                     });
             }
             !em &&
-                L.default.track(Q.rMx.PREMIUM_UPSELL_VIEWED, {
+                L.default.track(J.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: et.cd.COLLECTIBLES_SHOP,
                     location_stack: m
                 });
@@ -210,12 +210,12 @@ t.default = function (e) {
     n.useEffect(() => {
         if ((eT(), !(0, h.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK)))
             (0, h.EW)(d.z.COLLECTIBLES_GIFTING_COACHMARK, {
-                dismissAction: J.L.AUTO_DISMISS,
+                dismissAction: Q.L.AUTO_DISMISS,
                 forceTrack: !0
             });
     }, [eT]),
         n.useEffect(() => {
-            !t && (0, p.Y)(Q.Z5c.COLLECTIBLES_SHOP);
+            !t && (0, p.Y)(J.Z5c.COLLECTIBLES_SHOP);
         }, [t]),
         n.useEffect(
             () => () => {

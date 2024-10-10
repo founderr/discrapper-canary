@@ -26,7 +26,7 @@ var i,
     l,
     r = n(70956);
 ((l = i || (i = {})).GUILDS = 'guilds'), (l.FEATURED = 'featured'), (l.GAMING = 'gaming'), (l.MUSIC = 'music'), (l.ENTERTAINMENT = 'entertainment'), (l.TECH = 'tech'), (l.EDUCATION = 'education'), (l.HUBS = 'hubs');
-let a = new Set(['guilds', 'hubs']),
+let a = new Set(['hubs']),
     s = [],
     o = 'q',
     c = 'c',
