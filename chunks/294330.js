@@ -40,27 +40,21 @@ function b(e) {
         [g, T] = a.useState(!1),
         [A, b] = a.useState(!1),
         [M, P] = a.useState(!1),
-        D = a.useCallback(
-            async (e) => {
-                let { className: n } = e.target;
-                if (!n.includes('Menu')) {
-                    e.stopPropagation(), b(!0);
-                    try {
-                        await s(t.id);
-                    } catch (t) {
-                        var i;
-                        let e = new _.Hx(t);
-                        d.Z.show({
-                            title: Z.Z.Messages.ERROR_GENERIC_TITLE,
-                            body: null !== (i = e.getAnyErrorMessage()) && void 0 !== i ? i : Z.Z.Messages.GENERIC_ERROR_BODY
-                        });
-                    } finally {
-                        b(!1);
-                    }
-                }
-            },
-            [t.id, s]
-        ),
+        D = a.useCallback(async () => {
+            b(!0);
+            try {
+                await s(t.id);
+            } catch (n) {
+                var e;
+                let t = new _.Hx(n);
+                d.Z.show({
+                    title: Z.Z.Messages.ERROR_GENERIC_TITLE,
+                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : Z.Z.Messages.GENERIC_ERROR_BODY
+                });
+            } finally {
+                b(!1);
+            }
+        }, [t.id, s]),
         y = a.useCallback(
             (e) => {
                 e && !g && (T(!0), null == l || l(t.id));
