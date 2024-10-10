@@ -46,7 +46,8 @@ e.exports = {
         SAFETY_CENTER: 'Safety Center',
         MOD_ACADEMY: 'Mod Academy',
         DISCOVER: 'Discover',
-        CAREERS: 'Careers'
+        CAREERS: 'Careers',
+        QUESTS: 'Quests'
     },
     NumberAbbreviations: {
         MILLION: '{num}M',
