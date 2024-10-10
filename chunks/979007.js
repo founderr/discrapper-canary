@@ -1,6 +1,18 @@
 n.d(t, {
-    k: function () {
+    Et: function () {
+        return s;
+    },
+    IV: function () {
+        return r;
+    },
+    Mm: function () {
+        return a;
+    },
+    kK: function () {
         return i;
     }
 });
-let i = 'featured';
+let i = 'featured',
+    a = '',
+    s = 100,
+    r = 7;

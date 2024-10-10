@@ -11,52 +11,53 @@ var i = n(735250),
     _ = n(125909),
     E = n(797908),
     h = n(292191),
-    m = n(854336);
-let I = {
+    m = n(979007),
+    I = n(854336);
+let p = {
     results: [],
     totalPages: 0
 };
 t.Z = function (e) {
     var t;
     let { categoryId: n } = e,
-        [p, g] = a.useState(1),
-        T = a.useCallback((e) => {
-            g(e);
+        [g, T] = a.useState(1),
+        f = a.useCallback((e) => {
+            T(e);
         }, []);
     a.useEffect(() => {
-        g(1);
+        T(1);
     }, [n]);
-    let f = a.useMemo(
+    let S = a.useMemo(
             () => ({
-                query: '',
-                page: p,
+                query: m.Mm,
+                page: g,
                 categoryId: n
             }),
-            [p, n]
+            [g, n]
         ),
-        S = (0, r.e7)([u.Z], () =>
+        C = (0, r.e7)([u.Z], () =>
             u.Z.getFetchState({
-                query: '',
-                page: p,
+                query: m.Mm,
+                page: g,
                 categoryId: n
             })
         ),
-        C = (0, r.cj)([u.Z], () => {
+        N = (0, r.cj)([u.Z], () => {
             var e;
-            return null !== (e = u.Z.getSearchResults(f)) && void 0 !== e ? e : I;
+            return null !== (e = u.Z.getSearchResults(S)) && void 0 !== e ? e : p;
         }),
-        N = null !== (t = (0, o.Z)(C)) && void 0 !== t ? t : I,
-        { results: A, totalPages: v } = a.useMemo(() => (S === d.M.FETCHING ? N : C), [S, N, C]),
-        Z = a.useMemo(() => (null == A ? void 0 : A.filter((e) => !(e.type !== s.s.APPLICATION))), [A]),
-        L = a.useCallback((e) => {
+        A = null !== (t = (0, o.Z)(N)) && void 0 !== t ? t : p,
+        { results: v, totalPages: Z } = a.useMemo(() => (C === d.M.FETCHING ? A : N), [C, A, N]),
+        L = a.useMemo(() => (null == v ? void 0 : v.filter((e) => !(e.type !== s.s.APPLICATION))), [v]),
+        R = a.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: a, fetchCounts: s } = e;
             s &&
                 c.yC({
-                    query: '',
+                    query: m.Mm,
                     guildId: a
                 }),
                 c.yC({
-                    query: '',
+                    query: m.Mm,
                     guildId: a,
                     options: {
                         page: t,
@@ -66,26 +67,26 @@ t.Z = function (e) {
                 });
         }, []);
     return (a.useEffect(() => {
-        L({
-            page: p,
+        R({
+            page: g,
             activeCategoryId: n,
             onSuccessCallback: () => {}
         });
-    }, [n, L, p]),
-    S === d.M.ERROR)
+    }, [n, R, g]),
+    C === d.M.ERROR)
         ? (0, i.jsx)('div', {
-              className: m.errorContainer,
-              children: (0, i.jsx)(h.Z, { className: m.error })
+              className: I.errorContainer,
+              children: (0, i.jsx)(h.Z, { className: I.error })
           })
         : (0, i.jsxs)(_.Z, {
-              loading: S === d.M.FETCHING,
+              loading: C === d.M.FETCHING,
               children: [
                   (0, i.jsx)('div', {
-                      className: m.content,
+                      className: I.content,
                       children:
-                          null == Z
+                          null == L
                               ? void 0
-                              : Z.map((e) => {
+                              : L.map((e) => {
                                     if (e.type === s.s.APPLICATION) {
                                         let t = e.data;
                                         return (0, i.jsx)(E.Z, { application: t }, t.id);
@@ -94,13 +95,13 @@ t.Z = function (e) {
                                 })
                   }),
                   (0, i.jsx)(l.Paginator, {
-                      className: m.paginationInput,
-                      totalCount: Math.min(7 * v, 700),
-                      pageSize: 7,
+                      className: I.paginationInput,
+                      totalCount: Math.min(Z * m.IV, m.Et * m.IV),
+                      pageSize: m.IV,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
-                      currentPage: p,
-                      onPageChange: T
+                      currentPage: g,
+                      onPageChange: f
                   })
               ]
           });

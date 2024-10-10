@@ -10,28 +10,33 @@ var i = n(470079),
     r = n(618508);
 function l() {
     let [e, t] = i.useState(''),
-        [n] = i.useState(1),
-        l = (0, r.k)(),
-        o = i.useCallback((e) => {
+        [n, l] = i.useState(''),
+        [o, c] = i.useState(!1),
+        d = (0, r.k)(),
+        u = i.useCallback((e) => {
             t(e);
         }, []),
-        c = i.useCallback(() => {
-            t('');
+        _ = i.useCallback(() => {
+            t(''), l(''), c(!1);
         }, []),
-        d = i.useCallback(() => {
+        E = i.useCallback(() => {
             s.yC({
                 query: e,
                 options: {
-                    page: n,
+                    page: 1,
                     source: a.F.APP_DIRECTORY,
-                    categoryId: null == l ? void 0 : l.id
+                    categoryId: null == d ? void 0 : d.id
                 }
-            });
-        }, [n, e, l]);
+            }),
+                c(!0),
+                l(e);
+        }, [e, d]);
     return {
         searchQuery: e,
-        onSearchTextChange: o,
-        onClearSearch: c,
-        onSearchSubmit: d
+        searchFetchedQuery: n,
+        onSearchTextChange: u,
+        onClearSearch: _,
+        onSearchSubmit: E,
+        isSearchVisible: o
     };
 }
