@@ -31,21 +31,20 @@ var d = n(202226),
     b = n(846519),
     M = n(579806),
     P = n(896361),
-    U = n(892254),
-    w = n(756148);
+    U = n(892254);
 n(776200);
-var x = n(857192),
-    G = n(203088),
-    k = n(44163),
-    B = n(710845),
-    F = n(70956);
-x.default.cssDebuggingEnabled && n.e('55776').then(n.bind(n, 233999));
-let V = 5 * F.Z.Millis.MINUTE,
-    H = document.getElementById('app-mount');
-E()(null != H, 'Could not find app-mount'), (H.className = __OVERLAY__ ? '' : G.appMount);
-let Z = (0, d.createRoot)(H),
-    Y = { '/oauth2/authorize': v.Z },
-    j = (e) => Z.render((0, c.jsx)(U.Z, { children: (0, c.jsx)(P.Z, { children: (0, c.jsx)(e, {}) }) }));
+var w = n(857192),
+    x = n(203088),
+    G = n(44163),
+    k = n(710845),
+    B = n(70956);
+w.default.cssDebuggingEnabled && n.e('55776').then(n.bind(n, 233999));
+let F = 5 * B.Z.Millis.MINUTE,
+    V = document.getElementById('app-mount');
+E()(null != V, 'Could not find app-mount'), (V.className = __OVERLAY__ ? '' : x.appMount);
+let H = (0, d.createRoot)(V),
+    Z = { '/oauth2/authorize': v.Z },
+    Y = (e) => H.render((0, c.jsx)(U.Z, { children: (0, c.jsx)(P.Z, { children: (0, c.jsx)(e, {}) }) }));
 if (null != M.Z) {
     null === (r = M.Z.setUncaughtExceptionHandler) ||
         void 0 === r ||
@@ -67,16 +66,16 @@ if (null != M.Z) {
         .filter((e) => null != n[e])
         .map((e) => ''.concat(e, ': ').concat(n[e]))
         .join(', ');
-    new B.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(c, ', build: ').concat(t));
+    new k.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(c, ', build: ').concat(t));
     let d = null === (l = (u = M.Z.remoteApp).getReleaseChannel) || void 0 === l ? void 0 : l.call(u);
     ('canary' === d || 'development' === d) && R.ZP.pauseFrameEvictor(), R.ZP.initializeExitHook();
 }
-if (((0, D.O)(window), __OVERLAY__)) j(f.Z.Overlay);
-else if (null != window.require && null == window.DiscordNative) j(f.Z.OutdatedClient);
+if (((0, D.O)(window), __OVERLAY__)) Y(f.Z.Overlay);
+else if (null != window.require && null == window.DiscordNative) Y(f.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), C.isPlatformEmbedded)) {
         (window.onbeforeunload = () => R.ZP.beforeUnload()), R.ZP.on('HELP_OPEN', () => window.open(A.Z.getCommunityURL()));
-        let e = new b.sW(V, () => R.ZP.purgeMemory());
+        let e = new b.sW(F, () => R.ZP.purgeMemory());
         R.ZP.on('MAIN_WINDOW_BLUR', () => {
             e.delay(), R.ZP.setFocused(!1), (0, y.T_)(window, !1);
         }),
@@ -86,11 +85,11 @@ else {
             R.ZP.on('MAIN_WINDOW_PATH', function (e, t, n) {
                 var r;
                 let i = null != n ? new URLSearchParams(n) : null;
-                if (null === (r = Y[t]) || void 0 === r ? !void 0 : !r.call(Y, i)) (0, L.uL)(t);
+                if (null === (r = Z[t]) || void 0 === r ? !void 0 : !r.call(Z, i)) (0, L.uL)(t);
             }),
             R.ZP.on('MAIN_WINDOW_HIDDEN', () => {
                 (0, y.al)(window);
             });
     }
-    m.Z.initialize(), h.Z.initialize(), p.Z.init(), S.Z.init(), k.Z.init(), I.Z.initialize(), N.Z.initialize(), O.Z.initialize(), T.j(), w.Z.init(), j(f.Z.App);
+    m.Z.initialize(), h.Z.initialize(), p.Z.init(), S.Z.init(), G.Z.init(), I.Z.initialize(), N.Z.initialize(), O.Z.initialize(), T.j(), Y(f.Z.App);
 }
