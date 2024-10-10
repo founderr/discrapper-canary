@@ -20,8 +20,8 @@ var i,
     N = n(403404),
     h = n(100527),
     C = n(906732),
-    p = n(783097),
-    f = n(581364),
+    f = n(783097),
+    p = n(581364),
     g = n(592180),
     A = n(347475),
     S = n(598077),
@@ -54,7 +54,7 @@ function j(e) {
 ((i = a || (a = {}))[(i.InteractionUser = 0)] = 'InteractionUser'), (i[(i.InteractionTarget = 1)] = 'InteractionTarget');
 function U(e, t, n, i, a) {
     var l, r, c;
-    let { message: d, compact: u, channel: _, isInteractionUserBlocked: I, showAvatarPopout: m, showTargetAvatarPopout: T, onClickAvatar: N, onUserContextMenu: h, onClickTargetAvatar: C, onTargetUserContextMenu: p, onPopoutRequestClose: f } = e;
+    let { message: d, compact: u, channel: _, isInteractionUserBlocked: I, showAvatarPopout: m, showTargetAvatarPopout: T, onClickAvatar: N, onUserContextMenu: h, onClickTargetAvatar: C, onTargetUserContextMenu: f, onPopoutRequestClose: p } = e;
     if (u && 1 === n) return null;
     if ((u && null == d.activityInstance) || I)
         return (0, s.jsx)('div', {
@@ -89,7 +89,7 @@ function U(e, t, n, i, a) {
                 guildId: _.guild_id,
                 guildAvatar: g,
                 onClick: 1 === n ? C : N,
-                onContextMenu: 1 === n ? p : h
+                onContextMenu: 1 === n ? f : h
             }),
         S = 1 === n ? T : m;
     return null != a && null != S
@@ -97,7 +97,7 @@ function U(e, t, n, i, a) {
               renderPopout: a,
               shouldShow: S,
               position: 'right',
-              onRequestClose: f,
+              onRequestClose: p,
               children: A
           })
         : A();
@@ -155,7 +155,7 @@ function k(e) {
             ),
             [a, i.id, i.interactionData]
         ),
-        M = (0, f.t0)(i),
+        M = (0, p.t0)(i),
         v = (null == M ? void 0 : M.type) === I.B8.APPLICATION_COMMAND && null != M.target_user ? new S.Z(M.target_user) : null,
         j = (null == M ? void 0 : M.type) === I.B8.APPLICATION_COMMAND && null != i.messageReference && null != e.renderTargetMessage,
         k = (0, R.Sw)(null === (t = i.interaction) || void 0 === t ? void 0 : t.user, a),
@@ -217,7 +217,7 @@ function k(e) {
                                     children: r
                                 });
                             {
-                                let e = (0, p.XZ)(r);
+                                let e = (0, f.XZ)(r);
                                 return (0, s.jsx)(E.Clickable, {
                                     ...n,
                                     tag: 'span',

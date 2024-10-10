@@ -16,8 +16,8 @@ var i = n(735250),
     N = n(594174),
     h = n(739566),
     C = n(981631),
-    p = n(665692),
-    f = n(689938),
+    f = n(665692),
+    p = n(689938),
     g = n(120584);
 let A = {
         tag: 'span',
@@ -111,7 +111,7 @@ t.Z = a.memo(function (e) {
                                                 sourceAnalyticsLocations: P,
                                                 analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                             }),
-                                        children: [p.ME, e.nick]
+                                        children: [f.ME, e.nick]
                                     });
                                 }
                                 break;
@@ -122,7 +122,7 @@ t.Z = a.memo(function (e) {
                                 null != t &&
                                     (g = (0, i.jsxs)(E.Z, {
                                         ...S,
-                                        children: [p.zy, t.name]
+                                        children: [f.zy, t.name]
                                     }));
                                 break;
                             }
@@ -132,7 +132,7 @@ t.Z = a.memo(function (e) {
                                 null != t &&
                                     (g = (0, i.jsxs)(E.Z, {
                                         ...S,
-                                        children: [p.ME, t.name]
+                                        children: [f.ME, t.name]
                                     }));
                                 break;
                             }
@@ -141,7 +141,7 @@ t.Z = a.memo(function (e) {
                                     t = null != R ? T.Z.getRole(R.id, e) : void 0;
                                 if (null != t)
                                     g = (0, i.jsxs)(E.Z, {
-                                        children: [p.ME, t.name]
+                                        children: [f.ME, t.name]
                                     });
                                 else {
                                     let t = N.default.getUser(e);
@@ -155,14 +155,14 @@ t.Z = a.memo(function (e) {
                                                     guildId: x.guild_id,
                                                     analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                                 }),
-                                            children: [p.ME, e.nick]
+                                            children: [f.ME, e.nick]
                                         });
                                     }
                                 }
                                 break;
                             }
                             case c.jw.ATTACHMENT:
-                                g = M(f.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
+                                g = M(p.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
                                 break;
                             default: {
                                 let e = null == Z ? void 0 : null === (d = Z.choices) || void 0 === d ? void 0 : d.find((e) => e.value === O.value);

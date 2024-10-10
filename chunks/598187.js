@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(528011),
     h = n(533244),
     C = n(825829),
-    p = n(226192),
-    f = n(36459),
+    f = n(226192),
+    p = n(36459),
     g = n(434404),
     A = n(518950),
     S = n(347475),
@@ -215,14 +215,14 @@ function F(e) {
     var t;
     let { message: n, compact: s } = e,
         { joinAttempts: l, raidDatetime: r, dmsSent: d, raidType: m, resolvedReason: T } = (0, C.FL)(n),
-        f = (0, _.e7)([M.Z], () => M.Z.getChannel(n.channel_id), [n.channel_id]),
-        g = null !== (t = null == f ? void 0 : f.guild_id) && void 0 !== t ? t : null,
+        p = (0, _.e7)([M.Z], () => M.Z.getChannel(n.channel_id), [n.channel_id]),
+        g = null !== (t = null == p ? void 0 : p.guild_id) && void 0 !== t ? t : null,
         { shouldShowIncidentActions: A } = (0, N.mI)(g),
         S = (0, v.sR)(n.author.id, n.channel_id),
         O = a.useCallback(() => {
-            let e = null == f ? void 0 : f.guild_id;
-            null != e && (0, p.kW)(n.id, e);
-        }, [n.id, f]),
+            let e = null == p ? void 0 : p.guild_id;
+            null != e && (0, f.kW)(n.id, e);
+        }, [n.id, p]),
         x = m === u.$.DM_RAID,
         R = x ? I.CircleWarningIcon : I.ChatWarningIcon;
     return (0, i.jsx)(V, {
@@ -367,8 +367,8 @@ function w(e) {
                     onClick: function () {
                         null != l &&
                             null != c &&
-                            (0, f.UE)(l, c, () => {
-                                (0, m.c)(d), (0, f.T9)(l);
+                            (0, p.UE)(l, c, () => {
+                                (0, m.c)(d), (0, p.T9)(l);
                             });
                     },
                     color: I.Button.Colors.LINK,

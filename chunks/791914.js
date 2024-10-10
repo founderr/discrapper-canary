@@ -20,8 +20,8 @@ var a = n(399606),
     T = n(811304);
 function N(e) {
     let { tab: t, setTab: n, children: N, badgeState: h, closePopout: C } = e,
-        { showReminders: p } = E.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
-        { enabled: f, inInbox: g } = u.Z.useExperiment({ location: 'RecentsPopout' }),
+        { showReminders: f } = E.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+        { enabled: p, inInbox: g } = u.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: A } = d.Z.useExperiment({ location: 'RecentsHeader' }),
         S = (0, a.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
         M = (0, a.e7)([_.Z], () => _.Z.getOverdueMessageReminderCount());
@@ -98,7 +98,7 @@ function N(e) {
                                   ]
                               })
                             : null,
-                        f && g
+                        p && g
                             ? (0, i.jsx)(l.TabBar.Item, {
                                   'aria-label': m.Z.Messages.FOR_LATER,
                                   id: s.X.BOOKMARKS,
@@ -106,7 +106,7 @@ function N(e) {
                                   children: 0 === M ? m.Z.Messages.FOR_LATER : m.Z.Messages.FOR_LATER_COUNT.format({ count: M })
                               })
                             : null,
-                        p && !f
+                        f && !p
                             ? (0, i.jsx)(l.TabBar.Item, {
                                   'aria-label': 'todos',
                                   id: s.X.TODOS,

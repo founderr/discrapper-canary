@@ -24,8 +24,8 @@ var i = n(735250),
     N = n(585483),
     h = n(143316),
     C = n(240126),
-    p = n(791914),
-    f = n(147522),
+    f = n(791914),
+    p = n(147522),
     g = n(809780),
     A = n(981631),
     S = n(689938),
@@ -84,7 +84,7 @@ function O(e) {
         return (0, i.jsxs)('div', {
             className: M.container,
             children: [
-                (0, i.jsx)(p.Z, {
+                (0, i.jsx)(f.Z, {
                     tab: u.X.UNREADS,
                     setTab: t,
                     badgeState: R,
@@ -102,7 +102,7 @@ function O(e) {
         className: l()(M.container, 'group-spacing-'.concat(U)),
         'aria-label': S.Z.Messages.UNREADS_TAB_LABEL,
         children: [
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(f.Z, {
                 tab: u.X.UNREADS,
                 setTab: t,
                 badgeState: R,
@@ -125,7 +125,7 @@ function O(e) {
                             ...a,
                             onScroll: P === g.jd.Done ? void 0 : D,
                             className: M.scroller,
-                            children: [s ? (0, i.jsx)(x, { setSeenTutorial: r }) : null, (0, f.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: M.spinner })]
+                            children: [s ? (0, i.jsx)(x, { setSeenTutorial: r }) : null, (0, p.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: M.spinner })]
                         });
                     }
                 })
@@ -173,7 +173,7 @@ function R(e) {
     return (0, i.jsxs)('div', {
         className: M.container,
         children: [
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(f.Z, {
                 tab: u.X.UNREADS,
                 setTab: t,
                 badgeState: n,

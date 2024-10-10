@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(825829),
     h = n(226192),
     C = n(36459),
-    p = n(336197),
-    f = n(359110),
+    f = n(336197),
+    p = n(359110),
     g = n(347475),
     A = n(496675),
     S = n(594174),
@@ -260,7 +260,7 @@ function J(e) {
         }, [r.id, ee, J, o]),
         eu = a.useCallback(
             (e) => {
-                if (null != et && null != z) e.stopPropagation(), e.preventDefault(), (0, p.Z)(B.Z5c.CHANNEL(null == z ? void 0 : z.guild_id, null == z ? void 0 : z.id, et));
+                if (null != et && null != z) e.stopPropagation(), e.preventDefault(), (0, f.Z)(B.Z5c.CHANNEL(null == z ? void 0 : z.guild_id, null == z ? void 0 : z.id, et));
             },
             [z, et]
         ),
@@ -272,7 +272,7 @@ function J(e) {
                         channelId: e,
                         messageId: r.id
                     }),
-                    (0, f.Kh)(e));
+                    (0, p.Kh)(e));
             },
             [r, z]
         ),

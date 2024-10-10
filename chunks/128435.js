@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return p;
     }
 }),
     n(627341);
@@ -119,7 +119,7 @@ function C(e) {
                   className: o
               });
 }
-function p(e) {
+function f(e) {
     let { message: t, poll: n, className: a } = e,
         s = (0, _.$B)(n.containerStyle),
         d = (function (e, t) {
@@ -186,13 +186,13 @@ function p(e) {
               })
           });
 }
-function f(e) {
+function p(e) {
     let { message: t, poll: n, className: a } = e;
     return (0, i.jsx)(_.XL, {
         message: t,
         poll: n,
         children: (0, i.jsx)(E.Pk, {
-            children: (0, i.jsx)(p, {
+            children: (0, i.jsx)(f, {
                 message: t,
                 poll: n,
                 className: a

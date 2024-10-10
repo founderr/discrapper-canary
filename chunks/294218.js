@@ -15,8 +15,8 @@ var i = n(735250),
     N = n(739566),
     h = n(492593),
     C = n(453687),
-    p = n(25015),
-    f = n(689674),
+    f = n(25015),
+    p = n(689674),
     g = n(438075),
     A = n(963550),
     S = n(845080),
@@ -31,7 +31,7 @@ t.Z = a.memo(function (e) {
         F = a.type === R.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
         w = a.isFirstMessageInForumPost(D),
         V = (0, d.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()),
-        { content: H, hasSpoilerEmbeds: Y } = (0, p.Z)(a, {
+        { content: H, hasSpoilerEmbeds: Y } = (0, f.Z)(a, {
             hideSimpleEmbedContent: b,
             allowList: w || V,
             allowHeading: w || V,
@@ -48,7 +48,7 @@ t.Z = a.memo(function (e) {
             roleId: X.iconRoleId
         }),
         q = (0, o.e7)([E.Z], () => E.Z.can(R.Plq.CREATE_INSTANT_INVITE, D)),
-        $ = (0, f.Z)({
+        $ = (0, p.Z)({
             message: a,
             channel: D,
             enabled: k

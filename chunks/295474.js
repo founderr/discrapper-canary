@@ -6,7 +6,7 @@ n.d(t, {
         return C;
     },
     ww: function () {
-        return p;
+        return f;
     }
 }),
     n(789020);
@@ -63,7 +63,7 @@ function C(e) {
         [e]
     );
 }
-function p(e) {
+function f(e) {
     let { guildId: t, scrollPosition: n, analyticsLocation: o, analyticsLocations: c, openWithoutBackstack: _ } = e,
         { analyticsLocations: E } = (0, l.ZP)(),
         m = (0, a.e7)([d.Z], () => d.Z.getGuild(t), [t]),

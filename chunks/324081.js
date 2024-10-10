@@ -21,8 +21,8 @@ var a = n(120356),
     N = n(592125),
     h = n(430824),
     C = n(158776),
-    p = n(594174),
-    f = n(689938),
+    f = n(594174),
+    p = n(689938),
     g = n(699420);
 let A = {
     top: 8,
@@ -72,7 +72,7 @@ function M(e) {
 }
 function O(e) {
     let { channel: t, gotoChannel: n } = e,
-        a = (0, r.e7)([p.default], () => (t.isDM() ? p.default.getUser(t.getRecipientId()) : null)),
+        a = (0, r.e7)([f.default], () => (t.isDM() ? f.default.getUser(t.getRecipientId()) : null)),
         s = null == a ? (0, d.x)(t) : a.getAvatarURL(void 0, 40);
     return (0, i.jsx)(o.Clickable, {
         onClick: n,
@@ -108,7 +108,7 @@ function R(e) {
         I = (0, u.ZP)(t, !1),
         m = null == c ? (null == l ? void 0 : l.name) : ''.concat(null == l ? void 0 : l.name, ' \u203A ').concat(c.name),
         T = t.isMultiUserDM()
-            ? f.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
+            ? p.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
             : t.isPrivate()
               ? (0, i.jsx)(v, { channel: t })
               : (0, i.jsx)(o.Clickable, {
@@ -163,8 +163,8 @@ function v(e) {
             user: n,
             activities: a,
             applicationStream: s
-        } = (0, r.cj)([p.default, C.Z, T.Z], () => {
-            let e = p.default.getUser(t.getRecipientId());
+        } = (0, r.cj)([f.default, C.Z, T.Z], () => {
+            let e = f.default.getUser(t.getRecipientId());
             return {
                 user: e,
                 activities: null != e ? C.Z.getActivities(e.id) : null,

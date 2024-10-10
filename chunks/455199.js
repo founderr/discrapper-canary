@@ -16,8 +16,8 @@ var i,
     N = n(23750),
     h = n(314897),
     C = n(592125),
-    p = n(375954),
-    f = n(306680),
+    f = n(375954),
+    p = n(306680),
     g = n(699516),
     A = n(914010),
     S = n(9156),
@@ -39,7 +39,7 @@ let x = 'recentMentionFilterSettings',
     U = !1;
 function y(e) {
     if (e instanceof N.ZP) return e;
-    let t = p.Z.getMessage(e.channel_id, e.id);
+    let t = f.Z.getMessage(e.channel_id, e.id);
     return null != t ? t : (0, E.e5)(e);
 }
 function B(e) {
@@ -60,7 +60,7 @@ function B(e) {
         suppressRoles: s
     })
         ? (U &&
-              f.ZP.ackMessageId(n.id) !== e.id &&
+              p.ZP.ackMessageId(n.id) !== e.id &&
               (0, I.ZP)({
                   message: e,
                   userId: i,
@@ -109,7 +109,7 @@ function H(e) {
 }
 class Y extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(M.default, C.Z, p.Z, f.ZP);
+        this.waitFor(M.default, C.Z, f.Z, p.ZP);
     }
     isOpen() {
         return j;

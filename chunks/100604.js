@@ -52,8 +52,8 @@ class N {
             N = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
             h = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
             C = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Z,
-            p = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.Z,
-            f = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.Z,
+            f = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.Z,
+            p = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.Z,
             { snapshotIndex: g, parentMessage: A, messageSnapshot: S } = this,
             { useOldIcon: M } = (0, E.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
             { showForwardBreadcrumb: O } = _.u.getCurrentConfig({ location: 'MessageForward' });
@@ -67,7 +67,7 @@ class N {
         if (null != R && R.guild_id === (null === (e = A.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
             let e = m.getChannel(null === (n = A.messageReference) || void 0 === n ? void 0 : n.channel_id);
             if (null == e) {
-                let e = p.getGuild(R.guild_id);
+                let e = f.getGuild(R.guild_id);
                 return null == e
                     ? {
                           snapshotIndex: g,
@@ -104,7 +104,7 @@ class N {
                 snapshotIndex: g,
                 useOldIcon: M
             };
-        let L = null !== (d = p.getGuild(v)) && void 0 !== d ? d : f.getGuild(v);
+        let L = null !== (d = f.getGuild(v)) && void 0 !== d ? d : p.getGuild(v);
         return null == L
             ? {
                   snapshotIndex: g,

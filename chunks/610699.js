@@ -23,8 +23,8 @@ var i = n(735250),
     N = n(100527),
     h = n(906732),
     C = n(835473),
-    p = n(471445),
-    f = n(111028),
+    f = n(471445),
+    p = n(111028),
     g = n(955415),
     A = n(601964),
     S = n(592125),
@@ -93,7 +93,7 @@ function y(e) {
 function B(e) {
     let { channel: t, guild: n, isStacked: a, hasEnded: s } = e;
     if (null != t && null != n) {
-        let e = (0, p.KS)(t, n);
+        let e = (0, f.KS)(t, n);
         return (0, i.jsxs)('div', {
             className: l()(b.channel, {
                 [b.stacked]: a,
@@ -107,7 +107,7 @@ function B(e) {
                           color: 'currentColor'
                       })
                     : null,
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(p.Z, {
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         children: P.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
@@ -125,7 +125,7 @@ function B(e) {
                   [b.stacked]: a,
                   [b.ended]: s
               }),
-              children: (0, i.jsx)(f.Z, {
+              children: (0, i.jsx)(p.Z, {
                   children: (0, i.jsx)(u.Text, {
                       variant: 'text-xs/normal',
                       children: P.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: n.name })
@@ -138,8 +138,8 @@ function k(e) {
     var t, n;
     let s,
         r,
-        { invite: d, getAcceptInviteContext: p } = e,
-        { approximate_member_count: f, approximate_presence_count: R, target_type: k, target_application: G } = d;
+        { invite: d, getAcceptInviteContext: f } = e,
+        { approximate_member_count: p, approximate_presence_count: R, target_type: k, target_application: G } = d;
     o()(k === Z.Iq.EMBEDDED_APPLICATION && null != G, 'invalid application invite');
     let F = a.useRef(null),
         [w, V] = a.useState(!1),
@@ -202,7 +202,7 @@ function k(e) {
         es = () => {
             _.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: d.code,
-                context: p('Invite Button Embed'),
+                context: f('Invite Button Embed'),
                 analyticsLocations: q
             });
         };
@@ -277,7 +277,7 @@ function k(e) {
                                   ei
                                       ? null
                                       : (0, i.jsx)(y, {
-                                            members: f,
+                                            members: p,
                                             membersOnline: R,
                                             isLarge: w,
                                             isStacked: H

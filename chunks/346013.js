@@ -21,8 +21,8 @@ var i = n(735250),
     N = n(1585),
     h = n(841762),
     C = n(336197),
-    p = n(406432),
-    f = n(348238),
+    f = n(406432),
+    p = n(348238),
     g = n(38267),
     A = n(184301),
     S = n(347475),
@@ -44,7 +44,7 @@ function B(e) {
     let { embedUrl: r, message: B, channel: k } = e,
         G = (0, P.J)(r, B),
         { setPopout: F } = (0, g.Z)(B.id, D.d$),
-        w = (0, f.qo)(B, k, F, !0),
+        w = (0, p.qo)(B, k, F, !0),
         V = M.QK.useSetting(),
         H = (0, L.n)(),
         [Y, W] = a.useState(!1),
@@ -115,7 +115,7 @@ function B(e) {
             if (!et.enabled) ei((e) => !e);
         },
         e_ = G.coverImage,
-        eE = null != e_ && (0, p.d$)(e_);
+        eE = null != e_ && (0, f.d$)(e_);
     return (0, i.jsxs)('div', {
         className: U.postPreviewContainer,
         children: [

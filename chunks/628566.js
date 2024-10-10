@@ -56,7 +56,7 @@ function C(e) {
               writable: !0
           })
         : (l[r] = o);
-let p = new h(d.Z, {
+let f = new h(d.Z, {
     LOGOUT() {
         E.clear();
     },
@@ -119,4 +119,4 @@ let p = new h(d.Z, {
         return E.delete(t.id);
     }
 });
-t.Z = p;
+t.Z = f;

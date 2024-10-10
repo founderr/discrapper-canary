@@ -16,8 +16,8 @@ var i,
     N = n(592745),
     h = n(952164),
     C = n(768419),
-    p = n(456432),
-    f = n(347475),
+    f = n(456432),
+    p = n(347475),
     g = n(789407),
     A = n(598077),
     S = n(757266),
@@ -143,7 +143,7 @@ class G extends (i = s.PureComponent) {
                 let { channelId: n, guildId: i, message: s, analyticsLocations: l } = this.props;
                 return null == n
                     ? null
-                    : (0, a.jsx)(f.Z, {
+                    : (0, a.jsx)(p.Z, {
                           ...t,
                           userId: e.id,
                           guildId: null != i ? i : void 0,
@@ -154,7 +154,7 @@ class G extends (i = s.PureComponent) {
             }),
             B(this, 'renderSpotifyJoinButton', (e) => {
                 let { channelId: t, guildId: n } = this.props;
-                return (0, a.jsx)(p.Z, {
+                return (0, a.jsx)(f.Z, {
                     guildId: null != n ? n : void 0,
                     channelId: t,
                     source: 'Invite Embed',

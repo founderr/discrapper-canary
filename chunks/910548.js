@@ -21,8 +21,8 @@ var i,
     N = n(745510),
     h = n(549006),
     C = n(64078),
-    p = n(29270),
-    f = n(709586),
+    f = n(29270),
+    p = n(709586),
     g = n(267642),
     A = n(739566),
     S = n(834129),
@@ -151,8 +151,8 @@ function k(e) {
                   })()
         ),
         { createMultipleConfettiAt: T, confettiCanvas: h } = o.useContext(N.h),
-        [C, p] = o.useState(null),
-        f = (0, u.uR)(h, C),
+        [C, f] = o.useState(null),
+        p = (0, u.uR)(h, C),
         g = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
@@ -216,7 +216,7 @@ function k(e) {
         o.useEffect(() => {
             if (A && 'leaf_fall' === c) {
                 let e = P[I].leafRotationDirection;
-                f.createConfetti(
+                p.createConfetti(
                     {
                         id: ''.concat(b, '-').concat((0, _.Z)()),
                         position: {
@@ -266,11 +266,11 @@ function k(e) {
                     { sprite: 'TOP_LEFT' === I ? j : U }
                 );
             }
-        }, [A, f, I, c]),
+        }, [A, p, I, c]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Ji, {
-                    ref: p,
+                    ref: f,
                     sprites: y,
                     colors: D,
                     spriteWidth: 45,
@@ -313,7 +313,7 @@ function G(e) {
             }
             return null;
         })(n),
-        d = (0, p.Z)(n),
+        d = (0, f.Z)(n),
         { createMultipleConfettiAt: u, addClickListener: _ } = o.useContext(N.h),
         [E, I] = o.useState(!1),
         R = o.useRef(null),
@@ -373,7 +373,7 @@ function G(e) {
         className: x.iconWrapper,
         innerRef: R,
         onClick: l,
-        children: (0, r.jsx)(f.Z, {
+        children: (0, r.jsx)(p.Z, {
             className: x.icon,
             onMouseEnter: D
         })

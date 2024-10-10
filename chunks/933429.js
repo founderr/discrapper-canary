@@ -21,8 +21,8 @@ var i,
     N = n(223892),
     h = n(674525),
     C = n(605236),
-    p = n(353926),
-    f = n(594190),
+    f = n(353926),
+    p = n(594190),
     g = n(38618),
     A = n(569545),
     S = n(615365),
@@ -75,8 +75,8 @@ var i,
     eN = n(853872),
     eh = n(78839),
     eC = n(295226),
-    ep = n(580130),
-    ef = n(695103),
+    ef = n(580130),
+    ep = n(695103),
     eg = n(358085),
     eA = n(74538),
     eS = n(922156),
@@ -320,7 +320,7 @@ let ew = [ex.kVF.QUARANTINED, ex.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, ex.kVF.VI
                 return null == t ? void 0 : t.hasBouncedEmail;
             }
         },
-        [ex.kVF.CONNECT_SPOTIFY]: { predicate: () => !Y.Z.hasConnectedAccount() && f.ZP.isObservedAppRunning(m.Z.get(ex.ABu.SPOTIFY).name) && !eF(ex.kVF.CONNECT_SPOTIFY) },
+        [ex.kVF.CONNECT_SPOTIFY]: { predicate: () => !Y.Z.hasConnectedAccount() && p.ZP.isObservedAppRunning(m.Z.get(ex.ABu.SPOTIFY).name) && !eF(ex.kVF.CONNECT_SPOTIFY) },
         [ex.kVF.WIN32_DEPRECATED_MESSAGE]: {
             predicate: () => (null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.arch) === 'ia32' && (null === I.Z || void 0 === I.Z ? void 0 : I.Z.process.platform) === 'win32',
             metadata: () => ({ dismissUntil: o()().add(5, 'days').toDate() })
@@ -375,8 +375,8 @@ let ew = [ex.kVF.QUARANTINED, ex.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, ex.kVF.VI
                     i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0,
                     a = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf('day'), 'days') : 0,
                     s = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
-                    l = ep.Z.applicationIdsFetched.has(ev.CL),
-                    r = ep.Z.getForApplication(ev.CL),
+                    l = ef.Z.applicationIdsFetched.has(ev.CL),
+                    r = ef.Z.getForApplication(ev.CL),
                     c = null != t ? (0, eA.Af)(t) : null,
                     d = null != c ? eA.ZP.getSkuIdForPlan(c.planId) : null,
                     u =
@@ -433,10 +433,10 @@ let ew = [ex.kVF.QUARANTINED, ex.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, ex.kVF.VI
             }
         },
         [ex.kVF.APPLICATION_TEST_MODE]: {
-            predicate: () => null != ef.Z.testModeApplicationId,
+            predicate: () => null != ep.Z.testModeApplicationId,
             metadata: () => {
-                if (null == ef.Z.testModeApplicationId) return {};
-                let e = ef.Z.testModeApplicationId,
+                if (null == ep.Z.testModeApplicationId) return {};
+                let e = ep.Z.testModeApplicationId,
                     t = T.Z.getApplication(e);
                 return {
                     applicationName: null != t ? t.name : e,
@@ -580,7 +580,7 @@ function eW() {
 }
 class eK extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([e_.Z, el.Z, ee.Z, ec.Z, G.Z, eC.Z, Q.Z, $.Z, K.Z, O.Z, V.Z, z.Z], eY), this.waitFor(eI.default, ed.Z, en.Z, et.ZP, er.Z, ei.Z, eu.Z, p.Z, ec.Z, eE.Z, Y.Z, f.ZP, el.Z, eS.Z, eM.Z, ef.Z, ea.Z, eh.ZP, eO.Z, ee.Z, eN.Z, es.Z, G.Z, ep.Z, eC.Z, $.Z, L.Z, h.Z, w.Z, V.Z, z.Z);
+        this.syncWith([e_.Z, el.Z, ee.Z, ec.Z, G.Z, eC.Z, Q.Z, $.Z, K.Z, O.Z, V.Z, z.Z], eY), this.waitFor(eI.default, ed.Z, en.Z, et.ZP, er.Z, ei.Z, eu.Z, f.Z, ec.Z, eE.Z, Y.Z, p.ZP, el.Z, eS.Z, eM.Z, ep.Z, ea.Z, eh.ZP, eO.Z, ee.Z, eN.Z, es.Z, G.Z, ef.Z, eC.Z, $.Z, L.Z, h.Z, w.Z, V.Z, z.Z);
     }
     hasNotice() {
         return null != eB && null != eB.type;

@@ -20,8 +20,8 @@ let _ = (e) => {
             [N, h] = i.useState(!1),
             {
                 initialized: C,
-                loading: p,
-                items: f,
+                loading: f,
+                items: p,
                 hasMore: g,
                 cursor: A,
                 errored: S
@@ -44,9 +44,9 @@ let _ = (e) => {
         let x = (0, l.Z)();
         i.useEffect(
             () => () => {
-                _ ? !x() && (S || f.length > 100) && (0, o.jF)() : n && f.length > 100 && (0, o.jF)();
+                _ ? !x() && (S || p.length > 100) && (0, o.jF)() : n && p.length > 100 && (0, o.jF)();
             },
-            [n, f, _, x, S]
+            [n, p, _, x, S]
         ),
             i.useEffect(() => {
                 let e = m && t;
@@ -85,8 +85,8 @@ let _ = (e) => {
         );
         return {
             initialized: C,
-            loading: p,
-            items: f,
+            loading: f,
+            items: p,
             hasMore: g,
             loadMore: R,
             loadingMore: N,

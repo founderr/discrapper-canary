@@ -31,8 +31,8 @@ var i,
     N = n(853856),
     h = n(181945),
     C = n(220444),
-    p = n(601070),
-    f = n(344185),
+    f = n(601070),
+    p = n(344185),
     g = n(569471),
     A = n(723170),
     S = n(675478),
@@ -98,7 +98,7 @@ class V extends o.EventEmitter {
                 hasLoadedAnything: !0
             };
         if ('forum' === e.type) {
-            let t = f.Z.hasLoaded(e.guildId);
+            let t = p.Z.hasLoaded(e.guildId);
             return {
                 ...e,
                 isFullyLoaded: t,
@@ -277,7 +277,7 @@ class V extends o.EventEmitter {
                 let e = this.state.channels.map((e) => {
                     if ('forum' !== e.type) return e;
                     {
-                        let t = f.Z.hasLoaded(e.guildId);
+                        let t = p.Z.hasLoaded(e.guildId);
                         return {
                             ...e,
                             isFullyLoaded: t,
@@ -325,7 +325,7 @@ function Y() {
                 D.ZP.getFlattenedGuildIds().forEach((n) => {
                     if (null == n) return;
                     let i = R.ZP.getSelectableChannelIds(n),
-                        a = p.Z.getActiveJoinedUnreadThreadsForGuild(n);
+                        a = f.Z.getActiveJoinedUnreadThreadsForGuild(n);
                     i.forEach((i) => {
                         var s;
                         W(e, t, n, i);
@@ -449,7 +449,7 @@ function X(e) {
         r.useEffect(() => (Z.Z.addChangeListener(t.reloadMessages), () => Z.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]),
         r.useEffect(() => (j.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => j.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]),
         r.useEffect(() => (g.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => g.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
-        r.useEffect(() => (f.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => f.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),
+        r.useEffect(() => (p.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => p.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),
         [l, t]
     );
 }

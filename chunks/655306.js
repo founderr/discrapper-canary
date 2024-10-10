@@ -261,6 +261,6 @@ class g extends a.Z {
             }),
             (this.delayedCall = new u.sW(100, this.update)),
             (this.offscreenTimeout = new u.V7()),
-            E.w.on(E.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged.bind(this));
+            E.w.on(E.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
     }
 }

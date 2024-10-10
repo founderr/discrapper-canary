@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return p;
     }
 });
 var i = n(735250),
@@ -20,9 +20,9 @@ var i = n(735250),
     N = n(981631),
     h = n(176505),
     C = n(689938),
-    p = n(900547);
-function f(e) {
-    var t, f;
+    f = n(900547);
+function p(e) {
+    var t, p;
     let { onDismiss: g } = e,
         A = (0, s.e7)([_.Z], () => _.Z.getGuildId()),
         S = (0, s.e7)([u.Z], () => (null != A ? u.Z.getChannelId(A) : null), [A]),
@@ -55,14 +55,14 @@ function f(e) {
             });
         },
         b = (0, i.jsx)(r.Z, {
-            className: p.guildIcon,
+            className: f.guildIcon,
             guild: O,
             size: r.Z.Sizes.MINI
         }),
         D = (0, T.OY)(R, O.name);
-    if (null != (null !== (f = R.dmsDisabledUntil) && void 0 !== f ? f : R.invitesDisabledUntil) && v)
+    if (null != (null !== (p = R.dmsDisabledUntil) && void 0 !== p ? p : R.invitesDisabledUntil) && v)
         return (0, i.jsxs)(l.Notice, {
-            className: p.notice,
+            className: f.notice,
             color: l.NoticeColors.NEUTRAL,
             children: [
                 (0, i.jsx)(l.NoticeCloseButton, {
@@ -72,10 +72,10 @@ function f(e) {
                 b,
                 D,
                 (0, i.jsx)(l.NoticeButton, {
-                    className: p.actionButton,
+                    className: f.actionButton,
                     onClick: () => P(!1),
                     children: (0, i.jsxs)('div', {
-                        className: p.actionButtonInner,
+                        className: f.actionButtonInner,
                         children: [
                             (0, i.jsx)(l.LockIcon, {
                                 size: 'xs',
@@ -90,7 +90,7 @@ function f(e) {
     let j = (0, T.CG)(R) ? C.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({ guildName: O.name }) : (0, T.kk)(R) ? C.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({ guildName: O.name }) : C.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({ guildName: O.name }),
         U = L && S === h.oC.MEMBER_SAFETY;
     return (0, i.jsxs)(l.Notice, {
-        className: p.notice,
+        className: f.notice,
         color: l.NoticeColors.WARNING,
         children: [
             (0, i.jsx)(l.NoticeCloseButton, {
@@ -101,10 +101,10 @@ function f(e) {
             j,
             !U &&
                 (0, i.jsx)(l.NoticeButton, {
-                    className: p.actionButton,
+                    className: f.actionButton,
                     onClick: () => P(!0),
                     children: (0, i.jsx)('div', {
-                        className: p.actionButtonInner,
+                        className: f.actionButtonInner,
                         children: (0, i.jsx)('span', { children: C.Z.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW })
                     })
                 })

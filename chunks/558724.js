@@ -1,6 +1,6 @@
 n.d(t, {
     J: function () {
-        return f;
+        return p;
     }
 }),
     n(47120),
@@ -40,8 +40,8 @@ let N = {
     },
     h = N,
     C = {},
-    p = null,
-    f = 86400000;
+    f = null,
+    p = 86400000;
 ((s = i || (i = {})).IS_OWNER = 'is_owner'), (s.IS_ADMIN = 'is_admin'), (s.IS_COMMUNITY = 'is_community'), (s.GUILD_SIZE = 'guild_size'), (s.IS_HUB = 'is_hub'), (s.IS_VIEWING = 'is_viewing'), (s.GUILD_PERMISSIONS = 'guild_permissions'), (s.GUILD_SIZE_ALL = 'guild_size_all');
 let g = new Set(Object.values(i));
 function A(e) {
@@ -96,11 +96,11 @@ function S(e) {
     let { survey: t } = e;
     if (((h.lastFetched = Date.now()), null == h.hiddenSurveys && (h.hiddenSurveys = {}), null != t && null == h.hiddenSurveys[t.key])) {
         if (!A(t)) return;
-        p = t;
+        f = t;
     }
 }
 function M() {
-    if (null != p && (A(p) || ((p = null), 0))) return !1;
+    if (null != f && (A(f) || ((f = null), 0))) return !1;
     !(function () {
         let e = Object.values((C = null != C ? C : {}))[0];
         if (null != e && A(e)) {
@@ -110,8 +110,8 @@ function M() {
             });
             return;
         }
-        if (null == p) return;
-        p = null;
+        if (null == f) return;
+        f = null;
     })();
 }
 class O extends (a = r.ZP.PersistedStore) {
@@ -122,7 +122,7 @@ class O extends (a = r.ZP.PersistedStore) {
         return h;
     }
     getCurrentSurvey() {
-        return p;
+        return f;
     }
     getSurveyOverride() {
         return h.surveyOverride;
@@ -156,12 +156,12 @@ T(O, 'displayName', 'SurveyStore'),
     (t.Z = new O(o.Z, {
         CONNECTION_OPEN: function () {
             var e;
-            if (!(null != h.lastFetched && Date.now() - (null !== (e = h.lastFetched) && void 0 !== e ? e : 0) < f) || null != h.surveyOverride) (0, c.wk)(h.surveyOverride, !0);
+            if (!(null != h.lastFetched && Date.now() - (null !== (e = h.lastFetched) && void 0 !== e ? e : 0) < p) || null != h.surveyOverride) (0, c.wk)(h.surveyOverride, !0);
         },
         SURVEY_FETCHED: S,
         SURVEY_HIDE: function (e) {
             let { key: t } = e;
-            (h.hiddenSurveys[t] = !0), (p = null), (C = null != C ? C : {}), delete C[t];
+            (h.hiddenSurveys[t] = !0), (f = null), (C = null != C ? C : {}), delete C[t];
         },
         SURVEY_OVERRIDE: function (e) {
             let { id: t } = e;

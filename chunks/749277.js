@@ -21,8 +21,8 @@ var a = n(442837),
     N = n(463230),
     h = n(246965),
     C = n(703656),
-    p = n(706454),
-    f = n(933429),
+    f = n(706454),
+    p = n(933429),
     g = n(395361),
     A = n(626135),
     S = n(243778),
@@ -34,8 +34,8 @@ var a = n(442837),
     L = n(569252);
 let Z = (e) => {
     let { dismissibleContent: t, noticeType: Z } = e,
-        P = (0, a.e7)([f.Z], () => f.Z.getNotice()),
-        b = (0, a.e7)([p.default], () => p.default.locale);
+        P = (0, a.e7)([p.Z], () => p.Z.getNotice()),
+        b = (0, a.e7)([f.default], () => f.default.locale);
     return (0, i.jsx)(S.ZP, {
         contentTypes: [t],
         groupName: M.R.NOTICE_BAR,
@@ -211,7 +211,7 @@ let Z = (e) => {
                         ]
                     });
                 case s.z.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
-                    let p = _.Z.getEligibleGuildsForNagActivate();
+                    let f = _.Z.getEligibleGuildsForNagActivate();
                     return (0, i.jsxs)(l.Notice, {
                         color: l.NoticeColors.DEFAULT,
                         children: [
@@ -223,7 +223,7 @@ let Z = (e) => {
                             (0, i.jsx)(l.PrimaryCTANoticeButton, {
                                 noticeType: Z,
                                 onClick: () => {
-                                    a(M.L.PRIMARY), (0, C.uL)(1 === p.length ? O.Z5c.GUILD_SETTINGS(p[0], 'role-subscriptions') : O.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
+                                    a(M.L.PRIMARY), (0, C.uL)(1 === f.length ? O.Z5c.GUILD_SETTINGS(f[0], 'role-subscriptions') : O.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
                                 },
                                 children: v.Z.Messages.LETS_GO
                             })

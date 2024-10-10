@@ -22,8 +22,8 @@ function N(e) {
     var t;
     let { message: n, compact: a, usernameHook: N, channel: h } = e,
         C = (0, l.e7)([c.Z], () => c.Z.getGuild(h.guild_id)),
-        p = (0, d.ZP)(n),
-        f = N(p),
+        f = (0, d.ZP)(n),
+        p = N(f),
         {
             avatarSrc: g,
             eventHandlers: { onMouseEnter: A, onMouseLeave: S }
@@ -65,8 +65,8 @@ function N(e) {
                     (0, i.jsx)('div', {
                         className: s()(T.__invalid_messageContent, { [T.compact]: a }),
                         children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-                            username: p.nick,
-                            usernameHook: f,
+                            username: f.nick,
+                            usernameHook: p,
                             guildName: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : ''
                         })
                     })

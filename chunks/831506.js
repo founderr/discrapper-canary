@@ -42,13 +42,13 @@ function C(e, t, n, i) {
         (T[n] = s), s.add(e);
     })(t, e, s);
 }
-function p(e) {
+function f(e) {
     let { guild: t } = e,
         n = !1;
     for (let { user: e, status: i, activities: a } of t.presences) !1 !== C(t.id, e.id, a, i) && (n = !0);
     return n;
 }
-function f(e, t) {
+function p(e, t) {
     let n = !1;
     return (
         t.forEach((t) => {
@@ -90,14 +90,14 @@ class A extends (i = c.ZP.Store) {
             let { guilds: t, presences: n } = e,
                 i = !1;
             for (let { user: e, status: t, activities: a } of n) null != e && !1 !== C(I.ME, e.id, a, t) && (i = !0);
-            for (let e of t) !1 !== p({ guild: e }) && (i = !0);
+            for (let e of t) !1 !== f({ guild: e }) && (i = !0);
             return i;
         },
         OVERLAY_INITIALIZE: function (e) {
             let { parties: t, userParties: n } = e;
             (T = {}), (m = { ...n }), Object.keys(t).forEach((e) => (T[e] = new Set(t[e])));
         },
-        GUILD_CREATE: p,
+        GUILD_CREATE: f,
         PRESENCES_REPLACE: function (e) {
             let { presences: t } = e,
                 n = !1;
@@ -115,7 +115,7 @@ class A extends (i = c.ZP.Store) {
         },
         THREAD_MEMBER_LIST_UPDATE: function (e) {
             let { guildId: t, members: n } = e;
-            return f(
+            return p(
                 t,
                 n.map((e) => e.presence)
             );
@@ -124,7 +124,7 @@ class A extends (i = c.ZP.Store) {
             let { guildId: t, addedMembers: n } = e;
             return (
                 null != n &&
-                f(
+                p(
                     t,
                     n.map((e) => e.presence)
                 )

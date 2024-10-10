@@ -11,11 +11,11 @@ var i = n(470079),
     l = n(689938);
 function o() {
     let e = (0, a.e7)([s.Z], () => s.Z.getCategories()),
-        [t, n] = i.useState(r.k),
+        [t, n] = i.useState(r.kK),
         o = i.useMemo(
             () => [
                 {
-                    id: r.k,
+                    id: r.kK,
                     label: l.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY
                 },
                 ...e.map((e) => ({

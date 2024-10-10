@@ -25,8 +25,8 @@ var i = n(735250),
     N = n(551428),
     h = n(626135),
     C = n(572004),
-    p = n(601911),
-    f = n(504211),
+    f = n(601911),
+    p = n(504211),
     g = n(381961),
     A = n(970321),
     S = n(680005),
@@ -42,7 +42,7 @@ let v = P(function (e) {
                 () => {
                     var e;
                     let n = c.Z.getApplication(t),
-                        i = null != n ? (0, p.y)(n, 45) : void 0,
+                        i = null != n ? (0, f.y)(n, 45) : void 0,
                         a = null === (e = E.Z.getBasicChannel(o.channel_id)) || void 0 === e ? void 0 : e.guild_id;
                     return [n, c.Z.isFetchingApplication(t), c.Z.didFetchingApplicationFail(t), m.Z.getStoreLayout(t), m.Z.getFetchStatus(t), a, i];
                 },
@@ -86,7 +86,7 @@ let v = P(function (e) {
             description: P,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(M.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, O.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
-                (0, f.X)(t, f.B.STORE_EMBED);
+                (0, p.X)(t, p.B.STORE_EMBED);
             },
             iconSrc: S,
             onIconClick: () => {
@@ -120,7 +120,7 @@ let v = P(function (e) {
                         s = T.Z.get(d),
                         l = null !== (n = null == s ? void 0 : null === (t = s.application) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null == s ? void 0 : s.applicationId,
                         r = null !== (i = null != l ? c.Z.getApplication(l) : void 0) && void 0 !== i ? i : null == s ? void 0 : s.application,
-                        o = null != r ? (0, p.y)(r, 45) : void 0,
+                        o = null != r ? (0, f.y)(r, 45) : void 0,
                         u = I.Z.getForSKU(d);
                     return [s, r, N.Z.getForSKU(d), T.Z.isFetching(d), T.Z.didFetchingSkuFail(d), u.length > 0 ? u[0] : null, a, o];
                 },
@@ -231,7 +231,7 @@ let v = P(function (e) {
             description: Y,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(M.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(g.id, O.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
-                (0, f.X)(g.id, f.B.SKU_EMBED, d);
+                (0, p.X)(g.id, p.B.SKU_EMBED, d);
             },
             iconSrc: j,
             onIconClick: () => {

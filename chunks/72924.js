@@ -26,7 +26,7 @@ async function N(e) {
         s()(null != e, 'Could not find store listing for sku'), e.sku.type === T.epS.SUBSCRIPTION_GROUP && (await (0, E.rx)(t, e.id));
     }
     (C = null != C ? C : m.Z.get(n)), s()(null != C && C.applicationId === t, 'SKU must belong to application'), C.type === T.epS.SUBSCRIPTION && !(0, c.a)([C.id]) && (await (0, o.GZ)(C.id));
-    let p = (function () {
+    let f = (function () {
         let e = _.Z.getWindow(T.KJ3.CHANNEL_CALL_POPOUT);
         return null == e || e.closed ? l.DEFAULT_MODAL_CONTEXT : l.POPOUT_MODAL_CONTEXT;
     })();
@@ -37,7 +37,7 @@ async function N(e) {
                 skuId: n,
                 analyticsLocationObject: h,
                 analyticsLocations: N,
-                contextKey: p,
+                contextKey: f,
                 onComplete: (t) => {
                     var n;
                     e(null !== (n = null == t ? void 0 : t.entitlements) && void 0 !== n ? n : []);

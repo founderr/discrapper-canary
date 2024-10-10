@@ -21,14 +21,14 @@ var i = n(735250),
 function N(e) {
     let { setTab: t, badgeState: s, closePopout: N } = e,
         C = (0, r.Wu)([d.Z], () => d.Z.getInvites()),
-        p = (0, r.e7)([d.Z], () => d.Z.getInviteStatuses()),
-        [f, g] = a.useMemo(
+        f = (0, r.e7)([d.Z], () => d.Z.getInviteStatuses()),
+        [p, g] = a.useMemo(
             () =>
                 l().partition(C, (e) => {
                     var t;
-                    return (null === (t = p[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+                    return (null === (t = f[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
                 }),
-            [C, p]
+            [C, f]
         );
     return (a.useEffect(() => {
         (0, u.sJ)();
@@ -84,12 +84,12 @@ function N(e) {
                       children: (0, i.jsxs)('div', {
                           className: T.invitesContainer,
                           children: [
-                              f.length > 0 &&
+                              p.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(h, { title: m.Z.Messages.GAME_INVITES_RECENT_HEADER }),
                                           (0, i.jsx)(i.Fragment, {
-                                              children: f.map((e) =>
+                                              children: p.map((e) =>
                                                   (0, i.jsx)(
                                                       I.Z,
                                                       {

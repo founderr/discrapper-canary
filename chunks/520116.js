@@ -21,8 +21,8 @@ var i = n(735250),
     N = n(314897),
     h = n(496675),
     C = n(594174),
-    p = n(55935),
-    f = n(655354),
+    f = n(55935),
+    p = n(655354),
     g = n(809780),
     A = n(981631),
     S = n(689938),
@@ -53,7 +53,7 @@ function x(e) {
                 onKeyDown: E,
                 ..._,
                 children: [
-                    (0, i.jsx)(f.Z, {
+                    (0, i.jsx)(p.Z, {
                         className: M.jumpButton,
                         onJump: (e) => u(e, s.id)
                     }),
@@ -78,7 +78,7 @@ function R(e) {
     var t, n;
     let { channel: a, channelRecord: s, gotoChannel: r } = e,
         { enabled: m } = d.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
-        f = T.jU.useSetting(),
+        p = T.jU.useSetting(),
         O = (0, o.e7)([h.Z], () => h.Z.can(A.Plq.CREATE_INSTANT_INVITE, s)),
         R = (0, E.P1)(s),
         v = !1,
@@ -92,7 +92,7 @@ function R(e) {
         n.forEach((n) => {
             if (!(0, u.Z)(n, O)) {
                 if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
-                    let t = (0, p.vc)(n.timestamp, 'LL');
+                    let t = (0, f.vc)(n.timestamp, 'LL');
                     P.push(
                         (0, i.jsx)(
                             I.Z,
@@ -114,7 +114,7 @@ function R(e) {
                             {
                                 channel: s,
                                 message: n,
-                                compact: f,
+                                compact: p,
                                 isGroupStart: a,
                                 treatSpam: !Z && m && (0, E.DQ)(n) && R,
                                 gotoChannel: r

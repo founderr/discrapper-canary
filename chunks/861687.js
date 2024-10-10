@@ -1042,14 +1042,6 @@ class eo extends E.Z {
     getGoLiveSource() {
         return w.Z.getGoLiveSource();
     }
-    incomingVideoEnabledChanged(e) {
-        var t, n;
-        null === (t = this._goLiveQualityManager) || void 0 === t || t.onIncomingVideoEnabled(e), null === (n = this.getOrCreateVideoQuality()) || void 0 === n || n.setOcclusionIncomingVideoEnabled(e);
-    }
-    windowVisibilityChanged(e) {
-        var t;
-        null === (t = this.getOrCreateVideoQuality()) || void 0 === t || t.setWindowOcclusionState(!e);
-    }
     constructor({ userId: e, sessionId: t, guildId: n, channelId: r, context: i = er.Yn.DEFAULT, rtcServerId: a, parentMediaSessionId: s }) {
         var l, u;
         super(),
@@ -1178,6 +1170,14 @@ class eo extends E.Z {
                     channel_type: t
                 });
             }),
+            ei(this, 'incomingVideoEnabledChanged', (e) => {
+                var t, n;
+                null === (t = this._goLiveQualityManager) || void 0 === t || t.onIncomingVideoEnabled(e), null === (n = this.getOrCreateVideoQuality()) || void 0 === n || n.setOcclusionIncomingVideoEnabled(e);
+            }),
+            ei(this, 'windowVisibilityChanged', (e) => {
+                var t;
+                null === (t = this.getOrCreateVideoQuality()) || void 0 === t || t.setWindowOcclusionState(!e);
+            }),
             (this.context = i),
             (this.logger = new g.Z('RTCConnection('.concat(null !== (l = null != a ? a : n) && void 0 !== l ? l : r, ', ').concat(this.context, ')'))),
             (this.userId = e),
@@ -1256,8 +1256,8 @@ class eo extends E.Z {
                     }
                 }));
         (this._remoteVideoSinkWants = q.Yy),
-            et.w.on(et.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged.bind(this)),
-            et.w.on(et.e.WindowVisibilityChanged, this.windowVisibilityChanged.bind(this)),
+            et.w.on(et.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
+            et.w.on(et.e.WindowVisibilityChanged, this.windowVisibilityChanged),
             G.ZP.shouldRecordNextConnection() ? ((this._recordingEnabled = !0), T.TC(!1)) : (this._recordingEnabled = !1),
             (this._soundshareStats = new Q.Z()),
             H.Z.addOnlineCallback(this._handleNetworkOnline),

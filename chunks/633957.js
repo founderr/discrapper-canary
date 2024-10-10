@@ -21,8 +21,8 @@ var i = n(735250),
     N = n(314897),
     h = n(592125),
     C = n(158776),
-    p = n(594174),
-    f = n(823379),
+    f = n(594174),
+    p = n(823379),
     g = n(226378),
     A = n(701488),
     S = n(689938),
@@ -44,11 +44,11 @@ function O(e) {
             currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity(),
             activityLaunchState: o.ZP.getLaunchState(n.id, null != Z ? Z : void 0)
         })),
-        U = (0, s.Wu)([p.default], () => {
+        U = (0, s.Wu)([f.default], () => {
             var e;
             return Array.from(null !== (e = null == b ? void 0 : b.userIds) && void 0 !== e ? e : [])
-                .map((e) => p.default.getUser(e))
-                .filter(f.lm);
+                .map((e) => f.default.getUser(e))
+                .filter(p.lm);
         }),
         y = (0, s.e7)([C.Z], () => {
             var e;

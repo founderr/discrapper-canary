@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     },
     s: function () {
-        return f;
+        return p;
     }
 });
 var i = n(735250),
@@ -26,7 +26,7 @@ let h = (e) => {
             { url: n, description: a } = t;
         return null == n
             ? null
-            : (0, i.jsx)(p, {
+            : (0, i.jsx)(f, {
                   url: n,
                   description: a
               });
@@ -36,9 +36,9 @@ let h = (e) => {
         let { embed: s } = e;
         if (!m.n2.has(s.type)) return null;
         let l = void 0 !== s.video && s.type !== r.h.GIFV ? s.video.url : null !== (a = null === (t = s.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a ? a : null === (n = s.image) || void 0 === n ? void 0 : n.url;
-        return null == l ? null : (0, i.jsx)(p, { url: l });
+        return null == l ? null : (0, i.jsx)(f, { url: l });
     },
-    p = (e) => {
+    f = (e) => {
         let { url: t, description: n } = e,
             a = (0, _.cb)(t);
         return (0, i.jsx)('div', {
@@ -56,7 +56,7 @@ let h = (e) => {
                   })
         });
     };
-function f(e) {
+function p(e) {
     c.Z.pop(),
         (0, E.t)({
             id: 'explicit-media-false-positive-modal',
@@ -67,7 +67,7 @@ function f(e) {
 function g(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: s, analyticsContext: l, attachmentPreview: r, embedPreview: c, onConfirmPress: u, transitionState: _, onClose: E } = e,
         m = (0, d.Dt)(),
-        p = a.useCallback(() => {
+        f = a.useCallback(() => {
             (0, I.aP)({
                 action: I.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
@@ -76,7 +76,7 @@ function g(e) {
             }),
                 E();
         }, [t, n, l, E]),
-        f = a.useCallback(() => {
+        p = a.useCallback(() => {
             null == u || u(),
                 (0, I.aP)({
                     action: I.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
@@ -102,7 +102,7 @@ function g(e) {
                 (0, i.jsxs)(o.ModalContent, {
                     children: [
                         (0, i.jsx)(o.ModalCloseButton, {
-                            onClick: p,
+                            onClick: f,
                             className: N.closeButton
                         }),
                         (0, i.jsx)(o.Heading, {
@@ -130,7 +130,7 @@ function g(e) {
                             submitting: s,
                             size: o.Button.Sizes.MEDIUM,
                             color: o.Button.Colors.BRAND,
-                            onClick: f,
+                            onClick: p,
                             children: T.Z.Messages.CONFIRM
                         }),
                         (0, i.jsx)(o.Button, {
@@ -138,7 +138,7 @@ function g(e) {
                             disabled: s,
                             color: o.Button.Colors.TRANSPARENT,
                             size: o.Button.Sizes.MEDIUM,
-                            onClick: p,
+                            onClick: f,
                             children: T.Z.Messages.CANCEL
                         })
                     ]

@@ -16,7 +16,7 @@ var i,
 let N = 'ChannelFollowingBumpChannels',
     h = new Set(),
     C = new Set();
-class p extends (i = r.ZP.Store) {
+class f extends (i = r.ZP.Store) {
     initialize() {
         this.waitFor(d.default), (h = new Set(o.K.get(N)));
     }
@@ -25,7 +25,7 @@ class p extends (i = r.ZP.Store) {
     }
 }
 (l = 'ChannelFollowingPublishBumpStore'),
-    (s = 'displayName') in (a = p)
+    (s = 'displayName') in (a = f)
         ? Object.defineProperty(a, s, {
               value: l,
               enumerable: !0,
@@ -33,7 +33,7 @@ class p extends (i = r.ZP.Store) {
               writable: !0
           })
         : (a[s] = l),
-    (t.Z = new p(c.Z, {
+    (t.Z = new f(c.Z, {
         MESSAGE_CREATE: function (e) {
             var t;
             let { channelId: n, message: i, optimistic: a } = e;

@@ -16,8 +16,8 @@ var i = n(735250),
     N = n(600164),
     h = n(479446),
     C = n(930114),
-    p = n(981632),
-    f = n(108989),
+    f = n(981632),
+    p = n(108989),
     g = n(703656),
     A = n(314897),
     S = n(82142),
@@ -331,13 +331,13 @@ class V extends a.Component {
                     children: [
                         !t &&
                             y.eZ.includes(e.giftStyle) &&
-                            (0, i.jsx)(f.Z, {
+                            (0, i.jsx)(p.Z, {
                                 className: k.snow,
                                 wind: 5
                             }),
                         a && (0, i.jsx)(v.Z, { className: k.headerIcon }),
                         null != e.giftStyle &&
-                            (0, i.jsx)(p.Z, {
+                            (0, i.jsx)(f.Z, {
                                 defaultAnimationState: e.redeemed ? h.SR.LOOP : h.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: r

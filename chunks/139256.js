@@ -36,8 +36,8 @@ var i,
     N = n(553826),
     h = n(506071),
     C = n(203143),
-    p = n(79390),
-    f = n(839963),
+    f = n(79390),
+    p = n(839963),
     g = n(294608),
     A = n(65145),
     S = n(981631),
@@ -103,18 +103,18 @@ function P(e) {
             canTapAnswers: a,
             answersInteraction: n
         })
-            .with({ answersInteraction: f.Y7.RADIO_BUTTONS }, () => ({
+            .with({ answersInteraction: p.Y7.RADIO_BUTTONS }, () => ({
                 ContainerComponent: v,
                 answerElementType: 1
             }))
-            .with({ answersInteraction: f.Y7.CHECKBOXES }, () => ({
+            .with({ answersInteraction: p.Y7.CHECKBOXES }, () => ({
                 ContainerComponent: R,
                 answerElementType: 2
             }))
             .with(
                 {
                     canTapAnswers: !0,
-                    answersInteraction: f.Y7.LIST
+                    answersInteraction: p.Y7.LIST
                 },
                 () => ({
                     ContainerComponent: x,
@@ -191,7 +191,7 @@ function D(e) {
         className: i,
         imageClassName: O.attachmentImage,
         src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
-        alt: null !== (t = n.description) && void 0 !== t ? t : (0, p.fw)(n.filename),
+        alt: null !== (t = n.description) && void 0 !== t ? t : (0, f.fw)(n.filename),
         responsive: !0,
         width: 212,
         height: 212,

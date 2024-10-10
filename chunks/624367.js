@@ -23,8 +23,8 @@ var a = n(613828),
     N = n(594174),
     h = n(630388),
     C = n(823379),
-    p = n(624138),
-    f = n(317381),
+    f = n(624138),
+    p = n(317381),
     g = n(638880),
     A = n(122613),
     S = n(147865),
@@ -35,9 +35,9 @@ var a = n(613828),
     v = n(981631),
     L = n(689938),
     Z = n(896219);
-let P = (0, p.Mg)(l.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+let P = (0, f.Mg)(l.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function b(e) {
-    var t, n, l, p;
+    var t, n, l, f;
     let { applicationId: b, message: D } = e,
         { analyticsLocations: j } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK),
         U = (0, c.O)(),
@@ -45,12 +45,12 @@ function b(e) {
         B = (0, s.e7)([T.Z], () => T.Z.getChannel(y), [y]),
         k = null == B ? void 0 : B.guild_id,
         G = null != B && (B.isGuildVoice() || B.isPrivate()),
-        F = (0, s.e7)([f.ZP], () => f.ZP.getSelfEmbeddedActivityForChannel(y)),
+        F = (0, s.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(y)),
         w = (null == F ? void 0 : F.applicationId) === b,
         [V] = (0, E.Z)([b, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
         H = (0, S.ZP)(null !== (l = null == V ? void 0 : V.maxParticipants) && void 0 !== l ? l : 0),
-        [Y] = (0, s.Wu)([f.ZP], () => (G ? f.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === b) : []), [b, y, G]),
-        W = Array.from(null !== (p = null == Y ? void 0 : Y.userIds) && void 0 !== p ? p : []),
+        [Y] = (0, s.Wu)([p.ZP], () => (G ? p.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === b) : []), [b, y, G]),
+        W = Array.from(null !== (f = null == Y ? void 0 : Y.userIds) && void 0 !== f ? f : []),
         K = (0, s.Wu)([N.default], () => W.map((e) => N.default.getUser(e)).filter(C.lm), [W]),
         z = (0, M.Z)({
             applicationId: b,

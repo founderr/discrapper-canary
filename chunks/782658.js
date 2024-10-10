@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(610699),
     h = n(313876),
     C = n(778333),
-    p = n(949981),
-    f = n(680668),
+    f = n(949981),
+    p = n(680668),
     g = n(143708),
     A = n(358595),
     S = n(563917),
@@ -76,7 +76,7 @@ function x(e) {
                       context: x('Invite Button Embed')
                   });
         },
-        y = (0, i.jsx)(f.Z, {
+        y = (0, i.jsx)(p.Z, {
             onTransitionToInviteChannel: j,
             onAcceptInstantInvite: U,
             currentUserId: b,
@@ -104,7 +104,7 @@ function x(e) {
         default:
             switch ((0, u.VR)(L)) {
                 case u.wx.GROUP_DM:
-                    y = (0, i.jsx)(p.Z, {
+                    y = (0, i.jsx)(f.Z, {
                         onTransitionToInviteChannel: j,
                         onAcceptInstantInvite: U,
                         currentUserId: b,

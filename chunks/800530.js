@@ -1,6 +1,6 @@
 n.d(t, {
     Cg: function () {
-        return f;
+        return p;
     },
     Cs: function () {
         return m;
@@ -39,7 +39,7 @@ n.d(t, {
         return E;
     },
     sQ: function () {
-        return p;
+        return f;
     },
     wo: function () {
         return u;
@@ -75,10 +75,10 @@ function C(e, t, n) {
     );
 }
 ((i = d || (d = {})).SETTINGS = 'SETTINGS'), (i.ACCOUNT_STANDING = 'ACCOUNT_STANDING'), (i.GUILD_SETTINGS = 'GUILD_SETTINGS'), (i.ENCRYPTION = 'ENCRYPTION'), (i.CONTENT_AND_SOCIAL = 'CONTENT_AND_SOCIAL'), (i.DATA_PRIVACY = 'DATA_PRIVACY');
-class p {}
-C(p, 'TOS_LINK', 'https://discord.com/terms'), C(p, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), C(p, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(p, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), C(p, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(p, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
 class f {}
-C(f, 'CLASSIFICATION_ID', 'classification_id'), C(f, 'INCIDENT_TIMESTAMP', 'incident_time'), ((a = u || (u = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (a.LEARN_MORE_LINK = 'learn_more_link');
+C(f, 'TOS_LINK', 'https://discord.com/terms'), C(f, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), C(f, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(f, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), C(f, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(f, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
+class p {}
+C(p, 'CLASSIFICATION_ID', 'classification_id'), C(p, 'INCIDENT_TIMESTAMP', 'incident_time'), ((a = u || (u = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (a.LEARN_MORE_LINK = 'learn_more_link');
 class g {}
 C(g, 'ICON_TYPE', 'icon_type'),
     C(g, 'HEADER', 'header'),

@@ -67,8 +67,8 @@ var i = n(735250),
     N = n(5967),
     h = n(630388),
     C = n(358085),
-    p = n(51144),
-    f = n(91047),
+    f = n(51144),
+    p = n(91047),
     g = n(50284),
     A = n(981631),
     S = n(689938);
@@ -86,7 +86,7 @@ function O(e, t, n) {
                 n();
                 return;
             }
-            let s = '@'.concat(p.ZP.getUserTag(a, { decoration: 'never' })),
+            let s = '@'.concat(f.ZP.getUserTag(a, { decoration: 'never' })),
                 l = '<@'.concat(e, '>');
             T.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
                 plainText: s,
@@ -176,7 +176,7 @@ function U(e, t) {
         (n) => {
             let i = m.default.getUser(e),
                 a = _.Z.getChannel(t);
-            null != i && null != a && (n.stopPropagation(), (0, f.Pv)(n, i, a));
+            null != i && null != a && (n.stopPropagation(), (0, p.Pv)(n, i, a));
         },
         [e, t]
     );
@@ -189,7 +189,7 @@ function y(e, t, n) {
             null != a &&
                 null != s &&
                 (i.stopPropagation(),
-                (0, f._j)(i, {
+                (0, p._j)(i, {
                     user: a,
                     channel: s,
                     moderationAlertId: n
@@ -203,7 +203,7 @@ function B(e, t) {
         (n) => {
             let i = m.default.getUser(e),
                 a = _.Z.getChannel(t);
-            null != i && null != a && (n.stopPropagation(), (0, f.xS)(n, i, a.guild_id));
+            null != i && null != a && (n.stopPropagation(), (0, p.xS)(n, i, a.guild_id));
         },
         [e, t]
     );

@@ -21,7 +21,7 @@ var a = n(442837),
     N = n(900849),
     h = n(981631);
 function C(e) {
-    let { channel: t, onClick: n, beforeTransition: C, className: p, openChatWithoutConnecting: f } = e,
+    let { channel: t, onClick: n, beforeTransition: C, className: f, openChatWithoutConnecting: p } = e,
         g = (0, a.e7)([m.default, I.Z], () => (null == t ? '' : (0, o.F6)(t, m.default, I.Z)), [t]);
     return (0, i.jsx)(s.Tooltip, {
         text: g,
@@ -30,7 +30,7 @@ function C(e) {
             let { onMouseEnter: a, onMouseLeave: o } = e;
             return (0, i.jsx)(c.Z, {
                 role: 'link',
-                className: p,
+                className: f,
                 onClick: (e) => {
                     e.stopPropagation(),
                         null != n
@@ -55,7 +55,7 @@ function C(e) {
                                       return;
                                   }
                                   (0, d.uL)(h.Z5c.CHANNEL(e, t));
-                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, f));
+                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, p));
                 },
                 onMouseEnter: a,
                 onMouseLeave: o,

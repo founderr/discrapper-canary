@@ -13,8 +13,8 @@ var a = n(442837),
     c = n(701560),
     d = n(785547);
 function u(e) {
-    let { application: t, fullWidth: n = !1, size: u = s.Button.Sizes.LARGE, color: _, customDisabledColor: E, hideNotLaunchable: I, tooltipPosition: m, onClick: T, className: N, source: h, hover: C, innerClassName: p } = e,
-        f = {
+    let { application: t, fullWidth: n = !1, size: u = s.Button.Sizes.LARGE, color: _, customDisabledColor: E, hideNotLaunchable: I, tooltipPosition: m, onClick: T, className: N, source: h, hover: C, innerClassName: f } = e,
+        p = {
             fullWidth: n,
             size: u,
             color: _,
@@ -23,7 +23,7 @@ function u(e) {
             onClick: T,
             className: N,
             hover: C,
-            innerClassName: p
+            innerClassName: f
         },
         g = (0, a.e7)([l.Z], () => l.Z.getActiveLibraryApplication(t.id)),
         A = null != g ? g.sku.id : null,
@@ -31,14 +31,14 @@ function u(e) {
         M = (0, a.e7)([r.Z], () => null != S && !r.Z.didFetchingSkuFail(S));
     return null != g && (0, o.Je)(g)
         ? (0, i.jsx)(d.Z, {
-              ...f,
+              ...p,
               libraryApplication: g,
               source: h
           })
         : M
           ? (0, i.jsx)('div', { children: 'deprecated!' })
           : (0, i.jsx)(c.Z, {
-                ...f,
+                ...p,
                 hideNotLaunchable: I,
                 applicationId: t.id
             });

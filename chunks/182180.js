@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return p;
     }
 });
 var i = n(735250),
@@ -46,7 +46,7 @@ function C(e) {
         })
     });
 }
-function p(e) {
+function f(e) {
     let { guildId: t, user: n, username: a } = e;
     return (0, i.jsxs)('div', {
         className: h.welcomeCard,
@@ -62,11 +62,11 @@ function p(e) {
         ]
     });
 }
-function f(e) {
+function p(e) {
     var t, s;
     let { channel: I, message: N, compact: h } = e,
         C = (0, o.ZP)(N),
-        f = (function (e) {
+        p = (function (e) {
             let { author: t, channel: n, message: i } = e,
                 s = n.guild_id,
                 o = (0, c.l)({
@@ -95,7 +95,7 @@ function f(e) {
             author: C
         }),
         g = (null === (t = N.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (s = N.roleSubscriptionData) || void 0 === s ? void 0 : s.total_months_subscribed) <= 1;
-    return null == f
+    return null == p
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -103,10 +103,10 @@ function f(e) {
                       icon: n(570111),
                       timestamp: N.timestamp,
                       compact: h,
-                      children: f
+                      children: p
                   }),
                   g &&
-                      (0, i.jsx)(p, {
+                      (0, i.jsx)(f, {
                           guildId: I.guild_id,
                           user: N.author,
                           username: C.nick

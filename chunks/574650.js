@@ -20,12 +20,12 @@ var a = n(120356),
 t.Z = () => {
     var e, t;
     let a = (0, r.e7)([d.Z], () => d.Z.getGuildId(), []),
-        p = (0, r.e7)([c.Z], () => c.Z.getGuild(a), [a]),
-        f = (0, r.e7)([I.Z], () => (null != a ? I.Z.getRequest(a) : null), [a]),
+        f = (0, r.e7)([c.Z], () => c.Z.getGuild(a), [a]),
+        p = (0, r.e7)([I.Z], () => (null != a ? I.Z.getRequest(a) : null), [a]),
         g = (0, l.TH)(),
-        A = (null === (e = (0, l.LX)(g.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-    if (null == p || !p.hasVerificationGate() || A) return null;
-    let S = null !== (t = null == f ? void 0 : f.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
+        A = (null === (e = (0, l.LX)(g.pathname, m.Z5c.CHANNEL(null == f ? void 0 : f.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+    if (null == f || !f.hasVerificationGate() || A) return null;
+    let S = null !== (t = null == p ? void 0 : p.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
         M = null,
         O = null,
         x = null,
@@ -40,7 +40,7 @@ t.Z = () => {
                             header: N.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
                             confirmText: N.Z.Messages.CONFIRM,
                             cancelText: N.Z.Messages.CANCEL,
-                            onConfirm: () => u.Z.removeGuildJoinRequest(p.id),
+                            onConfirm: () => u.Z.removeGuildJoinRequest(f.id),
                             confirmButtonColor: o.Button.Colors.BRAND,
                             ...e,
                             children: (0, i.jsx)(o.Text, {
@@ -59,7 +59,7 @@ t.Z = () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
                         return (t) =>
                             (0, i.jsx)(e, {
-                                guildId: p.id,
+                                guildId: f.id,
                                 ...t
                             });
                     });
@@ -70,7 +70,7 @@ t.Z = () => {
             (M = N.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT),
                 (O = N.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
                 (x = () => {
-                    (0, _.hk)(p.id);
+                    (0, _.hk)(f.id);
                 });
     }
     return (0, i.jsxs)('div', {

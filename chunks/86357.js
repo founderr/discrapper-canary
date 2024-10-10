@@ -30,7 +30,7 @@ let C = (e) => {
             ]
         });
     },
-    p = (e) => {
+    f = (e) => {
         let { sku: t, className: n } = e;
         return (0, u.jsxs)('div', {
             className: I()(h.row, n),
@@ -44,7 +44,7 @@ let C = (e) => {
             ]
         });
     },
-    f = (e) => {
+    p = (e) => {
         let { sku: t, className: n } = e;
         return (0, u.jsx)('div', {
             className: I()(h.salePercentage, n),
@@ -69,7 +69,7 @@ let C = (e) => {
         let { sku: t, className: n } = e;
         return (0, u.jsxs)('div', {
             className: I()(h.row, n),
-            children: [(0, u.jsx)(f, { sku: t }), (0, u.jsx)(g, { sku: t }), (0, u.jsx)(A, { sku: t })]
+            children: [(0, u.jsx)(p, { sku: t }), (0, u.jsx)(g, { sku: t }), (0, u.jsx)(A, { sku: t })]
         });
     },
     M = (e) => {
@@ -98,7 +98,7 @@ class O extends (s = _.PureComponent) {
             case 1:
                 return (0, u.jsx)(C, { className: I()(t, n) });
             case 3:
-                return (0, u.jsx)(p, {
+                return (0, u.jsx)(f, {
                     sku: i,
                     className: I()(t, n)
                 });
@@ -120,7 +120,7 @@ class O extends (s = _.PureComponent) {
             case 5:
                 return (0, u.jsx)(M, { className: I()(t) });
             case 3:
-                return (0, u.jsx)(p, {
+                return (0, u.jsx)(f, {
                     sku: n,
                     className: I()(h.directoryHeroPricePremium, t)
                 });
@@ -148,7 +148,7 @@ class O extends (s = _.PureComponent) {
                     children: [
                         (0, u.jsxs)('div', {
                             className: h.row,
-                            children: [(0, u.jsx)(A, { sku: i }), (0, u.jsx)(f, { sku: i })]
+                            children: [(0, u.jsx)(A, { sku: i }), (0, u.jsx)(p, { sku: i })]
                         }),
                         (0, u.jsx)(g, { sku: i })
                     ]

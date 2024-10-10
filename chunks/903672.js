@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(455199),
     h = n(655354),
     C = n(999671),
-    p = n(324081),
-    f = n(240126),
+    f = n(324081),
+    p = n(240126),
     g = n(791914),
     A = n(981631),
     S = n(689938),
@@ -45,8 +45,8 @@ function R(e) {
         {
             messages: m,
             hasMore: h,
-            loading: p,
-            guildFilter: f,
+            loading: f,
+            guildFilter: p,
             roleFilter: O,
             everyoneFilter: R
         } = (0, s.cj)([N.Z], () => ({
@@ -57,7 +57,7 @@ function R(e) {
             roleFilter: N.Z.roleFilter,
             everyoneFilter: N.Z.everyoneFilter
         })),
-        v = (0, d.Z)(f),
+        v = (0, d.Z)(p),
         Z = (0, d.Z)(O),
         b = (0, d.Z)(R);
     a.useEffect(() => {
@@ -65,8 +65,8 @@ function R(e) {
             x(E, !0);
             return;
         }
-        ((null != v && f !== v) || (null != Z && O !== Z) || (null != b && R !== b)) && x(E, !0);
-    }, [v, f, Z, O, b, R, E, !0]);
+        ((null != v && p !== v) || (null != Z && O !== Z) || (null != b && R !== b)) && x(E, !0);
+    }, [v, p, Z, O, b, R, E, !0]);
     a.useEffect(() => {
         (null == m ? void 0 : m.some(u.k5)) && (o.Z.clearMentions(), x(E, !0));
     }, []),
@@ -98,7 +98,7 @@ function R(e) {
             },
             channel: E,
             messages: m,
-            loading: p,
+            loading: f,
             hasMore: h,
             analyticsName: 'Recent Mentions',
             loadMore: function () {
@@ -148,7 +148,7 @@ function Z(e) {
     return (0, i.jsxs)('div', {
         className: M.container,
         children: [
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(f.Z, {
                 channel: s,
                 gotoChannel: n,
                 children:
@@ -192,7 +192,7 @@ function Z(e) {
     });
 }
 function P(e) {
-    return (0, i.jsx)(f.Z, {
+    return (0, i.jsx)(p.Z, {
         Icon: r.AtIcon,
         header: S.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
         tip: S.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP

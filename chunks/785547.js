@@ -22,8 +22,8 @@ var i,
     N = n(293245),
     h = n(417363),
     C = n(941128),
-    p = n(780570),
-    f = n(358085),
+    f = n(780570),
+    p = n(358085),
     g = n(814225),
     A = n(346329),
     S = n(701560),
@@ -91,7 +91,7 @@ class Z extends (a = r.Component) {
         if (e.isHidden()) return 'add_to_library';
         if (e.isPreorder()) return 'preorder_wait';
         let i = null != n ? v[n] : null;
-        return null != i ? i : null != t && t.type === M.vxO.UNINSTALLING ? 'uninstalling' : (0, f.isWeb)() ? 'play' : 'unsupported_os';
+        return null != i ? i : null != t && t.type === M.vxO.UNINSTALLING ? 'uninstalling' : (0, p.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {
         let { libraryApplication: e, fullWidth: t, size: n, color: i, customDisabledColor: a, isPlayShiny: s, onDropdownOpen: r, onDropdownClose: o, analyticsListSort: c, analyticsListIndex: d } = this.props;
@@ -137,9 +137,9 @@ class Z extends (a = r.Component) {
     renderProgressBar() {
         let { hideProgress: e, dispatchState: t } = this.props;
         if (e) return null;
-        let n = p.KJ(t);
+        let n = f.KJ(t);
         if (null == n) return null;
-        let i = n.type === M.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : p.xI(Number(n.progress), Number(n.total));
+        let i = n.type === M.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : f.xI(Number(n.progress), Number(n.total));
         return (0, l.jsx)(d.Progress, {
             percent: i,
             size: d.Progress.Sizes.XSMALL,

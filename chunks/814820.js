@@ -1,6 +1,6 @@
 n.d(t, {
     f: function () {
-        return p;
+        return f;
     }
 }),
     n(47120);
@@ -55,7 +55,7 @@ let C = (e) => {
             })
         });
     },
-    p = (e) => {
+    f = (e) => {
         let { message: t, channel: n } = e,
             a = n.getGuildId(),
             l = (0, s.e7)([E.default, _.Z, u.Z, d.ZP], () => {

@@ -24,8 +24,8 @@ var i = n(735250),
     N = n(724757),
     h = n(213609),
     C = n(294218),
-    p = n(373662),
-    f = n(695346),
+    f = n(373662),
+    p = n(695346),
     g = n(496675),
     A = n(626135),
     S = n(585483),
@@ -195,14 +195,14 @@ function w(e) {
                           message: t.message,
                           channel: r,
                           className: U.message,
-                          compact: f.jU.getSetting(),
+                          compact: p.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: y,
                           trackAnnouncementViews: !0
                       },
                       t.message.id
                   ),
-                  (0, i.jsx)(p.ZP, {
+                  (0, i.jsx)(f.ZP, {
                       className: U.hoverBar,
                       children: (0, i.jsx)(H, {
                           savedMessage: t,
@@ -226,10 +226,10 @@ function w(e) {
                       color: 'header-secondary',
                       children: null != t.saveData.dueAt ? j.Z.Messages.FOR_LATER_REMINDER_DELETED : j.Z.Messages.FOR_LATER_BOOKMARK_DELETED
                   }),
-                  (0, i.jsx)(p.ZP, {
+                  (0, i.jsx)(f.ZP, {
                       className: U.hoverBar,
                       children: (0, i.jsx)(
-                          p.sF,
+                          f.sF,
                           {
                               label: j.Z.Messages.FOR_LATER_REMOVE,
                               icon: I.TrashIcon,
@@ -259,7 +259,7 @@ function H(e) {
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(
-                      p.sF,
+                      f.sF,
                       {
                           label: j.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
                           icon: I.CheckmarkLargeIcon,
@@ -273,7 +273,7 @@ function H(e) {
                       'mark-complete'
                   ),
                   (0, i.jsx)(
-                      p.sF,
+                      f.sF,
                       {
                           label: j.Z.Messages.MESSAGE_REMINDERS_EDIT,
                           icon: I.PencilIcon,
@@ -290,9 +290,9 @@ function H(e) {
                       },
                       'edit-reminder'
                   ),
-                  (0, i.jsx)(p.fO, {}),
+                  (0, i.jsx)(f.fO, {}),
                   (0, i.jsx)(
-                      p.sF,
+                      f.sF,
                       {
                           label: j.Z.Messages.JUMP_TO_MESSAGE,
                           icon: I.ArrowLargeRightIcon,
@@ -301,7 +301,7 @@ function H(e) {
                       'jump-to-message'
                   ),
                   (0, i.jsx)(
-                      p.sF,
+                      f.sF,
                       {
                           label: j.Z.Messages.FOR_LATER_REMOVE,
                           icon: I.BookmarkIcon,
@@ -314,7 +314,7 @@ function H(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(
-                      p.sF,
+                      f.sF,
                       {
                           label: j.Z.Messages.MESSAGE_REMINDERS_CREATE,
                           icon: I.ClockIcon,
@@ -332,7 +332,7 @@ function H(e) {
                       'create-reminder'
                   ),
                   (0, i.jsx)(
-                      p.sF,
+                      f.sF,
                       {
                           label: j.Z.Messages.JUMP_TO_MESSAGE,
                           icon: I.ArrowLargeRightIcon,
@@ -341,7 +341,7 @@ function H(e) {
                       'jump-to-message'
                   ),
                   (0, i.jsx)(
-                      p.sF,
+                      f.sF,
                       {
                           label: j.Z.Messages.FOR_LATER_REMOVE,
                           icon: I.BookmarkIcon,

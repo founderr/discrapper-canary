@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(833592),
     h = n(497089),
     C = n(178480),
-    p = n(418316),
-    f = n(526146),
+    f = n(418316),
+    p = n(526146),
     g = n(400565),
     A = n(148789),
     S = n(11825),
@@ -96,7 +96,7 @@ let b = a.memo(function (e) {
         var t;
         let { item: l, ackedBeforeId: u } = e,
             { analyticsLocations: _ } = (0, r.ZP)(),
-            E = (0, f.I)(l, u),
+            E = (0, p.I)(l, u),
             O = a.useCallback(async () => {
                 if ((!E && (0, N.wt)(l), null != l.item_enum && l.item_enum === h.AM.FIND_FRIENDS)) {
                     (0, s.openModalLazy)(async () => {
@@ -138,7 +138,7 @@ let b = a.memo(function (e) {
             R = null;
         l.type === h.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user && (R = (0, i.jsx)(A.Z, { userId: l.other_user.id }));
         let v = null != l.local_id,
-            b = (0, p.Z)(l);
+            b = (0, f.Z)(l);
         return (0, i.jsxs)('div', {
             className: x.row,
             children: [
