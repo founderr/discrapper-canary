@@ -297,6 +297,7 @@ n.default = (e) => {
     r.useEffect(() => {
         (0, p.Jn)();
     }, []),
+    (0, I.Z)(h),
     r.useEffect(() => {
         !R.startsWith('en') && (null == D ? void 0 : D.summaryLocalized) == null && E.Z.getDetectableGamesSupplemental([t], { forceFetch: !0 });
     }, [t, null == D ? void 0 : D.summaryLocalized, R]),
