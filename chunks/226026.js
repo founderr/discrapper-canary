@@ -9,8 +9,8 @@ var i = t(990547),
     o = t(541099),
     r = t(312871);
 function s(e) {
-    let { applicationId: n, sectionName: t, sectionPosition: s } = e,
-        c = (0, a.e7)([o.Z], () => o.Z.entrypoint());
+    let { applicationId: n, sectionName: t, sectionPosition: s, sectionOverallPosition: c } = e,
+        d = (0, a.e7)([o.Z], () => o.Z.entrypoint());
     return {
         trackItemImpressionRef: (0, r.Z)({
             onVisible: () => {
@@ -21,7 +21,8 @@ function s(e) {
                         application_id: n,
                         section_name: t,
                         section_position: s,
-                        source: c
+                        section_overall_position: c,
+                        source: d
                     }
                 });
             },

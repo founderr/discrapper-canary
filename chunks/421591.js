@@ -133,7 +133,8 @@ function N(e) {
                             title: v.title,
                             look: v.look,
                             items: v.items,
-                            sectionName: v.sectionName
+                            sectionName: v.sectionName,
+                            sectionOverallPosition: v.sectionOverallPosition
                         })
                 })
             }),

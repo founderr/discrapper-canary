@@ -16,9 +16,9 @@ var i = t(735250),
     p = t(689938),
     _ = t(400963);
 function C(e) {
-    let { channel: n, entrypoint: t, title: l, look: C, items: h, sectionName: f } = e,
-        A = (0, d.s)('AppLauncherApplicationListViewScreen'),
-        E = a.useMemo(() => (t === c._b.TEXT ? u.kA : u.qR), [t]);
+    let { channel: n, entrypoint: t, title: l, look: C, items: h, sectionName: f, sectionOverallPosition: A } = e,
+        E = (0, d.s)('AppLauncherApplicationListViewScreen'),
+        N = a.useMemo(() => (t === c._b.TEXT ? u.kA : u.qR), [t]);
     return (0, i.jsxs)('section', {
         className: _.container,
         'aria-label': p.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({ sectionTitle: l }),
@@ -43,7 +43,7 @@ function C(e) {
                     children: h.map((e, t) => {
                         let { application: a, installOnDemand: l } = e;
                         return (0, i.jsx)(
-                            E,
+                            N,
                             {
                                 channel: n,
                                 application: a,
@@ -52,7 +52,8 @@ function C(e) {
                                 resultsPosition: t,
                                 location: s.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
                                 installOnDemand: l,
-                                isOneClickCTA: A
+                                isOneClickCTA: E,
+                                sectionOverallPosition: A
                             },
                             a.id
                         );
