@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return T;
+        return L;
     }
 }),
     t(47120);
@@ -22,12 +22,12 @@ var i = t(735250),
     A = t(783097),
     E = t(695676),
     N = t(520315),
-    v = t(29380),
-    x = t(783685),
+    x = t(29380),
+    v = t(783685),
     I = t(689938),
     P = t(131242),
     g = t(554034);
-function T(e) {
+function L(e) {
     let { channel: n, application: t, videoUrl: l, imageCoverUrl: s, sectionName: d, hasCommands: m } = e,
         p = a.useMemo(() => {
             var e;
@@ -36,10 +36,10 @@ function T(e) {
         _ = (0, r.e7)([c.Z], () => c.Z.inDevModeForApplication(t.id)),
         h = null != l,
         { isSlideReady: f } = (0, E.hH)(),
-        [N, v] = a.useState(!1);
+        [N, x] = a.useState(!1);
     return (
         a.useEffect(() => {
-            f && v(!0);
+            f && x(!0);
         }, [f]),
         (0, i.jsxs)('div', {
             className: P.container,
@@ -74,7 +74,7 @@ function T(e) {
                             children: [
                                 (0, i.jsx)(b, { application: t }),
                                 (0, i.jsx)(S, { application: t }),
-                                p.length > 0 ? (0, i.jsx)(j, { description: p }) : null,
+                                p.length > 0 ? (0, i.jsx)(y, { description: p }) : null,
                                 _
                                     ? (0, i.jsx)('div', {
                                           className: P.developerShelfControlsContainer,
@@ -95,12 +95,12 @@ function T(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(L, { application: t })
+                (0, i.jsx)(T, { application: t })
             ]
         })
     );
 }
-function L(e) {
+function T(e) {
     let { application: n } = e,
         t = (0, A.Cb)(n),
         a = (0, A.Hu)(n);
@@ -221,36 +221,45 @@ function R(e) {
 }
 function M(e) {
     var n;
-    let { channel: t, application: a, sectionName: l, hasCommands: o, isDeveloperOfThisApp: r } = e,
-        c = (0, p.Fs)(t, a.id),
-        d = (0, _.q)(a.id),
-        u = null == d ? void 0 : null === (n = d.bot) || void 0 === n ? void 0 : n.id,
-        C = (0, m.Z)({
+    let { channel: t, application: a, sectionName: l, hasCommands: r, isDeveloperOfThisApp: c } = e,
+        d = (0, p.Fs)(t, a.id),
+        u = (0, _.q)(a.id),
+        C = null == u ? void 0 : null === (n = u.bot) || void 0 === n ? void 0 : n.id,
+        h = (0, m.Z)({
             channel: t,
             applicationId: a.id,
-            botUserId: u
+            botUserId: C
         });
     if (!(0, A.BQ)(a)) return null;
-    let h = s.ButtonSizes.MAX;
-    return null != c
-        ? (0, i.jsx)('div', {
+    let f = s.ButtonSizes.MAX;
+    return null != d
+        ? (0, i.jsxs)('div', {
               className: P.entrypointContainer,
-              children:
-                  C && null != u
-                      ? (0, i.jsx)(x.Z, {
-                            botUserId: u,
-                            applicationId: a.id,
-                            buttonSize: h
+              children: [
+                  (0, i.jsx)('div', {
+                      className: o()(P.entryPointContainerFlexChild, { [P.entryPointButtonWrapper]: h }),
+                      children: (0, i.jsx)(x.Z, {
+                          channel: t,
+                          application: a,
+                          sectionName: l,
+                          primaryEntryPointCommand: d,
+                          buttonSize: f
+                      })
+                  }),
+                  h && null != C
+                      ? (0, i.jsx)('div', {
+                            className: o()(P.entryPointContainerFlexChild, P.tryItOutButtonWrapper),
+                            children: (0, i.jsx)(v.Z, {
+                                botUserId: C,
+                                applicationId: a.id,
+                                buttonSize: f,
+                                channel: t
+                            })
                         })
-                      : (0, i.jsx)(v.Z, {
-                            channel: t,
-                            application: a,
-                            sectionName: l,
-                            primaryEntryPointCommand: c,
-                            buttonSize: h
-                        })
+                      : null
+              ]
           })
-        : r && !o && (0, A.ye)(a)
+        : c && !r && (0, A.ye)(a)
           ? (0, i.jsx)(s.HelpMessage, {
                 className: P.primaryEntryPointWarningMessage,
                 messageType: s.HelpMessageTypes.WARNING,
@@ -258,7 +267,7 @@ function M(e) {
             })
           : null;
 }
-function j(e) {
+function y(e) {
     let { description: n } = e,
         [t, l] = a.useState(!0);
     a.useLayoutEffect(() => l(!1), []);
