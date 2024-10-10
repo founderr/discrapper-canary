@@ -4230,6 +4230,7 @@ let it = Object.freeze({
     (nf.GIFT_ACCEPT_STEP = 'gift_accept_step'),
     (nf.GIFT_INTENT_BADGE_CLICKED = 'gift_intent_badge_clicked'),
     (nf.GIFT_INTENT_ACTION_BUTTON_CLICKED = 'gift_intent_action_button_clicked'),
+    (nf.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED = 'gift_intent_card_secondary_cta_clicked'),
     (nf.SLASH_COMMAND_USED = 'slash_command_used'),
     (nf.KEYBOARD_SHORTCUT_USED = 'keyboard_shortcut_used'),
     (nf.KEYBOARD_MODE_TOGGLED = 'keyboard_mode_toggled'),

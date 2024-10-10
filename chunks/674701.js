@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     Z: function () {
-        return v;
+        return L;
     }
 });
 var i,
@@ -23,20 +23,21 @@ var i,
     N = n(963249),
     h = n(703656),
     C = n(594174),
-    f = n(51144),
-    p = n(479446),
-    g = n(441623),
-    A = n(317271),
-    S = n(474936),
-    M = n(981631),
-    O = n(182294),
-    x = n(689938),
-    R = n(17500);
-function v(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: r, popoutPosition: v, analyticsPage: L, analyticsSection: Z, glow: P, showSecondaryCta: b } = e,
-        D = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
-        { analyticsLocations: j } = (0, m.ZP)(),
-        U = (0, d.e7)([g.Z], () => g.Z.getFriendAnniversaryYears(i.id));
+    f = n(626135),
+    p = n(51144),
+    g = n(479446),
+    A = n(441623),
+    S = n(317271),
+    M = n(474936),
+    O = n(981631),
+    x = n(182294),
+    R = n(689938),
+    v = n(17500);
+function L(e) {
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: r, popoutPosition: L, analyticsPage: Z, analyticsSection: P, glow: b, showSecondaryCta: D } = e,
+        j = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
+        { analyticsLocations: U } = (0, m.ZP)(),
+        y = (0, d.e7)([A.Z], () => A.Z.getFriendAnniversaryYears(i.id));
     l.useEffect(() => {
         (0, T.h)({
             name: c.ImpressionNames.GIFT_INTENT_CARD,
@@ -44,71 +45,71 @@ function v(e) {
             properties: {
                 gift_intent_type: t,
                 type: n,
-                num_friend_anniversaries: g.Z.getFriendAnniversaries().length
+                num_friend_anniversaries: A.Z.getFriendAnniversaries().length
             }
         });
     }, [t, n]);
-    let y = () => {
-            if (t === S.hX.FRIEND_ANNIVERSARY) return x.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: U });
-            return (0, p.Ou)(t);
+    let B = () => {
+            if (t === M.hX.FRIEND_ANNIVERSARY) return R.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: y });
+            return (0, g.Ou)(t);
         },
-        B = 'coachmark' === n,
-        k = B ? R.innerContentCoachmark : R.innerContent,
-        G = B ? R.recipientUserAvatarCoachmark : R.recipientUserAvatar,
-        F = B ? R.currentUserAvatarCoachmark : R.currentUserAvatar,
-        w = B ? R.subHeaderTextCoachmark : R.subHeaderText,
-        V = B ? _.Button.Colors.BRAND : _.Button.Colors.WHITE,
-        H = B ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
-        Y = B ? R.buttonTextPrimaryCoachmark : R.buttonTextPrimary;
+        k = 'coachmark' === n,
+        G = k ? v.innerContentCoachmark : v.innerContent,
+        F = k ? v.recipientUserAvatarCoachmark : v.recipientUserAvatar,
+        w = k ? v.currentUserAvatarCoachmark : v.currentUserAvatar,
+        V = k ? v.subHeaderTextCoachmark : v.subHeaderText,
+        H = k ? _.Button.Colors.BRAND : _.Button.Colors.WHITE,
+        Y = k ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
+        W = k ? v.buttonTextPrimaryCoachmark : v.buttonTextPrimary;
     return (0, s.jsx)('div', {
-        className: o()(R.content, {
-            [R.outerGlow]: P,
-            [R.contentCoachmark]: B
+        className: o()(v.content, {
+            [v.outerGlow]: b,
+            [v.contentCoachmark]: k
         }),
         onMouseEnter: a,
         onMouseLeave: r,
         children: (0, s.jsxs)('div', {
-            className: o()(k, { [R.innerGlow]: P }),
+            className: o()(G, { [v.innerGlow]: b }),
             children: [
                 (0, s.jsxs)('div', {
-                    className: R.subContent,
+                    className: v.subContent,
                     children: [
                         (0, s.jsxs)('div', {
-                            className: R.avatars,
+                            className: v.avatars,
                             children: [
                                 (0, s.jsx)(I.Z, {
-                                    className: G,
+                                    className: F,
                                     user: i,
                                     'aria-label': i.username,
-                                    size: O.EF.SIZE_56
+                                    size: x.EF.SIZE_56
                                 }),
-                                null != D &&
+                                null != j &&
                                     (0, s.jsx)(I.Z, {
-                                        className: F,
-                                        user: D,
+                                        className: w,
+                                        user: j,
                                         'aria-label': i.username,
-                                        size: O.EF.SIZE_24
+                                        size: x.EF.SIZE_24
                                     })
                             ]
                         }),
                         (0, s.jsxs)('div', {
-                            className: R.textContainer,
+                            className: v.textContainer,
                             children: [
                                 (0, s.jsx)(_.Text, {
                                     variant: 'text-md/medium',
-                                    color: B ? 'header-primary' : 'always-white',
+                                    color: k ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
                                     children: (() => {
-                                        if (t === S.hX.FRIEND_ANNIVERSARY) return x.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: f.ZP.getName(i) });
-                                        return (0, p.Ou)(t);
+                                        if (t === M.hX.FRIEND_ANNIVERSARY) return R.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: p.ZP.getName(i) });
+                                        return (0, g.Ou)(t);
                                     })()
                                 }),
                                 (0, s.jsx)(_.Text, {
-                                    className: w,
+                                    className: V,
                                     variant: 'text-sm/normal',
                                     children: (() => {
-                                        if (t === S.hX.FRIEND_ANNIVERSARY) return x.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER.format({ numberOfYears: U });
-                                        return (0, p.Ou)(t);
+                                        if (t === M.hX.FRIEND_ANNIVERSARY) return R.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER.format({ numberOfYears: y });
+                                        return (0, g.Ou)(t);
                                     })()
                                 })
                             ]
@@ -116,74 +117,74 @@ function v(e) {
                     ]
                 }),
                 (0, s.jsxs)('div', {
-                    className: R.buttonContainer,
+                    className: v.buttonContainer,
                     children: [
-                        b &&
+                        D &&
                             (0, s.jsx)(_.Button, {
-                                className: o()(R.button, R.buttonSecondary),
+                                className: o()(v.button, v.buttonSecondary),
                                 onClick: (e) => {
-                                    e.stopPropagation(), (0, h.uL)(M.Z5c.FRIENDS), E.Z.setSection(M.pJs.ALL);
+                                    e.stopPropagation(), f.default.track(O.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, { gift_intent_type: t }), (0, h.uL)(O.Z5c.FRIENDS), E.Z.setSection(O.pJs.ALL);
                                 },
                                 size: _.Button.Sizes.MEDIUM,
                                 color: _.Button.Colors.CUSTOM,
                                 look: _.Button.Looks.OUTLINED,
                                 children: (0, s.jsx)('div', {
-                                    className: R.buttonContentContainer,
+                                    className: v.buttonContentContainer,
                                     children: (0, s.jsx)(_.Text, {
                                         variant: 'text-sm/medium',
-                                        className: o()(R.buttonText, R.buttonTextSecondary),
+                                        className: o()(v.buttonText, v.buttonTextSecondary),
                                         children: (() => {
-                                            if (t === S.hX.FRIEND_ANNIVERSARY) return x.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_VIEW_ALL_SECONDARY_CTA;
+                                            if (t === M.hX.FRIEND_ANNIVERSARY) return R.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_VIEW_ALL_SECONDARY_CTA;
                                         })()
                                     })
                                 })
                             }),
                         (0, s.jsx)(_.Button, {
-                            className: R.button,
+                            className: v.button,
                             onClick: (e) => {
                                 e.stopPropagation();
-                                let a = (0, A.F)(t);
+                                let a = (0, S.F)(t);
                                 (0, N.Z)({
                                     isGift: !0,
                                     initialPlanId: null,
                                     giftRecipient: i,
                                     analyticsLocation: 'system_message' === n ? a.chat : a.actionButtonCoachmark,
-                                    analyticsLocations: j,
+                                    analyticsLocations: U,
                                     analyticsObject: {
-                                        page: L,
-                                        section: Z,
-                                        object: M.qAy.BUTTON_CTA,
-                                        objectType: M.Qqv.GIFT
+                                        page: Z,
+                                        section: P,
+                                        object: O.qAy.BUTTON_CTA,
+                                        objectType: O.Qqv.GIFT
                                     },
-                                    giftMessage: y()
+                                    giftMessage: B()
                                 });
                             },
                             size: _.Button.Sizes.MEDIUM,
-                            color: V,
+                            color: H,
                             children: (0, s.jsxs)('div', {
-                                className: R.buttonContentContainer,
+                                className: v.buttonContentContainer,
                                 children: [
                                     (0, s.jsx)(_.GiftIcon, {
-                                        color: H,
+                                        color: Y,
                                         size: 'custom',
                                         width: '14',
                                         height: '14'
                                     }),
                                     (0, s.jsx)(_.Text, {
                                         variant: 'text-sm/medium',
-                                        className: o()(R.buttonText, Y),
-                                        children: x.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_PRIMARY_CTA
+                                        className: o()(v.buttonText, W),
+                                        children: R.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_PRIMARY_CTA
                                     })
                                 ]
                             })
                         })
                     ]
                 }),
-                null != v &&
+                null != L &&
                     (0, s.jsx)('div', {
-                        className: o()(R.connector, {
-                            [R.leftPopoutConnector]: 'left' === v,
-                            [R.rightPopoutConnector]: 'right' === v
+                        className: o()(v.connector, {
+                            [v.leftPopoutConnector]: 'left' === L,
+                            [v.rightPopoutConnector]: 'right' === L
                         })
                     })
             ]
