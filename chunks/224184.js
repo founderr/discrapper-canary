@@ -30,8 +30,8 @@ t.Z = (e) => {
         b = (0, r.e7)([d.default], () => d.default.getId()),
         R = (0, r.e7)([_.default], () => _.default.getUser(a)),
         L = (0, r.e7)([m.Z], () => m.Z.getChannelId() === A.id),
-        P = (0, r.e7)([p.Z], () => p.Z.can(v.Plq.CONNECT, A)),
-        j = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, A),
+        j = (0, r.e7)([p.Z], () => p.Z.can(v.Plq.CONNECT, A)),
+        P = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, A),
         O = (0, r.e7)([h.ZP], () => (null != A.guild_id && null != R ? h.ZP.getMember(A.guild_id, a) : null)),
         y = s.useMemo(() => (null != R ? (0, u.SG)(void 0, O, R, { size: 40 }) : void 0), [O, R]);
     return (s.useEffect(() => {
@@ -107,13 +107,13 @@ t.Z = (e) => {
                                     })
                                 ]
                             }),
-                            !L && P
+                            !L && j
                                 ? (0, i.jsx)(o.Button, {
                                       className: N.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           !L &&
-                                              P &&
+                                              j &&
                                               (c.default.selectVoiceChannel(A.id),
                                               f.default.track(v.rMx.HANG_STATUS_CTA_CLICKED, {
                                                   source: 'HangStatusPopout',
@@ -124,7 +124,7 @@ t.Z = (e) => {
                                       children: S.Z.Messages.CUSTOM_HANG_STATUS_CTA
                                   })
                                 : null,
-                            L && j
+                            L && P
                                 ? (0, i.jsx)(o.Button, {
                                       className: N.cta,
                                       size: o.Button.Sizes.SMALL,

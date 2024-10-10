@@ -28,8 +28,8 @@ var s = n(120356),
     b = n(544671),
     R = n(757182),
     L = n(910424),
-    P = n(981631),
-    j = n(193710);
+    j = n(981631),
+    P = n(193710);
 t.Z = (0, u.Z)((e) => {
     let { activity: t, embeddedActivity: n, user: s, applicationStream: l, className: u, guildId: O, channelId: y, source: D, color: U = c.Button.Colors.WHITE, look: k = c.Button.Looks.OUTLINED, type: w, onAction: B, isEmbedded: H = !1 } = e,
         G = (0, o.e7)([_.default], () => {
@@ -39,7 +39,7 @@ t.Z = (0, u.Z)((e) => {
         V = w === T.Y.STREAM_PREVIEW || null != l,
         F = (0, C.Z)(t),
         W = F || V ? h.Z.Direction.HORIZONTAL : h.Z.Direction.VERTICAL,
-        z = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
+        z = (null == t ? void 0 : t.type) === j.IIU.HANG_STATUS,
         Y = (0, o.e7)([f.Z, m.Z], () => {
             var e;
             return z ? m.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(s.id)) || void 0 === e ? void 0 : e.channelId) : null;
@@ -50,13 +50,13 @@ t.Z = (0, u.Z)((e) => {
         align: h.Z.Align.STRETCH,
         direction: W,
         wrap: K ? h.Z.Wrap.WRAP : h.Z.Wrap.NO_WRAP,
-        className: a()(u, j.buttonsWrapper, K ? j.vertical : j.horizontal),
+        className: a()(u, P.buttonsWrapper, K ? P.vertical : P.horizontal),
         children: (() => {
             if ((0, I.Z)(t))
                 return (0, i.jsx)(
                     x.Z,
                     {
-                        platform: d.Z.get(P.ABu.XBOX),
+                        platform: d.Z.get(j.ABu.XBOX),
                         look: k,
                         color: U,
                         onAction: B,
@@ -64,13 +64,13 @@ t.Z = (0, u.Z)((e) => {
                     },
                     'ConnectPlatformActivityButton'
                 );
-            if ((null == t ? void 0 : t.platform) === P.M7m.PS4 || (null == t ? void 0 : t.platform) === P.M7m.PS5)
+            if ((null == t ? void 0 : t.platform) === j.M7m.PS4 || (null == t ? void 0 : t.platform) === j.M7m.PS5)
                 return (0, i.jsx)(
                     x.Z,
                     {
                         look: k,
                         color: U,
-                        platform: d.Z.get(P.ABu.PLAYSTATION),
+                        platform: d.Z.get(j.ABu.PLAYSTATION),
                         onAction: B,
                         Icon: E.Z
                     },

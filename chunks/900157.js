@@ -33,7 +33,7 @@ function b(e) {
     let { channelId: t, baseChannelId: a, channelViewSource: b = 'Split View' } = e,
         R = (0, r.e7)([I.Z], () => I.Z.getChannel(t)),
         L = (0, r.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())),
-        P = (0, m.ZP)(R);
+        j = (0, m.ZP)(R);
     (function (e) {
         let t = (0, r.e7)([v.Z], () => null != e && !l().isEmpty(v.Z.getVoiceStatesForChannel(e.id)));
         s.useEffect(() => {
@@ -46,11 +46,11 @@ function b(e) {
                 (0, C.ad)(e, { source: N.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(R);
-    let j = s.useRef(!1);
+    let P = s.useRef(!1);
     if (
         (s.useEffect(() => {
-            if (null == R || j.current) return;
-            j.current = !0;
+            if (null == R || P.current) return;
+            P.current = !0;
             let e = (0, h.K)(I.Z.getChannel(R.id), !0);
             (0, d.yw)(A.rMx.CHANNEL_OPENED, {
                 ...e,
@@ -77,7 +77,7 @@ function b(e) {
                 'aria-label': Z.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                 children: (0, g.ud)({
                     channel: R,
-                    channelName: P,
+                    channelName: j,
                     guild: L,
                     inSidebar: !0,
                     handleContextMenu: function (e) {

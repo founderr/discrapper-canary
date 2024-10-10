@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(228392),
     R = n(981631),
     L = n(689938),
-    P = n(314251),
-    j = n(96042);
+    j = n(314251),
+    P = n(96042);
 function O(e) {
     let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: O } = e,
         { ref: y, width: D } = (0, p.Z)(),
@@ -102,17 +102,17 @@ function O(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: l()(P.container, { [P.header]: w }),
+                className: l()(j.container, { [j.header]: w }),
                 ref: y,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: l()(P.reactButtons, { [P.loading]: et }),
+                        className: l()(j.reactButtons, { [j.loading]: et }),
                         children: [
                             !ei &&
                                 !Y &&
                                 null != Q &&
                                 (0, i.jsx)('div', {
-                                    className: j.reactions,
+                                    className: P.reactions,
                                     children: (0, i.jsx)(x.le, {
                                         message: F,
                                         readOnly: !1,
@@ -138,7 +138,7 @@ function O(e) {
                                 isGuest: q,
                                 isPendingMember: X,
                                 maxReactions: U,
-                                className: P.reactions,
+                                className: j.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,
                                 forceHideReactionCreates: !0
@@ -149,14 +149,14 @@ function O(e) {
                                     message: F,
                                     channel: V,
                                     useChatFontScaling: !1,
-                                    className: P.addReactButton,
+                                    className: j.addReactButton,
                                     isForumToolbar: !0,
                                     children: !ei && L.Z.Messages.FORUM_REACT_TO_POST
                                 })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: P.buttons,
+                        className: j.buttons,
                         children: [
                             (0, i.jsx)(u.Tooltip, {
                                 text: L.Z.Messages.FORUM_FOLLOW_TOOLTIP,
@@ -166,8 +166,8 @@ function O(e) {
                                         look: u.Button.Looks.BLANK,
                                         size: u.Button.Sizes.SMALL,
                                         onClick: es,
-                                        className: P.button,
-                                        innerClassName: l()(P.buttonInner, { [P.active]: W }),
+                                        className: j.button,
+                                        innerClassName: l()(j.buttonInner, { [j.active]: W }),
                                         children: [
                                             (0, i.jsx)(er, {
                                                 size: 'xs',
@@ -185,8 +185,8 @@ function O(e) {
                                         look: u.Button.Looks.BLANK,
                                         size: u.Button.Sizes.SMALL,
                                         onClick: ea,
-                                        className: P.button,
-                                        innerClassName: P.buttonInner,
+                                        className: j.button,
+                                        innerClassName: j.buttonInner,
                                         children: [
                                             H
                                                 ? (0, i.jsx)(u.CheckmarkLargeIcon, {
@@ -214,8 +214,8 @@ function O(e) {
                                             look: u.Button.Looks.BLANK,
                                             size: u.Button.Sizes.SMALL,
                                             onClick: el,
-                                            className: P.button,
-                                            innerClassName: P.buttonInner,
+                                            className: j.button,
+                                            innerClassName: j.buttonInner,
                                             children: (0, i.jsx)(c.Z, {
                                                 size: 'custom',
                                                 color: 'currentColor',

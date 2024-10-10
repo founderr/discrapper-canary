@@ -28,8 +28,8 @@ var i = n(735250),
     S = n(981631),
     N = n(301439);
 function A(e) {
-    let { participants: t, onClick: n, onDoubleClick: A, onContextMenu: Z, channel: M, className: b, inCall: R, totalNumberOfParticipants: L, paused: P = !1 } = e,
-        j = (0, c.bp)() === S.IlC.POPOUT,
+    let { participants: t, onClick: n, onDoubleClick: A, onContextMenu: Z, channel: M, className: b, inCall: R, totalNumberOfParticipants: L, paused: j = !1 } = e,
+        P = (0, c.bp)() === S.IlC.POPOUT,
         O = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]),
         { dismissedActivityEntryPointTileChannel: y } = (0, x.d)(),
         D = (0, r.e7)([p.Z], () => p.Z.getUserParticipantCount(M.id), [M]),
@@ -61,13 +61,13 @@ function A(e) {
                         participant: e,
                         channel: M,
                         className: N.tile,
-                        paused: P,
+                        paused: j,
                         onClick: n,
                         onDoubleClick: A,
                         onContextMenu: Z,
                         inCall: R,
                         width: t,
-                        inPopout: j
+                        inPopout: P
                     },
                     e.id
                 )
@@ -98,7 +98,7 @@ function A(e) {
                                 channel: M,
                                 guild: O,
                                 width: e,
-                                inPopout: j,
+                                inPopout: P,
                                 handleClose: k,
                                 userParticipantCount: D
                             })
@@ -108,7 +108,7 @@ function A(e) {
                                 width: e,
                                 channel: M,
                                 guild: O,
-                                inPopout: j
+                                inPopout: P
                             })
                         ))
                 : z.push((e) =>
@@ -116,7 +116,7 @@ function A(e) {
                           channel: M,
                           guild: O,
                           width: e,
-                          inPopout: j,
+                          inPopout: P,
                           handleClose: k,
                           userParticipantCount: D
                       })

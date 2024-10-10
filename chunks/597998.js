@@ -139,7 +139,7 @@ class b extends (i = a.Component) {
             : null;
     }
     renderIcons() {
-        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: a, serverDeaf: l, collapsed: c, video: d, isStreaming: p, disabled: m, isWatching: _, iconClassName: f, embeddedApplication: I, otherClientSessionType: A, voicePlatform: Z, hangStatusActivity: b, showHangStatus: P, isSelf: j, application: O, guildId: y, channelId: D, user: U, handleHoverHangStatus: k, handleHoverIcons: w, disconnected: B } = this.props;
+        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: a, serverDeaf: l, collapsed: c, video: d, isStreaming: p, disabled: m, isWatching: _, iconClassName: f, embeddedApplication: I, otherClientSessionType: A, voicePlatform: Z, hangStatusActivity: b, showHangStatus: j, isSelf: P, application: O, guildId: y, channelId: D, user: U, handleHoverHangStatus: k, handleHoverIcons: w, disconnected: B } = this.props;
         if (c || m) return null;
         let H = [],
             G = (0, s.jsx)(L, {
@@ -265,7 +265,7 @@ class b extends (i = a.Component) {
                   );
         let V = null != O && !(0, C.yE)(O.flags, T.udG.EMBEDDED),
             F = null == b && V;
-        return 0 !== H.length || null != G || P || F
+        return 0 !== H.length || null != G || j || F
             ? (0, s.jsxs)('div', {
                   className: N.icons,
                   children: [
@@ -275,7 +275,7 @@ class b extends (i = a.Component) {
                           onMouseLeave: () => (null == w ? void 0 : w(!1)),
                           children: [G, H]
                       }),
-                      P || F
+                      j || F
                           ? (0, s.jsx)('div', {
                                 className: N.iconGroup,
                                 onMouseEnter: () => (null == k ? void 0 : k(!0)),
@@ -295,7 +295,7 @@ class b extends (i = a.Component) {
                                     : (0, s.jsx)(M, {
                                           hangStatusActivity: b,
                                           iconClassName: f,
-                                          isSelf: j
+                                          isSelf: P
                                       })
                             })
                           : null

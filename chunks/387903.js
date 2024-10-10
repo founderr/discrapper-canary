@@ -34,8 +34,8 @@ var i,
     b = n(750154),
     R = n(768581),
     L = n(630388),
-    P = n(153066),
-    j = n(740265),
+    j = n(153066),
+    P = n(740265),
     O = n(122810),
     y = n(833664),
     D = n(503438),
@@ -103,7 +103,7 @@ class q extends (s = r.PureComponent) {
             : e;
     }
     getTypeClass(e, t) {
-        return (0, P.l)(V, e, this.props.type, t);
+        return (0, j.l)(V, e, this.props.type, t);
     }
     isStreamerOnTypeActivityFeed() {
         return (0, k.Z)(this.activity) && 'ActivityFeed' === this.props.type;
@@ -127,7 +127,7 @@ class q extends (s = r.PureComponent) {
                 t = G.Z.Messages.USER_ACTIVITY_HEADER_WATCHING.format({ name: o });
                 break;
             case H.IIU.PLAYING:
-                t = (0, j.Z)(r);
+                t = (0, P.Z)(r);
                 break;
             case H.IIU.COMPETING:
                 t = G.Z.Messages.USER_ACTIVITY_HEADER_COMPETING.format({ name: o });
@@ -142,7 +142,7 @@ class q extends (s = r.PureComponent) {
                 className: V.headerContainer,
                 children: [
                     (0, l.jsx)(p.Heading, {
-                        className: c()((0, P.l)(V, 'headerText', e ? 'EmptyBody' : 'Normal')),
+                        className: c()((0, j.l)(V, 'headerText', e ? 'EmptyBody' : 'Normal')),
                         variant: s ? 'text-xs/semibold' : 'eyebrow',
                         children: (0, l.jsx)(C.Z, { children: t })
                     }),
@@ -322,7 +322,7 @@ class q extends (s = r.PureComponent) {
             : (0, l.jsx)(p.Text, {
                   title: o,
                   variant: 'text-sm/semibold',
-                  className: c()((0, P.l)(V, 'name', t.bot ? 'wrap' : 'normal')),
+                  className: c()((0, j.l)(V, 'name', t.bot ? 'wrap' : 'normal')),
                   children: u
               });
     }
@@ -532,7 +532,7 @@ class q extends (s = r.PureComponent) {
                             this.isStreamerOnTypeActivityFeed()
                                 ? null
                                 : (0, l.jsxs)(E.Z.Child, {
-                                      className: c()((0, P.l)(V, 'content', m ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
+                                      className: c()((0, j.l)(V, 'content', m ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
                                       children: [
                                           (0, l.jsxs)(p.Clickable, {
                                               className: c()(null != o && V.openGameProfile),

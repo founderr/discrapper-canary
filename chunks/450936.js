@@ -77,9 +77,9 @@ function E(e) {
                 })) || void 0 === t
                 ? void 0
                 : t.application,
-        P = i.useMemo(() => (null != L ? m.Z.createFromServer(L) : void 0), [L]),
-        j = (0, d.q)(null == P && g ? S : void 0),
-        O = null !== (n = null != P ? P : j) && void 0 !== n ? n : void 0,
+        j = i.useMemo(() => (null != L ? m.Z.createFromServer(L) : void 0), [L]),
+        P = (0, d.q)(null == j && g ? S : void 0),
+        O = null !== (n = null != j ? j : P) && void 0 !== n ? n : void 0,
         y = null == O || (R && 0 === b.length);
     return {
         application: O,

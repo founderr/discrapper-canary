@@ -1,17 +1,17 @@
-a(47120);
-var t = a(470079),
-    r = a(688619),
-    s = a.n(r);
-a(979590);
-var i = a(442837),
-    o = a(866442),
-    l = a(607070),
-    c = a(220082),
-    d = a(981631);
+t(47120);
+var a = t(470079),
+    r = t(688619),
+    s = t.n(r);
+t(979590);
+var i = t(442837),
+    o = t(866442),
+    l = t(607070),
+    c = t(220082),
+    d = t(981631);
 n.Z = (e) => {
     var n, r, u, _, E, m;
     let I;
-    I = a(481060).tokens;
+    I = t(481060).tokens;
     let A = (0, i.e7)([l.Z], () => l.Z.saturation),
         [p, g] = (0, c.Cf)(
             e,
@@ -37,7 +37,7 @@ n.Z = (e) => {
                 ? m
                 : '#000'
         );
-    return t.useMemo(() => {
+    return a.useMemo(() => {
         let e = (0, o._i)(p),
             n = (0, o._i)(g);
         for (let n = 1; n < 8 && !((0, o.Bd)(e) >= 0.725); n++) {
@@ -46,9 +46,9 @@ n.Z = (e) => {
         for (let e = 1; e < 8 && !((0, o.Bd)(n) >= 0.725); e++) {
             n = s()(n).darken(0.5).num();
         }
-        let a = (0, o.Rf)(e);
+        let t = (0, o.Rf)(e);
         return {
-            primaryColor: a,
+            primaryColor: t,
             secondaryColor: (0, o.Rf)(n)
         };
     }, [p, g]);

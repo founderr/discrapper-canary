@@ -91,7 +91,7 @@ function d(e) {
                     },
                     [I, d, m, _, t, M]
                 ),
-                P = i.useCallback(
+                j = i.useCallback(
                     (e) => {
                         if (!S.current) return;
                         if (r.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
@@ -133,7 +133,7 @@ function d(e) {
                     },
                     [I, t, _, d, L, h]
                 ),
-                j = i.useCallback(() => {
+                P = i.useCallback(() => {
                     N || A(!0);
                 }, [N]),
                 O = i.useCallback(() => {
@@ -157,23 +157,23 @@ function d(e) {
                 let e = D.current;
                 if (null != e)
                     return (
-                        e.addEventListener('focusin', j),
+                        e.addEventListener('focusin', P),
                         e.addEventListener('focus', O),
                         e.addEventListener('focusout', y),
                         () => {
-                            e.removeEventListener('focusin', j), e.removeEventListener('focus', O), e.removeEventListener('focusout', y);
+                            e.removeEventListener('focusin', P), e.removeEventListener('focus', O), e.removeEventListener('focusout', y);
                         }
                     );
-            }, [O, j, y]);
+            }, [O, P, y]);
             let U = i.useCallback(
                     () => ({
                         role: 'list',
                         tabIndex: N && f ? -1 : 0,
                         id: t,
-                        onKeyDown: P,
+                        onKeyDown: j,
                         ref: D
                     }),
-                    [t, N, P, f]
+                    [t, N, j, f]
                 ),
                 k = i.useCallback(
                     (e) => {

@@ -1,26 +1,26 @@
-a.d(n, {
+t.d(n, {
     Z: function () {
         return I;
     }
 }),
-    a(411104);
-var t = a(735250),
-    r = a(470079),
-    s = a(442837),
-    i = a(481060),
-    o = a(239091),
-    l = a(751688),
-    c = a(184301),
-    d = a(347475),
-    u = a(210887),
-    _ = a(5192),
-    E = a(684201);
+    t(411104);
+var a = t(735250),
+    r = t(470079),
+    s = t(442837),
+    i = t(481060),
+    o = t(239091),
+    l = t(751688),
+    c = t(184301),
+    d = t(347475),
+    u = t(210887),
+    _ = t(5192),
+    E = t(684201);
 function m(e) {
     let { participants: n, channel: r } = e;
-    return (0, t.jsx)(i.Scroller, {
+    return (0, a.jsx)(i.Scroller, {
         className: E.popout,
         children: n.map((e) =>
-            (0, t.jsx)(
+            (0, a.jsx)(
                 l.Z,
                 {
                     guildId: null == r ? void 0 : r.guild_id,
@@ -28,10 +28,10 @@ function m(e) {
                     nick: _.ZP.getNickname(null == r ? void 0 : r.guild_id, null == r ? void 0 : r.id, e),
                     onContextMenu: (n) => {
                         (0, o.jW)(n, async () => {
-                            let { default: n } = await Promise.all([a.e('79695'), a.e('69220'), a.e('50261')]).then(a.bind(a, 881351));
-                            return (a) =>
-                                (0, t.jsx)(n, {
-                                    ...a,
+                            let { default: n } = await Promise.all([t.e('79695'), t.e('69220'), t.e('50261')]).then(t.bind(t, 881351));
+                            return (t) =>
+                                (0, a.jsx)(n, {
+                                    ...t,
                                     user: e
                                 });
                         });
@@ -43,13 +43,13 @@ function m(e) {
     });
 }
 function I(e) {
-    let { children: n, participants: a, channel: o, onPopoutClosed: l } = e,
+    let { children: n, participants: t, channel: o, onPopoutClosed: l } = e,
         _ = (0, s.e7)([u.Z], () => u.Z.theme),
-        E = 1 === a.length ? a[0] : null,
+        E = 1 === t.length ? t[0] : null,
         I = (0, r.useCallback)(
             (e) => {
                 if (null != E)
-                    return (0, t.jsx)(d.Z, {
+                    return (0, a.jsx)(d.Z, {
                         ...e,
                         closePopout: () => {
                             e.closePopout(), null == l || l();
@@ -58,18 +58,18 @@ function I(e) {
                         guildId: null == o ? void 0 : o.guild_id,
                         channelId: null == o ? void 0 : o.id
                     });
-                if (null != a)
-                    return (0, t.jsx)(m, {
-                        participants: a,
+                if (null != t)
+                    return (0, a.jsx)(m, {
+                        participants: t,
                         channel: o
                     });
                 throw Error('One of participant or participants is required');
             },
-            [o, l, a, E]
+            [o, l, t, E]
         );
-    return (0, t.jsx)(i.ThemeContextProvider, {
+    return (0, a.jsx)(i.ThemeContextProvider, {
         theme: _,
-        children: (0, t.jsx)(i.Popout, {
+        children: (0, a.jsx)(i.Popout, {
             renderPopout: I,
             preload: () =>
                 null != E

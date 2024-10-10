@@ -33,14 +33,14 @@ var i = n(735250),
     b = n(884338),
     R = n(719296),
     L = n(651612),
-    P = n(918559),
-    j = n(981631),
+    j = n(918559),
+    P = n(981631),
     O = n(689938),
     y = n(735299);
 let D = b.u.SIZE_32,
     U = {
-        [P.MI.NO_CHAT]: y.noChat,
-        [P.MI.RESIZABLE]: y.resizable
+        [j.MI.NO_CHAT]: y.noChat,
+        [j.MI.RESIZABLE]: y.resizable
     };
 function k(e) {
     var t, n;
@@ -51,11 +51,11 @@ function k(e) {
         V = (0, N.gb)(H),
         F = (0, N.uF)(V),
         W = s.useCallback(() => {
-            (0, v.tg)(P.Ez.PIP);
+            (0, v.tg)(j.Ez.PIP);
         }, []),
         z = s.useRef(null),
         Y = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
-        K = Y !== P.MI.NO_CHAT,
+        K = Y !== j.MI.NO_CHAT,
         [q, X] = s.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : a),
         J = s.useCallback((e) => {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
@@ -76,14 +76,14 @@ function k(e) {
         });
         return e.observe(Q.current), () => e.disconnect();
     }, []);
-    let et = $.width / Math.max($.height, 1) < P.I0,
+    let et = $.width / Math.max($.height, 1) < j.I0,
         en = 0,
         ei = 0,
         es = (0, A.Z)(null == B ? void 0 : B.id);
     if (!es) {
         let e = $.width,
             t = $.height;
-        et ? ((t = $.width / P.I0) > $.height && (e = (t = $.height) * P.I0), (ei = ($.height - t) / 2)) : ((e = Math.min($.height * P.I0)) > $.width && (t = (e = $.width) / P.I0), (en = ($.width - e) / 2));
+        et ? ((t = $.width / j.I0) > $.height && (e = (t = $.height) * j.I0), (ei = ($.height - t) / 2)) : ((e = Math.min($.height * j.I0)) > $.width && (t = (e = $.width) / j.I0), (en = ($.width - e) / 2));
     }
     let ea = F.get(null !== (n = null == B ? void 0 : B.id) && void 0 !== n ? n : ''),
         el = (0, r.e7)([C.Z], () => C.Z.getChannelId()),
@@ -162,7 +162,7 @@ function k(e) {
         );
     };
     return (0, i.jsx)(c.ThemeProvider, {
-        theme: j.BRd.DARK,
+        theme: P.BRd.DARK,
         children: (e) =>
             (0, i.jsxs)('div', {
                 className: l()(y.wrapper, U[Y], e),
@@ -248,10 +248,10 @@ function k(e) {
                               maxHeight: a,
                               resizableNode: z,
                               onResize: (e) => {
-                                  T.S.dispatch(j.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
+                                  T.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
                               },
                               onResizeEnd: (e) => {
-                                  T.S.dispatch(j.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
+                                  T.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
                               }
                           })
                         : null

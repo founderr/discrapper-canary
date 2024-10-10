@@ -36,8 +36,8 @@ var i,
     b = n(496675),
     R = n(979651),
     L = n(981631),
-    P = n(927923),
-    j = n(70722),
+    j = n(927923),
+    P = n(70722),
     O = n(689938),
     y = n(697529);
 function D(e, t, n) {
@@ -153,7 +153,7 @@ class w extends (i = a.PureComponent) {
                 let { user: e, channel: t, isWatching: n, hidePreview: i } = this.props;
                 if (!this.canWatchStream) return;
                 let s = {
-                    streamType: j.lo.GUILD,
+                    streamType: P.lo.GUILD,
                     ownerId: e.id,
                     channelId: t.id,
                     guildId: t.guild_id
@@ -211,8 +211,8 @@ class w extends (i = a.PureComponent) {
             }),
             D(this, 'renderUser', (e) => {
                 let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: a, mute: l, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: p, deaf: m, priority: _, collapsed: f, isStreaming: E, isGuest: C, nick: I, video: T, serverMute: x, serverDeaf: v, tabIndex: S, embeddedApplication: N, channel: Z, hangStatusActivity: M, showHangStatus: b, isSelf: R, application: L } = this.props,
-                    { userPopoutOpen: j, isHoveringHangStatus: D } = this.state,
-                    U = P.al.has(null != n ? n : ''),
+                    { userPopoutOpen: P, isHoveringHangStatus: D } = this.state,
+                    U = j.al.has(null != n ? n : ''),
                     k = {
                         user: p,
                         speaking: d,
@@ -236,7 +236,7 @@ class w extends (i = a.PureComponent) {
                         embeddedApplication: N,
                         avatarContainerClass: r()({ [y.userAvatar]: !0 }),
                         disabled: t && !U,
-                        selected: j,
+                        selected: P,
                         onClick: U ? void 0 : this.handleClickUser,
                         onDoubleClick: this.handleWatchStream,
                         onContextMenu: this.handleUserContextMenu,
@@ -263,7 +263,7 @@ class w extends (i = a.PureComponent) {
                 return (0, s.jsx)(u.Popout, {
                     position: 'right',
                     renderPopout: (b && D) || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
-                    shouldShow: a && !j,
+                    shouldShow: a && !P,
                     onRequestClose: this.handleHidePreview,
                     spacing: 0,
                     children: () =>

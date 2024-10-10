@@ -35,8 +35,8 @@ var i = n(735250),
     b = n(944486),
     R = n(594174),
     L = n(101695),
-    P = n(683101),
-    j = n(981631),
+    j = n(683101),
+    P = n(981631),
     O = n(689938),
     y = n(652553);
 function D(e) {
@@ -62,7 +62,7 @@ function D(e) {
                 else {
                     let t = S.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    u.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: M.Z.getAnalyticsId(a) }), (0, I.uL)(j.Z5c.CHANNEL(n, e.channel_id, e.id));
+                    u.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: M.Z.getAnalyticsId(a) }), (0, I.uL)(P.Z5c.CHANNEL(n, e.channel_id, e.id));
                 }
             },
             [a]
@@ -91,7 +91,7 @@ function D(e) {
         }, [_, x]),
         b = s.useRef([]),
         R = A.reduce((e, t) => e + 1 + t.results.length, 0),
-        P = s.useCallback(
+        j = s.useCallback(
             (e, t) => {
                 if (!p.Z.keyboardModeEnabled) return;
                 let n = b.current,
@@ -113,11 +113,11 @@ function D(e) {
             navId: 'search-results',
             itemCount: R,
             focusedIndex: 0,
-            setFocus: P,
+            setFocus: j,
             onSelect: D
         }),
         w = M.Z.getQuery(a),
-        B = M.Z.getSearchType(a) === j.aib.FAVORITES,
+        B = M.Z.getSearchType(a) === P.aib.FAVORITES,
         H = (0, h.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ''),
         G = A.map((e) => {
             let { channel: t, results: n, startIndex: s } = e;
@@ -177,7 +177,7 @@ function D(e) {
                     changePage: v,
                     offset: g,
                     totalResults: C,
-                    pageLength: j.vpv
+                    pageLength: P.vpv
                 })
         ]
     });
@@ -223,14 +223,14 @@ function k(e) {
         B = s.useCallback((e) => {
             if (e === b.Z.getChannelId()) return;
             let t = S.Z.getChannel(e);
-            if (null != t && !!A.Z.can(j.Plq.VIEW_CHANNEL, t)) (0, T.Kh)(t.id);
+            if (null != t && !!A.Z.can(P.Plq.VIEW_CHANNEL, t)) (0, T.Kh)(t.id);
         }, []),
         H = null != l ? (0, m.F6)(l, R.default, Z.Z, !1) : '???',
         G = D && null != l.guild_id ? (null === (t = N.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name) : null,
         V = (null == l ? void 0 : l.parent_id) != null ? S.Z.getChannel(l.parent_id) : null,
         F = null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : null,
         W = null !== (a = (0, _.KS)(l)) && void 0 !== a ? a : o.TextIcon,
-        z = A.Z.can(j.Plq.MANAGE_MESSAGES, l),
+        z = A.Z.can(P.Plq.MANAGE_MESSAGES, l),
         { content: Y } = (0, C.ZP)(
             {
                 content: H,
@@ -286,7 +286,7 @@ function k(e) {
                 r.map((e, t) => {
                     let n = u + t;
                     return (0, i.jsx)(
-                        P.Z,
+                        j.Z,
                         {
                             ref: (e) => (d.current[n] = e),
                             totalResults: h,

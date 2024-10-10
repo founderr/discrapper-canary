@@ -59,7 +59,7 @@ function E(e) {
             },
             [b, s, E]
         ),
-        P = i.useCallback(
+        j = i.useCallback(
             async (e) => {
                 if (b) return;
                 x(!0);
@@ -76,7 +76,7 @@ function E(e) {
             },
             [b, s, E]
         ),
-        j = i.useCallback(
+        P = i.useCallback(
             async (e) => {
                 if (b) return;
                 if (null != t && null == o.Z.getMutualGuilds(t.id)) {
@@ -150,9 +150,9 @@ function E(e) {
             [R]
         );
     return {
-        acceptMessageRequest: g ? j : R,
+        acceptMessageRequest: g ? P : R,
         rejectMessageRequest: L,
-        rejectAll: P,
+        rejectAll: j,
         markAsNotSpam: O,
         isAcceptLoading: C,
         isRejectLoading: T,

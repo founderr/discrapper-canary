@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return P;
     }
 });
 var i = n(735250),
@@ -32,10 +32,10 @@ var i = n(735250),
     b = n(228168),
     R = n(689938),
     L = n(337319),
-    P = n(299336);
-function j(e) {
+    j = n(299336);
+function P(e) {
     let { user: t, channel: n } = e,
-        j = __OVERLAY__ || !(0, d.Z)(t.id),
+        P = __OVERLAY__ || !(0, d.Z)(t.id),
         O = (0, E.ZP)(t.id),
         y = (0, o.ZP)(),
         { analyticsLocations: D } = (0, u.ZP)(c.Z.PROFILE_PANEL),
@@ -85,27 +85,27 @@ function j(e) {
                                         displayProfile: O,
                                         channelId: n.id,
                                         profileType: b.y0.PANEL,
-                                        onOpenProfile: j ? void 0 : B
+                                        onOpenProfile: P ? void 0 : B
                                     }),
                                     t.isClyde() && (0, i.jsx)(h.Z, { className: L.headerTag })
                                 ]
                             }),
                             (0, i.jsxs)('div', {
-                                className: P.body,
+                                className: j.body,
                                 children: [
                                     (0, i.jsx)(N.Z, {
                                         user: t,
                                         profileType: b.y0.PANEL,
                                         nickname: m.ZP.getName(null, n.id, t),
                                         pronouns: null == O ? void 0 : O.pronouns,
-                                        onOpenProfile: j ? void 0 : B,
+                                        onOpenProfile: P ? void 0 : B,
                                         tags: (0, i.jsx)(C.Z, {
                                             displayProfile: O,
                                             profileType: b.y0.PANEL
                                         })
                                     }),
                                     (0, i.jsxs)(S.Z.Overlay, {
-                                        className: P.overlay,
+                                        className: j.overlay,
                                         children: [
                                             (0, i.jsx)(v.Z, {
                                                 heading: R.Z.Messages.USER_POPOUT_ABOUT_ME,
@@ -128,7 +128,7 @@ function j(e) {
                             })
                         ]
                     }),
-                    !j &&
+                    !P &&
                         (0, i.jsx)('footer', {
                             className: L.footer,
                             children: (0, i.jsx)(l.Button, {

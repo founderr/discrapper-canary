@@ -1,24 +1,24 @@
-a.d(n, {
+t.d(n, {
     Z: function () {
         return m;
     }
 }),
-    a(47120);
-var t = a(470079),
-    r = a(392711),
-    s = a.n(r),
-    i = a(876215),
-    o = a(442837),
-    l = a(146282),
-    c = a(897674),
-    d = a(709054),
-    u = a(206583);
+    t(47120);
+var a = t(470079),
+    r = t(392711),
+    s = t.n(r),
+    i = t(876215),
+    o = t(442837),
+    l = t(146282),
+    c = t(897674),
+    d = t(709054),
+    u = t(206583);
 let _ = new Set([i.s.PLAYED_GAME]),
     E = (e) => _.has(e.content_type);
 function m() {
     let e = (0, c.Z)(u.YN.GAME_PROFILE_FEED),
         n = (0, c.Z)(u.YN.GLOBAL_FEED),
-        a = t.useMemo(
+        t = a.useMemo(
             () =>
                 s()(n)
                     .unionBy(e, (e) => e.id)
@@ -30,6 +30,6 @@ function m() {
         );
     return {
         requestId: (0, o.e7)([l.Z], () => l.Z.getFeedRequestId(u.YN.GAME_PROFILE_FEED)),
-        entries: a
+        entries: t
     };
 }

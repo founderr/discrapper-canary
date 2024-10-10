@@ -37,8 +37,8 @@ function Z(e) {
         b = null !== (a = null === (t = I[M.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== a ? a : (0, _.wt)(M),
         R = null !== (r = null === (n = I[M.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : '',
         L = x._o.has(M),
-        P = x.Qn.includes(o),
-        j = f.length,
+        j = x.Qn.includes(o),
+        P = f.length,
         O = (0, c.e7)([g.Z], () => g.Z.can(v.Plq.MANAGE_ROLES, C), [C]),
         y = s.useCallback(
             async (e) => {
@@ -102,7 +102,7 @@ function Z(e) {
                                                 ]
                                             }),
                                         !L &&
-                                            P &&
+                                            j &&
                                             (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsx)(h.Z, {
@@ -128,7 +128,7 @@ function Z(e) {
                     (0, i.jsx)(u.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({ roleCount: j })
+                        children: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({ roleCount: P })
                     })
                 ]
             }),
@@ -190,17 +190,17 @@ function b(e) {
         b = Object.keys(g).length,
         R = s.useMemo(() => (null != p ? I.Z.getGuildPermissionSpecMap(p) : null), [p]),
         L = s.useMemo(() => (null != p ? I.Z.generateGuildPermissionSpec(p) : null), [p]),
-        [P, j] = s.useState(''),
+        [j, P] = s.useState(''),
         [O, y] = s.useState(''),
         D = s.useCallback(o()(y, 300), []),
         U = s.useCallback(
             (e) => {
-                j(e), D(e);
+                P(e), D(e);
             },
             [D]
         ),
         k = s.useCallback(() => {
-            j(''), y('');
+            P(''), y('');
         }, []),
         w = s.useMemo(() => {
             if (null == p || null == R || null == m) return null;
@@ -272,7 +272,7 @@ function b(e) {
                               children: [
                                   (0, i.jsx)(u.SearchBar, {
                                       className: A.searchBar,
-                                      query: P,
+                                      query: j,
                                       placeholder: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
                                       onChange: U,
                                       onClear: k,

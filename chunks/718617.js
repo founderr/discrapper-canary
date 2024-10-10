@@ -43,7 +43,7 @@ function I(e) {
             },
             [N, T, I]
         ),
-        P = s.useMemo(
+        j = s.useMemo(
             () => ({
                 [g.EkH.CLOSE_MODAL]: {
                     binds: ['esc'],
@@ -56,8 +56,8 @@ function I(e) {
             }),
             [x, A, L]
         );
-    s.useEffect(() => (u.Z.enable(), u.Z.enableTemp(P), () => u.Z.disableTemp()), [P]);
-    let j = (0, o.useTransition)(
+    s.useEffect(() => (u.Z.enable(), u.Z.enableTemp(j), () => u.Z.disableTemp()), [j]);
+    let P = (0, o.useTransition)(
         A,
         {
             value: 0,
@@ -74,7 +74,7 @@ function I(e) {
             flex: 1,
             overflow: 'hidden'
         },
-        children: j((e, t, n) => {
+        children: P((e, t, n) => {
             var s, l, r;
             let { key: o } = n;
             return (0, i.jsx)(

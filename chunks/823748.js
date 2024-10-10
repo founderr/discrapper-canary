@@ -28,8 +28,8 @@ var i = n(735250),
     b = n(296797),
     R = n(358221),
     L = n(677601),
-    P = n(541716),
-    j = n(236091),
+    j = n(541716),
+    P = n(236091),
     O = n(663993),
     y = n(252618),
     D = n(201493),
@@ -82,8 +82,8 @@ var i = n(735250),
     eb = n(171368),
     eR = n(430670),
     eL = n(524329),
-    eP = n(995532),
-    ej = n(738643),
+    ej = n(995532),
+    eP = n(738643),
     eO = n(433355),
     ey = n(592125),
     eD = n(703558),
@@ -265,7 +265,7 @@ class tt extends s.PureComponent {
             {
                 channel: e,
                 guild: n,
-                chatInputType: P.I.NORMAL
+                chatInputType: j.I.NORMAL
             },
             null != n ? n.id : 'home'
         );
@@ -496,7 +496,7 @@ class tt extends s.PureComponent {
             }),
             e8(this, 'renderClipsEnabledIndicatorToolbarItem', () => {
                 let { inCall: e, voiceChannel: t } = this.props;
-                return e ? (0, i.jsx)(j.Z, { channelId: null != t ? t.id : null }) : null;
+                return e ? (0, i.jsx)(P.Z, { channelId: null != t ? t.id : null }) : null;
             }),
             e8(this, 'renderStreamQualityLiveIndicatorToolbarItem', () => {
                 let { selectedParticipant: e, premiumIndicatorEnabled: t } = this.props;
@@ -719,9 +719,9 @@ t.Z = s.memo(function (e) {
             return (null !== (e = null == v ? void 0 : v.channelId) && void 0 !== e ? e : eV.Z.getVoiceChannelId()) === (null == c ? void 0 : c.id);
         }),
         L = (0, p.e7)([A.ZP], () => (null != c ? A.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
-        P = (0, p.e7)([eH.Z], () => eH.Z.isConnected()),
-        j = (0, N.Z)(P),
-        O = P && !1 === j;
+        j = (0, p.e7)([eH.Z], () => eH.Z.isConnected()),
+        P = (0, N.Z)(j),
+        O = j && !1 === P;
     s.useEffect(() => {
         Z && O && null != L && null != c && E.Z.selectParticipant(c.id, L.applicationId);
     }, [O, c, Z, L]);
@@ -736,12 +736,12 @@ t.Z = s.memo(function (e) {
         G = (null == c ? void 0 : c.isGuildVocal()) || H || w,
         { welcomeModalChannelId: V } = (0, d.TH)(),
         F = (0, p.e7)([eu.Z], () => null != c && eu.Z.isLurking(c.guild_id), [c]),
-        W = (0, p.e7)([eP.Z], () => eP.Z.hasSeen(null == c ? void 0 : c.guild_id, F), [c, F]),
+        W = (0, p.e7)([ej.Z], () => ej.Z.hasSeen(null == c ? void 0 : c.guild_id, F), [c, F]),
         Y = (0, p.e7)([R.Z, A.ZP], () => (null != A.ZP.getConnectedActivityChannelId() && A.ZP.getActivityPanelMode() === e2.Ez.PANEL ? (A.ZP.getFocusedLayout() === e2.MI.NO_CHAT ? e1.AEg.NO_CHAT : e1.AEg.NORMAL) : null != r ? R.Z.getLayout(r) : e1.AEg.NORMAL), [r]),
         K = (0, p.e7)([R.Z], () => (null != c ? R.Z.getSelectedParticipant(c.id) : null)),
         q = (0, p.e7)([eW.default], () => eW.default.getCurrentUser()),
         X = (0, eo.Z)(I),
-        J = (0, ej.Z)(V, null == I ? void 0 : I.id),
+        J = (0, eP.Z)(V, null == I ? void 0 : I.id),
         { section: Q, channelSidebarState: $ } = (0, p.cj)(
             [eO.ZP],
             () => ({

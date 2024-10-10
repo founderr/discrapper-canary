@@ -65,7 +65,7 @@ function I(e) {
             },
             [n, t]
         ),
-        P = s.useCallback(
+        j = s.useCallback(
             (e) => {
                 if (null != M)
                     e === E.AEg.FULL_SCREEN &&
@@ -76,15 +76,15 @@ function I(e) {
             },
             [Z, L, M]
         ),
-        j = s.useCallback(
+        P = s.useCallback(
             (e) => () => {
-                null != M && (e !== E.AEg.FULL_SCREEN ? ((A.current = e), L(e, E.AEg.FULL_SCREEN), (0, f.Dj)(M)) : P(e));
+                null != M && (e !== E.AEg.FULL_SCREEN ? ((A.current = e), L(e, E.AEg.FULL_SCREEN), (0, f.Dj)(M)) : j(e));
             },
-            [L, P, M]
+            [L, j, M]
         );
     return (s.useEffect(() => {
         let e = () => {
-            null != M && !(0, f.rB)(M, Z) && v === E.AEg.FULL_SCREEN && j(v)();
+            null != M && !(0, f.rB)(M, Z) && v === E.AEg.FULL_SCREEN && P(v)();
         };
         return (
             Z.addEventListener(f.NO, e),
@@ -92,7 +92,7 @@ function I(e) {
                 Z.removeEventListener(f.NO, e);
             }
         );
-    }, [Z, v, j, M]),
+    }, [Z, v, P, M]),
     s.useEffect(
         () => (
             p.default.track(E.rMx.VIDEO_LAYOUT_TOGGLED, {
@@ -100,7 +100,7 @@ function I(e) {
                 ...(0, o.AB)(t.id)
             }),
             () => {
-                !(T && (0, _.isMac)()) && P(v);
+                !(T && (0, _.isMac)()) && j(v);
             }
         ),
         [v, T]
@@ -117,7 +117,7 @@ function I(e) {
               node: M,
               guestWindow: u,
               className: g.rightTrayIcon,
-              onClick: j(v)
+              onClick: P(v)
           })
         : null;
 }

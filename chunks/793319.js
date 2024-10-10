@@ -36,8 +36,8 @@ var i,
     b = n(575175),
     R = n(243778),
     L = n(258609),
-    P = n(446226),
-    j = n(569545),
+    j = n(446226),
+    P = n(569545),
     O = n(74299),
     y = n(803647),
     D = n(554747),
@@ -254,8 +254,8 @@ let eN = l.memo(function (e) {
         T() !== x && u(!0);
     }, [x, T]);
     let A = l.useCallback(() => {
-            if (null != m) (0, g.g)((0, j.V9)(m));
-            else for (let e of C) (0, g.g)((0, j.V9)(e));
+            if (null != m) (0, g.g)((0, P.V9)(m));
+            else for (let e of C) (0, g.g)((0, P.V9)(e));
         }, [C, m]),
         Z = (e, t) => {
             let l = {
@@ -382,10 +382,10 @@ t.ZP = function (e) {
         m = (0, ec.Z)(n),
         { suppress: f, selfMute: E, mute: g } = (0, eu.Z)(n),
         { canGoLive: I } = (0, p.cj)([et.Z], () => ({ canGoLive: (0, O.Z)(et.Z) })),
-        x = (0, P.Z)(),
+        x = (0, j.Z)(),
         N = (0, p.e7)([L.Z], () => null != L.Z.getAwaitingRemoteSessionInfo()),
         R = null != x,
-        j = (0, p.e7)([en.Z], () => {
+        P = (0, p.e7)([en.Z], () => {
             var e;
             return (null !== (e = null == x ? void 0 : x.channelId) && void 0 !== e ? e : en.Z.getVoiceChannelId()) === n.id;
         }),
@@ -396,7 +396,7 @@ t.ZP = function (e) {
         }),
         { reachedLimit: U, limit: w } = (0, eo.Z)(n),
         { analyticsLocations: B } = (0, S.ZP)(v.Z.VOICE_CONTROL_TRAY);
-    if (!j)
+    if (!P)
         return (0, a.jsx)(S.Gt, {
             value: B,
             children: (0, a.jsx)(eA, {

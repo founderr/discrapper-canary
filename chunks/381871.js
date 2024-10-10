@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(981631),
     R = n(354459),
     L = n(185923),
-    P = n(474936),
-    j = n(526761),
+    j = n(474936),
+    P = n(526761),
     O = n(689938),
     y = n(742831);
 let D = L.Hz.CHAT,
@@ -82,7 +82,7 @@ function w(e) {
         K = () => {
             (0, A.openEffectsUpsellModal)({
                 analytics: {
-                    type: P.cd.EMOJI_PICKER_EMOJI_CLICKED,
+                    type: j.cd.EMOJI_PICKER_EMOJI_CLICKED,
                     object: b.qAy.BUTTON_CTA,
                     section: b.jXE.VOICE_CHANNEL_EFFECTS_BAR
                 }
@@ -122,7 +122,7 @@ function w(e) {
                             header: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
                             content: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
                             onClick: () => {
-                                u.Z.open(b.oAB.ACCESSIBILITY, null, { scrollPosition: j.rP.REDUCED_MOTION }), _();
+                                u.Z.open(b.oAB.ACCESSIBILITY, null, { scrollPosition: P.rP.REDUCED_MOTION }), _();
                             },
                             markAsDismissed: s,
                             buttonCTA: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
@@ -158,7 +158,7 @@ function w(e) {
                                 onShowUpsell: () =>
                                     (0, A.openEffectsUpsellModal)({
                                         analytics: {
-                                            type: G.current ? P.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : P.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
+                                            type: G.current ? j.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : j.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
                                             object: b.qAy.VOICE_CHANNEL_EFFECTS_TOGGLE,
                                             section: G.current ? b.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : b.jXE.VOICE_CHANNEL_EFFECTS_BAR
                                         }

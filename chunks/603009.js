@@ -63,13 +63,13 @@ function b(e) {
             }
         );
     }, []);
-    let P = s.useCallback(
+    let j = s.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), p();
             },
             [p]
         ),
-        j = s.useCallback(
+        P = s.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), o();
             },
@@ -122,7 +122,7 @@ function b(e) {
                 ref: E,
                 children: (0, i.jsx)(c.ClickableContainer, {
                     'aria-label': k,
-                    onClick: j,
+                    onClick: P,
                     children: (0, i.jsxs)('div', {
                         className: l()(M.toastContainerInner, m ? M.hovered : null),
                         children: [
@@ -165,7 +165,7 @@ function b(e) {
                             (0, i.jsx)('div', {
                                 children: (0, i.jsx)(c.Clickable, {
                                     className: M.toastButton,
-                                    onClick: P,
+                                    onClick: j,
                                     children: (0, i.jsx)(c.XSmallBoldIcon, {
                                         size: 'custom',
                                         width: 20,

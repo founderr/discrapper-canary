@@ -1,32 +1,32 @@
-a.d(n, {
+t.d(n, {
     Z: function () {
         return l;
     }
 }),
-    a(47120);
-var t = a(735250),
-    r = a(470079),
-    s = a(481060);
-function i(e, n, a) {
+    t(47120);
+var a = t(735250),
+    r = t(470079),
+    s = t(481060);
+function i(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
-                  value: a,
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = a),
+            : (e[n] = t),
         e
     );
 }
 class o extends r.PureComponent {
     render() {
-        let { text: e, lastItem: n, className: a } = this.props;
-        return (0, t.jsxs)('span', {
+        let { text: e, lastItem: n, className: t } = this.props;
+        return (0, a.jsxs)('span', {
             children: [
-                (0, t.jsx)(s.Anchor, {
-                    className: a,
+                (0, a.jsx)(s.Anchor, {
+                    className: t,
                     onClick: this.handleClick,
                     children: e
                 }),
@@ -47,17 +47,17 @@ class l extends r.PureComponent {
         let e = this.props.artists.split(';');
         if (!this.props.canOpen) return e.join(', ');
         let n = e.length - 1;
-        return e.map((e, a) =>
-            (0, t.jsx)(
+        return e.map((e, t) =>
+            (0, a.jsx)(
                 o,
                 {
                     text: e,
-                    index: a,
-                    lastItem: a === n,
+                    index: t,
+                    lastItem: t === n,
                     onClick: this.handleOpenSpotifyArtist,
                     className: this.props.linkClassName
                 },
-                'spotify-artist-'.concat(a)
+                'spotify-artist-'.concat(t)
             )
         );
     }

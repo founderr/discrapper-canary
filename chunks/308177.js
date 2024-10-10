@@ -54,8 +54,8 @@ t.Z = (0, o.Z)((e) => {
         b = (0, d.Rk)(i.id, h.pV.AUDIENCE),
         R = (0, r.e7)([u.Z], () => (null != T ? u.Z.getParticipant(i.id, T) : null)),
         L = (0, d.w8)(i.id, h.pV.SPEAKER),
-        P = L.filter(Z),
-        j = null != L.find((e) => e.type === h.Ui.STREAM),
+        j = L.filter(Z),
+        P = null != L.find((e) => e.type === h.Ui.STREAM),
         O = A(s),
         y = N(s, v),
         D = {
@@ -86,9 +86,9 @@ t.Z = (0, o.Z)((e) => {
                               className: I.header,
                               onClick: () => z(!W),
                               collapsed: W,
-                              speakers: P,
+                              speakers: j,
                               channel: i,
-                              isStreamLive: j
+                              isStreamLive: P
                           },
                           'speaker-header-'.concat(t)
                       );

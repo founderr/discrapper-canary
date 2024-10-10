@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return j;
+        return P;
     }
 });
 var i = n(735250),
@@ -32,7 +32,7 @@ var i = n(735250),
     b = n(981631),
     R = n(689938),
     L = n(247111);
-function P(e) {
+function j(e) {
     let { type: t, source: n, activity: s, applicationStream: a, user: l, guildId: r, channelId: c, onAction: d, isEmbedded: p = (0, u.Z)(s), actionColor: m } = e;
     return (0, i.jsx)(h.Z, {
         className: (0, M.l)(L, 'actions', t),
@@ -49,9 +49,9 @@ function P(e) {
         isEmbedded: p
     });
 }
-let j = d.Z.Types;
+let P = d.Z.Types;
 t.Z = function (e) {
-    let { activity: t, user: n, useStoreStream: a = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: h = !1, analyticsParams: M, ...j } = e,
+    let { activity: t, user: n, useStoreStream: a = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: h = !1, analyticsParams: M, ...P } = e,
         O = (0, r.e7)([A.Z, v.Z], () => {
             var e;
             return v.Z.getChannel(null === (e = A.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
@@ -89,7 +89,7 @@ t.Z = function (e) {
     }, [null == t ? void 0 : t.type, U, k]),
     (null == t ? void 0 : t.type) !== b.IIU.HANG_STATUS || U)
         ? (0, i.jsx)(d.Z, {
-              ...j,
+              ...P,
               activity: t,
               user: n,
               application: H,
@@ -103,8 +103,8 @@ t.Z = function (e) {
                         (0, i.jsxs)('div', {
                             className: l()(F && L.actionsWrapper),
                             children: [
-                                (0, i.jsx)(P, {
-                                    ...j,
+                                (0, i.jsx)(j, {
+                                    ...P,
                                     applicationStream: D,
                                     activity: t,
                                     user: n

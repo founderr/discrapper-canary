@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return P;
     }
 }),
     n(47120);
@@ -33,32 +33,32 @@ var i = n(735250),
     b = n(318374),
     R = n(981631),
     L = n(689938),
-    P = n(293081);
-function j(e) {
+    j = n(293081);
+function P(e) {
     let { channel: t } = e,
         [n, a] = s.useState(!1),
         r = (0, _.ZP)(t, !0),
-        j = t.guild_id,
-        O = (0, d.e7)([x.Z], () => (null != j ? x.Z.getRoles(j) : void 0)),
+        P = t.guild_id,
+        O = (0, d.e7)([x.Z], () => (null != P ? x.Z.getRoles(P) : void 0)),
         y = (0, d.e7)([S.default, x.Z], () => {
             var e;
-            return S.default.getUser(null === (e = x.Z.getGuild(j)) || void 0 === e ? void 0 : e.ownerId);
+            return S.default.getUser(null === (e = x.Z.getGuild(P)) || void 0 === e ? void 0 : e.ownerId);
         }),
         D = s.useMemo(
             () =>
-                null != j
+                null != P
                     ? o()(O)
                           .sortBy((e) => -e.position)
-                          .filter((e) => !(0, f.pM)(j, e.id))
+                          .filter((e) => !(0, f.pM)(P, e.id))
                           .value()
                     : [],
-            [j, O]
+            [P, O]
         ),
         U = s.useMemo(
             () =>
                 o()(D)
                     .filter((e) => {
-                        if (null == j) return !1;
+                        if (null == P) return !1;
                         let n = N.I0({
                             forceRoles: { [e.id]: e },
                             context: t
@@ -66,7 +66,7 @@ function j(e) {
                         return c.e$(n, R.Plq.ADMINISTRATOR) || c.e$(n, R.Plq.VIEW_CHANNEL);
                     })
                     .value(),
-            [t, j, D]
+            [t, P, D]
         ),
         k = (0, d.Wu)(
             [S.default],
@@ -114,7 +114,7 @@ function j(e) {
             }),
             w
                 ? (0, i.jsxs)('div', {
-                      className: P.channelSettingButtons,
+                      className: j.channelSettingButtons,
                       children: [
                           (0, i.jsx)(Z.Z, {
                               label: L.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
@@ -136,20 +136,20 @@ function j(e) {
                   })
                 : null,
             (0, i.jsxs)('div', {
-                className: P.members,
+                className: j.members,
                 children: [
                     (function () {
                         if (1 !== k.length || U.length > 0)
                             return (0, i.jsx)(b.Z, {
                                 guildId: t.guild_id,
-                                className: P.avatars,
+                                className: j.avatars,
                                 maxUsers: 5,
                                 users: k
                             });
                         let e = k[0],
                             n = A.ZP.getName(e);
                         return (0, i.jsxs)('div', {
-                            className: P.avatars,
+                            className: j.avatars,
                             children: [
                                 (0, i.jsx)(h.Avatar, {
                                     src: e.getAvatarURL(t.guild_id, 24),
@@ -158,7 +158,7 @@ function j(e) {
                                 }),
                                 (0, i.jsx)(h.Text, {
                                     tag: 'span',
-                                    className: P.singleUserName,
+                                    className: j.singleUserName,
                                     variant: 'text-md/normal',
                                     children: n
                                 }),
@@ -180,7 +180,7 @@ function j(e) {
                             ? (0, i.jsx)(
                                   g.Z,
                                   {
-                                      className: l()(P.role, { [P.last]: n === U.length - 1 }),
+                                      className: l()(j.role, { [j.last]: n === U.length - 1 }),
                                       roleName: e.name,
                                       roleColor: r,
                                       disabled: !w,
@@ -194,7 +194,7 @@ function j(e) {
                             : (0, i.jsx)(
                                   C.Z,
                                   {
-                                      className: l()(P.role, { [P.last]: n === U.length - 1 }),
+                                      className: l()(j.role, { [j.last]: n === U.length - 1 }),
                                       roleName: e.name,
                                       roleColor: r,
                                       verified: o

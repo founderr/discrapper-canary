@@ -66,7 +66,7 @@ let L = s.forwardRef(function (e, t) {
         })
     });
 });
-function P(e) {
+function j(e) {
     let { showAppLauncherPopup: t, children: n } = e,
         s = (0, r.e7)([x.Z], () => x.Z.hasLayers()),
         {
@@ -139,7 +139,7 @@ t.Z = s.memo(function (e) {
                       animationContainerClassName: b.entrypointAnimation,
                       glowClassName: b.animationGlow,
                       trinketsClassName: b.animationTrinkets,
-                      children: (0, i.jsx)(P, {
+                      children: (0, i.jsx)(j, {
                           showAppLauncherPopup: h,
                           children: (0, i.jsx)(L, {
                               type: n,

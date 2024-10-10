@@ -75,7 +75,7 @@ function A(e) {
             label: S.Z.Messages.COPY_ID_THREAD
         }),
         L = (0, _.Z)(t);
-    function P() {
+    function j() {
         (0, C.Kh)(t.id);
     }
     return (0, i.jsxs)(a.Menu, {
@@ -90,7 +90,7 @@ function A(e) {
                     (0, i.jsx)(a.MenuItem, {
                         id: 'open',
                         label: S.Z.Messages.OPEN_IN_FULL_VIEW,
-                        action: P
+                        action: j
                     })
                 ]
             }),
@@ -107,7 +107,7 @@ function A(e) {
                         label: S.Z.Messages.SEARCH,
                         icon: a.WindowLaunchIcon,
                         action: function () {
-                            P(),
+                            j(),
                                 setTimeout(() => {
                                     I.S.dispatch(v.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
@@ -118,7 +118,7 @@ function A(e) {
                         label: S.Z.Messages.PINS,
                         icon: a.WindowLaunchIcon,
                         action: function () {
-                            P(), I.S.dispatch(v.CkL.TOGGLE_CHANNEL_PINS);
+                            j(), I.S.dispatch(v.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]

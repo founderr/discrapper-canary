@@ -3,7 +3,7 @@ n.d(t, {
         return U;
     },
     ud: function () {
-        return j;
+        return P;
     },
     v0: function () {
         return y;
@@ -39,7 +39,7 @@ var i = n(735250),
     b = n(921944),
     R = n(689938),
     L = n(784237);
-function P(e) {
+function j(e) {
     var t;
     let { channel: n } = e,
         s = (0, u.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id),
@@ -110,7 +110,7 @@ function P(e) {
         a
     );
 }
-function j(e) {
+function P(e) {
     let { channel: t, channelName: n, parentChannel: a, guild: r, inSidebar: o = !1, handleClick: u, handleContextMenu: d, handleParentClick: m, handleParentContextMenu: f, renderFollowButton: E } = e,
         C = (0, p.KS)(t, r),
         { prefix: T, level: x } = (function (e, t) {
@@ -205,7 +205,7 @@ function j(e) {
                         onClick: u,
                         children: v
                     }),
-                    null != t.linkedLobby ? (0, i.jsx)(P, { channel: t }) : null,
+                    null != t.linkedLobby ? (0, i.jsx)(j, { channel: t }) : null,
                     null != E ? E() : null
                 ]
             });
@@ -271,7 +271,7 @@ function j(e) {
                 ]
             });
         case M.d4z.GUILD_DIRECTORY:
-            let j = (null == r ? void 0 : r.hasFeature(M.oNc.HUB)) ? R.Z.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({ guildName: n }) : n;
+            let P = (null == r ? void 0 : r.hasFeature(M.oNc.HUB)) ? R.Z.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({ guildName: n }) : n;
             return (0, i.jsxs)(s.Fragment, {
                 children: [
                     null !== C
@@ -292,7 +292,7 @@ function j(e) {
                                   })
                                 : null,
                             ' ',
-                            j
+                            P
                         ]
                     })
                 ]

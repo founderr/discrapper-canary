@@ -35,8 +35,8 @@ var i,
     b = n(313201),
     R = n(366980),
     L = n(703656),
-    P = n(93127),
-    j = n(428598),
+    j = n(93127),
+    P = n(428598),
     O = n(131704),
     y = n(592125),
     D = n(341165),
@@ -485,7 +485,7 @@ class ec extends (i = a.PureComponent) {
         return {
             affinities: e.map((e) => {
                 var t;
-                let n = j.Z.getUserAffinity(e);
+                let n = P.Z.getUserAffinity(e);
                 return null !== (t = null == n ? void 0 : n.communicationProbability) && void 0 !== t ? t : -1;
             })
         };
@@ -735,7 +735,7 @@ function ed(e) {
     );
     let g = (0, p.e7)([G.default], () => G.default.getUser(null == i ? void 0 : i.getRecipientId()));
     return (a.useEffect(() => {
-        (0, P._)();
+        (0, j._)();
     }, []),
     (null !== (t = null == g ? void 0 : g.bot) && void 0 !== t && t) || (null !== (n = null == g ? void 0 : g.isProvisional) && void 0 !== n && n))
         ? null

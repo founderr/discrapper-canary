@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(386542),
     R = n(933843),
     L = n(746599),
-    P = n(231664),
-    j = n(614011),
+    j = n(231664),
+    P = n(614011),
     O = n(210975),
     y = n(695346),
     D = n(937995),
@@ -71,15 +71,15 @@ let eo = s.memo((e) => {
         eM = y.Sb.useSetting(),
         eb = (0, o.e7)([B.default], () => B.default.isStreamInfoOverlayEnabled),
         [eR, eL] = s.useState(!1),
-        eP = (0, o.e7)([w.default], () => w.default.getId()),
-        ej = (0, o.e7)([F.default], () => F.default.getCurrentUser()),
+        ej = (0, o.e7)([w.default], () => w.default.getId()),
+        eP = (0, o.e7)([F.default], () => F.default.getCurrentUser()),
         eO = I.type === ei.fO.ACTIVITY ? null : null === (t = I.user) || void 0 === t ? void 0 : t.id,
         [ey] = (0, m.Z)(I.type === ei.fO.ACTIVITY ? [I.id] : []),
         eD = (0, o.e7)([x.Z], () => x.Z.getEnabled()),
         eU = (0, o.e7)([G.Z], () => null != eO && G.Z.isLocalVideoDisabled(eO, (0, _.Z)(I.type)), [eO, I.type]),
         ek = (0, o.e7)([G.Z], () => (null != eO ? G.Z.getVideoToggleState(eO, (0, _.Z)(I.type)) : en.ZUi.NONE), [eO, I.type]),
         ew = ek === en.ZUi.AUTO_PROBING,
-        { speaking: eB, ringing: eH, hasVideo: eG } = (0, et.Z)(I, eP),
+        { speaking: eB, ringing: eH, hasVideo: eG } = (0, et.Z)(I, ej),
         eV = (function (e, t, n) {
             var i, s, a, l;
             let r = (0, o.cj)([W.Z], () => {
@@ -118,14 +118,14 @@ let eo = s.memo((e) => {
                 muted: null !== (a = t.type === ei.fO.USER && (null === (i = t.voiceState) || void 0 === i ? void 0 : i.isVoiceMuted())) && void 0 !== a && a,
                 deafened: null !== (l = t.type === ei.fO.USER && (null === (s = t.voiceState) || void 0 === s ? void 0 : s.isVoiceDeafened())) && void 0 !== l && l
             };
-        })(eP, I, eh.getGuildId()),
-        eF = I.type === ei.fO.STREAM && eO === eP,
+        })(ej, I, eh.getGuildId()),
+        eF = I.type === ei.fO.STREAM && eO === ej,
         eW = (0, R.So)(r.q.STREAM_HIGH_QUALITY),
         { hqStreamingState: ez } = (0, b.k)(r.q.STREAM_HIGH_QUALITY),
-        eY = (0, P.Z)(),
+        eY = (0, j.Z)(),
         eK = eW && eF && null != eY,
-        eq = (0, M.o)(I, ej),
-        eX = (0, Z.lL)('CallTile', !0, ej, eq),
+        eq = (0, M.o)(I, eP),
+        eX = (0, Z.lL)('CallTile', !0, eP, eq),
         eJ = (0, o.e7)([U.Z], () => (I.type === ei.fO.USER && null != eO ? U.Z.getEffectForUserId(eO) : null)),
         eQ = (0, o.e7)([W.Z], () => W.Z.getVoicePlatformForChannel(eh.id, null != eO ? eO : en.lds)),
         { enableHangStatus: e$ } = C.n.useExperiment({
@@ -311,7 +311,7 @@ let eo = s.memo((e) => {
                                     : null,
                                 ta,
                                 eK
-                                    ? (0, i.jsx)(j.W, {
+                                    ? (0, i.jsx)(P.W, {
                                           onPlayed: te,
                                           played: ez.hqStreamingFrameAnimationPlayed
                                       })
@@ -377,7 +377,7 @@ let eo = s.memo((e) => {
                         eb &&
                         eR &&
                         (0, i.jsx)(q.Z, {
-                            currentUserId: eP,
+                            currentUserId: ej,
                             participant: I
                         }),
                     (0, i.jsx)(N.Z, {
@@ -416,7 +416,7 @@ function ec(e) {
 }
 eo.displayName = 'CallTile';
 let eu = s.memo((e) => {
-    let { muted: t, deafened: n, localMuted: s, serverMuted: a, serverDeafened: r, idle: d, title: h, width: p, hasVideo: m, inCall: f, localVideoDisabled: g, videoToggleState: C, focused: x, blocked: v, hideAudioIcon: S, participantType: N, participantUserId: A, onContextMenu: Z, onToggleMute: M, platform: b, hangStatusActivity: R, application: L, speaking: P, secureFramesVerified: j } = e,
+    let { muted: t, deafened: n, localMuted: s, serverMuted: a, serverDeafened: r, idle: d, title: h, width: p, hasVideo: m, inCall: f, localVideoDisabled: g, videoToggleState: C, focused: x, blocked: v, hideAudioIcon: S, participantType: N, participantUserId: A, onContextMenu: Z, onToggleMute: M, platform: b, hangStatusActivity: R, application: L, speaking: j, secureFramesVerified: P } = e,
         O = null,
         y = null,
         D = null,
@@ -516,7 +516,7 @@ let eu = s.memo((e) => {
                           children: (0, i.jsx)(T.Z, {
                               hangStatusActivity: R,
                               className: er.hangStatusIcon,
-                              animate: P
+                              animate: j
                           })
                       })
               }))
@@ -600,7 +600,7 @@ let eu = s.memo((e) => {
                                                 children: h
                                             })
                                           : null,
-                                      j &&
+                                      P &&
                                           (0, i.jsx)(u.Tooltip, {
                                               text: el.Z.Messages.E2EE_USER_VERIFIED_TOOLTIP,
                                               children: (e) =>

@@ -34,8 +34,8 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     b = { opacity: 0 },
     R = { opacity: 1 },
     L = { borderRadius: ''.concat(A, 'px ').concat(A, 'px ').concat(A, 'px ').concat(A, 'px') },
-    P = { borderRadius: '0px '.concat(A, 'px ').concat(A, 'px 0px') },
-    j = {
+    j = { borderRadius: '0px '.concat(A, 'px ').concat(A, 'px 0px') },
+    P = {
         mass: 1,
         tension: 500,
         friction: 18,
@@ -47,7 +47,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             { participant: r, isUpsellEnabled: o, shape: d, size: f, didTrackUpsellViewed: A, setDidTrackUpsellViewed: Z, className: M, premiumIndicator: b } = e,
             R = (0, I.Wc)(r),
             { analyticsLocations: L } = (0, m.ZP)(),
-            P = null != (0, T.Z)(r);
+            j = null != (0, T.Z)(r);
         try {
             t = (0, I.nG)(R);
         } catch (e) {
@@ -58,13 +58,13 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         } catch (e) {
             a = !1;
         }
-        let j = t || a,
+        let P = t || a,
             { location: O } = (0, p.O)(),
             y = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
             D = o && !C.ZP.isPremium(y, v.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
             U = s.useCallback(() => {
                 D &&
-                    j &&
+                    P &&
                     (0, h.openModalLazy)(async () => {
                         let { default: e } = await n.e('28479').then(n.bind(n, 78865));
                         return (t) =>
@@ -73,11 +73,11 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                                 analyticsSource: O
                             });
                     });
-            }, [D, j, O]);
+            }, [D, P, O]);
         if (
             (s.useEffect(() => {
                 !A &&
-                    j &&
+                    P &&
                     (g.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: v.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
@@ -85,21 +85,21 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         location_stack: L
                     }),
                     Z(!0));
-            }, [t, a, j, A, Z, L]),
+            }, [t, a, P, A, Z, L]),
             null == R)
         )
             return null;
         let k = (0, i.jsx)(h.Tooltip, {
-            text: P ? S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : j ? S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+            text: j ? S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
             position: 'bottom',
             color: h.Tooltip.Colors.GREY,
             children: (e) =>
                 (0, i.jsxs)(h.Clickable, {
                     ...e,
                     onClick: U,
-                    className: l()(N.qualityIndicator, f, _.eE[d], P ? N.qualityIndicatorLowQuality : N.qualityIndicatorFullQuality, { [N.clickable]: D && j }),
+                    className: l()(N.qualityIndicator, f, _.eE[d], j ? N.qualityIndicatorLowQuality : N.qualityIndicatorFullQuality, { [N.clickable]: D && P }),
                     children: [
-                        j
+                        P
                             ? (0, i.jsx)(h.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -116,7 +116,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         });
         return (0, i.jsx)(h.TextBadge, {
             text: k,
-            className: l()(M, N.qualityIndicatorBadge, { [N.qualityIndicatorBadgePremium]: j && b }),
+            className: l()(M, N.qualityIndicatorBadge, { [N.qualityIndicatorBadgePremium]: P && b }),
             color: u.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: d
         });
@@ -138,14 +138,14 @@ t.Z = (e) => {
                     to: E.enabled ? R : M
                 },
                 leave: E.enabled ? b : Z,
-                config: j
+                config: P
             },
             'animate-always'
         ),
         T = (0, h.useSpring)(
             {
-                to: g ? P : L,
-                config: j
+                to: g ? j : L,
+                config: P
             },
             'animate-always'
         );

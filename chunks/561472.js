@@ -30,19 +30,19 @@ t.Z = function (e) {
             return !0 == !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
         }),
         L = (0, a.e7)([c.Z], () => c.Z.didAgree(M)) && !R,
-        P = s.useMemo(() => !N && ((T.isPrivate() && !T.isManaged()) || (null != M && (!T.isNSFW() || L) && A && u.Z.canChatInGuild(M))), [A, L, T, M, N]),
-        j = b ? (C.TPd.GUILD_THREADS_ONLY.has(T.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD) : v ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(T, m.default, p.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
-    return Z || !P
+        j = s.useMemo(() => !N && ((T.isPrivate() && !T.isManaged()) || (null != M && (!T.isNSFW() || L) && A && u.Z.canChatInGuild(M))), [A, L, T, M, N]),
+        P = b ? (C.TPd.GUILD_THREADS_ONLY.has(T.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD) : v ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(T, m.default, p.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
+    return Z || !j
         ? null
         : (0, i.jsx)(E.Z, {
               className: t,
               style: n,
-              title: j,
+              title: P,
               description: b ? I.Z.Messages.UPLOAD_AREA_NEW_THREAD_HELP : I.Z.Messages.UPLOAD_AREA_HELP,
               icons: g.J6,
               onDrop: (e) => {
                   if (Z) return !1;
-                  P &&
+                  j &&
                       null != T &&
                       ((0, f.d)(e, T, x, {
                           requireConfirm: v,

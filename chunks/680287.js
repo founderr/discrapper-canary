@@ -1,44 +1,44 @@
-a.d(n, {
+t.d(n, {
     Z: function () {
         return c;
     }
 }),
-    a(653041);
-var t = a(544891),
-    r = a(881052),
-    s = a(687294),
-    i = a(476326),
-    o = a(861990),
-    l = a(689938);
+    t(653041);
+var a = t(544891),
+    r = t(881052),
+    s = t(687294),
+    i = t(476326),
+    o = t(861990),
+    l = t(689938);
 class c extends s.Z {
     async uploadFiles(e, n) {
-        let { addFilesTo: a } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        let { addFilesTo: t } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         super.upload({ name: l.Z.Messages.ATTACHMENT_PROCESSING }, n, e);
-        let t = new AbortController();
+        let a = new AbortController();
         try {
             if (((this.files = e), this._aborted)) return;
-            if ((this._handleStart(() => t.abort()), !(await this.compressAndCheckFileSize()))) return;
+            if ((this._handleStart(() => a.abort()), !(await this.compressAndCheckFileSize()))) return;
             this.setUploadingTextForUI(), await (0, s.$)(this.files, !0, this._recomputeProgress.bind(this));
         } catch (e) {
             this._handleException(e);
         }
         try {
-            return await this._createMessage(t.signal, n, a);
+            return await this._createMessage(a.signal, n, t);
         } catch (e) {
             if (this._raiseEndpointErrors) throw e;
             this._handleException(e);
         }
     }
-    async _createMessage(e, n, a) {
+    async _createMessage(e, n, t) {
         let s;
         let l = [];
         this.files.forEach((e, n) => {
-            let a = (0, o.B)(e, n);
-            e.item.platform === i.ow.WEB && l.push({ ...a });
+            let t = (0, o.B)(e, n);
+            e.item.platform === i.ow.WEB && l.push({ ...t });
         }),
             (s =
-                null != a && null != n
-                    ? this._addAttachmentsToPayload(n, a, l)
+                null != t && null != n
+                    ? this._addAttachmentsToPayload(n, t, l)
                     : {
                           ...n,
                           attachments: l
@@ -48,7 +48,7 @@ class c extends s.Z {
                 body: s,
                 signal: e
             },
-            d = 'POST' === this._method ? t.tn.post : t.tn.patch;
+            d = 'POST' === this._method ? a.tn.post : a.tn.patch;
         try {
             let e = await d(c);
             return this._handleComplete(e.body), e.body;
@@ -61,7 +61,7 @@ class c extends s.Z {
             });
         }
     }
-    constructor(e, n = 'POST', a) {
-        super(e, n, a);
+    constructor(e, n = 'POST', t) {
+        super(e, n, t);
     }
 }
