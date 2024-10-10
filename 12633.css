@@ -15441,10 +15441,6 @@ span.clanTag_a31c43 {
     max-height: 32px
 }
 
-.actionButton_f5dff0 {
-    margin-left: auto
-}
-
 .row_e33a4d {
     align-items: center;
     display: flex;
@@ -15478,6 +15474,16 @@ span.clanTag_a31c43 {
 
 .button_e33a4d {
     min-width: 75px;
+    margin-left: auto
+}
+
+.infoGroup_d34773 {
+    border-radius: var(--radius-sm);
+    background-color: var(--background-secondary);
+    width: 100%
+}
+
+.actionButton_f5dff0 {
     margin-left: auto
 }
 
