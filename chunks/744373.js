@@ -1,31 +1,35 @@
 n.r(a),
     n.d(a, {
         default: function () {
-            return d;
+            return u;
         }
     });
 var t = n(735250);
 n(470079);
 var s = n(399606),
     r = n(481060),
-    o = n(594174),
-    i = n(51144),
-    c = n(689938);
-function d(e) {
-    let { transitionState: a, onClose: n, userId: d, onCancel: u, confirmBlock: C } = e,
-        f = (0, s.e7)([o.default], () => o.default.getUser(d)),
-        l = i.ZP.useName(f);
+    o = n(843931),
+    c = n(1596),
+    i = n(594174),
+    d = n(51144),
+    l = n(689938);
+function u(e) {
+    let { transitionState: a, onClose: n, userId: u, onCancel: C, confirmBlock: f } = e,
+        m = (0, s.e7)([i.default], () => i.default.getUser(u)),
+        _ = d.ZP.useName(m);
     return (0, t.jsx)(r.ConfirmModal, {
-        header: c.Z.Messages.CONFIRM_USER_BLOCK_TITLE.format({ name: l }),
-        confirmText: c.Z.Messages.BLOCK,
-        cancelText: c.Z.Messages.CANCEL,
-        onConfirm: C,
+        header: l.Z.Messages.CONFIRM_USER_BLOCK_TITLE.format({ name: _ }),
+        confirmText: l.Z.Messages.BLOCK,
+        cancelText: l.Z.Messages.CANCEL,
+        onConfirm: f,
         onClose: n,
-        onCancel: u,
+        onCancel: C,
         transitionState: a,
-        children: (0, t.jsx)(r.Text, {
-            variant: 'text-md/normal',
-            children: c.Z.Messages.CONFIRM_USER_BLOCK_BODY.format({ name: l })
-        })
+        children: (0, o.c)({ location: 'confirm_block_modal' })
+            ? (0, t.jsx)(c.Z, {})
+            : (0, t.jsx)(r.Text, {
+                  variant: 'text-md/normal',
+                  children: l.Z.Messages.CONFIRM_USER_BLOCK_BODY.format({ name: _ })
+              })
     });
 }
