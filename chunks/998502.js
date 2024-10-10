@@ -490,6 +490,10 @@ function M(e) {
         setApplicationBackgroundColor(e) {
             A.ipc.send('SETTINGS_UPDATE_BACKGROUND_COLOR', e);
         },
+        initializeAbortHandler() {
+            let { initializeAbortHandler: e } = this.getDiscordUtils();
+            null != e && e();
+        },
         initializeExitHook() {
             let { initializeExitHook: e } = this.getDiscordUtils();
             null != e && e();
