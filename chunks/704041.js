@@ -1,18 +1,23 @@
 n(47120);
 var r = n(735250),
     i = n(470079),
-    a = n(481060),
-    s = n(114201),
-    o = n(154658),
-    l = n(370611),
-    u = n(463031),
-    c = n(231338),
-    d = n(689938),
-    _ = n(304818);
-function E(e) {
+    a = n(442837),
+    s = n(481060),
+    o = n(511010),
+    l = n(553795),
+    u = n(979192),
+    c = n(114201),
+    d = n(154658),
+    _ = n(370611),
+    E = n(463031),
+    f = n(981631),
+    h = n(231338),
+    p = n(689938),
+    I = n(304818);
+function m(e) {
     let { children: t } = e;
-    return (0, r.jsx)(a.ThemeProvider, {
-        theme: c.BR.DARK,
+    return (0, r.jsx)(s.ThemeProvider, {
+        theme: h.BR.DARK,
         children: (e) =>
             (0, r.jsx)('div', {
                 'data-disable-adaptive-theme': !0,
@@ -21,76 +26,100 @@ function E(e) {
             })
     });
 }
+function T(e) {
+    let { guildId: t } = e,
+        { leaderboardsDisabled: i } = (0, u.Oz)(t);
+    return null == (0, a.e7)([l.Z], () => l.Z.getAccount(null, f.ABu.RIOT_GAMES)) || i
+        ? (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)(o.Z, { className: I.divider }),
+                  (0, r.jsx)(s.Button, {
+                      className: I.joinLeaderboardButton,
+                      onClick: function () {
+                          (0, s.openModalLazy)(async () => {
+                              let { default: e } = await n.e('73217').then(n.bind(n, 139964));
+                              return (t) => (0, r.jsx)(e, { ...t });
+                          });
+                      },
+                      children: p.Z.Messages.JOIN_LEADERBOARD
+                  })
+              ]
+          })
+        : null;
+}
 t.Z = (e) => {
     let { guildId: t, previewMode: n = !1 } = e,
-        [c, f] = i.useState(n),
-        h = i.useRef(null);
-    return ((0, a.useFocusLock)(h), null == t)
+        [a, o] = i.useState(n),
+        l = i.useRef(null);
+    return ((0, s.useFocusLock)(l), null == t)
         ? null
-        : (0, r.jsx)(E, {
+        : (0, r.jsx)(m, {
               children: (0, r.jsxs)('div', {
-                  className: _.popout,
-                  ref: h,
+                  className: I.popout,
+                  ref: l,
                   children: [
                       (0, r.jsxs)('div', {
-                          className: _.content,
+                          className: I.content,
                           children: [
                               (0, r.jsxs)('div', {
-                                  className: _.header,
+                                  className: I.header,
                                   children: [
-                                      (0, r.jsx)(a.LeagueOfLegendsBrandIcon, { size: 'md' }),
-                                      (0, r.jsx)(a.Spacer, {
+                                      (0, r.jsx)(s.LeagueOfLegendsBrandIcon, { size: 'md' }),
+                                      (0, r.jsx)(s.Spacer, {
                                           size: 8,
                                           horizontal: !0
                                       }),
-                                      (0, r.jsx)(a.Heading, {
+                                      (0, r.jsx)(s.Heading, {
                                           variant: 'heading-sm/normal',
-                                          className: _.leaderboardTitle,
-                                          children: d.Z.Messages.LEADERBOARD_POPOUT_TITLE.format({
+                                          className: I.leaderboardTitle,
+                                          children: p.Z.Messages.LEADERBOARD_POPOUT_TITLE.format({
                                               leaderboardName: 'League of Legends',
                                               leaderboardNameHook: (e, t) =>
                                                   (0, r.jsx)(
-                                                      a.Text,
+                                                      s.Text,
                                                       {
                                                           variant: 'text-sm/medium',
-                                                          className: _.leaderboardName,
+                                                          className: I.leaderboardName,
                                                           children: e
                                                       },
                                                       t
                                                   )
                                           })
                                       }),
-                                      (0, r.jsx)(s.Z, {})
+                                      (0, r.jsx)(c.Z, { guildId: t })
                                   ]
                               }),
-                              (0, r.jsx)(l.Z, {
+                              (0, r.jsx)(_.Z, {
                                   guildId: t,
-                                  leaderboardId: u._,
+                                  leaderboardId: E._,
                                   intervalOffset: 0,
-                                  previewMode: c
+                                  previewMode: a
                               }),
-                              c
+                              a
                                   ? null
-                                  : (0, r.jsx)(r.Fragment, {
-                                        children: (0, r.jsx)(o.Z, {
-                                            className: _.previousChampion,
-                                            guildId: t,
-                                            leaderboardId: u._,
-                                            intervalOffset: -1
-                                        })
+                                  : (0, r.jsxs)(r.Fragment, {
+                                        children: [
+                                            (0, r.jsx)(d.Z, {
+                                                className: I.previousChampion,
+                                                guildId: t,
+                                                leaderboardId: E._,
+                                                intervalOffset: -1
+                                            }),
+                                            (0, r.jsx)(T, { guildId: t })
+                                        ]
                                     })
                           ]
                       }),
-                      c
+                      a
                           ? (0, r.jsx)(r.Fragment, {
-                                children: (0, r.jsx)(a.Clickable, {
-                                    onClick: () => f(!1),
+                                children: (0, r.jsx)(s.Clickable, {
+                                    onClick: () => o(!1),
                                     children: (0, r.jsx)('div', {
-                                        className: _.exitPreviewModeButton,
-                                        children: (0, r.jsx)(a.Text, {
+                                        className: I.exitPreviewModeButton,
+                                        children: (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            className: _.exitPreviewModeText,
-                                            children: d.Z.Messages.LEADERBOARD_POPOUT_PREVIEW_SHOW_FULL_LEADERBOARD
+                                            className: I.exitPreviewModeText,
+                                            children: p.Z.Messages.LEADERBOARD_POPOUT_PREVIEW_SHOW_FULL_LEADERBOARD
                                         })
                                     })
                                 })
