@@ -117,20 +117,16 @@ function P(e) {
                         }
                     });
                 });
-            await c.Z.fetchMessages({
-                channelId: v.id,
-                limit: C.AQB
-            }),
-                v !== O &&
-                    (u.Z.clearDraft(t.id, I.d.ThreadSettings),
-                    u.Z.clearDraft(t.id, I.d.FirstThreadMessage),
-                    null == l || l(v),
-                    (T || e.length > 0 || (null != a && a.length > 0) || (null != h && h.length > 0)) &&
-                        (function (e, t, n, r, i) {
-                            if (null != i && null != r && r.length > 0) i(e, r, t, n);
-                            else if (null != n && n.length > 0) c.Z.sendStickers(e.id, n, t);
-                            else c.Z.sendMessage(e.id, f.ZP.parse(e, t));
-                        })(v, e, a, h, E)),
+            v !== O &&
+                (u.Z.clearDraft(t.id, I.d.ThreadSettings),
+                u.Z.clearDraft(t.id, I.d.FirstThreadMessage),
+                null == l || l(v),
+                (T || e.length > 0 || (null != a && a.length > 0) || (null != h && h.length > 0)) &&
+                    (function (e, t, n, r, i) {
+                        if (null != i && null != r && r.length > 0) i(e, r, t, n);
+                        else if (null != n && n.length > 0) c.Z.sendStickers(e.id, n, t);
+                        else c.Z.sendMessage(e.id, f.ZP.parse(e, t));
+                    })(v, e, a, h, E)),
                 d.Z.clearAll(t.id, I.d.FirstThreadMessage);
         },
         [t, n, r, l, i, o, _, E]
@@ -213,7 +209,7 @@ async function x(e, t) {
                       channelId: n.body.id
                   }));
     } catch (t) {
-        var i, a, s, u, c, d;
+        var i, a, s, u, d, E;
         if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === C.evJ.TOO_MANY_THREADS)
             l.Z.show({
                 title: r ? L.Z.Messages.CANNOT_CREATE_FORUM_POST : L.Z.Messages.CANNOT_CREATE_THREAD,
@@ -225,7 +221,7 @@ async function x(e, t) {
                 body: L.Z.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
             });
         else if ((null === (s = t.body) || void 0 === s ? void 0 : s.code) === C.evJ.SLOWMODE_RATE_LIMITED) {
-            let n = null !== (d = t.body.retry_after) && void 0 !== d ? d : 0;
+            let n = null !== (E = t.body.retry_after) && void 0 !== E ? E : 0;
             n > 0 &&
                 o.Z.dispatch({
                     type: 'SLOWMODE_SET_COOLDOWN',
@@ -240,7 +236,7 @@ async function x(e, t) {
             });
         else if (v.fZ.has(null === (u = t.body) || void 0 === u ? void 0 : u.code)) throw t;
         else {
-            if (v.RN.has(null === (c = t.body) || void 0 === c ? void 0 : c.code))
+            if (v.RN.has(null === (d = t.body) || void 0 === d ? void 0 : d.code))
                 return new Promise((e, n) => {
                     null == t.body && n(),
                         _.Z.addConditionalChangeListener(() => {
@@ -262,7 +258,7 @@ async function x(e, t) {
             });
         }
     }
-    return new Promise((e, t) => {
+    let f = await new Promise((e, t) => {
         null == n.body && t(),
             p.Z.addConditionalChangeListener(() => {
                 let t = p.Z.getChannel(n.body.id);
@@ -275,4 +271,11 @@ async function x(e, t) {
                     );
             });
     });
+    try {
+        await c.Z.fetchMessages({
+            channelId: f.id,
+            limit: C.AQB
+        });
+    } catch (e) {}
+    return f;
 }
