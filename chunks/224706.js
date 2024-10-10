@@ -210,13 +210,14 @@ t.Z = {
                 })
         ),
     getDetectableGamesSupplemental(e) {
-        let t = e.filter(_.Z.canFetch);
-        if (0 === t.length) return;
+        let { forceFetch: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { forceFetch: !1 },
+            n = t ? e : e.filter(_.Z.canFetch);
+        if (0 === n.length) return;
         l.Z.dispatch({
             type: 'DETECTABLE_GAME_SUPPLEMENTAL_FETCH',
-            applicationIds: t
+            applicationIds: n
         });
-        let n = async (e) => {
+        let r = async (e) => {
             try {
                 let t = await s.tn.get({
                     url: v.ANM.APPLICATIONS_GAMES_SUPPLEMENTAL,
@@ -234,7 +235,7 @@ t.Z = {
                 });
             }
         };
-        for (; t.length > 0; ) n(t.splice(0, 20));
+        for (; n.length > 0; ) r(n.splice(0, 20));
     },
     getDetectableGames() {
         if (h.Z.fetching || null != h.Z.lastFetched) return;
