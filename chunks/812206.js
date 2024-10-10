@@ -24,7 +24,10 @@ let l = [],
     E = {},
     f = { botUserIdToAppUsage: {} };
 function h(e) {
-    for (let t of ((u[e.id] = e), (_[e.id] = Date.now()), (d[e.name.toLowerCase()] = e), e.aliases)) d[t.toLowerCase()] = e;
+    let t = u[e.id];
+    _[e.id] = Date.now();
+    let n = e;
+    for (let r of (null != t && (n = t.mergeFromApplicationUpdate(e)), (u[e.id] = n), (d[e.name.toLowerCase()] = n), e.aliases)) d[r.toLowerCase()] = n;
     delete E[e.id];
 }
 function p(e) {
