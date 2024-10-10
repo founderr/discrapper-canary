@@ -40,7 +40,7 @@ function x(e, t, n) {
     );
 }
 let b = 1 * N.Z.Millis.DAY,
-    M = 2 * N.Z.Millis.DAY,
+    M = 3 * N.Z.Millis.DAY,
     P = [],
     D = null,
     y = 0,
@@ -168,21 +168,22 @@ function er() {
         el();
 }
 function el() {
-    if ((($ = $.filter((e) => e.type !== v.Rr.RECOMMENDED_GUILDS)), 0 === en.length)) return;
-    let e = 'recommendedGuilds-'.concat(en[0].id),
-        t = Z.Z.getReadTimestamp(e);
-    if (null != t && Date.now() - ei > b && Date.now() - t < M) return;
-    let n = {
+    if ((($ = $.filter((e) => e.type !== v.Rr.RECOMMENDED_GUILDS)), (ee = ee.filter((e) => e.type !== v.Rr.RECOMMENDED_GUILDS)), 0 === en.length)) return;
+    let e = 'recommendedGuilds',
+        t = Object.values(p.Z.getGuilds()).filter((e) => e.isCommunity()).length >= 5,
+        n = Z.Z.getReadTimestamp(e);
+    if (t && null != n && Date.now() - ei > b && Date.now() - n < M) return;
+    let i = {
         id: e,
         type: v.Rr.RECOMMENDED_GUILDS,
         score: 50
     };
-    if (((V[n.id] = n), (B[n.id] = n), $.length < 10)) {
-        $ = [...$, n];
-        return;
-    }
-    let i = Math.floor(Math.random() * $.length);
-    $.splice(i, 0, n);
+    if (((V[i.id] = i), (B[i.id] = i), 0 === $.length)) ee = [i, ...ee];
+    else if ((!t && $.length < 5) || (t && $.length < 10)) $ = [...$, i];
+    else if (t) {
+        let e = Math.round(2 * Math.random()) + 3 - 1;
+        $.splice(e, 0, i);
+    } else $.splice(5, 0, i);
 }
 function eo(e) {
     if ((j.length > 0 && ((P = j), (j = []), (w = [])), z++, null != e)) ($ = e.newUnread), (ee = e.newRead);
