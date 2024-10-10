@@ -23,5 +23,6 @@ e.exports = {
     heroButton: 'heroButton_a24e0c',
     heroButtonInner: 'heroButtonInner_a24e0c',
     globalDiscoveryTitle: 'globalDiscoveryTitle_a24e0c',
-    customDiscoveryTitle: 'customDiscoveryTitle_a24e0c'
+    customDiscoveryTitle: 'customDiscoveryTitle_a24e0c',
+    contentTabs: 'contentTabs_a24e0c'
 };
