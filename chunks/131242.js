@@ -16,8 +16,6 @@ e.exports = {
     entrypointContainer: 'entrypointContainer_e80fe9',
     developerShelfControlsContainer: 'developerShelfControlsContainer_e80fe9',
     entryPointContainerFlexChild: 'entryPointContainerFlexChild_e80fe9',
-    entryPointButtonWrapper: 'entryPointButtonWrapper_e80fe9',
-    tryItOutButtonWrapper: 'tryItOutButtonWrapper_e80fe9',
     expandableDescriptionClickable: 'expandableDescriptionClickable_e80fe9',
     overflowHidden: 'overflowHidden_e80fe9',
     developerShelfControls: 'developerShelfControls_e80fe9',
